@@ -138,6 +138,10 @@ def references(p: Project, address: int) -> List[dict]:
                 sec = image.pe.section_for_rva(base - image.pe.image_base) if image.pe else None
                 if sec is not None and sec.writable:
                     entry["value"] = "initially " + entry["value"]  # a variable, not a constant
+                elif DAT_NAME.search(sym.name):
+                    # a literal the bootstrap bound as DAT_: an extern float loads first (fld [DAT]; fmul [x]),
+                    # a literal second (fld [x]; fmul [__real@]), and the verifier compares a literal's bytes
+                    entry["write"] = entry["value"].replace(" (double)", "")
         elif kind == "data" and base is not None:
             image = image or TargetImage(p)
             text = string_at(image, base)
@@ -149,6 +153,9 @@ def references(p: Project, address: int) -> List[dict]:
         if dem.get(e["name"]):
             e["demangled"] = dem[e["name"]]
     return out
+
+
+DAT_NAME = re.compile(r"DAT_[0-9A-Fa-f]{8}@")  # a placeholder global
 
 
 def fpu_operands(obj: coff.Coff, fn: coff.Symbol, length: int) -> Dict[int, int]:
@@ -485,6 +492,8 @@ def print_packet(pk: dict) -> None:
                 note += f"  ({r['vtable_of']}'s vtable)"
             if r.get("value"):
                 note += f"  {'' if r['value'].startswith('initially') else '= '}{r['value']}"
+            if r.get("write"):
+                note += f"  (a constant: write {r['write']}, not an extern)"
             if r.get("string") is not None:
                 note += f"  = {json.dumps(r['string'])}"
             print(f"{r['kind']:<5} {r['addr'] or '?':<11} {r['name']}{note}")

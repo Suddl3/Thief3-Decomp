@@ -134,7 +134,9 @@ inlines any body in the file, even one defined after the caller). Use
 - An address-taken local may share a dead parameter's stack slot: plain
   `int Key = 0; F(&Key);` does it, no trick needed.
 - `if (P) { delete P; P = 0; }` stores only when P was set; `delete P; P = 0;`
-  stores always. A float constant: write the literal (`0.5f`), not an extern.
+  stores always. A float constant: write the literal (`0.5f`), not an extern,
+  also one symbols.txt names `DAT_` (the packet says `write 1.0f`): MSVC loads
+  an extern float first (`fld [DAT]; fmul [x]`) and a literal second.
 - `fild; test; jge; fadd [2^32]`: the converted value is unsigned. A byte field
   passed with movzx: the callee takes an `int` (a BYTE or bool parameter
   gives xor/mov al).
