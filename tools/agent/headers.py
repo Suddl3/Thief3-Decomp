@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
-"""Lead only: give each game class one declaration, in include/Game/<Class>.h, and move the units onto it.
+"""Give each game class one declaration, in include/Game/<Class>.h, and move the units onto it (lead only;
+a worker may run `check`).
 
     python tools/agent/headers.py stats                 # which classes get a header, and why the others do not
     python tools/agent/headers.py build [--classes A,B] # write the headers and move the units onto them
+    python tools/agent/headers.py absorb <addr> ...     # merge accepted functions' class members into headers
+    python tools/agent/headers.py check <unit|Class> ... # units keep their last built code (headers: their users')
     python configure.py && ninja                        # then compare the report with the previous one
 
 integrate.py copies each accepted function's declarations into its unit, so a class has one
@@ -308,8 +311,9 @@ def complete_types(decl: classdecl.ClassDecl, text: str, frees: Dict[str, str], 
 
 def plan_headers(units: Dict[str, UnitDecls], var: Dict[str, Dict[str, classdecl.ClassDecl]], wanted: Set[str],
                  measured: Set[str], packages: Dict[str, Tuple[str, str]], kinds: Dict[str, str],
-                 frees: Dict[str, str]) -> Tuple[Dict[str, Plan], Dict[str, str]]:
-    """({class: plan}, {class: why it has no header})."""
+                 frees: Dict[str, str], existing: Set[str]) -> Tuple[Dict[str, Plan], Dict[str, str]]:
+    """({class: plan}, {class: why it has no header}) for the classes in `wanted`; `existing` headers count
+    as written."""
     skipped: Dict[str, str] = {}
     plans: Dict[str, Plan] = {}
     for name in sorted(wanted):
@@ -344,7 +348,7 @@ def plan_headers(units: Dict[str, UnitDecls], var: Dict[str, Dict[str, classdecl
     while changed:
         changed = False
         for name in list(plans):
-            missing = plans[name].needs - set(plans)
+            missing = plans[name].needs - set(plans) - existing
             if missing:
                 skipped[name] = f"needs {sorted(missing)[0]}, which has no header"
                 del plans[name]
@@ -357,12 +361,12 @@ def plan_headers(units: Dict[str, UnitDecls], var: Dict[str, Dict[str, classdecl
     while changed:
         changed = False
         for name in list(plans):
-            if plans[name].needs - set(plans):
+            if plans[name].needs - set(plans) - existing:
                 skipped[name] = "needs a class in an include cycle"
                 del plans[name]
                 changed = True
     for name, plan in plans.items():
-        plan.text = header_text(plan, set(plans), kinds, frees, packages, units)
+        plan.text = header_text(plan, set(plans) | existing, kinds, frees, packages, units)
     return plans, skipped
 
 
@@ -574,6 +578,40 @@ def still_same(p: Project, sources: List[str], work: Path, jobs: int) -> Optiona
         return next((x for x in pool.map(one, sources) if x), None)
 
 
+def check(p: Project, names: List[str], jobs: int) -> int:
+    """For each unit (Game/X.cpp or X.cpp): it compiles to its last built object's code. For each class with
+    a header: the header compiles alone and every unit including it keeps its code. Prints each problem;
+    returns how many there are."""
+    work = Path(tempfile.mkdtemp(prefix="t3check-", dir=p.state_dir("tmp")))
+    game = p.include_dir / GAME_DIR
+    sources, problems = [], 0
+    for name in names:
+        stem = Path(name).stem
+        if name.endswith(".cpp"):
+            sources.append(f"{GAME_DIR}/{Path(name).name}")
+        elif (game / f"{stem}.h").is_file():
+            plan = Plan(stem, classdecl.ClassDecl("class", stem, ""), True, "", [])
+            err = compile_alone(p, {stem: plan}, work / "alone", 1).get(stem)
+            if err:
+                print(f"{stem}.h does not compile alone: " + re.sub(r"^.*[\\/](?=[^\\/]*\(\d+\) : )", "", err))
+                problems += 1
+            sources += dependents(p, stem)
+        else:
+            print(f"{name}: neither a unit nor a class with a header")
+            problems += 1
+    sources = sorted(set(sources))
+    missing = [s for s in sources if not (p.src_dir / s).is_file()]
+    for s in missing:
+        print(f"{s}: no such unit")
+    with ThreadPoolExecutor(jobs) as pool:
+        results = list(pool.map(lambda s: still_same(p, [s], work / s.replace("/", "_"), 1),
+                                [s for s in sources if s not in missing]))
+    for source, err in zip([s for s in sources if s not in missing], results):
+        print(f"{source}: " + (re.sub(r"^.*[\\/](?=[^\\/]*\(\d+\) : )", "", err.split(": ", 1)[-1])
+                               if err else "same code"))
+    return problems + len(missing) + sum(1 for r in results if r)
+
+
 def absorb(p: Project, addresses: List[int], jobs: int) -> None:
     """Merge the accepted functions' own definitions of classes include/Game/ declares into the headers, each
     checked: the header still compiles alone and every unit using it keeps its bytes, else it stays as it was."""
@@ -635,47 +673,56 @@ def absorb(p: Project, addresses: List[int], jobs: int) -> None:
         print(f"{name}: took {', '.join(f'0x{a:08X}' for a, _, _ in props)}'s members")
 
 
-def drop(plans: Dict[str, Plan], skipped: Dict[str, str], names: Dict[str, str], game: Optional[Path]) -> None:
-    """Take classes out (with why), and every header that needs one of them."""
+def drop(plans: Dict[str, Plan], skipped: Dict[str, str], names: Dict[str, str], game: Optional[Path],
+         existing: Set[str] = frozenset()) -> None:
+    """Take classes out (with why), and every header that needs one of them (`existing` headers stay)."""
     while names:
         for name, why in names.items():
             skipped[name] = why
             plans.pop(name, None)
             if game is not None:
                 (game / f"{name}.h").unlink(missing_ok=True)
-        names = {n: f"needs {sorted(plan.needs - set(plans))[0]}, which has no header"
-                 for n, plan in plans.items() if plan.needs - set(plans)}
+        names = {n: f"needs {sorted(plan.needs - set(plans) - existing)[0]}, which has no header"
+                 for n, plan in plans.items() if plan.needs - set(plans) - existing}
 
 
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("command", choices=("stats", "build", "absorb"))
-    ap.add_argument("addrs", nargs="*", help="absorb: accepted functions whose class definitions to merge")
+    ap.add_argument("command", choices=("stats", "build", "absorb", "check"))
+    ap.add_argument("addrs", nargs="*", help="absorb: accepted functions whose class definitions to merge; "
+                                             "check: units (Game/X.cpp) and classes with a header")
     ap.add_argument("--classes", default="", help="only these classes and what they need (comma-separated)")
     ap.add_argument("--jobs", type=int, default=os.cpu_count() or 8)
     args = ap.parse_args()
-    if os.environ.get("T3_AGENT_ID"):
-        sys.exit("headers.py is the lead's")
     p = Project()
+    if args.command == "check":  # the one a worker may run: it only reads the tree
+        sys.exit(1 if check(p, args.addrs, min(args.jobs, 4) if os.environ.get("T3_AGENT_ID") else args.jobs)
+                 else 0)
+    if os.environ.get("T3_AGENT_ID"):
+        sys.exit("headers.py is the lead's (a worker may run `check`)")
     if args.command == "absorb":
         absorb(p, [p.parse_addr(a) for a in args.addrs], args.jobs)
         return
     units = load_units(p)
+    existing = existing_plans(p)
     work = Path(tempfile.mkdtemp(prefix="t3headers-", dir=p.state_dir("tmp")))
     packages = package_index(p)
     kinds = kinds_of(units)
+    for name, plan in existing.items():  # a class only its header defines now
+        kinds.setdefault(name, plan.decl.kind)
     frees = free_index(units)
     var = variants(units)
     classes = set(var) | set(packages)
     with_methods = method_classes(units)
-    wanted = {n for n, v in var.items() if (len(v) >= 2 or n in with_methods) and n not in packages}
+    wanted = {n for n, v in var.items()
+              if (len(v) >= 2 or n in with_methods) and n not in packages and n not in existing}
     if args.classes:
         wanted &= set(args.classes.split(","))
     todo = list(wanted)  # and every class those need complete, from any unit
     while todo:
         for d in var.get(todo.pop(), {}).values():
             for x in complete_types(d, d.text, frees, classes):
-                if x in var and x not in wanted and x not in packages:
+                if x in var and x not in wanted and x not in packages and x not in existing:
                     wanted.add(x)
                     todo.append(x)
     # measure the units whose declarations of a wanted class differ
@@ -687,13 +734,16 @@ def main() -> None:
                 errors[source] = err
     print(f"{len(units)} units; {len(wanted)} classes to give a header; {len(differing)} units measured, "
           f"{len(errors)} could not be")
-    plans, skipped = plan_headers(units, var, wanted, set(differing) - set(errors), packages, kinds, frees)
+    plans, skipped = plan_headers(units, var, wanted, set(differing) - set(errors), packages, kinds, frees,
+                                  set(existing))
     # one file per class: a case-blind disk would give Class_10bf7f90 and Class_10BF7F90 one header
     by_file: Dict[str, List[str]] = collections.defaultdict(list)
     for name in plans:
         by_file[name.lower()].append(name)
+    for name in plans:
+        by_file[name.lower()] += [x for x in existing if x.lower() == name.lower()]
     drop(plans, skipped, {n: f"{' and '.join(sorted(ns))} would share a file on a case-blind disk"
-                          for ns in by_file.values() if len(ns) > 1 for n in ns}, None)
+                          for ns in by_file.values() if len(ns) > 1 for n in ns if n in plans}, None, set(existing))
     # every header compiles on its own: written to include/ (build) or beside the test sources (stats).
     # A member a header does not compile with is left out of it, and the header tried again.
     root = p.include_dir if args.command == "build" else work / "include"
@@ -708,14 +758,15 @@ def main() -> None:
         if not fixed:
             break
         for name in fixed:
-            plans[name].text = header_text(plans[name], set(plans), kinds, frees, packages, units)
+            plans[name].text = header_text(plans[name], set(plans) | set(existing), kinds, frees, packages, units)
             (game / f"{name}.h").write_text(plans[name].text, encoding="utf-8", newline="\n")
         failed = compile_alone(p, {n: plans[n] for n in failed}, here, args.jobs)
     drop(plans, skipped, {n: "does not compile alone: " + re.sub(r"^.*[\\/](?=[^\\/]*\(\d+\) : )", "", e)
                           for n, e in failed.items()},
-         game if args.command == "build" else None)  # a dry run keeps them to look at
+         game if args.command == "build" else None, set(existing))  # a dry run keeps them to look at
     repaired = {n: x.repairs for n, x in plans.items() if x.repairs}
-    print(f"{len(plans)} headers ({sum(1 for x in plans.values() if x.verbatim)} as every unit declares them, "
+    print(f"{len(existing)} headers kept as they are; {len(plans)} new "
+          f"({sum(1 for x in plans.values() if x.verbatim)} as every unit declares them, "
           f"{sum(1 for x in plans.values() if not x.verbatim)} merged, {len(repaired)} of them without a member "
           f"they did not compile with); {len(skipped)} classes without one:")
     reasons = collections.Counter(
@@ -728,19 +779,36 @@ def main() -> None:
     if args.command == "stats":
         print(f"the headers are in {game}; build/agent/headers-stats.json says why the rest have none")
         return
-    migrate_all(p, units, plans, work, args.jobs)
+    migrate_all(p, units, {**existing, **plans}, work, args.jobs)
+
+
+def existing_plans(p: Project) -> Dict[str, Plan]:
+    """The headers include/Game/ has, as migration needs them: what they include, what they carry. A later
+    `build` keeps them as they are (absorb grows them, checked against every unit using them)."""
+    out = {}
+    for h in sorted((p.include_dir / GAME_DIR).glob("*.h")):
+        text = h.read_text(encoding="utf-8")
+        decl = header_class(text, h.stem)
+        if decl is None:
+            continue
+        plan = Plan(h.stem, decl, True, "", [])
+        plan.text = text
+        plan.needs = set(re.findall(r'#include "Game/(\w+)\.h"', text)) - {h.stem}
+        plan.carries = [i for i in integrate.items(text) if free_name(i)]
+        out[h.stem] = plan
+    return out
 
 
 def migrate_all(p: Project, units: Dict[str, UnitDecls], plans: Dict[str, Plan], work: Path, jobs: int) -> None:
-    """Move each unit onto the headers whose classes it declares, keeping its bytes; then drop the
-    headers no unit uses."""
+    """Move each unit onto the headers whose classes it declares, keeping its bytes; then drop the headers
+    no unit uses."""
     game = p.include_dir / GAME_DIR
 
     def closure(n: str) -> Set[str]:
         out, todo = set(), [n]
         while todo:
             for x in plans[todo.pop()].needs:
-                if x not in out:
+                if x not in out and x in plans:
                     out.add(x)
                     todo.append(x)
         return out
@@ -794,13 +862,14 @@ def migrate_all(p: Project, units: Dict[str, UnitDecls], plans: Dict[str, Plan],
         text = check(candidates, "all")
         if text is not None:
             return u.source, text, set()
-        good = {n for n in sorted(candidates) if check({n}, f"one_{n}") is not None}
-        while good:
-            text = check(good, "good")
-            if text is not None:
-                return u.source, text, candidates - good
-            good.discard(sorted(good)[-1])
-        return u.source, None, candidates
+        # one header at a time, what others include first, each kept when the bytes stay
+        use: Set[str] = set()
+        for n in sorted(candidates, key=lambda n: (len(closure(n)), n)):
+            found = check(use | {n}, f"add_{len(use)}_{n}")
+            if found is not None:
+                use.add(n)
+                text = found
+        return u.source, text if use else None, candidates - use
 
     with ThreadPoolExecutor(jobs) as pool:
         results = list(pool.map(migrate, units.values()))
@@ -810,7 +879,8 @@ def migrate_all(p: Project, units: Dict[str, UnitDecls], plans: Dict[str, Plan],
         if text is not None:
             (p.src_dir / source).write_text(text, encoding="utf-8", newline="\n")
             moved += 1
-            for n in re.findall(r'#include "Game/(\w+)\.h"', text):
+        for n in re.findall(r'#include "Game/(\w+)\.h"', text if text is not None else units[source].text):
+            if n in plans:
                 used |= {n} | closure(n)
         for n in kept:
             kept_local[n].append(source)
