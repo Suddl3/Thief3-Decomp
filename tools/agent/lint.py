@@ -27,6 +27,10 @@ RULES: List[Tuple[str, "re.Pattern[str]", str]] = [
         r"(?:0[xX][0-9A-Fa-f]+|\d+)\s*\)"), "pointer + integer offset cast (use a struct field)"),
     ("offset-cast", re.compile(r"\(\s*[\w:<>\s]+\*+\s*\)\s*\(\s*this\s*[-+]\s*(?:0[xX][0-9A-Fa-f]+|\d+)\s*\)"),
      "`this` + integer offset cast (use a struct field)"),
+    # The same through a pointer variable cast beforehand: char* P = (char*)F(); *(T*)(P + 0x2c)
+    ("offset-cast", re.compile(r"\(\s*(?:const\s+)?[\w:<>\s]+\*+\s*\)\s*\(\s*(?!this\b)[A-Za-z_][\w\->.\[\]()]*\s*"
+                               r"[-+]\s*(?:0[xX][0-9A-Fa-f]+|\d+)\s*\)"),
+     "pointer + integer offset cast (use a struct field)"),
     # Forms that reproduce a method's code without being one (seen in review, docs/agent-workflow.md).
     ("register-name", re.compile(r"\b(?:int|unsigned|long|short|char|float|DWORD|INT|BYTE|void\s*\*)\s*\**\s*"
                                  r"(?:eax|ebx|ecx|edx|esi|edi|ebp|esp|local_e[a-d]x)\b"),

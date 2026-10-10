@@ -322,6 +322,8 @@ def test_lint(base: Path) -> None:
     for body, rule in (("int Seven(int x) { __asm { nop } return x * 7 + 100; }", "[asm]"),
                        ("int Seven(int x) { if (x) goto done; done: return x * 7 + 100; }", "[goto]"),
                        ("int Seven(int x) { return *(int*)((char*)&x + 0) * 7 + 100; }", "[offset-cast]"),
+                       ("int Seven(int x) { char* P = (char*)&x; return *(int*)(P + 0) * 7 + 100; }",
+                        "[offset-cast]"),
                        ("int Seven(int x) { return x * 7 + *(int*)0x10F00000; }", "[address]"),
                        ("int Seven(int param_1) { int iVar1 = param_1 * 7; return iVar1 + 100; }", "[decompiler]")):
         proc = e.run("accept.py", e.addr(sym), e.candidate(sym, body))
