@@ -226,7 +226,9 @@ game    start:0x10A11140 end:0x10A111B0
 libs    start:0x10A111B0 end:0x10A11270
 game    start:0x10A11270 end:0x10A11310
 libs    start:0x10A11310 end:0x10A114A0
-game    start:0x10A114A0 end:0x10A2B1C0
+game    start:0x10A114A0 end:0x10A1F59A
+libs    start:0x10A1F59A end:0x10A1F5F0
+game    start:0x10A1F5F0 end:0x10A2B1C0
 engine  start:0x10A2B1C0 end:0x10A2B2E0
 game    start:0x10A2B2E0 end:0x10A2C5B0
 engine  start:0x10A2C5B0 end:0x10A2C610
@@ -554,7 +556,9 @@ game    start:0x10C67D80 end:0x10C67F60
 libs    start:0x10C67F60 end:0x10C67F90
 game    start:0x10C67F90 end:0x10C68670
 libs    start:0x10C68670 end:0x10C686A0
-game    start:0x10C686A0 end:0x10C68BD0
+game    start:0x10C686A0 end:0x10C68A70
+libs    start:0x10C68A70 end:0x10C68AF0
+game    start:0x10C68AF0 end:0x10C68BD0
 libs    start:0x10C68BD0 end:0x10C68CE0
 game    start:0x10C68CE0 end:0x10C68DF6
 libs    start:0x10C68DF6 end:0x10C68E60

@@ -79,6 +79,44 @@ public:
     Class_10934DB0_Member* Unknown00;
 };
 
+class Class_10934990
+{
+public:
+    int FUN_10934990(int* Out, int B, int C);
+
+    char Unknown00[0x14];
+    unsigned char Unknown14;
+};
+
+class Class_10E49D44
+{
+public:
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual void Virtual2();
+    virtual int FUN_10934930(unsigned int A, int B, int C, int D, int* Out);
+
+    char Unknown04[8];
+    unsigned int Unknown0C;
+    Class_10934990** Unknown10;
+};
+
+// FUNCTION: 0x10934930 ?FUN_10934930@Class_10E49D44@@UAEHIHHHPAH@Z
+int Class_10E49D44::FUN_10934930(unsigned int A, int B, int C, int D, int* Out)
+{
+    if (!Out)
+        return 0x80070057;
+    *Out = 0;
+    if (A < Unknown0C && B != 0)
+    {
+        Class_10934990* Element = Unknown10[A];
+        if (!(Element->Unknown14 & 1))
+            return 0x8004071e;
+        return Element->FUN_10934990(Out, B, D);
+    }
+    return 0x80070057;
+}
+
 // FUNCTION: 0x10934A20 ?FUN_10934a20@Class_10E49EE0@@UAEHXZ
 int Class_10E49EE0::FUN_10934a20()
 {

@@ -44,6 +44,37 @@ public:
     void FUN_10c265c0();
 };
 
+class Class_10C3CFC0
+{
+public:
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual int Virtual2();
+
+    void FUN_10c3cfc0(int A, int B, int C);
+};
+
+class Class_10C26570
+{
+public:
+    void FUN_10c26570(int A, int B, int C);
+
+    char Unknown00[0x38];
+    int Unknown38;
+    char Unknown3C[4];
+    Class_10C3CFC0** Unknown40;
+};
+
+// FUNCTION: 0x10C26570 ?FUN_10c26570@Class_10C26570@@QAEXHHH@Z
+void Class_10C26570::FUN_10c26570(int A, int B, int C)
+{
+    for (int i = 0; i < Unknown38; i++)
+    {
+        if (Unknown40[i]->Virtual2() == 2)
+            Unknown40[i]->FUN_10c3cfc0(B, A, C);
+    }
+}
+
 // FUNCTION: 0x10C265C0 ?FUN_10c265c0@Class_10E992D4@@QAEXXZ
 void Class_10E992D4::FUN_10c265c0()
 {

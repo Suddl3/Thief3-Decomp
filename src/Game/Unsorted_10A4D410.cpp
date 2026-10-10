@@ -50,6 +50,38 @@ public:
     int Unknown340[6];
 };
 
+class Class_10A4D4E0
+{
+public:
+    int FindIndex(int Key)
+    {
+        for (int i = 0; i < UnknownC4; i++)
+        {
+            if (UnknownC0[i] == Key)
+                return i;
+        }
+        return -1;
+    }
+
+    char Unknown00[0xC0];
+    int* UnknownC0;
+    int UnknownC4;
+};
+
+// FUNCTION: 0x10A4D4E0 ?FUN_10a4d4e0@@YGHPAVClass_10A4D4E0@@H@Z
+int __stdcall FUN_10a4d4e0(Class_10A4D4E0* Obj, int Key)
+{
+    int Result = 0;
+    if (Obj)
+    {
+        int Index = Obj->FindIndex(Key);
+        if (Index < Obj->UnknownC4 - 1)
+            return Obj->UnknownC0[Index + 1];
+        Result = Obj->UnknownC0[0];
+    }
+    return Result;
+}
+
 // FUNCTION: 0x10A4DD60 ?FUN_10a4dd60@Class_10A4DD60@@QAEHH@Z
 int Class_10A4DD60::FUN_10a4dd60(int Index)
 {

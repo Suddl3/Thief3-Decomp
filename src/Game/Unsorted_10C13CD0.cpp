@@ -38,6 +38,60 @@ public:
     virtual void FUN_10c13ea0(int, int, int, int);
 };
 
+struct Struct_10AA3520
+{
+    char Unknown00[8];
+    void* Unknown08;
+};
+
+extern Struct_10AA3520* DAT_10f35dec;
+
+class Class_10BAA6B0_Param;
+
+class Class_10BAA9D0
+{
+public:
+    bool FUN_10baa9d0(void* A, float B, bool C);
+};
+
+class Class_10BABED0 : public Class_10BAA9D0
+{
+};
+
+Class_10BABED0* FUN_10baa6b0(Class_10BAA6B0_Param* A);
+
+bool FUN_10c16700(void* A);
+
+class Class_10978090
+{
+public:
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual void Virtual2();
+    virtual void Virtual3();
+    virtual void Virtual4();
+    virtual void Virtual5();
+    virtual int Virtual6(int A, int B);
+    virtual void Virtual7();
+    virtual Class_10BAA6B0_Param* Virtual8();
+    int FUN_10978090();
+};
+
+class Class_10E8D618 : public Class_10978090
+{
+public:
+    virtual int FUN_10c13cd0(int A, int B);
+};
+
+// FUNCTION: 0x10C13CD0 ?FUN_10c13cd0@Class_10E8D618@@UAEHHH@Z
+int Class_10E8D618::FUN_10c13cd0(int A, int B)
+{
+    Class_10BAA6B0_Param* Param = ((Class_10978090*)FUN_10978090())->Virtual8();
+    if (FUN_10baa6b0(Param)->FUN_10baa9d0(DAT_10f35dec->Unknown08, 0.25f, true) && FUN_10c16700(DAT_10f35dec->Unknown08))
+        return 1;
+    return 0;
+}
+
 // FUNCTION: 0x10C13E80 ?FUN_10c13e80@Class_10E8C1F0@@QAEXXZ
 void Class_10E8C1F0::FUN_10c13e80()
 {
