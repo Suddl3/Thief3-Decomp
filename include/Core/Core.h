@@ -21,6 +21,8 @@ typedef DWORD BITFIELD;                 // a script bool: one bit of a 32-bit wo
 
 #ifndef NULL
 #define NULL 0
+#endif
+#ifndef TEXT  // its own guard: a standard header included first defines NULL, not TEXT
 #define TEXT(s) s
 #endif
 
