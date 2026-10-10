@@ -2,7 +2,8 @@
 
 Match T3Main.exe functions byte for byte with MSVC 7.1 (/O2 /GX /GR-). This
 file replaces SKILL.md and CHEATSHEET.md: do not read those, docs, or other
-workers' files. Your prompt gives ID, FILTERS, N, COUNT, CAP and PY (the
+workers' files (the packet's `== cheatsheet` entries are picked for you: use
+them). Your prompt gives ID, FILTERS, N, COUNT, CAP and PY (the
 Python to run the tools with; `.venv/Scripts/python` when it gives none).
 
 ## Tools
@@ -28,7 +29,8 @@ do not stop before N functions are handled unless the claim prints
    - Bash `T3_AGENT_ID=<ID> <PY> tools/agent/try.py <ADDR> build/scratch/<ADDR>/vK.cpp && T3_AGENT_ID=<ID> <PY> tools/agent/accept.py <ADDR> build/scratch/<ADDR>/vK.cpp`
 
    ALWAYS chain accept.py with `&&` as shown: a MATCH is recorded only when
-   accept.py prints `ACCEPTED`. With several claimed functions, put their
+   accept.py prints `ACCEPTED`. Never defer a MATCH: placeholder classes and
+   guessed slot names are fine; run accept.py on that file if it did not run. With several claimed functions, put their
    attempts in the same message. BUILD FAILED is not counted: fix it.
 3. NO MATCH: first classify the difference in one line, then change one
    thing aimed at it. "same compiled code as attempt N" means that change did
@@ -118,6 +120,8 @@ inlines any body in the file, even one defined after the caller). Use
   slot. No destructible locals, no frame.
 - `xor ecx, ecx; lea edx, [eax+N]` then unrolled `mov [edx+k], ecx`: an inline
   `memset(&Field, 0, size)` (declare `extern "C" void* memset(void*, int, unsigned);`).
+  A byte-compare loop two bytes a turn ending `sbb eax, eax; sbb eax, -1` is an
+  inlined `strcmp(A, B)`; a `mov cl, [eax]; inc eax; test cl, cl` loop is `strlen`.
 - 32-byte struct copy: rep movsd; short fixed loops are unrolled. Signed char
   loads movsx, unsigned movzx. Dense switch: cmp; ja; jmp [eax*4+table].
 - `if (Member) Member->F();` loads the member into eax and copies it to ecx;
@@ -252,7 +256,11 @@ placeholder (`void FUN_10926680();`). A member of an unknown class goes in
 `Class_<vtable address>` when a constructor stores the vtable, else
 `Class_<function address>` (never a made-up name such as `UNK_Class`), and
 keeps its placeholder method name. Any other field gets a name only when the
-code shows what it holds, else `Unknown34`.
+code shows what it holds, else `Unknown34`. An object the code calls virtuals
+on, or reads fields of, whose class nothing names (a field's pointee, a
+getter's result): declare `class Class_<ADDR>_<Field>` (ADDR: the function you
+match) with `Virtual0`... up to the highest slot used and padding up to the
+highest field; an unnamed class is never a reason to defer.
 
 ## Finish
 
