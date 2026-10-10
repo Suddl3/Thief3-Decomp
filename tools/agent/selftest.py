@@ -1008,6 +1008,78 @@ def test_fold_into(base: Path) -> None:
 TESTS.append(test_fold_into)
 
 
+def test_class_declarations(base: Path) -> None:
+    """Two units' declarations of one class, measured by the compiler and merged (classdecl.py): fields by
+    offset, the methods of both, and a layout the compiler agrees with."""
+    import classdecl
+    p = Project()
+    first = ("class Widget\n{\npublic:\n    virtual void Virtual0();\n    int Count() const;\n\n"
+             "    char Unknown04[0x8];\n    int Size;\n};\n")
+    second = ("class Widget\n{\npublic:\n    virtual void Draw();\n    void Reset();\n\n"
+              "    int Flags;\n    char Unknown08[0x4];\n    int Total;\n};\n")
+    decls = []
+    for i, text in enumerate((first, second)):
+        d = classdecl.parse(text)
+        source, order = classdecl.probe_source(text, [d])
+        path = base / "decls" / f"probe{i}.cpp"
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(source, encoding="utf-8")
+        ok, log = p.compile(path, path.with_suffix(".obj"), p.configure.CFLAGS)
+        check(ok, f"the probe compiles: {log}")
+        classdecl.read_probe(path.with_suffix(".obj").read_bytes(), [d], order)
+        decls.append(d)
+    check([(f.name, f.offset, f.size) for f in decls[0].fields()] == [("Unknown04", 4, 8), ("Size", 12, 4)],
+          f"offsets measured: {[(f.name, f.offset, f.size) for f in decls[0].fields()]}")
+    dropped = []
+    merged = classdecl.merge(decls, dropped=dropped)
+    text = classdecl.write(merged)
+    names = [m.name for m in merged.members]
+    check("Draw" in names and "Virtual0" not in names, f"a named slot wins over a placeholder: {names}")
+    check({"Count", "Reset"} <= set(names), f"the methods of both: {names}")
+    fields = [(f.key, f.offset) for f in merged.fields()]
+    check(fields == [("Flags", 4), ("Unknown08", 8), ("union:Size,Total", 12)] and not dropped,
+          f"fields by offset, the padding under Flags gone, Size and Total sharing 0xC: {fields}\n{text}")
+    again = classdecl.parse(text)
+    source, order = classdecl.probe_source(text, [again])
+    path = base / "decls" / "merged.cpp"
+    path.write_text(source, encoding="utf-8")
+    ok, log = p.compile(path, path.with_suffix(".obj"), p.configure.CFLAGS)
+    check(ok, f"the merged declaration compiles: {log}\n{text}")
+    classdecl.read_probe(path.with_suffix(".obj").read_bytes(), [again], order)
+    check(again.size == 16, f"and keeps the size: {again.size}\n{text}")
+
+
+TESTS.append(test_class_declarations)
+
+
+def test_restructure_helpers(base: Path) -> None:
+    """Renaming placeholder classes (restructure.py) leaves `// FUNCTION:` lines to the compiler and refuses
+    a decorated name a back-reference would change; headers.py finds include cycles and free declarations."""
+    import headers
+    import restructure
+    renames = {"Class_10000010": "Class_10E00000", "Class_10000020": "Class_10E00000"}
+    rename = restructure.renamer(renames)
+    text = ("class Class_10000010;\n// FUNCTION: 0x10000010 ?Get@Class_10000010@@QAEHXZ\n"
+            "int Class_10000010::Get() { return Class_10000010_Field; }\n")
+    out = rename(text)
+    check("// FUNCTION: 0x10000010 ?Get@Class_10000010@@QAEHXZ" in out and "int Class_10E00000::Get()" in out
+          and "Class_10000010_Field" in out, f"code renamed, marker and longer names kept:\n{out}")
+    check(restructure.substitute("?Get@Class_10000010@@QAEHXZ", renames) == "?Get@Class_10E00000@@QAEHXZ",
+          "a plain substitution")
+    check(restructure.substitute("?Copy@Class_10000010@@QAEXPAVClass_10000020@@@Z", renames) is None,
+          "two placeholders becoming one class would need a back-reference")
+    graph = {"A": {"B"}, "B": {"A"}, "C": {"A"}, "D": set()}
+    check([sorted(c) for c in headers.cycles(graph)] == [["A", "B"]], f"cycles: {headers.cycles(graph)}")
+    for item, name in (("void FUN_10948890();\n", "FUN_10948890"), ("extern int DAT_10e4ac64;\n", "DAT_10e4ac64"),
+                       ("extern void (*DAT_10e00010)(int);\n", "DAT_10e00010"), ("enum EKind { A, B };\n", "EKind"),
+                       ("typedef void* HMODULE;\n", "HMODULE"), ("class Class_10000010;\n", None),
+                       ("struct S { int a; };\n", None)):
+        check(headers.free_name(item) == name, f"free_name({item!r}) = {headers.free_name(item)!r}, not {name!r}")
+
+
+TESTS.append(test_restructure_helpers)
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("-k", help="run only tests whose name contains this")
