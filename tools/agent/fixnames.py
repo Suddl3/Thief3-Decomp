@@ -147,8 +147,9 @@ def prepare(p: Project, addr: str) -> dict:
 
     probe = p.root / "build" / "scratch" / addr / f"lead-probe-{int(time.time())}.cpp"
     probe.parent.mkdir(parents=True, exist_ok=True)
-    probe.write_text(source, encoding="utf-8")
-    proc = tool(p, "try.py", addr, str(probe.relative_to(p.root)), "--json")
+    # A first line of its own: try.py refuses a source it checked before, as it did the deferred best.
+    probe.write_text(f"// fixnames.py prepare: {probe.stem}\n" + source, encoding="utf-8")
+    proc = tool(p, "try.py", addr, str(probe.relative_to(p.root)), "--json", "--patience", "0", "--cap", "1000")
     try:
         result = json.loads(proc.stdout)
     except ValueError:
