@@ -293,13 +293,18 @@ def merge(decls: Sequence[ClassDecl], pod_classes: Sequence[str] = (),
     start = max(base_end, 4 if poly and not bases else 0)
     out = ClassDecl(kind="class" if any(d.kind == "class" for d in decls) else "struct", name=name,
                     bases=bases, size=max(d.size for d in decls))
-    # virtual slots, in order
+    # virtual slots, in order. A unit that declares only some of them puts the same one at another
+    # index: each name takes one slot, and a slot left without a name of its own a placeholder.
     lists = [d.virtuals() for d in decls]
     slots: List[Member] = []
+    taken: set = set()
     for i in range(max((len(v) for v in lists), default=0)):
         cands = [v[i] for v in lists if i < len(v)]
-        dtors = [c for c in cands if c.kind == "dtor"]
-        named = [c for c in cands if c.kind != "dtor" and not PLACEHOLDER_SLOT.match(c.name)]
+        fresh = [c for c in cands if c.name not in taken]
+        if len(fresh) < len(cands):
+            dropped.append(f"slot {i}: {sorted({c.name for c in cands if c.name in taken})} has another slot")
+        dtors = [c for c in fresh if c.kind == "dtor"]
+        named = [c for c in fresh if c.kind != "dtor" and not PLACEHOLDER_SLOT.match(c.name)]
         if dtors:
             pick = max(dtors, key=lambda c: c.body)
         elif named:
@@ -308,8 +313,12 @@ def merge(decls: Sequence[ClassDecl], pod_classes: Sequence[str] = (),
             pick = max((c for c in named if c.name == top), key=lambda c: (c.body, len(c.key)))
             if len(counts) > 1:
                 dropped.append(f"slot {i} names {sorted(set(counts) - {top})}")
+        elif fresh:
+            pick = max(fresh, key=lambda c: (c.body, len(c.key)))
         else:
-            pick = max(cands, key=lambda c: (c.body, len(c.key)))
+            slot = next(f"Virtual{i}{s}" for s in ("", "_", "__", "___") if f"Virtual{i}{s}" not in taken)
+            pick = Member("virtual", slot, f"{slot}()", f"    virtual void {slot}();\n")
+        taken.add(pick.name)
         slots.append(pick)
     # fields, by offset
     by_place: Dict[Tuple[int, int], List[Member]] = collections.defaultdict(list)
@@ -409,8 +418,9 @@ def merge(decls: Sequence[ClassDecl], pod_classes: Sequence[str] = (),
     return out
 
 
-def write(d: ClassDecl, comment: str = "") -> str:
-    """A declaration as C++: virtual slots, constructors and destructor, methods, the rest, then the fields."""
+def write(d: ClassDecl, comment: str = "", spans: Optional[List[Tuple[int, int, Member]]] = None) -> str:
+    """A declaration as C++: virtual slots, constructors and destructor, methods, the rest, then the fields.
+    `spans` receives (first line, last line, member) for each member, counted from 0 in the text."""
     head = f"{d.kind} {d.name}" + (f" : {d.bases}" if d.bases else "")
     lines = [comment] if comment else []
     lines += [head, "{", "public:"]
@@ -426,9 +436,12 @@ def write(d: ClassDecl, comment: str = "") -> str:
                 k = "dtor-virtual"
             if k in kinds:
                 emitted.add(id(m))
-                chunk.append(_indent(m.text))
+                text = _indent(m.text).rstrip("\n").split("\n")
+                if spans is not None:
+                    spans.append((len(lines) + len(chunk), len(lines) + len(chunk) + len(text) - 1, m))
+                chunk += text
         if chunk:
-            lines.append("".join(chunk).rstrip("\n"))
+            lines += chunk
             lines.append("")
     if lines[-1] == "":
         lines.pop()

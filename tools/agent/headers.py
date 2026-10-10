@@ -263,21 +263,53 @@ def free_index(units: Dict[str, "UnitDecls"]) -> Dict[str, str]:
 class Plan:
     """A header to write: its class, what it includes and forward-declares, the free declarations it carries."""
 
-    def __init__(self, name: str, decl: classdecl.ClassDecl, verbatim: bool, note: str):
-        self.name, self.decl, self.verbatim, self.note = name, decl, verbatim, note
+    def __init__(self, name: str, decl: classdecl.ClassDecl, verbatim: bool, note: str, sources: List[str]):
+        self.name, self.decl, self.verbatim, self.note, self.sources = name, decl, verbatim, note, sources
         self.needs: Set[str] = set()      # Game headers it includes
         self.carries: List[str] = []      # free declarations, as one unit wrote them
         self.text = ""
+        self.class_line = 0               # the line the class starts on in the text, from 0
+        self.spans: List[Tuple[int, int, classdecl.Member]] = []  # each member's lines in the class
+        self.repairs: List[str] = []      # members left out: the header did not compile with them
+        self.system: Optional[List[str]] = None  # its #include <...> lines (default: the declaring units')
 
     def body(self) -> str:
-        return self.decl.text if self.verbatim else classdecl.write(self.decl)
+        self.spans = []
+        return self.decl.text if self.verbatim else classdecl.write(self.decl, spans=self.spans)
+
+    def member_at(self, line: int) -> Optional[classdecl.Member]:
+        for first, last, m in self.spans:
+            if first <= line - self.class_line <= last:
+                return m
+        return None
+
+
+def carried(decl: classdecl.ClassDecl, text: str, frees: Dict[str, str], classes: Set[str]) -> List[str]:
+    """The free declarations a class's text names: an inline body's callee or global, a field's enum or typedef."""
+    inline = set()
+    for m in decl.members:
+        if m.body:
+            inline |= set(classdecl.uses(m.text))
+    out = []
+    for n in sorted(set(classdecl.uses(text)) - classes - {decl.name}):
+        if n in frees and (n in inline or frees[n].lstrip().startswith(("enum", "typedef"))):
+            out.append(frees[n])
+    return out
+
+
+def complete_types(decl: classdecl.ClassDecl, text: str, frees: Dict[str, str], classes: Set[str]) -> Set[str]:
+    """Names a header must have complete: by_value_types', and the types of the free functions its inline
+    bodies call (`FUN_10905aa0()->Virtual5(Block)` needs the class FUN_10905aa0 returns)."""
+    out = by_value_types(decl)
+    for f in carried(decl, text, frees, classes):
+        out |= set(classdecl.uses(f))
+    return out
 
 
 def plan_headers(units: Dict[str, UnitDecls], var: Dict[str, Dict[str, classdecl.ClassDecl]], wanted: Set[str],
-                 measured: Set[str], packages: Dict[str, Tuple[str, str]]) -> Tuple[Dict[str, Plan], Dict[str, str]]:
+                 measured: Set[str], packages: Dict[str, Tuple[str, str]], kinds: Dict[str, str],
+                 frees: Dict[str, str]) -> Tuple[Dict[str, Plan], Dict[str, str]]:
     """({class: plan}, {class: why it has no header})."""
-    kinds = kinds_of(units)
-    frees = free_index(units)
     skipped: Dict[str, str] = {}
     plans: Dict[str, Plan] = {}
     for name in sorted(wanted):
@@ -287,7 +319,7 @@ def plan_headers(units: Dict[str, UnitDecls], var: Dict[str, Dict[str, classdecl
             unique.setdefault(classdecl.normal(d.text), d)
         note = f"declared by {len(decls)} unit{'s' if len(decls) != 1 else ''}"
         if len(unique) == 1:
-            plans[name] = Plan(name, next(iter(unique.values())), True, note)
+            plans[name] = Plan(name, next(iter(unique.values())), True, note, sorted(var[name]))
             continue
         if any(lays_out_others(d) for d in unique.values()):
             skipped[name] = "bitfields or several fields to a line, declared differently: merge by hand"
@@ -303,10 +335,11 @@ def plan_headers(units: Dict[str, UnitDecls], var: Dict[str, Dict[str, classdecl
             skipped[name] = str(e)
             continue
         merged.kind = kinds.get(name, merged.kind)
-        plans[name] = Plan(name, merged, False, note)
+        plans[name] = Plan(name, merged, False, note, sorted(var[name]))
     # what each needs complete, and the cycles that rules out
+    classes = set(var) | set(packages)
     for name, plan in plans.items():
-        plan.needs = (by_value_types(plan.decl) & set(var)) - set(packages) - {name}
+        plan.needs = (complete_types(plan.decl, plan.body(), frees, classes) & set(var)) - set(packages) - {name}
     changed = True
     while changed:
         changed = False
@@ -329,7 +362,7 @@ def plan_headers(units: Dict[str, UnitDecls], var: Dict[str, Dict[str, classdecl
                 del plans[name]
                 changed = True
     for name, plan in plans.items():
-        plan.text = header_text(plan, set(plans), kinds, frees, packages)
+        plan.text = header_text(plan, set(plans), kinds, frees, packages, units)
     return plans, skipped
 
 
@@ -384,22 +417,13 @@ def cycles(graph: Dict[str, Set[str]]) -> List[List[str]]:
 
 
 def header_text(plan: Plan, headers: Set[str], kinds: Dict[str, str], frees: Dict[str, str],
-                packages: Dict[str, Tuple[str, str]]) -> str:
+                packages: Dict[str, Tuple[str, str]], units: Dict[str, UnitDecls]) -> str:
     body = plan.body()
-    inline_uses = set()
-    for m in plan.decl.members:
-        if m.body:
-            inline_uses |= set(classdecl.uses(m.text))
-    used = set(classdecl.uses(body))
-    # free declarations the class's text names (an inline body's callee, a field's enum)
-    carried = []
-    for n in sorted(used - headers - set(packages) - {plan.name}):
-        if n in frees and (n in inline_uses or frees[n].lstrip().startswith(("enum", "typedef"))):
-            carried.append(frees[n])
-    plan.carries = carried
-    used |= {i for f in carried for i in classdecl.uses(f)}
-    complete = by_value_types(plan.decl) | {i for f in carried if f.lstrip().startswith(("enum", "typedef"))
-                                             for i in classdecl.uses(f)}
+    classes = set(kinds) | set(packages) | headers
+    plan.carries = carried(plan.decl, body, frees, classes)
+    in_carried = {i for f in plan.carries for i in classdecl.uses(f)}
+    used = set(classdecl.uses(body)) | in_carried
+    complete = complete_types(plan.decl, body, frees, classes)
     includes = set()
     forward = set()
     for n in used - {plan.name}:
@@ -413,36 +437,73 @@ def header_text(plan: Plan, headers: Set[str], kinds: Dict[str, str], frees: Dic
                 includes.add(where)
         elif n in kinds:
             forward.add((kinds[n], n))
+    if plan.name in in_carried:  # a carried declaration names the class before its definition
+        forward.add((plan.decl.kind, plan.name))
+    # the standard library the declaring units include (std::vector members)
+    system = plan.system if plan.system is not None else sorted(
+        {classdecl.normal(i) for s in plan.sources for i in units[s].items
+         if classdecl.normal(i).startswith("#include <")}) if "std" in used else []
     guard = GUARD.format(plan.name.upper())
     lines = [f"// {plan.name}: {plan.note}.",
              "// Generated by tools/agent/headers.py from the units that declare it; edit it here.",
              f"#ifndef {guard}", f"#define {guard}", ""]
+    lines += system
     lines += [f'#include "{i}"' for i in sorted(includes, key=lambda i: (i.startswith(GAME_DIR), i))]
-    if includes:
+    if includes or system:
         lines.append("")
     lines += [f"{kind} {n};" for kind, n in sorted(forward, key=lambda x: x[1])]
     if forward:
         lines.append("")
-    for f in carried:
+    for f in plan.carries:
         lines.append(f.strip("\n"))
-    if carried:
+    if plan.carries:
         lines.append("")
+    plan.class_line = sum(1 + line.count("\n") for line in lines)
     lines.append(body.strip("\n"))
     lines += ["", f"#endif // {guard}", ""]
     return "\n".join(lines)
 
 
-def compile_alone(p: Project, plans: Dict[str, Plan], work: Path, jobs: int) -> Dict[str, str]:
-    """{class: the first error} for headers that do not compile on their own."""
+ERROR_AT = re.compile(r"[\\/]" + GAME_DIR + r"[\\/](\w+)\.h\((\d+)\) : error (C\d+): (.*)")
+
+
+def repair(plan: Plan, error: str) -> bool:
+    """Leave out the member a header's own compile error is in (never a field: the layout stays); a header
+    the units all declare alike is read member by member first. False when there is nothing to leave out."""
+    m = ERROR_AT.search(error)
+    if m is None or m.group(1) != plan.name or lays_out_others(plan.decl):
+        return False
+    if plan.verbatim:
+        plan.verbatim = False
+        return True
+    member = plan.member_at(int(m.group(2)) - 1)
+    if member is None:  # an error the compiler puts at the class's end names the member
+        said = re.findall(r"::(~?\w+)'", m.group(4))
+        member = next((x for x in plan.decl.members if said and x.name == said[0] and x.kind != "field"), None)
+    if member is None or member.kind == "field":
+        return False
+    if member.kind == "virtual" and not plan.decl.bases:  # its slot stays, as a placeholder
+        taken = {x.name for x in plan.decl.members}
+        slot = next(f"Slot{i}" for i in range(1000) if f"Slot{i}" not in taken)
+        stand_in = classdecl.Member("virtual", slot, f"{slot}()", f"    virtual void {slot}();\n")
+        plan.decl.members = [stand_in if x is member else x for x in plan.decl.members]
+    else:
+        plan.decl.members = [x for x in plan.decl.members if x is not member]
+    plan.repairs.append(f"{member.key or member.name}: {m.group(3)}")
+    return True
+
+
+def compile_alone(p: Project, plans: Dict[str, Plan], here: Path, jobs: int) -> Dict[str, str]:
+    """{class: its first error} for headers that do not compile on their own. The test sources go in
+    `here`: a quoted #include looks beside its file first, so headers written there win over include/."""
     def one(name: str) -> Optional[str]:
-        path = work / "alone" / f"{name}.cpp"
-        path.parent.mkdir(parents=True, exist_ok=True)
+        path = here / f"alone_{name}.cpp"
         path.write_text(f'#include "{GAME_DIR}/{name}.h"\n', encoding="utf-8")
         ok, log = p.compile(path, path.with_suffix(".obj"), p.configure.CFLAGS)
         if ok:
             return None
-        return next((re.sub(r"^.*?\(\d+\) : ", "", line.strip()) for line in log.splitlines() if "error" in line),
-                    "does not compile")
+        return next((line.strip() for line in log.splitlines() if "error" in line), "does not compile")
+    here.mkdir(parents=True, exist_ok=True)
     failed = {}
     with ThreadPoolExecutor(jobs) as pool:
         for name, err in zip(plans, pool.map(one, plans)):
@@ -451,19 +512,161 @@ def compile_alone(p: Project, plans: Dict[str, Plan], work: Path, jobs: int) -> 
     return failed
 
 
+def header_class(text: str, name: str) -> Optional[classdecl.ClassDecl]:
+    """The definition of `name` in a header's text."""
+    for item in integrate.items(text):
+        d = classdecl.parse(item)
+        if d is not None and d.name == name:
+            return d
+    return None
+
+
+def in_place(text: str) -> str:
+    """A header's text without its include guard: to compile as a unit's declarations (a probe opens their
+    private members, which an #include would hide)."""
+    return "".join(line for line in text.splitlines(keepends=True)
+                   if not re.match(r"^\s*#\s*(?:ifndef|define|endif)\b.*\bGAME_\w+_H\b", line))
+
+
+def probe(p: Project, declarations: str, decls: List[classdecl.ClassDecl], path: Path) -> Optional[str]:
+    """Measure `decls` as `declarations` declare them; an error message on failure."""
+    text, order = classdecl.probe_source(declarations, decls)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(text, encoding="utf-8")
+    ok, log = p.compile(path, path.with_suffix(".obj"), p.configure.CFLAGS)
+    if not ok:
+        return " / ".join(log.splitlines()[:2])
+    classdecl.read_probe(path.with_suffix(".obj").read_bytes(), decls, order)
+    return None
+
+
+def dependents(p: Project, name: str) -> List[str]:
+    """The units that include include/Game/<name>.h, directly or through another header."""
+    game = p.include_dir / GAME_DIR
+    includes = {h.stem: set(re.findall(r'#include "Game/(\w+)\.h"', h.read_text(encoding="utf-8", errors="replace")))
+                for h in game.glob("*.h")}
+    users = {name}
+    changed = True
+    while changed:
+        changed = False
+        for h, inc in includes.items():
+            if h not in users and inc & users:
+                users.add(h)
+                changed = True
+    out = []
+    for path in sorted((p.src_dir / GAME_DIR).glob("*.cpp")):
+        if set(re.findall(r'#include "Game/(\w+)\.h"', path.read_text(encoding="utf-8", errors="replace"))) & users:
+            out.append(f"{GAME_DIR}/{path.name}")
+    return out
+
+
+def still_same(p: Project, sources: List[str], work: Path, jobs: int) -> Optional[str]:
+    """None when every unit in `sources` compiles to its current object's code, else the first that does not."""
+    def one(source: str) -> Optional[str]:
+        old = p.main / "build" / p.version / "src" / source.replace(".cpp", ".obj")
+        new = work / "check" / source.replace(".cpp", ".obj")
+        ok, log = p.compile(p.src_dir / source, new, cflags(p, source))
+        if not ok:
+            return f"{source} does not compile: {log.splitlines()[0] if log else ''}"
+        diff = same_code(old, new) if old.is_file() else "has no object to compare (ninja first)"
+        return f"{source}: {diff}" if diff else None
+    with ThreadPoolExecutor(jobs) as pool:
+        return next((x for x in pool.map(one, sources) if x), None)
+
+
+def absorb(p: Project, addresses: List[int], jobs: int) -> None:
+    """Merge the accepted functions' own definitions of classes include/Game/ declares into the headers, each
+    checked: the header still compiles alone and every unit using it keeps its bytes, else it stays as it was."""
+    game = p.include_dir / GAME_DIR
+    work = Path(tempfile.mkdtemp(prefix="t3absorb-", dir=p.state_dir("tmp")))
+    proposals: Dict[str, List[Tuple[int, classdecl.ClassDecl, str]]] = collections.defaultdict(list)
+    for a in addresses:
+        path = p.state / "accepted" / f"{a:08X}.cpp"
+        if not path.is_file():
+            print(f"0x{a:08X}: not accepted")
+            continue
+        declarations, _ = integrate.split_file(path.read_text(encoding="utf-8"))
+        for item in integrate.items(declarations):
+            d = classdecl.parse(item)
+            if d is not None and (game / f"{d.name}.h").is_file():
+                proposals[d.name].append((a, d, declarations))
+    if not proposals:
+        print("no accepted function declares a class include/Game/ has")
+        return
+    units = load_units(p)
+    packages, kinds, frees = package_index(p), kinds_of(units), free_index(units)
+    existing = {h.stem for h in game.glob("*.h")}
+    for name, props in sorted(proposals.items()):
+        path = game / f"{name}.h"
+        old_text = path.read_text(encoding="utf-8")
+        current = header_class(old_text, name)
+        if current is None:
+            print(f"{name}: its header has no definition of it")
+            continue
+        err = probe(p, in_place(old_text), [current], work / name / "header.cpp")
+        for i, (a, d, declarations) in enumerate(props):
+            err = err or probe(p, declarations, [d], work / name / f"{a:08X}.cpp")
+        if err:
+            print(f"{name}: not measured: {err[:160]}")
+            continue
+        merged = classdecl.merge([current] + [d for _, d, _ in props])
+        keys = {m.key for m in merged.members}
+        places = {(f.offset, f.size) for f in merged.fields()}
+        lost = [m.key for m in current.members if m.kind != "field" and m.key not in keys]
+        lost += [f.name for f in current.fields()
+                 if (f.offset, f.size) not in places and not classdecl.PAD.match(f.name)]
+        if lost:
+            print(f"{name}: the merge would drop {lost[:3]} from the header; merge by hand")
+            continue
+        merged.kind = current.kind
+        plan = Plan(name, merged, False, old_text.split("\n", 1)[0].split(": ", 1)[-1].rstrip("."), [])
+        plan.system = re.findall(r"^#include <[^>]+>", old_text, re.M)
+        plan.text = header_text(plan, existing, kinds, frees, packages, units)
+        if plan.text == old_text:
+            print(f"{name}: nothing to add")
+            continue
+        path.write_text(plan.text, encoding="utf-8", newline="\n")
+        failed = compile_alone(p, {name: plan}, work / name / "alone", 1)
+        problem = failed.get(name) or still_same(p, dependents(p, name), work / name, jobs)
+        if problem:
+            path.write_text(old_text, encoding="utf-8", newline="\n")
+            print(f"{name}: kept as it was: {problem[:200]}")
+            continue
+        print(f"{name}: took {', '.join(f'0x{a:08X}' for a, _, _ in props)}'s members")
+
+
+def drop(plans: Dict[str, Plan], skipped: Dict[str, str], names: Dict[str, str], game: Optional[Path]) -> None:
+    """Take classes out (with why), and every header that needs one of them."""
+    while names:
+        for name, why in names.items():
+            skipped[name] = why
+            plans.pop(name, None)
+            if game is not None:
+                (game / f"{name}.h").unlink(missing_ok=True)
+        names = {n: f"needs {sorted(plan.needs - set(plans))[0]}, which has no header"
+                 for n, plan in plans.items() if plan.needs - set(plans)}
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("command", choices=("stats", "build"))
+    ap.add_argument("command", choices=("stats", "build", "absorb"))
+    ap.add_argument("addrs", nargs="*", help="absorb: accepted functions whose class definitions to merge")
     ap.add_argument("--classes", default="", help="only these classes and what they need (comma-separated)")
     ap.add_argument("--jobs", type=int, default=os.cpu_count() or 8)
     args = ap.parse_args()
     if os.environ.get("T3_AGENT_ID"):
         sys.exit("headers.py is the lead's")
     p = Project()
+    if args.command == "absorb":
+        absorb(p, [p.parse_addr(a) for a in args.addrs], args.jobs)
+        return
     units = load_units(p)
     work = Path(tempfile.mkdtemp(prefix="t3headers-", dir=p.state_dir("tmp")))
     packages = package_index(p)
+    kinds = kinds_of(units)
+    frees = free_index(units)
     var = variants(units)
+    classes = set(var) | set(packages)
     with_methods = method_classes(units)
     wanted = {n for n, v in var.items() if (len(v) >= 2 or n in with_methods) and n not in packages}
     if args.classes:
@@ -471,7 +674,7 @@ def main() -> None:
     todo = list(wanted)  # and every class those need complete, from any unit
     while todo:
         for d in var.get(todo.pop(), {}).values():
-            for x in by_value_types(d):
+            for x in complete_types(d, d.text, frees, classes):
                 if x in var and x not in wanted and x not in packages:
                     wanted.add(x)
                     todo.append(x)
@@ -484,33 +687,48 @@ def main() -> None:
                 errors[source] = err
     print(f"{len(units)} units; {len(wanted)} classes to give a header; {len(differing)} units measured, "
           f"{len(errors)} could not be")
-    plans, skipped = plan_headers(units, var, wanted, set(differing) - set(errors), packages)
-    if args.command == "build":
-        game = p.include_dir / GAME_DIR
-        game.mkdir(parents=True, exist_ok=True)
-        for name, plan in plans.items():
-            (game / f"{name}.h").write_text(plan.text, encoding="utf-8", newline="\n")
-        failed = compile_alone(p, plans, work, args.jobs)
-        while failed:
-            for name, err in failed.items():
-                skipped[name] = f"does not compile alone: {err[:120]}"
-                plans.pop(name, None)
-                (game / f"{name}.h").unlink()
-            failed = {n: "includes a header that does not compile"
-                      for n, plan in plans.items() if plan.needs - set(plans)}
-            for name in failed:
-                skipped[name] = failed[name]
-                plans.pop(name)
-                (game / f"{name}.h").unlink()
-            failed = {}
+    plans, skipped = plan_headers(units, var, wanted, set(differing) - set(errors), packages, kinds, frees)
+    # one file per class: a case-blind disk would give Class_10bf7f90 and Class_10BF7F90 one header
+    by_file: Dict[str, List[str]] = collections.defaultdict(list)
+    for name in plans:
+        by_file[name.lower()].append(name)
+    drop(plans, skipped, {n: f"{' and '.join(sorted(ns))} would share a file on a case-blind disk"
+                          for ns in by_file.values() if len(ns) > 1 for n in ns}, None)
+    # every header compiles on its own: written to include/ (build) or beside the test sources (stats).
+    # A member a header does not compile with is left out of it, and the header tried again.
+    root = p.include_dir if args.command == "build" else work / "include"
+    game = root / GAME_DIR
+    game.mkdir(parents=True, exist_ok=True)
+    here = work / "alone" if args.command == "build" else root
+    for name, plan in plans.items():
+        (game / f"{name}.h").write_text(plan.text, encoding="utf-8", newline="\n")
+    failed = compile_alone(p, plans, here, args.jobs)
+    for _ in range(8):
+        fixed = [n for n, err in failed.items() if repair(plans[n], err)]
+        if not fixed:
+            break
+        for name in fixed:
+            plans[name].text = header_text(plans[name], set(plans), kinds, frees, packages, units)
+            (game / f"{name}.h").write_text(plans[name].text, encoding="utf-8", newline="\n")
+        failed = compile_alone(p, {n: plans[n] for n in failed}, here, args.jobs)
+    drop(plans, skipped, {n: "does not compile alone: " + re.sub(r"^.*[\\/](?=[^\\/]*\(\d+\) : )", "", e)
+                          for n, e in failed.items()},
+         game if args.command == "build" else None)  # a dry run keeps them to look at
+    repaired = {n: x.repairs for n, x in plans.items() if x.repairs}
     print(f"{len(plans)} headers ({sum(1 for x in plans.values() if x.verbatim)} as every unit declares them, "
-          f"{sum(1 for x in plans.values() if not x.verbatim)} merged); {len(skipped)} classes without one:")
-    reasons = collections.Counter(re.sub(r"[A-Z][a-z]+_[0-9A-Fa-f]{8}\w*|0x[0-9A-Fa-f]+|'[^']*'|\[.*?\]", "#", why)[:90]
-                                  for why in skipped.values())
+          f"{sum(1 for x in plans.values() if not x.verbatim)} merged, {len(repaired)} of them without a member "
+          f"they did not compile with); {len(skipped)} classes without one:")
+    reasons = collections.Counter(
+        re.sub(r"[A-Z][a-z]+_[0-9A-Fa-f]{8}\w*|0x[0-9A-Fa-f]+|'[^']*'|\[.*?\]|^.*?\(\d+\) : ", "#", why)[:90]
+        for why in skipped.values())
     for why, n in reasons.most_common(14):
         print(f"  {n:5} {why}")
-    if args.command == "build":
-        migrate_all(p, units, plans, work, args.jobs)
+    report = {"headers": sorted(plans), "repaired": repaired, "without": dict(sorted(skipped.items()))}
+    (p.state / f"headers-{args.command}.json").write_text(json.dumps(report, indent=1) + "\n", encoding="utf-8")
+    if args.command == "stats":
+        print(f"the headers are in {game}; build/agent/headers-stats.json says why the rest have none")
+        return
+    migrate_all(p, units, plans, work, args.jobs)
 
 
 def migrate_all(p: Project, units: Dict[str, UnitDecls], plans: Dict[str, Plan], work: Path, jobs: int) -> None:
@@ -597,7 +815,7 @@ def migrate_all(p: Project, units: Dict[str, UnitDecls], plans: Dict[str, Plan],
         for n in kept:
             kept_local[n].append(source)
     for name in set(plans) - used:  # every header in the tree is one the build compiles
-        (game / f"{name}.h").unlink()
+        (game / f"{name}.h").unlink(missing_ok=True)
     report = {"headers": len(used), "units moved": moved,
               "kept local": {n: sorted(v) for n, v in sorted(kept_local.items())}}
     (p.state / "headers-report.json").write_text(json.dumps(report, indent=1) + "\n", encoding="utf-8")

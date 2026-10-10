@@ -1068,6 +1068,12 @@ def test_restructure_helpers(base: Path) -> None:
           "a plain substitution")
     check(restructure.substitute("?Copy@Class_10000010@@QAEXPAVClass_10000020@@@Z", renames) is None,
           "two placeholders becoming one class would need a back-reference")
+    import lint
+    problems = lint.lint("class Class_10000010;\nvoid Use(Class_10000010* P);\n", None, renames)
+    check(any("[classmap]" in x and "Class_10E00000" in x and x.startswith("line 1") for x in problems),
+          f"the gate names the class a resolved placeholder is: {problems}")
+    check(not lint.lint("class Class_10E00000;\n// Class_10000010 was its name\n", None, renames),
+          "the class's own name passes, and a comment may name the placeholder")
     graph = {"A": {"B"}, "B": {"A"}, "C": {"A"}, "D": set()}
     check([sorted(c) for c in headers.cycles(graph)] == [["A", "B"]], f"cycles: {headers.cycles(graph)}")
     for item, name in (("void FUN_10948890();\n", "FUN_10948890"), ("extern int DAT_10e4ac64;\n", "DAT_10e4ac64"),
