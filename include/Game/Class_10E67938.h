@@ -9,8 +9,9 @@ struct Struct_10A4C940_Owner;
 class Class_10E67938
 {
 public:
-    virtual ~Class_10E67938();
+    // Slot 0 is FUN_10a4c470 and slot 1 the deleting destructor (0x10A4C720), as the game's vtable has them.
     virtual void FUN_10a4c470(int A, int B, int C, int D);
+    virtual ~Class_10E67938();
     virtual void Virtual2();
     virtual void Virtual3(int A, int B);
     virtual void Virtual4(int A, int B);
