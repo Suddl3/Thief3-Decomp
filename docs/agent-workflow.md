@@ -174,6 +174,35 @@ template members in `src/` that workers, stamps and retries had matched as
 plain code (`std::list`'s `clear` and `_Tidy`, list and tree node
 destructors, a `TArray<T>::Remove`).
 
+### Haiku tests (2026-10-10)
+
+Two test swarms of 8 Haiku workers, each running once with no refill, on
+batch w7's bands and settings: 4 on 32 to 79 bytes, 4 on 80 to 159. Between
+them the lead fixed what the first showed blocking any model and gave the
+packets what they lacked: Ghidra's decompilation of the open functions under
+160 bytes (the cache held none of them: `fill-ghidra` had failed on a long
+command line), "Where to start" in worker.md, names-only differences
+deferred at once whatever the score, `FName(const TCHAR*, EFindName)` and
+`UObject()` in Core.h, and the names of the destructor pair folded for
+`Class_10E67938`'s subclasses.
+
+| Run | Band | Matched by workers | Per worker-hour | Tokens per match |
+|---|---|---|---|---|
+| Haiku 1 | 32 to 79 | 31/40 | 28.5 | 35K |
+| Haiku 1 | 80 to 159 | 12/24 | 9.4 | 101K |
+| Haiku 2 | 32 to 79 | 27/40 | 24.0 | 39K |
+| Haiku 2 | 80 to 159 | 12/24 | 11.9 | 83K |
+| Sonnet, w7 | 32 to 79 | 90% | 26.9 | 25K |
+| Sonnet, w7 | 80 to 159 | 79% | 12.2 | 50K |
+
+The second run matched more on the first attempt (29 of 39, against 23 of
+43) and spent fewer tokens on the bigger band, but not a higher share: the
+second run had what the first left, and its deferrals were mostly class
+layouts and vtable owners nobody has modelled yet, which no worker settles
+within one claim. The next naming pass matched 5 of each run's deferrals,
+from the names their workers asked for. In the second run Haiku kept
+Sonnet's pace per worker and spent 1.6 to 1.7 times its tokens per match.
+
 The lead adds what needs no model between swarms: a naming pass over the
 name-blocked deferrals (each blocked function's candidate names its callee;
 the old guess stays as an alias, so callers in `src/` keep matching), 66
@@ -546,6 +575,14 @@ anew (`configure.py && ninja`, then `integrate.py`, which places a
 generated function in the same run as its emitter). The first runs matched
 117. String properties are `FStringNoInit` in the generated headers: unwind
 code calls its implicit destructor's out-of-line copy, not `~FString`.
+
+A virtual destructor stores its class's vtable too, so compiling it emits
+the deleting destructor whatever its slot and whether or not the
+constructor is matched. `dtors.py matched` accepts each deleting destructor
+whose destructor is matched as `??1C@@UAE@XZ` from that destructor's source,
+as generated with it; the first runs matched 25. It reports the classes whose
+destructor was matched non-virtual (about a hundred): their deleting
+destructors wait for a model with the virtual destructor in its slot.
 
 ## Guard and permissions
 

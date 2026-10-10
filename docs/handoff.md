@@ -48,12 +48,12 @@ decompilation** worked mostly by Claude agents under the strict gate in
   unclassified); `include/Core/Core.h` keeps the declarations the game code
   compiles against. Matching runs as the [agent
   workflow](agent-workflow.md): a swarm of up to 12 sub-agents at a time
-  (Sonnet on functions under 160 bytes, Opus on bigger ones), from the one-file protocol `tools/agent/worker.md`. `src/Game` holds 5,454
-  matched functions in 2,543 units, one per auto unit of the split
+  (Sonnet on functions under 160 bytes, Opus on bigger ones), from the one-file protocol `tools/agent/worker.md`. `src/Game` holds 5,575
+  matched functions in 2,615 units, one per auto unit of the split
   (`Unsorted_<start>.cpp`, chunks of up to 64 KB; `_2`, `_3`, ... hold
   functions whose classes clash with their unit's). decomp.dev shows the
   committed report `progress/PC_20040610/report.json`, whose headline is the
-  game code (5,616 of 12,029 functions at 100%, 10.9% of its bytes; hidden from decomp.dev's list
+  game code (5,744 of 12,039 functions at 100%, 11.2% of its bytes; hidden from decomp.dev's list
   below 0.5% matched): regenerate it after integrating, see next step 2.
 - The 266 native classes are in `config/PC_20040610/classes.txt` (size,
   super class, flags, vtable; `tools/classify.py write`), and the 64 classes
@@ -207,9 +207,9 @@ Later the same day, played by the user:
      script, families stamped between workers. Drain it for a checkpoint
      (sweep, review, naming pass, `integrate.py`, `dtors.py`,
      `progress_report.py write`, commit). Integration and `retry.py` check
-     in parallel, so a checkpoint takes minutes. About 5,650 game functions are
-     still queued: 145 under 80 bytes, 1,870 of 80 to 159, 3,640 of 160 and
-     more. Batch w7 ended (2026-10-03) with 425 deferrals and 47 accepted
+     in parallel, so a checkpoint takes minutes. About 5,530 game functions are
+     still queued: 65 under 80 bytes, 1,825 of 80 to 159, 3,640 of 160 and
+     more (Haiku's tests on the small ones: agent-workflow.md). Batch w7 ended (2026-10-03) with 425 deferrals and 47 accepted
      functions `integrate.py` cannot place (their classes clash with their
      unit's, in overflow units too); the renames and models its workers asked
      for are in the lead's local `build/agent/lead-backlog.md`.
@@ -287,7 +287,8 @@ Later the same day, played by the user:
      destructor is matched). Left by hand: classes whose deleting destructor
      inlines the destructor (it needs the destructor's definition in the
      same unit) and classes matched with a non-virtual destructor.
-     `dtors.py native` does native classes, whose deleting destructors
+     `dtors.py matched` does any class whose virtual destructor is
+     matched; `dtors.py native` does native classes, whose deleting destructors
      call `UObject::operator delete` with the size (Core.h): 108 are in
      `src/`. Left: 11 classes whose destructor is more than
      `ConditionalDestroy()` (members to destroy, `AGarrett`, `APlayerPawn`)
@@ -318,8 +319,8 @@ Later the same day, played by the user:
      of stock UE2 files, non-UObject vtables) moves it to a side; the 117
      functions taken out of `src/` as unclassified can come back once it is
      game code.
-   - objdiff's report counts what the gate matched, but for 83 of the
-     5,454 functions in `src/`: a static local's guard and `$E` destructor
+   - objdiff's report counts what the gate matched, but for 90 of the
+     5,575 functions in `src/`: a static local's guard and `$E` destructor
      stub keep names only their object file knows, one global is read
      through the second half of an 8-byte symbol, `0x10C68010` starts
      inside `FUN_10c67f90` in `symbols.txt`, and some constructors and
