@@ -7,7 +7,7 @@
 
 class Class_10E6B078_Member;
 
-class Class_10E6B078 : public Class_10A58FE0
+class Class_10E6B078
 {
 public:
     virtual ~Class_10E6B078();
