@@ -1,4 +1,4 @@
-# Handoff: T3SDK status (2026-10-02)
+# Handoff: T3SDK status (2026-10-10)
 
 ## Goal
 
@@ -51,7 +51,11 @@ decompilation** worked mostly by Claude agents under the strict gate in
   (Haiku or Sonnet on functions under 160 bytes, Opus on bigger ones), from the one-file protocol `tools/agent/worker.md`. `src/Game` holds 6,107
   matched functions in 2,985 units, one per auto unit of the split
   (`Unsorted_<start>.cpp`, chunks of up to 64 KB; `_2`, `_3`, ... hold
-  functions whose classes clash with their unit's). decomp.dev shows the
+  functions whose classes clash with their unit's); 1,208 of them are named
+  after the class most of their code is. 2,975 classes are declared once, in
+  `include/Game/<Class>.h`, and the placeholders the exe shows to be one
+  class are folded (`config/PC_20040610/classmap.txt`; agent-workflow.md,
+  "Class structure"). decomp.dev shows the
   committed report `progress/PC_20040610/report.json`, whose headline is the
   game code (6,329 of 12,069 functions at 100%, 13.3% of its bytes; hidden from decomp.dev's list
   below 0.5% matched): regenerate it after integrating, see next step 2.
@@ -205,8 +209,17 @@ Later the same day, played by the user:
    - Matching runs as a swarm ([agent-workflow.md](agent-workflow.md)), now
      best as the `t3-swarm` workflow: bands mixed, slots refilled by the
      script, families stamped between workers. Drain it for a checkpoint
-     (sweep, review, naming pass, `integrate.py`, `dtors.py`,
-     `progress_report.py write`, commit). Integration and `retry.py` check
+     (sweep, review, naming pass, `integrate.py`, `dtors.py`, the structure
+     pass: `classmap.py`, `restructure.py`, `headers.py build`,
+     `unitnames.py`; `progress_report.py write`, commit). Units still
+     carry their own copy of a class that has a header (2,666 declarations
+     in 868 classes): mostly what the merge gets wrong, listed with the
+     Haiku pilot in agent-workflow.md ("Class structure"). Fix those in
+     `headers.py`/`classmap.py` first (one field, several placeholder
+     types; signatures from `symbols.txt`; base classes that end where
+     their subclasses' fields start), then give reconciliation workers
+     (`tools/agent/reconcile.md`, tasks from
+     `build/agent/lead-tools/reconcile_tasks.py`) what is left. Integration and `retry.py` check
      in parallel, so a checkpoint takes minutes. About 5,530 game functions are
      still queued: 65 under 80 bytes, 1,825 of 80 to 159, 3,640 of 160 and
      more (Haiku's tests on the small ones: agent-workflow.md). Batch w7 ended (2026-10-03) with 425 deferrals and 47 accepted

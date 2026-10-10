@@ -410,7 +410,13 @@ close a failure seen in the pilot:
      (`Unsorted_<start>.cpp`, a chunk of up to 64 KB; the exe does not record
      its object files): with all of them in one file, MSVC inlined a small
      callee into callers the game had compiled apart from it, and with one
-     file per placeholder class the tree held a file per function;
+     file per placeholder class the tree held a file per function. A
+     function dropped because its class's header lacks a member it declares
+     goes in after `headers.py absorb <addr>`;
+   - give the new code its classes (see [Class structure](#class-structure)):
+     `classmap.py write`, `restructure.py apply`, `headers.py build`,
+     `unitnames.py apply`, each followed by `configure.py && ninja` and a
+     report comparison when it changed `src/`;
    - `python configure.py && ninja`, compare the objdiff report with the
      previous one and reject regressions, then
      `python tools/progress_report.py write`;
@@ -418,6 +424,76 @@ close a failure seen in the pilot:
      (headers, names), and requeue deferrals whose blocker is gone
      (`next.py requeue`);
    - commit only when the user says so.
+
+## Class structure
+
+A worker names a class nothing names after the function it matches
+(`Class_<address>`), and integrate.py copied each accepted file's
+declarations into its unit. By batch w10 `src/Game` held 10,573 class
+definitions for 4,950 classes, most of them placeholders with one method, so
+one game class was spread over as many classes as it had matched methods.
+Four lead tools give the code its classes back. Each one checks its work
+against the build: every unit it touches compiles to the same code and
+relocations, function by function, and the report loses no function.
+
+1. `tools/agent/classmap.py write` decides which placeholders are one class,
+   from the exe alone: a function in the slots of one vtable (without RTTI
+   the tables sit back to back, so a table runs to the next address an
+   instruction names), the tables a function stores at its own `this` (a
+   constructor stores its bases' first, a destructor its own first; a
+   factory that inlines its product's constructor stores into another
+   object and says nothing), a helper only one class with no known base
+   calls on `this`, and a placeholder spelled in small hex digits.
+   `config/<version>/classmap.txt` lists each with its evidence and only
+   grows: an entry still tells the gate what a renamed placeholder is.
+2. `tools/agent/restructure.py apply` renames the placeholders unit by unit,
+   merges the definitions a unit then has twice (`classdecl.py`: fields
+   placed by offset as MSVC measures them in the unit), compiles the unit,
+   and pairs every symbol with the old object's by its demangled text before
+   comparing. A rename that changes a unit's code stays out of that unit, and
+   so does one that would make a class its own base or give two addresses
+   one name. `symbols.txt` takes the new names and keeps the old ones as
+   aliases, so units that kept a placeholder still pair.
+3. `tools/agent/headers.py build` gives each class with methods in `src/` or
+   declared by two units one declaration, `include/Game/<Class>.h`: the
+   units' own text where they all agree, else their merge. A header carries
+   the headers its bases, fields held by value and inline bodies need,
+   forward declarations with each class's own keyword (MSVC decorates
+   `class` and `struct` differently), and the free declarations its inline
+   bodies call. Every header compiles alone (a merged one loses the member
+   it does not compile with), and each unit takes the headers one at a time,
+   keeping those that leave its code as it was. A later run keeps the
+   headers there are; `headers.py absorb <addr>` grows one with an accepted
+   function's members, checked against every unit including it, and
+   `headers.py stats` is the dry run.
+4. `tools/agent/unitnames.py apply` names an `Unsorted_<start>.cpp` unit
+   after the class 75% of its code belongs to, when the exe knows the class
+   as one (a real name, or `Class_<vtable>`): `Class_10E4AC78.cpp` beside
+   `include/Game/Class_10E4AC78.h`.
+
+Workers see a class's header in their packet and include it (worker.md);
+accept.py refuses a placeholder the map resolves and names the class it is.
+What a unit and a header still disagree on, a member's name or type, goes to
+reconciliation workers (`tools/agent/reconcile.md`): each takes a few units,
+changes only those (names and declarations), checks them with
+`headers.py check`, and reports what a header lacks instead of editing it.
+
+The first pass (2026-10-10) folded 430 placeholders into 333 classes and 73
+small-hex spellings into their capitals, declared 2,975 classes once in
+`include/Game`, cut `src/Game`'s class definitions from 10,573 to under 4,900,
+and named 1,208 units after their classes; no function moved in the report.
+
+A pilot of 20 Haiku reconciliation workers (tasks of 4 units, 99 unit and
+class pairs) moved 16 pairs for about 3.05M tokens, 120K to 206K a worker.
+What kept the rest was on the headers' side, which the workers could only
+report: a field typed with a different placeholder in each unit (each named
+after a method someone called on it), a method whose signature the merge took
+from a caller's guess rather than from `symbols.txt`, a base class header
+grown with its subclasses' fields, typed `UnknownNN` arrays merged as padding
+(fixed), and constructors written as methods that store their vtables through
+a named `VTable` field. One of those notes, a method `Class_10BFBD70.h`
+lacked, moved 46 units on the next `headers.py build`: fix the merge in the
+tools first, and give workers only what the tools cannot settle.
 
 ## Matches without a model
 

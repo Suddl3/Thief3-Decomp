@@ -254,6 +254,11 @@ first) and puts each into a unit:
   per auto unit of the split (one file for all would let MSVC inline small
   callees into their callers). A function whose class definitions clash with
   its unit's goes to `--unit <Category>/Unsorted_<start>_2.cpp`.
+  `tools/agent/unitnames.py` later names such a unit after the class most of
+  its code is (`Class_<vtable>.cpp`); only a real class name draws a
+  class's other methods to its unit, a placeholder's go by address. A class
+  `include/Game/` declares goes in by its header (`#include
+  "Game/<Class>.h"`) instead of the accepted file's copy of it.
   The category is `--category`, else the function's in `categories.txt`,
   except that a method of an Unreal-style class (`UObject`, `AActor`,
   `FName`) counts as Epic's engine unless `classes.txt` has the class as Ion
