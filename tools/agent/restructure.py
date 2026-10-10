@@ -54,15 +54,6 @@ SYMBOL_LINE = re.compile(r"^(\S+) = (\.\w+):0x([0-9A-Fa-f]+);(.*)$")
 _demangling = threading.Lock()  # common.demangle's cache is one file
 
 
-def read_map(p: Project) -> Dict[str, str]:
-    out = {}
-    for line in (p.config_dir / "classmap.txt").read_text(encoding="utf-8").splitlines():
-        if line.strip() and not line.startswith("#"):
-            old, new = line.split()[:2]
-            out[old] = new
-    return out
-
-
 def package_classes(p: Project) -> Set[str]:
     """Classes a package header declares (include/<Package>/, not include/Game/)."""
     out: Set[str] = set()
@@ -412,7 +403,7 @@ def main() -> None:
     if os.environ.get("T3_AGENT_ID"):
         sys.exit("restructure.py is the lead's")
     p = Project()
-    mapping = read_map(p)
+    mapping = p.class_map()
     packaged = package_classes(p)
     checks = {"class of a package header": {n: f"{t} is declared by a package header"
                                             for n, t in mapping.items() if t in packaged},

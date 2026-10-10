@@ -294,6 +294,19 @@ class Project:
             self._classes = categorieslib.load_classes(self.config_dir / "classes.txt")
         return self._classes
 
+    def class_map(self) -> Dict[str, str]:
+        """Placeholder class -> the class it is (config/<version>/classmap.txt, tools/agent/classmap.py)."""
+        if not hasattr(self, "_class_map"):
+            out: Dict[str, str] = {}
+            path = self.config_dir / "classmap.txt"
+            if path.is_file():
+                for line in path.read_text(encoding="utf-8").splitlines():
+                    if line.strip() and not line.startswith("#"):
+                        old, new = line.split()[:2]
+                        out[old] = new
+            self._class_map = out
+        return self._class_map
+
     def plan(self, declared: List[splitslib.Unit]) -> List[splitslib.Unit]:
         """Declared plus auto units, exactly as configure.py plans the split."""
         return splitslib.plan(declared, self.functions, self.chunk_size, breaks=self.breaks())

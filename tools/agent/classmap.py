@@ -303,6 +303,20 @@ def build(p: Project):
             if target != cls:
                 f = min(x for x in fs if x in known)
                 mapping[cls] = (target, f"{fmt_addr(f)}: {known[f][1]}")
+    # the map only grows: a placeholder renamed earlier is gone from src/, but its entry still says
+    # what a worker means by it (lint.py, accept.py)
+    for cls, (target, why) in read(p).items():
+        mapping.setdefault(cls, (target, why))
+    # a placeholder spelled with small hex digits names the same address as the capitals (and on a
+    # case-blind disk, include/Game/<Class>.h would be one file for both)
+    spelled = set()
+    for path in (p.src_dir / "Game").glob("*.cpp"):
+        spelled |= set(re.findall(r"\b(?:Class|Struct|Object)_[0-9A-Fa-f]{8}\b",
+                                  path.read_text(encoding="utf-8", errors="replace")))
+    for cls in sorted(spelled):
+        upper = cls.split("_")[0] + "_" + cls.split("_")[1].upper()
+        if upper != cls and cls not in mapping:
+            mapping[cls] = (upper, f"the same address as {upper}, in capitals")
     # a target that is itself mapped: follow the chain
     for cls in list(mapping):
         seen, (target, why) = {cls}, mapping[cls]
@@ -318,6 +332,18 @@ def build(p: Project):
         "vtables": len(tables),
     }
     return mapping, stats, split
+
+
+def read(p: Project) -> Dict[str, Tuple[str, str]]:
+    """The map as written: {placeholder: (class, evidence)}."""
+    out = {}
+    path = p.config_dir / "classmap.txt"
+    if path.is_file():
+        for line in path.read_text(encoding="utf-8").splitlines():
+            if line.strip() and not line.startswith("#"):
+                old, new, why = (line.split(None, 2) + [""])[:3]
+                out[old] = (new, why.strip())
+    return out
 
 
 def main() -> None:
