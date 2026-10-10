@@ -41,3 +41,6 @@ Class_10E70150::~Class_10E70150()
 {
     DAT_10f46da0->Virtual2(this);
 }
+
+// FUNCTION: 0x10ACE390 ??_GClass_10E70150@@UAEPAXI@Z
+// Compiler-generated: emitted with the class's vtable by 0x10ACE220's definition in this unit.

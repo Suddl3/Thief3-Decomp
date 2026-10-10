@@ -23,6 +23,9 @@ public:
     virtual ~Class_10E9B370();
 };
 
+// FUNCTION: 0x10C3E310 ??_GClass_10E9B370@@UAEPAXI@Z
+// Compiler-generated: emitted with the class's vtable by 0x10C3E330's definition in this unit.
+
 // FUNCTION: 0x10C3E330 ??1Class_10E9B370@@UAE@XZ
 Class_10E9B370::~Class_10E9B370()
 {

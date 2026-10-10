@@ -40,3 +40,6 @@ Class_10E700F0::~Class_10E700F0()
 {
     DAT_10f46da0->Virtual2(this);
 }
+
+// FUNCTION: 0x10ACD6C0 ??_GClass_10E700F0@@UAEPAXI@Z
+// Compiler-generated: emitted with the class's vtable by 0x10ACD640's definition in this unit.

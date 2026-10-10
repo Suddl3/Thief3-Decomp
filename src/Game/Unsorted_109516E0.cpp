@@ -98,6 +98,38 @@ public:
     int Unknown28;
 };
 
+class Class_10951540
+{
+public:
+    bool FUN_10951540(void* A);
+};
+
+class Class_10951A40
+{
+public:
+    void FUN_109516e0();
+
+    char Unknown00[0x40];
+    int Unknown40;
+    int Unknown44;
+    Class_10951540** Unknown48;
+    char Unknown4C[4];
+};
+
+// FUNCTION: 0x109516E0 ?FUN_109516e0@Class_10951A40@@QAEXXZ
+void Class_10951A40::FUN_109516e0()
+{
+    for (int i = 0; i < Unknown40; i++)
+    {
+        Class_10951540* Item = Unknown48[i];
+        if (Item->FUN_10951540(&Unknown4C))
+        {
+            delete Item;
+            Unknown48[i] = 0;
+        }
+    }
+}
+
 // FUNCTION: 0x10951780 ??0Class_10E4AC6C@@QAE@XZ
 Class_10E4AC6C::Class_10E4AC6C() : Unknown04(0)
 {

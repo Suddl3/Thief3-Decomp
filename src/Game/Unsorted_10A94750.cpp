@@ -45,3 +45,6 @@ Class_10E6CD70::~Class_10E6CD70()
     if (DAT_10f46da0)
         DAT_10f46da0->Virtual2(this);
 }
+
+// FUNCTION: 0x10A94D90 ??_GClass_10E6CD70@@UAEPAXI@Z
+// Compiler-generated: emitted with the class's vtable by 0x10A94930's definition in this unit.

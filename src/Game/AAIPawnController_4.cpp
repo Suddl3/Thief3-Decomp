@@ -30,3 +30,6 @@ AAIPawnController::~AAIPawnController()
 {
     ConditionalDestroy();
 }
+
+// FUNCTION: 0x10962790 ??_GAAIPawnController@@UAEPAXI@Z
+// Compiler-generated: emitted with the class's vtable by 0x10962730's definition in this unit.

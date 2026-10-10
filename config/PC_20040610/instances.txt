@@ -298,3 +298,5 @@
 0x10A2E100 libs   std::vector<T>::push_back (size() < capacity() inlined, else _Insert_n 0x10A2DF20)
 0x10AE39F0 engine UObjectExporterT3D::StaticConstructor (Epic's Core: SupportedClass, bText, Formats 'T3D'; withdrawn)
 0x10AD0070 engine TArray<T>::Remove(INT Index, INT Count), an instance of Epic's template (element destructors, then FArray::Rem
+0x10C69990 libs   std::copy_backward over 56-byte elements (two std::string members)
+0x10C03360 libs   std::vector<T>::push_back body (insert via 0x10C02F70)

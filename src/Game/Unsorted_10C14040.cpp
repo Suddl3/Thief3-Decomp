@@ -39,6 +39,9 @@ public:
     virtual int Virtual0(int A, int B, int C, int* D);
 };
 
+// FUNCTION: 0x10BA35E0 ??_GClass_10E8C248@@UAEPAXI@Z
+// Compiler-generated: emitted with the class's vtable by 0x10C14040's definition in this unit.
+
 // FUNCTION: 0x10C14040 ??1Class_10E8C248@@UAE@XZ
 Class_10E8C248::~Class_10E8C248()
 {

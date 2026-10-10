@@ -103,3 +103,6 @@ Class_10E6B490::~Class_10E6B490()
 {
     FUN_10c5d5b0((int)this, Unknown08);
 }
+
+// FUNCTION: 0x10A66F30 ??_GClass_10E6B490@@UAEPAXI@Z
+// Compiler-generated: emitted with the class's vtable by 0x10A66CF0's definition in this unit.

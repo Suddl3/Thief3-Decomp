@@ -72,3 +72,12 @@ Class_10E7C30C::~Class_10E7C30C()
 {
     DAT_10f46da0->Virtual2(this);
 }
+
+// FUNCTION: 0x10B35A20 ??_GClass_10E7C2CC@@UAEPAXI@Z
+// Compiler-generated: emitted with the class's vtable by 0x10B35710's definition in this unit.
+
+// FUNCTION: 0x10B35A40 ??_GClass_10E7C2EC@@UAEPAXI@Z
+// Compiler-generated: emitted with the class's vtable by 0x10B35840's definition in this unit.
+
+// FUNCTION: 0x10B35A60 ??_GClass_10E7C30C@@UAEPAXI@Z
+// Compiler-generated: emitted with the class's vtable by 0x10B35970's definition in this unit.

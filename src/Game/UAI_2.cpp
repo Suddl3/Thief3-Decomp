@@ -37,6 +37,9 @@ public:
     virtual void FUN_10bbe970();
 };
 
+// FUNCTION: 0x10BBE660 ??_GUAI@@UAEPAXI@Z
+// Compiler-generated: emitted with the class's vtable by 0x10BBE680's definition in this unit.
+
 // FUNCTION: 0x10BBE680 ??1UAI@@UAE@XZ
 UAI::~UAI()
 {

@@ -33,3 +33,6 @@ AAIPathPoint::~AAIPathPoint()
 {
     ConditionalDestroy();
 }
+
+// FUNCTION: 0x10B93830 ??_GAAIPathPoint@@UAEPAXI@Z
+// Compiler-generated: emitted with the class's vtable by 0x10B937D0's definition in this unit.

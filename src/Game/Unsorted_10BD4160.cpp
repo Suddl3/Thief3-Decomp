@@ -47,6 +47,39 @@ public:
     int FUN_10bd4670(int A, Object_10BD4670* Obj, int C);
 };
 
+struct Struct_10BAEC40_Unknown08
+{
+    int Unknown00;
+    int Unknown04;
+    int Unknown08;
+    bool Unknown0C;
+};
+
+class Class_10BAEC40
+{
+public:
+    void FUN_10bae1d0(int NewCount);
+    void FUN_10bd4160(const Class_10BAEC40& Other);
+
+    int Unknown00;
+    int Unknown04;
+    Struct_10BAEC40_Unknown08* Unknown08;
+};
+
+// FUNCTION: 0x10BD4160 ?FUN_10bd4160@Class_10BAEC40@@QAEXABV1@@Z
+void Class_10BAEC40::FUN_10bd4160(const Class_10BAEC40& Other)
+{
+    FUN_10bae1d0(Other.Unknown00);
+    for (int i = 0; i < Unknown00; i++)
+    {
+        const Struct_10BAEC40_Unknown08& Source = Other.Unknown08[i];
+        Struct_10BAEC40_Unknown08& Item = Unknown08[i];
+        Item.Unknown04 = Source.Unknown04;
+        Item.Unknown08 = Source.Unknown08;
+        Item.Unknown0C = Source.Unknown0C;
+    }
+}
+
 // FUNCTION: 0x10BD4600 ?FUN_10bd4600@Class_10BD4600@@QAEHHPAVObject_10BD4600@@H@Z
 int Class_10BD4600::FUN_10bd4600(int A, Object_10BD4600* Obj, int C)
 {

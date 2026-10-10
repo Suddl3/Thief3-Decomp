@@ -39,6 +39,9 @@ public:
     Owner<Class_10E77978> Unknown24;
 };
 
+// FUNCTION: 0x10AB0160 ??_GClass_10E6DD68@@UAEPAXI@Z
+// Compiler-generated: emitted with the class's vtable by 0x10AB0180's definition in this unit.
+
 // FUNCTION: 0x10AB0180 ??1Class_10E6DD68@@UAE@XZ
 Class_10E6DD68::Class_10E6DD68()
 {

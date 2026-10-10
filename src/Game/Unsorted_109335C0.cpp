@@ -86,3 +86,6 @@ Class_10E49E50::Class_10E49E50()
     Unknown30 = 0;
     Unknown34 = 0;
 }
+
+// FUNCTION: 0x10933790 ??_GClass_10E49E50@@UAEPAXI@Z
+// Compiler-generated: emitted with the class's vtable by 0x109335C0's definition in this unit.

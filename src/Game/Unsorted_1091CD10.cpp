@@ -1,6 +1,8 @@
 // Game/Unsorted_1091CD10.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
+#include <math.h>
+
 class Class_1091E1F0
 {
 public:
@@ -34,6 +36,30 @@ public:
     int Unknown5C;
     int Unknown60;
 };
+
+extern float DAT_10e49684;
+
+class Class_1091E1A0
+{
+public:
+    void FUN_1091e1a0();
+
+    float Unknown00;
+    float Unknown04;
+    float Unknown08;
+};
+
+// FUNCTION: 0x1091E1A0 ?FUN_1091e1a0@Class_1091E1A0@@QAEXXZ
+void Class_1091E1A0::FUN_1091e1a0()
+{
+    float Length = sqrtf(Unknown00 * Unknown00 + Unknown04 * Unknown04 + Unknown08 * Unknown08);
+    if (Length < 0.0001f)
+        return;
+    float Scale = DAT_10e49684 / Length;
+    Unknown00 *= Scale;
+    Unknown04 *= Scale;
+    Unknown08 *= Scale;
+}
 
 // FUNCTION: 0x1091E1F0 ?FUN_1091e1f0@Class_1091E1F0@@QAEPAV1@HHHHHHHHH@Z
 Class_1091E1F0* Class_1091E1F0::FUN_1091e1f0(int A, int B, int C, int D, int E, int F, int G, int H, int I)

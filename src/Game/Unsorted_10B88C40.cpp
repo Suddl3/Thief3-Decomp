@@ -54,6 +54,39 @@ public:
     INT Unknown40;
 };
 
+class Class_109A6AA0
+{
+public:
+    int FUN_109a6aa0();
+
+    float Unknown00;
+    float Unknown04;
+    float Unknown08;
+};
+
+class Class_10E89458
+{
+public:
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual bool FUN_10b89280(Class_10E89458* Other);
+
+    char Unknown04[0xC];
+    FVector Unknown10;
+};
+
+// FUNCTION: 0x10B89280 ?FUN_10b89280@Class_10E89458@@UAE_NPAV1@@Z
+bool Class_10E89458::FUN_10b89280(Class_10E89458* Other)
+{
+    FVector A = Unknown10;
+    FVector B = Other->Unknown10;
+    Class_109A6AA0 D;
+    D.Unknown00 = B.X - A.X;
+    D.Unknown04 = B.Y - A.Y;
+    D.Unknown08 = B.Z - A.Z;
+    return D.FUN_109a6aa0() != 0;
+}
+
 // FUNCTION: 0x10B89760 ?FUN_10b89760@Class_10E89478@@UAEXXZ
 void Class_10E89478::FUN_10b89760()
 {

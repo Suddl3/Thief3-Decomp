@@ -22,6 +22,9 @@ public:
     Class_10B1D190 Unknown2C4;
 };
 
+// FUNCTION: 0x10B121C0 ??_GAT3PlayerController@@UAEPAXI@Z
+// Compiler-generated: emitted with the class's vtable by 0x10B121F0's definition in this unit.
+
 // FUNCTION: 0x10B121F0 ??1AT3PlayerController@@UAE@XZ
 AT3PlayerController::~AT3PlayerController()
 {
