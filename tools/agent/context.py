@@ -518,8 +518,10 @@ def fill_ghidra(p: Project, addresses: List[int]) -> None:
     if not todo:
         print("all cached")
         return
+    listing = out / "addresses.txt"  # a file: a command line holds only a few hundred addresses
+    listing.write_text("".join(fmt_addr(a) + "\n" for a in todo), encoding="utf-8")
     cmd = [sys.executable, str(p.main / "tools" / "ghidra_headless.py"), "--version", p.version, "script",
-           str(p.main / "tools" / "ghidra" / "Decompile.java"), *[fmt_addr(a) for a in todo], f"out:{out}"]
+           str(p.main / "tools" / "ghidra" / "Decompile.java"), f"addrs:{listing}", f"out:{out}"]
     print("+", " ".join(cmd))
     sys.exit(subprocess.call(cmd, cwd=p.main))
 

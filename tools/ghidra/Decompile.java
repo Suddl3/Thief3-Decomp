@@ -1,7 +1,9 @@
 // Prints Ghidra's decompilation of the functions containing the given
 // addresses, or of every function that references a given data address when it
-// is prefixed with "refs:". With "out:<dir>", each function is written to
-// <dir>/<ENTRY>.c instead (tools/agent/context.py caches them that way).
+// is prefixed with "refs:". "addrs:<file>" reads more addresses from a file, one
+// per line (a command line holds a few hundred). With "out:<dir>", each function
+// is written to <dir>/<ENTRY>.c instead (tools/agent/context.py caches them that
+// way).
 //
 //   tools/ghidra_headless.py script tools/ghidra/Decompile.java 0x109b2010 refs:0x10f7af1c
 //@category Thief3-Decomp
@@ -29,6 +31,15 @@ public class Decompile extends GhidraScript {
 		for (String arg : getScriptArgs()) {
 			if (arg.startsWith("out:")) {
 				outDir = arg.substring(4);
+			}
+			else if (arg.startsWith("addrs:")) {
+				for (String line : Files.readAllLines(java.nio.file.Path.of(arg.substring(6)),
+					StandardCharsets.UTF_8)) {
+					Function f = line.isBlank() ? null : getFunctionContaining(toAddr(Long.decode(line.trim())));
+					if (f != null) {
+						functions.add(f);
+					}
+				}
 			}
 			else if (arg.startsWith("refs:")) {
 				Address target = toAddr(Long.decode(arg.substring(5)));
