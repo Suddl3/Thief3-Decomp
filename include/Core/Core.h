@@ -47,11 +47,21 @@ enum EName
 
 // One 32-bit value: the low 16 bits index FName::Names, the high 16 bits are
 // an instance number (not stock Unreal Engine 2, where it is a plain index).
+// How FName's string constructor treats a name the table does not hold yet.
+enum EFindName
+{
+    FNAME_Find,     // return NAME_None
+    FNAME_Add,      // add it
+    FNAME_Intrinsic,
+};
+
 class FName
 {
 public:
     FName() {}
     FName(EName N) : Value(N) {}
+    // Looks a name up in the name table (0x10AF9E20).
+    FName(const TCHAR* Name, EFindName FindType = FNAME_Add);
 
     UBOOL operator==(const FName& Other) const { return Value == Other.Value; }
     UBOOL operator!=(const FName& Other) const { return Value != Other.Value; }
@@ -207,6 +217,10 @@ class UObject
     typedef UObject WithinClass;
 
 public:
+    // Out of line, as in stock Unreal Engine 2 (0x10AD1710): a derived class's
+    // constructor calls it rather than storing UObject's vtable itself.
+    UObject();
+
     // Stock Unreal Engine 2's virtuals in Ion Storm's order: Destroy first
     // (ConditionalDestroy calls slot 0), the destructor in slot 2, then the
     // stock order. Every native class's table agrees with each slot's
