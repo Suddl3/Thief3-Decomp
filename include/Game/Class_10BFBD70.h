@@ -3,7 +3,11 @@
 #ifndef GAME_CLASS_10BFBD70_H
 #define GAME_CLASS_10BFBD70_H
 
+#include "Game/Class_10905A90_Member.h"
+
 struct Struct_10C08690;
+
+Class_10905A90_Member* FUN_10905aa0();
 
 class Class_10BFBD70
 {
@@ -14,6 +18,17 @@ public:
         Unknown00 = Unknown04 = 0;
         Unknown08 = 0;
         FUN_10a58cb0(Other);
+    }
+    // The game's (0x109ED5E0): inlined on normal paths, called from unwind funclets.
+    ~Class_10BFBD70()
+    {
+        FUN_10bfbd70(0);
+        if (Unknown04)
+        {
+            FUN_10905aa0()->Virtual5(Unknown08);
+            Unknown08 = 0;
+            Unknown04 = 0;
+        }
     }
 
     void FUN_10a58c70(const Class_10BFBD70& Other);

@@ -2,19 +2,6 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10BFBD70.h"
 
-class Class_10905A90_Member
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5(int Item);
-};
-
-Class_10905A90_Member* FUN_10905aa0();
-
 extern "C" void* memmove(void* Dest, const void* Src, unsigned Count);
 
 // FUNCTION: 0x109DFF00 ?FUN_109dff00@Class_10BFBD70@@QAEXXZ
@@ -26,7 +13,7 @@ void Class_10BFBD70::FUN_109dff00()
         if (*Item)
         {
             int Key = *Item - 4;
-            FUN_10905aa0()->Virtual5(Key);
+            FUN_10905aa0()->Virtual5((void*)Key);
             *Item = 0;
         }
     }
