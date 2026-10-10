@@ -1,16 +1,10 @@
 // Game/Unsorted_10932FB0_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Data_10932FB0.h"
 
 extern "C" void* memset(void*, int, unsigned);
 
 class Object_109331D0;
-
-struct Data_10932FB0
-{
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-};
 
 class Class_10933230
 {

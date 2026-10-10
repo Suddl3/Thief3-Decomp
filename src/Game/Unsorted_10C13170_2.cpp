@@ -1,5 +1,6 @@
 // Game/Unsorted_10C13170_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_1096C8D0_Field0C.h"
 
 template <class T> class TArray
 {
@@ -13,13 +14,6 @@ class UObject
 {
 public:
     static TArray<UObject*> GObjObjects;
-};
-
-class Class_1096C8D0_Field0C
-{
-public:
-    char Unknown00[0x1C];
-    int Unknown1C;
 };
 
 class Class_1096C8D0

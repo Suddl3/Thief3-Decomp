@@ -1,7 +1,8 @@
 // Game/Unsorted_10A67000_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
+#include "Game/Class_10A37700.h"
+#include "Game/Class_10E6B4C8.h"
 
 class Object_10A67120
 {
@@ -107,13 +108,6 @@ public:
     FRotator Unknown38;
 };
 
-class Class_10A37700
-{
-public:
-    char Unknown00[0xC];
-    FRotator Unknown0C;
-};
-
 struct Struct_10AA3520
 {
     char Unknown00[0x10];
@@ -121,16 +115,6 @@ struct Struct_10AA3520
 };
 
 extern Struct_10AA3520* DAT_10f35dec;
-
-class Class_10E6B4C8
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void FUN_10a67120(Object_10A67120* Obj, int Param);
-};
 
 // FUNCTION: 0x10A67120 ?FUN_10a67120@Class_10E6B4C8@@UAEXPAVObject_10A67120@@H@Z
 void Class_10E6B4C8::FUN_10a67120(Object_10A67120* Obj, int Param)

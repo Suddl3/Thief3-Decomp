@@ -1,18 +1,10 @@
 // Game/Unsorted_10B81D80.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10B822C0.h"
+#include "Game/Struct_10B859B0_0C.h"
+#include "Game/Struct_10B859B0_Vector.h"
 
 typedef unsigned char BYTE;
-
-struct Struct_10B859B0_Vector
-{
-    void SetZero() { X = Y = Z = W = 0.0f; }
-    float& operator()(int I) { return (&X)[I]; }
-
-    float X;
-    float Y;
-    float Z;
-    float W;
-};
 
 struct Struct_10B859B0_Rotation
 {
@@ -48,15 +40,6 @@ struct Struct_10B859B0_Transform
     Struct_10B859B0_Vector Translation;
 };
 
-struct Struct_10B859B0_0C
-{
-    Struct_10B859B0_0C() : Unknown00(0), Unknown04(0), Unknown08(0x80000000) {}
-
-    int Unknown00;
-    int Unknown04;
-    unsigned int Unknown08;
-};
-
 class Class_10B859B0
 {
 public:
@@ -76,15 +59,6 @@ class Class_10B822C0_Member
 public:
     char Unknown00[0x28];
     unsigned int Unknown28;
-};
-
-class Class_10B822C0
-{
-public:
-    int FUN_10b822c0();
-
-    char Unknown00[0x8C];
-    Class_10B822C0_Member* Unknown8C;
 };
 
 class Allocator_10FFA700

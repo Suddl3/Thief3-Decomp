@@ -1,5 +1,8 @@
 // Game/Unsorted_10B42C10.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10B175C0.h"
+#include "Game/Class_10B314F0.h"
+#include "Game/Class_10B78320.h"
 
 typedef unsigned long DWORD;
 
@@ -21,24 +24,11 @@ public:
     void FUN_10a53560(int A);
 };
 
-class Class_10B314F0
-{
-public:
-    void FUN_10b314f0(bool A);
-};
-
 class Class_10B42BD0;
 
 void FUN_10b42bd0(Class_10B42BD0* A);
 
 void* FUN_10b154c0();
-
-class Class_10B175C0
-{
-public:
-    void FUN_10b175c0(void* A, int B, void (*C)(Class_10B42BD0*), void* D);
-    Class_10B314F0* FUN_10b16fb0();
-};
 
 class Class_10E809B8 : public Window
 {
@@ -153,14 +143,6 @@ public:
     float Unknown124;
     float Unknown128;
     char Unknown12C[4];
-};
-
-class Class_10B78320
-{
-public:
-    void FUN_10b78320();
-
-    char Unknown00[0x1A4];
 };
 
 class Class_10B43160_Member

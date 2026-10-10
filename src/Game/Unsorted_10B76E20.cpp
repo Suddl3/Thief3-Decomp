@@ -1,31 +1,18 @@
 // Game/Unsorted_10B76E20.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10B78340
-{
-public:
-    char Unknown00[0x188];
-    void* Field188;
-
-    void* FUN_10b78340();
-};
+#include "Game/Base_10B7AA20.h"
+#include "Game/Class_10B78340.h"
+#include "Game/Class_10B7AC80.h"
+#include "Game/Class_10B7B910.h"
+#include "Game/Class_10B81A40.h"
+#include "Game/Class_10B81B10.h"
+#include "Game/Class_10E888E4.h"
+#include "Game/Class_10E89268.h"
+#include "Game/Struct_10B7AA20.h"
 
 extern void* DAT_10e888e4[];
 
 extern void* DAT_10e68f94[];
-
-class Class_10E888E4
-{
-public:
-    Class_10E888E4* FUN_10b7a2f0();
-
-    void** Unknown00;        // +0x00: DAT_10e888e4
-    float Unknown04;
-    int Unknown08;
-    void** Unknown0C;        // +0x0c: DAT_10e68f94
-    char Unknown10[0x3C];
-    float Unknown4C;
-};
 
 class Class_10E822B0
 {
@@ -37,28 +24,6 @@ public:
     char Unknown04[0x150];
 };
 
-struct Base_10B7AA20
-{
-    int Unknown154;
-
-    Base_10B7AA20()
-    {
-        Unknown154 = 0;
-    }
-};
-
-struct Struct_10B7AA20
-{
-    int Unknown00;
-    int Unknown04;
-
-    Struct_10B7AA20()
-    {
-        Unknown00 = 0;
-        Unknown04 = 0;
-    }
-};
-
 class Class_10E88AF8 : public Class_10E822B0, public Base_10B7AA20
 {
 public:
@@ -68,38 +33,7 @@ public:
     Struct_10B7AA20 Unknown158;
 };
 
-class Class_10B7AC80 {
-public:
-    char Unknown00[0x40];
-    unsigned char Field40;
-
-    void FUN_10b7ac80(unsigned char param);
-};
-
-class Class_10B7B910 {
-public:
-    int Field00;
-
-    Class_10B7B910* FUN_10b7b910();
-};
-
 void FUN_10da4310();
-
-class Class_10B81A40
-{
-public:
-    char Unknown00[0x70];
-    float Field70;
-
-    virtual float FUN_10b81a40();
-};
-
-class Class_10B81B10 {
-public:
-    char Unknown00[0x8c];
-    int Field8c;
-    int FUN_10b81b10();
-};
 
 void FUN_10b87e40();
 
@@ -108,12 +42,6 @@ void FUN_10b87e80();
 void FUN_10b878f0();
 
 extern void* DAT_10e89268[];
-
-class Class_10E89268 {
-public:
-    void* Field00;
-    void FUN_10b81d10();
-};
 
 void FUN_10cad410();
 

@@ -1,7 +1,7 @@
 // Game/Unsorted_1098CB50.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include <new>
+#include "Game/Class_1098CB90.h"
 
 class APlayerPawn
 {
@@ -9,25 +9,6 @@ public:
     APlayerPawn();
     void operator delete(void* p);
     static void FUN_1098cb80(void* p);
-};
-
-class Class_1098CB90
-{
-public:
-    Class_1098CB90* FUN_1098cb90(int A, int B);
-
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    int Unknown10;
-    int Unknown14;
-    int Unknown18;
-    int Unknown1C;
-    int Unknown20;
-    int Unknown24;
-    int Unknown28;
-    int Unknown2C;
 };
 
 // FUNCTION: 0x1098CB80 ?FUN_1098cb80@APlayerPawn@@SAXPAX@Z

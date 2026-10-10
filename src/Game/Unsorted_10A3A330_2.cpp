@@ -1,5 +1,7 @@
 // Game/Unsorted_10A3A330_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10A3A330_Primary.h"
+#include "Game/Class_10E667AC.h"
 
 class Class_10A3A330;
 
@@ -11,21 +13,6 @@ public:
 };
 
 extern Class_10F46DA0* DAT_10f46da0;
-
-class Class_10A3A330_Primary
-{
-public:
-    virtual void Virtual0();
-};
-
-class Class_10E667AC
-{
-public:
-    virtual void Virtual0();
-    virtual void FUN_10a3ac50(int A);
-    virtual void FUN_10a3a330();
-    virtual void FUN_10a3a380();
-};
 
 class Class_10A3A330 : public Class_10A3A330_Primary, public Class_10E667AC
 {

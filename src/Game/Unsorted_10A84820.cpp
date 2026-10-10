@@ -1,5 +1,7 @@
 // Game/Unsorted_10A84820.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_109022E0.h"
+#include "Game/Class_10E6C390.h"
 
 extern const char DAT_10e47660[];
 
@@ -15,12 +17,6 @@ public:
     FName(const char* Name, EFindName FindType);
 
     unsigned long Value;
-};
-
-class Class_109022E0
-{
-public:
-    char* Unknown00;
 };
 
 class Class_10A84CE0
@@ -44,23 +40,6 @@ public:
 };
 
 extern Class_10F46DA0* DAT_10f46da0;
-
-class Class_10E6C390
-{
-public:
-    void FUN_10a84d70();
-
-    char Unknown00[4];
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    int Unknown10;
-    bool Unknown14;
-    bool Unknown15;
-    char Unknown16[0x16];
-    int Unknown2C;
-    int Unknown30;
-};
 
 class Class_10E5D498
 {

@@ -1,5 +1,9 @@
 // Game/Unsorted_10C0CED0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10905A90_Member.h"
+#include "Game/Class_10C0EE90.h"
+#include "Game/Class_10E98530.h"
+#include "Game/Struct_10C0EE30.h"
 
 extern const char DAT_10e47600[];
 
@@ -171,41 +175,6 @@ public:
     Class_10E984F4* FUN_10c12a90();
 };
 
-class Class_10E98530
-{
-public:
-    Class_10E98530();
-
-    virtual ~Class_10E98530();
-
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-};
-
-class Class_10c0ee90
-{
-public:
-    Class_10c0ee90* FUN_10c0ee90();
-
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    float Unknown10;
-};
-
-class Class_10905A90_Member
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5(void* Block);
-};
-
 Class_10905A90_Member* FUN_10905aa0();
 
 class Class_10BFBD70
@@ -250,12 +219,6 @@ public:
     Class_10BFBD70 Unknown10;
 };
 
-struct Struct_10C0EE30
-{
-    char Unknown00[8];
-    int Unknown08;
-};
-
 class Class_10E97CC0
 {
 public:
@@ -277,8 +240,8 @@ void Class_10E97CC0::FUN_10c0ee30(int A, int B, Struct_10C0EE30* C, int D)
         FUN_10c0eb00();
 }
 
-// FUNCTION: 0x10C0EE90 ?FUN_10c0ee90@Class_10c0ee90@@QAEPAV1@XZ
-Class_10c0ee90* Class_10c0ee90::FUN_10c0ee90()
+// FUNCTION: 0x10C0EE90 ?FUN_10c0ee90@Class_10C0EE90@@QAEPAV1@XZ
+Class_10C0EE90* Class_10C0EE90::FUN_10c0ee90()
 {
     Unknown00 = 0;
     Unknown04 = 0;

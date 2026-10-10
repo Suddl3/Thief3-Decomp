@@ -1,14 +1,6 @@
 // Game/Unsorted_10B34B30_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_109081E0
-{
-public:
-    Class_109081E0(const char* In);
-    ~Class_109081E0();
-
-    char* Unknown00;
-};
+#include "Game/Class_109081E0.h"
 
 template <class T> class TArray
 {

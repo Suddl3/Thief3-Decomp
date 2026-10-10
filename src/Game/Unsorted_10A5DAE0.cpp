@@ -1,21 +1,7 @@
 // Game/Unsorted_10A5DAE0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
-
-class Window
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual FVector PlacedPosition();
-
-    char Unknown04[0x114];
-};
+#include "Game/Window.h"
 
 class Class_10E698F0 : public Window
 {

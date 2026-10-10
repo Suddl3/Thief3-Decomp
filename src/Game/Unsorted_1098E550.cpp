@@ -1,14 +1,6 @@
 // Game/Unsorted_1098E550.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10E70A50
-{
-public:
-    Class_10E70A50();
-
-    void** Unknown00;
-    char Unknown04[0x28];
-};
+#include "Game/Class_10E70A50.h"
 
 class AMetaData : public Class_10E70A50
 {

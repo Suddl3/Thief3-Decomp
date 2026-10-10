@@ -1,16 +1,9 @@
 // Game/Unsorted_10C165A0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10E98C8C.h"
+#include "Game/Class_10FF667C_Member.h"
 
 void operator delete(void* P);
-
-class Class_10FF667C_Member
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1(int p1, int* p2);
-    virtual void Virtual2();
-    virtual void Virtual3(int* P);
-};
 
 class Class_10FF667C
 {
@@ -34,16 +27,6 @@ public:
 };
 
 extern Class_10E98C88* DAT_10ff7080;
-
-class Class_10E98C8C
-{
-public:
-    ~Class_10E98C8C();
-
-    virtual void FUN_10c162e0(int p1);
-
-    int Unknown04;
-};
 
 inline void FreeInstance(Class_10E98C88* P)
 {

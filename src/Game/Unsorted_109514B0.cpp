@@ -1,45 +1,21 @@
 // Game/Unsorted_109514B0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10951530.h"
+#include "Game/Class_109523B0.h"
+#include "Game/Class_109523C0.h"
+#include "Game/Class_10953B60.h"
+#include "Game/Class_10956F50.h"
+#include "Game/Class_10956F60.h"
+#include "Game/Class_10E4AC64.h"
+#include "Game/Struct_10951DE0.h"
+#include "Game/Struct_10951E80.h"
+#include "Game/Struct_10951EB0.h"
+#include "Game/Struct_10952020.h"
+#include "Game/Struct_109520C0.h"
+#include "Game/Struct_109520F0.h"
+#include "Game/Struct_10952710.h"
 
 extern void* DAT_10e4ac64;
-
-class Class_10E4AC64
-{
-public:
-    void* Field00;
-
-    void FUN_109514b0();
-};
-
-class Class_10951530
-{
-public:
-    char Unknown00[0x4c];
-    void* Unknown4c;
-
-    void* FUN_10951530();
-};
-
-struct Struct_10951DE0
-{
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-};
-
-struct Struct_10951E80
-{
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-};
-
-struct Struct_10951EB0
-{
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-};
 
 class Class_10E4AC78
 {
@@ -54,20 +30,6 @@ public:
     Struct_10951DE0 Unknown110;
 };
 
-struct Struct_10952020
-{
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-};
-
-struct Struct_109520C0
-{
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-};
-
 class Class_109520C0
 {
 public:
@@ -75,13 +37,6 @@ public:
 
     char Unknown00[0x120];
     Struct_109520C0 Unknown120;
-};
-
-struct Struct_109520F0
-{
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
 };
 
 class Class_10E4AD48
@@ -103,31 +58,9 @@ struct Struct_109523b0_Field00 {
     unsigned char Field28c;
 };
 
-class Class_109523b0
-{
-public:
-    Struct_109523b0_Field00* Field00;
-    unsigned char FUN_109523b0();
-};
-
 struct Struct_109523c0_Field00 {
     char Unknown00[0x290];
     int Field290;
-};
-
-class Class_109523c0
-{
-public:
-    Struct_109523c0_Field00* Field00;
-    int FUN_109523c0();
-};
-
-struct Struct_10952710
-{
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
 };
 
 class Class_10952710
@@ -141,14 +74,6 @@ public:
 
 extern unsigned int DAT_10f3424c;
 
-class Class_10953B60
-{
-public:
-    void FUN_10953b60();
-    void FUN_10953c90(int Arg);
-    void FUN_10953e40();
-};
-
 extern Class_10953B60 DAT_10f341f8;
 
 extern void* DAT_10e4ae20[];
@@ -159,22 +84,6 @@ class Class_10E4AE20 {
     void* Field00;
 public:
     void FUN_109562b0();
-};
-
-class Class_10956f50
-{
-public:
-    char Unknown00[0x294];
-    unsigned char Field294;
-    void FUN_10956f50(unsigned char p1);
-};
-
-class Class_10956F60
-{
-public:
-    char Unknown00[0x294];
-    unsigned char Field294;
-    unsigned char FUN_10956f60();
 };
 
 extern void* DAT_10e4ae58[];
@@ -289,14 +198,14 @@ void FUN_10952200()
     FUN_10948890();
 }
 
-// FUNCTION: 0x109523B0 ?FUN_109523b0@Class_109523b0@@QAEEXZ
-unsigned char Class_109523b0::FUN_109523b0()
+// FUNCTION: 0x109523B0 ?FUN_109523b0@Class_109523B0@@QAEEXZ
+unsigned char Class_109523B0::FUN_109523b0()
 {
     return Field00->Field28c;
 }
 
-// FUNCTION: 0x109523C0 ?FUN_109523c0@Class_109523c0@@QAEHXZ
-int Class_109523c0::FUN_109523c0()
+// FUNCTION: 0x109523C0 ?FUN_109523c0@Class_109523C0@@QAEHXZ
+int Class_109523C0::FUN_109523c0()
 {
     return Field00->Field290;
 }
@@ -334,8 +243,8 @@ void Class_10E4AE58::FUN_10956830()
     Field294 = 0;
 }
 
-// FUNCTION: 0x10956F50 ?FUN_10956f50@Class_10956f50@@QAEXE@Z
-void Class_10956f50::FUN_10956f50(unsigned char p1)
+// FUNCTION: 0x10956F50 ?FUN_10956f50@Class_10956F50@@QAEXE@Z
+void Class_10956F50::FUN_10956f50(unsigned char p1)
 {
     Field294 = p1;
 }

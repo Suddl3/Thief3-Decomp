@@ -1,19 +1,9 @@
 // Game/Unsorted_10BC3FC0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10BA9EC0.h"
+#include "Game/Class_10C00C70.h"
 
 double FUN_10c00480();
-
-class Class_10BA9EC0
-{
-public:
-    void* FUN_10ba9ec0();
-};
-
-class Class_10c00c70
-{
-public:
-    bool FUN_10c00c70();
-};
 
 class Class_10BB8300
 {
@@ -103,7 +93,7 @@ bool Class_10E8BE68::FUN_10bc3fc0()
     double Limit = Virtual65() + Unknown0C;
     if (FUN_10c00480() < Limit)
         return false;
-    if (static_cast<Class_10c00c70*>(Unknown04->Unknown08->FUN_10ba9ec0())->FUN_10c00c70() == 1)
+    if (static_cast<Class_10C00C70*>(Unknown04->Unknown08->FUN_10ba9ec0())->FUN_10c00c70() == 1)
         return false;
     return true;
 }

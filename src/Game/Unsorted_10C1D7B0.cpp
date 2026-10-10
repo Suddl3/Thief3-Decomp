@@ -1,5 +1,7 @@
 // Game/Unsorted_10C1D7B0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10E8D7C4.h"
+#include "Game/Struct_Vec3.h"
 
 class FArchive
 {
@@ -12,16 +14,6 @@ public:
     virtual void Virtual5();
     virtual void Virtual6(int* Value);
     virtual void Virtual7(int* Value);
-};
-
-class Class_10E8D7C4
-{
-public:
-    virtual void FUN_10c1ef20(FArchive& Ar);
-
-    int Unknown04;
-    int Unknown08;
-    char Unknown0C;
 };
 
 extern void* DAT_10e99178[];
@@ -72,13 +64,6 @@ public:
     int Unknown80;
     int Unknown84;
     int Unknown88;
-};
-
-struct Struct_Vec3
-{
-    float Unknown00;
-    float Unknown04;
-    float Unknown08;
 };
 
 struct Struct_10C1DD00

@@ -1,92 +1,25 @@
 // Game/Unsorted_10C09090.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_1090A780
-{
-public:
-    Class_1090A780(const Class_1090A780& Other);
-    ~Class_1090A780();
-
-    char* Unknown00;
-};
+#include "Game/Class_1090A780.h"
+#include "Game/Class_10C13100.h"
+#include "Game/Class_10C13130.h"
+#include "Game/Class_10C15D50.h"
+#include "Game/Class_10C160D0.h"
+#include "Game/Class_10C16220.h"
+#include "Game/Class_10C168F0.h"
+#include "Game/Class_10E984BC.h"
+#include "Game/Class_10E98C80.h"
+#include "Game/Class_10E98C84.h"
 
 extern Class_1090A780 DAT_10ff7060;
 
-class Class_10E984BC
-{
-public:
-    Class_1090A780 FUN_10c12da0();
-};
-
 extern Class_1090A780 DAT_10ff7064;
-
-class Class_10C13100
-{
-public:
-    Class_1090A780 FUN_10c13100();
-};
-
-class Class_10C13130
-{
-public:
-    Class_1090A780 FUN_10c13130();
-
-    char Unknown00[0xC];
-    Class_1090A780 Unknown0C;
-};
 
 extern void* DAT_10e98c80[];
 
-class Class_10E98C80
-{
-public:
-    void* Field00;
-    void FUN_10c15bb0();
-};
-
-class Class_10C15D50
-{
-public:
-    char Unknown00[0x401c];
-    void* Field401c;
-    void* FUN_10c15d50();
-};
-
 extern void* DAT_10e98c84[];
 
-class Class_10E98C84
-{
-public:
-    void* Field00;
-    void FUN_10c15db0();
-};
-
-class Class_10C160D0
-{
-public:
-    bool FUN_10c160d0(int Id, int* Out);
-};
-
-class Class_10C16220
-{
-public:
-    int FUN_10c16220(int Id);
-
-    char Unknown00[4];
-    Class_10C160D0 Unknown04;
-};
-
 double FUN_10c00480();
-
-class Class_10C168F0
-{
-public:
-    void FUN_10c168f0(int A, float B);
-
-    char Unknown00[0xAC];
-    int Unknown0AC;
-    float Unknown0B0;
-};
 
 // FUNCTION: 0x10C12DA0 ?FUN_10c12da0@Class_10E984BC@@QAE?AVClass_1090A780@@XZ
 Class_1090A780 Class_10E984BC::FUN_10c12da0()

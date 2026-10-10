@@ -1,13 +1,10 @@
 // Game/Unsorted_10B88C40.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
-
-class Class_1098E3D0
-{
-public:
-    void FUN_1098e3d0(int A, void* B);
-};
+#include "Game/Class_1098E3D0.h"
+#include "Game/Class_109A6AA0.h"
+#include "Game/Class_10E89458.h"
+#include "Game/Class_10E89478.h"
 
 struct Struct_10E89478_Unknown08
 {
@@ -25,54 +22,6 @@ struct Struct_10B89760_Param
     INT Unknown2C;
     INT Unknown30;
     INT Unknown34;
-};
-
-class Class_10E89478
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void FUN_10b89760();
-
-    char Unknown04[4];
-    Struct_10E89478_Unknown08* Unknown08;
-    INT Unknown0C;
-    char Unknown10[4];
-    FVector* Unknown14;
-    FVector Unknown18;
-    FVector Unknown24;
-    INT Unknown30;
-    INT Unknown34;
-    INT Unknown38;
-    INT Unknown3C;
-    INT Unknown40;
-};
-
-class Class_109A6AA0
-{
-public:
-    int FUN_109a6aa0();
-
-    float Unknown00;
-    float Unknown04;
-    float Unknown08;
-};
-
-class Class_10E89458
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual bool FUN_10b89280(Class_10E89458* Other);
-
-    char Unknown04[0xC];
-    FVector Unknown10;
 };
 
 // FUNCTION: 0x10B89280 ?FUN_10b89280@Class_10E89458@@UAE_NPAV1@@Z

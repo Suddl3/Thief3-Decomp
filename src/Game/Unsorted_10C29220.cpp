@@ -1,34 +1,18 @@
 // Game/Unsorted_10C29220.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_109081E0.h"
+#include "Game/Class_10B26930.h"
+#include "Game/Class_10C38430.h"
+#include "Game/Class_10E99370.h"
+#include "Game/Class_10E993C0.h"
+#include "Game/Class_10E9AAD0.h"
+#include "Game/Class_10E9AD9C.h"
+#include "Game/Class_10E9ADE8.h"
+#include "Game/Class_10E9AEC8.h"
+#include "Game/Info_10C2F870.h"
+#include "Game/Struct_10C35670.h"
 
 extern void* DAT_10e993c0[];
-
-class Class_10E993C0
-{
-public:
-    Class_10E993C0(int A);
-
-    void** Unknown00;        // +0x00: DAT_10e993c0
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    int Unknown10;
-    int Unknown14;
-    int Unknown18;
-    int Unknown1C;
-};
-
-class Class_10E99370
-{
-public:
-    Class_10E99370(int A, int B);
-
-    virtual void FUN_10c28260();
-
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-};
 
 class Class_10E993C4 : public Class_10E99370
 {
@@ -46,15 +30,6 @@ void FUN_10c27290();
 
 extern const char DAT_10e9aaa8[];
 
-class Class_109081E0
-{
-public:
-    Class_109081E0(const char* In);
-    ~Class_109081E0();
-
-    char* Unknown00;
-};
-
 class Class_10E9AA7C
 {
 public:
@@ -62,20 +37,6 @@ public:
     Class_109081E0 FUN_10c2ebd0();
 
     void* Field00;
-};
-
-struct Info_10C2F870
-{
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-};
-
-struct Struct_10C35670
-{
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
 };
 
 class Class_10E9AC80
@@ -125,21 +86,9 @@ public:
 
 extern const char DAT_10e9adc8[];
 
-class Class_10E9AD9C
-{
-public:
-    Class_109081E0 FUN_10c36860();
-};
-
 void FUN_10c36a20();
 
 extern const char DAT_10e9ae18[];
-
-class Class_10E9ADE8
-{
-public:
-    Class_109081E0 FUN_10c374e0();
-};
 
 extern const char DAT_10e9ae54[];
 
@@ -180,37 +129,9 @@ public:
 
 extern const char DAT_10e9aef4[];
 
-class Class_10E9AEC8
-{
-public:
-    Class_109081E0 FUN_10c382b0();
-};
-
 extern const char DAT_10e9af34[];
 
-class Class_10C38430
-{
-public:
-    Class_109081E0 FUN_10c38430();
-};
-
 extern void* DAT_10e9aad0[];
-
-class Class_10E9AAD0
-{
-public:
-    void* Field00;
-    void FUN_10c384f0();
-};
-
-class Class_10B26930
-{
-public:
-    void FUN_10b26930(int Value);
-
-    int Unknown00;
-    int Unknown04;
-};
 
 class Class_10C38610
 {

@@ -1,7 +1,7 @@
 // Game/Unsorted_10BA90A0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include <math.h>
+#include "Game/Struct_10BA91E0.h"
 
 extern "C" void* memmove(void* Dest, const void* Src, unsigned Count);
 
@@ -14,13 +14,6 @@ public:
     int Unknown00;
     int Unknown04;
     int* Unknown08;
-};
-
-struct Struct_10BA91E0
-{
-    float Unknown00;
-    float Unknown04;
-    float Unknown08;
 };
 
 float FUN_10ba91e0(const Struct_10BA91E0* A, const Struct_10BA91E0* B);

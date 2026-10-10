@@ -1,32 +1,7 @@
 // Game/Unsorted_10BBB540_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10BFBD70
-{
-public:
-    void FUN_109dff50(int Index);
-
-    int FindIndex(int Item)
-    {
-        for (int i = 0; i < Count; i++)
-        {
-            if (Data[i] == Item)
-                return i;
-        }
-        return -1;
-    }
-
-    int Count;
-    int Unknown04;
-    int* Data;
-};
-
-class Class_10BFF460
-{
-public:
-    bool FUN_10bff460();
-    bool FUN_10bff330();
-};
+#include "Game/Class_10BFBD70.h"
+#include "Game/Class_10BFF460.h"
 
 class Class_10BBB410
 {

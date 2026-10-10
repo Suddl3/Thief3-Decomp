@@ -1,29 +1,10 @@
 // Game/Unsorted_10BED4A0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
+#include "Game/Class_109081E0.h"
+#include "Game/Class_10E90D70.h"
 
 double FUN_10c00480();
-
-class Class_109081E0
-{
-public:
-    Class_109081E0(const Class_109081E0& Other);
-    ~Class_109081E0();
-
-    void* Unknown00;
-};
-
-class Class_10E90D70
-{
-public:
-    Class_10E90D70(int A, int B);
-    ~Class_10E90D70();
-
-    virtual void Virtual0();
-
-    int Unknown04[15];
-};
 
 // The base whose implicit destructor (0x10BD3140, a jmp to ~Class_10E90D70) unwinds this constructor.
 class Class_10BD3140 : public Class_10E90D70

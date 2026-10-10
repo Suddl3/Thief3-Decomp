@@ -1,18 +1,7 @@
 // Game/Unsorted_10906090.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10905A90_Member
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7(int A);
-};
+#include "Game/Class_10905A90_Member.h"
+#include "Game/Class_10906090.h"
 
 Class_10905A90_Member* FUN_10905aa0();
 
@@ -37,17 +26,6 @@ extern void* DAT_10f2bfe4;
 extern unsigned char DAT_10f2bfed;
 
 extern void* DAT_10f2bfe8;
-
-class Class_10906090
-{
-public:
-    Class_10906090* FUN_10906090(int A, const char* B, const char* C, int D);
-
-    int Unknown00;
-    int Unknown04;
-    char Unknown08[0x101];
-    char Unknown109[0xC01];
-};
 
 extern "C" __declspec(dllimport) void __stdcall Sleep(unsigned long dwMilliseconds);
 

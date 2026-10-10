@@ -1,5 +1,9 @@
 // Game/Unsorted_109E5770.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_109081E0.h"
+#include "Game/Class_109E5910.h"
+#include "Game/Class_10D3F830.h"
+#include "Game/Entry_10C32C30.h"
 
 class Class_10BFBD70
 {
@@ -65,33 +69,6 @@ public:
 };
 
 int FUN_10af36e0(const char* A, const char* B);
-
-extern const char DAT_10e47660[];
-
-// Ion Storm's string (0x109081E0): a char pointer, null when empty.
-class Class_109081E0
-{
-public:
-    char* Unknown00;
-};
-
-class Class_109E5910
-{
-public:
-    int FUN_109e5910(const Class_109081E0& Name);
-};
-
-struct Entry_10C32C30
-{
-    Entry_10C32C30* Next;
-    Entry_10C32C30* Prev;
-};
-
-class Class_10D3F830
-{
-public:
-    bool FUN_10d3f830(int* Key);
-};
 
 class Class_10C49740 : public Class_10D3F830
 {

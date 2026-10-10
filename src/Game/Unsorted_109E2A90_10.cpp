@@ -1,21 +1,16 @@
 // Game/Unsorted_109E2A90_10.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10905A90_Member.h"
+#include "Game/Class_109E2A90.h"
+#include "Game/Class_109E2AE0.h"
+#include "Game/Class_109E2BD0.h"
+#include "Game/Class_10E5B2AC.h"
 
 struct Struct_109E2A90_Node
 {
     Struct_109E2A90_Node* Next;
     Struct_109E2A90_Node* Prev;
     int Unknown08;
-};
-
-class Class_109E2A90
-{
-public:
-    void FUN_109e2a90(Struct_109E2A90_Node* Item);
-
-    int Count;
-    Struct_109E2A90_Node* Head;
-    Struct_109E2A90_Node* Tail;
 };
 
 struct Struct_109E2AE0_Node
@@ -27,43 +22,6 @@ struct Struct_109E2AE0_Item
 {
     int Unknown00;
     Struct_109E2AE0_Node* Unknown04;
-};
-
-class Class_109E2AE0
-{
-public:
-    void FUN_109e2ae0();
-
-    char Unknown00[4];
-    int Unknown04;
-    char Unknown08[4];
-    Struct_109E2AE0_Item** Unknown0C;
-};
-
-class Class_109E2BD0
-{
-public:
-    int FUN_109e2bd0(int Value);
-
-    char Unknown00[4];
-    int Unknown04;
-    char Unknown08[4];
-    Class_109E2A90** Unknown0C;
-};
-
-class Class_10905A90_Member
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8(int A, int B);
-    virtual void Virtual9();
 };
 
 Class_10905A90_Member* FUN_10905aa0();
@@ -104,16 +62,6 @@ public:
 };
 
 extern Class_10F46DA0* DAT_10f46da0;
-
-class Class_10E5B2AC
-{
-public:
-    virtual void FUN_109e3510(int Msg, int A, int B, int C);
-
-    void FUN_109e32b0();
-    void FUN_109e3320(int A, int B, int C);
-    void FUN_109e3420(int A, int B, int C);
-};
 
 class FVector
 {

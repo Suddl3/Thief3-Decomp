@@ -1,57 +1,12 @@
 // Game/Unsorted_10C5B9D0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_109081E0
-{
-public:
-    Class_109081E0& operator=(const Class_109081E0& Other);
-
-    char* Unknown00;
-};
-
-struct Struct_10C5BA20
-{
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-};
-
-class Class_10C5BA20
-{
-public:
-    Class_10C5BA20* FUN_10c5ba20(const Class_10C5BA20& A);
-
-    Class_109081E0 Unknown00;
-    Class_109081E0 Unknown04;
-    bool Unknown08;
-    Struct_10C5BA20 Unknown0C;
-    int Unknown18;
-    int Unknown1C;
-    int Unknown20;
-    int Unknown24;
-};
+#include "Game/Class_109081E0.h"
+#include "Game/Class_10A32000.h"
+#include "Game/Class_10C5B9D0.h"
+#include "Game/Class_10C5BA20.h"
+#include "Game/Struct_10C5BA20.h"
 
 extern "C" void* memmove(void* Dest, const void* Src, unsigned Count);
-
-// A growable array of bytes: a count, the bytes allocated and the block.
-class Class_10A32000
-{
-public:
-    void FUN_10a32000(int NewCount);
-
-    int Unknown00;
-    int Unknown04;
-    char* Unknown08;
-};
-
-class Class_10C5B9D0
-{
-public:
-    void FUN_10c5b9d0();
-
-    char Unknown00[0x3C];
-    Class_10A32000 Unknown3C;
-};
 
 // FUNCTION: 0x10C5B9D0 ?FUN_10c5b9d0@Class_10C5B9D0@@QAEXXZ
 void Class_10C5B9D0::FUN_10c5b9d0()

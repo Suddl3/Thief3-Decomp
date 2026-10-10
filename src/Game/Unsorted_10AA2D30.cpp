@@ -1,5 +1,7 @@
 // Game/Unsorted_10AA2D30.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10905A90_Member.h"
+#include "Game/Class_1096A960.h"
 
 enum EName
 {
@@ -25,17 +27,6 @@ public:
     unsigned long Value;
 };
 
-class Class_10905A90_Member
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5(void* Block);
-};
-
 Class_10905A90_Member* FUN_10905aa0();
 
 extern const char DAT_10e47660[];
@@ -57,12 +48,6 @@ public:
     const char* operator*() const { return Unknown00 ? Unknown00 : DAT_10e47660; }
 
     char* Unknown00;
-};
-
-class Class_1096A960
-{
-public:
-    Class_109081E0 FUN_1096a960();
 };
 
 class UClass;

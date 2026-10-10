@@ -1,16 +1,13 @@
 // Game/Unsorted_10B56980.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
-
-class Class_1090A780
-{
-public:
-    Class_1090A780(const Class_1090A780& Other);
-    ~Class_1090A780();
-
-    char* Unknown00;
-};
+#include "Game/Class_1090A780.h"
+#include "Game/Class_10B5B050.h"
+#include "Game/Class_10B5FAE0.h"
+#include "Game/Class_10B61020.h"
+#include "Game/Class_10B64430.h"
+#include "Game/Class_10B78780.h"
+#include "Game/Info_10B66060.h"
 
 class Class_10B56C80
 {
@@ -91,15 +88,6 @@ void FUN_10a593a0();
 
 extern void* DAT_10e82af8[];
 
-class Class_10B78780
-{
-public:
-    void FUN_10b78780();
-
-    void** Unknown00;
-    char Unknown04[0x18C];
-};
-
 class Class_10E82AF8 : public Class_10B78780
 {
 public:
@@ -136,12 +124,6 @@ public:
     char* Unknown00;
 };
 
-class Class_10B5B050
-{
-public:
-    Class_109081E0 FUN_10b5b050();
-};
-
 void FUN_10b45c20();
 
 extern void* DAT_10e83230[];
@@ -167,12 +149,6 @@ public:
 
 void FUN_10b59e30();
 
-class Class_10B5FAE0
-{
-public:
-    void FUN_10b5fae0(bool Param);
-};
-
 extern Class_10B5FAE0* DAT_10ff6598;
 
 extern void* DAT_10e83c48;
@@ -192,15 +168,6 @@ public:
 };
 
 void FUN_10a529e0();
-
-// Parameter setter at field offset 0x1ec
-
-class Class_10B61020 {
-public:
-    char Unknown00[0x1ec];
-    int Field1ec;
-    void FUN_10b61020(int param);
-};
 
 extern void* DAT_10ff659c[];
 
@@ -226,15 +193,6 @@ void FUN_10b74330();
 void FUN_10b74400();
 
 void FUN_10b79770();
-
-// Parameter setter at field offset 0x2fc
-
-class Class_10B64430 {
-public:
-    char Unknown00[0x2fc];
-    int Field2fc;
-    void FUN_10b64430(int param);
-};
 
 // Constructor-like initialization with mixed vtable stores
 
@@ -271,11 +229,6 @@ public:
 void FUN_10b76060();
 
 void FUN_10b760b0();
-
-struct Info_10B66060
-{
-    char Unknown00[0x2C];
-};
 
 struct Data_10B66060
 {

@@ -1,7 +1,10 @@
 // Game/Unsorted_10B3ADD0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
+#include "Game/Class_10B25200.h"
+#include "Game/Class_10B3AE70.h"
+#include "Game/Class_10E7E538.h"
+#include "Game/Class_10E816E0.h"
 
 struct Struct_10B21820_Object
 {
@@ -13,26 +16,6 @@ class Class_10B21820
 {
 public:
     Struct_10B21820_Object* FUN_10991e10();
-};
-
-class Class_10E7E538
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8();
-    virtual void Virtual9();
-    virtual void Virtual10();
-    virtual void Virtual11();
-    virtual void Virtual12();
-    virtual void Virtual13();
-    virtual float FUN_10b3af10(Class_10B21820* Obj);
 };
 
 struct Struct_10B48890;
@@ -69,29 +52,11 @@ public:
     unsigned char ArmUse;
 };
 
-class Class_10B25200
-{
-public:
-    void FUN_10b24d70();
-};
-
 class Class_10B255F0 : public Class_10B25200
 {
 };
 
 Class_10B255F0* FUN_10b25cd0();
-
-class Class_10E816E0
-{
-public:
-    void FUN_10b3ae50(AGarrett* Garrett);
-};
-
-class Class_10B3AE70
-{
-public:
-    void FUN_10b3ae70(AGarrett* Garrett);
-};
 
 // FUNCTION: 0x10B3ADD0 ?FUN_10b3add0@@YGHE@Z
 int __stdcall FUN_10b3add0(unsigned char A)

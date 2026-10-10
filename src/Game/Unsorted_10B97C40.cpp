@@ -1,45 +1,19 @@
 // Game/Unsorted_10B97C40.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10BC9D40
-{
-public:
-    bool FUN_10bc9d40();
-};
-
-class Class_10B9CAC0
-{
-public:
-    Class_10BC9D40* FUN_10b9cac0(int A);
-};
-
-struct Struct_10B9BCA0
-{
-    char Unknown00[8];
-    Class_10B9CAC0* Unknown08;
-};
-
-class Class_10B9BCA0
-{
-public:
-    bool FUN_10b9bca0(int A);
-
-    char Unknown00[0x118];
-    Struct_10B9BCA0* Unknown118;
-};
+#include "Game/Class_10B9BCA0.h"
+#include "Game/Class_10B9CAC0.h"
+#include "Game/Class_10BC9D40.h"
+#include "Game/Class_10E4CCD0.h"
+#include "Game/Class_10E90D70.h"
+#include "Game/Class_10E93148.h"
+#include "Game/Class_10FF667C.h"
+#include "Game/Struct_10B9BCA0.h"
 
 class Class_10B9BDA0_Member
 {
 public:
     virtual void F0() = 0;
     virtual void F1() = 0;
-};
-
-class Class_10FF667C
-{
-public:
-    char Unknown00[0x14];
-    Class_10B9BDA0_Member* Unknown14;
 };
 
 extern Class_10FF667C* DAT_10ff667c;
@@ -116,43 +90,6 @@ void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
 struct Struct_10B98E00;
-
-class Class_10E90D70
-{
-public:
-    Class_10E90D70(int A, int B);
-
-    void** Unknown00;
-    int Unknown04[15];
-};
-
-class Class_10E93148 : public Class_10E90D70
-{
-public:
-    Class_10E93148(int A, int B, int C, bool D);
-
-    int Unknown40[3];
-    int Unknown4C;
-    int Unknown50;
-    bool Unknown54;
-    bool Unknown55;
-};
-
-class Class_10E4CCD0
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8();
-    virtual void Virtual9();
-    virtual Class_10E93148* FUN_10b97d80(Struct_10B98E00* A, int B, bool C);
-};
 
 // FUNCTION: 0x10B97D80 ?FUN_10b97d80@Class_10E4CCD0@@UAEPAVClass_10E93148@@PAUStruct_10B98E00@@H_N@Z
 Class_10E93148* Class_10E4CCD0::FUN_10b97d80(Struct_10B98E00* A, int B, bool C)

@@ -1,51 +1,13 @@
 // Game/Unsorted_10B30030.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_1090A780
-{
-public:
-    Class_1090A780(const Class_1090A780& Other);
-    ~Class_1090A780();
-
-    char* Unknown00;
-};
-
-class Class_10B30190
-{
-public:
-    Class_1090A780 FUN_10b30190(int Index);
-
-    char Unknown00[0x30];
-    Class_1090A780* Unknown30;
-};
-
-class Class_10b31460
-{
-public:
-    char Unknown00[0x130];
-    unsigned char Unknown130;
-
-    void FUN_10b31460(unsigned char param);
-};
-
-class Class_10B31470
-{
-public:
-    void FUN_10b31470(int p1, int p2);
-
-    char Unknown00[0x124];
-    int Unknown124;
-    int Unknown128;
-};
-
-class Class_10b314e0
-{
-public:
-    char Unknown00[0x132];
-    unsigned char Unknown132;
-
-    void FUN_10b314e0(unsigned char param);
-};
+#include "Game/Class_1090A780.h"
+#include "Game/Class_10B30190.h"
+#include "Game/Class_10B31460.h"
+#include "Game/Class_10B31470.h"
+#include "Game/Class_10B314E0.h"
+#include "Game/Class_10B314F0.h"
+#include "Game/Class_10B31570.h"
+#include "Game/Class_10E7BB2C.h"
 
 class Struct_10B314F0
 {
@@ -109,42 +71,6 @@ public:
     virtual void Virtual56(int A);
 };
 
-class Class_10B314F0
-{
-public:
-    void FUN_10b314f0(bool A);
-
-    char Unknown00[0x134];
-    Struct_10B314F0* Unknown134;
-    bool Unknown138;
-};
-
-class Class_10b31570
-{
-public:
-    char Unknown00[0x144];
-    unsigned char Unknown144;
-
-    void FUN_10b31570(unsigned char param);
-};
-
-class Class_10E7BB2C
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void FUN_10b30030(const float* p1);
-
-    char Unknown04[0x10];
-    float Unknown14;
-    float Unknown18;
-    float Unknown1C;
-};
-
 // FUNCTION: 0x10B30030 ?FUN_10b30030@Class_10E7BB2C@@UAEXPBM@Z
 void Class_10E7BB2C::FUN_10b30030(const float* p1)
 {
@@ -158,8 +84,8 @@ Class_1090A780 Class_10B30190::FUN_10b30190(int Index)
     return Unknown30[Index];
 }
 
-// FUNCTION: 0x10B31460 ?FUN_10b31460@Class_10b31460@@QAEXE@Z
-void Class_10b31460::FUN_10b31460(unsigned char param)
+// FUNCTION: 0x10B31460 ?FUN_10b31460@Class_10B31460@@QAEXE@Z
+void Class_10B31460::FUN_10b31460(unsigned char param)
 {
     Unknown130 = param;
 }
@@ -171,8 +97,8 @@ void Class_10B31470::FUN_10b31470(int p1, int p2)
     Unknown128 = p2;
 }
 
-// FUNCTION: 0x10B314E0 ?FUN_10b314e0@Class_10b314e0@@QAEXE@Z
-void Class_10b314e0::FUN_10b314e0(unsigned char param)
+// FUNCTION: 0x10B314E0 ?FUN_10b314e0@Class_10B314E0@@QAEXE@Z
+void Class_10B314E0::FUN_10b314e0(unsigned char param)
 {
     Unknown132 = param;
 }
@@ -185,8 +111,8 @@ void Class_10B314F0::FUN_10b314f0(bool A)
         Unknown134->Virtual56(A ? 2 : 0);
 }
 
-// FUNCTION: 0x10B31570 ?FUN_10b31570@Class_10b31570@@QAEXE@Z
-void Class_10b31570::FUN_10b31570(unsigned char param)
+// FUNCTION: 0x10B31570 ?FUN_10b31570@Class_10B31570@@QAEXE@Z
+void Class_10B31570::FUN_10b31570(unsigned char param)
 {
     Unknown144 = param;
 }

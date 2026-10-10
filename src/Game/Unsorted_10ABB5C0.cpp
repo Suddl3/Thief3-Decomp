@@ -1,12 +1,6 @@
 // Game/Unsorted_10ABB5C0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-struct Struct_10ABB300
-{
-    char Unknown00[0x10];
-    bool Unknown10;
-    char Unknown11[3];
-};
+#include "Game/Struct_10ABB300.h"
 
 class Class_10ABB300
 {

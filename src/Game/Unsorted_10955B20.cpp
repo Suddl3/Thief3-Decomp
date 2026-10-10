@@ -1,27 +1,9 @@
 // Game/Unsorted_10955B20.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_1095AFD0
-{
-public:
-    ~Class_1095AFD0();
-};
+#include "Game/Class_10955C30.h"
+#include "Game/Class_1095AFD0.h"
 
 void FUN_1092bdb0(void* P);
-
-class Class_10955C30
-{
-public:
-    void FUN_10955c30();
-    void FUN_10956270();
-
-    const char* Unknown00;
-    char Unknown04[4];
-    int Unknown08;
-    char Unknown0C[0xC];
-    void* Unknown18;
-    Class_1095AFD0* Unknown1C;
-};
 
 extern const char DAT_10e47660[];
 

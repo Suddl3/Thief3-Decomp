@@ -1,15 +1,8 @@
 // Game/Unsorted_10C3E180.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Arg_10A48720.h"
 
 class Class_109BBBA0;
-
-struct Arg_10A48720
-{
-    Arg_10A48720() { Unknown00 = 0; }
-    Arg_10A48720(const Arg_10A48720& Other) { Unknown00 = Other.Unknown00; }
-
-    int Unknown00;
-};
 
 void FUN_10a48720(int A, int* B, int C, int D, Class_109BBBA0* E, int F, Arg_10A48720 G);
 

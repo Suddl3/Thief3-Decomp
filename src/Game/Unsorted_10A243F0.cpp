@@ -1,29 +1,11 @@
 // Game/Unsorted_10A243F0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10905A90_Member
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5(void* Block);
-};
+#include "Game/Class_10905A90_Member.h"
+#include "Game/Class_10A243F0.h"
+#include "Game/Class_10A24540.h"
+#include "Game/Class_10A250D0_Field18.h"
 
 Class_10905A90_Member* FUN_10905aa0();
-
-class Class_10A243F0
-{
-public:
-    void FUN_10a243f0(int A);
-    void FUN_10a24580();
-
-    int Unknown00;
-    int Unknown04;
-    void* Unknown08;
-};
 
 // Ion Storm's string (0x109081E0): a char pointer, null when default constructed.
 class Class_109081E0
@@ -51,13 +33,6 @@ public:
     Class_10A250D0_Node* Next;
 };
 
-// The table's key hasher: slot 0 gives the bytes FUN_1090e9b0 hashes.
-class Class_10A250D0_Field18
-{
-public:
-    virtual void Virtual0(const Class_109081E0& Key, const void** Data, int* Length);
-};
-
 // The hash table of 0x1090F080 (Class_1090F080) with string values.
 class Class_10A250D0
 {
@@ -72,14 +47,6 @@ public:
     bool Unknown10;
     Class_10A250D0_Node** Unknown14;
     Class_10A250D0_Field18 Unknown18;
-};
-
-class Class_10A24540
-{
-public:
-    void FUN_10a24540(char Old, char New);
-
-    char* Unknown00;
 };
 
 // FUNCTION: 0x10A24540 ?FUN_10a24540@Class_10A24540@@QAEXDD@Z

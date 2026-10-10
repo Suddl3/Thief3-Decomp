@@ -1,33 +1,11 @@
 // Game/Unsorted_10BB8D00_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10BBA080.h"
+#include "Game/Class_10BBDB40.h"
+#include "Game/Class_10BBDC30.h"
+#include "Game/Class_10DBD510.h"
 
 float appFrand();
-
-class Class_10BBDC30
-{
-public:
-    float FUN_10bbdbc0(int Id);
-};
-
-class Class_10BBDB40 : public Class_10BBDC30
-{
-};
-
-class Class_10DBD510
-{
-public:
-    Class_10BBDB40* FUN_10dbd510();
-};
-
-class Class_10BBA080
-{
-public:
-    float FUN_10bb8e70();
-    unsigned char FUN_10bb8c60();
-
-    char Unknown00[8];
-    Class_10DBD510* Unknown08;
-};
 
 // FUNCTION: 0x10BB8E70 ?FUN_10bb8e70@Class_10BBA080@@QAEMXZ
 float Class_10BBA080::FUN_10bb8e70()

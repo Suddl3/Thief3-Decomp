@@ -1,11 +1,10 @@
 // Game/Unsorted_10BA0220.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10BA1270
-{
-public:
-    virtual ~Class_10BA1270();
-};
+#include "Game/Class_10BA1270.h"
+#include "Game/Class_10BA12F0.h"
+#include "Game/Class_10C084A0.h"
+#include "Game/Class_10E8C118.h"
+#include "Game/FArchive.h"
 
 extern Class_10BA1270* DAT_10ff6680;
 
@@ -17,49 +16,10 @@ struct Struct_10BA12F0
     void** Items;
 };
 
-class Class_10BA12F0
-{
-public:
-    void FUN_10ba12f0();
-
-    void* Current;
-    Struct_10BA12F0* Container;
-    int Index;
-};
-
-class FArchive
-{
-public:
-    virtual ~FArchive();
-    virtual void Serialize(void* V, int Length);
-
-    char Unknown04[8];
-    int Unknown0C;
-};
-
-class Class_10C084A0
-{
-public:
-    void FUN_10c084a0(FArchive& Ar);
-};
-
 class Class_10C074F0
 {
 public:
     void FUN_10c074f0(FArchive& Ar);
-};
-
-class Class_10E8C118
-{
-public:
-    virtual void Virtual0();
-    virtual void FUN_10ba0da0(FArchive& Ar);
-
-    char Unknown04[0x28];
-    Class_10C084A0* Unknown2C;
-    Class_10C074F0* Unknown30;
-    char Unknown34[0x7C];
-    bool UnknownB0;
 };
 
 // FUNCTION: 0x10BA0DA0 ?FUN_10ba0da0@Class_10E8C118@@UAEXAAVFArchive@@@Z

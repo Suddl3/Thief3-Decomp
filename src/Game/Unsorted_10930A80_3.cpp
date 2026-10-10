@@ -1,42 +1,9 @@
 // Game/Unsorted_10930A80_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-// Ion Storm's string (0x109081E0): a char pointer, null when default constructed.
-class Class_109081E0
-{
-public:
-    ~Class_109081E0();
-
-    char* Unknown00;
-};
-
-// A chained hash table's entry: 12 bytes, allocated per insert.
-class Class_10932830_Node
-{
-public:
-    Class_109081E0 Key;
-    int Value;
-    Class_10932830_Node* Next;
-};
-
-class Class_10932830
-{
-public:
-    void FUN_10932910(int Size);
-
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    bool Unknown10;
-    Class_10932830_Node** Unknown14;
-};
-
-class Class_109329F0 : public Class_10932830
-{
-public:
-    void FUN_109329f0(int Size);
-};
+#include "Game/Class_109081E0.h"
+#include "Game/Class_10932830.h"
+#include "Game/Class_10932830_Node.h"
+#include "Game/Class_109329F0.h"
 
 // FUNCTION: 0x109329F0 ?FUN_109329f0@Class_109329F0@@QAEXH@Z
 void Class_109329F0::FUN_109329f0(int Size)

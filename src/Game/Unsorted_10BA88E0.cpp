@@ -1,28 +1,54 @@
 // Game/Unsorted_10BA88E0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
-
-class Class_10BA9EC0 {
-public:
-    char Unknown00[0xf0];
-    void* UnknownF0;
-    void* FUN_10ba9ec0();
-};
-
-class Class_10BA9ED0 {
-public:
-    char Unknown00[0x128];
-    void* Unknown128;
-    void* FUN_10ba9ed0();
-};
-
-struct Struct_10BA9EF0
-{
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-};
+#include "Game/Class_10BA9EC0.h"
+#include "Game/Class_10BA9ED0.h"
+#include "Game/Class_10BA9F80.h"
+#include "Game/Class_10BA9FA0.h"
+#include "Game/Class_10BA9FD0.h"
+#include "Game/Class_10BAA050.h"
+#include "Game/Class_10BAA390.h"
+#include "Game/Class_10BAA3B0.h"
+#include "Game/Class_10BAA3C0.h"
+#include "Game/Class_10BB7D50.h"
+#include "Game/Class_10BB7D70.h"
+#include "Game/Class_10BB7D80.h"
+#include "Game/Class_10BB7D90.h"
+#include "Game/Class_10BB7DA0.h"
+#include "Game/Class_10BB7E40.h"
+#include "Game/Class_10BB7E50.h"
+#include "Game/Class_10BB7EE0.h"
+#include "Game/Class_10BB7EF0.h"
+#include "Game/Class_10BB7F20.h"
+#include "Game/Class_10BB80E0.h"
+#include "Game/Class_10BB80F0.h"
+#include "Game/Class_10BB8100.h"
+#include "Game/Class_10BB8110.h"
+#include "Game/Class_10BB8120.h"
+#include "Game/Class_10BB8130.h"
+#include "Game/Class_10BB8140.h"
+#include "Game/Class_10BB8150.h"
+#include "Game/Class_10BB8230.h"
+#include "Game/Class_10BB8240.h"
+#include "Game/Class_10BB8250.h"
+#include "Game/Class_10BB8260.h"
+#include "Game/Class_10BB8270.h"
+#include "Game/Class_10BB8280.h"
+#include "Game/Class_10BB85B0.h"
+#include "Game/Class_10BB85C0.h"
+#include "Game/Class_10BB85D0.h"
+#include "Game/Class_10BB8600.h"
+#include "Game/Class_10BB8610.h"
+#include "Game/Class_10BB8620.h"
+#include "Game/Class_10BB8630.h"
+#include "Game/Class_10BB8640.h"
+#include "Game/Class_10BB86E0.h"
+#include "Game/Class_10C29000.h"
+#include "Game/Class_10E99370.h"
+#include "Game/Class_10E9CFE0.h"
+#include "Game/Struct_10BA9EF0.h"
+#include "Game/Struct_10BA9F20.h"
+#include "Game/Struct_10BB8180.h"
 
 class Class_10E5CBD8
 {
@@ -31,13 +57,6 @@ public:
 
     char Unknown00[0x90];
     Struct_10BA9EF0 Unknown90;
-};
-
-struct Struct_10BA9F20
-{
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
 };
 
 class Class_10BA9F20
@@ -56,52 +75,6 @@ public:
     void FUN_10ba9f70(unsigned char param);
 };
 
-class Class_10BA9F80
-{
-public:
-    char Unknown00[0x64];
-    float Unknown64;
-
-    virtual float FUN_10ba9f80();
-};
-
-class Class_10E9CFE0 {
-public:
-    char Unknown00[0x68];
-    int Unknown68;
-    void FUN_10ba9f90(int param);
-};
-
-class Class_10BA9FA0
-{
-public:
-    char Unknown00[0x68];
-    float Unknown68;
-
-    virtual float FUN_10ba9fa0();
-};
-
-struct Class_10BA9FD0 {
-    char unknown_00[0x54];
-    void* unknown_54;
-
-    void* FUN_10ba9fd0();
-};
-
-class Class_10BAA050 {
-public:
-    char Unknown00[0x44];
-    void* Unknown44;
-    void* FUN_10baa050();
-};
-
-class Class_10BAA390 {
-public:
-    char Unknown00[0x160];
-    int Unknown160;
-    void FUN_10baa390(int param);
-};
-
 class Class_10E4AB88
 {
 public:
@@ -111,36 +84,7 @@ public:
     void* Unknown160;
 };
 
-class Class_10BAA3B0 {
-public:
-    char Unknown00[0xc8];
-    int Unknown0C8;
-
-    void FUN_10baa3b0(int param);
-};
-
-class Class_10BAA3C0
-{
-public:
-    void* FUN_10baa3c0();
-
-    char Unknown00[0xcc];
-    char UnknownCC[1];
-};
-
 void __stdcall FUN_109e3c90(int);
-
-class Class_10E99370
-{
-public:
-    ~Class_10E99370();
-
-    virtual void FUN_10c28260();
-
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-};
 
 class Class_10E993C4
 {
@@ -150,153 +94,6 @@ public:
     Class_10E99370 Unknown00;
 };
 
-class Class_10BB7D50
-{
-public:
-    char Unknown00[0x1e8];
-    int Unknown1e8;
-    void FUN_10bb7d50();
-};
-
-class Class_10BB7D70 {
-public:
-    char Unknown00[0x1dc];
-    float Unknown1DC;
-
-    float FUN_10bb7d70();
-};
-
-class Class_10BB7D80 {
-public:
-    char Unknown00[0x244];
-    int Unknown244;
-
-    void FUN_10bb7d80(int param);
-};
-
-class Class_10BB7D90
-{
-public:
-    char Unknown00[0x24c];
-    int Unknown24c;
-    void FUN_10bb7d90();
-};
-
-class Class_10BB7DA0
-{
-public:
-    char Unknown00[0x254];
-    int Unknown254;
-    void FUN_10bb7da0();
-};
-
-class Class_10BB7E40 {
-public:
-    char Unknown00[0x25c];
-    float Unknown25C;
-
-    float FUN_10bb7e40();
-};
-
-class Class_10BB7E50 {
-public:
-    char Unknown00[0x260];
-    float Unknown260;
-
-    float FUN_10bb7e50();
-};
-
-class Class_10BB7EE0 {
-public:
-    char Unknown00[0x27c];
-    float Unknown27C;
-
-    float FUN_10bb7ee0();
-};
-
-class Class_10BB7EF0 {
-public:
-    char Unknown00[0x27c];
-    int Unknown27C;
-
-    void FUN_10bb7ef0(int param);
-};
-
-class Class_10BB7F20
-{
-public:
-    unsigned char FUN_10bb7f20();
-
-    char Unknown00[0x282];
-    unsigned char Unknown282;
-};
-
-class Class_10BB80E0 {
-public:
-    char Unknown00[0x2c8];
-    float Unknown2C8;
-
-    float FUN_10bb80e0();
-};
-
-class Class_10BB80F0 {
-public:
-    char Unknown00[0x2c8];
-    int Unknown2c8;
-    void FUN_10bb80f0(int param);
-};
-
-class Class_10BB8100 {
-public:
-    char Unknown00[0x280];
-    unsigned char Unknown280;
-    void FUN_10bb8100(unsigned char param);
-};
-
-class Class_10BB8110
-{
-public:
-    unsigned char FUN_10bb8110();
-
-    char Unknown00[0x280];
-    unsigned char Unknown280;
-};
-
-class Class_10BB8120 {
-public:
-    char Unknown00[0x2a8];
-    int Unknown2a8;
-    void FUN_10bb8120(int param);
-};
-
-class Class_10BB8130 {
-public:
-    char Unknown00[0x2a8];
-    float Unknown2a8;
-    float FUN_10bb8130();
-};
-
-class Class_10BB8140 {
-public:
-    char Unknown00[0x2ac];
-    int Unknown2ac;
-    void FUN_10bb8140(int param);
-};
-
-class Class_10BB8150 {
-public:
-    char Unknown00[0x2ac];
-    float Unknown2ac;
-    float FUN_10bb8150();
-};
-
-struct Struct_10BB8180
-{
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-};
-
 class Class_10BB8180
 {
 public:
@@ -304,126 +101,6 @@ public:
 
     char Unknown00[0x2B0];
     Struct_10BB8180 Unknown2B0;
-};
-
-struct Class_10BB8230 {
-    char unknown_00[0x334];
-    unsigned char unknown_334;
-
-    unsigned char FUN_10bb8230();
-};
-
-struct Class_10BB8240 {
-    char unknown_00[0x335];
-    unsigned char unknown_335;
-
-    unsigned char FUN_10bb8240();
-};
-
-struct Class_10BB8250 {
-    char unknown_00[0x337];
-    unsigned char unknown_337;
-
-    unsigned char FUN_10bb8250();
-};
-
-class Class_10BB8260 {
-public:
-    char Unknown00[0x337];
-    unsigned char Unknown337;
-    void FUN_10bb8260(unsigned char param);
-};
-
-class Class_10BB8270 {
-public:
-    char Unknown00[0x2c0];
-    float Unknown2c0;
-    float FUN_10bb8270();
-};
-
-class Class_10BB8280 {
-public:
-    char Unknown00[0x2c0];
-    int Unknown2C0;
-
-    void FUN_10bb8280(int param);
-};
-
-class Class_10BB85B0 {
-public:
-    char Unknown00[0x2f0];
-    unsigned char Unknown2f0;
-    void FUN_10bb85b0(unsigned char param);
-};
-
-struct Class_10BB85C0 {
-    char unknown_00[0x2f1];
-    unsigned char unknown_2f1;
-
-    unsigned char FUN_10bb85c0();
-};
-
-class Class_10C29000
-{
-public:
-    void FUN_10c29000();
-};
-
-class Class_10BB85D0
-{
-public:
-    char Unknown00[0x10];
-    Class_10C29000* Unknown10;
-    void FUN_10bb85d0();
-};
-
-class Class_10BB8600
-{
-public:
-    char Unknown00[0x2f4];
-    unsigned char Unknown2f4;
-    unsigned char FUN_10bb8600();
-};
-
-class Class_10BB8610
-{
-public:
-    char Unknown00[0x300];
-    int Unknown300;
-    int FUN_10bb8610();
-};
-
-class Class_10BB8620
-{
-public:
-    char Unknown00[0x2f5];
-    unsigned char Unknown2f5;
-    void FUN_10bb8620();
-};
-
-class Class_10BB8630
-{
-public:
-    void FUN_10bb8630();
-
-    char Unknown00[0x2f5];
-    unsigned char Unknown2f5;
-};
-
-class Class_10BB8640
-{
-public:
-    void* FUN_10bb8640();
-
-    char Unknown00[0x2f8];
-    void* Unknown2f8;
-};
-
-class Class_10BB86E0 {
-public:
-    char Unknown00[0x340];
-    double Unknown340;
-    float FUN_10bb86e0();
 };
 
 // FUNCTION: 0x10BA9EC0 ?FUN_10ba9ec0@Class_10BA9EC0@@QAEPAXXZ

@@ -1,5 +1,6 @@
 // Game/Unsorted_10B25DC0_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Config.h"
 
 class WindowManager
 {
@@ -11,14 +12,6 @@ public:
 };
 
 extern WindowManager* GWindowManager;
-
-class Config
-{
-public:
-    static Config* Instance();
-
-    bool GetFloat(const char* Section, const char* Key, float* Value, const char* File);
-};
 
 extern void* DAT_10e7aaac[];
 

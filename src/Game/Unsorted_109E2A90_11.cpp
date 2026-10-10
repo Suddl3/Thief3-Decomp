@@ -1,7 +1,7 @@
 // Game/Unsorted_109E2A90_11.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
+#include "Game/Class_10E5B2A8.h"
 
 class AInfo;
 
@@ -12,13 +12,6 @@ class AZoneProperties
 public:
     BYTE Unknown00[0x90];
     INT m_FleshBSPZone;                     // 0x90: inherited from AActor
-};
-
-class Class_10E5B2A8
-{
-public:
-    void FUN_109e2c10(INT A, AZoneProperties* B);
-    void FUN_109e2ce0(UObject* Obj, int A, int B);
 };
 
 // FUNCTION: 0x109E2CE0 ?FUN_109e2ce0@Class_10E5B2A8@@QAEXPAVUObject@@HH@Z

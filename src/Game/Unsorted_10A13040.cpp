@@ -1,5 +1,6 @@
 // Game/Unsorted_10A13040.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10A13040.h"
 
 class Class_10A13040_Unknown10
 {
@@ -25,17 +26,6 @@ public:
     virtual void Virtual18();
     virtual void Virtual19();
     virtual int Virtual20();
-};
-
-class Class_10A13040
-{
-public:
-    int FUN_10a13040();
-
-    char Unknown00[8];
-    int Unknown08;
-    char Unknown0C[4];
-    Class_10A13040_Unknown10** Unknown10;
 };
 
 // FUNCTION: 0x10A13040 ?FUN_10a13040@Class_10A13040@@QAEHXZ

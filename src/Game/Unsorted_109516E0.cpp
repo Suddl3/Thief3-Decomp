@@ -1,52 +1,12 @@
 // Game/Unsorted_109516E0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-struct Struct_Pair0
-{
-    Struct_Pair0() : A(0), B(0) {}
-
-    int A;
-    int B;
-};
-
-struct Struct_Zero5
-{
-    Struct_Zero5() : A(0), B(0), C(0), D(0), E(0) {}
-
-    int A;
-    int B;
-    int C;
-    int D;
-    int E;
-};
-
-struct Struct_One4
-{
-    Struct_One4() : A(1.0f), B(1.0f), C(1.0f), D(1.0f) {}
-
-    float A;
-    float B;
-    float C;
-    float D;
-};
-
-struct Struct_Zero4
-{
-    Struct_Zero4() : A(0), B(0), C(0), D(0) {}
-
-    int A;
-    int B;
-    int C;
-    int D;
-};
-
-struct Struct_One2
-{
-    Struct_One2() : A(1.0f), B(1.0f) {}
-
-    float A;
-    float B;
-};
+#include "Game/Class_10939570.h"
+#include "Game/Class_10951A40.h"
+#include "Game/Struct_One2.h"
+#include "Game/Struct_One4.h"
+#include "Game/Struct_Pair0.h"
+#include "Game/Struct_Zero4.h"
+#include "Game/Struct_Zero5.h"
 
 class Class_10E4AC6C
 {
@@ -76,12 +36,6 @@ public:
     Struct_Zero4 Unknown7C;
 };
 
-class Class_10939570
-{
-public:
-    void* FUN_1093bd40(int* A, int B, int C);
-};
-
 extern Class_10939570* DAT_10f323fc;
 
 class Class_10951900
@@ -102,18 +56,6 @@ class Class_10951540
 {
 public:
     bool FUN_10951540(void* A);
-};
-
-class Class_10951A40
-{
-public:
-    void FUN_109516e0();
-
-    char Unknown00[0x40];
-    int Unknown40;
-    int Unknown44;
-    Class_10951540** Unknown48;
-    char Unknown4C[4];
 };
 
 // FUNCTION: 0x109516E0 ?FUN_109516e0@Class_10951A40@@QAEXXZ

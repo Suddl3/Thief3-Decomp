@@ -1,5 +1,6 @@
 // Game/Unsorted_10AAE8B0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Config.h"
 
 class IDirectInput8A;
 
@@ -16,14 +17,6 @@ extern const char DAT_10e6dc48[];
 extern float DAT_10e49684;
 
 extern "C" int __stdcall DirectInput8Create(int Instance, unsigned int Version, void* Iid, IDirectInput8A** Out, void* Outer);
-
-class Config
-{
-public:
-    static Config* Instance();
-
-    bool GetFloat(const char* Section, const char* Key, float* Value, const char* File);
-};
 
 class Class_10E6DC54
 {

@@ -1,11 +1,6 @@
 // Game/AGarrett_4.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_109B28E0
-{
-public:
-    void FUN_109b28e0(int A);
-};
+#include "Game/Class_109B28E0.h"
 
 struct Struct_10B21820_Object : public Class_109B28E0
 {

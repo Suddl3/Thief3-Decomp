@@ -1,30 +1,16 @@
 // Game/Unsorted_10B461D0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
-
-class Class_10AC92F0
-{
-public:
-    void FUN_10ac92f0();
-};
-
-class Class_10F3A3D8
-{
-public:
-    char Unknown00[0x13C];
-    Class_10AC92F0* Unknown13C;
-};
+#include "Game/Class_10AAB5C0.h"
+#include "Game/Class_10AC92F0.h"
+#include "Game/Class_10B46D40.h"
+#include "Game/Class_10B46F50.h"
+#include "Game/Class_10DD7640.h"
+#include "Game/Class_10F3A3D8.h"
+#include "Game/Struct_10B48890.h"
+#include "Game/Struct_10B4D620.h"
 
 extern Class_10F3A3D8* DAT_10f3a3d8;
-
-class Class_10DD7640
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2(int A);
-};
 
 Class_10DD7640* FUN_10dd7640();
 
@@ -48,13 +34,6 @@ public:
 extern void __stdcall FUN_10b4bd70(UnknownClass_10B4BD70* p1);
 
 void FUN_10b3b130();
-
-struct Struct_10B4D620
-{
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-};
 
 class Class_10B4D620
 {
@@ -168,113 +147,7 @@ void FUN_10a5ab50();
 
 struct Struct_10B3AF40_Param;
 
-struct Struct_10B48890
-{
-    char Unknown00[0x108];
-    FVector Unknown108;
-    bool Unknown114;
-};
-
 Struct_10B48890* __stdcall FUN_10b3af40(Struct_10B3AF40_Param* p1);
-
-class Class_10B46D40
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8();
-    virtual void Virtual9();
-    virtual void Virtual10();
-    virtual void Virtual11();
-    virtual void Virtual12();
-    virtual void Virtual13();
-    virtual void Virtual14();
-    virtual void Virtual15();
-    virtual void Virtual16();
-    virtual void Virtual17();
-    virtual void Virtual18();
-    virtual void Virtual19();
-    virtual void Virtual20();
-    virtual void Virtual21();
-    virtual void Virtual22();
-    virtual void Virtual23();
-    virtual void Virtual24();
-    virtual void Virtual25();
-    virtual void Virtual26();
-    virtual void Virtual27();
-    virtual void Virtual28();
-    virtual void Virtual29();
-    virtual void Virtual30();
-    virtual void Virtual31();
-    virtual void Virtual32();
-    virtual void Virtual33();
-    virtual void Virtual34();
-    virtual void Virtual35();
-    virtual void Virtual36();
-    virtual void Virtual37();
-    virtual void Virtual38();
-    virtual void Virtual39();
-    virtual void Virtual40();
-    virtual void Virtual41();
-    virtual void Virtual42();
-    virtual void Virtual43();
-    virtual void Virtual44();
-    virtual void Virtual45();
-    virtual void Virtual46();
-    virtual void Virtual47();
-    virtual void Virtual48();
-    virtual void Virtual49();
-    virtual void Virtual50();
-    virtual void Virtual51();
-    virtual void Virtual52();
-    virtual void Virtual53();
-    virtual void Virtual54();
-    virtual void Virtual55();
-    virtual void Virtual56();
-    virtual void Virtual57();
-    virtual void Virtual58();
-    virtual void Virtual59();
-    virtual void Virtual60();
-    virtual void Virtual61();
-    virtual void Virtual62();
-    virtual void Virtual63();
-    virtual void Virtual64();
-    virtual void Virtual65();
-    virtual void Virtual66();
-    virtual void Virtual67();
-    virtual void Virtual68();
-    virtual void Virtual69();
-    virtual void Virtual70();
-    virtual void Virtual71();
-    virtual void Virtual72();
-    virtual void Virtual73();
-    virtual void Virtual74();
-    virtual void Virtual75();
-    virtual void Virtual76();
-    virtual void Virtual77();
-    virtual void Virtual78();
-    virtual void Virtual79();
-    virtual bool Virtual80();
-
-    bool FUN_10b46d40();
-
-    char Unknown04[0xB4];
-    int UnknownB8;
-    char UnknownBC[4];
-    Class_10B46D40** UnknownC0;
-};
-
-class Class_10AAB5C0
-{
-public:
-    int FUN_10aab5c0();
-};
 
 class Class_10B46F10
 {
@@ -298,17 +171,6 @@ class Class_10B7B110 : public Class_10C3E140
 {
 public:
     void FUN_10b7b110(float A);
-};
-
-class Class_10B46F50
-{
-public:
-    void FUN_10b46f50(float A);
-
-    char Unknown00[8];
-    Class_10B7B110* Unknown08[2];
-    char Unknown10[0x24];
-    float Unknown34;
 };
 
 // FUNCTION: 0x10B46D40 ?FUN_10b46d40@Class_10B46D40@@QAE_NXZ

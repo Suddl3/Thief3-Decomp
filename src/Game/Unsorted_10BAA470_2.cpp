@@ -1,7 +1,7 @@
 // Game/Unsorted_10BAA470_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
+#include "Game/Class_10B9BCA0.h"
 
 class AAIController;
 
@@ -10,12 +10,6 @@ class AController;
 class AAIPawnController
 {
     DECLARE_CLASS(AAIPawnController, AAIController, 0x0, AICore)
-};
-
-class Class_10B9BCA0
-{
-public:
-    char Unknown00[0x118];
 };
 
 class AAIPawn

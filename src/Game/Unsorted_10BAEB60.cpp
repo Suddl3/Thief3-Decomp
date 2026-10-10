@@ -1,5 +1,8 @@
 // Game/Unsorted_10BAEB60.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_1090A780.h"
+#include "Game/Class_10BAFBF0.h"
+#include "Game/Struct_10BAFBF0.h"
 
 extern const char DAT_10e8d954[];
 
@@ -15,30 +18,6 @@ public:
 extern const char DAT_10e8d95c[];
 
 class Class_10A68D20;
-
-class Class_1090A780
-{
-public:
-    Class_1090A780(const Class_1090A780& Other);
-    ~Class_1090A780();
-
-    char* Unknown00;
-};
-
-struct Struct_10BAFBF0
-{
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-};
-
-class Class_10BAFBF0
-{
-public:
-    Class_10BAFBF0() : Unknown04(0) {}
-
-    int Unknown04;
-};
 
 class Class_10E8DBA4 : public Class_10BAFBF0
 {

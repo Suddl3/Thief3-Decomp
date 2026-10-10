@@ -1,46 +1,16 @@
 // Game/Unsorted_10BAA420.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
+#include "Game/Class_10B9CAC0.h"
+#include "Game/Class_10BAA8A0.h"
+#include "Game/Class_10BC9D40.h"
+#include "Game/Class_10E98C8C.h"
 
 class AAIController;
 
 class AAIPawnController
 {
     DECLARE_CLASS(AAIPawnController, AAIController, 0x0, AICore)
-};
-
-class Class_10BC9D40
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual int Virtual3();
-};
-
-class Class_10B9CAC0
-{
-public:
-    Class_10BC9D40* FUN_10b9cac0();
-};
-
-class Class_10BAA8A0
-{
-public:
-    bool FUN_10baa8a0();
-
-    Class_10B9CAC0* FUN_10baa750();
-};
-
-class Class_10E98C8C
-{
-public:
-    ~Class_10E98C8C();
-
-    virtual void FUN_10c162e0(int p1);
-
-    int Unknown04;
 };
 
 struct Struct_10BAA8F0

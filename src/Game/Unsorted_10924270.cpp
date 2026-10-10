@@ -1,19 +1,8 @@
 // Game/Unsorted_10924270.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_1094D740
-{
-public:
-    void FUN_1094d740(int A, int B, int C);
-};
-
-struct Struct_10924370
-{
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    char Unknown0C[0x14];
-};
+#include "Game/Class_10924370.h"
+#include "Game/Class_1094D740.h"
+#include "Game/Struct_10924370.h"
 
 struct Struct_10924370_Rect
 {
@@ -21,19 +10,6 @@ struct Struct_10924370_Rect
     int Y;
     float W;
     float H;
-};
-
-class Class_10924370
-{
-public:
-    void FUN_10924370(int Index);
-
-    char Unknown00[0x14];
-    int Unknown14;
-    char Unknown18[0x18];
-    Class_1094D740 Unknown30;
-    char Unknown31[0x17];
-    Struct_10924370 Unknown48[1];
 };
 
 // FUNCTION: 0x10924370 ?FUN_10924370@Class_10924370@@QAEXH@Z

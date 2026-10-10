@@ -1,19 +1,11 @@
 // Game/Unsorted_10BE3060.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-struct Struct_10C05A50
-{
-    float Unknown00;
-    float Unknown04;
-};
+#include "Game/Class_10BB8620.h"
+#include "Game/Class_10BE31B0.h"
+#include "Game/Class_10C7D570.h"
+#include "Game/Struct_10C05A50.h"
 
 float FUN_10c05a50(const Struct_10C05A50* A, const Struct_10C05A50* B);
-
-class Class_10c7d570
-{
-public:
-    void* FUN_10c7d570();
-};
 
 struct Struct_10BE31B0_Target
 {
@@ -24,22 +16,12 @@ struct Struct_10BE31B0_Target
 struct Struct_10BE31B0_Owner
 {
     char Unknown00[8];
-    Class_10c7d570* Unknown08;
+    Class_10C7D570* Unknown08;
 };
 
 struct Struct_10BE31B0_Out
 {
     char Unknown00[0xC];
-};
-
-class Class_10BE31B0
-{
-public:
-    Struct_10C05A50* FUN_10be3060(Struct_10BE31B0_Out* Out);
-    int FUN_10be31b0();
-
-    char Unknown00[4];
-    Struct_10BE31B0_Owner* Unknown04;
 };
 
 class Class_10E94578
@@ -48,12 +30,6 @@ public:
     virtual void Virtual0();
 
     void FUN_10bc5b50();
-};
-
-class Class_10BB8620
-{
-public:
-    void FUN_10bb8620();
 };
 
 class Class_10BB85E0 : public Class_10BB8620
@@ -80,7 +56,7 @@ public:
 int Class_10BE31B0::FUN_10be31b0()
 {
     Struct_10BE31B0_Out Out;
-    Class_10c7d570* Obj = Unknown04->Unknown08;
+    Class_10C7D570* Obj = Unknown04->Unknown08;
     if (FUN_10c05a50(&((Struct_10BE31B0_Target*)Obj->FUN_10c7d570())->Unknown2C, FUN_10be3060(&Out)) < 12544.0f)
         return 1;
     return 0;

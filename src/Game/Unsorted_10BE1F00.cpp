@@ -1,14 +1,11 @@
 // Game/Unsorted_10BE1F00.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Engine/EngineClasses.h"
-
-class FArchive
-{
-public:
-    virtual ~FArchive();
-    virtual void Serialize(void* V, int Length);
-};
+#include "Game/Class_10BE1F80.h"
+#include "Game/Class_10C7D570.h"
+#include "Game/Class_10FF667C.h"
+#include "Game/Class_10FF667C_Unknown18.h"
+#include "Game/FArchive.h"
 
 class Class_10E8BE68
 {
@@ -29,20 +26,6 @@ class Class_10E94578 : public Class_10E8BE68
 {
 public:
     void FUN_10bc5b50();
-};
-
-class Class_10FF667C_Unknown18
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1(FArchive& Ar, int* Value);
-};
-
-class Class_10FF667C
-{
-public:
-    char Unknown00[0x18];
-    Class_10FF667C_Unknown18* Unknown18;
 };
 
 extern Class_10FF667C* DAT_10ff667c;
@@ -202,28 +185,11 @@ public:
     int Unknown4C;
 };
 
-class Class_10c7d570
-{
-public:
-    void* FUN_10c7d570();
-};
-
 class Object_10BE1F80
 {
 public:
     char Unknown00[8];
-    Class_10c7d570* Unknown08;
-};
-
-class Class_10BE1F80
-{
-public:
-    void FUN_10be1f80(UObject* Obj);
-
-    char Unknown00[4];
-    Object_10BE1F80* Unknown04;
-    char Unknown08[0x38];
-    UObject* Unknown40;
+    Class_10C7D570* Unknown08;
 };
 
 // FUNCTION: 0x10BE1F20 ?FUN_10be1f20@Class_10E95780@@UAEXAAVFArchive@@@Z

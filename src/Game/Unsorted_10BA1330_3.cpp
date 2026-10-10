@@ -1,33 +1,8 @@
 // Game/Unsorted_10BA1330_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-// A chained hash table's entry, allocated per insert.
-class Class_10BA1330_Node
-{
-public:
-    int Unknown00;
-    int Unknown04;
-    Class_10BA1330_Node* Next;
-};
-
-class Class_10BA1330
-{
-public:
-    void FUN_10ba13f0(int Size);
-
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    bool Unknown10;
-    Class_10BA1330_Node** Unknown14;
-};
-
-class Class_10BA1660 : public Class_10BA1330
-{
-public:
-    void FUN_10ba15c0(int Size);
-};
+#include "Game/Class_10BA1330.h"
+#include "Game/Class_10BA1330_Node.h"
+#include "Game/Class_10BA1660.h"
 
 // FUNCTION: 0x10BA15C0 ?FUN_10ba15c0@Class_10BA1660@@QAEXH@Z
 void Class_10BA1660::FUN_10ba15c0(int Size)

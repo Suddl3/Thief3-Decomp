@@ -1,18 +1,12 @@
 // Game/Unsorted_10ACA550.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
+#include "Game/Class_10A174E0.h"
+#include "Game/Class_10ACA550.h"
+#include "Game/Class_10ACA600.h"
+#include "Game/Class_10ACA620.h"
 
 extern float DAT_10eafbdc;
-
-class Class_10ACA600
-{
-public:
-    int FUN_10aca600();
-
-    char Unknown00[8];
-    float Unknown08;
-};
 
 class Class_10F46DA0
 {
@@ -27,35 +21,9 @@ public:
 
 extern Class_10F46DA0* DAT_10f46da0;
 
-class Class_10ACA620
-{
-public:
-    void FUN_10aca620();
-
-    char Unknown00[4];
-    int Unknown04;
-    float Unknown08;
-};
-
-class Class_10A174E0
-{
-public:
-    virtual int Virtual0(FName Name);
-};
-
 Class_10A174E0* FUN_10a18230();
 
 extern const char DAT_10e6fd30[];
-
-class Class_10ACA550
-{
-public:
-    void FUN_10aca550(int A);
-
-    int Unknown00;
-    int Unknown04;
-    float Unknown08;
-};
 
 // FUNCTION: 0x10ACA550 ?FUN_10aca550@Class_10ACA550@@QAEXH@Z
 void Class_10ACA550::FUN_10aca550(int A)

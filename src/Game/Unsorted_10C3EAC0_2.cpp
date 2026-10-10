@@ -1,7 +1,7 @@
 // Game/Unsorted_10C3EAC0_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
+#include "Game/Class_10E9B570.h"
 
 class Class_10C3EA90
 {
@@ -16,15 +16,6 @@ public:
 extern Class_10C3EA90* DAT_10ff70a4;
 
 FVector FUN_10c3ebc0(int p1);
-
-class Class_10E9B570
-{
-public:
-    virtual void Virtual0();
-    virtual FVector FUN_10c3ed70();
-
-    int Unknown04;
-};
 
 // FUNCTION: 0x10C3EB80 ?FUN_10c3eb80@@YAXXZ
 void FUN_10c3eb80()

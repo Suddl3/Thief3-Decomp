@@ -1,65 +1,19 @@
 // Game/Unsorted_10C29EF0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
+#include "Game/Class_1098E330.h"
+#include "Game/Class_10AF3AA0.h"
+#include "Game/Class_10C29F10.h"
+#include "Game/Class_10C7D570.h"
+#include "Game/Class_10E9AA20.h"
+#include "Game/Class_10E9AA2C.h"
+#include "Game/Class_10FF667C.h"
 
 extern void* DAT_10e9aa20[];
 
-class Class_10E9AA20
-{
-public:
-    Class_10E9AA20* FUN_10c2e350(int p1);
-
-    void** VTable;
-    int Unknown04;
-};
-
 extern void* DAT_10e9aa2c[];
 
-class Class_10E9AA2C
-{
-public:
-    Class_10E9AA2C* FUN_10c2e370(int p1);
-
-    void** VTable;
-    int Unknown04;
-};
-
-class Class_10AF3AA0
-{
-public:
-    void FUN_10af3aa0(const char* Format, ...);
-};
-
-class Class_1098E330
-{
-public:
-    int FUN_1098e330(int Id, int* Out);
-};
-
-class Class_10c7d570
-{
-public:
-    void* FUN_10c7d570();
-};
-
-class Class_10FF667C
-{
-public:
-    char Unknown00[0xA0];
-    float UnknownA0;
-};
-
 extern Class_10FF667C* DAT_10ff667c;
-
-class Class_10C29F10
-{
-public:
-    float FUN_10c29f10();
-
-    char Unknown00[4];
-    Class_10c7d570* Unknown04;
-};
 
 // FUNCTION: 0x10C29F10 ?FUN_10c29f10@Class_10C29F10@@QAEMXZ
 float Class_10C29F10::FUN_10c29f10()

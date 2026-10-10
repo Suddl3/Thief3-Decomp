@@ -1,12 +1,6 @@
 // Game/Unsorted_10BCECD0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class TimeManager
-{
-public:
-    static TimeManager* Instance();
-    double GetGameTime();
-};
+#include "Game/TimeManager.h"
 
 class Class_10BC4BF0
 {

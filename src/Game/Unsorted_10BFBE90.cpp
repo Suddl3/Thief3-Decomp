@@ -1,21 +1,12 @@
 // Game/Unsorted_10BFBE90.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10BFBE90.h"
+#include "Game/Class_10BFBFD0.h"
 
 class Class_10BFBE90_Element
 {
 public:
     virtual int Virtual0();
-};
-
-class Class_10BFBE90
-{
-public:
-    bool FUN_10bfbe90(int A);
-
-    char Unknown00[8];
-    int Unknown08;
-    char Unknown0C[4];
-    Class_10BFBE90_Element** Unknown10;
 };
 
 struct Struct_10BFBFD0_Value
@@ -30,17 +21,6 @@ struct Struct_10BFBFD0_Entry
     int Unknown00;
     int Unknown04;
     Struct_10BFBFD0_Value Unknown08;
-};
-
-class Class_10BFBFD0
-{
-public:
-    bool FUN_10bfbfd0(Struct_10BFBFD0_Value* Out, int Key);
-
-    char Unknown00[0x54];
-    int Unknown54;
-    char Unknown58[4];
-    Struct_10BFBFD0_Entry* Unknown5C;
 };
 
 // FUNCTION: 0x10BFBE90 ?FUN_10bfbe90@Class_10BFBE90@@QAE_NH@Z

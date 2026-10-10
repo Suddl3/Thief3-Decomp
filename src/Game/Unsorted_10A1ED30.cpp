@@ -1,5 +1,10 @@
 // Game/Unsorted_10A1ED30.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10905A90_Member.h"
+#include "Game/Class_10A1EDC0.h"
+#include "Game/Class_10A1F880.h"
+#include "Game/Class_10E65558.h"
+#include "Game/Class_10E65574.h"
 
 class Class_10D382EB {
 public:
@@ -19,50 +24,7 @@ struct Struct_10A1EDC0_Ios {
 struct Struct_10A1EDC0_Ostream : virtual Struct_10A1EDC0_Ios {
 };
 
-class Class_10A1EDC0 {
-public:
-    Struct_10A1EDC0_Ostream* Unknown00;
-
-    void FUN_10a1edc0();
-};
-
-class Class_10A1F880
-{
-public:
-    int FUN_10a1f880(int Index);
-
-    char Unknown00[4];
-    int Unknown04;
-    char Unknown08[4];
-    int* Unknown0C;
-};
-
-class Class_10905A90_Member
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5(int* Obj);
-};
-
 Class_10905A90_Member* FUN_10905aa0();
-
-class Class_10E65558
-{
-public:
-    virtual ~Class_10E65558() {}
-};
-
-class Class_10E65574 : public Class_10E65558
-{
-public:
-    virtual ~Class_10E65574();
-
-    int* Unknown04;
-};
 
 // FUNCTION: 0x10A1ED50 ??1Class_10E65574@@UAE@XZ
 Class_10E65574::~Class_10E65574()

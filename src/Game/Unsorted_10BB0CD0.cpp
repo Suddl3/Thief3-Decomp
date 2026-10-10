@@ -1,25 +1,13 @@
 // Game/Unsorted_10BB0CD0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10AA82D0.h"
+#include "Game/Class_10C3D3B0.h"
+#include "Game/Class_10E8C848.h"
+#include "Game/Class_10E8C86C.h"
+#include "Game/Class_10E9CD90.h"
+#include "Game/Struct_10BB0B90.h"
 
 int FUN_10bb0c60(int A);
-
-class Class_10C3D3B0
-{
-public:
-    virtual float FUN_10c3d3b0();
-};
-
-class Class_10E9CD90
-{
-public:
-    virtual void FUN_10bfbb80(float param);
-};
-
-class Class_10AA82D0
-{
-public:
-    int FUN_10aa82d0();
-};
 
 class Class_10BB1140_Item
 {
@@ -43,14 +31,6 @@ public:
     virtual void Virtual2();
     virtual int Virtual3();
     virtual Class_10C3D3B0* Virtual4(int A);
-};
-
-class Class_10E8C86C
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual int FUN_10bb1140(int p1, Class_10BB1140_Item* Item, Class_10BB1140_Source* Source);
 };
 
 class Class_10BB1020_B
@@ -93,22 +73,7 @@ struct Struct_10BB0B90_Unknown118
     Class_10B9C9F0* Unknown08;
 };
 
-class Struct_10BB0B90
-{
-public:
-    char Unknown00[0x118];
-    Struct_10BB0B90_Unknown118* Unknown118;
-};
-
 Struct_10BB0B90* FUN_10bb0b90(int A);
-
-class Class_10E8C848
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual int FUN_10bb1020(int A, Class_10BB1020_B* B, int C);
-};
 
 // FUNCTION: 0x10BB1020 ?FUN_10bb1020@Class_10E8C848@@UAEHHPAVClass_10BB1020_B@@H@Z
 int Class_10E8C848::FUN_10bb1020(int A, Class_10BB1020_B* B, int C)

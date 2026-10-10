@@ -1,7 +1,7 @@
 // Game/Unsorted_1095A720.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include <string.h>
+#include "Game/Class_1095A720.h"
 
 struct Struct_1095A720_Unknown08
 {
@@ -14,16 +14,6 @@ struct Struct_1095A720_Unknown08
             return 0;
         return Unknown04[-1];
     }
-};
-
-class Class_1095A720
-{
-public:
-    int FUN_1095a720();
-
-    char Unknown00[8];
-    Struct_1095A720_Unknown08* Unknown08;
-    const char* Unknown0C;
 };
 
 // FUNCTION: 0x1095A720 ?FUN_1095a720@Class_1095A720@@QAEHXZ

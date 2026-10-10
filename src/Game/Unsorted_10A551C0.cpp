@@ -1,5 +1,8 @@
 // Game/Unsorted_10A551C0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10905A90_Member.h"
+#include "Game/Class_1090C880.h"
+#include "Game/Class_10C4EDA0.h"
 
 class FVector
 {
@@ -25,30 +28,6 @@ struct Item_10A55380
     int Unknown10;
 };
 
-class Class_10C4EDA0
-{
-public:
-    void FUN_10a550b0(int Count);
-    void FUN_10a55380(const Struct_10A55380& A);
-
-    int Unknown00;
-    int Unknown04;
-    Item_10A55380* Unknown08;
-    char Unknown0C[8];
-    int Unknown14;
-};
-
-class Class_10905A90_Member
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5(void* Block);
-};
-
 Class_10905A90_Member* FUN_10905aa0();
 
 // Ion Storm's string (0x109081E0): a char pointer to a block allocated 4 bytes before it.
@@ -68,14 +47,6 @@ public:
     }
 
     char* Unknown00;
-};
-
-class Class_1090C880
-{
-public:
-    Class_109081E0 FUN_1090c880(int A);
-
-    char Unknown00[0xC];
 };
 
 class Class_10E684A8

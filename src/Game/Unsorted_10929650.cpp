@@ -1,33 +1,8 @@
 // Game/Unsorted_10929650.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/IDirect3DDevice8.h"
 
 class IDirect3DTexture8;
-
-class IDirect3DDevice8
-{
-public:
-    virtual long __stdcall Virtual0();
-    virtual long __stdcall Virtual1();
-    virtual long __stdcall Virtual2();
-    virtual long __stdcall Virtual3();
-    virtual long __stdcall Virtual4();
-    virtual long __stdcall Virtual5();
-    virtual long __stdcall Virtual6();
-    virtual long __stdcall Virtual7();
-    virtual long __stdcall Virtual8();
-    virtual long __stdcall Virtual9();
-    virtual long __stdcall Virtual10();
-    virtual long __stdcall Virtual11();
-    virtual long __stdcall Virtual12();
-    virtual long __stdcall Virtual13();
-    virtual long __stdcall Virtual14();
-    virtual long __stdcall Virtual15();
-    virtual long __stdcall Virtual16();
-    virtual long __stdcall Virtual17();
-    virtual long __stdcall Virtual18();
-    virtual long __stdcall Virtual19();
-    virtual long __stdcall CreateTexture(unsigned int Width, unsigned int Height, unsigned int Levels, unsigned long Usage, int Format, int Pool, IDirect3DTexture8** ppTexture);
-};
 
 extern IDirect3DDevice8* GDirect3DDevice8;
 

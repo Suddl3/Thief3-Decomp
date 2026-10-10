@@ -1,11 +1,6 @@
 // Game/Unsorted_10B8AB90.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-struct Struct_10B8AC20
-{
-    char Unknown00[4];
-    int Unknown04;
-};
+#include "Game/Struct_10B8AC20.h"
 
 class Class_10E894C8
 {

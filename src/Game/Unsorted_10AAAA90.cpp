@@ -1,18 +1,9 @@
 // Game/Unsorted_10AAAA90.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
-
-class Class_10905A90_Member
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5(void* Block);
-};
+#include "Game/Class_10905A90_Member.h"
+#include "Game/Class_10AAAA90.h"
+#include "Game/Class_10AAACB0_Param.h"
 
 Class_10905A90_Member* FUN_10905aa0();
 
@@ -30,14 +21,6 @@ public:
     Class_109081E0& operator=(const Class_109081E0& Other);
 
     char* Unknown00;
-};
-
-class Class_10AAACB0_Param
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual Class_109081E0 Virtual2();
 };
 
 class Class_10E6D9E8
@@ -170,15 +153,6 @@ public:
     virtual void Virtual109();
     virtual void Virtual110();
     virtual void Virtual111(int A, const FString& Text, int C, int D);
-};
-
-class Class_10AAAA90
-{
-public:
-    int FUN_10aaaa90(int A, Class_10AAAA90_Param* Obj, int C);
-
-    char Unknown00[0x8];
-    char* Unknown08;
 };
 
 // FUNCTION: 0x10AAAA90 ?FUN_10aaaa90@Class_10AAAA90@@QAEHHPAVClass_10AAAA90_Param@@H@Z

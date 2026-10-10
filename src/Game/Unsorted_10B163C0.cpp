@@ -1,81 +1,19 @@
 // Game/Unsorted_10B163C0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10B19540 {
-public:
-    char Unknown00[0x68];
-    void* Unknown68;
-
-    void* FUN_10b19540();
-};
-
-struct Struct_10B21250
-{
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-};
-
-class Class_10B21250
-{
-public:
-    Struct_10B21250 FUN_10b21250();
-
-    char Unknown00[0x400];
-    Struct_10B21250 Unknown400;
-};
-
-class Class_10B212F0 {
-public:
-    char Unknown00[0x464];
-    int Unknown464;
-    void FUN_10b212f0();
-};
-
-class Class_10B21300 {
-public:
-    char Unknown00[0x464];
-    int Unknown464;
-    void FUN_10b21300();
-};
-
-class Class_10B21310 {
-public:
-    char Unknown00[0x464];
-    int Unknown464;
-    void FUN_10b21310();
-};
-
-class Class_10B21320 {
-public:
-    char Unknown00[0x464];
-    int Unknown464;
-    void FUN_10b21320();
-};
-
-class Class_10B21330 {
-public:
-    char Unknown00[0x464];
-    int Unknown464;
-
-    void FUN_10b21330();
-};
-
-class Class_10B21340 {
-public:
-    char Unknown00[0x464];
-    int Unknown464;
-
-    void FUN_10b21340();
-};
-
-class Class_10B21350 {
-public:
-    char Unknown00[0x464];
-    int Unknown464;
-
-    void FUN_10b21350();
-};
+#include "Game/Class_10B19540.h"
+#include "Game/Class_10B21250.h"
+#include "Game/Class_10B212F0.h"
+#include "Game/Class_10B21300.h"
+#include "Game/Class_10B21310.h"
+#include "Game/Class_10B21320.h"
+#include "Game/Class_10B21330.h"
+#include "Game/Class_10B21340.h"
+#include "Game/Class_10B21350.h"
+#include "Game/Class_10B21580.h"
+#include "Game/Class_10B21590.h"
+#include "Game/Class_10B215A0.h"
+#include "Game/Class_10EB79F4.h"
+#include "Game/Struct_10B21250.h"
 
 class Class_10B21560
 {
@@ -85,37 +23,7 @@ public:
     unsigned char FUN_10b21560();
 };
 
-class Class_10B21580 {
-public:
-    char Unknown00[0x32c];
-    int Unknown32c;
-
-    int FUN_10b21580();
-};
-
-class Class_10B21590
-{
-public:
-    char Unknown00[0x32c];
-    int Unknown32c;
-    void FUN_10b21590(int param);
-};
-
-class Class_10B215A0 {
-public:
-    char Unknown00[0x32c];
-    int Unknown32C;
-    void FUN_10b215a0();
-};
-
 void FUN_10984d70();
-
-class Class_10EB79F4 {
-public:
-    char Unknown00[0x1c];
-    unsigned char Unknown1C;
-    unsigned char FUN_10b24d60();
-};
 
 // FUNCTION: 0x10B19540 ?FUN_10b19540@Class_10B19540@@QAEPAXXZ
 void* Class_10B19540::FUN_10b19540()

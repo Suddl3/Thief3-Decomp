@@ -1,24 +1,13 @@
 // Game/Unsorted_10A5DE40.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10905A90_Member
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5(void* Block);
-};
-
-Class_10905A90_Member* FUN_10905aa0();
-
-class Class_10AF7F80
-{
-public:
-    const char* FUN_10af7f80();
-};
+#include "Game/Class_10905A90_Member.h"
+#include "Game/Class_109081E0.h"
+#include "Game/Class_1096A960.h"
+#include "Game/Class_10A5DF10.h"
+#include "Game/Class_10AF7F80.h"
+#include "Game/Class_10E69BA0.h"
+#include "Game/Struct_10A5DF10.h"
+#include "Game/Struct_10AA3520.h"
 
 class Class_10A5EF80_Item
 {
@@ -29,12 +18,6 @@ public:
     virtual void Virtual3();
     virtual void Virtual4();
     virtual Class_10AF7F80* Virtual5();
-};
-
-class Class_1096A960
-{
-public:
-    char** FUN_1096a960(char** Out);
 };
 
 extern "C" unsigned int strlen(const char*);
@@ -52,12 +35,6 @@ public:
     void FUN_10a79e60(void* A, void* B, int C);
 };
 
-struct Struct_10AA3520
-{
-    char Unknown00[0x40];
-    Class_10A79E60* Unknown40;
-};
-
 extern Struct_10AA3520* DAT_10f35dec;
 
 struct Item_10A5E900
@@ -72,42 +49,6 @@ struct List_10A5E900
     int Unknown00;
     char Unknown04[4];
     Item_10A5E900** Unknown08;
-};
-
-class Class_10E69BA0
-{
-public:
-    void FUN_10a5e8a0(char* Text);
-    void FUN_10a5e900(List_10A5E900* List);
-
-    char Pad00[0x1];
-};
-
-class Class_109081E0
-{
-public:
-    Class_109081E0& operator=(const Class_109081E0& Other);
-
-    void* Unknown00;
-};
-
-struct Struct_10A5DF10
-{
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-};
-
-class Class_10A5DF10
-{
-public:
-    Class_10A5DF10* FUN_10a5df10(const Class_10A5DF10& Other);
-
-    Struct_10A5DF10 Unknown00;
-    Struct_10A5DF10 Unknown10;
-    int Unknown20;
-    Class_109081E0 Unknown24;
 };
 
 // FUNCTION: 0x10A5DF10 ?FUN_10a5df10@Class_10A5DF10@@QAEPAV1@ABV1@@Z

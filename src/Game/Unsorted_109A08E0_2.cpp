@@ -1,37 +1,10 @@
 // Game/Unsorted_109A08E0_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10E55E78
-{
-public:
-    Class_10E55E78();
-
-    virtual void Virtual0();
-};
-
-class Class_10E57220 : public Class_10E55E78
-{
-public:
-    Class_10E57220();
-};
-
-class Class_10E572A8 : public Class_10E55E78
-{
-public:
-    Class_10E572A8();
-};
-
-class Class_10E57330 : public Class_10E55E78
-{
-public:
-    Class_10E57330();
-};
-
-class Class_10E573B8 : public Class_10E55E78
-{
-public:
-    Class_10E573B8();
-};
+#include "Game/Class_10E55E78.h"
+#include "Game/Class_10E57220.h"
+#include "Game/Class_10E572A8.h"
+#include "Game/Class_10E57330.h"
+#include "Game/Class_10E573B8.h"
 
 // FUNCTION: 0x109A0950 ??0Class_10E57220@@QAE@XZ
 Class_10E57220::Class_10E57220()

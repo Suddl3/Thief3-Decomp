@@ -1,5 +1,7 @@
 // Game/Unsorted_10C262D0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10C262D0.h"
+#include "Game/Class_10C7D570.h"
 
 struct Struct_10C26310
 {
@@ -13,12 +15,6 @@ struct Data_10C26310
     char Unknown00[0x2C];
     Struct_10C26310 Unknown2C;
     Struct_10C26310 Unknown38;
-};
-
-class Class_10c7d570
-{
-public:
-    void* FUN_10c7d570();
 };
 
 class Class_10E99298
@@ -39,25 +35,7 @@ public:
     virtual Struct_10C26310 FUN_10c26340();
 
     char Unknown04[4];
-    Class_10c7d570* Unknown08;
-};
-
-class Class_10C262D0
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-
-    void FUN_10c262d0(bool A);
-
-    char Unknown04[0x40];
-    bool Unknown44;
+    Class_10C7D570* Unknown08;
 };
 
 // FUNCTION: 0x10C262D0 ?FUN_10c262d0@Class_10C262D0@@QAEX_N@Z

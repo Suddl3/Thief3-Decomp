@@ -1,9 +1,9 @@
 // Game/Unsorted_109119B0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #define HKEY_CURRENT_USER ((HKEY)(unsigned long)0x80000001)
 #define HKEY_LOCAL_MACHINE ((HKEY)(unsigned long)0x80000002)
 #define ERROR_SUCCESS 0L
+#include "Game/Class_10912800.h"
 
 typedef struct HKEY__* HKEY;
 
@@ -29,19 +29,6 @@ public:
 extern "C" __declspec(dllimport) void* __stdcall GetCurrentProcess(void);
 
 extern "C" __declspec(dllimport) int __stdcall FreeLibrary(void* Module);
-
-class Class_10912800
-{
-public:
-    void FUN_10912800();
-
-    char Unknown00[0x18];
-    int (__stdcall* Unknown18)(void* Process, unsigned int Address);
-    int (__stdcall* Unknown1C)(void* Process);
-    char Unknown20[4];
-    void* Unknown24;
-    void* Unknown28;
-};
 
 extern "C" __declspec(dllimport) int __stdcall IsBadReadPtr(const void* Pointer, unsigned int Size);
 

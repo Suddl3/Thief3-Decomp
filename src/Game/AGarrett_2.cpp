@@ -1,21 +1,9 @@
 // Game/AGarrett_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10ABF100
-{
-public:
-    bool FUN_10abf100();
-};
+#include "Game/Class_10ABF100.h"
+#include "Game/Class_10B22640.h"
 
 Class_10ABF100* FUN_10abf0d0();
-
-class Class_10B22640
-{
-public:
-    void FUN_10b22640(int p1);
-
-    char Unknown00[0xC];
-};
 
 class APlayerPawn
 {

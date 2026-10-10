@@ -1,29 +1,8 @@
 // Game/Unsorted_10C09560.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-struct Struct_10C099A0
-{
-    int Unknown00;
-    int Unknown04;
-    char Unknown08[0x18];
-};
-
-class Class_10C099A0
-{
-public:
-    int FUN_10c099a0(int Value);
-
-    char Unknown00[4];
-    int Unknown04;
-    char Unknown08[4];
-    Struct_10C099A0* Unknown0C;
-};
-
-struct Struct_10C09A10
-{
-    char Unknown00[0xC];
-    int Unknown0C;
-};
+#include "Game/Class_10C099A0.h"
+#include "Game/Struct_10C099A0.h"
+#include "Game/Struct_10C09A10.h"
 
 Struct_10C09A10* FUN_10b8b660(int A);
 

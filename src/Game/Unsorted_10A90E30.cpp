@@ -1,14 +1,9 @@
 // Game/Unsorted_10A90E30.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10C08940
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual int Virtual3(int A, int B);
-};
+#include "Game/Class_10905A90_Member.h"
+#include "Game/Class_10C08940.h"
+#include "Game/Class_10E5D7B4.h"
+#include "Game/Class_10E5D7B8.h"
 
 class Class_10978090
 {
@@ -42,23 +37,6 @@ class Class_10E6CA6C : public Class_10AAB5C0, public Class_10E5B578
 {
 public:
     virtual int Virtual0(int A, int B, int C, int* D);
-};
-
-// Ion Storm's memory manager (0x10905AA0): the allocation happens inside a
-// scope of it (slots 8 and 9).
-class Class_10905A90_Member
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8(int A, int B);
-    virtual void Virtual9();
 };
 
 Class_10905A90_Member* FUN_10905aa0();
@@ -95,12 +73,6 @@ public:
     }
 };
 
-class Class_10E5D7B4
-{
-public:
-    virtual Class_10E6CA50* FUN_10a91150();
-};
-
 extern void* DAT_10e6ca70[];
 
 extern void* DAT_10e6ca6c[];
@@ -113,12 +85,6 @@ public:
         VTable = DAT_10e6ca70;
         VTable0C = DAT_10e6ca6c;
     }
-};
-
-class Class_10E5D7B8
-{
-public:
-    virtual Class_10E6CA70* FUN_10a911f0();
 };
 
 // FUNCTION: 0x10A91150 ?FUN_10a91150@Class_10E5D7B4@@UAEPAVClass_10E6CA50@@XZ

@@ -1,18 +1,9 @@
 // Game/Unsorted_109427A0_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-struct Struct_10919190
-{
-    float Unknown00[16];
-};
+#include "Game/Class_10936AC0.h"
+#include "Game/Struct_10919190.h"
 
 void FUN_10919190(Struct_10919190* Matrix);
-
-class Class_10936AC0
-{
-public:
-    void FUN_10936b20(int A, int B);
-};
 
 extern Class_10936AC0* DAT_10f31be0;
 

@@ -1,22 +1,12 @@
 // Game/AT3PlayerController.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10B228A0
-{
-public:
-    int FUN_10b228a0();
-};
+#include "Game/Class_10B1D3D0.h"
+#include "Game/Class_10B228A0.h"
 
 struct Struct_10B1D1C0
 {
     int Unknown00;
     Class_10B228A0* Unknown04;
-};
-
-class Class_10B1D3D0
-{
-public:
-    Struct_10B1D1C0* Unknown00;
 };
 
 class AT3PlayerController

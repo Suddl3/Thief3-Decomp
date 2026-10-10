@@ -1,13 +1,7 @@
 // Game/Unsorted_109E6110.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_109081E0
-{
-public:
-    Class_109081E0& operator=(const Class_109081E0& Other);
-
-    void* Unknown00;
-};
+#include "Game/Class_109081E0.h"
+#include "Game/Class_109E6220.h"
 
 class Class_10E5B2C0
 {
@@ -77,15 +71,6 @@ public:
 struct Struct_109E6220_Item {
     char Unknown00[8];
     int Unknown08;
-};
-
-class Class_109E6220 {
-public:
-    char Unknown00[0x8C];
-    Struct_109E6220_Item** Unknown8C;
-    int Unknown90;
-
-    int FUN_109e6220();
 };
 
 // FUNCTION: 0x109E6110 ?FUN_109e6110@Class_10E5B588@@UAEXHPAVClass_10BFBD70@@@Z

@@ -1,19 +1,9 @@
 // Game/Unsorted_10A7DE40.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10E6BF5C.h"
 
 // Ion Storm's placement new (0x10905C10).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
-
-class Class_10E6BF5C
-{
-public:
-    Class_10E6BF5C() : Unknown04(false), Unknown08(0) {}
-
-    virtual void Virtual0();
-
-    bool Unknown04;
-    int Unknown08;
-};
 
 extern Class_10E6BF5C* DAT_10f3a17c;
 

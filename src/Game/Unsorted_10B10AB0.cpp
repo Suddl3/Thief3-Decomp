@@ -1,37 +1,10 @@
 // Game/Unsorted_10B10AB0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10A73EF0_Object
-{
-public:
-    virtual void Virtual0();
-
-    char Unknown04[0x30];
-    int Unknown34;
-    int Unknown38;
-};
-
-class Class_10A73EF0_Table
-{
-public:
-    Class_10A73EF0_Object* FUN_10af33e0(int Handle);
-
-    int Unknown00;
-    int Unknown04;
-    Class_10A73EF0_Object** Unknown08;
-};
+#include "Game/Class_10A73EF0_Object.h"
+#include "Game/Class_10A73EF0_Table.h"
+#include "Game/Class_10B10B30.h"
 
 Class_10A73EF0_Table* FUN_10af3470();
-
-class Class_10B10B30
-{
-public:
-    void FUN_10b10b30(unsigned short Value);
-
-    unsigned short Unknown00;
-    unsigned short Unknown02;
-    int Unknown04;
-};
 
 // FUNCTION: 0x10B10B30 ?FUN_10b10b30@Class_10B10B30@@QAEXG@Z
 void Class_10B10B30::FUN_10b10b30(unsigned short Value)

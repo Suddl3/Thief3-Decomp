@@ -1,5 +1,8 @@
 // Game/Unsorted_10917FF0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_1091E400.h"
+#include "Game/Class_10924100.h"
+#include "Game/Config.h"
 
 extern "C" int __cdecl sprintf(char* Out, const char* Format, ...);
 
@@ -31,28 +34,6 @@ public:
 };
 
 extern IDirect3D8* GDirect3D8;
-
-class Config
-{
-public:
-    static Config* Instance();
-    bool FUN_10910a20(const char* Section, const char* Key, int* Value, int D);
-};
-
-class Class_10924100
-{
-public:
-    bool FUN_109228a0(int A, int B);
-
-    char Unknown00[0xC];
-    int Unknown0C;
-};
-
-class Class_1091E400
-{
-public:
-    bool FUN_10917900(int A, int B);
-};
 
 extern Class_10924100* DAT_10f2c740;
 

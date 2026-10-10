@@ -1,7 +1,8 @@
 // Game/Unsorted_1091E420.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include <math.h>
+#include "Game/Class_1091ED80.h"
+#include "Game/IDirect3DDevice8.h"
 
 extern void* DAT_10e49a0c[];
 
@@ -12,73 +13,6 @@ public:
 };
 
 class IDirect3DBaseTexture8;
-
-class IDirect3DDevice8
-{
-public:
-    virtual long __stdcall Virtual0();
-    virtual long __stdcall Virtual1();
-    virtual long __stdcall Virtual2();
-    virtual long __stdcall Virtual3();
-    virtual long __stdcall Virtual4();
-    virtual long __stdcall Virtual5();
-    virtual long __stdcall Virtual6();
-    virtual long __stdcall Virtual7();
-    virtual long __stdcall Virtual8();
-    virtual long __stdcall Virtual9();
-    virtual long __stdcall Virtual10();
-    virtual long __stdcall Virtual11();
-    virtual long __stdcall Virtual12();
-    virtual long __stdcall Virtual13();
-    virtual long __stdcall Virtual14();
-    virtual long __stdcall Virtual15();
-    virtual long __stdcall Virtual16();
-    virtual long __stdcall Virtual17();
-    virtual long __stdcall Virtual18();
-    virtual long __stdcall Virtual19();
-    virtual long __stdcall Virtual20();
-    virtual long __stdcall Virtual21();
-    virtual long __stdcall Virtual22();
-    virtual long __stdcall Virtual23();
-    virtual long __stdcall Virtual24();
-    virtual long __stdcall Virtual25();
-    virtual long __stdcall Virtual26();
-    virtual long __stdcall Virtual27();
-    virtual long __stdcall Virtual28();
-    virtual long __stdcall Virtual29();
-    virtual long __stdcall Virtual30();
-    virtual long __stdcall Virtual31();
-    virtual long __stdcall Virtual32();
-    virtual long __stdcall Virtual33();
-    virtual long __stdcall Virtual34();
-    virtual long __stdcall Virtual35();
-    virtual long __stdcall Virtual36();
-    virtual long __stdcall Virtual37();
-    virtual long __stdcall Virtual38();
-    virtual long __stdcall Virtual39();
-    virtual long __stdcall Virtual40();
-    virtual long __stdcall Virtual41();
-    virtual long __stdcall Virtual42();
-    virtual long __stdcall Virtual43();
-    virtual long __stdcall Virtual44();
-    virtual long __stdcall Virtual45();
-    virtual long __stdcall Virtual46();
-    virtual long __stdcall Virtual47();
-    virtual long __stdcall Virtual48();
-    virtual long __stdcall Virtual49();
-    virtual long __stdcall Virtual50();
-    virtual long __stdcall Virtual51();
-    virtual long __stdcall Virtual52();
-    virtual long __stdcall Virtual53();
-    virtual long __stdcall Virtual54();
-    virtual long __stdcall Virtual55();
-    virtual long __stdcall Virtual56();
-    virtual long __stdcall Virtual57();
-    virtual long __stdcall Virtual58();
-    virtual long __stdcall Virtual59();
-    virtual long __stdcall Virtual60();
-    virtual long __stdcall SetTexture(unsigned long Stage, IDirect3DBaseTexture8* Texture);
-};
 
 extern IDirect3DDevice8* GDirect3DDevice8;
 
@@ -92,16 +26,6 @@ public:
 };
 
 extern float DAT_10e49684;
-
-class Class_1091ED80
-{
-public:
-    float FUN_1091ed80();
-
-    float Unknown00;
-    float Unknown04;
-    float Unknown08;
-};
 
 // FUNCTION: 0x1091ED80 ?FUN_1091ed80@Class_1091ED80@@QAEMXZ
 float Class_1091ED80::FUN_1091ed80()

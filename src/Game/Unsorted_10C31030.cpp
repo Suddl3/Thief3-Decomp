@@ -1,17 +1,10 @@
 // Game/Unsorted_10C31030.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10BAA580.h"
+#include "Game/Class_10C30D10_Field18.h"
 
 // Ion Storm's placement new (0x10905C10).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
-
-// The table's key hasher: slot 0 gives the bytes FUN_1090e9b0 hashes,
-// slot 1 compares a key with an entry's key (0 when they are equal).
-class Class_10C30D10_Field18
-{
-public:
-    virtual void Virtual0(const int& Key, const void** Data, int* Length);
-    virtual int Virtual1(const int& Key, const int& Other);
-};
 
 // The hash table of 0x10B2A160.
 class Class_10C30D10
@@ -124,12 +117,6 @@ public:
     virtual void Virtual65();
     virtual void Virtual66();
     virtual float Virtual67(int A);
-};
-
-class Class_10BAA580
-{
-public:
-    Class_109BC840* FUN_10baa580();
 };
 
 class Class_10E9AC80

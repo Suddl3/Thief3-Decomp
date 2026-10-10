@@ -1,11 +1,6 @@
 // Game/Unsorted_10928BD0_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-struct Struct_10929510
-{
-    int Pitch;
-    unsigned char* Bits;
-};
+#include "Game/Struct_10929510.h"
 
 class Class_10E49AE0
 {

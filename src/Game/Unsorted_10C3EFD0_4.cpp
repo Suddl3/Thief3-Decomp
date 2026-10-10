@@ -1,16 +1,14 @@
 // Game/Unsorted_10C3EFD0_4.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10C3F090.h"
+#include "Game/Class_10C3FF10.h"
+#include "Game/Class_10C62A40.h"
+#include "Game/Class_10E9B5C0_Unknown1C.h"
 
 class FVector
 {
 public:
     float X, Y, Z;
-};
-
-class Class_10C3FF10
-{
-public:
-    void FUN_10c3ff10(int A);
 };
 
 class Class_10C41420 : public Class_10C3FF10
@@ -21,37 +19,11 @@ public:
 
 Class_10C41420* FUN_10c47d90();
 
-class Class_10C62A40
-{
-public:
-    void FUN_10c62a40(unsigned char A);
-};
-
 class Class_10C80360 : public Class_10C62A40
 {
 };
 
 Class_10C80360* FUN_10c5f280();
-
-class Class_10E9B5C0_Unknown1C
-{
-public:
-    virtual int __stdcall Virtual0();
-    virtual int __stdcall Virtual1();
-    virtual int __stdcall Virtual2();
-    virtual int __stdcall Virtual3();
-    virtual int __stdcall Virtual4();
-    virtual int __stdcall Virtual5();
-    virtual int __stdcall Virtual6();
-    virtual int __stdcall Virtual7();
-    virtual int __stdcall Virtual8();
-    virtual int __stdcall Virtual9();
-    virtual int __stdcall Virtual10();
-    virtual int __stdcall Virtual11();
-    virtual int __stdcall Virtual12();
-    virtual int __stdcall Virtual13();
-    virtual int __stdcall Virtual14(float X, float Y, float Z, int Apply);
-};
 
 class Class_10E9B5C0
 {
@@ -108,15 +80,6 @@ public:
     virtual int __stdcall Virtual11();
     virtual int __stdcall Virtual12();
     virtual int __stdcall Virtual13(int A, int B, int C, int D, int E, int F, int G);
-};
-
-class Class_10C3F090
-{
-public:
-    void FUN_10c3f090(Struct_10C3F090* P);
-
-    char Unknown00[0x1C];
-    Class_10C3F090_Member* Unknown1C;
 };
 
 // FUNCTION: 0x10C3F050 ?FUN_10c3f050@Class_10E9B5C0@@UAEXPAVFVector@@@Z

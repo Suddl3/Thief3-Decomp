@@ -1,7 +1,7 @@
 // Game/Unsorted_10B1BEA0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
+#include "Game/Class_10E79488.h"
 
 class APawn;
 
@@ -133,17 +133,6 @@ struct Struct_10AA3520
 };
 
 extern Struct_10AA3520* DAT_10f35dec;
-
-class Class_10E79488
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void FUN_10b1bea0();
-};
 
 // FUNCTION: 0x10B1BEA0 ?FUN_10b1bea0@Class_10E79488@@UAEXXZ
 void Class_10E79488::FUN_10b1bea0()

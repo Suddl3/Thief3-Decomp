@@ -1,25 +1,7 @@
 // Game/Unsorted_10C3E9F0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10E9BB80 {
-public:
-    virtual void FUN_10c3e9f0(int p1, int* p2, int* p3);
-};
-
-
-class Class_10C3EA90
-{
-public:
-    void FUN_10c3ea10(int A);
-    void FUN_10c3ea90();
-
-    int Unknown00;
-    int Unknown04;
-    char Unknown08[4];
-    int Unknown0C;
-    char Unknown10[4];
-    void* Unknown14;
-};
+#include "Game/Class_10C3EA90.h"
+#include "Game/Class_10E9BB80.h"
 
 // FUNCTION: 0x10C3E9F0 ?FUN_10c3e9f0@Class_10E9BB80@@UAEXHPAH0@Z
 void Class_10E9BB80::FUN_10c3e9f0(int p1, int* p2, int* p3)

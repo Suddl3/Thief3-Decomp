@@ -1,5 +1,8 @@
 // Game/Unsorted_10C49230.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10C49740.h"
+#include "Game/Class_10C58C80.h"
+#include "Game/Class_10C58C90.h"
 
 void FUN_10c4c2d0();
 
@@ -18,31 +21,10 @@ public:
     void FUN_10c57e70();
 };
 
-class Class_10C58C80
-{
-public:
-    Class_Field_10C58C80* Field00;
-    void FUN_10c58c80();
-};
-
-class Class_10C49740
-{
-public:
-    void FUN_10c49740(int* A, int B);
-};
-
 struct Info_10C58C90
 {
     char Unknown00[0xDC];
     Class_10C49740 UnknownDC;
-};
-
-class Class_10C58C90
-{
-public:
-    void FUN_10c58c90(int A, int B);
-
-    Info_10C58C90* Unknown00;
 };
 
 // FUNCTION: 0x10C4CD50 ?FUN_10c4cd50@@YAXXZ

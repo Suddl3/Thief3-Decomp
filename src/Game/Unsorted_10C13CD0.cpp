@@ -1,19 +1,12 @@
 // Game/Unsorted_10C13CD0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10978090.h"
+#include "Game/Class_10BAA9D0.h"
+#include "Game/Class_10E700F0.h"
+#include "Game/Class_10E98C80.h"
+#include "Game/Struct_10AA3520.h"
 
 extern void* DAT_10e98c80[];
-
-class Class_10E98C80
-{
-public:
-    Class_10E98C80();
-
-    void* VTable;
-    char Unknown04[8];
-    int Unknown0c;
-    int Unknown10;
-    int Unknown14;
-};
 
 extern void* DAT_10e8c1f0[];
 
@@ -33,26 +26,9 @@ public:
     void FUN_10c13e80();
 };
 
-class Class_10E700F0 {
-public:
-    virtual void FUN_10c13ea0(int, int, int, int);
-};
-
-struct Struct_10AA3520
-{
-    char Unknown00[8];
-    void* Unknown08;
-};
-
 extern Struct_10AA3520* DAT_10f35dec;
 
 class Class_10BAA6B0_Param;
-
-class Class_10BAA9D0
-{
-public:
-    bool FUN_10baa9d0(void* A, float B, bool C);
-};
 
 class Class_10BABED0 : public Class_10BAA9D0
 {
@@ -61,21 +37,6 @@ class Class_10BABED0 : public Class_10BAA9D0
 Class_10BABED0* FUN_10baa6b0(Class_10BAA6B0_Param* A);
 
 bool FUN_10c16700(void* A);
-
-class Class_10978090
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual int Virtual6(int A, int B);
-    virtual void Virtual7();
-    virtual Class_10BAA6B0_Param* Virtual8();
-    int FUN_10978090();
-};
 
 class Class_10E8D618 : public Class_10978090
 {

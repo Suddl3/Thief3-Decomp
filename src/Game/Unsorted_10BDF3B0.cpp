@@ -1,11 +1,6 @@
 // Game/Unsorted_10BDF3B0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10BB85B0
-{
-public:
-    void FUN_10bb85b0(unsigned char p1);
-};
+#include "Game/Class_10BB85B0.h"
 
 class Class_10E95170
 {

@@ -1,7 +1,8 @@
 // Game/Unsorted_10B7FB40.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include <vector>
+#include "Game/Class_10B7FC20.h"
+#include "Game/Struct_10B7FC20_Item.h"
 
 class Class_10B7FEE0
 {
@@ -12,21 +13,6 @@ public:
     void* Unknown04;
     int Unknown08;
     int Unknown0C;
-};
-
-struct Struct_10B7FC20_Item
-{
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-};
-
-class Class_10B7FC20
-{
-public:
-    int FUN_10b7fc20();
-
-    std::vector<Struct_10B7FC20_Item> Unknown00;
 };
 
 // FUNCTION: 0x10B7FC20 ?FUN_10b7fc20@Class_10B7FC20@@QAEHXZ

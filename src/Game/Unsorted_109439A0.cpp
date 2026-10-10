@@ -1,12 +1,8 @@
 // Game/Unsorted_109439A0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10946B20
-{
-public:
-    void FUN_10946b20();
-    void FUN_109464c0(int a, int b);
-};
+#include "Game/Class_10946110.h"
+#include "Game/Class_10946B20.h"
+#include "Game/Class_10A32000.h"
 
 struct Entry_10946110
 {
@@ -19,27 +15,7 @@ struct Entry_10946110
     int Unknown18;
 };
 
-class Class_10946110
-{
-public:
-    int FUN_10946110(const Entry_10946110* Item);
-    void FUN_10943350(int NewCount);
-
-    int Unknown00;
-    int Unknown04;
-    Entry_10946110* Unknown08;
-};
-
 extern "C" void* memcpy(void*, const void*, unsigned int);
-
-class Class_10A32000
-{
-public:
-    void FUN_10a32000(int A);
-
-    char Unknown00[8];
-    char* Unknown08;
-};
 
 class Object_10944D50
 {

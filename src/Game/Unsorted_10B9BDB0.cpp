@@ -1,61 +1,19 @@
 // Game/Unsorted_10B9BDB0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10B9C9C0
-{
-public:
-    void FUN_10b9c9c0(void* A);
-
-    char Unknown00[0x38];
-    void* Unknown38;
-};
+#include "Game/Class_10B9BDB0.h"
+#include "Game/Class_10B9C030.h"
+#include "Game/Class_10B9C9A0.h"
+#include "Game/Class_10B9C9C0.h"
+#include "Game/Class_10BB89D0.h"
+#include "Game/Class_10BE3FF0.h"
+#include "Game/Class_10BFB910.h"
+#include "Game/Class_10BFC190.h"
+#include "Game/Class_10FF667C.h"
 
 class Class_10B9BEB0
 {
 public:
     void FUN_10b9beb0();
-};
-
-class Class_10B9C9A0
-{
-public:
-    void FUN_10b9c9a0();
-
-    Class_10B9BEB0* Unknown00;
-};
-
-class Class_10BFC190
-{
-public:
-    void FUN_10bfc190();
-};
-
-class Class_10BE3FF0
-{
-public:
-    void FUN_10be3ff0();
-};
-
-class Class_10BB89D0
-{
-public:
-    Class_10BE3FF0* FUN_10bb89d0();
-
-    char Unknown00[0x30];
-    Class_10BFC190 Unknown30;
-};
-
-class Class_10BFB910
-{
-public:
-    void FUN_10bfb910(int Index);
-};
-
-class Class_10FF667C
-{
-public:
-    char Unknown00[0x28];
-    Class_10BFB910* Unknown28;
 };
 
 extern Class_10FF667C* DAT_10ff667c;
@@ -64,36 +22,6 @@ struct Struct_10B9BDB0_Unknown118
 {
     char Unknown00[4];
     Class_10BB89D0* Unknown04;
-};
-
-class Class_10B9BDB0
-{
-public:
-    void FUN_10b9bdb0();
-
-    char Unknown00[0x118];
-    Struct_10B9BDB0_Unknown118* Unknown118;
-};
-
-class Class_10B9C030
-{
-public:
-    bool FUN_10b9c030(int Value);
-
-    // The index of the first element equal to Value, else -1.
-    int FindIndex(int Value)
-    {
-        for (int i = 0; i < Unknown00; i++)
-        {
-            if (Unknown08[i] == Value)
-                return i;
-        }
-        return -1;
-    }
-
-    int Unknown00;
-    int Unknown04;
-    int* Unknown08;
 };
 
 // FUNCTION: 0x10B9BDB0 ?FUN_10b9bdb0@Class_10B9BDB0@@QAEXXZ

@@ -1,5 +1,7 @@
 // Game/Unsorted_10C47EC0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10E9BB5C.h"
+#include "Game/Config.h"
 
 class Class_10C47FA0_Field04
 {
@@ -7,22 +9,7 @@ public:
     virtual void Virtual0(int B);
 };
 
-class Class_10E9BB5C
-{
-public:
-    virtual bool FUN_10c47fa0(int A, int B);
-
-    Class_10C47FA0_Field04* Unknown04;
-};
-
 extern void* DAT_10e9bb4c[];
-
-class Config
-{
-public:
-    static Config* Instance();
-    void FUN_10910a20(const char* Section, const char* Key, int* Value, int D);
-};
 
 class Class_10E9BB4C
 {

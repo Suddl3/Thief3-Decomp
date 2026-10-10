@@ -1,5 +1,7 @@
 // Game/Unsorted_10BF7830.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10BF7990.h"
+#include "Game/Class_10C7D570.h"
 
 struct Struct_10BF7990
 {
@@ -20,23 +22,6 @@ public:
     virtual void Virtual1();
     virtual void Virtual2();
     virtual bool Virtual3(Struct_10BF7990* A);
-};
-
-class Class_10c7d570
-{
-public:
-    void* FUN_10c7d570();
-};
-
-class Class_10BF7990
-{
-public:
-    bool FUN_10bf7990(Struct_10BF7990* A);
-
-    char Unknown00[0xC];
-    Class_Field0C* Unknown0C;
-    char Unknown10[4];
-    Class_10c7d570* Unknown14;
 };
 
 // FUNCTION: 0x10BF7990 ?FUN_10bf7990@Class_10BF7990@@QAE_NPAUStruct_10BF7990@@@Z

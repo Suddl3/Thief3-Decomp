@@ -1,29 +1,15 @@
 // Game/Unsorted_10B3F000.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_1098E3D0.h"
+#include "Game/Class_10A3C2E0.h"
+#include "Game/Class_10E7E6A0.h"
+#include "Game/Struct_10AA3520.h"
 
 class AGarrett;
-
-class Class_10A3C2E0
-{
-public:
-    void FUN_10a3c2e0();
-};
-
-struct Struct_10AA3520
-{
-    char Unknown00[0x94];
-    Class_10A3C2E0* Unknown94;
-};
 
 extern Struct_10AA3520* DAT_10f35dec;
 
 void FUN_10b54790();
-
-class Class_1098E3D0
-{
-public:
-    void FUN_1098e3d0(int A, void* B);
-};
 
 class AGarrett
 {
@@ -36,19 +22,6 @@ public:
     unsigned bUpdatePhysHeight : 1;
     char Unknown454[4];
     Class_1098E3D0* Unknown458;
-};
-
-class Class_10E7E6A0
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-
-    void FUN_10b3ed30(AGarrett* Garrett);
-    void FUN_10b3adc0(AGarrett* Garrett);
-    void FUN_10b3ae90(AGarrett* Garrett);
-    void FUN_10b3b130(AGarrett* Garrett);
 };
 
 class Class_10E7ED00 : public Class_10E7E6A0

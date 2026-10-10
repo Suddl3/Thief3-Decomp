@@ -1,5 +1,7 @@
 // Game/Unsorted_10B83850.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10B83DC0.h"
+#include "Game/Class_10B83E50.h"
 
 class Allocator_10FFA700
 {
@@ -35,21 +37,9 @@ public:
     unsigned Unknown08Flag : 1;
 };
 
-class Class_10B83DC0
-{
-public:
-    int FUN_10b83dc0(Class_10943600* Out);
-};
-
 int FUN_10b83a30(Class_10B83DC0* Self, Class_10B83820* Out);
 
 void FUN_10b83870(Class_10B83820* In, Class_10943600* Out);
-
-class Class_10B83E50
-{
-public:
-    int FUN_10b83e50(Class_10943600* Out);
-};
 
 int FUN_10b83b60(Class_10B83E50* Self, Class_10B83820* Out);
 

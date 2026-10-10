@@ -1,17 +1,12 @@
 // Game/Unsorted_10ABC140.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
-
-class Class_10E70A50
-{
-public:
-    Class_10E70A50();
-
-    virtual void FUN_10adb3a0();
-
-    char Unknown04[0x28];
-};
+#include "Game/Class_1098E330.h"
+#include "Game/Class_10ABEA80.h"
+#include "Game/Class_10ABFBB0.h"
+#include "Game/Class_10E70A50.h"
+#include "Game/Struct_10AA3520_Member.h"
+#include "Game/Struct_10ABC6F0.h"
 
 class Class_10993EC0 : public Class_10E70A50
 {
@@ -46,24 +41,6 @@ public:
     Object_10ABD7F0* Unknown0D0;
 };
 
-class Class_1098E330
-{
-public:
-    void FUN_1098e330(int Id, int* Out);
-};
-
-class Class_10ABEA80 {
-public:
-    void FUN_10abe270(int param);
-    void FUN_10abea80();
-};
-
-struct Struct_10AA3520_Member
-{
-    char Unknown00[0x214];
-    int Unknown214;
-};
-
 struct Struct_10AA3520
 {
     char Unknown00[0x08];
@@ -71,26 +48,6 @@ struct Struct_10AA3520
 };
 
 extern Struct_10AA3520* DAT_10f35dec;
-
-class Class_10ABFBB0 {
-public:
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    unsigned char Unknown0c;
-
-    Class_10ABFBB0* FUN_10abfbb0();
-};
-
-struct Struct_10ABC6F0
-{
-    FLOAT Unknown00;
-    FVector Unknown04;
-    FVector Unknown10;
-    BYTE Unknown1C;
-    BYTE Unknown1D;
-    INT Unknown20;
-};
 
 struct Struct_10ABC530
 {

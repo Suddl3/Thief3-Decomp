@@ -1,12 +1,7 @@
 // Game/Unsorted_109E3770.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-struct Struct_109E3770
-{
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-};
+#include "Game/Struct_109E3770.h"
+#include "Game/Struct_109E3790.h"
 
 class Class_10E5B2C0
 {
@@ -47,13 +42,6 @@ public:
 
     char Unknown04[0x30];
     Struct_109E3770 Unknown34;
-};
-
-struct Struct_109E3790
-{
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
 };
 
 class Class_109E3790

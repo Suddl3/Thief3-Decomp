@@ -1,5 +1,13 @@
 // Game/Unsorted_10A93E40.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10905A90_Member.h"
+#include "Game/Class_10E5D7F4.h"
+#include "Game/Class_10E5D95C.h"
+#include "Game/Class_10E5D960.h"
+#include "Game/Class_10E5D964.h"
+#include "Game/Class_10E6CCA4.h"
+#include "Game/Class_10E6CCB0.h"
+#include "Game/Class_10E6CCD8.h"
 
 class Class_10E6C890
 {
@@ -12,57 +20,10 @@ public:
     virtual int FUN_10a93fd0(int A);
 };
 
-// Ion Storm's memory manager (0x10905AA0): the allocation happens inside a
-// scope of it (slots 8 and 9).
-class Class_10905A90_Member
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8(int A, int B);
-    virtual void Virtual9();
-};
-
 Class_10905A90_Member* FUN_10905aa0();
 
 // Ion Storm's placement new (0x10905C10).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
-
-// FUN_10a93d40 is the constructor: it stores the vtable and returns this.
-class Class_10E6CCA4
-{
-public:
-    Class_10E6CCA4* FUN_10a93d40();
-
-    void* Unknown00;
-};
-
-class Class_10E5D960
-{
-public:
-    virtual Class_10E6CCA4* FUN_10a93e40();
-};
-
-// FUN_10a93db0 is the constructor: it stores the vtable and returns this.
-class Class_10E6CCB0
-{
-public:
-    Class_10E6CCB0* FUN_10a93db0();
-
-    void* Unknown00;
-};
-
-class Class_10E5D964
-{
-public:
-    virtual Class_10E6CCB0* FUN_10a93e90();
-};
 
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
@@ -85,27 +46,6 @@ public:
     {
         VTable = DAT_10e6ccbc;
     }
-};
-
-class Class_10E5D7F4
-{
-public:
-    virtual Class_10E6CCBC* FUN_10a93ee0();
-};
-
-// FUN_10a93e30 is the constructor: it stores the vtable and returns this.
-class Class_10E6CCD8
-{
-public:
-    Class_10E6CCD8* FUN_10a93e30();
-
-    void* Unknown00;
-};
-
-class Class_10E5D95C
-{
-public:
-    virtual Class_10E6CCD8* FUN_10a93f80();
 };
 
 // FUNCTION: 0x10A93E40 ?FUN_10a93e40@Class_10E5D960@@UAEPAVClass_10E6CCA4@@XZ

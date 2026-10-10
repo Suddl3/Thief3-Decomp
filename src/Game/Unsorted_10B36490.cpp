@@ -1,5 +1,6 @@
 // Game/Unsorted_10B36490.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10E7C41C.h"
 
 class WindowManager;
 
@@ -25,14 +26,6 @@ public:
     virtual void Virtual6();
     virtual void Virtual7();
     virtual void* Virtual8();
-};
-
-class Class_10E7C41C
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual int FUN_10b36490(int A, Object_10B36490* B, int C);
 };
 
 // FUNCTION: 0x10B36490 ?FUN_10b36490@Class_10E7C41C@@UAEHHPAVObject_10B36490@@H@Z

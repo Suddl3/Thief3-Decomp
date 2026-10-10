@@ -1,5 +1,6 @@
 // Game/Unsorted_10A9D710.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10E6D260.h"
 
 // A growable array of pointers: a count, the capacity in bytes and the items.
 class Class_10BFBD70
@@ -49,16 +50,6 @@ public:
 void* FUN_10a030c0();
 
 int FUN_10977fa0(int A);
-
-class Class_10E6D260
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual int FUN_10a9dbe0(int A, Class_10A9DBE0_Param2* B, Class_10A9DBE0_Param3* C);
-
-    void FUN_10a9d5b0(int Id, float Value);
-};
 
 // FUNCTION: 0x10A9DBE0 ?FUN_10a9dbe0@Class_10E6D260@@UAEHHPAVClass_10A9DBE0_Param2@@PAVClass_10A9DBE0_Param3@@@Z
 int Class_10E6D260::FUN_10a9dbe0(int A, Class_10A9DBE0_Param2* B, Class_10A9DBE0_Param3* C)

@@ -1,12 +1,6 @@
 // Game/UBitfieldEnum.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class FArchive
-{
-public:
-    virtual ~FArchive();
-    virtual void Serialize(void* V, int Length);
-};
+#include "Game/FArchive.h"
 
 FArchive& FUN_109bc520(FArchive& Ar, void* V);
 

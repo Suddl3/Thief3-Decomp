@@ -1,5 +1,11 @@
 // Game/Unsorted_10B66980.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_109081E0.h"
+#include "Game/Class_10B71110.h"
+#include "Game/Class_10B71140.h"
+#include "Game/Class_10B73E80.h"
+#include "Game/Class_10B76190.h"
+#include "Game/Class_10E873B0.h"
 
 extern void* DAT_10e84d80[];
 
@@ -10,15 +16,6 @@ public:
 };
 
 extern const char DAT_10e84f7c[];
-
-class Class_109081E0
-{
-public:
-    Class_109081E0(const char* In);
-    ~Class_109081E0();
-
-    char* Unknown00;
-};
 
 class Class_10E84D80 : public Class_10B787F0
 {
@@ -179,15 +176,6 @@ public:
     int Unknown1F0;
 };
 
-class Class_10B71110
-{
-public:
-    void FUN_10b71110();
-
-    int Unknown00;
-    Struct_10B71110* Unknown04;
-};
-
 class Struct_10B71140
 {
 public:
@@ -323,22 +311,7 @@ public:
     int Unknown1F0;
 };
 
-class Class_10B71140
-{
-public:
-    void FUN_10b71140();
-
-    int Unknown00;
-    Struct_10B71140* Unknown04;
-};
-
 extern const char DAT_10e875ac[];
-
-class Class_10E873B0
-{
-public:
-    Class_109081E0 FUN_10b718f0();
-};
 
 extern void* DAT_10e876d0;
 
@@ -351,13 +324,6 @@ public:
     char Unknown00[0x118];
     void* Field118;
     void FUN_10b73e60();
-};
-
-class Class_10B73E80 {
-public:
-    char Unknown00[0x1d0];
-    void* Field1d0;
-    void FUN_10b73e80(void* p1);
 };
 
 void FUN_10b756d0();
@@ -400,13 +366,6 @@ public:
     char Unknown00[0xc4];
     void* Fieldc4;
     void FUN_10b76180(void* p1);
-};
-
-class Class_10B76190 {
-public:
-    char Unknown00[0x13d];
-    unsigned char Field13d;
-    void FUN_10b76190(unsigned char p1);
 };
 
 extern void* DAT_10e88160;

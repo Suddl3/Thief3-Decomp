@@ -1,39 +1,21 @@
 // Game/Unsorted_10BDBD50.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_1098E330
-{
-public:
-    void FUN_1098e330(int Id, int* Out);
-};
-
-class Class_10AAF570
-{
-public:
-    int FUN_10aaf570();
-};
+#include "Game/Class_10971570.h"
+#include "Game/Class_1098E330.h"
+#include "Game/Class_10AAF570.h"
+#include "Game/Class_10C7D570.h"
+#include "Game/Class_10DBD510.h"
+#include "Game/Class_10FF667C.h"
+#include "Game/FArchive.h"
 
 class Class_10BBDB40 : public Class_10AAF570
 {
-};
-
-class Class_10DBD510
-{
-public:
-    Class_10BBDB40* FUN_10dbd510();
 };
 
 struct Struct_10BDC290
 {
     char Unknown00[8];
     Class_10DBD510* Unknown08;
-};
-
-class Class_10FF667C
-{
-public:
-    char Unknown00[0xA8];
-    float UnknownA8;
 };
 
 extern Class_10FF667C* DAT_10ff667c;
@@ -45,12 +27,6 @@ public:
 
     char Unknown00[4];
     Struct_10BDC290* Unknown04;
-};
-
-class Class_10971570
-{
-public:
-    void FUN_10971570(int A, bool* B);
 };
 
 class Object_10BDC830
@@ -157,16 +133,10 @@ public:
     virtual Class_10971570* Virtual98();
 };
 
-class Class_10c7d570
-{
-public:
-    void* FUN_10c7d570();
-};
-
 struct Struct_10BDC830
 {
     char Unknown00[8];
-    Class_10c7d570* Unknown08;
+    Class_10C7D570* Unknown08;
 };
 
 class Class_10E94C58
@@ -195,16 +165,6 @@ public:
     virtual void FUN_10bdc830(int A);
 
     Struct_10BDC830* Unknown04;
-};
-
-class FArchive
-{
-public:
-    virtual ~FArchive();
-    virtual void Serialize(void* V, int Length);
-
-    char Unknown04[8];
-    int Unknown0C;
 };
 
 FArchive& FUN_10b052a0(FArchive& Ar, void* V);

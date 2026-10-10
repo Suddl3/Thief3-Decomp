@@ -1,16 +1,8 @@
 // Game/Unsorted_10BAEA60.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_109081E0.h"
 
 extern "C" int __cdecl sprintf(char* Out, const char* Format, ...);
-
-class Class_109081E0
-{
-public:
-    Class_109081E0(const char* In);
-    ~Class_109081E0();
-
-    char* Unknown00;
-};
 
 struct Struct_10BAEAB0
 {

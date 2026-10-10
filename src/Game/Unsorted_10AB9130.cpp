@@ -1,38 +1,11 @@
 // Game/Unsorted_10AB9130.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10E5BBE0
-{
-public:
-    Class_10E5BBE0();
-
-    virtual ~Class_10E5BBE0();
-
-    char Unknown04[0xD4];
-};
-
-struct Struct_10ABA050
-{
-    Struct_10ABA050()
-    {
-        Unknown00 = 0;
-        Unknown04 = 0;
-        Unknown08 = 0;
-        Unknown0C = 0;
-        Unknown14 = 0;
-        Unknown18 = 0;
-        Unknown1C = 0;
-    }
-
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    int Unknown10;
-    int Unknown14;
-    int Unknown18;
-    char Unknown1C;
-};
+#include "Game/Class_10AB90F0.h"
+#include "Game/Class_10AB9D40.h"
+#include "Game/Class_10AB9FF0.h"
+#include "Game/Class_10E5BBE0.h"
+#include "Game/Class_10E67938.h"
+#include "Game/Struct_10ABA050.h"
 
 class Class_10E6F3F4 : public Class_10E5BBE0
 {
@@ -90,52 +63,12 @@ extern char DAT_10e6b668[];
 
 int FUN_10af3690(const char* A, const char* B);
 
-class Class_10AB9D40
-{
-public:
-    void FUN_10ab9a60(int A, Struct_10AB9D40* B, int C);
-    void FUN_10ab9d40(int A, Struct_10AB9D40* B, int C);
-};
-
 class Object_10AB9FF0
 {
 public:
     virtual void Virtual0();
     virtual void Virtual1();
     virtual void Virtual2();
-};
-
-class Class_10AB9FF0
-{
-public:
-    Class_10AB9FF0* FUN_10ab9ff0(Class_10AB9FF0* Other);
-
-    Object_10AB9FF0* Unknown00;
-};
-
-class Class_10E67938
-{
-public:
-    Class_10E67938();
-    virtual void FUN_10ab9d90(int Type, int A, int B, int C);
-    virtual ~Class_10E67938();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual bool FUN_10a4c4d0(int A);
-    virtual void Virtual7();
-};
-
-class Class_10AB90F0
-{
-public:
-    Class_10AB90F0() : Unknown00(0), Unknown04(0), Unknown08(0) {}
-    ~Class_10AB90F0();
-
-    int Unknown00;
-    int Unknown04;
-    void* Unknown08;
 };
 
 class Class_10E6F30C : public Class_10E67938

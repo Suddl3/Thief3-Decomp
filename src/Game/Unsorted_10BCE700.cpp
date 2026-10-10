@@ -1,5 +1,9 @@
 // Game/Unsorted_10BCE700.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10AA6080.h"
+#include "Game/Class_10AA82D0.h"
+#include "Game/Class_10BB8360.h"
+#include "Game/Class_10C7D570.h"
 
 void __stdcall FUN_109e3c90(int p1);
 
@@ -95,31 +99,13 @@ public:
     FVector Location;
 };
 
-class Class_10c7d570
-{
-public:
-    void* FUN_10c7d570();
-};
-
 struct Struct_10E91CB8_Unknown04
 {
     char Unknown00[8];
-    Class_10c7d570* Unknown08;
-};
-
-class Class_10AA6080
-{
-public:
-    bool FUN_10aa6080(FVector* Position, float Distance);
+    Class_10C7D570* Unknown08;
 };
 
 int FUN_10aa6040();
-
-class Class_10AA82D0
-{
-public:
-    int FUN_10aa82d0();
-};
 
 class Class_10BF7F90 : public Class_10AA82D0
 {
@@ -148,13 +134,6 @@ public:
     void FUN_10bce210();
 
     Struct_10E91CB8_Unknown04* Unknown04;
-};
-
-class Class_10BB8360
-{
-public:
-    void FUN_10bb8360(int A, float B, int C);
-    int FUN_10bbac00(int A);
 };
 
 struct Struct_10AA3520

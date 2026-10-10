@@ -1,5 +1,6 @@
 // Game/Unsorted_10BC0F50.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10BC1BA0.h"
 
 void FUN_10af42f0(int A, const char* B);
 
@@ -14,16 +15,8 @@ struct Struct_10BC1BA0
     char Unknown54[0xC];
 };
 
-class Class_10bc1ba0
-{
-public:
-    void FUN_10bc1ba0(int A);
-
-    Struct_10BC1BA0* Unknown00;
-};
-
-// FUNCTION: 0x10BC1BA0 ?FUN_10bc1ba0@Class_10bc1ba0@@QAEXH@Z
-void Class_10bc1ba0::FUN_10bc1ba0(int A)
+// FUNCTION: 0x10BC1BA0 ?FUN_10bc1ba0@Class_10BC1BA0@@QAEXH@Z
+void Class_10BC1BA0::FUN_10bc1ba0(int A)
 {
     FUN_10af42f0(A, "Begin PathLinks");
     FUN_10bc1b00(Unknown00->Unknown30, A);

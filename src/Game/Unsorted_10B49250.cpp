@@ -1,5 +1,7 @@
 // Game/Unsorted_10B49250.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10AA82D0.h"
+#include "Game/Class_10B396A0.h"
 
 class AGarrett
 {
@@ -12,20 +14,6 @@ public:
     unsigned CanDoItemSearch : 1;
     unsigned CanUseItems : 1;
     unsigned bUpdatePhysHeight : 1;
-};
-
-class Class_10B396A0
-{
-public:
-    void FUN_10b396a0();
-};
-
-class Class_10AA82D0
-{
-public:
-    virtual void Virtual0();
-
-    int FUN_10aa82d0();
 };
 
 class Class_10E7E6A0 : public Class_10AA82D0

@@ -1,30 +1,8 @@
 // Game/Unsorted_10A87400_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-// A list of nodes (Count, Head, Tail) and a Class_10A873D0 at +0xC.
-
-class Class_10A873D0
-{
-public:
-    ~Class_10A873D0()
-    {
-        FUN_10a86490(0x40);
-        ::operator delete(Unknown14);
-        Unknown04 = 0;
-        Unknown0C = 0;
-        Unknown14 = 0;
-        Unknown00 = 0;
-    }
-
-    void FUN_10a86490(int A);
-
-    int Unknown00;
-    int Unknown04;
-    char Unknown08[4];
-    int Unknown0C;
-    char Unknown10[4];
-    void* Unknown14;
-};
+#include "Game/Class_10905A90_Member.h"
+#include "Game/Class_10A873D0.h"
+#include "Game/Class_10A87F40.h"
 
 struct Class_10A87C00_Node
 {
@@ -43,29 +21,7 @@ public:
     Class_10A873D0 Unknown0C;
 };
 
-class Class_10905A90_Member
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2(int A, int B, int C, int D, int E);
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5(void* Block);
-};
-
 Class_10905A90_Member* FUN_10905aa0();
-
-class Class_10A87F40
-{
-public:
-    void FUN_10a87cd0(int Count);
-    void FUN_10a87f40();
-
-    int Unknown00;
-    int Unknown04;
-    void* Unknown08;
-};
 
 // FUNCTION: 0x10A87C00 ??1Class_10A87C00@@QAE@XZ
 Class_10A87C00::~Class_10A87C00()

@@ -1,11 +1,8 @@
 // Game/Unsorted_10B19550_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-struct Struct_10AA3520_Member
-{
-    char Unknown00[0x47c];
-    int Unknown47C;
-};
+#include "Game/Class_10E79488.h"
+#include "Game/Class_10F3A3D8.h"
+#include "Game/Struct_10AA3520_Member.h"
 
 struct Struct_10AA3520
 {
@@ -17,42 +14,10 @@ extern Struct_10AA3520* DAT_10f35dec;
 
 extern void* GWindowManager[];
 
-class Class_10E79488
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8();
-    virtual void Virtual9();
-    virtual void Virtual10();
-    virtual void Virtual11();
-    virtual void Virtual12();
-    virtual void Virtual13();
-    virtual void Virtual14();
-    virtual void Virtual15();
-    virtual void Virtual16();
-    virtual void Virtual17();
-    virtual void Virtual18();
-    virtual bool FUN_10b1bcc0(int param);
-};
-
 class Class_10ABDC10
 {
 public:
     void FUN_10abdc10(int A, int B, int C, int D, int E);
-};
-
-class Class_10F3A3D8
-{
-public:
-    char Unknown00[0x150];
-    Class_10ABDC10* Unknown150;
 };
 
 extern Class_10F3A3D8* DAT_10f3a3d8;

@@ -1,5 +1,8 @@
 // Game/Unsorted_10BA1330_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10BA1330.h"
+#include "Game/Class_10BA1330_Field18.h"
+#include "Game/Class_10BA1330_Node.h"
 
 // Ion Storm's placement new and its delete (0x10905C10; the delete folded into ::operator delete).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
@@ -7,38 +10,6 @@ void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
 unsigned int FUN_1090e9b0(const void* Data, int Length);
-
-// A chained hash table's entry: 12 bytes, allocated per insert.
-class Class_10BA1330_Node
-{
-public:
-    int Key;
-    int Value;
-    Class_10BA1330_Node* Next;
-};
-
-// The table's key hasher: slot 0 gives the bytes FUN_1090e9b0 hashes.
-class Class_10BA1330_Field18
-{
-public:
-    virtual void Virtual0(const int& Key, const void** Data, int* Length);
-};
-
-// The hash table of 0x1090F080 (Class_1090F080) over another key type.
-class Class_10BA1330
-{
-public:
-    unsigned int FUN_10ba1330(const int& Key, const int& Value);
-    void FUN_10ba13f0(int Size);
-
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    bool Unknown10;
-    Class_10BA1330_Node** Unknown14;
-    Class_10BA1330_Field18 Unknown18;
-};
 
 // FUNCTION: 0x10BA1330 ?FUN_10ba1330@Class_10BA1330@@QAEIABH0@Z
 unsigned int Class_10BA1330::FUN_10ba1330(const int& Key, const int& Value)

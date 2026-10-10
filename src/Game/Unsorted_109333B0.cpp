@@ -1,7 +1,7 @@
 // Game/Unsorted_109333B0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include <vector>
+#include "Game/Class_10933420.h"
 
 class Class_10E49DFC {
 public:
@@ -15,15 +15,6 @@ public:
 
     char Unknown04[0x3C];
     std::vector<void*> Unknown40;
-};
-
-class Class_10933420
-{
-public:
-    std::vector<void*>::iterator FUN_10933420(std::vector<void*>::iterator Where);
-
-    char Unknown00[4];
-    std::vector<void*> Unknown04;
 };
 
 // FUNCTION: 0x109333B0 ?FUN_109333b0@Class_10E49DFC@@UAEHXZ

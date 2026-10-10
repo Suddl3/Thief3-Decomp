@@ -1,24 +1,7 @@
 // Game/T3GameRegistration.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "T3Game/T3GameClasses.h"
-
-// Ion Storm's memory manager (0x10905AA0): the registration allocates inside a
-// scope of it (slots 8 and 9).
-class Class_10905A90_Member
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8(int A, int B);
-    virtual void Virtual9();
-};
+#include "Game/Class_10905A90_Member.h"
 
 Class_10905A90_Member* FUN_10905aa0();
 

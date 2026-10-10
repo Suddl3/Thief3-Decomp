@@ -1,7 +1,8 @@
 // Game/Unsorted_10B1DC70.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
+#include "Game/Class_10A18FA0.h"
+#include "Game/Struct_10B1DCA0.h"
 
 // The vector flattened onto the ground plane and normalized.
 inline FVector FlatNormal(const FVector& V)
@@ -26,27 +27,11 @@ FVector FUN_10b1e010(Struct_10B1E010_Param* A);
 
 struct Struct_10B1DCA0_Param;
 
-struct Struct_10B1DCA0
-{
-    Struct_10B1DCA0() {}
-
-    FVector Unknown00;
-    FVector Unknown0C;
-    FVector Unknown18;
-    FVector Unknown24;
-};
-
 Struct_10B1DCA0 FUN_10b1dca0(Struct_10B1DCA0_Param* p1);
 
 void FUN_109672e0(const Struct_10B1DCA0& Coords, const FVector& V, FVector& Out);
 
 FVector FUN_10b1f490(Struct_10B1DCA0_Param* A);
-
-class Class_10A18FA0
-{
-public:
-    bool FUN_10a18fa0(int Index);
-};
 
 class Object_10A18FC0 : public Class_10A18FA0
 {

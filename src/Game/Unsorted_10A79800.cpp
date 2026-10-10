@@ -1,36 +1,11 @@
 // Game/Unsorted_10A79800.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10E77578
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5(int A, int B, int C, int D, int E);
-};
+#include "Game/Class_10E6BD68_Unknown0C.h"
+#include "Game/Class_10E6BD68_Unknown18.h"
+#include "Game/Class_10E6BD90.h"
+#include "Game/Class_10E77578.h"
 
 Class_10E77578* FUN_10b0b2b0();
-
-class Class_10E6BD90
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8();
-    virtual void Virtual9();
-    virtual void Virtual10();
-    virtual void Virtual11();
-    virtual void FUN_10a7a390(int A, int B);
-};
 
 class Class_10BFBD70
 {
@@ -57,18 +32,6 @@ public:
     int Unknown00;
     int Unknown04;
     int* Unknown08;
-};
-
-class Class_10E6BD68_Unknown0C
-{
-public:
-    virtual ~Class_10E6BD68_Unknown0C();
-};
-
-class Class_10E6BD68_Unknown18
-{
-public:
-    virtual ~Class_10E6BD68_Unknown18();
 };
 
 class Class_10E6BD68

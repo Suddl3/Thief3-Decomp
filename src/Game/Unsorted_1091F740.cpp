@@ -1,5 +1,7 @@
 // Game/Unsorted_1091F740.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_1091F9B0.h"
+#include "Game/Class_109203B0.h"
 
 extern "C" long _time32(long* Timer);
 
@@ -12,32 +14,6 @@ extern int DAT_10f3195c;
 extern bool DAT_10f31964;
 
 extern int DAT_10f2c8c4;
-
-class Class_109203B0
-{
-public:
-    Class_109203B0* FUN_109203b0();
-
-    long Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    int Unknown10;
-    int Unknown14;
-    int Unknown18;
-    int Unknown1C;
-    char Unknown20[0xC];
-    int Unknown2C;
-    int Unknown30;
-    int Unknown34;
-    int Unknown38;
-    int Unknown3C;
-    int Unknown40;
-    int Unknown44;
-    int Unknown48;
-    bool Unknown4C;
-    bool Unknown4D;
-};
 
 class Class_10948260
 {
@@ -54,19 +30,6 @@ public:
     int Unknown0C;
     char Unknown10[0x44];
     Class_10948260* Unknown54;
-};
-
-class Class_1091F9B0
-{
-public:
-    void FUN_1091f9b0();
-
-    char Unknown00[0xC];
-    Class_1091F9B0_Unknown0C* Unknown0C;
-    char Unknown10[0x20];
-    int Unknown30;
-    char Unknown34[4];
-    Class_10948260** Unknown38;
 };
 
 // FUNCTION: 0x1091F9B0 ?FUN_1091f9b0@Class_1091F9B0@@QAEXXZ

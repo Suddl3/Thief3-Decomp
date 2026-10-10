@@ -1,128 +1,29 @@
 // Game/Unsorted_10BB0B10.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10bb7570
-{
-public:
-    char Unknown00[4];
-    int Unknown04;
-
-    bool FUN_10bb7570();
-};
-
-class Class_10bb7580
-{
-public:
-    char Unknown00[4];
-    int Unknown04;
-
-    bool FUN_10bb7580();
-};
-
-class Class_10bb7590
-{
-public:
-    char Unknown00[4];
-    int Unknown04;
-
-    bool FUN_10bb7590();
-};
-
-class Class_10bb75e0
-{
-public:
-    char Unknown00[4];
-    int Unknown04;
-
-    bool FUN_10bb75e0();
-};
-
-class Class_10BB75F0 {
-public:
-    char Unknown00[4];
-    int Unknown04;
-
-    bool FUN_10bb75f0();
-};
-
-class Class_10BB7600 {
-public:
-    char Unknown00[4];
-    int Unknown04;
-
-    bool FUN_10bb7600();
-};
-
-class Class_10BB7610 {
-public:
-    char Unknown00[4];
-    int Unknown04;
-
-    bool FUN_10bb7610();
-};
-
-class Class_10BB7670 {
-public:
-    char Unknown00[4];
-    int Unknown04;
-
-    bool FUN_10bb7670();
-};
-
-class Class_10BB48E0
-{
-public:
-    ~Class_10BB48E0();
-};
+#include "Game/Class_109081E0.h"
+#include "Game/Class_10BB48E0.h"
+#include "Game/Class_10BB7570.h"
+#include "Game/Class_10BB7580.h"
+#include "Game/Class_10BB7590.h"
+#include "Game/Class_10BB75E0.h"
+#include "Game/Class_10BB75F0.h"
+#include "Game/Class_10BB7600.h"
+#include "Game/Class_10BB7610.h"
+#include "Game/Class_10BB7670.h"
+#include "Game/Class_10E8C728.h"
+#include "Game/Class_10E8C764.h"
+#include "Game/Struct_10BB0B90.h"
+#include "Game/Struct_10BB0B90_Unknown118.h"
 
 extern Class_10BB48E0* DAT_10ff6694;
 
 void FUN_10bb3470(int p1, int p2);
 
-class Class_10E8C728
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void FUN_10bb35c0(int p1, int p2, int p3);
-};
-
 void FUN_10bb35e0(int p1, int p2);
-
-class Class_10E8C764
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void FUN_10bb3710(int p1, int p2, int p3);
-};
-
-class Struct_10BB0B90_Unknown118
-{
-public:
-    char Unknown00[8];
-    int Unknown08;
-};
-
-class Struct_10BB0B90
-{
-public:
-    char Unknown00[0x118];
-    Struct_10BB0B90_Unknown118* Unknown118;
-};
 
 Struct_10BB0B90* FUN_10bb0b90(int A);
 
 extern const char DAT_10e8dc40[];
-
-class Class_109081E0
-{
-public:
-    Class_109081E0(const char* In);
-    ~Class_109081E0();
-
-    char* Unknown00;
-};
 
 extern const char DAT_10e8dc98[];
 
@@ -907,26 +808,26 @@ void FUN_10bb5630()
     }
 }
 
-// FUNCTION: 0x10BB7570 ?FUN_10bb7570@Class_10bb7570@@QAE_NXZ
-bool Class_10bb7570::FUN_10bb7570()
+// FUNCTION: 0x10BB7570 ?FUN_10bb7570@Class_10BB7570@@QAE_NXZ
+bool Class_10BB7570::FUN_10bb7570()
 {
     return Unknown04 <= 1;
 }
 
-// FUNCTION: 0x10BB7580 ?FUN_10bb7580@Class_10bb7580@@QAE_NXZ
-bool Class_10bb7580::FUN_10bb7580()
+// FUNCTION: 0x10BB7580 ?FUN_10bb7580@Class_10BB7580@@QAE_NXZ
+bool Class_10BB7580::FUN_10bb7580()
 {
     return Unknown04 <= 2;
 }
 
-// FUNCTION: 0x10BB7590 ?FUN_10bb7590@Class_10bb7590@@QAE_NXZ
-bool Class_10bb7590::FUN_10bb7590()
+// FUNCTION: 0x10BB7590 ?FUN_10bb7590@Class_10BB7590@@QAE_NXZ
+bool Class_10BB7590::FUN_10bb7590()
 {
     return Unknown04 == 3;
 }
 
-// FUNCTION: 0x10BB75E0 ?FUN_10bb75e0@Class_10bb75e0@@QAE_NXZ
-bool Class_10bb75e0::FUN_10bb75e0()
+// FUNCTION: 0x10BB75E0 ?FUN_10bb75e0@Class_10BB75E0@@QAE_NXZ
+bool Class_10BB75E0::FUN_10bb75e0()
 {
     return Unknown04 != 3;
 }

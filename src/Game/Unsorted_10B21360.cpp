@@ -1,11 +1,8 @@
 // Game/Unsorted_10B21360.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10B255F0
-{
-public:
-    void* FUN_10b24f70();
-};
+#include "Game/Class_10B21360.h"
+#include "Game/Class_10B255F0.h"
+#include "Game/Info_10B21360.h"
 
 Class_10B255F0* FUN_10b25cd0();
 
@@ -135,22 +132,6 @@ public:
     virtual void Virtual120();
     virtual void Virtual121();
     virtual void* FUN_10b21380();
-};
-
-struct Info_10B21360
-{
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-};
-
-class Class_10B21360
-{
-public:
-    void FUN_10b21360(const Info_10B21360* In);
-
-    char Unknown00[0x468];
-    Info_10B21360 Unknown468;
 };
 
 // FUNCTION: 0x10B21360 ?FUN_10b21360@Class_10B21360@@QAEXPBUInfo_10B21360@@@Z

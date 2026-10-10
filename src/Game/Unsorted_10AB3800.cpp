@@ -53,7 +53,7 @@ public:
     Class_10E6E6E0* FUN_10ab4000();
 };
 
-class Class_10ab3ea0
+class Class_10AB3EA0
 {
 public:
     void FUN_10ab3ea0();
@@ -91,7 +91,7 @@ public:
     Class_10E6EA88();
 };
 
-class Class_10ab4f10
+class Class_10AB4F10
 {
 public:
     void FUN_10ab4f10();
@@ -129,8 +129,8 @@ Class_10E6E6E0* Class_10E6E6E0::FUN_10ab4000()
     return this;
 }
 
-// FUNCTION: 0x10AB4D40 ?FUN_10ab4d40@@YAXPAVClass_10ab3ea0@@@Z
-void FUN_10ab4d40(Class_10ab3ea0* p1)
+// FUNCTION: 0x10AB4D40 ?FUN_10ab4d40@@YAXPAVClass_10AB3EA0@@@Z
+void FUN_10ab4d40(Class_10AB3EA0* p1)
 {
     if (p1)
         p1->FUN_10ab3ea0();
@@ -156,8 +156,8 @@ Class_10E6EA88::Class_10E6EA88()
 {
 }
 
-// FUNCTION: 0x10AB53E0 ?FUN_10ab53e0@@YAXPAVClass_10ab4f10@@@Z
-void FUN_10ab53e0(Class_10ab4f10* p1)
+// FUNCTION: 0x10AB53E0 ?FUN_10ab53e0@@YAXPAVClass_10AB4F10@@@Z
+void FUN_10ab53e0(Class_10AB4F10* p1)
 {
     if (p1)
         p1->FUN_10ab4f10();

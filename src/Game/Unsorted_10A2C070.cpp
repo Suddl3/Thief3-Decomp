@@ -1,7 +1,9 @@
 // Game/Unsorted_10A2C070.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
+#include "Game/Class_10A2C2F0.h"
+#include "Game/Class_10A2C350.h"
+#include "Game/Struct_10A2C500.h"
 
 FVector FUN_10a2c0a0(const FVector* A, const FVector* B);
 
@@ -9,29 +11,6 @@ struct Struct_10A2C350
 {
     double Unknown00;
     char Unknown08[0xA8];
-};
-
-class Class_10A2C350
-{
-public:
-    void FUN_10a2c350(int A, int B);
-
-    int Unknown00;
-    int Unknown04;
-    Struct_10A2C350* Unknown08;
-};
-
-struct Struct_10A2C500
-{
-    char Unknown00[0x7D];
-    char Unknown7D;
-};
-
-class Class_10A2C2F0
-{
-public:
-    int FUN_10a2c2f0(void* A, void* B);
-    bool FUN_10a2c500(void* A, void* B);
 };
 
 extern int DAT_10f39f30;

@@ -1,22 +1,16 @@
 // Game/Unsorted_10924A00_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10925410.h"
+#include "Game/Class_10925440.h"
+#include "Game/Class_10925470.h"
+#include "Game/Class_109254A0.h"
+#include "Game/Class_109254D0.h"
 
 struct Entry_10925410
 {
     char Unknown00[0xC];
     int Unknown0C;
     char Unknown10[0x34];
-};
-
-class Class_10925410
-{
-public:
-    int FUN_10925410(int Index);
-
-    char Unknown00[0xDC];
-    int UnknownDC;
-    char UnknownE0[4];
-    Entry_10925410* UnknownE4;
 };
 
 struct Entry_10925440
@@ -26,33 +20,11 @@ struct Entry_10925440
     char Unknown38[0xC];
 };
 
-class Class_10925440
-{
-public:
-    int FUN_10925440(int Index);
-
-    char Unknown00[0xDC];
-    int UnknownDC;
-    char UnknownE0[4];
-    Entry_10925440* UnknownE4;
-};
-
 struct Entry_10925470
 {
     char Unknown00[0x34];
     int Unknown34;
     char Unknown38[0xC];
-};
-
-class Class_10925470
-{
-public:
-    void FUN_10925470(int Index, int Value);
-
-    char Unknown00[0xDC];
-    int UnknownDC;
-    char UnknownE0[4];
-    Entry_10925470* UnknownE4;
 };
 
 struct Entry_109254A0
@@ -62,33 +34,11 @@ struct Entry_109254A0
     char Unknown3C[8];
 };
 
-class Class_109254A0
-{
-public:
-    void FUN_109254a0(int Index, int Value);
-
-    char Unknown00[0xDC];
-    int UnknownDC;
-    char UnknownE0[4];
-    Entry_109254A0* UnknownE4;
-};
-
 struct Entry_109254D0
 {
     char Unknown00[0x3C];
     char Unknown3C;
     char Unknown3D[7];
-};
-
-class Class_109254D0
-{
-public:
-    void FUN_109254d0(int Index, char Value);
-
-    char Unknown00[0xDC];
-    int Unknown0DC;
-    int Unknown0E0;
-    Entry_109254D0* Unknown0E4;
 };
 
 class Class_10BFBD70

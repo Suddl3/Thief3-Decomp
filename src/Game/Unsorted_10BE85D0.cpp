@@ -1,5 +1,6 @@
 // Game/Unsorted_10BE85D0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10C88610.h"
 
 class Class_10E960D8
 {
@@ -13,12 +14,6 @@ class FVector
 {
 public:
     float X, Y, Z;
-};
-
-class Class_10C88610
-{
-public:
-    void* FUN_10c88610();
 };
 
 class Class_10AAF570;

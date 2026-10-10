@@ -1,13 +1,7 @@
 // Game/UAI_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
-
-class Class_10E5B578
-{
-public:
-    virtual void FUN_10bbe970() = 0;
-};
+#include "Game/Class_10E5B578.h"
 
 class USubsystem : public UObject, public Class_10E5B578
 {

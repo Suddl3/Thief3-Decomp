@@ -18,7 +18,7 @@ public:
     int* Unknown08;
 };
 
-class Class_10925d80
+class Class_10925D80
 {
 public:
     void FUN_10925d80(int Item);
@@ -27,7 +27,7 @@ public:
     Class_10BFBD70 Unknown8C;
 };
 
-class Class_10925db0
+class Class_10925DB0
 {
 public:
     void FUN_10925db0(int Item);
@@ -36,14 +36,14 @@ public:
     Class_10BFBD70 Unknown98;
 };
 
-// FUNCTION: 0x10925D80 ?FUN_10925d80@Class_10925d80@@QAEXH@Z
-void Class_10925d80::FUN_10925d80(int Item)
+// FUNCTION: 0x10925D80 ?FUN_10925d80@Class_10925D80@@QAEXH@Z
+void Class_10925D80::FUN_10925d80(int Item)
 {
     Unknown8C.Append(Item);
 }
 
-// FUNCTION: 0x10925DB0 ?FUN_10925db0@Class_10925db0@@QAEXH@Z
-void Class_10925db0::FUN_10925db0(int Item)
+// FUNCTION: 0x10925DB0 ?FUN_10925db0@Class_10925DB0@@QAEXH@Z
+void Class_10925DB0::FUN_10925db0(int Item)
 {
     Unknown98.Append(Item);
 }

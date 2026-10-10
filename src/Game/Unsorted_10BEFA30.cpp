@@ -1,70 +1,20 @@
 // Game/Unsorted_10BEFA30.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
-
-struct Struct_10BEFA30
-{
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-};
-
-class Class_10BEFA30
-{
-public:
-    Class_10BEFA30* FUN_10befa30(const Class_10BEFA30& A);
-
-    char Unknown00[4];
-    Struct_10BEFA30 Unknown04;
-    int Unknown10;
-    int Unknown14;
-    unsigned char Unknown18;
-    int Unknown1C;
-    int Unknown20;
-};
+#include "Game/Class_10AAF570.h"
+#include "Game/Class_10BAC050.h"
+#include "Game/Class_10BC4160.h"
+#include "Game/Class_10BEFA30.h"
+#include "Game/Class_10BEFA80.h"
+#include "Game/Class_10BF0360.h"
+#include "Game/Class_10BF03B0.h"
+#include "Game/Class_10BF03E0.h"
+#include "Game/Class_10BF0A30.h"
+#include "Game/Struct_10BEFA30.h"
 
 float appFrand();
 
 double FUN_10c00480();
-
-class Class_10BEFA80
-{
-public:
-    void FUN_10befa80();
-
-    char Unknown00[0x224];
-    float Unknown224;
-};
-
-class Class_10BF0360
-{
-public:
-    float FUN_10bef550();
-    void FUN_10bf0360(FVector A, float B);
-
-    char Unknown00[0x114];
-    int Unknown114;
-    int Unknown118;
-    float Unknown11C;
-    char Unknown120[0xB0];
-    FVector Unknown1D0;
-    float Unknown1DC;
-};
-
-class Class_10BC4160
-{
-public:
-    char Unknown00[8];
-
-    int FUN_10bc4160();
-};
-
-class Class_10AAF570
-{
-public:
-    int FUN_10aaf570();
-};
 
 class Class_10BF03B0_Member
 {
@@ -85,44 +35,11 @@ public:
     virtual void Virtual13(int A, void* B, int C, int D);
 };
 
-class Class_10BF03B0 : public Class_10BC4160
-{
-public:
-    void FUN_10bf03b0();
-
-    char Unknown08[0x78];
-    char Unknown80;
-};
-
-class Class_10BF03E0 : public Class_10BC4160
-{
-public:
-    void FUN_10bf03e0();
-
-    char Unknown08[0x78];
-    char Unknown80;
-};
-
-class Class_10BAC050
-{
-public:
-    int FUN_10baac90(int A);
-};
-
 class Object_10BF0A30
 {
 public:
     char Unknown00[8];
     Class_10BAC050* Unknown08;
-};
-
-class Class_10BF0A30
-{
-public:
-    bool FUN_10bf0a30(int A);
-
-    char Unknown00[4];
-    Object_10BF0A30* Unknown04;
 };
 
 // FUNCTION: 0x10BEFA30 ?FUN_10befa30@Class_10BEFA30@@QAEPAV1@ABV1@@Z

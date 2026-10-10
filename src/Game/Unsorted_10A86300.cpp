@@ -1,12 +1,37 @@
 // Game/Unsorted_10A86300.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_109081E0.h"
+#include "Game/Class_10A8D160.h"
+#include "Game/Class_10A8D310.h"
+#include "Game/Class_10A8D320.h"
+#include "Game/Class_10E6CA40.h"
+#include "Game/Class_10E6CBEC.h"
+#include "Game/Class_10E6CBF8.h"
+#include "Game/Class_10E6CC70.h"
+#include "Game/Class_10E6CC98.h"
+#include "Game/Class_10E6CCB0.h"
+#include "Game/Class_10E6CD40.h"
+#include "Game/Class_10E6CDC4.h"
+#include "Game/Class_10E6CDD0.h"
+#include "Game/Class_10E6CDDC.h"
+#include "Game/Class_10E6CDE8.h"
+#include "Game/Class_10E6CDF4.h"
+#include "Game/Class_10E6CE94.h"
+#include "Game/Class_10E6CEC4.h"
+#include "Game/Class_10E6CED0.h"
+#include "Game/Class_10E6CEDC.h"
+#include "Game/Class_10E6CEE8.h"
+#include "Game/Class_10E6CEF4.h"
+#include "Game/Class_10E6CF00.h"
+#include "Game/Class_10E6CF0C.h"
+#include "Game/Class_10E6CF18.h"
+#include "Game/Class_10E6CF24.h"
+#include "Game/Class_10E6CF30.h"
+#include "Game/Class_10E6CF3C.h"
+#include "Game/Class_10E6DC88.h"
+#include "Game/FieldClass_A89060.h"
 
 void FUN_10a18f40();
-
-class FieldClass_A89060 {
-public:
-    void FUN_10aae870();
-};
 
 class Class_10E6C484 {
 public:
@@ -19,37 +44,6 @@ extern int DAT_10f3a1f4;
 
 extern const char DAT_10e6c100[];
 
-class Class_109081E0
-{
-public:
-    Class_109081E0(const char* In);
-    ~Class_109081E0();
-
-    char* Unknown00;
-};
-
-class Class_10A8D160
-{
-public:
-    Class_109081E0 FUN_10a8d160();
-};
-
-class Class_10A8D310
-{
-public:
-    char Unknown00[0x8];
-    int Field8;
-    void FUN_10a8d310();
-};
-
-class Class_10A8D320
-{
-public:
-    char Unknown00[0x8];
-    int Field8;
-    void FUN_10a8d320();
-};
-
 extern void* DAT_10e50610;
 
 class Class_10A905A0
@@ -57,12 +51,6 @@ class Class_10A905A0
 public:
     void* Field0;
     void FUN_10a905a0();
-};
-
-class Class_10E6DC88
-{
-public:
-    void FUN_10aaf500();
 };
 
 class Class_10A90DC0 : public Class_10E6DC88
@@ -73,28 +61,11 @@ public:
 
 extern void* DAT_10e6ca40[];
 
-class Class_10E6CA40 {
-public:
-    Class_10E6CA40* FUN_10a90dd0();
-};
-
 void FUN_10d4e100();
 
 extern void* DAT_10e6cbec;
 
-class Class_10E6CBEC {
-public:
-    void* Field00;
-    Class_10E6CBEC* FUN_10a92670();
-};
-
 extern void* DAT_10e6cbf8;
-
-class Class_10E6CBF8 {
-public:
-    void* Field00;
-    Class_10E6CBF8* FUN_10a928c0();
-};
 
 extern void* DAT_10e6cc64;
 
@@ -106,19 +77,7 @@ public:
 
 extern void* DAT_10e6cc70;
 
-class Class_10E6CC70 {
-public:
-    void* Field00;
-    Class_10E6CC70* FUN_10a93370();
-};
-
 extern void* DAT_10e6cc98[];
-
-class Class_10E6CC98 {
-public:
-    void* Field00;
-    Class_10E6CC98* FUN_10a93500();
-};
 
 extern void* DAT_10e6cca4[];
 
@@ -130,12 +89,6 @@ public:
 
 extern void* DAT_10e6ccb0[];
 
-class Class_10E6CCB0 {
-public:
-    void* Field00;
-    Class_10E6CCB0* FUN_10a93db0();
-};
-
 extern void* DAT_10e6ccd8[];
 
 class Class_10E6CCD8 {
@@ -146,47 +99,15 @@ public:
 
 extern void* DAT_10e6cd40[];
 
-class Class_10E6CD40 {
-public:
-    Class_10E6CD40* FUN_10a943d0();
-};
-
 extern void* DAT_10e6cdc4[];
-
-class Class_10E6CDC4 {
-public:
-    Class_10E6CDC4* FUN_10a94b00();
-};
 
 extern void* DAT_10e6cdd0[];
 
-class Class_10E6CDD0 {
-public:
-    Class_10E6CDD0* FUN_10a94b70();
-};
-
 extern void* DAT_10e6cddc[];
-
-class Class_10E6CDDC {
-public:
-    Class_10E6CDDC* FUN_10a94c00();
-};
 
 extern void* DAT_10e6cde8[];
 
-class Class_10E6CDE8 {
-public:
-    void* Field00;
-    Class_10E6CDE8* FUN_10a94c80();
-};
-
 extern void* DAT_10e6cdf4[];
-
-class Class_10E6CDF4 {
-public:
-    void* Field00;
-    Class_10E6CDF4* FUN_10a94c90();
-};
 
 extern void* DAT_10e6ce1c[];
 
@@ -206,91 +127,27 @@ public:
 
 extern void* DAT_10e6ce94[];
 
-class Class_10E6CE94 {
-public:
-    Class_10E6CE94* FUN_10a95b60();
-};
-
 extern void* DAT_10e6cec4[];
-
-class Class_10E6CEC4 {
-public:
-    Class_10E6CEC4* FUN_10a95d90();
-};
 
 extern void* DAT_10e6ced0[];
 
-class Class_10E6CED0 {
-public:
-    Class_10E6CED0* FUN_10a95db0();
-};
-
 extern void* DAT_10e6cedc[];
-
-class Class_10E6CEDC {
-public:
-    Class_10E6CEDC* FUN_10a95dd0();
-};
 
 extern void* DAT_10e6cee8[];
 
-class Class_10E6CEE8 {
-public:
-    void* Field00;
-    Class_10E6CEE8* FUN_10a95df0();
-};
-
 extern void* DAT_10e6cef4[];
-
-class Class_10E6CEF4 {
-public:
-    void* Field00;
-    Class_10E6CEF4* FUN_10a95e10();
-};
 
 extern void* DAT_10e6cf00[];
 
-class Class_10E6CF00 {
-public:
-    void* Field00;
-    Class_10E6CF00* FUN_10a95e30();
-};
-
 extern void* DAT_10e6cf0c[];
-
-class Class_10E6CF0C {
-public:
-    void* Field00;
-    Class_10E6CF0C* FUN_10a95e50();
-};
 
 extern void* DAT_10e6cf18[];
 
-class Class_10E6CF18 {
-public:
-    Class_10E6CF18* FUN_10a95e70();
-};
-
 extern void* DAT_10e6cf24[];
-
-class Class_10E6CF24 {
-public:
-    Class_10E6CF24* FUN_10a95e90();
-};
 
 extern void* DAT_10e6cf30[];
 
-class Class_10E6CF30 {
-public:
-    Class_10E6CF30* FUN_10a95eb0();
-};
-
 extern void* DAT_10e6cf3c[];
-
-class Class_10E6CF3C {
-public:
-    Class_10E6CF3C* FUN_10a95ed0();
-};
 
 // FUNCTION: 0x10A88F70 ?FUN_10a88f70@@YAXXZ
 void FUN_10a88f70()

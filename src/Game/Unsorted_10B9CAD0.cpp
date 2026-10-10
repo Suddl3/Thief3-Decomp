@@ -1,5 +1,15 @@
 // Game/Unsorted_10B9CAD0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10B9CB80.h"
+#include "Game/Class_10B9CBE0.h"
+#include "Game/Class_10B9CCD0.h"
+#include "Game/Class_10B9CCF0.h"
+#include "Game/Class_10B9CD10.h"
+#include "Game/Class_10B9CD30.h"
+#include "Game/Class_10B9CDA0.h"
+#include "Game/Class_10B9CDC0.h"
+#include "Game/Class_10BA9FD0.h"
+#include "Game/Class_10BB7580.h"
 
 class Object_10B9CBE0
 {
@@ -39,17 +49,6 @@ public:
     virtual void Virtual32();
 };
 
-class Class_10B9CBE0
-{
-public:
-    void FUN_10b9cbe0();
-
-    char Unknown00[0x10];
-    int Unknown10;
-    char Unknown14[4];
-    Object_10B9CBE0** Unknown18;
-};
-
 class Class_10B9CCD0_Member
 {
 public:
@@ -77,17 +76,6 @@ public:
     virtual void Virtual21();
     virtual void Virtual22();
     virtual void Virtual23(int A, int B, int C, int D, int E);
-};
-
-class Class_10B9CCD0
-{
-public:
-    void FUN_10b9ccd0(int A, int B, int C, int D, int E);
-
-    char Unknown00[0x10];
-    int Unknown10;
-    char Unknown14[4];
-    Class_10B9CCD0_Member** Unknown18;
 };
 
 class Class_10B9CCF0_Member
@@ -118,17 +106,6 @@ public:
     virtual void Virtual22();
     virtual void Virtual23();
     virtual void Virtual24(int A, int B);
-};
-
-class Class_10B9CCF0
-{
-public:
-    void FUN_10b9ccf0(int A, int B);
-
-    char Unknown00[0x10];
-    int Unknown10;
-    char Unknown14[4];
-    Class_10B9CCF0_Member** Unknown18;
 };
 
 class Class_10B9CD10_Member
@@ -162,17 +139,6 @@ public:
     virtual void Virtual25();
     virtual void Virtual26();
     virtual void Virtual27(int A);
-};
-
-class Class_10B9CD10
-{
-public:
-    void FUN_10b9cd10(int A);
-
-    char Unknown00[0x10];
-    int Unknown10;
-    char Unknown14[4];
-    Class_10B9CD10_Member** Unknown18;
 };
 
 class Class_10B9CD30_Member
@@ -214,17 +180,6 @@ public:
     virtual void Virtual33();
 };
 
-class Class_10B9CD30
-{
-public:
-    void FUN_10b9cd30();
-
-    char Unknown00[0x10];
-    int Unknown10;
-    char Unknown14[4];
-    Class_10B9CD30_Member** Unknown18;
-};
-
 class Class_10B9CDA0_Member
 {
 public:
@@ -260,17 +215,6 @@ public:
     virtual void Virtual29(int A);
 };
 
-class Class_10B9CDA0
-{
-public:
-    void FUN_10b9cda0(int A);
-
-    char Unknown00[0x10];
-    int Unknown10;
-    char Unknown14[4];
-    Class_10B9CDA0_Member** Unknown18;
-};
-
 class Class_10B9CDC0_Member
 {
 public:
@@ -303,17 +247,6 @@ public:
     virtual void Virtual26();
     virtual void Virtual27();
     virtual void Virtual28(int A, int B, int C, int D);
-};
-
-class Class_10B9CDC0
-{
-public:
-    void FUN_10b9cdc0(int A, int B, int C, int D);
-
-    char Unknown00[0x10];
-    int Unknown10;
-    char Unknown14[4];
-    Class_10B9CDC0_Member** Unknown18;
 };
 
 class Object_10B9CAC0
@@ -370,7 +303,7 @@ public:
 
 class Class_10BA9FD0;
 
-class Class_10bb7580;
+class Class_10BB7580;
 
 class Class_10B9CB80_Member;
 
@@ -381,18 +314,6 @@ struct Struct_10B98C50
 };
 
 bool FUN_10b98c50(Struct_10B98C50* A);
-
-class Class_10BA9FD0
-{
-public:
-    void* FUN_10ba9fd0();
-};
-
-class Class_10bb7580
-{
-public:
-    bool FUN_10bb7580();
-};
 
 class Class_10B9CB80_Member
 {
@@ -413,22 +334,10 @@ public:
     virtual bool Virtual13(int A);
 };
 
-class Class_10B9CB80
-{
-public:
-    bool FUN_10b9cb80(int A);
-
-    char Unknown00[0xC];
-    Struct_10B98C50* Unknown0C;
-    int Unknown10;
-    char Unknown14[4];
-    Class_10B9CB80_Member** Unknown18;
-};
-
 // FUNCTION: 0x10B9CB80 ?FUN_10b9cb80@Class_10B9CB80@@QAE_NH@Z
 bool Class_10B9CB80::FUN_10b9cb80(int A)
 {
-    if (((Class_10bb7580*)Unknown0C->Unknown08->FUN_10ba9fd0())->FUN_10bb7580() && Unknown10 != 0)
+    if (((Class_10BB7580*)Unknown0C->Unknown08->FUN_10ba9fd0())->FUN_10bb7580() && Unknown10 != 0)
     {
         Class_10B9CB80_Member* Last = Unknown18[Unknown10 - 1];
         if (Last && Last->Virtual13(A))

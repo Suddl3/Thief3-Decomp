@@ -1,19 +1,10 @@
 // Game/Unsorted_10A6F2B0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include <vector>
-
-class Class_10E6BA88
-{
-public:
-    Class_10E6BA88();
-
-    virtual ~Class_10E6BA88();
-
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-};
+#include "Game/Class_10AB0400.h"
+#include "Game/Class_10E6BA88.h"
+#include "Game/Struct_10AA3520.h"
+#include "Game/Struct_10AB0400.h"
 
 class Class_10A6FED0_Member
 {
@@ -47,34 +38,9 @@ public:
     virtual void Virtual1(Struct_10A6FED0* A, int B, int C);
 };
 
-struct Struct_10AA3520
-{
-    char Unknown00[0x1C];
-    Class_10A6FED0_Owner* Unknown1C;
-};
-
 extern Struct_10AA3520* DAT_10f35dec;
 
 extern int DAT_10e6b594;
-
-struct Struct_10AB0400
-{
-};
-
-class Class_10AB0400
-{
-public:
-    void FUN_10a6e990();
-    void FUN_10ab0400()
-    {
-        FUN_10a6e990();
-        delete Unknown04;
-        Unknown04 = 0;
-    }
-
-    char Unknown00[4];
-    Struct_10AB0400* Unknown04;
-};
 
 class Class_10E6B594
 {

@@ -1,10 +1,10 @@
 // Game/Unsorted_10A52470_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-struct Struct_10A52470
-{
-    char Unknown00[0x40];
-};
+#include "Game/Class_10A52950.h"
+#include "Game/Class_10A529B0.h"
+#include "Game/Class_10A52A40.h"
+#include "Game/Class_10E67FD0.h"
+#include "Game/Struct_10A52470.h"
 
 class Class_10E5B2C0
 {
@@ -47,17 +47,6 @@ public:
 
 class Object_10A52980;
 
-class Class_10A52950
-{
-public:
-    void FUN_10a52950();
-    void FUN_10a52980();
-
-    char Unknown00[0x100];
-    Object_10A52950* Unknown100;
-    Object_10A52980* Unknown104;
-};
-
 class Object_10A52950;
 
 class Object_10A52980
@@ -74,15 +63,6 @@ public:
     virtual ~Class_10A529B0_Member();
     virtual void Virtual1();
     virtual void Virtual2();
-};
-
-class Class_10A529B0
-{
-public:
-    void FUN_10a529b0();
-
-    char Unknown00[0x108];
-    Class_10A529B0_Member* Unknown108;
 };
 
 class Class_10A52A40_Member
@@ -161,15 +141,6 @@ public:
     virtual void Virtual70(int A);
 };
 
-class Class_10A52A40
-{
-public:
-    void FUN_10a52a40(Class_10A52A40_Member* P);
-
-    char Unknown00[0xC4];
-    Class_10A52A40_Member* Unknown0C4;
-};
-
 typedef float FLOAT;
 
 typedef int INT;
@@ -200,27 +171,6 @@ public:
     FVector Min;
     FVector Max;
     BYTE IsValid;
-};
-
-class Class_10E67FD0
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8();
-    virtual void Virtual9();
-    virtual void Virtual10();
-    virtual void Virtual11();
-    virtual void Virtual12();
-    virtual void Virtual13();
-    virtual void Virtual14();
-    virtual FBox FUN_10a52b80();
 };
 
 // FUNCTION: 0x10A52470 ?FUN_10a52470@Class_10E5B2C0@@UAEXPBUStruct_10A52470@@@Z

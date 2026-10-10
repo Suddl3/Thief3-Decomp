@@ -1,5 +1,6 @@
 // Game/Unsorted_109396A0_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_1093AF30.h"
 
 // Ion Storm's placement new and its delete (0x10905C10; the delete folded into ::operator delete).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
@@ -22,21 +23,6 @@ public:
     Class_109081E0 Key;
     int Value;
     Class_1093AF30_Node* Next;
-};
-
-// The hash table of 0x10A85940 (Class_10A85940) over a string key.
-class Class_1093AF30
-{
-public:
-    unsigned int FUN_1093af30(const Class_109081E0& Key, const int& Value);
-    void FUN_1093b040(int Size);
-
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    bool Unknown10;
-    Class_1093AF30_Node** Unknown14;
 };
 
 // FUNCTION: 0x1093B040 ?FUN_1093b040@Class_1093AF30@@QAEXH@Z

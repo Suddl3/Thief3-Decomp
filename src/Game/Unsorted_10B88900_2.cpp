@@ -1,7 +1,10 @@
 // Game/Unsorted_10B88900_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
+#include "Game/Class_10B8AB60.h"
+#include "Game/Class_10B8AC90.h"
+#include "Game/Class_10D9B090.h"
+#include "Game/Struct_10B8AC90.h"
 
 class Class_109B5830
 {
@@ -9,43 +12,9 @@ public:
     FName FUN_109b5830(int Index);
 };
 
-class Class_10B8AB60
-{
-public:
-    FName FUN_10b8ab60();
-
-    char Unknown00[0x30];
-    int Unknown30;
-    char Unknown34[4];
-    Class_109B5830* Unknown38;
-};
-
 class Class_10B8AC90;
 
-class Class_10D9B090
-{
-public:
-    void FUN_10d9b090();
-};
-
 Class_10D9B090* __stdcall FUN_10d9dcb0(Class_10B8AC90* Obj, int A);
-
-struct Struct_10B8AC90
-{
-    char Unknown00[0x28];
-    unsigned int Unknown28Bits0To4 : 5;
-    unsigned int Unknown28Bits5To10 : 6;
-    unsigned int Unknown28Bits11To16 : 6;
-};
-
-class Class_10B8AC90
-{
-public:
-    void FUN_10b8ac90(int A);
-
-    char Unknown00[0x10];
-    Struct_10B8AC90* Unknown10;
-};
 
 extern void* DAT_10e89540[];
 

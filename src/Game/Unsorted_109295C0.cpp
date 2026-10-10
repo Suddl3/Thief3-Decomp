@@ -1,16 +1,9 @@
 // Game/Unsorted_109295C0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10905A90_Member
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5(void* A);
-};
+#include "Game/Class_10905A90_Member.h"
+#include "Game/Class_10E49B48.h"
+#include "Game/Struct_10929600.h"
+#include "Game/Struct_10929D60.h"
 
 Class_10905A90_Member* FUN_10905aa0();
 
@@ -27,37 +20,12 @@ typedef unsigned short WORD;
 
 typedef unsigned long DWORD;
 
-struct Struct_10929D60
-{
-    float Unknown00;
-    float Unknown04;
-    float Unknown08;
-};
-
-class Class_10E49B48
-{
-public:
-    virtual void Virtual0(int A, int B, int C, DWORD* Out);
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void FUN_10929d60(int A, int B, int C, Struct_10929D60* Out);
-};
-
 class Object_10929600
 {
 public:
     virtual int __stdcall Virtual0();
     virtual int __stdcall Virtual1();
     virtual int __stdcall Virtual2();
-};
-
-struct Struct_10929600
-{
-    char Unknown00[0x30];
-    Object_10929600* Unknown30;
 };
 
 extern int DAT_10f31ad4;

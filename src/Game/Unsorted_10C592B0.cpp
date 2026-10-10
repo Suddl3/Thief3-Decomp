@@ -1,34 +1,9 @@
 // Game/Unsorted_10C592B0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10C5A1C0
-{
-public:
-    void FUN_10c592b0(int A);
-    void FUN_10c5a1c0();
-
-    int Unknown00;
-    int Unknown04;
-    char Unknown08[4];
-    int Unknown0C;
-    char Unknown10[4];
-    void* Unknown14;
-};
-
-class Class_10C591A0
-{
-public:
-    bool FUN_10c591a0(int* A);
-};
-
-class Class_10E9C7DC
-{
-public:
-    virtual void FUN_10c59ec0(int A);
-
-    char Unknown04[0xD4];
-    Class_10C591A0 Unknown0D8;
-};
+#include "Game/Class_10C591A0.h"
+#include "Game/Class_10C592B0.h"
+#include "Game/Class_10C5A1C0.h"
+#include "Game/Class_10E9C7DC.h"
 
 // A chained hash table's entry, allocated per insert.
 class Class_10C592B0_Node
@@ -40,20 +15,6 @@ public:
     int Unknown0C;
     int Unknown10;
     Class_10C592B0_Node* Next;
-};
-
-class Class_10C592B0
-{
-public:
-    void FUN_10c57620(int Size);
-    void FUN_10c592b0(int Size);
-
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    bool Unknown10;
-    Class_10C592B0_Node** Unknown14;
 };
 
 // FUNCTION: 0x10C592B0 ?FUN_10c592b0@Class_10C592B0@@QAEXH@Z

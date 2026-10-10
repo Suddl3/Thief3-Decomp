@@ -1,22 +1,8 @@
 // Game/Unsorted_10A8F9A0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-// Ion Storm's memory manager (0x10905AA0): the allocation happens inside a
-// scope of it (slots 8 and 9).
-class Class_10905A90_Member
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8(int A, int B);
-    virtual void Virtual9();
-};
+#include "Game/Class_10905A90_Member.h"
+#include "Game/Class_10C08940.h"
+#include "Game/Class_10E5D788.h"
 
 Class_10905A90_Member* FUN_10905aa0();
 
@@ -54,12 +40,6 @@ public:
     }
 };
 
-class Class_10E5D788
-{
-public:
-    virtual Class_10E6C908* FUN_10a8f9f0();
-};
-
 struct Struct_10AA3520
 {
     char Unknown00[8];
@@ -73,15 +53,6 @@ struct Struct_10A8F9A0
 };
 
 extern Struct_10AA3520* DAT_10f35dec;
-
-class Class_10C08940
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual int Virtual3(int A, int B);
-};
 
 class Class_10978090
 {

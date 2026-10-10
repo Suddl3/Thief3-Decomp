@@ -1,36 +1,7 @@
 // Game/Unsorted_10C28230.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10C282A0
-{
-public:
-    Class_10C282A0* FUN_10c282a0(int A);
-
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    int Unknown10;
-    int Unknown14;
-    int Unknown18;
-    int Unknown1C;
-    int Unknown20;
-    int Unknown24;
-    int Unknown28;
-};
-
-class Class_10E99370
-{
-public:
-    Class_10E99370(int A, int B);
-    ~Class_10E99370();
-
-    virtual void FUN_10c28260();
-
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-};
+#include "Game/Class_10C282A0.h"
+#include "Game/Class_10E99370.h"
 
 // FUNCTION: 0x10C28230 ??1Class_10E99370@@QAE@XZ
 Class_10E99370::~Class_10E99370()

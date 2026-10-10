@@ -1,12 +1,6 @@
 // Game/Unsorted_10BDB480_4.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class FArchive
-{
-public:
-    virtual ~FArchive();
-    virtual void Serialize(void* V, int Length);
-};
+#include "Game/FArchive.h"
 
 void FUN_10c11ff0(FArchive& Ar, int* P);
 

@@ -1,19 +1,8 @@
 // Game/Unsorted_10AA6050.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10E6D8F0
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual int FUN_10aa6390();
-
-    char Unknown04[0x14];
-    int Unknown18;
-};
+#include "Game/Class_10B0AED0.h"
+#include "Game/Class_10E6D8F0.h"
+#include "Game/Struct_10AA6050.h"
 
 typedef unsigned char BYTE;
 
@@ -63,20 +52,7 @@ public:
     FArray Unknown20;
 };
 
-class Class_10B0AED0
-{
-public:
-    ~Class_10B0AED0();
-
-    int RefCount;
-};
-
 extern Class_10B0AED0* DAT_10f3a248;
-
-struct Struct_10AA6050
-{
-    int Unknown00;
-};
 
 class Class_10AA6050
 {

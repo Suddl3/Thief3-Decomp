@@ -1,12 +1,18 @@
 // Game/Unsorted_10B364D0_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_109081E0.h"
+#include "Game/Class_10B396A0.h"
+#include "Game/Class_10B3A470.h"
+#include "Game/Class_10B3AC50.h"
+#include "Game/Class_10B42340.h"
+#include "Game/Class_10B42640.h"
+#include "Game/Class_10B429A0.h"
+#include "Game/Class_10B43D40.h"
+#include "Game/Class_10E7C428.h"
+#include "Game/Class_10E7E6A0.h"
+#include "Game/Class_10E80C78.h"
 
 extern void* DAT_10e7c428[];
-
-class Class_10E7C428 {
-public:
-    Class_10E7C428* FUN_10b364d0();
-};
 
 void FUN_10b476d0();
 
@@ -14,37 +20,6 @@ class Class_Field04
 {
 public:
     void FUN_10b476d0();
-};
-
-class Class_10B396A0
-{
-public:
-    void FUN_10b396a0();
-
-    char Unknown00[0xc];
-    Class_Field04* Field0c;
-};
-
-class Class_10B3A470
-{
-public:
-    Class_10B3A470* FUN_10b3a470();
-
-    char Unknown00;
-    char Unknown01;
-    float Unknown04;
-    float Unknown08;
-    char Unknown0C[0xC];
-    int Unknown18;
-    int Unknown1C;
-    int Unknown20;
-    int Unknown24;
-    int Unknown28;
-};
-
-class Class_10B3AC50 {
-public:
-    void FUN_10b3ac50(void* p1);
 };
 
 struct Static_10B3AC60
@@ -67,11 +42,6 @@ class Object_10B3ADC0 {
 public:
     char Unknown00[0x450];
     int Field450;
-};
-
-class Class_10E7E6A0 {
-public:
-    void FUN_10b3adc0(Object_10B3ADC0* param);
 };
 
 struct Info_10B3E210
@@ -128,60 +98,7 @@ struct Class_10E7FB00
 
 void FUN_10b40820();
 
-class Class_10B42340
-{
-public:
-    Class_10B42340* FUN_10b42340(int A, int B);
-
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    int Unknown10;
-    float Unknown14;
-};
-
-class Class_10B42640
-{
-public:
-    char Unknown00[0x1c];
-    int Field1C;
-
-    void FUN_10b42640();
-};
-
-// Parameter setter at field offset 0x120
-
-class Class_10B429A0 {
-public:
-    char Unknown00[0x120];
-    int Field120;
-    void FUN_10b429a0(int param);
-};
-
-class Class_10B43D40 {
-public:
-    char Unknown00[0x150];
-    void* Field150;
-    void FUN_10b43d40(void* p1);
-};
-
 extern const char DAT_10e80e74[];
-
-class Class_109081E0
-{
-public:
-    Class_109081E0(const char* In);
-    ~Class_109081E0();
-
-    char* Unknown00;
-};
-
-class Class_10E80C78
-{
-public:
-    Class_109081E0 FUN_10b43d50();
-};
 
 class Class_10E81300 : public Class_10E67FD0
 {

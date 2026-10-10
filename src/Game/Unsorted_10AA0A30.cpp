@@ -1,36 +1,10 @@
 // Game/Unsorted_10AA0A30.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10E6D330.h"
+#include "Game/Class_10F352D8.h"
 
 // Declarations first
 class Class_10F352D8_Result;
-
-class Class_10F352D8
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8();
-    virtual void Virtual9();
-    virtual void Virtual10();
-    virtual void Virtual11();
-    virtual void Virtual12();
-    virtual void Virtual13();
-    virtual void Virtual14();
-    virtual void Virtual15();
-    virtual void Virtual16();
-    virtual void Virtual17();
-    virtual void Virtual18();
-    virtual void Virtual19();
-    virtual void Virtual20();
-    virtual void Virtual21();
-    virtual Class_10F352D8_Result* Virtual22(int Key);
-};
 
 class Class_10F352D8_Result
 {
@@ -57,14 +31,6 @@ public:
     virtual void Virtual3();
     virtual void Virtual4();
     virtual int Virtual5(int Index);
-};
-
-class Class_10E6D330
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual int FUN_10aa0a30(int A, int B, Class_10AA0A30* C);
 };
 
 extern Class_10F352D8* DAT_10f352d8;

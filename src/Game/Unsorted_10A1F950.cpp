@@ -1,99 +1,14 @@
 // Game/Unsorted_10A1F950.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include <vector>
-
-class Class_10A1F9C0
-{
-public:
-    int FUN_10a1f9c0();
-
-    char Unknown00[4];
-    int Unknown04;
-    char Unknown08[4];
-    int* Unknown0C;
-};
-
-class Class_10A1F9D0
-{
-public:
-    int FUN_10a1f8a0(int A);
-    int FUN_10a1f9d0(int A);
-
-    char Unknown00[4];
-    int Unknown04;
-    char Unknown08[4];
-    int* Unknown0C;
-};
-
-struct Struct_10A1FA70
-{
-    int Unknown00;
-    int Unknown04;
-};
-
-class Class_10A1FA70
-{
-public:
-    void FUN_10a1fa70(int Index, int* A, int* B);
-
-    char Unknown00[0x70];
-    std::vector<Struct_10A1FA70> Unknown70;
-};
-
-class Class_10A1FB50
-{
-public:
-    int FUN_10a1fad0(int A);
-    int FUN_10a1fb50(int A);
-
-    char Unknown00[4];
-    int Unknown04;
-    char Unknown08[4];
-    int* Unknown0C;
-};
+#include "Game/Class_10A1F9C0.h"
+#include "Game/Class_10A1F9D0.h"
+#include "Game/Class_10A1FA70.h"
+#include "Game/Class_10A1FB50.h"
+#include "Game/Class_10E6561C.h"
+#include "Game/Struct_10A1FA70.h"
 
 extern void* DAT_10e6561c[];
-
-class Class_10E6561C
-{
-public:
-    Class_10E6561C* FUN_10a22e20();
-
-    void** Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    int Unknown10;
-    int Unknown14;
-    int Unknown18;
-    int Unknown1C;
-    int Unknown20;
-    int Unknown24;
-    int Unknown28;
-    int Unknown2C;
-    int Unknown30;
-    int Unknown34;
-    int Unknown38;
-    int Unknown3C;
-    int Unknown40;
-    int Unknown44;
-    int Unknown48;
-    int Unknown4C;
-    int Unknown50;
-    int Unknown54;
-    int Unknown58;
-    int Unknown5C;
-    int Unknown60;
-    int Unknown64;
-    int Unknown68;
-    int Unknown6C;
-    int Unknown70;
-    int Unknown74;
-    int Unknown78;
-    int Unknown7C;
-    int Unknown80;
-};
 
 // FUNCTION: 0x10A1F9C0 ?FUN_10a1f9c0@Class_10A1F9C0@@QAEHXZ
 int Class_10A1F9C0::FUN_10a1f9c0()

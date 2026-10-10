@@ -1,7 +1,8 @@
 // Game/Unsorted_10A62CF0_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
+#include "Game/Class_109081E0.h"
+#include "Game/Class_10E6B078.h"
 
 struct FColor
 {
@@ -11,27 +12,6 @@ struct FColor
     BYTE G;
     BYTE R;
     BYTE A;
-};
-
-class Class_109081E0
-{
-public:
-    Class_109081E0(const char* In);
-    ~Class_109081E0();
-
-    char* Unknown00;
-};
-
-class Class_10E6B078
-{
-public:
-    Class_10E6B078();
-
-    virtual ~Class_10E6B078();
-
-    char Unknown04[0xE4];
-    int Unknown0E8;
-    char Unknown0EC[0xCC];
 };
 
 class Class_10E6A9F8 : public Class_10E6B078

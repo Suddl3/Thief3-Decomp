@@ -1,92 +1,20 @@
 // Game/Unsorted_10BFBC90.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10BFBC90.h"
+#include "Game/Class_10BFC190.h"
+#include "Game/Class_10BFD210.h"
+#include "Game/Class_10BFF240.h"
+#include "Game/Class_10C16580.h"
+#include "Game/Class_10E97AD4.h"
+#include "Game/Class_10E97ADC.h"
 
 void FUN_10bfbd30(int* A);
 
-class Class_10BFC190
-{
-public:
-    void FUN_10bfc190();
-
-    char Unknown00[8];
-    int Unknown08;
-    char Unknown0C[8];
-    int Unknown14;
-    int Unknown18;
-    int Unknown1C;
-};
-
-class Class_10BFD210
-{
-public:
-    void FUN_10bfd210();
-    void FUN_10bfc680(float Value);
-};
-
-class Class_10C16580
-{
-public:
-    Class_10C16580(int A);
-
-    char Unknown00[8];
-};
-
-class Class_10E97AD4
-{
-public:
-    Class_10E97AD4(int A, int B);
-
-    virtual void Virtual0();
-
-    int Unknown04;
-    Class_10C16580 Unknown08;
-    bool Unknown10;
-};
-
-class Class_10BFF240
-{
-public:
-    char Unknown00[0x10];
-    unsigned char Unknown10;
-
-    void FUN_10bff240(unsigned char param);
-};
-
 extern void* DAT_10e97adc[];
-
-class Class_10E97ADC
-{
-public:
-    Class_10E97ADC* FUN_10bff720();
-
-    void** Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    int Unknown10;
-    int Unknown14;
-    int Unknown18;
-    int Unknown1C;
-    int Unknown20;
-    int Unknown24;
-    int Unknown28;
-    int Unknown2C;
-    int Unknown30;
-    int Unknown34;
-};
 
 double FUN_1095af80();
 
 double FUN_10c00480();
-
-class Class_10BFBC90
-{
-public:
-    void FUN_10bfbc90();
-
-    char Unknown00[0x4C];
-    float Unknown4C;
-};
 
 // FUNCTION: 0x10BFBC90 ?FUN_10bfbc90@Class_10BFBC90@@QAEXXZ
 void Class_10BFBC90::FUN_10bfbc90()

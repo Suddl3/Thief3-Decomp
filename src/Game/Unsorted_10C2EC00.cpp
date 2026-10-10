@@ -1,19 +1,10 @@
 // Game/Unsorted_10C2EC00.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
-
-class Class_109BC840
-{
-public:
-    void FUN_109bc160(int A, FVector* Out);
-};
-
-class Class_10BAA580
-{
-public:
-    Class_109BC840* FUN_10baa580();
-};
+#include "Game/Class_109BC840.h"
+#include "Game/Class_10BAA580.h"
+#include "Game/Class_10C2EC00.h"
+#include "Game/FArchive.h"
 
 class Class_10E9AC80
 {
@@ -41,35 +32,7 @@ public:
     Class_10BAA580* Unknown08;
 };
 
-class FArchive
-{
-public:
-    virtual ~FArchive();
-    virtual void Serialize(void* V, int Length);
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7(void* V);
-};
-
 void FUN_10c11ff0(FArchive& Ar, int* Value);
-
-class Class_10C2EC00
-{
-public:
-    void FUN_10c2ec00(FArchive& Ar);
-
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    int Unknown10;
-    bool Unknown14;
-    char Unknown15[0x7];
-    int Unknown1C;
-};
 
 // FUNCTION: 0x10C2EC00 ?FUN_10c2ec00@Class_10C2EC00@@QAEXAAVFArchive@@@Z
 void Class_10C2EC00::FUN_10c2ec00(FArchive& Ar)

@@ -1,34 +1,20 @@
 // Game/Unsorted_109412F0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
-
-struct Elem_10943710
-{
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    int Unknown10;
-    int Unknown14;
-    int Unknown18;
-    int Unknown1C;
-    int Unknown20;
-};
-
-struct Struct_109437D0
-{
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-};
-
-struct Struct_10943800
-{
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-};
+#include "Game/Class_10948250.h"
+#include "Game/Class_1094AEC0.h"
+#include "Game/Class_1094D950.h"
+#include "Game/Class_1094DA60.h"
+#include "Game/Class_1094DFA0.h"
+#include "Game/Class_1094EF90.h"
+#include "Game/Class_10E4AA80.h"
+#include "Game/Elem_10943710.h"
+#include "Game/Struct_109437D0.h"
+#include "Game/Struct_10943800.h"
+#include "Game/Struct_10948220.h"
+#include "Game/Struct_1094D980.h"
+#include "Game/Struct_1094E0F0.h"
+#include "Game/Struct_1094E120.h"
 
 class Class_10E4A668
 {
@@ -69,13 +55,6 @@ public:
     Struct_10943800 Unknown188;
 };
 
-struct Struct_10948220
-{
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-};
-
 class Class_10948220
 {
 public:
@@ -85,107 +64,12 @@ public:
     Struct_10948220 UnknownCC;
 };
 
-class Class_10948250 {
-public:
-    char Unknown00[0xd8];
-    float FieldD8;
-
-    float FUN_10948250();
-};
-
-class Class_1094AEC0 {
-public:
-    int Field00;
-    unsigned char Field04;
-
-    void FUN_1094aec0();
-};
-
-class Class_10E4AA80 {
-public:
-    char Unknown00[0x78];
-    float Field78;
-
-    float FUN_1094c700();
-};
-
-class Class_1094D950
-{
-public:
-    Class_1094D950* FUN_1094d950();
-
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    bool Unknown10;
-    bool Unknown11;
-    bool Unknown12;
-    int Unknown14;
-    int Unknown18;
-    int Unknown1C;
-};
-
-class Struct_1094D980
-{
-public:
-    void SetValues(int Param1, int Param2, int Param3);
-
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    char Unknown10;
-    char Unknown11;
-};
-
-class Class_1094DA60
-{
-public:
-    char Unknown00[0x150];
-    unsigned char Field150;
-
-    unsigned char FUN_1094da60();
-};
-
-class Class_1094DFA0
-{
-public:
-    char Unknown00[0x110];
-    int Field110;
-
-    int FUN_1094dfa0();
-};
-
-struct Struct_1094E0F0
-{
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-};
-
-struct Struct_1094E120
-{
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-};
-
 struct Elem_1094EF90
 {
     int Unknown00;
     char Unknown04[0x1C];
     int Unknown20;
     char Unknown24[4];
-};
-
-class Class_1094EF90
-{
-public:
-    int FUN_1094ef90(int Index);
-
-    char Unknown00[0x108];
-    Elem_1094EF90* Unknown108;
 };
 
 class Class_10E4AB88

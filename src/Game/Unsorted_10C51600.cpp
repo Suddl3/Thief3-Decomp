@@ -1,16 +1,10 @@
 // Game/Unsorted_10C51600.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
+#include "Game/Class_10E9BE7C.h"
+#include "Game/Class_10E9BEA0.h"
 
 extern void* DAT_10e9bea0;
-
-class Class_10E9BEA0
-{
-public:
-    void* Unknown00;
-    void FUN_10c531f0();
-};
 
 struct Struct_10C516B0
 {
@@ -24,12 +18,6 @@ public:
 
     char Unknown00[4];
     Struct_10C516B0* Unknown04;
-};
-
-class Class_10E9BE7C
-{
-public:
-    int FUN_10c4eb60(const FVector* Point);
 };
 
 Class_10E9BE7C* FUN_10c51550();

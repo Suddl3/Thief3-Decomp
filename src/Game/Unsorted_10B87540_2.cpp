@@ -1,13 +1,14 @@
 // Game/Unsorted_10B87540_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
-
-class Class_10B8C7B0
-{
-public:
-    void FUN_10b8c7b0();
-};
+#include "Game/Class_10B87950.h"
+#include "Game/Class_10B87970.h"
+#include "Game/Class_10B87990.h"
+#include "Game/Class_10B87EA0.h"
+#include "Game/Class_10B87EC0.h"
+#include "Game/Class_10B8C7B0.h"
+#include "Game/Class_10B8CFF0.h"
+#include "Game/Class_10E896A8.h"
 
 class Class_10E893B0
 {
@@ -39,28 +40,10 @@ public:
     bool Unknown19;
 };
 
-class Class_10E896A8
-{
-public:
-    bool FUN_10b87900();
-
-    char Unknown00[0x78];
-    Class_10B87900_Member* Unknown78;
-};
-
 class Class_10B8D800
 {
 public:
     bool FUN_10b8d800(int A, int B, int C, int D);
-};
-
-class Class_10B87950
-{
-public:
-    bool FUN_10b87950(int A, int B, int C, int D);
-
-    char Unknown00[0x78];
-    Class_10B8D800* Unknown78;
 };
 
 class Class_10B8C9F0
@@ -69,28 +52,10 @@ public:
     bool FUN_10b8c9f0(int A, int B, int C);
 };
 
-class Class_10B87970
-{
-public:
-    bool FUN_10b87970(int A, int B, int C);
-
-    char Unknown00[0x78];
-    Class_10B8C9F0* Unknown78;
-};
-
 class Class_10B8CB20
 {
 public:
     bool FUN_10b8cb20(int p1, int p2, int p3, int p4);
-};
-
-class Class_10B87990
-{
-public:
-    bool FUN_10b87990(int p1, int p2, int p3, int p4);
-
-    char Unknown00[0x78];
-    Class_10B8CB20* Unknown78;
 };
 
 class Class_10B8D030
@@ -125,38 +90,11 @@ public:
     Class_10B8D030* Unknown78;
 };
 
-class Class_10B8CFF0
-{
-public:
-    void FUN_10b8cff0();
-
-    char Unknown00[0x19];
-    bool Unknown19;
-};
-
-class Class_10B87EA0
-{
-public:
-    void FUN_10b87ea0();
-
-    char Unknown00[0x78];
-    Class_10B8CFF0* Unknown78;
-};
-
 class Class_10B87EC0_Member
 {
 public:
     char Unknown00[0xC];
     int Unknown0C;
-};
-
-class Class_10B87EC0
-{
-public:
-    bool FUN_10b87ec0();
-
-    char Unknown00[0x78];
-    Class_10B87EC0_Member* Unknown78;
 };
 
 // FUNCTION: 0x10B876C0 ?FUN_10b876c0@Class_10E893B0@@UAEXXZ

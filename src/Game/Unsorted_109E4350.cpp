@@ -1,43 +1,14 @@
 // Game/Unsorted_109E4350.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
-
-class Class_109E4350
-{
-public:
-    FVector FUN_109e4350(const FVector* In, float Param);
-
-    char Unknown00[0xCC];
-    float Unknown0CC;
-    float Unknown0D0;
-    char Unknown0D4[0x10C];
-    float Unknown1E0;
-};
-
-class Class_10925410
-{
-public:
-    int FUN_10925410(int A);
-};
-
-class Class_10924E80 : public Class_10925410
-{
-};
+#include "Game/Class_1091E3E0.h"
+#include "Game/Class_1091E3F0.h"
+#include "Game/Class_10924E80.h"
+#include "Game/Class_10925410.h"
+#include "Game/Class_109E4350.h"
+#include "Game/Class_109E4430.h"
 
 extern Class_10924E80* DAT_10f2c734;
-
-class Class_1091E3E0
-{
-public:
-    void* FUN_1091e3e0();
-};
-
-class Class_1091E3F0
-{
-public:
-    void* FUN_1091e3f0();
-};
 
 class Class_10963C40
 {
@@ -49,15 +20,6 @@ public:
 };
 
 extern "C" void __stdcall FUN_10d67f9a(Class_10963C40* Out, void* A, void* B);
-
-class Class_109E4430
-{
-public:
-    Class_10963C40 FUN_109e4430();
-
-    char Unknown00[0x200];
-    int Unknown200;
-};
 
 // FUNCTION: 0x109E4350 ?FUN_109e4350@Class_109E4350@@QAE?AVFVector@@PBV2@M@Z
 FVector Class_109E4350::FUN_109e4350(const FVector* In, float Param)

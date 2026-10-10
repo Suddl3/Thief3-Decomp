@@ -1,7 +1,8 @@
 // Game/Unsorted_1091E240.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
+#include "Game/Class_1091E240.h"
+#include "Game/Class_1091E290.h"
 
 struct Struct_1091E290
 {
@@ -16,25 +17,6 @@ struct Struct_1091E290
     int Unknown20;
 };
 
-class Class_1091E290
-{
-public:
-    void FUN_1091e290(const Struct_1091E290& A);
-
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    int Unknown10;
-    int Unknown14;
-    int Unknown18;
-    int Unknown1C;
-    int Unknown20;
-    int Unknown24;
-    int Unknown28;
-    int Unknown2C;
-};
-
 // Nine floats, built from the nine values it is given.
 class Struct_1091E240
 {
@@ -45,19 +27,6 @@ public:
     float M00, M01, M02;
     float M10, M11, M12;
     float M20, M21, M22;
-};
-
-class Class_1091E240
-{
-public:
-    Struct_1091E240 FUN_1091e240();
-
-    FVector Unknown00;
-    char Unknown0C[4];
-    FVector Unknown10;
-    char Unknown1C[4];
-    FVector Unknown20;
-    char Unknown2C[4];
 };
 
 // FUNCTION: 0x1091E240 ?FUN_1091e240@Class_1091E240@@QAE?AVStruct_1091E240@@XZ

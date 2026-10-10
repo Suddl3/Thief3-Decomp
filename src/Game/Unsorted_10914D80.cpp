@@ -1,64 +1,18 @@
 // Game/Unsorted_10914D80.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10915210.h"
+#include "Game/Class_10915830.h"
+#include "Game/Class_109169E0.h"
+#include "Game/Class_10916CA0.h"
+#include "Game/Class_109242E0.h"
+#include "Game/Class_10924E80.h"
 
 class Class_1090A780;
 
-class Class_109169E0
-{
-public:
-    int FUN_109169e0(const Class_1090A780& Name);
-};
-
-class Class_10915210
-{
-public:
-    Class_109169E0* FUN_10915210(const Class_1090A780& Name);
-    int FUN_10915810(const Class_1090A780& A, const Class_1090A780& B);
-};
-
-
-class Class_10915830
-{
-public:
-    void FUN_109154f0(int A);
-    void FUN_10915830();
-
-    int Unknown00;
-    int Unknown04;
-    char Unknown08[4];
-    int Unknown0C;
-    char Unknown10[4];
-    void* Unknown14;
-};
-
-class Class_10916CA0
-{
-public:
-    void FUN_10916b80(int A);
-    void FUN_10916ca0();
-
-    int Unknown00;
-    int Unknown04;
-    char Unknown08[4];
-    int Unknown0C;
-    char Unknown10[4];
-    void* Unknown14;
-};
-
-class Class_109242E0 {
-public:
-    void FUN_109242e0(int p1);
-};
-
 extern Class_109242E0* DAT_10f319a0;
 
-class Class_10924E80
-{
-public:
-    void FUN_10924e80(int A);
-};
-
 class Class_10924100;
+
 extern Class_10924100* DAT_10f2c740;
 
 extern Class_10924E80* DAT_10f2c734;

@@ -1,28 +1,11 @@
 // Game/Unsorted_10A2DF20.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10A174E0.h"
+#include "Game/Class_10A2E400.h"
+#include "Game/Class_10A2E430.h"
+#include "Game/Class_10A2EE30.h"
 
 int FUN_10a2e900(void* p1);
-
-class Class_10A2EE30
-{
-public:
-    Class_10A2EE30* FUN_10a2ee30();
-
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    int Unknown10;
-    int Unknown14;
-};
-
-class Class_10A2E430
-{
-public:
-    bool FUN_10a2e430(unsigned Mask);
-
-    unsigned Unknown00;
-};
 
 extern void* DAT_10f39f34;
 
@@ -42,21 +25,7 @@ public:
     unsigned long Value;
 };
 
-class Class_10A174E0
-{
-public:
-    virtual int Virtual0(FName Name);
-};
-
 Class_10A174E0* FUN_10a18230();
-
-class Class_10A2E400
-{
-public:
-    void FUN_10a2e400();
-
-    int Unknown00;
-};
 
 // FUNCTION: 0x10A2E400 ?FUN_10a2e400@Class_10A2E400@@QAEXXZ
 void Class_10A2E400::FUN_10a2e400()

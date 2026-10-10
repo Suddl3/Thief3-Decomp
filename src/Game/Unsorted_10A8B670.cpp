@@ -1,5 +1,7 @@
 // Game/Unsorted_10A8B670.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10905A90_Member.h"
+#include "Game/Class_10E5D74C.h"
 
 template <class T> class TArray
 {
@@ -49,23 +51,6 @@ public:
     virtual int FUN_10a8b860();
 };
 
-// Ion Storm's memory manager (0x10905AA0): the allocation happens inside a
-// scope of it (slots 8 and 9).
-class Class_10905A90_Member
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8(int A, int B);
-    virtual void Virtual9();
-};
-
 Class_10905A90_Member* FUN_10905aa0();
 
 // Ion Storm's placement new (0x10905C10).
@@ -93,12 +78,6 @@ public:
 
     void** VTable;
     FName Unknown04;
-};
-
-class Class_10E5D74C
-{
-public:
-    virtual Class_10E6C6C4* FUN_10a8c030(int A, int B);
 };
 
 // FUNCTION: 0x10A8B860 ?FUN_10a8b860@Class_10E6C68C@@UAEHXZ

@@ -1,5 +1,7 @@
 // Game/Unsorted_10C27410.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10C27410.h"
+#include "Game/Class_10E99350.h"
 
 class Class_10C27460_Param
 {
@@ -8,31 +10,11 @@ public:
     virtual void Virtual1(void* p1, int p2);
 };
 
-class Class_10E99350
-{
-public:
-    virtual void FUN_10c27460(Class_10C27460_Param* p1);
-
-    int Unknown04;
-};
-
 class Class_10C27410_Unknown10
 {
 public:
     virtual bool Virtual0(int A);
     virtual int Virtual1();
-};
-
-class Class_10C27410
-{
-public:
-    void FUN_10c27410(int A);
-
-    char Unknown00[4];
-    int Unknown04;
-    int Unknown08;
-    char Unknown0C[4];
-    Class_10C27410_Unknown10** Unknown10;
 };
 
 // FUNCTION: 0x10C27410 ?FUN_10c27410@Class_10C27410@@QAEXH@Z

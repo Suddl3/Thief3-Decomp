@@ -1,76 +1,18 @@
 // Game/Unsorted_10C48200.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10E9BB8C
-{
-public:
-    int FUN_10c49020();
-
-    char Unknown00[0x20];
-    int* Unknown20;
-    char Unknown24[0xC];
-    int* Unknown30;
-};
-
-class Class_10C49200
-{
-public:
-    void FUN_10c48b80(int A);
-    void FUN_10c49200();
-
-    int Unknown00;
-    int Unknown04;
-    char Unknown08[4];
-    int Unknown0C;
-    char Unknown10[4];
-    void* Unknown14;
-};
-
-class Class_10C49230
-{
-public:
-    void FUN_10c48c00(int A);
-    void FUN_10c49230();
-
-    int Unknown00;
-    int Unknown04;
-    char Unknown08[4];
-    int Unknown0C;
-    char Unknown10[4];
-    void* Unknown14;
-};
+#include "Game/Class_10C49200.h"
+#include "Game/Class_10C49230.h"
+#include "Game/Class_10C4A030_Member10.h"
+#include "Game/Class_10C4A150.h"
+#include "Game/Class_10E9BB60.h"
+#include "Game/Class_10E9BB80.h"
+#include "Game/Class_10E9BB8C.h"
 
 class Object_10C4A030
 {
 public:
     virtual void Virtual0();
     virtual void Virtual1();
-};
-
-class Class_10C4A030_Member10
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-};
-
-class Class_10C4A150
-{
-public:
-    void FUN_10c49da0(int A);
-    void FUN_10c4a150();
-
-    int Unknown00;
-    int Unknown04;
-    char Unknown08[4];
-    int Unknown0C;
-    char Unknown10[4];
-    void* Unknown14;
 };
 
 class Class_10E9BC18
@@ -94,25 +36,6 @@ public:
     Class_10C4A150 Unknown60;
     char Unknown78[4];
     Object_10C4A030* Unknown7C;
-};
-
-class Class_10E9BB60 {
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual unsigned int FUN_10c48200(int p1, unsigned int p2, unsigned int p3, unsigned int p4);
-};
-
-class Class_10E9BB80
-{
-public:
-    virtual void Virtual0();
-    virtual int FUN_10c483e0(unsigned int* A, unsigned int* B);
 };
 
 // FUNCTION: 0x10C48200 ?FUN_10c48200@Class_10E9BB60@@UAEIHIII@Z

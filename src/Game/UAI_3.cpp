@@ -1,17 +1,10 @@
 // Game/UAI_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10FF667C.h"
 
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
-
-class Class_10FF667C
-{
-public:
-    Class_10FF667C();
-
-    char Unknown00[0xb4];
-};
 
 extern Class_10FF667C* DAT_10ff667c;
 

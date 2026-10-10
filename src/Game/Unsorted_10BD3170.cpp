@@ -1,62 +1,20 @@
 // Game/Unsorted_10BD3170.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
-
-class Class_10E90D70
-{
-public:
-    Class_10E90D70(int A, int B);
-
-    virtual void Virtual0();
-};
-
-class Class_10E93710 : public Class_10E90D70
-{
-public:
-    Class_10E93710(int A, int B);
-};
-
-class Class_10E93878 : public Class_10E93710
-{
-public:
-    Class_10E93878(int A, int B);
-};
-
-class Class_10905A90_Member
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2(int A, int B, int C, int D, int E);
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5(void* Block);
-};
+#include "Game/Class_10905A90_Member.h"
+#include "Game/Class_10BD3830.h"
+#include "Game/Class_10BD4120.h"
+#include "Game/Class_10C7D570.h"
+#include "Game/Class_10E90D70.h"
+#include "Game/Class_10E93710.h"
+#include "Game/Class_10E93878.h"
 
 Class_10905A90_Member* FUN_10905aa0();
-
-class Class_10BD4120
-{
-public:
-    void FUN_10a20940(int Count);
-    void FUN_10bd4120();
-
-    int Unknown00;
-    int Unknown04;
-    void* Unknown08;
-};
-
-class Class_10c7d570
-{
-public:
-    void* FUN_10c7d570();
-};
 
 struct Struct_10BD3830_Owner
 {
     char Unknown00[8];
-    Class_10c7d570* Unknown08;
+    Class_10C7D570* Unknown08;
 };
 
 struct Struct_10BD3830_Target
@@ -70,16 +28,6 @@ class Object_10BD3830
 public:
     virtual void Virtual0();
     virtual unsigned char Virtual1(FVector* A, int* B);
-};
-
-class Class_10BD3830
-{
-public:
-    int FUN_10bd2340(int A, const FVector& B, const FVector& C, int D, int E);
-    int FUN_10bd3830(int A, Object_10BD3830* Obj, int C, int D);
-
-    char Unknown00[4];
-    Struct_10BD3830_Owner* Unknown04;
 };
 
 // FUNCTION: 0x10BD3830 ?FUN_10bd3830@Class_10BD3830@@QAEHHPAVObject_10BD3830@@HH@Z

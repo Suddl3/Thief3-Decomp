@@ -1,38 +1,6 @@
 // Game/Unsorted_10A35940.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10A359D0
-{
-public:
-    int FUN_10a358b0();
-    void FUN_10a359d0();
-    void FUN_10a35a20();
-
-    char Unknown00[0xD];
-    bool Unknown0D;
-    char Unknown0E[0xE];
-    int Unknown1C;
-    int Unknown20;
-    int Unknown24;
-    char Unknown28[8];
-    int Unknown30;
-    int Unknown34;
-    int Unknown38;
-    int Unknown3C;
-    int Unknown40;
-    char Unknown44[8];
-    int Unknown4C;
-    int Unknown50;
-    int Unknown54;
-    int Unknown58;
-    int Unknown5C;
-    int Unknown60;
-    int Unknown64;
-    int Unknown68;
-    char Unknown6C[0xC];
-    int Unknown78;
-    int Unknown7C;
-};
+#include "Game/Class_10A359D0.h"
 
 // FUNCTION: 0x10A359D0 ?FUN_10a359d0@Class_10A359D0@@QAEXXZ
 void Class_10A359D0::FUN_10a359d0()

@@ -1,14 +1,7 @@
 // Game/Unsorted_10933670.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include <vector>
-
-struct Struct_10932ED0
-{
-    float Unknown00;
-    float Unknown04;
-    float Unknown08;
-};
+#include "Game/Struct_10932ED0.h"
 
 class Class_10E49EB8
 {

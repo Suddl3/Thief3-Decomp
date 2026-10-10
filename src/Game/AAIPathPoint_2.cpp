@@ -3,7 +3,7 @@
 
 class AAIPathPoint;
 
-class Class_10bc20b0
+class Class_10BC20B0
 {
 public:
     void FUN_10bc20b0(AAIPathPoint* p1, int p2);
@@ -87,7 +87,7 @@ public:
     virtual void FUN_10bbeec0(int p1);
 
     char Unknown04[0xBC];
-    Class_10bc20b0 Unknown0C0;
+    Class_10BC20B0 Unknown0C0;
 };
 
 // FUNCTION: 0x10BBEEC0 ?FUN_10bbeec0@AAIPathPoint@@UAEXH@Z

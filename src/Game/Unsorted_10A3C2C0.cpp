@@ -1,32 +1,10 @@
 // Game/Unsorted_10A3C2C0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Object_10A18FC0
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6(int A, int B);
-};
+#include "Game/Class_10A3C2E0.h"
+#include "Game/Class_10A3C640_Field18.h"
+#include "Game/Object_10A18FC0.h"
 
 Object_10A18FC0* FUN_10a18fc0();
-
-class Class_10A3C2E0
-{
-public:
-    void FUN_10a3c2e0();
-
-    char Unknown00[0x20];
-    int Unknown20;
-    int Unknown24;
-    int Unknown28;
-    char Unknown2C[4];
-    int Unknown30;
-};
 
 // Ion Storm's string (0x109081E0): a char pointer, null when default constructed.
 class Class_109081E0
@@ -53,13 +31,6 @@ public:
     Class_109081E0 Key;
     int Value;
     Class_10A3C640_Node* Next;
-};
-
-// The table's key hasher: slot 0 gives the bytes FUN_1090e9b0 hashes.
-class Class_10A3C640_Field18
-{
-public:
-    virtual void Virtual0(const Class_109081E0& Key, const void** Data, int* Length);
 };
 
 class Class_10A3C640

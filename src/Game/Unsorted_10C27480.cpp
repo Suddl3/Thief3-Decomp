@@ -1,5 +1,7 @@
 // Game/Unsorted_10C27480.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10E99340.h"
+#include "Game/Class_10E99348.h"
 
 struct Struct_10C27480
 {
@@ -18,12 +20,6 @@ struct Struct_10C27480
     int* Unknown08;
 };
 
-class Class_10E99340
-{
-public:
-    virtual bool FUN_10c27480(Struct_10C27480* List);
-};
-
 struct Struct_10C274B0
 {
     int Count;
@@ -39,12 +35,6 @@ struct Struct_10C274B0
         }
         return -1;
     }
-};
-
-class Class_10E99348
-{
-public:
-    virtual bool FUN_10c274b0(Struct_10C274B0* List);
 };
 
 // FUNCTION: 0x10C27480 ?FUN_10c27480@Class_10E99340@@UAE_NPAUStruct_10C27480@@@Z

@@ -1,7 +1,7 @@
 // Game/Unsorted_10B29840.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include <math.h>
+#include "Game/Class_10E7AE9C_Second.h"
 
 extern void* DAT_10e7b120[];
 
@@ -67,13 +67,6 @@ public:
 
     float Unknown04;
     int Unknown08;
-};
-
-class Class_10E7AE9C_Second
-{
-public:
-    virtual void SecondVirtual0();
-    virtual void SecondVirtual1(float A);
 };
 
 class Class_10E7AE9C : public Class_10B28950, public Class_10E7AE9C_Second

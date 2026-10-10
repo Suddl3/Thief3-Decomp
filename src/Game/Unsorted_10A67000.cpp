@@ -1,19 +1,11 @@
 // Game/Unsorted_10A67000.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include <new>
+#include "Game/Class_10A73EF0_Table.h"
+#include "Game/Class_10AF4B90.h"
+#include "Game/Class_10B06220.h"
 
 extern void* DAT_10e47850[];
-
-class Class_10AF4B90
-{
-public:
-    Class_10AF4B90* FUN_10af4b90(int A, void* B);
-
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-};
 
 // The item 0x10A671D0 constructs: a Class_10AF4B90 set up with (0x27, DAT_10e47850).
 class Class_10A671D0_Item : public Class_10AF4B90
@@ -81,23 +73,7 @@ public:
     virtual void* Virtual51();
 };
 
-// The global table of objects, indexed by a handle's low 16 bits.
-class Class_10A73EF0_Table
-{
-public:
-    int Unknown00;
-    int Unknown04;
-    Class_10A73EF0_Object** Unknown08;
-};
-
 extern Class_10A73EF0_Table* DAT_10f3eda4;
-
-class Class_10B06220
-{
-public:
-    int FUN_10b06220();
-    void FUN_10ad9c90(int Handle, Class_10A671D0_Item* const& Item);
-};
 
 class Class_10A671D0 : public Class_10B06220
 {

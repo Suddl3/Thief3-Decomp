@@ -1,17 +1,10 @@
 // Game/Unsorted_10B652D0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Options.h"
 
 class Options;
 
 Options* FUN_10929550();
-
-class Options
-{
-public:
-    int SetDefaults(int Name);
-    void Set(int Name, int Value);
-    void FUN_10ab6420();
-};
 
 class Class_10E84730_Unknown190
 {

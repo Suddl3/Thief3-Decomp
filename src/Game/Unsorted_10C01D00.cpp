@@ -1,25 +1,7 @@
 // Game/Unsorted_10C01D00.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-// A node of the list (Next, Prev) that the index maps a key to.
-struct Entry_10C32C30
-{
-    Entry_10C32C30* Next;
-    Entry_10C32C30* Prev;
-};
-
-class Class_10C01140
-{
-public:
-    bool FUN_10c015b0(const int& Key);
-
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    bool Unknown10;
-    void* Unknown14;
-};
+#include "Game/Class_10C01140.h"
+#include "Game/Entry_10C32C30.h"
 
 class Class_10C49740 : public Class_10C01140
 {

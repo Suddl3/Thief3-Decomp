@@ -1,11 +1,6 @@
 // Game/Unsorted_109481F0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-struct Struct_109481F0
-{
-    char Unknown00[0x28];
-    int Unknown28;
-};
+#include "Game/Struct_109481F0.h"
 
 class Class_10E4A668
 {

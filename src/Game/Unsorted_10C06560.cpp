@@ -1,5 +1,11 @@
 // Game/Unsorted_10C06560.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10963740.h"
+#include "Game/Class_10C065F0.h"
+#include "Game/Class_10C066A0.h"
+#include "Game/Class_10C06F30.h"
+#include "Game/Class_10E8C008.h"
+#include "Game/FArchive.h"
 
 class Class_10C06F80
 {
@@ -90,53 +96,6 @@ public:
     virtual void Virtual83();
     virtual void Virtual84();
     virtual int Virtual85();
-};
-
-class FArchive
-{
-public:
-    virtual ~FArchive();
-    virtual void Serialize(void* V, int Length);
-};
-
-class Class_10C065F0
-{
-public:
-    void FUN_10c065f0(FArchive& Ar);
-};
-
-class Class_10C066A0
-{
-public:
-    void FUN_10c066a0(FArchive& Ar);
-};
-
-class Class_10E8C008
-{
-public:
-    virtual void FUN_10c06750(FArchive& Ar);
-
-    char Unknown04[0xC];
-    Class_10C065F0 Unknown10;
-    char Unknown11[0xB];
-    Class_10C066A0 Unknown1C;
-};
-
-class Class_10963740
-{
-public:
-    Class_10963740* FUN_10963740(int A, int B, int C);
-
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-};
-
-class Class_10C06F30
-{
-public:
-    Class_10963740* FUN_10c06f30(Class_10963740* Out, int Index);
-    int FUN_10c06d30(int Index, int* B, int* C);
 };
 
 // FUNCTION: 0x10C06750 ?FUN_10c06750@Class_10E8C008@@UAEXAAVFArchive@@@Z

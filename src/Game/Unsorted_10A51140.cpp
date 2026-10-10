@@ -1,11 +1,7 @@
 // Game/Unsorted_10A51140.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class WindowManager
-{
-public:
-    void FUN_109e3d60(void* Window);
-};
+#include "Game/Class_10E7EDB8.h"
+#include "Game/WindowManager.h"
 
 extern WindowManager* GWindowManager;
 
@@ -18,17 +14,6 @@ public:
     void* Unknown11C;
     char Unknown120[8];
     void** Unknown128;
-};
-
-class Class_10E7EDB8
-{
-public:
-    virtual void FUN_10a51530(int A, void* B, int C, int D);
-
-    void* Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    void** Unknown10;
 };
 
 // FUNCTION: 0x10A514E0 ?FUN_10a514e0@Class_10E67BD8@@QAEXH@Z

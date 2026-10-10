@@ -1,5 +1,12 @@
 // Game/Unsorted_10BE1910.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10A2C2F0.h"
+#include "Game/Class_10BBDB40.h"
+#include "Game/Class_10BE1910.h"
+#include "Game/Class_10BFB8D0.h"
+#include "Game/Class_10C7D570.h"
+#include "Game/Class_10DBD510.h"
+#include "Game/Class_10E95780_Unknown04.h"
 
 extern const char DAT_10e5052c[];
 
@@ -17,41 +24,16 @@ public:
     unsigned long Value;
 };
 
-class Class_10c7d570
-{
-public:
-    void* FUN_10c7d570();
-};
-
-class Class_10A2C2F0
-{
-public:
-    void FUN_10a2c2a0(void* A, int* B);
-};
-
 Class_10A2C2F0* FUN_10a2c6b0();
-
-class Class_10bfb8d0
-{
-public:
-    void FUN_10bfb8d0(int p1);
-};
 
 class Class_10FF667C
 {
 public:
     char Unknown00[0x28];
-    Class_10bfb8d0* Unknown28;
+    Class_10BFB8D0* Unknown28;
 };
 
 extern Class_10FF667C* DAT_10ff667c;
-
-class Class_10E95780_Unknown04
-{
-public:
-    char Unknown00[8];
-    Class_10c7d570* Unknown08;
-};
 
 class Class_10E95780
 {
@@ -84,33 +66,10 @@ public:
 
 float appFrand();
 
-class Class_10BBDB40
-{
-public:
-    float FUN_10bbdb40();
-};
-
-class Class_10DBD510
-{
-public:
-    Class_10BBDB40* FUN_10dbd510(int Id);
-};
-
 struct Struct_10BE1910
 {
     char Unknown00[8];
     Class_10DBD510* Unknown08;
-};
-
-class Class_10BE1910
-{
-public:
-    void FUN_10be1910();
-
-    char Unknown00[4];
-    Struct_10BE1910* Unknown04;
-    char Unknown08[0x44];
-    float Unknown4C;
 };
 
 // FUNCTION: 0x10BE1910 ?FUN_10be1910@Class_10BE1910@@QAEXXZ
@@ -125,7 +84,7 @@ void Class_10BE1910::FUN_10be1910()
 void Class_10E95780::FUN_10be1970()
 {
     FName Name(DAT_10e5052c, FNAME_Add);
-    Class_10c7d570* Item = Unknown04->Unknown08;
+    Class_10C7D570* Item = Unknown04->Unknown08;
     FUN_10a2c6b0()->FUN_10a2c2a0(Item->FUN_10c7d570(), (int*)&Name);
     DAT_10ff667c->Unknown28->FUN_10bfb8d0(3);
 }

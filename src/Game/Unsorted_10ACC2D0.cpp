@@ -1,26 +1,10 @@
 // Game/Unsorted_10ACC2D0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_1098E330
-{
-public:
-    void FUN_1098e330(int A, int* B);
-};
-
-class Class_1098E3D0
-{
-public:
-    void FUN_1098e3d0(int A, void* B);
-};
+#include "Game/Class_1098E330.h"
+#include "Game/Class_1098E3D0.h"
+#include "Game/Class_10ACC2D0.h"
 
 extern float DAT_10eafbdc;
-
-class Class_10ACC2D0
-{
-public:
-    void FUN_10acc2d0(int A, float B);
-    void FUN_10acc0f0(int A, float B);
-};
 
 // FUNCTION: 0x10ACC2D0 ?FUN_10acc2d0@Class_10ACC2D0@@QAEXHM@Z
 void Class_10ACC2D0::FUN_10acc2d0(int A, float B)

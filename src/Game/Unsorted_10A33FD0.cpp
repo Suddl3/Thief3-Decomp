@@ -1,18 +1,22 @@
 // Game/Unsorted_10A33FD0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
+#include "Game/Class_10A34CD0.h"
+#include "Game/Class_10A35630.h"
+#include "Game/Class_10A35680.h"
+#include "Game/Class_10A357C0.h"
+#include "Game/Class_10A357D0.h"
+#include "Game/Class_10A357E0.h"
+#include "Game/Class_10A39EA0.h"
+#include "Game/Class_10A3A020.h"
+#include "Game/Class_10A3A9C0.h"
+#include "Game/Class_10E666E0.h"
+#include "Game/Struct_10A3A1D0.h"
 
 class Class_10A34B90
 {
 public:
     void FUN_10a34b90(int A);
-};
-
-class Class_10A34CD0
-{
-public:
-    void FUN_10a34cd0(int A);
 };
 
 class Class_10A35300
@@ -24,41 +28,6 @@ public:
     Class_10A34B90 Unknown04;
     char Unknown05[0x1B];
     Class_10A34CD0 Unknown20;
-};
-
-class Class_10A35630 {
-    char Unknown00[0x74];
-    void* Field74;
-public:
-    void FUN_10a35630(void* p1);
-};
-
-class Class_10A35680 {
-    char Unknown00[0xc];
-    unsigned char FieldC;
-public:
-    void FUN_10a35680(unsigned char p1);
-};
-
-class Class_10A357C0 {
-    char Unknown00[0xa];
-    unsigned char FieldA;
-public:
-    void FUN_10a357c0(unsigned char p1);
-};
-
-class Class_10A357D0 {
-    char Unknown00[0x9];
-    unsigned char Field9;
-public:
-    void FUN_10a357d0(unsigned char p1);
-};
-
-class Class_10A357E0 {
-public:
-    char Unknown00[0xb];
-    unsigned char Field0b;
-    void FUN_10a357e0(unsigned char param);
 };
 
 void FUN_10b10050();
@@ -81,33 +50,7 @@ extern const char DAT_10e47660[];
 
 extern void* DAT_10e666e0[];
 
-class Class_10E666E0 {
-    void* Field00;
-public:
-    void FUN_10a39e70();
-};
-
 extern void* DAT_10e66700[];
-
-class Class_10A39EA0 {
-    void* Field00;
-public:
-    void FUN_10a39ea0();
-};
-
-struct Class_10A3A020 {
-    char unknown_00[0x144];
-    void* Field_144;
-
-    void* FUN_10a3a020(int p1);
-};
-
-struct Struct_10A3A1D0
-{
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-};
 
 class Class_10A3A1D0
 {
@@ -116,13 +59,6 @@ public:
 
     char Unknown00[0x114];
     Struct_10A3A1D0 Unknown114;
-};
-
-class Class_10A3A9C0 {
-public:
-    char Unknown00[0x12c];
-    float Field12c;
-    float FUN_10a3a9c0();
 };
 
 // FUNCTION: 0x10A35300 ?FUN_10a35300@Class_10A35300@@QAEXH@Z

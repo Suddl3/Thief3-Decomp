@@ -1,5 +1,21 @@
 // Game/Unsorted_10C39220.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10C3D050.h"
+#include "Game/Class_10C3D0D0.h"
+#include "Game/Class_10C3D340.h"
+#include "Game/Class_10C3D350.h"
+#include "Game/Class_10C3D3B0.h"
+#include "Game/Class_10C3D3C0.h"
+#include "Game/Class_10C3D3E0.h"
+#include "Game/Class_10C3D3F0.h"
+#include "Game/Class_10C3D420.h"
+#include "Game/Class_10C3D440.h"
+#include "Game/Class_10C3D560.h"
+#include "Game/Class_10C3DD60.h"
+#include "Game/Class_10C3DFE0.h"
+#include "Game/Class_10C3F170.h"
+#include "Game/Class_10E9B580.h"
+#include "Game/Class_10E9B5C0.h"
 
 extern void* DAT_10e9afa4[];
 
@@ -18,110 +34,7 @@ public:
 
 extern void* DAT_10e9b020[];
 
-class Class_10C3D050
-{
-public:
-    void* Field00;
-    void FUN_10c3d050();
-};
-
-class Class_10C3D0D0
-{
-public:
-    char Unknown00[0x2c];
-    unsigned char Field2c;
-    unsigned char FUN_10c3d0d0();
-};
-
-class Class_10C3D340 {
-public:
-    char Unknown00[0x18];
-    unsigned char Field18;
-    void FUN_10c3d340();
-};
-
-class Class_10C3D350 {
-public:
-    char Unknown00[0x18];
-    unsigned char Field18;
-    void FUN_10c3d350();
-};
-
-class Class_10C3D3B0
-{
-public:
-    float Field00;
-
-    virtual float FUN_10c3d3b0();
-};
-
-class Class_10C3D3C0
-{
-public:
-    char Unknown00[0x04];
-    float Field04;
-
-    virtual float FUN_10c3d3c0();
-};
-
-class Class_10C3D3E0
-{
-public:
-    char Unknown00[0x10];
-    float Field10;
-
-    virtual float FUN_10c3d3e0();
-};
-
-class Class_10C3D3F0
-{
-public:
-    char Unknown00[0x14];
-    float Field14;
-
-    virtual float FUN_10c3d3f0();
-};
-
-class Class_10C3D420 {
-public:
-    char Unknown00[0x29];
-    unsigned char Field29;
-    unsigned char FUN_10c3d420();
-};
-
-class Class_10C3D440 {
-public:
-    char Unknown00[0x2a];
-    unsigned char Field2a;
-    unsigned char FUN_10c3d440();
-};
-
 extern void* DAT_10e9afd0[];
-
-class Class_10C3D560
-{
-public:
-    void* Field00;
-    void FUN_10c3d560();
-};
-
-class Class_10C3DD60
-{
-public:
-    char Unknown00[0x24];
-    float Field24;
-
-    virtual float FUN_10c3dd60();
-};
-
-class Class_10C3DFE0
-{
-public:
-    char Unknown00[0x30];
-    float Field30;
-
-    virtual float FUN_10c3dfe0();
-};
 
 void FUN_10c3dee0();
 
@@ -136,32 +49,6 @@ public:
 extern int DAT_10ff70a4;
 
 extern void* DAT_10e9b580[];
-
-class Class_10E9B580
-{
-public:
-    void* Field00;
-    void FUN_10c3efc0();
-};
-
-class Class_10C3F170
-{
-public:
-    char Unknown00[0x20];
-    unsigned char Field20;
-    unsigned char FUN_10c3f170();
-};
-
-class Class_10E9B5C0
-{
-public:
-    unsigned char FUN_10c3f1f0();
-    unsigned char FUN_10c3f260();
-
-    char Unknown00[0x21];
-    unsigned char Field21;
-    unsigned char Field22;
-};
 
 void FUN_10c3fb10();
 

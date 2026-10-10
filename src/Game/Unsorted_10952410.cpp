@@ -1,76 +1,7 @@
 // Game/Unsorted_10952410.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10955AA0
-{
-public:
-    void FUN_10955aa0(int Mode);
-
-    int Unknown00;
-    int Unknown04;
-    int Mode;
-    char Unknown0C[4];
-    int Unknown10;
-    int Unknown14;
-    char Unknown18[0x20];
-};
-
-class Class_10E4ADC0
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8();
-    virtual void Virtual9();
-    virtual void Virtual10();
-    virtual void FUN_109524a0();
-
-    char Unknown04[8];
-    int Unknown0C;
-    char Unknown10[0xC];
-    int Unknown1C;
-    int Unknown20;
-    int Unknown24;
-    int Unknown28;
-    int Unknown2C;
-    int Unknown30;
-    int Unknown34;
-    float Unknown38;
-    float Unknown3C;
-    float Unknown40;
-    int Unknown44;
-    int Unknown48;
-    bool Unknown4C;
-    bool Unknown4D;
-    bool Unknown4E;
-    bool Unknown4F;
-    bool Unknown50;
-    int Unknown54;
-    int Unknown58;
-    float Unknown5C;
-    int Unknown60;
-    int Unknown64;
-    int Unknown68;
-    float Unknown6C;
-    float Unknown70;
-    float Unknown74;
-    float Unknown78;
-    float Unknown7C;
-    float Unknown80;
-    float Unknown84;
-    float Unknown88;
-    float Unknown8C;
-    Class_10955AA0 Unknown90[9];
-    int Unknown288;
-    bool Unknown28C;
-    int Unknown290;
-};
+#include "Game/Class_10955AA0.h"
+#include "Game/Class_10E4ADC0.h"
 
 // FUNCTION: 0x109524A0 ?FUN_109524a0@Class_10E4ADC0@@UAEXXZ
 void Class_10E4ADC0::FUN_109524a0()

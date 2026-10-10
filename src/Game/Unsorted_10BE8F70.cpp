@@ -1,5 +1,8 @@
 // Game/Unsorted_10BE8F70.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10BE9140.h"
+#include "Game/Class_10BEF120.h"
+#include "Game/Class_10BF6BD0.h"
 
 class Class_Field00_10be90e0
 {
@@ -15,14 +18,6 @@ public:
     void FUN_10be90e0();
 };
 
-class Class_10be9140
-{
-public:
-    char Unknown00[0x44];
-    float Field44;
-    void FUN_10be9140();
-};
-
 extern void* DAT_10e96eb0[];
 
 void FUN_10bc6a80();
@@ -34,28 +29,7 @@ public:
     void FUN_10be91a0();
 };
 
-class Class_10BEF120
-{
-public:
-    void FUN_10bef120(int Value);
-
-    char Unknown00[0x160];
-    int Unknown160;
-    int Unknown164;
-    int Unknown168;
-    int Unknown16C;
-    char Unknown170[0x8C];
-    int Unknown1FC;
-};
-
 void FUN_10befed0();
-
-class Class_10BF6BD0 {
-public:
-    char Unknown00[0x60];
-    unsigned char Field60;
-    void FUN_10bf6bd0();
-};
 
 // FUNCTION: 0x10BE90E0 ?FUN_10be90e0@Class_10E96D98@@QAEXXZ
 void Class_10E96D98::FUN_10be90e0()
@@ -63,8 +37,8 @@ void Class_10E96D98::FUN_10be90e0()
     Field00->Field114();
 }
 
-// FUNCTION: 0x10BE9140 ?FUN_10be9140@Class_10be9140@@QAEXXZ
-void Class_10be9140::FUN_10be9140()
+// FUNCTION: 0x10BE9140 ?FUN_10be9140@Class_10BE9140@@QAEXXZ
+void Class_10BE9140::FUN_10be9140()
 {
     Field44 = 1.5f;
 }

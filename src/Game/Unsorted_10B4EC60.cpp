@@ -1,5 +1,6 @@
 // Game/Unsorted_10B4EC60.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10E7E6A0.h"
 
 struct Struct_10B4F4B0_B
 {
@@ -40,17 +41,6 @@ public:
 };
 
 class AGarrett;
-
-class Class_10E7E6A0
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-
-    void FUN_10b3ae90(AGarrett* Param);
-    void FUN_10b3adc0(AGarrett* Param);
-};
 
 class Class_10E7EB20 : public Class_10E7E6A0
 {

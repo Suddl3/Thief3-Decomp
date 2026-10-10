@@ -1,18 +1,8 @@
 // Game/Unsorted_10AC2610.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10E6F5F0
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual int FUN_10ac2610(float Value);
-};
+#include "Game/Class_10AC2E40.h"
+#include "Game/Class_10E6F5F0.h"
+#include "Game/Options.h"
 
 class UClient
 {
@@ -31,12 +21,6 @@ public:
 };
 
 extern UEngine* GEngine;
-
-class Options
-{
-public:
-    void FUN_10ab5c60(int A);
-};
 
 Options* FUN_10929550();
 
@@ -74,15 +58,6 @@ struct Struct_10AA3520
 };
 
 extern Struct_10AA3520* DAT_10f35dec;
-
-class Class_10AC2E40
-{
-public:
-    float FUN_10ac2e40();
-
-    char Unknown00[0x604];
-    float Unknown604;
-};
 
 class Class_10BFBD70
 {

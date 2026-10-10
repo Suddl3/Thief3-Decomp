@@ -1,19 +1,8 @@
 // Game/Unsorted_10919310.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include <xmmintrin.h>
-
-class Class_10939570
-{
-public:
-    char FUN_10939570();
-};
-
-class Class_10E4A538
-{
-public:
-    char FUN_10940970();
-};
+#include "Game/Class_10939570.h"
+#include "Game/Class_10E4A538.h"
 
 extern Class_10939570* DAT_10f323fc;
 

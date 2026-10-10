@@ -1,5 +1,7 @@
 // Game/Unsorted_10B8CFF0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10B8CFF0.h"
+#include "Game/Class_10D3E450.h"
 
 // Ion Storm's growable array: count, capacity, block.
 class Class_10BFBD70
@@ -11,12 +13,6 @@ public:
     int Unknown00;
     int Unknown04;
     void* Unknown08;
-};
-
-class Class_10D3E450
-{
-public:
-    Class_10D3E450();
 };
 
 class Class_10B8D4C0
@@ -42,18 +38,6 @@ public:
 
     char Unknown00[8];
     int Unknown08;
-};
-
-class Class_10B8CFF0
-{
-public:
-    void FUN_10b8cff0();
-
-    int Unknown00;
-    int Unknown04;
-    Class_10D9FEE0** Unknown08;
-    char Unknown0C[0xD];
-    bool Unknown19;
 };
 
 // FUNCTION: 0x10B8CFF0 ?FUN_10b8cff0@Class_10B8CFF0@@QAEXXZ

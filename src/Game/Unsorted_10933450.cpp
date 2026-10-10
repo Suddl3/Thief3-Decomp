@@ -1,9 +1,8 @@
 // Game/Unsorted_10933450.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include <new>
-
-extern "C" void* memset(void* Dest, int Value, unsigned int Count);
+#include "Game/Class_10E49D1C.h"
+#include "Game/Struct_10932ED0.h"
 
 // A COM object the list at +0x20 holds (Direct3D): slot 2 is Release.
 class Class_109334E0_Element
@@ -33,30 +32,6 @@ public:
     Class_109334E0_Element** Unknown08;
     Class_109334E0_Element** Unknown0C;
     Class_109334E0_Element** Unknown10;
-};
-
-struct Struct_10932ED0
-{
-    float Unknown00;
-    float Unknown04;
-    float Unknown08;
-};
-
-class Class_10E49D1C
-{
-public:
-    virtual ~Class_10E49D1C()
-    {
-        Unknown04 = 0;
-        Unknown08 = -1;
-        memset(&Unknown10, 0, sizeof(Unknown10));
-        Unknown0C = 0;
-    }
-
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    Struct_10932ED0 Unknown10;
 };
 
 class Class_10E49DFC : public Class_10E49D1C

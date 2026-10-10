@@ -1,72 +1,22 @@
 // Game/Unsorted_10BB8960.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10BB8CC0 {
-public:
-    char Unknown00[0x334];
-    unsigned char Field334;
-    unsigned char Field335;
-    void FUN_10bb8cc0();
-};
+#include "Game/Class_1098E330.h"
+#include "Game/Class_10BB8CC0.h"
+#include "Game/Class_10BBDB10.h"
+#include "Game/Class_10BBDC00.h"
+#include "Game/Class_10BBDC70.h"
+#include "Game/Class_10BBF5C0.h"
+#include "Game/Class_10BBF5D0.h"
+#include "Game/Class_10BC3F90.h"
+#include "Game/Class_10BC4010.h"
+#include "Game/Class_10E5B578.h"
+#include "Game/Class_10E70A50.h"
+#include "Game/Class_Field04.h"
+#include "Game/Struct_10BC3F90.h"
 
 void FUN_1096a980();
 
-class Class_1098E330
-{
-public:
-    void FUN_1098e330(int Id, int* Out);
-};
-
-class Class_10BBDB10
-{
-public:
-    int FUN_10bbdb10(int Id);
-
-    int Unknown00;
-    Class_1098E330* Unknown04;
-};
-
-class Class_10BBDC00
-{
-public:
-    int FUN_10bbdc00(int Id);
-
-    char Unknown00[0xC];
-    Class_1098E330* Unknown0C;
-};
-
 void FUN_1098e290();
-
-class Class_Field04
-{
-public:
-    void FUN_1098e290();
-};
-
-class Class_10BBDC70
-{
-public:
-    void FUN_10bbdc70();
-
-    char Unknown00[0xc];
-    Class_Field04* Field0c;
-};
-
-class Class_10E70A50
-{
-public:
-    Class_10E70A50();
-
-    virtual void FUN_10adb3a0();
-
-    char Unknown04[0x28];
-};
-
-class Class_10E5B578
-{
-public:
-    virtual void FUN_10bbe970() = 0;
-};
 
 class UAI : public Class_10E70A50, public Class_10E5B578
 {
@@ -184,45 +134,6 @@ public:
 
     char Unknown04[0xBC];
     Class_10BC1840 UnknownC0;
-};
-
-class Class_10BBF5C0
-{
-public:
-    int Field00;
-
-    int FUN_10bbf5c0();
-};
-
-class Class_10BBF5D0
-{
-public:
-    int Field00;
-
-    int FUN_10bbf5d0();
-};
-
-struct Struct_10BC3F90
-{
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-};
-
-class Class_10BC3F90
-{
-public:
-    Struct_10BC3F90 FUN_10bc3f90();
-
-    char Unknown00[0x22C];
-    Struct_10BC3F90 Unknown22C;
-};
-
-class Class_10BC4010 {
-public:
-    char Unknown00[0x10];
-    int Field10;
-    void FUN_10bc4010(int param);
 };
 
 // FUNCTION: 0x10BB8CC0 ?FUN_10bb8cc0@Class_10BB8CC0@@QAEXXZ

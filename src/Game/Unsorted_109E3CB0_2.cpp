@@ -1,7 +1,7 @@
 // Game/Unsorted_109E3CB0_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
+#include "Game/Struct_10AA3520.h"
 
 class ULevel;
 
@@ -29,12 +29,6 @@ AAIPathPoint* FUN_10a49f00(ULevel* Level, UClass* Class, int C, int D, FVector E
 struct Struct_109E3CB0
 {
     ULevel* Unknown00;
-};
-
-struct Struct_10AA3520
-{
-    char Unknown00[0xCC];
-    Struct_109E3CB0* UnknownCC;
 };
 
 extern Struct_10AA3520* DAT_10f35dec;

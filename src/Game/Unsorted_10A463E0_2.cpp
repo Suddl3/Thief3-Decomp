@@ -1,13 +1,6 @@
 // Game/Unsorted_10A463E0_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-struct Struct_10A46390
-{
-    char Unknown00[0x1C];
-    unsigned char Unknown1C;
-    char Unknown1D[7];
-    unsigned char Unknown24;
-};
+#include "Game/Struct_10A46390.h"
 
 class APlayerPawn
 {

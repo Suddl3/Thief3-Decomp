@@ -1,5 +1,8 @@
 // Game/Unsorted_10BCE970.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/FArchive.h"
+#include "Game/Struct_10BCE9F0.h"
+#include "Game/TimeManager.h"
 
 extern void* DAT_10e92b20[];
 
@@ -12,13 +15,6 @@ public:
     int Unknown04[15];
 };
 
-struct Struct_10BCE9F0
-{
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-};
-
 class Class_10E92B20 : public Class_10E90D70
 {
 public:
@@ -26,20 +22,6 @@ public:
 
     Struct_10BCE9F0 Unknown40;
     bool Unknown4C;
-};
-
-class FArchive
-{
-public:
-    virtual ~FArchive();
-    virtual void Serialize(void* V, int Length);
-};
-
-class TimeManager
-{
-public:
-    static TimeManager* Instance();
-    double GetGameTime();
 };
 
 class Class_10E8BE68

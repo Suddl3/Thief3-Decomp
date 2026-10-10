@@ -1,5 +1,6 @@
 // Game/Unsorted_1094D9F0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_1094D9F0.h"
 
 class IDirect3DDevice8
 {
@@ -83,15 +84,6 @@ struct Struct_1094D9F0
 {
     char Unknown00[0x30];
     void* Unknown30;
-};
-
-class Class_1094D9F0
-{
-public:
-    void FUN_1094d9f0(int Stage);
-
-    char Unknown00[0x14];
-    Struct_1094D9F0* Unknown14[8];
 };
 
 // FUNCTION: 0x1094D9F0 ?FUN_1094d9f0@Class_1094D9F0@@QAEXH@Z

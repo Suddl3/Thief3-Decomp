@@ -1,13 +1,7 @@
 // Game/Unsorted_10B1F550.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
-
-class Class_10991FF0
-{
-public:
-    float FUN_10991ff0();
-};
+#include "Game/Class_10991FF0.h"
 
 bool FUN_10b1fc30(Class_10991FF0* Actor, const FVector& Offset);
 

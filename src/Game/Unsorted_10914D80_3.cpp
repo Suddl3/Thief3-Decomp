@@ -1,5 +1,6 @@
 // Game/Unsorted_10914D80_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10914D80.h"
 
 // A string-keyed hash table: buckets of singly linked nodes.
 
@@ -25,20 +26,6 @@ struct Class_10914D80_Node
     Class_109081E0 Key;
     int Value;
     Class_10914D80_Node* Next;
-};
-
-class Class_10914D80
-{
-public:
-    unsigned int FUN_10914d80(const Class_109081E0& Key, const int& Value);
-    void FUN_10914e60(int NewSize);
-
-    int Collisions;
-    int Count;
-    int Bits;
-    int Size;
-    bool Unknown10;
-    Class_10914D80_Node** Table;
 };
 
 // FUNCTION: 0x10914E60 ?FUN_10914e60@Class_10914D80@@QAEXH@Z

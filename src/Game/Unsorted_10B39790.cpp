@@ -1,19 +1,16 @@
 // Game/Unsorted_10B39790.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10B39790.h"
+#include "Game/Class_10B397D0.h"
+#include "Game/Class_10B39870.h"
+#include "Game/Class_10B3A460.h"
+#include "Game/Class_10B47130.h"
+#include "Game/Class_10B47180.h"
 
 class Class_10B47720
 {
 public:
     void FUN_10b47720(int A);
-};
-
-class Class_10B39870
-{
-public:
-    int FUN_10b39870(int A);
-
-    char Unknown00[0xC];
-    Class_10B47720* Unknown0C;
 };
 
 struct Static_10B3A410
@@ -30,46 +27,7 @@ struct Static_10B3A410
     int Unknown18;
 };
 
-class Class_10B47180
-{
-public:
-    void FUN_10b47180(int A, int B, int C, int D);
-};
-
-class Class_10B3A460
-{
-public:
-    Class_10B3A460* FUN_10b3a460(int A);
-
-    char Unknown00[0x1C];
-    int Unknown1C;
-};
-
 Class_10B3A460* FUN_10b3abf0();
-
-class Class_10B397D0
-{
-public:
-    void FUN_10b397d0(int A, int B, int C, int D);
-
-    char Unknown00[0xC];
-    Class_10B47180* Unknown0C[1];
-};
-
-class Class_10B47130
-{
-public:
-    void FUN_10b47130(int A, int B, int C, int D, int E);
-};
-
-class Class_10B39790
-{
-public:
-    void FUN_10b39790(int A, int B, int C, int D, int E);
-
-    char Unknown00[0xC];
-    Class_10B47130* Unknown0C[1];
-};
 
 // FUNCTION: 0x10B39790 ?FUN_10b39790@Class_10B39790@@QAEXHHHHH@Z
 void Class_10B39790::FUN_10b39790(int A, int B, int C, int D, int E)

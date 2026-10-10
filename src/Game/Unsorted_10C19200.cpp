@@ -1,7 +1,19 @@
 // Game/Unsorted_10C19200.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
+#include "Game/Class_1090A780.h"
+#include "Game/Class_10C1A940.h"
+#include "Game/Class_10C1A950.h"
+#include "Game/Class_10C1AAC0.h"
+#include "Game/Class_10C1B1A0.h"
+#include "Game/Class_10C28EF0.h"
+#include "Game/Class_10C28F00.h"
+#include "Game/Class_10E98CEC.h"
+#include "Game/Class_10E99370.h"
+#include "Game/Struct_10C1AAD0.h"
+#include "Game/Struct_10C1ACA0.h"
+#include "Game/Struct_10C1AD20.h"
+#include "Game/Struct_10C1AF80.h"
 
 extern int DAT_10ff708c;
 
@@ -9,42 +21,7 @@ extern void* DAT_10e98cec[];
 
 void FUN_10c62c90();
 
-class Class_10E98CEC
-{
-public:
-    void* Field00;
-    void FUN_10c1a570();
-};
-
 extern void* DAT_10e98d08[];
-
-class Class_10C1A940 {
-public:
-    void FUN_10c1a940();
-};
-
-class Class_10C1A950
-{
-public:
-    char Unknown00[0x20];
-    float Field20;
-
-    virtual float FUN_10c1a950();
-};
-
-class Class_10C1AAC0 {
-public:
-    char Unknown00[0x46];
-    unsigned char Field46;
-    unsigned char FUN_10c1aac0();
-};
-
-struct Struct_10C1AAD0
-{
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-};
 
 class Class_10C1AAD0
 {
@@ -53,13 +30,6 @@ public:
 
     char Unknown00[0x48];
     Struct_10C1AAD0 Unknown48;
-};
-
-struct Struct_10C1ACA0
-{
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
 };
 
 class Class_10E98F00
@@ -71,13 +41,6 @@ public:
     Struct_10C1ACA0 Unknown4C;
 };
 
-struct Struct_10C1AD20
-{
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-};
-
 class Class_10E98F48
 {
 public:
@@ -85,13 +48,6 @@ public:
 
     char Unknown00[0x48];
     Struct_10C1AD20 Unknown48;
-};
-
-struct Struct_10C1AF80
-{
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
 };
 
 class Class_10C1AF80
@@ -104,23 +60,6 @@ public:
 };
 
 class FArchive;
-
-class Class_10C1B1A0
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8();
-    virtual void Virtual9();
-
-    void FUN_10c1b1a0(FArchive& Ar);
-};
 
 class Class_10E99020 : public Class_10C1B1A0
 {
@@ -164,15 +103,6 @@ struct Info_10C266A0
     int Unknown08;
 };
 
-class Class_1090A780
-{
-public:
-    Class_1090A780(const Class_1090A780& Other);
-    ~Class_1090A780();
-
-    char* Unknown00;
-};
-
 class Class_10E6AC20
 {
 public:
@@ -200,35 +130,7 @@ public:
 
 extern int DAT_10ff709c;
 
-class Class_10E99370
-{
-public:
-    Class_10E99370(int A, int B);
-
-    virtual void FUN_10c28260();
-
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-};
-
 extern int DAT_10ff70a0;
-
-class Class_10c28ef0
-{
-public:
-    char Unknown00[0x1d];
-    unsigned char Field1D;
-    int FUN_10c28ef0();
-};
-
-class Class_10C28F00
-{
-public:
-    char Unknown00[0x4];
-    int Field04;
-    void FUN_10c28f00();
-};
 
 // FUNCTION: 0x10C1A160 ?FUN_10c1a160@@YAHXZ
 int FUN_10c1a160()
@@ -427,8 +329,8 @@ int FUN_10c28bc0()
     return DAT_10ff70a0;
 }
 
-// FUNCTION: 0x10C28EF0 ?FUN_10c28ef0@Class_10c28ef0@@QAEHXZ
-int Class_10c28ef0::FUN_10c28ef0()
+// FUNCTION: 0x10C28EF0 ?FUN_10c28ef0@Class_10C28EF0@@QAEHXZ
+int Class_10C28EF0::FUN_10c28ef0()
 {
     return Field1D;
 }

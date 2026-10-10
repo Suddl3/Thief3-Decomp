@@ -1,5 +1,9 @@
 // Game/Unsorted_10B92E30.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10B822C0.h"
+#include "Game/Class_10D9B090.h"
+#include "Game/Class_10E894C8_Unknown10.h"
+#include "Game/Class_10E894C8_Unknown54.h"
 
 extern void* DAT_10e89aa0[];
 
@@ -21,57 +25,6 @@ public:
 };
 
 class Class_10B8AC90;
-
-class Class_10D9B090
-{
-public:
-    void FUN_10d9b1e0();
-};
-
-class Class_10B822C0
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8();
-    virtual void Virtual9();
-    virtual void Virtual10();
-    virtual void Virtual11();
-    virtual void Virtual12();
-    virtual void Virtual13();
-    virtual void Virtual14();
-    virtual void Virtual15();
-
-    int FUN_10b822c0();
-
-    int Unknown04;
-};
-
-class Class_10E894C8_Unknown54
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual int Virtual7();
-};
-
-class Class_10E894C8_Unknown10
-{
-public:
-    char Unknown00[0x54];
-    Class_10E894C8_Unknown54* Unknown54;
-};
 
 class Class_10E894C8
 {

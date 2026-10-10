@@ -1,7 +1,7 @@
 // Game/Unsorted_10BF8CC0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
+#include "Game/Class_10AF7F80.h"
 
 class Object_10BF9030
 {
@@ -44,12 +44,6 @@ public:
 
     char Unknown04[0x74];
     int Unknown78;
-};
-
-class Class_10AF7F80 : public FString
-{
-public:
-    const char* FUN_10af7f80();
 };
 
 // FUNCTION: 0x10BF8FB0 ?FUN_10bf8fb0@@YA?AVFString@@PAVClass_10AF7F80@@PAH@Z

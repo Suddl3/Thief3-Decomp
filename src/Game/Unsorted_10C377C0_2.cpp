@@ -1,16 +1,9 @@
 // Game/Unsorted_10C377C0_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
+#include "Game/Class_10C08940.h"
 
 class Object_10BCE8D0;
-
-class Class_10C08940
-{
-public:
-    char Unknown00[0x2C];
-    FVector Unknown2C;
-};
 
 class Class_10978090
 {

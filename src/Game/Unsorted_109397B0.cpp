@@ -1,19 +1,10 @@
 // Game/Unsorted_109397B0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_1093AED0.h"
 
 int __stricmp(const char* A, const char* B);
 
 extern const char DAT_10e47660[];
-
-class Class_1093AED0
-{
-public:
-    int FUN_1093aed0(const char** Name);
-
-    int Unknown00[9];
-    const char** Unknown24;
-    const char** Unknown28;
-};
 
 // FUNCTION: 0x1093AED0 ?FUN_1093aed0@Class_1093AED0@@QAEHPAPBD@Z
 int Class_1093AED0::FUN_1093aed0(const char** Name)

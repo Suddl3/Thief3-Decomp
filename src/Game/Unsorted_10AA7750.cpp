@@ -1,5 +1,9 @@
 // Game/Unsorted_10AA7750.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10AA7810.h"
+#include "Game/Class_10AA7850.h"
+#include "Game/Class_10AA7880.h"
+#include "Game/Class_10AA78A0.h"
 
 class FArray
 {
@@ -40,15 +44,6 @@ public:
     virtual void Virtual1();
 };
 
-class Class_10AA78A0
-{
-public:
-    void FUN_10aa78a0();
-
-    char Unknown00[0xC];
-    Class_10AA78A0_Field0C* Unknown0C;
-};
-
 class Class_10AA7880_Member
 {
 public:
@@ -60,15 +55,6 @@ public:
 };
 
 extern void* DAT_10f46d9c;
-
-class Class_10AA7880
-{
-public:
-    void FUN_10aa7880();
-
-    char Unknown00[0xC];
-    Class_10AA7880_Member* Unknown0C;
-};
 
 class Object_10AA7810
 {
@@ -84,16 +70,6 @@ public:
     virtual int Virtual8();
 };
 
-class Class_10AA7810
-{
-public:
-    void FUN_10aa7810(int A, int B);
-
-    char Unknown00[8];
-    void* Unknown08;
-    Object_10AA7810* Unknown0C;
-};
-
 class Object_10AA7850
 {
 public:
@@ -105,15 +81,6 @@ public:
     virtual void Virtual5();
     virtual void Virtual6();
     virtual int Virtual7();
-};
-
-class Class_10AA7850
-{
-public:
-    int FUN_10aa7850();
-
-    char Unknown00[0xc];
-    Object_10AA7850* Unknown0C;
 };
 
 // FUNCTION: 0x10AA7810 ?FUN_10aa7810@Class_10AA7810@@QAEXHH@Z

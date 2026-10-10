@@ -1,13 +1,9 @@
 // Game/Unsorted_10B92C10.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
-
-class Class_10990D10
-{
-public:
-    void FUN_10990d10();
-};
+#include "Game/Class_10990D10.h"
+#include "Game/Class_10E89A8C.h"
+#include "Game/FCoords.h"
 
 class Class_10E894C8
 {
@@ -15,17 +11,6 @@ public:
     virtual void FUN_10b92cb0(int p1);
 
     Class_10990D10* Unknown04;
-};
-
-class FCoords
-{
-public:
-    FCoords(const FVector& InOrigin) : Origin(InOrigin), XAxis(1, 0, 0), YAxis(0, 1, 0), ZAxis(0, 0, 1) {}
-
-    FVector Origin;
-    FVector XAxis;
-    FVector YAxis;
-    FVector ZAxis;
 };
 
 class Class_10B92DB0
@@ -43,17 +28,6 @@ public:
 
 // Ion Storm's placement new (0x10905C10).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
-
-class Class_10E89A8C
-{
-public:
-    Class_10E89A8C(int Value) : Unknown04(Value) {}
-
-    virtual ~Class_10E89A8C();
-    virtual Class_10E89A8C* FUN_10b92c10();
-
-    int Unknown04;
-};
 
 // FUNCTION: 0x10B92C10 ?FUN_10b92c10@Class_10E89A8C@@UAEPAV1@XZ
 Class_10E89A8C* Class_10E89A8C::FUN_10b92c10()

@@ -1,11 +1,6 @@
 // Game/AAIPawnController_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10B9CB80
-{
-public:
-    bool FUN_10b9cb80(int p1);
-};
+#include "Game/Class_10B9CB80.h"
 
 class Class_10B9BC40_Member
 {

@@ -1,17 +1,16 @@
 // Game/Unsorted_10B23B60_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10B152C0.h"
+#include "Game/Class_10B24D00.h"
+#include "Game/Class_10B24D20.h"
+#include "Game/Class_10B24D30.h"
+#include "Game/Class_10E7A9C0.h"
+#include "Game/Class_10F3A3D8.h"
 
 class Class_10ABB6B0
 {
 public:
     void FUN_10abb6b0(int A);
-};
-
-class Class_10F3A3D8
-{
-public:
-    char Unknown00[0xE8];
-    Class_10ABB6B0* Unknown0E8;
 };
 
 extern Class_10F3A3D8* DAT_10f3a3d8;
@@ -56,66 +55,6 @@ public:
 };
 
 class Class_10E7A9C0;
-
-class Class_10B152C0
-{
-public:
-    void FUN_10b152c0(int p1, Class_10E7A9C0* p2);
-};
-
-class Class_10E7A9C0
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8();
-    virtual void Virtual9();
-    virtual void FUN_10b248d0(Class_10B152C0* p1);
-};
-
-class Class_10B24D00
-{
-public:
-    void FUN_10b24d00(int p1, unsigned char p2);
-    char Unknown00[4];
-    int Unknown04;
-    int Unknown08;
-    char Unknown0C[4];
-    int Unknown10;
-    int Unknown14;
-};
-
-class Class_10B24D20
-{
-public:
-    char Unknown00[0x2C];
-    int Unknown2C;
-    int Unknown30;
-
-    void FUN_10b24d20(int p1);
-};
-
-class Class_10B24D30
-{
-public:
-    void FUN_10b24d30(int Mode);
-
-    char Unknown00[4];
-    int Unknown04;
-    int Unknown08;
-    char Unknown0C[4];
-    int Unknown10;
-    int Unknown14;
-    char Unknown18[0x14];
-    int Unknown2C;
-    int Unknown30;
-};
 
 // FUNCTION: 0x10B23B60 ?FUN_10b23b60@UT3GameEngine@@UAEXH@Z
 void UT3GameEngine::FUN_10b23b60(int A)

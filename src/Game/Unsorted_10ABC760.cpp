@@ -1,5 +1,7 @@
 // Game/Unsorted_10ABC760.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10ABCC20.h"
+#include "Game/Class_10AF4B90.h"
 
 typedef unsigned char BYTE;
 
@@ -11,23 +13,6 @@ struct FColor
     BYTE G;
     BYTE R;
     BYTE A;
-};
-
-extern void* DAT_10e47850[];
-
-class Class_10AF4B90
-{
-public:
-    Class_10AF4B90* FUN_10af4b90(int p1, void* p2);
-};
-
-class Class_10ABCC20
-{
-public:
-    Class_10ABCC20* FUN_10abcc20();
-
-    char Unknown00[4];
-    Class_10AF4B90 Unknown04;
 };
 
 // FUNCTION: 0x10ABC760 ?FUN_10abc760@@YA?AUFColor@@H@Z

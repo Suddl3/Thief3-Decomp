@@ -1,5 +1,10 @@
 // Game/Unsorted_10C18520_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10905A90_Member.h"
+#include "Game/Class_10DC1750.h"
+#include "Game/Class_10E98CA4.h"
+#include "Game/Struct_10B9F810.h"
+#include "Game/Struct_10DC1750_Result_1C.h"
 
 struct Struct_10AA3520
 {
@@ -9,13 +14,6 @@ struct Struct_10AA3520
 
 extern Struct_10AA3520* DAT_10f35dec;
 
-struct Struct_10DC1750_Result_1C
-{
-    int Count;
-    char Unknown04[4];
-    int* Items;
-};
-
 class Class_10DC1750_Result
 {
 public:
@@ -23,36 +21,7 @@ public:
     Struct_10DC1750_Result_1C Unknown1C;
 };
 
-class Class_10DC1750
-{
-public:
-    Class_10DC1750_Result* FUN_10dc1750();
-};
-
-class Class_10E98CA4
-{
-public:
-    void FUN_10c19b90();
-    void FUN_10c19810(int Value);
-
-    char Unknown00[4];
-    Class_10DC1750* Unknown04;
-};
-
-class Class_10905A90_Member
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5(void* Block);
-};
-
 Class_10905A90_Member* FUN_10905aa0();
-
-struct Struct_10B9F810 {};
 
 class Class_10BFBD70
 {

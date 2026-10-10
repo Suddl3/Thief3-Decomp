@@ -1,29 +1,9 @@
 // Game/Unsorted_10A31620.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10905A90_Member
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2(int A, int B, int C, int D, int E);
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5(void* Block);
-};
-
-Class_10905A90_Member* FUN_10905aa0();
-
-class Class_10A32270
-{
-public:
-    void FUN_10a31f30(int Count);
-    void FUN_10a32270();
-
-    int Unknown00;
-    int Unknown04;
-    void* Unknown08;
-};
+#include "Game/Class_10905A90_Member.h"
+#include "Game/Class_10A31F00.h"
+#include "Game/Class_10A32270.h"
+#include "Game/Class_10E663C8.h"
 
 class Class_10A31F00;
 
@@ -40,27 +20,7 @@ public:
     virtual bool Virtual7(Class_10A31F00* A);
 };
 
-class Class_10A31F00
-{
-public:
-    int FUN_10a31f00();
-
-    Class_10A31F00_Owner* Unknown00;
-    char Unknown04[8];
-    int Unknown0C;
-};
-
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
-
-void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
-
-class Class_10E663C8
-{
-public:
-    Class_10E663C8();
-
-    char Unknown00[0x10];
-};
 
 extern Class_10E663C8* DAT_10f39f3c;
 

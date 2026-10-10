@@ -1,7 +1,11 @@
 // Game/Unsorted_10C0BDE0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
+#include "Game/Class_10C0C090.h"
+#include "Game/Class_10C0C150.h"
+#include "Game/Class_10C0C8E0.h"
+#include "Game/Item_10C0C150.h"
+#include "Game/Struct_10C0BFC0.h"
 
 struct Struct_10C0C8E0
 {
@@ -10,29 +14,7 @@ struct Struct_10C0C8E0
     int Unknown30;
 };
 
-class Class_10C0C8E0
-{
-public:
-    void FUN_10c0c8e0(const Struct_10C0C8E0* In);
-    void FUN_10c0c200(int A, int B);
-};
-
-struct Struct_10C0BFC0
-{
-    char Unknown00[0x38];
-    FVector Unknown38;
-    char Unknown44[0x18];
-    float Unknown5C;
-};
-
 double FUN_10c00480();
-
-class Class_10C0C090
-{
-public:
-    Struct_10C0BFC0* FUN_10c0bfc0(int A, int B);
-    void FUN_10c0c090(int A, int B, FVector* Pos, int D);
-};
 
 void* operator new(unsigned int);
 
@@ -50,24 +32,6 @@ struct Struct_10C0C0D0
     Struct_10C0C0D0A Unknown0C;
     bool Unknown14;
     bool Unknown15;
-};
-
-struct Item_10C0C150
-{
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-};
-
-class Class_10C0C150
-{
-public:
-    int FUN_10c0c150(const Item_10C0C150* Item);
-    void FUN_10c0be50(int NewCount);
-
-    int Unknown00;
-    int Unknown04;
-    Item_10C0C150* Unknown08;
 };
 
 // FUNCTION: 0x10C0C090 ?FUN_10c0c090@Class_10C0C090@@QAEXHHPAVFVector@@H@Z

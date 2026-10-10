@@ -1,13 +1,10 @@
 // Game/Unsorted_10ABF100.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
-
-class Class_10974340
-{
-public:
-    int FUN_10974340();
-};
+#include "Game/Class_10974340.h"
+#include "Game/Class_10ABF100.h"
+#include "Game/Struct_10974340_Result.h"
+#include "Game/Struct_10ABF1B0.h"
 
 class UEngine
 {
@@ -17,25 +14,6 @@ public:
 };
 
 extern UEngine* GEngine;
-
-struct Struct_10974340_Result
-{
-    char Unknown00[0x218];
-    unsigned int Unknown218;
-};
-
-class Class_10ABF100
-{
-public:
-    bool FUN_10abf100();
-};
-
-struct Struct_10ABF1B0
-{
-    char Unknown00[4];
-    int Unknown04;
-    char Unknown08[0x2C];
-};
 
 class APlayerPawn
 {

@@ -1,5 +1,6 @@
 // Game/Unsorted_1099F560_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10E55E78.h"
 
 extern void* DAT_10e561a8[];
 
@@ -39,14 +40,6 @@ class Class_10E56340 : public UAttachmentLinkDataObject
 {
 public:
     Class_10E56340* FUN_1099f7b0();
-};
-
-class Class_10E55E78
-{
-public:
-    Class_10E55E78();
-
-    virtual void Virtual0();
 };
 
 class Class_10E563C8 : public Class_10E55E78

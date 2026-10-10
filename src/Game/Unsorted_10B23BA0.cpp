@@ -1,16 +1,7 @@
 // Game/Unsorted_10B23BA0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10905A90_Member
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5(void* Block);
-};
+#include "Game/Class_10905A90_Member.h"
+#include "Game/Class_109E6D60.h"
 
 Class_10905A90_Member* FUN_10905aa0();
 
@@ -33,19 +24,6 @@ public:
 };
 
 bool FUN_10abc140();
-
-// The window manager's base: slot 4 takes a window, FUN_109e6d60 compares one with the top.
-class Class_109E6D60
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4(int Window);
-
-    bool FUN_109e6d60(int Window);
-};
 
 class WindowManager : public Class_109E6D60
 {

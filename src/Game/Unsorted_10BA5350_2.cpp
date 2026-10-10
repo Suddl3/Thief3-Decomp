@@ -1,5 +1,17 @@
 // Game/Unsorted_10BA5350_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10BA8F10.h"
+#include "Game/Class_10C15EF0.h"
+#include "Game/Class_10E8C5FC.h"
+#include "Game/Class_10E8C600.h"
+#include "Game/Class_10E8C604.h"
+#include "Game/Class_10E8C608.h"
+#include "Game/Class_10E8C60C.h"
+#include "Game/Class_10E8C610.h"
+#include "Game/Class_10E8C614.h"
+#include "Game/Class_10E8C618.h"
+#include "Game/Class_10E8C61C.h"
+#include "Game/Class_10E98C84.h"
 
 // Ion Storm's placement new and its delete (0x10905C10; the delete folded into ::operator delete).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
@@ -27,12 +39,6 @@ public:
     }
 };
 
-class Class_10E8C5FC
-{
-public:
-    virtual Class_10E8D554* FUN_10ba88e0();
-};
-
 extern void* DAT_10e8d570[];
 
 class Class_10E8D570 : public Class_10EB766C
@@ -42,12 +48,6 @@ public:
     {
         VTable = DAT_10e8d570;
     }
-};
-
-class Class_10E8C600
-{
-public:
-    virtual Class_10E8D570* FUN_10ba8970();
 };
 
 extern void* DAT_10e8d58c[];
@@ -61,12 +61,6 @@ public:
     }
 };
 
-class Class_10E8C604
-{
-public:
-    virtual Class_10E8D58C* FUN_10ba8a00();
-};
-
 extern void* DAT_10e8d5a8[];
 
 class Class_10E8D5A8 : public Class_10EB766C
@@ -76,12 +70,6 @@ public:
     {
         VTable = DAT_10e8d5a8;
     }
-};
-
-class Class_10E8C608
-{
-public:
-    virtual Class_10E8D5A8* FUN_10ba8a90();
 };
 
 extern void* DAT_10e8d5c4[];
@@ -95,12 +83,6 @@ public:
     }
 };
 
-class Class_10E8C60C
-{
-public:
-    virtual Class_10E8D5C4* FUN_10ba8b20();
-};
-
 extern void* DAT_10e8d5e0[];
 
 class Class_10E8D5E0 : public Class_10EB766C
@@ -110,12 +92,6 @@ public:
     {
         VTable = DAT_10e8d5e0;
     }
-};
-
-class Class_10E8C610
-{
-public:
-    virtual Class_10E8D5E0* FUN_10ba8bb0();
 };
 
 extern void* DAT_10e8d5fc[];
@@ -129,12 +105,6 @@ public:
     }
 };
 
-class Class_10E8C614
-{
-public:
-    virtual Class_10E8D5FC* FUN_10ba8c40();
-};
-
 extern void* DAT_10e8d618[];
 
 class Class_10E8D618 : public Class_10EB766C
@@ -144,12 +114,6 @@ public:
     {
         VTable = DAT_10e8d618;
     }
-};
-
-class Class_10E8C618
-{
-public:
-    virtual Class_10E8D618* FUN_10ba8cd0();
 };
 
 extern void* DAT_10e8d634[];
@@ -163,28 +127,6 @@ public:
     }
 };
 
-class Class_10E8C61C
-{
-public:
-    virtual Class_10E8D634* FUN_10ba8d60();
-};
-
-class Class_10C15EF0
-{
-public:
-    Class_10C15EF0();
-    ~Class_10C15EF0();
-
-    char Unknown00[0x4010];
-};
-
-class Class_10E98C84
-{
-public:
-    Class_10E98C84();
-    ~Class_10E98C84();
-};
-
 class Class_10E8D658
 {
 public:
@@ -193,12 +135,6 @@ public:
 
     Class_10C15EF0 Unknown04;
     Class_10E98C84 Unknown4014;
-};
-
-class Class_10BA8F10
-{
-public:
-    virtual ~Class_10BA8F10();
 };
 
 extern Class_10BA8F10* DAT_10ff6684;

@@ -1,5 +1,19 @@
 // Game/Unsorted_10A95050.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10905A90_Member.h"
+#include "Game/Class_10E5D808.h"
+#include "Game/Class_10E5D968.h"
+#include "Game/Class_10E5D96C.h"
+#include "Game/Class_10E5D970.h"
+#include "Game/Class_10E5D974.h"
+#include "Game/Class_10E5D978.h"
+#include "Game/Class_10E5D97C.h"
+#include "Game/Class_10E6CDC4.h"
+#include "Game/Class_10E6CDD0.h"
+#include "Game/Class_10E6CDDC.h"
+#include "Game/Class_10E6CDE8.h"
+#include "Game/Class_10E6CDF4.h"
+#include "Game/Class_10E6CE1C.h"
 
 class Class_10AAB5C0_Result
 {
@@ -33,102 +47,10 @@ public:
     int Unknown0C;
 };
 
-// Ion Storm's memory manager (0x10905AA0): the allocation happens inside a
-// scope of it (slots 8 and 9).
-class Class_10905A90_Member
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8(int A, int B);
-    virtual void Virtual9();
-};
-
 Class_10905A90_Member* FUN_10905aa0();
 
 // Ion Storm's placement new (0x10905C10).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
-
-// FUN_10a94b00 is the constructor: it stores the vtable and returns this.
-class Class_10E6CDC4
-{
-public:
-    Class_10E6CDC4* FUN_10a94b00();
-
-    void* Unknown00;
-};
-
-class Class_10E5D96C
-{
-public:
-    virtual Class_10E6CDC4* FUN_10a95050();
-};
-
-// FUN_10a94b70 is the constructor: it stores the vtable and returns this.
-class Class_10E6CDD0
-{
-public:
-    Class_10E6CDD0* FUN_10a94b70();
-
-    void* Unknown00;
-};
-
-class Class_10E5D970
-{
-public:
-    virtual Class_10E6CDD0* FUN_10a950a0();
-};
-
-// FUN_10a94c00 is the constructor: it stores the vtable and returns this.
-class Class_10E6CDDC
-{
-public:
-    Class_10E6CDDC* FUN_10a94c00();
-
-    void* Unknown00;
-};
-
-class Class_10E5D974
-{
-public:
-    virtual Class_10E6CDDC* FUN_10a950f0();
-};
-
-// FUN_10a94c80 is the constructor: it stores the vtable and returns this.
-class Class_10E6CDE8
-{
-public:
-    Class_10E6CDE8* FUN_10a94c80();
-
-    void* Unknown00;
-};
-
-class Class_10E5D978
-{
-public:
-    virtual Class_10E6CDE8* FUN_10a95140();
-};
-
-// FUN_10a94c90 is the constructor: it stores the vtable and returns this.
-class Class_10E6CDF4
-{
-public:
-    Class_10E6CDF4* FUN_10a94c90();
-
-    void* Unknown00;
-};
-
-class Class_10E5D97C
-{
-public:
-    virtual Class_10E6CDF4* FUN_10a95190();
-};
 
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
@@ -151,27 +73,6 @@ public:
     {
         VTable = DAT_10e6ce00;
     }
-};
-
-class Class_10E5D808
-{
-public:
-    virtual Class_10E6CE00* FUN_10a951e0();
-};
-
-// FUN_10a95040 is the constructor: it stores the vtable and returns this.
-class Class_10E6CE1C
-{
-public:
-    Class_10E6CE1C* FUN_10a95040();
-
-    void* Unknown00;
-};
-
-class Class_10E5D968
-{
-public:
-    virtual Class_10E6CE1C* FUN_10a95590();
 };
 
 // FUNCTION: 0x10A95050 ?FUN_10a95050@Class_10E5D96C@@UAEPAVClass_10E6CDC4@@XZ

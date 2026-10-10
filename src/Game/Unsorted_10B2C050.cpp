@@ -1,32 +1,14 @@
 // Game/Unsorted_10B2C050.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10B2E000
-{
-public:
-    void FUN_10b2cb50(int p1);
-    void FUN_10b2e000(int p1, int p2);
-
-    char Unknown00[0x11C];
-    int Unknown11C;
-};
+#include "Game/Class_10B2E000.h"
+#include "Game/Class_10B2E6F0.h"
+#include "Game/Class_10B2E770.h"
+#include "Game/Class_10B2E890.h"
 
 class Class_10A51A40
 {
 public:
     void FUN_10a51a40(int A, int B);
-};
-
-class Class_10B2E6F0
-{
-public:
-    void FUN_10b2e6f0();
-
-    char Unknown00[0x118];
-    Class_10A51A40* Unknown118;
-    Class_10A51A40* Unknown11C;
-    char Unknown120[0x29];
-    bool Unknown149;
 };
 
 class Class_10B2E770_Field124
@@ -133,15 +115,6 @@ public:
     virtual void Virtual98();
 };
 
-class Class_10B2E770
-{
-public:
-    void FUN_10b2e770();
-
-    char Unknown00[0x124];
-    Class_10B2E770_Field124* Unknown124;
-};
-
 class Struct_10B2E890
 {
 public:
@@ -202,15 +175,6 @@ public:
     virtual void Virtual54();
     virtual void Virtual55();
     virtual void Virtual56(int A);
-};
-
-class Class_10B2E890
-{
-public:
-    void FUN_10b2e890(bool A);
-
-    char Unknown00[0x120];
-    Struct_10B2E890* Unknown120;
 };
 
 class FArray

@@ -1,15 +1,8 @@
 // Game/Unsorted_10C2F340.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Struct_10FF66B0.h"
 
 extern "C" int __cdecl sprintf(char* Out, const char* Format, ...);
-
-struct Struct_10FF66B0
-{
-    const char* Unknown00;
-    char Unknown04[8];
-    int Unknown0C;
-    char Unknown10[4];
-};
 
 extern Struct_10FF66B0 DAT_10ff66b0[];
 

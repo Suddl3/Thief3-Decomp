@@ -1,5 +1,6 @@
 // Game/AGarrett_7.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10ABF100.h"
 
 struct Struct_10A465C0;
 
@@ -8,12 +9,6 @@ struct FsCitySectionGoal;
 class Class_10ABF100;
 
 Class_10ABF100* FUN_10abf0d0();
-
-class Class_10ABF100
-{
-public:
-    bool FUN_10abf100();
-};
 
 class APlayerPawn
 {

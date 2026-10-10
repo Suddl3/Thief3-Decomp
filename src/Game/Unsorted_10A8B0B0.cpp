@@ -1,5 +1,8 @@
 // Game/Unsorted_10A8B0B0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_109022E0.h"
+#include "Game/Class_1090FD40.h"
+#include "Game/Class_10E6C620.h"
 
 void FUN_10d3d990(void* Stream, int* Value);
 
@@ -25,8 +28,6 @@ public:
     int Unknown0C;
 };
 
-extern const char DAT_10e47660[];
-
 enum EFindName
 {
     FNAME_Find = 0,
@@ -39,12 +40,6 @@ public:
     FName(const char* Name, EFindName FindType);
 
     unsigned long Value;
-};
-
-class Class_109022E0
-{
-public:
-    char* Unknown00;
 };
 
 class Class_10E6C6C4
@@ -62,12 +57,6 @@ public:
 extern int DAT_10f3a1dc;
 
 extern void* DAT_10e6c610[];
-
-class Class_1090FD40
-{
-public:
-    void FUN_1090f2c0(int Count);
-};
 
 extern Class_1090FD40 DAT_10f3a1e0;
 
@@ -93,17 +82,6 @@ public:
 };
 
 Class_10C4CD50* FUN_10c4cd50();
-
-class Class_10E6C620
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void FUN_10a8b1e0();
-};
 
 // FUNCTION: 0x10A8B1E0 ?FUN_10a8b1e0@Class_10E6C620@@UAEXXZ
 void Class_10E6C620::FUN_10a8b1e0()

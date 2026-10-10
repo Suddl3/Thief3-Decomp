@@ -1,5 +1,6 @@
 // Game/Unsorted_10C559A0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10C56000.h"
 
 // The pointee: an object whose slots 1 and 2 are AddRef and Release.
 class Object_10C40120
@@ -18,18 +19,6 @@ public:
 
     char Unknown00[0x4C];
     Object_10C40120* Unknown4C;
-};
-
-// A growable array: a count, the bytes allocated and the block.
-class Class_10C56000
-{
-public:
-    void FUN_10c56000(int NewCount);
-    int FUN_10c56270(const Class_10C559A0* Src);
-
-    int Unknown00;
-    int Unknown04;
-    Class_10C559A0* Unknown08;
 };
 
 // FUNCTION: 0x10C56270 ?FUN_10c56270@Class_10C56000@@QAEHPBVClass_10C559A0@@@Z

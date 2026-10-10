@@ -1,19 +1,7 @@
 // Game/Unsorted_10B29A40.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10AF7F80
-{
-public:
-    const char* FUN_10af7f80();
-};
-
-class Config
-{
-public:
-    static Config* Instance();
-
-    bool GetFloat(const char* Section, const char* Key, float* Value, const char* File);
-};
+#include "Game/Class_10AF7F80.h"
+#include "Game/Config.h"
 
 class Class_10E80798
 {

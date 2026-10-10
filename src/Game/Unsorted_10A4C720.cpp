@@ -1,5 +1,8 @@
 // Game/Unsorted_10A4C720.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10A4C550_Iterator.h"
+#include "Game/Struct_10A4C940_Node.h"
+#include "Game/Struct_10A4C940_Owner.h"
 
 extern int DAT_10f3a084;
 
@@ -10,29 +13,6 @@ extern bool DAT_10f3a060;
 class Class_10BFBD70;
 
 class Class_10E67938;
-
-struct Struct_10A4C940_Owner
-{
-    virtual void Virtual0(int A);
-    char Unknown04[4];
-    Class_10E67938* Unknown08;
-};
-
-struct Struct_10A4C940_Node
-{
-    Struct_10A4C940_Node* Unknown00;
-    Struct_10A4C940_Node* Unknown04;
-    unsigned int Unknown08;
-    Struct_10A4C940_Owner* Unknown0C;
-};
-
-class Class_10A4C550_Iterator
-{
-public:
-    Class_10A4C550_Iterator() {}
-
-    Struct_10A4C940_Node* Unknown00;
-};
 
 class Class_10A4C550
 {

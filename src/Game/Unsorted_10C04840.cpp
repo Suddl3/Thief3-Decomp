@@ -1,25 +1,8 @@
 // Game/Unsorted_10C04840.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
-
-class Class_10C04A60
-{
-public:
-    FVector FUN_10c04a60();
-
-    char Unknown00[0x10];
-    FVector* Unknown10;
-};
-
-class Class_10C04840
-{
-public:
-    bool FUN_10c04840(unsigned char A);
-
-    char Unknown00[0x19];
-    unsigned char Unknown19[5];
-};
+#include "Game/Class_10C04840.h"
+#include "Game/Class_10C04A60.h"
 
 // FUNCTION: 0x10C04840 ?FUN_10c04840@Class_10C04840@@QAE_NE@Z
 bool Class_10C04840::FUN_10c04840(unsigned char A)

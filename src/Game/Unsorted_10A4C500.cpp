@@ -1,5 +1,6 @@
 // Game/Unsorted_10A4C500.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10E67938.h"
 
 class Class_10E67938;
 
@@ -33,21 +34,6 @@ struct Struct_10A4C500_Node
 };
 
 extern int DAT_10f3a084;
-
-class Class_10E67938
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual bool FUN_10a4c4d0(int A);
-    virtual void Virtual7();
-    virtual void Virtual8();
-    virtual void FUN_10a4c500(Class_10BFBD70* Array);
-};
 
 // FUNCTION: 0x10A4C500 ?FUN_10a4c500@Class_10E67938@@UAEXPAVClass_10BFBD70@@@Z
 void Class_10E67938::FUN_10a4c500(Class_10BFBD70* Array)

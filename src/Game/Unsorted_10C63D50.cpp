@@ -1,19 +1,16 @@
 // Game/Unsorted_10C63D50.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10C63D50.h"
+#include "Game/Class_10C63D60.h"
+#include "Game/Class_10C63D70.h"
+#include "Game/Class_10C63DC0.h"
+#include "Game/Class_10C63DD0.h"
 
 class Class_10c63d50_Member
 {
 public:
     virtual void F0() = 0;
     virtual void F1() = 0;
-};
-
-class Class_10c63d50
-{
-public:
-    char Unknown00[8];
-    Class_10c63d50_Member* Unknown08;
-    void FUN_10c63d50();
 };
 
 class Class_10c63d60_Member
@@ -48,14 +45,6 @@ public:
     virtual void F1A() = 0;
 };
 
-class Class_10c63d60
-{
-public:
-    char Unknown00[8];
-    Class_10c63d60_Member* Unknown08;
-    void FUN_10c63d60();
-};
-
 class Class_10c63d70_Member
 {
 public:
@@ -78,14 +67,6 @@ public:
     virtual void F10() = 0;
     virtual void F11() = 0;
     virtual void F12() = 0;
-};
-
-class Class_10c63d70
-{
-public:
-    char Unknown00[8];
-    Class_10c63d70_Member* Unknown08;
-    void FUN_10c63d70();
 };
 
 extern float DAT_10f06a78;
@@ -124,45 +105,26 @@ public:
     virtual void F18() = 0;
 };
 
-class Class_10c63dc0
-{
-public:
-    char Unknown00[8];
-    Class_10c63dc0_Member* Unknown08;
-    void FUN_10c63dc0();
-};
-
 struct Struct_10C63DD0
 {
     char Unknown00[0x20];
     char Unknown20;
 };
 
-class Class_10C63DD0
-{
-public:
-    int FUN_10c63dd0(int A);
-
-    char Unknown00[8];
-    Struct_10C63DD0* Unknown08;
-    char Unknown0C[4];
-    int Unknown10;
-};
-
-// FUNCTION: 0x10C63D50 ?FUN_10c63d50@Class_10c63d50@@QAEXXZ
-void Class_10c63d50::FUN_10c63d50()
+// FUNCTION: 0x10C63D50 ?FUN_10c63d50@Class_10C63D50@@QAEXXZ
+void Class_10C63D50::FUN_10c63d50()
 {
     Unknown08->F1();
 }
 
-// FUNCTION: 0x10C63D60 ?FUN_10c63d60@Class_10c63d60@@QAEXXZ
-void Class_10c63d60::FUN_10c63d60()
+// FUNCTION: 0x10C63D60 ?FUN_10c63d60@Class_10C63D60@@QAEXXZ
+void Class_10C63D60::FUN_10c63d60()
 {
     Unknown08->F1A();
 }
 
-// FUNCTION: 0x10C63D70 ?FUN_10c63d70@Class_10c63d70@@QAEXXZ
-void Class_10c63d70::FUN_10c63d70()
+// FUNCTION: 0x10C63D70 ?FUN_10c63d70@Class_10C63D70@@QAEXXZ
+void Class_10C63D70::FUN_10c63d70()
 {
     Unknown08->F12();
 }
@@ -173,8 +135,8 @@ float FUN_10c63d80()
     return DAT_10f06a78 - DAT_10e7a734 + DAT_10f06a7c;
 }
 
-// FUNCTION: 0x10C63DC0 ?FUN_10c63dc0@Class_10c63dc0@@QAEXXZ
-void Class_10c63dc0::FUN_10c63dc0()
+// FUNCTION: 0x10C63DC0 ?FUN_10c63dc0@Class_10C63DC0@@QAEXXZ
+void Class_10C63DC0::FUN_10c63dc0()
 {
     Unknown08->F18();
 }

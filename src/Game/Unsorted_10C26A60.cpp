@@ -1,15 +1,11 @@
 // Game/Unsorted_10C26A60.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10C26980.h"
+#include "Game/Class_10C26E80.h"
+#include "Game/Class_10C39220.h"
+#include "Game/Class_10E9AA7C.h"
 
 extern void* DAT_10e99298[];
-
-class Class_10C26980
-{
-public:
-    Class_10C26980(int A, int B, int C, int D, float E, float F);
-
-    void** Unknown00;
-};
 
 class Class_10E99298 : public Class_10C26980
 {
@@ -23,24 +19,6 @@ class Class_10E992D4 : public Class_10C26980
 {
 public:
     Class_10E992D4* FUN_10c27050(int A, int B, int C, int D);
-};
-
-class Class_10C39220
-{
-public:
-    bool FUN_10c39220(int A);
-};
-
-class Class_10E9AA7C
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual bool FUN_10c27090(int A);
-
-    char Unknown04[0x44];
-    Class_10C39220* Unknown48;
 };
 
 struct Struct_10C26A60 {};
@@ -79,23 +57,6 @@ public:
 extern float DAT_10eafbdc;
 
 double FUN_10c00480();
-
-class Class_10C26E80
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4(float A);
-    virtual void Virtual5();
-
-    void FUN_10c26d60();
-    void FUN_10c26e80();
-
-    char Unknown04[0x2C];
-    float Unknown30;
-};
 
 // FUNCTION: 0x10C26A60 ?FUN_10c26a60@Class_10C26A60@@QAEXPAUStruct_10C26A60@@H@Z
 void Class_10C26A60::FUN_10c26a60(Struct_10C26A60* Obj, int Arg)

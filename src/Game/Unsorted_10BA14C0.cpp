@@ -1,5 +1,8 @@
 // Game/Unsorted_10BA14C0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10C49740.h"
+#include "Game/Class_10E8C144.h"
+#include "Game/Entry_10C32C30.h"
 
 struct Item_10BA14C0
 {
@@ -13,29 +16,6 @@ struct Group_10BA14C0
     int Count;
     int Unknown04;
     Item_10BA14C0* Data;
-};
-
-struct Entry_10C32C30
-{
-    int Count;
-    int Unknown04;
-    Group_10BA14C0* Data;
-};
-
-class Class_10C49740
-{
-public:
-    bool FUN_10c49740(int* Key, Entry_10C32C30** Out);
-};
-
-class Class_10E8C144
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual Item_10BA14C0* FUN_10ba14c0(int Key, int Index, int Group);
-
-    Class_10C49740 Unknown04;
 };
 
 // FUNCTION: 0x10BA14C0 ?FUN_10ba14c0@Class_10E8C144@@UAEPAUItem_10BA14C0@@HHH@Z

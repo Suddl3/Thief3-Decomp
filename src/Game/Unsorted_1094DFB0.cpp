@@ -1,5 +1,7 @@
 // Game/Unsorted_1094DFB0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_1094DFB0.h"
+#include "Game/Class_1094DFD0.h"
 
 struct Struct_10919190
 {
@@ -55,15 +57,6 @@ public:
     virtual void Virtual7();
 };
 
-class Class_1094DFB0
-{
-public:
-    void FUN_1094dfb0();
-
-    char Unknown00[0xE8];
-    Class_1094DFB0_Slot* Unknown0E8[1];
-};
-
 class Class_1094DFD0_Slot
 {
 public:
@@ -75,15 +68,6 @@ public:
     virtual void Virtual5();
     virtual void Virtual6();
     virtual void Virtual7();
-};
-
-class Class_1094DFD0
-{
-public:
-    void FUN_1094dfd0();
-
-    char Unknown00[0x114];
-    Class_1094DFD0_Slot* Unknown114[1];
 };
 
 // FUNCTION: 0x1094DFB0 ?FUN_1094dfb0@Class_1094DFB0@@QAEXXZ

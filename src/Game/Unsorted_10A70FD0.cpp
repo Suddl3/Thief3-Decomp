@@ -1,19 +1,12 @@
 // Game/Unsorted_10A70FD0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10905A90_Member.h"
+#include "Game/Class_10A70FD0.h"
+#include "Game/Class_10AF4B90.h"
 
 extern void* DAT_10e47850[];
 
 extern float DAT_10eafbdc;
-
-class Class_10AF4B90
-{
-public:
-    Class_10AF4B90* FUN_10af4b90(int A, void* B);
-
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-};
 
 // A Class_10AF4B90 set up with (0x27, DAT_10e47850).
 class Class_10A71030 : public Class_10AF4B90
@@ -52,36 +45,10 @@ public:
     float Unknown08;
 };
 
-// Ion Storm's memory manager (0x10905AA0): the allocation happens inside a
-// scope of it (slots 8 and 9).
-class Class_10905A90_Member
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8(int A, int B);
-    virtual void Virtual9();
-};
-
 Class_10905A90_Member* FUN_10905aa0();
 
 // Ion Storm's placement new (0x10905C10).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
-
-class Class_10A70FD0
-{
-public:
-    void* FUN_10a70fd0(int A, int B);
-
-    char Unknown00[0x4];
-    int Unknown04;
-};
 
 // FUNCTION: 0x10A70FD0 ?FUN_10a70fd0@Class_10A70FD0@@QAEPAXHH@Z
 void* Class_10A70FD0::FUN_10a70fd0(int A, int B)

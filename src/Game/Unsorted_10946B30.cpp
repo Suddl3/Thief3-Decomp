@@ -1,18 +1,7 @@
 // Game/Unsorted_10946B30.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10946D70 {
-public:
-    void FUN_10946d70(void* P);
-};
-
-class Config
-{
-public:
-    static Config* Instance();
-
-    bool GetBool(const char* Section, const char* Key, bool* Value, const char* File);
-};
+#include "Game/Class_10946D70.h"
+#include "Game/Config.h"
 
 extern bool DAT_10f34104;
 

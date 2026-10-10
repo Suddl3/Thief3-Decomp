@@ -1,11 +1,12 @@
 // Game/Unsorted_10B4CD30.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10971570
-{
-public:
-    void FUN_10971570(int A, bool* B);
-};
+#include "Game/Class_10971570.h"
+#include "Game/Class_1098E330.h"
+#include "Game/Class_10AC92F0.h"
+#include "Game/Class_10B19300.h"
+#include "Game/Class_10B22020.h"
+#include "Game/Class_10F3A3D8.h"
+#include "Game/Static_10B18D00.h"
 
 class Class_10B4D010_Param
 {
@@ -51,48 +52,11 @@ public:
     int Unknown14;
 };
 
-class Class_1098E330
-{
-public:
-    int FUN_10b22000();
-};
-
-class Class_10B22020
-{
-public:
-    char Unknown00[0x54E];
-    bool Unknown54E;
-};
-
 struct Struct_10B19300_Param;
-
-class Class_10B19300
-{
-public:
-    void FUN_10b19300(Struct_10B19300_Param* A, float B);
-};
 
 Class_10B19300* FUN_10b190e0();
 
-struct Static_10B18D00
-{
-    void FUN_10b18d20(Class_10B22020* A);
-};
-
 Static_10B18D00* FUN_10b18d00();
-
-class Class_10AC92F0
-{
-public:
-    void FUN_10ac92f0();
-};
-
-class Class_10F3A3D8
-{
-public:
-    char Unknown00[0x13C];
-    Class_10AC92F0* Unknown13C;
-};
 
 extern Class_10F3A3D8* DAT_10f3a3d8;
 

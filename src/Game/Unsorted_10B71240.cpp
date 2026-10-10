@@ -1,5 +1,7 @@
 // Game/Unsorted_10B71240.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10B717E0.h"
+#include "Game/Class_10BFBD70.h"
 
 class FArray
 {
@@ -9,20 +11,6 @@ public:
     void* Data;
     int ArrayNum;
     int ArrayMax;
-};
-
-// A growable array (count, allocated, data); 0x10B71920 shows its inline destructor.
-class Class_10BFBD70
-{
-public:
-    Class_10BFBD70() : Unknown00(0), Unknown04(0), Unknown08(0) {}
-    ~Class_10BFBD70();
-
-    void FUN_10bfbd70(int NewCount);
-
-    int Unknown00;
-    int Unknown04;
-    int* Unknown08;
 };
 
 class Class_10E88AF8
@@ -139,17 +127,6 @@ public:
     virtual void Virtual54();
     virtual void Virtual55();
     virtual void FUN_10a52a90(int A);
-};
-
-class Class_10B717E0
-{
-public:
-    void FUN_10b717e0(bool Flag);
-
-    char Unknown00[0x1E8];
-    int Unknown1E8;
-    char Unknown1EC[4];
-    Class_10E67FD0** Unknown1F0;
 };
 
 // FUNCTION: 0x10B717E0 ?FUN_10b717e0@Class_10B717E0@@QAEX_N@Z

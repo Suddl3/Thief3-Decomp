@@ -1,5 +1,9 @@
 // Game/Unsorted_10A4EB60.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10A4EB60.h"
+#include "Game/Class_10A4FD00.h"
+#include "Game/Class_10AF4B90.h"
+#include "Game/InnerClass_10A4EB40.h"
 
 class APawn
 {
@@ -105,42 +109,6 @@ public:
 };
 
 extern void* DAT_10e67b54[];
-
-class Class_10AF4B90
-{
-public:
-    Class_10AF4B90* FUN_10af4b90(int A, void* B);
-
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-};
-
-class Class_10A4FD00
-{
-public:
-    Class_10A4FD00* FUN_10a4fd00();
-
-    char Unknown00[4];
-    Class_10AF4B90 Unknown04;
-};
-
-class InnerClass_10A4EB40
-{
-public:
-    void FUN_10a4e3d0(void* A, int B, int C);
-    void FUN_10a4e6f0(void* A, int B);
-    void FUN_10a4e7e0(void* A, int B);
-};
-
-class Class_10A4EB60
-{
-public:
-    char Unknown00[0x1c];
-    InnerClass_10A4EB40 Field1c;
-
-    void FUN_10a4eb60(void* A, int B);
-};
 
 // FUNCTION: 0x10A4EB60 ?FUN_10a4eb60@Class_10A4EB60@@QAEXPAXH@Z
 void Class_10A4EB60::FUN_10a4eb60(void* A, int B)

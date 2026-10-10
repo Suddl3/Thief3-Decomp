@@ -1,5 +1,7 @@
 // Game/Unsorted_10A2C650_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10A2C610.h"
+#include "Game/FCoords.h"
 
 struct Struct_10B21820_Object;
 
@@ -7,12 +9,6 @@ class Class_10B21820
 {
 public:
     Struct_10B21820_Object* FUN_10991e10();
-};
-
-class FCoords
-{
-public:
-    char Unknown00[0x30];
 };
 
 extern FCoords DAT_10f46de8;
@@ -32,16 +28,6 @@ struct Struct_10A2DA00
     bool Unknown7C;
     bool Unknown7D;
     char Unknown7E[0x32];
-};
-
-class Class_10A2C610
-{
-public:
-    void FUN_10a2c3b0(int NewCount);
-
-    int Unknown00;
-    int Unknown04;
-    Struct_10A2DA00* Unknown08;
 };
 
 class Class_10A2C2F0

@@ -1,29 +1,11 @@
 // Game/Unsorted_10ABFB50.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10ABFB00.h"
+#include "Game/Class_10ABFB00_Member.h"
 
 extern float DAT_10e49684;
 
 extern float DAT_10eafbdc;
-
-class Class_10ABFB00_Member
-{
-public:
-    virtual void Virtual0(float* A, float* B, int C);
-};
-
-class Class_10ABFB00
-{
-public:
-    void FUN_10abf660(int A);
-    void FUN_10abf7c0(int A);
-    void FUN_10abfb50(int A, int B);
-
-    bool Unknown00;
-    char Unknown01[0xB];
-    float Unknown0C;
-    char Unknown10[0x10];
-    Class_10ABFB00_Member Unknown20;
-};
 
 bool __stdcall FUN_10abf300(int A, int B);
 

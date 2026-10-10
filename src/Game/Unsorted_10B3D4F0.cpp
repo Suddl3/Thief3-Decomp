@@ -1,7 +1,7 @@
 // Game/Unsorted_10B3D4F0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-class Class_10e7e538
+class Class_10E7E538
 {
 public:
     virtual void Virtual0();
@@ -42,8 +42,8 @@ Class_10E7EC88* Class_10E7EC88::FUN_10b3d4f0()
     return this;
 }
 
-// FUNCTION: 0x10B3E160 ?FUN_10b3e160@Class_10e7e538@@UAEXH@Z
-void Class_10e7e538::FUN_10b3e160(int p1)
+// FUNCTION: 0x10B3E160 ?FUN_10b3e160@Class_10E7E538@@UAEXH@Z
+void Class_10E7E538::FUN_10b3e160(int p1)
 {
     Virtual4();
 }

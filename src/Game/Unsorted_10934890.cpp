@@ -1,23 +1,9 @@
 // Game/Unsorted_10934890.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10E49EE0_Member
-{
-public:
-    virtual int __stdcall Virtual0();
-    virtual int __stdcall Virtual1();
-    virtual int __stdcall Virtual2();
-    virtual int __stdcall Virtual3();
-    virtual int __stdcall Virtual4();
-    virtual int __stdcall Virtual5();
-    virtual int __stdcall Virtual6();
-    virtual int __stdcall Virtual7();
-    virtual int __stdcall Virtual8();
-    virtual int __stdcall Virtual9();
-    virtual int __stdcall Virtual10();
-    virtual int __stdcall Virtual11();
-    virtual int __stdcall Virtual12();
-};
+#include "Game/Class_10934DB0.h"
+#include "Game/Class_10936AC0.h"
+#include "Game/Class_10E49EE0_Member.h"
+#include "Game/Class_10E49F64.h"
 
 class Class_10E49EE0
 {
@@ -35,33 +21,7 @@ public:
     Class_10E49EE0_Member* Unknown14;
 };
 
-class Class_10936AC0
-{
-public:
-    void FUN_10936ac0(int A, int B);
-};
-
 extern Class_10936AC0* DAT_10f31be0;
-
-class Class_10E49F64
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual int FUN_10934a40(int A);
-
-    char Unknown04[0x10];
-    int Unknown14;
-    char Unknown18[4];
-    int Unknown1C;
-    int Unknown20;
-};
 
 class Class_10934DB0_Member
 {
@@ -69,14 +29,6 @@ public:
     virtual void __stdcall Virtual0();
     virtual void __stdcall Virtual1();
     virtual void __stdcall Virtual2();
-};
-
-class Class_10934DB0
-{
-public:
-    void FUN_10934db0();
-
-    Class_10934DB0_Member* Unknown00;
 };
 
 class Class_10934990

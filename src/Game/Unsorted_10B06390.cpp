@@ -1,5 +1,7 @@
 // Game/Unsorted_10B06390.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10B120F0.h"
+#include "Game/Class_10B138F0.h"
 
 struct Struct_10B0F7C0;
 
@@ -19,29 +21,11 @@ struct Struct_10B0F7C0
 
 extern "C" void* memset(void* Dest, int Value, unsigned int Count);
 
-class Class_10B120F0
-{
-public:
-    Class_10B120F0* FUN_10b120f0();
-
-    int Unknown00;
-    int Unknown04[7];
-};
-
 void FUN_10b12d20();
 
 void FUN_10b13120();
 
 void FUN_10b13180();
-
-// Parameter setter - stores parameter to field at offset 0x30
-
-class Class_10B138F0 {
-public:
-    char Unknown00[0x30];
-    int Unknown30;
-    void FUN_10b138f0(int param);
-};
 
 extern void* GWindowManager[];
 

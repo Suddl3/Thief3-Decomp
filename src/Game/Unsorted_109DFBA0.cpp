@@ -1,129 +1,24 @@
 // Game/Unsorted_109DFBA0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_109E3750.h"
+#include "Game/Class_109E3760.h"
+#include "Game/Class_109E37D0.h"
+#include "Game/Class_109E37E0.h"
+#include "Game/Class_109E37F0.h"
+#include "Game/Class_109E3800.h"
+#include "Game/Class_109E38A0.h"
+#include "Game/Class_109E38C0.h"
+#include "Game/Class_109E38D0.h"
+#include "Game/Class_109E3910.h"
+#include "Game/Class_109E3920.h"
+#include "Game/Class_109E39C0.h"
+#include "Game/Class_109E39D0.h"
+#include "Game/Class_109E39F0.h"
+#include "Game/Class_109E3A00.h"
+#include "Game/Class_109E44D0.h"
+#include "Game/Class_109E5310.h"
 
 void FUN_10d4e090();
-
-class Class_109E3750
-{
-public:
-    char Unknown00[0xdc];
-    void* FieldDC;
-    void* FUN_109e3750();
-};
-
-class Class_109E3760
-{
-public:
-    char Unknown00[0xe0];
-    void* Field_E0;
-    void* FUN_109e3760();
-};
-
-class Class_109E37D0
-{
-public:
-    char Unknown00[0xcc];
-    unsigned char FieldCC;
-    unsigned char FUN_109e37d0();
-};
-
-class Class_109E37E0 {
-    char Unknown00[0xcc];
-    unsigned char FieldCC;
-public:
-    void FUN_109e37e0(unsigned char param);
-};
-
-class Class_109E37F0
-{
-public:
-    char Unknown00[0xcd];
-    unsigned char FieldCD;
-    unsigned char FUN_109e37f0();
-};
-
-class Class_109E3800 {
-    char Unknown00[0xcd];
-    unsigned char FieldCD;
-public:
-    void FUN_109e3800(unsigned char param);
-};
-
-class Class_109E38A0 {
-public:
-    void FUN_109e38a0(unsigned char p1);
-    char Unknown00[0xce];
-    unsigned char FieldCE;
-};
-
-class Class_109E38C0 {
-public:
-    void FUN_109e38c0(int p1);
-    char Unknown00[0xb0];
-    int FieldB0;
-};
-
-class Class_109E38D0
-{
-public:
-    char Unknown00[0xb0];
-    void* FieldB0;
-    void* FUN_109e38d0();
-};
-
-struct Class_109E3910
-{
-    char unknown_00[0xd8];
-    void* unknown_d8;
-
-    void* FUN_109e3910();
-};
-
-class Class_109E3920
-{
-public:
-    char Unknown00[0xe4];
-    void* FieldE4;
-    void* FUN_109e3920();
-};
-
-class Class_109E39C0
-{
-public:
-    char Unknown00[0x100];
-    void* Field100;
-    void* FUN_109e39c0();
-};
-
-class Class_109E39D0
-{
-public:
-    char Unknown00[0x108];
-    void* Field108;
-    void* FUN_109e39d0();
-};
-
-class Class_109E39F0
-{
-public:
-    char Unknown00[0xc4];
-    void* FieldC4;
-    void* FUN_109e39f0();
-};
-
-class Class_109E3A00 {
-public:
-    void FUN_109e3a00(int p1, int p2);
-    char Unknown00[0xe4];
-    int FieldE4;
-};
-
-struct Class_109E44D0 {
-    char unknown_00[0x158];
-    void* Field_158;
-
-    void* FUN_109e44d0();
-};
 
 void FUN_10a53560();
 
@@ -132,19 +27,6 @@ struct Struct_109E5310
     char Unknown00[0x6C];
     int Unknown6C;
     int Unknown70;
-};
-
-class Class_109E5310
-{
-public:
-    void FUN_109e5310(Struct_109E5310* A);
-    void FUN_109e3d70();
-
-    char Unknown00[0x98];
-    Struct_109E5310* Unknown98;
-    char Unknown9C[0x14];
-    float UnknownB0;
-    float UnknownB4;
 };
 
 extern int DAT_10f35db8;

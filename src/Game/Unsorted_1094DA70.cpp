@@ -1,49 +1,12 @@
 // Game/Unsorted_1094DA70.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_1094DF60
-{
-public:
-    void FUN_1094df60(int A);
-
-    char Unknown00[0x10C];
-    int Unknown10C;
-    int Unknown110;
-};
-
-struct Info_1094DF40
-{
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-};
-
-class Class_1094DF40
-{
-public:
-    void FUN_1094df40(const Info_1094DF40* In);
-
-    char Unknown00[0x14C];
-    Info_1094DF40 Unknown14C;
-};
+#include "Game/Class_1094DF00.h"
+#include "Game/Class_1094DF40.h"
+#include "Game/Class_1094DF60.h"
+#include "Game/Info_1094DF40.h"
+#include "Game/Struct_1094DF00.h"
 
 extern "C" int memcmp(const void*, const void*, unsigned);
-
-struct Struct_1094DF00
-{
-    char Unknown00[0x40];
-};
-
-class Class_1094DF00
-{
-public:
-    void FUN_1094df00(const Struct_1094DF00& Value);
-
-    char Unknown00[4];
-    Struct_1094DF00 Unknown04;
-    char Unknown44[0x18];
-    unsigned int Unknown5C;
-};
 
 // FUNCTION: 0x1094DF00 ?FUN_1094df00@Class_1094DF00@@QAEXABUStruct_1094DF00@@@Z
 void Class_1094DF00::FUN_1094df00(const Struct_1094DF00& Value)

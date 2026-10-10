@@ -1,5 +1,8 @@
 // Game/Unsorted_10C25580_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10C26660.h"
+#include "Game/Class_10E5CB88.h"
+#include "Game/Class_10E99298.h"
 
 struct Object_10C255F0
 {
@@ -7,17 +10,20 @@ struct Object_10C255F0
     unsigned char Unknown0C;
 };
 
-
 extern void* DAT_10ff7098;
 
 extern float DAT_10e49984;
 
-class Class_10e992d4
+extern float DAT_10e49684;
+
+extern float DAT_10e99258;
+
+class Class_10E992D4
 {
 public:
     virtual void Virtual0();
     virtual void Virtual1();
-    virtual void Virtual2();
+    virtual void FUN_10c262b0(int p1, int p2, int p3, int p4);
     virtual void Virtual3();
     virtual void Virtual4();
     virtual void Virtual5();
@@ -26,56 +32,11 @@ public:
     virtual void Virtual8();
     virtual void Virtual9();
     virtual float FUN_10c26200();
-};
 
-extern float DAT_10e49684;
-
-class Class_10E5CB88
-{
-public:
-    virtual void Virtual0() = 0;
-    virtual void Virtual1() = 0;
-    virtual void Virtual2() = 0;
-    virtual float FUN_10c26290();
-};
-
-extern float DAT_10e99258;
-
-class Class_10E99298
-{
-public:
-    virtual void Virtual0() = 0;
-    virtual void Virtual1() = 0;
-    virtual void Virtual2() = 0;
-    virtual void Virtual3() = 0;
-    virtual void Virtual4() = 0;
-    virtual void Virtual5() = 0;
-    virtual void Virtual6() = 0;
-    virtual void Virtual7() = 0;
-    virtual void Virtual8() = 0;
-    virtual void Virtual9() = 0;
-    virtual float FUN_10c262a0();
-};
-
-class Class_10E992D4
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void FUN_10c262b0(int p1, int p2, int p3, int p4);
     char Unknown04[0x20];
     int Unknown24;
     int Unknown28;
     int Unknown2C;
-};
-
-class Class_10C26660
-{
-public:
-    char Unknown00[0x38];
-    int Unknown38;
-
-    bool FUN_10c26660();
 };
 
 // FUNCTION: 0x10C255F0 ?FUN_10c255f0@@YAHPAPAUObject_10C255F0@@0@Z
@@ -99,8 +60,8 @@ void FUN_10c25610()
     }
 }
 
-// FUNCTION: 0x10C26200 ?FUN_10c26200@Class_10e992d4@@UAEMXZ
-float Class_10e992d4::FUN_10c26200()
+// FUNCTION: 0x10C26200 ?FUN_10c26200@Class_10E992D4@@UAEMXZ
+float Class_10E992D4::FUN_10c26200()
 {
     return DAT_10e49984;
 }

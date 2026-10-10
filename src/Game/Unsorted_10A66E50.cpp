@@ -1,7 +1,8 @@
 // Game/Unsorted_10A66E50.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include <float.h>
+#include "Game/Info_10A66E50.h"
+#include "Game/Info_10A66E70.h"
 
 int FUN_10a66c80(void* A, void* B, float Epsilon);
 
@@ -20,13 +21,6 @@ public:
     int Unknown08;
 };
 
-struct Info_10A66E50
-{
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-};
-
 class Class_10A66E50
 {
 public:
@@ -34,11 +28,6 @@ public:
 
     char Unknown00[8];
     Info_10A66E50 Unknown08;
-};
-
-struct Info_10A66E70
-{
-    char Unknown00[0x24];
 };
 
 class Class_10A66E70

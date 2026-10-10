@@ -1,7 +1,7 @@
 // Game/Unsorted_109337B0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include <vector>
+#include "Game/Struct_10932ED0.h"
 
 extern "C" void* memset(void* Dest, int Value, unsigned int Count);
 
@@ -39,13 +39,6 @@ public:
 
     int Pool;
     const char* Name;
-};
-
-struct Struct_10932ED0
-{
-    float Unknown00;
-    float Unknown04;
-    float Unknown08;
 };
 
 // A pool-allocated vector of the game's VBPool classes; its destructor is the game's own.

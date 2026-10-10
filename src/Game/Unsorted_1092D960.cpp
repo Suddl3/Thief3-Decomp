@@ -1,5 +1,10 @@
 // Game/Unsorted_1092D960.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10905A90_Member.h"
+#include "Game/Class_1092D960.h"
+#include "Game/Class_1092E8F0.h"
+#include "Game/Class_1092E930.h"
+#include "Game/Class_1092F100.h"
 
 class Class_1092F100;
 
@@ -13,12 +18,6 @@ public:
     Class_1092F100** Unknown08;
 };
 
-class Class_1092F100
-{
-public:
-    void FUN_1092f100();
-};
-
 extern Class_10BFBD70 DAT_10f31b9c;
 
 struct Struct_1092FCA0
@@ -27,40 +26,7 @@ struct Struct_1092FCA0
     int Unknown38;
 };
 
-class Class_10905A90_Member
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5(void* Block);
-};
-
 Class_10905A90_Member* FUN_10905aa0();
-
-class Class_1092E8F0
-{
-public:
-    void FUN_1091f380(int A);
-    void FUN_1092e8f0();
-
-    int Unknown00;
-    int Unknown04;
-    void* Unknown08;
-};
-
-class Class_1092E930
-{
-public:
-    void FUN_10a51140(int A);
-    void FUN_1092e930();
-
-    int Unknown00;
-    int Unknown04;
-    void* Unknown08;
-};
 
 class Class_1092D960_Member
 {
@@ -68,15 +34,6 @@ public:
     virtual int __stdcall Virtual0();
     virtual int __stdcall Virtual1();
     virtual int __stdcall Virtual2();
-};
-
-class Class_1092D960
-{
-public:
-    void FUN_1092d960();
-
-    Class_1092D960_Member* Unknown00;
-    Class_1092D960_Member* Unknown04;
 };
 
 // FUNCTION: 0x1092D960 ?FUN_1092d960@Class_1092D960@@QAEXXZ

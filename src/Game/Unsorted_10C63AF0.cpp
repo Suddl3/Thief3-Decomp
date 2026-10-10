@@ -1,5 +1,9 @@
 // Game/Unsorted_10C63AF0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_109E3C90.h"
+#include "Game/Class_10C63AF0.h"
+#include "Game/Class_10C63CF0.h"
+#include "Game/Class_10C63D00.h"
 
 class Class_10C63CF0_Member {
 public:
@@ -23,13 +27,6 @@ public:
     virtual void F11() = 0;
 };
 
-class Class_10C63CF0 {
-public:
-    char Unknown00[8];
-    Class_10C63CF0_Member* Field8;
-    void FUN_10c63cf0();
-};
-
 class Class_10C63D00_Member {
 public:
     virtual void F0() = 0;
@@ -44,28 +41,6 @@ public:
     virtual void F9() = 0;
     virtual void FA() = 0;
     virtual void FB() = 0;
-};
-
-class Class_10C63D00 {
-public:
-    char Unknown00[8];
-    Class_10C63D00_Member* Field8;
-    void FUN_10c63d00();
-};
-
-class Class_109E3C90
-{
-public:
-    void FUN_109e3c90(int p1);
-};
-
-class Class_10C63AF0
-{
-public:
-    void FUN_10c63af0(int p1);
-
-    char Unknown00[0xC];
-    Class_109E3C90 Field0C;
 };
 
 // FUNCTION: 0x10C63AF0 ?FUN_10c63af0@Class_10C63AF0@@QAEXH@Z

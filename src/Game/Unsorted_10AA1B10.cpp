@@ -1,87 +1,19 @@
 // Game/Unsorted_10AA1B10.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-// Ion Storm's memory manager (0x10905AA0): the allocation happens inside a
-// scope of it (slots 8 and 9).
-class Class_10905A90_Member
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8(int A, int B);
-    virtual void Virtual9();
-};
+#include "Game/Class_10905A90_Member.h"
+#include "Game/Class_10E5D994.h"
+#include "Game/Class_10E5D998.h"
+#include "Game/Class_10E5D99C.h"
+#include "Game/Class_10E5D9A0.h"
+#include "Game/Class_10E6D390.h"
+#include "Game/Class_10E6D39C.h"
+#include "Game/Class_10E6D3A8.h"
+#include "Game/Class_10E6D3B4.h"
 
 Class_10905A90_Member* FUN_10905aa0();
 
 // Ion Storm's placement new (0x10905C10).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
-
-// FUN_10aa1a60 is the constructor: it stores the vtable and returns this.
-class Class_10E6D390
-{
-public:
-    Class_10E6D390* FUN_10aa1a60();
-
-    void* Unknown00;
-};
-
-class Class_10E5D99C
-{
-public:
-    virtual Class_10E6D390* FUN_10aa1b10();
-};
-
-// FUN_10aa1a80 is the constructor: it stores the vtable and returns this.
-class Class_10E6D39C
-{
-public:
-    Class_10E6D39C* FUN_10aa1a80();
-
-    void* Unknown00;
-};
-
-class Class_10E5D994
-{
-public:
-    virtual Class_10E6D39C* FUN_10aa1b60();
-};
-
-// FUN_10aa1aa0 is the constructor: it stores the vtable and returns this.
-class Class_10E6D3A8
-{
-public:
-    Class_10E6D3A8* FUN_10aa1aa0();
-
-    void* Unknown00;
-};
-
-class Class_10E5D9A0
-{
-public:
-    virtual Class_10E6D3A8* FUN_10aa1bb0();
-};
-
-// FUN_10aa1b00 is the constructor: it stores the vtable and returns this.
-class Class_10E6D3B4
-{
-public:
-    Class_10E6D3B4* FUN_10aa1b00();
-
-    void* Unknown00;
-};
-
-class Class_10E5D998
-{
-public:
-    virtual Class_10E6D3B4* FUN_10aa1c00();
-};
 
 // FUNCTION: 0x10AA1B10 ?FUN_10aa1b10@Class_10E5D99C@@UAEPAVClass_10E6D390@@XZ
 Class_10E6D390* Class_10E5D99C::FUN_10aa1b10()

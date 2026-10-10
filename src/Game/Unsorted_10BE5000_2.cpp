@@ -1,30 +1,18 @@
 // Game/Unsorted_10BE5000_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10c1ac00
-{
-public:
-    virtual int Virtual0();
-    int* FUN_10c1ac00(int* A);
-};
+#include "Game/Class_10C1AC00.h"
+#include "Game/Class_10FF667C.h"
 
 class Class_10C88610
 {
 public:
-    Class_10c1ac00* FUN_10c88610();
+    Class_10C1AC00* FUN_10c88610();
 };
 
 struct Struct_10BE57C0
 {
     char Unknown00[0x30];
     Class_10C88610 Unknown30;
-};
-
-class Class_10FF667C
-{
-public:
-    char Unknown00[0x78];
-    int Unknown78;
 };
 
 extern Class_10FF667C* DAT_10ff667c;
@@ -118,7 +106,7 @@ public:
 bool Class_10E95F40::FUN_10be57c0()
 {
     int Local;
-    Class_10c1ac00* Object = Unknown04->Unknown30.FUN_10c88610();
+    Class_10C1AC00* Object = Unknown04->Unknown30.FUN_10c88610();
     if (Object && Object->Virtual0() == 7)
     {
         int* Field = &DAT_10ff667c->Unknown78;

@@ -1,15 +1,9 @@
 // Game/Unsorted_10C04DC0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
+#include "Game/Struct_10C05A50.h"
 
 float FUN_10c054b0(float A, float B, float C, float D, float E);
-
-struct Struct_10C05A50
-{
-    float Unknown00;
-    float Unknown04;
-};
 
 float FUN_10c05a50(const Struct_10C05A50* A, const Struct_10C05A50* B);
 

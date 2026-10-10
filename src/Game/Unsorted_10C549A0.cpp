@@ -1,5 +1,9 @@
 // Game/Unsorted_10C549A0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10AFCF40.h"
+#include "Game/Class_10C55800.h"
+#include "Game/Class_10E9C330.h"
+#include "Game/TimeManager.h"
 
 class Class_10C55090
 {
@@ -8,28 +12,6 @@ public:
 
     Class_10C55090* Unknown00;
     Class_10C55090* Unknown04;
-};
-
-class Class_10C55800
-{
-public:
-    void FUN_10c553a0();
-
-    char Unknown00[0x18];
-    Class_10C55090* Unknown18;
-    int Unknown1C;
-};
-
-class Class_10AFCF40
-{
-public:
-    int FUN_10afcf40();
-};
-
-class TimeManager : public Class_10AFCF40
-{
-public:
-    static TimeManager* Instance();
 };
 
 class Class_10C549E0_Object
@@ -92,24 +74,6 @@ struct Struct_10C549A0
 {
     char Unknown00[4];
     int Unknown04;
-};
-
-class Class_10E9C330
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void FUN_10c549a0(Struct_10C549A0* A);
-
-    char Unknown04[0x48];
-    int Unknown4C;
-    char Unknown50[4];
-    Struct_10C549A0_Entry* Unknown54;
 };
 
 // FUNCTION: 0x10C549A0 ?FUN_10c549a0@Class_10E9C330@@UAEXPAUStruct_10C549A0@@@Z

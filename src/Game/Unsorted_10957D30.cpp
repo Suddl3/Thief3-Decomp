@@ -1,82 +1,15 @@
 // Game/Unsorted_10957D30.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_1095A7A0
-{
-public:
-    Class_1095A7A0();
-
-    char Unknown00[2];
-    char Unknown02;
-    char Unknown03;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    int Unknown10;
-    int Unknown14;
-    int Unknown18;
-    int Unknown1C;
-};
-
-class Class_1095A1A0
-{
-public:
-    void FUN_1095a1a0();
-
-    char Unknown00[8];
-    void* Unknown08;
-};
-
-class Class_1095A490
-{
-public:
-    Class_1095A490* FUN_1095a490(float A, float B, float C, float D,
-                                 float E, float F, float G, float H,
-                                 float I, float J, float K, float L,
-                                 float M, float N, float O, float P);
-
-    float Unknown00[4][4];
-};
-
-class Class_10905A90_Member
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5(void* Block);
-};
+#include "Game/Class_10905A90_Member.h"
+#include "Game/Class_10958A10.h"
+#include "Game/Class_1095A1A0.h"
+#include "Game/Class_1095A490.h"
+#include "Game/Class_1095A760.h"
+#include "Game/Class_1095A7A0.h"
 
 Class_10905A90_Member* FUN_10905aa0();
 
-class Class_1095A760
-{
-public:
-    void FUN_1095a5a0(int A);
-    void FUN_1095a760();
-
-    int Unknown00;
-    int Unknown04;
-    void* Unknown08;
-};
-
 void* operator new(unsigned int A, const int& B, int C, int D, int E, int F);
-
-class Class_10958A10
-{
-public:
-    Class_10958A10* FUN_10958a10(int A);
-
-    void* Unknown00;
-    void* Unknown04;
-    void* Unknown08;
-    int Unknown0C;
-    int Unknown10;
-    int Unknown14;
-    int Unknown18;
-};
 
 // FUNCTION: 0x10958A10 ?FUN_10958a10@Class_10958A10@@QAEPAV1@H@Z
 Class_10958A10* Class_10958A10::FUN_10958a10(int A)

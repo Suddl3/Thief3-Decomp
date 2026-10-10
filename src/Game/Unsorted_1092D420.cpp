@@ -1,5 +1,6 @@
 // Game/Unsorted_1092D420.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_1092D940.h"
 
 class Class_1092D420 {
 public:
@@ -11,15 +12,6 @@ public:
 };
 
 extern int DAT_10f31b88;
-
-class Class_1092D940
-{
-public:
-    char Unknown00[0x7D];
-    unsigned char Unknown7D;
-
-    unsigned char FUN_1092d940(unsigned char param);
-};
 
 // FUNCTION: 0x1092D420 ?FUN_1092d420@Class_1092D420@@QAEPAV1@XZ
 Class_1092D420* Class_1092D420::FUN_1092d420()

@@ -1,5 +1,8 @@
 // Game/Unsorted_10A03A30.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10E5D478.h"
+#include "Game/Class_10E5D4B8.h"
+#include "Game/InnerObject.h"
 
 extern int DAT_10f39870;
 
@@ -7,27 +10,7 @@ extern int DAT_10f39874;
 
 void FUN_10a123c0();
 
-class InnerObject {
-public:
-    int Field00;
-    int Field04;
-};
-
-class Class_10E5D4B8 {
-public:
-    int FUN_10a12dc0();
-    char Unknown00[0x40];
-    InnerObject* Field40;
-};
-
 extern void* DAT_10e5d478[];
-
-class Class_10E5D478
-{
-public:
-    void* Field00;
-    void FUN_10a12f50();
-};
 
 // FUNCTION: 0x10A0FFC0 ?FUN_10a0ffc0@@YAHXZ
 int FUN_10a0ffc0()

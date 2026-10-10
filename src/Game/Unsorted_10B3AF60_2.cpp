@@ -1,5 +1,8 @@
 // Game/Unsorted_10B3AF60_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10B3B220.h"
+#include "Game/Class_10B3C740.h"
+#include "Game/Struct_10B53A00.h"
 
 class Class_10B3B220_Item
 {
@@ -39,27 +42,6 @@ public:
     virtual void Virtual4();
     virtual void Virtual5();
     virtual Class_10B3B220_Item* Virtual6();
-};
-
-struct Struct_10B53A00
-{
-    char Unknown00[0xB0];
-    Class_10B3B220_Unknown0B0* Unknown0B0;
-    char Unknown0B4[0x39C];
-    int Unknown450;
-};
-
-class Class_10B3B220
-{
-public:
-    void FUN_10b3b220(Struct_10B53A00* P);
-};
-
-class Class_10B3C740
-{
-public:
-    int FUN_10b3c0a0(float p1, float* Out1, float* Out2);
-    int FUN_10b3c740(float p1);
 };
 
 // FUNCTION: 0x10B3B220 ?FUN_10b3b220@Class_10B3B220@@QAEXPAUStruct_10B53A00@@@Z

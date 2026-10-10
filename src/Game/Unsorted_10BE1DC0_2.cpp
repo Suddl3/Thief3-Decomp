@@ -1,17 +1,8 @@
 // Game/Unsorted_10BE1DC0_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10C08940
-{
-public:
-    int FUN_10c08940();
-};
-
-class Class_10978090
-{
-public:
-    Class_10C08940* FUN_10978090();
-};
+#include "Game/Class_10978090.h"
+#include "Game/Class_10BC4160.h"
+#include "Game/Class_10C08940.h"
 
 class Class_10FF667C
 {
@@ -21,12 +12,6 @@ public:
 };
 
 extern Class_10FF667C* DAT_10ff667c;
-
-class Class_10BC4160
-{
-public:
-    virtual void Virtual0();
-};
 
 class Class_10E94578 : public Class_10BC4160
 {

@@ -1,13 +1,39 @@
 // Game/Unsorted_10B97440.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10E90D70
-{
-public:
-    Class_10E90D70(int A, int B);
-
-    virtual void Virtual0();
-};
+#include "Game/Class_10B9C9F0.h"
+#include "Game/Class_10E8C728.h"
+#include "Game/Class_10E8C734.h"
+#include "Game/Class_10E8C740.h"
+#include "Game/Class_10E8C74C.h"
+#include "Game/Class_10E8C758.h"
+#include "Game/Class_10E8C770.h"
+#include "Game/Class_10E8C77C.h"
+#include "Game/Class_10E8C788.h"
+#include "Game/Class_10E8C794.h"
+#include "Game/Class_10E8C7A0.h"
+#include "Game/Class_10E8C7AC.h"
+#include "Game/Class_10E8C7F4.h"
+#include "Game/Class_10E8C800.h"
+#include "Game/Class_10E8C80C.h"
+#include "Game/Class_10E8C818.h"
+#include "Game/Class_10E8C824.h"
+#include "Game/Class_10E8C830.h"
+#include "Game/Class_10E8C83C.h"
+#include "Game/Class_10E8C854.h"
+#include "Game/Class_10E8C890.h"
+#include "Game/Class_10E8C8CC.h"
+#include "Game/Class_10E8C8D8.h"
+#include "Game/Class_10E8C8F0.h"
+#include "Game/Class_10E8C8FC.h"
+#include "Game/Class_10E8C908.h"
+#include "Game/Class_10E8C914.h"
+#include "Game/Class_10E8C920.h"
+#include "Game/Class_10E8C92C.h"
+#include "Game/Class_10E8C938.h"
+#include "Game/Class_10E8C944.h"
+#include "Game/Class_10E8C950.h"
+#include "Game/Class_10E8C95C.h"
+#include "Game/Class_10E90D70.h"
 
 class Class_10E8BE68 : public Class_10E90D70
 {
@@ -21,13 +47,6 @@ class InnerClass_10B9C9F0 {
 public:
     char Unknown00[0x8];
     void* Field8;
-};
-
-class Class_10B9C9F0 {
-public:
-    char Unknown00[0xc];
-    InnerClass_10B9C9F0* Fieldc;
-    void* FUN_10b9c9f0();
 };
 
 void FUN_10b9e180();
@@ -62,55 +81,21 @@ void FUN_10c13220();
 
 extern void* DAT_10e8c728[];
 
-class Class_10E8C728 {
-public:
-    Class_10E8C728* FUN_10ba4230();
-};
-
 int FUN_10aaaa10();
 
 extern void* DAT_10e8c734[];
-
-class Class_10E8C734 {
-public:
-    Class_10E8C734* FUN_10ba4290();
-};
 
 int FUN_10aa9d80();
 
 extern void* DAT_10e8c740[];
 
-class Class_10E8C740
-{
-public:
-    Class_10E8C740* FUN_10ba42f0();
-
-    void* Unknown00;
-};
-
 int FUN_10aaaea0();
 
 extern void* DAT_10e8c74c[];
 
-class Class_10E8C74C
-{
-public:
-    Class_10E8C74C* FUN_10ba4350();
-
-    void* Unknown00;
-};
-
 int FUN_10b3d210();
 
 extern void* DAT_10e8c758[];
-
-class Class_10E8C758
-{
-public:
-    Class_10E8C758* FUN_10ba43b0();
-
-    void* Unknown00;
-};
 
 int FUN_10c88a60();
 
@@ -126,63 +111,15 @@ public:
 
 extern void* DAT_10e8c770[];
 
-class Class_10E8C770
-{
-public:
-    Class_10E8C770* FUN_10ba4460();
-
-    void* Unknown00;
-};
-
 extern void* DAT_10e8c77c[];
-
-class Class_10E8C77C
-{
-public:
-    Class_10E8C77C* FUN_10ba44b0();
-
-    void* Unknown00;
-};
 
 extern void* DAT_10e8c788[];
 
-class Class_10E8C788
-{
-public:
-    Class_10E8C788* FUN_10ba4500();
-
-    void* Unknown00;
-};
-
 extern void* DAT_10e8c794[];
-
-class Class_10E8C794
-{
-public:
-    Class_10E8C794* FUN_10ba4550();
-
-    void* Unknown00;
-};
 
 extern void* DAT_10e8c7a0[];
 
-class Class_10E8C7A0
-{
-public:
-    Class_10E8C7A0* FUN_10ba45a0();
-
-    void* Unknown00;
-};
-
 extern void* DAT_10e8c7ac[];
-
-class Class_10E8C7AC
-{
-public:
-    Class_10E8C7AC* FUN_10ba45f0();
-
-    void* Unknown00;
-};
 
 extern void* DAT_10e8c7b8[];
 
@@ -239,84 +176,29 @@ int FUN_10b3d310();
 
 extern void* DAT_10e8c7f4;
 
-class Class_10E8C7F4 {
-public:
-    void* Field00;
-
-    Class_10E8C7F4* FUN_10ba4800();
-};
-
 int FUN_10b3d4b0();
 
 extern void* DAT_10e8c800[];
-
-class Class_10E8C800
-{
-public:
-    Class_10E8C800* FUN_10ba4860();
-
-    void* Unknown00;
-};
 
 int FUN_10b4cd10();
 
 extern void* DAT_10e8c80c[];
 
-class Class_10E8C80C
-{
-public:
-    Class_10E8C80C* FUN_10ba48c0();
-
-    void* Unknown00;
-};
-
 int FUN_10b3d4e0();
 
 extern void* DAT_10e8c818[];
-
-class Class_10E8C818
-{
-public:
-    Class_10E8C818* FUN_10ba4920();
-
-    void* Unknown00;
-};
 
 int FUN_10a8c930();
 
 extern void* DAT_10e8c824[];
 
-class Class_10E8C824
-{
-public:
-    Class_10E8C824* FUN_10ba4980();
-
-    void* Unknown00;
-};
-
 int __cdecl FUN_10a8d030();
 
 extern void* DAT_10e8c830[];
 
-class Class_10E8C830
-{
-public:
-    Class_10E8C830* FUN_10ba49e0();
-
-    void* Unknown00;
-};
-
 int __cdecl FUN_10be1d40(void);
 
 extern void* DAT_10e8c83c[];
-
-class Class_10E8C83C
-{
-public:
-    Class_10E8C83C* FUN_10ba4a40();
-
-    void* Unknown00;
-};
 
 int __cdecl FUN_10b349b0(void);
 
@@ -334,14 +216,6 @@ int __cdecl FUN_10bdf7c0();
 
 extern void* DAT_10e8c854[];
 
-class Class_10E8C854
-{
-public:
-    Class_10E8C854* FUN_10ba4b00();
-
-    void* Unknown00;
-};
-
 int __cdecl FUN_10bdf820();
 
 int FUN_10c13cc0();
@@ -353,13 +227,6 @@ int FUN_10bcbf50();
 int __cdecl FUN_10be1d80(void);
 
 extern void* DAT_10e8c890;
-
-class Class_10E8C890 {
-public:
-    void* Field00;
-
-    Class_10E8C890* FUN_10ba4ce0();
-};
 
 int FUN_10bd85a0(void);
 
@@ -408,21 +275,9 @@ void FUN_10be42c0();
 
 extern void* DAT_10e8c8cc[];
 
-class Class_10E8C8CC {
-public:
-    void* Field00;
-    Class_10E8C8CC* FUN_10ba4ec0();
-};
-
 int FUN_10be2f30();
 
 extern void* DAT_10e8c8d8[];
-
-class Class_10E8C8D8 {
-public:
-    void* Field00;
-    Class_10E8C8D8* FUN_10ba4f20();
-};
 
 int FUN_10bce960();
 
@@ -438,116 +293,39 @@ int FUN_10bcc070();
 
 extern void* DAT_10e8c8f0;
 
-class Class_10E8C8F0 {
-public:
-    void* Field00;
-
-    Class_10E8C8F0* FUN_10ba4fe0();
-};
-
 int FUN_10bdb460();
 
 extern void* DAT_10e8c8fc;
-
-class Class_10E8C8FC {
-public:
-    void* Field00;
-
-    Class_10E8C8FC* FUN_10ba5040();
-};
 
 int FUN_10be2fd0();
 
 extern void* DAT_10e8c908;
 
-class Class_10E8C908 {
-public:
-    void* Field00;
-
-    Class_10E8C908* FUN_10ba50a0();
-};
-
 int FUN_10bcc110();
 
 extern void* DAT_10e8c914[];
 
-class Class_10E8C914
-{
-public:
-    Class_10E8C914* FUN_10ba5100();
-
-    void* Unknown00;
-};
-
 extern void* DAT_10e8c920[];
-
-class Class_10E8C920
-{
-public:
-    Class_10E8C920* FUN_10ba5150();
-
-    void* Unknown00;
-};
 
 int FUN_10b8eeb0();
 
 extern void* DAT_10e8c92c[];
 
-class Class_10E8C92C
-{
-public:
-    Class_10E8C92C* FUN_10ba51b0();
-
-    void* Unknown00;
-};
-
 int __cdecl FUN_10a8d930();
 
 extern void* DAT_10e8c938[];
-
-class Class_10E8C938
-{
-public:
-    Class_10E8C938* FUN_10ba5210();
-
-    void* Unknown00;
-};
 
 int FUN_10934dd0();
 
 extern void* DAT_10e8c944[];
 
-class Class_10E8C944
-{
-public:
-    Class_10E8C944* FUN_10ba5270();
-
-    void* Unknown00;
-};
-
 int FUN_10bb0ae0();
 
 extern void* DAT_10e8c950[];
 
-class Class_10E8C950
-{
-public:
-    Class_10E8C950* FUN_10ba52d0();
-
-    void* Unknown00;
-};
-
 int FUN_10bb0af0();
 
 extern void* DAT_10e8c95c[];
-
-class Class_10E8C95C
-{
-public:
-    Class_10E8C95C* FUN_10ba5330();
-
-    void* Unknown00;
-};
 
 int FUN_10bb0b00();
 

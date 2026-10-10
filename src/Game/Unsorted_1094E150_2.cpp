@@ -1,21 +1,11 @@
 // Game/Unsorted_1094E150_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-struct Elem_1094E3A0
-{
-    char Unknown00[0x28];
-};
-
-class Class_1094e3a0
-{
-public:
-    char Unknown00[0x108];
-    Elem_1094E3A0* Unknown108;
-    char Unknown10C[4];
-    int Unknown110;
-
-    Elem_1094E3A0* FUN_1094e3a0();
-};
+#include "Game/Class_1094E3A0.h"
+#include "Game/Class_1094E650.h"
+#include "Game/Class_1094E690.h"
+#include "Game/Class_1094E780.h"
+#include "Game/Class_Field108.h"
+#include "Game/Elem_1094E3A0.h"
 
 struct Struct_1094E650
 {
@@ -36,15 +26,6 @@ struct Struct_1094E650_Unknown108
     Struct_1094E650_Unknown10 Unknown10[1];
 };
 
-class Class_1094E650
-{
-public:
-    void FUN_1094e650(int A, int B, Struct_1094E650* Out);
-
-    char Unknown00[0x108];
-    Struct_1094E650_Unknown108* Unknown108;
-};
-
 struct Struct_1094E690
 {
     int Unknown00;
@@ -62,32 +43,6 @@ struct Struct_1094E690_Unknown108
 {
     char Unknown00[0x10];
     Struct_1094E690_Unknown10 Unknown10[1];
-};
-
-class Class_1094E690
-{
-public:
-    void FUN_1094e690(int A, int B, Struct_1094E690* In);
-
-    char Unknown00[0x108];
-    Struct_1094E690_Unknown108* Unknown108;
-};
-
-class Class_Field108
-{
-public:
-    char Unknown00[0x20];
-    int Unknown20;
-    char Unknown24[4];
-};
-
-class Class_1094E780
-{
-public:
-    int FUN_1094e780(int param);
-
-    char Unknown00[0x108];
-    Class_Field108* Unknown108;
 };
 
 struct Struct_1094E820A
@@ -125,8 +80,8 @@ public:
     int Unknown110;
 };
 
-// FUNCTION: 0x1094E3A0 ?FUN_1094e3a0@Class_1094e3a0@@QAEPAUElem_1094E3A0@@XZ
-Elem_1094E3A0* Class_1094e3a0::FUN_1094e3a0()
+// FUNCTION: 0x1094E3A0 ?FUN_1094e3a0@Class_1094E3A0@@QAEPAUElem_1094E3A0@@XZ
+Elem_1094E3A0* Class_1094E3A0::FUN_1094e3a0()
 {
     return &Unknown108[Unknown110];
 }

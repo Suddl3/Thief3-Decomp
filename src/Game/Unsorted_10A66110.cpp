@@ -1,7 +1,11 @@
 // Game/Unsorted_10A66110.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
+#include "Game/Class_10A69170.h"
+#include "Game/Class_10A6A140.h"
+#include "Game/Class_10E6B978.h"
+#include "Game/Class_10E6BAB0.h"
+#include "Game/Class_10E6BBCC.h"
 
 extern int DAT_10e6b594;
 
@@ -39,27 +43,9 @@ public:
 
 typedef void (*VFunc)(void);
 
-class Class_10A69170 {
-public:
-    void FUN_10a69170();
-};
-
-class Class_10A6A140 {
-public:
-    void FUN_10a6a140();
-    char Unknown00[4];
-    unsigned char Field04;
-};
-
 void FUN_10a4c5f0();
 
 extern void* DAT_10e6b978;
-
-class Class_10E6B978
-{
-public:
-    void FUN_10a6da70();
-};
 
 class Class_10A67000
 {
@@ -67,34 +53,7 @@ public:
     bool FUN_10a67000(FVector V);
 };
 
-class Class_10E6BAB0
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8();
-    virtual void Virtual9();
-    virtual void Virtual10();
-    virtual void Virtual11();
-    virtual void Virtual12();
-    virtual void Virtual13();
-    virtual void Virtual14();
-    virtual bool FUN_10a70fa0(const FVector& A, Class_10A67000* B);
-};
-
 extern void* DAT_10e6bbcc[];
-
-class Class_10E6BBCC {
-public:
-    void* Field00;
-    Class_10E6BBCC* FUN_10a74820();
-};
 
 extern void* DAT_10e6bbe8[];
 

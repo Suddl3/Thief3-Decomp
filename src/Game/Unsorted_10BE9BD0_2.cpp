@@ -1,5 +1,6 @@
 // Game/Unsorted_10BE9BD0_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10E975A0.h"
 
 class Class_10BECE80_Target {
 public:
@@ -67,33 +68,6 @@ public:
 };
 
 void __stdcall FUN_109e3c90(int);
-
-class Class_10E975A0
-{
-public:
-    virtual void Virtual0() = 0;
-    virtual void Virtual1() = 0;
-    virtual void Virtual2() = 0;
-    virtual void Virtual3() = 0;
-    virtual void Virtual4() = 0;
-    virtual void Virtual5() = 0;
-    virtual void Virtual6() = 0;
-    virtual void Virtual7() = 0;
-    virtual void Virtual8() = 0;
-    virtual void Virtual9() = 0;
-    virtual void Virtual10() = 0;
-    virtual void Virtual11() = 0;
-    virtual void Virtual12() = 0;
-    virtual void Virtual13() = 0;
-    virtual void Virtual14() = 0;
-    virtual void Virtual15() = 0;
-    virtual void Virtual16() = 0;
-    virtual void Virtual17() = 0;
-    virtual void Virtual18() = 0;
-    virtual void Virtual19() = 0;
-    virtual void Virtual20() = 0;
-    virtual void FUN_10becef0();
-};
 
 // FUNCTION: 0x10BECE80 ?FUN_10bece80@Class_10E92730@@UAE_NXZ
 bool Class_10E92730::FUN_10bece80()

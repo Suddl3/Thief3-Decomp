@@ -1,16 +1,11 @@
 // Game/Unsorted_109311E0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_109333A0.h"
+#include "Game/Struct_10932ED0.h"
 
 extern void* DAT_10e49d1c[];
 
 extern "C" void* memset(void* Dest, int Value, unsigned int Count);
-
-struct Struct_10932ED0
-{
-    float Unknown00;
-    float Unknown04;
-    float Unknown08;
-};
 
 class Class_10E49D1C
 {
@@ -24,19 +19,10 @@ public:
     Struct_10932ED0 Unknown10;
 };
 
-class Class_109333a0
-{
-public:
-    char Unknown00[0x10];
-    int Field10;
-    char Unknown14[0x24];
-    int Field38;
-    int FUN_109333a0();
-};
-
 extern int DAT_10f31bdc;
 
 class Class_10939570;
+
 extern Class_10939570* DAT_10f323fc;
 
 extern int DAT_10f340ac;
@@ -53,8 +39,8 @@ void Class_10E49D1C::FUN_10932ed0()
     Unknown0C = 0;
 }
 
-// FUNCTION: 0x109333A0 ?FUN_109333a0@Class_109333a0@@QAEHXZ
-int Class_109333a0::FUN_109333a0()
+// FUNCTION: 0x109333A0 ?FUN_109333a0@Class_109333A0@@QAEHXZ
+int Class_109333A0::FUN_109333a0()
 {
     return Field10 - Field38;
 }

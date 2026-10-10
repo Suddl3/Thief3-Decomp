@@ -1,34 +1,8 @@
 // Game/Unsorted_10C485A0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-// A chained hash table's entry: 12 bytes, allocated per insert.
-class Class_10C48260_Node
-{
-public:
-    int Key;
-    int Value;
-    Class_10C48260_Node* Next;
-};
-
-// The hash table of 0x1090F080 (Class_1090F080) over another key type.
-class Class_10C48260
-{
-public:
-    void FUN_10c48400(int Size);
-
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    bool Unknown10;
-    Class_10C48260_Node** Unknown14;
-};
-
-class Class_10C49200 : public Class_10C48260
-{
-public:
-    void FUN_10c48b80(int Size);
-};
+#include "Game/Class_10C48260.h"
+#include "Game/Class_10C48260_Node.h"
+#include "Game/Class_10C49200.h"
 
 class Class_10C48160
 {

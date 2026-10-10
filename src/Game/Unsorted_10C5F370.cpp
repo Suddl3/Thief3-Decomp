@@ -1,17 +1,12 @@
 // Game/Unsorted_10C5F370.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10C5F410.h"
 
 class Class_10C5F410_Member {
 public:
     char Unknown00[0x30];
     int Field30;
     int Field34;
-};
-
-class Class_10C5F410 {
-public:
-    Class_10C5F410_Member* Field00;
-    void FUN_10c5f410(int p1, int p2);
 };
 
 extern unsigned char DAT_10ff7111;

@@ -1,5 +1,15 @@
 // Game/Unsorted_10BD8F20.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_109081E0.h"
+#include "Game/Class_10BB8300.h"
+#include "Game/Class_10BDAF90.h"
+#include "Game/Class_10BDF6F0.h"
+#include "Game/Class_10BE40A0.h"
+#include "Game/Class_10BE40B0.h"
+#include "Game/Class_10BE4FA0.h"
+#include "Game/Class_10E94578.h"
+#include "Game/FArchive.h"
+#include "Game/Struct_10BDF0A0.h"
 
 extern void* DAT_10e93e48[];
 
@@ -17,13 +27,6 @@ public:
     Class_10E93E48* FUN_10bd9780(int A, int B);
 };
 
-class FArchive
-{
-public:
-    virtual ~FArchive();
-    virtual void Serialize(void* V, int Length);
-};
-
 class Class_10E8BE68
 {
 public:
@@ -34,28 +37,6 @@ class Class_10E928E8 : public Class_10E8BE68
 {
 public:
     virtual void FUN_10bd97a0(FArchive& Ar);
-};
-
-class Class_10E94578
-{
-public:
-    virtual void FUN_10bdaf10();
-
-    void FUN_10bc5b50();
-};
-
-class Class_10BB8300
-{
-public:
-    void FUN_10bb8300();
-};
-
-class Class_10BDAF90
-{
-public:
-    char Unknown00[4];
-    Class_10BB8300* Field04;
-    void FUN_10bdaf90();
 };
 
 class Class_10E94B20
@@ -149,13 +130,6 @@ public:
     void FUN_10bdb390();
 };
 
-struct Struct_10BDF0A0
-{
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-};
-
 class Class_10BDF0A0
 {
 public:
@@ -168,14 +142,6 @@ public:
 void FUN_10bc9f40();
 
 void FUN_10bc8010();
-
-class Class_10bdf6f0
-{
-public:
-    char Unknown00[0x4d];
-    unsigned char Field4D;
-    void FUN_10bdf6f0();
-};
 
 extern void* DAT_10e954d0[];
 
@@ -228,34 +194,7 @@ public:
 
 void FUN_10bcac50();
 
-class Class_10BE40A0
-{
-public:
-    char Unknown00[0x64];
-    unsigned char Field64;
-    unsigned char FUN_10be40a0();
-};
-
-class Class_10BE40B0
-{
-public:
-    char Unknown00[0x64];
-    unsigned char Field64;
-    void FUN_10be40b0();
-};
-
 void FUN_10bc3fc0();
-
-extern const char DAT_10e47660[];
-
-class Class_109081E0
-{
-public:
-    Class_109081E0(const char* In);
-    ~Class_109081E0();
-
-    char* Unknown00;
-};
 
 class Class_10E97B00
 {
@@ -264,12 +203,6 @@ public:
 
     void** Unknown00;
     Class_109081E0 Unknown04;
-};
-
-class Class_10BE4FA0
-{
-public:
-    Class_10E97B00 FUN_10be4fa0();
 };
 
 extern const char DAT_10e960c8[];
@@ -470,8 +403,8 @@ void* FUN_10bdf650()
     return (void*)(0x100688);
 }
 
-// FUNCTION: 0x10BDF6F0 ?FUN_10bdf6f0@Class_10bdf6f0@@QAEXXZ
-void Class_10bdf6f0::FUN_10bdf6f0()
+// FUNCTION: 0x10BDF6F0 ?FUN_10bdf6f0@Class_10BDF6F0@@QAEXXZ
+void Class_10BDF6F0::FUN_10bdf6f0()
 {
     Field4D = 1;
 }

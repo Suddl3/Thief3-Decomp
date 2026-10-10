@@ -1,42 +1,9 @@
 // Game/Unsorted_10933970.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_109343B0.h"
+#include "Game/IDirect3DDevice8.h"
 
 class IDirect3DVertexBuffer8;
-
-class IDirect3DDevice8
-{
-public:
-    virtual long __stdcall Virtual0();
-    virtual long __stdcall Virtual1();
-    virtual long __stdcall Virtual2();
-    virtual long __stdcall Virtual3();
-    virtual long __stdcall Virtual4();
-    virtual long __stdcall Virtual5();
-    virtual long __stdcall Virtual6();
-    virtual long __stdcall Virtual7();
-    virtual long __stdcall Virtual8();
-    virtual long __stdcall Virtual9();
-    virtual long __stdcall Virtual10();
-    virtual long __stdcall Virtual11();
-    virtual long __stdcall Virtual12();
-    virtual long __stdcall Virtual13();
-    virtual long __stdcall Virtual14();
-    virtual long __stdcall Virtual15();
-    virtual long __stdcall Virtual16();
-    virtual long __stdcall Virtual17();
-    virtual long __stdcall Virtual18();
-    virtual long __stdcall Virtual19();
-    virtual long __stdcall Virtual20();
-    virtual long __stdcall Virtual21();
-    virtual long __stdcall Virtual22();
-    virtual long __stdcall CreateVertexBuffer(unsigned int Length, unsigned long Usage, unsigned long FVF, int Pool, IDirect3DVertexBuffer8** ppVertexBuffer);
-};
-
-class Class_109343B0
-{
-public:
-    void FUN_109343b0(IDirect3DVertexBuffer8** A);
-};
 
 class Class_10E49EB8
 {

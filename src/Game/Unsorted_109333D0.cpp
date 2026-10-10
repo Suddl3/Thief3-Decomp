@@ -1,16 +1,7 @@
 // Game/Unsorted_109333D0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include <vector>
-
-class Class_10933420
-{
-public:
-    std::vector<void*>::iterator FUN_10933420(std::vector<void*>::iterator Where);
-
-    char Unknown00[4];
-    std::vector<void*> Unknown04;
-};
+#include "Game/Class_10933420.h"
 
 class Class_10E49DFC
 {

@@ -1,5 +1,7 @@
 // Game/Unsorted_10B59300.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10905A90_Member.h"
+#include "Game/Class_10E68F74.h"
 
 class Class_10B59640
 {
@@ -91,22 +93,6 @@ public:
     void FUN_10b59640(int A);
 };
 
-// Ion Storm's memory manager (0x10905AA0).
-class Class_10905A90_Member
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void* Virtual3(void* Block, int Size, int A, int B, int C, int D);
-    virtual void Virtual4();
-    virtual void Virtual5(void* Block);
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8(int A, int B);
-    virtual void Virtual9();
-};
-
 Class_10905A90_Member* FUN_10905aa0();
 
 // A growable array of pointers: a count, the bytes allocated and the block,
@@ -166,15 +152,6 @@ class Class_10B59320_Element
 {
 public:
     virtual ~Class_10B59320_Element();
-};
-
-class Class_10E68F74
-{
-public:
-    virtual ~Class_10E68F74() {}
-
-    float Unknown04;
-    int Unknown08;
 };
 
 class Class_10E82214 : public Class_10E68F74

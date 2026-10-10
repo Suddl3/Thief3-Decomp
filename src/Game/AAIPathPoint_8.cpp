@@ -1,19 +1,9 @@
 // Game/AAIPathPoint_8.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Engine/EngineClasses.h"
+#include "Game/Class_10BBF5D0.h"
 
 class AAIPathPoint;
-
-class Class_10BBF5D0
-{
-public:
-    int Field00;
-
-    int FUN_10bbf5d0();
-    void FUN_10bc0eb0(AAIPathPoint* Point, AAIPathPoint* Other);
-    void FUN_10bc0150(AAIPathPoint* Point, AAIPathPoint* Other);
-};
 
 class AAIPathPoint : public AMarker
 {

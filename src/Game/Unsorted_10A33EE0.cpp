@@ -1,60 +1,14 @@
 // Game/Unsorted_10A33EE0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10E6649C
-{
-public:
-    virtual void FUN_10a34760(int p1, int* p2, int* p3);
-};
-
-class Class_10A34B90
-{
-public:
-    void FUN_10a34b90(int A);
-    void FUN_10a35140();
-
-    int Unknown00;
-    int Unknown04;
-    char Unknown08[4];
-    int Unknown0C;
-    char Unknown10[4];
-    void* Unknown14;
-};
-
-class Class_10A34CD0
-{
-public:
-    void FUN_10a34cd0(int A);
-    void FUN_10a35170();
-
-    int Unknown00;
-    int Unknown04;
-    char Unknown08[4];
-    int Unknown0C;
-    char Unknown10[4];
-    void* Unknown14;
-};
-
-class Object_10AB5B20
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-};
-
-class Class_10AB5B20
-{
-public:
-    Class_10AB5B20(const Class_10AB5B20& Other)
-    {
-        Unknown00 = Other.Unknown00;
-        if (Unknown00)
-            Unknown00->Virtual1();
-    }
-    ~Class_10AB5B20();
-
-    Object_10AB5B20* Unknown00;
-};
+#include "Game/Class_10905A90_Member.h"
+#include "Game/Class_10A34730.h"
+#include "Game/Class_10A34B90.h"
+#include "Game/Class_10A34CD0.h"
+#include "Game/Class_10A34D50.h"
+#include "Game/Class_10AB5B20.h"
+#include "Game/Class_10E6649C.h"
+#include "Game/Entry_10A34D50.h"
+#include "Game/Object_10AB5B20.h"
 
 struct Info_10A34730
 {
@@ -62,42 +16,7 @@ struct Info_10A34730
     Class_10AB5B20 Unknown10;
 };
 
-class Class_10A34730
-{
-public:
-    Class_10AB5B20 FUN_10a34730();
-
-    Info_10A34730* Unknown00;
-};
-
-class Class_10905A90_Member
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5(void* Block);
-};
-
 Class_10905A90_Member* FUN_10905aa0();
-
-struct Entry_10A34D50
-{
-    char Unknown00[0x6C];
-};
-
-class Class_10A34D50
-{
-public:
-    void FUN_10a33fd0(int NewCount);
-    void FUN_10a346f0();
-
-    int Unknown00;
-    int Unknown04;
-    Entry_10A34D50* Unknown08;
-};
 
 struct Struct_10A33EE0_Vec
 {

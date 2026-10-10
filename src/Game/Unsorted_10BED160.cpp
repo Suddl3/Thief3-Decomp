@@ -1,5 +1,8 @@
 // Game/Unsorted_10BED160.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10FF667C.h"
+#include "Game/Class_10FF667C_Unknown18.h"
+#include "Game/FArchive.h"
 
 extern void* DAT_10e975a0[];
 
@@ -64,31 +67,10 @@ public:
     int Unknown5C;
 };
 
-class FArchive
-{
-public:
-    virtual ~FArchive();
-    virtual void Serialize(void* V, int Length);
-};
-
 class Class_10E8BE68
 {
 public:
     virtual void FUN_10bca010(FArchive& Ar);
-};
-
-class Class_10FF667C_Unknown18
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1(FArchive& Ar, int* Value);
-};
-
-class Class_10FF667C
-{
-public:
-    char Unknown00[0x18];
-    Class_10FF667C_Unknown18* Unknown18;
 };
 
 extern Class_10FF667C* DAT_10ff667c;

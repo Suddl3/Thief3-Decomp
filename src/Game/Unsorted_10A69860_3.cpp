@@ -1,7 +1,7 @@
 // Game/Unsorted_10A69860_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
+#include "Game/Class_10E6B620.h"
 
 class AActor : public UObject
 {
@@ -28,23 +28,6 @@ class Object_10A6A0F0_C
 public:
     int Unknown00;
     Object_10A6A0F0_P* Unknown04;
-};
-
-class Class_10E6B620
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void FUN_10a6a0f0(AActor* A, Object_10A6A0F0_B* B, Object_10A6A0F0_C* C);
-
-    void FUN_10a69ad0(AActor* A);
-    void FUN_10a69c90(AActor* A, int B);
 };
 
 // FUNCTION: 0x10A6A0F0 ?FUN_10a6a0f0@Class_10E6B620@@UAEXPAVAActor@@PAVObject_10A6A0F0_B@@PAVObject_10A6A0F0_C@@@Z

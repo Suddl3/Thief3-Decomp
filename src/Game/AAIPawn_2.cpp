@@ -1,24 +1,8 @@
 // Game/AAIPawn_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10B9CAC0
-{
-public:
-    bool FUN_10b9d0c0(int A);
-};
-
-struct Struct_10B9BCA0
-{
-    char Unknown00[8];
-    Class_10B9CAC0* Unknown08;
-};
-
-class Class_10B9BCA0
-{
-public:
-    char Unknown00[0x118];
-    Struct_10B9BCA0* Unknown118;
-};
+#include "Game/Class_10B9BCA0.h"
+#include "Game/Class_10B9CAC0.h"
+#include "Game/Struct_10B9BCA0.h"
 
 class AAIPawn;
 

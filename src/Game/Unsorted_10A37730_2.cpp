@@ -1,5 +1,11 @@
 // Game/Unsorted_10A37730_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10924E80.h"
+#include "Game/Class_10E66530.h"
+#include "Game/Class_10E666A0.h"
+#include "Game/Info_10A399C0.h"
+#include "Game/Struct_10A378B0.h"
+#include "Game/UClient.h"
 
 class Class_10A37810
 {
@@ -12,29 +18,7 @@ public:
     int Unknown28;
 };
 
-struct Struct_10A378B0
-{
-    char Unknown00[4];
-    char Unknown04[0x3C];
-    bool Unknown40;
-    char Unknown41[0x25F];
-    int Unknown2A0;
-};
-
-class Class_10924E80
-{
-public:
-    void FUN_10925c60(void* A, int B);
-};
-
 extern Class_10924E80* DAT_10f2c734;
-
-class UClient
-{
-public:
-    char Unknown00[0x70];
-    int Unknown70;
-};
 
 class UEngine
 {
@@ -91,39 +75,6 @@ public:
     virtual void Virtual3();
     virtual void Virtual4();
     virtual void Virtual5(int A, int B, float C);
-};
-
-class Class_10E66530
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void FUN_10a37a30(int A, Class_10A37A30* B);
-};
-
-struct Info_10A399C0
-{
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-};
-
-class Class_10E666A0
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void FUN_10a399c0(const Info_10A399C0* In);
-
-    char Unknown04[0x28];
-    Info_10A399C0 Unknown2C;
 };
 
 // FUNCTION: 0x10A37810 ?FUN_10a37810@Class_10A37810@@QAEHXZ

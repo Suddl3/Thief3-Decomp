@@ -1,35 +1,8 @@
 // Game/Unsorted_109421E0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10942BB0
-{
-public:
-    void FUN_10942bb0(int Flag, unsigned int Value);
-
-    char Unknown00[0x158];
-    unsigned int Unknown158Bits0To18 : 19;
-    unsigned int Unknown158Bits19To31 : 13;
-};
-
-class Class_10942BF0
-{
-public:
-    int FUN_10942bf0(int Flag);
-
-    char Unknown00[0x158];
-    int Unknown158;
-};
-
-class Class_109435A0
-{
-public:
-    int FUN_109435a0(const short* Item);
-    void FUN_10942c60(int NewCount);
-
-    int Unknown00;
-    int Unknown04;
-    short* Unknown08;
-};
+#include "Game/Class_10942BB0.h"
+#include "Game/Class_10942BF0.h"
+#include "Game/Class_109435A0.h"
 
 extern "C" void* memcpy(void* Dest, const void* Src, unsigned Count);
 

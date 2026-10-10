@@ -1,20 +1,10 @@
 // Game/AT3AIPawnController_5.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10B9C9C0.h"
+#include "Game/Class_10E4CCD0.h"
 
 // Ion Storm's placement new (0x10905C10).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
-
-class Class_10E4CCD0
-{
-public:
-    virtual void Virtual0();
-};
-
-class Class_10B9C9C0
-{
-public:
-    void FUN_10b9c9c0(void* A);
-};
 
 struct Struct_10964A20
 {

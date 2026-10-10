@@ -1,108 +1,19 @@
 // Game/Unsorted_10953AC0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10905A90_Member.h"
+#include "Game/Class_10953730.h"
+#include "Game/Class_10953AC0.h"
+#include "Game/Class_10953C20.h"
+#include "Game/D3DXMATRIX.h"
+#include "Game/IDirect3DDevice8.h"
 
 struct Item_10953AC0;
 
-class Class_10905A90_Member
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5(void* Block);
-};
-
 Class_10905A90_Member* FUN_10905aa0();
-
-class Class_10953AC0
-{
-public:
-    void FUN_10953ac0(int A);
-    void FUN_10953be0();
-
-    int Unknown00;
-    int Unknown04;
-    Item_10953AC0* Unknown08;
-};
-
-class Class_10953C20
-{
-public:
-    Class_10953C20* FUN_10953c20(int A, bool B);
-
-    float Unknown00[4][4];
-    float Unknown40;
-    float Unknown44;
-    float Unknown48;
-    int Unknown4C;
-    int Unknown50;
-    float Unknown54;
-    float Unknown58;
-    float Unknown5C;
-    bool Unknown60;
-    bool Unknown61;
-    bool Unknown62;
-};
-
-struct D3DXMATRIX
-{
-    float m[4][4];
-};
-
-class IDirect3DDevice8
-{
-public:
-    virtual long __stdcall Virtual0();
-    virtual long __stdcall Virtual1();
-    virtual long __stdcall Virtual2();
-    virtual long __stdcall Virtual3();
-    virtual long __stdcall Virtual4();
-    virtual long __stdcall Virtual5();
-    virtual long __stdcall Virtual6();
-    virtual long __stdcall Virtual7();
-    virtual long __stdcall Virtual8();
-    virtual long __stdcall Virtual9();
-    virtual long __stdcall Virtual10();
-    virtual long __stdcall Virtual11();
-    virtual long __stdcall Virtual12();
-    virtual long __stdcall Virtual13();
-    virtual long __stdcall Virtual14();
-    virtual long __stdcall Virtual15();
-    virtual long __stdcall Virtual16();
-    virtual long __stdcall Virtual17();
-    virtual long __stdcall Virtual18();
-    virtual long __stdcall Virtual19();
-    virtual long __stdcall Virtual20();
-    virtual long __stdcall Virtual21();
-    virtual long __stdcall Virtual22();
-    virtual long __stdcall Virtual23();
-    virtual long __stdcall Virtual24();
-    virtual long __stdcall Virtual25();
-    virtual long __stdcall Virtual26();
-    virtual long __stdcall Virtual27();
-    virtual long __stdcall Virtual28();
-    virtual long __stdcall Virtual29();
-    virtual long __stdcall Virtual30();
-    virtual long __stdcall Virtual31();
-    virtual long __stdcall Virtual32();
-    virtual long __stdcall Virtual33();
-    virtual long __stdcall Virtual34();
-    virtual long __stdcall Virtual35();
-    virtual long __stdcall Virtual36();
-    virtual long __stdcall SetTransform(int State, const D3DXMATRIX* pMatrix);
-};
 
 extern IDirect3DDevice8* GDirect3DDevice8;
 
 class Class_10953B60;
-
-class Class_10953730
-{
-public:
-    D3DXMATRIX* FUN_10953730(D3DXMATRIX* Out, Class_10953B60* Obj);
-};
 
 class Class_1091E400
 {

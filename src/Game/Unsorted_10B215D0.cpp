@@ -1,5 +1,6 @@
 // Game/Unsorted_10B215D0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10B215D0.h"
 
 class AGarrett
 {
@@ -49,24 +50,6 @@ public:
 };
 
 extern bool DAT_10f45c0c;
-
-class Class_10B215D0
-{
-public:
-    Class_10B215D0() {}
-    Class_10B215D0(float A, float B, float C) : Unknown00(A), Unknown04(B), Unknown08(C) {}
-
-    Class_10B215D0 FUN_10b215d0(const Class_10B215D0& N);
-
-    float Dot(const Class_10B215D0& V)
-    {
-        return Unknown04 * V.Unknown04 + (Unknown00 * V.Unknown00 + Unknown08 * V.Unknown08);
-    }
-
-    float Unknown00;
-    float Unknown04;
-    float Unknown08;
-};
 
 // FUNCTION: 0x10B215D0 ?FUN_10b215d0@Class_10B215D0@@QAE?AV1@ABV1@@Z
 Class_10B215D0 Class_10B215D0::FUN_10b215d0(const Class_10B215D0& N)

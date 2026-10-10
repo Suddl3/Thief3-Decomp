@@ -1,12 +1,10 @@
 // Game/Unsorted_10B87540.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-struct Struct_10B88840
-{
-    int Unknown00;
-    int Unknown04;
-    bool Unknown08;
-};
+#include "Game/Class_10E89384.h"
+#include "Game/Class_10b888d0_Entry.h"
+#include "Game/Class_Unknown00.h"
+#include "Game/Struct_10B87560.h"
+#include "Game/Struct_10B88840.h"
 
 class Class_10B88840
 {
@@ -17,26 +15,11 @@ public:
     bool Unknown30;
 };
 
-struct Class_10b888d0_Entry
-{
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-};
-
-class Class_10b888d0
+class Class_10B888D0
 {
 public:
     Class_10b888d0_Entry Entries[1];
     int FUN_10b888d0(int index);
-};
-
-class Class_Unknown00
-{
-public:
-    char Unknown00[4];
-    int Unknown04;
-    char Unknown08[4];
 };
 
 class Class_10B888E0
@@ -80,27 +63,6 @@ public:
     void FUN_10da91d0();
 
     char Unknown00[0x18];
-};
-
-// Three values its inline constructor clears.
-struct Struct_10B87560
-{
-    Struct_10B87560() : Unknown00(0), Unknown04(0), Unknown08(0) {}
-
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-};
-
-// The base (vtable 0x10E89384); its destructor's out-of-line copy is 0x10B87530.
-class Class_10E89384
-{
-public:
-    Class_10E89384(int A) : Unknown04(A), Unknown08(0) {}
-    virtual ~Class_10E89384() {}
-
-    int Unknown04;
-    int Unknown08;
 };
 
 class Class_10E893B0 : public Class_10E89384
@@ -148,8 +110,8 @@ Class_10B88840* Class_10B88840::FUN_10b88840()
     return this;
 }
 
-// FUNCTION: 0x10B888D0 ?FUN_10b888d0@Class_10b888d0@@QAEHH@Z
-int Class_10b888d0::FUN_10b888d0(int index)
+// FUNCTION: 0x10B888D0 ?FUN_10b888d0@Class_10B888D0@@QAEHH@Z
+int Class_10B888D0::FUN_10b888d0(int index)
 {
     return Entries[index].Unknown00;
 }

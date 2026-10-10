@@ -1,12 +1,10 @@
 // Game/Unsorted_10C16250_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10FF667C_Member
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1(int p1, int* p2);
-};
+#include "Game/Class_10B1D1B0.h"
+#include "Game/Class_10B228E0.h"
+#include "Game/Class_10C168D0.h"
+#include "Game/Class_10E98C8C.h"
+#include "Game/Class_10FF667C_Member.h"
 
 class Class_10FF667C
 {
@@ -17,14 +15,6 @@ public:
 
 extern Class_10FF667C* DAT_10ff667c;
 
-class Class_10E98C8C
-{
-public:
-    virtual void FUN_10c162e0(int p1);
-
-    int Unknown04;
-};
-
 class Class_10B3ED20
 {
 public:
@@ -33,19 +23,6 @@ public:
     virtual void Virtual2();
     virtual void Virtual3();
     virtual int Virtual4();
-};
-
-class Class_10B228E0
-{
-public:
-    char Unknown00[0x90];
-    Class_10B3ED20* Unknown90;
-};
-
-class Class_10B1D1B0
-{
-public:
-    Class_10B228E0* FUN_10b1d1b0();
 };
 
 class Class_10B1D660
@@ -71,15 +48,6 @@ struct Struct_10C168D0
 {
     char Unknown00[0x1C];
     unsigned int Unknown1C;
-};
-
-class Class_10C168D0
-{
-public:
-    void FUN_10c168d0(Struct_10C168D0* P);
-
-    char Unknown00[0xA4];
-    Struct_10C168D0* UnknownA4;
 };
 
 // FUNCTION: 0x10C162E0 ?FUN_10c162e0@Class_10E98C8C@@UAEXH@Z

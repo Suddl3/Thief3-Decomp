@@ -1,18 +1,7 @@
 // Game/Unsorted_10C2F340_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
-
-class FCoords
-{
-public:
-    FCoords& FUN_10961af0(const FRotator& Rot);
-
-    FVector Origin;
-    FVector XAxis;
-    FVector YAxis;
-    FVector ZAxis;
-};
+#include "Game/FCoords.h"
 
 extern FCoords DAT_10f46de8;
 

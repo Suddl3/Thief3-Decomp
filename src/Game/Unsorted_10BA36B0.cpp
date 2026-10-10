@@ -1,5 +1,9 @@
 // Game/Unsorted_10BA36B0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10E8C64C.h"
+#include "Game/Class_10E8C650.h"
+#include "Game/Class_10E8C65C.h"
+#include "Game/Class_10E8C664.h"
 
 // Ion Storm's placement new and its delete (0x10905C10; the delete folded into ::operator delete).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
@@ -33,12 +37,6 @@ public:
     int Unknown10;
 };
 
-class Class_10E8C64C
-{
-public:
-    virtual Class_10BA3740* FUN_10ba3740();
-};
-
 extern void* DAT_10e8c2c4[];
 
 extern void* DAT_10e8c2c0[];
@@ -54,12 +52,6 @@ public:
 
     void* Unknown0C;
     int Unknown10;
-};
-
-class Class_10E8C650
-{
-public:
-    virtual Class_10BA37D0* FUN_10ba37d0();
 };
 
 extern void* DAT_10e8c320[];
@@ -79,12 +71,6 @@ public:
     int Unknown10;
 };
 
-class Class_10E8C65C
-{
-public:
-    virtual Class_10E8C320* FUN_10ba39a0();
-};
-
 extern void* DAT_10e8c35c[];
 
 extern void* DAT_10e8c358[];
@@ -101,12 +87,6 @@ public:
     void* Unknown0C;
     int Unknown10;
     int Unknown14;
-};
-
-class Class_10E8C664
-{
-public:
-    virtual Class_10E8C35C* FUN_10ba3ac0();
 };
 
 // FUNCTION: 0x10BA3740 ?FUN_10ba3740@Class_10E8C64C@@UAEPAVClass_10BA3740@@XZ

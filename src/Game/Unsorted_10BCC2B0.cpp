@@ -1,51 +1,20 @@
 // Game/Unsorted_10BCC2B0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10963740.h"
+#include "Game/Class_10AA6080.h"
+#include "Game/Class_10C06F30.h"
+#include "Game/Class_10C25EB0.h"
+#include "Game/Class_10E92690.h"
 
 class FVector;
 
 struct Struct_10BA91E0;
-
-class Class_10963740
-{
-public:
-    char Unknown00[12];
-};
-
-class Class_10C25EB0 : public Class_10963740
-{
-public:
-    char FUN_10c25fb0();
-};
-
-class Class_10C06F30
-{
-public:
-    Class_10963740* FUN_10c06f30(Class_10963740* A, int B);
-};
-
-class Class_10AA6080
-{
-public:
-    bool FUN_10aa6080(FVector* A, float B);
-};
 
 int FUN_10aa6040();
 
 float FUN_10ba91e0(const Struct_10BA91E0* A, const Struct_10BA91E0* B);
 
 extern float DAT_10eafbdc;
-
-class Class_10E92690
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual float FUN_10bcc2b0(int A, int B);
-
-    Class_10C06F30* Unknown04;
-    char Unknown08[0x10];
-};
 
 // FUNCTION: 0x10BCC2B0 ?FUN_10bcc2b0@Class_10E92690@@UAEMHH@Z
 float Class_10E92690::FUN_10bcc2b0(int A, int B)

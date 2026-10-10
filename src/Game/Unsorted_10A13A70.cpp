@@ -1,13 +1,9 @@
 // Game/Unsorted_10A13A70.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class InnerObject {
-public:
-    char Unknown00[0xb4];
-    int UnknownB4;
-};
+#include "Game/InnerObject.h"
 
 class Class_10939570;
+
 extern Class_10939570* DAT_10f323fc;
 
 class Class_Thiscall {

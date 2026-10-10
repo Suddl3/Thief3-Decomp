@@ -1,5 +1,6 @@
 // Game/Unsorted_10B2BAA0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Struct_10B2BAA0.h"
 
 typedef float FLOAT;
 
@@ -13,13 +14,6 @@ public:
 };
 
 extern FVector DAT_10f032ec;
-
-struct Struct_10B2BAA0
-{
-    Struct_10B2BAA0() : Unknown00(0) {}
-
-    int Unknown00;
-};
 
 class Class_10E67FD0
 {

@@ -1,7 +1,7 @@
 // Game/Unsorted_10B19140.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include <stdlib.h>
+#include "Game/Class_10B193E0.h"
 
 struct Struct_10B193E0
 {
@@ -11,17 +11,6 @@ struct Struct_10B193E0
     int Unknown404;
     char Unknown408[8];
     float Unknown410;
-};
-
-class Class_10B193E0
-{
-public:
-    void FUN_10b19260(Struct_10B193E0* Object, float Value);
-    void FUN_10b19140(int* Out, Struct_10B193E0* Object);
-    void FUN_10b193e0(Struct_10B193E0* Object);
-
-    char Unknown00[0x30];
-    int Unknown30;
 };
 
 int FUN_10b1dad0(int Value);

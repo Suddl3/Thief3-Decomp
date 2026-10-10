@@ -1,14 +1,8 @@
 // Game/Unsorted_10C3D8B0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
-
-struct Info_10C3DD40
-{
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-};
+#include "Game/FArchive.h"
+#include "Game/Info_10C3DD40.h"
 
 class Class_10E5B2C0
 {
@@ -22,13 +16,6 @@ public:
 
     char Unknown04[0x18];
     Info_10C3DD40 Unknown1C;
-};
-
-class FArchive
-{
-public:
-    virtual ~FArchive();
-    virtual void Serialize(void* V, int Length);
 };
 
 FArchive& FUN_10b052a0(FArchive& Ar, void* Data);

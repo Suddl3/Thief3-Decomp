@@ -1,7 +1,7 @@
 // Game/Unsorted_10AC1640.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
+#include "Game/Struct_10AC14A0.h"
 
 class Class_10AC1640_Object
 {
@@ -26,12 +26,6 @@ class Class_10A37810 : public Class_10A37860
 {
 public:
     int FUN_10a37810();
-};
-
-struct Struct_10AC14A0
-{
-    char Unknown00[0x14];
-    FRotator Unknown14;
 };
 
 class Class_10E6F910 : public Class_10A37810

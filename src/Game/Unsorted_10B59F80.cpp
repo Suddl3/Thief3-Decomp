@@ -1,5 +1,8 @@
 // Game/Unsorted_10B59F80.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_109E8930.h"
+#include "Game/Class_10A64D50.h"
+#include "Game/Class_10B15960.h"
 
 class Class_10A55050
 {
@@ -7,27 +10,9 @@ public:
     void FUN_10a55050(unsigned char A);
 };
 
-class Class_10A64D50
-{
-public:
-    void FUN_10a64d50();
-};
-
 extern void* GWindowManager[];
 
 void* FUN_10b154c0();
-
-class Class_109E8930
-{
-public:
-    void FUN_109e8930(void* Window);
-};
-
-class Class_10B15960
-{
-public:
-    bool FUN_10b15960(int A);
-};
 
 class Class_10E82688
 {

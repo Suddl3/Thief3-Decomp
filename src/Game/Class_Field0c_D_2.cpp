@@ -1,11 +1,6 @@
 // Game/Class_Field0c_D_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10C3E140
-{
-public:
-    unsigned char FUN_10c3e140();
-};
+#include "Game/Class_10C3E140.h"
 
 class Class_Field0c_D
 {

@@ -1,27 +1,10 @@
 // Game/Unsorted_1092D440_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/IDirect3DDevice8.h"
 
 extern "C" __declspec(dllimport) void* __stdcall SetCursor(void* Cursor);
 
 extern "C" __declspec(dllimport) int __stdcall ShowCursor(int Show);
-
-class IDirect3DDevice8
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8();
-    virtual void Virtual9();
-    virtual void Virtual10();
-    virtual void Virtual11();
-    virtual int __stdcall ShowCursor(int Show);
-};
 
 extern IDirect3DDevice8* GDirect3DDevice8;
 

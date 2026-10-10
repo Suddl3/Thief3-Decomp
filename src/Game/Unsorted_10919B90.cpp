@@ -1,12 +1,7 @@
 // Game/Unsorted_10919B90.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_1091DEE0
-{
-public:
-    char Unknown00[0x28];
-    float Unknown28;
-};
+#include "Game/Class_10919C40.h"
+#include "Game/Class_1091DEE0.h"
 
 extern Class_1091DEE0* DAT_10f2c928;
 
@@ -24,20 +19,6 @@ struct Struct_10919C40_B
     float Unknown04;
     char Unknown08[4];
     float Unknown0C;
-};
-
-class Class_10919C40
-{
-public:
-    float FUN_10919c40(int A);
-
-    char Unknown00[4];
-    Struct_10919C40_A* Unknown04;
-    char Unknown08[4];
-    Struct_10919C40_B* Unknown0C;
-    float Unknown10;
-    char Unknown14[0x18];
-    bool Unknown2C;
 };
 
 // FUNCTION: 0x10919C40 ?FUN_10919c40@Class_10919C40@@QAEMH@Z

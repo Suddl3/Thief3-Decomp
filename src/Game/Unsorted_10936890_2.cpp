@@ -1,15 +1,6 @@
 // Game/Unsorted_10936890_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-struct D3DVIEWPORT8
-{
-    unsigned long X;
-    unsigned long Y;
-    unsigned long Width;
-    unsigned long Height;
-    float MinZ;
-    float MaxZ;
-};
+#include "Game/D3DVIEWPORT8.h"
 
 class IDirect3DDevice8
 {

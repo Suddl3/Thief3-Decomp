@@ -1,5 +1,6 @@
 // Game/Unsorted_10951B70.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10951B70.h"
 
 class Object_10951B70_A
 {
@@ -14,20 +15,6 @@ public:
     virtual int __stdcall Virtual0();
     virtual int __stdcall Virtual1();
     virtual int __stdcall Virtual2();
-};
-
-class Class_10951B70
-{
-public:
-    void FUN_10951b70(int A);
-
-    char Unknown00[0xF0];
-    int Unknown0F0;
-    int Unknown0F4;
-    char Unknown0F8[0x80];
-    Object_10951B70_B* Unknown178;
-    Object_10951B70_A* Unknown17C;
-    Object_10951B70_A* Unknown180;
 };
 
 // FUNCTION: 0x10951B70 ?FUN_10951b70@Class_10951B70@@QAEXH@Z

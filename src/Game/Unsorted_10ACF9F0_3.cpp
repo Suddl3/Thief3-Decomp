@@ -1,13 +1,7 @@
 // Game/Unsorted_10ACF9F0_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
-
-class Class_Field04
-{
-public:
-    int FUN_1098e290(int Mode, FString* Name);
-};
+#include "Game/Class_Field04.h"
 
 extern const char DAT_10e47660[];
 

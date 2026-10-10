@@ -1,20 +1,9 @@
 // Game/Unsorted_10A55000.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10A242D0
-{
-public:
-    int FUN_10a242d0();
-};
-
-class Class_10A55000
-{
-public:
-    int FUN_10a55000();
-
-    char Unknown00[0x12C];
-    Class_10A242D0* Unknown12C;
-};
+#include "Game/Class_10A242D0.h"
+#include "Game/Class_10A24370.h"
+#include "Game/Class_10A55000.h"
+#include "Game/Class_10A55050.h"
 
 class Class_10A52BE0
 {
@@ -82,42 +71,6 @@ public:
 
     char Unknown04[0x11C];
     bool Unknown120;
-};
-
-class Class_10A24370
-{
-public:
-    void FUN_10a24370(int p1);
-
-    char Unknown00[0x70];
-    char Unknown70;
-};
-
-class Class_10A55050
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8();
-    virtual void Virtual9();
-    virtual void Virtual10();
-    virtual void Virtual11();
-    virtual void Virtual12();
-    virtual void Virtual13();
-    virtual void Virtual14();
-    virtual void Virtual15();
-    virtual void Virtual16(int A);
-
-    void FUN_10a55050(int A);
-
-    char Unknown04[0x128];
-    Class_10A24370* Unknown12c;
 };
 
 // FUNCTION: 0x10A55000 ?FUN_10a55000@Class_10A55000@@QAEHXZ

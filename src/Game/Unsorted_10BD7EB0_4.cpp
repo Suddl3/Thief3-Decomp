@@ -1,22 +1,9 @@
 // Game/Unsorted_10BD7EB0_4.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Struct_10BD7F70.h"
+#include "Game/Struct_10BD7FA0.h"
 
 extern void* DAT_10e93b68[];
-
-struct Struct_10BD7F70
-{
-    int Unknown00[3];
-    int Unknown0C[3];
-};
-
-struct Struct_10BD7FA0
-{
-    Struct_10BD7FA0() : Unknown00(0), Unknown04(0), Unknown08(0) {}
-
-    int Unknown00;
-    int Unknown04;
-    Struct_10BD7F70* Unknown08;
-};
 
 class Class_10E90D70
 {

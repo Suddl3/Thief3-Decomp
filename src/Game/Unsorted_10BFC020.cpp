@@ -1,5 +1,6 @@
 // Game/Unsorted_10BFC020.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10BFC020.h"
 
 class Class_10BFC020_Item
 {
@@ -11,17 +12,6 @@ public:
     virtual void Virtual4();
     virtual void Virtual5();
     virtual float Virtual6(int A);
-};
-
-class Class_10BFC020
-{
-public:
-    float FUN_10bfc020(int A);
-
-    char Unknown00[8];
-    int Unknown08;
-    char Unknown0C[4];
-    Class_10BFC020_Item** Unknown10;
 };
 
 // FUNCTION: 0x10BFC020 ?FUN_10bfc020@Class_10BFC020@@QAEMH@Z

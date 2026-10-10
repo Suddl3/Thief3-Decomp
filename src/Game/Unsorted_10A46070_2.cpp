@@ -1,5 +1,21 @@
 // Game/Unsorted_10A46070_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_1090A780.h"
+#include "Game/Class_1098E330.h"
+#include "Game/Class_10A50750.h"
+#include "Game/Class_10A52110.h"
+#include "Game/Class_10A52460.h"
+#include "Game/Class_10A53BD0.h"
+#include "Game/Class_10A54CC0.h"
+#include "Game/Class_10A55080.h"
+#include "Game/Class_10E67938.h"
+#include "Game/Class_10E6798C.h"
+#include "Game/Class_10E679BC.h"
+#include "Game/Class_10E67DF0.h"
+#include "Game/Class_10E67FB8.h"
+#include "Game/Class_10E7BB2C.h"
+#include "Game/InnerClass_10A4EB40.h"
+#include "Game/InnerClass_10A4EB50.h"
 
 class Class_10a46380
 {
@@ -14,75 +30,13 @@ void FUN_10991270();
 
 void FUN_10a47530();
 
-class Class_1098E330
-{
-public:
-    void FUN_1098e330(int Id, int* Out);
-};
-
 extern int DAT_10f3a084;
-
-class Class_10E67938
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual bool FUN_10a4c4d0(int A);
-    virtual void Virtual7();
-    virtual void Virtual8();
-    virtual void Virtual9();
-    virtual void Virtual10();
-    virtual void Virtual11();
-    virtual void Virtual12();
-    virtual void Virtual13();
-    virtual void Virtual14(int* Out, int A);
-};
 
 extern void* DAT_10e6798c[];
 
-class Class_10E6798C
-{
-public:
-    Class_10E6798C* FUN_10a4d310();
-    void FUN_10a4d340();
-
-    union
-    {
-        void** Unknown00;
-        void* Field00;
-    };
-    char Unknown04[0x24];
-    int Unknown28;
-    int Unknown2C;
-    int Unknown30;
-    int Unknown34;
-    int Unknown38;
-    int Unknown3C;
-    int Unknown40;
-    int Unknown44;
-    int Unknown48;
-};
-
 extern void* DAT_10e679bc[];
 
-class Class_10E679BC
-{
-public:
-    void* Field00;
-    void FUN_10a4d400();
-};
-
 void FUN_10a4e3d0();
-
-class InnerClass_10A4EB40
-{
-public:
-    void FUN_10a4e3d0();
-};
 
 class Class_10A4EB40
 {
@@ -94,12 +48,6 @@ public:
 
 void FUN_10a4e580();
 
-class InnerClass_10A4EB50
-{
-public:
-    void FUN_10a4e580();
-};
-
 class Class_10A4EB50
 {
 public:
@@ -108,60 +56,9 @@ public:
     void FUN_10a4eb50();
 };
 
-class Class_10A50750
-{
-public:
-    Class_10A50750* FUN_10a50750();
-
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    int Unknown10;
-    int Unknown14;
-    int Unknown18;
-    int Unknown1C;
-    float Unknown20;
-};
-
 void FUN_10a51ab0();
 
 extern void* DAT_10e67df0;
-
-class Class_10E67DF0
-{
-public:
-    void FUN_10a51d60();
-};
-
-class Class_10A52110
-{
-public:
-    bool FUN_10a52110();
-
-    char Unknown00[0x10C];
-    void* Unknown10C;
-    int Unknown110;
-    int Unknown114;
-};
-
-class Class_10a52460
-{
-public:
-    char Unknown00[0x58];
-    void* Unknown58;
-
-    void* FUN_10a52460();
-};
-
-class Class_10E7BB2C
-{
-public:
-    char Unknown00[0x20];
-    unsigned char Unknown20;
-
-    void FUN_10a53250();
-};
 
 extern const char DAT_10e47660[];
 
@@ -174,37 +71,7 @@ public:
     char* Unknown00;
 };
 
-class Class_10A53BD0
-{
-public:
-    Class_109081E0 FUN_10a53bd0(int A);
-};
-
 extern void* DAT_10e67fb8;
-
-class Class_10E67FB8
-{
-public:
-    void FUN_10a53d80();
-};
-
-class Class_10A54CC0
-{
-public:
-    char Unknown00[0x120];
-    unsigned char Field120;
-    unsigned char FUN_10a54cc0();
-};
-
-class Class_1090A780
-{
-public:
-    Class_1090A780() : Unknown00(0) {}
-    Class_1090A780(const Class_1090A780& Other);
-    ~Class_1090A780();
-
-    char* Unknown00;
-};
 
 class Class_10E67FD0
 {
@@ -227,13 +94,6 @@ public:
     Class_1090A780 Unknown11C;
     char Unknown120;
     char Unknown121;
-};
-
-class Class_10A55080 {
-public:
-    char Unknown00[0x119];
-    unsigned char Field119;
-    void FUN_10a55080(unsigned char param);
 };
 
 // FUNCTION: 0x10A46380 ?FUN_10a46380@Class_10a46380@@QAEHXZ
@@ -348,8 +208,8 @@ bool Class_10A52110::FUN_10a52110()
     return HasData;
 }
 
-// FUNCTION: 0x10A52460 ?FUN_10a52460@Class_10a52460@@QAEPAXXZ
-void* Class_10a52460::FUN_10a52460() {
+// FUNCTION: 0x10A52460 ?FUN_10a52460@Class_10A52460@@QAEPAXXZ
+void* Class_10A52460::FUN_10a52460() {
     return &Unknown58;
 }
 

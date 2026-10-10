@@ -1,5 +1,6 @@
 // Game/Unsorted_1093F180.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10940180.h"
 
 struct FVector
 {
@@ -24,12 +25,6 @@ struct Struct_10940180
 void FUN_109573a0(char* Unknown, FVector* Start, FVector* Direction);
 
 void __stdcall FUN_10d690fe(char* Unknown, float A, float B, float C, float D);
-
-class Class_10940180
-{
-public:
-    void FUN_1093ff60(Struct_10940180* P);
-};
 
 // FUNCTION: 0x1093FF60 ?FUN_1093ff60@Class_10940180@@QAEXPAUStruct_10940180@@@Z
 void Class_10940180::FUN_1093ff60(Struct_10940180* P)

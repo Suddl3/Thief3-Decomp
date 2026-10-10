@@ -1,38 +1,19 @@
 // Game/Unsorted_10B97C40_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10BBDB40.h"
+#include "Game/Class_10DBD510.h"
+#include "Game/Class_10E4CCD0.h"
+#include "Game/Struct_10B98C50.h"
+#include "Game/Struct_10B98E00.h"
 
 extern float DAT_10eafbdc;
 
 void* FUN_10be1a60();
 
-class Class_10BBDB40
-{
-public:
-    float FUN_10bbdb40();
-};
-
-class Class_10DBD510
-{
-public:
-    Class_10BBDB40* FUN_10dbd510(int Id);
-};
-
-struct Struct_10B98C50
-{
-    char Unknown00[8];
-    Class_10DBD510* Unknown08;
-};
-
 // Ion Storm's placement new and its delete (0x10905C10; the delete folded into ::operator delete).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
-
-struct Struct_10B98E00
-{
-    char Unknown00[8];
-    Class_10DBD510* Unknown08;
-};
 
 void* FUN_10bdf650();
 
@@ -43,13 +24,6 @@ public:
 
     void** Unknown00;
     int Unknown04[26];
-};
-
-class Class_10E4CCD0
-{
-public:
-    virtual void Virtual0();
-    virtual Class_10E95288* FUN_10b98e00(Struct_10B98E00* A);
 };
 
 // FUNCTION: 0x10B98C50 ?FUN_10b98c50@@YAHPAUStruct_10B98C50@@@Z

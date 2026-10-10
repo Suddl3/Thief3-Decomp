@@ -1,5 +1,8 @@
 // Game/Unsorted_10BBF5E0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10BC2080.h"
+#include "Game/Class_10C07ED0.h"
+#include "Game/Class_10FF667C.h"
 
 class Class_1098E330
 {
@@ -109,19 +112,6 @@ public:
     virtual int FUN_10bc2e20(int Index);
 };
 
-class Class_10C07ED0
-{
-public:
-    void FUN_10c07ed0();
-};
-
-class Class_10FF667C
-{
-public:
-    char Unknown00[0x30];
-    Class_10C07ED0* Unknown30;
-};
-
 extern Class_10FF667C* DAT_10ff667c;
 
 class ACitySectionPopulationInfo
@@ -190,18 +180,9 @@ public:
     virtual void FUN_10bc2f40(int p1);
 };
 
-class Class_10bbefa0;
+class Class_10BBEFA0;
 
-class Class_10BC2080
-{
-public:
-    void FUN_10bc1c00(void* p1, Class_10bbefa0* p2);
-    void FUN_10bc2080(Class_10bbefa0* p1);
-
-    void* Unknown00;
-};
-
-class Class_10bbefc0;
+class Class_10BBEFC0;
 
 struct Struct_10BBFEF0
 {
@@ -213,21 +194,21 @@ struct Struct_10BBFEF0
 class Class_10BBFEF0
 {
 public:
-    int FUN_10bbfef0(Class_10bbefc0* p1);
+    int FUN_10bbfef0(Class_10BBEFC0* p1);
 
     Struct_10BBFEF0* Unknown00;
 };
 
-// FUNCTION: 0x10BBFEF0 ?FUN_10bbfef0@Class_10BBFEF0@@QAEHPAVClass_10bbefc0@@@Z
-int Class_10BBFEF0::FUN_10bbfef0(Class_10bbefc0* p1)
+// FUNCTION: 0x10BBFEF0 ?FUN_10bbfef0@Class_10BBFEF0@@QAEHPAVClass_10BBEFC0@@@Z
+int Class_10BBFEF0::FUN_10bbfef0(Class_10BBEFC0* p1)
 {
     if (Unknown00->Unknown00 == 0)
         return 0;
     return *Unknown00->Unknown08;
 }
 
-// FUNCTION: 0x10BC2080 ?FUN_10bc2080@Class_10BC2080@@QAEXPAVClass_10bbefa0@@@Z
-void Class_10BC2080::FUN_10bc2080(Class_10bbefa0* p1)
+// FUNCTION: 0x10BC2080 ?FUN_10bc2080@Class_10BC2080@@QAEXPAVClass_10BBEFA0@@@Z
+void Class_10BC2080::FUN_10bc2080(Class_10BBEFA0* p1)
 {
     FUN_10bc1c00(Unknown00, p1);
 }

@@ -1,13 +1,10 @@
 // Game/Unsorted_10A6DA80.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
-
-class Class_10E67938
-{
-public:
-    virtual void FUN_10a4c470(int Type, int A, int B, int C);
-};
+#include "Game/Class_1098E330.h"
+#include "Game/Class_10E67938.h"
+#include "Game/Class_10E6B978.h"
+#include "Game/Class_10E6B9F8.h"
 
 class Class_10E6BA00 : public Class_10E67938
 {
@@ -47,23 +44,6 @@ public:
     bool FUN_10a6e690(int A);
 };
 
-class Class_10E6B9F8
-{
-public:
-    virtual void FUN_10a6e5e0(int Event, UObject* A, int B, int C);
-    virtual ~Class_10E6B9F8();
-
-    void FUN_10a6e1c0(UObject* A, int B, int C);
-    void FUN_10a6e370(UObject* A, int B, int C, int Event);
-    void FUN_10a6e490(UObject* A, int B, int C, int Event, int Id);
-};
-
-class Class_1098E330
-{
-public:
-    int FUN_1098e330(int A, int* B);
-};
-
 class Class_10E6B594
 {
 public:
@@ -88,14 +68,6 @@ public:
 };
 
 extern Class_10F46DA0* DAT_10f46da0;
-
-class Class_10E6B978
-{
-public:
-    virtual void FUN_10a6dc50(int Msg, int A, int B, int C);
-
-    void FUN_10a6db10(int A, int B, int C);
-};
 
 // FUNCTION: 0x10A6DC50 ?FUN_10a6dc50@Class_10E6B978@@UAEXHHHH@Z
 void Class_10E6B978::FUN_10a6dc50(int Msg, int A, int B, int C)

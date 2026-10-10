@@ -1,22 +1,13 @@
 // Game/Unsorted_10AA8420.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10905A90_Member.h"
+#include "Game/Class_10AA8420_Unknown08.h"
 
 typedef struct _iobuf FILE;
 
 extern char DAT_10e6c0f0[];
 
 extern "C" int fprintf(FILE* File, const char* Format, ...);
-
-class Class_10905A90_Member
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5(void* A);
-};
 
 Class_10905A90_Member* FUN_10905aa0();
 
@@ -79,14 +70,6 @@ public:
     virtual void Virtual5();
     virtual void Virtual6();
     virtual bool Virtual7(Class_10AA8420_Unknown08_Unknown00** A);
-};
-
-class Class_10AA8420_Unknown08
-{
-public:
-    Class_10AA8420_Unknown08_Unknown00* Unknown00;
-    int Unknown04;
-    int Unknown08;
 };
 
 class Class_10AA8420 : public Class_10A80CB0

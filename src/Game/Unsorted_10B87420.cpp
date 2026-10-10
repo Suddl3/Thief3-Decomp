@@ -1,13 +1,15 @@
 // Game/Unsorted_10B87420.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10B87530.h"
+#include "Game/Class_10B8EC40.h"
+#include "Game/Class_10B8F710.h"
+#include "Game/Class_10E897F4.h"
+#include "Game/Class_10E89800.h"
+#include "Game/Class_10E8980C.h"
+#include "Game/Class_10E89818.h"
+#include "Game/Class_10E89824.h"
 
 extern void* DAT_10e89384[];
-
-class Class_10B87530 {
-public:
-    void* Unknown00;
-    void FUN_10b87530();
-};
 
 extern void* DAT_10e896a8[];
 
@@ -23,66 +25,25 @@ extern int DAT_10ff6600;
 
 extern void* DAT_10e6bf84[];
 
-class Class_10B8EC40 {
-public:
-    void* Unknown00;
-    void FUN_10b8ec40();
-};
-
 // Store global address to field at offset 0 and return this
 
 extern void* DAT_10e897f4;
-
-class Class_10E897F4 {
-public:
-    void* Unknown00;
-    Class_10E897F4* FUN_10b8f6d0();
-};
 
 // Store global address to field at offset 0 and return this
 
 extern void* DAT_10e89800;
 
-class Class_10E89800 {
-public:
-    void* Unknown00;
-    Class_10E89800* FUN_10b8f6f0();
-};
-
 // Store global address to field at offset 0 and return this
 
 extern void* DAT_10e8980c;
 
-class Class_10E8980C {
-public:
-    void* Unknown00;
-    Class_10E8980C* FUN_10b8f700();
-};
-
 extern void* DAT_10e6ca18[];
-
-class Class_10B8F710 {
-public:
-    void* Unknown00;
-    void FUN_10b8f710();
-};
 
 // Store global address to field at offset 0 and return this
 
 extern void* DAT_10e89818;
 
-class Class_10E89818 {
-public:
-    void* Unknown00;
-    Class_10E89818* FUN_10b8fc80();
-};
-
 extern void* DAT_10e89824[];
-
-class Class_10E89824 {
-public:
-    Class_10E89824* FUN_10b8fca0();
-};
 
 extern void* DAT_10e89a10[];
 

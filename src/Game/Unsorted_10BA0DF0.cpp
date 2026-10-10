@@ -1,20 +1,11 @@
 // Game/Unsorted_10BA0DF0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10B9E410
-{
-public:
-    void FUN_10b9d8d0();
-};
-
-class Class_10BC9D40
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual int Virtual3();
-};
+#include "Game/Class_10B9E410.h"
+#include "Game/Class_10BAA8A0.h"
+#include "Game/Class_10BBDB40.h"
+#include "Game/Class_10BC9D40.h"
+#include "Game/Class_10C7D570.h"
+#include "Game/Class_10DBD510.h"
 
 class Class_10B9CAC0 : public Class_10B9E410
 {
@@ -22,21 +13,9 @@ public:
     Class_10BC9D40* FUN_10b9cac0();
 };
 
-class Class_10BAA8A0
-{
-public:
-    Class_10B9CAC0* FUN_10baa750();
-};
-
 class Class_10970890;
 
 class Class_10BBDB40;
-
-class Class_10c7d570
-{
-public:
-    void* FUN_10c7d570();
-};
 
 class Class_109BC840
 {
@@ -47,23 +26,11 @@ public:
     bool Unknown4A1;
 };
 
-class Class_10BAA580 : public Class_10c7d570
+class Class_10BAA580 : public Class_10C7D570
 {
 public:
     int FUN_10babe80();
     Class_109BC840* FUN_10baa580();
-};
-
-class Class_10DBD510
-{
-public:
-    Class_10BBDB40* FUN_10dbd510(int A);
-};
-
-class Class_10BBDB40
-{
-public:
-    float FUN_10bbdb40();
 };
 
 class Class_1098E330

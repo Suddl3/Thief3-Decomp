@@ -1,11 +1,8 @@
 // Game/Unsorted_10B6BE30.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10E871C8
-{
-public:
-    virtual void Virtual0();
-};
+#include "Game/Class_10B6BE30.h"
+#include "Game/Class_10B78780.h"
+#include "Game/Class_10E871C8.h"
 
 Class_10E871C8* FUN_10b70460();
 
@@ -58,43 +55,12 @@ public:
     FArray Unknown154;
 };
 
-class Class_10B78780
-{
-public:
-    void FUN_10b78780();
-
-    void** Unknown00;
-    char Unknown04[0x18C];
-};
-
 class Class_10E86A28 : public Class_10B78780
 {
 public:
     Class_10E86A28* FUN_10b6d970();
 
     int Unknown190;
-};
-
-class Class_10B6BE30
-{
-public:
-    bool FUN_10b6be30(int Value);
-
-    // The index of the first element equal to Value, else -1.
-    int FindIndex(int Value)
-    {
-        for (int i = 0; i < Unknown120; i++)
-        {
-            if (Unknown128[i] == Value)
-                return i;
-        }
-        return -1;
-    }
-
-    char Unknown00[0x120];
-    int Unknown120;
-    char Unknown124[4];
-    int* Unknown128;
 };
 
 // FUNCTION: 0x10B6BE30 ?FUN_10b6be30@Class_10B6BE30@@QAE_NH@Z

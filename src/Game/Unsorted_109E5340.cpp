@@ -1,22 +1,15 @@
 // Game/Unsorted_109E5340.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
+#include "Game/Class_109E53B0.h"
+#include "Game/Class_109E5620.h"
+#include "Game/Class_109E5700.h"
+#include "Game/Class_10E5B7C8.h"
 
 struct Struct_109E5700
 {
     Struct_109E5700* Unknown00;
     Struct_109E5700* Unknown04;
-};
-
-class Class_109E5700
-{
-public:
-    void FUN_109e5700();
-
-    char Unknown00[0x18];
-    Struct_109E5700* Unknown18;
-    int Unknown1C;
 };
 
 class Class_10A4B960
@@ -28,15 +21,6 @@ public:
 };
 
 void FUN_10a4b960(Class_10A4B960** Out, int A);
-
-class Class_109E5620
-{
-public:
-    void FUN_109e5620(int A, bool B);
-
-    char Unknown00[0x208];
-    int Unknown208;
-};
 
 extern const char DAT_10e47660[];
 
@@ -64,15 +48,6 @@ class Class_109E53B0_Unknown98
 public:
     char Unknown00[0x30];
     Class_109E53B0_Unknown30 Unknown30;
-};
-
-class Class_109E53B0
-{
-public:
-    int FUN_109e53b0(int A);
-
-    char Unknown00[0x98];
-    Class_109E53B0_Unknown98* Unknown98;
 };
 
 class Class_109E55C0_Param;
@@ -147,12 +122,6 @@ struct Struct_109E55C0
     int Count;
     char Unknown04[4];
     Class_109E55C0_Param** Data;
-};
-
-class Class_10E5B7C8
-{
-public:
-    void FUN_109e55c0(Class_109E55C0_Param* Param);
 };
 
 // FUNCTION: 0x109E53B0 ?FUN_109e53b0@Class_109E53B0@@QAEHH@Z

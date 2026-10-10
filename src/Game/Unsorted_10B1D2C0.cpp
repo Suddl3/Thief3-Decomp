@@ -1,15 +1,11 @@
 // Game/Unsorted_10B1D2C0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
-
-class Class_10B1D3D0
-{
-public:
-    void FUN_10b1d3d0(int A);
-
-    void* Unknown00;
-};
+#include "Game/Class_10B1D1B0.h"
+#include "Game/Class_10B1D3D0.h"
+#include "Game/Class_10B22D60.h"
+#include "Game/Class_10B3AF40_UnknownB0.h"
+#include "Game/Class_10B48890.h"
 
 class AT3PlayerController
 {
@@ -117,28 +113,6 @@ public:
     Class_10B1D3D0 Unknown2C4;
 };
 
-class Class_10B48890
-{
-public:
-    virtual void Virtual0();
-
-    char Unknown04[0x1C];
-    FVector Unknown20;
-    FVector Unknown2C;
-};
-
-class Class_10B3AF40_UnknownB0
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual Class_10B48890* Virtual6();
-};
-
 class APawn
 {
 public:
@@ -146,22 +120,10 @@ public:
     Class_10B3AF40_UnknownB0* m_physicsObjectPadding;
 };
 
-class Class_10B22D60
-{
-public:
-    void FUN_10b22c80();
-};
-
 struct Struct_10B1D1B0_Unknown00
 {
     char Unknown00[4];
     Class_10B22D60* Unknown04;
-};
-
-class Class_10B1D1B0
-{
-public:
-    Struct_10B1D1B0_Unknown00* Unknown00;
 };
 
 // AT3PlayerController (0x2C0 is its bIsActive bitfield).

@@ -1,13 +1,10 @@
 // Game/Unsorted_10A715C0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include <vector>
-
-class Class_10A111B0
-{
-public:
-    void FUN_10a111b0();
-};
+#include "Game/Class_10A111B0.h"
+#include "Game/Class_10A4C550.h"
+#include "Game/Class_10AB0400.h"
+#include "Game/Struct_10AB0400.h"
 
 class Class_10A72DB0 : public Class_10A111B0
 {
@@ -34,12 +31,6 @@ public:
     Struct_10A4C550_Node* Unknown00;
 };
 
-class Class_10A4C550
-{
-public:
-    Class_10A4C550_Iterator FUN_10a4c550(const unsigned int& Key);
-};
-
 class Class_10E6BAB0
 {
 public:
@@ -62,25 +53,6 @@ public:
     virtual int* FUN_10a73200(unsigned int Key);
 
     Class_10A4C550 Unknown04;
-};
-
-struct Struct_10AB0400
-{
-};
-
-class Class_10AB0400
-{
-public:
-    void FUN_10a6e990();
-    void FUN_10ab0400()
-    {
-        FUN_10a6e990();
-        delete Unknown04;
-        Unknown04 = 0;
-    }
-
-    char Unknown00[4];
-    Struct_10AB0400* Unknown04;
 };
 
 class Class_10A71C40

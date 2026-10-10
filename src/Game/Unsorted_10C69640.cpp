@@ -1,17 +1,7 @@
 // Game/Unsorted_10C69640.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include <string>
-
-class Class_10C66DE0
-{
-public:
-    Class_10C66DE0(const Class_10C66DE0& Other);
-    ~Class_10C66DE0();
-
-    std::string Unknown00;
-    std::string Unknown1C;
-};
+#include "Game/Class_10C66DE0.h"
 
 // FUNCTION: 0x10C69820 ??0Class_10C66DE0@@QAE@ABV0@@Z
 Class_10C66DE0::Class_10C66DE0(const Class_10C66DE0& Other)

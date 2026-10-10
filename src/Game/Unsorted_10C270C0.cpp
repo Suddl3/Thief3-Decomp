@@ -1,5 +1,8 @@
 // Game/Unsorted_10C270C0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10C270C0.h"
+#include "Game/Class_10C270D0.h"
+#include "Game/Class_10C273E0.h"
 
 class Class_10C270C0_Member
 {
@@ -41,39 +44,10 @@ public:
     virtual void F22() = 0;
 };
 
-class Class_10C270C0
-{
-public:
-    char Unknown00[4];
-    Class_10C270C0_Member* Unknown04;
-    void FUN_10c270c0();
-};
-
 class Object_10C270D0
 {
 public:
     virtual ~Object_10C270D0();
-};
-
-class Class_10C270D0
-{
-public:
-    void FUN_10c270d0();
-
-    char Unknown00[0x44];
-    bool Unknown44;
-    bool Unknown45;
-    char Unknown46[2];
-    Object_10C270D0* Unknown48;
-};
-
-class Class_10C273E0
-{
-public:
-    bool FUN_10c273e0(int Bit);
-
-    int Unknown00;
-    unsigned Unknown04;
 };
 
 // FUNCTION: 0x10C270C0 ?FUN_10c270c0@Class_10C270C0@@QAEXXZ

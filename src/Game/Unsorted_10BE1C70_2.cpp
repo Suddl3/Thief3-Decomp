@@ -1,22 +1,13 @@
 // Game/Unsorted_10BE1C70_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10c7d570
-{
-public:
-    void* FUN_10c7d570();
-};
+#include "Game/Class_10BFBC90.h"
+#include "Game/Class_10C7D570.h"
+#include "Game/Class_10E959B0.h"
 
 class Class_10bf7f90
 {
 public:
     void FUN_10bf7f90(int A, int B);
-};
-
-class Class_10BFBC90
-{
-public:
-    void FUN_10bfbc90();
 };
 
 class Object_10BE1CE0
@@ -114,38 +105,10 @@ class Class_10E959B0_Member
 {
 public:
     char Unknown00[8];
-    Class_10c7d570* Unknown08;
+    Class_10C7D570* Unknown08;
     Class_10bf7f90* Unknown0C;
     char Unknown10[0x20];
     Class_10BFBC90 Unknown30;
-};
-
-class Class_10E959B0
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8();
-    virtual void Virtual9();
-    virtual void Virtual10();
-    virtual void Virtual11();
-    virtual void Virtual12();
-    virtual void Virtual13();
-    virtual void Virtual14();
-    virtual void Virtual15();
-    virtual void Virtual16();
-    virtual void Virtual17();
-    virtual void Virtual18();
-    virtual void Virtual19();
-    virtual void FUN_10be1ce0(int A);
-
-    Class_10E959B0_Member* Unknown04;
 };
 
 // FUNCTION: 0x10BE1CE0 ?FUN_10be1ce0@Class_10E959B0@@UAEXH@Z

@@ -1,5 +1,6 @@
 // Game/Unsorted_1099FEA0_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_109A0310.h"
 
 extern void* DAT_10e56c48[];
 
@@ -19,15 +20,7 @@ public:
 
 extern void* DAT_10e56de0[];
 
-class Class_109a0310
-{
-public:
-    void FUN_109a0310();
-
-    void** Unknown00;
-};
-
-class Class_10E56DE0 : public Class_109a0310
+class Class_10E56DE0 : public Class_109A0310
 {
 public:
     Class_10E56DE0* FUN_109a0470();
@@ -244,13 +237,13 @@ public:
     Class_10e56b38();
 };
 
-class Class_109a0390
+class Class_109A0390
 {
 public:
     void FUN_109a0390();
 };
 
-class Class_109a0740
+class Class_109A0740
 {
 public:
     void FUN_109a0740();
@@ -280,7 +273,7 @@ public:
     Class_10E573B8();
 };
 
-class Class_109a0e60
+class Class_109A0E60
 {
 public:
     void FUN_109a0e60();
@@ -504,15 +497,15 @@ void FUN_109a1710(void* Memory)
     new ((EInternal*)Memory) Class_10e56b38();
 }
 
-// FUNCTION: 0x109A1750 ?FUN_109a1750@@YAXPAVClass_109a0390@@@Z
-void FUN_109a1750(Class_109a0390* p1)
+// FUNCTION: 0x109A1750 ?FUN_109a1750@@YAXPAVClass_109A0390@@@Z
+void FUN_109a1750(Class_109A0390* p1)
 {
     if (p1)
         p1->FUN_109a0390();
 }
 
-// FUNCTION: 0x109A17B0 ?FUN_109a17b0@@YAXPAVClass_109a0740@@@Z
-void FUN_109a17b0(Class_109a0740* p1)
+// FUNCTION: 0x109A17B0 ?FUN_109a17b0@@YAXPAVClass_109A0740@@@Z
+void FUN_109a17b0(Class_109A0740* p1)
 {
     if (p1)
         p1->FUN_109a0740();
@@ -542,8 +535,8 @@ void FUN_109a1810(void* Memory)
     new ((EInternal*)Memory) Class_10E573B8();
 }
 
-// FUNCTION: 0x109A1870 ?FUN_109a1870@@YAXPAVClass_109a0e60@@@Z
-void FUN_109a1870(Class_109a0e60* p1)
+// FUNCTION: 0x109A1870 ?FUN_109a1870@@YAXPAVClass_109A0E60@@@Z
+void FUN_109a1870(Class_109A0E60* p1)
 {
     if (p1)
         p1->FUN_109a0e60();

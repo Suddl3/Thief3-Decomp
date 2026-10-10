@@ -1,44 +1,12 @@
 // Game/Unsorted_10A87F80.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include <math.h>
 #include "Core/Core.h"
-
-class Class_10A88910
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual bool Virtual4(int Id, float* Out);
-    void FUN_10a88910(int Id, int Mode);
-
-    float Unknown04[0x20];
-};
-
-class Class_10A88970
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual bool Virtual4(int Index, float* Out);
-
-    void FUN_10a88970(int Index, int Mode);
-
-    char Unknown04[0x3FC];
-    float Unknown400[1];
-};
+#include "Game/Class_10A88910.h"
+#include "Game/Class_10A88970.h"
+#include "Game/Class_10A88D00.h"
 
 extern float DAT_10e49684;
-
-class Class_10A88D00
-{
-public:
-    float FUN_10a889e0(float A, float B);
-};
 
 // FUNCTION: 0x10A88910 ?FUN_10a88910@Class_10A88910@@QAEXHH@Z
 void Class_10A88910::FUN_10a88910(int Id, int Mode)

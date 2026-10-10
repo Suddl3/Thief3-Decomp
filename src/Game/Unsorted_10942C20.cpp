@@ -1,69 +1,19 @@
 // Game/Unsorted_10942C20.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10905A90_Member
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5(void* Block);
-};
+#include "Game/Class_10905A90_Member.h"
+#include "Game/Class_109434F0.h"
+#include "Game/Class_10943520.h"
+#include "Game/Class_109435A0.h"
+#include "Game/Class_10946110.h"
 
 Class_10905A90_Member* FUN_10905aa0();
-
-class Class_109435A0
-{
-public:
-    void FUN_10942c60(int A);
-    void FUN_10943160();
-
-    int Unknown00;
-    int Unknown04;
-    void* Unknown08;
-};
 
 struct Struct_109434F0
 {
     char Unknown00[0x20];
 };
 
-class Class_109434F0
-{
-public:
-    int FUN_109434f0(const Struct_109434F0& Item);
-    void FUN_10dcd540(int Count);
-
-    int Unknown00;
-    int Unknown04;
-    Struct_109434F0* Unknown08;
-};
-
-class Class_10943520
-{
-public:
-    void FUN_10943240(int A);
-    void FUN_10943520();
-
-    int Unknown00;
-    int Unknown04;
-    void* Unknown08;
-};
-
 struct Entry_10946110;
-
-class Class_10946110
-{
-public:
-    void FUN_10943350(int NewCount);
-    void FUN_10943560();
-
-    int Unknown00;
-    int Unknown04;
-    Entry_10946110* Unknown08;
-};
 
 class Class_10E4A668_Unknown130_Unknown04
 {

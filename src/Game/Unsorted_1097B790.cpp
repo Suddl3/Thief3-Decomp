@@ -1,25 +1,17 @@
 // Game/Unsorted_1097B790.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
-
-class Class_1096BD50
-{
-public:
-    Class_1096BD50* FUN_1096bd50(UClass* InClass);
-};
-
-class Class_1097CAA0 : public Class_1096BD50
-{
-public:
-    Class_1097CAA0* FUN_1097caa0();
-};
-
-class Class_1097CAE0 : public Class_1096BD50
-{
-public:
-    Class_1097CAE0* FUN_1097cae0();
-};
+#include "Game/Class_109081E0.h"
+#include "Game/Class_1096BD50.h"
+#include "Game/Class_1097B240.h"
+#include "Game/Class_1097B790.h"
+#include "Game/Class_1097CAA0.h"
+#include "Game/Class_1097CAE0.h"
+#include "Game/Class_1097CB20.h"
+#include "Game/Class_1097CB60.h"
+#include "Game/Class_1097CBA0.h"
+#include "Game/Class_1097CBE0.h"
+#include "Game/USkeletalMesh.h"
 
 class AActor;
 
@@ -28,43 +20,11 @@ class APawn
     DECLARE_CLASS(APawn, AActor, 0x800, Engine)
 };
 
-class Class_1097CB20 : public Class_1096BD50
-{
-public:
-    Class_1097CB20* FUN_1097cb20();
-};
-
 class ULodMesh;
-
-class USkeletalMesh
-{
-    DECLARE_CLASS(USkeletalMesh, ULodMesh, 0x40, Engine)
-};
-
-class Class_1097CB60 : public Class_1096BD50
-{
-public:
-    Class_1097CB60* FUN_1097cb60();
-};
 
 class UMeshAnimation
 {
     DECLARE_CLASS(UMeshAnimation, UObject, 0x40, Engine)
-};
-
-class Class_1097CBA0 : public Class_1096BD50
-{
-public:
-    Class_1097CBA0* FUN_1097cba0();
-};
-
-// Ion Storm's string (0x109081E0): a char pointer, null when default constructed.
-class Class_109081E0
-{
-public:
-    ~Class_109081E0();
-
-    char* Unknown00;
 };
 
 // A chained hash table's entry: 24 bytes, allocated per insert.
@@ -76,37 +36,11 @@ public:
     Class_1097B240_Node* Next;
 };
 
-class Class_1097B240
-{
-public:
-    void FUN_1097b240(int Size);
-
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    bool Unknown10;
-    Class_1097B240_Node** Unknown14;
-};
-
-class Class_1097CBE0 : public Class_1097B240
-{
-public:
-    void FUN_1097c880(int Size);
-};
-
 struct Struct_1097B790
 {
     char Unknown00[0x2C];
     void** Unknown2C;
     int Unknown30;
-};
-
-class Class_1097B790
-{
-public:
-    void FUN_1097afb0(void* Item, int Flags);
-    void FUN_1097b790(Struct_1097B790* A);
 };
 
 // FUNCTION: 0x1097B790 ?FUN_1097b790@Class_1097B790@@QAEXPAUStruct_1097B790@@@Z

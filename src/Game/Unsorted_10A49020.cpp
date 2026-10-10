@@ -1,7 +1,9 @@
 // Game/Unsorted_10A49020.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
+#include "Game/Class_10A492B0_Field18.h"
+#include "Game/Class_10A4C4A0.h"
+#include "Game/FCoords.h"
 
 int FUN_10a48b30(int A, int B);
 
@@ -18,26 +20,6 @@ struct Struct_10A4C4A0
     int Unknown00;
     int Unknown04;
     Struct_10A4C4A0_Pair Unknown08;
-};
-
-class Class_10A4C4A0
-{
-public:
-    Struct_10A4C4A0* FUN_10a4c0d0(int A, int B);
-    void FUN_10a4c4a0(int A, int B, Struct_10A4C4A0_Pair* C);
-};
-
-class FCoords
-{
-public:
-    FCoords() {}
-
-    FRotator OrthoRotation() const;
-
-    FVector Origin;
-    FVector XAxis;
-    FVector YAxis;
-    FVector ZAxis;
 };
 
 void FUN_10a48f20(int A, int B, FCoords* Out);
@@ -67,13 +49,6 @@ public:
     Class_109081E0 Key;
     int Value;
     Class_10A492B0_Node* Next;
-};
-
-// The table's key hasher: slot 0 gives the bytes FUN_1090e9b0 hashes.
-class Class_10A492B0_Field18
-{
-public:
-    virtual void Virtual0(const Class_109081E0& Key, const void** Data, int* Length);
 };
 
 class Class_10A492B0

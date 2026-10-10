@@ -1,5 +1,9 @@
 // Game/Unsorted_10B40620.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10B2A160.h"
+#include "Game/Class_10B2A160_Node.h"
+#include "Game/Class_10E696A8.h"
+#include "Game/Struct_10B406A0.h"
 
 class FArray
 {
@@ -36,23 +40,6 @@ public:
     int Unknown134;
 };
 
-struct Struct_10B406A0
-{
-    Struct_10B406A0() : Unknown00(0) {}
-
-    int Unknown00;
-};
-
-class Class_10E696A8
-{
-public:
-    Class_10E696A8();
-
-    virtual ~Class_10E696A8();
-
-    char Unknown04[0x1C8];
-};
-
 class Class_10E7FB08 : public Class_10E696A8
 {
 public:
@@ -75,28 +62,6 @@ public:
     int Unknown1FC;
     int Unknown200;
     bool Unknown204;
-};
-
-// A chained hash table's entry, allocated per insert.
-class Class_10B2A160_Node
-{
-public:
-    int Unknown00;
-    int Unknown04;
-    Class_10B2A160_Node* Next;
-};
-
-class Class_10B2A160
-{
-public:
-    void FUN_10b2a220(int Size);
-
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    bool Unknown10;
-    Class_10B2A160_Node** Unknown14;
 };
 
 class Class_10B408D0 : public Class_10B2A160

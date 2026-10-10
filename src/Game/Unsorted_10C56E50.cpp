@@ -1,5 +1,8 @@
 // Game/Unsorted_10C56E50.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10C56E50.h"
+#include "Game/Class_10C576F0.h"
+#include "Game/Class_10C576F0_Field18.h"
 
 // Ion Storm's placement new and its delete (0x10905C10; the delete folded into ::operator delete).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
@@ -15,76 +18,6 @@ public:
     int Key;
     int Value;
     Class_10C576F0_Node* Next;
-};
-
-// The table's key hasher: slot 0 gives the bytes FUN_1090e9b0 hashes.
-class Class_10C576F0_Field18
-{
-public:
-    virtual void Virtual0(const int& Key, const void** Data, int* Length);
-};
-
-// The hash table of 0x1090F080 (Class_1090F080) over another key type.
-class Class_10C576F0
-{
-public:
-    unsigned int FUN_10c576f0(const int& Key, const int& Value);
-    void FUN_10c577b0(int Size);
-
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    bool Unknown10;
-    Class_10C576F0_Node** Unknown14;
-    Class_10C576F0_Field18 Unknown18;
-};
-
-class Class_10C56E50
-{
-public:
-    void FUN_10c56e50();
-
-    float Unknown00;
-    float Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    int Unknown10;
-    int Unknown14;
-    int Unknown18;
-    int Unknown1C;
-    int Unknown20;
-    int Unknown24;
-    int Unknown28;
-    int Unknown2C;
-    int Unknown30;
-    int Unknown34;
-    int Unknown38;
-    int Unknown3C;
-    int Unknown40;
-    int Unknown44;
-    int Unknown48;
-    int Unknown4C;
-    int Unknown50;
-    int Unknown54;
-    int Unknown58;
-    int Unknown5C;
-    int Unknown60;
-    int Unknown64;
-    int Unknown68;
-    int Unknown6C;
-    int Unknown70;
-    int Unknown74;
-    int Unknown78;
-    int Unknown7C;
-    int Unknown80;
-    int Unknown84;
-    int Unknown88;
-    int Unknown8C;
-    int Unknown90;
-    int Unknown94;
-    float Unknown98;
-    int Unknown9C;
 };
 
 // FUNCTION: 0x10C56E50 ?FUN_10c56e50@Class_10C56E50@@QAEXXZ

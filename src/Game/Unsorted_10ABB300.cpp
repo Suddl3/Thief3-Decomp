@@ -1,5 +1,9 @@
 // Game/Unsorted_10ABB300.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10951900.h"
+#include "Game/Class_10ABB300.h"
+#include "Game/Class_10ABB480.h"
+#include "Game/Struct_10ABB300.h"
 
 struct Struct_10ABB4B0
 {
@@ -19,12 +23,6 @@ public:
 
     char Unknown04[0x18];
     Struct_10ABB4B0* Unknown1C;
-};
-
-class Class_10951900
-{
-public:
-    void FUN_10951900(int* A, int B);
 };
 
 class Class_1092F270
@@ -48,40 +46,11 @@ struct Struct_10ABB300_Slot
     int Unknown04;
 };
 
-struct Struct_10ABB300
-{
-    Struct_10ABB300_Owner* Unknown00;
-    bool Unknown04;
-};
-
-class Class_10ABB300
-{
-public:
-    void FUN_10abb300(Struct_10ABB300* P);
-
-    char Unknown00[4];
-    int Unknown04;
-    int Unknown08;
-    char Unknown0C[4];
-    Struct_10ABB300_Slot** Unknown10;
-};
-
 class Class_10ABB480_Element
 {
 public:
     virtual void Virtual0();
     virtual void Virtual1();
-};
-
-class Class_10ABB480
-{
-public:
-    void FUN_10abb480();
-
-    char Unknown00[4];
-    int Unknown04;
-    char Unknown08[4];
-    Class_10ABB480_Element** Unknown0C;
 };
 
 // FUNCTION: 0x10ABB300 ?FUN_10abb300@Class_10ABB300@@QAEXPAUStruct_10ABB300@@@Z

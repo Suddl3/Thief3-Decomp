@@ -1,13 +1,6 @@
 // Game/Unsorted_10AAB8D0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Config
-{
-public:
-    static Config* Instance();
-
-    bool GetFloat(const char* Section, const char* Key, float* Value, const char* File);
-};
+#include "Game/Config.h"
 
 extern void* DAT_10e6da90[];
 

@@ -1,11 +1,6 @@
 // Game/Unsorted_10917F30.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10924E80
-{
-public:
-    void FUN_10926f20(int A, int B);
-};
+#include "Game/Class_10924E80.h"
 
 class Class_10924100;
 

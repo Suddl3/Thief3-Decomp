@@ -1,5 +1,8 @@
 // Game/Unsorted_10B88900.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10905A90_Member.h"
+#include "Game/Class_10B88A80_Field18.h"
+#include "Game/Class_10B89820.h"
 
 // Ion Storm's string (0x109081E0): a char pointer, null when default constructed.
 class Class_109081E0
@@ -28,13 +31,6 @@ public:
     Class_10B88A80_Node* Next;
 };
 
-// The table's key hasher: slot 0 gives the bytes FUN_1090e9b0 hashes.
-class Class_10B88A80_Field18
-{
-public:
-    virtual void Virtual0(const Class_109081E0& Key, const void** Data, int* Length);
-};
-
 class Class_10B88A80
 {
 public:
@@ -50,29 +46,7 @@ public:
     Class_10B88A80_Field18 Unknown18;
 };
 
-class Class_10905A90_Member
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2(int A, int B, int C, int D, int E);
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5(void* Block);
-};
-
 Class_10905A90_Member* FUN_10905aa0();
-
-class Class_10B89820
-{
-public:
-    void FUN_10b89460(int Count);
-    void FUN_10b89820();
-
-    int Unknown00;
-    int Unknown04;
-    void* Unknown08;
-};
 
 // FUNCTION: 0x10B88A80 ?FUN_10b88a80@Class_10B88A80@@QAEIABVClass_109081E0@@ABH@Z
 unsigned int Class_10B88A80::FUN_10b88a80(const Class_109081E0& Key, const int& Value)

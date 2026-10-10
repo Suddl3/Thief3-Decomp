@@ -1,5 +1,6 @@
 // Game/Unsorted_10B4BCE0_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10E7E6A0.h"
 
 enum EFatalAttackState
 {
@@ -20,15 +21,6 @@ public:
     unsigned bUpdatePhysHeight : 1;
     char Unknown454[0xFC];
     unsigned char FatalAttackState;
-};
-
-class Class_10E7E6A0
-{
-public:
-    virtual void Virtual0();
-
-    void FUN_10b3ae90(AGarrett* Garrett);
-    void FUN_10b3b130(AGarrett* Garrett);
 };
 
 class Class_10E816E0 : public Class_10E7E6A0
