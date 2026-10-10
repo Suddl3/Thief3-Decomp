@@ -18,6 +18,8 @@ public:
     virtual bool FUN_10b8ec30();
     virtual Class_109081E0 FUN_10b8ecd0();
 
+    Class_10E89720();
+
     int Unknown04;
 };
 

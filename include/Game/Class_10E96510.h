@@ -24,6 +24,7 @@ public:
     char Unknown08[0x48];
     float Unknown50;
     FVector Unknown54;
+    char Pad60[0x70];
 };
 
 #endif // GAME_CLASS_10E96510_H

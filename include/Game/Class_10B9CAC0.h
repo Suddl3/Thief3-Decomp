@@ -19,6 +19,7 @@ public:
     void FUN_10b9d330(int A);
 
     char Pad01[0xb];
+    char Pad47[0x1];
     Class_10BB8300* Unknown0C;
     int Unknown10;
     char Unknown14[4];

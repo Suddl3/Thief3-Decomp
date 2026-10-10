@@ -17,6 +17,7 @@ public:
     void FUN_10b2b9d0(int p1);
 
     FArray Unknown118;
+    char Pad124[0x38];
 };
 
 #endif // GAME_CLASS_10E7FED0_H

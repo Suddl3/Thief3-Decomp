@@ -21,6 +21,7 @@ public:
 
     char Pad01[0x3];
     char Unknown04[0x30];
+    char Pad6B[0x1];
 };
 
 #endif // GAME_CLASS_10B19300_H

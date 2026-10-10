@@ -11,6 +11,7 @@ public:
     void FUN_10b7ab80(int A, float B);
 
     char Pad01[0x7];
+    char Pad2F[0x1];
     int Unknown08;
     char Unknown0C[0x10];
     float Unknown1C;

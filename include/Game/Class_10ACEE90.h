@@ -6,9 +6,9 @@
 class Class_10ACEE90
 {
 public:
-    void FUN_10acf2d0();
     bool FUN_10acee90();
     void FUN_10acf0a0();
+    bool FUN_10acf2d0();
 
     char Pad00[0x1];
 };

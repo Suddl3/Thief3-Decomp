@@ -82,6 +82,7 @@ public:
     FVector Unknown4A4;
     char Pad4B0[0x70];
     int Unknown520;
+    char Pad524[0x4];
 };
 
 #endif // GAME_STRUCT_10B21820_OBJECT_H

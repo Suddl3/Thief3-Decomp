@@ -14,6 +14,7 @@ public:
     void FUN_10daa100();
 
     char Pad01[0x7];
+    char Pad13[0x1];
     Class_10C63AD0_Member* Unknown08;
 };
 

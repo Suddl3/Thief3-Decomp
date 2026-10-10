@@ -25,6 +25,8 @@ public:
     virtual void FUN_10b4e660(Info_10B4E660* Out);
 
     Class_10E7EA48* FUN_10b3d380();
+
+    char Pad04[0xc];
 };
 
 #endif // GAME_CLASS_10E7EA48_H

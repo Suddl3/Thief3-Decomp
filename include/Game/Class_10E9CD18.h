@@ -15,6 +15,7 @@ public:
 
     char Pad04[0x38];
     unsigned char Field3c;
+    char Pad81[0x3];
 };
 
 #endif // GAME_CLASS_10E9CD18_H

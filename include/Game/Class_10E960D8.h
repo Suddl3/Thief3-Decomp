@@ -111,8 +111,9 @@ public:
     void FUN_10be8ee0();
 
     Class_10BB8140* Unknown04;
-    char Unknown08[0x60];
+    char Pad08[0x60];
     int Unknown68;
+    char Pad6C[0x8];
 };
 
 #endif // GAME_CLASS_10E960D8_H

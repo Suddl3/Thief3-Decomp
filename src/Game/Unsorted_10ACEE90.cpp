@@ -3,6 +3,7 @@
 #include "Core/Core.h"
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10A174E0.h"
+#include "Game/Class_10ACEE90.h"
 
 Class_10905A90_Member* FUN_10905aa0();
 
@@ -33,12 +34,6 @@ public:
 };
 
 extern UEngine* GEngine;
-
-class Class_10ACEE90
-{
-public:
-    bool FUN_10acf2d0();
-};
 
 // FUNCTION: 0x10ACF2D0 ?FUN_10acf2d0@Class_10ACEE90@@QAE_NXZ
 bool Class_10ACEE90::FUN_10acf2d0()

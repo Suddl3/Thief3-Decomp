@@ -29,6 +29,7 @@ public:
 
     int Unknown10;
     float Unknown14;
+    char Pad18[0x24];
 };
 
 #endif // GAME_CLASS_10E7E730_H

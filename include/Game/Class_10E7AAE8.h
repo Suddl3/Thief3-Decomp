@@ -18,6 +18,7 @@ public:
     virtual void FUN_10b26970(int A, int B);
 
     ~Class_10E7AAE8();
+    Class_10E7AAE8();
 
     int Unknown04;
     int Unknown08;

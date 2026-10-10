@@ -85,8 +85,9 @@ public:
     void FUN_109bc160(int A, FVector* Out);
     void FUN_109cc130(int A);
 
-    char Pad01[0x49b];
+    char Pad04[0x498];
     int Unknown49C;
+    char Pad4A0[0x4];
     bool Unknown4A0;
     bool Unknown4A1;
     char Pad4A2[0x2];

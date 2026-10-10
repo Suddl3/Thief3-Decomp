@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_109081E0.h"
 #include "Game/Class_1096A960.h"
+#include "Game/Class_10E6C68C.h"
 
 template <class T> class TArray
 {
@@ -42,22 +43,6 @@ class Class_10F3A1EC : public Class_1096C8D0
 };
 
 extern Class_10F3A1EC* DAT_10f3a1ec;
-
-class Class_10E6C68C
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void FUN_10a8bf80();
-    virtual int FUN_10a8b860();
-    virtual Class_109081E0 FUN_10a8bbc0();
-
-    int FUN_10a8bac0();
-};
 
 // FUNCTION: 0x10A8BBC0 ?FUN_10a8bbc0@Class_10E6C68C@@UAE?AVClass_109081E0@@XZ
 Class_109081E0 Class_10E6C68C::FUN_10a8bbc0()

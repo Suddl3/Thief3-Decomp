@@ -27,8 +27,12 @@ public:
 
     Class_10E99298* FUN_10c27010(int A, int B, int C, int D);
 
-    char Unknown04[4];
-    Class_10C7D570* Unknown08;
+    union
+    {
+        char Unknown04[4];
+        Class_10C7D570* Unknown08;
+    };
+    char Pad0C[0x4];
 };
 
 #endif // GAME_CLASS_10E99298_H

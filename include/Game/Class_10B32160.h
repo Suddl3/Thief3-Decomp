@@ -14,6 +14,8 @@ public:
     void FUN_10b32160(Class_1098E330* Props);
     void FUN_10b32100(Class_1098E330* A);
     void FUN_10b31a70(Class_1098E330* A);
+
+    char Pad04[0x24];
 };
 
 #endif // GAME_CLASS_10B32160_H

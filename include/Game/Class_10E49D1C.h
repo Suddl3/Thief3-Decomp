@@ -5,7 +5,7 @@
 
 #include "Game/Struct_10932ED0.h"
 
-extern "C" void* memset(void* Dest, int Value, unsigned int Count);
+extern "C" void* memset(void*, int, unsigned);
 
 class Class_10E49D1C
 {

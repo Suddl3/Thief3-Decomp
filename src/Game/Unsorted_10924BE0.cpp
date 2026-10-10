@@ -3,6 +3,7 @@
 #include "Game/Class_109250C0.h"
 #include "Game/Class_10925390.h"
 #include "Game/Class_10BCE8F0.h"
+#include "Game/Class_10924AE0.h"
 
 class Class_10924BE0
 {
@@ -49,24 +50,6 @@ public:
     virtual void __stdcall Virtual39();
     virtual void __stdcall Virtual40();
     virtual void __stdcall Virtual41(int* A);
-};
-
-class Class_10924AE0
-{
-public:
-    bool FUN_10924ae0();
-    bool FUN_10924be0(Class_10924BE0* A);
-
-    bool Unknown00;
-    Class_10924BE0* Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    char Unknown10[0x8];
-    int Unknown18;
-    char Unknown1C[0x14];
-    Class_10BCE8F0 Unknown30;
-    char Unknown31[0x77];
-    int UnknownA8;
 };
 
 class Class_109250C0_Item

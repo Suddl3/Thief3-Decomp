@@ -76,6 +76,7 @@ public:
     bool Unknown49;
     char Unknown4A[2];
     int Unknown4C;
+    char Pad50[0x3c];
 };
 
 #endif // GAME_CLASS_10E95780_H

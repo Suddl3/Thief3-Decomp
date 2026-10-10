@@ -11,6 +11,7 @@
 #include "Game/Class_10951730.h"
 #include "Game/IDirect3DDevice8.h"
 #include "Game/Class_109081E0.h"
+#include "Game/Class_1093EDB0.h"
 
 struct Struct_10940180
 {
@@ -37,16 +38,6 @@ public:
     int Unknown04;
     int Unknown08;
     int Unknown0C;
-};
-
-class Class_1093EDB0
-{
-public:
-    bool FUN_1093edb0();
-
-    int Unknown00;
-    int Unknown04;
-    Class_1093EDB0_Element* Unknown08;
 };
 
 // FUNCTION: 0x1093EDB0 ?FUN_1093edb0@Class_1093EDB0@@QAE_NXZ

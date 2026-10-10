@@ -13,6 +13,7 @@ public:
     void FUN_10924c60();
 
     Struct_10924210 Unknown18;
+    char Pad30[0x8];
 };
 
 #endif // GAME_CLASS_109242E0_H

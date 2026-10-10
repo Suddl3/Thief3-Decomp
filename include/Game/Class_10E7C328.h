@@ -14,6 +14,8 @@ public:
     virtual void Virtual3();
     virtual void Virtual4();
     virtual bool FUN_10b35490(int param);
+
+    Class_10E7C328();
 };
 
 #endif // GAME_CLASS_10E7C328_H

@@ -6,7 +6,7 @@
 class Class_10971570
 {
 public:
-    void FUN_10971570(int A, bool* B);
+    int FUN_10971570(int Id, bool* Out);
 
     char Pad00[0x1];
 };

@@ -16,8 +16,9 @@ public:
     Class_10C7D570* Unknown08;
     char Unknown0C[0x88];
     Class_10C273E0 Unknown94;
-    char Unknown95[0x2C8 - 0x95];
+    char Pad9C[0x22c];
     float Unknown2C8;
+    char Pad2CC[0x8];
 };
 
 #endif // GAME_CLASS_10BBA020_H

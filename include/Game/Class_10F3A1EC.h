@@ -12,6 +12,7 @@ class Class_10F3A1EC : public Class_1096C8D0
 {
 public:
     char Pad01[0x3];
+    char Pad2B[0x1];
     int Unknown04;
     int Unknown08;
     Class_10F3A1EC_Field0C* Unknown0C;

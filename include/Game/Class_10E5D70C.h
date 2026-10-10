@@ -25,7 +25,8 @@ public:
     void FUN_10a18f10();
 
     Object_10A18F40* Unknown04;
-    char Unknown08[0x668];
+    char Unknown08[0x630];
+    void* Unknown638[14];
     float Unknown670;
     int Unknown674;
 };

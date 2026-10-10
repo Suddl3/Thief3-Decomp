@@ -43,7 +43,7 @@ public:
     char Pad05[0x3];
     int Unknown08;
     int Unknown0C;
-    char Unknown10[4];
+    char Pad10[0x4];
     Class_10BFBD70 Unknown14;
     int Unknown20;
     int Unknown24;

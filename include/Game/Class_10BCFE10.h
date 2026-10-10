@@ -10,6 +10,8 @@ class Class_10BCFE10 : public Class_10BC4160
 public:
     void FUN_10bcfbd0();
     void FUN_10bcfe10(int A);
+
+    char Pad04[0x4];
 };
 
 #endif // GAME_CLASS_10BCFE10_H

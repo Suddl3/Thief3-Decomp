@@ -20,6 +20,7 @@ public:
     int Unknown1C;
     int Unknown20;
     int Unknown24;
+    char Pad28[0x24];
 };
 
 #endif // GAME_CLASS_10E81620_H

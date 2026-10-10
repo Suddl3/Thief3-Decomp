@@ -20,6 +20,7 @@
 #include "Game/Class_10E98F00.h"
 #include "Game/Class_10E99020.h"
 #include "Game/Class_10E992D4.h"
+#include "Game/Class_10E8D7AC.h"
 
 extern int DAT_10ff708c;
 
@@ -41,22 +42,6 @@ public:
 class FArchive;
 
 extern void* DAT_10e8d7ac[];
-
-class Class_10E8D7AC
-{
-public:
-    Class_10E8D7AC();
-
-    void** Unknown00;        // +0x00: DAT_10e8d7ac
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    int Unknown10;
-    int Unknown14;
-    char Unknown18;
-    int Unknown1C;
-    int Unknown20;
-};
 
 void FUN_10c1f820();
 

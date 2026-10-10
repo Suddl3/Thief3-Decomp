@@ -114,9 +114,10 @@ public:
     Class_10E69080();
     ~Class_10E69080();
 
-    char Unknown04[0x114];
+    char PadC4[0x54];
     void** Unknown118;
     char Unknown11C[0xB4];
+    char Pad1D0[0xc0];
 };
 
 #endif // GAME_CLASS_10E69080_H

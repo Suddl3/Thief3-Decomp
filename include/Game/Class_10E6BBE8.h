@@ -26,7 +26,7 @@ public:
     virtual int FUN_10a76490(int A, int B, int C);
     virtual void Virtual14();
     virtual void FUN_10a757b0(int A);
-    virtual void FUN_10a757e0(AActor* A);
+    virtual void FUN_10a757e0(int A);
 
     void FUN_10a757a0();
     void FUN_10a759b0(int A, int B);

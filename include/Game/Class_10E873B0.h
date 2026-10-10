@@ -153,6 +153,7 @@ public:
     Class_10B71A80_Unknown1C4* Unknown1C4;
     char Unknown1C8[4];
     Class_10B71220_Member* Unknown1CC;
+    char Pad1D0[0x1a0];
 };
 
 #endif // GAME_CLASS_10E873B0_H

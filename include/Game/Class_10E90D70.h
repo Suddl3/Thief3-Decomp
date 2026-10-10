@@ -3,8 +3,6 @@
 #ifndef GAME_CLASS_10E90D70_H
 #define GAME_CLASS_10E90D70_H
 
-struct Struct_10BCB770;
-
 class Class_10E90D70
 {
 public:
@@ -13,8 +11,7 @@ public:
     Class_10E90D70(int A, int B);
     ~Class_10E90D70();
 
-    Struct_10BCB770* Unknown04;
-    int Unknown08[14];
+    int Unknown04[15];
 };
 
 #endif // GAME_CLASS_10E90D70_H

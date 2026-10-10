@@ -5,7 +5,6 @@
 
 #include "Game/Class_109081E0.h"
 
-// A chained hash table's entry: 12 bytes, allocated per insert.
 class Class_109E6520_Node
 {
 public:

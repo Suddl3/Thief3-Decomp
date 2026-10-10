@@ -21,6 +21,7 @@ public:
     void FUN_10925c60(void* A, int B);
 
     char Pad01[0xbb];
+    char Pad1A3[0x1];
     Class_10BFBD70 UnknownBC;
     char PadC8[0x10];
     Class_1092D990* Unknown0D8;

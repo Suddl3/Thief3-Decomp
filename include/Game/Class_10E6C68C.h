@@ -17,7 +17,7 @@ public:
     virtual void Virtual5();
     virtual void FUN_10a8bf80();
     virtual int FUN_10a8b860();
-    virtual char** FUN_10a8bbc0(char** Out);
+    virtual Class_109081E0 FUN_10a8bbc0();
 
     Class_10E6C68C();
 

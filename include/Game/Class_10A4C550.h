@@ -9,7 +9,7 @@ class Class_10A4C550
 {
 public:
     Class_10A4C550_Iterator FUN_10a4c550(const unsigned int& Key);
-    void FUN_10dd5120(int* A, int B);
+    int* FUN_10dd5120(int* A, int B);
 
     char Pad00[0x1];
 };

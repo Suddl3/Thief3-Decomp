@@ -15,6 +15,8 @@ public:
     Class_10BFBD70 FUN_10b73ee0();
     Class_10BFBD70 FUN_10a5a920();
     Class_10BFBD70 FUN_10b73f00();
+
+    char Pad11C[0x178];
 };
 
 #endif // GAME_CLASS_10E878B8_H

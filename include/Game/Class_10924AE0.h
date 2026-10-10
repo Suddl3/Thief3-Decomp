@@ -26,8 +26,9 @@ public:
     Class_10BCE8F0 Unknown30;
     char Pad31[0x17];
     Struct_1094D980 Unknown48;
-    char Pad49[0x5f];
+    char Pad5C[0x4c];
     int UnknownA8;
+    char PadAC[0x14];
 };
 
 #endif // GAME_CLASS_10924AE0_H

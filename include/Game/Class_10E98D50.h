@@ -28,6 +28,7 @@ public:
     virtual void Virtual14();
     virtual void Virtual15();
     virtual bool FUN_10c1ae10();
+    virtual void Virtual16();
 
     ~Class_10E98D50();
 

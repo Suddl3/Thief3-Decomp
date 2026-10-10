@@ -13,6 +13,8 @@ class Class_10E5B2A8
 public:
     virtual void FUN_109e30d0(int Event, UObject* A, int B, int C);
 
+    Class_10E5B2A8();
+
     void FUN_109e2c10(INT A, AZoneProperties* B);
     void FUN_109e2ce0(UObject* Obj, int A, int B);
     void FUN_109e2fa0(UObject* A, int B, int C);

@@ -13,8 +13,12 @@ public:
     void FUN_10c3ea10(int A);
     void FUN_10c3ea90();
 
-    char Pad18[0x4];
-    int Unknown1C;
+    union
+    {
+        char Pad18[0x4];
+        int Unknown1C;
+    };
+    char Pad20[0x4];
 };
 
 #endif // GAME_CLASS_10C3EA90_H

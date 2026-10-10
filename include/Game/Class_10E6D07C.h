@@ -10,6 +10,8 @@ class Class_10E6D07C : public Class_10E6DC88
 public:
     virtual void Virtual1();
     virtual void FUN_10a99350();
+
+    Class_10E6D07C();
 };
 
 #endif // GAME_CLASS_10E6D07C_H

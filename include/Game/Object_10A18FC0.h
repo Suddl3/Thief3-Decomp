@@ -17,6 +17,7 @@ public:
     virtual void Virtual6(int A, int B);
 
     char Pad01[0x3];
+    char Pad643[0x1];
 };
 
 #endif // GAME_OBJECT_10A18FC0_H

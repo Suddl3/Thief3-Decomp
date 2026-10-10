@@ -21,6 +21,8 @@ public:
     virtual int FUN_10b4f4e0(int A);
 
     void FUN_10b3b400(AGarrett* Garrett);
+
+    char Pad10[0x24];
 };
 
 #endif // GAME_CLASS_10E7EB20_H

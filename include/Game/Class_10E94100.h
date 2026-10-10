@@ -85,6 +85,8 @@ public:
     void FUN_10bc4360(int A);
     void FUN_10bdc860(int A);
     void FUN_10bde730();
+    // The accessor at 0x10BC4BF0, which the compiler inlines here.
+    int FUN_10bc4bf0();
 
     Class_10BC4BF0_Member* Unknown04;
 };

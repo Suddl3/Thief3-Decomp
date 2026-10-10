@@ -16,6 +16,7 @@ public:
     int FUN_10bbac00(int Type);
 
     char Pad01[0x7];
+    char Pad28F[0x1];
     Class_10DBD510* Unknown08;
     Class_10AAF570* Unknown0C;
 };

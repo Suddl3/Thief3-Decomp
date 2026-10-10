@@ -25,8 +25,8 @@ public:
     void FUN_10c372e0(Object_10BCE8D0* A);
     Class_10E9AF04* FUN_10c382f0(int A, int B, int C, int D, int E, int F);
 
-    char Unknown04[0x90];
     int Unknown94;
+    char Pad98[0x90];
 };
 
 #endif // GAME_CLASS_10E9AF04_H

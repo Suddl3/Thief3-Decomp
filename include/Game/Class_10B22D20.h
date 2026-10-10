@@ -13,6 +13,7 @@ public:
     void FUN_10b22d20();
 
     Class_10B22D20_Unknown90* Unknown90;
+    char Pad94[0x8];
 };
 
 #endif // GAME_CLASS_10B22D20_H

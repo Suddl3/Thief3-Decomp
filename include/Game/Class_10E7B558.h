@@ -16,6 +16,8 @@ public:
     virtual void Virtual5();
     virtual void FUN_10b2c5d0(const Class_10967060& A);
 
+    Class_10E7B558();
+
     float Unknown04;
     int Unknown08;
     char Pad0C[0x10];

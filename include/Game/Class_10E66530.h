@@ -5,6 +5,7 @@
 
 class Class_10A37A10_Field08;
 class Class_10A37A30;
+class Class_10E666A0;
 
 class Class_10E66530
 {
@@ -17,6 +18,8 @@ public:
     virtual void Virtual5();
     virtual void Virtual6();
     virtual int FUN_10a37a50(float A);
+
+    Class_10E66530(Class_10E666A0* A, int B);
 
     int Unknown04;
     Class_10A37A10_Field08* Unknown08;

@@ -20,7 +20,7 @@ public:
     static TimeManager* Instance();
     float FUN_10d3edc0();
 
-    char Pad01[0x3];
+    float TimeScale;
     float MinStep;
     float MaxStep;
     char Pad0C[0x4];

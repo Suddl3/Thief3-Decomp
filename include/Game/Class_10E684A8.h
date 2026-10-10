@@ -54,12 +54,13 @@ public:
 
     char Unknown04[0x18];
     FVector Unknown1C;
-    char Unknown28[0xF8];
+    char Pad28[0xf8];
     bool Unknown120;
     char Unknown121[3];
     Class_109081E0 Unknown124;
     Class_1090C880 Unknown128;
     int Unknown134;
+    char Pad138[0xc0];
 };
 
 #endif // GAME_CLASS_10E684A8_H

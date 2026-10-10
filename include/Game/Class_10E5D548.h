@@ -48,7 +48,7 @@ public:
     char Pad0C[0x4];
     Class_10E5D548_Unknown10** Unknown10;
     int Unknown14;
-    char Unknown18[4];
+    char Pad18[0x4];
     int* Unknown1C;
     int Unknown20;
     char Unknown24[4];

@@ -5,7 +5,6 @@
 
 #include "Core/Core.h"
 #include "Game/Class_10E67FD0.h"
-#include "Game/Struct_10B2BAA0.h"
 
 class Class_10E7B360 : public Class_10E67FD0
 {
@@ -14,18 +13,22 @@ public:
 
     Class_10E7B360();
 
-    char Unknown118[0x4];
-    int Unknown11C;
+    char Pad118[0x8];
     char Unknown120[0x1C];
     int Unknown13C;
     char Unknown140[0x10];
-    Struct_10B2BAA0 Unknown150;
-    char Unknown154[0x4];
+    char Unknown118[0x4];
+    union
+    {
+        int Unknown11C;
+        char Unknown154[0x4];
+    };
     FVector Unknown158;
     FLOAT Unknown164;
     FLOAT Unknown168;
     FLOAT Unknown16C;
     FLOAT Unknown170;
+    char Pad174[0x38];
     bool Unknown174;
     char Pad175[0x3];
 };

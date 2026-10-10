@@ -15,8 +15,9 @@ public:
 
     char Unknown00[0x30];
     Class_10BFC190 Unknown30;
-    char Pad31[0x30b];
+    char Pad50[0x2ec];
     float Unknown33C;
+    char Pad340[0x20];
 };
 
 #endif // GAME_CLASS_10BB89D0_H

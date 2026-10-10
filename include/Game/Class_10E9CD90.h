@@ -25,9 +25,14 @@ public:
 
     Class_10E9CD90* FUN_10c63f70(int A, int B);
 
+    char Pad34[0x4];
     int Unknown34;
-    int Unknown38;
-    int Unknown3C;
+    union
+    {
+        int Unknown38;
+        int Unknown3C;
+    };
+    char Pad40[0x4];
 };
 
 #endif // GAME_CLASS_10E9CD90_H

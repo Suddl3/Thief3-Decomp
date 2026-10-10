@@ -13,6 +13,8 @@ public:
     virtual void Virtual2();
     virtual void Virtual3();
     virtual void FUN_10a67120(Object_10A67120* Obj, int Param);
+
+    Class_10E6B4C8();
 };
 
 #endif // GAME_CLASS_10E6B4C8_H

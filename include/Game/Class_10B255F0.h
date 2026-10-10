@@ -12,6 +12,8 @@ class Class_10B255F0 : public Class_10AA9D90
 public:
     virtual int Virtual0();
 
+    Class_10B255F0();
+
     void FUN_10b24dd0(FArchive& Ar);
     void* FUN_10b24f70();
     int FUN_10b25010();
@@ -23,27 +25,43 @@ public:
     void FUN_10b25dc0(int p1);
     int FUN_10b255f0();
 
-    char Pad01[0x3];
-    int Unknown04;
-    int Unknown08;
+    int Unknown30;
+    union
+    {
+        int Unknown04;
+        int Unknown34;
+    };
+    union
+    {
+        int Unknown08;
+        int Unknown38;
+    };
     int Unknown0C;
-    int Unknown10;
-    int Unknown14;
-    int Unknown18;
+    union
+    {
+        int Unknown10;
+        float Unknown40;
+    };
+    union
+    {
+        int Unknown14;
+        int Unknown44;
+    };
+    union
+    {
+        int Unknown18;
+        int Unknown48;
+    };
     bool Unknown1C;
-    char Pad1D[0x3];
+    char Pad4D[0x3];
     float Unknown20;
     int Unknown24;
     int Unknown28;
     int Unknown2C;
-    int Unknown30;
-    int Unknown34;
-    int Unknown38;
+    char Pad60[0xc];
     bool Unknown3C;
     char Pad3D[0x3];
-    float Unknown40;
-    int Unknown44;
-    int Unknown48;
+    char Pad70[0xc];
     int Unknown4C;
     bool Unknown50;
     bool Unknown51;

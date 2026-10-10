@@ -8,7 +8,10 @@
 struct Static_10B3AC60 : Class_10B3AC90
 {
 public:
+    Static_10B3AC60();
+
     char Pad01[0x3];
+    char Pad07[0x1];
 };
 
 #endif // GAME_STATIC_10B3AC60_H

@@ -20,6 +20,7 @@ public:
     bool FUN_10b7b8d0(int A);
 
     char Pad01[0x7];
+    char Pad4F[0x1];
     int Unknown08;
     int Unknown0C;
     int Unknown10;

@@ -13,8 +13,9 @@ public:
     void FUN_10c076f0(int A);
 
     short Unknown44[17];
-    char Unknown66[0x3E];
+    char Pad66[0x3e];
     unsigned int UnknownA4;
+    char PadA8[0xc];
 };
 
 #endif // GAME_CLASS_10C07ED0_H

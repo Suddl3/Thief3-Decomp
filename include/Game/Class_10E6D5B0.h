@@ -13,6 +13,8 @@ public:
     virtual void Virtual1();
     virtual void FUN_10aa4d20();
 
+    Class_10E6D5B0();
+
     void FUN_10aa4cf0(int A, int B, int C, int D);
 
     bool Unknown04;

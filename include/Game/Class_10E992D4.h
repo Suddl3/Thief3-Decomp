@@ -18,6 +18,7 @@ public:
     virtual void Virtual7();
     virtual void Virtual9();
     virtual float FUN_10c26200();
+    virtual void Virtual10();
 
     unsigned char FUN_10c270b0();
     void FUN_10c265c0();
@@ -26,6 +27,7 @@ public:
     int Unknown38;
     char Pad3C[0x8];
     unsigned char Field44;
+    char Pad45[0x3];
 };
 
 #endif // GAME_CLASS_10E992D4_H

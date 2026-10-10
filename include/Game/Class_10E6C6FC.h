@@ -22,6 +22,8 @@ public:
     virtual void Virtual11();
     virtual void FUN_10a8c410(Class_10E6C6FC* p1);
 
+    Class_10E6C6FC();
+
     Struct_10A8C2B0_Outer* Unknown04;
     int Unknown08;
     int Unknown0C;

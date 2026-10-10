@@ -31,6 +31,7 @@ public:
     virtual float FUN_10b3af10(Class_10B21820* Obj);
 
     int Unknown10;
+    char Pad14[0x18];
 };
 
 #endif // GAME_CLASS_10E7E538_H

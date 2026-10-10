@@ -22,6 +22,8 @@ public:
     virtual void FUN_10a8d350(int A, void* Stream);
     virtual bool FUN_10a8d3c0(int A, void* Reader);
 
+    Class_10E6C7B4();
+
     int Unknown04;
     int Unknown08;
 };

@@ -14,6 +14,7 @@ public:
     Class_10E6D52C* FUN_10aa4a00();
 
     int Unknown08;
+    char Pad0C[0x38];
 };
 
 #endif // GAME_CLASS_10E6D52C_H

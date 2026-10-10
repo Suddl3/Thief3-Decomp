@@ -16,7 +16,7 @@ public:
     Class_10bf7f90* Unknown0C;
     char Unknown10[0x20];
     Class_10BFC2B0 Unknown30;
-    char Pad31[0x3];
+    char Pad31[0x4f];
 };
 
 #endif // GAME_CLASS_10E959B0_MEMBER_H

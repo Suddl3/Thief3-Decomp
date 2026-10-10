@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10C262D0.h"
 #include "Game/Class_10C7D570.h"
+#include "Game/Class_10E99298.h"
 
 struct Struct_10C26310
 {
@@ -15,27 +16,6 @@ struct Data_10C26310
     char Unknown00[0x2C];
     Struct_10C26310 Unknown2C;
     Struct_10C26310 Unknown38;
-};
-
-class Class_10E99298
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8();
-    virtual void Virtual9();
-    virtual void Virtual10();
-    virtual Struct_10C26310 FUN_10c26310();
-    virtual Struct_10C26310 FUN_10c26340();
-
-    char Unknown04[4];
-    Class_10C7D570* Unknown08;
 };
 
 // FUNCTION: 0x10C262D0 ?FUN_10c262d0@Class_10C262D0@@QAEX_N@Z

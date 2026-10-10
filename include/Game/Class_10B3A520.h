@@ -14,6 +14,7 @@ public:
     void FUN_10b3a5c0();
 
     char Pad01[0x2c57];
+    char Pad2C83[0x1];
 };
 
 #endif // GAME_CLASS_10B3A520_H

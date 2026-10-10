@@ -13,6 +13,7 @@ public:
 
     char Pad04[0x1a0];
     bool Unknown1A4;
+    char Pad1A5[0x3];
 };
 
 #endif // GAME_CLASS_10A57930_H

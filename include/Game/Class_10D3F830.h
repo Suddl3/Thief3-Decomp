@@ -9,6 +9,8 @@ class Class_10D3F830 : public Class_10C48260
 {
 public:
     bool FUN_10d3f830(int* Key);
+
+    char Pad01[0x1b];
 };
 
 #endif // GAME_CLASS_10D3F830_H

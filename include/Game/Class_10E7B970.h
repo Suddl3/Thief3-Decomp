@@ -18,6 +18,7 @@ public:
     Class_10B2F900_Unknown130* Unknown130;
     char Pad134[0x1c];
     unsigned char Field150;
+    char Pad151[0x3];
 };
 
 #endif // GAME_CLASS_10E7B970_H

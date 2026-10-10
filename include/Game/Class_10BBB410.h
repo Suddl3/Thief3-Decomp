@@ -14,7 +14,7 @@ public:
     Class_10BFF460* FUN_10bbb410();
     void FUN_10bbb330();
     void FUN_10bbb540(int Item);
-    bool FUN_10bbb730();
+    int FUN_10bbb730();
 };
 
 #endif // GAME_CLASS_10BBB410_H

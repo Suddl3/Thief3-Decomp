@@ -3,6 +3,7 @@
 #include "Game/Class_10A4C550_Iterator.h"
 #include "Game/Struct_10A4C940_Node.h"
 #include "Game/Struct_10A4C940_Owner.h"
+#include "Game/Class_10A4C550.h"
 
 extern int DAT_10f3a084;
 
@@ -13,13 +14,6 @@ extern bool DAT_10f3a060;
 class Class_10BFBD70;
 
 class Class_10E67938;
-
-class Class_10A4C550
-{
-public:
-    Class_10A4C550_Iterator FUN_10a4c550(const unsigned int& Key);
-    int* FUN_10dd5120(int* A, int B);
-};
 
 extern Class_10A4C550 DAT_10f3a068;
 

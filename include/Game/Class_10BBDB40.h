@@ -25,6 +25,7 @@ public:
     Class_1098E330* Unknown08;
     char Unknown0C[4];
     Class_1098E330* Unknown10;
+    char Pad14[0x1c];
 };
 
 #endif // GAME_CLASS_10BBDB40_H

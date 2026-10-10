@@ -21,6 +21,7 @@ public:
     void FUN_1098e290();
 
     char Pad01[0xb];
+    char Pad293[0x1];
     Class_10AAF570* Unknown0C;
     int Unknown10;
     int Unknown14;

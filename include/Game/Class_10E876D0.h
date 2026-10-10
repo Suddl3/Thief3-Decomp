@@ -14,6 +14,7 @@ public:
     void FUN_10b73e60();
 
     Class_10B7B910 Unknown1D0;
+    char Pad1D4[0xc0];
 };
 
 #endif // GAME_CLASS_10E876D0_H

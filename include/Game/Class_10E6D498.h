@@ -12,6 +12,7 @@ public:
     void* Unknown00;
     char Pad04[0x1];
     unsigned char Field05;
+    char Pad06[0x2];
 };
 
 #endif // GAME_CLASS_10E6D498_H

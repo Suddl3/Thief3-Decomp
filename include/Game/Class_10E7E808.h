@@ -15,6 +15,8 @@ public:
     virtual void Virtual4();
 
     Class_10E7E808* FUN_10b3d220();
+
+    char Pad04[0xc];
 };
 
 #endif // GAME_CLASS_10E7E808_H

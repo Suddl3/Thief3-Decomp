@@ -9,6 +9,7 @@ class Class_10C19FD0
 {
 public:
     ~Class_10C19FD0();
+    Class_10C19FD0();
 
     int Unknown00;
     Class_10BFBD70 Unknown04;

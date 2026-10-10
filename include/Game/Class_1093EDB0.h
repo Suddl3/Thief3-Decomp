@@ -8,8 +8,8 @@ class Class_1093EDB0_Element;
 class Class_1093EDB0
 {
 public:
-    void FUN_1093edb0();
     void FUN_1093f7a0();
+    bool FUN_1093edb0();
 
     int Unknown00;
     int Unknown04;

@@ -21,6 +21,7 @@ public:
     void FUN_10936bf0(int A);
 
     char Pad01[0xb];
+    char Pad81F[0x1];
     int Unknown0C;
     int Unknown10;
     int Unknown14;
