@@ -12,15 +12,9 @@ Class_10905A90_Member* FUN_10905aa0();
 class Class_109081E0 : public Class_1090A780
 {
 public:
-    ~Class_109081E0()
-    {
-        if (Unknown00)
-        {
-            char* Block = Unknown00 - 4;
-            FUN_10905aa0()->Virtual5(Block);
-            Unknown00 = 0;
-        }
-    }
+    // No destructor of its own: the implicit one inlines Class_1090A780's, one body, as the game does
+    // (src/Game/Class_10E9CA9C.cpp keeps a copy that calls it, as that module does).
+    Class_109081E0() {}
     Class_109081E0(const char* In);
     Class_109081E0(const Class_109081E0& Other);
     Class_109081E0(const Class_1090A780& Other) : Class_1090A780(Other) {}
