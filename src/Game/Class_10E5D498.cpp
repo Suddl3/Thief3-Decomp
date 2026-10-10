@@ -1,14 +1,7 @@
 // Game/Class_10E5D498.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10A174E0
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual int Virtual3(int Name);
-};
+#include "Game/Class_10A174E0.h"
+#include "Core/Core.h"
 
 Class_10A174E0* FUN_10a18230();
 
@@ -30,7 +23,7 @@ public:
 bool Class_10E5D498::FUN_10a84b50()
 {
     Class_10A174E0* Object = FUN_10a18230();
-    int Name = Unknown04;
+    FName Name = (EName)Unknown04;
     int Expected = Unknown08;
     return Object->Virtual3(Name) == Expected;
 }

@@ -6,16 +6,7 @@
 #include "Game/Entry_10C32C30.h"
 #include "Game/Class_109E59D0.h"
 #include "Game/Class_10C49740.h"
-
-class Class_10BFBD70
-{
-public:
-    void FUN_10bfbd70(int NewCount);
-
-    int Count;
-    int Unknown04;
-    int* Data;
-};
+#include "Game/Class_10BFBD70.h"
 
 class Class_10E5B2C0
 {

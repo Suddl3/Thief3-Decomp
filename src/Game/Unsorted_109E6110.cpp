@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_109081E0.h"
 #include "Game/Class_109E6220.h"
+#include "Game/Class_10BFBD70.h"
 
 class Class_10E5B2C0
 {
@@ -10,16 +11,6 @@ public:
 
     char Unknown04[0xD4];
     Class_109081E0 UnknownD8;
-};
-
-class Class_10BFBD70
-{
-public:
-    void FUN_10bfbd70(int NewCount);
-
-    int Count;
-    int Unknown04;
-    int* Data;
 };
 
 class Class_10E5B588

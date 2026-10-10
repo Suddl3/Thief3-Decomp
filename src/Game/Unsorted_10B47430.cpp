@@ -4,30 +4,8 @@
 #include "Game/Class_10C3E140.h"
 #include "Game/Class_10B7AB80.h"
 #include "Game/Class_10EC0E20.h"
-
-class Class_10BFBD70
-{
-public:
-    void FUN_10bfbd70(int A);
-};
-
-class Class_10B47660
-{
-public:
-    void FUN_10b47660(int A, int B);
-
-    int Unknown00;
-    int Unknown04;
-    Class_10EC0E20* Unknown08;
-    Class_10EC0E20* Unknown0C;
-    Class_10B47660_Member* Unknown10;
-    int Unknown14;
-    int Unknown18;
-    bool Unknown1C;
-    bool Unknown1D;
-    char Unknown1E[0x2E];
-    Class_10BFBD70 Unknown4C;
-};
+#include "Game/Class_10B47660.h"
+#include "Game/Class_10BFBD70.h"
 
 // FUNCTION: 0x10B47660 ?FUN_10b47660@Class_10B47660@@QAEXHH@Z
 void Class_10B47660::FUN_10b47660(int A, int B)

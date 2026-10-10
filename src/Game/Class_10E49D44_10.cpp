@@ -1,16 +1,8 @@
 // Game/Class_10E49D44_10.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10933230.h"
 
 class Object_109331D0;
-
-class Class_10933230
-{
-public:
-    void FUN_10933230();
-
-    char Unknown00[0x14];
-    unsigned char Unknown14;
-};
 
 class Class_10E49D44
 {
@@ -36,7 +28,7 @@ int Class_10E49D44::FUN_10933200(unsigned int Index)
     if (Index >= Unknown0C)
         return 0x80070057;
     Class_10933230* Item = Unknown10[Index];
-    if (!(Item->Unknown14 & 1))
+    if (!(Item->Unknown10.Unknown04 & 1))
         return 0x8004071e;
     Item->FUN_10933230();
     return 0;

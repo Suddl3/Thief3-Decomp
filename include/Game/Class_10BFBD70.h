@@ -17,6 +17,7 @@ public:
     }
 
     void FUN_10a58c70(const Class_10BFBD70& Other);
+    void FUN_10bfbd70(int Count);
     void FUN_109dff50(int Index);
     int FindIndex(int Item)
     {

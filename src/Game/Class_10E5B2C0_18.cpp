@@ -1,15 +1,6 @@
 // Game/Class_10E5B2C0_18.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10BFBD70
-{
-public:
-    void FUN_10bfbd70(int NewCount);
-
-    int Count;
-    int Unknown04;
-    int* Data;
-};
+#include "Game/Class_10BFBD70.h"
 
 class Class_10E5B2C0
 {

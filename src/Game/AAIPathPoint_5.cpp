@@ -1,13 +1,8 @@
 // Game/AAIPathPoint_5.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10993EC0.h"
 
 class AAIPathPoint;
-
-class Class_10993EC0
-{
-public:
-    virtual void FUN_10adb3a0();
-};
 
 class Class_10BC0AB0
 {
@@ -20,7 +15,7 @@ class AAIPathPoint : public Class_10993EC0
 public:
     virtual void Virtual0();
 
-    char Unknown04[0xBC];
+    char UnknownBC[0x4];
     Class_10BC0AB0 UnknownC0;
 };
 

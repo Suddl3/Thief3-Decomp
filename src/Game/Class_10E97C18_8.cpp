@@ -1,5 +1,7 @@
 // Game/Class_10E97C18_8.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10BFBD70.h"
+#include "Game/Class_10E97C18.h"
 
 class FArchive
 {
@@ -14,25 +16,6 @@ public:
 
     char Unknown04[16];
     int Unknown14;
-};
-
-class Class_10BFBD70
-{
-public:
-    void FUN_10bfbd70(int Value);
-
-    int Count;
-    int Unknown04;
-    void** Data;
-};
-
-class Class_10E97C18
-{
-public:
-    void FUN_10c0b960(FArchive& Ar);
-
-    char Unknown00[0x14];
-    Class_10BFBD70 Unknown14;
 };
 
 // FUNCTION: 0x10C0B960 ?FUN_10c0b960@Class_10E97C18@@QAEXAAVFArchive@@@Z

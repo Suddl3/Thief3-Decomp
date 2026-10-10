@@ -3,19 +3,9 @@
 #include "Game/Class_10B9EEB0.h"
 #include "Game/Class_10BA1660.h"
 #include "Game/Class_10C7D570.h"
+#include "Game/Class_10BFBD70.h"
 
 extern __int64 DAT_10f05c70;
-
-class Class_10BFBD70
-{
-public:
-    void FUN_10bfbd70(int Count);
-    int FUN_10b9fa20(int* Item);
-
-    int Unknown00;
-    int Unknown04;
-    int* Unknown08;
-};
 
 extern void* DAT_10e8c00c[];
 

@@ -5,32 +5,8 @@
 #include "Game/Class_10C3E140.h"
 #include "Game/Class_10B7AB80.h"
 #include "Game/Class_10EC0E20.h"
-
-class Class_10BFBD70
-{
-public:
-    void FUN_10bfbd70(int A);
-
-    int Unknown00;
-    int Unknown04;
-    void* Unknown08;
-};
-
-class Class_10B47AB0
-{
-public:
-    void FUN_10b47ab0(int A);
-    void FUN_10b47850(int A, float B, float C, int D, int E, float F);
-
-    char Unknown00[8];
-    Class_10B7AC30* Unknown08;
-    Class_10EC0E20* Unknown0C;
-    Class_10B47660_Member* Unknown10;
-    char Unknown14[0x1C];
-    bool Unknown30;
-    char Unknown31[0x1B];
-    Class_10BFBD70 Unknown4C;
-};
+#include "Game/Class_10B47AB0.h"
+#include "Game/Class_10BFBD70.h"
 
 // FUNCTION: 0x10B47AB0 ?FUN_10b47ab0@Class_10B47AB0@@QAEXH@Z
 void Class_10B47AB0::FUN_10b47ab0(int A)

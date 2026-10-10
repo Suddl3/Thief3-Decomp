@@ -1,6 +1,7 @@
 // Game/Class_10E5D688.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10A16120.h"
+#include "Game/Class_10E5D688.h"
 
 struct Struct_10A16120
 {
@@ -10,21 +11,10 @@ struct Struct_10A16120
     int Unknown0C;
 };
 
-class Class_10E5D688
-{
-public:
-    virtual int FUN_10a16660(int A);
-    virtual void Virtual1();
-    virtual bool Virtual2(int A);
-
-    char Unknown04[0x2C];
-    Class_10A16120 Unknown30;
-};
-
 // FUNCTION: 0x10A16660 ?FUN_10a16660@Class_10E5D688@@UAEHH@Z
 int Class_10E5D688::FUN_10a16660(int A)
 {
-    if (!Virtual2(A))
+    if (!FUN_10a16640(A))
         return 0;
     Struct_10A16120 Result;
     Result = Unknown30.FUN_10a16120(A);

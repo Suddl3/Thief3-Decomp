@@ -3,18 +3,9 @@
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_1094F750.h"
 #include "Game/Class_10953590.h"
+#include "Game/Class_10BFBD70.h"
 
 Class_10905A90_Member* FUN_10905aa0();
-
-class Class_10BFBD70
-{
-public:
-    void FUN_10bfbd70(int NewCount);
-
-    int Unknown00;
-    int Unknown04;
-    int* Unknown08;
-};
 
 struct Struct_1094F6F0_Item
 {

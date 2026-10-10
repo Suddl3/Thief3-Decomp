@@ -1,5 +1,6 @@
 // Game/Class_10E49F38.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10E49F38.h"
 
 class IDirect3DVertexBuffer8
 {
@@ -18,23 +19,6 @@ public:
     virtual long __stdcall Lock(unsigned int OffsetToLock, unsigned int SizeToLock, unsigned char** ppbData, unsigned long Flags);
 };
 
-class Class_10E49F38
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual int FUN_10934810(int A, int B, unsigned char** Out);
-
-    char Unknown04[0x10];
-    IDirect3DVertexBuffer8* Unknown14;
-    char Unknown18[4];
-    int Unknown1C;
-};
-
 // FUNCTION: 0x10934810 ?FUN_10934810@Class_10E49F38@@UAEHHHPAPAE@Z
 int Class_10E49F38::FUN_10934810(int A, int B, unsigned char** Out)
 {
@@ -43,5 +27,5 @@ int Class_10E49F38::FUN_10934810(int A, int B, unsigned char** Out)
     *Out = 0;
     if (Unknown14 == 0)
         return 0x80040721;
-    return Unknown14->Lock(Unknown1C * A, Unknown1C * B, Out, 0);
+    return ((IDirect3DVertexBuffer8*)Unknown14)->Lock(Unknown1C * A, Unknown1C * B, Out, 0);
 }

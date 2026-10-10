@@ -3,6 +3,8 @@
 #include "Game/Class_10AC2E40.h"
 #include "Game/Class_10E6F5F0.h"
 #include "Game/Options.h"
+#include "Game/Class_10BFBD70.h"
+#include "Game/Class_10E6F61C.h"
 
 class UClient
 {
@@ -58,25 +60,6 @@ struct Struct_10AA3520
 };
 
 extern Struct_10AA3520* DAT_10f35dec;
-
-class Class_10BFBD70
-{
-public:
-    void FUN_10bfbd70(int Count);
-
-    int Unknown00;
-    int Unknown04;
-    int* Unknown08;
-};
-
-class Class_10E6F61C
-{
-public:
-    virtual void FUN_10ac39b0(int p1, int p2, int p3, int p4);
-
-    char Unknown04[0x554];
-    Class_10BFBD70 Unknown558;
-};
 
 // FUNCTION: 0x10AC2610 ?FUN_10ac2610@Class_10E6F5F0@@UAEHM@Z
 int Class_10E6F5F0::FUN_10ac2610(float Value)

@@ -3,26 +3,12 @@
 #include "Game/Class_10B8C7B0.h"
 #include "Game/Class_10B8C9B0.h"
 #include "Game/Class_10D9B090.h"
+#include "Game/Class_10B8DC70.h"
+#include "Game/Class_10BFBD70.h"
 
 struct Struct_10D9E5E0_Param;
 
 Class_10D9B090* FUN_10d9dcb0();
-
-class Class_10BFBD70
-{
-public:
-    void FUN_10bfbd70(int NewCount);
-
-    int Unknown00;
-    int Unknown04;
-    int* Unknown08;
-};
-
-class Class_10B8DC70 : public Class_10BFBD70
-{
-public:
-    void FUN_10b8dc70(int Item);
-};
 
 struct Struct_10B8C9B0
 {

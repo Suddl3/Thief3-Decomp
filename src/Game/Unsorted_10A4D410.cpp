@@ -4,12 +4,7 @@
 #include "Game/Class_10A4DDA0.h"
 #include "Game/Class_10A4E2A0.h"
 #include "Game/Class_10A4EAE0.h"
-
-class Class_10BFBD70
-{
-public:
-    void FUN_10bfbd70(int Count);
-};
+#include "Game/Class_10BFBD70.h"
 
 struct Struct_10A4DD60
 {

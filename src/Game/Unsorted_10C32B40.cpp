@@ -4,16 +4,7 @@
 #include "Game/Entry_10C32C30.h"
 #include "Game/Struct_10C32C30.h"
 #include "Game/Class_10C32C30.h"
-
-class Class_10BFBD70
-{
-public:
-    void FUN_10bfbd70(int NewCount);
-
-    int Unknown00;
-    int Unknown04;
-    int* Unknown08;
-};
+#include "Game/Class_10BFBD70.h"
 
 class Class_10E9AC80
 {

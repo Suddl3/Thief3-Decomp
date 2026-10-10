@@ -4,18 +4,9 @@
 #include "Game/Class_10928760.h"
 #include "Game/Class_1092F130.h"
 #include "Game/Class_10E49C6C.h"
+#include "Game/Class_10BFBD70.h"
 
 Class_10905A90_Member* FUN_10905aa0();
-
-class Class_10BFBD70
-{
-public:
-    void FUN_10bfbd70(int Count);
-
-    int Unknown00;
-    int Unknown04;
-    void* Unknown08;
-};
 
 extern Class_10BFBD70 DAT_10f31b9c;
 

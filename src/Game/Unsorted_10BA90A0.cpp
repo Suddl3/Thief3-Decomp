@@ -2,19 +2,9 @@
 // Declarations above the functions belong in include/ once they settle.
 #include <math.h>
 #include "Game/Struct_10BA91E0.h"
+#include "Game/Class_10BFBD70.h"
 
 extern "C" void* memmove(void* Dest, const void* Src, unsigned Count);
-
-class Class_10BFBD70
-{
-public:
-    void FUN_10bfbd70(int NewCount);
-    void FUN_10ba91a0(const int* Item);
-
-    int Unknown00;
-    int Unknown04;
-    int* Unknown08;
-};
 
 float FUN_10ba91e0(const Struct_10BA91E0* A, const Struct_10BA91E0* B);
 

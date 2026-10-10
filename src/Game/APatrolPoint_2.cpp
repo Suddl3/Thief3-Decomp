@@ -1,12 +1,6 @@
 // Game/APatrolPoint_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_1098E330
-{
-public:
-    virtual void Virtual0();
-    int FUN_1098e330(int A, int* B);
-};
+#include "Game/Class_1098E330.h"
 
 class APatrolPoint : public Class_1098E330
 {
@@ -95,7 +89,7 @@ public:
     virtual void Virtual82();
     virtual void Virtual83();
     virtual void Virtual84();
-    virtual void Virtual85();
+    virtual int Virtual85();
     virtual void Virtual86();
     virtual void Virtual87();
     virtual void Virtual88();

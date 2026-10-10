@@ -5,6 +5,8 @@
 #include "Game/Class_10925470.h"
 #include "Game/Class_109254A0.h"
 #include "Game/Class_109254D0.h"
+#include "Game/Class_10925D50.h"
+#include "Game/Class_10BFBD70.h"
 
 struct Entry_10925410
 {
@@ -39,25 +41,6 @@ struct Entry_109254D0
     char Unknown00[0x3C];
     char Unknown3C;
     char Unknown3D[7];
-};
-
-class Class_10BFBD70
-{
-public:
-    void FUN_10bfbd70(int Count);
-
-    int Unknown00;
-    int Unknown04;
-    int* Unknown08;
-};
-
-class Class_10925D50
-{
-public:
-    void FUN_10925d50(int Value);
-
-    char Unknown00[0x68];
-    Class_10BFBD70 Unknown68;
 };
 
 // FUNCTION: 0x10925410 ?FUN_10925410@Class_10925410@@QAEHH@Z
