@@ -265,8 +265,13 @@ def _type_rank(f: Member) -> Tuple[int, int]:
     return (0 if f.array else 1, 0 if t.startswith("void") or t in ("char", "BYTE") else 1)
 
 
+PAD_TYPES = ("char", "unsigned char", "signed char", "BYTE", "ANSICHAR")
+
+
 def _is_pad(fs: Sequence[Member]) -> bool:
-    return all(PAD.match(f.name) and f.array for f in fs)
+    """Padding: bytes named after their offset (`char Unknown08[0x630]`). A typed array named so
+    (`void* Unknown638[14]`) is a field the code uses."""
+    return all(PAD.match(f.name) and f.array and f.type.replace("const ", "").strip() in PAD_TYPES for f in fs)
 
 
 def merge(decls: Sequence[ClassDecl], pod_classes: Sequence[str] = (),
