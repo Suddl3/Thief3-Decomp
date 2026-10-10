@@ -6,7 +6,7 @@
 class Class_10E5B578
 {
 public:
-    virtual void FUN_10bbe970() = 0;
+    virtual int Virtual0(int A, int B, int C, int* D) = 0;
 };
 
 #endif // GAME_CLASS_10E5B578_H

@@ -3,8 +3,6 @@
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10E5D818.h"
 #include "Game/Class_10EB766C.h"
-#include "Game/Class_10E5B578.h"
-#include "Game/Class_10E6DC88.h"
 
 Class_10905A90_Member* FUN_10905aa0();
 
@@ -12,6 +10,21 @@ Class_10905A90_Member* FUN_10905aa0();
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
+
+class Class_10E5B578
+{
+public:
+    virtual int Virtual0(int A, int B, int C, int* D) = 0;
+};
+
+class Class_10E6DC88 : public Class_10EB766C, public Class_10E5B578
+{
+public:
+    Class_10E6DC88(int Value);
+    virtual ~Class_10E6DC88();
+
+    int Unknown10;
+};
 
 class Class_10E6CD70 : public Class_10E6DC88
 {
@@ -22,7 +35,7 @@ public:
     }
 
     virtual ~Class_10E6CD70();
-    virtual void FUN_10bbe970();
+    virtual int Virtual0(int A, int B, int C, int* D);
 };
 
 // FUNCTION: 0x10A94890 ?FUN_10a94890@Class_10E5D818@@UAEPAVClass_10E6CD70@@XZ

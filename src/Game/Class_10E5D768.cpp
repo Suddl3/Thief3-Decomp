@@ -3,7 +3,12 @@
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10E5D768.h"
 #include "Game/Class_10EB766C.h"
-#include "Game/Class_10E5B578.h"
+
+class Class_10E5B578
+{
+public:
+    virtual void FUN_10bbe970() = 0;
+};
 
 Class_10905A90_Member* FUN_10905aa0();
 
