@@ -41,7 +41,6 @@ Class_109523b0           Class_109523B0                   the same address as Cl
 Class_109523c0           Class_109523C0                   the same address as Class_109523C0, in capitals
 Class_109562B0           Class_10E4AE20                   0x109562B0: stores 0x10E4AE20
 Class_10956830           Class_10E4AE58                   0x10956830: slot of 0x10E4AE58
-Class_10956DB0           Class_10E4AE8C                   0x10956DB0: slot of 0x10E4AE8C
 Class_10956F20           Class_10E4AE8C                   0x10956F20: slot of 0x10E4AE8C
 Class_10956f50           Class_10956F50                   the same address as Class_10956F50, in capitals
 Class_10957000           Class_10E4AE8C                   0x10957000: slot of 0x10E4AE8C
@@ -59,23 +58,17 @@ Class_10A12F50           Class_10E5D478                   0x10A12F50: stores 0x1
 Class_10A18E50           Class_10E5D70C                   0x10A18E50: slot of 0x10E5D70C
 Class_10A311E0           Class_10E663C8                   0x10A30F20: stores 0x10E663C8
 Class_10A33ED0           Class_10E9CD18                   0x10A33ED0: slot of 0x10E9CD18
-Class_10A37810           Class_10E6F910                   0x10A37810: called on this by 0x10AC1640
-Class_10A37860           Class_10E6F910                   0x10A37860: called on this by 0x10AC1640
 Class_10A39E70           Class_10E666E0                   0x10A39E70: stores 0x10E666E0
 Class_10A3A020           Class_10E66718                   0x10A3A020: slot of 0x10E66718
 Class_10A3A1D0           Class_10E66718                   0x10A3A1D0: slot of 0x10E66718
-Class_10A3A300           Class_10E66718                   0x10A3A300: slot of 0x10E66718
 Class_10A3A330           Class_10E66700                   0x10A3A330: slot of 0x10E667AC
 Class_10A3A380           Class_10E66700                   0x10A3A380: slot of 0x10E667AC
 Class_10A3A9C0           Class_10E66718                   0x10A3A9C0: slot of 0x10E66718
 Class_10A3AC50           Class_10E66700                   0x10A3AC50: slot of 0x10E667AC
-Class_10A46520           Class_10E50610                   0x10A46520: stores 0x10E50610
-Class_10A4C5F0           Class_10E6FF54                   0x10ACB2E0: slot of 0x10E6FF54
 Class_10A4D340           Class_10E6798C                   0x10A4D340: stores 0x10E6798C
 Class_10A4D400           Class_10E679BC                   0x10A4D400: stores 0x10E679BC
 Class_10A54CB0           Class_10E7BBC8                   0x10A54CB0: called on this by 0x10B31580
 Class_10A556F0           Class_10E684A8                   0x10A556F0: called on this by 0x10A55A20
-Class_10A57930           Class_10E68D80                   0x10A57930: slot of 0x10E68D80
 Class_10A58FE0           Class_10E68738                   0x10A56010: called on this by 0x10A56060
 Class_10A5B530           Class_10E69470                   0x10A5B530: called on this by 0x10A5C590
 Class_10A5D420           Class_10E696A8                   0x10A5D420: stores 0x10E696A8
@@ -207,7 +200,6 @@ Class_10AA63A0           Class_10E6D8F0                   0x10AA63A0: slot of 0x
 Class_10AA63B0           Class_10E6D8CC                   0x10AA63B0: slot of 0x10E6D8CC
 Class_10AA71F0           Class_10E6C128                   0x10AA71F0: slot of 0x10E6C128
 Class_10AA7220           Class_10EC0808                   0x10AA7220: slot of 0x10EC0808
-Class_10AA83E0           Class_10E6D990                   0x10AA83E0: called on this by 0x10AA8490
 Class_10AAAA60           Class_10E6D9E8                   0x10AAAA60: slot of 0x10E6D9E8
 Class_10AAB060           Class_10E6DA1C                   0x10AAB060: called on this by 0x10AAB080
 Class_10AACF40           Class_10E6DA90                   0x10AACF40: slot of 0x10E6DA90
@@ -216,7 +208,6 @@ Class_10AAEB70           Class_10E6DC54                   0x10AAEB70: slot of 0x
 Class_10AAF4D0           Class_10E6DC54                   0x10AAF4D0: slot of 0x10E6DC54
 Class_10AB72D0           Class_10E6F3EC                   0x10AB72D0: called on this by 0x10ABA020
 Class_10ABA190           Class_10E6F388                   0x10ABA190: stores 0x10E6F388
-Class_10ABB300           Class_10E6F47C                   0x10ABB300: called on this by 0x10ABB5C0
 Class_10ABB4E0           Class_10E6F474                   0x10ABB4E0: called on this by 0x10ABBE40
 Class_10ABB720           Class_10E6F474                   0x10ABB720: called on this by 0x10ABBE40
 Class_10ABB8F0           Class_10E6F47C                   0x10ABB8F0: stores 0x10E6F47C
@@ -255,8 +246,6 @@ Class_10B2EE90           Class_10E7B89C                   0x10B2EE90: slot of 0x
 Class_10B2F8F0           Class_10E7B970                   0x10B2F8F0: slot of 0x10E7B970
 Class_10B2F900           Class_10E7B970                   0x10B2F900: slot of 0x10E7B970
 Class_10B31520           Class_10E7BBC8                   0x10B31520: called on this by 0x10B31580
-Class_10B32160           Class_10E7E928                   0x10B31AD0: called on this by 0x10B32160
-Class_10B32750           Class_10E7E928                   0x10B32750: called on this by 0x10B32900
 Class_10B33D70           Class_10E7BF50                   0x10B33D70: called on this by 0x10B34090
 Class_10B36240           Class_10E7C380                   0x10B36240: stores 0x10E7C380
 Class_10B36260           Class_10E7C38C                   0x10B36260: stores 0x10E7C38C
@@ -277,7 +266,6 @@ Class_10B3ACB0           Class_10E7E4E0                   0x10B3ACB0: stores 0x1
 Class_10B3ADC0           Class_10E7E6A0                   0x10B49D10: slot of 0x10E7E6A0
 Class_10B3AE50           Class_10E816E0                   0x10B3AE50: called on this by 0x10B53B30
 Class_10B3E260           Class_10E7ED00                   0x10B3E260: called on this by 0x10B3F910
-Class_10B3ED20           Class_10E7ED00                   0x10B3EA80: called on this by 0x10B3EFE0
 Class_10B43160           Class_10E80C78                   0x10B43160: slot of 0x10E80C78
 Class_10B43D50           Class_10E80C78                   0x10B43D50: slot of 0x10E80C78
 Class_10B460C0           Class_10E81130                   0x10B460C0: stores 0x10E81130
@@ -289,7 +277,6 @@ Class_10B54FE0           Class_10E7F930                   0x10B54FE0: slot of 0x
 Class_10B55000           Class_10E7F930                   0x10B55000: slot of 0x10E7F930
 Class_10B56520           Class_10E81DE8                   0x10B45D10: called on this by 0x10B56520
 Class_10B592E0           Class_10E82058                   0x10B592E0: stores 0x10E82058
-Class_10B59640           Class_10E82058                   0x10B59640: slot of 0x10E82058
 Class_10B5A390           Class_10E82688                   0x10B5A570: called on this by 0x10B5A6F0
 Class_10B5A3D0           Class_10E82688                   0x10B5A3D0: called on this by 0x10B5A620
 Class_10B5AB90           Class_10E828B0                   0x10B5AB90: stores 0x10E828B0
@@ -332,7 +319,6 @@ Class_10B71200           Class_10E873B0                   0x10B71200: slot of 0x
 Class_10B71220           Class_10E873B0                   0x10B71220: slot of 0x10E873B0
 Class_10B718F0           Class_10E873B0                   0x10B718F0: slot of 0x10E873B0
 Class_10B71A80           Class_10E873B0                   0x10B71A80: called on this by 0x10B73CF0
-Class_10B73810           Class_10E873B0                   0x10B737B0: called on this by 0x10B73890
 Class_10B73900           Class_10E873B0                   0x10B73900: slot of 0x10E873B0
 Class_10B739C0           Class_10E873B0                   0x10B739C0: called on this by 0x10B73BA0
 Class_10B73E60           Class_10E876D0                   0x10B73E60: stores 0x10E876D0
@@ -399,10 +385,8 @@ Class_10BA5330           Class_10E8C95C                   0x10BA5330: stores 0x1
 Class_10BA9EF0           Class_10E5CBD8                   0x10BA9EF0: slot of 0x10E5CBD8
 Class_10BA9F90           Class_10E9CFE0                   0x10BA9F90: slot of 0x10E9CFE0
 Class_10BAA3A0           Class_10E4AB88                   0x10BAA3A0: slot of 0x10E4AB88
-Class_10BB43E0           Class_10E50610                   0x10BB43E0: stores 0x10E50610
 Class_10BB7BE0           Class_10E993C4                   0x10BB7BE0: called on this by 0x10C29EF0
 Class_10BB8430           Class_10E90A1C                   0x10BB7F90: called on this by 0x10BBCBF0
-Class_10BCFE10           Class_10E92C38                   0x10BCFE10: slot of 0x10E92C38
 Class_10BD0260           Class_10E93020                   0x10BD0260: slot of 0x10E93020
 Class_10BD7EA0           Class_10E93B68                   0x10BD7EA0: slot of 0x10E93B68
 Class_10BD8460           Class_10E93B68                   0x10BD8460: slot of 0x10E93B68
@@ -450,7 +434,6 @@ Class_10C1A570           Class_10E98CEC                   0x10C1A570: stores 0x1
 Class_10C1ACA0           Class_10E98F00                   0x10C1ACA0: slot of 0x10E98F00
 Class_10C1AD20           Class_10E98F48                   0x10C1AD20: slot of 0x10E98F48
 Class_10C270B0           Class_10E992D4                   0x10C270B0: slot of 0x10E992D4
-Class_10C270D0           Class_10E9AA7C                   0x10C270D0: called on this by 0x10C2EB40
 Class_10C27100           Class_10E99314                   0x10C27100: slot of 0x10E99314
 Class_10C2EB30           Class_10E9AA7C                   0x10C2EB30: stores 0x10E9AA7C
 Class_10C2EBD0           Class_10E9AA7C                   0x10C2EBD0: slot of 0x10E9AA7C
@@ -480,7 +463,6 @@ Class_10C384F0           Class_10E9AAD0                   0x10C384F0: stores 0x1
 Class_10C3EFC0           Class_10E9B580                   0x10C3EFC0: stores 0x10E9B580
 Class_10C3F1F0           Class_10E9B5C0                   0x10C3F1F0: slot of 0x10E9B5C0
 Class_10C3F260           Class_10E9B5C0                   0x10C3F260: slot of 0x10E9B5C0
-Class_10C41420           Class_10E9B83C                   0x10C41B10: called on this by 0x10C423D0
 Class_10C47EA0           Class_10E9BC18                   0x10C47EA0: slot of 0x10E9BC18
 Class_10C49020           Class_10E9BB8C                   0x10C49020: called on this by 0x10C48F80
 Class_10C4E880           Class_10E9BE7C                   0x10C50F00: stores 0x10E9BE7C
@@ -542,7 +524,6 @@ Class_10bdf6f0           Class_10BDF6F0                   the same address as Cl
 Class_10be90e0           Class_10E96D98                   0x10BE90E0: slot of 0x10E96D98
 Class_10be9140           Class_10BE9140                   the same address as Class_10BE9140, in capitals
 Class_10be91a0           Class_10E96EB0                   0x10BE91A0: stores 0x10E96EB0
-Class_10bf7f90           Class_10BF7F90                   the same address as Class_10BF7F90, in capitals
 Class_10bfb8d0           Class_10BFB8D0                   the same address as Class_10BFB8D0, in capitals
 Class_10c00c70           Class_10C00C70                   the same address as Class_10C00C70, in capitals
 Class_10c092f0           Class_10C092F0                   the same address as Class_10C092F0, in capitals
@@ -582,3 +563,22 @@ Class_10e9092c           Class_10E9092C                   0x10BB74E0: stores 0x1
 Class_10e984f4           Class_10E984F4                   0x10C12A90: stores 0x10E984F4
 Class_10e992d4           Class_10E992D4                   the same address as Class_10E992D4, in capitals
 Struct_10919b40          Struct_10919B40                  the same address as Struct_10919B40, in capitals
+# rejected: Class_10956DB0 Class_10E4AE8C Class_10E4AE8C derives from Class_10956DB0: one class by the map
+# rejected: Class_10A37810 Class_10E6F910 Class_10E6F910 derives from Class_10A37810: one class by the map
+# rejected: Class_10A37860 Class_10E6F910 Class_10A37810 derives from Class_10A37860: one class by the map
+# rejected: Class_10A3A300 Class_10E66718 Class_10A3A300 derives from Class_10E66718: one class by the map
+# rejected: Class_10A46520 Class_10E50610 ??1Class_10E50610@@QAE@XZ would name 0x10A46520 and 0x10A905A0
+# rejected: Class_10A4C5F0 Class_10E6FF54 ??1Class_10E6FF54@@QAE@XZ would name 0x10A4C5F0 and 0x10ACB0E0
+# rejected: Class_10A57930 Class_10E68D80 Class_10E68D80 derives from Class_10A57930: one class by the map
+# rejected: Class_10AA83E0 Class_10E6D990 Class_10E6D990 derives from Class_10AA83E0: one class by the map
+# rejected: Class_10ABB300 Class_10E6F47C Class_10E6F47C derives from Class_10ABB300: one class by the map
+# rejected: Class_10B32160 Class_10E7E928 Class_10B32750 derives from Class_10B32160: one class by the map
+# rejected: Class_10B32750 Class_10E7E928 Class_10B32750 derives from Class_10B32160: one class by the map
+# rejected: Class_10B3ED20 Class_10E7ED00 Class_10E7ED00 derives from Class_10B3ED20: one class by the map
+# rejected: Class_10B59640 Class_10E82058 Class_10E82058 derives from Class_10B59640: one class by the map
+# rejected: Class_10B73810 Class_10E873B0 Class_10E873B0 derives from Class_10B73810: one class by the map
+# rejected: Class_10BB43E0 Class_10E50610 ??1Class_10E50610@@QAE@XZ would name 0x10BB43E0 and 0x10A905A0
+# rejected: Class_10BCFE10 Class_10E92C38 Class_10E92C38 derives from Class_10BCFE10: one class by the map
+# rejected: Class_10C270D0 Class_10E9AA7C Class_10E9AA7C derives from Class_10C270D0: one class by the map
+# rejected: Class_10C41420 Class_10E9B83C Class_10E9B83C derives from Class_10C41420: one class by the map
+# rejected: Class_10bf7f90 Class_10BF7F90 Class_10BF7F90 derives from Class_10bf7f90: one class by the map

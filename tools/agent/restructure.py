@@ -2,6 +2,8 @@
 """Lead only: apply config/<version>/classmap.txt, so each placeholder class takes the name of the class it is.
 
     python tools/agent/restructure.py apply [--units Game/A.cpp,...] [--jobs N]
+    python tools/agent/restructure.py names [--dry-run]   # the same renames in every other symbols.txt name
+    python tools/agent/restructure.py reject              # only move the entries found wrong out of the map
     python configure.py && ninja        # the split takes the new names; compare the report
 
 classmap.py finds which placeholder classes are one class (`Class_<vtable>`). For each unit naming
@@ -44,7 +46,7 @@ import classdecl  # noqa: E402
 import coff  # noqa: E402
 import headers  # noqa: E402
 import integrate  # noqa: E402
-from common import FUNCTION_MARKER, Project, atomic_write, demangle, fmt_addr  # noqa: E402
+from common import FUNCTION_MARKER, Project, atomic_write, demangle, fmt_addr, symbolslib  # noqa: E402
 
 PLACEHOLDER = re.compile(r"\b(?:Class|Struct|Object)_[0-9A-Fa-f]{8}\b")
 FRAGMENT = re.compile(r"((?:Class|Struct|Object)_[0-9A-Fa-f]{8})@")
@@ -393,9 +395,59 @@ def update_symbols(p: Project, results: List[dict],
     return "\n".join(out) + "\n", units, conflicts
 
 
+def rename_names(p: Project, renames: Dict[str, str]) -> Tuple[str, int, List[str]]:
+    """symbols.txt with every name a resolved placeholder appears in renamed by substitution, the old name
+    kept as an alias: `apply` renames what units compile, this the rest (callers' bindings of functions
+    not matched yet, which a worker now declares with the resolved class). (text, names renamed, skipped)."""
+    lines = p.symbols_txt.read_text(encoding="utf-8").splitlines()
+    rows = [(i, SYMBOL_LINE.match(line)) for i, line in enumerate(lines)]
+    taken: Dict[str, int] = {}
+    for _, m in rows:
+        if m:
+            taken.setdefault(m.group(1), int(m.group(3), 16))
+    plan: Dict[int, str] = {}       # line -> its new name
+    skipped: List[str] = []
+    for i, m in rows:
+        if not m or not FRAGMENT.search(m.group(1)):
+            continue
+        name, address = m.group(1), int(m.group(3), 16)
+        new = substitute(name, renames)
+        if new is None or new == name:
+            continue  # None: a back-reference would be due, which only the compiler settles
+        if taken.get(new, address) != address:
+            skipped.append(f"{name}: {new} is {fmt_addr(taken[new])}'s")
+            continue
+        plan[i] = new
+    primaries = {plan[i]: int(m.group(3), 16) for i, m in rows if i in plan and "type:alias" not in m.group(4)}
+    out: List[str] = []
+    present = set(taken)
+    for i, m in rows:
+        line = lines[i]
+        if m is None:
+            out.append(line)
+            continue
+        name, section, address, rest = m.group(1), m.group(2), int(m.group(3), 16), m.group(4)
+        if "type:alias" in rest and primaries.get(name) == address:
+            continue  # an alias about to be the address's own name
+        if i not in plan:
+            out.append(line)
+            continue
+        new = plan[i]
+        if "type:alias" in rest:
+            out.append(line)
+            if new not in present:
+                out.append(f"{new} = {section}:{fmt_addr(address)}; // type:alias")
+                present.add(new)
+            continue
+        out.append(new + line[len(name):])
+        out.append(f"{name} = {section}:{fmt_addr(address)}; // type:alias")
+        present.add(new)
+    return "\n".join(out) + "\n", len(plan), skipped
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("command", choices=("apply",))
+    ap.add_argument("command", choices=("apply", "names", "reject"))
     ap.add_argument("--units", default="", help="only these units (comma-separated, relative to src/)")
     ap.add_argument("--jobs", type=int, default=os.cpu_count() or 8)
     ap.add_argument("--dry-run", action="store_true", help="write the results under build/agent/tmp/ only")
@@ -414,6 +466,30 @@ def main() -> None:
         excluded.update(found)
     print(f"{len(mapping)} placeholders mapped; {len(excluded)} keep their names ("
           + ", ".join(f"{len(v)} {k}" for k, v in checks.items()) + ")")
+    if args.command != "apply" or not args.dry_run:
+        # entries the evidence got wrong (a class its own base, a name for two addresses) leave the map, so
+        # the gate stops asking workers for them; a package header's class stays (its name is the right one)
+        wrong = {**checks["a name for two addresses"], **checks["a class its own base"]}
+        if wrong:
+            import classmap
+            current = classmap.read(p)
+            rejects = classmap.rejected(p)
+            rejects.update({n: (mapping[n], why) for n, why in wrong.items() if n in mapping})
+            classmap.write(p, {n: v for n, v in current.items() if n not in rejects}, rejects)
+            print(f"{len(wrong)} entries rejected in classmap.txt")
+    if args.command == "reject":
+        return
+    if args.command == "names":
+        text, count, skipped = rename_names(p, {n: t for n, t in mapping.items() if n not in excluded})
+        target = p.state_dir("tmp") / "symbols-names.txt" if args.dry_run else p.symbols_txt
+        check = p.state_dir("tmp") / "symbols-names-check.txt"
+        check.write_text(text, encoding="utf-8")
+        symbolslib.load(check)  # raises on a name given twice
+        atomic_write(target, text)
+        print(f"{count} names renamed (the old ones kept as aliases), {len(skipped)} skipped; wrote {target}")
+        for line in skipped[:5]:
+            print("  skipped:", line)
+        return
     names_of: Dict[str, List[str]] = {}
     by_address: Dict[int, List[str]] = collections.defaultdict(list)
     for s in p.symbols:

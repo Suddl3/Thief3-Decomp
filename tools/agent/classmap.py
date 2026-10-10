@@ -317,6 +317,9 @@ def build(p: Project):
         upper = cls.split("_")[0] + "_" + cls.split("_")[1].upper()
         if upper != cls and cls not in mapping:
             mapping[cls] = (upper, f"the same address as {upper}, in capitals")
+    # what restructure.py found wrong stays out (a class its own base by some unit's declaration)
+    for cls in rejected(p):
+        mapping.pop(cls, None)
     # a target that is itself mapped: follow the chain
     for cls in list(mapping):
         seen, (target, why) = {cls}, mapping[cls]
@@ -334,6 +337,9 @@ def build(p: Project):
     return mapping, stats, split
 
 
+REJECTED = re.compile(r"^# rejected: (\S+) (\S+) (.*)$")
+
+
 def read(p: Project) -> Dict[str, Tuple[str, str]]:
     """The map as written: {placeholder: (class, evidence)}."""
     out = {}
@@ -346,6 +352,27 @@ def read(p: Project) -> Dict[str, Tuple[str, str]]:
     return out
 
 
+def rejected(p: Project) -> Dict[str, Tuple[str, str]]:
+    """The entries restructure.py rejected, as `# rejected: <placeholder> <class> <why>` lines: kept out of
+    the map (and so out of the gate's [classmap] rule), whatever the evidence says next time."""
+    out = {}
+    path = p.config_dir / "classmap.txt"
+    if path.is_file():
+        for line in path.read_text(encoding="utf-8").splitlines():
+            m = REJECTED.match(line)
+            if m:
+                out[m.group(1)] = (m.group(2), m.group(3))
+    return out
+
+
+def write(p: Project, mapping: Dict[str, Tuple[str, str]], rejects: Dict[str, Tuple[str, str]]) -> Path:
+    path = p.config_dir / "classmap.txt"
+    rows = [f"{old:<24} {new:<32} {why}" for old, (new, why) in sorted(mapping.items()) if old not in rejects]
+    rows += [f"# rejected: {old} {new} {why}" for old, (new, why) in sorted(rejects.items())]
+    path.write_text(MAP_HEADER + "\n".join(rows) + "\n", encoding="utf-8", newline="\n")
+    return path
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("command", choices=("write", "stats"))
@@ -355,10 +382,8 @@ def main() -> None:
     for k, v in stats.items():
         print(f"{k}: {v}")
     if args.command == "write":
-        path = p.config_dir / "classmap.txt"
-        rows = [f"{old:<24} {new:<32} {why}" for old, (new, why) in sorted(mapping.items())]
-        path.write_text(MAP_HEADER + "\n".join(rows) + "\n", encoding="utf-8", newline="\n")
-        print(f"wrote {path}: {len(rows)} placeholders")
+        path = write(p, mapping, rejected(p))
+        print(f"wrote {path}: {len(mapping)} placeholders")
 
 
 if __name__ == "__main__":
