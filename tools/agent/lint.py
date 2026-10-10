@@ -34,6 +34,12 @@ RULES: List[Tuple[str, "re.Pattern[str]", str]] = [
     ("fastcall", re.compile(r"\b__fastcall\b"), "__fastcall (`this` in ecx is a method: declare one)"),
     ("vtable-struct", re.compile(r"\b(?:vtable|vtbl|VTable|Vtable|lpVtbl|vfptr)\s*->\s*\w+\s*\("),
      "a call through a hand-made vtable struct (declare virtual methods)"),
+    # The context packet shows Ghidra's reading of the target; its spellings are raw decompiler output, which
+    # the repository does not publish (CONTRIBUTING.md).
+    ("decompiler", re.compile(r"\b(?:undefined[1248]?|CONCAT[0-9]{2}|SUB[0-9]{2}|ZEXT[0-9]{2}|SEXT[0-9]{2}|"
+                              r"in_(?:E[A-D]X|E[SD]I|stack_[0-9a-f]+)|unaff_\w+|extraout_\w+|param_[0-9]+|"
+                              r"local_[0-9a-f]+|[a-z]{1,3}Var[0-9]+)\b"),
+     "a decompiler's spelling (raw decompiler output is not published: name and type it)"),
 ]
 
 

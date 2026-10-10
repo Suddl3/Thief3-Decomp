@@ -39,7 +39,9 @@ do not stop before N functions are handled unless the claim prints
      unrelated rewrites (statement order, a temporary), then defer `tiebreak`;
    - a helper inlined on one side only: defer `inline`;
    - an offset, size or slot you cannot know: defer `layout` or `vtable`;
-   - only a name or signature differs (score 99.9+): defer `name-conflict`.
+   - only names differ (a callee's, a global's, a vtable slot's), whatever the
+     score: defer `name-conflict` at once, with the exact name each needs in
+     `--needs`; the lead's naming pass renames it and retries your source.
 4. Defer after CAP attempts, when try.py refuses (4 attempts in a row with no
    new best), or at once on a systemic blocker:
    `accept.py defer <ADDR> "<slug>: <one-line blocker>" --needs "<what would unblock it>"`.
@@ -56,6 +58,17 @@ start from an accepted sibling under `similar`. `best earlier attempt`: a
 second pass; start from it, the blocker is a lead and not a verdict, and do
 not repeat what it tried. Claims of one class (`--by-class`): declare the
 class once, the same way in each file.
+
+## Where to start
+
+From, in this order: a `similar` source with the same code (similarity 1.0
+or more: copy it and change only the names, offsets and constants the target
+shows); else the packet's `ghidra` section, a decompiler's reading of the
+target to rewrite in this project's terms: the references' names and types,
+declared classes for `this` and its fields, `this` for `param_1` when ecx is
+the object. Never keep its spellings (`undefined4`, `param_1`, `in_ECX`,
+`CONCAT`, casts through `int`, `__fastcall` for a method): raw decompiler
+output is not published, and accept.py rejects it.
 
 ## Scratch file
 
@@ -112,6 +125,15 @@ inlines any body in the file, even one defined after the caller). Use
   `int Key = A; F(&Key);` stores back into the argument's own slot, `F(&A)`
   does not. A global load hoisted above a member store: `int v = G; f = 0;
   if (v) ...`.
+- A base at offset 0 of a class with a vtable needs virtual methods itself;
+  a base without any lands at +4 (`lea ecx, [esi+4]` to call it).
+- An address-taken local may share a dead parameter's stack slot: plain
+  `int Key = 0; F(&Key);` does it, no trick needed.
+- `if (P) { delete P; P = 0; }` stores only when P was set; `delete P; P = 0;`
+  stores always. A float constant: write the literal (`0.5f`), not an extern.
+- `fild; test; jge; fadd [2^32]`: the converted value is unsigned. A byte field
+  passed with movzx: the callee takes an `int` (a BYTE or bool parameter
+  gives xor/mov al).
 - `movzx eax, al` after a call returning bool: the caller returns int.
   `neg eax; sbb eax, eax; neg eax` after a call: `return F() != 0;` (bool).
   `setge dl; mov eax, edx`: an int return; a bool return is `mov al, dl`.
