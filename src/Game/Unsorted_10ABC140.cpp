@@ -7,24 +7,7 @@
 #include "Game/Class_10E70A50.h"
 #include "Game/Struct_10AA3520_Member.h"
 #include "Game/Struct_10ABC6F0.h"
-
-class Class_10993EC0 : public Class_10E70A50
-{
-public:
-    Class_10993EC0()
-    {
-        UnknownB0 = 0;
-        UnknownB4 = 0;
-        UnknownB8 = 0;
-    }
-
-    virtual void FUN_10adb3a0();
-
-    char Unknown2C[0x84];
-    int UnknownB0;
-    int UnknownB4;
-    int UnknownB8;
-};
+#include "Game/Class_10993EC0.h"
 
 class Object_10ABD7F0
 {

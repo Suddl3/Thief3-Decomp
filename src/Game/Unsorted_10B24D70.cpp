@@ -3,24 +3,10 @@
 #include "Game/Class_10B16930.h"
 #include "Game/Class_10B25200.h"
 #include "Game/Struct_10B25010.h"
+#include "Game/Class_10B1B8A0.h"
+#include "Game/Class_10B25010_Member.h"
 
 void* FUN_10b154c0();
-
-class Class_10B25010_Member
-{
-public:
-    int Get(int Index) { return Unknown08[Index].Unknown04; }
-
-    char Unknown00[8];
-    Struct_10B25010* Unknown08;
-};
-
-class Class_10B1B8A0
-{
-public:
-    char Unknown00[0x1C];
-    Class_10B25010_Member Unknown1C;
-};
 
 Class_10B1B8A0* FUN_10b1b600();
 

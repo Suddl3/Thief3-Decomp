@@ -6,6 +6,7 @@
 #include "Game/Class_10E4B180.h"
 #include "Game/Class_10E4B180_Unknown7C.h"
 #include "Game/Struct_10B7C030_Param.h"
+#include "Game/Class_10B7ECC0.h"
 
 class Allocator_10FFA700
 {
@@ -33,15 +34,6 @@ struct Struct_10B7C3D0
 };
 
 extern void* DAT_10e47850[];
-
-class Class_10B7ECC0
-{
-public:
-    Class_10B7ECC0* FUN_10b7ecc0();
-
-    char Unknown00[0xC];
-    Class_10AF4B90 Unknown0C;
-};
 
 struct Struct_10D9E5E0_Param;
 

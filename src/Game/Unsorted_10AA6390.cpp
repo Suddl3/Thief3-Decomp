@@ -24,6 +24,11 @@
 #include "Game/Class_10E6D8F0.h"
 #include "Game/Class_10E6DA90.h"
 #include "Game/Class_10EC0808.h"
+#include "Game/Class_109081E0.h"
+#include "Game/Class_10AAA130.h"
+#include "Game/Class_10AAE310.h"
+#include "Game/Class_10AB37F0.h"
+#include "Game/Class_10E6C128.h"
 
 class Class_10E6D8CC
 {
@@ -34,37 +39,15 @@ public:
     int FUN_10aa63b0();
 };
 
-typedef struct _iobuf FILE;
-
 extern char DAT_10e6c0f0[];
 
 extern "C" int fprintf(FILE* File, const char* Format, ...);
-
-class Class_10E6C128
-{
-public:
-    int FUN_10aa71f0(FILE* File, int Param);
-
-    char Unknown00[0x0C];
-    int Unknown0C;
-    char Unknown10[0x10];
-    int Unknown20;
-};
 
 struct Class_10AA82D0 {
 	char unknown_00[0xc];
 	int unknown_0c;
 
 	int FUN_10aa82d0();
-};
-
-class Class_10AAA130
-{
-public:
-    Class_1090A780 FUN_10aaa130();
-
-    char Unknown00[0x20];
-    Class_1090A780 Unknown20;
 };
 
 extern char DAT_10e6d9e0[];
@@ -86,14 +69,6 @@ struct Class_10AAB5C0 {
 	int FUN_10aab5c0();
 };
 
-class Class_10AAE310
-{
-public:
-    char Unknown00[0x818];
-    int Field818;
-    void FUN_10aae310(int param);
-};
-
 class Member_10AB0140
 {
 public:
@@ -103,22 +78,6 @@ public:
     virtual void F3() = 0;
     virtual void F4() = 0;
     virtual void F5() = 0;
-};
-
-class Class_109081E0
-{
-public:
-    Class_109081E0& operator=(const Class_109081E0& Other);
-
-    void* Unknown00;
-};
-
-class Class_10AB37F0
-{
-public:
-    void FUN_10ab37f0(const Class_109081E0& Value);
-
-    Class_109081E0 Unknown00;
 };
 
 void FUN_10ab57c0();

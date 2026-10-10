@@ -12,6 +12,7 @@
 #include "Game/Class_10A3A9C0.h"
 #include "Game/Class_10E666E0.h"
 #include "Game/Struct_10A3A1D0.h"
+#include "Game/Class_10A3A1D0.h"
 
 class Class_10A34B90
 {
@@ -51,15 +52,6 @@ extern const char DAT_10e47660[];
 extern void* DAT_10e666e0[];
 
 extern void* DAT_10e66700[];
-
-class Class_10A3A1D0
-{
-public:
-    Struct_10A3A1D0 FUN_10a3a1d0();
-
-    char Unknown00[0x114];
-    Struct_10A3A1D0 Unknown114;
-};
 
 // FUNCTION: 0x10A35300 ?FUN_10a35300@Class_10A35300@@QAEXH@Z
 void Class_10A35300::FUN_10a35300(int A)

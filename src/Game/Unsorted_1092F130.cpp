@@ -3,13 +3,7 @@
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10928760.h"
 #include "Game/Class_1092F130.h"
-
-class Class_10E49C6C : public Class_10928760
-{
-public:
-    virtual ~Class_10E49C6C();
-    Class_10E49C6C();
-};
+#include "Game/Class_10E49C6C.h"
 
 Class_10905A90_Member* FUN_10905aa0();
 

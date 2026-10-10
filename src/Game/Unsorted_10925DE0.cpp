@@ -2,20 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10925FC0.h"
 #include "Game/Object_10AB5B20.h"
-
-class Class_10AB5B20
-{
-public:
-    Class_10AB5B20(const Class_10AB5B20& Other)
-    {
-        Unknown00 = Other.Unknown00;
-        if (Unknown00)
-            Unknown00->Virtual1();
-    }
-    ~Class_10AB5B20();
-
-    Object_10AB5B20* Unknown00;
-};
+#include "Game/Class_10AB5B20.h"
 
 class Class_10BFBD70
 {

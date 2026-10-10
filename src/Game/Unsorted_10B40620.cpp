@@ -4,6 +4,7 @@
 #include "Game/Class_10B2A160_Node.h"
 #include "Game/Class_10E696A8.h"
 #include "Game/Struct_10B406A0.h"
+#include "Game/Class_10B408D0.h"
 
 class FArray
 {
@@ -62,12 +63,6 @@ public:
     int Unknown1FC;
     int Unknown200;
     bool Unknown204;
-};
-
-class Class_10B408D0 : public Class_10B2A160
-{
-public:
-    void FUN_10b40620(int Size);
 };
 
 // FUNCTION: 0x10B40620 ?FUN_10b40620@Class_10B408D0@@QAEXH@Z

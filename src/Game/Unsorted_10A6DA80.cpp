@@ -5,26 +5,7 @@
 #include "Game/Class_10E67938.h"
 #include "Game/Class_10E6B978.h"
 #include "Game/Class_10E6B9F8.h"
-
-class Class_10E6BA00 : public Class_10E67938
-{
-public:
-    virtual void FUN_10a6e6b0(int Type, int A, int B, int C);
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8();
-    virtual void Virtual9();
-    virtual void Virtual10();
-    virtual void Virtual11();
-    virtual void Virtual12();
-    virtual void Virtual13();
-    virtual void Virtual14();
-    virtual void Virtual15(int A, int B, int C);
-};
+#include "Game/Class_10E6BA00.h"
 
 class Class_10E6BC8C
 {

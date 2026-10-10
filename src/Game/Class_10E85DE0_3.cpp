@@ -3,14 +3,7 @@
 #include "Game/Class_10A56860.h"
 #include "Game/Struct_10B6BC80.h"
 #include "Game/Struct_10B6C180.h"
-
-struct Data_10B66060
-{
-    char Unknown000[0x174];
-    unsigned char Unknown174;
-    char Unknown175[3];
-    Struct_10B6C180 Unknown178;
-};
+#include "Game/Data_10B66060.h"
 
 class Class_10F3A3D8
 {

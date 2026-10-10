@@ -5,6 +5,8 @@
 #include "Game/Class_10C168D0.h"
 #include "Game/Class_10E98C8C.h"
 #include "Game/Class_10FF667C_Member.h"
+#include "Game/Class_10B1D660.h"
+#include "Game/Struct_10AA3520.h"
 
 class Class_10FF667C
 {
@@ -23,21 +25,6 @@ public:
     virtual void Virtual2();
     virtual void Virtual3();
     virtual int Virtual4();
-};
-
-class Class_10B1D660
-{
-public:
-    char Unknown00[0x2C4];
-    Class_10B1D1B0 Unknown2C4;
-};
-
-struct Struct_10AA3520
-{
-    char Unknown00[0xC];
-    Class_10B1D660* Unknown0C;
-
-    Class_10B1D660* GetUnknown0C() { return Unknown0C; }
 };
 
 extern Struct_10AA3520* DAT_10f35dec;

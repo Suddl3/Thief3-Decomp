@@ -2,12 +2,9 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10936A40.h"
 #include "Game/IDirect3DDevice8.h"
+#include "Game/Class_10936AC0.h"
 
 class IDirect3DSurface8;
-
-class Class_10936AC0 : public Class_10936A40
-{
-};
 
 extern Class_10936AC0* DAT_10f31be0;
 

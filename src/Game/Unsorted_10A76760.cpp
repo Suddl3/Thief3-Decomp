@@ -4,6 +4,7 @@
 #include "Game/Class_10E67938.h"
 #include "Game/Class_10E6BC80.h"
 #include "Game/Class_10E6BD64.h"
+#include "Game/Class_10E6BD18.h"
 
 extern void* DAT_10e6bd64[];
 
@@ -29,12 +30,6 @@ public:
     int Unknown28;
     int Unknown2C;
     int Unknown30;
-};
-
-class Class_10E6BD18 : public Class_10E67938
-{
-public:
-    void FUN_10a790b0(int A, int B, int C, int D);
 };
 
 class Object_10A76760

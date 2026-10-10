@@ -3,6 +3,7 @@
 #include "Game/Class_10C48320_Field18.h"
 #include "Game/Class_10C48320_Node.h"
 #include "Game/Class_10E9BBC0_Unknown3C.h"
+#include "Game/Class_10C48320.h"
 
 // Ion Storm's placement new and its delete (0x10905C10; the delete folded into ::operator delete).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
@@ -10,23 +11,6 @@ void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
 unsigned int FUN_1090e9b0(const void* Data, int Length);
-
-// The hash table of 0x1090F080 (Class_1090F080) over another key type.
-class Class_10C48320
-{
-public:
-    unsigned int FUN_10c48320(const int& Key, const int& Value);
-    void FUN_10c484d0(int Size);
-    bool FUN_10c49960(const int& Key);
-
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    bool Unknown10;
-    Class_10C48320_Node** Unknown14;
-    Class_10C48320_Field18 Unknown18;
-};
 
 class Class_10C48260
 {

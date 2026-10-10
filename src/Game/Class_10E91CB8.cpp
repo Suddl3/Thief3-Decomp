@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10C7D570.h"
 #include "Game/Struct_10BCB770_Value.h"
+#include "Game/Struct_10C7D570.h"
 
 extern void* DAT_10e91cb8[];
 
@@ -9,12 +10,6 @@ struct Struct_10BCB770
 {
     char Unknown00[8];
     Class_10C7D570* Unknown08;
-};
-
-struct Struct_10C7D570
-{
-    char Unknown00[0x2C];
-    Struct_10BCB770_Value Unknown2C;
 };
 
 class Class_10E90D70

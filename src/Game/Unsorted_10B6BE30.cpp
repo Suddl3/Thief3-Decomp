@@ -3,6 +3,7 @@
 #include "Game/Class_10B6BE30.h"
 #include "Game/Class_10B78780.h"
 #include "Game/Class_10E871C8.h"
+#include "Game/Class_10E86A28.h"
 
 Class_10E871C8* FUN_10b70460();
 
@@ -53,14 +54,6 @@ public:
     Class_10E871D0* FUN_10b70430();
 
     FArray Unknown154;
-};
-
-class Class_10E86A28 : public Class_10B78780
-{
-public:
-    Class_10E86A28* FUN_10b6d970();
-
-    int Unknown190;
 };
 
 // FUNCTION: 0x10B6BE30 ?FUN_10b6be30@Class_10B6BE30@@QAE_NH@Z

@@ -2,12 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10C17360.h"
 #include "Game/FArchive.h"
-
-struct Struct_10BCBD10
-{
-    char Unknown00[0xAC];
-    Class_10C17360 UnknownAC;
-};
+#include "Game/Struct_10BCBD10.h"
 
 class Class_10E94578
 {

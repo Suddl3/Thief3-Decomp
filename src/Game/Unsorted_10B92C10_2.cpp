@@ -1,6 +1,9 @@
 // Game/Unsorted_10B92C10_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10E52230.h"
+#include "Game/Class_10E89AF8.h"
+#include "Game/Class_10E89C78.h"
+#include "Game/Class_10E89DF8.h"
 
 enum EInternal { EC_Internal };
 
@@ -17,27 +20,9 @@ public:
 
 extern void* DAT_10e89af8[];
 
-class Class_10E89AF8 : public Class_10E52230
-{
-public:
-    Class_10E89AF8* FUN_10b93410();
-};
-
 extern void* DAT_10e89c78[];
 
-class Class_10E89C78 : public Class_10E52230
-{
-public:
-    Class_10E89C78* FUN_10b934b0();
-};
-
 extern void* DAT_10e89df8[];
-
-class Class_10E89DF8 : public Class_10E52230
-{
-public:
-    Class_10E89DF8* FUN_10b93550();
-};
 
 extern void* DAT_10e89f78[];
 

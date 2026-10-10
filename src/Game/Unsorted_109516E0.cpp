@@ -7,34 +7,7 @@
 #include "Game/Struct_Pair0.h"
 #include "Game/Struct_Zero4.h"
 #include "Game/Struct_Zero5.h"
-
-class Class_10E4AC6C
-{
-public:
-    Class_10E4AC6C();
-
-    virtual ~Class_10E4AC6C();
-
-    int Unknown04;
-    int Unknown08;
-    float Unknown0C;
-    float Unknown10;
-    float Unknown14;
-    float Unknown18;
-    float Unknown1C;
-    Struct_Pair0 Unknown20;
-    int Unknown28;
-    float Unknown2C;
-    float Unknown30;
-    float Unknown34;
-    float Unknown38;
-    int Unknown3C;
-    Struct_Zero5 Unknown40;
-    Struct_One4 Unknown54;
-    Struct_Zero4 Unknown64;
-    Struct_One2 Unknown74;
-    Struct_Zero4 Unknown7C;
-};
+#include "Game/Class_10E4AC6C.h"
 
 extern Class_10939570* DAT_10f323fc;
 

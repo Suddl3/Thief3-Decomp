@@ -4,6 +4,7 @@
 #include "Game/Class_10A492B0_Field18.h"
 #include "Game/Class_10A4C4A0.h"
 #include "Game/FCoords.h"
+#include "Game/Class_10A492B0.h"
 
 int FUN_10a48b30(int A, int B);
 
@@ -49,21 +50,6 @@ public:
     Class_109081E0 Key;
     int Value;
     Class_10A492B0_Node* Next;
-};
-
-class Class_10A492B0
-{
-public:
-    unsigned int FUN_10a492b0(const Class_109081E0& Key, const int& Value);
-    void FUN_10a4ab10(int Size);
-
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    bool Unknown10;
-    Class_10A492B0_Node** Unknown14;
-    Class_10A492B0_Field18 Unknown18;
 };
 
 // FUNCTION: 0x10A492B0 ?FUN_10a492b0@Class_10A492B0@@QAEIABVClass_109081E0@@ABH@Z

@@ -3,6 +3,8 @@
 #include "Game/Class_10978090.h"
 #include "Game/Class_10BC4160.h"
 #include "Game/Class_10C08940.h"
+#include "Game/Class_10E94578.h"
+#include "Game/Class_10E95AC8.h"
 
 class Class_10FF667C
 {
@@ -12,26 +14,6 @@ public:
 };
 
 extern Class_10FF667C* DAT_10ff667c;
-
-class Class_10E94578 : public Class_10BC4160
-{
-public:
-    virtual void Virtual1();
-
-    void FUN_10bc5b50();
-};
-
-class Class_10E95AC8 : public Class_10E94578
-{
-public:
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void FUN_10be1dc0();
-};
 
 // FUNCTION: 0x10BE1DC0 ?FUN_10be1dc0@Class_10E95AC8@@UAEXXZ
 void Class_10E95AC8::FUN_10be1dc0()

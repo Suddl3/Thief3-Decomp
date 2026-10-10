@@ -3,20 +3,8 @@
 #include "Game/Class_10B47660_Member.h"
 #include "Game/Class_10B7AC30.h"
 #include "Game/Class_10C3E140.h"
-
-class Class_10B7AB80 : public Class_10C3E140
-{
-public:
-    void FUN_10b7ab80(int A, float B);
-};
-
-class Class_10EC0E20 : public Class_10B7AB80
-{
-public:
-    void FUN_10b7b8a0();
-    void FUN_10b7abb0(int A);
-    void FUN_10b7b760(int A);
-};
+#include "Game/Class_10B7AB80.h"
+#include "Game/Class_10EC0E20.h"
 
 class Class_10BFBD70
 {

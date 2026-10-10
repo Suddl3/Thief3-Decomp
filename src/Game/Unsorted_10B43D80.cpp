@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10B787F0.h"
+#include "Game/Class_10B2AB30.h"
 
 extern void* DAT_10e81130[];
 
@@ -26,29 +27,6 @@ public:
     int Unknown158;
     int Unknown15C;
     int Unknown160;
-};
-
-Class_10905A90_Member* FUN_10905aa0();
-
-class Class_10B2AB30
-{
-public:
-    void FUN_10b2a8a0(int Count);
-
-    ~Class_10B2AB30()
-    {
-        FUN_10b2a8a0(0);
-        if (Unknown04)
-        {
-            FUN_10905aa0()->Virtual5(Unknown08);
-            Unknown08 = 0;
-            Unknown04 = 0;
-        }
-    }
-
-    int Unknown00;
-    int Unknown04;
-    void* Unknown08;
 };
 
 class Class_10E80C78 : public Class_10B787F0

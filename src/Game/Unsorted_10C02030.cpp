@@ -2,22 +2,12 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10C01FC0.h"
+#include "Game/Class_10C02460.h"
 
 struct Class_10C02460_Node
 {
     Class_10C02460_Node* Next;
     Class_10C02460_Node* Prev;
-};
-
-class Class_10C02460
-{
-public:
-    ~Class_10C02460();
-
-    int Count;
-    Class_10C02460_Node* Head;
-    Class_10C02460_Node* Tail;
-    Class_10C01FC0 Unknown0C;
 };
 
 Class_10905A90_Member* FUN_10905aa0();

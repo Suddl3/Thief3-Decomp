@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10E67938.h"
 #include "Game/Class_10E70060.h"
+#include "Game/Class_10E700F0.h"
 
 class Class_10E700F0;
 
@@ -14,15 +15,6 @@ public:
 };
 
 extern Class_10F46DA0* DAT_10f46da0;
-
-class Class_10E700F0 : public Class_10E67938, public Class_10E70060
-{
-public:
-    ~Class_10E700F0();
-
-    virtual void FUN_10c13ea0(int A, int B, int C, int D);
-    virtual float FUN_10ace340(int A, int B, int C);
-};
 
 // FUNCTION: 0x10ACD640 ??1Class_10E700F0@@UAE@XZ
 Class_10E700F0::~Class_10E700F0()

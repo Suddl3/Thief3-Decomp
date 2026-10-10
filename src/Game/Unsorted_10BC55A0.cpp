@@ -5,15 +5,7 @@
 #include "Game/Class_10BBA020.h"
 #include "Game/Class_10BBDB40.h"
 #include "Game/Class_10C7D570.h"
-
-class Class_109081E0
-{
-public:
-    Class_109081E0(const Class_109081E0& Other);
-    ~Class_109081E0();
-
-    char* Unknown00;
-};
+#include "Game/Class_109081E0.h"
 
 class Class_10E50610
 {
@@ -34,8 +26,6 @@ public:
 
 // Ion Storm's placement new (0x10905C10).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
-
-Class_10905A90_Member* FUN_10905aa0();
 
 extern void* DAT_10e90c5c[];
 

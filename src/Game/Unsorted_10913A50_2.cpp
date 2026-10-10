@@ -1,10 +1,10 @@
 // Game/Unsorted_10913A50_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10905A90_Member.h"
+#include "Game/Class_109081E0.h"
+#include "Game/Class_10913D70.h"
 
 extern void* DAT_10e49384[];
-
-Class_10905A90_Member* FUN_10905aa0();
 
 inline void FreeBlock(int*& Block)
 {
@@ -23,21 +23,6 @@ public:
 
     void** VTable;
     int* Unknown04;
-};
-
-class Class_109081E0 {
-public:
-    Class_109081E0& operator=(const Class_109081E0& Other);
-
-    void* Unknown00;
-};
-
-class Class_10913D70 {
-public:
-    int Unknown00;
-    Class_109081E0 Unknown04;
-
-    Class_10913D70* FUN_10913d70(Class_10913D70* Other);
 };
 
 // FUNCTION: 0x10913A50 ??1Class_10E49384@@QAE@XZ

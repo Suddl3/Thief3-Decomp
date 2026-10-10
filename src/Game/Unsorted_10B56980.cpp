@@ -8,15 +8,10 @@
 #include "Game/Class_10B64430.h"
 #include "Game/Class_10B78780.h"
 #include "Game/Info_10B66060.h"
-
-class Class_10B56C80
-{
-public:
-    Class_1090A780 FUN_10b56c80();
-
-    char Unknown00[0x1BC];
-    Class_1090A780 Unknown1BC;
-};
+#include "Game/Class_109081E0.h"
+#include "Game/Class_10B56C80.h"
+#include "Game/Class_10B66060.h"
+#include "Game/Class_10E82AF8.h"
 
 extern void* DAT_10e82058;
 
@@ -88,15 +83,6 @@ void FUN_10a593a0();
 
 extern void* DAT_10e82af8[];
 
-class Class_10E82AF8 : public Class_10B78780
-{
-public:
-    Class_10E82AF8* FUN_10b5aea0();
-
-    int Unknown190;
-    int Unknown194;
-};
-
 class Class_10B787F0
 {
 public:
@@ -114,15 +100,6 @@ public:
 void FUN_10b78080();
 
 extern const char DAT_10e82cf4[];
-
-class Class_109081E0
-{
-public:
-    Class_109081E0(const char* In);
-    ~Class_109081E0();
-
-    char* Unknown00;
-};
 
 void FUN_10b45c20();
 
@@ -234,17 +211,6 @@ struct Data_10B66060
 {
     char Unknown000[0x178];
     Info_10B66060 Unknown178;
-};
-
-class Class_10B66060
-{
-public:
-    void FUN_10b66060(int A, Data_10B66060* B);
-
-    char Unknown000[0x154];
-    Data_10B66060* Unknown154;
-    Info_10B66060 Unknown158;
-    int Unknown184;
 };
 
 // FUNCTION: 0x10B56C80 ?FUN_10b56c80@Class_10B56C80@@QAE?AVClass_1090A780@@XZ

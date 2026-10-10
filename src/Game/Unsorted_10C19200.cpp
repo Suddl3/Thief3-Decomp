@@ -14,6 +14,12 @@
 #include "Game/Struct_10C1ACA0.h"
 #include "Game/Struct_10C1AD20.h"
 #include "Game/Struct_10C1AF80.h"
+#include "Game/Class_10C1AAD0.h"
+#include "Game/Class_10C1AF80.h"
+#include "Game/Class_10E6AC20.h"
+#include "Game/Class_10E98F00.h"
+#include "Game/Class_10E99020.h"
+#include "Game/Class_10E992D4.h"
 
 extern int DAT_10ff708c;
 
@@ -22,24 +28,6 @@ extern void* DAT_10e98cec[];
 void FUN_10c62c90();
 
 extern void* DAT_10e98d08[];
-
-class Class_10C1AAD0
-{
-public:
-    bool FUN_10c1aad0(Struct_10C1AAD0* Out, float* Value);
-
-    char Unknown00[0x48];
-    Struct_10C1AAD0 Unknown48;
-};
-
-class Class_10E98F00
-{
-public:
-    bool FUN_10c1aca0(Struct_10C1ACA0* Out, float* Value);
-
-    char Unknown00[0x4C];
-    Struct_10C1ACA0 Unknown4C;
-};
 
 class Class_10E98F48
 {
@@ -50,22 +38,7 @@ public:
     Struct_10C1AD20 Unknown48;
 };
 
-class Class_10C1AF80
-{
-public:
-    bool FUN_10c1af80(Struct_10C1AF80* Out, float* Value);
-
-    char Unknown00[0xC];
-    Struct_10C1AF80 Unknown0C;
-};
-
 class FArchive;
-
-class Class_10E99020 : public Class_10C1B1A0
-{
-public:
-    virtual void FUN_10c1b7d0(FArchive& Ar);
-};
 
 extern void* DAT_10e8d7ac[];
 
@@ -101,31 +74,6 @@ struct Info_10C266A0
     int Unknown00;
     int Unknown04;
     int Unknown08;
-};
-
-class Class_10E6AC20
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8();
-    virtual Class_1090A780 FUN_10c26a40();
-
-    char Unknown04[0xC];
-    Class_1090A780 Unknown10;
-};
-
-class Class_10E992D4 {
-public:
-    char Unknown00[0x44];
-    unsigned char Field44;
-    unsigned char FUN_10c270b0();
 };
 
 extern int DAT_10ff709c;

@@ -4,6 +4,7 @@
 #include "Game/Class_10B330D0.h"
 #include "Game/Class_10B33D70.h"
 #include "Game/Class_10BFBD70.h"
+#include "Game/Class_10B33200.h"
 
 extern void* DAT_10e7bf50[];
 
@@ -34,17 +35,6 @@ public:
     int Unknown19C;
     int Unknown1A0;
     bool Unknown1A4;
-};
-
-class Class_10B33200
-{
-public:
-    Class_10B33200(int A, const Class_109081E0& B, const Class_109081E0& C, int D);
-
-    int Unknown00;
-    Class_109081E0 Unknown04;
-    Class_109081E0 Unknown08;
-    int Unknown0C;
 };
 
 // FUNCTION: 0x10B33200 ??0Class_10B33200@@QAE@HABVClass_109081E0@@0H@Z

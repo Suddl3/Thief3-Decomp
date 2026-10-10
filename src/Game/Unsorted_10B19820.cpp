@@ -3,17 +3,12 @@
 #include "Core/Core.h"
 #include "Game/Class_1098E330.h"
 #include "Game/Class_10AF4BB0.h"
+#include "Game/Class_10B199A0.h"
 
 struct Struct_10B199A0
 {
     FStringNoInit Unknown00;
     int Unknown0C;
-};
-
-class Class_10B199A0 : public Class_10AF4BB0
-{
-public:
-    void FUN_10b199a0(int Index, int Count);
 };
 
 struct Struct_10B198A0

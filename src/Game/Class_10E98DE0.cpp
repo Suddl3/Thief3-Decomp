@@ -3,12 +3,9 @@
 #include "Game/Class_10BBDC30.h"
 #include "Game/Class_10DBD510.h"
 #include "Game/Struct_10BA91E0.h"
+#include "Game/Class_10BBDB40.h"
 
 float FUN_10ba91e0(const Struct_10BA91E0* A, const Struct_10BA91E0* B);
-
-class Class_10BBDB40 : public Class_10BBDC30
-{
-};
 
 class Class_10E98DE0
 {

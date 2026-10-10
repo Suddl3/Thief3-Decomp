@@ -3,24 +3,8 @@
 #include "Game/Class_109A6AA0.h"
 #include "Game/Class_10C1B840.h"
 #include "Game/Struct_10C1B940.h"
-
-class Class_10C1BE80
-{
-public:
-    bool FUN_10c1be80(Class_109A6AA0* Out);
-
-    char Unknown00[0x58];
-    Class_109A6AA0 Unknown58;
-};
-
-class Class_10C1BEB0
-{
-public:
-    bool FUN_10c1beb0(Class_109A6AA0* Out);
-
-    char Unknown00[0x64];
-    Class_109A6AA0 Unknown64;
-};
+#include "Game/Class_10C1BE80.h"
+#include "Game/Class_10C1BEB0.h"
 
 extern void* DAT_10e98d98[];
 

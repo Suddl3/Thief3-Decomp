@@ -6,31 +6,11 @@
 #include "Game/Class_10A73EF0_Table.h"
 #include "Game/Class_10AF4B90.h"
 #include "Game/Class_10B06220.h"
-
-extern void* DAT_10e47850[];
-
-// The member of Class_10ABCC20 at 4: a Class_10AF4B90 set up with (0x27, DAT_10e47850).
-class Class_10ABCC20_Field04 : public Class_10AF4B90
-{
-public:
-    Class_10ABCC20_Field04() { FUN_10af4b90(0x27, DAT_10e47850); }
-};
-
-// The item 0x10ABCC20 constructs.
-class Class_10ABCC20
-{
-public:
-    int Unknown00;
-    Class_10ABCC20_Field04 Unknown04;
-};
+#include "Game/Class_10ABCC20.h"
+#include "Game/Class_10ABCC20_Field04.h"
+#include "Game/Class_10ABCFE0.h"
 
 extern Class_10A73EF0_Table* DAT_10f3eda4;
-
-class Class_10ABCFE0 : public Class_10B06220
-{
-public:
-    void FUN_10abcfe0(int Handle, int B);
-};
 
 class Class_1098E330
 {

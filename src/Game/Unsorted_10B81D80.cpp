@@ -3,56 +3,11 @@
 #include "Game/Class_10B822C0.h"
 #include "Game/Struct_10B859B0_0C.h"
 #include "Game/Struct_10B859B0_Vector.h"
+#include "Game/Class_10B859B0.h"
+#include "Game/Struct_10B859B0_Rotation.h"
+#include "Game/Struct_10B859B0_Transform.h"
 
 typedef unsigned char BYTE;
-
-struct Struct_10B859B0_Rotation
-{
-    void SetZero()
-    {
-        Col0.SetZero();
-        Col1.SetZero();
-        Col2.SetZero();
-    }
-    float& operator()(int Row, int Col) { return (&Col0)[Col](Row); }
-    void SetIdentity()
-    {
-        SetZero();
-        (*this)(0, 0) = 1.0f;
-        (*this)(1, 1) = 1.0f;
-        (*this)(2, 2) = 1.0f;
-    }
-
-    Struct_10B859B0_Vector Col0;
-    Struct_10B859B0_Vector Col1;
-    Struct_10B859B0_Vector Col2;
-};
-
-struct Struct_10B859B0_Transform
-{
-    void SetIdentity()
-    {
-        Rotation.SetIdentity();
-        Translation.SetZero();
-    }
-
-    Struct_10B859B0_Rotation Rotation;
-    Struct_10B859B0_Vector Translation;
-};
-
-class Class_10B859B0
-{
-public:
-    Class_10B859B0* FUN_10b859b0();
-
-    int Unknown00;
-    int Unknown04;
-    BYTE Unknown08;
-    Struct_10B859B0_0C Unknown0C;
-    int Unknown18;
-    int Unknown1C;
-    Struct_10B859B0_Transform Unknown20;
-};
 
 class Class_10B822C0_Member
 {

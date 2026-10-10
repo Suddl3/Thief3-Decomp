@@ -5,30 +5,9 @@
 #include "Game/Class_Unknown00.h"
 #include "Game/Struct_10B87560.h"
 #include "Game/Struct_10B88840.h"
-
-class Class_10B88840
-{
-public:
-    Class_10B88840* FUN_10b88840();
-
-    Struct_10B88840 Unknown00[4];
-    bool Unknown30;
-};
-
-class Class_10B888D0
-{
-public:
-    Class_10b888d0_Entry Entries[1];
-    int FUN_10b888d0(int index);
-};
-
-class Class_10B888E0
-{
-public:
-    void FUN_10b888e0(int p1, int* p2);
-
-    Class_Unknown00 Unknown00[1];
-};
+#include "Game/Class_10B88840.h"
+#include "Game/Class_10B888D0.h"
+#include "Game/Class_10B888E0.h"
 
 extern void* DAT_10e89540[];
 

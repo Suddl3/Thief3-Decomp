@@ -3,10 +3,7 @@
 #include "Game/Class_10E5B578.h"
 #include "Game/Class_10EB766C.h"
 #include "Game/Class_10F46DA0.h"
-
-class Class_10E6C874 : public Class_10EB766C
-{
-};
+#include "Game/Class_10E6C874.h"
 
 class Class_10E6DC88 : public Class_10E6C874, public Class_10E5B578
 {

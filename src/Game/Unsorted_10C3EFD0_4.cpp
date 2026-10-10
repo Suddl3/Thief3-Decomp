@@ -4,6 +4,7 @@
 #include "Game/Class_10C3FF10.h"
 #include "Game/Class_10C62A40.h"
 #include "Game/Class_10E9B5C0_Unknown1C.h"
+#include "Game/Class_10C80360.h"
 
 class FVector
 {
@@ -18,10 +19,6 @@ public:
 };
 
 Class_10C41420* FUN_10c47d90();
-
-class Class_10C80360 : public Class_10C62A40
-{
-};
 
 Class_10C80360* FUN_10c5f280();
 

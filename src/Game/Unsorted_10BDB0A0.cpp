@@ -6,6 +6,7 @@
 #include "Game/Class_10BFF240.h"
 #include "Game/Class_10DBD510.h"
 #include "Game/FArchive.h"
+#include "Game/Class_10BFF460.h"
 
 class Class_10E8BE68
 {
@@ -71,12 +72,6 @@ public:
     virtual void FUN_10bdb110(int A);
 
     Class_10BB8700* Unknown04;
-};
-
-class Class_10BFF460 : public Class_10BFF240
-{
-public:
-    bool FUN_10bff330();
 };
 
 class Class_10E94578

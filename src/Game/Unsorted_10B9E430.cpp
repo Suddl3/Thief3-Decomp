@@ -3,12 +3,7 @@
 #include "Game/Class_10B9E410_Member.h"
 #include "Game/Class_10BA9EC0.h"
 #include "Game/Class_10C01CE0.h"
-
-class Class_10BA9EE0 : public Class_10BA9EC0
-{
-public:
-    int FUN_10ba9ee0();
-};
+#include "Game/Class_10BA9EE0.h"
 
 struct Class_10B9E410_Unknown0C
 {

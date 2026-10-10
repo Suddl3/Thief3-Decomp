@@ -3,6 +3,7 @@
 #include "Core/Core.h"
 #include "Game/Class_10A3B460_Member.h"
 #include "Game/Class_10BFBD70.h"
+#include "Game/Class_10A3AD10.h"
 
 class Class_10E667C4
 {
@@ -14,21 +15,6 @@ public:
     Class_10A3B460_Member Unknown04;
     char Unknown08[0x20];
     int Unknown28;
-};
-
-class Class_10A3AD10
-{
-public:
-    Class_10A3AD10(const Class_10A3AD10& Other);
-
-    int Unknown00;
-    FString Unknown04;
-    int Unknown10;
-    int Unknown14;
-    int Unknown18;
-    int Unknown1C;
-    bool Unknown20;
-    Class_10BFBD70 Unknown24;
 };
 
 // FUNCTION: 0x10A3AD10 ??0Class_10A3AD10@@QAE@ABV0@@Z

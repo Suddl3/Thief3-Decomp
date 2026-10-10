@@ -6,6 +6,7 @@
 #include "Game/Class_10953C20.h"
 #include "Game/D3DXMATRIX.h"
 #include "Game/IDirect3DDevice8.h"
+#include "Game/Class_10953B60.h"
 
 struct Item_10953AC0;
 
@@ -25,18 +26,6 @@ public:
 extern Class_1091E400* DAT_10f2c8c0;
 
 class Class_10953E40_Member;
-
-class Class_10953B60
-{
-public:
-    void FUN_10953b60();
-    void FUN_109538b0();
-
-    char Unknown00[0x5C];
-    Class_10953E40_Member* Unknown5C;
-    char Unknown60;
-    bool Unknown61;
-};
 
 extern D3DXMATRIX DAT_10f341b0;
 

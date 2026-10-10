@@ -4,6 +4,7 @@
 #include "Game/Class_10BE31B0.h"
 #include "Game/Class_10C7D570.h"
 #include "Game/Struct_10C05A50.h"
+#include "Game/Class_10BB85E0.h"
 
 float FUN_10c05a50(const Struct_10C05A50* A, const Struct_10C05A50* B);
 
@@ -30,12 +31,6 @@ public:
     virtual void Virtual0();
 
     void FUN_10bc5b50();
-};
-
-class Class_10BB85E0 : public Class_10BB8620
-{
-public:
-    void FUN_10bb8ee0(int A);
 };
 
 class Class_10E95D00 : public Class_10E94578

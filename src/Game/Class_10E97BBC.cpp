@@ -3,6 +3,7 @@
 #include "Game/Class_10C08810.h"
 #include "Game/FArchive.h"
 #include "Game/Object_10BFBD00.h"
+#include "Game/Class_10E97BBC.h"
 
 void FUN_10c11ff0(FArchive& Ar, int* Value);
 
@@ -16,20 +17,6 @@ public:
 };
 
 extern Class_10FF667C* DAT_10ff667c;
-
-class Class_10E97BBC
-{
-public:
-    virtual void FUN_10c08810(FArchive& Ar);
-
-    Class_10C08810 Unknown04;
-    char Unknown08[4];
-    int Unknown0C;
-    int Unknown10;
-    int Unknown14;
-    char Unknown18[8];
-    int Unknown20;
-};
 
 // FUNCTION: 0x10C08810 ?FUN_10c08810@Class_10E97BBC@@UAEXAAVFArchive@@@Z
 void Class_10E97BBC::FUN_10c08810(FArchive& Ar)

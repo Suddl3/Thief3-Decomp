@@ -14,6 +14,8 @@
 #include "Game/Struct_109520C0.h"
 #include "Game/Struct_109520F0.h"
 #include "Game/Struct_10952710.h"
+#include "Game/Class_109520C0.h"
+#include "Game/Class_10952710.h"
 
 extern void* DAT_10e4ac64;
 
@@ -28,15 +30,6 @@ public:
     Struct_10951E80 UnknownF8;
     Struct_10951EB0 Unknown104;
     Struct_10951DE0 Unknown110;
-};
-
-class Class_109520C0
-{
-public:
-    Struct_109520C0 FUN_109520c0();
-
-    char Unknown00[0x120];
-    Struct_109520C0 Unknown120;
 };
 
 class Class_10E4AD48
@@ -61,15 +54,6 @@ struct Struct_109523b0_Field00 {
 struct Struct_109523c0_Field00 {
     char Unknown00[0x290];
     int Field290;
-};
-
-class Class_10952710
-{
-public:
-    Struct_10952710 FUN_10952710();
-
-    char Unknown00[0x70];
-    Struct_10952710 Unknown70;
 };
 
 extern unsigned int DAT_10f3424c;

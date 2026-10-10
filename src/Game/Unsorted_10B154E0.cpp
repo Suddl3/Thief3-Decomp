@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Static_10B18DC0.h"
 #include "Game/Struct_10B19530_Item.h"
+#include "Game/Class_10B19530.h"
 
 class Class_10C56E40
 {
@@ -10,15 +11,6 @@ public:
     ~Class_10C56E40();
 
     int Unknown00;
-};
-
-class Class_10B19530
-{
-public:
-    Struct_10B19530_Item* FUN_10b19530(int Index);
-
-    int Unknown00;
-    Struct_10B19530_Item Items[1];
 };
 
 // FUNCTION: 0x10B18B20 ?FUN_10b18b20@@YAPAVClass_10C56E40@@XZ

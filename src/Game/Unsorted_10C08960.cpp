@@ -3,6 +3,7 @@
 #include "Game/Class_10B9CA00.h"
 #include "Game/Class_10BAA8A0.h"
 #include "Game/Class_10C08DE0.h"
+#include "Game/Class_10BABED0.h"
 
 class Class_10BAA6B0_Param;
 
@@ -17,10 +18,6 @@ class Class_10B9CAC0;
 Class_10BABED0* FUN_10baa6b0(Class_10BAA6B0_Param* Param);
 
 class Class_10B9CAC0 : public Class_10B9CA00
-{
-};
-
-class Class_10BABED0 : public Class_10BAA8A0
 {
 };
 

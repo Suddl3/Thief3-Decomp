@@ -1,6 +1,7 @@
 // Game/Unsorted_10936890_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/D3DVIEWPORT8.h"
+#include "Game/Class_10936A40.h"
 
 class IDirect3DDevice8
 {
@@ -49,15 +50,6 @@ public:
 };
 
 extern IDirect3DDevice8* GDirect3DDevice8;
-
-class Class_10936A40
-{
-public:
-    void FUN_10936a40();
-
-    char Unknown00[0x7FC];
-    D3DVIEWPORT8 Viewport;
-};
 
 // FUNCTION: 0x10936A40 ?FUN_10936a40@Class_10936A40@@QAEXXZ
 void Class_10936A40::FUN_10936a40()

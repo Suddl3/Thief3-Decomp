@@ -24,25 +24,8 @@
 #include "Game/Class_10F3A3D8.h"
 #include "Game/Struct_10AC67F0.h"
 #include "Game/Struct_10AC6820.h"
-
-class Class_10E6F7D4
-{
-public:
-    virtual float FUN_10ac6850();
-
-    Struct_10AC67F0 FUN_10ac67f0();
-    Struct_10AC6820 FUN_10ac6820();
-    int FUN_10ac6860();
-
-    char Pad04[0xcc];
-    Struct_10AC67F0 UnknownD0;
-    char PadDC[0x2c];
-    Struct_10AC6820 Unknown108;
-    char Pad114[0x54];
-    float Field168;
-    char Pad16C[0x44];
-    int Field1B0;
-};
+#include "Game/Class_10E6F7D4.h"
+#include "Game/Class_10E701C8.h"
 
 extern void* DAT_10e6fc78[];
 
@@ -77,12 +60,6 @@ extern Class_10F46DA0* DAT_10f46da0;
 extern void* DAT_10e701c8[];
 
 void FUN_10a4c5f0();
-
-class Class_10E701C8
-{
-public:
-    void FUN_10ace4a0();
-};
 
 class Class_10B82390
 {

@@ -3,6 +3,7 @@
 #include <list>
 #include "Game/Class_109E6520_Field18.h"
 #include "Game/Class_10E5B7C8.h"
+#include "Game/Class_109E6520.h"
 
 // Ion Storm's string (0x109081E0): a char pointer, null when default constructed.
 class Class_109081E0
@@ -29,21 +30,6 @@ public:
     Class_109081E0 Key;
     int Value;
     Class_109E6520_Node* Next;
-};
-
-class Class_109E6520
-{
-public:
-    unsigned int FUN_109e6520(const Class_109081E0& Key, const int& Value);
-    void FUN_109e6600(int Size);
-
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    bool Unknown10;
-    Class_109E6520_Node** Unknown14;
-    Class_109E6520_Field18 Unknown18;
 };
 
 class Class_10E5B7C8_Unknown88

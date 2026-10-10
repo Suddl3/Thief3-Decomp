@@ -9,6 +9,8 @@
 #include "Game/Class_10F3A3D8.h"
 #include "Game/Struct_10B48890.h"
 #include "Game/Struct_10B4D620.h"
+#include "Game/Class_10B4D620.h"
+#include "Game/Class_10C3E140.h"
 
 extern Class_10F3A3D8* DAT_10f3a3d8;
 
@@ -34,15 +36,6 @@ public:
 extern void __stdcall FUN_10b4bd70(UnknownClass_10B4BD70* p1);
 
 void FUN_10b3b130();
-
-class Class_10B4D620
-{
-public:
-    Struct_10B4D620 FUN_10b4d620();
-
-    char Unknown00[0xEC];
-    Struct_10B4D620 UnknownEC;
-};
 
 struct Info_10B4EC30
 {
@@ -159,12 +152,6 @@ public:
     Class_10AAB5C0* Unknown0C;
     int Unknown10;
     int Unknown14;
-};
-
-class Class_10C3E140
-{
-public:
-    unsigned char FUN_10c3e140();
 };
 
 class Class_10B7B110 : public Class_10C3E140

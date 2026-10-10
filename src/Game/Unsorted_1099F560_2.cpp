@@ -1,6 +1,10 @@
 // Game/Unsorted_1099F560_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10E55E78.h"
+#include "Game/Class_10E563C8.h"
+#include "Game/Class_10E56450.h"
+#include "Game/Class_10E564D8.h"
+#include "Game/Class_10E56560.h"
 
 extern void* DAT_10e561a8[];
 
@@ -40,30 +44,6 @@ class Class_10E56340 : public UAttachmentLinkDataObject
 {
 public:
     Class_10E56340* FUN_1099f7b0();
-};
-
-class Class_10E563C8 : public Class_10E55E78
-{
-public:
-    Class_10E563C8();
-};
-
-class Class_10E56450 : public Class_10E55E78
-{
-public:
-    Class_10E56450();
-};
-
-class Class_10E564D8 : public Class_10E55E78
-{
-public:
-    Class_10E564D8();
-};
-
-class Class_10E56560 : public Class_10E55E78
-{
-public:
-    Class_10E56560();
 };
 
 // FUNCTION: 0x1099F5E0 ?FUN_1099f5e0@Class_10E561A8@@QAEPAV1@XZ

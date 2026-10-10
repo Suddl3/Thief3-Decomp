@@ -3,30 +3,7 @@
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_1098E330.h"
 #include "Game/Struct_10C099A0.h"
-
-class Class_10C099A0
-{
-public:
-    bool FUN_10c09c30(int A, int B);
-    bool FUN_10c09f10(int Key, int B);
-
-    // The value of the first entry whose key is Key, else 0.
-    int FindValue(int Key)
-    {
-        for (int i = 0; i < Unknown04; i++)
-        {
-            Struct_10C099A0* Item = &Unknown0C[i];
-            if (Item->Unknown00 == Key)
-                return Item->Unknown04;
-        }
-        return 0;
-    }
-
-    char Unknown00[4];
-    int Unknown04;
-    char Unknown08[4];
-    Struct_10C099A0* Unknown0C;
-};
+#include "Game/Class_10C099A0.h"
 
 Class_10905A90_Member* FUN_10905aa0();
 

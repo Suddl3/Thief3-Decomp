@@ -2,39 +2,8 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Item_10943600.h"
-
-Class_10905A90_Member* FUN_10905aa0();
-
-class Class_10943600
-{
-public:
-    void FUN_10da4f50(int NewCount);
-
-    void Empty()
-    {
-        FUN_10da4f50(0);
-        if (Unknown04)
-        {
-            FUN_10905aa0()->Virtual5(Unknown08);
-            Unknown08 = 0;
-            Unknown04 = 0;
-        }
-    }
-
-    int Unknown00;
-    int Unknown04;
-    Item_10943600* Unknown08;
-};
-
-class Class_10A680C0
-{
-public:
-    void FUN_10a680c0();
-
-    int Unknown00;
-    int Unknown04;
-    Class_10943600 Unknown08;
-};
+#include "Game/Class_10943600.h"
+#include "Game/Class_10A680C0.h"
 
 class Class_10BFBD70
 {

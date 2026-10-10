@@ -4,19 +4,8 @@
 #include "Game/Class_10A243F0.h"
 #include "Game/Class_10A24540.h"
 #include "Game/Class_10A250D0_Field18.h"
-
-Class_10905A90_Member* FUN_10905aa0();
-
-// Ion Storm's string (0x109081E0): a char pointer, null when default constructed.
-class Class_109081E0
-{
-public:
-    Class_109081E0() : Unknown00(0) {}
-    ~Class_109081E0();
-    Class_109081E0& operator=(const Class_109081E0& Other);
-
-    char* Unknown00;
-};
+#include "Game/Class_109081E0.h"
+#include "Game/Class_10A250D0.h"
 
 // Ion Storm's placement new and its delete (0x10905C10; the delete folded into ::operator delete).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
@@ -31,22 +20,6 @@ public:
     Class_109081E0 Key;
     Class_109081E0 Value;
     Class_10A250D0_Node* Next;
-};
-
-// The hash table of 0x1090F080 (Class_1090F080) with string values.
-class Class_10A250D0
-{
-public:
-    unsigned int FUN_10a250d0(const Class_109081E0& Key, const Class_109081E0& Value);
-    void FUN_10a251b0(int Size);
-
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    bool Unknown10;
-    Class_10A250D0_Node** Unknown14;
-    Class_10A250D0_Field18 Unknown18;
 };
 
 // FUNCTION: 0x10A24540 ?FUN_10a24540@Class_10A24540@@QAEXDD@Z

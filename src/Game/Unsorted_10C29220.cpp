@@ -11,16 +11,12 @@
 #include "Game/Class_10E9AEC8.h"
 #include "Game/Info_10C2F870.h"
 #include "Game/Struct_10C35670.h"
+#include "Game/Class_10C38610.h"
+#include "Game/Class_10E993C4.h"
+#include "Game/Class_10E9AE24.h"
+#include "Game/Class_10E9AF04.h"
 
 extern void* DAT_10e993c0[];
-
-class Class_10E993C4 : public Class_10E99370
-{
-public:
-    Class_10E993C4(int A, int B);
-
-    virtual void FUN_10c28260();
-};
 
 void FUN_10c28280();
 
@@ -92,30 +88,7 @@ extern const char DAT_10e9ae18[];
 
 extern const char DAT_10e9ae54[];
 
-class Class_10E9AE24
-{
-public:
-    Class_109081E0 FUN_10c378a0();
-};
-
 class Object_10BCE8D0;
-
-class Class_10E9AF04
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8();
-    virtual void Virtual9();
-
-    void FUN_10c372e0(Object_10BCE8D0* A);
-};
 
 extern const char DAT_10e9aeb8[];
 
@@ -132,18 +105,6 @@ extern const char DAT_10e9aef4[];
 extern const char DAT_10e9af34[];
 
 extern void* DAT_10e9aad0[];
-
-class Class_10C38610
-{
-public:
-    void FUN_10c38610();
-
-    char Unknown00[0xBC];
-    Class_10B26930 Unknown0BC;
-    int Unknown0C4;
-    char Unknown0C8[0x34];
-    int Unknown0FC;
-};
 
 // FUNCTION: 0x10C296B0 ??0Class_10E993C0@@QAE@H@Z
 Class_10E993C0::Class_10E993C0(int A)

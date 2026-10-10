@@ -3,15 +3,7 @@
 #include "Game/Class_10C49740.h"
 #include "Game/Entry_10C32C30.h"
 #include "Game/Struct_10C32C30.h"
-
-class Class_10C32C30
-{
-public:
-    int FUN_10c32c30(int A);
-
-    char Unknown00[0xC];
-    Class_10C49740 Unknown0C;
-};
+#include "Game/Class_10C32C30.h"
 
 class Class_10BFBD70
 {

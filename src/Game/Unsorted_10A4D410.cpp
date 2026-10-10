@@ -3,20 +3,12 @@
 #include "Game/Class_10A4DD60.h"
 #include "Game/Class_10A4DDA0.h"
 #include "Game/Class_10A4E2A0.h"
+#include "Game/Class_10A4EAE0.h"
 
 class Class_10BFBD70
 {
 public:
     void FUN_10bfbd70(int Count);
-};
-
-class Class_10A4EAE0
-{
-public:
-    void FUN_10a4eae0(int A, Class_10BFBD70* B);
-
-    char Unknown00[0x1C];
-    Class_10A4E2A0 Unknown1C;
 };
 
 struct Struct_10A4DD60

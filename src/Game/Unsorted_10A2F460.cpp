@@ -2,21 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Core/Core.h"
 #include "Game/Class_10A905A0.h"
-
-class Class_10E66320 : public Class_10A905A0
-{
-public:
-    Class_10E66320();
-    virtual ~Class_10E66320();
-    virtual Class_10E66320* Virtual1();
-    virtual int FUN_10a2f0c0(Class_10E66320* Other);
-    virtual bool FUN_10a2f0f0(int p1);
-    virtual void FUN_109b1f50(FString* p1);
-    virtual FString* FUN_10a2f510();
-
-    FString Unknown04;
-    int Unknown10;
-};
+#include "Game/Class_10E66320.h"
 
 // Ion Storm's placement new (0x10905C10).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);

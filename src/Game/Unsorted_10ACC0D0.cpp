@@ -3,6 +3,7 @@
 #include "Game/Class_10971570.h"
 #include "Game/Class_10E67938.h"
 #include "Game/Class_10E7007C.h"
+#include "Game/Class_10E70098.h"
 
 class Class_1098E330;
 
@@ -17,12 +18,6 @@ public:
 };
 
 extern Class_10F46DA0* DAT_10f46da0;
-
-class Class_10E70098 : public Class_10E67938, public Class_10E7007C
-{
-public:
-    ~Class_10E70098();
-};
 
 class Class_10E70020
 {

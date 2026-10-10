@@ -3,14 +3,9 @@
 #include "Game/Class_10C7D570.h"
 #include "Game/Class_10c380d0_Member.h"
 #include "Game/Struct_10C05A50.h"
+#include "Game/Struct_10C3D0A0.h"
 
 float FUN_10c05a20(const Struct_10C05A50* A, const Struct_10C05A50* B);
-
-struct Struct_10C3D0A0
-{
-    char Unknown00[0x2C];
-    Struct_10C05A50 Unknown2C;
-};
 
 class Class_10C270C0
 {

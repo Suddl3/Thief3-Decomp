@@ -30,6 +30,7 @@
 #include "Game/Class_10E6CF3C.h"
 #include "Game/Class_10E6DC88.h"
 #include "Game/FieldClass_A89060.h"
+#include "Game/Class_10A90DC0.h"
 
 void FUN_10a18f40();
 
@@ -51,12 +52,6 @@ class Class_10A905A0
 public:
     void* Field0;
     void FUN_10a905a0();
-};
-
-class Class_10A90DC0 : public Class_10E6DC88
-{
-public:
-    void FUN_10a90dc0();
 };
 
 extern void* DAT_10e6ca40[];

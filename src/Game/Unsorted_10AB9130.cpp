@@ -6,44 +6,8 @@
 #include "Game/Class_10E5BBE0.h"
 #include "Game/Class_10E67938.h"
 #include "Game/Struct_10ABA050.h"
-
-class Class_10E6F3F4 : public Class_10E5BBE0
-{
-public:
-    Class_10E6F3F4();
-
-    virtual ~Class_10E6F3F4();
-
-    int UnknownD8;
-    int UnknownDC;
-    int UnknownE0;
-    int UnknownE4;
-    int UnknownE8;
-    int UnknownEC;
-    int UnknownF0;
-    int UnknownF4;
-    int UnknownF8;
-    int UnknownFC;
-    int Unknown100;
-    int Unknown104;
-    int Unknown108;
-    int Unknown10C;
-    int Unknown110;
-    int Unknown114;
-    int Unknown118;
-    int Unknown11C;
-    int Unknown120;
-    int Unknown124;
-    int Unknown128;
-    int Unknown12C;
-    int Unknown130;
-    int Unknown134;
-    int Unknown138;
-    int Unknown13C;
-    int Unknown140;
-    int Unknown144;
-    Struct_10ABA050 Unknown148;
-};
+#include "Game/Class_10E6F30C.h"
+#include "Game/Class_10E6F3F4.h"
 
 class Class_10AF7F80
 {
@@ -69,21 +33,6 @@ public:
     virtual void Virtual0();
     virtual void Virtual1();
     virtual void Virtual2();
-};
-
-class Class_10E6F30C : public Class_10E67938
-{
-public:
-    Class_10E6F30C();
-    virtual ~Class_10E6F30C();
-
-    virtual void FUN_10ab9d90(int Type, int A, int B, int C);
-
-    void FUN_10ab85a0();
-
-    Class_10AB90F0 Unknown04;
-    int Unknown10;
-    int Unknown14;
 };
 
 // FUNCTION: 0x10AB9130 ??0Class_10E6F30C@@QAE@XZ

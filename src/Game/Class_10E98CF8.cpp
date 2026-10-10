@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_1090EC30.h"
 #include "Game/Class_10BA9FD0.h"
+#include "Game/Class_10E98CF8.h"
 
 class Class_10BAA6B0_Param;
 
@@ -18,14 +19,6 @@ public:
 };
 
 extern char const* const DAT_10e47660;
-
-class Class_10E98CF8
-{
-public:
-    virtual bool FUN_10c1a790(Class_10BAA6B0_Param* A);
-
-    Class_1090EC30 Unknown04;
-};
 
 // FUNCTION: 0x10C1A790 ?FUN_10c1a790@Class_10E98CF8@@UAE_NPAVClass_10BAA6B0_Param@@@Z
 bool Class_10E98CF8::FUN_10c1a790(Class_10BAA6B0_Param* A)

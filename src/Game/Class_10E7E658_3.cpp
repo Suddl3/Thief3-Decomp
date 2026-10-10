@@ -3,6 +3,7 @@
 #include "Game/Class_10AA82D0.h"
 #include "Game/Class_10B396A0.h"
 #include "Game/Class_10F3A3D8.h"
+#include "Game/Class_10E7ED00.h"
 
 class AActor;
 
@@ -29,12 +30,6 @@ public:
     unsigned CanDoItemSearch : 1;
     unsigned CanUseItems : 1;
     unsigned bUpdatePhysHeight : 1;
-};
-
-class Class_10E7ED00
-{
-public:
-    void FUN_109e38b0(int A, int B);
 };
 
 extern Class_10F3A3D8* DAT_10f3a3d8;

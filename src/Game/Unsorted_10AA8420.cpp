@@ -2,30 +2,15 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10AA8420_Unknown08.h"
+#include "Game/Class_1090A780.h"
+#include "Game/Class_10A80CB0.h"
+#include "Game/Class_10AA8420.h"
 
 typedef struct _iobuf FILE;
 
 extern char DAT_10e6c0f0[];
 
 extern "C" int fprintf(FILE* File, const char* Format, ...);
-
-Class_10905A90_Member* FUN_10905aa0();
-
-class Class_1090A780
-{
-public:
-    ~Class_1090A780()
-    {
-        if (Unknown00)
-        {
-            char* Block = Unknown00 - 4;
-            FUN_10905aa0()->Virtual5(Block);
-            Unknown00 = 0;
-        }
-    }
-
-    char* Unknown00;
-};
 
 class Class_10AA83E0
 {
@@ -50,15 +35,6 @@ public:
     char* Unknown08;
 };
 
-class Class_10A80CB0
-{
-public:
-    ~Class_10A80CB0();
-
-    int Unknown00;
-    int Unknown04;
-};
-
 class Class_10AA8420_Unknown08_Unknown00
 {
 public:
@@ -70,14 +46,6 @@ public:
     virtual void Virtual5();
     virtual void Virtual6();
     virtual bool Virtual7(Class_10AA8420_Unknown08_Unknown00** A);
-};
-
-class Class_10AA8420 : public Class_10A80CB0
-{
-public:
-    ~Class_10AA8420();
-
-    Class_10AA8420_Unknown08 Unknown08;
 };
 
 // FUNCTION: 0x10AA8420 ??1Class_10AA8420@@QAE@XZ

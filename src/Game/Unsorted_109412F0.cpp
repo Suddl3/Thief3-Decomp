@@ -15,6 +15,7 @@
 #include "Game/Struct_1094D980.h"
 #include "Game/Struct_1094E0F0.h"
 #include "Game/Struct_1094E120.h"
+#include "Game/Class_10948220.h"
 
 class Class_10E4A668
 {
@@ -53,15 +54,6 @@ public:
     char Pad134[0x48];
     Struct_109437D0 Unknown17C;
     Struct_10943800 Unknown188;
-};
-
-class Class_10948220
-{
-public:
-    Struct_10948220 FUN_10948220();
-
-    char Unknown00[0xCC];
-    Struct_10948220 UnknownCC;
 };
 
 struct Elem_1094EF90

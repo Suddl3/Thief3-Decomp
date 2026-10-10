@@ -4,12 +4,7 @@
 #include "Game/Class_109BC840.h"
 #include "Game/Class_10C7D570.h"
 #include "Game/Struct_10BDF7D0.h"
-
-class Class_10BAA580 : public Class_10C7D570
-{
-public:
-    Class_109BC840* FUN_10baa580();
-};
+#include "Game/Class_10BAA580.h"
 
 class Class_10E955F0
 {

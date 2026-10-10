@@ -3,6 +3,7 @@
 #include "Game/Class_10A3C2E0.h"
 #include "Game/Class_10A3C640_Field18.h"
 #include "Game/Object_10A18FC0.h"
+#include "Game/Class_10A3C640.h"
 
 Object_10A18FC0* FUN_10a18fc0();
 
@@ -31,21 +32,6 @@ public:
     Class_109081E0 Key;
     int Value;
     Class_10A3C640_Node* Next;
-};
-
-class Class_10A3C640
-{
-public:
-    unsigned int FUN_10a3c640(const Class_109081E0& Key, const int& Value);
-    void FUN_10a3c7d0(int Size);
-
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    bool Unknown10;
-    Class_10A3C640_Node** Unknown14;
-    Class_10A3C640_Field18 Unknown18;
 };
 
 // FUNCTION: 0x10A3C2E0 ?FUN_10a3c2e0@Class_10A3C2E0@@QAEXXZ

@@ -12,6 +12,7 @@
 #include "Game/Class_10E8C618.h"
 #include "Game/Class_10E8C61C.h"
 #include "Game/Class_10E98C84.h"
+#include "Game/Class_10E8D658.h"
 
 // Ion Storm's placement new and its delete (0x10905C10; the delete folded into ::operator delete).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
@@ -125,16 +126,6 @@ public:
     {
         VTable = DAT_10e8d634;
     }
-};
-
-class Class_10E8D658
-{
-public:
-    Class_10E8D658();
-    virtual ~Class_10E8D658();
-
-    Class_10C15EF0 Unknown04;
-    Class_10E98C84 Unknown4014;
 };
 
 extern Class_10BA8F10* DAT_10ff6684;

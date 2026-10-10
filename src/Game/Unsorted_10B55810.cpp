@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Options.h"
 #include "Game/Struct_10B55810.h"
+#include "Game/Class_10E81C20.h"
 
 Options* FUN_10929550();
 
@@ -68,18 +69,6 @@ public:
 
     void FUN_10b56520();
     void FUN_10b45d10();
-};
-
-class Class_10E81C20
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual Struct_10B55810 FUN_10b55810();
-
-    char Unknown04[0x50];
-    Struct_10B55810 Unknown54;
 };
 
 // FUNCTION: 0x10B55810 ?FUN_10b55810@Class_10E81C20@@UAE?AUStruct_10B55810@@XZ

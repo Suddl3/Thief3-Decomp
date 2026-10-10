@@ -3,6 +3,7 @@
 #include "Game/Class_10B395B0.h"
 #include "Game/Class_10B39700.h"
 #include "Game/Class_10BFBD70.h"
+#include "Game/Class_10B47C50.h"
 
 class Class_10B22020;
 
@@ -30,16 +31,6 @@ public:
     virtual int FUN_10b48400(Object_10B4BC30* A, int B);
 
     int Unknown10;
-};
-
-class Class_10B47C50
-{
-public:
-    void FUN_10b47b20(int A, float B, float C, int D, int E, bool F, bool G, float H);
-    void FUN_10b47c50();
-
-    char Unknown00[0x4C];
-    Class_10BFBD70 Unknown4C;
 };
 
 // FUNCTION: 0x10B47C50 ?FUN_10b47c50@Class_10B47C50@@QAEXXZ

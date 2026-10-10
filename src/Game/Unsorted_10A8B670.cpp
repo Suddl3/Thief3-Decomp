@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10E5D74C.h"
+#include "Game/Class_10E6C68C.h"
 
 template <class T> class TArray
 {
@@ -37,21 +38,6 @@ public:
 };
 
 extern Class_10F3A1EC* DAT_10f3a1ec;
-
-class Class_10E6C68C
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual int FUN_10a8b860();
-};
-
-Class_10905A90_Member* FUN_10905aa0();
 
 // Ion Storm's placement new (0x10905C10).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);

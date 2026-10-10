@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10B39870.h"
 #include "Game/Struct_10B4C2C0.h"
+#include "Game/Struct_10B48890.h"
 
 struct Struct_10B3AF40_Param;
 
@@ -12,14 +13,6 @@ class Class_10AA82D0
 public:
     virtual void Virtual0();
     Class_10B39870* FUN_10aa82d0();
-};
-
-struct Struct_10B48890
-{
-    bool FUN_10b83ee0(Struct_10B4C2C0* A, int B);
-
-    char Unknown00[0x14];
-    Struct_10B4C2C0 Unknown14;
 };
 
 class Class_10E7E898 : public Class_10AA82D0

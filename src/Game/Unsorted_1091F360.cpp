@@ -5,17 +5,8 @@
 #include "Game/Class_10E49A0C.h"
 #include "Game/IDirect3DDevice8.h"
 #include "Game/Struct_10924210.h"
-
-class Class_109243D0
-{
-public:
-    void FUN_109243d0(int p1);
-
-    char Unknown00[0x14];
-    int Unknown14;
-    char Unknown18[0x18];
-    Class_1094D740 Unknown30;
-};
+#include "Game/Class_10924210.h"
+#include "Game/Class_109243D0.h"
 
 class IDirect3DBaseTexture8;
 
@@ -29,15 +20,6 @@ public:
 };
 
 extern Class_10936AC0* DAT_10f31be0;
-
-class Class_10924210
-{
-public:
-    void FUN_10924210(const Struct_10924210& Value);
-
-    char Unknown00[0x18];
-    Struct_10924210 Unknown18;
-};
 
 // FUNCTION: 0x1091F360 ?FUN_1091f360@Class_10E49A0C@@UAEXHH@Z
 void Class_10E49A0C::FUN_1091f360(int A, int B)

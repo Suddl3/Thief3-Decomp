@@ -3,6 +3,8 @@
 #include <float.h>
 #include "Game/Info_10A66E50.h"
 #include "Game/Info_10A66E70.h"
+#include "Game/Class_10A66E50.h"
+#include "Game/Class_10A66E70.h"
 
 int FUN_10a66c80(void* A, void* B, float Epsilon);
 
@@ -19,24 +21,6 @@ public:
 
     char Unknown04[4];
     int Unknown08;
-};
-
-class Class_10A66E50
-{
-public:
-    void FUN_10a66e50(const Info_10A66E50* In);
-
-    char Unknown00[8];
-    Info_10A66E50 Unknown08;
-};
-
-class Class_10A66E70
-{
-public:
-    void FUN_10a66e70(const Info_10A66E70* In);
-
-    char Unknown00[0x14];
-    Info_10A66E70 Unknown14;
 };
 
 // FUNCTION: 0x10A66E50 ?FUN_10a66e50@Class_10A66E50@@QAEXPBUInfo_10A66E50@@@Z

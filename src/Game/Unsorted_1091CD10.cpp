@@ -6,6 +6,7 @@
 #include "Game/Class_1091E1A0.h"
 #include "Game/Class_1091E1F0.h"
 #include "Game/Class_1091E2E0.h"
+#include "Game/Class_1091DEE0.h"
 
 extern float DAT_10e49684;
 
@@ -28,13 +29,6 @@ public:
     }
 
     char* Unknown00;
-};
-
-class Class_1091DEE0 : public Class_1091AA10
-{
-public:
-    Class_1091CA00* FUN_1091dee0(int A);
-    Class_1091CA00* FUN_1091dc40(const Class_109081E0& Name);
 };
 
 // FUNCTION: 0x1091DEE0 ?FUN_1091dee0@Class_1091DEE0@@QAEPAVClass_1091CA00@@H@Z

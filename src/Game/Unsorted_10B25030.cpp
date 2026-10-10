@@ -3,22 +3,8 @@
 #include "Game/Class_10B251A0.h"
 #include "Game/Class_10B251B0.h"
 #include "Game/Struct_10B25010.h"
-
-class Class_10B25010_Member
-{
-public:
-    Struct_10B25010& operator[](int Index) { return Unknown08[Index]; }
-
-    char Unknown00[8];
-    Struct_10B25010* Unknown08;
-};
-
-class Class_10B1B8A0
-{
-public:
-    char Unknown00[0x1C];
-    Class_10B25010_Member Unknown1C;
-};
+#include "Game/Class_10B1B8A0.h"
+#include "Game/Class_10B25010_Member.h"
 
 Class_10B1B8A0* FUN_10b1b600();
 

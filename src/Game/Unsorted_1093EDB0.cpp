@@ -10,6 +10,7 @@
 #include "Game/Class_10941C40.h"
 #include "Game/Class_10951730.h"
 #include "Game/IDirect3DDevice8.h"
+#include "Game/Class_109081E0.h"
 
 struct Struct_10940180
 {
@@ -26,8 +27,6 @@ public:
     char Unknown04[0xAC];
     Class_10951730* UnknownB0;
 };
-
-Class_10905A90_Member* FUN_10905aa0();
 
 extern IDirect3DDevice8* GDirect3DDevice8;
 
@@ -48,14 +47,6 @@ public:
     int Unknown00;
     int Unknown04;
     Class_1093EDB0_Element* Unknown08;
-};
-
-class Class_109081E0
-{
-public:
-    void FUN_10907870(int Length, int Flag);
-
-    char* Unknown00;
 };
 
 // FUNCTION: 0x1093EDB0 ?FUN_1093edb0@Class_1093EDB0@@QAE_NXZ

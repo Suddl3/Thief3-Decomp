@@ -1,12 +1,7 @@
 // Game/Class_10E49F90.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_109373D0.h"
-
-class Class_10937400 : public Class_109373D0
-{
-public:
-    void FUN_10937400(unsigned long Value);
-};
+#include "Game/Class_10937400.h"
 
 class Class_10936AC0 : public Class_10937400
 {

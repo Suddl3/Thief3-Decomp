@@ -5,23 +5,7 @@
 #include "Game/Class_10B9E410_Member.h"
 #include "Game/Class_10BB8300.h"
 #include "Game/Object_10B9CAC0.h"
-
-class Class_10B9E410
-{
-public:
-    void FUN_10b9d740(int A);
-    void FUN_10b9d8d0();
-    void FUN_10b9dc80(int A);
-    void FUN_10b9dcc0();
-
-    char Unknown00[0xC];
-    int Unknown0C;
-    int Unknown10;
-    char Unknown14[4];
-    Class_10B9E410_Item** Unknown18;
-    char Unknown1C[0x1C];
-    Class_10B9E410_Member* Unknown38;
-};
+#include "Game/Class_10B9E410.h"
 
 Class_10905A90_Member* FUN_10905aa0();
 

@@ -5,6 +5,7 @@
 #include "Game/Class_10E98CA4.h"
 #include "Game/Struct_10B9F810.h"
 #include "Game/Struct_10DC1750_Result_1C.h"
+#include "Game/Class_10DC1750_Result.h"
 
 struct Struct_10AA3520
 {
@@ -13,13 +14,6 @@ struct Struct_10AA3520
 };
 
 extern Struct_10AA3520* DAT_10f35dec;
-
-class Class_10DC1750_Result
-{
-public:
-    char Unknown00[0x1C];
-    Struct_10DC1750_Result_1C Unknown1C;
-};
 
 Class_10905A90_Member* FUN_10905aa0();
 

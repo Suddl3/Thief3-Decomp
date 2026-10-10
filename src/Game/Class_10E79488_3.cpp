@@ -1,6 +1,7 @@
 // Game/Class_10E79488_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10C56E40_Field00.h"
+#include "Game/Class_10C56E40.h"
 
 class Object_10B1BD10_Field08
 {
@@ -27,19 +28,6 @@ public:
 
     int Unknown04;
     Object_10B1BD10_Field08* Unknown08;
-};
-
-class Class_10C56E40
-{
-public:
-    Class_10C56E40() : Unknown00(0) {}
-    ~Class_10C56E40()
-    {
-        if (Unknown00)
-            Unknown00->Virtual2();
-    }
-
-    Class_10C56E40_Field00* Unknown00;
 };
 
 class Class_10E79488

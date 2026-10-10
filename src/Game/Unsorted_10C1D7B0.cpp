@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10E8D7C4.h"
 #include "Game/Struct_Vec3.h"
+#include "Game/Class_10C1DD00.h"
 
 class FArchive
 {
@@ -75,32 +76,6 @@ struct Struct_10C1DD00
     bool Unknown18;
     int Unknown1C;
     int Unknown20;
-};
-
-class Class_10C1DD00
-{
-public:
-    int FUN_10c1dd00(Struct_10C1DD00& A, Struct_10C1DD00& B, bool bClear);
-
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    int Unknown10;
-    int Unknown14;
-    Struct_Vec3 Unknown18;
-    int Unknown24;
-    int Unknown28;
-    bool Unknown2C;
-    int Unknown30;
-    int Unknown34;
-    int Unknown38;
-    Struct_Vec3 Unknown3C;
-    int Unknown48;
-    int Unknown4C;
-    bool Unknown50;
-    int Unknown54;
-    int Unknown58;
 };
 
 // FUNCTION: 0x10C1DD00 ?FUN_10c1dd00@Class_10C1DD00@@QAEHAAUStruct_10C1DD00@@0_N@Z

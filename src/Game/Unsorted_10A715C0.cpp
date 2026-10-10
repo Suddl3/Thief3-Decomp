@@ -5,6 +5,8 @@
 #include "Game/Class_10A4C550.h"
 #include "Game/Class_10AB0400.h"
 #include "Game/Struct_10AB0400.h"
+#include "Game/Class_10A71C40.h"
+#include "Game/Class_10E6BAB0.h"
 
 class Class_10A72DB0 : public Class_10A111B0
 {
@@ -29,41 +31,6 @@ public:
     Class_10A4C550_Iterator() {}
 
     Struct_10A4C550_Node* Unknown00;
-};
-
-class Class_10E6BAB0
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8();
-    virtual void Virtual9();
-    virtual void Virtual10();
-    virtual void Virtual11();
-    virtual void Virtual12();
-    virtual void Virtual13();
-    virtual void Virtual14();
-    virtual void Virtual15();
-    virtual int* FUN_10a73200(unsigned int Key);
-
-    Class_10A4C550 Unknown04;
-};
-
-class Class_10A71C40
-{
-public:
-    void FUN_10a71c40();
-
-    char Unknown00[8];
-    Class_10AB0400 Unknown08;
-    char Unknown10[4];
-    std::vector<void*> Unknown14;
 };
 
 // FUNCTION: 0x10A71C40 ?FUN_10a71c40@Class_10A71C40@@QAEXXZ

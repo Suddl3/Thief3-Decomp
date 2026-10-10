@@ -7,6 +7,8 @@
 #include "Game/Class_10E6F4B4.h"
 #include "Game/Object_10AB5B20.h"
 #include "Game/Struct_10AC1830.h"
+#include "Game/Class_10AB5B20.h"
+#include "Game/Class_10AC1830.h"
 
 void FUN_10dd3d40();
 
@@ -35,32 +37,7 @@ public:
     void* FUN_10ac1490();
 };
 
-class Class_10AC1830
-{
-public:
-    Struct_10AC1830 FUN_10ac1830();
-
-    char Unknown00[0xE0];
-    Struct_10AC1830 UnknownE0;
-};
-
 void FUN_10ac2fb0();
-
-class Class_10AB5B20
-{
-public:
-    Class_10AB5B20(const Class_10AB5B20& Other)
-    {
-        Unknown00 = Other.Unknown00;
-        if (Unknown00)
-            Unknown00->Virtual1();
-    }
-    ~Class_10AB5B20();
-
-    Class_10AB5B20 FUN_10ab5b20();
-
-    Object_10AB5B20* Unknown00;
-};
 
 // FUNCTION: 0x10AB5B20 ?FUN_10ab5b20@Class_10AB5B20@@QAE?AV1@XZ
 Class_10AB5B20 Class_10AB5B20::FUN_10ab5b20()

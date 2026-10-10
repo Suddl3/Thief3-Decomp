@@ -3,6 +3,7 @@
 #include "Game/Class_10B15960.h"
 #include "Game/Class_10B59FA0_Member.h"
 #include "Game/Class_10B64280.h"
+#include "Game/Class_10B59F20_Member.h"
 
 extern void* DAT_10e86fd0[];
 
@@ -30,23 +31,6 @@ public:
     virtual ~Class_10E88900();
 
     char Unknown04[0x2C8];
-};
-
-class Class_10B59F20_Member
-{
-public:
-    Class_10B59F20_Member(Class_10B59FA0_Member* In = 0) : Unknown00(In)
-    {
-        if (Unknown00)
-            Unknown00->Virtual1();
-    }
-    ~Class_10B59F20_Member()
-    {
-        if (Unknown00)
-            Unknown00->Virtual2();
-    }
-
-    Class_10B59FA0_Member* Unknown00;
 };
 
 class Class_10E86DC0 : public Class_10E88900

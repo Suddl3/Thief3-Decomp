@@ -4,24 +4,10 @@
 #include "Game/Class_10C54B70_Object.h"
 #include "Game/Class_10C55320.h"
 #include "Game/Object_10AB5B20.h"
-
-class Class_10AB5B20
-{
-public:
-    Class_10AB5B20()
-    {
-        Unknown00 = 0;
-    }
-    Class_10AB5B20(const Class_10AB5B20& Other)
-    {
-        Unknown00 = Other.Unknown00;
-        if (Unknown00)
-            Unknown00->Virtual1();
-    }
-    ~Class_10AB5B20();
-
-    Object_10AB5B20* Unknown00;
-};
+#include "Game/Class_10AB5B20.h"
+#include "Game/Class_10C54B70_Member.h"
+#include "Game/Class_10C55360.h"
+#include "Game/Entry_10C55360.h"
 
 struct Struct_10C55320
 {
@@ -29,23 +15,6 @@ struct Struct_10C55320
     Struct_10C55320* Unknown04;
     char Unknown08[0x14];
     Class_10AB5B20 Unknown1C;
-};
-
-struct Entry_10C55360
-{
-    char Unknown00[0x14];
-    Class_10AB5B20 Value;
-};
-
-class Class_10C55360
-{
-public:
-    Class_10AB5B20 FUN_10c55360();
-
-    char Unknown00[0x1C];
-    std::list<Entry_10C55360> Unknown1C;
-    char Unknown28[0x30];
-    std::list<Entry_10C55360>::iterator Unknown58;
 };
 
 class Class_10EB7660
@@ -56,23 +25,6 @@ public:
     virtual ~Class_10EB7660();
 
     int Unknown04;
-};
-
-class Class_10C54B70_Member
-{
-public:
-    Class_10C54B70_Member(Class_10C54B70_Object* In = 0) : Unknown00(In)
-    {
-        if (Unknown00)
-            Unknown00->Virtual1();
-    }
-    ~Class_10C54B70_Member()
-    {
-        if (Unknown00)
-            Unknown00->Virtual2();
-    }
-
-    Class_10C54B70_Object* Unknown00;
 };
 
 class Class_10E9C300 : public Class_10EB7660

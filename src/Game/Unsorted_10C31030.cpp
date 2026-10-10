@@ -2,24 +2,11 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10BAA580.h"
 #include "Game/Class_10C30D10_Field18.h"
+#include "Game/Class_10C30D10.h"
+#include "Game/Class_10C323A0.h"
 
 // Ion Storm's placement new (0x10905C10).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
-
-// The hash table of 0x10B2A160.
-class Class_10C30D10
-{
-public:
-    unsigned int FUN_10c30d10(const int& Key, const int& Value);
-
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    bool Unknown10;
-    void* Unknown14;
-    Class_10C30D10_Field18 Unknown18;
-};
 
 // A doubly linked list entry: 12 bytes, linked at the tail.
 class Class_10C323A0_Node
@@ -30,18 +17,6 @@ public:
     Class_10C323A0_Node* Next;
     Class_10C323A0_Node* Prev;
     void* Value;
-};
-
-// A linked list whose values are also indexed by a hash table.
-class Class_10C323A0
-{
-public:
-    void FUN_10c323a0(void* Value);
-
-    int Count;
-    Class_10C323A0_Node* Head;
-    Class_10C323A0_Node* Tail;
-    Class_10C30D10 Index;
 };
 
 extern float DAT_10eafbdc;

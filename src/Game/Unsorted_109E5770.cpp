@@ -4,6 +4,8 @@
 #include "Game/Class_109E5910.h"
 #include "Game/Class_10D3F830.h"
 #include "Game/Entry_10C32C30.h"
+#include "Game/Class_109E59D0.h"
+#include "Game/Class_10C49740.h"
 
 class Class_10BFBD70
 {
@@ -69,21 +71,6 @@ public:
 };
 
 int FUN_10af36e0(const char* A, const char* B);
-
-class Class_10C49740 : public Class_10D3F830
-{
-public:
-    bool FUN_10c49740(int* Key, Entry_10C32C30** Out);
-};
-
-class Class_109E59D0
-{
-public:
-    Entry_10C32C30* FUN_109e59d0(int* Key);
-
-    char Unknown00[0x3C];
-    Class_10C49740 Unknown3C;
-};
 
 // FUNCTION: 0x109E5910 ?FUN_109e5910@Class_109E5910@@QAEHABVClass_109081E0@@@Z
 int Class_109E5910::FUN_109e5910(const Class_109081E0& Name)

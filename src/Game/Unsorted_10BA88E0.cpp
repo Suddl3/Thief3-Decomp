@@ -49,24 +49,9 @@
 #include "Game/Struct_10BA9EF0.h"
 #include "Game/Struct_10BA9F20.h"
 #include "Game/Struct_10BB8180.h"
-
-class Class_10E5CBD8
-{
-public:
-    Struct_10BA9EF0 FUN_10ba9ef0();
-
-    char Unknown00[0x90];
-    Struct_10BA9EF0 Unknown90;
-};
-
-class Class_10BA9F20
-{
-public:
-    Struct_10BA9F20 FUN_10ba9f20();
-
-    char Unknown00[0x9C];
-    Struct_10BA9F20 Unknown9C;
-};
+#include "Game/Class_10BA9F20.h"
+#include "Game/Class_10BB8180.h"
+#include "Game/Class_10E5CBD8.h"
 
 class Class_10BA9F70 {
 public:
@@ -92,15 +77,6 @@ public:
     ~Class_10E993C4();
 
     Class_10E99370 Unknown00;
-};
-
-class Class_10BB8180
-{
-public:
-    Struct_10BB8180 FUN_10bb8180();
-
-    char Unknown00[0x2B0];
-    Struct_10BB8180 Unknown2B0;
 };
 
 // FUNCTION: 0x10BA9EC0 ?FUN_10ba9ec0@Class_10BA9EC0@@QAEPAXXZ

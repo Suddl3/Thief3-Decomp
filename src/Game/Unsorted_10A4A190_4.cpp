@@ -2,10 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10D9B090.h"
 #include "Game/Class_10D9FEE0.h"
-
-struct Struct_10D9E5E0_Param : public Class_10D9FEE0
-{
-};
+#include "Game/Struct_10D9E5E0_Param.h"
 
 Class_10D9B090* FUN_10d9dcb0();
 

@@ -4,6 +4,7 @@
 #include "Game/Class_10A73EF0_Table.h"
 #include "Game/Class_10AF4B90.h"
 #include "Game/Class_10B06220.h"
+#include "Game/Class_10A671D0.h"
 
 extern void* DAT_10e47850[];
 
@@ -74,12 +75,6 @@ public:
 };
 
 extern Class_10A73EF0_Table* DAT_10f3eda4;
-
-class Class_10A671D0 : public Class_10B06220
-{
-public:
-    void FUN_10a671d0(int Handle, int B);
-};
 
 // FUNCTION: 0x10A671D0 ?FUN_10a671d0@Class_10A671D0@@QAEXHH@Z
 void Class_10A671D0::FUN_10a671d0(int Handle, int B)

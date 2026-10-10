@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10B1D660.h"
 #include "Game/Info_10A399C0.h"
+#include "Game/Struct_10AA3520.h"
 
 class Class_10B1D660_Member
 {
@@ -96,12 +97,6 @@ public:
     virtual void Virtual87();
     virtual void Virtual88();
     virtual Info_10A399C0 Virtual89();
-};
-
-struct Struct_10AA3520
-{
-    char Unknown00[0x0C];
-    Class_10B1D660* Unknown0C;
 };
 
 extern Struct_10AA3520* DAT_10f35dec;

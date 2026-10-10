@@ -4,6 +4,7 @@
 #include "Game/Class_10990D10.h"
 #include "Game/Class_10E89A8C.h"
 #include "Game/FCoords.h"
+#include "Game/Class_10B92DB0.h"
 
 class Class_10E894C8
 {
@@ -11,19 +12,6 @@ public:
     virtual void FUN_10b92cb0(int p1);
 
     Class_10990D10* Unknown04;
-};
-
-class Class_10B92DB0
-{
-public:
-    Class_10B92DB0* FUN_10b92db0();
-
-    FCoords Unknown00;
-    FVector Unknown30;
-    FLOAT Unknown3C;
-    FLOAT Unknown40;
-    FLOAT Unknown44;
-    INT Unknown48;
 };
 
 // Ion Storm's placement new (0x10905C10).

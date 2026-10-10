@@ -34,14 +34,7 @@
 #include "Game/Class_10E8C950.h"
 #include "Game/Class_10E8C95C.h"
 #include "Game/Class_10E90D70.h"
-
-class Class_10E8BE68 : public Class_10E90D70
-{
-public:
-    Class_10E8BE68(int A, int B);
-
-    virtual void Virtual0();
-};
+#include "Game/Class_10E8BE68.h"
 
 class InnerClass_10B9C9F0 {
 public:

@@ -3,6 +3,7 @@
 #include "Game/Class_10B175C0.h"
 #include "Game/Class_10B314F0.h"
 #include "Game/Class_10B78320.h"
+#include "Game/Class_10E80C78.h"
 
 typedef unsigned long DWORD;
 
@@ -219,17 +220,6 @@ public:
     virtual void Virtual68();
     virtual void Virtual69();
     virtual void Virtual70(int A);
-};
-
-class Class_10E80C78 : public Class_10B78320
-{
-public:
-    void FUN_10b43160();
-
-    Class_10B43160_Member* Unknown1A4;
-    Class_10B43160_Member* Unknown1A8;
-    Class_10B43160_Member* Unknown1AC;
-    Class_10B43160_Member* Unknown1B0;
 };
 
 // FUNCTION: 0x10B42C10 ?FUN_10b42c10@Class_10E809B8@@UAEXH@Z

@@ -3,6 +3,7 @@
 #include "Game/Class_10AA82D0.h"
 #include "Game/Class_10AC92E0.h"
 #include "Game/Class_10B39530.h"
+#include "Game/Class_10E7E580.h"
 
 class AGarrett
 {
@@ -20,13 +21,6 @@ public:
 };
 
 extern Class_10F3A3D8* DAT_10f3a3d8;
-
-class Class_10E7E580 : public Class_10AA82D0
-{
-public:
-    virtual void Virtual1();
-    virtual void FUN_10b49120(AGarrett* Garrett);
-};
 
 // FUNCTION: 0x10B49120 ?FUN_10b49120@Class_10E7E580@@UAEXPAVAGarrett@@@Z
 void Class_10E7E580::FUN_10b49120(AGarrett* Garrett)

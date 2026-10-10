@@ -3,17 +3,9 @@
 #include "Game/Class_1090A780.h"
 #include "Game/Class_10BAFBF0.h"
 #include "Game/Struct_10BAFBF0.h"
+#include "Game/Class_109081E0.h"
 
 extern const char DAT_10e8d954[];
-
-class Class_109081E0
-{
-public:
-    Class_109081E0(const char* In);
-    ~Class_109081E0();
-
-    char* Unknown00;
-};
 
 extern const char DAT_10e8d95c[];
 

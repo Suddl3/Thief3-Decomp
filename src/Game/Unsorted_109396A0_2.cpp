@@ -1,6 +1,7 @@
 // Game/Unsorted_109396A0_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_1093AF30_Field18.h"
+#include "Game/Class_1093AF30.h"
 
 // Ion Storm's string (0x109081E0): a char pointer, null when default constructed.
 class Class_109081E0
@@ -27,21 +28,6 @@ public:
     Class_109081E0 Key;
     int Value;
     Class_1093AF30_Node* Next;
-};
-
-class Class_1093AF30
-{
-public:
-    unsigned int FUN_1093af30(const Class_109081E0& Key, const int& Value);
-    void FUN_1093b040(int Size);
-
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    bool Unknown10;
-    Class_1093AF30_Node** Unknown14;
-    Class_1093AF30_Field18 Unknown18;
 };
 
 // FUNCTION: 0x1093AF30 ?FUN_1093af30@Class_1093AF30@@QAEIABVClass_109081E0@@ABH@Z

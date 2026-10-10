@@ -16,6 +16,9 @@
 #include "Game/Class_10E7BB2C.h"
 #include "Game/InnerClass_10A4EB40.h"
 #include "Game/InnerClass_10A4EB50.h"
+#include "Game/Class_109081E0.h"
+#include "Game/Class_10A4EB40.h"
+#include "Game/Class_10A4EB50.h"
 
 class Class_10a46380
 {
@@ -38,38 +41,11 @@ extern void* DAT_10e679bc[];
 
 void FUN_10a4e3d0();
 
-class Class_10A4EB40
-{
-public:
-    char Unknown00[0x1c];
-    InnerClass_10A4EB40 Field1c;
-    void FUN_10a4eb40();
-};
-
 void FUN_10a4e580();
-
-class Class_10A4EB50
-{
-public:
-    char Unknown00[0x1c];
-    InnerClass_10A4EB50 Field1c;
-    void FUN_10a4eb50();
-};
 
 void FUN_10a51ab0();
 
 extern void* DAT_10e67df0;
-
-extern const char DAT_10e47660[];
-
-class Class_109081E0
-{
-public:
-    Class_109081E0(const char* In);
-    ~Class_109081E0();
-
-    char* Unknown00;
-};
 
 extern void* DAT_10e67fb8;
 

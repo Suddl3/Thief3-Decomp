@@ -4,17 +4,8 @@
 #include "Game/IDirect3DDevice8.h"
 #include "Game/Struct_10924210.h"
 #include "Game/Struct_109E44B0.h"
-
-class Class_1091E400 : public Class_1091E3E0
-{
-};
-
-class Class_1091E940 : public Class_1091E400
-{
-public:
-    void FUN_1091ea50(Struct_10924210* A, int B);
-    void FUN_1091eb80();
-};
+#include "Game/Class_1091E400.h"
+#include "Game/Class_1091E940.h"
 
 class Class_10E6D8F0
 {

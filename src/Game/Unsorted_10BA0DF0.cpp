@@ -6,12 +6,8 @@
 #include "Game/Class_10BC9D40.h"
 #include "Game/Class_10C7D570.h"
 #include "Game/Class_10DBD510.h"
-
-class Class_10B9CAC0 : public Class_10B9E410
-{
-public:
-    Class_10BC9D40* FUN_10b9cac0();
-};
+#include "Game/Class_10B9CAC0.h"
+#include "Game/Class_10BAA580.h"
 
 class Class_10970890;
 
@@ -24,13 +20,6 @@ public:
     int Unknown49C;
     bool Unknown4A0;
     bool Unknown4A1;
-};
-
-class Class_10BAA580 : public Class_10C7D570
-{
-public:
-    int FUN_10babe80();
-    Class_109BC840* FUN_10baa580();
 };
 
 class Class_1098E330

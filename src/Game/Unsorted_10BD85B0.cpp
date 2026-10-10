@@ -4,12 +4,7 @@
 #include "Game/Class_10BD8630.h"
 #include "Game/Class_10BD8650.h"
 #include "Game/Class_10DBD510.h"
-
-struct Struct_10BD8630
-{
-    char Unknown00[8];
-    Class_10DBD510* Unknown08;
-};
+#include "Game/Struct_10BD8630.h"
 
 void __stdcall FUN_109e3c90(int A);
 

@@ -5,16 +5,8 @@
 #include "Game/Class_10C7D570.h"
 #include "Game/Class_10DBBAE0.h"
 #include "Game/FArchive.h"
-
-class Class_10E97AD4
-{
-public:
-    virtual void Virtual0(FArchive& Ar);
-
-    int Unknown04;
-    Class_10C16580 Unknown08;
-    bool Unknown10;
-};
+#include "Game/Class_10BAA9D0.h"
+#include "Game/Class_10E97AD4.h"
 
 class Class_10978090
 {
@@ -29,10 +21,6 @@ public:
 
     char Unknown00[8];
     Class_10978090 Unknown08;
-};
-
-class Class_10BAA9D0 : public Class_10C7D570
-{
 };
 
 struct Struct_10BFF250_A

@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10AA82D0.h"
 #include "Game/Class_10B39530.h"
+#include "Game/Class_10E7EA90.h"
 
 class AGarrett
 {
@@ -9,13 +10,6 @@ public:
     char Unknown00[0x450];
     unsigned bInBowDraw : 1;
     unsigned isCrouching : 1;
-};
-
-class Class_10E7EA90 : public Class_10AA82D0
-{
-public:
-    virtual void Virtual1();
-    virtual void FUN_10b4eaf0(AGarrett* Garrett);
 };
 
 // FUNCTION: 0x10B4EAF0 ?FUN_10b4eaf0@Class_10E7EA90@@UAEXPAVAGarrett@@@Z

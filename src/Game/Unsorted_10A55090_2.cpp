@@ -17,15 +17,9 @@
 #include "Game/Class_10A64F10.h"
 #include "Game/Class_10AF8250.h"
 #include "Game/Object_10A626F0.h"
-
-class Class_10A56B70
-{
-public:
-    Class_10AF8250 FUN_10a56b70();
-
-    char Unknown00[0x158];
-    Class_10AF8250 Unknown158;
-};
+#include "Game/Class_10A56B70.h"
+#include "Game/Class_10E6AC50.h"
+#include "Game/Class_10E6AC98.h"
 
 void FUN_10a58910();
 
@@ -80,41 +74,6 @@ public:
         int Field1d4;
     };
     int Unknown1D8;
-};
-
-class Class_10E6AC50 : public Base_10A62CB0
-{
-public:
-    Class_10E6AC50();
-
-    virtual ~Class_10E6AC50();
-
-    int Unknown10;
-    int Unknown14;
-    int Unknown18;
-    int Unknown1C;
-};
-
-class Class_10E6AC98
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8();
-    virtual void Virtual9();
-    virtual void Virtual10();
-    virtual void Virtual11();
-    virtual void Virtual12();
-    virtual Class_1090A780 FUN_10a63210();
-
-    char Unknown04[0x10];
-    Class_1090A780 Unknown14;
 };
 
 void FUN_10aa7100();

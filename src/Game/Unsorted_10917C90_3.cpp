@@ -2,14 +2,9 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/IDirect3DDevice8.h"
 #include "Game/Struct_10924210.h"
+#include "Game/Class_10924210.h"
 
 typedef Struct_10924210 D3DVIEWPORT8;
-
-class Class_10924210
-{
-public:
-    void FUN_10924210(const Struct_10924210& A);
-};
 
 class Class_109242E0 : public Class_10924210
 {
