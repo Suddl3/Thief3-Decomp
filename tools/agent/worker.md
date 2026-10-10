@@ -48,7 +48,8 @@ do not stop before N functions are handled unless the claim prints
    new best), or at once on a systemic blocker:
    `accept.py defer <ADDR> "<slug>: <one-line blocker>" --needs "<what would unblock it>"`.
    Slugs: tiebreak, inline, layout, vtable, signature, name-conflict, eh,
-   switch, codegen, library, engine, compiler-generated, asm, adjustor thunk.
+   switch, codegen, library, engine, compiler-generated, asm, adjustor thunk,
+   ltcg.
    Deferring is a normal outcome; your best attempt is kept for the next pass.
    `CANNOT CHECK`: `next.py release <ADDR>` and note it in needs.
 
@@ -234,6 +235,14 @@ that function's own source), never through a made-up constructor or
 destructor written to make the compiler emit it; accept.py refuses that.
 Defer it with "compiler-generated: implicit <what> of <class>, emitted by
 <addr>".
+
+The game was linked with link-time code generation, which gives some static
+helpers arguments in registers that no C++ convention uses. Examples: the
+object in esi or edi, an index in ecx with the result's buffer in eax, a
+register the function reads before anything sets it. Such a helper, and a
+caller that loads those registers just before calling it, cannot be written.
+Defer either at once with the blocker "ltcg: <which registers>". `this` in ecx
+is ordinary thiscall, and a result in eax or edx is ordinary too.
 
 ## Names need evidence
 

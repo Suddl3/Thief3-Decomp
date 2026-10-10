@@ -486,3 +486,39 @@ its unit's flags, so a worker writes them like any other function, and
 integrate.py puts them in that unit. `splits.txt` declares only what `src/`
 holds, as for any unit. 0x10BF7810 to 0x10BF7AD0 is one such file, broken
 by one optimized function at 0x10BF7990, and 0x10BF8F00 another.
+
+## Link-time code generation
+
+The game was built with `/GL` and linked with `/LTCG`. A few helpers take
+their arguments in registers that no C++ calling convention uses, and each
+is called only from code next to it:
+
+| Helper | Arguments in |
+| --- | --- |
+| 0x10C808F0 | ecx (an index) and eax (the buffer of a 16-byte result) |
+| 0x10C00CF0 | edi (its object) |
+| 0x10C64E80 | esi (its object) |
+| 0x10A1E540 | esi (its object) |
+| 0x10957280 | eax, ecx and edi, plus a stack argument |
+
+VC7.1 does exactly this to a `static` function when the linker generates the
+code. Compiled with `cl /O2 /GX /GL` and linked with `link /LTCG`, a static
+function returning one of four constant 16-byte structs by index comes out
+as 0x10C808F0's code: `cmp ecx, 3; ja; jmp [ecx*4+table]`, then
+`mov ecx, eax; mov [ecx], edx`. A plain `/O2` object always passes such a
+function its arguments on the stack.
+
+Most functions compile the same either way, which is why the workbench's
+`/O2` objects match the rest. Three kinds of code differ:
+
+- such a helper;
+- a caller that loads the helper's registers just before the call;
+- a call the linker inlined from another file. The gate's objects can only
+  inline what a header defines, so the callee goes in its header as an
+  inline function.
+
+The helpers and their open callers are excluded with reasons that start with
+`ltcg:`, and workers defer them with the `ltcg` slug. Matching them would
+need a `/GL` path in the gate: compile the unit with `/GL`, link it with
+`/LTCG` together with the helper and its callers, then compare the linked
+code.
