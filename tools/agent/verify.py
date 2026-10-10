@@ -286,7 +286,9 @@ class Verifier:
         only non-inline function the file defines."""
         defined = [s for s in obj.functions() if s.external]
         if symbol:
-            found = [s for s in defined if s.name == symbol]
+            # tools/cc.py gives an alias of the address the address's own name, the target's: a unit whose
+            # `// FUNCTION:` line names the alias (a constructor recorded as a method) defines the target's
+            found = [s for s in defined if s.name == symbol] or [s for s in defined if s.name == target]
             if not found:
                 raise ValueError(f"{symbol} is not defined in the compiled file")
             return found[0]
