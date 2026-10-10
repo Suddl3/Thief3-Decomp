@@ -225,6 +225,9 @@ public:
     // constructor calls it rather than storing UObject's vtable itself.
     UObject();
 
+    // Every object, by its Index (0x10F3E4A0).
+    static TArray<UObject*> GObjObjects;
+
     // Stock Unreal Engine 2's virtuals in Ion Storm's order: Destroy first
     // (ConditionalDestroy calls slot 0), the destructor in slot 2, then the
     // stock order. Every native class's table agrees with each slot's
