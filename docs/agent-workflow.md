@@ -203,6 +203,41 @@ within one claim. The next naming pass matched 5 of each run's deferrals,
 from the names their workers asked for. In the second run Haiku kept
 Sonnet's pace per worker and spent 1.6 to 1.7 times its tokens per match.
 
+### Batch w10: 20 Haiku workers (2026-10-10)
+
+20 Haiku workers at once for two and a half hours, each freed slot refilled
+at once: 32 to 79 bytes until that band ran dry (7 workers), then 80 to 159
+(149 workers). No checkpoint while they ran: the lead read each hand-back,
+excluded the library code workers reported, and integrated at the end.
+
+| Band | Workers | Matched by workers | Per worker-hour | Tokens per match |
+|---|---|---|---|---|
+| 32 to 79 | 7 | 50 (77%) | 26.0 | 37K |
+| 80 to 159 | 149 | 431 (51%) | 10.1 | 95K |
+
+About 190 matches an hour over the 20 slots; 469 stayed after review (275 on
+the first attempt). The naming pass after the batch matched 59 deferrals
+(their own candidates named the callees: constructors recorded as methods
+returning `this`, return types an earlier caller guessed, destructor names),
+the deleting-destructor pass 7, and `src/` grew from 5,575 functions to 6,107
+(game code at 100%: 5,744 to 6,329 functions, 11.2% to 13.3% of the bytes). Three
+changes to worker.md mid-batch paid off: a MATCH is never deferred (one was,
+at 100%), an object of an unnamed class gets a placeholder
+`Class_<ADDR>_<Field>` rather than a deferral, and the packet's cheatsheet
+entries are to be used. 22 of the 43 deferrals a worker had made without one
+attempt matched once requeued under the new rule.
+
+The 80-to-159 band holds most of the STL code the classifier still calls
+game: instantiations in the objects of the game code that uses them
+(`0x10C40000` to `0x10C45A00`, iostream and locale code around `0x10A1F000`
+and `0x10C66000` to `0x10C6A000`). Workers matched tree rotations, node
+constructors, `std::pair` constructors, `std::fill`, `copy` and
+`copy_backward`, `_Med3`, a locale facet's `_Getcat` and
+`basic_filebuf::close` as plain code; the lead withdrew them and excluded
+their families, and `libscan.py` found the two that had reached `src/`. The
+lint now also refuses `*(T*)(P + 0x2c)` through a `char*` variable, which one
+match used to reach a field.
+
 The lead adds what needs no model between swarms: a naming pass over the
 name-blocked deferrals (each blocked function's candidate names its callee;
 the old guess stays as an alias, so callers in `src/` keep matching), 66

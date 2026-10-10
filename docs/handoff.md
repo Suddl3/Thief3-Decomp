@@ -47,13 +47,13 @@ decompilation** worked mostly by Claude agents under the strict gate in
   classifier does not call game code (244 Epic's, 53 library, 117
   unclassified); `include/Core/Core.h` keeps the declarations the game code
   compiles against. Matching runs as the [agent
-  workflow](agent-workflow.md): a swarm of up to 12 sub-agents at a time
-  (Sonnet on functions under 160 bytes, Opus on bigger ones), from the one-file protocol `tools/agent/worker.md`. `src/Game` holds 5,575
-  matched functions in 2,615 units, one per auto unit of the split
+  workflow](agent-workflow.md): a swarm of up to 20 sub-agents at a time
+  (Haiku or Sonnet on functions under 160 bytes, Opus on bigger ones), from the one-file protocol `tools/agent/worker.md`. `src/Game` holds 6,107
+  matched functions in 2,985 units, one per auto unit of the split
   (`Unsorted_<start>.cpp`, chunks of up to 64 KB; `_2`, `_3`, ... hold
   functions whose classes clash with their unit's). decomp.dev shows the
   committed report `progress/PC_20040610/report.json`, whose headline is the
-  game code (5,744 of 12,039 functions at 100%, 11.2% of its bytes; hidden from decomp.dev's list
+  game code (6,329 of 12,069 functions at 100%, 13.3% of its bytes; hidden from decomp.dev's list
   below 0.5% matched): regenerate it after integrating, see next step 2.
 - The 266 native classes are in `config/PC_20040610/classes.txt` (size,
   super class, flags, vtable; `tools/classify.py write`), and the 64 classes
@@ -319,8 +319,8 @@ Later the same day, played by the user:
      of stock UE2 files, non-UObject vtables) moves it to a side; the 117
      functions taken out of `src/` as unclassified can come back once it is
      game code.
-   - objdiff's report counts what the gate matched, but for 90 of the
-     5,575 functions in `src/`: a static local's guard and `$E` destructor
+   - objdiff's report counts what the gate matched, but for 105 of the
+     6,107 functions in `src/`: a static local's guard and `$E` destructor
      stub keep names only their object file knows, one global is read
      through the second half of an 8-byte symbol, `0x10C68010` starts
      inside `FUN_10c67f90` in `symbols.txt`, and some constructors and
