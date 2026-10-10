@@ -34,6 +34,12 @@ UObject::operator delete(this, sizeof(C)) (Core.h). `native` accepts each of Ion
 in the header form (as matched, or accepted anew; a worker's placeholder-chain form is re-accepted when it
 is not in src/ or is alone in its unit, which is removed with its splits.txt block for the integration to
 write anew), then the deleting destructor as compiler-generated with it.
+
+    python tools/agent/dtors.py matched [--dry-run]
+
+A class's deleting destructor is also emitted with its virtual destructor, which stores the class's
+vtable: `matched` accepts each deleting destructor whose destructor is matched as `??1C@@UAE@XZ` from that
+destructor's source, as compiler-generated with it (no constructor needed, any slot).
 """
 
 import argparse
@@ -260,15 +266,50 @@ def native(p: Project, dry_run: bool = False) -> Dict[str, List[str]]:
     return out
 
 
+def matched(p: Project, dry_run: bool = False) -> Dict[str, List[str]]:
+    """{outcome: [deleting destructor]} for the deleting destructors whose class's virtual destructor is
+    matched: compiling that destructor's source emits the class's vtable, and with it the deleting
+    destructor, accepted from the same source as compiler-generated (--with the destructor)."""
+    from verify import TargetImage
+
+    image = TargetImage(p)
+    accepted, integrated = p.accepted(), p.integrated()
+    work = p.state_dir("tmp", "dtors")
+    out: Dict[str, List[str]] = defaultdict(list)
+    for f in p.functions:
+        x = f.address
+        if x in accepted or x in integrated or not f.size or f.size > 0x60 or p.category(x) != "game":
+            continue
+        d = deleting_destructor(p, image, x)
+        if not d or d not in integrated or d not in accepted:
+            continue
+        m = re.fullmatch(r"\?\?1(\w+)@@UAE@XZ", accepted[d].get("symbol", ""))
+        if not m:
+            out["destructor not matched as virtual"].append(f"{fmt_addr(x)} calls {fmt_addr(d)}")
+            continue
+        name = f"??_G{m.group(1)}@@UAEPAXI@Z"
+        if dry_run:
+            out["planned"].append(f"{fmt_addr(x)} {name} with {fmt_addr(d)}")
+            continue
+        source = (p.state / "accepted" / f"{addr_key(d)}.cpp").read_text(encoding="utf-8")
+        path = work / f"{addr_key(x)}.cpp"
+        path.write_text(source.replace(f"// FUNCTION: {fmt_addr(d)}", f"// FUNCTION: {fmt_addr(x)}"),
+                        encoding="utf-8")
+        verdict = accept(p, fmt_addr(x), str(path), "--symbol", name, "--with", fmt_addr(d))
+        ok = verdict.startswith("ACCEPTED")
+        out["accepted" if ok else "rejected"].append(f"{fmt_addr(x)} {name}" + ("" if ok else f": {verdict[:100]}"))
+    return out
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("mode", nargs="?", choices=("plan", "native"), default="plan")
+    parser.add_argument("mode", nargs="?", choices=("plan", "native", "matched"), default="plan")
     parser.add_argument("-o", "--output", type=Path, help="the plan (default: build/agent/dtors-plan.json)")
-    parser.add_argument("--dry-run", action="store_true", help="native: list what would be accepted")
+    parser.add_argument("--dry-run", action="store_true", help="native, matched: list what would be accepted")
     args = parser.parse_args()
     p = Project()
-    if args.mode == "native":
-        for outcome, items in native(p, args.dry_run).items():
+    if args.mode in ("native", "matched"):
+        for outcome, items in (native if args.mode == "native" else matched)(p, args.dry_run).items():
             print(f"{outcome}: {len(items)}")
             for item in items[:20]:
                 print(f"  {item}")
