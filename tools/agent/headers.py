@@ -612,7 +612,7 @@ def absorb(p: Project, addresses: List[int], jobs: int) -> None:
         merged = classdecl.merge([current] + [d for _, d, _ in props])
         keys = {m.key for m in merged.members}
         places = {(f.offset, f.size) for f in merged.fields()}
-        lost = [m.key for m in current.members if m.kind != "field" and m.key not in keys]
+        lost = [m.key for m in current.members if m.kind not in ("field", "access") and m.key not in keys]
         lost += [f.name for f in current.fields()
                  if (f.offset, f.size) not in places and not classdecl.PAD.match(f.name)]
         if lost:

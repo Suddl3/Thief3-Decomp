@@ -22,7 +22,8 @@ AActor, FName) that config/<version>/classes.txt does not list as Ion Storm's
 code is skipped unless --category libs, unclassified code unless --category game.
 
 For each unit the tool assembles the file (the accepted files' declarations,
-deduplicated, then the functions in address order behind their
+deduplicated, a class that include/Game/ declares by its header instead, then
+the functions in address order behind their
 `// FUNCTION: 0x<ADDR> <decorated name>` lines), compiles it with the unit's
 flags and checks every function in it against the target with the accept.py
 rulers. A new function that no longer matches in the unit's context is left
@@ -53,6 +54,7 @@ from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
+import classdecl
 import lint as linter
 from common import (FUNCTION_MARKER, Lock, Project, addr_key, atomic_write, fmt_addr, guessed_name, is_placeholder,
                     read_json, splitslib, symbolslib)
@@ -176,8 +178,8 @@ def unit_for(p: Project, rec: dict, args, declared: List[splitslib.Unit]) -> Tup
             return u.source, args.category or guess_category(p, rec)
     category = args.category or guess_category(p, rec)
     cls = rec.get("class") or ""
-    for u in declared:  # the class's unit may exist already
-        if cls and Path(u.source).stem == cls:
+    for u in declared:  # the class's unit may exist already (a placeholder's goes by address, as its unit does)
+        if cls and not PLACEHOLDER_CLASS.fullmatch(cls) and Path(u.source).stem == cls:
             return u.source, category
     auto = auto_unit(p, address) if not cls or PLACEHOLDER_CLASS.fullmatch(cls) else ""
     if auto.startswith("auto/text_"):
@@ -372,6 +374,17 @@ def apply_symbols(text: str, renames: Dict[int, Tuple[str, str]], added: List[Tu
     return "\n".join(out) + "\n"
 
 
+def shared_header(p: Project, item: str, local: set) -> str:
+    """An accepted file's definition of a class include/Game/ declares gives way to that header (the class's
+    one declaration, tools/agent/headers.py), unless the unit keeps its own definition of the class. When the
+    function needs a member the header lacks, it no longer matches here: `headers.py absorb` merges the
+    accepted definition into the header first."""
+    d = classdecl.parse(item)
+    if d is None or d.name in local or not (p.include_dir / "Game" / f"{d.name}.h").is_file():
+        return item
+    return f'#include "Game/{d.name}.h"\n'
+
+
 # -- main ----------------------------------------------------------------------------
 def build_unit(p: Project, verifier: Verifier, source: str, declarations: List[str], blocks: Dict[int, str],
                symbols: Dict[int, str], workdir: Path, cflags: List[str]) -> Tuple[str, Dict[int, str]]:
@@ -487,6 +500,7 @@ def integrate(p: Project, args) -> dict:
         unit_path = p.src_dir / source
         head, blocks = parse_unit(unit_path.read_text(encoding="utf-8")) if unit_path.is_file() else ("", {})
         existing = set(blocks)
+        local = {d.name for d in map(classdecl.parse, items(head)) if d is not None}  # classes the unit keeps
         symbols = {a: (FUNCTION_MARKER.search(b).group(2).strip() or None) for a, b in blocks.items()}
         new_decls: Dict[int, List[str]] = {}
         for a in sorted(addrs):
@@ -499,7 +513,7 @@ def integrate(p: Project, args) -> dict:
                              f"class's vtable by {accepted[a]['with']}'s definition in this unit.\n")
                 continue
             decl, body = split_file((p.state / "accepted" / f"{addr_key(a)}.cpp").read_text(encoding="utf-8"))
-            new_decls[a] = items(decl)
+            new_decls[a] = [shared_header(p, item, local) for item in items(decl)]
             blocks[a] = FUNCTION_MARKER.sub(f"// FUNCTION: {fmt_addr(a)} {accepted[a]['symbol']}",
                                             body, 1).rstrip() + "\n"
         cflags = p.configure.UNITS.get(source, {}).get("cflags", p.configure.CFLAGS)

@@ -5,7 +5,7 @@ inside them.
 """
 
 import re
-from typing import List, Optional, Tuple
+from typing import Dict, List, Optional, Tuple
 
 # Addresses inside T3Main.exe's image: a literal one is a hard-coded reference.
 IMAGE_START, IMAGE_END = 0x10900000, 0x11018000
@@ -75,10 +75,18 @@ def strip(source: str) -> str:
     return "".join(out)
 
 
-def lint(source: str, address: Optional[int] = None) -> List[str]:
-    """Problems with a candidate source file; empty when it passes."""
+PLACEHOLDER = re.compile(r"\b(?:Class|Struct|Object)_[0-9A-Fa-f]{8}\b")
+
+
+def lint(source: str, address: Optional[int] = None, class_map: Optional[Dict[str, str]] = None) -> List[str]:
+    """Problems with a candidate source file; empty when it passes. `class_map` (Project.class_map()) names
+    the class each resolved placeholder is."""
     text = strip(source)
     problems = []
+    for name in sorted(set(PLACEHOLDER.findall(text)) & set(class_map or ())):
+        line = text.count("\n", 0, re.search(rf"\b{name}\b", text).start()) + 1
+        problems.append(f"line {line}: {name} is {class_map[name]} (config/<version>/classmap.txt): "
+                        f"use that name [classmap]")
     for rule, pattern, what in RULES:
         for m in pattern.finditer(text):
             line = text.count("\n", 0, m.start()) + 1

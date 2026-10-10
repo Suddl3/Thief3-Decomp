@@ -188,21 +188,44 @@ def fpu_literal(data: bytes) -> str:
 
 def headers(p: Project, classes: List[str], whole: Sequence[str] = (), max_lines: int = 40) -> List[dict]:
     """The declarations of `classes` in include/: an excerpt; the whole class for those in `whole` that a
-    generated <Package>Classes.h declares (tools/assets/t3classes.py: every member with its offset)."""
+    generated <Package>Classes.h declares (tools/assets/t3classes.py: every member with its offset), or that
+    has its own header in include/Game/ (tools/agent/headers.py: the one declaration the units share; a
+    placeholder classmap.txt resolves shows its class's)."""
     if not p.include_dir.is_dir():
         return []
-    out = []
+
+    def excerpt(text: str, cls: str, full: bool):
+        m = re.search(rf"^\s*(?:class|struct)\s+(?:\w+\s+)?{re.escape(cls)}\b[^;]*$", text, re.M)
+        if not m:
+            return None
+        lines = text[m.start():].splitlines()
+        end = next((i for i, line in enumerate(lines) if line.startswith("};")), len(lines)) + 1
+        return "\n".join(lines[:end] if full else lines[:min(end, max_lines)])
+
+    out, rest = [], []
+    resolved = p.class_map()
+    game = p.include_dir / "Game"
+    for cls in classes:
+        name = resolved.get(cls, cls)
+        path = game / f"{name}.h"
+        text = excerpt(path.read_text(encoding="utf-8", errors="replace"), name, cls in whole) \
+            if path.is_file() else None
+        if text is None:
+            rest.append(cls)
+            continue
+        out.append({"class": name, "path": str(path.relative_to(p.main)).replace("\\", "/"),
+                    "include": f'#include "Game/{name}.h"', **({"resolves": cls} if name != cls else {}),
+                    "excerpt": text})
     for path in sorted(p.include_dir.rglob("*.h*")):
+        if path.parent == game:
+            continue
         text = path.read_text(encoding="utf-8", errors="replace")
         generated = path.name.endswith("Classes.h")
-        for cls in classes:
-            m = re.search(rf"^\s*(?:class|struct)\s+(?:\w+\s+)?{re.escape(cls)}\b[^;]*$", text, re.M)
-            if m:
-                lines = text[m.start():].splitlines()
-                end = next((i for i, line in enumerate(lines) if line.startswith("};")), len(lines)) + 1
-                lines = lines[:end] if generated and cls in whole else lines[:min(end, max_lines)]
+        for cls in rest:
+            found = excerpt(text, cls, generated and cls in whole)
+            if found is not None:
                 out.append({"class": cls, "path": str(path.relative_to(p.main)).replace("\\", "/"),
-                            "excerpt": "\n".join(lines)})
+                            "excerpt": found})
     return out
 
 
@@ -483,6 +506,9 @@ def print_packet(pk: dict) -> None:
                       "(a real name there gives this override's name and signature)")
     for h in pk.get("headers", []):
         print(f"\n== header {h['path']} ({h['class']})")
+        if h.get("include"):
+            print(f"{h['include']}: the class's one declaration; include it instead of declaring the class"
+                  + (f" ({h['resolves']} is {h['class']}: classmap.txt)" if h.get("resolves") else ""))
         print(h["excerpt"])
     for s in pk.get("similar", []):
         print(f"\n== similar {s['addr']} {s['symbol']} (similarity {s['similarity']})")

@@ -100,7 +100,7 @@ def accept(argv) -> None:
     previous = p.accepted().get(address)
     if previous and not args.replace:
         reject([f"already accepted ({previous.get('symbol')}, by {previous.get('agent')}); --replace to redo it"])
-    problems = linter.lint(source, address)
+    problems = linter.lint(source, address, p.class_map())
     if problems:
         reject(["lint: " + pr for pr in problems])
 

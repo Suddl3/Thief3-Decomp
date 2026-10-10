@@ -262,6 +262,16 @@ getter's result): declare `class Class_<ADDR>_<Field>` (ADDR: the function you
 match) with `Virtual0`... up to the highest slot used and padding up to the
 highest field; an unnamed class is never a reason to defer.
 
+A class with a header in `include/Game/` (the packet shows `== header
+include/Game/<Class>.h`) is declared there once for every unit:
+`#include "Game/<Class>.h"` and do not declare the class yourself. If your
+function needs a member the header lacks (a method, a field where the header
+has padding, a slot's real name), declare the class in your own file instead,
+copied whole from the header with your member added: the lead merges it into
+the header. accept.py refuses a placeholder that
+config/PC_20040610/classmap.txt resolves and names the class it is: use that
+name.
+
 ## Finish
 
 Your final message is ONLY this JSON line, with no other text (with a
