@@ -86,6 +86,7 @@ public:
 template <class T> class TArray : public FArray
 {
 public:
+    ~TArray(); // out of line in this build: each instance removes the elements, then ~FArray
     T& operator()(INT i) { return ((T*)Data)[i]; }
 };
 
@@ -114,12 +115,13 @@ public:
 };
 
 // A script class's string property, as the generated class headers declare it (stock Unreal
-// Engine 2). Bodies inline its implicit destructor (~FString); unwind code calls its out-of-line
-// copy, a jump to ~FString (0x10BB7C00).
+// Engine 2). Its constructor is out of line in this build: it builds the array with the memory
+// tag "FStringNoInit". Bodies inline its implicit destructor (~FString); unwind code calls its
+// out-of-line copy, a jump to ~FString (0x10BB7C00).
 class FStringNoInit : public FString
 {
 public:
-    FStringNoInit() : FString(E_NoInit) {}
+    FStringNoInit();                                          // 0x10AF8A50
     using FString::operator=;
 };
 

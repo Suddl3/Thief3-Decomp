@@ -18,20 +18,13 @@ public:
     char Unknown04[0x6C];
 };
 
-// A script string member: built by its own constructor, destroyed by ~FString.
-class Class_10AF8A50 : public FString
-{
-public:
-    Class_10AF8A50();
-};
-
 class UCollisionSpawnLinkDataObject : public USpawnableHardpointLinkDataObject
 {
 public:
     UCollisionSpawnLinkDataObject();
 
     unsigned int Active : 1;
-    Class_10AF8A50 Tag;
+    FStringNoInit Tag;
 };
 
 // FUNCTION: 0x109A0390 ??0UCollisionSpawnLinkDataObject@@QAE@XZ

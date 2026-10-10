@@ -14,17 +14,10 @@ public:
     char Unknown04[0x4C];
 };
 
-// A script string member: built by its own constructor, destroyed by ~FString.
-class Class_10AF8A50 : public FString
-{
-public:
-    Class_10AF8A50();
-};
-
 class UHardpointLinkDataObject : public Class_10E55E78
 {
 public:
-    Class_10AF8A50 m_parentBone;
+    FStringNoInit m_parentBone;
 };
 
 class USpawnableHardpointLinkDataObject : public UHardpointLinkDataObject
@@ -36,7 +29,7 @@ public:
     unsigned bTakeParentRotation : 1;
     unsigned bAttachObjects : 1;
     unsigned bDeleteOnDeath : 1;
-    Class_10AF8A50 m_childBone;
+    FStringNoInit m_childBone;
 };
 
 // FUNCTION: 0x109A0310 ??0USpawnableHardpointLinkDataObject@@QAE@XZ

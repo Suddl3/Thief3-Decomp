@@ -14,17 +14,10 @@ public:
     char Unknown04[0x4C];
 };
 
-// A script string member: built by its own constructor, destroyed by ~FString.
-class Class_10AF8A50 : public FString
-{
-public:
-    Class_10AF8A50();
-};
-
 class Class_10E56A28 : public Class_10E55E78
 {
 public:
-    Class_10AF8A50 m_parentBone;
+    FStringNoInit m_parentBone;
 };
 
 class Class_10e56ab0 : public Class_10E56A28

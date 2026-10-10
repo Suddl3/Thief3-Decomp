@@ -1,11 +1,11 @@
 // Game/Unsorted_109A0030_4.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-class Class_10AF8A50
+class FStringNoInit
 {
 public:
-    Class_10AF8A50();
-    ~Class_10AF8A50();
+    FStringNoInit();
+    ~FStringNoInit();
 
     void* Unknown00;
     int Unknown04;
@@ -26,7 +26,7 @@ public:
 class Class_10E56A28 : public Class_10E55E78
 {
 public:
-    Class_10AF8A50 Unknown50;
+    FStringNoInit Unknown50;
 };
 
 class Class_10e56bc0 : public Class_10E56A28

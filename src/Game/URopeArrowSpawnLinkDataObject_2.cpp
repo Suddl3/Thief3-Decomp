@@ -14,20 +14,13 @@ public:
     char Unknown04[0x4C];
 };
 
-// A script string member: built by its own constructor, destroyed by ~FString.
-class Class_10AF8A50 : public FString
-{
-public:
-    Class_10AF8A50();
-};
-
 class URopeArrowSpawnLinkDataObject : public Class_10E55E78
 {
 public:
     URopeArrowSpawnLinkDataObject();
 
     float RopeLength;
-    Class_10AF8A50 UnfurlAnimName;
+    FStringNoInit UnfurlAnimName;
 };
 
 // FUNCTION: 0x10AB4F10 ??0URopeArrowSpawnLinkDataObject@@QAE@XZ
