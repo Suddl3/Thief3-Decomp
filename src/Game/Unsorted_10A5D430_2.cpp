@@ -32,7 +32,7 @@ class WindowManager : public Class_109E8930
 
 extern WindowManager* GWindowManager;
 
-class Class_10A5D460
+class Class_10E7FB08
 {
 public:
     virtual void Virtual0();
@@ -179,8 +179,8 @@ bool Class_10E696A8::FUN_10a5d430(int A, int B, bool C)
     return Class_10E6B078::FUN_10a5d430(A, B, C);
 }
 
-// FUNCTION: 0x10A5D460 ?FUN_10a5d460@Class_10A5D460@@QAEXXZ
-void Class_10A5D460::FUN_10a5d460()
+// FUNCTION: 0x10A5D460 ?FUN_10a5d460@Class_10E7FB08@@QAEXXZ
+void Class_10E7FB08::FUN_10a5d460()
 {
     Virtual131();
     GWindowManager->FUN_109e8930(this);

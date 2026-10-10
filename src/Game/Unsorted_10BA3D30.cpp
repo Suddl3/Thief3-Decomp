@@ -8,16 +8,16 @@ void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
 extern void* DAT_10e8c42c[];
 
-class Class_10e984f4
+class Class_10E984F4
 {
 public:
-    Class_10e984f4* FUN_10c12a90();
+    Class_10E984F4* FUN_10c12a90();
 
     void* Unknown00;
     int Unknown04;
 };
 
-class Class_10E8C42C : public Class_10e984f4
+class Class_10E8C42C : public Class_10E984F4
 {
 public:
     Class_10E8C42C()

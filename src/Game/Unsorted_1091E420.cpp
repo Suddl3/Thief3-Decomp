@@ -5,7 +5,7 @@
 
 extern void* DAT_10e49a0c[];
 
-class Class_1091F350 {
+class Class_10E49A0C {
     void* Unknown00;
 public:
     void FUN_1091f350();
@@ -138,8 +138,8 @@ void Class_10936AC0::FUN_1091ef90()
     }
 }
 
-// FUNCTION: 0x1091F350 ?FUN_1091f350@Class_1091F350@@QAEXXZ
-void Class_1091F350::FUN_1091f350()
+// FUNCTION: 0x1091F350 ?FUN_1091f350@Class_10E49A0C@@QAEXXZ
+void Class_10E49A0C::FUN_1091f350()
 {
     Unknown00 = (void*)DAT_10e49a0c;
 }

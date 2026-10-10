@@ -11,14 +11,14 @@ public:
     void* VTable;
 };
 
-class Class_10B460C0 : public Class_10A66190
+class Class_10E81130 : public Class_10A66190
 {
 public:
     void FUN_10b460c0();
 };
 
-// FUNCTION: 0x10B460C0 ?FUN_10b460c0@Class_10B460C0@@QAEXXZ
-void Class_10B460C0::FUN_10b460c0()
+// FUNCTION: 0x10B460C0 ?FUN_10b460c0@Class_10E81130@@QAEXXZ
+void Class_10E81130::FUN_10b460c0()
 {
     VTable = DAT_10e81130;
     FUN_10a66190();

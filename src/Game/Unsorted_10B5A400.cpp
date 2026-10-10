@@ -63,7 +63,7 @@ public:
     void FUN_10a64d50();
 };
 
-class Class_10B5A390
+class Class_10E82688
 {
 public:
     void FUN_10b5a570();
@@ -78,8 +78,8 @@ public:
     Class_10A64D50 Unknown134;
 };
 
-// FUNCTION: 0x10B5A570 ?FUN_10b5a570@Class_10B5A390@@QAEXXZ
-void Class_10B5A390::FUN_10b5a570()
+// FUNCTION: 0x10B5A570 ?FUN_10b5a570@Class_10E82688@@QAEXXZ
+void Class_10E82688::FUN_10b5a570()
 {
     if (Unknown11C)
     {

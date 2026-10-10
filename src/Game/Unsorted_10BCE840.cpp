@@ -24,7 +24,7 @@ public:
     bool Unknown64;
 };
 
-class Class_10e9092c
+class Class_10E9092C
 {
 public:
     bool FUN_10bb7500(int A, bool B);
@@ -124,7 +124,7 @@ void Class_10E92C38::FUN_10bce840()
         FUN_10bc4160()->FUN_10bf7920();
     if (Virtual72())
     {
-        ((Class_10e9092c*)Unknown04->Unknown08->FUN_10ba9fd0())->FUN_10bb7500(3, true);
+        ((Class_10E9092C*)Unknown04->Unknown08->FUN_10ba9fd0())->FUN_10bb7500(3, true);
         Unknown04->Unknown08->Unknown64 = true;
     }
 }

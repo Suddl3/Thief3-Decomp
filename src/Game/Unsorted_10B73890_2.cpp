@@ -23,7 +23,7 @@ public:
     int Unknown00;
 };
 
-class Class_10B739C0 : public Class_10B73810
+class Class_10E873B0 : public Class_10B73810
 {
 public:
     void FUN_10b73890();
@@ -34,8 +34,8 @@ public:
     Class_10B739C0_Unknown1A4** Unknown1A4;
 };
 
-// FUNCTION: 0x10B73890 ?FUN_10b73890@Class_10B739C0@@QAEXXZ
-void Class_10B739C0::FUN_10b73890()
+// FUNCTION: 0x10B73890 ?FUN_10b73890@Class_10E873B0@@QAEXXZ
+void Class_10E873B0::FUN_10b73890()
 {
     for (int i = 0; i < Unknown19C; i++)
         FUN_10929550()->Set(Unknown1A4[i]->Unknown00, FUN_10929550()->SetDefaults(Unknown1A4[i]->Unknown00));

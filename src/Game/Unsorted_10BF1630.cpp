@@ -123,7 +123,7 @@ public:
     virtual Class_1098E330* Virtual98();
 };
 
-class Class_10BF2F70
+class Class_10E97720
 {
 public:
     virtual void Virtual0();
@@ -208,8 +208,8 @@ public:
     int Unknown23C;
 };
 
-// FUNCTION: 0x10BF2F70 ?FUN_10bf2f70@Class_10BF2F70@@QAEXH@Z
-void Class_10BF2F70::FUN_10bf2f70(int A)
+// FUNCTION: 0x10BF2F70 ?FUN_10bf2f70@Class_10E97720@@QAEXH@Z
+void Class_10E97720::FUN_10bf2f70(int A)
 {
     if (Unknown13C == 2)
     {

@@ -137,7 +137,7 @@ extern int DAT_10ff70a4;
 
 extern void* DAT_10e9b580[];
 
-class Class_10C3EFC0
+class Class_10E9B580
 {
 public:
     void* Field00;
@@ -152,20 +152,15 @@ public:
     unsigned char FUN_10c3f170();
 };
 
-class Class_10C3F1F0
+class Class_10E9B5C0
 {
 public:
+    unsigned char FUN_10c3f1f0();
+    unsigned char FUN_10c3f260();
+
     char Unknown00[0x21];
     unsigned char Field21;
-    unsigned char FUN_10c3f1f0();
-};
-
-class Class_10C3F260
-{
-public:
-    char Unknown00[0x22];
     unsigned char Field22;
-    unsigned char FUN_10c3f260();
 };
 
 void FUN_10c3fb10();
@@ -173,14 +168,6 @@ void FUN_10c3fb10();
 void FUN_10c42440();
 
 void FUN_10c43060();
-
-class Class_10C47EA0
-{
-public:
-    char Unknown00[0x7c];
-    int Field7C;
-    int FUN_10c47ea0();
-};
 
 extern void* DAT_10e9bb5c[];
 
@@ -217,8 +204,12 @@ public:
     virtual void Virtual7();
     virtual void FUN_10c47fc0(int Value);
 
+    int FUN_10c47ea0();
+
     char Unknown04[0xC];
     Class_10E9BBC0 Unknown10;
+    char Pad14[0x68];
+    int Field7C;
 };
 
 // FUNCTION: 0x10C3CF70 ?FUN_10c3cf70@Class_10E9AFA4@@QAEPAV1@HHH@Z
@@ -329,8 +320,8 @@ int FUN_10c3e9e0()
     return DAT_10ff70a4;
 }
 
-// FUNCTION: 0x10C3EFC0 ?FUN_10c3efc0@Class_10C3EFC0@@QAEXXZ
-void Class_10C3EFC0::FUN_10c3efc0()
+// FUNCTION: 0x10C3EFC0 ?FUN_10c3efc0@Class_10E9B580@@QAEXXZ
+void Class_10E9B580::FUN_10c3efc0()
 {
     Field00 = (void*)DAT_10e9b580;
 }
@@ -341,14 +332,14 @@ unsigned char Class_10C3F170::FUN_10c3f170()
     return Field20;
 }
 
-// FUNCTION: 0x10C3F1F0 ?FUN_10c3f1f0@Class_10C3F1F0@@QAEEXZ
-unsigned char Class_10C3F1F0::FUN_10c3f1f0()
+// FUNCTION: 0x10C3F1F0 ?FUN_10c3f1f0@Class_10E9B5C0@@QAEEXZ
+unsigned char Class_10E9B5C0::FUN_10c3f1f0()
 {
     return Field21;
 }
 
-// FUNCTION: 0x10C3F260 ?FUN_10c3f260@Class_10C3F260@@QAEEXZ
-unsigned char Class_10C3F260::FUN_10c3f260()
+// FUNCTION: 0x10C3F260 ?FUN_10c3f260@Class_10E9B5C0@@QAEEXZ
+unsigned char Class_10E9B5C0::FUN_10c3f260()
 {
     return Field22;
 }
@@ -371,8 +362,8 @@ void FUN_10c44930()
     FUN_10c43060();
 }
 
-// FUNCTION: 0x10C47EA0 ?FUN_10c47ea0@Class_10C47EA0@@QAEHXZ
-int Class_10C47EA0::FUN_10c47ea0()
+// FUNCTION: 0x10C47EA0 ?FUN_10c47ea0@Class_10E9BC18@@QAEHXZ
+int Class_10E9BC18::FUN_10c47ea0()
 {
     return Field7C;
 }

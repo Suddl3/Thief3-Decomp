@@ -21,7 +21,7 @@ struct Struct_1093FFE0
     float M41, M42, M43, M44;
 };
 
-class Class_10940970
+class Class_10E4A538
 {
 public:
     void FUN_1093ffe0(int Width, int Height, Struct_1093FFE0* Out);
@@ -67,8 +67,8 @@ int Class_1093EFB0::FUN_1093f140(const Item_1093F140* Item)
     return Index;
 }
 
-// FUNCTION: 0x1093FFE0 ?FUN_1093ffe0@Class_10940970@@QAEXHHPAUStruct_1093FFE0@@@Z
-void Class_10940970::FUN_1093ffe0(int Width, int Height, Struct_1093FFE0* Out)
+// FUNCTION: 0x1093FFE0 ?FUN_1093ffe0@Class_10E4A538@@QAEXHHPAUStruct_1093FFE0@@@Z
+void Class_10E4A538::FUN_1093ffe0(int Width, int Height, Struct_1093FFE0* Out)
 {
     float OffsetX = 0.5f + 0.5f / Width;
     float OffsetY = 0.5f + 0.5f / Height;

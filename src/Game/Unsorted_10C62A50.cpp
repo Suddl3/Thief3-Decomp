@@ -8,7 +8,7 @@ public:
 
 Class_10C3F110* FUN_10c3fb10();
 
-class Class_10C62A50 {
+class Class_10E9E178 {
 public:
     char Unknown00[0x40];
     int Unknown40;
@@ -16,8 +16,8 @@ public:
     int FUN_10c62a50(int A);
 };
 
-// FUNCTION: 0x10C62A50 ?FUN_10c62a50@Class_10C62A50@@QAEHH@Z
-int Class_10C62A50::FUN_10c62a50(int A)
+// FUNCTION: 0x10C62A50 ?FUN_10c62a50@Class_10E9E178@@QAEHH@Z
+int Class_10E9E178::FUN_10c62a50(int A)
 {
     return FUN_10c3fb10()->FUN_10c3f110(Unknown40) + A;
 }

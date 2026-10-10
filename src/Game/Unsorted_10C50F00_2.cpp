@@ -67,10 +67,10 @@ public:
     virtual void FUN_10c51600() = 0;
 };
 
-class Class_10C4E880 : public Class_10C4E880_Primary, public Class_10E5B578
+class Class_10E9BE7C : public Class_10C4E880_Primary, public Class_10E5B578
 {
 public:
-    Class_10C4E880();
+    Class_10E9BE7C();
 
     virtual void FUN_10c51600();
     virtual void FUN_10c4e650(int Code, int A, int* B, int C);
@@ -84,8 +84,8 @@ public:
     Class_10C4EDA0 Unknown38;
 };
 
-// FUNCTION: 0x10C50F00 ??0Class_10C4E880@@QAE@XZ
-Class_10C4E880::Class_10C4E880()
+// FUNCTION: 0x10C50F00 ??0Class_10E9BE7C@@QAE@XZ
+Class_10E9BE7C::Class_10E9BE7C()
     : Unknown20(0.1f), Unknown24(20), Unknown34(0)
 {
     DAT_10f46da0->Virtual1(this, 7, -1, -1);

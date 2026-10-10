@@ -3,36 +3,6 @@
 
 #include "Core/Core.h"
 
-// Member function class structure
-struct Class_109421A0
-{
-    char Unknown00[0xF0];
-    int FieldF0;
-    char UnknownF4[0x3C];
-    void* Field130;
-
-    void FUN_109421a0(int param1, int param2);
-};
-
-// Member function class structure
-struct Class_109421C0
-{
-    char Unknown00[0xF0];
-    int FieldF0;
-    char UnknownF4[0x3C];
-    void* Field130;
-
-    void FUN_109421c0(int param1, int param2);
-};
-
-class Class_10943700
-{
-public:
-    char Unknown00[0xF0];
-    void* Field0F0;
-    void* Get();
-};
-
 struct Elem_10943710
 {
     int Unknown00;
@@ -46,39 +16,11 @@ struct Elem_10943710
     int Unknown20;
 };
 
-class Class_10943710
-{
-public:
-    int* FUN_10943710(int Index);
-
-    char Unknown00[0xF0];
-    int UnknownF0;
-    char UnknownF4[0x3C];
-    Elem_10943710* Unknown130;
-};
-
-class Class_109437C0 {
-public:
-    char Unknown00[0x11c];
-    float Field11c;
-
-    float FUN_109437c0();
-};
-
 struct Struct_109437D0
 {
     int Unknown00;
     int Unknown04;
     int Unknown08;
-};
-
-class Class_109437D0
-{
-public:
-    Struct_109437D0 FUN_109437d0();
-
-    char Unknown00[0x17C];
-    Struct_109437D0 Unknown17C;
 };
 
 struct Struct_10943800
@@ -88,28 +30,43 @@ struct Struct_10943800
     int Unknown08;
 };
 
-class Class_10943800
+class Class_10E4A668
 {
 public:
+    void FUN_109421a0(int param1, int param2);
+    void FUN_109421c0(int param1, int param2);
+    void* Get();
+    int* FUN_10943710(int Index);
+    float FUN_109437c0();
+    Struct_109437D0 FUN_109437d0();
     Struct_10943800 FUN_10943800();
-
-    char Unknown00[0x188];
-    Struct_10943800 Unknown188;
-};
-
-class Class_10943970
-{
-public:
     int FUN_10943970();
 
     char Unknown00[0xE4];
     int UnknownE4;
     char UnknownE8[0x4];
     int UnknownEC;
-    char UnknownF0[0xC];
+    union
+    {
+        int FieldF0;
+        void* Field0F0;
+        int UnknownF0;
+    };
+    char PadF4[0x8];
     int UnknownFC;
     char Unknown100[0x4];
     int Unknown104;
+    char Pad108[0x14];
+    float Field11c;
+    char Pad120[0x10];
+    union
+    {
+        void* Field130;
+        Elem_10943710* Unknown130;
+    };
+    char Pad134[0x48];
+    Struct_109437D0 Unknown17C;
+    Struct_10943800 Unknown188;
 };
 
 struct Struct_10948220
@@ -144,7 +101,7 @@ public:
     void FUN_1094aec0();
 };
 
-class Class_1094C700 {
+class Class_10E4AA80 {
 public:
     char Unknown00[0x78];
     float Field78;
@@ -207,29 +164,11 @@ struct Struct_1094E0F0
     int Unknown08;
 };
 
-class Class_1094E0F0
-{
-public:
-    Struct_1094E0F0 FUN_1094e0f0();
-
-    char Unknown00[0x134];
-    Struct_1094E0F0 Unknown134;
-};
-
 struct Struct_1094E120
 {
     int Unknown00;
     int Unknown04;
     int Unknown08;
-};
-
-class Class_1094E120
-{
-public:
-    Struct_1094E120 FUN_1094e120();
-
-    char Unknown00[0x140];
-    Struct_1094E120 Unknown140;
 };
 
 struct Elem_1094EF90
@@ -249,16 +188,22 @@ public:
     Elem_1094EF90* Unknown108;
 };
 
-class Class_1094f9b0
+class Class_10E4AB88
 {
 public:
-    char Unknown00[0x158];
-    float Field158;
+    Struct_1094E0F0 FUN_1094e0f0();
+    Struct_1094E120 FUN_1094e120();
     float FUN_1094f9b0();
+
+    char Unknown00[0x134];
+    Struct_1094E0F0 Unknown134;
+    Struct_1094E120 Unknown140;
+    char Pad14C[0xc];
+    float Field158;
 };
 
-// FUNCTION: 0x109421A0 ?FUN_109421a0@Class_109421A0@@QAEXHH@Z
-void Class_109421A0::FUN_109421a0(int param1, int param2)
+// FUNCTION: 0x109421A0 ?FUN_109421a0@Class_10E4A668@@QAEXHH@Z
+void Class_10E4A668::FUN_109421a0(int param1, int param2)
 {
     if (param1 >= FieldF0)
         return;
@@ -268,8 +213,8 @@ void Class_109421A0::FUN_109421a0(int param1, int param2)
     ptr[index + 1] = (void*)param2;
 }
 
-// FUNCTION: 0x109421C0 ?FUN_109421c0@Class_109421C0@@QAEXHH@Z
-void Class_109421C0::FUN_109421c0(int param1, int param2)
+// FUNCTION: 0x109421C0 ?FUN_109421c0@Class_10E4A668@@QAEXHH@Z
+void Class_10E4A668::FUN_109421c0(int param1, int param2)
 {
     if (param1 >= FieldF0)
         return;
@@ -279,40 +224,40 @@ void Class_109421C0::FUN_109421c0(int param1, int param2)
     ptr[index + 2] = (void*)param2;
 }
 
-// FUNCTION: 0x10943700 ?Get@Class_10943700@@QAEPAXXZ
-void* Class_10943700::Get()
+// FUNCTION: 0x10943700 ?Get@Class_10E4A668@@QAEPAXXZ
+void* Class_10E4A668::Get()
 {
     return Field0F0;
 }
 
-// FUNCTION: 0x10943710 ?FUN_10943710@Class_10943710@@QAEPAHH@Z
-int* Class_10943710::FUN_10943710(int Index)
+// FUNCTION: 0x10943710 ?FUN_10943710@Class_10E4A668@@QAEPAHH@Z
+int* Class_10E4A668::FUN_10943710(int Index)
 {
     if (Index < UnknownF0)
         return &Unknown130[Index].Unknown04;
     return 0;
 }
 
-// FUNCTION: 0x109437C0 ?FUN_109437c0@Class_109437C0@@QAEMXZ
-float Class_109437C0::FUN_109437c0()
+// FUNCTION: 0x109437C0 ?FUN_109437c0@Class_10E4A668@@QAEMXZ
+float Class_10E4A668::FUN_109437c0()
 {
     return Field11c;
 }
 
-// FUNCTION: 0x109437D0 ?FUN_109437d0@Class_109437D0@@QAE?AUStruct_109437D0@@XZ
-Struct_109437D0 Class_109437D0::FUN_109437d0()
+// FUNCTION: 0x109437D0 ?FUN_109437d0@Class_10E4A668@@QAE?AUStruct_109437D0@@XZ
+Struct_109437D0 Class_10E4A668::FUN_109437d0()
 {
     return Unknown17C;
 }
 
-// FUNCTION: 0x10943800 ?FUN_10943800@Class_10943800@@QAE?AUStruct_10943800@@XZ
-Struct_10943800 Class_10943800::FUN_10943800()
+// FUNCTION: 0x10943800 ?FUN_10943800@Class_10E4A668@@QAE?AUStruct_10943800@@XZ
+Struct_10943800 Class_10E4A668::FUN_10943800()
 {
     return Unknown188;
 }
 
-// FUNCTION: 0x10943970 ?FUN_10943970@Class_10943970@@QAEHXZ
-int Class_10943970::FUN_10943970()
+// FUNCTION: 0x10943970 ?FUN_10943970@Class_10E4A668@@QAEHXZ
+int Class_10E4A668::FUN_10943970()
 {
     return (UnknownFC + (Unknown104 + UnknownE4 * 2) * 8 + UnknownEC) * 2 + 0x1ac;
 }
@@ -354,8 +299,8 @@ void Class_1094AEC0::FUN_1094aec0()
     Field04 = 0;
 }
 
-// FUNCTION: 0x1094C700 ?FUN_1094c700@Class_1094C700@@QAEMXZ
-float Class_1094C700::FUN_1094c700()
+// FUNCTION: 0x1094C700 ?FUN_1094c700@Class_10E4AA80@@QAEMXZ
+float Class_10E4AA80::FUN_1094c700()
 {
     return Field78;
 }
@@ -398,14 +343,14 @@ int Class_1094DFA0::FUN_1094dfa0()
     return Field110;
 }
 
-// FUNCTION: 0x1094E0F0 ?FUN_1094e0f0@Class_1094E0F0@@QAE?AUStruct_1094E0F0@@XZ
-Struct_1094E0F0 Class_1094E0F0::FUN_1094e0f0()
+// FUNCTION: 0x1094E0F0 ?FUN_1094e0f0@Class_10E4AB88@@QAE?AUStruct_1094E0F0@@XZ
+Struct_1094E0F0 Class_10E4AB88::FUN_1094e0f0()
 {
     return Unknown134;
 }
 
-// FUNCTION: 0x1094E120 ?FUN_1094e120@Class_1094E120@@QAE?AUStruct_1094E120@@XZ
-Struct_1094E120 Class_1094E120::FUN_1094e120()
+// FUNCTION: 0x1094E120 ?FUN_1094e120@Class_10E4AB88@@QAE?AUStruct_1094E120@@XZ
+Struct_1094E120 Class_10E4AB88::FUN_1094e120()
 {
     return Unknown140;
 }
@@ -416,8 +361,8 @@ int Class_1094EF90::FUN_1094ef90(int Index)
     return (Unknown108[Index].Unknown20 + (Unknown108[Index].Unknown20 & 1) + Unknown108[Index].Unknown00 * 2) * 16;
 }
 
-// FUNCTION: 0x1094F9B0 ?FUN_1094f9b0@Class_1094f9b0@@QAEMXZ
-float Class_1094f9b0::FUN_1094f9b0()
+// FUNCTION: 0x1094F9B0 ?FUN_1094f9b0@Class_10E4AB88@@QAEMXZ
+float Class_10E4AB88::FUN_1094f9b0()
 {
     return Field158;
 }

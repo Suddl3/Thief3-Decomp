@@ -46,7 +46,7 @@ public:
 
 extern Class_10F3A3D8* DAT_10f3a3d8;
 
-class Class_10B3ADC0
+class Class_10E7E6A0
 {
 public:
     virtual void Virtual0();
@@ -57,7 +57,7 @@ public:
     void FUN_10b3ae90(Object_10B3ADC0* A);
 };
 
-class Class_10E7EAD8 : public Class_10B3ADC0
+class Class_10E7EAD8 : public Class_10E7E6A0
 {
 public:
     virtual void FUN_10b4ec00(Object_10B3ADC0* A);

@@ -137,7 +137,7 @@ extern void* DAT_10e696a8[];
 
 void FUN_10a663b0();
 
-class Class_10A5D420
+class Class_10E696A8
 {
 public:
     void* Field00;
@@ -160,24 +160,20 @@ public:
     virtual void Virtual9();
 };
 
-class Class_10A626F0
+class Class_10E6A9F8
 {
 public:
     void FUN_10a626f0();
     void FUN_10a64d70();
+    int FUN_10a62bc0();
 
     char Unknown00[0x1D4];
-    Object_10A626F0* Unknown1D4;
+    union
+    {
+        Object_10A626F0* Unknown1D4;
+        int Field1d4;
+    };
     int Unknown1D8;
-};
-
-class Class_10A62BC0
-{
-public:
-    char Unknown00[0x1d4];
-    int Field1d4;
-public:
-    int FUN_10a62bc0();
 };
 
 struct Base_10A62CB0
@@ -366,23 +362,23 @@ void Class_10A5B490::FUN_10a5b490(int param)
     Field13c = param;
 }
 
-// FUNCTION: 0x10A5D420 ?FUN_10a5d420@Class_10A5D420@@QAEXXZ
-void Class_10A5D420::FUN_10a5d420()
+// FUNCTION: 0x10A5D420 ?FUN_10a5d420@Class_10E696A8@@QAEXXZ
+void Class_10E696A8::FUN_10a5d420()
 {
     Field00 = (void*)DAT_10e696a8;
     FUN_10a663b0();
 }
 
-// FUNCTION: 0x10A626F0 ?FUN_10a626f0@Class_10A626F0@@QAEXXZ
-void Class_10A626F0::FUN_10a626f0()
+// FUNCTION: 0x10A626F0 ?FUN_10a626f0@Class_10E6A9F8@@QAEXXZ
+void Class_10E6A9F8::FUN_10a626f0()
 {
     Unknown1D8 = 0;
     Unknown1D4->Virtual9();
     FUN_10a64d70();
 }
 
-// FUNCTION: 0x10A62BC0 ?FUN_10a62bc0@Class_10A62BC0@@QAEHXZ
-int Class_10A62BC0::FUN_10a62bc0()
+// FUNCTION: 0x10A62BC0 ?FUN_10a62bc0@Class_10E6A9F8@@QAEHXZ
+int Class_10E6A9F8::FUN_10a62bc0()
 {
     return Field1d4;
 }

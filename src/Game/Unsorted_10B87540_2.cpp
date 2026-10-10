@@ -39,7 +39,7 @@ public:
     bool Unknown19;
 };
 
-class Class_10B87900
+class Class_10E896A8
 {
 public:
     bool FUN_10b87900();
@@ -166,8 +166,8 @@ void Class_10E893B0::FUN_10b876c0()
         Unknown78->FUN_10b8c7b0();
 }
 
-// FUNCTION: 0x10B87900 ?FUN_10b87900@Class_10B87900@@QAE_NXZ
-bool Class_10B87900::FUN_10b87900()
+// FUNCTION: 0x10B87900 ?FUN_10b87900@Class_10E896A8@@QAE_NXZ
+bool Class_10E896A8::FUN_10b87900()
 {
     if (Unknown78)
         return Unknown78->Unknown19;

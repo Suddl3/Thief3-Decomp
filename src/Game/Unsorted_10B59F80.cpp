@@ -13,20 +13,6 @@ public:
     void FUN_10a64d50();
 };
 
-class Class_10B5A390
-{
-public:
-    void FUN_10b5a390();
-
-    char Unknown00[0x11C];
-    Class_10A55050* Unknown11C;
-    char Unknown120[4];
-    int Unknown124;
-    char Unknown128[8];
-    int Unknown130;
-    Class_10A64D50 Unknown134;
-};
-
 extern void* GWindowManager[];
 
 void* FUN_10b154c0();
@@ -43,7 +29,7 @@ public:
     bool FUN_10b15960(int A);
 };
 
-class Class_10B5A3D0
+class Class_10E82688
 {
 public:
     virtual void Virtual0();
@@ -104,11 +90,21 @@ public:
     virtual void Virtual55();
     virtual void Virtual56(int A);
 
+    void FUN_10b5a390();
     void FUN_10b5a3d0();
+
+    char Pad04[0x118];
+    Class_10A55050* Unknown11C;
+    char Unknown120[4];
+    int Unknown124;
+    char Unknown128[8];
+    int Unknown130;
+    Class_10A64D50 Unknown134;
+    char Pad135[0x3];
 };
 
-// FUNCTION: 0x10B5A390 ?FUN_10b5a390@Class_10B5A390@@QAEXXZ
-void Class_10B5A390::FUN_10b5a390()
+// FUNCTION: 0x10B5A390 ?FUN_10b5a390@Class_10E82688@@QAEXXZ
+void Class_10E82688::FUN_10b5a390()
 {
     Unknown124 = 0;
     Unknown134.FUN_10a64d50();
@@ -117,8 +113,8 @@ void Class_10B5A390::FUN_10b5a390()
         Unknown11C->FUN_10a55050(Unknown130);
 }
 
-// FUNCTION: 0x10B5A3D0 ?FUN_10b5a3d0@Class_10B5A3D0@@QAEXXZ
-void Class_10B5A3D0::FUN_10b5a3d0()
+// FUNCTION: 0x10B5A3D0 ?FUN_10b5a3d0@Class_10E82688@@QAEXXZ
+void Class_10E82688::FUN_10b5a3d0()
 {
     Virtual56(0);
     static_cast<Class_109E8930*>(GWindowManager[0])->FUN_109e8930(this);

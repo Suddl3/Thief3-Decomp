@@ -9,7 +9,7 @@ public:
 
 Options* FUN_10929550();
 
-class Class_10B56520
+class Class_10E81DE8
 {
 public:
     virtual void Virtual0();
@@ -99,8 +99,8 @@ Struct_10B55810 Class_10E81C20::FUN_10b55810()
     return Unknown54;
 }
 
-// FUNCTION: 0x10B56520 ?FUN_10b56520@Class_10B56520@@QAEXXZ
-void Class_10B56520::FUN_10b56520()
+// FUNCTION: 0x10B56520 ?FUN_10b56520@Class_10E81DE8@@QAEXXZ
+void Class_10E81DE8::FUN_10b56520()
 {
     FUN_10929550()->Save();
     Virtual56(0);

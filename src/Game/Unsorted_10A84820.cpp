@@ -32,7 +32,7 @@ public:
     FName Unknown04;
 };
 
-class Class_10A84D70;
+class Class_10E6C390;
 
 class Class_10F46DA0
 {
@@ -40,12 +40,12 @@ public:
     virtual void Virtual0();
     virtual void Virtual1();
     virtual void Virtual2();
-    virtual void Virtual3(Class_10A84D70* Obj, int A, int B, int C);
+    virtual void Virtual3(Class_10E6C390* Obj, int A, int B, int C);
 };
 
 extern Class_10F46DA0* DAT_10f46da0;
 
-class Class_10A84D70
+class Class_10E6C390
 {
 public:
     void FUN_10a84d70();
@@ -88,8 +88,8 @@ void Class_10A84CE0::FUN_10a84ce0(const Class_109022E0& Name)
     Unknown04 = FName(Text, FNAME_Add);
 }
 
-// FUNCTION: 0x10A84D70 ?FUN_10a84d70@Class_10A84D70@@QAEXXZ
-void Class_10A84D70::FUN_10a84d70()
+// FUNCTION: 0x10A84D70 ?FUN_10a84d70@Class_10E6C390@@QAEXXZ
+void Class_10E6C390::FUN_10a84d70()
 {
     Unknown04 = 0;
     Unknown08 = 0;

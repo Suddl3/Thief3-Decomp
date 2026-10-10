@@ -120,7 +120,7 @@ public:
     virtual void Virtual102(Class_10A52A40_Member* P);
 };
 
-class Class_10B2F900 : public Class_10A52A40
+class Class_10E7B970 : public Class_10A52A40
 {
 public:
     void FUN_10b2f900(Class_10A52A40_Member* P);
@@ -129,8 +129,8 @@ public:
     Class_10B2F900_Unknown130* Unknown130;
 };
 
-// FUNCTION: 0x10B2F900 ?FUN_10b2f900@Class_10B2F900@@QAEXPAVClass_10A52A40_Member@@@Z
-void Class_10B2F900::FUN_10b2f900(Class_10A52A40_Member* P)
+// FUNCTION: 0x10B2F900 ?FUN_10b2f900@Class_10E7B970@@QAEXPAVClass_10A52A40_Member@@@Z
+void Class_10E7B970::FUN_10b2f900(Class_10A52A40_Member* P)
 {
     FUN_10a52a40(P);
     if (Unknown130)

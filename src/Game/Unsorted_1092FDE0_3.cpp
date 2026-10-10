@@ -3,7 +3,7 @@
 
 extern bool DAT_10f2c757;
 
-class Class_10930110
+class Class_10E49C6C
 {
 public:
     void FUN_10930110(int Param1, int Param2);
@@ -17,8 +17,8 @@ public:
     void** Unknown58;
 };
 
-// FUNCTION: 0x10930110 ?FUN_10930110@Class_10930110@@QAEXHH@Z
-void Class_10930110::FUN_10930110(int Param1, int Param2)
+// FUNCTION: 0x10930110 ?FUN_10930110@Class_10E49C6C@@QAEXHH@Z
+void Class_10E49C6C::FUN_10930110(int Param1, int Param2)
 {
     if (!DAT_10f2c757 && FUN_10925160(Param2))
     {

@@ -1,7 +1,7 @@
 // Game/Unsorted_10C0B3D0_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-class Class_10B87900
+class Class_10E896A8
 {
 public:
     bool FUN_10b87900();
@@ -16,7 +16,7 @@ public:
     virtual void Virtual3();
     virtual void Virtual4();
     virtual void Virtual5();
-    virtual Class_10B87900* Virtual6();
+    virtual Class_10E896A8* Virtual6();
 };
 
 struct Struct_10C0B6B0_Unknown0C0
@@ -66,7 +66,7 @@ bool Class_10E97C18::FUN_10c0b6b0(Struct_10C0B6B0* A)
     Class_10C0B6B0_Unknown0B0* Source = Owner->Unknown0B0;
     if (Source)
     {
-        Class_10B87900* Target = Source->Virtual6();
+        Class_10E896A8* Target = Source->Virtual6();
         if (Target && Target->FUN_10b87900())
             return false;
     }

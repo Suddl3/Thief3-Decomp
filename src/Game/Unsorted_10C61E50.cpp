@@ -3,7 +3,7 @@
 
 extern void* DAT_10e9cb60;
 
-class Class_10c62a20
+class Class_10E9CB60
 {
 public:
     void* Unknown00;
@@ -73,8 +73,8 @@ int Class_10E9CB00::FUN_10c61e50()
     return Virtual13();
 }
 
-// FUNCTION: 0x10C62A20 ?FUN_10c62a20@Class_10c62a20@@QAEXXZ
-void Class_10c62a20::FUN_10c62a20()
+// FUNCTION: 0x10C62A20 ?FUN_10c62a20@Class_10E9CB60@@QAEXXZ
+void Class_10E9CB60::FUN_10c62a20()
 {
     Unknown00 = &DAT_10e9cb60;
 }

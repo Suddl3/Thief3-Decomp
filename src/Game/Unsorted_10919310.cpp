@@ -9,7 +9,7 @@ public:
     char FUN_10939570();
 };
 
-class Class_10940970
+class Class_10E4A538
 {
 public:
     char FUN_10940970();
@@ -17,7 +17,7 @@ public:
 
 extern Class_10939570* DAT_10f323fc;
 
-extern Class_10940970* DAT_10f2c8e4;
+extern Class_10E4A538* DAT_10f2c8e4;
 
 // FUNCTION: 0x10919310 ?FUN_10919310@@YAXPBMPAE@Z
 void FUN_10919310(const float* Normal, unsigned char* Color)

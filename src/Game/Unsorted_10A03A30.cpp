@@ -13,7 +13,7 @@ public:
     int Field04;
 };
 
-class Class_10A12DC0 {
+class Class_10E5D4B8 {
 public:
     int FUN_10a12dc0();
     char Unknown00[0x40];
@@ -22,7 +22,7 @@ public:
 
 extern void* DAT_10e5d478[];
 
-class Class_10A12F50
+class Class_10E5D478
 {
 public:
     void* Field00;
@@ -47,14 +47,14 @@ void FUN_10a12ae0()
     FUN_10a123c0();
 }
 
-// FUNCTION: 0x10A12DC0 ?FUN_10a12dc0@Class_10A12DC0@@QAEHXZ
-int Class_10A12DC0::FUN_10a12dc0()
+// FUNCTION: 0x10A12DC0 ?FUN_10a12dc0@Class_10E5D4B8@@QAEHXZ
+int Class_10E5D4B8::FUN_10a12dc0()
 {
     return Field40->Field04;
 }
 
-// FUNCTION: 0x10A12F50 ?FUN_10a12f50@Class_10A12F50@@QAEXXZ
-void Class_10A12F50::FUN_10a12f50()
+// FUNCTION: 0x10A12F50 ?FUN_10a12f50@Class_10E5D478@@QAEXXZ
+void Class_10E5D478::FUN_10a12f50()
 {
     Field00 = (void*)DAT_10e5d478;
 }

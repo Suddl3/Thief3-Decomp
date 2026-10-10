@@ -1,14 +1,7 @@
 // Game/Unsorted_10AA6390.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-class Class_10AA63A0 {
-public:
-    char Unknown00[0x18];
-    int Unknown18;
-    void FUN_10aa63a0();
-};
-
-class Class_10AA63B0
+class Class_10E6D8CC
 {
 public:
     char Unknown00[0x0c];
@@ -20,9 +13,11 @@ public:
 class Class_10E6D8F0
 {
 public:
+    virtual ~Class_10E6D8F0();
+
     Class_10E6D8F0();
 
-    virtual ~Class_10E6D8F0();
+    void FUN_10aa63a0();
 
     int Unknown04;
     int Unknown08;
@@ -39,7 +34,7 @@ extern char DAT_10e6c0f0[];
 
 extern "C" int fprintf(FILE* File, const char* Format, ...);
 
-class Class_10AA71F0
+class Class_10E6C128
 {
 public:
     int FUN_10aa71f0(FILE* File, int Param);
@@ -50,7 +45,7 @@ public:
     int Unknown20;
 };
 
-class Class_10AA7220 {
+class Class_10EC0808 {
 public:
     char Unknown00[0x20];
     void* Unknown20;
@@ -168,7 +163,7 @@ public:
 
 extern char DAT_10e6d9e0[];
 
-class Class_10AAAA60
+class Class_10E6D9E8
 {
 public:
     int FUN_10aaaa60(FILE* File, int Param);
@@ -192,7 +187,7 @@ struct Class_10AAB5C0 {
 	int FUN_10aab5c0();
 };
 
-struct Class_10AACF40 {
+struct Class_10E6DA90 {
 	char unknown_00[0x14];
 	unsigned char unknown_14;
 
@@ -288,14 +283,14 @@ public:
     unsigned char FUN_10ab5aa0();
 };
 
-// FUNCTION: 0x10AA63A0 ?FUN_10aa63a0@Class_10AA63A0@@QAEXXZ
-void Class_10AA63A0::FUN_10aa63a0()
+// FUNCTION: 0x10AA63A0 ?FUN_10aa63a0@Class_10E6D8F0@@QAEXXZ
+void Class_10E6D8F0::FUN_10aa63a0()
 {
     Unknown18 = 0;
 }
 
-// FUNCTION: 0x10AA63B0 ?FUN_10aa63b0@Class_10AA63B0@@QAEHXZ
-int Class_10AA63B0::FUN_10aa63b0()
+// FUNCTION: 0x10AA63B0 ?FUN_10aa63b0@Class_10E6D8CC@@QAEHXZ
+int Class_10E6D8CC::FUN_10aa63b0()
 {
     return *Field0C;
 }
@@ -315,15 +310,15 @@ Class_10E6D8F0::Class_10E6D8F0()
 // FUNCTION: 0x10AA69E0 ??_GClass_10E6D8F0@@UAEPAXI@Z
 // Compiler-generated: emitted with the class's vtable by 0x10AA6860's definition in this unit.
 
-// FUNCTION: 0x10AA71F0 ?FUN_10aa71f0@Class_10AA71F0@@QAEHPAU_iobuf@@H@Z
-int Class_10AA71F0::FUN_10aa71f0(FILE* File, int Param)
+// FUNCTION: 0x10AA71F0 ?FUN_10aa71f0@Class_10E6C128@@QAEHPAU_iobuf@@H@Z
+int Class_10E6C128::FUN_10aa71f0(FILE* File, int Param)
 {
     fprintf(File, DAT_10e6c0f0, Unknown0C, Unknown20);
     return 1;
 }
 
-// FUNCTION: 0x10AA7220 ?FUN_10aa7220@Class_10AA7220@@QAEPAXXZ
-void* Class_10AA7220::FUN_10aa7220()
+// FUNCTION: 0x10AA7220 ?FUN_10aa7220@Class_10EC0808@@QAEPAXXZ
+void* Class_10EC0808::FUN_10aa7220()
 {
     return &Unknown20;
 }
@@ -442,8 +437,8 @@ int FUN_10aaaa10()
     return 0xc;
 }
 
-// FUNCTION: 0x10AAAA60 ?FUN_10aaaa60@Class_10AAAA60@@QAEHPAU_iobuf@@H@Z
-int Class_10AAAA60::FUN_10aaaa60(FILE* File, int Param)
+// FUNCTION: 0x10AAAA60 ?FUN_10aaaa60@Class_10E6D9E8@@QAEHPAU_iobuf@@H@Z
+int Class_10E6D9E8::FUN_10aaaa60(FILE* File, int Param)
 {
     fprintf(File, DAT_10e6c0f0, DAT_10e6d9e0, Unknown08);
     return 1;
@@ -465,8 +460,8 @@ int Class_10AAB5C0::FUN_10aab5c0() {
 	return unknown_08;
 }
 
-// FUNCTION: 0x10AACF40 ?FUN_10aacf40@Class_10AACF40@@QAEXXZ
-void Class_10AACF40::FUN_10aacf40() {
+// FUNCTION: 0x10AACF40 ?FUN_10aacf40@Class_10E6DA90@@QAEXXZ
+void Class_10E6DA90::FUN_10aacf40() {
 	unknown_14 = 0x0;
 }
 

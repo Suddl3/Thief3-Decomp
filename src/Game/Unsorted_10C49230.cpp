@@ -3,9 +3,9 @@
 
 void FUN_10c4c2d0();
 
-class Class_10C4E880;
+class Class_10E9BE7C;
 
-Class_10C4E880* FUN_10c51550();
+Class_10E9BE7C* FUN_10c51550();
 
 void FUN_10c53200();
 
@@ -51,8 +51,8 @@ void FUN_10c4cd50()
     FUN_10c4c2d0();
 }
 
-// FUNCTION: 0x10C515F0 ?FUN_10c515f0@@YAPAVClass_10C4E880@@XZ
-Class_10C4E880* FUN_10c515f0()
+// FUNCTION: 0x10C515F0 ?FUN_10c515f0@@YAPAVClass_10E9BE7C@@XZ
+Class_10E9BE7C* FUN_10c515f0()
 {
     return FUN_10c51550();
 }

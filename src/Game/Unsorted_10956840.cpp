@@ -3,7 +3,7 @@
 
 void FUN_1092bdb0(void* Memory);
 
-class Class_10956F20
+class Class_10E4AE8C
 {
 public:
     void FUN_10956f20(int Index);
@@ -96,8 +96,8 @@ void Class_10956DB0::FUN_10956db0()
     Unknown294 = 0;
 }
 
-// FUNCTION: 0x10956F20 ?FUN_10956f20@Class_10956F20@@QAEXH@Z
-void Class_10956F20::FUN_10956f20(int Index)
+// FUNCTION: 0x10956F20 ?FUN_10956f20@Class_10E4AE8C@@QAEXH@Z
+void Class_10E4AE8C::FUN_10956f20(int Index)
 {
     if (Unknown29C[Index])
     {

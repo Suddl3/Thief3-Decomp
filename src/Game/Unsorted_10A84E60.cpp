@@ -8,14 +8,6 @@ struct Struct_10A85890
     int Unknown18;
 };
 
-class Class_10A85890
-{
-public:
-    void FUN_10a85110(Struct_10A85890* Ar);
-    void FUN_10a852e0(Struct_10A85890* Ar);
-    void FUN_10a85890(Struct_10A85890* Ar);
-};
-
 class Class_10A873D0
 {
 public:
@@ -30,9 +22,12 @@ public:
     void* Unknown14;
 };
 
-class Class_10A84E90
+class Class_10E6C390
 {
 public:
+    void FUN_10a85110(Struct_10A85890* Ar);
+    void FUN_10a852e0(Struct_10A85890* Ar);
+    void FUN_10a85890(Struct_10A85890* Ar);
     void FUN_10a84e90();
 
     char Unknown00[0x14];
@@ -41,16 +36,16 @@ public:
     int Unknown30;
 };
 
-// FUNCTION: 0x10A84E90 ?FUN_10a84e90@Class_10A84E90@@QAEXXZ
-void Class_10A84E90::FUN_10a84e90()
+// FUNCTION: 0x10A84E90 ?FUN_10a84e90@Class_10E6C390@@QAEXXZ
+void Class_10E6C390::FUN_10a84e90()
 {
     Unknown30 = -1;
     if (Unknown14)
         Unknown14 = false;
 }
 
-// FUNCTION: 0x10A85890 ?FUN_10a85890@Class_10A85890@@QAEXPAUStruct_10A85890@@@Z
-void Class_10A85890::FUN_10a85890(Struct_10A85890* Ar)
+// FUNCTION: 0x10A85890 ?FUN_10a85890@Class_10E6C390@@QAEXPAUStruct_10A85890@@@Z
+void Class_10E6C390::FUN_10a85890(Struct_10A85890* Ar)
 {
     if (Ar->Unknown14)
         FUN_10a852e0(Ar);

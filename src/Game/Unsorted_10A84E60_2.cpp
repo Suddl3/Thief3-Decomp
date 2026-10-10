@@ -23,7 +23,7 @@ public:
     virtual void Virtual6();
 };
 
-class Class_10A84E60
+class Class_10E6C390
 {
 public:
     void FUN_10a84e60();
@@ -32,8 +32,8 @@ public:
     Object_10A84E60* Unknown20;
 };
 
-// FUNCTION: 0x10A84E60 ?FUN_10a84e60@Class_10A84E60@@QAEXXZ
-void Class_10A84E60::FUN_10a84e60()
+// FUNCTION: 0x10A84E60 ?FUN_10a84e60@Class_10E6C390@@QAEXXZ
+void Class_10E6C390::FUN_10a84e60()
 {
     if (!Unknown20->Virtual2())
     {

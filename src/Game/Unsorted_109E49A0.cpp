@@ -5,7 +5,7 @@ struct Struct_109E4FB0_Item
 {
 };
 
-class Class_109E4FB0
+class Class_10E5B7C8
 {
 public:
     void FUN_109e4fb0();
@@ -16,8 +16,8 @@ public:
     Struct_109E4FB0_Item** Unknown1F0;
 };
 
-// FUNCTION: 0x109E4FB0 ?FUN_109e4fb0@Class_109E4FB0@@QAEXXZ
-void Class_109E4FB0::FUN_109e4fb0()
+// FUNCTION: 0x109E4FB0 ?FUN_109e4fb0@Class_10E5B7C8@@QAEXXZ
+void Class_10E5B7C8::FUN_109e4fb0()
 {
     for (int i = 0; i < Unknown1E8; i++)
     {

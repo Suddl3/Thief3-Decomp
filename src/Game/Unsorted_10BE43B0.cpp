@@ -19,7 +19,7 @@ struct Struct_10BE4540
     Class_10DBD510* Unknown08;
 };
 
-class Class_10BE4540
+class Class_10E960D8
 {
 public:
     bool FUN_10be4540();
@@ -28,8 +28,8 @@ public:
     Struct_10BE4540* Unknown04;
 };
 
-// FUNCTION: 0x10BE4540 ?FUN_10be4540@Class_10BE4540@@QAE_NXZ
-bool Class_10BE4540::FUN_10be4540()
+// FUNCTION: 0x10BE4540 ?FUN_10be4540@Class_10E960D8@@QAE_NXZ
+bool Class_10E960D8::FUN_10be4540()
 {
     switch (Unknown04->Unknown08->FUN_10dbd510(0x42000585)->FUN_10bbdb80())
     {

@@ -21,15 +21,15 @@ public:
     char Unknown04[0x48];
 };
 
-class Class_10C38350 : public Class_10E99314
+class Class_10E9AF04 : public Class_10E99314
 {
 public:
-    ~Class_10C38350();
+    ~Class_10E9AF04();
 
     Class_10E98C8C Unknown4C;
 };
 
-// FUNCTION: 0x10C38350 ??1Class_10C38350@@QAE@XZ
-Class_10C38350::~Class_10C38350()
+// FUNCTION: 0x10C38350 ??1Class_10E9AF04@@QAE@XZ
+Class_10E9AF04::~Class_10E9AF04()
 {
 }

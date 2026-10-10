@@ -48,8 +48,13 @@ class Class_10E6798C
 {
 public:
     Class_10E6798C* FUN_10a4d310();
+    void FUN_10a4d340();
 
-    void** Unknown00;
+    union
+    {
+        void** Unknown00;
+        void* Field00;
+    };
     char Unknown04[0x24];
     int Unknown28;
     int Unknown2C;
@@ -62,16 +67,9 @@ public:
     int Unknown48;
 };
 
-class Class_10A4D340
-{
-public:
-    void* Field00;
-    void FUN_10a4d340();
-};
-
 extern void* DAT_10e679bc[];
 
-class Class_10A4D400
+class Class_10E679BC
 {
 public:
     void* Field00;
@@ -130,7 +128,7 @@ void FUN_10a51ab0();
 
 extern void* DAT_10e67df0;
 
-class Class_10a51d60
+class Class_10E67DF0
 {
 public:
     void FUN_10a51d60();
@@ -156,7 +154,7 @@ public:
     void* FUN_10a52460();
 };
 
-class Class_10a53250
+class Class_10E7BB2C
 {
 public:
     char Unknown00[0x20];
@@ -184,7 +182,7 @@ public:
 
 extern void* DAT_10e67fb8;
 
-class Class_10a53d80
+class Class_10E67FB8
 {
 public:
     void FUN_10a53d80();
@@ -287,14 +285,14 @@ Class_10E6798C* Class_10E6798C::FUN_10a4d310()
     return this;
 }
 
-// FUNCTION: 0x10A4D340 ?FUN_10a4d340@Class_10A4D340@@QAEXXZ
-void Class_10A4D340::FUN_10a4d340()
+// FUNCTION: 0x10A4D340 ?FUN_10a4d340@Class_10E6798C@@QAEXXZ
+void Class_10E6798C::FUN_10a4d340()
 {
     Field00 = (void*)DAT_10e6798c;
 }
 
-// FUNCTION: 0x10A4D400 ?FUN_10a4d400@Class_10A4D400@@QAEXXZ
-void Class_10A4D400::FUN_10a4d400()
+// FUNCTION: 0x10A4D400 ?FUN_10a4d400@Class_10E679BC@@QAEXXZ
+void Class_10E679BC::FUN_10a4d400()
 {
     Field00 = (void*)DAT_10e679bc;
 }
@@ -332,8 +330,8 @@ void FUN_10a50de0()
     FUN_10a51ab0();
 }
 
-// FUNCTION: 0x10A51D60 ?FUN_10a51d60@Class_10a51d60@@QAEXXZ
-void Class_10a51d60::FUN_10a51d60() {
+// FUNCTION: 0x10A51D60 ?FUN_10a51d60@Class_10E67DF0@@QAEXXZ
+void Class_10E67DF0::FUN_10a51d60() {
     *(void**)this = &DAT_10e67df0;
 }
 
@@ -355,8 +353,8 @@ void* Class_10a52460::FUN_10a52460() {
     return &Unknown58;
 }
 
-// FUNCTION: 0x10A53250 ?FUN_10a53250@Class_10a53250@@QAEXXZ
-void Class_10a53250::FUN_10a53250() {
+// FUNCTION: 0x10A53250 ?FUN_10a53250@Class_10E7BB2C@@QAEXXZ
+void Class_10E7BB2C::FUN_10a53250() {
     Unknown20 = 1;
 }
 
@@ -366,8 +364,8 @@ Class_109081E0 Class_10A53BD0::FUN_10a53bd0(int A)
     return Class_109081E0(DAT_10e47660);
 }
 
-// FUNCTION: 0x10A53D80 ?FUN_10a53d80@Class_10a53d80@@QAEXXZ
-void Class_10a53d80::FUN_10a53d80() {
+// FUNCTION: 0x10A53D80 ?FUN_10a53d80@Class_10E67FB8@@QAEXXZ
+void Class_10E67FB8::FUN_10a53d80() {
     *(void**)this = &DAT_10e67fb8;
 }
 

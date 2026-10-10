@@ -21,14 +21,14 @@ public:
     char Unknown04[0x48];
 };
 
-class Class_10C37390 : public Class_10E99314
+class Class_10E9ADE8 : public Class_10E99314
 {
 public:
     Class_10E98C8C Unknown4C;
     char Unknown54[0x40];
 };
 
-class Class_10E9AE24 : public Class_10C37390
+class Class_10E9AE24 : public Class_10E9ADE8
 {
 public:
     ~Class_10E9AE24();

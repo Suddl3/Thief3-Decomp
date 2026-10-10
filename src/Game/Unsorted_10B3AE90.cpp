@@ -27,14 +27,14 @@ class Class_10B255F0 : public Class_10B25200
 
 Class_10B255F0* FUN_10b25cd0();
 
-class Class_10B3ADC0
+class Class_10E7E6A0
 {
 public:
     void FUN_10b3ae90(AGarrett* Garrett);
 };
 
-// FUNCTION: 0x10B3AE90 ?FUN_10b3ae90@Class_10B3ADC0@@QAEXPAVAGarrett@@@Z
-void Class_10B3ADC0::FUN_10b3ae90(AGarrett* Garrett)
+// FUNCTION: 0x10B3AE90 ?FUN_10b3ae90@Class_10E7E6A0@@QAEXPAVAGarrett@@@Z
+void Class_10E7E6A0::FUN_10b3ae90(AGarrett* Garrett)
 {
     Garrett->ArmUse = EAU_FREE;
     FUN_10b25cd0()->FUN_10b24d90();

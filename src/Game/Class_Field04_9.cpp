@@ -7,7 +7,7 @@ public:
     void FUN_10b26930(int A);
 };
 
-class Class_10B7AD70 : public Class_10B26930
+class Class_10EC0E20 : public Class_10B26930
 {
 public:
     void FUN_10b7b8a0();
@@ -44,7 +44,7 @@ public:
     void FUN_10b476d0();
 
     char Unknown00[8];
-    Class_10B7AD70* Unknown08[2];
+    Class_10EC0E20* Unknown08[2];
     int Unknown10;
     int Unknown14;
     float Unknown18;

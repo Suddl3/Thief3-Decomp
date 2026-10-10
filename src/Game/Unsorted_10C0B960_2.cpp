@@ -26,7 +26,7 @@ public:
     void** Data;
 };
 
-class Class_10C0B960
+class Class_10E97C18
 {
 public:
     void FUN_10c0b960(FArchive& Ar);
@@ -35,8 +35,8 @@ public:
     Class_10BFBD70 Unknown14;
 };
 
-// FUNCTION: 0x10C0B960 ?FUN_10c0b960@Class_10C0B960@@QAEXAAVFArchive@@@Z
-void Class_10C0B960::FUN_10c0b960(FArchive& Ar)
+// FUNCTION: 0x10C0B960 ?FUN_10c0b960@Class_10E97C18@@QAEXAAVFArchive@@@Z
+void Class_10E97C18::FUN_10c0b960(FArchive& Ar)
 {
     int Count = Unknown14.Count;
     Ar.Virtual1(&Count, 4);

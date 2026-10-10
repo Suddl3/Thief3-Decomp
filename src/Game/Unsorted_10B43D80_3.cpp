@@ -34,7 +34,7 @@ struct Struct_10B45D10
     virtual void Virtual16(int A);
 };
 
-class Class_10B56520
+class Class_10E81DE8
 {
 public:
     virtual void Virtual0();
@@ -160,8 +160,8 @@ public:
     Struct_10B45D10* Unknown158;
 };
 
-// FUNCTION: 0x10B45D10 ?FUN_10b45d10@Class_10B56520@@QAEXXZ
-void Class_10B56520::FUN_10b45d10()
+// FUNCTION: 0x10B45D10 ?FUN_10b45d10@Class_10E81DE8@@QAEXXZ
+void Class_10E81DE8::FUN_10b45d10()
 {
     Virtual115();
     GWindowManager->FUN_109e8930(this);

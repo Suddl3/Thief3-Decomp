@@ -18,7 +18,7 @@ public:
 
 Class_10C3F110* FUN_10c3fb10();
 
-class Class_10A850C0
+class Class_10E6C390
 {
 public:
     void FUN_10a850c0();
@@ -70,8 +70,8 @@ int __stdcall FUN_10a84f00(Class_10A84F00_Param* Object)
     return 2;
 }
 
-// FUNCTION: 0x10A850C0 ?FUN_10a850c0@Class_10A850C0@@QAEXXZ
-void Class_10A850C0::FUN_10a850c0()
+// FUNCTION: 0x10A850C0 ?FUN_10a850c0@Class_10E6C390@@QAEXXZ
+void Class_10E6C390::FUN_10a850c0()
 {
     FUN_10c3fb10()->FUN_10c3f120(0, Unknown3C);
     FUN_10c3fb10()->FUN_10c3f120(1, Unknown40);

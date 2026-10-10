@@ -127,7 +127,7 @@ public:
     int Unknown12C;
 };
 
-class Class_10B71A80
+class Class_10E873B0
 {
 public:
     void FUN_10b71a80();
@@ -140,8 +140,8 @@ public:
     Class_10B71A80_Unknown1CC* Unknown1CC;
 };
 
-// FUNCTION: 0x10B71A80 ?FUN_10b71a80@Class_10B71A80@@QAEXXZ
-void Class_10B71A80::FUN_10b71a80()
+// FUNCTION: 0x10B71A80 ?FUN_10b71a80@Class_10E873B0@@QAEXXZ
+void Class_10E873B0::FUN_10b71a80()
 {
     if (Unknown1CC)
     {

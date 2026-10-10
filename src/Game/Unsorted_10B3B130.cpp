@@ -53,14 +53,14 @@ public:
     Class_10B3AF40_UnknownB0* m_physicsObjectPadding;
 };
 
-class Class_10B3ADC0
+class Class_10E7E6A0
 {
 public:
     void FUN_10b3b130(AGarrett* Garrett);
 };
 
-// FUNCTION: 0x10B3B130 ?FUN_10b3b130@Class_10B3ADC0@@QAEXPAVAGarrett@@@Z
-void Class_10B3ADC0::FUN_10b3b130(AGarrett* Garrett)
+// FUNCTION: 0x10B3B130 ?FUN_10b3b130@Class_10E7E6A0@@QAEXPAVAGarrett@@@Z
+void Class_10E7E6A0::FUN_10b3b130(AGarrett* Garrett)
 {
     Class_10B48890* Body = Garrett->m_physicsObjectPadding->Virtual6();
     Body->Virtual18(3, 1, 0);

@@ -18,7 +18,7 @@ public:
     int* Unknown08;
 };
 
-class Class_10ABB720
+class Class_10E6F474
 {
 public:
     void FUN_10abb720(int Item);
@@ -27,8 +27,8 @@ public:
     Class_10BFBD70 Unknown10;
 };
 
-// FUNCTION: 0x10ABB720 ?FUN_10abb720@Class_10ABB720@@QAEXH@Z
-void Class_10ABB720::FUN_10abb720(int Item)
+// FUNCTION: 0x10ABB720 ?FUN_10abb720@Class_10E6F474@@QAEXH@Z
+void Class_10E6F474::FUN_10abb720(int Item)
 {
     for (int i = 0; i < Unknown10.Unknown00; i++)
     {

@@ -18,7 +18,7 @@ struct Struct_10B6C180
     char Unknown00[0x2C];
 };
 
-class Class_10B6C180
+class Class_10E85DE0
 {
 public:
     void FUN_10b6c180(Struct_10B6C180* A);
@@ -146,7 +146,7 @@ public:
 
     char Unknown04[0x154];
     Struct_10B6C180 Unknown158;
-    Class_10B6C180* Unknown184;
+    Class_10E85DE0* Unknown184;
 };
 
 class Class_10A52A40_Member;

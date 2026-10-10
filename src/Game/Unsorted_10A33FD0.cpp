@@ -81,7 +81,7 @@ extern const char DAT_10e47660[];
 
 extern void* DAT_10e666e0[];
 
-class Class_10A39E70 {
+class Class_10E666E0 {
     void* Field00;
 public:
     void FUN_10a39e70();
@@ -207,8 +207,8 @@ void FUN_10a36c70()
     DAT_10f39fe8 = 0;
 }
 
-// FUNCTION: 0x10A39E70 ?FUN_10a39e70@Class_10A39E70@@QAEXXZ
-void Class_10A39E70::FUN_10a39e70()
+// FUNCTION: 0x10A39E70 ?FUN_10a39e70@Class_10E666E0@@QAEXXZ
+void Class_10E666E0::FUN_10a39e70()
 {
     Field00 = (void*)DAT_10e666e0;
 }

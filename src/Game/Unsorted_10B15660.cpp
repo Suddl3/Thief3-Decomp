@@ -11,7 +11,7 @@ public:
     void FUN_10b274d0(int A);
 };
 
-class Class_10A5D460
+class Class_10E7FB08
 {
 public:
     void FUN_10a5d460();
@@ -57,7 +57,7 @@ Class_10B274B0* Class_10B15840::FUN_10b15840(int A, int B, int C, int D, int E, 
         P->FUN_10b274b0(B);
         ((Class_10B274D0*)P)->FUN_10b274d0(C);
         P->FUN_10b27e00(D, E);
-        ((Class_10A5D460*)P)->FUN_10a5d460();
+        ((Class_10E7FB08*)P)->FUN_10a5d460();
         P->Virtual7();
         P->Unknown1C8 = F;
         Virtual4(P);

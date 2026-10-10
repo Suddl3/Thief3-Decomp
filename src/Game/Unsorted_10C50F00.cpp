@@ -25,23 +25,23 @@ void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D
 
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
-class Class_10C4E880
+class Class_10E9BE7C
 {
 public:
-    Class_10C4E880();
+    Class_10E9BE7C();
 
     char Unknown00[0x44];
 };
 
-extern Class_10C4E880* DAT_10ff70c4;
+extern Class_10E9BE7C* DAT_10ff70c4;
 
-// FUNCTION: 0x10C51550 ?FUN_10c51550@@YAPAVClass_10C4E880@@XZ
-Class_10C4E880* FUN_10c51550()
+// FUNCTION: 0x10C51550 ?FUN_10c51550@@YAPAVClass_10E9BE7C@@XZ
+Class_10E9BE7C* FUN_10c51550()
 {
     if (!DAT_10ff70c4)
     {
         FUN_10905aa0()->Virtual8(0, 0);
-        DAT_10ff70c4 = new(0, 0, 0, 0, 0) Class_10C4E880;
+        DAT_10ff70c4 = new(0, 0, 0, 0, 0) Class_10E9BE7C;
         FUN_10905aa0()->Virtual9();
     }
     return DAT_10ff70c4;

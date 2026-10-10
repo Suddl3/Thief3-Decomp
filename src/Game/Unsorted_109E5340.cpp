@@ -149,7 +149,7 @@ struct Struct_109E55C0
     Class_109E55C0_Param** Data;
 };
 
-class Class_109E55C0
+class Class_10E5B7C8
 {
 public:
     void FUN_109e55c0(Class_109E55C0_Param* Param);
@@ -166,8 +166,8 @@ int Class_109E53B0::FUN_109e53b0(int A)
     return 0;
 }
 
-// FUNCTION: 0x109E55C0 ?FUN_109e55c0@Class_109E55C0@@QAEXPAVClass_109E55C0_Param@@@Z
-void Class_109E55C0::FUN_109e55c0(Class_109E55C0_Param* Param)
+// FUNCTION: 0x109E55C0 ?FUN_109e55c0@Class_10E5B7C8@@QAEXPAVClass_109E55C0_Param@@@Z
+void Class_10E5B7C8::FUN_109e55c0(Class_109E55C0_Param* Param)
 {
     Param->Virtual57();
     if (Param->Virtual54())

@@ -7,7 +7,7 @@ extern void* DAT_10e6bd64[];
 
 extern void* DAT_10e6bd60[];
 
-class Class_10A79670
+class Class_10E6BD64
 {
 public:
     void FUN_10a79670();
@@ -117,8 +117,8 @@ void Class_10E6BD18::FUN_10a790b0(int A, int B, int C, int D)
     Virtual16(B, C, D);
 }
 
-// FUNCTION: 0x10A79670 ?FUN_10a79670@Class_10A79670@@QAEXXZ
-void Class_10A79670::FUN_10a79670()
+// FUNCTION: 0x10A79670 ?FUN_10a79670@Class_10E6BD64@@QAEXXZ
+void Class_10E6BD64::FUN_10a79670()
 {
     VTable = DAT_10e6bd64;
     if (Unknown18)

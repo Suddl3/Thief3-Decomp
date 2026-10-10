@@ -55,18 +55,7 @@ public:
     unsigned bUpdatePhysHeight : 1;
 };
 
-class Class_10B3ADC0
-{
-public:
-    void FUN_10b3ae90(AGarrett* Garrett);
-    void FUN_10b3b130(AGarrett* Garrett);
-    void FUN_10b49d10(AGarrett* Garrett);
-
-    char Unknown00[0x1C];
-    bool Unknown1C;
-};
-
-class Class_10B49D40
+class Class_10E7E6A0
 {
 public:
     virtual void Virtual0();
@@ -75,14 +64,18 @@ public:
     virtual void Virtual3();
     virtual int Virtual4();
 
+    void FUN_10b3ae90(AGarrett* Garrett);
+    void FUN_10b3b130(AGarrett* Garrett);
+    void FUN_10b49d10(AGarrett* Garrett);
     int FUN_10b49d40(int A);
 
     char Unknown04[0x18];
     bool Unknown1C;
+    char Pad1D[0x3];
 };
 
-// FUNCTION: 0x10B49D10 ?FUN_10b49d10@Class_10B3ADC0@@QAEXPAVAGarrett@@@Z
-void Class_10B3ADC0::FUN_10b49d10(AGarrett* Garrett)
+// FUNCTION: 0x10B49D10 ?FUN_10b49d10@Class_10E7E6A0@@QAEXPAVAGarrett@@@Z
+void Class_10E7E6A0::FUN_10b49d10(AGarrett* Garrett)
 {
     Unknown1C = true;
     FUN_10b3b130(Garrett);
@@ -91,8 +84,8 @@ void Class_10B3ADC0::FUN_10b49d10(AGarrett* Garrett)
     Garrett->FUN_10b21b90(0);
 }
 
-// FUNCTION: 0x10B49D40 ?FUN_10b49d40@Class_10B49D40@@QAEHH@Z
-int Class_10B49D40::FUN_10b49d40(int A)
+// FUNCTION: 0x10B49D40 ?FUN_10b49d40@Class_10E7E6A0@@QAEHH@Z
+int Class_10E7E6A0::FUN_10b49d40(int A)
 {
     if (Unknown1C)
         return Virtual4();

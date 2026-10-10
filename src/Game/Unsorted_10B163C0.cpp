@@ -110,7 +110,7 @@ public:
 
 void FUN_10984d70();
 
-class Class_10B24D60 {
+class Class_10EB79F4 {
 public:
     char Unknown00[0x1c];
     unsigned char Unknown1C;
@@ -201,8 +201,8 @@ void FUN_10b23b50()
     FUN_10984d70();
 }
 
-// FUNCTION: 0x10B24D60 ?FUN_10b24d60@Class_10B24D60@@QAEEXZ
-unsigned char Class_10B24D60::FUN_10b24d60()
+// FUNCTION: 0x10B24D60 ?FUN_10b24d60@Class_10EB79F4@@QAEEXZ
+unsigned char Class_10EB79F4::FUN_10b24d60()
 {
     return Unknown1C;
 }

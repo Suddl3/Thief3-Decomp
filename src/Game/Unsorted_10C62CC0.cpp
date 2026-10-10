@@ -3,15 +3,15 @@
 
 extern void* DAT_10e9cbf8;
 
-class Class_10c62cf0
+class Class_10E9CBF8
 {
 public:
     void* Unknown00;
     void FUN_10c62cf0();
 };
 
-// FUNCTION: 0x10C62CF0 ?FUN_10c62cf0@Class_10c62cf0@@QAEXXZ
-void Class_10c62cf0::FUN_10c62cf0()
+// FUNCTION: 0x10C62CF0 ?FUN_10c62cf0@Class_10E9CBF8@@QAEXXZ
+void Class_10E9CBF8::FUN_10c62cf0()
 {
     Unknown00 = &DAT_10e9cbf8;
 }

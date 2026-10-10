@@ -7,7 +7,7 @@ public:
     int FUN_10a58b70(int Index);
 };
 
-class Class_10B61080 : public Class_10A58B70
+class Class_10E83E20 : public Class_10A58B70
 {
 public:
     int FUN_10b61080(int Index);
@@ -47,8 +47,8 @@ void Class_10B61030::FUN_10b61030(int A)
     }
 }
 
-// FUNCTION: 0x10B61080 ?FUN_10b61080@Class_10B61080@@QAEHH@Z
-int Class_10B61080::FUN_10b61080(int Index)
+// FUNCTION: 0x10B61080 ?FUN_10b61080@Class_10E83E20@@QAEHH@Z
+int Class_10E83E20::FUN_10b61080(int Index)
 {
     int Result = FUN_10a58b70(Index);
     if (Unknown1D4 == 3)

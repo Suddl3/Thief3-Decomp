@@ -16,7 +16,7 @@ public:
     bool Unknown64;
 };
 
-class Class_10e9092c
+class Class_10E9092C
 {
 public:
     bool FUN_10bb7500(int Value, bool Flag);
@@ -27,8 +27,8 @@ public:
     Class_10c7d570* Unknown0C;
 };
 
-// FUNCTION: 0x10BB7500 ?FUN_10bb7500@Class_10e9092c@@QAE_NH_N@Z
-bool Class_10e9092c::FUN_10bb7500(int Value, bool Flag)
+// FUNCTION: 0x10BB7500 ?FUN_10bb7500@Class_10E9092C@@QAE_NH_N@Z
+bool Class_10E9092C::FUN_10bb7500(int Value, bool Flag)
 {
     if (Flag)
     {

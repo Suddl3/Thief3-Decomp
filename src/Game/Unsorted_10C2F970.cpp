@@ -17,22 +17,6 @@ public:
     void* Unknown14;
 };
 
-class Class_10E9AC80
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual bool FUN_10c32a70(void* A);
-
-    void FUN_10c32970(void* A, int B);
-};
-
 class Class_10C30700_Unknown140
 {
 public:
@@ -161,16 +145,28 @@ public:
 
 extern float DAT_10eafbdc;
 
-class Class_10C306B0
+class Class_10E9AC80
 {
 public:
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual void Virtual2();
+    virtual void Virtual3();
+    virtual void Virtual4();
+    virtual void Virtual5();
+    virtual void Virtual6();
+    virtual void Virtual7();
+    virtual bool FUN_10c32a70(void* A);
+
+    void FUN_10c32970(void* A, int B);
     void FUN_10c306b0();
 
-    char Unknown00[0x4C];
+    char Pad04[0x48];
     float Unknown4C;
     float Unknown50;
     char Unknown54[0x44];
     bool Unknown98;
+    char Pad99[0x3];
 };
 
 // FUNCTION: 0x10C2F970 ?FUN_10c2f970@Class_10c2f970@@QAEPAVUSkeletalMesh@@XZ
@@ -212,8 +208,8 @@ void Class_10C30640::FUN_10c30640()
         Found->Unknown14 = FVector(0.0f, 0.0f, 0.0f);
 }
 
-// FUNCTION: 0x10C306B0 ?FUN_10c306b0@Class_10C306B0@@QAEXXZ
-void Class_10C306B0::FUN_10c306b0()
+// FUNCTION: 0x10C306B0 ?FUN_10c306b0@Class_10E9AC80@@QAEXXZ
+void Class_10E9AC80::FUN_10c306b0()
 {
     float Abs = Unknown4C;
     if (!(Abs >= DAT_10eafbdc))

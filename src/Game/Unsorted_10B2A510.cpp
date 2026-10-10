@@ -29,7 +29,7 @@ struct Struct_10B2A750
     unsigned char Unknown03;
 };
 
-class Class_10B2A750 : public Window
+class Class_10E80798 : public Window
 {
 public:
     virtual void Virtual4();
@@ -162,8 +162,8 @@ public:
     float Unknown1E4;
 };
 
-// FUNCTION: 0x10B2A750 ?FUN_10b2a750@Class_10B2A750@@QAEXM@Z
-void Class_10B2A750::FUN_10b2a750(float Delta)
+// FUNCTION: 0x10B2A750 ?FUN_10b2a750@Class_10E80798@@QAEXM@Z
+void Class_10E80798::FUN_10b2a750(float Delta)
 {
     FUN_10a53560(*(int*)&Delta);
     Unknown1E4 = Delta + Unknown1E4;

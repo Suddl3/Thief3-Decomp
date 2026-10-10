@@ -5,7 +5,7 @@
 
 extern void* DAT_10e9bea0;
 
-class Class_10c531f0
+class Class_10E9BEA0
 {
 public:
     void* Unknown00;
@@ -26,13 +26,13 @@ public:
     Struct_10C516B0* Unknown04;
 };
 
-class Class_10C4E880
+class Class_10E9BE7C
 {
 public:
     int FUN_10c4eb60(const FVector* Point);
 };
 
-Class_10C4E880* FUN_10c51550();
+Class_10E9BE7C* FUN_10c51550();
 
 // FUNCTION: 0x10C51670 ?FUN_10c51670@@YG_NPBVFVector@@0@Z
 bool __stdcall FUN_10c51670(const FVector* A, const FVector* B)
@@ -40,8 +40,8 @@ bool __stdcall FUN_10c51670(const FVector* A, const FVector* B)
     return FUN_10c51550()->FUN_10c4eb60(A) != FUN_10c51550()->FUN_10c4eb60(B);
 }
 
-// FUNCTION: 0x10C531F0 ?FUN_10c531f0@Class_10c531f0@@QAEXXZ
-void Class_10c531f0::FUN_10c531f0()
+// FUNCTION: 0x10C531F0 ?FUN_10c531f0@Class_10E9BEA0@@QAEXXZ
+void Class_10E9BEA0::FUN_10c531f0()
 {
     Unknown00 = &DAT_10e9bea0;
 }

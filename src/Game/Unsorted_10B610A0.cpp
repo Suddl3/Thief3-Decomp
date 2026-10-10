@@ -63,15 +63,6 @@ public:
     virtual void Virtual56(int p1);
 };
 
-class Class_10B61C70
-{
-public:
-    void FUN_10b61c70();
-
-    char Unknown00[0x1B8];
-    Class_10B61C70_Member* Unknown1B8;
-};
-
 class Class_10B45AD0
 {
 public:
@@ -140,17 +131,18 @@ public:
     virtual void Virtual56(int A);
 };
 
-class Class_10B61C40
+class Class_10E84088
 {
 public:
+    void FUN_10b61c70();
     void FUN_10b61c40(Class_10B45AD0* A);
 
     char Unknown00[0x1B8];
-    Class_10B61C40_Member* Unknown1B8;
+    Class_10B61C70_Member* Unknown1B8;
 };
 
-// FUNCTION: 0x10B61C40 ?FUN_10b61c40@Class_10B61C40@@QAEXPAVClass_10B45AD0@@@Z
-void Class_10B61C40::FUN_10b61c40(Class_10B45AD0* A)
+// FUNCTION: 0x10B61C40 ?FUN_10b61c40@Class_10E84088@@QAEXPAVClass_10B45AD0@@@Z
+void Class_10E84088::FUN_10b61c40(Class_10B45AD0* A)
 {
     if (A)
     {
@@ -160,8 +152,8 @@ void Class_10B61C40::FUN_10b61c40(Class_10B45AD0* A)
     }
 }
 
-// FUNCTION: 0x10B61C70 ?FUN_10b61c70@Class_10B61C70@@QAEXXZ
-void Class_10B61C70::FUN_10b61c70()
+// FUNCTION: 0x10B61C70 ?FUN_10b61c70@Class_10E84088@@QAEXXZ
+void Class_10E84088::FUN_10b61c70()
 {
     if (Unknown1B8)
         Unknown1B8->Virtual56(2);

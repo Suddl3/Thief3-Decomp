@@ -3,7 +3,7 @@
 
 extern bool DAT_10f2c758;
 
-class Class_10930110
+class Class_10E49C6C
 {
 public:
     void FUN_10930170(int A, int B);
@@ -17,8 +17,8 @@ public:
     void** Unknown58;
 };
 
-// FUNCTION: 0x10930170 ?FUN_10930170@Class_10930110@@QAEXHH@Z
-void Class_10930110::FUN_10930170(int A, int B)
+// FUNCTION: 0x10930170 ?FUN_10930170@Class_10E49C6C@@QAEXHH@Z
+void Class_10E49C6C::FUN_10930170(int A, int B)
 {
     if (!DAT_10f2c758 && FUN_10925160(B))
     {

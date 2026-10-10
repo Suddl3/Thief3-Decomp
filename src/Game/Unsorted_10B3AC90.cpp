@@ -47,14 +47,14 @@ public:
 
 extern void* DAT_10e7e4e0[];
 
-class Class_10B3ACB0
+class Class_10E7E4E0
 {
 public:
     void* Field00;
     char Unknown04[4];
     int Field08;
     int Field0c;
-    Class_10B3ACB0* FUN_10b3acb0();
+    Class_10E7E4E0* FUN_10b3acb0();
 };
 
 struct Struct_10AA3520
@@ -85,8 +85,8 @@ void* Class_10B3AC90::FUN_10b3ac90()
     return Unknown00;
 }
 
-// FUNCTION: 0x10B3ACB0 ?FUN_10b3acb0@Class_10B3ACB0@@QAEPAV1@XZ
-Class_10B3ACB0* Class_10B3ACB0::FUN_10b3acb0()
+// FUNCTION: 0x10B3ACB0 ?FUN_10b3acb0@Class_10E7E4E0@@QAEPAV1@XZ
+Class_10E7E4E0* Class_10E7E4E0::FUN_10b3acb0()
 {
     Field00 = DAT_10e7e4e0;
     Field08 = 0x101;

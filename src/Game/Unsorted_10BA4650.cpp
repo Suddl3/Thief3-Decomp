@@ -1,10 +1,10 @@
 // Game/Unsorted_10BA4650.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-class Class_10BA4690
+class Class_10E8C7C4
 {
 public:
-    Class_10BA4690* FUN_10ba4690();
+    Class_10E8C7C4* FUN_10ba4690();
 
     void** Unknown00;
 };
@@ -15,13 +15,13 @@ void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D
 class Class_10E8C69C
 {
 public:
-    virtual Class_10BA4690* FUN_10ba4650();
+    virtual Class_10E8C7C4* FUN_10ba4650();
 };
 
-// FUNCTION: 0x10BA4650 ?FUN_10ba4650@Class_10E8C69C@@UAEPAVClass_10BA4690@@XZ
-Class_10BA4690* Class_10E8C69C::FUN_10ba4650()
+// FUNCTION: 0x10BA4650 ?FUN_10ba4650@Class_10E8C69C@@UAEPAVClass_10E8C7C4@@XZ
+Class_10E8C7C4* Class_10E8C69C::FUN_10ba4650()
 {
-    Class_10BA4690* Object = (Class_10BA4690*)operator new(sizeof(Class_10BA4690), 0, 0, 0, 0, 0);
+    Class_10E8C7C4* Object = (Class_10E8C7C4*)operator new(sizeof(Class_10E8C7C4), 0, 0, 0, 0, 0);
     if (Object)
         return Object->FUN_10ba4690();
     return 0;

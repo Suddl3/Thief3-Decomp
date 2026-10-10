@@ -9,7 +9,7 @@ extern void* DAT_10e98cec[];
 
 void FUN_10c62c90();
 
-class Class_10C1A570
+class Class_10E98CEC
 {
 public:
     void* Field00;
@@ -62,7 +62,7 @@ struct Struct_10C1ACA0
     int Unknown08;
 };
 
-class Class_10C1ACA0
+class Class_10E98F00
 {
 public:
     bool FUN_10c1aca0(Struct_10C1ACA0* Out, float* Value);
@@ -78,7 +78,7 @@ struct Struct_10C1AD20
     int Unknown08;
 };
 
-class Class_10C1AD20
+class Class_10E98F48
 {
 public:
     bool FUN_10c1ad20(Struct_10C1AD20* Out, float* Value);
@@ -191,7 +191,7 @@ public:
     Class_1090A780 Unknown10;
 };
 
-class Class_10C270B0 {
+class Class_10E992D4 {
 public:
     char Unknown00[0x44];
     unsigned char Field44;
@@ -236,8 +236,8 @@ int FUN_10c1a160()
     return DAT_10ff708c;
 }
 
-// FUNCTION: 0x10C1A570 ?FUN_10c1a570@Class_10C1A570@@QAEXXZ
-void Class_10C1A570::FUN_10c1a570()
+// FUNCTION: 0x10C1A570 ?FUN_10c1a570@Class_10E98CEC@@QAEXXZ
+void Class_10E98CEC::FUN_10c1a570()
 {
     Field00 = (void*)DAT_10e98cec;
     FUN_10c62c90();
@@ -293,8 +293,8 @@ int FUN_10c1ac90()
     return 0x100014;
 }
 
-// FUNCTION: 0x10C1ACA0 ?FUN_10c1aca0@Class_10C1ACA0@@QAE_NPAUStruct_10C1ACA0@@PAM@Z
-bool Class_10C1ACA0::FUN_10c1aca0(Struct_10C1ACA0* Out, float* Value)
+// FUNCTION: 0x10C1ACA0 ?FUN_10c1aca0@Class_10E98F00@@QAE_NPAUStruct_10C1ACA0@@PAM@Z
+bool Class_10E98F00::FUN_10c1aca0(Struct_10C1ACA0* Out, float* Value)
 {
     *Out = Unknown4C;
     *Value = 0.0f;
@@ -307,8 +307,8 @@ int FUN_10c1ad10()
     return 0x1001ea;
 }
 
-// FUNCTION: 0x10C1AD20 ?FUN_10c1ad20@Class_10C1AD20@@QAE_NPAUStruct_10C1AD20@@PAM@Z
-bool Class_10C1AD20::FUN_10c1ad20(Struct_10C1AD20* Out, float* Value)
+// FUNCTION: 0x10C1AD20 ?FUN_10c1ad20@Class_10E98F48@@QAE_NPAUStruct_10C1AD20@@PAM@Z
+bool Class_10E98F48::FUN_10c1ad20(Struct_10C1AD20* Out, float* Value)
 {
     *Out = Unknown48;
     *Value = 0.0f;
@@ -401,8 +401,8 @@ Class_1090A780 Class_10E6AC20::FUN_10c26a40()
     return Class_1090A780(Unknown10);
 }
 
-// FUNCTION: 0x10C270B0 ?FUN_10c270b0@Class_10C270B0@@QAEEXZ
-unsigned char Class_10C270B0::FUN_10c270b0()
+// FUNCTION: 0x10C270B0 ?FUN_10c270b0@Class_10E992D4@@QAEEXZ
+unsigned char Class_10E992D4::FUN_10c270b0()
 {
     return Field44;
 }

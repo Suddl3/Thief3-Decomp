@@ -77,7 +77,7 @@ public:
     virtual void Virtual70(int A);
 };
 
-class Class_10B5F9C0
+class Class_10E83420
 {
 public:
     virtual void Virtual0();
@@ -195,8 +195,8 @@ public:
     Class_10B5F9C0_Member* Unknown230;
 };
 
-// FUNCTION: 0x10B5FA80 ?FUN_10b5fa80@Class_10B5F9C0@@QAEXXZ
-void Class_10B5F9C0::FUN_10b5fa80()
+// FUNCTION: 0x10B5FA80 ?FUN_10b5fa80@Class_10E83420@@QAEXXZ
+void Class_10E83420::FUN_10b5fa80()
 {
     if (Unknown230)
         Unknown230->Virtual56(2);

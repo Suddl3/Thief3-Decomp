@@ -49,7 +49,7 @@ public:
     Class_10BBDB40* FUN_10dbd510();
 };
 
-class Class_10BA9EF0 : public Class_10DBD510
+class Class_10E5CBD8 : public Class_10DBD510
 {
 public:
     Struct_10BA91E0 FUN_10ba9ef0();
@@ -69,7 +69,7 @@ public:
     bool FUN_10c16680(Struct_10C16680* A, float B, float C);
 
     char Unknown00[4];
-    Class_10BA9EF0* Unknown04;
+    Class_10E5CBD8* Unknown04;
 };
 
 // FUNCTION: 0x10C165F0 ?FUN_10c165f0@@YAPAVClass_10E98C8C@@H@Z

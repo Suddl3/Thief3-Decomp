@@ -54,17 +54,17 @@ public:
     char Unknown04[0x14C];
 };
 
-class Class_10B2BD00
+class Class_10E7B360
 {
 public:
-    ~Class_10B2BD00();
+    ~Class_10E7B360();
 
     Class_10E67FD0 Unknown00;
     Class_109081E0 Unknown150;
 };
 
-// FUNCTION: 0x10B2BD00 ??1Class_10B2BD00@@QAE@XZ
-Class_10B2BD00::~Class_10B2BD00()
+// FUNCTION: 0x10B2BD00 ??1Class_10E7B360@@QAE@XZ
+Class_10E7B360::~Class_10E7B360()
 {
 }
 

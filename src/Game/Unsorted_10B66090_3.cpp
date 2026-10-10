@@ -149,7 +149,7 @@ public:
     void FUN_10b6ba50(int A, Class_10B66980_Unknown158* B, int C);
 };
 
-class Class_10B66980
+class Class_10E84BB8
 {
 public:
     void FUN_10b66980(int Index);
@@ -164,8 +164,8 @@ public:
     Class_10B66980_Unknown198** Unknown198;
 };
 
-// FUNCTION: 0x10B66980 ?FUN_10b66980@Class_10B66980@@QAEXH@Z
-void Class_10B66980::FUN_10b66980(int Index)
+// FUNCTION: 0x10B66980 ?FUN_10b66980@Class_10E84BB8@@QAEXH@Z
+void Class_10E84BB8::FUN_10b66980(int Index)
 {
     Class_10B66980_Unknown198* Object = Unknown198[Index];
     if (Object->Unknown1F0 == Object->Unknown1E8)

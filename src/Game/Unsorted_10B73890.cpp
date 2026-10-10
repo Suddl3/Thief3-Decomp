@@ -151,7 +151,7 @@ public:
     void FUN_10b781e0();
 };
 
-class Class_10B73900 : public Class_10B781E0
+class Class_10E873B0 : public Class_10B781E0
 {
 public:
     void FUN_10b73900();
@@ -162,8 +162,8 @@ public:
     Class_10B73900_Unknown1CC* Unknown1CC;
 };
 
-// FUNCTION: 0x10B73900 ?FUN_10b73900@Class_10B73900@@QAEXXZ
-void Class_10B73900::FUN_10b73900()
+// FUNCTION: 0x10B73900 ?FUN_10b73900@Class_10E873B0@@QAEXXZ
+void Class_10E873B0::FUN_10b73900()
 {
     if (Unknown1CC)
     {

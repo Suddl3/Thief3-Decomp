@@ -20,12 +20,6 @@ public:
     void FUN_10940c50();
 };
 
-class Class_10E49F90 : public Class_10E4A538
-{
-public:
-    ~Class_10E49F90();
-};
-
 class IDirect3DDevice8
 {
 public:
@@ -84,15 +78,17 @@ public:
 
 extern IDirect3DDevice8* GDirect3DDevice8;
 
-class Class_10935D10
+class Class_10E49F90 : public Class_10E4A538
 {
 public:
+    ~Class_10E49F90();
+
     void FUN_10935d10(int A, int B);
     void FUN_10935930(int A, int B);
 };
 
-// FUNCTION: 0x10935D10 ?FUN_10935d10@Class_10935D10@@QAEXHH@Z
-void Class_10935D10::FUN_10935d10(int A, int B)
+// FUNCTION: 0x10935D10 ?FUN_10935d10@Class_10E49F90@@QAEXHH@Z
+void Class_10E49F90::FUN_10935d10(int A, int B)
 {
     GDirect3DDevice8->Virtual50(0x1b, 1);
     GDirect3DDevice8->Virtual50(0x13, 2);

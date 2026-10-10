@@ -35,14 +35,14 @@ public:
     void* Unknown08;
 };
 
-class Class_10B460C0
+class Class_10E81130
 {
 public:
     virtual void Virtual0();
-    ~Class_10B460C0();
+    ~Class_10E81130();
 };
 
-class Class_10E82E90 : public Class_10B460C0
+class Class_10E82E90 : public Class_10E81130
 {
 public:
     virtual void Virtual1();

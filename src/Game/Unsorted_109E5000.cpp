@@ -9,7 +9,7 @@ public:
     virtual void Virtual2(int Param);
 };
 
-class Class_109E5180
+class Class_10E5B7C8
 {
 public:
     void FUN_109e5180(int Param);
@@ -20,8 +20,8 @@ public:
     Class_109E5180_Item** Unknown1F0;
 };
 
-// FUNCTION: 0x109E5180 ?FUN_109e5180@Class_109E5180@@QAEXH@Z
-void Class_109E5180::FUN_109e5180(int Param)
+// FUNCTION: 0x109E5180 ?FUN_109e5180@Class_10E5B7C8@@QAEXH@Z
+void Class_10E5B7C8::FUN_109e5180(int Param)
 {
     for (int i = 0; i < Unknown1E8; i++)
     {

@@ -7,11 +7,11 @@ struct Struct_10B67EE0
     bool Unknown1A4;
 };
 
-class Class_10B67EE0
+class Class_10E858D0
 {
 public:
     virtual void Virtual0();
-    virtual void Virtual1();
+    virtual bool FUN_10b67ea0(int A, int B, bool C);
     virtual void Virtual2();
     virtual void Virtual3();
     virtual void Virtual4();
@@ -133,20 +133,12 @@ public:
 
     void FUN_10b79860(int A);
     void FUN_10b67ee0(int A);
+    bool FUN_10b79560(int A, int B, bool C);
 
     char Unknown04[0x14C];
     int Unknown150;
     char Unknown154[0x18C];
     Struct_10B67EE0* Unknown2E0;
-};
-
-class Class_10E858D0
-{
-public:
-    virtual void Virtual0();
-    virtual bool FUN_10b67ea0(int A, int B, bool C);
-
-    bool FUN_10b79560(int A, int B, bool C);
 };
 
 // FUNCTION: 0x10B67EA0 ?FUN_10b67ea0@Class_10E858D0@@UAE_NHH_N@Z
@@ -159,8 +151,8 @@ bool Class_10E858D0::FUN_10b67ea0(int A, int B, bool C)
     return false;
 }
 
-// FUNCTION: 0x10B67EE0 ?FUN_10b67ee0@Class_10B67EE0@@QAEXH@Z
-void Class_10B67EE0::FUN_10b67ee0(int A)
+// FUNCTION: 0x10B67EE0 ?FUN_10b67ee0@Class_10E858D0@@QAEXH@Z
+void Class_10E858D0::FUN_10b67ee0(int A)
 {
     FUN_10b79860(A);
     if (Unknown2E0 && Unknown2E0->Unknown1A4 && Unknown150 != 4)

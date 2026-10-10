@@ -37,7 +37,7 @@ public:
     float Unknown14;
 };
 
-class Class_10B3ADC0
+class Class_10E7E6A0
 {
 public:
     virtual void Virtual0();
@@ -48,7 +48,7 @@ public:
     void FUN_10b3b130(AGarrett* Param);
 };
 
-class Class_10E7E6E8 : public Class_10B3ADC0
+class Class_10E7E6E8 : public Class_10E7E6A0
 {
 public:
     virtual void FUN_10b4a160(AGarrett* Param);

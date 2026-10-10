@@ -44,13 +44,6 @@ extern void* DAT_10e9aa7c[];
 
 void FUN_10c27290();
 
-class Class_10C2EB30
-{
-public:
-    void* Field00;
-    void FUN_10c2eb30();
-};
-
 extern const char DAT_10e9aaa8[];
 
 class Class_109081E0
@@ -62,57 +55,13 @@ public:
     char* Unknown00;
 };
 
-class Class_10C2EBD0
+class Class_10E9AA7C
 {
 public:
+    void FUN_10c2eb30();
     Class_109081E0 FUN_10c2ebd0();
-};
 
-class Class_10C2ECF0
-{
-public:
-    char Unknown00[0x160];
-    unsigned char Field160;
-    unsigned char FUN_10c2ecf0();
-};
-
-class Class_10C2EE10
-{
-public:
-    char Unknown00[0x114];
-    unsigned char Field114;
-    unsigned char FUN_10c2ee10();
-};
-
-class Class_10C2EEB0 {
-public:
-    char Unknown00[0x10c];
-    unsigned char Field10c;
-    unsigned char FUN_10c2eeb0();
-};
-
-class Class_10C2F530 {
-public:
-    char Unknown00[0xcc];
-    void* Fieldcc;
-    void* FUN_10c2f530();
-};
-
-class Class_10C2F570
-{
-public:
-    bool FUN_10c2f570(int Key, int* Out);
-
-    char Unknown00[0x150];
-    int Unknown150;
-    int Unknown154;
-};
-
-class Class_10C2F5C0 {
-public:
-    char Unknown00[0x9d];
-    unsigned char Field9d;
-    void FUN_10c2f5c0();
+    void* Field00;
 };
 
 struct Info_10C2F870
@@ -122,33 +71,6 @@ struct Info_10C2F870
     int Unknown08;
 };
 
-class Class_10C2F870
-{
-public:
-    void FUN_10c2f870(const Info_10C2F870* In);
-
-    char Unknown00[0x74];
-    Info_10C2F870 Unknown74;
-    char Unknown80[0x1F];
-    char Unknown9F;
-};
-
-class Class_10C2F960 {
-public:
-    char Unknown00[0x12c];
-    unsigned char Field12c;
-    void FUN_10c2f960();
-};
-
-class Class_10C35650
-{
-public:
-    char Unknown00[0x60];
-    float Field60;
-
-    virtual float FUN_10c35650();
-};
-
 struct Struct_10C35670
 {
     int Unknown00;
@@ -156,28 +78,54 @@ struct Struct_10C35670
     int Unknown08;
 };
 
-class Class_10C35670
+class Class_10E9AC80
 {
 public:
+    virtual float FUN_10c35650();
+
+    unsigned char FUN_10c2ecf0();
+    unsigned char FUN_10c2ee10();
+    unsigned char FUN_10c2eeb0();
+    void* FUN_10c2f530();
+    bool FUN_10c2f570(int Key, int* Out);
+    void FUN_10c2f5c0();
+    void FUN_10c2f870(const Info_10C2F870* In);
+    void FUN_10c2f960();
     void FUN_10c35670(Struct_10C35670* Value);
-
-    char Unknown00[0x68];
-    Struct_10C35670 Unknown68;
-    char Unknown74[0x27];
-    bool Unknown9B;
-};
-
-class Class_10C356A0
-{
-public:
-    char Unknown00[0x9f];
-    unsigned char Field9f;
     void FUN_10c356a0();
+
+    char Unknown00[0x60];
+    float Field60;
+    Struct_10C35670 Unknown68;
+    Info_10C2F870 Unknown74;
+    char Pad80[0x1b];
+    bool Unknown9B;
+    char Pad9C[0x1];
+    unsigned char Field9d;
+    char Pad9E[0x1];
+    union
+    {
+        char Unknown9F;
+        unsigned char Field9f;
+    };
+    char PadA0[0x2c];
+    void* Fieldcc;
+    char PadD0[0x3c];
+    unsigned char Field10c;
+    char Pad10D[0x7];
+    unsigned char Field114;
+    char Pad115[0x17];
+    unsigned char Field12c;
+    char Pad12D[0x23];
+    int Unknown150;
+    int Unknown154;
+    char Pad158[0x8];
+    unsigned char Field160;
 };
 
 extern const char DAT_10e9adc8[];
 
-class Class_10C36860
+class Class_10E9AD9C
 {
 public:
     Class_109081E0 FUN_10c36860();
@@ -187,7 +135,7 @@ void FUN_10c36a20();
 
 extern const char DAT_10e9ae18[];
 
-class Class_10C374E0
+class Class_10E9ADE8
 {
 public:
     Class_109081E0 FUN_10c374e0();
@@ -195,7 +143,7 @@ public:
 
 extern const char DAT_10e9ae54[];
 
-class Class_10C378A0
+class Class_10E9AE24
 {
 public:
     Class_109081E0 FUN_10c378a0();
@@ -220,23 +168,19 @@ public:
     void FUN_10c372e0(Object_10BCE8D0* A);
 };
 
+extern const char DAT_10e9aeb8[];
+
 class Class_10E9AE88 : public Class_10E9AF04
 {
 public:
     virtual void FUN_10c37e80(Object_10BCE8D0* A);
-};
 
-extern const char DAT_10e9aeb8[];
-
-class Class_10C38040
-{
-public:
     Class_109081E0 FUN_10c38040();
 };
 
 extern const char DAT_10e9aef4[];
 
-class Class_10C382B0
+class Class_10E9AEC8
 {
 public:
     Class_109081E0 FUN_10c382b0();
@@ -252,7 +196,7 @@ public:
 
 extern void* DAT_10e9aad0[];
 
-class Class_10C384F0
+class Class_10E9AAD0
 {
 public:
     void* Field00;
@@ -304,45 +248,45 @@ void FUN_10c29ee0()
     FUN_10c28280();
 }
 
-// FUNCTION: 0x10C2EB30 ?FUN_10c2eb30@Class_10C2EB30@@QAEXXZ
-void Class_10C2EB30::FUN_10c2eb30()
+// FUNCTION: 0x10C2EB30 ?FUN_10c2eb30@Class_10E9AA7C@@QAEXXZ
+void Class_10E9AA7C::FUN_10c2eb30()
 {
     Field00 = (void*)DAT_10e9aa7c;
     FUN_10c27290();
 }
 
-// FUNCTION: 0x10C2EBD0 ?FUN_10c2ebd0@Class_10C2EBD0@@QAE?AVClass_109081E0@@XZ
-Class_109081E0 Class_10C2EBD0::FUN_10c2ebd0()
+// FUNCTION: 0x10C2EBD0 ?FUN_10c2ebd0@Class_10E9AA7C@@QAE?AVClass_109081E0@@XZ
+Class_109081E0 Class_10E9AA7C::FUN_10c2ebd0()
 {
     return Class_109081E0(DAT_10e9aaa8);
 }
 
-// FUNCTION: 0x10C2ECF0 ?FUN_10c2ecf0@Class_10C2ECF0@@QAEEXZ
-unsigned char Class_10C2ECF0::FUN_10c2ecf0()
+// FUNCTION: 0x10C2ECF0 ?FUN_10c2ecf0@Class_10E9AC80@@QAEEXZ
+unsigned char Class_10E9AC80::FUN_10c2ecf0()
 {
     return Field160;
 }
 
-// FUNCTION: 0x10C2EE10 ?FUN_10c2ee10@Class_10C2EE10@@QAEEXZ
-unsigned char Class_10C2EE10::FUN_10c2ee10()
+// FUNCTION: 0x10C2EE10 ?FUN_10c2ee10@Class_10E9AC80@@QAEEXZ
+unsigned char Class_10E9AC80::FUN_10c2ee10()
 {
     return Field114;
 }
 
-// FUNCTION: 0x10C2EEB0 ?FUN_10c2eeb0@Class_10C2EEB0@@QAEEXZ
-unsigned char Class_10C2EEB0::FUN_10c2eeb0()
+// FUNCTION: 0x10C2EEB0 ?FUN_10c2eeb0@Class_10E9AC80@@QAEEXZ
+unsigned char Class_10E9AC80::FUN_10c2eeb0()
 {
     return Field10c;
 }
 
-// FUNCTION: 0x10C2F530 ?FUN_10c2f530@Class_10C2F530@@QAEPAXXZ
-void* Class_10C2F530::FUN_10c2f530()
+// FUNCTION: 0x10C2F530 ?FUN_10c2f530@Class_10E9AC80@@QAEPAXXZ
+void* Class_10E9AC80::FUN_10c2f530()
 {
     return Fieldcc;
 }
 
-// FUNCTION: 0x10C2F570 ?FUN_10c2f570@Class_10C2F570@@QAE_NHPAH@Z
-bool Class_10C2F570::FUN_10c2f570(int Key, int* Out)
+// FUNCTION: 0x10C2F570 ?FUN_10c2f570@Class_10E9AC80@@QAE_NHPAH@Z
+bool Class_10E9AC80::FUN_10c2f570(int Key, int* Out)
 {
     if (Key == Unknown150) {
         *Out = Unknown154;
@@ -351,46 +295,46 @@ bool Class_10C2F570::FUN_10c2f570(int Key, int* Out)
     return false;
 }
 
-// FUNCTION: 0x10C2F5C0 ?FUN_10c2f5c0@Class_10C2F5C0@@QAEXXZ
-void Class_10C2F5C0::FUN_10c2f5c0()
+// FUNCTION: 0x10C2F5C0 ?FUN_10c2f5c0@Class_10E9AC80@@QAEXXZ
+void Class_10E9AC80::FUN_10c2f5c0()
 {
     Field9d = 1;
 }
 
-// FUNCTION: 0x10C2F870 ?FUN_10c2f870@Class_10C2F870@@QAEXPBUInfo_10C2F870@@@Z
-void Class_10C2F870::FUN_10c2f870(const Info_10C2F870* In)
+// FUNCTION: 0x10C2F870 ?FUN_10c2f870@Class_10E9AC80@@QAEXPBUInfo_10C2F870@@@Z
+void Class_10E9AC80::FUN_10c2f870(const Info_10C2F870* In)
 {
     Unknown9F = 1;
     Unknown74 = *In;
 }
 
-// FUNCTION: 0x10C2F960 ?FUN_10c2f960@Class_10C2F960@@QAEXXZ
-void Class_10C2F960::FUN_10c2f960()
+// FUNCTION: 0x10C2F960 ?FUN_10c2f960@Class_10E9AC80@@QAEXXZ
+void Class_10E9AC80::FUN_10c2f960()
 {
     Field12c = 1;
 }
 
-// FUNCTION: 0x10C35650 ?FUN_10c35650@Class_10C35650@@UAEMXZ
-float Class_10C35650::FUN_10c35650()
+// FUNCTION: 0x10C35650 ?FUN_10c35650@Class_10E9AC80@@UAEMXZ
+float Class_10E9AC80::FUN_10c35650()
 {
     return Field60;
 }
 
-// FUNCTION: 0x10C35670 ?FUN_10c35670@Class_10C35670@@QAEXPAUStruct_10C35670@@@Z
-void Class_10C35670::FUN_10c35670(Struct_10C35670* Value)
+// FUNCTION: 0x10C35670 ?FUN_10c35670@Class_10E9AC80@@QAEXPAUStruct_10C35670@@@Z
+void Class_10E9AC80::FUN_10c35670(Struct_10C35670* Value)
 {
     Unknown68 = *Value;
     Unknown9B = true;
 }
 
-// FUNCTION: 0x10C356A0 ?FUN_10c356a0@Class_10C356A0@@QAEXXZ
-void Class_10C356A0::FUN_10c356a0()
+// FUNCTION: 0x10C356A0 ?FUN_10c356a0@Class_10E9AC80@@QAEXXZ
+void Class_10E9AC80::FUN_10c356a0()
 {
     Field9f = 0;
 }
 
-// FUNCTION: 0x10C36860 ?FUN_10c36860@Class_10C36860@@QAE?AVClass_109081E0@@XZ
-Class_109081E0 Class_10C36860::FUN_10c36860()
+// FUNCTION: 0x10C36860 ?FUN_10c36860@Class_10E9AD9C@@QAE?AVClass_109081E0@@XZ
+Class_109081E0 Class_10E9AD9C::FUN_10c36860()
 {
     return Class_109081E0(DAT_10e9adc8);
 }
@@ -401,14 +345,14 @@ void FUN_10c36f30()
     FUN_10c36a20();
 }
 
-// FUNCTION: 0x10C374E0 ?FUN_10c374e0@Class_10C374E0@@QAE?AVClass_109081E0@@XZ
-Class_109081E0 Class_10C374E0::FUN_10c374e0()
+// FUNCTION: 0x10C374E0 ?FUN_10c374e0@Class_10E9ADE8@@QAE?AVClass_109081E0@@XZ
+Class_109081E0 Class_10E9ADE8::FUN_10c374e0()
 {
     return Class_109081E0(DAT_10e9ae18);
 }
 
-// FUNCTION: 0x10C378A0 ?FUN_10c378a0@Class_10C378A0@@QAE?AVClass_109081E0@@XZ
-Class_109081E0 Class_10C378A0::FUN_10c378a0()
+// FUNCTION: 0x10C378A0 ?FUN_10c378a0@Class_10E9AE24@@QAE?AVClass_109081E0@@XZ
+Class_109081E0 Class_10E9AE24::FUN_10c378a0()
 {
     return Class_109081E0(DAT_10e9ae54);
 }
@@ -419,14 +363,14 @@ void Class_10E9AE88::FUN_10c37e80(Object_10BCE8D0* A)
     FUN_10c372e0(A);
 }
 
-// FUNCTION: 0x10C38040 ?FUN_10c38040@Class_10C38040@@QAE?AVClass_109081E0@@XZ
-Class_109081E0 Class_10C38040::FUN_10c38040()
+// FUNCTION: 0x10C38040 ?FUN_10c38040@Class_10E9AE88@@QAE?AVClass_109081E0@@XZ
+Class_109081E0 Class_10E9AE88::FUN_10c38040()
 {
     return Class_109081E0(DAT_10e9aeb8);
 }
 
-// FUNCTION: 0x10C382B0 ?FUN_10c382b0@Class_10C382B0@@QAE?AVClass_109081E0@@XZ
-Class_109081E0 Class_10C382B0::FUN_10c382b0()
+// FUNCTION: 0x10C382B0 ?FUN_10c382b0@Class_10E9AEC8@@QAE?AVClass_109081E0@@XZ
+Class_109081E0 Class_10E9AEC8::FUN_10c382b0()
 {
     return Class_109081E0(DAT_10e9aef4);
 }
@@ -443,8 +387,8 @@ Class_109081E0 Class_10C38430::FUN_10c38430()
     return Class_109081E0(DAT_10e9af34);
 }
 
-// FUNCTION: 0x10C384F0 ?FUN_10c384f0@Class_10C384F0@@QAEXXZ
-void Class_10C384F0::FUN_10c384f0()
+// FUNCTION: 0x10C384F0 ?FUN_10c384f0@Class_10E9AAD0@@QAEXXZ
+void Class_10E9AAD0::FUN_10c384f0()
 {
     Field00 = (void*)DAT_10e9aad0;
 }

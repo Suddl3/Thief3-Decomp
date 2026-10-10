@@ -7,7 +7,7 @@ public:
     void FUN_10a55090(int A);
 };
 
-class Class_10B31520
+class Class_10E7BBC8
 {
 public:
     void FUN_10b31520(float A);
@@ -19,8 +19,8 @@ public:
     int Unknown140;
 };
 
-// FUNCTION: 0x10B31520 ?FUN_10b31520@Class_10B31520@@QAEXM@Z
-void Class_10B31520::FUN_10b31520(float A)
+// FUNCTION: 0x10B31520 ?FUN_10b31520@Class_10E7BBC8@@QAEXM@Z
+void Class_10E7BBC8::FUN_10b31520(float A)
 {
     Unknown13C += A;
     if (Unknown13C >= 1.0f)

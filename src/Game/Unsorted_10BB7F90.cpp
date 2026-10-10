@@ -36,7 +36,7 @@ public:
 
 float appFrand();
 
-class Class_10BB8430
+class Class_10E90A1C
 {
 public:
     void FUN_10bb7f90();
@@ -48,8 +48,8 @@ public:
     float Unknown29C;
 };
 
-// FUNCTION: 0x10BB7F90 ?FUN_10bb7f90@Class_10BB8430@@QAEXXZ
-void Class_10BB8430::FUN_10bb7f90()
+// FUNCTION: 0x10BB7F90 ?FUN_10bb7f90@Class_10E90A1C@@QAEXXZ
+void Class_10E90A1C::FUN_10bb7f90()
 {
     float Min = Unknown08->FUN_10dbd510(0x100251)->FUN_10bbdb40();
     float Max = Unknown08->FUN_10dbd510(0x100252)->FUN_10bbdb40();

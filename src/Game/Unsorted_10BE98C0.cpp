@@ -21,7 +21,7 @@ struct Struct_10BE99E0
     Class_10DBD510* Unknown08;
 };
 
-class Class_10BE99E0
+class Class_10E970F0
 {
 public:
     void FUN_10be99e0();
@@ -32,8 +32,8 @@ public:
     float Unknown68;
 };
 
-// FUNCTION: 0x10BE99E0 ?FUN_10be99e0@Class_10BE99E0@@QAEXXZ
-void Class_10BE99E0::FUN_10be99e0()
+// FUNCTION: 0x10BE99E0 ?FUN_10be99e0@Class_10E970F0@@QAEXXZ
+void Class_10E970F0::FUN_10be99e0()
 {
     float Min = Unknown04->Unknown08->FUN_10dbd510(0x1005e6)->FUN_10bbdb40();
     float Max = Unknown04->Unknown08->FUN_10dbd510(0x1005e7)->FUN_10bbdb40();

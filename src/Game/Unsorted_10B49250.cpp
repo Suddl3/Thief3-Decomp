@@ -28,7 +28,7 @@ public:
     int FUN_10aa82d0();
 };
 
-class Class_10B3ADC0 : public Class_10AA82D0
+class Class_10E7E6A0 : public Class_10AA82D0
 {
 public:
     virtual void Virtual1();
@@ -38,7 +38,7 @@ public:
     void FUN_10b3b130(AGarrett* Garrett);
 };
 
-class Class_10E7E610 : public Class_10B3ADC0
+class Class_10E7E610 : public Class_10E7E6A0
 {
 public:
     virtual void FUN_10b49360(AGarrett* Garrett);

@@ -12,13 +12,13 @@ public:
     int Unknown08;
 };
 
-class Class_10C4E880
+class Class_10E9BE7C
 {
 public:
     void FUN_10c4e880(void* Owner);
 };
 
-Class_10C4E880* FUN_10c51550();
+Class_10E9BE7C* FUN_10c51550();
 
 class Class_10AC9AE0
 {

@@ -29,7 +29,7 @@ public:
     Class_10DC1750_Result* FUN_10dc1750();
 };
 
-class Class_10C19B90
+class Class_10E98CA4
 {
 public:
     void FUN_10c19b90();
@@ -74,8 +74,8 @@ public:
     Class_10BFBD70 Unknown04;
 };
 
-// FUNCTION: 0x10C19B90 ?FUN_10c19b90@Class_10C19B90@@QAEXXZ
-void Class_10C19B90::FUN_10c19b90()
+// FUNCTION: 0x10C19B90 ?FUN_10c19b90@Class_10E98CA4@@QAEXXZ
+void Class_10E98CA4::FUN_10c19b90()
 {
     int Value = DAT_10f35dec->Unknown08;
     if (Value)

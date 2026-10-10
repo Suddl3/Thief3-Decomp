@@ -13,7 +13,7 @@ struct Struct_10BE8F70_Unknown04
     Class_10BAAB60* Unknown08;
 };
 
-class Class_10BE8F70
+class Class_10E960D8
 {
 public:
     void FUN_10be8f70();
@@ -62,8 +62,8 @@ public:
     virtual void FUN_10be90c0(int A);
 };
 
-// FUNCTION: 0x10BE8F70 ?FUN_10be8f70@Class_10BE8F70@@QAEXXZ
-void Class_10BE8F70::FUN_10be8f70()
+// FUNCTION: 0x10BE8F70 ?FUN_10be8f70@Class_10E960D8@@QAEXXZ
+void Class_10E960D8::FUN_10be8f70()
 {
     Unknown04->Unknown08->FUN_10baab60();
     FUN_10be8ee0();

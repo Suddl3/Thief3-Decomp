@@ -27,7 +27,7 @@ extern void* DAT_10e7edb8[];
 
 extern void FUN_10a51620(void);
 
-class Class_10B592E0 {
+class Class_10E82058 {
 public:
     char Unknown00[0x118];
     void* Field118;
@@ -56,7 +56,6 @@ public:
     void FUN_10b59e00();
 };
 
-
 // Declare as functions to get direct mov instructions
 extern void* DAT_10e828b0[];
 
@@ -68,24 +67,22 @@ public:
     void* vtable;
 };
 
-class Class_10B5AB90 : public Class_10E69080
-{
-public:
-    char Unknown004[0x114];
-    void* field118;
-    char Unknown11C[0xB4];
-    int field1D0;
-
-    Class_10B5AB90* FUN_10b5ab90();
-};
-
 extern void FUN_10a58e50(void);
 
-class Class_10B5ABE0 {
+class Class_10E828B0 : public Class_10E69080
+{
 public:
-    char Unknown00[0x118];
-    void* Field118;
+    Class_10E828B0* FUN_10b5ab90();
     void FUN_10b5abe0();
+
+    char Unknown004[0x114];
+    union
+    {
+        void* field118;
+        void* Field118;
+    };
+    char Unknown11C[0xB4];
+    int field1D0;
 };
 
 void FUN_10a58950();
@@ -180,8 +177,7 @@ extern Class_10B5FAE0* DAT_10ff6598;
 
 extern void* DAT_10e83c48;
 
-
-class Class_10B460C0
+class Class_10E81130
 {
 public:
     void* Field00;
@@ -189,7 +185,7 @@ public:
     void FUN_10b460c0();
 };
 
-class Class_10B60F30 : public Class_10B460C0
+class Class_10E83C48 : public Class_10E81130
 {
 public:
     void FUN_10b60f30();
@@ -206,15 +202,6 @@ public:
     void FUN_10b61020(int param);
 };
 
-class Class_10B61C90
-{
-public:
-    char Unknown00[0x1ac];
-    void* Field1AC;
-
-    void* FUN_10b61c90();
-};
-
 extern void* DAT_10ff659c[];
 
 class Class_10B61D20 {
@@ -224,10 +211,14 @@ public:
 
 extern const char DAT_10e84284[];
 
-class Class_10B61EA0
+class Class_10E84088
 {
 public:
+    void* FUN_10b61c90();
     Class_109081E0 FUN_10b61ea0();
+
+    char Unknown00[0x1ac];
+    void* Field1AC;
 };
 
 void FUN_10b74330();
@@ -249,7 +240,7 @@ public:
 
 extern void* DAT_10e68d80;
 
-class Class_10B65DE0 {
+class Class_10E68D80 {
 public:
     char Unknown00[0x118];
     void* Field118;
@@ -309,8 +300,8 @@ Class_1090A780 Class_10B56C80::FUN_10b56c80()
     return Class_1090A780(Unknown1BC);
 }
 
-// FUNCTION: 0x10B592E0 ?FUN_10b592e0@Class_10B592E0@@QAEXXZ
-void Class_10B592E0::FUN_10b592e0()
+// FUNCTION: 0x10B592E0 ?FUN_10b592e0@Class_10E82058@@QAEXXZ
+void Class_10E82058::FUN_10b592e0()
 {
     *(void**)this = &DAT_10e82058;
     Field118 = DAT_10e7edb8;
@@ -348,8 +339,8 @@ int FUN_10b59f70()
     return 0;
 }
 
-// FUNCTION: 0x10B5AB90 ?FUN_10b5ab90@Class_10B5AB90@@QAEPAV1@XZ
-Class_10B5AB90* Class_10B5AB90::FUN_10b5ab90()
+// FUNCTION: 0x10B5AB90 ?FUN_10b5ab90@Class_10E828B0@@QAEPAV1@XZ
+Class_10E828B0* Class_10E828B0::FUN_10b5ab90()
 {
     this->Class_10E69080::Class_10E69080();
     this->vtable = (void*)DAT_10e828b0;
@@ -358,8 +349,8 @@ Class_10B5AB90* Class_10B5AB90::FUN_10b5ab90()
     return this;
 }
 
-// FUNCTION: 0x10B5ABE0 ?FUN_10b5abe0@Class_10B5ABE0@@QAEXXZ
-void Class_10B5ABE0::FUN_10b5abe0()
+// FUNCTION: 0x10B5ABE0 ?FUN_10b5abe0@Class_10E828B0@@QAEXXZ
+void Class_10E828B0::FUN_10b5abe0()
 {
     *(void**)this = DAT_10e828b0;
     Field118 = DAT_10e7edb8;
@@ -437,8 +428,8 @@ void FUN_10b60580(int Param)
     DAT_10ff6598 = 0;
 }
 
-// FUNCTION: 0x10B60F30 ?FUN_10b60f30@Class_10B60F30@@QAEXXZ
-void Class_10B60F30::FUN_10b60f30()
+// FUNCTION: 0x10B60F30 ?FUN_10b60f30@Class_10E83C48@@QAEXXZ
+void Class_10E83C48::FUN_10b60f30()
 {
     Field00 = (void*)&DAT_10e83c48;
     FUN_10b460c0();
@@ -456,8 +447,8 @@ void Class_10B61020::FUN_10b61020(int param)
     Field1ec = param;
 }
 
-// FUNCTION: 0x10B61C90 ?FUN_10b61c90@Class_10B61C90@@QAEPAXXZ
-void* Class_10B61C90::FUN_10b61c90()
+// FUNCTION: 0x10B61C90 ?FUN_10b61c90@Class_10E84088@@QAEPAXXZ
+void* Class_10E84088::FUN_10b61c90()
 {
     return Field1AC;
 }
@@ -468,8 +459,8 @@ void FUN_10b61d20()
     ((Class_10B61D20*)DAT_10ff659c[0])->FUN_10b61be0();
 }
 
-// FUNCTION: 0x10B61EA0 ?FUN_10b61ea0@Class_10B61EA0@@QAE?AVClass_109081E0@@XZ
-Class_109081E0 Class_10B61EA0::FUN_10b61ea0()
+// FUNCTION: 0x10B61EA0 ?FUN_10b61ea0@Class_10E84088@@QAE?AVClass_109081E0@@XZ
+Class_109081E0 Class_10E84088::FUN_10b61ea0()
 {
     return Class_109081E0(DAT_10e84284);
 }
@@ -498,8 +489,8 @@ void Class_10B64430::FUN_10b64430(int param)
     Field2fc = param;
 }
 
-// FUNCTION: 0x10B65DE0 ?FUN_10b65de0@Class_10B65DE0@@QAEXXZ
-void Class_10B65DE0::FUN_10b65de0()
+// FUNCTION: 0x10B65DE0 ?FUN_10b65de0@Class_10E68D80@@QAEXXZ
+void Class_10E68D80::FUN_10b65de0()
 {
     *(void**)this = &DAT_10e68d80;
     Field118 = DAT_10e7edb8;

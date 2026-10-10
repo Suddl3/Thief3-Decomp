@@ -24,10 +24,10 @@ Class_10905A90_Member* FUN_10905aa0();
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 
 // FUN_10aa2410 is the constructor: it stores the vtable and returns this.
-class Class_10AA2410
+class Class_10E6D3F4
 {
 public:
-    Class_10AA2410* FUN_10aa2410();
+    Class_10E6D3F4* FUN_10aa2410();
 
     void* Unknown00;
 };
@@ -35,17 +35,17 @@ public:
 class Class_10E5D9A4
 {
 public:
-    virtual Class_10AA2410* FUN_10aa2420();
+    virtual Class_10E6D3F4* FUN_10aa2420();
 };
 
-// FUNCTION: 0x10AA2420 ?FUN_10aa2420@Class_10E5D9A4@@UAEPAVClass_10AA2410@@XZ
-Class_10AA2410* Class_10E5D9A4::FUN_10aa2420()
+// FUNCTION: 0x10AA2420 ?FUN_10aa2420@Class_10E5D9A4@@UAEPAVClass_10E6D3F4@@XZ
+Class_10E6D3F4* Class_10E5D9A4::FUN_10aa2420()
 {
     FUN_10905aa0()->Virtual8(0, 0);
-    Class_10AA2410* Result = 0;
-    void* Memory = operator new(sizeof(Class_10AA2410), 0, 0, 0, 0, 0);
+    Class_10E6D3F4* Result = 0;
+    void* Memory = operator new(sizeof(Class_10E6D3F4), 0, 0, 0, 0, 0);
     if (Memory)
-        Result = static_cast<Class_10AA2410*>(Memory)->FUN_10aa2410();
+        Result = static_cast<Class_10E6D3F4*>(Memory)->FUN_10aa2410();
     FUN_10905aa0()->Virtual9();
     return Result;
 }

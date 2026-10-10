@@ -7,7 +7,7 @@ extern unsigned int DAT_10efef9c;
 
 extern unsigned int DAT_10efefa0;
 
-class Class_10930110
+class Class_10E49C6C
 {
 public:
     void FUN_1092ff00(int A, int B);
@@ -21,8 +21,8 @@ public:
     void** Unknown58;
 };
 
-// FUNCTION: 0x1092FF00 ?FUN_1092ff00@Class_10930110@@QAEXHH@Z
-void Class_10930110::FUN_1092ff00(int A, int B)
+// FUNCTION: 0x1092FF00 ?FUN_1092ff00@Class_10E49C6C@@QAEXHH@Z
+void Class_10E49C6C::FUN_1092ff00(int A, int B)
 {
     if (!DAT_10f2c759 && DAT_10efef9c < DAT_10efefa0 && FUN_10925130(6))
     {

@@ -15,7 +15,7 @@ public:
     bool GetFloat(const char* Section, const char* Key, float* Value, const char* File);
 };
 
-class Class_10B2A100
+class Class_10E80798
 {
 public:
     void FUN_10b2a100(Class_10AF7F80* File, Class_10AF7F80* Section);
@@ -26,8 +26,8 @@ public:
     int Unknown1E4;
 };
 
-// FUNCTION: 0x10B2A100 ?FUN_10b2a100@Class_10B2A100@@QAEXPAVClass_10AF7F80@@0@Z
-void Class_10B2A100::FUN_10b2a100(Class_10AF7F80* File, Class_10AF7F80* Section)
+// FUNCTION: 0x10B2A100 ?FUN_10b2a100@Class_10E80798@@QAEXPAVClass_10AF7F80@@0@Z
+void Class_10E80798::FUN_10b2a100(Class_10AF7F80* File, Class_10AF7F80* Section)
 {
     FUN_10a65730(File, Section);
     bool Loaded = Config::Instance()->GetFloat(Section->FUN_10af7f80(), "FadeTime", &FadeTime, File->FUN_10af7f80());

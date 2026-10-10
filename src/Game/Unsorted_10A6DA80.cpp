@@ -29,7 +29,7 @@ public:
     virtual void Virtual15(int A, int B, int C);
 };
 
-class Class_10A6E690
+class Class_10E6BC8C
 {
 public:
     virtual void Virtual0();
@@ -64,13 +64,13 @@ public:
     int FUN_1098e330(int A, int* B);
 };
 
-class Class_10A67B70
+class Class_10E6B594
 {
 public:
-    virtual ~Class_10A67B70();
+    virtual ~Class_10E6B594();
 };
 
-class Class_10E6B610 : public Class_10A67B70
+class Class_10E6B610 : public Class_10E6B594
 {
 public:
     Class_10E6B610(Class_1098E330* A);
@@ -135,8 +135,8 @@ void Class_10E6B9F8::FUN_10a6e5e0(int Event, UObject* A, int B, int C)
     }
 }
 
-// FUNCTION: 0x10A6E690 ?FUN_10a6e690@Class_10A6E690@@QAE_NH@Z
-bool Class_10A6E690::FUN_10a6e690(int A)
+// FUNCTION: 0x10A6E690 ?FUN_10a6e690@Class_10E6BC8C@@QAE_NH@Z
+bool Class_10E6BC8C::FUN_10a6e690(int A)
 {
     return Virtual10(A) != 0;
 }

@@ -1,7 +1,7 @@
 // Game/Unsorted_10C48200.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-class Class_10C49020
+class Class_10E9BB8C
 {
 public:
     int FUN_10c49020();
@@ -134,8 +134,8 @@ int Class_10E9BB80::FUN_10c483e0(unsigned int* A, unsigned int* B)
     return X > Y ? 1 : -1;
 }
 
-// FUNCTION: 0x10C49020 ?FUN_10c49020@Class_10C49020@@QAEHXZ
-int Class_10C49020::FUN_10c49020()
+// FUNCTION: 0x10C49020 ?FUN_10c49020@Class_10E9BB8C@@QAEHXZ
+int Class_10E9BB8C::FUN_10c49020()
 {
     ++*Unknown30;
     --*Unknown20;

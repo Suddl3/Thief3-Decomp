@@ -3,15 +3,15 @@
 
 extern void* DAT_10e7e808[];
 
-class Class_10B3ACB0
+class Class_10E7E4E0
 {
 public:
-    Class_10B3ACB0* FUN_10b3acb0();
+    Class_10E7E4E0* FUN_10b3acb0();
 
     void** Unknown00;
 };
 
-class Class_10E7E808 : public Class_10B3ACB0
+class Class_10E7E808 : public Class_10E7E4E0
 {
 public:
     Class_10E7E808* FUN_10b3d220();
@@ -19,7 +19,7 @@ public:
 
 extern void* DAT_10e7e850[];
 
-class Class_10E7E850 : public Class_10B3ACB0
+class Class_10E7E850 : public Class_10E7E4E0
 {
 public:
     Class_10E7E850* FUN_10b3d240();

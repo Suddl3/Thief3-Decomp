@@ -15,18 +15,18 @@ extern Struct_10C16250* DAT_10ff7070;
 
 extern int DAT_10ff7074;
 
-class Class_10C15DB0
+class Class_10E98C84
 {
 public:
-    Class_10C15DB0();
+    Class_10E98C84();
 
     void* Field00;
     int Unknown04;
     int Unknown08;
 };
 
-// FUNCTION: 0x10C15D60 ??0Class_10C15DB0@@QAE@XZ
-Class_10C15DB0::Class_10C15DB0()
+// FUNCTION: 0x10C15D60 ??0Class_10E98C84@@QAE@XZ
+Class_10E98C84::Class_10E98C84()
 {
     Field00 = DAT_10e98c84;
     Unknown04 = 0;

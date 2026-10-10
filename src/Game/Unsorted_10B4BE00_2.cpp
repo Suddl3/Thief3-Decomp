@@ -3,7 +3,7 @@
 
 class AGarrett;
 
-class Class_10B3ADC0
+class Class_10E7E6A0
 {
 public:
     virtual void Virtual0();
@@ -15,7 +15,7 @@ public:
     void FUN_10b3b130(AGarrett* Param);
 };
 
-class Class_10E7E778 : public Class_10B3ADC0
+class Class_10E7E778 : public Class_10E7E6A0
 {
 public:
     virtual void FUN_10b4be90(AGarrett* Param);
@@ -50,16 +50,16 @@ public:
 
 extern void* DAT_10e81590[];
 
-class Class_10B3ACB0
+class Class_10E7E4E0
 {
 public:
-    Class_10B3ACB0* FUN_10b3acb0();
+    Class_10E7E4E0* FUN_10b3acb0();
 
     void** Unknown00;
     char Unknown04[0x0C];
 };
 
-class Class_10E81590 : public Class_10B3ACB0
+class Class_10E81590 : public Class_10E7E4E0
 {
 public:
     Class_10E81590* FUN_10b4ccf0();

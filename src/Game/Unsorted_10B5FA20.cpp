@@ -136,7 +136,7 @@ public:
     int Unknown1F0;
 };
 
-class Class_10B5F9C0
+class Class_10E83420
 {
 public:
     virtual void Virtual0();
@@ -253,8 +253,8 @@ public:
     int Unknown208;
 };
 
-// FUNCTION: 0x10B5FA20 ?FUN_10b5fa20@Class_10B5F9C0@@QAEXXZ
-void Class_10B5F9C0::FUN_10b5fa20()
+// FUNCTION: 0x10B5FA20 ?FUN_10b5fa20@Class_10E83420@@QAEXXZ
+void Class_10E83420::FUN_10b5fa20()
 {
     if (Unknown204->Unknown1F0 == Unknown204->Unknown1EC)
         Unknown204->Virtual122();

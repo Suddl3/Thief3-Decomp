@@ -62,10 +62,10 @@ public:
     ~Class_10B17140();
 };
 
-class Class_10B177C0 : public Class_109E8FB0
+class Class_10E79228 : public Class_109E8FB0
 {
 public:
-    ~Class_10B177C0();
+    ~Class_10E79228();
 
     Class_10B17140 Unknown220;
 };
@@ -179,7 +179,7 @@ void Class_10B16930::FUN_10b166a0()
         Second.Data[0]->FUN_10b2c130();
 }
 
-// FUNCTION: 0x10B177C0 ??1Class_10B177C0@@QAE@XZ
-Class_10B177C0::~Class_10B177C0()
+// FUNCTION: 0x10B177C0 ??1Class_10E79228@@QAE@XZ
+Class_10E79228::~Class_10E79228()
 {
 }

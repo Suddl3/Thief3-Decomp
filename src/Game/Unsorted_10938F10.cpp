@@ -71,14 +71,14 @@ struct Struct_10938F80
     int Unknown08;
 };
 
-class Class_10940970
+class Class_10E4A538
 {
 public:
     char Unknown00[0x2FC];
     int Unknown2FC;
 };
 
-extern Class_10940970* DAT_10f2c8e4;
+extern Class_10E4A538* DAT_10f2c8e4;
 
 void FUN_10938230();
 

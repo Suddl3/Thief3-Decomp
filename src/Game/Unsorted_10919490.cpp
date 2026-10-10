@@ -3,7 +3,7 @@
 
 double FUN_10d20ec0(double A);
 
-class Class_10940970
+class Class_10E4A538
 {
 public:
     virtual void Virtual0();
@@ -29,7 +29,7 @@ public:
     void FUN_10937730();
 };
 
-extern Class_10940970* DAT_10f2c8e4;
+extern Class_10E4A538* DAT_10f2c8e4;
 
 extern Class_1093E930* DAT_10f340ac;
 

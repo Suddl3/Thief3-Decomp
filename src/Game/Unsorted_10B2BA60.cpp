@@ -9,14 +9,14 @@ public:
 
 Class_10B255F0* FUN_10b25cd0();
 
-class Class_10B2BA60
+class Class_10E80088
 {
 public:
     void FUN_10b2ba60(int p1);
 };
 
-// FUNCTION: 0x10B2BA60 ?FUN_10b2ba60@Class_10B2BA60@@QAEXH@Z
-void Class_10B2BA60::FUN_10b2ba60(int p1)
+// FUNCTION: 0x10B2BA60 ?FUN_10b2ba60@Class_10E80088@@QAEXH@Z
+void Class_10E80088::FUN_10b2ba60(int p1)
 {
     FUN_10b25cd0()->FUN_10b25dc0(p1);
 }

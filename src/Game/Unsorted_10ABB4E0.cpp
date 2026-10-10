@@ -11,7 +11,7 @@ public:
     virtual int Virtual4(int A);
 };
 
-class Class_10ABB4E0
+class Class_10E6F474
 {
 public:
     int FUN_10abb4e0(int A);
@@ -22,8 +22,8 @@ public:
     Class_10ABB4E0_Element** Unknown0C;
 };
 
-// FUNCTION: 0x10ABB4E0 ?FUN_10abb4e0@Class_10ABB4E0@@QAEHH@Z
-int Class_10ABB4E0::FUN_10abb4e0(int A)
+// FUNCTION: 0x10ABB4E0 ?FUN_10abb4e0@Class_10E6F474@@QAEHH@Z
+int Class_10E6F474::FUN_10abb4e0(int A)
 {
     for (int i = 0; i < Unknown04; i++)
     {

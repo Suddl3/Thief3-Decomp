@@ -35,7 +35,7 @@ public:
     char* Unknown00;
 };
 
-class Class_10A5B530
+class Class_10E69470
 {
 public:
     virtual void Virtual0();
@@ -108,8 +108,8 @@ public:
     Class_109081E0* Unknown1E4;
 };
 
-// FUNCTION: 0x10A5B530 ?FUN_10a5b530@Class_10A5B530@@QAEXXZ
-void Class_10A5B530::FUN_10a5b530()
+// FUNCTION: 0x10A5B530 ?FUN_10a5b530@Class_10E69470@@QAEXXZ
+void Class_10E69470::FUN_10a5b530()
 {
     FUN_10905aa0()->Virtual8(0, 0);
     if (Unknown1DC)

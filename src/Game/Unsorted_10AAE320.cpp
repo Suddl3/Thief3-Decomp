@@ -22,7 +22,7 @@ public:
     int Unknown81c;
 };
 
-class Class_10AAF4D0
+class Class_10E6DC54
 {
 public:
     void FUN_10aaf320(int A);
@@ -53,8 +53,8 @@ void Class_10AAEBF0::FUN_10aaebf0(int param)
     Unknown818 += Unknown81c * param;
 }
 
-// FUNCTION: 0x10AAF4D0 ?FUN_10aaf4d0@Class_10AAF4D0@@QAEXH@Z
-void Class_10AAF4D0::FUN_10aaf4d0(int A)
+// FUNCTION: 0x10AAF4D0 ?FUN_10aaf4d0@Class_10E6DC54@@QAEXH@Z
+void Class_10E6DC54::FUN_10aaf4d0(int A)
 {
     FUN_10aaf320(A);
     if (Unknown812)

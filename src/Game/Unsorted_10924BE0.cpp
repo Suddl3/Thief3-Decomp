@@ -104,7 +104,7 @@ public:
     Struct_109250C0_Entry* UnknownE4;
 };
 
-class Class_1091E340
+class Class_10E499F4
 {
 public:
     void FUN_1091e340();
@@ -113,7 +113,7 @@ public:
 struct Struct_10925390
 {
     char Unknown00[0x0C];
-    Class_1091E340* Unknown0C;
+    Class_10E499F4* Unknown0C;
     char Unknown10[0x30];
     int Unknown40;
 };
@@ -174,7 +174,7 @@ void Class_10925390::FUN_10925390(int Index)
         }
         if (UnknownE4[Index].Unknown40 == 1)
         {
-            Class_1091E340* Object = UnknownE4[Index].Unknown0C;
+            Class_10E499F4* Object = UnknownE4[Index].Unknown0C;
             if (Object)
             {
                 Object->FUN_1091e340();

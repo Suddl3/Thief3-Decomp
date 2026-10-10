@@ -86,7 +86,7 @@ public:
     Class_10B274F0_Member* Unknown1C4;
 };
 
-class Class_10B274F0 : public Class_10E696A8
+class Class_10E7FB08 : public Class_10E696A8
 {
 public:
     void FUN_10b274f0();
@@ -229,8 +229,8 @@ public:
     Class_109081E0 Unknown190;
 };
 
-// FUNCTION: 0x10B274F0 ?FUN_10b274f0@Class_10B274F0@@QAEXXZ
-void Class_10B274F0::FUN_10b274f0()
+// FUNCTION: 0x10B274F0 ?FUN_10b274f0@Class_10E7FB08@@QAEXXZ
+void Class_10E7FB08::FUN_10b274f0()
 {
     if (Unknown1C4)
     {

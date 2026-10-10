@@ -39,12 +39,6 @@ public:
 
 extern "C" unsigned int strlen(const char*);
 
-class Class_10A5E8A0
-{
-public:
-    void FUN_10a5e8a0(char* Text);
-};
-
 class Class_10A79E60
 {
 public:
@@ -80,10 +74,13 @@ struct List_10A5E900
     Item_10A5E900** Unknown08;
 };
 
-class Class_10A5E900
+class Class_10E69BA0
 {
 public:
+    void FUN_10a5e8a0(char* Text);
     void FUN_10a5e900(List_10A5E900* List);
+
+    char Pad00[0x1];
 };
 
 class Class_109081E0
@@ -123,8 +120,8 @@ Class_10A5DF10* Class_10A5DF10::FUN_10a5df10(const Class_10A5DF10& Other)
     return this;
 }
 
-// FUNCTION: 0x10A5E8A0 ?FUN_10a5e8a0@Class_10A5E8A0@@QAEXPAD@Z
-void Class_10A5E8A0::FUN_10a5e8a0(char* Text)
+// FUNCTION: 0x10A5E8A0 ?FUN_10a5e8a0@Class_10E69BA0@@QAEXPAD@Z
+void Class_10E69BA0::FUN_10a5e8a0(char* Text)
 {
     int Length = strlen(Text);
     for (int i = 0; i < Length; i++)
@@ -134,8 +131,8 @@ void Class_10A5E8A0::FUN_10a5e8a0(char* Text)
     }
 }
 
-// FUNCTION: 0x10A5E900 ?FUN_10a5e900@Class_10A5E900@@QAEXPAUList_10A5E900@@@Z
-void Class_10A5E900::FUN_10a5e900(List_10A5E900* List)
+// FUNCTION: 0x10A5E900 ?FUN_10a5e900@Class_10E69BA0@@QAEXPAUList_10A5E900@@@Z
+void Class_10E69BA0::FUN_10a5e900(List_10A5E900* List)
 {
     DAT_10f35dec->Unknown40->Virtual5(3);
     for (int i = 0; i < List->Unknown00; i++)

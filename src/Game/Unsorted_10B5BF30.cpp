@@ -37,14 +37,14 @@ public:
 
 Class_109081E0 FUN_1090a660(const char* Text);
 
-class Class_10B5C2A0
+class Class_10E83230
 {
 public:
     Class_109081E0 FUN_10b5c2a0();
 };
 
-// FUNCTION: 0x10B5C2A0 ?FUN_10b5c2a0@Class_10B5C2A0@@QAE?AVClass_109081E0@@XZ
-Class_109081E0 Class_10B5C2A0::FUN_10b5c2a0()
+// FUNCTION: 0x10B5C2A0 ?FUN_10b5c2a0@Class_10E83230@@QAE?AVClass_109081E0@@XZ
+Class_109081E0 Class_10E83230::FUN_10b5c2a0()
 {
     Class_109081E0 Local = FUN_1090a660("<string=T_TabScreenMissionFailedTitle>");
     return Local;

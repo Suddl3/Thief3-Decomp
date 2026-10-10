@@ -11,7 +11,7 @@ public:
     int* Data;
 };
 
-class Class_10A58FE0
+class Class_10E68738
 {
 public:
     void FUN_10a58fe0(int Index, int Value);
@@ -20,8 +20,8 @@ public:
     Class_10BFBD70 Unknown154;
 };
 
-// FUNCTION: 0x10A58FE0 ?FUN_10a58fe0@Class_10A58FE0@@QAEXHH@Z
-void Class_10A58FE0::FUN_10a58fe0(int Index, int Value)
+// FUNCTION: 0x10A58FE0 ?FUN_10a58fe0@Class_10E68738@@QAEXHH@Z
+void Class_10E68738::FUN_10a58fe0(int Index, int Value)
 {
     if (Unknown154.Count < Index + 1)
         Unknown154.FUN_10bfbd70(Index + 1);

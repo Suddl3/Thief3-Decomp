@@ -76,7 +76,7 @@ public:
     Struct_10AB0400* Unknown04;
 };
 
-class Class_10A6F9B0
+class Class_10E6B594
 {
 public:
     void FUN_10a6f9b0();
@@ -88,8 +88,8 @@ public:
     std::vector<void*> Unknown14;
 };
 
-// FUNCTION: 0x10A6F9B0 ?FUN_10a6f9b0@Class_10A6F9B0@@QAEXXZ
-void Class_10A6F9B0::FUN_10a6f9b0()
+// FUNCTION: 0x10A6F9B0 ?FUN_10a6f9b0@Class_10E6B594@@QAEXXZ
+void Class_10E6B594::FUN_10a6f9b0()
 {
     Unknown14.~vector();
     Unknown08.FUN_10ab0400();

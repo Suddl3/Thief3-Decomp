@@ -37,13 +37,13 @@ public:
     void FUN_10c070c0(int Id, Class_10C070C0_Result* Result);
 };
 
-class Class_10A67B70
+class Class_10E6B594
 {
 public:
-    virtual ~Class_10A67B70();
+    virtual ~Class_10E6B594();
 };
 
-class Class_10E6B610 : public Class_10A67B70
+class Class_10E6B610 : public Class_10E6B594
 {
 public:
     Class_10E6B610(Class_10C070C0* A);

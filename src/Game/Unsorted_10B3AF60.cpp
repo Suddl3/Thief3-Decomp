@@ -3,15 +3,15 @@
 
 extern void* DAT_10e7e538[];
 
-class Class_10B3ACB0
+class Class_10E7E4E0
 {
 public:
-    Class_10B3ACB0* FUN_10b3acb0();
+    Class_10E7E4E0* FUN_10b3acb0();
 
     void** Unknown00;
 };
 
-class Class_10E7E538 : public Class_10B3ACB0
+class Class_10E7E538 : public Class_10E7E4E0
 {
 public:
     Class_10E7E538* FUN_10b3d0d0();
@@ -19,7 +19,7 @@ public:
 
 extern void* DAT_10e7e580[];
 
-class Class_10E7E580 : public Class_10B3ACB0
+class Class_10E7E580 : public Class_10E7E4E0
 {
 public:
     Class_10E7E580* FUN_10b3d0f0();
@@ -27,7 +27,7 @@ public:
 
 extern void* DAT_10e7e5c8[];
 
-class Class_10E7E5C8 : public Class_10B3ACB0
+class Class_10E7E5C8 : public Class_10E7E4E0
 {
 public:
     Class_10E7E5C8* FUN_10b3d110();
@@ -35,7 +35,7 @@ public:
 
 extern void* DAT_10e7e610[];
 
-class Class_10E7E610 : public Class_10B3ACB0
+class Class_10E7E610 : public Class_10E7E4E0
 {
 public:
     Class_10E7E610* FUN_10b3d130();
@@ -43,7 +43,7 @@ public:
 
 extern void* DAT_10e7e658[];
 
-class Class_10E7E658 : public Class_10B3ACB0
+class Class_10E7E658 : public Class_10E7E4E0
 {
 public:
     Class_10E7E658* FUN_10b3d150();
@@ -51,7 +51,7 @@ public:
 
 extern void* DAT_10e7e6a0[];
 
-class Class_10E7E6A0 : public Class_10B3ACB0
+class Class_10E7E6A0 : public Class_10E7E4E0
 {
 public:
     Class_10E7E6A0* FUN_10b3d170();
@@ -59,7 +59,7 @@ public:
 
 extern void* DAT_10e7e6e8[];
 
-class Class_10E7E6E8 : public Class_10B3ACB0
+class Class_10E7E6E8 : public Class_10E7E4E0
 {
 public:
     Class_10E7E6E8* FUN_10b3d190();
@@ -67,7 +67,7 @@ public:
 
 extern void* DAT_10e7e730[];
 
-class Class_10E7E730 : public Class_10B3ACB0
+class Class_10E7E730 : public Class_10E7E4E0
 {
 public:
     Class_10E7E730* FUN_10b3d1b0();
@@ -75,7 +75,7 @@ public:
 
 extern void* DAT_10e7e778[];
 
-class Class_10E7E778 : public Class_10B3ACB0
+class Class_10E7E778 : public Class_10E7E4E0
 {
 public:
     Class_10E7E778* FUN_10b3d1d0();
@@ -83,7 +83,7 @@ public:
 
 extern void* DAT_10e7e7c0[];
 
-class Class_10E7E7C0 : public Class_10B3ACB0
+class Class_10E7E7C0 : public Class_10E7E4E0
 {
 public:
     Class_10E7E7C0* FUN_10b3d1f0();

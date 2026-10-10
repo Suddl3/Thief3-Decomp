@@ -7,22 +7,6 @@ public:
     float X, Y, Z;
 };
 
-class Class_10E684A8
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void FUN_10a551c0(FVector* A);
-
-    char Unknown04[0x18];
-    FVector Unknown1C;
-    char Unknown28[0xF8];
-    bool Unknown120;
-};
-
 extern float DAT_10eafbdc;
 
 extern float DAT_10e49684;
@@ -94,12 +78,21 @@ public:
     char Unknown00[0xC];
 };
 
-class Class_10A556F0
+class Class_10E684A8
 {
 public:
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual void Virtual2();
+    virtual void Virtual3();
+    virtual void Virtual4();
+    virtual void FUN_10a551c0(FVector* A);
+
     void FUN_10a556f0(int A);
 
-    char Unknown00[0x120];
+    char Unknown04[0x18];
+    FVector Unknown1C;
+    char Unknown28[0xF8];
     bool Unknown120;
     char Unknown121[3];
     Class_109081E0 Unknown124;
@@ -131,8 +124,8 @@ void Class_10C4EDA0::FUN_10a55380(const Struct_10A55380& A)
     Unknown08[Index] = Item;
 }
 
-// FUNCTION: 0x10A556F0 ?FUN_10a556f0@Class_10A556F0@@QAEXH@Z
-void Class_10A556F0::FUN_10a556f0(int A)
+// FUNCTION: 0x10A556F0 ?FUN_10a556f0@Class_10E684A8@@QAEXH@Z
+void Class_10E684A8::FUN_10a556f0(int A)
 {
     Unknown124 = Unknown128.FUN_1090c880(A);
     Unknown134 = 0;

@@ -24,10 +24,10 @@ Class_10905A90_Member* FUN_10905aa0();
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 
 // FUN_10a92670 is the constructor: it stores the vtable and returns this.
-class Class_10A92670
+class Class_10E6CBEC
 {
 public:
-    Class_10A92670* FUN_10a92670();
+    Class_10E6CBEC* FUN_10a92670();
 
     void* Unknown00;
 };
@@ -35,14 +35,14 @@ public:
 class Class_10E5D944
 {
 public:
-    virtual Class_10A92670* FUN_10a928d0();
+    virtual Class_10E6CBEC* FUN_10a928d0();
 };
 
 // FUN_10a928c0 is the constructor: it stores the vtable and returns this.
-class Class_10A928C0
+class Class_10E6CBF8
 {
 public:
-    Class_10A928C0* FUN_10a928c0();
+    Class_10E6CBF8* FUN_10a928c0();
 
     void* Unknown00;
 };
@@ -50,29 +50,29 @@ public:
 class Class_10E5D940
 {
 public:
-    virtual Class_10A928C0* FUN_10a92920();
+    virtual Class_10E6CBF8* FUN_10a92920();
 };
 
-// FUNCTION: 0x10A928D0 ?FUN_10a928d0@Class_10E5D944@@UAEPAVClass_10A92670@@XZ
-Class_10A92670* Class_10E5D944::FUN_10a928d0()
+// FUNCTION: 0x10A928D0 ?FUN_10a928d0@Class_10E5D944@@UAEPAVClass_10E6CBEC@@XZ
+Class_10E6CBEC* Class_10E5D944::FUN_10a928d0()
 {
     FUN_10905aa0()->Virtual8(0, 0);
-    Class_10A92670* Result = 0;
-    void* Memory = operator new(sizeof(Class_10A92670), 0, 0, 0, 0, 0);
+    Class_10E6CBEC* Result = 0;
+    void* Memory = operator new(sizeof(Class_10E6CBEC), 0, 0, 0, 0, 0);
     if (Memory)
-        Result = static_cast<Class_10A92670*>(Memory)->FUN_10a92670();
+        Result = static_cast<Class_10E6CBEC*>(Memory)->FUN_10a92670();
     FUN_10905aa0()->Virtual9();
     return Result;
 }
 
-// FUNCTION: 0x10A92920 ?FUN_10a92920@Class_10E5D940@@UAEPAVClass_10A928C0@@XZ
-Class_10A928C0* Class_10E5D940::FUN_10a92920()
+// FUNCTION: 0x10A92920 ?FUN_10a92920@Class_10E5D940@@UAEPAVClass_10E6CBF8@@XZ
+Class_10E6CBF8* Class_10E5D940::FUN_10a92920()
 {
     FUN_10905aa0()->Virtual8(0, 0);
-    Class_10A928C0* Result = 0;
-    void* Memory = operator new(sizeof(Class_10A928C0), 0, 0, 0, 0, 0);
+    Class_10E6CBF8* Result = 0;
+    void* Memory = operator new(sizeof(Class_10E6CBF8), 0, 0, 0, 0, 0);
     if (Memory)
-        Result = static_cast<Class_10A928C0*>(Memory)->FUN_10a928c0();
+        Result = static_cast<Class_10E6CBF8*>(Memory)->FUN_10a928c0();
     FUN_10905aa0()->Virtual9();
     return Result;
 }

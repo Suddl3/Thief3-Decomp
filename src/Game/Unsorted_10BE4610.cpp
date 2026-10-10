@@ -29,7 +29,7 @@ struct Struct_10BE4800
     Class_10BFD210 Unknown30;
 };
 
-class Class_10BE4800
+class Class_10E96510
 {
 public:
     float FUN_10be4800();
@@ -38,8 +38,8 @@ public:
     Struct_10BE4800* Unknown04;
 };
 
-// FUNCTION: 0x10BE4800 ?FUN_10be4800@Class_10BE4800@@QAEMXZ
-float Class_10BE4800::FUN_10be4800()
+// FUNCTION: 0x10BE4800 ?FUN_10be4800@Class_10E96510@@QAEMXZ
+float Class_10E96510::FUN_10be4800()
 {
     float L = Unknown04->Unknown30.FUN_10bfc3a0();
     float V = Unknown04->Unknown08->FUN_10dbd510(0x40100244)->FUN_10bbdb40();

@@ -7,15 +7,6 @@ struct Struct_10B1E010_Param;
 
 FVector FUN_10b1e010(Struct_10B1E010_Param* A);
 
-class Class_10B4A2A0
-{
-public:
-    FVector FUN_10b4a2a0(Struct_10B1E010_Param* A);
-
-    char Unknown00[0x10];
-    int Unknown10;
-};
-
 class AGarrett
 {
 public:
@@ -56,6 +47,7 @@ class Class_10E7E6A0 : public Class_10E7E658
 public:
     virtual void FUN_10b4a330(AGarrett* Garrett);
 
+    FVector FUN_10b4a2a0(Struct_10B1E010_Param* A);
     void FUN_10b49f60();
 
     int Unknown10;
@@ -65,10 +57,11 @@ public:
     bool Unknown1A;
     bool Unknown1B;
     bool Unknown1C;
+    char Pad1D[0x3];
 };
 
-// FUNCTION: 0x10B4A2A0 ?FUN_10b4a2a0@Class_10B4A2A0@@QAE?AVFVector@@PAUStruct_10B1E010_Param@@@Z
-FVector Class_10B4A2A0::FUN_10b4a2a0(Struct_10B1E010_Param* A)
+// FUNCTION: 0x10B4A2A0 ?FUN_10b4a2a0@Class_10E7E6A0@@QAE?AVFVector@@PAUStruct_10B1E010_Param@@@Z
+FVector Class_10E7E6A0::FUN_10b4a2a0(Struct_10B1E010_Param* A)
 {
     switch (Unknown10)
     {

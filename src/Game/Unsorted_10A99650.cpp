@@ -24,10 +24,10 @@ Class_10905A90_Member* FUN_10905aa0();
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 
 // FUN_10a99610 is the constructor: it stores the vtable and returns this.
-class Class_10A99610
+class Class_10E6D0F8
 {
 public:
-    Class_10A99610* FUN_10a99610();
+    Class_10E6D0F8* FUN_10a99610();
 
     void* Unknown00;
 };
@@ -35,14 +35,14 @@ public:
 class Class_10E5D874
 {
 public:
-    virtual Class_10A99610* FUN_10a99650();
+    virtual Class_10E6D0F8* FUN_10a99650();
 };
 
 // FUN_10a99620 is the constructor: it stores the vtable and returns this.
-class Class_10A99620
+class Class_10E6D104
 {
 public:
-    Class_10A99620* FUN_10a99620();
+    Class_10E6D104* FUN_10a99620();
 
     void* Unknown00;
 };
@@ -50,14 +50,14 @@ public:
 class Class_10E5D870
 {
 public:
-    virtual Class_10A99620* FUN_10a996a0();
+    virtual Class_10E6D104* FUN_10a996a0();
 };
 
 // FUN_10a99640 is the constructor: it stores the vtable and returns this.
-class Class_10A99640
+class Class_10E6D110
 {
 public:
-    Class_10A99640* FUN_10a99640();
+    Class_10E6D110* FUN_10a99640();
 
     void* Unknown00;
 };
@@ -65,41 +65,41 @@ public:
 class Class_10E5D86C
 {
 public:
-    virtual Class_10A99640* FUN_10a99c90();
+    virtual Class_10E6D110* FUN_10a99c90();
 };
 
-// FUNCTION: 0x10A99650 ?FUN_10a99650@Class_10E5D874@@UAEPAVClass_10A99610@@XZ
-Class_10A99610* Class_10E5D874::FUN_10a99650()
+// FUNCTION: 0x10A99650 ?FUN_10a99650@Class_10E5D874@@UAEPAVClass_10E6D0F8@@XZ
+Class_10E6D0F8* Class_10E5D874::FUN_10a99650()
 {
     FUN_10905aa0()->Virtual8(0, 0);
-    Class_10A99610* Result = 0;
-    void* Memory = operator new(sizeof(Class_10A99610), 0, 0, 0, 0, 0);
+    Class_10E6D0F8* Result = 0;
+    void* Memory = operator new(sizeof(Class_10E6D0F8), 0, 0, 0, 0, 0);
     if (Memory)
-        Result = static_cast<Class_10A99610*>(Memory)->FUN_10a99610();
+        Result = static_cast<Class_10E6D0F8*>(Memory)->FUN_10a99610();
     FUN_10905aa0()->Virtual9();
     return Result;
 }
 
-// FUNCTION: 0x10A996A0 ?FUN_10a996a0@Class_10E5D870@@UAEPAVClass_10A99620@@XZ
-Class_10A99620* Class_10E5D870::FUN_10a996a0()
+// FUNCTION: 0x10A996A0 ?FUN_10a996a0@Class_10E5D870@@UAEPAVClass_10E6D104@@XZ
+Class_10E6D104* Class_10E5D870::FUN_10a996a0()
 {
     FUN_10905aa0()->Virtual8(0, 0);
-    Class_10A99620* Result = 0;
-    void* Memory = operator new(sizeof(Class_10A99620), 0, 0, 0, 0, 0);
+    Class_10E6D104* Result = 0;
+    void* Memory = operator new(sizeof(Class_10E6D104), 0, 0, 0, 0, 0);
     if (Memory)
-        Result = static_cast<Class_10A99620*>(Memory)->FUN_10a99620();
+        Result = static_cast<Class_10E6D104*>(Memory)->FUN_10a99620();
     FUN_10905aa0()->Virtual9();
     return Result;
 }
 
-// FUNCTION: 0x10A99C90 ?FUN_10a99c90@Class_10E5D86C@@UAEPAVClass_10A99640@@XZ
-Class_10A99640* Class_10E5D86C::FUN_10a99c90()
+// FUNCTION: 0x10A99C90 ?FUN_10a99c90@Class_10E5D86C@@UAEPAVClass_10E6D110@@XZ
+Class_10E6D110* Class_10E5D86C::FUN_10a99c90()
 {
     FUN_10905aa0()->Virtual8(0, 0);
-    Class_10A99640* Result = 0;
-    void* Memory = operator new(sizeof(Class_10A99640), 0, 0, 0, 0, 0);
+    Class_10E6D110* Result = 0;
+    void* Memory = operator new(sizeof(Class_10E6D110), 0, 0, 0, 0, 0);
     if (Memory)
-        Result = static_cast<Class_10A99640*>(Memory)->FUN_10a99640();
+        Result = static_cast<Class_10E6D110*>(Memory)->FUN_10a99640();
     FUN_10905aa0()->Virtual9();
     return Result;
 }

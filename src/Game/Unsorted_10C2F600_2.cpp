@@ -3,7 +3,7 @@
 
 #include "Core/Core.h"
 
-class Class_10C2F600
+class Class_10E9AC80
 {
 public:
     void FUN_10c2f600();
@@ -15,8 +15,8 @@ public:
     int UnknownDC;
 };
 
-// FUNCTION: 0x10C2F600 ?FUN_10c2f600@Class_10C2F600@@QAEXXZ
-void Class_10C2F600::FUN_10c2f600()
+// FUNCTION: 0x10C2F600 ?FUN_10c2f600@Class_10E9AC80@@QAEXXZ
+void Class_10E9AC80::FUN_10c2f600()
 {
     Unknown28 = FVector(0, 0, Unknown28.Z);
     Unknown34 = FRotator(0, 0, 0);

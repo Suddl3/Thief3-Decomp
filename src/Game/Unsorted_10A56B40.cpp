@@ -12,7 +12,7 @@ public:
     int ArrayMax;
 };
 
-class Class_10A626F0
+class Class_10E6A9F8
 {
 public:
     void FUN_10a64d70();
@@ -22,8 +22,8 @@ public:
     FString Unknown158;
 };
 
-// FUNCTION: 0x10A56B40 ?FUN_10a56b40@Class_10A626F0@@QAEXABVFString@@@Z
-void Class_10A626F0::FUN_10a56b40(const FString& Value)
+// FUNCTION: 0x10A56B40 ?FUN_10a56b40@Class_10E6A9F8@@QAEXABVFString@@@Z
+void Class_10E6A9F8::FUN_10a56b40(const FString& Value)
 {
     if (Unknown158.FUN_10af80a0(Value))
     {

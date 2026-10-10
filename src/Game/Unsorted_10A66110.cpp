@@ -5,7 +5,7 @@
 
 extern int DAT_10e6b594;
 
-class Class_10A67B70 {
+class Class_10E6B594 {
 public:
     void FUN_10a67b70();
     void* Field00;
@@ -21,22 +21,20 @@ class Class_10E6B5A0
 {
 public:
     Class_10E6B5A0* FUN_10a68b30();
+    int FUN_10a68b70();
 
     void* VTable;
     int Unknown04;
     int Unknown08;
     int Unknown0C;
     int Unknown10;
-    int Unknown14;
+    union
+    {
+        int Unknown14;
+        int Field14;
+    };
     int Unknown18;
     int Unknown1C;
-};
-
-class Class_10A68B70 {
-public:
-    char Unknown00[0x14];
-    int Field14;
-    int FUN_10a68b70();
 };
 
 typedef void (*VFunc)(void);
@@ -57,7 +55,7 @@ void FUN_10a4c5f0();
 
 extern void* DAT_10e6b978;
 
-class Class_10a6da70
+class Class_10E6B978
 {
 public:
     void FUN_10a6da70();
@@ -92,15 +90,15 @@ public:
 
 extern void* DAT_10e6bbcc[];
 
-class Class_10A74820 {
+class Class_10E6BBCC {
 public:
     void* Field00;
-    Class_10A74820* FUN_10a74820();
+    Class_10E6BBCC* FUN_10a74820();
 };
 
 extern void* DAT_10e6bbe8[];
 
-class Class_10A757A0
+class Class_10E6BBE8
 {
 public:
     void* Field00;
@@ -108,8 +106,8 @@ public:
     void FUN_10a757a0();
 };
 
-// FUNCTION: 0x10A67B70 ?FUN_10a67b70@Class_10A67B70@@QAEXXZ
-void Class_10A67B70::FUN_10a67b70()
+// FUNCTION: 0x10A67B70 ?FUN_10a67b70@Class_10E6B594@@QAEXXZ
+void Class_10E6B594::FUN_10a67b70()
 {
     Field00 = (void*)&DAT_10e6b594;
 }
@@ -128,8 +126,8 @@ Class_10E6B5A0* Class_10E6B5A0::FUN_10a68b30()
     return this;
 }
 
-// FUNCTION: 0x10A68B70 ?FUN_10a68b70@Class_10A68B70@@QAEHXZ
-int Class_10A68B70::FUN_10a68b70()
+// FUNCTION: 0x10A68B70 ?FUN_10a68b70@Class_10E6B5A0@@QAEHXZ
+int Class_10E6B5A0::FUN_10a68b70()
 {
     return Field14 << 4;
 }
@@ -153,8 +151,8 @@ void FUN_10a6adf0()
     FUN_10a4c5f0();
 }
 
-// FUNCTION: 0x10A6DA70 ?FUN_10a6da70@Class_10a6da70@@QAEXXZ
-void Class_10a6da70::FUN_10a6da70() {
+// FUNCTION: 0x10A6DA70 ?FUN_10a6da70@Class_10E6B978@@QAEXXZ
+void Class_10E6B978::FUN_10a6da70() {
     *(void**)this = &DAT_10e6b978;
     FUN_10a4c5f0();
 }
@@ -165,15 +163,15 @@ bool Class_10E6BAB0::FUN_10a70fa0(const FVector& A, Class_10A67000* B)
     return B->FUN_10a67000(A);
 }
 
-// FUNCTION: 0x10A74820 ?FUN_10a74820@Class_10A74820@@QAEPAV1@XZ
-Class_10A74820* Class_10A74820::FUN_10a74820()
+// FUNCTION: 0x10A74820 ?FUN_10a74820@Class_10E6BBCC@@QAEPAV1@XZ
+Class_10E6BBCC* Class_10E6BBCC::FUN_10a74820()
 {
     Field00 = DAT_10e6bbcc;
     return this;
 }
 
-// FUNCTION: 0x10A757A0 ?FUN_10a757a0@Class_10A757A0@@QAEXXZ
-void Class_10A757A0::FUN_10a757a0()
+// FUNCTION: 0x10A757A0 ?FUN_10a757a0@Class_10E6BBE8@@QAEXXZ
+void Class_10E6BBE8::FUN_10a757a0()
 {
     Field00 = (void*)DAT_10e6bbe8;
     FUN_10a4c5f0();

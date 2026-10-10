@@ -19,18 +19,10 @@ struct Struct_10BD2D10
     Class_10DBD510* Unknown08;
 };
 
-class Class_10BDB320
+class Class_10E94B20
 {
 public:
     float FUN_10bdb320();
-
-    char Unknown00[4];
-    Struct_10BD2D10* Unknown04;
-};
-
-class Class_10BDB340
-{
-public:
     float FUN_10bdb340();
 
     char Unknown00[4];
@@ -105,15 +97,15 @@ public:
     int Unknown54;
 };
 
-// FUNCTION: 0x10BDB320 ?FUN_10bdb320@Class_10BDB320@@QAEMXZ
-float Class_10BDB320::FUN_10bdb320()
+// FUNCTION: 0x10BDB320 ?FUN_10bdb320@Class_10E94B20@@QAEMXZ
+float Class_10E94B20::FUN_10bdb320()
 {
     float Value = Unknown04->Unknown08->FUN_10dbd510(0x100615)->FUN_10bbdc80();
     return Value;
 }
 
-// FUNCTION: 0x10BDB340 ?FUN_10bdb340@Class_10BDB340@@QAEMXZ
-float Class_10BDB340::FUN_10bdb340()
+// FUNCTION: 0x10BDB340 ?FUN_10bdb340@Class_10E94B20@@QAEMXZ
+float Class_10E94B20::FUN_10bdb340()
 {
     float Value = Unknown04->Unknown08->FUN_10dbd510(0x1006ca)->FUN_10bbdc80();
     return Value;

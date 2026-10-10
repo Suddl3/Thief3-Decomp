@@ -52,7 +52,7 @@ public:
     virtual bool Virtual9();
 };
 
-class Class_10BAA3A0
+class Class_10E4AB88
 {
 public:
     void* FUN_10baa3a0();
@@ -61,7 +61,7 @@ public:
 struct Struct_10BE1AD0
 {
     char Unknown00[8];
-    Class_10BAA3A0* Unknown08;
+    Class_10E4AB88* Unknown08;
 };
 
 class Class_10E95780

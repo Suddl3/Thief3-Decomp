@@ -38,7 +38,7 @@ public:
 
 extern Class_10FF667C* DAT_10ff667c;
 
-class Class_10BDC290
+class Class_10E948D8
 {
 public:
     float FUN_10bdc290();
@@ -301,8 +301,8 @@ void Class_10E94100::FUN_10bdbd70(FArchive& Ar)
     }
 }
 
-// FUNCTION: 0x10BDC290 ?FUN_10bdc290@Class_10BDC290@@QAEMXZ
-float Class_10BDC290::FUN_10bdc290()
+// FUNCTION: 0x10BDC290 ?FUN_10bdc290@Class_10E948D8@@QAEMXZ
+float Class_10E948D8::FUN_10bdc290()
 {
     float Value = 0.0f;
     Class_10DBD510* Props = Unknown04->Unknown08;

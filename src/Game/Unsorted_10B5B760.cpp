@@ -98,13 +98,13 @@ public:
     virtual void Virtual70(int A);
 };
 
-class Class_10B5C440
+class Class_10E83420
 {
 public:
     void FUN_10b45ca0();
 };
 
-class Class_10B5B760 : public Class_10B5C440
+class Class_10B5B760 : public Class_10E83420
 {
 public:
     void FUN_10b5b760();

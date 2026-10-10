@@ -12,7 +12,7 @@ public:
     char* Unknown08;
 };
 
-class Class_10A311E0
+class Class_10E663C8
 {
 public:
     void FUN_10a30f20();
@@ -24,7 +24,7 @@ public:
     }
 };
 
-extern Class_10A311E0* DAT_10f39f3c;
+extern Class_10E663C8* DAT_10f39f3c;
 
 class Class_10DB58F0
 {

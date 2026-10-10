@@ -13,7 +13,7 @@ public:
     void FUN_10b7ab80(int A, float B);
 };
 
-class Class_10B7AD70 : public Class_10B7AB80
+class Class_10EC0E20 : public Class_10B7AB80
 {
 public:
     void FUN_10b7b8a0();
@@ -51,7 +51,7 @@ public:
 
     char Unknown00[8];
     Class_10B7AC30* Unknown08;
-    Class_10B7AD70* Unknown0C;
+    Class_10EC0E20* Unknown0C;
     Class_10B47660_Member* Unknown10;
     char Unknown14[0x1C];
     bool Unknown30;

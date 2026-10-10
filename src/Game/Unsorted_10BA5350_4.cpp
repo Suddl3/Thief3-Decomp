@@ -9,7 +9,7 @@ public:
     char Unknown00[0x4010];
 };
 
-class Class_10C15DB0
+class Class_10E98C84
 {
 public:
     void FUN_10c15db0();
@@ -23,7 +23,7 @@ public:
     virtual ~Class_10E8D658();
 
     Class_10C15EF0 Unknown04;
-    Class_10C15DB0 Unknown4014;
+    Class_10E98C84 Unknown4014;
 };
 
 class Class_10E8D65C

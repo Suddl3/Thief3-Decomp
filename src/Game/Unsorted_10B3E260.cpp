@@ -12,7 +12,7 @@ public:
 
 Object_10A18FC0* FUN_10a18fc0();
 
-class Class_10B3E260
+class Class_10E7ED00
 {
 public:
     void FUN_10b3e260();
@@ -27,8 +27,8 @@ public:
     bool Unknown90;
 };
 
-// FUNCTION: 0x10B3E260 ?FUN_10b3e260@Class_10B3E260@@QAEXXZ
-void Class_10B3E260::FUN_10b3e260()
+// FUNCTION: 0x10B3E260 ?FUN_10b3e260@Class_10E7ED00@@QAEXXZ
+void Class_10E7ED00::FUN_10b3e260()
 {
     Unknown78 = 0;
     Unknown7C = 0;

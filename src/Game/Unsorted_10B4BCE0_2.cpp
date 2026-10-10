@@ -14,7 +14,7 @@ public:
     unsigned bUpdatePhysHeight : 1;
 };
 
-class Class_10B3ADC0
+class Class_10E7E6A0
 {
 public:
     virtual void Virtual0();
@@ -23,13 +23,13 @@ public:
     void FUN_10b3b130(AGarrett* Garrett);
 };
 
-class Class_10B3AE50 : public Class_10B3ADC0
+class Class_10E816E0 : public Class_10E7E6A0
 {
 public:
     void FUN_10b3ae50(AGarrett* Garrett);
 };
 
-class Class_10B3AE70 : public Class_10B3AE50
+class Class_10B3AE70 : public Class_10E816E0
 {
 public:
     void FUN_10b3ae70(AGarrett* Garrett);

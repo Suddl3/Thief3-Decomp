@@ -40,7 +40,7 @@ public:
 
 extern Class_10F3A3D8* DAT_10f3a3d8;
 
-class Class_10B6C180
+class Class_10E85DE0
 {
 public:
     void FUN_10b6bd70();
@@ -52,8 +52,8 @@ public:
     int Unknown19C;
 };
 
-// FUNCTION: 0x10B6C180 ?FUN_10b6c180@Class_10B6C180@@QAEXPAUStruct_10B6C180@@@Z
-void Class_10B6C180::FUN_10b6c180(Struct_10B6C180* Src)
+// FUNCTION: 0x10B6C180 ?FUN_10b6c180@Class_10E85DE0@@QAEXPAUStruct_10B6C180@@@Z
+void Class_10E85DE0::FUN_10b6c180(Struct_10B6C180* Src)
 {
     Data_10B66060* Value;
     switch (Unknown19C)

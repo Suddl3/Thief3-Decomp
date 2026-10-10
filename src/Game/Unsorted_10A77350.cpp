@@ -41,7 +41,7 @@ struct Struct_10A78020
     int Unknown08;
 };
 
-class Class_10A78020
+class Class_10E6BCD0
 {
 public:
     void FUN_10a77750(ULevel* A);
@@ -54,8 +54,8 @@ public:
     int Unknown14;
 };
 
-// FUNCTION: 0x10A78020 ?FUN_10a78020@Class_10A78020@@QAEXPAVUObject@@PAUStruct_10A78020@@H@Z
-void Class_10A78020::FUN_10a78020(UObject* A, Struct_10A78020* B, int C)
+// FUNCTION: 0x10A78020 ?FUN_10a78020@Class_10E6BCD0@@QAEXPAVUObject@@PAUStruct_10A78020@@H@Z
+void Class_10E6BCD0::FUN_10a78020(UObject* A, Struct_10A78020* B, int C)
 {
     if (B && B->Unknown08 == 0)
     {

@@ -12,7 +12,7 @@ public:
     float Unknown2C4;
 };
 
-class Class_10BA9F90
+class Class_10E9CFE0
 {
 public:
     void FUN_10ba9f90(int A);
@@ -32,13 +32,13 @@ public:
     float FUN_10bbdb40();
 };
 
-class Class_10DBD510 : public Class_10BA9F90
+class Class_10DBD510 : public Class_10E9CFE0
 {
 public:
     Class_10BBDB40* FUN_10dbd510(int A);
 };
 
-class Class_10BB8430
+class Class_10E90A1C
 {
 public:
     void FUN_10bb7f90();
@@ -50,8 +50,8 @@ public:
     float Unknown2C4;
 };
 
-// FUNCTION: 0x10BB8430 ?FUN_10bb8430@Class_10BB8430@@QAEXXZ
-void Class_10BB8430::FUN_10bb8430()
+// FUNCTION: 0x10BB8430 ?FUN_10bb8430@Class_10E90A1C@@QAEXXZ
+void Class_10E90A1C::FUN_10bb8430()
 {
     Unknown08->FUN_10ba9f90(0);
     ((Class_10C28BD0*)FUN_10c28bc0())->FUN_10c28bd0();

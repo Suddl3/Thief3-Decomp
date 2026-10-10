@@ -11,7 +11,7 @@ public:
     bool FUN_10b17220();
 };
 
-class Class_10B56520
+class Class_10E81DE8
 {
 public:
     virtual void Virtual0();
@@ -76,8 +76,8 @@ public:
     void FUN_10b45d10();
 };
 
-// FUNCTION: 0x10B5B7F0 ?FUN_10b5b7f0@Class_10B56520@@QAEXXZ
-void Class_10B56520::FUN_10b5b7f0()
+// FUNCTION: 0x10B5B7F0 ?FUN_10b5b7f0@Class_10E81DE8@@QAEXXZ
+void Class_10E81DE8::FUN_10b5b7f0()
 {
     Virtual56(0);
     FUN_10b45d10();

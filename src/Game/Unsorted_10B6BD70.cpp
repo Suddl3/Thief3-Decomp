@@ -15,7 +15,7 @@ public:
     int Unknown12C;
 };
 
-class Class_10B6C180
+class Class_10E85DE0
 {
 public:
     virtual void Virtual0();
@@ -152,8 +152,8 @@ public:
     Class_10B6C180_Member* Unknown190;
 };
 
-// FUNCTION: 0x10B6BD70 ?FUN_10b6bd70@Class_10B6C180@@QAEXXZ
-void Class_10B6C180::FUN_10b6bd70()
+// FUNCTION: 0x10B6BD70 ?FUN_10b6bd70@Class_10E85DE0@@QAEXXZ
+void Class_10E85DE0::FUN_10b6bd70()
 {
     Virtual123();
     Unknown164 = 0;

@@ -147,7 +147,7 @@ public:
     int Unknown1F0;
 };
 
-class Class_10B66980
+class Class_10E84BB8
 {
 public:
     void FUN_10b66900(int A);
@@ -162,8 +162,8 @@ public:
     Class_10B66980_Unknown198** Unknown198;
 };
 
-// FUNCTION: 0x10B66900 ?FUN_10b66900@Class_10B66980@@QAEXH@Z
-void Class_10B66980::FUN_10b66900(int A)
+// FUNCTION: 0x10B66900 ?FUN_10b66900@Class_10E84BB8@@QAEXH@Z
+void Class_10E84BB8::FUN_10b66900(int A)
 {
     Class_10B66980_Unknown198* Element = Unknown198[A];
     if (Element->Unknown1F0 == Element->Unknown1EC)

@@ -1,7 +1,14 @@
 // Game/Unsorted_10B71170.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-class Class_10B71200
+class Class_10B71220_Member
+{
+public:
+    char Unknown00[0x128];
+    int* Unknown128;
+};
+
+class Class_10E873B0
 {
 public:
     virtual void Virtual0();
@@ -130,33 +137,21 @@ public:
     virtual void Virtual123();
 
     void FUN_10b71200(bool p1);
-};
-
-class Class_10B71220_Member
-{
-public:
-    char Unknown00[0x128];
-    int* Unknown128;
-};
-
-class Class_10B71220
-{
-public:
     int FUN_10b71220();
 
-    char Unknown00[0x1CC];
+    char Pad04[0x1c8];
     Class_10B71220_Member* Unknown1CC;
 };
 
-// FUNCTION: 0x10B71200 ?FUN_10b71200@Class_10B71200@@QAEX_N@Z
-void Class_10B71200::FUN_10b71200(bool p1)
+// FUNCTION: 0x10B71200 ?FUN_10b71200@Class_10E873B0@@QAEX_N@Z
+void Class_10E873B0::FUN_10b71200(bool p1)
 {
     if (p1)
         Virtual123();
 }
 
-// FUNCTION: 0x10B71220 ?FUN_10b71220@Class_10B71220@@QAEHXZ
-int Class_10B71220::FUN_10b71220()
+// FUNCTION: 0x10B71220 ?FUN_10b71220@Class_10E873B0@@QAEHXZ
+int Class_10E873B0::FUN_10b71220()
 {
     if (Unknown1CC)
         return *Unknown1CC->Unknown128;

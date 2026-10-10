@@ -20,7 +20,7 @@ struct Struct_10A58AE0
     Class_1098E330* Unknown00;
 };
 
-class Class_10A58FE0
+class Class_10E68738
 {
 public:
     virtual void Virtual0();
@@ -147,8 +147,8 @@ public:
     int* Unknown15C;
 };
 
-// FUNCTION: 0x10A58AE0 ?FUN_10a58ae0@Class_10A58FE0@@QAEXH@Z
-void Class_10A58FE0::FUN_10a58ae0(int A)
+// FUNCTION: 0x10A58AE0 ?FUN_10a58ae0@Class_10E68738@@QAEXH@Z
+void Class_10E68738::FUN_10a58ae0(int A)
 {
     Class_1098E330* Obj = Unknown128->Unknown00;
     if (Obj && Unknown154 > A && Unknown15C[A] != -1)

@@ -1,7 +1,7 @@
 // Game/Unsorted_10BE85D0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-class Class_10BE85B0
+class Class_10E960D8
 {
 public:
     virtual void Virtual0();
@@ -48,7 +48,7 @@ public:
 
 double FUN_10c00480();
 
-class Class_10BE8710 : public Class_10BE85B0
+class Class_10E96510 : public Class_10E960D8
 {
 public:
     void FUN_10be8710();
@@ -59,8 +59,8 @@ public:
     FVector Unknown54;
 };
 
-// FUNCTION: 0x10BE8710 ?FUN_10be8710@Class_10BE8710@@QAEXXZ
-void Class_10BE8710::FUN_10be8710()
+// FUNCTION: 0x10BE8710 ?FUN_10be8710@Class_10E96510@@QAEXXZ
+void Class_10E96510::FUN_10be8710()
 {
     FVector Out;
     int Flag;

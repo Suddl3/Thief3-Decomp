@@ -11,7 +11,7 @@ public:
 
 Class_10B3A460* FUN_10b3abf0();
 
-class Class_10B7AD70
+class Class_10EC0E20
 {
 public:
     void FUN_10b7b8a0();
@@ -25,8 +25,8 @@ public:
     bool Unknown18;
 };
 
-// FUNCTION: 0x10B7B8D0 ?FUN_10b7b8d0@Class_10B7AD70@@QAE_NH@Z
-bool Class_10B7AD70::FUN_10b7b8d0(int A)
+// FUNCTION: 0x10B7B8D0 ?FUN_10b7b8d0@Class_10EC0E20@@QAE_NH@Z
+bool Class_10EC0E20::FUN_10b7b8d0(int A)
 {
     if (Unknown18)
     {

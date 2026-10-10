@@ -58,20 +58,15 @@ public:
 
 extern void* DAT_10e499f4[];
 
-class Class_1091E340
+class Class_10E499F4
 {
 public:
     void FUN_1091e340();
+    float FUN_1091e360();
 
     void* VTable;
-};
-
-class Class_1091e360
-{
-public:
-    char Unknown00[0x180];
+    char Pad04[0x17c];
     float Field180;
-    float FUN_1091e360();
 };
 
 struct Class_1091E3E0 {
@@ -151,14 +146,14 @@ Class_1091CCF0::Class_1091CCF0()
     Unknown00 = 0;
 }
 
-// FUNCTION: 0x1091E340 ?FUN_1091e340@Class_1091E340@@QAEXXZ
-void Class_1091E340::FUN_1091e340()
+// FUNCTION: 0x1091E340 ?FUN_1091e340@Class_10E499F4@@QAEXXZ
+void Class_10E499F4::FUN_1091e340()
 {
     VTable = DAT_10e499f4;
 }
 
-// FUNCTION: 0x1091E360 ?FUN_1091e360@Class_1091e360@@QAEMXZ
-float Class_1091e360::FUN_1091e360()
+// FUNCTION: 0x1091E360 ?FUN_1091e360@Class_10E499F4@@QAEMXZ
+float Class_10E499F4::FUN_1091e360()
 {
     return Field180;
 }

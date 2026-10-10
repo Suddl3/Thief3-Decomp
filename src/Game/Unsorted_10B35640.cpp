@@ -33,7 +33,7 @@ public:
     Class_10C08940* FUN_10978090();
 };
 
-class Class_10e7c360 : public Class_10978090
+class Class_10E7C360 : public Class_10978090
 {
 public:
     virtual void Virtual1();
@@ -44,8 +44,8 @@ public:
     virtual int FUN_10b35640(int A, int B);
 };
 
-// FUNCTION: 0x10B35640 ?FUN_10b35640@Class_10e7c360@@UAEHHH@Z
-int Class_10e7c360::FUN_10b35640(int A, int B)
+// FUNCTION: 0x10B35640 ?FUN_10b35640@Class_10E7C360@@UAEHHH@Z
+int Class_10E7C360::FUN_10b35640(int A, int B)
 {
     Class_10BAA6B0_Param* Obj = FUN_10978090()->Virtual8();
     return FUN_10baa6b0(Obj)->FUN_10babed0(false);

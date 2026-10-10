@@ -34,7 +34,7 @@ struct Struct_10BA9EF0
     int Unknown08;
 };
 
-class Class_10BA9EF0
+class Class_10E5CBD8
 {
 public:
     Struct_10BA9EF0 FUN_10ba9ef0();
@@ -47,7 +47,7 @@ public:
     void FUN_10bbb580(const Struct_10BA9EF0& Position);
 
     char Unknown00[8];
-    Class_10BA9EF0* Unknown08;
+    Class_10E5CBD8* Unknown08;
 };
 
 // FUNCTION: 0x10BBB510 ?FUN_10bbb510@Class_10BBB510@@QAEXH@Z
