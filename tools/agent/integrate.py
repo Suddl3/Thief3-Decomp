@@ -503,6 +503,7 @@ def integrate(p: Project, args) -> dict:
         local = {d.name for d in map(classdecl.parse, items(head)) if d is not None}  # classes the unit keeps
         symbols = {a: (FUNCTION_MARKER.search(b).group(2).strip() or None) for a, b in blocks.items()}
         new_decls: Dict[int, List[str]] = {}
+        own_decls: Dict[int, List[str]] = {}  # the accepted file's declarations, before any header took over
         for a in sorted(addrs):
             symbols[a] = accepted[a]["symbol"]
             if accepted[a].get("generated"):
@@ -513,7 +514,8 @@ def integrate(p: Project, args) -> dict:
                              f"class's vtable by {accepted[a]['with']}'s definition in this unit.\n")
                 continue
             decl, body = split_file((p.state / "accepted" / f"{addr_key(a)}.cpp").read_text(encoding="utf-8"))
-            new_decls[a] = [shared_header(p, item, local) for item in items(decl)]
+            own_decls[a] = items(decl)
+            new_decls[a] = [shared_header(p, item, local) for item in own_decls[a]]
             blocks[a] = FUNCTION_MARKER.sub(f"// FUNCTION: {fmt_addr(a)} {accepted[a]['symbol']}",
                                             body, 1).rstrip() + "\n"
         cflags = p.configure.UNITS.get(source, {}).get("cflags", p.configure.CFLAGS)
@@ -532,6 +534,11 @@ def integrate(p: Project, args) -> dict:
                 new_decls = {}
                 break
             for a, why in failures.items():  # leave out what no longer matches here, then try again
+                if a in own_decls and new_decls[a] != own_decls[a]:
+                    # a class header took the place of the file's own definition: the function may need
+                    # its own (a destructor the game inlines here and calls elsewhere); once more with it
+                    new_decls[a] = own_decls.pop(a)
+                    continue
                 dropped.append({"addr": fmt_addr(a), "unit": source, "reason": why})
                 del blocks[a], new_decls[a]
             if not failures or not new_decls:
