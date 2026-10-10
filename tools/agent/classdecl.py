@@ -194,6 +194,30 @@ def parse_member(text: str, class_name: str) -> Member:
     return Member("field", m.group(2), m.group(2), text, type=m.group(1).strip(), array=(m.group(3) or "").strip())
 
 
+def declaration_only(m: Member) -> Member:
+    """A method defined in the class, declared instead: its text up to the parameter list's end (and
+    `const`), the body and a constructor's initializer list dropped. A member without a body as it is."""
+    if not m.body or m.kind not in ("method", "virtual", "ctor", "dtor"):
+        return m
+    bare = linter.strip(m.text)
+    at = re.search(re.escape(m.name) + r"\s*\(", bare)
+    if at is None:
+        return m
+    depth, j = 0, at.end() - 1
+    while j < len(bare):
+        if bare[j] == "(":
+            depth += 1
+        elif bare[j] == ")":
+            depth -= 1
+            if depth == 0:
+                break
+        j += 1
+    tail = re.match(r"\s*const\b", bare[j + 1:])
+    text = m.text[:j + 1] + (" const" if tail else "") + ";\n"
+    text = re.sub(r"\binline\s+", "", text, count=1)
+    return Member(m.kind, m.name, m.key, text, type=m.type, array=m.array, body=False)
+
+
 def parse(item: str) -> Optional[ClassDecl]:
     """A class or struct definition (an item of integrate.items()), or None."""
     bare = linter.strip(item)

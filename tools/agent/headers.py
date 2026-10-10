@@ -5,6 +5,7 @@ a worker may run `check`).
     python tools/agent/headers.py stats                 # which classes get a header, and why the others do not
     python tools/agent/headers.py build [--classes A,B] # write the headers and move the units onto them
     python tools/agent/headers.py absorb <addr> ...     # merge accepted functions' class members into headers
+    python tools/agent/headers.py refresh               # merge headers again with the units' own copies
     python tools/agent/headers.py check <unit|Class> ... # units keep their last built code (headers: their users')
     python configure.py && ninja                        # then compare the report with the previous one
 
@@ -32,6 +33,7 @@ declaration per unit using it, each with the members that unit's functions neede
 
 import argparse
 import collections
+import copy
 import json
 import os
 import re
@@ -47,7 +49,7 @@ sys.path.insert(0, str(HERE))
 import classdecl  # noqa: E402
 import coff  # noqa: E402
 import integrate  # noqa: E402
-from common import Project  # noqa: E402
+from common import Project, demangle  # noqa: E402
 
 GAME_DIR = "Game"
 GUARD = "GAME_{}_H"
@@ -263,6 +265,113 @@ def free_index(units: Dict[str, "UnitDecls"]) -> Dict[str, str]:
     return out
 
 
+TYPEDEFS = {"INT": "int", "UINT": "unsigned int", "DWORD": "unsigned long", "UBOOL": "unsigned long",
+            "BITFIELD": "unsigned long", "BYTE": "unsigned char", "WORD": "unsigned short", "FLOAT": "float",
+            "DOUBLE": "double", "ANSICHAR": "char", "SWORD": "short", "SBYTE": "signed char",
+            "QWORD": "unsigned __int64", "SQWORD": "__int64", "unsigned": "unsigned int", "signed": "int",
+            "long int": "long", "unsigned long int": "unsigned long", "short int": "short"}
+
+
+def type_key(text: str) -> str:
+    """A type as MSVC's demangler spells it, for comparing: no class keys, `const` after its type,
+    typedefs of Core.h resolved, no spaces before `*` or `&`."""
+    t = re.sub(r"\b(?:class|struct|union|enum)\s+", "", text)
+    t = " ".join(t.replace("*", " * ").replace("&", " & ").split())
+    lead = re.match(r"^const\s+([\w:<>, ]+?)(\s*[*&].*)?$", t)
+    if lead:
+        t = f"{lead.group(1)} const{lead.group(2) or ''}"
+    base = re.match(r"^([\w:<>, ]+?)((?:\s+const)?(?:\s*[*&].*)?)$", t)
+    if base:
+        t = TYPEDEFS.get(base.group(1).strip(), base.group(1).strip()) + base.group(2)
+    return re.sub(r"\s+([*&])", r"\1", re.sub(r"([*&])\s+", r"\1", t)).strip()
+
+
+def split_params(text: str) -> List[str]:
+    parts, depth, cur = [], 0, ""
+    for ch in text:
+        if ch in "(<[":
+            depth += 1
+        elif ch in ")>]":
+            depth -= 1
+        if ch == "," and depth == 0:
+            parts.append(cur)
+            cur = ""
+        else:
+            cur += ch
+    parts.append(cur)
+    return [x.strip() for x in parts if x.strip() and x.strip() != "void"]
+
+
+def member_signature(m: classdecl.Member) -> Optional[Tuple[str, Tuple[str, ...]]]:
+    """(return type, parameter types) of a method as declared, or None when it does not read as one."""
+    head = classdecl.normal(classdecl.declaration_only(m).text).rstrip(";").strip()
+    head = re.sub(r"\s*=\s*0$", "", head)
+    at = re.search(re.escape(m.name) + r"\s*\(", head)
+    if at is None or not head.endswith(")") and not re.search(r"\)\s*const$", head):
+        return None
+    ret = re.sub(r"\b(?:virtual|static|inline|__thiscall|__cdecl|__stdcall)\b", "", head[:at.start()]).strip()
+    params = head[at.end():head.rindex(")")]
+    keys = []
+    for prm in split_params(params):
+        prm = prm.split("=")[0].strip()
+        named = re.match(r"^(.*?[\s*&])([A-Za-z_]\w*)(\s*\[[^\]]*\])?$", prm)
+        if named and named.group(1).strip() not in ("", "const", "unsigned", "signed", "struct", "class") \
+                and not classdecl.BASIC_POD.match(prm):
+            prm = named.group(1) + (named.group(3) or "")
+        keys.append(type_key(prm))
+    return type_key(ret) if ret else "", tuple(keys)
+
+
+def demangled_signature(text: str, name: str) -> Optional[Tuple[str, Tuple[str, ...]]]:
+    """(return type, parameter types) from a demangled member: `public: virtual int __thiscall C::F(int,char *)`."""
+    m = re.match(r"^(?:(?:public|protected|private): )?(?:virtual |static )?(.*?)\s*__\w+\s+[\w:]*::"
+                 + re.escape(name) + r"\((.*)\)(?:\s*const)?$", text)
+    if m is None:
+        return None
+    return type_key(m.group(1)), tuple(type_key(x) for x in split_params(m.group(2)))
+
+
+def authority(p: Project, classes: Set[str]) -> Dict[Tuple[str, str], Set[Tuple[str, Tuple[str, ...]]]]:
+    """(class, method) -> the signatures symbols.txt's own names (not aliases) give it: what the game's
+    function is, where units guessed differently."""
+    wanted = {}
+    for s in p.symbols:
+        m = re.match(r"^\?(~?[A-Za-z_]\w*)@([A-Za-z_]\w*)@@", s.name)
+        if m and s.type != "alias" and m.group(2) in classes:
+            wanted[s.name] = (m.group(2), m.group(1))
+    texts = demangle(p, sorted(wanted))
+    out: Dict[Tuple[str, str], Set[Tuple[str, Tuple[str, ...]]]] = collections.defaultdict(set)
+    for name, (cls, method) in wanted.items():
+        sig = demangled_signature(texts.get(name, ""), method)
+        if sig is not None:
+            out[(cls, method)].add(sig)
+    return out
+
+
+def authorize(decls: List[classdecl.ClassDecl], signatures: Dict[Tuple[str, str], Set]) -> int:
+    """Leave out of `decls` each declaration of a method whose types differ from what symbols.txt says,
+    when some declaration agrees with it. The number left out."""
+    if not decls:
+        return 0
+    cls = decls[0].name
+    by_name: Dict[str, List[classdecl.Member]] = collections.defaultdict(list)
+    for d in decls:
+        for m in d.members:
+            if m.kind in ("method", "virtual"):
+                by_name[m.name].append(m)
+    drop = set()
+    for name, members in by_name.items():
+        known = signatures.get((cls, name))
+        if not known:
+            continue
+        agree = [m for m in members if member_signature(m) in known]
+        if agree and len(agree) < len(members):
+            drop |= {id(m) for m in members if member_signature(m) not in known}
+    for d in decls:
+        d.members = [m for m in d.members if id(m) not in drop]
+    return len(drop)
+
+
 class Plan:
     """A header to write: its class, what it includes and forward-declares, the free declarations it carries."""
 
@@ -311,11 +420,13 @@ def complete_types(decl: classdecl.ClassDecl, text: str, frees: Dict[str, str], 
 
 def plan_headers(units: Dict[str, UnitDecls], var: Dict[str, Dict[str, classdecl.ClassDecl]], wanted: Set[str],
                  measured: Set[str], packages: Dict[str, Tuple[str, str]], kinds: Dict[str, str],
-                 frees: Dict[str, str], existing: Set[str]) -> Tuple[Dict[str, Plan], Dict[str, str]]:
+                 frees: Dict[str, str], existing: Set[str],
+                 signatures: Dict[Tuple[str, str], Set] = None) -> Tuple[Dict[str, Plan], Dict[str, str]]:
     """({class: plan}, {class: why it has no header}) for the classes in `wanted`; `existing` headers count
     as written."""
     skipped: Dict[str, str] = {}
     plans: Dict[str, Plan] = {}
+    defined = defined_members(units)
     for name in sorted(wanted):
         decls = list(var[name].values())
         unique: Dict[str, classdecl.ClassDecl] = {}
@@ -334,11 +445,14 @@ def plan_headers(units: Dict[str, UnitDecls], var: Dict[str, Dict[str, classdecl
             skipped[name] = "not measured"
             continue
         try:
-            merged = classdecl.merge(list(ready.values()))
+            chosen = [copy.deepcopy(d) for d in ready.values()]
+            authorize(chosen, signatures or {})
+            merged = classdecl.merge(chosen)
         except classdecl.Conflict as e:
             skipped[name] = str(e)
             continue
         merged.kind = kinds.get(name, merged.kind)
+        out_of_line(merged, defined.get(name, set()))
         plans[name] = Plan(name, merged, False, note, sorted(var[name]))
     # what each needs complete, and the cycles that rules out
     classes = set(var) | set(packages)
@@ -472,8 +586,9 @@ ERROR_AT = re.compile(r"[\\/]" + GAME_DIR + r"[\\/](\w+)\.h\((\d+)\) : error (C\
 
 
 def repair(plan: Plan, error: str) -> bool:
-    """Leave out the member a header's own compile error is in (never a field: the layout stays); a header
-    the units all declare alike is read member by member first. False when there is nothing to leave out."""
+    """Leave out the member a header's own compile error is in (never a field: the layout stays; a method
+    with a body loses the body first); a header the units all declare alike is read member by member
+    first. False when there is nothing to leave out."""
     m = ERROR_AT.search(error)
     if m is None or m.group(1) != plan.name or lays_out_others(plan.decl):
         return False
@@ -486,6 +601,10 @@ def repair(plan: Plan, error: str) -> bool:
         member = next((x for x in plan.decl.members if said and x.name == said[0] and x.kind != "field"), None)
     if member is None or member.kind == "field":
         return False
+    if member.body:  # declared without its body first: the method stays
+        plan.decl.members = [classdecl.declaration_only(x) if x is member else x for x in plan.decl.members]
+        plan.repairs.append(f"{member.key or member.name}: its body ({m.group(3)})")
+        return True
     if member.kind == "virtual" and not plan.decl.bases:  # its slot stays, as a placeholder
         taken = {x.name for x in plan.decl.members}
         slot = next(f"Slot{i}" for i in range(1000) if f"Slot{i}" not in taken)
@@ -673,6 +792,147 @@ def absorb(p: Project, addresses: List[int], jobs: int) -> None:
         print(f"{name}: took {', '.join(f'0x{a:08X}' for a, _, _ in props)}'s members")
 
 
+def defined_members(units: Dict[str, UnitDecls]) -> Dict[str, Set[str]]:
+    """class -> the members src/ defines outside the class (`void C::F(...) {`): a header declares those
+    without a body, or the unit defining one would define it twice."""
+    out: Dict[str, Set[str]] = collections.defaultdict(set)
+    for u in units.values():
+        for block in u.blocks.values():
+            code = block.split("\n", 1)[1] if "\n" in block else block
+            m = re.search(r"^[^\n(]*?\b([A-Za-z_]\w*)::(~?[A-Za-z_]\w*)\s*\(", code, re.M)
+            if m:
+                out[m.group(1)].add(m.group(2))
+    return out
+
+
+def out_of_line(decl: classdecl.ClassDecl, defined: Set[str]) -> None:
+    """Declare without a body each member src/ defines outside the class."""
+    decl.members = [classdecl.declaration_only(m) if m.body and m.name in defined else m for m in decl.members]
+
+
+def refresh(p: Project, jobs: int) -> None:
+    """Merge each header again with the definitions the units still keep of its class (they keep them
+    because the header differs from them; the merge's rules may have changed since): every changed header
+    written at once, then the whole tree checked against its last built code, and a header any unit no
+    longer compiles to its code with put back, until the tree is clean. `build` then moves the units."""
+    units = load_units(p)
+    existing = existing_plans(p)
+    var = variants(units)
+    targets = sorted(n for n in existing if n in var)
+    work = Path(tempfile.mkdtemp(prefix="t3refresh-", dir=p.state_dir("tmp")))
+    game = p.include_dir / GAME_DIR
+    packages, kinds, frees = package_index(p), kinds_of(units), free_index(units)
+    for name, plan in existing.items():
+        kinds.setdefault(name, plan.decl.kind)
+    defined = defined_members(units)
+    signatures = authority(p, set(targets))
+    sources = sorted({s for n in targets for s in var[n]})
+    errors: Dict[str, str] = {}
+    with ThreadPoolExecutor(jobs) as pool:
+        for source, err in zip(sources, pool.map(lambda s: measure(p, units[s], work), sources)):
+            if err:
+                errors[source] = err
+        old = {n: (game / f"{n}.h").read_text(encoding="utf-8") for n in targets}
+        heads = {n: header_class(old[n], n) for n in targets}
+        failed = dict(zip(targets, pool.map(
+            lambda n: probe(p, in_place(old[n]), [heads[n]], work / "probe" / f"{n}.cpp"), targets)))
+    print(f"{len(targets)} headers with units keeping their own definition ({len(sources)} units, "
+          f"{len(errors)} could not be measured)")
+    new: Dict[str, str] = {}
+    fresh: Dict[str, Plan] = {}
+    why: collections.Counter = collections.Counter()
+    for n in targets:
+        if failed.get(n):
+            why["the header could not be measured"] += 1
+            continue
+        decls = [heads[n]] + [d for s, d in sorted(var[n].items()) if s not in errors]
+        if any(lays_out_others(d) for d in decls):
+            why["bitfields"] += 1
+            continue
+        decls = [copy.deepcopy(d) for d in decls]
+        authorize(decls, signatures)
+        try:
+            merged = classdecl.merge(decls)
+        except classdecl.Conflict:
+            why["no merge"] += 1
+            continue
+        keys = {m.key for m in merged.members}
+        places = {(f.offset, f.size) for f in merged.fields()}
+        kept = decls[0]  # the header as symbols.txt leaves it: a method it corrects may go
+        if any(m.kind not in ("field", "access") and m.key not in keys for m in kept.members) or any(
+                (f.offset, f.size) not in places and not classdecl.PAD.match(f.name) for f in kept.fields()):
+            why["the merge would drop part of the header"] += 1
+            continue
+        merged.kind = heads[n].kind
+        out_of_line(merged, defined.get(n, set()))
+        plan = Plan(n, merged, False, old[n].split("\n", 1)[0].split(": ", 1)[-1].rstrip("."), sorted(var[n]))
+        plan.system = re.findall(r"^#include <[^>]+>", old[n], re.M)
+        plan.needs = (complete_types(merged, classdecl.write(merged), frees, set(var) | set(packages))
+                      & (set(var) | set(existing))) - set(packages) - {n}
+        if plan.needs - set(existing):
+            why["it would need a class with no header"] += 1
+            continue
+        text = header_text(plan, set(existing), kinds, frees, packages, units)
+        if text != old[n]:
+            new[n] = text
+            fresh[n] = plan
+            existing[n].needs = plan.needs
+        else:
+            why["nothing to add"] += 1
+    for scc in cycles({n: x.needs for n, x in existing.items()}):  # a new include may close a cycle
+        for n in scc:
+            if n in new:
+                del new[n]
+                why["an include cycle"] += 1
+    print(f"{len(new)} headers to rewrite; the rest: " + ", ".join(f"{k} {v}" for k, v in why.most_common()))
+    for n, text in new.items():
+        (game / f"{n}.h").write_text(text, encoding="utf-8", newline="\n")
+    alone = compile_alone(p, {n: existing[n] for n in new}, work / "alone", jobs)
+    for _ in range(8):  # as build does: the member an error is in loses its body, then goes
+        fixed = [n for n, err in alone.items() if repair(fresh[n], err)]
+        if not fixed:
+            break
+        for n in fixed:
+            new[n] = header_text(fresh[n], set(existing), kinds, frees, packages, units)
+            (game / f"{n}.h").write_text(new[n], encoding="utf-8", newline="\n")
+        alone = compile_alone(p, {n: existing[n] for n in alone}, work / "alone", jobs)
+    for n in alone:
+        (game / f"{n}.h").write_text(old[n], encoding="utf-8", newline="\n")
+        del new[n]
+    print(f"{len(alone)} did not compile alone and stay as they were")
+    # the whole tree keeps its code, or the headers its failing units include go back
+    includes = {s: set(re.findall(r'#include "Game/(\w+)\.h"', u.text)) for s, u in units.items()}
+
+    def closure(names: Set[str]) -> Set[str]:
+        """The headers `names` include, themselves too, as the files are now."""
+        out, todo = set(names), list(names)
+        while todo:
+            path = game / f"{todo.pop()}.h"
+            text = path.read_text(encoding="utf-8") if path.is_file() else ""
+            for x in re.findall(r'#include "Game/(\w+)\.h"', text):
+                if x not in out:
+                    out.add(x)
+                    todo.append(x)
+        return out
+
+    todo = sorted(s for s in units if closure(includes[s]) & set(new))
+    for round_ in range(6):
+        with ThreadPoolExecutor(jobs) as pool:
+            results = list(pool.map(lambda s: still_same(p, [s], work / f"r{round_}" / s.replace("/", "_"), 1), todo))
+        broken = [s for s, err in zip(todo, results) if err]
+        culprits = {n for s in broken for n in closure(includes[s]) if n in new}
+        print(f"round {round_ + 1}: {len(todo)} units checked, {len(broken)} changed; "
+              f"{len(culprits)} headers go back")
+        if not culprits:
+            break
+        for n in culprits:
+            (game / f"{n}.h").write_text(old[n], encoding="utf-8", newline="\n")
+            del new[n]
+        todo = sorted(s for s in units if closure(includes[s]) & culprits)
+    print(f"{len(new)} headers rewritten; next: headers.py build moves the units onto them, then "
+          f"configure.py && ninja")
+
+
 def drop(plans: Dict[str, Plan], skipped: Dict[str, str], names: Dict[str, str], game: Optional[Path],
          existing: Set[str] = frozenset()) -> None:
     """Take classes out (with why), and every header that needs one of them (`existing` headers stay)."""
@@ -688,7 +948,7 @@ def drop(plans: Dict[str, Plan], skipped: Dict[str, str], names: Dict[str, str],
 
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("command", choices=("stats", "build", "absorb", "check"))
+    ap.add_argument("command", choices=("stats", "build", "absorb", "check", "refresh"))
     ap.add_argument("addrs", nargs="*", help="absorb: accepted functions whose class definitions to merge; "
                                              "check: units (Game/X.cpp) and classes with a header")
     ap.add_argument("--classes", default="", help="only these classes and what they need (comma-separated)")
@@ -702,6 +962,9 @@ def main() -> None:
         sys.exit("headers.py is the lead's (a worker may run `check`)")
     if args.command == "absorb":
         absorb(p, [p.parse_addr(a) for a in args.addrs], args.jobs)
+        return
+    if args.command == "refresh":
+        refresh(p, args.jobs)
         return
     units = load_units(p)
     existing = existing_plans(p)
@@ -734,8 +997,9 @@ def main() -> None:
                 errors[source] = err
     print(f"{len(units)} units; {len(wanted)} classes to give a header; {len(differing)} units measured, "
           f"{len(errors)} could not be")
+    signatures = authority(p, set(var))
     plans, skipped = plan_headers(units, var, wanted, set(differing) - set(errors), packages, kinds, frees,
-                                  set(existing))
+                                  set(existing), signatures)
     # one file per class: a case-blind disk would give Class_10bf7f90 and Class_10BF7F90 one header
     by_file: Dict[str, List[str]] = collections.defaultdict(list)
     for name in plans:

@@ -1086,6 +1086,34 @@ def test_restructure_helpers(base: Path) -> None:
 TESTS.append(test_restructure_helpers)
 
 
+def test_header_rules(base: Path) -> None:
+    """A method src/ defines outside its class is declared in the header without its body, and a method's
+    declared types compare with the demangled name symbols.txt gives it (headers.py)."""
+    import classdecl
+    import headers
+    d = classdecl.parse("class C\n{\npublic:\n    void Set(int NewCount)\n    {\n        Count = NewCount;\n    }\n"
+                        "    C(int N) : Count(N) { Set(N); }\n    int Get() const { return Count; }\n"
+                        "    int Count;\n};\n")
+    texts = [classdecl.normal(classdecl.declaration_only(m).text) for m in d.members if m.body]
+    check(texts == ["void Set(int NewCount);", "C(int N);", "int Get() const;"], f"declarations: {texts}")
+    for decl, name, demangled in (
+            ("int F(int A, int* B);", "F", "public: int __thiscall C::F(int,int *)"),
+            ("const char* Name(const FString& S, DWORD Flags) const;", "Name",
+             "public: char const * __thiscall C::Name(class FString const &,unsigned long)const"),
+            ("virtual void G(Struct_10929510* A, bool B) = 0;", "G",
+             "public: virtual void __thiscall C::G(struct Struct_10929510 *,bool)")):
+        m = next(x for x in classdecl.parse("class C\n{\npublic:\n    " + decl + "\n};\n").members if x.name == name)
+        check(headers.member_signature(m) == headers.demangled_signature(demangled, name),
+              f"{decl}: {headers.member_signature(m)} vs {headers.demangled_signature(demangled, name)}")
+    m = next(x for x in classdecl.parse("class C\n{\npublic:\n    void F(unsigned long* P);\n};\n").members
+             if x.name == "F")
+    check(headers.member_signature(m) != headers.demangled_signature("public: void __thiscall C::F(int *)", "F"),
+          "a pointer to another type differs")
+
+
+TESTS.append(test_header_rules)
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("-k", help="run only tests whose name contains this")
