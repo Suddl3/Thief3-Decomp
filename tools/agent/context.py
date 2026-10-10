@@ -155,7 +155,7 @@ def references(p: Project, address: int) -> List[dict]:
     return out
 
 
-DAT_NAME = re.compile(r"DAT_[0-9A-Fa-f]{8}@")  # a placeholder global
+DAT_NAME = re.compile(r"^\??DAT_[0-9A-Fa-f]{8}(@|$)")  # a placeholder global, bound or not
 
 
 def fpu_operands(obj: coff.Coff, fn: coff.Symbol, length: int) -> Dict[int, int]:
@@ -186,8 +186,11 @@ def fpu_literal(data: bytes) -> str:
         return f"0x{data[::-1].hex()} (float)"
     for digits in range(1, 10):
         text = f"{value:.{digits}g}"
-        if struct.pack("<f", float(text)) == data:
-            break
+        try:
+            if struct.pack("<f", float(text)) == data:
+                break
+        except OverflowError:
+            continue  # rounded past the largest float: take more digits
     if "e" not in text and "." not in text:
         text += ".0"
     return f"{text}f"
