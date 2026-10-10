@@ -10,6 +10,7 @@ class Class_10C7D570
 public:
     void* FUN_10c7d570();
     Class_10BBDB40* FUN_10dbd510(int Id);
+    Class_10BBDB40* FUN_10dbd510();  // also called with no argument (the same function, 0x10DBD510)
 
     char Unknown00[0x64];
     bool Unknown64;
