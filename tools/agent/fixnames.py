@@ -46,6 +46,17 @@ the fix (docs/agent-workflow.md, "Name conflicts"); a plan file carries it:
 edits its src/ unit; `spec-accept` accepts the patched callers (a caller that
 no longer matches keeps its old record) and runs retry.py on the blocked
 functions and the candidates.
+
+    python tools/agent/fixnames.py aliases [--min-score 90] [-o build/agent/alias-plan.json] [<addr> ...]
+
+writes such a plan for the deferred functions that differ from the game only
+in names: each best candidate is checked again, and when every row that
+differs is a relocation the candidate names otherwise than the target's
+address (a callee the linker folded, a signature a caller guessed), the
+names become aliases of those addresses (tools/cc.py points a reference to
+an alias at the address's own name) and the function is blocked on the plan.
+A name symbols.txt gives another address, or two candidates give two, leaves
+the function out.
 """
 
 import json
@@ -57,7 +68,7 @@ import time
 from pathlib import Path
 from typing import Optional
 
-from common import Project, atomic_write, fmt_addr
+from common import Project, addr_key, atomic_write, fmt_addr
 
 HERE = Path(__file__).resolve().parent
 
@@ -301,12 +312,107 @@ def spec_accept(p: Project, spec: dict) -> None:
         print((proc.stdout or proc.stderr).rstrip())
 
 
+# verify.py's notes under a relocation that names the target's address otherwise (Verifier.name_rule): from
+# symbols.txt, or from the accepted function that bound a placeholder.
+OTHER_NAME = (
+    re.compile(r"the candidate uses (?P<name>\S+); the target uses (?P<addr>0x[0-9A-Fa-f]+) \("),
+    re.compile(r"the target uses (?P<addr>0x[0-9A-Fa-f]+) \([^)]*\), which accepted \S+ names \S+; "
+               r"the candidate uses (?P<name>\S+)$"),
+)
+
+
+def other_names(result: dict) -> Optional[dict]:
+    """{name: address} when every row of a try.py --json result that differs is a relocation whose only
+    difference is the name the candidate gives the target's address; None otherwise."""
+    if not result.get("build_ok") or result.get("problems"):
+        return None
+    rows = result.get("diff", [])
+    differing = [i for i, row in enumerate(rows) if row[:1] in ("~", "<", ">", "r")]
+    if not differing or len(differing) != result.get("mismatch_rows"):
+        return None  # it matches, or the diff was cut short
+    names = {}
+    for i in differing:
+        notes = []
+        for row in rows[i + 1:]:
+            if not row.lstrip().startswith("!"):
+                break
+            notes.append(row.lstrip()[1:].strip())
+        if rows[i][:1] != "r" or not notes:
+            return None
+        for note in notes:
+            m = next((m for m in (r.search(note) for r in OTHER_NAME) if m), None)
+            if not m:
+                return None
+            names[m.group("name")] = int(m.group("addr"), 16)
+    return names
+
+
+def aliases(p: Project, argv) -> None:
+    import argparse
+    from concurrent.futures import ThreadPoolExecutor
+    parser = argparse.ArgumentParser(prog="fixnames.py aliases")
+    parser.add_argument("addrs", nargs="*", help="deferred functions (default: every one at --min-score or better)")
+    parser.add_argument("--min-score", type=float, default=90.0)
+    parser.add_argument("--jobs", type=int, default=8)
+    parser.add_argument("-o", "--out", type=Path, default=p.state / "alias-plan.json")
+    args = parser.parse_args(argv)
+    if args.addrs:
+        addresses = [p.parse_addr(a) for a in args.addrs]
+    else:
+        addresses = sorted(a for a, rec in p.deferred().items()
+                           if ((rec.get("best") or {}).get("score") or 0) >= args.min_score)
+    probes = p.state_dir("tmp", "aliases")
+
+    def probe(address: int):
+        best = p.state / "deferred" / f"{addr_key(address)}.cpp"
+        if not best.is_file():
+            return address, None
+        # A first line of its own: try.py refuses a source it checked before. The lead's checks have no
+        # claim, so neither the cap nor the patience of a worker's applies.
+        copy = probes / f"{addr_key(address)}-{time.time_ns()}.cpp"
+        copy.write_bytes(f"// fixnames.py aliases: {copy.stem}\n".encode() + best.read_bytes())
+        proc = tool(p, "try.py", fmt_addr(address), str(copy), "--json", "--patience", "0", "--cap", "1000")
+        try:
+            return address, json.loads(proc.stdout)
+        except ValueError:
+            return address, None
+
+    found = {}
+    with ThreadPoolExecutor(max_workers=max(1, args.jobs)) as pool:
+        for address, result in pool.map(probe, addresses):
+            names = other_names(result) if result else None
+            if names and all(p.by_name.get(n) is None or p.by_name[n].address == a for n, a in names.items()):
+                found[address] = names
+    claims = {}  # a name two candidates give two addresses names neither
+    for names in found.values():
+        for name, target in names.items():
+            claims.setdefault(name, set()).add(target)
+    plan = {"aliases": {}, "blocked": []}
+    for address, names in sorted(found.items()):
+        if any(len(claims[n]) > 1 for n in names):
+            print(f"{fmt_addr(address)}: left out, " + ", ".join(
+                f"{n} names {', '.join(map(fmt_addr, sorted(claims[n])))}" for n in names if len(claims[n]) > 1))
+            continue
+        for name, target in names.items():
+            have = plan["aliases"].setdefault(fmt_addr(target), [])
+            if name not in have:
+                have.append(name)
+        plan["blocked"].append(fmt_addr(address))
+        print(f"{fmt_addr(address)}: " + ", ".join(f"{n} -> {fmt_addr(a)}" for n, a in names.items()))
+    atomic_write(args.out, json.dumps(plan, indent=1) + "\n")
+    print(f"{len(plan['blocked'])} of {len(addresses)} functions differ only in names; "
+          f"{sum(map(len, plan['aliases'].values()))} aliases; wrote {args.out}")
+
+
 def main() -> None:
-    if len(sys.argv) < 2 or sys.argv[1] not in ("prepare", "constants", "accept", "spec", "spec-accept"):
+    if len(sys.argv) < 2 or sys.argv[1] not in ("prepare", "constants", "accept", "spec", "spec-accept", "aliases"):
         sys.exit(__doc__)
     if os.environ.get("T3_AGENT_ID"):
         sys.exit("fixnames.py is the lead's")
     p = Project()
+    if sys.argv[1] == "aliases":
+        aliases(p, sys.argv[2:])
+        return
     if sys.argv[1] in ("spec", "spec-accept"):
         spec = json.loads(Path(sys.argv[2]).read_text(encoding="utf-8"))
         (spec_prepare if sys.argv[1] == "spec" else spec_accept)(p, spec)

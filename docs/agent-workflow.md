@@ -663,6 +663,13 @@ more names in symbols.txt (`type:alias`, with `fixnames.py spec`'s
 [tools/cc.py](../tools/cc.py), which gives references to an alias the
 address's own name, so the gate and objdiff's report pair them
 ([matching.md](matching.md), "One address, several names").
+`fixnames.py aliases` finds the deferred functions waiting on such names:
+it checks each best candidate again, and when every row that differs is a
+relocation naming the target's address otherwise (a folded callee, a
+caller's guessed signature, a base class's name for a shared destructor),
+it writes those names as a plan's `aliases` and the functions as its
+`blocked`, for `fixnames.py spec`. A name symbols.txt gives another address
+leaves its function out: that candidate calls the wrong function.
 
 Scalar deleting destructors (`??_G`) are compiler-generated: they match
 from a class that declares `virtual ~C();` at slot 0, where the class's

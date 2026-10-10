@@ -1114,6 +1114,29 @@ def test_header_rules(base: Path) -> None:
 TESTS.append(test_header_rules)
 
 
+def test_fixnames_aliases(base: Path) -> None:
+    """fixnames.py aliases plans an alias for a callee a deferred candidate names otherwise, and leaves out
+    a candidate whose callee's name symbols.txt gives another address."""
+    e = Env(base, "aliases", named={"?Helper@@YAHH@Z"}, extra={"?Other@@YAHH@Z": 0x10A40000})
+    get, twice = "?Get@Foo@@QBEHXZ", "?Twice@@YAHH@Z"
+    proc = e.run("try.py", e.addr(get), e.candidate(get, "int Foo::Get() const { return a + b * 3 + "
+                                                         "Helper2(g_counter); }", extra="int Helper2(int);\n"))
+    check(proc.returncode == 1 and "?Helper2@@YAHH@Z" in proc.stdout, "another name for Helper differs", proc)
+    e.run("accept.py", "defer", e.addr(get), "name-conflict: Helper2")
+    proc = e.run("try.py", e.addr(twice), e.candidate(twice, "int Twice(int x) { return Other(x) + Helper(x + 1); }"))
+    check(proc.returncode == 1, "Other is not Helper", proc)
+    e.run("accept.py", "defer", e.addr(twice), "name-conflict: Other")
+    out = e.root / "alias-plan.json"
+    proc = e.run("fixnames.py", "aliases", "--min-score", "0", "-o", out, agent="")
+    plan = json.loads(out.read_text(encoding="utf-8")) if out.is_file() else {}
+    check(plan.get("aliases") == {e.addr("?Helper@@YAHH@Z"): ["?Helper2@@YAHH@Z"]},
+          "the other name becomes an alias of Helper's address", proc)
+    check(plan.get("blocked") == [e.addr(get)], "only the name-only function waits on the plan", proc)
+
+
+TESTS.append(test_fixnames_aliases)
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("-k", help="run only tests whose name contains this")
