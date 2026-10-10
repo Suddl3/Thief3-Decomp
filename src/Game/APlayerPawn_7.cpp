@@ -1,4 +1,4 @@
-// Game/Unsorted_10A46450_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/APlayerPawn_7.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
 struct Struct_10A465C0

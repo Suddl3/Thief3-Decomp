@@ -1,4 +1,4 @@
-// Game/Unsorted_10AC14A0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/Class_10E6F910.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Core/Core.h"
 #include "Game/Struct_10AC14A0.h"

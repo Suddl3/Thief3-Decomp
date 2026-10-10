@@ -1,4 +1,4 @@
-// Game/Unsorted_10C60C90.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/Class_10E9CB00.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
 extern "C" __declspec(dllimport) void __stdcall Sleep(unsigned long dwMilliseconds);

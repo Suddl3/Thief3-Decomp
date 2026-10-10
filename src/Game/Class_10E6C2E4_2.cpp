@@ -1,4 +1,4 @@
-// Game/Unsorted_10AA9450.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/Class_10E6C2E4_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
 typedef struct _iobuf FILE;

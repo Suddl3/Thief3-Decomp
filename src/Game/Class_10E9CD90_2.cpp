@@ -1,4 +1,4 @@
-// Game/Unsorted_10C63FD0_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/Class_10E9CD90_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
 extern "C" void* memcpy(void* Dest, const void* Src, unsigned Count);

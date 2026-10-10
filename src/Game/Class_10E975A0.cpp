@@ -1,4 +1,4 @@
-// Game/Unsorted_10BECF00.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/Class_10E975A0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
 struct Struct_10BC4240_Param;

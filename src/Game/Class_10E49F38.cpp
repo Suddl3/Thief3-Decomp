@@ -1,4 +1,4 @@
-// Game/Unsorted_10934810_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/Class_10E49F38.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
 class IDirect3DVertexBuffer8

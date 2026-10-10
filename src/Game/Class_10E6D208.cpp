@@ -1,4 +1,4 @@
-// Game/Unsorted_10A2F220.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/Class_10E6D208.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
 // Ion Storm's placement new (0x10905C10).

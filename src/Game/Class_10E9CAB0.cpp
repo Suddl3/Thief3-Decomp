@@ -1,4 +1,4 @@
-// Game/Unsorted_10C61E70_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/Class_10E9CAB0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
 // Ion Storm's string (0x109081E0): a char pointer, null when default constructed.

@@ -1,4 +1,4 @@
-// Game/Unsorted_1098E470.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/AFX.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
 #include <new>

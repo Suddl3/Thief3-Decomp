@@ -1,4 +1,4 @@
-// Game/Unsorted_10A84D10.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/Class_10E6C390.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
 extern void* DAT_10e6c390[];
