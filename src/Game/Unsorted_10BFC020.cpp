@@ -1,0 +1,38 @@
+// Game/Unsorted_10BFC020.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Declarations above the functions belong in include/ once they settle.
+
+class Class_10BFC020_Item
+{
+public:
+    virtual int Virtual0();
+    virtual void Virtual1();
+    virtual void Virtual2();
+    virtual void Virtual3();
+    virtual void Virtual4();
+    virtual void Virtual5();
+    virtual float Virtual6(int A);
+};
+
+class Class_10BFC020
+{
+public:
+    float FUN_10bfc020(int A);
+
+    char Unknown00[8];
+    int Unknown08;
+    char Unknown0C[4];
+    Class_10BFC020_Item** Unknown10;
+};
+
+// FUNCTION: 0x10BFC020 ?FUN_10bfc020@Class_10BFC020@@QAEMH@Z
+float Class_10BFC020::FUN_10bfc020(int A)
+{
+    float Sum = 0.0f;
+    for (int i = 0; i < Unknown08; i++)
+    {
+        Class_10BFC020_Item* Item = Unknown10[i];
+        if (Item->Virtual0() == A)
+            Sum += Item->Virtual6(0);
+    }
+    return Sum;
+}

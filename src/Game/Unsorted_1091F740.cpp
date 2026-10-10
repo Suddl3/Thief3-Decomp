@@ -39,6 +39,48 @@ public:
     bool Unknown4D;
 };
 
+class Class_10948260
+{
+public:
+    void FUN_10948260();
+
+    char Unknown00[0x1AC];
+};
+
+class Class_1091F9B0_Unknown0C
+{
+public:
+    char Unknown00[0xC];
+    int Unknown0C;
+    char Unknown10[0x44];
+    Class_10948260* Unknown54;
+};
+
+class Class_1091F9B0
+{
+public:
+    void FUN_1091f9b0();
+
+    char Unknown00[0xC];
+    Class_1091F9B0_Unknown0C* Unknown0C;
+    char Unknown10[0x20];
+    int Unknown30;
+    char Unknown34[4];
+    Class_10948260** Unknown38;
+};
+
+// FUNCTION: 0x1091F9B0 ?FUN_1091f9b0@Class_1091F9B0@@QAEXXZ
+void Class_1091F9B0::FUN_1091f9b0()
+{
+    if (Unknown0C)
+    {
+        for (int i = 0; i < Unknown0C->Unknown0C; i++)
+            Unknown0C->Unknown54[i].FUN_10948260();
+    }
+    for (int i = 0; i < Unknown30; i++)
+        Unknown38[i]->FUN_10948260();
+}
+
 // FUNCTION: 0x109203B0 ?FUN_109203b0@Class_109203B0@@QAEPAV1@XZ
 Class_109203B0* Class_109203B0::FUN_109203b0()
 {

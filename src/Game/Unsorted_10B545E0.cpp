@@ -89,6 +89,66 @@ public:
     Object_10B54760** Unknown10;
 };
 
+class Class_10905A90_Member
+{
+public:
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual void Virtual2();
+    virtual void Virtual3();
+    virtual void Virtual4();
+    virtual void Virtual5();
+    virtual void Virtual6();
+    virtual void Virtual7();
+    virtual void Virtual8(int A, int B);
+    virtual void Virtual9();
+};
+
+Class_10905A90_Member* FUN_10905aa0();
+
+// Ion Storm's placement new (0x10905C10).
+void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
+
+class Class_10B542D0
+{
+public:
+    Class_10B542D0()
+    {
+        Unknown00 = 0;
+        Unknown04 = 0;
+        Unknown08 = 0;
+        Unknown0C = 0;
+        Unknown10 = 0;
+        Unknown14 = 0;
+        Unknown18 = 0;
+        Unknown1C = 0;
+    }
+
+    int Unknown00;
+    int Unknown04;
+    int Unknown08;
+    int Unknown0C;
+    int Unknown10;
+    int Unknown14;
+    int Unknown18;
+    int Unknown1C;
+};
+
+extern Class_10B542D0* DAT_10ff6580;
+
+// FUNCTION: 0x10B546F0 ?FUN_10b546f0@@YAPAVClass_10B542D0@@XZ
+Class_10B542D0* FUN_10b546f0()
+{
+    if (DAT_10ff6580 == 0)
+    {
+        FUN_10905aa0()->Virtual8(0, 0);
+        Class_10B542D0* Result = new(0, 0, 0, 0, 0) Class_10B542D0;
+        DAT_10ff6580 = Result;
+        FUN_10905aa0()->Virtual9();
+    }
+    return DAT_10ff6580;
+}
+
 // FUNCTION: 0x10B54760 ?FUN_10b54760@Class_10B54760@@QAEXXZ
 void Class_10B54760::FUN_10b54760()
 {

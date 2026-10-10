@@ -92,6 +92,37 @@ public:
     virtual float FUN_10bd1a40();
 };
 
+// FUNCTION: 0x10BD19B0 ?FUN_10bd19b0@@YAHH@Z
+int FUN_10bd19b0(int Value)
+{
+    switch (Value % 11)
+    {
+    case 0:
+        return 0x3fff;
+    case 1:
+        return 0xffffc001;
+    case 2:
+        return 0x2fff;
+    case 3:
+        return 0xffffd001;
+    case 4:
+        return 0x1fff;
+    case 5:
+        return 0xffffe001;
+    case 6:
+        return 0xfff;
+    case 7:
+        return 0xfffff001;
+    case 9:
+        return 0x7fff;
+    case 10:
+        return 0x5fff;
+    case 11:
+        return 0xffffa001;
+    }
+    return 0;
+}
+
 // FUNCTION: 0x10BD1A40 ?FUN_10bd1a40@Class_10E93710@@UAEMXZ
 float Class_10E93710::FUN_10bd1a40()
 {

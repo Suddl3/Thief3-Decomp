@@ -1,0 +1,74 @@
+// Game/Unsorted_10BE91B0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Declarations above the functions belong in include/ once they settle.
+
+struct Struct_10C05A50
+{
+    float Unknown00;
+    float Unknown04;
+};
+
+struct Struct_10C3D0A0
+{
+    char Unknown00[0x2C];
+    Struct_10C05A50 Unknown2C;
+};
+
+float FUN_10c05a20(const Struct_10C05A50* A, const Struct_10C05A50* B);
+
+class Class_10c7d570
+{
+public:
+    void* FUN_10c7d570();
+};
+
+struct Struct_10BE91B0_Pos : public Struct_10C05A50
+{
+    float Unknown08;
+};
+
+struct Struct_10BE91B0
+{
+    char Unknown00[0x2C];
+    Struct_10BE91B0_Pos Unknown2C;
+};
+
+struct Struct_10BE91B0_Member
+{
+    char Unknown00[8];
+    Class_10c7d570* Unknown08;
+};
+
+class Class_10E8BE68
+{
+public:
+    virtual void Virtual0();
+
+    void FUN_10bc5b50();
+};
+
+class Class_10E96EB0 : public Class_10E8BE68
+{
+public:
+    virtual void Virtual1();
+    virtual void FUN_10be91b0();
+
+    Struct_10BE91B0_Member* Unknown04;
+    char Unknown08[0x38];
+    Struct_10BE91B0* Unknown40;
+    char Unknown44[4];
+    float Unknown48;
+};
+
+// FUNCTION: 0x10BE91B0 ?FUN_10be91b0@Class_10E96EB0@@UAEXXZ
+void Class_10E96EB0::FUN_10be91b0()
+{
+    if (Unknown40)
+    {
+        Struct_10BE91B0_Pos Local = Unknown40->Unknown2C;
+        Struct_10C3D0A0* Actor = (Struct_10C3D0A0*)Unknown04->Unknown08->FUN_10c7d570();
+        float Dist = FUN_10c05a20(&Local, &Actor->Unknown2C);
+        if (!(Dist < Unknown48))
+            return;
+    }
+    FUN_10bc5b50();
+}

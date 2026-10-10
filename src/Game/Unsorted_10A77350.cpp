@@ -29,6 +29,45 @@ public:
     Class_10E6BD18();
 };
 
+class UObject;
+
+class ULevel;
+
+template <class T> T* Cast(UObject* Src);
+
+struct Struct_10A78020
+{
+    char Unknown00[8];
+    int Unknown08;
+};
+
+class Class_10A78020
+{
+public:
+    void FUN_10a77750(ULevel* A);
+    void FUN_10a77af0(ULevel* A);
+    void FUN_10a78020(UObject* A, Struct_10A78020* B, int C);
+
+    char Unknown00[4];
+    int Unknown04;
+    char Unknown08[0xC];
+    int Unknown14;
+};
+
+// FUNCTION: 0x10A78020 ?FUN_10a78020@Class_10A78020@@QAEXPAVUObject@@PAUStruct_10A78020@@H@Z
+void Class_10A78020::FUN_10a78020(UObject* A, Struct_10A78020* B, int C)
+{
+    if (B && B->Unknown08 == 0)
+    {
+        ULevel* Level = Cast<ULevel>(A);
+        if (Unknown04 == 0 && Unknown14 == 0)
+        {
+            FUN_10a77750(Level);
+            FUN_10a77af0(Level);
+        }
+    }
+}
+
 // FUNCTION: 0x10A79050 ??0Class_10E6BD18@@QAE@XZ
 Class_10E6BD18::Class_10E6BD18()
 {

@@ -31,6 +31,47 @@ public:
     int Unknown24;
 };
 
+extern "C" void* memmove(void* Dest, const void* Src, unsigned Count);
+
+// A growable array of bytes: a count, the bytes allocated and the block.
+class Class_10A32000
+{
+public:
+    void FUN_10a32000(int NewCount);
+
+    int Unknown00;
+    int Unknown04;
+    char* Unknown08;
+};
+
+class Class_10C5B9D0
+{
+public:
+    void FUN_10c5b9d0();
+
+    char Unknown00[0x3C];
+    Class_10A32000 Unknown3C;
+};
+
+// FUNCTION: 0x10C5B9D0 ?FUN_10c5b9d0@Class_10C5B9D0@@QAEXXZ
+void Class_10C5B9D0::FUN_10c5b9d0()
+{
+    if (Unknown3C.Unknown00 > 1)
+    {
+        Class_10A32000* Arr = &Unknown3C;
+        int Index = Unknown3C.Unknown00 - 1;
+        if (Index != Arr->Unknown00 - 1)
+        {
+            int From = Index + 1;
+            int To = Index;
+            int Size = Arr->Unknown00 - Index - 1;
+            if (From != To && Size)
+                memmove(Arr->Unknown08 + To, Arr->Unknown08 + From, Size);
+        }
+        Arr->FUN_10a32000(Arr->Unknown00 - 1);
+    }
+}
+
 // FUNCTION: 0x10C5BA20 ?FUN_10c5ba20@Class_10C5BA20@@QAEPAV1@ABV1@@Z
 Class_10C5BA20* Class_10C5BA20::FUN_10c5ba20(const Class_10C5BA20& A)
 {

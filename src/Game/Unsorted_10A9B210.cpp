@@ -38,6 +38,38 @@ public:
     virtual Class_10A9AC80* FUN_10a9b3e0();
 };
 
+class Class_10D43FD0
+{
+public:
+    int FUN_10d43fd0(int A);
+    int FUN_10d41050(int A, float B, int C);
+};
+
+class Class_10E6D1AC
+{
+public:
+    virtual int FUN_10a9b210(int A, int B, int C, int* D);
+
+    Class_10D43FD0* Unknown04;
+    int Unknown08;
+};
+
+// FUNCTION: 0x10A9B210 ?FUN_10a9b210@Class_10E6D1AC@@UAEHHHHPAH@Z
+int Class_10E6D1AC::FUN_10a9b210(int A, int B, int C, int* D)
+{
+    switch (A)
+    {
+    case 0x7e:
+        if (Unknown04 && Unknown08)
+            return Unknown04->FUN_10d43fd0(Unknown08);
+        break;
+    case 0x7d:
+        if (Unknown04 && Unknown08)
+            return Unknown04->FUN_10d41050(Unknown08, 1.0f, 0);
+        break;
+    }
+}
+
 // FUNCTION: 0x10A9B3E0 ?FUN_10a9b3e0@Class_10E5D878@@UAEPAVClass_10A9AC80@@XZ
 Class_10A9AC80* Class_10E5D878::FUN_10a9b3e0()
 {

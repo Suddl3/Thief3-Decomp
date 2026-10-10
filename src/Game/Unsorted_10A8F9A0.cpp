@@ -60,6 +60,70 @@ public:
     virtual Class_10E6C908* FUN_10a8f9f0();
 };
 
+struct Struct_10AA3520
+{
+    char Unknown00[8];
+    int Unknown08;
+};
+
+struct Struct_10A8F9A0
+{
+    char Unknown00[4];
+    int Unknown04;
+};
+
+extern Struct_10AA3520* DAT_10f35dec;
+
+class Class_10C08940
+{
+public:
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual void Virtual2();
+    virtual int Virtual3(int A, int B);
+};
+
+class Class_10978090
+{
+public:
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual void Virtual2();
+    virtual void Virtual3();
+    virtual int Virtual4();
+
+    Class_10C08940* FUN_10978090();
+
+    Class_10C08940* Unknown04;
+};
+
+class Class_10AAB5C0 : public Class_10978090
+{
+public:
+    int FUN_10aab5c0();
+
+    int Unknown08;
+};
+
+class Class_10E5B578
+{
+public:
+    virtual int Virtual0(int A, int B, Struct_10A8F9A0* C, int* D) = 0;
+};
+
+class Class_10E6C904 : public Class_10AAB5C0, public Class_10E5B578
+{
+public:
+    virtual int Virtual0(int A, int B, Struct_10A8F9A0* C, int* D);
+};
+
+// FUNCTION: 0x10A8F9A0 ?Virtual0@Class_10E6C904@@UAEHHHPAUStruct_10A8F9A0@@PAH@Z
+int Class_10E6C904::Virtual0(int A, int B, Struct_10A8F9A0* C, int* D)
+{
+    if (C && DAT_10f35dec->Unknown08 && C->Unknown04 == DAT_10f35dec->Unknown08)
+        return FUN_10978090()->Virtual3(Virtual4(), FUN_10aab5c0());
+}
+
 // FUNCTION: 0x10A8F9F0 ?FUN_10a8f9f0@Class_10E5D788@@UAEPAVClass_10E6C908@@XZ
 Class_10E6C908* Class_10E5D788::FUN_10a8f9f0()
 {

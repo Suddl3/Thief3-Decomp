@@ -50,6 +50,35 @@ public:
 
 extern bool DAT_10f45c0c;
 
+class Class_10B215D0
+{
+public:
+    Class_10B215D0() {}
+    Class_10B215D0(float A, float B, float C) : Unknown00(A), Unknown04(B), Unknown08(C) {}
+
+    Class_10B215D0 FUN_10b215d0(const Class_10B215D0& N);
+
+    float Dot(const Class_10B215D0& V)
+    {
+        return Unknown04 * V.Unknown04 + (Unknown00 * V.Unknown00 + Unknown08 * V.Unknown08);
+    }
+
+    float Unknown00;
+    float Unknown04;
+    float Unknown08;
+};
+
+// FUNCTION: 0x10B215D0 ?FUN_10b215d0@Class_10B215D0@@QAE?AV1@ABV1@@Z
+Class_10B215D0 Class_10B215D0::FUN_10b215d0(const Class_10B215D0& N)
+{
+    Class_10B215D0 T;
+    T.Unknown00 = N.Unknown00 * Dot(N);
+    T.Unknown04 = N.Unknown04 * Dot(N);
+    T.Unknown08 = N.Unknown08 * Dot(N);
+    return Class_10B215D0(Unknown00 - (T.Unknown00 + T.Unknown00), Unknown04 - (T.Unknown04 + T.Unknown04),
+                          Unknown08 - (T.Unknown08 + T.Unknown08));
+}
+
 // FUNCTION: 0x10B217F0 ?FUN_10b217f0@AGarrett@@UAEHMH@Z
 int AGarrett::FUN_10b217f0(float A, int B)
 {

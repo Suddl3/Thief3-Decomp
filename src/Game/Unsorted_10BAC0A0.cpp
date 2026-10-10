@@ -21,6 +21,25 @@ public:
     int Unknown2C;
 };
 
+// Ion Storm's placement new and its delete (0x10905C10; the delete folded into ::operator delete).
+void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
+
+void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
+
+class Class_10DDA810
+{
+public:
+    Class_10DDA810();
+
+    char Unknown00[0x4c];
+};
+
+// FUNCTION: 0x10BAD820 ?FUN_10bad820@@YAPAVClass_10DDA810@@XZ
+Class_10DDA810* FUN_10bad820()
+{
+    return new(0, 0, 0, 0, 0) Class_10DDA810;
+}
+
 // FUNCTION: 0x10BAD8A0 ??0Class_10E8D7A8@@QAE@ABV0@@Z
 Class_10E8D7A8::Class_10E8D7A8(const Class_10E8D7A8& Other)
     : Unknown04(Other.Unknown04), Unknown08(Other.Unknown08), Unknown0C(Other.Unknown0C), Unknown10(Other.Unknown10),

@@ -61,6 +61,42 @@ public:
 
 Class_10905A90_Member* FUN_10905aa0();
 
+struct Struct_10939380
+{
+    Struct_10939380* Unknown00;
+    Struct_10939380* Unknown04;
+    Struct_10939380* Unknown08;
+    char Unknown0C[5];
+    char Unknown11;
+};
+
+class Class_10939380
+{
+public:
+    void FUN_10939380(Struct_10939380* Node);
+
+    char Unknown00[0x1C];
+    Struct_10939380* Unknown1C;
+};
+
+// FUNCTION: 0x10939380 ?FUN_10939380@Class_10939380@@QAEXPAUStruct_10939380@@@Z
+void Class_10939380::FUN_10939380(Struct_10939380* Node)
+{
+    Struct_10939380* Left = Node->Unknown00;
+    Node->Unknown00 = Left->Unknown08;
+    if (!Left->Unknown08->Unknown11)
+        Left->Unknown08->Unknown04 = Node;
+    Left->Unknown04 = Node->Unknown04;
+    if (Node == Unknown1C->Unknown04)
+        Unknown1C->Unknown04 = Left;
+    else if (Node == Node->Unknown04->Unknown08)
+        Node->Unknown04->Unknown08 = Left;
+    else
+        Node->Unknown04->Unknown00 = Left;
+    Left->Unknown08 = Node;
+    Node->Unknown04 = Left;
+}
+
 // FUNCTION: 0x109394C0 ?FUN_109394c0@Class_109394C0@@QAEPAV1@XZ
 Class_109394C0* Class_109394C0::FUN_109394c0()
 {

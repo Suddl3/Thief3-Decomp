@@ -51,6 +51,59 @@ public:
     Class_10C01140 Index;
 };
 
+class Class_10905A90_Member
+{
+public:
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual void Virtual2();
+    virtual void Virtual3();
+    virtual void Virtual4();
+    virtual void Virtual5();
+    virtual void Virtual6();
+    virtual void Virtual7();
+    virtual void Virtual8(int A, int B);
+    virtual void Virtual9();
+};
+
+Class_10905A90_Member* FUN_10905aa0();
+
+class Class_10C013C0
+{
+public:
+    Class_10C013C0()
+    {
+        Unknown00 = 0;
+        Unknown04 = 0;
+        Unknown08 = 0;
+        Unknown0C = 0;
+        Unknown10 = 0;
+        Unknown14 = 0;
+    }
+
+    int Unknown00;
+    int Unknown04;
+    int Unknown08;
+    int Unknown0C;
+    int Unknown10;
+    int Unknown14;
+};
+
+extern Class_10C013C0* DAT_10ff66a0;
+
+// FUNCTION: 0x10C013C0 ?FUN_10c013c0@@YAXXZ
+void FUN_10c013c0()
+{
+    if (DAT_10ff66a0 == 0)
+    {
+        FUN_10905aa0()->Virtual8(0, 0);
+        Class_10C013C0* Result = new(0, 0, 0, 0, 0) Class_10C013C0;
+        DAT_10ff66a0 = Result;
+        FUN_10905aa0()->Virtual9();
+    }
+    DAT_10ff66a0->Unknown04++;
+}
+
 // FUNCTION: 0x10C01430 ?FUN_10c01430@Class_10C01430@@QAEXPAX@Z
 void Class_10C01430::FUN_10c01430(void* Value)
 {

@@ -302,3 +302,43 @@
 0x10C03360 libs   std::vector<T>::push_back body (insert via 0x10C02F70)
 0x10A1F59A libs   a std::basic_ios setstate member (ios_base::clear through a virtual base; entered with esi/edi, a chunk of a l
 0x10C68A70 libs   an MSVC STL locale facet constructor (_Locinfo, _Getcvt)
+0x10925940 libs   std::basic_string<char>::_Tidy (VC7.1 xstring)
+0x10A10110 engine TArray<INT>::operator+=, an instance of Epic's template (appends Other's elements through FArray::Add)
+0x10C66B00 libs   std::basic_ostream inserter (VC7.1 <ostream>: sentry, catch(...) setstate(badbit) through ios_base::clear)
+0x10C66C70 libs   std::basic_ostream inserter (VC7.1 <ostream>: sentry, catch(...) setstate(badbit) through ios_base::clear)
+0x10C66D8F libs   tail fragment of a std::basic_ostream member (the catch continuation of 0x10C66C70)
+0x1097DC70 libs   std::fill over std::set<int> elements (VC7.1 <xutility>; set::operator= inlined: _Tree::erase, _Copy)
+0x10C40840 libs   std::fill over a 12-byte element holding a ref-counted pointer (VC7.1 <xutility>; the element's operator= inli
+0x10C402F0 libs   std::copy_backward over a ref-counted pointer (VC7.1 <xutility>; the pointer's operator= inlined)
+0x10A1F060 libs   chunk of a std::basic_istream/ostream member (entered with esi/ebp set, EH state -1, setstate through ios_base
+0x10A2B2E0 engine TMultiMap<K,V>::Add, an instance of Epic's template (TMapBase::Add inlined: new(Pairs) TPair, hash link, Rehas
+0x10C68B20 libs   a locale facet's static _Getcat (VC7.1 <xlocale>: if (_Ppf && !*_Ppf) *_Ppf = new facet(0); return the categor
+0x10C44B00 libs   std::_Tree::insert(const value_type&) of a multimap/multiset (VC7.1 <xtree>: walk to the nil node, _Insert, re
+0x1097D7E0 libs   std::copy_backward over 16-byte {int, std::set<int>} elements (VC7.1 <xutility>; set::operator= inlined: _Tree
+0x10C40340 libs   std::copy_backward over a 12-byte {ref-counted pointer, int, int} element (VC7.1 <xutility>; the element's ope
+0x10C40000 libs   std::_Tree::_Rrotate (VC7.1 <xtree>; _Isnil at +0x1D, root through _Myhead)
+0x10C40660 libs   std::_Tree::_Lrotate (VC7.1 <xtree>)
+0x10C406C0 libs   std::_Tree::_Lrotate (VC7.1 <xtree>)
+0x10C407D0 libs   std::_Tree_nod::_Node constructor (left, parent, right, value, color; _Isnil false)
+0x10C400C0 libs   std::pair constructors of a multimap's value_type (two ref-counted pointers; built and destroyed around _Tree:
+0x10C40440 libs   std::pair constructors of a multimap's value_type (two ref-counted pointers; built and destroyed around _Tree:
+0x10C405C0 libs   std::pair constructors of a multimap's value_type (two ref-counted pointers; built and destroyed around _Tree:
+0x10C40060 libs   std::_Tree::const_iterator::_Inc (successor walk; _Isnil at +0x1D)
+0x10C40760 libs   std::_Tree::_Lbound (lower_bound walk; the key's operator< inlined)
+0x10C43000 libs   std::vector<RefPtr>::erase(first, last) (VC7.1 <vector>: _Copy_opt(last, _Mylast, first), destroy the tail, _M
+0x10A1F467 libs   chunk of a std::basic_istream/ostream member (no prologue; entered with ebp/esi/edi set, an iostream EH body)
+0x1097E240 libs   std::vector<16-byte T>::push_back (VC7.1 <vector>: _Ufill when size < capacity, else _Insert_n)
+0x1097DE00 libs   std::vector<16-byte T>::_Ufill / _Insert_n (callees of push_back 0x1097E240)
+0x1097DF20 libs   std::vector<16-byte T>::_Ufill / _Insert_n (callees of push_back 0x1097E240)
+0x10C6957C libs   tail fragment of an STL iostream member (no prologue, EH state writes; follows 0x10C694C0, between std::basic_
+0x10A10160 engine TArray<INT>::operator=, an instance of Epic's template (Empty(Other.Num) inlined: Num = 0, Max = Other.Num, Re
+0x10C69126 libs   chunk of a std::basic_ostream sentry (ios_base::clear, then tie()->flush() through the virtual base)
+0x10C69458 libs   chunk of a std::basic_ios setstate/clear on a virtual-base stream (no prologue; ios_base::clear)
+0x10C411B0 libs   std::_Med3 (VC7.1 <algorithm>, the median of three for std::sort; iter_swap 0x10C40890 on the key at +8)
+0x10C5CC00 libs   std::_Tree::const_iterator::_Inc (VC7.1 <xtree>)
+0x10C56D80 libs   std::_Tree::const_iterator::_Inc (VC7.1 <xtree>; _Isnil node layout)
+0x10C40120 libs   std::fill / std::_Copy_opt over a ref-counted pointer (VC7.1 <xutility>; the pointer's operator= inlined; _Cop
+0x10C402A0 libs   std::fill / std::_Copy_opt over a ref-counted pointer (VC7.1 <xutility>; the pointer's operator= inlined; _Cop
+0x109F0AD0 libs   std::basic_streambuf::_Init() (VC7.1 <streambuf>; called by basic_filebuf::close / _Initcvt)
+0x10C4A370 libs   std::basic_filebuf::_Endwrite (VC7.1 <fstream>; called by close 0x10C4B240)
+0x10C48B10 libs   a locale facet's static _Getcat (VC7.1 <xlocale>: new facet(0) when *_Ppf is null; returns 2 = _X_CTYPE; calle

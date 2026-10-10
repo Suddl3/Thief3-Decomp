@@ -20,6 +20,56 @@ public:
     int Unknown14;
 };
 
+extern const char DAT_10e6c100[];
+
+class Class_109081E0
+{
+public:
+    Class_109081E0(const char* In);
+    ~Class_109081E0();
+
+    void* Unknown00;
+};
+
+class Class_10E6C104
+{
+public:
+    Class_10E6C104();
+    ~Class_10E6C104();
+    virtual void Virtual0();
+
+    int Unknown04;
+};
+
+class Class_10AB37D0
+{
+public:
+    Class_10AB37D0* FUN_10ab37d0();
+};
+
+class Class_10E6D990 : public Class_10E6C104
+{
+public:
+    Class_10E6D990();
+    virtual void Virtual0();
+
+    Class_109081E0 Unknown08;
+    int Unknown0C;
+    int Unknown10;
+    int Unknown14;
+    int Unknown18;
+    Class_109081E0 Unknown1C;
+    Class_10AB37D0 Unknown20;
+};
+
+// FUNCTION: 0x10AA84E0 ??0Class_10E6D990@@QAE@XZ
+Class_10E6D990::Class_10E6D990()
+    : Class_10E6C104(), Unknown08(DAT_10e6c100), Unknown0C(0), Unknown10(0), Unknown14(0), Unknown18(0),
+      Unknown1C(DAT_10e6c100)
+{
+    Unknown20.FUN_10ab37d0();
+}
+
 // FUNCTION: 0x10AA90B0 ?FUN_10aa90b0@Class_10E6C290@@UAEXPAXHH@Z
 void Class_10E6C290::FUN_10aa90b0(void* A, int, int)
 {

@@ -31,6 +31,37 @@ public:
     float Unknown00;
 };
 
+void FUN_1092bdb0(void* Block);
+
+struct Struct_1095AFE0_Unknown04 {};
+
+struct Struct_1095AFE0_Unknown08 {};
+
+class Class_1095AFE0
+{
+public:
+    void FUN_1095afe0();
+
+    char Unknown00[4];
+    Struct_1095AFE0_Unknown04* Unknown04;
+    Struct_1095AFE0_Unknown08** Unknown08;
+    int Unknown0C;
+};
+
+// FUNCTION: 0x1095AFE0 ?FUN_1095afe0@Class_1095AFE0@@QAEXXZ
+void Class_1095AFE0::FUN_1095afe0()
+{
+    for (int i = 0; i < Unknown0C; i++)
+        FUN_1092bdb0(Unknown08[i]);
+    if (Unknown04)
+        delete Unknown04;
+    if (Unknown08)
+        delete Unknown08;
+    Unknown0C = 0;
+    Unknown04 = 0;
+    Unknown08 = 0;
+}
+
 // FUNCTION: 0x1095B040 ?FUN_1095b040@Class_1095B040@@QAEXH@Z
 void Class_1095B040::FUN_1095b040(int A)
 {

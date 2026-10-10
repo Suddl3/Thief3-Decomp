@@ -1,6 +1,8 @@
 // Game/Unsorted_10A66290.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
+#include "Core/Core.h"
+
 class Class_10E6B288
 {
 public:
@@ -123,6 +125,43 @@ public:
     virtual void Virtual108();
     virtual void Virtual109();
 };
+
+class Class_1091AA50
+{
+public:
+    void FUN_1091aa50();
+};
+
+class Class_10A66190
+{
+public:
+    virtual ~Class_10A66190();
+};
+
+class Class_10E6B078 : public Class_10A66190
+{
+public:
+    virtual ~Class_10E6B078();
+
+    char Unknown04[0x154];
+    FString Unknown158;
+    char Unknown164[0x28];
+    Class_1091AA50* Unknown18C;
+};
+
+// FUNCTION: 0x10A663B0 ??1Class_10E6B078@@UAE@XZ
+Class_10E6B078::~Class_10E6B078()
+{
+    Class_1091AA50* Object = Unknown18C;
+    if (Object)
+    {
+        Object->FUN_1091aa50();
+        delete Object;
+    }
+}
+
+// FUNCTION: 0x10A66430 ??_GClass_10E6B078@@UAEPAXI@Z
+// Compiler-generated: emitted with the class's vtable by 0x10A663B0's definition in this unit.
 
 // FUNCTION: 0x10A66560 ?FUN_10a66560@Class_10E6AEA0@@UAEXXZ
 void Class_10E6AEA0::FUN_10a66560()

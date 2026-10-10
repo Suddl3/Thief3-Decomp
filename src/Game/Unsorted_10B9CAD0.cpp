@@ -368,6 +368,75 @@ public:
     Object_10B9CAC0** Unknown18;
 };
 
+class Class_10BA9FD0;
+
+class Class_10bb7580;
+
+class Class_10B9CB80_Member;
+
+struct Struct_10B98C50
+{
+    char Unknown00[8];
+    Class_10BA9FD0* Unknown08;
+};
+
+bool FUN_10b98c50(Struct_10B98C50* A);
+
+class Class_10BA9FD0
+{
+public:
+    void* FUN_10ba9fd0();
+};
+
+class Class_10bb7580
+{
+public:
+    bool FUN_10bb7580();
+};
+
+class Class_10B9CB80_Member
+{
+public:
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual void Virtual2();
+    virtual void Virtual3();
+    virtual void Virtual4();
+    virtual void Virtual5();
+    virtual void Virtual6();
+    virtual void Virtual7();
+    virtual void Virtual8();
+    virtual void Virtual9();
+    virtual void Virtual10();
+    virtual void Virtual11();
+    virtual void Virtual12();
+    virtual bool Virtual13(int A);
+};
+
+class Class_10B9CB80
+{
+public:
+    bool FUN_10b9cb80(int A);
+
+    char Unknown00[0xC];
+    Struct_10B98C50* Unknown0C;
+    int Unknown10;
+    char Unknown14[4];
+    Class_10B9CB80_Member** Unknown18;
+};
+
+// FUNCTION: 0x10B9CB80 ?FUN_10b9cb80@Class_10B9CB80@@QAE_NH@Z
+bool Class_10B9CB80::FUN_10b9cb80(int A)
+{
+    if (((Class_10bb7580*)Unknown0C->Unknown08->FUN_10ba9fd0())->FUN_10bb7580() && Unknown10 != 0)
+    {
+        Class_10B9CB80_Member* Last = Unknown18[Unknown10 - 1];
+        if (Last && Last->Virtual13(A))
+            return FUN_10b98c50(Unknown0C) ? true : false;
+    }
+    return false;
+}
+
 // FUNCTION: 0x10B9CBE0 ?FUN_10b9cbe0@Class_10B9CBE0@@QAEXXZ
 void Class_10B9CBE0::FUN_10b9cbe0()
 {

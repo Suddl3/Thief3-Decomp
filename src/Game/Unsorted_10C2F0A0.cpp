@@ -48,6 +48,14 @@ public:
     Class_10BAA580* Unknown08;
 };
 
+// FUNCTION: 0x10C2F170 ?FUN_10c2f170@@YAHH@Z
+int FUN_10c2f170(int Kind)
+{
+    if (Kind == 9 || Kind == 0xC || Kind == 8 || Kind == 0xB || Kind == 0xA || Kind == 0xD || Kind == 0xE || Kind == 1 || Kind == 7)
+        return 1;
+    return 0;
+}
+
 // FUNCTION: 0x10C2F2A0 ?FUN_10c2f2a0@Class_10E9AC80@@UAEXXZ
 void Class_10E9AC80::FUN_10c2f2a0()
 {

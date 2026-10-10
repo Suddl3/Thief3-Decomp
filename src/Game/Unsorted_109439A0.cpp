@@ -30,6 +30,42 @@ public:
     Entry_10946110* Unknown08;
 };
 
+extern "C" void* memcpy(void*, const void*, unsigned int);
+
+class Class_10A32000
+{
+public:
+    void FUN_10a32000(int A);
+
+    char Unknown00[8];
+    char* Unknown08;
+};
+
+class Object_10944D50
+{
+public:
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual void Virtual2();
+    virtual void Virtual3();
+    virtual void Virtual4();
+    virtual void Virtual5();
+    virtual void Virtual6(int A, int B, int* C);
+    virtual void Virtual7();
+};
+
+// FUNCTION: 0x10944D50 ?FUN_10944d50@@YGXPAVObject_10944D50@@HHPAVClass_10A32000@@PAH@Z
+void __stdcall FUN_10944d50(Object_10944D50* A, int B, int Size, Class_10A32000* C, int* Offset)
+{
+    int Base = 0;
+    A->Virtual6(0, 0, &Base);
+    char* Src = (char*)(Base + B);
+    C->FUN_10a32000(*Offset + Size);
+    memcpy(C->Unknown08 + *Offset, Src, Size);
+    *Offset += Size;
+    A->Virtual7();
+}
+
 // FUNCTION: 0x10946110 ?FUN_10946110@Class_10946110@@QAEHPBUEntry_10946110@@@Z
 int Class_10946110::FUN_10946110(const Entry_10946110* Item)
 {

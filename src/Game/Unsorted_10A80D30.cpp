@@ -1,6 +1,8 @@
 // Game/Unsorted_10A80D30.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
+#include <stdio.h>
+
 class Class_10AA7530;
 
 class Class_10E6C1F0
@@ -65,6 +67,48 @@ public:
 
     void FUN_10aa7530(int A, int B);
 };
+
+extern char DAT_10e6c0f0[];
+
+extern void* DAT_10e6c0f8[];
+
+class Object_10A80D30
+{
+public:
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual void Virtual2();
+    virtual void Virtual3();
+    virtual void Virtual4();
+    virtual void Virtual5();
+    virtual void Virtual6();
+    virtual int Virtual7(FILE* File, int A);
+};
+
+class Class_10A80D30
+{
+public:
+    bool FUN_10a80d30(FILE* File, int A);
+
+    char Unknown00[4];
+    int ChildCount;
+    char Unknown08[4];
+    Object_10A80D30** Children;
+    char Unknown10[0x24];
+    char* Subject;
+};
+
+// FUNCTION: 0x10A80D30 ?FUN_10a80d30@Class_10A80D30@@QAE_NPAU_iobuf@@H@Z
+bool Class_10A80D30::FUN_10a80d30(FILE* File, int A)
+{
+    fprintf(File, DAT_10e6c0f0, DAT_10e6c0f8, Subject);
+    for (int i = 0; i < ChildCount; i++)
+    {
+        if (!Children[i]->Virtual7(File, A))
+            return false;
+    }
+    return true;
+}
 
 // FUNCTION: 0x10A80D90 ?FUN_10a80d90@Class_10E6C1F0@@UAE_NH@Z
 bool Class_10E6C1F0::FUN_10a80d90(int A)

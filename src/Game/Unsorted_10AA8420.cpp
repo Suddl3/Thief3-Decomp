@@ -59,6 +59,56 @@ public:
     char* Unknown08;
 };
 
+class Class_10A80CB0
+{
+public:
+    ~Class_10A80CB0();
+
+    int Unknown00;
+    int Unknown04;
+};
+
+class Class_10AA8420_Unknown08_Unknown00
+{
+public:
+    virtual void Virtual0();
+    virtual void Virtual1(Class_10AA8420_Unknown08_Unknown00** A);
+    virtual void Virtual2();
+    virtual void Virtual3();
+    virtual void Virtual4();
+    virtual void Virtual5();
+    virtual void Virtual6();
+    virtual bool Virtual7(Class_10AA8420_Unknown08_Unknown00** A);
+};
+
+class Class_10AA8420_Unknown08
+{
+public:
+    Class_10AA8420_Unknown08_Unknown00* Unknown00;
+    int Unknown04;
+    int Unknown08;
+};
+
+class Class_10AA8420 : public Class_10A80CB0
+{
+public:
+    ~Class_10AA8420();
+
+    Class_10AA8420_Unknown08 Unknown08;
+};
+
+// FUNCTION: 0x10AA8420 ??1Class_10AA8420@@QAE@XZ
+Class_10AA8420::~Class_10AA8420()
+{
+    Class_10AA8420_Unknown08* Handle = &Unknown08;
+    if (Handle->Unknown00 && Handle->Unknown00->Virtual7(&Handle->Unknown00))
+    {
+        Handle->Unknown00->Virtual1(&Handle->Unknown00);
+        Handle->Unknown04 = -1;
+        Handle->Unknown08 = -1;
+    }
+}
+
 // FUNCTION: 0x10AA8490 ?FUN_10aa8490@Class_10E6D990@@UAEHPAU_iobuf@@H@Z
 int Class_10E6D990::FUN_10aa8490(FILE* File, int Param)
 {

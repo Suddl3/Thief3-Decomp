@@ -33,6 +33,57 @@ public:
     Struct_10951A40 Unknown4C;
 };
 
+class Class_109514C0
+{
+public:
+    virtual ~Class_109514C0();
+    void FUN_109514c0();
+};
+
+class Class_10953590;
+
+class Class_10939570
+{
+public:
+    void FUN_1093bce0(Class_10953590* Param);
+};
+
+extern Class_10939570* DAT_10f323fc;
+
+class Class_10951900
+{
+public:
+    void FUN_10951660();
+
+    char Unknown00[4];
+    int Unknown04;
+    char Unknown08[0x10];
+    int Unknown18;
+    char Unknown1C[4];
+    Class_10953590* Unknown20;
+    Class_109514C0* Unknown24;
+    int Unknown28;
+};
+
+// FUNCTION: 0x10951660 ?FUN_10951660@Class_10951900@@QAEXXZ
+void Class_10951900::FUN_10951660()
+{
+    if (Unknown28 == 1 && Unknown18 == 0x3f800000)
+        Unknown04 &= ~0x400;
+    Unknown28 = 0;
+    if (Unknown24)
+    {
+        Unknown24->FUN_109514c0();
+        delete Unknown24;
+        Unknown24 = 0;
+    }
+    if (Unknown20)
+    {
+        DAT_10f323fc->FUN_1093bce0(Unknown20);
+        Unknown20 = 0;
+    }
+}
+
 // FUNCTION: 0x109516C0 ?FUN_109516c0@Class_109516C0@@QAEPAUClass_109516C0_Entry@@H@Z
 Class_109516C0_Entry* Class_109516C0::FUN_109516c0(int Index)
 {

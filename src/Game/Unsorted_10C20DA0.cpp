@@ -1,6 +1,8 @@
 // Game/Unsorted_10C20DA0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
+#include "Core/Core.h"
+
 class Class_10905A90_Member
 {
 public:
@@ -35,6 +37,16 @@ public:
     int Unknown04;
     void* Unknown08;
 };
+
+extern float DAT_10eafbdc;
+
+// FUNCTION: 0x10C211C0 ?FUN_10c211c0@@YAHPAVFVector@@00@Z
+UBOOL FUN_10c211c0(FVector* Normal, FVector* A, FVector* B)
+{
+    FVector V(A->X - B->X, A->Y - B->Y, 0.0f);
+    V.Normalize();
+    return V.Z * Normal->Z + V.Y * Normal->Y + V.X * Normal->X > DAT_10eafbdc;
+}
 
 // FUNCTION: 0x10C223A0 ?FUN_10c223a0@Class_10C223A0@@QAEXXZ
 void Class_10C223A0::FUN_10c223a0()

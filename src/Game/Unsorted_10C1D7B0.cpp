@@ -74,6 +74,72 @@ public:
     int Unknown88;
 };
 
+struct Struct_Vec3
+{
+    float Unknown00;
+    float Unknown04;
+    float Unknown08;
+};
+
+struct Struct_10C1DD00
+{
+    int Unknown00;
+    Struct_Vec3 Unknown04;
+    int Unknown10;
+    int Unknown14;
+    bool Unknown18;
+    int Unknown1C;
+    int Unknown20;
+};
+
+class Class_10C1DD00
+{
+public:
+    int FUN_10c1dd00(Struct_10C1DD00& A, Struct_10C1DD00& B, bool bClear);
+
+    int Unknown00;
+    int Unknown04;
+    int Unknown08;
+    int Unknown0C;
+    int Unknown10;
+    int Unknown14;
+    Struct_Vec3 Unknown18;
+    int Unknown24;
+    int Unknown28;
+    bool Unknown2C;
+    int Unknown30;
+    int Unknown34;
+    int Unknown38;
+    Struct_Vec3 Unknown3C;
+    int Unknown48;
+    int Unknown4C;
+    bool Unknown50;
+    int Unknown54;
+    int Unknown58;
+};
+
+// FUNCTION: 0x10C1DD00 ?FUN_10c1dd00@Class_10C1DD00@@QAEHAAUStruct_10C1DD00@@0_N@Z
+int Class_10C1DD00::FUN_10c1dd00(Struct_10C1DD00& A, Struct_10C1DD00& B, bool bClear)
+{
+    A.Unknown04 = Unknown18;
+    A.Unknown10 = Unknown24;
+    A.Unknown14 = Unknown28;
+    A.Unknown18 = Unknown2C;
+    A.Unknown1C = Unknown30;
+    A.Unknown20 = Unknown34;
+    B.Unknown04 = Unknown3C;
+    B.Unknown10 = Unknown48;
+    B.Unknown14 = Unknown4C;
+    B.Unknown18 = Unknown50;
+    B.Unknown1C = Unknown54;
+    B.Unknown20 = Unknown58;
+    if (bClear)
+    {
+        Unknown04 = 0;
+    }
+    return Unknown08;
+}
+
 // FUNCTION: 0x10C1DD90 ??0Class_10E99178@@QAE@H@Z
 Class_10E99178::Class_10E99178(int A)
     : Unknown00(DAT_10e99178), Unknown04(0), Unknown08(0), Unknown0C(0), Unknown10(0),

@@ -5,6 +5,41 @@ extern float DAT_10eafbdc;
 
 float FUN_10c05bc0(int A, int B, int C, float D);
 
+class Class_10BFBD70
+{
+public:
+    void FUN_10bfbd70(int NewCount);
+
+    int Count;
+    int Unknown04;
+    int* Data;
+};
+
+class Class_10BBF5D0
+{
+public:
+    Class_10BFBD70* FUN_10bbf5d0();
+};
+
+class Class_10BFFF00_Src
+{
+public:
+    char Unknown00[0xC0];
+    Class_10BBF5D0 Unknown0C0;
+};
+
+// FUNCTION: 0x10BFFF00 ?FUN_10bfff00@@YGXPAVClass_10BFFF00_Src@@PAVClass_10BFBD70@@@Z
+void __stdcall FUN_10bfff00(Class_10BFFF00_Src* Src, Class_10BFBD70* Dst)
+{
+    for (int i = 0; i < Src->Unknown0C0.FUN_10bbf5d0()->Count; i++)
+    {
+        int Value = Src->Unknown0C0.FUN_10bbf5d0()->Data[i];
+        int Index = Dst->Count;
+        Dst->FUN_10bfbd70(Index + 1);
+        Dst->Data[Index] = Value;
+    }
+}
+
 // FUNCTION: 0x10C00280 ?FUN_10c00280@@YAHHHH@Z
 int FUN_10c00280(int A, int B, int C)
 {

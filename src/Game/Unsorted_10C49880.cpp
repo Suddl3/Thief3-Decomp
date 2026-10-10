@@ -43,6 +43,65 @@ public:
     Class_10C48320_Field18 Unknown18;
 };
 
+class Class_10C48260
+{
+public:
+    unsigned int FUN_10c48260(const int& A, const int& B);
+};
+
+class Class_10D3F830 : public Class_10C48260
+{
+public:
+    bool FUN_10d3f830(int* A);
+};
+
+class Class_10E9BBC0_Unknown3C
+{
+public:
+    virtual int Virtual0(int A);
+};
+
+struct Struct_10C49880
+{
+    char Unknown00[4];
+    int Unknown04;
+};
+
+class Class_10E9BBC0
+{
+public:
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual void Virtual2();
+    virtual void Virtual3();
+    virtual void Virtual4();
+    virtual void FUN_10c49a60(int A);
+    virtual void Virtual6();
+    virtual void Virtual7();
+    virtual void Virtual8();
+    virtual void Virtual9();
+    virtual void FUN_10c49880(Struct_10C49880* A);
+
+    Class_10D3F830 Unknown04;
+    char Unknown05[0x37];
+    Class_10E9BBC0_Unknown3C* Unknown3C;
+};
+
+// FUNCTION: 0x10C49880 ?FUN_10c49880@Class_10E9BBC0@@UAEXPAUStruct_10C49880@@@Z
+void Class_10E9BBC0::FUN_10c49880(Struct_10C49880* A)
+{
+    int Key = A->Unknown04;
+    if (Unknown04.FUN_10d3f830(&Key))
+        return;
+    int Value = A->Unknown04;
+    Key = Unknown3C->Virtual0(Value);
+    if (Key)
+    {
+        int Index = A->Unknown04;
+        Unknown04.FUN_10c48260(Index, Key);
+    }
+}
+
 // FUNCTION: 0x10C49960 ?FUN_10c49960@Class_10C48320@@QAE_NABH@Z
 bool Class_10C48320::FUN_10c49960(const int& Key)
 {

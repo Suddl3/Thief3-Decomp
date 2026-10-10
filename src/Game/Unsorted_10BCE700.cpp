@@ -150,6 +150,99 @@ public:
     Struct_10E91CB8_Unknown04* Unknown04;
 };
 
+class Class_10BB8360
+{
+public:
+    void FUN_10bb8360(int A, float B, int C);
+    int FUN_10bbac00(int A);
+};
+
+struct Struct_10AA3520
+{
+    char Unknown00[0x8];
+    int Unknown08;
+};
+
+extern Struct_10AA3520* DAT_10f35dec;
+
+class Class_10E8BE68
+{
+public:
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual void Virtual2();
+    virtual void Virtual3();
+    virtual void Virtual4();
+    virtual void Virtual5();
+    virtual void Virtual6();
+    virtual void Virtual7();
+    virtual void Virtual8();
+    virtual void Virtual9();
+    virtual void Virtual10();
+    virtual void Virtual11();
+    virtual void Virtual12();
+    virtual void Virtual13();
+    virtual void Virtual14();
+    virtual void Virtual15();
+    virtual void Virtual16();
+    virtual void Virtual17();
+    virtual void Virtual18();
+    virtual void Virtual19();
+    virtual void Virtual20();
+    virtual void Virtual21();
+    virtual void Virtual22();
+    virtual void Virtual23();
+    virtual void Virtual24();
+    virtual void Virtual25();
+    virtual void Virtual26();
+    virtual void Virtual27();
+    virtual void Virtual28();
+    virtual void Virtual29();
+    virtual void Virtual30();
+    virtual void Virtual31();
+    virtual void Virtual32();
+    virtual void Virtual33();
+    virtual void Virtual34();
+    virtual void Virtual35();
+    virtual void Virtual36();
+    virtual void Virtual37();
+    virtual void Virtual38();
+    virtual void Virtual39();
+    virtual void Virtual40();
+    virtual void Virtual41();
+    virtual void Virtual42();
+    virtual void Virtual43();
+    virtual void Virtual44();
+    virtual void Virtual45();
+    virtual void Virtual46();
+    virtual void Virtual47();
+    virtual void FUN_10bce700(int A, int B);
+
+    void FUN_10bce0d0(int A);
+    void FUN_10bc5b50();
+
+    Class_10BB8360* Unknown04;
+};
+
+// FUNCTION: 0x10BCE700 ?FUN_10bce700@Class_10E8BE68@@UAEXHH@Z
+void Class_10E8BE68::FUN_10bce700(int A, int B)
+{
+    if (A == 4)
+    {
+        if (B == 1)
+        {
+            FUN_10bce0d0(B);
+            Unknown04->FUN_10bb8360(DAT_10f35dec->Unknown08, 0.0f, 0);
+            return;
+        }
+        int Limit = Unknown04->FUN_10bbac00(4);
+        if (B > Limit)
+            FUN_10bc5b50();
+        else
+            FUN_10bce0d0(B);
+    }
+}
+
 // FUNCTION: 0x10BCE760 ?FUN_10bce760@Class_10E91CB8@@UAEXXZ
 void Class_10E91CB8::FUN_10bce760()
 {

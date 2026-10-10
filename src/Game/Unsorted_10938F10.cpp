@@ -71,6 +71,54 @@ struct Struct_10938F80
     int Unknown08;
 };
 
+class Class_10940970
+{
+public:
+    char Unknown00[0x2FC];
+    int Unknown2FC;
+};
+
+extern Class_10940970* DAT_10f2c8e4;
+
+void FUN_10938230();
+
+void FUN_10938330();
+
+void FUN_10938520();
+
+void FUN_109387c0();
+
+void FUN_109388c0();
+
+void FUN_10938a50();
+
+// FUNCTION: 0x10938F10 ?FUN_10938f10@@YGXH@Z
+void __stdcall FUN_10938f10(int A)
+{
+    if (DAT_10f2c8e4)
+        DAT_10f2c8e4->Unknown2FC = 0;
+    switch (A)
+    {
+    case 1:
+        FUN_10938230();
+        return;
+    case 2:
+        FUN_10938330();
+        return;
+    case 3:
+        FUN_10938520();
+        return;
+    case 4:
+        FUN_109387c0();
+        return;
+    case 5:
+        FUN_109388c0();
+        return;
+    case 6:
+        FUN_10938a50();
+    }
+}
+
 // FUNCTION: 0x10938F80 ?FUN_10938f80@@YGXPAUStruct_10938F80@@@Z
 void __stdcall FUN_10938f80(Struct_10938F80* P)
 {

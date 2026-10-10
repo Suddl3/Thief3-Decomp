@@ -1,6 +1,8 @@
 // Game/Unsorted_10BE1F00.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
+#include "Engine/EngineClasses.h"
+
 class FArchive
 {
 public:
@@ -123,6 +125,131 @@ public:
     unsigned char Unknown48;
     unsigned char Unknown49;
 };
+
+class Class_10E95780 : public Class_10E8BE68
+{
+public:
+    virtual void Virtual1();
+    virtual void Virtual2();
+    virtual void Virtual3();
+    virtual void Virtual4();
+    virtual void Virtual5();
+    virtual void Virtual6();
+    virtual void Virtual7();
+    virtual void Virtual8();
+    virtual void Virtual9();
+    virtual void Virtual10();
+    virtual void Virtual11();
+    virtual void Virtual12();
+    virtual void Virtual13();
+    virtual void Virtual14();
+    virtual void Virtual15();
+    virtual void Virtual16();
+    virtual void Virtual17();
+    virtual void Virtual18();
+    virtual void Virtual19();
+    virtual void Virtual20();
+    virtual void Virtual21();
+    virtual void Virtual22();
+    virtual void Virtual23();
+    virtual void Virtual24();
+    virtual void Virtual25();
+    virtual void Virtual26();
+    virtual void Virtual27();
+    virtual void Virtual28();
+    virtual void Virtual29();
+    virtual void Virtual30();
+    virtual void Virtual31();
+    virtual void Virtual32();
+    virtual void Virtual33();
+    virtual void Virtual34();
+    virtual void Virtual35();
+    virtual void Virtual36();
+    virtual void Virtual37();
+    virtual void Virtual38();
+    virtual void Virtual39();
+    virtual void Virtual40();
+    virtual void Virtual41();
+    virtual void Virtual42();
+    virtual void Virtual43();
+    virtual void Virtual44();
+    virtual void Virtual45();
+    virtual void Virtual46();
+    virtual void Virtual47();
+    virtual void Virtual48();
+    virtual void Virtual49();
+    virtual void Virtual50();
+    virtual void Virtual51();
+    virtual void Virtual52();
+    virtual void Virtual53();
+    virtual void Virtual54();
+    virtual void Virtual55();
+    virtual void Virtual56();
+    virtual void Virtual57();
+    virtual void Virtual58();
+    virtual void Virtual59();
+    virtual void Virtual60();
+    virtual void Virtual61();
+    virtual void Virtual62();
+    virtual void Virtual63();
+    virtual void FUN_10be1f20(FArchive& Ar);
+
+    char Unknown04[0x3C];
+    int Unknown40;
+    int Unknown44;
+    unsigned char Unknown48;
+    unsigned char Unknown49;
+    int Unknown4C;
+};
+
+class Class_10c7d570
+{
+public:
+    void* FUN_10c7d570();
+};
+
+class Object_10BE1F80
+{
+public:
+    char Unknown00[8];
+    Class_10c7d570* Unknown08;
+};
+
+class Class_10BE1F80
+{
+public:
+    void FUN_10be1f80(UObject* Obj);
+
+    char Unknown00[4];
+    Object_10BE1F80* Unknown04;
+    char Unknown08[0x38];
+    UObject* Unknown40;
+};
+
+// FUNCTION: 0x10BE1F20 ?FUN_10be1f20@Class_10E95780@@UAEXAAVFArchive@@@Z
+void Class_10E95780::FUN_10be1f20(FArchive& Ar)
+{
+    Class_10E8BE68::FUN_10bca010(Ar);
+    DAT_10ff667c->Unknown18->Virtual1(Ar, &Unknown40);
+    DAT_10ff667c->Unknown18->Virtual1(Ar, &Unknown44);
+    Ar.Serialize(&Unknown48, 1);
+    Ar.Serialize(&Unknown49, 1);
+    Ar.Serialize(&Unknown4C, 4);
+}
+
+// FUNCTION: 0x10BE1F80 ?FUN_10be1f80@Class_10BE1F80@@QAEXPAVUObject@@@Z
+void Class_10BE1F80::FUN_10be1f80(UObject* Obj)
+{
+    if (Obj->IsA(APawn::StaticClass()))
+    {
+        if (Obj == Unknown04->Unknown08->FUN_10c7d570())
+        {
+            Unknown40 = 0;
+            return;
+        }
+    }
+    Unknown40 = Obj;
+}
 
 // FUNCTION: 0x10BE2090 ?FUN_10be2090@Class_10E95898@@UAEXAAVFArchive@@@Z
 void Class_10E95898::FUN_10be2090(FArchive& Ar)

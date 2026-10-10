@@ -61,6 +61,34 @@ public:
     Class_10CAD680* Unknown90;
 };
 
+extern float DAT_11006e34;
+
+class Class_10CA86E0
+{
+public:
+    void* FUN_10ca86e0();
+};
+
+class Class_10B82330
+{
+public:
+    FVector FUN_10b82330();
+
+    char Unknown00[0x7C];
+    Class_10CA86E0* Unknown7C;
+};
+
+// FUNCTION: 0x10B82330 ?FUN_10b82330@Class_10B82330@@QAE?AVFVector@@XZ
+FVector Class_10B82330::FUN_10b82330()
+{
+    if (Unknown7C)
+    {
+        const FVector* V = (const FVector*)Unknown7C->FUN_10ca86e0();
+        return FVector(V->X, V->Y, V->Z) * DAT_11006e34;
+    }
+    return FVector(0.0f, 0.0f, 0.0f);
+}
+
 // FUNCTION: 0x10B82DD0 ?FUN_10b82dd0@Class_10B82DD0@@QAE_NABVFVector@@H@Z
 bool Class_10B82DD0::FUN_10b82dd0(const FVector& A, int B)
 {

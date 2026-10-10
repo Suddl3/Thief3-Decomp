@@ -62,6 +62,37 @@ public:
     void* Unknown08;
 };
 
+void* operator new(unsigned int A, const int& B, int C, int D, int E, int F);
+
+class Class_10958A10
+{
+public:
+    Class_10958A10* FUN_10958a10(int A);
+
+    void* Unknown00;
+    void* Unknown04;
+    void* Unknown08;
+    int Unknown0C;
+    int Unknown10;
+    int Unknown14;
+    int Unknown18;
+};
+
+// FUNCTION: 0x10958A10 ?FUN_10958a10@Class_10958A10@@QAEPAV1@H@Z
+Class_10958A10* Class_10958A10::FUN_10958a10(int A)
+{
+    Unknown10 = A;
+    Unknown0C = A * 3;
+    Unknown14 = 0;
+    Unknown18 = 0;
+    int Tag = 0;
+    Unknown00 = operator new(Unknown0C * 12, Tag, 0, 0, 0, 0);
+    Tag = 0;
+    Unknown08 = operator new((A + 1) * 16, Tag, 0, 0, 0, 0);
+    Unknown04 = (void*)(((unsigned int)Unknown08 + 15) & 0xfffffff0);
+    return this;
+}
+
 // FUNCTION: 0x1095A1A0 ?FUN_1095a1a0@Class_1095A1A0@@QAEXXZ
 void Class_1095A1A0::FUN_1095a1a0()
 {

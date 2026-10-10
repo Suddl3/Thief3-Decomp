@@ -25,6 +25,33 @@ struct Struct_10BA91E0
 
 float FUN_10ba91e0(const Struct_10BA91E0* A, const Struct_10BA91E0* B);
 
+// Ion Storm's placement new and its delete (0x10905C10; the delete folded into ::operator delete).
+void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
+
+void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
+
+class Class_10BA8F10
+{
+};
+
+class Class_10E8D65C : public Class_10BA8F10
+{
+public:
+    Class_10E8D65C();
+
+    char Unknown00[0x8050];
+};
+
+extern Class_10BA8F10* DAT_10ff6684;
+
+// FUNCTION: 0x10BA90A0 ?FUN_10ba90a0@@YAHXZ
+int FUN_10ba90a0()
+{
+    if (!DAT_10ff6684)
+        DAT_10ff6684 = new((int)DAT_10ff6684, 0, 0, 0, 0) Class_10E8D65C;
+    return (int)DAT_10ff6684;
+}
+
 // FUNCTION: 0x10BA91A0 ?FUN_10ba91a0@Class_10BFBD70@@QAEXPBH@Z
 void Class_10BFBD70::FUN_10ba91a0(const int* Item)
 {

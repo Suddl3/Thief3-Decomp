@@ -51,6 +51,81 @@ public:
     int Unknown14;
 };
 
+class Class_1098E330
+{
+public:
+    int FUN_10b22000();
+};
+
+class Class_10B22020
+{
+public:
+    char Unknown00[0x54E];
+    bool Unknown54E;
+};
+
+struct Struct_10B19300_Param;
+
+class Class_10B19300
+{
+public:
+    void FUN_10b19300(Struct_10B19300_Param* A, float B);
+};
+
+Class_10B19300* FUN_10b190e0();
+
+struct Static_10B18D00
+{
+    void FUN_10b18d20(Class_10B22020* A);
+};
+
+Static_10B18D00* FUN_10b18d00();
+
+class Class_10AC92F0
+{
+public:
+    void FUN_10ac92f0();
+};
+
+class Class_10F3A3D8
+{
+public:
+    char Unknown00[0x13C];
+    Class_10AC92F0* Unknown13C;
+};
+
+extern Class_10F3A3D8* DAT_10f3a3d8;
+
+class Class_10E81590
+{
+public:
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual void Virtual2();
+    virtual void Virtual3();
+    virtual int Virtual4();
+    virtual void Virtual5();
+    virtual void Virtual6();
+    virtual int FUN_10b4cd30(Class_1098E330* A);
+
+    char Unknown04[0xC];
+    bool Unknown10;
+};
+
+// FUNCTION: 0x10B4CD30 ?FUN_10b4cd30@Class_10E81590@@UAEHPAVClass_1098E330@@@Z
+int Class_10E81590::FUN_10b4cd30(Class_1098E330* A)
+{
+    DAT_10f3a3d8->Unknown13C->FUN_10ac92f0();
+    if (Unknown10)
+        return 0x17;
+    if (!A->FUN_10b22000())
+    {
+        FUN_10b18d00()->FUN_10b18d20((Class_10B22020*)A);
+        FUN_10b190e0()->FUN_10b19300((Struct_10B19300_Param*)A, 1.0f);
+    }
+    return Virtual4();
+}
+
 // FUNCTION: 0x10B4D010 ?FUN_10b4d010@Class_10E7E9B8@@UAEXPAVClass_10B4D010_Param@@@Z
 void Class_10E7E9B8::FUN_10b4d010(Class_10B4D010_Param* A)
 {

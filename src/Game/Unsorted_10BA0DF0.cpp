@@ -28,6 +28,74 @@ public:
     Class_10B9CAC0* FUN_10baa750();
 };
 
+class Class_10970890;
+
+class Class_10BBDB40;
+
+class Class_10c7d570
+{
+public:
+    void* FUN_10c7d570();
+};
+
+class Class_109BC840
+{
+public:
+    char Unknown00[0x49C];
+    int Unknown49C;
+    bool Unknown4A0;
+    bool Unknown4A1;
+};
+
+class Class_10BAA580 : public Class_10c7d570
+{
+public:
+    int FUN_10babe80();
+    Class_109BC840* FUN_10baa580();
+};
+
+class Class_10DBD510
+{
+public:
+    Class_10BBDB40* FUN_10dbd510(int A);
+};
+
+class Class_10BBDB40
+{
+public:
+    float FUN_10bbdb40();
+};
+
+class Class_1098E330
+{
+public:
+    Class_10970890* FUN_10991eb0();
+
+    char Unknown00[0xC4];
+    unsigned int Unknown0C4;
+};
+
+// FUNCTION: 0x10BA0DF0 ?FUN_10ba0df0@@YGXPAVClass_10BAA580@@@Z
+void __stdcall FUN_10ba0df0(Class_10BAA580* Obj)
+{
+    if (Obj)
+    {
+        Obj->FUN_10babe80();
+        ((Class_1098E330*)Obj->FUN_10c7d570())->FUN_10991eb0();
+        Class_109BC840* Mode = Obj->FUN_10baa580();
+        if (Mode)
+        {
+            Mode->Unknown49C = 0;
+            Mode->Unknown4A0 = true;
+            Mode->Unknown4A1 = false;
+        }
+        if (((Class_10DBD510*)Obj)->FUN_10dbd510(0x100647)->FUN_10bbdb40() > 0.0)
+        {
+            ((Class_1098E330*)Obj->FUN_10c7d570())->Unknown0C4 |= 0x10000000;
+        }
+    }
+}
+
 // FUNCTION: 0x10BA0E70 ?FUN_10ba0e70@@YGXPAVClass_10BAA8A0@@@Z
 void __stdcall FUN_10ba0e70(Class_10BAA8A0* A)
 {

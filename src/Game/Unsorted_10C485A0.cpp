@@ -30,6 +30,15 @@ public:
     void FUN_10c48b80(int Size);
 };
 
+class Class_10C48160
+{
+public:
+    Class_10C48160(int A);
+
+    int Unknown00;
+    int Unknown04;
+};
+
 // FUNCTION: 0x10C48B80 ?FUN_10c48b80@Class_10C49200@@QAEXH@Z
 void Class_10C49200::FUN_10c48b80(int Size)
 {

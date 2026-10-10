@@ -34,6 +34,29 @@ public:
     float Unknown298;
 };
 
+float appFrand();
+
+class Class_10BB8430
+{
+public:
+    void FUN_10bb7f90();
+
+    char Unknown00[8];
+    Class_10DBD510* Unknown08;
+    char Unknown0C[0x28C];
+    float Unknown298;
+    float Unknown29C;
+};
+
+// FUNCTION: 0x10BB7F90 ?FUN_10bb7f90@Class_10BB8430@@QAEXXZ
+void Class_10BB8430::FUN_10bb7f90()
+{
+    float Min = Unknown08->FUN_10dbd510(0x100251)->FUN_10bbdb40();
+    float Max = Unknown08->FUN_10dbd510(0x100252)->FUN_10bbdb40();
+    Unknown298 = Min + (Max - Min) * appFrand();
+    Unknown29C = appFrand();
+}
+
 // FUNCTION: 0x10BB8070 ?FUN_10bb8070@Class_10BB8070@@QAE_NXZ
 bool Class_10BB8070::FUN_10bb8070()
 {

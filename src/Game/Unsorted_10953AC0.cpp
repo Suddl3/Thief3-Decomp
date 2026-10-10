@@ -46,6 +46,109 @@ public:
     bool Unknown62;
 };
 
+struct D3DXMATRIX
+{
+    float m[4][4];
+};
+
+class IDirect3DDevice8
+{
+public:
+    virtual long __stdcall Virtual0();
+    virtual long __stdcall Virtual1();
+    virtual long __stdcall Virtual2();
+    virtual long __stdcall Virtual3();
+    virtual long __stdcall Virtual4();
+    virtual long __stdcall Virtual5();
+    virtual long __stdcall Virtual6();
+    virtual long __stdcall Virtual7();
+    virtual long __stdcall Virtual8();
+    virtual long __stdcall Virtual9();
+    virtual long __stdcall Virtual10();
+    virtual long __stdcall Virtual11();
+    virtual long __stdcall Virtual12();
+    virtual long __stdcall Virtual13();
+    virtual long __stdcall Virtual14();
+    virtual long __stdcall Virtual15();
+    virtual long __stdcall Virtual16();
+    virtual long __stdcall Virtual17();
+    virtual long __stdcall Virtual18();
+    virtual long __stdcall Virtual19();
+    virtual long __stdcall Virtual20();
+    virtual long __stdcall Virtual21();
+    virtual long __stdcall Virtual22();
+    virtual long __stdcall Virtual23();
+    virtual long __stdcall Virtual24();
+    virtual long __stdcall Virtual25();
+    virtual long __stdcall Virtual26();
+    virtual long __stdcall Virtual27();
+    virtual long __stdcall Virtual28();
+    virtual long __stdcall Virtual29();
+    virtual long __stdcall Virtual30();
+    virtual long __stdcall Virtual31();
+    virtual long __stdcall Virtual32();
+    virtual long __stdcall Virtual33();
+    virtual long __stdcall Virtual34();
+    virtual long __stdcall Virtual35();
+    virtual long __stdcall Virtual36();
+    virtual long __stdcall SetTransform(int State, const D3DXMATRIX* pMatrix);
+};
+
+extern IDirect3DDevice8* GDirect3DDevice8;
+
+class Class_10953B60;
+
+class Class_10953730
+{
+public:
+    D3DXMATRIX* FUN_10953730(D3DXMATRIX* Out, Class_10953B60* Obj);
+};
+
+class Class_1091E400
+{
+public:
+    char Unknown00[4];
+    Class_10953730 Unknown04;
+};
+
+extern Class_1091E400* DAT_10f2c8c0;
+
+class Class_10953E40_Member;
+
+class Class_10953B60
+{
+public:
+    void FUN_10953b60();
+    void FUN_109538b0();
+
+    char Unknown00[0x5C];
+    Class_10953E40_Member* Unknown5C;
+    char Unknown60;
+    bool Unknown61;
+};
+
+extern D3DXMATRIX DAT_10f341b0;
+
+extern unsigned int DAT_10f341f0;
+
+// FUNCTION: 0x10953B60 ?FUN_10953b60@Class_10953B60@@QAEXXZ
+void Class_10953B60::FUN_10953b60()
+{
+    if (Unknown5C)
+    {
+        if (Unknown61)
+        {
+            if (!(DAT_10f341f0 & 1))
+                DAT_10f341f0 |= 1;
+            D3DXMATRIX Matrix;
+            D3DXMATRIX* Src = DAT_10f2c8c0->Unknown04.FUN_10953730(&Matrix, this);
+            DAT_10f341b0 = *Src;
+            GDirect3DDevice8->SetTransform(0x100, &DAT_10f341b0);
+        }
+        FUN_109538b0();
+    }
+}
+
 // FUNCTION: 0x10953BE0 ?FUN_10953be0@Class_10953AC0@@QAEXXZ
 void Class_10953AC0::FUN_10953be0()
 {

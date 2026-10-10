@@ -1,6 +1,8 @@
 // Game/Unsorted_10A3AD10.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
+#include "Core/Core.h"
+
 class Class_10A3B460_Member
 {
 public:
@@ -23,6 +25,48 @@ public:
     char Unknown08[0x20];
     int Unknown28;
 };
+
+class Class_10BFBD70
+{
+public:
+    Class_10BFBD70() : Unknown00(0), Unknown04(0), Unknown08(0) {}
+    Class_10BFBD70(const Class_10BFBD70& Other)
+    {
+        Unknown00 = Unknown04 = 0;
+        Unknown08 = 0;
+        FUN_10a58cb0(Other);
+    }
+    ~Class_10BFBD70();
+
+    void FUN_10a58cb0(const Class_10BFBD70& Other);
+
+    int Unknown00;
+    int Unknown04;
+    void* Unknown08;
+};
+
+class Class_10A3AD10
+{
+public:
+    Class_10A3AD10(const Class_10A3AD10& Other);
+
+    int Unknown00;
+    FString Unknown04;
+    int Unknown10;
+    int Unknown14;
+    int Unknown18;
+    int Unknown1C;
+    bool Unknown20;
+    Class_10BFBD70 Unknown24;
+};
+
+// FUNCTION: 0x10A3AD10 ??0Class_10A3AD10@@QAE@ABV0@@Z
+Class_10A3AD10::Class_10A3AD10(const Class_10A3AD10& Other)
+    : Unknown00(Other.Unknown00), Unknown04(Other.Unknown04), Unknown10(Other.Unknown10),
+      Unknown14(Other.Unknown14), Unknown18(Other.Unknown18), Unknown1C(Other.Unknown1C),
+      Unknown20(Other.Unknown20), Unknown24(Other.Unknown24)
+{
+}
 
 // FUNCTION: 0x10A3B460 ?FUN_10a3b460@Class_10E667C4@@UAEXHHHH@Z
 void Class_10E667C4::FUN_10a3b460(int Message, int Param, int C, int D)

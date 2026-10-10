@@ -41,6 +41,48 @@ public:
     Class_10BAA580* Unknown08;
 };
 
+class FArchive
+{
+public:
+    virtual ~FArchive();
+    virtual void Serialize(void* V, int Length);
+    virtual void Virtual2();
+    virtual void Virtual3();
+    virtual void Virtual4();
+    virtual void Virtual5();
+    virtual void Virtual6();
+    virtual void Virtual7(void* V);
+};
+
+void FUN_10c11ff0(FArchive& Ar, int* Value);
+
+class Class_10C2EC00
+{
+public:
+    void FUN_10c2ec00(FArchive& Ar);
+
+    int Unknown00;
+    int Unknown04;
+    int Unknown08;
+    int Unknown0C;
+    int Unknown10;
+    bool Unknown14;
+    char Unknown15[0x7];
+    int Unknown1C;
+};
+
+// FUNCTION: 0x10C2EC00 ?FUN_10c2ec00@Class_10C2EC00@@QAEXAAVFArchive@@@Z
+void Class_10C2EC00::FUN_10c2ec00(FArchive& Ar)
+{
+    Ar.Serialize(&Unknown04, 4);
+    Ar.Serialize(&Unknown08, 4);
+    FUN_10c11ff0(Ar, &Unknown00);
+    Ar.Virtual7(&Unknown0C);
+    Ar.Serialize(&Unknown14, 1);
+    Ar.Serialize(&Unknown10, 4);
+    Ar.Virtual7(&Unknown1C);
+}
+
 // FUNCTION: 0x10C2EC90 ?FUN_10c2ec90@Class_10E9AC80@@UAE?AVFVector@@H@Z
 FVector Class_10E9AC80::FUN_10c2ec90(int A)
 {

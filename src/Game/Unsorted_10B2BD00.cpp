@@ -16,6 +16,58 @@ public:
     float Unknown48;
 };
 
+class Class_10905A90_Member
+{
+public:
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual void Virtual2();
+    virtual void Virtual3();
+    virtual void Virtual4();
+    virtual void Virtual5(void* Block);
+};
+
+Class_10905A90_Member* FUN_10905aa0();
+
+// Ion Storm's string (0x109081E0): a char pointer to a block allocated 4 bytes before it.
+class Class_109081E0
+{
+public:
+    ~Class_109081E0()
+    {
+        if (Unknown00)
+        {
+            char* Block = Unknown00 - 4;
+            FUN_10905aa0()->Virtual5(Block);
+            Unknown00 = 0;
+        }
+    }
+
+    char* Unknown00;
+};
+
+class Class_10E67FD0
+{
+public:
+    virtual ~Class_10E67FD0();
+
+    char Unknown04[0x14C];
+};
+
+class Class_10B2BD00
+{
+public:
+    ~Class_10B2BD00();
+
+    Class_10E67FD0 Unknown00;
+    Class_109081E0 Unknown150;
+};
+
+// FUNCTION: 0x10B2BD00 ??1Class_10B2BD00@@QAE@XZ
+Class_10B2BD00::~Class_10B2BD00()
+{
+}
+
 // FUNCTION: 0x10B2BE50 ?FUN_10b2be50@Class_10E68F9C@@UAEMXZ
 float Class_10E68F9C::FUN_10b2be50()
 {

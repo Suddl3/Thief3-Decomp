@@ -50,6 +50,27 @@ public:
     int Unknown0C;
 };
 
+void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
+
+void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
+
+class Class_10A311E0
+{
+public:
+    Class_10A311E0();
+
+    char Unknown00[0x10];
+};
+
+extern Class_10A311E0* DAT_10f39f3c;
+
+// FUNCTION: 0x10A31E70 ?FUN_10a31e70@@YAXXZ
+void FUN_10a31e70()
+{
+    if (!DAT_10f39f3c)
+        DAT_10f39f3c = new(0, 0, 0, 0, 0) Class_10A311E0;
+}
+
 // FUNCTION: 0x10A31F00 ?FUN_10a31f00@Class_10A31F00@@QAEHXZ
 int Class_10A31F00::FUN_10a31f00()
 {

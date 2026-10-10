@@ -16,6 +16,36 @@ public:
     int Unknown04;
 };
 
+class Class_10C27410_Unknown10
+{
+public:
+    virtual bool Virtual0(int A);
+    virtual int Virtual1();
+};
+
+class Class_10C27410
+{
+public:
+    void FUN_10c27410(int A);
+
+    char Unknown00[4];
+    int Unknown04;
+    int Unknown08;
+    char Unknown0C[4];
+    Class_10C27410_Unknown10** Unknown10;
+};
+
+// FUNCTION: 0x10C27410 ?FUN_10c27410@Class_10C27410@@QAEXH@Z
+void Class_10C27410::FUN_10c27410(int A)
+{
+    for (int i = 0; i < Unknown08; i++)
+    {
+        Class_10C27410_Unknown10* Item = Unknown10[i];
+        if (Item->Virtual0(A) == 1)
+            Unknown04 |= 1 << Item->Virtual1();
+    }
+}
+
 // FUNCTION: 0x10C27460 ?FUN_10c27460@Class_10E99350@@UAEXPAVClass_10C27460_Param@@@Z
 void Class_10E99350::FUN_10c27460(Class_10C27460_Param* p1)
 {

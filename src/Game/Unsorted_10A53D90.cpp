@@ -172,6 +172,41 @@ public:
     bool AlterGamma;
 };
 
+class Class_1094D430
+{
+public:
+    void FUN_1094d430();
+};
+
+class Class_10E67FD0
+{
+public:
+    virtual ~Class_10E67FD0();
+};
+
+class Class_10E5B588 : public Class_10E67FD0
+{
+public:
+    ~Class_10E5B588();
+
+    char Unknown04[0x120];
+    Class_1094D430* Unknown124;
+};
+
+// FUNCTION: 0x109E49A0 ??_GClass_10E5B588@@UAEPAXI@Z
+// Compiler-generated: emitted with the class's vtable by 0x10A54860's definition in this unit.
+
+// FUNCTION: 0x10A54860 ??1Class_10E5B588@@UAE@XZ
+Class_10E5B588::~Class_10E5B588()
+{
+    Class_1094D430* Object = Unknown124;
+    if (Object)
+    {
+        Object->FUN_1094d430();
+        delete Object;
+    }
+}
+
 // FUNCTION: 0x10A54C20 ?LoadConfig@Class_10E682F0@@UAEXPAVClass_10AF7F80@@0@Z
 void Class_10E682F0::LoadConfig(Class_10AF7F80* File, Class_10AF7F80* Section)
 {

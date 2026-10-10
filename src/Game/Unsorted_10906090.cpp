@@ -38,6 +38,116 @@ extern unsigned char DAT_10f2bfed;
 
 extern void* DAT_10f2bfe8;
 
+class Class_10906090
+{
+public:
+    Class_10906090* FUN_10906090(int A, const char* B, const char* C, int D);
+
+    int Unknown00;
+    int Unknown04;
+    char Unknown08[0x101];
+    char Unknown109[0xC01];
+};
+
+extern "C" __declspec(dllimport) void __stdcall Sleep(unsigned long dwMilliseconds);
+
+struct Struct_10906CB0
+{
+    void (*Unknown00)(void*);
+    void* Unknown04;
+};
+
+extern bool DAT_10f2bfdc;
+
+extern int DAT_10f2bfd8;
+
+extern Struct_10906CB0 DAT_10f2bec8[];
+
+typedef void* HMODULE;
+
+typedef int (__stdcall* FARPROC)();
+
+extern "C" __declspec(dllimport) HMODULE __stdcall GetModuleHandleA(const char* lpModuleName);
+
+extern "C" __declspec(dllimport) FARPROC __stdcall GetProcAddress(HMODULE hModule, const char* lpProcName);
+
+extern void* DAT_10e48084[];
+
+extern void* DAT_10e48070[];
+
+extern FARPROC DAT_10f2bfe0;
+
+// FUNCTION: 0x10906090 ?FUN_10906090@Class_10906090@@QAEPAV1@HPBD0H@Z
+Class_10906090* Class_10906090::FUN_10906090(int A, const char* B, const char* C, int D)
+{
+    Unknown00 = A;
+    Unknown04 = D;
+
+    char* Dst = Unknown08;
+    const char* Src = B;
+    for (int Count = 0x101; Count != 0; Count--)
+    {
+        if (Src)
+        {
+            *Dst = *Src;
+            if (*Src == 0)
+                Src = 0;
+            else
+                Src++;
+        }
+        Dst++;
+    }
+
+    Dst = Unknown109;
+    Src = C;
+    for (int Count = 0xC01; Count != 0; Count--)
+    {
+        if (Src)
+        {
+            *Dst = *Src;
+            if (*Src == 0)
+                Src = 0;
+            else
+                Src++;
+        }
+        Dst++;
+    }
+
+    return this;
+}
+
+// FUNCTION: 0x10906CB0 ?FUN_10906cb0@@YAXXZ
+void FUN_10906cb0()
+{
+    while (DAT_10f2bfdc)
+        Sleep(50);
+    DAT_10f2bfdc = true;
+    for (int i = 0; i < DAT_10f2bfd8; i++)
+    {
+        DAT_10f2bec8[i].Unknown00(DAT_10f2bec8[i].Unknown04);
+        DAT_10f2bec8[i].Unknown00 = 0;
+        DAT_10f2bec8[i].Unknown04 = 0;
+    }
+    DAT_10f2bfd8 = 0;
+    DAT_10f2bfdc = false;
+}
+
+// FUNCTION: 0x10906D20 ?FUN_10906d20@@YA_NXZ
+bool FUN_10906d20()
+{
+    if (!DAT_10f2bfe0)
+    {
+        HMODULE Module = GetModuleHandleA((const char*)DAT_10e48084);
+        if (Module)
+            DAT_10f2bfe0 = GetProcAddress(Module, (const char*)DAT_10e48070);
+    }
+    if (!DAT_10f2bfe0)
+        DAT_10f2bfe0 = (FARPROC)0xffffffff;
+    if (DAT_10f2bfe0 == (FARPROC)0xffffffff)
+        return false;
+    return DAT_10f2bfe0() == 1;
+}
+
 // FUNCTION: 0x10906D80 ?ForceExit@@YAXXZ
 void ForceExit()
 {
