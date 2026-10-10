@@ -493,7 +493,7 @@ def print_packet(pk: dict) -> None:
             if r.get("value"):
                 note += f"  {'' if r['value'].startswith('initially') else '= '}{r['value']}"
             if r.get("write"):
-                note += f"  (a constant: write {r['write']}, not an extern)"
+                note += f"  (a constant: as fadd/fmul's memory operand write {r['write']}; loaded first, an extern)"
             if r.get("string") is not None:
                 note += f"  = {json.dumps(r['string'])}"
             print(f"{r['kind']:<5} {r['addr'] or '?':<11} {r['name']}{note}")
