@@ -573,6 +573,43 @@ change no code, so they can come after the matches at no matching cost; they
 need their own work and their own measure. Run `readability.py --history`
 after each naming pass (it appends to `build/agent/readability-history.jsonl`).
 
+### Xbox builds
+
+Ion Storm's Xbox development builds of April 2004 (`T3Opt.xbe`, optimized
+with assertions, and `T3Debug.xbe`) kept what the PC release dropped:
+assertion messages with their source files, debug names of arrays
+(`cTriggerSystem::m_ConditionTypes`) and log messages naming their
+functions. They carry no symbols (the PDB they name is not on the discs) and
+no RTTI. `tools/agent/xbox.py pair <T3Opt.xbe> [<T3Debug.xbe>]` pairs their
+functions and vtables with T3Main.exe's and writes the evidence to
+`build/agent/xbox.json`; `xbox.py show <address|Class_X>` and
+`xbox.py classes` print it.
+The builds stay on your machine: only names, with a line of evidence, enter
+the repository. The rules, repeated until nothing new pairs:
+
+- `string`: a string one function of each program uses, and no other;
+  `strings`: the one Xbox function using all of a PC function's strings;
+- `vtable`: tables whose own slots (in no other table) or constructors are
+  paired are one class; tables of one length pair every slot;
+- `calls`: paired functions calling as many functions pair their callees in
+  order; `callees`: the one Xbox function calling the twins of three or more
+  of a PC function's callees.
+
+String pairs are reliable. A structural pair is checked when its PC function
+has strings of its own: right when the twin uses them all, wrong when it uses
+none. A rule checked right less than 70% of the time on a build is dropped
+for that build, and the packet prints each pair's rule with its rate.
+
+| T3Main.exe paired with | Functions | by string(s) | Structural, checked right | Vtables |
+|---|---|---|---|---|
+| T3Opt.xbe | 4,932 | 1,269 | vtable 89%, calls 88%, callees 87% | 457 |
+| T3Debug.xbe | 1,396 | 1,220 | callees 71% (vtable 57%, calls 60%: dropped) | 0 |
+
+T3Debug.xbe's class layouts differ from the PC's, so it adds assertion
+messages to string-paired functions only. 173 PC vtables get a class-name
+vote: `Class_10E9AC80` is `cMotionControllerAnim`
+(`AI_MotionControllerAnim.cpp`).
+
 ## Matches without a model
 
 The cheapest match is the one no worker makes. The lead's tools take the

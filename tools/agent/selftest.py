@@ -1191,6 +1191,49 @@ TESTS.append(test_arity)
 TESTS.append(test_fixnames_aliases)
 
 
+
+def test_xbox_pairs(base: Path) -> None:
+    """xbox.py pairs two programs' functions through a string only one function of each uses, then the rest
+    of a vtable whose own slot is paired, and votes the table's class name from its twin's strings."""
+    import xbox
+
+    def program(code_at, data_at, debug_names):
+        # A: uses the unique string and sits in slot 0; B: slot 1, names its array "cThing::m_List" in the Xbox
+        # build only; C stores the vtable.
+        mem = {}
+        s1, s2, table = data_at + 4, data_at + 0x40, data_at + 0x80
+        a, b, c = code_at, code_at + 0x20, code_at + 0x40
+        code = bytearray(b"\xCC" * 0x60)
+        code[0:5] = b"\x68" + struct.pack("<I", s1)              # push "unique message"
+        code[5:6] = b"\xC3"
+        if debug_names:
+            code[0x20:0x25] = b"\x68" + struct.pack("<I", s2)    # push "cThing::m_List"
+        code[0x25:0x26] = b"\xC3"
+        code[0x40:0x46] = b"\xC7\x00" + struct.pack("<I", table)  # mov [eax], vtable
+        code[0x46:0x47] = b"\xC3"
+        data = bytearray(0xC0)
+        data[4:19] = b"unique message\0"
+        data[0x40:0x4F] = b"cThing::m_List\0"
+        data[0x80:0x88] = struct.pack("<II", a, b)
+        for k, byte in enumerate(code):
+            mem[code_at + k] = byte
+        for k, byte in enumerate(data):
+            mem[data_at + k] = byte
+        read = lambda va, n: bytes(mem[va + i] for i in range(n) if va + i in mem)  # noqa: E731
+        return xbox.Program(read, [(code_at, bytes(code))], [(data_at, bytes(data))], {a, b, c}), (a, b)
+
+    pc, (pa, pb) = program(0x10900000, 0x10E00000, False)
+    xb, (xa, xb_) = program(0x00012000, 0x00AE0000, True)
+    fp, vp = xbox.pair(pc, xb)
+    check(fp.get(pa) == (xa, "string") and fp.get(pb) == (xb_, "vtable"), f"paired {fp}")
+    check(vp == {0x10E00080: 0x00AE0080}, f"vtables {vp}")
+    ev = xbox.evidence(pc, xb, fp, vp, "T3Opt")
+    check(ev["vtables"]["0x10E00080"]["names"] == [("cThing", 1)], f"class votes {ev['vtables']}")
+
+
+TESTS.append(test_xbox_pairs)
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("-k", help="run only tests whose name contains this")
