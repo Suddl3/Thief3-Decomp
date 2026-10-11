@@ -294,6 +294,12 @@ placeholder methods `Virtual0()`... before its slot, the function itself
 `virtual` at its slot, and define `AGarrett::FUN_x` (or
 `Class_<table>::FUN_x`).
 
+Your function's own name, when it is a decorated name on its own placeholder
+(`?FUN_10918880@@YAXH@Z` at 0x10918880), is a caller's guess: write the
+function as its code shows (a method when it reads ecx at entry, a bool
+parameter, a return value) and accept.py takes that name; never defer over
+it. An unnamed function (`FUN_10a76630`) you name as its code shows.
+
 Use the symbols.txt and header names the packet shows. A generated header
 (`include/<Package>/<Package>Classes.h`) lists a class's fields with their
 offsets: name and type the fields you use from it, in your own declaration
