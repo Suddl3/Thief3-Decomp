@@ -269,7 +269,11 @@ that call's `this`: the callee is a method of its class even when symbols.txt
 names it a free function or types the global int or void*. That is a name
 conflict, not ltcg. A function that reads ecx at entry is likewise a method
 (ecx is its `this`): write it on a placeholder class. A virtual call is never
-ltcg either: virtual functions keep the standard convention. Pushes before a call that a later call pops belong to the
+ltcg either: virtual functions keep the standard convention. Nor is `push ecx;
+mov ecx, esp` after a call (often then `mov [esp+N], esp`): it reserves a stack
+slot and builds a by-value argument there (ecx is its constructor's `this`, the
+pushed value is junk), so a later call takes a class by value (Class_109081E0,
+FName). Pushes before a call that a later call pops belong to the
 later call: MSVC evaluates arguments right to left, so `F(P->Get(), A, B)`
 pushes B and A, calls Get, pushes its result, calls F and pops all three. Get
 takes none of those pushes. try.py checks every direct call against its
