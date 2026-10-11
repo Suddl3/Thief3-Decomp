@@ -642,6 +642,12 @@ outer call to the 4-byte getters 0x10DBD510 and 0x10C7D570 (about 45
 callers) and to a singleton getter, and named ordinary methods `??_G`;
 re-checked, 4 of 1,200 pending accepted functions fail it, all on a callee
 named with the wrong convention.
+[arity.py](../tools/agent/arity.py) lists the names already recorded
+that disagree with their functions' returns, in symbols.txt and in the
+accepted functions' proposals: 412 names on 224 functions when the rule
+came in, mostly no-argument placeholders (a caller's `void FUN_x()` guess,
+a vtable slot's `VirtualN()`, an engine class's `UnknownN()`) on functions
+that take arguments. The naming pass gives them what their returns show.
 
 The first naming pass (2026-09-30) settled the rest by hand: 44 symbols got
 their real names, the 32 accepted callers that had pinned the guesses were
