@@ -153,6 +153,10 @@ inlines any body in the file, even one defined after the caller). Use
 - `movzx eax, al` after a call returning bool: the caller returns int.
   `neg eax; sbb eax, eax; neg eax` after a call: `return F() != 0;` (bool).
   `setge dl; mov eax, edx`: an int return; a bool return is `mov al, dl`.
+- A function that destroys one of its stack arguments on exit (its destructor
+  called on the argument's address, under an EH state) takes that class by
+  value: `void __stdcall F(Class_10B21820* A, Class_109081E0 Name)`. Its
+  callers build the copy in the argument's slot.
 - `delete P` with no destructor call (operator delete only): give P a
   complete empty type, `struct Struct_<addr> {};`, not `void*` (deleting a
   `void*` is undefined C++, though MSVC compiles it the same).
