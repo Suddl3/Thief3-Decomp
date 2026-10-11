@@ -1,13 +1,7 @@
-// Game/Class_10E9AC80_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/cMotionControllerAnim_16.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-#include "Core/Core.h"
-
-class Object_10C2F5D0;
-
-double FUN_10c00480();
-
-class Class_10E9AC80
+class cMotionControllerAnim
 {
 public:
     virtual void Virtual0();
@@ -64,24 +58,21 @@ public:
     virtual void Virtual51();
     virtual void Virtual52();
     virtual void Virtual53();
-    virtual void Virtual54();
-    virtual void Virtual55();
-    virtual void Virtual56();
-    virtual void FUN_10c2edb0(const FVector& Location, float Duration, int Flag);
+    virtual void FUN_10c2f5a0();
 
-    char Unknown04[0xDC];
-    float Unknown0E0;
-    FVector Unknown0E4;
-    Object_10C2F5D0* Unknown0F0;
-    char Unknown0F4[0x70];
-    int Unknown164;
+    char Unknown04[0x144];
+    int Unknown148;
+    char Unknown14C[4];
+    int m_Key;
+    int m_Value;
+    int Unknown158;
 };
 
-// FUNCTION: 0x10C2EDB0 ?FUN_10c2edb0@Class_10E9AC80@@UAEXABVFVector@@MH@Z
-void Class_10E9AC80::FUN_10c2edb0(const FVector& Location, float Duration, int Flag)
+// FUNCTION: 0x10C2F5A0 ?FUN_10c2f5a0@cMotionControllerAnim@@UAEXXZ
+void cMotionControllerAnim::FUN_10c2f5a0()
 {
-    Unknown0E4 = Location;
-    if (Duration > 0.0f)
-        Unknown0E0 = FUN_10c00480() + Duration;
-    Unknown164 = Flag;
+    m_Key = 0;
+    m_Value = 0;
+    Unknown158 = 0;
+    Unknown148 = 0;
 }

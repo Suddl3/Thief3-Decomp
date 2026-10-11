@@ -4,7 +4,7 @@
 
 extern float DAT_10eafbdc;
 
-double FUN_10c00480();
+double GetTimeSeconds();
 
 // FUNCTION: 0x10C2E500 ?FUN_10c2e500@Class_10E9AA38@@UAE_NXZ
 bool Class_10E9AA38::FUN_10c2e500()
@@ -12,7 +12,7 @@ bool Class_10E9AA38::FUN_10c2e500()
     if (Unknown5C != DAT_10eafbdc)
     {
         double EndTime = Unknown5C + Unknown60;
-        if (FUN_10c00480() > EndTime)
+        if (GetTimeSeconds() > EndTime)
             return true;
     }
     return Unknown4C;

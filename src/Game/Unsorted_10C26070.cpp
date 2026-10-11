@@ -6,7 +6,7 @@
 
 int FUN_10b0fdb0();
 
-double FUN_10c00480();
+double GetTimeSeconds();
 
 void FUN_10c25ef0(Class_10B9FBE0* Array);
 
@@ -30,7 +30,7 @@ char Class_10C26070::FUN_10c26070(float Margin)
     Struct_10C26030* Data = &Unknown00->Unknown1C;
     FUN_10c25f40(Data);
     float Value = Data->Unknown08[FUN_10b0fdb0() * Row + Column];
-    if (Value < FUN_10c00480() - Margin && Unknown00)
+    if (Value < GetTimeSeconds() - Margin && Unknown00)
     {
         Column = Unknown08;
         Row = Unknown04;

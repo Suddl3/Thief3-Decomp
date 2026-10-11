@@ -12131,16 +12131,16 @@ Game/Unsorted_10C2EC00.cpp:
 	.text  start:0x10C2EC00 end:0x10C2EC61
 	.text  start:0x10C2EC90 end:0x10C2ECE2
 
-Game/Class_10E9AC80.cpp:
+Game/cMotionControllerAnim.cpp:
 	.text  start:0x10C2ED00 end:0x10C2ED5C
 
-Game/Class_10E9AC80_2.cpp:
+Game/cMotionControllerAnim_2.cpp:
 	.text  start:0x10C2ED60 end:0x10C2EDA9
 
-Game/Class_10E9AC80_3.cpp:
+Game/cMotionControllerAnim_3.cpp:
 	.text  start:0x10C2EDB0 end:0x10C2EE09
 
-Game/Class_10E9AC80_4.cpp:
+Game/cMotionControllerAnim_4.cpp:
 	.text  start:0x10C2EE60 end:0x10C2EEA3
 
 Game/Unsorted_10C2EEC0.cpp:
@@ -12148,65 +12148,65 @@ Game/Unsorted_10C2EEC0.cpp:
 	.text  start:0x10C2F090 end:0x10C2F09D
 	.text  start:0x10C2F330 end:0x10C2F33C
 
-Game/Class_10E9AC80_5.cpp:
+Game/cMotionControllerAnim_5.cpp:
 	.text  start:0x10C2EFD0 end:0x10C2F00C
 
-Game/Class_10E9AC80_6.cpp:
+Game/cMotionControllerAnim_6.cpp:
 	.text  start:0x10C2F010 end:0x10C2F02E
 
-Game/Class_10E9AC80_7.cpp:
+Game/cMotionControllerAnim_7.cpp:
 	.text  start:0x10C2F030 end:0x10C2F083
 
-Game/Class_10E9AC80_8.cpp:
+Game/cMotionControllerAnim_8.cpp:
 	.text  start:0x10C2F240 end:0x10C2F26A
 
-Game/Class_10E9AC80_9.cpp:
+Game/cMotionControllerAnim_9.cpp:
 	.text  start:0x10C2F270 end:0x10C2F298
 
 Game/Unsorted_10C2F0A0.cpp:
 	.text  start:0x10C2F170 end:0x10C2F1AA
 	.text  start:0x10C2F2A0 end:0x10C2F2C1
 
-Game/Class_10E9AC80_10.cpp:
+Game/cMotionControllerAnim_10.cpp:
 	.text  start:0x10C2F2D0 end:0x10C2F2FA
 
-Game/Class_10E9AC80_11.cpp:
+Game/cMotionControllerAnim_11.cpp:
 	.text  start:0x10C2F300 end:0x10C2F32B
 
-Game/Class_10E9AC80_12.cpp:
+Game/cMotionControllerAnim_12.cpp:
 	.text  start:0x10C2F430 end:0x10C2F4A0
 
-Game/Class_10E9AC80_13.cpp:
+Game/cMotionControllerAnim_13.cpp:
 	.text  start:0x10C2F4A0 end:0x10C2F4E1
 
 Game/Unsorted_10C2F4F0.cpp:
 	.text  start:0x10C2F4F0 end:0x10C2F526
 
-Game/Class_10E9AC80_14.cpp:
+Game/cMotionControllerAnim_14.cpp:
 	.text  start:0x10C2F540 end:0x10C2F54D
 
-Game/Class_10E9AC80_15.cpp:
+Game/cMotionControllerAnim_15.cpp:
 	.text  start:0x10C2F550 end:0x10C2F567
 
-Game/Class_10E9AC80_16.cpp:
+Game/cMotionControllerAnim_16.cpp:
 	.text  start:0x10C2F5A0 end:0x10C2F5BB
 
-Game/Class_10E9AC80_17.cpp:
+Game/cMotionControllerAnim_17.cpp:
 	.text  start:0x10C2F5D0 end:0x10C2F5F9
 
-Game/Class_10E9AC80_18.cpp:
+Game/cMotionControllerAnim_18.cpp:
 	.text  start:0x10C2F600 end:0x10C2F64E
 
 Game/Unsorted_10C2F600.cpp:
 	.text  start:0x10C2F650 end:0x10C2F677
 
-Game/Class_10E9AC80_19.cpp:
+Game/cMotionControllerAnim_19.cpp:
 	.text  start:0x10C2F8A0 end:0x10C2F8CB
 
-Game/Class_10E9AC80_24.cpp:
+Game/cMotionControllerAnim_24.cpp:
 	.text  start:0x10C30170 end:0x10C30232
 
-Game/Class_10E9AC80_25.cpp:
+Game/cMotionControllerAnim_25.cpp:
 	.text  start:0x10C30420 end:0x10C3050F
 
 Game/Unsorted_10C307A0.cpp:
@@ -12235,7 +12235,7 @@ Game/Unsorted_10C2F970.cpp:
 	.text  start:0x10C32A70 end:0x10C32A8A
 	.text  start:0x10C32C70 end:0x10C32C95
 
-Game/Class_10E9AC80_20.cpp:
+Game/cMotionControllerAnim_20.cpp:
 	.text  start:0x10C32AF0 end:0x10C32B35
 
 Game/Unsorted_10C32B40.cpp:
@@ -12249,13 +12249,13 @@ Game/Unsorted_10C33510.cpp:
 	.text  start:0x10C352D0 end:0x10C35391
 	.text  start:0x10E2D9B0 end:0x10E2D9C5  # .text$x: EH handlers and unwind funclets
 
-Game/Class_10E9AC80_21.cpp:
+Game/cMotionControllerAnim_21.cpp:
 	.text  start:0x10C35630 end:0x10C3564E
 
-Game/Class_10E9AC80_22.cpp:
+Game/cMotionControllerAnim_22.cpp:
 	.text  start:0x10C35660 end:0x10C3566D
 
-Game/Class_10E9AC80_23.cpp:
+Game/cMotionControllerAnim_23.cpp:
 	.text  start:0x10C356B0 end:0x10C356CC
 
 Game/Class_10E9AD9C.cpp:

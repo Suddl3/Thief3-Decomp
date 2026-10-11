@@ -32,7 +32,7 @@ extern Class_10FF667C* DAT_10ff667c;
 
 extern float DAT_10e49684;
 
-double FUN_10c00480();
+double GetTimeSeconds();
 
 class Class_10E95898 : public Class_10E94578
 {

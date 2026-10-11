@@ -14,7 +14,7 @@ public:
 
 extern float DAT_10eafbdc;
 
-double FUN_10c00480();
+double GetTimeSeconds();
 
 // FUNCTION: 0x10C28570 ?FUN_10c28570@Class_10C28570@@QAEXXZ
 void Class_10C28570::FUN_10c28570()
@@ -22,7 +22,7 @@ void Class_10C28570::FUN_10c28570()
     if (Unknown08 != DAT_10eafbdc)
     {
         double EndTime = Unknown08 + Unknown10;
-        if (FUN_10c00480() > EndTime)
+        if (GetTimeSeconds() > EndTime)
         {
             FUN_10c283f0();
             Unknown08 = 0;

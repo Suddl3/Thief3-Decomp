@@ -56,7 +56,7 @@ public:
 
 extern float DAT_10eafbdc;
 
-double FUN_10c00480();
+double GetTimeSeconds();
 
 // FUNCTION: 0x10C26A60 ?FUN_10c26a60@Class_10C26A60@@QAEXPAUStruct_10C26A60@@H@Z
 void Class_10C26A60::FUN_10c26a60(Struct_10C26A60* Obj, int Arg)
@@ -81,12 +81,12 @@ void Class_10C26E80::FUN_10c26e80()
     if (Unknown30 == DAT_10eafbdc)
         Value = 0.1f;
     else
-        Value = FUN_10c00480() - Unknown30;
+        Value = GetTimeSeconds() - Unknown30;
     FUN_10c26d60();
     Virtual3();
     Virtual4(Value);
     Virtual5();
-    Unknown30 = (float)FUN_10c00480();
+    Unknown30 = (float)GetTimeSeconds();
 }
 
 // FUNCTION: 0x10C27010 ?FUN_10c27010@Class_10E99298@@QAEPAV1@HHHH@Z

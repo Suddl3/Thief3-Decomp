@@ -17,7 +17,7 @@ public:
 class AGarrett : public Class_10B21820
 {
 public:
-    void FUN_10b21b90(bool A);
+    void SetNoiseEnabled(bool A);
 
     char Unknown00[0x490];
     unsigned bIn3rdPersonMode : 1;
@@ -28,8 +28,8 @@ public:
     unsigned bNoiseEnabled : 1;
 };
 
-// FUNCTION: 0x10B21B90 ?FUN_10b21b90@AGarrett@@QAEX_N@Z
-void AGarrett::FUN_10b21b90(bool A)
+// FUNCTION: 0x10B21B90 ?SetNoiseEnabled@AGarrett@@QAEX_N@Z
+void AGarrett::SetNoiseEnabled(bool A)
 {
     if (bNoiseEnabled != A)
     {

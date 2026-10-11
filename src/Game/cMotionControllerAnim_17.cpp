@@ -1,13 +1,9 @@
-// Game/Class_10E9AC80.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/cMotionControllerAnim_17.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-#include "Core/Core.h"
 
 class Object_10C2F5D0;
 
-double FUN_10c00480();
-
-class Class_10E9AC80
+class cMotionControllerAnim
 {
 public:
     virtual void Virtual0();
@@ -66,21 +62,31 @@ public:
     virtual void Virtual53();
     virtual void Virtual54();
     virtual void Virtual55();
-    virtual void FUN_10c2ed00();
+    virtual void Virtual56();
+    virtual void Virtual57();
+    virtual void Virtual58();
+    virtual void Virtual59();
+    virtual void Virtual60();
+    virtual void Virtual61();
+    virtual void Virtual62();
+    virtual void Virtual63();
+    virtual void Virtual64();
+    virtual void Virtual65();
+    virtual void Virtual66();
+    virtual void Virtual67();
+    virtual void ClearReferencesTo(Object_10C2F5D0* A);
 
-    char Unknown04[0xDC];
-    float Unknown0E0;
-    FVector Unknown0E4;
-    Object_10C2F5D0* Unknown0F0;
-    char Unknown0F4[0x70];
-    int Unknown164;
+    char Unknown04[0xEC];
+    Object_10C2F5D0* m_Target;
+    char Unknown0F4[4];
+    Object_10C2F5D0* Unknown0F8;
 };
 
-// FUNCTION: 0x10C2ED00 ?FUN_10c2ed00@Class_10E9AC80@@UAEXXZ
-void Class_10E9AC80::FUN_10c2ed00()
+// FUNCTION: 0x10C2F5D0 ?ClearReferencesTo@cMotionControllerAnim@@UAEXPAVObject_10C2F5D0@@@Z
+void cMotionControllerAnim::ClearReferencesTo(Object_10C2F5D0* A)
 {
-    Unknown0F0 = 0;
-    Unknown0E4 = FVector(0.0f, 0.0f, 0.0f);
-    Unknown0E0 = FUN_10c00480();
-    Unknown164 = 0;
+    if (m_Target == A)
+        m_Target = 0;
+    if (Unknown0F8 == A)
+        Unknown0F8 = 0;
 }

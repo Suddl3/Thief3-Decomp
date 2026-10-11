@@ -106,13 +106,13 @@ public:
     virtual void Virtual100();
     virtual void Virtual101();
     virtual void Virtual102();
-    virtual unsigned char FUN_10b21290();
+    virtual unsigned char IsHoldingWeapon();
     char Unknown04[0x43c];
     int Unknown440;
 };
 
-// FUNCTION: 0x10B21290 ?FUN_10b21290@AGarrett@@UAEEXZ
-unsigned char AGarrett::FUN_10b21290()
+// FUNCTION: 0x10B21290 ?IsHoldingWeapon@AGarrett@@UAEEXZ
+unsigned char AGarrett::IsHoldingWeapon()
 {
     return Unknown440 != 0;
 }

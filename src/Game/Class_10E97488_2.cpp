@@ -4,7 +4,7 @@
 #include "Game/Class_109081E0.h"
 #include "Game/Class_10E90D70.h"
 
-double FUN_10c00480();
+double GetTimeSeconds();
 
 // The base whose implicit destructor (0x10BD3140, a jmp to ~Class_10E90D70) unwinds this constructor.
 class Class_10BD3140 : public Class_10E90D70
@@ -34,7 +34,7 @@ public:
 
 // FUNCTION: 0x10BED9E0 ??0Class_10E97488@@QAE@HHABVFVector@@MABVClass_109081E0@@HHH@Z
 Class_10E97488::Class_10E97488(int A, int B, const FVector& C, float D, const Class_109081E0& E, int F, int G, int H)
-    : Class_10BD3140(A, B), Unknown44(FUN_10c00480() + D), Unknown48(D), Unknown4C(C), Unknown58(F), Unknown5C(0),
+    : Class_10BD3140(A, B), Unknown44(GetTimeSeconds() + D), Unknown48(D), Unknown4C(C), Unknown58(F), Unknown5C(0),
       Unknown60(0), Unknown64(G), Unknown68(E), Unknown6C(H)
 {
 }

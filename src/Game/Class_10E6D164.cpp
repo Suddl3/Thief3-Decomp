@@ -87,7 +87,7 @@ public:
     Struct_10C549A0_Entry* Unknown54;
 };
 
-Class_10E9C330* FUN_10c56cf0();
+Class_10E9C330* GetSoundSimulator();
 
 Class_10A036A0 FUN_10a9c050(int A, Class_10A9C200_Unknown00* B);
 
@@ -112,7 +112,7 @@ int Class_10E6D164::FUN_10a9c200(void* Arg1, Class_10A9C200_Arg2* Arg2, Class_10
     Class_10A036A0 Holder = FUN_10a9c050(Arg3->Virtual4(0), Arg2->Virtual8());
     if (Holder.Unknown00 && Holder.Unknown00->Virtual7(&Holder))
     {
-        FUN_10c56cf0()->Virtual3(&Arg2, &Holder, 0, 0);
+        GetSoundSimulator()->Virtual3(&Arg2, &Holder, 0, 0);
         if (Arg2)
             Arg2->Virtual2();
     }

@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10BFBE30.h"
 
-double FUN_10c00480();
+double GetTimeSeconds();
 
 class Object_10BFBD30
 {
@@ -34,7 +34,7 @@ void FUN_10bfbd30(Struct_10BFBD30* List)
 bool Class_10BFBE30::FUN_10bfbe30()
 {
     float Limit = Unknown08;
-    if (FUN_10c00480() - Unknown04 > Limit)
+    if (GetTimeSeconds() - Unknown04 > Limit)
         return true;
     return false;
 }

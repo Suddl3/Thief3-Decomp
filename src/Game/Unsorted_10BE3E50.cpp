@@ -15,7 +15,7 @@ public:
     Class_10BFD210 Unknown30;
 };
 
-double FUN_10c00480();
+double GetTimeSeconds();
 
 extern float DAT_10e49684;
 
@@ -88,5 +88,5 @@ Class_10E95F40::~Class_10E95F40()
 void Class_10BE3FF0::FUN_10be3ff0()
 {
     Unknown04->Unknown30.FUN_10bfd210();
-    Unknown0C = FUN_10c00480() - (Virtual65() + DAT_10e49684);
+    Unknown0C = GetTimeSeconds() - (Virtual65() + DAT_10e49684);
 }

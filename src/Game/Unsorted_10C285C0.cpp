@@ -6,7 +6,7 @@
 #include "Game/Class_10C285C0.h"
 #include "Game/Class_10C28740.h"
 
-double FUN_10c00480();
+double GetTimeSeconds();
 
 int FUN_10c28480(int A, Class_109081E0* B, Class_109081E0* C);
 
@@ -33,5 +33,5 @@ void Class_10C28740::FUN_10c28740()
 // FUNCTION: 0x10C28B10 ??0Class_10C28B10@@QAE@HH@Z
 Class_10C28B10::Class_10C28B10(int A, int B) : Unknown00(A), Unknown08(B)
 {
-    Unknown10 = FUN_10c00480();
+    Unknown10 = GetTimeSeconds();
 }

@@ -1,7 +1,7 @@
 // Game/Class_10E9AF80_4.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-double FUN_10c00480();
+double GetTimeSeconds();
 
 class Class_10E9AF80
 {
@@ -17,7 +17,7 @@ public:
 // FUNCTION: 0x10C3CF40 ?FUN_10c3cf40@Class_10E9AF80@@UAEHXZ
 int Class_10E9AF80::FUN_10c3cf40()
 {
-    if (FUN_10c00480() > Unknown18 + Unknown14)
+    if (GetTimeSeconds() > Unknown18 + Unknown14)
         return 1;
     return 0;
 }

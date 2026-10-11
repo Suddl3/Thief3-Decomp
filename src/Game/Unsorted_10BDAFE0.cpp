@@ -32,7 +32,7 @@ public:
 
 float appFrand();
 
-double FUN_10c00480();
+double GetTimeSeconds();
 
 struct Struct_10BDAFE0
 {
@@ -45,7 +45,7 @@ void Class_10BDAFE0::FUN_10bdafe0()
 {
     float Min = Unknown04->Unknown08->FUN_10dbd510(0x10056e)->FUN_10bbdc80();
     float Max = Unknown04->Unknown08->FUN_10dbd510(0x10056f)->FUN_10bbdc80();
-    Unknown70 = FUN_10c00480() + (Max - Min) * appFrand() + Min;
+    Unknown70 = GetTimeSeconds() + (Max - Min) * appFrand() + Min;
 }
 
 // FUNCTION: 0x10BDB050 ?FUN_10bdb050@Class_10BDB050@@QAE_NXZ

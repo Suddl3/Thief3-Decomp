@@ -37,7 +37,7 @@ public:
     Class_10C7D570* Unknown08;
 };
 
-double FUN_10c00480();
+double GetTimeSeconds();
 
 extern Class_10FF667C* DAT_10ff667c;
 
@@ -46,7 +46,7 @@ int Class_10BF23A0::FUN_10bf23a0()
 {
     if (!Unknown230 && FUN_10bf1550())
     {
-        double Limit = FUN_10c00480();
+        double Limit = GetTimeSeconds();
         if (DAT_10ff667c->Unknown28->FUN_10bfb8c0(8) < Limit)
         {
             if (DAT_10ff667c->Unknown14->Virtual6())

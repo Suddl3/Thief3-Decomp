@@ -1,22 +1,7 @@
-// Game/Class_10E9AC80_25.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/cMotionControllerAnim_15.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-#include "Core/Core.h"
-#include "Game/FCoords.h"
-
-extern FCoords DAT_10f46de8;
-
-extern float DAT_10e49684;
-
-class Class_10C30420_Unknown0C
-{
-public:
-    char Unknown00[0x2C];
-    FVector Unknown2C;
-};
-
-class Class_10E9AC80
-{
+class cMotionControllerAnim {
 public:
     virtual void Virtual0();
     virtual void Virtual1();
@@ -38,7 +23,7 @@ public:
     virtual void Virtual17();
     virtual void Virtual18();
     virtual void Virtual19();
-    virtual int FUN_10c30420(const FVector& Point, float Radius);
+    virtual void Virtual20();
     virtual void Virtual21();
     virtual void Virtual22();
     virtual void Virtual23();
@@ -68,33 +53,18 @@ public:
     virtual void Virtual47();
     virtual void Virtual48();
     virtual void Virtual49();
-    virtual FRotator* Virtual50(FVector* Out);
+    virtual void Virtual50();
+    virtual void Virtual51();
+    virtual void SetKeyValue(int a, int b);
 
-    int Unknown04;
-    int Unknown08;
-    Class_10C30420_Unknown0C* Unknown0C;
+    char Unknown04[0x14C];
+    int m_Key;
+    int m_Value;
 };
 
-// FUNCTION: 0x10C30420 ?FUN_10c30420@Class_10E9AC80@@UAEHABVFVector@@M@Z
-int Class_10E9AC80::FUN_10c30420(const FVector& Point, float Radius)
+// FUNCTION: 0x10C2F550 ?SetKeyValue@cMotionControllerAnim@@UAEXHH@Z
+void cMotionControllerAnim::SetKeyValue(int a, int b)
 {
-    const FVector* Origin = &Unknown0C->Unknown2C;
-    FVector Delta;
-    Delta.X = Point.X - Origin->X;
-    Delta.Y = Point.Y - Origin->Y;
-    FVector Dir;
-    const FRotator& Rotation = *Virtual50(&Dir);
-    FCoords Coords = FCoords(DAT_10f46de8).FUN_10961af0(Rotation);
-    Dir = Coords.XAxis;
-    Delta.Z = 0.0f;
-    Dir.Z = 0.0f;
-    Delta.Normalize();
-    Dir.Normalize();
-    float Dot = Dir.X * Delta.X + Dir.Y * Delta.Y;
-    Dot += Dir.Z * Delta.Z;
-    if (DAT_10e49684 < Dot)
-        Dot = DAT_10e49684;
-    if (Dot < DAT_10e49684 - Radius)
-        return 1;
-    return 0;
+    m_Key = a;
+    m_Value = b;
 }

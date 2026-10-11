@@ -5,7 +5,7 @@
 #include "Game/Struct_10C05A80.h"
 #include "Game/Class_10C0C360.h"
 
-double FUN_10c00480();
+double GetTimeSeconds();
 
 class Class_10C0C8E0_Unknown0C
 {
@@ -51,7 +51,7 @@ void Class_10C0C8E0::FUN_10c0c410()
     {
         Class_10C0C8E0_Unknown0C* Item = Unknown0C[i];
         float Old = Item->Unknown5C;
-        if (FUN_10c00480() - Old > 60.0)
+        if (GetTimeSeconds() - Old > 60.0)
             FUN_10c0c200(Item->Unknown30, Item->Unknown2C);
     }
 }

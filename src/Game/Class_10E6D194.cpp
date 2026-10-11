@@ -24,16 +24,16 @@ public:
     virtual void Virtual9();
 };
 
-Object_10A9AC30* FUN_10c56cf0();
+Object_10A9AC30* GetSoundSimulator();
 
 // FUNCTION: 0x10A9AC30 ?FUN_10a9ac30@Class_10E6D194@@UAEHHHPAVClass_10AA1AC0@@@Z
 int Class_10E6D194::FUN_10a9ac30(int A, int B, Class_10AA1AC0* C)
 {
     if (C->Virtual4(0)->FUN_10978090() == 1)
     {
-        FUN_10c56cf0()->Virtual9();
+        GetSoundSimulator()->Virtual9();
         return 1;
     }
-    FUN_10c56cf0()->Virtual8(1);
+    GetSoundSimulator()->Virtual8(1);
     return 1;
 }

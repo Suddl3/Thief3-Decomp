@@ -45,8 +45,8 @@ void FUN_10c53230()
     FUN_10c53200();
 }
 
-// FUNCTION: 0x10C56CF0 ?FUN_10c56cf0@@YAXXZ
-void FUN_10c56cf0()
+// FUNCTION: 0x10C56CF0 ?GetSoundSimulator@@YAXXZ
+void GetSoundSimulator()
 {
     FUN_10c562c0();
 }

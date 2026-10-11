@@ -50,7 +50,7 @@ public:
     virtual void Virtual29();
     virtual void Virtual30();
     virtual void Virtual31();
-    virtual void FUN_10b15450(UObject* Obj);
+    virtual void Init(UObject* Obj);
 
     void FUN_10b137c0();
 
@@ -62,8 +62,8 @@ public:
     Class_10B15450_Item** Unknown44;
 };
 
-// FUNCTION: 0x10B15450 ?FUN_10b15450@UT3Game@@UAEXPAVUObject@@@Z
-void UT3Game::FUN_10b15450(UObject* Obj)
+// FUNCTION: 0x10B15450 ?Init@UT3Game@@UAEXPAVUObject@@@Z
+void UT3Game::Init(UObject* Obj)
 {
     FUN_10b137c0();
     if (Obj->IsA(UGameEngine::StaticClass()))

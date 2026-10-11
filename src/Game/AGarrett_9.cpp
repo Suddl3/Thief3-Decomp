@@ -104,14 +104,14 @@ public:
     virtual void Virtual98();
     virtual void Virtual99();
     virtual void Virtual100();
-    virtual bool FUN_10b21280();
+    virtual bool IsCrouching();
     char Unknown04[0x44c];
     unsigned Unknown450_0 : 1;
     unsigned Unknown450_1 : 1;
 };
 
-// FUNCTION: 0x10B21280 ?FUN_10b21280@AGarrett@@UAE_NXZ
-bool AGarrett::FUN_10b21280()
+// FUNCTION: 0x10B21280 ?IsCrouching@AGarrett@@UAE_NXZ
+bool AGarrett::IsCrouching()
 {
     return Unknown450_1;
 }

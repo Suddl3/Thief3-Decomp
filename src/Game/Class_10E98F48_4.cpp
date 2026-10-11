@@ -103,7 +103,7 @@ public:
     virtual float Virtual110();
 };
 
-double FUN_10c00480();
+double GetTimeSeconds();
 
 class Class_10E98D08
 {
@@ -158,7 +158,7 @@ bool Class_10E98F48::FUN_10c1b600()
     if (Pawn && !(Pawn->ObjectFlags & 0x800000))
     {
         float Value = Pawn->Virtual110();
-        if (!(FUN_10c00480() - Value > 5.0))
+        if (!(GetTimeSeconds() - Value > 5.0))
             return true;
     }
     return false;

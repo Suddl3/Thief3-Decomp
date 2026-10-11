@@ -18,7 +18,7 @@ public:
 class AGarrett
 {
 public:
-    void FUN_10b21b90(int A);
+    void SetNoiseEnabled(int A);
 
     char Unknown00[0x2C];
     FVector Location;
@@ -58,5 +58,5 @@ void Class_10E7E658::FUN_10b494c0(AGarrett* Garrett)
     ((Class_10B396A0*)FUN_10aa82d0())->FUN_10b396a0();
     DAT_10f3a3d8->Unknown108->FUN_109e38b0((int)Garrett->ropeToMount, (int)&Garrett->Location);
     Garrett->bUpdatePhysHeight = 1;
-    Garrett->FUN_10b21b90(0);
+    Garrett->SetNoiseEnabled(0);
 }

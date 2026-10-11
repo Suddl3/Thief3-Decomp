@@ -1,9 +1,16 @@
-// Game/Class_10E9AC80_4.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/cMotionControllerAnim_7.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10BA9F50.h"
+#include "Game/Struct_10BA9F50.h"
 
-#include "Core/Core.h"
+class Object_10C2F030
+{
+public:
+    char Unknown00[0x38];
+    Struct_10BA9F50 Unknown38;
+};
 
-class Class_10E9AC80
+class cMotionControllerAnim
 {
 public:
     virtual void Virtual0();
@@ -56,31 +63,23 @@ public:
     virtual void Virtual47();
     virtual void Virtual48();
     virtual void Virtual49();
-    virtual void Virtual50();
-    virtual void Virtual51();
-    virtual void Virtual52();
-    virtual void Virtual53();
-    virtual void Virtual54();
-    virtual void Virtual55();
-    virtual void Virtual56();
-    virtual void Virtual57();
-    virtual void Virtual58();
-    virtual void Virtual59();
-    virtual void Virtual60();
-    virtual void Virtual61();
-    virtual void Virtual62();
-    virtual void Virtual63();
-    virtual void FUN_10c2ee60(int A);
+    virtual Struct_10BA9F50 GetFacingRotation();
 
-    char Unknown04[0xF4];
-    int Unknown0F8;
-    int Unknown0FC;
-    FVector Unknown100;
+    char Unknown04[4];
+    Class_10BA9F50* Unknown08;
+    char Unknown0C[4];
+    Object_10C2F030* Unknown10;
+    char Unknown14[0x20];
+    Struct_10BA9F50 Unknown34;
 };
 
-// FUNCTION: 0x10C2EE60 ?FUN_10c2ee60@Class_10E9AC80@@UAEXH@Z
-void Class_10E9AC80::FUN_10c2ee60(int A)
+// FUNCTION: 0x10C2F030 ?GetFacingRotation@cMotionControllerAnim@@UAE?AUStruct_10BA9F50@@XZ
+Struct_10BA9F50 cMotionControllerAnim::GetFacingRotation()
 {
-    Unknown0F8 = A;
-    Unknown100 = FVector(0.0f, 0.0f, 0.0f);
+    Struct_10BA9F50 Value = Unknown10->Unknown38;
+    Unknown08->FUN_10ba9f50(&Value);
+    Value.Unknown00 = Unknown34.Unknown00;
+    Value.Unknown04 += Unknown34.Unknown04;
+    Value.Unknown08 = Unknown34.Unknown08;
+    return Value;
 }

@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10BAA230.h"
 
-double FUN_10c00480();
+double GetTimeSeconds();
 
 // FUNCTION: 0x10BAA130 ?FUN_10baa130@@YAHH@Z
 int FUN_10baa130(int A)
@@ -15,5 +15,5 @@ int FUN_10baa130(int A)
 // FUNCTION: 0x10BAA230 ?FUN_10baa230@Class_10BAA230@@QAEXXZ
 void Class_10BAA230::FUN_10baa230()
 {
-    UnknownB0 = FUN_10c00480();
+    UnknownB0 = GetTimeSeconds();
 }

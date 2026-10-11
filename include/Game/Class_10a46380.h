@@ -123,7 +123,7 @@ public:
     virtual void Virtual112();
     virtual void Virtual113();
 
-    int FUN_10a46380();
+    int GetGoalCount();
 
     char Unknown04[0x204];
     FArray Goals;

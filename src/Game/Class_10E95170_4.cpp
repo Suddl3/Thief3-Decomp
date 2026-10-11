@@ -15,7 +15,7 @@ public:
     int FUN_10bc4160();
 };
 
-double FUN_10c00480();
+double GetTimeSeconds();
 
 class Class_10E95170 : public Class_10BC4160
 {
@@ -32,5 +32,5 @@ void Class_10E95170::FUN_10bdf410()
 {
     ((Class_10bf7f90*)FUN_10bc4160())->FUN_10bf7f90(0, 1);
     Unknown40 = 1;
-    Unknown44 = (float)(FUN_10c00480() + 1.0);
+    Unknown44 = (float)(GetTimeSeconds() + 1.0);
 }

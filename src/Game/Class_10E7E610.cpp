@@ -5,7 +5,7 @@
 class AGarrett
 {
 public:
-    void FUN_10b21b90(int A);
+    void SetNoiseEnabled(int A);
 
     char Unknown00[0x450];
     unsigned bInBowDraw : 1;
@@ -62,5 +62,5 @@ void Class_10E7E610::FUN_10b492f0(AGarrett* Garrett)
     Unknown20 = 1;
     Unknown1C = 1;
     Garrett->bUpdatePhysHeight = 0;
-    Garrett->FUN_10b21b90(1);
+    Garrett->SetNoiseEnabled(1);
 }

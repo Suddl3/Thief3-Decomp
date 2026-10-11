@@ -1,13 +1,13 @@
-// Game/Class_10E9AC80_11.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/cMotionControllerAnim_8.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_109B2900.h"
+#include "Game/Class_109E3920.h"
 #include "Game/Class_10BAA580.h"
 
-class Class_109BC840 : public Class_109B2900
+class Class_109BC840 : public Class_109E3920
 {
 };
 
-class Class_10E9AC80
+class cMotionControllerAnim
 {
 public:
     virtual void Virtual0();
@@ -33,17 +33,18 @@ public:
     virtual void Virtual20();
     virtual void Virtual21();
     virtual void Virtual22();
-    virtual void FUN_10c2f300();
+    virtual void Virtual23();
+    virtual void Virtual24();
+    virtual bool FUN_10c2f240();
 
     char Unknown04[4];
     Class_10BAA580* Unknown08;
-    char Unknown0C[0xCD];
-    bool Unknown0D9;
 };
 
-// FUNCTION: 0x10C2F300 ?FUN_10c2f300@Class_10E9AC80@@UAEXXZ
-void Class_10E9AC80::FUN_10c2f300()
+// FUNCTION: 0x10C2F240 ?FUN_10c2f240@cMotionControllerAnim@@UAE_NXZ
+bool cMotionControllerAnim::FUN_10c2f240()
 {
-    if (!Unknown0D9 && Unknown08->FUN_10baa580())
-        Unknown08->FUN_10baa580()->FUN_109b2900();
+    if (Unknown08->FUN_10baa580())
+        return Unknown08->FUN_10baa580()->FUN_109e3920() != 0;
+    return false;
 }

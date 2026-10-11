@@ -1,8 +1,8 @@
-// Game/Class_10E9AC80_21.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/cMotionControllerAnim_21.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Struct_10C35630.h"
 
-class Class_10E9AC80
+class cMotionControllerAnim
 {
 public:
     virtual void Virtual0();
@@ -47,8 +47,8 @@ public:
     Struct_10C35630 Unknown58;
 };
 
-// FUNCTION: 0x10C35630 ?FUN_10c35630@Class_10E9AC80@@UAE?AUStruct_10C35630@@XZ
-Struct_10C35630 Class_10E9AC80::FUN_10c35630()
+// FUNCTION: 0x10C35630 ?FUN_10c35630@cMotionControllerAnim@@UAE?AUStruct_10C35630@@XZ
+Struct_10C35630 cMotionControllerAnim::FUN_10c35630()
 {
     return Unknown58;
 }

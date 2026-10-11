@@ -1,11 +1,11 @@
-// Game/Class_10E9AC80_12.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/cMotionControllerAnim_12.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Core/Core.h"
 #include "Game/FCoords.h"
 
 extern FCoords DAT_10f46de8;
 
-class Class_10E9AC80
+class cMotionControllerAnim
 {
 public:
     virtual void Virtual0();
@@ -15,8 +15,8 @@ public:
     virtual void Virtual4(const FVector& Direction, float A, float B);
 };
 
-// FUNCTION: 0x10C2F430 ?FUN_10c2f430@Class_10E9AC80@@UAEXABVFRotator@@MM@Z
-void Class_10E9AC80::FUN_10c2f430(const FRotator& Rotation, float A, float B)
+// FUNCTION: 0x10C2F430 ?FUN_10c2f430@cMotionControllerAnim@@UAEXABVFRotator@@MM@Z
+void cMotionControllerAnim::FUN_10c2f430(const FRotator& Rotation, float A, float B)
 {
     FCoords Coords = FCoords(DAT_10f46de8).FUN_10961af0(Rotation);
     FVector Direction = Coords.XAxis;

@@ -10,7 +10,7 @@ FVector FUN_10b1e010(Struct_10B1E010_Param* A);
 class AGarrett
 {
 public:
-    void FUN_10b21b90(int A);
+    void SetNoiseEnabled(int A);
 
     char Unknown00[0x450];
     unsigned bInBowDraw : 1;
@@ -88,5 +88,5 @@ void Class_10E7E6A0::FUN_10b4a330(AGarrett* Garrett)
     FUN_10b3b030(Garrett);
     FUN_10b3ae70(Garrett);
     Garrett->bUpdatePhysHeight = 0;
-    Garrett->FUN_10b21b90(1);
+    Garrett->SetNoiseEnabled(1);
 }

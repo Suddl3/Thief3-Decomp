@@ -94,7 +94,7 @@ public:
     virtual float Virtual67(int A);
 };
 
-class Class_10E9AC80
+class cMotionControllerAnim
 {
 public:
     void FUN_10c311d0();
@@ -106,8 +106,8 @@ public:
     char Unknown114;
 };
 
-// FUNCTION: 0x10C311D0 ?FUN_10c311d0@Class_10E9AC80@@QAEXXZ
-void Class_10E9AC80::FUN_10c311d0()
+// FUNCTION: 0x10C311D0 ?FUN_10c311d0@cMotionControllerAnim@@QAEXXZ
+void cMotionControllerAnim::FUN_10c311d0()
 {
     Class_109BC840* P = Unknown08->FUN_10baa580();
     if (P)

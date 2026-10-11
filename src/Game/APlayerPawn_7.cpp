@@ -121,15 +121,15 @@ public:
     virtual void Virtual109();
     virtual void Virtual110();
     virtual void Virtual111();
-    virtual Struct_10A465C0* FUN_10a465c0(int Index);
+    virtual Struct_10A465C0* GetGoal(int Index);
 
     char Unknown04[0x204];
     Struct_10A465C0* Unknown208;
     int Unknown20C;
 };
 
-// FUNCTION: 0x10A465C0 ?FUN_10a465c0@APlayerPawn@@UAEPAUStruct_10A465C0@@H@Z
-Struct_10A465C0* APlayerPawn::FUN_10a465c0(int Index)
+// FUNCTION: 0x10A465C0 ?GetGoal@APlayerPawn@@UAEPAUStruct_10A465C0@@H@Z
+Struct_10A465C0* APlayerPawn::GetGoal(int Index)
 {
     if (Index >= 0 && Index < Unknown20C)
         return &Unknown208[Index];

@@ -3,7 +3,7 @@
 #include "Game/Class_10BE3FF0.h"
 #include "Game/Class_10BB89D0.h"
 
-double FUN_10c00480();
+double GetTimeSeconds();
 
 class Class_10E93878
 {
@@ -94,6 +94,6 @@ public:
 void Class_10E93878::FUN_10bd1a60()
 {
     float Deadline = Unknown04->Unknown33C;
-    if (FUN_10c00480() > Deadline)
+    if (GetTimeSeconds() > Deadline)
         Unknown04->FUN_10bbc0f0(0x807fa);
 }

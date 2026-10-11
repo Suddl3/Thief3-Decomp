@@ -110,7 +110,7 @@ public:
     Class_10BE3FF0* FUN_10bb89d0();
 };
 
-double FUN_10c00480();
+double GetTimeSeconds();
 
 class Class_10E934D0
 {
@@ -152,6 +152,6 @@ void Class_10E934D0::FUN_10bd7de0(int A)
     if (Unknown04->FUN_10bb89d0())
         Unknown04->FUN_10bb89d0()->FUN_10be7ae0();
     double Value = Result->Virtual88();
-    Unknown44 = (float)(FUN_10c00480() + Value);
+    Unknown44 = (float)(GetTimeSeconds() + Value);
     FUN_10bd5860();
 }

@@ -6,7 +6,7 @@
 
 float appFrand();
 
-double FUN_10c00480();
+double GetTimeSeconds();
 
 struct Struct_10BE9A40
 {
@@ -19,5 +19,5 @@ void Class_10BE9A40::FUN_10be9a40()
 {
     float Min = Unknown04->Unknown08->FUN_10dbd510(0x100856)->FUN_10bbdb40();
     float Max = Unknown04->Unknown08->FUN_10dbd510(0x100857)->FUN_10bbdb40();
-    Unknown78 = FUN_10c00480() + (Min + (Max - Min) * appFrand());
+    Unknown78 = GetTimeSeconds() + (Min + (Max - Min) * appFrand());
 }

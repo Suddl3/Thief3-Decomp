@@ -14,7 +14,7 @@ struct Struct_10C0C8E0
     int Unknown30;
 };
 
-double FUN_10c00480();
+double GetTimeSeconds();
 
 void* operator new(unsigned int);
 
@@ -38,7 +38,7 @@ struct Struct_10C0C0D0
 void Class_10C0C090::FUN_10c0c090(int A, int B, FVector* Pos, int D)
 {
     Struct_10C0BFC0* Obj = FUN_10c0bfc0(A, B);
-    Obj->Unknown5C = FUN_10c00480();
+    Obj->Unknown5C = GetTimeSeconds();
     Obj->Unknown38 = *Pos;
 }
 

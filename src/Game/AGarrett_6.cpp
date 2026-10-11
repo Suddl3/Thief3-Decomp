@@ -97,7 +97,7 @@ public:
 class APlayerPawn : public Class_1098E330
 {
 public:
-    virtual float FUN_10a47f10();
+    virtual float GetLightLevel();
 
     char Unknown04[0x274];
 };
@@ -107,19 +107,19 @@ extern float DAT_10eafbdc;
 class AGarrett : public APlayerPawn
 {
 public:
-    virtual float FUN_10b220c0();
+    virtual float GetLightLevel();
     bool FUN_109a54b0();
 
     char Unknown278[0x268];
     float wallFlattenedLightModifier;
 };
 
-// FUNCTION: 0x10B220C0 ?FUN_10b220c0@AGarrett@@UAEMXZ
-float AGarrett::FUN_10b220c0()
+// FUNCTION: 0x10B220C0 ?GetLightLevel@AGarrett@@UAEMXZ
+float AGarrett::GetLightLevel()
 {
     if (FUN_109a54b0())
         return DAT_10eafbdc;
-    float Speed = APlayerPawn::FUN_10a47f10();
+    float Speed = APlayerPawn::GetLightLevel();
     int Value = 0;
     FUN_1098e330(0x800847, &Value);
     if (Value)

@@ -7,7 +7,7 @@ class Class_109BC840 : public Class_109B28F0
 {
 };
 
-class Class_10E9AC80
+class cMotionControllerAnim
 {
 public:
     virtual void Virtual0();
@@ -46,8 +46,8 @@ int FUN_10c2f170(int Kind)
     return 0;
 }
 
-// FUNCTION: 0x10C2F2A0 ?FUN_10c2f2a0@Class_10E9AC80@@UAEXXZ
-void Class_10E9AC80::FUN_10c2f2a0()
+// FUNCTION: 0x10C2F2A0 ?FUN_10c2f2a0@cMotionControllerAnim@@UAEXXZ
+void cMotionControllerAnim::FUN_10c2f2a0()
 {
     if (Unknown08->FUN_10baa580())
         Unknown08->FUN_10baa580()->FUN_109b28f0();

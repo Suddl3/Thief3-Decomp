@@ -8,11 +8,11 @@ class APlayerPawn
 public:
     APlayerPawn();
     void operator delete(void* p);
-    static void FUN_1098cb80(void* p);
+    static void InternalConstructor(void* p);
 };
 
-// FUNCTION: 0x1098CB80 ?FUN_1098cb80@APlayerPawn@@SAXPAX@Z
-void APlayerPawn::FUN_1098cb80(void* p)
+// FUNCTION: 0x1098CB80 ?InternalConstructor@APlayerPawn@@SAXPAX@Z
+void APlayerPawn::InternalConstructor(void* p)
 {
     new (p) APlayerPawn;
 }

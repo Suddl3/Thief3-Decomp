@@ -18,7 +18,7 @@ public:
 
 extern Class_10FF667C* DAT_10ff667c;
 
-double FUN_10c00480();
+double GetTimeSeconds();
 
 class Class_10E95898 : public Class_10E94578
 {
@@ -98,6 +98,6 @@ public:
 // FUNCTION: 0x10BE1C00 ?FUN_10be1c00@Class_10E95898@@UAEXXZ
 void Class_10E95898::FUN_10be1c00()
 {
-    if (Unknown40 + 1.0f < FUN_10c00480())
+    if (Unknown40 + 1.0f < GetTimeSeconds())
         FUN_10bc5b50();
 }

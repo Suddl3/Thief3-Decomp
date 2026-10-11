@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10BB8140.h"
 
-double FUN_10c00480();
+double GetTimeSeconds();
 
 class Class_10E960D8
 {
@@ -104,6 +104,6 @@ void Class_10E960D8::FUN_10be4250(bool A)
     if (A || !Virtual86())
     {
         Class_10BB8140* Ctrl = Unknown04;
-        Ctrl->FUN_10bb8140((float)FUN_10c00480());
+        Ctrl->FUN_10bb8140((float)GetTimeSeconds());
     }
 }

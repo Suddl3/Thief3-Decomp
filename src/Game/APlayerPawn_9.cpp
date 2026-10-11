@@ -137,14 +137,14 @@ public:
     virtual void Virtual108();
     virtual void Virtual109();
     virtual void Virtual110();
-    virtual void FUN_10a46a90(const FName& NoteName, const FString& NoteText, const FString& FriendlyName, INT Expiration); // slot 111
+    virtual void AddNote(const FName& NoteName, const FString& NoteText, const FString& FriendlyName, INT Expiration); // slot 111
 
     char Pad04[0x21C];
     Class_10B19940 PlayerNotes;     // 0x220
 };
 
-// FUNCTION: 0x10A46A90 ?FUN_10a46a90@APlayerPawn@@UAEXABVFName@@ABVFString@@1H@Z
-void APlayerPawn::FUN_10a46a90(const FName& NoteName, const FString& NoteText, const FString& FriendlyName, INT Expiration)
+// FUNCTION: 0x10A46A90 ?AddNote@APlayerPawn@@UAEXABVFName@@ABVFString@@1H@Z
+void APlayerPawn::AddNote(const FName& NoteName, const FString& NoteText, const FString& FriendlyName, INT Expiration)
 {
     for (INT i = 0; i < PlayerNotes.Unknown04; i++)
     {

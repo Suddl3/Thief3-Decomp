@@ -120,14 +120,14 @@ public:
     virtual void Virtual112();
     virtual void Virtual113();
     virtual void Virtual114();
-    virtual void FUN_10a46a80();
+    virtual void ClearGoals();
 
     char Unknown04[0x204];
     Class_10A46770 Unknown208;
 };
 
-// FUNCTION: 0x10A46A80 ?FUN_10a46a80@APlayerPawn@@UAEXXZ
-void APlayerPawn::FUN_10a46a80()
+// FUNCTION: 0x10A46A80 ?ClearGoals@APlayerPawn@@UAEXXZ
+void APlayerPawn::ClearGoals()
 {
     Unknown208.FUN_10a46770(0);
 }

@@ -45,7 +45,7 @@ struct Info_10B49D70
 class AGarrett
 {
 public:
-    void FUN_10b21b90(int A);
+    void SetNoiseEnabled(int A);
 
     char Unknown00[0x450];
     unsigned bInBowDraw : 1;
@@ -81,7 +81,7 @@ void Class_10E7E6A0::FUN_10b49d10(AGarrett* Garrett)
     FUN_10b3b130(Garrett);
     FUN_10b3ae90(Garrett);
     Garrett->bUpdatePhysHeight = 1;
-    Garrett->FUN_10b21b90(0);
+    Garrett->SetNoiseEnabled(0);
 }
 
 // FUNCTION: 0x10B49D40 ?FUN_10b49d40@Class_10E7E6A0@@QAEHH@Z

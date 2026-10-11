@@ -6,7 +6,7 @@
 #include "Game/Class_10C32C30.h"
 #include "Game/Class_10BFBD70.h"
 
-class Class_10E9AC80
+class cMotionControllerAnim
 {
 public:
     virtual void Virtual0();
@@ -28,20 +28,20 @@ public:
     virtual void Virtual16();
     virtual void Virtual17();
     virtual void Virtual18();
-    virtual void FUN_10c32b40(int Item);
+    virtual void RemoveMotionCallback(int Item);
 
     char Unknown04[0x134];
-    Class_10BFBD70 Unknown138;
+    Class_10BFBD70 m_MotionCallbacks;
 };
 
-// FUNCTION: 0x10C32B40 ?FUN_10c32b40@Class_10E9AC80@@UAEXH@Z
-void Class_10E9AC80::FUN_10c32b40(int Item)
+// FUNCTION: 0x10C32B40 ?RemoveMotionCallback@cMotionControllerAnim@@UAEXH@Z
+void cMotionControllerAnim::RemoveMotionCallback(int Item)
 {
-    int Count = Unknown138.Unknown00;
-    Class_10BFBD70* Set = &Unknown138;
+    int Count = m_MotionCallbacks.Unknown00;
+    Class_10BFBD70* Set = &m_MotionCallbacks;
     for (int i = 0; i < Count; i++)
     {
-        if (Unknown138.Unknown08[i] == Item)
+        if (m_MotionCallbacks.Unknown08[i] == Item)
         {
             int Last = Set->Unknown00 - 1;
             int Moved = Set->Unknown08[Last];

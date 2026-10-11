@@ -26,7 +26,7 @@ public:
     char Unknown00[0x20c];
     int Unknown20c;
 
-    int FUN_10a46380();
+    int GetGoalCount();
 };
 
 void FUN_10991270();
@@ -72,8 +72,8 @@ public:
     char Unknown121;
 };
 
-// FUNCTION: 0x10A46380 ?FUN_10a46380@Class_10a46380@@QAEHXZ
-int Class_10a46380::FUN_10a46380()
+// FUNCTION: 0x10A46380 ?GetGoalCount@Class_10a46380@@QAEHXZ
+int Class_10a46380::GetGoalCount()
 {
     return Unknown20c;
 }

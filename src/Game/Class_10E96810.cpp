@@ -4,7 +4,7 @@
 #include "Game/Class_10BFD210.h"
 #include "Game/Class_10DBD510.h"
 
-double FUN_10c00480();
+double GetTimeSeconds();
 
 struct Struct_10BE41B0
 {
@@ -104,7 +104,7 @@ public:
 bool Class_10E96810::FUN_10be41b0()
 {
     double V = Virtual65() + Unknown0C;
-    if (FUN_10c00480() < V)
+    if (GetTimeSeconds() < V)
         return false;
     Struct_10BE41B0* Owner = Unknown04;
     float L = Owner->Unknown30.FUN_10bfc3a0();

@@ -3,7 +3,7 @@
 
 extern void* DAT_10e935f0[];
 
-double FUN_10c00480();
+double GetTimeSeconds();
 
 class Class_10E90D70
 {
@@ -42,7 +42,7 @@ public:
 Class_10E935F0::Class_10E935F0(int A, int B) : Class_10BD3140(A, B)
 {
     Unknown00 = DAT_10e935f0;
-    Unknown44 = (float)FUN_10c00480();
+    Unknown44 = (float)GetTimeSeconds();
     Unknown48 = 0;
     Unknown4C = 0;
     Unknown50 = 0;

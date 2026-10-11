@@ -3,7 +3,7 @@
 #include "Game/Class_10C28240.h"
 #include "Game/Class_10E99370.h"
 
-double FUN_10c00480();
+double GetTimeSeconds();
 
 class Class_10C28280_Param
 {
@@ -16,7 +16,7 @@ public:
 void Class_10C28240::FUN_10c28240()
 {
     Virtual3();
-    Unknown08 = (float)FUN_10c00480();
+    Unknown08 = (float)GetTimeSeconds();
 }
 
 // FUNCTION: 0x10C28280 ?FUN_10c28280@Class_10E99370@@UAEXPAVClass_10C28280_Param@@@Z

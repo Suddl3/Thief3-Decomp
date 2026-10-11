@@ -41,7 +41,7 @@ public:
     virtual void Virtual33();
     virtual void Virtual34();
     virtual void Virtual35();
-    virtual int FUN_10b217f0(float A, int B);
+    virtual int Tick(float A, int B);
 
     void FUN_10b21690(float A);
 
@@ -62,8 +62,8 @@ Class_10B215D0 Class_10B215D0::FUN_10b215d0(const Class_10B215D0& N)
                           Unknown08 - (T.Unknown08 + T.Unknown08));
 }
 
-// FUNCTION: 0x10B217F0 ?FUN_10b217f0@AGarrett@@UAEHMH@Z
-int AGarrett::FUN_10b217f0(float A, int B)
+// FUNCTION: 0x10B217F0 ?Tick@AGarrett@@UAEHMH@Z
+int AGarrett::Tick(float A, int B)
 {
     Unknown454 = A;
     if (!DAT_10f45c0c)

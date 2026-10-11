@@ -32,7 +32,7 @@ public:
 
 float FUN_10ba91e0(const Struct_10BA91E0* A, const Struct_10BA91E0* B);
 
-double FUN_10c00480();
+double GetTimeSeconds();
 
 class Class_10E93CA0
 {
@@ -138,7 +138,7 @@ void Class_10E93CA0::FUN_10bd92e0()
     Unknown48 = FUN_10ba91e0(&((Class_10C7D570_Result*)C->FUN_10c7d570())->Unknown2C, Virtual70());
     Unknown58 = Obj && !Obj->FUN_10bff330() && Virtual73(0.5f);
     float Value = ((Class_10BB89D0*)Unknown04)->Unknown33C;
-    if (FUN_10c00480() > Value)
+    if (GetTimeSeconds() > Value)
     {
         if (((Class_10BB7E60*)Unknown04)->FUN_10bb7e60())
         {

@@ -14,12 +14,12 @@ extern void* DAT_10e97adc[];
 
 double FUN_1095af80();
 
-double FUN_10c00480();
+double GetTimeSeconds();
 
 // FUNCTION: 0x10BFBC90 ?FUN_10bfbc90@Class_10BFBC90@@QAEXXZ
 void Class_10BFBC90::FUN_10bfbc90()
 {
-    Unknown4C = (float)FUN_10c00480();
+    Unknown4C = (float)GetTimeSeconds();
 }
 
 // FUNCTION: 0x10BFC190 ?FUN_10bfc190@Class_10BFC190@@QAEXXZ

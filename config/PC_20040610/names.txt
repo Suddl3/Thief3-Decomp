@@ -1,0 +1,48 @@
+# Names the decompilation gave placeholder classes, functions and fields, with the evidence for each.
+# Written by tools/agent/names.py apply and fields.py apply; classmap.py keeps the class names in
+# classmap.txt.
+#   class <placeholder> <name> <evidence>
+#   function <address> <name> <evidence>
+#   field <class>::<placeholder> <name> <evidence>
+class Class_10E9AC80 cMotionControllerAnim Xbox twin vtable names cMotionControllerAnim (5 votes), source AI_MotionControllerAnim.cpp; its code adds and removes MotionCallbacks and queues locomotion commands.
+function 0x10A46380 GetGoalCount returns Goals.Num() (0x20C); AGarrett's GetGoalCount override calls it outside city sections
+function 0x10A47F10 GetLightLevel APlayerPawn's slot that AGarrett's GetLightLevel override calls and adds wallFlattenedLightModifier to; the Xbox builds name AActor::GetLightLevel
+function 0x10B21280 IsCrouching returns bit 1 of the flag word at 0x450, the header's script bool isCrouching
+function 0x10B21290 IsHoldingWeapon returns whether the script variable WeaponHolding (0x440) is non-null
+function 0x10B217F0 Tick stores its float argument in LastTickTime, calls FUN_10b21690 with it, returns 1; (float, int) to int is the AActor::Tick signature
+function 0x10B21AA0 GetGoalCount returns CitySectionGoals.Num() when FUN_10abf100() is true, else the inherited FUN_10a46380()
+function 0x10B21B90 SetNoiseEnabled assigns the script bit bNoiseEnabled; when bIn3rdPersonMode is set, forwards it to the object from FUN_10991e10
+function 0x10B220C0 GetLightLevel adds the script variable wallFlattenedLightModifier to the inherited FUN_10a47f10() float while property 0x800847 is set
+function 0x10B22690 ClearGoals empties CitySectionGoals when FUN_10abf100() is true, else calls APlayerPawn::FUN_10a46a80(), which empties Goals
+function 0x10C56CF0 GetSoundSimulator no-argument accessor returning Class_10E9C330, whose Xbox twin is SoundSimulator (SoundSimulator.cpp, listener message)
+function 0x1098CB80 InternalConstructor Body is new (p) APlayerPawn: DECLARE_CLASS's static InternalConstructor, passed to UClass in GetPrivateStaticClassAPlayerPawn; symbols.txt already lists this name.
+function 0x10A46360 HasGoal Returns whether slot 113, FindGoal (argument is the goal's FName), finds a goal; sibling accessors read that goal's GoalState, bPrimary, GoalType.
+function 0x10A46390 GetGoalState Returns GoalState of the goal from slot 113 (FindGoal); miss value 5 is one past eGoalState's last value, kGS_Hidden.
+function 0x10A463B0 IsGoalPrimary Returns bPrimary (bit 0 of the dword at 0x20) of the goal from slot 113 (FindGoal), or 5 when none.
+function 0x10A46430 GetGoalType Returns GoalType (byte at 0x24) of the goal from slot 113 (FindGoal); miss value 3 is one past eGoalType's last value, kGT_Note.
+function 0x10A46580 FindGoal Returns the Goals entry whose GoalName equals the FName, else null; vtable slot 113, AGarrett overrides it for city-section goals.
+function 0x10A465C0 GetGoal Returns Goals[Index] after a bounds check, else null; vtable slot 112, AGarrett overrides it for city-section goals.
+function 0x10A46A80 ClearGoals Empties the Goals array, destroying each FsGoal; vtable slot 115, AGarrett's override FUN_10b22690 empties CitySectionGoals in city mode.
+function 0x10A46A90 AddNote Appends an FsNote (NoteName, NoteText, FriendlyName, Expiration) to PlayerNotes unless an existing NoteText matches the new text; vtable slot 111.
+function 0x10B15450 Init creates its helper objects, registers its listeners when given a UGameEngine, stores the argument, then calls slot 0 of the first listener list
+function 0x10C32AF0 AddMotionCallback Xbox twin message 'Attempt to multiply add a MotionCallback'; code appends to the callback list unless the item is already present.
+function 0x10C32B40 RemoveMotionCallback Xbox twin message 'Attempt to remove nonexistant MotionCallback'; code finds the item in the same list and removes it.
+function 0x10C32A70 LocomotionCommandQueue Xbox twin message 'Invalid pLocomotionCommand in LocomotionCommandQueue()'; code returns false on a null command, else hands it to FUN_10c32970.
+function 0x10C2F030 GetFacingRotation Adds Unknown34's yaw to the owner's; slot 20 passes the result through FCoords to get the forward vector.
+function 0x10C30420 IsPointOutsideFacingCone Flattens and normalizes the facing (slot 50) and point directions, then tests their dot product against 1 minus the tolerance.
+function 0x10C2F5D0 ClearReferencesTo Nulls the object pointers at 0xF0 and 0xF8 when they equal its argument.
+function 0x10C00480 GetTimeSeconds Its double result plus a float Duration is stored as expiry time Unknown0E0; slot 56 stores it unchanged.
+function 0x10C2ED00 Reset Restores the defaults of the target, location, timer and flag that SetTarget and SetLocation store.
+function 0x10C2ED60 SetTarget Stores Target in Unknown0F0, sets Unknown0E0 to FUN_10c00480() + Duration when positive, Unknown164 to Flag.
+function 0x10C2EDB0 SetLocation Stores Location in Unknown0E4 with the same timer and flag handling as SetTarget.
+function 0x10C2F550 SetKeyValue Stores Key in Unknown150 and Value in Unknown154; FindValue reads them back.
+function 0x10C2F570 FindValue Returns true and writes Unknown154 to Out when Key equals Unknown150, the key SetKeyValue stores.
+field Struct_10A46390::Unknown1C GoalState Slot 113 (FindGoal) returns FsGoal; its GoalState byte is at 0x1C, and GetGoalState returns it.
+field Struct_10A46390::Unknown20 bPrimary FsGoal's bPrimary bitfield dword is at 0x20; IsGoalPrimary returns its bit 0.
+field Struct_10A46390::Unknown24 GoalType FsGoal's GoalType byte is at 0x24, and GetGoalType returns it.
+field cMotionControllerAnim::Unknown138 m_MotionCallbacks AddMotionCallback appends to it and RemoveMotionCallback removes from it; Xbox messages name MotionCallback.
+field cMotionControllerAnim::Unknown0E0 m_ExpireTime Set to FUN_10c00480() plus Duration by SetTarget and SetLocation, and to FUN_10c00480() by Reset.
+field cMotionControllerAnim::Unknown0E4 m_Location FVector stored by SetLocation and zeroed by Reset.
+field cMotionControllerAnim::Unknown0F0 m_Target Object pointer stored by SetTarget, zeroed by Reset, cleared by ClearReferencesTo.
+field cMotionControllerAnim::Unknown150 m_Key Compared with Key by FindValue; stored by SetKeyValue.
+field cMotionControllerAnim::Unknown154 m_Value Written to Out by FindValue; stored by SetKeyValue.

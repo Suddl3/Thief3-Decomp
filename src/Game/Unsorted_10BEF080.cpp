@@ -3,7 +3,7 @@
 #include "Game/Class_10BB8300.h"
 #include "Game/Class_10BEF080.h"
 
-double FUN_10c00480();
+double GetTimeSeconds();
 
 class Class_10BBB8B0
 {
@@ -47,7 +47,7 @@ public:
 void Class_10BEF080::FUN_10bef080()
 {
     Unknown134 = Unknown04->FUN_10bbb8b0() ? 1 : 2;
-    Unknown220 = FUN_10c00480() + 1.0;
+    Unknown220 = GetTimeSeconds() + 1.0;
 }
 
 // FUNCTION: 0x10BEF0F0 ?FUN_10bef0f0@Class_10E97720@@UAEXXZ

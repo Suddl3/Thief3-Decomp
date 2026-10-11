@@ -41,7 +41,7 @@ public:
     virtual unsigned char Virtual1(FVector* A, int* B);
 };
 
-double FUN_10c00480();
+double GetTimeSeconds();
 
 class Class_10E96510 : public Class_10E960D8
 {
@@ -63,7 +63,7 @@ void Class_10E96510::FUN_10be8710()
     Object_10BE8710* Object = static_cast<Object_10BE8710*>(Owner->Unknown30.FUN_10c88610());
     if (Object && Object->Virtual1(&Out, &Flag) == 1)
     {
-        Unknown50 = (float)FUN_10c00480();
+        Unknown50 = (float)GetTimeSeconds();
         Unknown54 = Out;
         Unknown04->FUN_10bb83a0((int)&Unknown54, 5.0f, 0);
     }

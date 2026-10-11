@@ -15,13 +15,13 @@ class AAIPawn;
 
 Class_10B9BCA0* FUN_10baa660(AAIPawn* Pawn);
 
-double FUN_10c00480();
+double GetTimeSeconds();
 
 // FUNCTION: 0x10BB8D00 ?FUN_10bb8d00@Class_10BB8D00@@QAEXXZ
 void Class_10BB8D00::FUN_10bb8d00()
 {
-    if (FUN_10c00480() - Unknown2EC > 1.0)
-        Unknown2EC = FUN_10c00480();
+    if (GetTimeSeconds() - Unknown2EC > 1.0)
+        Unknown2EC = GetTimeSeconds();
     Class_10B9BCA0* Controller = FUN_10baa660((AAIPawn*)Unknown08->FUN_10c7d570());
     Class_10BC9D40* Target;
     if (Controller && Controller->Unknown118 && Controller->Unknown118->Unknown08)

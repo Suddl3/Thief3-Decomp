@@ -4,7 +4,7 @@
 #include "Game/Class_10BB86B0.h"
 #include "Game/Class_10BB86F0.h"
 
-double FUN_10c00480();
+double GetTimeSeconds();
 
 class Class_10BC4BF0
 {
@@ -47,5 +47,5 @@ void Class_10E92348::FUN_10bcc030()
 {
     Unknown04->FUN_10bb86b0(0.5f);
     ((Class_10AAF570_Field10*)FUN_10bc4bf0())->Virtual27();
-    ((Class_10BB86F0*)Unknown04)->FUN_10bb86f0(FUN_10c00480());
+    ((Class_10BB86F0*)Unknown04)->FUN_10bb86f0(GetTimeSeconds());
 }

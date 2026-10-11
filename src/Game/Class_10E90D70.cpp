@@ -7,7 +7,7 @@ class Class_10BC4BE0_Member;
 
 class Class_10E90C58;
 
-double FUN_10c00480();
+double GetTimeSeconds();
 
 void FUN_10c28d20();
 
@@ -50,7 +50,7 @@ public:
 
 // FUNCTION: 0x10BC55A0 ??0Class_10E90D70@@QAE@HH@Z
 Class_10E90D70::Class_10E90D70(int A, int B)
-    : Unknown04(A), Unknown08(B), Unknown0C(FUN_10c00480()), Unknown10(), Unknown14(), Unknown18(),
+    : Unknown04(A), Unknown08(B), Unknown0C(GetTimeSeconds()), Unknown10(), Unknown14(), Unknown18(),
       Unknown1C(), Unknown20(), Unknown24(), Unknown28(), Unknown34()
 {
     FUN_10905aa0()->Virtual8(0, 0);

@@ -6,7 +6,7 @@
 #include "Game/Class_10E90A1C.h"
 #include "Game/Class_10E9CFE0.h"
 
-double FUN_10c00480();
+double GetTimeSeconds();
 
 class Class_10C28BD0
 {
@@ -23,13 +23,13 @@ void Class_10E90A1C::FUN_10bb8430()
     ((Class_10C28BD0*)FUN_10c28bc0())->FUN_10c28bd0();
     FUN_10bb7f90();
     float Value = Unknown08->FUN_10dbd510(0x10070a)->FUN_10bbdb40();
-    Unknown2C4 = FUN_10c00480() + Value;
+    Unknown2C4 = GetTimeSeconds() + Value;
 }
 
 // FUNCTION: 0x10BB8480 ?FUN_10bb8480@Class_10BB8480@@QAE_NXZ
 bool Class_10BB8480::FUN_10bb8480()
 {
-    if (FUN_10c00480() > Unknown2C4)
+    if (GetTimeSeconds() > Unknown2C4)
         return true;
     return false;
 }

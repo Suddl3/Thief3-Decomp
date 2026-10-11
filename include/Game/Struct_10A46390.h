@@ -7,10 +7,10 @@ struct Struct_10A46390
 {
 public:
     char Unknown00[0x1C];
-    unsigned char Unknown1C;
+    unsigned char GoalState;
     char Pad1D[0x3];
-    int Unknown20;
-    unsigned char Unknown24;
+    int bPrimary;
+    unsigned char GoalType;
 };
 
 #endif // GAME_STRUCT_10A46390_H

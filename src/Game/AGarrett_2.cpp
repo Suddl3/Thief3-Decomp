@@ -123,7 +123,7 @@ public:
     virtual void Virtual112();
     virtual void Virtual113();
     virtual void Virtual114();
-    virtual void FUN_10a46a80();
+    virtual void ClearGoals();
 
     char Unknown04[0x210];
     Class_10B22640 CitySectionGoals;
@@ -132,14 +132,14 @@ public:
 class AGarrett : public APlayerPawn
 {
 public:
-    virtual void FUN_10b22690();
+    virtual void ClearGoals();
 };
 
-// FUNCTION: 0x10B22690 ?FUN_10b22690@AGarrett@@UAEXXZ
-void AGarrett::FUN_10b22690()
+// FUNCTION: 0x10B22690 ?ClearGoals@AGarrett@@UAEXXZ
+void AGarrett::ClearGoals()
 {
     if (FUN_10abf0d0()->FUN_10abf100())
         CitySectionGoals.FUN_10b22640(0);
     else
-        APlayerPawn::FUN_10a46a80();
+        APlayerPawn::ClearGoals();
 }

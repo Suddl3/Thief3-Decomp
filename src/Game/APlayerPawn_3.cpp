@@ -125,14 +125,14 @@ public:
     virtual void Virtual110();
     virtual void Virtual111();
     virtual void Virtual112();
-    virtual FsGoal* FUN_10a46580(const FName& Name);
+    virtual FsGoal* FindGoal(const FName& Name);
 
     char Unknown04[0x204];
     TArray<FsGoal> Goals;
 };
 
-// FUNCTION: 0x10A46580 ?FUN_10a46580@APlayerPawn@@UAEPAUFsGoal@@ABVFName@@@Z
-FsGoal* APlayerPawn::FUN_10a46580(const FName& Name)
+// FUNCTION: 0x10A46580 ?FindGoal@APlayerPawn@@UAEPAUFsGoal@@ABVFName@@@Z
+FsGoal* APlayerPawn::FindGoal(const FName& Name)
 {
     for (int i = 0; i < Goals.Num(); i++)
     {

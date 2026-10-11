@@ -120,11 +120,11 @@ public:
     virtual void* Virtual113(int Param);
     virtual void Virtual114();
     virtual void Virtual115();
-    virtual bool FUN_10a46360(int Param);
+    virtual bool HasGoal(int Param);
 };
 
-// FUNCTION: 0x10A46360 ?FUN_10a46360@APlayerPawn@@UAE_NH@Z
-bool APlayerPawn::FUN_10a46360(int Param)
+// FUNCTION: 0x10A46360 ?HasGoal@APlayerPawn@@UAE_NH@Z
+bool APlayerPawn::HasGoal(int Param)
 {
     return Virtual113(Param) != 0;
 }

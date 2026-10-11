@@ -6,7 +6,7 @@
 
 float appFrand();
 
-double FUN_10c00480();
+double GetTimeSeconds();
 
 class Class_10BB8140
 {
@@ -130,7 +130,7 @@ void Class_10E960D8::FUN_10be85d0()
     if (!Unknown64)
         Virtual86();
     FUN_10be7ae0();
-    if (FUN_10c00480() - Unknown50 > Unknown68)
+    if (GetTimeSeconds() - Unknown50 > Unknown68)
     {
         float Max = Unknown04->Unknown08->FUN_10dbd510(0x100592)->FUN_10bbdb40();
         if (Max > 0.0f)

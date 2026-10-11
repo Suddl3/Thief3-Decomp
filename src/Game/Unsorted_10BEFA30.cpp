@@ -14,7 +14,7 @@
 
 float appFrand();
 
-double FUN_10c00480();
+double GetTimeSeconds();
 
 class Class_10BF03B0_Member
 {
@@ -60,7 +60,7 @@ void Class_10BEFA80::FUN_10befa80()
     float Delay = appFrand();
     Delay *= 3.0f;
     Delay += 3.0f;
-    Unknown224 = Delay + FUN_10c00480();
+    Unknown224 = Delay + GetTimeSeconds();
 }
 
 // FUNCTION: 0x10BF0360 ?FUN_10bf0360@Class_10BF0360@@QAEXVFVector@@M@Z

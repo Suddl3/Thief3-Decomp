@@ -3,7 +3,7 @@
 
 extern void* DAT_10e9af80[];
 
-double FUN_10c00480();
+double GetTimeSeconds();
 
 class Class_10E9AF80
 {
@@ -27,7 +27,7 @@ Class_10E9AF80* Class_10E9AF80::FUN_10c3ceb0(int A, int B, int C)
     Unknown00 = DAT_10e9af80;
     Unknown0C = A;
     Unknown10 = B;
-    Unknown14 = FUN_10c00480();
+    Unknown14 = GetTimeSeconds();
     Unknown18 = C;
     return this;
 }

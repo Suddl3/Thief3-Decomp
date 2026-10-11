@@ -44,7 +44,7 @@ struct Struct_10C7D570_Result
 
 extern float DAT_10eafbdc;
 
-class Class_10E9AC80
+class cMotionControllerAnim
 {
 public:
     virtual void Virtual0();
@@ -55,7 +55,7 @@ public:
     virtual void Virtual5();
     virtual void Virtual6();
     virtual void Virtual7();
-    virtual bool FUN_10c32a70(void* A);
+    virtual bool LocomotionCommandQueue(void* A);
 
     void FUN_10c32970(void* A, int B);
     void FUN_10c306b0();
@@ -107,8 +107,8 @@ void Class_10C30640::FUN_10c30640()
         Found->Unknown14 = FVector(0.0f, 0.0f, 0.0f);
 }
 
-// FUNCTION: 0x10C306B0 ?FUN_10c306b0@Class_10E9AC80@@QAEXXZ
-void Class_10E9AC80::FUN_10c306b0()
+// FUNCTION: 0x10C306B0 ?FUN_10c306b0@cMotionControllerAnim@@QAEXXZ
+void cMotionControllerAnim::FUN_10c306b0()
 {
     float Abs = Unknown4C;
     if (!(Abs >= DAT_10eafbdc))
@@ -141,8 +141,8 @@ void Class_10C30700::FUN_10c30750(int A, int B)
     Unknown99 = false;
 }
 
-// FUNCTION: 0x10C32A70 ?FUN_10c32a70@Class_10E9AC80@@UAE_NPAX@Z
-bool Class_10E9AC80::FUN_10c32a70(void* A)
+// FUNCTION: 0x10C32A70 ?LocomotionCommandQueue@cMotionControllerAnim@@UAE_NPAX@Z
+bool cMotionControllerAnim::LocomotionCommandQueue(void* A)
 {
     if (!A)
         return false;

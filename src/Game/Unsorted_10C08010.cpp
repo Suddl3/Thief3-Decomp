@@ -20,7 +20,7 @@ public:
     void FUN_10c26030(float Value);
 };
 
-double FUN_10c00480();
+double GetTimeSeconds();
 
 float FUN_10c064c0();
 
@@ -68,7 +68,7 @@ void Class_10C08010::FUN_10c08010(Class_10C08010_Arg1* A, Struct_10BA91E0* P, in
             if (FUN_10c00430(&Vec) == Index)
             {
                 Out.FUN_10c25ff0(0xff);
-                Out.FUN_10c26030((float)FUN_10c00480());
+                Out.FUN_10c26030((float)GetTimeSeconds());
             }
         }
     }

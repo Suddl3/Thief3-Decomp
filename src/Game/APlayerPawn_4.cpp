@@ -123,14 +123,14 @@ public:
     virtual void Virtual115();
     virtual void Virtual116();
     virtual void Virtual117();
-    virtual int FUN_10a46390(int Param);
+    virtual int GetGoalState(int Param);
 };
 
-// FUNCTION: 0x10A46390 ?FUN_10a46390@APlayerPawn@@UAEHH@Z
-int APlayerPawn::FUN_10a46390(int Param)
+// FUNCTION: 0x10A46390 ?GetGoalState@APlayerPawn@@UAEHH@Z
+int APlayerPawn::GetGoalState(int Param)
 {
     Struct_10A46390* Info = Virtual113(Param);
     if (Info)
-        return Info->Unknown1C;
+        return Info->GoalState;
     return 5;
 }

@@ -5,7 +5,7 @@
 
 extern float DAT_10eafbdc;
 
-double FUN_10c00480();
+double GetTimeSeconds();
 
 bool FUN_10c00680(void* Obj);
 
@@ -56,7 +56,7 @@ float Class_10E98D08::FUN_10c1b000(bool B)
 {
     if (!B)
     {
-        float Now = FUN_10c00480();
+        float Now = GetTimeSeconds();
         if (Now < Unknown30 + Unknown24)
             return DAT_10eafbdc;
         if (Now - Unknown38 < 0.01f)

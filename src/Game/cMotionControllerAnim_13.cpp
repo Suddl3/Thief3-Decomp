@@ -1,7 +1,12 @@
-// Game/Class_10E9AC80_16.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/cMotionControllerAnim_13.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Struct_10FF66B0.h"
 
-class Class_10E9AC80
+extern "C" int __cdecl sprintf(char* Out, const char* Format, ...);
+
+extern Struct_10FF66B0 DAT_10ff66b0[];
+
+class cMotionControllerAnim
 {
 public:
     virtual void Virtual0();
@@ -39,40 +44,14 @@ public:
     virtual void Virtual32();
     virtual void Virtual33();
     virtual void Virtual34();
-    virtual void Virtual35();
+    virtual void FUN_10c2f4a0(char* Buffer);
     virtual void Virtual36();
     virtual void Virtual37();
-    virtual void Virtual38();
-    virtual void Virtual39();
-    virtual void Virtual40();
-    virtual void Virtual41();
-    virtual void Virtual42();
-    virtual void Virtual43();
-    virtual void Virtual44();
-    virtual void Virtual45();
-    virtual void Virtual46();
-    virtual void Virtual47();
-    virtual void Virtual48();
-    virtual void Virtual49();
-    virtual void Virtual50();
-    virtual void Virtual51();
-    virtual void Virtual52();
-    virtual void Virtual53();
-    virtual void FUN_10c2f5a0();
-
-    char Unknown04[0x144];
-    int Unknown148;
-    char Unknown14C[4];
-    int Unknown150;
-    int Unknown154;
-    int Unknown158;
+    virtual int Virtual38();
 };
 
-// FUNCTION: 0x10C2F5A0 ?FUN_10c2f5a0@Class_10E9AC80@@UAEXXZ
-void Class_10E9AC80::FUN_10c2f5a0()
+// FUNCTION: 0x10C2F4A0 ?FUN_10c2f4a0@cMotionControllerAnim@@UAEXPAD@Z
+void cMotionControllerAnim::FUN_10c2f4a0(char* Buffer)
 {
-    Unknown150 = 0;
-    Unknown154 = 0;
-    Unknown158 = 0;
-    Unknown148 = 0;
+    sprintf(Buffer, "%s: %d", DAT_10ff66b0[Virtual38()].Unknown00, DAT_10ff66b0[Virtual38()].Unknown0C);
 }

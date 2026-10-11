@@ -1,16 +1,13 @@
-// Game/Class_10E9AC80_7.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/cMotionControllerAnim_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10BA9F50.h"
-#include "Game/Struct_10BA9F50.h"
 
-class Object_10C2F030
-{
-public:
-    char Unknown00[0x38];
-    Struct_10BA9F50 Unknown38;
-};
+#include "Core/Core.h"
 
-class Class_10E9AC80
+class Object_10C2F5D0;
+
+double GetTimeSeconds();
+
+class cMotionControllerAnim
 {
 public:
     virtual void Virtual0();
@@ -63,23 +60,28 @@ public:
     virtual void Virtual47();
     virtual void Virtual48();
     virtual void Virtual49();
-    virtual Struct_10BA9F50 FUN_10c2f030();
+    virtual void Virtual50();
+    virtual void Virtual51();
+    virtual void Virtual52();
+    virtual void Virtual53();
+    virtual void Virtual54();
+    virtual void Virtual55();
+    virtual void Virtual56();
+    virtual void SetLocation(const FVector& Location, float Duration, int Flag);
 
-    char Unknown04[4];
-    Class_10BA9F50* Unknown08;
-    char Unknown0C[4];
-    Object_10C2F030* Unknown10;
-    char Unknown14[0x20];
-    Struct_10BA9F50 Unknown34;
+    char Unknown04[0xDC];
+    float m_ExpireTime;
+    FVector m_Location;
+    Object_10C2F5D0* m_Target;
+    char Unknown0F4[0x70];
+    int Unknown164;
 };
 
-// FUNCTION: 0x10C2F030 ?FUN_10c2f030@Class_10E9AC80@@UAE?AUStruct_10BA9F50@@XZ
-Struct_10BA9F50 Class_10E9AC80::FUN_10c2f030()
+// FUNCTION: 0x10C2EDB0 ?SetLocation@cMotionControllerAnim@@UAEXABVFVector@@MH@Z
+void cMotionControllerAnim::SetLocation(const FVector& Location, float Duration, int Flag)
 {
-    Struct_10BA9F50 Value = Unknown10->Unknown38;
-    Unknown08->FUN_10ba9f50(&Value);
-    Value.Unknown00 = Unknown34.Unknown00;
-    Value.Unknown04 += Unknown34.Unknown04;
-    Value.Unknown08 = Unknown34.Unknown08;
-    return Value;
+    m_Location = Location;
+    if (Duration > 0.0f)
+        m_ExpireTime = GetTimeSeconds() + Duration;
+    Unknown164 = Flag;
 }

@@ -19,7 +19,7 @@ extern void* DAT_10e98c80[];
 
 extern void* DAT_10e98c84[];
 
-double FUN_10c00480();
+double GetTimeSeconds();
 
 // FUNCTION: 0x10C12DA0 ?FUN_10c12da0@Class_10E984BC@@QAE?AVClass_1090A780@@XZ
 Class_1090A780 Class_10E984BC::FUN_10c12da0()
@@ -75,5 +75,5 @@ int Class_10C16220::FUN_10c16220(int Id)
 void Class_10C168F0::FUN_10c168f0(int A, float B)
 {
     Unknown0AC = A;
-    Unknown0B0 = FUN_10c00480() + B;
+    Unknown0B0 = GetTimeSeconds() + B;
 }

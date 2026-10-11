@@ -6,7 +6,7 @@
 #include "Game/Class_10C2EC00.h"
 #include "Game/FArchive.h"
 
-class Class_10E9AC80
+class cMotionControllerAnim
 {
 public:
     virtual void Virtual0();
@@ -46,8 +46,8 @@ void Class_10C2EC00::FUN_10c2ec00(FArchive& Ar)
     Ar.Virtual7(&Unknown1C);
 }
 
-// FUNCTION: 0x10C2EC90 ?FUN_10c2ec90@Class_10E9AC80@@UAE?AVFVector@@H@Z
-FVector Class_10E9AC80::FUN_10c2ec90(int A)
+// FUNCTION: 0x10C2EC90 ?FUN_10c2ec90@cMotionControllerAnim@@UAE?AVFVector@@H@Z
+FVector cMotionControllerAnim::FUN_10c2ec90(int A)
 {
     FVector Result(0.0f, 0.0f, 0.0f);
     Unknown08->FUN_10baa580()->FUN_109bc160(A, &Result);

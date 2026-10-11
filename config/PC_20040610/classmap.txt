@@ -470,20 +470,20 @@ Class_10C270B0           Class_10E992D4                   0x10C270B0: slot of 0x
 Class_10C27100           Class_10E99314                   0x10C27100: slot of 0x10E99314
 Class_10C2EB30           Class_10E9AA7C                   0x10C2EB30: stores 0x10E9AA7C
 Class_10C2EBD0           Class_10E9AA7C                   0x10C2EBD0: slot of 0x10E9AA7C
-Class_10C2ECF0           Class_10E9AC80                   0x10C2ECF0: slot of 0x10E9AC80
-Class_10C2EE10           Class_10E9AC80                   0x10C2EE10: slot of 0x10E9AC80
-Class_10C2EEB0           Class_10E9AC80                   0x10C2EEB0: slot of 0x10E9AC80
-Class_10C2F530           Class_10E9AC80                   0x10C2F530: slot of 0x10E9AC80
-Class_10C2F570           Class_10E9AC80                   0x10C2F570: slot of 0x10E9AC80
-Class_10C2F5C0           Class_10E9AC80                   0x10C2F5C0: slot of 0x10E9AC80
-Class_10C2F600           Class_10E9AC80                   0x10C2F600: called on this by 0x10C357D0
-Class_10C2F870           Class_10E9AC80                   0x10C2F870: slot of 0x10E9AC80
-Class_10C2F960           Class_10E9AC80                   0x10C2F960: slot of 0x10E9AC80
-Class_10C306B0           Class_10E9AC80                   0x10C306B0: called on this by 0x10C357D0
-Class_10C311D0           Class_10E9AC80                   0x10C311D0: called on this by 0x10C357D0
-Class_10C35650           Class_10E9AC80                   0x10C35650: slot of 0x10E9AC80
-Class_10C35670           Class_10E9AC80                   0x10C35670: slot of 0x10E9AC80
-Class_10C356A0           Class_10E9AC80                   0x10C356A0: slot of 0x10E9AC80
+Class_10C2ECF0           cMotionControllerAnim            0x10C2ECF0: slot of 0x10E9AC80
+Class_10C2EE10           cMotionControllerAnim            0x10C2EE10: slot of 0x10E9AC80
+Class_10C2EEB0           cMotionControllerAnim            0x10C2EEB0: slot of 0x10E9AC80
+Class_10C2F530           cMotionControllerAnim            0x10C2F530: slot of 0x10E9AC80
+Class_10C2F570           cMotionControllerAnim            0x10C2F570: slot of 0x10E9AC80
+Class_10C2F5C0           cMotionControllerAnim            0x10C2F5C0: slot of 0x10E9AC80
+Class_10C2F600           cMotionControllerAnim            0x10C2F600: called on this by 0x10C357D0
+Class_10C2F870           cMotionControllerAnim            0x10C2F870: slot of 0x10E9AC80
+Class_10C2F960           cMotionControllerAnim            0x10C2F960: slot of 0x10E9AC80
+Class_10C306B0           cMotionControllerAnim            0x10C306B0: called on this by 0x10C357D0
+Class_10C311D0           cMotionControllerAnim            0x10C311D0: called on this by 0x10C357D0
+Class_10C35650           cMotionControllerAnim            0x10C35650: slot of 0x10E9AC80
+Class_10C35670           cMotionControllerAnim            0x10C35670: slot of 0x10E9AC80
+Class_10C356A0           cMotionControllerAnim            0x10C356A0: slot of 0x10E9AC80
 Class_10C36860           Class_10E9AD9C                   0x10C36860: slot of 0x10E9AD9C
 Class_10C37390           Class_10E9ADE8                   0x10C37490: called on this by 0x10C37470
 Class_10C374E0           Class_10E9ADE8                   0x10C374E0: slot of 0x10E9ADE8
@@ -522,6 +522,7 @@ Class_10E667AC           Class_10E66700                   0x10A39EA0: stores 0x1
 Class_10E78470           UAttachment_LinkDataObject       0x10B129D0: stores 0x10E78470
 Class_10E784F8           UGarrettEquipLinkDataObject      0x10B12A60: stores 0x10E784F8
 Class_10E78580           UHUDRenderLinkDataObject         0x10B12B30: stores 0x10E78580
+Class_10E9AC80           cMotionControllerAnim            named: Xbox twin vtable names cMotionControllerAnim (5 votes), source AI_MotionControllerAnim.cpp; its code adds and removes MotionCallbacks and queues locomotion commands.
 Class_10a46380           APlayerPawn                      0x10A46380: slot of 0x10E676D0
 Class_10a46770           Class_10A46770                   the same address as Class_10A46770, in capitals
 Class_10a51d60           Class_10E67DF0                   0x10A51D60: stores 0x10E67DF0

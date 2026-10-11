@@ -129,17 +129,17 @@ public:
     virtual void Virtual110();
     virtual void Virtual111();
     virtual void Virtual112();
-    virtual FsGoal* FUN_10a46580(const FName& A);
+    virtual FsGoal* FindGoal(const FName& A);
 };
 
 class AGarrett : public APlayerPawn
 {
 public:
-    virtual FsGoal* FUN_10a46580(const FName& A);
+    virtual FsGoal* FindGoal(const FName& A);
 };
 
-// FUNCTION: 0x10B212A0 ?FUN_10a46580@AGarrett@@UAEPAUFsGoal@@ABVFName@@@Z
-FsGoal* AGarrett::FUN_10a46580(const FName& A)
+// FUNCTION: 0x10B212A0 ?FindGoal@AGarrett@@UAEPAUFsGoal@@ABVFName@@@Z
+FsGoal* AGarrett::FindGoal(const FName& A)
 {
     if (FUN_10abf0d0()->FUN_10abf100())
     {
@@ -148,5 +148,5 @@ FsGoal* AGarrett::FUN_10a46580(const FName& A)
             return (FsGoal*)&Found->Unknown04;
         return 0;
     }
-    return APlayerPawn::FUN_10a46580(A);
+    return APlayerPawn::FindGoal(A);
 }

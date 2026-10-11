@@ -3,7 +3,7 @@
 #include "Game/Class_10C2F090.h"
 #include "Game/Class_10C2F330.h"
 
-class Class_10E9AC80 {
+class cMotionControllerAnim {
 public:
     virtual void Virtual0();
     virtual void Virtual1();
@@ -25,8 +25,8 @@ public:
     unsigned char Unknown9E;
 };
 
-// FUNCTION: 0x10C2EFC0 ?FUN_10c2efc0@Class_10E9AC80@@UAE_NXZ
-bool Class_10E9AC80::FUN_10c2efc0()
+// FUNCTION: 0x10C2EFC0 ?FUN_10c2efc0@cMotionControllerAnim@@UAE_NXZ
+bool cMotionControllerAnim::FUN_10c2efc0()
 {
     return Unknown9E == 0;
 }

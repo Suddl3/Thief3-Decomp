@@ -13,7 +13,7 @@ extern float DAT_10eafbdc;
 
 extern "C" void* memset(void*, int, unsigned);
 
-double FUN_10c00480();
+double GetTimeSeconds();
 
 class Class_10BC9D40
 {
@@ -114,7 +114,7 @@ void Class_10BBB410::FUN_10bb9260()
         if (Value > DAT_10eafbdc)
         {
             double Limit = Value + Unknown1DC;
-            if (Limit < FUN_10c00480())
+            if (Limit < GetTimeSeconds())
             {
                 Unknown1DC = 0.0f;
                 memset(&Unknown1CC, 0, sizeof(FVector));

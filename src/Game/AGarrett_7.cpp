@@ -125,7 +125,7 @@ public:
     virtual void Virtual109();
     virtual void Virtual110();
     virtual void Virtual111();
-    virtual struct Struct_10A465C0* FUN_10a465c0(int A);
+    virtual struct Struct_10A465C0* GetGoal(int A);
     virtual void Virtual113();
     virtual int Virtual114();
 
@@ -142,18 +142,18 @@ struct FsCitySectionGoal
 class AGarrett : public APlayerPawn
 {
 public:
-    virtual struct Struct_10A465C0* FUN_10a465c0(int Index);
+    virtual struct Struct_10A465C0* GetGoal(int Index);
 };
 
-// FUNCTION: 0x10B21A50 ?FUN_10a465c0@AGarrett@@UAEPAUStruct_10A465C0@@H@Z
-struct Struct_10A465C0* AGarrett::FUN_10a465c0(int Index)
+// FUNCTION: 0x10B21A50 ?GetGoal@AGarrett@@UAEPAUStruct_10A465C0@@H@Z
+struct Struct_10A465C0* AGarrett::GetGoal(int Index)
 {
     int Count = Virtual114();
     if (Index >= 0 && Index < Count)
     {
         if (FUN_10abf0d0()->FUN_10abf100())
             return (struct Struct_10A465C0*)CitySectionGoals[Index].Unknown04;
-        return APlayerPawn::FUN_10a465c0(Index);
+        return APlayerPawn::GetGoal(Index);
     }
     return 0;
 }

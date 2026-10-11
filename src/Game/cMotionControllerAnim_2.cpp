@@ -1,9 +1,11 @@
-// Game/Class_10E9AC80_23.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/cMotionControllerAnim_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-#include "Core/Core.h"
+class Object_10C2F5D0;
 
-class Class_10E9AC80
+double GetTimeSeconds();
+
+class cMotionControllerAnim
 {
 public:
     virtual void Virtual0();
@@ -50,17 +52,35 @@ public:
     virtual void Virtual41();
     virtual void Virtual42();
     virtual void Virtual43();
-    virtual void FUN_10c356b0();
+    virtual void Virtual44();
+    virtual void Virtual45();
+    virtual void Virtual46();
+    virtual void Virtual47();
+    virtual void Virtual48();
+    virtual void Virtual49();
+    virtual void Virtual50();
+    virtual void Virtual51();
+    virtual void Virtual52();
+    virtual void Virtual53();
+    virtual void Virtual54();
+    virtual void Virtual55();
+    virtual void Virtual56();
+    virtual void Virtual57();
+    virtual void SetTarget(Object_10C2F5D0* Target, float Duration, int Flag);
 
-    char Unknown04[0x64];
-    FRotator Unknown68;
-    char Unknown74[0x27];
-    bool Unknown9B;
+    char Unknown04[0xDC];
+    float m_ExpireTime;
+    char m_Location[0xC];
+    Object_10C2F5D0* m_Target;
+    char Unknown0F4[0x70];
+    int Unknown164;
 };
 
-// FUNCTION: 0x10C356B0 ?FUN_10c356b0@Class_10E9AC80@@UAEXXZ
-void Class_10E9AC80::FUN_10c356b0()
+// FUNCTION: 0x10C2ED60 ?SetTarget@cMotionControllerAnim@@UAEXPAVObject_10C2F5D0@@MH@Z
+void cMotionControllerAnim::SetTarget(Object_10C2F5D0* Target, float Duration, int Flag)
 {
-    Unknown68 = FRotator(0, 0, 0);
-    Unknown9B = false;
+    m_Target = Target;
+    if (Duration > 0.0f)
+        m_ExpireTime = GetTimeSeconds() + Duration;
+    Unknown164 = Flag;
 }

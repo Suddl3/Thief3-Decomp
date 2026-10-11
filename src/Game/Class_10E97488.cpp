@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10BB8D60.h"
 
-double FUN_10c00480();
+double GetTimeSeconds();
 
 class Class_10E8BE68
 {
@@ -51,7 +51,7 @@ void Class_10E97488::FUN_10bed000()
         if (Unknown10 == 10)
             Unknown04->FUN_10bb8d60();
     }
-    if (Unknown58 < 1 && FUN_10c00480() > Unknown44)
+    if (Unknown58 < 1 && GetTimeSeconds() > Unknown44)
     {
         FUN_10bc5b50();
         return;

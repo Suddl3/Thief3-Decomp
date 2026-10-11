@@ -3,7 +3,7 @@
 
 extern "C" double sin(double);
 
-double FUN_10c00480();
+double GetTimeSeconds();
 
 extern float DAT_10e49684;
 
@@ -29,7 +29,7 @@ public:
 // FUNCTION: 0x10C3CFE0 ?FUN_10c3cfe0@Class_10E9AF80@@UAEXPAM00@Z
 void Class_10E9AF80::FUN_10c3cfe0(float* A, float* B, float* C)
 {
-    float T = (FUN_10c00480() - Unknown14) / Unknown18;
+    float T = (GetTimeSeconds() - Unknown14) / Unknown18;
     float X = DAT_10e49684 - T;
     float S = sin((DAT_10e49684 - X * X * X) * DAT_10e9afc8);
     *B = S * Unknown0C;

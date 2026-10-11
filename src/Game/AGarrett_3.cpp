@@ -5,11 +5,11 @@
 #include "Game/Class_10C56E40_Field00.h"
 #include "Game/Class_10E9C330.h"
 
-Class_10E9C330* FUN_10c56cf0();
+Class_10E9C330* GetSoundSimulator();
 
 // FUNCTION: 0x10B21630 ?Destroy@AGarrett@@UAEXXZ
 void AGarrett::Destroy()
 {
     Super::Destroy();
-    FUN_10c56cf0()->Virtual0(0);
+    GetSoundSimulator()->Virtual0(0);
 }

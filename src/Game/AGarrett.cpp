@@ -9,13 +9,13 @@ Class_10ABF100* FUN_10abf0d0();
 class AGarrett : public Class_10a46380
 {
 public:
-    virtual int FUN_10b21aa0();
+    virtual int GetGoalCount();
 };
 
-// FUNCTION: 0x10B21AA0 ?FUN_10b21aa0@AGarrett@@UAEHXZ
-int AGarrett::FUN_10b21aa0()
+// FUNCTION: 0x10B21AA0 ?GetGoalCount@AGarrett@@UAEHXZ
+int AGarrett::GetGoalCount()
 {
     if (FUN_10abf0d0()->FUN_10abf100())
         return CitySectionGoals.Num();
-    return FUN_10a46380();
+    return Class_10a46380::GetGoalCount();
 }

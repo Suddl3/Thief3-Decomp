@@ -4,7 +4,7 @@
 #include "Game/Class_109081E0.h"
 #include "Game/Class_10E93B5C.h"
 
-double FUN_10c00480();
+double GetTimeSeconds();
 
 class Class_10C37960
 {
@@ -111,7 +111,7 @@ public:
 Class_10E9AA38::Class_10E9AA38(Class_10C37960* A, const Class_10E93B5C& B, int C, const Class_109081E0& E, int F, int G, int H, int I)
     : Class_10E99314((int)A, B, C), Unknown4C(false), Unknown50(0), Unknown54((char)F), Unknown58(G), Unknown5C(0.0f), Unknown64(E)
 {
-    Unknown60 = (float)FUN_10c00480();
+    Unknown60 = (float)GetTimeSeconds();
     A->Virtual54();
     if (E.Unknown00 != 0 && ((int*)E.Unknown00)[-1] > 0)
     {

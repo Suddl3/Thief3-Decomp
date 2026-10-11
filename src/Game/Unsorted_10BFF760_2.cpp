@@ -2,8 +2,8 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/TimeManager.h"
 
-// FUNCTION: 0x10C00480 ?FUN_10c00480@@YANXZ
-double FUN_10c00480()
+// FUNCTION: 0x10C00480 ?GetTimeSeconds@@YANXZ
+double GetTimeSeconds()
 {
     double GameTime = TimeManager::Instance()->GetGameTime();
     return GameTime;

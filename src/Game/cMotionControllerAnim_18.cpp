@@ -1,9 +1,9 @@
-// Game/Class_10E9AC80_18.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/cMotionControllerAnim_18.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Core/Core.h"
 
-class Class_10E9AC80
+class cMotionControllerAnim
 {
 public:
     void FUN_10c2f600();
@@ -15,8 +15,8 @@ public:
     int UnknownDC;
 };
 
-// FUNCTION: 0x10C2F600 ?FUN_10c2f600@Class_10E9AC80@@QAEXXZ
-void Class_10E9AC80::FUN_10c2f600()
+// FUNCTION: 0x10C2F600 ?FUN_10c2f600@cMotionControllerAnim@@QAEXXZ
+void cMotionControllerAnim::FUN_10c2f600()
 {
     Unknown28 = FVector(0, 0, Unknown28.Z);
     Unknown34 = FRotator(0, 0, 0);

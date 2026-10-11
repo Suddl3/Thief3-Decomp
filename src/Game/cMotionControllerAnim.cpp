@@ -1,7 +1,14 @@
-// Game/Class_10E9AC80_15.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/cMotionControllerAnim.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-class Class_10E9AC80 {
+#include "Core/Core.h"
+
+class Object_10C2F5D0;
+
+double GetTimeSeconds();
+
+class cMotionControllerAnim
+{
 public:
     virtual void Virtual0();
     virtual void Virtual1();
@@ -55,16 +62,25 @@ public:
     virtual void Virtual49();
     virtual void Virtual50();
     virtual void Virtual51();
-    virtual void FUN_10c2f550(int a, int b);
+    virtual void Virtual52();
+    virtual void Virtual53();
+    virtual void Virtual54();
+    virtual void Virtual55();
+    virtual void Reset();
 
-    char Unknown04[0x14C];
-    int Unknown150;
-    int Unknown154;
+    char Unknown04[0xDC];
+    float m_ExpireTime;
+    FVector m_Location;
+    Object_10C2F5D0* m_Target;
+    char Unknown0F4[0x70];
+    int Unknown164;
 };
 
-// FUNCTION: 0x10C2F550 ?FUN_10c2f550@Class_10E9AC80@@UAEXHH@Z
-void Class_10E9AC80::FUN_10c2f550(int a, int b)
+// FUNCTION: 0x10C2ED00 ?Reset@cMotionControllerAnim@@UAEXXZ
+void cMotionControllerAnim::Reset()
 {
-    Unknown150 = a;
-    Unknown154 = b;
+    m_Target = 0;
+    m_Location = FVector(0.0f, 0.0f, 0.0f);
+    m_ExpireTime = GetTimeSeconds();
+    Unknown164 = 0;
 }

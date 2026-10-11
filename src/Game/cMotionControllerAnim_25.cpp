@@ -1,9 +1,21 @@
-// Game/Class_10E9AC80_17.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/cMotionControllerAnim_25.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-class Object_10C2F5D0;
+#include "Core/Core.h"
+#include "Game/FCoords.h"
 
-class Class_10E9AC80
+extern FCoords DAT_10f46de8;
+
+extern float DAT_10e49684;
+
+class Class_10C30420_Unknown0C
+{
+public:
+    char Unknown00[0x2C];
+    FVector Unknown2C;
+};
+
+class cMotionControllerAnim
 {
 public:
     virtual void Virtual0();
@@ -26,7 +38,7 @@ public:
     virtual void Virtual17();
     virtual void Virtual18();
     virtual void Virtual19();
-    virtual void Virtual20();
+    virtual int IsPointOutsideFacingCone(const FVector& Point, float Radius);
     virtual void Virtual21();
     virtual void Virtual22();
     virtual void Virtual23();
@@ -56,37 +68,33 @@ public:
     virtual void Virtual47();
     virtual void Virtual48();
     virtual void Virtual49();
-    virtual void Virtual50();
-    virtual void Virtual51();
-    virtual void Virtual52();
-    virtual void Virtual53();
-    virtual void Virtual54();
-    virtual void Virtual55();
-    virtual void Virtual56();
-    virtual void Virtual57();
-    virtual void Virtual58();
-    virtual void Virtual59();
-    virtual void Virtual60();
-    virtual void Virtual61();
-    virtual void Virtual62();
-    virtual void Virtual63();
-    virtual void Virtual64();
-    virtual void Virtual65();
-    virtual void Virtual66();
-    virtual void Virtual67();
-    virtual void FUN_10c2f5d0(Object_10C2F5D0* A);
+    virtual FRotator* Virtual50(FVector* Out);
 
-    char Unknown04[0xEC];
-    Object_10C2F5D0* Unknown0F0;
-    char Unknown0F4[4];
-    Object_10C2F5D0* Unknown0F8;
+    int Unknown04;
+    int Unknown08;
+    Class_10C30420_Unknown0C* Unknown0C;
 };
 
-// FUNCTION: 0x10C2F5D0 ?FUN_10c2f5d0@Class_10E9AC80@@UAEXPAVObject_10C2F5D0@@@Z
-void Class_10E9AC80::FUN_10c2f5d0(Object_10C2F5D0* A)
+// FUNCTION: 0x10C30420 ?IsPointOutsideFacingCone@cMotionControllerAnim@@UAEHABVFVector@@M@Z
+int cMotionControllerAnim::IsPointOutsideFacingCone(const FVector& Point, float Radius)
 {
-    if (Unknown0F0 == A)
-        Unknown0F0 = 0;
-    if (Unknown0F8 == A)
-        Unknown0F8 = 0;
+    const FVector* Origin = &Unknown0C->Unknown2C;
+    FVector Delta;
+    Delta.X = Point.X - Origin->X;
+    Delta.Y = Point.Y - Origin->Y;
+    FVector Dir;
+    const FRotator& Rotation = *Virtual50(&Dir);
+    FCoords Coords = FCoords(DAT_10f46de8).FUN_10961af0(Rotation);
+    Dir = Coords.XAxis;
+    Delta.Z = 0.0f;
+    Dir.Z = 0.0f;
+    Delta.Normalize();
+    Dir.Normalize();
+    float Dot = Dir.X * Delta.X + Dir.Y * Delta.Y;
+    Dot += Dir.Z * Delta.Z;
+    if (DAT_10e49684 < Dot)
+        Dot = DAT_10e49684;
+    if (Dot < DAT_10e49684 - Radius)
+        return 1;
+    return 0;
 }

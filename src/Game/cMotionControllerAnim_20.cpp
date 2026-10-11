@@ -1,4 +1,4 @@
-// Game/Class_10E9AC80_20.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/cMotionControllerAnim_20.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
 class Class_10BFBD70
@@ -18,7 +18,7 @@ public:
     int* Unknown08;
 };
 
-class Class_10E9AC80
+class cMotionControllerAnim
 {
 public:
     virtual void Virtual0();
@@ -39,19 +39,19 @@ public:
     virtual void Virtual15();
     virtual void Virtual16();
     virtual void Virtual17();
-    virtual void FUN_10c32af0(int Item);
+    virtual void AddMotionCallback(int Item);
 
     char Unknown04[0x134];
-    Class_10BFBD70 Unknown138;
+    Class_10BFBD70 m_MotionCallbacks;
 };
 
-// FUNCTION: 0x10C32AF0 ?FUN_10c32af0@Class_10E9AC80@@UAEXH@Z
-void Class_10E9AC80::FUN_10c32af0(int Item)
+// FUNCTION: 0x10C32AF0 ?AddMotionCallback@cMotionControllerAnim@@UAEXH@Z
+void cMotionControllerAnim::AddMotionCallback(int Item)
 {
-    for (int i = 0; i < Unknown138.Unknown00; i++)
+    for (int i = 0; i < m_MotionCallbacks.Unknown00; i++)
     {
-        if (Unknown138.Unknown08[i] == Item)
+        if (m_MotionCallbacks.Unknown08[i] == Item)
             return;
     }
-    Unknown138.Append(Item);
+    m_MotionCallbacks.Append(Item);
 }
