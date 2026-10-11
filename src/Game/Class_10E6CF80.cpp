@@ -3,6 +3,7 @@
 #include "Game/Class_10AAB5C0.h"
 #include "Game/Class_10A98570_Unknown08.h"
 #include "Game/Class_10D4ACC0.h"
+#include "Game/Class_10E6CF80.h"
 
 Class_10D4ACC0 FUN_10d4acc0();
 
@@ -17,12 +18,6 @@ public:
 
     int Unknown04;
     int Unknown08;
-};
-
-class Class_10E6CF80 : public Class_10AAB5C0
-{
-public:
-    virtual int Virtual6(int A, int B);
 };
 
 // FUNCTION: 0x10A98570 ?Virtual6@Class_10E6CF80@@UAEHHH@Z
