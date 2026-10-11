@@ -187,6 +187,12 @@ inlines any body in the file, even one defined after the caller). Use
   T::InternalConstructor(void* X) { new ((EInternal*)X) T(); }`. The jmp
   target is `T::T()`: declare it as the constructor even when symbols.txt
   calls it a method.
+- `new(0, 0, 0, 0, 0) T` is Ion Storm's tagged new (`??2@YAPAXIABHHHHH@Z`).
+  Declare it together with its placement delete:
+  `void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);`
+  `void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);`
+  Without the delete, MSVC leaves out the new-expression's EH states and
+  calls an implicit constructor out of line where the game inlines it.
 
 ## Rules (accept.py rejects the rest)
 
