@@ -114,7 +114,21 @@ public:
     INT InStr(const FString& SubStr, UBOOL Right = 0) const;  // 0x10AF8190
 
     INT Len() const;                                          // 0x10AF7F70
+    const ANSICHAR* operator*() const;                        // 0x10AF7F80: Data, or "" when empty
 };
+
+// String and number helpers, out of line in this build: each jumps into the C runtime.
+typedef INT (__cdecl* QSORT_COMPARE)(const void* A, const void* B);
+const TCHAR* appStrstr(const TCHAR* String, const TCHAR* Find);          // 0x10AF3630
+const TCHAR* appStrchr(const TCHAR* String, INT c);                      // 0x10AF3640
+INT appStricmp(const TCHAR* String1, const TCHAR* String2);              // 0x10AF36E0
+INT appAtoi(const TCHAR* Str);                                           // 0x10AF3710
+INT appStrtoi(const TCHAR* Start, TCHAR** End, INT Base);                // 0x10AF3720
+INT appStrncmp(const TCHAR* A, const TCHAR* B, INT Count);               // 0x10AF3730
+INT appStrnicmp(const TCHAR* A, const TCHAR* B, INT Count);              // 0x10AF3740
+void appQsort(void* Base, INT Num, INT Size, QSORT_COMPARE Compare);     // 0x10AF3750
+// Skips the command word Match at *Stream, and the spaces after it, when it is there.
+UBOOL ParseCommand(const TCHAR** Stream, const TCHAR* Match);            // 0x10AF42F0
 
 // A script class's string property, as the generated class headers declare it (stock Unreal
 // Engine 2). Its constructor is out of line in this build: it builds the array with the memory
