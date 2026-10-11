@@ -573,6 +573,37 @@ change no code, so they can come after the matches at no matching cost; they
 need their own work and their own measure. Run `readability.py --history`
 after each naming pass (it appends to `build/agent/readability-history.jsonl`).
 
+### Naming pass
+
+Naming workers follow [namer.md](../tools/agent/namer.md): for each class of
+their task, `tools/agent/classinfo.py <Class>` prints its packet (the
+declaration, derived classes, every matched method with its source, strings,
+callees and callers, the placeholder fields and who uses them, the vtable's
+slots, and the Xbox evidence below), and the worker writes a plan of names,
+each with a line of evidence, to `build/scratch/names/<ID>.json`. The lead
+reviews the plans and applies them:
+
+    python tools/agent/names.py apply build/scratch/names/<ID>.json [--dry-run]
+    python configure.py --msvc-runtime <dir> && ninja   # the report must not move
+
+`names.py` checks each entry (a placeholder still in use; a new identifier no
+class or global uses; no two addresses with one decorated name), renames the
+identifiers in `src/`, `include/` (a class header's file and guard too), the
+accepted and deferred records and `symbols.txt` (the old names stay as
+aliases, so a pending source using one still pairs), and records each name
+with its evidence in `config/<version>/names.txt`; `classmap.py` keeps the
+class names in `classmap.txt`, so workers are asked for them.
+`names.py list [<regex>]` prints the names given so far.
+
+A plan's `fields` go through `tools/agent/fields.py apply <plan>` after
+names.py (a class key that names.py has renamed resolves to the new name).
+`Unknown0E0` is a member of hundreds of classes, so a field is renamed where
+its class is declared, and the compiler finds its uses: every unit that
+declares the class, includes its header or uses the old name is compiled,
+and exactly the uses MSVC no longer resolves (C2039, C2065) are renamed,
+until each compiles. A class's renames are kept only when every such unit
+still compiles to its built object's code; otherwise every file goes back.
+
 ### Xbox builds
 
 Ion Storm's Xbox development builds of April 2004 (`T3Opt.xbe`, optimized
@@ -583,7 +614,7 @@ functions. They carry no symbols (the PDB they name is not on the discs) and
 no RTTI. `tools/agent/xbox.py pair <T3Opt.xbe> [<T3Debug.xbe>]` pairs their
 functions and vtables with T3Main.exe's and writes the evidence to
 `build/agent/xbox.json`; `xbox.py show <address|Class_X>` and
-`xbox.py classes` print it.
+`xbox.py classes` print it, and classinfo.py shows it to the naming workers.
 The builds stay on your machine: only names, with a line of evidence, enter
 the repository. The rules, repeated until nothing new pairs:
 

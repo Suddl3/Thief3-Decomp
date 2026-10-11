@@ -30,6 +30,7 @@ python tools/agent/clusters.py list|stamp; sweep.py "<prefix>-*"                
 .venv/Scripts/python tools/progress_report.py write|check                          # decomp.dev report: write after integrating, commit progress/
 .venv/Scripts/python tools/classify.py write|classes|explain <addr>|stats          # whose code: game/engine/libs (config/*/categories.txt, classes.txt)
 .venv/Scripts/python tools/agent/readability.py [--history]                       # how much of src/ is named (docs/agent-workflow.md, "Readable code")
+.venv/Scripts/python tools/agent/classinfo.py <Class>; names.py apply <plan> [--dry-run]|list; fields.py apply <plan>   # naming pass (tools/agent/namer.md)
 .venv/Scripts/python tools/agent/xbox.py pair <T3Opt.xbe> [<T3Debug.xbe>]|show <addr|Class_X>|classes   # Xbox builds' evidence for names
 .venv/Scripts/python tools/assets/t3classes.py check|show <class>|headers          # class layouts from the scripts (include/<Package>/)
 .venv/Scripts/python tools/agent/retry.py; rename.py --registered; fixnames.py spec <plan>; dtors.py [native|matched]; classreg.py; vtables.py spec <plan>; arity.py   # naming passes, deleting destructors, class registrations, vtable slots, arities (docs/agent-workflow.md)

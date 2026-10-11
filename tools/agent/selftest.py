@@ -1191,6 +1191,22 @@ TESTS.append(test_arity)
 TESTS.append(test_fixnames_aliases)
 
 
+def test_names(base: Path) -> None:
+    """names.py renames whole identifiers, inside decorated names too, and keeps a renamed symbols.txt name as
+    an alias."""
+    import names
+    rename = names.renamer({"Class_10BFBD70": "PtrArray", "FUN_10bfbd70": "Empty"})
+    check(rename("Class_10BFBD70* p; Class_10BFBD70_Member m; ?FUN_10bfbd70@Class_10BFBD70@@QAEXXZ; xFUN_10bfbd70")
+          == "PtrArray* p; Class_10BFBD70_Member m; ?Empty@PtrArray@@QAEXXZ; xFUN_10bfbd70", "whole identifiers only")
+    text, changed = names.rename_symbols("?FUN_10bfbd70@Class_10BFBD70@@QAEXXZ = .text:0x10BFBD70; "
+                                         "// type:function size:0x10\n", rename)
+    check(changed == 1 and text.splitlines() == [
+        "?Empty@PtrArray@@QAEXXZ = .text:0x10BFBD70; // type:function size:0x10",
+        "?FUN_10bfbd70@Class_10BFBD70@@QAEXXZ = .text:0x10BFBD70; // type:alias"], "the old name stays as an alias")
+
+
+TESTS.append(test_names)
+
 
 def test_xbox_pairs(base: Path) -> None:
     """xbox.py pairs two programs' functions through a string only one function of each uses, then the rest

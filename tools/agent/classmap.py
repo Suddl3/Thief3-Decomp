@@ -365,6 +365,15 @@ def rejected(p: Project) -> Dict[str, Tuple[str, str]]:
     return out
 
 
+def with_names(mapping: Dict[str, Tuple[str, str]], names: Dict[str, Tuple[str, str]]) -> Dict[str, Tuple[str, str]]:
+    """The map with the names config/<version>/names.txt gives classes (tools/agent/names.py): a named
+    placeholder maps to its name, and so does every placeholder the map makes that class."""
+    out = {old: ((names[new][0], why) if new in names else (new, why)) for old, (new, why) in mapping.items()}
+    for old, (new, why) in names.items():
+        out.setdefault(old, (new, f"named: {why}"))
+    return out
+
+
 def write(p: Project, mapping: Dict[str, Tuple[str, str]], rejects: Dict[str, Tuple[str, str]]) -> Path:
     path = p.config_dir / "classmap.txt"
     rows = [f"{old:<24} {new:<32} {why}" for old, (new, why) in sorted(mapping.items()) if old not in rejects]
@@ -382,7 +391,8 @@ def main() -> None:
     for k, v in stats.items():
         print(f"{k}: {v}")
     if args.command == "write":
-        path = write(p, mapping, rejected(p))
+        import names  # names.py imports this module
+        path = write(p, with_names(mapping, names.class_names(p)), rejected(p))
         print(f"wrote {path}: {len(mapping)} placeholders")
 
 
