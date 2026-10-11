@@ -255,7 +255,10 @@ is ordinary thiscall, and a result in eax or edx is ordinary too. Whatever is
 loaded into ecx just before a call (a global, a field, a parameter, a local) is
 that call's `this`: the callee is a method of its class even when symbols.txt
 names it a free function or types the global int or void*. That is a name
-conflict, not ltcg.
+conflict, not ltcg. Pushes before a call that a later call pops belong to the
+later call: MSVC evaluates arguments right to left, so `F(P->Get(), A, B)`
+pushes B and A, calls Get, pushes its result, calls F and pops all three. Get
+takes none of those pushes.
 
 ## Names need evidence
 
