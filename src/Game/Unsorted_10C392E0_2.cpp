@@ -1,6 +1,5 @@
 // Game/Unsorted_10C392E0_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10C0A9A0.h"
 #include "Game/Class_10C80360.h"
 #include "Game/Class_10C20BC0.h"
@@ -19,6 +18,9 @@
 #include "Game/Class_10BFF460.h"
 #include "Game/Class_10DC1750.h"
 #include "Game/Class_10DC1750_Result.h"
+#include "Game/Class_10AA82D0.h"
+#include "Game/Class_10C399C0.h"
+#include "Game/Class_10C39E90.h"
 
 class Class_10FF667C
 {
@@ -28,20 +30,6 @@ public:
 };
 
 extern Class_10FF667C* DAT_10ff667c;
-
-class Class_10C399C0
-{
-public:
-    int FUN_10c38d90(int A);
-    int FUN_10c399c0();
-
-    char Unknown00[0x88];
-    int Unknown88;
-    char Unknown8C[4];
-    Class_10C80360** Unknown90;
-    char Unknown94[0x1C];
-    int UnknownB0;
-};
 
 class Class_10C39C90_Result
 {
@@ -208,12 +196,6 @@ class AAIPawn;
 
 class Class_10B39870;
 
-class Class_10AA82D0
-{
-public:
-    Class_10B39870* FUN_10aa82d0();
-};
-
 class Class_10BAC050 : public Class_10C7D570
 {
 public:
@@ -274,15 +256,6 @@ public:
     virtual void Virtual32();
     virtual void Virtual33();
     virtual void* Virtual34();
-};
-
-class Class_10C39E90
-{
-public:
-    bool FUN_10c39e90(int* Out);
-
-    char Unknown00[0x48];
-    Class_10C39E90_Unknown48* Unknown48;
 };
 
 inline int FindIndex(const Struct_10DC1750_Result_1C& List, int Item)

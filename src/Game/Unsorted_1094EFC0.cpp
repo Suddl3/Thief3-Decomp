@@ -1,14 +1,12 @@
 // Game/Unsorted_1094EFC0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_1094F750.h"
 #include "Game/Class_10953590.h"
 #include "Game/Class_10BFBD70.h"
 #include "Game/Class_10943600.h"
 #include "Game/Item_10943600.h"
-
-Class_10905A90_Member* FUN_10905aa0();
+#include "Game/Class_1094EFC0.h"
 
 struct Struct_1094F6F0_Item
 {
@@ -72,18 +70,6 @@ public:
 };
 
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
-
-class Class_1094EFC0
-{
-public:
-    void FUN_1094efc0(int A, int B);
-
-    char Pad00[0xF0];
-    int Unknown0F0;
-    Class_10BFBD70 Unknown0F4;
-    char Pad100[0x8];
-    Class_1094EFC0_Unknown108* Unknown108;
-};
 
 // FUNCTION: 0x1094EFC0 ?FUN_1094efc0@Class_1094EFC0@@QAEXHH@Z
 void Class_1094EFC0::FUN_1094efc0(int A, int B)

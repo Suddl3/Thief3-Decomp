@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10B228A0.h"
 #include "Game/Class_10E7A768.h"
+#include "Game/Object_10B22790.h"
 
 class Class_10B3ED20
 {
@@ -20,12 +21,6 @@ struct Struct_10F02BBC
 };
 
 extern Struct_10F02BBC DAT_10f02bbc[];
-
-class Object_10B22790
-{
-public:
-    virtual ~Object_10B22790();
-};
 
 // FUNCTION: 0x10B22790 ??1Class_10E7A768@@UAE@XZ
 Class_10E7A768::~Class_10E7A768()

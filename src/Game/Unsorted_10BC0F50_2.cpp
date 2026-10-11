@@ -1,7 +1,7 @@
 // Game/Unsorted_10BC0F50_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10943600.h"
+#include "Game/Item_10943600.h"
 
 class FArchive
 {
@@ -11,13 +11,6 @@ public:
 };
 
 FArchive& FUN_10b052a0(FArchive& Ar, void* A);
-
-struct Item_10943600
-{
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-};
 
 // FUNCTION: 0x10BC19E0 ?FUN_10bc19e0@@YAXPAHPAVClass_10943600@@AAVFArchive@@@Z
 void FUN_10bc19e0(int* A, Class_10943600* Dst, FArchive& Ar)

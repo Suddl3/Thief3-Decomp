@@ -1,6 +1,5 @@
 // Game/Unsorted_10A67000.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include <new>
 #include "Game/Class_10A73EF0_Table.h"
 #include "Game/Class_10AF4B90.h"
@@ -8,6 +7,7 @@
 #include "Game/Class_10A671D0.h"
 #include "Core/Core.h"
 #include "Game/Class_1098CB90.h"
+#include "Game/Class_10A67000.h"
 
 extern void* DAT_10e47850[];
 
@@ -116,18 +116,6 @@ public:
     virtual void Virtual29();
     virtual void Virtual30();
     virtual int Virtual31(Class_1098CB90* A, Class_10A67000* B, FVector C, FVector D, int E);
-};
-
-class Class_10A67000
-{
-public:
-    Class_10A67000_Result* FUN_10991ef0();
-    int FUN_10a67000(FVector Param);
-
-    char Unknown00[0x12c];
-    FVector Unknown12C;
-    FVector Unknown138;
-    bool Unknown144;
 };
 
 // FUNCTION: 0x10A67000 ?FUN_10a67000@Class_10A67000@@QAEHVFVector@@@Z

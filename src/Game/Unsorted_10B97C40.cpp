@@ -8,13 +8,7 @@
 #include "Game/Class_10E93148.h"
 #include "Game/Class_10FF667C.h"
 #include "Game/Struct_10B9BCA0.h"
-
-class Class_10B9BDA0_Member
-{
-public:
-    virtual void F0() = 0;
-    virtual void F1() = 0;
-};
+#include "Game/Class_10B9BDA0_Member.h"
 
 extern Class_10FF667C* DAT_10ff667c;
 

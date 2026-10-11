@@ -1,0 +1,49 @@
+// Game/Class_10E871D0_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10BFBD70.h"
+#include "Game/Class_10B6FC70.h"
+#include "Game/Class_10B6FDA0.h"
+#include "Game/Class_10E871C8.h"
+
+extern void* DAT_10e871d0[];
+
+extern void* DAT_10e7edb8[];
+
+Class_10E871C8* FUN_10b70460();
+
+extern Class_10E871C8* DAT_10ff65ac;
+
+class Class_10E67BD8
+{
+public:
+    ~Class_10E67BD8();
+
+    void** Unknown00;
+    char Unknown04[0x114];
+    void** Unknown118;
+    char Unknown11C[0x38];
+};
+
+class Class_10E871D0 : public Class_10E67BD8
+{
+public:
+    ~Class_10E871D0();
+
+    Class_10BFBD70 Unknown154;
+};
+
+// FUNCTION: 0x10B708D0 ??1Class_10E871D0@@QAE@XZ
+Class_10E871D0::~Class_10E871D0()
+{
+    Unknown00 = DAT_10e871d0;
+    Unknown118 = DAT_10e7edb8;
+    if (DAT_10ff65ac)
+    {
+        Class_10E871C8* Manager = FUN_10b70460();
+        if (--Manager->Unknown102FC == 0 && DAT_10ff65ac)
+        {
+            delete DAT_10ff65ac;
+            DAT_10ff65ac = 0;
+        }
+    }
+}

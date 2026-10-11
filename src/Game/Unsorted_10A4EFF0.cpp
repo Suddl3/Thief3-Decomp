@@ -1,23 +1,7 @@
 // Game/Unsorted_10A4EFF0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10A243F0.h"
-
-// Ion Storm's memory manager (0x10905AA0).
-class Class_10905A90_Member
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void* Virtual3(void* Block, int Size, int A, int B, int C, int D);
-    virtual void Virtual4();
-    virtual void Virtual5(void* Block);
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8(int A, int B);
-    virtual void Virtual9();
-};
+#include "Game/Class_10905A90_Member.h"
 
 Class_10905A90_Member* FUN_10905aa0();
 

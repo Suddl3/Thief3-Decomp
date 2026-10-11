@@ -3,6 +3,7 @@
 #include "Game/Class_109022E0.h"
 #include "Game/Class_1090FD40.h"
 #include "Game/Class_10E6C620.h"
+#include "Game/Class_10C4CD50.h"
 
 void FUN_10d3d990(void* Stream, int* Value);
 
@@ -65,20 +66,6 @@ void FUN_10c3fbd0();
 struct Class_10E6C610
 {
     void* VTable;
-};
-
-class Class_10C4CD50
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8(Class_10E6C610* Event);
 };
 
 Class_10C4CD50* FUN_10c4cd50();

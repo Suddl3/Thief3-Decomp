@@ -4,6 +4,7 @@
 #include "Game/Class_10C08940.h"
 #include "Game/Class_10E5D7B4.h"
 #include "Game/Class_10E5D7B8.h"
+#include "Game/Class_10E5B578.h"
 
 class Class_10978090
 {
@@ -25,12 +26,6 @@ public:
     int FUN_10aab5c0();
 
     int Unknown08;
-};
-
-class Class_10E5B578
-{
-public:
-    virtual int Virtual0(int A, int B, int C, int* D) = 0;
 };
 
 class Class_10E6CA6C : public Class_10AAB5C0, public Class_10E5B578

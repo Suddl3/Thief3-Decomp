@@ -1,5 +1,6 @@
 // Game/Unsorted_10B1D2C0_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10B1D2C0.h"
 
 // Ion Storm's placement new and its delete (0x10905C10; the delete folded into ::operator delete).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
@@ -47,16 +48,6 @@ public:
     Class_10B384C0(Class_109A62E0* Arg, void* Other);
 
     char Pad00[0x18];
-};
-
-class Class_10B1D2C0
-{
-public:
-    Class_10B1D2C0* FUN_10b1d2c0(Class_109A62E0* Arg);
-
-    void* Unknown00;
-    void* Unknown04;
-    void* Unknown08;
 };
 
 // FUNCTION: 0x10B1D2C0 ?FUN_10b1d2c0@Class_10B1D2C0@@QAEPAV1@PAVClass_109A62E0@@@Z

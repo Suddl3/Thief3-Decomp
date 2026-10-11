@@ -1,12 +1,12 @@
 // Game/Unsorted_109119B0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #define HKEY_CURRENT_USER ((HKEY)(unsigned long)0x80000001)
 #define HKEY_LOCAL_MACHINE ((HKEY)(unsigned long)0x80000002)
 #define ERROR_SUCCESS 0L
 #include "Game/Class_10912800.h"
 #include <stdarg.h>
 #include <string.h>
+#include "Game/Class_109081E0.h"
 
 typedef struct HKEY__* HKEY;
 
@@ -17,17 +17,6 @@ extern "C" __declspec(dllimport) long __stdcall RegQueryValueExA(HKEY Key, const
                                                                  unsigned long* DataSize);
 
 extern "C" __declspec(dllimport) long __stdcall RegCloseKey(HKEY Key);
-
-// Ion Storm's string (0x109081E0): a char pointer, null when default constructed.
-class Class_109081E0
-{
-public:
-    Class_109081E0() : Unknown00(0) {}
-    Class_109081E0(const char* In);
-    ~Class_109081E0();
-
-    char* Unknown00;
-};
 
 extern "C" __declspec(dllimport) void* __stdcall GetCurrentProcess(void);
 

@@ -1,12 +1,6 @@
 // Game/Unsorted_1095CF50.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-struct Struct_1095CAA0
-{
-    char Unknown00[0xC];
-    int Unknown0C;
-    int Unknown10;
-};
+#include "Game/Struct_1095CAA0.h"
 
 struct Struct_1095CEC0
 {

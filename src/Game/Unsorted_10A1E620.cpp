@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Core/Core.h"
 #include "Game/Class_10924100.h"
+#include "Game/Class_10963CE0.h"
 
 void FUN_10a1e620(void* Object);
 
@@ -12,14 +13,6 @@ class Class_10A1ED10
 public:
     char Unknown00[0x288];
     void* Unknown288;
-};
-
-class Class_10963CE0
-{
-public:
-    void FUN_10963ce0(FRotator R);
-
-    FLOAT M[4][4];
 };
 
 struct Struct_10A1E690

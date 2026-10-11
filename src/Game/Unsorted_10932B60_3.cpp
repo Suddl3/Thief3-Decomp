@@ -1,8 +1,9 @@
 // Game/Unsorted_10932B60_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_109081E0.h"
+#include "Game/Class_10932760.h"
+#include "Game/Node_10932350.h"
 
 Class_10905A90_Member* FUN_10905aa0();
 
@@ -11,20 +12,6 @@ extern const char DAT_10e47660[];
 Class_109081E0 FUN_10932a70(const char* Param1);
 
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
-
-struct Node_10932350
-{
-    char Pad00[0x9C];
-    int Unknown9C;
-    char Pad0A0[0x10];
-    char* UnknownB0;
-};
-
-class Class_10932760
-{
-public:
-    Node_10932350* FUN_10932760();
-};
 
 extern Class_10932760 DAT_10f31bb8;
 

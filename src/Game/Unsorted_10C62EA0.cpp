@@ -1,13 +1,7 @@
 // Game/Unsorted_10C62EA0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10926730
-{
-public:
-    void FUN_109263e0(const char* Param1, int Param2);
-
-    char Unknown00[0x14];
-};
+#include "Game/Class_10926730.h"
+#include "Game/Class_10C63530.h"
 
 class Class_10C63530_Param
 {
@@ -23,20 +17,6 @@ public:
 void FUN_10c62e70(int Param1, Class_10926730* Param2);
 
 extern const char DAT_10e47660[];
-
-class Class_10C63530
-{
-public:
-    bool FUN_10c63530(Class_10C63530_Param* Param1);
-
-    char Unknown00[0x54];
-    int Unknown54;
-    char Unknown58[0x1];
-    bool Unknown59;
-    char Unknown5A[0x2];
-    Class_10926730 Unknown5C;
-    void* Unknown70;
-};
 
 // FUNCTION: 0x10C63530 ?FUN_10c63530@Class_10C63530@@QAE_NPAVClass_10C63530_Param@@@Z
 bool Class_10C63530::FUN_10c63530(Class_10C63530_Param* Param1)

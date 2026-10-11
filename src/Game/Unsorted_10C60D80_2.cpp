@@ -1,7 +1,7 @@
 // Game/Unsorted_10C60D80_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10C64AA0.h"
+#include "Game/Class_10C60D80.h"
 
 class Class_10C662F0;
 
@@ -27,19 +27,6 @@ void operator delete(void* Ptr);
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 
 Class_10C662F0* FUN_10c65090();
-
-class Class_10C60D80
-{
-public:
-    void FUN_10c60d80();
-
-    char Unknown00[0x120];
-    int Unknown120;
-    int Unknown124;
-    int Unknown128;
-    int Unknown12C;
-    void* Unknown130;
-};
 
 // FUNCTION: 0x10C60D80 ?FUN_10c60d80@Class_10C60D80@@QAEXXZ
 void Class_10C60D80::FUN_10c60d80()

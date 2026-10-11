@@ -4,22 +4,9 @@
 #include "Game/Class_10DBD510.h"
 #include "Game/Struct_10BA91E0.h"
 #include "Game/Class_10BBDB40.h"
+#include "Game/Class_10E98DE0.h"
 
 float FUN_10ba91e0(const Struct_10BA91E0* A, const Struct_10BA91E0* B);
-
-class Class_10E98DE0
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual int FUN_10c1ab00(Class_10E98DE0* Other);
-
-    char Unknown04[4];
-    Class_10DBD510* Unknown08;
-    char Unknown0C[0x3C];
-    Struct_10BA91E0 Unknown48;
-};
 
 // FUNCTION: 0x10C1AB00 ?FUN_10c1ab00@Class_10E98DE0@@UAEHPAV1@@Z
 int Class_10E98DE0::FUN_10c1ab00(Class_10E98DE0* Other)

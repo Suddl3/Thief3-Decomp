@@ -5,6 +5,9 @@
 #include "Game/Class_10E98530.h"
 #include "Game/Struct_10C0EE30.h"
 #include "Game/Class_10E8C4A4.h"
+#include "Game/Class_10BFBD70.h"
+#include "Game/Class_10E97CB4.h"
+#include "Game/Class_10E97CC0.h"
 
 extern const char DAT_10e47600[];
 
@@ -158,29 +161,6 @@ public:
     Class_10E984F4* FUN_10c12a90();
 };
 
-Class_10905A90_Member* FUN_10905aa0();
-
-class Class_10BFBD70
-{
-public:
-    void FUN_10bfbd70(int Count);
-
-    ~Class_10BFBD70()
-    {
-        FUN_10bfbd70(0);
-        if (Unknown04)
-        {
-            FUN_10905aa0()->Virtual5(Unknown08);
-            Unknown08 = 0;
-            Unknown04 = 0;
-        }
-    }
-
-    int Unknown00;
-    int Unknown04;
-    void* Unknown08;
-};
-
 class Class_10E97CB4;
 
 class Class_10F46DA0
@@ -192,23 +172,6 @@ public:
 };
 
 extern Class_10F46DA0* DAT_10f46da0;
-
-class Class_10E97CB4
-{
-public:
-    virtual ~Class_10E97CB4();
-
-    Class_10BFBD70 Unknown04;
-    Class_10BFBD70 Unknown10;
-};
-
-class Class_10E97CC0
-{
-public:
-    virtual void FUN_10c0ee30(int A, int B, Struct_10C0EE30* C, int D);
-
-    void FUN_10c0eb00();
-};
 
 // FUNCTION: 0x10C0E510 ??1Class_10E97CB4@@UAE@XZ
 Class_10E97CB4::~Class_10E97CB4()

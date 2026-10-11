@@ -1,19 +1,9 @@
 // Game/Unsorted_10A34780_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10A34B90_Node.h"
+#include "Game/Class_10A34C10.h"
 
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
-
-// A bucket chain's node: the field at 0x10 is passed by address, the next node at 0x14.
-class Class_10A34B90_Node
-{
-public:
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    int Unknown10;
-    Class_10A34B90_Node* Next;
-};
 
 // The class of include/Game/Class_10A34B90.h, with FUN_10a34420 added.
 class Class_10A34B90
@@ -55,20 +45,6 @@ struct Class_10A34C10_Node
     char Unknown04[0xC];
     Class_10A34C10_Unknown10* Value;
     Class_10A34C10_Node* Next;
-};
-
-class Class_10A34C10
-{
-public:
-    unsigned int FUN_10a348e0(const Class_109081E0& Key, Class_10A34C10_Unknown10** Value);
-    void FUN_10a349e0(int NewSize);
-
-    int Collisions;
-    int Count;
-    int Bits;
-    int Size;
-    bool Unknown10;
-    Class_10A34C10_Node** Table;
 };
 
 // FUNCTION: 0x10A34810 ?FUN_10a34810@Class_10A34B90@@QAEXH@Z

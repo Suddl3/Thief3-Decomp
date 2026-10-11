@@ -3,12 +3,7 @@
 #include "Game/Class_10B22C40.h"
 #include "Game/Class_10B37610.h"
 #include "Game/Class_10F3A3D8.h"
-
-class Class_10ACF3A0
-{
-public:
-    int FUN_10acf3a0(int A);
-};
+#include "Game/Class_10ACF3A0.h"
 
 extern Class_10F3A3D8* DAT_10f3a3d8;
 

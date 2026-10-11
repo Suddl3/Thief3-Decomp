@@ -5,7 +5,7 @@
 #include "Game/Class_10C1A940.h"
 #include "Game/Class_10C1A950.h"
 #include "Game/Class_10C1AAC0.h"
-#include "Game/Class_10C1B1A0.h"
+#include "Game/Class_10E98D08.h"
 #include "Game/Class_10C28EF0.h"
 #include "Game/Class_10C28F00.h"
 #include "Game/Class_10E98CEC.h"
@@ -21,6 +21,7 @@
 #include "Game/Class_10E99020.h"
 #include "Game/Class_10E992D4.h"
 #include "Game/Class_10E8D7AC.h"
+#include "Game/Class_10E98F48.h"
 
 extern int DAT_10ff708c;
 
@@ -29,15 +30,6 @@ extern void* DAT_10e98cec[];
 void FUN_10c62c90();
 
 extern void* DAT_10e98d08[];
-
-class Class_10E98F48
-{
-public:
-    bool FUN_10c1ad20(Struct_10C1AD20* Out, float* Value);
-
-    char Unknown00[0x48];
-    Struct_10C1AD20 Unknown48;
-};
 
 class FArchive;
 

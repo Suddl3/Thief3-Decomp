@@ -4,40 +4,8 @@
 #include "Game/Class_1098E330.h"
 #include "Game/Struct_10C099A0.h"
 #include "Game/Class_10C099A0.h"
-
-Class_10905A90_Member* FUN_10905aa0();
-
-class Class_10BFBD70
-{
-public:
-    void FUN_10bfbd70(int Count);
-
-    ~Class_10BFBD70()
-    {
-        FUN_10bfbd70(0);
-        if (Unknown04)
-        {
-            FUN_10905aa0()->Virtual5(Unknown08);
-            Unknown08 = 0;
-            Unknown04 = 0;
-        }
-    }
-
-    int Unknown00;
-    int Unknown04;
-    void* Unknown08;
-};
-
-class Class_10C09B60
-{
-public:
-    ~Class_10C09B60();
-
-    int Unknown00;
-    int Unknown04;
-    Class_10BFBD70 Unknown08;
-    Class_10BFBD70 Unknown14;
-};
+#include "Game/Class_10BFBD70.h"
+#include "Game/Class_10C09B60.h"
 
 // FUNCTION: 0x10C09B60 ??1Class_10C09B60@@QAE@XZ
 Class_10C09B60::~Class_10C09B60()

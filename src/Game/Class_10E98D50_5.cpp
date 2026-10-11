@@ -1,11 +1,12 @@
 // Game/Class_10E98D50_5.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10C1B930.h"
 #include "Game/FArchive.h"
 
 class UObject;
 
-class Class_10C1B1A0
+class Class_10E98D08
 {
 public:
     virtual void Virtual0();
@@ -22,7 +23,7 @@ public:
     void FUN_10c1b1a0(FArchive& Ar);
 };
 
-class Class_10E98D50 : public Class_10C1B1A0
+class Class_10E98D50 : public Class_10E98D08
 {
 public:
     virtual void FUN_10c1b800(FArchive& Ar);

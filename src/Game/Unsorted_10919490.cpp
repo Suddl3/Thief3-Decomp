@@ -3,14 +3,9 @@
 #include "Game/Class_1093E930.h"
 #include "Game/Class_1093EDB0.h"
 #include "Game/Class_10E4A538.h"
+#include "Game/Class_10937730.h"
 
 double FUN_10d20ec0(double A);
-
-class Class_10937730
-{
-public:
-    void FUN_10937730();
-};
 
 extern Class_10E4A538* DAT_10f2c8e4;
 

@@ -1,13 +1,8 @@
 // Game/Unsorted_10A2C3B0_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10A2C610.h"
-
-struct Struct_10A2DA00
-{
-    char Unknown00[0xB0];
-};
+#include "Game/Struct_10A2DA00.h"
 
 Class_10905A90_Member* FUN_10905aa0();
 

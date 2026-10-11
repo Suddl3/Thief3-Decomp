@@ -5,6 +5,8 @@
 #include "Game/Class_10C4EDA0.h"
 #include "Game/Class_10C50EC0.h"
 #include "Game/Class_10E5B578.h"
+#include "Game/Class_10BFBD70.h"
+#include "Game/Class_10E9BE7C.h"
 
 class Class_10F46DA0
 {
@@ -14,34 +16,6 @@ public:
 };
 
 extern Class_10F46DA0* DAT_10f46da0;
-
-class Class_10BFBD70
-{
-public:
-    Class_10BFBD70() : Unknown00(0), Unknown04(0), Unknown08(0) {}
-    ~Class_10BFBD70();
-
-    int Unknown00;
-    int Unknown04;
-    void* Unknown08;
-};
-
-class Class_10E9BE7C : public Class_10C4E880_Primary, public Class_10E5B578
-{
-public:
-    Class_10E9BE7C();
-
-    virtual void FUN_10c51600();
-    virtual void FUN_10c4e650(int Code, int A, int* B, int C);
-
-    Class_10C50EC0 Unknown08;
-    Class_10BFBD70 Unknown14;
-    float Unknown20;
-    int Unknown24;
-    Class_10C4E8D0 Unknown28;
-    int Unknown34;
-    Class_10C4EDA0 Unknown38;
-};
 
 // FUNCTION: 0x10C50F00 ??0Class_10E9BE7C@@QAE@XZ
 Class_10E9BE7C::Class_10E9BE7C()

@@ -5,6 +5,7 @@
 #include "Game/Class_10B59770.h"
 #include "Game/Class_10F2C744.h"
 #include "Game/Struct_10918E10.h"
+#include "Game/Class_1092D420.h"
 
 class Class_10924E80
 {
@@ -22,12 +23,6 @@ extern Class_109242E0* DAT_10f319a0;
 extern Class_10F2C744* DAT_10f2c744;
 
 void FUN_10929650();
-
-class Class_1092D420
-{
-public:
-    void FUN_1092d440();
-};
 
 extern Class_1092D420* DAT_10f31b88;
 

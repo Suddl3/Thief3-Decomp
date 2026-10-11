@@ -1,8 +1,8 @@
 // Game/Unsorted_10A755B0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10AF7F80.h"
 #include "Game/Class_1090A780.h"
+#include "Game/Class_10A74DF0_Unknown00.h"
 
 extern const char DAT_10e47660[];
 
@@ -25,14 +25,6 @@ public:
         int Length = Unknown00 == 0 ? 0 : ((int*)Unknown00)[-1];
         return Length == 0;
     }
-};
-
-class Class_10A74DF0_Unknown00
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
 };
 
 void FUN_10a4bae0(Class_10A74DF0_Unknown00** Out, Class_109081E0* Text, int A, int B);

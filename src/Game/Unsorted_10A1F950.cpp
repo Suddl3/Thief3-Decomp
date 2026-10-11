@@ -1,6 +1,5 @@
 // Game/Unsorted_10A1F950.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include <vector>
 #include "Game/Class_10A1F9C0.h"
 #include "Game/Class_10A1F9D0.h"
@@ -10,6 +9,7 @@
 #include "Game/Struct_10A1FA70.h"
 #include "Game/Class_1098E330.h"
 #include "Game/Class_10C00A60.h"
+#include "Game/Class_10E65590.h"
 
 extern void* DAT_10e6561c[];
 
@@ -22,17 +22,8 @@ public:
     Class_1098E330* UnknownE8;
 };
 
-class Class_10A1F950
-{
-public:
-    void FUN_10a1f950(Class_10AE7460* Obj);
-
-    int Unknown00;
-    Class_10C00A60 Unknown04;
-};
-
-// FUNCTION: 0x10A1F950 ?FUN_10a1f950@Class_10A1F950@@QAEXPAVClass_10AE7460@@@Z
-void Class_10A1F950::FUN_10a1f950(Class_10AE7460* Obj)
+// FUNCTION: 0x10A1F950 ?FUN_10a1f950@Class_10E65590@@QAEXPAVClass_10AE7460@@@Z
+void Class_10E65590::FUN_10a1f950(Class_10AE7460* Obj)
 {
     int Index;
     if (Obj->UnknownE8->FUN_1098e330(0x200467, &Index))

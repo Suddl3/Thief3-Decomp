@@ -1,7 +1,7 @@
 // Game/Unsorted_10C07220.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_1098E330.h"
+#include "Game/Class_10C07220.h"
 
 extern "C" void* memset(void*, int, unsigned);
 
@@ -18,17 +18,6 @@ class Class_10C070C0
 {
 public:
     int FUN_10c070c0(int Id, Class_10C070C0_Result* Out);
-};
-
-class Class_10C07220
-{
-public:
-    bool FUN_10c07220(Class_10C070C0* Obj);
-
-    char Unknown00[0x5C];
-    short Unknown5C[5];
-    char Unknown66[0x3E];
-    int Unknown0A4;
 };
 
 // FUNCTION: 0x10C07220 ?FUN_10c07220@Class_10C07220@@QAE_NPAVClass_10C070C0@@@Z

@@ -1,5 +1,7 @@
 // Game/Unsorted_10A33F30_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10A34420_Unknown18.h"
+#include "Game/Class_10A345C0.h"
 
 extern "C" void* memcpy(void* Dest, const void* Src, unsigned int Size);
 
@@ -16,28 +18,6 @@ public:
     __int64 Key[2];
     int Value;
     Class_10A345C0_Node* Next;
-};
-
-// The table's key hasher: slot 0 gives the bytes FUN_1090e9b0 hashes.
-class Class_10A34420_Unknown18
-{
-public:
-    virtual void Virtual0(const __int64* Key, const void** Data, int* Length);
-};
-
-class Class_10A345C0
-{
-public:
-    unsigned int FUN_10a34420(__int64* Key, int* Value);
-    void FUN_10a34810(int Size);
-
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    bool Unknown10;
-    Class_10A345C0_Node** Unknown14;
-    Class_10A34420_Unknown18 Unknown18;
 };
 
 // FUNCTION: 0x10A34420 ?FUN_10a34420@Class_10A345C0@@QAEIPA_JPAH@Z

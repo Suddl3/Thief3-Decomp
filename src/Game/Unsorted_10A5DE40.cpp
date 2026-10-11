@@ -8,6 +8,9 @@
 #include "Game/Class_10E69BA0.h"
 #include "Game/Struct_10A5DF10.h"
 #include "Game/Struct_10AA3520.h"
+#include "Game/Class_10A79E60.h"
+#include "Game/Item_10A5E900.h"
+#include "Game/List_10A5E900.h"
 
 class Class_10A5EF80_Item
 {
@@ -22,34 +25,7 @@ public:
 
 extern "C" unsigned int strlen(const char*);
 
-class Class_10A79E60
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5(int A);
-
-    void FUN_10a79e60(void* A, void* B, int C);
-};
-
 extern Struct_10AA3520* DAT_10f35dec;
-
-struct Item_10A5E900
-{
-    char Unknown00[0x2C];
-    char Unknown2C[0xC];
-    char Unknown38[0xC];
-};
-
-struct List_10A5E900
-{
-    int Unknown00;
-    char Unknown04[4];
-    Item_10A5E900** Unknown08;
-};
 
 // FUNCTION: 0x10A5DF10 ?FUN_10a5df10@Class_10A5DF10@@QAEPAV1@ABV1@@Z
 Class_10A5DF10* Class_10A5DF10::FUN_10a5df10(const Class_10A5DF10& Other)

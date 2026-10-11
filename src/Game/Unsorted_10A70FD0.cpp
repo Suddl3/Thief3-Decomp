@@ -3,32 +3,11 @@
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10A70FD0.h"
 #include "Game/Class_10AF4B90.h"
-
-extern void* DAT_10e47850[];
+#include "Game/Class_10A71030.h"
+#include "Game/Class_10C070C0.h"
+#include "Game/Class_10C070C0_Result.h"
 
 extern float DAT_10eafbdc;
-
-// A Class_10AF4B90 set up with (0x27, DAT_10e47850).
-class Class_10A71030 : public Class_10AF4B90
-{
-public:
-    Class_10A71030() { FUN_10af4b90(0x27, DAT_10e47850); }
-    ~Class_10A71030();
-};
-
-// What FUN_10c070c0 fills in.
-struct Class_10C070C0_Result
-{
-    int Unknown00;
-    Class_10A71030 Unknown04;
-    float Unknown10;
-};
-
-class Class_10C070C0
-{
-public:
-    void FUN_10c070c0(int Id, Class_10C070C0_Result* Result);
-};
 
 class Class_10E6B594
 {

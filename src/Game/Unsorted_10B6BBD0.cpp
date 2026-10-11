@@ -3,6 +3,7 @@
 #include "Game/Class_10B66060.h"
 #include "Game/Class_10B6BC80.h"
 #include "Game/Struct_10B6BC80.h"
+#include "Game/Class_10B154C0.h"
 
 class Class_10B66060;
 
@@ -13,16 +14,6 @@ struct Struct_10B6BC80;
 class Class_10B154C0;
 
 void* FUN_10b154c0();
-
-class Class_10B154C0
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4(Class_10B66060* A);
-};
 
 class Class_10F3A3D8
 {

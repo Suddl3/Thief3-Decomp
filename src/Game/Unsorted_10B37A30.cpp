@@ -1,7 +1,7 @@
 // Game/Unsorted_10B37A30.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Engine/EngineClasses.h"
+#include "Game/Class_10B37DE0.h"
 
 class ULevel;
 
@@ -74,15 +74,6 @@ struct Struct_10B37DE0_List
 {
     int Count;
     AAIPathPoint* Last;
-};
-
-class Class_10B37DE0
-{
-public:
-    int Unknown00;
-    Class_1096D780* Unknown04;
-
-    void FUN_10b37de0(int A, int B, Struct_10B37DE0_List* C);
 };
 
 // FUNCTION: 0x10B37DE0 ?FUN_10b37de0@Class_10B37DE0@@QAEXHHPAUStruct_10B37DE0_List@@@Z

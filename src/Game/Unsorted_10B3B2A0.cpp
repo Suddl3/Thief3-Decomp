@@ -21,7 +21,7 @@ inline FVector operator*(FLOAT Scale, const FVector& V)
     return FVector(Scale * V.X, Scale * V.Y, Scale * V.Z);
 }
 
-class Class_10B3B700
+class Class_10E7E6A0
 {
 public:
     FVector FUN_10b3b700(Struct_10B1DD70_Param* Param);
@@ -32,8 +32,8 @@ inline float FVectorDot(const FVector& A, const FVector& B)
     return A.X * B.X + A.Y * B.Y + A.Z * B.Z;
 }
 
-// FUNCTION: 0x10B3B700 ?FUN_10b3b700@Class_10B3B700@@QAE?AVFVector@@PAUStruct_10B1DD70_Param@@@Z
-FVector Class_10B3B700::FUN_10b3b700(Struct_10B1DD70_Param* Param)
+// FUNCTION: 0x10B3B700 ?FUN_10b3b700@Class_10E7E6A0@@QAE?AVFVector@@PAUStruct_10B1DD70_Param@@@Z
+FVector Class_10E7E6A0::FUN_10b3b700(Struct_10B1DD70_Param* Param)
 {
     FVector Scaled = 0.0f * FUN_10b1de50(Param);
     return FVector(Scaled.X, Scaled.Y, Scaled.Z + 4.8f);

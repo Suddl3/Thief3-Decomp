@@ -6,17 +6,9 @@
 #include "Game/Class_10C491E0.h"
 #include "Game/Struct_10C49030.h"
 #include "Game/Class_10C49100.h"
-
-// Ion Storm's string (0x109081E0): a char pointer, null when default constructed.
-class Class_109081E0
-{
-public:
-    Class_109081E0() : Unknown00(0) {}
-    ~Class_109081E0();
-    Class_109081E0& operator=(const Class_109081E0& Other);
-
-    char* Unknown00;
-};
+#include "Game/Class_109081E0.h"
+#include "Game/Class_10C49100_Node.h"
+#include "Game/Class_10E9BB8C.h"
 
 // Ion Storm's placement new and its delete (0x10905C10; the delete folded into ::operator delete).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
@@ -24,38 +16,6 @@ void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
 unsigned int FUN_1090e9b0(const void* Data, int Length);
-
-// A chained hash table's entry: 12 bytes, allocated per insert.
-class Class_10C49100_Node
-{
-public:
-    Class_109081E0 Key;
-    int Value;
-    Class_10C49100_Node* Next;
-};
-
-class Class_10E9BB8C
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2(int Value);
-    virtual void Virtual3();
-    virtual int FUN_10c49030();
-    virtual int Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8();
-    virtual void Virtual9();
-    virtual Class_10E9BB8C* FUN_10c48f00(char* Buffer, size_t Size);
-
-    char Unknown04[0x1C];
-    Struct_10C49030* Unknown20;
-    char Unknown24[0xC];
-    int* Unknown30;
-    char Unknown34[0x24];
-    FILE* Unknown58;
-};
 
 // FUNCTION: 0x10C49100 ?FUN_10c49100@Class_10C49100@@QAEIABVClass_109081E0@@ABH@Z
 unsigned int Class_10C49100::FUN_10c49100(const Class_109081E0& Key, const int& Value)

@@ -3,6 +3,7 @@
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_1090C880.h"
 #include "Game/Class_10C4EDA0.h"
+#include "Game/Class_109081E0.h"
 
 class FVector
 {
@@ -26,27 +27,6 @@ struct Item_10A55380
     Struct_10A55380 Unknown00;
     float Unknown0C;
     int Unknown10;
-};
-
-Class_10905A90_Member* FUN_10905aa0();
-
-// Ion Storm's string (0x109081E0): a char pointer to a block allocated 4 bytes before it.
-class Class_109081E0
-{
-public:
-    Class_109081E0(const char* In);
-    Class_109081E0& operator=(const Class_109081E0& In);
-    ~Class_109081E0()
-    {
-        if (Unknown00)
-        {
-            char* Block = Unknown00 - 4;
-            FUN_10905aa0()->Virtual5(Block);
-            Unknown00 = 0;
-        }
-    }
-
-    char* Unknown00;
 };
 
 class Class_10E684A8

@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10E816E0.h"
 #include "Game/Struct_10B53A00.h"
+#include "Game/Class_10B50500.h"
 
 class Class_1098E330;
 
@@ -19,15 +20,6 @@ public:
 };
 
 extern Class_10F3A3D8* DAT_10f3a3d8;
-
-class Class_10B50500
-{
-public:
-    char Unknown00[0x320];
-    Class_1098E330* Unknown320;
-    int Unknown324;
-    int Unknown328;
-};
 
 struct Struct_10B50500_Member
 {

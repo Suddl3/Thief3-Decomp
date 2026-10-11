@@ -1,5 +1,6 @@
 // Game/Unsorted_10B3C860.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Struct_10B3C760_Param.h"
 
 class FVector;
 
@@ -20,12 +21,6 @@ public:
 
     char Unknown00[0xC];
     Class_10B39890* Unknown0C;
-};
-
-struct Struct_10B3C760_Param
-{
-    char Unknown00[0xB0];
-    Class_10B3C860_Unknown0B0* Unknown0B0;
 };
 
 class Class_10B3C860_Unknown0B0

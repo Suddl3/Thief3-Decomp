@@ -1,9 +1,9 @@
 // Game/Unsorted_10A370F0_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
 #include "Game/Class_1096D780.h"
 #include "Game/Class_1096D780_Field98.h"
+#include "Game/Class_10DA0870.h"
 
 // Class_10DA91B0 as Game/Class_10DA91B0.h declares it, without Pad18: the
 // frame of the local below holds 0x18 bytes, so the object is 0x18 long.
@@ -16,12 +16,6 @@ public:
     void FUN_10da91d0();
 
     char Unknown00[0x18];
-};
-
-class Class_10DA0870
-{
-public:
-    bool FUN_10da0c00(FVector* A, Class_10DA91B0* B);
 };
 
 // FUNCTION: 0x10A370F0 ?FUN_10a370f0@@YA_NPAVClass_1096D780@@PAVFVector@@@Z

@@ -2,28 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_1090A780.h"
-
-class Class_109081E0
-{
-public:
-    ~Class_109081E0()
-    {
-        if (Unknown00)
-        {
-            char* Block = Unknown00 - 4;
-            FUN_10905aa0()->Virtual5(Block);
-            Unknown00 = 0;
-        }
-    }
-
-    bool IsEmpty() const
-    {
-        int Length = Unknown00 == 0 ? 0 : ((int*)Unknown00)[-1];
-        return Length == 0;
-    }
-
-    char* Unknown00;
-};
+#include "Game/Class_109081E0.h"
 
 extern Class_1090A780 DAT_10ff7064;
 

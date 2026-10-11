@@ -1,9 +1,9 @@
 // Game/Unsorted_10919730.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10924AE0.h"
 #include "Game/Struct_10924210.h"
+#include "Game/Class_10937730.h"
 
 class IDirect3D8;
 
@@ -71,12 +71,6 @@ public:
     Class_1093E930_Member* Unknown04;
     bool Unknown08;
     char Pad09[0x3];
-};
-
-class Class_10937730
-{
-public:
-    bool FUN_10937690();
 };
 
 // Copied from include/Game/Class_10939570.h with FUN_109397b0 added.

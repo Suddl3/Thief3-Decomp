@@ -1,6 +1,7 @@
 // Game/Class_10E6CEA4.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10C08940.h"
+#include "Game/Class_10E5B578.h"
 
 class Class_10978090
 {
@@ -22,12 +23,6 @@ public:
     int FUN_10aab5c0();
 
     int Unknown08;
-};
-
-class Class_10E5B578
-{
-public:
-    virtual int Virtual0(int A, int B, int C, int* D) = 0;
 };
 
 class Class_10E6CEA4 : public Class_10AAB5C0, public Class_10E5B578

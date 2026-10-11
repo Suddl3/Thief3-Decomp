@@ -1,5 +1,6 @@
 // Game/Unsorted_10B431D0_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10D4ACC0.h"
 
 struct FILETIME
 {
@@ -18,15 +19,6 @@ public:
     int Unknown00;
     int Unknown04;
     int Unknown08;
-};
-
-class Class_10D4ACC0
-{
-public:
-    ~Class_10D4ACC0();
-    Class_10D4AE40 FUN_10d4b650(int Key);
-
-    int Unknown00;
 };
 
 Class_10D4ACC0 FUN_10d4acc0();

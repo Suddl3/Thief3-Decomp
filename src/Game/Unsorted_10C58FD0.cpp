@@ -1,26 +1,10 @@
 // Game/Unsorted_10C58FD0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_109081E0.h"
+#include "Game/Class_10C59030_Field18.h"
+#include "Game/Class_10C59030_Value.h"
 
 unsigned int FUN_1090e9b0(const void* Data, int Length);
-
-// The value stored in a node: 16 bytes, copied whole.
-class Class_10C59030_Value
-{
-public:
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-};
-
-class Class_10C59030_Field18
-{
-public:
-    virtual void Virtual0(const Class_109081E0& Key, const void** Data, int* Length);
-    virtual int Virtual1(const Class_109081E0& Key, const Class_109081E0& Other);
-};
 
 // A chained hash table's entry: 24 bytes.
 class Class_10C59030_Node

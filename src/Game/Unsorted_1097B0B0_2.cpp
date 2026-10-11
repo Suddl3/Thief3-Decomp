@@ -1,47 +1,13 @@
 // Game/Unsorted_1097B0B0_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_1090A780.h"
-
-extern const char DAT_10e47660[];
-
-Class_10905A90_Member* FUN_10905aa0();
-
-class Class_109081E0 : public Class_1090A780
-{
-public:
-    Class_109081E0() {}
-    Class_109081E0(const char* In);
-    Class_109081E0(const Class_109081E0& Other);
-    Class_109081E0(const Class_1090A780& Other) : Class_1090A780(Other) {}
-    ~Class_109081E0();
-
-    void FUN_10907870(int Length, int Flag);
-    Class_109081E0& operator=(const Class_109081E0& Other);
-    Class_109081E0& FUN_1090a590(const char* In);
-    const char* operator*() const { return Unknown00 ? Unknown00 : DAT_10e47660; }
-    bool IsEmpty() const
-    {
-        int Length = Unknown00 == 0 ? 0 : ((int*)Unknown00)[-1];
-        return Length == 0;
-    }
-};
+#include "Game/Class_109081E0.h"
+#include "Game/Class_1097B240_Node.h"
 
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 
 void operator delete(void* Ptr);
-
-// A bucket entry (24 bytes).
-struct Class_1097B240_Node
-{
-    Class_109081E0 Key;
-    int Value;
-    int Unknown08;
-    int Unknown0C;
-    int Unknown10;
-    Class_1097B240_Node* Next;
-};
 
 class Class_1097B240
 {

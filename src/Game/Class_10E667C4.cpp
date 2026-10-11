@@ -2,13 +2,8 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10A3BA50.h"
 #include "Game/Class_10E67938.h"
-
-class Class_10E667AC
-{
-public:
-    virtual ~Class_10E667AC();
-    virtual void FUN_10a3ac50(int A) = 0;
-};
+#include "Game/Class_10E66700.h"
+#include "Game/Class_10E667C4.h"
 
 struct Struct_10A3BD30
 {
@@ -16,28 +11,9 @@ struct Struct_10A3BD30
     int Unknown04;
 };
 
-class Class_10E667C4 : public Class_10E67938, public Class_10E667AC
-{
-public:
-    Class_10E667C4();
-    virtual void FUN_10a4c470(int A, int B, int C, int D);
-    virtual void FUN_10a3ac50(int A);
-
-    Class_10A3BA50 Unknown08;
-    int Unknown48;
-    int Unknown4C;
-    int Unknown50;
-    int Unknown54;
-    int Unknown58;
-    int Unknown5C;
-    int Unknown60;
-    int Unknown64;
-    int Unknown68;
-};
-
 // FUNCTION: 0x10A3BD30 ??0Class_10E667C4@@QAE@XZ
 Class_10E667C4::Class_10E667C4()
-    : Class_10E67938(), Class_10E667AC()
+    : Class_10E67938(), Class_10E66700()
 {
     char Flag;
     Struct_10A3BD30 Param;

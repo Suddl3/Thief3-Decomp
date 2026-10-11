@@ -1,8 +1,8 @@
 // Game/Unsorted_10B9CC00.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10BBDB40.h"
 #include "Game/Class_10C7D570.h"
+#include "Game/Class_10B9CC00.h"
 
 float appFrand();
 
@@ -17,15 +17,6 @@ struct Struct_10B9CC00
     float Unknown00;
     char Unknown04[0x18];
     unsigned char Unknown1C;
-};
-
-class Class_10B9CC00
-{
-public:
-    int FUN_10b9cc00(Struct_10B9CC00* Arg);
-
-    char Unknown00[0xc];
-    Struct_10B98E00* Unknown0C;
 };
 
 // FUNCTION: 0x10B9CC00 ?FUN_10b9cc00@Class_10B9CC00@@QAEHPAUStruct_10B9CC00@@@Z

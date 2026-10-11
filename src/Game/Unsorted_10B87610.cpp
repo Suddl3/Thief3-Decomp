@@ -1,5 +1,6 @@
 // Game/Unsorted_10B87610.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Struct_10B87610.h"
 
 extern void* DAT_10e89384[];
 
@@ -65,16 +66,6 @@ public:
     void FUN_10da91d0();
 
     int Unknown00[6];
-};
-
-// Three dwords the constructor zeroes.
-struct Struct_10B87610
-{
-    Struct_10B87610() : Unknown00(0), Unknown04(0), Unknown08(0) {}
-
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
 };
 
 class Class_10B87610 : public Class_10E893B0

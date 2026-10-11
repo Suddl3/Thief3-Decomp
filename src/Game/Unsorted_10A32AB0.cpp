@@ -1,14 +1,7 @@
 // Game/Unsorted_10A32AB0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10A32370.h"
-
-class Class_10A32AB0_Element
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-};
+#include "Game/Class_10A32AB0_Element.h"
 
 // FUNCTION: 0x10A32AB0 ?FUN_10a32ab0@Class_10A32370@@QAEHPAPAVClass_10A32AB0_Element@@@Z
 int Class_10A32370::FUN_10a32ab0(Class_10A32AB0_Element** A)

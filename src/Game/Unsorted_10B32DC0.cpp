@@ -1,38 +1,10 @@
 // Game/Unsorted_10B32DC0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10BFBD70.h"
 #include "Game/Class_10970890.h"
 #include "Game/Class_1098E330.h"
-
-class Object_10970890
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8();
-    virtual void Virtual9();
-    virtual void Virtual10();
-    virtual void Virtual11();
-    virtual void Virtual12();
-    virtual void Virtual13();
-    virtual void Virtual14();
-    virtual void Virtual15();
-    virtual void Virtual16();
-    virtual void Virtual17();
-    virtual void Virtual18();
-    virtual void Virtual19();
-    virtual void Virtual20();
-    virtual void Virtual21();
-    virtual void Virtual22();
-    virtual int Virtual23(int Param);
-};
+#include "Game/Class_10B32F20.h"
+#include "Game/Object_10970890.h"
 
 class Class_10B32F20_Unknown164
 {
@@ -76,15 +48,6 @@ public:
     virtual void Virtual36();
     virtual void Virtual37();
     virtual void Virtual38(Class_10BFBD70& Found);
-};
-
-class Class_10B32F20
-{
-public:
-    int FUN_10b32f20(int Param);
-
-    char Pad00[0x164];
-    Class_10B32F20_Unknown164* Unknown164;
 };
 
 class Class_10B33000_Unknown19C
@@ -163,7 +126,7 @@ public:
     virtual void Virtual70(int A);
 };
 
-// Class_10E7BF50 (the classmap's name for Class_10B33D70): the header's members, with the vtable and the two object fields this function calls through.
+// Class_10E7BF50 (the classmap's name for Class_10E7BF50): the header's members, with the vtable and the two object fields this function calls through.
 class Class_10E7BF50
 {
 public:

@@ -3,6 +3,7 @@
 #include "Game/Class_10B9D060.h"
 #include "Game/Class_10B9D080.h"
 #include "Game/Class_10B9D0A0.h"
+#include "Game/Class_10BC9A50.h"
 
 class Class_10BC9D40;
 
@@ -27,12 +28,6 @@ class Class_10BC9930
 {
 public:
     bool FUN_10bc9930();
-};
-
-class Class_10BC9A50
-{
-public:
-    bool FUN_10bc9a50();
 };
 
 // FUNCTION: 0x10B9CAC0 ?FUN_10b9cac0@Class_10B9CAC0@@QAEPAVClass_10BC9D40@@XZ

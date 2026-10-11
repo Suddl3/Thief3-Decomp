@@ -2,12 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Core/Core.h"
 #include "Game/Struct_10B1DCA0.h"
-
-struct Struct_10B1DD70_Param
-{
-    char Unknown00[0x38];
-    FRotator Unknown38;
-};
+#include "Game/Struct_10B1DD70_Param.h"
 
 void FUN_109672e0(const Struct_10B1DCA0& Coords, const FVector& V, FVector& Out);
 

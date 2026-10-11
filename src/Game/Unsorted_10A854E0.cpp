@@ -1,9 +1,11 @@
 // Game/Unsorted_10A854E0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Struct_10AA3520.h"
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10BFBD70.h"
+#include "Game/Class_10A857A0.h"
+#include "Game/Class_10B1BD70.h"
+#include "Game/Object_10A84D10.h"
 
 class Object_10A84D10;
 
@@ -16,32 +18,6 @@ struct Struct_10A85660_Items
     int Count;
     char Unknown04[4];
     int* Items;
-};
-
-class Object_10A84D10
-{
-public:
-    virtual ~Object_10A84D10();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual Struct_10A85660_Items* Virtual4();
-};
-
-class Class_10B1BD70
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8();
-    virtual void Virtual9();
-    virtual void Virtual10();
 };
 
 extern Struct_10AA3520* DAT_10f35dec;
@@ -151,15 +127,6 @@ public:
 };
 
 extern Class_10F46DA0* DAT_10f46da0;
-
-class Class_10A857A0
-{
-public:
-    Class_10E6DA64* FUN_10a857a0(int A, int B);
-
-    char Unknown00[0x4];
-    int Unknown04;
-};
 
 // FUNCTION: 0x10A85660 ?FUN_10a85660@Class_10E6C390@@UAEXHHHH@Z
 void Class_10E6C390::FUN_10a85660(int Message, int Value, int A, int B)

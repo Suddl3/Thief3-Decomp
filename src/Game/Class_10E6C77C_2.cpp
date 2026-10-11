@@ -1,29 +1,9 @@
 // Game/Class_10E6C77C_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10905A90_Member.h"
-
-Class_10905A90_Member* FUN_10905aa0();
-
-class Class_109081E0
-{
-public:
-    Class_109081E0() : Unknown00(0) {}
-    ~Class_109081E0()
-    {
-        if (Unknown00)
-        {
-            char* Block = Unknown00 - 4;
-            FUN_10905aa0()->Virtual5(Block);
-            Unknown00 = 0;
-        }
-    }
-
-    char* Unknown00;
-};
+#include "Game/Class_109081E0.h"
 
 void FUN_10d3ddc0(void* Reader, int* Out);
-
-extern const char DAT_10e47660[];
 
 enum EFindName
 {

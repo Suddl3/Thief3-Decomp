@@ -3,25 +3,8 @@
 #include "Game/Class_109081E0.h"
 #include "Game/Class_10913D70.h"
 #include "Game/Class_10C08E90.h"
-
-struct Struct_10C091A0
-{
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-};
-
-// An element of 0x28 bytes.
-struct Item_10C091A0
-{
-    int Unknown00;
-    Class_10913D70 Unknown04;
-    int Unknown0C;
-    int Unknown10;
-    Struct_10C091A0 Unknown14;
-    int Unknown20;
-    unsigned char Unknown24;
-};
+#include "Game/Item_10C091A0.h"
+#include "Game/Struct_10C091A0.h"
 
 // FUNCTION: 0x10C091A0 ?FUN_10c091a0@Class_10C08E90@@QAEHPAUItem_10C091A0@@@Z
 int Class_10C08E90::FUN_10c091a0(Item_10C091A0* Item)

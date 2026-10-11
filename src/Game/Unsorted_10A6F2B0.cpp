@@ -5,6 +5,7 @@
 #include "Game/Class_10E6BA88.h"
 #include "Game/Struct_10AA3520.h"
 #include "Game/Struct_10AB0400.h"
+#include "Game/Class_10A6FED0_Owner.h"
 
 class Class_10A6FED0_Member
 {
@@ -29,13 +30,6 @@ struct Struct_10A6FED0
 {
     char Unknown00[0xB0];
     Class_10A6FED0_Member* UnknownB0;
-};
-
-class Class_10A6FED0_Owner
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1(Struct_10A6FED0* A, int B, int C);
 };
 
 extern Struct_10AA3520* DAT_10f35dec;

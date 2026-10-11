@@ -1,7 +1,7 @@
 // Game/Unsorted_10B2E9D0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10BFBD70.h"
+#include "Game/Class_10B2ED00.h"
 
 // The object at +0x118: its slot 38 fills the array passed in.
 class Class_10B2ED00_Unknown118
@@ -91,18 +91,6 @@ public:
     virtual void Virtual36();
     virtual void Virtual37();
     virtual void Virtual38(Class_10BFBD70* Out);
-};
-
-class Class_10B2ED00
-{
-public:
-    bool FUN_10b2ed00();
-
-    char Unknown00[0x118];
-    Class_10B2ED00_Unknown118* Unknown118;
-    Class_10B2ED00_Unknown11c* Unknown11c;
-    char Unknown120[0x29];
-    char Unknown149;
 };
 
 // FUNCTION: 0x10B2ED00 ?FUN_10b2ed00@Class_10B2ED00@@QAE_NXZ

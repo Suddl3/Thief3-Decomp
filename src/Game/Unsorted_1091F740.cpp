@@ -1,8 +1,8 @@
 // Game/Unsorted_1091F740.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_1091F9B0.h"
 #include "Game/Class_109203B0.h"
+#include "Game/Class_1091F740.h"
 
 extern "C" long _time32(long* Timer);
 
@@ -100,22 +100,6 @@ public:
     char Unknown10[0x40];
     Struct_1091F740_S* Unknown50;
     Struct_1091F740_Unknown54* Unknown54;
-};
-
-class Class_1091F740
-{
-public:
-    void FUN_1091f740(Class_1091F740_Param0* Param);
-
-    char Unknown00[0xC];
-    Class_1091F740_Unknown0C* Unknown0C;
-    char Unknown10[0x20];
-    int Unknown30;
-    char Unknown34[4];
-    Class_1091F740_Item** Unknown38;
-    int Unknown3C;
-    char Unknown40[4];
-    Class_1091F740_Unknown44** Unknown44;
 };
 
 // FUNCTION: 0x1091F740 ?FUN_1091f740@Class_1091F740@@QAEXPAVClass_1091F740_Param0@@@Z

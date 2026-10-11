@@ -1,20 +1,9 @@
 // Game/Unsorted_10C640E0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10C54970.h"
-
-struct Struct_10C647F0_Vec
-{
-    float X;
-    float Y;
-    float Z;
-
-    Struct_10C647F0_Vec(float A, float B, float C) : X(A), Y(B), Z(C) {}
-    Struct_10C647F0_Vec operator-(const Struct_10C647F0_Vec& Other) const
-    {
-        return Struct_10C647F0_Vec(X - Other.X, Y - Other.Y, Z - Other.Z);
-    }
-};
+#include "Game/Class_10C562C0.h"
+#include "Game/Class_10C647F0.h"
+#include "Game/Struct_10C647F0_Vec.h"
 
 class Object_10AB5B20
 {
@@ -56,10 +45,6 @@ public:
     Object_10AB5B20* Unknown00;
 };
 
-class Class_10C562C0 : public Class_10C54970
-{
-};
-
 Class_10C562C0* FUN_10c562c0();
 
 class Class_10C647F0_Unknown08
@@ -70,19 +55,6 @@ public:
 };
 
 float FUN_10d4e270(const Struct_10C647F0_Vec& V);
-
-class Class_10C647F0
-{
-public:
-    void FUN_10c647f0(int Param);
-
-    char Unknown00[8];
-    Class_10C647F0_Unknown08* Unknown08;
-    char Unknown0C[4];
-    int Unknown10;
-    char Unknown14[0xC];
-    Struct_10C647F0_Vec Unknown20;
-};
 
 // FUNCTION: 0x10C647F0 ?FUN_10c647f0@Class_10C647F0@@QAEXH@Z
 void Class_10C647F0::FUN_10c647f0(int Param)

@@ -3,6 +3,9 @@
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10E5D83C.h"
 #include "Game/Class_10EB766C.h"
+#include "Game/Class_10E5B578.h"
+#include "Game/Class_10E6CFB8.h"
+#include "Game/Class_10E6DC88.h"
 
 Class_10905A90_Member* FUN_10905aa0();
 
@@ -10,33 +13,6 @@ Class_10905A90_Member* FUN_10905aa0();
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
-
-class Class_10E5B578
-{
-public:
-    virtual int Virtual0(int A, int B, int C, int* D) = 0;
-};
-
-class Class_10E6DC88 : public Class_10EB766C, public Class_10E5B578
-{
-public:
-    Class_10E6DC88(int Value);
-    virtual ~Class_10E6DC88();
-
-    int Unknown10;
-};
-
-// Its second base's table (0x10E70820) is folded with Class_10E8C22C's.
-class Class_10E6CFB8 : public Class_10E6DC88
-{
-public:
-    Class_10E6CFB8()
-        : Class_10E6DC88(0x5b)
-    {
-    }
-
-    virtual int Virtual0(int A, int B, int C, int* D);
-};
 
 // FUNCTION: 0x10A987A0 ?FUN_10a987a0@Class_10E5D83C@@UAEPAVClass_10E6CFB8@@XZ
 Class_10E6CFB8* Class_10E5D83C::FUN_10a987a0()

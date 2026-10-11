@@ -12,12 +12,7 @@
 #include "Game/IDirect3DDevice8.h"
 #include "Game/Class_109081E0.h"
 #include "Game/Class_1093EDB0.h"
-
-struct Struct_10940180
-{
-    char Unknown00[0x64];
-    int Unknown64;
-};
+#include "Game/Struct_10940180.h"
 
 class Class_10E4A668
 {

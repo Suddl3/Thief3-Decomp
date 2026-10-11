@@ -1,5 +1,6 @@
 // Game/Unsorted_10A33F30_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10A34510_Field18.h"
 
 unsigned int FUN_1090e9b0(const void* Data, int Length);
 
@@ -10,13 +11,6 @@ public:
     char Unknown08[0x8];
     int Value;
     Class_10A34510_Node* Next;
-};
-
-class Class_10A34510_Field18
-{
-public:
-    virtual void Virtual0(const __int64* Key, const void** Data, int* Length);
-    virtual int Virtual1(const __int64* Key, const __int64* Other);
 };
 
 class Class_10A345C0

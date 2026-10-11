@@ -1,5 +1,6 @@
 // Game/Class_10E4CCD0_19.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10BBDB40.h"
 #include "Game/Class_10DBD510.h"
 #include "Game/Class_10E4CCD0.h"
@@ -20,7 +21,7 @@ class Class_10E95288;
 
 class Class_10E95898;
 
-class Class_10BE5EF0;
+class Class_10E96510;
 
 class Class_10E91EE8;
 

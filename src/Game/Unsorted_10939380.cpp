@@ -6,14 +6,7 @@
 #include "Game/Class_109394C0.h"
 #include "Game/Class_1093BCB0.h"
 #include "Game/Class_1093C750.h"
-
-struct Struct_1093BCB0
-{
-    int Unknown00;
-    Class_1090A780 Unknown04;
-    char Unknown08[0x4C];
-    int Unknown54;
-};
+#include "Game/Struct_1093BCB0.h"
 
 struct Struct_10939380
 {

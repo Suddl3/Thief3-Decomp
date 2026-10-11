@@ -1,8 +1,8 @@
 // Game/Unsorted_10929DC0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10BFBD70.h"
 #include "Game/Class_10905A90_Member.h"
+#include "Game/Class_1092A280.h"
 
 Class_10905A90_Member* FUN_10905aa0();
 
@@ -22,19 +22,6 @@ public:
     Class_1092A280_Node* Prev;
     Class_1092A280_Node* Next;
     char Pad14[0x2c];
-};
-
-class Class_1092A280
-{
-public:
-    Class_1092A280_Node* FUN_1092a280();
-
-    Class_1092A280_Node* Head;
-    Class_1092A280_Node* Tail;
-    int Count;
-    Class_1092A280_Node* FreeHead;
-    Class_1092A280_Node* FreeTail;
-    int FreeCount;
 };
 
 // FUNCTION: 0x1092A280 ?FUN_1092a280@Class_1092A280@@QAEPAVClass_1092A280_Node@@XZ

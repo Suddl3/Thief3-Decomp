@@ -1,9 +1,9 @@
 // Game/Unsorted_10B1B660.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10B25010_Member.h"
 #include "Game/Struct_10AA3520.h"
 #include "Game/Struct_10B1B8A0_List.h"
+#include "Game/Class_109E3D60_Member.h"
 
 class Class_10B1B8A0_Arg;
 
@@ -18,14 +18,6 @@ public:
     char Pad00[0x1];
     char Pad01[0x23];
     int Unknown24;
-};
-
-class Class_109E3D60_Member
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2(int A);
 };
 
 // Game/Class_10B1B8A0.h copied whole, with the four methods this function calls added.

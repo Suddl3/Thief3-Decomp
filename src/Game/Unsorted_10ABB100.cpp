@@ -1,8 +1,8 @@
 // Game/Unsorted_10ABB100.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10ABB580.h"
 #include "Game/Class_10905A90_Member.h"
+#include "Game/Class_10ABB200.h"
 
 Class_10905A90_Member* FUN_10905aa0();
 
@@ -27,16 +27,6 @@ public:
     int Unknown08;
     int Unknown0C;
     bool Unknown10;
-};
-
-class Class_10ABB200
-{
-public:
-    void FUN_10abb200(int From, int To, int Count);
-
-    int Unknown00;
-    int Unknown04;
-    Class_10ABB200_Unknown08* Unknown08;
 };
 
 // FUNCTION: 0x10ABB100 ?FUN_10abb100@Class_10ABB580@@QAEXH@Z

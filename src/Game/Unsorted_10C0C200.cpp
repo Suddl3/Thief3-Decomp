@@ -1,9 +1,9 @@
 // Game/Unsorted_10C0C200.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10C0C8E0.h"
 #include "Game/Class_10BFBD70.h"
 #include "Game/Struct_10C05A80.h"
+#include "Game/Class_10C0C360.h"
 
 double FUN_10c00480();
 
@@ -24,17 +24,6 @@ class Class_10C0C360_Unknown0C
 public:
     char Unknown00[0x38];
     Struct_10C05A80 Unknown38;
-};
-
-class Class_10C0C360
-{
-public:
-    void FUN_10c0c360(Class_10BFBD70* Out, const Struct_10C05A80* Center, float Radius);
-
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int* Unknown0C;
 };
 
 // FUNCTION: 0x10C0C360 ?FUN_10c0c360@Class_10C0C360@@QAEXPAVClass_10BFBD70@@PBUStruct_10C05A80@@M@Z

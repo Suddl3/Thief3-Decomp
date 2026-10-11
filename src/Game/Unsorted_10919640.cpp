@@ -1,11 +1,12 @@
 // Game/Unsorted_10919640.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_1093E930.h"
 #include "Game/Class_1093EDB0.h"
 #include "Game/Class_109081E0.h"
 #include "Game/Class_1091E400.h"
 #include "Game/IDirect3DDevice8.h"
+#include "Game/Class_10937730.h"
+#include "Game/IDirect3D8.h"
 
 struct Struct_1093FFE0;
 
@@ -45,20 +46,6 @@ public:
     char Pad00[0x1];
     char Pad01[0x1C4F];
     bool Unknown1C50;
-};
-
-class Class_10937730
-{
-public:
-    void FUN_10937730();
-};
-
-class IDirect3D8
-{
-public:
-    virtual int __stdcall Virtual0();
-    virtual int __stdcall Virtual1();
-    virtual int __stdcall Virtual2();
 };
 
 extern Class_10E4A538* DAT_10f2c8e4;

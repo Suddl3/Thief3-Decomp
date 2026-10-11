@@ -1,8 +1,8 @@
 // Game/Unsorted_10C04DC0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
 #include "Game/Struct_10C05A50.h"
+#include "Game/Struct_10C05610_Item.h"
 
 float FUN_10c054b0(float A, float B, float C, float D, float E);
 
@@ -11,13 +11,6 @@ float FUN_10c05a50(const Struct_10C05A50* A, const Struct_10C05A50* B);
 int FUN_109688a0(int A, int B, int C);
 
 void FUN_10c05480(int* A, int B);
-
-struct Struct_10C05610_Item
-{
-    float Unknown00;
-    float Unknown04;
-    float Unknown08;
-};
 
 // FUNCTION: 0x10C053C0 ?FUN_10c053c0@@YAXPAUStruct_10C05610_Item@@PAM1PA_N@Z
 void FUN_10c053c0(struct Struct_10C05610_Item* Item, float* Min, float* Max, bool* Done)

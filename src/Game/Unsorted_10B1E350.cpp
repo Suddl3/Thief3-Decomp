@@ -1,16 +1,8 @@
 // Game/Unsorted_10B1E350.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
 #include <math.h>
-
-struct Struct_10B1DD70_Param
-{
-    char Unknown00[0x44];
-    float Unknown44;
-    float Unknown48;
-    float Unknown4C;
-};
+#include "Game/Struct_10B1DD70_Param.h"
 
 FVector FUN_10b1de50(Struct_10B1DD70_Param* A);
 

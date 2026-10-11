@@ -3,6 +3,7 @@
 #include "Game/Class_1091E400.h"
 #include "Game/Class_10924100.h"
 #include "Game/Config.h"
+#include "Game/IDirect3D8.h"
 
 extern "C" int __cdecl sprintf(char* Out, const char* Format, ...);
 
@@ -20,17 +21,6 @@ struct D3DADAPTER_IDENTIFIER8
     unsigned long Revision;
     unsigned char DeviceIdentifier[16];
     unsigned long WHQLLevel;
-};
-
-class IDirect3D8
-{
-public:
-    virtual int __stdcall Virtual0();
-    virtual int __stdcall Virtual1();
-    virtual int __stdcall Virtual2();
-    virtual int __stdcall Virtual3();
-    virtual int __stdcall Virtual4();
-    virtual int __stdcall GetAdapterIdentifier(unsigned int Adapter, unsigned long Flags, D3DADAPTER_IDENTIFIER8* pIdentifier);
 };
 
 extern IDirect3D8* GDirect3D8;

@@ -3,6 +3,7 @@
 #include "Game/Class_10C80360.h"
 #include "Game/Class_10E9B5C0.h"
 #include "Game/TimeManager.h"
+#include "Game/Class_10C562C0.h"
 
 class Class_10C41420
 {
@@ -11,12 +12,6 @@ public:
 };
 
 Class_10C41420* FUN_10c47d90();
-
-class Class_10C562C0
-{
-public:
-    void FUN_10c56780(float A);
-};
 
 Class_10C562C0* FUN_10c562c0();
 

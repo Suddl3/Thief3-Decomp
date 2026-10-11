@@ -1,6 +1,5 @@
 // Game/Unsorted_10C54A20.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include <list>
 #include "Game/Class_10C54B70_Object.h"
 #include "Game/Class_10C55320.h"
@@ -10,6 +9,7 @@
 #include "Game/Class_10C55360.h"
 #include "Game/Entry_10C55360.h"
 #include "Game/Class_10C56E40_Field00.h"
+#include "Game/Class_10C54A20.h"
 
 struct Struct_10C55320
 {
@@ -83,16 +83,6 @@ struct Struct_10C54A20
 {
     int Unknown00;
     Class_10C56E40 Unknown04;
-};
-
-class Class_10C54A20
-{
-public:
-    void FUN_10c54a20(int A, int B);
-
-    int Unknown00;
-    int Unknown04;
-    Struct_10C54A20* Unknown08;
 };
 
 // FUNCTION: 0x10C54A20 ?FUN_10c54a20@Class_10C54A20@@QAEXHH@Z

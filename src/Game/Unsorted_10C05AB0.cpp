@@ -1,24 +1,12 @@
 // Game/Unsorted_10C05AB0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
 #include "Game/FCoords.h"
+#include "Game/Class_10C05E30.h"
 
 extern FCoords DAT_10f46de8;
 
 bool FUN_10c054e0(float A, float B, float C);
-
-class Class_10C05E30
-{
-public:
-    Class_10C05E30(int A, int B);
-
-    float Unknown00;
-    float Unknown04;
-    float Unknown08;
-    FVector Unknown0C;
-    FVector Unknown18;
-};
 
 // FUNCTION: 0x10C05BC0 ?FUN_10c05bc0@@YAMHHHM@Z
 float FUN_10c05bc0(int A, int B, int Rot, float Distance)

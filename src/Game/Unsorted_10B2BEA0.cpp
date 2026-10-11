@@ -1,7 +1,8 @@
 // Game/Unsorted_10B2BEA0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
+#include "Game/Class_10B2BC90_Unknown.h"
+#include "Game/Class_10E68F8C.h"
 
 extern void* DAT_10e7b558[];
 
@@ -10,14 +11,6 @@ extern float DAT_10e49684;
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
-
-class Class_10E68F8C
-{
-public:
-    virtual void Virtual0(int A, FVector* B, float C);
-
-    char Unknown04[0x3C];
-};
 
 class Class_10E7B558
 {
@@ -38,20 +31,6 @@ class Object_10B2BF10 : public Class_10E7B558
 {
 public:
     Class_10E68F8C Unknown0C;
-};
-
-class Class_10B2BC90_Unknown
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual FVector* Virtual8();
 };
 
 class Class_10B2BF10_Param0

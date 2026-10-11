@@ -1,13 +1,7 @@
 // Game/Unsorted_10AAE2A0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-struct GUID
-{
-    unsigned long Data1;
-    unsigned short Data2;
-    unsigned short Data3;
-    unsigned char Data4[8];
-};
+#include "Game/GUID.h"
+#include "Game/IDirectInput8A.h"
 
 struct DIDEVICEINSTANCEA
 {
@@ -23,15 +17,6 @@ struct DIDEVICEINSTANCEA
 };
 
 class IDirectInputDevice8A;
-
-class IDirectInput8A
-{
-public:
-    virtual long __stdcall Virtual0();
-    virtual long __stdcall Virtual1();
-    virtual long __stdcall Virtual2();
-    virtual long __stdcall CreateDevice(const GUID& Guid, IDirectInputDevice8A** Device, void* Outer);
-};
 
 int FUN_10af3690(const char* A, const char* B);
 

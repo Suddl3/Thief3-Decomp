@@ -1,6 +1,5 @@
 // Game/Unsorted_10BB9030.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
 #include "Game/Class_10BB7F30.h"
 #include "Game/Class_10B9CAC0.h"
@@ -8,6 +7,7 @@
 #include "Game/Class_10C7D570.h"
 #include "Game/Class_109081E0.h"
 #include "Game/Class_10E97B00.h"
+#include "Game/Class_10BC9A50.h"
 
 extern float DAT_10eafbdc;
 
@@ -82,12 +82,6 @@ public:
     virtual void Virtual61();
     virtual void Virtual62();
     virtual bool Virtual63();
-};
-
-class Class_10BC9A50
-{
-public:
-    void FUN_10bc7d70(Class_10E97B00* Name, int Flags, int Count, Class_109081E0* Out, bool Flag);
 };
 
 // The address of an object passed by reference.

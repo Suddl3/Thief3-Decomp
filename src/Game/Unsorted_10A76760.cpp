@@ -5,6 +5,7 @@
 #include "Game/Class_10E6BC80.h"
 #include "Game/Class_10E6BD64.h"
 #include "Game/Class_10E6BD18.h"
+#include "Game/ULevel.h"
 
 extern void* DAT_10e6bd64[];
 
@@ -39,11 +40,6 @@ public:
 };
 
 class ULevelBase;
-
-class ULevel
-{
-    DECLARE_CLASS(ULevel, ULevelBase, 0x0, Engine)
-};
 
 // FUNCTION: 0x10A76760 ?FUN_10a76760@Class_10E6BC80@@UAEPAVObject_10A76760@@H@Z
 Object_10A76760* Class_10E6BC80::FUN_10a76760(int Value)

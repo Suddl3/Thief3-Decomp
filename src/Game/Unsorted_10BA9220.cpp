@@ -1,7 +1,7 @@
 // Game/Unsorted_10BA9220.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10C7D570.h"
+#include "Game/Class_10BA9D80.h"
 
 class Class_10BA9D80_Unknown14
 {
@@ -30,23 +30,6 @@ public:
 };
 
 extern Class_10FF667C* DAT_10ff667c;
-
-class Class_10BA9D80
-{
-public:
-    virtual void Virtual0();
-    virtual bool Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4(int A);
-
-    int FUN_10ba9ae0(int A2, int A3, int A4, int A5, int A6, int A7, int A8, int A9, int A10, Class_10C7D570* Owner, int A13);
-    int FUN_10ba9d80(int A2, int A3, int A4, int A5, int A6, int A7, int A8, int A9, int A10, Class_10C7D570* Owner, bool A12, int A13);
-
-    char Unknown04[4];
-    float Unknown08;
-    void* Unknown0C;
-};
 
 // FUNCTION: 0x10BA9D80 ?FUN_10ba9d80@Class_10BA9D80@@QAEHHHHHHHHHHPAVClass_10C7D570@@_NH@Z
 int Class_10BA9D80::FUN_10ba9d80(int A2, int A3, int A4, int A5, int A6, int A7, int A8, int A9, int A10, Class_10C7D570* Owner, bool A12, int A13)

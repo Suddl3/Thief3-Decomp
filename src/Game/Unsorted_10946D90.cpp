@@ -1,5 +1,6 @@
 // Game/Unsorted_10946D90.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10946D90.h"
 
 extern float DAT_10e4a750;
 
@@ -17,17 +18,6 @@ struct Struct_10946D90_Node
     int Next;
     int Unknown08;
     char Unknown0C[0x18];
-};
-
-class Class_10946D90
-{
-public:
-    void FUN_10946d90(float* Point, float Radius, int* Out, int* Count, unsigned int Index);
-
-    char Unknown00[0x2C];
-    Struct_10946D90_Node* Unknown2C;
-    int Unknown30;
-    Struct_10946D90_Plane* Unknown34;
 };
 
 // FUNCTION: 0x10946D90 ?FUN_10946d90@Class_10946D90@@QAEXPAMMPAH1I@Z

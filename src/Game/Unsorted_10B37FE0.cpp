@@ -8,14 +8,12 @@
 #include "Game/Class_10F3A3D8.h"
 #include "Game/Struct_10AA3520.h"
 #include "Game/Struct_10ABC6F0.h"
+#include "Game/Class_109A62E0.h"
+#include "Game/Class_10B37FE0_Unknown04.h"
+#include "Game/Class_10B37FE0_Unknown04_Unknown460.h"
+#include "Game/Class_10B37FE0_Unknown0B4.h"
 
 class Class_10E7C584;
-
-class Class_109A62E0
-{
-public:
-    void FUN_109a62e0(Class_10E7C584* A);
-};
 
 void FUN_10abc6f0(Struct_10ABC6F0* A, const FVector& B);
 
@@ -32,31 +30,6 @@ public:
 };
 
 extern Class_10F3A3D8* DAT_10f3a3d8;
-
-class Class_10B37FE0_Unknown04_Unknown460
-{
-public:
-    char Unknown00[0x2C];
-    FVector Unknown2C;
-};
-
-class Class_10B37FE0_Unknown04
-{
-public:
-    char Unknown00[0x460];
-    Class_10B37FE0_Unknown04_Unknown460* Unknown460;
-};
-
-class Class_10B37FE0_Unknown0B4
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5(Class_10B37FE0_Unknown04_Unknown460* A, Class_10B37FE0_Unknown04* B, Struct_10ABC6F0* C, int D);
-};
 
 extern Struct_10AA3520* DAT_10f35dec;
 

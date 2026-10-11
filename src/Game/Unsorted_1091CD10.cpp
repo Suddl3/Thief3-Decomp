@@ -1,6 +1,5 @@
 // Game/Unsorted_1091CD10.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include <math.h>
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_1091AA10.h"
@@ -8,29 +7,12 @@
 #include "Game/Class_1091E1F0.h"
 #include "Game/Class_1091E2E0.h"
 #include "Game/Class_1091DEE0.h"
+#include "Game/Class_109081E0.h"
+#include "Game/Class_1091D390.h"
 
 extern float DAT_10e49684;
 
 class Class_1091CA00;
-
-Class_10905A90_Member* FUN_10905aa0();
-
-class Class_109081E0
-{
-public:
-    Class_109081E0(const char* In);
-    ~Class_109081E0()
-    {
-        if (Unknown00)
-        {
-            char* Block = Unknown00 - 4;
-            FUN_10905aa0()->Virtual5(Block);
-            Unknown00 = 0;
-        }
-    }
-
-    char* Unknown00;
-};
 
 // Ion Storm's placement new (0x10905C10).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
@@ -58,18 +40,6 @@ public:
     int Unknown14;
     int Unknown18;
     int Unknown1C;
-};
-
-class Class_1091D390
-{
-public:
-    bool FUN_1091d390(int A, int B, int C, unsigned int D, int E, int F, int G);
-    bool FUN_1091a690(Class_1091D390_Unknown24* A, int B, int C, int D, unsigned int E, int F, int G, int H);
-
-    char Unknown00[0x24];
-    Class_1091D390_Unknown24* Unknown24;
-    char Unknown28[4];
-    char Unknown2C;
 };
 
 // FUNCTION: 0x1091D390 ?FUN_1091d390@Class_1091D390@@QAE_NHHHIHHH@Z

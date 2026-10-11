@@ -5,20 +5,10 @@
 #include "Game/Class_10B9F480.h"
 #include "Game/Class_10E5BC3C.h"
 #include "Game/Object_10BE58C0.h"
+#include "Game/Class_10B9F2F0.h"
+#include "Game/Class_10C04AA0.h"
 
 class FArchive;
-
-class Class_10C04AA0
-{
-public:
-    void FUN_10c04aa0(FArchive& Ar);
-};
-
-class Class_10B9F2F0
-{
-public:
-    void FUN_10b9f2f0(FArchive& Ar);
-};
 
 class Object_10B9F420
 {

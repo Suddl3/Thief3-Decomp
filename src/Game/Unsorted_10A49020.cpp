@@ -5,6 +5,8 @@
 #include "Game/Class_10A4C4A0.h"
 #include "Game/FCoords.h"
 #include "Game/Class_10A492B0.h"
+#include "Game/Class_109081E0.h"
+#include "Game/Class_10A492B0_Node.h"
 
 int FUN_10a48b30(int A, int B);
 
@@ -25,32 +27,12 @@ struct Struct_10A4C4A0
 
 void FUN_10a48f20(int A, int B, FCoords* Out);
 
-// Ion Storm's string (0x109081E0): a char pointer, null when default constructed.
-class Class_109081E0
-{
-public:
-    Class_109081E0() : Unknown00(0) {}
-    ~Class_109081E0();
-    Class_109081E0& operator=(const Class_109081E0& Other);
-
-    char* Unknown00;
-};
-
 // Ion Storm's placement new and its delete (0x10905C10; the delete folded into ::operator delete).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
 unsigned int FUN_1090e9b0(const void* Data, int Length);
-
-// A chained hash table's entry: 12 bytes, allocated per insert.
-class Class_10A492B0_Node
-{
-public:
-    Class_109081E0 Key;
-    int Value;
-    Class_10A492B0_Node* Next;
-};
 
 // FUNCTION: 0x10A492B0 ?FUN_10a492b0@Class_10A492B0@@QAEIABVClass_109081E0@@ABH@Z
 unsigned int Class_10A492B0::FUN_10a492b0(const Class_109081E0& Key, const int& Value)

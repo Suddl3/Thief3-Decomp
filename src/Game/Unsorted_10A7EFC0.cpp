@@ -1,10 +1,10 @@
 // Game/Unsorted_10A7EFC0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_109081E0.h"
 #include "Game/Class_10E6BFBC.h"
 #include "Game/Class_1096A960.h"
+#include "Game/Class_10E5D738.h"
 
 enum EInternal { EC_Internal };
 
@@ -17,12 +17,6 @@ bool FUN_1090f010(const int* A, const int* B);
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
-
-class Class_10E5D738
-{
-public:
-    virtual Class_10E6BFBC* FUN_10a7f220(int A, const int* B);
-};
 
 void FUN_10af37a0(int A, const char* B, ...);
 

@@ -1,6 +1,5 @@
 // Game/Unsorted_10B16780_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10BFBD70.h"
 #include "Game/Class_10B16930.h"
 #include "Game/Class_10B2B9E0.h"
@@ -11,12 +10,9 @@
 #include "Game/Class_109E6D60.h"
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_109081E0.h"
-
-class Class_10E7B6E8
-{
-public:
-    void FUN_10b2e840(bool B);
-};
+#include "Game/Class_10B16D80.h"
+#include "Game/Class_10B2EEA0.h"
+#include "Game/Class_10E7B6E8.h"
 
 class Class_10B2E9D0
 {
@@ -29,12 +25,6 @@ struct Struct_10B16860
     int Unknown00;
     int Unknown04;
     int Unknown08;
-};
-
-class Class_10B2EEA0
-{
-public:
-    void FUN_10b2eea0(Struct_10B16860* Args, float Scale);
 };
 
 class Class_10B16860_Window
@@ -165,12 +155,6 @@ public:
     virtual bool Virtual54();
     virtual void Virtual55();
     virtual void Virtual56(int A);
-};
-
-class Class_10B16D80 : public WindowManager
-{
-public:
-    void FUN_10b16d80(int A);
 };
 
 // FUNCTION: 0x10B16780 ?FUN_10b16780@Class_10B16930@@QAEXXZ

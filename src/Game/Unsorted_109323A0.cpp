@@ -1,29 +1,6 @@
 // Game/Unsorted_109323A0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-struct Struct_109323A0_Node
-{
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    int Unknown10;
-    int Unknown14;
-    int Unknown18;
-    int Unknown1C;
-    char Unknown20[0x20];
-    bool Unknown40;
-    char Unknown41[0x6B];
-    Struct_109323A0_Node* Next;
-    int UnknownB0;
-    int UnknownB4;
-    int UnknownB8;
-    int UnknownBC;
-    int UnknownC0;
-    int UnknownC4;
-    int UnknownC8;
-    int UnknownCC;
-};
+#include "Game/Struct_109323A0_Node.h"
 
 struct Struct_109323A0_Entry
 {

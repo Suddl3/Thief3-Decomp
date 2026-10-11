@@ -1,9 +1,9 @@
 // Game/Unsorted_1091B480.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_109081E0.h"
 #include "Game/Class_1091B3F0.h"
 #include "Game/Class_1090A780.h"
+#include "Game/Class_1091B480.h"
 
 struct Item_1091B3F0
 {
@@ -25,21 +25,6 @@ struct Class_1091B480_Node
     int Value;
     char Unknown08[0x18];
     Class_1091B480_Node* Next;
-};
-
-class Class_1091B480
-{
-public:
-    void FUN_1091b480(int NewSize);
-    void FUN_1091b280(const Class_109081E0& Key, const int& Value);
-
-    int Collisions;
-    int Count;
-    int Bits;
-    int Size;
-    bool Unknown10;
-    char Pad11[0x3];
-    Class_1091B480_Node** Table;
 };
 
 // FUNCTION: 0x1091B480 ?FUN_1091b480@Class_1091B480@@QAEXH@Z

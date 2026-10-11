@@ -1,8 +1,9 @@
 // Game/Unsorted_10B111A0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10B116B0.h"
+#include "Game/Class_10B11600.h"
+#include "Game/Class_10E782A0.h"
 
 Class_10905A90_Member* FUN_10905aa0();
 
@@ -29,18 +30,6 @@ public:
     Struct_10B111A0_Node* Tail;
 };
 
-class Class_10E782A0
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual bool FUN_10b111a0(int A);
-
-    int Unknown04;
-    int Unknown08;
-    Class_10B111A0_Unknown0C** Unknown0C;
-};
-
 // The element: 0xC bytes, its three words cleared by the loop.
 class Class_10B11520_Unknown08
 {
@@ -58,16 +47,6 @@ public:
     void* Unknown00;
     int Unknown04;
     int Unknown08;
-};
-
-class Class_10B11600
-{
-public:
-    void FUN_10b11600(int From, int To, int Count);
-
-    int Unknown00;
-    int Unknown04;
-    Class_10B11600_Unknown08* Unknown08;
 };
 
 // FUNCTION: 0x10B111A0 ?FUN_10b111a0@Class_10E782A0@@UAE_NH@Z

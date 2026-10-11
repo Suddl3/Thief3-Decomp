@@ -1,9 +1,9 @@
 // Game/Unsorted_10BF0AE0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_109081E0.h"
 #include "Game/Class_10E97B00.h"
 #include "Game/Class_10BEFAB0.h"
+#include "Game/Class_10BC9A50.h"
 
 class Class_10BFF460
 {
@@ -12,17 +12,6 @@ public:
 };
 
 float FUN_10c00490();
-
-class Class_10BC9A50 : public Class_10BEFAB0
-{
-public:
-    void FUN_10bf0ae0(Class_10BFF460* Target);
-    void FUN_10bc7d70(Class_10E97B00* Name, int Flags, int Count, Class_109081E0* Out, bool Flag);
-
-    char Pad08[0x258];
-    float Unknown260;
-    float Unknown264;
-};
 
 // The address of an object passed by reference.
 inline Class_10E97B00* AddressOf(const Class_10E97B00& Object)

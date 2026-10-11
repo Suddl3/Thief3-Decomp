@@ -1,9 +1,10 @@
 // Game/Unsorted_10B34C30.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
 #include "Game/Class_10B0D530.h"
 #include "Game/Class_10E6DC88.h"
+#include "Game/Class_10905A90_Member.h"
+#include "Game/Class_10E79548.h"
 
 struct Struct_10A89290
 {
@@ -59,28 +60,13 @@ public:
 
 extern Class_1096C8D0* DAT_10ff3818;
 
-class Class_10B34F60
+class Class_10E7C178
 {
 public:
     void FUN_10b34f60();
 
     char Pad00[0x8];
     unsigned char Unknown08;
-};
-
-class Class_10905A90_Member
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8(int A, int B);
-    virtual void Virtual9();
 };
 
 Class_10905A90_Member* FUN_10905aa0();
@@ -102,14 +88,8 @@ public:
     virtual int Virtual0(int A, int B, int C, int* D);
 };
 
-class Class_10E79548
-{
-public:
-    virtual Class_10E7C268* FUN_10b35020();
-};
-
-// FUNCTION: 0x10B34F60 ?FUN_10b34f60@Class_10B34F60@@QAEXXZ
-void Class_10B34F60::FUN_10b34f60()
+// FUNCTION: 0x10B34F60 ?FUN_10b34f60@Class_10E7C178@@QAEXXZ
+void Class_10E7C178::FUN_10b34f60()
 {
     for (DAT_10ff3818->FUN_1096c8d0(); DAT_10ff3818->IsValid(); DAT_10ff3818->FUN_1096c8d0())
     {

@@ -5,13 +5,7 @@
 #include "Game/Class_109E2AE0.h"
 #include "Game/Class_109E2BD0.h"
 #include "Game/Class_10E5B2AC.h"
-
-struct Struct_109E2A90_Node
-{
-    Struct_109E2A90_Node* Next;
-    Struct_109E2A90_Node* Prev;
-    int Unknown08;
-};
+#include "Game/Struct_109E2A90_Node.h"
 
 struct Struct_109E2AE0_Node
 {

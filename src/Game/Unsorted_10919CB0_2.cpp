@@ -6,36 +6,8 @@
 #include "Game/Class_1091B3F0.h"
 #include "Game/Struct_1091A610.h"
 #include "Game/Struct_1091A610Header.h"
-
-Class_10905A90_Member* FUN_10905aa0();
-
-// Ion Storm's string (0x109081E0): a char pointer to a block allocated 4 bytes before it.
-class Class_109081E0
-{
-public:
-    ~Class_109081E0()
-    {
-        if (Unknown00)
-        {
-            char* Block = Unknown00 - 4;
-            FUN_10905aa0()->Virtual5(Block);
-            Unknown00 = 0;
-        }
-    }
-
-    char* Unknown00;
-};
-
-class Class_1091A590
-{
-public:
-    ~Class_1091A590();
-
-    Class_109081E0 Unknown00;
-    Class_109081E0 Unknown04;
-};
-
-extern const char DAT_10e47660[];
+#include "Game/Class_109081E0.h"
+#include "Game/Class_1091A590.h"
 
 // FUNCTION: 0x1091A590 ??1Class_1091A590@@QAE@XZ
 Class_1091A590::~Class_1091A590()

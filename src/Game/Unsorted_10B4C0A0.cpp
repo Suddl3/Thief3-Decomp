@@ -3,6 +3,7 @@
 #include "Game/Class_10B39870.h"
 #include "Game/Struct_10B4C2C0.h"
 #include "Game/Struct_10B48890.h"
+#include "Game/Object_10B4CA50_A.h"
 
 struct Struct_10B3AF40_Param;
 
@@ -23,18 +24,6 @@ public:
     virtual void Virtual2();
     virtual void Virtual3();
     virtual void Virtual4();
-};
-
-class Object_10B4CA50_A
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6(int A);
 };
 
 class Object_10B4CA50_B

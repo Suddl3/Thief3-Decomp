@@ -1,5 +1,6 @@
 // Game/AAIPathPoint.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10BC00A0.h"
 
 class UObject
 {
@@ -25,14 +26,6 @@ class AMarker : public AActor
 {
 public:
     virtual ~AMarker();
-};
-
-class Class_10BC00A0
-{
-public:
-    Class_10BC00A0();
-
-    int Unknown00;
 };
 
 class AAIPathPoint : public AMarker

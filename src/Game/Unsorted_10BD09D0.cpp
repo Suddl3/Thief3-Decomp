@@ -4,16 +4,9 @@
 #include "Game/Class_10BD1320.h"
 #include "Game/Class_10E93138.h"
 #include "Game/FArchive.h"
+#include "Game/Item_10BD1320.h"
 
 void* FUN_10b232e0(void* A, void* B);
-
-struct Item_10BD1320
-{
-    int Unknown00;
-    Class_109081E0 Unknown04;
-    int Unknown08;
-    int Unknown0C;
-};
 
 // FUNCTION: 0x10BD10A0 ?FUN_10bd10a0@Class_10E93138@@UAEXAAVFArchive@@@Z
 void Class_10E93138::FUN_10bd10a0(FArchive& Ar)

@@ -7,20 +7,13 @@
 #include "Game/Class_10941C40.h"
 #include "Game/D3DXMATRIX.h"
 #include "Game/IDirect3DDevice8.h"
+#include "Game/Class_10941480.h"
 
 struct Struct_10941980
 {
     short Unknown00;
     short Unknown02;
     short Unknown04;
-};
-
-class Class_10941480
-{
-public:
-    void FUN_10941480();
-
-    char Unknown00[0x44];
 };
 
 // D3DX's inline identity (d3dx8math.inl).

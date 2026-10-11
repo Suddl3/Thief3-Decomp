@@ -1,15 +1,9 @@
 // Game/Unsorted_109E1FC0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_1090FD40.h"
 #include "Game/Class_109081E0.h"
-
-class Class_1091CD10
-{
-public:
-    void FUN_1091cd10();
-};
+#include "Game/Class_1091CD10.h"
 
 // COM interface behind DAT_10f35b10 and DAT_10f35b14: only Release (slot 2) is called.
 class Class_109E2840_Com

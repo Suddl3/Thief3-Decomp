@@ -1,9 +1,9 @@
 // Game/Unsorted_10B16C10.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_109081E0.h"
 #include "Game/WindowManager.h"
+#include "Game/Class_10B16C10.h"
 
 Class_10905A90_Member* FUN_10905aa0();
 
@@ -69,13 +69,6 @@ public:
     virtual void Virtual54();
     virtual void Virtual55();
     virtual void Virtual56(int A);
-};
-
-class Class_10B16C10 : public WindowManager
-{
-public:
-    void FUN_10b16c10(bool Flag);
-    void FUN_10b16b30();
 };
 
 // FUNCTION: 0x10B16C10 ?FUN_10b16c10@Class_10B16C10@@QAEX_N@Z

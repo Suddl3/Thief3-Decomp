@@ -1,5 +1,6 @@
 // Game/Unsorted_10918E90.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/IDirect3DSurface8.h"
 
 // Direct3D 8 interfaces, declared with the slots this function calls. COM methods are __stdcall
 // with this pushed last, so a call pushes the arguments in reverse and then the object.
@@ -21,20 +22,6 @@ struct D3DSURFACE_DESC
     int MultiSampleType;
     unsigned int Width;
     unsigned int Height;
-};
-
-class IDirect3DSurface8
-{
-public:
-    virtual int __stdcall Virtual0();
-    virtual int __stdcall Virtual1();
-    virtual int __stdcall Virtual2();
-    virtual int __stdcall Virtual3();
-    virtual int __stdcall Virtual4();
-    virtual int __stdcall Virtual5();
-    virtual int __stdcall Virtual6();
-    virtual int __stdcall Virtual7();
-    virtual int __stdcall Virtual8(D3DSURFACE_DESC* Desc);
 };
 
 class IDirect3DDevice8

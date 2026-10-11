@@ -1,11 +1,12 @@
 // Game/Unsorted_10B37640_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
 #include "Game/Class_10B21580.h"
 #include "Game/Class_10993E20.h"
 #include "Game/Struct_10AA3520.h"
 #include "Game/Struct_10B21820_Object.h"
+#include "Game/Class_10B378A0.h"
+#include "Game/Object_10B4CA50_A.h"
 
 extern const char* DAT_10ff3824;
 
@@ -119,25 +120,6 @@ public:
 
     char Pad04[0xac];
     Class_10B378A0_Unknown0B0* Unknown0B0;
-};
-
-class Object_10B4CA50_A
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4(Class_10B21580* A, Class_10B21820* B, FString* C, FString* D, const FString& E, int F, int G);
-};
-
-class Class_10B378A0
-{
-public:
-    void FUN_10b378a0();
-
-    char Unknown00[4];
-    Class_10B21580* Unknown04;
 };
 
 class Class_10CAFD00;

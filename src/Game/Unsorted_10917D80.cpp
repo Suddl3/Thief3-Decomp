@@ -1,26 +1,11 @@
 // Game/Unsorted_10917D80.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/IDirect3DSurface8.h"
 
 struct Struct_10917E40
 {
     int Unknown00;
     int* Bits;
-};
-
-class IDirect3DSurface8
-{
-public:
-    virtual int __stdcall Virtual0();
-    virtual int __stdcall Virtual1();
-    virtual int __stdcall Virtual2();
-    virtual int __stdcall Virtual3();
-    virtual int __stdcall Virtual4();
-    virtual int __stdcall Virtual5();
-    virtual int __stdcall Virtual6();
-    virtual int __stdcall Virtual7();
-    virtual int __stdcall Virtual8();
-    virtual int __stdcall Virtual9(Struct_10917E40* LockedRect, const void* Rect, unsigned long Flags);
-    virtual int __stdcall Virtual10();
 };
 
 class IDirect3DDevice8

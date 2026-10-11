@@ -1,7 +1,7 @@
 // Game/Unsorted_10952210.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10952390.h"
+#include "Game/Class_109522D0.h"
 
 struct Struct_10952390_A
 {
@@ -17,24 +17,6 @@ struct Struct_10952390_B
 
 // Declarations first.
 extern float DAT_10eafbdc;
-
-class Class_109522D0
-{
-public:
-    void FUN_109522d0(float A, float* B, float* C);
-
-    char Unknown00[0x18];
-    float Unknown18;
-    float Unknown1C;
-    float Unknown20;
-    float Unknown24;
-    float Unknown28;
-    float Unknown2C;
-    float Unknown30;
-    float Unknown34;
-    float Unknown38;
-    float Unknown3C;
-};
 
 // FUNCTION: 0x109522D0 ?FUN_109522d0@Class_109522D0@@QAEXMPAM0@Z
 void Class_109522D0::FUN_109522d0(float A, float* B, float* C)

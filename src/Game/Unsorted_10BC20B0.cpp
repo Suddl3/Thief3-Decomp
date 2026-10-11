@@ -1,9 +1,9 @@
 // Game/Unsorted_10BC20B0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "AICore/AICoreClasses.h"
 #include "Game/Class_10BBF5D0.h"
 #include "Game/Class_10C25770.h"
+#include "Game/Class_10BC20B0.h"
 
 extern float DAT_10ff6698;
 
@@ -16,13 +16,6 @@ public:
     char Pad0C[0xC];
     Class_10C25770 Unknown18;
     Class_10C25770 Unknown24;
-};
-
-class Class_10BC20B0 : public Class_10BBF5D0
-{
-public:
-    void FUN_10bc20b0(AAIPathPoint* A, int B);
-    void FUN_10bc0f50(AAIPathPoint* A, int B);
 };
 
 // FUNCTION: 0x10BC20B0 ?FUN_10bc20b0@Class_10bc20b0@@QAEXPAVAAIPathPoint@@H@Z

@@ -3,6 +3,7 @@
 #include "Game/Class_10BAEC40.h"
 #include "Game/Class_10BD4600.h"
 #include "Game/Class_10BD4670.h"
+#include "Game/Struct_10BAEC40_Unknown08.h"
 
 struct Struct_10BD4600
 {
@@ -34,14 +35,6 @@ class Object_10BD4670
 public:
     virtual void Virtual0();
     virtual unsigned char Virtual1(Struct_10BD4670* A, int* B);
-};
-
-struct Struct_10BAEC40_Unknown08
-{
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    bool Unknown0C;
 };
 
 // FUNCTION: 0x10BD4160 ?FUN_10bd4160@Class_10BAEC40@@QAEXABV1@@Z

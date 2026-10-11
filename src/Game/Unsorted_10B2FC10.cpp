@@ -1,10 +1,10 @@
 // Game/Unsorted_10B2FC10.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
 #include "Game/Class_109081E0.h"
 #include "Game/Class_10A242D0.h"
 #include "Game/Class_10AF7F80.h"
+#include "Game/Class_10B2FCE0.h"
 
 class Class_10B2FEF0_Unknown118
 {
@@ -123,7 +123,7 @@ public:
     virtual void Virtual111(const Class_109081E0& Text, float Scale, int Flag);
 };
 
-class Class_10B2FEF0
+class Class_10E7B970
 {
 public:
     virtual void Virtual0();
@@ -278,19 +278,6 @@ public:
     float Unknown18;
 };
 
-class Class_10B2FCE0
-{
-public:
-    bool FUN_10b2fce0(float A);
-
-    char Unknown00[0x134];
-    Class_10A24370* Unknown134;
-    char Pad138[0x14];
-    Class_10B2FCE0_Unknown14C* Unknown14C;
-    char Pad150[0x14];
-    bool Unknown164;
-};
-
 // FUNCTION: 0x10B2FCE0 ?FUN_10b2fce0@Class_10B2FCE0@@QAE_NM@Z
 bool Class_10B2FCE0::FUN_10b2fce0(float A)
 {
@@ -319,8 +306,8 @@ bool Class_10B2FCE0::FUN_10b2fce0(float A)
     return Result;
 }
 
-// FUNCTION: 0x10B2FEF0 ?FUN_10b2fef0@Class_10B2FEF0@@QAEXXZ
-void Class_10B2FEF0::FUN_10b2fef0()
+// FUNCTION: 0x10B2FEF0 ?FUN_10b2fef0@Class_10E7B970@@QAEXXZ
+void Class_10E7B970::FUN_10b2fef0()
 {
     if (Unknown134 != 0)
     {

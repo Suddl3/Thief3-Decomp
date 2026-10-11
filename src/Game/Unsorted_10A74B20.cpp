@@ -1,6 +1,5 @@
 // Game/Unsorted_10A74B20.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
 #include "Game/Class_10A73EF0_Table.h"
 #include "Game/Class_10BB8300.h"
@@ -8,6 +7,7 @@
 #include "Game/Class_10AF7F80.h"
 #include "Game/Class_10E6BBD0.h"
 #include "Game/Class_10905A90_Member.h"
+#include "Game/Class_109081E0.h"
 
 class Class_10A73EF0_Object
 {
@@ -73,26 +73,6 @@ public:
 Class_10A73EF0_Table* FUN_10af3470();
 
 class Class_10AAF570;
-
-Class_10905A90_Member* FUN_10905aa0();
-
-// Class_109081E0 without its base, with the body as its own destructor.
-class Class_109081E0
-{
-public:
-    Class_109081E0(const char* In);
-    ~Class_109081E0()
-    {
-        if (Unknown00)
-        {
-            char* Block = Unknown00 - 4;
-            FUN_10905aa0()->Virtual5(Block);
-            Unknown00 = 0;
-        }
-    }
-
-    char* Unknown00;
-};
 
 // Class_Field04 from include/Game/Class_Field04.h, with virtual slots up to 70.
 class Class_Field04 : public Class_10BB8300

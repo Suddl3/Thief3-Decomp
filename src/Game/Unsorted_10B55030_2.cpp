@@ -3,20 +3,13 @@
 #include "Game/Class_10B3AC90.h"
 #include "Game/Static_10B3AC60.h"
 #include "Game/Struct_10AA3520.h"
+#include "Game/Object_10B55450.h"
 
 struct Info_10B55450
 {
     float Unknown00;
     float Unknown04;
     float Unknown08;
-};
-
-class Object_10B55450
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2(void* A, Info_10B55450* B);
 };
 
 extern Struct_10AA3520* DAT_10f35dec;

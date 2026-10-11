@@ -1,7 +1,7 @@
 // Game/Unsorted_1090FD70.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_109081E0.h"
+#include "Game/Class_1090FE50.h"
 
 typedef void* HANDLE;
 
@@ -29,13 +29,6 @@ public:
 
     char Unknown00[0x10];
     void* Unknown10;
-};
-
-class Class_1090FE50
-{
-public:
-    bool FUN_1090fe50(Class_10AA9DA0* A, Class_109081E0& B, Class_109081E0& C);
-    void FUN_1090f400(Class_109081E0& Name, void* Data, int Mode, bool Flag);
 };
 
 // FUNCTION: 0x1090FE50 ?FUN_1090fe50@Class_1090FE50@@QAE_NPAVClass_10AA9DA0@@AAVClass_109081E0@@1@Z

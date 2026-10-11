@@ -1,17 +1,9 @@
 // Game/Unsorted_10A85AD0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10905A90_Member.h"
+#include "Game/Object_10A858C0.h"
 
 Class_10905A90_Member* FUN_10905aa0();
-
-// What the pointer array holds: its scalar deleting destructor is slot 1.
-class Object_10A858C0
-{
-public:
-    virtual void Virtual0();
-    virtual ~Object_10A858C0();
-};
 
 // The growable pointer array in globals: the count, the bytes allocated and the block.
 extern int DAT_10f3a1c8;

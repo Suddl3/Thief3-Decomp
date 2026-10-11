@@ -4,29 +4,8 @@
 #include "Game/Class_10A1F880.h"
 #include "Game/Class_10A1F9D0.h"
 #include "Game/Class_10A1FB50.h"
-
-Class_10905A90_Member* FUN_10905aa0();
-
-class Class_10BFBD70
-{
-public:
-    void FUN_10bfbd70(int Count);
-
-    ~Class_10BFBD70()
-    {
-        FUN_10bfbd70(0);
-        if (Unknown04)
-        {
-            FUN_10905aa0()->Virtual5(Unknown08);
-            Unknown08 = 0;
-            Unknown04 = 0;
-        }
-    }
-
-    int Unknown00;
-    int Unknown04;
-    void* Unknown08;
-};
+#include "Game/Class_10BFBD70.h"
+#include "Game/Class_10E678F0.h"
 
 class Class_10E678F0;
 
@@ -39,15 +18,6 @@ public:
 };
 
 extern Class_10F46DA0* DAT_10f46da0;
-
-class Class_10E678F0
-{
-public:
-    virtual ~Class_10E678F0();
-
-    Class_10BFBD70 Unknown04;
-    Class_10BFBD70 Unknown10;
-};
 
 Class_10A1F880* FUN_10a1fcf0();
 

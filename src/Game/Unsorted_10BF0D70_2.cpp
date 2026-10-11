@@ -1,10 +1,11 @@
 // Game/Unsorted_10BF0D70_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
 #include "Game/Class_10BA9F50.h"
 #include "Game/Class_10BC4B80.h"
 #include "Game/Class_10BC4BF0.h"
+#include "Game/Class_10963CE0.h"
+#include "Game/Class_10BF0EA0.h"
 
 // Game/Struct_10BA91E0.h copied whole with its FVector base: the result is used as a vector.
 struct Struct_10BA91E0 : public FVector
@@ -84,25 +85,6 @@ public:
     virtual void Virtual46();
     virtual void Virtual47();
     virtual int Virtual48();
-};
-
-// The matrix object of FUN_10963ce0: 16 floats, set from a rotation.
-class Class_10963CE0
-{
-public:
-    void FUN_10963ce0(FRotator R);
-    FVector* FUN_1096d8a0(FVector* Out, const FVector* In);
-
-    FLOAT M[4][4];
-};
-
-class Class_10BF0EA0
-{
-public:
-    bool FUN_10bf0ea0(FVector* Out, int Param2, int Param3);
-
-    char Unknown00[4];
-    Class_10BF0EA0_Unknown04* Unknown04;
 };
 
 // FUNCTION: 0x10BF0EA0 ?FUN_10bf0ea0@Class_10BF0EA0@@QAE_NPAVFVector@@HH@Z

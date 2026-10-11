@@ -9,14 +9,9 @@
 #include "Game/Class_10ABCC20.h"
 #include "Game/Class_10ABCC20_Field04.h"
 #include "Game/Class_10ABCFE0.h"
+#include "Game/Class_1098E330.h"
 
 extern Class_10A73EF0_Table* DAT_10f3eda4;
-
-class Class_1098E330
-{
-public:
-    int FUN_1098e330(int A, int* B);
-};
 
 struct Struct_10ABCD90
 {

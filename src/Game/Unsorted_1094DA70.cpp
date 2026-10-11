@@ -1,6 +1,5 @@
 // Game/Unsorted_1094DA70.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_1094DF00.h"
 #include "Game/Class_1094DF40.h"
 #include "Game/Class_1094DF60.h"
@@ -8,24 +7,11 @@
 #include "Game/Struct_1094DF00.h"
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_109081E0.h"
+#include "Game/Class_10E4AA94.h"
 
 extern "C" int memcmp(const void*, const void*, unsigned);
 
-Class_10905A90_Member* FUN_10905aa0();
-
 void FUN_1092bdb0(void* Memory);
-
-class Class_10E4AA94
-{
-public:
-    virtual ~Class_10E4AA94();
-
-    Class_109081E0 Unknown04;
-    Class_109081E0 Unknown08;
-    int Unknown0C;
-    int Unknown10;
-    void* Unknown14[4];
-};
 
 // FUNCTION: 0x1094DB20 ??1Class_10E4AA94@@UAE@XZ
 Class_10E4AA94::~Class_10E4AA94()

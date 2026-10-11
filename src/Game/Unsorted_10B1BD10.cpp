@@ -3,12 +3,7 @@
 #include "Game/Class_10B1D170.h"
 #include "Game/Class_10E79488.h"
 #include "Game/Struct_10AA3520.h"
-
-class Class_10B1BD70
-{
-public:
-    void FUN_10b1bd70();
-};
+#include "Game/Class_10B1BD70.h"
 
 extern Struct_10AA3520* DAT_10f35dec;
 

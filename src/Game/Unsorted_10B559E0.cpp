@@ -1,31 +1,17 @@
 // Game/Unsorted_10B559E0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Struct_10AA3520.h"
 #include "Game/Static_10B3AC60.h"
+#include "Game/Class_10E68F8C.h"
+#include "Game/Class_10E80418.h"
+#include "Game/Object_10B55450.h"
+#include "Game/Struct_10DD7DC0Arg.h"
 
 extern void* DAT_10e81c20[];
 
 extern int DAT_10f05674;
 
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
-
-class Class_10E68F8C
-{
-public:
-    virtual void Virtual0(int A, int* B, float C);
-
-    char Unknown04[0x3C];
-};
-
-struct Struct_10DD7DC0Arg
-{
-    Struct_10DD7DC0Arg(float A, float B, float C) : X(A), Y(B), Z(C) {}
-
-    float X;
-    float Y;
-    float Z;
-};
 
 class Class_10E81C20
 {
@@ -179,27 +165,6 @@ public:
     virtual void Virtual3();
     virtual void Virtual4();
     virtual void Virtual5(void* A, int B, Struct_10B559E0* C, int D);
-};
-
-class Object_10B55450
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual float Virtual6(void* A, float B, int C);
-};
-
-class Class_10E80418
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual int FUN_10b559e0(char* Command, int Unknown);
 };
 
 // FUNCTION: 0x10B559E0 ?FUN_10b559e0@Class_10E80418@@UAEHPADH@Z

@@ -1,24 +1,15 @@
 // Game/Unsorted_1092F270.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10E4AC6C.h"
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10951900.h"
+#include "Game/Class_1092F270.h"
 
 Class_10905A90_Member* FUN_10905aa0();
 
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
-
-class Class_1092F270
-{
-public:
-    Class_10951900* FUN_1092f270(bool A);
-
-    char Pad00[0xb0];
-    Class_10E4AC6C* Unknown0B0;
-};
 
 // FUNCTION: 0x1092F270 ?FUN_1092f270@Class_1092F270@@QAEPAVClass_10951900@@_N@Z
 Class_10951900* Class_1092F270::FUN_1092f270(bool A)

@@ -1,9 +1,10 @@
 // Game/Unsorted_10C5BB10.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 // The placement delete that pairs with Ion Storm's new.
 #include "Game/Class_109081E0.h"
 #include "Game/Struct_10C5BA20.h"
+#include "Game/Class_10C5BB10.h"
+#include "Game/Class_10C5BB10_Unknown18.h"
 
 // Class_10C5BA20 as include/Game/Class_10C5BA20.h declares it, plus the constructor the
 // new-expression below inlines (it stores -1.0f into Unknown1C and Unknown20, so those are float).
@@ -36,28 +37,6 @@ public:
     int Key;
     Class_10C5BA20 Value;
     Class_10C5BB10_Node* Next;
-};
-
-// The table's key hasher: slot 0 gives the bytes FUN_1090e9b0 hashes.
-class Class_10C5BB10_Unknown18
-{
-public:
-    virtual void Virtual0(const int& Key, const void** Data, int* Length);
-};
-
-class Class_10C5BB10
-{
-public:
-    void FUN_10c5bbf0(int Size);
-    unsigned int FUN_10c5bb10(const int& Key, const Class_10C5BA20& Value);
-
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    bool Unknown10;
-    Class_10C5BB10_Node** Unknown14;
-    Class_10C5BB10_Unknown18 Unknown18;
 };
 
 // FUNCTION: 0x10C5BB10 ?FUN_10c5bb10@Class_10C5BB10@@QAEIABHABVClass_10C5BA20@@@Z

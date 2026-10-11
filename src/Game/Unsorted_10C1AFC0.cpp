@@ -3,36 +3,13 @@
 #include "Game/Class_10C1B0F0.h"
 #include "Game/Class_10FF667C.h"
 #include "Game/FArchive.h"
+#include "Game/Class_10E98E70.h"
 
 extern Class_10FF667C* DAT_10ff667c;
 
-class Class_10E98E70
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8();
-    virtual void Virtual9();
-    virtual void Virtual10();
-    virtual void Virtual11();
-    virtual void Virtual12();
-    virtual void Virtual13();
-    virtual void Virtual14();
-    virtual bool FUN_10c1b460();
-
-    char Unknown04[0x54];
-    int Unknown58;
-};
-
 FArchive& FUN_10b052a0(FArchive& Ar, void* V);
 
-class Class_10C1B1A0
+class Class_10E98D08
 {
 public:
     virtual void Virtual0();
@@ -49,7 +26,7 @@ public:
     void FUN_10c1b1a0(FArchive& Ar);
 };
 
-class Class_10E98D98 : public Class_10C1B1A0
+class Class_10E98D98 : public Class_10E98D08
 {
 public:
     virtual void FUN_10c1b270(FArchive& Ar);

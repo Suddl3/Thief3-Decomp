@@ -26,6 +26,7 @@
 #include "Game/Struct_10AC6820.h"
 #include "Game/Class_10E6F7D4.h"
 #include "Game/Class_10E701C8.h"
+#include "Game/Class_10B82390.h"
 
 extern void* DAT_10e6fc78[];
 
@@ -60,12 +61,6 @@ extern Class_10F46DA0* DAT_10f46da0;
 extern void* DAT_10e701c8[];
 
 void FUN_10a4c5f0();
-
-class Class_10B82390
-{
-public:
-    void FUN_10b82390(int A, void* B);
-};
 
 Class_10B82390* __stdcall FUN_10acf690(int A);
 

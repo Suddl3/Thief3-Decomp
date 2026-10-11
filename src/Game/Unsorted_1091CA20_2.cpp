@@ -1,25 +1,13 @@
 // Game/Unsorted_1091CA20_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_109081E0.h"
+#include "Game/Class_10BFBD70.h"
 
 class Class_10919C40;
 
 extern float DAT_10e499a4;
 
 double FUN_10d20ec0(double Value);
-
-// Ion Storm's growable array: count, capacity, block.
-class Class_10BFBD70
-{
-public:
-    Class_10BFBD70() : Unknown00(0), Unknown04(0), Unknown08(0) {}
-    ~Class_10BFBD70();
-
-    int Unknown00;
-    int Unknown04;
-    void* Unknown08;
-};
 
 class Class_1091CB20
 {

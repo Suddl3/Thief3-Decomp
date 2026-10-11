@@ -1,5 +1,6 @@
 // Game/Unsorted_10955B20_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10955B20.h"
 
 class IDirect3DBaseTexture8;
 
@@ -125,17 +126,6 @@ public:
 extern IDirect3DDevice8* GDirect3DDevice8;
 
 extern int DAT_10efefb8;
-
-// The object this method runs on: its state at 0x10 and 0x14 (no header yet).
-class Class_10955B20
-{
-public:
-    void FUN_10955b20(int A);
-
-    int Unknown00[4];
-    int Unknown10;
-    int Unknown14;
-};
 
 // FUNCTION: 0x10955B20 ?FUN_10955b20@Class_10955B20@@QAEXH@Z
 void Class_10955B20::FUN_10955b20(int A)

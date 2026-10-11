@@ -1,12 +1,12 @@
 // Game/Unsorted_10B327C0_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
 #include "Game/Class_10AAF570.h"
 #include "Game/Class_10AA82D0.h"
 #include "Game/Class_10B47660.h"
 #include "Game/Class_10B39580.h"
 #include "Game/Struct_10AA3520.h"
+#include "Game/Class_10B32B50.h"
 
 class Class_10B21340
 {
@@ -32,19 +32,6 @@ public:
     virtual void Virtual4(int A, int B, FString* C, FString* D, FString* E, int F, int G);
     virtual void Virtual5();
     virtual void Virtual6(int A);
-};
-
-class Class_10B32B50
-{
-public:
-    void FUN_10b32b50(Class_10B21340* A);
-    void FUN_10b31fb0(int* A, Class_10B21340* B);
-    void FUN_10b32620(Class_10B21340* A);
-    void FUN_10b326b0(Class_10B21340* A);
-
-    char Unknown00[0x32];
-    bool Unknown32;
-    int Unknown34;
 };
 
 extern const char DAT_10e7bdd0[];

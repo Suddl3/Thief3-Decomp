@@ -1,5 +1,9 @@
 // Game/Unsorted_10A37C60.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10A37E80.h"
+#include "Game/Class_10F46DA0.h"
+#include "Game/Object_10A37820.h"
+#include "Game/Struct_10A37860.h"
 
 class Class_10E666A0;
 
@@ -29,17 +33,6 @@ public:
     virtual void Virtual3(int A, int B, Class_10E666A0* Owner);
 };
 
-class Class_10F46DA0
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5(int A, int B, int C, int D);
-};
-
 extern Class_10F46DA0* DAT_10f46da0;
 
 class Class_10E666A0
@@ -67,14 +60,6 @@ public:
 
 extern float DAT_10eafbdc;
 
-struct Struct_10A37860
-{
-    char Unknown00[0xC];
-    int Unknown0C;
-    char Unknown10[0x20];
-    float Unknown30;
-};
-
 class Object_10A37860
 {
 public:
@@ -83,16 +68,6 @@ public:
     virtual void Virtual2();
     virtual float Virtual3();
     virtual Struct_10A37860* Virtual4();
-};
-
-class Object_10A37820
-{
-public:
-    virtual void Virtual0();
-    virtual Object_10A37860* Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual bool Virtual4();
 };
 
 class Class_10A37E80_Unknown20
@@ -106,31 +81,6 @@ public:
     virtual void Virtual5();
     virtual void Virtual6();
     virtual bool Virtual7(float A);
-};
-
-class Class_10A37E80
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8();
-    virtual void Virtual9();
-    virtual void Virtual10();
-    virtual void Virtual11();
-    virtual Object_10A37820* Virtual12();
-
-    bool FUN_10a37e80(float* P);
-
-    char Unknown04[0x1C];
-    Class_10A37E80_Unknown20* Unknown20;
-    int Unknown24;
-    Class_10A37E80_Unknown20* Unknown28;
 };
 
 // FUNCTION: 0x10A37DC0 ?FUN_10a37dc0@Class_10E666A0@@UAE_NHHH@Z

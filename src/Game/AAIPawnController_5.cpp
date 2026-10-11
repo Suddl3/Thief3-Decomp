@@ -1,7 +1,7 @@
 // Game/AAIPawnController_5.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Engine/EngineClasses.h"
+#include "Game/Class_10B9C9A0.h"
 
 class FArchive
 {
@@ -62,14 +62,6 @@ public:
     Class_10B9BE00_Unknown08* Unknown08;
     Class_10B9BE00_Unknown0C* Unknown0C;
     Class_10B9BE00_Unknown10* Unknown10;
-};
-
-class Class_10B9C9A0
-{
-public:
-    ~Class_10B9C9A0();
-
-    void* Unknown00;
 };
 
 class AAIPawnController : public AAIController

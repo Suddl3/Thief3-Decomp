@@ -2,14 +2,9 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10BAA000.h"
 #include "Game/Struct_10C05A80.h"
+#include "Game/Struct_10BAA000.h"
 
 float FUN_10c05a80(const Struct_10C05A80* A, const Struct_10C05A80* B);
-
-struct Struct_10BAA000
-{
-    char Unknown00[0x2C];
-    Struct_10C05A80 Unknown2C;
-};
 
 struct Struct_10AA3520
 {

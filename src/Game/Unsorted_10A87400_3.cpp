@@ -3,18 +3,8 @@
 #include "Game/Class_10C49740.h"
 #include "Game/Entry_10C32C30.h"
 #include "Game/Struct_10C32C30.h"
-
-class Class_10A86300
-{
-public:
-    void FUN_10a86300(int A);
-};
-
-struct Struct_10A87A70
-{
-    char Unknown00[8];
-    int Unknown08;
-};
+#include "Game/Class_10A86300.h"
+#include "Game/Struct_10A87A70.h"
 
 extern Struct_10A87A70* DAT_10f3a1a4;
 

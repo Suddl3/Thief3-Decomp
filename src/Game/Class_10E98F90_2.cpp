@@ -18,7 +18,7 @@ public:
 
 FArchive& FUN_10b052a0(FArchive& Ar, void* V);
 
-class Class_10C1B1A0
+class Class_10E98D08
 {
 public:
     virtual void Virtual0();
@@ -35,7 +35,7 @@ public:
     void FUN_10c1b1a0(FArchive& Ar);
 };
 
-class Class_10E98F90 : public Class_10C1B1A0
+class Class_10E98F90 : public Class_10E98D08
 {
 public:
     virtual void FUN_10c1b710(FArchive& Ar);

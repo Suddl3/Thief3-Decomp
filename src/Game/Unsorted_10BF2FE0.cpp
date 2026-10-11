@@ -1,9 +1,10 @@
 // Game/Unsorted_10BF2FE0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10BBDB40.h"
 #include "Game/Class_10C7D570.h"
 #include "Game/Class_10BC4BF0.h"
+#include "Game/Class_10BF3390.h"
+#include "Game/Class_10BF3400.h"
 
 float appFrand();
 
@@ -12,19 +13,6 @@ class Class_10BF3400_Unknown04
 public:
     char Unknown00[0x8];
     Class_10C7D570* Unknown08;
-};
-
-class Class_10BF3400
-{
-public:
-    int FUN_10bf3400(float A, int B);
-    void FUN_10bf3180(int A, int B, float C, float D);
-
-    char Unknown00[0x4];
-    Class_10BF3400_Unknown04* Unknown04;
-    char Unknown08[0x120];
-    int Unknown128;
-    int Unknown12C;
 };
 
 class Class_10BF3390_Result
@@ -85,15 +73,6 @@ class Struct_10BF3390_Local
 {
 public:
     char Unknown00[0xC];
-};
-
-class Class_10BF3390 : public Class_10BC4BF0
-{
-public:
-    void FUN_10bf3390();
-    bool FUN_10bc4b80(Struct_10BF3390_Local* A, int B, int C);
-    bool FUN_10bf2170(int A, int B, float* C);
-    void FUN_10bf3180(int A, int B, float C, float D);
 };
 
 // FUNCTION: 0x10BF3390 ?FUN_10bf3390@Class_10BF3390@@QAEXXZ

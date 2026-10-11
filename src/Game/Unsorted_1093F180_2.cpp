@@ -1,8 +1,8 @@
 // Game/Unsorted_1093F180_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_109373D0.h"
 #include "Game/Class_10937400.h"
+#include "Game/Class_1093F9F0.h"
 
 class Class_10936AC0 : public Class_10937400
 {
@@ -15,21 +15,6 @@ class Class_1093F9F0_Param
 public:
     char Unknown00[0x64];
     int Unknown64;
-};
-
-class Class_1093F9F0
-{
-public:
-    void FUN_1093f9f0(Class_1093F9F0_Param* Param, int B);
-
-    char Unknown00[0x174];
-    unsigned long Unknown174;
-    unsigned long Unknown178;
-    unsigned long Unknown17C;
-    char Unknown180[0x16C];
-    unsigned long Unknown2EC;
-    unsigned long Unknown2F0;
-    unsigned long Unknown2F4;
 };
 
 // FUNCTION: 0x1093F9F0 ?FUN_1093f9f0@Class_1093F9F0@@QAEXPAVClass_1093F9F0_Param@@H@Z

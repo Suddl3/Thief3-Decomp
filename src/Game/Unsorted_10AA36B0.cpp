@@ -1,17 +1,11 @@
 // Game/Unsorted_10AA36B0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10E97B00.h"
+#include "Game/Class_10AA44B0_Node.h"
 
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 
 void operator delete(void* Ptr);
-
-class Class_10AA44B0_Node : public Class_10E97B00
-{
-public:
-    Class_10AA44B0_Node* Next;
-};
 
 class Class_10AA44B0
 {

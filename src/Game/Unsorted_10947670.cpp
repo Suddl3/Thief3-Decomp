@@ -1,7 +1,8 @@
 // Game/Unsorted_10947670.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10948190.h"
+#include "Game/Class_109475E0.h"
+#include "Game/Class_109480B0.h"
 
 void operator delete(void* Ptr);
 
@@ -9,14 +10,6 @@ class Class_1095A7C0
 {
 public:
     ~Class_1095A7C0();
-
-    char Unknown00[0x24];
-};
-
-class Class_109475E0
-{
-public:
-    ~Class_109475E0();
 
     char Unknown00[0x24];
 };
@@ -34,17 +27,6 @@ public:
 
 struct Struct_109480B0
 {
-};
-
-class Class_109480B0
-{
-public:
-    void FUN_109480b0();
-
-    char Unknown00[0x4c];
-    Class_1095A7C0* Unknown4C;
-    Class_109475E0* Unknown50;
-    Class_109480B0_Unknown54* Unknown54;
 };
 
 extern Class_1095A7C0* DAT_10f340f4;

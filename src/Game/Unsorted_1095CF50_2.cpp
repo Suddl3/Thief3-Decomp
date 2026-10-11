@@ -1,5 +1,8 @@
 // Game/Unsorted_1095CF50_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_1095CF00.h"
+#include "Game/Class_1095D090.h"
+#include "Game/Struct_1095CF00.h"
 
 class Class_1095D090_Item
 {
@@ -13,32 +16,6 @@ struct Struct_1095D090
     char Unknown00[8];
     Class_1095D090_Item** Unknown08;
     Class_1095D090_Item** Unknown0C;
-};
-
-class Class_1095D090
-{
-public:
-    Class_1095D090_Item* FUN_1095d090(Struct_1095D090* Param1, int Param2);
-    int FUN_1095cf50(Struct_1095D090* Param1, int Param2);
-
-    char Unknown00[0x1C];
-    float Unknown1C;
-    bool Unknown20;
-};
-
-struct Struct_1095CF00
-{
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-};
-
-class Class_1095CF00
-{
-public:
-    char Unknown00[8];
-    Struct_1095CF00** Unknown08;
-    Struct_1095CF00** Unknown0C;
 };
 
 // FUNCTION: 0x1095D090 ?FUN_1095d090@Class_1095D090@@QAEPAVClass_1095D090_Item@@PAUStruct_1095D090@@H@Z

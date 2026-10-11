@@ -1,29 +1,13 @@
 // Game/Unsorted_10C64E80_4.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10905A90_Member.h"
+#include "Game/Class_10C68070.h"
 
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
 Class_10905A90_Member* FUN_10905aa0();
-
-// The 0x98-byte object FUN_10c68070 builds.
-class Class_10C68070
-{
-public:
-    Class_10C68070();
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6(int A);
-
-    char Pad04[0x94];
-};
 
 // One of the eight 0x38-byte entries at Class_10C662F0+0x1C.
 class Class_10C662F0_Unknown1C

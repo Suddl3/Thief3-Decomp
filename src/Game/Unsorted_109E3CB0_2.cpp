@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Core/Core.h"
 #include "Game/Struct_10AA3520.h"
+#include "Game/Struct_109E3CB0.h"
 
 class ULevel;
 
@@ -25,11 +26,6 @@ public:
 // Spawns an actor of Class in Level (its SpawnActor is slot 46); the FRotator H is a rotation rate.
 AAIPathPoint* FUN_10a49f00(ULevel* Level, UClass* Class, int C, int D, FVector E, FVector F, FRotator G,
                            FRotator H, bool I);
-
-struct Struct_109E3CB0
-{
-    ULevel* Unknown00;
-};
 
 extern Struct_10AA3520* DAT_10f35dec;
 

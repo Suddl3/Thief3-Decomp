@@ -4,18 +4,9 @@
 #include "Game/Class_10B7C330.h"
 #include "Game/Class_10D9B090.h"
 #include "Game/Class_10E4B180.h"
+#include "Game/Struct_10B7C170.h"
 
 struct Struct_10B7C030_Param;
-
-struct Struct_10B7C170
-{
-    FVector Unknown00;
-    FVector Unknown0C;
-    float Unknown18;
-    float Unknown1C;
-    int Unknown20;
-    int Unknown24;
-};
 
 Class_10D9B090* FUN_10d9dcb0();
 

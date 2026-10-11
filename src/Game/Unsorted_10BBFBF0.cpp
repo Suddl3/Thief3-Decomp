@@ -1,5 +1,7 @@
 // Game/Unsorted_10BBFBF0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10BBFBF0.h"
+#include "Game/Class_10BBFCA0.h"
 
 class FArchive
 {
@@ -157,14 +159,6 @@ public:
 
 void FUN_10bbf8d0(Class_10A68D20* Owner, Class_10BBFBF0_Param* A, Class_10BBFBF0_Entry* Entry);
 
-class Class_10BBFBF0
-{
-public:
-    int FUN_10bbfbf0(Class_10BBFBF0_Param* A, Class_10A68D20* B);
-
-    Class_10BBFBF0_Unknown00* Unknown00;
-};
-
 class Class_10BBFCA0_Unknown00
 {
 public:
@@ -175,14 +169,6 @@ public:
 };
 
 void FUN_10bbf7a0(Class_10A68D20* Owner, Class_10BBFBF0_Param* A, Class_10BBFBF0_Entry* Entry, unsigned char* Color, int Percent);
-
-class Class_10BBFCA0
-{
-public:
-    unsigned int FUN_10bbfca0(Class_10BBFBF0_Param* A, Class_10A68D20* B);
-
-    Class_10BBFCA0_Unknown00* Unknown00;
-};
 
 // FUNCTION: 0x10BBFBF0 ?FUN_10bbfbf0@Class_10BBFBF0@@QAEHPAVClass_10BBFBF0_Param@@PAVClass_10A68D20@@@Z
 int Class_10BBFBF0::FUN_10bbfbf0(Class_10BBFBF0_Param* A, Class_10A68D20* B)

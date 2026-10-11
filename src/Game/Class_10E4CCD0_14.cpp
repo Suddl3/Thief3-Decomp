@@ -4,6 +4,7 @@
 #include "Game/Class_10DBD510.h"
 #include "Game/Class_10E4CCD0.h"
 #include "Game/Struct_10B98E00.h"
+#include "Game/Class_10BE5EF0.h"
 
 // Ion Storm's placement new and its delete (0x10905C10; the delete folded into ::operator delete).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
@@ -13,16 +14,6 @@ void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 void* FUN_10be4910();
 
 extern float DAT_10eafbdc;
-
-// 0x6c bytes; built by its constructor at 0x10BE5EF0.
-class Class_10BE5EF0
-{
-public:
-    Class_10BE5EF0(int A, int B);
-
-    void** Unknown00;
-    int Unknown04[26];
-};
 
 class Class_10E95288;
 

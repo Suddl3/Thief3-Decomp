@@ -1,28 +1,14 @@
 // Game/Unsorted_10B6FCD0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
+#include "Game/Class_10B6FCD0.h"
+#include "Game/Class_10D3C2B0.h"
 
 extern float DAT_10e49684;
 
 extern float DAT_10f0591c;
 
 extern float DAT_10eafbdc;
-
-class Class_10D3C2B0
-{
-public:
-    float FUN_10d3c2b0();
-};
-
-class Class_10B6FCD0
-{
-public:
-    float FUN_10b6fcd0(FVector* A, FVector* B);
-
-    FVector Unknown00;
-    Class_10D3C2B0 Unknown0C;
-};
 
 // FUNCTION: 0x10B6FCD0 ?FUN_10b6fcd0@Class_10B6FCD0@@QAEMPAVFVector@@0@Z
 float Class_10B6FCD0::FUN_10b6fcd0(FVector* A, FVector* B)

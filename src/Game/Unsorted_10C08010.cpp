@@ -1,11 +1,11 @@
 // Game/Unsorted_10C08010.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10C08480.h"
 #include "Game/Class_10963740.h"
 #include "Game/Class_10C06F30.h"
 #include "Game/Class_10C7D570.h"
 #include "Game/Struct_10BA91E0.h"
+#include "Game/Class_10C08010.h"
 
 class FVector;
 
@@ -48,15 +48,6 @@ class Class_10C08010_Unknown04
 public:
     char Unknown00[4];
     Class_10C06F30* Unknown04;
-};
-
-class Class_10C08010
-{
-public:
-    void FUN_10c08010(Class_10C08010_Arg1* A, Struct_10BA91E0* P, int Unused3, float* Radius, int Unused5);
-
-    char Unknown00[4];
-    Class_10C08010_Unknown04* Unknown04;
 };
 
 // FUNCTION: 0x10C08010 ?FUN_10c08010@Class_10C08010@@QAEXPAVClass_10C08010_Arg1@@PAUStruct_10BA91E0@@HPAMH@Z

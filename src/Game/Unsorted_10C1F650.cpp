@@ -1,12 +1,12 @@
 // Game/Unsorted_10C1F650.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
 #include "Game/Class_10DBD510.h"
 #include "Game/Class_10FF667C.h"
 #include "Game/Class_10971570.h"
 #include "Game/Class_10978090.h"
 #include "Game/Class_Field04.h"
+#include "Game/Class_10C1F650.h"
 
 extern void* DAT_10e991d4[];
 
@@ -36,15 +36,6 @@ public:
     char* Unknown00;
     int Unknown04;
     int Unknown08;
-};
-
-class Class_10C1F650
-{
-public:
-    bool FUN_10c1f650(Class_10971570* Target, int* Obj);
-
-    char Pad00[0x4];
-    Class_10DBD510* Unknown04;
 };
 
 // FUNCTION: 0x10C1F650 ?FUN_10c1f650@Class_10C1F650@@QAE_NPAVClass_10971570@@PAH@Z

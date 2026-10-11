@@ -9,6 +9,8 @@
 #include "Game/Class_10B8C7B0.h"
 #include "Game/Class_10B8CFF0.h"
 #include "Game/Class_10E896A8.h"
+#include "Game/Class_10B8CB20.h"
+#include "Game/Class_10B8D800.h"
 
 class Class_10E893B0
 {
@@ -40,22 +42,10 @@ public:
     bool Unknown19;
 };
 
-class Class_10B8D800
-{
-public:
-    bool FUN_10b8d800(int A, int B, int C, int D);
-};
-
 class Class_10B8C9F0
 {
 public:
     bool FUN_10b8c9f0(int A, int B, int C);
-};
-
-class Class_10B8CB20
-{
-public:
-    bool FUN_10b8cb20(int p1, int p2, int p3, int p4);
 };
 
 class Class_10B8D030

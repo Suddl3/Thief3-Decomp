@@ -4,6 +4,7 @@
 #include "Game/Class_10ABB300.h"
 #include "Game/Class_10ABB480.h"
 #include "Game/Struct_10ABB300.h"
+#include "Game/Class_1092F270.h"
 
 struct Struct_10ABB4B0
 {
@@ -23,15 +24,6 @@ public:
 
     char Unknown04[0x18];
     Struct_10ABB4B0* Unknown1C;
-};
-
-class Class_1092F270
-{
-public:
-    Class_10951900* FUN_1092f270(int A);
-
-    char Unknown00[0xB0];
-    int UnknownB0;
 };
 
 struct Struct_10ABB300_Owner

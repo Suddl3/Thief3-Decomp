@@ -4,12 +4,7 @@
 #include "Game/Class_1096D780.h"
 #include "Game/Class_1096D780_Field98.h"
 #include "Game/Struct_10B1DCA0.h"
-
-class Class_10DA0870
-{
-public:
-    void FUN_10da0870(const Struct_10B1DCA0* Coords);
-};
+#include "Game/Class_10DA0870.h"
 
 class Class_1096D780;
 

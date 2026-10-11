@@ -4,15 +4,7 @@
 #include "Game/Class_10C55800.h"
 #include "Game/Class_10E9C330.h"
 #include "Game/TimeManager.h"
-
-class Class_10C55090
-{
-public:
-    void FUN_10c55090();
-
-    Class_10C55090* Unknown00;
-    Class_10C55090* Unknown04;
-};
+#include "Game/Class_10C55090.h"
 
 class Class_10C549E0_Object
 {

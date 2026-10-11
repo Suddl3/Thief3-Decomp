@@ -1,5 +1,7 @@
 // Game/Unsorted_10B55830_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10E68F8C.h"
+#include "Game/Struct_10DD7DC0Arg.h"
 
 extern void* DAT_10e81c20[];
 
@@ -8,23 +10,6 @@ extern int DAT_10f05674;
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
-
-class Class_10E68F8C
-{
-public:
-    virtual void Virtual0(int A, int* B, float C);
-
-    char Unknown04[0x3C];
-};
-
-struct Struct_10DD7DC0Arg
-{
-    Struct_10DD7DC0Arg(float A, float B, float C) : X(A), Y(B), Z(C) {}
-
-    float X;
-    float Y;
-    float Z;
-};
 
 class Class_10E81C20
 {

@@ -4,18 +4,7 @@
 #include "Game/Class_10C592B0.h"
 #include "Game/Class_10C5A1C0.h"
 #include "Game/Class_10E9C7DC.h"
-
-// A chained hash table's entry, allocated per insert.
-class Class_10C592B0_Node
-{
-public:
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    int Unknown10;
-    Class_10C592B0_Node* Next;
-};
+#include "Game/Class_10C592B0_Node.h"
 
 // FUNCTION: 0x10C592B0 ?FUN_10c592b0@Class_10C592B0@@QAEXH@Z
 void Class_10C592B0::FUN_10c592b0(int Size)

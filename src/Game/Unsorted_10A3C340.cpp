@@ -1,9 +1,11 @@
 // Game/Unsorted_10A3C340.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Object_10A18FC0.h"
 #include "Game/Entry_10C32C30.h"
 #include "Game/Class_10905A90_Member.h"
+#include "Game/Class_109081E0.h"
+#include "Game/Class_10A3C3B0.h"
+#include "Game/Group_10BA14C0.h"
 
 class Class_10A3C3B0_Unknown08
 {
@@ -24,54 +26,12 @@ Object_10A18FC0* FUN_10a18fc0();
 
 extern float DAT_10eafbdc;
 
-class Class_10A3C3B0
-{
-public:
-    void FUN_10a3c3b0();
-
-    char Unknown00[0x24];
-    int Unknown24;
-    Class_10A3C3B0_Unknown28* Unknown28;
-    bool Unknown2C;
-    bool Unknown2D;
-    float Unknown30;
-    int Unknown34;
-    int Unknown38;
-};
-
 struct Item_10BA14C0;
-
-struct Group_10BA14C0
-{
-    int Count;
-    int Unknown04;
-    Item_10BA14C0* Data;
-};
 
 class Class_10C49740
 {
 public:
     bool FUN_10c49740(int* Key, Entry_10C32C30** Out);
-};
-
-Class_10905A90_Member* FUN_10905aa0();
-
-// Ion Storm's string (0x109081E0): a char pointer to a block allocated 4 bytes before it.
-class Class_109081E0
-{
-public:
-    Class_109081E0() : Unknown00(0) {}
-    ~Class_109081E0()
-    {
-        if (Unknown00)
-        {
-            char* Block = Unknown00 - 4;
-            FUN_10905aa0()->Virtual5(Block);
-            Unknown00 = 0;
-        }
-    }
-
-    char* Unknown00;
 };
 
 class Class_10A3C550

@@ -1,7 +1,7 @@
 // Game/Unsorted_10B83850_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
+#include "Game/Struct_10B82770_Param.h"
 
 struct __declspec(align(16)) Struct_10B7C800
 {
@@ -11,40 +11,6 @@ struct __declspec(align(16)) Struct_10B7C800
 };
 
 Struct_10B7C800 FUN_10b7c800(const FVector& V);
-
-struct Struct_10B82770_Param
-{
-    Struct_10B82770_Param()
-        : Unknown00(0.0f), Unknown04(0.0f), Unknown08(0.0f), Unknown0C(0.0f), Unknown10(0.0f), Unknown14(0.0f),
-          Unknown18(0.0f), Unknown1C(0.0f), Unknown20(1.0f), Unknown24(0.0f), Unknown30(0.0f), Unknown34(1.0f),
-          Unknown38(0.0f), Unknown3C(0.0f), Unknown40(0.0f), Unknown44(0.0f), Unknown48(0.0f), Unknown4C(0.05f),
-          Unknown50(1.0f), Unknown54(true)
-    {
-    }
-
-    float Unknown00;
-    float Unknown04;
-    float Unknown08;
-    float Unknown0C;
-    float Unknown10;
-    float Unknown14;
-    float Unknown18;
-    float Unknown1C;
-    float Unknown20;
-    float Unknown24;
-    char Pad28[8];
-    float Unknown30;
-    float Unknown34;
-    float Unknown38;
-    float Unknown3C;
-    float Unknown40;
-    float Unknown44;
-    float Unknown48;
-    float Unknown4C;
-    float Unknown50;
-    bool Unknown54;
-    char Pad55[0xB];
-};
 
 class Class_10943600;
 

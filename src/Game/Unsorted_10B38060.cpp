@@ -1,7 +1,7 @@
 // Game/Unsorted_10B38060.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10B22D60.h"
+#include "Game/Class_10B38DE0.h"
 
 struct Struct_10B38DE0_Vec
 {
@@ -47,19 +47,6 @@ public:
 };
 
 float FUN_10abc4a0(int A, const Struct_10B38DE0_Vec* B);
-
-class Class_10B38DE0
-{
-public:
-    void FUN_10b38de0(int A, Class_10B38DE0_Param2* B, int C);
-    void FUN_10b38140();
-
-    int Unknown00;
-    Class_10B38DE0_Unknown04* Unknown04;
-    Class_10B22D60* Unknown08;
-    float Unknown0C;
-    float Unknown10;
-};
 
 // FUNCTION: 0x10B38DE0 ?FUN_10b38de0@Class_10B38DE0@@QAEXHPAVClass_10B38DE0_Param2@@H@Z
 void Class_10B38DE0::FUN_10b38de0(int A, Class_10B38DE0_Param2* B, int C)

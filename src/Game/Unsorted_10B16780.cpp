@@ -4,6 +4,7 @@
 #include "Game/Class_10E5B7C8.h"
 #include "Game/WindowManager.h"
 #include "Game/Class_10B175C0.h"
+#include "Game/Class_109081E0.h"
 
 class Class_10E79228 : public Class_10E5B7C8
 {
@@ -11,25 +12,6 @@ public:
     virtual void FUN_10b170f0();
 
     void FUN_10b16b30();
-};
-
-Class_10905A90_Member* FUN_10905aa0();
-
-class Class_109081E0
-{
-public:
-    Class_109081E0(const char* In);
-    ~Class_109081E0()
-    {
-        if (Unknown00)
-        {
-            char* Block = Unknown00 - 4;
-            FUN_10905aa0()->Virtual5(Block);
-            Unknown00 = 0;
-        }
-    }
-
-    char* Unknown00;
 };
 
 class Class_10B314F0;

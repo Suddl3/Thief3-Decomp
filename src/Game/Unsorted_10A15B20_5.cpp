@@ -1,12 +1,9 @@
 // Game/Unsorted_10A15B20_5.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10A15D50.h"
+#include "Game/Struct_10A15D50_Value.h"
 
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
-
-struct Struct_10A15D50_Value
-{
-    char Unknown00[8];
-};
 
 // A chained hash table's entry: 16 bytes, allocated per insert.
 class Class_10A15D50_Node
@@ -15,20 +12,6 @@ public:
     int Unknown00;
     Struct_10A15D50_Value Unknown04;
     Class_10A15D50_Node* Next;
-};
-
-class Class_10A15D50
-{
-public:
-    unsigned int FUN_10a15d50(const int& Key, const Struct_10A15D50_Value& Value);
-    void FUN_10a15e20(int Size);
-
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    bool Unknown10;
-    Class_10A15D50_Node** Unknown14;
 };
 
 // FUNCTION: 0x10A15E20 ?FUN_10a15e20@Class_10A15D50@@QAEXH@Z

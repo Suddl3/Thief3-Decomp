@@ -1,8 +1,8 @@
 // Game/Class_10E6DA1C.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_1090A780.h"
-#include "Game/Class_10AAB060.h"
 #include "Game/Class_10E6DA1C.h"
 
 extern char DAT_10e6c0f0[];

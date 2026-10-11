@@ -1,5 +1,6 @@
 // Game/Unsorted_109402C0_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_109403A0.h"
 
 struct D3DXMATRIX;
 
@@ -146,18 +147,6 @@ struct Struct_109403A0
 {
     char Unknown00[0x140];
     IDirect3DBaseTexture8* Unknown140;
-};
-
-class Class_109403A0
-{
-public:
-    void FUN_1093fcd0(Struct_109403A0* Material);
-    void FUN_109403a0(Struct_109403A0* Material, bool Enable);
-
-    char Unknown00[0x300];
-    IDirect3DBaseTexture8* Unknown300;
-    char Unknown304[4];
-    IDirect3DBaseTexture8* Unknown308;
 };
 
 // FUNCTION: 0x109403A0 ?FUN_109403a0@Class_109403A0@@QAEXPAUStruct_109403A0@@_N@Z

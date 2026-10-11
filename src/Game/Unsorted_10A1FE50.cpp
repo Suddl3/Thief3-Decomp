@@ -1,23 +1,13 @@
 // Game/Unsorted_10A1FE50.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10905A90_Member.h"
+#include "Game/Class_10A21280.h"
 
 Class_10905A90_Member* FUN_10905aa0();
 
 struct Struct_10A21280_Element
 {
     char Unknown00[0x34];
-};
-
-class Class_10A21280
-{
-public:
-    void FUN_10a21280(int NewCount);
-
-    int Unknown00;
-    int Unknown04;
-    void* Unknown08;
 };
 
 // FUNCTION: 0x10A21280 ?FUN_10a21280@Class_10A21280@@QAEXH@Z

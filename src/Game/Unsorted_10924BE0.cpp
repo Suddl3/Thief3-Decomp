@@ -4,53 +4,7 @@
 #include "Game/Class_10925390.h"
 #include "Game/Class_10BCE8F0.h"
 #include "Game/Class_10924AE0.h"
-
-class Class_10924BE0
-{
-public:
-    virtual void __stdcall Virtual0();
-    virtual void __stdcall Virtual1();
-    virtual void __stdcall Virtual2();
-    virtual void __stdcall Virtual3();
-    virtual void __stdcall Virtual4();
-    virtual void __stdcall Virtual5();
-    virtual void __stdcall Virtual6();
-    virtual void __stdcall Virtual7();
-    virtual void __stdcall Virtual8();
-    virtual void __stdcall Virtual9();
-    virtual void __stdcall Virtual10();
-    virtual void __stdcall Virtual11();
-    virtual void __stdcall Virtual12();
-    virtual void __stdcall Virtual13();
-    virtual void __stdcall Virtual14();
-    virtual void __stdcall Virtual15();
-    virtual void __stdcall Virtual16();
-    virtual void __stdcall Virtual17();
-    virtual void __stdcall Virtual18();
-    virtual void __stdcall Virtual19();
-    virtual void __stdcall Virtual20();
-    virtual void __stdcall Virtual21();
-    virtual void __stdcall Virtual22();
-    virtual void __stdcall Virtual23();
-    virtual void __stdcall Virtual24();
-    virtual void __stdcall Virtual25();
-    virtual void __stdcall Virtual26();
-    virtual void __stdcall Virtual27();
-    virtual void __stdcall Virtual28();
-    virtual void __stdcall Virtual29();
-    virtual void __stdcall Virtual30();
-    virtual void __stdcall Virtual31();
-    virtual void __stdcall Virtual32(int* A);
-    virtual void __stdcall Virtual33(int* A);
-    virtual void __stdcall Virtual34();
-    virtual void __stdcall Virtual35();
-    virtual void __stdcall Virtual36();
-    virtual void __stdcall Virtual37();
-    virtual void __stdcall Virtual38();
-    virtual void __stdcall Virtual39();
-    virtual void __stdcall Virtual40();
-    virtual void __stdcall Virtual41(int* A);
-};
+#include "Game/Class_10924BE0.h"
 
 class Class_109250C0_Item
 {

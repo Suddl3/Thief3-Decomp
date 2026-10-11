@@ -3,6 +3,7 @@
 #include "Game/Class_109081E0.h"
 #include "Game/Class_1096C8D0.h"
 #include "Game/Class_10E6C4A8.h"
+#include "Game/Struct_10A89290.h"
 
 template <class T> class TArray
 {
@@ -49,12 +50,6 @@ public:
     virtual void Virtual23();
     virtual void Virtual24();
     virtual Class_109081E0 Virtual25();
-};
-
-struct Struct_10A89290
-{
-    char Unknown00[8];
-    Class_10A89290_Member* Unknown08;
 };
 
 extern Class_1096C8D0* DAT_10f3a1d4;

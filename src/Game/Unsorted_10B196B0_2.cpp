@@ -1,10 +1,6 @@
 // Game/Unsorted_10B196B0_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-struct Info_10B196B0
-{
-    char Unknown00[0x1c];
-};
+#include "Game/Info_10B196B0.h"
 
 struct Data_10B196B0
 {

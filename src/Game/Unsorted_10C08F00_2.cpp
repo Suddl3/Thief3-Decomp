@@ -3,13 +3,9 @@
 #include "Game/Class_10E97BEC.h"
 #include "Game/Class_10E97C18.h"
 #include "Game/Struct_10C09A10.h"
+#include "Game/Class_10BAF8E0.h"
 
 Struct_10C09A10* FUN_10b8b660(int A);
-
-class Class_10BAF8E0 {
-public:
-    void FUN_10baf8e0(int p1);
-};
 
 // FUNCTION: 0x10C09A10 ?FUN_10c09a10@@YG_NH@Z
 bool __stdcall FUN_10c09a10(int A)

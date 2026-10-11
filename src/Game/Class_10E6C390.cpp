@@ -1,5 +1,6 @@
 // Game/Class_10E6C390.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Object_10A84D10.h"
 
 extern void* DAT_10e6c390[];
 
@@ -15,12 +16,6 @@ extern Class_10F46DA0* DAT_10f46da0;
 
 struct Struct_10A84D10
 {
-};
-
-class Object_10A84D10
-{
-public:
-    virtual ~Object_10A84D10();
 };
 
 class Class_10E6C390

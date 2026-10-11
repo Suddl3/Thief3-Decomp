@@ -3,15 +3,7 @@
 #include <string.h>
 #include "Game/Class_10915B00.h"
 #include "Game/Class_10E499A8.h"
-
-class Class_109081E0
-{
-public:
-    Class_109081E0() : Unknown00(0) {}
-    ~Class_109081E0();
-
-    char* Unknown00;
-};
+#include "Game/Class_109081E0.h"
 
 class Class_10914D80
 {

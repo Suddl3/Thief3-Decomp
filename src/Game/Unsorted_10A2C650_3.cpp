@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10A2C610.h"
 #include "Game/FCoords.h"
+#include "Game/Struct_10A2DA00.h"
 
 struct Struct_10B21820_Object;
 
@@ -12,23 +13,6 @@ public:
 };
 
 extern FCoords DAT_10f46de8;
-
-struct Struct_10A2DA00
-{
-    Class_10B21820* Unknown00;
-    char Unknown04[4];
-    int Unknown08;
-    char Unknown0C[0xC];
-    Struct_10B21820_Object* Unknown18;
-    char Unknown1C[4];
-    FCoords Unknown20;
-    char Unknown50[0x2A];
-    bool Unknown7A;
-    char Unknown7B;
-    bool Unknown7C;
-    bool Unknown7D;
-    char Unknown7E[0x32];
-};
 
 class Class_10A2C2F0
 {

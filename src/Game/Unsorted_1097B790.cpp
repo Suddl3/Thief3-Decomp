@@ -12,6 +12,7 @@
 #include "Game/Class_1097CBA0.h"
 #include "Game/Class_1097CBE0.h"
 #include "Game/USkeletalMesh.h"
+#include "Game/Class_1097B240_Node.h"
 
 class AActor;
 
@@ -25,15 +26,6 @@ class ULodMesh;
 class UMeshAnimation
 {
     DECLARE_CLASS(UMeshAnimation, UObject, 0x40, Engine)
-};
-
-// A chained hash table's entry: 24 bytes, allocated per insert.
-class Class_1097B240_Node
-{
-public:
-    Class_109081E0 Key;
-    char Unknown04[0x10];
-    Class_1097B240_Node* Next;
 };
 
 struct Struct_1097B790

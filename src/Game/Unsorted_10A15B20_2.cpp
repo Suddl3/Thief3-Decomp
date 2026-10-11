@@ -1,26 +1,11 @@
 // Game/Unsorted_10A15B20_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10A163F0_Node.h"
+#include "Game/Struct_10A16B60.h"
 
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
-
-struct Struct_10A16B60
-{
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    int Unknown10;
-};
-
-class Class_10A163F0_Node
-{
-public:
-    int Key;
-    Struct_10A16B60 Value;
-    Class_10A163F0_Node* Next;
-};
 
 class Class_10A163F0
 {

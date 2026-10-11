@@ -3,14 +3,9 @@
 #include "Game/Class_10AB5B20.h"
 #include "Game/Class_10C662F0.h"
 #include "Game/Object_10AB5B20.h"
+#include "Game/Struct_10C64E10.h"
 
 class Class_10E9CB00;
-
-struct Struct_10C64E10
-{
-    Class_10E9CB00* Unknown00;
-    int Unknown04;
-};
 
 // FUNCTION: 0x10C64E10 ?FUN_10c64e10@Class_10C662F0@@QAEXPAVClass_10E9CB00@@@Z
 void Class_10C662F0::FUN_10c64e10(Class_10E9CB00* A)

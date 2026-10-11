@@ -1,7 +1,7 @@
 // Game/UAttachmentLinkDataObject_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
+#include "Game/Class_10AF8A50.h"
 
 class Class_10E55E78
 {
@@ -12,13 +12,6 @@ public:
     virtual void Virtual0();
 
     char Unknown04[0x4C];
-};
-
-// A script string member: built by its own constructor, destroyed by ~FString.
-class Class_10AF8A50 : public FString
-{
-public:
-    Class_10AF8A50();
 };
 
 class UAttachmentLinkDataObject : public Class_10E55E78

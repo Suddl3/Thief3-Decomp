@@ -1,5 +1,6 @@
 // Game/Unsorted_10941480.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10941480.h"
 
 struct D3DXMATRIX;
 
@@ -140,26 +141,6 @@ class Class_10941480_Unknown00
 public:
     char Unknown00[0x30];
     IDirect3DBaseTexture8* Unknown30;
-};
-
-class Class_10941480
-{
-public:
-    void FUN_10941480();
-
-    Class_10941480_Unknown00* Unknown00;
-    char Unknown04[0x1];
-    unsigned char Unknown05;
-    bool Unknown06;
-    char Unknown07[0x1];
-    int Unknown08[3];
-    int Unknown14;
-    char Unknown18[0x8];
-    int Unknown20;
-    char Unknown24[0x8];
-    int Unknown2C;
-    char Unknown30[0xC];
-    int Unknown3C;
 };
 
 extern Class_10936AC0* DAT_10f31be0;

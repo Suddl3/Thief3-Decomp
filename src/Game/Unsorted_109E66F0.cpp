@@ -4,15 +4,12 @@
 #include "Game/Class_109E6AA0.h"
 #include "Game/Class_109E6D60.h"
 #include "Game/Object_10A18FC0.h"
+#include "Game/Class_1092D420.h"
 
 struct Class_109E6D60_Member
 {
     char Unknown00[8];
     int Unknown08;
-};
-
-class Class_1092D420 : public Class_1092D3D0
-{
 };
 
 extern Class_1092D420* DAT_10f31b88;

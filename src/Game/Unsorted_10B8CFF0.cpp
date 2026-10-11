@@ -2,34 +2,8 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10B8CFF0.h"
 #include "Game/Class_10D3E450.h"
-
-// Ion Storm's growable array: count, capacity, block.
-class Class_10BFBD70
-{
-public:
-    Class_10BFBD70() : Unknown00(0), Unknown04(0), Unknown08(0) {}
-    ~Class_10BFBD70();
-
-    int Unknown00;
-    int Unknown04;
-    void* Unknown08;
-};
-
-class Class_10B8D4C0
-{
-public:
-    Class_10B8D4C0();
-
-    Class_10BFBD70 Unknown00;
-    Class_10BFBD70 Unknown0C;
-    char Unknown18;
-    bool Unknown19;
-    char Unknown1A[6];
-    int Unknown20;
-    bool Unknown24;
-    char Unknown25[3];
-    Class_10D3E450 Unknown28;
-};
+#include "Game/Class_10B8D4C0.h"
+#include "Game/Class_10BFBD70.h"
 
 class Class_10D9FEE0
 {

@@ -1,12 +1,12 @@
 // Game/Unsorted_10C09200.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10C08960.h"
 #include "Game/Class_10C093C0.h"
 #include "Game/Class_109081E0.h"
 #include "Game/Class_10913D70.h"
 #include "Game/Class_10E97B00.h"
 #include "Game/Class_10C08E90.h"
+#include "Game/Class_10C08E30.h"
 
 // The field at 0x10 of the object: a flag at 0x24 is read through it.
 class Class_10C08960_Unknown10
@@ -31,16 +31,6 @@ struct Item_10C091A0
     int Unknown1C;
     int Unknown20;
     bool Unknown24;
-};
-
-class Class_10C08E30
-{
-public:
-    void FUN_10c08e30(int A);
-    void FUN_10c09200(int A, Class_10913D70* B, int C, int* D, int E);
-
-    char Unknown00[0x8];
-    Class_10C08E90 Unknown08;
 };
 
 // FUNCTION: 0x10C09200 ?FUN_10c09200@Class_10C08E30@@QAEXHPAVClass_10913D70@@HPAHH@Z

@@ -15,6 +15,7 @@
 #include "Game/Class_10E960D8.h"
 #include "Game/Class_10E96510.h"
 #include "Game/Class_10E96810.h"
+#include "Game/Class_10E97B00.h"
 
 extern void* DAT_10e93e48[];
 
@@ -191,15 +192,6 @@ public:
 void FUN_10bcac50();
 
 void FUN_10bc3fc0();
-
-class Class_10E97B00
-{
-public:
-    Class_10E97B00(const char* In);
-
-    void** Unknown00;
-    Class_109081E0 Unknown04;
-};
 
 extern const char DAT_10e960c8[];
 

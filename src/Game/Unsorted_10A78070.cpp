@@ -1,9 +1,11 @@
 // Game/Unsorted_10A78070.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
 #include "Game/Class_1096D780_Field98.h"
 #include "Game/Class_1098E3D0.h"
+#include "Game/Class_10A78070.h"
+#include "Game/Struct_10AA3520.h"
+#include "Game/Struct_10AA3520_Unknown78.h"
 
 class Class_10DA0870;
 
@@ -27,50 +29,9 @@ public:
     void FUN_10a12ae0(Class_1096D780* A, int B);
 };
 
-class Struct_10AA3520_Unknown78
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8();
-    virtual void Virtual9();
-    virtual void Virtual10();
-    virtual void Virtual11();
-    virtual void Virtual12();
-    virtual void Virtual13();
-    virtual void Virtual14();
-    virtual void Virtual15();
-    virtual void Virtual16();
-    virtual void Virtual17(Class_1096D780* A, int B, int C);
-};
-
-struct Struct_10AA3520
-{
-    char Unknown00[0x78];
-    Struct_10AA3520_Unknown78* Unknown78;
-};
-
 extern Struct_10AA3520* DAT_10f35dec;
 
 extern Class_10A12AE0* DAT_10f39874;
-
-class Class_10A78070
-{
-public:
-    Class_1096D780* FUN_10a78070(int A, const FVector* B, const FRotator* C, int D, int E, int F, int G);
-
-    char Unknown00[4];
-    int Unknown04;
-    char Unknown08[4];
-    Class_1096D780** Unknown0C;
-    int Unknown10;
-};
 
 // FUNCTION: 0x10A78070 ?FUN_10a78070@Class_10A78070@@QAEPAVClass_1096D780@@HPBVFVector@@PBVFRotator@@HHHH@Z
 Class_1096D780* Class_10A78070::FUN_10a78070(int A, const FVector* B, const FRotator* C, int D, int E, int F, int G)

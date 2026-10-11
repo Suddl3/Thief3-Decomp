@@ -9,20 +9,10 @@
 #include "Game/Class_10BFB910.h"
 #include "Game/Class_10BFC190.h"
 #include "Game/Class_10FF667C.h"
-
-class Class_10B9BEB0
-{
-public:
-    void FUN_10b9beb0();
-};
+#include "Game/Class_10B9BEB0.h"
+#include "Game/Struct_10B9BDB0_Unknown118.h"
 
 extern Class_10FF667C* DAT_10ff667c;
-
-struct Struct_10B9BDB0_Unknown118
-{
-    char Unknown00[4];
-    Class_10BB89D0* Unknown04;
-};
 
 // FUNCTION: 0x10B9BDB0 ?FUN_10b9bdb0@Class_10B9BDB0@@QAEXXZ
 void Class_10B9BDB0::FUN_10b9bdb0()

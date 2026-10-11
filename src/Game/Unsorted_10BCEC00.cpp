@@ -4,20 +4,7 @@
 #include "Game/Class_10D9B090.h"
 #include "Game/FArchive.h"
 #include "Game/TimeManager.h"
-
-class Class_10E92C38
-{
-public:
-    virtual void Virtual0();
-    virtual void FUN_10bcef30();
-
-    void FUN_10bced10();
-
-    char Unknown04[0x44];
-    bool Unknown48;
-    char Unknown49[2];
-    bool Unknown4B;
-};
+#include "Game/Class_10E92C38.h"
 
 Class_10D9B090* FUN_10d9dcb0();
 

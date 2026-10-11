@@ -1,14 +1,8 @@
 // Game/Unsorted_10A68190.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10B59770.h"
 #include "Game/Class_10905A90_Member.h"
-
-struct Struct_10B597B0
-{
-    int Unknown00;
-    int Unknown04;
-};
+#include "Game/Struct_10B597B0.h"
 
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 

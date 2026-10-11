@@ -1,23 +1,9 @@
 // Game/Unsorted_10B8D520.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10B8C9B0.h"
 #include "Game/Class_10AA82D0.h"
-
-class Class_10B8CB20 : public Class_10B8C9B0
-{
-public:
-    bool FUN_10b8cb20(int p1, int p2, int p3, int p4);
-};
-
-class Class_10B8D800 : public Class_10B8CB20
-{
-public:
-    bool FUN_10b8d800(int A, int B, int C, int D);
-
-    char Unknown0C[0xD];
-    bool Unknown19;
-};
+#include "Game/Class_10B8CB20.h"
+#include "Game/Class_10B8D800.h"
 
 class FVector;
 

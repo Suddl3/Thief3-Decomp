@@ -1,25 +1,9 @@
 // Game/Unsorted_10B2A510.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_109081E0.h"
-
-Class_10905A90_Member* FUN_10905aa0();
-
-class Class_10B2A510_Unknown08
-{
-public:
-    Class_10B2A510_Unknown08& operator=(const Class_10B2A510_Unknown08& Other)
-    {
-        Unknown00 = Other.Unknown00;
-        Unknown04 = Other.Unknown04;
-        return *this;
-    }
-
-    Class_109081E0 Unknown00;
-    int Unknown04;
-};
+#include "Game/Class_10B2A510_Unknown08.h"
 
 class Class_10B2A510_Unknown04
 {

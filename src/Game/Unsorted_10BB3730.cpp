@@ -5,6 +5,7 @@
 #include "Game/Class_10E8C7D0.h"
 #include "Game/Class_10E8C7DC.h"
 #include "Game/Class_10E8C8E4.h"
+#include "Game/Class_109081E0.h"
 
 void FUN_10bb3830(int A, int B, int C);
 
@@ -21,25 +22,6 @@ public:
 };
 
 extern Class_10BB48E0* DAT_10ff6694;
-
-Class_10905A90_Member* FUN_10905aa0();
-
-class Class_109081E0
-{
-public:
-    Class_109081E0(const char* In);
-    ~Class_109081E0()
-    {
-        if (Unknown00)
-        {
-            char* Block = Unknown00 - 4;
-            FUN_10905aa0()->Virtual5(Block);
-            Unknown00 = 0;
-        }
-    }
-
-    char* Unknown00;
-};
 
 int FUN_10bb3730(int A, int B, int C, const Class_109081E0& Name);
 
