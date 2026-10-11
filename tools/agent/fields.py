@@ -37,7 +37,8 @@ import headers  # noqa: E402
 import names  # noqa: E402
 
 PLACEHOLDER = re.compile(r"^(?:Unknown|Pad)[0-9A-Fa-f]+(?:_\d+)?$")
-ERROR = re.compile(r"^(?P<file>.*?)\((?P<line>\d+)\) : error (?P<code>C2039|C2065): '(?P<ident>\w+)'")
+ERROR = re.compile(r"^(?P<file>.*?)\((?P<line>\d+)\) : error (?:(?:C2039|C2065): '(?P<ident>\w+)'"
+                   r"|C2614: '\w+' : illegal member initialization: '(?P<init>\w+)' is not a base or member)")
 ROUNDS = 12
 
 
@@ -51,8 +52,11 @@ def class_body(text: str, cls: str) -> Optional[Tuple[int, int]]:
 
 
 def rename_in(text: str, span: Tuple[int, int], renames: Dict[str, str]) -> str:
-    rename = names.renamer(renames)
-    return text[:span[0]] + rename(text[span[0]:span[1]]) + text[span[1]:]
+    """Whole identifiers, both ends: unlike a placeholder class, `Unknown10` is also the end of a type's name
+    (`Class_10E5D548_Unknown10`), which must keep it."""
+    pattern = re.compile(r"(?<![A-Za-z0-9_])(" + "|".join(map(re.escape, renames)) + r")(?![A-Za-z0-9_])")
+    body = pattern.sub(lambda m: renames[m.group(1)], text[span[0]:span[1]])
+    return text[:span[0]] + body + text[span[1]:]
 
 
 def rename_line(text: str, line: int, old: str, new: str) -> Optional[str]:
@@ -138,7 +142,8 @@ def apply_class(p: Project, cls: str, renames: Dict[str, str], jobs: int, dry_ru
                     continue
                 fixed = False
                 for m in map(ERROR.match, log.splitlines()):
-                    if not m or m.group("ident") not in job.renames:
+                    ident = m and (m.group("ident") or m.group("init"))
+                    if not ident or ident not in job.renames:
                         continue
                     where = Path(m.group("file"))
                     if where.suffix == ".cpp" and where.name == unit.name:
@@ -147,8 +152,12 @@ def apply_class(p: Project, cls: str, renames: Dict[str, str], jobs: int, dry_ru
                         target = (where if where.is_absolute() else p.main / where).resolve()
                         if target.suffix != ".h" or p.include_dir.resolve() not in target.parents:
                             continue
-                    new = rename_line(job.text(target), int(m.group("line")), m.group("ident"),
-                                      job.renames[m.group("ident")])
+                    line = int(m.group("line"))
+                    # C2614 names the constructor's line; its initializer list may start above it.
+                    for at in ([line] if m.group("ident") else range(line, max(line - 8, 0), -1)):
+                        new = rename_line(job.text(target), at, ident, job.renames[ident])
+                        if new is not None:
+                            break
                     if new is not None:
                         job.files[target] = new
                         fixed = True
