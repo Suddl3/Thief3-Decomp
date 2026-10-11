@@ -42,22 +42,6 @@ void Class_10C0C090::FUN_10c0c090(int A, int B, FVector* Pos, int D)
     Obj->Unknown38 = *Pos;
 }
 
-// FUNCTION: 0x10C0C0D0 ?FUN_10c0c0d0@@YGPAUStruct_10C0C0D0@@HHHPBUStruct_10C0C0D0A@@_N@Z
-Struct_10C0C0D0* __stdcall FUN_10c0c0d0(int A, int B, int C, const Struct_10C0C0D0A* D, bool E)
-{
-    Struct_10C0C0D0* Node = new Struct_10C0C0D0;
-    if (Node)
-    {
-        Node->Unknown00 = A;
-        Node->Unknown04 = B;
-        Node->Unknown08 = C;
-        Node->Unknown0C = *D;
-        Node->Unknown14 = E;
-        Node->Unknown15 = false;
-    }
-    return Node;
-}
-
 // FUNCTION: 0x10C0C150 ?FUN_10c0c150@Class_10C0C150@@QAEHPBUItem_10C0C150@@@Z
 int Class_10C0C150::FUN_10c0c150(const Item_10C0C150* Item)
 {

@@ -58,9 +58,3 @@ void Class_10E9BBC0::FUN_10c49860(Struct_10C49860* A)
     int Key = A->Unknown04;
     Unknown04.FUN_10d3f830(&Key);
 }
-
-// FUNCTION: 0x10C49F50 ?FUN_10c49f50@Class_10E9BB8C@@UAEXH@Z
-void Class_10E9BB8C::FUN_10c49f50(int A)
-{
-    FUN_10c49340(FUN_10c48c80(A));
-}

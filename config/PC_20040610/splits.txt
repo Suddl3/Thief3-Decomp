@@ -9392,7 +9392,7 @@ Game/Unsorted_10C0BDE0_3.cpp:
 	.text  start:0x10C0C050 end:0x10C0C081
 
 Game/Unsorted_10C0BDE0.cpp:
-	.text  start:0x10C0C090 end:0x10C0C10F
+	.text  start:0x10C0C090 end:0x10C0C0D0
 	.text  start:0x10C0C150 end:0x10C0C183
 	.text  start:0x10C0C8E0 end:0x10C0C8F4
 
@@ -10418,9 +10418,6 @@ Game/Class_10E9B83C.cpp:
 Game/Unsorted_10C41610.cpp:
 	.text  start:0x10C41B10 end:0x10C41B3E
 
-Game/Unsorted_10C41B40.cpp:
-	.text  start:0x10C42090 end:0x10C420CE
-
 Game/Unsorted_10C44940.cpp:
 	.text  start:0x10C47E40 end:0x10C47E67
 
@@ -10432,9 +10429,6 @@ Game/Class_10E9BAE8.cpp:
 
 Game/Unsorted_10C47EC0.cpp:
 	.text  start:0x10C47F30 end:0x10C47FB1
-
-Game/Class_10E9BB60.cpp:
-	.text  start:0x10C481D0 end:0x10C481EC
 
 Game/Unsorted_10C48200.cpp:
 	.text  start:0x10C48200 end:0x10C48217
@@ -10457,17 +10451,12 @@ Game/Unsorted_10C485A0.cpp:
 Game/Unsorted_10C48C00.cpp:
 	.text  start:0x10C48C00 end:0x10C48C7A
 
-Game/Class_10E9BB8C.cpp:
-	.text  start:0x10C48F00 end:0x10C48F41
-
 Game/Unsorted_10C49030.cpp:
-	.text  start:0x10C49030 end:0x10C49071
 	.text  start:0x10C49100 end:0x10C491FF
 
 Game/Unsorted_10C49260.cpp:
 	.text  start:0x10C49260 end:0x10C49335
 	.text  start:0x10C49860 end:0x10C4987B
-	.text  start:0x10C49F50 end:0x10C49F6C
 
 Game/Unsorted_10C49880.cpp:
 	.text  start:0x10C49880 end:0x10C498D6
@@ -10478,13 +10467,6 @@ Game/Class_10E9BBC0.cpp:
 
 Game/Unsorted_10C49AB0.cpp:
 	.text  start:0x10C49E20 end:0x10C49E69
-
-Game/Unsorted_10C4A180.cpp:
-	.text  start:0x10C4C200 end:0x10C4C21E
-
-Game/Class_10E9BE44.cpp:
-	.text  start:0x10C4CB50 end:0x10C4CBA9
-	.text  start:0x10E2ED20 end:0x10E2ED35  # .text$x: EH handlers and unwind funclets
 
 Game/Unsorted_10C49230.cpp:
 	.text  start:0x10C4CD50 end:0x10C4CD55
@@ -10629,7 +10611,6 @@ Game/Unsorted_10C592A0_2.cpp:
 	.text  start:0x10C63D40 end:0x10C63D45
 	.text  start:0x10C63E90 end:0x10C63EB3
 	.text  start:0x10C63ED0 end:0x10C63ED8
-	.text  start:0x10C64AD0 end:0x10C64AF6
 	.text  start:0x10C663E0 end:0x10C663E4
 	.text  start:0x10C664F0 end:0x10C66514
 	.text  start:0x10C66560 end:0x10C66564

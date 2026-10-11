@@ -197,16 +197,6 @@ void Class_10C63ED0::FUN_10c63ed0(int Value)
     Field08->Class_10E74F70::FUN_10bfbb90(Value);
 }
 
-// FUNCTION: 0x10C64AD0 ?FUN_10c64ad0@Class_10C64AD0@@QAEPAV1@PAX@Z
-Class_10C64AD0* Class_10C64AD0::FUN_10c64ad0(void* Arg)
-{
-    Unknown00 = Arg;
-    Unknown08 = DAT_10ffc7a0;
-    Unknown0C = DAT_10ffc7a4;
-    Unknown10 = DAT_10f35f68;
-    return this;
-}
-
 // FUNCTION: 0x10C663E0 ?FUN_10c663e0@Class_10C663E0@@QAEEXZ
 unsigned char Class_10C663E0::FUN_10c663e0()
 {
