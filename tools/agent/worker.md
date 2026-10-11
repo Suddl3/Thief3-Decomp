@@ -47,6 +47,9 @@ do not stop before N functions are handled unless the claim prints
      Defer on a try.py result, not on a header: a header whose return or
      parameter type differs from symbols.txt's name is often listed there as an
      alias, which tools/cc.py maps to the address, so write the call and try it.
+     So with a callee whose name disagrees with its call site (arguments,
+     convention, return): declare it as the call site shows, write the whole
+     body and try it; the lead adds that name from your best candidate.
 4. Defer after CAP attempts, when try.py refuses (4 attempts in a row with no
    new best), or at once on a systemic blocker:
    `accept.py defer <ADDR> "<slug>: <one-line blocker>" --needs "<what would unblock it>"`.
