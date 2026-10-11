@@ -44,6 +44,9 @@ do not stop before N functions are handled unless the claim prints
    - only names differ (a callee's, a global's, a vtable slot's), whatever the
      score: defer `name-conflict` at once, with the exact name each needs in
      `--needs`; the lead's naming pass renames it and retries your source.
+     Defer on a try.py result, not on a header: a header whose return or
+     parameter type differs from symbols.txt's name is often listed there as an
+     alias, which tools/cc.py maps to the address, so write the call and try it.
 4. Defer after CAP attempts, when try.py refuses (4 attempts in a row with no
    new best), or at once on a systemic blocker:
    `accept.py defer <ADDR> "<slug>: <one-line blocker>" --needs "<what would unblock it>"`.
