@@ -45,10 +45,12 @@ GUARD = "GAME_{}_H"  # headers.py
 CPP_KEYWORDS = {"class", "struct", "union", "enum", "public", "private", "protected", "virtual", "operator",
                 "template", "typename", "this", "new", "delete", "return", "const", "static", "void", "int",
                 "char", "short", "long", "float", "double", "bool", "signed", "unsigned", "inline", "friend"}
-NAMES_HEADER = ("# Names the decompilation gave placeholder classes and functions, with the evidence for each.\n"
-                "# Written by tools/agent/names.py apply; classmap.py keeps the class names in classmap.txt.\n"
+NAMES_HEADER = ("# Names the decompilation gave placeholder classes, functions and fields, with the evidence for each.\n"
+                "# Written by tools/agent/names.py apply and fields.py apply; classmap.py keeps the class names in\n"
+                "# classmap.txt.\n"
                 "#   class <placeholder> <name> <evidence>\n"
-                "#   function <address> <name> <evidence>\n")
+                "#   function <address> <name> <evidence>\n"
+                "#   field <class>::<placeholder> <name> <evidence>\n")
 
 
 def load_names(p: Project) -> List[Tuple[str, str, str, str]]:
