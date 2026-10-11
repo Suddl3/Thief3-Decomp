@@ -649,6 +649,31 @@ messages to string-paired functions only. 173 PC vtables get a class-name
 vote: `Class_10E9AC80` is `cMotionControllerAnim`
 (`AI_MotionControllerAnim.cpp`).
 
+### First naming passes (2026-10-10 to 11)
+
+| Pass | Workers | Named | Cost |
+|---|---|---|---|
+| Pilot: AGarrett, APlayerPawn, AT3PlayerController, UT3Game, cMotionControllerAnim | 4 Sonnet, 1 Haiku | 1 class, 33 functions, 9 fields | 120K to 225K tokens a worker |
+| Lead review of the Xbox class votes (`build/agent/lead-tools/xbox_class_plan.py`) | none | 30 classes | minutes |
+| Wave 1: 20 tasks of about 20 placeholder methods, classes with an Xbox twin first | 29 Haiku | 19 classes, 181 functions, 85 fields | about 100K tokens a worker |
+
+On the class both ran, Haiku named more (9 functions and 6 fields against 7
+and 1) for about two thirds of Sonnet's tokens, at a fraction of the price,
+with names as good: naming waves run Haiku. Four of wave 1's 20 Haiku
+workers stopped when one response passed the 64K-token output limit and
+left no plan; their tasks, split one or two classes a worker, then
+finished, and namer.md now says to keep messages short. Readability went
+from 613 readable functions (8.9%) to 775 (11.3%), and named classes from 34
+to 72. Pitfalls the gate does not catch, seen at the rebuild:
+
+- two methods of one class named alike that differ only in being virtual
+  (a base's version modeled as the derived class's own member): C2535;
+  leave the base's version unnamed until the class model has its base;
+- a derived method named like its base one, whose body called the base
+  unqualified: the call becomes recursion (`Base::Name()` fixes it);
+- a field rename must keep both identifier boundaries: `Unknown10` ends the
+  type name `Class_10E5D548_Unknown10` too.
+
 ## Matches without a model
 
 The cheapest match is the one no worker makes. The lead's tools take the

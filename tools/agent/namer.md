@@ -53,13 +53,18 @@ times in ten, so check them against the code.
   reader; a placeholder only slows them. Skip what you cannot support.
 - A method named after a vtable slot's job in a base class keeps that name
   in every class overriding it: name the slot once, in the class that
-  declares it, and mention the overrides in the evidence.
+  declares it, and mention the overrides in the evidence. When you name an
+  override whose body calls its base's version (`APlayerPawn::FUN_10a47f10()`
+  in `calls`), name that base function too, with the same name.
 - Names are C++ identifiers: no keywords, no names another class or global
   already uses, one name per method signature in a class.
 - Evidence is one line, at most 25 words: what shows the name (a message, a
   debug name, a field, a callee), never a guess's reasoning.
 - Read and run only what this protocol names; write only your plan file.
   Never edit sources, headers, symbols or tools.
+- Keep your own messages short: never copy a packet's source back into a
+  message or your reasoning, and write the plan with one Write call. A
+  single response over the output limit loses the whole task.
 
 ## Finish
 
