@@ -249,10 +249,11 @@ object in esi or edi, an index in ecx with the result's buffer in eax, a
 register the function reads before anything sets it. Such a helper, and a
 caller that loads those registers just before calling it, cannot be written.
 Defer either at once with the blocker "ltcg: <which registers>". `this` in ecx
-is ordinary thiscall, and a result in eax or edx is ordinary too. A global or a
-field loaded into ecx just before a call is an object pointer and the call is a
-method call, even when symbols.txt types the global int or void*: that is a
-name conflict, not ltcg.
+is ordinary thiscall, and a result in eax or edx is ordinary too. Whatever is
+loaded into ecx just before a call (a global, a field, a parameter, a local) is
+that call's `this`: the callee is a method of its class even when symbols.txt
+names it a free function or types the global int or void*. That is a name
+conflict, not ltcg.
 
 ## Names need evidence
 
