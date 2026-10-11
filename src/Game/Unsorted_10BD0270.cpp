@@ -1,7 +1,7 @@
 // Game/Unsorted_10BD0270.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-class Class_10E93710
+class State_Search
 {
 public:
     virtual void Virtual0();
@@ -72,10 +72,10 @@ public:
     int Unknown04[15];
 };
 
-class Class_10E93148 : public Class_10E90D70
+class State_PlayAnim : public Class_10E90D70
 {
 public:
-    Class_10E93148* FUN_10bd0990(int A, int B, int C, bool D);
+    State_PlayAnim* FUN_10bd0990(int A, int B, int C, bool D);
 
     int Unknown40[3];
     int Unknown4C;
@@ -84,8 +84,8 @@ public:
     bool Unknown55;
 };
 
-// FUNCTION: 0x10BD0990 ?FUN_10bd0990@Class_10E93148@@QAEPAV1@HHH_N@Z
-Class_10E93148* Class_10E93148::FUN_10bd0990(int A, int B, int C, bool D)
+// FUNCTION: 0x10BD0990 ?FUN_10bd0990@State_PlayAnim@@QAEPAV1@HHH_N@Z
+State_PlayAnim* State_PlayAnim::FUN_10bd0990(int A, int B, int C, bool D)
 {
     this->Class_10E90D70::Class_10E90D70(A, B);
     Unknown00 = DAT_10e93148;
@@ -98,8 +98,8 @@ Class_10E93148* Class_10E93148::FUN_10bd0990(int A, int B, int C, bool D)
     return this;
 }
 
-// FUNCTION: 0x10BD17E0 ?FUN_10bd17e0@Class_10E93710@@UAEXH@Z
-void Class_10E93710::FUN_10bd17e0(int A)
+// FUNCTION: 0x10BD17E0 ?FUN_10bd17e0@State_Search@@UAEXH@Z
+void State_Search::FUN_10bd17e0(int A)
 {
     if (Unknown104 == A)
         Unknown104 = 0;

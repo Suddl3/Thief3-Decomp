@@ -1,6 +1,6 @@
 // Game/Unsorted_10BE9BD0_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10E975A0.h"
+#include "Game/State_Patrol.h"
 
 class Class_10BECE80_Target {
 public:
@@ -81,8 +81,8 @@ void UCanvas::FUN_10becee0(int p1)
     Unknown78 = p1;
 }
 
-// FUNCTION: 0x10BECEF0 ?FUN_10becef0@Class_10E975A0@@UAEXXZ
-void Class_10E975A0::FUN_10becef0()
+// FUNCTION: 0x10BECEF0 ?FUN_10becef0@State_Patrol@@UAEXXZ
+void State_Patrol::FUN_10becef0()
 {
     FUN_109e3c90(0);
 }

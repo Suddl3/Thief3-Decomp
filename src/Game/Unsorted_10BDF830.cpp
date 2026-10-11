@@ -89,10 +89,10 @@ public:
     int Unknown44;
 };
 
-class Class_10E954D0 : public Class_10E95050
+class State_MunchCorpse : public Class_10E95050
 {
 public:
-    Class_10E954D0* FUN_10bdf890(int A, int B, int C);
+    State_MunchCorpse* FUN_10bdf890(int A, int B, int C);
 
     int Unknown48;
     float Unknown4C;
@@ -105,8 +105,8 @@ bool Class_10E955F0::FUN_10bdf870(Info_10BDF870* p1)
     return p1->Unknown1C == 4;
 }
 
-// FUNCTION: 0x10BDF890 ?FUN_10bdf890@Class_10E954D0@@QAEPAV1@HHH@Z
-Class_10E954D0* Class_10E954D0::FUN_10bdf890(int A, int B, int C)
+// FUNCTION: 0x10BDF890 ?FUN_10bdf890@State_MunchCorpse@@QAEPAV1@HHH@Z
+State_MunchCorpse* State_MunchCorpse::FUN_10bdf890(int A, int B, int C)
 {
     this->Class_10E95050::Class_10E95050(A, B);
     Unknown00 = DAT_10e954d0;

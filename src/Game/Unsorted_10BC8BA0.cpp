@@ -44,15 +44,15 @@ void FUN_10bc6a80();
 
 extern void* DAT_10e939e0[];
 
-class Class_10E93710
+class State_Search
 {
 public:
-    Class_10E93710(int A, int B);
+    State_Search(int A, int B);
 
     void** Unknown00;
 };
 
-class Class_10E939E0 : public Class_10E93710
+class Class_10E939E0 : public State_Search
 {
 public:
     Class_10E939E0* FUN_10bd51e0(int A, int B);
@@ -268,7 +268,7 @@ void FUN_10bd3140()
 // FUNCTION: 0x10BD51E0 ?FUN_10bd51e0@Class_10E939E0@@QAEPAV1@HH@Z
 Class_10E939E0* Class_10E939E0::FUN_10bd51e0(int A, int B)
 {
-    this->Class_10E93710::Class_10E93710(A, B);
+    this->State_Search::State_Search(A, B);
     Unknown00 = DAT_10e939e0;
     return this;
 }

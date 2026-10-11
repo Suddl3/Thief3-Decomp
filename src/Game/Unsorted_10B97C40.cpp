@@ -5,7 +5,7 @@
 #include "Game/Class_10BC9D40.h"
 #include "Game/Class_10E4CCD0.h"
 #include "Game/Class_10E90D70.h"
-#include "Game/Class_10E93148.h"
+#include "Game/State_PlayAnim.h"
 #include "Game/Class_10FF667C.h"
 #include "Game/Struct_10B9BCA0.h"
 #include "Game/Class_10B9BDA0_Member.h"
@@ -85,10 +85,10 @@ void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
 struct Struct_10B98E00;
 
-// FUNCTION: 0x10B97D80 ?FUN_10b97d80@Class_10E4CCD0@@UAEPAVClass_10E93148@@PAUStruct_10B98E00@@H_N@Z
-Class_10E93148* Class_10E4CCD0::FUN_10b97d80(Struct_10B98E00* A, int B, bool C)
+// FUNCTION: 0x10B97D80 ?FUN_10b97d80@Class_10E4CCD0@@UAEPAVState_PlayAnim@@PAUStruct_10B98E00@@H_N@Z
+State_PlayAnim* Class_10E4CCD0::FUN_10b97d80(Struct_10B98E00* A, int B, bool C)
 {
-    return new(0, 0, 0, 0, 0) Class_10E93148((int)A, (int)this, B, C);
+    return new(0, 0, 0, 0, 0) State_PlayAnim((int)A, (int)this, B, C);
 }
 
 // FUNCTION: 0x10B9BCA0 ?FUN_10b9bca0@Class_10B9BCA0@@QAE_NH@Z

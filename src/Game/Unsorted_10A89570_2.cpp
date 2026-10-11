@@ -1,7 +1,7 @@
 // Game/Unsorted_10A89570_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10E6C5D0.h"
-#include "Game/Class_10E6C620.h"
+#include "Game/cTriggerSoundSchemaParam.h"
 
 extern int DAT_10f3a1dc;
 
@@ -14,8 +14,8 @@ void Class_10E6C5D0::FUN_10a8a550()
         Unknown04->FUN_10a8a550();
 }
 
-// FUNCTION: 0x10A8AC00 ?FUN_10a8ac00@Class_10E6C620@@UAEXXZ
-void Class_10E6C620::FUN_10a8ac00()
+// FUNCTION: 0x10A8AC00 ?FUN_10a8ac00@cTriggerSoundSchemaParam@@UAEXXZ
+void cTriggerSoundSchemaParam::FUN_10a8ac00()
 {
     if (DAT_10f3a1dc < DAT_10f3a1e0)
         DAT_10f3a1dc++;

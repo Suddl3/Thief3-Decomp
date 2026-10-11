@@ -18,14 +18,14 @@ public:
     Class_10C39220* Unknown48;
 };
 
-class Class_10E9AA7C : public Class_10C270D0
+class MC_MoveToPoint : public Class_10C270D0
 {
 public:
     virtual void FUN_10c2eb40();
 };
 
-// FUNCTION: 0x10C2EB40 ?FUN_10c2eb40@Class_10E9AA7C@@UAEXXZ
-void Class_10E9AA7C::FUN_10c2eb40()
+// FUNCTION: 0x10C2EB40 ?FUN_10c2eb40@MC_MoveToPoint@@UAEXXZ
+void MC_MoveToPoint::FUN_10c2eb40()
 {
     if (Unknown48)
     {

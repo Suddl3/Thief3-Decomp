@@ -15,7 +15,7 @@ public:
     virtual void Virtual1();
 };
 
-class Class_10E9BC18
+class CadenceFactory
 {
 public:
     virtual void Virtual0();
@@ -87,8 +87,8 @@ void Class_10C49230::FUN_10c49230()
     Unknown00 = 0;
 }
 
-// FUNCTION: 0x10C4A030 ?FUN_10c4a030@Class_10E9BC18@@UAEXXZ
-void Class_10E9BC18::FUN_10c4a030()
+// FUNCTION: 0x10C4A030 ?FUN_10c4a030@CadenceFactory@@UAEXXZ
+void CadenceFactory::FUN_10c4a030()
 {
     Unknown7C->Virtual1();
     Unknown10.Virtual6();

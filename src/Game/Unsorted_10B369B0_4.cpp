@@ -1,7 +1,7 @@
 // Game/Unsorted_10B369B0_4.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10978090.h"
-#include "Game/Class_10E65574.h"
+#include "Game/cTaggedAnimSeq.h"
 #include "Game/WindowManager.h"
 #include "Game/Class_10905A90_Member.h"
 
@@ -61,8 +61,8 @@ extern WindowManager* GWindowManager;
 int __stdcall FUN_10b369b0(int A, int B, Class_10B369B0_Param* P)
 {
     Class_10C08940* R1 = ((Class_10978090*)P->Virtual4(0))->FUN_10978090();
-    Class_10E65574* O2 = (Class_10E65574*)P->Virtual4(1);
-    Class_10B369B0_Result* Y = (Class_10B369B0_Result*)FUN_10a4bd70((int)O2->Class_10E65574::FUN_10b34b10());
+    cTaggedAnimSeq* O2 = (cTaggedAnimSeq*)P->Virtual4(1);
+    Class_10B369B0_Result* Y = (Class_10B369B0_Result*)FUN_10a4bd70((int)O2->cTaggedAnimSeq::FUN_10b34b10());
     FUN_10b1b600()->FUN_10b1afd0(Y, R1);
     if (GWindowManager)
     {

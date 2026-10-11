@@ -3,7 +3,7 @@
 #include "Game/Class_10C4D140.h"
 #include "Game/Class_10C4DE40.h"
 #include "Game/Class_10C4ED70.h"
-#include "Game/Class_10EC0560.h"
+#include "Game/cResSkeletalAnimInfo.h"
 
 struct Struct_10C4D230
 {
@@ -41,14 +41,14 @@ void Class_10E9BBC0::FUN_10c4d230(Struct_10C4D230* p1)
     Unknown40.FUN_10c4d140(p1->Unknown08);
 }
 
-// FUNCTION: 0x10C4D3A0 ?FUN_10c4d3a0@Class_10EC0560@@UAEXH@Z
-void Class_10EC0560::FUN_10c4d3a0(int p1)
+// FUNCTION: 0x10C4D3A0 ?FUN_10c4d3a0@cResSkeletalAnimInfo@@UAEXH@Z
+void cResSkeletalAnimInfo::FUN_10c4d3a0(int p1)
 {
     Unknown20 = p1;
 }
 
-// FUNCTION: 0x10C4D3B0 ?FUN_10c4d3b0@Class_10EC0560@@UAEXH@Z
-void Class_10EC0560::FUN_10c4d3b0(int p1)
+// FUNCTION: 0x10C4D3B0 ?FUN_10c4d3b0@cResSkeletalAnimInfo@@UAEXH@Z
+void cResSkeletalAnimInfo::FUN_10c4d3b0(int p1)
 {
     Unknown24 = p1;
 }

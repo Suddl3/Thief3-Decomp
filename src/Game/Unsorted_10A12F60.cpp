@@ -5,7 +5,7 @@
 #include "Game/Class_10A18E80.h"
 #include "Game/Class_10C00A60.h"
 
-class Class_10E5D548
+class cConversationManager
 {
 public:
     virtual void Virtual0();
@@ -36,8 +36,8 @@ void FUN_10a19c00();
 
 void FUN_10a1b850();
 
-// FUNCTION: 0x10A141A0 ?FUN_10a141a0@Class_10E5D548@@UAEHH@Z
-int Class_10E5D548::FUN_10a141a0(int Value)
+// FUNCTION: 0x10A141A0 ?FUN_10a141a0@cConversationManager@@UAEHH@Z
+int cConversationManager::FUN_10a141a0(int Value)
 {
     Class_10C00A60* Array = &Unknown08;
     int Index = Array->Unknown00;

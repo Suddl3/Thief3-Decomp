@@ -20,7 +20,7 @@ public:
     void FUN_10bc5b50();
 };
 
-class Class_10E92A00 : public Class_10E94578
+class State_PlayingPossum : public Class_10E94578
 {
 public:
     virtual void Virtual1();
@@ -94,8 +94,8 @@ public:
     int Unknown50;
 };
 
-// FUNCTION: 0x10BCEC90 ?FUN_10bcec90@Class_10E92A00@@UAEXXZ
-void Class_10E92A00::FUN_10bcec90()
+// FUNCTION: 0x10BCEC90 ?FUN_10bcec90@State_PlayingPossum@@UAEXXZ
+void State_PlayingPossum::FUN_10bcec90()
 {
     if (Unknown48 > 0.0 && TimeManager::Instance()->GetGameTime() > Unknown48)
         FUN_10bc5b50();

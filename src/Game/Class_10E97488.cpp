@@ -21,13 +21,13 @@ public:
     void FUN_10bc5b50();
 };
 
-class Class_10E975A0 : public Class_10E8BE68
+class State_Patrol : public Class_10E8BE68
 {
 public:
     void FUN_10bece10();
 };
 
-class Class_10E97488 : public Class_10E975A0
+class Class_10E97488 : public State_Patrol
 {
 public:
     virtual void FUN_10bed000();

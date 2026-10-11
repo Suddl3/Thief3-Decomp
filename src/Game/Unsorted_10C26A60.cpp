@@ -3,7 +3,7 @@
 #include "Game/Class_10C26980.h"
 #include "Game/Class_10C26E80.h"
 #include "Game/Class_10C39220.h"
-#include "Game/Class_10E9AA7C.h"
+#include "Game/MC_MoveToPoint.h"
 
 extern void* DAT_10e99298[];
 
@@ -105,8 +105,8 @@ Class_10E992D4* Class_10E992D4::FUN_10c27050(int A, int B, int C, int D)
     return this;
 }
 
-// FUNCTION: 0x10C27090 ?FUN_10c27090@Class_10E9AA7C@@UAE_NH@Z
-bool Class_10E9AA7C::FUN_10c27090(int A)
+// FUNCTION: 0x10C27090 ?FUN_10c27090@MC_MoveToPoint@@UAE_NH@Z
+bool MC_MoveToPoint::FUN_10c27090(int A)
 {
     if (!Unknown48)
         return false;

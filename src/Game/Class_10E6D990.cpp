@@ -5,7 +5,7 @@
 #include "Game/Class_10AA83E0.h"
 #include "Game/Class_10AA8400.h"
 #include "Game/Class_10AB3800.h"
-#include "Game/Class_10E65574.h"
+#include "Game/cTaggedAnimSeq.h"
 #include "Game/Class_10AB37C0.h"
 
 void FUN_10d3d990(void* Stream, int* Value);
@@ -49,5 +49,5 @@ Class_1090A780 Class_10AA83E0::FUN_10aa83e0()
 // FUNCTION: 0x10AA8400 ?FUN_10aa8400@Class_10AA8400@@QAE?AVClass_1090A780@@XZ
 Class_1090A780 Class_10AA8400::FUN_10aa8400()
 {
-    return Unknown20.Class_10E65574::FUN_10b34b10();
+    return Unknown20.cTaggedAnimSeq::FUN_10b34b10();
 }

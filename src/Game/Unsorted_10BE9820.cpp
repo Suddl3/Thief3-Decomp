@@ -27,7 +27,7 @@ public:
     virtual Struct_10BC4240_Param* Virtual18(int A, int B);
 };
 
-class Class_10E975A0
+class State_Patrol
 {
 public:
     virtual void Virtual0();
@@ -55,8 +55,8 @@ int FUN_10be9820(Struct_10BE9820** A, Struct_10BE9820** B)
     return (*A)->Unknown14 < (*B)->Unknown14 ? -1 : 1;
 }
 
-// FUNCTION: 0x10BE9860 ?FUN_10be9860@Class_10E975A0@@QAEXH@Z
-void Class_10E975A0::FUN_10be9860(int A)
+// FUNCTION: 0x10BE9860 ?FUN_10be9860@State_Patrol@@QAEXH@Z
+void State_Patrol::FUN_10be9860(int A)
 {
     int Id = Unknown04;
     Object_10BE9860* Obj = Unknown08;

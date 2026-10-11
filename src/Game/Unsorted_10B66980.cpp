@@ -5,7 +5,7 @@
 #include "Game/Class_10B71140.h"
 #include "Game/Class_10B73E80.h"
 #include "Game/Class_10B76190.h"
-#include "Game/Class_10E873B0.h"
+#include "Game/cT3OptionsWindow.h"
 
 extern void* DAT_10e84d80[];
 
@@ -434,8 +434,8 @@ void Class_10B71140::FUN_10b71140()
         Unknown04->Virtual124();
 }
 
-// FUNCTION: 0x10B718F0 ?FUN_10b718f0@Class_10E873B0@@QAE?AVClass_109081E0@@XZ
-Class_109081E0 Class_10E873B0::FUN_10b718f0()
+// FUNCTION: 0x10B718F0 ?FUN_10b718f0@cT3OptionsWindow@@QAE?AVClass_109081E0@@XZ
+Class_109081E0 cT3OptionsWindow::FUN_10b718f0()
 {
     return Class_109081E0(DAT_10e875ac);
 }

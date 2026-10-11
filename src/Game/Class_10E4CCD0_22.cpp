@@ -25,7 +25,7 @@ class Class_10E928E8;
 
 class Class_10E93020;
 
-class Class_10E93148;
+class State_PlayAnim;
 
 class Class_10E934D0;
 
@@ -37,7 +37,7 @@ class Class_10E93E48;
 
 class Class_10E95288;
 
-class Class_10E954D0;
+class State_MunchCorpse;
 
 class Class_10E95898;
 
@@ -62,7 +62,7 @@ public:
     virtual void Virtual7();
     virtual void Virtual8();
     virtual void Virtual9();
-    virtual Class_10E93148* FUN_10b97d80(Struct_10B98E00* A, int B, bool C);
+    virtual State_PlayAnim* FUN_10b97d80(Struct_10B98E00* A, int B, bool C);
     virtual void Virtual11();
     virtual void Virtual12();
     virtual void Virtual13();
@@ -107,7 +107,7 @@ public:
     virtual void Virtual52();
     virtual void Virtual53();
     virtual Class_10E92460* FUN_10b98aa0(int A, int B);
-    virtual Class_10E954D0* FUN_10b98b30(int A, int B);
+    virtual State_MunchCorpse* FUN_10b98b30(int A, int B);
 };
 
 // FUNCTION: 0x10B98450 ?FUN_10b98450@Class_10E4CCD0@@UAEPAVClass_10E948D8@@PAUStruct_10B98E00@@HH@Z

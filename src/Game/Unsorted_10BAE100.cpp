@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_109081E0.h"
 #include "Game/Class_10BAE080.h"
-#include "Game/Class_10E8D7A8.h"
+#include "Game/VisualSubsystem.h"
 
 extern "C" int __cdecl sprintf(char* Out, const char* Format, ...);
 

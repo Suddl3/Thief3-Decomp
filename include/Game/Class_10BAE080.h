@@ -3,19 +3,19 @@
 #ifndef GAME_CLASS_10BAE080_H
 #define GAME_CLASS_10BAE080_H
 
-class Class_10E8D7A8;
+class VisualSubsystem;
 
 class Class_10BAE080
 {
 public:
     void FUN_10bad9d0(int Count);
     void FUN_10bae080();
-    int FUN_10c176e0(const Class_10E8D7A8& Item);
+    int FUN_10c176e0(const VisualSubsystem& Item);
     void FUN_10bae2b0(const Class_10BAE080& Other);
 
     int Unknown00;
     int Unknown04;
-    Class_10E8D7A8* Unknown08;
+    VisualSubsystem* Unknown08;
 };
 
 #endif // GAME_CLASS_10BAE080_H

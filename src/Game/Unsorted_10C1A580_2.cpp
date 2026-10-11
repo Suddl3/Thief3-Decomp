@@ -16,10 +16,10 @@ extern Class_10E9CBE4* DAT_10ff7090;
 extern void* DAT_10ff7118;
 
 // The class whose vtable is DAT_10e98cec: a Class_10E9CBE4 whose constructor sets Unknown04 to 0.
-class Class_10E98CEC : public Class_10E9CBE4
+class SoundNotifier : public Class_10E9CBE4
 {
 public:
-    Class_10E98CEC() : Class_10E9CBE4() { Unknown04 = 0; }
+    SoundNotifier() : Class_10E9CBE4() { Unknown04 = 0; }
 };
 
 // FUNCTION: 0x10C1A580 ?FUN_10c1a580@@YAXXZ
@@ -28,7 +28,7 @@ void FUN_10c1a580()
     if (!DAT_10ff7090)
     {
         FUN_10905aa0()->Virtual8(0, 0);
-        DAT_10ff7090 = new(0, 0, 0, 0, 0) Class_10E98CEC;
+        DAT_10ff7090 = new(0, 0, 0, 0, 0) SoundNotifier;
         FUN_10905aa0()->Virtual9();
         DAT_10ff7118 = DAT_10ff7090;
     }

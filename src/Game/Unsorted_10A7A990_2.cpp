@@ -211,7 +211,7 @@ public:
     Class_10AAB5C0** Unknown08;
 };
 
-class Class_10E77578
+class cUObjectLinkManager
 {
 public:
     virtual void Virtual0();
@@ -222,7 +222,7 @@ public:
     virtual void Virtual5(int A, int B, int C, int D, int E);
 };
 
-Class_10E77578* FUN_10b0b2b0();
+cUObjectLinkManager* FUN_10b0b2b0();
 
 // FUNCTION: 0x10A7AAC0 ?FUN_10a7aac0@Class_10E6BD90@@UAEXHHAAPAVClass_10AAB5C0@@@Z
 void Class_10E6BD90::FUN_10a7aac0(int A, int B, Class_10AAB5C0*& ObjRef)

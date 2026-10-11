@@ -24,13 +24,13 @@ struct Struct_10C08690;
 
 class Class_10B7DC60_Param0;
 
-class Class_10E77578;
+class cUObjectLinkManager;
 
 class Class_10BFBD70;
 
 UClass* FUN_109015c0();
 
-Class_10E77578* FUN_10b0b2b0();
+cUObjectLinkManager* FUN_10b0b2b0();
 
 Class_10D9B090* FUN_10d9dcb0();
 
@@ -175,8 +175,8 @@ public:
     Class_10E4B180_Unknown70** Unknown94;
 };
 
-// The header's copy of Class_10E77578, with Virtual4 taking the arguments and the result.
-class Class_10E77578
+// The header's copy of cUObjectLinkManager, with Virtual4 taking the arguments and the result.
+class cUObjectLinkManager
 {
 public:
     virtual void Virtual0();

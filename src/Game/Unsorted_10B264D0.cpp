@@ -54,7 +54,7 @@ public:
     float Unknown2C;
 };
 
-class Class_10E65574
+class cTaggedAnimSeq
 {
 public:
     virtual void Virtual0();
@@ -201,8 +201,8 @@ int __cdecl FUN_10b349b0(void)
     return 0x24;
 }
 
-// FUNCTION: 0x10B34B10 ?FUN_10b34b10@Class_10E65574@@UAE?AVClass_1090A780@@XZ
-Class_1090A780 Class_10E65574::FUN_10b34b10()
+// FUNCTION: 0x10B34B10 ?FUN_10b34b10@cTaggedAnimSeq@@UAE?AVClass_1090A780@@XZ
+Class_1090A780 cTaggedAnimSeq::FUN_10b34b10()
 {
     return Class_1090A780(Unknown04);
 }

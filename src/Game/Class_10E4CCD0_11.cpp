@@ -7,16 +7,16 @@ void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D
 
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
-class Class_10E954D0
+class State_MunchCorpse
 {
 public:
-    Class_10E954D0(int A, int B, int C);
+    State_MunchCorpse(int A, int B, int C);
 
     int Unknown00[21];
 };
 
-// FUNCTION: 0x10B98B30 ?FUN_10b98b30@Class_10E4CCD0@@UAEPAVClass_10E954D0@@HH@Z
-Class_10E954D0* Class_10E4CCD0::FUN_10b98b30(int A, int B)
+// FUNCTION: 0x10B98B30 ?FUN_10b98b30@Class_10E4CCD0@@UAEPAVState_MunchCorpse@@HH@Z
+State_MunchCorpse* Class_10E4CCD0::FUN_10b98b30(int A, int B)
 {
-    return new(0, 0, 0, 0, 0) Class_10E954D0(A, (int)this, B);
+    return new(0, 0, 0, 0, 0) State_MunchCorpse(A, (int)this, B);
 }

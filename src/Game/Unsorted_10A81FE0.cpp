@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10C00A60.h"
 #include "Game/Struct_10A82E20.h"
-#include "Game/Class_10E6C1F0.h"
+#include "Game/cConversation.h"
 
 class Class_10E6C104
 {
@@ -40,8 +40,8 @@ public:
     int Unknown10;
 };
 
-// FUNCTION: 0x10A823C0 ?FUN_10a823c0@Class_10E6C1F0@@UAEXH@Z
-void Class_10E6C1F0::FUN_10a823c0(int Value)
+// FUNCTION: 0x10A823C0 ?FUN_10a823c0@cConversation@@UAEXH@Z
+void cConversation::FUN_10a823c0(int Value)
 {
     Class_10C00A60* Array = &Unknown04;
     int Index = Array->Unknown00;

@@ -5,7 +5,7 @@
 
 class Class_10AA7530;
 
-class Class_10E6C1F0
+class cConversation
 {
 public:
     virtual void Virtual0();
@@ -97,8 +97,8 @@ bool Class_10A80D30::FUN_10a80d30(FILE* File, int A)
     return true;
 }
 
-// FUNCTION: 0x10A80D90 ?FUN_10a80d90@Class_10E6C1F0@@UAE_NH@Z
-bool Class_10E6C1F0::FUN_10a80d90(int A)
+// FUNCTION: 0x10A80D90 ?FUN_10a80d90@cConversation@@UAE_NH@Z
+bool cConversation::FUN_10a80d90(int A)
 {
     if (A != 0 && A == Unknown14)
     {
@@ -110,8 +110,8 @@ bool Class_10E6C1F0::FUN_10a80d90(int A)
     return false;
 }
 
-// FUNCTION: 0x10A80DE0 ?FUN_10a80de0@Class_10E6C1F0@@UAEXHH@Z
-void Class_10E6C1F0::FUN_10a80de0(int A, int B)
+// FUNCTION: 0x10A80DE0 ?FUN_10a80de0@cConversation@@UAEXHH@Z
+void cConversation::FUN_10a80de0(int A, int B)
 {
     for (int i = 0; i < Unknown04; i++)
     {

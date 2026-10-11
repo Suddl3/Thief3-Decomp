@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10C613F0.h"
 #include "Game/Class_10E9CA9C.h"
-#include "Game/Class_10EC0560.h"
+#include "Game/cResSkeletalAnimInfo.h"
 
 struct Class_10C613F0_Member
 {
@@ -49,8 +49,8 @@ void Class_10E9CA9C::FUN_10c61c20(Class_10C61C20_Param* p1)
         p1->Virtual18(1);
 }
 
-// FUNCTION: 0x10C61CD0 ?FUN_10c61cd0@Class_10EC0560@@UAEHXZ
-int Class_10EC0560::FUN_10c61cd0()
+// FUNCTION: 0x10C61CD0 ?FUN_10c61cd0@cResSkeletalAnimInfo@@UAEHXZ
+int cResSkeletalAnimInfo::FUN_10c61cd0()
 {
     if (Unknown14 != 0 && Unknown10 == Unknown14)
         return 1;

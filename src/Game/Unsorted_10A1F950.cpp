@@ -5,7 +5,7 @@
 #include "Game/Class_10A1F9D0.h"
 #include "Game/Class_10A1FA70.h"
 #include "Game/Class_10A1FB50.h"
-#include "Game/Class_10E6561C.h"
+#include "Game/cBuildFleshBSP.h"
 #include "Game/Struct_10A1FA70.h"
 #include "Game/Class_1098E330.h"
 #include "Game/Class_10C00A60.h"
@@ -81,8 +81,8 @@ int Class_10A1FB50::FUN_10a1fb50(int A)
     return 0;
 }
 
-// FUNCTION: 0x10A22E20 ?FUN_10a22e20@Class_10E6561C@@QAEPAV1@XZ
-Class_10E6561C* Class_10E6561C::FUN_10a22e20()
+// FUNCTION: 0x10A22E20 ?FUN_10a22e20@cBuildFleshBSP@@QAEPAV1@XZ
+cBuildFleshBSP* cBuildFleshBSP::FUN_10a22e20()
 {
     Unknown00 = DAT_10e6561c;
     Unknown04 = 0;

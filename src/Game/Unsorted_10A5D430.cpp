@@ -25,10 +25,10 @@ public:
     char Unknown0EC[0xCC];
 };
 
-class Class_10E698F0 : public Class_10E6B078
+class cIconWindow : public Class_10E6B078
 {
 public:
-    Class_10E698F0* FUN_10a5ddc0();
+    cIconWindow* FUN_10a5ddc0();
 
     bool Unknown1B8;
     bool Unknown1B9;
@@ -50,8 +50,8 @@ void Class_10A5DA00::FUN_10a5da00(int A, int B)
     }
 }
 
-// FUNCTION: 0x10A5DDC0 ?FUN_10a5ddc0@Class_10E698F0@@QAEPAV1@XZ
-Class_10E698F0* Class_10E698F0::FUN_10a5ddc0()
+// FUNCTION: 0x10A5DDC0 ?FUN_10a5ddc0@cIconWindow@@QAEPAV1@XZ
+cIconWindow* cIconWindow::FUN_10a5ddc0()
 {
     this->Class_10E6B078::Class_10E6B078();
     Unknown1B8 = false;

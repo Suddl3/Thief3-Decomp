@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10BFBC80.h"
 #include "Game/Class_10C04800.h"
-#include "Game/Class_10E97AF4.h"
+#include "Game/AudioController.h"
 #include "Game/Class_10E97BB8.h"
 #include "Game/Class_10E97BC0.h"
 
@@ -31,8 +31,8 @@ void* FUN_10c00a40(void)
     return DAT_10ff66a4;
 }
 
-// FUNCTION: 0x10C047F0 ?FUN_10c047f0@Class_10E97AF4@@QAEXXZ
-void Class_10E97AF4::FUN_10c047f0()
+// FUNCTION: 0x10C047F0 ?FUN_10c047f0@AudioController@@QAEXXZ
+void AudioController::FUN_10c047f0()
 {
     Field04->FUN_10c04630();
 }

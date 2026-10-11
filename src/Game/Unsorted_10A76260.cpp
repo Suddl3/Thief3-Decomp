@@ -5,7 +5,7 @@
 #include "Game/Class_10E6BD60.h"
 #include "Game/Class_10E6BE98.h"
 #include "Game/Class_10E6C050.h"
-#include "Game/Class_10E6C1F0.h"
+#include "Game/cConversation.h"
 #include "Game/Class_10E6C390.h"
 
 extern void* DAT_10e6bc44[];
@@ -75,14 +75,14 @@ void Class_10E6C050::FUN_10a80b90()
     Field00 = (void*)DAT_10e6c050;
 }
 
-// FUNCTION: 0x10A80C70 ?FUN_10a80c70@Class_10E6C1F0@@QAEXE@Z
-void Class_10E6C1F0::FUN_10a80c70(unsigned char param)
+// FUNCTION: 0x10A80C70 ?FUN_10a80c70@cConversation@@QAEXE@Z
+void cConversation::FUN_10a80c70(unsigned char param)
 {
     Field4c = param;
 }
 
-// FUNCTION: 0x10A80C80 ?FUN_10a80c80@Class_10E6C1F0@@QAEXXZ
-void Class_10E6C1F0::FUN_10a80c80()
+// FUNCTION: 0x10A80C80 ?FUN_10a80c80@cConversation@@QAEXXZ
+void cConversation::FUN_10a80c80()
 {
     Field10->F4();
 }

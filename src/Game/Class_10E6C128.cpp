@@ -18,7 +18,7 @@ public:
     int Unknown24;
 };
 
-class Class_10E6C1F0 {
+class cConversation {
 public:
     virtual void Virtual0();
     virtual void Virtual1();
@@ -50,8 +50,8 @@ Class_10E6C128::Class_10E6C128() : Unknown18(0), Unknown1C(0), Unknown20(0), Unk
 {
 }
 
-// FUNCTION: 0x10A81FC0 ?FUN_10a81fc0@Class_10E6C1F0@@UAEIXZ
-unsigned Class_10E6C1F0::FUN_10a81fc0()
+// FUNCTION: 0x10A81FC0 ?FUN_10a81fc0@cConversation@@UAEIXZ
+unsigned cConversation::FUN_10a81fc0()
 {
     return (Virtual22() >> 10) & 1;
 }

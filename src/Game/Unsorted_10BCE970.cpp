@@ -36,7 +36,7 @@ public:
     void FUN_10bc5b50();
 };
 
-class Class_10E92A00 : public Class_10E94578
+class State_PlayingPossum : public Class_10E94578
 {
 public:
     virtual void Virtual1();
@@ -110,8 +110,8 @@ public:
     int Unknown50;
 };
 
-// FUNCTION: 0x10BCE9B0 ?FUN_10bce9b0@Class_10E92A00@@UAEXAAVFArchive@@@Z
-void Class_10E92A00::FUN_10bce9b0(FArchive& Ar)
+// FUNCTION: 0x10BCE9B0 ?FUN_10bce9b0@State_PlayingPossum@@UAEXAAVFArchive@@@Z
+void State_PlayingPossum::FUN_10bce9b0(FArchive& Ar)
 {
     Class_10E8BE68::FUN_10bca010(Ar);
     Ar.Serialize(&Unknown40, 8);

@@ -78,7 +78,7 @@ public:
     virtual void Virtual8(Info_10C47FC0* Info);
 };
 
-class Class_10E9BC18
+class CadenceFactory
 {
 public:
     virtual void Virtual0();
@@ -249,14 +249,14 @@ void FUN_10c44930()
     FUN_10c43060();
 }
 
-// FUNCTION: 0x10C47EA0 ?FUN_10c47ea0@Class_10E9BC18@@QAEHXZ
-int Class_10E9BC18::FUN_10c47ea0()
+// FUNCTION: 0x10C47EA0 ?FUN_10c47ea0@CadenceFactory@@QAEHXZ
+int CadenceFactory::FUN_10c47ea0()
 {
     return Field7C;
 }
 
-// FUNCTION: 0x10C47FC0 ?FUN_10c47fc0@Class_10E9BC18@@UAEXH@Z
-void Class_10E9BC18::FUN_10c47fc0(int Value)
+// FUNCTION: 0x10C47FC0 ?FUN_10c47fc0@CadenceFactory@@UAEXH@Z
+void CadenceFactory::FUN_10c47fc0(int Value)
 {
     Info_10C47FC0 Info;
     Info.Unknown04 = Value;

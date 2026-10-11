@@ -41,7 +41,7 @@ public:
 
 extern Class_10F46DA0* DAT_10f46da0;
 
-class Class_10E5D498
+class cFlagElementLogic
 {
 public:
     virtual void Virtual0();
@@ -53,8 +53,8 @@ public:
     FName Unknown04;
 };
 
-// FUNCTION: 0x10A84CB0 ?FUN_10a84cb0@Class_10E5D498@@UAE_NABVClass_109022E0@@@Z
-bool Class_10E5D498::FUN_10a84cb0(const Class_109022E0& Name)
+// FUNCTION: 0x10A84CB0 ?FUN_10a84cb0@cFlagElementLogic@@UAE_NABVClass_109022E0@@@Z
+bool cFlagElementLogic::FUN_10a84cb0(const Class_109022E0& Name)
 {
     const char* Text = Name.Unknown00 ? Name.Unknown00 : DAT_10e47660;
     return Unknown04.Value == FName(Text, FNAME_Add).Value;

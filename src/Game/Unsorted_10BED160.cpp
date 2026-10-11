@@ -27,10 +27,10 @@ public:
     int Unknown04[15];
 };
 
-class Class_10E975A0 : public Class_10E90D70
+class State_Patrol : public Class_10E90D70
 {
 public:
-    Class_10E975A0* FUN_10bed440(int A, int B);
+    State_Patrol* FUN_10bed440(int A, int B);
 
     bool Unknown40;
     int Unknown44;
@@ -280,8 +280,8 @@ void Class_10E97370::FUN_10bed3e0(FArchive& Ar)
     Ar.Serialize(&Unknown50, 4);
 }
 
-// FUNCTION: 0x10BED440 ?FUN_10bed440@Class_10E975A0@@QAEPAV1@HH@Z
-Class_10E975A0* Class_10E975A0::FUN_10bed440(int A, int B)
+// FUNCTION: 0x10BED440 ?FUN_10bed440@State_Patrol@@QAEPAV1@HH@Z
+State_Patrol* State_Patrol::FUN_10bed440(int A, int B)
 {
     this->Class_10E90D70::Class_10E90D70(A, B);
     Unknown44 = 0;

@@ -1,7 +1,7 @@
 // Game/Unsorted_10AC2610.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10AC2E40.h"
-#include "Game/Class_10E6F5F0.h"
+#include "Game/GarrettOnCamera.h"
 #include "Game/Options.h"
 #include "Game/Class_10BFBD70.h"
 #include "Game/Class_10E6F61C.h"
@@ -61,8 +61,8 @@ struct Struct_10AA3520
 
 extern Struct_10AA3520* DAT_10f35dec;
 
-// FUNCTION: 0x10AC2610 ?FUN_10ac2610@Class_10E6F5F0@@UAEHM@Z
-int Class_10E6F5F0::FUN_10ac2610(float Value)
+// FUNCTION: 0x10AC2610 ?FUN_10ac2610@GarrettOnCamera@@UAEHM@Z
+int GarrettOnCamera::FUN_10ac2610(float Value)
 {
     if (Value < 0.33f)
         return 1;

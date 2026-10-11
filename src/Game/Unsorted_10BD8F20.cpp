@@ -142,7 +142,7 @@ void FUN_10bc8010();
 
 extern void* DAT_10e954d0[];
 
-class Class_10E954D0
+class State_MunchCorpse
 {
 public:
     void FUN_10bdf8d0();
@@ -318,8 +318,8 @@ int __cdecl FUN_10bdf820()
     return 0x26;
 }
 
-// FUNCTION: 0x10BDF8D0 ?FUN_10bdf8d0@Class_10E954D0@@QAEXXZ
-void Class_10E954D0::FUN_10bdf8d0()
+// FUNCTION: 0x10BDF8D0 ?FUN_10bdf8d0@State_MunchCorpse@@QAEXXZ
+void State_MunchCorpse::FUN_10bdf8d0()
 {
     *(void**)this = (void*)DAT_10e954d0;
     FUN_10bc6a80();

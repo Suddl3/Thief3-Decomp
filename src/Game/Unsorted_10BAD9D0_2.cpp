@@ -9,13 +9,13 @@ enum EInternal { EC_Internal };
 
 inline void* operator new(unsigned int Size, EInternal* Mem) { return Mem; }
 
-// Game/Class_10E8D7A8.h copied with the default constructor the element's loop runs (it stores the vtable, then zeroes Unknown04).
-class Class_10E8D7A8
+// Game/VisualSubsystem.h copied with the default constructor the element's loop runs (it stores the vtable, then zeroes Unknown04).
+class VisualSubsystem
 {
 public:
-    Class_10E8D7A8() { Unknown04 = 0; }
-    Class_10E8D7A8(const Class_10E8D7A8& Other);
-    virtual ~Class_10E8D7A8();
+    VisualSubsystem() { Unknown04 = 0; }
+    VisualSubsystem(const VisualSubsystem& Other);
+    virtual ~VisualSubsystem();
 
     int Unknown04;
     int Unknown08;
@@ -34,16 +34,16 @@ public:
 void Class_10BAE080::FUN_10bad9d0(int NewCount)
 {
     int OldCount = Unknown00;
-    int Capacity = !Unknown08 ? 0 : Unknown04 / sizeof(Class_10E8D7A8);
+    int Capacity = !Unknown08 ? 0 : Unknown04 / sizeof(VisualSubsystem);
     FUN_10905aa0()->Virtual8(0, 0);
     if (NewCount > Capacity)
     {
         int NewCapacity = NewCount;
         if (Capacity)
             NewCapacity = (NewCount & ~15) + 16;
-        void* Block = FUN_10905aa0()->Virtual3(Unknown08, NewCapacity * sizeof(Class_10E8D7A8), 0, 0, 0, 0);
-        Unknown04 = NewCapacity * sizeof(Class_10E8D7A8);
-        Unknown08 = (Class_10E8D7A8*)Block;
+        void* Block = FUN_10905aa0()->Virtual3(Unknown08, NewCapacity * sizeof(VisualSubsystem), 0, 0, 0, 0);
+        Unknown04 = NewCapacity * sizeof(VisualSubsystem);
+        Unknown08 = (VisualSubsystem*)Block;
     }
     else if (NewCount <= Capacity - 16)
     {
@@ -56,15 +56,15 @@ void Class_10BAE080::FUN_10bad9d0(int NewCount)
         else
         {
             int NewCapacity = (NewCount & ~15) + 16;
-            void* Block = FUN_10905aa0()->Virtual3(Unknown08, NewCapacity * sizeof(Class_10E8D7A8), 0, 0, 0, 0);
-            Unknown04 = NewCapacity * sizeof(Class_10E8D7A8);
-            Unknown08 = (Class_10E8D7A8*)Block;
+            void* Block = FUN_10905aa0()->Virtual3(Unknown08, NewCapacity * sizeof(VisualSubsystem), 0, 0, 0, 0);
+            Unknown04 = NewCapacity * sizeof(VisualSubsystem);
+            Unknown08 = (VisualSubsystem*)Block;
         }
     }
     for (int j = OldCount; j < NewCount; j++)
     {
-        Class_10E8D7A8* Element = Unknown08 + j;
-        new ((EInternal*)Element) Class_10E8D7A8();
+        VisualSubsystem* Element = Unknown08 + j;
+        new ((EInternal*)Element) VisualSubsystem();
     }
     FUN_10905aa0()->Virtual9();
     Unknown00 = NewCount;

@@ -5,7 +5,7 @@
 #include "Game/Class_10AAB5C0.h"
 #include "Game/Class_10BFBD70.h"
 
-class Class_10E77578
+class cUObjectLinkManager
 {
 public:
     virtual void Virtual0();
@@ -15,7 +15,7 @@ public:
     virtual void Virtual4(int A, int B, int C, Class_10BFBD70* D);
 };
 
-Class_10E77578* FUN_10b0b2b0();
+cUObjectLinkManager* FUN_10b0b2b0();
 
 // FUNCTION: 0x10ACF690 ?FUN_10acf690@Class_10ACF9A0@@QAEPAVClass_10B82390@@H@Z
 Class_10B82390* Class_10ACF9A0::FUN_10acf690(int A)

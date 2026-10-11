@@ -4,7 +4,7 @@
 #include "Game/Class_10A1EDC0.h"
 #include "Game/Class_10A1F880.h"
 #include "Game/Class_10E65558.h"
-#include "Game/Class_10E65574.h"
+#include "Game/cTaggedAnimSeq.h"
 
 class Class_10D382EB {
 public:
@@ -26,8 +26,8 @@ struct Struct_10A1EDC0_Ostream : virtual Struct_10A1EDC0_Ios {
 
 Class_10905A90_Member* FUN_10905aa0();
 
-// FUNCTION: 0x10A1ED50 ??1Class_10E65574@@UAE@XZ
-Class_10E65574::~Class_10E65574()
+// FUNCTION: 0x10A1ED50 ??1cTaggedAnimSeq@@UAE@XZ
+cTaggedAnimSeq::~cTaggedAnimSeq()
 {
     if (Unknown04)
     {
@@ -45,7 +45,7 @@ void Class_10A1EDC0::FUN_10a1edc0()
         Buf->Unknown04.FUN_10d382eb();
 }
 
-// FUNCTION: 0x10A1EE60 ??_GClass_10E65574@@UAEPAXI@Z
+// FUNCTION: 0x10A1EE60 ??_GcTaggedAnimSeq@@UAEPAXI@Z
 // Compiler-generated: emitted with the class's vtable by 0x10A1ED50's definition in this unit.
 
 // FUNCTION: 0x10A1F880 ?FUN_10a1f880@Class_10A1F880@@QAEHH@Z

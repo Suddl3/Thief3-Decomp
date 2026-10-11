@@ -2,13 +2,13 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Game/Class_10BFBD70.h"
-#include "Game/Class_10E77578.h"
+#include "Game/cUObjectLinkManager.h"
 #include "Game/Class_10F46DA0.h"
 #include "Game/Class_1098E3D0.h"
 
 extern Class_10F46DA0* DAT_10f46da0;
 
-Class_10E77578* FUN_10b0b2b0();
+cUObjectLinkManager* FUN_10b0b2b0();
 
 class Class_10A6E080_Arg2
 {

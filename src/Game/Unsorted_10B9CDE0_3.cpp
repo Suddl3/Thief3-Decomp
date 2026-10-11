@@ -3,7 +3,7 @@
 #include "Game/Class_10B9E410_Item.h"
 #include "Game/Class_10B9E410.h"
 
-class Class_10E975A0 : public Class_10B9E410_Item
+class State_Patrol : public Class_10B9E410_Item
 {
 public:
     void FUN_10bef060();
@@ -13,5 +13,5 @@ public:
 void Class_10B9E410::FUN_10b9cf20()
 {
     if (Top() && Top()->Virtual3() == 0xB)
-        static_cast<Class_10E975A0*>(Top())->FUN_10bef060();
+        static_cast<State_Patrol*>(Top())->FUN_10bef060();
 }

@@ -6,7 +6,7 @@
 #include "Game/Class_10AAB5C0.h"
 #include "Game/Class_10BFBD70.h"
 
-class Class_10E77578
+class cUObjectLinkManager
 {
 public:
     virtual void Virtual0();
@@ -16,7 +16,7 @@ public:
     virtual void Virtual4(int A, int B, int C, Class_10BFBD70& D);
 };
 
-Class_10E77578* FUN_10b0b2b0();
+cUObjectLinkManager* FUN_10b0b2b0();
 
 struct Struct_10A4C940_Owner;
 

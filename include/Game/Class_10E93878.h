@@ -3,11 +3,11 @@
 #ifndef GAME_CLASS_10E93878_H
 #define GAME_CLASS_10E93878_H
 
-#include "Game/Class_10E93710.h"
+#include "Game/State_Search.h"
 
 class Class_10BB89D0;
 
-class Class_10E93878 : public Class_10E93710
+class Class_10E93878 : public State_Search
 {
 public:
     virtual void Virtual0();

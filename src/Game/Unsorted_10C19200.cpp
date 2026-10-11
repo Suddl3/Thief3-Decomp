@@ -8,7 +8,7 @@
 #include "Game/Class_10E98D08.h"
 #include "Game/Class_10C28EF0.h"
 #include "Game/Class_10C28F00.h"
-#include "Game/Class_10E98CEC.h"
+#include "Game/SoundNotifier.h"
 #include "Game/Class_10E99370.h"
 #include "Game/Struct_10C1AAD0.h"
 #include "Game/Struct_10C1ACA0.h"
@@ -16,7 +16,7 @@
 #include "Game/Struct_10C1AF80.h"
 #include "Game/Class_10C1AAD0.h"
 #include "Game/Class_10C1AF80.h"
-#include "Game/Class_10E6AC20.h"
+#include "Game/cMenu.h"
 #include "Game/Class_10E98F00.h"
 #include "Game/Class_10E99020.h"
 #include "Game/Class_10E992D4.h"
@@ -63,8 +63,8 @@ int FUN_10c1a160()
     return DAT_10ff708c;
 }
 
-// FUNCTION: 0x10C1A570 ?FUN_10c1a570@Class_10E98CEC@@QAEXXZ
-void Class_10E98CEC::FUN_10c1a570()
+// FUNCTION: 0x10C1A570 ?FUN_10c1a570@SoundNotifier@@QAEXXZ
+void SoundNotifier::FUN_10c1a570()
 {
     Field00 = (void*)DAT_10e98cec;
     FUN_10c62c90();
@@ -222,8 +222,8 @@ void __stdcall FUN_10c266a0(Info_10C266A0* Out, int A, int B, int C)
     Out->Unknown08 = B;
 }
 
-// FUNCTION: 0x10C26A40 ?FUN_10c26a40@Class_10E6AC20@@UAE?AVClass_1090A780@@XZ
-Class_1090A780 Class_10E6AC20::FUN_10c26a40()
+// FUNCTION: 0x10C26A40 ?FUN_10c26a40@cMenu@@UAE?AVClass_1090A780@@XZ
+Class_1090A780 cMenu::FUN_10c26a40()
 {
     return Class_1090A780(Unknown10);
 }

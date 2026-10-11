@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_10AA8400_H
 #define GAME_CLASS_10AA8400_H
 
-#include "Game/Class_10E65574.h"
+#include "Game/cTaggedAnimSeq.h"
 
 class Class_1090A780;
 
@@ -13,7 +13,7 @@ public:
     Class_1090A780 FUN_10aa8400();
 
     char Unknown00[0x20];
-    Class_10E65574 Unknown20;
+    cTaggedAnimSeq Unknown20;
 };
 
 #endif // GAME_CLASS_10AA8400_H

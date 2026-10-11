@@ -1,6 +1,6 @@
 // Game/Unsorted_10BD1820.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10E93710.h"
+#include "Game/State_Search.h"
 
 extern float DAT_10e6b950;
 
@@ -35,8 +35,8 @@ int FUN_10bd19b0(int Value)
     return 0;
 }
 
-// FUNCTION: 0x10BD1A40 ?FUN_10bd1a40@Class_10E93710@@UAEMXZ
-float Class_10E93710::FUN_10bd1a40()
+// FUNCTION: 0x10BD1A40 ?FUN_10bd1a40@State_Search@@UAEMXZ
+float State_Search::FUN_10bd1a40()
 {
     return DAT_10e6b950;
 }

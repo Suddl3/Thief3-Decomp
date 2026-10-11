@@ -4,7 +4,7 @@
 #include "Game/Class_109081E0.h"
 #include "Game/Class_10E6BFBC.h"
 #include "Game/Class_1096A960.h"
-#include "Game/Class_10E5D738.h"
+#include "Game/cEngineTriggerRegistrar.h"
 
 enum EInternal { EC_Internal };
 
@@ -49,8 +49,8 @@ void FUN_10a7efc0(Class_10A7EFC0_Param* A, int B)
         FUN_10af35e0(B, (int)Buffer, (Found - Buffer) + 1);
 }
 
-// FUNCTION: 0x10A7F220 ?FUN_10a7f220@Class_10E5D738@@UAEPAVClass_10E6BFBC@@HPBH@Z
-Class_10E6BFBC* Class_10E5D738::FUN_10a7f220(int A, const int* B)
+// FUNCTION: 0x10A7F220 ?FUN_10a7f220@cEngineTriggerRegistrar@@UAEPAVClass_10E6BFBC@@HPBH@Z
+Class_10E6BFBC* cEngineTriggerRegistrar::FUN_10a7f220(int A, const int* B)
 {
     FUN_10905aa0()->Virtual8(0, 0);
     bool Flag;

@@ -9,7 +9,7 @@ public:
     void FUN_10bc5b50();
 };
 
-class Class_10E975A0 : public Class_10E94578
+class State_Patrol : public Class_10E94578
 {
 public:
     virtual void Virtual0();
@@ -26,7 +26,7 @@ public:
     char Unknown04[0x40];
 };
 
-class Class_10E97258 : public Class_10E975A0
+class Class_10E97258 : public State_Patrol
 {
 public:
     virtual void FUN_10bed130();

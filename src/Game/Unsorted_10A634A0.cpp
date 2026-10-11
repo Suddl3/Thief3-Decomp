@@ -3,7 +3,7 @@
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_109081E0.h"
 #include "Game/Class_1090A780.h"
-#include "Game/Class_10E6AC20.h"
+#include "Game/cMenu.h"
 
 class Class_10E6AC98
 {
@@ -39,8 +39,8 @@ void Class_10E6AC98::FUN_10a634a0(const Class_109081E0& A)
     FUN_10905aa0()->Virtual9();
 }
 
-// FUNCTION: 0x10A634D0 ?FUN_10a634d0@Class_10E6AC20@@UAEXABVClass_109081E0@@@Z
-void Class_10E6AC20::FUN_10a634d0(const Class_109081E0& A)
+// FUNCTION: 0x10A634D0 ?FUN_10a634d0@cMenu@@UAEXABVClass_109081E0@@@Z
+void cMenu::FUN_10a634d0(const Class_109081E0& A)
 {
     FUN_10905aa0()->Virtual8(0, 0);
     Unknown10 = A;

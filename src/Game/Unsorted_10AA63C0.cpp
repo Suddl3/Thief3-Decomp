@@ -3,7 +3,7 @@
 #include "Game/Class_10BFBD70.h"
 #include "Game/Class_10E6D8CC.h"
 
-class Class_10E6C1F0
+class cConversation
 {
 public:
     virtual void Virtual0();
@@ -31,8 +31,8 @@ public:
     int* Unknown0C;
 };
 
-// FUNCTION: 0x10AA63C0 ?FUN_10aa63c0@Class_10E6C1F0@@UAEHH@Z
-int Class_10E6C1F0::FUN_10aa63c0(int index)
+// FUNCTION: 0x10AA63C0 ?FUN_10aa63c0@cConversation@@UAEHH@Z
+int cConversation::FUN_10aa63c0(int index)
 {
     return Unknown0C[index];
 }

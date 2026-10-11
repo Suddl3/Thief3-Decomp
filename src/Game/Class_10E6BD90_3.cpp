@@ -9,7 +9,7 @@ class UClass;
 
 class UObject;
 
-class Class_10E77578
+class cUObjectLinkManager
 {
 public:
     virtual void Virtual0();
@@ -20,7 +20,7 @@ public:
     virtual void Virtual5(int A, int B, int C, int D, int E);
 };
 
-Class_10E77578* FUN_10b0b2b0();
+cUObjectLinkManager* FUN_10b0b2b0();
 
 class Class_10E6BD90
 {

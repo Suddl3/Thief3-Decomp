@@ -3,7 +3,7 @@
 #include "Game/Class_10A80C90.h"
 #include "Game/TimeManager.h"
 
-class Class_10E6C1F0
+class cConversation
 {
 public:
     virtual void Virtual0();
@@ -71,8 +71,8 @@ void Class_10A80C90::FUN_10a80c90()
     Unknown54 = (float)TimeManager::Instance()->GetGameTime();
 }
 
-// FUNCTION: 0x10A80E30 ?FUN_10a80e30@Class_10E6C1F0@@UAEHH@Z
-int Class_10E6C1F0::FUN_10a80e30(int Value)
+// FUNCTION: 0x10A80E30 ?FUN_10a80e30@cConversation@@UAEHH@Z
+int cConversation::FUN_10a80e30(int Value)
 {
     for (int i = 0; i < Unknown04; i++)
     {

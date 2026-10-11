@@ -3,9 +3,9 @@
 #include "Game/Class_10E6BD68_Unknown0C.h"
 #include "Game/Class_10E6BD68_Unknown18.h"
 #include "Game/Class_10E6BD90.h"
-#include "Game/Class_10E77578.h"
+#include "Game/cUObjectLinkManager.h"
 
-Class_10E77578* FUN_10b0b2b0();
+cUObjectLinkManager* FUN_10b0b2b0();
 
 class Class_10BFBD70
 {

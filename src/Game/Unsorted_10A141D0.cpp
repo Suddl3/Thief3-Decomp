@@ -19,7 +19,7 @@ public:
     virtual ~Object_10A14540_A();
 };
 
-class Class_10E5D548
+class cConversationManager
 {
 public:
     virtual void Virtual0();
@@ -36,8 +36,8 @@ public:
     Class_1090FD40 Unknown14;
 };
 
-// FUNCTION: 0x10A14540 ?FUN_10a14540@Class_10E5D548@@UAEXXZ
-void Class_10E5D548::FUN_10a14540()
+// FUNCTION: 0x10A14540 ?FUN_10a14540@cConversationManager@@UAEXXZ
+void cConversationManager::FUN_10a14540()
 {
     for (int i = 0; i < Unknown08.Unknown00; i++)
     {

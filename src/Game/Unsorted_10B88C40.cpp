@@ -4,7 +4,7 @@
 #include "Game/Class_1098E3D0.h"
 #include "Game/Class_109A6AA0.h"
 #include "Game/Class_10E89458.h"
-#include "Game/Class_10E89478.h"
+#include "Game/ElevatorController.h"
 #include "Game/Class_10C49740.h"
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_109081E0.h"
@@ -79,8 +79,8 @@ bool Class_10E89458::FUN_10b89280(Class_10E89458* Other)
     return D.FUN_109a6aa0() != 0;
 }
 
-// FUNCTION: 0x10B89760 ?FUN_10b89760@Class_10E89478@@UAEXXZ
-void Class_10E89478::FUN_10b89760()
+// FUNCTION: 0x10B89760 ?FUN_10b89760@ElevatorController@@UAEXXZ
+void ElevatorController::FUN_10b89760()
 {
     Struct_10B89760_Param Param;
     Param.Unknown00 = FVector(-1.0f, -1.0f, -1.0f);

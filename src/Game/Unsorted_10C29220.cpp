@@ -26,7 +26,7 @@ void FUN_10c27290();
 
 extern const char DAT_10e9aaa8[];
 
-class Class_10E9AA7C
+class MC_MoveToPoint
 {
 public:
     void FUN_10c2eb30();
@@ -130,15 +130,15 @@ void FUN_10c29ee0()
     FUN_10c28280();
 }
 
-// FUNCTION: 0x10C2EB30 ?FUN_10c2eb30@Class_10E9AA7C@@QAEXXZ
-void Class_10E9AA7C::FUN_10c2eb30()
+// FUNCTION: 0x10C2EB30 ?FUN_10c2eb30@MC_MoveToPoint@@QAEXXZ
+void MC_MoveToPoint::FUN_10c2eb30()
 {
     Field00 = (void*)DAT_10e9aa7c;
     FUN_10c27290();
 }
 
-// FUNCTION: 0x10C2EBD0 ?FUN_10c2ebd0@Class_10E9AA7C@@QAE?AVClass_109081E0@@XZ
-Class_109081E0 Class_10E9AA7C::FUN_10c2ebd0()
+// FUNCTION: 0x10C2EBD0 ?FUN_10c2ebd0@MC_MoveToPoint@@QAE?AVClass_109081E0@@XZ
+Class_109081E0 MC_MoveToPoint::FUN_10c2ebd0()
 {
     return Class_109081E0(DAT_10e9aaa8);
 }

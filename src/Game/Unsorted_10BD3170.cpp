@@ -6,7 +6,7 @@
 #include "Game/Class_10BD4120.h"
 #include "Game/Class_10C7D570.h"
 #include "Game/Class_10E90D70.h"
-#include "Game/Class_10E93710.h"
+#include "Game/State_Search.h"
 #include "Game/Class_10E93878.h"
 
 Class_10905A90_Member* FUN_10905aa0();
@@ -56,6 +56,6 @@ void Class_10BD4120::FUN_10bd4120()
 }
 
 // FUNCTION: 0x10BD51C0 ??0Class_10E93878@@QAE@HH@Z
-Class_10E93878::Class_10E93878(int A, int B) : Class_10E93710(A, B)
+Class_10E93878::Class_10E93878(int A, int B) : State_Search(A, B)
 {
 }
