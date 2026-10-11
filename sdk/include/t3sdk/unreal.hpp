@@ -70,6 +70,7 @@ inline constexpr uintptr_t GObjHash = 0x10F3A418;          // UObject* [4096], b
 inline constexpr uintptr_t FNameNames = 0x10F7AF1C;        // TArray<FNameEntry*> FName::Names
 inline constexpr uintptr_t FNameInitialized = 0x10F7AF18;  // BOOL
 inline constexpr uintptr_t FNameHash = 0x10F76F18;         // FNameEntry* [4096]
+inline constexpr uintptr_t GNatives = 0x10F41C08;          // Native[4096]: the function of each opcode and native index
 inline constexpr uintptr_t GIsCriticalError = 0x10F46D70;  // UBOOL, set by the error handler
 inline constexpr uintptr_t GIsRunning = 0x10F46D7C;        // UBOOL, main loop condition
 inline constexpr uintptr_t GIsRequestingExit = 0x10F46D84; // UBOOL, appRequestExit / WM_QUIT

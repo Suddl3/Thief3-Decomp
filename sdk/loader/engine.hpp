@@ -65,4 +65,12 @@ std::string PathName(t3::UObject* object);  // "Engine.Actor"
 // Writes "<index> <class> <path>" for every live object. Returns the count.
 int DumpObjects(const std::filesystem::path& file);
 
+// Writes the engine's reflection data for the decompilation's naming tools
+// (tools/agent/reflection.py): every non-null GNatives entry, the raw bytes of
+// every class, state, function, struct and property object, and each class's
+// default object and vtable. The tools work out the field offsets from known
+// natives, so the dump assumes no layout beyond UObject's. Returns the number
+// of objects written.
+int DumpReflection(const std::filesystem::path& file);
+
 }  // namespace t3sdk::engine

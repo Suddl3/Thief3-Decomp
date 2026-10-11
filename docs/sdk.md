@@ -57,6 +57,7 @@ in the manifest.
 | `T3SDK` | `Console` | 0 | show a console with the live log |
 | | `EngineLog` | 1 | copy the engine's own log lines into `T3SDK.log` |
 | | `DumpObjectsKey` | `0x79` (F10) | key that writes every live object to `T3SDK_objects.txt`; 0 = off |
+| | `DumpReflectionDelay` | 0 | seconds after the engine is up to write its classes, functions, properties and native table to `T3SDK_reflection.txt`, once, for the decompilation's naming (docs/engine.md, "Script natives"); 0 = off |
 | | `MenuVersionLabel` | 1 | append `[Modded - T3SDK <version>]` to the main menu's version line |
 | | `MenuInputTrace` | 0 | log main-menu and popup input events |
 | `Fixes` | `SkipIntros` | 1 | skip the logo movies at start-up |

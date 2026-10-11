@@ -35,6 +35,7 @@ struct Settings {
     bool console = false;
     bool engineLog = true;
     int dumpObjectsKey = VK_F10;
+    int dumpReflectionDelay = 0;  // seconds after the engine is up; 0 = off
     bool menuVersionLabel = true;
     bool menuInputTrace = false;
     fixes::Options fixes;
@@ -58,6 +59,8 @@ fs::path g_dir;
 Settings g_settings;
 DWORD g_mainThread = 0;
 bool g_announced = false;
+DWORD g_readyAt = 0;
+bool g_dumpedReflection = false;
 bool g_shutDown = false;
 std::vector<FrameCallback> g_frameCallbacks;
 std::vector<LogCallback> g_logCallbacks;
@@ -113,6 +116,7 @@ Settings LoadSettings(const fs::path& ini) {
     wchar_t key[32];
     GetPrivateProfileStringW(L"T3SDK", L"DumpObjectsKey", L"0x79", key, 32, file);
     s.dumpObjectsKey = int(wcstol(key, nullptr, 0));
+    s.dumpReflectionDelay = int(GetPrivateProfileIntW(L"T3SDK", L"DumpReflectionDelay", 0, file));
     s.menuVersionLabel = GetPrivateProfileIntW(L"T3SDK", L"MenuVersionLabel", s.menuVersionLabel, file) != 0;
     s.menuInputTrace = GetPrivateProfileIntW(L"T3SDK", L"MenuInputTrace", s.menuInputTrace, file) != 0;
     s.fixes.skipIntros = GetPrivateProfileIntW(L"Fixes", L"SkipIntros", s.fixes.skipIntros, file) != 0;
@@ -212,7 +216,14 @@ void OnFrame() {
     }
     if (!g_announced) {
         g_announced = true;
+        g_readyAt = GetTickCount();
         T3_LOG("engine ready");
+    }
+    if (g_settings.dumpReflectionDelay > 0 && !g_dumpedReflection &&
+        GetTickCount() - g_readyAt >= DWORD(g_settings.dumpReflectionDelay) * 1000) {
+        g_dumpedReflection = true;
+        fs::path file = g_dir / "T3SDK_reflection.txt";
+        T3_LOG("dumped reflection data of %d objects to %s", engine::DumpReflection(file), file.string().c_str());
     }
     if (g_settings.dumpObjectsKey && (GetAsyncKeyState(g_settings.dumpObjectsKey) & 1) && GameHasFocus()) {
         fs::path file = g_dir / "T3SDK_objects.txt";

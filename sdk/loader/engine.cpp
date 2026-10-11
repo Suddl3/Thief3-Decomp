@@ -8,6 +8,7 @@
 #include <windows.h>
 
 #include <cstdio>
+#include <cstring>
 #include <vector>
 #include <unordered_set>
 
@@ -124,6 +125,26 @@ UObject* Field(const UObject* object, uint32_t offset) {
 }
 
 UObject* ClassOf(const UObject* object) { return reinterpret_cast<UObject*>(object->Class); }
+
+// Copies `size` bytes at `address` into `out`; false if any of them is unreadable.
+bool SafeRead(const void* address, void* out, size_t size) {
+    __try {
+        memcpy(out, address, size);
+        return true;
+    } __except (EXCEPTION_EXECUTE_HANDLER) {
+        return false;
+    }
+}
+
+// The class object named `name` (a class of class Class), or nullptr.
+UObject* FindClassNamed(UObject* classClass, const char* name) {
+    for (UObject* object : t3::GObjObjects()) {
+        if (object && ClassOf(object) == classClass && NameIs(object, name)) {
+            return object;
+        }
+    }
+    return nullptr;
+}
 
 // ---- object layout validation ----------------------------------------------------
 
@@ -381,6 +402,76 @@ int DumpObjects(const std::filesystem::path& file) {
             fprintf(f, "%6d %-32s %s\n", i, ObjectName(ClassOf(object)).c_str(), PathName(object).c_str());
             ++count;
         }
+    }
+    fclose(f);
+    return count;
+}
+
+int DumpReflection(const std::filesystem::path& file) {
+    if (!Ready()) {
+        return 0;
+    }
+    auto& objects = t3::GObjObjects();
+    UObject* classClass = nullptr;
+    for (UObject* object : objects) {
+        if (object && ClassOf(object) == object && NameIs(object, "Class")) {
+            classClass = object;
+        }
+    }
+    UObject* fieldClass = classClass ? FindClassNamed(classClass, "Field") : nullptr;
+    if (!fieldClass) {
+        return 0;
+    }
+    FILE* f = _wfopen(file.c_str(), L"w");
+    if (!f) {
+        return 0;
+    }
+    fprintf(f, "# T3SDK reflection dump: %d objects, Outer at 0x%X, SuperField at 0x%X\n", objects.Num, g_layout.outer,
+            g_layout.superField);
+
+    // N <index> <function>: the native function of each opcode and numbered native.
+    auto natives = reinterpret_cast<const uint32_t*>(t3::addr::GNatives);
+    for (int i = 0; i < 4096; ++i) {
+        uint32_t function = 0;
+        if (SafeRead(natives + i, &function, sizeof(function)) && function) {
+            fprintf(f, "N %d %08X\n", i, function);
+        }
+    }
+
+    // O <index> <address> <class> <path> <bytes>: each field object (classes, states, functions, structs,
+    // properties, ...) from its vtable on, more bytes than the largest of them (a UClass is 0x114).
+    // V <path> <default object> <vtable>: a class's default object (class + 0xE8) and that object's vtable.
+    constexpr size_t kBytes = 0x120;
+    static const char kHex[] = "0123456789ABCDEF";
+    uint8_t bytes[kBytes];
+    char hex[kBytes * 2 + 1];
+    int count = 0;
+    for (int i = 0; i < objects.Num; ++i) {
+        UObject* object = objects.Data[i];
+        if (!object || !IsA(object, fieldClass)) {
+            continue;
+        }
+        size_t size = kBytes;
+        while (size && !SafeRead(object, bytes, size)) {
+            size -= 0x10;  // the object ends at unreadable memory
+        }
+        for (size_t k = 0; k < size; ++k) {
+            hex[2 * k] = kHex[bytes[k] >> 4];
+            hex[2 * k + 1] = kHex[bytes[k] & 0xF];
+        }
+        hex[2 * size] = 0;
+        std::string path = PathName(object);
+        fprintf(f, "O %d %08X %s %s %s\n", i, uint32_t(reinterpret_cast<uintptr_t>(object)),
+                ObjectName(ClassOf(object)).c_str(), path.c_str(), hex);
+        if (ClassOf(object) == classClass) {
+            uint32_t defaults = 0;
+            uint32_t vtable = 0;
+            if (SafeRead(reinterpret_cast<const uint8_t*>(object) + 0xE8, &defaults, sizeof(defaults)) && defaults) {
+                SafeRead(reinterpret_cast<const void*>(uintptr_t(defaults)), &vtable, sizeof(vtable));
+            }
+            fprintf(f, "V %s %08X %08X\n", path.c_str(), defaults, vtable);
+        }
+        ++count;
     }
     fclose(f);
     return count;

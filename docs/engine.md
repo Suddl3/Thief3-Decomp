@@ -118,7 +118,8 @@ out-of-line copy per class it casts to (`Cast<AGarrett>` at `0x109E9FD0`).
 | `0x24` | Class | verified |
 | `0x28` | `ObjectInternalPropertyHash` (Ion Storm's, `Object.uc`) | static: `UObject` registers `0x2C` bytes |
 | `0x2C` | `UStruct` SuperField (on class objects) | verified: all 287 classes chain up to `Object` |
-| class `+0xE8` | the class's default object | static, probable |
+| class `+0xE8` | `Defaults` (`TArray<BYTE>`: data, then count and capacity, the class's size) | verified (reflection dump) |
+| class `+0xF4` | the class's `InternalConstructor` | verified (reflection dump, `classes.txt`) |
 
 Stock Unreal Engine 2 has SuperField at `0x28`; this fork's `UObject` is one
 field longer ("Class layouts" below). The SDK re-detects Outer and SuperField
@@ -261,8 +262,9 @@ reads the next opcode and calls it.
 | `GCasts` (`Native[256]`) | `0x10F417F8` | static (`UObject::execPrimitiveCast`) |
 | `FFrame::Step(UObject* Context, void* Result)`, `__thiscall`, out of line (stock Unreal Engine 2 inlines it) | `0x10B0FC50` | static, matched as called |
 | `UObject::execPrimitiveCast` | `0x10AFDC90` | static |
+| `UFunction` fields: `FunctionFlags` `+0x74`, native index (`_WORD`) `+0x78`, native function `+0x84`; `0x88` bytes | | verified (reflection dump: `Object.Abs`, native 186, `execAbs`) |
 
-The table names 234 `UObject` natives in `symbols.txt`. Seven functions are
+Little of this runs in Thief: Deadly Shadows: a reflection dump at the main menu (the SDK's `DumpReflectionDelay`) finds 700 classes but only 163 function objects, 157 of them `Core.Object`'s, and 221 registered natives in `GNatives`, nearly all Core's; Engine's script natives (`Spawn`, `Trace`, ...) are not registered. The table names 234 `UObject` natives in `symbols.txt`. Seven functions are
 shared by two or three natives (the linker folded identical bodies, such as
 `execIntZero`, `execFalse` and `execNoObject` at `0x10AFDC00`), and stay
 unnamed. Fifteen natives sat inside a neighbour's range in Ghidra's export,
