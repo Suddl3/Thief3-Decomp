@@ -551,6 +551,28 @@ a named `VTable` field. One of those notes, a method `Class_10BFBD70.h`
 lacked, moved 46 units on the next `headers.py build`: fix the merge in the
 tools first, and give workers only what the tools cannot settle.
 
+## Readable code
+
+A match proves that a function compiles to the game's code, not that anyone
+can read it. After batch w11, 6,878 functions were in `src/` and 18.6% of the
+game's code matched, yet almost nothing carried a name:
+`tools/agent/readability.py` counts the names the decompilation uses.
+
+| 2026-10-10 | Total | Named |
+|---|---|---|
+| Functions readable (function and class named) | 6,878 | 613 (8.9%) |
+| Class headers (`include/Game`) | 3,361 | 34 (1.0%) |
+| Fields in those headers | 8,689 | 292 (3.4%) |
+| Virtual slots in those headers | 13,384 | 1,403 (10.5%) |
+
+The matching swarm was tuned for matches per token, and its workers may not
+invent a name (the protocol's "Names need evidence"), so a method is
+`FUN_<address>` on a class `Class_<address>`, its fields `UnknownXX`, and a
+class that calls slot 63 declares `Virtual0()` to `Virtual62()` first. Names
+change no code, so they can come after the matches at no matching cost; they
+need their own work and their own measure. Run `readability.py --history`
+after each naming pass (it appends to `build/agent/readability-history.jsonl`).
+
 ## Matches without a model
 
 The cheapest match is the one no worker makes. The lead's tools take the
