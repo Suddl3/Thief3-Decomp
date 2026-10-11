@@ -28,7 +28,7 @@ class Class_10E8BE68
 public:
     virtual void Virtual0();
 
-    void FUN_10bc5b50();
+    void PopState();
 };
 
 class Class_10E96EB0 : public Class_10E8BE68
@@ -55,5 +55,5 @@ void Class_10E96EB0::FUN_10be91b0()
         if (!(Dist < Unknown48))
             return;
     }
-    FUN_10bc5b50();
+    PopState();
 }

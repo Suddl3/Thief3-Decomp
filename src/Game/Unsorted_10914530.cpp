@@ -41,9 +41,9 @@ void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 // FUNCTION: 0x10914530 ?FUN_10914530@Class_10914530@@QAEXHHHH@Z
 void Class_10914530::FUN_10914530(int A, int B, int C, int D)
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     Class_10E495F8* Obj = new(0, 0, 0, 0, 0) Class_10E495F8;
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     int Index = Unknown04.Count;
     Class_10BFBD70* List = &Unknown04;
     List->FUN_10bfbd70(Index + 1);

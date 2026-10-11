@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10BB85E0.h"
 
-class Class_10E94578
+class cTacticMoveToPoint
 {
 public:
     virtual void Virtual0();
@@ -30,10 +30,10 @@ public:
     virtual void Virtual22();
     virtual void FUN_10bcac50(int A, int B, int C, int D, int E);
 
-    void FUN_10bc5b50();
+    void PopState();
 };
 
-class Class_10E95D00 : public Class_10E94578
+class Class_10E95D00 : public cTacticMoveToPoint
 {
 public:
     virtual void FUN_10be2ee0(int A, int B, int C, int D, int E);
@@ -44,7 +44,7 @@ public:
 // FUNCTION: 0x10BE2EE0 ?FUN_10be2ee0@Class_10E95D00@@UAEXHHHHH@Z
 void Class_10E95D00::FUN_10be2ee0(int A, int B, int C, int D, int E)
 {
-    Class_10E94578::FUN_10bcac50(A, B, C, D, E);
+    cTacticMoveToPoint::FUN_10bcac50(A, B, C, D, E);
     Unknown04->FUN_10bb8ee0(0);
-    FUN_10bc5b50();
+    PopState();
 }

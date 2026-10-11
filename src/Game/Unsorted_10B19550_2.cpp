@@ -159,8 +159,8 @@ int FUN_10b196a0()
     return DAT_10f35dec->Unknown08->Unknown47C;
 }
 
-// FUNCTION: 0x10B1BCC0 ?FUN_10b1bcc0@Class_10E79488@@UAE_NH@Z
-bool Class_10E79488::FUN_10b1bcc0(int param)
+// FUNCTION: 0x10B1BCC0 ?HasWindowManager@Class_10E79488@@UAE_NH@Z
+bool Class_10E79488::HasWindowManager(int param)
 {
     return GWindowManager[0] != 0;
 }

@@ -13,7 +13,7 @@ public:
         FUN_10b330d0(0);
         if (Unknown04)
         {
-            FUN_10905aa0()->Virtual5(Unknown08);
+            GetAllocator()->Virtual5(Unknown08);
             Unknown08 = 0;
             Unknown04 = 0;
         }

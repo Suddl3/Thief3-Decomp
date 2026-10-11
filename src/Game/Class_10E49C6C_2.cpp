@@ -9,8 +9,8 @@ void Class_10E49C6C::FUN_10930110(int Param1, int Param2)
 {
     if (!DAT_10f2c757 && FUN_10925160(Param2))
     {
-        for (int i = 0; i < Unknown50; i++)
-            FUN_1092fae0(Param1, 4, Unknown58[i]);
+        for (int i = 0; i < m_ItemCount; i++)
+            FUN_1092fae0(Param1, 4, m_Items[i]);
         FUN_10925190(4);
     }
 }

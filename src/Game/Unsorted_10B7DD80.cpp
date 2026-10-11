@@ -11,7 +11,7 @@ void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D
 
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 Class_10D9B090* FUN_10d9dcb0();
 
@@ -39,9 +39,9 @@ public:
 // FUNCTION: 0x10B7DFF0 ?FUN_10b7dff0@@YGPAVClass_10E89540@@HHH@Z
 Class_10E89540* __stdcall FUN_10b7dff0(int A, int B, int C)
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     Class_10E89540* Obj = new(0, 0, 0, 0, 0) Class_10E89540(B, A);
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     Class_10B7DFF0_Unknown10* Field = Obj->Unknown10;
     Field->Unknown28 = (Field->Unknown28 & 0xffffffe1) | 1;
     FUN_10d9dcb0()->FUN_10d9e490((Struct_10D9E5E0_Param*)Obj);

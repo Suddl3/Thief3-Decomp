@@ -20,7 +20,7 @@ public:
 class Class_10E8BE68
 {
 public:
-    virtual void FUN_10bca010(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 };
 
 class Class_10E95BE8 : public Class_10E8BE68
@@ -99,7 +99,7 @@ public:
 // FUNCTION: 0x10BE3010 ?FUN_10be3010@Class_10E95BE8@@UAEXAAVFArchive@@@Z
 void Class_10E95BE8::FUN_10be3010(FArchive& Ar)
 {
-    Class_10E8BE68::FUN_10bca010(Ar);
+    Class_10E8BE68::Serialize(Ar);
     Ar.Virtual6(&Unknown40);
     unsigned char Temp = Unknown44;
     Ar.Serialize(&Temp, 1);

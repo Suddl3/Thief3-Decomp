@@ -126,7 +126,7 @@ public:
     virtual void Virtual103();
     virtual void Virtual104();
     virtual void Virtual105();
-    virtual void FUN_10a629b0(int A);
+    virtual void Update(int A);
     virtual void Virtual107();
     virtual void Virtual108();
     virtual void Virtual109();
@@ -162,19 +162,19 @@ public:
     char Unknown1D8[4];
     bool Unknown1DC;
     char Unknown1DD[3];
-    int Unknown1E0;
-    float Unknown1E4;
+    int m_TimerAction;
+    float m_Timer;
 };
 
-// FUNCTION: 0x10A629B0 ?FUN_10a629b0@Class_10E6A9F8@@UAEXH@Z
-void Class_10E6A9F8::FUN_10a629b0(int A)
+// FUNCTION: 0x10A629B0 ?Update@Class_10E6A9F8@@UAEXH@Z
+void Class_10E6A9F8::Update(int A)
 {
     Virtual134(Unknown1D4);
-    if (Unknown1DC && Unknown1E0 != 0x40)
+    if (Unknown1DC && m_TimerAction != 0x40)
     {
-        Unknown1E4 = *(float*)&A + Unknown1E4;
-        if (Unknown1E4 > 0.8)
-            Virtual135(Unknown1E0);
+        m_Timer = *(float*)&A + m_Timer;
+        if (m_Timer > 0.8)
+            Virtual135(m_TimerAction);
     }
     FUN_10a53560(A);
 }

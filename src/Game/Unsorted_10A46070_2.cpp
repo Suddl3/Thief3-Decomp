@@ -8,7 +8,7 @@
 #include "Game/Class_10A53BD0.h"
 #include "Game/Class_10A54CC0.h"
 #include "Game/Class_10A55080.h"
-#include "Game/Class_10E67938.h"
+#include "Game/cActorManager.h"
 #include "Game/Class_10E6798C.h"
 #include "Game/Class_10E679BC.h"
 #include "Game/Class_10E67DF0.h"
@@ -98,8 +98,8 @@ int FUN_10a48b10(Class_1098E330* Obj)
     return Value;
 }
 
-// FUNCTION: 0x10A4C4D0 ?FUN_10a4c4d0@Class_10E67938@@UAE_NH@Z
-bool Class_10E67938::FUN_10a4c4d0(int A)
+// FUNCTION: 0x10A4C4D0 ?FUN_10a4c4d0@cActorManager@@UAE_NH@Z
+bool cActorManager::FUN_10a4c4d0(int A)
 {
     Virtual14(&A, A);
     return A != DAT_10f3a084;

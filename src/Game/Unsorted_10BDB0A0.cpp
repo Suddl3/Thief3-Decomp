@@ -11,7 +11,7 @@
 class Class_10E8BE68
 {
 public:
-    virtual void FUN_10bca010(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 };
 
 void FUN_10c11ff0(FArchive& Ar, int* Value);
@@ -74,15 +74,15 @@ public:
     Class_10BB8700* Unknown04;
 };
 
-class Class_10E94578
+class cTacticMoveToPoint
 {
 public:
     virtual void FUN_10bdb0a0();
 
-    void FUN_10bc5b50();
+    void PopState();
 };
 
-class Class_10E947B8 : public Class_10E94578
+class Class_10E947B8 : public cTacticMoveToPoint
 {
 public:
     virtual void FUN_10bdb0a0();
@@ -102,7 +102,7 @@ void Class_10E947B8::FUN_10bdb0a0()
         if (!Obj->FUN_10bff330())
         {
             Obj->FUN_10bff240(1);
-            FUN_10bc5b50();
+            PopState();
         }
         else
         {
@@ -130,6 +130,6 @@ void Class_10E94E00::FUN_10bdb110(int A)
 // FUNCTION: 0x10BDB210 ?FUN_10bdb210@Class_10E94A00@@UAEXAAVFArchive@@@Z
 void Class_10E94A00::FUN_10bdb210(FArchive& Ar)
 {
-    Class_10E8BE68::FUN_10bca010(Ar);
+    Class_10E8BE68::Serialize(Ar);
     FUN_10c11ff0(Ar, &Unknown54);
 }

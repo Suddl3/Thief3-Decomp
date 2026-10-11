@@ -15,7 +15,7 @@ public:
     virtual void Virtual5(int A, int B, int C, Class_10BFBD70& Found, int E);
 };
 
-cUObjectLinkManager* FUN_10b0b2b0();
+cUObjectLinkManager* GetUObjectLinkManager();
 
 class Class_10B82390;
 
@@ -51,7 +51,7 @@ Struct_10A36570* __stdcall FUN_10a36570(Struct_10A36570* Out, int Id, int Index)
     Result.Unknown04 = 0.0f;
     Result.Unknown08 = 0.0f;
     Class_10BFBD70 Found;
-    FUN_10b0b2b0()->Virtual5(Id, 0, 0x2e2eda5, Found, 3);
+    GetUObjectLinkManager()->Virtual5(Id, 0, 0x2e2eda5, Found, 3);
     if (Found.Count != 0)
     {
         Class_10B82390* Obj = (Class_10B82390*)((Class_10AAB5C0*)Found.Data[0])->FUN_10aab5c0();

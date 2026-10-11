@@ -3,7 +3,7 @@
 #include "Core/CoreClasses.h"
 #include "Game/Class_10905A90_Member.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 // Ion Storm's placement new and its delete (0x10905C10; the delete folded into ::operator delete).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
@@ -13,42 +13,42 @@ void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 // FUNCTION: 0x10ADD960 ?GetPrivateStaticClassUBitfieldEnum@UBitfieldEnum@@SAPAVUClass@@PBD@Z
 UClass* UBitfieldEnum::GetPrivateStaticClassUBitfieldEnum(const TCHAR* Package)
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     UClass* ReturnClass = ::new(0, 0, 0, 0, 0) UClass(EC_StaticConstructor, sizeof(UBitfieldEnum), StaticClassFlags,
                                                       FGuid(0, 0, 0, 0), &TEXT("UBitfieldEnum")[1], Package,
                                                       StaticConfigName(),
                                                       RF_Public | RF_Standalone | RF_Transient | RF_Native,
                                                       InternalConstructor,
                                                       (void (UObject::*)())&UBitfieldEnum::StaticConstructor);
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     return ReturnClass;
 }
 
 // FUNCTION: 0x10AF0430 ?GetPrivateStaticClassUBitfieldProperty@UBitfieldProperty@@SAPAVUClass@@PBD@Z
 UClass* UBitfieldProperty::GetPrivateStaticClassUBitfieldProperty(const TCHAR* Package)
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     UClass* ReturnClass = ::new(0, 0, 0, 0, 0) UClass(EC_StaticConstructor, sizeof(UBitfieldProperty), StaticClassFlags,
                                                       FGuid(0, 0, 0, 0), &TEXT("UBitfieldProperty")[1], Package,
                                                       StaticConfigName(),
                                                       RF_Public | RF_Standalone | RF_Transient | RF_Native,
                                                       InternalConstructor,
                                                       (void (UObject::*)())&UBitfieldProperty::StaticConstructor);
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     return ReturnClass;
 }
 
 // FUNCTION: 0x10B0F240 ?GetPrivateStaticClassULinkDataObject@ULinkDataObject@@SAPAVUClass@@PBD@Z
 UClass* ULinkDataObject::GetPrivateStaticClassULinkDataObject(const TCHAR* Package)
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     UClass* ReturnClass = ::new(0, 0, 0, 0, 0) UClass(EC_StaticConstructor, sizeof(ULinkDataObject), StaticClassFlags,
                                                       FGuid(0, 0, 0, 0), &TEXT("ULinkDataObject")[1], Package,
                                                       StaticConfigName(),
                                                       RF_Public | RF_Standalone | RF_Transient | RF_Native,
                                                       InternalConstructor,
                                                       (void (UObject::*)())&ULinkDataObject::StaticConstructor);
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     return ReturnClass;
 }
 

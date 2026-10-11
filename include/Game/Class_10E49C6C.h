@@ -21,9 +21,9 @@ public:
     void FUN_10930170(int A, int B);
 
     char Pad04[0x4c];
-    int Unknown50;
+    int m_ItemCount;
     char Unknown54[4];
-    void** Unknown58;
+    void** m_Items;
 };
 
 #endif // GAME_CLASS_10E49C6C_H

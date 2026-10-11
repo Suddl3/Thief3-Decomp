@@ -4,7 +4,7 @@
 #include "Game/Class_10C5EE80.h"
 #include "Game/Class_10E9C9A8.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 struct Struct_10C5DB50
 {
@@ -46,7 +46,7 @@ void Class_10C5EE80::FUN_10c5ee80()
     FUN_10c5e600(0);
     if (Unknown04)
     {
-        FUN_10905aa0()->Virtual5(Unknown08);
+        GetAllocator()->Virtual5(Unknown08);
         Unknown08 = 0;
         Unknown04 = 0;
     }

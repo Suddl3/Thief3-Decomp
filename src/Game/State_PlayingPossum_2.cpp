@@ -11,13 +11,13 @@ public:
     int FUN_10bc4bf0();
 };
 
-class Class_10E94578 : public Class_10BC4BF0
+class cTacticMoveToPoint : public Class_10BC4BF0
 {
 public:
-    void FUN_10bc5b50();
+    void PopState();
 };
 
-class State_PlayingPossum : public Class_10E94578
+class State_PlayingPossum : public cTacticMoveToPoint
 {
 public:
     virtual void FUN_10bce970();
@@ -45,18 +45,18 @@ public:
     virtual void FUN_10bcecd0(int A, int B, int C, int D, int E);
 
     char Unknown04[0x3C];
-    double Unknown40;
-    double Unknown48;
-    float Unknown50;
+    double m_StartTime;
+    double m_EndTime;
+    float m_Duration;
 };
 
 // FUNCTION: 0x10BCE970 ?FUN_10bce970@State_PlayingPossum@@UAEXXZ
 void State_PlayingPossum::FUN_10bce970()
 {
-    if (Unknown40 < 0.0)
+    if (m_StartTime < 0.0)
     {
-        Unknown40 = TimeManager::Instance()->GetGameTime();
-        Unknown48 = Unknown40 + Unknown50;
+        m_StartTime = TimeManager::Instance()->GetGameTime();
+        m_EndTime = m_StartTime + m_Duration;
         ((Class_10C30640*)FUN_10bc4bf0())->FUN_10c30640();
     }
 }

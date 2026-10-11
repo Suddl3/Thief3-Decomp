@@ -18,13 +18,13 @@ public:
     int Unknown14;
 };
 
-// FUNCTION: 0x10C0B960 ?FUN_10c0b960@cAIManager@@QAEXAAVFArchive@@@Z
-void cAIManager::FUN_10c0b960(FArchive& Ar)
+// FUNCTION: 0x10C0B960 ?Serialize@cAIManager@@QAEXAAVFArchive@@@Z
+void cAIManager::Serialize(FArchive& Ar)
 {
-    int Count = Unknown14.Count;
+    int Count = m_Controllers.Count;
     Ar.Virtual1(&Count, 4);
     if (Ar.Unknown14)
-        Unknown14.FUN_10bfbd70(Count);
+        m_Controllers.FUN_10bfbd70(Count);
     for (int i = 0; i < Count; i++)
-        Ar.Virtual6(&Unknown14.Data[i]);
+        Ar.Virtual6(&m_Controllers.Data[i]);
 }

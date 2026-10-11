@@ -15,10 +15,10 @@ public:
     virtual Class_10919B80* Virtual0();
     virtual Class_10919B80* FUN_10a12e60(int A);
     virtual void Virtual2();
-    virtual cFlagElementLogic* FUN_10a13600(const Class_109022E0& A, float B);
+    virtual cFlagElementLogic* CreateFlagElement(const Class_109022E0& A, float B);
     virtual void Virtual4();
     virtual void Virtual5();
-    virtual void FUN_10a14540();
+    virtual void Clear();
     virtual void Virtual7();
     virtual void Virtual8();
     virtual void FUN_10a12fd0(int Param);
@@ -28,15 +28,15 @@ public:
     virtual void Virtual13();
     virtual void Virtual14(int A, int* B);
     virtual void Virtual15();
-    virtual int FUN_10a141a0(int Value);
+    virtual int AddChild(int Value);
     virtual void Virtual17();
     virtual int FUN_10a13090(int Param);
     virtual int FUN_10a130d0(int Param);
     virtual void Virtual20();
     virtual void Virtual21();
     virtual void Virtual22();
-    virtual Class_10E5D548_Unknown10* FUN_10a13150(int A);
-    virtual Struct_10A13110* FUN_10a13110(int Key);
+    virtual Class_10E5D548_Unknown10* FindChildByKey(int A);
+    virtual Struct_10A13110* FindEntryByKey(int Key);
     virtual void Virtual25();
     virtual void Virtual26();
     virtual void Virtual27();
@@ -44,15 +44,15 @@ public:
     virtual void FUN_10a13480(int Param);
 
     int Unknown04;
-    int Unknown08;
+    int m_ChildCount;
     char Pad0C[0x4];
-    Class_10E5D548_Unknown10** Unknown10;
+    Class_10E5D548_Unknown10** m_Children;
     int Unknown14;
     char Pad18[0x4];
     int* Unknown1C;
-    int Unknown20;
+    int m_EntryCount;
     char Unknown24[4];
-    Struct_10A13110* Unknown28;
+    Struct_10A13110* m_Entries;
 };
 
 #endif // GAME_CCONVERSATIONMANAGER_H

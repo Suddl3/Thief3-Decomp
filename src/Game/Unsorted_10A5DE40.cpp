@@ -69,6 +69,6 @@ void __stdcall FUN_10a5ef80(Class_1096A960* Owner, Class_10A5EF80_Item* Item, in
     if (Data)
     {
         char* Block = Data - 4;
-        FUN_10905aa0()->Virtual5(Block);
+        GetAllocator()->Virtual5(Block);
     }
 }

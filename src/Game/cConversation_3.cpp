@@ -8,24 +8,24 @@ public:
     virtual void Virtual0();
     virtual void Virtual1();
     virtual void Virtual2(int A);
-    virtual void FUN_10a823f0(int Item, int Param3);
+    virtual void ReplaceConEvent(int Item, int Param3);
 
-    Class_10BFBD70 Unknown04;
+    Class_10BFBD70 m_ConEvents;
 };
 
-// FUNCTION: 0x10A823F0 ?FUN_10a823f0@cConversation@@UAEXHH@Z
-void cConversation::FUN_10a823f0(int Item, int Param3)
+// FUNCTION: 0x10A823F0 ?ReplaceConEvent@cConversation@@UAEXHH@Z
+void cConversation::ReplaceConEvent(int Item, int Param3)
 {
     if (!Item)
     {
         Virtual2(Param3);
         return;
     }
-    for (int i = 0; i < Unknown04.Count; i++)
+    for (int i = 0; i < m_ConEvents.Count; i++)
     {
-        if (Item == Unknown04.Data[i])
+        if (Item == m_ConEvents.Data[i])
         {
-            Unknown04.FUN_10a81b10(i, &Param3);
+            m_ConEvents.FUN_10a81b10(i, &Param3);
             return;
         }
     }

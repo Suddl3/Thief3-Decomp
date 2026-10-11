@@ -11,7 +11,7 @@ void Class_1090FD40::FUN_1090fd00()
     FUN_1090f2c0(0);
     if (Unknown04)
     {
-        FUN_10905aa0()->Virtual5(Unknown08);
+        GetAllocator()->Virtual5(Unknown08);
         Unknown08 = 0;
         Unknown04 = 0;
     }

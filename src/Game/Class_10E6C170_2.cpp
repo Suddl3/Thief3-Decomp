@@ -9,14 +9,14 @@ public:
     virtual void Virtual0();
     virtual void Virtual1();
     virtual void Virtual2();
-    virtual void FUN_10aa8060(void* Reader, int Version, int Flag);
+    virtual void Load(void* Reader, int Version, int Flag);
 
     char Unknown04[4];
     int Unknown08;
 };
 
-// FUNCTION: 0x10AA8060 ?FUN_10aa8060@Class_10E6C170@@UAEXPAXHH@Z
-void Class_10E6C170::FUN_10aa8060(void* Reader, int Version, int Flag)
+// FUNCTION: 0x10AA8060 ?Load@Class_10E6C170@@UAEXPAXHH@Z
+void Class_10E6C170::Load(void* Reader, int Version, int Flag)
 {
     if (Flag == 0)
         FUN_10d3d990(Reader, &Unknown08);

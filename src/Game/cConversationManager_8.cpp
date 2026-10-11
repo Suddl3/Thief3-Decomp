@@ -3,7 +3,7 @@
 
 #include "Game/Class_10905A90_Member.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 class Class_10A13BC0_Data
 {
@@ -40,16 +40,16 @@ public:
     virtual void Virtual22();
     virtual int Virtual23(int Key);
 
-    void FUN_10a13bc0();
+    void ResolvePending();
 
     char Unknown04[0x38];
     int Count;
-    unsigned Unknown40;
+    unsigned m_DataBytes;
     Class_10A13BC0_Data* Data;
 };
 
-// FUNCTION: 0x10A13BC0 ?FUN_10a13bc0@cConversationManager@@QAEXXZ
-void cConversationManager::FUN_10a13bc0()
+// FUNCTION: 0x10A13BC0 ?ResolvePending@cConversationManager@@QAEXXZ
+void cConversationManager::ResolvePending()
 {
     int Num = Count;
     for (int i = 0; i < Num; i++)
@@ -61,22 +61,22 @@ void cConversationManager::FUN_10a13bc0()
     if (Data == 0)
         Capacity = 0;
     else
-        Capacity = Unknown40 / sizeof(Class_10A13BC0_Data);
-    FUN_10905aa0()->Virtual8(0, 0);
+        Capacity = m_DataBytes / sizeof(Class_10A13BC0_Data);
+    GetAllocator()->Virtual8(0, 0);
     if ((int)Capacity < 0)
     {
         int NewCapacity = 0;
         if (Capacity)
             NewCapacity = 0x10;
-        Data = (Class_10A13BC0_Data*)FUN_10905aa0()->Virtual3(Data, NewCapacity * sizeof(Class_10A13BC0_Data), 0, 0, 0, 0);
-        Unknown40 = NewCapacity * sizeof(Class_10A13BC0_Data);
+        Data = (Class_10A13BC0_Data*)GetAllocator()->Virtual3(Data, NewCapacity * sizeof(Class_10A13BC0_Data), 0, 0, 0, 0);
+        m_DataBytes = NewCapacity * sizeof(Class_10A13BC0_Data);
     }
     else if ((int)(Capacity - 16) >= 0)
     {
-        FUN_10905aa0()->Virtual5(Data);
+        GetAllocator()->Virtual5(Data);
         Data = 0;
-        Unknown40 = 0;
+        m_DataBytes = 0;
     }
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     Count = 0;
 }

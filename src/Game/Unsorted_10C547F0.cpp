@@ -3,7 +3,7 @@
 #include "Game/Class_10AB5B20.h"
 #include "Game/Class_10C54970.h"
 #include "Game/Class_10C55800.h"
-#include "Game/Class_10E9C330.h"
+#include "Game/SoundSimulator.h"
 #include "Game/Object_10AB5B20.h"
 
 class Class_10C41420
@@ -18,8 +18,8 @@ struct Struct_10C55800
 {
 };
 
-// FUNCTION: 0x10C547F0 ?FUN_10c547f0@Class_10E9C330@@UAEXH@Z
-void Class_10E9C330::FUN_10c547f0(int p1)
+// FUNCTION: 0x10C547F0 ?FUN_10c547f0@SoundSimulator@@UAEXH@Z
+void SoundSimulator::FUN_10c547f0(int p1)
 {
     FUN_10c47d90()->FUN_10c41490(p1);
 }

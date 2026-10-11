@@ -33,7 +33,7 @@ public:
     Class_10B88A80_Node* Next;
 };
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 extern bool DAT_10ffc854;
 
@@ -155,7 +155,7 @@ void Class_10B89820::FUN_10b89820()
     FUN_10b89460(0);
     if (Unknown04)
     {
-        FUN_10905aa0()->Virtual5(Unknown08);
+        GetAllocator()->Virtual5(Unknown08);
         Unknown08 = 0;
         Unknown04 = 0;
     }

@@ -5,7 +5,7 @@
 #include "Game/Class_1094C3F0.h"
 #include "Game/Struct_1094C6E0.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 class Class_10E499F4 {
 public:
@@ -37,13 +37,13 @@ void Class_1094C3F0::FUN_1094b640(int NewCount)
         Element->Unknown00 = 0;
         Element->Unknown04 = 0;
     }
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     if (NewCount > Capacity)
     {
         int NewCapacity = NewCount;
         if (Capacity)
             NewCapacity = (NewCount & ~15) + 16;
-        void* Block = FUN_10905aa0()->Virtual3(Unknown08, NewCapacity * sizeof(Class_1094B640_Unknown08), 0, 0, 0, 0);
+        void* Block = GetAllocator()->Virtual3(Unknown08, NewCapacity * sizeof(Class_1094B640_Unknown08), 0, 0, 0, 0);
         Unknown04 = NewCapacity * sizeof(Class_1094B640_Unknown08);
         Unknown08 = Block;
     }
@@ -51,14 +51,14 @@ void Class_1094C3F0::FUN_1094b640(int NewCount)
     {
         if (NewCount == 0)
         {
-            FUN_10905aa0()->Virtual5(Unknown08);
+            GetAllocator()->Virtual5(Unknown08);
             Unknown08 = 0;
             Unknown04 = 0;
         }
         else
         {
             int NewCapacity = (NewCount & ~15) + 16;
-            void* Block = FUN_10905aa0()->Virtual3(Unknown08, NewCapacity * sizeof(Class_1094B640_Unknown08), 0, 0, 0, 0);
+            void* Block = GetAllocator()->Virtual3(Unknown08, NewCapacity * sizeof(Class_1094B640_Unknown08), 0, 0, 0, 0);
             Unknown04 = NewCapacity * sizeof(Class_1094B640_Unknown08);
             Unknown08 = Block;
         }
@@ -72,7 +72,7 @@ void Class_1094C3F0::FUN_1094b640(int NewCount)
             Element->Unknown04 = 0;
         }
     }
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     Unknown00 = NewCount;
 }
 
@@ -82,7 +82,7 @@ void Class_1094C3F0::FUN_1094c3f0()
     FUN_1094b640(0);
     if (Unknown04)
     {
-        FUN_10905aa0()->Virtual5(Unknown08);
+        GetAllocator()->Virtual5(Unknown08);
         Unknown08 = 0;
         Unknown04 = 0;
     }

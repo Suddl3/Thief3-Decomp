@@ -12,15 +12,15 @@ class cTaggedAnimSeq : public Class_10E65558
 {
 public:
     virtual ~cTaggedAnimSeq();
-    virtual Class_1090A780 FUN_10b34b10();
+    virtual Class_1090A780 GetName();
     virtual void Virtual2();
     virtual void Virtual3();
-    virtual bool FUN_10a1f150(Class_10A1F150* Item);
-    virtual void FUN_10a1f840(void* A);
+    virtual bool SetName(Class_10A1F150* Item);
+    virtual void Play(void* A);
 
     cTaggedAnimSeq();
 
-    int* Unknown04;
+    int* m_Name;
 };
 
 #endif // GAME_CTAGGEDANIMSEQ_H

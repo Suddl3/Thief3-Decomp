@@ -119,13 +119,13 @@ public:
     Class_10BF7F90* FUN_10bc4160();
 };
 
-class Class_10E94578 : public Class_10BC4160
+class cTacticMoveToPoint : public Class_10BC4160
 {
 public:
-    void FUN_10bc5b50();
+    void PopState();
 };
 
-class Class_10E91CB8 : public Class_10E94578
+class Class_10E91CB8 : public cTacticMoveToPoint
 {
 public:
     virtual void Virtual1();
@@ -198,7 +198,7 @@ public:
     virtual void FUN_10bce700(int A, int B);
 
     void FUN_10bce0d0(int A);
-    void FUN_10bc5b50();
+    void PopState();
 
     Class_10BB8360* Unknown04;
 };
@@ -216,7 +216,7 @@ void Class_10E8BE68::FUN_10bce700(int A, int B)
         }
         int Limit = Unknown04->FUN_10bbac00(4);
         if (B > Limit)
-            FUN_10bc5b50();
+            PopState();
         else
             FUN_10bce0d0(B);
     }
@@ -228,7 +228,7 @@ void Class_10E91CB8::FUN_10bce760()
     if (!FUN_10bc4160()->FUN_10aa82d0())
     {
         if (!((Class_10AA6080*)FUN_10aa6040())->FUN_10aa6080(&((AActor*)Unknown04->Unknown08->FUN_10c7d570())->Location, 80.0f))
-            FUN_10bc5b50();
+            PopState();
         else
             FUN_10bce210();
     }

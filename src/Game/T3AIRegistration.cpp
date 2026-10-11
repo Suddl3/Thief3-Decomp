@@ -3,7 +3,7 @@
 #include "T3AI/T3AIClasses.h"
 #include "Game/Class_10905A90_Member.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 // Ion Storm's placement new and its delete (0x10905C10; the delete folded into ::operator delete).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
@@ -91,83 +91,83 @@ void AT3FactionModel::InitializePrivateStaticClassAT3FactionModel()
 // FUNCTION: 0x10964540 ?GetPrivateStaticClassAT3AIPawnController@AT3AIPawnController@@SAPAVUClass@@PBD@Z
 UClass* AT3AIPawnController::GetPrivateStaticClassAT3AIPawnController(const TCHAR* Package)
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     UClass* ReturnClass = ::new(0, 0, 0, 0, 0) UClass(EC_StaticConstructor, sizeof(AT3AIPawnController), StaticClassFlags,
                                                       FGuid(0, 0, 0, 0), &TEXT("AT3AIPawnController")[1], Package,
                                                       StaticConfigName(),
                                                       RF_Public | RF_Standalone | RF_Transient | RF_Native,
                                                       InternalConstructor,
                                                       (void (UObject::*)())&AT3AIPawnController::StaticConstructor);
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     return ReturnClass;
 }
 
 // FUNCTION: 0x10964610 ?GetPrivateStaticClassAT3BehaviorModel@AT3BehaviorModel@@SAPAVUClass@@PBD@Z
 UClass* AT3BehaviorModel::GetPrivateStaticClassAT3BehaviorModel(const TCHAR* Package)
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     UClass* ReturnClass = ::new(0, 0, 0, 0, 0) UClass(EC_StaticConstructor, sizeof(AT3BehaviorModel), StaticClassFlags,
                                                       FGuid(0, 0, 0, 0), &TEXT("AT3BehaviorModel")[1], Package,
                                                       StaticConfigName(),
                                                       RF_Public | RF_Standalone | RF_Transient | RF_Native,
                                                       InternalConstructor,
                                                       (void (UObject::*)())&AT3BehaviorModel::StaticConstructor);
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     return ReturnClass;
 }
 
 // FUNCTION: 0x109646E0 ?GetPrivateStaticClassAT3SensoryModel@AT3SensoryModel@@SAPAVUClass@@PBD@Z
 UClass* AT3SensoryModel::GetPrivateStaticClassAT3SensoryModel(const TCHAR* Package)
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     UClass* ReturnClass = ::new(0, 0, 0, 0, 0) UClass(EC_StaticConstructor, sizeof(AT3SensoryModel), StaticClassFlags,
                                                       FGuid(0, 0, 0, 0), &TEXT("AT3SensoryModel")[1], Package,
                                                       StaticConfigName(),
                                                       RF_Public | RF_Standalone | RF_Transient | RF_Native,
                                                       InternalConstructor,
                                                       (void (UObject::*)())&AT3SensoryModel::StaticConstructor);
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     return ReturnClass;
 }
 
 // FUNCTION: 0x109647B0 ?GetPrivateStaticClassAT3CombatModel@AT3CombatModel@@SAPAVUClass@@PBD@Z
 UClass* AT3CombatModel::GetPrivateStaticClassAT3CombatModel(const TCHAR* Package)
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     UClass* ReturnClass = ::new(0, 0, 0, 0, 0) UClass(EC_StaticConstructor, sizeof(AT3CombatModel), StaticClassFlags,
                                                       FGuid(0, 0, 0, 0), &TEXT("AT3CombatModel")[1], Package,
                                                       StaticConfigName(),
                                                       RF_Public | RF_Standalone | RF_Transient | RF_Native,
                                                       InternalConstructor,
                                                       (void (UObject::*)())&AT3CombatModel::StaticConstructor);
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     return ReturnClass;
 }
 
 // FUNCTION: 0x10964880 ?GetPrivateStaticClassAT3MovementModel@AT3MovementModel@@SAPAVUClass@@PBD@Z
 UClass* AT3MovementModel::GetPrivateStaticClassAT3MovementModel(const TCHAR* Package)
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     UClass* ReturnClass = ::new(0, 0, 0, 0, 0) UClass(EC_StaticConstructor, sizeof(AT3MovementModel), StaticClassFlags,
                                                       FGuid(0, 0, 0, 0), &TEXT("AT3MovementModel")[1], Package,
                                                       StaticConfigName(),
                                                       RF_Public | RF_Standalone | RF_Transient | RF_Native,
                                                       InternalConstructor,
                                                       (void (UObject::*)())&AT3MovementModel::StaticConstructor);
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     return ReturnClass;
 }
 
 // FUNCTION: 0x10964950 ?GetPrivateStaticClassAT3FactionModel@AT3FactionModel@@SAPAVUClass@@PBD@Z
 UClass* AT3FactionModel::GetPrivateStaticClassAT3FactionModel(const TCHAR* Package)
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     UClass* ReturnClass = ::new(0, 0, 0, 0, 0) UClass(EC_StaticConstructor, sizeof(AT3FactionModel), StaticClassFlags,
                                                       FGuid(0, 0, 0, 0), &TEXT("AT3FactionModel")[1], Package,
                                                       StaticConfigName(),
                                                       RF_Public | RF_Standalone | RF_Transient | RF_Native,
                                                       InternalConstructor,
                                                       (void (UObject::*)())&AT3FactionModel::StaticConstructor);
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     return ReturnClass;
 }

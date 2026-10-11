@@ -43,7 +43,7 @@ public:
     virtual void Virtual24();
     virtual void Virtual25();
     virtual void Virtual26();
-    virtual void FUN_1094f6f0(Class_10BFBD70* Out, int Param);
+    virtual void CollectValues(Class_10BFBD70* Out, int Param);
 
     char Unknown04[0xF0];
     int Unknown0F4;
@@ -86,17 +86,17 @@ void Class_1094EFC0::FUN_1094efc0(int A, int B)
     {
         Unknown0F0 = 0;
         Unknown0F4.FUN_10bfbd70(B);
-        FUN_10905aa0()->Virtual8(0, 0);
+        GetAllocator()->Virtual8(0, 0);
         for (int i = 0; i < B; i++)
         {
             Unknown0F4.Data[i] = (int)(new(0, 0, 0, 0, 0) Class_1094EFC0_Item);
         }
-        FUN_10905aa0()->Virtual9();
+        GetAllocator()->Virtual9();
     }
 }
 
-// FUNCTION: 0x1094F6F0 ?FUN_1094f6f0@Class_10E4AB88@@UAEXPAVClass_10BFBD70@@H@Z
-void Class_10E4AB88::FUN_1094f6f0(Class_10BFBD70* Out, int Param)
+// FUNCTION: 0x1094F6F0 ?CollectValues@Class_10E4AB88@@UAEXPAVClass_10BFBD70@@H@Z
+void Class_10E4AB88::CollectValues(Class_10BFBD70* Out, int Param)
 {
     for (int i = 0; i < Unknown0F4; i++)
     {
@@ -120,7 +120,7 @@ void Class_1094F750::FUN_1094f750()
     FUN_1094f510(0);
     if (Unknown04)
     {
-        FUN_10905aa0()->Virtual5(Unknown08);
+        GetAllocator()->Virtual5(Unknown08);
         Unknown08 = 0;
         Unknown04 = 0;
     }

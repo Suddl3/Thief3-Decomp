@@ -34,15 +34,15 @@ public:
 // FUNCTION: 0x10A634A0 ?FUN_10a634a0@Class_10E6AC98@@UAEXABVClass_109081E0@@@Z
 void Class_10E6AC98::FUN_10a634a0(const Class_109081E0& A)
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     Unknown14 = A;
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
 }
 
 // FUNCTION: 0x10A634D0 ?FUN_10a634d0@cMenu@@UAEXABVClass_109081E0@@@Z
 void cMenu::FUN_10a634d0(const Class_109081E0& A)
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     Unknown10 = A;
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
 }

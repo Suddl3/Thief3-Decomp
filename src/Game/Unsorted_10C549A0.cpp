@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10AFCF40.h"
 #include "Game/Class_10C55800.h"
-#include "Game/Class_10E9C330.h"
+#include "Game/SoundSimulator.h"
 #include "Game/TimeManager.h"
 #include "Game/Class_10C55090.h"
 
@@ -68,12 +68,12 @@ struct Struct_10C549A0
     int Unknown04;
 };
 
-// FUNCTION: 0x10C549A0 ?FUN_10c549a0@Class_10E9C330@@UAEXPAUStruct_10C549A0@@@Z
-void Class_10E9C330::FUN_10c549a0(Struct_10C549A0* A)
+// FUNCTION: 0x10C549A0 ?FUN_10c549a0@SoundSimulator@@UAEXPAUStruct_10C549A0@@@Z
+void SoundSimulator::FUN_10c549a0(Struct_10C549A0* A)
 {
-    for (int i = 0; i < Unknown4C; i++)
+    for (int i = 0; i < m_EntryCount; i++)
     {
-        Struct_10C549A0_Entry& Entry = Unknown54[i];
+        Struct_10C549A0_Entry& Entry = m_Entries[i];
         if (Entry.Unknown00 == A->Unknown04)
             Entry.Unknown04->Unknown08->Virtual10();
     }

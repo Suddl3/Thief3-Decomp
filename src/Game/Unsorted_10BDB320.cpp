@@ -16,15 +16,15 @@ public:
 
 void __stdcall FUN_109e3c90(int A);
 
-class Class_10E94578
+class cTacticMoveToPoint
 {
 public:
     virtual void Virtual0();
 
-    void FUN_10bc5b50();
+    void PopState();
 };
 
-class Class_10E94C58 : public Class_10E94578
+class Class_10E94C58 : public cTacticMoveToPoint
 {
 public:
     virtual void Virtual0();
@@ -103,6 +103,6 @@ void Class_10E94C58::FUN_10bdb360(int A)
     if (A == Unknown54)
     {
         Unknown54 = 0;
-        FUN_10bc5b50();
+        PopState();
     }
 }

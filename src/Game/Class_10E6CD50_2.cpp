@@ -1,7 +1,7 @@
 // Game/Class_10E6CD50_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10E5D5E0Base.h"
-#include "Game/Class_10E67938.h"
+#include "Game/cActorManager.h"
 #include "Game/Class_10E5D5E0.h"
 
 class Class_10AAB5C0
@@ -18,7 +18,7 @@ public:
     int Unknown08;
 };
 
-class Class_10E6CD50 : public Class_10AAB5C0, public Class_10E67938
+class Class_10E6CD50 : public Class_10AAB5C0, public cActorManager
 {
 public:
     virtual void FUN_10a94fc0();
@@ -28,7 +28,7 @@ class Class_10F46DA0
 {
 public:
     virtual void Virtual0();
-    virtual void Virtual1(Class_10E67938* Obj, int B, int C, Class_10E5D5E0* D);
+    virtual void Virtual1(cActorManager* Obj, int B, int C, Class_10E5D5E0* D);
 };
 
 extern Class_10F46DA0* DAT_10f46da0;

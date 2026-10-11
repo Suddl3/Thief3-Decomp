@@ -7,7 +7,7 @@
 
 class Class_10953590;
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 extern Class_10939570* DAT_10f323fc;
 

@@ -28,13 +28,13 @@ public:
     virtual int Virtual20();
 };
 
-// FUNCTION: 0x10A13150 ?FUN_10a13150@cConversationManager@@UAEPAVClass_10E5D548_Unknown10@@H@Z
-Class_10E5D548_Unknown10* cConversationManager::FUN_10a13150(int A)
+// FUNCTION: 0x10A13150 ?FindChildByKey@cConversationManager@@UAEPAVClass_10E5D548_Unknown10@@H@Z
+Class_10E5D548_Unknown10* cConversationManager::FindChildByKey(int A)
 {
-    for (int i = 0; i < Unknown08; i++)
+    for (int i = 0; i < m_ChildCount; i++)
     {
-        if (Unknown10[i]->Virtual20() == A)
-            return Unknown10[i];
+        if (m_Children[i]->Virtual20() == A)
+            return m_Children[i];
     }
     return 0;
 }

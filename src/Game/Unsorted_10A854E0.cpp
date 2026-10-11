@@ -81,7 +81,7 @@ void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D
 
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 class Class_10A857A0;
 
@@ -178,9 +178,9 @@ void Class_10E6C390::FUN_10a85660(int Message, int Value, int A, int B)
 Class_10E6DA64* Class_10A857A0::FUN_10a857a0(int A, int B)
 {
     DAT_10f46da0->Virtual3(this, 0x26, -1, -1);
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     Class_10E6DA64* Obj = new(0, 0, 0, 0, 0) Class_10E6DA64;
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     if (Unknown04 == 3)
         Obj->Virtual1(A, 0, 0, B);
     else

@@ -466,7 +466,7 @@ public:
     Class_10B6B3F0_Unknown128* Unknown128;
     Class_10B6B3F0_Unknown12C* Unknown12C;
     char Unknown130[0x50];
-    int Unknown180;
+    int m_State;
 };
 
 // FUNCTION: 0x10B6AED0 ?FUN_10b6aed0@Class_10B6AED0@@QAEXXZ
@@ -484,7 +484,7 @@ void Class_10B6AED0::FUN_10b6aed0()
 // FUNCTION: 0x10B6B3F0 ?FUN_10b6b3f0@Class_10E85AD8@@UAEXPAVClass_10A52A40_Member@@@Z
 void Class_10E85AD8::FUN_10b6b3f0(Class_10A52A40_Member* P)
 {
-    if (Unknown180 == 0)
+    if (m_State == 0)
     {
         FUN_10a52a40(P);
         if (Unknown118)
@@ -492,7 +492,7 @@ void Class_10E85AD8::FUN_10b6b3f0(Class_10A52A40_Member* P)
             if (Unknown0C4 != 0)
             {
                 Unknown118->Virtual102(P);
-                if (Unknown180 == 0)
+                if (m_State == 0)
                 {
                     FUN_10b6b1d0();
                     FUN_10b69930();
@@ -504,7 +504,7 @@ void Class_10E85AD8::FUN_10b6b3f0(Class_10A52A40_Member* P)
             }
         }
     }
-    else if (Unknown180 == 1 || Unknown180 == 2)
+    else if (m_State == 1 || m_State == 2)
     {
         Unknown128->Virtual102(P);
         if (Unknown12C)

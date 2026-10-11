@@ -3,7 +3,7 @@
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10AAB7D0.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 // The element: 0x18 bytes, its first two words cleared by the loop.
 class Class_10AAB7D0_Unknown08
@@ -19,13 +19,13 @@ void Class_10AAB7D0::FUN_10aab7d0(int NewCount)
 {
     int OldCount = Unknown00;
     int Capacity = !Unknown08 ? 0 : Unknown04 / sizeof(Class_10AAB7D0_Unknown08);
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     if (NewCount > Capacity)
     {
         int NewCapacity = NewCount;
         if (Capacity)
             NewCapacity = (NewCount & ~15) + 16;
-        void* Block = FUN_10905aa0()->Virtual3(Unknown08, NewCapacity * sizeof(Class_10AAB7D0_Unknown08), 0, 0, 0, 0);
+        void* Block = GetAllocator()->Virtual3(Unknown08, NewCapacity * sizeof(Class_10AAB7D0_Unknown08), 0, 0, 0, 0);
         Unknown04 = NewCapacity * sizeof(Class_10AAB7D0_Unknown08);
         Unknown08 = Block;
     }
@@ -33,14 +33,14 @@ void Class_10AAB7D0::FUN_10aab7d0(int NewCount)
     {
         if (NewCount == 0)
         {
-            FUN_10905aa0()->Virtual5(Unknown08);
+            GetAllocator()->Virtual5(Unknown08);
             Unknown08 = 0;
             Unknown04 = 0;
         }
         else
         {
             int NewCapacity = (NewCount & ~15) + 16;
-            void* Block = FUN_10905aa0()->Virtual3(Unknown08, NewCapacity * sizeof(Class_10AAB7D0_Unknown08), 0, 0, 0, 0);
+            void* Block = GetAllocator()->Virtual3(Unknown08, NewCapacity * sizeof(Class_10AAB7D0_Unknown08), 0, 0, 0, 0);
             Unknown04 = NewCapacity * sizeof(Class_10AAB7D0_Unknown08);
             Unknown08 = Block;
         }
@@ -54,6 +54,6 @@ void Class_10AAB7D0::FUN_10aab7d0(int NewCount)
             Element->Unknown04 = 0;
         }
     }
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     Unknown00 = NewCount;
 }

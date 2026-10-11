@@ -25,18 +25,18 @@ class cAIManager
 public:
     virtual void Virtual0();
     virtual void Virtual1();
-    virtual void FUN_10c0bc50(UObject* Obj);
+    virtual void AddPawnController(UObject* Obj);
 
-    char Unknown04[0x10];
-    Class_10BFBD70 Unknown14;
+    char m_Active[0x10];
+    Class_10BFBD70 m_Controllers;
 };
 
-// FUNCTION: 0x10C0BC50 ?FUN_10c0bc50@cAIManager@@UAEXPAVUObject@@@Z
-void cAIManager::FUN_10c0bc50(UObject* Obj)
+// FUNCTION: 0x10C0BC50 ?AddPawnController@cAIManager@@UAEXPAVUObject@@@Z
+void cAIManager::AddPawnController(UObject* Obj)
 {
     if (Obj && Obj->IsA(AAIPawnController::StaticClass()))
     {
-        Class_10BFBD70* List = &Unknown14;
+        Class_10BFBD70* List = &m_Controllers;
         int Index = List->Unknown00;
         List->FUN_10bfbd70(Index + 1);
         List->Unknown08[Index] = Obj;

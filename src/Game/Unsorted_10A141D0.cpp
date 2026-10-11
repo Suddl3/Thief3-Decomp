@@ -28,23 +28,23 @@ public:
     virtual void Virtual3();
     virtual void Virtual4();
     virtual void Virtual5();
-    virtual void FUN_10a14540();
+    virtual void Clear();
 
     char Unknown04[4];
-    Class_10C00A60 Unknown08;
-    Object_10A14540_A** Unknown10;
+    Class_10C00A60 m_ChildCount;
+    Object_10A14540_A** m_Children;
     Class_1090FD40 Unknown14;
 };
 
-// FUNCTION: 0x10A14540 ?FUN_10a14540@cConversationManager@@UAEXXZ
-void cConversationManager::FUN_10a14540()
+// FUNCTION: 0x10A14540 ?Clear@cConversationManager@@UAEXXZ
+void cConversationManager::Clear()
 {
-    for (int i = 0; i < Unknown08.Unknown00; i++)
+    for (int i = 0; i < m_ChildCount.Unknown00; i++)
     {
-        delete Unknown10[i];
-        Unknown10[i] = 0;
+        delete m_Children[i];
+        m_Children[i] = 0;
     }
-    Unknown08.FUN_10c00a60(0);
+    m_ChildCount.FUN_10c00a60(0);
     Unknown14.FUN_1090f2c0(0);
     Unknown14.FUN_1090f2c0(0);
 }
@@ -55,7 +55,7 @@ void Class_10A151A0::FUN_10a151a0()
     FUN_10a15060(0);
     if (Unknown04)
     {
-        FUN_10905aa0()->Virtual5(Unknown08);
+        GetAllocator()->Virtual5(Unknown08);
         Unknown08 = 0;
         Unknown04 = 0;
     }

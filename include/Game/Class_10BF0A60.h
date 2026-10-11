@@ -7,7 +7,7 @@
 
 class Class_10BEFA30;
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 class Class_10BF0A60
 {
@@ -19,7 +19,7 @@ public:
         FUN_10befb10(0);
         if (Unknown04)
         {
-            FUN_10905aa0()->Virtual5(Unknown08);
+            GetAllocator()->Virtual5(Unknown08);
             Unknown08 = 0;
             Unknown04 = 0;
         }

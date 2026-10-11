@@ -35,7 +35,7 @@ public:
     void FUN_10bc4240(Struct_10BC4240_Param* A, bool B);
     void FUN_10be9860(int A);
 
-    int Unknown04;
+    int m_Id;
     Object_10BE9860* Unknown08;
     char Unknown0C[0x61];
     bool Unknown6D;
@@ -58,7 +58,7 @@ int FUN_10be9820(Struct_10BE9820** A, Struct_10BE9820** B)
 // FUNCTION: 0x10BE9860 ?FUN_10be9860@State_Patrol@@QAEXH@Z
 void State_Patrol::FUN_10be9860(int A)
 {
-    int Id = Unknown04;
+    int Id = m_Id;
     Object_10BE9860* Obj = Unknown08;
     Unknown6D = true;
     Struct_10BC4240_Param* Param = Obj->Virtual18(Id, A);

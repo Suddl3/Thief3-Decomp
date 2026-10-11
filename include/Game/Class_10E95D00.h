@@ -3,11 +3,11 @@
 #ifndef GAME_CLASS_10E95D00_H
 #define GAME_CLASS_10E95D00_H
 
-#include "Game/Class_10E94578.h"
+#include "Game/cTacticMoveToPoint.h"
 
 class Class_10BB85E0;
 
-class Class_10E95D00 : public Class_10E94578
+class Class_10E95D00 : public cTacticMoveToPoint
 {
 public:
     virtual void FUN_10be2ee0(int A, int B, int C, int D, int E);

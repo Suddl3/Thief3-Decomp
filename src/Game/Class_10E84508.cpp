@@ -12,7 +12,7 @@ public:
     void** Unknown00;
 };
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 class Class_1090A780
 {
@@ -30,7 +30,7 @@ public:
         if (Unknown00)
         {
             int* Obj = (int*)Unknown00 - 1;
-            FUN_10905aa0()->Virtual5(Obj);
+            GetAllocator()->Virtual5(Obj);
         }
     }
 };

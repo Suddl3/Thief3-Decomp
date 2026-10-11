@@ -5,7 +5,7 @@
 #include "Game/Class_10AAAA90.h"
 #include "Game/Class_10AAACB0_Param.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 class Class_109081E0
 {
@@ -15,7 +15,7 @@ public:
         if (Unknown00)
         {
             char* Block = Unknown00 - 4;
-            FUN_10905aa0()->Virtual5(Block);
+            GetAllocator()->Virtual5(Block);
         }
     }
     Class_109081E0& operator=(const Class_109081E0& Other);
@@ -23,17 +23,17 @@ public:
     char* Unknown00;
 };
 
-class Class_10E6D9E8
+class cConNoteEvent
 {
 public:
     virtual void Virtual0();
     virtual void Virtual1();
     virtual void Virtual2();
     virtual void Virtual3();
-    virtual int FUN_10aaacb0(Class_10AAACB0_Param* Src);
+    virtual int CopyFrom(Class_10AAACB0_Param* Src);
 
     Class_109081E0 Unknown04;
-    Class_109081E0 Unknown08;
+    Class_109081E0 m_Note;
 };
 
 extern const char DAT_10e47660[];
@@ -162,10 +162,10 @@ int Class_10AAAA90::FUN_10aaaa90(int A, Class_10AAAA90_Param* Obj, int C)
     return 1;
 }
 
-// FUNCTION: 0x10AAACB0 ?FUN_10aaacb0@Class_10E6D9E8@@UAEHPAVClass_10AAACB0_Param@@@Z
-int Class_10E6D9E8::FUN_10aaacb0(Class_10AAACB0_Param* Src)
+// FUNCTION: 0x10AAACB0 ?CopyFrom@cConNoteEvent@@UAEHPAVClass_10AAACB0_Param@@@Z
+int cConNoteEvent::CopyFrom(Class_10AAACB0_Param* Src)
 {
     Unknown04 = Src->Virtual2();
-    Unknown08 = Src->Virtual2();
+    m_Note = Src->Virtual2();
     return 1;
 }

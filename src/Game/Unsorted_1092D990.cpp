@@ -8,12 +8,12 @@ class IDirect3DTexture8;
 
 extern IDirect3DDevice8* GDirect3DDevice8;
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 // FUNCTION: 0x1092D990 ?FUN_1092d990@Class_1092D990@@QAEXXZ
 void Class_1092D990::FUN_1092d990()
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     GDirect3DDevice8->CreateTexture(0x100, 0x80, 1, 1, 0x15, 0, &Unknown00);
     GDirect3DDevice8->CreateTexture(0x100, 0x80, 1, 1, 0x15, 0, &Unknown04);
 }

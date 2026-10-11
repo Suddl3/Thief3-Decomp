@@ -7,7 +7,7 @@ FArchive& FUN_10b052a0(FArchive& Ar, void* V);
 class Class_10E8BE68
 {
 public:
-    virtual void FUN_10bca010(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 };
 
 class Class_10E92B20 : public Class_10E8BE68
@@ -23,7 +23,7 @@ public:
 // FUNCTION: 0x10BCEA30 ?FUN_10bcea30@Class_10E92B20@@UAEXAAVFArchive@@@Z
 void Class_10E92B20::FUN_10bcea30(FArchive& Ar)
 {
-    Class_10E8BE68::FUN_10bca010(Ar);
+    Class_10E8BE68::Serialize(Ar);
     FUN_10b052a0(Ar, Unknown40);
     Ar.Serialize(&Unknown4C, 1);
 }

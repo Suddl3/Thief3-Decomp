@@ -24,8 +24,8 @@ public:
     virtual void Virtual3();
     virtual void Virtual4();
     virtual void Virtual5();
-    virtual int FUN_1094e800();
-    virtual int FUN_1094e820(int Index);
+    virtual int GetCount();
+    virtual int GetItem(int Index);
     virtual void FUN_1094e050();
     virtual void Virtual9(int A, int B);
     virtual void FUN_1094e9d0(int p1, int p2);
@@ -34,7 +34,7 @@ public:
     virtual void Virtual13();
     virtual void Virtual14();
     virtual void Virtual15();
-    virtual bool FUN_1094e860();
+    virtual bool IsReady();
     virtual void Virtual17();
     virtual void Virtual18();
     virtual void Virtual19();
@@ -45,7 +45,7 @@ public:
     virtual void Virtual24();
     virtual void Virtual25();
     virtual void Virtual26();
-    virtual void FUN_1094f6f0(Class_10BFBD70* Out, int Param);
+    virtual void CollectValues(Class_10BFBD70* Out, int Param);
     virtual void FUN_1094eea0(int Param);
 
     Struct_1094E0F0 FUN_1094e0f0();
@@ -106,8 +106,8 @@ struct Struct_1094E9D0
     Class_1094E860_Unknown00* Unknown00;
 };
 
-// FUNCTION: 0x1094E860 ?FUN_1094e860@Class_10E4AB88@@UAE_NXZ
-bool Class_10E4AB88::FUN_1094e860()
+// FUNCTION: 0x1094E860 ?IsReady@Class_10E4AB88@@UAE_NXZ
+bool Class_10E4AB88::IsReady()
 {
     if (((Class_109481D0*)this)->FUN_109481d0(0x400))
         return false;

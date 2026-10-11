@@ -1,7 +1,7 @@
 // Game/Unsorted_10AAB5D0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10E6DA64.h"
-#include "Game/Class_10E6DA90.h"
+#include "Game/cConCameraController.h"
 
 extern void* DAT_10e6da40[];
 
@@ -46,8 +46,8 @@ Class_10E6DA64* Class_10E6DA64::FUN_10aab8b0()
     return this;
 }
 
-// FUNCTION: 0x10AAC110 ?FUN_10aac110@Class_10E6DA90@@UAEXH@Z
-void Class_10E6DA90::FUN_10aac110(int param)
+// FUNCTION: 0x10AAC110 ?FUN_10aac110@cConCameraController@@UAEXH@Z
+void cConCameraController::FUN_10aac110(int param)
 {
     Unknown08 = param;
     Unknown14 = true;

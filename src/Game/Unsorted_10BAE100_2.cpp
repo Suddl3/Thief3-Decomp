@@ -4,7 +4,7 @@
 #include "Game/Class_10BAEC00.h"
 #include "Game/Class_10905A90_Member.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 extern void* DAT_10e8d7c0[];
 
@@ -21,24 +21,24 @@ void Class_10BAEC00::FUN_10bae100(int NewCount)
 {
     int OldCount = Unknown00;
     int Capacity = !Unknown08 ? 0 : Unknown04 / sizeof(Class_10E8D7C0);
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     if (NewCount > Capacity) {
         int NewCapacity = NewCount;
         if (Capacity)
             NewCapacity = (NewCount & ~15) + 16;
-        void* Block = FUN_10905aa0()->Virtual3(Unknown08, NewCapacity * sizeof(Class_10E8D7C0), 0, 0, 0, 0);
+        void* Block = GetAllocator()->Virtual3(Unknown08, NewCapacity * sizeof(Class_10E8D7C0), 0, 0, 0, 0);
         Unknown04 = NewCapacity * sizeof(Class_10E8D7C0);
         Unknown08 = Block;
     }
     else if (NewCount <= Capacity - 16) {
         if (NewCount == 0) {
-            FUN_10905aa0()->Virtual5(Unknown08);
+            GetAllocator()->Virtual5(Unknown08);
             Unknown08 = 0;
             Unknown04 = 0;
         }
         else {
             int NewCapacity = (NewCount & ~15) + 16;
-            void* Block = FUN_10905aa0()->Virtual3(Unknown08, NewCapacity * sizeof(Class_10E8D7C0), 0, 0, 0, 0);
+            void* Block = GetAllocator()->Virtual3(Unknown08, NewCapacity * sizeof(Class_10E8D7C0), 0, 0, 0, 0);
             Unknown04 = NewCapacity * sizeof(Class_10E8D7C0);
             Unknown08 = Block;
         }
@@ -48,6 +48,6 @@ void Class_10BAEC00::FUN_10bae100(int NewCount)
         if (Element)
             Element->VTable = DAT_10e8d7c0;
     }
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     Unknown00 = NewCount;
 }

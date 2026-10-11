@@ -129,7 +129,7 @@ public:
     virtual void FUN_10bd0f30();
 
     Class_10BF7F90* FUN_10bc4160();
-    void FUN_10bc5b50();
+    void PopState();
     Struct_10BC4240_Param* FUN_10bc58f0(int A, int B, int C);
     void FUN_10bc4360(int A);
     void FUN_10bd0d80(Class_10BD0270* A, int B);
@@ -161,7 +161,7 @@ void Class_10E93020::FUN_10bd0f30()
         }
         if (!Unknown56 || !((Class_10C00C70*)Unknown04[0]->Unknown08->FUN_10ba9ec0())->FUN_10c00c70())
         {
-            FUN_10bc5b50();
+            PopState();
             return;
         }
     }
@@ -169,7 +169,7 @@ void Class_10E93020::FUN_10bd0f30()
     if (P)
     {
         if (P->Virtual74() || P->Virtual75())
-            FUN_10bc5b50();
+            PopState();
     }
     else
     {

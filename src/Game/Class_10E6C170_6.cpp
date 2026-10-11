@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10905A90_Member.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 class Class_109081E0
 {
@@ -12,7 +12,7 @@ public:
         if (Unknown00)
         {
             char* Block = Unknown00 - 4;
-            FUN_10905aa0()->Virtual5(Block);
+            GetAllocator()->Virtual5(Block);
         }
     }
     Class_109081E0& operator=(const Class_109081E0& Other);
@@ -35,14 +35,14 @@ public:
     virtual void Virtual1();
     virtual void Virtual2();
     virtual void Virtual3();
-    virtual int FUN_10aa8110(Class_10AA8110_Param* Src);
+    virtual int CopyFromParam(Class_10AA8110_Param* Src);
 
     Class_109081E0 Unknown04;
     Class_109081E0 Unknown08;
 };
 
-// FUNCTION: 0x10AA8110 ?FUN_10aa8110@Class_10E6C170@@UAEHPAVClass_10AA8110_Param@@@Z
-int Class_10E6C170::FUN_10aa8110(Class_10AA8110_Param* Src)
+// FUNCTION: 0x10AA8110 ?CopyFromParam@Class_10E6C170@@UAEHPAVClass_10AA8110_Param@@@Z
+int Class_10E6C170::CopyFromParam(Class_10AA8110_Param* Src)
 {
     Unknown04 = Src->Virtual2();
     Unknown08 = Src->Virtual2();

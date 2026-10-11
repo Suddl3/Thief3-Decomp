@@ -17,7 +17,7 @@ class cAIManager
 {
 public:
     virtual void Virtual0();
-    virtual void FUN_10c0b510(int A);
+    virtual void Activate(int A);
     virtual void Virtual2();
     virtual void Virtual3();
     virtual void Virtual4();
@@ -39,19 +39,19 @@ public:
     virtual void Virtual20();
     virtual void Virtual21(int A);
 
-    bool Unknown04;
+    bool m_Active;
     char Unknown05[0xF];
-    int Unknown14;
+    int m_Controllers;
     char Unknown18[0x2A];
     bool Unknown42;
 };
 
-// FUNCTION: 0x10C0B510 ?FUN_10c0b510@cAIManager@@UAEXH@Z
-void cAIManager::FUN_10c0b510(int A)
+// FUNCTION: 0x10C0B510 ?Activate@cAIManager@@UAEXH@Z
+void cAIManager::Activate(int A)
 {
-    if (Unknown14 > 0 && !Unknown04)
+    if (m_Controllers > 0 && !m_Active)
     {
-        Unknown04 = true;
+        m_Active = true;
         Virtual21(A);
         Object_10BA90A0* Owner = (Object_10BA90A0*)FUN_10ba90a0();
         if (Owner->Virtual1() && !Unknown42)

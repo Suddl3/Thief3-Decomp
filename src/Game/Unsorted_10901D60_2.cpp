@@ -8,7 +8,7 @@
 
 extern const char DAT_10e47660[];
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 extern "C" __declspec(dllimport) int __stdcall CloseHandle(void* Object);
 
@@ -21,7 +21,7 @@ const char* Class_109022E0::FUN_109022e0()
 // FUNCTION: 0x10905A90 ?FUN_10905a90@@YAXXZ
 void FUN_10905a90()
 {
-    FUN_10905aa0()->F1();
+    GetAllocator()->F1();
 }
 
 // FUNCTION: 0x10905E60 ?FUN_10905e60@Class_10905E60@@QAEXXZ

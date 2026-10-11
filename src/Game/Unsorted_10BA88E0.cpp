@@ -45,7 +45,7 @@
 #include "Game/Class_10BB86E0.h"
 #include "Game/Class_10C29000.h"
 #include "Game/Class_10E99370.h"
-#include "Game/Class_10E9CFE0.h"
+#include "Game/SoundSchema.h"
 #include "Game/Struct_10BA9EF0.h"
 #include "Game/Struct_10BA9F20.h"
 #include "Game/Struct_10BB8180.h"
@@ -115,8 +115,8 @@ float Class_10BA9F80::FUN_10ba9f80()
     return Unknown64;
 }
 
-// FUNCTION: 0x10BA9F90 ?FUN_10ba9f90@Class_10E9CFE0@@QAEXH@Z
-void Class_10E9CFE0::FUN_10ba9f90(int param)
+// FUNCTION: 0x10BA9F90 ?FUN_10ba9f90@SoundSchema@@QAEXH@Z
+void SoundSchema::FUN_10ba9f90(int param)
 {
     Unknown68 = param;
 }

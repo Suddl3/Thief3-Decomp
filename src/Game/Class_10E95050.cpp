@@ -5,7 +5,7 @@
 class Class_10E8BE68
 {
 public:
-    virtual void FUN_10bca010(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 };
 
 class Class_10E95050 : public Class_10E8BE68
@@ -84,7 +84,7 @@ public:
 // FUNCTION: 0x10BDF140 ?FUN_10bdf140@Class_10E95050@@UAEXAAVFArchive@@@Z
 void Class_10E95050::FUN_10bdf140(FArchive& Ar)
 {
-    Class_10E8BE68::FUN_10bca010(Ar);
+    Class_10E8BE68::Serialize(Ar);
     if (Ar.Unknown0C >= 0x37)
     {
         Ar.Serialize(&Unknown40, 4);

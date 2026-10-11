@@ -4,14 +4,14 @@
 class Class_10E6A9F8 {
 public:
     char Unknown00[0x150];
-    unsigned char Unknown150;
+    unsigned char m_Dirty;
     unsigned char Unknown151;
-    void FUN_10a64d70();
+    void MarkDirty();
 };
 
-// FUNCTION: 0x10A64D70 ?FUN_10a64d70@Class_10E6A9F8@@QAEXXZ
-void Class_10E6A9F8::FUN_10a64d70()
+// FUNCTION: 0x10A64D70 ?MarkDirty@Class_10E6A9F8@@QAEXXZ
+void Class_10E6A9F8::MarkDirty()
 {
-    Unknown150 = 1;
+    m_Dirty = 1;
     Unknown151 = 0;
 }

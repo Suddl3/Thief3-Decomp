@@ -82,8 +82,8 @@ int Class_10E6C68C::FUN_10a8b860()
 // FUNCTION: 0x10A8C030 ?FUN_10a8c030@Class_10E5D74C@@UAEPAVClass_10E6C6C4@@HH@Z
 Class_10E6C6C4* Class_10E5D74C::FUN_10a8c030(int A, int B)
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     Class_10E6C6C4* Result = new(0, 0, 0, 0, 0) Class_10E6C6C4;
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     return Result;
 }

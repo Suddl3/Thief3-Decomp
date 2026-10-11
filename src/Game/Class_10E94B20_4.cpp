@@ -100,13 +100,13 @@ public:
     Class_10BF7F90* FUN_10bc4160();
 };
 
-class Class_10E94578 : public Class_10BC4160
+class cTacticMoveToPoint : public Class_10BC4160
 {
 public:
-    void FUN_10bc5b50();
+    void PopState();
 };
 
-class Class_10E94100 : public Class_10E94578
+class Class_10E94100 : public cTacticMoveToPoint
 {
 public:
     void FUN_10bc4e30(int A);
@@ -179,7 +179,7 @@ public:
     virtual void Virtual61();
     virtual void Virtual62();
     virtual void Virtual63();
-    virtual void FUN_10bdbc30(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
     virtual void Virtual65();
     virtual void Virtual66();
     virtual void Virtual67();
@@ -210,7 +210,7 @@ void Class_10E94B20::FUN_10bdb260()
         {
             if (!Unknown55)
                 ((Class_10AAF570_Result*)FUN_10bc4160()->FUN_10aaf570())->Virtual49(0);
-            FUN_10bc5b50();
+            PopState();
             return;
         }
         if (!Unknown55)

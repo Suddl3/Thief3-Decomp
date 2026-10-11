@@ -12,7 +12,7 @@ void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 void* FUN_10be1a60();
 
 // The header's Class_10E95780 (include/Game/Class_10E95780.h) has no (int, int) constructor
-// (its FUN_10be1820 is the constructor at 0x10BE1820), and its base and Pad50 make the object
+// (its Init is the constructor at 0x10BE1820), and its base and Pad50 make the object
 // 0x8c bytes; the new in this function allocates 0x50, so the copy keeps the fields from 0x00 to 0x50.
 class Class_10E95780_Unknown04;
 
@@ -73,7 +73,7 @@ public:
     Class_10E95780(int A, int B);
     ~Class_10E95780();
 
-    Class_10E95780* FUN_10be1820(int A, int B);
+    Class_10E95780* Init(int A, int B);
     void FUN_10be1a70();
     bool FUN_10be2380(void* Object, int A);
     void FUN_10be2a70();

@@ -5,7 +5,7 @@
 #include "Game/Struct_10929600.h"
 #include "Game/Struct_10929D60.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 class Class_10929710
 {

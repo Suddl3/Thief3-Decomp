@@ -91,16 +91,16 @@ class Class_10E79228
 public:
     virtual void Virtual0();
     virtual void Virtual1();
-    virtual void FUN_10b154e0(float A);
+    virtual void Tick(float A);
     void FUN_109e70e0(float A);
 
     char Unknown04[0x90];
     Class_10B154E0_Unknown94* Unknown94;
     char Unknown98[0x188];
     Class_10B27220 Unknown220;
-    bool Unknown25C;
+    bool m_Closing;
     char Pad25D[0x3];
-    float Unknown260;
+    float m_CloseTimer;
 };
 
 Class_10E7AAAC* FUN_10b266e0();
@@ -109,8 +109,8 @@ void FUN_10a36cf0();
 
 extern bool DAT_10f31a58;
 
-// FUNCTION: 0x10B154E0 ?FUN_10b154e0@Class_10E79228@@UAEXM@Z
-void Class_10E79228::FUN_10b154e0(float A)
+// FUNCTION: 0x10B154E0 ?Tick@Class_10E79228@@UAEXM@Z
+void Class_10E79228::Tick(float A)
 {
     Unknown220.FUN_10b271d0(A);
     FUN_10b266e0()->Virtual5(A);
@@ -118,13 +118,13 @@ void Class_10E79228::FUN_10b154e0(float A)
     {
         if (!Unknown94->Virtual64(0x400) || DAT_10f31a58)
         {
-            if (Unknown25C)
+            if (m_Closing)
             {
-                Unknown260 -= A;
-                if (Unknown260 <= 0.0f)
+                m_CloseTimer -= A;
+                if (m_CloseTimer <= 0.0f)
                 {
                     FUN_10a36cf0();
-                    Unknown25C = false;
+                    m_Closing = false;
                     ((Class_10E5B7C8*)this)->FUN_109e3c70();
                 }
             }

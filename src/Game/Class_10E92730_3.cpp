@@ -26,20 +26,20 @@ class Class_10E92730 : public Class_10E95288
 {
 public:
     virtual void Virtual1();
-    virtual void FUN_10bcbf00();
+    virtual void TickCountdown();
 
     char Unknown04[0x60];
-    float Unknown64;
+    float m_Countdown;
 };
 
-// FUNCTION: 0x10BCBF00 ?FUN_10bcbf00@Class_10E92730@@UAEXXZ
-void Class_10E92730::FUN_10bcbf00()
+// FUNCTION: 0x10BCBF00 ?TickCountdown@Class_10E92730@@UAEXXZ
+void Class_10E92730::TickCountdown()
 {
     if (FUN_10bc4160()->FUN_10aa82d0() == 0)
     {
-        double Remaining = Unknown64;
-        Unknown64 = Remaining - FUN_10c00490();
-        if (Unknown64 < 0.0f)
+        double Remaining = m_Countdown;
+        m_Countdown = Remaining - FUN_10c00490();
+        if (m_Countdown < 0.0f)
             FUN_10be02e0();
     }
 }

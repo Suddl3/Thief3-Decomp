@@ -7,7 +7,7 @@
 
 extern "C" void* memset(void*, int, unsigned);
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 // FUNCTION: 0x109128F0 ?FUN_109128f0@@YAPAHPAHPBD@Z
 int* FUN_109128f0(int* A, const char* B)
@@ -28,7 +28,7 @@ int* FUN_109128f0(int* A, const char* B)
     int Length = (int)strlen(Name);
     if (Length != 0)
     {
-        int* Block = (int*)FUN_10905aa0()->Virtual2(Length + 5, 0, 0, 0, 0);
+        int* Block = (int*)GetAllocator()->Virtual2(Length + 5, 0, 0, 0, 0);
         *A = (int)(Block + 1);
         *Block = Length;
         char* Dst = (char*)*A;

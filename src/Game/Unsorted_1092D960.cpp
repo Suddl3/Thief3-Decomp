@@ -26,7 +26,7 @@ struct Struct_1092FCA0
     int Unknown38;
 };
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 class Class_1092D960_Member
 {
@@ -57,7 +57,7 @@ void Class_1092E8F0::FUN_1092e8f0()
     FUN_1091f380(0);
     if (Unknown04)
     {
-        FUN_10905aa0()->Virtual5(Unknown08);
+        GetAllocator()->Virtual5(Unknown08);
         Unknown08 = 0;
         Unknown04 = 0;
     }
@@ -69,7 +69,7 @@ void Class_1092E930::FUN_1092e930()
     FUN_10a51140(0);
     if (Unknown04)
     {
-        FUN_10905aa0()->Virtual5(Unknown08);
+        GetAllocator()->Virtual5(Unknown08);
         Unknown08 = 0;
         Unknown04 = 0;
     }

@@ -2,10 +2,10 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10ACCFB0.h"
-#include "Game/Class_10E67938.h"
+#include "Game/cActorManager.h"
 #include "Game/Class_10E70060.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 class Class_1098E330;
 
@@ -20,7 +20,7 @@ public:
 
 extern Class_10F46DA0* DAT_10f46da0;
 
-class Class_10E70098 : public Class_10E67938, public Class_10E70060
+class Class_10E70098 : public cActorManager, public Class_10E70060
 {
 public:
     Class_10E70098();
@@ -41,7 +41,7 @@ void Class_10ACCFB0::FUN_10accfb0()
     FUN_10acc790(0);
     if (Unknown04)
     {
-        FUN_10905aa0()->Virtual5(Unknown08);
+        GetAllocator()->Virtual5(Unknown08);
         Unknown08 = 0;
         Unknown04 = 0;
     }

@@ -13,7 +13,7 @@ extern const char DAT_10e873a0[];
 
 extern const char DAT_10e87390[];
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 // Class_10E871C8 copied whole from include/Game/Class_10E871C8.h, with FUN_10b700a0 added.
 class Class_10E871C8

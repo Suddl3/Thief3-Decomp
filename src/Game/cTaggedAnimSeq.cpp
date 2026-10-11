@@ -12,13 +12,13 @@ public:
     cTaggedAnimSeq();
     virtual ~cTaggedAnimSeq();
 
-    Class_109081E0 Unknown04;
+    Class_109081E0 m_Name;
 };
 
 // FUNCTION: 0x10A1EDE0 ??0cTaggedAnimSeq@@QAE@XZ
 cTaggedAnimSeq::cTaggedAnimSeq()
 {
-    FUN_10905aa0()->Virtual8(0, 0);
-    Unknown04.FUN_1090a590(DAT_10e5027c);
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual8(0, 0);
+    m_Name.FUN_1090a590(DAT_10e5027c);
+    GetAllocator()->Virtual9();
 }

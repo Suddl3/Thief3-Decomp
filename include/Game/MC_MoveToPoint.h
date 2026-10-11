@@ -18,11 +18,11 @@ public:
     virtual bool FUN_10c27090(int A);
 
     void FUN_10c2eb30();
-    Class_109081E0 FUN_10c2ebd0();
+    Class_109081E0 GetClassName();
 
     char Unknown04[0x44];
     Class_10C39220* Unknown48;
-    float Unknown4C[3];
+    float m_Point[3];
 };
 
 #endif // GAME_MC_MOVETOPOINT_H

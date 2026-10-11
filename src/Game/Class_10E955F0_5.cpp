@@ -29,15 +29,15 @@ public:
     virtual void Virtual17();
     virtual void Virtual18();
     virtual void Virtual19();
-    virtual void FUN_10be0b30(int A);
+    virtual void StartBlinding(int A);
 
     void FUN_10be0690(int A);
 
     Struct_10BDF7D0* Unknown04;
 };
 
-// FUNCTION: 0x10BE0B30 ?FUN_10be0b30@Class_10E955F0@@UAEXH@Z
-void Class_10E955F0::FUN_10be0b30(int A)
+// FUNCTION: 0x10BE0B30 ?StartBlinding@Class_10E955F0@@UAEXH@Z
+void Class_10E955F0::StartBlinding(int A)
 {
     FUN_10be0690(A);
     ((APawn*)Unknown04->Unknown08->FUN_10c7d570())->IsBlinded = 1;

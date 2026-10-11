@@ -17,19 +17,19 @@ class cTaggedAnimSeq
 {
 public:
     virtual void Virtual0();
-    virtual Class_1090A780 FUN_10b34b10();
+    virtual Class_1090A780 GetName();
     virtual void Virtual2();
     virtual void Virtual3();
     virtual void Virtual4();
-    virtual void FUN_10a1f840(void* A);
+    virtual void Play(void* A);
 
-    Class_1090A780 Unknown04;
+    Class_1090A780 m_Name;
 };
 
-// FUNCTION: 0x10A1F840 ?FUN_10a1f840@cTaggedAnimSeq@@UAEXPAX@Z
-void cTaggedAnimSeq::FUN_10a1f840(void* A)
+// FUNCTION: 0x10A1F840 ?Play@cTaggedAnimSeq@@UAEXPAX@Z
+void cTaggedAnimSeq::Play(void* A)
 {
-    const char* S = Unknown04.Unknown00;
+    const char* S = m_Name.Unknown00;
     if (!S)
         S = DAT_10e47660;
     Class_10A1F4D0* Obj = FUN_109f5f80(A, S);

@@ -48,7 +48,7 @@ public:
 class Class_10E94B20 : public Class_10BC4160
 {
 public:
-    virtual void FUN_10bdc600(int A);
+    virtual void NotifyGrenadeThrown(int A);
 
     void FUN_10bc7d70(Class_10E97B00* Name, int Flags, int Count, Class_109081E0* Out, bool Flag);
 
@@ -56,8 +56,8 @@ public:
     bool Unknown55;
 };
 
-// FUNCTION: 0x10BDC600 ?FUN_10bdc600@Class_10E94B20@@UAEXH@Z
-void Class_10E94B20::FUN_10bdc600(int A)
+// FUNCTION: 0x10BDC600 ?NotifyGrenadeThrown@Class_10E94B20@@UAEXH@Z
+void Class_10E94B20::NotifyGrenadeThrown(int A)
 {
     FUN_10bc4160()->FUN_10bf7f90(0, 1);
     if (!Unknown55)

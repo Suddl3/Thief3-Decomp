@@ -26,7 +26,7 @@ public:
 
     bool FUN_10bc40e0();
     void FUN_10bc4240(Struct_10BC4240_Param* Param, bool A);
-    void FUN_10bc5b50();
+    void PopState();
     Struct_10BC4240_Param* FUN_10bca700();
 
     Class_10BB8300* Unknown04;
@@ -37,12 +37,12 @@ void Class_10E8BE68::FUN_10bcc240()
 {
     if (!Unknown04->Unknown08->FUN_10babed0(false))
     {
-        FUN_10bc5b50();
+        PopState();
         return;
     }
     if (FUN_10bc40e0())
     {
-        FUN_10bc5b50();
+        PopState();
         return;
     }
     Struct_10BC4240_Param* Param = FUN_10bca700();

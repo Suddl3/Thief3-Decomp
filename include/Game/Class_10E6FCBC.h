@@ -4,9 +4,9 @@
 #define GAME_CLASS_10E6FCBC_H
 
 #include "Game/Class_10AC8F70.h"
-#include "Game/Class_10E67938.h"
+#include "Game/cActorManager.h"
 
-class Class_10E6FCBC : public Class_10E67938
+class Class_10E6FCBC : public cActorManager
 {
 public:
     virtual ~Class_10E6FCBC();

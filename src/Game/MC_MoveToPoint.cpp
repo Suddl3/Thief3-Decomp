@@ -10,5 +10,5 @@ FArchive& FUN_10b052a0(FArchive& Ar, void* V);
 void MC_MoveToPoint::FUN_10c2eb90(FArchive& Ar)
 {
     FUN_10c271a0(Ar);
-    FUN_10b052a0(Ar, Unknown4C);
+    FUN_10b052a0(Ar, m_Point);
 }

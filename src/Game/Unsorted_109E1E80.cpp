@@ -10,7 +10,7 @@ void FUN_109e1e80(float A, bool B);
 
 extern bool DAT_10f35b24;
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 // FUNCTION: 0x109E1F90 ?FUN_109e1f90@@YAXM@Z
 void FUN_109e1f90(float A)
@@ -42,5 +42,5 @@ void FUN_109e2930()
 // FUNCTION: 0x109E2970 ?FUN_109e2970@@YGPAXI@Z
 void* __stdcall FUN_109e2970(unsigned int A)
 {
-    return FUN_10905aa0()->Virtual2(A, 0, 0, 0, 0);
+    return GetAllocator()->Virtual2(A, 0, 0, 0, 0);
 }

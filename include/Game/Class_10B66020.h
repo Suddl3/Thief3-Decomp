@@ -5,7 +5,7 @@
 
 #include "Game/Struct_10B6C180.h"
 
-class Class_10E85DE0;
+class cDifficultyPane;
 
 class Class_10B66020
 {
@@ -129,7 +129,7 @@ public:
 
     char Unknown04[0x154];
     Struct_10B6C180 Unknown158;
-    Class_10E85DE0* Unknown184;
+    cDifficultyPane* Unknown184;
 };
 
 #endif // GAME_CLASS_10B66020_H

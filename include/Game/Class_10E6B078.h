@@ -11,7 +11,7 @@ class Class_10E6B078
 {
 public:
     virtual ~Class_10E6B078();
-    virtual bool FUN_10a5d430(int A, bool B, bool C);
+    virtual bool HandleKey(int A, bool B, bool C);
     virtual void Virtual2();
     virtual void Virtual3();
     virtual void Virtual4();

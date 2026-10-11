@@ -1,7 +1,7 @@
 // Game/Unsorted_10B65E90.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_109E8930.h"
-#include "Game/Class_10E85DE0.h"
+#include "Game/cDifficultyPane.h"
 #include "Game/Struct_10B6C180.h"
 #include "Game/WindowManager.h"
 #include "Game/Class_10B66020.h"
@@ -154,5 +154,5 @@ void Class_10B66020::FUN_10b66020()
     Virtual56(0);
     Virtual113();
     GWindowManager->FUN_109e8930(this);
-    Unknown184->FUN_10b6c180(&Unknown158);
+    Unknown184->SetData(&Unknown158);
 }

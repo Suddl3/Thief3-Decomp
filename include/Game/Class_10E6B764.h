@@ -3,13 +3,13 @@
 #ifndef GAME_CLASS_10E6B764_H
 #define GAME_CLASS_10E6B764_H
 
-#include "Game/Class_10E67938.h"
+#include "Game/cActorManager.h"
 
 class AActor;
 class Object_10A6AEA0_B;
 class Object_10A6AEA0_C;
 
-class Class_10E6B764 : public Class_10E67938
+class Class_10E6B764 : public cActorManager
 {
 public:
     virtual void Virtual0();

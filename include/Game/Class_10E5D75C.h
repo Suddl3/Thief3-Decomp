@@ -3,12 +3,12 @@
 #ifndef GAME_CLASS_10E5D75C_H
 #define GAME_CLASS_10E5D75C_H
 
-class Class_10E6C7B4;
+class cTriggerOperatorParam;
 
 class Class_10E5D75C
 {
 public:
-    virtual Class_10E6C7B4* FUN_10a8d440(int A, int B);
+    virtual cTriggerOperatorParam* FUN_10a8d440(int A, int B);
 };
 
 #endif // GAME_CLASS_10E5D75C_H

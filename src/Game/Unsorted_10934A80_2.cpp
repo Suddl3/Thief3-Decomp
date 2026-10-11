@@ -7,14 +7,14 @@
 
 class IDirect3DVertexBuffer8;
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 // FUNCTION: 0x10934D10 ?FUN_10934d10@Class_10934D10@@QAEJXZ
 long Class_10934D10::FUN_10934d10()
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     long Result = Unknown0C->CreateVertexBuffer(Unknown10, 0x208, 0, 0, &Unknown1C);
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     Unknown20.FUN_109343b0(&Unknown1C);
     return Result;
 }

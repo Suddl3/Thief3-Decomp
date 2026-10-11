@@ -8,12 +8,12 @@ class Object_109331D0;
 class Class_10E49D44
 {
 public:
-    virtual int FUN_10932fa0();
+    virtual int AddRef();
     virtual void Virtual1();
     virtual void Virtual2();
     virtual void Virtual3();
     virtual void Virtual4();
-    virtual int FUN_10932fb0(unsigned int Index, Data_10932FB0* Out);
+    virtual int GetItemData(unsigned int Index, Data_10932FB0* Out);
     virtual void Virtual6();
     virtual int FUN_10933200(unsigned int Index);
     virtual void Virtual8();

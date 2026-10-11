@@ -15,13 +15,13 @@ public:
     virtual void Virtual4(int A, int B, int C, Class_10BFBD70* D);
 };
 
-cUObjectLinkManager* FUN_10b0b2b0();
+cUObjectLinkManager* GetUObjectLinkManager();
 
 // FUNCTION: 0x10ACF690 ?FUN_10acf690@Class_10ACF9A0@@QAEPAVClass_10B82390@@H@Z
 Class_10B82390* Class_10ACF9A0::FUN_10acf690(int A)
 {
     Class_10BFBD70 Items;
-    FUN_10b0b2b0()->Virtual4(A, 0, 0x64d9226, &Items);
+    GetUObjectLinkManager()->Virtual4(A, 0, 0x64d9226, &Items);
     if (Items.Count)
         return (Class_10B82390*)((Class_10AAB5C0*)Items.Data[0])->FUN_10aab5c0();
     return 0;

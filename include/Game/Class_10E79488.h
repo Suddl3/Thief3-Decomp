@@ -25,13 +25,13 @@ public:
     virtual void Virtual16();
     virtual void Virtual17();
     virtual void Virtual18();
-    virtual bool FUN_10b1bcc0(int param);
+    virtual bool HasWindowManager(int param);
     virtual void Virtual20();
     virtual void FUN_10b1be80(int A);
 
     ~Class_10E79488();
 
-    Class_10E79488* FUN_10b1bcd0();
+    Class_10E79488* Initialize();
 
     int Unknown04;
     int Unknown08;

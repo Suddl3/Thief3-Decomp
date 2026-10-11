@@ -15,9 +15,9 @@ public:
     virtual bool Virtual7(Object_10A8AC40** Ref);
 };
 
-// FUNCTION: 0x10A8AC40 ?FUN_10a8ac40@cTriggerSoundSchemaParam@@UAEHXZ
-int cTriggerSoundSchemaParam::FUN_10a8ac40()
+// FUNCTION: 0x10A8AC40 ?IsValid@cTriggerSoundSchemaParam@@UAEHXZ
+int cTriggerSoundSchemaParam::IsValid()
 {
-    int Result = Unknown04 && Unknown04->Virtual7(&Unknown04);
+    int Result = m_Schema && m_Schema->Virtual7(&m_Schema);
     return (unsigned char)Result;
 }

@@ -14,15 +14,15 @@ public:
 
 extern Class_10F46DA0* DAT_10f46da0;
 
-class Class_10E67938
+class cActorManager
 {
 public:
-    ~Class_10E67938();
+    ~cActorManager();
 
     virtual void FUN_10a4c470(int Type, int A, int B, int C);
 };
 
-class Class_10E6B620 : public Class_10E67938
+class Class_10E6B620 : public cActorManager
 {
 public:
     ~Class_10E6B620();

@@ -7,7 +7,7 @@
 class Class_10E8BE68
 {
 public:
-    virtual void FUN_10bca010(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 };
 
 extern Class_10FF667C* DAT_10ff667c;
@@ -85,7 +85,7 @@ public:
     int Unknown44;
 };
 
-class Class_10E94578
+class cTacticMoveToPoint
 {
 public:
     virtual void Virtual0();
@@ -114,7 +114,7 @@ public:
     virtual void FUN_10bcac50(int A, int B, int C, int D, int E);
 };
 
-class Class_10E970F0 : public Class_10E94578
+class State_Flee : public cTacticMoveToPoint
 {
 public:
     virtual void FUN_10bec730(int A, int B, int C, int D, int E);
@@ -128,15 +128,15 @@ public:
 // FUNCTION: 0x10BE9D00 ?FUN_10be9d00@Class_10E96FD0@@UAEXAAVFArchive@@@Z
 void Class_10E96FD0::FUN_10be9d00(FArchive& Ar)
 {
-    Class_10E8BE68::FUN_10bca010(Ar);
+    Class_10E8BE68::Serialize(Ar);
     DAT_10ff667c->Unknown18->Virtual1(Ar, &Unknown40);
     Ar.Serialize(&Unknown44, 4);
 }
 
-// FUNCTION: 0x10BEC730 ?FUN_10bec730@Class_10E970F0@@UAEXHHHHH@Z
-void Class_10E970F0::FUN_10bec730(int A, int B, int C, int D, int E)
+// FUNCTION: 0x10BEC730 ?FUN_10bec730@State_Flee@@UAEXHHHHH@Z
+void State_Flee::FUN_10bec730(int A, int B, int C, int D, int E)
 {
-    Class_10E94578::FUN_10bcac50(A, B, C, D, E);
+    cTacticMoveToPoint::FUN_10bcac50(A, B, C, D, E);
     if (!Unknown64)
         FUN_10bebc70();
 }

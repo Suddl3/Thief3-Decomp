@@ -4,12 +4,12 @@
 #define GAME_CLASS_10E6BAB0_H
 
 #include "Game/Class_10A4C550.h"
-#include "Game/Class_10E67938.h"
+#include "Game/cActorManager.h"
 
 class Class_10A67000;
 class FVector;
 
-class Class_10E6BAB0 : public Class_10E67938
+class Class_10E6BAB0 : public cActorManager
 {
 public:
     virtual void FUN_10a70f00(int Event, int A, int B, int C);

@@ -43,9 +43,9 @@ Class_10C62290* Class_10E9CA9C::FUN_10c62550(int A, const char* B)
 {
     if (Unknown04)
     {
-        FUN_10905aa0()->Virtual8(0, 0);
+        GetAllocator()->Virtual8(0, 0);
         Class_10C62290* Obj = new(0, 0, 0, 0, 0) Class_10C62290(A);
-        FUN_10905aa0()->Virtual9();
+        GetAllocator()->Virtual9();
         {
             Class_109081E0 Name(B);
             Obj->Virtual3(Name);

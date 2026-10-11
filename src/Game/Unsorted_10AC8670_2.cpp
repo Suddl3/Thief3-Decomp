@@ -37,7 +37,7 @@ public:
     virtual void Virtual5(int A, int B, int C, int D, int E);
 };
 
-cUObjectLinkManager* FUN_10b0b2b0();
+cUObjectLinkManager* GetUObjectLinkManager();
 
 class Class_10B47720;
 
@@ -63,7 +63,7 @@ void Class_10AC8770::FUN_10ac8690(int A, int B, float C, int D)
     int Z = Src->Unknown08;
     int Y = Src->Unknown04;
     Class_10BFBD70 Found;
-    FUN_10b0b2b0()->Virtual4(0, A, 0x281B9D0, Found);
+    GetUObjectLinkManager()->Virtual4(0, A, 0x281B9D0, Found);
     Class_10AC8690_Unknown78 Value;
     Value.Unknown00 = X;
     Value.Unknown04 = Y;

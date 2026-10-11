@@ -56,14 +56,14 @@ public:
     virtual int Virtual4(int A);
 };
 
-// Class_10E9C330 as include/Game/Class_10E9C330.h declares it, with Virtual3's real arguments
+// SoundSimulator as include/Game/SoundSimulator.h declares it, with Virtual3's real arguments
 class Class_10C56E40;
 
 struct Struct_10C549A0;
 
 struct Struct_10C549A0_Entry;
 
-class Class_10E9C330
+class SoundSimulator
 {
 public:
     virtual void Virtual0(Class_10C56E40 A);
@@ -82,12 +82,12 @@ public:
     virtual void FUN_10c547e0();
 
     char Unknown04[0x48];
-    int Unknown4C;
+    int m_EntryCount;
     char Unknown50[4];
-    Struct_10C549A0_Entry* Unknown54;
+    Struct_10C549A0_Entry* m_Entries;
 };
 
-Class_10E9C330* GetSoundSimulator();
+SoundSimulator* GetSoundSimulator();
 
 Class_10A036A0 FUN_10a9c050(int A, Class_10A9C200_Unknown00* B);
 

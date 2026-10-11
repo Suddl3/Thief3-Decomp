@@ -7,7 +7,7 @@
 class Class_10E8BE68
 {
 public:
-    virtual void FUN_10bca010(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 };
 
 extern Class_10FF667C* DAT_10ff667c;
@@ -90,7 +90,7 @@ public:
 // FUNCTION: 0x10BDF930 ?FUN_10bdf930@State_MunchCorpse@@UAEXAAVFArchive@@@Z
 void State_MunchCorpse::FUN_10bdf930(FArchive& Ar)
 {
-    Class_10E8BE68::FUN_10bca010(Ar);
+    Class_10E8BE68::Serialize(Ar);
     if (Ar.Unknown0C >= 0x37)
     {
         Ar.Serialize(&Unknown40, 4);

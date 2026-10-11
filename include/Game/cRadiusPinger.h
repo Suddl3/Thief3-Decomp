@@ -3,13 +3,13 @@
 #ifndef GAME_CRADIUSPINGER_H
 #define GAME_CRADIUSPINGER_H
 
-#include "Game/Class_10E67938.h"
+#include "Game/cActorManager.h"
 
 class AActor;
 class Object_10A73870_B;
 class Object_10A73870_C;
 
-class cRadiusPinger : public Class_10E67938
+class cRadiusPinger : public cActorManager
 {
 public:
     virtual void Virtual0();

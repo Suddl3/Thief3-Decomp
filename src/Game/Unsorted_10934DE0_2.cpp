@@ -6,7 +6,7 @@
 
 extern Class_109242E0* DAT_10f319a0;
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 void __stdcall FUN_10d6b575(int A, int B, int C, unsigned int D, int E, int* F, int G, int H);
 
@@ -14,12 +14,12 @@ void __stdcall FUN_10d6b575(int A, int B, int C, unsigned int D, int E, int* F, 
 void Class_10934DE0::FUN_10934de0()
 {
     unsigned int Length = DAT_10f319a0->Unknown08;
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     int Rect[4];
     Rect[2] = 0x80;
     Rect[3] = 0x80;
     Rect[0] = 0;
     Rect[1] = 0;
     FUN_10d6b575(Unknown00, 0, 0, Length, 0, Rect, 1, 0);
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
 }

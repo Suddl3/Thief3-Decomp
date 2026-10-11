@@ -1,16 +1,16 @@
 // Game/Class_10E95170_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-class Class_10E94578
+class cTacticMoveToPoint
 {
 public:
     virtual void Virtual0();
 
     bool FUN_10bc40e0();
-    void FUN_10bc5b50();
+    void PopState();
 };
 
-class Class_10E95170 : public Class_10E94578
+class Class_10E95170 : public cTacticMoveToPoint
 {
 public:
     virtual void Virtual0();
@@ -24,17 +24,17 @@ public:
     virtual void FUN_10bdf3f0();
 
     char Unknown04[0x3C];
-    int Unknown40;
+    int m_State;
 };
 
 // FUNCTION: 0x10BDF3F0 ?FUN_10bdf3f0@Class_10E95170@@UAEXXZ
 void Class_10E95170::FUN_10bdf3f0()
 {
-    if (Unknown40 == 3)
+    if (m_State == 3)
     {
-        FUN_10bc5b50();
+        PopState();
         return;
     }
     if (FUN_10bc40e0())
-        FUN_10bc5b50();
+        PopState();
 }

@@ -24,7 +24,7 @@ int FUN_10932c50(int A, Class_10E4A668* P);
 
 void FUN_10932d40(int A, int B);
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 extern const char DAT_10e47660[];
 

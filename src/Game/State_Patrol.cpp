@@ -3,15 +3,15 @@
 
 struct Struct_10BC4240_Param;
 
-class Class_10E94578
+class cTacticMoveToPoint
 {
 public:
     virtual void Virtual0();
 
-    void FUN_10bc5b50();
+    void PopState();
 };
 
-class State_Patrol : public Class_10E94578
+class State_Patrol : public cTacticMoveToPoint
 {
 public:
     virtual void Virtual0();
@@ -27,7 +27,7 @@ public:
     void FUN_10bc4240(Struct_10BC4240_Param* A, bool B);
     void FUN_10bece10();
 
-    char Unknown04[0x45];
+    char m_Id[0x45];
     char Unknown49;
     char Unknown4A[2];
     Struct_10BC4240_Param* Unknown4C;
@@ -39,7 +39,7 @@ void State_Patrol::FUN_10becfd0()
     if (Unknown4C)
         FUN_10bc4240(Unknown4C, false);
     else if (Unknown49 == 1)
-        FUN_10bc5b50();
+        PopState();
     else
         FUN_10bece10();
 }

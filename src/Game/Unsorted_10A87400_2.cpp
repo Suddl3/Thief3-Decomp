@@ -21,7 +21,7 @@ public:
     Class_10A873D0 Unknown0C;
 };
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 // FUNCTION: 0x10A87C00 ??1Class_10A87C00@@QAE@XZ
 Class_10A87C00::~Class_10A87C00()
@@ -50,7 +50,7 @@ void Class_10A87F40::FUN_10a87f40()
     FUN_10a87cd0(0);
     if (Unknown04)
     {
-        FUN_10905aa0()->Virtual5(Unknown08);
+        GetAllocator()->Virtual5(Unknown08);
         Unknown08 = 0;
         Unknown04 = 0;
     }

@@ -5,7 +5,7 @@
 #include "Game/Class_109413A0.h"
 #include "Game/IDirect3DVertexBuffer8.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 extern IDirect3DDevice8* GDirect3DDevice8;
 
@@ -31,10 +31,10 @@ bool Class_109413A0::FUN_109413a0()
         {
             for (int i = 0; i < 2; i++)
             {
-                FUN_10905aa0()->Virtual8(0, 0);
+                GetAllocator()->Virtual8(0, 0);
                 int Size = Unknown20 * 28;
                 long Result = GDirect3DDevice8->CreateVertexBuffer(Size, 8, 0x144, DAT_10efefbc, &Unknown08[i]);
-                FUN_10905aa0()->Virtual9();
+                GetAllocator()->Virtual9();
                 if (Result < 0)
                 {
                     Unknown08[i] = 0;

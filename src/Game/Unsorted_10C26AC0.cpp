@@ -63,9 +63,9 @@ public:
 // FUNCTION: 0x10C26B60 ?FUN_10c26b60@Class_10C26B60@@QAEXHHH@Z
 void Class_10C26B60::FUN_10c26b60(int A, int B, int C)
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     Class_10E9AFA4* Obj = new(0, 0, 0, 0, 0) Class_10E9AFA4(A, B, C);
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     FUN_10c26a60((Struct_10C26A60*)Obj, 0);
 }
 

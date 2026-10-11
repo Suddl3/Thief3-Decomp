@@ -7,7 +7,7 @@ class Class_10E6A9F8
 {
 public:
     virtual void Virtual0();
-    virtual bool FUN_10a62a20(unsigned int A, bool B, bool C);
+    virtual bool SetTimerAction(unsigned int A, bool B, bool C);
     virtual void Virtual2();
     virtual void Virtual3();
     virtual void Virtual4();
@@ -144,21 +144,21 @@ public:
     virtual bool Virtual135(unsigned int A);
 
     char Unknown04[0x1DC];
-    unsigned int Unknown1E0;
-    int Unknown1E4;
+    unsigned int m_TimerAction;
+    int m_Timer;
 };
 
-// FUNCTION: 0x10A62A20 ?FUN_10a62a20@Class_10E6A9F8@@UAE_NI_N0@Z
-bool Class_10E6A9F8::FUN_10a62a20(unsigned int A, bool B, bool C)
+// FUNCTION: 0x10A62A20 ?SetTimerAction@Class_10E6A9F8@@UAE_NI_N0@Z
+bool Class_10E6A9F8::SetTimerAction(unsigned int A, bool B, bool C)
 {
     if (C)
     {
-        Unknown1E0 = A;
-        Unknown1E4 = 0;
+        m_TimerAction = A;
+        m_Timer = 0;
         if (B)
             return Virtual135(A);
     }
-    Unknown1E0 = 0x40;
+    m_TimerAction = 0x40;
     return false;
 }
 

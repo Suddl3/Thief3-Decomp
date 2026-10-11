@@ -3,7 +3,7 @@
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10C08E90.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 // FUNCTION: 0x10C08E90 ?FUN_10c08e90@Class_10C08E90@@QAEXXZ
 void Class_10C08E90::FUN_10c08e90()
@@ -11,7 +11,7 @@ void Class_10C08E90::FUN_10c08e90()
     FUN_10c089b0(0);
     if (Unknown04)
     {
-        FUN_10905aa0()->Virtual5(Unknown08);
+        GetAllocator()->Virtual5(Unknown08);
         Unknown08 = 0;
         Unknown04 = 0;
     }

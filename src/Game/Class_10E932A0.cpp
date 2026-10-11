@@ -3,15 +3,15 @@
 #include "Game/Class_10BB8960.h"
 #include "Game/Class_10bb8960_Result.h"
 
-class Class_10E94578
+class cTacticMoveToPoint
 {
 public:
     virtual void Virtual0();
 
-    void FUN_10bc5b50();
+    void PopState();
 };
 
-class Class_10E932A0 : public Class_10E94578
+class Class_10E932A0 : public cTacticMoveToPoint
 {
 public:
     virtual void Virtual0();
@@ -59,6 +59,6 @@ public:
 bool Class_10E932A0::FUN_10bd1e30()
 {
     if (Unknown04->FUN_10bb8960()->Virtual36())
-        FUN_10bc5b50();
+        PopState();
     return true;
 }

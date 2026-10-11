@@ -13,8 +13,8 @@ class cAIManager
 {
 public:
     virtual void Virtual0();
-    virtual void FUN_10c0b510(int A);
-    virtual void FUN_10c0bc50(UObject* Obj);
+    virtual void Activate(int A);
+    virtual void AddPawnController(UObject* Obj);
     virtual void Virtual3();
     virtual void Virtual4();
     virtual void Virtual5();
@@ -28,23 +28,23 @@ public:
     virtual void Virtual13();
     virtual void FUN_10c0b3c0(unsigned char param);
     virtual void Virtual15();
-    virtual void FUN_10c0af80();
+    virtual void Reset();
     virtual void Virtual17();
-    virtual void FUN_10c0b870();
+    virtual void UpdateControllers();
     virtual void Virtual19(int A, int B);
     virtual bool FUN_10c0b6b0(Struct_10C0B6B0* A);
     virtual void Virtual21(int A);
 
-    cAIManager* FUN_10c0b8d0();
+    cAIManager* Init();
     void FUN_10c0b920();
-    void FUN_10c0b960(FArchive& Ar);
+    void Serialize(FArchive& Ar);
 
-    bool Unknown04;
+    bool m_Active;
     char Pad05[0x3];
     int Unknown08;
-    int Unknown0C;
+    int m_UpdateIndex;
     char Pad10[0x4];
-    Class_10BFBD70 Unknown14;
+    Class_10BFBD70 m_Controllers;
     int Unknown20;
     int Unknown24;
     int Unknown28;
@@ -53,7 +53,7 @@ public:
     int Unknown34;
     int Unknown38;
     int Unknown3C;
-    bool Unknown40;
+    bool m_UpdateAll;
     unsigned char Unknown41;
     bool Unknown42;
     char Pad43[0x1];

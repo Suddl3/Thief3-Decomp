@@ -29,7 +29,7 @@ public:
     char PadAC[0x14];
 };
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 // FUNCTION: 0x10924C60 ?FUN_10924c60@Class_10924AE0@@QAEXXZ
 void Class_10924AE0::FUN_10924c60()
@@ -37,8 +37,8 @@ void Class_10924AE0::FUN_10924c60()
     Unknown04->Virtual41(&Unknown18);
     Unknown04->Virtual32(&Unknown08);
     Unknown04->Virtual33(&Unknown0C);
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     Unknown48.SetValues(1, 0, 0xff000000);
     FUN_10924490(1, 0, 0, 0, &Unknown48);
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
 }

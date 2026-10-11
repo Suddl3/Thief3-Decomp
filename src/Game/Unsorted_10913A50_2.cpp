@@ -11,7 +11,7 @@ inline void FreeBlock(int*& Block)
     if (Block)
     {
         int* Obj = Block - 1;
-        FUN_10905aa0()->Virtual5(Obj);
+        GetAllocator()->Virtual5(Obj);
         Block = 0;
     }
 }

@@ -13,7 +13,7 @@ extern bool DAT_10f3a060;
 
 class Class_10BFBD70;
 
-class Class_10E67938;
+class cActorManager;
 
 extern Class_10A4C550 DAT_10f3a068;
 

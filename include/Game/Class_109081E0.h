@@ -7,14 +7,14 @@
 #include "Game/Class_1090A780.h"
 
 extern const char DAT_10e47660[];
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 class Class_109081E0 : public Class_1090A780
 {
 public:
     // No destructor of its own: the implicit one inlines Class_1090A780's, one body, as the game does
     // (src/Game/Class_10E9CA9C.cpp keeps a copy that calls it, as that module does). Where the code
-    // computes Unknown00 - 4 before FUN_10905aa0() and this one schedules it after, a copy of the class
+    // computes Unknown00 - 4 before GetAllocator() and this one schedules it after, a copy of the class
     // without a base and with that body as its own destructor matched instead (0x1094EEE0).
     Class_109081E0() {}
     Class_109081E0(const char* In);

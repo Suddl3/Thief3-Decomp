@@ -16,7 +16,7 @@ public:
     virtual void Virtual5();
     virtual int FUN_10c61e50();
     virtual void FUN_10c60c90();
-    virtual void FUN_10c60e60();
+    virtual void ReleaseData();
     virtual int Virtual9();
     virtual void Virtual10();
     virtual void Virtual11();

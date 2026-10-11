@@ -5,7 +5,7 @@
 #include "Game/Class_10932760.h"
 #include "Game/Node_10932350.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 extern const char DAT_10e47660[];
 

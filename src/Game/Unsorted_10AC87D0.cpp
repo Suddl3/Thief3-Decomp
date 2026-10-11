@@ -1,10 +1,10 @@
 // Game/Unsorted_10AC87D0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Core/Core.h"
-#include "Game/Class_10E67938.h"
+#include "Game/cActorManager.h"
 #include "Game/Struct_10AC90F0.h"
 
-class Class_10E6FCBC : public Class_10E67938
+class Class_10E6FCBC : public cActorManager
 {
 public:
     Class_10E6FCBC();

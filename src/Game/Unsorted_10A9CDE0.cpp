@@ -6,7 +6,7 @@
 #include "Game/Class_10E6D1D8.h"
 #include "Game/Class_10E6D1E4.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 // Ion Storm's placement new (0x10905C10).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
@@ -14,23 +14,23 @@ void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D
 // FUNCTION: 0x10A9CDE0 ?FUN_10a9cde0@Class_10E5D894@@UAEPAVClass_10E6D1D8@@XZ
 Class_10E6D1D8* Class_10E5D894::FUN_10a9cde0()
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     Class_10E6D1D8* Result = 0;
     void* Memory = operator new(sizeof(Class_10E6D1D8), 0, 0, 0, 0, 0);
     if (Memory)
         Result = static_cast<Class_10E6D1D8*>(Memory)->FUN_10a9cdb0();
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     return Result;
 }
 
 // FUNCTION: 0x10A9CE30 ?FUN_10a9ce30@Class_10E5D890@@UAEPAVClass_10E6D1E4@@XZ
 Class_10E6D1E4* Class_10E5D890::FUN_10a9ce30()
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     Class_10E6D1E4* Result = 0;
     void* Memory = operator new(sizeof(Class_10E6D1E4), 0, 0, 0, 0, 0);
     if (Memory)
         Result = static_cast<Class_10E6D1E4*>(Memory)->FUN_10a9cdd0();
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     return Result;
 }

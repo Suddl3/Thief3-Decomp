@@ -37,17 +37,17 @@ extern void* DAT_10e47850[];
 
 struct Struct_10D9E5E0_Param;
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 Class_10D9B090* FUN_10d9dcb0();
 
 // FUNCTION: 0x10B7C030 ?FUN_10b7c030@Class_10E4B180@@UAEXPAUStruct_10B7C030_Param@@@Z
 void Class_10E4B180::FUN_10b7c030(Struct_10B7C030_Param* A)
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     if (A && A->UnknownB0)
         FUN_10d9dcb0()->FUN_10d9e5e0(A->UnknownB0);
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
 }
 
 // FUNCTION: 0x10B7C150 ?FUN_10b7c150@@YAXPAUStruct_10B7C150@@@Z

@@ -5,7 +5,7 @@
 #include "Game/WindowManager.h"
 #include "Game/Class_10905A90_Member.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 void* FUN_10a4bd70(int A);
 
@@ -21,7 +21,7 @@ public:
         if (Unknown00)
         {
             char* Block = Unknown00 - 4;
-            FUN_10905aa0()->Virtual5(Block);
+            GetAllocator()->Virtual5(Block);
             Unknown00 = 0;
         }
     }
@@ -62,7 +62,7 @@ int __stdcall FUN_10b369b0(int A, int B, Class_10B369B0_Param* P)
 {
     Class_10C08940* R1 = ((Class_10978090*)P->Virtual4(0))->FUN_10978090();
     cTaggedAnimSeq* O2 = (cTaggedAnimSeq*)P->Virtual4(1);
-    Class_10B369B0_Result* Y = (Class_10B369B0_Result*)FUN_10a4bd70((int)O2->cTaggedAnimSeq::FUN_10b34b10());
+    Class_10B369B0_Result* Y = (Class_10B369B0_Result*)FUN_10a4bd70((int)O2->cTaggedAnimSeq::GetName());
     FUN_10b1b600()->FUN_10b1afd0(Y, R1);
     if (GWindowManager)
     {

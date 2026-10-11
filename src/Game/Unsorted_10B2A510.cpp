@@ -164,7 +164,7 @@ void Class_10E80798::FUN_10b2a510()
         if (Unknown1E8.Unknown00.Unknown00)
         {
             char* Block = Unknown1E8.Unknown00.Unknown00 - 4;
-            FUN_10905aa0()->Virtual5(Block);
+            GetAllocator()->Virtual5(Block);
             Unknown1E8.Unknown00.Unknown00 = 0;
         }
         Virtual56(0);

@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Core/Core.h"
 #include "Game/Class_1098E330.h"
-#include "Game/Class_10E67938.h"
+#include "Game/cActorManager.h"
 #include "Game/Class_10E6B978.h"
 #include "Game/Class_10E6B9F8.h"
 #include "Game/Class_10E6BA00.h"
@@ -98,7 +98,7 @@ bool Class_10E6BC8C::FUN_10a6e690(int A)
 void Class_10E6BA00::FUN_10a6e6b0(int Type, int A, int B, int C)
 {
     if (Type != 0x26)
-        Class_10E67938::FUN_10a4c470(Type, A, B, C);
+        cActorManager::FUN_10a4c470(Type, A, B, C);
     else
         Virtual15(A, B, C);
 }

@@ -5,9 +5,9 @@
 
 #include "Game/Class_10A3BA50.h"
 #include "Game/Class_10E66700.h"
-#include "Game/Class_10E67938.h"
+#include "Game/cActorManager.h"
 
-class Class_10E667C4 : public Class_10E67938, public Class_10E66700
+class Class_10E667C4 : public cActorManager, public Class_10E66700
 {
 public:
     virtual void FUN_10a4c470(int A, int B, int C, int D);

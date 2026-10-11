@@ -23,7 +23,7 @@ public:
 
     virtual ~Class_10E85AD8();
 
-    int FUN_10b69640();
+    int FindCurrentIndex();
 
     int Unknown118;
     int Unknown11C;
@@ -39,7 +39,7 @@ public:
     int Unknown144;
     int Unknown148;
     Class_10BFBD70 Unknown14C;
-    int Unknown158;
+    int m_CurrentIndex;
     int Unknown15C;
     int Unknown160;
     int Unknown164;
@@ -47,18 +47,18 @@ public:
     int Unknown16C;
     char Unknown170[0xC];
     int Unknown17C;
-    int Unknown180;
+    int m_State;
 };
 
-// FUNCTION: 0x10B69640 ?FUN_10b69640@Class_10E85AD8@@QAEHXZ
-int Class_10E85AD8::FUN_10b69640()
+// FUNCTION: 0x10B69640 ?FindCurrentIndex@Class_10E85AD8@@QAEHXZ
+int Class_10E85AD8::FindCurrentIndex()
 {
     int i;
     for (i = 0; i < Unknown14C.Unknown00; i++)
     {
         if (Unknown14C.Unknown08[i] == UnknownC4)
         {
-            Unknown158 = i;
+            m_CurrentIndex = i;
             break;
         }
     }

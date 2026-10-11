@@ -37,10 +37,10 @@ public:
     void** VTable;
 };
 
-class Class_10E94578
+class cTacticMoveToPoint
 {
 public:
-    void FUN_10bc5b50();
+    void PopState();
 
     char Unknown00[0x1C];
     Class_10E90C5C* Unknown1C;
@@ -115,15 +115,15 @@ public:
     Class_10BBA020* Unknown04;
 };
 
-// FUNCTION: 0x10BC5B50 ?FUN_10bc5b50@Class_10E8BE68@@QAEXXZ
-void Class_10E94578::FUN_10bc5b50()
+// FUNCTION: 0x10BC5B50 ?PopState@Class_10E8BE68@@QAEXXZ
+void cTacticMoveToPoint::PopState()
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     Class_10E90C5C* Result = new(0, 0, 0, 0, 0) Class_10E90C5C;
     if (Unknown1C)
         delete Unknown1C;
     Unknown1C = Result;
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
 }
 
 // FUNCTION: 0x10BC5BC0 ?FUN_10bc5bc0@Class_10E8BE68@@UAEDXZ

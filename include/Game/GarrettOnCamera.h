@@ -16,7 +16,7 @@ public:
     virtual void Virtual5(int A, bool B, float C);
     virtual void Virtual6();
     virtual int FUN_10ac2610(float Value);
-    virtual void FUN_10ac2c60(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 
     bool FUN_10ac1180(GarrettOnCamera* A, int* B, bool* C, float* D);
     void FUN_10ac2a80(GarrettOnCamera* A);

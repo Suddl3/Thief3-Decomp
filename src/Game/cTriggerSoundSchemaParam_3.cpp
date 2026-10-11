@@ -3,7 +3,7 @@
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10E6BF84.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 extern const char DAT_10e47660[];
 
@@ -67,7 +67,7 @@ public:
         if (Unknown00)
         {
             char* Block = Unknown00 - 4;
-            FUN_10905aa0()->Virtual5(Block);
+            GetAllocator()->Virtual5(Block);
             Unknown00 = 0;
         }
     }
@@ -93,7 +93,7 @@ public:
     cTriggerSoundSchemaParam();
     virtual ~cTriggerSoundSchemaParam();
 
-    Class_10A036A0 Unknown04;
+    Class_10A036A0 m_Schema;
     Class_109081E0 Unknown14;
 };
 
@@ -102,7 +102,7 @@ cTriggerSoundSchemaParam::cTriggerSoundSchemaParam()
 {
     Class_10A036A0 Local;
     Unknown14.FUN_1090a590(DAT_10e47660);
-    Unknown04.FUN_10a036a0(Local);
+    m_Schema.FUN_10a036a0(Local);
 }
 
 // FUNCTION: 0x10A8AFA0 ??_GcTriggerSoundSchemaParam@@UAEPAXI@Z

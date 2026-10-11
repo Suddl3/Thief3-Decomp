@@ -22,12 +22,12 @@ Class_10C41420* FUN_10c47d90();
 
 Class_10C80360* FUN_10c5f280();
 
-class Class_10E9B5C0
+class CadenceManager
 {
 public:
     virtual void Virtual0();
     virtual void Virtual1();
-    virtual void FUN_10c3f050(FVector* Position);
+    virtual void SetPosition(FVector* Position);
     virtual void Virtual3();
     virtual void Virtual4();
     virtual void Virtual5();
@@ -41,7 +41,7 @@ public:
     virtual void FUN_10c3f220(unsigned char A);
 
     char Unknown04[4];
-    FVector Unknown08;
+    FVector m_Position;
     char Unknown14[8];
     Class_10E9B5C0_Unknown1C* Unknown1C;
     bool Unknown20;
@@ -79,10 +79,10 @@ public:
     virtual int __stdcall Virtual13(int A, int B, int C, int D, int E, int F, int G);
 };
 
-// FUNCTION: 0x10C3F050 ?FUN_10c3f050@Class_10E9B5C0@@UAEXPAVFVector@@@Z
-void Class_10E9B5C0::FUN_10c3f050(FVector* Position)
+// FUNCTION: 0x10C3F050 ?SetPosition@CadenceManager@@UAEXPAVFVector@@@Z
+void CadenceManager::SetPosition(FVector* Position)
 {
-    Unknown08 = *Position;
+    m_Position = *Position;
     if (Unknown1C)
         Unknown1C->Virtual14(Position->X, Position->Y, Position->Z, 1);
 }

@@ -14,14 +14,14 @@ public:
 class Class_10E6C170 : public Class_10E6C104
 {
 public:
-    Class_10E6C170* FUN_10a81190();
+    Class_10E6C170* Construct();
 
     char Unknown04[4];
     int Unknown08;
 };
 
-// FUNCTION: 0x10A81190 ?FUN_10a81190@Class_10E6C170@@QAEPAV1@XZ
-Class_10E6C170* Class_10E6C170::FUN_10a81190()
+// FUNCTION: 0x10A81190 ?Construct@Class_10E6C170@@QAEPAV1@XZ
+Class_10E6C170* Class_10E6C170::Construct()
 {
     this->Class_10E6C104::Class_10E6C104();
     Unknown00 = DAT_10e6c170;

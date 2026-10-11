@@ -4,7 +4,7 @@
 #include "Game/Class_1094E6D0.h"
 #include "Game/Class_10F2C744.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 extern Class_10F2C744* DAT_10f2c744;
 
@@ -26,9 +26,9 @@ void Class_1094E6D0::FUN_1094e6d0(int Index, int A, int B, int C, int D)
     Unknown108[Index].Unknown24 = D;
     if (Index == 0)
     {
-        FUN_10905aa0()->Virtual8(0, 0);
+        GetAllocator()->Virtual8(0, 0);
         DAT_10f2c744->Virtual3(0, 0x10, 0, "BlendMesh::m_ShadowVertex", &Unknown114);
         DAT_10f2c744->Virtual3(1, 0x10, 0, "BlendMesh::m_ShadowVertex", &Unknown118);
-        FUN_10905aa0()->Virtual9();
+        GetAllocator()->Virtual9();
     }
 }

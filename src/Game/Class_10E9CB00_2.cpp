@@ -4,8 +4,8 @@
 
 struct Struct_10C60E60 {};
 
-// FUNCTION: 0x10C60E60 ?FUN_10c60e60@Class_10E9CB00@@UAEXXZ
-void Class_10E9CB00::FUN_10c60e60()
+// FUNCTION: 0x10C60E60 ?ReleaseData@Class_10E9CB00@@UAEXXZ
+void Class_10E9CB00::ReleaseData()
 {
     if (UnknownF8)
         Unknown10 -= UnknownFC;

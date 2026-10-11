@@ -11,16 +11,16 @@ Class_10D9B090* FUN_10d9dcb0();
 class Class_10E8BE68
 {
 public:
-    virtual void FUN_10bca010(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 };
 
-class Class_10E94578 : public Class_10E8BE68
+class cTacticMoveToPoint : public Class_10E8BE68
 {
 public:
-    void FUN_10bc5b50();
+    void PopState();
 };
 
-class State_PlayingPossum : public Class_10E94578
+class State_PlayingPossum : public cTacticMoveToPoint
 {
 public:
     virtual void Virtual1();
@@ -89,16 +89,16 @@ public:
     virtual void FUN_10bce9b0(FArchive& Ar);
 
     char Unknown04[0x3C];
-    double Unknown40;
-    double Unknown48;
-    int Unknown50;
+    double m_StartTime;
+    double m_EndTime;
+    int m_Duration;
 };
 
 // FUNCTION: 0x10BCEC90 ?FUN_10bcec90@State_PlayingPossum@@UAEXXZ
 void State_PlayingPossum::FUN_10bcec90()
 {
-    if (Unknown48 > 0.0 && TimeManager::Instance()->GetGameTime() > Unknown48)
-        FUN_10bc5b50();
+    if (m_EndTime > 0.0 && TimeManager::Instance()->GetGameTime() > m_EndTime)
+        PopState();
 }
 
 // FUNCTION: 0x10BCEF30 ?FUN_10bcef30@Class_10E92C38@@UAEXXZ

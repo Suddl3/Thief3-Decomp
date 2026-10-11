@@ -37,14 +37,14 @@ public:
     virtual void FUN_10a13480(int Param);
 
     char Unknown04[4];
-    int Unknown08;
+    int m_ChildCount;
     char Unknown0C[4];
-    Class_10A80E60** Unknown10;
+    Class_10A80E60** m_Children;
 };
 
 // FUNCTION: 0x10A13480 ?FUN_10a13480@cConversationManager@@UAEXH@Z
 void cConversationManager::FUN_10a13480(int Param)
 {
-    for (int i = 0; i < Unknown08; i++)
-        Unknown10[i]->FUN_10a80e60(Param);
+    for (int i = 0; i < m_ChildCount; i++)
+        m_Children[i]->FUN_10a80e60(Param);
 }

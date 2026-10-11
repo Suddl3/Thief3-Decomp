@@ -11,7 +11,7 @@ struct Struct_10ABB4B0
     char Unknown00[0x14];
 };
 
-class Class_10E6F47C
+class cHighlightMgr
 {
 public:
     virtual void Virtual0();
@@ -20,10 +20,10 @@ public:
     virtual void Virtual3();
     virtual int Virtual4(int A);
     virtual void Virtual5();
-    virtual Struct_10ABB4B0* FUN_10abb4b0(int A);
+    virtual Struct_10ABB4B0* FindEntry(int A);
 
     char Unknown04[0x18];
-    Struct_10ABB4B0* Unknown1C;
+    Struct_10ABB4B0* m_Entries;
 };
 
 struct Struct_10ABB300_Owner
@@ -71,11 +71,11 @@ void Class_10ABB480::FUN_10abb480()
         Unknown0C[i]->Virtual1();
 }
 
-// FUNCTION: 0x10ABB4B0 ?FUN_10abb4b0@Class_10E6F47C@@UAEPAUStruct_10ABB4B0@@H@Z
-Struct_10ABB4B0* Class_10E6F47C::FUN_10abb4b0(int A)
+// FUNCTION: 0x10ABB4B0 ?FindEntry@cHighlightMgr@@UAEPAUStruct_10ABB4B0@@H@Z
+Struct_10ABB4B0* cHighlightMgr::FindEntry(int A)
 {
     int Index = Virtual4(A);
     if (Index == -1)
         return 0;
-    return Unknown1C + Index;
+    return m_Entries + Index;
 }

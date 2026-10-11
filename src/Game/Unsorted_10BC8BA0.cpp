@@ -22,7 +22,7 @@ public:
 class Class_10E92730 : public Class_10E95288
 {
 public:
-    Class_10E92730* FUN_10bccb00(int A, int B);
+    Class_10E92730* Construct(int A, int B);
 };
 
 void FUN_10bb83e0();
@@ -55,7 +55,7 @@ public:
 class Class_10E939E0 : public State_Search
 {
 public:
-    Class_10E939E0* FUN_10bd51e0(int A, int B);
+    Class_10E939E0* Initialize(int A, int B);
 };
 
 void FUN_10bd4310();
@@ -215,8 +215,8 @@ void FUN_10bcc280()
     FUN_10bc5a60();
 }
 
-// FUNCTION: 0x10BCCB00 ?FUN_10bccb00@Class_10E92730@@QAEPAV1@HH@Z
-Class_10E92730* Class_10E92730::FUN_10bccb00(int A, int B)
+// FUNCTION: 0x10BCCB00 ?Construct@Class_10E92730@@QAEPAV1@HH@Z
+Class_10E92730* Class_10E92730::Construct(int A, int B)
 {
     this->Class_10E95288::Class_10E95288(A, B);
     Unknown00 = DAT_10e92730;
@@ -265,8 +265,8 @@ void FUN_10bd3140()
     FUN_10bc6a80();
 }
 
-// FUNCTION: 0x10BD51E0 ?FUN_10bd51e0@Class_10E939E0@@QAEPAV1@HH@Z
-Class_10E939E0* Class_10E939E0::FUN_10bd51e0(int A, int B)
+// FUNCTION: 0x10BD51E0 ?Initialize@Class_10E939E0@@QAEPAV1@HH@Z
+Class_10E939E0* Class_10E939E0::Initialize(int A, int B)
 {
     this->State_Search::State_Search(A, B);
     Unknown00 = DAT_10e939e0;

@@ -46,7 +46,7 @@ class Class_10E92730 : public Class_10E95288
 {
 public:
     virtual void Virtual1();
-    virtual void FUN_10bcbf00();
+    virtual void TickCountdown();
     virtual void Virtual3();
     virtual void Virtual4();
     virtual void Virtual5();

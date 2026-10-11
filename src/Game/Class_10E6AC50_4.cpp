@@ -34,16 +34,16 @@ public:
     virtual void Virtual8();
     virtual void Virtual9();
     virtual void Virtual10();
-    virtual void FUN_10a632e0(Object_10A632E0* Obj);
+    virtual void AddItem(Object_10A632E0* Obj);
 
     char Unknown04[0x10];
-    Class_10BFBD70 Unknown14;
+    Class_10BFBD70 m_Count;
 };
 
-// FUNCTION: 0x10A632E0 ?FUN_10a632e0@Class_10E6AC50@@UAEXPAVObject_10A632E0@@@Z
-void Class_10E6AC50::FUN_10a632e0(Object_10A632E0* Obj)
+// FUNCTION: 0x10A632E0 ?AddItem@Class_10E6AC50@@UAEXPAVObject_10A632E0@@@Z
+void Class_10E6AC50::AddItem(Object_10A632E0* Obj)
 {
-    Class_10BFBD70* Array = &Unknown14;
+    Class_10BFBD70* Array = &m_Count;
     int Index = Array->Count;
     Array->FUN_10bfbd70(Index + 1);
     Array->Data[Index] = Obj;

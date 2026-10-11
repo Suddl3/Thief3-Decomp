@@ -3,11 +3,11 @@
 #ifndef GAME_CLASS_10E6FC80_H
 #define GAME_CLASS_10E6FC80_H
 
-#include "Game/Class_10E67938.h"
+#include "Game/cActorManager.h"
 
 class Class_10990E20;
 
-class Class_10E6FC80 : public Class_10E67938
+class Class_10E6FC80 : public cActorManager
 {
 public:
     virtual void FUN_10ac8e80(int Type, Class_10990E20* Source, int C, int D);

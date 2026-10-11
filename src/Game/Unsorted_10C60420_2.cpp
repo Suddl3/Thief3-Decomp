@@ -6,7 +6,7 @@
 
 struct Item_10C50320;
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 // FUNCTION: 0x10C60420 ?FUN_10c60420@Class_10C60480@@QAEXXZ
 void Class_10C60480::FUN_10c60420()
@@ -17,7 +17,7 @@ void Class_10C60480::FUN_10c60420()
         Item->FUN_10c4f690(0);
         if (Item->Unknown04)
         {
-            FUN_10905aa0()->Virtual5(Item->Unknown08);
+            GetAllocator()->Virtual5(Item->Unknown08);
             Item->Unknown08 = 0;
             Item->Unknown04 = 0;
         }

@@ -31,7 +31,7 @@ public:
 
 extern Class_10F3A3D8* DAT_10f3a3d8;
 
-class Class_10E85DE0
+class cDifficultyPane
 {
 public:
     virtual void Virtual0();
@@ -163,7 +163,7 @@ public:
     Class_10B6BBD0_190* Unknown190;
     char Unknown194[4];
     Class_10B6BBD0_198* Unknown198;
-    int Unknown19C;
+    int m_Mode;
 };
 
 // include/Game/Class_10B66980_Unknown158.h has only padding; this copy names the
@@ -189,14 +189,14 @@ public:
     int Unknown28;
 };
 
-// FUNCTION: 0x10B6B970 ?FUN_10b6b970@Class_10E85DE0@@UAEXXZ
-void Class_10E85DE0::FUN_10b6b970()
+// FUNCTION: 0x10B6B970 ?FUN_10b6b970@cDifficultyPane@@UAEXXZ
+void cDifficultyPane::FUN_10b6b970()
 {
     ((Class_10B78320*)this)->FUN_10b78320();
     if (Unknown190)
     {
         Data_10B66060* Value;
-        switch (Unknown19C)
+        switch (m_Mode)
         {
         case 0:
             Value = DAT_10f3a3d8->Unknown150->Unknown08;
@@ -209,7 +209,7 @@ void Class_10E85DE0::FUN_10b6b970()
             break;
         }
         Class_1098E330* Obj;
-        switch (Unknown19C)
+        switch (m_Mode)
         {
         case 0:
             Obj = DAT_10f3a3d8->Unknown150->Unknown04;

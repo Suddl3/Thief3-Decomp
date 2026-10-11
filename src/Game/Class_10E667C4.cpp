@@ -1,7 +1,7 @@
 // Game/Class_10E667C4.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10A3BA50.h"
-#include "Game/Class_10E67938.h"
+#include "Game/cActorManager.h"
 #include "Game/Class_10E66700.h"
 #include "Game/Class_10E667C4.h"
 
@@ -13,7 +13,7 @@ struct Struct_10A3BD30
 
 // FUNCTION: 0x10A3BD30 ??0Class_10E667C4@@QAE@XZ
 Class_10E667C4::Class_10E667C4()
-    : Class_10E67938(), Class_10E66700()
+    : cActorManager(), Class_10E66700()
 {
     char Flag;
     Struct_10A3BD30 Param;

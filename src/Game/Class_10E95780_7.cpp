@@ -122,7 +122,7 @@ public:
 
     ~Class_10E95780();
 
-    Class_10E95780* FUN_10be1820(int A, int B);
+    Class_10E95780* Init(int A, int B);
     void FUN_10be1a70();
     bool FUN_10be2380(void* Object, int A);
     void FUN_10be2a70();

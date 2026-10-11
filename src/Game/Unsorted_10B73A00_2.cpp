@@ -25,7 +25,7 @@ public:
     char Pad5A[0x2];
 };
 
-Options* FUN_10929550();
+Options* GetOptions();
 
 class Class_10B73810
 {
@@ -337,9 +337,9 @@ void Class_10B73C30::FUN_10b73a00(bool Param)
     if (Param)
     {
         for (int i = 0; i < Unknown19C; i++)
-            Unknown1B0[i] = FUN_10929550()->Get(Unknown1A4[i]->Unknown00);
+            Unknown1B0[i] = GetOptions()->Get(Unknown1A4[i]->Unknown00);
         Class_10B73810::FUN_10b737b0();
         if (Virtual53())
-            FUN_10929550()->FUN_10ab5a90();
+            GetOptions()->FUN_10ab5a90();
     }
 }

@@ -52,7 +52,7 @@ public:
     virtual ~cT3OptionsWindow();
 
     Class_10BFBD70 Unknown190;
-    Class_10BFBD70 Unknown19C;
+    Class_10BFBD70 m_OptionCount;
     Class_10BFBD70 Unknown1A8;
     int Unknown1B4;
     int Unknown1B8;

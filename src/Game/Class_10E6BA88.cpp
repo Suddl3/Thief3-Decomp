@@ -4,7 +4,7 @@
 #include "Game/Class_10A70DF0_Obj.h"
 #include "Game/Struct_10A70DF0.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 class Class_10A70B80
 {
@@ -17,7 +17,7 @@ public:
         FUN_10dd4d40(0);
         if (Unknown04)
         {
-            FUN_10905aa0()->Virtual5(Unknown08);
+            GetAllocator()->Virtual5(Unknown08);
             Unknown08 = 0;
             Unknown04 = 0;
         }

@@ -16,7 +16,7 @@ public:
 class Class_10E8BE68
 {
 public:
-    virtual void FUN_10bca010(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 };
 
 class Class_10E94C58 : public Class_10E8BE68
@@ -95,7 +95,7 @@ public:
 // FUNCTION: 0x10BDBCE0 ?FUN_10bdbce0@Class_10E94C58@@UAEXAAVFArchive@@@Z
 void Class_10E94C58::FUN_10bdbce0(FArchive& Ar)
 {
-    Class_10E8BE68::FUN_10bca010(Ar);
+    Class_10E8BE68::Serialize(Ar);
     Ar.Virtual6(&Unknown54);
     Ar.Serialize(&Unknown58, 1);
 }

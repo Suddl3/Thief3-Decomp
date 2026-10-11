@@ -15,7 +15,7 @@
 #include "Game/Class_10C3DFE0.h"
 #include "Game/Class_10C3F170.h"
 #include "Game/Class_10E9B580.h"
-#include "Game/Class_10E9B5C0.h"
+#include "Game/CadenceManager.h"
 
 extern void* DAT_10e9afa4[];
 
@@ -219,14 +219,14 @@ unsigned char Class_10C3F170::FUN_10c3f170()
     return Field20;
 }
 
-// FUNCTION: 0x10C3F1F0 ?FUN_10c3f1f0@Class_10E9B5C0@@QAEEXZ
-unsigned char Class_10E9B5C0::FUN_10c3f1f0()
+// FUNCTION: 0x10C3F1F0 ?FUN_10c3f1f0@CadenceManager@@QAEEXZ
+unsigned char CadenceManager::FUN_10c3f1f0()
 {
     return Field21;
 }
 
-// FUNCTION: 0x10C3F260 ?FUN_10c3f260@Class_10E9B5C0@@QAEEXZ
-unsigned char Class_10E9B5C0::FUN_10c3f260()
+// FUNCTION: 0x10C3F260 ?FUN_10c3f260@CadenceManager@@QAEEXZ
+unsigned char CadenceManager::FUN_10c3f260()
 {
     return Field22;
 }

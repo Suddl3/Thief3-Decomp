@@ -39,7 +39,7 @@ public:
 class Class_10E8BE68 : public Class_10BC4160
 {
 public:
-    void FUN_10bc5b50();
+    void PopState();
 };
 
 class Class_10E94698 : public Class_10E8BE68
@@ -63,5 +63,5 @@ void Class_10E94698::FUN_10bded50(int A)
         FUN_10bdcc50(Obj->FUN_10bff280() + 0x2c, Unknown54);
         return;
     }
-    FUN_10bc5b50();
+    PopState();
 }

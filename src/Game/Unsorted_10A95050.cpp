@@ -47,7 +47,7 @@ public:
     int Unknown0C;
 };
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 // Ion Storm's placement new (0x10905C10).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
@@ -78,81 +78,81 @@ public:
 // FUNCTION: 0x10A95050 ?FUN_10a95050@Class_10E5D96C@@UAEPAVClass_10E6CDC4@@XZ
 Class_10E6CDC4* Class_10E5D96C::FUN_10a95050()
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     Class_10E6CDC4* Result = 0;
     void* Memory = operator new(sizeof(Class_10E6CDC4), 0, 0, 0, 0, 0);
     if (Memory)
         Result = static_cast<Class_10E6CDC4*>(Memory)->FUN_10a94b00();
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     return Result;
 }
 
 // FUNCTION: 0x10A950A0 ?FUN_10a950a0@Class_10E5D970@@UAEPAVClass_10E6CDD0@@XZ
 Class_10E6CDD0* Class_10E5D970::FUN_10a950a0()
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     Class_10E6CDD0* Result = 0;
     void* Memory = operator new(sizeof(Class_10E6CDD0), 0, 0, 0, 0, 0);
     if (Memory)
         Result = static_cast<Class_10E6CDD0*>(Memory)->FUN_10a94b70();
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     return Result;
 }
 
 // FUNCTION: 0x10A950F0 ?FUN_10a950f0@Class_10E5D974@@UAEPAVClass_10E6CDDC@@XZ
 Class_10E6CDDC* Class_10E5D974::FUN_10a950f0()
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     Class_10E6CDDC* Result = 0;
     void* Memory = operator new(sizeof(Class_10E6CDDC), 0, 0, 0, 0, 0);
     if (Memory)
         Result = static_cast<Class_10E6CDDC*>(Memory)->FUN_10a94c00();
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     return Result;
 }
 
 // FUNCTION: 0x10A95140 ?FUN_10a95140@Class_10E5D978@@UAEPAVClass_10E6CDE8@@XZ
 Class_10E6CDE8* Class_10E5D978::FUN_10a95140()
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     Class_10E6CDE8* Result = 0;
     void* Memory = operator new(sizeof(Class_10E6CDE8), 0, 0, 0, 0, 0);
     if (Memory)
         Result = static_cast<Class_10E6CDE8*>(Memory)->FUN_10a94c80();
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     return Result;
 }
 
 // FUNCTION: 0x10A95190 ?FUN_10a95190@Class_10E5D97C@@UAEPAVClass_10E6CDF4@@XZ
 Class_10E6CDF4* Class_10E5D97C::FUN_10a95190()
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     Class_10E6CDF4* Result = 0;
     void* Memory = operator new(sizeof(Class_10E6CDF4), 0, 0, 0, 0, 0);
     if (Memory)
         Result = static_cast<Class_10E6CDF4*>(Memory)->FUN_10a94c90();
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     return Result;
 }
 
 // FUNCTION: 0x10A951E0 ?FUN_10a951e0@Class_10E5D808@@UAEPAVClass_10E6CE00@@XZ
 Class_10E6CE00* Class_10E5D808::FUN_10a951e0()
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     Class_10E6CE00* Result = new(0, 0, 0, 0, 0) Class_10E6CE00;
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     return Result;
 }
 
 // FUNCTION: 0x10A95590 ?FUN_10a95590@Class_10E5D968@@UAEPAVClass_10E6CE1C@@XZ
 Class_10E6CE1C* Class_10E5D968::FUN_10a95590()
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     Class_10E6CE1C* Result = 0;
     void* Memory = operator new(sizeof(Class_10E6CE1C), 0, 0, 0, 0, 0);
     if (Memory)
         Result = static_cast<Class_10E6CE1C*>(Memory)->FUN_10a95040();
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     return Result;
 }
 

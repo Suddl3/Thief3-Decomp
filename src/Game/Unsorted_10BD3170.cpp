@@ -9,7 +9,7 @@
 #include "Game/State_Search.h"
 #include "Game/Class_10E93878.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 struct Struct_10BD3830_Owner
 {
@@ -49,7 +49,7 @@ void Class_10BD4120::FUN_10bd4120()
     FUN_10a20940(0);
     if (Unknown04)
     {
-        FUN_10905aa0()->Virtual5(Unknown08);
+        GetAllocator()->Virtual5(Unknown08);
         Unknown08 = 0;
         Unknown04 = 0;
     }

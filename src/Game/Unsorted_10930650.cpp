@@ -4,7 +4,7 @@
 #include "Game/Class_10930A40.h"
 #include "Game/Class_109329F0.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 extern Class_109329F0 DAT_10eff31c;
 
@@ -16,7 +16,7 @@ void Class_10930A40::FUN_10930a40()
     FUN_10930450(0);
     if (Unknown04)
     {
-        FUN_10905aa0()->Virtual5(Unknown08);
+        GetAllocator()->Virtual5(Unknown08);
         Unknown08 = 0;
         Unknown04 = 0;
     }

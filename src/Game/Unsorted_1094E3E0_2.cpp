@@ -3,7 +3,7 @@
 
 #include "Game/Class_10905A90_Member.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 // The render device (its Virtual3 creates a vertex buffer and returns a status).
 class Class_10F2C744
@@ -63,7 +63,7 @@ bool Class_1094E3A0::FUN_1094e3e0(int Index, int Value)
     Unknown108[Index].Unknown00 = Value;
     if (Index == 0)
     {
-        FUN_10905aa0()->Virtual8(0, 0);
+        GetAllocator()->Virtual8(0, 0);
         if (Unknown0E8)
         {
             Unknown0E8->Virtual1();
@@ -76,7 +76,7 @@ bool Class_1094E3A0::FUN_1094e3e0(int Index, int Value)
         }
         int Result0 = DAT_10f2c744->Virtual3(0, 0x20, 0, "BlendMesh::m_Vertex", &Unknown0E8);
         int Result1 = DAT_10f2c744->Virtual3(1, 0x20, 0, "BlendMesh::m_Vertex", &Unknown0EC);
-        FUN_10905aa0()->Virtual9();
+        GetAllocator()->Virtual9();
         if (Result0 < 0 || Result1 < 0)
         {
             if (Unknown0E8)

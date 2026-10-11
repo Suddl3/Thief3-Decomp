@@ -9,7 +9,7 @@ void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D
 
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 // The 0x8c-byte object FUN_10a589e0 creates; its constructor is FUN_10a248c0.
 class Class_10A248C0
@@ -192,9 +192,9 @@ void Class_10A57980::FUN_10a589e0(int A)
         }
         if (Unknown188 == 0)
         {
-            FUN_10905aa0()->Virtual8(0, 0);
+            GetAllocator()->Virtual8(0, 0);
             Unknown188 = new(0, 0, 0, 0, 0) Class_10A248C0();
-            FUN_10905aa0()->Virtual9();
+            GetAllocator()->Virtual9();
             Unknown188->Unknown58 = Unknown1B8;
             Virtual118(A);
         }

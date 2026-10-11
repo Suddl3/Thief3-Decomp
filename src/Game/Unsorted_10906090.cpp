@@ -3,7 +3,7 @@
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10906090.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 int FUN_10901770();
 
@@ -130,7 +130,7 @@ bool FUN_10906d20()
 void ForceExit()
 {
     if (FUN_10901770())
-        FUN_10905aa0()->Virtual7(0);
+        GetAllocator()->Virtual7(0);
     FUN_10906cb0();
     RelaunchForLevelChange();
     FUN_10918880(1);

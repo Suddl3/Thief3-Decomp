@@ -12,7 +12,7 @@ public:
     virtual void Virtual5(int Item);
 };
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 class Class_10B9D450
 {
@@ -33,7 +33,7 @@ void FUN_10b9d450(Class_10B9D450* Array)
             if (*Item)
             {
                 int Key = *Item - 4;
-                FUN_10905aa0()->Virtual5(Key);
+                GetAllocator()->Virtual5(Key);
                 *Item = 0;
             }
             ::operator delete(Item);

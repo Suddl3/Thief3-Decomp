@@ -23,14 +23,14 @@ public:
     virtual void FUN_10bdf410();
 
     char Unknown04[0x3C];
-    int Unknown40;
-    float Unknown44;
+    int m_State;
+    float m_Deadline;
 };
 
 // FUNCTION: 0x10BDF410 ?FUN_10bdf410@Class_10E95170@@UAEXXZ
 void Class_10E95170::FUN_10bdf410()
 {
     ((Class_10bf7f90*)FUN_10bc4160())->FUN_10bf7f90(0, 1);
-    Unknown40 = 1;
-    Unknown44 = (float)(GetTimeSeconds() + 1.0);
+    m_State = 1;
+    m_Deadline = (float)(GetTimeSeconds() + 1.0);
 }

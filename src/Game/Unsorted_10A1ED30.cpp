@@ -24,16 +24,16 @@ struct Struct_10A1EDC0_Ios {
 struct Struct_10A1EDC0_Ostream : virtual Struct_10A1EDC0_Ios {
 };
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 // FUNCTION: 0x10A1ED50 ??1cTaggedAnimSeq@@UAE@XZ
 cTaggedAnimSeq::~cTaggedAnimSeq()
 {
-    if (Unknown04)
+    if (m_Name)
     {
-        int* Obj = Unknown04 - 1;
-        FUN_10905aa0()->Virtual5(Obj);
-        Unknown04 = 0;
+        int* Obj = m_Name - 1;
+        GetAllocator()->Virtual5(Obj);
+        m_Name = 0;
     }
 }
 

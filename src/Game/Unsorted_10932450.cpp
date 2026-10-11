@@ -6,7 +6,7 @@
 
 class Item_10943600;
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 class Class_10943600
 {
@@ -23,7 +23,7 @@ public:
         FUN_10da4f50(0);
         if (Unknown04)
         {
-            FUN_10905aa0()->Virtual5(Unknown08);
+            GetAllocator()->Virtual5(Unknown08);
             Unknown08 = 0;
             Unknown04 = 0;
         }
@@ -80,12 +80,12 @@ Node_10932350* Class_10932760::FUN_10932760()
     Node_10932350* Node = Unknown0C.Unknown00;
     if (Node)
         Unknown0C.FUN_10932350(Node);
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     if (!Node)
     {
         Node = new(0, 0, 0, 0, 0) Class_109324C0;
     }
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     if (Node)
     {
         Node_10932350* Last = Unknown04;

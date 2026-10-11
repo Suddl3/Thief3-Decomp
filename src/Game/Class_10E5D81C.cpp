@@ -13,7 +13,7 @@ struct Struct_10AA3520
 
 extern Struct_10AA3520* DAT_10f35dec;
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 // Ion Storm's placement new and its delete (0x10905C10; the delete folded into ::operator delete).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
@@ -56,8 +56,8 @@ int Class_10E6CE6C::FUN_10a95980(int A, int B, int C)
 // FUNCTION: 0x10A959A0 ?FUN_10a959a0@Class_10E5D81C@@UAEPAVClass_10E6CE28@@XZ
 Class_10E6CE28* Class_10E5D81C::FUN_10a959a0()
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     Class_10E6CE28* Result = new(0, 0, 0, 0, 0) Class_10E6CE28;
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     return Result;
 }

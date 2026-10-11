@@ -1,6 +1,6 @@
 // Game/cRadiusPinger_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10E67938.h"
+#include "Game/cActorManager.h"
 #include "Game/cRadiusPinger.h"
 
 class Class_10E5D360

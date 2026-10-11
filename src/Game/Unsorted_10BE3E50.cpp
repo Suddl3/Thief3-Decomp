@@ -44,7 +44,7 @@ public:
 class Class_10E8BE68 : public Class_10BC4160
 {
 public:
-    void FUN_10bc5b50();
+    void PopState();
 };
 
 extern Class_10FF667C* DAT_10ff667c;
@@ -74,7 +74,7 @@ void Class_10E95E18::FUN_10be3e50()
         return;
     DAT_10ff667c->Unknown28->FUN_10bfb910(4);
     Unknown04->FUN_10bb8ee0(0);
-    FUN_10bc5b50();
+    PopState();
 }
 
 // FUNCTION: 0x10BE3F90 ??1Class_10E95F40@@QAE@XZ

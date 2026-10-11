@@ -23,14 +23,14 @@ public:
 class Class_10E6A9F8
 {
 public:
-    void FUN_10a64d70();
-    void FUN_10a62a60(Class_10A62A60_Param* Container);
+    void MarkDirty();
+    void ClearItems(Class_10A62A60_Param* Container);
 };
 
-// FUNCTION: 0x10A62A60 ?FUN_10a62a60@Class_10E6A9F8@@QAEXPAVClass_10A62A60_Param@@@Z
-void Class_10E6A9F8::FUN_10a62a60(Class_10A62A60_Param* Container)
+// FUNCTION: 0x10A62A60 ?ClearItems@Class_10E6A9F8@@QAEXPAVClass_10A62A60_Param@@@Z
+void Class_10E6A9F8::ClearItems(Class_10A62A60_Param* Container)
 {
     while (Container->Virtual10() > 0)
         Container->Virtual13(0);
-    FUN_10a64d70();
+    MarkDirty();
 }

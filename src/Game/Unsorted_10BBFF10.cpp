@@ -10,7 +10,7 @@ public:
     void FUN_10bbff10();
 };
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 // Ion Storm's placement new (0x10905C10).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
@@ -83,9 +83,9 @@ public:
 // FUNCTION: 0x10BC00A0 ??0Class_10BC00A0@@QAE@XZ
 Class_10BC00A0::Class_10BC00A0()
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     Unknown00 = new(0, 0, 0, 0, 0) Class_10BC00A0_Unknown00;
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
 }
 
 // FUNCTION: 0x10BC0F30 ?FUN_10bc0f30@Class_10BC0F30@@QAEXXZ

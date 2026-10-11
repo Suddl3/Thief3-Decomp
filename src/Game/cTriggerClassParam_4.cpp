@@ -1,0 +1,67 @@
+// Game/cTriggerClassParam_4.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_109081E0.h"
+#include "Game/Class_1096C8D0.h"
+#include "Game/cTriggerClassParam.h"
+#include "Game/Struct_10A89290.h"
+
+template <class T> class TArray
+{
+public:
+    T& operator()(int i) { return Data[i]; }
+
+    T* Data;
+    int ArrayNum;
+    int ArrayMax;
+};
+
+class UObject
+{
+public:
+    static TArray<UObject*> GObjObjects;
+};
+
+class Class_10A89290_Member
+{
+public:
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual void Virtual2();
+    virtual void Virtual3();
+    virtual void Virtual4();
+    virtual void Virtual5();
+    virtual void Virtual6();
+    virtual void Virtual7();
+    virtual void Virtual8();
+    virtual void Virtual9();
+    virtual void Virtual10();
+    virtual void Virtual11();
+    virtual void Virtual12();
+    virtual void Virtual13();
+    virtual void Virtual14();
+    virtual void Virtual15();
+    virtual void Virtual16();
+    virtual void Virtual17();
+    virtual void Virtual18();
+    virtual void Virtual19();
+    virtual void Virtual20();
+    virtual void Virtual21();
+    virtual void Virtual22();
+    virtual void Virtual23();
+    virtual void Virtual24();
+    virtual Class_109081E0 Virtual25();
+};
+
+extern Class_1096C8D0* DAT_10f3a1d4;
+
+// FUNCTION: 0x10A89290 ?FUN_10a89290@cTriggerClassParam@@UAE?AVClass_109081E0@@XZ
+Class_109081E0 cTriggerClassParam::FUN_10a89290()
+{
+    Class_1096C8D0* Holder = DAT_10f3a1d4;
+    Class_10A89290_Member* Obj;
+    if (Holder->Unknown04 == 0)
+        Obj = (Class_10A89290_Member*)UObject::GObjObjects(Holder->Unknown08);
+    else
+        Obj = Holder->Unknown10->Unknown08;
+    return Obj->Virtual25();
+}

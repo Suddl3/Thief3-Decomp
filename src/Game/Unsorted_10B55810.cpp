@@ -4,7 +4,7 @@
 #include "Game/Struct_10B55810.h"
 #include "Game/Class_10E81C20.h"
 
-Options* FUN_10929550();
+Options* GetOptions();
 
 class Class_10E81DE8
 {
@@ -80,7 +80,7 @@ Struct_10B55810 Class_10E81C20::FUN_10b55810()
 // FUNCTION: 0x10B56520 ?FUN_10b56520@Class_10E81DE8@@QAEXXZ
 void Class_10E81DE8::FUN_10b56520()
 {
-    FUN_10929550()->Save();
+    GetOptions()->Save();
     Virtual56(0);
     FUN_10b45d10();
 }

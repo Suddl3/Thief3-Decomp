@@ -78,9 +78,9 @@ public:
     char Unknown04[0x1D4];
     Class_10E87D58_Unknown1D8* Unknown1D8;
     char Unknown1DC[0x10];
-    int Unknown1EC;
-    int Unknown1F0;
-    char Unknown1F4[4];
+    int m_MaxIndex;
+    int m_Index;
+    char m_NextIndex[4];
 };
 
 class Class_10E87D58_Unknown1D8
@@ -214,5 +214,5 @@ void Class_10E87D58::FUN_10b75ba0(int A, int B)
         Mode = 0;
     Unknown1D8->Virtual56(Mode);
     if (Unknown1FC)
-        Unknown1FC->Virtual56(Unknown1F0 < Unknown1EC ? Mode : 0);
+        Unknown1FC->Virtual56(m_Index < m_MaxIndex ? Mode : 0);
 }

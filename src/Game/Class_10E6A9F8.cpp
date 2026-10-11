@@ -4,7 +4,7 @@
 class Class_10E6A9F8
 {
 public:
-    void FUN_10a64d70();
+    void MarkDirty();
     void FUN_10a56ab0(int p1);
 
     char Unknown00[0x17C];
@@ -17,6 +17,6 @@ void Class_10E6A9F8::FUN_10a56ab0(int p1)
     if (Unknown17C != p1)
     {
         Unknown17C = p1;
-        FUN_10a64d70();
+        MarkDirty();
     }
 }

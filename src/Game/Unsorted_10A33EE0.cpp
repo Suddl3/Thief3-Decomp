@@ -16,7 +16,7 @@ struct Info_10A34730
     Class_10AB5B20 Unknown10;
 };
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 struct Struct_10A33EE0_Vec
 {
@@ -46,7 +46,7 @@ void Class_10A34D50::FUN_10a346f0()
     FUN_10a33fd0(0);
     if (Unknown04)
     {
-        FUN_10905aa0()->Virtual5(Unknown08);
+        GetAllocator()->Virtual5(Unknown08);
         Unknown08 = 0;
         Unknown04 = 0;
     }

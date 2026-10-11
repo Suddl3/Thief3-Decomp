@@ -93,9 +93,9 @@ public:
 
     State_PlayAnim(int A, int B, int C, bool D);
 
-    State_PlayAnim* FUN_10bd0990(int A, int B, int C, bool D);
+    State_PlayAnim* Construct(int A, int B, int C, bool D);
 
-    Class_10BD1320 Unknown40;
+    Class_10BD1320 m_Items;
     int Unknown4C;
     int Unknown50;
     bool Unknown54;
@@ -106,13 +106,13 @@ public:
 // FUNCTION: 0x10BD0A50 ?FUN_10bd0a50@State_PlayAnim@@UAEXAAVFArchive@@@Z
 void State_PlayAnim::FUN_10bd0a50(FArchive& Ar)
 {
-    ((Class_10E8BE68*)this)->Class_10E8BE68::FUN_10bca010(Ar);
-    int Count = Unknown40.Unknown00;
+    ((Class_10E8BE68*)this)->Class_10E8BE68::Serialize(Ar);
+    int Count = m_Items.Unknown00;
     Ar.Serialize(&Count, 4);
     if (Ar.ArIsLoading)
-        Unknown40.FUN_10bd0410(Count);
+        m_Items.FUN_10bd0410(Count);
     for (int i = 0; i < Count; i++)
-        Unknown40.Unknown08[i].Virtual0(Ar);
+        m_Items.Unknown08[i].Virtual0(Ar);
     FUN_10c11ff0(Ar, &Unknown4C);
     unsigned char Flag = Unknown50;
     Ar.Serialize(&Flag, 1);

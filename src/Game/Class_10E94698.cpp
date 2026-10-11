@@ -4,15 +4,15 @@
 #include "Game/Class_10BFF240.h"
 #include "Game/Class_10BFF460.h"
 
-class Class_10E94578
+class cTacticMoveToPoint
 {
 public:
     virtual void FUN_10bdaf30();
 
-    void FUN_10bc5b50();
+    void PopState();
 };
 
-class Class_10E94698 : public Class_10E94578
+class Class_10E94698 : public cTacticMoveToPoint
 {
 public:
     virtual void FUN_10bdaf30();
@@ -26,5 +26,5 @@ void Class_10E94698::FUN_10bdaf30()
     Class_10BFF460* Obj = Unknown04->FUN_10bbb410();
     if (Obj && !Obj->FUN_10bff330())
         Obj->FUN_10bff240(1);
-    FUN_10bc5b50();
+    PopState();
 }

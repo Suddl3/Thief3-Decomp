@@ -13,7 +13,7 @@ public:
     virtual void Virtual3();
     virtual void Virtual4();
     virtual void Virtual5();
-    virtual int FUN_1094e800();
+    virtual int GetCount();
 
     char Unknown04[0x104];
     Class_Field108* Unknown108;
@@ -48,8 +48,8 @@ int Class_1094E7A0::FUN_1094e7a0(int A)
     return Result;
 }
 
-// FUNCTION: 0x1094E800 ?FUN_1094e800@Class_10E4AB88@@UAEHXZ
-int Class_10E4AB88::FUN_1094e800()
+// FUNCTION: 0x1094E800 ?GetCount@Class_10E4AB88@@UAEHXZ
+int Class_10E4AB88::GetCount()
 {
     return Unknown108[Unknown110].Unknown14;
 }

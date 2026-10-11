@@ -4,7 +4,7 @@
 
 class Options;
 
-Options* FUN_10929550();
+Options* GetOptions();
 
 class Class_10E84730_Unknown190
 {
@@ -144,8 +144,8 @@ void Class_10E84730::FUN_10b65d70()
 {
     for (int i = 0; i < Unknown188; i++)
     {
-        FUN_10929550()->Set(Unknown190[i]->Unknown00, FUN_10929550()->SetDefaults(Unknown190[i]->Unknown00));
+        GetOptions()->Set(Unknown190[i]->Unknown00, GetOptions()->SetDefaults(Unknown190[i]->Unknown00));
     }
-    FUN_10929550()->FUN_10ab6420();
+    GetOptions()->FUN_10ab6420();
     FUN_10b65250();
 }

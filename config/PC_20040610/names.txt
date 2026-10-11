@@ -76,3 +76,287 @@ class Class_10E873B0 cT3OptionsWindow Xbox twin vtable (T3Opt 127/124 slots): it
 class Class_10E65574 cTaggedAnimSeq Xbox twin vtable (T3Opt 7/7 slots): its own methods' and constructors' debug names say cTaggedAnimSeq (3), source TaggedAnimSeq.cpp
 class Class_10E6C620 cTriggerSoundSchemaParam Xbox twin vtable (T3Opt 14/14 slots): its own methods' and constructors' debug names say cTriggerSoundSchemaParam (1), source TriggerSoundSchemaParam.cpp
 class Class_10E77578 cUObjectLinkManager Xbox twin vtable (T3Opt 17/17 slots): its own methods' and constructors' debug names say cUObjectLinkManager (11), source ULinkManager.cpp
+class Class_10E84088 cT3InventoryWindow Xbox source file T3InventoryWindow.cpp (named like its siblings cT3OptionsWindow, cT3ReadBookWindow); a Window subclass that loads 'InventoryPane.txt'
+class Class_10E9CFE0 SoundSchema Xbox twin's Class:: names, most frequent SoundSchema (4), source SoundSchema.cpp; its messages name SoundSchema::play and getMetaSound.
+class Class_10E9B5C0 CadenceManager Xbox twin CadenceManager (CadenceManager.cpp); its update's callees log CadenceTimingDetails.
+class Class_10E5D688 cGlobalDataManager Xbox messages 'cGlobalDataManager : ...' and file GlobalDataManager.cpp; int and flag refs saved in INTS and FLAGS sections.
+class Class_10E6C6FC cTriggerByteEnumParam Xbox source file TriggerByteEnumParam.cpp; its message 'RelationType %d not supported for ByteEnum!' pairs with FUN_10a8c200.
+class Class_10E67938 cActorManager Xbox messages 'cActorManager::GetUserLink...' and 'cActorManager::results' pair with Virtual2 by vtable.
+class Class_10E85DE0 cDifficultyPane FUN_10b6be00 returns the string 'DifficultyPane.txt', the pane's own file.
+class Class_10E6C740 cTriggerSuperEnumParam Xbox twin's source file is TriggerSuperEnumParam.cpp; its relation test says 'super enum'.
+class Class_10E970F0 State_Flee Xbox twin's class name State_Flee (3 Class:: names, AI_FleeStates.cpp); FUN_10be9c30 calls UObject::ProcessState.
+class Class_10E6BD90 cRigidAttachmentManager Xbox twin names it cRigidAttachmentManager 18 times (RigidAttachmentManager.cpp 5); code links objects by rigid link type.
+class Class_10E6C4A8 cTriggerClassParam Xbox source file TriggerClassParam.cpp; FUN_10a891f0 falls back to the type name 'Class'.
+class Class_10E6C7B4 cTriggerOperatorParam Xbox source file TriggerOperatorParam.cpp; its RelationType message fits FUN_10a8d2d0's relation switch.
+class Class_10E94578 cTacticMoveToPoint Xbox twin's class name (AICombatTactics.cpp); its '+Inform:arrive' message agrees
+class Class_10E9C330 SoundSimulator Xbox twin in SoundSimulator.cpp; its message names SoundSimulator as a sound's listener (FUN_10c556d0).
+class Class_10E6D9E8 cConNoteEvent Xbox source ConNoteEvent.cpp pairs with its code, which reads and writes a 'Note' line.
+class Class_10E6DA90 cConCameraController Xbox source file ConCameraController.cpp; reads the ConversationCamera config section.
+class Class_10E6F47C cHighlightMgr Xbox source file HighlightMgr.cpp; FX material and membrane material messages.
+class Class_10E6F910 cT3Camera Xbox source file T3Camera.cpp; rotation setter zeroes roll; makes a Class_10AC3EA0 for AGarrett actors.
+class Class_10E7B970 cT3ReadBookWindow Xbox source file T3ReadBookWindow.cpp; a Window (Window vtable slots) that shows FString text.
+function 0x10A823C0 AddConEvent Grows m_ConEvents by one and stores Value at the end; GetConEvent's Xbox assert names the list.
+function 0x10A823F0 ReplaceConEvent Xbox 'Failed to find ConEvent in current list' (vtable pair); Item 0 appends Param3 via AddConEvent.
+function 0x10AA63C0 GetConEvent Xbox asserts 'Index >= 0' and 'Index < m_ConEvents.GetSize()' (vtable pair); returns the entry at index.
+function 0x10A80E30 IndexOfConEvent Loops over m_ConEvents returning i where the entry equals Value, else -1.
+function 0x10A81A10 FindByName Returns the m_ConEvents entry whose NameOf matches Name under appStricmp.
+function 0x10A80DE0 DispatchToConEvents Calls FUN_10aa7530(A, B) on each m_ConEvents entry whose Virtual1() is false.
+function 0x10A82840 DeleteChild Xbox assert 'pParent->GetType() == kFET_Logic' (vtable pair); deletes Item from Table's children, recursing.
+function 0x10905AA0 GetAllocator Returns the singleton whose Virtual3 reallocates and Virtual5 frees the Data buffer in FUN_10a13bc0.
+function 0x10A13110 FindEntryByKey Scans Unknown28 up to Unknown20 and returns the entry whose Unknown00 equals Key.
+function 0x10A13150 FindChildByKey Scans the children up to Unknown08 and returns the child whose Virtual20() equals A.
+function 0x10A143A0 FindChildByName __stricmp of each child's Virtual15() name against *Name; a null name compares as DAT_10e47660.
+function 0x10A13600 CreateFlagElement Creates a cFlagElementLogic set from A and B; Xbox strings 'cFlagElement' and 'name.Length() > 0' match it.
+function 0x10A13BC0 ResolvePending Writes Virtual23(key) through each queued Data entry's pointer, then sets Count to 0; called by FUN_10a14400.
+function 0x10A14540 Clear Deletes every child, empties the child array and the Unknown14 list; called by FUN_10a151e0.
+function 0x10A141A0 AddChild Appends Value to the child array (Unknown10), growing its count (Unknown08) by one; Clear deletes those children.
+function 0x10C0AF80 Reset Clears m_Active and the run-state fields Init zeroes; m_Controllers is kept.
+function 0x10C0B510 Activate Sets m_Active once while m_Controllers is non-empty, then calls Virtual21(A) and maybe the owner's Virtual4(0).
+function 0x10C0B870 UpdateControllers Calls Virtual19 on every m_Controllers entry while m_UpdateAll is set, else on one entry at m_UpdateIndex.
+function 0x10C0B8D0 Init Stores the vtable, sets the fields to their defaults and returns this; FUN_10ba0a50 calls it.
+function 0x10C0B960 Serialize Serializes the count of m_Controllers, then each element, through the FArchive.
+function 0x10C0BC50 AddPawnController Appends Obj to m_Controllers when Obj IsA AAIPawnController.
+function 0x10B718F0 GetPaneFileName returns Class_109081E0 built from the string 'OptionsPane.txt'
+function 0x10B71220 GetValue returns *Unknown1CC->Unknown128, or 0 when Unknown1CC is null
+function 0x10B73890 ResetToDefaults sets each option entry to Options::SetDefaults(key) via Options::Set, then calls FUN_10ab6420
+function 0x10929550 GetOptions free function returning Options*; FUN_10b73890 calls Set, SetDefaults and FUN_10ab6420 on it
+function 0x10BED440 Init Calls base ctor Class_10E90D70(int, int) and FArray ctors, sets fields to defaults, returns this.
+function 0x10BEF040 StartTimer Stores (float)GetTimeSeconds() as start time, sets its flag, then calls FUN_10beec50(0).
+function 0x10A8ABE0 IsRelated Xbox message 'RelationType %d not supported for TriggerSoundSchemaParam!'; switches on the relation type, case 1 compares Unknown08
+function 0x10A8AC00 IncrementCount increments DAT_10f3a1dc while it is below DAT_10f3a1e0
+function 0x10A8AC20 IsLimitReached returns whether DAT_10f3a1dc has reached DAT_10f3a1e0
+function 0x10A8AC40 IsValid Xbox 'GetSchema().IsValid()' string; returns the schema field's validity through its Virtual7
+function 0x10A8B080 CopyFrom assigns the other param's schema field and resets Unknown14; Xbox check 'GetType() == pOther->GetType()'
+function 0x10A8B1E0 Reset zeroes DAT_10f3a1dc, clears DAT_10f3a1e0, then sends an event to the manager
+function 0x10BCE920 Construct calls base constructor with A and B, sets its start and end times to -1 and Unknown50 to C, returns this
+function 0x10BDF890 Construct calls base constructor with A and B, sets the vtable, Unknown48 to C, Unknown4C to -1 and Unknown50 to 1.5
+function 0x10C2EBD0 GetClassName returns a string built from the literal 'MC_MoveToPoint'
+function 0x10AC2C60 Serialize Ar.Serialize of Unknown0C, Unknown10, Unknown14 and Unknown1C; a load stores the key and sets Unknown91.
+function 0x10A84B50 Evaluate Returns whether FUN_10a18230()->Virtual3(flag name) equals Unknown08, the expected value.
+function 0x10A84CB0 HasFlagName Compares Unknown04 with FName of the argument's text (default string when null).
+function 0x10BD0990 Construct Runs Class_10E90D70's constructor on this, sets its fields, returns this; called from FUN_10b97d80.
+function 0x10A1F150 SetName Assigns Item's value to Unknown04 through FUN_1090f010 and returns its result; false when Item->Virtual3() holds.
+function 0x10A1F840 Play Creates a player on A from Unknown04's text (default when empty), sets FUN_10a1f4d0(10), calls FUN_109f36e0().
+function 0x10B34B10 GetName Returns a copy of Unknown04, the sequence name the ctor sets to 'Test' and Play reads.
+function 0x10C66900 GetMetaSound Xbox message 'Index for SoundSchema::getMetaSound is out of range!' (vtable pair); returns m_MetaSounds[param].
+function 0x10C67EB0 Play Xbox message 'SoundSchema::play called with no metasounds' (vtable pair); plays only when m_MetaSounds is non-empty.
+function 0x10C666E0 GetMetaSoundCount Returns m_MetaSounds.size(); Xbox play message tests the same list for 'no metasounds'.
+function 0x10C66A20 RemoveByName Erases and deletes the first Unknown0C element whose Virtual7() equals Name.
+function 0x1094E080 GetCenter returns (Unknown140 + Unknown134) * 0.5, the midpoint of two vectors
+function 0x1094E800 GetCount returns Unknown108[Unknown110].Unknown14, the current entry's item count
+function 0x1094E820 GetItem returns UnknownFC[entry index table[Index]] when Index is below GetCount()
+function 0x1094E860 IsReady false while FUN_109481d0(0x400) or any entry is unset or pending (Unknown4C without Unknown28C)
+function 0x1094F6F0 CollectValues appends each nonzero Virtual4(Param) result of its entries to Out
+function 0x10A64D70 MarkDirty sets Unknown150 to 1 and clears Unknown151; each setter calls it after a change
+function 0x10A62A60 ClearItems calls Virtual13(0) while Virtual10() > 0 on the container, then marks dirty
+function 0x10A62710 GetLastNode walks the Unknown1D4 chain through Virtual14, counts nodes into *Count, returns the last
+function 0x10A629B0 Update per-frame: ticks Unknown1D4, adds float A to the hold timer, forwards A to Window::FUN_10a53560
+function 0x10A62A20 SetTimerAction stores action A and zeroes the timer when C; B fires it now; 0x40 means none
+function 0x10BC5B50 PopState Xbox message 'State::PopState' with 'new_transition != 0' (calls pairing); body replaces the transition object.
+function 0x10BE69A0 Serialize Serialize override (slot 64); archive version 0x45 gates Unknown6C and Unknown68 after the base call.
+function 0x10C3EFF0 Update Scales Dt by TimeManager and passes it to three subsystems; Xbox callees log cadence timing.
+function 0x10C3F050 SetPosition Copies the FVector argument into Unknown08 and forwards X, Y, Z to Unknown1C's Virtual14.
+function 0x10C3F0E0 GetPosition Returns Unknown08, which SetPosition fills from an FVector.
+function 0x10932F40 ClearItems Deletes each element of Unknown10 and the array, zeroes Unknown0C; the destructor calls it.
+function 0x10932FA0 AddRef Increments Unknown04 and returns the new count; slot 1 (Release) decrements it.
+function 0x109331A0 Release Xbox message m_cRefs > 0; decrements Unknown04 and deletes this at zero.
+function 0x10932FB0 GetItemData Copies the element's Data_10932FB0 to Out; zeroes Out and returns 0x80070057 on a bad index.
+function 0x10933000 GetItemStat Strings MaxBytesAllocated, BytesAllocated and NumVertexBuffers pick which element value is returned.
+function 0x10A16660 GetInt Returns the value field of the int ref after HasInt passes; zero when the name is absent.
+function 0x10A16640 HasInt Tests the name in the int-name table (Unknown34), the check GetInt makes first.
+function 0x10A166B0 HasFlag Tests the name in the flag table (Unknown08); GetFlagValue returns zero when it fails.
+function 0x10A166D0 GetFlagValue Returns zero unless HasFlag passes; otherwise the value Unknown04 holds for the name.
+function 0x10A16B20 IsIntSet The HasInt membership test (Unknown34), returned as int rather than bool.
+function 0x10A16B40 IsFlagSet The HasFlag membership test (Unknown08), returned as int rather than bool.
+function 0x10A16E90 AddIntRef Xbox message 'Attempt to add an int ref with no name!' fits this method's guard on the name.
+function 0x10A16F00 RemoveIntRef Removes the name from the int-name table (Unknown34) when HasInt passes.
+function 0x10A16F30 AddFlagRef Xbox message 'Attempt to add a flag ref with no name!' fits this method's guard on the name.
+function 0x10A16F70 RemoveFlagRef Removes the name from the flag table (Unknown08) when HasFlag passes.
+function 0x10BE1820 Init Runs the base constructor Class_10E90D70(A, B), zeroes its fields and returns this.
+function 0x10BE1F20 Serialize FArchive& override: calls base Serialize (0x10BCA010) first, then serializes its state fields.
+function 0x10BCA010 Serialize Base serialize, called first by the FArchive& override at 0x10BE1F20.
+function 0x10BE58C0 Serialize Calls FUN_10be4ef0(Ar), then Ar->Virtual1(&Unknown68, 4): the archive transfers the 4-byte Unknown68.
+function 0x10BE85D0 UpdateRandomTimer Once GetTimeSeconds() minus Unknown50 passes Unknown68, rerolls Unknown68 with appFrand() between properties 0x100591 and 0x100592.
+function 0x10A8C1F0 HasIndex Returns Unknown08 != -1; -1 is the unset index that GetValueText shows as 'Byte/Enum'.
+function 0x10A8C200 Compare Switch on relation p1 (==, !=, <, <=, >, >=) over Unknown08; Xbox message: 'RelationType %d not supported for ByteEnum!'.
+function 0x10A8C2B0 FirstValue Sets DAT_10f3a1f0 to 0, then skips zero entries of Unknown04->Unknown60->Unknown34.
+function 0x10A8C2F0 NextValue Advances DAT_10f3a1f0 to the next non-zero Unknown34 entry, bounded by Unknown38 (or by 0xFF without an enum).
+function 0x10A8C350 IsAtEnd Returns DAT_10f3a1f0 >= Unknown38, or >= 0xFF when there is no enum.
+function 0x10A8C390 Write Writes Unknown08 (FUN_10d3d2d0) and the Unknown0C name (FUN_10d3d990) to stream B.
+function 0x10A8C410 CopyFrom Copies Unknown08 and Unknown0C from p1.
+function 0x10A8C610 Read Reads the index (a short when A < 8, else an int) and, for A >= 8, the name text; then sets Unknown0C.
+function 0x10A8C720 GetValueText Returns 'Byte/Enum' when Unknown08 is -1, else the selected entry's name or the formatted index.
+function 0x10A8C830 GetCurrentValue Returns the name at DAT_10f3a1f0 from Unknown34, DAT_10e6c100 past the end, or the formatted index without an enum.
+function 0x10A4C940 GetOwner Returns the Struct_10A4C940_Owner under Key whose Unknown08 is this.
+function 0x10AA6180 AddRef Creates the shared Class_10B0AED0 on first use and increments its RefCount; the constructor calls it.
+function 0x10B6B940 GetData Returns the Data_10B66060 record (Unknown150 Unknown08 or Unknown10) chosen by Unknown19C.
+function 0x10B6BDE0 GetSelectedValue Returns Unknown190->Unknown128[Unknown12C], the selected entry; 0 when Unknown190 is null.
+function 0x10B6BD70 ApplySelection Resets Unknown164, toggles Virtual120, then passes the selected value to GetParent()->FUN_10b799a0.
+function 0x10B6BE00 GetPaneFileName Returns the string 'DifficultyPane.txt'.
+function 0x10B6C180 SetData Stores Src in the mode's Data_10B66060 with the selected index and applies it; null restores the index.
+function 0x10BDBBC0 Init Calls the Class_10E90D70(A, B) constructor, sets Unknown00 and Unknown40-Unknown64, returns this; called by FUN_10b9a120.
+function 0x10BDBC30 Serialize Calls base FUN_10bca010 with the archive, then serializes Unknown54 and Unknown55 (version 0x4F and up).
+function 0x10BDC600 NotifyGrenadeThrown Sends the '+grenade:thrown' event through FUN_10bc7d70 unless Unknown55 is set.
+function 0x10BDF7D0 StopBlinding Sets APawn::IsBlinded to 0, then calls FUN_109b2920(0, 1.0f) on FUN_10baa580's object.
+function 0x10BE0B30 StartBlinding Calls FUN_10be0690(A), sets APawn::IsBlinded to 1, then FUN_109b2920(1, 1.0f) on FUN_10baa580's object.
+function 0x10BD1A60 CheckDeadline Local Deadline is Unknown04->Unknown33C; once GetTimeSeconds() passes it, calls Unknown04->FUN_10bbc0f0(0x807fa).
+function 0x10BE33A0 Serialize FArchive& override: calls base FUN_10bca010(Ar), then version-gated Ar.Serialize of Unknown40, Unknown5C and Unknown60.
+function 0x10A8C950 TestRelation Xbox message 'RelationType (%d) not supported for super enum!'; switch on the relation type, only case 1 handled.
+function 0x10A8C990 AdvanceCursor Increments global cursor DAT_10f3a1f4 while it is at most the value count; IsDone and GetCurrentName read it.
+function 0x10A8C9B0 IsDone True once the global cursor is past the value count, or when there is no super enum.
+function 0x10A8C9E0 Load Reads the value as an int for versions below 8; later versions read a name and pass it to Virtual4.
+function 0x10A8CA90 CopyValueFrom Assigns the argument's value field to this one and nothing else.
+function 0x10A8CCC0 GetValueName Returns the super enum's FName for the current value, with -1 and end-marker cases; 'Enum' is among its strings.
+function 0x10A8CF70 GetCurrentName Returns the name at the global cursor, with end-marker and default strings, as GetValueName does.
+function 0x10C60E60 ReleaseData Deletes and zeroes UnknownF8 and Unknown130 (both Struct_10C60E60*), and subtracts UnknownFC from Unknown10.
+function 0x10B1BCD0 Initialize Sets Unknown00 to DAT_10e79488, clears Unknown04 and Unknown08, returns this; called by FUN_10aba1a0.
+function 0x10B1BCC0 HasWindowManager Returns GWindowManager[0] != 0; the int parameter is unused; virtual slot 19 of its class.
+function 0x10B61E10 Initialize Sets Unknown00 to DAT_10e84088, constructs six arrays, clears Unknown1D8 and Unknown1DC, returns this; called by FUN_10b40ba0.
+function 0x10B61EA0 GetInventoryPaneFileName Returns a string built from DAT_10e84284; its only string is 'InventoryPane.txt'.
+function 0x10BD51E0 Initialize Calls the State_Search(int, int) constructor, sets Unknown00 to DAT_10e939e0, returns this; called by FUN_10b99d90, FUN_10b9a120.
+function 0x10BE99E0 RollRandomRange Stores Min + (Max - Min) * appFrand() in Unknown68; Min and Max are properties 0x1005E6 and 0x1005E7.
+function 0x10C3D6F0 SetFlatDirection Stores Flatten(Rot.Vector()) in Unknown28, zeroes Unknown1C, clears Unknown39.
+function 0x10C3D880 Start Calls Virtual20() and sets Unknown18 (active) true; Stop clears it.
+function 0x10C3D890 Stop Releases the Unknown60 entry from Unknown70 when set, then clears Unknown18 (active).
+function 0x10A56010 SetSelection Stores the index in m_Selection, sets entries 0 to 2 from m_Values, then calls ApplyEntry; FUN_10a56060 and RefreshRow call it.
+function 0x10A560C0 SetThirdStateEnabled Stores the flag that FUN_10a56060 reads to pick the cycle; false turns selection 2 into 0; RefreshRow calls it.
+function 0x10A58AE0 ApplyEntry Calls the controller from Unknown128's object (FUN_109724c0) with Virtual112(A), when A is within m_Entries and Unknown15C[A] is not -1.
+function 0x10A58FE0 SetEntry Grows m_Entries to Index+1 through FUN_10bfbd70, then stores Value at m_Entries[Index].
+function 0x10A57CE0 SetIndex Stores A in m_Index and refreshes child Unknown1D8 via FUN_10a579c0 when not Virtual80; the constructor zeroes m_Index.
+function 0x10A59320 GetItem Returns m_Items[Index] by value.
+function 0x10A7A390 Attach Calls the link manager's Virtual5 with rigid link type 0x281b9d0 for A and B.
+function 0x10A7A830 DispatchEvent Switches on Event and forwards to Virtual20 through Virtual25 for non-default objects.
+function 0x10A7AAC0 Detach Clears the second object's parent link (FUN_109909c0(0)) when it points at the first.
+function 0x10A7C7B0 GetAttachedObject Returns the linked object when exactly one rigid link from UnknownA4 to this exists.
+function 0x10B0B2B0 GetUObjectLinkManager Returns cUObjectLinkManager*; callers use its Virtual4 and Virtual5 with the rigid link type.
+function 0x10A81190 Construct Calls the base constructor, then stores DAT_10e6c170 (vtable 0x10E6C170) in Unknown00 and zeroes Unknown08.
+function 0x10AA8060 Load Calls FUN_10d3d990(Reader, &Unknown08) only when Flag is 0: a read of Unknown08 from Reader.
+function 0x10AA8080 Serialize Passes Unknown04 and Unknown08 to the stream's Virtual0 in turn and returns 1.
+function 0x10AA80B0 Dump fprintf writes Unknown08 to the file with a format constant, then returns 1.
+function 0x10AA8110 CopyFromParam Sets Unknown04 and Unknown08 from two Virtual2 reads of the Class_10AA8110_Param argument.
+function 0x10A89130 WriteValue Passes Stream and its value to FUN_10d3d990, the same call as FUN_10a8d350.
+function 0x10A891F0 GetTypeName Returns the inner object's Virtual25() name, or 'Class' when there is none.
+function 0x10A8D340 CopyFrom Copies Unknown04 from its argument; the same function is slot 12 of Class_10E6C7B4's vtable.
+function 0x10A8D2D0 TestRelation Switches on relation codes 1 (equal) and 6 (not equal); the Xbox RelationType message fits.
+function 0x10A8D350 WriteValue Passes Stream and Virtual3()'s value to FUN_10d3d990, the same call as FUN_10a89130.
+function 0x10A8D3C0 ReadValue Reads text from Reader with FUN_10d3ddc0, then passes it to Virtual4(); the write twin is FUN_10a8d350.
+function 0x10A8D490 GetText Returns names-table entry Unknown04 (0 to 3), else a fallback string; strings include 'Not Set'.
+function 0x10B154E0 Tick Float delta: advances Unknown220, calls Virtual5 on FUN_10b266e0(), counts down Unknown260 while Unknown25C is set.
+function 0x10B16B30 LayoutTitleBar Finds the META_TabScreenTitleBar entry and passes its rect to FUN_10a23fb0.
+function 0x10B17100 CheckGameOver Tests the name 'T3GameOver' through FUN_10a18230()->Virtual3; when true, calls FUN_10b15d70(1).
+function 0x10B5A390 ResetFrame Clears Unknown124 and the Unknown134 accumulator, then sends Unknown130 to Unknown11C.
+function 0x10B5A3D0 Close Called on Tick's last frame; calls Virtual56(0), GWindowManager[0]'s FUN_109e8930(this), FUN_10b15960(0).
+function 0x10B5A570 StartSequence Reads the frame count (FUN_10a55000), resets the timers, sets frame 0 on Unknown11C; FUN_10b5a6f0 calls it when A is 2.
+function 0x10B5A620 Tick Adds the delta to Unknown124 and steps frames past Unknown120; the last frame calls Close.
+function 0x10B69640 FindCurrentIndex Searches Unknown14C for UnknownC4, stores the index in Unknown158 and returns it
+function 0x10B69700 DeactivateRejected Calls Virtual56(0) on each entry for which FUN_10ac99d0(i) is false
+function 0x10B69750 DispatchFirstAccepted Calls Virtual102 on the first entry for which FUN_10ac99d0(i) is true, then returns
+function 0x10B6B4A0 ResetState Sets Unknown180 to 0, calls FUN_10a52a90 on its sub-objects, sets Unknown158 to -1
+function 0x10BCBF00 TickCountdown Subtracts FUN_10c00490() from Unknown64 while owner FUN_10aa82d0() is 0; calls FUN_10be02e0 below zero
+function 0x10BCCB00 Construct Runs base constructor Class_10E95288(A, B), sets Unknown00 from DAT_10e92730; factory FUN_10b98740 calls it
+function 0x10BDBD10 Construct Runs base constructor Class_10E90D70(A, B), zeroes Unknown40-48, sets Unknown00 from DAT_10e94100; factory FUN_10b9a070 calls it
+function 0x10BDBD70 Serialize Calls base FUN_10bca010, then serializes Unknown40, Unknown44 and Unknown48 when Ar.Unknown0C is at least 0x60
+function 0x10BCA4F0 InformArrival Sends '+Inform:arrive,+ArrivalStatus:present' via FUN_10bc7d70 unless Unknown04's FUN_10bb8600() holds
+function 0x10BDB590 Construct Runs base constructor Class_10E90D70(A, B), sets Unknown40, Unknown50, Unknown54 and Unknown60 from its arguments
+function 0x10BDB5F0 Serialize Calls base FUN_10bca010 first, then serializes Unknown54 and Unknown60
+function 0x10C556D0 UnregisterFromSounds Xbox message: SoundSimulator wasn't registered as a listener to one of its sounds; walks and frees each registration node.
+function 0x10A62AC0 GetCurrentItem Returns m_Items[m_CurrentIndex], or 0 while the index is -1.
+function 0x10A62AE0 ResetItems Sets m_CurrentIndex to -1, then calls Virtual9 on each item whose Virtual4 holds.
+function 0x10A62CE0 GetItem Returns m_Items[index] through the pointer view Unknown1c of the same storage.
+function 0x10A632E0 AddItem Writes Obj at m_Count in m_Items, grows the array, then calls Obj->Virtual1(this).
+function 0x10A63310 RemoveItemAt Calls Virtual1(0) on m_Items[Index], then removes that index from the array.
+function 0x10AAAA20 ReadNote Passes Reader and &m_Note to FUN_10d3ddc0; WriteNote is its counterpart.
+function 0x10AAAA40 WriteNote Passes Writer and &m_Note to FUN_10d3d990; ReadNote is its counterpart.
+function 0x10AAAA60 WriteNoteLine fprintf writes the 'Note' keyword and m_Note to the file.
+function 0x10AAACB0 CopyFrom Sets Unknown04 and m_Note from two Src->Virtual2() reads; returns 1.
+function 0x10AAAD70 ReadNoteLine Reads a line, rejects it unless its token is 'Note', then sets m_Note.
+function 0x10AABDF0 Init Sets the defaults and reads ShoulderMult and FaceScalar from the ConversationCamera config section.
+function 0x10ABB2D0 FindIndex Linear search of the entries by key; returns the index or -1. FindEntry calls it.
+function 0x10ABB4B0 FindEntry Returns the entry at FindIndex(A), or null when no entry has that key.
+function 0x10ABB900 FindMembraneMaterials Xbox string 'Never found a membrane material!' (string pair); looks up MetaselectionFrob_M%03d materials.
+function 0x10AC14A0 SetRotation Takes an FRotator, zeroes its Roll, stores it in m_Rotation and in the object at Unknown600.
+function 0x10A5D430 HandleKey Base key handler; Class_10E7B970's HandleKey override calls it for the keys it does not handle.
+field cConversation::Unknown04 m_ConEvents Xbox 'Index < m_ConEvents.GetSize()' (vtable pair) indexes this list; AddConEvent appends to it.
+field cAIManager::Unknown00 VTable Init stores DAT_10e97c18 in it; FUN_10c0b920 already writes it as VTable.
+field cAIManager::Unknown04 m_Active Set by Activate, cleared by Reset and Init; Activate does nothing while it is set.
+field cAIManager::Unknown0C m_UpdateIndex Round-robin cursor in UpdateControllers: passed to Virtual19, advanced, and wrapped at the list count.
+field cAIManager::Unknown14 m_Controllers AddPawnController appends AAIPawnController objects here; UpdateControllers and Serialize walk it.
+field cAIManager::Unknown40 m_UpdateAll UpdateControllers runs every controller in one call while it is set; Init sets it true.
+field State_Patrol::Unknown04 m_Id Copied to local Id, then passed to Obj->Virtual18(Id, A) in FUN_10be9860.
+field State_Patrol::Unknown68 m_HasStartTime Set true beside the GetTimeSeconds() store in FUN_10bef040; false in the init.
+field State_Patrol::Unknown6C m_StartTime Assigned (float)GetTimeSeconds() in FUN_10bef040; zero in the init.
+field cTriggerSoundSchemaParam::Unknown04 m_Schema Xbox '!!GetSchema()' assertion; the schema methods read and copy this pointer
+field MC_MoveToPoint::Unknown4C m_Point three floats serialized by the class; the class moves to a point
+field State_PlayingPossum::Unknown40 m_StartTime double set from TimeManager game time on first start, -1 until then
+field State_PlayingPossum::Unknown48 m_EndTime set to start time plus Unknown50; the state ends once game time passes it
+field State_PlayingPossum::Unknown50 m_Duration int constructor argument added to the start time to give the end time
+field cFlagElementLogic::Unknown04 m_FlagName Read as the flag FName in FUN_10a84b50 and compared with FName(text) in FUN_10a84cb0.
+field cFlagElementLogic::Unknown08 m_ExpectedValue Compared with the flag lookup result in FUN_10a84b50.
+field cTaggedAnimSeq::Unknown04 m_Name Ctor assigns 'Test'; FUN_10a1f840 reads its text as the name; FUN_10b34b10 copies it.
+field State_PlayAnim::Unknown40 m_Items Serialized as count Unknown00 then each Unknown08[i].Virtual0(Ar); a load calls FUN_10bd0410(Count).
+field State_Search::Unknown04 m_Owner Read as Owner in FUN_10bd6a90; its Unknown30 supplies the object passed to FUN_10bd6550.
+field SoundSchema::Unknown08 m_MetaSounds Xbox messages name SoundSchema::getMetaSound (index) and play (no metasounds); code indexes and checks its size.
+field CadenceManager::Unknown08 m_Position Filled from the FVector in SetPosition; returned by GetPosition.
+field cGlobalDataManager::Unknown04 m_FlagValues GetFlagValue returns the value this table holds for a set flag.
+field cGlobalDataManager::Unknown08 m_Flags Name table of flags: HasFlag, AddFlagRef and RemoveFlagRef use it.
+field cGlobalDataManager::Unknown30 m_Ints GetInt reads its value; AddIntRef passes the new entry to it; INTS save section string.
+field cGlobalDataManager::Unknown34 m_IntNames Name table of int refs: HasInt and RemoveIntRef use it.
+field Class_10E960D8::Unknown50 m_IntervalStart Subtracted from GetTimeSeconds() and tested against Unknown68 in FUN_10be85d0.
+field Class_10E960D8::Unknown68 m_Interval Rerolled in FUN_10be85d0 from properties 0x100591/0x100592 via appFrand(); serialized in FUN_10be58c0.
+field cTriggerByteEnumParam::Unknown08 m_Index Enum name index, -1 when unset: Unknown04->Unknown60->Unknown34[Unknown08] in GetValueText; written as an int in Write.
+field cTriggerByteEnumParam::Unknown0C m_Name FName of the selected name: set from Unknown34 in Read, written as text in Write, copied in CopyFrom.
+field cDifficultyPane::Unknown19C m_Mode Its 0 or 1 selects Unknown08 or Unknown10 of Unknown150 in each method using it.
+field Class_10E95170::Unknown40 m_State Int state: set to 0 or 1 in FUN_10be02b0 and FUN_10bdf410, compared with 3 in FUN_10bdf3f0.
+field Class_10E95170::Unknown44 m_Deadline Float set to GetTimeSeconds() + 1.0 in FUN_10bdf410; zeroed in FUN_10bdf380.
+field State_Flee::Unknown68 m_RandomValue Float set in FUN_10be99e0 to a random value between two property bounds.
+field Class_10E9B240::Unknown18 m_Active Bool set true by Start (FUN_10c3d880) and cleared by Stop (FUN_10c3d890).
+field Class_10E9B240::Unknown28 m_FlatDirection FVector set by SetFlatDirection (FUN_10c3d6f0) to Flatten(Rot.Vector()).
+field Class_10E68738::Unknown1D0 m_Selection Set by FUN_10a56010 and FUN_10a560c0, read by FUN_10a56060 to cycle, zeroed in the constructor; values 0 to 2.
+field Class_10E68738::Unknown1E0 m_Values Indexed by m_Selection; its value and value+1 fill entries 0 to 2 in FUN_10a56010 and FUN_10a560c0.
+field Class_10E68738::Unknown154 m_Entries FUN_10a58fe0 grows it to Index+1 and stores Value at Data[Index]; FUN_10a58ae0 checks its Count.
+field Class_10E68D80::Unknown1F0 m_Index FUN_10a57820 and FUN_10a58330 step from it; FUN_10a57ce0 stores it; the constructor zeroes it.
+field Class_10E68D80::Unknown1F4 m_NextIndex FUN_10a57820 sets it to m_Index plus or minus one; FUN_10a58330 also sets it; the constructor zeroes it.
+field Class_10E68D80::Unknown1E8 m_MinIndex FUN_10a58330 will not step below it; FUN_10a57820 can wrap past it.
+field Class_10E68D80::Unknown1EC m_MaxIndex FUN_10a58330 will not step above it; FUN_10a57820 can wrap past it.
+field Class_10E68D80::Unknown1D0 m_PrevControl FUN_10a58330 steps back when the mouse is over it.
+field Class_10E68D80::Unknown1D4 m_NextControl FUN_10a58330 steps forward when the mouse is over it.
+field Class_10E68D80::Unknown1BC m_Items Indexed by the index and returned by value from FUN_10a59320.
+field Class_10E79228::Unknown25C m_Closing Blocks FUN_10b155b0 and skips FUN_10b15590's base call while set; Tick counts Unknown260 down.
+field Class_10E79228::Unknown260 m_CloseTimer Counts down by the delta while m_Closing; at zero Tick calls FUN_10a36cf0 and clears it.
+field Class_10E82688::Unknown12C m_Frame Stepped modulo Unknown128 in Tick; set to 0 in StartSequence.
+field Class_10E82688::Unknown128 m_FrameCount Frame count from FUN_10a55000, at least 1; the last frame is Unknown128 - 1.
+field Class_10E82688::Unknown124 m_Elapsed Time into the frame: the delta added in Tick, cleared in ResetFrame and StartSequence.
+field Class_10E82688::Unknown120 m_FrameTime Frame period: Tick steps frames once Unknown124 exceeds it.
+field Class_10E92730::Unknown64 m_Countdown TickCountdown subtracts FUN_10c00490() from it and calls FUN_10be02e0 below zero
+field SoundSimulator::Unknown20 m_Registrations Circular list head that FUN_10c556d0 walks to unregister each node's sound.
+field SoundSimulator::Unknown24 m_RegistrationCount Decremented once per node unlinked in FUN_10c556d0.
+field SoundSimulator::Unknown4C m_EntryCount Loop bound in FUN_10c549a0 over the entry array at Unknown54.
+field SoundSimulator::Unknown54 m_Entries Array walked by FUN_10c549a0's loop up to Unknown4C; entries pair a key with an object.
+field cConNoteEvent::Unknown08 m_Note Written under 'Note' by WriteNoteLine; read back by ReadNoteLine; set in the constructor.
+field cConCameraController::Unknown18 m_ShoulderMult Read from the ShoulderMult key of the ConversationCamera section by Init.
+field cConCameraController::Unknown1C m_FaceScalar Read from the FaceScalar key of the ConversationCamera section by Init.
+field cHighlightMgr::Unknown08 m_MembraneMaterials TArray (Count, Add) filled by FindMembraneMaterials with the MetaselectionFrob materials.
+field cHighlightMgr::Unknown14 m_EntryCount Loop bound over the entries in FindIndex.
+field cHighlightMgr::Unknown1C m_Entries Entry array searched by FindIndex and returned by FindEntry; its count is in m_EntryCount.
+field cT3Camera::Unknown38 m_Rotation Stored by SetRotation on every call, with Roll zeroed.
+field cT3ReadBookWindow::Unknown154 m_Text FString checked with Len() and passed as the text to the object at Unknown118.
+field cConversationManager::Unknown08 m_ChildCount Bounds every loop over the children (Unknown10); Clear reads it as their count.
+field cConversationManager::Unknown10 m_Children Child array: Clear deletes each element; the loops call their virtuals and search them.
+field cConversationManager::Unknown20 m_EntryCount Bounds the scan of Unknown28 in FUN_10a13110.
+field cConversationManager::Unknown28 m_Entries Entry table that FUN_10a13110 searches by each entry's Unknown00 key.
+field cConversationManager::Unknown40 m_DataBytes Byte size of Data: FUN_10a13bc0 divides it by the entry size to get the capacity.
+field cT3OptionsWindow::Unknown19C m_OptionCount loop bound over the option entries in FUN_10b73890
+field cT3OptionsWindow::Unknown1A4 m_Options option entries whose Unknown00 key FUN_10b73890 passes to Options::Set and SetDefaults
+field cTriggerSuperEnumParam::Unknown04 m_SuperEnum Pointer to the super enum whose Unknown38 count and Unknown34 value names the value methods read.
+field cTriggerSuperEnumParam::Unknown08 m_Value Value index: -1 when unset, compared with the count, copied by CopyValueFrom, set by Load.
+field Class_10E49C6C::Unknown50 m_ItemCount Loop bound in each dispatch method (FUN_1092ff00 and siblings) and in FUN_109301d0.
+field Class_10E49C6C::Unknown58 m_Items Array of item pointers that every dispatch method and FUN_109301d0 walk up to Unknown50.
+field Class_10E6AC50::Unknown10 m_CurrentIndex Index read by GetCurrentItem; -1 means none, and ResetItems sets it.
+field Class_10E6AC50::Unknown14 m_Count Loop bound in ResetItems; AddItem uses it as Array->Count for the new slot.
+field Class_10E6AC50::Unknown1C m_Items Item array indexed by GetCurrentItem, ResetItems and RemoveItemAt.
+field Class_10E6A9F8::Unknown150 m_Dirty set to 1 by MarkDirty, which runs after every state change
+field Class_10E6A9F8::Unknown1E0 m_TimerAction action id stored by SetTimerAction; 0x40 means none; checked by Update
+field Class_10E6A9F8::Unknown1E4 m_Timer float accumulated by Update, zeroed by SetTimerAction, fires past 0.8
+field Class_10E85AD8::Unknown158 m_CurrentIndex FindCurrentIndex stores the found index here; ResetState sets it to -1
+field Class_10E85AD8::UnknownC4 m_SearchValue FindCurrentIndex compares each entry of Unknown14C against it
+field Class_10E85AD8::Unknown180 m_State ResetState sets it to 0; FUN_10b6b3f0 branches on 0 versus 1 and 2

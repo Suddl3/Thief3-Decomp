@@ -50,32 +50,32 @@ void FUN_1092f190()
         }
     }
     int Capacity = !DAT_10f31ba4 ? 0 : DAT_10f31ba0 / sizeof(void*);
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     int NewCount = 0;
     if (NewCount > Capacity)
     {
         int NewCapacity = NewCount;
         if (Capacity)
             NewCapacity = (NewCount & ~15) + 16;
-        DAT_10f31ba4 = (Class_1092F130**)FUN_10905aa0()->Virtual3(DAT_10f31ba4, NewCapacity * sizeof(void*), 0, 0, 0, 0);
+        DAT_10f31ba4 = (Class_1092F130**)GetAllocator()->Virtual3(DAT_10f31ba4, NewCapacity * sizeof(void*), 0, 0, 0, 0);
         DAT_10f31ba0 = NewCapacity * sizeof(void*);
     }
     else if (NewCount <= Capacity - 16)
     {
         if (NewCount == 0)
         {
-            FUN_10905aa0()->Virtual5(DAT_10f31ba4);
+            GetAllocator()->Virtual5(DAT_10f31ba4);
             DAT_10f31ba4 = 0;
             DAT_10f31ba0 = 0;
         }
         else
         {
             int NewCapacity = (NewCount & ~15) + 16;
-            DAT_10f31ba4 = (Class_1092F130**)FUN_10905aa0()->Virtual3(DAT_10f31ba4, NewCapacity * sizeof(void*), 0, 0, 0, 0);
+            DAT_10f31ba4 = (Class_1092F130**)GetAllocator()->Virtual3(DAT_10f31ba4, NewCapacity * sizeof(void*), 0, 0, 0, 0);
             DAT_10f31ba0 = NewCapacity * sizeof(void*);
         }
     }
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     DAT_10f31b9c.Count = NewCount;
 }
 

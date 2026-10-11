@@ -16,7 +16,7 @@ public:
 extern Class_10F46DA0* DAT_10f46da0;
 
 // Copied from include/Game/Class_10C0A6F0.h with the destructor its members
-// need: the same body as Class_10BFBD70's, released through FUN_10905aa0.
+// need: the same body as Class_10BFBD70's, released through GetAllocator.
 class Class_10C0A6F0
 {
 public:
@@ -25,7 +25,7 @@ public:
         FUN_10c0a320(0);
         if (Unknown04)
         {
-            FUN_10905aa0()->Virtual5(Unknown08);
+            GetAllocator()->Virtual5(Unknown08);
             Unknown08 = 0;
             Unknown04 = 0;
         }
@@ -48,7 +48,7 @@ public:
         FUN_10c095f0(0);
         if (Unknown04)
         {
-            FUN_10905aa0()->Virtual5(Unknown08);
+            GetAllocator()->Virtual5(Unknown08);
             Unknown08 = 0;
             Unknown04 = 0;
         }

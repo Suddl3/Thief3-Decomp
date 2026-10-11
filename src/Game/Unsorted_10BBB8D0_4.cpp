@@ -83,9 +83,9 @@ int FUN_10bbc190(Class_10BBB440* Self, int Key, Class_109081E0* Name)
     Table->FUN_10babab0(&Info, Name);
     if (Info == 0)
         return 0;
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     Class_10E992D4* Obj = new(0, 0, 0, 0, 0) Class_10E992D4(Self->Unknown0C->FUN_10aaf570(), Self->Unknown08, &Info, Key);
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     int Index = Self->Unknown14.Count;
     Class_10BFBD70* List = &Self->Unknown14;
     List->FUN_10bfbd70(Index + 1);

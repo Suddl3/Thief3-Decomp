@@ -17,9 +17,9 @@ void FUN_10c164c0(Class_10E98C8C* Item)
 {
     if (!DAT_10ff7080)
     {
-        FUN_10905aa0()->Virtual8(0, 0);
+        GetAllocator()->Virtual8(0, 0);
         DAT_10ff7080 = new(0, 0, 0, 0, 0) Class_10E98C88;
-        FUN_10905aa0()->Virtual9();
+        GetAllocator()->Virtual9();
     }
     int Index = DAT_10ff7080->Count;
     Class_10BFBD70* List = DAT_10ff7080;

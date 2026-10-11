@@ -99,7 +99,7 @@ public:
     int Unknown144;
     int Unknown148;
     Class_10BFBD70 Unknown14C;
-    int Unknown158;
+    int m_CurrentIndex;
     int Unknown15C;
     int Unknown160;
     int Unknown164;
@@ -107,10 +107,10 @@ public:
     int Unknown16C;
     char Unknown170[0xC];
     int Unknown17C;
-    int Unknown180;
+    int m_State;
 };
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 class Class_1090A780
 {
@@ -128,7 +128,7 @@ public:
         if (Unknown00)
         {
             int* Obj = (int*)Unknown00 - 1;
-            FUN_10905aa0()->Virtual5(Obj);
+            GetAllocator()->Virtual5(Obj);
         }
     }
 };
@@ -161,8 +161,8 @@ void Class_10B695F0::FUN_10b695f0()
 // FUNCTION: 0x10B69800 ??0Class_10E85AD8@@QAE@XZ
 Class_10E85AD8::Class_10E85AD8()
     : Unknown118(0), Unknown11C(0), Unknown120(0), Unknown124(0), Unknown128(0), Unknown12C(0), Unknown130(0),
-      Unknown134(0), Unknown138(0), Unknown13C(0), Unknown140(0), Unknown144(0), Unknown148(0), Unknown158(0),
-      Unknown15C(0), Unknown160(0), Unknown164(0), Unknown168(0), Unknown16C(0), Unknown17C(0), Unknown180(0)
+      Unknown134(0), Unknown138(0), Unknown13C(0), Unknown140(0), Unknown144(0), Unknown148(0), m_CurrentIndex(0),
+      Unknown15C(0), Unknown160(0), Unknown164(0), Unknown168(0), Unknown16C(0), Unknown17C(0), m_State(0)
 {
     Unknown0E8 = 6;
 }

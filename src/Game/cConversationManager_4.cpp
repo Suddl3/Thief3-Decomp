@@ -5,13 +5,13 @@
 
 class Class_10A80E60;
 
-// FUNCTION: 0x10A13110 ?FUN_10a13110@cConversationManager@@UAEPAUStruct_10A13110@@H@Z
-Struct_10A13110* cConversationManager::FUN_10a13110(int Key)
+// FUNCTION: 0x10A13110 ?FindEntryByKey@cConversationManager@@UAEPAUStruct_10A13110@@H@Z
+Struct_10A13110* cConversationManager::FindEntryByKey(int Key)
 {
-    for (int i = 0; i < Unknown20; i++)
+    for (int i = 0; i < m_EntryCount; i++)
     {
-        if (Unknown28[i].Unknown00 == Key)
-            return &Unknown28[i];
+        if (m_Entries[i].Unknown00 == Key)
+            return &m_Entries[i];
     }
     return 0;
 }

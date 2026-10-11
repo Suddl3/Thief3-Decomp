@@ -3,7 +3,7 @@
 #include "Game/Class_10978090.h"
 #include "Game/Class_10BC4160.h"
 #include "Game/Class_10C08940.h"
-#include "Game/Class_10E94578.h"
+#include "Game/cTacticMoveToPoint.h"
 #include "Game/Class_10E95AC8.h"
 
 class Class_10FF667C
@@ -19,5 +19,5 @@ extern Class_10FF667C* DAT_10ff667c;
 void Class_10E95AC8::FUN_10be1dc0()
 {
     if (!DAT_10ff667c->Unknown24->FUN_10978090() || !DAT_10ff667c->Unknown24->FUN_10978090()->FUN_10c08940())
-        FUN_10bc5b50();
+        PopState();
 }

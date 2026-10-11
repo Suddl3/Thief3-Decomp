@@ -3,7 +3,7 @@
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10B38060.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 extern const char DAT_10e47660[];
 
@@ -20,7 +20,7 @@ public:
 };
 
 // Ion Storm's string (0x109081E0): a char pointer to a block allocated 4 bytes before it.
-// This copy has no base and the destructor's body, which computes Unknown00 - 4 before FUN_10905aa0().
+// This copy has no base and the destructor's body, which computes Unknown00 - 4 before GetAllocator().
 class Class_109081E0
 {
 public:
@@ -33,7 +33,7 @@ public:
         if (Unknown00)
         {
             char* Block = Unknown00 - 4;
-            FUN_10905aa0()->Virtual5(Block);
+            GetAllocator()->Virtual5(Block);
             Unknown00 = 0;
         }
     }

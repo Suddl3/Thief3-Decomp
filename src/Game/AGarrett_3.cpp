@@ -3,9 +3,9 @@
 #include "T3Player/T3PlayerClasses.h"
 #include "Game/Class_10C56E40.h"
 #include "Game/Class_10C56E40_Field00.h"
-#include "Game/Class_10E9C330.h"
+#include "Game/SoundSimulator.h"
 
-Class_10E9C330* GetSoundSimulator();
+SoundSimulator* GetSoundSimulator();
 
 // FUNCTION: 0x10B21630 ?Destroy@AGarrett@@UAEXXZ
 void AGarrett::Destroy()

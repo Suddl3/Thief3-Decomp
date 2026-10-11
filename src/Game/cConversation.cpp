@@ -29,7 +29,7 @@ public:
     virtual void Virtual10();
     virtual bool Virtual11();
 
-    char Unknown04[0xC];
+    char m_ConEvents[0xC];
     Class_10E6C1F0_Unknown10* Unknown10;
 };
 

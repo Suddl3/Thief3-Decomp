@@ -3,7 +3,7 @@
 
 #include "Game/Class_10C7D570.h"
 #include "Game/Class_10BBDB40.h"
-#include "Game/Class_10E94578.h"
+#include "Game/cTacticMoveToPoint.h"
 
 // Ion Storm's placement new and its delete (0x10905C10; the delete folded into ::operator delete).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
@@ -23,8 +23,8 @@ class Class_10BC4BF0_Member;
 // The header's Class_10E94100 (include/Game/Class_10E94100.h) has no (int, int) constructor
 // (the new in this function calls ??0Class_10E94100@@QAE@HH@Z), so the class is copied whole
 // with the constructor added. Its size is 0x54: the new in this function allocates 0x54, and
-// the base Class_10E94578 is 0x24 bytes, so the derived part is 0x30 bytes.
-class Class_10E94100 : public Class_10E94578
+// the base cTacticMoveToPoint is 0x24 bytes, so the derived part is 0x30 bytes.
+class Class_10E94100 : public cTacticMoveToPoint
 {
 public:
     Class_10E94100(int A, int B);

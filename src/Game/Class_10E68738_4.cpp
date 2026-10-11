@@ -127,21 +127,21 @@ public:
     virtual void Virtual111();
     virtual int Virtual112(int A);
 
-    void FUN_10a58ae0(int A);
+    void ApplyEntry(int A);
 
     char Unknown04[0x124];
     Struct_10A58AE0* Unknown128;
     char Unknown12C[0x28];
-    int Unknown154;
+    int m_Entries;
     char Unknown158[0x4];
     int* Unknown15C;
 };
 
-// FUNCTION: 0x10A58AE0 ?FUN_10a58ae0@Class_10E68738@@QAEXH@Z
-void Class_10E68738::FUN_10a58ae0(int A)
+// FUNCTION: 0x10A58AE0 ?ApplyEntry@Class_10E68738@@QAEXH@Z
+void Class_10E68738::ApplyEntry(int A)
 {
     Class_1098E330* Obj = Unknown128->Unknown00;
-    if (Obj && Unknown154 > A && Unknown15C[A] != -1)
+    if (Obj && m_Entries > A && Unknown15C[A] != -1)
     {
         Class_10970890* Ctrl = Obj->FUN_10991eb0();
         if (Ctrl)

@@ -17,16 +17,16 @@ class Class_10E95170 : public Class_10E90D70
 public:
     Class_10E95170* FUN_10bdf380(int A, int B);
 
-    int Unknown40;
-    int Unknown44;
+    int m_State;
+    int m_Deadline;
 };
 
 // FUNCTION: 0x10BDF380 ?FUN_10bdf380@Class_10E95170@@QAEPAV1@HH@Z
 Class_10E95170* Class_10E95170::FUN_10bdf380(int A, int B)
 {
     this->Class_10E90D70::Class_10E90D70(A, B);
-    Unknown40 = 0;
-    Unknown44 = 0;
+    m_State = 0;
+    m_Deadline = 0;
     Unknown00 = DAT_10e95170;
     return this;
 }

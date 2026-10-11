@@ -8,8 +8,8 @@ public:
     virtual ~Class_10932F40_Item();
 };
 
-// FUNCTION: 0x10932F40 ?FUN_10932f40@Class_10E49D44@@QAEXXZ
-void Class_10E49D44::FUN_10932f40()
+// FUNCTION: 0x10932F40 ?ClearItems@Class_10E49D44@@QAEXXZ
+void Class_10E49D44::ClearItems()
 {
     if (Unknown10)
     {

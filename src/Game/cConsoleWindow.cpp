@@ -7,18 +7,18 @@
 // FUNCTION: 0x10A5B530 ?FUN_10a5b530@cConsoleWindow@@QAEXXZ
 void cConsoleWindow::FUN_10a5b530()
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     if (Unknown1DC)
     {
         Class_109081E0* Str = Unknown1E4;
         if (Str->Unknown00)
         {
             char* Block = Str->Unknown00 - 4;
-            FUN_10905aa0()->Virtual5(Block);
+            GetAllocator()->Virtual5(Block);
             Str->Unknown00 = 0;
         }
     }
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     Unknown1D8 = 0;
     Unknown1D4 = 0;
     Virtual56(0);

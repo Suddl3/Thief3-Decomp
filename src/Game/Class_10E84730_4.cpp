@@ -29,7 +29,7 @@ public:
     char Pad5A[0x2];
 };
 
-Options* FUN_10929550();
+Options* GetOptions();
 
 class Class_10E84730
 {
@@ -53,7 +53,7 @@ public:
 // FUNCTION: 0x10B650F0 ?FUN_10b650f0@Class_10E84730@@QAEXXZ
 void Class_10E84730::FUN_10b650f0()
 {
-    FUN_10929550()->Save();
+    GetOptions()->Save();
     bool Dirty = false;
     for (int i = 0; i < Unknown188; i++)
     {
@@ -61,14 +61,14 @@ void Class_10E84730::FUN_10b650f0()
             break;
         int Name = *Unknown190[i];
         int* Expected = Unknown19C + i;
-        if (FUN_10929550()->Get(Name) != *Expected)
+        if (GetOptions()->Get(Name) != *Expected)
         {
             if (Name == 0xb || Name == 0xf || Name == 9)
                 Dirty = true;
         }
     }
     if (Dirty)
-        FUN_10929550()->ApplyVideo();
+        GetOptions()->ApplyVideo();
     if (!Unknown170)
     {
         Unknown174 = 2;

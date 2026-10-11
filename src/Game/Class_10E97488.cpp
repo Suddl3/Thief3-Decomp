@@ -18,7 +18,7 @@ public:
 
     bool FUN_10bc40e0();
     bool FUN_10bc4af0();
-    void FUN_10bc5b50();
+    void PopState();
 };
 
 class State_Patrol : public Class_10E8BE68
@@ -53,7 +53,7 @@ void Class_10E97488::FUN_10bed000()
     }
     if (Unknown58 < 1 && GetTimeSeconds() > Unknown44)
     {
-        FUN_10bc5b50();
+        PopState();
         return;
     }
     FUN_10bece10();

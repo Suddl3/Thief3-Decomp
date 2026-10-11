@@ -58,16 +58,16 @@ public:
     virtual void Virtual33();
     virtual void Virtual34();
     virtual void Virtual35();
-    virtual void FUN_10a82840(Class_10A82840_Unknown10* Table, Class_10A82840_Unknown10* Item);
+    virtual void DeleteChild(Class_10A82840_Unknown10* Table, Class_10A82840_Unknown10* Item);
 
-    int Unknown04;
+    int m_ConEvents;
     int Unknown08;
     int Unknown0C;
     Class_10A82840_Unknown10* Unknown10;
 };
 
-// FUNCTION: 0x10A82840 ?FUN_10a82840@cConversation@@UAEXPAVClass_10A82840_Unknown10@@0@Z
-void cConversation::FUN_10a82840(Class_10A82840_Unknown10* Table, Class_10A82840_Unknown10* Item)
+// FUNCTION: 0x10A82840 ?DeleteChild@cConversation@@UAEXPAVClass_10A82840_Unknown10@@0@Z
+void cConversation::DeleteChild(Class_10A82840_Unknown10* Table, Class_10A82840_Unknown10* Item)
 {
     if (!Table)
         Table = Unknown10;
@@ -90,6 +90,6 @@ void cConversation::FUN_10a82840(Class_10A82840_Unknown10* Table, Class_10A82840
             return;
         }
         if (!Entry->Virtual1())
-            FUN_10a82840(Table->Unknown10[i], Item);
+            DeleteChild(Table->Unknown10[i], Item);
     }
 }

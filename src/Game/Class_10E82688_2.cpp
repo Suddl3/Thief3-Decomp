@@ -24,10 +24,10 @@ public:
     char Unknown0EC[0x2C];
     int Unknown118;
     int Unknown11C;
-    int Unknown120;
-    int Unknown124;
-    int Unknown128;
-    int Unknown12C;
+    int m_FrameTime;
+    int m_Elapsed;
+    int m_FrameCount;
+    int m_Frame;
     int Unknown130;
     Class_10A64CD0 Unknown134;
     char Unknown135[0x23];
@@ -42,9 +42,9 @@ Class_10E82688::Class_10E82688()
 {
     Unknown118 = 0;
     Unknown11C = 0;
-    Unknown124 = 0;
-    Unknown128 = 0;
-    Unknown12C = 0;
+    m_Elapsed = 0;
+    m_FrameCount = 0;
+    m_Frame = 0;
     Unknown134.FUN_10a64cd0();
     Unknown158 = 0;
     Unknown15C = 0;

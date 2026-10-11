@@ -5,7 +5,7 @@
 class Class_10E6B078 : public Class_10A58FE0
 {
 public:
-    virtual bool FUN_10a5d430(int A, int B, bool C);
+    virtual bool HandleKey(int A, int B, bool C);
 };
 
 class Class_10E68738 : public Class_10E6B078
@@ -14,7 +14,7 @@ public:
     virtual void FUN_10a56060(int A, int B, bool C);
 
     char Unknown04[0x1CC];
-    int Unknown1D0;
+    int m_Selection;
     bool Unknown1D4;
 };
 
@@ -23,7 +23,7 @@ void Class_10E68738::FUN_10a56060(int A, int B, bool C)
 {
     if (C && A == 0x1d)
     {
-        int Value = Unknown1D0;
+        int Value = m_Selection;
         int Mode;
         if (Unknown1D4)
         {
@@ -35,7 +35,7 @@ void Class_10E68738::FUN_10a56060(int A, int B, bool C)
         {
             Mode = Value == 0;
         }
-        FUN_10a56010(Mode);
+        SetSelection(Mode);
     }
-    Class_10E6B078::FUN_10a5d430(A, B, C);
+    Class_10E6B078::HandleKey(A, B, C);
 }

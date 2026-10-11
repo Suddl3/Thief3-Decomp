@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/FArchive.h"
 
-class Class_10E94578
+class cTacticMoveToPoint
 {
 public:
     virtual void Virtual0();
@@ -30,11 +30,11 @@ public:
     virtual void Virtual22();
     virtual void FUN_10bcac50(int A, int B, int C, int D, int E);
 
-    void FUN_10bc5b50();
+    void PopState();
     void FUN_10bcb850(FArchive& Ar);
 };
 
-class Class_10E92578 : public Class_10E94578
+class Class_10E92578 : public cTacticMoveToPoint
 {
 public:
     virtual void FUN_10bcc1e0(int A, int B, int C, int D, int E);

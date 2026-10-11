@@ -3,15 +3,15 @@
 #ifndef GAME_STATE_PATROL_H
 #define GAME_STATE_PATROL_H
 
-#include "Game/Class_10E94578.h"
+#include "Game/cTacticMoveToPoint.h"
 
 class Object_10BE9860;
 struct Struct_10BC4240_Param;
 
-class State_Patrol : public Class_10E94578
+class State_Patrol : public cTacticMoveToPoint
 {
 public:
-    virtual void FUN_10bef040();
+    virtual void StartTimer();
     virtual void FUN_10bef030();
     virtual void Virtual2() = 0;
     virtual void Virtual3() = 0;
@@ -40,16 +40,16 @@ public:
     void FUN_10beec50(int param);
     void FUN_10bef060();
 
-    int Unknown04;
+    int m_Id;
     Object_10BE9860* Unknown08;
     char Pad0C[0x3d];
     char Unknown49;
     char Unknown4A[2];
     Struct_10BC4240_Param* Unknown4C;
     char Pad50[0x18];
-    bool Unknown68;
+    bool m_HasStartTime;
     char Pad69[0x3];
-    float Unknown6C;
+    float m_StartTime;
 };
 
 #endif // GAME_STATE_PATROL_H

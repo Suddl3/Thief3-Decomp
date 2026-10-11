@@ -137,7 +137,7 @@ public:
     virtual void Virtual123();
 
     void FUN_10b71200(bool p1);
-    int FUN_10b71220();
+    int GetValue();
 
     char Pad04[0x1c8];
     Class_10B71220_Member* Unknown1CC;
@@ -150,8 +150,8 @@ void cT3OptionsWindow::FUN_10b71200(bool p1)
         Virtual123();
 }
 
-// FUNCTION: 0x10B71220 ?FUN_10b71220@cT3OptionsWindow@@QAEHXZ
-int cT3OptionsWindow::FUN_10b71220()
+// FUNCTION: 0x10B71220 ?GetValue@cT3OptionsWindow@@QAEHXZ
+int cT3OptionsWindow::GetValue()
 {
     if (Unknown1CC)
         return *Unknown1CC->Unknown128;

@@ -82,5 +82,5 @@ void Class_10BF5310::FUN_10bf5310()
         return;
     }
     if (FUN_10bef0b0())
-        Class_10E8BE68::FUN_10bc5b50();
+        Class_10E8BE68::PopState();
 }

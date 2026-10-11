@@ -75,19 +75,19 @@ public:
     virtual void Virtual19();
     virtual void Virtual20();
     virtual void Virtual21();
-    virtual void FUN_10c3d6f0(const FRotator& Rot);
+    virtual void SetFlatDirection(const FRotator& Rot);
 
     char Unknown04[0x18];
     FVector Unknown1C;
-    FVector Unknown28;
+    FVector m_FlatDirection;
     char Unknown34[5];
     unsigned char Unknown39;
 };
 
-// FUNCTION: 0x10C3D6F0 ?FUN_10c3d6f0@Class_10E9B240@@UAEXABVFRotator@@@Z
-void Class_10E9B240::FUN_10c3d6f0(const FRotator& Rot)
+// FUNCTION: 0x10C3D6F0 ?SetFlatDirection@Class_10E9B240@@UAEXABVFRotator@@@Z
+void Class_10E9B240::SetFlatDirection(const FRotator& Rot)
 {
     Unknown1C = FVector(0.0f, 0.0f, 0.0f);
-    Unknown28 = Flatten(Rot.Vector()).FUN_10967580();
+    m_FlatDirection = Flatten(Rot.Vector()).FUN_10967580();
     Unknown39 = 0;
 }

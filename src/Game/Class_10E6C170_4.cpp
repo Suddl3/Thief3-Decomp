@@ -17,14 +17,14 @@ public:
     virtual void Virtual4();
     virtual void Virtual5();
     virtual void Virtual6();
-    virtual int FUN_10aa80b0(FILE* File, int Param);
+    virtual int Dump(FILE* File, int Param);
 
     char Unknown04[4];
     int Unknown08;
 };
 
-// FUNCTION: 0x10AA80B0 ?FUN_10aa80b0@Class_10E6C170@@UAEHPAU_iobuf@@H@Z
-int Class_10E6C170::FUN_10aa80b0(FILE* File, int Param)
+// FUNCTION: 0x10AA80B0 ?Dump@Class_10E6C170@@UAEHPAU_iobuf@@H@Z
+int Class_10E6C170::Dump(FILE* File, int Param)
 {
     fprintf(File, DAT_10e6d988, Unknown08);
     return 1;

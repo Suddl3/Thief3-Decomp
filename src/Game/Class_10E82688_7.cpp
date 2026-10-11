@@ -153,7 +153,7 @@ public:
     virtual void Virtual67(int A);
     virtual void Virtual68(int A);
 
-    void FUN_10b5a570();
+    void StartSequence();
 
     char Pad04[0x114];
     Class_10E82688* Unknown118;
@@ -191,7 +191,7 @@ void Class_10E82688::FUN_10b5a6f0(int A)
     if (Unknown11C)
     {
         if (A == 2)
-            FUN_10b5a570();
+            StartSequence();
         Unknown11C->FUN_10b5a6f0(A);
     }
 }

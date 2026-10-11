@@ -3,11 +3,11 @@
 #ifndef GAME_CLASS_10E6FEE8_H
 #define GAME_CLASS_10E6FEE8_H
 
-#include "Game/Class_10E67938.h"
+#include "Game/cActorManager.h"
 
 class Object_10ACACB0;
 
-class Class_10E6FEE8 : public Class_10E67938
+class Class_10E6FEE8 : public cActorManager
 {
 public:
     virtual void FUN_10acb0c0(int Code, int A, int B, int C);

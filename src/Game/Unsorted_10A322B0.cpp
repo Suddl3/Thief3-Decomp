@@ -50,7 +50,7 @@ public:
     Class_10A322B0_Unknown08* Ptr;
 };
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 // FUNCTION: 0x10A322B0 ?FUN_10a322b0@Class_10A322B0@@QAEXHH@Z
 void Class_10A322B0::FUN_10a322b0(int A, int B)
@@ -74,27 +74,27 @@ void Class_10A32370::FUN_10a32370(int NewCount)
             (*Slot)->Virtual2();
         }
     }
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     if (NewCount > Capacity)
     {
         int NewCapacity = NewCount;
         if (Capacity)
             NewCapacity = (NewCount & ~15) + 16;
-        Unknown08 = (Class_10A32AB0_Element**)FUN_10905aa0()->Virtual3(Unknown08, NewCapacity * sizeof(Class_10A32AB0_Element*), 0, 0, 0, 0);
+        Unknown08 = (Class_10A32AB0_Element**)GetAllocator()->Virtual3(Unknown08, NewCapacity * sizeof(Class_10A32AB0_Element*), 0, 0, 0, 0);
         Unknown04 = NewCapacity * sizeof(Class_10A32AB0_Element*);
     }
     else if (NewCount <= Capacity - 16)
     {
         if (NewCount == 0)
         {
-            FUN_10905aa0()->Virtual5(Unknown08);
+            GetAllocator()->Virtual5(Unknown08);
             Unknown08 = 0;
             Unknown04 = 0;
         }
         else
         {
             int NewCapacity = (NewCount & ~15) + 16;
-            Unknown08 = (Class_10A32AB0_Element**)FUN_10905aa0()->Virtual3(Unknown08, NewCapacity * sizeof(Class_10A32AB0_Element*), 0, 0, 0, 0);
+            Unknown08 = (Class_10A32AB0_Element**)GetAllocator()->Virtual3(Unknown08, NewCapacity * sizeof(Class_10A32AB0_Element*), 0, 0, 0, 0);
             Unknown04 = NewCapacity * sizeof(Class_10A32AB0_Element*);
         }
     }
@@ -106,6 +106,6 @@ void Class_10A32370::FUN_10a32370(int NewCount)
             *Element = 0;
         }
     }
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     Unknown00 = NewCount;
 }

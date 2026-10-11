@@ -3,13 +3,13 @@
 #include <stdlib.h>
 #include "Game/Class_10905A90_Member.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 extern const char DAT_10e47660[];
 
 extern int DAT_10eff700;
 
-// Game/Class_109081E0.h copied without its base, with the destructor's own body: the code computes Unknown00 - 4 before FUN_10905aa0().
+// Game/Class_109081E0.h copied without its base, with the destructor's own body: the code computes Unknown00 - 4 before GetAllocator().
 class Class_109081E0
 {
 public:
@@ -21,7 +21,7 @@ public:
         if (Unknown00)
         {
             char* Block = Unknown00 - 4;
-            FUN_10905aa0()->Virtual5(Block);
+            GetAllocator()->Virtual5(Block);
         }
     }
 

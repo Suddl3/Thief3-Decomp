@@ -29,7 +29,7 @@ void FUN_10c3f6e0(const Class_109081E0& Name)
             int Length = strlen(Entry);
             if (Length != 0)
             {
-                Struct_10C3F6E0* Block = (Struct_10C3F6E0*)FUN_10905aa0()->Virtual2(Length + 5, 0, 0, 0, 0);
+                Struct_10C3F6E0* Block = (Struct_10C3F6E0*)GetAllocator()->Virtual2(Length + 5, 0, 0, 0, 0);
                 Copy = Block->Text;
                 Block->Length = Length;
                 strcpy(Copy, Entry);
@@ -42,7 +42,7 @@ void FUN_10c3f6e0(const Class_109081E0& Name)
             Other = Copy;
         bool Equal = strcmp(*Name, Other) == 0;
         if (Copy != 0)
-            FUN_10905aa0()->Virtual5(Copy - 4);
+            GetAllocator()->Virtual5(Copy - 4);
         if (Equal)
             Best = i;
     }

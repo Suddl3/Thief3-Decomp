@@ -11,16 +11,16 @@ class Class_10E79228 : public Class_10E5B7C8
 public:
     virtual bool FUN_10b155b0(int p1);
     virtual void Virtual1();
-    virtual void FUN_10b154e0(float A);
+    virtual void Tick(float A);
 
     void FUN_109e70e0(float A);
-    void FUN_10b16b30();
+    void LayoutTitleBar();
 
     char Unknown98[0x188];
     Class_10B27220 Unknown220;
-    bool Unknown25C;
+    bool m_Closing;
     char Pad25D[0x3];
-    float Unknown260;
+    float m_CloseTimer;
 };
 
 #endif // GAME_CLASS_10E79228_H

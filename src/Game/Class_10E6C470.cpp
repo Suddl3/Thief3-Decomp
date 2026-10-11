@@ -6,7 +6,7 @@
 
 struct Struct_10C08690;
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 struct Struct_10A88D40
 {
@@ -29,7 +29,7 @@ public:
         FUN_10bfbd70(0);
         if (Unknown04)
         {
-            FUN_10905aa0()->Virtual5(Unknown08);
+            GetAllocator()->Virtual5(Unknown08);
             Unknown08 = 0;
             Unknown04 = 0;
         }

@@ -118,7 +118,7 @@ public:
     virtual float Virtual111();
 
     void FUN_10a56b10(float Value);
-    void FUN_10a64d70();
+    void MarkDirty();
 
     char Unknown04[0x138];
     float Unknown13C;
@@ -130,6 +130,6 @@ void Class_10E6A9F8::FUN_10a56b10(float Value)
     if (Value != Virtual111())
     {
         Unknown13C = Value;
-        FUN_10a64d70();
+        MarkDirty();
     }
 }

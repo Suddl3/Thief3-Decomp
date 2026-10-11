@@ -13,7 +13,7 @@ struct Struct_10BC4C10;
 class Class_10E8BE68 : public Class_10E90D70
 {
 public:
-    virtual void FUN_10bca010(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
     virtual void Virtual1();
     virtual void Virtual2();
     virtual void Virtual3();
@@ -89,7 +89,7 @@ public:
     void FUN_10bc4170(void* p1, int p2);
     bool FUN_10bc40e0();
     void FUN_10bc4240(Struct_10BC4240_Param* Param, bool A);
-    void FUN_10bc5b50();
+    void PopState();
     Struct_10BC4240_Param* FUN_10bca700();
     void FUN_10bce0d0(int p1);
     bool FUN_10bc4af0();

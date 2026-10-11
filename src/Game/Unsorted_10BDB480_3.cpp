@@ -67,10 +67,10 @@ public:
     float X, Y, Z;
 };
 
-class Class_10E94578 : public Class_10E90D70
+class cTacticMoveToPoint : public Class_10E90D70
 {
 public:
-    Class_10E94578* FUN_10bdb590(int A, int B, int C, const FVector& D, int E);
+    cTacticMoveToPoint* Construct(int A, int B, int C, const FVector& D, int E);
 
     int Unknown40;
     FArray Unknown44;
@@ -155,8 +155,8 @@ Class_10E94458* Class_10E94458::FUN_10bdb500(int A, int B, int C, int D, int E)
     return this;
 }
 
-// FUNCTION: 0x10BDB590 ?FUN_10bdb590@Class_10E94578@@QAEPAV1@HHHABVFVector@@H@Z
-Class_10E94578* Class_10E94578::FUN_10bdb590(int A, int B, int C, const FVector& D, int E)
+// FUNCTION: 0x10BDB590 ?Construct@cTacticMoveToPoint@@QAEPAV1@HHHABVFVector@@H@Z
+cTacticMoveToPoint* cTacticMoveToPoint::Construct(int A, int B, int C, const FVector& D, int E)
 {
     this->Class_10E90D70::Class_10E90D70(A, B);
     Unknown40 = C;

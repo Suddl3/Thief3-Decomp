@@ -11,7 +11,7 @@ public:
     virtual void Virtual3();
     virtual void Virtual4();
     virtual void Virtual5();
-    virtual int FUN_1094e800();
+    virtual int GetCount();
     virtual void Virtual7();
     virtual void Virtual8();
     virtual void Virtual9(int A, int B);

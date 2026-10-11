@@ -10,9 +10,9 @@ class State_PlayAnim : public Class_10E90D70
 public:
     State_PlayAnim(int A, int B, int C, bool D);
 
-    State_PlayAnim* FUN_10bd0990(int A, int B, int C, bool D);
+    State_PlayAnim* Construct(int A, int B, int C, bool D);
 
-    int Unknown40[3];
+    int m_Items[3];
     int Unknown4C;
     int Unknown50;
     bool Unknown54;

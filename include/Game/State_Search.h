@@ -103,7 +103,7 @@ public:
     void FUN_10bd6ac0(int A, int B);
     bool FUN_10bd3f10(int A);
 
-    Struct_10BD6A90* Unknown04;
+    Struct_10BD6A90* m_Owner;
     char Pad08[0x38];
     int Unknown40;
     char Pad44[0xa8];

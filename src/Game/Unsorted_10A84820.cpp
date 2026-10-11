@@ -48,16 +48,16 @@ public:
     virtual void Virtual1();
     virtual void Virtual2();
     virtual void Virtual3();
-    virtual bool FUN_10a84cb0(const Class_109022E0& Name);
+    virtual bool HasFlagName(const Class_109022E0& Name);
 
-    FName Unknown04;
+    FName m_FlagName;
 };
 
-// FUNCTION: 0x10A84CB0 ?FUN_10a84cb0@cFlagElementLogic@@UAE_NABVClass_109022E0@@@Z
-bool cFlagElementLogic::FUN_10a84cb0(const Class_109022E0& Name)
+// FUNCTION: 0x10A84CB0 ?HasFlagName@cFlagElementLogic@@UAE_NABVClass_109022E0@@@Z
+bool cFlagElementLogic::HasFlagName(const Class_109022E0& Name)
 {
     const char* Text = Name.Unknown00 ? Name.Unknown00 : DAT_10e47660;
-    return Unknown04.Value == FName(Text, FNAME_Add).Value;
+    return m_FlagName.Value == FName(Text, FNAME_Add).Value;
 }
 
 // FUNCTION: 0x10A84CE0 ?FUN_10a84ce0@Class_10A84CE0@@QAEXABVClass_109022E0@@@Z

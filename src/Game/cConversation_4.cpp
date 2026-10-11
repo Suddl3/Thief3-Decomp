@@ -36,8 +36,8 @@ class cConversation
 public:
     virtual void Virtual0();
     virtual void Virtual1();
-    virtual void FUN_10a823c0(int Value);
-    virtual void FUN_10a823f0(int Item, int Param3);
+    virtual void AddConEvent(int Value);
+    virtual void ReplaceConEvent(int Item, int Param3);
     virtual void Virtual4();
     virtual int FUN_10a80bc0(int A);
     virtual int FUN_10a80c10();
@@ -53,16 +53,16 @@ public:
     virtual void Virtual16();
     virtual void Virtual17();
     virtual void Virtual18();
-    virtual int FUN_10aa63c0(int index);
+    virtual int GetConEvent(int index);
     virtual void Virtual20();
     virtual void Virtual21();
     virtual int Virtual22();
-    virtual int FUN_10a80e30(int Value);
+    virtual int IndexOfConEvent(int Value);
     virtual void Virtual24();
     virtual void Virtual25();
     virtual void Virtual26();
     virtual void Virtual27();
-    virtual Class_10AA82C0* FUN_10a81a10(FName Name);
+    virtual Class_10AA82C0* FindByName(FName Name);
     virtual void Virtual29();
     virtual bool FUN_10a80d90(int A);
     virtual void Virtual31();
@@ -73,12 +73,12 @@ public:
     virtual void Virtual36();
     virtual void Virtual37();
     virtual void Virtual38();
-    virtual void FUN_10a80de0(int A, int B);
+    virtual void DispatchToConEvents(int A, int B);
 
     void FUN_10a80c70(unsigned char param);
     void FUN_10a80c80();
 
-    Class_10C00A60 Unknown04;
+    Class_10C00A60 m_ConEvents;
     union
     {
         Member* Field10;
@@ -100,14 +100,14 @@ static const char* NameOf(Class_10AA82C0* Item)
     return Text ? Text : DAT_10e47660;
 }
 
-// FUNCTION: 0x10A81A10 ?FUN_10a81a10@cConversation@@UAEPAVClass_10AA82C0@@VFName@@@Z
-Class_10AA82C0* cConversation::FUN_10a81a10(FName Name)
+// FUNCTION: 0x10A81A10 ?FindByName@cConversation@@UAEPAVClass_10AA82C0@@VFName@@@Z
+Class_10AA82C0* cConversation::FindByName(FName Name)
 {
-    for (int i = 0; i < Unknown04.Unknown00; i++)
+    for (int i = 0; i < m_ConEvents.Unknown00; i++)
     {
-        if (((Class_10AA82C0**)Unknown04.Unknown08)[i]->Virtual1() == 11)
+        if (((Class_10AA82C0**)m_ConEvents.Unknown08)[i]->Virtual1() == 11)
         {
-            Class_10AA82C0* Item = ((Class_10AA82C0**)Unknown04.Unknown08)[i];
+            Class_10AA82C0* Item = ((Class_10AA82C0**)m_ConEvents.Unknown08)[i];
             if (Item)
             {
                 bool Equal = FUN_10af36e0(*Name.FUN_10af9730(), NameOf(Item)) == 0;

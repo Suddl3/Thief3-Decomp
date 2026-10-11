@@ -5,7 +5,7 @@
 
 extern void* DAT_10e99350[];
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 class Class_10BFBD70
 {
@@ -38,7 +38,7 @@ void Class_10E99350::FUN_10c274e0()
     Array.FUN_10bfbd70(0);
     if (Array.Unknown04)
     {
-        FUN_10905aa0()->Virtual5(Array.Unknown08);
+        GetAllocator()->Virtual5(Array.Unknown08);
         Array.Unknown08 = 0;
         Array.Unknown04 = 0;
     }

@@ -77,28 +77,28 @@ public:
     virtual void Virtual70();
     virtual int Virtual71();
 
-    void FUN_10a56010(int A);
-    void FUN_10a58ae0(int A);
-    void FUN_10a58fe0(int Index, int Value);
-    void FUN_10a560c0(bool A);
+    void SetSelection(int A);
+    void ApplyEntry(int A);
+    void SetEntry(int Index, int Value);
+    void SetThirdStateEnabled(bool A);
 
     char Unknown04[0x1CC];
-    int Unknown1D0;
+    int m_Selection;
     char Unknown1D4[0xC];
-    int* Unknown1E0;
+    int* m_Values;
 };
 
-// FUNCTION: 0x10A560C0 ?FUN_10a560c0@Class_10E68738@@QAEX_N@Z
-void Class_10E68738::FUN_10a560c0(bool A)
+// FUNCTION: 0x10A560C0 ?SetThirdStateEnabled@Class_10E68738@@QAEX_N@Z
+void Class_10E68738::SetThirdStateEnabled(bool A)
 {
-    int Index = Unknown1D0;
+    int Index = m_Selection;
     Unknown1D4[0] = A;
     if (!A && Index == 2)
         Index = 0;
-    Unknown1D0 = Index;
-    int Value = Unknown1E0[Index];
-    FUN_10a58fe0(0, Value);
-    FUN_10a58fe0(1, Value + 1);
-    FUN_10a58fe0(2, Value + 1);
-    FUN_10a58ae0(Virtual71());
+    m_Selection = Index;
+    int Value = m_Values[Index];
+    SetEntry(0, Value);
+    SetEntry(1, Value + 1);
+    SetEntry(2, Value + 1);
+    ApplyEntry(Virtual71());
 }

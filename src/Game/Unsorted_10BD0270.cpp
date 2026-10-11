@@ -55,7 +55,7 @@ public:
     virtual void Virtual48();
     virtual void FUN_10bd17e0(int A);
 
-    char Unknown04[0x3C];
+    char m_Owner[0x3C];
     int Unknown40;
     char Unknown44[0xC0];
     int Unknown104;
@@ -75,22 +75,22 @@ public:
 class State_PlayAnim : public Class_10E90D70
 {
 public:
-    State_PlayAnim* FUN_10bd0990(int A, int B, int C, bool D);
+    State_PlayAnim* Construct(int A, int B, int C, bool D);
 
-    int Unknown40[3];
+    int m_Items[3];
     int Unknown4C;
     int Unknown50;
     bool Unknown54;
     bool Unknown55;
 };
 
-// FUNCTION: 0x10BD0990 ?FUN_10bd0990@State_PlayAnim@@QAEPAV1@HHH_N@Z
-State_PlayAnim* State_PlayAnim::FUN_10bd0990(int A, int B, int C, bool D)
+// FUNCTION: 0x10BD0990 ?Construct@State_PlayAnim@@QAEPAV1@HHH_N@Z
+State_PlayAnim* State_PlayAnim::Construct(int A, int B, int C, bool D)
 {
     this->Class_10E90D70::Class_10E90D70(A, B);
     Unknown00 = DAT_10e93148;
     for (int i = 0; i < 3; i++)
-        Unknown40[i] = 0;
+        m_Items[i] = 0;
     Unknown4C = C;
     Unknown50 = 0;
     Unknown54 = D;

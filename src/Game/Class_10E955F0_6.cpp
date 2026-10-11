@@ -27,7 +27,7 @@ public:
     char Unknown00[0xc];
 };
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 void FUN_10a48ff0(int A, int B, int C);
 
@@ -44,7 +44,7 @@ public:
         if (Unknown00)
         {
             char* Block = Unknown00 - 4;
-            FUN_10905aa0()->Virtual5(Block);
+            GetAllocator()->Virtual5(Block);
             Unknown00 = 0;
         }
     }

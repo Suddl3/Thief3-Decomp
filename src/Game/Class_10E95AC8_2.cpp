@@ -9,15 +9,15 @@ struct Struct_10BE1E00_Unknown04
     Class_10BA9EC0* Unknown08;
 };
 
-class Class_10E94578
+class cTacticMoveToPoint
 {
 public:
     virtual void Virtual0();
 
-    void FUN_10bc5b50();
+    void PopState();
 };
 
-class Class_10E95AC8 : public Class_10E94578
+class Class_10E95AC8 : public cTacticMoveToPoint
 {
 public:
     virtual void Virtual0();
@@ -73,5 +73,5 @@ public:
 void Class_10E95AC8::FUN_10be1e00()
 {
     static_cast<Class_10C01CE0*>(Unknown04->Unknown08->FUN_10ba9ec0())->FUN_10c01ce0();
-    FUN_10bc5b50();
+    PopState();
 }

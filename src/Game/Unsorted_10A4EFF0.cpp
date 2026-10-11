@@ -3,7 +3,7 @@
 #include "Game/Class_10A243F0.h"
 #include "Game/Class_10905A90_Member.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 class Class_10A4EFB0
 {
@@ -31,22 +31,22 @@ void Class_10A4EFB0::FUN_10a4f120()
             Capacity = 0;
         else
             Capacity = (unsigned)Unknown0C[i].Unknown04 >> 2;
-        FUN_10905aa0()->Virtual8(0, 0);
+        GetAllocator()->Virtual8(0, 0);
         if ((int)Capacity < 0)
         {
             int Want = 0;
             if (Capacity)
                 Want = 0x10;
-            Unknown0C[i].Unknown08 = FUN_10905aa0()->Virtual3(Unknown0C[i].Unknown08, Want * 4, 0, 0, 0, 0);
+            Unknown0C[i].Unknown08 = GetAllocator()->Virtual3(Unknown0C[i].Unknown08, Want * 4, 0, 0, 0, 0);
             Unknown0C[i].Unknown04 = Want * 4;
         }
         else if ((int)(Capacity - 16) >= 0)
         {
-            FUN_10905aa0()->Virtual5(Unknown0C[i].Unknown08);
+            GetAllocator()->Virtual5(Unknown0C[i].Unknown08);
             Unknown0C[i].Unknown08 = 0;
             Unknown0C[i].Unknown04 = 0;
         }
-        FUN_10905aa0()->Virtual9();
+        GetAllocator()->Virtual9();
         Unknown0C[i].Unknown00 = 0;
     }
     for (int i = 0; i < 0xff; i++)

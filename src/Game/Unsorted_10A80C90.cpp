@@ -29,9 +29,9 @@ public:
     virtual void Virtual20();
     virtual void Virtual21();
     virtual void Virtual22();
-    virtual int FUN_10a80e30(int Value);
+    virtual int IndexOfConEvent(int Value);
 
-    int Unknown04;
+    int m_ConEvents;
     int Unknown08;
     int* Unknown0C;
 };
@@ -71,10 +71,10 @@ void Class_10A80C90::FUN_10a80c90()
     Unknown54 = (float)TimeManager::Instance()->GetGameTime();
 }
 
-// FUNCTION: 0x10A80E30 ?FUN_10a80e30@cConversation@@UAEHH@Z
-int cConversation::FUN_10a80e30(int Value)
+// FUNCTION: 0x10A80E30 ?IndexOfConEvent@cConversation@@UAEHH@Z
+int cConversation::IndexOfConEvent(int Value)
 {
-    for (int i = 0; i < Unknown04; i++)
+    for (int i = 0; i < m_ConEvents; i++)
     {
         if (Unknown0C[i] == Value)
             return i;

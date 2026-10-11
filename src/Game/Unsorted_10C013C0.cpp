@@ -19,7 +19,7 @@ public:
     void* Value;
 };
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 class Class_10C013C0
 {
@@ -49,10 +49,10 @@ void FUN_10c013c0()
 {
     if (DAT_10ff66a0 == 0)
     {
-        FUN_10905aa0()->Virtual8(0, 0);
+        GetAllocator()->Virtual8(0, 0);
         Class_10C013C0* Result = new(0, 0, 0, 0, 0) Class_10C013C0;
         DAT_10ff66a0 = Result;
-        FUN_10905aa0()->Virtual9();
+        GetAllocator()->Virtual9();
     }
     DAT_10ff66a0->Unknown04++;
 }

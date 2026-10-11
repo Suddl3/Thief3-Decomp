@@ -70,8 +70,8 @@ struct Class_10E6C610
 
 Class_10C4CD50* FUN_10c4cd50();
 
-// FUNCTION: 0x10A8B1E0 ?FUN_10a8b1e0@cTriggerSoundSchemaParam@@UAEXXZ
-void cTriggerSoundSchemaParam::FUN_10a8b1e0()
+// FUNCTION: 0x10A8B1E0 ?Reset@cTriggerSoundSchemaParam@@UAEXXZ
+void cTriggerSoundSchemaParam::Reset()
 {
     FUN_10c3fbd0();
     DAT_10f3a1e0.FUN_1090f2c0(0);

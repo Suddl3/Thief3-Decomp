@@ -83,7 +83,7 @@ public:
 class Class_10E85AD8 : public Class_10E67FD0
 {
 public:
-    void FUN_10b6b4a0();
+    void ResetState();
     void FUN_10b6b1d0();
     void FUN_10b699f0();
 
@@ -101,7 +101,7 @@ public:
     Class_10E67FD0* Unknown144;
     Class_10E67FD0* Unknown148;
     Class_10BFBD70 Unknown14C;
-    int Unknown158;
+    int m_CurrentIndex;
     int Unknown15C;
     int Unknown160;
     int Unknown164;
@@ -109,13 +109,13 @@ public:
     int Unknown16C;
     char Unknown170[0xC];
     int Unknown17C;
-    int Unknown180;
+    int m_State;
 };
 
-// FUNCTION: 0x10B6B4A0 ?FUN_10b6b4a0@Class_10E85AD8@@QAEXXZ
-void Class_10E85AD8::FUN_10b6b4a0()
+// FUNCTION: 0x10B6B4A0 ?ResetState@Class_10E85AD8@@QAEXXZ
+void Class_10E85AD8::ResetState()
 {
-    Unknown180 = 0;
+    m_State = 0;
     Unknown120->FUN_10a52a90(2);
     Unknown124->FUN_10a52a90(2);
     Unknown118->FUN_10a52a90(2);
@@ -127,5 +127,5 @@ void Class_10E85AD8::FUN_10b6b4a0()
     Unknown13C->FUN_10a52a90(2);
     FUN_10b6b1d0();
     FUN_10b699f0();
-    Unknown158 = -1;
+    m_CurrentIndex = -1;
 }

@@ -11,7 +11,7 @@ class Class_10E79228 : public Class_10E5B7C8
 public:
     virtual void FUN_10b170f0();
 
-    void FUN_10b16b30();
+    void LayoutTitleBar();
 };
 
 class Class_10B314F0;
@@ -27,6 +27,6 @@ Class_10B314F0* Class_10B175C0::FUN_10b16fb0()
 // FUNCTION: 0x10B170F0 ?FUN_10b170f0@Class_10E79228@@UAEXXZ
 void Class_10E79228::FUN_10b170f0()
 {
-    FUN_10b16b30();
+    LayoutTitleBar();
     Class_10E5B7C8::FUN_109e64e0();
 }

@@ -6,10 +6,10 @@
 // FUNCTION: 0x10A130D0 ?FUN_10a130d0@cConversationManager@@UAEHH@Z
 int cConversationManager::FUN_10a130d0(int Param)
 {
-    for (int i = 0; i < Unknown08; i++)
+    for (int i = 0; i < m_ChildCount; i++)
     {
-        Unknown10[i]->Virtual34(Param);
-        Unknown10[i]->Virtual30(Param);
+        m_Children[i]->Virtual34(Param);
+        m_Children[i]->Virtual30(Param);
     }
     return 1;
 }

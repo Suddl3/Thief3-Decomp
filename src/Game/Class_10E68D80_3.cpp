@@ -165,13 +165,13 @@ public:
     int FUN_10a57d40(int X, int Y);
 
     char Unknown04[0x1CC];
-    Class_10E68D80* Unknown1D0;
-    Class_10E68D80* Unknown1D4;
+    Class_10E68D80* m_PrevControl;
+    Class_10E68D80* m_NextControl;
     char Unknown1D8[0x10];
-    int Unknown1E8;
-    int Unknown1EC;
-    int Unknown1F0;
-    int Unknown1F4;
+    int m_MinIndex;
+    int m_MaxIndex;
+    int m_Index;
+    int m_NextIndex;
 };
 
 // FUNCTION: 0x10A58330 ?FUN_10a58330@Class_10E68D80@@UAEXH@Z
@@ -187,16 +187,16 @@ void Class_10E68D80::FUN_10a58330(int A)
         if (Q)
         {
             if (Q == this)
-                Unknown1F4 = FUN_10a57d40(X, Y);
-            else if (Q == Unknown1D0 && Unknown1F0 != Unknown1E8)
-                Unknown1F4 = Unknown1F0 - 1;
-            else if (Q == Unknown1D4 && Unknown1F0 != Unknown1EC)
-                Unknown1F4 = Unknown1F0 + 1;
+                m_NextIndex = FUN_10a57d40(X, Y);
+            else if (Q == m_PrevControl && m_Index != m_MinIndex)
+                m_NextIndex = m_Index - 1;
+            else if (Q == m_NextControl && m_Index != m_MaxIndex)
+                m_NextIndex = m_Index + 1;
         }
     }
-    else if (Unknown1D0 && Unknown1D4)
+    else if (m_PrevControl && m_NextControl)
     {
-        Unknown1D4->Virtual70(0);
-        Unknown1D0->Virtual70(0);
+        m_NextControl->Virtual70(0);
+        m_PrevControl->Virtual70(0);
     }
 }

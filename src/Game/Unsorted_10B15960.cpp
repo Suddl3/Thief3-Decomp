@@ -8,7 +8,7 @@
 #include "Game/Class_10B2C030.h"
 #include "Game/Options.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 class Class_10BFBD70
 {
@@ -20,7 +20,7 @@ public:
         FUN_10bfbd70(0);
         if (Unknown04)
         {
-            FUN_10905aa0()->Virtual5(Data);
+            GetAllocator()->Virtual5(Data);
             Data = 0;
             Unknown04 = 0;
         }
@@ -41,7 +41,7 @@ public:
 
 class Options;
 
-Options* FUN_10929550();
+Options* GetOptions();
 
 class Class_10B2ADA0
 {
@@ -110,7 +110,7 @@ public:
 // FUNCTION: 0x10B160B0 ?FUN_10b160b0@Class_10B15960@@QAEXHPAX_N@Z
 void Class_10B15960::FUN_10b160b0(int A, void* B, bool C)
 {
-    if (FUN_10929550()->Get(1))
+    if (GetOptions()->Get(1))
     {
         Class_10B2ADA0* P = FUN_10b15ed0();
         if (P)

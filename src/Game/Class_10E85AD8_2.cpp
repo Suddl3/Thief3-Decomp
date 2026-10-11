@@ -182,8 +182,8 @@ public:
     virtual void Virtual101();
     virtual void Virtual102(Class_10E85AD8_Unknown154* A);
 
-    void FUN_10b69700();
-    void FUN_10b69750();
+    void DeactivateRejected();
+    void DispatchFirstAccepted();
 
     char Unknown118[0x34];
     int Unknown14C;
@@ -191,8 +191,8 @@ public:
     Class_10E85AD8_Unknown154** Unknown154;
 };
 
-// FUNCTION: 0x10B69700 ?FUN_10b69700@Class_10E85AD8@@QAEXXZ
-void Class_10E85AD8::FUN_10b69700()
+// FUNCTION: 0x10B69700 ?DeactivateRejected@Class_10E85AD8@@QAEXXZ
+void Class_10E85AD8::DeactivateRejected()
 {
     for (int i = 0; i < Unknown14C; i++)
     {
@@ -201,8 +201,8 @@ void Class_10E85AD8::FUN_10b69700()
     }
 }
 
-// FUNCTION: 0x10B69750 ?FUN_10b69750@Class_10E85AD8@@QAEXXZ
-void Class_10E85AD8::FUN_10b69750()
+// FUNCTION: 0x10B69750 ?DispatchFirstAccepted@Class_10E85AD8@@QAEXXZ
+void Class_10E85AD8::DispatchFirstAccepted()
 {
     for (int i = 0; i < Unknown14C; i++)
     {

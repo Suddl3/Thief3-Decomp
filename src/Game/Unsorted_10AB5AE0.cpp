@@ -18,7 +18,7 @@ extern void* DAT_10e6f47c[];
 
 void FUN_10abb760();
 
-class Class_10E6F47C
+class cHighlightMgr
 {
 public:
     void* Field00;
@@ -29,7 +29,7 @@ extern void* DAT_10e6f4b4[];
 
 extern void* DAT_10f3a3e4;
 
-class Class_10E6F910
+class cT3Camera
 {
 public:
     char Unknown00[1536];
@@ -57,8 +57,8 @@ void Class_10E6F388::FUN_10aba190()
     Field00 = (void*)DAT_10e6f388;
 }
 
-// FUNCTION: 0x10ABB8F0 ?FUN_10abb8f0@Class_10E6F47C@@QAEXXZ
-void Class_10E6F47C::FUN_10abb8f0()
+// FUNCTION: 0x10ABB8F0 ?FUN_10abb8f0@cHighlightMgr@@QAEXXZ
+void cHighlightMgr::FUN_10abb8f0()
 {
     Field00 = (void*)DAT_10e6f47c;
     FUN_10abb760();
@@ -83,8 +83,8 @@ void FUN_10abc130(void* p)
     DAT_10f3a3e4 = p;
 }
 
-// FUNCTION: 0x10AC1490 ?FUN_10ac1490@Class_10E6F910@@QAEPAXXZ
-void* Class_10E6F910::FUN_10ac1490()
+// FUNCTION: 0x10AC1490 ?FUN_10ac1490@cT3Camera@@QAEPAXXZ
+void* cT3Camera::FUN_10ac1490()
 {
     return Unknown600;
 }

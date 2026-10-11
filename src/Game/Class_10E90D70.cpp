@@ -53,8 +53,8 @@ Class_10E90D70::Class_10E90D70(int A, int B)
     : Unknown04(A), Unknown08(B), Unknown0C(GetTimeSeconds()), Unknown10(), Unknown14(), Unknown18(),
       Unknown1C(), Unknown20(), Unknown24(), Unknown28(), Unknown34()
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     Unknown18 = new(0, 0, 0, 0, 0) Class_10E90C58(this);
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     FUN_10c28d20();
 }

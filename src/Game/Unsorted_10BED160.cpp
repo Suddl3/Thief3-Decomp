@@ -30,7 +30,7 @@ public:
 class State_Patrol : public Class_10E90D70
 {
 public:
-    State_Patrol* FUN_10bed440(int A, int B);
+    State_Patrol* Init(int A, int B);
 
     bool Unknown40;
     int Unknown44;
@@ -39,8 +39,8 @@ public:
     FArray Unknown4C;
     FArray Unknown58;
     int Unknown64;
-    bool Unknown68;
-    int Unknown6C;
+    bool m_HasStartTime;
+    int m_StartTime;
     int Unknown70;
     int Unknown74;
     int Unknown78;
@@ -48,15 +48,15 @@ public:
     bool Unknown80;
 };
 
-class Class_10E94578
+class cTacticMoveToPoint
 {
 public:
     virtual void Virtual0();
 
-    void FUN_10bc5b50();
+    void PopState();
 };
 
-class Class_10E97488 : public Class_10E94578
+class Class_10E97488 : public cTacticMoveToPoint
 {
 public:
     virtual void Virtual0();
@@ -72,7 +72,7 @@ public:
 class Class_10E8BE68
 {
 public:
-    virtual void FUN_10bca010(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 };
 
 extern Class_10FF667C* DAT_10ff667c;
@@ -260,7 +260,7 @@ Struct_10BAA000* FUN_10bed160(Class_10BED160* Array, const Struct_10C05A80* Targ
 // FUNCTION: 0x10BED370 ?FUN_10bed370@Class_10E97258@@UAEXAAVFArchive@@@Z
 void Class_10E97258::FUN_10bed370(FArchive& Ar)
 {
-    Class_10E8BE68::FUN_10bca010(Ar);
+    Class_10E8BE68::Serialize(Ar);
     Ar.Serialize(&Unknown40, 1);
     DAT_10ff667c->Unknown18->Virtual1(Ar, &Unknown44);
     Ar.Serialize(&Unknown48, 4);
@@ -272,7 +272,7 @@ void Class_10E97258::FUN_10bed370(FArchive& Ar)
 // FUNCTION: 0x10BED3E0 ?FUN_10bed3e0@Class_10E97370@@UAEXAAVFArchive@@@Z
 void Class_10E97370::FUN_10bed3e0(FArchive& Ar)
 {
-    Class_10E8BE68::FUN_10bca010(Ar);
+    Class_10E8BE68::Serialize(Ar);
     Ar.Serialize(&Unknown40, 1);
     DAT_10ff667c->Unknown18->Virtual1(Ar, &Unknown44);
     Ar.Serialize(&Unknown48, 4);
@@ -280,8 +280,8 @@ void Class_10E97370::FUN_10bed3e0(FArchive& Ar)
     Ar.Serialize(&Unknown50, 4);
 }
 
-// FUNCTION: 0x10BED440 ?FUN_10bed440@State_Patrol@@QAEPAV1@HH@Z
-State_Patrol* State_Patrol::FUN_10bed440(int A, int B)
+// FUNCTION: 0x10BED440 ?Init@State_Patrol@@QAEPAV1@HH@Z
+State_Patrol* State_Patrol::Init(int A, int B)
 {
     this->Class_10E90D70::Class_10E90D70(A, B);
     Unknown44 = 0;
@@ -292,8 +292,8 @@ State_Patrol* State_Patrol::FUN_10bed440(int A, int B)
     Unknown48 = true;
     Unknown58.FArray::FArray();
     Unknown64 = 0;
-    Unknown68 = false;
-    Unknown6C = 0;
+    m_HasStartTime = false;
+    m_StartTime = 0;
     Unknown70 = 0;
     Unknown74 = 0;
     Unknown78 = 0;
@@ -308,7 +308,7 @@ void Class_10E97488::FUN_10bee9a0()
     if (Unknown58 >= 1)
     {
         if (Unknown5C >= Unknown58)
-            FUN_10bc5b50();
+            PopState();
         else
             FUN_10bedca0();
     }

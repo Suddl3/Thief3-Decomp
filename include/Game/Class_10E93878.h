@@ -87,7 +87,7 @@ public:
     virtual void Virtual74();
     virtual void Virtual75();
     virtual void Virtual76();
-    virtual void FUN_10bd1a60();
+    virtual void CheckDeadline();
     virtual void Virtual78();
     virtual void Virtual79();
     virtual void Virtual80();

@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10905A90_Member.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 // Ion Storm's placement new (0x10905C10).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
@@ -31,10 +31,10 @@ void FUN_10c1a030()
 {
     if (DAT_10ff7088 == 0)
     {
-        FUN_10905aa0()->Virtual8(0, 0);
+        GetAllocator()->Virtual8(0, 0);
         Class_10C19FD0* Result = new(0, 0, 0, 0, 0) Class_10C19FD0;
         DAT_10ff7088 = Result;
-        FUN_10905aa0()->Virtual9();
+        GetAllocator()->Virtual9();
     }
     DAT_10ff7088->Unknown00++;
 }

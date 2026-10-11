@@ -3,15 +3,15 @@
 
 extern void* DAT_10e701c8[];
 
-class Class_10E67938
+class cActorManager
 {
 public:
-    Class_10E67938();
+    cActorManager();
 
     void** Unknown00;
 };
 
-class Class_10E701C8 : public Class_10E67938
+class Class_10E701C8 : public cActorManager
 {
 public:
     Class_10E701C8* FUN_10ace480();
@@ -20,7 +20,7 @@ public:
 // FUNCTION: 0x10ACE480 ?FUN_10ace480@Class_10E701C8@@QAEPAV1@XZ
 Class_10E701C8* Class_10E701C8::FUN_10ace480()
 {
-    this->Class_10E67938::Class_10E67938();
+    this->cActorManager::cActorManager();
     Unknown00 = DAT_10e701c8;
     return this;
 }

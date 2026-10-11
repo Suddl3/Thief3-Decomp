@@ -9,7 +9,7 @@ class Class_10B16C10 : public WindowManager
 {
 public:
     void FUN_10b16c10(bool Flag);
-    void FUN_10b16b30();
+    void LayoutTitleBar();
 };
 
 #endif // GAME_CLASS_10B16C10_H

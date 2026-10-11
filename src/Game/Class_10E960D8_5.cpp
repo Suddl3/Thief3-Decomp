@@ -69,17 +69,17 @@ public:
     virtual void Virtual61();
     virtual void Virtual62();
     virtual void Virtual63();
-    virtual void FUN_10be58c0(Object_10BE58C0* Ar);
+    virtual void Serialize(Object_10BE58C0* Ar);
 
     void FUN_10be4ef0(Object_10BE58C0* Ar);
 
     char Unknown04[0x64];
-    int Unknown68;
+    int m_Interval;
 };
 
-// FUNCTION: 0x10BE58C0 ?FUN_10be58c0@Class_10E960D8@@UAEXPAVObject_10BE58C0@@@Z
-void Class_10E960D8::FUN_10be58c0(Object_10BE58C0* Ar)
+// FUNCTION: 0x10BE58C0 ?Serialize@Class_10E960D8@@UAEXPAVObject_10BE58C0@@@Z
+void Class_10E960D8::Serialize(Object_10BE58C0* Ar)
 {
     FUN_10be4ef0(Ar);
-    Ar->Virtual1(&Unknown68, 4);
+    Ar->Virtual1(&m_Interval, 4);
 }

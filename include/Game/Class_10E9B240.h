@@ -16,8 +16,8 @@ public:
     virtual void Virtual5();
     virtual void Virtual6();
     virtual void Virtual7();
-    virtual void FUN_10c3d880();
-    virtual void FUN_10c3d890();
+    virtual void Start();
+    virtual void Stop();
     virtual void Virtual10();
     virtual void Virtual11();
     virtual void Virtual12();
@@ -41,7 +41,7 @@ public:
     void FUN_10c3d600(int A);
 
     char Unknown04[0x14];
-    bool Unknown18;
+    bool m_Active;
     char Pad19[0x1b];
     int Unknown34;
     unsigned char Unknown38;

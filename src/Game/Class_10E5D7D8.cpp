@@ -6,7 +6,7 @@
 #include "Game/Class_10E5B578.h"
 #include "Game/Class_10E6DC88.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 // Ion Storm's placement new and its delete (0x10905C10; the delete folded into ::operator delete).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
@@ -28,8 +28,8 @@ public:
 // FUNCTION: 0x10A92680 ?FUN_10a92680@Class_10E5D7D8@@UAEPAVClass_10E6CB94@@XZ
 Class_10E6CB94* Class_10E5D7D8::FUN_10a92680()
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     Class_10E6CB94* Result = new(0, 0, 0, 0, 0) Class_10E6CB94;
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     return Result;
 }

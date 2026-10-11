@@ -75,7 +75,7 @@ public:
     virtual void Virtual61();
     virtual void Virtual62();
     virtual void Virtual63();
-    virtual void FUN_10be58c0(Object_10BE58C0* Ar);
+    virtual void Serialize(Object_10BE58C0* Ar);
     virtual float FUN_10be4340();
     virtual void Virtual66();
     virtual void Virtual67();
@@ -112,7 +112,7 @@ public:
 
     Class_10BB8140* Unknown04;
     char Pad08[0x60];
-    int Unknown68;
+    int m_Interval;
     char Pad6C[0x8];
 };
 

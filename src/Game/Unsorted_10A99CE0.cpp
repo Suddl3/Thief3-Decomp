@@ -3,7 +3,7 @@
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10A7F5A0.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 // Game/Class_10BFBD70.h has no destructor and an out-of-line FUN_10bfbd70; this copy inlines both, as the function does.
 class Class_10BFBD70
@@ -12,31 +12,31 @@ public:
     void FUN_10bfbd70(int NewCount)
     {
         int Capacity = !Unknown08 ? 0 : Unknown04 / sizeof(void*);
-        FUN_10905aa0()->Virtual8(0, 0);
+        GetAllocator()->Virtual8(0, 0);
         if (NewCount > Capacity)
         {
             int NewCapacity = NewCount;
             if (Capacity)
                 NewCapacity = (NewCount & ~15) + 16;
-            Unknown08 = (void**)FUN_10905aa0()->Virtual3(Unknown08, NewCapacity * sizeof(void*), 0, 0, 0, 0);
+            Unknown08 = (void**)GetAllocator()->Virtual3(Unknown08, NewCapacity * sizeof(void*), 0, 0, 0, 0);
             Unknown04 = NewCapacity * sizeof(void*);
         }
         else if (NewCount <= Capacity - 16)
         {
             if (NewCount == 0)
             {
-                FUN_10905aa0()->Virtual5(Unknown08);
+                GetAllocator()->Virtual5(Unknown08);
                 Unknown08 = 0;
                 Unknown04 = 0;
             }
             else
             {
                 int NewCapacity = (NewCount & ~15) + 16;
-                Unknown08 = (void**)FUN_10905aa0()->Virtual3(Unknown08, NewCapacity * sizeof(void*), 0, 0, 0, 0);
+                Unknown08 = (void**)GetAllocator()->Virtual3(Unknown08, NewCapacity * sizeof(void*), 0, 0, 0, 0);
                 Unknown04 = NewCapacity * sizeof(void*);
             }
         }
-        FUN_10905aa0()->Virtual9();
+        GetAllocator()->Virtual9();
         Unknown00 = NewCount;
     }
 
@@ -45,7 +45,7 @@ public:
         FUN_10bfbd70(0);
         if (Unknown04)
         {
-            FUN_10905aa0()->Virtual5(Unknown08);
+            GetAllocator()->Virtual5(Unknown08);
             Unknown08 = 0;
             Unknown04 = 0;
         }

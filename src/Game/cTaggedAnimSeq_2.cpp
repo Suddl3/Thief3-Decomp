@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10905A90_Member.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 class Class_10A1F150
 {
@@ -22,23 +22,23 @@ public:
     virtual void Virtual1();
     virtual void Virtual2();
     virtual void Virtual3();
-    virtual bool FUN_10a1f150(Class_10A1F150* Item);
+    virtual bool SetName(Class_10A1F150* Item);
 
-    int Unknown04;
+    int m_Name;
 };
 
-// FUNCTION: 0x10A1F150 ?FUN_10a1f150@cTaggedAnimSeq@@UAE_NPAVClass_10A1F150@@@Z
-bool cTaggedAnimSeq::FUN_10a1f150(Class_10A1F150* Item)
+// FUNCTION: 0x10A1F150 ?SetName@cTaggedAnimSeq@@UAE_NPAVClass_10A1F150@@@Z
+bool cTaggedAnimSeq::SetName(Class_10A1F150* Item)
 {
     if (Item->Virtual3())
         return false;
     Class_10A1F150* Object;
     const int* Value = Item->Virtual1(&Object);
-    bool Result = FUN_1090f010(Value, &Unknown04);
+    bool Result = FUN_1090f010(Value, &m_Name);
     if (Object)
     {
         char* Block = (char*)Object - 4;
-        FUN_10905aa0()->Virtual5(Block);
+        GetAllocator()->Virtual5(Block);
     }
     return Result;
 }

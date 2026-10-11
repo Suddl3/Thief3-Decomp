@@ -123,7 +123,7 @@ public:
     virtual void Virtual111(const Class_109081E0& Text, float Scale, int Flag);
 };
 
-class Class_10E7B970
+class cT3ReadBookWindow
 {
 public:
     virtual void Virtual0();
@@ -244,7 +244,7 @@ public:
     char Pad11C[0x18];
     Class_10A242D0* Unknown134;
     char Pad138[0x1C];
-    FString Unknown154;
+    FString m_Text;
     int Unknown160;
     char Pad164[0x4];
     int Unknown168;
@@ -306,8 +306,8 @@ bool Class_10B2FCE0::FUN_10b2fce0(float A)
     return Result;
 }
 
-// FUNCTION: 0x10B2FEF0 ?FUN_10b2fef0@Class_10E7B970@@QAEXXZ
-void Class_10E7B970::FUN_10b2fef0()
+// FUNCTION: 0x10B2FEF0 ?FUN_10b2fef0@cT3ReadBookWindow@@QAEXXZ
+void cT3ReadBookWindow::FUN_10b2fef0()
 {
     if (Unknown134 != 0)
     {
@@ -317,10 +317,10 @@ void Class_10E7B970::FUN_10b2fef0()
             if (Unknown160 >= Count)
             {
                 Unknown160 -= Count;
-                if (Unknown118 != 0 && Unknown118->Virtual54() && Unknown154.Len() > 0)
+                if (Unknown118 != 0 && Unknown118->Virtual54() && m_Text.Len() > 0)
                 {
                     {
-                        Class_109081E0 Text(((Class_10AF7F80*)&Unknown154)->FUN_10af7f80());
+                        Class_109081E0 Text(((Class_10AF7F80*)&m_Text)->FUN_10af7f80());
                         Unknown118->Virtual111(Text, -1.1f, 0);
                     }
                     Unknown118->Virtual36();

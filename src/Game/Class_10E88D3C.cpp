@@ -3,7 +3,7 @@
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10E88D3C.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 // Ion Storm's placement new (0x10905C10).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
@@ -22,8 +22,8 @@ public:
 // FUNCTION: 0x10B8EC50 ?FUN_10b8ec50@Class_10E88D3C@@UAEPAVClass_10E89720@@HH@Z
 Class_10E89720* Class_10E88D3C::FUN_10b8ec50(int A, int B)
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     Class_10E89720* Result = new(0, 0, 0, 0, 0) Class_10E89720;
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     return Result;
 }

@@ -4,7 +4,7 @@
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_1092A280.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 // Ion Storm's placement new (0x10905C10).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
@@ -40,14 +40,14 @@ Class_1092A280_Node* Class_1092A280::FUN_1092a280()
             Node->Next->Prev = Node->Prev;
         FreeCount--;
     }
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     if (!Node)
     {
         int Tag = 0;
         Class_1092A280_Node* Created = new(Tag, 0, 0, 0, 0) Class_1092A280_Node();
         Node = Created;
     }
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     if (Node)
     {
         Class_1092A280_Node* OldTail = Tail;

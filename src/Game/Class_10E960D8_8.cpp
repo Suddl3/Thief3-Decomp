@@ -25,7 +25,7 @@ class Class_10E960D8
 public:
     virtual void Virtual0();
     virtual void Virtual1();
-    virtual void FUN_10be85d0();
+    virtual void UpdateRandomTimer();
     virtual void Virtual3();
     virtual void Virtual4();
     virtual void Virtual5();
@@ -115,29 +115,29 @@ public:
 
     Class_10BB8140* Unknown04;
     char Pad08[0x48];
-    float Unknown50;
+    float m_IntervalStart;
     char Pad54[0x10];
     bool Unknown64;
     char Pad65[0x3];
-    float Unknown68;
+    float m_Interval;
 };
 
-// FUNCTION: 0x10BE85D0 ?FUN_10be85d0@Class_10E960D8@@UAEXXZ
-void Class_10E960D8::FUN_10be85d0()
+// FUNCTION: 0x10BE85D0 ?UpdateRandomTimer@Class_10E960D8@@UAEXXZ
+void Class_10E960D8::UpdateRandomTimer()
 {
     if (Virtual73())
         return;
     if (!Unknown64)
         Virtual86();
     FUN_10be7ae0();
-    if (GetTimeSeconds() - Unknown50 > Unknown68)
+    if (GetTimeSeconds() - m_IntervalStart > m_Interval)
     {
         float Max = Unknown04->Unknown08->FUN_10dbd510(0x100592)->FUN_10bbdb40();
         if (Max > 0.0f)
         {
             Virtual85();
             float Min = Unknown04->Unknown08->FUN_10dbd510(0x100591)->FUN_10bbdb40();
-            Unknown68 = (Max - Min) * appFrand() + Min;
+            m_Interval = (Max - Min) * appFrand() + Min;
         }
     }
 }

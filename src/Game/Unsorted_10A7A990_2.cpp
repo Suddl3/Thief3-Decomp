@@ -151,8 +151,8 @@ public:
 
 int FUN_10977fa0(int A);
 
-// Copied whole from include/Game/Class_10E6BD90.h with the function at slot 21.
-class Class_10E6BD90
+// Copied whole from include/Game/cRigidAttachmentManager.h with the function at slot 21.
+class cRigidAttachmentManager
 {
 public:
     virtual void Virtual0();
@@ -167,7 +167,7 @@ public:
     virtual void Virtual9();
     virtual void Virtual10();
     virtual void Virtual11();
-    virtual void FUN_10a7a390(int A, int B);
+    virtual void Attach(int A, int B);
     virtual void Virtual13();
     virtual void Virtual14();
     virtual void Virtual15();
@@ -176,7 +176,7 @@ public:
     virtual void Virtual18();
     virtual void Virtual19();
     virtual void Virtual20();
-    virtual void FUN_10a7aac0(int A, int B, Class_10AAB5C0*& ObjRef);
+    virtual void Detach(int A, int B, Class_10AAB5C0*& ObjRef);
     virtual void Virtual22();
     virtual void Virtual23();
     virtual void Virtual24();
@@ -187,7 +187,7 @@ class UClass;
 
 class Class_10BFBD70;
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 class Class_10BFBD70
 {
@@ -198,7 +198,7 @@ public:
         FUN_10bfbd70(0);
         if (Unknown04)
         {
-            FUN_10905aa0()->Virtual5(Unknown08);
+            GetAllocator()->Virtual5(Unknown08);
             Unknown08 = 0;
             Unknown04 = 0;
         }
@@ -222,10 +222,10 @@ public:
     virtual void Virtual5(int A, int B, int C, int D, int E);
 };
 
-cUObjectLinkManager* FUN_10b0b2b0();
+cUObjectLinkManager* GetUObjectLinkManager();
 
-// FUNCTION: 0x10A7AAC0 ?FUN_10a7aac0@Class_10E6BD90@@UAEXHHAAPAVClass_10AAB5C0@@@Z
-void Class_10E6BD90::FUN_10a7aac0(int A, int B, Class_10AAB5C0*& ObjRef)
+// FUNCTION: 0x10A7AAC0 ?Detach@cRigidAttachmentManager@@UAEXHHAAPAVClass_10AAB5C0@@@Z
+void cRigidAttachmentManager::Detach(int A, int B, Class_10AAB5C0*& ObjRef)
 {
     Class_10AAB5C0* Obj = ObjRef;
     Class_10C08940* First = Obj->FUN_10978090();
@@ -253,7 +253,7 @@ void __stdcall FUN_10a7d2a0(int A, Class_10BFBD70* Out)
     if (((Class_10C08940*)A)->FUN_10ad18b0() == 0)
     {
         Class_10BFBD70 Found;
-        FUN_10b0b2b0()->Virtual4(A, 0, 0x281B9D0, Found);
+        GetUObjectLinkManager()->Virtual4(A, 0, 0x281B9D0, Found);
         for (int i = 0; i < Found.Unknown00; i++)
         {
             Class_10AAB5C0* Item = Found.Unknown08[i];

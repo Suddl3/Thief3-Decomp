@@ -17,9 +17,9 @@ class Class_10A2AEF0;
 
 class Class_10B6BDE0_Member;
 
-// Class_10E85DE0 laid out as the accepted sources have it (no base: the vtable pointer is
+// cDifficultyPane laid out as the accepted sources have it (no base: the vtable pointer is
 // the first word, so Unknown164 is at 0x164), with the header's members and FUN_10b77ee0.
-class Class_10E85DE0
+class cDifficultyPane
 {
 public:
     virtual void Virtual0();
@@ -148,13 +148,13 @@ public:
     virtual void Virtual123();
     virtual void Virtual124();
 
-    void FUN_10b6c180(Struct_10B6C180* A);
+    void SetData(Struct_10B6C180* A);
     void FUN_10b6b930();
-    Class_109081E0 FUN_10b6be00();
-    int FUN_10b6b940();
+    Class_109081E0 GetPaneFileName();
+    int GetData();
     void FUN_10b6bb80(int A, int B, int C, int D, int E, int F);
-    int FUN_10b6bde0();
-    void FUN_10b6bd70();
+    int GetSelectedValue();
+    void ApplySelection();
     void FUN_10b77ee0(int A);
 
     char Unknown04[0x15C];
@@ -166,7 +166,7 @@ public:
     Class_10B6BDE0_Member* Unknown190;
     int Unknown194;
     char Pad198[0x4];
-    int Unknown19C;
+    int m_Mode;
 };
 
 // The five pointees are unnamed; each is called through its slot 56 only.
@@ -480,7 +480,7 @@ public:
     virtual void Virtual56(int A);
 };
 
-class Class_10E80C78 : public Class_10E85DE0
+class Class_10E80C78 : public cDifficultyPane
 {
 public:
     void FUN_10b42f70(int Arg);

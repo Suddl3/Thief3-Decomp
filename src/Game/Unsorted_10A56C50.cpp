@@ -23,16 +23,16 @@ class Class_10E68D80 : public Class_10E69080
 public:
     Class_10E68D80();
 
-    int Unknown1D0;
-    int Unknown1D4;
+    int m_PrevControl;
+    int m_NextControl;
     int Unknown1D8;
     char Unknown1DC;
     int Unknown1E0;
     int Unknown1E4;
-    int Unknown1E8;
-    int Unknown1EC;
-    int Unknown1F0;
-    int Unknown1F4;
+    int m_MinIndex;
+    int m_MaxIndex;
+    int m_Index;
+    int m_NextIndex;
 };
 
 typedef float FLOAT;
@@ -141,16 +141,16 @@ void Class_10E6AEA0::FUN_10a572c0(Class_10BFBD70* Array, int B)
 // FUNCTION: 0x10A57790 ??0Class_10E68D80@@QAE@XZ
 Class_10E68D80::Class_10E68D80()
 {
-    Unknown1D0 = 0;
-    Unknown1D4 = 0;
+    m_PrevControl = 0;
+    m_NextControl = 0;
     Unknown1D8 = 0;
     Unknown1DC = 0;
     Unknown1E0 = 0;
     Unknown1E4 = 0;
-    Unknown1E8 = 0;
-    Unknown1EC = 0;
-    Unknown1F0 = 0;
-    Unknown1F4 = 0;
+    m_MinIndex = 0;
+    m_MaxIndex = 0;
+    m_Index = 0;
+    m_NextIndex = 0;
     Unknown00 = &DAT_10e68d80;
     Unknown118 = DAT_10e7edb8;
 }

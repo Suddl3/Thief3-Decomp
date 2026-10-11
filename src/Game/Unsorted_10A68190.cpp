@@ -34,9 +34,9 @@ int FUN_10a68190(int A)
             return i;
     }
     Class_10A68190_Param* Param = (Class_10A68190_Param*)A;
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     Class_109EF3F0* Obj = new(0, 0, 0, 0, 0) Class_109EF3F0(A, Param->Unknown190);
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     int Index = DAT_10f3a12c.Count;
     DAT_10f3a12c.FUN_10abc210(Index + 1);
     DAT_10f3a12c.Data[Index].Unknown00 = A;

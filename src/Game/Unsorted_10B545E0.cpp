@@ -80,7 +80,7 @@ public:
     virtual void Virtual70(int A);
 };
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 // Ion Storm's placement new (0x10905C10).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
@@ -92,10 +92,10 @@ Class_10B542D0* FUN_10b546f0()
 {
     if (DAT_10ff6580 == 0)
     {
-        FUN_10905aa0()->Virtual8(0, 0);
+        GetAllocator()->Virtual8(0, 0);
         Class_10B542D0* Result = new(0, 0, 0, 0, 0) Class_10B542D0;
         DAT_10ff6580 = Result;
-        FUN_10905aa0()->Virtual9();
+        GetAllocator()->Virtual9();
     }
     return DAT_10ff6580;
 }

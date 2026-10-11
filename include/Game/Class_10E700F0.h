@@ -3,10 +3,10 @@
 #ifndef GAME_CLASS_10E700F0_H
 #define GAME_CLASS_10E700F0_H
 
-#include "Game/Class_10E67938.h"
+#include "Game/cActorManager.h"
 #include "Game/Class_10E70060.h"
 
-class Class_10E700F0 : public Class_10E67938, public Class_10E70060
+class Class_10E700F0 : public cActorManager, public Class_10E70060
 {
 public:
     virtual void FUN_10c13ea0(int, int, int, int);

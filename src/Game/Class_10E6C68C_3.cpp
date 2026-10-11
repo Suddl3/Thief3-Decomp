@@ -4,7 +4,7 @@
 #include "Game/Class_10B0D530.h"
 #include "Game/Class_10E6BF84.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 class Class_10F3A1EC
 {
@@ -36,7 +36,7 @@ Class_10E6C68C::~Class_10E6C68C()
     if (Unknown0C)
     {
         int* Obj = Unknown0C - 1;
-        FUN_10905aa0()->Virtual5(Obj);
+        GetAllocator()->Virtual5(Obj);
         Unknown0C = 0;
     }
 }

@@ -25,14 +25,14 @@ public:
     virtual void Virtual16();
     virtual void Virtual17();
     virtual void Virtual18();
-    virtual int FUN_10aa63c0(int index);
+    virtual int GetConEvent(int index);
 
-    char Unknown04[8];
+    char m_ConEvents[8];
     int* Unknown0C;
 };
 
-// FUNCTION: 0x10AA63C0 ?FUN_10aa63c0@cConversation@@UAEHH@Z
-int cConversation::FUN_10aa63c0(int index)
+// FUNCTION: 0x10AA63C0 ?GetConEvent@cConversation@@UAEHH@Z
+int cConversation::GetConEvent(int index)
 {
     return Unknown0C[index];
 }

@@ -6,18 +6,18 @@ double GetTimeSeconds();
 class State_Patrol
 {
 public:
-    virtual void FUN_10bef040();
+    virtual void StartTimer();
     void FUN_10beec50(int A);
 
-    char Unknown04[0x64];
-    bool Unknown68;
-    float Unknown6C;
+    char m_Id[0x64];
+    bool m_HasStartTime;
+    float m_StartTime;
 };
 
-// FUNCTION: 0x10BEF040 ?FUN_10bef040@State_Patrol@@UAEXXZ
-void State_Patrol::FUN_10bef040()
+// FUNCTION: 0x10BEF040 ?StartTimer@State_Patrol@@UAEXXZ
+void State_Patrol::StartTimer()
 {
-    Unknown68 = true;
-    Unknown6C = (float)GetTimeSeconds();
+    m_HasStartTime = true;
+    m_StartTime = (float)GetTimeSeconds();
     FUN_10beec50(0);
 }

@@ -8,7 +8,7 @@ void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D
 
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 class Class_10919C40;
 
@@ -46,7 +46,7 @@ bool FUN_1094c430(const Class_109081E0& A, const Class_109081E0& B);
 // FUNCTION: 0x10A63500 ?FUN_10a63500@Class_10A63500@@QAEXABVClass_109081E0@@PAVClass_10919C40@@@Z
 void Class_10A63500::FUN_10a63500(const Class_109081E0& Name, Class_10919C40* Value)
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     if (Unknown0C == 0)
     {
         Unknown0C = new(0, 0, 0, 0, 0) Class_1091CB20(Value, Name, -1.0f, -1.0f, true, 8);
@@ -66,5 +66,5 @@ void Class_10A63500::FUN_10a63500(const Class_109081E0& Name, Class_10919C40* Va
             Obj->Unknown0C = false;
         }
     }
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
 }

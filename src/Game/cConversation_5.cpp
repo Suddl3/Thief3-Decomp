@@ -23,8 +23,8 @@ class cConversation
 public:
     virtual void Virtual0();
     virtual void Virtual1();
-    virtual void FUN_10a823c0(int Value);
-    virtual void FUN_10a823f0(int Item, int Param3);
+    virtual void AddConEvent(int Value);
+    virtual void ReplaceConEvent(int Item, int Param3);
     virtual void Virtual4();
     virtual int FUN_10a80bc0(int A);
     virtual int FUN_10a80c10();
@@ -40,11 +40,11 @@ public:
     virtual const int* Virtual16();
     virtual void Virtual17();
     virtual void Virtual18();
-    virtual int FUN_10aa63c0(int index);
+    virtual int GetConEvent(int index);
     virtual void Virtual20();
     virtual void Virtual21();
     virtual int Virtual22();
-    virtual int FUN_10a80e30(int Value);
+    virtual int IndexOfConEvent(int Value);
     virtual void Virtual24();
     virtual void Virtual25();
     virtual void Virtual26();
@@ -60,12 +60,12 @@ public:
     virtual void Virtual36();
     virtual void Virtual37();
     virtual void Virtual38();
-    virtual void FUN_10a80de0(int A, int B);
+    virtual void DispatchToConEvents(int A, int B);
 
     void FUN_10a80c70(unsigned char param);
     void FUN_10a80c80();
 
-    Class_10C00A60 Unknown04;
+    Class_10C00A60 m_ConEvents;
     union
     {
         Member* Field10;

@@ -136,14 +136,14 @@ public:
     virtual void Virtual129();
     virtual void Virtual130();
     virtual void Virtual131();
-    virtual Class_10E6A9F8* FUN_10a62710(int* Count);
+    virtual Class_10E6A9F8* GetLastNode(int* Count);
 
     char Unknown04[0x1D0];
     Class_10E6A9F8* Unknown1D4;
 };
 
-// FUNCTION: 0x10A62710 ?FUN_10a62710@Class_10E6A9F8@@UAEPAV1@PAH@Z
-Class_10E6A9F8* Class_10E6A9F8::FUN_10a62710(int* Count)
+// FUNCTION: 0x10A62710 ?GetLastNode@Class_10E6A9F8@@UAEPAV1@PAH@Z
+Class_10E6A9F8* Class_10E6A9F8::GetLastNode(int* Count)
 {
     Class_10E6A9F8* Node = Unknown1D4;
     *Count = 0;

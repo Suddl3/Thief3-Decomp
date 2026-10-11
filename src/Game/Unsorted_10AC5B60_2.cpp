@@ -7,7 +7,7 @@
 #include "Game/Class_10AC9300.h"
 #include "Game/Class_10AC9310.h"
 #include "Game/Class_10ACFDE0.h"
-#include "Game/Class_10E67938.h"
+#include "Game/cActorManager.h"
 #include "Game/Class_10E6FC78.h"
 #include "Game/Class_10E6FC7C.h"
 #include "Game/Class_10E6FCF8.h"
@@ -36,7 +36,7 @@ extern void* DAT_10e6fedc[];
 
 extern float DAT_10e58a20;
 
-class Class_10E700F0 : public Class_10E67938, public Class_10E70060
+class Class_10E700F0 : public cActorManager, public Class_10E70060
 {
 public:
     Class_10E700F0();

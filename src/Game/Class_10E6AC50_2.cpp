@@ -28,22 +28,22 @@ public:
     virtual void Virtual6();
     virtual void Virtual7();
     virtual void Virtual8();
-    virtual void FUN_10a62ae0();
+    virtual void ResetItems();
 
     char Unknown04[0xC];
-    int Unknown10;
-    int Unknown14;
+    int m_CurrentIndex;
+    int m_Count;
     char Unknown18[4];
-    Class_10E6AC50_Unknown1C** Unknown1C;
+    Class_10E6AC50_Unknown1C** m_Items;
 };
 
-// FUNCTION: 0x10A62AE0 ?FUN_10a62ae0@Class_10E6AC50@@UAEXXZ
-void Class_10E6AC50::FUN_10a62ae0()
+// FUNCTION: 0x10A62AE0 ?ResetItems@Class_10E6AC50@@UAEXXZ
+void Class_10E6AC50::ResetItems()
 {
-    Unknown10 = -1;
-    for (int i = 0; i < Unknown14; i++)
+    m_CurrentIndex = -1;
+    for (int i = 0; i < m_Count; i++)
     {
-        Class_10E6AC50_Unknown1C* Item = Unknown1C[i];
+        Class_10E6AC50_Unknown1C* Item = m_Items[i];
         if (Item->Virtual4())
             Item->Virtual9();
     }

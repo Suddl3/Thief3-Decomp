@@ -8,7 +8,7 @@ class WindowManager;
 
 extern WindowManager* GWindowManager;
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 void* FUN_10b154c0();
 
@@ -25,7 +25,7 @@ public:
         if (Unknown00)
         {
             char* Block = Unknown00 - 4;
-            FUN_10905aa0()->Virtual5(Block);
+            GetAllocator()->Virtual5(Block);
         }
     }
     Class_109081E0& operator=(const Class_109081E0& Other);
@@ -45,7 +45,7 @@ public:
         FUN_1090f2c0(0);
         if (Unknown04)
         {
-            FUN_10905aa0()->Virtual5(Unknown08);
+            GetAllocator()->Virtual5(Unknown08);
             Unknown08 = 0;
             Unknown04 = 0;
         }

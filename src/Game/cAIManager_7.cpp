@@ -11,13 +11,13 @@ public:
     void FUN_10c0b920();
 
     void** VTable;
-    char Unknown04[0x10];
-    Class_10BFBD70 Unknown14;
+    char m_Active[0x10];
+    Class_10BFBD70 m_Controllers;
 };
 
 // FUNCTION: 0x10C0B920 ?FUN_10c0b920@cAIManager@@QAEXXZ
 void cAIManager::FUN_10c0b920()
 {
     VTable = DAT_10e97c18;
-    Unknown14.~Class_10BFBD70();
+    m_Controllers.~Class_10BFBD70();
 }

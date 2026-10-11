@@ -36,7 +36,7 @@ public:
     virtual void FUN_10be9720();
 
     void FUN_10be94c0();
-    void FUN_10bc5b50();
+    void PopState();
     Struct_10BC4240_Param* FUN_10bca700();
     void FUN_10bc4240(Struct_10BC4240_Param* Param, bool A);
     Struct_10BC4240_Param* FUN_10bc58f0(int A, int B, int C);
@@ -51,7 +51,7 @@ void Class_10E96D98::FUN_10be9720()
 {
     if (Unknown40 == 0)
     {
-        FUN_10bc5b50();
+        PopState();
         return;
     }
     FUN_10be94c0();

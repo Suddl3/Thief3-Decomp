@@ -159,7 +159,7 @@ public:
     char Unknown120[0xB8];
     Class_10E68D80_Unknown1D8* Unknown1D8;
     char Unknown1DC[0x14];
-    int Unknown1F0;
+    int m_Index;
 };
 
 // FUNCTION: 0x10A57C70 ?FUN_10a57c70@Class_10E68D80@@QAEXH@Z
@@ -171,6 +171,6 @@ void Class_10E68D80::FUN_10a57c70(int A)
     if (A && Unknown1D8 && Unknown11C)
     {
         Unknown1D8->Virtual77(0);
-        Unknown1D8->Virtual5(FUN_10a579c0(&Local, Unknown1F0));
+        Unknown1D8->Virtual5(FUN_10a579c0(&Local, m_Index));
     }
 }

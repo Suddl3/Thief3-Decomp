@@ -6,7 +6,7 @@
 #include "Game/Class_10E49C6C.h"
 #include "Game/Class_10BFBD70.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 extern Class_10BFBD70 DAT_10f31b9c;
 
@@ -17,11 +17,11 @@ void Class_1092F130::FUN_1092f130()
 {
     for (int i = 0; i < Unknown0C; i++)
         Unknown14[i]->FUN_1092f130();
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     int Index = DAT_10f31b9c.Unknown00;
     DAT_10f31b9c.FUN_10bfbd70(DAT_10f31b9c.Unknown00 + 1);
     DAT_10f31ba4[Index] = this;
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
 }
 
 // FUNCTION: 0x1092F830 ??0Class_10E49C6C@@QAE@XZ

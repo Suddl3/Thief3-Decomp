@@ -6,7 +6,7 @@
 #include "Game/Class_10E6C580.h"
 #include "Game/Class_10F3A1D8.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 extern Class_10F3A1D8* DAT_10f3a1d8;
 
@@ -21,7 +21,7 @@ Class_10E6C580::~Class_10E6C580()
     if (Unknown0C)
     {
         int* Obj = Unknown0C - 1;
-        FUN_10905aa0()->Virtual5(Obj);
+        GetAllocator()->Virtual5(Obj);
         Unknown0C = 0;
     }
 }

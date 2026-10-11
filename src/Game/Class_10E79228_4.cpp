@@ -31,8 +31,8 @@ public:
 
 void FUN_10a23fb0(Class_10B16B30_Result* A, Struct_10B16B30* B, char* C, char* D);
 
-// FUNCTION: 0x10B16B30 ?FUN_10b16b30@Class_10E79228@@QAEXXZ
-void Class_10E79228::FUN_10b16b30()
+// FUNCTION: 0x10B16B30 ?LayoutTitleBar@Class_10E79228@@QAEXXZ
+void Class_10E79228::LayoutTitleBar()
 {
     Struct_1093BCB0* Info = 0;
     bool Found;

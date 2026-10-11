@@ -14,8 +14,8 @@ void Class_10E6C5D0::FUN_10a8a550()
         Unknown04->FUN_10a8a550();
 }
 
-// FUNCTION: 0x10A8AC00 ?FUN_10a8ac00@cTriggerSoundSchemaParam@@UAEXXZ
-void cTriggerSoundSchemaParam::FUN_10a8ac00()
+// FUNCTION: 0x10A8AC00 ?IncrementCount@cTriggerSoundSchemaParam@@UAEXXZ
+void cTriggerSoundSchemaParam::IncrementCount()
 {
     if (DAT_10f3a1dc < DAT_10f3a1e0)
         DAT_10f3a1dc++;

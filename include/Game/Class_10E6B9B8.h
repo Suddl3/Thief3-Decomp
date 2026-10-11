@@ -3,9 +3,9 @@
 #ifndef GAME_CLASS_10E6B9B8_H
 #define GAME_CLASS_10E6B9B8_H
 
-#include "Game/Class_10E67938.h"
+#include "Game/cActorManager.h"
 
-class Class_10E6B9B8 : public Class_10E67938
+class Class_10E6B9B8 : public cActorManager
 {
 public:
     Class_10E6B9B8();

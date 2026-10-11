@@ -22,7 +22,7 @@
 #include "Game/Class_10AB5A90.h"
 #include "Game/Class_10AB5AA0.h"
 #include "Game/Class_10E6D8F0.h"
-#include "Game/Class_10E6DA90.h"
+#include "Game/cConCameraController.h"
 #include "Game/Class_10EC0808.h"
 #include "Game/Class_109081E0.h"
 #include "Game/Class_10AAA130.h"
@@ -52,14 +52,14 @@ struct Class_10AA82D0 {
 
 extern char DAT_10e6d9e0[];
 
-class Class_10E6D9E8
+class cConNoteEvent
 {
 public:
-    int FUN_10aaaa60(FILE* File, int Param);
+    int WriteNoteLine(FILE* File, int Param);
 
     int Unknown00;
     int Unknown04;
-    int Unknown08;
+    int m_Note;
 };
 
 struct Class_10AAB5C0 {
@@ -236,10 +236,10 @@ int FUN_10aaaa10()
     return 0xc;
 }
 
-// FUNCTION: 0x10AAAA60 ?FUN_10aaaa60@Class_10E6D9E8@@QAEHPAU_iobuf@@H@Z
-int Class_10E6D9E8::FUN_10aaaa60(FILE* File, int Param)
+// FUNCTION: 0x10AAAA60 ?WriteNoteLine@cConNoteEvent@@QAEHPAU_iobuf@@H@Z
+int cConNoteEvent::WriteNoteLine(FILE* File, int Param)
 {
-    fprintf(File, DAT_10e6c0f0, DAT_10e6d9e0, Unknown08);
+    fprintf(File, DAT_10e6c0f0, DAT_10e6d9e0, m_Note);
     return 1;
 }
 
@@ -259,8 +259,8 @@ int Class_10AAB5C0::FUN_10aab5c0() {
 	return unknown_08;
 }
 
-// FUNCTION: 0x10AACF40 ?FUN_10aacf40@Class_10E6DA90@@QAEXXZ
-void Class_10E6DA90::FUN_10aacf40() {
+// FUNCTION: 0x10AACF40 ?FUN_10aacf40@cConCameraController@@QAEXXZ
+void cConCameraController::FUN_10aacf40() {
 	unknown_14 = 0x0;
 }
 

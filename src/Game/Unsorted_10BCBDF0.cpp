@@ -32,7 +32,7 @@ public:
     virtual void FUN_10bcbea0();
 };
 
-class Class_10E94578
+class cTacticMoveToPoint
 {
 public:
     virtual void Virtual0();
@@ -60,10 +60,10 @@ public:
     virtual void Virtual22();
     virtual void FUN_10bcac50(int A, int B, int C, int D, int E);
 
-    void FUN_10bc5b50();
+    void PopState();
 };
 
-class Class_10E92230 : public Class_10E94578
+class Class_10E92230 : public cTacticMoveToPoint
 {
 public:
     virtual void FUN_10bcbdf0(int A, int B, int C, int D, int E);
@@ -75,8 +75,8 @@ public:
 void Class_10E92230::FUN_10bcbdf0(int A, int B, int C, int D, int E)
 {
     Unknown04->FUN_10bb7e30();
-    Class_10E94578::FUN_10bcac50(A, B, C, D, E);
-    FUN_10bc5b50();
+    cTacticMoveToPoint::FUN_10bcac50(A, B, C, D, E);
+    PopState();
 }
 
 // FUNCTION: 0x10BCBEA0 ?FUN_10bcbea0@Class_10E92730@@UAEXXZ

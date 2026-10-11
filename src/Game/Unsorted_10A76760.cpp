@@ -1,7 +1,7 @@
 // Game/Unsorted_10A76760.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Core/Core.h"
-#include "Game/Class_10E67938.h"
+#include "Game/cActorManager.h"
 #include "Game/Class_10E6BC80.h"
 #include "Game/Class_10E6BD64.h"
 #include "Game/Class_10E6BD18.h"
@@ -60,7 +60,7 @@ void Class_10E6BD18::FUN_10a790b0(int A, int B, int C, int D)
 {
     if (A != 0x27)
     {
-        Class_10E67938::FUN_10a4c470(A, B, C, D);
+        cActorManager::FUN_10a4c470(A, B, C, D);
         return;
     }
     Virtual16(B, C, D);

@@ -7,7 +7,7 @@ class Class_10E6B078
 {
 public:
     virtual void Virtual0();
-    virtual bool FUN_10a5d430(int A, int B, bool C);
+    virtual bool HandleKey(int A, int B, bool C);
 
     char Unknown04[0x1b4];
 };
@@ -15,7 +15,7 @@ public:
 class Class_10E696A8 : public Class_10E6B078
 {
 public:
-    virtual bool FUN_10a5d430(int A, int B, bool C);
+    virtual bool HandleKey(int A, int B, bool C);
 
     int Unknown1b8;
     int Unknown1bc;
@@ -163,12 +163,12 @@ public:
     void FUN_10a5d460();
 };
 
-// FUNCTION: 0x10A5D430 ?FUN_10a5d430@Class_10E696A8@@UAE_NHH_N@Z
-bool Class_10E696A8::FUN_10a5d430(int A, int B, bool C)
+// FUNCTION: 0x10A5D430 ?HandleKey@Class_10E696A8@@UAE_NHH_N@Z
+bool Class_10E696A8::HandleKey(int A, int B, bool C)
 {
     if (Unknown1b8 == 0 && Unknown1bc == 0 && Unknown1c0 == 0)
         return true;
-    return Class_10E6B078::FUN_10a5d430(A, B, C);
+    return Class_10E6B078::HandleKey(A, B, C);
 }
 
 // FUNCTION: 0x10A5D460 ?FUN_10a5d460@Class_10E7FB08@@QAEXXZ

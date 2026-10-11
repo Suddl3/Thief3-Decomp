@@ -22,13 +22,13 @@ public:
     virtual void FUN_10b15590(int p1);
 
     char Unknown98[0x1C4];
-    bool Unknown25C;
+    bool m_Closing;
 };
 
 // FUNCTION: 0x10B15590 ?FUN_10b15590@Class_10E79228@@UAEXH@Z
 void Class_10E79228::FUN_10b15590(int p1)
 {
-    if (!Unknown25C)
+    if (!m_Closing)
         Class_10E5B7C8::FUN_109e87f0(p1);
 }
 

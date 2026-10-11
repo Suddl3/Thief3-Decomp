@@ -42,7 +42,7 @@ public:
     void FUN_10bdfef0();
 
     char Unknown04[0x3C];
-    int Unknown40;
+    int m_State;
 };
 
 // FUNCTION: 0x10BE02B0 ?FUN_10be02b0@Class_10E95170@@UAEXH@Z
@@ -52,7 +52,7 @@ void Class_10E95170::FUN_10be02b0(int A)
     if (P)
     {
         P->FUN_10bf7f90(0, 1);
-        Unknown40 = 0;
+        m_State = 0;
         FUN_10bdfef0();
     }
 }

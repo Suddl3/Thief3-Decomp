@@ -44,9 +44,9 @@ void FUN_10a86210(Class_10A86210_Arg* Ar)
     {
         if (Ar->Unknown14)
         {
-            FUN_10905aa0()->Virtual8(0, 0);
+            GetAllocator()->Virtual8(0, 0);
             DAT_10f3a1d0[i] = new(0, 0, 0, 0, 0) Class_10A85AD0;
-            FUN_10905aa0()->Virtual9();
+            GetAllocator()->Virtual9();
         }
         DAT_10f3a1d0[i]->Virtual19(Ar);
     }

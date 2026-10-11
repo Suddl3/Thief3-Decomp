@@ -65,9 +65,9 @@ public:
     void FUN_10a57c70(int A);
 
     char Unknown04[0x1E8];
-    int Unknown1EC;
-    int Unknown1F0;
-    char Unknown1F4[4];
+    int m_MaxIndex;
+    int m_Index;
+    char m_NextIndex[4];
 };
 
 class Class_10E87D58 : public Class_10E68D80
@@ -84,5 +84,5 @@ void Class_10E87D58::FUN_10b75b40(int A)
 {
     FUN_10a57c70(A);
     if (Unknown1FC)
-        Unknown1FC->Virtual56(Unknown1F0 < Unknown1EC ? A : 0);
+        Unknown1FC->Virtual56(m_Index < m_MaxIndex ? A : 0);
 }

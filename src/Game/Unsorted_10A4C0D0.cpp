@@ -6,7 +6,7 @@
 
 struct Struct_10A4C4A0;
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 // Ion Storm's placement new (0x10905C10).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
@@ -15,11 +15,11 @@ void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D
 Struct_10A4C4A0* Class_10A4C4A0::FUN_10a4c0d0(int A, int B)
 {
     if (Unknown04 != 0)
-        FUN_10905aa0()->Virtual8(0, 0);
+        GetAllocator()->Virtual8(0, 0);
     int Tag = 0;
     void* Memory = operator new(A * 16, Tag, 0, 0, 0, 0);
     if (Unknown04 != 0)
-        FUN_10905aa0()->Virtual9();
+        GetAllocator()->Virtual9();
     return (Struct_10A4C4A0*)Memory;
 }
 
@@ -27,10 +27,10 @@ Struct_10A4C4A0* Class_10A4C4A0::FUN_10a4c0d0(int A, int B)
 void* Class_10A4C130::FUN_10a4c130(int Count, int B)
 {
     if (Unknown04)
-        FUN_10905aa0()->Virtual8(0, 0);
+        GetAllocator()->Virtual8(0, 0);
     int Tag = 0;
     void* Result = operator new(Count * 4, Tag, 0, 0, 0, 0);
     if (Unknown04)
-        FUN_10905aa0()->Virtual9();
+        GetAllocator()->Virtual9();
     return Result;
 }

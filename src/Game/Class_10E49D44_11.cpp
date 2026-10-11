@@ -24,15 +24,15 @@ public:
     virtual void Virtual3();
     virtual void Virtual4();
     virtual void Virtual5();
-    virtual int FUN_10933000(unsigned int Index, const char* Name, int* Out);
+    virtual int GetItemStat(unsigned int Index, const char* Name, int* Out);
 
     char Unknown04[0x8];
     unsigned int Unknown0C;
     Class_10E49D44_Elem** Unknown10;
 };
 
-// FUNCTION: 0x10933000 ?FUN_10933000@Class_10E49D44@@UAEHIPBDPAH@Z
-int Class_10E49D44::FUN_10933000(unsigned int Index, const char* Name, int* Out)
+// FUNCTION: 0x10933000 ?GetItemStat@Class_10E49D44@@UAEHIPBDPAH@Z
+int Class_10E49D44::GetItemStat(unsigned int Index, const char* Name, int* Out)
 {
     if (Out == 0)
         return 0x80070057;

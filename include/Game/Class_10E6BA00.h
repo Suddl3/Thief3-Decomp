@@ -3,9 +3,9 @@
 #ifndef GAME_CLASS_10E6BA00_H
 #define GAME_CLASS_10E6BA00_H
 
-#include "Game/Class_10E67938.h"
+#include "Game/cActorManager.h"
 
-class Class_10E6BA00 : public Class_10E67938
+class Class_10E6BA00 : public cActorManager
 {
 public:
     virtual void FUN_10a6e6b0(int Type, int A, int B, int C);

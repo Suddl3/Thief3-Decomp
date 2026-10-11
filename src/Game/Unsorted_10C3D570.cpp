@@ -69,13 +69,13 @@ void Class_10E9B370::FUN_10c3d5e0()
     Unknown18 = false;
 }
 
-// FUNCTION: 0x10C3D890 ?FUN_10c3d890@Class_10E9B240@@UAEXXZ
-void Class_10E9B240::FUN_10c3d890()
+// FUNCTION: 0x10C3D890 ?Stop@Class_10E9B240@@UAEXXZ
+void Class_10E9B240::Stop()
 {
     if (Unknown60 >= 0)
     {
         Unknown70->FUN_109bbba0(Unknown60);
         Unknown60 = -1;
     }
-    Unknown18 = false;
+    m_Active = false;
 }

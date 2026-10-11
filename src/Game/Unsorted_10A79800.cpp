@@ -2,10 +2,10 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10E6BD68_Unknown0C.h"
 #include "Game/Class_10E6BD68_Unknown18.h"
-#include "Game/Class_10E6BD90.h"
+#include "Game/cRigidAttachmentManager.h"
 #include "Game/cUObjectLinkManager.h"
 
-cUObjectLinkManager* FUN_10b0b2b0();
+cUObjectLinkManager* GetUObjectLinkManager();
 
 class Class_10BFBD70
 {
@@ -63,8 +63,8 @@ void Class_10E6BD68::FUN_10a79d30(int Item)
         Unknown28.Append(Item);
 }
 
-// FUNCTION: 0x10A7A390 ?FUN_10a7a390@Class_10E6BD90@@UAEXHH@Z
-void Class_10E6BD90::FUN_10a7a390(int A, int B)
+// FUNCTION: 0x10A7A390 ?Attach@cRigidAttachmentManager@@UAEXHH@Z
+void cRigidAttachmentManager::Attach(int A, int B)
 {
-    FUN_10b0b2b0()->Virtual5(A, 0, 0x281b9d0, B, 3);
+    GetUObjectLinkManager()->Virtual5(A, 0, 0x281b9d0, B, 3);
 }

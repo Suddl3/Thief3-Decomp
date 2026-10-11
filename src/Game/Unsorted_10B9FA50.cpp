@@ -5,7 +5,7 @@
 #include "Game/Class_10B9FC20.h"
 #include "Game/Class_10E8C008.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 struct Struct_10BA0080
 {
@@ -20,7 +20,7 @@ void Class_10B9FBE0::FUN_10b9fbe0()
     FUN_10b9f620(0);
     if (Unknown04)
     {
-        FUN_10905aa0()->Virtual5(Unknown08);
+        GetAllocator()->Virtual5(Unknown08);
         Unknown08 = 0;
         Unknown04 = 0;
     }
@@ -32,7 +32,7 @@ void Class_10B9FC20::FUN_10b9fc20()
     FUN_10b9f6d0(0);
     if (Unknown04)
     {
-        FUN_10905aa0()->Virtual5(Unknown08);
+        GetAllocator()->Virtual5(Unknown08);
         Unknown08 = 0;
         Unknown04 = 0;
     }

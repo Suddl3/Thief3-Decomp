@@ -15,7 +15,7 @@ public:
 class Class_10E94100 : public Class_10E90D70
 {
 public:
-    Class_10E94100* FUN_10bdbd10(int A, int B);
+    Class_10E94100* Construct(int A, int B);
 
     int Unknown40;
     int Unknown44;
@@ -56,7 +56,7 @@ public:
 class Class_10E94B20 : public Class_10E90D70
 {
 public:
-    Class_10E94B20* FUN_10bdbbc0(int A, int B, int C, const FVector& D, int E, bool F);
+    Class_10E94B20* Init(int A, int B, int C, const FVector& D, int E, bool F);
 
     int Unknown40;
     FArray Unknown44;
@@ -94,8 +94,8 @@ Class_10E94A00* Class_10E94A00::FUN_10bdbb80(int A, int B, int C, int D)
     return this;
 }
 
-// FUNCTION: 0x10BDBBC0 ?FUN_10bdbbc0@Class_10E94B20@@QAEPAV1@HHHABVFVector@@H_N@Z
-Class_10E94B20* Class_10E94B20::FUN_10bdbbc0(int A, int B, int C, const FVector& D, int E, bool F)
+// FUNCTION: 0x10BDBBC0 ?Init@Class_10E94B20@@QAEPAV1@HHHABVFVector@@H_N@Z
+Class_10E94B20* Class_10E94B20::Init(int A, int B, int C, const FVector& D, int E, bool F)
 {
     this->Class_10E90D70::Class_10E90D70(A, B);
     Unknown40 = C;
@@ -123,8 +123,8 @@ Class_10E94C58* Class_10E94C58::FUN_10bdbc70(int A, int B, int C, int D)
     return this;
 }
 
-// FUNCTION: 0x10BDBD10 ?FUN_10bdbd10@Class_10E94100@@QAEPAV1@HH@Z
-Class_10E94100* Class_10E94100::FUN_10bdbd10(int A, int B)
+// FUNCTION: 0x10BDBD10 ?Construct@Class_10E94100@@QAEPAV1@HH@Z
+Class_10E94100* Class_10E94100::Construct(int A, int B)
 {
     this->Class_10E90D70::Class_10E90D70(A, B);
     Unknown40 = 0;

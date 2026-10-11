@@ -3,8 +3,8 @@
 #include "Game/GarrettOnCamera.h"
 #include "Game/FArchive.h"
 
-// FUNCTION: 0x10AC2C60 ?FUN_10ac2c60@GarrettOnCamera@@UAEXAAVFArchive@@@Z
-void GarrettOnCamera::FUN_10ac2c60(FArchive& Ar)
+// FUNCTION: 0x10AC2C60 ?Serialize@GarrettOnCamera@@UAEXAAVFArchive@@@Z
+void GarrettOnCamera::Serialize(FArchive& Ar)
 {
     Ar.Serialize(&Unknown0C, 4);
     Ar.Serialize(&Unknown10, 4);

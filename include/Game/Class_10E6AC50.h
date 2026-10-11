@@ -19,21 +19,21 @@ public:
     virtual void Virtual6();
     virtual void Virtual7();
     virtual void Virtual8();
-    virtual void FUN_10a62ae0();
+    virtual void ResetItems();
     virtual void Virtual10();
-    virtual void FUN_10a632e0(Object_10A632E0* Obj);
-    virtual int FUN_10a62ce0(int index);
-    virtual void FUN_10a63310(int Index);
-    virtual int FUN_10a62ac0();
+    virtual void AddItem(Object_10A632E0* Obj);
+    virtual int GetItem(int index);
+    virtual void RemoveItemAt(int Index);
+    virtual int GetCurrentItem();
 
     Class_10E6AC50();
 
-    int Unknown10;
-    int Unknown14;
+    int m_CurrentIndex;
+    int m_Count;
     int Unknown18;
     union
     {
-        int Unknown1C;
+        int m_Items;
         int* Unknown1c;
     };
 };

@@ -5,7 +5,7 @@
 #include "Game/Class_10C223A0.h"
 #include "Game/Class_10C24940.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 extern float DAT_10eafbdc;
 
@@ -23,7 +23,7 @@ void Class_10C223A0::FUN_10c223a0()
     FUN_10c20c70(0);
     if (Unknown04)
     {
-        FUN_10905aa0()->Virtual5(Unknown08);
+        GetAllocator()->Virtual5(Unknown08);
         Unknown08 = 0;
         Unknown04 = 0;
     }
@@ -35,7 +35,7 @@ void Class_10C24940::FUN_10c24940()
     FUN_10c24260(0);
     if (Unknown04)
     {
-        FUN_10905aa0()->Virtual5(Unknown08);
+        GetAllocator()->Virtual5(Unknown08);
         Unknown08 = 0;
         Unknown04 = 0;
     }

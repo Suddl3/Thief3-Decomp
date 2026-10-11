@@ -5,7 +5,7 @@
 #include "Game/Class_10B11600.h"
 #include "Game/Class_10E782A0.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 class Class_10B111A0_Unknown10
 {
@@ -91,13 +91,13 @@ void Class_10B116B0::FUN_10b11520(int NewCount)
 {
     int OldCount = Unknown00;
     int Capacity = !Unknown08 ? 0 : Unknown04 / sizeof(Class_10B11520_Unknown08);
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     if (NewCount > Capacity)
     {
         int NewCapacity = NewCount;
         if (Capacity)
             NewCapacity = (NewCount & ~15) + 16;
-        void* Block = FUN_10905aa0()->Virtual3(Unknown08, NewCapacity * sizeof(Class_10B11520_Unknown08), 0, 0, 0, 0);
+        void* Block = GetAllocator()->Virtual3(Unknown08, NewCapacity * sizeof(Class_10B11520_Unknown08), 0, 0, 0, 0);
         Unknown04 = NewCapacity * sizeof(Class_10B11520_Unknown08);
         Unknown08 = Block;
     }
@@ -105,14 +105,14 @@ void Class_10B116B0::FUN_10b11520(int NewCount)
     {
         if (NewCount == 0)
         {
-            FUN_10905aa0()->Virtual5(Unknown08);
+            GetAllocator()->Virtual5(Unknown08);
             Unknown08 = 0;
             Unknown04 = 0;
         }
         else
         {
             int NewCapacity = (NewCount & ~15) + 16;
-            void* Block = FUN_10905aa0()->Virtual3(Unknown08, NewCapacity * sizeof(Class_10B11520_Unknown08), 0, 0, 0, 0);
+            void* Block = GetAllocator()->Virtual3(Unknown08, NewCapacity * sizeof(Class_10B11520_Unknown08), 0, 0, 0, 0);
             Unknown04 = NewCapacity * sizeof(Class_10B11520_Unknown08);
             Unknown08 = Block;
         }
@@ -127,7 +127,7 @@ void Class_10B116B0::FUN_10b11520(int NewCount)
             Element->Unknown08 = 0;
         }
     }
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     Unknown00 = NewCount;
 }
 
@@ -172,7 +172,7 @@ void Class_10B116B0::FUN_10b116b0()
     FUN_10b11520(0);
     if (Unknown04)
     {
-        FUN_10905aa0()->Virtual5(Unknown08);
+        GetAllocator()->Virtual5(Unknown08);
         Unknown08 = 0;
         Unknown04 = 0;
     }

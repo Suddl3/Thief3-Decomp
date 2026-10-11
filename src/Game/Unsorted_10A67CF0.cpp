@@ -74,7 +74,7 @@ void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D
 
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 class Class_109EE940
 {
@@ -97,9 +97,9 @@ void FUN_10a67cf0(Struct_10A67CF0_Param* A)
 {
     if (!DAT_10f3a0fc)
     {
-        FUN_10905aa0()->Virtual8(0, 0);
+        GetAllocator()->Virtual8(0, 0);
         DAT_10f3a0fc = new(0, 0, 0, 0, 0) Class_109EE940(A->Unknown190);
-        FUN_10905aa0()->Virtual9();
+        GetAllocator()->Virtual9();
     }
 }
 

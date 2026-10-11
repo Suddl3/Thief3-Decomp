@@ -17,7 +17,7 @@ public:
     virtual void Virtual5(int A, int B, int C, int D, int E);
 };
 
-cUObjectLinkManager* FUN_10b0b2b0();
+cUObjectLinkManager* GetUObjectLinkManager();
 
 class Class_10E6B4C8
 {
@@ -38,7 +38,7 @@ void Class_10E6B4C8::FUN_10a676a0(int A, int B, Class_10BFBD70* Out)
     Out->FUN_10bfbd70(Count + 1);
     Out->Data[Count] = B;
     Class_10BFBD70 Found;
-    FUN_10b0b2b0()->Virtual4(B, 0, 0x21C3981, Found);
+    GetUObjectLinkManager()->Virtual4(B, 0, 0x21C3981, Found);
     if (Found.Count >= 1) {
         int ID = ((Class_10AAB5C0*)Found.Data[0])->FUN_10aab5c0();
         for (int i = 0; i < Out->Count; i++) {

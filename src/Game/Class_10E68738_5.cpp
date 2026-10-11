@@ -5,16 +5,16 @@
 class Class_10E68738
 {
 public:
-    void FUN_10a58fe0(int Index, int Value);
+    void SetEntry(int Index, int Value);
 
     char Unknown00[0x154];
-    Class_10BFBD70 Unknown154;
+    Class_10BFBD70 m_Entries;
 };
 
-// FUNCTION: 0x10A58FE0 ?FUN_10a58fe0@Class_10E68738@@QAEXHH@Z
-void Class_10E68738::FUN_10a58fe0(int Index, int Value)
+// FUNCTION: 0x10A58FE0 ?SetEntry@Class_10E68738@@QAEXHH@Z
+void Class_10E68738::SetEntry(int Index, int Value)
 {
-    if (Unknown154.Count < Index + 1)
-        Unknown154.FUN_10bfbd70(Index + 1);
-    Unknown154.Data[Index] = Value;
+    if (m_Entries.Count < Index + 1)
+        m_Entries.FUN_10bfbd70(Index + 1);
+    m_Entries.Data[Index] = Value;
 }

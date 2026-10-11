@@ -5,7 +5,7 @@
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_1092D9F0.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 // FUNCTION: 0x1092D9F0 ??0Class_1092D9F0@@QAE@XZ
 Class_1092D9F0::Class_1092D9F0()
@@ -33,5 +33,5 @@ Class_1092D9F0::Class_1092D9F0()
     Unknown7D = true;
     FUN_1092d990();
     FUN_1092d700();
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
 }

@@ -15,7 +15,7 @@ struct Struct_10AA3520
 
 extern Struct_10AA3520* DAT_10f35dec;
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 class Class_10BFBD70
 {
@@ -70,7 +70,7 @@ Class_10C19FD0::~Class_10C19FD0()
     Items.FUN_10bfbd70(0);
     if (Items.Unknown04)
     {
-        FUN_10905aa0()->Virtual5(Items.Unknown08);
+        GetAllocator()->Virtual5(Items.Unknown08);
         Items.Unknown08 = 0;
         Items.Unknown04 = 0;
     }

@@ -18,18 +18,18 @@ public:
     virtual void Virtual11();
     virtual void Virtual12();
     virtual void Virtual13();
-    virtual int FUN_10a62ac0();
+    virtual int GetCurrentItem();
 
     char Unknown04[0xC];
-    int Unknown10;
-    char Unknown14[8];
-    int* Unknown1C;
+    int m_CurrentIndex;
+    char m_Count[8];
+    int* m_Items;
 };
 
-// FUNCTION: 0x10A62AC0 ?FUN_10a62ac0@Class_10E6AC50@@UAEHXZ
-int Class_10E6AC50::FUN_10a62ac0()
+// FUNCTION: 0x10A62AC0 ?GetCurrentItem@Class_10E6AC50@@UAEHXZ
+int Class_10E6AC50::GetCurrentItem()
 {
-    if (Unknown10 != -1)
-        return Unknown1C[Unknown10];
+    if (m_CurrentIndex != -1)
+        return m_Items[m_CurrentIndex];
     return 0;
 }

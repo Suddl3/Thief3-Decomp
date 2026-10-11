@@ -6,7 +6,7 @@
 #include "Game/Class_10A3ACD0.h"
 #include "Game/Class_10E667AC.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 class Class_10A3AC50_Item
 {
@@ -36,7 +36,7 @@ void Class_10A3ACD0::FUN_10a3acd0()
     FUN_1091a960(0);
     if (Unknown04)
     {
-        FUN_10905aa0()->Virtual5(Unknown08);
+        GetAllocator()->Virtual5(Unknown08);
         Unknown08 = 0;
         Unknown04 = 0;
     }

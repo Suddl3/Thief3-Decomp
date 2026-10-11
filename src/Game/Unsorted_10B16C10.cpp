@@ -5,7 +5,7 @@
 #include "Game/WindowManager.h"
 #include "Game/Class_10B16C10.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 extern const char DAT_10e79144[];
 
@@ -83,7 +83,7 @@ void Class_10B16C10::FUN_10b16c10(bool Flag)
     {
         if (Flag)
         {
-            FUN_10b16b30();
+            LayoutTitleBar();
             Window->Virtual56(2);
             return;
         }

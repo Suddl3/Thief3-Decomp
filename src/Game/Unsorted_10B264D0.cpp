@@ -6,7 +6,7 @@
 #include "Game/Class_10B32D60.h"
 #include "Game/Class_10E7AD44.h"
 #include "Game/Class_10E7B89C.h"
-#include "Game/Class_10E7B970.h"
+#include "Game/cT3ReadBookWindow.h"
 #include "Game/Class_10E7C380.h"
 #include "Game/Class_10E7C38C.h"
 #include "Game/Class_10E7C3B0.h"
@@ -58,9 +58,9 @@ class cTaggedAnimSeq
 {
 public:
     virtual void Virtual0();
-    virtual Class_1090A780 FUN_10b34b10();
+    virtual Class_1090A780 GetName();
 
-    Class_1090A780 Unknown04;
+    Class_1090A780 m_Name;
 };
 
 extern void* DAT_10e7c380[];
@@ -160,8 +160,8 @@ void Class_10E7B89C::FUN_10b2ee90()
     Field0C = Field10;
 }
 
-// FUNCTION: 0x10B2F8F0 ?FUN_10b2f8f0@Class_10E7B970@@QAEXH@Z
-void Class_10E7B970::FUN_10b2f8f0(int p1)
+// FUNCTION: 0x10B2F8F0 ?FUN_10b2f8f0@cT3ReadBookWindow@@QAEXH@Z
+void cT3ReadBookWindow::FUN_10b2f8f0(int p1)
 {
     Field150 = 1;
 }
@@ -201,10 +201,10 @@ int __cdecl FUN_10b349b0(void)
     return 0x24;
 }
 
-// FUNCTION: 0x10B34B10 ?FUN_10b34b10@cTaggedAnimSeq@@UAE?AVClass_1090A780@@XZ
-Class_1090A780 cTaggedAnimSeq::FUN_10b34b10()
+// FUNCTION: 0x10B34B10 ?GetName@cTaggedAnimSeq@@UAE?AVClass_1090A780@@XZ
+Class_1090A780 cTaggedAnimSeq::GetName()
 {
-    return Class_1090A780(Unknown04);
+    return Class_1090A780(m_Name);
 }
 
 // FUNCTION: 0x10B35480 ?FUN_10b35480@@YAHXZ

@@ -85,13 +85,13 @@ public:
     virtual void Virtual74();
     virtual void Virtual75();
     virtual void Virtual76();
-    virtual void FUN_10bd1a60();
+    virtual void CheckDeadline();
 
     Class_10BB89D0* Unknown04;
 };
 
-// FUNCTION: 0x10BD1A60 ?FUN_10bd1a60@Class_10E93878@@UAEXXZ
-void Class_10E93878::FUN_10bd1a60()
+// FUNCTION: 0x10BD1A60 ?CheckDeadline@Class_10E93878@@UAEXXZ
+void Class_10E93878::CheckDeadline()
 {
     float Deadline = Unknown04->Unknown33C;
     if (GetTimeSeconds() > Deadline)

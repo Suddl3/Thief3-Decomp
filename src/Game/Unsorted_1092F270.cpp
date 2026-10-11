@@ -5,7 +5,7 @@
 #include "Game/Class_10951900.h"
 #include "Game/Class_1092F270.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 
@@ -16,9 +16,9 @@ Class_10951900* Class_1092F270::FUN_1092f270(bool A)
 {
     if (Unknown0B0 == 0 && A)
     {
-        FUN_10905aa0()->Virtual8(0, 0);
+        GetAllocator()->Virtual8(0, 0);
         Unknown0B0 = new(0, 0, 0, 0, 0) Class_10E4AC6C;
-        FUN_10905aa0()->Virtual9();
+        GetAllocator()->Virtual9();
     }
     return (Class_10951900*)Unknown0B0;
 }

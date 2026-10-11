@@ -95,14 +95,14 @@ public:
     void FUN_10bd6430();
     void FUN_10bd6550(int A, void* B, int C);
 
-    Struct_10BD6A90* Unknown04;
+    Struct_10BD6A90* m_Owner;
 };
 
 // FUNCTION: 0x10BD6A90 ?FUN_10bd6a90@State_Search@@UAEXHHH@Z
 void State_Search::FUN_10bd6a90(int A, int B, int C)
 {
     FUN_10bd6430();
-    Struct_10BD6A90* Owner = Unknown04;
+    Struct_10BD6A90* Owner = m_Owner;
     void* Object = Owner->Unknown30.FUN_10c88610();
     FUN_10bd6550(A, Object, C);
 }

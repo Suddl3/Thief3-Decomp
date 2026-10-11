@@ -66,7 +66,7 @@ public:
     virtual void Virtual56(int Mode);
 };
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 class FArray
 {
@@ -115,7 +115,7 @@ void Class_10B78380::FUN_10b78380()
     if (Unknown168)
     {
         int* Obj = Unknown168 - 1;
-        FUN_10905aa0()->Virtual5(Obj);
+        GetAllocator()->Virtual5(Obj);
         Unknown168 = 0;
     }
 }

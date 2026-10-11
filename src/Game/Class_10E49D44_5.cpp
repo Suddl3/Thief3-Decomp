@@ -15,8 +15,8 @@ public:
 class Class_10E49D44
 {
 public:
-    virtual int FUN_10932fa0();
-    virtual int FUN_109331a0();
+    virtual int AddRef();
+    virtual int Release();
     virtual void Virtual2();
     virtual void Virtual3();
     virtual void Virtual4();

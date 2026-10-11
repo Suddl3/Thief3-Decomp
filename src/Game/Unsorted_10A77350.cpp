@@ -15,16 +15,16 @@ extern Class_10F46DA0* DAT_10f46da0;
 
 extern void* DAT_10e6bd18[];
 
-class Class_10E67938
+class cActorManager
 {
 public:
-    Class_10E67938();
-    ~Class_10E67938();
+    cActorManager();
+    ~cActorManager();
 
     void** Unknown00;
 };
 
-class Class_10E6BD18 : public Class_10E67938
+class Class_10E6BD18 : public cActorManager
 {
 public:
     Class_10E6BD18();

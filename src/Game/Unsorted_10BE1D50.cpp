@@ -8,15 +8,15 @@ public:
     Class_10E95AC8(int A, int B, int C);
 };
 
-class Class_10E94578
+class cTacticMoveToPoint
 {
 public:
     virtual void Virtual0();
 
-    void FUN_10bc5b50();
+    void PopState();
 };
 
-class Class_10E959B0 : public Class_10E94578
+class Class_10E959B0 : public cTacticMoveToPoint
 {
 public:
     virtual void Virtual0();
@@ -37,7 +37,7 @@ public:
 void Class_10E959B0::FUN_10be1d50()
 {
     if (Unknown40)
-        FUN_10bc5b50();
+        PopState();
 }
 
 // FUNCTION: 0x10BE1D60 ??0Class_10E95AC8@@QAE@HHH@Z

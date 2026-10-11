@@ -7,7 +7,7 @@
 #include "Game/Class_10BE40A0.h"
 #include "Game/Class_10BE40B0.h"
 #include "Game/Class_10BE4FA0.h"
-#include "Game/Class_10E94578.h"
+#include "Game/cTacticMoveToPoint.h"
 #include "Game/FArchive.h"
 #include "Game/Struct_10BDF0A0.h"
 #include "Game/Class_10BDF0A0.h"
@@ -36,7 +36,7 @@ public:
 class Class_10E8BE68
 {
 public:
-    virtual void FUN_10bca010(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 };
 
 class Class_10E928E8 : public Class_10E8BE68
@@ -218,7 +218,7 @@ Class_10E93E48* Class_10E93E48::FUN_10bd9780(int A, int B)
 // FUNCTION: 0x10BD97A0 ?FUN_10bd97a0@Class_10E928E8@@UAEXAAVFArchive@@@Z
 void Class_10E928E8::FUN_10bd97a0(FArchive& Ar)
 {
-    Class_10E8BE68::FUN_10bca010(Ar);
+    Class_10E8BE68::Serialize(Ar);
 }
 
 // FUNCTION: 0x10BDAF00 ?FUN_10bdaf00@@YAHXZ
@@ -227,10 +227,10 @@ int FUN_10bdaf00()
     return 0x3c;
 }
 
-// FUNCTION: 0x10BDAF10 ?FUN_10bdaf10@Class_10E94578@@UAEXXZ
-void Class_10E94578::FUN_10bdaf10()
+// FUNCTION: 0x10BDAF10 ?FUN_10bdaf10@cTacticMoveToPoint@@UAEXXZ
+void cTacticMoveToPoint::FUN_10bdaf10()
 {
-    FUN_10bc5b50();
+    PopState();
 }
 
 // FUNCTION: 0x10BDAF90 ?FUN_10bdaf90@Class_10BDAF90@@QAEXXZ

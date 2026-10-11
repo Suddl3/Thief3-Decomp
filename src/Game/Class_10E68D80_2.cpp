@@ -219,7 +219,7 @@ public:
     virtual void Virtual118();
     virtual void Virtual119();
     virtual void Virtual120();
-    virtual void FUN_10a57ce0(int A);
+    virtual void SetIndex(int A);
     int FUN_10a579c0(Struct_10A57C70* Out, int Value);
 
     char Unknown118[0x4];
@@ -227,18 +227,18 @@ public:
     char Unknown120[0xB8];
     Class_10A57CE0_Unknown1D8* Unknown1D8;
     char Unknown1DC[0x14];
-    int Unknown1F0;
+    int m_Index;
 };
 
-// FUNCTION: 0x10A57CE0 ?FUN_10a57ce0@Class_10E68D80@@UAEXH@Z
-void Class_10E68D80::FUN_10a57ce0(int A)
+// FUNCTION: 0x10A57CE0 ?SetIndex@Class_10E68D80@@UAEXH@Z
+void Class_10E68D80::SetIndex(int A)
 {
     Struct_10A57C70 Local;
 
-    Unknown1F0 = A;
+    m_Index = A;
     if (Unknown1D8 && Unknown11C)
     {
         if (!Unknown1D8->Virtual80())
-            Unknown1D8->Virtual5(FUN_10a579c0(&Local, Unknown1F0));
+            Unknown1D8->Virtual5(FUN_10a579c0(&Local, m_Index));
     }
 }

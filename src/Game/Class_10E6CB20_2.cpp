@@ -1,10 +1,10 @@
 // Game/Class_10E6CB20_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10E67938.h"
+#include "Game/cActorManager.h"
 #include "Game/Class_10EB766C.h"
 #include "Game/Class_10E6C874.h"
 
-class Class_10E6CB20 : public Class_10E6C874, public Class_10E67938
+class Class_10E6CB20 : public Class_10E6C874, public cActorManager
 {
 public:
     Class_10E6CB20();

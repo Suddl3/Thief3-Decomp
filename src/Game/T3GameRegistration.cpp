@@ -3,7 +3,7 @@
 #include "T3Game/T3GameClasses.h"
 #include "Game/Class_10905A90_Member.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 // Ion Storm's placement new and its delete (0x10905C10; the delete folded into ::operator delete).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
@@ -22,14 +22,14 @@ ASpellProjectile::~ASpellProjectile()
 // FUNCTION: 0x10AB40A0 ?GetPrivateStaticClassUT3GameRegistrar@UT3GameRegistrar@@SAPAVUClass@@PBD@Z
 UClass* UT3GameRegistrar::GetPrivateStaticClassUT3GameRegistrar(const TCHAR* Package)
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     UClass* ReturnClass = ::new(0, 0, 0, 0, 0) UClass(EC_StaticConstructor, sizeof(UT3GameRegistrar), StaticClassFlags,
                                                       FGuid(0, 0, 0, 0), &TEXT("UT3GameRegistrar")[1], Package,
                                                       StaticConfigName(),
                                                       RF_Public | RF_Standalone | RF_Transient | RF_Native,
                                                       InternalConstructor,
                                                       (void (UObject::*)())&UT3GameRegistrar::StaticConstructor);
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     return ReturnClass;
 }
 
@@ -179,139 +179,139 @@ void AWakeupCameraPoint::InitializePrivateStaticClassAWakeupCameraPoint()
 // FUNCTION: 0x10AB5070 ?GetPrivateStaticClassADifficultyInfo@ADifficultyInfo@@SAPAVUClass@@PBD@Z
 UClass* ADifficultyInfo::GetPrivateStaticClassADifficultyInfo(const TCHAR* Package)
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     UClass* ReturnClass = ::new(0, 0, 0, 0, 0) UClass(EC_StaticConstructor, sizeof(ADifficultyInfo), StaticClassFlags,
                                                       FGuid(0, 0, 0, 0), &TEXT("ADifficultyInfo")[1], Package,
                                                       StaticConfigName(),
                                                       RF_Public | RF_Standalone | RF_Transient | RF_Native,
                                                       InternalConstructor,
                                                       (void (UObject::*)())&ADifficultyInfo::StaticConstructor);
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     return ReturnClass;
 }
 
 // FUNCTION: 0x10AB5140 ?GetPrivateStaticClassAExitMissionInfo@AExitMissionInfo@@SAPAVUClass@@PBD@Z
 UClass* AExitMissionInfo::GetPrivateStaticClassAExitMissionInfo(const TCHAR* Package)
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     UClass* ReturnClass = ::new(0, 0, 0, 0, 0) UClass(EC_StaticConstructor, sizeof(AExitMissionInfo), StaticClassFlags,
                                                       FGuid(0, 0, 0, 0), &TEXT("AExitMissionInfo")[1], Package,
                                                       StaticConfigName(),
                                                       RF_Public | RF_Standalone | RF_Transient | RF_Native,
                                                       InternalConstructor,
                                                       (void (UObject::*)())&AExitMissionInfo::StaticConstructor);
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     return ReturnClass;
 }
 
 // FUNCTION: 0x10AB5210 ?GetPrivateStaticClassASpellProjectile@ASpellProjectile@@SAPAVUClass@@PBD@Z
 UClass* ASpellProjectile::GetPrivateStaticClassASpellProjectile(const TCHAR* Package)
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     UClass* ReturnClass = ::new(0, 0, 0, 0, 0) UClass(EC_StaticConstructor, sizeof(ASpellProjectile), StaticClassFlags,
                                                       FGuid(0, 0, 0, 0), &TEXT("ASpellProjectile")[1], Package,
                                                       StaticConfigName(),
                                                       RF_Public | RF_Standalone | RF_Transient | RF_Native,
                                                       InternalConstructor,
                                                       (void (UObject::*)())&ASpellProjectile::StaticConstructor);
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     return ReturnClass;
 }
 
 // FUNCTION: 0x10AB52E0 ?GetPrivateStaticClassAWakeupCameraPoint@AWakeupCameraPoint@@SAPAVUClass@@PBD@Z
 UClass* AWakeupCameraPoint::GetPrivateStaticClassAWakeupCameraPoint(const TCHAR* Package)
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     UClass* ReturnClass = ::new(0, 0, 0, 0, 0) UClass(EC_StaticConstructor, sizeof(AWakeupCameraPoint), StaticClassFlags,
                                                       FGuid(0, 0, 0, 0), &TEXT("AWakeupCameraPoint")[1], Package,
                                                       StaticConfigName(),
                                                       RF_Public | RF_Standalone | RF_Transient | RF_Native,
                                                       InternalConstructor,
                                                       (void (UObject::*)())&AWakeupCameraPoint::StaticConstructor);
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     return ReturnClass;
 }
 
 // FUNCTION: 0x10AB5400 ?GetPrivateStaticClassULockLinkDataObject@ULockLinkDataObject@@SAPAVUClass@@PBD@Z
 UClass* ULockLinkDataObject::GetPrivateStaticClassULockLinkDataObject(const TCHAR* Package)
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     UClass* ReturnClass = ::new(0, 0, 0, 0, 0) UClass(EC_StaticConstructor, sizeof(ULockLinkDataObject), StaticClassFlags,
                                                       FGuid(0, 0, 0, 0), &TEXT("ULockLinkDataObject")[1], Package,
                                                       StaticConfigName(),
                                                       RF_Public | RF_Standalone | RF_Transient | RF_Native,
                                                       InternalConstructor,
                                                       (void (UObject::*)())&ULockLinkDataObject::StaticConstructor);
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     return ReturnClass;
 }
 
 // FUNCTION: 0x10AB54C0 ?GetPrivateStaticClassUSpawnPoolLinkDataObject@USpawnPoolLinkDataObject@@SAPAVUClass@@PBD@Z
 UClass* USpawnPoolLinkDataObject::GetPrivateStaticClassUSpawnPoolLinkDataObject(const TCHAR* Package)
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     UClass* ReturnClass = ::new(0, 0, 0, 0, 0) UClass(EC_StaticConstructor, sizeof(USpawnPoolLinkDataObject), StaticClassFlags,
                                                       FGuid(0, 0, 0, 0), &TEXT("USpawnPoolLinkDataObject")[1], Package,
                                                       StaticConfigName(),
                                                       RF_Public | RF_Standalone | RF_Transient | RF_Native,
                                                       InternalConstructor,
                                                       (void (UObject::*)())&USpawnPoolLinkDataObject::StaticConstructor);
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     return ReturnClass;
 }
 
 // FUNCTION: 0x10AB5580 ?GetPrivateStaticClassULockTickLinkDataObject@ULockTickLinkDataObject@@SAPAVUClass@@PBD@Z
 UClass* ULockTickLinkDataObject::GetPrivateStaticClassULockTickLinkDataObject(const TCHAR* Package)
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     UClass* ReturnClass = ::new(0, 0, 0, 0, 0) UClass(EC_StaticConstructor, sizeof(ULockTickLinkDataObject), StaticClassFlags,
                                                       FGuid(0, 0, 0, 0), &TEXT("ULockTickLinkDataObject")[1], Package,
                                                       StaticConfigName(),
                                                       RF_Public | RF_Standalone | RF_Transient | RF_Native,
                                                       InternalConstructor,
                                                       (void (UObject::*)())&ULockTickLinkDataObject::StaticConstructor);
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     return ReturnClass;
 }
 
 // FUNCTION: 0x10AB5640 ?GetPrivateStaticClassUInventorySwitchLinkDataObject@UInventorySwitchLinkDataObject@@SAPAVUClass@@PBD@Z
 UClass* UInventorySwitchLinkDataObject::GetPrivateStaticClassUInventorySwitchLinkDataObject(const TCHAR* Package)
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     UClass* ReturnClass = ::new(0, 0, 0, 0, 0) UClass(EC_StaticConstructor, sizeof(UInventorySwitchLinkDataObject), StaticClassFlags,
                                                       FGuid(0, 0, 0, 0), &TEXT("UInventorySwitchLinkDataObject")[1], Package,
                                                       StaticConfigName(),
                                                       RF_Public | RF_Standalone | RF_Transient | RF_Native,
                                                       InternalConstructor,
                                                       (void (UObject::*)())&UInventorySwitchLinkDataObject::StaticConstructor);
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     return ReturnClass;
 }
 
 // FUNCTION: 0x10AB5700 ?GetPrivateStaticClassURopeArrowSpawnLinkDataObject@URopeArrowSpawnLinkDataObject@@SAPAVUClass@@PBD@Z
 UClass* URopeArrowSpawnLinkDataObject::GetPrivateStaticClassURopeArrowSpawnLinkDataObject(const TCHAR* Package)
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     UClass* ReturnClass = ::new(0, 0, 0, 0, 0) UClass(EC_StaticConstructor, sizeof(URopeArrowSpawnLinkDataObject), StaticClassFlags,
                                                       FGuid(0, 0, 0, 0), &TEXT("URopeArrowSpawnLinkDataObject")[1], Package,
                                                       StaticConfigName(),
                                                       RF_Public | RF_Standalone | RF_Transient | RF_Native,
                                                       InternalConstructor,
                                                       (void (UObject::*)())&URopeArrowSpawnLinkDataObject::StaticConstructor);
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     return ReturnClass;
 }
 
 // FUNCTION: 0x10AB59B0 ?GetPrivateStaticClassAEnterMissionInfo@AEnterMissionInfo@@SAPAVUClass@@PBD@Z
 UClass* AEnterMissionInfo::GetPrivateStaticClassAEnterMissionInfo(const TCHAR* Package)
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     UClass* ReturnClass = ::new(0, 0, 0, 0, 0) UClass(EC_StaticConstructor, sizeof(AEnterMissionInfo), StaticClassFlags,
                                                       FGuid(0, 0, 0, 0), &TEXT("AEnterMissionInfo")[1], Package,
                                                       StaticConfigName(),
                                                       RF_Public | RF_Standalone | RF_Transient | RF_Native,
                                                       InternalConstructor,
                                                       (void (UObject::*)())&AEnterMissionInfo::StaticConstructor);
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     return ReturnClass;
 }

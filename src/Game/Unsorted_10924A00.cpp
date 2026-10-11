@@ -6,15 +6,15 @@
 #include "Game/Struct_10924B30_Slot.h"
 #include "Game/Struct_1094D980.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 // FUNCTION: 0x10924AE0 ?FUN_10924ae0@Class_10924AE0@@QAE_NXZ
 bool Class_10924AE0::FUN_10924ae0()
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     Unknown48.SetValues(1, 0, 0xff000000);
     bool Result = FUN_10924490(1, 0, 0, 0, &Unknown48);
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     return Result;
 }
 

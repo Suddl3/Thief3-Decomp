@@ -42,7 +42,7 @@ public:
 // FUNCTION: 0x10C27540 ??0Class_10E99350@@QAE@H@Z
 Class_10E99350::Class_10E99350(int Value) : Unknown00(DAT_10e99350), Unknown04(0), Unknown08(), Unknown14(Value)
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     int Tag = 0;
     Class_10E99340* First = new(Tag, 0, 0, 0, 0) Class_10E99340;
     Class_10BFBD70* List = &Unknown08;
@@ -53,5 +53,5 @@ Class_10E99350::Class_10E99350(int Value) : Unknown00(DAT_10e99350), Unknown04(0
     Index = List->Count;
     List->FUN_10bfbd70(Index + 1);
     List->Data[Index] = (int)Second;
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
 }

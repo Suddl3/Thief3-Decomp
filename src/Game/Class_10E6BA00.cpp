@@ -4,7 +4,7 @@
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10BFBD70.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 struct Struct_10C08690;
 

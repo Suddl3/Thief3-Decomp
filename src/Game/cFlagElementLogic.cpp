@@ -13,17 +13,17 @@ public:
     virtual void Virtual2();
     virtual void Virtual3();
     virtual void Virtual4();
-    virtual bool FUN_10a84b50();
+    virtual bool Evaluate();
 
-    int Unknown04;
-    int Unknown08;
+    int m_FlagName;
+    int m_ExpectedValue;
 };
 
-// FUNCTION: 0x10A84B50 ?FUN_10a84b50@cFlagElementLogic@@UAE_NXZ
-bool cFlagElementLogic::FUN_10a84b50()
+// FUNCTION: 0x10A84B50 ?Evaluate@cFlagElementLogic@@UAE_NXZ
+bool cFlagElementLogic::Evaluate()
 {
     Class_10A174E0* Object = FUN_10a18230();
-    FName Name = (EName)Unknown04;
-    int Expected = Unknown08;
+    FName Name = (EName)m_FlagName;
+    int Expected = m_ExpectedValue;
     return Object->Virtual3(Name) == Expected;
 }

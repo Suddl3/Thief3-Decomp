@@ -78,8 +78,8 @@ public:
     virtual void Virtual70(int A);
 };
 
-// FUNCTION: 0x10A529E0 ?FUN_10a5d430@Class_10E6B078@@UAE_NH_N0@Z
-bool Class_10E6B078::FUN_10a5d430(int A, bool B, bool C)
+// FUNCTION: 0x10A529E0 ?HandleKey@Class_10E6B078@@UAE_NH_N0@Z
+bool Class_10E6B078::HandleKey(int A, bool B, bool C)
 {
     if (Virtual53() && Virtual64(4) && B)
     {

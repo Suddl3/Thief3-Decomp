@@ -4,7 +4,7 @@
 #include "Game/Class_10C4B2A0.h"
 #include "Game/Class_10C68070.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 
@@ -64,9 +64,9 @@ Class_10C68070* Class_10E9BB4C::FUN_10c4cbd0(int A)
         if (!FUN_10c4c2d0()->FUN_10c48d90())
             return 0;
     }
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     Class_10C68070* Obj = new(0, 0, 0, 0, 0) Class_10C68070;
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     Obj->Virtual6(A);
     if (Unknown04)
     {

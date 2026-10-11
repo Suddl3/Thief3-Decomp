@@ -3,11 +3,11 @@
 #ifndef GAME_CLASS_10E95AC8_H
 #define GAME_CLASS_10E95AC8_H
 
-#include "Game/Class_10E94578.h"
+#include "Game/cTacticMoveToPoint.h"
 
 struct Struct_10BE1E00_Unknown04;
 
-class Class_10E95AC8 : public Class_10E94578
+class Class_10E95AC8 : public cTacticMoveToPoint
 {
 public:
     virtual void Virtual0();

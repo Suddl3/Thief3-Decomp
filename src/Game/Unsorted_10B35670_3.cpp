@@ -22,7 +22,7 @@ public:
     virtual void FUN_10b35770();
 };
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 // Ion Storm's placement new and its delete (0x10905C10; the delete folded into ::operator delete).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
@@ -81,26 +81,26 @@ void Class_10E7C2CC::FUN_10b35770()
 // FUNCTION: 0x10B35B40 ?FUN_10b35b40@Class_10E79568@@UAEPAVClass_10E7C328@@XZ
 Class_10E7C328* Class_10E79568::FUN_10b35b40()
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     Class_10E7C328* Result = new(0, 0, 0, 0, 0) Class_10E7C328;
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     return Result;
 }
 
 // FUNCTION: 0x10B35BE0 ?FUN_10b35be0@Class_10E79570@@UAEPAVClass_10E7C344@@XZ
 Class_10E7C344* Class_10E79570::FUN_10b35be0()
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     Class_10E7C344* Result = new(0, 0, 0, 0, 0) Class_10E7C344;
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     return Result;
 }
 
 // FUNCTION: 0x10B35C80 ?FUN_10b35c80@Class_10E7956C@@UAEPAVClass_10E7C360@@XZ
 Class_10E7C360* Class_10E7956C::FUN_10b35c80()
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     Class_10E7C360* Result = new(0, 0, 0, 0, 0) Class_10E7C360;
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     return Result;
 }

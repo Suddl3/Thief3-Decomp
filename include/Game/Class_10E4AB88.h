@@ -22,8 +22,8 @@ public:
     virtual void Virtual3();
     virtual void Virtual4();
     virtual void Virtual5();
-    virtual int FUN_1094e800();
-    virtual int FUN_1094e820(int Index);
+    virtual int GetCount();
+    virtual int GetItem(int Index);
     virtual void FUN_1094e050();
     virtual void Virtual9(int A, int B);
     virtual void FUN_1094e9d0(int p1, int p2);
@@ -43,7 +43,7 @@ public:
     virtual void Virtual24();
     virtual void Virtual25();
     virtual void Virtual26();
-    virtual void FUN_1094f6f0(Class_10BFBD70* Out, int Param);
+    virtual void CollectValues(Class_10BFBD70* Out, int Param);
     virtual void FUN_1094eea0(int Param);
 
     Struct_1094E0F0 FUN_1094e0f0();

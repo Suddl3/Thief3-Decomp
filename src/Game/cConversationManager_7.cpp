@@ -4,7 +4,7 @@
 #include "Game/Class_10CA8290.h"
 #include "Game/cConversationManager.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 // Ion Storm's placement new (0x10905C10).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
@@ -28,16 +28,16 @@ public:
     }
 
     void** VTable;
-    int Unknown04;
-    int Unknown08;
+    int m_FlagName;
+    int m_ExpectedValue;
 };
 
-// FUNCTION: 0x10A13600 ?FUN_10a13600@cConversationManager@@UAEPAVcFlagElementLogic@@ABVClass_109022E0@@M@Z
-cFlagElementLogic* cConversationManager::FUN_10a13600(const Class_109022E0& A, float B)
+// FUNCTION: 0x10A13600 ?CreateFlagElement@cConversationManager@@UAEPAVcFlagElementLogic@@ABVClass_109022E0@@M@Z
+cFlagElementLogic* cConversationManager::CreateFlagElement(const Class_109022E0& A, float B)
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     cFlagElementLogic* Result = new(0, 0, 0, 0, 0) cFlagElementLogic;
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     Result->FUN_10a84ce0(A);
     Result->FUN_10ca8290(B);
     return Result;

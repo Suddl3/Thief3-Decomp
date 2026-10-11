@@ -3,7 +3,7 @@
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10E6BF84.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 class Class_10E984BC : public Class_10E6BF84
 {
@@ -19,7 +19,7 @@ Class_10E984BC::~Class_10E984BC()
     if (Unknown04)
     {
         int* Obj = Unknown04 - 1;
-        FUN_10905aa0()->Virtual5(Obj);
+        GetAllocator()->Virtual5(Obj);
         Unknown04 = 0;
     }
 }

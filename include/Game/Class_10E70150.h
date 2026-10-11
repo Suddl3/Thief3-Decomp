@@ -3,12 +3,12 @@
 #ifndef GAME_CLASS_10E70150_H
 #define GAME_CLASS_10E70150_H
 
-#include "Game/Class_10E67938.h"
+#include "Game/cActorManager.h"
 #include "Game/Class_10E70060.h"
 
 class Class_1098E330;
 
-class Class_10E70150 : public Class_10E67938, public Class_10E70060
+class Class_10E70150 : public cActorManager, public Class_10E70060
 {
 public:
     virtual float FUN_10ace280(int A, int B, Class_1098E330* Obj);

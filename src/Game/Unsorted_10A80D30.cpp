@@ -47,9 +47,9 @@ public:
     virtual void Virtual36();
     virtual void Virtual37();
     virtual void Virtual38();
-    virtual void FUN_10a80de0(int A, int B);
+    virtual void DispatchToConEvents(int A, int B);
 
-    int Unknown04;
+    int m_ConEvents;
     char Unknown08[4];
     Class_10AA7530** Unknown0C;
     char Unknown10[4];
@@ -110,10 +110,10 @@ bool cConversation::FUN_10a80d90(int A)
     return false;
 }
 
-// FUNCTION: 0x10A80DE0 ?FUN_10a80de0@cConversation@@UAEXHH@Z
-void cConversation::FUN_10a80de0(int A, int B)
+// FUNCTION: 0x10A80DE0 ?DispatchToConEvents@cConversation@@UAEXHH@Z
+void cConversation::DispatchToConEvents(int A, int B)
 {
-    for (int i = 0; i < Unknown04; i++)
+    for (int i = 0; i < m_ConEvents; i++)
     {
         if (!Unknown0C[i]->Virtual1())
             Unknown0C[i]->FUN_10aa7530(A, B);

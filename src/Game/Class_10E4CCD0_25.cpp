@@ -37,7 +37,7 @@ public:
     Class_10E96810(int A, int B);
 
     virtual void FUN_10be4a20();
-    virtual void FUN_10be69a0(Object_10BE58C0* Ar);
+    virtual void Serialize(Object_10BE58C0* Ar);
     virtual void Virtual2();
     virtual void Virtual3();
     virtual void Virtual4();

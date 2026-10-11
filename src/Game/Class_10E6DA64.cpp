@@ -6,7 +6,7 @@
 
 extern const char DAT_10e47660[];
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 class Class_10AAB970_Unknown24
 {
@@ -79,7 +79,7 @@ Class_10AAB970_Unknown0C* Class_10E6DA64::FUN_10aab970(const char** Name, int A)
         if (Key)
         {
             char* Block = Key - 4;
-            FUN_10905aa0()->Virtual5(Block);
+            GetAllocator()->Virtual5(Block);
             Key = 0;
         }
         if (Equal)

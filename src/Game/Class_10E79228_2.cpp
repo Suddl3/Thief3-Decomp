@@ -31,11 +31,11 @@ extern WindowManager* GWindowManager;
 class Class_10E79228 : public Class_10E5B7C8
 {
 public:
-    virtual void FUN_10b17100();
+    virtual void CheckGameOver();
 };
 
-// FUNCTION: 0x10B17100 ?FUN_10b17100@Class_10E79228@@UAEXXZ
-void Class_10E79228::FUN_10b17100()
+// FUNCTION: 0x10B17100 ?CheckGameOver@Class_10E79228@@UAEXXZ
+void Class_10E79228::CheckGameOver()
 {
     if (FUN_10a18230()->Virtual3(DAT_10e6f4d8))
         GWindowManager->FUN_10b15d70(1);

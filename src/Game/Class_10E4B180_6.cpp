@@ -30,11 +30,11 @@ class Class_10BFBD70;
 
 UClass* FUN_109015c0();
 
-cUObjectLinkManager* FUN_10b0b2b0();
+cUObjectLinkManager* GetUObjectLinkManager();
 
 Class_10D9B090* FUN_10d9dcb0();
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 // The header's copy of Class_10BFBD70, with the destructor out of line: the game calls it (0x109ED5E0) here.
 class Class_10BFBD70
@@ -201,15 +201,15 @@ void Class_10E4B180::FUN_10b7dc60(Class_10B7DC60_Param0* Obj)
     {
         UClass* Type = FUN_109015c0();
         ((UObject*)Obj)->IsA(Type);
-        FUN_10905aa0()->Virtual8(0, 0);
+        GetAllocator()->Virtual8(0, 0);
         this->Virtual40(Obj);
-        FUN_10905aa0()->Virtual9();
+        GetAllocator()->Virtual9();
         Flag = true;
         if (Obj->UnknownB0 == 0)
             return;
     }
     Class_10BFBD70 Found;
-    FUN_10b0b2b0()->Virtual4(0, (int)Obj, 0x281B9D0, Found);
+    GetUObjectLinkManager()->Virtual4(0, (int)Obj, 0x281B9D0, Found);
     if (Found.Count == 0)
     {
         Struct_10D9E5E0_Param* Param = Obj->UnknownB0;

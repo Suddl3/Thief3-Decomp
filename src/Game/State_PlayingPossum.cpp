@@ -15,20 +15,20 @@ public:
 class State_PlayingPossum : public Class_10E90D70
 {
 public:
-    State_PlayingPossum* FUN_10bce920(int A, int B, int C);
+    State_PlayingPossum* Construct(int A, int B, int C);
 
-    double Unknown40;
-    double Unknown48;
-    int Unknown50;
+    double m_StartTime;
+    double m_EndTime;
+    int m_Duration;
 };
 
-// FUNCTION: 0x10BCE920 ?FUN_10bce920@State_PlayingPossum@@QAEPAV1@HHH@Z
-State_PlayingPossum* State_PlayingPossum::FUN_10bce920(int A, int B, int C)
+// FUNCTION: 0x10BCE920 ?Construct@State_PlayingPossum@@QAEPAV1@HHH@Z
+State_PlayingPossum* State_PlayingPossum::Construct(int A, int B, int C)
 {
     this->Class_10E90D70::Class_10E90D70(A, B);
-    Unknown40 = -1.0;
+    m_StartTime = -1.0;
     Unknown00 = DAT_10e92a00;
-    Unknown48 = -1.0;
-    Unknown50 = C;
+    m_EndTime = -1.0;
+    m_Duration = C;
     return this;
 }

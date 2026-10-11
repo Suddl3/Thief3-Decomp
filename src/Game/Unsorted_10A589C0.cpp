@@ -62,10 +62,10 @@ public:
     virtual void Virtual48();
     virtual void Virtual49();
     virtual void Virtual50();
-    virtual Class_1090A780 FUN_10a59320(int Index);
+    virtual Class_1090A780 GetItem(int Index);
 
     char Unknown04[0x1B8];
-    Class_1090A780 Unknown1BC[15];
+    Class_1090A780 m_Items[15];
 };
 
 struct Struct_10A58B40
@@ -97,8 +97,8 @@ void Class_10E69050::FUN_10a58be0()
     Unknown14[Unknown18]->Virtual2();
 }
 
-// FUNCTION: 0x10A59320 ?FUN_10a59320@Class_10E68D80@@UAE?AVClass_1090A780@@H@Z
-Class_1090A780 Class_10E68D80::FUN_10a59320(int Index)
+// FUNCTION: 0x10A59320 ?GetItem@Class_10E68D80@@UAE?AVClass_1090A780@@H@Z
+Class_1090A780 Class_10E68D80::GetItem(int Index)
 {
-    return Unknown1BC[Index];
+    return m_Items[Index];
 }

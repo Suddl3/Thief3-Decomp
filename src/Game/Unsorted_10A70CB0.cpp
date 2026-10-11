@@ -21,7 +21,7 @@ public:
     Class_10A70B80 Unknown04;
 };
 
-class Class_10E67938
+class cActorManager
 {
 public:
     virtual void FUN_10a70f00(int A, int B, int C, int D);
@@ -43,7 +43,7 @@ public:
     virtual void Virtual16();
 };
 
-class Class_10E6BAB0 : public Class_10E67938
+class Class_10E6BAB0 : public cActorManager
 {
 public:
     virtual void FUN_10a70f00(int Event, int A, int B, int C);
@@ -86,7 +86,7 @@ void Class_10E6BAB0::FUN_10a70f00(int Event, int A, int B, int C)
         Virtual18(A, B, C);
         break;
     default:
-        Class_10E67938::FUN_10a4c470(Event, A, B, C);
+        cActorManager::FUN_10a4c470(Event, A, B, C);
         break;
     }
 }

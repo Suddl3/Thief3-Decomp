@@ -70,7 +70,7 @@ public:
     virtual void Virtual4();
     virtual void Virtual5();
     virtual void Virtual6();
-    virtual int FUN_1094e820(int Index);
+    virtual int GetItem(int Index);
 
     char Unknown04[0xF8];
     int* UnknownFC;
@@ -104,8 +104,8 @@ int Class_1094E780::FUN_1094e780(int param)
     return Unknown108[param].Unknown20;
 }
 
-// FUNCTION: 0x1094E820 ?FUN_1094e820@Class_10E4AB88@@UAEHH@Z
-int Class_10E4AB88::FUN_1094e820(int Index)
+// FUNCTION: 0x1094E820 ?GetItem@Class_10E4AB88@@UAEHH@Z
+int Class_10E4AB88::GetItem(int Index)
 {
     Struct_1094E820B* Entry = &Unknown108[Unknown110];
     if (Index < Entry->Unknown14)

@@ -53,12 +53,12 @@ public:
     Class_10BF7F90* FUN_10bc4160();
 };
 
-class Class_10E94578 : public Class_10BC4160
+class cTacticMoveToPoint : public Class_10BC4160
 {
 public:
     virtual void Virtual1();
 
-    void FUN_10bc5b50();
+    void PopState();
 };
 
 class Object_10BDAEB0
@@ -69,7 +69,7 @@ public:
     virtual void Virtual2();
 };
 
-class Class_10E94218 : public Class_10E94578
+class Class_10E94218 : public cTacticMoveToPoint
 {
 public:
     virtual void FUN_10bdaeb0();
@@ -103,5 +103,5 @@ void Class_10E94218::FUN_10bdaeb0()
         Unknown40->Virtual2();
     Class_10BFF460* Obj = Unknown04->FUN_10bbb410();
     if (!Obj || !Obj->FUN_10bff460() || FUN_10bc4160()->FUN_10aa82d0() == 0)
-        FUN_10bc5b50();
+        PopState();
 }

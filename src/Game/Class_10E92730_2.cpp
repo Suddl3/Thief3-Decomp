@@ -9,7 +9,7 @@ struct Struct_10BCBEC0
     Class_10C7D570* Unknown08;
 };
 
-class Class_10E94578
+class cTacticMoveToPoint
 {
 public:
     virtual void Virtual0();
@@ -21,10 +21,10 @@ public:
     virtual void Virtual6();
     virtual void Virtual7();
 
-    void FUN_10bc5b50();
+    void PopState();
 };
 
-class Class_10E92730 : public Class_10E94578
+class Class_10E92730 : public cTacticMoveToPoint
 {
 public:
     virtual void FUN_10bcbec0();
@@ -38,5 +38,5 @@ void Class_10E92730::FUN_10bcbec0()
     int Value = 1;
     Class_10C7D570* Props = Unknown04->Unknown08;
     if (((Class_1098E330*)Props->FUN_10c7d570())->FUN_1098e330(0x80028b, &Value) && !Value)
-        FUN_10bc5b50();
+        PopState();
 }

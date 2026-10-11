@@ -14,25 +14,25 @@ public:
 
     Class_10BBB410* Unknown04;
     char Unknown08[0x60];
-    int Unknown68;
+    int m_Interval;
 };
 
 class Class_10E96810 : public Class_10E960D8
 {
 public:
     virtual void FUN_10be4a20();
-    virtual void FUN_10be69a0(Object_10BE58C0* Ar);
+    virtual void Serialize(Object_10BE58C0* Ar);
 
     bool Unknown6C;
 };
 
-// FUNCTION: 0x10BE69A0 ?FUN_10be69a0@Class_10E96810@@UAEXPAVObject_10BE58C0@@@Z
-void Class_10E96810::FUN_10be69a0(Object_10BE58C0* Ar)
+// FUNCTION: 0x10BE69A0 ?Serialize@Class_10E96810@@UAEXPAVObject_10BE58C0@@@Z
+void Class_10E96810::Serialize(Object_10BE58C0* Ar)
 {
     FUN_10be4ef0(Ar);
     if (Ar->Unknown0C >= 0x45)
     {
         Ar->Virtual1(&Unknown6C, 1);
-        Ar->Virtual1(&Unknown68, 4);
+        Ar->Virtual1(&m_Interval, 4);
     }
 }

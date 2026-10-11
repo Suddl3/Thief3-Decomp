@@ -10,7 +10,7 @@ enum EInternal { EC_Internal };
 
 inline void* operator new(unsigned int Size, EInternal* Mem) { return Mem; }
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 bool FUN_1090f010(const int* A, const int* B);
 
@@ -52,7 +52,7 @@ void FUN_10a7efc0(Class_10A7EFC0_Param* A, int B)
 // FUNCTION: 0x10A7F220 ?FUN_10a7f220@cEngineTriggerRegistrar@@UAEPAVClass_10E6BFBC@@HPBH@Z
 Class_10E6BFBC* cEngineTriggerRegistrar::FUN_10a7f220(int A, const int* B)
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     bool Flag;
     {
         char Storage[4];
@@ -68,6 +68,6 @@ Class_10E6BFBC* cEngineTriggerRegistrar::FUN_10a7f220(int A, const int* B)
     {
         Result = new(0, 0, 0, 0, 0) Class_10E6BFBC(true);
     }
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     return Result;
 }

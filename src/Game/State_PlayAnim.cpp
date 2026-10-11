@@ -3,7 +3,7 @@
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10E90D70.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 class Class_10BD1320
 {
@@ -15,7 +15,7 @@ public:
         FUN_10bd0410(0);
         if (Unknown04)
         {
-            FUN_10905aa0()->Virtual5(Unknown08);
+            GetAllocator()->Virtual5(Unknown08);
             Unknown08 = 0;
             Unknown04 = 0;
         }
@@ -31,7 +31,7 @@ class State_PlayAnim : public Class_10E90D70
 public:
     virtual ~State_PlayAnim();
 
-    Class_10BD1320 Unknown40;
+    Class_10BD1320 m_Items;
 };
 
 // FUNCTION: 0x10BD09D0 ??1State_PlayAnim@@UAE@XZ

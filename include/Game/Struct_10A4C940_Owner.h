@@ -3,7 +3,7 @@
 #ifndef GAME_STRUCT_10A4C940_OWNER_H
 #define GAME_STRUCT_10A4C940_OWNER_H
 
-class Class_10E67938;
+class cActorManager;
 
 struct Struct_10A4C940_Owner
 {
@@ -11,7 +11,7 @@ public:
     virtual void Virtual0(int A);
 
     char Unknown04[4];
-    Class_10E67938* Unknown08;
+    cActorManager* Unknown08;
 };
 
 #endif // GAME_STRUCT_10A4C940_OWNER_H

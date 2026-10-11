@@ -6,7 +6,7 @@
 
 class Class_109081E0;
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 // Copied from include/Game/Class_1090FD40.h with FUN_1090f160 (the find that returns -1) added.
 class Class_1090FD40
@@ -26,7 +26,7 @@ public:
         FUN_1090f2c0(0);
         if (Unknown04)
         {
-            FUN_10905aa0()->Virtual5(Unknown08);
+            GetAllocator()->Virtual5(Unknown08);
             Unknown08 = 0;
             Unknown04 = 0;
         }
@@ -80,7 +80,7 @@ public:
     virtual void Virtual24();
     virtual void FUN_10a83ac0(Class_1090FD40* A);
 
-    int Unknown04;
+    int m_ConEvents;
     char Unknown08[4];
     Class_10A83AC0_Unknown0C** Unknown0C;
 };
@@ -89,7 +89,7 @@ public:
 void cConversation::FUN_10a83ac0(Class_1090FD40* A)
 {
     A->FUN_1090f2c0(0);
-    for (int i = 0; i < Unknown04; i++)
+    for (int i = 0; i < m_ConEvents; i++)
     {
         if (Unknown0C[i]->Virtual1() == 0)
         {

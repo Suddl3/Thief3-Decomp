@@ -27,16 +27,16 @@ public:
 class Class_10E8BE68
 {
 public:
-    virtual void FUN_10bca010(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 };
 
-class Class_10E94578 : public Class_10E8BE68
+class cTacticMoveToPoint : public Class_10E8BE68
 {
 public:
-    void FUN_10bc5b50();
+    void PopState();
 };
 
-class State_PlayingPossum : public Class_10E94578
+class State_PlayingPossum : public cTacticMoveToPoint
 {
 public:
     virtual void Virtual1();
@@ -105,18 +105,18 @@ public:
     virtual void FUN_10bce9b0(FArchive& Ar);
 
     char Unknown04[0x3C];
-    double Unknown40;
-    double Unknown48;
-    int Unknown50;
+    double m_StartTime;
+    double m_EndTime;
+    int m_Duration;
 };
 
 // FUNCTION: 0x10BCE9B0 ?FUN_10bce9b0@State_PlayingPossum@@UAEXAAVFArchive@@@Z
 void State_PlayingPossum::FUN_10bce9b0(FArchive& Ar)
 {
-    Class_10E8BE68::FUN_10bca010(Ar);
-    Ar.Serialize(&Unknown40, 8);
-    Ar.Serialize(&Unknown48, 8);
-    Ar.Serialize(&Unknown50, 4);
+    Class_10E8BE68::Serialize(Ar);
+    Ar.Serialize(&m_StartTime, 8);
+    Ar.Serialize(&m_EndTime, 8);
+    Ar.Serialize(&m_Duration, 4);
 }
 
 // FUNCTION: 0x10BCE9F0 ?FUN_10bce9f0@Class_10E92B20@@QAEPAV1@HHABUStruct_10BCE9F0@@@Z

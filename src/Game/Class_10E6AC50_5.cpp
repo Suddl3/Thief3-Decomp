@@ -30,17 +30,17 @@ public:
     virtual void Virtual10();
     virtual void Virtual11();
     virtual void Virtual12();
-    virtual void FUN_10a63310(int Index);
+    virtual void RemoveItemAt(int Index);
 
     char Unknown04[0x10];
-    Class_10A63340 Unknown14;
+    Class_10A63340 m_Count;
     char Unknown15[7];
-    Object_10A63310** Unknown1C;
+    Object_10A63310** m_Items;
 };
 
-// FUNCTION: 0x10A63310 ?FUN_10a63310@Class_10E6AC50@@UAEXH@Z
-void Class_10E6AC50::FUN_10a63310(int Index)
+// FUNCTION: 0x10A63310 ?RemoveItemAt@Class_10E6AC50@@UAEXH@Z
+void Class_10E6AC50::RemoveItemAt(int Index)
 {
-    Unknown1C[Index]->Virtual1(0);
-    Unknown14.FUN_10a63340(Index);
+    m_Items[Index]->Virtual1(0);
+    m_Count.FUN_10a63340(Index);
 }

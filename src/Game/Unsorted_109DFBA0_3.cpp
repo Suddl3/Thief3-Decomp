@@ -13,7 +13,7 @@ void Class_10BFBD70::FUN_109dff00()
         if (*Item)
         {
             int Key = *Item - 4;
-            FUN_10905aa0()->Virtual5((void*)Key);
+            GetAllocator()->Virtual5((void*)Key);
             *Item = 0;
         }
     }

@@ -8,7 +8,7 @@
 
 struct Struct_10D9E5E0_Param;
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 Class_10D9B090* FUN_10d9dcb0();
 

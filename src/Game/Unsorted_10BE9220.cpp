@@ -15,7 +15,7 @@ public:
 class Class_10E8BE68
 {
 public:
-    virtual void FUN_10bca010(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 };
 
 extern Class_10FF667C* DAT_10ff667c;
@@ -173,7 +173,7 @@ public:
 // FUNCTION: 0x10BE9240 ?FUN_10be9240@Class_10E96D98@@UAEXAAVFArchive@@@Z
 void Class_10E96D98::FUN_10be9240(FArchive& Ar)
 {
-    Class_10E8BE68::FUN_10bca010(Ar);
+    Class_10E8BE68::Serialize(Ar);
     Ar.Serialize(&Unknown44, 4);
     DAT_10ff667c->Unknown18->Virtual1(Ar, &Unknown40);
     Ar.Serialize(&Unknown48, 4);
@@ -184,7 +184,7 @@ void Class_10E96D98::FUN_10be9240(FArchive& Ar)
 // FUNCTION: 0x10BE92C0 ?FUN_10be92c0@Class_10E96EB0@@UAEXAAVFArchive@@@Z
 void Class_10E96EB0::FUN_10be92c0(FArchive& Ar)
 {
-    Class_10E8BE68::FUN_10bca010(Ar);
+    Class_10E8BE68::Serialize(Ar);
     DAT_10ff667c->Unknown18->Virtual1(Ar, &Unknown40);
     Ar.Serialize(&Unknown44, 4);
     Ar.Serialize(&Unknown48, 4);

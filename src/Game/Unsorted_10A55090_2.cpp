@@ -64,7 +64,7 @@ class Class_10E6A9F8
 {
 public:
     void FUN_10a626f0();
-    void FUN_10a64d70();
+    void MarkDirty();
     int FUN_10a62bc0();
 
     char Unknown00[0x1D4];
@@ -190,7 +190,7 @@ void Class_10E6A9F8::FUN_10a626f0()
 {
     Unknown1D8 = 0;
     Unknown1D4->Virtual9();
-    FUN_10a64d70();
+    MarkDirty();
 }
 
 // FUNCTION: 0x10A62BC0 ?FUN_10a62bc0@Class_10E6A9F8@@QAEHXZ
@@ -202,10 +202,10 @@ int Class_10E6A9F8::FUN_10a62bc0()
 // FUNCTION: 0x10A62CB0 ??0Class_10E6AC50@@QAE@XZ
 Class_10E6AC50::Class_10E6AC50()
 {
-    Unknown10 = -1;
-    Unknown14 = 0;
+    m_CurrentIndex = -1;
+    m_Count = 0;
     Unknown18 = 0;
-    Unknown1C = 0;
+    m_Items = 0;
 }
 
 // FUNCTION: 0x10A63210 ?FUN_10a63210@Class_10E6AC98@@UAE?AVClass_1090A780@@XZ

@@ -28,7 +28,7 @@ void Class_1091A4F0::FUN_1091a920()
     FUN_1091a4f0(0);
     if (Unknown04)
     {
-        FUN_10905aa0()->Virtual5(Unknown08);
+        GetAllocator()->Virtual5(Unknown08);
         Unknown08 = 0;
         Unknown04 = 0;
     }
@@ -40,7 +40,7 @@ void Class_1091B3F0::FUN_1091b3f0()
     FUN_1091af10(0);
     if (Unknown04)
     {
-        FUN_10905aa0()->Virtual5(Unknown08);
+        GetAllocator()->Virtual5(Unknown08);
         Unknown08 = 0;
         Unknown04 = 0;
     }

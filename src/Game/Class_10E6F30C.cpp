@@ -1,7 +1,7 @@
 // Game/Class_10E6F30C.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10AB90F0.h"
-#include "Game/Class_10E67938.h"
+#include "Game/cActorManager.h"
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_109081E0.h"
 
@@ -45,7 +45,7 @@ public:
 extern Class_10F46DA0* DAT_10f46da0;
 
 // Copied from Game/Class_10E6F30C.h with the fields at +0x18 to +0x28 added.
-class Class_10E6F30C : public Class_10E67938
+class Class_10E6F30C : public cActorManager
 {
 public:
     Class_10E6F30C();

@@ -4,7 +4,7 @@
 class Class_10E696A8
 {
 public:
-    virtual bool FUN_10a5d430(int A, bool B, bool C);
+    virtual bool HandleKey(int A, bool B, bool C);
 };
 
 class Class_10E7FB08_Unknown200
@@ -97,5 +97,5 @@ void Class_10E7FB08::FUN_10b27590(int A, bool B, bool C)
 {
     if (A == 0x1e && B && C && Unknown200)
         Unknown200->Virtual70(2);
-    Class_10E696A8::FUN_10a5d430(A, B, C);
+    Class_10E696A8::HandleKey(A, B, C);
 }

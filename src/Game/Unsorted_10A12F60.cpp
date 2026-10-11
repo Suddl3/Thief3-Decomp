@@ -24,10 +24,10 @@ public:
     virtual void Virtual13();
     virtual void Virtual14();
     virtual void Virtual15();
-    virtual int FUN_10a141a0(int Value);
+    virtual int AddChild(int Value);
 
     int Unknown04;
-    Class_10C00A60 Unknown08;
+    Class_10C00A60 m_ChildCount;
 };
 
 void FUN_10a196d0();
@@ -36,10 +36,10 @@ void FUN_10a19c00();
 
 void FUN_10a1b850();
 
-// FUNCTION: 0x10A141A0 ?FUN_10a141a0@cConversationManager@@UAEHH@Z
-int cConversationManager::FUN_10a141a0(int Value)
+// FUNCTION: 0x10A141A0 ?AddChild@cConversationManager@@UAEHH@Z
+int cConversationManager::AddChild(int Value)
 {
-    Class_10C00A60* Array = &Unknown08;
+    Class_10C00A60* Array = &m_ChildCount;
     int Index = Array->Unknown00;
     Array->FUN_10c00a60(Index + 1);
     Array->Unknown08[Index] = Value;

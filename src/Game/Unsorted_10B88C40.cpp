@@ -29,7 +29,7 @@ struct Struct_10B89760_Param
     INT Unknown34;
 };
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 extern const char DAT_10e47660[];
 

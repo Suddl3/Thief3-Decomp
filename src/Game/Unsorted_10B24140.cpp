@@ -5,7 +5,7 @@
 #include "Game/WindowManager.h"
 #include "Game/Class_10B17210.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 struct Struct_10C08690;
 

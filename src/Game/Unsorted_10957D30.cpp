@@ -7,7 +7,7 @@
 #include "Game/Class_1095A760.h"
 #include "Game/Class_1095A7A0.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 void* operator new(unsigned int A, const int& B, int C, int D, int E, int F);
 
@@ -65,7 +65,7 @@ void Class_1095A760::FUN_1095a760()
     FUN_1095a5a0(0);
     if (Unknown04)
     {
-        FUN_10905aa0()->Virtual5(Unknown08);
+        GetAllocator()->Virtual5(Unknown08);
         Unknown08 = 0;
         Unknown04 = 0;
     }

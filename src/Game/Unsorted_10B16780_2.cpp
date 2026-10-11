@@ -93,7 +93,7 @@ class Class_10B45AD0;
 
 extern const char DAT_10e7919c[];
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 class Class_10B16D80_Window
 {

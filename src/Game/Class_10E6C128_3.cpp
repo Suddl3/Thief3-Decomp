@@ -3,7 +3,7 @@
 
 #include "Game/Class_10905A90_Member.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 void FUN_10d3ddc0(void* A, int* B);
 
@@ -15,7 +15,7 @@ public:
         if (Unknown00)
         {
             char* Block = Unknown00 - 4;
-            FUN_10905aa0()->Virtual5(Block);
+            GetAllocator()->Virtual5(Block);
         }
     }
     Class_109081E0& operator=(const Class_109081E0& Other);

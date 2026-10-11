@@ -7,7 +7,7 @@
 
 class Item_10943600;
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 // Game/Class_10C603E0.h has no destructor; this copy adds the inline one the owner's cleanup runs.
 class Class_10C603E0
@@ -18,7 +18,7 @@ public:
         FUN_10c504a0(0);
         if (Unknown04)
         {
-            FUN_10905aa0()->Virtual5(Unknown08);
+            GetAllocator()->Virtual5(Unknown08);
             Unknown08 = 0;
             Unknown04 = 0;
         }
@@ -41,7 +41,7 @@ public:
         FUN_10da4f50(0);
         if (Unknown04)
         {
-            FUN_10905aa0()->Virtual5(Unknown08);
+            GetAllocator()->Virtual5(Unknown08);
             Unknown08 = 0;
             Unknown04 = 0;
         }

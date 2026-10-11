@@ -277,7 +277,7 @@ public:
 
     void FUN_10b739c0();
     void FUN_10b71740();
-    void FUN_10b73890();
+    void ResetToDefaults();
 
     char Unknown04[0x184];
     Class_10B73900_Unknown188* Unknown188;
@@ -319,7 +319,7 @@ void cT3OptionsWindow::FUN_10b739c0()
         switch (Unknown1CC->Unknown12C)
         {
         case 0:
-            FUN_10b73890();
+            ResetToDefaults();
             break;
         case 1:
             FUN_10b71740();

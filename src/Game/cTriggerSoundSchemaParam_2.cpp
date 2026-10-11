@@ -18,15 +18,15 @@ public:
     virtual void Virtual9();
     virtual void Virtual10();
     virtual void Virtual11();
-    virtual void FUN_10a8b080(cTriggerSoundSchemaParam* Other);
+    virtual void CopyFrom(cTriggerSoundSchemaParam* Other);
 
-    Class_10A036A0 Unknown04;
+    Class_10A036A0 m_Schema;
     Class_109081E0 Unknown14;
 };
 
-// FUNCTION: 0x10A8B080 ?FUN_10a8b080@cTriggerSoundSchemaParam@@UAEXPAV1@@Z
-void cTriggerSoundSchemaParam::FUN_10a8b080(cTriggerSoundSchemaParam* Other)
+// FUNCTION: 0x10A8B080 ?CopyFrom@cTriggerSoundSchemaParam@@UAEXPAV1@@Z
+void cTriggerSoundSchemaParam::CopyFrom(cTriggerSoundSchemaParam* Other)
 {
     Unknown14.FUN_1090a590(DAT_10e47660);
-    Unknown04.FUN_10a036a0(Other->Unknown04);
+    m_Schema.FUN_10a036a0(Other->m_Schema);
 }

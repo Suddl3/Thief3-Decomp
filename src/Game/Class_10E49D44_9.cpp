@@ -13,7 +13,7 @@ public:
 // FUNCTION: 0x109331D0 ??1Class_10E49D44@@QAE@XZ
 Class_10E49D44::~Class_10E49D44()
 {
-    FUN_10932f40();
+    ClearItems();
     if (Unknown08)
     {
         Unknown08->Virtual2();

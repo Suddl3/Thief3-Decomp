@@ -10,7 +10,7 @@
 
 struct Item_10953AC0;
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 extern IDirect3DDevice8* GDirect3DDevice8;
 
@@ -55,7 +55,7 @@ void Class_10953AC0::FUN_10953be0()
     FUN_10953ac0(0);
     if (Unknown04)
     {
-        FUN_10905aa0()->Virtual5(Unknown08);
+        GetAllocator()->Virtual5(Unknown08);
         Unknown08 = 0;
         Unknown04 = 0;
     }

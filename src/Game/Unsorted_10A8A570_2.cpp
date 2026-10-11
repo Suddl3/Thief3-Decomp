@@ -11,8 +11,8 @@ int Class_10E6C5D0::FUN_10a8a570()
     return Unknown04->FUN_10a8a570();
 }
 
-// FUNCTION: 0x10A8ABE0 ?FUN_10a8abe0@cTriggerSoundSchemaParam@@UAEHHPAV1@@Z
-int cTriggerSoundSchemaParam::FUN_10a8abe0(int p1, cTriggerSoundSchemaParam* p2)
+// FUNCTION: 0x10A8ABE0 ?IsRelated@cTriggerSoundSchemaParam@@UAEHHPAV1@@Z
+int cTriggerSoundSchemaParam::IsRelated(int p1, cTriggerSoundSchemaParam* p2)
 {
     switch (p1)
     {

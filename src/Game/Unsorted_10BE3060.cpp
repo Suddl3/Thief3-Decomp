@@ -25,15 +25,15 @@ struct Struct_10BE31B0_Out
     char Unknown00[0xC];
 };
 
-class Class_10E94578
+class cTacticMoveToPoint
 {
 public:
     virtual void Virtual0();
 
-    void FUN_10bc5b50();
+    void PopState();
 };
 
-class Class_10E95D00 : public Class_10E94578
+class Class_10E95D00 : public cTacticMoveToPoint
 {
 public:
     bool FUN_10be3220();
@@ -63,14 +63,14 @@ void Class_10E95D00::FUN_10be3df0()
     if (FUN_10be3220())
     {
         Unknown04->FUN_10bb8620();
-        FUN_10bc5b50();
+        PopState();
     }
     else if (!Unknown40)
     {
         if (Unknown5C > 8)
         {
             Unknown04->FUN_10bb8ee0(0);
-            FUN_10bc5b50();
+            PopState();
         }
         else
             FUN_10be38e0();

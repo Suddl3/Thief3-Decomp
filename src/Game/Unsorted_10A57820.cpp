@@ -102,10 +102,10 @@ public:
     char Unknown04[0x1d8];
     bool Unknown1DC;
     char Unknown1DD[0xb];
-    int Unknown1E8;
-    int Unknown1EC;
-    int Unknown1F0;
-    int Unknown1F4;
+    int m_MinIndex;
+    int m_MaxIndex;
+    int m_Index;
+    int m_NextIndex;
 };
 
 // FUNCTION: 0x10A57820 ?FUN_10a57820@Class_10E68D80@@UAE_NHH_N@Z
@@ -118,9 +118,9 @@ bool Class_10E68D80::FUN_10a57820(int Kind, int Unused, bool Force)
     {
         if (Kind == 0x1b || Kind == 0x24)
         {
-            if (Wrap || Unknown1F0 != Unknown1E8)
+            if (Wrap || m_Index != m_MinIndex)
             {
-                Unknown1F4 = Unknown1F0 - 1;
+                m_NextIndex = m_Index - 1;
                 return true;
             }
         }
@@ -128,9 +128,9 @@ bool Class_10E68D80::FUN_10a57820(int Kind, int Unused, bool Force)
         {
             if (Kind != 0x1c && Kind != 0x25)
                 return false;
-            if (Wrap || Unknown1F0 != Unknown1EC)
+            if (Wrap || m_Index != m_MaxIndex)
             {
-                Unknown1F4 = Unknown1F0 + 1;
+                m_NextIndex = m_Index + 1;
                 return true;
             }
         }
@@ -140,15 +140,15 @@ bool Class_10E68D80::FUN_10a57820(int Kind, int Unused, bool Force)
     {
         if (Kind != 0x1a && Kind != 0x24)
             return false;
-        if (Wrap || Unknown1F0 != Unknown1EC)
+        if (Wrap || m_Index != m_MaxIndex)
         {
-            Unknown1F4 = Unknown1F0 + 1;
+            m_NextIndex = m_Index + 1;
             return true;
         }
         return false;
     }
-    if (Wrap || Unknown1F0 != Unknown1E8)
-        Unknown1F4 = Unknown1F0 - 1;
+    if (Wrap || m_Index != m_MinIndex)
+        m_NextIndex = m_Index - 1;
     else
         return false;
     return true;

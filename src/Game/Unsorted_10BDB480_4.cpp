@@ -7,7 +7,7 @@ void FUN_10c11ff0(FArchive& Ar, int* P);
 class Class_10E8BE68
 {
 public:
-    virtual void FUN_10bca010(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 };
 
 class Class_10E94458 : public Class_10E8BE68
@@ -23,7 +23,7 @@ public:
 
 FArchive& FUN_10b052a0(FArchive& Ar, void* V);
 
-class Class_10E94578 : public Class_10E8BE68
+class cTacticMoveToPoint : public Class_10E8BE68
 {
 public:
     virtual void Virtual1();
@@ -89,7 +89,7 @@ public:
     virtual void Virtual61();
     virtual void Virtual62();
     virtual void Virtual63();
-    virtual void FUN_10bdb5f0(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 
     char Unknown04[0x50];
     float Unknown54[3];
@@ -99,16 +99,16 @@ public:
 // FUNCTION: 0x10BDB550 ?FUN_10bdb550@Class_10E94458@@UAEXAAVFArchive@@@Z
 void Class_10E94458::FUN_10bdb550(FArchive& Ar)
 {
-    Class_10E8BE68::FUN_10bca010(Ar);
+    Class_10E8BE68::Serialize(Ar);
     FUN_10c11ff0(Ar, &Unknown54);
     Ar.Serialize(&Unknown58, 4);
     Ar.Serialize(&Unknown5C, 4);
 }
 
-// FUNCTION: 0x10BDB5F0 ?FUN_10bdb5f0@Class_10E94578@@UAEXAAVFArchive@@@Z
-void Class_10E94578::FUN_10bdb5f0(FArchive& Ar)
+// FUNCTION: 0x10BDB5F0 ?Serialize@cTacticMoveToPoint@@UAEXAAVFArchive@@@Z
+void cTacticMoveToPoint::Serialize(FArchive& Ar)
 {
-    Class_10E8BE68::FUN_10bca010(Ar);
+    Class_10E8BE68::Serialize(Ar);
     FUN_10b052a0(Ar, Unknown54);
     Ar.Serialize(&Unknown60, 4);
 }

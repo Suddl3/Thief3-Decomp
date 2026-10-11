@@ -117,7 +117,7 @@ public:
     virtual void Virtual110();
     virtual void Virtual111(int A);
 
-    void FUN_10a58ae0(int A);
+    void ApplyEntry(int A);
 
     char Unknown04[0x1C8];
     bool Unknown1CC;
@@ -166,7 +166,7 @@ void Class_10E68938::FUN_10a56480(int Index)
             if (Unknown134)
             {
                 ((Class_10E68738*)Unknown128[i])->Unknown1CC = false;
-                ((Class_10E68738*)Unknown128[i])->FUN_10a58ae0(Same ? 0 : 3);
+                ((Class_10E68738*)Unknown128[i])->ApplyEntry(Same ? 0 : 3);
             }
         }
     }

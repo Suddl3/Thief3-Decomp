@@ -12,19 +12,19 @@ class cTriggerSoundSchemaParam
 public:
     virtual void Virtual0();
     virtual void Virtual1();
-    virtual int FUN_10a8abe0(int p1, cTriggerSoundSchemaParam* p2);
+    virtual int IsRelated(int p1, cTriggerSoundSchemaParam* p2);
     virtual void Virtual3();
     virtual void Virtual4();
-    virtual void FUN_10a8b1e0();
-    virtual void FUN_10a8ac00();
-    virtual bool FUN_10a8ac20();
+    virtual void Reset();
+    virtual void IncrementCount();
+    virtual bool IsLimitReached();
     virtual void Virtual8();
-    virtual int FUN_10a8ac40();
+    virtual int IsValid();
     virtual void Virtual10();
     virtual void Virtual11();
-    virtual void FUN_10a8b080(cTriggerSoundSchemaParam* Other);
+    virtual void CopyFrom(cTriggerSoundSchemaParam* Other);
 
-    Object_10A8AC40* Unknown04;
+    Object_10A8AC40* m_Schema;
     int Unknown08;
     char Pad0C[0x8];
     Class_109081E0 Unknown14;

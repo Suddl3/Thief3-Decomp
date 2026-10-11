@@ -85,7 +85,7 @@ public:
     char Pad00[0x1];
 };
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 void FUN_10919490();
 
@@ -122,21 +122,21 @@ bool FUN_10919a10(IDirect3D8* D3D, IDirect3DDevice8* Device, bool Flag)
         Device->Virtual41(&DAT_10f2c780);
         if (!Flag)
         {
-            FUN_10905aa0()->Virtual8(0, 0);
+            GetAllocator()->Virtual8(0, 0);
             bool Ok = DAT_10f3199c->FUN_10924be0((Class_10924BE0*)GDirect3DDevice8);
-            FUN_10905aa0()->Virtual9();
+            GetAllocator()->Virtual9();
             if (Ok)
             {
-                FUN_10905aa0()->Virtual8(0, 0);
+                GetAllocator()->Virtual8(0, 0);
                 Ok = DAT_10f340ac->FUN_1093ec90();
-                FUN_10905aa0()->Virtual9();
+                GetAllocator()->Virtual9();
                 if (Ok)
                 {
                     if (FUN_10918f40())
                     {
-                        FUN_10905aa0()->Virtual8(0, 0);
+                        GetAllocator()->Virtual8(0, 0);
                         Ok = DAT_10f31bdc->FUN_10937690();
-                        FUN_10905aa0()->Virtual9();
+                        GetAllocator()->Virtual9();
                         if (Ok)
                         {
                             DAT_10f323fc->FUN_109397b0();

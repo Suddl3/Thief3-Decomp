@@ -82,17 +82,17 @@ public:
     void FUN_109301d0();
 
     char Unknown00[0x50];
-    int Unknown50;
+    int m_ItemCount;
     int Unknown54;
-    Class_109301D0_Unknown58** Unknown58;
+    Class_109301D0_Unknown58** m_Items;
 };
 
 // FUNCTION: 0x109301D0 ?FUN_109301d0@Class_10E49C6C@@QAEXXZ
 void Class_10E49C6C::FUN_109301d0()
 {
     DAT_10f31be0->FUN_10938000();
-    Class_109301D0_Unknown58** Slot = Unknown58;
-    for (int i = 0; i < Unknown50; i++, Slot++)
+    Class_109301D0_Unknown58** Slot = m_Items;
+    for (int i = 0; i < m_ItemCount; i++, Slot++)
     {
         Class_109301D0_Unknown58* Item = *Slot;
         float Value = (float)Item->Unknown64;

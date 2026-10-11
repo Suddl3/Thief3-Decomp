@@ -30,13 +30,13 @@ public:
     virtual void Virtual18();
     virtual void Virtual19();
     virtual void Virtual20();
-    virtual void FUN_10bdf7d0();
+    virtual void StopBlinding();
 
     Struct_10BDF7D0* Unknown04;
 };
 
-// FUNCTION: 0x10BDF7D0 ?FUN_10bdf7d0@Class_10E955F0@@UAEXXZ
-void Class_10E955F0::FUN_10bdf7d0()
+// FUNCTION: 0x10BDF7D0 ?StopBlinding@Class_10E955F0@@UAEXXZ
+void Class_10E955F0::StopBlinding()
 {
     ((APawn*)Unknown04->Unknown08->FUN_10c7d570())->IsBlinded = 0;
     if (Unknown04->Unknown08->FUN_10baa580())

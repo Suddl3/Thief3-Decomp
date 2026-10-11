@@ -7,7 +7,7 @@ class Object_109331D0;
 class Class_10E49D44
 {
 public:
-    virtual int FUN_10932fa0();
+    virtual int AddRef();
     virtual void Virtual1();
     virtual void Virtual2();
     virtual void Virtual3();

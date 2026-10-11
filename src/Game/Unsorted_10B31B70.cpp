@@ -5,7 +5,7 @@
 #include "Game/Class_10B32160.h"
 #include "Game/Options.h"
 
-Options* FUN_10929550();
+Options* GetOptions();
 
 class Class_10F3A3D8
 {
@@ -19,7 +19,7 @@ extern Class_10F3A3D8* DAT_10f3a3d8;
 // FUNCTION: 0x10B32160 ?FUN_10b32160@Class_10B32160@@QAEXPAVClass_1098E330@@@Z
 void Class_10B32160::FUN_10b32160(Class_1098E330* Props)
 {
-    if (!FUN_10929550()->Get(10))
+    if (!GetOptions()->Get(10))
     {
         FUN_10b31ad0(Props);
         return;

@@ -10,7 +10,7 @@
 class Class_10E8BE68
 {
 public:
-    virtual void FUN_10bca010(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 };
 
 class Class_10E959B0 : public Class_10E8BE68
@@ -22,10 +22,10 @@ public:
     char Unknown40;
 };
 
-class Class_10E94578 : public Class_10E8BE68
+class cTacticMoveToPoint : public Class_10E8BE68
 {
 public:
-    void FUN_10bc5b50();
+    void PopState();
 };
 
 extern Class_10FF667C* DAT_10ff667c;
@@ -34,7 +34,7 @@ extern float DAT_10e49684;
 
 double GetTimeSeconds();
 
-class Class_10E95898 : public Class_10E94578
+class Class_10E95898 : public cTacticMoveToPoint
 {
 public:
     virtual void Virtual1();
@@ -175,7 +175,7 @@ public:
     virtual void Virtual61();
     virtual void Virtual62();
     virtual void Virtual63();
-    virtual void FUN_10be1f20(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 
     char Unknown04[0x3C];
     int Unknown40;
@@ -192,10 +192,10 @@ public:
     Class_10C7D570* Unknown08;
 };
 
-// FUNCTION: 0x10BE1F20 ?FUN_10be1f20@Class_10E95780@@UAEXAAVFArchive@@@Z
-void Class_10E95780::FUN_10be1f20(FArchive& Ar)
+// FUNCTION: 0x10BE1F20 ?Serialize@Class_10E95780@@UAEXAAVFArchive@@@Z
+void Class_10E95780::Serialize(FArchive& Ar)
 {
-    Class_10E8BE68::FUN_10bca010(Ar);
+    Class_10E8BE68::Serialize(Ar);
     DAT_10ff667c->Unknown18->Virtual1(Ar, &Unknown40);
     DAT_10ff667c->Unknown18->Virtual1(Ar, &Unknown44);
     Ar.Serialize(&Unknown48, 1);
@@ -220,7 +220,7 @@ void Class_10BE1F80::FUN_10be1f80(UObject* Obj)
 // FUNCTION: 0x10BE2090 ?FUN_10be2090@Class_10E95898@@UAEXAAVFArchive@@@Z
 void Class_10E95898::FUN_10be2090(FArchive& Ar)
 {
-    Class_10E8BE68::FUN_10bca010(Ar);
+    Class_10E8BE68::Serialize(Ar);
     Ar.Serialize(&Unknown40, 4);
     DAT_10ff667c->Unknown18->Virtual1(Ar, &Unknown44);
     Ar.Serialize(&Unknown48, 1);
@@ -230,6 +230,6 @@ void Class_10E95898::FUN_10be2090(FArchive& Ar)
 // FUNCTION: 0x10BE20E0 ?FUN_10be20e0@Class_10E959B0@@UAEXAAVFArchive@@@Z
 void Class_10E959B0::FUN_10be20e0(FArchive& Ar)
 {
-    Class_10E8BE68::FUN_10bca010(Ar);
+    Class_10E8BE68::Serialize(Ar);
     Ar.Serialize(&Unknown40, 1);
 }

@@ -51,34 +51,34 @@ public:
 class Class_10E82688
 {
 public:
-    void FUN_10b5a570();
+    void StartSequence();
 
     char Unknown00[0x11C];
     Class_10A55050* Unknown11C;
-    char Unknown120[4];
-    int Unknown124;
-    int Unknown128;
-    int Unknown12C;
+    char m_FrameTime[4];
+    int m_Elapsed;
+    int m_FrameCount;
+    int m_Frame;
     int Unknown130;
     Class_10A64D50 Unknown134;
 };
 
-// FUNCTION: 0x10B5A570 ?FUN_10b5a570@Class_10E82688@@QAEXXZ
-void Class_10E82688::FUN_10b5a570()
+// FUNCTION: 0x10B5A570 ?StartSequence@Class_10E82688@@QAEXXZ
+void Class_10E82688::StartSequence()
 {
     if (Unknown11C)
     {
         Unknown11C->Virtual36();
-        Unknown128 = ((Class_10A55000*)Unknown11C)->FUN_10a55000();
-        if (!Unknown128)
-            Unknown128 = 1;
-        Unknown124 = 0;
+        m_FrameCount = ((Class_10A55000*)Unknown11C)->FUN_10a55000();
+        if (!m_FrameCount)
+            m_FrameCount = 1;
+        m_Elapsed = 0;
         Unknown134.FUN_10a64d50();
         Unknown130 = 0;
         if (Unknown11C)
             Unknown11C->FUN_10a55050(Unknown130);
-        Unknown12C = 0;
+        m_Frame = 0;
         Unknown11C->FUN_10a55050(Unknown130);
-        ((Class_10A54FE0*)Unknown11C)->FUN_10a54fe0(Unknown12C);
+        ((Class_10A54FE0*)Unknown11C)->FUN_10a54fe0(m_Frame);
     }
 }

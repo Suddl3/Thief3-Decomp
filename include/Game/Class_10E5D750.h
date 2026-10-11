@@ -3,12 +3,12 @@
 #ifndef GAME_CLASS_10E5D750_H
 #define GAME_CLASS_10E5D750_H
 
-class Class_10E6C6FC;
+class cTriggerByteEnumParam;
 
 class Class_10E5D750
 {
 public:
-    virtual Class_10E6C6FC* FUN_10a8c470(int A, int B);
+    virtual cTriggerByteEnumParam* FUN_10a8c470(int A, int B);
 };
 
 #endif // GAME_CLASS_10E5D750_H

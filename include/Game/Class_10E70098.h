@@ -3,10 +3,10 @@
 #ifndef GAME_CLASS_10E70098_H
 #define GAME_CLASS_10E70098_H
 
-#include "Game/Class_10E67938.h"
+#include "Game/cActorManager.h"
 #include "Game/Class_10E7007C.h"
 
-class Class_10E70098 : public Class_10E67938, public Class_10E7007C
+class Class_10E70098 : public cActorManager, public Class_10E7007C
 {
 public:
     ~Class_10E70098();

@@ -29,9 +29,9 @@ public:
     void FUN_10930170(int A, int B);
 
     char Pad04[0x4c];
-    int Unknown50;
+    int m_ItemCount;
     char Unknown54[4];
-    void** Unknown58;
+    void** m_Items;
 };
 
 // FUNCTION: 0x1092FF60 ?FUN_1092ff60@Class_10E49C6C@@QAEXHH@Z
@@ -40,8 +40,8 @@ void Class_10E49C6C::FUN_1092ff60(int A, int B)
     if (!DAT_10f2c754 && FUN_10925130(1))
     {
         FUN_1092fcb0(DAT_10f34130, DAT_10f34134, DAT_10f34138);
-        for (int i = 0; i < Unknown50; i++)
-            FUN_1092fae0(A, 1, Unknown58[i]);
+        for (int i = 0; i < m_ItemCount; i++)
+            FUN_1092fae0(A, 1, m_Items[i]);
         FUN_10925190(1);
     }
 }

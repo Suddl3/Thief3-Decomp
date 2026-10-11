@@ -15,7 +15,7 @@ public:
 class Class_10E6A9F8
 {
 public:
-    void FUN_10a64d70();
+    void MarkDirty();
     void FUN_10a56b40(const FString& Value);
 
     char Unknown00[0x158];
@@ -28,6 +28,6 @@ void Class_10E6A9F8::FUN_10a56b40(const FString& Value)
     if (Unknown158.FUN_10af80a0(Value))
     {
         Unknown158 = Value;
-        FUN_10a64d70();
+        MarkDirty();
     }
 }

@@ -4,7 +4,7 @@
 #include "Game/Class_10C0C150.h"
 #include "Game/Item_10C0C150.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 // FUNCTION: 0x10C0C050 ?FUN_10c0c050@Class_10C0C150@@QAEXXZ
 void Class_10C0C150::FUN_10c0c050()
@@ -12,7 +12,7 @@ void Class_10C0C150::FUN_10c0c050()
     FUN_10c0be50(0);
     if (Unknown04)
     {
-        FUN_10905aa0()->Virtual5(Unknown08);
+        GetAllocator()->Virtual5(Unknown08);
         Unknown08 = 0;
         Unknown04 = 0;
     }

@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10905A90_Member.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 // A growable array of pointers: a count, the bytes allocated and the block,
 // grown and shrunk 16 entries at a time.
@@ -12,31 +12,31 @@ public:
     void FUN_10bfbd70(int NewCount)
     {
         int Capacity = !Unknown08 ? 0 : Unknown04 / sizeof(void*);
-        FUN_10905aa0()->Virtual8(0, 0);
+        GetAllocator()->Virtual8(0, 0);
         if (NewCount > Capacity)
         {
             int NewCapacity = NewCount;
             if (Capacity)
                 NewCapacity = (NewCount & ~15) + 16;
-            Unknown08 = (void**)FUN_10905aa0()->Virtual3(Unknown08, NewCapacity * sizeof(void*), 0, 0, 0, 0);
+            Unknown08 = (void**)GetAllocator()->Virtual3(Unknown08, NewCapacity * sizeof(void*), 0, 0, 0, 0);
             Unknown04 = NewCapacity * sizeof(void*);
         }
         else if (NewCount <= Capacity - 16)
         {
             if (NewCount == 0)
             {
-                FUN_10905aa0()->Virtual5(Unknown08);
+                GetAllocator()->Virtual5(Unknown08);
                 Unknown08 = 0;
                 Unknown04 = 0;
             }
             else
             {
                 int NewCapacity = (NewCount & ~15) + 16;
-                Unknown08 = (void**)FUN_10905aa0()->Virtual3(Unknown08, NewCapacity * sizeof(void*), 0, 0, 0, 0);
+                Unknown08 = (void**)GetAllocator()->Virtual3(Unknown08, NewCapacity * sizeof(void*), 0, 0, 0, 0);
                 Unknown04 = NewCapacity * sizeof(void*);
             }
         }
-        FUN_10905aa0()->Virtual9();
+        GetAllocator()->Virtual9();
         Unknown00 = NewCount;
     }
 
@@ -45,7 +45,7 @@ public:
         FUN_10bfbd70(0);
         if (Unknown04)
         {
-            FUN_10905aa0()->Virtual5(Unknown08);
+            GetAllocator()->Virtual5(Unknown08);
             Unknown08 = 0;
             Unknown04 = 0;
         }

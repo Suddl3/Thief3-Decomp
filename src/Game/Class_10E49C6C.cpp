@@ -13,8 +13,8 @@ void Class_10E49C6C::FUN_1092ff00(int A, int B)
 {
     if (!DAT_10f2c759 && DAT_10efef9c < DAT_10efefa0 && FUN_10925130(6))
     {
-        for (int i = 0; i < Unknown50; i++)
-            FUN_1092fae0(A, 6, Unknown58[i]);
+        for (int i = 0; i < m_ItemCount; i++)
+            FUN_1092fae0(A, 6, m_Items[i]);
         FUN_10925190(6);
     }
 }

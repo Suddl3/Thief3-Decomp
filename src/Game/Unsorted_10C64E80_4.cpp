@@ -7,7 +7,7 @@ void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D
 
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 // One of the eight 0x38-byte entries at Class_10C662F0+0x1C.
 class Class_10C662F0_Unknown1C
@@ -42,9 +42,9 @@ bool Class_10C662F0::FUN_10c662f0(int A, int B, int C)
     unsigned int Index = (unsigned int)B >> 29;
     if (Unknown1C[Index].FUN_10d57ac0(A))
     {
-        FUN_10905aa0()->Virtual8(0, 0);
+        GetAllocator()->Virtual8(0, 0);
         *(Class_10C68070**)C = new(0, 0, 0, 0, 0) Class_10C68070();
-        FUN_10905aa0()->Virtual9();
+        GetAllocator()->Virtual9();
         (*(Class_10C68070**)C)->Virtual6(B);
         FUN_10c65bf0(B, *(Class_10C68070**)C);
         Unknown1C[Index].FUN_10d580e0(A);

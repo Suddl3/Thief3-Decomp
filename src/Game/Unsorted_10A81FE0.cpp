@@ -40,10 +40,10 @@ public:
     int Unknown10;
 };
 
-// FUNCTION: 0x10A823C0 ?FUN_10a823c0@cConversation@@UAEXH@Z
-void cConversation::FUN_10a823c0(int Value)
+// FUNCTION: 0x10A823C0 ?AddConEvent@cConversation@@UAEXH@Z
+void cConversation::AddConEvent(int Value)
 {
-    Class_10C00A60* Array = &Unknown04;
+    Class_10C00A60* Array = &m_ConEvents;
     int Index = Array->Unknown00;
     Array->FUN_10c00a60(Index + 1);
     Array->Unknown08[Index] = Value;

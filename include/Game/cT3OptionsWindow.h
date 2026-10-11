@@ -138,9 +138,9 @@ public:
     virtual void Virtual122();
     virtual void Virtual123();
 
-    Class_109081E0 FUN_10b718f0();
+    Class_109081E0 GetPaneFileName();
     void FUN_10b71200(bool p1);
-    int FUN_10b71220();
+    int GetValue();
     void FUN_10b71a80();
     void FUN_10b71600();
     void FUN_10b716a0();

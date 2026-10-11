@@ -155,11 +155,11 @@ public:
 
 extern const char DAT_10e84284[];
 
-class Class_10E84088
+class cT3InventoryWindow
 {
 public:
     void* FUN_10b61c90();
-    Class_109081E0 FUN_10b61ea0();
+    Class_109081E0 GetInventoryPaneFileName();
 
     char Unknown00[0x1ac];
     void* Field1AC;
@@ -366,8 +366,8 @@ void Class_10B61020::FUN_10b61020(int param)
     Field1ec = param;
 }
 
-// FUNCTION: 0x10B61C90 ?FUN_10b61c90@Class_10E84088@@QAEPAXXZ
-void* Class_10E84088::FUN_10b61c90()
+// FUNCTION: 0x10B61C90 ?FUN_10b61c90@cT3InventoryWindow@@QAEPAXXZ
+void* cT3InventoryWindow::FUN_10b61c90()
 {
     return Field1AC;
 }
@@ -378,8 +378,8 @@ void FUN_10b61d20()
     ((Class_10B61D20*)DAT_10ff659c[0])->FUN_10b61be0();
 }
 
-// FUNCTION: 0x10B61EA0 ?FUN_10b61ea0@Class_10E84088@@QAE?AVClass_109081E0@@XZ
-Class_109081E0 Class_10E84088::FUN_10b61ea0()
+// FUNCTION: 0x10B61EA0 ?GetInventoryPaneFileName@cT3InventoryWindow@@QAE?AVClass_109081E0@@XZ
+Class_109081E0 cT3InventoryWindow::GetInventoryPaneFileName()
 {
     return Class_109081E0(DAT_10e84284);
 }

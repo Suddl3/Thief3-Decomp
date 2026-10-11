@@ -7,20 +7,20 @@
 class Class_10E8BE68
 {
 public:
-    virtual void FUN_10bca010(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 };
 
-class Class_10E94578 : public Class_10E8BE68
+class cTacticMoveToPoint : public Class_10E8BE68
 {
 public:
-    void FUN_10bc5b50();
+    void PopState();
 };
 
 extern Class_10FF667C* DAT_10ff667c;
 
 double GetTimeSeconds();
 
-class Class_10E95898 : public Class_10E94578
+class Class_10E95898 : public cTacticMoveToPoint
 {
 public:
     virtual void Virtual1();
@@ -99,5 +99,5 @@ public:
 void Class_10E95898::FUN_10be1c00()
 {
     if (Unknown40 + 1.0f < GetTimeSeconds())
-        FUN_10bc5b50();
+        PopState();
 }

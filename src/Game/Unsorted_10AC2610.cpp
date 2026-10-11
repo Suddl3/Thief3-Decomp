@@ -24,9 +24,9 @@ public:
 
 extern UEngine* GEngine;
 
-Options* FUN_10929550();
+Options* GetOptions();
 
-class Class_10E6F910
+class cT3Camera
 {
 public:
     virtual void Virtual0();
@@ -69,13 +69,13 @@ int GarrettOnCamera::FUN_10ac2610(float Value)
     return 0;
 }
 
-// FUNCTION: 0x10AC2CC0 ?FUN_10ac2cc0@Class_10E6F910@@UAEMXZ
-float Class_10E6F910::FUN_10ac2cc0()
+// FUNCTION: 0x10AC2CC0 ?FUN_10ac2cc0@cT3Camera@@UAEMXZ
+float cT3Camera::FUN_10ac2cc0()
 {
     float Saved70 = GEngine->Client->Unknown70;
     float Saved68 = GEngine->Client->Unknown68;
     float Saved6C = GEngine->Client->Unknown6C;
-    FUN_10929550()->FUN_10ab5c60(8);
+    GetOptions()->FUN_10ab5c60(8);
     float Result = GEngine->Client->Unknown70;
     GEngine->Client->Unknown70 = Saved70;
     GEngine->Client->Unknown68 = Saved68;

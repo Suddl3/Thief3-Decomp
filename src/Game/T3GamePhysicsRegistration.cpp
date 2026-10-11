@@ -3,7 +3,7 @@
 #include "T3GamePhysics/T3GamePhysicsClasses.h"
 #include "Game/Class_10905A90_Member.h"
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 // Ion Storm's placement new and its delete (0x10905C10; the delete folded into ::operator delete).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
@@ -26,13 +26,13 @@ void UT3GamePhysics::InitializePrivateStaticClassUT3GamePhysics()
 // FUNCTION: 0x10961960 ?GetPrivateStaticClassUT3GamePhysics@UT3GamePhysics@@SAPAVUClass@@PBD@Z
 UClass* UT3GamePhysics::GetPrivateStaticClassUT3GamePhysics(const TCHAR* Package)
 {
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     UClass* ReturnClass = ::new(0, 0, 0, 0, 0) UClass(EC_StaticConstructor, sizeof(UT3GamePhysics), StaticClassFlags,
                                                       FGuid(0, 0, 0, 0), &TEXT("UT3GamePhysics")[1], Package,
                                                       StaticConfigName(),
                                                       RF_Public | RF_Standalone | RF_Transient | RF_Native,
                                                       InternalConstructor,
                                                       (void (UObject::*)())&UT3GamePhysics::StaticConstructor);
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     return ReturnClass;
 }

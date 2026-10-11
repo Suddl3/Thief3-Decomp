@@ -8,7 +8,7 @@ class Class_10A58FE0
 public:
     virtual bool Virtual0(int A, int B, bool C);
 
-    void FUN_10a56010(int Mode);
+    void SetSelection(int Mode);
 };
 
 #endif // GAME_CLASS_10A58FE0_H

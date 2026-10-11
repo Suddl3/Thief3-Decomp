@@ -51,9 +51,9 @@ bool Class_1091D390::FUN_1091d390(int A, int B, int C, unsigned int D, int E, in
         return true;
     if (Unknown24 == 0)
     {
-        FUN_10905aa0()->Virtual8(0, 0);
+        GetAllocator()->Virtual8(0, 0);
         Unknown24 = new(0, 0, 0, 0, 0) Class_1091D390_Unknown24;
-        FUN_10905aa0()->Virtual9();
+        GetAllocator()->Virtual9();
     }
     return FUN_1091a690(Unknown24, C, A, B, D, E, F, G);
 }

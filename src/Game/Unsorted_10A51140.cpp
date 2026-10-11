@@ -19,7 +19,7 @@ public:
     void** Unknown128;
 };
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 struct Struct_1092E930_Element
 {
@@ -30,31 +30,31 @@ struct Struct_1092E930_Element
 void Class_1092E930::FUN_10a51140(int NewCount)
 {
     int Capacity = !Unknown08 ? 0 : Unknown04 / sizeof(Struct_1092E930_Element);
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     if (NewCount > Capacity)
     {
         int NewCapacity = NewCount;
         if (Capacity)
             NewCapacity = (NewCount & ~3) + 4;
-        Unknown08 = FUN_10905aa0()->Virtual3(Unknown08, NewCapacity * sizeof(Struct_1092E930_Element), 0, 0, 0, 0);
+        Unknown08 = GetAllocator()->Virtual3(Unknown08, NewCapacity * sizeof(Struct_1092E930_Element), 0, 0, 0, 0);
         Unknown04 = NewCapacity * sizeof(Struct_1092E930_Element);
     }
     else if (NewCount <= Capacity - 4)
     {
         if (NewCount == 0)
         {
-            FUN_10905aa0()->Virtual5(Unknown08);
+            GetAllocator()->Virtual5(Unknown08);
             Unknown08 = 0;
             Unknown04 = 0;
         }
         else
         {
             int NewCapacity = (NewCount & ~3) + 4;
-            Unknown08 = FUN_10905aa0()->Virtual3(Unknown08, NewCapacity * sizeof(Struct_1092E930_Element), 0, 0, 0, 0);
+            Unknown08 = GetAllocator()->Virtual3(Unknown08, NewCapacity * sizeof(Struct_1092E930_Element), 0, 0, 0, 0);
             Unknown04 = NewCapacity * sizeof(Struct_1092E930_Element);
         }
     }
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     Unknown00 = NewCount;
 }
 

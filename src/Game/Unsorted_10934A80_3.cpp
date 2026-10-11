@@ -8,14 +8,14 @@ class IDirect3DSurface8;
 
 extern IDirect3DDevice8* GDirect3DDevice8;
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 // FUNCTION: 0x10934D60 ?FUN_10934d60@Class_10934D60@@QAEPAV1@XZ
 Class_10934D60* Class_10934D60::FUN_10934d60()
 {
     Unknown00 = 0;
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     GDirect3DDevice8->CreateImageSurface(0x80, 0x80, 0x16, &Unknown00);
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     return this;
 }

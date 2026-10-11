@@ -19,9 +19,9 @@ void Class_10B9F950::FUN_10b9f950(FArchive& Ar, int Count)
     Unknown18.FUN_10bfbd70(Start + Count);
     for (int i = 0; i < Count; i++)
     {
-        FUN_10905aa0()->Virtual8(0, 0);
+        GetAllocator()->Virtual8(0, 0);
         Class_10B9F2F0* Item = new(0, 0, 0, 0, 0) Class_10B9F2F0(Ar);
-        FUN_10905aa0()->Virtual9();
+        GetAllocator()->Virtual9();
         Unknown18.Data[Start + i] = (int)Item;
     }
 }

@@ -75,31 +75,31 @@ public:
     virtual void Virtual55();
     virtual void Virtual56(int A);
 
-    void FUN_10b5a390();
-    void FUN_10b5a3d0();
+    void ResetFrame();
+    void Close();
 
     char Pad04[0x118];
     Class_10A55050* Unknown11C;
-    char Unknown120[4];
-    int Unknown124;
-    char Unknown128[8];
+    char m_FrameTime[4];
+    int m_Elapsed;
+    char m_FrameCount[8];
     int Unknown130;
     Class_10A64D50 Unknown134;
     char Pad135[0x3];
 };
 
-// FUNCTION: 0x10B5A390 ?FUN_10b5a390@Class_10E82688@@QAEXXZ
-void Class_10E82688::FUN_10b5a390()
+// FUNCTION: 0x10B5A390 ?ResetFrame@Class_10E82688@@QAEXXZ
+void Class_10E82688::ResetFrame()
 {
-    Unknown124 = 0;
+    m_Elapsed = 0;
     Unknown134.FUN_10a64d50();
     Unknown130 = 0;
     if (Unknown11C)
         Unknown11C->FUN_10a55050(Unknown130);
 }
 
-// FUNCTION: 0x10B5A3D0 ?FUN_10b5a3d0@Class_10E82688@@QAEXXZ
-void Class_10E82688::FUN_10b5a3d0()
+// FUNCTION: 0x10B5A3D0 ?Close@Class_10E82688@@QAEXXZ
+void Class_10E82688::Close()
 {
     Virtual56(0);
     static_cast<Class_109E8930*>(GWindowManager[0])->FUN_109e8930(this);

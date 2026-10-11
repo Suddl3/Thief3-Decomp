@@ -25,31 +25,31 @@ public:
     virtual void Virtual15();
     virtual void Virtual16();
     virtual void Virtual17();
-    virtual void FUN_10c0b870();
+    virtual void UpdateControllers();
     virtual void Virtual19(int A, int B);
 
-    char Unknown04[8];
-    int Unknown0C;
+    char m_Active[8];
+    int m_UpdateIndex;
     char Unknown10[4];
-    int Unknown14;
+    int m_Controllers;
     char Unknown18[0x28];
-    bool Unknown40;
+    bool m_UpdateAll;
 };
 
-// FUNCTION: 0x10C0B870 ?FUN_10c0b870@cAIManager@@UAEXXZ
-void cAIManager::FUN_10c0b870()
+// FUNCTION: 0x10C0B870 ?UpdateControllers@cAIManager@@UAEXXZ
+void cAIManager::UpdateControllers()
 {
     if (DAT_10f35dec && DAT_10f35dec->Unknown08)
     {
-        if (Unknown40)
+        if (m_UpdateAll)
         {
-            Virtual19(0, Unknown14);
+            Virtual19(0, m_Controllers);
             return;
         }
-        if (Unknown0C < Unknown14)
-            Virtual19(Unknown0C, Unknown0C + 1);
-        Unknown0C = Unknown0C + 1;
-        if (Unknown0C >= Unknown14)
-            Unknown0C = 0;
+        if (m_UpdateIndex < m_Controllers)
+            Virtual19(m_UpdateIndex, m_UpdateIndex + 1);
+        m_UpdateIndex = m_UpdateIndex + 1;
+        if (m_UpdateIndex >= m_Controllers)
+            m_UpdateIndex = 0;
     }
 }

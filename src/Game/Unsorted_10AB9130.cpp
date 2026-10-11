@@ -4,7 +4,7 @@
 #include "Game/Class_10AB9D40.h"
 #include "Game/Class_10AB9FF0.h"
 #include "Game/Class_10E5BBE0.h"
-#include "Game/Class_10E67938.h"
+#include "Game/cActorManager.h"
 #include "Game/Struct_10ABA050.h"
 #include "Game/Class_10E6F30C.h"
 #include "Game/Class_10E6F3F4.h"

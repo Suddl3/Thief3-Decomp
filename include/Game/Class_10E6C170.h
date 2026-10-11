@@ -16,13 +16,13 @@ public:
     virtual void Virtual0();
     virtual void Virtual1();
     virtual void Virtual2();
-    virtual void FUN_10aa8060(void* Reader, int Version, int Flag);
-    virtual int FUN_10aa8110(Class_10AA8110_Param* Src);
-    virtual int FUN_10aa8080(Object_10AA8080* Stream);
+    virtual void Load(void* Reader, int Version, int Flag);
+    virtual int CopyFromParam(Class_10AA8110_Param* Src);
+    virtual int Serialize(Object_10AA8080* Stream);
     virtual int FUN_10aa80d0(FILE* File, int Param);
-    virtual int FUN_10aa80b0(FILE* File, int Param);
+    virtual int Dump(FILE* File, int Param);
 
-    Class_10E6C170* FUN_10a81190();
+    Class_10E6C170* Construct();
 
     int Unknown04;
     int Unknown08;

@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Options.h"
 
-Options* FUN_10929550();
+Options* GetOptions();
 
 class Class_10B73810
 {
@@ -19,19 +19,19 @@ public:
 class cT3OptionsWindow : public Class_10B73810
 {
 public:
-    void FUN_10b73890();
+    void ResetToDefaults();
 
     char Unknown00[0x19C];
-    int Unknown19C;
+    int m_OptionCount;
     char Unknown1A0[0x4];
-    Class_10B739C0_Unknown1A4** Unknown1A4;
+    Class_10B739C0_Unknown1A4** m_Options;
 };
 
-// FUNCTION: 0x10B73890 ?FUN_10b73890@cT3OptionsWindow@@QAEXXZ
-void cT3OptionsWindow::FUN_10b73890()
+// FUNCTION: 0x10B73890 ?ResetToDefaults@cT3OptionsWindow@@QAEXXZ
+void cT3OptionsWindow::ResetToDefaults()
 {
-    for (int i = 0; i < Unknown19C; i++)
-        FUN_10929550()->Set(Unknown1A4[i]->Unknown00, FUN_10929550()->SetDefaults(Unknown1A4[i]->Unknown00));
+    for (int i = 0; i < m_OptionCount; i++)
+        GetOptions()->Set(m_Options[i]->Unknown00, GetOptions()->SetDefaults(m_Options[i]->Unknown00));
     FUN_10b737b0();
-    FUN_10929550()->FUN_10ab6420();
+    GetOptions()->FUN_10ab6420();
 }

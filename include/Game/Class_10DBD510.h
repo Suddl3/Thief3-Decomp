@@ -3,11 +3,11 @@
 #ifndef GAME_CLASS_10DBD510_H
 #define GAME_CLASS_10DBD510_H
 
-#include "Game/Class_10E9CFE0.h"
+#include "Game/SoundSchema.h"
 
 class Class_10BBDB40;
 
-class Class_10DBD510 : public Class_10E9CFE0
+class Class_10DBD510 : public SoundSchema
 {
 public:
     Class_10BBDB40* FUN_10dbd510(int Id);

@@ -12,7 +12,7 @@ extern "C" __declspec(dllimport) unsigned int __stdcall HeapSize(void* hHeap, un
 
 extern "C" __declspec(dllimport) int __stdcall HeapFree(void* hHeap, unsigned long dwFlags, void* lpMem);
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 // FUNCTION: 0x10905CD0 ?FUN_10905cd0@@YAXPAX@Z
 void FUN_10905cd0(void* Mem)
@@ -21,7 +21,7 @@ void FUN_10905cd0(void* Mem)
     {
         if (HeapSize(DAT_11008978, 0, Mem) == 0xffffffff)
         {
-            FUN_10905aa0()->Virtual5(Mem);
+            GetAllocator()->Virtual5(Mem);
             return;
         }
         DAT_10f29a6c -= HeapSize(DAT_11008978, 0, Mem);

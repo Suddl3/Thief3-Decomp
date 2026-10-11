@@ -141,7 +141,7 @@ public:
     virtual void Virtual122();
 };
 
-Class_10905A90_Member* FUN_10905aa0();
+Class_10905A90_Member* GetAllocator();
 
 extern WindowManager* GWindowManager;
 
@@ -153,7 +153,7 @@ public:
     void FUN_10b29a40();
 };
 
-Options* FUN_10929550();
+Options* GetOptions();
 
 class Class_10B64CE0_Unknown1B4
 {
@@ -306,7 +306,7 @@ void Class_10E84730::FUN_10b64ce0()
         }
         if (Unknown1B4 && Unknown1B4->Unknown1A4)
         {
-            ((Class_10AB5A90*)FUN_10929550())->FUN_10ab5a90();
+            ((Class_10AB5A90*)GetOptions())->FUN_10ab5a90();
             ((Class_10B29A40*)Window)->FUN_10b29a40();
             return;
         }

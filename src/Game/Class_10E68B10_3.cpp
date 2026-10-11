@@ -11,7 +11,7 @@ class Class_10E6A9F8
 {
 public:
     virtual void Virtual0();
-    void FUN_10a64d70();
+    void MarkDirty();
 };
 
 class Class_10E68B10 : public Class_10E6A9F8
@@ -62,6 +62,6 @@ void Class_10E68B10::FUN_10a56c90(FVector* A)
     if (Current->X != A->X || Current->Y != A->Y || Current->Z != A->Z)
     {
         Unknown34 = *A;
-        Class_10E6A9F8::FUN_10a64d70();
+        Class_10E6A9F8::MarkDirty();
     }
 }

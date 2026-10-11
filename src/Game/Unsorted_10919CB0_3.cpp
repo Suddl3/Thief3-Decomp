@@ -25,7 +25,7 @@ void Class_1091A8F0::FUN_1091a8f0()
     if (Unknown08)
     {
         int* Obj = Unknown08 - 1;
-        FUN_10905aa0()->Virtual5(Obj);
+        GetAllocator()->Virtual5(Obj);
         Unknown08 = 0;
     }
 }

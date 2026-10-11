@@ -34,11 +34,11 @@ extern void* DAT_10e85de0[];
 
 extern const char DAT_10e85fdc[];
 
-class Class_10E85DE0 : public Class_10B787F0
+class cDifficultyPane : public Class_10B787F0
 {
 public:
     void FUN_10b6b930();
-    Class_109081E0 FUN_10b6be00();
+    Class_109081E0 GetPaneFileName();
 
     void* Field00;
 };
@@ -403,15 +403,15 @@ void FUN_10b68100()
     FUN_10b790f0();
 }
 
-// FUNCTION: 0x10B6B930 ?FUN_10b6b930@Class_10E85DE0@@QAEXXZ
-void Class_10E85DE0::FUN_10b6b930()
+// FUNCTION: 0x10B6B930 ?FUN_10b6b930@cDifficultyPane@@QAEXXZ
+void cDifficultyPane::FUN_10b6b930()
 {
     Field00 = DAT_10e85de0;
     FUN_10b787f0();
 }
 
-// FUNCTION: 0x10B6BE00 ?FUN_10b6be00@Class_10E85DE0@@QAE?AVClass_109081E0@@XZ
-Class_109081E0 Class_10E85DE0::FUN_10b6be00()
+// FUNCTION: 0x10B6BE00 ?GetPaneFileName@cDifficultyPane@@QAE?AVClass_109081E0@@XZ
+Class_109081E0 cDifficultyPane::GetPaneFileName()
 {
     return Class_109081E0(DAT_10e85fdc);
 }
@@ -434,8 +434,8 @@ void Class_10B71140::FUN_10b71140()
         Unknown04->Virtual124();
 }
 
-// FUNCTION: 0x10B718F0 ?FUN_10b718f0@cT3OptionsWindow@@QAE?AVClass_109081E0@@XZ
-Class_109081E0 cT3OptionsWindow::FUN_10b718f0()
+// FUNCTION: 0x10B718F0 ?GetPaneFileName@cT3OptionsWindow@@QAE?AVClass_109081E0@@XZ
+Class_109081E0 cT3OptionsWindow::GetPaneFileName()
 {
     return Class_109081E0(DAT_10e875ac);
 }

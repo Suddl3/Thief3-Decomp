@@ -27,7 +27,7 @@ public:
 Class_10E6C68C::Class_10E6C68C()
 {
     Unknown04 = 0;
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     Unknown0C.FUN_1090a590(DAT_10e6c100);
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
 }

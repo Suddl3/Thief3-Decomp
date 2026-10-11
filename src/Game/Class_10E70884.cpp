@@ -7,15 +7,15 @@ public:
     virtual ~Class_10E6CA18();
 };
 
-class Class_10E67938
+class cActorManager
 {
 public:
-    Class_10E67938();
+    cActorManager();
 
     virtual void FUN_10a4c470(int Type, int A, int B, int C);
 };
 
-class Class_10E70884 : public Class_10E6CA18, public Class_10E67938
+class Class_10E70884 : public Class_10E6CA18, public cActorManager
 {
 public:
     Class_10E70884();

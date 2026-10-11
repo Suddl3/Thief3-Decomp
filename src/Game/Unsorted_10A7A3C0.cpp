@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Core/Core.h"
 #include "Game/Class_10AF7F80.h"
-#include "Game/Class_10E6BD90.h"
+#include "Game/cRigidAttachmentManager.h"
 
 class AActor
 {
@@ -31,8 +31,8 @@ FString __stdcall FUN_10a7a770(Class_10AF7F80* Src, int* Pos)
     return FString(Buf);
 }
 
-// FUNCTION: 0x10A7A920 ?FUN_10a7a920@Class_10E6BD90@@UAEXPAVUObject@@HH@Z
-void Class_10E6BD90::FUN_10a7a920(UObject* Obj, int Unknown04, int Unknown08)
+// FUNCTION: 0x10A7A920 ?FUN_10a7a920@cRigidAttachmentManager@@UAEXPAVUObject@@HH@Z
+void cRigidAttachmentManager::FUN_10a7a920(UObject* Obj, int Unknown04, int Unknown08)
 {
     if (Obj && Obj->Class->ClassDefaultObject != Obj && Obj->IsA(AActor::StaticClass()))
     {

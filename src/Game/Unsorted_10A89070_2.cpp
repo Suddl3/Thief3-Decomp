@@ -1,20 +1,20 @@
 // Game/Unsorted_10A89070_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/cTriggerSoundSchemaParam.h"
-#include "Game/Class_10E6C6FC.h"
+#include "Game/cTriggerByteEnumParam.h"
 
 extern int DAT_10f3a1dc;
 
 extern int DAT_10f3a1e0;
 
-// FUNCTION: 0x10A8AC20 ?FUN_10a8ac20@cTriggerSoundSchemaParam@@UAE_NXZ
-bool cTriggerSoundSchemaParam::FUN_10a8ac20()
+// FUNCTION: 0x10A8AC20 ?IsLimitReached@cTriggerSoundSchemaParam@@UAE_NXZ
+bool cTriggerSoundSchemaParam::IsLimitReached()
 {
     return DAT_10f3a1dc >= DAT_10f3a1e0;
 }
 
-// FUNCTION: 0x10A8C1F0 ?FUN_10a8c1f0@Class_10E6C6FC@@UAE_NXZ
-bool Class_10E6C6FC::FUN_10a8c1f0()
+// FUNCTION: 0x10A8C1F0 ?HasIndex@cTriggerByteEnumParam@@UAE_NXZ
+bool cTriggerByteEnumParam::HasIndex()
 {
-    return Unknown08 != -1;
+    return m_Index != -1;
 }

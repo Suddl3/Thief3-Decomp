@@ -12,32 +12,32 @@ void Class_10A32D60::FUN_10a32c30(int NewCount)
     int Capacity = !Unknown08 ? 0 : Unknown04 / sizeof(Class_10A32370);
     for (int i = NewCount; i < OldCount; i++)
         Unknown08[i].~Class_10A32370();
-    FUN_10905aa0()->Virtual8(0, 0);
+    GetAllocator()->Virtual8(0, 0);
     if (NewCount > Capacity)
     {
         int NewCapacity = NewCount;
         if (Capacity)
             NewCapacity = (NewCount & ~15) + 16;
-        Unknown08 = (Class_10A32370*)FUN_10905aa0()->Virtual3(Unknown08, NewCapacity * sizeof(Class_10A32370), 0, 0, 0, 0);
+        Unknown08 = (Class_10A32370*)GetAllocator()->Virtual3(Unknown08, NewCapacity * sizeof(Class_10A32370), 0, 0, 0, 0);
         Unknown04 = NewCapacity * sizeof(Class_10A32370);
     }
     else if (NewCount <= Capacity - 16)
     {
         if (NewCount == 0)
         {
-            FUN_10905aa0()->Virtual5(Unknown08);
+            GetAllocator()->Virtual5(Unknown08);
             Unknown08 = 0;
             Unknown04 = 0;
         }
         else
         {
             int NewCapacity = (NewCount & ~15) + 16;
-            Unknown08 = (Class_10A32370*)FUN_10905aa0()->Virtual3(Unknown08, NewCapacity * sizeof(Class_10A32370), 0, 0, 0, 0);
+            Unknown08 = (Class_10A32370*)GetAllocator()->Virtual3(Unknown08, NewCapacity * sizeof(Class_10A32370), 0, 0, 0, 0);
             Unknown04 = NewCapacity * sizeof(Class_10A32370);
         }
     }
     for (int j = OldCount; j < NewCount; j++)
         new (&Unknown08[j]) Class_10A32370;
-    FUN_10905aa0()->Virtual9();
+    GetAllocator()->Virtual9();
     Unknown00 = NewCount;
 }

@@ -4,7 +4,7 @@
 #include "Game/Class_10BBDB40.h"
 #include "Game/Class_10DBD510.h"
 #include "Game/Class_10E90A1C.h"
-#include "Game/Class_10E9CFE0.h"
+#include "Game/SoundSchema.h"
 
 double GetTimeSeconds();
 
