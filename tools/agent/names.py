@@ -5,6 +5,7 @@
     python configure.py && ninja      # the split takes the new names: the report must not move
     python tools/agent/names.py list [<regex>]
     python tools/agent/names.py units # units still named after a class renamed since (apply does it too)
+    python tools/agent/names.py sync [--dry-run]  # rename what still uses a named placeholder (after integrating)
 
 A plan names placeholder classes and functions, each with its evidence:
 
@@ -71,10 +72,12 @@ def class_names(p: Project) -> Dict[str, Tuple[str, str]]:
 
 
 def renamer(renames: Dict[str, str]):
-    """Whole-identifier replacement (an identifier inside a decorated name or a path counts as one)."""
+    """Whole-identifier replacement, decorated names included. A placeholder carries its address, so only
+    its end is a boundary: in a decorated name a class follows ??0, ??_G, ??_7 or a type code (PAV),
+    letters and digits that a start boundary would refuse (`??0Class_10E65574@@QAE@XZ`)."""
     if not renames:
         return lambda text: text
-    pattern = re.compile(r"(?<![A-Za-z0-9_])(" + "|".join(sorted(map(re.escape, renames), key=len, reverse=True))
+    pattern = re.compile(r"(" + "|".join(sorted(map(re.escape, renames), key=len, reverse=True))
                          + r")(?![A-Za-z0-9_])")
     return lambda text: pattern.sub(lambda m: renames[m.group(1)], text)
 
@@ -91,6 +94,7 @@ def rename_symbols(text: str, rename) -> Tuple[str, int]:
             out.append(line)
             continue
         changed += 1
+        present.add(new)  # a later line renamed to it too stays as it is
         out.append(f"{new} = {m.group(2)}:{m.group(3)};{m.group(4)}")
         out.append(f"{m.group(1)} = {m.group(2)}:{m.group(3)}; // type:alias")
     return "\n".join(out) + "\n", changed
@@ -149,6 +153,23 @@ def apply(p: Project, plan: dict, dry_run: bool) -> int:
         print("refused:", line)
     if problems:
         return 1
+    rewrite(p, renames, dry_run, lambda: record(p, plan))
+    return 0
+
+
+def recorded(p: Project) -> Dict[str, str]:
+    """Every rename names.txt records, as placeholder -> name (functions as FUN_<address>)."""
+    out = {}
+    for kind, old, new, _ in load_names(p):
+        if kind == "class":
+            out[old] = new
+        elif kind == "function":
+            out[f"FUN_{int(old, 16):08x}"] = new
+    return out
+
+
+def rewrite(p: Project, renames: Dict[str, str], dry_run: bool, after=None) -> None:
+    """Rename the placeholders everywhere: sources, headers (and their files), records, symbols.txt, units."""
     rename = renamer(renames)
     changed: List[Path] = []
     files = (list(p.src_dir.rglob("*.cpp")) + list(p.include_dir.rglob("*.h"))
@@ -166,7 +187,7 @@ def apply(p: Project, plan: dict, dry_run: bool) -> int:
     moved = []
     for old, name in renames.items():
         header = p.include_dir / "Game" / f"{old}.h"
-        if header.is_file():
+        if header.is_file() and not header.with_name(f"{name}.h").exists():
             target = header.with_name(f"{name}.h")
             moved.append((header, target))
             if not dry_run:
@@ -175,12 +196,12 @@ def apply(p: Project, plan: dict, dry_run: bool) -> int:
     units = unit_renames(p, {old: new for old, new in renames.items() if CLASS_PLACEHOLDER.match(old)})
     if not dry_run:
         p.symbols_txt.write_text(symbols_text, encoding="utf-8", newline="\n")
-        record(p, plan)
+        if after:
+            after()
         rename_units(p, units)
     print(f"{len(renames)} names; {len(changed)} files, {len(moved)} headers and {len(units)} units renamed, "
           f"{symbols_changed} symbols.txt names (the old ones kept as aliases)"
           + (" (dry run: nothing written)" if dry_run else "; next: python configure.py && ninja"))
-    return 0
 
 
 def unit_renames(p: Project, classes: Dict[str, str]) -> List[Tuple[str, str]]:
@@ -229,6 +250,8 @@ def main() -> None:
     li = sub.add_parser("list")
     li.add_argument("pattern", nargs="?", default="")
     sub.add_parser("units")
+    sy = sub.add_parser("sync")
+    sy.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
     p = Project()
     if args.command == "apply":
@@ -237,6 +260,9 @@ def main() -> None:
         units = unit_renames(p, {old: new for old, (new, _) in class_names(p).items()})
         rename_units(p, units)
         print(f"{len(units)} units renamed" + ("; next: python configure.py && ninja" if units else ""))
+        return
+    if args.command == "sync":  # what still uses a placeholder names.txt has named (new code, a missed name)
+        rewrite(p, recorded(p), args.dry_run)
         return
     for kind, old, new, why in load_names(p):
         if re.search(args.pattern, f"{kind} {old} {new} {why}"):

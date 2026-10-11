@@ -593,7 +593,15 @@ accepted and deferred records and `symbols.txt` (the old names stay as
 aliases, so a pending source using one still pairs), and records each name
 with its evidence in `config/<version>/names.txt`; `classmap.py` keeps the
 class names in `classmap.txt`, so workers are asked for them.
-`names.py list [<regex>]` prints the names given so far.
+`names.py list [<regex>]` prints the names given so far, and
+`names.py sync` renames what still uses a placeholder names.txt has named
+(an integration's new code, say). A placeholder carries its address, so only
+its end is a boundary: in a decorated name a class follows `??0`, `??_G`,
+`??_7` or a type code (`PAVClass_...`).
+
+The report must not move. A derived method named like its base one, whose
+body called the base's placeholder unqualified, now calls itself: name the
+base (`Base::Name()`), as the original's direct call does.
 
 A plan's `fields` go through `tools/agent/fields.py apply <plan>` after
 names.py (a class key that names.py has renamed resolves to the new name).

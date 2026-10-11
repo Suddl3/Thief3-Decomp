@@ -1192,12 +1192,16 @@ TESTS.append(test_fixnames_aliases)
 
 
 def test_names(base: Path) -> None:
-    """names.py renames whole identifiers, inside decorated names too, and keeps a renamed symbols.txt name as
-    an alias."""
+    """names.py renames placeholders up to their end, inside decorated names too (after ??0, ??_7 or a type
+    code like PAV), and keeps a renamed symbols.txt name as an alias."""
     import names
     rename = names.renamer({"Class_10BFBD70": "PtrArray", "FUN_10bfbd70": "Empty"})
-    check(rename("Class_10BFBD70* p; Class_10BFBD70_Member m; ?FUN_10bfbd70@Class_10BFBD70@@QAEXXZ; xFUN_10bfbd70")
-          == "PtrArray* p; Class_10BFBD70_Member m; ?Empty@PtrArray@@QAEXXZ; xFUN_10bfbd70", "whole identifiers only")
+    check(rename("Class_10BFBD70* p; Class_10BFBD70_Member m; ?FUN_10bfbd70@Class_10BFBD70@@QAEXXZ;")
+          == "PtrArray* p; Class_10BFBD70_Member m; ?Empty@PtrArray@@QAEXXZ;", "the whole placeholder only")
+    check(rename("??0Class_10BFBD70@@QAE@XZ ??_GClass_10BFBD70@@UAEPAXI@Z ??_7Class_10BFBD70@@6B@ "
+                 "?F@@YAXPAVClass_10BFBD70@@@Z __ehhandler$??1Class_10BFBD70@@UAE@XZ")
+          == "??0PtrArray@@QAE@XZ ??_GPtrArray@@UAEPAXI@Z ??_7PtrArray@@6B@ ?F@@YAXPAVPtrArray@@@Z "
+             "__ehhandler$??1PtrArray@@UAE@XZ", "constructors, destructors, vtables and parameter types")
     text, changed = names.rename_symbols("?FUN_10bfbd70@Class_10BFBD70@@QAEXXZ = .text:0x10BFBD70; "
                                          "// type:function size:0x10\n", rename)
     check(changed == 1 and text.splitlines() == [
