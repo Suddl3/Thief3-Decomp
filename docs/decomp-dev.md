@@ -144,7 +144,7 @@ gate is the proof.
 The report can still under-count: objdiff scores a few functions the gate
 matched just below 100% (a static local's guard, a reference into a named
 array at an offset; see [matching.md](matching.md), "objdiff's report and
-the gate"): 105 of the 6,107 in `src/`.
+the gate"): 181 of the 6,878 in `src/`.
 Functions with an exception frame no longer do: `tools/split.py` gives the
 split objects the `__except_list` relocations the exe dropped. Nor do their
 `__ehhandler$` stubs and unwind funclets: both sides name a function's

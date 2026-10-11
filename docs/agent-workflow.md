@@ -247,6 +247,62 @@ returning `Class_109081E0(DAT_x)`). Library and compiler-generated shapes the
 workers recognize (STL `_Tidy`, `_Ufill`, `std::fill`, global initializers)
 go to `excluded.json` as they report them.
 
+### Batch w11: 20 Haiku workers on 160 to 319 bytes (2026-10-10)
+
+20 Haiku workers at once on functions of 160 to 319 bytes
+(`--by-class N=4 COUNT=1 CAP=10`), 388 workers over about seven hours, each
+freed slot refilled at once, integrated at the end. Counted by `sweep.py`:
+
+| Band | Workers | Matched by workers | First try | Per worker-hour | Tokens per match |
+|---|---|---|---|---|---|
+| 160 to 319 | 388 | 609 of 1,546 (39%) | 291 | about 4 | 206K |
+
+Tokens per match as for w10 (the sub-agents' own counts); `sweep.py` puts
+the batch at 753K priced tokens per match. The deferrals by blocker: name
+conflicts 297, register tiebreaks 218, other code generation 103, exception
+frames 93, layouts 72, signatures 41, compiler-generated 26, vtables 26,
+library 25, inlining 18. Name conflicts were a third: the lead probed each
+names-only deferral as it came in (`fixnames.py aliases`) and kept the names
+in one plan, which the naming pass applied after integration (292 renames,
+the destructors unwind funclets call among them, and 529 aliases): 181 of
+the 273 functions it had blocked matched at once.
+
+What the batch taught, now in the protocol or the gate:
+
+- **The game was built with link-time code generation**
+  ([matching.md](matching.md), "Link-time code generation"): a few static
+  helpers take arguments in registers no C++ declaration gives, and a few
+  callers rely on a callee leaving a register alone. Those are excluded
+  (`ltcg:`). Workers took far more for it than it holds: a method call
+  (whatever is in ecx before a call is its `this`), a virtual call, the
+  pushes of an outer call, and `push ecx; mov ecx, esp`, which reserves the
+  slot of a class passed by value. Each became a rule in worker.md, and the
+  deferrals went back to the queue.
+- **Nested calls split their pushes either way.** Two callee-cleaned calls,
+  one in the other's arguments, compile alike whichever call a push is given
+  to, and accepted sources had given an outer call's pushes to 4-byte getters
+  that take none. The gate now checks each direct call against its callee's
+  `ret` (see [Name conflicts](#name-conflicts)); 4 accepted functions that
+  fail it went back to the queue.
+- **A function's own guessed name is the worker's to correct**, and a callee
+  whose name disagrees with its call site is declared as the call site shows
+  and tried, so the lead can take the name from the best candidate.
+- **The STL hides in game ranges.** `build/agent/lead-tools/stlscan.py`
+  compiles the VC7.1 standard library's char streams, strings, locale facets
+  and containers and compares their code with every accepted and queued
+  function: 239 are the library's and excluded, and 9 that had reached
+  `src/` came out (`libscan.py` found two more among the new matches).
+- **C names have one underscore.** A match that declared `extern "C" int
+  _sprintf(...)` bound the runtime's `sprintf` as `__sprintf`, and
+  integration wrote that over `_sprintf`: six functions dropped to 99.8% in
+  the report (objdiff pairs references by name) until the source said
+  `sprintf`. Compare the report after every integration.
+
+After the batch, `src/` holds 6,878 functions (from 6,107), and game code
+at 100% is 7,260 of 12,252 functions, 18.6% of its bytes (from 6,329 and
+13.3%). 71 accepted functions still clash with their units (an overflow unit
+does not take them either), and the 160-to-319 band has 283 functions left.
+
 ## Running a swarm as a workflow
 
 [.claude/workflows/t3-swarm.js](../.claude/workflows/t3-swarm.js) runs one

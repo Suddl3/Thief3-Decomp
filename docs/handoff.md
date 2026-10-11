@@ -48,16 +48,16 @@ decompilation** worked mostly by Claude agents under the strict gate in
   unclassified); `include/Core/Core.h` keeps the declarations the game code
   compiles against. Matching runs as the [agent
   workflow](agent-workflow.md): a swarm of up to 20 sub-agents at a time
-  (Haiku or Sonnet on functions under 160 bytes, Opus on bigger ones), from the one-file protocol `tools/agent/worker.md`. `src/Game` holds 6,107
-  matched functions in 2,985 units, one per auto unit of the split
+  (Haiku or Sonnet on functions under 160 bytes, Opus on bigger ones), from the one-file protocol `tools/agent/worker.md`. `src/Game` holds 6,878
+  matched functions in 3,642 units, one per auto unit of the split
   (`Unsorted_<start>.cpp`, chunks of up to 64 KB; `_2`, `_3`, ... hold
-  functions whose classes clash with their unit's); 1,208 of them are named
-  after the class most of their code is. 2,975 classes are declared once, in
+  functions whose classes clash with their unit's); 1,484 of them are named
+  after the class most of their code is. 3,361 classes are declared once, in
   `include/Game/<Class>.h`, and the placeholders the exe shows to be one
   class are folded (`config/PC_20040610/classmap.txt`; agent-workflow.md,
   "Class structure"). decomp.dev shows the
   committed report `progress/PC_20040610/report.json`, whose headline is the
-  game code (6,329 of 12,069 functions at 100%, 13.3% of its bytes; hidden from decomp.dev's list
+  game code (7,260 of 12,252 functions at 100%, 18.6% of its bytes; hidden from decomp.dev's list
   below 0.5% matched): regenerate it after integrating, see next step 2.
 - The 266 native classes are in `config/PC_20040610/classes.txt` (size,
   super class, flags, vtable; `tools/classify.py write`), and the 64 classes
@@ -220,12 +220,25 @@ Later the same day, played by the user:
      their subclasses' fields start), then give reconciliation workers
      (`tools/agent/reconcile.md`, tasks from
      `build/agent/lead-tools/reconcile_tasks.py`) what is left. Integration and `retry.py` check
-     in parallel, so a checkpoint takes minutes. About 5,530 game functions are
-     still queued: 65 under 80 bytes, 1,825 of 80 to 159, 3,640 of 160 and
-     more (Haiku's tests on the small ones: agent-workflow.md). Batch w7 ended (2026-10-03) with 425 deferrals and 47 accepted
+     in parallel, so a checkpoint takes minutes. About 3,090 game functions are
+     still queued: 5 under 80 bytes, 856 of 80 to 159, 283 of 160 to 319,
+     1,944 of 320 and more (Haiku's tests on the small ones: agent-workflow.md). Batch w7 ended (2026-10-03) with 425 deferrals and 47 accepted
      functions `integrate.py` cannot place (their classes clash with their
      unit's, in overflow units too); the renames and models its workers asked
      for are in the lead's local `build/agent/lead-backlog.md`.
+   - Batch w11 (2026-10-10, agent-workflow.md) ended with 1,506 deferrals
+     and 71 accepted functions `integrate.py` cannot place. What would
+     unblock most of the rest, in order: one class split over placeholders
+     that the class map cannot join (`Class_10BC4160` and `Class_10BC4BF0`
+     declare the same 20 slots and a member at +4, and the AI code in
+     `0x10BC0000` to `0x10BF0000` calls both on one `this`: add the merge by
+     hand, then requeue that range's name-blocked deferrals); the names
+     `tools/agent/arity.py` lists (412 at first, mostly `void FUN_x()`
+     guesses and `VirtualN()` slots of functions that take arguments: give
+     each the arguments its `ret` pops); and the string class
+     `Class_109081E0`, whose inline destructor about 20 deferrals schedule
+     differently from the game (some keep its pointer in a register across
+     calls, which may be link-time code generation).
    - First run on the real split after the 2026-10-02 changes
      ([research/ue2-decomps.md](research/ue2-decomps.md), section 3): build
      the family index (`clusters.py list`, which also shows how many open
@@ -332,8 +345,8 @@ Later the same day, played by the user:
      of stock UE2 files, non-UObject vtables) moves it to a side; the 117
      functions taken out of `src/` as unclassified can come back once it is
      game code.
-   - objdiff's report counts what the gate matched, but for 105 of the
-     6,107 functions in `src/`: a static local's guard and `$E` destructor
+   - objdiff's report counts what the gate matched, but for 181 of the
+     6,878 functions in `src/`: a static local's guard and `$E` destructor
      stub keep names only their object file knows, one global is read
      through the second half of an 8-byte symbol, `0x10C68010` starts
      inside `FUN_10c67f90` in `symbols.txt`, and some constructors and
