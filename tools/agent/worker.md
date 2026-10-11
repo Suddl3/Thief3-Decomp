@@ -220,8 +220,9 @@ types, as Ion Storm did. Neither is Epic's engine: a method of an Unreal Engine 
 (`UObject`, `UClass`, `FName`, `FString`, `FArchive`, `AActor`, `UEngine`,
 `ULevel`, `UViewport`, the render device, ...) is deferred at once with the
 blocker "engine: <class>". The queue only gives out what tools/classify.py
-calls game code: a class Ion Storm added to the Engine package
-(`Engine.PlayerPawn`, `Engine.CARDEntry`, ...) is theirs, and so is a method
+calls game code: a class Ion Storm added to Epic's packages
+(`Engine.PlayerPawn`, `Engine.CARDEntry`, `Core.BitfieldProperty`, ...: classes.txt
+says `category:game`) is theirs, and so is a method
 they added to an engine class (`APawn`'s `m_MotionCallbackArray` code): match
 what the queue gives you. Never pass `--replace`, `--cap`, `--patience` or `--include-siblings`,
 never run integrate.py, wave.py, sweep.py, fixnames.py, clusters.py stamp,
