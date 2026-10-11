@@ -216,7 +216,9 @@ Library code is not published: a target that is itself part of the STL,
 CRT, D3DX or Havok (a member of a `std::` template, a CRT routine) is
 deferred at once with the blocker "library: <what>". Game code that uses a library
 is game code: include the compiler's header (`#include <vector>`) and use its
-types, as Ion Storm did. Neither is Epic's engine: a method of an Unreal Engine class
+types, as Ion Storm did. So is game code with a `TArray<T>` local: use Core.h's
+TArray, whose instance destructor binds to the placeholder the target calls.
+Neither is Epic's engine: a method of an Unreal Engine class
 (`UObject`, `UClass`, `FName`, `FString`, `FArchive`, `AActor`, `UEngine`,
 `ULevel`, `UViewport`, the render device, ...) is deferred at once with the
 blocker "engine: <class>". The queue only gives out what tools/classify.py
