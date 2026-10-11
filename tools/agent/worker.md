@@ -272,7 +272,10 @@ conflict, not ltcg. A function that reads ecx at entry is likewise a method
 ltcg either: virtual functions keep the standard convention. Pushes before a call that a later call pops belong to the
 later call: MSVC evaluates arguments right to left, so `F(P->Get(), A, B)`
 pushes B and A, calls Get, pushes its result, calls F and pops all three. Get
-takes none of those pushes.
+takes none of those pushes. try.py checks every direct call against its
+callee's `ret`: a row saying `pops 0x8 bytes of arguments (its ret)` gives
+that call pushes another call pops, or names the callee with the wrong
+arguments (declare it as its ret shows and defer name-conflict).
 
 ## Names need evidence
 

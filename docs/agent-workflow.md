@@ -627,6 +627,22 @@ method, a destructor), and `integrate.py` renames the address and keeps
 the guess as an alias for the callers in `src/`. `retry.py --conflicts`
 accepted the waiting ones at once.
 
+A guess can also hide in matching bytes. Two callee-cleaned calls, one in
+the other's arguments, compile alike whichever call a push is given to:
+`Put(Get(), y)` and `Put(Get(y))` both push y, call Get, push its result
+and call Put. Only the callees' returns tell them apart, so since
+2026-10-10 `try.py` and `accept.py` (`Verifier(p, arity=True)`) refuse a
+direct call whose callee pops other than its name says: `ret N` for
+`__stdcall` and `__thiscall` (N its stack arguments, plus the hidden pointer
+of a class returned by value), a plain `ret` for `__cdecl`. Any of the
+address's names will do, since tools/cc.py compiles a call through an alias
+to the address's own name. Integration does not check it: integrated code
+predates the rule. Before it, accepted sources had given the pushes of an
+outer call to the 4-byte getters 0x10DBD510 and 0x10C7D570 (about 45
+callers) and to a singleton getter, and named ordinary methods `??_G`;
+re-checked, 4 of 1,200 pending accepted functions fail it, all on a callee
+named with the wrong convention.
+
 The first naming pass (2026-09-30) settled the rest by hand: 44 symbols got
 their real names, the 32 accepted callers that had pinned the guesses were
 rewritten (and `operator delete`'s 33), and 46 blocked functions matched.

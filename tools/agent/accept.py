@@ -104,8 +104,8 @@ def accept(argv) -> None:
     if problems:
         reject(["lint: " + pr for pr in problems])
 
-    res = Verifier(p).run(address, args.file, p.state / "tmp" / f"{agent}-{addr_key(address)}-accept",
-                          symbol=args.symbol)
+    res = Verifier(p, arity=True).run(address, args.file,
+                                      p.state / "tmp" / f"{agent}-{addr_key(address)}-accept", symbol=args.symbol)
     if not res.build_ok:
         reject(res.problems if not res.build_log else ["the file does not compile"] + res.build_log.splitlines()[:20])
     reasons = list(res.problems)

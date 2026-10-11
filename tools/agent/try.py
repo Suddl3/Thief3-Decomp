@@ -88,7 +88,7 @@ def main() -> None:
                f"close: python tools/agent/accept.py defer {fmt_addr(address)} \"<slug>: <one-line blocker>\"")
 
     workdir = p.state / "tmp" / f"{agent}-{addr_key(address)}"
-    res = Verifier(p).run(address, args.file, workdir, symbol=args.symbol)
+    res = Verifier(p, arity=True).run(address, args.file, workdir, symbol=args.symbol)
     if not res.build_ok and not res.build_log:
         print(f"CANNOT CHECK {fmt_addr(address)} (not counted): " + "; ".join(res.problems))
         sys.exit(3)

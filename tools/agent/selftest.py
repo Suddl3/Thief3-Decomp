@@ -1134,6 +1134,60 @@ def test_fixnames_aliases(base: Path) -> None:
     check(plan.get("blocked") == [e.addr(get)], "only the name-only function waits on the plan", proc)
 
 
+# Two callee-cleaned calls, one nested in the other's arguments: Put(Get(), y) pushes y, calls Get, pushes its
+# result and calls Put, which pops both. Put(Get(y)) compiles to the same bytes with the push given to Get.
+ARITY_REF = ("__declspec(noinline) int __stdcall Get() { return g_counter; }\n"
+             "__declspec(noinline) int __stdcall Put(int a, int b) { return a * 3 + b; }\n"
+             "int Nest(int y) { return Put(Get(), y); }\n")
+
+
+def test_arity(base: Path) -> None:
+    """try.py and accept.py refuse a direct call whose callee's name pops other than the callee's ret."""
+    from common import stack_bytes
+    check(stack_bytes("void __stdcall F(class C *,int)") == ("__stdcall", 8, False)
+          and stack_bytes("public: class V __thiscall V::operator+(class V const &)const ") == ("__thiscall", 4, True)
+          and stack_bytes("public: int __thiscall C::operator()(int,double)") == ("__thiscall", 12, False)
+          and stack_bytes("void __stdcall F(class V)") is None
+          and stack_bytes("int __cdecl printf(char const *,...)") is None, "stack arguments from demangled names")
+    e = Env(base, "arity", reference=DECLS + ARITY_REF)
+    nest = "?Nest@@YAHH@Z"
+    wrong = e.candidate(nest, "int Nest(int y) { return Put(Get(y)); }",
+                        extra="int __stdcall Get(int);\nint __stdcall Put(int);\n")
+    proc = e.run("try.py", e.addr(nest), wrong)
+    check(proc.returncode == 1 and "bytes of arguments (its ret)" in proc.stdout,
+          "the same bytes with Put's push given to Get must not match", proc)
+    proc = e.run("accept.py", e.addr(nest), wrong)
+    check(proc.returncode == 1, "accept.py must refuse it too", proc)
+    proc = e.run("try.py", e.addr(nest), e.candidate(nest, "int Nest(int y) { return Put(Get(), y); }",
+                                                     extra="int __stdcall Get();\nint __stdcall Put(int, int);\n"))
+    check(proc.returncode == 0, "the calls as their returns pop them match", proc)
+    # tools/cc.py compiles a call through an alias to the address's own name: any of its names will do.
+    import verify
+
+    class Image:
+        def pops(self, address):
+            return 8
+
+    class Names:
+        image = Image()
+
+        def __init__(self, names):
+            self.names = names
+
+        def names_at(self, address):
+            return self.names
+
+    rule = verify._Check.__new__(verify._Check)
+    rule.p, rule.dem = Project(), {"?Put@@YGHXZ": "int __stdcall Put(void)"}
+    rule.v = Names(["?Put@@YGHXZ", "?Put@@YGHHH@Z"])
+    check(rule.arity(0x10A40000, "?Put@@YGHXZ") is None, "an alias that pops 8 lets the call through")
+    rule.v = Names(["?Put@@YGHXZ"])
+    check("pops 0x8 bytes" in (rule.arity(0x10A40000, "?Put@@YGHXZ") or ""), "no name that pops 8: refused")
+
+
+TESTS.append(test_arity)
+
+
 TESTS.append(test_fixnames_aliases)
 
 

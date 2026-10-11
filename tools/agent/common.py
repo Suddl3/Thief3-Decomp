@@ -82,6 +82,55 @@ def guessed_name(name: str, address: int) -> bool:
     return re.match(r"\?FUN_%08x@" % address, name, re.I) is not None
 
 
+_SCALAR_SIZES = dict.fromkeys(
+    ("bool", "char", "signed char", "unsigned char", "short", "unsigned short", "int", "unsigned int", "long",
+     "unsigned long", "float", "wchar_t", "__wchar_t", "__int8", "unsigned __int8", "__int16", "unsigned __int16",
+     "__int32", "unsigned __int32"), 4)
+_SCALAR_SIZES.update(dict.fromkeys(("double", "long double", "__int64", "unsigned __int64"), 8))
+
+
+def _parameter_size(text: str) -> Optional[int]:
+    t = re.sub(r"\s+", " ", re.sub(r"\b(?:const|volatile)\b", "", text)).strip()
+    if t.endswith(("*", "&")) or "*)" in t or t.startswith("enum "):
+        return 4
+    return _SCALAR_SIZES.get(t)  # None: a class by value, whose size the name does not give
+
+
+def stack_bytes(demangled: str) -> Optional[Tuple[str, int, bool]]:
+    """(convention, bytes of stack arguments, returns a class by value) from a demangled function name, or
+    None when the name cannot tell: no convention, __fastcall, varargs or a class passed by value."""
+    conv = next((c for c in ("__cdecl", "__stdcall", "__thiscall") if f" {c} " in f" {demangled} "), None)
+    if conv is None:
+        return None
+    head, _, rest = demangled.partition(f" {conv} ")
+    at = rest.find("(")
+    if rest[:at].endswith("operator"):  # operator()(...): the second parentheses hold the parameters
+        at = rest.find("(", at + 2)
+    depth, params, part = 0, [], ""
+    for ch in rest[at:] if at >= 0 else "":
+        depth += (ch == "(") - (ch == ")")
+        depth += (ch == "<") - (ch == ">")
+        if depth == 0:
+            break
+        if ch == "," and depth == 1:
+            params.append(part)
+            part = ""
+        elif depth > 1 or ch != "(":
+            part += ch
+    else:
+        return None
+    total = 0
+    for prm in params + [part]:
+        if prm.strip() in ("", "void"):
+            continue
+        size = _parameter_size(prm)
+        if size is None:
+            return None
+        total += size
+    ret = re.sub(r"\b(?:public|private|protected):|\b(?:virtual|static|const|volatile)\b", "", head).strip()
+    return conv, total, ret.startswith(("class ", "struct ", "union ")) and not ret.endswith(("*", "&"))
+
+
 def emit(obj) -> None:
     print(json.dumps(obj, indent=1))
 

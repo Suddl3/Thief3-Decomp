@@ -43,7 +43,7 @@ from pathlib import Path
 from typing import Dict, List, Optional, Set, Tuple
 
 import coff
-from common import Project, demangle, fmt_addr, guessed_name, is_placeholder, qualified_name
+from common import Project, demangle, fmt_addr, guessed_name, is_placeholder, qualified_name, stack_bytes
 
 # Absolute symbols MSVC relocates against where the linked exe holds a plain value.
 ABSOLUTE = {"__except_list": 0, "__tls_array": 0x2C}
@@ -138,6 +138,23 @@ class TargetImage:
         self._index: Optional[List[Tuple[int, str, int, int]]] = None
         self._starts: List[int] = []
         self._objs: Dict[str, coff.Coff] = {}
+        self._pops: Dict[int, Optional[int]] = {}
+
+    def pops(self, address: int) -> Optional[int]:
+        """The bytes of stack arguments the function at `address` pops: its returns' `ret N` (iced-x86), up to
+        its first data object; None without iced-x86 or its bytes, or when it has no return or several kinds."""
+        if address not in self._pops:
+            found = set()
+            try:
+                from iced_x86 import Decoder, Mnemonic
+                view = self.view(address, self.p.code_extent(address)[0] - address)
+                if view is not None:
+                    found = {i.immediate16 if i.op_count else 0
+                             for i in Decoder(32, view.data, ip=address) if i.mnemonic == Mnemonic.RET}
+            except (ImportError, SystemExit, ValueError):
+                pass
+            self._pops[address] = found.pop() if len(found) == 1 else None
+        return self._pops[address]
 
     def _object(self, path: str) -> coff.Coff:
         if path not in self._objs:
@@ -276,9 +293,22 @@ def objdiff_rows(project: Project, target_obj: Path, base_obj: Path, symbol: str
 
 
 class Verifier:
-    def __init__(self, project: Project):
+    def __init__(self, project: Project, arity: bool = False):
+        """With `arity`, a direct call must also pop what its callee's returns pop (_Check.arity): the gate's
+        rule for new matches (try.py, accept.py), not for integrated code, whose names predate it."""
         self.p = project
         self.image = TargetImage(project)
+        self.arity = arity
+        self._names: Optional[Dict[int, List[str]]] = None
+
+    def names_at(self, address: int) -> List[str]:
+        """symbols.txt's names of an address: its own and its aliases."""
+        if self._names is None:
+            names: Dict[int, List[str]] = {}
+            for s in self.p.symbols:
+                names.setdefault(s.address, []).append(s.name)
+            self._names = names
+        return self._names.get(address, [])
 
     # -- the candidate -----------------------------------------------------------
     def pick(self, obj: coff.Coff, target: str, dem: Dict[str, str], symbol: Optional[str]) -> coff.Symbol:
@@ -536,9 +566,36 @@ class _Check:
                                  f"run ninja)")
                     continue
             problem = self.reference(target, tname, cobj, csym, cobj.addend(csec.index, cr))
+            if not problem and self.v.arity and cr.type == coff.IMAGE_REL_I386_REL32 and k \
+                    and c_bytes[k - 1] == 0xE8 and csym.is_function and not csym.defined:
+                problem = self.arity((target - cobj.addend(csec.index, cr)) & 0xFFFFFFFF, csym.name)
             if problem:
                 notes.append("reloc: " + problem)
         return notes
+
+    def arity(self, base: int, name: str) -> Optional[str]:
+        """A direct call's callee pops what its name says: `ret N` for __stdcall and __thiscall (N its stack
+        arguments; a class returned by value may add its hidden pointer), a plain ret for __cdecl. Identical
+        bytes can split one call's pushes over a nested call: the callee's returns tell which call takes them.
+        tools/cc.py compiles a call through an alias to the address's own name, so any of its names will do."""
+        sig = stack_bytes(self.dem.get(name, ""))
+        pops = self.v.image.pops(base) if sig else None
+        if pops is None:
+            return None
+        others = [n for n in self.v.names_at(base) if n != name and n.startswith("?")]
+        dem = demangle(self.p, others) if others else {}
+        for other in [sig] + [stack_bytes(dem.get(n, "")) for n in others]:
+            if other is None:
+                return None  # a name the check cannot read
+            conv, total, sret = other
+            if pops in ({0} if conv == "__cdecl" else {total, total + 4} if sret else {total}):
+                return None
+        conv, total, sret = sig
+        said = "none (__cdecl)" if conv == "__cdecl" else f"{total:#x}"
+        return (f"{fmt_addr(base)} pops {pops:#x} bytes of arguments (its ret), {name} {said}: pushes before a "
+                f"call that it does not pop belong to another call (MSVC pushes an outer call's arguments before "
+                f"it evaluates the inner one), so give each call the arguments its ret pops; if the name itself "
+                f"is wrong, declare the function as its ret shows and defer name-conflict")
 
     # -- references --------------------------------------------------------------
     def reference(self, target: int, tname: str, cobj: coff.Coff, csym: coff.Symbol, cadd: int) -> Optional[str]:
