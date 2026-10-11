@@ -1,5 +1,6 @@
 // Game/Unsorted_10A1F950.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include <vector>
 #include "Game/Class_10A1F9C0.h"
 #include "Game/Class_10A1F9D0.h"
@@ -7,8 +8,46 @@
 #include "Game/Class_10A1FB50.h"
 #include "Game/Class_10E6561C.h"
 #include "Game/Struct_10A1FA70.h"
+#include "Game/Class_1098E330.h"
+#include "Game/Class_10C00A60.h"
 
 extern void* DAT_10e6561c[];
+
+class Class_10AE7460
+{
+public:
+    bool FUN_10ae7460();
+
+    char Unknown00[0xE8];
+    Class_1098E330* UnknownE8;
+};
+
+class Class_10A1F950
+{
+public:
+    void FUN_10a1f950(Class_10AE7460* Obj);
+
+    int Unknown00;
+    Class_10C00A60 Unknown04;
+};
+
+// FUNCTION: 0x10A1F950 ?FUN_10a1f950@Class_10A1F950@@QAEXPAVClass_10AE7460@@@Z
+void Class_10A1F950::FUN_10a1f950(Class_10AE7460* Obj)
+{
+    int Index;
+    if (Obj->UnknownE8->FUN_1098e330(0x200467, &Index))
+    {
+        if (!Obj->FUN_10ae7460())
+        {
+            if (Unknown04.Unknown00 <= Index)
+                Unknown04.FUN_10c00a60(Index + 1);
+            Class_10AE7460* Old = (Class_10AE7460*)Unknown04.Unknown08[Index];
+            if (Old && Old != Obj)
+                Old->FUN_10ae7460();
+            Unknown04.Unknown08[Index] = (int)Obj;
+        }
+    }
+}
 
 // FUNCTION: 0x10A1F9C0 ?FUN_10a1f9c0@Class_10A1F9C0@@QAEHXZ
 int Class_10A1F9C0::FUN_10a1f9c0()

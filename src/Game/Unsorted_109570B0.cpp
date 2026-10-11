@@ -1,9 +1,28 @@
 // Game/Unsorted_109570B0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10957D20.h"
 #include "Game/Class_1095AFD0.h"
+#include "Core/Core.h"
 
 void FUN_10957be0(float* Out, float* A, float* B);
+
+// FUNCTION: 0x10957150 ?FUN_10957150@@YAXPAVFVector@@@Z
+void FUN_10957150(FVector* Value)
+{
+    if (Value->X < -359.0f)
+        Value->X += 360.0f;
+    if (Value->X > 359.0f)
+        Value->X -= 360.0f;
+    if (Value->Y < -359.0f)
+        Value->Y += 360.0f;
+    if (Value->Y > 359.0f)
+        Value->Y -= 360.0f;
+    if (Value->Z < -359.0f)
+        Value->Z += 360.0f;
+    if (Value->Z > 359.0f)
+        Value->Z -= 360.0f;
+}
 
 // FUNCTION: 0x10957BE0 ?FUN_10957be0@@YAXPAM00@Z
 void FUN_10957be0(float* Out, float* A, float* B)

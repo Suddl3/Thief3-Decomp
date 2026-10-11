@@ -1,0 +1,61 @@
+// Game/Unsorted_10B16110_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Declarations above the functions belong in include/ once they settle.
+
+#include "Game/Class_10BFBD70.h"
+#include "Game/Class_10B25D90.h"
+#include "Game/Class_10B25D60.h"
+
+class Class_10B255F0;
+
+Class_10B255F0* FUN_10b25cd0();
+
+class Class_10B2D600
+{
+public:
+    void FUN_10b2d600();
+};
+
+class Class_10B2E000
+{
+public:
+    void FUN_10b2cb50(int p1);
+    void FUN_10b2e000(int p1, int p2);
+
+    char Unknown00[0x11C];
+    int Unknown11C;
+};
+
+class Class_10B16930
+{
+public:
+    Class_10BFBD70 FUN_109e6d80(int A);
+    void FUN_10b166a0();
+    void FUN_10b16930();
+    void FUN_10b16780();
+    void FUN_10b16860(int A);
+    void FUN_10b16ef0(int A);
+    void FUN_10b16300(int A, int B, bool C);
+
+    char Pad00[0x1];
+};
+
+// FUNCTION: 0x10B16300 ?FUN_10b16300@Class_10B16930@@QAEXHH_N@Z
+void Class_10B16930::FUN_10b16300(int A, int B, bool C)
+{
+    Class_10B2D600* Item = 0;
+    Class_10BFBD70 Found = FUN_109e6d80(0x69);
+    if (Found.Count > 0)
+        Item = (Class_10B2D600*)Found.Data[0];
+    if (C)
+    {
+        if (Item)
+            Item->FUN_10b2d600();
+        Class_10B255F0* Obj = FUN_10b25cd0();
+        if ((char)A)
+            ((Class_10B25D90*)Obj)->FUN_10b25d90();
+        else
+            ((Class_10B25D60*)Obj)->FUN_10b25d60();
+    }
+    if (Item)
+        ((Class_10B2E000*)Item)->FUN_10b2e000(A, B);
+}

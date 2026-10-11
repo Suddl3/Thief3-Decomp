@@ -1,8 +1,10 @@
 // Game/Unsorted_1093EFF0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_109081E0.h"
 #include "Game/Class_1093EFB0.h"
 #include "Game/Class_10E4A538.h"
+#include <string.h>
 
 struct Struct_1093FFE0
 {
@@ -31,6 +33,42 @@ struct Item_1093F140
     int Unknown08;
     int Unknown0C;
 };
+
+extern const char DAT_10e47660[];
+
+class Class_1093F090_Unknown08
+{
+public:
+    const char* Unknown00;
+    int Unknown04;
+    int Unknown08;
+    int Unknown0C;
+};
+
+class Class_1093F090
+{
+public:
+    int FUN_1093f090(const char** Name, int A, int B);
+
+    int Unknown00;
+    int Unknown04;
+    Class_1093F090_Unknown08* Unknown08;
+};
+
+// FUNCTION: 0x1093F090 ?FUN_1093f090@Class_1093F090@@QAEHPAPBDHH@Z
+int Class_1093F090::FUN_1093f090(const char** Name, int A, int B)
+{
+    for (int i = 0; i < Unknown00; i++)
+    {
+        const char* Want = *Name ? *Name : DAT_10e47660;
+        const char* Have = Unknown08[i].Unknown00;
+        if (!Have)
+            Have = DAT_10e47660;
+        if (strcmp(Have, Want) == 0 && Unknown08[i].Unknown08 == B && Unknown08[i].Unknown0C == A)
+            return Unknown08[i].Unknown04;
+    }
+    return 0;
+}
 
 // FUNCTION: 0x1093F140 ?FUN_1093f140@Class_1093EFB0@@QAEHPBUItem_1093F140@@@Z
 int Class_1093EFB0::FUN_1093f140(const Item_1093F140* Item)

@@ -1,0 +1,80 @@
+// Game/Unsorted_10C019B0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Declarations above the functions belong in include/ once they settle.
+
+#include "Game/Class_10BFBD70.h"
+
+class Class_10C01C10_Unknown08_Unknown08
+{
+public:
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual void Virtual2();
+    virtual void Virtual3();
+    virtual void Virtual4();
+    virtual void Virtual5();
+    virtual void Virtual6();
+    virtual void Virtual7();
+    virtual void Virtual8();
+    virtual void Virtual9();
+    virtual void Virtual10();
+};
+
+class Class_10C01C10_Unknown08
+{
+public:
+    char Unknown00[8];
+    Class_10C01C10_Unknown08_Unknown08* Unknown08;
+};
+
+class Class_10C00BA0
+{
+public:
+    ~Class_10C00BA0();
+
+    char Unknown00[8];
+    Class_10C01C10_Unknown08* Unknown08;
+};
+
+class Class_10C56E40
+{
+public:
+    Class_10C56E40(Class_10C01C10_Unknown08_Unknown08* Object) : Unknown00(Object)
+    {
+        if (Object)
+            Object->Virtual1();
+    }
+    ~Class_10C56E40()
+    {
+        Unknown00->Virtual2();
+    }
+
+    Class_10C01C10_Unknown08_Unknown08* Unknown00;
+};
+
+class Class_10C01CE0 : public Class_10BFBD70
+{
+public:
+    void FUN_10c01ce0();
+    void FUN_10c01c10(int A);
+};
+
+// FUNCTION: 0x10C01C10 ?FUN_10c01c10@Class_10C01CE0@@QAEXH@Z
+void Class_10C01CE0::FUN_10c01c10(int A)
+{
+    Class_10C00BA0* Entry = (Class_10C00BA0*)Data[A];
+    bool Empty = Entry->Unknown08 == 0;
+    if (Empty)
+    {
+        FUN_109dff50(A);
+        delete Entry;
+        return;
+    }
+    int Saved = Count;
+    Class_10C56E40 Ref(Entry->Unknown08->Unknown08);
+    Ref.Unknown00->Virtual10();
+    if (Count == Saved)
+    {
+        FUN_109dff50(A);
+        delete Entry;
+    }
+}

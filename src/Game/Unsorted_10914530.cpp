@@ -1,6 +1,8 @@
 // Game/Unsorted_10914530.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
+#include "Game/Class_10BFBD70.h"
+
 // Simple MAPI error codes (mapi.h).
 enum
 {
@@ -30,6 +32,43 @@ enum
     MAPI_E_INVALID_RECIPS = 25,
     MAPI_E_NOT_SUPPORTED = 26
 };
+
+void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
+
+void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
+
+class Class_10E495F8
+{
+public:
+    Class_10E495F8();
+
+    virtual void Virtual0();
+    void FUN_10915570(int A, int B, int C, int D);
+
+    char Unknown04[0x24];
+};
+
+class Class_10914530
+{
+public:
+    void FUN_10914530(int A, int B, int C, int D);
+
+    int Unknown00;
+    Class_10BFBD70 Unknown04;
+};
+
+// FUNCTION: 0x10914530 ?FUN_10914530@Class_10914530@@QAEXHHHH@Z
+void Class_10914530::FUN_10914530(int A, int B, int C, int D)
+{
+    FUN_10905aa0()->Virtual8(0, 0);
+    Class_10E495F8* Obj = new(0, 0, 0, 0, 0) Class_10E495F8;
+    FUN_10905aa0()->Virtual9();
+    int Index = Unknown04.Count;
+    Class_10BFBD70* List = &Unknown04;
+    List->FUN_10bfbd70(Index + 1);
+    List->Data[Index] = (int)Obj;
+    Obj->FUN_10915570(A, B, C, D);
+}
 
 // FUNCTION: 0x109149C0 ?FUN_109149c0@@YAPBDH@Z
 const char* FUN_109149c0(int Error)

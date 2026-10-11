@@ -1,0 +1,45 @@
+// Game/Unsorted_10B37050.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Declarations above the functions belong in include/ once they settle.
+
+#include "Game/Class_109081E0.h"
+#include "Game/Class_10AB37C0.h"
+#include "Game/Class_10978090.h"
+
+class WindowManager;
+
+extern WindowManager* GWindowManager;
+
+class Class_10B42BD0;
+
+class Class_10B175C0
+{
+public:
+    void FUN_10b175c0(void* A, bool B, void (*C)(Class_10B42BD0*), void* D);
+};
+
+class Class_10B37140_Arg
+{
+public:
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual void Virtual2();
+    virtual void Virtual3();
+    virtual Class_10AB37C0* Virtual4(int A);
+};
+
+Class_109081E0 FUN_109510c0(const Class_109081E0& In);
+
+void* FUN_10b154c0();
+
+// FUNCTION: 0x10B37140 ?FUN_10b37140@@YGHHHPAVClass_10B37140_Arg@@@Z
+int __stdcall FUN_10b37140(int A, int B, Class_10B37140_Arg* C)
+{
+    if (GWindowManager)
+    {
+        Class_109081E0 Text(*(Class_109081E0*)C->Virtual4(0)->FUN_10ab37c0());
+        bool Flag = (int)((Class_10978090*)C->Virtual4(1))->FUN_10978090() == 1;
+        Class_109081E0 Key = FUN_109510c0(Text);
+        ((Class_10B175C0*)FUN_10b154c0())->FUN_10b175c0(&Key, Flag, 0, 0);
+    }
+    return 1;
+}

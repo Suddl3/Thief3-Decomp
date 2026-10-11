@@ -1,0 +1,392 @@
+// Game/Unsorted_10C392E0_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Declarations above the functions belong in include/ once they settle.
+
+#include "Game/Class_10C0A9A0.h"
+#include "Game/Class_10C80360.h"
+#include "Game/Class_10C20BC0.h"
+#include "Game/Class_10C38EB0_Member.h"
+#include "Game/Class_10C7D570.h"
+#include "Game/Class_10943600.h"
+#include "Game/Item_10943600.h"
+#include "Game/Struct_10C05A80.h"
+#include "Game/Struct_10C37D30.h"
+#include "Game/Struct_10C39220.h"
+#include "Game/Class_10BA9EC0.h"
+#include "Game/Class_10BA9EE0.h"
+#include "Game/Class_10BB9FC0.h"
+#include "Game/Class_10BBB410.h"
+#include "Game/Class_10BBDB40.h"
+#include "Game/Class_10BFF460.h"
+#include "Game/Class_10DC1750.h"
+#include "Game/Class_10DC1750_Result.h"
+
+class Class_10FF667C
+{
+public:
+    char Unknown00[0x1C];
+    Class_10C0A9A0* Unknown1C;
+};
+
+extern Class_10FF667C* DAT_10ff667c;
+
+class Class_10C399C0
+{
+public:
+    int FUN_10c38d90(int A);
+    int FUN_10c399c0();
+
+    char Unknown00[0x88];
+    int Unknown88;
+    char Unknown8C[4];
+    Class_10C80360** Unknown90;
+    char Unknown94[0x1C];
+    int UnknownB0;
+};
+
+class Class_10C39C90_Result
+{
+public:
+    char Unknown00[0x2C];
+    Item_10943600 Unknown2C;
+};
+
+class Class_10C38E40
+{
+public:
+    void FUN_10c38e40(int A);
+    void FUN_10c39c90();
+
+    char Unknown00[0x3C];
+    Item_10943600 Unknown3C;
+    Class_10C38EB0_Member* Unknown48;
+    char Unknown4C[0x3C];
+    int Unknown88;
+    char Unknown8C[0x4];
+    Class_10C80360** Unknown90;
+    int Unknown94;
+    char Unknown98[0x4];
+    Item_10943600* Unknown9C;
+    Class_10943600 Unknown0A0;
+    int Unknown0AC;
+    int Unknown0B0;
+    Class_10C20BC0* Unknown0B4;
+    char Unknown0B8[0x4E];
+    bool Unknown106;
+};
+
+extern float DAT_10e49684;
+
+class Class_10C39D90_Result12;
+
+class Class_10C39D90_Result39;
+
+class Class_10C39D90_Unknown48
+{
+public:
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual void Virtual2();
+    virtual void Virtual3();
+    virtual void Virtual4();
+    virtual void Virtual5();
+    virtual void Virtual6();
+    virtual void Virtual7();
+    virtual void Virtual8();
+    virtual void Virtual9();
+    virtual void Virtual10();
+    virtual void Virtual11();
+    virtual void Virtual12();
+    virtual void Virtual13();
+    virtual void Virtual14();
+    virtual void Virtual15();
+    virtual void Virtual16();
+    virtual void Virtual17();
+    virtual void Virtual18();
+    virtual void Virtual19();
+    virtual void Virtual20();
+    virtual void Virtual21();
+    virtual void Virtual22();
+    virtual void Virtual23();
+    virtual void Virtual24();
+    virtual void Virtual25();
+    virtual void Virtual26();
+    virtual void Virtual27();
+    virtual void Virtual28();
+    virtual void Virtual29();
+    virtual void Virtual30();
+    virtual void Virtual31();
+    virtual void Virtual32();
+    virtual void Virtual33();
+    virtual void Virtual34();
+    virtual void Virtual35();
+    virtual void Virtual36();
+    virtual void Virtual37();
+    virtual void Virtual38();
+    virtual Class_10C39D90_Result39* Virtual39();
+};
+
+class Class_10C39D90_Result39
+{
+public:
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual void Virtual2();
+    virtual void Virtual3();
+    virtual void Virtual4();
+    virtual void Virtual5();
+    virtual void Virtual6();
+    virtual void Virtual7();
+    virtual void Virtual8();
+    virtual void Virtual9();
+    virtual void Virtual10();
+    virtual void Virtual11();
+    virtual Class_10C39D90_Result12* Virtual12();
+};
+
+class Class_10C39D90_Result12
+{
+public:
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual void Virtual2();
+    virtual void Virtual3();
+    virtual void Virtual4();
+    virtual void Virtual5();
+    virtual void Virtual6();
+    virtual void Virtual7();
+    virtual void Virtual8();
+    virtual void Virtual9();
+    virtual void Virtual10();
+    virtual void Virtual11();
+    virtual void Virtual12();
+    virtual void Virtual13();
+    virtual void Virtual14();
+    virtual void Virtual15();
+    virtual void Virtual16();
+    virtual void Virtual17();
+    virtual void Virtual18();
+    virtual void Virtual19();
+    virtual void Virtual20();
+    virtual Struct_10C05A80* Virtual21();
+};
+
+void FUN_10c37cb0(void* A, Struct_10C05A80* B, int C, int D, int E, bool F);
+
+bool FUN_10c37d30(void* A, int B, int C, float D, float E, int F, int G, Struct_10C37D30 H);
+
+float FUN_10c05a80(const Struct_10C05A80* A, const Struct_10C05A80* B);
+
+class Class_10C39220
+{
+public:
+    virtual ~Class_10C39220();
+
+    bool FUN_10c39220(int A);
+    int FUN_10c3c2c0(int A);
+    bool FUN_10c38810();
+    void FUN_10c39d90();
+
+    char Pad04[0x24];
+    Struct_10C39220 Unknown28;
+    char Unknown34[0x14];
+    Class_10C39D90_Unknown48* Unknown48;
+    char Unknown4C[0x1C];
+    bool Unknown68;
+    char Unknown69[0x17];
+    int Unknown80;
+    int Unknown84;
+    char Unknown88[0x18];
+    int UnknownA0;
+    char UnknownA4[4];
+    Struct_10C39220* UnknownA8;
+    int UnknownAC;
+    char UnknownB0[0x4C];
+    int UnknownFC;
+};
+
+class AAIPawn;
+
+class Class_10B39870;
+
+class Class_10AA82D0
+{
+public:
+    Class_10B39870* FUN_10aa82d0();
+};
+
+class Class_10BAC050 : public Class_10C7D570
+{
+public:
+    bool FUN_10bac050(int A);
+};
+
+class Class_10B9BCA0_Unknown118
+{
+public:
+    char Unknown00[8];
+    Class_10AA82D0* Unknown08;
+};
+
+class Class_10B9BCA0
+{
+public:
+    char Unknown00[0x118];
+    Class_10B9BCA0_Unknown118* Unknown118;
+};
+
+Class_10B9BCA0* FUN_10baa660(AAIPawn* A);
+
+class Class_10C39E90_Unknown48
+{
+public:
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual void Virtual2();
+    virtual void Virtual3();
+    virtual void Virtual4();
+    virtual void Virtual5();
+    virtual void Virtual6();
+    virtual void Virtual7();
+    virtual void Virtual8();
+    virtual void Virtual9();
+    virtual void Virtual10();
+    virtual void Virtual11();
+    virtual void Virtual12();
+    virtual void Virtual13();
+    virtual void Virtual14();
+    virtual void Virtual15();
+    virtual void Virtual16();
+    virtual void Virtual17();
+    virtual void Virtual18();
+    virtual void Virtual19();
+    virtual void Virtual20();
+    virtual void Virtual21();
+    virtual void Virtual22();
+    virtual void Virtual23();
+    virtual void Virtual24();
+    virtual void Virtual25();
+    virtual void Virtual26();
+    virtual void Virtual27();
+    virtual void Virtual28();
+    virtual void Virtual29();
+    virtual void Virtual30();
+    virtual void Virtual31();
+    virtual void Virtual32();
+    virtual void Virtual33();
+    virtual void* Virtual34();
+};
+
+class Class_10C39E90
+{
+public:
+    bool FUN_10c39e90(int* Out);
+
+    char Unknown00[0x48];
+    Class_10C39E90_Unknown48* Unknown48;
+};
+
+inline int FindIndex(const Struct_10DC1750_Result_1C& List, int Item)
+{
+    for (int i = 0; i < List.Count; i++)
+    {
+        if (List.Items[i] == Item)
+            return i;
+    }
+    return -1;
+}
+
+// FUNCTION: 0x10C399C0 ?FUN_10c399c0@Class_10C399C0@@QAEHXZ
+int Class_10C399C0::FUN_10c399c0()
+{
+    int Start = UnknownB0 - 1;
+    for (int i = Start > 0 ? Start : 0; i < Unknown88; i++)
+    {
+        Class_10C80360* Item = Unknown90[i];
+        if (Item->FUN_10c80360() & 8)
+        {
+            int Result = DAT_10ff667c->Unknown1C->FUN_10c099a0((int)Item);
+            if (Result != 0)
+                return FUN_10c38d90(Result);
+        }
+    }
+    return 0;
+}
+
+// FUNCTION: 0x10C39C90 ?FUN_10c39c90@Class_10C38E40@@QAEXXZ
+void Class_10C38E40::FUN_10c39c90()
+{
+    Class_10943600* List = &Unknown0A0;
+    List->Unknown00 = 0;
+    Class_10C20BC0* Pending = Unknown0B4;
+    Unknown0AC = 0;
+    if (Pending)
+        Pending->FUN_10c20bc0();
+    if (Unknown88 > ++Unknown0B0)
+    {
+        Class_10C80360* Obj = Unknown90[Unknown0B0];
+        if (Obj->FUN_10c80360() & 8)
+            FUN_10c38e40((int)Obj);
+        else if (Unknown88 > Unknown0B0 + 1)
+        {
+            Obj = Unknown90[Unknown0B0 + 1];
+            if (Obj->FUN_10c80360() & 8)
+                FUN_10c38e40((int)Obj);
+        }
+    }
+    if (Unknown0B0 < Unknown94)
+    {
+        Unknown3C = ((Class_10C39C90_Result*)Unknown48->Virtual34()->FUN_10c7d570())->Unknown2C;
+        Item_10943600* Src = &Unknown9C[Unknown0B0];
+        int Count = List->Unknown00;
+        List->FUN_10da4f50(Count + 1);
+        List->Unknown08[Count] = *Src;
+    }
+}
+
+// FUNCTION: 0x10C39D90 ?FUN_10c39d90@Class_10C39220@@QAEXXZ
+void Class_10C39220::FUN_10c39d90()
+{
+    Struct_10C05A80 Pos;
+    Class_10C39D90_Result39* Obj = Unknown48->Virtual39();
+    if (Obj != 0)
+    {
+        Class_10C39D90_Result12* Sub = Obj->Virtual12();
+        if (Sub != 0 && FUN_10c39220((int)&Pos) == 1)
+        {
+            Struct_10C05A80 Copy = *Sub->Virtual21();
+            if (FUN_10c05a80(&Pos, &Copy) < DAT_10e49684)
+            {
+                return;
+            }
+        }
+    }
+    if (!FUN_10c39220((int)&Pos))
+    {
+        FUN_10c37d30(Unknown48, Unknown84, 1, -1.0f, 1.0f, 1, 1, Struct_10C37D30());
+        return;
+    }
+
+    const bool& Flag = Unknown68 || FUN_10c38810();
+    FUN_10c37cb0(Unknown48, &Pos, 0x15, Unknown80, 1, Flag);
+}
+
+// FUNCTION: 0x10C39E90 ?FUN_10c39e90@Class_10C39E90@@QAE_NPAH@Z
+bool Class_10C39E90::FUN_10c39e90(int* Out)
+{
+    if (FindIndex(((Class_10DC1750*)Unknown48->Virtual34())->FUN_10dc1750()->Unknown1C, 0x11) != -1)
+        return false;
+    int Id = ((Class_10BA9EE0*)Unknown48->Virtual34())->FUN_10ba9ee0();
+    *Out = Id;
+    if (Id != 0)
+    {
+        Class_10BAC050* Check = (Class_10BAC050*)Unknown48->Virtual34();
+        if (!Check->FUN_10bac050(*Out))
+            return true;
+    }
+    Class_10B9BCA0* Obj = FUN_10baa660((AAIPawn*)((Class_10C7D570*)Unknown48->Virtual34())->FUN_10c7d570());
+    Class_10AA82D0* Owner = Obj && Obj->Unknown118 ? Obj->Unknown118->Unknown08 : 0;
+    Class_10BFF460* Item = ((Class_10BBB410*)Owner->FUN_10aa82d0())->FUN_10bbb410();
+    if (Item && Item->FUN_10bff2a0() && (int)Item->FUN_10bff2a0() == *Out && Item->FUN_10bff330())
+        return true;
+    return false;
+}

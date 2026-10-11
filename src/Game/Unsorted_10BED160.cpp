@@ -1,8 +1,10 @@
 // Game/Unsorted_10BED160.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10FF667C.h"
 #include "Game/Class_10FF667C_Unknown18.h"
 #include "Game/FArchive.h"
+#include "Game/Struct_10C05A80.h"
 
 extern void* DAT_10e975a0[];
 
@@ -150,6 +152,128 @@ public:
     int Unknown4C;
     int Unknown50;
 };
+
+struct Struct_10BAA000
+{
+    char Unknown00[0x2C];
+    Struct_10C05A80 Unknown2C;
+};
+
+class Class_10BED160
+{
+public:
+    int Unknown00;
+    char Unknown04[4];
+    Struct_10BAA000** Unknown08;
+};
+
+float FUN_10c05a80(const Struct_10C05A80* A, const Struct_10C05A80* B);
+
+class Class_10E97258 : public Class_10E8BE68
+{
+public:
+    virtual void Virtual1();
+    virtual void Virtual2();
+    virtual void Virtual3();
+    virtual void Virtual4();
+    virtual void Virtual5();
+    virtual void Virtual6();
+    virtual void Virtual7();
+    virtual void Virtual8();
+    virtual void Virtual9();
+    virtual void Virtual10();
+    virtual void Virtual11();
+    virtual void Virtual12();
+    virtual void Virtual13();
+    virtual void Virtual14();
+    virtual void Virtual15();
+    virtual void Virtual16();
+    virtual void Virtual17();
+    virtual void Virtual18();
+    virtual void Virtual19();
+    virtual void Virtual20();
+    virtual void Virtual21();
+    virtual void Virtual22();
+    virtual void Virtual23();
+    virtual void Virtual24();
+    virtual void Virtual25();
+    virtual void Virtual26();
+    virtual void Virtual27();
+    virtual void Virtual28();
+    virtual void Virtual29();
+    virtual void Virtual30();
+    virtual void Virtual31();
+    virtual void Virtual32();
+    virtual void Virtual33();
+    virtual void Virtual34();
+    virtual void Virtual35();
+    virtual void Virtual36();
+    virtual void Virtual37();
+    virtual void Virtual38();
+    virtual void Virtual39();
+    virtual void Virtual40();
+    virtual void Virtual41();
+    virtual void Virtual42();
+    virtual void Virtual43();
+    virtual void Virtual44();
+    virtual void Virtual45();
+    virtual void Virtual46();
+    virtual void Virtual47();
+    virtual void Virtual48();
+    virtual void Virtual49();
+    virtual void Virtual50();
+    virtual void Virtual51();
+    virtual void Virtual52();
+    virtual void Virtual53();
+    virtual void Virtual54();
+    virtual void Virtual55();
+    virtual void Virtual56();
+    virtual void Virtual57();
+    virtual void Virtual58();
+    virtual void Virtual59();
+    virtual void Virtual60();
+    virtual void Virtual61();
+    virtual void Virtual62();
+    virtual void Virtual63();
+    virtual void FUN_10bed370(FArchive& Ar);
+
+    char Unknown04[0x3C];
+    bool Unknown40;
+    int Unknown44;
+    int Unknown48;
+    int Unknown4C;
+    int Unknown50;
+    unsigned char Unknown54;
+};
+
+// FUNCTION: 0x10BED160 ?FUN_10bed160@@YAPAUStruct_10BAA000@@PAVClass_10BED160@@PBUStruct_10C05A80@@@Z
+Struct_10BAA000* FUN_10bed160(Class_10BED160* Array, const Struct_10C05A80* Target)
+{
+    float BestDist = 0.0f;
+    Struct_10BAA000* Best = 0;
+    for (int i = 0; i < Array->Unknown00; i++)
+    {
+        float Dist = FUN_10c05a80(&Array->Unknown08[i]->Unknown2C, Target);
+        if (Best == 0 || Dist < BestDist)
+        {
+            BestDist = Dist;
+            Best = Array->Unknown08[i];
+        }
+    }
+    return Best;
+}
+
+// FUNCTION: 0x10BED370 ?FUN_10bed370@Class_10E97258@@UAEXAAVFArchive@@@Z
+void Class_10E97258::FUN_10bed370(FArchive& Ar)
+{
+    Class_10E8BE68::FUN_10bca010(Ar);
+    Ar.Serialize(&Unknown40, 1);
+    DAT_10ff667c->Unknown18->Virtual1(Ar, &Unknown44);
+    Ar.Serialize(&Unknown48, 4);
+    Ar.Serialize(&Unknown4C, 4);
+    Ar.Serialize(&Unknown50, 4);
+    Ar.Serialize(&Unknown54, 1);
+}
 
 // FUNCTION: 0x10BED3E0 ?FUN_10bed3e0@Class_10E97370@@UAEXAAVFArchive@@@Z
 void Class_10E97370::FUN_10bed3e0(FArchive& Ar)

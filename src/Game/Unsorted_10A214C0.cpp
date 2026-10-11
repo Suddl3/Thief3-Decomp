@@ -1,0 +1,55 @@
+// Game/Unsorted_10A214C0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Declarations above the functions belong in include/ once they settle.
+
+#include <math.h>
+
+struct Item_10A21A60
+{
+    float Unknown00;
+    float Unknown04;
+    float Unknown08;
+    float Unknown0C;
+};
+
+class Class_10953AC0
+{
+public:
+    void FUN_10953ac0(int A);
+    void FUN_10953be0();
+    void FUN_10bb5810(const Class_10953AC0& Other);
+
+    int Unknown00;
+    int Unknown04;
+    Item_10A21A60* Unknown08;
+};
+
+class Class_10A21A60
+{
+public:
+    int FUN_10a21a60(const Item_10A21A60* P);
+
+    char Unknown00[0x1C];
+    Class_10953AC0 Unknown1C;
+};
+
+// FUNCTION: 0x10A21A60 ?FUN_10a21a60@Class_10A21A60@@QAEHPBUItem_10A21A60@@@Z
+int Class_10A21A60::FUN_10a21a60(const Item_10A21A60* P)
+{
+    Item_10A21A60 Item;
+    Item.Unknown00 = P->Unknown00;
+    Item.Unknown04 = P->Unknown04;
+    Item.Unknown08 = P->Unknown08;
+    Item.Unknown0C = -P->Unknown0C;
+    int Count = Unknown1C.Unknown00;
+    Class_10953AC0* Array = &Unknown1C;
+    for (int i = 0; i < Count; i++)
+    {
+        Item_10A21A60* Entry = &Unknown1C.Unknown08[i];
+        if (Item.Unknown08 * Entry->Unknown08 + Item.Unknown04 * Entry->Unknown04 + Item.Unknown00 * Entry->Unknown00 > 0.999 && fabs(Entry->Unknown0C - Item.Unknown0C) < 0.001)
+            return i;
+    }
+    int Index = Array->Unknown00;
+    Array->FUN_10953ac0(Index + 1);
+    Array->Unknown08[Index] = Item;
+    return Index;
+}

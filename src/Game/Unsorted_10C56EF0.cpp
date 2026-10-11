@@ -1,6 +1,8 @@
 // Game/Unsorted_10C56EF0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10C57430.h"
+#include "Game/Class_109081E0.h"
 
 struct Struct_10C57430
 {
@@ -10,6 +12,50 @@ struct Struct_10C57430
     char Unknown0C[0x29];
     bool Unknown35;
 };
+
+extern "C" int tolower(int C);
+
+extern float DAT_10eafbdc;
+
+class Class_10C57310_Unknown00
+{
+public:
+    char Unknown00[0x1C];
+    bool Unknown1C;
+    bool Unknown1D;
+    bool Unknown1E;
+    bool Unknown1F;
+};
+
+class Class_10C57310
+{
+public:
+    bool FUN_10c57310(Class_109081E0* A, float B);
+
+    Class_10C57310_Unknown00* Unknown00;
+};
+
+// FUNCTION: 0x10C57310 ?FUN_10c57310@Class_10C57310@@QAE_NPAVClass_109081E0@@M@Z
+bool Class_10C57310::FUN_10c57310(Class_109081E0* A, float B)
+{
+    switch (tolower(*A->Unknown00))
+    {
+    case 'b':
+        Unknown00->Unknown1C = B != DAT_10eafbdc ? 1 : 0;
+        return 1;
+    case 'c':
+        Unknown00->Unknown1E = B != DAT_10eafbdc ? 1 : 0;
+        return 1;
+    case 'r':
+        Unknown00->Unknown1D = B != DAT_10eafbdc ? 1 : 0;
+        return 1;
+    case 's':
+        Unknown00->Unknown1F = B != DAT_10eafbdc ? 1 : 0;
+        return 1;
+    default:
+        return 0;
+    }
+}
 
 // FUNCTION: 0x10C57430 ?FUN_10c57430@Class_10C57430@@QAEXPAUStruct_10C57430@@@Z
 void Class_10C57430::FUN_10c57430(Struct_10C57430* Node)

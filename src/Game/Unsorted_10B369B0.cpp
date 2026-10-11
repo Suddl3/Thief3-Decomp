@@ -1,12 +1,58 @@
 // Game/Unsorted_10B369B0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10B1B8A0.h"
 #include "Game/Class_10B374A0.h"
 #include "Game/WindowManager.h"
+#include "Game/Class_109081E0.h"
+#include "Game/Class_10AB37C0.h"
 
 Class_10B1B8A0* FUN_10b1b600();
 
 extern WindowManager* GWindowManager;
+
+class WindowManager;
+
+struct FColor
+{
+    FColor() {}
+    int Unknown00;
+};
+
+class Class_10B36E40_Arg
+{
+public:
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual void Virtual2();
+    virtual void Virtual3();
+    virtual Class_10AB37C0* Virtual4(int A);
+};
+
+class Class_10B154C0
+{
+public:
+    void FUN_10b15e30(void* A, int B);
+};
+
+FColor FUN_10abc760(int A);
+
+void FUN_10a27a60(void* A, void* B);
+
+void* FUN_10b154c0();
+
+// FUNCTION: 0x10B36E40 ?FUN_10b36e40@@YGHHHPAVClass_10B36E40_Arg@@@Z
+int __stdcall FUN_10b36e40(int A, int B, Class_10B36E40_Arg* C)
+{
+    if (GWindowManager)
+    {
+        Class_109081E0 Text(*(Class_1090A780*)C->Virtual4(0)->FUN_10ab37c0());
+        Class_109081E0 Key;
+        FUN_10a27a60(&Text, &Key);
+        ((Class_10B154C0*)FUN_10b154c0())->FUN_10b15e30(&Key, FUN_10abc760(0).Unknown00);
+    }
+    return 1;
+}
 
 // FUNCTION: 0x10B374A0 ?FUN_10b374a0@Class_10B374A0@@QAEXHPAV1@H@Z
 void Class_10B374A0::FUN_10b374a0(int A, Class_10B374A0* B, int C)

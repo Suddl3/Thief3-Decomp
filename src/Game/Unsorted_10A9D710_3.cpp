@@ -1,0 +1,54 @@
+// Game/Unsorted_10A9D710_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Declarations above the functions belong in include/ once they settle.
+
+#include "Game/Class_10905A90_Member.h"
+#include "Game/Class_10A04080.h"
+
+class Class_10BFBD70;
+
+Class_10905A90_Member* FUN_10905aa0();
+
+void* FUN_10a030c0();
+
+class Class_10A03410
+{
+public:
+    void FUN_10a03410(int A, int B, int C, int D);
+};
+
+// Copied from include/Game/Class_10BFBD70.h; Unknown08 holds Class_10A03410 items here.
+class Class_10BFBD70
+{
+public:
+    Class_10BFBD70() : Unknown00(0), Unknown04(0), Unknown08(0) {}
+    ~Class_10BFBD70()
+    {
+        FUN_10bfbd70(0);
+        if (Unknown04)
+        {
+            FUN_10905aa0()->Virtual5(Unknown08);
+            Unknown08 = 0;
+            Unknown04 = 0;
+        }
+    }
+
+    void FUN_10bfbd70(int Count);
+
+    int Unknown00;
+    int Unknown04;
+    Class_10A03410** Unknown08;
+};
+
+// FUNCTION: 0x10A9D7D0 ?FUN_10a9d7d0@@YGXHHHHH@Z
+void __stdcall FUN_10a9d7d0(int Id, int A, int B, int C, int D)
+{
+    if (!Id)
+        return;
+    Class_10BFBD70 Found;
+    ((Class_10A04080*)FUN_10a030c0())->FUN_10a04080(Id, Found, true);
+    for (int i = 0; i < Found.Unknown00; i++)
+    {
+        Class_10A03410* Item = Found.Unknown08[i];
+        Item->FUN_10a03410(A, B, C, D);
+    }
+}

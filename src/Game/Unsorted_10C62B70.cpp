@@ -13,6 +13,26 @@ extern float DAT_10f06a70;
 
 extern float DAT_10f06a74;
 
+extern unsigned char DAT_10ff7115;
+
+// FUNCTION: 0x10C62B70 ?FUN_10c62b70@@YAMM@Z
+float FUN_10c62b70(float X)
+{
+    if (DAT_10ff7115 == 0)
+        return X;
+    float Y = X;
+    if (X < 0.0f)
+        Y = 0.0f;
+    else if (X > 1.0f)
+        Y = 1.0f;
+    Y = log((1.0f - DAT_10f06a74) * Y + DAT_10f06a74) / DAT_10f06a70 * 0.1f + 1.0f;
+    if (Y < 0.0f)
+        return 0.0f;
+    if (Y > 1.0f)
+        return 1.0f;
+    return Y;
+}
+
 // FUNCTION: 0x10C62C10 ?FUN_10c62c10@@YAXM@Z
 void FUN_10c62c10(float X)
 {

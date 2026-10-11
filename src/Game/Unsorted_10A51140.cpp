@@ -1,7 +1,10 @@
 // Game/Unsorted_10A51140.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10E7EDB8.h"
 #include "Game/WindowManager.h"
+#include "Game/Class_1092E930.h"
+#include "Game/Class_10905A90_Member.h"
 
 extern WindowManager* GWindowManager;
 
@@ -15,6 +18,45 @@ public:
     char Unknown120[8];
     void** Unknown128;
 };
+
+Class_10905A90_Member* FUN_10905aa0();
+
+struct Struct_1092E930_Element
+{
+    char Unknown00[4];
+};
+
+// FUNCTION: 0x10A51140 ?FUN_10a51140@Class_1092E930@@QAEXH@Z
+void Class_1092E930::FUN_10a51140(int NewCount)
+{
+    int Capacity = !Unknown08 ? 0 : Unknown04 / sizeof(Struct_1092E930_Element);
+    FUN_10905aa0()->Virtual8(0, 0);
+    if (NewCount > Capacity)
+    {
+        int NewCapacity = NewCount;
+        if (Capacity)
+            NewCapacity = (NewCount & ~3) + 4;
+        Unknown08 = FUN_10905aa0()->Virtual3(Unknown08, NewCapacity * sizeof(Struct_1092E930_Element), 0, 0, 0, 0);
+        Unknown04 = NewCapacity * sizeof(Struct_1092E930_Element);
+    }
+    else if (NewCount <= Capacity - 4)
+    {
+        if (NewCount == 0)
+        {
+            FUN_10905aa0()->Virtual5(Unknown08);
+            Unknown08 = 0;
+            Unknown04 = 0;
+        }
+        else
+        {
+            int NewCapacity = (NewCount & ~3) + 4;
+            Unknown08 = FUN_10905aa0()->Virtual3(Unknown08, NewCapacity * sizeof(Struct_1092E930_Element), 0, 0, 0, 0);
+            Unknown04 = NewCapacity * sizeof(Struct_1092E930_Element);
+        }
+    }
+    FUN_10905aa0()->Virtual9();
+    Unknown00 = NewCount;
+}
 
 // FUNCTION: 0x10A514E0 ?FUN_10a514e0@Class_10E67BD8@@QAEXH@Z
 void Class_10E67BD8::FUN_10a514e0(int Index)

@@ -1,5 +1,6 @@
 // Game/Unsorted_1091CD10.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include <math.h>
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_1091AA10.h"
@@ -30,6 +31,62 @@ public:
 
     char* Unknown00;
 };
+
+// Ion Storm's placement new (0x10905C10).
+void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
+
+class Class_1091D390_Unknown24
+{
+public:
+    Class_1091D390_Unknown24()
+    {
+        Unknown04 = 0;
+        Unknown08 = 0;
+        Unknown0C = 0;
+        Unknown10 = 0;
+        Unknown18 = -1;
+        Unknown14 = 0;
+        Unknown1C = 0;
+        Unknown00 = 0;
+    }
+
+    char Unknown00;
+    int Unknown04;
+    int Unknown08;
+    int Unknown0C;
+    int Unknown10;
+    int Unknown14;
+    int Unknown18;
+    int Unknown1C;
+};
+
+class Class_1091D390
+{
+public:
+    bool FUN_1091d390(int A, int B, int C, unsigned int D, int E, int F, int G);
+    bool FUN_1091a690(Class_1091D390_Unknown24* A, int B, int C, int D, unsigned int E, int F, int G, int H);
+
+    char Unknown00[0x24];
+    Class_1091D390_Unknown24* Unknown24;
+    char Unknown28[4];
+    char Unknown2C;
+};
+
+// FUNCTION: 0x1091D390 ?FUN_1091d390@Class_1091D390@@QAE_NHHHIHHH@Z
+bool Class_1091D390::FUN_1091d390(int A, int B, int C, unsigned int D, int E, int F, int G)
+{
+    if (Unknown2C == 0)
+        return false;
+    if ((D & 0xff000000) == 0)
+        return true;
+    if (Unknown24 == 0)
+    {
+        FUN_10905aa0()->Virtual8(0, 0);
+        Unknown24 = new(0, 0, 0, 0, 0) Class_1091D390_Unknown24;
+        FUN_10905aa0()->Virtual9();
+    }
+    return FUN_1091a690(Unknown24, C, A, B, D, E, F, G);
+}
 
 // FUNCTION: 0x1091DEE0 ?FUN_1091dee0@Class_1091DEE0@@QAEPAVClass_1091CA00@@H@Z
 Class_1091CA00* Class_1091DEE0::FUN_1091dee0(int A)

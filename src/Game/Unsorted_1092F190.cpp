@@ -1,0 +1,115 @@
+// Game/Unsorted_1092F190.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Declarations above the functions belong in include/ once they settle.
+
+#include "Game/Class_10BFBD70.h"
+#include "Game/IDirect3DDevice8.h"
+
+class Class_1092F130
+{
+public:
+    void FUN_1092e9c0();
+};
+
+extern Class_10BFBD70 DAT_10f31b9c;
+
+extern Class_1092F130** DAT_10f31ba4;
+
+extern int DAT_10f31ba0;
+
+extern IDirect3DDevice8* GDirect3DDevice8;
+
+class Class_109373D0
+{
+public:
+    void FUN_109373d0(unsigned long Value);
+
+    char Unknown00[0x1C];
+    IDirect3DBaseTexture8* Unknown1C[4];
+    char Unknown2C[0x684];
+    unsigned long Unknown6B0;
+};
+
+class Class_10936AC0 : public Class_109373D0
+{
+};
+
+extern Class_10936AC0* DAT_10f31be0;
+
+void FUN_109192e0(int A, int B, int C);
+
+class Class_1092F330
+{
+public:
+    void FUN_1092f330();
+
+    char Unknown00[0x0C];
+    int Unknown0C;
+    bool Unknown10;
+    char Unknown11[0x0B];
+    int Unknown1C;
+};
+
+// FUNCTION: 0x1092F190 ?FUN_1092f190@@YAXXZ
+void FUN_1092f190()
+{
+    for (int i = 0; i < DAT_10f31b9c.Count; i++)
+    {
+        Class_1092F130* Item = DAT_10f31ba4[i];
+        if (Item)
+        {
+            Item->FUN_1092e9c0();
+            delete Item;
+        }
+    }
+    int Capacity = !DAT_10f31ba4 ? 0 : DAT_10f31ba0 / sizeof(void*);
+    FUN_10905aa0()->Virtual8(0, 0);
+    int NewCount = 0;
+    if (NewCount > Capacity)
+    {
+        int NewCapacity = NewCount;
+        if (Capacity)
+            NewCapacity = (NewCount & ~15) + 16;
+        DAT_10f31ba4 = (Class_1092F130**)FUN_10905aa0()->Virtual3(DAT_10f31ba4, NewCapacity * sizeof(void*), 0, 0, 0, 0);
+        DAT_10f31ba0 = NewCapacity * sizeof(void*);
+    }
+    else if (NewCount <= Capacity - 16)
+    {
+        if (NewCount == 0)
+        {
+            FUN_10905aa0()->Virtual5(DAT_10f31ba4);
+            DAT_10f31ba4 = 0;
+            DAT_10f31ba0 = 0;
+        }
+        else
+        {
+            int NewCapacity = (NewCount & ~15) + 16;
+            DAT_10f31ba4 = (Class_1092F130**)FUN_10905aa0()->Virtual3(DAT_10f31ba4, NewCapacity * sizeof(void*), 0, 0, 0, 0);
+            DAT_10f31ba0 = NewCapacity * sizeof(void*);
+        }
+    }
+    FUN_10905aa0()->Virtual9();
+    DAT_10f31b9c.Count = NewCount;
+}
+
+// FUNCTION: 0x1092F330 ?FUN_1092f330@Class_1092F330@@QAEXXZ
+void Class_1092F330::FUN_1092f330()
+{
+    if (Unknown1C)
+    {
+        GDirect3DDevice8->SetRenderState(7, 1);
+        GDirect3DDevice8->SetRenderState(0x89, 0);
+        GDirect3DDevice8->SetRenderState(0x8d, 1);
+        IDirect3DBaseTexture8** Slot = &DAT_10f31be0->Unknown1C[0];
+        if (*Slot)
+        {
+            GDirect3DDevice8->SetTexture(0, 0);
+            *Slot = 0;
+        }
+        FUN_109192e0(Unknown1C, 0x14, 0);
+        DAT_10f31be0->FUN_109373d0(0x44);
+        if (Unknown10)
+            GDirect3DDevice8->DrawPrimitive(D3DPT_LINELIST, 0, Unknown0C);
+        else
+            GDirect3DDevice8->DrawPrimitive(D3DPT_LINESTRIP, 0, Unknown0C);
+    }
+}

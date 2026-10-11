@@ -1,9 +1,12 @@
 // Game/Unsorted_1094EFC0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_1094F750.h"
 #include "Game/Class_10953590.h"
 #include "Game/Class_10BFBD70.h"
+#include "Game/Class_10943600.h"
+#include "Game/Item_10943600.h"
 
 Class_10905A90_Member* FUN_10905aa0();
 
@@ -49,6 +52,62 @@ public:
     int Unknown0F8;
     Struct_1094F6F0_Item** Unknown0FC;
 };
+
+class Class_1094EFC0_Item
+{
+public:
+    Class_1094EFC0_Item() : Unknown00(0), Unknown04(0) {}
+
+    int Unknown00;
+    int Unknown04;
+};
+
+class Class_1094EFC0_Unknown108
+{
+public:
+    char Pad00[0x8];
+    Class_10943600 Unknown08;
+    int Unknown14;
+    char Pad18[0x10];
+};
+
+void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
+
+class Class_1094EFC0
+{
+public:
+    void FUN_1094efc0(int A, int B);
+
+    char Pad00[0xF0];
+    int Unknown0F0;
+    Class_10BFBD70 Unknown0F4;
+    char Pad100[0x8];
+    Class_1094EFC0_Unknown108* Unknown108;
+};
+
+// FUNCTION: 0x1094EFC0 ?FUN_1094efc0@Class_1094EFC0@@QAEXHH@Z
+void Class_1094EFC0::FUN_1094efc0(int A, int B)
+{
+    Unknown108[A].Unknown08.FUN_10da4f50(B);
+    Unknown108[A].Unknown14 = B;
+    for (int i = 0; i < B; i++)
+    {
+        Unknown108[A].Unknown08.Unknown08[i].Unknown00 = 0;
+        Unknown108[A].Unknown08.Unknown08[i].Unknown04 = 0;
+        Unknown108[A].Unknown08.Unknown08[i].Unknown08 = 0;
+    }
+    if (A == 0)
+    {
+        Unknown0F0 = 0;
+        Unknown0F4.FUN_10bfbd70(B);
+        FUN_10905aa0()->Virtual8(0, 0);
+        for (int i = 0; i < B; i++)
+        {
+            Unknown0F4.Data[i] = (int)(new(0, 0, 0, 0, 0) Class_1094EFC0_Item);
+        }
+        FUN_10905aa0()->Virtual9();
+    }
+}
 
 // FUNCTION: 0x1094F6F0 ?FUN_1094f6f0@Class_10E4AB88@@UAEXPAVClass_10BFBD70@@H@Z
 void Class_10E4AB88::FUN_1094f6f0(Class_10BFBD70* Out, int Param)

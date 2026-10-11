@@ -1,6 +1,8 @@
 // Game/Unsorted_10A67CF0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
+#include "Game/Class_10905A90_Member.h"
+
 class Object_10A67DA0
 {
 public:
@@ -66,6 +68,40 @@ struct Struct_10A67DA0_Param
     int Unknown00;
     Struct_10A67DA0_Inner* Unknown04;
 };
+
+// Ion Storm's placement new and its delete (0x10905C10; the delete folded into ::operator delete).
+void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
+
+void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
+
+Class_10905A90_Member* FUN_10905aa0();
+
+class Class_109EE940
+{
+public:
+    Class_109EE940(int A);
+
+    char Unknown00[0x28];
+};
+
+struct Struct_10A67CF0_Param
+{
+    char Unknown00[0x190];
+    int Unknown190;
+};
+
+extern Class_109EE940* DAT_10f3a0fc;
+
+// FUNCTION: 0x10A67CF0 ?FUN_10a67cf0@@YAXPAUStruct_10A67CF0_Param@@@Z
+void FUN_10a67cf0(Struct_10A67CF0_Param* A)
+{
+    if (!DAT_10f3a0fc)
+    {
+        FUN_10905aa0()->Virtual8(0, 0);
+        DAT_10f3a0fc = new(0, 0, 0, 0, 0) Class_109EE940(A->Unknown190);
+        FUN_10905aa0()->Virtual9();
+    }
+}
 
 // FUNCTION: 0x10A67DA0 ?FUN_10a67da0@@YAXHPAUStruct_10A67DA0_Param@@HHHPAHH@Z
 void FUN_10a67da0(int A, Struct_10A67DA0_Param* B, int C, int D, int E, int* F, int G)

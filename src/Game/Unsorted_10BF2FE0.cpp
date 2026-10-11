@@ -1,0 +1,129 @@
+// Game/Unsorted_10BF2FE0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Declarations above the functions belong in include/ once they settle.
+
+#include "Game/Class_10BBDB40.h"
+#include "Game/Class_10C7D570.h"
+#include "Game/Class_10BC4BF0.h"
+
+float appFrand();
+
+class Class_10BF3400_Unknown04
+{
+public:
+    char Unknown00[0x8];
+    Class_10C7D570* Unknown08;
+};
+
+class Class_10BF3400
+{
+public:
+    int FUN_10bf3400(float A, int B);
+    void FUN_10bf3180(int A, int B, float C, float D);
+
+    char Unknown00[0x4];
+    Class_10BF3400_Unknown04* Unknown04;
+    char Unknown08[0x120];
+    int Unknown128;
+    int Unknown12C;
+};
+
+class Class_10BF3390_Result
+{
+public:
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual void Virtual2();
+    virtual void Virtual3();
+    virtual void Virtual4();
+    virtual void Virtual5();
+    virtual void Virtual6();
+    virtual void Virtual7();
+    virtual void Virtual8();
+    virtual void Virtual9();
+    virtual void Virtual10();
+    virtual void Virtual11();
+    virtual void Virtual12();
+    virtual void Virtual13();
+    virtual void Virtual14();
+    virtual void Virtual15();
+    virtual void Virtual16();
+    virtual void Virtual17();
+    virtual void Virtual18();
+    virtual void Virtual19();
+    virtual void Virtual20();
+    virtual void Virtual21();
+    virtual void Virtual22();
+    virtual void Virtual23();
+    virtual void Virtual24();
+    virtual void Virtual25();
+    virtual void Virtual26();
+    virtual void Virtual27();
+    virtual void Virtual28();
+    virtual void Virtual29();
+    virtual void Virtual30();
+    virtual void Virtual31();
+    virtual void Virtual32();
+    virtual void Virtual33();
+    virtual void Virtual34();
+    virtual void Virtual35();
+    virtual void Virtual36();
+    virtual void Virtual37();
+    virtual void Virtual38();
+    virtual void Virtual39();
+    virtual void Virtual40();
+    virtual void Virtual41();
+    virtual void Virtual42();
+    virtual void Virtual43();
+    virtual void Virtual44();
+    virtual void Virtual45();
+    virtual void Virtual46();
+    virtual void Virtual47();
+    virtual int Virtual48();
+};
+
+class Struct_10BF3390_Local
+{
+public:
+    char Unknown00[0xC];
+};
+
+class Class_10BF3390 : public Class_10BC4BF0
+{
+public:
+    void FUN_10bf3390();
+    bool FUN_10bc4b80(Struct_10BF3390_Local* A, int B, int C);
+    bool FUN_10bf2170(int A, int B, float* C);
+    void FUN_10bf3180(int A, int B, float C, float D);
+};
+
+// FUNCTION: 0x10BF3390 ?FUN_10bf3390@Class_10BF3390@@QAEXXZ
+void Class_10BF3390::FUN_10bf3390()
+{
+    Struct_10BF3390_Local Local;
+    if (FUN_10bc4b80(&Local, 0x1b, ((Class_10BF3390_Result*)FUN_10bc4bf0())->Virtual48()))
+    {
+        float Dist;
+        if (FUN_10bf2170(0x1b, 1, &Dist) || Dist > 32.0f)
+            FUN_10bf3180(0x1b, 1, 0.2f, 1.0f);
+    }
+}
+
+// FUNCTION: 0x10BF3400 ?FUN_10bf3400@Class_10BF3400@@QAEHMH@Z
+int Class_10BF3400::FUN_10bf3400(float A, int B)
+{
+    bool Flag = Unknown12C == 1;
+    if (Unknown128 == 1)
+    {
+        if (!Flag || appFrand() < A)
+        {
+            FUN_10bf3180(0x18, B, 0.2f, Unknown04->Unknown08->FUN_10dbd510(0x100860)->FUN_10bbdc80());
+            return 0x18;
+        }
+    }
+    if (Flag)
+    {
+        FUN_10bf3180(0x19, B, 0.2f, Unknown04->Unknown08->FUN_10dbd510(0x100860)->FUN_10bbdc80());
+        return 0x19;
+    }
+    return 0;
+}
