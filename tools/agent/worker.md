@@ -142,6 +142,8 @@ inlines any body in the file, even one defined after the caller). Use
   One symbols.txt names `DAT_` (the packet gives its value): MSVC loads an
   extern float first (`fld [DAT]; fmul [x]`) and makes a literal the memory
   operand (`fld [x]; fmul [DAT]`): write the form the target's order shows.
+  `fsqrt` compared with a dword constant is `sqrtf(X)` (math.h); `sqrt(X)`
+  compares as double, against a qword `__real@`.
 - `fild; test; jge; fadd [2^32]`: the converted value is unsigned. A byte field
   passed with movzx: the callee takes an `int` (a BYTE or bool parameter
   gives xor/mov al).
