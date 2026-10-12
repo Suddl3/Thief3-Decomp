@@ -109,11 +109,11 @@ public:
     virtual void Virtual65(int A);
 
     void* FUN_10a51100(int A);
-    void FUN_10b70990(Class_10AF7F80* File, Class_10AF7F80* Section);
+    void LoadConfig(Class_10AF7F80* File, Class_10AF7F80* Section);
 };
 
-// FUNCTION: 0x10B70990 ?FUN_10b70990@Class_10E871D0@@QAEXPAVClass_10AF7F80@@0@Z
-void Class_10E871D0::FUN_10b70990(Class_10AF7F80* File, Class_10AF7F80* Section)
+// FUNCTION: 0x10B70990 ?LoadConfig@Class_10E871D0@@QAEXPAVClass_10AF7F80@@0@Z
+void Class_10E871D0::LoadConfig(Class_10AF7F80* File, Class_10AF7F80* Section)
 {
     ((Class_10E67BD8*)this)->Class_10E67BD8::LoadConfig(File, Section);
     void* Result1;

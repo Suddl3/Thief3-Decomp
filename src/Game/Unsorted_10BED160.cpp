@@ -143,7 +143,7 @@ public:
     virtual void Virtual61();
     virtual void Virtual62();
     virtual void Virtual63();
-    virtual void FUN_10bed3e0(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 
     char Unknown04[0x3C];
     unsigned char Unknown40;
@@ -229,7 +229,7 @@ public:
     virtual void Virtual61();
     virtual void Virtual62();
     virtual void Virtual63();
-    virtual void FUN_10bed370(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 
     char Unknown04[0x3C];
     bool Unknown40;
@@ -257,8 +257,8 @@ Struct_10BAA000* FUN_10bed160(Class_10BED160* Array, const Struct_10C05A80* Targ
     return Best;
 }
 
-// FUNCTION: 0x10BED370 ?FUN_10bed370@Class_10E97258@@UAEXAAVFArchive@@@Z
-void Class_10E97258::FUN_10bed370(FArchive& Ar)
+// FUNCTION: 0x10BED370 ?Serialize@Class_10E97258@@UAEXAAVFArchive@@@Z
+void Class_10E97258::Serialize(FArchive& Ar)
 {
     Class_10E8BE68::Serialize(Ar);
     Ar.Serialize(&Unknown40, 1);
@@ -269,8 +269,8 @@ void Class_10E97258::FUN_10bed370(FArchive& Ar)
     Ar.Serialize(&Unknown54, 1);
 }
 
-// FUNCTION: 0x10BED3E0 ?FUN_10bed3e0@Class_10E97370@@UAEXAAVFArchive@@@Z
-void Class_10E97370::FUN_10bed3e0(FArchive& Ar)
+// FUNCTION: 0x10BED3E0 ?Serialize@Class_10E97370@@UAEXAAVFArchive@@@Z
+void Class_10E97370::Serialize(FArchive& Ar)
 {
     Class_10E8BE68::Serialize(Ar);
     Ar.Serialize(&Unknown40, 1);

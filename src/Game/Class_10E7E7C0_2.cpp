@@ -4,7 +4,7 @@
 #include "Game/Class_10B39530.h"
 #include "Game/Struct_10B4C2C0.h"
 #include "Game/Class_10E7E898.h"
-#include "Game/Class_10E816E0.h"
+#include "Game/GSMantle.h"
 
 class AGarrett;
 
@@ -74,7 +74,7 @@ void Class_10E7E7C0::FUN_10b4c0a0(AGarrett* Garrett)
     switch (Unknown10)
     {
     case 2:
-        ((Class_10E816E0*)this)->FUN_10b3ae50(Garrett);
+        ((GSMantle*)this)->ForceArms(Garrett);
         break;
     default:
         ((Class_10B3AE70*)this)->FUN_10b3ae70(Garrett);

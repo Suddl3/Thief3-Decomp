@@ -3,12 +3,12 @@
 #include "Game/Class_10C0C150.h"
 #include "Game/Item_10C0C150.h"
 
-// FUNCTION: 0x10C0C190 ?FUN_10c0c190@Class_10C0C150@@QAEXH@Z
-void Class_10C0C150::FUN_10c0c190(int Index)
+// FUNCTION: 0x10C0C190 ?RemoveAt@Class_10C0C150@@QAEXH@Z
+void Class_10C0C150::RemoveAt(int Index)
 {
     int Last = Unknown00 - 1;
     Item_10C0C150 Temp = Unknown08[Index];
     Unknown08[Index] = Unknown08[Last];
     Unknown08[Last] = Temp;
-    FUN_10c0be50(Unknown00 - 1);
+    Resize(Unknown00 - 1);
 }

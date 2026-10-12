@@ -50,7 +50,7 @@ public:
     virtual void __stdcall Virtual0();
     virtual void __stdcall Virtual1();
     virtual void __stdcall Virtual2();
-    virtual void __stdcall FUN_10b4ca50();
+    virtual void __stdcall ReleaseHandles();
 
     char Unknown04[0x43C];
     int Unknown440;
@@ -70,8 +70,8 @@ void Class_10E7E898::FUN_10b4c2c0(Struct_10B3AF40_Param* A)
     Virtual4();
 }
 
-// FUNCTION: 0x10B4CA50 ?FUN_10b4ca50@Class_10E7EA00@@UAGXXZ
-void __stdcall Class_10E7EA00::FUN_10b4ca50()
+// FUNCTION: 0x10B4CA50 ?ReleaseHandles@Class_10E7EA00@@UAGXXZ
+void __stdcall Class_10E7EA00::ReleaseHandles()
 {
     Unknown44C = 0;
     if (Unknown440)

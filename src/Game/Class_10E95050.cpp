@@ -74,15 +74,15 @@ public:
     virtual void Virtual61();
     virtual void Virtual62();
     virtual void Virtual63();
-    virtual void FUN_10bdf140(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 
     char Unknown04[0x3C];
     int Unknown40;
     int Unknown44;
 };
 
-// FUNCTION: 0x10BDF140 ?FUN_10bdf140@Class_10E95050@@UAEXAAVFArchive@@@Z
-void Class_10E95050::FUN_10bdf140(FArchive& Ar)
+// FUNCTION: 0x10BDF140 ?Serialize@Class_10E95050@@UAEXAAVFArchive@@@Z
+void Class_10E95050::Serialize(FArchive& Ar)
 {
     Class_10E8BE68::Serialize(Ar);
     if (Ar.Unknown0C >= 0x37)

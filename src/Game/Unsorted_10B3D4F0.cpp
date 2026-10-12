@@ -28,14 +28,14 @@ public:
     void** Unknown00;
 };
 
-class Class_10E7EC88 : public Class_10E7E4E0
+class GSLean : public Class_10E7E4E0
 {
 public:
-    Class_10E7EC88* FUN_10b3d4f0();
+    GSLean* FUN_10b3d4f0();
 };
 
-// FUNCTION: 0x10B3D4F0 ?FUN_10b3d4f0@Class_10E7EC88@@QAEPAV1@XZ
-Class_10E7EC88* Class_10E7EC88::FUN_10b3d4f0()
+// FUNCTION: 0x10B3D4F0 ?FUN_10b3d4f0@GSLean@@QAEPAV1@XZ
+GSLean* GSLean::FUN_10b3d4f0()
 {
     FUN_10b3acb0();
     Unknown00 = DAT_10e7ec88;

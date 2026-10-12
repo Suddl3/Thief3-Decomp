@@ -113,7 +113,7 @@ public:
     virtual void Virtual61();
     virtual void Virtual62();
     virtual void Virtual63();
-    virtual void FUN_10bcc1a0(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 
     char Unknown04[0x58];
     bool Unknown5C;

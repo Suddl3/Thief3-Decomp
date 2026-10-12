@@ -13,10 +13,10 @@ public:
     void** Unknown00;
 };
 
-class Class_10E934D0 : public Class_10E90D70
+class State_SearchLook : public Class_10E90D70
 {
 public:
-    Class_10E934D0* FUN_10bd1ec0(int A, int B);
+    State_SearchLook* FUN_10bd1ec0(int A, int B);
 
     char Unknown04[0x3C];
     char Unknown40;
@@ -38,8 +38,8 @@ void Class_10E933B8::FUN_10bd1ea0()
     Unknown04->FUN_10bb8960()->Virtual70();
 }
 
-// FUNCTION: 0x10BD1EC0 ?FUN_10bd1ec0@Class_10E934D0@@QAEPAV1@HH@Z
-Class_10E934D0* Class_10E934D0::FUN_10bd1ec0(int A, int B)
+// FUNCTION: 0x10BD1EC0 ?FUN_10bd1ec0@State_SearchLook@@QAEPAV1@HH@Z
+State_SearchLook* State_SearchLook::FUN_10bd1ec0(int A, int B)
 {
     this->Class_10E90D70::Class_10E90D70(A, B);
     Unknown40 = 0;

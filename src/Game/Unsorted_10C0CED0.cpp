@@ -34,7 +34,7 @@ public:
     virtual void Virtual11();
     virtual void Virtual12();
     virtual void Virtual13();
-    virtual int FUN_10c12880();
+    virtual int GetAISensoryModelClass();
 };
 
 extern int DAT_10ff6610;
@@ -197,8 +197,8 @@ Class_10C0EE90* Class_10C0EE90::FUN_10c0ee90()
     return this;
 }
 
-// FUNCTION: 0x10C12880 ?FUN_10c12880@Class_10E8C378@@UAEHXZ
-int Class_10E8C378::FUN_10c12880()
+// FUNCTION: 0x10C12880 ?GetAISensoryModelClass@Class_10E8C378@@UAEHXZ
+int Class_10E8C378::GetAISensoryModelClass()
 {
     if (DAT_10ff6608 == 0)
     {

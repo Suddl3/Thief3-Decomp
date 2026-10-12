@@ -93,7 +93,7 @@ public:
 
 extern Class_10FF667C* DAT_10ff667c;
 
-class Class_10E95E18 : public Class_10E8BE68
+class State_Fetch : public Class_10E8BE68
 {
 public:
     virtual void Virtual1();
@@ -159,10 +159,10 @@ public:
     virtual void Virtual61();
     virtual void Virtual62();
     virtual void Virtual63();
-    virtual void FUN_10be3420(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 
     char Unknown04[0x3C];
-    int Unknown40;
+    int m_Reference;
     unsigned char Unknown44;
     int Unknown48;
 };
@@ -184,14 +184,14 @@ void Class_10E95D00::Serialize(FArchive& Ar)
     }
 }
 
-// FUNCTION: 0x10BE3420 ?FUN_10be3420@Class_10E95E18@@UAEXAAVFArchive@@@Z
-void Class_10E95E18::FUN_10be3420(FArchive& Ar)
+// FUNCTION: 0x10BE3420 ?Serialize@State_Fetch@@UAEXAAVFArchive@@@Z
+void State_Fetch::Serialize(FArchive& Ar)
 {
     Class_10E8BE68::Serialize(Ar);
     if (Ar.Unknown0C >= 0x60)
     {
         Ar.Serialize(&Unknown44, 1);
-        DAT_10ff667c->Unknown18->Virtual1(Ar, &Unknown40);
+        DAT_10ff667c->Unknown18->Virtual1(Ar, &m_Reference);
         unsigned char Byte = Unknown48;
         Ar.Serialize(&Byte, 1);
         Unknown48 = Byte;

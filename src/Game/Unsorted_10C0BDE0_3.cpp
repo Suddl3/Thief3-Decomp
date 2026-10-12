@@ -6,10 +6,10 @@
 
 Class_10905A90_Member* GetAllocator();
 
-// FUNCTION: 0x10C0C050 ?FUN_10c0c050@Class_10C0C150@@QAEXXZ
-void Class_10C0C150::FUN_10c0c050()
+// FUNCTION: 0x10C0C050 ?Clear@Class_10C0C150@@QAEXXZ
+void Class_10C0C150::Clear()
 {
-    FUN_10c0be50(0);
+    Resize(0);
     if (Unknown04)
     {
         GetAllocator()->Virtual5(Unknown08);

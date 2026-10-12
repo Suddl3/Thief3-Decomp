@@ -4,7 +4,7 @@
 #include "Game/Class_10B25200.h"
 #include "Game/Class_10B3AE70.h"
 #include "Game/Class_10E7E538.h"
-#include "Game/Class_10E816E0.h"
+#include "Game/GSMantle.h"
 
 struct Struct_10B21820_Object
 {
@@ -72,8 +72,8 @@ int __stdcall FUN_10b3add0(unsigned char A)
     return 0x21;
 }
 
-// FUNCTION: 0x10B3AE50 ?FUN_10b3ae50@Class_10E816E0@@QAEXPAVAGarrett@@@Z
-void Class_10E816E0::FUN_10b3ae50(AGarrett* Garrett)
+// FUNCTION: 0x10B3AE50 ?ForceArms@GSMantle@@QAEXPAVAGarrett@@@Z
+void GSMantle::ForceArms(AGarrett* Garrett)
 {
     Garrett->ArmUse = EAU_FORCED_ARMS;
     FUN_10b25cd0()->FUN_10b24d70();

@@ -30,13 +30,13 @@ public:
     Class_10B39870* FUN_10aa82d0();
 };
 
-class Class_10E816E0 : public Class_10AA82D0
+class GSMantle : public Class_10AA82D0
 {
 public:
-    void FUN_10b3ae50(AGarrett* Garrett);
+    void ForceArms(AGarrett* Garrett);
 };
 
-class Class_10B3AE70 : public Class_10E816E0
+class Class_10B3AE70 : public GSMantle
 {
 public:
     virtual void Virtual1();
@@ -70,7 +70,7 @@ void Class_10E81548::FUN_10b4bf20(AGarrett* Garrett)
     switch (Unknown10)
     {
     case 2:
-        FUN_10b3ae50(Garrett);
+        ForceArms(Garrett);
         break;
     default:
         FUN_10b3ae70(Garrett);

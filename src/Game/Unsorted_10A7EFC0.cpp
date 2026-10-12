@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_109081E0.h"
-#include "Game/Class_10E6BFBC.h"
+#include "Game/cTriggerLinkParam.h"
 #include "Game/Class_1096A960.h"
 #include "Game/cEngineTriggerRegistrar.h"
 
@@ -49,8 +49,8 @@ void FUN_10a7efc0(Class_10A7EFC0_Param* A, int B)
         FUN_10af35e0(B, (int)Buffer, (Found - Buffer) + 1);
 }
 
-// FUNCTION: 0x10A7F220 ?FUN_10a7f220@cEngineTriggerRegistrar@@UAEPAVClass_10E6BFBC@@HPBH@Z
-Class_10E6BFBC* cEngineTriggerRegistrar::FUN_10a7f220(int A, const int* B)
+// FUNCTION: 0x10A7F220 ?FUN_10a7f220@cEngineTriggerRegistrar@@UAEPAVcTriggerLinkParam@@HPBH@Z
+cTriggerLinkParam* cEngineTriggerRegistrar::FUN_10a7f220(int A, const int* B)
 {
     GetAllocator()->Virtual8(0, 0);
     bool Flag;
@@ -59,14 +59,14 @@ Class_10E6BFBC* cEngineTriggerRegistrar::FUN_10a7f220(int A, const int* B)
         Flag = FUN_1090f010(B, (const int*)new ((EInternal*)Storage) Class_109081E0("NoSelf"));
         ((Class_109081E0*)Storage)->~Class_109081E0();
     }
-    Class_10E6BFBC* Result;
+    cTriggerLinkParam* Result;
     if (Flag)
     {
-        Result = new(0, 0, 0, 0, 0) Class_10E6BFBC(false);
+        Result = new(0, 0, 0, 0, 0) cTriggerLinkParam(false);
     }
     else
     {
-        Result = new(0, 0, 0, 0, 0) Class_10E6BFBC(true);
+        Result = new(0, 0, 0, 0, 0) cTriggerLinkParam(true);
     }
     GetAllocator()->Virtual9();
     return Result;

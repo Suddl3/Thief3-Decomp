@@ -24,13 +24,13 @@ public:
 class Class_10E92D60 : public Class_10E92C38
 {
 public:
-    Class_10E92D60* FUN_10bcebc0(int A, int B, bool C, int D, void* E, int F);
+    Class_10E92D60* Initialize(int A, int B, bool C, int D, void* E, int F);
 
     bool Unknown54;
 };
 
-// FUNCTION: 0x10BCEBC0 ?FUN_10bcebc0@Class_10E92D60@@QAEPAV1@HH_NHPAXH@Z
-Class_10E92D60* Class_10E92D60::FUN_10bcebc0(int A, int B, bool C, int D, void* E, int F)
+// FUNCTION: 0x10BCEBC0 ?Initialize@Class_10E92D60@@QAEPAV1@HH_NHPAXH@Z
+Class_10E92D60* Class_10E92D60::Initialize(int A, int B, bool C, int D, void* E, int F)
 {
     this->Class_10E92C38::Class_10E92C38(A, B, F, D, E, false);
     Unknown00 = DAT_10e92d60;

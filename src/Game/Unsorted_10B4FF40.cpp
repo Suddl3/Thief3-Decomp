@@ -1,6 +1,6 @@
 // Game/Unsorted_10B4FF40.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10E816E0.h"
+#include "Game/GSMantle.h"
 #include "Game/Struct_10B53A00.h"
 #include "Game/Class_10B50500.h"
 
@@ -67,15 +67,15 @@ bool __stdcall FUN_10b50500(Class_10B50500* Obj, int A, int B)
     return false;
 }
 
-// FUNCTION: 0x10B53A00 ?FUN_10b53a00@Class_10E816E0@@UAEHPAUStruct_10B53A00@@H@Z
-int Class_10E816E0::FUN_10b53a00(Struct_10B53A00* P, int Code)
+// FUNCTION: 0x10B53A00 ?OnAnimationEnd@GSMantle@@UAEHPAUStruct_10B53A00@@H@Z
+int GSMantle::OnAnimationEnd(Struct_10B53A00* P, int Code)
 {
     if (Code == 0x52)
     {
         if (P->Unknown450 & 0x20)
         {
             P->Unknown450 &= ~0x20;
-            FUN_10b3b260(P);
+            ReleaseItem(P);
         }
     }
     return 2;

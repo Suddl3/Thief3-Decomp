@@ -13,7 +13,7 @@ public:
 class Class_10E94458 : public Class_10E8BE68
 {
 public:
-    virtual void FUN_10bdb550(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 
     char Unknown04[0x50];
     int Unknown54;
@@ -96,8 +96,8 @@ public:
     int Unknown60;
 };
 
-// FUNCTION: 0x10BDB550 ?FUN_10bdb550@Class_10E94458@@UAEXAAVFArchive@@@Z
-void Class_10E94458::FUN_10bdb550(FArchive& Ar)
+// FUNCTION: 0x10BDB550 ?Serialize@Class_10E94458@@UAEXAAVFArchive@@@Z
+void Class_10E94458::Serialize(FArchive& Ar)
 {
     Class_10E8BE68::Serialize(Ar);
     FUN_10c11ff0(Ar, &Unknown54);

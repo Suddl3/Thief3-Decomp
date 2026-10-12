@@ -8,10 +8,10 @@ struct Item_10C0C150;
 class Class_10C0C150
 {
 public:
-    int FUN_10c0c150(const Item_10C0C150* Item);
-    void FUN_10c0be50(int NewCount);
-    void FUN_10c0c050();
-    void FUN_10c0c190(int Index);
+    int Add(const Item_10C0C150* Item);
+    void Resize(int NewCount);
+    void Clear();
+    void RemoveAt(int Index);
 
     int Unknown00;
     int Unknown04;

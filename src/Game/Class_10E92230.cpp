@@ -64,11 +64,11 @@ public:
 class Class_10E92230 : public Class_10BC4160
 {
 public:
-    virtual void FUN_10bcc9e0(int Unused);
+    virtual void NotifyActivated(int Unused);
 };
 
-// FUNCTION: 0x10BCC9E0 ?FUN_10bcc9e0@Class_10E92230@@UAEXH@Z
-void Class_10E92230::FUN_10bcc9e0(int Unused)
+// FUNCTION: 0x10BCC9E0 ?NotifyActivated@Class_10E92230@@UAEXH@Z
+void Class_10E92230::NotifyActivated(int Unused)
 {
     ((Class_10BB89D0*)Unknown04)->FUN_10bbc0f0(0x80801);
     Class_10BF7F90* Obj = FUN_10bc4160();

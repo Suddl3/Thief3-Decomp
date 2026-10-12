@@ -74,14 +74,14 @@ public:
     virtual void Virtual61();
     virtual void Virtual62();
     virtual void Virtual63();
-    virtual void FUN_10bdf3b0(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 
     char Unknown04[0x3C];
     int m_State;
 };
 
-// FUNCTION: 0x10BDF3B0 ?FUN_10bdf3b0@Class_10E95170@@UAEXAAVFArchive@@@Z
-void Class_10E95170::FUN_10bdf3b0(FArchive& Ar)
+// FUNCTION: 0x10BDF3B0 ?Serialize@Class_10E95170@@UAEXAAVFArchive@@@Z
+void Class_10E95170::Serialize(FArchive& Ar)
 {
     Class_10E8BE68::Serialize(Ar);
     unsigned char Temp = m_State;

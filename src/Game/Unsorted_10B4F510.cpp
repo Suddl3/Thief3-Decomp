@@ -12,17 +12,17 @@ public:
     unsigned isCrouching : 1;
 };
 
-class Class_10E7EC88 : public Class_10AA82D0
+class GSLean : public Class_10AA82D0
 {
 public:
-    void FUN_10b4f510(AGarrett* Garrett);
+    void PlayLeanMotion(AGarrett* Garrett);
 
     char Pad[0x2C - sizeof(Class_10AA82D0)];
     int Unknown2C;
 };
 
-// FUNCTION: 0x10B4F510 ?FUN_10b4f510@Class_10E7EC88@@QAEXPAVAGarrett@@@Z
-void Class_10E7EC88::FUN_10b4f510(AGarrett* Garrett)
+// FUNCTION: 0x10B4F510 ?PlayLeanMotion@GSLean@@QAEXPAVAGarrett@@@Z
+void GSLean::PlayLeanMotion(AGarrett* Garrett)
 {
     if (!Unknown2C) {
         if (!Garrett->isCrouching)

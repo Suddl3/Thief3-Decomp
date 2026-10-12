@@ -12,8 +12,8 @@ public:
     unsigned isCrouching : 1;
 };
 
-// FUNCTION: 0x10B4EAF0 ?FUN_10b4eaf0@Class_10E7EA90@@UAEXPAVAGarrett@@@Z
-void Class_10E7EA90::FUN_10b4eaf0(AGarrett* Garrett)
+// FUNCTION: 0x10B4EAF0 ?UpdateCrouchMotion@Class_10E7EA90@@UAEXPAVAGarrett@@@Z
+void Class_10E7EA90::UpdateCrouchMotion(AGarrett* Garrett)
 {
     if (Garrett->isCrouching)
         ((Class_10B39530*)FUN_10aa82d0())->FUN_10b39530(0xaf, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);

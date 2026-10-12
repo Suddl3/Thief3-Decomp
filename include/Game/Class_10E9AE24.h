@@ -13,7 +13,7 @@ public:
     ~Class_10E9AE24();
 
     Class_10E9AE24* FUN_10c37700(int A, int B, int C, int D, int E, int F, int G, int H);
-    Class_109081E0 FUN_10c378a0();
+    Class_109081E0 GetMotionControllerName();
 
     int Unknown94;
     int Unknown98;

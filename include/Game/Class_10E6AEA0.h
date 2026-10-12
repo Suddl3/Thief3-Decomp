@@ -48,7 +48,7 @@ public:
     virtual FVector FUN_10a64f30();
     virtual void Virtual35();
     virtual void Virtual36();
-    virtual void FUN_10a572c0(Class_10BFBD70* Array, int B);
+    virtual void AddToArray(Class_10BFBD70* Array, int B);
 
     Class_10E6AEA0();
 

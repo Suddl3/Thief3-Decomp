@@ -16,7 +16,7 @@ void Class_10E81668::FUN_10b4fa70(Struct_10B53A00* A)
 {
     int Flags = A->Unknown450;
     if ((Flags & 2) && Unknown10 == 0 && !(Flags & 1))
-        FUN_10b3b260(A);
+        ReleaseItem(A);
     DAT_10f3a3d8->Unknown13C->FUN_10ac92f0();
     FUN_10abc090(DAT_10f05068);
 }

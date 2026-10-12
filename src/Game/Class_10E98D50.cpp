@@ -27,23 +27,23 @@ public:
     virtual void Virtual13();
     virtual void Virtual14();
     virtual void Virtual15();
-    virtual bool FUN_10c1ae10();
+    virtual bool Evaluate();
 
     int Unknown04;
     Class_10BAC050* Unknown08;
     char Unknown0C[0x3C];
-    Struct_10C1AE10* Unknown48;
-    bool Unknown4C;
+    Struct_10C1AE10* m_Info;
+    bool m_Disabled;
 };
 
-// FUNCTION: 0x10C1AE10 ?FUN_10c1ae10@Class_10E98D50@@UAE_NXZ
-bool Class_10E98D50::FUN_10c1ae10()
+// FUNCTION: 0x10C1AE10 ?Evaluate@Class_10E98D50@@UAE_NXZ
+bool Class_10E98D50::Evaluate()
 {
-    if (!Unknown4C && Unknown04)
+    if (!m_Disabled && Unknown04)
     {
         char Found = Unknown08->FUN_10bac050(Unknown04);
         bool Result;
-        if (Unknown48->Unknown2C == 0x8000)
+        if (m_Info->Unknown2C == 0x8000)
             Result = Found;
         else
             Result = !Found;

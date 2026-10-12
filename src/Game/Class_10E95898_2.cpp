@@ -86,7 +86,7 @@ public:
     virtual void Virtual61();
     virtual void Virtual62();
     virtual void Virtual63();
-    virtual void FUN_10be2090(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 
     char Unknown04[0x3C];
     float Unknown40;

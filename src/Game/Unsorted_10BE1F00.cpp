@@ -16,7 +16,7 @@ public:
 class Class_10E959B0 : public Class_10E8BE68
 {
 public:
-    virtual void FUN_10be20e0(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 
     char Unknown04[0x3C];
     char Unknown40;
@@ -100,7 +100,7 @@ public:
     virtual void Virtual61();
     virtual void Virtual62();
     virtual void Virtual63();
-    virtual void FUN_10be2090(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 
     char Unknown04[0x3C];
     float Unknown40;
@@ -217,8 +217,8 @@ void Class_10BE1F80::FUN_10be1f80(UObject* Obj)
     Unknown40 = Obj;
 }
 
-// FUNCTION: 0x10BE2090 ?FUN_10be2090@Class_10E95898@@UAEXAAVFArchive@@@Z
-void Class_10E95898::FUN_10be2090(FArchive& Ar)
+// FUNCTION: 0x10BE2090 ?Serialize@Class_10E95898@@UAEXAAVFArchive@@@Z
+void Class_10E95898::Serialize(FArchive& Ar)
 {
     Class_10E8BE68::Serialize(Ar);
     Ar.Serialize(&Unknown40, 4);
@@ -227,8 +227,8 @@ void Class_10E95898::FUN_10be2090(FArchive& Ar)
     Ar.Serialize(&Unknown49, 1);
 }
 
-// FUNCTION: 0x10BE20E0 ?FUN_10be20e0@Class_10E959B0@@UAEXAAVFArchive@@@Z
-void Class_10E959B0::FUN_10be20e0(FArchive& Ar)
+// FUNCTION: 0x10BE20E0 ?Serialize@Class_10E959B0@@UAEXAAVFArchive@@@Z
+void Class_10E959B0::Serialize(FArchive& Ar)
 {
     Class_10E8BE68::Serialize(Ar);
     Ar.Serialize(&Unknown40, 1);

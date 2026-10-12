@@ -68,8 +68,8 @@ public:
 
 extern Class_1096C8D0* DAT_10ff3818;
 
-// FUNCTION: 0x10B34BE0 ?FUN_10b34be0@Class_10E7C178@@UAE?AVClass_109081E0@@XZ
-Class_109081E0 Class_10E7C178::FUN_10b34be0()
+// FUNCTION: 0x10B34BE0 ?GetCurrent@Class_10E7C178@@UAE?AVClass_109081E0@@XZ
+Class_109081E0 Class_10E7C178::GetCurrent()
 {
     Class_1096C8D0* Holder = DAT_10ff3818;
     Class_10B34BE0_Member* Obj;

@@ -78,7 +78,7 @@ public:
     virtual void Virtual61();
     virtual void Virtual62();
     virtual void Virtual63();
-    virtual void FUN_10bdf930(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 
     char Unknown04[0x3C];
     int Unknown40;
@@ -87,8 +87,8 @@ public:
     int Unknown4C;
 };
 
-// FUNCTION: 0x10BDF930 ?FUN_10bdf930@State_MunchCorpse@@UAEXAAVFArchive@@@Z
-void State_MunchCorpse::FUN_10bdf930(FArchive& Ar)
+// FUNCTION: 0x10BDF930 ?Serialize@State_MunchCorpse@@UAEXAAVFArchive@@@Z
+void State_MunchCorpse::Serialize(FArchive& Ar)
 {
     Class_10E8BE68::Serialize(Ar);
     if (Ar.Unknown0C >= 0x37)

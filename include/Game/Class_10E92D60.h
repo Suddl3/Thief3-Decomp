@@ -74,7 +74,7 @@ public:
     virtual void Virtual61();
     virtual void Virtual62();
     virtual void Virtual63();
-    virtual void FUN_10bce8d0(Object_10BCE8D0* A);
+    virtual void Serialize(Object_10BCE8D0* A);
     virtual void Virtual65();
     virtual void Virtual66();
     virtual void Virtual67();
@@ -85,7 +85,7 @@ public:
     virtual bool Virtual72();
 
     void FUN_10bce7b0(Object_10BCE8D0* A);
-    Class_10E92D60* FUN_10bcebc0(int A, int B, bool C, int D, void* E, int F);
+    Class_10E92D60* Initialize(int A, int B, bool C, int D, void* E, int F);
 
     bool Unknown54;
     char Pad55[0x3];

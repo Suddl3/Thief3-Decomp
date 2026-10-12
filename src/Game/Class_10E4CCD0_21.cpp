@@ -8,10 +8,10 @@ void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
 struct Struct_10B98E00;
 
-class Class_10E947B8
+class cMeleeStrafeTarget
 {
 public:
-    Class_10E947B8(int A, int B, int C, int D);
+    cMeleeStrafeTarget(int A, int B, int C, int D);
 
     char Unknown00[0x74];
 };
@@ -57,11 +57,11 @@ public:
     virtual void Virtual35();
     virtual void Virtual36();
     virtual void Virtual37();
-    virtual Class_10E947B8* FUN_10b98320(Struct_10B98E00* A, int B, int C);
+    virtual cMeleeStrafeTarget* FUN_10b98320(Struct_10B98E00* A, int B, int C);
 };
 
-// FUNCTION: 0x10B98320 ?FUN_10b98320@Class_10E4CCD0@@UAEPAVClass_10E947B8@@PAUStruct_10B98E00@@HH@Z
-Class_10E947B8* Class_10E4CCD0::FUN_10b98320(Struct_10B98E00* A, int B, int C)
+// FUNCTION: 0x10B98320 ?FUN_10b98320@Class_10E4CCD0@@UAEPAVcMeleeStrafeTarget@@PAUStruct_10B98E00@@HH@Z
+cMeleeStrafeTarget* Class_10E4CCD0::FUN_10b98320(Struct_10B98E00* A, int B, int C)
 {
-    return new(0, 0, 0, 0, 0) Class_10E947B8((int)A, (int)this, B, C);
+    return new(0, 0, 0, 0, 0) cMeleeStrafeTarget((int)A, (int)this, B, C);
 }

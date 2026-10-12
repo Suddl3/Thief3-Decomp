@@ -79,7 +79,7 @@ public:
     virtual void Virtual61();
     virtual void Virtual62();
     virtual void Virtual63();
-    virtual void FUN_10bcbcc0(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 
     Struct_10BCBD10* Unknown04;
     char Unknown08[0x54];
@@ -89,8 +89,8 @@ public:
     int Unknown64;
 };
 
-// FUNCTION: 0x10BCBCC0 ?FUN_10bcbcc0@Class_10E92118@@UAEXAAVFArchive@@@Z
-void Class_10E92118::FUN_10bcbcc0(FArchive& Ar)
+// FUNCTION: 0x10BCBCC0 ?Serialize@Class_10E92118@@UAEXAAVFArchive@@@Z
+void Class_10E92118::Serialize(FArchive& Ar)
 {
     FUN_10bcb850(Ar);
     Ar.Serialize(&Unknown5C, 1);

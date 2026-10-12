@@ -8,7 +8,7 @@ class Class_109081E0;
 class Class_10C38430
 {
 public:
-    Class_109081E0 FUN_10c38430();
+    Class_109081E0 GetMotionControllerName();
 };
 
 #endif // GAME_CLASS_10C38430_H

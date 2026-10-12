@@ -26,20 +26,20 @@ public:
 class Class_10E98D50 : public Class_10E98D08
 {
 public:
-    virtual void FUN_10c1b800(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 
     char Unknown04[0x44];
-    UObject* Unknown48;
-    bool Unknown4C;
+    UObject* m_Info;
+    bool m_Disabled;
 };
 
-// FUNCTION: 0x10C1B800 ?FUN_10c1b800@Class_10E98D50@@UAEXAAVFArchive@@@Z
-void Class_10E98D50::FUN_10c1b800(FArchive& Ar)
+// FUNCTION: 0x10C1B800 ?Serialize@Class_10E98D50@@UAEXAAVFArchive@@@Z
+void Class_10E98D50::Serialize(FArchive& Ar)
 {
     FUN_10c1b1a0(Ar);
-    Ar.Virtual6(&Unknown48);
+    Ar.Virtual6(&m_Info);
     if (Ar.Unknown0C >= 0x40)
-        Ar.Serialize(&Unknown4C, 1);
+        Ar.Serialize(&m_Disabled, 1);
 }
 
 // FUNCTION: 0x10C1B930 ?FUN_10c1b930@Class_10C1B930@@QAEXXZ

@@ -18,14 +18,14 @@ public:
     virtual ~Class_10E6B93C();
     Class_10E6B93C(int Value) : Unknown04(Value) {}
 
-    virtual Class_10E6B93C* FUN_10a2fa70();
-    virtual int FUN_10a2f160(Class_10E6B93C* Other);
+    virtual Class_10E6B93C* Clone();
+    virtual int IsSame(Class_10E6B93C* Other);
 
     int Unknown04;
 };
 
-// FUNCTION: 0x10A2FA70 ?FUN_10a2fa70@Class_10E6B93C@@UAEPAV1@XZ
-Class_10E6B93C* Class_10E6B93C::FUN_10a2fa70()
+// FUNCTION: 0x10A2FA70 ?Clone@Class_10E6B93C@@UAEPAV1@XZ
+Class_10E6B93C* Class_10E6B93C::Clone()
 {
     return new(0, 0, 0, 0, 0) Class_10E6B93C(Unknown04);
 }

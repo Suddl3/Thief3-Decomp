@@ -18,8 +18,8 @@ public:
 
 extern Class_10FF667C* DAT_10ff667c;
 
-// FUNCTION: 0x10C1B4D0 ?FUN_10c1b4d0@Class_10E98E70@@UAEXAAVFArchive@@@Z
-void Class_10E98E70::FUN_10c1b4d0(FArchive& Ar)
+// FUNCTION: 0x10C1B4D0 ?Serialize@Class_10E98E70@@UAEXAAVFArchive@@@Z
+void Class_10E98E70::Serialize(FArchive& Ar)
 {
     Class_10C1B1A0::FUN_10c1b1a0(Ar);
     FUN_10b052a0(Ar, &Unknown48);
@@ -27,5 +27,5 @@ void Class_10E98E70::FUN_10c1b4d0(FArchive& Ar)
     Ar.Virtual7(&Unknown58);
     Ar.Serialize(&Unknown5C, 1);
     if (Ar.Unknown0C >= 0x6A)
-        DAT_10ff667c->Unknown18->Virtual1(Ar, &Unknown60);
+        DAT_10ff667c->Unknown18->Virtual1(Ar, &m_Reference);
 }

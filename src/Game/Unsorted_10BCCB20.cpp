@@ -46,8 +46,8 @@ void Class_10E8BE68::FUN_10bce6e0(int p1)
     FUN_10bce0d0(Unknown04->Unknown1D0);
 }
 
-// FUNCTION: 0x10BCE8D0 ?FUN_10bce8d0@Class_10E92D60@@UAEXPAVObject_10BCE8D0@@@Z
-void Class_10E92D60::FUN_10bce8d0(Object_10BCE8D0* A)
+// FUNCTION: 0x10BCE8D0 ?Serialize@Class_10E92D60@@UAEXPAVObject_10BCE8D0@@@Z
+void Class_10E92D60::Serialize(Object_10BCE8D0* A)
 {
     FUN_10bce7b0(A);
     A->Virtual1(&Unknown54, 1);

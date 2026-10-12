@@ -47,7 +47,7 @@ public:
     virtual void Virtual17();
     virtual void Virtual18();
     virtual void Virtual19();
-    virtual void FUN_10be90c0(int A);
+    virtual void NotifyActivated(int A);
 };
 
 // FUNCTION: 0x10BE8F70 ?FUN_10be8f70@Class_10E960D8@@QAEXXZ
@@ -57,8 +57,8 @@ void Class_10E960D8::FUN_10be8f70()
     FUN_10be8ee0();
 }
 
-// FUNCTION: 0x10BE90C0 ?FUN_10be90c0@Class_10E91CB8@@UAEXH@Z
-void Class_10E91CB8::FUN_10be90c0(int A)
+// FUNCTION: 0x10BE90C0 ?NotifyActivated@Class_10E91CB8@@UAEXH@Z
+void Class_10E91CB8::NotifyActivated(int A)
 {
     ((Class_10bf7f90*)FUN_10bc4160())->FUN_10bf7f90(0, 1);
 }

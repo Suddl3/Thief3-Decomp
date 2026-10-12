@@ -16,17 +16,17 @@ public:
     virtual void Virtual0();
     virtual void Virtual1();
     virtual void Virtual2();
-    virtual int FUN_10c1af00(Class_10E98D50* Other);
+    virtual int IsEquivalent(Class_10E98D50* Other);
 
     char Unknown04[0x44];
-    Struct_10C1AF00* Unknown48;
+    Struct_10C1AF00* m_Info;
 };
 
-// FUNCTION: 0x10C1AF00 ?FUN_10c1af00@Class_10E98D50@@UAEHPAV1@@Z
-int Class_10E98D50::FUN_10c1af00(Class_10E98D50* Other)
+// FUNCTION: 0x10C1AF00 ?IsEquivalent@Class_10E98D50@@UAEHPAV1@@Z
+int Class_10E98D50::IsEquivalent(Class_10E98D50* Other)
 {
-    if (Unknown48->Unknown2C == Other->Unknown48->Unknown2C && Unknown48->Unknown30 == Other->Unknown48->Unknown30 &&
-        Unknown48->Unknown5C == Other->Unknown48->Unknown5C)
+    if (m_Info->Unknown2C == Other->m_Info->Unknown2C && m_Info->Unknown30 == Other->m_Info->Unknown30 &&
+        m_Info->Unknown5C == Other->m_Info->Unknown5C)
         return 1;
     return 0;
 }

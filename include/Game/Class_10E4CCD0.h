@@ -11,7 +11,7 @@ class Class_10E92730;
 class Class_10E928E8;
 class Class_10E93020;
 class State_PlayAnim;
-class Class_10E934D0;
+class State_SearchLook;
 class Class_10E93878;
 class Class_10E93B68;
 class Class_10E93E48;
@@ -54,7 +54,7 @@ public:
     virtual void Virtual24();
     virtual void Virtual25();
     virtual void Virtual26();
-    virtual Class_10E934D0* FUN_10b97f30(int A);
+    virtual State_SearchLook* FUN_10b97f30(int A);
     virtual void Virtual28();
     virtual void Virtual29();
     virtual Class_10E93B68* FUN_10b980e0(int A);

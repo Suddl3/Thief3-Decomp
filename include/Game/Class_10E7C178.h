@@ -11,15 +11,15 @@ public:
     virtual ~Class_10E7C178();
     virtual void Virtual1();
     virtual void Virtual2();
-    virtual Class_109081E0 FUN_10b34a30();
+    virtual Class_109081E0 GetClassName();
     virtual void Virtual4();
     virtual void Virtual5();
     virtual void Virtual6();
-    virtual int FUN_10b34b80();
-    virtual Class_109081E0 FUN_10b34be0();
-    virtual int FUN_10b34b30();
+    virtual int IsDone();
+    virtual Class_109081E0 GetCurrent();
+    virtual int IsInventoryClass();
 
-    Class_109081E0 Unknown04;
+    Class_109081E0 m_ClassName;
 };
 
 #endif // GAME_CLASS_10E7C178_H

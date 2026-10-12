@@ -98,10 +98,10 @@ public:
 
 extern void* DAT_10e947b8[];
 
-class Class_10E947B8 : public Class_10E90D70
+class cMeleeStrafeTarget : public Class_10E90D70
 {
 public:
-    Class_10E947B8* FUN_10bdb6c0(int A, int B, int C, int D);
+    cMeleeStrafeTarget* FUN_10bdb6c0(int A, int B, int C, int D);
 
     int Unknown40;
     FArray Unknown44;
@@ -110,7 +110,7 @@ public:
     float Unknown58;
     int Unknown5C;
     bool Unknown60;
-    int Unknown64;
+    int m_WaitCount;
     int Unknown68;
     bool Unknown6C;
     int Unknown70;
@@ -184,8 +184,8 @@ Class_10E94698* Class_10E94698::FUN_10bdb620(int A, int B, int C, int D)
     return this;
 }
 
-// FUNCTION: 0x10BDB6C0 ?FUN_10bdb6c0@Class_10E947B8@@QAEPAV1@HHHH@Z
-Class_10E947B8* Class_10E947B8::FUN_10bdb6c0(int A, int B, int C, int D)
+// FUNCTION: 0x10BDB6C0 ?FUN_10bdb6c0@cMeleeStrafeTarget@@QAEPAV1@HHHH@Z
+cMeleeStrafeTarget* cMeleeStrafeTarget::FUN_10bdb6c0(int A, int B, int C, int D)
 {
     this->Class_10E90D70::Class_10E90D70(A, B);
     Unknown40 = C;
@@ -196,7 +196,7 @@ Class_10E947B8* Class_10E947B8::FUN_10bdb6c0(int A, int B, int C, int D)
     Unknown58 = 0.5f;
     Unknown5C = 0;
     Unknown60 = false;
-    Unknown64 = 0;
+    m_WaitCount = 0;
     Unknown68 = 0;
     Unknown6C = false;
     Unknown70 = 0;

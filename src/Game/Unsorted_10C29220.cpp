@@ -233,8 +233,8 @@ Class_109081E0 Class_10E9ADE8::GetMotionControllerName()
     return Class_109081E0(DAT_10e9ae18);
 }
 
-// FUNCTION: 0x10C378A0 ?FUN_10c378a0@Class_10E9AE24@@QAE?AVClass_109081E0@@XZ
-Class_109081E0 Class_10E9AE24::FUN_10c378a0()
+// FUNCTION: 0x10C378A0 ?GetMotionControllerName@Class_10E9AE24@@QAE?AVClass_109081E0@@XZ
+Class_109081E0 Class_10E9AE24::GetMotionControllerName()
 {
     return Class_109081E0(DAT_10e9ae54);
 }
@@ -263,8 +263,8 @@ int FUN_10c382e0()
     return 0x3;
 }
 
-// FUNCTION: 0x10C38430 ?FUN_10c38430@Class_10C38430@@QAE?AVClass_109081E0@@XZ
-Class_109081E0 Class_10C38430::FUN_10c38430()
+// FUNCTION: 0x10C38430 ?GetMotionControllerName@Class_10C38430@@QAE?AVClass_109081E0@@XZ
+Class_109081E0 Class_10C38430::GetMotionControllerName()
 {
     return Class_109081E0(DAT_10e9af34);
 }

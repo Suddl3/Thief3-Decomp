@@ -63,7 +63,7 @@ extern Class_1096C8D0* DAT_10ff3818;
 class Class_10E7C178
 {
 public:
-    void FUN_10b34f60();
+    void SeekMatch();
 
     char Pad00[0x8];
     unsigned char Unknown08;
@@ -88,8 +88,8 @@ public:
     virtual int Virtual0(int A, int B, int C, int* D);
 };
 
-// FUNCTION: 0x10B34F60 ?FUN_10b34f60@Class_10E7C178@@QAEXXZ
-void Class_10E7C178::FUN_10b34f60()
+// FUNCTION: 0x10B34F60 ?SeekMatch@Class_10E7C178@@QAEXXZ
+void Class_10E7C178::SeekMatch()
 {
     for (DAT_10ff3818->FUN_1096c8d0(); DAT_10ff3818->IsValid(); DAT_10ff3818->FUN_1096c8d0())
     {

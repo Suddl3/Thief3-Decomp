@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10E5D74C.h"
-#include "Game/Class_10E6C68C.h"
+#include "Game/cTriggerBoolPropertyParam.h"
 
 template <class T> class TArray
 {
@@ -66,8 +66,8 @@ public:
     FName Unknown04;
 };
 
-// FUNCTION: 0x10A8B860 ?FUN_10a8b860@Class_10E6C68C@@UAEHXZ
-int Class_10E6C68C::FUN_10a8b860()
+// FUNCTION: 0x10A8B860 ?IsLoaded@cTriggerBoolPropertyParam@@UAEHXZ
+int cTriggerBoolPropertyParam::IsLoaded()
 {
     int Pending;
     if (DAT_10f3a1ec->Unknown04 == 0)

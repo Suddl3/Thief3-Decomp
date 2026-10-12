@@ -182,7 +182,7 @@ public:
 
 extern void* DAT_10e95e18;
 
-class Class_10E95E18
+class State_Fetch
 {
 public:
     void* Field00;
@@ -394,8 +394,8 @@ int FUN_10be2f40()
     return 0x1007bb;
 }
 
-// FUNCTION: 0x10BE2F90 ?FUN_10be2f90@Class_10E95E18@@QAEXXZ
-void Class_10E95E18::FUN_10be2f90()
+// FUNCTION: 0x10BE2F90 ?FUN_10be2f90@State_Fetch@@QAEXXZ
+void State_Fetch::FUN_10be2f90()
 {
     Field00 = (void*)&DAT_10e95e18;
     FUN_10bc6a80();
@@ -473,8 +473,8 @@ void FUN_10be58b0()
     FUN_10be3f90();
 }
 
-// FUNCTION: 0x10BE5F60 ?FUN_10be5f60@Class_10E96510@@UAEXPAVObject_10BE58C0@@@Z
-void Class_10E96510::FUN_10be5f60(Object_10BE58C0* Ar)
+// FUNCTION: 0x10BE5F60 ?Serialize@Class_10E96510@@UAEXPAVObject_10BE58C0@@@Z
+void Class_10E96510::Serialize(Object_10BE58C0* Ar)
 {
     FUN_10be4ef0(Ar);
 }

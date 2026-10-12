@@ -89,15 +89,15 @@ public:
     virtual void Virtual61();
     virtual void Virtual62();
     virtual void Virtual63();
-    virtual void FUN_10be3010(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 
     char Unknown04[0x3C];
     int Unknown40;
     int Unknown44;
 };
 
-// FUNCTION: 0x10BE3010 ?FUN_10be3010@Class_10E95BE8@@UAEXAAVFArchive@@@Z
-void Class_10E95BE8::FUN_10be3010(FArchive& Ar)
+// FUNCTION: 0x10BE3010 ?Serialize@Class_10E95BE8@@UAEXAAVFArchive@@@Z
+void Class_10E95BE8::Serialize(FArchive& Ar)
 {
     Class_10E8BE68::Serialize(Ar);
     Ar.Virtual6(&Unknown40);

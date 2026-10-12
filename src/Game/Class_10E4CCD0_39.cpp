@@ -18,10 +18,10 @@ struct Struct_10B98E00
 };
 
 // The object the function allocates: 0x4c bytes, built from (int, int, int, int).
-class Class_10E95E18
+class State_Fetch
 {
 public:
-    Class_10E95E18(int A, int B, int C, int D);
+    State_Fetch(int A, int B, int C, int D);
 
     char Pad00[0x4c];
 };
@@ -81,14 +81,14 @@ public:
     virtual void Virtual49();
     virtual void Virtual50();
     virtual void Virtual51();
-    virtual Class_10E95E18* FUN_10b99fb0(Struct_10B98E00* A, int B, int C);
+    virtual State_Fetch* FUN_10b99fb0(Struct_10B98E00* A, int B, int C);
 };
 
-// FUNCTION: 0x10B99FB0 ?FUN_10b99fb0@Class_10E4CCD0@@UAEPAVClass_10E95E18@@PAUStruct_10B98E00@@HH@Z
-Class_10E95E18* Class_10E4CCD0::FUN_10b99fb0(Struct_10B98E00* A, int B, int C)
+// FUNCTION: 0x10B99FB0 ?FUN_10b99fb0@Class_10E4CCD0@@UAEPAVState_Fetch@@PAUStruct_10B98E00@@HH@Z
+State_Fetch* Class_10E4CCD0::FUN_10b99fb0(Struct_10B98E00* A, int B, int C)
 {
     int Id = FUN_10be2fe0();
     if (Id && A->Unknown08->FUN_10dbd510(Id)->FUN_10bbdb40() > 0.0f)
-        return new(0, 0, 0, 0, 0) Class_10E95E18((int)A, (int)this, B, C);
+        return new(0, 0, 0, 0, 0) State_Fetch((int)A, (int)this, B, C);
     return 0;
 }

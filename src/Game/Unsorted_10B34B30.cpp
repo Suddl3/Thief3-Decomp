@@ -56,8 +56,8 @@ public:
 
 extern Class_1096C8D0* DAT_10ff3818;
 
-// FUNCTION: 0x10B34B80 ?FUN_10b34b80@Class_10E7C178@@UAEHXZ
-int Class_10E7C178::FUN_10b34b80()
+// FUNCTION: 0x10B34B80 ?IsDone@Class_10E7C178@@UAEHXZ
+int Class_10E7C178::IsDone()
 {
     int Pending;
     if (DAT_10ff3818->Unknown04 == 0)

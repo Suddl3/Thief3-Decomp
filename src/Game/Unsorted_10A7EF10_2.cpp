@@ -3,7 +3,7 @@
 #include "Core/Core.h"
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_109081E0.h"
-#include "Game/Class_10E6BFBC.h"
+#include "Game/cTriggerLinkParam.h"
 
 class ULinkDataObject
 {
@@ -17,8 +17,8 @@ extern const char DAT_10e5da48[];
 // FUNCTION: 0x10A7EF10 ??$Cast@VULinkDataObject@@@@YAPAVULinkDataObject@@PAVUObject@@@Z
 template ULinkDataObject* Cast<ULinkDataObject>(UObject* Src);
 
-// FUNCTION: 0x10A7F420 ?FUN_10a7f420@Class_10E6BFBC@@UAEHXZ
-int Class_10E6BFBC::FUN_10a7f420()
+// FUNCTION: 0x10A7F420 ?IsDefaultFlavor@cTriggerLinkParam@@UAEHXZ
+int cTriggerLinkParam::IsDefaultFlavor()
 {
-    return FUN_1094c430(Unknown08, Class_109081E0(DAT_10e5da48));
+    return FUN_1094c430(m_Flavor, Class_109081E0(DAT_10e5da48));
 }

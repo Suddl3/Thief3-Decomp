@@ -13,7 +13,7 @@ struct Struct_10BE4800;
 class Class_10E96510 : public Class_10E960D8
 {
 public:
-    virtual void FUN_10be5f60(Object_10BE58C0* Ar);
+    virtual void Serialize(Object_10BE58C0* Ar);
 
     float FUN_10be4800();
     void FUN_10be8710();

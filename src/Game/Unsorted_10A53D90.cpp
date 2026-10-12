@@ -6,12 +6,12 @@
 #include "Game/Config.h"
 #include "Game/Window.h"
 
-class Class_10E7BBC8 {
+class cMovieSubtitles {
 public:
     char Unknown00[0x118];
     void* Unknown118;
 
-    bool FUN_10a54cb0();
+    bool IsPlaying();
 };
 
 class Class_10E682F0 : public Window
@@ -81,8 +81,8 @@ void Class_10E682F0::FUN_10a54c70(int A)
     }
 }
 
-// FUNCTION: 0x10A54CB0 ?FUN_10a54cb0@Class_10E7BBC8@@QAE_NXZ
-bool Class_10E7BBC8::FUN_10a54cb0()
+// FUNCTION: 0x10A54CB0 ?IsPlaying@cMovieSubtitles@@QAE_NXZ
+bool cMovieSubtitles::IsPlaying()
 {
     return Unknown118 != 0;
 }

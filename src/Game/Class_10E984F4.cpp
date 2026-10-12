@@ -15,7 +15,7 @@ public:
     virtual void Virtual6();
     virtual void Virtual7();
     virtual void Virtual8();
-    virtual int FUN_10c12b10();
+    virtual int HasElements();
 
     int* Unknown04;
 };
@@ -41,8 +41,8 @@ Class_10E984F4::~Class_10E984F4()
     }
 }
 
-// FUNCTION: 0x10C12B10 ?FUN_10c12b10@Class_10E8C378@@UAEHXZ
-int Class_10E8C378::FUN_10c12b10()
+// FUNCTION: 0x10C12B10 ?HasElements@Class_10E8C378@@UAEHXZ
+int Class_10E8C378::HasElements()
 {
     int Count = Unknown04 == 0 ? 0 : Unknown04[-1];
     return Count > 0;

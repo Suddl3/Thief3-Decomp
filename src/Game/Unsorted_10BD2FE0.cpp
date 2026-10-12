@@ -16,7 +16,7 @@ public:
 class Class_10E935F0 : public Class_10E8BE68
 {
 public:
-    virtual void FUN_10bd3090(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 
     char Unknown04[0x40];
     int Unknown44;
@@ -65,8 +65,8 @@ void Class_10E932A0::FUN_10bd2fe0()
         PopState();
 }
 
-// FUNCTION: 0x10BD3090 ?FUN_10bd3090@Class_10E935F0@@UAEXAAVFArchive@@@Z
-void Class_10E935F0::FUN_10bd3090(FArchive& Ar)
+// FUNCTION: 0x10BD3090 ?Serialize@Class_10E935F0@@UAEXAAVFArchive@@@Z
+void Class_10E935F0::Serialize(FArchive& Ar)
 {
     Class_10E8BE68::Serialize(Ar);
     Ar.Serialize(&Unknown44, 4);

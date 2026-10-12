@@ -89,7 +89,7 @@ public:
     virtual void Virtual61();
     virtual void Virtual62();
     virtual void Virtual63();
-    virtual void FUN_10bd0a50(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 
     State_PlayAnim(int A, int B, int C, bool D);
 
@@ -103,8 +103,8 @@ public:
     char Pad56[0x2];
 };
 
-// FUNCTION: 0x10BD0A50 ?FUN_10bd0a50@State_PlayAnim@@UAEXAAVFArchive@@@Z
-void State_PlayAnim::FUN_10bd0a50(FArchive& Ar)
+// FUNCTION: 0x10BD0A50 ?Serialize@State_PlayAnim@@UAEXAAVFArchive@@@Z
+void State_PlayAnim::Serialize(FArchive& Ar)
 {
     ((Class_10E8BE68*)this)->Class_10E8BE68::Serialize(Ar);
     int Count = m_Items.Unknown00;

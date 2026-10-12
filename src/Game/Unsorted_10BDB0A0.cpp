@@ -19,7 +19,7 @@ void FUN_10c11ff0(FArchive& Ar, int* Value);
 class Class_10E94A00 : public Class_10E8BE68
 {
 public:
-    virtual void FUN_10bdb210(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 
     char Unknown04[0x50];
     int Unknown54;
@@ -82,7 +82,7 @@ public:
     void PopState();
 };
 
-class Class_10E947B8 : public cTacticMoveToPoint
+class cMeleeStrafeTarget : public cTacticMoveToPoint
 {
 public:
     virtual void FUN_10bdb0a0();
@@ -90,11 +90,11 @@ public:
     Class_10BBB410* Unknown04;
     char Unknown08[0x58];
     bool Unknown60;
-    int Unknown64;
+    int m_WaitCount;
 };
 
-// FUNCTION: 0x10BDB0A0 ?FUN_10bdb0a0@Class_10E947B8@@UAEXXZ
-void Class_10E947B8::FUN_10bdb0a0()
+// FUNCTION: 0x10BDB0A0 ?FUN_10bdb0a0@cMeleeStrafeTarget@@UAEXXZ
+void cMeleeStrafeTarget::FUN_10bdb0a0()
 {
     Class_10BFF460* Obj = Unknown04->FUN_10bbb410();
     if (Obj)
@@ -106,7 +106,7 @@ void Class_10E947B8::FUN_10bdb0a0()
         }
         else
         {
-            ++Unknown64;
+            ++m_WaitCount;
             Unknown60 = false;
         }
     }
@@ -127,8 +127,8 @@ void Class_10E94E00::FUN_10bdb110(int A)
         Unknown04->FUN_10bb8700();
 }
 
-// FUNCTION: 0x10BDB210 ?FUN_10bdb210@Class_10E94A00@@UAEXAAVFArchive@@@Z
-void Class_10E94A00::FUN_10bdb210(FArchive& Ar)
+// FUNCTION: 0x10BDB210 ?Serialize@Class_10E94A00@@UAEXAAVFArchive@@@Z
+void Class_10E94A00::Serialize(FArchive& Ar)
 {
     Class_10E8BE68::Serialize(Ar);
     FUN_10c11ff0(Ar, &Unknown54);

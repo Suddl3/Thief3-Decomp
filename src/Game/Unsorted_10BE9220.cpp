@@ -86,7 +86,7 @@ public:
     virtual void Virtual61();
     virtual void Virtual62();
     virtual void Virtual63();
-    virtual void FUN_10be92c0(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 
     char Unknown04[0x3C];
     int Unknown40;
@@ -160,7 +160,7 @@ public:
     virtual void Virtual61();
     virtual void Virtual62();
     virtual void Virtual63();
-    virtual void FUN_10be9240(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 
     char Unknown04[0x3C];
     int Unknown40;
@@ -170,8 +170,8 @@ public:
     int Unknown50;
 };
 
-// FUNCTION: 0x10BE9240 ?FUN_10be9240@Class_10E96D98@@UAEXAAVFArchive@@@Z
-void Class_10E96D98::FUN_10be9240(FArchive& Ar)
+// FUNCTION: 0x10BE9240 ?Serialize@Class_10E96D98@@UAEXAAVFArchive@@@Z
+void Class_10E96D98::Serialize(FArchive& Ar)
 {
     Class_10E8BE68::Serialize(Ar);
     Ar.Serialize(&Unknown44, 4);
@@ -181,8 +181,8 @@ void Class_10E96D98::FUN_10be9240(FArchive& Ar)
     Ar.Serialize(&Unknown50, 4);
 }
 
-// FUNCTION: 0x10BE92C0 ?FUN_10be92c0@Class_10E96EB0@@UAEXAAVFArchive@@@Z
-void Class_10E96EB0::FUN_10be92c0(FArchive& Ar)
+// FUNCTION: 0x10BE92C0 ?Serialize@Class_10E96EB0@@UAEXAAVFArchive@@@Z
+void Class_10E96EB0::Serialize(FArchive& Ar)
 {
     Class_10E8BE68::Serialize(Ar);
     DAT_10ff667c->Unknown18->Virtual1(Ar, &Unknown40);

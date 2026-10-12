@@ -3,7 +3,7 @@
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10928760.h"
 #include "Game/Class_1092F130.h"
-#include "Game/Class_10E49C6C.h"
+#include "Game/Vocabulary.h"
 #include "Game/Class_10BFBD70.h"
 
 Class_10905A90_Member* GetAllocator();
@@ -24,10 +24,10 @@ void Class_1092F130::FUN_1092f130()
     GetAllocator()->Virtual9();
 }
 
-// FUNCTION: 0x1092F830 ??0Class_10E49C6C@@QAE@XZ
-Class_10E49C6C::Class_10E49C6C()
+// FUNCTION: 0x1092F830 ??0Vocabulary@@QAE@XZ
+Vocabulary::Vocabulary()
 {
 }
 
-// FUNCTION: 0x10930630 ??_GClass_10E49C6C@@UAEPAXI@Z
+// FUNCTION: 0x10930630 ??_GVocabulary@@UAEPAXI@Z
 // Compiler-generated: emitted with the class's vtable by 0x1092F830's definition in this unit.

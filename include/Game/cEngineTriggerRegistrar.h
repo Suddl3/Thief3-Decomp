@@ -3,12 +3,12 @@
 #ifndef GAME_CENGINETRIGGERREGISTRAR_H
 #define GAME_CENGINETRIGGERREGISTRAR_H
 
-class Class_10E6BFBC;
+class cTriggerLinkParam;
 
 class cEngineTriggerRegistrar
 {
 public:
-    virtual Class_10E6BFBC* FUN_10a7f220(int A, const int* B);
+    virtual cTriggerLinkParam* FUN_10a7f220(int A, const int* B);
 };
 
 #endif // GAME_CENGINETRIGGERREGISTRAR_H

@@ -114,7 +114,7 @@ public:
     virtual void Virtual34();
     virtual void Virtual35();
     virtual void Virtual36();
-    virtual void FUN_10a572c0(Class_10BFBD70* Array, int B);
+    virtual void AddToArray(Class_10BFBD70* Array, int B);
 
     char Unknown04[0x114];
     int Unknown118;
@@ -127,8 +127,8 @@ FVector Class_10E68B10::FUN_10a56c50()
     return Ext + Virtual6();
 }
 
-// FUNCTION: 0x10A572C0 ?FUN_10a572c0@Class_10E6AEA0@@UAEXPAVClass_10BFBD70@@H@Z
-void Class_10E6AEA0::FUN_10a572c0(Class_10BFBD70* Array, int B)
+// FUNCTION: 0x10A572C0 ?AddToArray@Class_10E6AEA0@@UAEXPAVClass_10BFBD70@@H@Z
+void Class_10E6AEA0::AddToArray(Class_10BFBD70* Array, int B)
 {
     if (Array && Unknown118)
     {

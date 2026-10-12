@@ -7,7 +7,7 @@ class Class_10E6B93C
 public:
     virtual void Virtual0();
     virtual void Virtual1();
-    virtual int FUN_10a2f160(Class_10E6B93C* Other);
+    virtual int IsSame(Class_10E6B93C* Other);
 
     int Unknown04;
 };
@@ -20,8 +20,8 @@ int Class_10E66300::FUN_10a2f140(int A)
     return 0;
 }
 
-// FUNCTION: 0x10A2F160 ?FUN_10a2f160@Class_10E6B93C@@UAEHPAV1@@Z
-int Class_10E6B93C::FUN_10a2f160(Class_10E6B93C* Other)
+// FUNCTION: 0x10A2F160 ?IsSame@Class_10E6B93C@@UAEHPAV1@@Z
+int Class_10E6B93C::IsSame(Class_10E6B93C* Other)
 {
     return &Unknown04 == &Other->Unknown04;
 }

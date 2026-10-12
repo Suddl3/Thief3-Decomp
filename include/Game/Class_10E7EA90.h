@@ -12,7 +12,7 @@ class Class_10E7EA90 : public Class_10AA82D0
 {
 public:
     virtual void Virtual1();
-    virtual void FUN_10b4eaf0(AGarrett* Garrett);
+    virtual void UpdateCrouchMotion(AGarrett* Garrett);
     virtual void Virtual2();
     virtual void Virtual3();
     virtual int Virtual4();

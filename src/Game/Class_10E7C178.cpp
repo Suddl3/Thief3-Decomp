@@ -24,15 +24,15 @@ public:
     virtual void Virtual0();
     virtual void Virtual1();
     virtual void Virtual2();
-    virtual Class_109081E0 FUN_10b34a30();
+    virtual Class_109081E0 GetClassName();
 
-    Class_109081E0 Unknown04;
+    Class_109081E0 m_ClassName;
 };
 
-// FUNCTION: 0x10B34A30 ?FUN_10b34a30@Class_10E7C178@@UAE?AVClass_109081E0@@XZ
-Class_109081E0 Class_10E7C178::FUN_10b34a30()
+// FUNCTION: 0x10B34A30 ?GetClassName@Class_10E7C178@@UAE?AVClass_109081E0@@XZ
+Class_109081E0 Class_10E7C178::GetClassName()
 {
-    if (Unknown04.Unknown00 && Unknown04.Unknown00[-1] > 0)
-        return Unknown04;
+    if (m_ClassName.Unknown00 && m_ClassName.Unknown00[-1] > 0)
+        return m_ClassName;
     return Class_109081E0(DAT_10e795b0);
 }

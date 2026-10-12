@@ -49,7 +49,7 @@ public:
 
 extern Class_10FF667C* DAT_10ff667c;
 
-class Class_10E95E18 : public Class_10E8BE68
+class State_Fetch : public Class_10E8BE68
 {
 public:
     virtual void Virtual0();
@@ -67,8 +67,8 @@ public:
     Class_10BB85E0* Unknown04;
 };
 
-// FUNCTION: 0x10BE3E50 ?FUN_10be3e50@Class_10E95E18@@UAEXXZ
-void Class_10E95E18::FUN_10be3e50()
+// FUNCTION: 0x10BE3E50 ?FUN_10be3e50@State_Fetch@@UAEXXZ
+void State_Fetch::FUN_10be3e50()
 {
     if (!(FUN_10bc4160() && FUN_10bc4160()->FUN_10aa82d0() == 0) && !FUN_10be3b30())
         return;

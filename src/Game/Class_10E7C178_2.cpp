@@ -8,8 +8,8 @@ bool FUN_1094c430(const Class_109081E0& A, const Class_109081E0& B) throw();
 
 extern const char DAT_10e795b0[];
 
-// FUNCTION: 0x10B34B30 ?FUN_10b34b30@Class_10E7C178@@UAEHXZ
-int Class_10E7C178::FUN_10b34b30()
+// FUNCTION: 0x10B34B30 ?IsInventoryClass@Class_10E7C178@@UAEHXZ
+int Class_10E7C178::IsInventoryClass()
 {
-    return FUN_1094c430(Unknown04, Class_109081E0(DAT_10e795b0));
+    return FUN_1094c430(m_ClassName, Class_109081E0(DAT_10e795b0));
 }

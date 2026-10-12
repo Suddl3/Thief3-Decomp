@@ -23,13 +23,13 @@ public:
     void ClearVelocity(AGarrett* Garrett);
 };
 
-class Class_10E816E0 : public Class_10E7E6A0
+class GSMantle : public Class_10E7E6A0
 {
 public:
-    void FUN_10b3ae50(AGarrett* Garrett);
+    void ForceArms(AGarrett* Garrett);
 };
 
-class Class_10B3AE70 : public Class_10E816E0
+class Class_10B3AE70 : public GSMantle
 {
 public:
     void FUN_10b3ae70(AGarrett* Garrett);
@@ -60,7 +60,7 @@ void Class_10E7E808::FUN_10b4bce0(AGarrett* Garrett)
     switch (Garrett->MtNextState)
     {
     case 2:
-        FUN_10b3ae50(Garrett);
+        ForceArms(Garrett);
         break;
     default:
         FUN_10b3ae70(Garrett);

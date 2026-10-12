@@ -11,11 +11,11 @@ public:
     virtual int Virtual0();
 
     char Unknown04[0x44];
-    UObject* Unknown48;
+    UObject* m_Info;
 };
 
 // FUNCTION: 0x10C1AE80 ??1Class_10E98D50@@QAE@XZ
 Class_10E98D50::~Class_10E98D50()
 {
-    Unknown48->ConditionalDestroy();
+    m_Info->ConditionalDestroy();
 }

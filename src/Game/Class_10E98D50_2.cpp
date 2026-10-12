@@ -22,17 +22,17 @@ public:
     virtual void Virtual9();
     virtual void Virtual10();
     virtual void Virtual11();
-    virtual bool FUN_10c1ae50(int A);
+    virtual bool Matches(int A);
 
     int Unknown04;
     char Unknown08[0x40];
-    Struct_10C1AE50* Unknown48;
+    Struct_10C1AE50* m_Info;
 };
 
-// FUNCTION: 0x10C1AE50 ?FUN_10c1ae50@Class_10E98D50@@UAE_NH@Z
-bool Class_10E98D50::FUN_10c1ae50(int A)
+// FUNCTION: 0x10C1AE50 ?Matches@Class_10E98D50@@UAE_NH@Z
+bool Class_10E98D50::Matches(int A)
 {
-    if (Unknown48 && Unknown48->Unknown30 == A)
+    if (m_Info && m_Info->Unknown30 == A)
         return true;
     return Unknown04 == A;
 }

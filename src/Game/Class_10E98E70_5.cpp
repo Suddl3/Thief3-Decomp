@@ -43,7 +43,7 @@ public:
     float Unknown54;
     int Unknown58;
     bool Unknown5C;
-    int Unknown60;
+    int m_Reference;
 };
 
 // FUNCTION: 0x10C1BB10 ??0Class_10E98E70@@QAE@HABUStruct_10BA91E0@@PAVClass_10C7D570@@HHMMM_NH@Z
@@ -54,7 +54,7 @@ Class_10E98E70::Class_10E98E70(int A, const Struct_10BA91E0& B, Class_10C7D570* 
     Unknown48 = B;
     Unknown58 = F;
     Unknown5C = J;
-    Unknown60 = K;
+    m_Reference = K;
     Unknown0C.Unknown08 += ((Class_10C1BB10_Field118*)C->FUN_10c7d570())->Unknown118;
     Unknown48.Unknown08 += ((Class_10C1BB10_Field118*)C->FUN_10c7d570())->Unknown118 * 0.2f;
     float V = FUN_10ba91e0(&Unknown0C, &Unknown48) * 0.2f;

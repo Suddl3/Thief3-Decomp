@@ -91,10 +91,10 @@ void FUN_10b3acd0();
 
 extern void* DAT_10e816e0[];
 
-class Class_10E816E0 : public Class_10E7E4E0
+class GSMantle : public Class_10E7E4E0
 {
 public:
-    Class_10E816E0* FUN_10b53a30();
+    GSMantle* FUN_10b53a30();
 
     char Unknown10[0x10];
     int Unknown20;
@@ -301,8 +301,8 @@ void FUN_10b4ff30()
     FUN_10b3acd0();
 }
 
-// FUNCTION: 0x10B53A30 ?FUN_10b53a30@Class_10E816E0@@QAEPAV1@XZ
-Class_10E816E0* Class_10E816E0::FUN_10b53a30()
+// FUNCTION: 0x10B53A30 ?FUN_10b53a30@GSMantle@@QAEPAV1@XZ
+GSMantle* GSMantle::FUN_10b53a30()
 {
     FUN_10b3acb0();
     Unknown20 = 0;

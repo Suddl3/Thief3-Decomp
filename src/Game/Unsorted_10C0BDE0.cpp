@@ -42,11 +42,11 @@ void Class_10C0C090::FUN_10c0c090(int A, int B, FVector* Pos, int D)
     Obj->Unknown38 = *Pos;
 }
 
-// FUNCTION: 0x10C0C150 ?FUN_10c0c150@Class_10C0C150@@QAEHPBUItem_10C0C150@@@Z
-int Class_10C0C150::FUN_10c0c150(const Item_10C0C150* Item)
+// FUNCTION: 0x10C0C150 ?Add@Class_10C0C150@@QAEHPBUItem_10C0C150@@@Z
+int Class_10C0C150::Add(const Item_10C0C150* Item)
 {
     int Index = Unknown00;
-    FUN_10c0be50(Index + 1);
+    Resize(Index + 1);
     Unknown08[Index] = *Item;
     return Index;
 }

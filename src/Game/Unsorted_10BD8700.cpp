@@ -34,7 +34,7 @@ float FUN_10ba91e0(const Struct_10BA91E0* A, const Struct_10BA91E0* B);
 
 double GetTimeSeconds();
 
-class Class_10E93CA0
+class cCombatBase
 {
 public:
     virtual void Virtual0();
@@ -117,7 +117,7 @@ public:
     Class_10BBB410* Unknown04;
     char Unknown08[0x40];
     float Unknown48;
-    char Unknown4C[0xC];
+    char m_LastKnownPosition[0xC];
     bool Unknown58;
 };
 
@@ -130,8 +130,8 @@ Class_10BD8880::Class_10BD8880(int A, int B)
     Unknown6C = ((Class_10BD8880_Unknown04*)Unknown04[0])->Unknown08->FUN_10dbd510(0x100745)->FUN_10bbdc80();
 }
 
-// FUNCTION: 0x10BD92E0 ?FUN_10bd92e0@Class_10E93CA0@@UAEXXZ
-void Class_10E93CA0::FUN_10bd92e0()
+// FUNCTION: 0x10BD92E0 ?FUN_10bd92e0@cCombatBase@@UAEXXZ
+void cCombatBase::FUN_10bd92e0()
 {
     Class_10BFF460* Obj = Unknown04->FUN_10bbb410();
     Class_10C7D570* C = Unknown04->Unknown08;

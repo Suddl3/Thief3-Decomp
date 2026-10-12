@@ -15,7 +15,7 @@ public:
     virtual void Virtual2();
     virtual void FUN_10b4fa70(Struct_10B53A00* A);
 
-    void FUN_10b3b260(Struct_10B53A00* P);
+    void ReleaseItem(Struct_10B53A00* P);
     Class_10E81668* Construct();
 
     int Unknown10;

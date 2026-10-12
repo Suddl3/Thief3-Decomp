@@ -43,12 +43,12 @@ bool Class_10E98FD8::FUN_10c1ade0(FVector* Out, int Unused)
     return false;
 }
 
-// FUNCTION: 0x10C1AED0 ?FUN_10c1aed0@Class_10E98D50@@UAE_NPAUData_10C1AED0@@H@Z
-bool Class_10E98D50::FUN_10c1aed0(Data_10C1AED0* Out, int B)
+// FUNCTION: 0x10C1AED0 ?GetData@Class_10E98D50@@UAE_NPAUData_10C1AED0@@H@Z
+bool Class_10E98D50::GetData(Data_10C1AED0* Out, int B)
 {
-    if (Unknown48 != 0)
+    if (m_Info != 0)
     {
-        *Out = Unknown48->Unknown38;
+        *Out = m_Info->Unknown38;
         return true;
     }
     return false;

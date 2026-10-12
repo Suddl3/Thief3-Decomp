@@ -12,9 +12,9 @@ struct Info_10C1AED0;
 class Class_10E98D50 : public Class_10E98D08
 {
 public:
-    virtual bool FUN_10c1aed0(Data_10C1AED0* Out, int B);
+    virtual bool GetData(Data_10C1AED0* Out, int B);
     virtual void Virtual2();
-    virtual int FUN_10c1af00(Class_10E98D50* Other);
+    virtual int IsEquivalent(Class_10E98D50* Other);
     virtual void Virtual4();
     virtual void Virtual5();
     virtual void Virtual6();
@@ -23,11 +23,11 @@ public:
     virtual void Virtual9();
     virtual void Virtual10();
     virtual void Virtual11();
-    virtual bool FUN_10c1ae50(int A);
+    virtual bool Matches(int A);
     virtual void Virtual13();
     virtual void Virtual14();
     virtual void Virtual15();
-    virtual bool FUN_10c1ae10();
+    virtual bool Evaluate();
     virtual void Virtual16();
 
     ~Class_10E98D50();
@@ -35,8 +35,8 @@ public:
     int Unknown04;
     Class_10BAC050* Unknown08;
     char Unknown0C[0x3C];
-    Info_10C1AED0* Unknown48;
-    bool Unknown4C;
+    Info_10C1AED0* m_Info;
+    bool m_Disabled;
     char Pad4D[0x3];
 };
 

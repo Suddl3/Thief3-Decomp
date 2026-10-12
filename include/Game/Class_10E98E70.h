@@ -11,7 +11,7 @@ class FArchive;
 class Class_10E98E70 : public Class_10C1B1A0
 {
 public:
-    virtual void FUN_10c1b4d0(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
     virtual bool FUN_10c1abd0(Struct_10C1ABD0* Out, int* Value);
     virtual void Virtual2();
     virtual void Virtual3();
@@ -24,7 +24,7 @@ public:
     virtual void Virtual10();
     virtual void Virtual11();
     virtual void Virtual12();
-    virtual void FUN_10c1ab70(void* p1);
+    virtual void ClearReference(void* p1);
     virtual void Virtual14();
     virtual bool FUN_10c1b460();
     virtual bool FUN_10c1ab90();
@@ -34,7 +34,7 @@ public:
     int Unknown58;
     bool Unknown5C;
     char Unknown5D[0x3];
-    void* Unknown60;
+    void* m_Reference;
 };
 
 #endif // GAME_CLASS_10E98E70_H

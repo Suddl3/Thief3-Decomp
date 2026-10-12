@@ -17,7 +17,7 @@ struct Struct_10B98E00
     Class_10C7D570* Unknown08;
 };
 
-class Class_10E93CA0;
+class cCombatBase;
 
 class Class_10E96510;
 
@@ -33,7 +33,7 @@ class Class_10E93020;
 
 class State_PlayAnim;
 
-class Class_10E934D0;
+class State_SearchLook;
 
 class Class_10E93878;
 
@@ -86,7 +86,7 @@ public:
     virtual void Virtual24();
     virtual void Virtual25();
     virtual void Virtual26();
-    virtual Class_10E934D0* FUN_10b97f30(int A);
+    virtual State_SearchLook* FUN_10b97f30(int A);
     virtual void Virtual28();
     virtual void Virtual29();
     virtual Class_10E93B68* FUN_10b980e0(int A);
@@ -94,7 +94,7 @@ public:
     virtual void Virtual32();
     virtual void Virtual33();
     virtual Class_10E93020* FUN_10b98050(Struct_10B98E00* A, bool B, bool C);
-    virtual Class_10E93CA0* FUN_10b98170(Struct_10B98E00* A);
+    virtual cCombatBase* FUN_10b98170(Struct_10B98E00* A);
     virtual void Virtual36();
     virtual Class_10E93E48* FUN_10b98290(int A);
     virtual void Virtual38();

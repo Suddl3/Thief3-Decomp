@@ -1,6 +1,6 @@
 // Game/Unsorted_10A69180.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10E6B5C0.h"
+#include "Game/cCauseManager.h"
 
 struct Struct_10A697A0
 {
@@ -47,8 +47,8 @@ public:
     int Unknown28;
 };
 
-// FUNCTION: 0x10A69180 ?FUN_10a69180@Class_10E6B5C0@@UAEHHPAVObject_10A69180@@M@Z
-int Class_10E6B5C0::FUN_10a69180(int A, Object_10A69180* B, float C)
+// FUNCTION: 0x10A69180 ?TickCause@cCauseManager@@UAEHHPAVObject_10A69180@@M@Z
+int cCauseManager::TickCause(int A, Object_10A69180* B, float C)
 {
     if (B)
     {

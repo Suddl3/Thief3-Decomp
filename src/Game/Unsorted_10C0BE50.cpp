@@ -16,8 +16,8 @@ public:
     char Unknown04[0x8];
 };
 
-// FUNCTION: 0x10C0BE50 ?FUN_10c0be50@Class_10C0C150@@QAEXH@Z
-void Class_10C0C150::FUN_10c0be50(int NewCount)
+// FUNCTION: 0x10C0BE50 ?Resize@Class_10C0C150@@QAEXH@Z
+void Class_10C0C150::Resize(int NewCount)
 {
     int OldCount = Unknown00;
     int Capacity = !Unknown08 ? 0 : Unknown04 / sizeof(Item_10C0C150);
