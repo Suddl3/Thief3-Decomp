@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Game/Class_109081E0.h"
-#include "Game/Class_10C00A60.h"
+#include "Game/cIntArray.h"
 #include "Game/Class_1096A960.h"
 
 bool FUN_1090f010(const int* A, const int* B);
@@ -65,7 +65,7 @@ public:
     void FUN_10a80c70(unsigned char param);
     void FUN_10a80c80();
 
-    Class_10C00A60 m_ConEvents;
+    cIntArray m_ConEvents;
     union
     {
         Member* Field10;

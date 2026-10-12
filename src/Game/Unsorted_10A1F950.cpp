@@ -1,5 +1,6 @@
 // Game/Unsorted_10A1F950.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include <vector>
 #include "Game/Class_10A1F9C0.h"
 #include "Game/Class_10A1F9D0.h"
@@ -8,7 +9,7 @@
 #include "Game/cBuildFleshBSP.h"
 #include "Game/Struct_10A1FA70.h"
 #include "Game/Class_1098E330.h"
-#include "Game/Class_10C00A60.h"
+#include "Game/cIntArray.h"
 #include "Game/Class_10E65590.h"
 
 extern void* DAT_10e6561c[];

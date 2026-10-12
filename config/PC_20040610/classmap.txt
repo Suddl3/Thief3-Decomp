@@ -462,6 +462,7 @@ Class_10BF2F70           cStateRangedCombat               0x10BF2F70: slot of 0x
 Class_10BF6B10           cStateMeleeCombat                0x10BF6B10: called on this by 0x10BF6EC0
 Class_10BF6B30           cStateMeleeCombat                0x10BF6B30: called on this by 0x10BF6EC0
 Class_10BFBD70           cIntArray                        named: Count, capacity in bytes and Data form a growable int array, grown and freed through GetAllocator().
+Class_10C00A60           cIntArray                        0x10C00A60: called on this by 0x10A81B10
 Class_10C047F0           AudioController                  0x10C047F0: slot of 0x10E97AF4
 Class_10C08880           Class_10E97BB8                   0x10C08880: stores 0x10E97BB8
 Class_10C0AA00           Class_10E97BE8                   0x10C0AA00: called on this by 0x10C0AB40

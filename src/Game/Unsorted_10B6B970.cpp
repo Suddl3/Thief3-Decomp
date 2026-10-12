@@ -1,6 +1,7 @@
 // Game/Unsorted_10B6B970.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10A56860.h"
+
+#include "Game/cRadioWindow.h"
 #include "Game/Class_10B78320.h"
 #include "Game/Class_10B6BD50.h"
 #include "Game/Class_10B6BBD0_190.h"
@@ -230,7 +231,7 @@ void cDifficultyPane::FUN_10b6b970()
         int Index = 1;
         if (Value)
             Index = Value->Unknown174;
-        ((Class_10A56860*)Unknown190)->SetSelectedIndex(Index);
+        ((cRadioWindow*)Unknown190)->SetSelectedIndex(Index);
     }
     if (Unknown198)
     {

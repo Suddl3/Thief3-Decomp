@@ -1,7 +1,8 @@
 // Game/Class_10E9B168_4.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Core/Core.h"
-#include "Game/Class_10C3DA10.h"
+#include "Game/Class_10E9B088.h"
 #include "Game/FArchive.h"
 
 FArchive& FUN_10b052a0(FArchive& Ar, void* Data);
@@ -40,7 +41,7 @@ public:
     FVector Unknown1C;
     float m_Range;
     bool Unknown2C;
-    Class_10C3DA10 Unknown30;
+    Class_10E9B088 Unknown30;
 };
 
 // FUNCTION: 0x10C3DD80 ?Serialize@Class_10E9B168@@UAEXAAVFArchive@@@Z
