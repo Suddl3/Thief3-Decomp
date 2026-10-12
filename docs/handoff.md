@@ -207,14 +207,19 @@ Later the same day, played by the user:
    decomp.dev, set the project's default category to **main** (owner).
 3. **Matching** (game code only):
    - Matching runs as a swarm ([agent-workflow.md](agent-workflow.md)), now
-     best as the `t3-swarm` workflow: bands mixed, slots refilled by the
-     script, families stamped between workers. Drain it for a checkpoint
+     best as a workflow: `t3-swarm` (a model per band) or `t3-match` (one
+     model, a fixed number of lanes; two runs of 10 make 20 Haiku workers),
+     slots refilled by the script, families stamped between workers. Set the
+     workers' effort in the workflow: they inherit the lead's otherwise.
+     Drain it for a checkpoint
      (sweep, review, naming pass, `integrate.py`, `dtors.py`, the structure
      pass: `classmap.py`, `restructure.py`, `headers.py build`,
      `unitnames.py`; `progress_report.py write`, commit). Units still
-     carry their own copy of a class that has a header (2,666 declarations
-     in 868 classes): mostly what the merge gets wrong, listed with the
-     Haiku pilot in agent-workflow.md ("Class structure"). Fix those in
+     carry their own copy of a class that has a header (3,341 declarations
+     in 1,042 classes after `headers.py refresh` and the naming waves):
+     mostly what the merge gets wrong, listed with the Haiku pilot in
+     agent-workflow.md ("Class structure"), and measured by
+     `build/agent/lead-tools/kept_local_why.py` ("The naming waves"). Fix those in
      `headers.py`/`classmap.py` first (one field, several placeholder
      types; signatures from `symbols.txt`; base classes that end where
      their subclasses' fields start), then give reconciliation workers
@@ -226,6 +231,18 @@ Later the same day, played by the user:
      functions `integrate.py` cannot place (their classes clash with their
      unit's, in overflow units too); the renames and models its workers asked
      for are in the lead's local `build/agent/lead-backlog.md`.
+   - Names ([agent-workflow.md](agent-workflow.md), "Readable code"): the
+     naming waves of 2026-10-12 gave half of the 6,878 matched functions a
+     real name (3,461), 203 classes and 1,461 fields theirs, each with its
+     evidence in `config/PC_20040610/names.txt`; 1,641 functions (23.9%) have
+     both a name and a named class. After an integration, `names.py sync`
+     renames what new code still calls by a placeholder that has a name, and
+     `ghidra_headless.py names` gives the decompiler the names (set aside the
+     cached readings of the queue, `build/agent/cache/ghidra/`, and fill them
+     again). What is left is mostly unnameable as it stands: tiny functions
+     on fields nobody named, and some 1,560 stand-in classes of one or two
+     methods. The Xbox development builds' evidence (`xbox.py`) needs a local
+     copy of the builds.
    - Batch w11 (2026-10-10, agent-workflow.md) ended with 1,506 deferrals
      and 71 accepted functions `integrate.py` cannot place. What would
      unblock most of the rest, in order: one class split over placeholders

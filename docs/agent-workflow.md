@@ -558,12 +558,13 @@ can read it. After batch w11, 6,878 functions were in `src/` and 18.6% of the
 game's code matched, yet almost nothing carried a name:
 `tools/agent/readability.py` counts the names the decompilation uses.
 
-| 2026-10-10 | Total | Named |
+| | 2026-10-10 | After the naming waves (2026-10-12) |
 |---|---|---|
-| Functions readable (function and class named) | 6,878 | 613 (8.9%) |
-| Class headers (`include/Game`) | 3,361 | 34 (1.0%) |
-| Fields in those headers | 8,689 | 292 (3.4%) |
-| Virtual slots in those headers | 13,384 | 1,403 (10.5%) |
+| Functions with a real name | 619 of 6,878 (9.0%) | 3,461 (50.3%) |
+| Functions readable (function and class named) | 613 (8.9%) | 1,641 (23.9%) |
+| Class headers (`include/Game`) named | 34 of 3,361 (1.0%) | 203 of 3,367 (6.0%) |
+| Fields in those headers named | 292 of 8,689 (3.4%) | 1,461 of 8,944 (16.3%) |
+| Virtual slots in those headers named | 1,403 of 13,384 (10.5%) | 1,421 of 13,851 (10.3%) |
 
 The matching swarm was tuned for matches per token, and its workers may not
 invent a name (the protocol's "Names need evidence"), so a method is
@@ -686,6 +687,57 @@ to 72. Pitfalls the gate does not catch, seen at the rebuild:
   unqualified: the call becomes recursion (`Base::Name()` fixes it);
 - a field rename must keep both identifier boundaries: `Unknown10` ends the
   type name `Class_10E5D548_Unknown10` too.
+
+### The naming waves (2026-10-12)
+
+Twenty Haiku workers at a time, in two runs of t3-names.js, took every
+placeholder once; the lead's cycle applied their plans as they came.
+
+| Stage | Tasks | Workers reported | Tokens |
+|---|---|---|---|
+| Classes with two placeholder methods or more, six to eight classes a task | 102 | 60 classes, 792 functions, 576 fields | 10.4M (about 100K a worker) |
+| Units in address order (free functions, classes with one placeholder method), about 18 functions a task | 187 | 102 classes, 1,738 functions, 754 fields | 29.3M (about 155K a worker) |
+| Class pass over the 381 placeholder classes with two named methods or more, six a task | 64 | 109 classes, 85 functions, 106 fields | 6.5M (about 100K a worker) |
+
+No task was lost at medium effort. `config/<version>/names.txt` then held
+202 classes, 3,013 functions and 1,501 fields, each with its evidence, and
+the report the same 7,260 functions at 100% throughout.
+
+The lead's side is three scripts in `build/agent/lead-tools/` (the
+checkpoint's paths are this machine's):
+
+- `name_checkpoint.py <tag> <globs>` merges the new plans, screens what the
+  rebuild would refuse (a method named like one its body calls unqualified;
+  two members of a class with one name and one parameter list), prunes what
+  `names.py` refuses, applies, re-splits and builds everything. While a
+  unit fails or a function loses its match, it takes back the names it gave
+  the placeholders that unit used, and builds again; then the fields, a
+  build, and the report once more. A name taken back is not proposed again
+  (`taken-back.json`). Of some 3,000 function names, the screen dropped a
+  few per cycle and the build took back six.
+- `slot_names.py` proposes names from the vtables: two tables holding the
+  same real functions at two slots or more share an ancestor, so the slots
+  up to the highest such one are the same virtual functions in both. When
+  two or more functions of such a family carry one real name and none
+  carries another, the family's `FUN_` functions take it (72 did). One
+  shared function is not enough (folded code joins unrelated classes) and
+  neither is one name (an override's name may be its class's own:
+  `StopBlinding`). Overrides recorded as methods of their base (`Window`)
+  cannot take one name: their decorated names would collide.
+- `name_cycle.py <tag>` runs both and commits; `name_driver.sh` runs a cycle
+  whenever twenty plans wait, and stops at the first that fails.
+
+What stays a placeholder is mostly unnameable as it stands: half of the
+functions still called `FUN_` are five lines or fewer (a constant, an
+accessor of a field nobody could name, a forward to another placeholder),
+and some 1,560 classes are stand-ins for the class of one or two methods
+nobody identified; a quarter of the classes in the class pass got a name.
+`headers.py refresh`, run before and after the waves, merged 201 headers
+with their units' copies and moved 126 units onto them; 3,341 definitions
+stay local in 1,042 classes. `kept_local_why.py` (lead-tools) says why, on
+a sample of 400: a member the header lacks or names otherwise (35%), a type
+or signature that changes the code (18%) or does not convert (13%), a class
+the unit still keeps (11%), a class the header only declares (8%).
 
 ## Matches without a model
 
