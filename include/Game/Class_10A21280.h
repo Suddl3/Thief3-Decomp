@@ -6,11 +6,11 @@
 class Class_10A21280
 {
 public:
-    void FUN_10a21280(int NewCount);
+    void Resize(int NewCount);
 
-    int Unknown00;
-    int Unknown04;
-    void* Unknown08;
+    int m_Count;
+    int m_BufferBytes;
+    void* m_Buffer;
 };
 
 #endif // GAME_CLASS_10A21280_H

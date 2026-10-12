@@ -29,8 +29,8 @@ public:
     int* Unknown114;
 };
 
-// FUNCTION: 0x10A1E700 ?FUN_10a1e700@@YAHPAVClass_10A1E700@@PAH@Z
-int FUN_10a1e700(Class_10A1E700* A, int* Out)
+// FUNCTION: 0x10A1E700 ?FindValue@@YAHPAVClass_10A1E700@@PAH@Z
+int FindValue(Class_10A1E700* A, int* Out)
 {
     int I = 0;
     Class_10A1E700_Field288* List = A->Unknown288;

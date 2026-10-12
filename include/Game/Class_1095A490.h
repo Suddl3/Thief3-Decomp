@@ -6,12 +6,12 @@
 class Class_1095A490
 {
 public:
-    Class_1095A490* FUN_1095a490(float A, float B, float C, float D,
+    Class_1095A490* SetMatrix(float A, float B, float C, float D,
                                  float E, float F, float G, float H,
                                  float I, float J, float K, float L,
                                  float M, float N, float O, float P);
 
-    float Unknown00[4][4];
+    float m_Matrix[4][4];
 };
 
 #endif // GAME_CLASS_1095A490_H

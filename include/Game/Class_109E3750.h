@@ -8,7 +8,7 @@ class Class_109E3750
 public:
     char Unknown00[0xdc];
     void* FieldDC;
-    void* FUN_109e3750();
+    void* GetFieldDC();
 };
 
 #endif // GAME_CLASS_109E3750_H

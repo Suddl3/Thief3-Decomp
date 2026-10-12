@@ -432,62 +432,62 @@ Class_10E57CC0* Class_10E57CC0::FUN_109a1510()
     return this;
 }
 
-// FUNCTION: 0x109A15A0 ?FUN_109a15a0@@YAXPAX@Z
-void FUN_109a15a0(void* Memory)
+// FUNCTION: 0x109A15A0 ?ConstructUAlarmLinkDataObject@@YAXPAX@Z
+void ConstructUAlarmLinkDataObject(void* Memory)
 {
     new ((EInternal*)Memory) Class_10E55F00();
 }
 
-// FUNCTION: 0x109A15B0 ?FUN_109a15b0@@YAXPAX@Z
-void FUN_109a15b0(void* Memory)
+// FUNCTION: 0x109A15B0 ?ConstructUAmmoLinkDataObject@@YAXPAX@Z
+void ConstructUAmmoLinkDataObject(void* Memory)
 {
     new ((EInternal*)Memory) Class_10E55F88();
 }
 
-// FUNCTION: 0x109A15D0 ?FUN_109a15d0@@YAXPAX@Z
-void FUN_109a15d0(void* Memory)
+// FUNCTION: 0x109A15D0 ?ConstructUAttachmentLinkDataObject@@YAXPAX@Z
+void ConstructUAttachmentLinkDataObject(void* Memory)
 {
     new ((EInternal*)Memory) UAttachmentLinkDataObject();
 }
 
-// FUNCTION: 0x109A15E0 ?FUN_109a15e0@@YAXPAX@Z
-void FUN_109a15e0(void* Memory)
+// FUNCTION: 0x109A15E0 ?ConstructUHingedAttachmentLinkDataObject@@YAXPAX@Z
+void ConstructUHingedAttachmentLinkDataObject(void* Memory)
 {
     new ((EInternal*)Memory) UHingedAttachmentLinkDataObject();
 }
 
-// FUNCTION: 0x109A1640 ?FUN_109a1640@@YAXPAX@Z
-void FUN_109a1640(void* Memory)
+// FUNCTION: 0x109A1640 ?ConstructUBreakingBeamLinkDataObject@@YAXPAX@Z
+void ConstructUBreakingBeamLinkDataObject(void* Memory)
 {
     new ((EInternal*)Memory) Class_10E56450();
 }
 
-// FUNCTION: 0x109A1650 ?FUN_109a1650@@YAXPAX@Z
-void FUN_109a1650(void* Memory)
+// FUNCTION: 0x109A1650 ?ConstructUCinematicLightLinkDataObject@@YAXPAX@Z
+void ConstructUCinematicLightLinkDataObject(void* Memory)
 {
     new ((EInternal*)Memory) Class_10E564D8();
 }
 
-// FUNCTION: 0x109A1660 ?FUN_109a1660@@YAXPAX@Z
-void FUN_109a1660(void* Memory)
+// FUNCTION: 0x109A1660 ?ConstructUDestroyOnDeathLinkDataObject@@YAXPAX@Z
+void ConstructUDestroyOnDeathLinkDataObject(void* Memory)
 {
     new ((EInternal*)Memory) Class_10E56560();
 }
 
-// FUNCTION: 0x109A16F0 ?FUN_109a16f0@@YAXPAX@Z
-void FUN_109a16f0(void* Memory)
+// FUNCTION: 0x109A16F0 ?ConstructUHardpointLinkDataObject@@YAXPAX@Z
+void ConstructUHardpointLinkDataObject(void* Memory)
 {
     new ((EInternal*)Memory) Class_10E56A28();
 }
 
-// FUNCTION: 0x109A1700 ?FUN_109a1700@@YAXPAX@Z
-void FUN_109a1700(void* Memory)
+// FUNCTION: 0x109A1700 ?ConstructUCreationSpawnLinkDataObject@@YAXPAX@Z
+void ConstructUCreationSpawnLinkDataObject(void* Memory)
 {
     new ((EInternal*)Memory) Class_10e56ab0();
 }
 
-// FUNCTION: 0x109A1710 ?FUN_109a1710@@YAXPAX@Z
-void FUN_109a1710(void* Memory)
+// FUNCTION: 0x109A1710 ?ConstructUDeathSpawnLinkDataObject@@YAXPAX@Z
+void ConstructUDeathSpawnLinkDataObject(void* Memory)
 {
     new ((EInternal*)Memory) Class_10e56b38();
 }
@@ -506,26 +506,26 @@ void FUN_109a17b0(Class_109A0740* p1)
         p1->FUN_109a0740();
 }
 
-// FUNCTION: 0x109A17E0 ?FUN_109a17e0@@YAXPAX@Z
-void FUN_109a17e0(void* Memory)
+// FUNCTION: 0x109A17E0 ?ConstructUOwnershipLinkDataObject@@YAXPAX@Z
+void ConstructUOwnershipLinkDataObject(void* Memory)
 {
     new ((EInternal*)Memory) Class_10E57220();
 }
 
-// FUNCTION: 0x109A17F0 ?FUN_109a17f0@@YAXPAX@Z
-void FUN_109a17f0(void* Memory)
+// FUNCTION: 0x109A17F0 ?ConstructUPlayerSetupInfoLinkDataObject@@YAXPAX@Z
+void ConstructUPlayerSetupInfoLinkDataObject(void* Memory)
 {
     new ((EInternal*)Memory) Class_10E572A8();
 }
 
-// FUNCTION: 0x109A1800 ?FUN_109a1800@@YAXPAX@Z
-void FUN_109a1800(void* Memory)
+// FUNCTION: 0x109A1800 ?ConstructUPowerLinkDataObject@@YAXPAX@Z
+void ConstructUPowerLinkDataObject(void* Memory)
 {
     new ((EInternal*)Memory) Class_10E57330();
 }
 
-// FUNCTION: 0x109A1810 ?FUN_109a1810@@YAXPAX@Z
-void FUN_109a1810(void* Memory)
+// FUNCTION: 0x109A1810 ?ConstructUProjectileLinkDataObject@@YAXPAX@Z
+void ConstructUProjectileLinkDataObject(void* Memory)
 {
     new ((EInternal*)Memory) Class_10E573B8();
 }
@@ -537,8 +537,8 @@ void FUN_109a1870(Class_109A0E60* p1)
         p1->FUN_109a0e60();
 }
 
-// FUNCTION: 0x109A18D0 ?FUN_109a18d0@@YAXPAX@Z
-void FUN_109a18d0(void* Memory)
+// FUNCTION: 0x109A18D0 ?ConstructUTriggerScriptLinkDataObject@@YAXPAX@Z
+void ConstructUTriggerScriptLinkDataObject(void* Memory)
 {
     new ((EInternal*)Memory) UTriggerScriptLinkDataObject();
 }

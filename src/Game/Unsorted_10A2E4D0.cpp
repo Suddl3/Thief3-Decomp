@@ -28,15 +28,15 @@ Struct_10A2E520* FUN_10a2e4d0(Struct_10A2E520* A)
     return 0;
 }
 
-// FUNCTION: 0x10A2E520 ?FUN_10a2e520@@YA_NPAUStruct_10A2E520@@H@Z
-bool FUN_10a2e520(Struct_10A2E520* A, int B)
+// FUNCTION: 0x10A2E520 ?SubtreeContains@@YA_NPAUStruct_10A2E520@@H@Z
+bool SubtreeContains(Struct_10A2E520* A, int B)
 {
     if (B == A->Unknown00)
         return true;
     int Count = A->Unknown08;
     for (int i = 0; i < Count; i++)
     {
-        if (FUN_10a2e520(A->Unknown10[i], B))
+        if (SubtreeContains(A->Unknown10[i], B))
             return true;
     }
     return false;

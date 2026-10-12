@@ -34,8 +34,8 @@ public:
     AVulnerabilityObject();
 };
 
-// FUNCTION: 0x1099BBE0 ?FUN_1099bbe0@@YAHXZ
-int FUN_1099bbe0()
+// FUNCTION: 0x1099BBE0 ?GetStaticClassULinkDataObject@@YAHXZ
+int GetStaticClassULinkDataObject()
 {
     if (DAT_10f7b5bc == 0)
     {
@@ -45,20 +45,20 @@ int FUN_1099bbe0()
     return DAT_10f7b5bc;
 }
 
-// FUNCTION: 0x1099BC10 ?FUN_1099bc10@@YAXPAX@Z
-void FUN_1099bc10(void* Memory)
+// FUNCTION: 0x1099BC10 ?ConstructAStimulusModifierObject@@YAXPAX@Z
+void ConstructAStimulusModifierObject(void* Memory)
 {
     new ((EInternal*)Memory) AStimulusModifierObject();
 }
 
-// FUNCTION: 0x1099BC20 ?FUN_1099bc20@@YAXPAX@Z
-void FUN_1099bc20(void* Memory)
+// FUNCTION: 0x1099BC20 ?ConstructASwooshEffectObject@@YAXPAX@Z
+void ConstructASwooshEffectObject(void* Memory)
 {
     new ((EInternal*)Memory) ASwooshEffectObject();
 }
 
-// FUNCTION: 0x1099BC30 ?FUN_1099bc30@@YAXPAX@Z
-void FUN_1099bc30(void* Memory)
+// FUNCTION: 0x1099BC30 ?ConstructAVulnerabilityObject@@YAXPAX@Z
+void ConstructAVulnerabilityObject(void* Memory)
 {
     new ((EInternal*)Memory) AVulnerabilityObject();
 }

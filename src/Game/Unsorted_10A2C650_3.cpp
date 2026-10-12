@@ -14,7 +14,7 @@ public:
 
 extern FCoords DAT_10f46de8;
 
-class Class_10A2C2F0
+class cBoneAimController
 {
 public:
     int FindEntry(void* A, void* B);
@@ -24,8 +24,8 @@ public:
     Class_10A2C610 Unknown08;
 };
 
-// FUNCTION: 0x10A2DA00 ?FindOrAddEntry@Class_10A2C2F0@@QAEPAUStruct_10A2DA00@@PAVClass_10B21820@@PAX@Z
-Struct_10A2DA00* Class_10A2C2F0::FindOrAddEntry(Class_10B21820* A, void* B)
+// FUNCTION: 0x10A2DA00 ?FindOrAddEntry@cBoneAimController@@QAEPAUStruct_10A2DA00@@PAVClass_10B21820@@PAX@Z
+Struct_10A2DA00* cBoneAimController::FindOrAddEntry(Class_10B21820* A, void* B)
 {
     int Found = FindEntry(A, B);
     if (Found != 0)

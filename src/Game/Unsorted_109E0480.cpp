@@ -11,8 +11,8 @@ extern int DAT_10f35b44;
 
 extern cString* DAT_10f35da8;
 
-// FUNCTION: 0x109E1360 ?FUN_109e1360@@YAXAAVcString@@@Z
-void FUN_109e1360(cString& Out)
+// FUNCTION: 0x109E1360 ?GetCurrentEntry@@YAXAAVcString@@@Z
+void GetCurrentEntry(cString& Out)
 {
     if (!DAT_10f35da0)
     {

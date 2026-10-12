@@ -3,8 +3,8 @@
 
 extern float DAT_10eafbdc;
 
-// FUNCTION: 0x1098CCE0 ?FUN_1098cce0@@YAMM@Z
-float FUN_1098cce0(float A)
+// FUNCTION: 0x1098CCE0 ?Sgn@@YAMM@Z
+float Sgn(float A)
 {
     int Sign;
     if (A > DAT_10eafbdc)

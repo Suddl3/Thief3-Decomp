@@ -170,14 +170,14 @@ struct Struct_109E6410_Node
 
 extern bool DAT_10f31a60;
 
-// FUNCTION: 0x109E6410 ?FUN_109e6410@Class_109E6410@@QAEXXZ
-void Class_109E6410::FUN_109e6410()
+// FUNCTION: 0x109E6410 ?UpdatePause@Class_109E6410@@QAEXXZ
+void Class_109E6410::UpdatePause()
 {
-    UnknownA0 = 0;
+    m_PauseRequested = 0;
     UnknownA4 = 0;
-    for (Struct_109E6410_Node* Node = Unknown8C->Next; Node != Unknown8C; Node = Node->Next)
+    for (Struct_109E6410_Node* Node = m_Head->Next; Node != m_Head; Node = Node->Next)
     {
-        if (UnknownA0 && UnknownA4)
+        if (m_PauseRequested && UnknownA4)
             break;
         Class_109E6410_Unknown8C* Object = Node->Value;
         if (Object->Virtual53())
@@ -185,13 +185,13 @@ void Class_109E6410::FUN_109e6410()
             if (Object->Virtual61())
                 UnknownA4 = 1;
             if (Object->Virtual58())
-                UnknownA0 = 1;
+                m_PauseRequested = 1;
         }
     }
     UnknownAC = 1;
-    TimeManager::Instance()->SetPaused(UnknownA0 == 1);
+    TimeManager::Instance()->SetPaused(m_PauseRequested == 1);
     UnknownAC = 0;
-    if (UnknownA0 == 1)
+    if (m_PauseRequested == 1)
     {
         DAT_10f31a60 = UnknownA4 == 1;
         return;

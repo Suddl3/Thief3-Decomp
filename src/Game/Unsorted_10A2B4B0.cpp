@@ -9,8 +9,8 @@ struct Struct_10A2B4B0_Node
     int Unknown08;
 };
 
-// FUNCTION: 0x10A2B4B0 ?FUN_10a2b4b0@Class_10A2B4B0@@QAEPAHPAIPAH@Z
-int* Class_10A2B4B0::FUN_10a2b4b0(unsigned int* Key, int* Value)
+// FUNCTION: 0x10A2B4B0 ?Set@Class_10A2B4B0@@QAEPAHPAIPAH@Z
+int* Class_10A2B4B0::Set(unsigned int* Key, int* Value)
 {
     int Index = Unknown0C[(Unknown10 - 1) & *Key];
     if (Index != -1)

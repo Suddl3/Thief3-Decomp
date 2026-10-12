@@ -67,10 +67,10 @@ public:
     FCoords* FUN_109700e0(FCoords* A);
 };
 
-class Class_10A2C2F0
+class cBoneAimController
 {
 public:
-    Class_10A2C2F0();
+    cBoneAimController();
 
     int FindEntry(void* A, void* B);
     bool FUN_10a2c500(void* A, void* B);
@@ -91,8 +91,8 @@ public:
     Struct_10A2C2F0_Unknown10* m_Entries;
 };
 
-// FUNCTION: 0x10A2C470 ?FUN_10a2c470@Class_10A2C2F0@@QAEXPAVClass_10B21820@@PAVFString@@PAVClass_109700E0@@@Z
-void Class_10A2C2F0::FUN_10a2c470(Class_10B21820* A, FString* B, Class_109700E0* C)
+// FUNCTION: 0x10A2C470 ?FUN_10a2c470@cBoneAimController@@QAEXPAVClass_10B21820@@PAVFString@@PAVClass_109700E0@@@Z
+void cBoneAimController::FUN_10a2c470(Class_10B21820* A, FString* B, Class_109700E0* C)
 {
     const TCHAR* Text = (const TCHAR*)B->Data;
     if (!Text)

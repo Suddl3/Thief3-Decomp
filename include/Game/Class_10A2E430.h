@@ -6,9 +6,9 @@
 class Class_10A2E430
 {
 public:
-    bool FUN_10a2e430(unsigned Mask);
+    bool MatchesMask(unsigned Mask);
 
-    unsigned Unknown00;
+    unsigned m_BitIndex;
 };
 
 #endif // GAME_CLASS_10A2E430_H

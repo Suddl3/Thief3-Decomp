@@ -52,7 +52,7 @@ void Class_10953B60::ApplyWorldMatrix()
 // FUNCTION: 0x10953BE0 ?Free@Class_10953AC0@@QAEXXZ
 void Class_10953AC0::Free()
 {
-    FUN_10953ac0(0);
+    Resize(0);
     if (m_Capacity)
     {
         GetAllocator()->Virtual5(m_Items);
@@ -61,8 +61,8 @@ void Class_10953AC0::Free()
     }
 }
 
-// FUNCTION: 0x10953C20 ?FUN_10953c20@Class_10953C20@@QAEPAV1@H_N@Z
-Class_10953C20* Class_10953C20::FUN_10953c20(int A, bool B)
+// FUNCTION: 0x10953C20 ?Init@Class_10953C20@@QAEPAV1@H_N@Z
+Class_10953C20* Class_10953C20::Init(int A, bool B)
 {
     Unknown40 = 0.0f;
     Unknown44 = 0.0f;
@@ -71,11 +71,11 @@ Class_10953C20* Class_10953C20::FUN_10953c20(int A, bool B)
     Unknown58 = 0.0f;
     Unknown5C = 0.0f;
     Unknown50 = A;
-    Unknown00[0][0] = Unknown00[1][1] = Unknown00[2][2] = Unknown00[3][3] = 1.0f;
-    Unknown00[0][3] = Unknown00[1][3] = Unknown00[2][3] = 0.0f;
-    Unknown00[0][1] = Unknown00[0][2] = Unknown00[1][0] = 0.0f;
-    Unknown00[3][0] = Unknown00[3][1] = Unknown00[3][2] = 0.0f;
-    Unknown00[1][2] = Unknown00[2][0] = Unknown00[2][1] = 0.0f;
+    m_Matrix[0][0] = m_Matrix[1][1] = m_Matrix[2][2] = m_Matrix[3][3] = 1.0f;
+    m_Matrix[0][3] = m_Matrix[1][3] = m_Matrix[2][3] = 0.0f;
+    m_Matrix[0][1] = m_Matrix[0][2] = m_Matrix[1][0] = 0.0f;
+    m_Matrix[3][0] = m_Matrix[3][1] = m_Matrix[3][2] = 0.0f;
+    m_Matrix[1][2] = m_Matrix[2][0] = m_Matrix[2][1] = 0.0f;
     Unknown60 = false;
     Unknown61 = true;
     Unknown62 = B;

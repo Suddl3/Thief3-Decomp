@@ -58,27 +58,27 @@ public:
     virtual void AddValue(int Value);
 
     char Unknown04[0xB4];
-    cIntArray Unknown0B8;
+    cIntArray m_Values;
 };
 
 int FUN_10af36e0(const char* A, const char* B);
 
-// FUNCTION: 0x109E5910 ?FUN_109e5910@Class_109E5910@@QAEHABVcString@@@Z
-int Class_109E5910::FUN_109e5910(const cString& Name)
+// FUNCTION: 0x109E5910 ?IsAbsolute@Class_109E5910@@QAEHABVcString@@@Z
+int Class_109E5910::IsAbsolute(const cString& Name)
 {
     if (!FUN_10af36e0(Name.Unknown00 ? Name.Unknown00 : DAT_10e47660, "ABSOLUTE"))
         return 1;
     return FUN_10af36e0(Name.Unknown00 ? Name.Unknown00 : DAT_10e47660, "RELATIVE") != 0;
 }
 
-// FUNCTION: 0x109E59D0 ?FUN_109e59d0@Class_109E59D0@@QAEPAUEntry_10C32C30@@PAH@Z
-Entry_10C32C30* Class_109E59D0::FUN_109e59d0(int* Key)
+// FUNCTION: 0x109E59D0 ?FindEntry@Class_109E59D0@@QAEPAUEntry_10C32C30@@PAH@Z
+Entry_10C32C30* Class_109E59D0::FindEntry(int* Key)
 {
     Entry_10C32C30* Entry = 0;
     Entry_10C32C30* Found = 0;
-    if (Unknown3C.FUN_10d3f830(Key))
+    if (m_Entries.FUN_10d3f830(Key))
     {
-        Unknown3C.FUN_10c49740(Key, &Found);
+        m_Entries.FUN_10c49740(Key, &Found);
         Entry = Found;
     }
     return Entry;
@@ -87,7 +87,7 @@ Entry_10C32C30* Class_109E59D0::FUN_109e59d0(int* Key)
 // FUNCTION: 0x109E60E0 ?AddValue@Class_10E5B2C0@@UAEXH@Z
 void Class_10E5B2C0::AddValue(int Value)
 {
-    cIntArray* List = &Unknown0B8;
+    cIntArray* List = &m_Values;
     int Index = List->Count;
     List->SetCount(Index + 1);
     List->Data[Index] = Value;

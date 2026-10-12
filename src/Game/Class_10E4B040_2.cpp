@@ -4,8 +4,8 @@
 
 void FUN_10ad1dc0(void* Memory, int Size);
 
-// FUNCTION: 0x10961620 ?FUN_10961620@Class_10E4B040@@UAEPAV1@I@Z
-Class_10E4B040* Class_10E4B040::FUN_10961620(unsigned int Flags)
+// FUNCTION: 0x10961620 ?ScalarDeletingDestructor@Class_10E4B040@@UAEPAV1@I@Z
+Class_10E4B040* Class_10E4B040::ScalarDeletingDestructor(unsigned int Flags)
 {
     FUN_109615b0();
     if (Flags & 1)

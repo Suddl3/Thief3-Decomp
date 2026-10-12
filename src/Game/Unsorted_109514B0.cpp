@@ -106,7 +106,7 @@ public:
     void FUN_109570a0();
 };
 
-void FUN_1095afe0();
+void Clear();
 
 extern unsigned char DAT_10f34480;
 
@@ -258,7 +258,7 @@ void Class_10E4AE8C::FUN_109570a0()
 // FUNCTION: 0x1095B100 ?FUN_1095b100@@YAXXZ
 void FUN_1095b100()
 {
-    FUN_1095afe0();
+    Clear();
 }
 
 // FUNCTION: 0x1095BC40 ?FUN_1095bc40@@YAXE@Z

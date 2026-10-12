@@ -11,7 +11,7 @@ struct Struct_10A2C2A0
     char Unknown7E[0x32];
 };
 
-class Class_10A2C2F0
+class cBoneAimController
 {
 public:
     void FUN_10a2c2a0(void* A, int* B);
@@ -22,8 +22,8 @@ public:
     Struct_10A2C2A0* m_Entries;
 };
 
-// FUNCTION: 0x10A2C2A0 ?FUN_10a2c2a0@Class_10A2C2F0@@QAEXPAXPAH@Z
-void Class_10A2C2F0::FUN_10a2c2a0(void* A, int* B)
+// FUNCTION: 0x10A2C2A0 ?FUN_10a2c2a0@cBoneAimController@@QAEXPAXPAH@Z
+void cBoneAimController::FUN_10a2c2a0(void* A, int* B)
 {
     for (int i = 0; i < Unknown08; i++)
     {

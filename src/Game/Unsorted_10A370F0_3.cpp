@@ -18,8 +18,8 @@ public:
     char Unknown00[0x18];
 };
 
-// FUNCTION: 0x10A370F0 ?FUN_10a370f0@@YA_NPAVClass_1096D780@@PAVFVector@@@Z
-bool FUN_10a370f0(Class_1096D780* A, FVector* B)
+// FUNCTION: 0x10A370F0 ?TryMoveTo@@YA_NPAVClass_1096D780@@PAVFVector@@@Z
+bool TryMoveTo(Class_1096D780* A, FVector* B)
 {
     if (A->UnknownB0 == 0)
     {

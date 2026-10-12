@@ -5,8 +5,8 @@
 
 extern cD3DStateCache* DAT_10f31be0;
 
-// FUNCTION: 0x109526F0 ?FUN_109526f0@Class_109526F0@@QAEXXZ
-void Class_109526F0::FUN_109526f0()
+// FUNCTION: 0x109526F0 ?ApplyPixelShaderConstant@Class_109526F0@@QAEXXZ
+void Class_109526F0::ApplyPixelShaderConstant()
 {
     DAT_10f31be0->SetPixelShaderConstantScalar(2, Unknown40);
 }

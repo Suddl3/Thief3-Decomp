@@ -149,8 +149,8 @@ extern IDirect3DDevice8* DAT_10f35b0c;
 
 void FUN_109e1410(float Value, bool Flag);
 
-// FUNCTION: 0x109E1E80 ?FUN_109e1e80@@YAXM_N@Z
-void FUN_109e1e80(float X, bool Force)
+// FUNCTION: 0x109E1E80 ?DrawLoadingProgress@@YAXM_N@Z
+void DrawLoadingProgress(float X, bool Force)
 {
     if (DAT_10effbf8 != -1 && DAT_10ffc855 && DAT_10f35b24)
     {

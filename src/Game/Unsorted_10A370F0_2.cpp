@@ -17,8 +17,8 @@ public:
     Class_10D9FEE0* UnknownB0;
 };
 
-// FUNCTION: 0x10A37210 ?FUN_10a37210@@YA_NPAVClass_1096D780@@PBVFVector@@@Z
-bool FUN_10a37210(Class_1096D780* A, const FVector* B)
+// FUNCTION: 0x10A37210 ?MoveTo@@YA_NPAVClass_1096D780@@PBVFVector@@@Z
+bool MoveTo(Class_1096D780* A, const FVector* B)
 {
     bool Result = static_cast<Class_1096D780_Field98*>(A->Get())->Virtual43(A, *B, 0, 0, 0) != 0;
     if (A->UnknownB0)

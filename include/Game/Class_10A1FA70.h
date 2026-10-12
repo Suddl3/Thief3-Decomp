@@ -9,10 +9,10 @@
 class Class_10A1FA70
 {
 public:
-    void FUN_10a1fa70(int Index, int* A, int* B);
+    void GetEntry(int Index, int* A, int* B);
 
     char Unknown00[0x70];
-    std::vector<Struct_10A1FA70> Unknown70;
+    std::vector<Struct_10A1FA70> m_Entries;
 };
 
 #endif // GAME_CLASS_10A1FA70_H

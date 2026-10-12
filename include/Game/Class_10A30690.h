@@ -10,11 +10,11 @@ class Class_10A30690
 public:
     ~Class_10A30690();
 
-    void FUN_10a30e10();
+    void Destroy();
 
     int Unknown00;
     Class_10A30530 Unknown04;
-    bool Unknown10;
+    bool m_Registered;
     char Pad11[0x3];
 };
 

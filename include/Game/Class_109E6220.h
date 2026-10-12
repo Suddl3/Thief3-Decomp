@@ -8,10 +8,10 @@ struct Struct_109E6220_Item;
 class Class_109E6220 {
 public:
     char Unknown00[0x8C];
-    Struct_109E6220_Item** Unknown8C;
+    Struct_109E6220_Item** m_Current;
     int Unknown90;
 
-    int FUN_109e6220();
+    int GetCurrentWindow();
 };
 
 #endif // GAME_CLASS_109E6220_H

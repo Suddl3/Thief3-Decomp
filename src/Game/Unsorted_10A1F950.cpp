@@ -41,30 +41,30 @@ void Class_10E65590::FUN_10a1f950(Class_10AE7460* Obj)
     }
 }
 
-// FUNCTION: 0x10A1F9C0 ?FUN_10a1f9c0@Class_10A1F9C0@@QAEHXZ
-int Class_10A1F9C0::FUN_10a1f9c0()
+// FUNCTION: 0x10A1F9C0 ?GetFirst@Class_10A1F9C0@@QAEHXZ
+int Class_10A1F9C0::GetFirst()
 {
-    if (Unknown04 <= 0)
+    if (m_Count <= 0)
         return 0;
-    return *Unknown0C;
+    return *m_Values;
 }
 
-// FUNCTION: 0x10A1F9D0 ?FUN_10a1f9d0@Class_10A1F9D0@@QAEHH@Z
-int Class_10A1F9D0::FUN_10a1f9d0(int A)
+// FUNCTION: 0x10A1F9D0 ?Lookup@Class_10A1F9D0@@QAEHH@Z
+int Class_10A1F9D0::Lookup(int A)
 {
     int Index = FUN_10a1f8a0(A);
-    if (Index >= 0 && Index < Unknown04)
-        return Unknown0C[Index];
+    if (Index >= 0 && Index < m_Count)
+        return m_Values[Index];
     return 0;
 }
 
-// FUNCTION: 0x10A1FA70 ?FUN_10a1fa70@Class_10A1FA70@@QAEXHPAH0@Z
-void Class_10A1FA70::FUN_10a1fa70(int Index, int* A, int* B)
+// FUNCTION: 0x10A1FA70 ?GetEntry@Class_10A1FA70@@QAEXHPAH0@Z
+void Class_10A1FA70::GetEntry(int Index, int* A, int* B)
 {
-    if (Index < Unknown70.size())
+    if (Index < m_Entries.size())
     {
-        *A = Unknown70[Index].Unknown00;
-        *B = Unknown70[Index].Unknown04;
+        *A = m_Entries[Index].Unknown00;
+        *B = m_Entries[Index].Unknown04;
     }
     else
     {
@@ -73,17 +73,17 @@ void Class_10A1FA70::FUN_10a1fa70(int Index, int* A, int* B)
     }
 }
 
-// FUNCTION: 0x10A1FB50 ?FUN_10a1fb50@Class_10A1FB50@@QAEHH@Z
-int Class_10A1FB50::FUN_10a1fb50(int A)
+// FUNCTION: 0x10A1FB50 ?Lookup@Class_10A1FB50@@QAEHH@Z
+int Class_10A1FB50::Lookup(int A)
 {
     int Index = FUN_10a1fad0(A);
-    if (Index >= 0 && Index < Unknown04)
-        return Unknown0C[Index];
+    if (Index >= 0 && Index < m_Count)
+        return m_Values[Index];
     return 0;
 }
 
-// FUNCTION: 0x10A22E20 ?FUN_10a22e20@cBuildFleshBSP@@QAEPAV1@XZ
-cBuildFleshBSP* cBuildFleshBSP::FUN_10a22e20()
+// FUNCTION: 0x10A22E20 ?Init@cBuildFleshBSP@@QAEPAV1@XZ
+cBuildFleshBSP* cBuildFleshBSP::Init()
 {
     Unknown00 = DAT_10e6561c;
     Unknown04 = 0;

@@ -5,7 +5,7 @@
 
 class Class_109E38C0 {
 public:
-    void FUN_109e38c0(int p1);
+    void SetFieldB0(int p1);
     char Unknown00[0xb0];
     int FieldB0;
 };

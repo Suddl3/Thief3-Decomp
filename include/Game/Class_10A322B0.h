@@ -8,11 +8,11 @@ class Class_10C56E40;
 class Class_10A322B0
 {
 public:
-    void FUN_10a322b0(int A, int B);
+    void Swap(int A, int B);
 
     int Unknown00;
     int Unknown04;
-    Class_10C56E40* Unknown08;
+    Class_10C56E40* m_Data;
 };
 
 #endif // GAME_CLASS_10A322B0_H

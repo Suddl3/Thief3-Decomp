@@ -8,11 +8,11 @@ struct Item_10A304C0;
 class Class_10A304C0
 {
 public:
-    void FUN_10a304c0(int A, int B);
+    void Swap(int A, int B);
 
     int Unknown00;
     int Unknown04;
-    Item_10A304C0* Unknown08;
+    Item_10A304C0* m_Data;
 };
 
 #endif // GAME_CLASS_10A304C0_H

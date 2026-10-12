@@ -19,14 +19,14 @@ class Class_10E663B4;
 
 extern Class_10E663B4* DAT_10f39f38;
 
-// FUNCTION: 0x10A30E10 ?FUN_10a30e10@Class_10A30690@@QAEXXZ
-void Class_10A30690::FUN_10a30e10()
+// FUNCTION: 0x10A30E10 ?Destroy@Class_10A30690@@QAEXXZ
+void Class_10A30690::Destroy()
 {
-    if (Unknown10)
+    if (m_Registered)
     {
-        Unknown04.FUN_10a30530(0);
+        Unknown04.SetCount(0);
         DAT_10f46da0->Virtual2(this);
-        Unknown10 = false;
+        m_Registered = false;
         delete this;
         DAT_10f39f38 = 0;
     }

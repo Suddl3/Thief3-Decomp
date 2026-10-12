@@ -163,14 +163,14 @@ void Class_109E5620::FUN_109e5620(int A, bool B)
     }
 }
 
-// FUNCTION: 0x109E5700 ?FUN_109e5700@Class_109E5700@@QAEXXZ
-void Class_109E5700::FUN_109e5700()
+// FUNCTION: 0x109E5700 ?Clear@Class_109E5700@@QAEXXZ
+void Class_109E5700::Clear()
 {
-    Struct_109E5700* Node = Unknown18->Unknown00;
-    Unknown18->Unknown00 = Unknown18;
-    Unknown18->Unknown04 = Unknown18;
-    Unknown1C = 0;
-    while (Node != Unknown18)
+    Struct_109E5700* Node = m_Head->Unknown00;
+    m_Head->Unknown00 = m_Head;
+    m_Head->Unknown04 = m_Head;
+    m_Count = 0;
+    while (Node != m_Head)
     {
         Struct_109E5700* Next = Node->Unknown00;
         delete Node;

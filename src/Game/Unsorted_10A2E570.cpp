@@ -55,8 +55,8 @@ public:
     int Unknown24;
 };
 
-// FUNCTION: 0x10A2E6F0 ?FUN_10a2e6f0@@YAIPAVUClass@@@Z
-unsigned int FUN_10a2e6f0(UClass* InClass)
+// FUNCTION: 0x10A2E6F0 ?CombineInstanceValues@@YAIPAVUClass@@@Z
+unsigned int CombineInstanceValues(UClass* InClass)
 {
     unsigned int Result = 0;
     Class_1096C8D0 Iter(InClass);

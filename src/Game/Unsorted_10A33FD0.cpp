@@ -23,7 +23,7 @@ public:
 class Class_10A35300
 {
 public:
-    void FUN_10a35300(int A);
+    void Reset(int A);
 
     char Unknown00[0x4];
     Class_10A34B90 Unknown04;
@@ -53,8 +53,8 @@ extern void* DAT_10e666e0[];
 
 extern void* DAT_10e66700[];
 
-// FUNCTION: 0x10A35300 ?FUN_10a35300@Class_10A35300@@QAEXH@Z
-void Class_10A35300::FUN_10a35300(int A)
+// FUNCTION: 0x10A35300 ?Reset@Class_10A35300@@QAEXH@Z
+void Class_10A35300::Reset(int A)
 {
     Unknown04.Reset(0x80);
     Unknown20.FUN_10a34cd0(0x80);
@@ -126,8 +126,8 @@ int FUN_10a36c60()
     return DAT_10f39ff0;
 }
 
-// FUNCTION: 0x10A36C70 ?FUN_10a36c70@@YAXXZ
-void FUN_10a36c70()
+// FUNCTION: 0x10A36C70 ?ResetGlobals@@YAXXZ
+void ResetGlobals()
 {
     DAT_10f39fe4 = 0;
     DAT_10f39ff4 = DAT_10e47660;

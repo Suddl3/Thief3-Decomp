@@ -27,7 +27,7 @@ void __stdcall FUN_10b23fa0(int A, int B, int C)
         int Window = GWindowManager->FindWindowByName(DAT_10e790f4);
         if (Window)
         {
-            if (!GWindowManager->FUN_109e6d60(Window))
+            if (!GWindowManager->IsCurrentWindow(Window))
                 GWindowManager->Virtual4(Window);
             else
                 GWindowManager->FUN_109e6b20(1);
@@ -43,7 +43,7 @@ void __stdcall FUN_10b24070(int A, int B, int C)
         int Window = GWindowManager->FindWindowByName(DAT_10e79120);
         if (Window)
         {
-            if (!GWindowManager->FUN_109e6d60(Window))
+            if (!GWindowManager->IsCurrentWindow(Window))
                 GWindowManager->Virtual4(Window);
             else
                 GWindowManager->FUN_109e6b20(1);

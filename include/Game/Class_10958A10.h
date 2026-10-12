@@ -6,13 +6,13 @@
 class Class_10958A10
 {
 public:
-    Class_10958A10* FUN_10958a10(int A);
+    Class_10958A10* Init(int A);
 
     void* Unknown00;
     void* Unknown04;
     void* Unknown08;
     int Unknown0C;
-    int Unknown10;
+    int m_Count;
     int Unknown14;
     int Unknown18;
 };

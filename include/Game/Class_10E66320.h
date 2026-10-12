@@ -18,8 +18,8 @@ public:
 
     Class_10E66320();
 
-    FString Unknown04;
-    int Unknown10;
+    FString m_Name;
+    int m_HasName;
 };
 
 #endif // GAME_CLASS_10E66320_H

@@ -10,10 +10,10 @@ struct Entry_10C32C30;
 class Class_109E59D0
 {
 public:
-    Entry_10C32C30* FUN_109e59d0(int* Key);
+    Entry_10C32C30* FindEntry(int* Key);
 
     char Unknown00[0x3C];
-    Class_10C49740 Unknown3C;
+    Class_10C49740 m_Entries;
 };
 
 #endif // GAME_CLASS_109E59D0_H

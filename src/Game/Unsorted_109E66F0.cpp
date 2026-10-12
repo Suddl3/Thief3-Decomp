@@ -80,8 +80,8 @@ void Class_109E6AA0::FUN_109e6aa0()
     }
 }
 
-// FUNCTION: 0x109E6D60 ?FUN_109e6d60@Class_109E6D60@@QAE_NH@Z
-bool Class_109E6D60::FUN_109e6d60(int p1)
+// FUNCTION: 0x109E6D60 ?IsCurrentWindow@Class_109E6D60@@QAE_NH@Z
+bool Class_109E6D60::IsCurrentWindow(int p1)
 {
-    return p1 == (*Unknown8C)->Unknown08;
+    return p1 == (*m_Current)->Unknown08;
 }

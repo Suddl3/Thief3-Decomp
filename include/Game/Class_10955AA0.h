@@ -6,7 +6,7 @@
 class Class_10955AA0
 {
 public:
-    void FUN_10955aa0(int Mode);
+    void SetMode(int Mode);
 
     int Unknown00;
     int Unknown04;

@@ -16,7 +16,7 @@ public:
 // FUNCTION: 0x10953E40 ?Reset@Class_10953B60@@QAEXXZ
 void Class_10953B60::Reset()
 {
-    m_Items.FUN_10953ac0(0);
+    m_Items.Resize(0);
     Unknown54 = 0;
     Unknown58 = 0;
     if (Unknown5C)

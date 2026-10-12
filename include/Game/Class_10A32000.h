@@ -6,12 +6,12 @@
 class Class_10A32000
 {
 public:
-    void FUN_10a32000(int A);
-    int FUN_10a32910(char* Value);
+    void SetCount(int A);
+    int Append(char* Value);
 
-    int Unknown00;
+    int m_Count;
     int Unknown04;
-    char* Unknown08;
+    char* m_Data;
 };
 
 #endif // GAME_CLASS_10A32000_H

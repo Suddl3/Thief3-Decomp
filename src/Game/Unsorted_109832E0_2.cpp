@@ -28,7 +28,7 @@ extern void* DAT_10e53a48[];
 class AZoneProperties : public Class_10E70A50
 {
 public:
-    AZoneProperties* FUN_1098dd00();
+    AZoneProperties* Construct();
 
     char Unknown2C[0x84];
     int UnknownB0;
@@ -47,8 +47,8 @@ AInfo* AInfo::FUN_1098dcd0()
     return this;
 }
 
-// FUNCTION: 0x1098DD00 ?FUN_1098dd00@AZoneProperties@@QAEPAV1@XZ
-AZoneProperties* AZoneProperties::FUN_1098dd00()
+// FUNCTION: 0x1098DD00 ?Construct@AZoneProperties@@QAEPAV1@XZ
+AZoneProperties* AZoneProperties::Construct()
 {
     this->Class_10E70A50::Class_10E70A50();
     UnknownB0 = 0;

@@ -6,12 +6,12 @@
 class Class_10A243F0
 {
 public:
-    void FUN_10a243f0(int A);
-    void FUN_10a24580();
+    void Resize(int A);
+    void Free();
 
     int Unknown00;
-    int Unknown04;
-    void* Unknown08;
+    int m_BufferBytes;
+    void* m_Buffer;
 };
 
 #endif // GAME_CLASS_10A243F0_H

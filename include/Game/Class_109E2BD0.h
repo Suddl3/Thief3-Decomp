@@ -8,12 +8,12 @@ class Class_109E2A90;
 class Class_109E2BD0
 {
 public:
-    int FUN_109e2bd0(int Value);
+    int FindBucketIndex(int Value);
 
     char Unknown00[4];
-    int Unknown04;
+    int m_BucketCount;
     char Unknown08[4];
-    Class_109E2A90** Unknown0C;
+    Class_109E2A90** m_Buckets;
 };
 
 #endif // GAME_CLASS_109E2BD0_H

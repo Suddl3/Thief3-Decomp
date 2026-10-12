@@ -6,7 +6,7 @@
 // FUNCTION: 0x10A2F510 ?FUN_10a2f510@Class_10E66320@@UAEPAVFString@@XZ
 FString* Class_10E66320::FUN_10a2f510()
 {
-    if (Unknown10)
-        return &Unknown04;
+    if (m_HasName)
+        return &m_Name;
     return 0;
 }

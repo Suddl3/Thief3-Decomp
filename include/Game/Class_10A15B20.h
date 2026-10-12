@@ -7,7 +7,7 @@ class Class_10A15B20
 {
 public:
     bool FUN_10a15b20(int* A);
-    void FUN_10a16270(int* A);
+    void Remove(int* A);
 
     char Pad00[0x1];
 };

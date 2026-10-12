@@ -8,11 +8,11 @@ class AFX
 public:
     AFX();
     void operator delete(void* p);
-    static void FUN_1098e470(void* p);
+    static void InternalConstructor(void* p);
 };
 
-// FUNCTION: 0x1098E470 ?FUN_1098e470@AFX@@SAXPAX@Z
-void AFX::FUN_1098e470(void* p)
+// FUNCTION: 0x1098E470 ?InternalConstructor@AFX@@SAXPAX@Z
+void AFX::InternalConstructor(void* p)
 {
     new (p) AFX;
 }

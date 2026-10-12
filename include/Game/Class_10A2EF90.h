@@ -7,7 +7,7 @@ class Class_10A2EF90 {
 public:
     int Unknown00;
     int Unknown04;
-    Class_10A2EF90* FUN_10a2ef90();
+    Class_10A2EF90* Construct();
 };
 
 #endif // GAME_CLASS_10A2EF90_H

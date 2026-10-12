@@ -8,7 +8,7 @@ struct Struct_1095A8D0_Unknown08;
 class Class_1095A8D0
 {
 public:
-    const char* FUN_1095a8d0();
+    const char* GetText();
 
     char Unknown00[8];
     Struct_1095A8D0_Unknown08* Unknown08;

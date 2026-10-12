@@ -8,11 +8,11 @@ void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D
 class Class_10A30530
 {
 public:
-    Class_10A30530() : Unknown00(0), Unknown04(0), Unknown08(0) {}
+    Class_10A30530() : m_Count(0), m_CapacityBytes(0), m_Data(0) {}
 
-    int Unknown00;
-    int Unknown04;
-    void* Unknown08;
+    int m_Count;
+    int m_CapacityBytes;
+    void* m_Data;
 };
 
 class Class_10E663B4

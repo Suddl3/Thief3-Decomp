@@ -12,16 +12,16 @@ class Class_109E5700
 public:
     ~Class_109E5700()
     {
-        FUN_109e5700();
-        delete Unknown18;
-        Unknown18 = 0;
+        Clear();
+        delete m_Head;
+        m_Head = 0;
     }
 
-    void FUN_109e5700();
+    void Clear();
 
     char Unknown00[0x18];
-    Struct_109E5700* Unknown18;
-    int Unknown1C;
+    Struct_109E5700* m_Head;
+    int m_Count;
 };
 
 #endif // GAME_CLASS_109E5700_H

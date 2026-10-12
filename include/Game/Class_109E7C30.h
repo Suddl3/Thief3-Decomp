@@ -8,7 +8,7 @@
 class Class_109E7C30 : public Class_109E6520
 {
 public:
-    void FUN_109e7c30(int Size);
+    void Reset(int Size);
 };
 
 #endif // GAME_CLASS_109E7C30_H

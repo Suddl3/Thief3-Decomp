@@ -8,11 +8,11 @@ class AMarker
 public:
     AMarker();
     void operator delete(void* p);
-    static void FUN_1098e490(void* p);
+    static void InternalConstructor(void* p);
 };
 
-// FUNCTION: 0x1098E490 ?FUN_1098e490@AMarker@@SAXPAX@Z
-void AMarker::FUN_1098e490(void* p)
+// FUNCTION: 0x1098E490 ?InternalConstructor@AMarker@@SAXPAX@Z
+void AMarker::InternalConstructor(void* p)
 {
     new (p) AMarker;
 }

@@ -8,12 +8,12 @@ class Class_10A13040_Unknown10;
 class Class_10A13040
 {
 public:
-    int FUN_10a13040();
+    int FindFreeKey();
 
     char Unknown00[8];
-    int Unknown08;
+    int m_ChildCount;
     char Unknown0C[4];
-    Class_10A13040_Unknown10** Unknown10;
+    Class_10A13040_Unknown10** m_Children;
 };
 
 #endif // GAME_CLASS_10A13040_H

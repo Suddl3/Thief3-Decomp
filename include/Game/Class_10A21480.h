@@ -7,11 +7,11 @@ class Class_10A21480
 {
 public:
     void FUN_10a20f60(int Count);
-    void FUN_10a21480();
+    void Free();
 
     int Unknown00;
     int Unknown04;
-    void* Unknown08;
+    void* m_Buffer;
 };
 
 #endif // GAME_CLASS_10A21480_H

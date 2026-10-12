@@ -12,37 +12,37 @@ void operator delete(void* Ptr);
 class Class_1097B240
 {
 public:
-    void FUN_1097b240(int Size);
-    unsigned int FUN_109792b0(const cString& Key, const int& Value);
+    void Resize(int Size);
+    unsigned int Insert(const cString& Key, const int& Value);
 
     int Unknown00;
     int Unknown04;
-    int Unknown08;
-    int Unknown0C;
+    int m_LogBucketCount;
+    int m_BucketCount;
     bool Unknown10;
-    Class_1097B240_Node** Unknown14;
+    Class_1097B240_Node** m_Buckets;
 };
 
-// FUNCTION: 0x1097B240 ?FUN_1097b240@Class_1097B240@@QAEXH@Z
-void Class_1097B240::FUN_1097b240(int Size)
+// FUNCTION: 0x1097B240 ?Resize@Class_1097B240@@QAEXH@Z
+void Class_1097B240::Resize(int Size)
 {
-    int OldSize = Unknown0C;
-    Class_1097B240_Node** OldTable = Unknown14;
-    Unknown14 = (Class_1097B240_Node**)operator new(Size * sizeof(Class_1097B240_Node*), 0, 0, 0, 0, 0);
-    Unknown0C = Size;
-    Unknown08 = 0;
+    int OldSize = m_BucketCount;
+    Class_1097B240_Node** OldTable = m_Buckets;
+    m_Buckets = (Class_1097B240_Node**)operator new(Size * sizeof(Class_1097B240_Node*), 0, 0, 0, 0, 0);
+    m_BucketCount = Size;
+    m_LogBucketCount = 0;
     while (Size >>= 1)
-        Unknown08++;
+        m_LogBucketCount++;
     Unknown04 = 0;
     Unknown00 = 0;
-    for (int i = 0; i < Unknown0C; i++)
-        Unknown14[i] = 0;
+    for (int i = 0; i < m_BucketCount; i++)
+        m_Buckets[i] = 0;
     for (int j = 0; j < OldSize; j++)
     {
         Class_1097B240_Node* Node = OldTable[j];
         while (Node)
         {
-            FUN_109792b0(Node->Key, Node->Value);
+            Insert(Node->Key, Node->Value);
             Class_1097B240_Node* Next = Node->Next;
             Node->Key.~cString();
             ::operator delete(Node);

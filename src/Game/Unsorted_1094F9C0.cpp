@@ -4,7 +4,7 @@
 
 extern "C" __declspec(dllimport) void __stdcall _BinkSetVolume(void* Bink, unsigned Track, int Volume);
 
-void FUN_109e29f0(float Value, int* Out);
+void ComputeMovieVolume(float Value, int* Out);
 
 struct Struct_10950310
 {
@@ -23,6 +23,6 @@ void SetMovieFramerate(int Value)
 // FUNCTION: 0x10950310 ?SetVolume@Class_10950310@@QAEXM@Z
 void Class_10950310::SetVolume(float Volume)
 {
-    FUN_109e29f0(Volume, (int*)&Volume);
+    ComputeMovieVolume(Volume, (int*)&Volume);
     _BinkSetVolume(Unknown00->Bink, 0, *(int*)&Volume);
 }

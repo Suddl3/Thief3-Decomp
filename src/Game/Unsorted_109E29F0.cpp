@@ -20,8 +20,8 @@ extern const char DAT_10e5b298[];
 
 extern const char DAT_10e5b28c[];
 
-// FUNCTION: 0x109E29F0 ?FUN_109e29f0@@YAXMPAH@Z
-void FUN_109e29f0(float Fraction, int* Result)
+// FUNCTION: 0x109E29F0 ?ComputeMovieVolume@@YAXMPAH@Z
+void ComputeMovieVolume(float Fraction, int* Result)
 {
     float MaxVolume;
     float MinVolume;
@@ -30,8 +30,8 @@ void FUN_109e29f0(float Fraction, int* Result)
     *Result = (int)(((MaxVolume - MinVolume) * Fraction + MinVolume) * 32768.0f);
 }
 
-// FUNCTION: 0x109E2A50 ?FUN_109e2a50@Class_109E2A50@@QAEXXZ
-void Class_109E2A50::FUN_109e2a50()
+// FUNCTION: 0x109E2A50 ?SendMessages@Class_109E2A50@@QAEXXZ
+void Class_109E2A50::SendMessages()
 {
     if (DAT_10f46da0)
     {

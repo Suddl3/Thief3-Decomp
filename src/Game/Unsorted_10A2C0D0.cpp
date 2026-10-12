@@ -4,8 +4,8 @@
 #include "Game/Class_10A2C130.h"
 #include "Game/Struct_10A2C130.h"
 
-// FUNCTION: 0x10A2C0D0 ?FUN_10a2c0d0@@YA?AVFVector@@PBV1@0@Z
-FVector FUN_10a2c0d0(const FVector* A, const FVector* B)
+// FUNCTION: 0x10A2C0D0 ?VectorCross@@YA?AVFVector@@PBV1@0@Z
+FVector VectorCross(const FVector* A, const FVector* B)
 {
     FVector Result;
     Result.X = A->Y * B->Z - A->Z * B->Y;
@@ -14,8 +14,8 @@ FVector FUN_10a2c0d0(const FVector* A, const FVector* B)
     return Result;
 }
 
-// FUNCTION: 0x10A2C130 ?FUN_10a2c130@Class_10A2C130@@QAEPAV1@ABUStruct_10A2C130@@00@Z
-Class_10A2C130* Class_10A2C130::FUN_10a2c130(const Struct_10A2C130& A, const Struct_10A2C130& B,
+// FUNCTION: 0x10A2C130 ?Set@Class_10A2C130@@QAEPAV1@ABUStruct_10A2C130@@00@Z
+Class_10A2C130* Class_10A2C130::Set(const Struct_10A2C130& A, const Struct_10A2C130& B,
                                              const Struct_10A2C130& C)
 {
     Unknown00 = A;

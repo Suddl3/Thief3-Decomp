@@ -19,6 +19,6 @@ public:
 // FUNCTION: 0x10A68BF0 ?SetCount@Class_10E6B5A0@@UAEXH@Z
 void Class_10E6B5A0::SetCount(int p1)
 {
-    m_Items.FUN_10953ac0(p1);
+    m_Items.Resize(p1);
     Unknown10++;
 }

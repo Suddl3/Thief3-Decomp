@@ -5,7 +5,7 @@
 
 class Class_10A2F180 {
 public:
-    Class_10A2F180* FUN_10a2f180();
+    Class_10A2F180* Construct();
 
     int Unknown00;
     unsigned char Unknown04;

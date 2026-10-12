@@ -11,7 +11,7 @@ class Class_10E4B040 : public Class_10B7C000, public Class_10E5B578
 public:
     virtual void Virtual0();
     virtual void Virtual1();
-    virtual Class_10E4B040* FUN_10961620(unsigned int Flags);
+    virtual Class_10E4B040* ScalarDeletingDestructor(unsigned int Flags);
 
     ~Class_10E4B040();
 

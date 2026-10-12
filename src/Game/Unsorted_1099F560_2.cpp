@@ -19,7 +19,7 @@ public:
 class Class_10E561A8 : public UAttachmentLinkDataObject
 {
 public:
-    Class_10E561A8* FUN_1099f5e0();
+    Class_10E561A8* Construct();
 };
 
 extern void* DAT_10e56230[];
@@ -27,7 +27,7 @@ extern void* DAT_10e56230[];
 class Class_10E56230 : public UAttachmentLinkDataObject
 {
 public:
-    Class_10E56230* FUN_1099f680();
+    Class_10E56230* Construct();
 };
 
 extern void* DAT_10e562b8[];
@@ -35,7 +35,7 @@ extern void* DAT_10e562b8[];
 class Class_10E562B8 : public UAttachmentLinkDataObject
 {
 public:
-    Class_10E562B8* FUN_1099f720();
+    Class_10E562B8* Construct();
 };
 
 extern void* DAT_10e56340[];
@@ -43,35 +43,35 @@ extern void* DAT_10e56340[];
 class Class_10E56340 : public UAttachmentLinkDataObject
 {
 public:
-    Class_10E56340* FUN_1099f7b0();
+    Class_10E56340* Construct();
 };
 
-// FUNCTION: 0x1099F5E0 ?FUN_1099f5e0@Class_10E561A8@@QAEPAV1@XZ
-Class_10E561A8* Class_10E561A8::FUN_1099f5e0()
+// FUNCTION: 0x1099F5E0 ?Construct@Class_10E561A8@@QAEPAV1@XZ
+Class_10E561A8* Class_10E561A8::Construct()
 {
     this->UAttachmentLinkDataObject::UAttachmentLinkDataObject();
     Unknown00 = DAT_10e561a8;
     return this;
 }
 
-// FUNCTION: 0x1099F680 ?FUN_1099f680@Class_10E56230@@QAEPAV1@XZ
-Class_10E56230* Class_10E56230::FUN_1099f680()
+// FUNCTION: 0x1099F680 ?Construct@Class_10E56230@@QAEPAV1@XZ
+Class_10E56230* Class_10E56230::Construct()
 {
     this->UAttachmentLinkDataObject::UAttachmentLinkDataObject();
     Unknown00 = DAT_10e56230;
     return this;
 }
 
-// FUNCTION: 0x1099F720 ?FUN_1099f720@Class_10E562B8@@QAEPAV1@XZ
-Class_10E562B8* Class_10E562B8::FUN_1099f720()
+// FUNCTION: 0x1099F720 ?Construct@Class_10E562B8@@QAEPAV1@XZ
+Class_10E562B8* Class_10E562B8::Construct()
 {
     this->UAttachmentLinkDataObject::UAttachmentLinkDataObject();
     Unknown00 = DAT_10e562b8;
     return this;
 }
 
-// FUNCTION: 0x1099F7B0 ?FUN_1099f7b0@Class_10E56340@@QAEPAV1@XZ
-Class_10E56340* Class_10E56340::FUN_1099f7b0()
+// FUNCTION: 0x1099F7B0 ?Construct@Class_10E56340@@QAEPAV1@XZ
+Class_10E56340* Class_10E56340::Construct()
 {
     this->UAttachmentLinkDataObject::UAttachmentLinkDataObject();
     Unknown00 = DAT_10e56340;

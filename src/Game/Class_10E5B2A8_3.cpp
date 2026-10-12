@@ -46,7 +46,7 @@ void Class_10E5B2A8::RemoveFromBucket(INT Index, AZoneProperties* Obj)
             {
                 if (Node->Unknown08 == Obj)
                 {
-                    Bucket->FUN_109e2a90(Node);
+                    Bucket->Unlink(Node);
                     delete Node;
                     return;
                 }

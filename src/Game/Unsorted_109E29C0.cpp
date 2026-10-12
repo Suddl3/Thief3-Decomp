@@ -4,8 +4,8 @@
 
 extern Class_10950230* DAT_10f31a64;
 
-// FUNCTION: 0x109E29C0 ?FUN_109e29c0@@YAXXZ
-void FUN_109e29c0()
+// FUNCTION: 0x109E29C0 ?AdvanceMovie@@YAXXZ
+void AdvanceMovie()
 {
     if (DAT_10f31a64)
         DAT_10f31a64->DecodeFrame();

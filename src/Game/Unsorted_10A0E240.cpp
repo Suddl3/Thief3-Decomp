@@ -14,8 +14,8 @@ public:
     char Unknown00[0x18];
 };
 
-// FUNCTION: 0x10A0E240 ?FUN_10a0e240@Class_10A0E240@@QAEXHH@Z
-void Class_10A0E240::FUN_10a0e240(int Index, int Count)
+// FUNCTION: 0x10A0E240 ?Remove@Class_10A0E240@@QAEXHH@Z
+void Class_10A0E240::Remove(int Index, int Count)
 {
     for (int i = Index; i < Index + Count; i++)
         ((Class_109709F0*)Unknown00)[i].FUN_109709f0();

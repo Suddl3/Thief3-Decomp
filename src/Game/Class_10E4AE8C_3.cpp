@@ -18,7 +18,7 @@ public:
     Class_10956DB0(int A) : Class_10E4ADC0(A, 0), Unknown294(0) {}
     ~Class_10956DB0();
 
-    void FUN_10956db0();
+    void Reset();
 
     unsigned char Unknown294;
 };
@@ -34,5 +34,5 @@ Class_10E4AE8C::Class_10E4AE8C(int A)
     : Class_10956DB0(A)
 {
     Unknown00 = &DAT_10e4ae8c;
-    FUN_10956db0();
+    Reset();
 }

@@ -28,20 +28,20 @@ public:
     AObjSysTestChild();
 };
 
-// FUNCTION: 0x1098E5B0 ?FUN_1098e5b0@@YAXPAX@Z
-void FUN_1098e5b0(void* Memory)
+// FUNCTION: 0x1098E5B0 ?ConstructAMissingArch@@YAXPAX@Z
+void ConstructAMissingArch(void* Memory)
 {
     new ((EInternal*)Memory) AMissingArch();
 }
 
-// FUNCTION: 0x1098E5C0 ?FUN_1098e5c0@@YAXPAX@Z
-void FUN_1098e5c0(void* Memory)
+// FUNCTION: 0x1098E5C0 ?ConstructAObjSysTest@@YAXPAX@Z
+void ConstructAObjSysTest(void* Memory)
 {
     new ((EInternal*)Memory) AObjSysTest();
 }
 
-// FUNCTION: 0x1098E5D0 ?FUN_1098e5d0@@YAXPAX@Z
-void FUN_1098e5d0(void* Memory)
+// FUNCTION: 0x1098E5D0 ?ConstructAObjSysTestChild@@YAXPAX@Z
+void ConstructAObjSysTestChild(void* Memory)
 {
     new ((EInternal*)Memory) AObjSysTestChild();
 }

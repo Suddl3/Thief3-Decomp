@@ -6,11 +6,11 @@
 class Class_10955B20
 {
 public:
-    void FUN_10955b20(int A);
+    void ApplySamplerState(int A);
 
     int Unknown00[4];
-    int Unknown10;
-    int Unknown14;
+    int m_MipFilter;
+    int m_AddressMode;
 };
 
 #endif // GAME_CLASS_10955B20_H

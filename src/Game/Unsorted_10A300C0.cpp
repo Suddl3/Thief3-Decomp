@@ -33,10 +33,10 @@ Class_10E66390* Class_10E66390::Virtual1()
     return new(0, 0, 0, 0, 0) Class_10E66390(Unknown04);
 }
 
-// FUNCTION: 0x10A304C0 ?FUN_10a304c0@Class_10A304C0@@QAEXHH@Z
-void Class_10A304C0::FUN_10a304c0(int A, int B)
+// FUNCTION: 0x10A304C0 ?Swap@Class_10A304C0@@QAEXHH@Z
+void Class_10A304C0::Swap(int A, int B)
 {
-    Item_10A304C0 Temp = Unknown08[A];
-    Unknown08[A] = Unknown08[B];
-    Unknown08[B] = Temp;
+    Item_10A304C0 Temp = m_Data[A];
+    m_Data[A] = m_Data[B];
+    m_Data[B] = Temp;
 }

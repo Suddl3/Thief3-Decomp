@@ -76,7 +76,7 @@ bool WindowManager::OpenMainMenuWindow(int A)
         cString Name(DAT_10e79040);
         Window = FindWindowByName(Name);
     }
-    if (Window && !FUN_109e6d60(Window))
+    if (Window && !IsCurrentWindow(Window))
     {
         Class_10B27FD0* Target = ((Class_10B15960_Window*)Window)->Virtual39() == 0x72 ? (Class_10B27FD0*)Window : 0;
         if (Target)

@@ -6,7 +6,7 @@
 class Class_109526F0
 {
 public:
-    void FUN_109526f0();
+    void ApplyPixelShaderConstant();
 
     char Unknown00[0x40];
     int Unknown40;

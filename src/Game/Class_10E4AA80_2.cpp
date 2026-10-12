@@ -29,7 +29,7 @@ public:
     FVector Unknown22C;
 };
 
-void FUN_10957150(FVector* A);
+void WrapAngles(FVector* A);
 
 // FUNCTION: 0x10949060 ?IntegrateOffsets@Class_10E4AA80@@QAEXM@Z
 void Class_10E4AA80::IntegrateOffsets(float A)
@@ -46,7 +46,7 @@ void Class_10E4AA80::IntegrateOffsets(float A)
     if (Unknown205)
     {
         Unknown22C += Unknown214 * A;
-        FUN_10957150(&Unknown22C);
+        WrapAngles(&Unknown22C);
     }
     else
     {

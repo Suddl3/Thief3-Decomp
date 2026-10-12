@@ -75,12 +75,12 @@ void Class_10E5B588::AppendTo(int A, cIntArray* Array)
     }
 }
 
-// FUNCTION: 0x109E6220 ?FUN_109e6220@Class_109E6220@@QAEHXZ
-int Class_109E6220::FUN_109e6220()
+// FUNCTION: 0x109E6220 ?GetCurrentWindow@Class_109E6220@@QAEHXZ
+int Class_109E6220::GetCurrentWindow()
 {
     if (Unknown90 == 0)
         return 0;
-    return (*Unknown8C)->Unknown08;
+    return (*m_Current)->Unknown08;
 }
 
 // FUNCTION: 0x109E66E0 ?FUN_109e66e0@Class_10E5B2C0@@UAEXABVcString@@@Z

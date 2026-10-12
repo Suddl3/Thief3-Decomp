@@ -4,7 +4,7 @@
 #include "Game/Class_10924100.h"
 #include "Game/Class_10963CE0.h"
 
-void FUN_10a1e620(void* Object);
+void FreeItemList(void* Object);
 
 void FUN_10a1eaa0(void* Object);
 
@@ -53,17 +53,17 @@ class Class_10A1E620
 {
 public:
     char Unknown00[0xB4];
-    Class_10A1E620_Inner* UnknownB4;
+    Class_10A1E620_Inner* m_ItemList;
 };
 
 extern Class_10924100* DAT_10f2c740;
 
-// FUNCTION: 0x10A1E620 ?FUN_10a1e620@@YAXPAX@Z
-void FUN_10a1e620(void* Ptr)
+// FUNCTION: 0x10A1E620 ?FreeItemList@@YAXPAX@Z
+void FreeItemList(void* Ptr)
 {
     Class_10A1E620* Obj = (Class_10A1E620*)Ptr;
-    Class_10A1E620_Inner* Inner = Obj->UnknownB4;
-    Obj->UnknownB4 = 0;
+    Class_10A1E620_Inner* Inner = Obj->m_ItemList;
+    Obj->m_ItemList = 0;
     if (Inner)
     {
         DAT_10f2c740->FUN_10920a30(Inner);
@@ -78,8 +78,8 @@ void FUN_10a1e620(void* Ptr)
     }
 }
 
-// FUNCTION: 0x10A1E690 ?FUN_10a1e690@@YAXPAUStruct_10A1E690@@PBVFRotator@@@Z
-void FUN_10a1e690(Struct_10A1E690* Out, const FRotator* R)
+// FUNCTION: 0x10A1E690 ?RotatorToMatrix@@YAXPAUStruct_10A1E690@@PBVFRotator@@@Z
+void RotatorToMatrix(Struct_10A1E690* Out, const FRotator* R)
 {
     Class_10963CE0 Matrix;
     Matrix.FUN_10963ce0(*R);
@@ -100,7 +100,7 @@ void FUN_10a1ed10(Class_10A1ED10* Owner)
     void* Object = Owner->Unknown288;
     if (Object)
     {
-        FUN_10a1e620(Object);
+        FreeItemList(Object);
         FUN_10a1eaa0(Object);
     }
 }

@@ -8,12 +8,12 @@ struct Struct_109E2AE0_Item;
 class Class_109E2AE0
 {
 public:
-    void FUN_109e2ae0();
+    void Clear();
 
     char Unknown00[4];
-    int Unknown04;
+    int m_ItemCount;
     char Unknown08[4];
-    Struct_109E2AE0_Item** Unknown0C;
+    Struct_109E2AE0_Item** m_Items;
 };
 
 #endif // GAME_CLASS_109E2AE0_H

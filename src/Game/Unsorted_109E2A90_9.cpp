@@ -19,8 +19,8 @@ public:
 
 extern Class_10E5B2AC* DAT_10f35dc0;
 
-// FUNCTION: 0x109E34B0 ?FUN_109e34b0@@YAPAVClass_10E5B2AC@@XZ
-Class_10E5B2AC* FUN_109e34b0()
+// FUNCTION: 0x109E34B0 ?GetMessageHandler@@YAPAVClass_10E5B2AC@@XZ
+Class_10E5B2AC* GetMessageHandler()
 {
     if (!DAT_10f35dc0)
     {

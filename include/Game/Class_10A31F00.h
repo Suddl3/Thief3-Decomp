@@ -8,11 +8,11 @@ class Class_10A31F00_Owner;
 class Class_10A31F00
 {
 public:
-    int FUN_10a31f00();
+    int Remove();
 
-    Class_10A31F00_Owner* Unknown00;
+    Class_10A31F00_Owner* m_Owner;
     char Unknown04[8];
-    int Unknown0C;
+    int m_Index;
 };
 
 #endif // GAME_CLASS_10A31F00_H

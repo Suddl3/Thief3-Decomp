@@ -8,14 +8,14 @@ class Class_1097B240_Node;
 class Class_1097B240
 {
 public:
-    void FUN_1097b240(int Size);
+    void Resize(int Size);
 
     int Unknown00;
     int Unknown04;
-    int Unknown08;
-    int Unknown0C;
+    int m_LogBucketCount;
+    int m_BucketCount;
     bool Unknown10;
-    Class_1097B240_Node** Unknown14;
+    Class_1097B240_Node** m_Buckets;
 };
 
 #endif // GAME_CLASS_1097B240_H

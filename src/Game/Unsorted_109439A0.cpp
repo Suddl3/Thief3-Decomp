@@ -24,8 +24,8 @@ void __stdcall AppendBufferRange(Object_10944D50* A, int B, int Size, Class_10A3
     int Base = 0;
     A->Virtual6(0, 0, &Base);
     char* Src = (char*)(Base + B);
-    C->FUN_10a32000(*Offset + Size);
-    memcpy(C->Unknown08 + *Offset, Src, Size);
+    C->SetCount(*Offset + Size);
+    memcpy(C->m_Data + *Offset, Src, Size);
     *Offset += Size;
     A->Virtual7();
 }

@@ -22,25 +22,25 @@ public:
     Class_10A250D0_Node* Next;
 };
 
-// FUNCTION: 0x10A24540 ?FUN_10a24540@Class_10A24540@@QAEXDD@Z
-void Class_10A24540::FUN_10a24540(char Old, char New)
+// FUNCTION: 0x10A24540 ?ReplaceChar@Class_10A24540@@QAEXDD@Z
+void Class_10A24540::ReplaceChar(char Old, char New)
 {
-    for (int i = 0; i < (Unknown00 == 0 ? 0 : ((int*)Unknown00)[-1]); i++)
+    for (int i = 0; i < (m_Chars == 0 ? 0 : ((int*)m_Chars)[-1]); i++)
     {
-        if (Unknown00[i] == Old)
-            Unknown00[i] = New;
+        if (m_Chars[i] == Old)
+            m_Chars[i] = New;
     }
 }
 
-// FUNCTION: 0x10A24580 ?FUN_10a24580@Class_10A243F0@@QAEXXZ
-void Class_10A243F0::FUN_10a24580()
+// FUNCTION: 0x10A24580 ?Free@Class_10A243F0@@QAEXXZ
+void Class_10A243F0::Free()
 {
-    FUN_10a243f0(0);
-    if (Unknown04)
+    Resize(0);
+    if (m_BufferBytes)
     {
-        GetAllocator()->Virtual5(Unknown08);
-        Unknown08 = 0;
-        Unknown04 = 0;
+        GetAllocator()->Virtual5(m_Buffer);
+        m_Buffer = 0;
+        m_BufferBytes = 0;
     }
 }
 

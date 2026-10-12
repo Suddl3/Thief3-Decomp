@@ -8,7 +8,7 @@ class cString;
 class Class_109E5910
 {
 public:
-    int FUN_109e5910(const cString& Name);
+    int IsAbsolute(const cString& Name);
 };
 
 #endif // GAME_CLASS_109E5910_H

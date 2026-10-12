@@ -10,8 +10,8 @@ inline void* operator new(unsigned int, EInternal* Mem)
     return Mem;
 }
 
-// FUNCTION: 0x109A1720 ?FUN_109a1720@@YAXPAX@Z
-void FUN_109a1720(void* Memory)
+// FUNCTION: 0x109A1720 ?ConstructInPlace@@YAXPAX@Z
+void ConstructInPlace(void* Memory)
 {
     new ((EInternal*)Memory) Class_10e56bc0();
 }

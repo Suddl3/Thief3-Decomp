@@ -6,7 +6,7 @@
 class Class_10A242D0
 {
 public:
-    int FUN_10a242d0();
+    int GetCount();
 
     char Unknown00[0x8];
     int Field08;

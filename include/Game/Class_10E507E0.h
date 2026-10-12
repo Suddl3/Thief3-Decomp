@@ -8,7 +8,7 @@ class Class_10E507E0
 public:
     virtual void Virtual0();
     virtual void Virtual1();
-    virtual int FUN_10a2eda0(Class_10E507E0* Other);
+    virtual int Matches(Class_10E507E0* Other);
 
     int Unknown04;
     int Unknown08;

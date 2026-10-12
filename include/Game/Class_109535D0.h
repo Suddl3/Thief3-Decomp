@@ -20,13 +20,13 @@ public:
     virtual void Virtual9(int A);
 
     bool FUN_10939410(int A);
-    void FUN_109535d0();
+    void RefreshSlots();
 
     char Pad04[0x28];
     int Unknown2C;
-    int Unknown30;
+    int m_SlotMask;
     char Pad34[0x5C];
-    Class_10955C30 Unknown90[9];
+    Class_10955C30 m_Slots[9];
 };
 
 #endif // GAME_CLASS_109535D0_H

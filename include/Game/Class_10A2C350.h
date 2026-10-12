@@ -8,11 +8,11 @@ struct Struct_10A2C350;
 class Class_10A2C350
 {
 public:
-    void FUN_10a2c350(int A, int B);
+    void Swap(int A, int B);
 
     int Unknown00;
     int Unknown04;
-    Struct_10A2C350* Unknown08;
+    Struct_10A2C350* m_Items;
 };
 
 #endif // GAME_CLASS_10A2C350_H

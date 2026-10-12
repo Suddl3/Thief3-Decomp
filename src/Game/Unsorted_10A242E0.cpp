@@ -21,12 +21,12 @@ void Class_10A288C0::Free()
     m_Collisions = 0;
 }
 
-// FUNCTION: 0x10A2B480 ?FUN_10a2b480@Class_10A2B480@@QAEXXZ
-void Class_10A2B480::FUN_10a2b480()
+// FUNCTION: 0x10A2B480 ?Free@Class_10A2B480@@QAEXXZ
+void Class_10A2B480::Free()
 {
-    if (Unknown0C)
-        ::operator delete(Unknown0C);
-    Unknown0C = 0;
+    if (m_Buffer)
+        ::operator delete(m_Buffer);
+    m_Buffer = 0;
     Unknown10 = 0;
     FUN_10a2b220();
 }

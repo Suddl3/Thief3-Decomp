@@ -16,9 +16,9 @@ struct Info_10C5BFA0
 void Class_10C5B9A0::FUN_10c5b9a0(char Item)
 {
     Class_10A32000* Array = &Unknown3C;
-    int Index = Array->Unknown00;
-    Array->FUN_10a32000(Index + 1);
-    Array->Unknown08[Index] = Item;
+    int Index = Array->m_Count;
+    Array->SetCount(Index + 1);
+    Array->m_Data[Index] = Item;
 }
 
 // FUNCTION: 0x10C5BFA0 ?FUN_10c5bfa0@Class_10C5BFA0@@QAE?AVClass_10C5BA80@@XZ

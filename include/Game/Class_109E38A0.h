@@ -5,7 +5,7 @@
 
 class Class_109E38A0 {
 public:
-    void FUN_109e38a0(unsigned char p1);
+    void SetFieldCE(unsigned char p1);
     char Unknown00[0xce];
     unsigned char FieldCE;
 };

@@ -7,7 +7,7 @@ struct Class_109E44D0 {
     char unknown_00[0x158];
     void* Field_158;
 
-    void* FUN_109e44d0();
+    void* GetField_158();
 };
 
 #endif // GAME_CLASS_109E44D0_H

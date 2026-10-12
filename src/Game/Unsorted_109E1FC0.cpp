@@ -32,8 +32,8 @@ extern float DAT_10f35b20;
 
 extern bool DAT_10effbec;
 
-// FUNCTION: 0x109E2840 ?FUN_109e2840@@YAXXZ
-void FUN_109e2840()
+// FUNCTION: 0x109E2840 ?ResetLoadingScreen@@YAXXZ
+void ResetLoadingScreen()
 {
     DAT_10f35d9c = cString(DAT_10e47660);
     DAT_10f35da0.FUN_1090f2c0(0);

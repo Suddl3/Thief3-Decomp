@@ -2,18 +2,18 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10A33E80.h"
 
-// FUNCTION: 0x10A33E80 ?FUN_10a33e80@Class_10A33E80@@QAEPAV1@_J0@Z
-Class_10A33E80* Class_10A33E80::FUN_10a33e80(__int64 A, __int64 B)
+// FUNCTION: 0x10A33E80 ?SetRange@Class_10A33E80@@QAEPAV1@_J0@Z
+Class_10A33E80* Class_10A33E80::SetRange(__int64 A, __int64 B)
 {
     if (A < B)
     {
-        Unknown00 = A;
-        Unknown08 = B;
+        m_Min = A;
+        m_Max = B;
     }
     else
     {
-        Unknown08 = A;
-        Unknown00 = B;
+        m_Max = A;
+        m_Min = B;
     }
     return this;
 }

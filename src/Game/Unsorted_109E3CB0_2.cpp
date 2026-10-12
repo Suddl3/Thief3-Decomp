@@ -29,8 +29,8 @@ AAIPathPoint* FUN_10a49f00(ULevel* Level, UClass* Class, int C, int D, FVector E
 
 extern Struct_10AA3520* DAT_10f35dec;
 
-// FUNCTION: 0x109E3CB0 ?FUN_109e3cb0@@YGPAVAAIPathPoint@@PAVUClass@@@Z
-AAIPathPoint* __stdcall FUN_109e3cb0(UClass* Class)
+// FUNCTION: 0x109E3CB0 ?SpawnAIPathPoint@@YGPAVAAIPathPoint@@PAVUClass@@@Z
+AAIPathPoint* __stdcall SpawnAIPathPoint(UClass* Class)
 {
     AAIPathPoint* Point = FUN_10a49f00(DAT_10f35dec->UnknownCC->Unknown00, Class, 0, 0, FVector(0, 0, 0),
                                        FVector(0, 0, 0), FRotator(0, 0, 0), FRotator(0, 0, 0), false);

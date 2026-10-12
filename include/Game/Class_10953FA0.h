@@ -10,10 +10,10 @@ struct Struct_10953FA0;
 class Class_10953FA0
 {
 public:
-    void FUN_10953fa0(const Struct_10953FA0* A);
+    void AddItem(const Struct_10953FA0* A);
 
     char Unknown00[0x40];
-    Class_10953AC0 Unknown40;
+    Class_10953AC0 m_Items;
     char Unknown4C[8];
     int Unknown54;
 };

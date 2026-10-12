@@ -11,7 +11,7 @@ public:
     void FreeEntry(int Index);
 
     char Unknown00[0x29C];
-    void* Unknown29C[1];
+    void* m_Entries[1];
 };
 
 class Class_10956DB0
@@ -24,12 +24,12 @@ public:
     virtual void Virtual4();
     virtual void Virtual5(int);
 
-    void FUN_10956db0();
+    void Reset();
 
     char Unknown04[0x290];
     char Unknown294;
     int Unknown298;
-    int Unknown29C[9];
+    int m_Entries[9];
 };
 
 class cD3DStateCache;
@@ -43,7 +43,7 @@ class Class_10E4AE58
 public:
     virtual void Virtual0();
     virtual void Virtual1();
-    virtual void FUN_10956880(bool A);
+    virtual void ApplyStages(bool A);
 
     char Unknown04[0x2C];
     unsigned int m_Flags;
@@ -55,19 +55,19 @@ public:
     Class_10955C80 Unknown218;
 };
 
-// FUNCTION: 0x10956880 ?FUN_10956880@Class_10E4AE58@@UAEX_N@Z
-void Class_10E4AE58::FUN_10956880(bool A)
+// FUNCTION: 0x10956880 ?ApplyStages@Class_10E4AE58@@UAEX_N@Z
+void Class_10E4AE58::ApplyStages(bool A)
 {
     if (m_Flags & 2)
-        Unknown0C8.FUN_10955c80(0, 0);
+        Unknown0C8.ApplyStage(0, 0);
     else if (m_Flags & 0x80)
-        Unknown218.FUN_10955c80(0, 0);
+        Unknown218.ApplyStage(0, 0);
     else
         DAT_10f31be0->FUN_10936bf0(0);
     if (A)
     {
         if (m_Flags & 4)
-            Unknown100.FUN_10955c80(0, 1);
+            Unknown100.ApplyStage(0, 1);
         else
         {
             DAT_10f31be0->FUN_10936bf0(2);
@@ -76,11 +76,11 @@ void Class_10E4AE58::FUN_10956880(bool A)
     }
 }
 
-// FUNCTION: 0x10956DB0 ?FUN_10956db0@Class_10956DB0@@QAEXXZ
-void Class_10956DB0::FUN_10956db0()
+// FUNCTION: 0x10956DB0 ?Reset@Class_10956DB0@@QAEXXZ
+void Class_10956DB0::Reset()
 {
     for (int i = 0; i < 9; i++)
-        Unknown29C[i] = 0;
+        m_Entries[i] = 0;
     Unknown298 = 0;
     Virtual5(0);
     Unknown294 = 0;
@@ -89,9 +89,9 @@ void Class_10956DB0::FUN_10956db0()
 // FUNCTION: 0x10956F20 ?FreeEntry@Class_10E4AE8C@@QAEXH@Z
 void Class_10E4AE8C::FreeEntry(int Index)
 {
-    if (Unknown29C[Index])
+    if (m_Entries[Index])
     {
-        FUN_1092bdb0(Unknown29C[Index]);
-        Unknown29C[Index] = 0;
+        FUN_1092bdb0(m_Entries[Index]);
+        m_Entries[Index] = 0;
     }
 }

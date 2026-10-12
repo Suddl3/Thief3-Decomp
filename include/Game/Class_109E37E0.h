@@ -7,7 +7,7 @@ class Class_109E37E0 {
     char Unknown00[0xcc];
     unsigned char FieldCC;
 public:
-    void FUN_109e37e0(unsigned char param);
+    void SetFieldCC(unsigned char param);
 };
 
 #endif // GAME_CLASS_109E37E0_H

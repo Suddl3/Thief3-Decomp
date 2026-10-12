@@ -28,13 +28,13 @@ public:
     virtual int Virtual20();
 };
 
-// FUNCTION: 0x10A13000 ?FUN_10a13000@Class_10A13000@@QAE_NH@Z
-bool Class_10A13000::FUN_10a13000(int A)
+// FUNCTION: 0x10A13000 ?HasDuplicateKey@Class_10A13000@@QAE_NH@Z
+bool Class_10A13000::HasDuplicateKey(int A)
 {
     int Matches = 0;
-    for (int i = 0; i < Unknown08; i++)
+    for (int i = 0; i < m_ChildCount; i++)
     {
-        if (Unknown10[i]->Virtual20() == A)
+        if (m_Children[i]->Virtual20() == A)
             Matches++;
     }
     return Matches > 1;

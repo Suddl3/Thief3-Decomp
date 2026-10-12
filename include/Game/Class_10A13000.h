@@ -8,12 +8,12 @@ class Class_10A13000_Element;
 class Class_10A13000
 {
 public:
-    bool FUN_10a13000(int A);
+    bool HasDuplicateKey(int A);
 
     char Unknown00[8];
-    int Unknown08;
+    int m_ChildCount;
     char Unknown0C[4];
-    Class_10A13000_Element** Unknown10;
+    Class_10A13000_Element** m_Children;
 };
 
 #endif // GAME_CLASS_10A13000_H

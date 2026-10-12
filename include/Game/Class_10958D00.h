@@ -8,7 +8,7 @@ class Class_1096A820;
 class Class_10958D00
 {
 public:
-    void FUN_10958d00();
+    void Apply();
 
     Class_1096A820* Unknown00;
     char Pad04[8];

@@ -11,8 +11,8 @@ void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
 void operator delete(void* Ptr) throw();
 
-// FUNCTION: 0x10958D00 ?FUN_10958d00@Class_10958D00@@QAEXXZ
-void Class_10958D00::FUN_10958d00()
+// FUNCTION: 0x10958D00 ?Apply@Class_10958D00@@QAEXXZ
+void Class_10958D00::Apply()
 {
     if (Unknown14 != Unknown10)
         Unknown10 = Unknown14;

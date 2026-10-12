@@ -25,7 +25,7 @@ class Class_10A15C30
 {
 public:
     bool FUN_10a15c30(int* p1);
-    bool FUN_10a164c0(int* Key);
+    bool Remove(int* Key);
     void Rehash(int Size);
 
     int Unknown00;
@@ -37,8 +37,8 @@ public:
     Class_10A15C30_Field18 Unknown18;
 };
 
-// FUNCTION: 0x10A164C0 ?FUN_10a164c0@Class_10A15C30@@QAE_NPAH@Z
-bool Class_10A15C30::FUN_10a164c0(int* Key)
+// FUNCTION: 0x10A164C0 ?Remove@Class_10A15C30@@QAE_NPAH@Z
+bool Class_10A15C30::Remove(int* Key)
 {
     if (!Unknown10 && Unknown04 < Unknown0C * 0.05 && Unknown0C > 64)
         Rehash(Unknown0C / 2);

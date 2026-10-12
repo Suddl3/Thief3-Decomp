@@ -14,8 +14,8 @@ public:
     AAmbientLightVolume();
 };
 
-// FUNCTION: 0x10994BF0 ?FUN_10994bf0@@YAXPAX@Z
-void FUN_10994bf0(void* Memory)
+// FUNCTION: 0x10994BF0 ?ConstructAAmbientLightVolume@@YAXPAX@Z
+void ConstructAAmbientLightVolume(void* Memory)
 {
     new ((EInternal*)Memory) AAmbientLightVolume();
 }

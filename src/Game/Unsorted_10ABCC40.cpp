@@ -24,7 +24,7 @@ Class_10A1F880* FUN_10a1fcf0();
 // FUNCTION: 0x10ABCD90 ?FUN_10abcd90@@YAHH@Z
 int FUN_10abcd90(int A)
 {
-    Struct_10ABCD90* Obj = (Struct_10ABCD90*)FUN_10a1fcf0()->FUN_10a1f880(A);
+    Struct_10ABCD90* Obj = (Struct_10ABCD90*)FUN_10a1fcf0()->GetAt(A);
     if (Obj)
     {
         int Value = 0;

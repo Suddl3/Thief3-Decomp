@@ -70,7 +70,7 @@ extern cD3DStateCache* DAT_10f31be0;
 class Class_10955C80
 {
 public:
-    void FUN_10955c80(int A, unsigned char B);
+    void ApplyStage(int A, unsigned char B);
 
     char Unknown00[0x38];
 };
@@ -86,7 +86,7 @@ public:
 class Class_109568F0 : public Class_109523D0
 {
 public:
-    void FUN_109568f0(int A);
+    void ApplyStages(int A);
 
     int Unknown30;
     char Unknown34[8];
@@ -94,11 +94,11 @@ public:
     char Unknown40[0xC];
     unsigned char Unknown4C;
     char Unknown4D[0x43];
-    Class_10955C80 Unknown90[9];
+    Class_10955C80 m_Stages[9];
 };
 
-// FUNCTION: 0x109568F0 ?FUN_109568f0@Class_109568F0@@QAEXH@Z
-void Class_109568F0::FUN_109568f0(int A)
+// FUNCTION: 0x109568F0 ?ApplyStages@Class_109568F0@@QAEXH@Z
+void Class_109568F0::ApplyStages(int A)
 {
     DAT_10f31be0->ResetTextureStagesBiased();
     GDirect3DDevice8->Virtual50(0x3c, (int)(Alpha * 255.5f) * 0x01010101);
@@ -106,7 +106,7 @@ void Class_109568F0::FUN_109568f0(int A)
     int Result = FUN_10952410(&Index);
     if (Result == 1)
     {
-        Unknown90[Index].FUN_10955c80(A, Unknown4C);
+        m_Stages[Index].ApplyStage(A, Unknown4C);
         return;
     }
     for (int i = 0; i < 9; i++)
@@ -117,15 +117,15 @@ void Class_109568F0::FUN_109568f0(int A)
         case 3:
         case 5:
         case 8:
-            Unknown90[i].FUN_10955c80(A, Unknown4C);
+            m_Stages[i].ApplyStage(A, Unknown4C);
             break;
         case 1:
         case 7:
             if ((Unknown30 & 0x40) && Result == 2)
-                Unknown90[i].FUN_10955c80(A, Unknown4C);
+                m_Stages[i].ApplyStage(A, Unknown4C);
             break;
         case 6:
-            Unknown90[6].FUN_10955c80(A, Unknown4C);
+            m_Stages[6].ApplyStage(A, Unknown4C);
             break;
         }
     }

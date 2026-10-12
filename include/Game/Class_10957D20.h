@@ -6,7 +6,7 @@
 class Class_10957D20
 {
 public:
-    Class_10957D20* FUN_10957d20();
+    Class_10957D20* Reset();
 
     char Unknown00[0x34];
     int Unknown34;

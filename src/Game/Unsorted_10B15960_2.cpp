@@ -26,7 +26,7 @@ bool Class_10B15CC0::FUN_10b15cc0()
         cString Name(DAT_10e79098);
         Window = FindWindowByName(Name);
     }
-    if (Window && !FUN_109e6d60(Window))
+    if (Window && !IsCurrentWindow(Window))
     {
         Virtual4(Window);
         return true;

@@ -1,6 +1,6 @@
 // Game/Unsorted_10BB8290.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10A2C2F0.h"
+#include "Game/cBoneAimController.h"
 #include "Game/Class_10BB8330.h"
 #include "Game/Class_10BB84F0.h"
 #include "Game/Class_10BB8510.h"
@@ -9,13 +9,13 @@
 #include "Game/Class_10BB8550.h"
 #include "Game/Class_10C7D570.h"
 
-Class_10A2C2F0* FUN_10a2c6b0();
+cBoneAimController* GetBoneAimController();
 
 // FUNCTION: 0x10BB8330 ?FUN_10bb8330@Class_10BB8330@@QAE_NXZ
 bool Class_10BB8330::FUN_10bb8330()
 {
     Class_10C7D570* Item = Unknown08;
-    return FUN_10a2c6b0()->FindEntry(Item->FUN_10c7d570(), &Unknown284) != 0;
+    return GetBoneAimController()->FindEntry(Item->FUN_10c7d570(), &Unknown284) != 0;
 }
 
 // FUNCTION: 0x10BB84F0 ?FUN_10bb84f0@Class_10BB84F0@@QAEXHH@Z

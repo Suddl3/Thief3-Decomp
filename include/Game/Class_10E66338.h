@@ -10,7 +10,7 @@ class Class_10E66338
 {
 public:
     virtual void Virtual0();
-    virtual Class_10E66338* FUN_10a2f630();
+    virtual Class_10E66338* Clone();
     virtual void Virtual2();
     virtual void Virtual3();
     virtual void Virtual4(int A);
@@ -18,7 +18,7 @@ public:
 
     Class_10E66338();
 
-    void FUN_10a2eeb0(FString* A, int* B, FString* C);
+    void CopyOptionalString(FString* A, int* B, FString* C);
 
     char Pad04[0x14];
     FString Unknown18;

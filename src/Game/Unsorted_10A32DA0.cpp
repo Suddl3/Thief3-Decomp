@@ -12,8 +12,8 @@ void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
 extern cSoundStreamingManager* DAT_10f39f40;
 
-// FUNCTION: 0x10A32FA0 ?FUN_10a32fa0@@YAPAVcSoundStreamingManager@@XZ
-cSoundStreamingManager* FUN_10a32fa0()
+// FUNCTION: 0x10A32FA0 ?GetSoundStreamingManager@@YAPAVcSoundStreamingManager@@XZ
+cSoundStreamingManager* GetSoundStreamingManager()
 {
     if (!DAT_10f39f40)
     {

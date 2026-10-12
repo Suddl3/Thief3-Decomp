@@ -27,20 +27,20 @@ public:
 
 Class_10A174E0* FUN_10a18230();
 
-// FUNCTION: 0x10A2E400 ?FUN_10a2e400@Class_10A2E400@@QAEXXZ
-void Class_10A2E400::FUN_10a2e400()
+// FUNCTION: 0x10A2E400 ?CacheGameDayIndex@Class_10A2E400@@QAEXXZ
+void Class_10A2E400::CacheGameDayIndex()
 {
-    Unknown00 = FUN_10a18230()->Virtual0(FName(DAT_10e662b4));
+    m_GameDayIndex = FUN_10a18230()->Virtual0(FName(DAT_10e662b4));
 }
 
-// FUNCTION: 0x10A2E430 ?FUN_10a2e430@Class_10A2E430@@QAE_NI@Z
-bool Class_10A2E430::FUN_10a2e430(unsigned Mask)
+// FUNCTION: 0x10A2E430 ?MatchesMask@Class_10A2E430@@QAE_NI@Z
+bool Class_10A2E430::MatchesMask(unsigned Mask)
 {
-    if (Unknown00 == 0xFFFFFFFF)
+    if (m_BitIndex == 0xFFFFFFFF)
         return true;
-    if (Unknown00 >= 32)
+    if (m_BitIndex >= 32)
         return false;
-    return (Mask & (1 << Unknown00)) != 0;
+    return (Mask & (1 << m_BitIndex)) != 0;
 }
 
 // FUNCTION: 0x10A2E4B0 ?FUN_10a2e4b0@@YAXXZ
@@ -61,8 +61,8 @@ int FUN_10a2ed30(void* p1)
     return FUN_10a2e900(p1);
 }
 
-// FUNCTION: 0x10A2EE30 ?FUN_10a2ee30@Class_10A2EE30@@QAEPAV1@XZ
-Class_10A2EE30* Class_10A2EE30::FUN_10a2ee30()
+// FUNCTION: 0x10A2EE30 ?Init@Class_10A2EE30@@QAEPAV1@XZ
+Class_10A2EE30* Class_10A2EE30::Init()
 {
     Unknown00 = 0;
     Unknown04 = 0;

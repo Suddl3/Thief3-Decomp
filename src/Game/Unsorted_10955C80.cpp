@@ -148,57 +148,57 @@ public:
 class Class_10955B20
 {
 public:
-    void FUN_10955b20(int A);
+    void ApplySamplerState(int A);
 };
 
 // Game/Class_10955C80.h copied whole, with its base and the member the function calls added
 class Class_10955C80 : public Class_10955B20
 {
 public:
-    void FUN_10955c80(int A, bool B);
+    void ApplyStage(int A, bool B);
 
     char Unknown00[4];
-    int Unknown04;
+    int m_Stage;
     char Unknown08[4];
-    bool Unknown0C;
+    bool m_Enabled;
     char Unknown0D[0xb];
     Class_10955C80_Unknown18* Unknown18;
     Class_1095B040* Unknown1C;
-    unsigned long Unknown20;
-    unsigned long Unknown24;
-    unsigned long Unknown28;
-    unsigned long Unknown2C;
-    unsigned long Unknown30;
-    unsigned long Unknown34;
+    unsigned long m_ColorArg1;
+    unsigned long m_ColorArg2;
+    unsigned long m_ColorOp;
+    unsigned long m_AlphaArg1;
+    unsigned long m_AlphaArg2;
+    unsigned long m_AlphaOp;
 };
 
-// FUNCTION: 0x10955C80 ?FUN_10955c80@Class_10955C80@@QAEXH_N@Z
-void Class_10955C80::FUN_10955c80(int A, bool B)
+// FUNCTION: 0x10955C80 ?ApplyStage@Class_10955C80@@QAEXH_N@Z
+void Class_10955C80::ApplyStage(int A, bool B)
 {
     if (Unknown1C)
     {
-        Unknown1C->FUN_1095b040(A);
-        Unknown18 = (Class_10955C80_Unknown18*)((Class_1095B070*)Unknown1C)->FUN_1095b070();
+        Unknown1C->UpdateTime(A);
+        Unknown18 = (Class_10955C80_Unknown18*)((Class_1095B070*)Unknown1C)->PickEntry();
     }
-    if (Unknown0C && Unknown04 != -1)
+    if (m_Enabled && m_Stage != -1)
     {
         IDirect3DBaseTexture8* Texture = Unknown18->Unknown30;
-        IDirect3DBaseTexture8** Slot = &DAT_10f31be0->m_Textures[Unknown04];
+        IDirect3DBaseTexture8** Slot = &DAT_10f31be0->m_Textures[m_Stage];
         if (*Slot != Texture)
         {
-            GDirect3DDevice8->SetTexture(Unknown04, Texture);
+            GDirect3DDevice8->SetTexture(m_Stage, Texture);
             *Slot = Texture;
         }
-        FUN_10955b20(Unknown04);
-        GDirect3DDevice8->SetTextureStageState(Unknown04, 24, 0);
-        GDirect3DDevice8->SetTextureStageState(Unknown04, 2, Unknown20);
-        GDirect3DDevice8->SetTextureStageState(Unknown04, 3, Unknown24);
-        GDirect3DDevice8->SetTextureStageState(Unknown04, 1, Unknown28);
+        ApplySamplerState(m_Stage);
+        GDirect3DDevice8->SetTextureStageState(m_Stage, 24, 0);
+        GDirect3DDevice8->SetTextureStageState(m_Stage, 2, m_ColorArg1);
+        GDirect3DDevice8->SetTextureStageState(m_Stage, 3, m_ColorArg2);
+        GDirect3DDevice8->SetTextureStageState(m_Stage, 1, m_ColorOp);
         if (B)
         {
-            GDirect3DDevice8->SetTextureStageState(Unknown04, 5, Unknown2C);
-            GDirect3DDevice8->SetTextureStageState(Unknown04, 6, Unknown30);
-            GDirect3DDevice8->SetTextureStageState(Unknown04, 4, Unknown34);
+            GDirect3DDevice8->SetTextureStageState(m_Stage, 5, m_AlphaArg1);
+            GDirect3DDevice8->SetTextureStageState(m_Stage, 6, m_AlphaArg2);
+            GDirect3DDevice8->SetTextureStageState(m_Stage, 4, m_AlphaOp);
         }
     }
 }

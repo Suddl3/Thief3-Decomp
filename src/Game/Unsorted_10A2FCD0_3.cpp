@@ -10,11 +10,11 @@ struct Item_10A30A70
     int Unknown0C;
 };
 
-// FUNCTION: 0x10A30A70 ?FUN_10a30a70@Class_10A30530@@QAEHPBUItem_10A30A70@@@Z
-int Class_10A30530::FUN_10a30a70(const Item_10A30A70* Item)
+// FUNCTION: 0x10A30A70 ?Append@Class_10A30530@@QAEHPBUItem_10A30A70@@@Z
+int Class_10A30530::Append(const Item_10A30A70* Item)
 {
-    int Index = Unknown00;
-    FUN_10a30530(Index + 1);
-    Unknown08[Index] = *Item;
+    int Index = m_Count;
+    SetCount(Index + 1);
+    m_Data[Index] = *Item;
     return Index;
 }

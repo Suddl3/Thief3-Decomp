@@ -5,8 +5,8 @@
 #include "Game/Class_109E6520_Node.h"
 #include "Game/Class_109E7C30.h"
 
-// FUNCTION: 0x109E7C30 ?FUN_109e7c30@Class_109E7C30@@QAEXH@Z
-void Class_109E7C30::FUN_109e7c30(int Size)
+// FUNCTION: 0x109E7C30 ?Reset@Class_109E7C30@@QAEXH@Z
+void Class_109E7C30::Reset(int Size)
 {
     for (int i = 0; i < m_BucketCount; i++)
     {

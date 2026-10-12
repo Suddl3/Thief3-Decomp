@@ -14,9 +14,9 @@ void Class_1097B760::FUN_1097b760(int A)
 void Class_1097CBE0::Free()
 {
     Clear(0x40);
-    ::operator delete(Unknown14);
+    ::operator delete(m_Buckets);
     Unknown04 = 0;
-    Unknown0C = 0;
-    Unknown14 = 0;
+    m_BucketCount = 0;
+    m_Buckets = 0;
     Unknown00 = 0;
 }

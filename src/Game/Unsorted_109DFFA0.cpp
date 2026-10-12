@@ -15,8 +15,8 @@ extern int DAT_10e5afbc[];
 
 extern float DAT_10e49984;
 
-// FUNCTION: 0x109DFFA0 ?FUN_109dffa0@@YAXXZ
-void FUN_109dffa0()
+// FUNCTION: 0x109DFFA0 ?InitIntTable@@YAXXZ
+void InitIntTable()
 {
     if (DAT_10f35b54 == 0)
     {

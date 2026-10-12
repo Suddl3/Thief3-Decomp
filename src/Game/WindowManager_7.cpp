@@ -50,7 +50,7 @@ bool WindowManager::OpenCreditsWindow(int A)
         cString Name(DAT_10e790b0);
         Window = FindWindowByName(Name);
     }
-    if (Window && !FUN_109e6d60(Window))
+    if (Window && !IsCurrentWindow(Window))
     {
         ((Class_10B45AD0*)Window)->Unknown15D = A;
         Virtual4(Window);

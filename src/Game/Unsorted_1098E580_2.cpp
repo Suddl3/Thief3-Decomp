@@ -5,7 +5,7 @@
 class AZoneProperties : public Class_10E70A50
 {
 public:
-    AZoneProperties* FUN_1098dd00();
+    AZoneProperties* Construct();
 
     char Unknown2C[0x84];
     int UnknownB0;
@@ -26,15 +26,15 @@ public:
     AMetaProperty();
 };
 
-// FUNCTION: 0x1098E580 ?FUN_1098e580@@YAXPAVAZoneProperties@@@Z
-void FUN_1098e580(AZoneProperties* Object)
+// FUNCTION: 0x1098E580 ?ConstructAZoneProperties@@YAXPAVAZoneProperties@@@Z
+void ConstructAZoneProperties(AZoneProperties* Object)
 {
     if (Object)
-        Object->FUN_1098dd00();
+        Object->Construct();
 }
 
-// FUNCTION: 0x1098E5A0 ?FUN_1098e5a0@@YAXPAX@Z
-void FUN_1098e5a0(void* Memory)
+// FUNCTION: 0x1098E5A0 ?ConstructAMetaProperty@@YAXPAX@Z
+void ConstructAMetaProperty(void* Memory)
 {
     new ((EInternal*)Memory) AMetaProperty();
 }

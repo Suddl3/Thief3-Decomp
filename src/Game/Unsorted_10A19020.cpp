@@ -3,10 +3,10 @@
 #include "Game/Class_10A19330.h"
 #include "Game/cIntArray.h"
 
-// FUNCTION: 0x10A19330 ?FUN_10a19330@Class_10A19330@@QAEXHH@Z
-void Class_10A19330::FUN_10a19330(int Item, int Which)
+// FUNCTION: 0x10A19330 ?RemoveItem@Class_10A19330@@QAEXHH@Z
+void Class_10A19330::RemoveItem(int Item, int Which)
 {
-    int Index = Unknown08[Which].FindIndex(Item);
+    int Index = m_Lists[Which].FindIndex(Item);
     if (Index != -1)
-        Unknown08[Which].RemoveAt(Index);
+        m_Lists[Which].RemoveAt(Index);
 }

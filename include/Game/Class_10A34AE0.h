@@ -10,10 +10,10 @@ struct Struct_10A34AE0;
 class Class_10A34AE0
 {
 public:
-    bool FUN_10a34ae0(Struct_10A34AE0* A, int B);
+    bool AddPair(Struct_10A34AE0* A, int B);
 
     int Unknown00;
-    Class_10A345C0 Unknown04;
+    Class_10A345C0 m_PairCounts;
 };
 
 #endif // GAME_CLASS_10A34AE0_H

@@ -6,13 +6,13 @@
 class Class_1095B070
 {
 public:
-    int FUN_1095b070();
+    int PickEntry();
 
     float Unknown00;
     char Unknown04[4];
     int* Unknown08;
     int Unknown0C;
-    float Unknown10;
+    float m_Rate;
 };
 
 #endif // GAME_CLASS_1095B070_H

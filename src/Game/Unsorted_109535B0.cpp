@@ -13,8 +13,8 @@ public:
     int Unknown30;
 };
 
-// FUNCTION: 0x109535D0 ?FUN_109535d0@Class_109535D0@@QAEXXZ
-void Class_109535D0::FUN_109535d0()
+// FUNCTION: 0x109535D0 ?RefreshSlots@Class_109535D0@@QAEXXZ
+void Class_109535D0::RefreshSlots()
 {
     bool Bad = false;
     bool Missing = false;
@@ -23,9 +23,9 @@ void Class_109535D0::FUN_109535d0()
     {
         if (Bad)
             break;
-        if (Unknown90[i].Unknown0C)
+        if (m_Slots[i].Unknown0C)
         {
-            Class_10955C30* Obj = &Unknown90[i];
+            Class_10955C30* Obj = &m_Slots[i];
             if (Obj->m_Handle == 0 || ((Class_109535D0_Unknown18*)Obj->m_Handle)->Unknown30 == 0)
             {
                 if (!FUN_10939410(i))
@@ -39,10 +39,10 @@ void Class_109535D0::FUN_109535d0()
         }
         else
         {
-            Unknown90[i].Destroy();
+            m_Slots[i].Destroy();
             if (Virtual7(i))
                 Virtual9(i);
-            Unknown30 &= ~(1 << i);
+            m_SlotMask &= ~(1 << i);
         }
         i++;
     } while (i < 9);
@@ -51,7 +51,7 @@ void Class_109535D0::FUN_109535d0()
         Unknown2C = 1;
         if (Bad)
         {
-            ((cString*)Unknown90)->FUN_1090a590(DAT_10e4a3c8);
+            ((cString*)m_Slots)->FUN_1090a590(DAT_10e4a3c8);
             FUN_10939410(0);
         }
     }

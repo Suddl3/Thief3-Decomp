@@ -24,8 +24,8 @@ public:
 
 extern void* DAT_10e5b75c[];
 
-// FUNCTION: 0x109E6140 ?FUN_109e6140@@YGXPAVFString@@PBV1@00@Z
-void __stdcall FUN_109e6140(FString* Out1, const FString* In, FString* Out3, FString* Out4)
+// FUNCTION: 0x109E6140 ?ParseFileName@@YGXPAVFString@@PBV1@00@Z
+void __stdcall ParseFileName(FString* Out1, const FString* In, FString* Out3, FString* Out4)
 {
     FString Name(*In);
     Class_10905530 Parts;

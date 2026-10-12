@@ -8,7 +8,7 @@ class Class_1095AFD0
 public:
     ~Class_1095AFD0();
 
-    Class_1095AFD0* FUN_1095afd0();
+    Class_1095AFD0* Reset();
 
     char Unknown00[4];
     int Unknown04;

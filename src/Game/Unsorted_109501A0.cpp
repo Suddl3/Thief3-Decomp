@@ -10,7 +10,7 @@ class Class_10950230;
 
 extern Class_10950230* DAT_10f31a64;
 
-void FUN_109e29d0();
+void ReleaseRADMemory();
 
 class Class_109501A0_Com
 {
@@ -92,7 +92,7 @@ void cBinkMovie::Close()
     delete Unknown00;
     Unknown00 = 0;
     DAT_10f31a64 = 0;
-    FUN_109e29d0();
+    ReleaseRADMemory();
     if (Unknown06)
     {
         GEngine->Unknown38->Unknown70 = Unknown10;

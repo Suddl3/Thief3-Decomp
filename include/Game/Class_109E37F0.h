@@ -8,7 +8,7 @@ class Class_109E37F0
 public:
     char Unknown00[0xcd];
     unsigned char FieldCD;
-    unsigned char FUN_109e37f0();
+    unsigned char GetFieldCD();
 };
 
 #endif // GAME_CLASS_109E37F0_H

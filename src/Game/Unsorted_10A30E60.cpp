@@ -80,11 +80,11 @@ void FUN_10a311e0()
     }
 }
 
-// FUNCTION: 0x10A32910 ?FUN_10a32910@Class_10A32000@@QAEHPAD@Z
-int Class_10A32000::FUN_10a32910(char* Value)
+// FUNCTION: 0x10A32910 ?Append@Class_10A32000@@QAEHPAD@Z
+int Class_10A32000::Append(char* Value)
 {
-    int Index = Unknown00;
-    FUN_10a32000(Index + 1);
-    Unknown08[Index] = *Value;
+    int Index = m_Count;
+    SetCount(Index + 1);
+    m_Data[Index] = *Value;
     return Index;
 }

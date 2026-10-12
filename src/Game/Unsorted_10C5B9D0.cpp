@@ -11,19 +11,19 @@ extern "C" void* memmove(void* Dest, const void* Src, unsigned Count);
 // FUNCTION: 0x10C5B9D0 ?FUN_10c5b9d0@Class_10C5B9D0@@QAEXXZ
 void Class_10C5B9D0::FUN_10c5b9d0()
 {
-    if (Unknown3C.Unknown00 > 1)
+    if (Unknown3C.m_Count > 1)
     {
         Class_10A32000* Arr = &Unknown3C;
-        int Index = Unknown3C.Unknown00 - 1;
-        if (Index != Arr->Unknown00 - 1)
+        int Index = Unknown3C.m_Count - 1;
+        if (Index != Arr->m_Count - 1)
         {
             int From = Index + 1;
             int To = Index;
-            int Size = Arr->Unknown00 - Index - 1;
+            int Size = Arr->m_Count - Index - 1;
             if (From != To && Size)
-                memmove(Arr->Unknown08 + To, Arr->Unknown08 + From, Size);
+                memmove(Arr->m_Data + To, Arr->m_Data + From, Size);
         }
-        Arr->FUN_10a32000(Arr->Unknown00 - 1);
+        Arr->SetCount(Arr->m_Count - 1);
     }
 }
 

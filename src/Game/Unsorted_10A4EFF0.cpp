@@ -13,24 +13,24 @@ void Class_10A4EFB0::Reset()
     for (int i = 0; i < 0x42; i++)
     {
         unsigned Capacity;
-        if (Unknown0C[i].Unknown08 == 0)
+        if (Unknown0C[i].m_Buffer == 0)
             Capacity = 0;
         else
-            Capacity = (unsigned)Unknown0C[i].Unknown04 >> 2;
+            Capacity = (unsigned)Unknown0C[i].m_BufferBytes >> 2;
         GetAllocator()->Virtual8(0, 0);
         if ((int)Capacity < 0)
         {
             int Want = 0;
             if (Capacity)
                 Want = 0x10;
-            Unknown0C[i].Unknown08 = GetAllocator()->Virtual3(Unknown0C[i].Unknown08, Want * 4, 0, 0, 0, 0);
-            Unknown0C[i].Unknown04 = Want * 4;
+            Unknown0C[i].m_Buffer = GetAllocator()->Virtual3(Unknown0C[i].m_Buffer, Want * 4, 0, 0, 0, 0);
+            Unknown0C[i].m_BufferBytes = Want * 4;
         }
         else if ((int)(Capacity - 16) >= 0)
         {
-            GetAllocator()->Virtual5(Unknown0C[i].Unknown08);
-            Unknown0C[i].Unknown08 = 0;
-            Unknown0C[i].Unknown04 = 0;
+            GetAllocator()->Virtual5(Unknown0C[i].m_Buffer);
+            Unknown0C[i].m_Buffer = 0;
+            Unknown0C[i].m_BufferBytes = 0;
         }
         GetAllocator()->Virtual9();
         Unknown0C[i].Unknown00 = 0;
@@ -38,5 +38,5 @@ void Class_10A4EFB0::Reset()
     for (int i = 0; i < 0xff; i++)
         Unknown324[i] = 0x40;
     for (int i = 0; i < 0xe; i++)
-        Unknown720[i].FUN_10a243f0(0);
+        Unknown720[i].Resize(0);
 }

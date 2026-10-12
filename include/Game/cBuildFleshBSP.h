@@ -8,7 +8,7 @@ class cBuildFleshBSP
 public:
     cBuildFleshBSP();
 
-    cBuildFleshBSP* FUN_10a22e20();
+    cBuildFleshBSP* Init();
 
     void** Unknown00;
     int Unknown04;

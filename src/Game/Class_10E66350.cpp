@@ -22,11 +22,11 @@ public:
 
     Class_10E66320();
 
-    FString Unknown04;
-    int Unknown10;
+    FString m_Name;
+    int m_HasName;
 };
 
-// Game/Class_10E66350.h plus the Virtual1 override (slot 1) and FUN_10a2eeb0, a method called on Copy (ecx holds it).
+// Game/Class_10E66350.h plus the Virtual1 override (slot 1) and CopyOptionalString, a method called on Copy (ecx holds it).
 class Class_10E66350 : public Class_10E66320
 {
 public:
@@ -35,7 +35,7 @@ public:
     virtual int FUN_10a2f0c0(Class_10E66320* Other);
 
     Class_10E66350();
-    void FUN_10a2eeb0(FString* Name, UBOOL* Found, FString* Source);
+    void CopyOptionalString(FString* Name, UBOOL* Found, FString* Source);
 
     int Unknown14;
     FString Unknown18;
@@ -48,8 +48,8 @@ public:
 Class_10E66320* Class_10E66350::Virtual1()
 {
     Class_10E66350* Copy = ::new(0, 0, 0, 0, 0) Class_10E66350();
-    Copy->FUN_10a2eeb0(&Copy->Unknown18, &Copy->Unknown30, Unknown30 != 0 ? &Unknown18 : 0);
-    Copy->FUN_10a2eeb0(&Copy->Unknown24, &Copy->Unknown34, Unknown34 != 0 ? &Unknown24 : 0);
+    Copy->CopyOptionalString(&Copy->Unknown18, &Copy->Unknown30, Unknown30 != 0 ? &Unknown18 : 0);
+    Copy->CopyOptionalString(&Copy->Unknown24, &Copy->Unknown34, Unknown34 != 0 ? &Unknown24 : 0);
     Copy->FUN_109b1f50(FUN_10a2f510());
     return Copy;
 }

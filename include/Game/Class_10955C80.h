@@ -6,7 +6,7 @@
 class Class_10955C80
 {
 public:
-    void FUN_10955c80(int A, int B);
+    void ApplyStage(int A, int B);
 };
 
 #endif // GAME_CLASS_10955C80_H

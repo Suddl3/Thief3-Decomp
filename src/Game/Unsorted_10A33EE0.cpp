@@ -52,8 +52,8 @@ void Class_10A34D50::Clear()
     }
 }
 
-// FUNCTION: 0x10A34730 ?FUN_10a34730@Class_10A34730@@QAE?AVcRefPtr@@XZ
-cRefPtr Class_10A34730::FUN_10a34730()
+// FUNCTION: 0x10A34730 ?GetRef@Class_10A34730@@QAE?AVcRefPtr@@XZ
+cRefPtr Class_10A34730::GetRef()
 {
     return Unknown00->Unknown10;
 }
@@ -76,13 +76,13 @@ void Class_10A34B90::Release()
     Unknown00 = 0;
 }
 
-// FUNCTION: 0x10A35170 ?FUN_10a35170@Class_10A34CD0@@QAEXXZ
-void Class_10A34CD0::FUN_10a35170()
+// FUNCTION: 0x10A35170 ?Release@Class_10A34CD0@@QAEXXZ
+void Class_10A34CD0::Release()
 {
     FUN_10a34cd0(0x40);
-    ::operator delete(Unknown14);
+    ::operator delete(m_Buckets);
     Unknown04 = 0;
-    Unknown0C = 0;
-    Unknown14 = 0;
+    m_BucketCount = 0;
+    m_Buckets = 0;
     Unknown00 = 0;
 }

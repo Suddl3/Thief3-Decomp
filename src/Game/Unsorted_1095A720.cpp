@@ -16,8 +16,8 @@ struct Struct_1095A720_Unknown08
     }
 };
 
-// FUNCTION: 0x1095A720 ?FUN_1095a720@Class_1095A720@@QAEHXZ
-int Class_1095A720::FUN_1095a720()
+// FUNCTION: 0x1095A720 ?GetSize@Class_1095A720@@QAEHXZ
+int Class_1095A720::GetSize()
 {
     if (Unknown0C)
         return strlen(Unknown0C) + 1;

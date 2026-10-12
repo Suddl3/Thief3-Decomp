@@ -6,10 +6,10 @@
 class Class_10A33E80
 {
 public:
-    Class_10A33E80* FUN_10a33e80(__int64 A, __int64 B);
+    Class_10A33E80* SetRange(__int64 A, __int64 B);
 
-    __int64 Unknown00;
-    __int64 Unknown08;
+    __int64 m_Min;
+    __int64 m_Max;
 };
 
 #endif // GAME_CLASS_10A33E80_H

@@ -1,13 +1,13 @@
 // Game/Class_10E95780.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Core/Core.h"
-#include "Game/Class_10A2C2F0.h"
+#include "Game/cBoneAimController.h"
 #include "Game/Class_10C7D570.h"
 #include "Game/Class_10E95780_Unknown04.h"
 
 extern const char DAT_10e5052c[];
 
-Class_10A2C2F0* FUN_10a2c6b0();
+cBoneAimController* GetBoneAimController();
 
 class Class_10E90D70
 {
@@ -32,5 +32,5 @@ Class_10E95780::~Class_10E95780()
 {
     FName Name(DAT_10e5052c, FNAME_Add);
     Class_10C7D570* Item = Unknown04->Unknown08;
-    FUN_10a2c6b0()->FUN_10a2c2a0(Item->FUN_10c7d570(), (int*)&Name);
+    GetBoneAimController()->FUN_10a2c2a0(Item->FUN_10c7d570(), (int*)&Name);
 }

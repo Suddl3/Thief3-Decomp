@@ -186,7 +186,7 @@ void cT3ReadBookWindow::FUN_10b2fef0()
     if (Unknown134 != 0)
     {
         int Count = Unknown168;
-        if (Unknown134->FUN_10a242d0() > Count)
+        if (Unknown134->GetCount() > Count)
         {
             if (Unknown160 >= Count)
             {

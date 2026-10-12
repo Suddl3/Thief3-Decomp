@@ -7,27 +7,27 @@
 
 Class_10905A90_Member* GetAllocator();
 
-// FUNCTION: 0x10A32A70 ?FUN_10a32a70@Class_10A32A70@@QAEXXZ
-void Class_10A32A70::FUN_10a32a70()
+// FUNCTION: 0x10A32A70 ?Clear@Class_10A32A70@@QAEXXZ
+void Class_10A32A70::Clear()
 {
-    FUN_10a32940(0);
-    if (Unknown04)
+    SetCount(0);
+    if (m_CapacityBytes)
     {
-        GetAllocator()->Virtual5(Unknown08);
-        Unknown08 = 0;
-        Unknown04 = 0;
+        GetAllocator()->Virtual5(m_Data);
+        m_Data = 0;
+        m_CapacityBytes = 0;
     }
 }
 
-// FUNCTION: 0x10A32BF0 ?FUN_10a32bf0@Class_10A32BF0@@QAEXXZ
-void Class_10A32BF0::FUN_10a32bf0()
+// FUNCTION: 0x10A32BF0 ?Clear@Class_10A32BF0@@QAEXXZ
+void Class_10A32BF0::Clear()
 {
-    FUN_10a32af0(0);
-    if (Unknown04)
+    SetCount(0);
+    if (m_CapacityBytes)
     {
-        GetAllocator()->Virtual5(Unknown08);
-        Unknown08 = 0;
-        Unknown04 = 0;
+        GetAllocator()->Virtual5(m_Data);
+        m_Data = 0;
+        m_CapacityBytes = 0;
     }
 }
 

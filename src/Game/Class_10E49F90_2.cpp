@@ -59,7 +59,7 @@ bool Class_10E49F90::FUN_10935f00(Class_10935F00_Arg* A, int B)
         DAT_10f31be0->SetVertexShader(Unknown150);
         DAT_10f31be0->FUN_10937400(Unknown2C8);
         ((Class_10952640*)A)->Apply();
-        ((Class_109526F0*)A)->FUN_109526f0();
+        ((Class_109526F0*)A)->ApplyPixelShaderConstant();
         float Color[4] = {1.0f, 1.0f, 1.0f, 1.0f};
         DAT_10f31be0->FUN_10937140(0x12, Color);
         A->Unknown1E0.FUN_10955db0(0, 0, 1);

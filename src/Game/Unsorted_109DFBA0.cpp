@@ -31,9 +31,9 @@ struct Struct_109E5310
 
 extern int DAT_10f35db8;
 
-void* __stdcall FUN_109e2970(unsigned Bytes);
+void* __stdcall AllocRADMemory(unsigned Bytes);
 
-void __stdcall FUN_10aed930(void* Ptr);
+void __stdcall RadFree(void* Ptr);
 
 extern "C" __declspec(dllimport) void __stdcall _RADSetMemory(void* (__stdcall* Alloc)(unsigned), void (__stdcall* Free)(void*));
 
@@ -47,11 +47,11 @@ void FUN_109e1e60(bool p1)
     FUN_109e1410(DAT_10f35b20, p1);
 }
 
-// FUNCTION: 0x109E2990 ?FUN_109e2990@@YAXXZ
-void FUN_109e2990()
+// FUNCTION: 0x109E2990 ?InitRadMemory@@YAXXZ
+void InitRadMemory()
 {
     if (DAT_10f35db8++ == 0)
-        _RADSetMemory(FUN_109e2970, FUN_10aed930);
+        _RADSetMemory(AllocRADMemory, RadFree);
 }
 
 // FUNCTION: 0x109E2A80 ?FUN_109e2a80@@YAXXZ
@@ -60,44 +60,44 @@ void FUN_109e2a80()
     FUN_10d4e090();
 }
 
-// FUNCTION: 0x109E3750 ?FUN_109e3750@Class_109E3750@@QAEPAXXZ
-void* Class_109E3750::FUN_109e3750()
+// FUNCTION: 0x109E3750 ?GetFieldDC@Class_109E3750@@QAEPAXXZ
+void* Class_109E3750::GetFieldDC()
 {
     return &FieldDC;
 }
 
-// FUNCTION: 0x109E3760 ?FUN_109e3760@Class_109E3760@@QAEPAXXZ
-void* Class_109E3760::FUN_109e3760()
+// FUNCTION: 0x109E3760 ?GetField_E0@Class_109E3760@@QAEPAXXZ
+void* Class_109E3760::GetField_E0()
 {
     return &Field_E0;
 }
 
-// FUNCTION: 0x109E37D0 ?FUN_109e37d0@Class_109E37D0@@QAEEXZ
-unsigned char Class_109E37D0::FUN_109e37d0()
+// FUNCTION: 0x109E37D0 ?GetFieldCC@Class_109E37D0@@QAEEXZ
+unsigned char Class_109E37D0::GetFieldCC()
 {
     return FieldCC;
 }
 
-// FUNCTION: 0x109E37E0 ?FUN_109e37e0@Class_109E37E0@@QAEXE@Z
-void Class_109E37E0::FUN_109e37e0(unsigned char param)
+// FUNCTION: 0x109E37E0 ?SetFieldCC@Class_109E37E0@@QAEXE@Z
+void Class_109E37E0::SetFieldCC(unsigned char param)
 {
     FieldCC = param;
 }
 
-// FUNCTION: 0x109E37F0 ?FUN_109e37f0@Class_109E37F0@@QAEEXZ
-unsigned char Class_109E37F0::FUN_109e37f0()
+// FUNCTION: 0x109E37F0 ?GetFieldCD@Class_109E37F0@@QAEEXZ
+unsigned char Class_109E37F0::GetFieldCD()
 {
     return FieldCD;
 }
 
-// FUNCTION: 0x109E3800 ?FUN_109e3800@Class_109E3800@@QAEXE@Z
-void Class_109E3800::FUN_109e3800(unsigned char param)
+// FUNCTION: 0x109E3800 ?SetFieldCD@Class_109E3800@@QAEXE@Z
+void Class_109E3800::SetFieldCD(unsigned char param)
 {
     FieldCD = param;
 }
 
-// FUNCTION: 0x109E38A0 ?FUN_109e38a0@Class_109E38A0@@QAEXE@Z
-void Class_109E38A0::FUN_109e38a0(unsigned char p1)
+// FUNCTION: 0x109E38A0 ?SetFieldCE@Class_109E38A0@@QAEXE@Z
+void Class_109E38A0::SetFieldCE(unsigned char p1)
 {
     FieldCE = p1;
 }
@@ -107,14 +107,14 @@ void __stdcall FUN_109e38b0(int p1, int p2)
 {
 }
 
-// FUNCTION: 0x109E38C0 ?FUN_109e38c0@Class_109E38C0@@QAEXH@Z
-void Class_109E38C0::FUN_109e38c0(int p1)
+// FUNCTION: 0x109E38C0 ?SetFieldB0@Class_109E38C0@@QAEXH@Z
+void Class_109E38C0::SetFieldB0(int p1)
 {
     FieldB0 = p1;
 }
 
-// FUNCTION: 0x109E38D0 ?FUN_109e38d0@Class_109E38D0@@QAEPAXXZ
-void* Class_109E38D0::FUN_109e38d0()
+// FUNCTION: 0x109E38D0 ?GetFieldB0@Class_109E38D0@@QAEPAXXZ
+void* Class_109E38D0::GetFieldB0()
 {
     return FieldB0;
 }
@@ -125,32 +125,32 @@ void* Class_109E3910::FUN_109e3910()
     return &unknown_d8;
 }
 
-// FUNCTION: 0x109E3920 ?FUN_109e3920@Class_109E3920@@QAEPAXXZ
-void* Class_109E3920::FUN_109e3920()
+// FUNCTION: 0x109E3920 ?GetFieldE4@Class_109E3920@@QAEPAXXZ
+void* Class_109E3920::GetFieldE4()
 {
     return FieldE4;
 }
 
-// FUNCTION: 0x109E39C0 ?FUN_109e39c0@Class_109E39C0@@QAEPAXXZ
-void* Class_109E39C0::FUN_109e39c0()
+// FUNCTION: 0x109E39C0 ?GetField100@Class_109E39C0@@QAEPAXXZ
+void* Class_109E39C0::GetField100()
 {
     return Field100;
 }
 
-// FUNCTION: 0x109E39D0 ?FUN_109e39d0@Class_109E39D0@@QAEPAXXZ
-void* Class_109E39D0::FUN_109e39d0()
+// FUNCTION: 0x109E39D0 ?GetField108@Class_109E39D0@@QAEPAXXZ
+void* Class_109E39D0::GetField108()
 {
     return Field108;
 }
 
-// FUNCTION: 0x109E39F0 ?FUN_109e39f0@Class_109E39F0@@QAEPAXXZ
-void* Class_109E39F0::FUN_109e39f0()
+// FUNCTION: 0x109E39F0 ?GetFieldC4@Class_109E39F0@@QAEPAXXZ
+void* Class_109E39F0::GetFieldC4()
 {
     return FieldC4;
 }
 
-// FUNCTION: 0x109E3A00 ?FUN_109e3a00@Class_109E3A00@@QAEXHH@Z
-void Class_109E3A00::FUN_109e3a00(int p1, int p2)
+// FUNCTION: 0x109E3A00 ?SetFieldE4@Class_109E3A00@@QAEXHH@Z
+void Class_109E3A00::SetFieldE4(int p1, int p2)
 {
     FieldE4 = p1;
 }
@@ -166,8 +166,8 @@ char __stdcall FUN_109e3ca0()
     return 0;
 }
 
-// FUNCTION: 0x109E44D0 ?FUN_109e44d0@Class_109E44D0@@QAEPAXXZ
-void* Class_109E44D0::FUN_109e44d0()
+// FUNCTION: 0x109E44D0 ?GetField_158@Class_109E44D0@@QAEPAXXZ
+void* Class_109E44D0::GetField_158()
 {
     return &Field_158;
 }

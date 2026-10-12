@@ -74,7 +74,7 @@ void Class_10B28870::FUN_10b28870()
     }
     if (Window)
     {
-        if (!GWindowManager->FUN_109e6d60(Window))
+        if (!GWindowManager->IsCurrentWindow(Window))
             GWindowManager->Virtual4(Window);
         else
             GWindowManager->FUN_109e6b20(1);

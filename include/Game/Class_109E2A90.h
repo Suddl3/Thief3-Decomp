@@ -8,7 +8,7 @@ struct Struct_109E2A90_Node;
 class Class_109E2A90
 {
 public:
-    void FUN_109e2a90(Struct_109E2A90_Node* Item);
+    void Unlink(Struct_109E2A90_Node* Item);
 
     int Count;
     Struct_109E2A90_Node* Head;

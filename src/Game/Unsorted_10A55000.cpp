@@ -78,7 +78,7 @@ int Class_10A55000::FUN_10a55000()
 {
     if (!Unknown12C)
         return 0;
-    return Unknown12C->FUN_10a242d0();
+    return Unknown12C->GetCount();
 }
 
 // FUNCTION: 0x10A55020 ?FUN_10a55020@Class_10E684A8@@UAEX_N@Z

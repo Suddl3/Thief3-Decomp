@@ -6,9 +6,9 @@
 class Class_10A2E400
 {
 public:
-    void FUN_10a2e400();
+    void CacheGameDayIndex();
 
-    int Unknown00;
+    int m_GameDayIndex;
 };
 
 #endif // GAME_CLASS_10A2E400_H

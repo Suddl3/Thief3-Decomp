@@ -8,7 +8,7 @@ struct Struct_10A2B4B0_Node;
 class Class_10A2B4B0
 {
 public:
-    int* FUN_10a2b4b0(unsigned int* Key, int* Value);
+    int* Set(unsigned int* Key, int* Value);
     int* FUN_10a2b2e0(unsigned int* Key, int* Value);
 
     Struct_10A2B4B0_Node* Unknown00;

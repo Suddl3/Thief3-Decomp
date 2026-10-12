@@ -8,5 +8,5 @@ void cGlobalDataManager::RemoveFlagRef(int A)
 {
     int Key = A;
     if (m_Flags.FUN_10a15b20(&Key))
-        m_Flags.FUN_10a16270(&Key);
+        m_Flags.Remove(&Key);
 }

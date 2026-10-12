@@ -21,8 +21,8 @@ public:
     void FUN_10a33ed0();
 };
 
-// FUNCTION: 0x10A242D0 ?FUN_10a242d0@Class_10A242D0@@QAEHXZ
-int Class_10A242D0::FUN_10a242d0()
+// FUNCTION: 0x10A242D0 ?GetCount@Class_10A242D0@@QAEHXZ
+int Class_10A242D0::GetCount()
 {
     return Field08 + 1;
 }
@@ -33,8 +33,8 @@ void FUN_10a2c060()
     FUN_10a2b520();
 }
 
-// FUNCTION: 0x10A2EE50 ?FUN_10a2ee50@Class_10A2EE50@@QAEPAV1@XZ
-Class_10A2EE50* Class_10A2EE50::FUN_10a2ee50()
+// FUNCTION: 0x10A2EE50 ?Reset@Class_10A2EE50@@QAEPAV1@XZ
+Class_10A2EE50* Class_10A2EE50::Reset()
 {
     Unknown00 = 0;
     Unknown04 = 0;

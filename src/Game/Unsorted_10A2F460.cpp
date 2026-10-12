@@ -41,7 +41,7 @@ Class_10E66310* Class_10E66310::Clone()
 // FUNCTION: 0x10A2F4C0 ??0Class_10E66320@@QAE@XZ
 Class_10E66320::Class_10E66320()
 {
-    Unknown10 = 0;
+    m_HasName = 0;
 }
 
 // FUNCTION: 0x10A2FB80 ??_GClass_10E66320@@UAEPAXI@Z

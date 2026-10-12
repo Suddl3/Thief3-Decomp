@@ -77,7 +77,7 @@ bool WindowManager::OpenRestartMissionWindow()
         cString Name(DAT_10e79080);
         Window = FindWindowByName(Name);
     }
-    if (Window && !FUN_109e6d60(Window))
+    if (Window && !IsCurrentWindow(Window))
     {
         Class_10B15BF0_Window* Target = ((Class_10B15BF0_Window*)Window)->Virtual39() == 0x7d ? (Class_10B15BF0_Window*)Window : 0;
         if (Target)

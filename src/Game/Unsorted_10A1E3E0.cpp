@@ -3,8 +3,8 @@
 
 #include "Core/Core.h"
 
-// FUNCTION: 0x10A1E3E0 ?FUN_10a1e3e0@@YA?AVFVector@@PBV1@@Z
-FVector FUN_10a1e3e0(const FVector* B)
+// FUNCTION: 0x10A1E3E0 ?CopyVector@@YA?AVFVector@@PBV1@@Z
+FVector CopyVector(const FVector* B)
 {
     return FVector(B->X, B->Y, B->Z);
 }

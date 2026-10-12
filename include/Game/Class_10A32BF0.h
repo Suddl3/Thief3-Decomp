@@ -6,12 +6,12 @@
 class Class_10A32BF0
 {
 public:
-    void FUN_10a32af0(int Count);
-    void FUN_10a32bf0();
+    void SetCount(int Count);
+    void Clear();
 
     int Unknown00;
-    int Unknown04;
-    void* Unknown08;
+    int m_CapacityBytes;
+    void* m_Data;
 };
 
 #endif // GAME_CLASS_10A32BF0_H

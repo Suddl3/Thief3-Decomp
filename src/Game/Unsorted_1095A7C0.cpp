@@ -11,8 +11,8 @@ struct Struct_1095A8D0_Unknown08
     const char* Unknown04;
 };
 
-// FUNCTION: 0x1095A8D0 ?FUN_1095a8d0@Class_1095A8D0@@QAEPBDXZ
-const char* Class_1095A8D0::FUN_1095a8d0()
+// FUNCTION: 0x1095A8D0 ?GetText@Class_1095A8D0@@QAEPBDXZ
+const char* Class_1095A8D0::GetText()
 {
     if (Unknown0C && strlen(Unknown0C))
         return Unknown0C;

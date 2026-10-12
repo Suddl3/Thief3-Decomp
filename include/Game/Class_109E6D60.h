@@ -15,10 +15,10 @@ public:
     virtual void Virtual3();
     virtual void Virtual4(int Window);
 
-    bool FUN_109e6d60(int p1);
+    bool IsCurrentWindow(int p1);
 
     char Pad04[0x88];
-    Class_109E6D60_Member** Unknown8C;
+    Class_109E6D60_Member** m_Current;
 };
 
 #endif // GAME_CLASS_109E6D60_H

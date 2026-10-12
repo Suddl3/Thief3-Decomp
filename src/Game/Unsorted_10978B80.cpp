@@ -13,8 +13,8 @@ int FUN_10af4710();
 
 void FUN_10ca7ab0(char* Path);
 
-// FUNCTION: 0x10978B80 ?FUN_10978b80@@YG?AVcString@@XZ
-cString __stdcall FUN_10978b80()
+// FUNCTION: 0x10978B80 ?ResolveGamesysNetPath@@YG?AVcString@@XZ
+cString __stdcall ResolveGamesysNetPath()
 {
     char Path[0x80] = {0};
     if (FUN_10af4710())

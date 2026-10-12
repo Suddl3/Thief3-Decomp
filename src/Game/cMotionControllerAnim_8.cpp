@@ -45,6 +45,6 @@ public:
 bool cMotionControllerAnim::FUN_10c2f240()
 {
     if (Unknown08->FUN_10baa580())
-        return Unknown08->FUN_10baa580()->FUN_109e3920() != 0;
+        return Unknown08->FUN_10baa580()->GetFieldE4() != 0;
     return false;
 }

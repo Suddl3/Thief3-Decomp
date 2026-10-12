@@ -8,12 +8,12 @@ struct Struct_109E6410_Node;
 class Class_109E6410
 {
 public:
-    void FUN_109e6410();
+    void UpdatePause();
 
     char Pad00[0x8C];
-    Struct_109E6410_Node* Unknown8C;
+    Struct_109E6410_Node* m_Head;
     char Pad90[0x10];
-    int UnknownA0;
+    int m_PauseRequested;
     int UnknownA4;
     char PadA8[0x4];
     int UnknownAC;

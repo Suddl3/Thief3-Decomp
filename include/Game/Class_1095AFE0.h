@@ -9,7 +9,7 @@ struct Struct_1095AFE0_Unknown08;
 class Class_1095AFE0
 {
 public:
-    void FUN_1095afe0();
+    void Clear();
 
     char Unknown00[4];
     Struct_1095AFE0_Unknown04* Unknown04;

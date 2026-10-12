@@ -9,7 +9,7 @@ class cConversationLoader
 {
 public:
     virtual void Virtual0();
-    virtual void FUN_10a0e150(const char* Name);
+    virtual void Load(const char* Name);
     virtual void Virtual2();
 
     cString FUN_10a0e070(const char* Name);

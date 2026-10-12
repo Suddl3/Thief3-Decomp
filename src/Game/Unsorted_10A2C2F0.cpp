@@ -9,7 +9,7 @@ struct Struct_10A2C2F0
     char Unknown84[0x2C];
 };
 
-class Class_10A2C2F0
+class cBoneAimController
 {
 public:
     int FindEntry(void* A, void* B);
@@ -21,8 +21,8 @@ public:
     Struct_10A2C2F0* m_Entries;
 };
 
-// FUNCTION: 0x10A2C2F0 ?FindEntry@Class_10A2C2F0@@QAEHPAX0@Z
-int Class_10A2C2F0::FindEntry(void* A, void* B)
+// FUNCTION: 0x10A2C2F0 ?FindEntry@cBoneAimController@@QAEHPAX0@Z
+int cBoneAimController::FindEntry(void* A, void* B)
 {
     for (int i = 0; i < Unknown08; i++)
     {

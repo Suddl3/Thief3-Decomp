@@ -71,6 +71,7 @@ Class_10A12F50           Class_10E5D478                   0x10A12F50: stores 0x1
 Class_10A13BC0           cConversationManager             0x10A13BC0: called on this by 0x10A14400
 Class_10A18E50           Class_10E5D70C                   0x10A18E50: slot of 0x10E5D70C
 Class_10A1F950           Class_10E65590                   0x10A1F950: called on this by 0x10A1FA00
+Class_10A2C2F0           cBoneAimController               named: Xbox twin BoneAimController.cpp names the class cBoneAimController; entries hold aim angles (IsAngleBelow).
 Class_10A2FC00           Class_10E66368                   0x10A2FC00: called on this by 0x10A2FBE0
 Class_10A311E0           Class_10E663C8                   0x10A30F20: stores 0x10E663C8
 Class_10A33ED0           Class_10E9CD18                   0x10A33ED0: slot of 0x10E9CD18

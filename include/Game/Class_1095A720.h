@@ -8,7 +8,7 @@ struct Struct_1095A720_Unknown08;
 class Class_1095A720
 {
 public:
-    int FUN_1095a720();
+    int GetSize();
 
     char Unknown00[8];
     Struct_1095A720_Unknown08* Unknown08;

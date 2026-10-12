@@ -6,7 +6,7 @@
 class Class_109E4830
 {
 public:
-    int FUN_109e4830();
+    int GetCursorScreenY();
 
     char Unknown00[0xB4];
     float UnknownB4;

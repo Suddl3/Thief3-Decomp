@@ -42,8 +42,8 @@ struct Struct_10A36570
     float Unknown0C;
 };
 
-// FUNCTION: 0x10A36570 ?FUN_10a36570@@YGPAUStruct_10A36570@@PAU1@HH@Z
-Struct_10A36570* __stdcall FUN_10a36570(Struct_10A36570* Out, int Id, int Index)
+// FUNCTION: 0x10A36570 ?GetVulnerability@@YGPAUStruct_10A36570@@PAU1@HH@Z
+Struct_10A36570* __stdcall GetVulnerability(Struct_10A36570* Out, int Id, int Index)
 {
     Struct_10A36570 Arr[37];
     Struct_10A36570 Result;

@@ -25,7 +25,7 @@ public:
 // FUNCTION: 0x10A68BB0 ?SetItems@Class_10E6B5A0@@UAEHPBUStruct_10A68BB0@@H@Z
 int Class_10E6B5A0::SetItems(const Struct_10A68BB0* Items, int Count)
 {
-    m_Items.FUN_10953ac0(Count);
+    m_Items.Resize(Count);
     memcpy(m_Items.m_Items, Items, Count * sizeof(Struct_10A68BB0));
     return ++Unknown10;
 }

@@ -9,8 +9,8 @@ extern void* DAT_10f3986c;
 
 extern Class_10F352D8* DAT_10f352d8;
 
-// FUNCTION: 0x10A0E150 ?FUN_10a0e150@cConversationLoader@@UAEXPBD@Z
-void cConversationLoader::FUN_10a0e150(const char* Name)
+// FUNCTION: 0x10A0E150 ?Load@cConversationLoader@@UAEXPBD@Z
+void cConversationLoader::Load(const char* Name)
 {
     Virtual2();
     DAT_10f352d8->Virtual15(FUN_10a0e070(Name));

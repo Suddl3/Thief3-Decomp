@@ -6,11 +6,11 @@
 class Class_10A2B480
 {
 public:
-    void FUN_10a2b480();
+    void Free();
     void FUN_10a2b220();
 
     char Unknown00[0xC];
-    void* Unknown0C;
+    void* m_Buffer;
     int Unknown10;
 };
 

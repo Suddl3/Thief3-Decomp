@@ -15,8 +15,8 @@ public:
     int Unknown20;
 };
 
-// FUNCTION: 0x1095AE50 ?FUN_1095ae50@@YAXPAVClass_1095AE50_Elem@@HPADH@Z
-void FUN_1095ae50(Class_1095AE50_Elem* Elems, int Count, char* Data, int Flags)
+// FUNCTION: 0x1095AE50 ?LoadElements@@YAXPAVClass_1095AE50_Elem@@HPADH@Z
+void LoadElements(Class_1095AE50_Elem* Elems, int Count, char* Data, int Flags)
 {
     char Buffer[1024];
     int Pos = 0;

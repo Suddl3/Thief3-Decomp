@@ -1,11 +1,11 @@
 // Game/Unsorted_10A2C070.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Core/Core.h"
-#include "Game/Class_10A2C2F0.h"
+#include "Game/cBoneAimController.h"
 #include "Game/Class_10A2C350.h"
 #include "Game/Struct_10A2C500.h"
 
-FVector FUN_10a2c0a0(const FVector* A, const FVector* B);
+FVector VectorSubtract(const FVector* A, const FVector* B);
 
 struct Struct_10A2C350
 {
@@ -17,8 +17,8 @@ extern int DAT_10f39f30;
 
 void* FUN_10905c10(int Kind, int* Arg, int A, int B, int C, int D);
 
-// FUNCTION: 0x10A2C070 ?FUN_10a2c070@@YAXPAM00@Z
-void FUN_10a2c070(float* A, float* B, float* C)
+// FUNCTION: 0x10A2C070 ?VectorAdd@@YAXPAM00@Z
+void VectorAdd(float* A, float* B, float* C)
 {
     float Z = B[2] + C[2];
     float Y = B[1] + C[1];
@@ -28,22 +28,22 @@ void FUN_10a2c070(float* A, float* B, float* C)
     A[2] = Z;
 }
 
-// FUNCTION: 0x10A2C0A0 ?FUN_10a2c0a0@@YA?AVFVector@@PBV1@0@Z
-FVector FUN_10a2c0a0(const FVector* A, const FVector* B)
+// FUNCTION: 0x10A2C0A0 ?VectorSubtract@@YA?AVFVector@@PBV1@0@Z
+FVector VectorSubtract(const FVector* A, const FVector* B)
 {
     return FVector(A->X - B->X, A->Y - B->Y, A->Z - B->Z);
 }
 
-// FUNCTION: 0x10A2C350 ?FUN_10a2c350@Class_10A2C350@@QAEXHH@Z
-void Class_10A2C350::FUN_10a2c350(int A, int B)
+// FUNCTION: 0x10A2C350 ?Swap@Class_10A2C350@@QAEXHH@Z
+void Class_10A2C350::Swap(int A, int B)
 {
-    Struct_10A2C350 Temp = Unknown08[A];
-    Unknown08[A] = Unknown08[B];
-    Unknown08[B] = Temp;
+    Struct_10A2C350 Temp = m_Items[A];
+    m_Items[A] = m_Items[B];
+    m_Items[B] = Temp;
 }
 
-// FUNCTION: 0x10A2C500 ?FUN_10a2c500@Class_10A2C2F0@@QAE_NPAX0@Z
-bool Class_10A2C2F0::FUN_10a2c500(void* A, void* B)
+// FUNCTION: 0x10A2C500 ?FUN_10a2c500@cBoneAimController@@QAE_NPAX0@Z
+bool cBoneAimController::FUN_10a2c500(void* A, void* B)
 {
     Struct_10A2C500* Entry = (Struct_10A2C500*)FindEntry(A, B);
     if (Entry && !Entry->Unknown7D)

@@ -31,15 +31,15 @@ void FUN_10a31e70()
         DAT_10f39f3c = new(0, 0, 0, 0, 0) Class_10E663C8;
 }
 
-// FUNCTION: 0x10A31F00 ?FUN_10a31f00@Class_10A31F00@@QAEHXZ
-int Class_10A31F00::FUN_10a31f00()
+// FUNCTION: 0x10A31F00 ?Remove@Class_10A31F00@@QAEHXZ
+int Class_10A31F00::Remove()
 {
-    if (!Unknown00)
+    if (!m_Owner)
         return 0;
-    if (!Unknown00->Virtual7(this))
+    if (!m_Owner->Virtual7(this))
         return 0;
-    int Result = Unknown00->Virtual2(this, Unknown0C);
-    Unknown0C = -1;
+    int Result = m_Owner->Virtual2(this, m_Index);
+    m_Index = -1;
     return Result;
 }
 

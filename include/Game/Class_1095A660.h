@@ -6,12 +6,12 @@
 class Class_1095A660
 {
 public:
-    void FUN_1095a660();
+    void Draw();
 
     short Unknown00;
     int Unknown04;
     char Unknown08[0xC];
-    int Unknown14;
+    int m_VertexCount;
 };
 
 #endif // GAME_CLASS_1095A660_H

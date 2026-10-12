@@ -8,7 +8,7 @@ struct Item_10953AC0;
 class Class_10953AC0
 {
 public:
-    void FUN_10953ac0(int A);
+    void Resize(int A);
     void Free();
     void CopyFrom(const Class_10953AC0& Other);
 

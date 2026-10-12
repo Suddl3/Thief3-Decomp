@@ -32,7 +32,7 @@ public:
     int Unknown38;
     int Unknown3C;
     int Unknown40[17];
-    Class_1091CA00* Unknown84;
+    Class_1091CA00* m_Font;
     Class_1091CA00* Unknown88;
 };
 
@@ -59,7 +59,7 @@ void Class_10A35EE0::Reset()
     if (DAT_10f2c928)
     {
         Class_1091CA00* Ptr = DAT_10f2c928->GetFont(2);
-        Unknown84 = Ptr;
+        m_Font = Ptr;
         Unknown88 = Ptr;
         int Result = FUN_10a358b0();
         Unknown3C = Result;
@@ -67,7 +67,7 @@ void Class_10A35EE0::Reset()
     }
     else
     {
-        Unknown84 = 0;
+        m_Font = 0;
         Unknown88 = 0;
         Unknown3C = 1;
         Unknown38 = 1;

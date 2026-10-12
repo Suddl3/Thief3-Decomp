@@ -6,9 +6,9 @@
 class Class_10A24540
 {
 public:
-    void FUN_10a24540(char Old, char New);
+    void ReplaceChar(char Old, char New);
 
-    char* Unknown00;
+    char* m_Chars;
 };
 
 #endif // GAME_CLASS_10A24540_H

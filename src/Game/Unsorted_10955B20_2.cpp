@@ -127,12 +127,12 @@ extern IDirect3DDevice8* GDirect3DDevice8;
 
 extern int DAT_10efefb8;
 
-// FUNCTION: 0x10955B20 ?FUN_10955b20@Class_10955B20@@QAEXH@Z
-void Class_10955B20::FUN_10955b20(int A)
+// FUNCTION: 0x10955B20 ?ApplySamplerState@Class_10955B20@@QAEXH@Z
+void Class_10955B20::ApplySamplerState(int A)
 {
     if (A == -1)
         return;
-    switch (Unknown14)
+    switch (m_AddressMode)
     {
     case 1:
         GDirect3DDevice8->SetTextureStageState(A, 0xd, 3);
@@ -155,9 +155,9 @@ void Class_10955B20::FUN_10955b20(int A)
         GDirect3DDevice8->SetRenderState(A + 0x80, 8);
         break;
     }
-    if (Unknown10 != 0)
+    if (m_MipFilter != 0)
     {
-        GDirect3DDevice8->SetTextureStageState(A, 0x12, Unknown10);
+        GDirect3DDevice8->SetTextureStageState(A, 0x12, m_MipFilter);
         GDirect3DDevice8->SetTextureStageState(A, 0x10, DAT_10efefb8);
     }
     else

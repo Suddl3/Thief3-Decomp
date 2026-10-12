@@ -11,15 +11,15 @@ extern bool DAT_10f35b24;
 
 extern bool DAT_10f35b58;
 
-void FUN_109dffa0();
+void InitIntTable();
 
 void FUN_109e0090();
 
-// FUNCTION: 0x109E0430 ?FUN_109e0430@@YAXXZ
-void FUN_109e0430()
+// FUNCTION: 0x109E0430 ?AdvanceIndexClamped@@YAXXZ
+void AdvanceIndexClamped()
 {
     if (DAT_10f35b54 == 0)
-        FUN_109dffa0();
+        InitIntTable();
     if (!DAT_10f35b1c)
     {
         FUN_109e0090();

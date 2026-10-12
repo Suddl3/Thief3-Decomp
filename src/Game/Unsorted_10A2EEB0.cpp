@@ -21,15 +21,15 @@ public:
     virtual void Virtual4();
     virtual Class_10AF7F80* Virtual5();
 
-    Class_10AF7F80 Unknown04;
+    Class_10AF7F80 m_Name;
     char Unknown05[0xB];
-    int Unknown10;
+    int m_HasName;
 };
 
 int FUN_10af36e0(const char* A, const char* B);
 
-// FUNCTION: 0x10A2EEB0 ?FUN_10a2eeb0@@YGXPAVFString@@PAH0@Z
-void __stdcall FUN_10a2eeb0(FString* Name, UBOOL* Found, FString* Source)
+// FUNCTION: 0x10A2EEB0 ?CopyOptionalString@@YGXPAVFString@@PAH0@Z
+void __stdcall CopyOptionalString(FString* Name, UBOOL* Found, FString* Source)
 {
     UBOOL Valid = Source != 0;
     *Found = Valid;
@@ -42,11 +42,11 @@ void __stdcall FUN_10a2eeb0(FString* Name, UBOOL* Found, FString* Source)
 // FUNCTION: 0x10A2EF40 ?FUN_10a2f0c0@Class_10E66320@@UAEHPAV1@@Z
 int Class_10E66320::FUN_10a2f0c0(Class_10E66320* Other)
 {
-    if (Unknown10 != 0)
+    if (m_HasName != 0)
     {
         if (Other->Virtual5() != 0)
         {
-            if (FUN_10af36e0(Unknown04.FUN_10af7f80(), Other->Virtual5()->FUN_10af7f80()))
+            if (FUN_10af36e0(m_Name.FUN_10af7f80(), Other->Virtual5()->FUN_10af7f80()))
                 return 0;
         }
     }

@@ -5,8 +5,8 @@
 
 Object_10A18FC0* FUN_10a18fc0();
 
-// FUNCTION: 0x109E4830 ?FUN_109e4830@Class_109E4830@@QAEHXZ
-int Class_109E4830::FUN_109e4830()
+// FUNCTION: 0x109E4830 ?GetCursorScreenY@Class_109E4830@@QAEHXZ
+int Class_109E4830::GetCursorScreenY()
 {
     float Ratio = (float)FUN_10a18fc0()->Virtual3() / UnknownB4;
     return (int)(Ratio * UnknownD0);

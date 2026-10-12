@@ -6,7 +6,7 @@
 class Class_109E2A50
 {
 public:
-    void FUN_109e2a50();
+    void SendMessages();
 };
 
 #endif // GAME_CLASS_109E2A50_H

@@ -7,10 +7,10 @@ class Class_10955750
 {
 public:
     bool FUN_10955540(int I, int A);
-    bool FUN_10955750(int A);
+    bool CheckAll(int A);
 
     char Unknown00[0x10];
-    int Unknown10;
+    int m_Count;
 };
 
 #endif // GAME_CLASS_10955750_H

@@ -86,8 +86,8 @@ public:
 
 extern Class_10924100* DAT_10f2c740;
 
-// FUNCTION: 0x109E2A90 ?FUN_109e2a90@Class_109E2A90@@QAEXPAUStruct_109E2A90_Node@@@Z
-void Class_109E2A90::FUN_109e2a90(Struct_109E2A90_Node* Item)
+// FUNCTION: 0x109E2A90 ?Unlink@Class_109E2A90@@QAEXPAUStruct_109E2A90_Node@@@Z
+void Class_109E2A90::Unlink(Struct_109E2A90_Node* Item)
 {
     if (Head == Item)
         Head = Item->Next;
@@ -102,12 +102,12 @@ void Class_109E2A90::FUN_109e2a90(Struct_109E2A90_Node* Item)
     Count--;
 }
 
-// FUNCTION: 0x109E2AE0 ?FUN_109e2ae0@Class_109E2AE0@@QAEXXZ
-void Class_109E2AE0::FUN_109e2ae0()
+// FUNCTION: 0x109E2AE0 ?Clear@Class_109E2AE0@@QAEXXZ
+void Class_109E2AE0::Clear()
 {
-    for (int i = 0; i < Unknown04; i++)
+    for (int i = 0; i < m_ItemCount; i++)
     {
-        Struct_109E2AE0_Item* Item = Unknown0C[i];
+        Struct_109E2AE0_Item* Item = m_Items[i];
         if (Item && Item->Unknown04)
         {
             Struct_109E2AE0_Node* Node = Item->Unknown04;
@@ -118,17 +118,17 @@ void Class_109E2AE0::FUN_109e2ae0()
                 Node = Next;
             } while (Node);
         }
-        delete Unknown0C[i];
-        Unknown0C[i] = 0;
+        delete m_Items[i];
+        m_Items[i] = 0;
     }
 }
 
-// FUNCTION: 0x109E2BD0 ?FUN_109e2bd0@Class_109E2BD0@@QAEHH@Z
-int Class_109E2BD0::FUN_109e2bd0(int Value)
+// FUNCTION: 0x109E2BD0 ?FindBucketIndex@Class_109E2BD0@@QAEHH@Z
+int Class_109E2BD0::FindBucketIndex(int Value)
 {
-    for (int i = 0; i < Unknown04; i++)
+    for (int i = 0; i < m_BucketCount; i++)
     {
-        Class_109E2A90* List = Unknown0C[i];
+        Class_109E2A90* List = m_Buckets[i];
         if (List)
         {
             for (Struct_109E2A90_Node* Node = List->Head; Node; Node = Node->Next)
@@ -141,8 +141,8 @@ int Class_109E2BD0::FUN_109e2bd0(int Value)
     return -1;
 }
 
-// FUNCTION: 0x109E2C70 ?FUN_109e2c70@@YAPAVClass_10E5B2A8@@XZ
-Class_10E5B2A8* FUN_109e2c70()
+// FUNCTION: 0x109E2C70 ?GetZoneManager@@YAPAVClass_10E5B2A8@@XZ
+Class_10E5B2A8* GetZoneManager()
 {
     if (DAT_10f35dbc == 0)
     {

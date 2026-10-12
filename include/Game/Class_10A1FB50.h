@@ -7,12 +7,12 @@ class Class_10A1FB50
 {
 public:
     int FUN_10a1fad0(int A);
-    int FUN_10a1fb50(int A);
+    int Lookup(int A);
 
     char Unknown00[4];
-    int Unknown04;
+    int m_Count;
     char Unknown08[4];
-    int* Unknown0C;
+    int* m_Values;
 };
 
 #endif // GAME_CLASS_10A1FB50_H

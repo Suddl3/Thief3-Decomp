@@ -21,7 +21,7 @@ bool WindowManager::OpenTitleLoadWindow()
         cString Name(DAT_10e79030);
         Window = FindWindowByName(Name);
     }
-    if (Window && !FUN_109e6d60(Window))
+    if (Window && !IsCurrentWindow(Window))
     {
         Virtual4(Window);
         return true;

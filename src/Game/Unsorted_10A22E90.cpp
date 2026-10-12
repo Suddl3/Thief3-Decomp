@@ -7,8 +7,8 @@ void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D
 
 extern cBuildFleshBSP* DAT_10f39f08;
 
-// FUNCTION: 0x10A22E90 ?FUN_10a22e90@@YAPAVcBuildFleshBSP@@XZ
-cBuildFleshBSP* FUN_10a22e90()
+// FUNCTION: 0x10A22E90 ?GetBuildFleshBSP@@YAPAVcBuildFleshBSP@@XZ
+cBuildFleshBSP* GetBuildFleshBSP()
 {
     if (!DAT_10f39f08)
         DAT_10f39f08 = new(0, 0, 0, 0, 0) cBuildFleshBSP;

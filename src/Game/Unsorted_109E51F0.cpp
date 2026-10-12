@@ -93,8 +93,8 @@ public:
     char Unknown00[0x40];
 };
 
-// FUNCTION: 0x109E51F0 ?FUN_109e51f0@@YAXPAVWindowManager@@HPAUStruct_109E51F0_Param@@H@Z
-void FUN_109e51f0(WindowManager* Manager, int A, Struct_109E51F0_Param* P, int C)
+// FUNCTION: 0x109E51F0 ?InitWindowManager@@YAXPAVWindowManager@@HPAUStruct_109E51F0_Param@@H@Z
+void InitWindowManager(WindowManager* Manager, int A, Struct_109E51F0_Param* P, int C)
 {
     GWindowManager = Manager;
     GWindowManager->Unknown9C = A;

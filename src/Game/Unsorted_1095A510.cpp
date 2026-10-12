@@ -52,8 +52,8 @@ void Class_1095A760::SetCount(int NewCount)
     m_Count = NewCount;
 }
 
-// FUNCTION: 0x1095A660 ?FUN_1095a660@Class_1095A660@@QAEXXZ
-void Class_1095A660::FUN_1095a660()
+// FUNCTION: 0x1095A660 ?Draw@Class_1095A660@@QAEXXZ
+void Class_1095A660::Draw()
 {
     Struct_10919190 Identity =
     {
@@ -64,5 +64,5 @@ void Class_1095A660::FUN_1095a660()
     };
     SetWorldTransform(&Identity);
     SetStreamAndIndices(Unknown04, Unknown00, 0);
-    GDirect3DDevice8->DrawPrimitive(D3DPT_TRIANGLEFAN, 0, Unknown14 - 2);
+    GDirect3DDevice8->DrawPrimitive(D3DPT_TRIANGLEFAN, 0, m_VertexCount - 2);
 }

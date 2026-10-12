@@ -6,9 +6,9 @@
 class Class_10953C20
 {
 public:
-    Class_10953C20* FUN_10953c20(int A, bool B);
+    Class_10953C20* Init(int A, bool B);
 
-    float Unknown00[4][4];
+    float m_Matrix[4][4];
     float Unknown40;
     float Unknown44;
     float Unknown48;

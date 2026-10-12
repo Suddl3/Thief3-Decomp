@@ -25,8 +25,8 @@ bool FUN_10a370c0(Class_10A370C0* Obj, const FVector& A)
     return true;
 }
 
-// FUNCTION: 0x10A37530 ?FUN_10a37530@@YAHH@Z
-int FUN_10a37530(int A)
+// FUNCTION: 0x10A37530 ?WrapInt16@@YAHH@Z
+int WrapInt16(int A)
 {
     int Positive = A >= 0;
     if (!Positive)

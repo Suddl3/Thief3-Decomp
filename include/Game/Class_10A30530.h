@@ -14,22 +14,22 @@ class Class_10A30530
 public:
     ~Class_10A30530()
     {
-        FUN_10a30530(0);
-        if (Unknown04)
+        SetCount(0);
+        if (m_CapacityBytes)
         {
-            GetAllocator()->Virtual5(Unknown08);
-            Unknown08 = 0;
-            Unknown04 = 0;
+            GetAllocator()->Virtual5(m_Data);
+            m_Data = 0;
+            m_CapacityBytes = 0;
         }
     }
-    Class_10A30530() : Unknown00(0), Unknown04(0), Unknown08(0) {}
+    Class_10A30530() : m_Count(0), m_CapacityBytes(0), m_Data(0) {}
 
-    void FUN_10a30530(int Count);
-    int FUN_10a30a70(const Item_10A30A70* Item);
+    void SetCount(int Count);
+    int Append(const Item_10A30A70* Item);
 
-    int Unknown00;
-    int Unknown04;
-    Item_10A30A70* Unknown08;
+    int m_Count;
+    int m_CapacityBytes;
+    Item_10A30A70* m_Data;
 };
 
 #endif // GAME_CLASS_10A30530_H

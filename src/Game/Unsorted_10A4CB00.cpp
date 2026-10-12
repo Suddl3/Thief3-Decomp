@@ -14,15 +14,15 @@ class Class_109E5700
 public:
     ~Class_109E5700()
     {
-        FUN_109e5700();
-        delete Unknown18;
-        Unknown18 = 0;
+        Clear();
+        delete m_Head;
+        m_Head = 0;
     }
 
-    void FUN_109e5700();
+    void Clear();
 
     char Unknown00[0x18];
-    Struct_10A4CB00* Unknown18;
+    Struct_10A4CB00* m_Head;
 };
 
 class Class_10A4CB00

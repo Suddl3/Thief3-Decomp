@@ -50,8 +50,8 @@ void cConversationManager::Clear()
     Unknown14.FUN_1090f2c0(0);
 }
 
-// FUNCTION: 0x10A151A0 ?FUN_10a151a0@Class_10A151A0@@QAEXXZ
-void Class_10A151A0::FUN_10a151a0()
+// FUNCTION: 0x10A151A0 ?Free@Class_10A151A0@@QAEXXZ
+void Class_10A151A0::Free()
 {
     FUN_10a15060(0);
     if (Unknown04)

@@ -16,8 +16,8 @@ public:
     ASpecialOptions();
 };
 
-// FUNCTION: 0x1098E590 ?FUN_1098e590@@YAXPAX@Z
-void FUN_1098e590(void* Memory)
+// FUNCTION: 0x1098E590 ?ConstructASpecialOptions@@YAXPAX@Z
+void ConstructASpecialOptions(void* Memory)
 {
     new ((EInternal*)Memory) ASpecialOptions();
 }

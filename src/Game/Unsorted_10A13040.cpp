@@ -28,15 +28,15 @@ public:
     virtual int Virtual20();
 };
 
-// FUNCTION: 0x10A13040 ?FUN_10a13040@Class_10A13040@@QAEHXZ
-int Class_10A13040::FUN_10a13040()
+// FUNCTION: 0x10A13040 ?FindFreeKey@Class_10A13040@@QAEHXZ
+int Class_10A13040::FindFreeKey()
 {
-    for (int Id = 0; Id < Unknown08; Id++)
+    for (int Id = 0; Id < m_ChildCount; Id++)
     {
         bool Used = false;
-        for (int i = 0; i < Unknown08; i++)
+        for (int i = 0; i < m_ChildCount; i++)
         {
-            if (Id == Unknown10[i]->Virtual20())
+            if (Id == m_Children[i]->Virtual20())
             {
                 Used = true;
                 break;

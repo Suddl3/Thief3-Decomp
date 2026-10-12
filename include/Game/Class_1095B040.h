@@ -6,9 +6,9 @@
 class Class_1095B040
 {
 public:
-    void FUN_1095b040(int A);
+    void UpdateTime(int A);
 
-    float Unknown00;
+    float m_Time;
 };
 
 #endif // GAME_CLASS_1095B040_H

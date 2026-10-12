@@ -7,7 +7,7 @@
 void Class_10E4ADC0::Reset()
 {
     for (int i = 0; i < 9; i++)
-        Unknown90[i].FUN_10955aa0(i);
+        Unknown90[i].SetMode(i);
     for (int j = 0; j < 9; j++)
         Unknown90[j].Unknown04 = -1;
     Unknown0C = -1;

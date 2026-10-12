@@ -6,7 +6,7 @@
 class Class_109E3920
 {
 public:
-    void* FUN_109e3920();
+    void* GetFieldE4();
 
     char Unknown00[0xe4];
     void* FieldE4;

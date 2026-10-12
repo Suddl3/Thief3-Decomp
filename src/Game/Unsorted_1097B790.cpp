@@ -49,9 +49,9 @@ void Class_1097B790::FUN_1097b790(Struct_1097B790* A)
 // FUNCTION: 0x1097C880 ?Clear@Class_1097CBE0@@QAEXH@Z
 void Class_1097CBE0::Clear(int Size)
 {
-    for (int i = 0; i < Unknown0C; i++)
+    for (int i = 0; i < m_BucketCount; i++)
     {
-        Class_1097B240_Node* Node = Unknown14[i];
+        Class_1097B240_Node* Node = m_Buckets[i];
         while (Node)
         {
             Class_1097B240_Node* Next = Node->Next;
@@ -61,12 +61,12 @@ void Class_1097CBE0::Clear(int Size)
         }
     }
     Unknown04 = 0;
-    Unknown0C = 0;
+    m_BucketCount = 0;
     Unknown00 = 0;
-    ::operator delete(Unknown14);
-    Unknown14 = 0;
+    ::operator delete(m_Buckets);
+    m_Buckets = 0;
     if (!Unknown10)
-        FUN_1097b240(Size);
+        Resize(Size);
 }
 
 // FUNCTION: 0x1097CAA0 ?FUN_1097caa0@Class_1097CAA0@@QAEPAV1@XZ

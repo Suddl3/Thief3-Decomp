@@ -15,7 +15,7 @@ public:
     void FUN_10953c90(int Arg);
     void Reset();
     void FUN_109538b0();
-    void FUN_10953fa0(const FVector& P);
+    void AddItem(const FVector& P);
 
     float Unknown00;
     int Unknown04;

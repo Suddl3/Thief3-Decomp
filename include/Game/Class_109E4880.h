@@ -6,7 +6,7 @@
 class Class_109E4880
 {
 public:
-    void FUN_109e4880(float* A, float* B);
+    void GetUIScreenScale(float* A, float* B);
 
     char Unknown00[0xB0];
     float Unknown0B0;

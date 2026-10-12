@@ -8,7 +8,7 @@
 class Class_10A2C130
 {
 public:
-    Class_10A2C130* FUN_10a2c130(const Struct_10A2C130& A, const Struct_10A2C130& B, const Struct_10A2C130& C);
+    Class_10A2C130* Set(const Struct_10A2C130& A, const Struct_10A2C130& B, const Struct_10A2C130& C);
 
     Struct_10A2C130 Unknown00;
     Struct_10A2C130 Unknown0C;

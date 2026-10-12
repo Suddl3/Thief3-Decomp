@@ -11,8 +11,8 @@ struct Struct_10A34AE0
     int Unknown0C;
 };
 
-// FUNCTION: 0x10A34AE0 ?FUN_10a34ae0@Class_10A34AE0@@QAE_NPAUStruct_10A34AE0@@H@Z
-bool Class_10A34AE0::FUN_10a34ae0(Struct_10A34AE0* A, int B)
+// FUNCTION: 0x10A34AE0 ?AddPair@Class_10A34AE0@@QAE_NPAUStruct_10A34AE0@@H@Z
+bool Class_10A34AE0::AddPair(Struct_10A34AE0* A, int B)
 {
     __int64 BValue = ((Struct_10A34AE0*)B)->Unknown0C;
     __int64 AValue = A->Unknown0C;
@@ -27,14 +27,14 @@ bool Class_10A34AE0::FUN_10a34ae0(Struct_10A34AE0* A, int B)
         Range[1] = AValue;
         Range[0] = BValue;
     }
-    if (Unknown04.FUN_10a345c0(Range, &B))
+    if (m_PairCounts.FUN_10a345c0(Range, &B))
     {
         B = B + 1;
-        Unknown04.InsertOrAssign(Range, &B);
+        m_PairCounts.InsertOrAssign(Range, &B);
         return false;
     }
     B = 1;
-    Unknown04.Insert(Range, &B);
+    m_PairCounts.Insert(Range, &B);
     return true;
 }
 

@@ -14,7 +14,7 @@ class Window;
 
 class Object_10A18FC0;
 
-// include/Game/WindowManager.h, copied whole with FUN_109e4800 and FUN_109e4830 added.
+// include/Game/WindowManager.h, copied whole with GetCursorScreenX and GetCursorScreenY added.
 class WindowManager : public Class_109E6D60
 {
 public:
@@ -34,8 +34,8 @@ public:
     void GetUIScreenSize(FVector* Out);
     FVector ScreenToUIPosition(int X, int Y);
     void UIPositionToScreen(FVector* Pos, int* OutX, int* OutY);
-    int FUN_109e4800();
-    int FUN_109e4830();
+    int GetCursorScreenX();
+    int GetCursorScreenY();
 
     char Unknown04[0x94];
     int Unknown98;
@@ -180,8 +180,8 @@ void Class_10E68D80::FUN_10a58330(int A)
     ((Class_10E83E20*)this)->FUN_10a58950(A);
     if (((Class_10A18F80*)FUN_10a18fc0())->FUN_10a18f80(1))
     {
-        int X = GWindowManager->FUN_109e4800();
-        int Y = GWindowManager->FUN_109e4830();
+        int X = GWindowManager->GetCursorScreenX();
+        int Y = GWindowManager->GetCursorScreenY();
         Class_10E68D80* R = Virtual41();
         Class_10E68D80* Q = R->Virtual52(X, Y);
         if (Q)

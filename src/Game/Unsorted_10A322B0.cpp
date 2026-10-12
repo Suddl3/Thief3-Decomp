@@ -52,13 +52,13 @@ public:
 
 Class_10905A90_Member* GetAllocator();
 
-// FUNCTION: 0x10A322B0 ?FUN_10a322b0@Class_10A322B0@@QAEXHH@Z
-void Class_10A322B0::FUN_10a322b0(int A, int B)
+// FUNCTION: 0x10A322B0 ?Swap@Class_10A322B0@@QAEXHH@Z
+void Class_10A322B0::Swap(int A, int B)
 {
     Class_10C56E40 Temp;
-    Temp = Unknown08[A];
-    Unknown08[A] = Unknown08[B];
-    Unknown08[B] = Temp;
+    Temp = m_Data[A];
+    m_Data[A] = m_Data[B];
+    m_Data[B] = Temp;
 }
 
 // FUNCTION: 0x10A32370 ?SetCount@Class_10A32370@@QAEXH@Z

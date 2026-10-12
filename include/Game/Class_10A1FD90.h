@@ -48,9 +48,9 @@ public:
     void FUN_10a1fd90(int A, int B, int C);
 
     char Unknown04[0x34];
-    int Unknown38;
+    int m_Stride;
     char Unknown3C[0xC];
-    int Unknown48;
+    int m_BaseOffset;
 };
 
 #endif // GAME_CLASS_10A1FD90_H

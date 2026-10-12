@@ -53,7 +53,7 @@ struct Struct_10AC0830_Entry
     int Unknown04;
 };
 
-bool FUN_10a37210(Class_1096D780* A, const FVector* B);
+bool MoveTo(Class_1096D780* A, const FVector* B);
 
 Class_10D9B090* FUN_10d9dcb0();
 
@@ -78,7 +78,7 @@ void Class_10E6F414::FUN_10ac0830(Class_1096D780* P1, AActor* P2)
                 Key = Entry->Unknown04;
             if (Value != Key)
             {
-                FUN_10a37210(P1, &P2->Location);
+                MoveTo(P1, &P2->Location);
                 FUN_10d9dcb0()->FUN_10d9e490((Struct_10D9E5E0_Param*)Target);
                 return;
             }

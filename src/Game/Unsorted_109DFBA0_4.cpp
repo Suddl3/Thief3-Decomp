@@ -19,8 +19,8 @@ extern bool DAT_10f35b08;
 
 extern bool DAT_10f35b48;
 
-// FUNCTION: 0x109DFE80 ?FUN_109dfe80@@YAXXZ
-void FUN_109dfe80()
+// FUNCTION: 0x109DFE80 ?AdvanceIndexOnTimer@@YAXXZ
+void AdvanceIndexOnTimer()
 {
     if (DAT_10f35da0 != 0)
     {

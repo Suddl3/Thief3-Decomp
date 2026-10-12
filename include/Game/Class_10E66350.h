@@ -15,7 +15,7 @@ public:
 
     Class_10E66350();
 
-    void FUN_10a2eeb0(FString* Name, UBOOL* Found, FString* Source);
+    void CopyOptionalString(FString* Name, UBOOL* Found, FString* Source);
 
     int Unknown14;
     FString Unknown18;

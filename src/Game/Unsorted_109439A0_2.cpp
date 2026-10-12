@@ -25,8 +25,8 @@ void __stdcall AppendBuffer(Object_10944D50* A, Class_10A32000* C, int* Offset)
     A->Virtual6(0, 0, &Base);
     int Size = A->Virtual4() * A->Virtual3();
     char* Src = (char*)Base;
-    C->FUN_10a32000(*Offset + Size);
-    memcpy(C->Unknown08 + *Offset, Src, Size);
+    C->SetCount(*Offset + Size);
+    memcpy(C->m_Data + *Offset, Src, Size);
     *Offset += Size;
     A->Virtual7();
 }

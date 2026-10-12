@@ -5,10 +5,10 @@
 #include "Game/Class_1095AFD0.h"
 #include "Core/Core.h"
 
-void FUN_10957be0(float* Out, float* A, float* B);
+void VectorMin(float* Out, float* A, float* B);
 
-// FUNCTION: 0x10957150 ?FUN_10957150@@YAXPAVFVector@@@Z
-void FUN_10957150(FVector* Value)
+// FUNCTION: 0x10957150 ?WrapAngles@@YAXPAVFVector@@@Z
+void WrapAngles(FVector* Value)
 {
     if (Value->X < -359.0f)
         Value->X += 360.0f;
@@ -24,8 +24,8 @@ void FUN_10957150(FVector* Value)
         Value->Z -= 360.0f;
 }
 
-// FUNCTION: 0x10957BE0 ?FUN_10957be0@@YAXPAM00@Z
-void FUN_10957be0(float* Out, float* A, float* B)
+// FUNCTION: 0x10957BE0 ?VectorMin@@YAXPAM00@Z
+void VectorMin(float* Out, float* A, float* B)
 {
     float X = B[0];
     float Z = B[2];
@@ -41,8 +41,8 @@ void FUN_10957be0(float* Out, float* A, float* B)
     Out[2] = Z;
 }
 
-// FUNCTION: 0x10957C50 ?FUN_10957c50@@YAXPAM00@Z
-void FUN_10957c50(float* Out, float* A, float* B)
+// FUNCTION: 0x10957C50 ?VectorMax@@YAXPAM00@Z
+void VectorMax(float* Out, float* A, float* B)
 {
     float X = B[0];
     float Z = B[2];
@@ -58,8 +58,8 @@ void FUN_10957c50(float* Out, float* A, float* B)
     Out[2] = Z;
 }
 
-// FUNCTION: 0x10957D20 ?FUN_10957d20@Class_10957D20@@QAEPAV1@XZ
-Class_10957D20* Class_10957D20::FUN_10957d20()
+// FUNCTION: 0x10957D20 ?Reset@Class_10957D20@@QAEPAV1@XZ
+Class_10957D20* Class_10957D20::Reset()
 {
     Unknown3c = 0;
     Unknown38 = 0;
@@ -67,8 +67,8 @@ Class_10957D20* Class_10957D20::FUN_10957d20()
     return this;
 }
 
-// FUNCTION: 0x1095AFD0 ?FUN_1095afd0@Class_1095AFD0@@QAEPAV1@XZ
-Class_1095AFD0* Class_1095AFD0::FUN_1095afd0()
+// FUNCTION: 0x1095AFD0 ?Reset@Class_1095AFD0@@QAEPAV1@XZ
+Class_1095AFD0* Class_1095AFD0::Reset()
 {
     Unknown04 = 0;
     Unknown08 = 0;

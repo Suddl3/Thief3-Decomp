@@ -8,9 +8,9 @@ class Class_10E50928
 public:
     virtual void Virtual0();
     virtual void Virtual1();
-    virtual int FUN_10a2fb40(const Class_10E50928* Other);
+    virtual int IsSameName(const Class_10E50928* Other);
 
-    const char* Unknown04;
+    const char* m_Name;
 };
 
 #endif // GAME_CLASS_10E50928_H
