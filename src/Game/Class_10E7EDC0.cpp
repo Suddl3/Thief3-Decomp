@@ -19,7 +19,7 @@ public:
 class Class_10E7EDC0 : public Class_10E69080
 {
 public:
-    Class_10E7EDC0* FUN_10b3fd90();
+    Class_10E7EDC0* Construct();
 
     char Unknown1D0;
     char Unknown1D1;
@@ -48,8 +48,8 @@ void Class_10B3ED20::ResetIfPending()
         Reset();
 }
 
-// FUNCTION: 0x10B3FD90 ?FUN_10b3fd90@Class_10E7EDC0@@QAEPAV1@XZ
-Class_10E7EDC0* Class_10E7EDC0::FUN_10b3fd90()
+// FUNCTION: 0x10B3FD90 ?Construct@Class_10E7EDC0@@QAEPAV1@XZ
+Class_10E7EDC0* Class_10E7EDC0::Construct()
 {
     this->Class_10E69080::Class_10E69080();
     Unknown1D0 = 1;

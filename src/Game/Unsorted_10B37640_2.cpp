@@ -5,7 +5,7 @@
 #include "Game/Class_10993E20.h"
 #include "Game/Struct_10AA3520.h"
 #include "Game/Struct_10B21820_Object.h"
-#include "Game/Class_10B378A0.h"
+#include "Game/cT3PlayerListener.h"
 #include "Game/Object_10B4CA50_A.h"
 
 extern const char* DAT_10ff3824;
@@ -20,7 +20,7 @@ extern Struct_10AA3520* DAT_10f35dec;
 
 class Class_10992030;
 
-class Class_10B378A0;
+class cT3PlayerListener;
 
 class Class_10B378A0_Unknown0B0
 {
@@ -155,8 +155,8 @@ Class_10D9B090* FUN_10d9dcb0();
 
 bool FUN_10a37340(Class_10992030* A);
 
-// FUNCTION: 0x10B378A0 ?FUN_10b378a0@Class_10B378A0@@QAEXXZ
-void Class_10B378A0::FUN_10b378a0()
+// FUNCTION: 0x10B378A0 ?PickUpBody@cT3PlayerListener@@QAEXXZ
+void cT3PlayerListener::PickUpBody()
 {
     Class_10B21820* Obj = (Class_10B21820*)Unknown04->FUN_10b21580();
     Obj->Unknown0B0->Virtual6();

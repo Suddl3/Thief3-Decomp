@@ -26,7 +26,7 @@ struct Struct_10B1BC90
 // FUNCTION: 0x10B197E0 ?Free@Class_10B197E0@@QAEXXZ
 void Class_10B197E0::Free()
 {
-    FUN_10b19550(0);
+    SetCount(0);
     if (Unknown04)
     {
         GetAllocator()->Virtual5(m_Items);

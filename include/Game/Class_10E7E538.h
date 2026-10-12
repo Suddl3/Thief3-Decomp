@@ -16,7 +16,7 @@ class Class_10E7E538 : public Class_10AA82D0
 public:
     virtual void Virtual0();
     virtual void Virtual1();
-    virtual void FUN_10b483c0(Class_10B22020* A);
+    virtual void StopAnimation(Class_10B22020* A);
     virtual void Virtual3();
     virtual int OnAnimationEnd(Object_10B4BC30* A, int B);
     virtual void FUN_10b3ace0(Struct_10B3ACE0* A, float B, float C);

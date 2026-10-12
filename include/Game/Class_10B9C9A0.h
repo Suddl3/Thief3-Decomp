@@ -10,7 +10,7 @@ class Class_10B9C9A0
 public:
     ~Class_10B9C9A0();
 
-    void FUN_10b9c9a0();
+    void Release();
 
     Class_10B9BEB0* Unknown00;
 };

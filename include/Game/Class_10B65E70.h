@@ -8,7 +8,7 @@ class Class_10E684A8;
 class Class_10B65E70
 {
 public:
-    void FUN_10b65e70(int A);
+    void SetNameByIndex(int A);
 
     char Unknown00[0x200];
     Class_10E684A8* Unknown200;

@@ -119,7 +119,7 @@ void Class_10B790F0::FUN_10b790f0(Class_10A52A40_Member* A)
     FUN_10a52a40(A);
     if (Unknown154)
     {
-        if (Unknown0C4)
+        if (m_Selected)
             Unknown154->Virtual102(A);
         else
             Unknown154->Virtual56(0);

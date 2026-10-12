@@ -29,7 +29,7 @@ public:
     virtual void Virtual11();
     virtual void Virtual12();
     virtual void Virtual13();
-    virtual void FUN_10b876c0();
+    virtual void Refresh();
 
     char Unknown04[0x74];
     Class_10B8C7B0* Unknown78;
@@ -87,8 +87,8 @@ public:
     int Unknown0C;
 };
 
-// FUNCTION: 0x10B876C0 ?FUN_10b876c0@Class_10E893B0@@UAEXXZ
-void Class_10E893B0::FUN_10b876c0()
+// FUNCTION: 0x10B876C0 ?Refresh@Class_10E893B0@@UAEXXZ
+void Class_10E893B0::Refresh()
 {
     if (Unknown78)
         Unknown78->Refresh();

@@ -118,7 +118,7 @@ public:
     virtual void Virtual95();
     virtual int Virtual96();
 
-    void FUN_10a51a40(int A, int B);
+    void SetValueAt(int A, int B);
 
     char Unknown04[0x11C];
     Class_1092E930 Unknown120;
@@ -127,8 +127,8 @@ public:
     int* Unknown134;
 };
 
-// FUNCTION: 0x10A51A40 ?FUN_10a51a40@Class_10A51A40@@QAEXHH@Z
-void Class_10A51A40::FUN_10a51a40(int A, int B)
+// FUNCTION: 0x10A51A40 ?SetValueAt@Class_10A51A40@@QAEXHH@Z
+void Class_10A51A40::SetValueAt(int A, int B)
 {
     if (A < 0)
         return;

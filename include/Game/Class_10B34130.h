@@ -8,12 +8,12 @@ struct Item_10B34130;
 class Class_10B34130
 {
 public:
-    int FUN_10b34130(const Item_10B34130* Item);
+    int AddItem(const Item_10B34130* Item);
     void FUN_10b330d0(int NewCount);
 
-    int Unknown00;
+    int m_Count;
     int Unknown04;
-    Item_10B34130* Unknown08;
+    Item_10B34130* m_Items;
 };
 
 #endif // GAME_CLASS_10B34130_H

@@ -17,24 +17,24 @@ struct Struct_10B791E0_Entry
     int Unknown04;
 };
 
-// FUNCTION: 0x10B79180 ?FUN_10b79180@Class_10B79180@@QAEHH@Z
-int Class_10B79180::FUN_10b79180(int Key)
+// FUNCTION: 0x10B79180 ?FindKeyByValue@Class_10B79180@@QAEHH@Z
+int Class_10B79180::FindKeyByValue(int Key)
 {
     for (int i = 0; i < Virtual117(); i++)
     {
-        if (Unknown2C8[i].Unknown04 == Key)
-            return Unknown2C8[i].Unknown00;
+        if (m_Entries[i].Unknown04 == Key)
+            return m_Entries[i].Unknown00;
     }
     return 0;
 }
 
-// FUNCTION: 0x10B791E0 ?FUN_10b791e0@Class_10B791E0@@QAEHH@Z
-int Class_10B791E0::FUN_10b791e0(int Key)
+// FUNCTION: 0x10B791E0 ?FindValueByKey@Class_10B791E0@@QAEHH@Z
+int Class_10B791E0::FindValueByKey(int Key)
 {
     for (int i = 0; i < Virtual117(); i++)
     {
-        if (Unknown2C8[i].Unknown00 == Key)
-            return Unknown2C8[i].Unknown04;
+        if (m_Entries[i].Unknown00 == Key)
+            return m_Entries[i].Unknown04;
     }
     return 0;
 }

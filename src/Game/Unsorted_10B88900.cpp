@@ -71,8 +71,8 @@ public:
 
 Class_10D393D0 FUN_10d39cf0(char const* File, int Line, char const* Name, int A, Class_10B88900_Arg1* B, int C, int D, int E, int F, unsigned G);
 
-// FUNCTION: 0x10B88900 ?FUN_10b88900@@YGXPAVClass_10B88900_Arg1@@PAVClass_10B88900_Arg2@@H@Z
-void __stdcall FUN_10b88900(Class_10B88900_Arg1* A, Class_10B88900_Arg2* B, int C)
+// FUNCTION: 0x10B88900 ?WriteBlockData@@YGXPAVClass_10B88900_Arg1@@PAVClass_10B88900_Arg2@@H@Z
+void __stdcall WriteBlockData(Class_10B88900_Arg1* A, Class_10B88900_Arg2* B, int C)
 {
     if (B)
     {
@@ -149,14 +149,14 @@ void Class_10B88A80::Rehash(int Size)
     delete OldBuckets;
 }
 
-// FUNCTION: 0x10B89820 ?FUN_10b89820@Class_10B89820@@QAEXXZ
-void Class_10B89820::FUN_10b89820()
+// FUNCTION: 0x10B89820 ?Free@Class_10B89820@@QAEXXZ
+void Class_10B89820::Free()
 {
     FUN_10b89460(0);
     if (Unknown04)
     {
-        GetAllocator()->Virtual5(Unknown08);
-        Unknown08 = 0;
+        GetAllocator()->Virtual5(m_Data);
+        m_Data = 0;
         Unknown04 = 0;
     }
 }

@@ -6,7 +6,7 @@
 class Class_10E888E4
 {
 public:
-    Class_10E888E4* FUN_10b7a2f0();
+    Class_10E888E4* Init();
 
     void** Unknown00;        // +0x00: DAT_10e888e4
     float Unknown04;

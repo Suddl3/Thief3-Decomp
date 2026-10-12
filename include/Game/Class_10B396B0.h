@@ -8,10 +8,10 @@ class Class_Field04;
 class Class_10B396B0
 {
 public:
-    void FUN_10b396b0(int A);
+    void ResetHandler(int A);
 
     char Unknown00[0xC];
-    Class_Field04* Unknown0C[1];
+    Class_Field04* m_Handlers[1];
 };
 
 #endif // GAME_CLASS_10B396B0_H

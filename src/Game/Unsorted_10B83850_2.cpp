@@ -31,19 +31,19 @@ extern Allocator_10FFA700* DAT_10ffa700;
 class Class_10B83820
 {
 public:
-    Class_10B83820() : Unknown00(0), Unknown04(0), Unknown08(0), Unknown08Flag(1) {}
+    Class_10B83820() : m_Buffer(0), m_Count(0), m_Capacity(0), Unknown08Flag(1) {}
     ~Class_10B83820()
     {
         if (!Unknown08Flag)
         {
             Allocator_10FFA700* Allocator = DAT_10ffa700;
-            Allocator->Virtual5(Unknown00, Unknown08 * 16, 0x11);
+            Allocator->Virtual5(m_Buffer, m_Capacity * 16, 0x11);
         }
     }
 
-    void* Unknown00;
-    int Unknown04;
-    unsigned Unknown08 : 31;
+    void* m_Buffer;
+    int m_Count;
+    unsigned m_Capacity : 31;
     unsigned Unknown08Flag : 1;
 };
 
@@ -56,9 +56,9 @@ int FUN_10b83a30(Class_10B83DC0* Self, Class_10B83820* Out)
 {
     Struct_10B82770_Param Params;
     Self->FUN_10b82770(&Params);
-    float F = DAT_11006e30 * Self->UnknownB8;
-    Out->Unknown04 = 0;
+    float F = DAT_11006e30 * Self->m_Scale;
+    Out->m_Count = 0;
     Struct_10B7C800 V = FUN_10b7c800(Self->UnknownA0);
-    return FUN_10dae490((&V.X)[(int)(float)Self->UnknownC0] * 2.0f - Params.Unknown50, V.X, F, V.X * 0.25f, 2,
+    return FUN_10dae490((&V.X)[(int)(float)Self->m_Axis] * 2.0f - Params.Unknown50, V.X, F, V.X * 0.25f, 2,
                         0x20, Out);
 }

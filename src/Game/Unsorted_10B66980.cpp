@@ -17,7 +17,7 @@ public:
 
 extern const char DAT_10e84f7c[];
 
-class Class_10E84D80 : public Class_10B787F0
+class cMissionStatsPane : public Class_10B787F0
 {
 public:
     void FUN_10b671a0();
@@ -353,7 +353,7 @@ public:
 class Class_10E87D58 : public Class_10E68D80
 {
 public:
-    Class_10E87D58* FUN_10b75b10();
+    Class_10E87D58* Construct();
 
     int Unknown1F8;
     int Unknown1FC;
@@ -378,15 +378,15 @@ public:
     void FUN_10b76310();
 };
 
-// FUNCTION: 0x10B671A0 ?FUN_10b671a0@Class_10E84D80@@QAEXXZ
-void Class_10E84D80::FUN_10b671a0()
+// FUNCTION: 0x10B671A0 ?FUN_10b671a0@cMissionStatsPane@@QAEXXZ
+void cMissionStatsPane::FUN_10b671a0()
 {
     Field00 = DAT_10e84d80;
     FUN_10b787f0();
 }
 
-// FUNCTION: 0x10B671D0 ?GetMissionStatsPaneFile@Class_10E84D80@@QAE?AVcString@@XZ
-cString Class_10E84D80::GetMissionStatsPaneFile()
+// FUNCTION: 0x10B671D0 ?GetMissionStatsPaneFile@cMissionStatsPane@@QAE?AVcString@@XZ
+cString cMissionStatsPane::GetMissionStatsPaneFile()
 {
     return cString(DAT_10e84f7c);
 }
@@ -466,8 +466,8 @@ int Class_10E87B68::FUN_10b75660()
     return Unknown2FC;
 }
 
-// FUNCTION: 0x10B75B10 ?FUN_10b75b10@Class_10E87D58@@QAEPAV1@XZ
-Class_10E87D58* Class_10E87D58::FUN_10b75b10()
+// FUNCTION: 0x10B75B10 ?Construct@Class_10E87D58@@QAEPAV1@XZ
+Class_10E87D58* Class_10E87D58::Construct()
 {
     this->Class_10E68D80::Class_10E68D80();
     Unknown1F8 = 0;

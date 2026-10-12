@@ -64,7 +64,7 @@ extern void FUN_10a58e50(void);
 class Class_10E828B0 : public Class_10E69080
 {
 public:
-    Class_10E828B0* FUN_10b5ab90();
+    Class_10E828B0* Initialize();
     void FUN_10b5abe0();
 
     char Unknown004[0x114];
@@ -117,7 +117,7 @@ public:
 class Class_10E83230 : public Class_10E88900
 {
 public:
-    Class_10E83230* FUN_10b5c400();
+    Class_10E83230* Initialize();
 
     int Unknown2CC;
     int Unknown2D0;
@@ -187,7 +187,7 @@ extern void* DAT_10e84978[];
 class Class_10E87D58
 {
 public:
-    Class_10E87D58* FUN_10b75b10();
+    Class_10E87D58* Construct();
 
     void* Unknown00;
     char Unknown04[0x114];
@@ -198,7 +198,7 @@ public:
 class Class_10E84978 : public Class_10E87D58
 {
 public:
-    Class_10E84978* FUN_10b65e00();
+    Class_10E84978* Initialize();
 
     int Unknown200;
 };
@@ -258,8 +258,8 @@ int FUN_10b59f70()
     return 0;
 }
 
-// FUNCTION: 0x10B5AB90 ?FUN_10b5ab90@Class_10E828B0@@QAEPAV1@XZ
-Class_10E828B0* Class_10E828B0::FUN_10b5ab90()
+// FUNCTION: 0x10B5AB90 ?Initialize@Class_10E828B0@@QAEPAV1@XZ
+Class_10E828B0* Class_10E828B0::Initialize()
 {
     this->Class_10E69080::Class_10E69080();
     this->vtable = (void*)DAT_10e828b0;
@@ -311,8 +311,8 @@ void FUN_10b5aed0()
     FUN_10b78080();
 }
 
-// FUNCTION: 0x10B5B050 ?FUN_10b5b050@Class_10B5B050@@QAE?AVcString@@XZ
-cString Class_10B5B050::FUN_10b5b050()
+// FUNCTION: 0x10B5B050 ?GetFactionPaneFileName@Class_10B5B050@@QAE?AVcString@@XZ
+cString Class_10B5B050::GetFactionPaneFileName()
 {
     return cString(DAT_10e82cf4);
 }
@@ -323,8 +323,8 @@ void FUN_10b5b750()
     FUN_10b45c20();
 }
 
-// FUNCTION: 0x10B5C400 ?FUN_10b5c400@Class_10E83230@@QAEPAV1@XZ
-Class_10E83230* Class_10E83230::FUN_10b5c400()
+// FUNCTION: 0x10B5C400 ?Initialize@Class_10E83230@@QAEPAV1@XZ
+Class_10E83230* Class_10E83230::Initialize()
 {
     this->Class_10E88900::Class_10E88900();
     Unknown2CC = 0;
@@ -416,10 +416,10 @@ void Class_10E68D80::FUN_10b65de0()
     FUN_10a58e50();
 }
 
-// FUNCTION: 0x10B65E00 ?FUN_10b65e00@Class_10E84978@@QAEPAV1@XZ
-Class_10E84978* Class_10E84978::FUN_10b65e00()
+// FUNCTION: 0x10B65E00 ?Initialize@Class_10E84978@@QAEPAV1@XZ
+Class_10E84978* Class_10E84978::Initialize()
 {
-    FUN_10b75b10();
+    Construct();
     Unknown00 = DAT_10e84978;
     Unknown118 = (void*)DAT_10e7edb8;
     Unknown200 = 0;
@@ -438,10 +438,10 @@ void FUN_10b65e60()
     FUN_10b760b0();
 }
 
-// FUNCTION: 0x10B66060 ?FUN_10b66060@Class_10B66060@@QAEXHPAUData_10B66060@@@Z
-void Class_10B66060::FUN_10b66060(int A, Data_10B66060* B)
+// FUNCTION: 0x10B66060 ?SetData@Class_10B66060@@QAEXHPAUData_10B66060@@@Z
+void Class_10B66060::SetData(int A, Data_10B66060* B)
 {
     Unknown184 = A;
-    Unknown154 = B;
-    Unknown158 = B->Unknown178;
+    m_Data = B;
+    m_Info = B->Unknown178;
 }

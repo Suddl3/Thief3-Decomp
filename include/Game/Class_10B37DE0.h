@@ -12,7 +12,7 @@ public:
     int Unknown00;
     Class_1096D780* Unknown04;
 
-    void FUN_10b37de0(int A, int B, Struct_10B37DE0_List* C);
+    void AddPathPoint(int A, int B, Struct_10B37DE0_List* C);
 };
 
 #endif // GAME_CLASS_10B37DE0_H

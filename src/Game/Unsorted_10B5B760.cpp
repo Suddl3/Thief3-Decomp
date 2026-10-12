@@ -15,7 +15,7 @@ public:
 class Class_10E82E90 : public Class_10E81130
 {
 public:
-    Class_10E82E90* FUN_10b5b7b0();
+    Class_10E82E90* Init();
 
     int Unknown164;
     int Unknown168[4];
@@ -129,8 +129,8 @@ void Class_10B5B760::FUN_10b5b760()
     }
 }
 
-// FUNCTION: 0x10B5B7B0 ?FUN_10b5b7b0@Class_10E82E90@@QAEPAV1@XZ
-Class_10E82E90* Class_10E82E90::FUN_10b5b7b0()
+// FUNCTION: 0x10B5B7B0 ?Init@Class_10E82E90@@QAEPAV1@XZ
+Class_10E82E90* Class_10E82E90::Init()
 {
     FUN_10b46080();
     Unknown00 = DAT_10e82e90;

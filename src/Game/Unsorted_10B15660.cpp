@@ -15,8 +15,8 @@ Class_10B274B0* Class_10B15840::FUN_10b15840(int A, int B, int C, int D, int E, 
     Class_10B274B0* P = FUN_10b15660(A);
     if (P)
     {
-        P->FUN_10b274b0(B);
-        ((Class_10B274D0*)P)->FUN_10b274d0(C);
+        P->SetNameIndex(B);
+        ((Class_10B274D0*)P)->SetNameIndex(C);
         P->FUN_10b27e00(D, E);
         ((Class_10E7FB08*)P)->FUN_10a5d460();
         P->Virtual7();

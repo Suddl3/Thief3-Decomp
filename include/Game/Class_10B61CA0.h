@@ -6,14 +6,14 @@
 class Class_10B61CA0
 {
 public:
-    int FUN_10b61ca0();
+    int FindIndex();
 
     char Unknown00[0xC4];
     int UnknownC4;
     char UnknownC8[0xC8];
-    int Unknown190;
+    int m_Count;
     int Unknown194;
-    int* Unknown198;
+    int* m_Items;
 };
 
 #endif // GAME_CLASS_10B61CA0_H

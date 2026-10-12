@@ -40,7 +40,7 @@ public:
 // FUNCTION: 0x10B4A0D0 ?FUN_10b4a0d0@Class_10E7E6E8@@UAEXPAVAGarrett@@@Z
 void Class_10E7E6E8::FUN_10b4a0d0(AGarrett* Garrett)
 {
-    ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(0xa3, 0.0f, 1.0f, 0x101, 0, 0, -1.0f);
+    ((Class_10B39530*)GetLinkedObject())->Play(0xa3, 0.0f, 1.0f, 0x101, 0, 0, -1.0f);
     FUN_10b3b0b0(Garrett);
     ForceBody(Garrett);
     Unknown10 = false;

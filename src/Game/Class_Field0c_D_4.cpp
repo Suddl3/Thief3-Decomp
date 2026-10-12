@@ -19,6 +19,6 @@ float Class_Field0c_D::FUN_10b471c0(int A, int B)
 {
     int Index = FindIndex(A);
     if (Index >= 0)
-        return Unknown08[Index]->FUN_10b7ad20(B);
+        return Unknown08[Index]->GetValue(B);
     return DAT_10e499a4;
 }

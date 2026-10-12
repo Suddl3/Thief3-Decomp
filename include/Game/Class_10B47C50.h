@@ -9,7 +9,7 @@ class Class_10B47C50
 {
 public:
     void FUN_10b47b20(int A, float B, float C, int D, int E, bool F, bool G, float H);
-    void FUN_10b47c50();
+    void PlayLastQueued();
 
     char Unknown00[0x4C];
     cIntArray Unknown4C;

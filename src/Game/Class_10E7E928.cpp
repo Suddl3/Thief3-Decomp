@@ -50,7 +50,7 @@ void Class_10E7E928::PlayBowToArrowAttach(Class_10B21350* A)
         Unknown30 = true;
         A->FUN_10b21350();
         ((Class_10B32160*)this)->FUN_10b32160((Class_1098E330*)A);
-        ((Class_10B39530*)((Class_10AA82D0*)this)->GetLinkedObject())->FUN_10b39530(0x6d, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+        ((Class_10B39530*)((Class_10AA82D0*)this)->GetLinkedObject())->Play(0x6d, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
         Unknown33.FUN_10b31be0(A->Unknown440);
         DAT_10f35dec->Unknown64->Virtual6(A->Unknown444);
         FString First(DAT_10e7bdd0);

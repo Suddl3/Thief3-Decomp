@@ -138,17 +138,17 @@ public:
     virtual void Virtual120(int A, int B);
 };
 
-// FUNCTION: 0x10B5E2E0 ?FUN_10b5e2e0@Class_10B5E2E0@@QAEXXZ
-void Class_10B5E2E0::FUN_10b5e2e0()
+// FUNCTION: 0x10B5E2E0 ?RebuildList@Class_10B5E2E0@@QAEXXZ
+void Class_10B5E2E0::RebuildList()
 {
-    Unknown1E8.FUN_10b19550(0);
+    m_Entries.SetCount(0);
     for (int I = 0; I < 4; I++)
     {
         Class_10B197E0 Tmp = FUN_10b1b600()->FUN_10b1a0c0(I);
-        Unknown1E8.FUN_10b5cee0(Tmp);
+        m_Entries.FUN_10b5cee0(Tmp);
     }
-    int Count = Unknown1E8.m_Count;
-    int Limit = Unknown1D0;
+    int Count = m_Entries.m_Count;
+    int Limit = m_Limit;
     bool Flag = false;
     int Diff = 0;
     if (Count > Limit)

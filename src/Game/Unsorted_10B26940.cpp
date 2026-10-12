@@ -47,12 +47,12 @@ bool Class_10B26D00::FUN_10b26d00(int A, int B, int C)
     return false;
 }
 
-// FUNCTION: 0x10B27090 ?FUN_10b27090@Class_10B27090@@QAEXHABVcString@@H@Z
-void Class_10B27090::FUN_10b27090(int Index, const cString& Name, int Value)
+// FUNCTION: 0x10B27090 ?SetEntry@Class_10B27090@@QAEXHABVcString@@H@Z
+void Class_10B27090::SetEntry(int Index, const cString& Name, int Value)
 {
-    Unknown08[Index] = true;
-    Unknown14[Index] = Name;
-    Unknown20[Index] = Value;
+    m_Used[Index] = true;
+    m_Names[Index] = Name;
+    m_Values[Index] = Value;
     FUN_10b26e00();
 }
 

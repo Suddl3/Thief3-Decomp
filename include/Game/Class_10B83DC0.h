@@ -17,9 +17,9 @@ public:
     char Pad00[0xA0];
     FVector UnknownA0;
     char PadAC[0xC];
-    float UnknownB8;
+    float m_Scale;
     char PadBC[0x4];
-    int UnknownC0;
+    int m_Axis;
 };
 
 #endif // GAME_CLASS_10B83DC0_H

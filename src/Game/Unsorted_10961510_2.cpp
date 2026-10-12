@@ -11,7 +11,7 @@ void FUN_10b7c720();
 
 void FUN_10b7cd40();
 
-void FUN_10b7c7c0();
+void Dispatch();
 
 void FUN_10b7f800();
 
@@ -50,7 +50,7 @@ void FUN_10961580()
 // FUNCTION: 0x10961590 ?FUN_10961590@@YAXXZ
 void FUN_10961590()
 {
-    FUN_10b7c7c0();
+    Dispatch();
 }
 
 // FUNCTION: 0x109615A0 ?FUN_109615a0@@YAXXZ

@@ -30,8 +30,8 @@ public:
     Class_10BAA580* Unknown10;
 };
 
-// FUNCTION: 0x10B9C570 ?FUN_10b9c570@Class_10B9C570@@QAE_NXZ
-bool Class_10B9C570::FUN_10b9c570()
+// FUNCTION: 0x10B9C570 ?IsOutOfRange@Class_10B9C570@@QAE_NXZ
+bool Class_10B9C570::IsOutOfRange()
 {
     if (Unknown0C0 == 0)
     {

@@ -6,7 +6,7 @@
 class Class_10B39890
 {
 public:
-    void* FUN_10b39890(int A);
+    void* GetEntryData(int A);
 };
 
 #endif // GAME_CLASS_10B39890_H

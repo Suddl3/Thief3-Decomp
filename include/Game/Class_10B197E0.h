@@ -14,7 +14,7 @@ class Class_10B197E0
 public:
     ~Class_10B197E0()
     {
-        FUN_10b19550(0);
+        SetCount(0);
         if (Unknown04)
         {
             GetAllocator()->Virtual5(m_Items);
@@ -23,7 +23,7 @@ public:
         }
     }
 
-    void FUN_10b19550(int Count);
+    void SetCount(int Count);
     void Free();
     void CopyFrom(const Class_10B197E0& Other);
     void FUN_10b5cee0(const Class_10B197E0& Other);

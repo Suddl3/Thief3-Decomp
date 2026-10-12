@@ -17,7 +17,7 @@ public:
     virtual void Virtual6();
     virtual void Virtual7();
 
-    void FUN_10b274b0(int A);
+    void SetNameIndex(int A);
     void FUN_10b27e00(int A, int B);
 
     char Unknown04[0x1C4];

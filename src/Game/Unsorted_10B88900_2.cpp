@@ -29,7 +29,7 @@ public:
 class Class_10E89540 : public Class_10E89AA0
 {
 public:
-    Class_10E89540* FUN_10b8b550(int A, int B, int C, int D);
+    Class_10E89540* Init(int A, int B, int C, int D);
 
     char Unknown04[0x14];
     bool Unknown18;
@@ -37,11 +37,11 @@ public:
     int Unknown2C;
 };
 
-// FUNCTION: 0x10B8AB60 ?FUN_10b8ab60@Class_10B8AB60@@QAE?AVFName@@XZ
-FName Class_10B8AB60::FUN_10b8ab60()
+// FUNCTION: 0x10B8AB60 ?GetName@Class_10B8AB60@@QAE?AVFName@@XZ
+FName Class_10B8AB60::GetName()
 {
-    if (Unknown30 >= 0)
-        return Unknown38->FUN_109b5830(Unknown30);
+    if (m_NameIndex >= 0)
+        return m_Names->FUN_109b5830(m_NameIndex);
     return NAME_None;
 }
 
@@ -54,8 +54,8 @@ void Class_10B8AC90::FUN_10b8ac90(int A)
     }
 }
 
-// FUNCTION: 0x10B8B550 ?FUN_10b8b550@Class_10E89540@@QAEPAV1@HHHH@Z
-Class_10E89540* Class_10E89540::FUN_10b8b550(int A, int B, int C, int D)
+// FUNCTION: 0x10B8B550 ?Init@Class_10E89540@@QAEPAV1@HHHH@Z
+Class_10E89540* Class_10E89540::Init(int A, int B, int C, int D)
 {
     this->Class_10E89AA0::Class_10E89AA0(A, B, C, D);
     Unknown00 = DAT_10e89540;

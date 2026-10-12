@@ -61,8 +61,8 @@ void* GetWindowManager();
 
 extern const char DAT_10e7ad64[];
 
-// FUNCTION: 0x10B28870 ?FUN_10b28870@Class_10B28870@@QAEXXZ
-void Class_10B28870::FUN_10b28870()
+// FUNCTION: 0x10B28870 ?OpenTitleOptions@Class_10B28870@@QAEXXZ
+void Class_10B28870::OpenTitleOptions()
 {
     Virtual56(0);
     GWindowManager->FUN_109e8930(this);

@@ -11,12 +11,12 @@ struct Item_10B34130
     int Unknown0C;
 };
 
-// FUNCTION: 0x10B34130 ?FUN_10b34130@Class_10B34130@@QAEHPBUItem_10B34130@@@Z
-int Class_10B34130::FUN_10b34130(const Item_10B34130* Item)
+// FUNCTION: 0x10B34130 ?AddItem@Class_10B34130@@QAEHPBUItem_10B34130@@@Z
+int Class_10B34130::AddItem(const Item_10B34130* Item)
 {
-    int Index = Unknown00;
+    int Index = m_Count;
     FUN_10b330d0(Index + 1);
-    Item_10B34130* Dest = &Unknown08[Index];
+    Item_10B34130* Dest = &m_Items[Index];
     Dest->Unknown00 = Item->Unknown00;
     Dest->Unknown04 = Item->Unknown04;
     Dest->Unknown08 = Item->Unknown08;

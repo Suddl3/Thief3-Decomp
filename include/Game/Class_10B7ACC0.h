@@ -8,17 +8,17 @@ class Class_109B5E00;
 class Class_10B7ACC0
 {
 public:
-    void FUN_10b7acc0(int A, int B);
-    void FUN_10b7acc0(float Value, int Index);
+    void SetValue(int A, int B);
+    void SetValue(float Value, int Index);
 
     char Unknown00[4];
     Class_109B5E00* Unknown04;
     char Unknown08[0xC];
     int Unknown14;
     char Unknown18[0x1C];
-    int Unknown34;
+    int m_NumValues;
     char Unknown38[4];
-    float* Unknown3C;
+    float* m_Values;
 };
 
 #endif // GAME_CLASS_10B7ACC0_H

@@ -476,7 +476,7 @@ void Class_10E85AD8::FUN_10b6b3f0(Class_10A52A40_Member* P)
         FUN_10a52a40(P);
         if (Unknown118)
         {
-            if (Unknown0C4 != 0)
+            if (m_Selected != 0)
             {
                 Unknown118->Virtual102(P);
                 if (m_State == 0)

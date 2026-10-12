@@ -41,12 +41,12 @@ void Class_10E4B180::Shutdown()
     }
 }
 
-// FUNCTION: 0x10B7C7C0 ?FUN_10b7c7c0@Class_10E4B178@@UAEHHH@Z
-int Class_10E4B178::FUN_10b7c7c0(int A, int B)
+// FUNCTION: 0x10B7C7C0 ?Dispatch@Class_10E4B178@@UAEHHH@Z
+int Class_10E4B178::Dispatch(int A, int B)
 {
-    for (int i = 0; i < Unknown30; i++)
+    for (int i = 0; i < m_ChildCount; i++)
     {
-        int Result = Unknown38[i]->Virtual5(A, B);
+        int Result = m_Children[i]->Virtual5(A, B);
         if (Result)
             return Result;
     }

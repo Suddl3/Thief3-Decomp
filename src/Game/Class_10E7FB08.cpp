@@ -127,8 +127,8 @@ void Class_10E7FB08::FUN_10b27530(Class_10A52A40_Member* P)
     FUN_10a52a40(P);
     if (Unknown1C4)
     {
-        if (Unknown0C4)
+        if (m_Selected)
             Unknown1C4->Virtual102(P);
-        Unknown1C4->Virtual56(Unknown0C4 ? 2 : 0);
+        Unknown1C4->Virtual56(m_Selected ? 2 : 0);
     }
 }

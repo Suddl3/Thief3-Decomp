@@ -106,7 +106,7 @@ public:
     virtual void Virtual97();
     virtual void Virtual98();
 
-    void FUN_10a51a40(int A, int B);
+    void SetValueAt(int A, int B);
 };
 
 class FArray

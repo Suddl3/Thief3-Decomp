@@ -10,7 +10,7 @@ class Class_10E84728
 public:
     virtual void FUN_10b644c0(int A, int B);
 
-    Class_10E84728_Field04* Unknown04;
+    Class_10E84728_Field04* m_Target;
 };
 
 #endif // GAME_CLASS_10E84728_H

@@ -6,10 +6,10 @@
 class Class_10B78380
 {
 public:
-    void FUN_10b78380();
+    void FreeArray();
 
     char Unknown00[0x168];
-    int* Unknown168;
+    int* m_Array;
 };
 
 #endif // GAME_CLASS_10B78380_H

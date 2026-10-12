@@ -102,8 +102,8 @@ int Class_10E7EAD8::OnAnimationEnd(Class_10B21570* A, Class_1098E3D0* B)
             {
                 B->Virtual2();
             }
-            ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(0xa6, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
-            ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(0xa9, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+            ((Class_10B39530*)GetLinkedObject())->Play(0xa6, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+            ((Class_10B39530*)GetLinkedObject())->Play(0xa9, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
             Unknown18 = false;
             return Virtual4();
         }

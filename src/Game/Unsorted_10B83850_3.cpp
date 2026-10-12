@@ -26,16 +26,16 @@ class Class_10B83E50 : public Class_10B83DC0
 public:
     char Unknown00[0xAC];
     FVector Unknown0AC;
-    float Unknown0B8;
+    float m_Scale;
     char Unknown0BC[4];
-    int Unknown0C0;
+    int m_Axis;
 };
 
 class Class_10B83820
 {
 public:
-    char Unknown00[4];
-    int Unknown04;
+    char m_Buffer[4];
+    int m_Count;
 };
 
 extern float DAT_11006e30;
@@ -47,8 +47,8 @@ int FUN_10b83b60(Class_10B83E50* Self, Class_10B83820* Out)
 {
     Struct_10B82770_Param P;
     Self->FUN_10b82770(&P);
-    float Scale = DAT_11006e30 * Self->Unknown0B8;
-    Out->Unknown04 = 0;
+    float Scale = DAT_11006e30 * Self->m_Scale;
+    Out->m_Count = 0;
     Struct_10B7C800 L = FUN_10b7c800(Self->Unknown0AC);
-    return FUN_10dae490((&L.X)[(int)(float)Self->Unknown0C0] + (&L.X)[(int)(float)Self->Unknown0C0] - P.Unknown50, L.X, Scale, L.X * 0.25f, 2, 0x20, Out);
+    return FUN_10dae490((&L.X)[(int)(float)Self->m_Axis] + (&L.X)[(int)(float)Self->m_Axis] - P.Unknown50, L.X, Scale, L.X * 0.25f, 2, 0x20, Out);
 }

@@ -91,9 +91,9 @@ public:
     bool FUN_10b46d40();
 
     char Unknown04[0xB4];
-    int UnknownB8;
+    int m_ChildCount;
     char UnknownBC[4];
-    Class_10B46D40** UnknownC0;
+    Class_10B46D40** m_Children;
 };
 
 #endif // GAME_CLASS_10B46D40_H

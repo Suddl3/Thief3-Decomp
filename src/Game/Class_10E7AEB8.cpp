@@ -1,4 +1,4 @@
-// Game/Class_10E7AEB8.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/cT3MainMenuWindow.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10B27FE0.h"
 
@@ -8,18 +8,18 @@ public:
     virtual ~Class_10E6AEA0();
 };
 
-class Class_10E7AEB8 : public Class_10E6AEA0
+class cT3MainMenuWindow : public Class_10E6AEA0
 {
 public:
-    ~Class_10E7AEB8();
+    ~cT3MainMenuWindow();
 
     char Unknown04[0x174];
     bool Unknown178;
     Class_10B27FE0* Unknown17C;
 };
 
-// FUNCTION: 0x10B299B0 ??1Class_10E7AEB8@@UAE@XZ
-Class_10E7AEB8::~Class_10E7AEB8()
+// FUNCTION: 0x10B299B0 ??1cT3MainMenuWindow@@UAE@XZ
+cT3MainMenuWindow::~cT3MainMenuWindow()
 {
     if (Unknown17C)
     {
@@ -28,5 +28,5 @@ Class_10E7AEB8::~Class_10E7AEB8()
     }
 }
 
-// FUNCTION: 0x10B29A20 ??_GClass_10E7AEB8@@UAEPAXI@Z
+// FUNCTION: 0x10B29A20 ??_GcT3MainMenuWindow@@UAEPAXI@Z
 // Compiler-generated: emitted with the class's vtable by 0x10B299B0's definition in this unit.

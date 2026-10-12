@@ -18,7 +18,7 @@ public:
     virtual void Virtual5();
     virtual void Virtual6();
     virtual void Virtual7();
-    virtual void FUN_10b89760();
+    virtual void saveControllerState();
 
     char Unknown04[4];
     Struct_10E89478_Unknown08* Unknown08;

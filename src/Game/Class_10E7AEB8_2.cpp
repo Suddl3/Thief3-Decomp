@@ -19,12 +19,12 @@ public:
 
 class Class_10B27FE0;
 
-class Class_10E7AEB8 : public Class_10E6AEA0
+class cT3MainMenuWindow : public Class_10E6AEA0
 {
 public:
-    Class_10E7AEB8();
+    cT3MainMenuWindow();
 
-    ~Class_10E7AEB8();
+    ~cT3MainMenuWindow();
 
     char Unknown04[0xE4];
     int Unknown0E8;
@@ -47,8 +47,8 @@ public:
     bool Unknown189;
 };
 
-// FUNCTION: 0x10B298D0 ??0Class_10E7AEB8@@QAE@XZ
-Class_10E7AEB8::Class_10E7AEB8()
+// FUNCTION: 0x10B298D0 ??0cT3MainMenuWindow@@QAE@XZ
+cT3MainMenuWindow::cT3MainMenuWindow()
 {
     Unknown150 = 0;
     Unknown154 = 0;

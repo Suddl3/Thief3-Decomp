@@ -92,19 +92,19 @@ void Class_10B5C440::FUN_10b5c440()
     }
 }
 
-// FUNCTION: 0x10B5C4D0 ?FUN_10b5c4d0@Class_10B5C4D0@@QAEHH@Z
-int Class_10B5C4D0::FUN_10b5c4d0(int Value)
+// FUNCTION: 0x10B5C4D0 ?FindIndex@Class_10B5C4D0@@QAEHH@Z
+int Class_10B5C4D0::FindIndex(int Value)
 {
-    for (int i = 0; i < Unknown170; i++)
+    for (int i = 0; i < m_Count; i++)
     {
-        if (Value == Unknown178[i])
+        if (Value == m_Values[i])
             return i;
     }
     return -1;
 }
 
-// FUNCTION: 0x10B5F9C0 ?FUN_10b5f9c0@Class_10B5F9C0@@QAEXXZ
-void Class_10B5F9C0::FUN_10b5f9c0()
+// FUNCTION: 0x10B5F9C0 ?MovePrevious@Class_10B5F9C0@@QAEXXZ
+void Class_10B5F9C0::MovePrevious()
 {
     if (Unknown204->Unknown1F0 == Unknown204->Unknown1E8)
         Unknown204->Virtual122();

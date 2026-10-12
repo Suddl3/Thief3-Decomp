@@ -8,7 +8,7 @@ class Class_109B6630;
 class Class_10B7AC10
 {
 public:
-    float FUN_10b7ac10();
+    float GetValue();
 
     char Unknown00[4];
     Class_109B6630* Unknown04;

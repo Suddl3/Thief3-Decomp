@@ -6,7 +6,7 @@
 class Class_10B87530 {
 public:
     void* Unknown00;
-    void FUN_10b87530();
+    void Init();
 };
 
 #endif // GAME_CLASS_10B87530_H

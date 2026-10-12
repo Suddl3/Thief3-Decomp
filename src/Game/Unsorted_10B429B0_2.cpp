@@ -70,8 +70,8 @@ public:
     int Unknown118;
     char Unknown11C[0x4];
     int Unknown120;
-    int Unknown124;
-    char Unknown128[0x4];
+    int m_Elapsed;
+    char m_Duration[0x4];
     Struct_10B429E0 Unknown12C;
 };
 
@@ -79,8 +79,8 @@ extern Class_10B435B0* DAT_10ff6530;
 
 extern int DAT_10ff652c;
 
-// FUNCTION: 0x10B429B0 ?FUN_10b429b0@Class_10B429B0@@QAEXXZ
-void Class_10B429B0::FUN_10b429b0()
+// FUNCTION: 0x10B429B0 ?Reset@Class_10B429B0@@QAEXXZ
+void Class_10B429B0::Reset()
 {
     Unknown124 = 0;
     if (Unknown11C)
@@ -91,7 +91,7 @@ void Class_10B429B0::FUN_10b429b0()
 }
 
 // FUNCTION: 0x10B429E0 ??0Class_10E809B8@@QAE@XZ
-Class_10E809B8::Class_10E809B8() : Unknown118(0), Unknown120(0), Unknown124(0)
+Class_10E809B8::Class_10E809B8() : Unknown118(0), Unknown120(0), m_Elapsed(0)
 {
     Unknown0E8 = 0x16;
 }

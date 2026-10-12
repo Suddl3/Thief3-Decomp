@@ -46,22 +46,22 @@ void Class_10E7EA48::FUN_10b4e6a0(AGarrett* Garrett)
 {
     if (Garrett->Unknown54C == 3)
     {
-        ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(0, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+        ((Class_10B39530*)GetLinkedObject())->Play(0, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
         return;
     }
     switch (Unknown10)
     {
     case 1:
-        ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(3, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+        ((Class_10B39530*)GetLinkedObject())->Play(3, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
         return;
     case 2:
-        ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(9, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+        ((Class_10B39530*)GetLinkedObject())->Play(9, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
         return;
     case 3:
-        ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(0xf, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+        ((Class_10B39530*)GetLinkedObject())->Play(0xf, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
         return;
     case 4:
-        ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(0x15, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+        ((Class_10B39530*)GetLinkedObject())->Play(0x15, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
         return;
     }
 }

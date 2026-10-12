@@ -8,7 +8,7 @@
 class Class_10B4D620
 {
 public:
-    Struct_10B4D620 FUN_10b4d620();
+    Struct_10B4D620 GetUnknownEC();
 
     char Unknown00[0xEC];
     Struct_10B4D620 UnknownEC;

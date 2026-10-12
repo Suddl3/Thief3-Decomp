@@ -15,7 +15,7 @@ struct Item_10B197E0
 // FUNCTION: 0x10B19820 ?CopyFrom@Class_10B197E0@@QAEXABV1@@Z
 void Class_10B197E0::CopyFrom(const Class_10B197E0& Other)
 {
-    FUN_10b19550(Other.m_Count);
+    SetCount(Other.m_Count);
     for (int i = 0; i < m_Count; i++)
         m_Items[i] = Other.m_Items[i];
 }

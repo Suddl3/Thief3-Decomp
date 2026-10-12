@@ -31,5 +31,5 @@ Class_10E876D0::Class_10E876D0()
 {
     Unknown00 = &DAT_10e876d0;
     Unknown118 = DAT_10e7edb8;
-    Unknown1D0.FUN_10b7b910();
+    Unknown1D0.Init();
 }

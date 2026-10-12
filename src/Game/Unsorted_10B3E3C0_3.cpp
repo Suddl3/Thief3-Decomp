@@ -29,9 +29,9 @@ public:
 void Class_10B3ED20::Reset()
 {
     m_ResetPending = 0;
-    ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(0xb5, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
-    ((Class_10B396B0*)GetLinkedObject())->FUN_10b396b0(0xb9);
-    ((Class_10B396B0*)GetLinkedObject())->FUN_10b396b0(0xb8);
+    ((Class_10B39530*)GetLinkedObject())->Play(0xb5, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+    ((Class_10B396B0*)GetLinkedObject())->ResetHandler(0xb9);
+    ((Class_10B396B0*)GetLinkedObject())->ResetHandler(0xb8);
     DAT_10f35dec->Unknown94->Reset();
     ClearSlots(4);
 }

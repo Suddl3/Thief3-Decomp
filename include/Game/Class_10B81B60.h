@@ -28,7 +28,7 @@ public:
     virtual void Virtual17();
     virtual void Virtual18(int Mode, int A, int B);
 
-    void FUN_10b81b60(int Type);
+    void SetModeFromType(int Type);
 
     char Unknown04[8];
     int Unknown0C;

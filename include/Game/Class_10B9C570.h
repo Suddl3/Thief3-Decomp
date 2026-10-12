@@ -8,7 +8,7 @@ class Class_10B9C570_Unknown118;
 class Class_10B9C570
 {
 public:
-    bool FUN_10b9c570();
+    bool IsOutOfRange();
 
     char Pad00[0xC0];
     int Unknown0C0;

@@ -33,7 +33,7 @@ void Class_10B48300::FUN_10b48300(int A)
     }
     if (((Class_10AC3BF0*)Unknown08[Index])->FUN_10ac3bf0())
     {
-        ((Class_10B47C50*)this)->FUN_10b47c50();
+        ((Class_10B47C50*)this)->PlayLastQueued();
         Unknown08[Index]->FUN_10b7ac80(0);
     }
 }

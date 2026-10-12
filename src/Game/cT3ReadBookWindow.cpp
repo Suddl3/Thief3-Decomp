@@ -119,7 +119,7 @@ void cT3ReadBookWindow::FUN_10b2f900(Class_10A52A40_Member* P)
     FUN_10a52a40(P);
     if (Unknown130)
     {
-        if (Unknown0C4)
+        if (m_Selected)
             Unknown130->Virtual102(P);
         else
             Unknown130->Virtual56(0);

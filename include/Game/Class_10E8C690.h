@@ -8,7 +8,7 @@ class cStatePatrol;
 class Class_10E8C690
 {
 public:
-    virtual cStatePatrol* FUN_10ba4560();
+    virtual cStatePatrol* CreateStatePatrol();
 };
 
 #endif // GAME_CLASS_10E8C690_H

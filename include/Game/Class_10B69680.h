@@ -8,7 +8,7 @@ class Class_1098E0F0;
 class Class_10B69680
 {
 public:
-    void FUN_10b69680();
+    void Release();
 
     char Unknown00[0x17c];
     Class_1098E0F0* Unknown17c;

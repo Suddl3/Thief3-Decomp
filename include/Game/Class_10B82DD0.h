@@ -11,7 +11,7 @@ class FVector;
 class Class_10B82DD0
 {
 public:
-    bool FUN_10b82dd0(const FVector& A, int B);
+    bool Teleport(const FVector& A, int B);
 
     char Unknown00[0x10];
     Class_10D9FEE0* Unknown10;

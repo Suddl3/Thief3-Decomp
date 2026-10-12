@@ -8,7 +8,7 @@
 class Class_10A51A40
 {
 public:
-    void FUN_10a51a40(int A, int B);
+    void SetValueAt(int A, int B);
 };
 
 class Class_10B2E770_Field124
@@ -230,7 +230,7 @@ void Class_10B2E6F0::FUN_10b2e6f0()
 {
     Class_10A51A40* P = Unknown149 ? Unknown11C : Unknown118;
     if (P)
-        P->FUN_10a51a40(0, 0);
+        P->SetValueAt(0, 0);
 }
 
 // FUNCTION: 0x10B2E770 ?FUN_10b2e770@Class_10B2E770@@QAEXXZ

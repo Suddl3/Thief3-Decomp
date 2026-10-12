@@ -21,7 +21,7 @@ public:
     void FUN_10b48220(cIntArray* A, int B, int C);
 };
 
-Class_10B3A460* FUN_10b3abf0();
+Class_10B3A460* GetEntries();
 
 class Class_10B47C90
 {
@@ -95,8 +95,8 @@ void Class_10B399B0::FUN_10b399b0(cIntArray* A, int B, int C)
 {
     if (A->Unknown00 > 0)
     {
-        int Index = FUN_10b3abf0()->FUN_10b3a460(A->Unknown08[A->Unknown00 - 1])->Unknown1C;
-        Unknown0C[Index]->FUN_10b48220(A, B, C);
+        int Index = GetEntries()->GetEntry(A->Unknown08[A->Unknown00 - 1])->m_Index;
+        m_Handlers[Index]->FUN_10b48220(A, B, C);
     }
 }
 
@@ -105,7 +105,7 @@ void Class_10B39A70::FUN_10b39a70(int A)
 {
     FUN_10b399f0();
     for (int i = 0; i < 8; i++)
-        Unknown0C[i]->FUN_10b47c90(A);
+        m_Handlers[i]->FUN_10b47c90(A);
     Unknown08->Virtual55(A);
 }
 

@@ -128,9 +128,9 @@ public:
     virtual int Virtual117();
 
     char Unknown04[0x2C4];
-    Struct_10B79180* Unknown2C8;
+    Struct_10B79180* m_Entries;
 
-    int FUN_10b79180(int Key);
+    int FindKeyByValue(int Key);
 };
 
 #endif // GAME_CLASS_10B79180_H

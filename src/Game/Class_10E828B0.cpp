@@ -145,7 +145,7 @@ public:
     virtual void FUN_10b5ac20(Class_10B16B30_Result* A, const Struct_10B16B30& P); // slot 119
 
     char Pad04[0x1CC];
-    float Unknown1D0;
+    float m_Blend;
 };
 
 // FUNCTION: 0x10B5AC20 ?FUN_10b5ac20@Class_10E828B0@@UAEXPAVClass_10B16B30_Result@@ABUStruct_10B16B30@@@Z
@@ -153,14 +153,14 @@ void Class_10E828B0::FUN_10b5ac20(Class_10B16B30_Result* A, const Struct_10B16B3
 {
     Struct_10F05678 From = DAT_10f05678;
     Struct_10F05678 Out;
-    Out.Unknown02 = (unsigned char)(int)((float)DAT_10f05678.Unknown02 + ((float)DAT_10f0567c.Unknown02 - (float)DAT_10f05678.Unknown02) * Unknown1D0);
-    Out.Unknown01 = (unsigned char)(int)((float)From.Unknown01 + ((float)DAT_10f0567c.Unknown01 - (float)From.Unknown01) * Unknown1D0);
-    Out.Unknown00 = (unsigned char)(int)((float)From.Unknown00 + ((float)DAT_10f0567c.Unknown00 - (float)From.Unknown00) * Unknown1D0);
-    Out.Unknown03 = (unsigned char)(int)((float)DAT_10f05678.Unknown03 + ((float)DAT_10f0567c.Unknown03 - (float)DAT_10f05678.Unknown03) * Unknown1D0);
+    Out.Unknown02 = (unsigned char)(int)((float)DAT_10f05678.Unknown02 + ((float)DAT_10f0567c.Unknown02 - (float)DAT_10f05678.Unknown02) * m_Blend);
+    Out.Unknown01 = (unsigned char)(int)((float)From.Unknown01 + ((float)DAT_10f0567c.Unknown01 - (float)From.Unknown01) * m_Blend);
+    Out.Unknown00 = (unsigned char)(int)((float)From.Unknown00 + ((float)DAT_10f0567c.Unknown00 - (float)From.Unknown00) * m_Blend);
+    Out.Unknown03 = (unsigned char)(int)((float)DAT_10f05678.Unknown03 + ((float)DAT_10f0567c.Unknown03 - (float)DAT_10f05678.Unknown03) * m_Blend);
     Struct_10B16B30 Range;
     Range.Unknown0C = P.Unknown0C;
     Range.Unknown00 = P.Unknown00;
     Range.Unknown04 = P.Unknown04;
-    Range.Unknown08 = (int)((float)(P.Unknown08 - P.Unknown00) * Unknown1D0) + P.Unknown00;
+    Range.Unknown08 = (int)((float)(P.Unknown08 - P.Unknown00) * m_Blend) + P.Unknown00;
     FUN_10a23fb0(A, &Range, (char*)&From, (char*)&Out);
 }

@@ -31,8 +31,8 @@ public:
 
 extern Class_10F46DA0* DAT_10f46da0;
 
-// FUNCTION: 0x10B69680 ?FUN_10b69680@Class_10B69680@@QAEXXZ
-void Class_10B69680::FUN_10b69680()
+// FUNCTION: 0x10B69680 ?Release@Class_10B69680@@QAEXXZ
+void Class_10B69680::Release()
 {
     if (Unknown17c)
     {

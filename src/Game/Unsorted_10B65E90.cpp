@@ -127,7 +127,7 @@ public:
 class Class_10B65FD0 : public Class_10A52A40
 {
 public:
-    void FUN_10b65fd0(Class_10A52A40_Member* A);
+    void SetSelected(Class_10A52A40_Member* A);
 
     char Unknown00[0xC4];
     int Unknown0C4;
@@ -135,8 +135,8 @@ public:
     Class_10B65FD0_Unknown18C* Unknown18C;
 };
 
-// FUNCTION: 0x10B65FD0 ?FUN_10b65fd0@Class_10B65FD0@@QAEXPAVClass_10A52A40_Member@@@Z
-void Class_10B65FD0::FUN_10b65fd0(Class_10A52A40_Member* A)
+// FUNCTION: 0x10B65FD0 ?SetSelected@Class_10B65FD0@@QAEXPAVClass_10A52A40_Member@@@Z
+void Class_10B65FD0::SetSelected(Class_10A52A40_Member* A)
 {
     FUN_10a52a40(A);
     if (Unknown18C)
@@ -154,5 +154,5 @@ void Class_10B66020::FUN_10b66020()
     Virtual56(0);
     Virtual113();
     GWindowManager->FUN_109e8930(this);
-    Unknown184->SetData(&Unknown158);
+    m_DifficultyPane->SetData(&m_Data);
 }

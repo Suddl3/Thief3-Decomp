@@ -9,10 +9,10 @@ public:
     virtual bool Virtual1(int A, int B, bool C);
 };
 
-// FUNCTION: 0x10B64460 ?FUN_10b64460@Class_10B64460@@QAE_NHH_NPAVClass_10B64460_Unknown04@@@Z
-bool Class_10B64460::FUN_10b64460(int A, int B, bool C, Class_10B64460_Unknown04* D)
+// FUNCTION: 0x10B64460 ?HandleKey@Class_10B64460@@QAE_NHH_NPAVClass_10B64460_Unknown04@@@Z
+bool Class_10B64460::HandleKey(int A, int B, bool C, Class_10B64460_Unknown04* D)
 {
-    if (!C || D == 0 || D != Unknown04)
+    if (!C || D == 0 || D != m_Target)
     {
         Unknown1C = 0x40;
         return false;
@@ -22,7 +22,7 @@ bool Class_10B64460::FUN_10b64460(int A, int B, bool C, Class_10B64460_Unknown04
         Unknown20 = 0;
         Unknown24 = 0;
         Unknown1C = A;
-        return Unknown04->Virtual1(A, B, C);
+        return m_Target->Virtual1(A, B, C);
     }
     return false;
 }

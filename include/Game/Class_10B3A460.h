@@ -6,14 +6,14 @@
 class Class_10B3A460
 {
 public:
-    Class_10B3A460* FUN_10b3a460(int A);
+    Class_10B3A460* GetEntry(int A);
 
     char Unknown00;
     char Pad01[0x3];
     float Unknown04;
     char Pad08[0x4];
     char Unknown0C[0x10];
-    int Unknown1C;
+    int m_Index;
     char Unknown20[0xC];
 };
 

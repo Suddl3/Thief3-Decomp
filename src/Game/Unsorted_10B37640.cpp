@@ -15,7 +15,7 @@ extern Class_10F3A3D8* DAT_10f3a3d8;
 
 void FUN_10d660b0();
 
-Class_10B3A460* FUN_10b3abf0();
+Class_10B3A460* GetEntries();
 
 class Class_10AF7F80
 {
@@ -69,6 +69,6 @@ void Class_10E7C584::FUN_10b39500(int A)
 // FUNCTION: 0x10B39580 ?FUN_10b39580@Class_10B39580@@QAEXHH@Z
 void Class_10B39580::FUN_10b39580(int A, int B)
 {
-    int Index = FUN_10b3abf0()->FUN_10b3a460(A)->Unknown1C;
+    int Index = GetEntries()->GetEntry(A)->m_Index;
     Unknown0C[Index]->FUN_10b47660(A, B);
 }

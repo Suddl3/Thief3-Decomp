@@ -55,8 +55,8 @@ public:
     void FUN_10b92690();
 };
 
-// FUNCTION: 0x10B87530 ?FUN_10b87530@Class_10B87530@@QAEXXZ
-void Class_10B87530::FUN_10b87530()
+// FUNCTION: 0x10B87530 ?Init@Class_10B87530@@QAEXXZ
+void Class_10B87530::Init()
 {
     Unknown00 = DAT_10e89384;
 }
@@ -80,8 +80,8 @@ void FUN_10b8ec00()
     DAT_10ff6600 = 0;
 }
 
-// FUNCTION: 0x10B8EC40 ?FUN_10b8ec40@Class_10B8EC40@@QAEXXZ
-void Class_10B8EC40::FUN_10b8ec40()
+// FUNCTION: 0x10B8EC40 ?Init@Class_10B8EC40@@QAEXXZ
+void Class_10B8EC40::Init()
 {
     Unknown00 = DAT_10e6bf84;
 }
@@ -98,8 +98,8 @@ int FUN_10b8f6c0()
     return 0x42;
 }
 
-// FUNCTION: 0x10B8F6D0 ?FUN_10b8f6d0@Class_10E897F4@@QAEPAV1@XZ
-Class_10E897F4* Class_10E897F4::FUN_10b8f6d0()
+// FUNCTION: 0x10B8F6D0 ?Init@Class_10E897F4@@QAEPAV1@XZ
+Class_10E897F4* Class_10E897F4::Init()
 {
     Unknown00 = &DAT_10e897f4;
     return this;
@@ -111,22 +111,22 @@ int FUN_10b8f6e0()
     return 0x47;
 }
 
-// FUNCTION: 0x10B8F6F0 ?FUN_10b8f6f0@Class_10E89800@@QAEPAV1@XZ
-Class_10E89800* Class_10E89800::FUN_10b8f6f0()
+// FUNCTION: 0x10B8F6F0 ?Init@Class_10E89800@@QAEPAV1@XZ
+Class_10E89800* Class_10E89800::Init()
 {
     Unknown00 = &DAT_10e89800;
     return this;
 }
 
-// FUNCTION: 0x10B8F700 ?FUN_10b8f700@Class_10E8980C@@QAEPAV1@XZ
-Class_10E8980C* Class_10E8980C::FUN_10b8f700()
+// FUNCTION: 0x10B8F700 ?Init@Class_10E8980C@@QAEPAV1@XZ
+Class_10E8980C* Class_10E8980C::Init()
 {
     Unknown00 = &DAT_10e8980c;
     return this;
 }
 
-// FUNCTION: 0x10B8F710 ?FUN_10b8f710@Class_10B8F710@@QAEXXZ
-void Class_10B8F710::FUN_10b8f710()
+// FUNCTION: 0x10B8F710 ?Init@Class_10B8F710@@QAEXXZ
+void Class_10B8F710::Init()
 {
     Unknown00 = DAT_10e6ca18;
 }
@@ -137,8 +137,8 @@ int FUN_10b8fc70()
     return 0x71;
 }
 
-// FUNCTION: 0x10B8FC80 ?FUN_10b8fc80@Class_10E89818@@QAEPAV1@XZ
-Class_10E89818* Class_10E89818::FUN_10b8fc80()
+// FUNCTION: 0x10B8FC80 ?Init@Class_10E89818@@QAEPAV1@XZ
+Class_10E89818* Class_10E89818::Init()
 {
     Unknown00 = &DAT_10e89818;
     return this;
@@ -150,8 +150,8 @@ int FUN_10b8fc90()
     return 0x72;
 }
 
-// FUNCTION: 0x10B8FCA0 ?FUN_10b8fca0@Class_10E89824@@QAEPAV1@XZ
-Class_10E89824* Class_10E89824::FUN_10b8fca0()
+// FUNCTION: 0x10B8FCA0 ?Init@Class_10E89824@@QAEPAV1@XZ
+Class_10E89824* Class_10E89824::Init()
 {
     *(void**)this = DAT_10e89824;
     return this;

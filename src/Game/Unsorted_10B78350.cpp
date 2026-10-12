@@ -109,14 +109,14 @@ public:
     bool Unknown18C;
 };
 
-// FUNCTION: 0x10B78380 ?FUN_10b78380@Class_10B78380@@QAEXXZ
-void Class_10B78380::FUN_10b78380()
+// FUNCTION: 0x10B78380 ?FreeArray@Class_10B78380@@QAEXXZ
+void Class_10B78380::FreeArray()
 {
-    if (Unknown168)
+    if (m_Array)
     {
-        int* Obj = Unknown168 - 1;
+        int* Obj = m_Array - 1;
         GetAllocator()->Virtual5(Obj);
-        Unknown168 = 0;
+        m_Array = 0;
     }
 }
 

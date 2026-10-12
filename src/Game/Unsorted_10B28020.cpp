@@ -133,10 +133,10 @@ public:
     virtual void Virtual102(Class_10A52A40_Member* A);
 };
 
-class Class_10E7AEB8 : public Class_10A52A40
+class cT3MainMenuWindow : public Class_10A52A40
 {
 public:
-    void FUN_10b282e0(Class_10A52A40_Member* A);
+    void SetSelectedItem(Class_10A52A40_Member* A);
 
     char Unknown00[0xC4];
     int Unknown0C4;
@@ -640,8 +640,8 @@ public:
     virtual void Virtual56(int A);
 };
 
-// FUNCTION: 0x10B28020 ?FUN_10b28020@Class_10B28020@@QAEXXZ
-void Class_10B28020::FUN_10b28020()
+// FUNCTION: 0x10B28020 ?ResetStates@Class_10B28020@@QAEXXZ
+void Class_10B28020::ResetStates()
 {
     if (Unknown170)
         Unknown170->Virtual56(0);
@@ -662,8 +662,8 @@ void Class_10B28020::FUN_10b28020()
     this->Virtual102(0);
 }
 
-// FUNCTION: 0x10B282E0 ?FUN_10b282e0@Class_10E7AEB8@@QAEXPAVClass_10A52A40_Member@@@Z
-void Class_10E7AEB8::FUN_10b282e0(Class_10A52A40_Member* A)
+// FUNCTION: 0x10B282E0 ?SetSelectedItem@cT3MainMenuWindow@@QAEXPAVClass_10A52A40_Member@@@Z
+void cT3MainMenuWindow::SetSelectedItem(Class_10A52A40_Member* A)
 {
     FUN_10a52a40(A);
     if (Unknown170)
@@ -675,8 +675,8 @@ void Class_10E7AEB8::FUN_10b282e0(Class_10A52A40_Member* A)
     }
 }
 
-// FUNCTION: 0x10B28390 ?FUN_10b28390@Class_10B28390@@QAEXXZ
-void Class_10B28390::FUN_10b28390()
+// FUNCTION: 0x10B28390 ?OpenTitleLoad@Class_10B28390@@QAEXXZ
+void Class_10B28390::OpenTitleLoad()
 {
     Virtual56(0);
     GWindowManager->FUN_109e8930(this);

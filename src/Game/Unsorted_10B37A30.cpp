@@ -64,8 +64,8 @@ struct Struct_10B37DE0_List
     AAIPathPoint* Last;
 };
 
-// FUNCTION: 0x10B37DE0 ?FUN_10b37de0@Class_10B37DE0@@QAEXHHPAUStruct_10B37DE0_List@@@Z
-void Class_10B37DE0::FUN_10b37de0(int A, int B, Struct_10B37DE0_List* C)
+// FUNCTION: 0x10B37DE0 ?AddPathPoint@Class_10B37DE0@@QAEXHHPAUStruct_10B37DE0_List@@@Z
+void Class_10B37DE0::AddPathPoint(int A, int B, Struct_10B37DE0_List* C)
 {
     UClass* Class = (UClass*)FUN_10a4bd70(A);
     if (Class == 0)

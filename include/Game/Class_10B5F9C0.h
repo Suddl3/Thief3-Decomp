@@ -113,7 +113,7 @@ public:
     virtual void Virtual102(int A);
 
     void FUN_10b5e920(int A);
-    void FUN_10b5f9c0();
+    void MovePrevious();
 
     char Unknown04[0xC0];
     int Unknown0C4;

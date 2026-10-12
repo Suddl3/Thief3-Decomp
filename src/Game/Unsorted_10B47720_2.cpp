@@ -27,7 +27,7 @@ void Class_10B48300::FUN_10b478e0()
         ((Class_10AAB5C0*)Unknown08[1])->GetUnknown08(),
         ((Class_10B7AC30*)Unknown08[1])->FUN_10b7ac30(),
         1.0f,
-        ((Class_10B7AD00*)Unknown08[1])->FUN_10b7ad00(0),
+        ((Class_10B7AD00*)Unknown08[1])->GetValue(0),
         ((Class_10B7AD50*)Unknown08[1])->FUN_10b7ad50(0),
         -1.0f);
     int i = 1;
@@ -36,10 +36,10 @@ void Class_10B48300::FUN_10b478e0()
         do
         {
             ((Class_10EC0E20*)Unknown08[0])->FUN_10b7b460(
-                ((Class_10B7AD00*)Unknown08[1])->FUN_10b7ad00(i),
+                ((Class_10B7AD00*)Unknown08[1])->GetValue(i),
                 ((Class_10B7AD50*)Unknown08[1])->FUN_10b7ad50(i),
                 i,
-                ((Class_10B7AD20*)Unknown08[1])->FUN_10b7ad20(i));
+                ((Class_10B7AD20*)Unknown08[1])->GetValue(i));
             i++;
         } while (i < (int)((Class_10C7D570*)Unknown08[1])->FUN_10c7d570());
     }

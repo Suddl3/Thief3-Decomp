@@ -68,11 +68,11 @@ public:
     virtual void Virtual55();
     virtual void Virtual56(int A);
 
-    void FUN_10b66060(int A, Data_10B66060* B);
+    void SetData(int A, Data_10B66060* B);
 
     char Pad04[0x150];
-    Data_10B66060* Unknown154;
-    Info_10B66060 Unknown158;
+    Data_10B66060* m_Data;
+    Info_10B66060 m_Info;
     int Unknown184;
 };
 

@@ -9,11 +9,11 @@ class Class_10B912E0
 {
 public:
     void FUN_10b90980(int Count);
-    void FUN_10b912e0();
+    void Free();
 
-    int Unknown00;
+    int m_Count;
     int Unknown04;
-    Class_10DAAF90* Unknown08;
+    Class_10DAAF90* m_Elements;
 };
 
 #endif // GAME_CLASS_10B912E0_H

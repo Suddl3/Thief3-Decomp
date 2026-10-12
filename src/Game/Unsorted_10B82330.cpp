@@ -45,8 +45,8 @@ FVector Class_10B82330::FUN_10b82330()
     return FVector(0.0f, 0.0f, 0.0f);
 }
 
-// FUNCTION: 0x10B82DD0 ?FUN_10b82dd0@Class_10B82DD0@@QAE_NABVFVector@@H@Z
-bool Class_10B82DD0::FUN_10b82dd0(const FVector& A, int B)
+// FUNCTION: 0x10B82DD0 ?Teleport@Class_10B82DD0@@QAE_NABVFVector@@H@Z
+bool Class_10B82DD0::Teleport(const FVector& A, int B)
 {
     Unknown10->FUN_10da0000(false);
     Struct_10B7C800 V = FUN_10b7c800(A);

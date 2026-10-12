@@ -18,8 +18,8 @@ struct Struct_10B42280
     int Unknown96C;
 };
 
-// FUNCTION: 0x10B42280 ?FUN_10b42280@@YGXPAUStruct_10B42280@@@Z
-void __stdcall FUN_10b42280(Struct_10B42280* A)
+// FUNCTION: 0x10B42280 ?PushSample@@YGXPAUStruct_10B42280@@@Z
+void __stdcall PushSample(Struct_10B42280* A)
 {
     A->Unknown964 = 1;
     A->Unknown96C++;

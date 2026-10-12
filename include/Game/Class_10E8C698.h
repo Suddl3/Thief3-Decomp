@@ -8,7 +8,7 @@ class cStateGuard;
 class Class_10E8C698
 {
 public:
-    virtual cStateGuard* FUN_10ba4600();
+    virtual cStateGuard* CreateStateGuard();
 };
 
 #endif // GAME_CLASS_10E8C698_H

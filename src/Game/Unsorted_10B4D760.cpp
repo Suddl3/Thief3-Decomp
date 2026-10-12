@@ -33,7 +33,7 @@ void Class_10B4D800::FUN_10b4d800(Class_10B22020* A)
     Unknown11 = true;
     if (Value != 0x101)
     {
-        ((Class_10B396B0*)GetLinkedObject())->FUN_10b396b0(Value);
+        ((Class_10B396B0*)GetLinkedObject())->ResetHandler(Value);
         Unknown08 = 0x101;
     }
     A->Unknown460 = 0;
@@ -83,5 +83,5 @@ void Class_10B4D800::FUN_10b4d800(Class_10B22020* A)
         }
     }
     if (Unknown08 != 0x101)
-        ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(Unknown08, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+        ((Class_10B39530*)GetLinkedObject())->Play(Unknown08, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
 }

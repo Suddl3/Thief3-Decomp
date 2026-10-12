@@ -9,12 +9,12 @@ class FName;
 class Class_10B8AB60
 {
 public:
-    FName FUN_10b8ab60();
+    FName GetName();
 
     char Unknown00[0x30];
-    int Unknown30;
+    int m_NameIndex;
     char Unknown34[4];
-    Class_109B5830* Unknown38;
+    Class_109B5830* m_Names;
 };
 
 #endif // GAME_CLASS_10B8AB60_H

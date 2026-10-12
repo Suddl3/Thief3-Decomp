@@ -157,8 +157,8 @@ class Class_10E984F4
 {
 public:
     void* Unknown00;
-    int Unknown04;
-    Class_10E984F4* FUN_10c12a90();
+    int m_Elements;
+    Class_10E984F4* Init();
 };
 
 class Class_10E97CB4;
@@ -265,11 +265,11 @@ Class_10E984BC::Class_10E984BC()
     Unknown04 = 0;
 }
 
-// FUNCTION: 0x10C12A90 ?FUN_10c12a90@Class_10E984F4@@QAEPAV1@XZ
-Class_10E984F4* Class_10E984F4::FUN_10c12a90()
+// FUNCTION: 0x10C12A90 ?Init@Class_10E984F4@@QAEPAV1@XZ
+Class_10E984F4* Class_10E984F4::Init()
 {
     Unknown00 = DAT_10e984f4;
-    Unknown04 = 0;
+    m_Elements = 0;
     return this;
 }
 

@@ -8,7 +8,7 @@ struct Struct_10B375E0;
 class Class_10B375E0
 {
 public:
-    void FUN_10b375e0(int A, Struct_10B375E0* B, int C);
+    void Activate(int A, Struct_10B375E0* B, int C);
 };
 
 #endif // GAME_CLASS_10B375E0_H

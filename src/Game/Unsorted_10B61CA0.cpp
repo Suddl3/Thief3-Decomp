@@ -13,7 +13,7 @@ public:
 class Class_10B61CE0
 {
 public:
-    int FUN_10b61ce0();
+    int FindIndex();
 
     char Unknown00[0xC4];
     void* UnknownC4;
@@ -21,20 +21,20 @@ public:
     cIntArray Unknown19C;
 };
 
-// FUNCTION: 0x10B61CA0 ?FUN_10b61ca0@Class_10B61CA0@@QAEHXZ
-int Class_10B61CA0::FUN_10b61ca0()
+// FUNCTION: 0x10B61CA0 ?FindIndex@Class_10B61CA0@@QAEHXZ
+int Class_10B61CA0::FindIndex()
 {
     int Result = -1;
     int i = 0;
     bool Done = false;
     while (!Done)
     {
-        if (i >= Unknown190)
+        if (i >= m_Count)
         {
             Result = -1;
             Done = true;
         }
-        else if (Unknown198[i] == UnknownC4)
+        else if (m_Items[i] == UnknownC4)
         {
             Result = i;
             Done = true;
@@ -44,8 +44,8 @@ int Class_10B61CA0::FUN_10b61ca0()
     return Result;
 }
 
-// FUNCTION: 0x10B61CE0 ?FUN_10b61ce0@Class_10B61CE0@@QAEHXZ
-int Class_10B61CE0::FUN_10b61ce0()
+// FUNCTION: 0x10B61CE0 ?FindIndex@Class_10B61CE0@@QAEHXZ
+int Class_10B61CE0::FindIndex()
 {
     int Index = -1;
     int i = 0;

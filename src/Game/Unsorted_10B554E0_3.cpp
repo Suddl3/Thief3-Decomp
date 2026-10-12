@@ -74,8 +74,8 @@ public:
 
 extern Class_10F3A3D8* DAT_10f3a3d8;
 
-// FUNCTION: 0x10B55680 ?FUN_10b55680@@YGHPADH@Z
-int __stdcall FUN_10b55680(char* Line, int B)
+// FUNCTION: 0x10B55680 ?HandleGlyphCommand@@YGHPADH@Z
+int __stdcall HandleGlyphCommand(char* Line, int B)
 {
     if (FUN_10af42f0(&Line, "USEGLYPH"))
     {

@@ -33,10 +33,10 @@ void Class_10E7E970::FUN_10b4d920(Class_10B22020* A)
     A->Unknown54E = false;
     if (Unknown08 != 0x101)
     {
-        ((Class_10B396B0*)GetLinkedObject())->FUN_10b396b0(Unknown08);
+        ((Class_10B396B0*)GetLinkedObject())->ResetHandler(Unknown08);
         Unknown08 = 0x101;
     }
-    ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(0x60 + (Unknown10 == 10), -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+    ((Class_10B39530*)GetLinkedObject())->Play(0x60 + (Unknown10 == 10), -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
     A->Unknown460 = 0;
     A->Unknown4BC = 0;
     ((Class_10B398B0*)GetLinkedObject())->FUN_10b398b0(0);

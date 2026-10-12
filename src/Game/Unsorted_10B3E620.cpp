@@ -22,19 +22,19 @@ void Class_10B3E340::FUN_10b3e6b0(int A, float B)
 {
     if (Unknown3C != 1 && Unknown38 != 2)
     {
-        ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(0xb9, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+        ((Class_10B39530*)GetLinkedObject())->Play(0xb9, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
         Unknown3C = 1;
     }
     if (Unknown40 != 1 && Unknown38 != 3)
     {
-        ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(0xb8, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+        ((Class_10B39530*)GetLinkedObject())->Play(0xb8, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
         Unknown40 = 1;
     }
     if (Unknown38 == 2)
     {
         if (Unknown3C != 0)
         {
-            ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(0xbd, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+            ((Class_10B39530*)GetLinkedObject())->Play(0xbd, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
             Unknown3C = 0;
         }
     }

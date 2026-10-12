@@ -13,18 +13,18 @@ public:
         FUN_10b330d0(0);
         if (Unknown04)
         {
-            GetAllocator()->Virtual5(Unknown08);
-            Unknown08 = 0;
+            GetAllocator()->Virtual5(m_Items);
+            m_Items = 0;
             Unknown04 = 0;
         }
     }
 
-    int FUN_10b34130(const Item_10B34130* Item);
+    int AddItem(const Item_10B34130* Item);
     void FUN_10b330d0(int NewCount);
 
-    int Unknown00;
+    int m_Count;
     int Unknown04;
-    Item_10B34130* Unknown08;
+    Item_10B34130* m_Items;
 };
 
 struct Struct_10C08690;

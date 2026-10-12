@@ -134,9 +134,9 @@ void Class_10A529B0::FUN_10a529b0()
 // FUNCTION: 0x10A52A40 ?FUN_10a52a40@Class_10A52A40@@QAEXPAVClass_10A52A40_Member@@@Z
 void Class_10A52A40::FUN_10a52a40(Class_10A52A40_Member* P)
 {
-    if (Unknown0C4 && Unknown0C4 != P && Unknown0C4->Virtual46())
-        Unknown0C4->Virtual70(0);
-    Unknown0C4 = P;
+    if (m_Selected && m_Selected != P && m_Selected->Virtual46())
+        m_Selected->Virtual70(0);
+    m_Selected = P;
     if (P)
         P->Virtual70(1);
 }

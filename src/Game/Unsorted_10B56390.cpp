@@ -286,37 +286,37 @@ struct Struct_10B56410_Elem
     bool Unknown18;
 };
 
-// FUNCTION: 0x10B56410 ?FUN_10b56410@Class_10B56410@@QAEXXZ
-void Class_10B56410::FUN_10b56410()
+// FUNCTION: 0x10B56410 ?UpdateHighlight@Class_10B56410@@QAEXXZ
+void Class_10B56410::UpdateHighlight()
 {
     Struct_10B56410_Key Key;
-    int Index = Unknown1AC;
-    int Sub = Unknown1B0;
+    int Index = m_Index;
+    int Sub = m_SubIndex;
     Class_10B56410_Unknown190* Obj;
-    if (Index >= 0 && Index < 0xC && Sub >= 0 && Sub < 2 && !Unknown16C[Index]->Unknown18)
-        Obj = Unknown16C[Index]->Unknown08[Sub].Unknown00;
+    if (Index >= 0 && Index < 0xC && Sub >= 0 && Sub < 2 && !m_Rows[Index]->Unknown18)
+        Obj = m_Rows[Index]->Unknown08[Sub].Unknown00;
     else
         Obj = 0;
-    if (Unknown190)
+    if (m_Highlight)
     {
         Key.Unknown00 = 0xe3;
         Key.Unknown01 = 0xb4;
         Key.Unknown02 = 0x92;
         Key.Unknown03 = 0xff;
-        Unknown190->Virtual123(&Key);
+        m_Highlight->Virtual123(&Key);
     }
-    if (Unknown194)
+    if (m_HighlightSecondary)
     {
         Key.Unknown00 = 0xad;
         Key.Unknown01 = 0x57;
         Key.Unknown02 = 0x61;
         Key.Unknown03 = 0xff;
-        Unknown194->Virtual123(&Key);
+        m_HighlightSecondary->Virtual123(&Key);
     }
-    Unknown190 = Obj;
+    m_Highlight = Obj;
     if (!Obj)
     {
-        Unknown194 = 0;
+        m_HighlightSecondary = 0;
         return;
     }
     Key.Unknown00 = 0xff;
@@ -324,8 +324,8 @@ void Class_10B56410::FUN_10b56410()
     Key.Unknown02 = 0x6a;
     Key.Unknown03 = 0xff;
     Obj->Virtual123(&Key);
-    Class_10B56410_Unknown194* Next = Unknown16C[Unknown1AC]->Unknown04;
-    Unknown194 = Next;
+    Class_10B56410_Unknown194* Next = m_Rows[m_Index]->Unknown04;
+    m_HighlightSecondary = Next;
     Key.Unknown00 = 0xff;
     Key.Unknown01 = 0x57;
     Key.Unknown02 = 0x6a;

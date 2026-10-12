@@ -43,7 +43,7 @@ void Class_10B4F610::FUN_10b4f610(AGarrett* A)
     else
         Value = (A->isCrouching ? 6 : 0) + 0x58;
     if (Unknown11)
-        ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(Value, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+        ((Class_10B39530*)GetLinkedObject())->Play(Value, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
     else
         ((Class_10B395E0*)GetLinkedObject())->FUN_10b395e0(Value);
 }

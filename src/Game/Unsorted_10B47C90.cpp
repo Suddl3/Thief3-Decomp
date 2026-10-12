@@ -6,8 +6,8 @@
 
 extern float DAT_10e49684;
 
-// FUNCTION: 0x10B481C0 ?FUN_10b481c0@Class_10B481C0@@QAEXHMMHH_N0M@Z
-void Class_10B481C0::FUN_10b481c0(int A, float B, float C, int D, int E, bool F, bool G, float H)
+// FUNCTION: 0x10B481C0 ?ReplaceAndPlay@Class_10B481C0@@QAEXHMMHH_N0M@Z
+void Class_10B481C0::ReplaceAndPlay(int A, float B, float C, int D, int E, bool F, bool G, float H)
 {
     Unknown4C.SetCount(0);
     if (B > DAT_10e49684)

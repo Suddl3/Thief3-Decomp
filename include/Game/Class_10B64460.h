@@ -8,10 +8,10 @@ class Class_10B64460_Unknown04;
 class Class_10B64460
 {
 public:
-    bool FUN_10b64460(int A, int B, bool C, Class_10B64460_Unknown04* D);
+    bool HandleKey(int A, int B, bool C, Class_10B64460_Unknown04* D);
 
     char Unknown00[4];
-    Class_10B64460_Unknown04* Unknown04;
+    Class_10B64460_Unknown04* m_Target;
     char Unknown08[0x14];
     int Unknown1C;
     int Unknown20;

@@ -30,13 +30,13 @@ void Class_10B227E0::FUN_10b227e0()
         switch (Unknown04->Unknown44C)
         {
         case 2:
-            Unknown98->FUN_10b39530(0x60, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+            Unknown98->Play(0x60, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
             break;
         case 3:
-            Unknown98->FUN_10b39530(0x62, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+            Unknown98->Play(0x62, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
             break;
         case 10:
-            Unknown98->FUN_10b39530(0x61, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+            Unknown98->Play(0x61, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
             break;
         }
     }

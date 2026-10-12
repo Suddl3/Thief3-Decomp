@@ -71,7 +71,7 @@ public:
 class Class_10E81620 : public Class_10E7E4E0
 {
 public:
-    Class_10E81620* FUN_10b4fc90();
+    Class_10E81620* Init();
 
     float Unknown10;
     char Unknown14;
@@ -94,7 +94,7 @@ extern void* DAT_10e816e0[];
 class GSMantle : public Class_10E7E4E0
 {
 public:
-    GSMantle* FUN_10b53a30();
+    GSMantle* Init();
 
     char Unknown10[0x10];
     int Unknown20;
@@ -119,8 +119,8 @@ extern void FUN_10a51620(void);
 class Class_10E81740 : public Class_10E67BD8
 {
 public:
-    Class_10E81740* FUN_10b53f70();
-    void FUN_10b53fa0();
+    Class_10E81740* Init();
+    void Reset();
 
     char Unknown004[0xE4];
     int fieldE8;
@@ -165,9 +165,9 @@ bool Class_10B46D40::FUN_10b46d40()
 {
     if (Virtual80())
         return true;
-    for (int i = 0; i < UnknownB8; i++)
+    for (int i = 0; i < m_ChildCount; i++)
     {
-        Class_10B46D40* Child = UnknownC0[i];
+        Class_10B46D40* Child = m_Children[i];
         if (Child && Child->Virtual80())
             return true;
     }
@@ -242,8 +242,8 @@ int FUN_10b4cd10()
     return 0x1f;
 }
 
-// FUNCTION: 0x10B4D620 ?FUN_10b4d620@Class_10B4D620@@QAE?AUStruct_10B4D620@@XZ
-Struct_10B4D620 Class_10B4D620::FUN_10b4d620()
+// FUNCTION: 0x10B4D620 ?GetUnknownEC@Class_10B4D620@@QAE?AUStruct_10B4D620@@XZ
+Struct_10B4D620 Class_10B4D620::GetUnknownEC()
 {
     return UnknownEC;
 }
@@ -274,8 +274,8 @@ void FUN_10b4fc80()
     FUN_10a54cd0();
 }
 
-// FUNCTION: 0x10B4FC90 ?FUN_10b4fc90@Class_10E81620@@QAEPAV1@XZ
-Class_10E81620* Class_10E81620::FUN_10b4fc90()
+// FUNCTION: 0x10B4FC90 ?Init@Class_10E81620@@QAEPAV1@XZ
+Class_10E81620* Class_10E81620::Init()
 {
     FUN_10b3acb0();
     Unknown00 = DAT_10e81620;
@@ -301,8 +301,8 @@ void FUN_10b4ff30()
     FUN_10b3acd0();
 }
 
-// FUNCTION: 0x10B53A30 ?FUN_10b53a30@GSMantle@@QAEPAV1@XZ
-GSMantle* GSMantle::FUN_10b53a30()
+// FUNCTION: 0x10B53A30 ?Init@GSMantle@@QAEPAV1@XZ
+GSMantle* GSMantle::Init()
 {
     FUN_10b3acb0();
     Unknown20 = 0;
@@ -312,8 +312,8 @@ GSMantle* GSMantle::FUN_10b53a30()
     return this;
 }
 
-// FUNCTION: 0x10B53F70 ?FUN_10b53f70@Class_10E81740@@QAEPAV1@XZ
-Class_10E81740* Class_10E81740::FUN_10b53f70()
+// FUNCTION: 0x10B53F70 ?Init@Class_10E81740@@QAEPAV1@XZ
+Class_10E81740* Class_10E81740::Init()
 {
     this->Class_10E67BD8::Class_10E67BD8();
     this->fieldE8 |= 0x10;
@@ -322,8 +322,8 @@ Class_10E81740* Class_10E81740::FUN_10b53f70()
     return this;
 }
 
-// FUNCTION: 0x10B53FA0 ?FUN_10b53fa0@Class_10E81740@@QAEXXZ
-void Class_10E81740::FUN_10b53fa0()
+// FUNCTION: 0x10B53FA0 ?Reset@Class_10E81740@@QAEXXZ
+void Class_10E81740::Reset()
 {
     *(void**)this = DAT_10e81740;
     Unknown118 = DAT_10e7edb8;

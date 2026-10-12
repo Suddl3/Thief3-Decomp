@@ -29,14 +29,14 @@ void Class_10B9BDB0::FUN_10b9bdb0()
     }
 }
 
-// FUNCTION: 0x10B9C030 ?FUN_10b9c030@Class_10B9C030@@QAE_NH@Z
-bool Class_10B9C030::FUN_10b9c030(int Value)
+// FUNCTION: 0x10B9C030 ?Contains@Class_10B9C030@@QAE_NH@Z
+bool Class_10B9C030::Contains(int Value)
 {
     return FindIndex(Value) != -1;
 }
 
-// FUNCTION: 0x10B9C9A0 ?FUN_10b9c9a0@Class_10B9C9A0@@QAEXXZ
-void Class_10B9C9A0::FUN_10b9c9a0()
+// FUNCTION: 0x10B9C9A0 ?Release@Class_10B9C9A0@@QAEXXZ
+void Class_10B9C9A0::Release()
 {
     Class_10B9BEB0* Object = Unknown00;
     if (Object)

@@ -19,7 +19,7 @@ public:
     char Unknown04[0x114];
     void** Unknown118;
 
-    Class_10E7F770* FUN_10b405b0();
+    Class_10E7F770* Construct();
 };
 
 extern void* DAT_10e7f930[];
@@ -32,11 +32,11 @@ public:
     char Unknown04[0x114];
     void** Unknown118;
 
-    Class_10E7F930* FUN_10b405d0();
+    Class_10E7F930* Construct();
 };
 
-// FUNCTION: 0x10B405B0 ?FUN_10b405b0@Class_10E7F770@@QAEPAV1@XZ
-Class_10E7F770* Class_10E7F770::FUN_10b405b0()
+// FUNCTION: 0x10B405B0 ?Construct@Class_10E7F770@@QAEPAV1@XZ
+Class_10E7F770* Class_10E7F770::Construct()
 {
     this->Class_10E67BD8::Class_10E67BD8();
     vtable = DAT_10e7f770;
@@ -44,8 +44,8 @@ Class_10E7F770* Class_10E7F770::FUN_10b405b0()
     return this;
 }
 
-// FUNCTION: 0x10B405D0 ?FUN_10b405d0@Class_10E7F930@@QAEPAV1@XZ
-Class_10E7F930* Class_10E7F930::FUN_10b405d0()
+// FUNCTION: 0x10B405D0 ?Construct@Class_10E7F930@@QAEPAV1@XZ
+Class_10E7F930* Class_10E7F930::Construct()
 {
     this->Class_10E67BD8::Class_10E67BD8();
     vtable = DAT_10e7f930;

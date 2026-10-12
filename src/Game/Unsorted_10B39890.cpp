@@ -3,10 +3,10 @@
 #include "Game/Class_10B39890.h"
 #include "Game/Class_10B3A460.h"
 
-Class_10B3A460* FUN_10b3abf0();
+Class_10B3A460* GetEntries();
 
-// FUNCTION: 0x10B39890 ?FUN_10b39890@Class_10B39890@@QAEPAXH@Z
-void* Class_10B39890::FUN_10b39890(int A)
+// FUNCTION: 0x10B39890 ?GetEntryData@Class_10B39890@@QAEPAXH@Z
+void* Class_10B39890::GetEntryData(int A)
 {
-    return FUN_10b3abf0()->FUN_10b3a460(A)->Unknown0C;
+    return GetEntries()->GetEntry(A)->Unknown0C;
 }

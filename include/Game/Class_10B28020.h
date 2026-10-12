@@ -119,7 +119,7 @@ public:
     virtual void Virtual101();
     virtual void Virtual102(int A);
 
-    void FUN_10b28020();
+    void ResetStates();
 
     char Unknown04[0x14C];
     Class_10B28020_Unknown150* Unknown150;

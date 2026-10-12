@@ -11,7 +11,7 @@ public:
     void FUN_10b397d0(int A, int B, int C, int D);
 
     char Unknown00[0xC];
-    Class_10B47180* Unknown0C[1];
+    Class_10B47180* m_Handlers[1];
 };
 
 #endif // GAME_CLASS_10B397D0_H

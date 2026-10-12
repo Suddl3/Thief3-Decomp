@@ -10,8 +10,8 @@ public:
     float FUN_109b6630(int A);
 };
 
-// FUNCTION: 0x10B7AC10 ?FUN_10b7ac10@Class_10B7AC10@@QAEMXZ
-float Class_10B7AC10::FUN_10b7ac10()
+// FUNCTION: 0x10B7AC10 ?GetValue@Class_10B7AC10@@QAEMXZ
+float Class_10B7AC10::GetValue()
 {
     if (Unknown04 == 0)
         return DAT_10eafbdc;

@@ -6,7 +6,7 @@
 class Class_10B3E5C0
 {
 public:
-    bool FUN_10b3e5c0(int A);
+    bool IsNear(int A);
 
     int Unknown00[7];
     float Unknown1C;

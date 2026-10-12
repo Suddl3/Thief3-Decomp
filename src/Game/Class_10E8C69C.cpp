@@ -6,8 +6,8 @@
 // Ion Storm's placement new (0x10905C10).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 
-// FUNCTION: 0x10BA4650 ?FUN_10ba4650@Class_10E8C69C@@UAEPAVcStateFlee@@XZ
-cStateFlee* Class_10E8C69C::FUN_10ba4650()
+// FUNCTION: 0x10BA4650 ?CreateStateFlee@Class_10E8C69C@@UAEPAVcStateFlee@@XZ
+cStateFlee* Class_10E8C69C::CreateStateFlee()
 {
     cStateFlee* Object = (cStateFlee*)operator new(sizeof(cStateFlee), 0, 0, 0, 0, 0);
     if (Object)

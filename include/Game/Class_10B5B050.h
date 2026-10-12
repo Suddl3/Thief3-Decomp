@@ -8,7 +8,7 @@ class cString;
 class Class_10B5B050
 {
 public:
-    cString FUN_10b5b050();
+    cString GetFactionPaneFileName();
 };
 
 #endif // GAME_CLASS_10B5B050_H

@@ -8,12 +8,12 @@ struct Struct_10B33260;
 class Class_10B33260
 {
 public:
-    bool FUN_10b33260(int A, int* B);
+    bool HasEntry(int A, int* B);
 
     char Unknown00[0x190];
-    int Unknown190;
+    int m_Count;
     char Unknown194[4];
-    Struct_10B33260* Unknown198;
+    Struct_10B33260* m_Entries;
 };
 
 #endif // GAME_CLASS_10B33260_H

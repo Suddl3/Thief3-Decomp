@@ -15,7 +15,7 @@ public:
 void Class_10B91800::CopyFrom(int A)
 {
     Class_10B91800* Other = (Class_10B91800*)A;
-    FUN_10b90980(Other->Unknown00);
-    for (int i = 0; i < Unknown00; i++)
-        Unknown08[i].FUN_10daaf90(&Other->Unknown08[i]);
+    FUN_10b90980(Other->m_Count);
+    for (int i = 0; i < m_Count; i++)
+        m_Elements[i].FUN_10daaf90(&Other->m_Elements[i]);
 }

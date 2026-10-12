@@ -6,12 +6,12 @@
 class Class_10B5C4D0
 {
 public:
-    int FUN_10b5c4d0(int Value);
+    int FindIndex(int Value);
 
     char Unknown00[0x170];
-    int Unknown170;
+    int m_Count;
     char Unknown174[4];
-    int* Unknown178;
+    int* m_Values;
 };
 
 #endif // GAME_CLASS_10B5C4D0_H

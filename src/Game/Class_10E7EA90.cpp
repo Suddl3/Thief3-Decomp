@@ -16,7 +16,7 @@ public:
 void Class_10E7EA90::UpdateCrouchMotion(AGarrett* Garrett)
 {
     if (Garrett->isCrouching)
-        ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(0xaf, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+        ((Class_10B39530*)GetLinkedObject())->Play(0xaf, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
     else
-        ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(0, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+        ((Class_10B39530*)GetLinkedObject())->Play(0, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
 }

@@ -10,13 +10,13 @@ class Class_10B651B0_Member;
 class Class_10B651B0
 {
 public:
-    void FUN_10b651b0(Struct_10B651B0* Src);
+    void SetData(Struct_10B651B0* Src);
     void FUN_10b64de0();
 
     char Unknown00[4];
     Class_10B651B0_Member* Unknown04;
     char Unknown08[4];
-    Struct_10B651B0 Unknown0C;
+    Struct_10B651B0 m_Data;
 };
 
 #endif // GAME_CLASS_10B651B0_H

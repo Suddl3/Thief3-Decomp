@@ -5,7 +5,7 @@
 #include "Game/Class_Unknown00.h"
 #include "Game/Struct_10B87560.h"
 #include "Game/Struct_10B88840.h"
-#include "Game/Class_10B88840.h"
+#include "Game/cRagdollBlockData.h"
 #include "Game/Class_10B888D0.h"
 #include "Game/Class_10B888E0.h"
 
@@ -22,7 +22,7 @@ public:
 class Class_10E89540 : public Class_10E89AA0
 {
 public:
-    Class_10E89540* FUN_10b8b5b0(int A, int B);
+    Class_10E89540* Init(int A, int B);
 
     char Unknown04[0x14];
     bool Unknown18;
@@ -76,8 +76,8 @@ Class_10E893B0::Class_10E893B0()
 // FUNCTION: 0x10B87EE0 ??_GClass_10E893B0@@UAEPAXI@Z
 // Compiler-generated: emitted with the class's vtable by 0x10B87560's definition in this unit.
 
-// FUNCTION: 0x10B88840 ?FUN_10b88840@Class_10B88840@@QAEPAV1@XZ
-Class_10B88840* Class_10B88840::FUN_10b88840()
+// FUNCTION: 0x10B88840 ?Reset@cRagdollBlockData@@QAEPAV1@XZ
+cRagdollBlockData* cRagdollBlockData::Reset()
 {
     Unknown30 = false;
     for (int i = 0; i < 4; i++)
@@ -101,8 +101,8 @@ void Class_10B888E0::FUN_10b888e0(int p1, int* p2)
     *p2 = Unknown00[p1].Unknown04;
 }
 
-// FUNCTION: 0x10B8B5B0 ?FUN_10b8b5b0@Class_10E89540@@QAEPAV1@HH@Z
-Class_10E89540* Class_10E89540::FUN_10b8b5b0(int A, int B)
+// FUNCTION: 0x10B8B5B0 ?Init@Class_10E89540@@QAEPAV1@HH@Z
+Class_10E89540* Class_10E89540::Init(int A, int B)
 {
     this->Class_10E89AA0::Class_10E89AA0(1, A, B);
     Unknown00 = DAT_10e89540;

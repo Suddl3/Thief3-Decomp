@@ -17,8 +17,8 @@ struct Struct_10B375E0
     bool Unknown04;
 };
 
-// FUNCTION: 0x10B375E0 ?FUN_10b375e0@Class_10B375E0@@QAEXHPAUStruct_10B375E0@@H@Z
-void Class_10B375E0::FUN_10b375e0(int A, Struct_10B375E0* B, int C)
+// FUNCTION: 0x10B375E0 ?Activate@Class_10B375E0@@QAEXHPAUStruct_10B375E0@@H@Z
+void Class_10B375E0::Activate(int A, Struct_10B375E0* B, int C)
 {
     bool Flag = true;
     if (B != (Struct_10B375E0*)-1)

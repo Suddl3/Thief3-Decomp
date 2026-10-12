@@ -18,8 +18,8 @@ struct Struct_10B9CA20
     Class_10B9CA20_Item** Unknown08;
 };
 
-// FUNCTION: 0x10B9CA20 ?FUN_10b9ca20@@YAXPAUStruct_10B9CA20@@@Z
-void FUN_10b9ca20(Struct_10B9CA20* List)
+// FUNCTION: 0x10B9CA20 ?ClearItems@@YAXPAUStruct_10B9CA20@@@Z
+void ClearItems(Struct_10B9CA20* List)
 {
     for (int i = 0; i < List->Unknown00; i++)
         delete List->Unknown08[i];

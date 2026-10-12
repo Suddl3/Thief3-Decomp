@@ -314,10 +314,10 @@ void cT3AVOptionsWindow::ShowMainMenu()
     }
 }
 
-// FUNCTION: 0x10B651B0 ?FUN_10b651b0@Class_10B651B0@@QAEXPAUStruct_10B651B0@@@Z
-void Class_10B651B0::FUN_10b651b0(Struct_10B651B0* Src)
+// FUNCTION: 0x10B651B0 ?SetData@Class_10B651B0@@QAEXPAUStruct_10B651B0@@@Z
+void Class_10B651B0::SetData(Struct_10B651B0* Src)
 {
-    Unknown0C = *Src;
+    m_Data = *Src;
     Unknown04->Virtual120(Src->Unknown04, Src->Unknown08);
     Unknown04->Virtual56(2);
     Unknown04->Virtual70(0);

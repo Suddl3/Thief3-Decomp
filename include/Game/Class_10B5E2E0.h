@@ -10,12 +10,12 @@ class Class_10B5E2E0_Field204;
 class Class_10B5E2E0
 {
 public:
-    void FUN_10b5e2e0();
+    void RebuildList();
 
     char Pad00[0x1d0];
-    int Unknown1D0;
+    int m_Limit;
     char Pad1D4[0x14];
-    Class_10B197E0 Unknown1E8;
+    Class_10B197E0 m_Entries;
     char Pad1F4[0x10];
     Class_10B5E2E0_Field204* Unknown204;
 };

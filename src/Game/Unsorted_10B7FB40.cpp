@@ -47,8 +47,8 @@ int FUN_10b7fb40(Class_1098E330* A)
     return Result;
 }
 
-// FUNCTION: 0x10B7FC20 ?FUN_10b7fc20@Class_10B7FC20@@QAEHXZ
-int Class_10B7FC20::FUN_10b7fc20()
+// FUNCTION: 0x10B7FC20 ?GetCount@Class_10B7FC20@@QAEHXZ
+int Class_10B7FC20::GetCount()
 {
-    return Unknown00.size();
+    return m_Items.size();
 }

@@ -25,7 +25,7 @@ public:
     void FUN_10b47a00(int A);
 };
 
-Class_10B3A460* FUN_10b3abf0();
+Class_10B3A460* GetEntries();
 
 // FUNCTION: 0x10B375B0 ?FUN_10b375b0@Class_10B375B0@@QAEXHPAUStruct_10B375B0@@H@Z
 void Class_10B375B0::FUN_10b375b0(int A, Struct_10B375B0* B, int C)
@@ -38,20 +38,20 @@ void Class_10B375B0::FUN_10b375b0(int A, Struct_10B375B0* B, int C)
 // FUNCTION: 0x10B395B0 ?FUN_10b395b0@Class_10B395B0@@QAEXH@Z
 void Class_10B395B0::FUN_10b395b0(int A)
 {
-    Class_10B47A00* Item = Unknown0C[FUN_10b3abf0()->FUN_10b3a460(A)->Unknown1C];
+    Class_10B47A00* Item = Unknown0C[GetEntries()->GetEntry(A)->m_Index];
     Item->FUN_10b47a00(A);
 }
 
 // FUNCTION: 0x10B395E0 ?FUN_10b395e0@Class_10B395E0@@QAEXH@Z
 void Class_10B395E0::FUN_10b395e0(int A)
 {
-    Class_10B47AB0* Item = Unknown0C[FUN_10b3abf0()->FUN_10b3a460(A)->Unknown1C];
+    Class_10B47AB0* Item = Unknown0C[GetEntries()->GetEntry(A)->m_Index];
     Item->FUN_10b47ab0(A);
 }
 
 // FUNCTION: 0x10B39670 ?FUN_10b39670@Class_10B39670@@QAEXH@Z
 void Class_10B39670::FUN_10b39670(int A)
 {
-    Class_10B46F10* Item = Unknown0C[FUN_10b3abf0()->FUN_10b3a460(A)->Unknown1C];
+    Class_10B46F10* Item = Unknown0C[GetEntries()->GetEntry(A)->m_Index];
     Item->FUN_10b46f10(A);
 }

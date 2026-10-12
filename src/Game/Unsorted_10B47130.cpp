@@ -27,7 +27,7 @@ void Class_10B47180::FUN_10b47180(int A, int B, int C, int D)
 {
     int Index = FindIndex(A);
     if (Index >= 0)
-        Unknown08[Index]->FUN_10b7acc0(C, D);
+        Unknown08[Index]->SetValue(C, D);
     else if (A == Unknown14)
         Unknown3C = C;
 }

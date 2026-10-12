@@ -8,7 +8,7 @@
 class Class_10B88870
 {
 public:
-    void FUN_10b88870(int Index, const void* Data, int Size);
+    void SetChunk(int Index, const void* Data, int Size);
 
     Struct_10B88870 Unknown00[1];
 };

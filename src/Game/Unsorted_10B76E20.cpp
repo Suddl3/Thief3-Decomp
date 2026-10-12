@@ -54,8 +54,8 @@ void* Class_10B78340::FUN_10b78340()
     return Field188;
 }
 
-// FUNCTION: 0x10B7A2F0 ?FUN_10b7a2f0@Class_10E888E4@@QAEPAV1@XZ
-Class_10E888E4* Class_10E888E4::FUN_10b7a2f0()
+// FUNCTION: 0x10B7A2F0 ?Init@Class_10E888E4@@QAEPAV1@XZ
+Class_10E888E4* Class_10E888E4::Init()
 {
     Unknown04 = 1.0f;
     Unknown08 = 0;
@@ -76,8 +76,8 @@ void Class_10B7AC80::FUN_10b7ac80(unsigned char param)
     Field40 = param;
 }
 
-// FUNCTION: 0x10B7B910 ?FUN_10b7b910@Class_10B7B910@@QAEPAV1@XZ
-Class_10B7B910* Class_10B7B910::FUN_10b7b910()
+// FUNCTION: 0x10B7B910 ?Init@Class_10B7B910@@QAEPAV1@XZ
+Class_10B7B910* Class_10B7B910::Init()
 {
     Field00 = -1;
     return this;

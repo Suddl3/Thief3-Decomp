@@ -108,7 +108,7 @@ public:
     virtual void Virtual97();
     virtual void Virtual98();
 
-    void FUN_10a51a40(int A, int B);
+    void SetValueAt(int A, int B);
 
     char Unknown04[0x11C];
     Class_1092E930 Unknown120;

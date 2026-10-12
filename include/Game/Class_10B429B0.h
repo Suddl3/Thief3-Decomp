@@ -8,7 +8,7 @@ class Class_10A64EB0;
 class Class_10B429B0
 {
 public:
-    void FUN_10b429b0();
+    void Reset();
 
     char Unknown00[0x11C];
     Class_10A64EB0* Unknown11C;

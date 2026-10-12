@@ -60,6 +60,6 @@ public:
 // FUNCTION: 0x10B644C0 ?FUN_10b644c0@Class_10E84728@@UAEXHH@Z
 void Class_10E84728::FUN_10b644c0(int A, int B)
 {
-    if (Unknown04)
-        Unknown04->Virtual49(A, B);
+    if (m_Target)
+        m_Target->Virtual49(A, B);
 }

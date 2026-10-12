@@ -9,7 +9,7 @@
 #include "Game/Class_10905A90_Member.h"
 #include "Game/cString.h"
 #include "Game/Class_1091ABB0.h"
-#include "Game/Class_10B89070.h"
+#include "Game/cRagdollBlockDataManager.h"
 
 struct Struct_10E89478_Unknown08
 {
@@ -41,8 +41,8 @@ int FUN_10d39b30();
 
 void FUN_10d39510(const char* Text, int Code, int Value);
 
-// FUNCTION: 0x10B89070 ?FUN_10b89070@Class_10B89070@@QAEPAUEntry_10C32C30@@PAVClass_1091ABB0@@@Z
-Entry_10C32C30* Class_10B89070::FUN_10b89070(Class_1091ABB0* Arg)
+// FUNCTION: 0x10B89070 ?FindOrLoad@cRagdollBlockDataManager@@QAEPAUEntry_10C32C30@@PAVClass_1091ABB0@@@Z
+Entry_10C32C30* cRagdollBlockDataManager::FindOrLoad(Class_1091ABB0* Arg)
 {
     Entry_10C32C30* Found = 0;
     {
@@ -79,8 +79,8 @@ bool Class_10E89458::FUN_10b89280(Class_10E89458* Other)
     return D.FUN_109a6aa0() != 0;
 }
 
-// FUNCTION: 0x10B89760 ?FUN_10b89760@ElevatorController@@UAEXXZ
-void ElevatorController::FUN_10b89760()
+// FUNCTION: 0x10B89760 ?saveControllerState@ElevatorController@@UAEXXZ
+void ElevatorController::saveControllerState()
 {
     Struct_10B89760_Param Param;
     Param.Unknown00 = FVector(-1.0f, -1.0f, -1.0f);

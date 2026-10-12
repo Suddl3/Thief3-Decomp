@@ -8,12 +8,12 @@ class Object_10B7C7C0;
 class Class_10E4B178
 {
 public:
-    virtual int FUN_10b7c7c0(int A, int B);
+    virtual int Dispatch(int A, int B);
 
     char Unknown04[0x2C];
-    int Unknown30;
+    int m_ChildCount;
     char Unknown34[4];
-    Object_10B7C7C0** Unknown38;
+    Object_10B7C7C0** m_Children;
 };
 
 #endif // GAME_CLASS_10E4B178_H

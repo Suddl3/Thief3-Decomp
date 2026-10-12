@@ -9,9 +9,9 @@
 class Class_10B7FC20
 {
 public:
-    int FUN_10b7fc20();
+    int GetCount();
 
-    std::vector<Struct_10B7FC20_Item> Unknown00;
+    std::vector<Struct_10B7FC20_Item> m_Items;
 };
 
 #endif // GAME_CLASS_10B7FC20_H

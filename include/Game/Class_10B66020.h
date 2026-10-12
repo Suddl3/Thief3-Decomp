@@ -128,8 +128,8 @@ public:
     void FUN_10b66020();
 
     char Unknown04[0x154];
-    Struct_10B6C180 Unknown158;
-    cDifficultyPane* Unknown184;
+    Struct_10B6C180 m_Data;
+    cDifficultyPane* m_DifficultyPane;
 };
 
 #endif // GAME_CLASS_10B66020_H

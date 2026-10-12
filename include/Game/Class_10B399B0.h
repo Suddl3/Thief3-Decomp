@@ -12,7 +12,7 @@ public:
     void FUN_10b399b0(cIntArray* A, int B, int C);
 
     char Unknown00[0xC];
-    Class_10B48220* Unknown0C[1];
+    Class_10B48220* m_Handlers[1];
 };
 
 #endif // GAME_CLASS_10B399B0_H

@@ -14,7 +14,7 @@ public:
     Class_10E5D360(int Value) : Unknown04(Value) {}
 
     virtual void Virtual1();
-    virtual int FUN_10b9caa0(Class_10E5D360* Other);
+    virtual int IsEqual(Class_10E5D360* Other);
 
     int Unknown04;
 };

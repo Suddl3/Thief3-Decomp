@@ -27,20 +27,20 @@ struct Static_10B3A410
     int Unknown18;
 };
 
-Class_10B3A460* FUN_10b3abf0();
+Class_10B3A460* GetEntries();
 
 // FUNCTION: 0x10B39790 ?FUN_10b39790@Class_10B39790@@QAEXHHHHH@Z
 void Class_10B39790::FUN_10b39790(int A, int B, int C, int D, int E)
 {
-    int Index = FUN_10b3abf0()->FUN_10b3a460(A)->Unknown1C;
-    Unknown0C[Index]->FUN_10b47130(A, B, C, D, E);
+    int Index = GetEntries()->GetEntry(A)->m_Index;
+    m_Handlers[Index]->FUN_10b47130(A, B, C, D, E);
 }
 
 // FUNCTION: 0x10B397D0 ?FUN_10b397d0@Class_10B397D0@@QAEXHHHH@Z
 void Class_10B397D0::FUN_10b397d0(int A, int B, int C, int D)
 {
-    int Index = FUN_10b3abf0()->FUN_10b3a460(A)->Unknown1C;
-    Unknown0C[Index]->FUN_10b47180(A, B, C, D);
+    int Index = GetEntries()->GetEntry(A)->m_Index;
+    m_Handlers[Index]->FUN_10b47180(A, B, C, D);
 }
 
 // FUNCTION: 0x10B39870 ?FUN_10b39870@Class_10B39870@@QAEHH@Z

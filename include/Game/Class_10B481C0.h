@@ -8,8 +8,8 @@
 class Class_10B481C0 : public Class_10B47C50
 {
 public:
-    void FUN_10b481c0(int A, float B, float C, int D, int E, int F, int G, float H);
-    void FUN_10b481c0(int A, float B, float C, int D, int E, bool F, bool G, float H);
+    void ReplaceAndPlay(int A, float B, float C, int D, int E, int F, int G, float H);
+    void ReplaceAndPlay(int A, float B, float C, int D, int E, bool F, bool G, float H);
 };
 
 #endif // GAME_CLASS_10B481C0_H

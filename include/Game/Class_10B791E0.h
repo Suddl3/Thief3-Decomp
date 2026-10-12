@@ -127,10 +127,10 @@ public:
     virtual void Virtual116();
     virtual int Virtual117();
 
-    int FUN_10b791e0(int Key);
+    int FindValueByKey(int Key);
 
     char Unknown04[0x2C4];
-    Struct_10B791E0_Entry* Unknown2C8;
+    Struct_10B791E0_Entry* m_Entries;
 };
 
 #endif // GAME_CLASS_10B791E0_H

@@ -8,14 +8,14 @@ class Class_109B5DB0;
 class Class_10B7AD20
 {
 public:
-    float FUN_10b7ad20(int A);
+    float GetValue(int A);
 
     int Unknown00;
     Class_109B5DB0* Unknown04;
     char Unknown08[0xC];
     int Unknown14;
     char Unknown18[0x10];
-    int Unknown28;
+    int m_NumValues;
 };
 
 #endif // GAME_CLASS_10B7AD20_H

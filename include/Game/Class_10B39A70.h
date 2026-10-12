@@ -16,7 +16,7 @@ public:
     char Unknown00[4];
     Struct_10B21820_Object* Unknown04;
     Class_10B39A70_Unknown08* Unknown08;
-    Class_10B47C90* Unknown0C[8];
+    Class_10B47C90* m_Handlers[8];
 };
 
 #endif // GAME_CLASS_10B39A70_H

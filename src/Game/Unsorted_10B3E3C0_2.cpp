@@ -26,8 +26,8 @@ public:
     int Unknown40;
 };
 
-// FUNCTION: 0x10B3E5C0 ?FUN_10b3e5c0@Class_10B3E5C0@@QAE_NH@Z
-bool Class_10B3E5C0::FUN_10b3e5c0(int A)
+// FUNCTION: 0x10B3E5C0 ?IsNear@Class_10B3E5C0@@QAE_NH@Z
+bool Class_10B3E5C0::IsNear(int A)
 {
     float X = Unknown28 - Unknown1C;
     float Y = Unknown2C - Unknown20;
@@ -43,12 +43,12 @@ void Class_10B3E7A0::FUN_10b3e7a0(int A)
 {
     if (Unknown40)
     {
-        ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(0xbc, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+        ((Class_10B39530*)GetLinkedObject())->Play(0xbc, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
         Unknown40 = 0;
     }
     if (Unknown3C)
     {
-        ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(0xbd, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+        ((Class_10B39530*)GetLinkedObject())->Play(0xbd, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
         Unknown3C = 0;
     }
 }

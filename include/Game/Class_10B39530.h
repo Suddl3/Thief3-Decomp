@@ -8,10 +8,10 @@ class Class_10B481C0;
 class Class_10B39530
 {
 public:
-    void FUN_10b39530(int A, float B, float C, int D, int E, int F, float G);
+    void Play(int A, float B, float C, int D, int E, int F, float G);
 
     char Unknown00[0xC];
-    Class_10B481C0* Unknown0C[1];
+    Class_10B481C0* m_Handlers[1];
 };
 
 #endif // GAME_CLASS_10B39530_H

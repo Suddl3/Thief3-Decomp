@@ -42,7 +42,7 @@ public:
     virtual bool FUN_10a52e70(int A, int B, int C);
 };
 
-class Class_10E7AEB8 : public Class_10E5B2C0
+class cT3MainMenuWindow : public Class_10E5B2C0
 {
 public:
     virtual bool FUN_10b27fe0(int A, int B, int C);
@@ -56,16 +56,16 @@ extern void* GWindowManager[];
 
 void* GetWindowManager();
 
-// FUNCTION: 0x10B27FE0 ?FUN_10b27fe0@Class_10E7AEB8@@UAE_NHHH@Z
-bool Class_10E7AEB8::FUN_10b27fe0(int A, int B, int C)
+// FUNCTION: 0x10B27FE0 ?FUN_10b27fe0@cT3MainMenuWindow@@UAE_NHHH@Z
+bool cT3MainMenuWindow::FUN_10b27fe0(int A, int B, int C)
 {
     if (Unknown178)
         Unknown17C->Virtual1();
     return Class_10E5B2C0::FUN_10a52e70(A, B, C);
 }
 
-// FUNCTION: 0x10B283D0 ?FUN_10b283d0@Class_10B283D0@@QAEXXZ
-void Class_10B283D0::FUN_10b283d0()
+// FUNCTION: 0x10B283D0 ?OpenCredits@Class_10B283D0@@QAEXXZ
+void Class_10B283D0::OpenCredits()
 {
     static_cast<Class_109E8930*>(GWindowManager[0])->FUN_109e8930(this);
     Virtual56(0);

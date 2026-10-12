@@ -10,8 +10,8 @@ void Class_10B39780::FUN_10b39780()
     Unknown0c->FUN_10b46fd0();
 }
 
-// FUNCTION: 0x10B3A460 ?FUN_10b3a460@Class_10B3A460@@QAEPAV1@H@Z
-Class_10B3A460* Class_10B3A460::FUN_10b3a460(int p1)
+// FUNCTION: 0x10B3A460 ?GetEntry@Class_10B3A460@@QAEPAV1@H@Z
+Class_10B3A460* Class_10B3A460::GetEntry(int p1)
 {
     return this + p1;
 }

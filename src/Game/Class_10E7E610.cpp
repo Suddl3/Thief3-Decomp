@@ -56,7 +56,7 @@ void Class_10E7E610::FUN_10b492f0(AGarrett* Garrett)
 {
     Unknown10 = 1;
     ForceBody(Garrett);
-    ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(0x48, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+    ((Class_10B39530*)GetLinkedObject())->Play(0x48, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
     StopBody(Garrett);
     Unknown18 = 0;
     Unknown20 = 1;

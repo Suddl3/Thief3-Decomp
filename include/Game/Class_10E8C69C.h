@@ -8,7 +8,7 @@ class cStateFlee;
 class Class_10E8C69C
 {
 public:
-    virtual cStateFlee* FUN_10ba4650();
+    virtual cStateFlee* CreateStateFlee();
 };
 
 #endif // GAME_CLASS_10E8C69C_H

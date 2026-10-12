@@ -152,7 +152,7 @@ void cT3AVOptionsWindow::BindControls()
     if (Obj)
         Base = Obj->Unknown1F0;
     for (int i = 0; i < Unknown17C; i++)
-        m_Controls[i]->FUN_10b651b0(m_Options[Base + i]);
+        m_Controls[i]->SetData(m_Options[Base + i]);
     Virtual16(1);
     Virtual115();
     Virtual102(Unknown0C4);

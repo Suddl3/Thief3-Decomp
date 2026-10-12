@@ -21,7 +21,7 @@ public:
     bool m_NoAutoResize;
     char Pad11[0x3];
     Class_10B2A160_Node** m_Buckets;
-    Class_10B2A160_Field18 Unknown18;
+    Class_10B2A160_Field18 m_KeyTraits;
 };
 
 #endif // GAME_CLASS_10B2A160_H

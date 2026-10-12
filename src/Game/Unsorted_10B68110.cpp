@@ -53,8 +53,8 @@ extern Struct_10AA3520* DAT_10f35dec;
 
 APlayerPawn* FUN_10983ca0(APlayerPawn* A);
 
-// FUNCTION: 0x10B68110 ?FUN_10b68110@@YAXXZ
-void FUN_10b68110()
+// FUNCTION: 0x10B68110 ?UpdateCitySectionGoals@@YAXXZ
+void UpdateCitySectionGoals()
 {
     Struct_10ABF1F0* List = GetCitySectionManager()->FUN_10abf1f0();
     for (int i = 0; i < List->Count; i++)

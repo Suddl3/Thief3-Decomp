@@ -13,7 +13,7 @@ public:
     void FUN_10a52a40(Class_10A52A40_Member* P);
 
     char Unknown04[0xC0];
-    Class_10A52A40_Member* Unknown0C4;
+    Class_10A52A40_Member* m_Selected;
 };
 
 #endif // GAME_CLASS_10A52A40_H

@@ -64,7 +64,7 @@ public:
     virtual void Virtual55();
     virtual void Virtual56(int A);
 
-    void FUN_10b283d0();
+    void OpenCredits();
 };
 
 #endif // GAME_CLASS_10B283D0_H

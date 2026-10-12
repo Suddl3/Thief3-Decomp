@@ -15,9 +15,9 @@ public:
 
     char Unknown00[0xAC];
     FVector Unknown0AC;
-    float Unknown0B8;
+    float m_Scale;
     char Unknown0BC[4];
-    int Unknown0C0;
+    int m_Axis;
 };
 
 #endif // GAME_CLASS_10B83E50_H

@@ -41,6 +41,6 @@ void Class_10E7EC40::FUN_10b48430(Object_10B48430* A)
     if (A->Unknown54C == 3)
         Unknown08 = 0x41;
     if (Unknown08 != 0x101)
-        ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(Unknown08, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+        ((Class_10B39530*)GetLinkedObject())->Play(Unknown08, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
     DAT_10f3a3d8->Unknown13C->FUN_10ac92f0();
 }

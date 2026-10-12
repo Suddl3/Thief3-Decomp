@@ -29,12 +29,12 @@ void Class_10B3E2C0::FUN_10b3e2c0(int A)
 {
     if (Unknown3C != 2)
     {
-        ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(0xbb, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+        ((Class_10B39530*)GetLinkedObject())->Play(0xbb, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
         Unknown3C = 2;
     }
     if (Unknown40 != 2)
     {
-        ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(0xba, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+        ((Class_10B39530*)GetLinkedObject())->Play(0xba, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
         Unknown40 = 2;
     }
 }

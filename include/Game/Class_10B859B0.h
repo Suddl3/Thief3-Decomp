@@ -10,7 +10,7 @@
 class Class_10B859B0
 {
 public:
-    Class_10B859B0* FUN_10b859b0();
+    Class_10B859B0* Reset();
 
     int Unknown00;
     int Unknown04;
@@ -18,7 +18,7 @@ public:
     Struct_10B859B0_0C Unknown0C;
     int Unknown18;
     int Unknown1C;
-    Struct_10B859B0_Transform Unknown20;
+    Struct_10B859B0_Transform m_Transform;
 };
 
 #endif // GAME_CLASS_10B859B0_H

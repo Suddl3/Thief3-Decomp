@@ -107,7 +107,7 @@ public:
 
     virtual ~Class_10E81300();
 
-    char Unknown118[0x08];
+    char m_Duration[0x08];
     int Unknown120;
     int Unknown124;
     int Unknown128;

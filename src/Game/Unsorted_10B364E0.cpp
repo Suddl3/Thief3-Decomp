@@ -25,8 +25,8 @@ Class_10905A90_Member* GetAllocator();
 // Ion Storm's placement new (0x10905C10).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 
-// FUNCTION: 0x10B364E0 ?FUN_10b364e0@Class_10E79580@@UAEPAVClass_10E7C380@@XZ
-Class_10E7C380* Class_10E79580::FUN_10b364e0()
+// FUNCTION: 0x10B364E0 ?Create@Class_10E79580@@UAEPAVClass_10E7C380@@XZ
+Class_10E7C380* Class_10E79580::Create()
 {
     GetAllocator()->Virtual8(0, 0);
     Class_10E7C380* Result = 0;
@@ -37,8 +37,8 @@ Class_10E7C380* Class_10E79580::FUN_10b364e0()
     return Result;
 }
 
-// FUNCTION: 0x10B36530 ?FUN_10b36530@Class_10E79578@@UAEPAVClass_10E7C38C@@XZ
-Class_10E7C38C* Class_10E79578::FUN_10b36530()
+// FUNCTION: 0x10B36530 ?Create@Class_10E79578@@UAEPAVClass_10E7C38C@@XZ
+Class_10E7C38C* Class_10E79578::Create()
 {
     GetAllocator()->Virtual8(0, 0);
     Class_10E7C38C* Result = 0;
@@ -49,8 +49,8 @@ Class_10E7C38C* Class_10E79578::FUN_10b36530()
     return Result;
 }
 
-// FUNCTION: 0x10B36580 ?FUN_10b36580@Class_10E7957C@@UAEPAVClass_10E7C398@@XZ
-Class_10E7C398* Class_10E7957C::FUN_10b36580()
+// FUNCTION: 0x10B36580 ?Create@Class_10E7957C@@UAEPAVClass_10E7C398@@XZ
+Class_10E7C398* Class_10E7957C::Create()
 {
     GetAllocator()->Virtual8(0, 0);
     Class_10E7C398* Result = 0;
@@ -61,8 +61,8 @@ Class_10E7C398* Class_10E7957C::FUN_10b36580()
     return Result;
 }
 
-// FUNCTION: 0x10B365D0 ?FUN_10b365d0@Class_10E79584@@UAEPAVClass_10E7C3A4@@XZ
-Class_10E7C3A4* Class_10E79584::FUN_10b365d0()
+// FUNCTION: 0x10B365D0 ?Create@Class_10E79584@@UAEPAVClass_10E7C3A4@@XZ
+Class_10E7C3A4* Class_10E79584::Create()
 {
     GetAllocator()->Virtual8(0, 0);
     Class_10E7C3A4* Result = 0;

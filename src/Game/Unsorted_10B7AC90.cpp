@@ -86,10 +86,10 @@ void Class_10B7AC90::FUN_10b7ac90(bool A)
     Unknown04->FUN_109b6cd0(!A);
 }
 
-// FUNCTION: 0x10B7AD20 ?FUN_10b7ad20@Class_10B7AD20@@QAEMH@Z
-float Class_10B7AD20::FUN_10b7ad20(int Index)
+// FUNCTION: 0x10B7AD20 ?GetValue@Class_10B7AD20@@QAEMH@Z
+float Class_10B7AD20::GetValue(int Index)
 {
-    if (Unknown28 > Index)
+    if (m_NumValues > Index)
         return Unknown04->FUN_109b5db0(Unknown14, Index);
     return DAT_10eafbdc;
 }

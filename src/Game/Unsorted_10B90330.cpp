@@ -49,14 +49,14 @@ Struct_10B90530 __stdcall FUN_10b90530(Class_10DA0410* Thing, int C)
     return Result;
 }
 
-// FUNCTION: 0x10B912E0 ?FUN_10b912e0@Class_10B912E0@@QAEXXZ
-void Class_10B912E0::FUN_10b912e0()
+// FUNCTION: 0x10B912E0 ?Free@Class_10B912E0@@QAEXXZ
+void Class_10B912E0::Free()
 {
     FUN_10b90980(0);
     if (Unknown04)
     {
-        GetAllocator()->Virtual5(Unknown08);
-        Unknown08 = 0;
+        GetAllocator()->Virtual5(m_Elements);
+        m_Elements = 0;
         Unknown04 = 0;
     }
 }
@@ -65,8 +65,8 @@ void Class_10B912E0::FUN_10b912e0()
 Class_10B91800* Class_10B91800::Assign(int A)
 {
     Unknown04 = 0;
-    Unknown00 = 0;
-    Unknown08 = 0;
+    m_Count = 0;
+    m_Elements = 0;
     CopyFrom(A);
     return this;
 }

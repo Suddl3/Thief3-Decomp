@@ -10,16 +10,16 @@ struct Struct_10B56410_Elem;
 class Class_10B56410
 {
 public:
-    void FUN_10b56410();
+    void UpdateHighlight();
 
     char Unknown00[0x16C];
-    Struct_10B56410_Elem** Unknown16C;
+    Struct_10B56410_Elem** m_Rows;
     char Pad170[0x20];
-    Class_10B56410_Unknown190* Unknown190;
-    Class_10B56410_Unknown194* Unknown194;
+    Class_10B56410_Unknown190* m_Highlight;
+    Class_10B56410_Unknown194* m_HighlightSecondary;
     char Pad198[0x14];
-    int Unknown1AC;
-    int Unknown1B0;
+    int m_Index;
+    int m_SubIndex;
 };
 
 #endif // GAME_CLASS_10B56410_H

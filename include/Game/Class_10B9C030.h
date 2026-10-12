@@ -6,7 +6,7 @@
 class Class_10B9C030
 {
 public:
-    bool FUN_10b9c030(int Value);
+    bool Contains(int Value);
 
     // The index of the first element equal to Value, else -1.
     int FindIndex(int Value)

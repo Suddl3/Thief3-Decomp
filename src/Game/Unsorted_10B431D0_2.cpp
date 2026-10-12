@@ -23,8 +23,8 @@ public:
 
 Class_10D4ACC0 FUN_10d4acc0();
 
-// FUNCTION: 0x10B431D0 ?FUN_10b431d0@@YAHPAH0@Z
-int FUN_10b431d0(int* A, int* B)
+// FUNCTION: 0x10B431D0 ?CompareFileTimes@@YAHPAH0@Z
+int CompareFileTimes(int* A, int* B)
 {
     FILETIME W1;
     FILETIME W2;

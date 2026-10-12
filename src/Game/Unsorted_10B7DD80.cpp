@@ -36,8 +36,8 @@ public:
     char Pad1A[0x16];
 };
 
-// FUNCTION: 0x10B7DFF0 ?FUN_10b7dff0@@YGPAVClass_10E89540@@HHH@Z
-Class_10E89540* __stdcall FUN_10b7dff0(int A, int B, int C)
+// FUNCTION: 0x10B7DFF0 ?CreateAIObject@@YGPAVClass_10E89540@@HHH@Z
+Class_10E89540* __stdcall CreateAIObject(int A, int B, int C)
 {
     GetAllocator()->Virtual8(0, 0);
     Class_10E89540* Obj = new(0, 0, 0, 0, 0) Class_10E89540(B, A);

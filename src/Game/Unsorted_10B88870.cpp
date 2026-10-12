@@ -8,8 +8,8 @@ extern "C" void* memcpy(void* Dest, const void* Src, unsigned Count);
 // Ion Storm's placement new (0x10905C10).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 
-// FUNCTION: 0x10B88870 ?FUN_10b88870@Class_10B88870@@QAEXHPBXH@Z
-void Class_10B88870::FUN_10b88870(int Index, const void* Data, int Size)
+// FUNCTION: 0x10B88870 ?SetChunk@Class_10B88870@@QAEXHPBXH@Z
+void Class_10B88870::SetChunk(int Index, const void* Data, int Size)
 {
     if (Size)
     {

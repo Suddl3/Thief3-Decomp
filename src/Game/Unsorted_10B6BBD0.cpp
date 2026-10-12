@@ -28,7 +28,7 @@ extern Class_10F3A3D8* DAT_10f3a3d8;
 void Class_10B6BC80::FUN_10b6bc80()
 {
     Data_10B66060* Value;
-    switch (Unknown19C)
+    switch (m_Mode)
     {
     case 0:
         Value = DAT_10f3a3d8->Unknown150->Unknown08;
@@ -40,7 +40,7 @@ void Class_10B6BC80::FUN_10b6bc80()
         Value = 0;
         break;
     }
-    Unknown198->FUN_10b66060((int)this, Value);
+    Unknown198->SetData((int)this, Value);
     Unknown198->Virtual56(2);
     ((Class_10B154C0*)GetWindowManager())->Virtual4(Unknown198);
 }

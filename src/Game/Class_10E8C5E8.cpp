@@ -9,8 +9,8 @@ void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D
 
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
-// FUNCTION: 0x10BA3E70 ?FUN_10ba3e70@Class_10E8C5E8@@UAEPAVClass_10E8C4A4@@HH@Z
-Class_10E8C4A4* Class_10E8C5E8::FUN_10ba3e70(int A, int B)
+// FUNCTION: 0x10BA3E70 ?Create@Class_10E8C5E8@@UAEPAVClass_10E8C4A4@@HH@Z
+Class_10E8C4A4* Class_10E8C5E8::Create(int A, int B)
 {
     return new(0, 0, 0, 0, 0) Class_10E8C4A4;
 }

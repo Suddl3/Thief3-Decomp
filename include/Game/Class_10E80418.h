@@ -13,7 +13,7 @@ public:
     virtual void Virtual2();
     virtual int HandleCheatCommand(char* Command, int Unknown);
 
-    Class_10E80418* FUN_10b40a00();
+    Class_10E80418* Construct();
 
     char Pad04[0x158];
 };

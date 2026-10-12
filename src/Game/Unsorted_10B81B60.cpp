@@ -3,8 +3,8 @@
 #include "Core/Core.h"
 #include "Game/Class_10B81B60.h"
 
-// FUNCTION: 0x10B81B60 ?FUN_10b81b60@Class_10B81B60@@QAEXH@Z
-void Class_10B81B60::FUN_10b81b60(int Type)
+// FUNCTION: 0x10B81B60 ?SetModeFromType@Class_10B81B60@@QAEXH@Z
+void Class_10B81B60::SetModeFromType(int Type)
 {
     int Mode;
     switch (Type)

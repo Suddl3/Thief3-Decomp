@@ -14,11 +14,11 @@ public:
 class Class_10E7E8E0 : public Class_10E7E4E0
 {
 public:
-    Class_10E7E8E0* FUN_10b3d2a0();
+    Class_10E7E8E0* Construct();
 };
 
-// FUNCTION: 0x10B3D2A0 ?FUN_10b3d2a0@Class_10E7E8E0@@QAEPAV1@XZ
-Class_10E7E8E0* Class_10E7E8E0::FUN_10b3d2a0()
+// FUNCTION: 0x10B3D2A0 ?Construct@Class_10E7E8E0@@QAEPAV1@XZ
+Class_10E7E8E0* Class_10E7E8E0::Construct()
 {
     FUN_10b3acb0();
     Unknown00 = DAT_10e7e8e0;

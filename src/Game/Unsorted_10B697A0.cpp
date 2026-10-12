@@ -25,8 +25,8 @@ struct Struct_10AA3520
 
 extern Struct_10AA3520* DAT_10f35dec;
 
-// FUNCTION: 0x10B697A0 ?FUN_10b697a0@@YAXXZ
-void FUN_10b697a0()
+// FUNCTION: 0x10B697A0 ?CheckGameDay@@YAXXZ
+void CheckGameDay()
 {
     if (DAT_10f35dec->Unknown08->Unknown474 == 0)
     {

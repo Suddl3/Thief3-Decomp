@@ -20,7 +20,7 @@ public:
 
     void ForceArms(AGarrett* Garrett);
     void ReleaseItem(Struct_10B53A00* P);
-    GSMantle* FUN_10b53a30();
+    GSMantle* Init();
     void GrabItem(Struct_10B53A00* P);
     bool TryGrab(Struct_10B53A00* P);
 

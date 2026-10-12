@@ -11,14 +11,14 @@ struct Struct_10B33260
     char Unknown08[8];
 };
 
-// FUNCTION: 0x10B33260 ?FUN_10b33260@Class_10B33260@@QAE_NHPAH@Z
-bool Class_10B33260::FUN_10b33260(int A, int* B)
+// FUNCTION: 0x10B33260 ?HasEntry@Class_10B33260@@QAE_NHPAH@Z
+bool Class_10B33260::HasEntry(int A, int* B)
 {
-    for (int i = 0; i < Unknown190; i++)
+    for (int i = 0; i < m_Count; i++)
     {
-        if (Unknown198[i].Unknown00 == A)
+        if (m_Entries[i].Unknown00 == A)
         {
-            if (FUN_1090f010(&Unknown198[i].Unknown04, B))
+            if (FUN_1090f010(&m_Entries[i].Unknown04, B))
                 return true;
         }
     }

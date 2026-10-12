@@ -12,7 +12,7 @@ public:
 
     char Unknown00[0x198];
     Class_10B66060* Unknown198;
-    int Unknown19C;
+    int m_Mode;
 };
 
 #endif // GAME_CLASS_10B6BC80_H

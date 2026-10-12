@@ -141,8 +141,8 @@ public:
     char Unknown0EC[0x2C];
     Class_10B314F0* Unknown118;
     char Unknown11C[8];
-    float Unknown124;
-    float Unknown128;
+    float m_Elapsed;
+    float m_Duration;
     char Unknown12C[4];
 };
 
@@ -226,8 +226,8 @@ public:
 void Class_10E809B8::Update(int A)
 {
     FUN_10a53560(A);
-    Unknown124 += *(float*)&A;
-    if (Unknown124 > Unknown128)
+    m_Elapsed += *(float*)&A;
+    if (m_Elapsed > m_Duration)
     {
         Virtual56(0);
         ((Class_10B175C0*)GetWindowManager())->FUN_10b175c0(&Unknown12C, 1, FUN_10b42bd0, this);

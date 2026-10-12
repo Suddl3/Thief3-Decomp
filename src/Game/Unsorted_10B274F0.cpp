@@ -105,9 +105,9 @@ void Class_10E7FB08::FUN_10b274f0()
     FUN_10a5d480();
 }
 
-// FUNCTION: 0x10B277B0 ?FUN_10b277b0@Class_10B277B0@@QAEXABVcString@@@Z
-void Class_10B277B0::FUN_10b277b0(const cString& Name)
+// FUNCTION: 0x10B277B0 ?SetName@Class_10B277B0@@QAEXABVcString@@@Z
+void Class_10B277B0::SetName(const cString& Name)
 {
-    Unknown190 = Name;
+    m_Name = Name;
     Virtual118(Virtual71());
 }

@@ -5,18 +5,18 @@
 #include "Game/Class_10B3A460.h"
 #include "Game/Class_Field04.h"
 
-Class_10B3A460* FUN_10b3abf0();
+Class_10B3A460* GetEntries();
 
-// FUNCTION: 0x10B396B0 ?FUN_10b396b0@Class_10B396B0@@QAEXH@Z
-void Class_10B396B0::FUN_10b396b0(int A)
+// FUNCTION: 0x10B396B0 ?ResetHandler@Class_10B396B0@@QAEXH@Z
+void Class_10B396B0::ResetHandler(int A)
 {
-    int Index = FUN_10b3abf0()->FUN_10b3a460(A)->Unknown1C;
-    Unknown0C[Index]->Reset();
+    int Index = GetEntries()->GetEntry(A)->m_Index;
+    m_Handlers[Index]->Reset();
 }
 
-// FUNCTION: 0x10B396E0 ?FUN_10b396e0@Class_10B396E0@@QAEXXZ
-void Class_10B396E0::FUN_10b396e0()
+// FUNCTION: 0x10B396E0 ?ResetAll@Class_10B396E0@@QAEXXZ
+void Class_10B396E0::ResetAll()
 {
     for (int i = 0; i < 8; i++)
-        Unknown0C[i]->Reset();
+        m_Handlers[i]->Reset();
 }

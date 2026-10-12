@@ -248,23 +248,23 @@ public:
     virtual void Virtual103();
     virtual void Virtual104();
     virtual void Virtual105();
-    virtual void FUN_10b46120(float Delta);
+    virtual void UpdateFade(float Delta);
 
     char Unknown04[0x114];
-    float Unknown118;
-    float Unknown11C;
+    float m_Duration;
+    float m_Elapsed;
     Class_10E81300_Unknown120* Unknown120;
 };
 
-// FUNCTION: 0x10B46120 ?FUN_10b46120@Class_10E81300@@UAEXM@Z
-void Class_10E81300::FUN_10b46120(float Delta)
+// FUNCTION: 0x10B46120 ?UpdateFade@Class_10E81300@@UAEXM@Z
+void Class_10E81300::UpdateFade(float Delta)
 {
-    Unknown11C += Delta;
+    m_Elapsed += Delta;
     Unknown120->Virtual124(&Delta);
     Struct_10B46120* Color = (Struct_10B46120*)&Delta;
-    Color->Unknown03 = (unsigned char)((Unknown118 - Unknown11C) / Unknown118 * 255.0f);
+    Color->Unknown03 = (unsigned char)((m_Duration - m_Elapsed) / m_Duration * 255.0f);
     Unknown120->Virtual123(Color);
-    if (Unknown11C >= Unknown118)
+    if (m_Elapsed >= m_Duration)
     {
         Virtual56(0);
     }

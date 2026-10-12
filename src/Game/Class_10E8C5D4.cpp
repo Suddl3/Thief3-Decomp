@@ -12,10 +12,10 @@ extern void* DAT_10e8c378[];
 class Class_10E984F4
 {
 public:
-    Class_10E984F4* FUN_10c12a90();
+    Class_10E984F4* Init();
 
     void* Unknown00;
-    int Unknown04;
+    int m_Elements;
 };
 
 class Class_10E8C378 : public Class_10E984F4
@@ -23,13 +23,13 @@ class Class_10E8C378 : public Class_10E984F4
 public:
     Class_10E8C378()
     {
-        FUN_10c12a90();
+        Init();
         Unknown00 = DAT_10e8c378;
     }
 };
 
-// FUNCTION: 0x10BA3B50 ?FUN_10ba3b50@Class_10E8C5D4@@UAEPAVClass_10E8C378@@HH@Z
-Class_10E8C378* Class_10E8C5D4::FUN_10ba3b50(int A, int B)
+// FUNCTION: 0x10BA3B50 ?Create@Class_10E8C5D4@@UAEPAVClass_10E8C378@@HH@Z
+Class_10E8C378* Class_10E8C5D4::Create(int A, int B)
 {
     return new(0, 0, 0, 0, 0) Class_10E8C378;
 }

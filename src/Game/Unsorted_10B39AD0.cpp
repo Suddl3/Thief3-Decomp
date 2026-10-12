@@ -22,8 +22,8 @@ struct Struct_10B39B30_Param
     FRotator Unknown38;
 };
 
-// FUNCTION: 0x10B39B30 ?FUN_10b39b30@@YGMPAUStruct_10B39B30_Param@@PAVClass_109B2D20@@@Z
-FLOAT __stdcall FUN_10b39b30(Struct_10B39B30_Param* A, Class_109B2D20* B)
+// FUNCTION: 0x10B39B30 ?GetRotatedZ@@YGMPAUStruct_10B39B30_Param@@PAVClass_109B2D20@@@Z
+FLOAT __stdcall GetRotatedZ(Struct_10B39B30_Param* A, Class_109B2D20* B)
 {
     Struct_109B2D20 V = B->FUN_109b2d20();
     Struct_10B1DCA0 Coords(FVector(0.0f, 0.0f, 0.0f));

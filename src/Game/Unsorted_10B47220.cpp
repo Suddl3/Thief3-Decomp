@@ -26,15 +26,15 @@ class Class_10E7E538 : public Class_10AA82D0
 public:
     virtual void Virtual1();
     virtual void Virtual2();
-    virtual void FUN_10b483c0(Class_10B22020* A);
+    virtual void StopAnimation(Class_10B22020* A);
     virtual int Virtual4();
     virtual int OnAnimationEnd(Object_10B4BC30* A, int B);
 
     int m_State;
 };
 
-// FUNCTION: 0x10B47C50 ?FUN_10b47c50@Class_10B47C50@@QAEXXZ
-void Class_10B47C50::FUN_10b47c50()
+// FUNCTION: 0x10B47C50 ?PlayLastQueued@Class_10B47C50@@QAEXXZ
+void Class_10B47C50::PlayLastQueued()
 {
     int Count = Unknown4C.Unknown00;
     if (Count > 0)
@@ -44,8 +44,8 @@ void Class_10B47C50::FUN_10b47c50()
     }
 }
 
-// FUNCTION: 0x10B483C0 ?FUN_10b483c0@Class_10E7E538@@UAEXPAVClass_10B22020@@@Z
-void Class_10E7E538::FUN_10b483c0(Class_10B22020* A)
+// FUNCTION: 0x10B483C0 ?StopAnimation@Class_10E7E538@@UAEXPAVClass_10B22020@@@Z
+void Class_10E7E538::StopAnimation(Class_10B22020* A)
 {
     if (Unknown08 != 0x101)
     {

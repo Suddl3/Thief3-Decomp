@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10B3A460.h"
 
-Class_10B3A460* FUN_10b3abf0();
+Class_10B3A460* GetEntries();
 
 class Class_10EC0E20
 {
@@ -23,7 +23,7 @@ bool Class_10EC0E20::FUN_10b7b8d0(int A)
 {
     if (Unknown18)
     {
-        Class_10B3A460* Entry = FUN_10b3abf0()->FUN_10b3a460(Unknown08);
+        Class_10B3A460* Entry = GetEntries()->GetEntry(Unknown08);
         if (Unknown14 == A && !Entry->Unknown00)
         {
             FUN_10b7b8a0();

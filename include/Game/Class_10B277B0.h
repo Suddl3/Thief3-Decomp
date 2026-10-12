@@ -128,10 +128,10 @@ public:
     virtual void Virtual117();
     virtual void Virtual118(int A);
 
-    void FUN_10b277b0(const cString& Name);
+    void SetName(const cString& Name);
 
     char Unknown04[0x18C];
-    cString Unknown190;
+    cString m_Name;
 };
 
 #endif // GAME_CLASS_10B277B0_H

@@ -188,11 +188,11 @@ void Class_10E696A8::FUN_10a5d4f0(Class_10A52A40_Member* Member)
     FUN_10a52a40(Member);
     if (Unknown1C4)
     {
-        if (Unknown0C4)
+        if (m_Selected)
         {
             Struct_10A5D4F0 Second;
             Struct_10A5D4F0 First;
-            Unknown0C4->Virtual6(&First);
+            m_Selected->Virtual6(&First);
             First.Unknown08 = Unknown1C4->Virtual6(&Second)->Unknown08;
             Unknown1C4->Virtual56(1);
             Unknown1C4->Virtual5(&First);

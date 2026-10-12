@@ -64,7 +64,7 @@ public:
     virtual void Virtual55();
     virtual void Virtual56(int A);
 
-    void FUN_10b28870();
+    void OpenTitleOptions();
 };
 
 #endif // GAME_CLASS_10B28870_H

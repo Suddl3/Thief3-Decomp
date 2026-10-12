@@ -6,7 +6,7 @@
 class Class_10E8980C
 {
 public:
-    Class_10E8980C* FUN_10b8f700();
+    Class_10E8980C* Init();
 
     void* Unknown00;
 };

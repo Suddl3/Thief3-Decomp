@@ -75,7 +75,7 @@ public:
     virtual void Virtual66(int A) = 0;
 };
 
-Class_10B3A460* FUN_10b3abf0();
+Class_10B3A460* GetEntries();
 
 class Class_10B7AB80
 {
@@ -182,7 +182,7 @@ void Class_10B7AB60::FUN_10b7ab60()
 void Class_10B7AB80::FUN_10b7ab80(int A, float B)
 {
     Unknown08 = A;
-    Unknown1C = B * FUN_10b3abf0()->FUN_10b3a460(A)->Unknown04;
+    Unknown1C = B * GetEntries()->GetEntry(A)->Unknown04;
 }
 
 // FUNCTION: 0x10B7AC30 ?FUN_10b7ac30@Class_10B7AC30@@QAEXXZ

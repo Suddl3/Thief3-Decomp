@@ -6,7 +6,7 @@
 class Class_10B7B910
 {
 public:
-    Class_10B7B910* FUN_10b7b910();
+    Class_10B7B910* Init();
 
     int Field00;
 };
