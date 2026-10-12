@@ -57,18 +57,18 @@ public:
     cString Unknown00;
 };
 
-class Class_10E6C104 : public Class_10A810F0
+class cConEvent : public Class_10A810F0
 {
 public:
-    Class_10E6C104();
+    cConEvent();
 
-    virtual ~Class_10E6C104();
+    virtual ~cConEvent();
 };
 
-// FUNCTION: 0x10A80C90 ?FUN_10a80c90@Class_10A80C90@@QAEXXZ
-void Class_10A80C90::FUN_10a80c90()
+// FUNCTION: 0x10A80C90 ?StoreGameTime@Class_10A80C90@@QAEXXZ
+void Class_10A80C90::StoreGameTime()
 {
-    Unknown54 = (float)TimeManager::Instance()->GetGameTime();
+    m_GameTime = (float)TimeManager::Instance()->GetGameTime();
 }
 
 // FUNCTION: 0x10A80E30 ?IndexOfConEvent@cConversation@@UAEHH@Z
@@ -82,10 +82,10 @@ int cConversation::IndexOfConEvent(int Value)
     return -1;
 }
 
-// FUNCTION: 0x10A810D0 ??_GClass_10E6C104@@UAEPAXI@Z
+// FUNCTION: 0x10A810D0 ??_GcConEvent@@UAEPAXI@Z
 // Compiler-generated: emitted with the class's vtable by 0x10A810F0's definition in this unit.
 
-// FUNCTION: 0x10A810F0 ??0Class_10E6C104@@QAE@XZ
-Class_10E6C104::Class_10E6C104()
+// FUNCTION: 0x10A810F0 ??0cConEvent@@QAE@XZ
+cConEvent::cConEvent()
 {
 }

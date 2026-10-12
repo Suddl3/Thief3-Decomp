@@ -17,7 +17,7 @@ class Class_10AA82D0
 public:
     virtual void Virtual0();
 
-    int FUN_10aa82d0();
+    int GetLinkedObject();
 };
 
 class Class_10B3AE70 : public Class_10AA82D0
@@ -53,5 +53,5 @@ void Class_10E7E898::FUN_10b4bd80(AGarrett* Garrett)
     Garrett->HeadRot = Garrett->Rotation;
     Unknown10 = 2.0f;
     Unknown08 = 0x100;
-    ((Class_10B39530*)FUN_10aa82d0())->FUN_10b39530(0x100, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+    ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(0x100, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
 }

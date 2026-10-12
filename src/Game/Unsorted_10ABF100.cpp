@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Core/Core.h"
 #include "Game/Class_10974340.h"
-#include "Game/Class_10ABF100.h"
+#include "Game/cCitySectionManager.h"
 #include "Game/Struct_10974340_Result.h"
 #include "Game/Struct_10ABF1B0.h"
 
@@ -30,8 +30,8 @@ struct Struct_10AA3520
 
 extern Struct_10AA3520* DAT_10f35dec;
 
-// FUNCTION: 0x10ABF100 ?FUN_10abf100@Class_10ABF100@@QAE_NXZ
-bool Class_10ABF100::FUN_10abf100()
+// FUNCTION: 0x10ABF100 ?FUN_10abf100@cCitySectionManager@@QAE_NXZ
+bool cCitySectionManager::FUN_10abf100()
 {
     UEngine* Engine = GEngine;
     if (Engine && Engine->Unknown10C && Engine->Unknown10C->FUN_10974340())
@@ -39,8 +39,8 @@ bool Class_10ABF100::FUN_10abf100()
     return false;
 }
 
-// FUNCTION: 0x10ABF1B0 ?FUN_10abf1b0@@YGPAUStruct_10ABF1B0@@H@Z
-Struct_10ABF1B0* __stdcall FUN_10abf1b0(int A)
+// FUNCTION: 0x10ABF1B0 ?FindCitySectionGoal@@YGPAUStruct_10ABF1B0@@H@Z
+Struct_10ABF1B0* __stdcall FindCitySectionGoal(int A)
 {
     APlayerPawn* Pawn = DAT_10f35dec->Unknown08;
     for (int i = 0; i < Pawn->CitySectionGoals.Num(); i++)

@@ -84,7 +84,7 @@ int FUN_10bbc190(Class_10BBB440* Self, int Key, cString* Name)
     if (Info == 0)
         return 0;
     GetAllocator()->Virtual8(0, 0);
-    Class_10E992D4* Obj = new(0, 0, 0, 0, 0) Class_10E992D4(Self->Unknown0C->FUN_10aaf570(), Self->Unknown08, &Info, Key);
+    Class_10E992D4* Obj = new(0, 0, 0, 0, 0) Class_10E992D4(Self->Unknown0C->GetLinkType(), Self->Unknown08, &Info, Key);
     GetAllocator()->Virtual9();
     int Index = Self->Unknown14.Count;
     cIntArray* List = &Self->Unknown14;

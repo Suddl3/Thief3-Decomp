@@ -49,7 +49,7 @@ int FUN_10bb3730(int A, int B, int C, const cString& D)
     Class_10BB3730_Param2* Writer = (Class_10BB3730_Param2*)C;
     if (Writer && Writer->Virtual3() >= 1)
     {
-        cString Local(*(cString*)Writer->Virtual4(0)->FUN_10ab37c0());
+        cString Local(*(cString*)Writer->Virtual4(0)->GetName());
         int Length = Local.Unknown00 == 0 ? 0 : ((int*)Local.Unknown00)[-1];
         if (Length == 0)
             return 0;

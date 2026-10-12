@@ -42,7 +42,7 @@ class Class_10AA82D0
 public:
     virtual void Virtual0();
 
-    int FUN_10aa82d0();
+    int GetLinkedObject();
 };
 
 class Class_10B3E340 : public Class_10AA82D0
@@ -66,7 +66,7 @@ void Class_10B3E340::FUN_10b3e340()
 {
     if (Unknown40)
     {
-        ((Class_10B39530*)FUN_10aa82d0())->FUN_10b39530(0xbc, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+        ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(0xbc, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
         Unknown40 = 0;
     }
 }

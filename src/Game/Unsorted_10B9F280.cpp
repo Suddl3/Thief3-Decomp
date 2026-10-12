@@ -52,7 +52,7 @@ void Class_10E5BC3C::FUN_10b9f3b0(Object_10BE58C0* Ar, Class_10AAB5C0*& Obj)
         return;
     }
     if (Obj)
-        Index = Obj->FUN_10aab5c0();
+        Index = Obj->GetUnknown08();
     Ar->Virtual1(&Index, 4);
 }
 

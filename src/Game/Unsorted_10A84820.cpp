@@ -22,10 +22,10 @@ public:
 class Class_10A84CE0
 {
 public:
-    void FUN_10a84ce0(const Class_109022E0& Name);
+    void SetFlagName(const Class_109022E0& Name);
 
     char Unknown00[4];
-    FName Unknown04;
+    FName m_FlagName;
 };
 
 class Class_10E6C390;
@@ -60,11 +60,11 @@ bool cFlagElementLogic::HasFlagName(const Class_109022E0& Name)
     return m_FlagName.Value == FName(Text, FNAME_Add).Value;
 }
 
-// FUNCTION: 0x10A84CE0 ?FUN_10a84ce0@Class_10A84CE0@@QAEXABVClass_109022E0@@@Z
-void Class_10A84CE0::FUN_10a84ce0(const Class_109022E0& Name)
+// FUNCTION: 0x10A84CE0 ?SetFlagName@Class_10A84CE0@@QAEXABVClass_109022E0@@@Z
+void Class_10A84CE0::SetFlagName(const Class_109022E0& Name)
 {
     const char* Text = Name.Unknown00 ? Name.Unknown00 : DAT_10e47660;
-    Unknown04 = FName(Text, FNAME_Add);
+    m_FlagName = FName(Text, FNAME_Add);
 }
 
 // FUNCTION: 0x10A84D70 ?Reset@Class_10E6C390@@QAEXXZ

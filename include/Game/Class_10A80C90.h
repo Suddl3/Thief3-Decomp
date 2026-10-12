@@ -6,10 +6,10 @@
 class Class_10A80C90
 {
 public:
-    void FUN_10a80c90();
+    void StoreGameTime();
 
     char Unknown00[0x54];
-    float Unknown54;
+    float m_GameTime;
 };
 
 #endif // GAME_CLASS_10A80C90_H

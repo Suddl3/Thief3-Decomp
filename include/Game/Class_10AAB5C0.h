@@ -14,7 +14,7 @@ public:
     virtual void Virtual3();
     virtual Class_10AAB5C0* Virtual4(int A);
 
-    int FUN_10aab5c0();
+    int GetUnknown08();
 
     union
     {

@@ -30,8 +30,8 @@ public:
 
 extern Class_10F46DA0* DAT_10f46da0;
 
-// FUNCTION: 0x10A98AC0 ?FUN_10a98ac0@Class_10E6CFD4@@UAEXXZ
-void Class_10E6CFD4::FUN_10a98ac0()
+// FUNCTION: 0x10A98AC0 ?SendEvent@Class_10E6CFD4@@UAEXXZ
+void Class_10E6CFD4::SendEvent()
 {
     Class_10E682E0 Local(1);
     DAT_10f46da0->Virtual1(this, 0x77, -1, &Local);

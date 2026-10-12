@@ -7,7 +7,7 @@ struct Class_10AB37C0 {
 	char unknown_00[0x4];
 	void* unknown_04;
 
-	void* FUN_10ab37c0();
+	void* GetName();
 };
 
 #endif // GAME_CLASS_10AB37C0_H

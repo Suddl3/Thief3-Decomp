@@ -14,8 +14,8 @@ void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D
 
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
-// FUNCTION: 0x10A987A0 ?FUN_10a987a0@Class_10E5D83C@@UAEPAVClass_10E6CFB8@@XZ
-Class_10E6CFB8* Class_10E5D83C::FUN_10a987a0()
+// FUNCTION: 0x10A987A0 ?Create@Class_10E5D83C@@UAEPAVClass_10E6CFB8@@XZ
+Class_10E6CFB8* Class_10E5D83C::Create()
 {
     GetAllocator()->Virtual8(0, 0);
     Class_10E6CFB8* Result = new(0, 0, 0, 0, 0) Class_10E6CFB8;

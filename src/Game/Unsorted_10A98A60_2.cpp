@@ -32,22 +32,22 @@ public:
 
 extern Class_10F46DA0* DAT_10f46da0;
 
-// FUNCTION: 0x10A98A60 ?FUN_10a98a60@Class_10E6CFB8@@UAEXXZ
-void Class_10E6CFB8::FUN_10a98a60()
+// FUNCTION: 0x10A98A60 ?SendEvent@Class_10E6CFB8@@UAEXXZ
+void Class_10E6CFB8::SendEvent()
 {
     Class_10E682E0 Local(0);
     DAT_10f46da0->Virtual1(this, 0x77, -1, &Local);
 }
 
-// FUNCTION: 0x10A98B20 ?FUN_10a98b20@Class_10E6CFF0@@UAEXXZ
-void Class_10E6CFF0::FUN_10a98b20()
+// FUNCTION: 0x10A98B20 ?SendEvent@Class_10E6CFF0@@UAEXXZ
+void Class_10E6CFF0::SendEvent()
 {
     Class_10E682E0 Local(2);
     DAT_10f46da0->Virtual1(this, 0x77, -1, &Local);
 }
 
-// FUNCTION: 0x10A98B80 ?FUN_10a98b80@Class_10E6D00C@@UAEXXZ
-void Class_10E6D00C::FUN_10a98b80()
+// FUNCTION: 0x10A98B80 ?SendEvent@Class_10E6D00C@@UAEXXZ
+void Class_10E6D00C::SendEvent()
 {
     Class_10E682E0 Local(3);
     DAT_10f46da0->Virtual1(this, 0x77, -1, &Local);

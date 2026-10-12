@@ -73,7 +73,7 @@ int Class_10E8C818::FUN_10bb0e40(int A, int B, Class_10BB0E40_Param* C)
         if (C->Virtual3() >= 3)
         {
             int Key = (int)C->Virtual4(0)->FUN_10978090();
-            int Value = C->Virtual4(1)->FUN_10aab5c0();
+            int Value = C->Virtual4(1)->GetUnknown08();
             int Third = FUN_10baa130((int)C->Virtual4(2)->FUN_10978090());
             if (FUN_10c27900() == 0)
                 return 0;

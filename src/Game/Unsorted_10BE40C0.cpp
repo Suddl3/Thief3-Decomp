@@ -225,12 +225,12 @@ unsigned char Class_10BE40C0::FUN_10be40c0()
         if (Virtual81())
         {
             Class_10DBD510* Source = Unknown04->Unknown08;
-            ((Class_10971570*)Source->FUN_10dbd510()->FUN_10aab5c0())->FUN_10971570(0x20005db, (bool*)&State);
+            ((Class_10971570*)Source->FUN_10dbd510()->GetUnknown08())->FUN_10971570(0x20005db, (bool*)&State);
         }
         else
         {
             Class_10DBD510* Source = Unknown04->Unknown08;
-            ((Class_10971570*)Source->FUN_10dbd510()->FUN_10aab5c0())->FUN_10971570(0x20005d3, (bool*)&State);
+            ((Class_10971570*)Source->FUN_10dbd510()->GetUnknown08())->FUN_10971570(0x20005d3, (bool*)&State);
         }
     }
     return State;
@@ -243,7 +243,7 @@ unsigned char Class_10BE4120::FUN_10be4120()
     if (Unknown04->Unknown08->FUN_10dbd510()->FUN_10bbdb80(0x4200057f))
     {
         Class_10DBD510* Source = Unknown04->Unknown08;
-        ((Class_10971570*)Source->FUN_10dbd510()->FUN_10aab5c0())->FUN_10971570(0x20005de, (bool*)&State);
+        ((Class_10971570*)Source->FUN_10dbd510()->GetUnknown08())->FUN_10971570(0x20005de, (bool*)&State);
     }
     return State;
 }

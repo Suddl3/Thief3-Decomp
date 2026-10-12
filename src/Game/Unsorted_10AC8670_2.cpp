@@ -68,7 +68,7 @@ void Class_10AC8770::FUN_10ac8690(int A, int B, float C, int D)
     Value.Unknown00 = X;
     Value.Unknown04 = Y;
     Value.Unknown08 = Z;
-    Class_10B39870* Target = (Class_10B39870*)((Class_10AA82D0*)Found.Data[0])->FUN_10aa82d0();
+    Class_10B39870* Target = (Class_10B39870*)((Class_10AA82D0*)Found.Data[0])->GetLinkedObject();
     Target->Unknown78 = Value;
     DAT_10f35dec->Unknown64->Virtual18(A, 0);
 }

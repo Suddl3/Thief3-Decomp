@@ -26,8 +26,8 @@ extern Class_10F3A3D8* DAT_10f3a3d8;
 void Class_10E7E580::FUN_10b49120(AGarrett* Garrett)
 {
     if (Garrett->isCrouching)
-        ((Class_10B39530*)FUN_10aa82d0())->FUN_10b39530(1, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+        ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(1, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
     else
-        ((Class_10B39530*)FUN_10aa82d0())->FUN_10b39530(0, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+        ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(0, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
     DAT_10f3a3d8->Unknown13C->FUN_10ac92e0();
 }

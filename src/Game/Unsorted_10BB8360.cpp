@@ -13,7 +13,7 @@ bool Class_10BB8400::FUN_10bb8400()
 {
     if (!Unknown2D4)
         return false;
-    return !((Object_10AAF570*)Unknown0C->FUN_10aaf570())->Virtual59();
+    return !((Object_10AAF570*)Unknown0C->GetLinkType())->Virtual59();
 }
 
 // FUNCTION: 0x10BB84A0 ?FUN_10bb84a0@Class_10BB84A0@@QAEHXZ

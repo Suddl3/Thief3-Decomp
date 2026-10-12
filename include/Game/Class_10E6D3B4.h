@@ -6,7 +6,7 @@
 class Class_10E6D3B4
 {
 public:
-    Class_10E6D3B4* FUN_10aa1b00();
+    Class_10E6D3B4* Construct();
 
     union
     {

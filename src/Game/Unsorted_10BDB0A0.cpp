@@ -122,7 +122,7 @@ void Class_10E948D8::FUN_10bdb0e0()
 // FUNCTION: 0x10BDB110 ?FUN_10bdb110@Class_10E94E00@@UAEXH@Z
 void Class_10E94E00::FUN_10bdb110(int A)
 {
-    Struct_10BDB110* Object = (Struct_10BDB110*)Unknown04->Unknown08->FUN_10dbd510()->FUN_10aa82d0();
+    Struct_10BDB110* Object = (Struct_10BDB110*)Unknown04->Unknown08->FUN_10dbd510()->GetLinkedObject();
     if (Object->UnknownDC & 1)
         Unknown04->FUN_10bb8700();
 }

@@ -7,7 +7,7 @@ class Class_10AAB5C0
 {
 public:
     virtual void Virtual0();
-    int FUN_10aab5c0();
+    int GetUnknown08();
 
     int Unknown04;
     int Unknown08;

@@ -13,7 +13,7 @@ class Class_10BF7F90;
 class Class_10AA82D0 : public Class_10AAF570
 {
 public:
-    Class_10B39870* FUN_10aa82d0();
+    Class_10B39870* GetLinkedObject();
 };
 
 class Class_10BF7F90 : public Class_10AA82D0
@@ -132,13 +132,13 @@ void Class_10E94B20::FUN_10bdb260()
 {
     if (Unknown40)
         Unknown40->Virtual2();
-    if (FUN_10bc4160()->FUN_10aa82d0() == 0)
+    if (FUN_10bc4160()->GetLinkedObject() == 0)
     {
         FUN_10bc4e30(0x40400000);
         if (Unknown54)
         {
             if (!Unknown55)
-                ((Class_10AAF570_Result*)FUN_10bc4160()->FUN_10aaf570())->Virtual49(0);
+                ((Class_10AAF570_Result*)FUN_10bc4160()->GetLinkType())->Virtual49(0);
             PopState();
             return;
         }

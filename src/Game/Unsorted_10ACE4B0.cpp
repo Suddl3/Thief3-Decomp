@@ -5,8 +5,8 @@
 #include "Game/Class_10E701C8.h"
 #include "Game/Class_10E70204.h"
 
-// FUNCTION: 0x10ACE5B0 ?FUN_10ace5b0@Class_10E701C8@@UAEXHHHH@Z
-void Class_10E701C8::FUN_10ace5b0(int Code, int A, int B, int C)
+// FUNCTION: 0x10ACE5B0 ?HandleEvent@Class_10E701C8@@UAEXHHHH@Z
+void Class_10E701C8::HandleEvent(int Code, int A, int B, int C)
 {
     if (Code == 0x10)
         FUN_10ace4d0(A, B, C);

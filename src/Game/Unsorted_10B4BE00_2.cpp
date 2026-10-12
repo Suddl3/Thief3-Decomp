@@ -27,7 +27,7 @@ class Class_10AA82D0
 public:
     virtual void Virtual0();
 
-    int FUN_10aa82d0();
+    int GetLinkedObject();
 };
 
 class Class_10E7EA00 : public Class_10AA82D0
@@ -76,7 +76,7 @@ int Class_10E7EA00::OnAnimationEnd(int A, int B)
 {
     if (B == 0x6e)
         return Virtual4();
-    ((Class_10B398B0*)FUN_10aa82d0())->FUN_10b398b0(0);
+    ((Class_10B398B0*)GetLinkedObject())->FUN_10b398b0(0);
     Unknown10 = 1;
     return 0x17;
 }

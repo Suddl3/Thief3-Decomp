@@ -12,7 +12,7 @@ class Class_10E6F414
 public:
     virtual void Virtual0();
     virtual Class_10E6F414_Member* Virtual1(int A);
-    virtual int FUN_10ac0560(int A, int B, int C, int D, int E, int F, int G, int H);
+    virtual int FireWeapon(int A, int B, int C, int D, int E, int F, int G, int H);
     virtual void Virtual3();
     virtual void Virtual4();
     virtual void Virtual5();

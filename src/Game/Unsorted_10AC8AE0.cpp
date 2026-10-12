@@ -5,9 +5,9 @@
 #include "Game/Class_Field04.h"
 #include "Game/Struct_10AA3520.h"
 
-void* FUN_10ac89c0();
+void* FindExitMissionInfo();
 
-void FUN_10ac87f0(void* A, int B, int C);
+void ReadExitMissionStrings(void* A, int B, int C);
 
 void FUN_10a36b00(int A, void** B, void** C, int D, int E, FString F, int G);
 
@@ -24,13 +24,13 @@ struct Struct_10AC8AE0_Field
 // FUNCTION: 0x10AC8AE0 ?FUN_10ac8ae0@@YAXXZ
 void FUN_10ac8ae0()
 {
-    Class_Field04* Field = (Class_Field04*)FUN_10ac89c0();
+    Class_Field04* Field = (Class_Field04*)FindExitMissionInfo();
     if (Field)
     {
         FString A;
         FString B;
         FString C;
-        FUN_10ac87f0(Field, (int)&A, (int)&B);
+        ReadExitMissionStrings(Field, (int)&A, (int)&B);
         if (Field->FUN_1098e290(0x4081e, &C) == 0)
             C = ((Struct_10AC8AE0_Field*)Field)->UnknownDC;
         FUN_10a36b00((int)DAT_10f35dec->Unknown08, (void**)&A, (void**)&B, 0, 0, C, 0);

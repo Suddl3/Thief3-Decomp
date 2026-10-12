@@ -6,11 +6,11 @@
 class Class_10AAB7D0
 {
 public:
-    int Unknown00;
-    int Unknown04;
-    void* Unknown08;
+    int m_Count;
+    int m_ByteCapacity;
+    void* m_Data;
 
-    void FUN_10aab7d0(int NewCount);
+    void SetCount(int NewCount);
 };
 
 #endif // GAME_CLASS_10AAB7D0_H

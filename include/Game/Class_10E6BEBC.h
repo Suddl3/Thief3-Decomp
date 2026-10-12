@@ -7,7 +7,7 @@ class Class_10E6BEBC
 {
 public:
     virtual void Virtual0();
-    virtual int FUN_10a7dd80(const char* Name);
+    virtual int IsHitProxyName(const char* Name);
 };
 
 #endif // GAME_CLASS_10E6BEBC_H

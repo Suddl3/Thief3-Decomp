@@ -240,8 +240,8 @@ Class_10E700F0::Class_10E700F0()
 {
 }
 
-// FUNCTION: 0x10ACE450 ?FUN_10ace450@@YGXHHHH@Z
-void __stdcall FUN_10ace450(int A, int B, int C, int D)
+// FUNCTION: 0x10ACE450 ?HandleEvent@@YGXHHHH@Z
+void __stdcall HandleEvent(int A, int B, int C, int D)
 {
     if (A == 0x10)
         DAT_10f46da0->Virtual5(0x39, B, 0, 0);

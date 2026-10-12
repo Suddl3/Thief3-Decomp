@@ -8,11 +8,11 @@ struct Struct_10AA5570_Owner;
 class Class_10AA5570
 {
 public:
-    int FUN_10aa5570();
+    int GetValueAtIndex();
 
     Struct_10AA5570_Owner* Unknown00;
     int Unknown04;
-    int Unknown08;
+    int m_Index;
 };
 
 #endif // GAME_CLASS_10AA5570_H

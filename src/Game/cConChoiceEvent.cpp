@@ -2,17 +2,17 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/cIntArray.h"
 
-class Class_10E6C104
+class cConEvent
 {
 public:
-    Class_10E6C104();
+    cConEvent();
 
-    virtual ~Class_10E6C104();
+    virtual ~cConEvent();
 
     char Unknown04[4];
 };
 
-class cConChoiceEvent : public Class_10E6C104
+class cConChoiceEvent : public cConEvent
 {
 public:
     cConChoiceEvent();

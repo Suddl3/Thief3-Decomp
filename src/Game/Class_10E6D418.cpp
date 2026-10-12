@@ -104,7 +104,7 @@ public:
     virtual void Virtual1();
     virtual int FUN_10aa2a60(int A, int B, Class_10AA2A60_Param* C);
 
-    Class_10E6D418* FUN_10aa2860();
+    Class_10E6D418* Construct();
 
     union
     {

@@ -20,7 +20,7 @@ public:
 class Class_10AAB5C0 : public Class_10978090
 {
 public:
-    int FUN_10aab5c0();
+    int GetUnknown08();
 
     int Unknown08;
 };
@@ -37,5 +37,5 @@ public:
 int Class_10E6C7F8::Virtual0(int A, int B, int C, int* D)
 {
     if (!DAT_10f45c0e)
-        return FUN_10978090()->Virtual3(Virtual4(), FUN_10aab5c0());
+        return FUN_10978090()->Virtual3(Virtual4(), GetUnknown08());
 }

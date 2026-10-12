@@ -10,11 +10,11 @@ class Class_10AA82D0
 public:
     virtual void Virtual0();
 
-    int FUN_10aa82d0();
+    int GetLinkedObject();
 
     char Unknown04[4];
     int Unknown08;
-    int Unknown0C;
+    int m_LinkedObject;
 };
 
 class Class_10E7EBB0 : public Class_10AA82D0
@@ -49,17 +49,17 @@ void Class_10E7EBF8::FUN_10b4d6f0(Class_10B22020* A)
 {
     if (Unknown08 != 0x101)
     {
-        ((Class_10B396B0*)FUN_10aa82d0())->FUN_10b396b0(Unknown08);
+        ((Class_10B396B0*)GetLinkedObject())->FUN_10b396b0(Unknown08);
         Unknown08 = 0x101;
     }
-    ((Class_10B39530*)FUN_10aa82d0())->FUN_10b39530(0x60 + (Unknown10 == 10), -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+    ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(0x60 + (Unknown10 == 10), -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
     A->Unknown54E = false;
 }
 
 // FUNCTION: 0x10B4DB40 ?OnAnimationEnd@Class_10E7EBB0@@UAEHHH@Z
 int Class_10E7EBB0::OnAnimationEnd(int A, int B)
 {
-    ((Class_10B396B0*)FUN_10aa82d0())->FUN_10b396b0(B);
+    ((Class_10B396B0*)GetLinkedObject())->FUN_10b396b0(B);
     Unknown08 = 0x101;
     Unknown14 = 0;
     return 0x17;

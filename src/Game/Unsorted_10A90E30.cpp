@@ -23,7 +23,7 @@ public:
 class Class_10AAB5C0 : public Class_10978090
 {
 public:
-    int FUN_10aab5c0();
+    int GetUnknown08();
 
     int Unknown08;
 };
@@ -82,8 +82,8 @@ public:
     }
 };
 
-// FUNCTION: 0x10A91150 ?FUN_10a91150@Class_10E5D7B4@@UAEPAVClass_10E6CA50@@XZ
-Class_10E6CA50* Class_10E5D7B4::FUN_10a91150()
+// FUNCTION: 0x10A91150 ?Create@Class_10E5D7B4@@UAEPAVClass_10E6CA50@@XZ
+Class_10E6CA50* Class_10E5D7B4::Create()
 {
     GetAllocator()->Virtual8(0, 0);
     Class_10E6CA50* Result = new(0, 0, 0, 0, 0) Class_10E6CA50;
@@ -91,8 +91,8 @@ Class_10E6CA50* Class_10E5D7B4::FUN_10a91150()
     return Result;
 }
 
-// FUNCTION: 0x10A911F0 ?FUN_10a911f0@Class_10E5D7B8@@UAEPAVClass_10E6CA70@@XZ
-Class_10E6CA70* Class_10E5D7B8::FUN_10a911f0()
+// FUNCTION: 0x10A911F0 ?Create@Class_10E5D7B8@@UAEPAVClass_10E6CA70@@XZ
+Class_10E6CA70* Class_10E5D7B8::Create()
 {
     GetAllocator()->Virtual8(0, 0);
     Class_10E6CA70* Result = new(0, 0, 0, 0, 0) Class_10E6CA70;
@@ -104,5 +104,5 @@ Class_10E6CA70* Class_10E5D7B8::FUN_10a911f0()
 int Class_10E6CA6C::Virtual0(int A, int B, int C, int* D)
 {
     if (A == 0x28)
-        return FUN_10978090()->Virtual3(Virtual4(), FUN_10aab5c0());
+        return FUN_10978090()->Virtual3(Virtual4(), GetUnknown08());
 }

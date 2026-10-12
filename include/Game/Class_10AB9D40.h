@@ -9,7 +9,7 @@ class Class_10AB9D40
 {
 public:
     void FUN_10ab9a60(int A, Struct_10AB9D40* B, int C);
-    void FUN_10ab9d40(int A, Struct_10AB9D40* B, int C);
+    void HandleFootstep(int A, Struct_10AB9D40* B, int C);
 };
 
 #endif // GAME_CLASS_10AB9D40_H

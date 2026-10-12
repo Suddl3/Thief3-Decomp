@@ -9,7 +9,7 @@ public:
     int FUN_10aa3510();
     Class_10E6D498* Construct();
 
-    void* Unknown00;
+    void* VTable;
     char Pad04[0x1];
     unsigned char Field05;
     char Pad06[0x2];

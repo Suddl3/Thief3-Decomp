@@ -26,6 +26,6 @@ public:
 // FUNCTION: 0x10BDB0F0 ?FUN_10bdb0f0@cTacticMoveToPoint@@UAEXXZ
 void cTacticMoveToPoint::FUN_10bdb0f0()
 {
-    if (FUN_10bc4160()->FUN_10aa82d0() == 0)
+    if (FUN_10bc4160()->GetLinkedObject() == 0)
         PopState();
 }

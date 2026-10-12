@@ -1,10 +1,10 @@
-// Game/Class_10E6F30C.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/cWaterManager.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10AB90F0.h"
 #include "Game/cActorManager.h"
 #include "Game/Class_10905A90_Member.h"
 #include "Game/cString.h"
-#include "Game/Class_10E6F30C.h"
+#include "Game/cWaterManager.h"
 
 extern const char DAT_10e6f2fc[];
 
@@ -33,28 +33,28 @@ public:
 
 extern Class_10939570* DAT_10f323fc;
 
-class Class_10E6F30C;
+class cWaterManager;
 
 // Copied from Game/Class_10F46DA0.h with slot 1 taking this object and three ints.
 class Class_10F46DA0
 {
 public:
     virtual void Virtual0();
-    virtual void Virtual1(Class_10E6F30C* A, int B, int C, int D);
+    virtual void Virtual1(cWaterManager* A, int B, int C, int D);
 };
 
 extern Class_10F46DA0* DAT_10f46da0;
 
-// FUNCTION: 0x10AB85A0 ?FUN_10ab85a0@Class_10E6F30C@@QAEXXZ
-void Class_10E6F30C::FUN_10ab85a0()
+// FUNCTION: 0x10AB85A0 ?Init@cWaterManager@@QAEXXZ
+void cWaterManager::Init()
 {
     {
         cString Splash(DAT_10e6f2fc);
-        Unknown10 = (int)FUN_10a4bd70((int)&Splash);
+        m_Splash = (int)FUN_10a4bd70((int)&Splash);
     }
     {
         cString Ripple(DAT_10e6f2f0);
-        Unknown14 = (int)FUN_10a4bd70((int)&Ripple);
+        m_Ripple = (int)FUN_10a4bd70((int)&Ripple);
     }
     Unknown20 = DAT_10f323fc->GetCategoryIndex(&DAT_10f3a3d0);
     Unknown24 = DAT_10f323fc->GetCategoryIndex(&DAT_10f3a3d4);

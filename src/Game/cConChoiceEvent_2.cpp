@@ -25,7 +25,7 @@ public:
     virtual void Virtual4();
     virtual void Virtual5();
     virtual void Virtual6();
-    virtual int FUN_10aa96c0(FILE* File, int Param);
+    virtual int WriteChoices(FILE* File, int Param);
 
     char Unknown04[4];
     int Unknown08;
@@ -33,8 +33,8 @@ public:
     Class_10E6C2E4_Unknown10* Unknown10;
 };
 
-// FUNCTION: 0x10AA96C0 ?FUN_10aa96c0@cConChoiceEvent@@UAEHPAU_iobuf@@H@Z
-int cConChoiceEvent::FUN_10aa96c0(FILE* File, int Param)
+// FUNCTION: 0x10AA96C0 ?WriteChoices@cConChoiceEvent@@UAEHPAU_iobuf@@H@Z
+int cConChoiceEvent::WriteChoices(FILE* File, int Param)
 {
     for (int i = 0; i < Unknown08; i++)
         fprintf(File, DAT_10e6c0f0, DAT_10e6d9b4, Unknown10[i].Unknown00);

@@ -44,7 +44,7 @@ class Class_10AA82D0
 {
 public:
     virtual void Virtual0();
-    Class_10B39870* FUN_10aa82d0();
+    Class_10B39870* GetLinkedObject();
 };
 
 class Class_10B3AE70
@@ -80,5 +80,5 @@ void Class_10E7E7C0::FUN_10b4c0a0(AGarrett* Garrett)
         ((Class_10B3AE70*)this)->FUN_10b3ae70(Garrett);
         break;
     }
-    ((Class_10B39530*)FUN_10aa82d0())->FUN_10b39530(Garrett->Unknown344, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+    ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(Garrett->Unknown344, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
 }

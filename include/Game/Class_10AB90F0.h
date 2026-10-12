@@ -6,15 +6,15 @@
 class Class_10AB90F0
 {
 public:
-    Class_10AB90F0() : Unknown00(0), Unknown04(0), Unknown08(0) {}
+    Class_10AB90F0() : Unknown00(0), Unknown04(0), m_Data(0) {}
     ~Class_10AB90F0();
 
     void FUN_10ab8e90(int Count);
-    void FUN_10ab90f0();
+    void Free();
 
     int Unknown00;
     int Unknown04;
-    void* Unknown08;
+    void* m_Data;
 };
 
 #endif // GAME_CLASS_10AB90F0_H

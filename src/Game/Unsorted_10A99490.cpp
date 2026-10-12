@@ -49,7 +49,7 @@ Class_10E6D0D0* Class_10E5D9E0::FUN_10a99530()
     Class_10E6D0D0* Result = 0;
     void* Memory = operator new(sizeof(Class_10E6D0D0), 0, 0, 0, 0, 0);
     if (Memory)
-        Result = static_cast<Class_10E6D0D0*>(Memory)->FUN_10a99470();
+        Result = static_cast<Class_10E6D0D0*>(Memory)->Construct();
     GetAllocator()->Virtual9();
     return Result;
 }

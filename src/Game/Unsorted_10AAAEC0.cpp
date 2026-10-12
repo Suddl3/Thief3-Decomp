@@ -11,20 +11,20 @@ class Class_10E6DA40
 public:
     virtual void Virtual0();
     virtual void Virtual1();
-    virtual void FUN_10aab540(void* Reader, int Version, int Unused);
+    virtual void ReadFields(void* Reader, int Version, int Unused);
 
     char Unknown04[4];
     int Unknown08;
 };
 
-// FUNCTION: 0x10AAB060 ?FUN_10aab060@Class_10AAB060@@QAE?AVClass_1090A780@@XZ
-Class_1090A780 Class_10AAB060::FUN_10aab060()
+// FUNCTION: 0x10AAB060 ?GetName@Class_10AAB060@@QAE?AVClass_1090A780@@XZ
+Class_1090A780 Class_10AAB060::GetName()
 {
     return Unknown10.FUN_10ab3800();
 }
 
-// FUNCTION: 0x10AAB540 ?FUN_10aab540@Class_10E6DA40@@UAEXPAXHH@Z
-void Class_10E6DA40::FUN_10aab540(void* Reader, int Version, int Unused)
+// FUNCTION: 0x10AAB540 ?ReadFields@Class_10E6DA40@@UAEXPAXHH@Z
+void Class_10E6DA40::ReadFields(void* Reader, int Version, int Unused)
 {
     if (Version > 12)
     {

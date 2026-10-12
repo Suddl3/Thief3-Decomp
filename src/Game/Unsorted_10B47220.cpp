@@ -14,11 +14,11 @@ class Class_10AA82D0
 public:
     virtual void Virtual0();
 
-    int FUN_10aa82d0();
+    int GetLinkedObject();
 
     char Unknown04[4];
     int Unknown08;
-    int Unknown0C;
+    int m_LinkedObject;
 };
 
 class Class_10E7E538 : public Class_10AA82D0
@@ -49,8 +49,8 @@ void Class_10E7E538::FUN_10b483c0(Class_10B22020* A)
 {
     if (Unknown08 != 0x101)
     {
-        ((Class_10B395B0*)FUN_10aa82d0())->FUN_10b395b0(Unknown08);
-        ((Class_10B39700*)FUN_10aa82d0())->FUN_10b39700();
+        ((Class_10B395B0*)GetLinkedObject())->FUN_10b395b0(Unknown08);
+        ((Class_10B39700*)GetLinkedObject())->FUN_10b39700();
     }
     m_State = 4;
 }

@@ -221,9 +221,9 @@ Class_10AA4CF0           SwooshGeometryTriStrip           0x10AA4CF0: slot of 0x
 Class_10AA5200           Class_10E6D5E4                   0x10AA5200: stores 0x10E6D5E4
 Class_10AA63A0           Class_10E6D8F0                   0x10AA63A0: slot of 0x10E6D8F0
 Class_10AA63B0           Class_10E6D8CC                   0x10AA63B0: slot of 0x10E6D8CC
-Class_10AA71F0           Class_10E6C128                   0x10AA71F0: slot of 0x10E6C128
+Class_10AA71F0           cConTransferObjectEvent          0x10AA71F0: slot of 0x10E6C128
 Class_10AA7220           Class_10EC0808                   0x10AA7220: slot of 0x10EC0808
-Class_10AA7250           Class_10E6C128                   0x10AA7250: slot of 0x10E6C128
+Class_10AA7250           cConTransferObjectEvent          0x10AA7250: slot of 0x10E6C128
 Class_10AA8310           Class_10E6D990                   0x10AA8310: slot of 0x10E6D990
 Class_10AAA050           Class_10E6D9BC                   0x10AAA050: slot of 0x10E6D9BC
 Class_10AAAA60           cConNoteEvent                    0x10AAAA60: slot of 0x10E6D9E8
@@ -241,6 +241,7 @@ Class_10ABB720           Class_10E6F474                   0x10ABB720: called on 
 Class_10ABB8F0           cHighlightMgr                    0x10ABB8F0: stores 0x10E6F47C
 Class_10ABB900           cHighlightMgr                    0x10ABB900: slot of 0x10E6F47C
 Class_10ABB9D0           Class_10E6F4B4                   0x10ABB9D0: stores 0x10E6F4B4
+Class_10ABF100           cCitySectionManager              named: Singleton accessor's Xbox twin is in CitySectionManager.cpp; its methods read APlayerPawn::CitySectionGoals.
 Class_10AC1490           cT3Camera                        0x10AC1490: slot of 0x10E6F910
 Class_10AC67F0           cVertexBufferInfo                0x10AC67F0: slot of 0x10E6F7D4
 Class_10AC6820           cVertexBufferInfo                0x10AC6820: slot of 0x10E6F7D4
@@ -563,6 +564,8 @@ Class_10E6BAB0           cVolumeManager                   named: Xbox twin's Cla
 Class_10E6BB40           cRadiusPinger                    named: Xbox twin vtable (T3Opt 18/18 slots): its own methods' and constructors' debug names say cRadiusPinger (1), source RadiusPinger.cpp
 Class_10E6BD90           cRigidAttachmentManager          named: Xbox twin names it cRigidAttachmentManager 18 times (RigidAttachmentManager.cpp 5); code links objects by rigid link type.
 Class_10E6BFBC           cTriggerLinkParam                named: Xbox twin's paired functions come from TriggerLinkParam.cpp; holds a 'LinkFlavor' name and saves its fields.
+Class_10E6C104           cConEvent                        named: Base of cConChoiceEvent and cConNoteEvent: their ctors call its ctor; Xbox files ConChoiceEvent.cpp, ConNoteEvent.cpp.
+Class_10E6C128           cConTransferObjectEvent          named: Xbox source file ConTransferObjectEvent.cpp; its Save twin logs 'Transfer object will not work right!'
 Class_10E6C1F0           cConversation                    named: Xbox twin vtable (T3Opt 40/40 slots): its own methods' and constructors' debug names say cConversation (2), source Conversation.cpp
 Class_10E6C2E4           cConChoiceEvent                  named: Xbox twin vtable (T3Opt 9/9 slots): its own methods' and constructors' debug names say cConChoiceEvent (1), source ConChoiceEvent.cpp
 Class_10E6C4A8           cTriggerClassParam               named: Xbox source file TriggerClassParam.cpp; FUN_10a891f0 falls back to the type name 'Class'.
@@ -576,6 +579,7 @@ Class_10E6D5B0           SwooshGeometryTriStrip           named: Xbox twin (5 sl
 Class_10E6D600           SwooshPointTracker               named: Xbox twin names SwooshPointTracker; a ring buffer of points, with 'Out of bounds' in its vtable.
 Class_10E6D9E8           cConNoteEvent                    named: Xbox source ConNoteEvent.cpp pairs with its code, which reads and writes a 'Note' line.
 Class_10E6DA90           cConCameraController             named: Xbox source file ConCameraController.cpp; reads the ConversationCamera config section.
+Class_10E6F30C           cWaterManager                    named: Strings 'WaterSplash' and 'WaterRipple' in its init; derives cActorManager and registers two types.
 Class_10E6F47C           cHighlightMgr                    named: Xbox source file HighlightMgr.cpp; FX material and membrane material messages.
 Class_10E6F5F0           GarrettOnCamera                  named: Xbox twin vtable (T3Opt 9/9 slots): its own methods' and constructors' debug names say GarrettOnCamera (2)
 Class_10E6F6A8           cCameraModeHandler               named: Xbox twin names cCameraModeHandler in T3Camera.cpp; its state is serialized and applied to an object.

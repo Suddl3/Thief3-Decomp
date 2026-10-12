@@ -32,6 +32,6 @@ unsigned char Class_10BEF0B0::FUN_10bef0b0()
     Unknown25C = 1;
     Class_10BF7F90* P = FUN_10bc4160();
     if (P)
-        ((Class_10AAF570_Field10*)P->FUN_10aaf570())->Virtual63();
+        ((Class_10AAF570_Field10*)P->GetLinkType())->Virtual63();
     return !Unknown04->FUN_10bb8290();
 }

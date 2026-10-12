@@ -12,7 +12,7 @@ public:
     virtual void FUN_10a94fc0();
     virtual void Virtual3();
     virtual Class_10AAB5C0* Virtual4(int A);
-    int FUN_10aab5c0();
+    int GetUnknown08();
 
     int Unknown04;
     int Unknown08;
@@ -36,7 +36,7 @@ extern Class_10F46DA0* DAT_10f46da0;
 // FUNCTION: 0x10A94FC0 ?FUN_10a94fc0@Class_10E6CD50@@UAEXXZ
 void Class_10E6CD50::FUN_10a94fc0()
 {
-    Class_10AAB5C0* Owner = (Class_10AAB5C0*)FUN_10aab5c0();
+    Class_10AAB5C0* Owner = (Class_10AAB5C0*)GetUnknown08();
     Class_10AAB5C0* Result = Owner->Virtual4(0);
     Class_10E5D5E0 Local;
     Local.Unknown00 = Result->Unknown04;

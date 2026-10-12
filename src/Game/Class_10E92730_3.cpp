@@ -35,7 +35,7 @@ public:
 // FUNCTION: 0x10BCBF00 ?TickCountdown@Class_10E92730@@UAEXXZ
 void Class_10E92730::TickCountdown()
 {
-    if (FUN_10bc4160()->FUN_10aa82d0() == 0)
+    if (FUN_10bc4160()->GetLinkedObject() == 0)
     {
         double Remaining = m_Countdown;
         m_Countdown = Remaining - FUN_10c00490();

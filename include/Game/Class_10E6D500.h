@@ -11,10 +11,10 @@ public:
     virtual void Virtual0();
     virtual void Virtual1();
     virtual void Virtual2();
-    virtual std::string FUN_10aa4790();
+    virtual std::string GetSuiteLabel();
 
     char Unknown04[0x10];
-    std::string Unknown14;
+    std::string m_Name;
 };
 
 #endif // GAME_CLASS_10E6D500_H

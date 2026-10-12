@@ -3,14 +3,14 @@
 #ifndef GAME_CLASS_10E6C170_H
 #define GAME_CLASS_10E6C170_H
 
-#include "Game/Class_10E6C104.h"
+#include "Game/cConEvent.h"
 
 class Class_10AA8110_Param;
 class Object_10AA8080;
 
 typedef struct _iobuf FILE;
 
-class Class_10E6C170 : public Class_10E6C104
+class Class_10E6C170 : public cConEvent
 {
 public:
     virtual void Virtual0();

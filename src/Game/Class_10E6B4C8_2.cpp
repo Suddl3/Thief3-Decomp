@@ -28,7 +28,7 @@ void LoginManager::FollowPlayerSetupLinks(int A, int B, cIntArray* Out)
     cIntArray Found;
     GetUObjectLinkManager()->Virtual4(B, 0, 0x21C3981, Found);
     if (Found.Count >= 1) {
-        int ID = ((Class_10AAB5C0*)Found.Data[0])->FUN_10aab5c0();
+        int ID = ((Class_10AAB5C0*)Found.Data[0])->GetUnknown08();
         for (int i = 0; i < Out->Count; i++) {
             if (Out->Data[i] == ID)
                 break;

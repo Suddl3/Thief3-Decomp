@@ -8,7 +8,7 @@
 class Class_10E701C8 : public cActorManager
 {
 public:
-    virtual void FUN_10ace5b0(int Code, int A, int B, int C);
+    virtual void HandleEvent(int Code, int A, int B, int C);
 
     void FUN_10ace4a0();
     Class_10E701C8* FUN_10ace480();

@@ -1,14 +1,14 @@
 // Game/AGarrett_7.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10ABF100.h"
+#include "Game/cCitySectionManager.h"
 
 struct Struct_10A465C0;
 
 struct FsCitySectionGoal;
 
-class Class_10ABF100;
+class cCitySectionManager;
 
-Class_10ABF100* FUN_10abf0d0();
+cCitySectionManager* GetCitySectionManager();
 
 class APlayerPawn
 {
@@ -151,7 +151,7 @@ struct Struct_10A465C0* AGarrett::GetGoal(int Index)
     int Count = Virtual114();
     if (Index >= 0 && Index < Count)
     {
-        if (FUN_10abf0d0()->FUN_10abf100())
+        if (GetCitySectionManager()->FUN_10abf100())
             return (struct Struct_10A465C0*)CitySectionGoals[Index].Unknown04;
         return APlayerPawn::GetGoal(Index);
     }

@@ -13,7 +13,7 @@ public:
     virtual void Virtual1();
     virtual int FUN_10a9dbe0(int A, Class_10A9DBE0_Param2* B, Class_10A9DBE0_Param3* C);
 
-    Class_10E6D260* FUN_10a9d3c0();
+    Class_10E6D260* Construct();
     void FUN_10a9d5b0(int Id, float Value);
 };
 

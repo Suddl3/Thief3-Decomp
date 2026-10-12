@@ -67,8 +67,8 @@ void Class_10ABB300::FUN_10abb300(Struct_10ABB300* P)
 // FUNCTION: 0x10ABB480 ?FUN_10abb480@Class_10ABB480@@QAEXXZ
 void Class_10ABB480::FUN_10abb480()
 {
-    for (int i = 0; i < Unknown04; i++)
-        Unknown0C[i]->Virtual1();
+    for (int i = 0; i < m_Count; i++)
+        m_Elements[i]->Virtual1();
 }
 
 // FUNCTION: 0x10ABB4B0 ?FindEntry@cHighlightMgr@@UAEPAUStruct_10ABB4B0@@H@Z

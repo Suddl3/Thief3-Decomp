@@ -8,7 +8,7 @@ class Class_10E6CE6C
 public:
     virtual void Virtual0();
     virtual void Virtual1();
-    virtual int FUN_10a95980(int A, int B, int C);
+    virtual int ResetSimtimePlayedTimer(int A, int B, int C);
 
     Class_10E6CE6C* Construct();
 };

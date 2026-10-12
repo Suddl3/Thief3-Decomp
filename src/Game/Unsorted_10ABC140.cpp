@@ -115,8 +115,8 @@ int* FUN_10abf1f0()
     return &DAT_10f35dec->Unknown08->Unknown214;
 }
 
-// FUNCTION: 0x10ABFBB0 ?FUN_10abfbb0@Class_10ABFBB0@@QAEPAV1@XZ
-Class_10ABFBB0* Class_10ABFBB0::FUN_10abfbb0()
+// FUNCTION: 0x10ABFBB0 ?Clear@Class_10ABFBB0@@QAEPAV1@XZ
+Class_10ABFBB0* Class_10ABFBB0::Clear()
 {
     Unknown00 = 0;
     Unknown04 = 0;

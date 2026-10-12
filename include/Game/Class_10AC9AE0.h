@@ -8,11 +8,11 @@ class AGarrett;
 class Class_10AC9AE0
 {
 public:
-    void FUN_10ac9ae0();
+    void Release();
     void FUN_10ac9b40(AGarrett* Garrett);
 
     char Unknown00[4];
-    void* Unknown04;
+    void* m_Handle;
 };
 
 #endif // GAME_CLASS_10AC9AE0_H

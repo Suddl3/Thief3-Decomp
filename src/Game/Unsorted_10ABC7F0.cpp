@@ -18,8 +18,8 @@ public:
 
 cUObjectLinkManager* GetUObjectLinkManager();
 
-// FUNCTION: 0x10ABC8F0 ?FUN_10abc8f0@@YA_NH@Z
-bool FUN_10abc8f0(int Param)
+// FUNCTION: 0x10ABC8F0 ?HasLinkedPawn@@YA_NH@Z
+bool HasLinkedPawn(int Param)
 {
     cIntArray Items;
     GetUObjectLinkManager()->Virtual4(0, Param, 0x281b9d0, &Items);

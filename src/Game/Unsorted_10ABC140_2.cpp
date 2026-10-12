@@ -11,8 +11,8 @@ extern "C" double sqrt(double);
 
 extern "C" double cos(double);
 
-// FUNCTION: 0x10ABC440 ?FUN_10abc440@@YAMMMMM@Z
-float FUN_10abc440(float A, float B, float C, float D)
+// FUNCTION: 0x10ABC440 ?CalcLaunchSpeed@@YAMMMMM@Z
+float CalcLaunchSpeed(float A, float B, float C, float D)
 {
     float V = C / (2.0f * (A * tan(D) - B));
     if (V < DAT_10eafbdc)

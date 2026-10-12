@@ -39,8 +39,8 @@ public:
     }
 };
 
-// FUNCTION: 0x10A95CA0 ?FUN_10a95ca0@Class_10E5D828@@UAEPAVClass_10E6CEA4@@XZ
-Class_10E6CEA4* Class_10E5D828::FUN_10a95ca0()
+// FUNCTION: 0x10A95CA0 ?Create@Class_10E5D828@@UAEPAVClass_10E6CEA4@@XZ
+Class_10E6CEA4* Class_10E5D828::Create()
 {
     GetAllocator()->Virtual8(0, 0);
     Class_10E6CEA4* Result = new(0, 0, 0, 0, 0) Class_10E6CEA4;

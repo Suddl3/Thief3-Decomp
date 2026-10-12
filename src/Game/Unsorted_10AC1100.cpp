@@ -4,15 +4,15 @@
 #include "Game/Struct_10AC1100.h"
 #include "Game/Struct_10AC1100_Frame.h"
 
-// FUNCTION: 0x10AC1100 ?FUN_10ac1100@Class_10AC1100@@QAEPAV1@ABUStruct_10AC1100@@00@Z
-Class_10AC1100* Class_10AC1100::FUN_10ac1100(const Struct_10AC1100& A, const Struct_10AC1100& B,
+// FUNCTION: 0x10AC1100 ?SetFrames@Class_10AC1100@@QAEPAV1@ABUStruct_10AC1100@@00@Z
+Class_10AC1100* Class_10AC1100::SetFrames(const Struct_10AC1100& A, const Struct_10AC1100& B,
                                              const Struct_10AC1100& C)
 {
-    Unknown00[0].Unknown08 = A;
-    Unknown00[0].Unknown14 = B;
-    Unknown00[0].Unknown20 = C;
-    Unknown00[1] = Unknown00[0];
-    Unknown00[2] = Unknown00[0];
-    Unknown00[3] = Unknown00[0];
+    m_Frames[0].Unknown08 = A;
+    m_Frames[0].Unknown14 = B;
+    m_Frames[0].Unknown20 = C;
+    m_Frames[1] = m_Frames[0];
+    m_Frames[2] = m_Frames[0];
+    m_Frames[3] = m_Frames[0];
     return this;
 }

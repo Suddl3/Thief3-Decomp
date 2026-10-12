@@ -50,8 +50,8 @@ public:
 
 extern Class_10F46DA0* DAT_10f46da0;
 
-// FUNCTION: 0x10A6DC50 ?FUN_10a6dc50@Class_10E6B978@@UAEXHHHH@Z
-void Class_10E6B978::FUN_10a6dc50(int Msg, int A, int B, int C)
+// FUNCTION: 0x10A6DC50 ?HandleEvent@Class_10E6B978@@UAEXHHHH@Z
+void Class_10E6B978::HandleEvent(int Msg, int A, int B, int C)
 {
     switch (Msg)
     {
@@ -94,8 +94,8 @@ bool Class_10E6BC8C::HasOwner(int A)
     return Virtual10(A) != 0;
 }
 
-// FUNCTION: 0x10A6E6B0 ?FUN_10a6e6b0@Class_10E6BA00@@UAEXHHHH@Z
-void Class_10E6BA00::FUN_10a6e6b0(int Type, int A, int B, int C)
+// FUNCTION: 0x10A6E6B0 ?HandleEvent@Class_10E6BA00@@UAEXHHHH@Z
+void Class_10E6BA00::HandleEvent(int Type, int A, int B, int C)
 {
     if (Type != 0x26)
         cActorManager::FUN_10a4c470(Type, A, B, C);

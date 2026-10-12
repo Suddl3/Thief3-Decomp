@@ -27,7 +27,7 @@ class Class_10AA82D0
 {
 public:
     virtual void Virtual0();
-    Class_10B39870* FUN_10aa82d0();
+    Class_10B39870* GetLinkedObject();
 };
 
 class GSMantle : public Class_10AA82D0
@@ -76,8 +76,8 @@ void Class_10E81548::FUN_10b4bf20(AGarrett* Garrett)
         FUN_10b3ae70(Garrett);
         break;
     }
-    ((Class_10B39530*)FUN_10aa82d0())->FUN_10b39530(Garrett->Unknown344, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
-    FVector V = *(FVector*)((Class_10B39890*)FUN_10aa82d0())->FUN_10b39890(Garrett->Unknown344);
+    ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(Garrett->Unknown344, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+    FVector V = *(FVector*)((Class_10B39890*)GetLinkedObject())->FUN_10b39890(Garrett->Unknown344);
     Struct_10B1DCA0 Coords(FVector(0.0f, 0.0f, 0.0f));
     Coords.FUN_109620b0(Garrett->Unknown38);
     {

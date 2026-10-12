@@ -83,5 +83,5 @@ void Class_10E92230::FUN_10bcbdf0(int A, int B, int C, int D, int E)
 void Class_10E92730::FUN_10bcbea0()
 {
     Class_10AAF570* Owner = (Class_10AAF570*)FUN_10bc4160();
-    ((Class_10AAF570_Field10*)Owner->FUN_10aaf570())->Virtual49(0);
+    ((Class_10AAF570_Field10*)Owner->GetLinkType())->Virtual49(0);
 }

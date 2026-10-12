@@ -18,7 +18,7 @@ class Class_10E6FEE8 : public cActorManager
 public:
     Class_10E6FEE8();
 
-    virtual void FUN_10acb0c0(int Code, int A, int B, int C);
+    virtual void HandleEvent(int Code, int A, int B, int C);
 };
 
 // FUNCTION: 0x10ACA730 ??0Class_10E6FEE8@@QAE@XZ

@@ -80,7 +80,7 @@ public:
 // FUNCTION: 0x10BB83A0 ?FUN_10bb83a0@Class_10BB8360@@QAEXHMH@Z
 void Class_10BB8360::FUN_10bb83a0(int A, float B, int C)
 {
-    if (Unknown0C && (DAT_10ff66bc[((Object_10AAF570*)Unknown0C->FUN_10aaf570())->Virtual38()].Flags & 4))
+    if (Unknown0C && (DAT_10ff66bc[((Object_10AAF570*)Unknown0C->GetLinkType())->Virtual38()].Flags & 4))
         return;
-    ((Object_10AAF570*)Unknown0C->FUN_10aaf570())->Virtual57(A, B, C);
+    ((Object_10AAF570*)Unknown0C->GetLinkType())->Virtual57(A, B, C);
 }

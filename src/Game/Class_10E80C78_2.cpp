@@ -1,9 +1,9 @@
 // Game/Class_10E80C78_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10ABF100.h"
+#include "Game/cCitySectionManager.h"
 #include "Game/Class_10B799A0.h"
 
-Class_10ABF100* FUN_10abf0d0();
+cCitySectionManager* GetCitySectionManager();
 
 extern bool DAT_10f45c0c;
 
@@ -503,7 +503,7 @@ void Class_10E80C78::SetDifficulty(int Arg)
     if (Unknown1B0)
     {
         int Value = Arg;
-        if (FUN_10abf0d0()->FUN_10abf100() || DAT_10f45c0c)
+        if (GetCitySectionManager()->FUN_10abf100() || DAT_10f45c0c)
             Value = 0;
         else
         {

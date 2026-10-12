@@ -8,14 +8,14 @@
 class Class_10AC1C40
 {
 public:
-    void FUN_10ac1c40(float Dt);
+    void Integrate(float Dt);
 
     char Unknown00[4];
-    float Unknown04;
-    FVector Unknown08;
-    FVector Unknown14;
-    FVector Unknown20;
-    FVector Unknown2C;
+    float m_InverseMass;
+    FVector m_Position;
+    FVector m_Velocity;
+    FVector m_Acceleration;
+    FVector m_Force;
 };
 
 #endif // GAME_CLASS_10AC1C40_H

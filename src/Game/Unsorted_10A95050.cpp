@@ -35,7 +35,7 @@ public:
     virtual void Virtual1();
     virtual void Virtual2();
 
-    int FUN_10aab5c0();
+    int GetUnknown08();
 };
 
 class Class_10E6CE50 : public Class_10AAB5C0
@@ -75,8 +75,8 @@ public:
     }
 };
 
-// FUNCTION: 0x10A95050 ?FUN_10a95050@Class_10E5D96C@@UAEPAVClass_10E6CDC4@@XZ
-Class_10E6CDC4* Class_10E5D96C::FUN_10a95050()
+// FUNCTION: 0x10A95050 ?Create@Class_10E5D96C@@UAEPAVClass_10E6CDC4@@XZ
+Class_10E6CDC4* Class_10E5D96C::Create()
 {
     GetAllocator()->Virtual8(0, 0);
     Class_10E6CDC4* Result = 0;
@@ -87,8 +87,8 @@ Class_10E6CDC4* Class_10E5D96C::FUN_10a95050()
     return Result;
 }
 
-// FUNCTION: 0x10A950A0 ?FUN_10a950a0@Class_10E5D970@@UAEPAVClass_10E6CDD0@@XZ
-Class_10E6CDD0* Class_10E5D970::FUN_10a950a0()
+// FUNCTION: 0x10A950A0 ?Create@Class_10E5D970@@UAEPAVClass_10E6CDD0@@XZ
+Class_10E6CDD0* Class_10E5D970::Create()
 {
     GetAllocator()->Virtual8(0, 0);
     Class_10E6CDD0* Result = 0;
@@ -99,8 +99,8 @@ Class_10E6CDD0* Class_10E5D970::FUN_10a950a0()
     return Result;
 }
 
-// FUNCTION: 0x10A950F0 ?FUN_10a950f0@Class_10E5D974@@UAEPAVClass_10E6CDDC@@XZ
-Class_10E6CDDC* Class_10E5D974::FUN_10a950f0()
+// FUNCTION: 0x10A950F0 ?Create@Class_10E5D974@@UAEPAVClass_10E6CDDC@@XZ
+Class_10E6CDDC* Class_10E5D974::Create()
 {
     GetAllocator()->Virtual8(0, 0);
     Class_10E6CDDC* Result = 0;
@@ -111,8 +111,8 @@ Class_10E6CDDC* Class_10E5D974::FUN_10a950f0()
     return Result;
 }
 
-// FUNCTION: 0x10A95140 ?FUN_10a95140@Class_10E5D978@@UAEPAVClass_10E6CDE8@@XZ
-Class_10E6CDE8* Class_10E5D978::FUN_10a95140()
+// FUNCTION: 0x10A95140 ?Create@Class_10E5D978@@UAEPAVClass_10E6CDE8@@XZ
+Class_10E6CDE8* Class_10E5D978::Create()
 {
     GetAllocator()->Virtual8(0, 0);
     Class_10E6CDE8* Result = 0;
@@ -123,8 +123,8 @@ Class_10E6CDE8* Class_10E5D978::FUN_10a95140()
     return Result;
 }
 
-// FUNCTION: 0x10A95190 ?FUN_10a95190@Class_10E5D97C@@UAEPAVClass_10E6CDF4@@XZ
-Class_10E6CDF4* Class_10E5D97C::FUN_10a95190()
+// FUNCTION: 0x10A95190 ?Create@Class_10E5D97C@@UAEPAVClass_10E6CDF4@@XZ
+Class_10E6CDF4* Class_10E5D97C::Create()
 {
     GetAllocator()->Virtual8(0, 0);
     Class_10E6CDF4* Result = 0;
@@ -135,8 +135,8 @@ Class_10E6CDF4* Class_10E5D97C::FUN_10a95190()
     return Result;
 }
 
-// FUNCTION: 0x10A951E0 ?FUN_10a951e0@Class_10E5D808@@UAEPAVClass_10E6CE00@@XZ
-Class_10E6CE00* Class_10E5D808::FUN_10a951e0()
+// FUNCTION: 0x10A951E0 ?Create@Class_10E5D808@@UAEPAVClass_10E6CE00@@XZ
+Class_10E6CE00* Class_10E5D808::Create()
 {
     GetAllocator()->Virtual8(0, 0);
     Class_10E6CE00* Result = new(0, 0, 0, 0, 0) Class_10E6CE00;
@@ -144,8 +144,8 @@ Class_10E6CE00* Class_10E5D808::FUN_10a951e0()
     return Result;
 }
 
-// FUNCTION: 0x10A95590 ?FUN_10a95590@Class_10E5D968@@UAEPAVClass_10E6CE1C@@XZ
-Class_10E6CE1C* Class_10E5D968::FUN_10a95590()
+// FUNCTION: 0x10A95590 ?Create@Class_10E5D968@@UAEPAVClass_10E6CE1C@@XZ
+Class_10E6CE1C* Class_10E5D968::Create()
 {
     GetAllocator()->Virtual8(0, 0);
     Class_10E6CE1C* Result = 0;
@@ -159,5 +159,5 @@ Class_10E6CE1C* Class_10E5D968::FUN_10a95590()
 // FUNCTION: 0x10A958F0 ?SetTimeRemaining@Class_10E6CE50@@UAEXXZ
 void Class_10E6CE50::SetTimeRemaining()
 {
-    m_TimeRemaining = ((Class_10AAB5C0_Result*)FUN_10aab5c0())->Virtual7(0);
+    m_TimeRemaining = ((Class_10AAB5C0_Result*)GetUnknown08())->Virtual7(0);
 }

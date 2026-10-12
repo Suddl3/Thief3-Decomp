@@ -18,5 +18,5 @@ public:
 void Class_Field04::FUN_10bb83e0()
 {
     if (Unknown2D4)
-        ((Class_10AAF570_Field10*)Unknown0C->FUN_10aaf570())->Virtual56();
+        ((Class_10AAF570_Field10*)Unknown0C->GetLinkType())->Virtual56();
 }

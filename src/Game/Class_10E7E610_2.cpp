@@ -37,7 +37,7 @@ void Class_10E7E610::FUN_10b49360(AGarrett* Garrett)
 {
     ReleaseArm(Garrett);
     ClearVelocity(Garrett);
-    ((Class_10B396A0*)FUN_10aa82d0())->FUN_10b396a0();
+    ((Class_10B396A0*)GetLinkedObject())->FUN_10b396a0();
     Garrett->bUpdatePhysHeight = 1;
     Garrett->SetNoiseEnabled(0);
 }

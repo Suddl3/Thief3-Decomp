@@ -8,7 +8,7 @@
 class Class_10E667C4
 {
 public:
-    virtual void FUN_10a3b460(int Message, int Param, int C, int D);
+    virtual void HandleEvent(int Message, int Param, int C, int D);
 
     bool FUN_10a3ad90(int Param);
 
@@ -25,8 +25,8 @@ Class_10A3AD10::Class_10A3AD10(const Class_10A3AD10& Other)
 {
 }
 
-// FUNCTION: 0x10A3B460 ?FUN_10a3b460@Class_10E667C4@@UAEXHHHH@Z
-void Class_10E667C4::FUN_10a3b460(int Message, int Param, int C, int D)
+// FUNCTION: 0x10A3B460 ?HandleEvent@Class_10E667C4@@UAEXHHHH@Z
+void Class_10E667C4::HandleEvent(int Message, int Param, int C, int D)
 {
     bool NoTarget = m_Target == 0;
     switch (Message)

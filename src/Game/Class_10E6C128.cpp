@@ -1,14 +1,14 @@
-// Game/Class_10E6C128.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/cConTransferObjectEvent.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10E6C104.h"
+#include "Game/cConEvent.h"
 #include "Game/Struct_10A81140.h"
 
-class Class_10E6C128 : public Class_10E6C104
+class cConTransferObjectEvent : public cConEvent
 {
 public:
-    Class_10E6C128();
+    cConTransferObjectEvent();
 
-    virtual ~Class_10E6C128();
+    virtual ~cConTransferObjectEvent();
 
     Struct_10A81140 Unknown0C;
     char Unknown14[4];
@@ -45,8 +45,8 @@ public:
     virtual unsigned Virtual22();
 };
 
-// FUNCTION: 0x10A81140 ??0Class_10E6C128@@QAE@XZ
-Class_10E6C128::Class_10E6C128() : Unknown18(0), Unknown1C(0), Unknown20(0), Unknown24(0)
+// FUNCTION: 0x10A81140 ??0cConTransferObjectEvent@@QAE@XZ
+cConTransferObjectEvent::cConTransferObjectEvent() : Unknown18(0), Unknown1C(0), Unknown20(0), Unknown24(0)
 {
 }
 
@@ -56,5 +56,5 @@ unsigned cConversation::FUN_10a81fc0()
     return (Virtual22() >> 10) & 1;
 }
 
-// FUNCTION: 0x10A81FE0 ??_GClass_10E6C128@@UAEPAXI@Z
+// FUNCTION: 0x10A81FE0 ??_GcConTransferObjectEvent@@UAEPAXI@Z
 // Compiler-generated: emitted with the class's vtable by 0x10A81140's definition in this unit.

@@ -22,12 +22,12 @@ public:
     cString Unknown00;
 };
 
-class Class_10E6C104 : public Class_10A810F0
+class cConEvent : public Class_10A810F0
 {
 public:
-    Class_10E6C104();
+    cConEvent();
 
-    virtual ~Class_10E6C104();
+    virtual ~cConEvent();
 };
 
 class Class_10AB37D0
@@ -37,7 +37,7 @@ public:
     ~Class_10AB37D0();
 };
 
-class Class_10E6DA1C : public Class_10E6C104
+class Class_10E6DA1C : public cConEvent
 {
 public:
     Class_10E6DA1C();

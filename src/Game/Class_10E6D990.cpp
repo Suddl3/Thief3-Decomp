@@ -15,7 +15,7 @@ void WriteInt(void* Stream, int Value);
 class Class_10E6D990
 {
 public:
-    void FUN_10aa8310(void* Stream, int, int);
+    void WriteFields(void* Stream, int, int);
 
     char Unknown00[0x8];
     int Unknown08;
@@ -27,8 +27,8 @@ public:
     Class_10AB3800 Unknown20;
 };
 
-// FUNCTION: 0x10AA8310 ?FUN_10aa8310@Class_10E6D990@@QAEXPAXHH@Z
-void Class_10E6D990::FUN_10aa8310(void* Stream, int, int)
+// FUNCTION: 0x10AA8310 ?WriteFields@Class_10E6D990@@QAEXPAXHH@Z
+void Class_10E6D990::WriteFields(void* Stream, int, int)
 {
     WriteString(Stream, (int*)&Unknown20.FUN_10ab3800());
     WriteString(Stream, &Unknown08);
@@ -37,17 +37,17 @@ void Class_10E6D990::FUN_10aa8310(void* Stream, int, int)
     WriteInt(Stream, Unknown14);
     WriteInt(Stream, Unknown18);
     WriteString(Stream, &Unknown1C);
-    WriteString(Stream, (int*)((Class_10AB37C0*)&Unknown20)->FUN_10ab37c0());
+    WriteString(Stream, (int*)((Class_10AB37C0*)&Unknown20)->GetName());
 }
 
-// FUNCTION: 0x10AA83E0 ?FUN_10aa83e0@Class_10AA83E0@@QAE?AVClass_1090A780@@XZ
-Class_1090A780 Class_10AA83E0::FUN_10aa83e0()
+// FUNCTION: 0x10AA83E0 ?GetName@Class_10AA83E0@@QAE?AVClass_1090A780@@XZ
+Class_1090A780 Class_10AA83E0::GetName()
 {
     return Unknown20.FUN_10ab3800();
 }
 
-// FUNCTION: 0x10AA8400 ?FUN_10aa8400@Class_10AA8400@@QAE?AVClass_1090A780@@XZ
-Class_1090A780 Class_10AA8400::FUN_10aa8400()
+// FUNCTION: 0x10AA8400 ?GetName@Class_10AA8400@@QAE?AVClass_1090A780@@XZ
+Class_1090A780 Class_10AA8400::GetName()
 {
-    return Unknown20.cTaggedAnimSeq::GetName();
+    return m_TaggedAnimSeq.cTaggedAnimSeq::GetName();
 }

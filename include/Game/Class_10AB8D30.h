@@ -8,16 +8,16 @@
 class Class_10AB8D30
 {
 public:
-    void FUN_10ab8d30(int A, int B, int C, int D);
+    void Init(int A, int B, int C, int D);
 
     int Unknown00;
     int Unknown04;
     int Unknown08;
-    int Unknown0C;
+    int m_Current;
     int Unknown10;
     char Unknown14[4];
-    cIntArray Unknown18;
-    cIntArray Unknown24;
+    cIntArray m_Items;
+    cIntArray m_Values;
 };
 
 #endif // GAME_CLASS_10AB8D30_H

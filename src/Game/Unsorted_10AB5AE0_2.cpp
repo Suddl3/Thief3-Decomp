@@ -9,11 +9,11 @@ public:
     virtual void Virtual1();
 };
 
-// FUNCTION: 0x10AB5AE0 ?FUN_10ab5ae0@Class_10AB5AE0@@QAEPAV1@PAV1@@Z
-Class_10AB5AE0* Class_10AB5AE0::FUN_10ab5ae0(Class_10AB5AE0* Other)
+// FUNCTION: 0x10AB5AE0 ?Assign@Class_10AB5AE0@@QAEPAV1@PAV1@@Z
+Class_10AB5AE0* Class_10AB5AE0::Assign(Class_10AB5AE0* Other)
 {
-    Unknown00 = Other->Unknown00;
-    if (Unknown00)
-        Unknown00->Virtual1();
+    m_Object = Other->m_Object;
+    if (m_Object)
+        m_Object->Virtual1();
     return this;
 }

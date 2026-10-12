@@ -11,20 +11,20 @@ public:
 class Class_10E49AC4 : public Options
 {
 public:
-    void FUN_10ab6e50();
+    void Init();
 
     int Unknown00;
-    int Unknown04[21];
+    int m_Values[21];
     bool Unknown58;
     unsigned char Unknown59;
     unsigned char Unknown5A;
 };
 
-// FUNCTION: 0x10AB6E50 ?FUN_10ab6e50@Class_10E49AC4@@QAEXXZ
-void Class_10E49AC4::FUN_10ab6e50()
+// FUNCTION: 0x10AB6E50 ?Init@Class_10E49AC4@@QAEXXZ
+void Class_10E49AC4::Init()
 {
     for (int i = 0; i < 21; i++)
-        Unknown04[i] = SetDefaults(i);
+        m_Values[i] = SetDefaults(i);
     unsigned int Flags = Load();
     Unknown59 = (Flags >> 2) & 1;
     Unknown5A = (Flags >> 3) & 1;

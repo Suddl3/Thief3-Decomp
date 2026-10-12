@@ -17,7 +17,7 @@ struct FColor
     int Unknown00;
 };
 
-FColor FUN_10abc760(int A);
+FColor GetFlavorColor(int A);
 
 void FUN_10a26c10(cString* A, cString* B);
 
@@ -42,12 +42,12 @@ int __stdcall Class_10E7C3C8::FUN_10b36f40(int A, Class_10B36E40_Arg* C)
 {
     if (GWindowManager)
     {
-        cString Text(*(cString*)C->Virtual4(0)->FUN_10ab37c0());
+        cString Text(*(cString*)C->Virtual4(0)->GetName());
         ((Class_10C3D3B0*)C->Virtual4(1))->Class_10C3D3B0::FUN_10c3d3b0();
         cString Key;
         FUN_10a26c10(&Text, &Key);
         FUN_10a293b0(&Key, 0);
-        ((Class_10B154C0*)FUN_10b154c0())->FUN_10b15e30(&Key, FUN_10abc760(0).Unknown00);
+        ((Class_10B154C0*)FUN_10b154c0())->FUN_10b15e30(&Key, GetFlavorColor(0).Unknown00);
     }
     return 1;
 }

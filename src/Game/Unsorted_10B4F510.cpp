@@ -26,14 +26,14 @@ void GSLean::PlayLeanMotion(AGarrett* Garrett)
 {
     if (!Unknown2C) {
         if (!Garrett->isCrouching)
-            ((Class_10B39530*)FUN_10aa82d0())->FUN_10b39530(0x53, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+            ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(0x53, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
         else
-            ((Class_10B39530*)FUN_10aa82d0())->FUN_10b39530(0x59, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+            ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(0x59, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
     } else {
         if (!Garrett->isCrouching)
-            ((Class_10B39530*)FUN_10aa82d0())->FUN_10b39530(0x56, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+            ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(0x56, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
         else
-            ((Class_10B39530*)FUN_10aa82d0())->FUN_10b39530(0x5c, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+            ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(0x5c, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
     }
 }
 
@@ -43,15 +43,15 @@ void Class_10B4F590::FUN_10b4f590(AGarrett* Garrett)
     if (Unknown2C == 0)
     {
         if (!Garrett->isCrouching)
-            ((Class_10B39530*)FUN_10aa82d0())->FUN_10b39530(0x54, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+            ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(0x54, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
         else
-            ((Class_10B39530*)FUN_10aa82d0())->FUN_10b39530(0x5a, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+            ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(0x5a, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
     }
     else
     {
         if (!Garrett->isCrouching)
-            ((Class_10B39530*)FUN_10aa82d0())->FUN_10b39530(0x57, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+            ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(0x57, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
         else
-            ((Class_10B39530*)FUN_10aa82d0())->FUN_10b39530(0x5d, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+            ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(0x5d, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
     }
 }

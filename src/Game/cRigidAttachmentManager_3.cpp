@@ -64,7 +64,7 @@ Class_10B39870* __stdcall cRigidAttachmentManager::GetAttachedObject()
         cIntArray Found;
         GetUObjectLinkManager()->Virtual4(UnknownA4, (int)this, 0x281B9D0, Found);
         if (Found.Count == 1)
-            return (Class_10B39870*)((Class_10AA82D0*)Found.Data[0])->FUN_10aa82d0();
+            return (Class_10B39870*)((Class_10AA82D0*)Found.Data[0])->GetLinkedObject();
     }
     return 0;
 }

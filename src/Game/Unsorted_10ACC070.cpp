@@ -22,7 +22,7 @@ class cActorManager
 public:
     ~cActorManager();
 
-    virtual void FUN_10acb0c0(int Code, int A, int B, int C);
+    virtual void HandleEvent(int Code, int A, int B, int C);
 };
 
 class Class_10E70020 : public cActorManager
@@ -30,7 +30,7 @@ class Class_10E70020 : public cActorManager
 public:
     ~Class_10E70020();
 
-    virtual void FUN_10acb0c0(int Code, int A, int B, int C);
+    virtual void HandleEvent(int Code, int A, int B, int C);
     void FUN_10acae80(int A, int B, int C);
 };
 

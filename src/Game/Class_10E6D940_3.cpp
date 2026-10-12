@@ -4,10 +4,10 @@
 #include "Game/cString.h"
 #include "Game/Class_10A810F0.h"
 
-class Class_10E6C104 : public Class_10A810F0
+class cConEvent : public Class_10A810F0
 {
 public:
-    virtual ~Class_10E6C104() {}
+    virtual ~cConEvent() {}
 };
 
 // The objects Class_10E6D940 owns at +0x08 and +0x0C, deleted through their virtual destructors.
@@ -23,7 +23,7 @@ public:
     virtual ~Class_10AA78B0_Field0C();
 };
 
-class Class_10E6D940 : public Class_10E6C104
+class Class_10E6D940 : public cConEvent
 {
 public:
     virtual ~Class_10E6D940();

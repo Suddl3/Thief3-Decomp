@@ -46,5 +46,5 @@ public:
 void cConversationManager::FUN_10a13480(int Param)
 {
     for (int i = 0; i < m_ChildCount; i++)
-        m_Children[i]->FUN_10a80e60(Param);
+        m_Children[i]->DispatchToElements(Param);
 }

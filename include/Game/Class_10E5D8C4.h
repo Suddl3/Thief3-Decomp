@@ -8,7 +8,7 @@ class Class_10E6D1FC;
 class Class_10E5D8C4
 {
 public:
-    virtual Class_10E6D1FC* FUN_10a9d0f0();
+    virtual Class_10E6D1FC* Create();
 };
 
 #endif // GAME_CLASS_10E5D8C4_H

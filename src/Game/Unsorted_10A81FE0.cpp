@@ -4,17 +4,17 @@
 #include "Game/Struct_10A82E20.h"
 #include "Game/cConversation.h"
 
-class Class_10E6C104
+class cConEvent
 {
 public:
-    Class_10E6C104();
+    cConEvent();
 
-    virtual ~Class_10E6C104();
+    virtual ~cConEvent();
 
     char Unknown04[4];
 };
 
-class Class_10E6C290 : public Class_10E6C104
+class Class_10E6C290 : public cConEvent
 {
 public:
     Class_10E6C290();

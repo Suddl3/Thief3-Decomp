@@ -6,8 +6,8 @@ extern float DAT_10f00e94;
 
 extern float DAT_10e6f4d4;
 
-// FUNCTION: 0x10ABC040 ?FUN_10abc040@Class_10ABC040@@QAEPAV1@XZ
-Class_10ABC040* Class_10ABC040::FUN_10abc040()
+// FUNCTION: 0x10ABC040 ?Reset@Class_10ABC040@@QAEPAV1@XZ
+Class_10ABC040* Class_10ABC040::Reset()
 {
     Unknown00 = 0;
     Unknown04 = 0;

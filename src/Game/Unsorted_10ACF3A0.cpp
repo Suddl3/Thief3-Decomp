@@ -23,6 +23,6 @@ Class_10B82390* Class_10ACF9A0::FUN_10acf690(int A)
     cIntArray Items;
     GetUObjectLinkManager()->Virtual4(A, 0, 0x64d9226, &Items);
     if (Items.Count)
-        return (Class_10B82390*)((Class_10AAB5C0*)Items.Data[0])->FUN_10aab5c0();
+        return (Class_10B82390*)((Class_10AAB5C0*)Items.Data[0])->GetUnknown08();
     return 0;
 }

@@ -15,7 +15,7 @@ class Class_10E6D498
 public:
     Class_10E6D498* Construct();
 
-    void* Unknown00;
+    void* VTable;
 };
 
 // FUNCTION: 0x10AA3580 ?FUN_10aa3580@Class_10E5D9D8@@UAEPAVClass_10E6D498@@XZ

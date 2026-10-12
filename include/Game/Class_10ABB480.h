@@ -11,9 +11,9 @@ public:
     void FUN_10abb480();
 
     char Unknown00[4];
-    int Unknown04;
+    int m_Count;
     char Unknown08[4];
-    Class_10ABB480_Element** Unknown0C;
+    Class_10ABB480_Element** m_Elements;
 };
 
 #endif // GAME_CLASS_10ABB480_H

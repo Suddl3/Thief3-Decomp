@@ -2,10 +2,10 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Struct_10ABF1B0.h"
 
-Struct_10ABF1B0* __stdcall FUN_10abf1b0(int A);
+Struct_10ABF1B0* __stdcall FindCitySectionGoal(int A);
 
-// FUNCTION: 0x10ABF200 ?FUN_10abf200@@YGXHD@Z
-void __stdcall FUN_10abf200(int A, char B)
+// FUNCTION: 0x10ABF200 ?SetCitySectionGoalState@@YGXHD@Z
+void __stdcall SetCitySectionGoalState(int A, char B)
 {
-    FUN_10abf1b0(A)->Unknown20 = B;
+    FindCitySectionGoal(A)->Unknown20 = B;
 }

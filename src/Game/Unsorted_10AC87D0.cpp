@@ -12,9 +12,9 @@ public:
     Struct_10AC90F0 Unknown04;
 };
 
-void* FUN_10ac89c0();
+void* FindExitMissionInfo();
 
-void FUN_10ac87f0(void* Obj, int A, int B);
+void ReadExitMissionStrings(void* Obj, int A, int B);
 
 class Class_Field04
 {
@@ -26,8 +26,8 @@ public:
     FString UnknownD0;
 };
 
-// FUNCTION: 0x10AC87F0 ?FUN_10ac87f0@@YAXPAXHH@Z
-void FUN_10ac87f0(void* Obj, int A, int B)
+// FUNCTION: 0x10AC87F0 ?ReadExitMissionStrings@@YAXPAXHH@Z
+void ReadExitMissionStrings(void* Obj, int A, int B)
 {
     Class_Field04* Info = (Class_Field04*)Obj;
     FString* First = (FString*)A;
@@ -38,12 +38,12 @@ void FUN_10ac87f0(void* Obj, int A, int B)
         *Second = Info->UnknownD0;
 }
 
-// FUNCTION: 0x10AC8BE0 ?FUN_10ac8be0@@YGXHH@Z
-void __stdcall FUN_10ac8be0(int A, int B)
+// FUNCTION: 0x10AC8BE0 ?GetExitMissionStrings@@YGXHH@Z
+void __stdcall GetExitMissionStrings(int A, int B)
 {
-    void* Obj = FUN_10ac89c0();
+    void* Obj = FindExitMissionInfo();
     if (Obj)
-        FUN_10ac87f0(Obj, A, B);
+        ReadExitMissionStrings(Obj, A, B);
 }
 
 // FUNCTION: 0x10AC90F0 ??0Class_10E6FCBC@@QAE@XZ

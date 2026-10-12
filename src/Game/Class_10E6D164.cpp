@@ -97,7 +97,7 @@ public:
     virtual void Virtual0();
     virtual void Virtual1();
     virtual int FUN_10a9c200(void* Arg1, Class_10A9C200_Arg2* Arg2, Class_10A9C200_Arg3* Arg3);
-    Class_10E6D164* FUN_10a9ab90();
+    Class_10E6D164* Construct();
 
     union
     {

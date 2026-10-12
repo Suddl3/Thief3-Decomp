@@ -1,9 +1,9 @@
 // Game/AGarrett_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10ABF100.h"
+#include "Game/cCitySectionManager.h"
 #include "Game/Class_10B22640.h"
 
-Class_10ABF100* FUN_10abf0d0();
+cCitySectionManager* GetCitySectionManager();
 
 class APlayerPawn
 {
@@ -138,7 +138,7 @@ public:
 // FUNCTION: 0x10B22690 ?ClearGoals@AGarrett@@UAEXXZ
 void AGarrett::ClearGoals()
 {
-    if (FUN_10abf0d0()->FUN_10abf100())
+    if (GetCitySectionManager()->FUN_10abf100())
         CitySectionGoals.FUN_10b22640(0);
     else
         APlayerPawn::ClearGoals();

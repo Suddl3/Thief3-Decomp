@@ -6,8 +6,8 @@
 #include "Game/Class_10AC4920.h"
 #include "Game/cCameraModeHandler.h"
 
-// FUNCTION: 0x10AC47F0 ?FUN_10ac47f0@Class_10AC47F0@@QAEPAV1@ABV1@@Z
-Class_10AC47F0* Class_10AC47F0::FUN_10ac47f0(const Class_10AC47F0& Other)
+// FUNCTION: 0x10AC47F0 ?CopyFrom@Class_10AC47F0@@QAEPAV1@ABV1@@Z
+Class_10AC47F0* Class_10AC47F0::CopyFrom(const Class_10AC47F0& Other)
 {
     Unknown00 = Other.Unknown00;
     Unknown04 = Other.Unknown04;
@@ -27,14 +27,14 @@ Class_10AC47F0* Class_10AC47F0::FUN_10ac47f0(const Class_10AC47F0& Other)
     return this;
 }
 
-// FUNCTION: 0x10AC4920 ?FUN_10ac4920@Class_10AC4920@@QAEXXZ
-void Class_10AC4920::FUN_10ac4920()
+// FUNCTION: 0x10AC4920 ?Free@Class_10AC4920@@QAEXXZ
+void Class_10AC4920::Free()
 {
     FUN_10ac44c0(0);
     if (Unknown04)
     {
-        GetAllocator()->Virtual5(Unknown08);
-        Unknown08 = 0;
+        GetAllocator()->Virtual5(m_Data);
+        m_Data = 0;
         Unknown04 = 0;
     }
 }

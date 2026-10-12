@@ -77,7 +77,7 @@ void Class_10BF0360::FUN_10bf0360(FVector A, float B)
 void Class_10BF03B0::FUN_10bf03b0()
 {
     Class_10AAF570* A = (Class_10AAF570*)FUN_10bc4160();
-    Class_10BF03B0_Member* B = (Class_10BF03B0_Member*)A->FUN_10aaf570();
+    Class_10BF03B0_Member* B = (Class_10BF03B0_Member*)A->GetLinkType();
     B->Virtual13(0x29, &Unknown80, 0, 1);
 }
 
@@ -85,7 +85,7 @@ void Class_10BF03B0::FUN_10bf03b0()
 void Class_10BF03E0::FUN_10bf03e0()
 {
     Class_10AAF570* A = (Class_10AAF570*)FUN_10bc4160();
-    Class_10BF03B0_Member* B = (Class_10BF03B0_Member*)A->FUN_10aaf570();
+    Class_10BF03B0_Member* B = (Class_10BF03B0_Member*)A->GetLinkType();
     B->Virtual13(0x2a, &Unknown80, 0, 1);
 }
 

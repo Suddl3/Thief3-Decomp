@@ -33,7 +33,7 @@ public:
 class Class_10AAB5C0 : public Class_10978090
 {
 public:
-    int FUN_10aab5c0();
+    int GetUnknown08();
 
     int Unknown08;
 };
@@ -56,5 +56,5 @@ int Class_10E8C194::Virtual0(int A, int B, int C, int* D)
     Class_10C08940* Obj = FUN_10978090();
     int Y = (*D && (((Class_10C13D90*)*D)->Unknown78 & 4)) ? *D : 0;
     if (Y == Obj->Virtual8())
-        return FUN_10978090()->Virtual3(Virtual4(), FUN_10aab5c0());
+        return FUN_10978090()->Virtual3(Virtual4(), GetUnknown08());
 }

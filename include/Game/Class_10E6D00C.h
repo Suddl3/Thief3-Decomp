@@ -9,7 +9,7 @@ class Class_10E6D00C : public Class_10E6DC88
 {
 public:
     virtual void Virtual1();
-    virtual void FUN_10a98b80();
+    virtual void SendEvent();
 
     Class_10E6D00C();
 };

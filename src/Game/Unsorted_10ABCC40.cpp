@@ -34,8 +34,8 @@ int FUN_10abcd90(int A)
     return 0;
 }
 
-// FUNCTION: 0x10ABCFE0 ?FUN_10abcfe0@Class_10ABCFE0@@QAEXHH@Z
-void Class_10ABCFE0::FUN_10abcfe0(int Handle, int B)
+// FUNCTION: 0x10ABCFE0 ?CreateItem@Class_10ABCFE0@@QAEXHH@Z
+void Class_10ABCFE0::CreateItem(int Handle, int B)
 {
     Class_10ABCC20* Item = 0;
     Class_10A73EF0_Object* Obj = DAT_10f3eda4->Unknown08[Handle & 0xffff];

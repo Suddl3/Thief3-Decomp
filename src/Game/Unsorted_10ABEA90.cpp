@@ -5,9 +5,9 @@
 
 Class_10ACEE90* FUN_10acee60();
 
-class Class_10ABF100;
+class cCitySectionManager;
 
-extern Class_10ABF100* DAT_10f3a3fc;
+extern cCitySectionManager* DAT_10f3a3fc;
 
 void* FUN_10905c10(int Kind, int* Arg, int A, int B, int C, int D);
 
@@ -18,13 +18,13 @@ void Class_10ABED70::FUN_10abed70()
     FUN_10acee60()->FUN_10acf2d0();
 }
 
-// FUNCTION: 0x10ABF0D0 ?FUN_10abf0d0@@YAPAVClass_10ABF100@@XZ
-Class_10ABF100* FUN_10abf0d0()
+// FUNCTION: 0x10ABF0D0 ?GetCitySectionManager@@YAPAVcCitySectionManager@@XZ
+cCitySectionManager* GetCitySectionManager()
 {
     if (!DAT_10f3a3fc)
     {
         int Local = 0;
-        DAT_10f3a3fc = (Class_10ABF100*)FUN_10905c10(1, &Local, 0, 0, 0, 0);
+        DAT_10f3a3fc = (cCitySectionManager*)FUN_10905c10(1, &Local, 0, 0, 0, 0);
     }
     return DAT_10f3a3fc;
 }

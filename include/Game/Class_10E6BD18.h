@@ -10,7 +10,7 @@ class Class_10E6BD18 : public cActorManager
 public:
     Class_10E6BD18();
 
-    void FUN_10a790b0(int A, int B, int C, int D);
+    void HandleEvent(int A, int B, int C, int D);
 };
 
 #endif // GAME_CLASS_10E6BD18_H

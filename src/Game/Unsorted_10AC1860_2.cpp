@@ -3,10 +3,10 @@
 #include "Core/Core.h"
 #include "Game/Class_10AC1C40.h"
 
-// FUNCTION: 0x10AC1C40 ?FUN_10ac1c40@Class_10AC1C40@@QAEXM@Z
-void Class_10AC1C40::FUN_10ac1c40(float Dt)
+// FUNCTION: 0x10AC1C40 ?Integrate@Class_10AC1C40@@QAEXM@Z
+void Class_10AC1C40::Integrate(float Dt)
 {
-    Unknown20 = Unknown2C * Unknown04;
-    Unknown14 = Unknown20 * Dt;
-    Unknown08 += Unknown14 * Dt;
+    m_Acceleration = m_Force * m_InverseMass;
+    m_Velocity = m_Acceleration * Dt;
+    m_Position += m_Velocity * Dt;
 }

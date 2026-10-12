@@ -33,7 +33,7 @@ struct Struct_10AA3520
 
 extern Struct_10AA3520* DAT_10f35dec;
 
-class Class_10E6C128
+class cConTransferObjectEvent
 {
 public:
     void Load(void* A, int Count, int Unused);
@@ -48,8 +48,8 @@ public:
     int Unknown24;
 };
 
-// FUNCTION: 0x10AA7250 ?Load@Class_10E6C128@@QAEXPAXHH@Z
-void Class_10E6C128::Load(void* A, int Count, int Unused)
+// FUNCTION: 0x10AA7250 ?Load@cConTransferObjectEvent@@QAEXPAXHH@Z
+void cConTransferObjectEvent::Load(void* A, int Count, int Unused)
 {
     ReadString(A, (int*)&Unknown24);
     if (Count < 0x10)

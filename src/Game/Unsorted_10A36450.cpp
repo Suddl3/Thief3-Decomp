@@ -54,7 +54,7 @@ Struct_10A36570* __stdcall GetVulnerability(Struct_10A36570* Out, int Id, int In
     GetUObjectLinkManager()->Virtual5(Id, 0, 0x2e2eda5, Found, 3);
     if (Found.Count != 0)
     {
-        Class_10B82390* Obj = (Class_10B82390*)((Class_10AAB5C0*)Found.Data[0])->FUN_10aab5c0();
+        Class_10B82390* Obj = (Class_10B82390*)((Class_10AAB5C0*)Found.Data[0])->GetUnknown08();
         if (Obj->FUN_10ad18b0())
             Obj = Obj->UnknownE8;
         if (Obj->FUN_10b82390(0x803bf, Arr))

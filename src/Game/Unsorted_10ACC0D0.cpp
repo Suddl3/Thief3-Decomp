@@ -22,7 +22,7 @@ extern Class_10F46DA0* DAT_10f46da0;
 class Class_10E70020
 {
 public:
-    virtual void FUN_10acb0c0(int A, int B, int C, int D);
+    virtual void HandleEvent(int A, int B, int C, int D);
     virtual void Virtual1();
     virtual void Virtual2();
     virtual void Virtual3();
@@ -30,8 +30,8 @@ public:
     virtual void Virtual5(int A, int B, int C, int D);
 };
 
-// FUNCTION: 0x10ACC280 ?FUN_10acb0c0@Class_10E70020@@UAEXHHHH@Z
-void Class_10E70020::FUN_10acb0c0(int A, int B, int C, int D)
+// FUNCTION: 0x10ACC280 ?HandleEvent@Class_10E70020@@UAEXHHHH@Z
+void Class_10E70020::HandleEvent(int A, int B, int C, int D)
 {
     if (A != 0x3c)
         return;

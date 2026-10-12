@@ -30,7 +30,7 @@ public:
     virtual void Virtual2();
     virtual void Resize(int A);
     virtual void Virtual4();
-    virtual int FUN_10aa6390();
+    virtual int IsSet();
     virtual void FUN_10bfbb50(int param);
     virtual void Virtual7();
     virtual void Virtual8();

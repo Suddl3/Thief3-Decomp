@@ -30,7 +30,7 @@ void Class_10E7E5C8::FUN_10b49250(Class_10B21560* A)
     Class_10B48890* Body = A->UnknownB0->Virtual6();
     Body->Unknown20 = A->Unknown44;
     if (!A->FUN_10b21560())
-        ((Class_10B39530*)FUN_10aa82d0())->FUN_10b39530(0x3c, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+        ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(0x3c, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
     else
-        ((Class_10B39530*)FUN_10aa82d0())->FUN_10b39530(0x44, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+        ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(0x44, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
 }

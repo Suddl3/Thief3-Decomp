@@ -8,9 +8,9 @@ class Object_10AB9FF0;
 class Class_10AB9FF0
 {
 public:
-    Class_10AB9FF0* FUN_10ab9ff0(Class_10AB9FF0* Other);
+    Class_10AB9FF0* Assign(Class_10AB9FF0* Other);
 
-    Object_10AB9FF0* Unknown00;
+    Object_10AB9FF0* m_Object;
 };
 
 #endif // GAME_CLASS_10AB9FF0_H

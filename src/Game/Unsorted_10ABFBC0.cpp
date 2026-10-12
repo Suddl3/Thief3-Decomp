@@ -20,8 +20,8 @@ public:
     int FUN_10accaa0(int A, int B, int C, int D, int E, int F, int G);
 };
 
-// FUNCTION: 0x10AC0560 ?FUN_10ac0560@Class_10E6F414@@UAEHHHHHHHHH@Z
-int Class_10E6F414::FUN_10ac0560(int A, int B, int C, int D, int E, int F, int G, int H)
+// FUNCTION: 0x10AC0560 ?FireWeapon@Class_10E6F414@@UAEHHHHHHHHH@Z
+int Class_10E6F414::FireWeapon(int A, int B, int C, int D, int E, int F, int G, int H)
 {
     Class_10E6F414_Member* Result = Virtual1(A);
     switch (Result->Virtual1(A, B, 0))

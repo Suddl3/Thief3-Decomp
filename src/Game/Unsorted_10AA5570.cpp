@@ -13,11 +13,11 @@ struct Struct_10AA5570_Owner
     Struct_10AA5570_Array* Unknown5C;
 };
 
-// FUNCTION: 0x10AA5570 ?FUN_10aa5570@Class_10AA5570@@QAEHXZ
-int Class_10AA5570::FUN_10aa5570()
+// FUNCTION: 0x10AA5570 ?GetValueAtIndex@Class_10AA5570@@QAEHXZ
+int Class_10AA5570::GetValueAtIndex()
 {
     Struct_10AA5570_Array* Array = Unknown00->Unknown5C;
     if (Array == 0)
         return 0;
-    return Array->Unknown00[Unknown08];
+    return Array->Unknown00[m_Index];
 }

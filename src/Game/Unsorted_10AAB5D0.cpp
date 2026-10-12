@@ -5,15 +5,15 @@
 
 extern void* DAT_10e6da40[];
 
-class Class_10E6C104
+class cConEvent
 {
 public:
-    Class_10E6C104();
+    cConEvent();
 
     void** Unknown00;
 };
 
-class Class_10E6DA40 : public Class_10E6C104
+class Class_10E6DA40 : public cConEvent
 {
 public:
     Class_10E6DA40* FUN_10aab5d0();
@@ -27,7 +27,7 @@ extern void* DAT_10e6da64[];
 // FUNCTION: 0x10AAB5D0 ?FUN_10aab5d0@Class_10E6DA40@@QAEPAV1@XZ
 Class_10E6DA40* Class_10E6DA40::FUN_10aab5d0()
 {
-    this->Class_10E6C104::Class_10E6C104();
+    this->cConEvent::cConEvent();
     Unknown00 = DAT_10e6da40;
     Unknown08 = 3;
     return this;

@@ -10,7 +10,7 @@ typedef struct _iobuf FILE;
 class Class_10A80D30
 {
 public:
-    bool FUN_10a80d30(FILE* File, int A);
+    bool WriteLines(FILE* File, int A);
 
     char Unknown00[4];
     int ChildCount;

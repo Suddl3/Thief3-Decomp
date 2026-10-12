@@ -175,7 +175,7 @@ public:
     char Pad58[0x6c];
     FString UnknownC4;
     FString UnknownD0;
-    FString UnknownDC;
+    FString m_DefaultString;
     FString UnknownE8;
     char PadF4[0x1e0];
     unsigned char Unknown2D4;

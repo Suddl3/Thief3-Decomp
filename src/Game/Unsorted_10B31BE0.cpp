@@ -69,6 +69,6 @@ void Class_10B32750::FUN_10b31c40(Class_1098E330* A)
     }
     if (Unknown18 > 0.83233f)
         Unknown18 = 0.83233f;
-    ((Class_10B39580*)((Class_10AA82D0*)this)->FUN_10aa82d0())->FUN_10b39580(0x6c, *(int*)&Unknown18);
+    ((Class_10B39580*)((Class_10AA82D0*)this)->GetLinkedObject())->FUN_10b39580(0x6c, *(int*)&Unknown18);
     Unknown33.FUN_10b31b70(A->Unknown440, *(int*)&Unknown18);
 }

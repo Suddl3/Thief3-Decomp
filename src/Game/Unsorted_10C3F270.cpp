@@ -16,7 +16,7 @@ extern Class_10C3F290* DAT_10ff70a8;
 // FUNCTION: 0x10C3F270 ?FUN_10c3f270@CadenceManager@@UAE_NXZ
 bool CadenceManager::FUN_10c3f270()
 {
-    return FUN_10c5f280()->FUN_10aab5c0() == 2;
+    return FUN_10c5f280()->GetUnknown08() == 2;
 }
 
 // FUNCTION: 0x10C3F290 ?FUN_10c3f290@@YAXXZ

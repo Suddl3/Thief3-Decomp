@@ -23,7 +23,7 @@ public:
     virtual void Virtual5();
     virtual void Virtual6();
 
-    Class_1090A780 FUN_10aa83e0();
+    Class_1090A780 GetName();
 };
 
 class Class_10E6D990 : public Class_10AA83E0
@@ -63,6 +63,6 @@ Class_10AA8420::~Class_10AA8420()
 // FUNCTION: 0x10AA8490 ?FUN_10aa8490@Class_10E6D990@@UAEHPAU_iobuf@@H@Z
 int Class_10E6D990::FUN_10aa8490(FILE* File, int Param)
 {
-    fprintf(File, DAT_10e6c0f0, Unknown08, FUN_10aa83e0().Unknown00);
+    fprintf(File, DAT_10e6c0f0, Unknown08, GetName().Unknown00);
     return 1;
 }

@@ -44,6 +44,6 @@ void Class_10E94A00::FUN_10bdb230()
 {
     if (Unknown40)
         Unknown40->Virtual2();
-    if (FUN_10bc4160()->FUN_10aa82d0() == 0)
+    if (FUN_10bc4160()->GetLinkedObject() == 0)
         PopState();
 }

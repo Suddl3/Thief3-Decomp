@@ -21,9 +21,9 @@ public:
 
     virtual void Virtual0();
 
-    void FUN_10ab6e50();
+    void Init();
 
-    char Unknown04[0x54];
+    char m_Values[0x54];
     bool Unknown58;
     bool Unknown59;
     bool Unknown5A;
@@ -35,7 +35,7 @@ Class_10E49AC4::Class_10E49AC4()
     Unknown58 = false;
     Unknown59 = false;
     Unknown5A = false;
-    FUN_10ab6e50();
+    Init();
 }
 
 // FUNCTION: 0x10AB72D0 ?FUN_10ab72d0@Class_10E6F3EC@@QAEXXZ

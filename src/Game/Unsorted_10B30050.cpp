@@ -15,7 +15,7 @@ void FUN_10a26c10(cString* A, cString* B);
 
 void FUN_10a293b0(cString* A, int B);
 
-FColor FUN_10abc760(int A);
+FColor GetFlavorColor(int A);
 
 void* FUN_10b154c0();
 
@@ -30,5 +30,5 @@ void __stdcall FUN_10b30050(int A)
         FUN_10a26c10(&Text, &Key);
     }
     FUN_10a293b0(&Key, 1);
-    ((Class_10B154C0*)FUN_10b154c0())->FUN_10b15e30(&Key, FUN_10abc760(0).Unknown00);
+    ((Class_10B154C0*)FUN_10b154c0())->FUN_10b15e30(&Key, GetFlavorColor(0).Unknown00);
 }

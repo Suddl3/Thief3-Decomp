@@ -10,7 +10,7 @@ class Class_10AA82D0 : public Class_10AAF570
 public:
     virtual void Virtual0();
 
-    int FUN_10aa82d0();
+    int GetLinkedObject();
 
     char Pad01[0x3];
     char Unknown04[4];
@@ -18,7 +18,7 @@ public:
     union
     {
         int unknown_0c;
-        int Unknown0C;
+        int m_LinkedObject;
     };
 };
 

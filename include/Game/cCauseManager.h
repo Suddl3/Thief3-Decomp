@@ -11,7 +11,7 @@ class Object_10A69180;
 class cCauseManager : public cActorManager
 {
 public:
-    virtual void FUN_10a691c0(int Type, int A, int B, int C);
+    virtual void HandleEvent(int Type, int A, int B, int C);
     virtual void Virtual1();
     virtual void Virtual2();
     virtual void Virtual3();

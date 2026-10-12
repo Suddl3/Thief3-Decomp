@@ -3,8 +3,8 @@
 #include <string>
 #include "Game/Class_10E6D500.h"
 
-// FUNCTION: 0x10AA4790 ?FUN_10aa4790@Class_10E6D500@@UAE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ
-std::string Class_10E6D500::FUN_10aa4790()
+// FUNCTION: 0x10AA4790 ?GetSuiteLabel@Class_10E6D500@@UAE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ
+std::string Class_10E6D500::GetSuiteLabel()
 {
-    return "suite " + Unknown14;
+    return "suite " + m_Name;
 }

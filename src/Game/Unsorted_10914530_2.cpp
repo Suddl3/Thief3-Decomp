@@ -13,7 +13,7 @@ public:
     virtual ~Class_10AB37C0();
     void* unknown_04;
 
-    void* FUN_10ab37c0();
+    void* GetName();
 };
 
 // Game/Class_10AA9DA0.h copied whole, with its +0x10 padding split into the fields the code uses:
@@ -37,7 +37,7 @@ void Class_10AA9DA0::RemoveByName(cString& Item)
     cIntArray* Array = (cIntArray*)&Unknown04;
     for (int i = 0; i < Array->Count; i++)
     {
-        cString* Name = (cString*)Items[i]->FUN_10ab37c0();
+        cString* Name = (cString*)Items[i]->GetName();
         if (strcmp(**Name, *Item) == 0)
         {
             delete Items[i];

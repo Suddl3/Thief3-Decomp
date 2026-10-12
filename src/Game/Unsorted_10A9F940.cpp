@@ -11,8 +11,8 @@
 
 extern Class_10A73EF0_Table* DAT_10f3eda4;
 
-// FUNCTION: 0x10A9FCC0 ?FUN_10a9fcc0@Class_10A9FCC0@@QAEXHH@Z
-void Class_10A9FCC0::FUN_10a9fcc0(int Handle, int B)
+// FUNCTION: 0x10A9FCC0 ?AddItem@Class_10A9FCC0@@QAEXHH@Z
+void Class_10A9FCC0::AddItem(int Handle, int B)
 {
     Class_10ABCC20* Item = 0;
     Class_10A73EF0_Object* Obj = DAT_10f3eda4->Unknown08[Handle & 0xffff];

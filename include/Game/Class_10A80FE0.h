@@ -8,11 +8,11 @@ struct Struct_10A80FE0_Element;
 class Class_10A80FE0
 {
 public:
-    void FUN_10a80fe0(int NewCount);
+    void SetSize(int NewCount);
 
-    int Unknown00;
-    unsigned int Unknown04;
-    Struct_10A80FE0_Element* Unknown08;
+    int m_Size;
+    unsigned int m_AllocBytes;
+    Struct_10A80FE0_Element* m_Elements;
 };
 
 #endif // GAME_CLASS_10A80FE0_H

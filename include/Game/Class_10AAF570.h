@@ -6,7 +6,7 @@
 class Class_10AAF570
 {
 public:
-    int FUN_10aaf570();
+    int GetLinkType();
 
     char unknown_00[0x10];
     int unknown_10;

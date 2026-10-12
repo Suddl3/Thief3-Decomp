@@ -9,19 +9,19 @@ struct Struct_10AB86F0
     char Unknown08[0x28];
 };
 
-// FUNCTION: 0x10AB86F0 ?FUN_10ab86f0@Class_10AB86F0@@QAEHH@Z
-int Class_10AB86F0::FUN_10ab86f0(int A)
+// FUNCTION: 0x10AB86F0 ?FindValue@Class_10AB86F0@@QAEHH@Z
+int Class_10AB86F0::FindValue(int A)
 {
     int Index = -1;
-    for (int i = 0; i < Unknown04; i++)
+    for (int i = 0; i < m_Count; i++)
     {
-        if (A == Unknown0C[i].Unknown00)
+        if (A == m_Entries[i].Unknown00)
         {
             Index = i;
             break;
         }
     }
     if (Index >= 0)
-        return Unknown0C[Index].Unknown04;
+        return m_Entries[Index].Unknown04;
     return 0;
 }

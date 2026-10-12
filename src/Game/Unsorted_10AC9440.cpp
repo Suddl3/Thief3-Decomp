@@ -12,8 +12,8 @@ void Class_10AC98B0::FUN_10ac98b0()
         FUN_10ac9840();
 }
 
-// FUNCTION: 0x10AC9AC0 ?FUN_10ac9ac0@Class_10E6FD1C@@QAEPAV1@XZ
-Class_10E6FD1C* Class_10E6FD1C::FUN_10ac9ac0()
+// FUNCTION: 0x10AC9AC0 ?Init@Class_10E6FD1C@@QAEPAV1@XZ
+Class_10E6FD1C* Class_10E6FD1C::Init()
 {
     Unknown00 = DAT_10e6fd1c;
     Unknown04 = 0;

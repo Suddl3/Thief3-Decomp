@@ -139,7 +139,7 @@ void AT3AIPawnController::FUN_10b9bc10()
         Struct_10B9BC10* Item = pad0;
         if (Item)
         {
-            ((Class_10AAF570_Field10*)Item->Unknown00->FUN_10aaf570())->Virtual22();
+            ((Class_10AAF570_Field10*)Item->Unknown00->GetLinkType())->Virtual22();
             Item->Unknown10->Unknown64 = true;
         }
     }

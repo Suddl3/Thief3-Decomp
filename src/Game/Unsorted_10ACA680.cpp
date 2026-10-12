@@ -10,8 +10,8 @@ struct Info_10ACB3B0
     float Unknown08;
 };
 
-// FUNCTION: 0x10ACB0C0 ?FUN_10acb0c0@Class_10E6FEE8@@UAEXHHHH@Z
-void Class_10E6FEE8::FUN_10acb0c0(int Code, int A, int B, int C)
+// FUNCTION: 0x10ACB0C0 ?HandleEvent@Class_10E6FEE8@@UAEXHHHH@Z
+void Class_10E6FEE8::HandleEvent(int Code, int A, int B, int C)
 {
     if (Code == 0xd)
         FUN_10acae80(A, B, C);

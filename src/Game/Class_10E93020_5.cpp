@@ -145,7 +145,7 @@ public:
 // FUNCTION: 0x10BD0F30 ?FUN_10bd0f30@Class_10E93020@@UAEXXZ
 void Class_10E93020::FUN_10bd0f30()
 {
-    if (!(FUN_10bc4160() && FUN_10bc4160()->FUN_10aa82d0() != 0))
+    if (!(FUN_10bc4160() && FUN_10bc4160()->GetLinkedObject() != 0))
     {
         if (m_CurrentAction)
         {

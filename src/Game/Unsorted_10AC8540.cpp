@@ -6,8 +6,8 @@
 
 void FUN_109672e0(const Struct_10B1DCA0& Coords, const FVector& V, FVector& Out);
 
-// FUNCTION: 0x10AC8540 ?FUN_10ac8540@@YG?AVFVector@@PAUStruct_10AC8540_Param@@@Z
-FVector __stdcall FUN_10ac8540(Struct_10AC8540_Param* A)
+// FUNCTION: 0x10AC8540 ?GetSideDirection@@YG?AVFVector@@PAUStruct_10AC8540_Param@@@Z
+FVector __stdcall GetSideDirection(Struct_10AC8540_Param* A)
 {
     Struct_10B1DCA0 Coords(FVector(0.0f, 0.0f, 0.0f));
     Coords.FUN_109620b0(FRotator(A->Unknown38.Pitch, A->Unknown38.Yaw - 16384, A->Unknown38.Roll));

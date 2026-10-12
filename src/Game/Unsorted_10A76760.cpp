@@ -55,8 +55,8 @@ Object_10A76760* Class_10E6BC80::FindBySource(int Value)
 // FUNCTION: 0x10A77300 ??$Cast@VULevel@@@@YAPAVULevel@@PAVUObject@@@Z
 template ULevel* Cast<ULevel>(UObject* Src);
 
-// FUNCTION: 0x10A790B0 ?FUN_10a790b0@Class_10E6BD18@@QAEXHHHH@Z
-void Class_10E6BD18::FUN_10a790b0(int A, int B, int C, int D)
+// FUNCTION: 0x10A790B0 ?HandleEvent@Class_10E6BD18@@QAEXHHHH@Z
+void Class_10E6BD18::HandleEvent(int A, int B, int C, int D)
 {
     if (A != 0x27)
     {

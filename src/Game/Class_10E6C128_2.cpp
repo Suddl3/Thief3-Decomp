@@ -7,7 +7,7 @@ public:
     virtual void Virtual0(void* A);
 };
 
-class Class_10E6C128
+class cConTransferObjectEvent
 {
 public:
     virtual void Virtual0();
@@ -28,8 +28,8 @@ public:
     int Unknown24;
 };
 
-// FUNCTION: 0x10AA7190 ?Serialize@Class_10E6C128@@UAEHPAVClassArg_10AA7190@@@Z
-int Class_10E6C128::Serialize(ClassArg_10AA7190* A)
+// FUNCTION: 0x10AA7190 ?Serialize@cConTransferObjectEvent@@UAEHPAVClassArg_10AA7190@@@Z
+int cConTransferObjectEvent::Serialize(ClassArg_10AA7190* A)
 {
     A->Virtual0(&Unknown04);
     A->Virtual0(&Unknown0C);

@@ -19,11 +19,11 @@ class Class_10AA82D0
 public:
     virtual void Virtual0();
 
-    Class_10B39870* FUN_10aa82d0();
+    Class_10B39870* GetLinkedObject();
 
     char Unknown04[4];
     int Unknown08;
-    int Unknown0C;
+    int m_LinkedObject;
 };
 
 class Class_10B21820
@@ -53,11 +53,11 @@ void Class_10E7EBB0::FUN_10b4e380(Class_10B21820* A)
     A->Unknown54E = false;
     if (Unknown08 != 0x101)
     {
-        ((Class_10B396B0*)FUN_10aa82d0())->FUN_10b396b0(Unknown08);
+        ((Class_10B396B0*)GetLinkedObject())->FUN_10b396b0(Unknown08);
         Unknown08 = 0x101;
     }
-    ((Class_10B39530*)FUN_10aa82d0())->FUN_10b39530(0x60 + (Unknown10 == 10), -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
-    ((Class_10B398B0*)FUN_10aa82d0())->FUN_10b398b0(0);
+    ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(0x60 + (Unknown10 == 10), -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+    ((Class_10B398B0*)GetLinkedObject())->FUN_10b398b0(0);
     Struct_10B21820_Object* Obj = A->FUN_10991e10();
     {
         cString Name(DAT_10e7a624);

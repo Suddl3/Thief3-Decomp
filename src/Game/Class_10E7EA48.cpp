@@ -17,7 +17,7 @@ class Class_10AA82D0
 public:
     virtual void Virtual0();
 
-    int FUN_10aa82d0();
+    int GetLinkedObject();
 };
 
 class Class_10B3AE70 : public Class_10AA82D0
@@ -50,9 +50,9 @@ void FUN_10b1f6a0(AGarrett* Garrett, int A);
 void Class_10E7EA48::FUN_10b4e5e0(AGarrett* Garrett)
 {
     if (Garrett->isCrouching)
-        ((Class_10B39530*)FUN_10aa82d0())->FUN_10b39530(1, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+        ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(1, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
     else
-        ((Class_10B39530*)FUN_10aa82d0())->FUN_10b39530(0, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+        ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(0, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
     Unknown10 = 0;
     Garrett->Unknown54C = 3;
     DAT_10f04aa0 = FUN_10abc0a0();

@@ -18,7 +18,7 @@ class Class_10AA82D0
 public:
     virtual void Virtual0();
 
-    int FUN_10aa82d0();
+    int GetLinkedObject();
 };
 
 class Class_10E81620 : public Class_10AA82D0
@@ -40,7 +40,7 @@ void Class_10E81620::FUN_10b4fcc0(Class_10B22020* Param)
 {
     Param->FUN_10b22020(1);
     Unknown08 = 0xfc;
-    ((Class_10B39530*)FUN_10aa82d0())->FUN_10b39530(0xfc, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+    ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(0xfc, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
     Unknown1C = 0;
     Unknown24 = 0;
     Unknown20 = 0;

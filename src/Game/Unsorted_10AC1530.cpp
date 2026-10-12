@@ -10,8 +10,8 @@ struct Struct_10AA3520
 
 extern Struct_10AA3520* DAT_10f35dec;
 
-// FUNCTION: 0x10AC1610 ?FUN_10ac1610@@YAMXZ
-float FUN_10ac1610()
+// FUNCTION: 0x10AC1610 ?GetMaximum@@YAMXZ
+float GetMaximum()
 {
     float Value = 75.0f;
     if (DAT_10f35dec->Unknown08)

@@ -115,8 +115,8 @@ public:
 
 int FUN_10af36e0(const char* A, const char* B);
 
-// FUNCTION: 0x10AA2E30 ?FUN_10aa2e30@@YAPAVUProperty@@PAVUStruct@@PBD@Z
-UProperty* FUN_10aa2e30(UStruct* Struct, const char* Name)
+// FUNCTION: 0x10AA2E30 ?FindProperty@@YAPAVUProperty@@PAVUStruct@@PBD@Z
+UProperty* FindProperty(UStruct* Struct, const char* Name)
 {
     if (Struct->IsA(UClass::StaticClass()))
     {

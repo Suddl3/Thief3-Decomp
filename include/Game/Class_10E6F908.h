@@ -6,7 +6,7 @@
 class Class_10E6F908
 {
 public:
-    virtual void FUN_10ac2e80(int A, int B, int C, int D);
+    virtual void HandleMessage(int A, int B, int C, int D);
 
     char Unknown04[0x66];
     bool Unknown6A;

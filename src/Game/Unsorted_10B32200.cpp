@@ -20,7 +20,7 @@ class Class_10AA82D0
 public:
     virtual void Virtual0();
 
-    int FUN_10aa82d0();
+    int GetLinkedObject();
 };
 
 class Class_10B21350
@@ -63,6 +63,6 @@ void Class_10B32750::FUN_10b32750(Class_1098E330* A)
     FUN_10b32160(A);
     Unknown31 = true;
     Unknown33.FUN_10b31be0(A->Unknown440);
-    ((Class_10B39530*)FUN_10aa82d0())->FUN_10b39530(0x6e, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+    ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(0x6e, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
     FUN_10b31d30(A);
 }

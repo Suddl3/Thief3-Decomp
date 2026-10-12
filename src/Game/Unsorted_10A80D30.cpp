@@ -85,8 +85,8 @@ public:
     virtual int Virtual7(FILE* File, int A);
 };
 
-// FUNCTION: 0x10A80D30 ?FUN_10a80d30@Class_10A80D30@@QAE_NPAU_iobuf@@H@Z
-bool Class_10A80D30::FUN_10a80d30(FILE* File, int A)
+// FUNCTION: 0x10A80D30 ?WriteLines@Class_10A80D30@@QAE_NPAU_iobuf@@H@Z
+bool Class_10A80D30::WriteLines(FILE* File, int A)
 {
     fprintf(File, DAT_10e6c0f0, DAT_10e6c0f8, Subject);
     for (int i = 0; i < ChildCount; i++)

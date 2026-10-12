@@ -18,7 +18,7 @@ public:
         Class_10AAF570* Target = Unknown04->Unknown0C;
         if (!Target)
             return 0;
-        return Target->FUN_10aaf570();
+        return Target->GetLinkType();
     }
 
     Class_10BC4BF0_Member* Unknown04;
@@ -43,7 +43,7 @@ int Class_10BC4BF0::FUN_10bc4bf0()
     Class_10AAF570* Target = Unknown04->Unknown0C;
     if (!Target)
         return 0;
-    return Target->FUN_10aaf570();
+    return Target->GetLinkType();
 }
 
 // FUNCTION: 0x10BC4EE0 ?FUN_10bc4ee0@Class_10E92B20@@QAEXPAHH@Z

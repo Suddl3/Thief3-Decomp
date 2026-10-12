@@ -7,11 +7,11 @@ class Class_10AC4920
 {
 public:
     void FUN_10ac44c0(int Count);
-    void FUN_10ac4920();
+    void Free();
 
     int Unknown00;
     int Unknown04;
-    void* Unknown08;
+    void* m_Data;
 };
 
 #endif // GAME_CLASS_10AC4920_H

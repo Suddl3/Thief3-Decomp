@@ -3,22 +3,22 @@
 #include "Game/Class_10AB8D30.h"
 #include "Game/cIntArray.h"
 
-// FUNCTION: 0x10AB8D30 ?FUN_10ab8d30@Class_10AB8D30@@QAEXHHHH@Z
-void Class_10AB8D30::FUN_10ab8d30(int A, int B, int C, int D)
+// FUNCTION: 0x10AB8D30 ?Init@Class_10AB8D30@@QAEXHHHH@Z
+void Class_10AB8D30::Init(int A, int B, int C, int D)
 {
     Unknown00 = A;
     Unknown04 = B;
     Unknown08 = 0;
-    Unknown0C = C;
+    m_Current = C;
     Unknown10 = 0;
-    cIntArray* Arr = &Unknown18;
+    cIntArray* Arr = &m_Items;
     Arr->SetCount(0);
     int Index = Arr->Unknown00;
     Arr->SetCount(Index + 1);
     Arr->Unknown08[Index] = D;
-    Arr = &Unknown24;
+    Arr = &m_Values;
     Arr->SetCount(0);
     int Index2 = Arr->Unknown00;
     Arr->SetCount(Index2 + 1);
-    Arr->Unknown08[Index2] = Unknown0C;
+    Arr->Unknown08[Index2] = m_Current;
 }

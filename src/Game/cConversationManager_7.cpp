@@ -16,7 +16,7 @@ class Class_109022E0;
 class Class_10A84CE0 : public Class_10CA8290
 {
 public:
-    void FUN_10a84ce0(const Class_109022E0& A);
+    void SetFlagName(const Class_109022E0& A);
 };
 
 class cFlagElementLogic : public Class_10A84CE0
@@ -38,7 +38,7 @@ cFlagElementLogic* cConversationManager::CreateFlagElement(const Class_109022E0&
     GetAllocator()->Virtual8(0, 0);
     cFlagElementLogic* Result = new(0, 0, 0, 0, 0) cFlagElementLogic;
     GetAllocator()->Virtual9();
-    Result->FUN_10a84ce0(A);
+    Result->SetFlagName(A);
     Result->FUN_10ca8290(B);
     return Result;
 }

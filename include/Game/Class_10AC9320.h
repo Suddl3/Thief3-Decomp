@@ -7,7 +7,7 @@ class Class_10AC9320 {
 public:
     int Unknown00;
 
-    int FUN_10ac9320(Class_10AC9320* p1);
+    int IsEqual(Class_10AC9320* p1);
 };
 
 #endif // GAME_CLASS_10AC9320_H

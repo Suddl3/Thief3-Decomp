@@ -9,14 +9,14 @@ Class_10905A90_Member* GetAllocator();
 // Ion Storm's placement new (0x10905C10).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 
-// FUNCTION: 0x10AA26C0 ?FUN_10aa26c0@Class_10E5D9BC@@UAEPAVClass_10E6D40C@@XZ
-Class_10E6D40C* Class_10E5D9BC::FUN_10aa26c0()
+// FUNCTION: 0x10AA26C0 ?Create@Class_10E5D9BC@@UAEPAVClass_10E6D40C@@XZ
+Class_10E6D40C* Class_10E5D9BC::Create()
 {
     GetAllocator()->Virtual8(0, 0);
     Class_10E6D40C* Result = 0;
     void* Memory = operator new(sizeof(Class_10E6D40C), 0, 0, 0, 0, 0);
     if (Memory)
-        Result = static_cast<Class_10E6D40C*>(Memory)->FUN_10aa26a0();
+        Result = static_cast<Class_10E6D40C*>(Memory)->Construct();
     GetAllocator()->Virtual9();
     return Result;
 }

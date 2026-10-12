@@ -9,7 +9,7 @@
 class Class_10AA82D0 : public Class_10AAF570
 {
 public:
-    int FUN_10aa82d0();
+    int GetLinkedObject();
 };
 
 class Class_10BF7F90 : public Class_10AA82D0
@@ -51,7 +51,7 @@ void Class_10BDAFE0::FUN_10bdafe0()
 // FUNCTION: 0x10BDB050 ?FUN_10bdb050@Class_10BDB050@@QAE_NXZ
 bool Class_10BDB050::FUN_10bdb050()
 {
-    if (FUN_10bc4160() && FUN_10bc4160()->FUN_10aa82d0())
-        return ((Class_10AAF570_Result*)FUN_10bc4160()->FUN_10aaf570())->Virtual46();
+    if (FUN_10bc4160() && FUN_10bc4160()->GetLinkedObject())
+        return ((Class_10AAF570_Result*)FUN_10bc4160()->GetLinkType())->Virtual46();
     return false;
 }

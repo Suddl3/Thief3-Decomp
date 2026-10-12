@@ -39,6 +39,6 @@ void Class_10E92C38::FUN_10bcfdd0()
     if (!Unknown4B)
         FUN_10bcfbd0();
     Class_10BF7F90* Info = FUN_10bc4160();
-    if ((!Info || !Info->FUN_10aa82d0()) && !Unknown4A)
+    if ((!Info || !Info->GetLinkedObject()) && !Unknown4A)
         FUN_10bcf680();
 }

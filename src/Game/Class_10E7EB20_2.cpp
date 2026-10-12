@@ -17,9 +17,9 @@ public:
 void Class_10E7EB20::FUN_10b4f430(AGarrett* Garrett)
 {
     if (Garrett->isCrouching)
-        ((Class_10B39530*)FUN_10aa82d0())->FUN_10b39530(0xaf, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+        ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(0xaf, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
     else
-        ((Class_10B39530*)FUN_10aa82d0())->FUN_10b39530(0xa9, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+        ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(0xa9, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
     FUN_10b3ae70(Garrett);
     FUN_10b3b400(Garrett);
 }

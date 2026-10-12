@@ -4,10 +4,10 @@
 #include "Game/cString.h"
 #include "Game/Class_10A810F0.h"
 
-class Class_10E6C104 : public Class_10A810F0
+class cConEvent : public Class_10A810F0
 {
 public:
-    virtual ~Class_10E6C104() {}
+    virtual ~cConEvent() {}
 };
 
 class Class_10AA7CC0_Unknown08
@@ -22,7 +22,7 @@ public:
     virtual ~Class_10AA7CC0_Unknown0C();
 };
 
-class Class_10E6D964 : public Class_10E6C104
+class Class_10E6D964 : public cConEvent
 {
 public:
     virtual ~Class_10E6D964();

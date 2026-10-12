@@ -20,7 +20,7 @@ class Class_10AA82D0
 public:
     virtual void Virtual0();
 
-    int FUN_10aa82d0();
+    int GetLinkedObject();
 };
 
 class Class_10B3AE70 : public Class_10AA82D0
@@ -56,7 +56,7 @@ void Class_10E7E610::FUN_10b492f0(AGarrett* Garrett)
 {
     Unknown10 = 1;
     FUN_10b3ae70(Garrett);
-    ((Class_10B39530*)FUN_10aa82d0())->FUN_10b39530(0x48, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+    ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(0x48, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
     StopBody(Garrett);
     Unknown18 = 0;
     Unknown20 = 1;

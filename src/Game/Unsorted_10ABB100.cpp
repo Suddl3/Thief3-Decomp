@@ -76,17 +76,17 @@ void Class_10ABB580::Resize(int NewCount)
     m_Count = NewCount;
 }
 
-// FUNCTION: 0x10ABB200 ?FUN_10abb200@Class_10ABB200@@QAEXHHH@Z
-void Class_10ABB200::FUN_10abb200(int From, int To, int Count)
+// FUNCTION: 0x10ABB200 ?MoveRange@Class_10ABB200@@QAEXHHH@Z
+void Class_10ABB200::MoveRange(int From, int To, int Count)
 {
     if (From != To && Count != 0)
     {
-        memmove(Unknown08 + To, Unknown08 + From, Count * sizeof(Class_10ABB200_Unknown08));
+        memmove(m_Elements + To, m_Elements + From, Count * sizeof(Class_10ABB200_Unknown08));
         if (From < To)
         {
             for (int I = From; I < To; I++)
             {
-                Class_10ABB200_Unknown08* Item = Unknown08 + I;
+                Class_10ABB200_Unknown08* Item = m_Elements + I;
                 if (Item)
                 {
                     Item->Unknown00 = 0;
@@ -104,7 +104,7 @@ void Class_10ABB200::FUN_10abb200(int From, int To, int Count)
         {
             for (int I = Start; I < End; I++)
             {
-                Class_10ABB200_Unknown08* Item = Unknown08 + I;
+                Class_10ABB200_Unknown08* Item = m_Elements + I;
                 if (Item)
                 {
                     Item->Unknown00 = 0;

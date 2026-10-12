@@ -10,7 +10,7 @@ public:
     int Unknown08;
     unsigned char Unknown0c;
 
-    Class_10ABFBB0* FUN_10abfbb0();
+    Class_10ABFBB0* Clear();
 };
 
 #endif // GAME_CLASS_10ABFBB0_H

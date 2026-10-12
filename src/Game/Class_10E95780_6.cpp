@@ -78,7 +78,7 @@ void Class_10E95780::FUN_10be2b90(int A)
     Class_10BF7F90* Result = FUN_10bc4160();
     if (Result)
     {
-        if (((Class_10AAF570_Result*)Result->FUN_10aaf570())->Virtual48() != 1)
+        if (((Class_10AAF570_Result*)Result->GetLinkType())->Virtual48() != 1)
             Result->FUN_10bf7f90(0, 1);
     }
     FUN_10be2a70();

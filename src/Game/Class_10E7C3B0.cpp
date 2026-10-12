@@ -85,7 +85,7 @@ int Class_10E7C3B0::ShowOkMessage(int A, int B, Class_10B37370_Arg* C)
         int Count = Array.m_Count;
         Array.FUN_1090f2c0(Count + 1);
         Array.m_Items[Count] = Text;
-        ((Class_10B154C0*)FUN_10b154c0())->FUN_10b15770(0, Item->FUN_10ab37c0(), &Array, 0, 0, 5.0f);
+        ((Class_10B154C0*)FUN_10b154c0())->FUN_10b15770(0, Item->GetName(), &Array, 0, 0, 5.0f);
     }
     return 1;
 }

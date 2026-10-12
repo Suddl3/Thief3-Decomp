@@ -8,7 +8,7 @@ class cTriggerLinkParam;
 class cEngineTriggerRegistrar
 {
 public:
-    virtual cTriggerLinkParam* FUN_10a7f220(int A, const int* B);
+    virtual cTriggerLinkParam* CreateLinkParam(int A, const int* B);
 };
 
 #endif // GAME_CENGINETRIGGERREGISTRAR_H

@@ -37,7 +37,7 @@ public:
 
     void FUN_109e38b0(int A, int B);
     void FUN_10b3e260();
-    FVector FUN_10ac8540(Struct_10AC8540_Param* A);
+    FVector GetSideDirection(Struct_10AC8540_Param* A);
 
     char Unknown50[0x20];
     bool Unknown70;
@@ -88,7 +88,7 @@ bool __stdcall FUN_10b505c0(Struct_10B505C0_Param* Obj, Struct_10AC8540_Param* S
     Hit.Unknown18 = 0.0f;
     Hit.Unknown1C = 0.0f;
     FVector End;
-    End = DAT_10f3a3d8->Unknown108->FUN_10ac8540(Src) * 24.0f + Src->Unknown2C;
+    End = DAT_10f3a3d8->Unknown108->GetSideDirection(Src) * 24.0f + Src->Unknown2C;
     FVector Start = End;
     Start.Z = Obj->Unknown34;
     return FUN_10d9dcb0()->FUN_10d9d640(Start, End, 3, &Hit, 0);

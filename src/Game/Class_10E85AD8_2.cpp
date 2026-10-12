@@ -196,7 +196,7 @@ void Class_10E85AD8::DeactivateRejected()
 {
     for (int i = 0; i < Unknown14C; i++)
     {
-        if (!DAT_10f3a3d8->Unknown138->FUN_10ac99d0(i))
+        if (!DAT_10f3a3d8->Unknown138->GetNext(i))
             Unknown154[i]->Virtual56(0);
     }
 }
@@ -206,7 +206,7 @@ void Class_10E85AD8::DispatchFirstAccepted()
 {
     for (int i = 0; i < Unknown14C; i++)
     {
-        if (DAT_10f3a3d8->Unknown138->FUN_10ac99d0(i))
+        if (DAT_10f3a3d8->Unknown138->GetNext(i))
         {
             Virtual102(Unknown154[i]);
             return;

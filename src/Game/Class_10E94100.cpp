@@ -92,7 +92,7 @@ public:
         Class_10AAF570* Target = Unknown04->Unknown0C;
         if (!Target)
             return 0;
-        return Target->FUN_10aaf570();
+        return Target->GetLinkType();
     }
 
     Class_10BC4BF0_Member* Unknown04;

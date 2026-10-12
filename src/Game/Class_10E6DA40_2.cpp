@@ -7,7 +7,7 @@ class Class_10E6DA40
 public:
     virtual void Virtual0();
     virtual void Virtual1();
-    virtual void FUN_10aab540(void* Reader, int Version, int Unused);
+    virtual void ReadFields(void* Reader, int Version, int Unused);
     virtual void Virtual3();
     virtual void Virtual4();
     virtual int FUN_10aab590(Class_10AAB590_Param* Writer);

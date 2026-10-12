@@ -31,8 +31,8 @@ struct Struct_10AA3520
 
 extern Struct_10AA3520* DAT_10f35dec;
 
-// FUNCTION: 0x10AC2E80 ?FUN_10ac2e80@Class_10E6F908@@UAEXHHHH@Z
-void Class_10E6F908::FUN_10ac2e80(int A, int B, int C, int D)
+// FUNCTION: 0x10AC2E80 ?HandleMessage@Class_10E6F908@@UAEXHHHH@Z
+void Class_10E6F908::HandleMessage(int A, int B, int C, int D)
 {
     if (A == 0x69)
     {

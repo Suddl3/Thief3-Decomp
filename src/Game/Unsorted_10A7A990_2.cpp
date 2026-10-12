@@ -229,13 +229,13 @@ void cRigidAttachmentManager::Detach(int A, int B, Class_10AAB5C0*& ObjRef)
 {
     Class_10AAB5C0* Obj = ObjRef;
     Class_10C08940* First = Obj->FUN_10978090();
-    Class_10C08940* Second = (Class_10C08940*)Obj->FUN_10aab5c0();
-    ((Class_10AA82D0*)Obj)->FUN_10aa82d0();
+    Class_10C08940* Second = (Class_10C08940*)Obj->GetUnknown08();
+    ((Class_10AA82D0*)Obj)->GetLinkedObject();
     if (!First->FUN_10ad18b0() && !Second->FUN_10ad18b0())
     {
         Class_10990D10* Ptr1 = (Class_10990D10*)FUN_10977fa0((int)First);
         Class_10A7AAC0_Result* Ptr2 = (Class_10A7AAC0_Result*)FUN_10977fa0((int)Second);
-        if (((Class_10AAF570*)Obj)->FUN_10aaf570() == 0x281b9d0)
+        if (((Class_10AAF570*)Obj)->GetLinkType() == 0x281b9d0)
             Ptr2->Unknown0A4 = 0;
         if (Ptr2->Unknown9C == (int)Ptr1)
             Ptr2->FUN_109909c0(0);
@@ -257,7 +257,7 @@ void __stdcall GatherAttachments(int A, cIntArray* Out)
         for (int i = 0; i < Found.Unknown00; i++)
         {
             Class_10AAB5C0* Item = Found.Unknown08[i];
-            if (((Class_10C08940*)Item->FUN_10aab5c0())->FUN_10ad18b0() == 0)
+            if (((Class_10C08940*)Item->GetUnknown08())->FUN_10ad18b0() == 0)
             {
                 int Count = Out->Unknown00;
                 Out->SetCount(Count + 1);

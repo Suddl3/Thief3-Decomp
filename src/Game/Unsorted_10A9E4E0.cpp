@@ -29,8 +29,8 @@ public:
     virtual Class_1096D780* Virtual8();
 };
 
-// FUNCTION: 0x10A9E4E0 ?FUN_10a9e4e0@@YGXPAVUClass@@HHPAVClass_10A9E4E0_Param@@@Z
-void __stdcall FUN_10a9e4e0(UClass* Class, int B, int C, Class_10A9E4E0_Param* P)
+// FUNCTION: 0x10A9E4E0 ?SpawnAt@@YGXPAVUClass@@HHPAVClass_10A9E4E0_Param@@@Z
+void __stdcall SpawnAt(UClass* Class, int B, int C, Class_10A9E4E0_Param* P)
 {
     if (B && Class)
     {

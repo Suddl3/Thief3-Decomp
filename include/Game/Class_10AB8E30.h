@@ -8,13 +8,13 @@
 class Class_10AB8E30
 {
 public:
-    void FUN_10ab8e30(int Item);
+    void RemoveItem(int Item);
 
     char Unknown00[0x0C];
-    int Unknown0C;
+    int m_Current;
     char Unknown10[0x08];
-    cIntArray Unknown18;
-    cIntArray Unknown24;
+    cIntArray m_Items;
+    cIntArray m_Values;
 };
 
 #endif // GAME_CLASS_10AB8E30_H

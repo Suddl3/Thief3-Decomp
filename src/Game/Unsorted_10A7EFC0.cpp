@@ -49,8 +49,8 @@ void FUN_10a7efc0(Class_10A7EFC0_Param* A, int B)
         FUN_10af35e0(B, (int)Buffer, (Found - Buffer) + 1);
 }
 
-// FUNCTION: 0x10A7F220 ?FUN_10a7f220@cEngineTriggerRegistrar@@UAEPAVcTriggerLinkParam@@HPBH@Z
-cTriggerLinkParam* cEngineTriggerRegistrar::FUN_10a7f220(int A, const int* B)
+// FUNCTION: 0x10A7F220 ?CreateLinkParam@cEngineTriggerRegistrar@@UAEPAVcTriggerLinkParam@@HPBH@Z
+cTriggerLinkParam* cEngineTriggerRegistrar::CreateLinkParam(int A, const int* B)
 {
     GetAllocator()->Virtual8(0, 0);
     bool Flag;

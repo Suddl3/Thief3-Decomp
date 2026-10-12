@@ -2,17 +2,17 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Struct_10A81C10.h"
 
-class Class_10E6C104
+class cConEvent
 {
 public:
-    Class_10E6C104();
+    cConEvent();
 
-    virtual ~Class_10E6C104();
+    virtual ~cConEvent();
 
     int Unknown04;
 };
 
-class Class_10E6C1C8 : public Class_10E6C104
+class Class_10E6C1C8 : public cConEvent
 {
 public:
     virtual ~Class_10E6C1C8();

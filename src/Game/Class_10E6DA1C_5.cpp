@@ -35,6 +35,6 @@ int Class_10E6DA1C::FUN_10aab200(Class_10AAB200_Param* Writer)
     Writer->Virtual1(Unknown08);
     Writer->Virtual0(Unknown0C);
     Writer->Virtual0(Unknown10.FUN_10ab3800());
-    Writer->Virtual0(*(Class_1090A780*)Unknown10.FUN_10ab37c0());
+    Writer->Virtual0(*(Class_1090A780*)Unknown10.GetName());
     return 1;
 }

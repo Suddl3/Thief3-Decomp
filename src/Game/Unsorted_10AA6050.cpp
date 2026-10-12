@@ -48,7 +48,7 @@ public:
     Class_10AA6120(int A);
 
     int Unknown00;
-    FBox Unknown04;
+    FBox m_Bounds;
     FArray Unknown20;
 };
 
@@ -81,11 +81,11 @@ Struct_10AA6050* Class_10AA6050::FindEntry(int Value)
 Class_10AA6120::Class_10AA6120(int A)
     : Unknown00(A)
 {
-    Unknown04.Init();
+    m_Bounds.Init();
 }
 
-// FUNCTION: 0x10AA61D0 ?FUN_10aa61d0@@YAXXZ
-void FUN_10aa61d0()
+// FUNCTION: 0x10AA61D0 ?ReleaseSharedRef@@YAXXZ
+void ReleaseSharedRef()
 {
     --DAT_10f3a248->RefCount;
     if (DAT_10f3a248->RefCount == 0)
@@ -95,8 +95,8 @@ void FUN_10aa61d0()
     }
 }
 
-// FUNCTION: 0x10AA6390 ?FUN_10aa6390@Class_10E6D8F0@@UAEHXZ
-int Class_10E6D8F0::FUN_10aa6390()
+// FUNCTION: 0x10AA6390 ?IsSet@Class_10E6D8F0@@UAEHXZ
+int Class_10E6D8F0::IsSet()
 {
     bool Result = false;
     if (Unknown18)

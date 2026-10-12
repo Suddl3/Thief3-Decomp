@@ -7,17 +7,17 @@ void WriteInt(void* Stream, int Value);
 
 void WriteString(void* Stream, int* Value);
 
-class Class_10E6C104
+class cConEvent
 {
 public:
-    virtual ~Class_10E6C104();
+    virtual ~cConEvent();
 
     char Unknown04[4];
 };
 
 extern Class_10F46D9C* DAT_10f46d9c;
 
-class Class_10E6D940 : public Class_10E6C104
+class Class_10E6D940 : public cConEvent
 {
 public:
     virtual ~Class_10E6D940();

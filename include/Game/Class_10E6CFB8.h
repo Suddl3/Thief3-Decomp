@@ -9,7 +9,7 @@ class Class_10E6CFB8 : public Class_10E6DC88
 {
 public:
     virtual int Virtual0(int A, int B, int C, int* D);
-    virtual void FUN_10a98a60();
+    virtual void SendEvent();
 
     Class_10E6CFB8()
         : Class_10E6DC88(0x5b)

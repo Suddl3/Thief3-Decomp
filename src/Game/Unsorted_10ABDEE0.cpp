@@ -31,8 +31,8 @@ public:
     int UnknownFC;
 };
 
-// FUNCTION: 0x10ABDEE0 ?FUN_10abdee0@@YAXPAVClass_Field04@@PAVFString@@@Z
-void FUN_10abdee0(Class_Field04* A, FString* B)
+// FUNCTION: 0x10ABDEE0 ?GetStringOrDefault@@YAXPAVClass_Field04@@PAVFString@@@Z
+void GetStringOrDefault(Class_Field04* A, FString* B)
 {
     if (!A->FUN_1098e290(0x40813, B))
         *B = A->UnknownE8;

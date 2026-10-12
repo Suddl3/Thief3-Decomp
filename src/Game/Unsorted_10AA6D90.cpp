@@ -1,6 +1,6 @@
 // Game/Unsorted_10AA6D90.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10E6C128.h"
+#include "Game/cConTransferObjectEvent.h"
 #include "Game/Class_1091CD10.h"
 
 class Class_10A52BE0
@@ -160,8 +160,8 @@ void Class_10E822B0::FUN_10aa7100(bool A)
     Class_10A52BE0::FUN_10a52be0(A);
 }
 
-// FUNCTION: 0x10AA7150 ?Save@Class_10E6C128@@UAEXPAXHH@Z
-void Class_10E6C128::Save(void* Stream, int A, int B)
+// FUNCTION: 0x10AA7150 ?Save@cConTransferObjectEvent@@UAEXPAXHH@Z
+void cConTransferObjectEvent::Save(void* Stream, int A, int B)
 {
     WriteString(Stream, &Unknown24);
     WriteString(Stream, &Unknown20);

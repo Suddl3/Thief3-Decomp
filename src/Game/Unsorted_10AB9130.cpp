@@ -6,7 +6,7 @@
 #include "Game/Class_10E5BBE0.h"
 #include "Game/cActorManager.h"
 #include "Game/Struct_10ABA050.h"
-#include "Game/Class_10E6F30C.h"
+#include "Game/cWaterManager.h"
 #include "Game/Class_10E6F3F4.h"
 
 class Class_10AF7F80
@@ -35,28 +35,28 @@ public:
     virtual void Virtual2();
 };
 
-// FUNCTION: 0x10AB9130 ??0Class_10E6F30C@@QAE@XZ
-Class_10E6F30C::Class_10E6F30C()
-    : Unknown10(0), Unknown14(0)
+// FUNCTION: 0x10AB9130 ??0cWaterManager@@QAE@XZ
+cWaterManager::cWaterManager()
+    : m_Splash(0), m_Ripple(0)
 {
-    FUN_10ab85a0();
+    Init();
 }
 
-// FUNCTION: 0x10AB9D40 ?FUN_10ab9d40@Class_10AB9D40@@QAEXHPAUStruct_10AB9D40@@H@Z
-void Class_10AB9D40::FUN_10ab9d40(int A, Struct_10AB9D40* B, int C)
+// FUNCTION: 0x10AB9D40 ?HandleFootstep@Class_10AB9D40@@QAEXHPAUStruct_10AB9D40@@H@Z
+void Class_10AB9D40::HandleFootstep(int A, Struct_10AB9D40* B, int C)
 {
     Class_10AF7F80* Name = B->Unknown40 ? &B->Unknown24 : 0;
     if (FUN_10af3690(Name->FUN_10af7f80(), DAT_10e6b668) == 0)
         FUN_10ab9a60(A, B, C);
 }
 
-// FUNCTION: 0x10AB9FF0 ?FUN_10ab9ff0@Class_10AB9FF0@@QAEPAV1@PAV1@@Z
-Class_10AB9FF0* Class_10AB9FF0::FUN_10ab9ff0(Class_10AB9FF0* Other)
+// FUNCTION: 0x10AB9FF0 ?Assign@Class_10AB9FF0@@QAEPAV1@PAV1@@Z
+Class_10AB9FF0* Class_10AB9FF0::Assign(Class_10AB9FF0* Other)
 {
-    Object_10AB9FF0* Old = Unknown00;
-    Unknown00 = Other->Unknown00;
-    if (Unknown00)
-        Unknown00->Virtual1();
+    Object_10AB9FF0* Old = m_Object;
+    m_Object = Other->m_Object;
+    if (m_Object)
+        m_Object->Virtual1();
     if (Old)
         Old->Virtual2();
     return this;

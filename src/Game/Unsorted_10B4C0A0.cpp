@@ -13,7 +13,7 @@ class Class_10AA82D0
 {
 public:
     virtual void Virtual0();
-    Class_10B39870* FUN_10aa82d0();
+    Class_10B39870* GetLinkedObject();
 };
 
 class Class_10E7E898 : public Class_10AA82D0
@@ -63,7 +63,7 @@ public:
 void Class_10E7E898::FUN_10b4c2c0(Struct_10B3AF40_Param* A)
 {
     Struct_10B4C2C0 Vec;
-    FUN_10aa82d0()->FUN_10b39870(&Vec);
+    GetLinkedObject()->FUN_10b39870(&Vec);
     Struct_10B48890* S = FUN_10b3af40(A);
     if (!S->FUN_10b83ee0(&Vec, 0))
         S->Unknown14 = Vec;

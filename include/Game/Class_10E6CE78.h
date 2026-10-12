@@ -14,7 +14,7 @@ public:
     virtual void Virtual3();
     virtual void Virtual4();
     virtual void Virtual5();
-    virtual bool FUN_10a95b40(int p1, int p2);
+    virtual bool IsTimePaused(int p1, int p2);
 
     Class_10E6CE78();
 };

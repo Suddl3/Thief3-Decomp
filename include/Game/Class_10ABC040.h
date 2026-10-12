@@ -5,7 +5,7 @@
 
 class Class_10ABC040 {
 public:
-    Class_10ABC040* FUN_10abc040();
+    Class_10ABC040* Reset();
 
     int Unknown00;
     unsigned char Unknown04;

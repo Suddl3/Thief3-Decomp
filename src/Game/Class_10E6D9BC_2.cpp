@@ -5,17 +5,17 @@
 
 extern const char DAT_10e6c100[];
 
-class Class_10E6C104
+class cConEvent
 {
 public:
-    Class_10E6C104();
-    ~Class_10E6C104();
+    cConEvent();
+    ~cConEvent();
     virtual void Virtual0();
 
     int Unknown04;
 };
 
-class Class_10E6D9BC : public Class_10E6C104
+class Class_10E6D9BC : public cConEvent
 {
 public:
     Class_10E6D9BC();
@@ -36,7 +36,7 @@ public:
 
 // FUNCTION: 0x10AA9DF0 ??0Class_10E6D9BC@@QAE@XZ
 Class_10E6D9BC::Class_10E6D9BC()
-    : Class_10E6C104(), Unknown08(DAT_10e6c100), Unknown0C(DAT_10e6c100), Unknown10(DAT_10e6c100),
+    : cConEvent(), Unknown08(DAT_10e6c100), Unknown0C(DAT_10e6c100), Unknown10(DAT_10e6c100),
       Unknown14(DAT_10e6c100), Unknown18(DAT_10e6c100), Unknown1C(DAT_10e6c100), Unknown20(DAT_10e6c100),
       Unknown24(-1), Unknown28(0), Unknown2C(0), Unknown30(1)
 {

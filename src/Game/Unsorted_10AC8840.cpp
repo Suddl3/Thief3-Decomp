@@ -56,8 +56,8 @@ public:
     int Unknown24;
 };
 
-// FUNCTION: 0x10AC89C0 ?FUN_10ac89c0@@YAPAXXZ
-void* FUN_10ac89c0()
+// FUNCTION: 0x10AC89C0 ?FindExitMissionInfo@@YAPAXXZ
+void* FindExitMissionInfo()
 {
     int Result = 0;
     Class_1096C8D0 Iter(AExitMissionInfo::StaticClass());

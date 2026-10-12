@@ -22,6 +22,6 @@ public:
 int Class_10E6C7FC::FUN_10aaf580(int A, Object_10AAF580* B)
 {
     if (A == Virtual4())
-        return B->Virtual1(FUN_10aab5c0());
+        return B->Virtual1(GetUnknown08());
     return 0;
 }

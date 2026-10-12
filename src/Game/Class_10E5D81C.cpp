@@ -41,8 +41,8 @@ public:
     }
 };
 
-// FUNCTION: 0x10A95980 ?FUN_10a95980@Class_10E6CE6C@@UAEHHHH@Z
-int Class_10E6CE6C::FUN_10a95980(int A, int B, int C)
+// FUNCTION: 0x10A95980 ?ResetSimtimePlayedTimer@Class_10E6CE6C@@UAEHHHH@Z
+int Class_10E6CE6C::ResetSimtimePlayedTimer(int A, int B, int C)
 {
     if (DAT_10f35dec)
     {
@@ -53,8 +53,8 @@ int Class_10E6CE6C::FUN_10a95980(int A, int B, int C)
     return 1;
 }
 
-// FUNCTION: 0x10A959A0 ?FUN_10a959a0@Class_10E5D81C@@UAEPAVClass_10E6CE28@@XZ
-Class_10E6CE28* Class_10E5D81C::FUN_10a959a0()
+// FUNCTION: 0x10A959A0 ?Create@Class_10E5D81C@@UAEPAVClass_10E6CE28@@XZ
+Class_10E6CE28* Class_10E5D81C::Create()
 {
     GetAllocator()->Virtual8(0, 0);
     Class_10E6CE28* Result = new(0, 0, 0, 0, 0) Class_10E6CE28;

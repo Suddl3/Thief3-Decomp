@@ -69,7 +69,7 @@ int Class_10E8C860::FUN_10bb1080(int p1, Class_10BB1080_Item* Item, Class_10BB10
         if (Obj)
         {
             float Value = Source->Virtual4(0)->Class_10C3D3B0::FUN_10c3d3b0();
-            Class_10BFD210* Light = (Class_10BFD210*)(((Class_10AA82D0*)Obj)->FUN_10aa82d0() + 0x30);
+            Class_10BFD210* Light = (Class_10BFD210*)(((Class_10AA82D0*)Obj)->GetLinkedObject() + 0x30);
             if (Value > DAT_10eafbdc)
                 Light->FUN_10bff150(DAT_10f35dec->Unknown08, Value, DAT_10f35dec->Unknown08 + 0x2c);
             else

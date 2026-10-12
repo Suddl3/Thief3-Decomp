@@ -70,7 +70,7 @@ public:
 // FUNCTION: 0x10BE3E50 ?FUN_10be3e50@State_Fetch@@UAEXXZ
 void State_Fetch::FUN_10be3e50()
 {
-    if (!(FUN_10bc4160() && FUN_10bc4160()->FUN_10aa82d0() == 0) && !FUN_10be3b30())
+    if (!(FUN_10bc4160() && FUN_10bc4160()->GetLinkedObject() == 0) && !FUN_10be3b30())
         return;
     DAT_10ff667c->Unknown28->FUN_10bfb910(4);
     Unknown04->FUN_10bb8ee0(0);

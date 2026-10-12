@@ -2849,3 +2849,304 @@ field Class_10A58B70::Unknown15C m_Values Indexed by GetValueAt: returns Unknown
 field Class_10A59370::Unknown1BC m_Strings Four cString elements; SetStringAt writes element Index in 0 to 3.
 field Class_10A68100::Unknown10 m_Items cIntArray that AddUnique searches with FindIndex and appends to.
 field Class_10A68150::Unknown10 m_Items cIntArray that Remove searches with FindIndex and removes an entry from.
+class Class_10E6F30C cWaterManager Strings 'WaterSplash' and 'WaterRipple' in its init; derives cActorManager and registers two types.
+class Class_10E6C104 cConEvent Base of cConChoiceEvent and cConNoteEvent: their ctors call its ctor; Xbox files ConChoiceEvent.cpp, ConNoteEvent.cpp.
+class Class_10E6C128 cConTransferObjectEvent Xbox source file ConTransferObjectEvent.cpp; its Save twin logs 'Transfer object will not work right!'
+class Class_10ABF100 cCitySectionManager Singleton accessor's Xbox twin is in CitySectionManager.cpp; its methods read APlayerPawn::CitySectionGoals.
+function 0x10A95EE0 Create Allocates a Class_10E6CEC4 with operator new, runs its FUN_10a95d90 init and returns it.
+function 0x10A95F30 Create Allocates a Class_10E6CED0 with operator new, runs its FUN_10a95db0 init and returns it.
+function 0x10A95F80 Create Allocates a Class_10E6CEDC with operator new, runs its FUN_10a95dd0 init and returns it.
+function 0x10A95FD0 Create Allocates a Class_10E6CEE8 with operator new, runs its FUN_10a95df0 init and returns it.
+function 0x10A96020 Create Allocates a Class_10E6CEF4 with operator new, runs its FUN_10a95e10 init and returns it.
+function 0x10A96070 Create Allocates a Class_10E6CF00 with operator new, runs its FUN_10a95e30 init and returns it.
+function 0x10A960C0 Create Allocates a Class_10E6CF0C with operator new, runs its FUN_10a95e50 init and returns it.
+function 0x10A96110 Create Allocates a Class_10E6CF18 with operator new, runs its FUN_10a95e70 init and returns it.
+function 0x10A96160 Create Allocates a Class_10E6CF24 with operator new, runs its FUN_10a95e90 init and returns it.
+function 0x10A961B0 Create Allocates a Class_10E6CF30 with operator new, runs its FUN_10a95eb0 init and returns it.
+function 0x10A96390 Create Allocates a Class_10E6CF3C with operator new, runs its FUN_10a95ed0 init and returns it.
+function 0x10A97E70 Create Allocates a new Class_10E6CF48 (operator new with five tag arguments) and returns it.
+function 0x10A97F10 Create Allocates a new Class_10E6CF64 (operator new with five tag arguments) and returns it.
+function 0x10A98630 Create Allocates a new Class_10E6CF80 (operator new with five tag arguments) and returns it.
+function 0x10A986D0 Create Allocates a new Class_10E6CF9C (operator new with five tag arguments) and returns it.
+function 0x10A987A0 Create Allocates a new Class_10E6CFB8 (operator new with five tag arguments) and returns it.
+function 0x10A98840 Create Allocates a new Class_10E6CFD4 (operator new with five tag arguments) and returns it.
+function 0x10A988E0 Create Allocates a new Class_10E6CFF0 (operator new with five tag arguments) and returns it.
+function 0x10A99470 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d0d0 at offset 0, returns this.
+function 0x10A99580 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d0ec at offset 0, returns this.
+function 0x10A99610 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d0f8 at offset 0, returns this.
+function 0x10A9AAD0 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d11c at offset 0, returns this.
+function 0x10A9AAF0 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d128 at offset 0, returns this.
+function 0x10A9AB10 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d134 at offset 0, returns this.
+function 0x10A9AB30 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d140 at offset 0, returns this.
+function 0x10A9AB50 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d14c at offset 0, returns this.
+function 0x10A9AB70 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d158 at offset 0, returns this.
+function 0x10A9AB90 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d164 at offset 0, returns this.
+function 0x10A9ABB0 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d170 at offset 0, returns this.
+function 0x10A9ABD0 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d17c at offset 0, returns this.
+function 0x10A9ABF0 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d188 at offset 0, returns this.
+function 0x10A9AC10 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d194 at offset 0, returns this.
+function 0x10A9AC80 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d1a0 at offset 0, returns this.
+function 0x10A9C720 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d1cc at offset 0, returns this.
+function 0x10A9CDB0 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d1d8 at offset 0, returns this.
+function 0x10A9CDD0 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d1e4 at offset 0, returns this.
+function 0x10A9CFC0 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d1f0 at offset 0, returns this.
+function 0x10A9D0E0 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d1fc at offset 0, returns this.
+function 0x10A9D150 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d218 at offset 0, returns this.
+function 0x10A9D320 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d224 at offset 0, returns this.
+function 0x10A9D340 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d230 at offset 0, returns this.
+function 0x10A9D360 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d23c at offset 0, returns this.
+function 0x10A9D380 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d248 at offset 0, returns this.
+function 0x10A9D3A0 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d254 at offset 0, returns this.
+function 0x10A9D3C0 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d260 at offset 0, returns this.
+function 0x10A9E4C0 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d26c at offset 0, returns this.
+function 0x10A9E5E0 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d278 at offset 0, returns this.
+function 0x10A9E600 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d284 at offset 0, returns this.
+function 0x10A9E620 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d290 at offset 0, returns this.
+function 0x10A9E640 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d29c at offset 0, returns this.
+function 0x10A9E660 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d2a8 at offset 0, returns this.
+function 0x10A9F870 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d2c4 at offset 0, returns this.
+function 0x10A9F890 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d2d0 at offset 0, returns this.
+function 0x10A9FFA0 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d2dc at offset 0, returns this.
+function 0x10AA0210 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d2e8 at offset 0, returns this.
+function 0x10AA0230 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d2f4 at offset 0, returns this.
+function 0x10AA0790 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d300 at offset 0, returns this.
+function 0x10AA0A90 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d30c at offset 0, returns this.
+function 0x10AA0AB0 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d318 at offset 0, returns this.
+function 0x10AA0B00 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d324 at offset 0, returns this.
+function 0x10AA0B50 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d330 at offset 0, returns this.
+function 0x10AA0EA0 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d33c at offset 0, returns this.
+function 0x10AA0EB0 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d348 at offset 0, returns this.
+function 0x10AA1150 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d358 at offset 0, returns this.
+function 0x10AA1430 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d368 at offset 0, returns this.
+function 0x10AA17C0 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d37c at offset 0, returns this.
+function 0x10AA1A60 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d390 at offset 0, returns this.
+function 0x10AA1A80 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d39c at offset 0, returns this.
+function 0x10AA1AA0 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d3a8 at offset 0, returns this.
+function 0x10AA1B00 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d3b4 at offset 0, returns this.
+function 0x10AA2410 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d3f4 at offset 0, returns this.
+function 0x10AA25D0 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d400 at offset 0, returns this.
+function 0x10AA26A0 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d40c at offset 0, returns this.
+function 0x10AA2860 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d418 at offset 0, returns this.
+function 0x10AA2880 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d424 at offset 0, returns this.
+function 0x10AA28C0 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d430 at offset 0, returns this.
+function 0x10AA2910 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d43c at offset 0, returns this.
+function 0x10AA2C50 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d448 at offset 0, returns this.
+function 0x10AA2C70 Construct Same body as named Class_10E6D104::Construct; stores DAT_10e6d454 at offset 0, returns this.
+function 0x10A9B3E0 Create Operator new of the returned Class_10E6D1A0, its constructor call, then the object is returned.
+function 0x10A9C730 Create Operator new of the returned Class_10E6D1CC, its constructor call, then the object is returned.
+function 0x10A9CDE0 Create Operator new of the returned Class_10E6D1D8, its constructor call, then the object is returned.
+function 0x10A9CE30 Create Operator new of the returned Class_10E6D1E4, its constructor call, then the object is returned.
+function 0x10A9CFD0 Create Operator new of the returned Class_10E6D1F0, its constructor call, then the object is returned.
+function 0x10A9D0F0 Create Operator new of the returned Class_10E6D1FC, its constructor call, then the object is returned.
+function 0x10A9D160 Create Operator new of the returned Class_10E6D218, its constructor call, then the object is returned.
+function 0x10A9D3D0 Create Operator new of the returned Class_10E6D224, its constructor call, then the object is returned.
+function 0x10A9D420 Create Operator new of the returned Class_10E6D230, its constructor call, then the object is returned.
+function 0x10A9D470 Create Operator new of the returned Class_10E6D23C, its constructor call, then the object is returned.
+function 0x10A9D4C0 Create Operator new of the returned Class_10E6D248, its constructor call, then the object is returned.
+function 0x10A9D510 Create Operator new of the returned Class_10E6D254, its constructor call, then the object is returned.
+function 0x10A9D560 Create Operator new of the returned Class_10E6D260, its constructor call, then the object is returned.
+function 0x10AA0B60 Create Allocates a Class_10E6D30C with operator new, constructs it and returns it, or null if allocation fails.
+function 0x10AA0BB0 Create Allocates a Class_10E6D318 with operator new, constructs it and returns it, or null if allocation fails.
+function 0x10AA0C00 Create Allocates a Class_10E6D324 with operator new, constructs it and returns it, or null if allocation fails.
+function 0x10AA0C50 Create Allocates a Class_10E6D330 with operator new, constructs it and returns it, or null if allocation fails.
+function 0x10AA0EC0 Create Allocates a Class_10E6D33C with operator new, constructs it and returns it, or null if allocation fails.
+function 0x10AA0F60 Create Allocates a Class_10E6D348 with operator new, constructs it and returns it, or null if allocation fails.
+function 0x10AA1160 Create Allocates a Class_10E6D358 with operator new, constructs it and returns it, or null if allocation fails.
+function 0x10AA1440 Create Allocates a Class_10E6D368 with operator new, constructs it and returns it, or null if allocation fails.
+function 0x10AA17D0 Create Allocates a Class_10E6D37C with operator new, constructs it and returns it, or null if allocation fails.
+function 0x10AA1B10 Create Allocates a Class_10E6D390 with operator new, constructs it and returns it, or null if allocation fails.
+function 0x10AA1B60 Create Allocates a Class_10E6D39C with operator new, constructs it and returns it, or null if allocation fails.
+function 0x10AA1BB0 Create Allocates a Class_10E6D3A8 with operator new, constructs it and returns it, or null if allocation fails.
+function 0x10AA1C00 Create Allocates a Class_10E6D3B4 with operator new, constructs it and returns it, or null if allocation fails.
+function 0x10AA2420 Create Allocates a Class_10E6D3F4 with operator new, constructs it and returns it, or null if allocation fails.
+function 0x10AA2650 Create Allocates a Class_10E6D400 with operator new, constructs it and returns it, or null if allocation fails.
+function 0x10AA26C0 Create Allocates a Class_10E6D40C with operator new, constructs it and returns it, or null if allocation fails.
+function 0x10AA5570 GetValueAtIndex Subscripts the owner's int array (Unknown00->Unknown5C) by Unknown08; returns 0 when the array is null.
+function 0x10AA61D0 ReleaseSharedRef Decrements RefCount of global DAT_10f3a248 and deletes it at zero; called by cActorManager's destructor.
+function 0x10AA6390 IsSet Returns whether Unknown18 is nonzero; FUN_10bfbb50 sets it and FUN_10aa63a0 clears it.
+function 0x10AA8310 WriteFields Vtable slot 3 of Class_10E6D990; writes its fields with WriteString and WriteInt, as Class_10E6C14C::WriteFields does.
+function 0x10AA83E0 GetName Same shape as GetName in Class_10AA8400: returns Unknown20's string, which Class_10E6D990's slot 7 writes as a value.
+function 0x10AA8400 GetName Returns Unknown20.cTaggedAnimSeq::GetName(), the name of the sequence it holds.
+function 0x10AAB060 GetName Returns Unknown10's string, the same shape as GetName in Class_10AA8400; a FILE method of Class_10E6DA1C calls it.
+function 0x10AAB540 ReadFields Vtable slot 2 reads Unknown08 with ReadInt, like ReadFields in Class_10E6C14C; slot 3 writes it back.
+function 0x10AA96C0 WriteChoices Writes each choice's text under a 'Choice' label with fprintf; the loop bound is the choice count Unknown08.
+function 0x10AAB7D0 SetCount Assigns the element count Unknown00, reallocating the block through allocator Virtual3 and zeroing new elements.
+function 0x10AB7610 GetDifficultyParam Xbox message 'Unknown or unsupported difficulty level requested!' (calls pair); Index selects a per-difficulty block.
+function 0x10AB86C0 Contains Returns FindIndex(Value) >= 0; FindIndex is the class's own lookup.
+function 0x10AB90F0 Free Frees Unknown08 through GetAllocator()->Virtual5, then zeroes Unknown04 and Unknown08.
+function 0x10AB7FA0 Create Allocates and constructs a Class_10ABCC20 for Handle, initializes it with B, passes it to FUN_10ad9c90.
+function 0x10AB85A0 Init Only the constructor calls it; looks up 'WaterSplash' and 'WaterRipple' and registers two types.
+function 0x10AB6E50 Init Only the constructor calls it; SetDefaults for indices 0 to 20, then Load() and two flag bits.
+function 0x10AB5AE0 Assign Copies Other's Unknown00, calls Virtual1 on it when non-null, returns this.
+function 0x10ABC440 CalcLaunchSpeed Launch speed sqrt(C/(2(A tan D - B))) A / cos D: range A, height B, gravity C, angle D.
+function 0x10ABC760 GetFlavorColor Xbox T3Opt message 'cT3GameUtils::GetFlavorColor was called with an invalid flavor enum'; returns a flavor-indexed table entry.
+function 0x10ABC8F0 HasLinkedPawn Link query (Virtual4) for Param; true when the first linked object IsA APawn.
+function 0x10ABCFE0 CreateItem Allocates a Class_10ABCC20 from the table object for Handle, constructs and initializes it, then registers it with FUN_10ad9c90.
+function 0x10ABFBB0 Clear Zeroes Unknown00, Unknown04, Unknown08 and Unknown0c, then returns this.
+function 0x10AC1100 SetFrames Writes A, B and C into Unknown00[0], copies it to Unknown00[1] to [3], returns this.
+function 0x10AC1610 GetMaximum Returns stat 0x100534 of the actor, default 75; FUN_10ac2e40 divides Unknown604 by it.
+function 0x10AC2E40 GetFraction Returns Unknown604 divided by stat 0x100534, the same maximum FUN_10ac1610 returns.
+function 0x10AC39B0 HandleMessage Tests the first int: message 0x5a clears Unknown558; Class_10E6F908::FUN_10ac2e80 has the same signature.
+function 0x10AC2E80 HandleMessage Tests the first int: 0x69 sets Unknown6A, 0x6a clears it; Class_10E6F61C::FUN_10ac39b0 has the same signature.
+function 0x10AC3C10 SetValue Stores Value in Unknown1C, then Unknown28 = Unknown1C - Unknown10.
+function 0x10AC47F0 CopyFrom Copies all fifteen members of Other (cString operator= for the first) and returns this.
+function 0x10AC4920 Free Calls FUN_10ac44c0(0), frees Unknown08 through GetAllocator()->Virtual5, then zeroes Unknown04 and Unknown08.
+function 0x10AC1CF0 Init Initializes every member from the arguments (Unknown20 zeroed) and returns this.
+function 0x10AC1C40 Integrate Unknown20 = Unknown2C * Unknown04, Unknown14 = Unknown20 * Dt, Unknown08 += Unknown14 * Dt.
+function 0x10AC8540 GetSideDirection Transforms the X unit vector by a frame built from the rotator (yaw minus 16384, i.e. 90 degrees), flattens Z and normalizes.
+function 0x10AC87F0 ReadExitMissionStrings Fills two strings from the info object by ids 0x4081C/0x4081D, defaulting to UnknownC4/UnknownD0; called by FUN_10ac8ae0, FUN_10ac8be0.
+function 0x10AC8BE0 GetExitMissionStrings Calls FUN_10ac89c0 and, when it returns an object, FUN_10ac87f0 on it; called by FUN_10b68170 (Class_10B68170).
+function 0x10AC89C0 FindExitMissionInfo Iterates AExitMissionInfo objects; returns the last with EntryMapObjectFlag 0 (lookup 0x80081b overrides it).
+function 0x10AC9320 IsEqual Returns (Unknown00 - p1->Unknown00) == 0, i.e. whether the two Unknown00 values are equal.
+function 0x10AC9AC0 Init Sets Unknown00 to DAT_10e6fd1c (its vtable), zeroes Unknown04 to Unknown18, returns this; called by FUN_10aba1a0.
+function 0x10AC99D0 GetNext Returns Unknown0C[Index + 1] while Index + 1 < Unknown04, else 0.
+function 0x10AC99F0 RemoveValue Zeroes each Unknown0C entry below Unknown04 that equals A; called by FUN_10b69f80.
+function 0x10AC9AE0 Release Passes Unknown04 to FUN_10c51550()->FUN_10c4e880 and zeroes it; called by GSLean::Exit.
+function 0x10ACA530 Init Sets Unknown00 to DAT_10e6fd2c (its vtable), zeroes Unknown04 and Unknown08, returns this; called by FUN_10aba1a0.
+function 0x10A7DD80 IsHitProxyName Returns 1 when Name equals the strings 'HBspSurf' or 'HHitProxy' (appStricmp).
+function 0x10A7F220 CreateLinkParam Xbox T3Opt string 'LinkFlavor'; returns a new cTriggerLinkParam, false only when the flavor is 'NoSelf'.
+function 0x10A80C90 StoreGameTime Stores (float)TimeManager::Instance()->GetGameTime() in the float at offset 0x54.
+function 0x10A80D30 WriteLines fprintf writes the 'Subject' line to a FILE, then each child's Virtual7(File, A); Xbox label 'm_ConEvents[i]'.
+function 0x10A80E60 DispatchToElements Loops over Unknown04 elements of Unknown0C, calling Virtual8(Param) on each.
+function 0x10A80FE0 SetSize Reallocates the element buffer to NewCount (allocator Virtual3/Virtual5), zeroes new elements, stores the count.
+function 0x10A81D20 Empty Calls FUN_10a80e90(0), then frees the buffer through allocator Virtual5 and zeroes both fields.
+function 0x10A84CE0 SetFlagName Stores FName(name, FNAME_Add) in Unknown04; cFlagElementLogic keeps m_FlagName at the same offset.
+function 0x10A90DE0 Create returns a new Class_10E6CA40: operator new, then its constructor FUN_10a90dd0, inside GetAllocator Virtual8/Virtual9
+function 0x10A91150 Create returns a new Class_10E6CA50 (operator new and constructor) inside GetAllocator Virtual8/Virtual9
+function 0x10A911F0 Create returns a new Class_10E6CA70 (operator new and constructor) inside GetAllocator Virtual8/Virtual9
+function 0x10A912D0 Create returns a new Class_10E6CA90 (operator new and constructor) inside GetAllocator Virtual8/Virtual9
+function 0x10A91B50 Create returns a new Class_10E6CAAC (operator new and constructor) inside GetAllocator Virtual8/Virtual9
+function 0x10A91F10 Create returns a new Class_10E6CAE4 (operator new and constructor) inside GetAllocator Virtual8/Virtual9
+function 0x10A922C0 Create returns a new Class_10E6CB00 (operator new and constructor) inside GetAllocator Virtual8/Virtual9
+function 0x10A91E70 Create returns a new Class_10E6CAC8 (operator new and constructor) inside GetAllocator Virtual8/Virtual9
+function 0x10A925D0 Create returns a new Class_10E6CB78 (operator new and constructor) inside GetAllocator Virtual8/Virtual9
+function 0x10A92680 Create returns a new Class_10E6CB94 (operator new and constructor) inside GetAllocator Virtual8/Virtual9
+function 0x10A92720 Create returns a new Class_10E6CBB0 (operator new and constructor) inside GetAllocator Virtual8/Virtual9
+function 0x10A927C0 Create returns a new Class_10E6CBD0 (operator new and constructor) inside GetAllocator Virtual8/Virtual9
+function 0x10A928D0 Create returns a new Class_10E6CBEC: operator new, then its constructor FUN_10a92670, inside GetAllocator Virtual8/Virtual9
+function 0x10A92920 Create returns a new Class_10E6CBF8: operator new, then its constructor FUN_10a928c0, inside GetAllocator Virtual8/Virtual9
+function 0x10A93060 Create returns a new Class_10E6CC10 (operator new and constructor); no allocator bracket
+function 0x10AAB5C0 GetUnknown08 returns field Unknown08 (unknown_08 in source); called by 269 functions
+function 0x10A94890 Create new Class_10E6CD70 between GetAllocator Virtual8 and Virtual9 calls, then returned.
+function 0x10A94E80 Create new Class_10E6CD8C between GetAllocator Virtual8 and Virtual9 calls, then returned.
+function 0x10A94F20 Create new Class_10E6CDA8 between GetAllocator Virtual8 and Virtual9 calls, then returned.
+function 0x10A95050 Create operator new Class_10E6CDC4, then FUN_10a94b00 on it; result returned inside GetAllocator Virtual8/Virtual9.
+function 0x10A950A0 Create operator new Class_10E6CDD0, then FUN_10a94b70 on it; result returned inside GetAllocator Virtual8/Virtual9.
+function 0x10A950F0 Create operator new Class_10E6CDDC, then FUN_10a94c00 on it; result returned inside GetAllocator Virtual8/Virtual9.
+function 0x10A95140 Create operator new Class_10E6CDE8, then FUN_10a94c80 on it; result returned inside GetAllocator Virtual8/Virtual9.
+function 0x10A95190 Create operator new Class_10E6CDF4, then FUN_10a94c90 on it; result returned inside GetAllocator Virtual8/Virtual9.
+function 0x10A951E0 Create new Class_10E6CE00 between GetAllocator Virtual8 and Virtual9 calls, then returned.
+function 0x10A95590 Create operator new Class_10E6CE1C, then FUN_10a95040 on it; result returned inside GetAllocator Virtual8/Virtual9.
+function 0x10A959A0 Create new Class_10E6CE28 between GetAllocator Virtual8 and Virtual9 calls, then returned.
+function 0x10A95B00 Create operator new Class_10E6CE6C, then its Construct (0x10A95AF0, already named) on it; returns that or null.
+function 0x10A95BB0 Create new Class_10E6CE78 between GetAllocator Virtual8 and Virtual9 calls, then returned.
+function 0x10A95C50 Create operator new Class_10E6CE94, then FUN_10a95b60 on it; result returned inside GetAllocator Virtual8/Virtual9.
+function 0x10A95CA0 Create new Class_10E6CEA4 between GetAllocator Virtual8 and Virtual9 calls, then returned.
+function 0x10A95980 ResetSimtimePlayedTimer Calls Class_10A67CA0::ResetSimtimePlayedTimer on DAT_10f35dec's Unknown70 object when set; returns 1.
+function 0x10A95B40 IsTimePaused Returns TimeManager::Instance()->IsPaused() != 0; the callee names are TimeManager's.
+function 0x10A989B0 Create Returns new Class_10E6D00C from placement new via GetAllocator(), the only method of Class_10E5D848.
+function 0x10A98A60 SendEvent Passes this, event 0x77 and a payload holding 0 to the global dispatcher's Virtual1.
+function 0x10A98AC0 SendEvent Passes this, event 0x77 and a payload holding 1 to the global dispatcher's Virtual1.
+function 0x10A98B20 SendEvent Passes this, event 0x77 and a payload holding 2 to the global dispatcher's Virtual1.
+function 0x10A98B80 SendEvent Passes this, event 0x77 and a payload holding 3 to the global dispatcher's Virtual1.
+function 0x10A99350 SendEvent Passes this, event 0x7a and -1 for both remaining arguments to the global dispatcher's Virtual1.
+function 0x10A99420 SendEvent Passes this, event 0x79 and -1 for both remaining arguments to the global dispatcher's Virtual1.
+function 0x10A9E670 Create Allocates and constructs a Class_10E6D26C; returns FUN_10a9e4c0's result (cf. Class_10E5D914::Create).
+function 0x10A9E6C0 Create Allocates and constructs a Class_10E6D278; returns FUN_10a9e5e0's result (cf. Class_10E5D914::Create).
+function 0x10A9E710 Create Allocates and constructs a Class_10E6D284; returns FUN_10a9e600's result (cf. Class_10E5D914::Create).
+function 0x10A9E760 Create Allocates and constructs a Class_10E6D290; returns FUN_10a9e620's result (cf. Class_10E5D914::Create).
+function 0x10A9E7B0 Create Allocates and constructs a Class_10E6D29C; returns FUN_10a9e640's result (cf. Class_10E5D914::Create).
+function 0x10A9E800 Create Allocates and constructs a Class_10E6D2A8; returns FUN_10a9e660's result (cf. Class_10E5D914::Create).
+function 0x10A9F8A0 Create Allocates and constructs a Class_10E6D2C4; returns FUN_10a9f870's result (cf. Class_10E5D914::Create).
+function 0x10A9F8F0 Create Allocates and constructs a Class_10E6D2D0; returns FUN_10a9f890's result (cf. Class_10E5D914::Create).
+function 0x10A9FFB0 Create Allocates and constructs a Class_10E6D2DC; returns FUN_10a9ffa0's result (cf. Class_10E5D914::Create).
+function 0x10AA0240 Create Allocates and constructs a Class_10E6D2E8; returns FUN_10aa0210's result (cf. Class_10E5D914::Create).
+function 0x10AA0290 Create Allocates and constructs a Class_10E6D2F4; returns FUN_10aa0230's result (cf. Class_10E5D914::Create).
+function 0x10AA07A0 Create Allocates and constructs a Class_10E6D300; returns FUN_10aa0790's result (cf. Class_10E5D914::Create).
+function 0x10A9FCC0 AddItem Takes a new item from the handle's table object (Virtual51), constructs it, initializes it with B, stores it under Handle via FUN_10ad9c90.
+function 0x10A9E4E0 SpawnAt Spawns Class through FUN_10a49f00 at the location FUN_10a4a160 gives for (B, C), in the level from P, if FUN_10a48b30(B, C) is not -1.
+function 0x10AA2E30 FindProperty Walks a struct's UProperty fields and super structs by FName, then appStricmp; UObject::execGetPropertyText and execSetPropertyText call it.
+function 0x10AA4790 GetSuiteLabel Its only string is the literal 'suite ' followed by Unknown14.
+function 0x10AA5110 CreateSwooshGeometryTriStrip Returns a new SwooshGeometryTriStrip, built between GetAllocator Virtual8 and Virtual9 calls; FUN_10a3aa20 calls it.
+function 0x10AB37C0 GetName RemoveByName compares this result with the search name through strcmp.
+function 0x10AAF570 GetLinkType Detach compares this result with 0x281B9D0, the constant Attach and GetAttachedObject pass to the link manager.
+function 0x10AA82D0 GetLinkedObject GetAttachedObject returns this getter's result, cast to Class_10B39870*, as the attached object.
+function 0x10AB86F0 FindValue Loops over Unknown0C (Unknown04 entries) for key A; returns the matched entry's Unknown04, else 0.
+function 0x10AB8D30 Init Sets fields from A, B and C, zeroes Unknown08 and Unknown10, seeds both cIntArrays with one entry each.
+function 0x10AB8E30 RemoveItem FindIndex(Item) in Unknown18, RemoveAt in both lists, then Unknown0C takes the last value left, if any.
+function 0x10AB9D40 HandleFootstep Compares the struct's name with 'footstep' (FUN_10af3690 == 0) and calls FUN_10ab9a60 on a match.
+function 0x10AB9FF0 Assign Copies Other's Unknown00 here, calls Virtual1 on the new pointer and Virtual2 on the old, returns this.
+function 0x10ABB200 MoveRange memmove of Count elements from From to To, then resets the vacated elements to default values.
+function 0x10ABC040 Reset Zeroes all three fields and returns this.
+function 0x10ABC050 Reset Zeroes all seven fields and returns this.
+function 0x10ABC1C0 ScaleToCount Returns 0 below B and E above C; else (A - B) / (C - B) * E truncated, minimum 1.
+function 0x10ABF0D0 GetCitySectionManager Xbox twin is in CitySectionManager.cpp (calls pair ~88%); lazily creates and returns the single instance.
+function 0x10ABF1B0 FindCitySectionGoal Scans APlayerPawn::CitySectionGoals for the entry whose Unknown04 equals the id; AGarrett::FindGoal calls it.
+function 0x10ABF200 SetCitySectionGoalState Stores its char argument in Unknown20 of the goal FindCitySectionGoal returns for the id.
+function 0x10ABDEE0 GetStringOrDefault Falls back to Class_Field04::UnknownE8 when FUN_1098e290(0x40813, Out) fails; FUN_10b6f510 calls it.
+function 0x10AC0560 FireWeapon Vtable-paired Xbox twin (~89%) prints 'Fired a non-spell weapon %s in Thief'; the body dispatches a fire to FUN_10accaa0.
+function 0x10A3B460 HandleEvent vtable slot 0: the same virtual function as cVolumeManager::HandleEvent (0x10A70F00)
+function 0x10A691C0 HandleEvent vtable slot 0: the same virtual function as cVolumeManager::HandleEvent (0x10A70F00)
+function 0x10A6DC50 HandleEvent vtable slot 0: the same virtual function as cVolumeManager::HandleEvent (0x10A70F00)
+function 0x10A6E6B0 HandleEvent vtable slot 0: the same virtual function as cVolumeManager::HandleEvent (0x10A70F00)
+function 0x10A790B0 HandleEvent vtable slot 0: the same virtual function as cVolumeManager::HandleEvent (0x10A70F00)
+function 0x10AB9D90 HandleEvent vtable slot 0: the same virtual function as cVolumeManager::HandleEvent (0x10A70F00)
+function 0x10AC8E80 HandleEvent vtable slot 0: the same virtual function as cVolumeManager::HandleEvent (0x10A70F00)
+function 0x10ACB0C0 HandleEvent vtable slot 0: the same virtual function as cVolumeManager::HandleEvent (0x10A70F00)
+function 0x10ACE450 HandleEvent vtable slot 0: the same virtual function as cVolumeManager::HandleEvent (0x10A70F00)
+function 0x10ACE5B0 HandleEvent vtable slot 0: the same virtual function as cVolumeManager::HandleEvent (0x10A70F00)
+field Class_10AA5570::Unknown08 m_Index Subscript of the owner's int array read in FUN_10aa5570.
+field Class_10AA6120::Unknown04 m_Bounds Unreal FBox (Min, Max, IsValid), initialized by the constructor.
+field Class_10AAB7D0::Unknown00 m_Count Old and new counts: the loop zeroes elements from the old count up to NewCount.
+field Class_10AAB7D0::Unknown04 m_ByteCapacity Block size in bytes: element capacity is Unknown04 divided by the element size.
+field Class_10AAB7D0::Unknown08 m_Data Element block: reallocated through GetAllocator()->Virtual3 and freed through Virtual5.
+field Class_10AA8400::Unknown20 m_TaggedAnimSeq Declared as cTaggedAnimSeq; the GetName wrapper forwards to that object's GetName().
+field cWaterManager::Unknown10 m_Splash Set from the lookup of string 'WaterSplash' in its init.
+field cWaterManager::Unknown14 m_Ripple Set from the lookup of string 'WaterRipple' in its init.
+field Class_10AB90F0::Unknown08 m_Data Buffer freed through GetAllocator()->Virtual5 and zeroed in FUN_10ab90f0.
+field Class_10E49AC4::Unknown04 m_Values Entries 0 to 20 each set from SetDefaults(i) in FUN_10ab6e50.
+field Class_10AB86C0::Unknown04 m_Count Loop bound of FindIndex over the array in Unknown0C.
+field Class_10AB86C0::Unknown0C m_Entries Array FindIndex scans, comparing each element's Unknown00 with Value.
+field Class_10AB5AE0::Unknown00 m_Object Pointer copied by FUN_10ab5ae0, with Virtual1 called on it when non-null.
+field Class_Field04::UnknownDC m_DefaultString Copied to the output when FUN_1098e290 finds no value for property 0x40812 (FUN_10abdeb0).
+field Class_10AC1100::Unknown00 m_Frames Four frames: FUN_10ac1100 writes frame 0 and copies it to frames 1 to 3.
+field Class_10AC1CF0::Unknown00 m_Mass Set from the mass argument; Unknown04 is DAT_10e49684 divided by it.
+field Class_10AC1CF0::Unknown04 m_InverseMass Set to DAT_10e49684 divided by the mass; FUN_10ac1c40 multiplies force by it.
+field Class_10AC1CF0::Unknown08 m_Position Set from the first argument; FUN_10ac1c40 adds Unknown14 times Dt to it.
+field Class_10AC1CF0::Unknown14 m_Velocity Set from the second argument; FUN_10ac1c40 sets it to Unknown20 times Dt.
+field Class_10AC1CF0::Unknown20 m_Acceleration Zeroed by FUN_10ac1cf0; FUN_10ac1c40 sets it to Unknown2C times Unknown04.
+field Class_10AC1CF0::Unknown2C m_Force Set from the third argument; FUN_10ac1c40 multiplies it by Unknown04.
+field Class_10AC1C40::Unknown04 m_InverseMass FUN_10ac1c40 multiplies Unknown2C by it; FUN_10ac1cf0 sets it to DAT_10e49684 divided by the mass.
+field Class_10AC1C40::Unknown08 m_Position FUN_10ac1c40 adds Unknown14 times Dt to it.
+field Class_10AC1C40::Unknown14 m_Velocity FUN_10ac1c40 sets it to Unknown20 times Dt, then adds it times Dt to Unknown08.
+field Class_10AC1C40::Unknown20 m_Acceleration FUN_10ac1c40 sets it to Unknown2C times Unknown04.
+field Class_10AC1C40::Unknown2C m_Force FUN_10ac1c40 multiplies it by Unknown04 to get the acceleration.
+field Class_10AC2E40::Unknown604 m_Current FUN_10ac2e40 divides it by the stat maximum to return a fraction.
+field Class_10AC4920::Unknown08 m_Data FUN_10ac4920 frees it through GetAllocator()->Virtual5 and nulls it.
+field Class_10AC99D0::Unknown04 m_Count Entry count: FUN_10ac99d0 checks Index + 1 < Unknown04 before reading Unknown0C.
+field Class_10AC99D0::Unknown0C m_Entries int array of Unknown04 entries, read by FUN_10ac99d0.
+field Class_10AC99F0::Unknown04 m_Count Entry count: FUN_10ac99f0 loops i < Unknown04 over Unknown0C.
+field Class_10AC99F0::Unknown0C m_Entries int array of Unknown04 entries that FUN_10ac99f0 scans and zeroes.
+field Class_10AC9AE0::Unknown04 m_Handle void* passed to FUN_10c4e880 on the manager and zeroed by FUN_10ac9ae0.
+field Class_10A80C90::Unknown54 m_GameTime Float set from TimeManager GetGameTime() in FUN_10a80c90.
+field Class_10A80FE0::Unknown00 m_Size Old count read and set to NewCount in FUN_10a80fe0.
+field Class_10A80FE0::Unknown04 m_AllocBytes Buffer size in bytes; FUN_10a80fe0 divides it by sizeof(element) for capacity.
+field Class_10A80FE0::Unknown08 m_Elements Element buffer indexed by i in FUN_10a80fe0, freed through the allocator.
+field Class_10A80E60::Unknown04 m_Count Loop bound over the Unknown0C elements in FUN_10a80e60.
+field Class_10A80E60::Unknown0C m_Elements Element array; Virtual8(Param) is called on each element in FUN_10a80e60.
+field Class_10A84CE0::Unknown04 m_FlagName FName set by FUN_10a84ce0; cFlagElementLogic::m_FlagName sits at this offset.
+field Class_10E6D498::Unknown00 VTable Construct stores DAT_10e6d498 at offset 0, the vtable pointer; SwooshGeometryTriStrip names its vtable VTable.
+field Class_10E6D500::Unknown14 m_Name FUN_10aa4790 returns 'suite ' + Unknown14; the only method using the field.
+field Class_10AA82D0::Unknown0C m_LinkedObject Returned by GetLinkedObject; GetAttachedObject returns it as the attached object.
+field Class_10AB86F0::Unknown04 m_Count Loop bound of the entry search in FUN_10ab86f0.
+field Class_10AB86F0::Unknown0C m_Entries Array of key and value entries that FUN_10ab86f0 searches.
+field Class_10AB8D30::Unknown0C m_Current Set from C in FUN_10ab8d30, which also seeds Unknown24 with it.
+field Class_10AB8D30::Unknown18 m_Items Seeded with D in FUN_10ab8d30; the item list, parallel to Unknown24.
+field Class_10AB8D30::Unknown24 m_Values Seeded with C in FUN_10ab8d30; parallel to Unknown18.
+field Class_10AB8E30::Unknown0C m_Current Set to the last value left in Unknown24 by FUN_10ab8e30.
+field Class_10AB8E30::Unknown18 m_Items Searched by FindIndex(Item) in FUN_10ab8e30; RemoveAt in step with Unknown24.
+field Class_10AB8E30::Unknown24 m_Values RemoveAt in step with Unknown18; its last entry becomes Unknown0C.
+field Class_10AB9FF0::Unknown00 m_Object Pointer swapped in FUN_10ab9ff0; Virtual1 on the new one, Virtual2 on the old.
+field Class_10ABB200::Unknown08 m_Elements Element array base that FUN_10abb200 memmoves within.
+field Class_10ABB480::Unknown04 m_Count Loop bound of FUN_10abb480 over the element pointers.
+field Class_10ABB480::Unknown0C m_Elements Element pointer array; FUN_10abb480 calls Virtual1 on each.

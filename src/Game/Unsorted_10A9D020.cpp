@@ -30,7 +30,7 @@ extern WindowManager* GWindowManager;
 int __stdcall FUN_10a9d020(int A, int B, Class_10A9D020_Param* Obj)
 {
     Class_10AB37C0* Map = Obj->Virtual4(0);
-    const char* Text = *(const char**)Map->FUN_10ab37c0();
+    const char* Text = *(const char**)Map->GetName();
     if (!Text)
         Text = DAT_10e47660;
     FString Name(Text);

@@ -18,7 +18,7 @@ class Class_10AA82D0
 public:
     virtual void Virtual0();
 
-    int FUN_10aa82d0();
+    int GetLinkedObject();
 };
 
 class Class_10B3AE70 : public Class_10AA82D0
@@ -46,22 +46,22 @@ void Class_10E7EA48::FUN_10b4e6a0(AGarrett* Garrett)
 {
     if (Garrett->Unknown54C == 3)
     {
-        ((Class_10B39530*)FUN_10aa82d0())->FUN_10b39530(0, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+        ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(0, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
         return;
     }
     switch (Unknown10)
     {
     case 1:
-        ((Class_10B39530*)FUN_10aa82d0())->FUN_10b39530(3, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+        ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(3, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
         return;
     case 2:
-        ((Class_10B39530*)FUN_10aa82d0())->FUN_10b39530(9, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+        ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(9, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
         return;
     case 3:
-        ((Class_10B39530*)FUN_10aa82d0())->FUN_10b39530(0xf, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+        ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(0xf, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
         return;
     case 4:
-        ((Class_10B39530*)FUN_10aa82d0())->FUN_10b39530(0x15, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+        ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(0x15, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
         return;
     }
 }

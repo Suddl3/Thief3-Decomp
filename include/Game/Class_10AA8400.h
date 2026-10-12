@@ -10,10 +10,10 @@ class Class_1090A780;
 class Class_10AA8400
 {
 public:
-    Class_1090A780 FUN_10aa8400();
+    Class_1090A780 GetName();
 
     char Unknown00[0x20];
-    cTaggedAnimSeq Unknown20;
+    cTaggedAnimSeq m_TaggedAnimSeq;
 };
 
 #endif // GAME_CLASS_10AA8400_H

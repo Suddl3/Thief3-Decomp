@@ -34,8 +34,8 @@ public:
     int Unknown1C;
 };
 
-// FUNCTION: 0x10AA5110 ?FUN_10aa5110@@YAPAVSwooshGeometryTriStrip@@XZ
-SwooshGeometryTriStrip* FUN_10aa5110()
+// FUNCTION: 0x10AA5110 ?CreateSwooshGeometryTriStrip@@YAPAVSwooshGeometryTriStrip@@XZ
+SwooshGeometryTriStrip* CreateSwooshGeometryTriStrip()
 {
     GetAllocator()->Virtual8(0, 0);
     SwooshGeometryTriStrip* Result = new(0, 0, 0, 0, 0) SwooshGeometryTriStrip;

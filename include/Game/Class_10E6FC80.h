@@ -10,7 +10,7 @@ class Class_10990E20;
 class Class_10E6FC80 : public cActorManager
 {
 public:
-    virtual void FUN_10ac8e80(int Type, Class_10990E20* Source, int C, int D);
+    virtual void HandleEvent(int Type, Class_10990E20* Source, int C, int D);
     virtual void Virtual1();
     virtual void Virtual2();
     virtual void Virtual3();

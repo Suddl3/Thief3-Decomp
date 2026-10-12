@@ -61,7 +61,7 @@ public:
 // FUNCTION: 0x10BD2FE0 ?FUN_10bd2fe0@Class_10E932A0@@UAEXXZ
 void Class_10E932A0::FUN_10bd2fe0()
 {
-    if ((!FUN_10bc4160()->FUN_10aa82d0() && !Unknown40) || Unknown04->FUN_10bb8960()->Virtual82())
+    if ((!FUN_10bc4160()->GetLinkedObject() && !Unknown40) || Unknown04->FUN_10bb8960()->Virtual82())
         PopState();
 }
 

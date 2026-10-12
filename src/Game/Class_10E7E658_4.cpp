@@ -19,7 +19,7 @@ public:
 void Class_10E7E658::FUN_10b49990(int A)
 {
     if (!FUN_10b3af60(A))
-        ((Class_10B39700*)FUN_10aa82d0())->FUN_10b39700();
+        ((Class_10B39700*)GetLinkedObject())->FUN_10b39700();
     FUN_10b49640(A);
     Virtual4();
 }

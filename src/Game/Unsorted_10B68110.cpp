@@ -1,15 +1,15 @@
 // Game/Unsorted_10B68110.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10ABF100.h"
+#include "Game/cCitySectionManager.h"
 
 class Class_10B68170 {
 public:
     void FUN_10b68170();
 };
 
-class Class_10ABF100;
+class cCitySectionManager;
 
-Class_10ABF100* FUN_10abf0d0();
+cCitySectionManager* GetCitySectionManager();
 
 struct Struct_10ABF1F0_Item
 {
@@ -56,11 +56,11 @@ APlayerPawn* FUN_10983ca0(APlayerPawn* A);
 // FUNCTION: 0x10B68110 ?FUN_10b68110@@YAXXZ
 void FUN_10b68110()
 {
-    Struct_10ABF1F0* List = FUN_10abf0d0()->FUN_10abf1f0();
+    Struct_10ABF1F0* List = GetCitySectionManager()->FUN_10abf1f0();
     for (int i = 0; i < List->Count; i++)
     {
         if (!List->Data[i].Unknown28 && List->Data[i].Unknown20)
-            FUN_10abf0d0()->FUN_10abf200(List->Data[i].Unknown04, 4);
+            GetCitySectionManager()->SetCitySectionGoalState(List->Data[i].Unknown04, 4);
     }
 }
 

@@ -6,12 +6,12 @@
 class Class_10AC99D0
 {
 public:
-    int FUN_10ac99d0(int Index);
+    int GetNext(int Index);
 
     char Unknown00[4];
-    int Unknown04;
+    int m_Count;
     char Unknown08[4];
-    int* Unknown0C;
+    int* m_Entries;
 };
 
 #endif // GAME_CLASS_10AC99D0_H

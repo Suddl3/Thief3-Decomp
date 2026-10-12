@@ -1,7 +1,7 @@
 // Game/Unsorted_10B9DCF0_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-#include "Game/Class_10ABF100.h"
+#include "Game/cCitySectionManager.h"
 #include "Game/Class_10BAC050.h"
 
 class Class_10BB9FC0;
@@ -12,7 +12,7 @@ class Class_10B9E410_Member;
 
 struct Class_10B9E410_Unknown0C;
 
-Class_10ABF100* FUN_10abf0d0();
+cCitySectionManager* GetCitySectionManager();
 
 struct Struct_10AA3520
 {
@@ -192,7 +192,7 @@ void Class_10B9E410::FUN_10b9e330(int A, int B)
     Top()->Virtual48(A, B);
     if (A == 4)
     {
-        if (FUN_10abf0d0()->FUN_10abf100())
+        if (GetCitySectionManager()->FUN_10abf100())
         {
             switch (Top()->Virtual3())
             {

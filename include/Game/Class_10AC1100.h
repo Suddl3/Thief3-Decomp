@@ -10,9 +10,9 @@ struct Struct_10AC1100;
 class Class_10AC1100
 {
 public:
-    Class_10AC1100* FUN_10ac1100(const Struct_10AC1100& A, const Struct_10AC1100& B, const Struct_10AC1100& C);
+    Class_10AC1100* SetFrames(const Struct_10AC1100& A, const Struct_10AC1100& B, const Struct_10AC1100& C);
 
-    Struct_10AC1100_Frame Unknown00[4];
+    Struct_10AC1100_Frame m_Frames[4];
 };
 
 #endif // GAME_CLASS_10AC1100_H

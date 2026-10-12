@@ -83,18 +83,18 @@ float cT3Camera::FUN_10ac2cc0()
     return Result;
 }
 
-// FUNCTION: 0x10AC2E40 ?FUN_10ac2e40@Class_10AC2E40@@QAEMXZ
-float Class_10AC2E40::FUN_10ac2e40()
+// FUNCTION: 0x10AC2E40 ?GetFraction@Class_10AC2E40@@QAEMXZ
+float Class_10AC2E40::GetFraction()
 {
-    float Current = Unknown604;
+    float Current = m_Current;
     float Max = 75.0f;
     if (DAT_10f35dec->Unknown08)
         DAT_10f35dec->Unknown08->FUN_1098e330(0x100534, (int*)&Max);
     return Current / Max;
 }
 
-// FUNCTION: 0x10AC39B0 ?FUN_10ac39b0@Class_10E6F61C@@UAEXHHHH@Z
-void Class_10E6F61C::FUN_10ac39b0(int p1, int p2, int p3, int p4)
+// FUNCTION: 0x10AC39B0 ?HandleMessage@Class_10E6F61C@@UAEXHHHH@Z
+void Class_10E6F61C::HandleMessage(int p1, int p2, int p3, int p4)
 {
     if (p1 == 0x5a)
         Unknown558.SetCount(0);

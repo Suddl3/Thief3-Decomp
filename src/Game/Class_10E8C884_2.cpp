@@ -17,7 +17,7 @@ class Class_10B39870;
 class Class_10AA82D0
 {
 public:
-    Class_10B39870* FUN_10aa82d0();
+    Class_10B39870* GetLinkedObject();
 };
 
 struct Struct_10BB0B90_Unknown118
@@ -60,7 +60,7 @@ int Class_10E8C884::FUN_10bb1240(int A, Class_10BB1020_B* B, int C)
         Struct_10BB0B90* Owner = FUN_10bb0b90((int)B);
         if (Owner && Owner->Unknown118 && Owner->Unknown118->Unknown08)
         {
-            Class_10B39870* Obj = Owner->Unknown118->Unknown08->FUN_10aa82d0();
+            Class_10B39870* Obj = Owner->Unknown118->Unknown08->GetLinkedObject();
             Class_10E9CD90* Light = &Obj->Unknown30;
             Light->Class_10E9CD90::SetPosition(0.0f);
             ((Class_10E74F70*)Light)->Class_10E74F70::FUN_10bfbb90(0);

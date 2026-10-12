@@ -15,14 +15,14 @@ public:
 
 extern Class_10F46DA0* DAT_10f46da0;
 
-// FUNCTION: 0x10A99350 ?FUN_10a99350@Class_10E6D07C@@UAEXXZ
-void Class_10E6D07C::FUN_10a99350()
+// FUNCTION: 0x10A99350 ?SendEvent@Class_10E6D07C@@UAEXXZ
+void Class_10E6D07C::SendEvent()
 {
     DAT_10f46da0->Virtual1(this, 0x7a, -1, -1);
 }
 
-// FUNCTION: 0x10A99420 ?FUN_10a99420@Class_10E6D098@@UAEXXZ
-void Class_10E6D098::FUN_10a99420()
+// FUNCTION: 0x10A99420 ?SendEvent@Class_10E6D098@@UAEXXZ
+void Class_10E6D098::SendEvent()
 {
     DAT_10f46da0->Virtual1(this, 0x79, -1, -1);
 }

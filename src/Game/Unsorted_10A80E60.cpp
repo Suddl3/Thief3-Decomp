@@ -16,9 +16,9 @@ public:
     virtual void Virtual8(int Param);
 };
 
-// FUNCTION: 0x10A80E60 ?FUN_10a80e60@Class_10A80E60@@QAEXH@Z
-void Class_10A80E60::FUN_10a80e60(int Param)
+// FUNCTION: 0x10A80E60 ?DispatchToElements@Class_10A80E60@@QAEXH@Z
+void Class_10A80E60::DispatchToElements(int Param)
 {
-    for (int i = 0; i < Unknown04; i++)
-        Unknown0C[i]->Virtual8(Param);
+    for (int i = 0; i < m_Count; i++)
+        m_Elements[i]->Virtual8(Param);
 }

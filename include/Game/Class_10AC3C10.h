@@ -8,7 +8,7 @@
 class Class_10AC3C10
 {
 public:
-    void FUN_10ac3c10(const Struct_10AC3C10& Value);
+    void SetValue(const Struct_10AC3C10& Value);
 
     char Unknown00[0x10];
     Struct_10AC3C10 Unknown10;

@@ -26,7 +26,7 @@ public:
 class Class_10AAB5C0 : public Class_10978090
 {
 public:
-    int FUN_10aab5c0();
+    int GetUnknown08();
 };
 
 class Class_10A94DB0_Unknown08
@@ -69,16 +69,16 @@ public:
 // FUNCTION: 0x10A94DB0 ?FUN_10a94db0@Class_10E6CE00@@UAEHHH@Z
 int Class_10E6CE00::FUN_10a94db0(int A, int B)
 {
-    Class_10A94DB0_Unknown08* Obj1 = (Class_10A94DB0_Unknown08*)FUN_10aab5c0();
+    Class_10A94DB0_Unknown08* Obj1 = (Class_10A94DB0_Unknown08*)GetUnknown08();
     Class_10978090* Obj1Result = Obj1->Virtual4(0);
-    Class_10A94DB0_Unknown08* Obj2 = (Class_10A94DB0_Unknown08*)FUN_10aab5c0();
+    Class_10A94DB0_Unknown08* Obj2 = (Class_10A94DB0_Unknown08*)GetUnknown08();
     Class_10978090* Obj3 = Obj2->Virtual4(1);
     Class_10E6BF84 Local1;
     Class_10A174E0* R = FUN_10a18230();
     Class_10C08940* Result1 = Obj1Result->Unknown04;
     int Value = R->Virtual0(Result1);
     Local1.FUN_10d51e20(Value);
-    Class_10A94DB0_Unknown08* Obj4 = (Class_10A94DB0_Unknown08*)FUN_10aab5c0();
+    Class_10A94DB0_Unknown08* Obj4 = (Class_10A94DB0_Unknown08*)GetUnknown08();
     Class_10978090* Obj5 = Obj4->Virtual4(2);
     Class_10E6BF84 Local2;
     if (!Obj5->Virtual1())

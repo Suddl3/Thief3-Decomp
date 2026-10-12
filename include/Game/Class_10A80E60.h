@@ -8,12 +8,12 @@ class Class_10A80E60_Unknown0C;
 class Class_10A80E60
 {
 public:
-    void FUN_10a80e60(int Param);
+    void DispatchToElements(int Param);
 
     int Unknown00;
-    int Unknown04;
+    int m_Count;
     int Unknown08;
-    Class_10A80E60_Unknown0C** Unknown0C;
+    Class_10A80E60_Unknown0C** m_Elements;
 };
 
 #endif // GAME_CLASS_10A80E60_H

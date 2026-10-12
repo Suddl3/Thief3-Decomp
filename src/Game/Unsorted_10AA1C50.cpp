@@ -124,7 +124,7 @@ int __stdcall FUN_10aa1c50(int A, int B, Class_10AA1C50_Param* C)
     if (DAT_10f35dec->Unknown08->Virtual85() != 1)
     {
         FString Name;
-        const char* Text = *(const char**)((Class_10AB37C0*)C->Virtual4(0))->FUN_10ab37c0();
+        const char* Text = *(const char**)((Class_10AB37C0*)C->Virtual4(0))->GetName();
         FString Key(Text ? Text : DAT_10e47660);
         int Value = (int)((Class_10978090*)C->Virtual4(1))->FUN_10978090();
         FUN_10a36b00((int)DAT_10f35dec->Unknown08, (void**)&Name, (void**)&Key, Value, 0,

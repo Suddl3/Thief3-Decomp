@@ -8,11 +8,11 @@ class Class_10AA82D0
 public:
     virtual void Virtual0();
 
-    int FUN_10aa82d0();
+    int GetLinkedObject();
 
     char Unknown04[4];
     int Unknown08;
-    int Unknown0C;
+    int m_LinkedObject;
 };
 
 class Class_10E7EC40 : public Class_10AA82D0
@@ -30,8 +30,8 @@ int Class_10E7EC40::OnAnimationEnd(int A, int B)
 {
     if (B == 0x41)
     {
-        ((Class_10B395B0*)FUN_10aa82d0())->FUN_10b395b0(Unknown08);
-        ((Class_10B39700*)FUN_10aa82d0())->FUN_10b39700();
+        ((Class_10B395B0*)GetLinkedObject())->FUN_10b395b0(Unknown08);
+        ((Class_10B39700*)GetLinkedObject())->FUN_10b39700();
         return 1;
     }
     return Virtual4();

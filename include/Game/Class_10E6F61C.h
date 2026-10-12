@@ -8,7 +8,7 @@
 class Class_10E6F61C
 {
 public:
-    virtual void FUN_10ac39b0(int p1, int p2, int p3, int p4);
+    virtual void HandleMessage(int p1, int p2, int p3, int p4);
 
     char Unknown04[0x554];
     cIntArray Unknown558;

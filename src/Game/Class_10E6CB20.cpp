@@ -31,7 +31,7 @@ public:
 class Class_10AAB5C0 : public Class_10978090
 {
 public:
-    int FUN_10aab5c0();
+    int GetUnknown08();
 
     int Unknown08;
 };
@@ -67,6 +67,6 @@ void Class_10E6CB20::FUN_10a92360()
 int Class_10E6CB20::FUN_10a92470(int A, Object_10A92470* B)
 {
     if (Virtual5(A))
-        return B->Virtual1(FUN_10aab5c0());
+        return B->Virtual1(GetUnknown08());
     return 0;
 }

@@ -9,11 +9,11 @@ class Class_10AA82D0
 public:
     virtual void Virtual0();
 
-    int FUN_10aa82d0();
+    int GetLinkedObject();
 
     char Unknown04[4];
     int Unknown08;
-    int Unknown0C;
+    int m_LinkedObject;
 };
 
 class Class_10B3E7A0 : public Class_10AA82D0
@@ -43,12 +43,12 @@ void Class_10B3E7A0::FUN_10b3e7a0(int A)
 {
     if (Unknown40)
     {
-        ((Class_10B39530*)FUN_10aa82d0())->FUN_10b39530(0xbc, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+        ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(0xbc, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
         Unknown40 = 0;
     }
     if (Unknown3C)
     {
-        ((Class_10B39530*)FUN_10aa82d0())->FUN_10b39530(0xbd, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+        ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(0xbd, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
         Unknown3C = 0;
     }
 }

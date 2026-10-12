@@ -102,6 +102,6 @@ void Class_10E94218::FUN_10bdaeb0()
     if (Unknown40)
         Unknown40->Virtual2();
     Class_10BFF460* Obj = Unknown04->GetCurrent();
-    if (!Obj || !Obj->FUN_10bff460() || FUN_10bc4160()->FUN_10aa82d0() == 0)
+    if (!Obj || !Obj->FUN_10bff460() || FUN_10bc4160()->GetLinkedObject() == 0)
         PopState();
 }

@@ -41,14 +41,14 @@ int Class_10E6D1AC::FUN_10a9b210(int A, int B, int C, int* D)
     }
 }
 
-// FUNCTION: 0x10A9B3E0 ?FUN_10a9b3e0@Class_10E5D878@@UAEPAVClass_10E6D1A0@@XZ
-Class_10E6D1A0* Class_10E5D878::FUN_10a9b3e0()
+// FUNCTION: 0x10A9B3E0 ?Create@Class_10E5D878@@UAEPAVClass_10E6D1A0@@XZ
+Class_10E6D1A0* Class_10E5D878::Create()
 {
     GetAllocator()->Virtual8(0, 0);
     Class_10E6D1A0* Result = 0;
     void* Memory = operator new(sizeof(Class_10E6D1A0), 0, 0, 0, 0, 0);
     if (Memory)
-        Result = static_cast<Class_10E6D1A0*>(Memory)->FUN_10a9ac80();
+        Result = static_cast<Class_10E6D1A0*>(Memory)->Construct();
     GetAllocator()->Virtual9();
     return Result;
 }

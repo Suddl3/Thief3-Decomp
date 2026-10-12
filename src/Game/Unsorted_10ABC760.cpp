@@ -15,8 +15,8 @@ struct FColor
     BYTE A;
 };
 
-// FUNCTION: 0x10ABC760 ?FUN_10abc760@@YA?AUFColor@@H@Z
-FColor FUN_10abc760(int Index)
+// FUNCTION: 0x10ABC760 ?GetFlavorColor@@YA?AUFColor@@H@Z
+FColor GetFlavorColor(int Index)
 {
     static FColor Colors[4] =
     {

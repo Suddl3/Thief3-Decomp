@@ -10,8 +10,8 @@ extern float DAT_10e499a0;
 
 extern float DAT_10f00e94;
 
-// FUNCTION: 0x10ABC050 ?FUN_10abc050@Class_10ABC050@@QAEPAV1@XZ
-Class_10ABC050* Class_10ABC050::FUN_10abc050()
+// FUNCTION: 0x10ABC050 ?Reset@Class_10ABC050@@QAEPAV1@XZ
+Class_10ABC050* Class_10ABC050::Reset()
 {
     Unknown00 = 0;
     Unknown04 = 0;
@@ -26,5 +26,5 @@ Class_10ABC050* Class_10ABC050::FUN_10abc050()
 // FUNCTION: 0x10ABC070 ?FUN_10abc070@@YAMXZ
 float FUN_10abc070()
 {
-    return DAT_10f3a3d8->Unknown10->FUN_10ac2e40() * DAT_10e499a0 + DAT_10f00e94;
+    return DAT_10f3a3d8->Unknown10->GetFraction() * DAT_10e499a0 + DAT_10f00e94;
 }

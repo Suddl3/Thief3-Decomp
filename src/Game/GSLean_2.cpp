@@ -54,6 +54,6 @@ void GSLean::Exit(AGarrett* Garrett)
     Unknown20 = FUN_10b4f690(Garrett);
     Unknown14 = FVector(0.0f, 0.0f, 0.0f);
     DAT_10f3a3d8->Unknown13C->FUN_10ac92f0();
-    DAT_10f3a3d8->Unknown134->FUN_10ac9ae0();
+    DAT_10f3a3d8->Unknown134->Release();
     Unknown11 = false;
 }

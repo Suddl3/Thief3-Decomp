@@ -9,7 +9,7 @@ class Class_10AB3800
 {
 public:
     Class_1090A780 FUN_10ab3800();
-    void* FUN_10ab37c0();
+    void* GetName();
 
     char Unknown00[0xC];
 };

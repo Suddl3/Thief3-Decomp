@@ -109,7 +109,7 @@ public:
     virtual Class_10971570* Virtual98();
 };
 
-class Class_10BB9E90_FUN_10aaf570
+class Class_10BB9E90_GetLinkType
 {
 public:
     virtual void Virtual0();
@@ -202,7 +202,7 @@ void Class_10BB9FC0::FUN_10bb9e90()
             Unknown284 = 0;
         return;
     }
-    int Kind = ((Class_10BB9E90_FUN_10aaf570*)Unknown0C->FUN_10aaf570())->Virtual48();
+    int Kind = ((Class_10BB9E90_GetLinkType*)Unknown0C->GetLinkType())->Virtual48();
     if (Kind == 0xb || Kind == 0xc)
         Unknown284 = DAT_10ff667c->Unknown34;
     else if (Kind == 0xf || Kind == 0xe)

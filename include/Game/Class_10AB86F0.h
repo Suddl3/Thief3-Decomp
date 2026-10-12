@@ -8,12 +8,12 @@ struct Struct_10AB86F0;
 class Class_10AB86F0
 {
 public:
-    int FUN_10ab86f0(int A);
+    int FindValue(int A);
 
     char Unknown00[4];
-    int Unknown04;
+    int m_Count;
     char Unknown08[4];
-    Struct_10AB86F0* Unknown0C;
+    Struct_10AB86F0* m_Entries;
 };
 
 #endif // GAME_CLASS_10AB86F0_H

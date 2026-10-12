@@ -225,7 +225,7 @@ void Class_10E8BE68::FUN_10bce700(int A, int B)
 // FUNCTION: 0x10BCE760 ?FUN_10bce760@Class_10E91CB8@@UAEXXZ
 void Class_10E91CB8::FUN_10bce760()
 {
-    if (!FUN_10bc4160()->FUN_10aa82d0())
+    if (!FUN_10bc4160()->GetLinkedObject())
     {
         if (!((Class_10AA6080*)FUN_10aa6040())->FUN_10aa6080(&((AActor*)Unknown04->Unknown08->FUN_10c7d570())->Location, 80.0f))
             PopState();

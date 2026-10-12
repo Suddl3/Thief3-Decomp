@@ -159,8 +159,8 @@ APlayerPawn* FUN_10983ca0(APlayerPawn* Obj);
 // FUNCTION: 0x10A933A0 ?Virtual6@Class_10E6CC7C@@UAEHHH@Z
 int Class_10E6CC7C::Virtual6(int, int)
 {
-    int First = ((Class_10A933A0_Unknown08*)FUN_10aab5c0())->Virtual6(0);
-    int Second = ((Class_10A933A0_Unknown08*)FUN_10aab5c0())->Virtual6(1);
+    int First = ((Class_10A933A0_Unknown08*)GetUnknown08())->Virtual6(0);
+    int Second = ((Class_10A933A0_Unknown08*)GetUnknown08())->Virtual6(1);
     APlayerPawn* Pawn = FUN_10983ca0(DAT_10f35dec->Unknown08);
     if (!Pawn)
         return 0;

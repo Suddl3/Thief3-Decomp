@@ -54,5 +54,5 @@ void Class_10E894C8::FUN_10b92d70()
 {
     Class_10D9FEE0::FUN_10d9fdb0();
     if (Virtual6() && Virtual6()->Unknown04 == 2)
-        Virtual6()->Virtual2(FUN_10aa82d0());
+        Virtual6()->Virtual2(GetLinkedObject());
 }

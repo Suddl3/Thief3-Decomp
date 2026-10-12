@@ -13,5 +13,5 @@ Class_10C80360* FUN_10c5f280();
 // FUNCTION: 0x10C3F200 ?FUN_10c3f200@CadenceManager@@UAE_NXZ
 bool CadenceManager::FUN_10c3f200()
 {
-    return FUN_10c5f280()->FUN_10aab5c0() != 0;
+    return FUN_10c5f280()->GetUnknown08() != 0;
 }

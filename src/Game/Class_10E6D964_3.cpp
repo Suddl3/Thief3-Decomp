@@ -3,17 +3,17 @@
 #include "Game/Class_10AAB590_Param.h"
 #include "Game/Object_10AA7BF0.h"
 
-class Class_10E6C104
+class cConEvent
 {
 public:
-    Class_10E6C104();
+    cConEvent();
 
-    virtual ~Class_10E6C104();
+    virtual ~cConEvent();
 
     int Unknown04;
 };
 
-class Class_10E6D964 : public Class_10E6C104
+class Class_10E6D964 : public cConEvent
 {
 public:
     Class_10E6D964();

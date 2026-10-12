@@ -77,7 +77,7 @@ public:
 void Class_10E7E778::FUN_10b4bec0(Struct_10B4BEC0* A)
 {
     A->Unknown400 = A->Unknown38;
-    ((Class_10B39700*)FUN_10aa82d0())->FUN_10b39700();
+    ((Class_10B39700*)GetLinkedObject())->FUN_10b39700();
     Virtual4();
 }
 

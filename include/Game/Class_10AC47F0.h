@@ -8,7 +8,7 @@
 class Class_10AC47F0
 {
 public:
-    Class_10AC47F0* FUN_10ac47f0(const Class_10AC47F0& Other);
+    Class_10AC47F0* CopyFrom(const Class_10AC47F0& Other);
 
     cString Unknown00;
     int Unknown04;

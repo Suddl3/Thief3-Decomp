@@ -17,7 +17,7 @@ public:
     int FUN_1098e290(int Id, FString* Out);
 
     char Unknown00[0xDC];
-    FString UnknownDC;
+    FString m_DefaultString;
 };
 
 class Class_1098E330
@@ -35,7 +35,7 @@ public:
 void FUN_10abdeb0(Class_Field04* A, FString* B)
 {
     if (!A->FUN_1098e290(0x40812, B))
-        *B = A->UnknownDC;
+        *B = A->m_DefaultString;
 }
 
 // FUNCTION: 0x10ABDFE0 ?FUN_10abdfe0@@YAHPAVClass_1098E330@@@Z

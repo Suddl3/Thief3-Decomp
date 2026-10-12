@@ -28,7 +28,7 @@
 #include "Game/Class_10AAA130.h"
 #include "Game/Class_10AAE310.h"
 #include "Game/Class_10AB37F0.h"
-#include "Game/Class_10E6C128.h"
+#include "Game/cConTransferObjectEvent.h"
 
 class Class_10E6D8CC
 {
@@ -47,7 +47,7 @@ struct Class_10AA82D0 {
 	char unknown_00[0xc];
 	int unknown_0c;
 
-	int FUN_10aa82d0();
+	int GetLinkedObject();
 };
 
 extern char DAT_10e6d9e0[];
@@ -66,7 +66,7 @@ struct Class_10AAB5C0 {
 	char unknown_00[0x8];
 	int unknown_08;
 
-	int FUN_10aab5c0();
+	int GetUnknown08();
 };
 
 class Member_10AB0140
@@ -109,8 +109,8 @@ Class_10E6D8F0::Class_10E6D8F0()
 // FUNCTION: 0x10AA69E0 ??_GClass_10E6D8F0@@UAEPAXI@Z
 // Compiler-generated: emitted with the class's vtable by 0x10AA6860's definition in this unit.
 
-// FUNCTION: 0x10AA71F0 ?Dump@Class_10E6C128@@QAEHPAU_iobuf@@H@Z
-int Class_10E6C128::Dump(FILE* File, int Param)
+// FUNCTION: 0x10AA71F0 ?Dump@cConTransferObjectEvent@@QAEHPAU_iobuf@@H@Z
+int cConTransferObjectEvent::Dump(FILE* File, int Param)
 {
     fprintf(File, DAT_10e6c0f0, Unknown0C, Unknown20);
     return 1;
@@ -168,8 +168,8 @@ void* Class_10AA82C0::FUN_10aa82c0()
     return &Unknown8;
 }
 
-// FUNCTION: 0x10AA82D0 ?FUN_10aa82d0@Class_10AA82D0@@QAEHXZ
-int Class_10AA82D0::FUN_10aa82d0() {
+// FUNCTION: 0x10AA82D0 ?GetLinkedObject@Class_10AA82D0@@QAEHXZ
+int Class_10AA82D0::GetLinkedObject() {
 	return unknown_0c;
 }
 
@@ -254,8 +254,8 @@ void* Class_10AAAEB0::FUN_10aaaeb0() {
 	return &unknown_0c;
 }
 
-// FUNCTION: 0x10AAB5C0 ?FUN_10aab5c0@Class_10AAB5C0@@QAEHXZ
-int Class_10AAB5C0::FUN_10aab5c0() {
+// FUNCTION: 0x10AAB5C0 ?GetUnknown08@Class_10AAB5C0@@QAEHXZ
+int Class_10AAB5C0::GetUnknown08() {
 	return unknown_08;
 }
 
@@ -276,8 +276,8 @@ void Class_10AAE310::FUN_10aae310(int param)
     Field818 = param;
 }
 
-// FUNCTION: 0x10AAF570 ?FUN_10aaf570@Class_10AAF570@@QAEHXZ
-int Class_10AAF570::FUN_10aaf570() {
+// FUNCTION: 0x10AAF570 ?GetLinkType@Class_10AAF570@@QAEHXZ
+int Class_10AAF570::GetLinkType() {
 	return unknown_10;
 }
 
@@ -287,8 +287,8 @@ void Class_10AB0140::FUN_10ab0140()
     Field24->F5();
 }
 
-// FUNCTION: 0x10AB37C0 ?FUN_10ab37c0@Class_10AB37C0@@QAEPAXXZ
-void* Class_10AB37C0::FUN_10ab37c0() {
+// FUNCTION: 0x10AB37C0 ?GetName@Class_10AB37C0@@QAEPAXXZ
+void* Class_10AB37C0::GetName() {
 	return &unknown_04;
 }
 

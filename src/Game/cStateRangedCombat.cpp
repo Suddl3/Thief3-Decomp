@@ -37,7 +37,7 @@ public:
 // FUNCTION: 0x10BF08D0 ?FUN_10bf08d0@cStateRangedCombat@@QAEXXZ
 void cStateRangedCombat::FUN_10bf08d0()
 {
-    Class_10AA82D0_Result* P = (Class_10AA82D0_Result*)FUN_10bc4160()->FUN_10aa82d0();
+    Class_10AA82D0_Result* P = (Class_10AA82D0_Result*)FUN_10bc4160()->GetLinkedObject();
     if (!P || P->Virtual5() == 0x11)
         Unknown138 = true;
 }

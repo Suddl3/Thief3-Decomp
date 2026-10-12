@@ -459,7 +459,7 @@ public:
 // FUNCTION: 0x10B6AED0 ?FUN_10b6aed0@Class_10B6AED0@@QAEXXZ
 void Class_10B6AED0::FUN_10b6aed0()
 {
-    int Index = DAT_10f3a3d8->Unknown138->FUN_10ac99d0(Unknown158);
+    int Index = DAT_10f3a3d8->Unknown138->GetNext(Unknown158);
     if (Index != 0)
     {
         cString Text(FUN_1090a660(DAT_10e47660));

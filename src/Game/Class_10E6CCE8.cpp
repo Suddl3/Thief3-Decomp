@@ -13,7 +13,7 @@ public:
     virtual void Virtual3();
     virtual Class_10AAB5C0* Virtual4(int A);
 
-    int FUN_10aab5c0();
+    int GetUnknown08();
 
     int Unknown04;
     int Unknown08;
@@ -61,7 +61,7 @@ void Class_10E6CCE8::FUN_10a94480()
 {
     Class_10E5D5E0 Local;
     int Key;
-    Class_10A94480_Owner* Owner = (Class_10A94480_Owner*)FUN_10aab5c0();
+    Class_10A94480_Owner* Owner = (Class_10A94480_Owner*)GetUnknown08();
     Class_10B0FDC0* Result = Owner->Virtual4(0);
     Class_10A94480_Result* Value = Result->FUN_10b0fdc0(&Key);
     Local.Unknown00 = Value->Unknown00;

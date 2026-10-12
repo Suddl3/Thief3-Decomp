@@ -10,7 +10,7 @@ class Object_10ACACB0;
 class Class_10E6FEE8 : public cActorManager
 {
 public:
-    virtual void FUN_10acb0c0(int Code, int A, int B, int C);
+    virtual void HandleEvent(int Code, int A, int B, int C);
     virtual void Virtual1();
     virtual void Virtual2();
     virtual void Virtual3();

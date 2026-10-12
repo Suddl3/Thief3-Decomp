@@ -24,7 +24,7 @@ public:
 void Class_10B48300::FUN_10b478e0()
 {
     ((Class_10B47AB0*)this)->FUN_10b47850(
-        ((Class_10AAB5C0*)Unknown08[1])->FUN_10aab5c0(),
+        ((Class_10AAB5C0*)Unknown08[1])->GetUnknown08(),
         ((Class_10B7AC30*)Unknown08[1])->FUN_10b7ac30(),
         1.0f,
         ((Class_10B7AD00*)Unknown08[1])->FUN_10b7ad00(0),

@@ -15,7 +15,7 @@ public:
 // FUNCTION: 0x10BC4B80 ?FUN_10bc4b80@Class_10BC4B80@@QAE_NPAVFVector@@HH@Z
 bool Class_10BC4B80::FUN_10bc4b80(FVector* Out, int B, int C)
 {
-    Class_10AAF570_Field10* Obj = (Class_10AAF570_Field10*)Unknown04->Unknown0C->FUN_10aaf570();
+    Class_10AAF570_Field10* Obj = (Class_10AAF570_Field10*)Unknown04->Unknown0C->GetLinkType();
     int Id = Obj->Virtual16(B, C, 1);
     if (!Id)
         return false;

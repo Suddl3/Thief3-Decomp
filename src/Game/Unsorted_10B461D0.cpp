@@ -177,7 +177,7 @@ bool Class_10B46D40::FUN_10b46d40()
 // FUNCTION: 0x10B46F10 ?FUN_10b46f10@Class_10B46F10@@QAE_NH@Z
 bool Class_10B46F10::FUN_10b46f10(int A)
 {
-    if (Unknown08->FUN_10aab5c0() == A || Unknown0C->FUN_10aab5c0() == A || Unknown14 == A)
+    if (Unknown08->GetUnknown08() == A || Unknown0C->GetUnknown08() == A || Unknown14 == A)
         return true;
     return false;
 }

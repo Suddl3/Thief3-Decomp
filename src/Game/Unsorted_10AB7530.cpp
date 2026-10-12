@@ -15,22 +15,22 @@ struct Struct_10AB86C0
 class Class_10AB86C0
 {
 public:
-    int FUN_10ab86c0(int Value);
+    int Contains(int Value);
 
     int FindIndex(int Value)
     {
-        for (int i = 0; i < Unknown04; i++)
+        for (int i = 0; i < m_Count; i++)
         {
-            if (Value == Unknown0C[i].Unknown00)
+            if (Value == m_Entries[i].Unknown00)
                 return i;
         }
         return -1;
     }
 
     char Unknown00[4];
-    int Unknown04;
+    int m_Count;
     char Unknown08[4];
-    Struct_10AB86C0* Unknown0C;
+    Struct_10AB86C0* m_Entries;
 };
 
 int __stdcall FUN_10bb9030(int Code, void* Dest);
@@ -52,8 +52,8 @@ public:
     Struct_10AB7610 Unknown178;
 };
 
-// FUNCTION: 0x10AB7610 ?FUN_10ab7610@@YAXPAVClass_10AB7610_Param@@HPAUStruct_10AB7610@@@Z
-void FUN_10ab7610(Class_10AB7610_Param* Param, int Index, Struct_10AB7610* Out)
+// FUNCTION: 0x10AB7610 ?GetDifficultyParam@@YAXPAVClass_10AB7610_Param@@HPAUStruct_10AB7610@@@Z
+void GetDifficultyParam(Class_10AB7610_Param* Param, int Index, Struct_10AB7610* Out)
 {
     if (Index == 4)
     {
@@ -84,20 +84,20 @@ void FUN_10ab7610(Class_10AB7610_Param* Param, int Index, Struct_10AB7610* Out)
         *Out = *Source;
 }
 
-// FUNCTION: 0x10AB86C0 ?FUN_10ab86c0@Class_10AB86C0@@QAEHH@Z
-int Class_10AB86C0::FUN_10ab86c0(int Value)
+// FUNCTION: 0x10AB86C0 ?Contains@Class_10AB86C0@@QAEHH@Z
+int Class_10AB86C0::Contains(int Value)
 {
     return FindIndex(Value) >= 0;
 }
 
-// FUNCTION: 0x10AB90F0 ?FUN_10ab90f0@Class_10AB90F0@@QAEXXZ
-void Class_10AB90F0::FUN_10ab90f0()
+// FUNCTION: 0x10AB90F0 ?Free@Class_10AB90F0@@QAEXXZ
+void Class_10AB90F0::Free()
 {
     FUN_10ab8e90(0);
     if (Unknown04)
     {
-        GetAllocator()->Virtual5(Unknown08);
-        Unknown08 = 0;
+        GetAllocator()->Virtual5(m_Data);
+        m_Data = 0;
         Unknown04 = 0;
     }
 }

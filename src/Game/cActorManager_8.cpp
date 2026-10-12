@@ -55,7 +55,7 @@ UObject* cActorManager::Virtual2(int A)
     GetUObjectLinkManager()->Virtual4(A, 0, 0x2F186B8, Items);
     if (Items.Count)
     {
-        UObject* Obj = (UObject*)((Class_10AAB5C0*)Items.Data[0])->FUN_10aab5c0();
+        UObject* Obj = (UObject*)((Class_10AAB5C0*)Items.Data[0])->GetUnknown08();
         if (!Obj || !Obj->IsA(AActor::StaticClass()))
             Obj = 0;
         return Obj;

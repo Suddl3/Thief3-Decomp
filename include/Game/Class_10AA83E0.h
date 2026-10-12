@@ -18,7 +18,7 @@ public:
     virtual void Virtual5();
     virtual void Virtual6();
 
-    Class_1090A780 FUN_10aa83e0();
+    Class_1090A780 GetName();
 
     char Pad04[0x1c];
     Class_10AB3800 Unknown20;

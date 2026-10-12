@@ -72,7 +72,7 @@ public:
 // FUNCTION: 0x10BCBE30 ?FUN_10bcbe30@Class_10E92730@@UAEXH@Z
 void Class_10E92730::FUN_10bcbe30(int A)
 {
-    ((Object_10AAF570*)FUN_10bc4160()->FUN_10aaf570())->Virtual49(3);
+    ((Object_10AAF570*)FUN_10bc4160()->GetLinkType())->Virtual49(3);
     Class_10C7D570* Obj = Unknown04->Unknown08;
     FUN_10bdf610(&((Struct_10BCBE30_A*)Obj->FUN_10c7d570())->Unknown2C, 800.0f,
                  ((Class_10992010*)Obj->FUN_10c7d570())->FUN_10992010() * 3.0f, 0.0f, 0.0f, true);

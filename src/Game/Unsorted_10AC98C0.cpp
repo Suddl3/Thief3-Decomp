@@ -12,10 +12,10 @@ void Class_10AC98B0::FUN_10ac98c0(int A)
         FUN_10ac9840();
 }
 
-// FUNCTION: 0x10AC99D0 ?FUN_10ac99d0@Class_10AC99D0@@QAEHH@Z
-int Class_10AC99D0::FUN_10ac99d0(int Index)
+// FUNCTION: 0x10AC99D0 ?GetNext@Class_10AC99D0@@QAEHH@Z
+int Class_10AC99D0::GetNext(int Index)
 {
-    if (Index + 1 < Unknown04)
-        return Unknown0C[Index + 1];
+    if (Index + 1 < m_Count)
+        return m_Entries[Index + 1];
     return 0;
 }

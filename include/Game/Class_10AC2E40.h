@@ -6,10 +6,10 @@
 class Class_10AC2E40
 {
 public:
-    float FUN_10ac2e40();
+    float GetFraction();
 
     char Unknown00[0x604];
-    float Unknown604;
+    float m_Current;
 };
 
 #endif // GAME_CLASS_10AC2E40_H

@@ -55,7 +55,7 @@ void Class_10E7E658::DismountRope(AGarrett* Garrett)
 {
     ReleaseArm(Garrett);
     ClearVelocity(Garrett);
-    ((Class_10B396A0*)FUN_10aa82d0())->FUN_10b396a0();
+    ((Class_10B396A0*)GetLinkedObject())->FUN_10b396a0();
     DAT_10f3a3d8->Unknown108->FUN_109e38b0((int)Garrett->ropeToMount, (int)&Garrett->Location);
     Garrett->bUpdatePhysHeight = 1;
     Garrett->SetNoiseEnabled(0);

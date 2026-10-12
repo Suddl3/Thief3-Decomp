@@ -27,5 +27,5 @@ void Class_10E6DA1C::WriteFields(void* A, int B, int C)
     WriteInt(A, Unknown08);
     WriteString(A, &Unknown0C);
     WriteString(A, (int*)&Unknown10.FUN_10ab3800());
-    WriteString(A, (int*)Unknown10.FUN_10ab37c0());
+    WriteString(A, (int*)Unknown10.GetName());
 }
