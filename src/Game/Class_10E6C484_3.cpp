@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10E6C470.h"
-#include "Game/Class_10E6DC54.h"
+#include "Game/XBInputInterface.h"
 
 Class_10905A90_Member* GetAllocator();
 
@@ -25,14 +25,14 @@ public:
 
     Class_10E6C470* Unknown04;
     char Unknown08[0x670];
-    Class_10E6DC54* Unknown678;
+    XBInputInterface* Unknown678;
 };
 
 // FUNCTION: 0x10A88EC0 ?FUN_10a88ec0@Class_10E6C484@@UAEXXZ
 void Class_10E6C484::FUN_10a88ec0()
 {
     GetAllocator()->Virtual8(0, 0);
-    Unknown678 = new(0, 0, 0, 0, 0) Class_10E6DC54;
+    Unknown678 = new(0, 0, 0, 0, 0) XBInputInterface;
     GetAllocator()->Virtual9();
     Unknown04 = Unknown678;
 }

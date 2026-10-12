@@ -101,16 +101,16 @@ public:
     virtual FVector* Virtual8();
 };
 
-// FUNCTION: 0x10B53FD0 ?FUN_10b53fd0@Class_10B54760@@QAEXXZ
-void Class_10B54760::FUN_10b53fd0()
+// FUNCTION: 0x10B53FD0 ?UpdatePosition@Class_10B54760@@QAEXXZ
+void Class_10B54760::UpdatePosition()
 {
     FVector Location = *Unknown18->Virtual8();
-    Location.X = Location.X + 10.0f - Unknown00 * 6;
+    Location.X = Location.X + 10.0f - m_CurrentIndex * 6;
     Unknown18->Virtual5(&Location);
 }
 
 // FUNCTION: 0x10B54050 ?FUN_10b54050@Class_10B54050@@QAEXXZ
 void Class_10B54050::FUN_10b54050()
 {
-    Unknown10[Unknown00]->Virtual70(2);
+    m_Elements[m_CurrentIndex]->Virtual70(2);
 }

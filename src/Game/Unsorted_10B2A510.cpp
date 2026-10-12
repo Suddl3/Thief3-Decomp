@@ -15,7 +15,7 @@ public:
 class Class_10B2A480
 {
 public:
-    int FUN_10b2a480(int A);
+    int RemoveValue(int A);
 
     int Unknown00;
     Class_10B2A510_Unknown04* Unknown04;
@@ -146,7 +146,7 @@ public:
     virtual void Virtual118();
     virtual void Virtual119(const FString& Text);
 
-    void FUN_10b2a510();
+    void AdvanceFade();
 
     char Unknown04[0x1B4];
     Class_10B2A480 Unknown1B8;
@@ -154,8 +154,8 @@ public:
     Class_10B2A510_Unknown08 Unknown1E8;
 };
 
-// FUNCTION: 0x10B2A510 ?FUN_10b2a510@Class_10B2A750@@QAEXXZ
-void Class_10E80798::FUN_10b2a510()
+// FUNCTION: 0x10B2A510 ?AdvanceFade@Class_10B2A750@@QAEXXZ
+void Class_10E80798::AdvanceFade()
 {
     Class_10B2A480* Obj = &Unknown1B8;
     m_FadeElapsed = 0;
@@ -176,5 +176,5 @@ void Class_10E80798::FUN_10b2a510()
         Virtual119(FString(*Item->Unknown00));
         Unknown1E8 = *Item;
     }
-    Obj->FUN_10b2a480((int)Item);
+    Obj->RemoveValue((int)Item);
 }

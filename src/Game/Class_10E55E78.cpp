@@ -33,13 +33,13 @@ public:
     virtual int FUN_10b0f4a0();
 
     char Unknown04[0x2C];
-    Class_10978090* Unknown30;
+    Class_10978090* m_pAssociatedLink;
 };
 
 // FUNCTION: 0x10B0F4A0 ?FUN_10b0f4a0@Class_10E55E78@@UAEHXZ
 int Class_10E55E78::FUN_10b0f4a0()
 {
-    if (Unknown30 && Unknown30->FUN_10978090())
-        return Unknown30->FUN_10978090()->Virtual24();
+    if (m_pAssociatedLink && m_pAssociatedLink->FUN_10978090())
+        return m_pAssociatedLink->FUN_10978090()->Virtual24();
     return -1;
 }

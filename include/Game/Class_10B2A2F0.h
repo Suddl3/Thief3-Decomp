@@ -11,7 +11,7 @@ class Class_10B2A2F0_Node;
 class Class_10B2A2F0
 {
 public:
-    void FUN_10b2a2f0(void* Value);
+    void Append(void* Value);
 
     int Count;
     Class_10B2A2F0_Node* Head;

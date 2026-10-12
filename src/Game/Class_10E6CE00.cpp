@@ -45,7 +45,7 @@ public:
     virtual int Virtual0(Class_10C08940* A);
 };
 
-Class_10A174E0* FUN_10a18230();
+Class_10A174E0* GetStats();
 
 class Class_10E6BF84
 {
@@ -74,7 +74,7 @@ int Class_10E6CE00::FUN_10a94db0(int A, int B)
     Class_10A94DB0_Unknown08* Obj2 = (Class_10A94DB0_Unknown08*)GetUnknown08();
     Class_10978090* Obj3 = Obj2->Virtual4(1);
     Class_10E6BF84 Local1;
-    Class_10A174E0* R = FUN_10a18230();
+    Class_10A174E0* R = GetStats();
     Class_10C08940* Result1 = Obj1Result->Unknown04;
     int Value = R->Virtual0(Result1);
     Local1.FUN_10d51e20(Value);

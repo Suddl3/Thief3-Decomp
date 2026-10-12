@@ -14,8 +14,8 @@ public:
     UBitfieldEnum();
 };
 
-// FUNCTION: 0x10ADD850 ?FUN_10add850@@YAXPAX@Z
-void FUN_10add850(void* Memory)
+// FUNCTION: 0x10ADD850 ?InternalConstructor@@YAXPAX@Z
+void InternalConstructor(void* Memory)
 {
     new ((EInternal*)Memory) UBitfieldEnum();
 }

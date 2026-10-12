@@ -63,14 +63,14 @@ public:
     virtual void Virtual39();
     virtual void Virtual40();
     virtual void Virtual41();
-    virtual const TCHAR* FUN_10af01b0(const TCHAR* Str, DWORD* Out, void* Unknown0C);
+    virtual const TCHAR* ImportText(const TCHAR* Str, DWORD* Out, void* Unknown0C);
 
     char Unknown04[0x5C];
     Class_10AF01B0_Unknown60* Unknown60;
 };
 
-// FUNCTION: 0x10AF01B0 ?FUN_10af01b0@UBitfieldProperty@@UAEPBDPBDPAKPAX@Z
-const TCHAR* UBitfieldProperty::FUN_10af01b0(const TCHAR* Str, DWORD* Out, void* Unknown0C)
+// FUNCTION: 0x10AF01B0 ?ImportText@UBitfieldProperty@@UAEPBDPBDPAKPAX@Z
+const TCHAR* UBitfieldProperty::ImportText(const TCHAR* Str, DWORD* Out, void* Unknown0C)
 {
     if (!Str)
         return NULL;

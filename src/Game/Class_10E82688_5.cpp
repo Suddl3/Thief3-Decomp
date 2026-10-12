@@ -6,7 +6,7 @@
 #include "Game/WindowManager.h"
 #include "Game/Class_10B15960.h"
 
-void* FUN_10b154c0();
+void* GetWindowManager();
 
 extern WindowManager* GWindowManager;
 
@@ -86,11 +86,11 @@ public:
 // FUNCTION: 0x10B5A400 ?FUN_10b5a400@Class_10E82688@@UAE_NHHH@Z
 bool Class_10E82688::FUN_10b5a400(int A, int B, int C)
 {
-    if (B == 1 && static_cast<Class_10B155D0*>(FUN_10b154c0())->FUN_10b155d0(A, 1))
+    if (B == 1 && static_cast<Class_10B155D0*>(GetWindowManager())->FUN_10b155d0(A, 1))
     {
         Virtual56(0);
         GWindowManager->FUN_109e8930(this);
-        static_cast<Class_10B15960*>(FUN_10b154c0())->OpenMainMenuWindow(0);
+        static_cast<Class_10B15960*>(GetWindowManager())->OpenMainMenuWindow(0);
         return true;
     }
     return Class_10E5B2C0::FUN_10a52e70(A, B, C);

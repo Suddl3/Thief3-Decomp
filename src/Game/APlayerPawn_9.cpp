@@ -148,7 +148,7 @@ void APlayerPawn::AddNote(const FName& NoteName, const FString& NoteText, const 
 {
     for (INT i = 0; i < PlayerNotes.Unknown04; i++)
     {
-        if (((FsNote*)PlayerNotes.Unknown00)[i].NoteText.FUN_10af8020((int)&NoteText))
+        if (((FsNote*)PlayerNotes.m_Items)[i].NoteText.FUN_10af8020((int)&NoteText))
         {
             return;
         }
@@ -159,5 +159,5 @@ void APlayerPawn::AddNote(const FName& NoteName, const FString& NoteText, const 
     Note.NoteText = NoteText;
     Note.Expiration = Expiration;
     INT Index = PlayerNotes.FUN_10af4cc0(0x20, 1);
-    ((FsNote*)PlayerNotes.Unknown00)[Index] = Note;
+    ((FsNote*)PlayerNotes.m_Items)[Index] = Note;
 }

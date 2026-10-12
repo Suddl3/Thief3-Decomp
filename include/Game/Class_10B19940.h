@@ -10,9 +10,9 @@ class Class_10B19940
 {
 public:
     int FUN_10af4cc0(int A, int B);
-    int FUN_10b19940(const Item_10B19940& Item);
+    int AddItem(const Item_10B19940& Item);
 
-    Struct_10A69C00Color* Unknown00;
+    Struct_10A69C00Color* m_Items;
     int Unknown04;
     int Unknown08;
 };

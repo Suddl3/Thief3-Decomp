@@ -8,7 +8,7 @@
 class Class_10B12D80 : public Class_10AF4BB0
 {
 public:
-    void FUN_10b12d80(int Index, int Count);
+    void Remove(int Index, int Count);
 };
 
 #endif // GAME_CLASS_10B12D80_H

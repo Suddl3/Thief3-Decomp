@@ -127,7 +127,7 @@ public:
 
     void FUN_10b2f8f0(int p1);
     void FUN_10b2f900(Class_10A52A40_Member* P);
-    void FUN_10b2fef0();
+    void PrevPage();
 
     char PadC8[0x50];
     Class_10B2FEF0_Unknown118* Unknown118;

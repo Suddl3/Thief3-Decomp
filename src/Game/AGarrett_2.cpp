@@ -139,7 +139,7 @@ public:
 void AGarrett::ClearGoals()
 {
     if (GetCitySectionManager()->FUN_10abf100())
-        CitySectionGoals.FUN_10b22640(0);
+        CitySectionGoals.Clear(0);
     else
         APlayerPawn::ClearGoals();
 }

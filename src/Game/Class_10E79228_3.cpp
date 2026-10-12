@@ -92,7 +92,7 @@ public:
     float m_CloseTimer;
 };
 
-Class_10E7AAAC* FUN_10b266e0();
+Class_10E7AAAC* GetMenuInput();
 
 void FUN_10a36cf0();
 
@@ -102,7 +102,7 @@ extern bool DAT_10f31a58;
 void Class_10E79228::Tick(float A)
 {
     Unknown220.Update(A);
-    FUN_10b266e0()->Virtual5(A);
+    GetMenuInput()->Virtual5(A);
     if (Unknown94 && !TimeManager::Instance()->IsPaused())
     {
         if (!Unknown94->Virtual64(0x400) || DAT_10f31a58)

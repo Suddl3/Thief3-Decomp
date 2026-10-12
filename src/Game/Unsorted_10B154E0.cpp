@@ -32,8 +32,8 @@ Static_10B18DC0* FUN_10b18dc0()
     return &Instance;
 }
 
-// FUNCTION: 0x10B19530 ?FUN_10b19530@Class_10B19530@@QAEPAUStruct_10B19530_Item@@H@Z
-Struct_10B19530_Item* Class_10B19530::FUN_10b19530(int Index)
+// FUNCTION: 0x10B19530 ?GetItem@Class_10B19530@@QAEPAUStruct_10B19530_Item@@H@Z
+Struct_10B19530_Item* Class_10B19530::GetItem(int Index)
 {
     return &Items[Index];
 }

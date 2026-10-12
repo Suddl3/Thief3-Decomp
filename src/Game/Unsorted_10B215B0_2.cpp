@@ -173,10 +173,10 @@ public:
     void ResetIfPending();
 };
 
-class Class_10B22D60
+class PlayerStateController
 {
 public:
-    void FUN_10b22c10();
+    void SetSlots();
     void SetSlot(void** A, int B);
 
     char Unknown00[0x90];
@@ -196,15 +196,15 @@ float Class_10B21820::FUN_10b21820()
     return FUN_10991e10()->Unknown3A4->Unknown24;
 }
 
-// FUNCTION: 0x10B22910 ?FUN_10b22910@Class_10B22910@@QAEXXZ
-void Class_10B22910::FUN_10b22910()
+// FUNCTION: 0x10B22910 ?CheckPendingReset@Class_10B22910@@QAEXXZ
+void Class_10B22910::CheckPendingReset()
 {
     if (Unknown90->Virtual4() == 0xB)
         Unknown90->ResetIfPending();
 }
 
-// FUNCTION: 0x10B22C10 ?FUN_10b22c10@Class_10B22D60@@QAEXXZ
-void Class_10B22D60::FUN_10b22c10()
+// FUNCTION: 0x10B22C10 ?SetSlots@PlayerStateController@@QAEXXZ
+void PlayerStateController::SetSlots()
 {
     SetSlot(&Unknown90, 0x11);
     SetSlot(&Unknown94, 0x17);

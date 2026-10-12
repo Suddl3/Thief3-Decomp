@@ -5,8 +5,8 @@
 #include "Game/Class_10B2C160.h"
 #include "Game/Class_10E7B558.h"
 
-// FUNCTION: 0x10B2C100 ?FUN_10b2c100@Class_10B2C030@@QAEXXZ
-void Class_10B2C030::FUN_10b2c100()
+// FUNCTION: 0x10B2C100 ?EnterUnEquip@Class_10B2C030@@QAEXXZ
+void Class_10B2C030::EnterUnEquip()
 {
     if (Virtual71() != 2)
     {

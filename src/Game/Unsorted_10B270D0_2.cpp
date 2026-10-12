@@ -7,7 +7,7 @@
 
 extern const char DAT_10e47660[];
 
-void* FUN_10b154c0();
+void* GetWindowManager();
 
 class Class_10B270D0_Unknown30
 {
@@ -107,7 +107,7 @@ void Class_10B27220::Stop()
     {
         Unknown30->Virtual56(0);
         cIntArray Items;
-        ((Class_10B17210*)FUN_10b154c0())->FUN_10b17210(Items);
+        ((Class_10B17210*)GetWindowManager())->FUN_10b17210(Items);
         Unknown30 = 0;
     }
     m_Active[Index] = 0;

@@ -4,7 +4,7 @@
 
 class Class_10B45AD0;
 
-void* FUN_10b154c0();
+void* GetWindowManager();
 
 class WindowManager
 {
@@ -20,5 +20,5 @@ public:
 void Class_10B45AD0::FUN_10b45ad0(int A)
 {
     Unknown158 = A;
-    static_cast<WindowManager*>(FUN_10b154c0())->Virtual4(this);
+    static_cast<WindowManager*>(GetWindowManager())->Virtual4(this);
 }

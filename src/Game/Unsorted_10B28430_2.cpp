@@ -57,7 +57,7 @@ public:
     char Unknown264;
 };
 
-void* FUN_10b154c0();
+void* GetWindowManager();
 
 extern const char DAT_10e7ad64[];
 
@@ -66,7 +66,7 @@ void Class_10B28870::FUN_10b28870()
 {
     Virtual56(0);
     GWindowManager->FUN_109e8930(this);
-    ((Class_10B154C0_Result*)FUN_10b154c0())->Unknown264 = 0;
+    ((Class_10B154C0_Result*)GetWindowManager())->Unknown264 = 0;
     int Window;
     {
         cString Name(DAT_10e7ad64);

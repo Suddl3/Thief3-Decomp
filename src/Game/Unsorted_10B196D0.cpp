@@ -6,8 +6,8 @@ class Class_10B196D0
 {
 public:
     char Unknown00[0x478];
-    Class_10AF8020* Unknown478;
-    int Unknown47C;
+    Class_10AF8020* m_Infos;
+    int m_InfoCount;
 };
 
 struct Struct_10AA3520
@@ -18,14 +18,14 @@ struct Struct_10AA3520
 
 extern Struct_10AA3520* DAT_10f35dec;
 
-// FUNCTION: 0x10B196D0 ?FUN_10b196d0@@YGHH@Z
-int __stdcall FUN_10b196d0(int Key)
+// FUNCTION: 0x10B196D0 ?FindInfoIndex@@YGHH@Z
+int __stdcall FindInfoIndex(int Key)
 {
     Class_10B196D0* Owner = DAT_10f35dec->Unknown08;
-    int Count = Owner->Unknown47C;
+    int Count = Owner->m_InfoCount;
     for (int i = 0; i < Count; i++)
     {
-        Class_10AF8020* Item = &Owner->Unknown478[i];
+        Class_10AF8020* Item = &Owner->m_Infos[i];
         if (Item->FUN_10af8020(Key))
             return i;
     }

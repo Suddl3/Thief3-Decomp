@@ -8,11 +8,11 @@ class Class_10B11600_Unknown08;
 class Class_10B11600
 {
 public:
-    void FUN_10b11600(int From, int To, int Count);
+    void MoveRange(int From, int To, int Count);
 
     int Unknown00;
     int Unknown04;
-    Class_10B11600_Unknown08* Unknown08;
+    Class_10B11600_Unknown08* m_Elements;
 };
 
 #endif // GAME_CLASS_10B11600_H

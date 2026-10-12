@@ -8,7 +8,7 @@ class Object_10B2E720;
 class Class_10B2E720
 {
 public:
-    void FUN_10b2e720(char A, char B);
+    void SetVisibility(char A, char B);
 
     char Unknown00[0x124];
     Object_10B2E720* Unknown124;

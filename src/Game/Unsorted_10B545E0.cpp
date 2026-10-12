@@ -87,8 +87,8 @@ void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D
 
 extern Class_10B542D0* DAT_10ff6580;
 
-// FUNCTION: 0x10B546F0 ?FUN_10b546f0@@YAPAVClass_10B542D0@@XZ
-Class_10B542D0* FUN_10b546f0()
+// FUNCTION: 0x10B546F0 ?GetLockPickWindowManager@@YAPAVClass_10B542D0@@XZ
+Class_10B542D0* GetLockPickWindowManager()
 {
     if (DAT_10ff6580 == 0)
     {
@@ -100,11 +100,11 @@ Class_10B542D0* FUN_10b546f0()
     return DAT_10ff6580;
 }
 
-// FUNCTION: 0x10B54760 ?FUN_10b54760@Class_10B54760@@QAEXXZ
-void Class_10B54760::FUN_10b54760()
+// FUNCTION: 0x10B54760 ?AdvanceToNext@Class_10B54760@@QAEXXZ
+void Class_10B54760::AdvanceToNext()
 {
-    Unknown10[Unknown00]->Virtual70(2);
+    m_Elements[m_CurrentIndex]->Virtual70(2);
     FUN_10b545e0(0.5f);
-    Unknown00++;
-    FUN_10b53fd0();
+    m_CurrentIndex++;
+    UpdatePosition();
 }

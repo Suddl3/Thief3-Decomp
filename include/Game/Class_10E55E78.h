@@ -40,7 +40,7 @@ public:
     ~Class_10E55E78();
 
     char Unknown04[0x2C];
-    Class_10978090* Unknown30;
+    Class_10978090* m_pAssociatedLink;
     char Pad34[0x1c];
 };
 

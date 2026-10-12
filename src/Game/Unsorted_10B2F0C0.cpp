@@ -108,7 +108,7 @@ class Class_10B2F6A0
 {
 public:
     void RefreshLabel();
-    void FUN_10b2f6a0(unsigned char param);
+    void SetHideCount(unsigned char param);
     void SetName(const cString& Name);
     void SetCount(int p1);
 
@@ -118,7 +118,7 @@ public:
     cString m_Name;
     char Pad140[0x4];
     int m_Count;
-    unsigned char Unknown148;
+    unsigned char m_HideCount;
 };
 
 // FUNCTION: 0x10B2F590 ?RefreshLabel@Class_10B2F6A0@@QAEXXZ
@@ -132,7 +132,7 @@ void Class_10B2F6A0::RefreshLabel()
             Text = FUN_1090a660(DAT_10e7b930, m_Count);
         }
         m_Label->SetNameByIndex((int)&Text);
-        if (!Unknown148 && m_Count >= 1)
+        if (!m_HideCount && m_Count >= 1)
         {
             m_Label->Virtual89(true, 1);
         }

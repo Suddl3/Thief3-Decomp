@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10B15CC0.h"
 
-void* FUN_10b154c0();
+void* GetWindowManager();
 
 extern bool DAT_10f45c0c;
 
@@ -10,5 +10,5 @@ extern bool DAT_10f45c0c;
 void FUN_10ad0990(int A)
 {
     if (A == 1 && !DAT_10f45c0c)
-        static_cast<Class_10B15CC0*>(FUN_10b154c0())->FUN_10b15cc0();
+        static_cast<Class_10B15CC0*>(GetWindowManager())->OpenMissionCompleteWindow();
 }

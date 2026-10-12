@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_10B38DE0_H
 #define GAME_CLASS_10B38DE0_H
 
-class Class_10B22D60;
+class PlayerStateController;
 class Class_10B38DE0_Param2;
 class Class_10B38DE0_Unknown04;
 
@@ -15,7 +15,7 @@ public:
 
     int Unknown00;
     Class_10B38DE0_Unknown04* Unknown04;
-    Class_10B22D60* Unknown08;
+    PlayerStateController* Unknown08;
     float Unknown0C;
     float Unknown10;
 };

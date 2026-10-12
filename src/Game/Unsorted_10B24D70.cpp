@@ -6,7 +6,7 @@
 #include "Game/Class_10B1B8A0.h"
 #include "Game/Class_10B25010_Member.h"
 
-void* FUN_10b154c0();
+void* GetWindowManager();
 
 Class_10B1B8A0* FUN_10b1b600();
 
@@ -32,8 +32,8 @@ int Class_10B255F0::GetEntryValue()
 void Class_10B25200::ClearJunkItem()
 {
     m_JunkItem = 0;
-    ((Class_10B16930*)FUN_10b154c0())->FUN_10b16930();
+    ((Class_10B16930*)GetWindowManager())->FUN_10b16930();
     Unknown28 = 0;
     Unknown48 = 0;
-    ((Class_10B16930*)FUN_10b154c0())->FUN_10b16780();
+    ((Class_10B16930*)GetWindowManager())->FUN_10b16780();
 }

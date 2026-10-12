@@ -6,7 +6,7 @@
 class Class_10AAEBD0
 {
 public:
-    void FUN_10aaebd0(int param);
+    void Advance(int param);
 
     char Unknown00[0x814];
     int Unknown814;

@@ -32,7 +32,7 @@ public:
 class Class_10B3AE70 : public GSMantle
 {
 public:
-    void FUN_10b3ae70(AGarrett* Garrett);
+    void ForceBody(AGarrett* Garrett);
 };
 
 class Class_10E7E730 : public Class_10B3AE70
@@ -63,7 +63,7 @@ void Class_10E7E808::FUN_10b4bce0(AGarrett* Garrett)
         ForceArms(Garrett);
         break;
     default:
-        FUN_10b3ae70(Garrett);
+        ForceBody(Garrett);
         break;
     }
     FUN_10b3b0b0(Garrett);

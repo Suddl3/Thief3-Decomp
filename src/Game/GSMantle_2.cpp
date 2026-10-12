@@ -43,7 +43,7 @@ bool GSMantle::TryGrab(Struct_10B53A00* P)
             if (!(P->Unknown450 & 2))
                 return true;
             P->Unknown450 &= ~2;
-            FUN_10b3b220(P);
+            GrabItem(P);
         }
     }
     return false;

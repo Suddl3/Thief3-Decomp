@@ -8,7 +8,7 @@ class Struct_10B2E890;
 class Class_10B2E890
 {
 public:
-    void FUN_10b2e890(bool A);
+    void SetVisible(bool A);
 
     char Unknown00[0x120];
     Struct_10B2E890* Unknown120;

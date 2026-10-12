@@ -19,8 +19,8 @@ extern const char DAT_10e790f4[];
 
 extern const char DAT_10e79120[];
 
-// FUNCTION: 0x10B23FA0 ?FUN_10b23fa0@@YGXHHH@Z
-void __stdcall FUN_10b23fa0(int A, int B, int C)
+// FUNCTION: 0x10B23FA0 ?ToggleMainStoreWindow@@YGXHHH@Z
+void __stdcall ToggleMainStoreWindow(int A, int B, int C)
 {
     if (FUN_10abc140())
     {
@@ -35,8 +35,8 @@ void __stdcall FUN_10b23fa0(int A, int B, int C)
     }
 }
 
-// FUNCTION: 0x10B24070 ?FUN_10b24070@@YGXHHH@Z
-void __stdcall FUN_10b24070(int A, int B, int C)
+// FUNCTION: 0x10B24070 ?ToggleFenceWindow@@YGXHHH@Z
+void __stdcall ToggleFenceWindow(int A, int B, int C)
 {
     if (FUN_10abc140())
     {

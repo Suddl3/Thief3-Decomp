@@ -25,7 +25,7 @@ class Class_10B3AE70 : public Class_10AA82D0
 public:
     virtual void Virtual1();
 
-    void FUN_10b3ae70(AGarrett* Garrett);
+    void ForceBody(AGarrett* Garrett);
 
     char Unknown04[4];
     int Unknown08;

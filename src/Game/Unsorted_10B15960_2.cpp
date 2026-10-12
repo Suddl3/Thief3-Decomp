@@ -15,11 +15,11 @@ public:
 class Class_10B15CC0 : public WindowManager
 {
 public:
-    bool FUN_10b15cc0();
+    bool OpenMissionCompleteWindow();
 };
 
-// FUNCTION: 0x10B15CC0 ?FUN_10b15cc0@Class_10B15CC0@@QAE_NXZ
-bool Class_10B15CC0::FUN_10b15cc0()
+// FUNCTION: 0x10B15CC0 ?OpenMissionCompleteWindow@Class_10B15CC0@@QAE_NXZ
+bool Class_10B15CC0::OpenMissionCompleteWindow()
 {
     int Window;
     {

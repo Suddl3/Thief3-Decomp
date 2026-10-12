@@ -12,7 +12,7 @@ public:
     void FUN_10b17510(void* A);
 };
 
-void* FUN_10b154c0();
+void* GetWindowManager();
 
 class Object_10B36490
 {
@@ -34,7 +34,7 @@ int Class_10E7C41C::FUN_10b36490(int A, Object_10B36490* B, int C)
     if (GWindowManager)
     {
         if (B->Virtual8())
-            static_cast<Class_10B17510*>(FUN_10b154c0())->FUN_10b17510(B->Virtual8());
+            static_cast<Class_10B17510*>(GetWindowManager())->FUN_10b17510(B->Virtual8());
     }
     return 1;
 }

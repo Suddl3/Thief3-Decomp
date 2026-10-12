@@ -229,9 +229,9 @@ Class_10AAA050           Class_10E6D9BC                   0x10AAA050: slot of 0x
 Class_10AAAA60           cConNoteEvent                    0x10AAAA60: slot of 0x10E6D9E8
 Class_10AAB060           Class_10E6DA1C                   0x10AAB060: called on this by 0x10AAB080
 Class_10AACF40           cConCameraController             0x10AACF40: slot of 0x10E6DA90
-Class_10AAEB00           Class_10E6DC54                   0x10AAEB00: slot of 0x10E6DC54
-Class_10AAEB70           Class_10E6DC54                   0x10AAEB70: slot of 0x10E6DC54
-Class_10AAF4D0           Class_10E6DC54                   0x10AAF4D0: slot of 0x10E6DC54
+Class_10AAEB00           XBInputInterface                 0x10AAEB00: slot of 0x10E6DC54
+Class_10AAEB70           XBInputInterface                 0x10AAEB70: slot of 0x10E6DC54
+Class_10AAF4D0           XBInputInterface                 0x10AAF4D0: slot of 0x10E6DC54
 Class_10AB5B20           cRefPtr                          named: Copy constructor calls Virtual1 (add reference), destructor calls Virtual2 (release) on Unknown00.
 Class_10AB72D0           Class_10E6F3EC                   0x10AB72D0: called on this by 0x10ABA020
 Class_10AB7500           cDifficulty                      named: Holds Difficulty, which FUN_10ab7330 reads from the T3Settings CurrentDifficulty string.
@@ -258,10 +258,13 @@ Class_10AD0AD0           Class_10E708F0                   0x10AD0AD0: stores 0x1
 Class_10AD0AE0           Class_10E708FC                   0x10AD0AE0: stores 0x10E708FC
 Class_10AD0AF0           Class_10E70908                   0x10AD0AF0: stores 0x10E70908
 Class_10AD0B00           Class_10E70914                   0x10AD0B00: stores 0x10E70914
+Class_10AF9A90           FNameEntry                       named: String 'FNameEntry::m_Concretes' is the debug name of the field its only method initialises.
 Class_10B152C0           UT3Game                          0x10B152C0: called on this by 0x10B15300
 Class_10B16C10           Class_10E79228                   0x10B16C10: called on this by 0x10B17810
 Class_10B177C0           Class_10E79228                   0x10B17720: stores 0x10E79228
 Class_10B21250           AGarrett                         0x10B21250: slot of 0x10E78710
+Class_10B215D0           cVector                          named: Three float fields, a three-float constructor and the named Dot: a 3D vector.
+Class_10B22D60           PlayerStateController            named: Xbox string pair 'PlayerStateController: No body was set...' is in HandleBodyCarryNotification, a method of this class.
 Class_10B24D60           Class_10EB79F4                   0x10B24D60: slot of 0x10EB79F4
 Class_10B274F0           Class_10E7FB08                   0x10B274F0: slot of 0x10E7FB08
 Class_10B27530           Class_10E7FB08                   0x10B27530: slot of 0x10E7FB08
@@ -579,6 +582,7 @@ Class_10E6D5B0           SwooshGeometryTriStrip           named: Xbox twin (5 sl
 Class_10E6D600           SwooshPointTracker               named: Xbox twin names SwooshPointTracker; a ring buffer of points, with 'Out of bounds' in its vtable.
 Class_10E6D9E8           cConNoteEvent                    named: Xbox source ConNoteEvent.cpp pairs with its code, which reads and writes a 'Note' line.
 Class_10E6DA90           cConCameraController             named: Xbox source file ConCameraController.cpp; reads the ConversationCamera config section.
+Class_10E6DC54           XBInputInterface                 named: Xbox twin's debug string names XBInputInterface; config keys InputSystem and DeadZonePercent match.
 Class_10E6F30C           cWaterManager                    named: Strings 'WaterSplash' and 'WaterRipple' in its init; derives cActorManager and registers two types.
 Class_10E6F47C           cHighlightMgr                    named: Xbox source file HighlightMgr.cpp; FX material and membrane material messages.
 Class_10E6F5F0           GarrettOnCamera                  named: Xbox twin vtable (T3Opt 9/9 slots): its own methods' and constructors' debug names say GarrettOnCamera (2)

@@ -53,7 +53,7 @@ void Class_10B379E0::FUN_10b379e0(Struct_10B379E0* A, int B)
 // FUNCTION: 0x10B37FA0 ?FUN_10b37fa0@Class_10B37FA0@@QAEXHHH@Z
 void Class_10B37FA0::FUN_10b37fa0(int A, int B, int C)
 {
-    Unknown08->FUN_10b22d20();
+    Unknown08->RefreshSlot();
     FUN_10d660b0();
     DAT_10f3a3d8->Unknown13C->FUN_10ac92f0();
     FUN_10b37640(B, C);

@@ -6,13 +6,13 @@
 class Class_10B33D70
 {
 public:
-    void FUN_10b33d70();
+    void Next();
     void FUN_10b332d0();
     void UpdateEndStyles();
 
     char Unknown00[0x18C];
-    int Unknown18C;
-    int Unknown190;
+    int m_Index;
+    int m_Count;
 };
 
 #endif // GAME_CLASS_10B33D70_H

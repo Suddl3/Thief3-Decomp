@@ -8,7 +8,7 @@
 class Class_10B16D80 : public WindowManager
 {
 public:
-    void FUN_10b16d80(int A);
+    void ToggleLockPickWindow(int A);
 };
 
 #endif // GAME_CLASS_10B16D80_H

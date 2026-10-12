@@ -29,8 +29,8 @@ public:
     virtual int Virtual0(int A, int B, int C, int* D);
 };
 
-// FUNCTION: 0x10B358D0 ?FUN_10b358d0@Class_10E79564@@UAEPAVClass_10E7C30C@@XZ
-Class_10E7C30C* Class_10E79564::FUN_10b358d0()
+// FUNCTION: 0x10B358D0 ?Create@Class_10E79564@@UAEPAVClass_10E7C30C@@XZ
+Class_10E7C30C* Class_10E79564::Create()
 {
     GetAllocator()->Virtual8(0, 0);
     Class_10E7C30C* Result = new(0, 0, 0, 0, 0) Class_10E7C30C;

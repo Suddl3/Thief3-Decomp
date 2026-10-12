@@ -6,8 +6,8 @@
 #include "Game/Class_10B3B220_Item.h"
 #include "Game/Class_10B3B220_Unknown0B0.h"
 
-// FUNCTION: 0x10B3B220 ?FUN_10b3b220@Class_10B3B220@@QAEXPAUStruct_10B53A00@@@Z
-void Class_10B3B220::FUN_10b3b220(Struct_10B53A00* P)
+// FUNCTION: 0x10B3B220 ?GrabItem@Class_10B3B220@@QAEXPAUStruct_10B53A00@@@Z
+void Class_10B3B220::GrabItem(Struct_10B53A00* P)
 {
     Class_10B3B220_Item* Item = P->Unknown0B0->Virtual6();
     Item->Virtual19(1);

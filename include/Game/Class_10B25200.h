@@ -7,7 +7,7 @@ class Class_10B25200
 {
 public:
     void ClearJunkItem();
-    void FUN_10b24d70();
+    void SetJunkState();
     void FUN_10b24d90();
     void SetJunkItem(int A);
 

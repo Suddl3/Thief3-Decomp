@@ -15,8 +15,8 @@ class Object_10A18FC0;
 
 Object_10A18FC0* FUN_10a18fc0();
 
-// FUNCTION: 0x10B1E150 ?FUN_10b1e150@@YAHPAVFVector@@0M@Z
-UBOOL FUN_10b1e150(FVector* A, FVector* B, float Tol)
+// FUNCTION: 0x10B1E150 ?IsAlignedXY@@YAHPAVFVector@@0M@Z
+UBOOL IsAlignedXY(FVector* A, FVector* B, float Tol)
 {
     FVector VA = *A;
     FVector VB = *B;
@@ -28,8 +28,8 @@ UBOOL FUN_10b1e150(FVector* A, FVector* B, float Tol)
     return fabs(Dot - DAT_10e49684) < Tol;
 }
 
-// FUNCTION: 0x10B1E1E0 ?FUN_10b1e1e0@@YAMXZ
-float FUN_10b1e1e0()
+// FUNCTION: 0x10B1E1E0 ?GetMoveSpeedMultiplier@@YAMXZ
+float GetMoveSpeedMultiplier()
 {
     FVector V;
     FVector Absolute;

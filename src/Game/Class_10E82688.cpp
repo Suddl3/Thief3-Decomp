@@ -12,7 +12,7 @@ public:
 
 extern void* GWindowManager[];
 
-void* FUN_10b154c0();
+void* GetWindowManager();
 
 class Class_10E82688
 {
@@ -103,5 +103,5 @@ void Class_10E82688::Close()
 {
     Virtual56(0);
     static_cast<Class_109E8930*>(GWindowManager[0])->FUN_109e8930(this);
-    static_cast<Class_10B15960*>(FUN_10b154c0())->OpenMainMenuWindow(0);
+    static_cast<Class_10B15960*>(GetWindowManager())->OpenMainMenuWindow(0);
 }

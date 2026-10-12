@@ -2,8 +2,8 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10AB37D0.h"
 
-// FUNCTION: 0x10AB37D0 ?FUN_10ab37d0@Class_10AB37D0@@QAEPAV1@XZ
-Class_10AB37D0* Class_10AB37D0::FUN_10ab37d0()
+// FUNCTION: 0x10AB37D0 ?Init@Class_10AB37D0@@QAEPAV1@XZ
+Class_10AB37D0* Class_10AB37D0::Init()
 {
     Unknown00 = 0;
     Unknown04 = 0;

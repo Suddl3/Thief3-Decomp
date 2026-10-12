@@ -10,9 +10,9 @@ class Class_10B54050
 public:
     void FUN_10b54050();
 
-    int Unknown00;
+    int m_CurrentIndex;
     char Unknown04[0xC];
-    Class_10B54050_Element** Unknown10;
+    Class_10B54050_Element** m_Elements;
 };
 
 #endif // GAME_CLASS_10B54050_H

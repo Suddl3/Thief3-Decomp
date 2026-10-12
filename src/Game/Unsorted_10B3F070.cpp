@@ -42,25 +42,25 @@ extern Struct_10AA3520* DAT_10f35dec;
 
 extern Class_10F3A3D8* DAT_10f3a3d8;
 
-Class_10B542D0* FUN_10b546f0();
+Class_10B542D0* GetLockPickWindowManager();
 
-Class_10A174E0* FUN_10a18230();
+Class_10A174E0* GetStats();
 
 // FUNCTION: 0x10B3F830 ?OnLockPicked@Class_10B3ED20@@QAEXPAVClass_10B3F830_Arg@@@Z
 void Class_10B3ED20::OnLockPicked(Class_10B3F830_Arg* A)
 {
     Reset();
     ((Class_10A3C550*)DAT_10f35dec->Unknown94)->Start(cString("LPOpenLock"));
-    ((Class_10B54760*)FUN_10b546f0())->FUN_10b54760();
-    DAT_10f3a3d8->UnknownFC->FUN_10acffa0(A->Unknown458);
+    ((Class_10B54760*)GetLockPickWindowManager())->AdvanceToNext();
+    DAT_10f3a3d8->UnknownFC->Unlock(A->Unknown458);
     FUN_10b3f280(A);
     FName Name("sta_lockspicked", FNAME_Add);
-    int Count = FUN_10a18230()->Virtual0(Name);
-    FUN_10a18230()->Virtual1(Name.Value, Count + 1);
+    int Count = GetStats()->Virtual0(Name);
+    GetStats()->Virtual1(Name.Value, Count + 1);
     {
         FName Total("sta_lockspickedtotal", FNAME_Add);
         Name = Total;
     }
-    int TotalCount = FUN_10a18230()->Virtual0(Name);
-    FUN_10a18230()->Virtual1(Name.Value, TotalCount + 1);
+    int TotalCount = GetStats()->Virtual0(Name);
+    GetStats()->Virtual1(Name.Value, TotalCount + 1);
 }

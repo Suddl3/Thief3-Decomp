@@ -28,14 +28,14 @@ int Class_10B255F0::FUN_10b25030()
     return Result;
 }
 
-// FUNCTION: 0x10B251A0 ?FUN_10b251a0@Class_10B251A0@@QAEXXZ
-void Class_10B251A0::FUN_10b251a0()
+// FUNCTION: 0x10B251A0 ?Refresh@Class_10B251A0@@QAEXXZ
+void Class_10B251A0::Refresh()
 {
     Unknown2C = FUN_10b25080();
 }
 
-// FUNCTION: 0x10B251B0 ?FUN_10b251b0@Class_10B251B0@@QAEXXZ
-void Class_10B251B0::FUN_10b251b0()
+// FUNCTION: 0x10B251B0 ?Refresh@Class_10B251B0@@QAEXXZ
+void Class_10B251B0::Refresh()
 {
     Unknown2C = FUN_10b25100();
 }

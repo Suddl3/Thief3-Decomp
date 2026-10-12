@@ -56,7 +56,7 @@ class Class_10B255F0 : public Class_10B25200
 {
 };
 
-Class_10B255F0* FUN_10b25cd0();
+Class_10B255F0* GetSelection();
 
 // FUNCTION: 0x10B3ADD0 ?FUN_10b3add0@@YGHE@Z
 int __stdcall FUN_10b3add0(unsigned char A)
@@ -76,14 +76,14 @@ int __stdcall FUN_10b3add0(unsigned char A)
 void GSMantle::ForceArms(AGarrett* Garrett)
 {
     Garrett->ArmUse = EAU_FORCED_ARMS;
-    FUN_10b25cd0()->FUN_10b24d70();
+    GetSelection()->SetJunkState();
 }
 
-// FUNCTION: 0x10B3AE70 ?FUN_10b3ae70@Class_10B3AE70@@QAEXPAVAGarrett@@@Z
-void Class_10B3AE70::FUN_10b3ae70(AGarrett* Garrett)
+// FUNCTION: 0x10B3AE70 ?ForceBody@Class_10B3AE70@@QAEXPAVAGarrett@@@Z
+void Class_10B3AE70::ForceBody(AGarrett* Garrett)
 {
     Garrett->ArmUse = EAU_FORCED_BODY;
-    FUN_10b25cd0()->FUN_10b24d70();
+    GetSelection()->SetJunkState();
 }
 
 // FUNCTION: 0x10B3AF10 ?GetLocationZ@Class_10E7E538@@UAEMPAVClass_10B21820@@@Z

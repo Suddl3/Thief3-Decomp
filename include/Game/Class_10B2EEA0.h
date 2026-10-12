@@ -10,7 +10,7 @@ struct Struct_10B16860;
 class Class_10B2EEA0
 {
 public:
-    void FUN_10b2eea0(Struct_10B16860* Args, float Scale);
+    void MoveTo(Struct_10B16860* Args, float Scale);
 
     char Unknown00[0x118];
     Class_10B2EEA0_Unknown118* Unknown118;

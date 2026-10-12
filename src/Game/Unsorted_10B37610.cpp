@@ -17,5 +17,5 @@ struct Struct_10B37610
 void Class_10B37610::FUN_10b37610(int A, int B, int C)
 {
     Unknown04->Unknown458 = DAT_10f3a3d8->UnknownFC->FUN_10acf3a0(A);
-    Unknown08->FUN_10b22c40(A);
+    Unknown08->RefreshSlot(A);
 }

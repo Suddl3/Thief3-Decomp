@@ -6,7 +6,7 @@
 #include "Game/Class_10ACEE90.h"
 #include "Game/cString.h"
 
-Class_10A174E0* FUN_10a18230();
+Class_10A174E0* GetStats();
 
 class UEngine
 {
@@ -19,7 +19,7 @@ extern UEngine* GEngine;
 // FUNCTION: 0x10ACF2D0 ?FUN_10acf2d0@Class_10ACEE90@@QAE_NXZ
 bool Class_10ACEE90::FUN_10acf2d0()
 {
-    FUN_10a18230()->FUN_10a16700(cString("TravelFlags"));
+    GetStats()->FUN_10a16700(cString("TravelFlags"));
     GEngine->FUN_109844d0();
     return true;
 }

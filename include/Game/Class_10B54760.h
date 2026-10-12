@@ -9,13 +9,13 @@ class Object_10B54760;
 class Class_10B54760
 {
 public:
-    void FUN_10b53fd0();
-    void FUN_10b54760();
+    void UpdatePosition();
+    void AdvanceToNext();
     void FUN_10b545e0(float A);
 
-    int Unknown00;
+    int m_CurrentIndex;
     char Unknown04[0xC];
-    Object_10B54760** Unknown10;
+    Object_10B54760** m_Elements;
     char Pad14[0x4];
     Class_10B54760_Unknown18* Unknown18;
 };

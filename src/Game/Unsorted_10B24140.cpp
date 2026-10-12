@@ -13,7 +13,7 @@ extern WindowManager* GWindowManager;
 
 void appRequestExit(int Force);
 
-void* FUN_10b154c0();
+void* GetWindowManager();
 
 // FUNCTION: 0x10B244A0 ?FUN_10b244a0@@YAXH@Z
 void FUN_10b244a0(int Mode)
@@ -24,6 +24,6 @@ void FUN_10b244a0(int Mode)
         return;
     }
     cIntArray Found;
-    ((Class_10B17210*)FUN_10b154c0())->FUN_10b17210(Found);
+    ((Class_10B17210*)GetWindowManager())->FUN_10b17210(Found);
     GWindowManager->Virtual3();
 }

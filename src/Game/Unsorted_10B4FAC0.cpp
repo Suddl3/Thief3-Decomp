@@ -9,7 +9,7 @@ extern float DAT_10eafbdc;
 
 bool FUN_10b1e4c0(Struct_10B3C760_Param* A);
 
-int FUN_10b1dad0(int Value);
+int WrapAngle(int Value);
 
 class Class_10B39890;
 
@@ -24,7 +24,7 @@ int Class_10B3C760::FUN_10b4fac0(Struct_10B3C760_Param* A, bool B, float C)
     {
         A->Unknown350 = A->Unknown2C;
         FVector Dir = A->Unknown338;
-        A->Unknown35C = FUN_10b1dad0((int)(atan2(Dir.Y, Dir.X) * 10430.060040584269 + 32767.0));
+        A->Unknown35C = WrapAngle((int)(atan2(Dir.Y, Dir.X) * 10430.060040584269 + 32767.0));
         A->Unknown344 = 0x4f;
         A->Unknown348 = 0xe;
         A->Unknown34C = 1;

@@ -1,7 +1,7 @@
 // Game/Unsorted_10B37500_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10ACA550.h"
-#include "Game/Class_10B22D60.h"
+#include "Game/PlayerStateController.h"
 #include "Game/Class_10B375B0.h"
 #include "Game/Class_10B395B0.h"
 #include "Game/Class_10B395E0.h"
@@ -31,8 +31,8 @@ Class_10B3A460* FUN_10b3abf0();
 void Class_10B375B0::FUN_10b375b0(int A, Struct_10B375B0* B, int C)
 {
     if (B->Unknown08 == 1)
-        Unknown08->FUN_10b22c10();
-    DAT_10f3a3d8->Unknown124->FUN_10aca550(Unknown04);
+        Unknown08->SetSlots();
+    DAT_10f3a3d8->Unknown124->SetState(Unknown04);
 }
 
 // FUNCTION: 0x10B395B0 ?FUN_10b395b0@Class_10B395B0@@QAEXH@Z

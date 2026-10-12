@@ -9,7 +9,7 @@ struct Struct_10B22C80
     int Unknown460;
 };
 
-class Class_10B22D60
+class PlayerStateController
 {
 public:
     void SetSlot(void** Slot, int Value);
@@ -22,8 +22,8 @@ public:
     void* Unknown94;
 };
 
-// FUNCTION: 0x10B22C80 ?FUN_10b22c80@Class_10B22D60@@QAEXXZ
-void Class_10B22D60::FUN_10b22c80()
+// FUNCTION: 0x10B22C80 ?FUN_10b22c80@PlayerStateController@@QAEXXZ
+void PlayerStateController::FUN_10b22c80()
 {
     SetSlot(&Unknown90, 0);
     if (m_Body->Unknown440)

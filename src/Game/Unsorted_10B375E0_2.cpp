@@ -6,7 +6,7 @@
 class Class_10B1D500
 {
 public:
-    void FUN_10b1d500(bool A, bool B);
+    void SetActive(bool A, bool B);
 };
 
 extern Class_10F3A3D8* DAT_10f3a3d8;
@@ -23,5 +23,5 @@ void Class_10B375E0::FUN_10b375e0(int A, Struct_10B375E0* B, int C)
     bool Flag = true;
     if (B != (Struct_10B375E0*)-1)
         Flag = B->Unknown04;
-    DAT_10f3a3d8->Unknown0C->FUN_10b1d500(true, Flag);
+    DAT_10f3a3d8->Unknown0C->SetActive(true, Flag);
 }

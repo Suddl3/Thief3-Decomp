@@ -21,11 +21,11 @@ class Class_10B255F0 : public Class_10B25200
 {
 };
 
-Class_10B255F0* FUN_10b25cd0();
+Class_10B255F0* GetSelection();
 
 // FUNCTION: 0x10B3AE90 ?ReleaseArm@Class_10E7E6A0@@QAEXPAVAGarrett@@@Z
 void Class_10E7E6A0::ReleaseArm(AGarrett* Garrett)
 {
     Garrett->ArmUse = EAU_FREE;
-    FUN_10b25cd0()->FUN_10b24d90();
+    GetSelection()->FUN_10b24d90();
 }

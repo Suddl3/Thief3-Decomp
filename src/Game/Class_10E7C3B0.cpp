@@ -10,7 +10,7 @@ extern WindowManager* GWindowManager;
 
 Class_10905A90_Member* GetAllocator();
 
-void* FUN_10b154c0();
+void* GetWindowManager();
 
 // Game/cString.h copied without its base: the destructor is the base's body as this class's own,
 // and this unit's temporary is destroyed without the zero store the inherited one makes.
@@ -85,7 +85,7 @@ int Class_10E7C3B0::ShowOkMessage(int A, int B, Class_10B37370_Arg* C)
         int Count = Array.m_Count;
         Array.FUN_1090f2c0(Count + 1);
         Array.m_Items[Count] = Text;
-        ((Class_10B154C0*)FUN_10b154c0())->FUN_10b15770(0, Item->GetName(), &Array, 0, 0, 5.0f);
+        ((Class_10B154C0*)GetWindowManager())->FUN_10b15770(0, Item->GetName(), &Array, 0, 0, 5.0f);
     }
     return 1;
 }

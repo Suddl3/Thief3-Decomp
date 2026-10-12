@@ -152,23 +152,23 @@ public:
     float Unknown18;
 };
 
-// FUNCTION: 0x10B2FCE0 ?FUN_10b2fce0@Class_10B2FCE0@@QAE_NM@Z
-bool Class_10B2FCE0::FUN_10b2fce0(float A)
+// FUNCTION: 0x10B2FCE0 ?UpdateFade@Class_10B2FCE0@@QAE_NM@Z
+bool Class_10B2FCE0::UpdateFade(float A)
 {
-    bool Result = Unknown14C == 0;
-    if (Unknown14C)
+    bool Result = m_Fade == 0;
+    if (m_Fade)
     {
-        if (!(Unknown14C->Unknown08 <= DAT_10eafbdc))
-            Unknown14C->Unknown08 = Unknown14C->Unknown08 - A;
+        if (!(m_Fade->Unknown08 <= DAT_10eafbdc))
+            m_Fade->Unknown08 = m_Fade->Unknown08 - A;
         else
-            Unknown14C->Virtual5(A * Unknown14C->Unknown04);
-        char Level = (char)(Unknown14C->Virtual3() * 255.0f);
+            m_Fade->Virtual5(A * m_Fade->Unknown04);
+        char Level = (char)(m_Fade->Virtual3() * 255.0f);
         char Old = Unknown134->Unknown70;
-        if (Unknown14C->Virtual1())
+        if (m_Fade->Virtual1())
         {
-            Level = (char)(Unknown14C->Unknown18 * 255.0f);
-            delete Unknown14C;
-            Unknown14C = 0;
+            Level = (char)(m_Fade->Unknown18 * 255.0f);
+            delete m_Fade;
+            m_Fade = 0;
             Result = true;
         }
         if (Level != Old)
@@ -180,8 +180,8 @@ bool Class_10B2FCE0::FUN_10b2fce0(float A)
     return Result;
 }
 
-// FUNCTION: 0x10B2FEF0 ?FUN_10b2fef0@cT3ReadBookWindow@@QAEXXZ
-void cT3ReadBookWindow::FUN_10b2fef0()
+// FUNCTION: 0x10B2FEF0 ?PrevPage@cT3ReadBookWindow@@QAEXXZ
+void cT3ReadBookWindow::PrevPage()
 {
     if (Unknown134 != 0)
     {

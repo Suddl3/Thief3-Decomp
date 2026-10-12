@@ -31,7 +31,7 @@ Struct_10B1DCA0 FUN_10b1dca0(Struct_10B1DCA0_Param* p1);
 
 void FUN_109672e0(const Struct_10B1DCA0& Coords, const FVector& V, FVector& Out);
 
-FVector FUN_10b1f490(Struct_10B1DCA0_Param* A);
+FVector GetForward(Struct_10B1DCA0_Param* A);
 
 class Object_10A18FC0 : public Class_10A18FA0
 {
@@ -63,8 +63,8 @@ FVector FUN_10b1e0f0(Struct_10B1E010_Param* A)
     return FlatNormal(FUN_10b1e010(A));
 }
 
-// FUNCTION: 0x10B1F490 ?FUN_10b1f490@@YA?AVFVector@@PAUStruct_10B1DCA0_Param@@@Z
-FVector FUN_10b1f490(Struct_10B1DCA0_Param* p1)
+// FUNCTION: 0x10B1F490 ?GetForward@@YA?AVFVector@@PAUStruct_10B1DCA0_Param@@@Z
+FVector GetForward(Struct_10B1DCA0_Param* p1)
 {
     Struct_10B1DCA0 Coords = FUN_10b1dca0(p1);
     FVector Result;
@@ -73,8 +73,8 @@ FVector FUN_10b1f490(Struct_10B1DCA0_Param* p1)
     return Result;
 }
 
-// FUNCTION: 0x10B1F4F0 ?FUN_10b1f4f0@@YA?AVFVector@@PAUStruct_10B1DCA0_Param@@@Z
-FVector FUN_10b1f4f0(Struct_10B1DCA0_Param* A)
+// FUNCTION: 0x10B1F4F0 ?GetFlatForward@@YA?AVFVector@@PAUStruct_10B1DCA0_Param@@@Z
+FVector GetFlatForward(Struct_10B1DCA0_Param* A)
 {
-    return FlatNormal(FUN_10b1f490(A));
+    return FlatNormal(GetForward(A));
 }

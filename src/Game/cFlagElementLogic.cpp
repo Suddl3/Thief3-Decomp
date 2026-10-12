@@ -3,7 +3,7 @@
 #include "Game/Class_10A174E0.h"
 #include "Core/Core.h"
 
-Class_10A174E0* FUN_10a18230();
+Class_10A174E0* GetStats();
 
 class cFlagElementLogic
 {
@@ -22,7 +22,7 @@ public:
 // FUNCTION: 0x10A84B50 ?Evaluate@cFlagElementLogic@@UAE_NXZ
 bool cFlagElementLogic::Evaluate()
 {
-    Class_10A174E0* Object = FUN_10a18230();
+    Class_10A174E0* Object = GetStats();
     FName Name = (EName)m_FlagName;
     int Expected = m_ExpectedValue;
     return Object->Virtual3(Name) == Expected;

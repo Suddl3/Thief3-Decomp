@@ -3,8 +3,8 @@
 #include "Game/cString.h"
 #include "Game/Class_1090A780.h"
 
-// FUNCTION: 0x10B1BEF0 ?FUN_10b1bef0@@YGXHAAVcString@@@Z
-void __stdcall FUN_10b1bef0(int State, cString& Out)
+// FUNCTION: 0x10B1BEF0 ?GetStateName@@YGXHAAVcString@@@Z
+void __stdcall GetStateName(int State, cString& Out)
 {
     switch (State)
     {

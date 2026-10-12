@@ -10,11 +10,11 @@ class Class_10E782A0
 public:
     virtual void Virtual0();
     virtual void Virtual1();
-    virtual bool FUN_10b111a0(int A);
+    virtual bool RemoveKey(int A);
 
-    int Unknown04;
+    int m_BucketCount;
     int Unknown08;
-    Class_10B111A0_Unknown0C** Unknown0C;
+    Class_10B111A0_Unknown0C** m_Buckets;
 };
 
 #endif // GAME_CLASS_10E782A0_H

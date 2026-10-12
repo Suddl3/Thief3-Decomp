@@ -54,7 +54,7 @@ Class_10E6D990::Class_10E6D990()
     : cConEvent(), Unknown08(DAT_10e6c100), Unknown0C(0), Unknown10(0), Unknown14(0), Unknown18(0),
       Unknown1C(DAT_10e6c100)
 {
-    Unknown20.FUN_10ab37d0();
+    Unknown20.Init();
 }
 
 // FUNCTION: 0x10AA90B0 ?WriteToStream@Class_10E6C290@@UAEXPAXHH@Z

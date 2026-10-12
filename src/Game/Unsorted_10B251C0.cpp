@@ -3,13 +3,13 @@
 #include "Game/Class_10B16930.h"
 #include "Game/Class_10B25200.h"
 
-void* FUN_10b154c0();
+void* GetWindowManager();
 
 // FUNCTION: 0x10B251C0 ?SetJunkItem@Class_10B25200@@QAEXH@Z
 void Class_10B25200::SetJunkItem(int A)
 {
     m_JunkItem = A;
-    ((Class_10B16930*)FUN_10b154c0())->ShowJunkItemWindow(A);
+    ((Class_10B16930*)GetWindowManager())->ShowJunkItemWindow(A);
     Unknown48 = Unknown28 = 3;
-    ((Class_10B16930*)FUN_10b154c0())->FUN_10b166a0();
+    ((Class_10B16930*)GetWindowManager())->FUN_10b166a0();
 }

@@ -80,7 +80,7 @@ extern void* DAT_10e7c3a4[];
 class Class_10E7C3A4 {
 public:
     void* Field00;
-    Class_10E7C3A4* FUN_10b362d0();
+    Class_10E7C3A4* Construct();
 };
 
 extern void* DAT_10e7c3b0[];
@@ -231,8 +231,8 @@ int FUN_10b36230()
     return 0x87;
 }
 
-// FUNCTION: 0x10B36240 ?FUN_10b36240@Class_10E7C380@@QAEPAV1@XZ
-Class_10E7C380* Class_10E7C380::FUN_10b36240()
+// FUNCTION: 0x10B36240 ?Construct@Class_10E7C380@@QAEPAV1@XZ
+Class_10E7C380* Class_10E7C380::Construct()
 {
     Field00 = DAT_10e7c380;
     return this;
@@ -244,8 +244,8 @@ int FUN_10b36250()
     return 0x8a;
 }
 
-// FUNCTION: 0x10B36260 ?FUN_10b36260@Class_10E7C38C@@QAEPAV1@XZ
-Class_10E7C38C* Class_10E7C38C::FUN_10b36260()
+// FUNCTION: 0x10B36260 ?Construct@Class_10E7C38C@@QAEPAV1@XZ
+Class_10E7C38C* Class_10E7C38C::Construct()
 {
     Field00 = DAT_10e7c38c;
     return this;
@@ -270,8 +270,8 @@ int FUN_10b36290()
     return 0x89;
 }
 
-// FUNCTION: 0x10B362D0 ?FUN_10b362d0@Class_10E7C3A4@@QAEPAV1@XZ
-Class_10E7C3A4* Class_10E7C3A4::FUN_10b362d0()
+// FUNCTION: 0x10B362D0 ?Construct@Class_10E7C3A4@@QAEPAV1@XZ
+Class_10E7C3A4* Class_10E7C3A4::Construct()
 {
     Field00 = DAT_10e7c3a4;
     return this;
@@ -296,8 +296,8 @@ int FUN_10b36300()
     return 0x8c;
 }
 
-// FUNCTION: 0x10B36310 ?FUN_10b36310@Class_10E7C3BC@@QAEPAV1@XZ
-Class_10E7C3BC* Class_10E7C3BC::FUN_10b36310()
+// FUNCTION: 0x10B36310 ?Construct@Class_10E7C3BC@@QAEPAV1@XZ
+Class_10E7C3BC* Class_10E7C3BC::Construct()
 {
     *(void**)this = DAT_10e7c3bc;
     return this;
@@ -322,8 +322,8 @@ int FUN_10b36340()
     return 0x8e;
 }
 
-// FUNCTION: 0x10B36350 ?FUN_10b36350@Class_10E7C3D4@@QAEPAV1@XZ
-Class_10E7C3D4* Class_10E7C3D4::FUN_10b36350()
+// FUNCTION: 0x10B36350 ?Construct@Class_10E7C3D4@@QAEPAV1@XZ
+Class_10E7C3D4* Class_10E7C3D4::Construct()
 {
     *(void**)this = DAT_10e7c3d4;
     return this;
@@ -335,8 +335,8 @@ int FUN_10b36360()
     return 0x8f;
 }
 
-// FUNCTION: 0x10B36370 ?FUN_10b36370@Class_10E7C3E0@@QAEPAV1@XZ
-Class_10E7C3E0* Class_10E7C3E0::FUN_10b36370()
+// FUNCTION: 0x10B36370 ?Construct@Class_10E7C3E0@@QAEPAV1@XZ
+Class_10E7C3E0* Class_10E7C3E0::Construct()
 {
     Unknown00 = DAT_10e7c3e0;
     return this;
@@ -374,8 +374,8 @@ int FUN_10b363e0()
     return 0x95;
 }
 
-// FUNCTION: 0x10B36410 ?FUN_10b36410@Class_10E7C404@@QAEPAV1@XZ
-Class_10E7C404* Class_10E7C404::FUN_10b36410()
+// FUNCTION: 0x10B36410 ?Construct@Class_10E7C404@@QAEPAV1@XZ
+Class_10E7C404* Class_10E7C404::Construct()
 {
     Unknown00 = DAT_10e7c404;
     return this;

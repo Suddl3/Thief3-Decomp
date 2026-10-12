@@ -1,6 +1,6 @@
 // Game/Unsorted_10B38060.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10B22D60.h"
+#include "Game/PlayerStateController.h"
 #include "Game/Class_10B38DE0.h"
 
 struct Struct_10B38DE0_Vec

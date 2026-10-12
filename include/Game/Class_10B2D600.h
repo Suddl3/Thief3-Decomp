@@ -10,7 +10,7 @@ class Class_10B2BC90_Unknown;
 class Class_10B2D600 : public Class_10A52EE0
 {
 public:
-    void FUN_10b2d600();
+    void RefreshNextSlots();
     void FUN_10b2c2e0(Class_10B2BC90_Unknown* Item, int Index);
 
     char Pad0C4[0x64];

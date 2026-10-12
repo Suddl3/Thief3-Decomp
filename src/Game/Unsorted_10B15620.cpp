@@ -9,6 +9,6 @@ bool FUN_10abc140();
 bool Class_10B15620::FUN_10b15620()
 {
     bool Result = FUN_10abc140();
-    Result &= TimeManager::Instance()->GetGameTime() - Unknown268 > 3.0;
+    Result &= TimeManager::Instance()->GetGameTime() - m_StartTime > 3.0;
     return Result;
 }

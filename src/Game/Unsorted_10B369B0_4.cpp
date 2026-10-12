@@ -9,7 +9,7 @@ Class_10905A90_Member* GetAllocator();
 
 void* FUN_10a4bd70(int A);
 
-void* FUN_10b154c0();
+void* GetWindowManager();
 
 class Class_1090A780
 {
@@ -71,7 +71,7 @@ int __stdcall FUN_10b369b0(int A, int B, Class_10B369B0_Param* P)
             W = 0;
         else
             W = Y->Unknown0E8;
-        ((WindowManager*)FUN_10b154c0())->FUN_10b16110(W, (int)R1);
+        ((WindowManager*)GetWindowManager())->FUN_10b16110(W, (int)R1);
     }
     return 1;
 }

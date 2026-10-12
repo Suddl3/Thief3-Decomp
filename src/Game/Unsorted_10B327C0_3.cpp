@@ -29,8 +29,8 @@ extern const char* DAT_10ff3814;
 
 extern Struct_10AA3520* DAT_10f35dec;
 
-// FUNCTION: 0x10B32B50 ?FUN_10b32b50@Class_10B32B50@@QAEXPAVClass_10B21340@@@Z
-void Class_10B32B50::FUN_10b32b50(Class_10B21340* A)
+// FUNCTION: 0x10B32B50 ?BeginArrowAttach@Class_10B32B50@@QAEXPAVClass_10B21340@@@Z
+void Class_10B32B50::BeginArrowAttach(Class_10B21340* A)
 {
     ((Class_10B39580*)((Class_10AA82D0*)this)->GetLinkedObject())->FUN_10b39580(0x6c, 0);
     int Local[3];

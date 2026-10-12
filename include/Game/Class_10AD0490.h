@@ -9,7 +9,7 @@ class Class_10AD0490
 {
 public:
     void FUN_10ad03f0(Class_1098E3D0* Obj);
-    void FUN_10ad0490(Class_1098E3D0* Obj);
+    void Lock(Class_1098E3D0* Obj);
 };
 
 #endif // GAME_CLASS_10AD0490_H

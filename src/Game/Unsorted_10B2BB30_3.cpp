@@ -12,16 +12,16 @@ public:
 class Class_10B2BC90 : public Class_10A52EE0
 {
 public:
-    FVector FUN_10b2bc90(int Index);
+    FVector GetSlotLocation(int Index);
 
     char Unknown00[0x128];
-    int Unknown128[4];
+    int m_Slots[4];
 };
 
-// FUNCTION: 0x10B2BC90 ?FUN_10b2bc90@Class_10B2BC90@@QAE?AVFVector@@H@Z
-FVector Class_10B2BC90::FUN_10b2bc90(int Index)
+// FUNCTION: 0x10B2BC90 ?GetSlotLocation@Class_10B2BC90@@QAE?AVFVector@@H@Z
+FVector Class_10B2BC90::GetSlotLocation(int Index)
 {
-    Class_10B2BC90_Unknown* Obj = GetItem(Unknown128[Index]);
+    Class_10B2BC90_Unknown* Obj = GetItem(m_Slots[Index]);
     if (Obj)
         return *Obj->Virtual8();
     return FVector(0, 0, 0);

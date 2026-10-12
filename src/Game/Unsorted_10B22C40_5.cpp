@@ -1,10 +1,10 @@
 // Game/Unsorted_10B22C40_5.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10B22D60.h"
+#include "Game/PlayerStateController.h"
 #include "Game/Class_10B22D60_Unknown90.h"
 
-// FUNCTION: 0x10B22CE0 ?HandleBodyCarryNotification@Class_10B22D60@@QAEXH@Z
-void Class_10B22D60::HandleBodyCarryNotification(int A)
+// FUNCTION: 0x10B22CE0 ?HandleBodyCarryNotification@PlayerStateController@@QAEXH@Z
+void PlayerStateController::HandleBodyCarryNotification(int A)
 {
     int Value = Unknown90->Virtual9(m_Body, A);
     if (Value != Unknown90->Virtual4())

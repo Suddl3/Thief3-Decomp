@@ -6,7 +6,7 @@
 #include "Game/Object_10A18FC0.h"
 
 class Class_10E6C470;
-class Class_10E6DC54;
+class XBInputInterface;
 class FieldClass_A89060;
 
 class Class_10E6C484 : public Object_10A18FC0
@@ -31,7 +31,7 @@ public:
     union
     {
         FieldClass_A89060* Field678;
-        Class_10E6DC54* Unknown678;
+        XBInputInterface* Unknown678;
     };
 };
 

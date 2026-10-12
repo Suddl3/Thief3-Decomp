@@ -32,8 +32,8 @@ void Class_10E79228::FUN_10b15590(int p1)
         Class_10E5B7C8::FUN_109e87f0(p1);
 }
 
-// FUNCTION: 0x10B15600 ?FUN_10b15600@Class_10B15600@@QAEXXZ
-void Class_10B15600::FUN_10b15600()
+// FUNCTION: 0x10B15600 ?SetStartTime@Class_10B15600@@QAEXXZ
+void Class_10B15600::SetStartTime()
 {
-    Unknown268 = TimeManager::Instance()->GetGameTime();
+    m_StartTime = TimeManager::Instance()->GetGameTime();
 }

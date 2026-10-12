@@ -3,7 +3,7 @@
 
 void FUN_10b792d0();
 
-void* FUN_10b154c0();
+void* GetWindowManager();
 
 class Class_10B17220
 {
@@ -87,5 +87,5 @@ void Class_10E81DE8::CancelAndClose()
 bool FUN_10b5bf10()
 {
     FUN_10b792d0();
-    return static_cast<Class_10B17220*>(FUN_10b154c0())->FUN_10b17220();
+    return static_cast<Class_10B17220*>(GetWindowManager())->FUN_10b17220();
 }

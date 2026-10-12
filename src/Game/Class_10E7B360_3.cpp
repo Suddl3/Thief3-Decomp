@@ -35,11 +35,11 @@ public:
     virtual void Virtual96(); virtual void Virtual97(); virtual void Virtual98(); virtual void Virtual99();
     virtual void Virtual100(); virtual void Virtual101(); virtual void Virtual102(); virtual void Virtual103();
     virtual void Virtual104(); virtual void Virtual105(); virtual void Virtual106(); virtual void Virtual107();
-    virtual cString FUN_10b2bd70(int State);
+    virtual cString GetStateName(int State);
 };
 
-// FUNCTION: 0x10B2BD70 ?FUN_10b2bd70@Class_10E7B360@@UAE?AVcString@@H@Z
-cString Class_10E7B360::FUN_10b2bd70(int State)
+// FUNCTION: 0x10B2BD70 ?GetStateName@Class_10E7B360@@UAE?AVcString@@H@Z
+cString Class_10E7B360::GetStateName(int State)
 {
     switch (State)
     {

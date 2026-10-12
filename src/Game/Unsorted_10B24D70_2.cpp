@@ -4,18 +4,18 @@
 #include "Game/Class_10B24DB0.h"
 #include "Game/Class_10B25200.h"
 
-void* FUN_10b154c0();
+void* GetWindowManager();
 
-// FUNCTION: 0x10B24D70 ?FUN_10b24d70@Class_10B25200@@QAEXXZ
-void Class_10B25200::FUN_10b24d70()
+// FUNCTION: 0x10B24D70 ?SetJunkState@Class_10B25200@@QAEXXZ
+void Class_10B25200::SetJunkState()
 {
     Unknown28 = 3;
     Unknown48 = 3;
-    static_cast<Class_10B16930*>(FUN_10b154c0())->FUN_10b166a0();
+    static_cast<Class_10B16930*>(GetWindowManager())->FUN_10b166a0();
 }
 
-// FUNCTION: 0x10B24DB0 ?FUN_10b24db0@Class_10B24DB0@@QAE_NXZ
-bool Class_10B24DB0::FUN_10b24db0()
+// FUNCTION: 0x10B24DB0 ?HasJunkItem@Class_10B24DB0@@QAE_NXZ
+bool Class_10B24DB0::HasJunkItem()
 {
     if (Unknown28 == 3 || Unknown48 == 3)
         return true;

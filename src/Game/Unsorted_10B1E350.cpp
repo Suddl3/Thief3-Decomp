@@ -48,8 +48,8 @@ void FUN_10b1e450(Struct_10B1DD70_Param* A)
     A->Unknown4C = A->Unknown4C - Twice.Z;
 }
 
-// FUNCTION: 0x10B1F260 ?FUN_10b1f260@@YAXH@Z
-void FUN_10b1f260(int A)
+// FUNCTION: 0x10B1F260 ?MoveTowardTarget@@YAXH@Z
+void MoveTowardTarget(int A)
 {
     Class_10B1F260_A* Obj = (Class_10B1F260_A*)A;
     if (Obj->Unknown2C.X != Obj->Unknown350.X || Obj->Unknown2C.Y != Obj->Unknown350.Y || Obj->Unknown2C.Z != Obj->Unknown350.Z)

@@ -7,7 +7,7 @@ class WindowManager;
 
 extern WindowManager* GWindowManager;
 
-void* FUN_10b154c0();
+void* GetWindowManager();
 
 void* FUN_10b1bde0(void* Name);
 
@@ -15,5 +15,5 @@ void* FUN_10b1bde0(void* Name);
 void Class_10E79488::FUN_10b1be20(int A, void* Name, int Mode)
 {
     if (Mode != -1 && GWindowManager)
-        static_cast<Class_10B15960*>(FUN_10b154c0())->FUN_10b160b0(A, FUN_10b1bde0(Name), Mode == 0);
+        static_cast<Class_10B15960*>(GetWindowManager())->FUN_10b160b0(A, FUN_10b1bde0(Name), Mode == 0);
 }

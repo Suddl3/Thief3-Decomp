@@ -3,8 +3,8 @@
 #include "Game/Class_10B2E690.h"
 #include "Game/Struct_10B2E690.h"
 
-// FUNCTION: 0x10B2E690 ?FUN_10b2e690@Class_10B2E690@@QAEXABUStruct_10B2E690@@0H@Z
-void Class_10B2E690::FUN_10b2e690(const Struct_10B2E690& A, const Struct_10B2E690& B, int C)
+// FUNCTION: 0x10B2E690 ?Init@Class_10B2E690@@QAEXABUStruct_10B2E690@@0H@Z
+void Class_10B2E690::Init(const Struct_10B2E690& A, const Struct_10B2E690& B, int C)
 {
     Unknown10 = 0;
     Unknown20 = A;

@@ -6,10 +6,10 @@ class Class_10B255F0 : public Class_10AA9D90
 {
 };
 
-Class_10B255F0* FUN_10b25cd0();
+Class_10B255F0* GetSelection();
 
 // FUNCTION: 0x10B2BA50 ?FUN_10b2ba50@@YAHXZ
 int FUN_10b2ba50()
 {
-    return FUN_10b25cd0()->FUN_10aa9d90();
+    return GetSelection()->FUN_10aa9d90();
 }

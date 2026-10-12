@@ -240,8 +240,8 @@ void Class_10B2E770::FUN_10b2e770()
         Unknown124->Virtual98();
 }
 
-// FUNCTION: 0x10B2E890 ?FUN_10b2e890@Class_10B2E890@@QAEX_N@Z
-void Class_10B2E890::FUN_10b2e890(bool A)
+// FUNCTION: 0x10B2E890 ?SetVisible@Class_10B2E890@@QAEX_N@Z
+void Class_10B2E890::SetVisible(bool A)
 {
     if (Unknown120)
     {

@@ -22,8 +22,8 @@ public:
     char Unknown00[0x34];
 };
 
-// FUNCTION: 0x10B22640 ?FUN_10b22640@Class_10B22640@@QAEXH@Z
-void Class_10B22640::FUN_10b22640(int Slack)
+// FUNCTION: 0x10B22640 ?Clear@Class_10B22640@@QAEXH@Z
+void Class_10B22640::Clear(int Slack)
 {
     for (int i = 0; i < Unknown04; i++)
         ((Class_10A46510*)Unknown00)[i].FUN_10a46510();

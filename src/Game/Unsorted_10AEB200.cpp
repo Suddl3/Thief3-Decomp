@@ -11,8 +11,8 @@ int FUN_10af36e0(const char* A, const char* B);
 
 void FUN_10af36f0(char* Dest, const char* Src);
 
-// FUNCTION: 0x10AEB200 ?FUN_10aeb200@@YAHPBD@Z
-int FUN_10aeb200(const char* Name)
+// FUNCTION: 0x10AEB200 ?GetExecutableBaseName@@YAHPBD@Z
+int GetExecutableBaseName(const char* Name)
 {
     if (DAT_10f3ec70[0] == 0)
     {

@@ -26,8 +26,8 @@ extern IDirectInput8A* DAT_10f3a36c;
 
 extern IDirectInputDevice8A* DAT_10f3a368;
 
-// FUNCTION: 0x10AAE2A0 ?FUN_10aae2a0@@YGHPBUDIDEVICEINSTANCEA@@PAX@Z
-int __stdcall FUN_10aae2a0(const DIDEVICEINSTANCEA* Instance, void* Ref)
+// FUNCTION: 0x10AAE2A0 ?EnumJoysticksCallback@@YGHPBUDIDEVICEINSTANCEA@@PAX@Z
+int __stdcall EnumJoysticksCallback(const DIDEVICEINSTANCEA* Instance, void* Ref)
 {
     if (FUN_10af3690(DAT_10f3a250, Instance->tszProductName) == 0)
     {

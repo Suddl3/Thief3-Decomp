@@ -6,11 +6,11 @@
 class Class_10AAF250
 {
 public:
-    void FUN_10aaf250(const char** Name);
+    void InitJoystick(const char** Name);
 
     char Unknown00[0x811];
-    bool Unknown811;
-    bool Unknown812;
+    bool m_IsPolled;
+    bool m_HasForceFeedback;
 };
 
 #endif // GAME_CLASS_10AAF250_H

@@ -15,7 +15,7 @@ public:
 class Class_10E6E1F8 : public Class_10E70A50
 {
 public:
-    Class_10E6E1F8* FUN_10ab3cc0();
+    Class_10E6E1F8* Construct();
 };
 
 extern void* DAT_10e6e278[];
@@ -34,7 +34,7 @@ public:
 class Class_10E6E278 : public AActor
 {
 public:
-    Class_10E6E278* FUN_10ab3d60();
+    Class_10E6E278* Construct();
 };
 
 extern void* DAT_10e6e3f0[];
@@ -42,7 +42,7 @@ extern void* DAT_10e6e3f0[];
 class Class_10E6E3F0 : public AActor
 {
 public:
-    Class_10E6E3F0* FUN_10ab3e00();
+    Class_10E6E3F0* Construct();
 };
 
 extern void* DAT_10e6e6e0[];
@@ -50,7 +50,7 @@ extern void* DAT_10e6e6e0[];
 class Class_10E6E6E0 : public AActor
 {
 public:
-    Class_10E6E6E0* FUN_10ab4000();
+    Class_10E6E6E0* Construct();
 };
 
 class Class_10AB3EA0
@@ -97,32 +97,32 @@ public:
     void FUN_10ab4f10();
 };
 
-// FUNCTION: 0x10AB3CC0 ?FUN_10ab3cc0@Class_10E6E1F8@@QAEPAV1@XZ
-Class_10E6E1F8* Class_10E6E1F8::FUN_10ab3cc0()
+// FUNCTION: 0x10AB3CC0 ?Construct@Class_10E6E1F8@@QAEPAV1@XZ
+Class_10E6E1F8* Class_10E6E1F8::Construct()
 {
     this->Class_10E70A50::Class_10E70A50();
     Unknown00 = DAT_10e6e1f8;
     return this;
 }
 
-// FUNCTION: 0x10AB3D60 ?FUN_10ab3d60@Class_10E6E278@@QAEPAV1@XZ
-Class_10E6E278* Class_10E6E278::FUN_10ab3d60()
+// FUNCTION: 0x10AB3D60 ?Construct@Class_10E6E278@@QAEPAV1@XZ
+Class_10E6E278* Class_10E6E278::Construct()
 {
     FUN_1098cf10();
     Unknown00 = DAT_10e6e278;
     return this;
 }
 
-// FUNCTION: 0x10AB3E00 ?FUN_10ab3e00@Class_10E6E3F0@@QAEPAV1@XZ
-Class_10E6E3F0* Class_10E6E3F0::FUN_10ab3e00()
+// FUNCTION: 0x10AB3E00 ?Construct@Class_10E6E3F0@@QAEPAV1@XZ
+Class_10E6E3F0* Class_10E6E3F0::Construct()
 {
     FUN_1098cf10();
     Unknown00 = DAT_10e6e3f0;
     return this;
 }
 
-// FUNCTION: 0x10AB4000 ?FUN_10ab4000@Class_10E6E6E0@@QAEPAV1@XZ
-Class_10E6E6E0* Class_10E6E6E0::FUN_10ab4000()
+// FUNCTION: 0x10AB4000 ?Construct@Class_10E6E6E0@@QAEPAV1@XZ
+Class_10E6E6E0* Class_10E6E6E0::Construct()
 {
     FUN_1098cf10();
     Unknown00 = DAT_10e6e6e0;

@@ -64,8 +64,8 @@ public:
     virtual void Virtual56(int A);
 };
 
-// FUNCTION: 0x10B2E720 ?FUN_10b2e720@Class_10B2E720@@QAEXDD@Z
-void Class_10B2E720::FUN_10b2e720(char A, char B)
+// FUNCTION: 0x10B2E720 ?SetVisibility@Class_10B2E720@@QAEXDD@Z
+void Class_10B2E720::SetVisibility(char A, char B)
 {
     if (Unknown124)
         Unknown124->Virtual56(A != 0);

@@ -43,12 +43,12 @@ Class_10B33200::Class_10B33200(int A, const cString& B, const cString& C, int D)
 {
 }
 
-// FUNCTION: 0x10B33D70 ?FUN_10b33d70@Class_10B33D70@@QAEXXZ
-void Class_10B33D70::FUN_10b33d70()
+// FUNCTION: 0x10B33D70 ?Next@Class_10B33D70@@QAEXXZ
+void Class_10B33D70::Next()
 {
-    if (Unknown18C < Unknown190 - 1)
+    if (m_Index < m_Count - 1)
     {
-        Unknown18C++;
+        m_Index++;
         FUN_10b332d0();
         UpdateEndStyles();
     }

@@ -15,22 +15,22 @@ public:
     virtual void Virtual5();
     virtual void Virtual6();
     virtual void Virtual7();
-    virtual void FUN_10ae5090(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 };
 
 class UBitfieldEnum : public Class_10E4E590
 {
 public:
-    virtual void FUN_10ad73f0(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 
     char Unknown04[0x30];
     int Unknown34[3];
 };
 
-// FUNCTION: 0x10AD73F0 ?FUN_10ad73f0@UBitfieldEnum@@UAEXAAVFArchive@@@Z
-void UBitfieldEnum::FUN_10ad73f0(FArchive& Ar)
+// FUNCTION: 0x10AD73F0 ?Serialize@UBitfieldEnum@@UAEXAAVFArchive@@@Z
+void UBitfieldEnum::Serialize(FArchive& Ar)
 {
-    Class_10E4E590::FUN_10ae5090(Ar);
+    Class_10E4E590::Serialize(Ar);
     FUN_109bc520(Ar, Unknown34);
     FUN_109bc520(Ar, Unknown34);
 }

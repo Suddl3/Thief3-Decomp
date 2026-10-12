@@ -1,7 +1,7 @@
 // Game/Unsorted_10B22C40.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-class Class_10B22D60
+class PlayerStateController
 {
 public:
     void FUN_10b22d60();
@@ -11,8 +11,8 @@ public:
     void* Unknown90;
 };
 
-// FUNCTION: 0x10B22D60 ?FUN_10b22d60@Class_10B22D60@@QAEXXZ
-void Class_10B22D60::FUN_10b22d60()
+// FUNCTION: 0x10B22D60 ?FUN_10b22d60@PlayerStateController@@QAEXXZ
+void PlayerStateController::FUN_10b22d60()
 {
     SetSlot(&Unknown90, 0xd);
 }

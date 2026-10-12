@@ -234,7 +234,7 @@ public:
     virtual void Virtual101();
     virtual void Virtual102(int A);
 
-    void FUN_10b33d70();
+    void Next();
     void FUN_10b332d0();
     void UpdateEndStyles();
 

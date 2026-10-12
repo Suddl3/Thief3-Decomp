@@ -9,12 +9,12 @@ class Class_10B2FCE0_Unknown14C;
 class Class_10B2FCE0
 {
 public:
-    bool FUN_10b2fce0(float A);
+    bool UpdateFade(float A);
 
     char Unknown00[0x134];
     Class_10A24370* Unknown134;
     char Pad138[0x14];
-    Class_10B2FCE0_Unknown14C* Unknown14C;
+    Class_10B2FCE0_Unknown14C* m_Fade;
     char Pad150[0x14];
     bool Unknown164;
 };

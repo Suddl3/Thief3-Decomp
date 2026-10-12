@@ -29,7 +29,7 @@ public:
 
 cString FUN_109510c0(const cString& In);
 
-void* FUN_10b154c0();
+void* GetWindowManager();
 
 // FUNCTION: 0x10B37140 ?FUN_10b37140@@YGHHHPAVClass_10B37140_Arg@@@Z
 int __stdcall FUN_10b37140(int A, int B, Class_10B37140_Arg* C)
@@ -39,7 +39,7 @@ int __stdcall FUN_10b37140(int A, int B, Class_10B37140_Arg* C)
         cString Text(*(cString*)C->Virtual4(0)->GetName());
         bool Flag = (int)((Class_10978090*)C->Virtual4(1))->FUN_10978090() == 1;
         cString Key = FUN_109510c0(Text);
-        ((Class_10B175C0*)FUN_10b154c0())->FUN_10b175c0(&Key, Flag, 0, 0);
+        ((Class_10B175C0*)GetWindowManager())->FUN_10b175c0(&Key, Flag, 0, 0);
     }
     return 1;
 }

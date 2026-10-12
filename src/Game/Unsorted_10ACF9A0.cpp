@@ -19,14 +19,14 @@ public:
     unsigned long Value;
 };
 
-Class_10A174E0* FUN_10a18230();
+Class_10A174E0* GetStats();
 
 class Class_10B82390;
 
 // FUNCTION: 0x10ACF9A0 ?CanLockpick@Class_10ACF9A0@@QAEHH@Z
 int Class_10ACF9A0::CanLockpick(int A)
 {
-    if (!FUN_10a18230()->Virtual3(DAT_10e7080c))
+    if (!GetStats()->Virtual3(DAT_10e7080c))
         return 0;
     return FUN_10acf690(A) != 0;
 }

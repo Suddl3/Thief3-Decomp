@@ -21,8 +21,8 @@ public:
 class Class_10B1B8A0
 {
 public:
-    int FUN_10b196a0();
-    Info_10B196B0* FUN_10b196b0(int A);
+    int GetInfoCount();
+    Info_10B196B0* GetInfo(int A);
 };
 
 Class_10B1B8A0* FUN_10b1b600();
@@ -55,9 +55,9 @@ int Class_10E7C344::Virtual6(int A, int B)
     if (Obj4->Virtual4(2)->FUN_10978090())
     {
         Class_10B1B8A0* Block = FUN_10b1b600();
-        for (int i = Block->FUN_10b196a0() - 1; i >= 0; i--)
+        for (int i = Block->GetInfoCount() - 1; i >= 0; i--)
         {
-            Info_10B196B0* Info = Block->FUN_10b196b0(i);
+            Info_10B196B0* Info = Block->GetInfo(i);
             Sum += Info->Unknown10 * Info->Unknown0C;
         }
     }

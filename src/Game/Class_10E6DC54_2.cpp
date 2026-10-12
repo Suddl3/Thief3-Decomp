@@ -13,18 +13,18 @@ public:
     virtual ~Class_10E6C470();
 };
 
-class Class_10E6DC54 : public Class_10E6C470
+class XBInputInterface : public Class_10E6C470
 {
 public:
-    virtual ~Class_10E6DC54();
+    virtual ~XBInputInterface();
 
     char Unknown04[0x81C];
     IDirectInputDevice8A* Unknown820;
     IDirectInputDevice8A* Unknown824;
 };
 
-// FUNCTION: 0x10AAEA40 ??1Class_10E6DC54@@UAE@XZ
-Class_10E6DC54::~Class_10E6DC54()
+// FUNCTION: 0x10AAEA40 ??1XBInputInterface@@UAE@XZ
+XBInputInterface::~XBInputInterface()
 {
     if (Unknown820)
     {

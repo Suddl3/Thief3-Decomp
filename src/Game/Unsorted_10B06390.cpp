@@ -38,8 +38,8 @@ int FUN_10b0f7c0(Struct_10B0F7C0* Obj)
     return Info->Unknown2C;
 }
 
-// FUNCTION: 0x10B120F0 ?FUN_10b120f0@Class_10B120F0@@QAEPAV1@XZ
-Class_10B120F0* Class_10B120F0::FUN_10b120f0()
+// FUNCTION: 0x10B120F0 ?Init@Class_10B120F0@@QAEPAV1@XZ
+Class_10B120F0* Class_10B120F0::Init()
 {
     Unknown00 = 1;
     memset(Unknown04, 0, sizeof(Unknown04));
@@ -70,8 +70,8 @@ void Class_10B138F0::FUN_10b138f0(int param)
     Unknown30 = param;
 }
 
-// FUNCTION: 0x10B154C0 ?FUN_10b154c0@@YAPAXXZ
-void* FUN_10b154c0()
+// FUNCTION: 0x10B154C0 ?GetWindowManager@@YAPAXXZ
+void* GetWindowManager()
 {
     return GWindowManager[0];
 }

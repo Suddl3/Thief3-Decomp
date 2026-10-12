@@ -15,8 +15,8 @@ public:
 
 extern Class_10F3A3D8* DAT_10f3a3d8;
 
-// FUNCTION: 0x10ACFFA0 ?FUN_10acffa0@@YGXPAVClass_1098E3D0@@@Z
-void __stdcall FUN_10acffa0(Class_1098E3D0* Obj)
+// FUNCTION: 0x10ACFFA0 ?Unlock@@YGXPAVClass_1098E3D0@@@Z
+void __stdcall Unlock(Class_1098E3D0* Obj)
 {
     int Value = 0;
     Obj->FUN_1098e3d0(0x800182, &Value);

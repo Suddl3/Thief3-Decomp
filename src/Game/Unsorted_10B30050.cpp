@@ -17,7 +17,7 @@ void FUN_10a293b0(cString* A, int B);
 
 FColor GetFlavorColor(int A);
 
-void* FUN_10b154c0();
+void* GetWindowManager();
 
 // FUNCTION: 0x10B30050 ?FUN_10b30050@@YGXH@Z
 void __stdcall FUN_10b30050(int A)
@@ -30,5 +30,5 @@ void __stdcall FUN_10b30050(int A)
         FUN_10a26c10(&Text, &Key);
     }
     FUN_10a293b0(&Key, 1);
-    ((Class_10B154C0*)FUN_10b154c0())->FUN_10b15e30(&Key, GetFlavorColor(0).Unknown00);
+    ((Class_10B154C0*)GetWindowManager())->FUN_10b15e30(&Key, GetFlavorColor(0).Unknown00);
 }

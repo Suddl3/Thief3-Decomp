@@ -1,6 +1,6 @@
 // Game/Unsorted_10B22940.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10B22D60.h"
+#include "Game/PlayerStateController.h"
 
 class Class_10B22D60_Unknown94
 {
@@ -23,8 +23,8 @@ public:
     virtual int Virtual5(int A, int B);
 };
 
-// FUNCTION: 0x10B22AC0 ?FUN_10b22ac0@Class_10B22D60@@QAEHXZ
-int Class_10B22D60::FUN_10b22ac0()
+// FUNCTION: 0x10B22AC0 ?FUN_10b22ac0@PlayerStateController@@QAEHXZ
+int PlayerStateController::FUN_10b22ac0()
 {
     int Kind = Unknown94->Virtual4();
     if (Kind == 0x18 || Kind == 0x1d || Kind == 0x1e || Kind == 0x1c)
@@ -32,8 +32,8 @@ int Class_10B22D60::FUN_10b22ac0()
     return 0;
 }
 
-// FUNCTION: 0x10B22B90 ?UpdateSlot@Class_10B22D60@@QAEXH@Z
-void Class_10B22D60::UpdateSlot(int A)
+// FUNCTION: 0x10B22B90 ?UpdateSlot@PlayerStateController@@QAEXH@Z
+void PlayerStateController::UpdateSlot(int A)
 {
     Class_10B22D60_Slot** Slot = FUN_10b22940(A);
     if (Slot)

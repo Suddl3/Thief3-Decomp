@@ -7,12 +7,12 @@ class WindowManager;
 
 extern WindowManager* GWindowManager;
 
-void* FUN_10b154c0();
+void* GetWindowManager();
 
 // FUNCTION: 0x10B36450 ?FUN_10b36450@Class_10E7C410@@UAEHHHH@Z
 int Class_10E7C410::FUN_10b36450(int A, int B, int C)
 {
     if (GWindowManager)
-        ((Class_10B15960*)FUN_10b154c0())->OpenMainMenuWindow(0);
+        ((Class_10B15960*)GetWindowManager())->OpenMainMenuWindow(0);
     return 1;
 }

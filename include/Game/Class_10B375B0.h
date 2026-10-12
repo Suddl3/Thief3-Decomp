@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_10B375B0_H
 #define GAME_CLASS_10B375B0_H
 
-class Class_10B22D60;
+class PlayerStateController;
 struct Struct_10B375B0;
 
 class Class_10B375B0
@@ -13,7 +13,7 @@ public:
 
     char Unknown00[4];
     int Unknown04;
-    Class_10B22D60* Unknown08;
+    PlayerStateController* Unknown08;
 };
 
 #endif // GAME_CLASS_10B375B0_H

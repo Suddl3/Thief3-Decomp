@@ -50,7 +50,7 @@ public:
 class Class_10B3AE70
 {
 public:
-    void FUN_10b3ae70(AGarrett* Garrett);
+    void ForceBody(AGarrett* Garrett);
 };
 
 class Class_10E7E7C0 : public Class_10AA82D0
@@ -77,7 +77,7 @@ void Class_10E7E7C0::FUN_10b4c0a0(AGarrett* Garrett)
         ((GSMantle*)this)->ForceArms(Garrett);
         break;
     default:
-        ((Class_10B3AE70*)this)->FUN_10b3ae70(Garrett);
+        ((Class_10B3AE70*)this)->ForceBody(Garrett);
         break;
     }
     ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(Garrett->Unknown344, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);

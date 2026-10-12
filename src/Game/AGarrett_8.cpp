@@ -23,7 +23,7 @@ extern Class_10F3A3D8* DAT_10f3a3d8;
 
 Class_10B1B8A0* FUN_10b1b600();
 
-Class_10B255F0* FUN_10b25cd0();
+Class_10B255F0* GetSelection();
 
 class APawn
 {
@@ -61,7 +61,7 @@ void AGarrett::Serialize(FArchive& Ar)
     {
         UnknownC0->FUN_10b1d600(Ar, this);
         FUN_10b1b600()->FUN_10b1a400(Ar);
-        FUN_10b25cd0()->FUN_10b24dd0(Ar);
+        GetSelection()->FUN_10b24dd0(Ar);
         DAT_10f3a3d8->Unknown140->FUN_10ac91b0(Ar);
     }
 }

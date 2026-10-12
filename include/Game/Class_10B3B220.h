@@ -8,7 +8,7 @@ struct Struct_10B53A00;
 class Class_10B3B220
 {
 public:
-    void FUN_10b3b220(Struct_10B53A00* P);
+    void GrabItem(Struct_10B53A00* P);
 };
 
 #endif // GAME_CLASS_10B3B220_H

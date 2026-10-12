@@ -14,7 +14,7 @@ public:
     virtual void Virtual3();
     virtual void Virtual4();
 
-    Class_10E7E808* FUN_10b3d220();
+    Class_10E7E808* Init();
 
     char Pad04[0xc];
 };

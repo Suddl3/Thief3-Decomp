@@ -18,7 +18,7 @@ public:
     virtual void Virtual7();
     virtual void Virtual8();
     virtual void Virtual9();
-    virtual void FUN_10b248d0(Class_10B152C0* p1);
+    virtual void Register(Class_10B152C0* p1);
 
     Class_10E7A9C0();
 

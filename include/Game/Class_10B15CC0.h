@@ -8,7 +8,7 @@
 class Class_10B15CC0 : public WindowManager
 {
 public:
-    bool FUN_10b15cc0();
+    bool OpenMissionCompleteWindow();
 
     char Pad90[0x264];
 };

@@ -8,7 +8,7 @@
 
 class Class_10B255F0;
 
-Class_10B255F0* FUN_10b25cd0();
+Class_10B255F0* GetSelection();
 
 class cIntArray;
 
@@ -36,12 +36,12 @@ void Class_10B16930::FUN_10b164e0(int A, int B, char C)
     if (C)
     {
         if (Value)
-            ((Class_10B2D600*)Value)->FUN_10b2d600();
-        Class_10B255F0* Obj = FUN_10b25cd0();
+            ((Class_10B2D600*)Value)->RefreshNextSlots();
+        Class_10B255F0* Obj = GetSelection();
         if ((char)A != 0)
-            ((Class_10B251B0*)Obj)->FUN_10b251b0();
+            ((Class_10B251B0*)Obj)->Refresh();
         else
-            ((Class_10B251A0*)Obj)->FUN_10b251a0();
+            ((Class_10B251A0*)Obj)->Refresh();
     }
     if (Value)
         ((Class_10B2E000*)Value)->FUN_10b2e000(A, B);

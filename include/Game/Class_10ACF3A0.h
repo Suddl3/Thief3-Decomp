@@ -9,7 +9,7 @@ class Class_10ACF3A0
 {
 public:
     int FUN_10acf3a0(int A);
-    void FUN_10acffa0(Class_1098E3D0* A);
+    void Unlock(Class_1098E3D0* A);
 
     char Pad00[0x1];
 };

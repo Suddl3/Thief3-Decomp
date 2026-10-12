@@ -11,17 +11,17 @@ struct Struct_10B18E10
     int Unknown404;
 };
 
-int __cdecl FUN_10b1dad0(int A);
+int __cdecl WrapAngle(int A);
 
-// FUNCTION: 0x10B18E10 ?FUN_10b18e10@@YGHPAUStruct_10B18E10@@PA_N@Z
-int __stdcall FUN_10b18e10(Struct_10B18E10* Obj, bool* Overflow)
+// FUNCTION: 0x10B18E10 ?GetAngleDelta@@YGHPAUStruct_10B18E10@@PA_N@Z
+int __stdcall GetAngleDelta(Struct_10B18E10* Obj, bool* Overflow)
 {
     int Delta = abs(Obj->Unknown3C - Obj->Unknown404);
     *Overflow = false;
     if (abs(Delta) > 0x7fff)
     {
         *Overflow = true;
-        Delta = FUN_10b1dad0(Delta);
+        Delta = WrapAngle(Delta);
         if (abs(Delta) > 0x7fff)
             return 0;
     }

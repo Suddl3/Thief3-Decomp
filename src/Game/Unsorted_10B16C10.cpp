@@ -71,8 +71,8 @@ public:
     virtual void Virtual56(int A);
 };
 
-// FUNCTION: 0x10B16C10 ?FUN_10b16c10@Class_10B16C10@@QAEX_N@Z
-void Class_10B16C10::FUN_10b16c10(bool Flag)
+// FUNCTION: 0x10B16C10 ?SetHUDMode@Class_10B16C10@@QAEX_N@Z
+void Class_10B16C10::SetHUDMode(bool Flag)
 {
     Class_10B16C10_Window* Window;
     {

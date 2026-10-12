@@ -8,7 +8,7 @@ class Class_10B3ED20;
 class Class_10B22910
 {
 public:
-    void FUN_10b22910();
+    void CheckPendingReset();
 
     char Unknown00[0x90];
     Class_10B3ED20* Unknown90;

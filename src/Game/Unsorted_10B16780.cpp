@@ -16,8 +16,8 @@ public:
 
 class Class_10B314F0;
 
-// FUNCTION: 0x10B16FB0 ?FUN_10b16fb0@Class_10B175C0@@QAEPAVClass_10B314F0@@XZ
-Class_10B314F0* Class_10B175C0::FUN_10b16fb0()
+// FUNCTION: 0x10B16FB0 ?GetFMVWindow@Class_10B175C0@@QAEPAVClass_10B314F0@@XZ
+Class_10B314F0* Class_10B175C0::GetFMVWindow()
 {
     cString Name("FMVWindow");
     int Result = FindWindowByName(Name);

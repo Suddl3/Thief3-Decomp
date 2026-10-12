@@ -21,8 +21,8 @@ public:
 
 void FUN_10b20650(Class_10B21820* Object);
 
-// FUNCTION: 0x10B1DBD0 ?FUN_10b1dbd0@@YAMMMMM@Z
-float FUN_10b1dbd0(float A, float B, float C, float D)
+// FUNCTION: 0x10B1DBD0 ?LerpScaled@@YAMMMMM@Z
+float LerpScaled(float A, float B, float C, float D)
 {
     return ((D - C) * A + C) * B;
 }

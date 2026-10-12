@@ -4,7 +4,7 @@
 #include "Game/Class_10B16D80.h"
 #include "Game/cIntArray.h"
 
-void* FUN_10b154c0();
+void* GetWindowManager();
 
 struct Struct_10C08690;
 
@@ -32,7 +32,7 @@ public:
 // FUNCTION: 0x10B542D0 ??1Class_10B542D0@@QAE@XZ
 Class_10B542D0::~Class_10B542D0()
 {
-    ((Class_10B16D80*)FUN_10b154c0())->FUN_10b16d80(0);
+    ((Class_10B16D80*)GetWindowManager())->ToggleLockPickWindow(0);
     Unknown14 = 0;
     Unknown18 = 0;
 }

@@ -11,7 +11,7 @@ class Class_10ACFDE0
 {
 public:
     int FUN_10acfde0(int A, Class_1098E330* B);
-    int FUN_10ad0040(int A, Struct_10AD0040* B);
+    int Matches(int A, Struct_10AD0040* B);
     bool MatchesAny(int A, List_10ACFFF0* B);
 
     char Pad00[0x1];

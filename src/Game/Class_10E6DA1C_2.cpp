@@ -37,5 +37,5 @@ void Class_10E6DA1C::ReadFields(void* Reader, int Version, int Unused)
         ReadString(Reader, (int*)&Text0C);
     }
     Unknown10.FUN_10ab37f0(Text10);
-    ((Class_10AB3C20*)&Unknown10)->FUN_10ab3c20(Text0C);
+    ((Class_10AB3C20*)&Unknown10)->SetValue(Text0C);
 }

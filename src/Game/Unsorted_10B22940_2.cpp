@@ -1,7 +1,7 @@
 // Game/Unsorted_10B22940_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10B19300.h"
-#include "Game/Class_10B22D60.h"
+#include "Game/PlayerStateController.h"
 
 class Class_10E6BA58;
 
@@ -40,8 +40,8 @@ public:
     virtual void* Virtual12(void* A);
 };
 
-// FUNCTION: 0x10B229C0 ?SetSlot@Class_10B22D60@@QAEXPAPAXH@Z
-void Class_10B22D60::SetSlot(void** A, int B)
+// FUNCTION: 0x10B229C0 ?SetSlot@PlayerStateController@@QAEXPAPAXH@Z
+void PlayerStateController::SetSlot(void** A, int B)
 {
     char Local[0x14];
     ((Class_10B22D60_Unknown08*)*A)->Virtual3(m_Body);

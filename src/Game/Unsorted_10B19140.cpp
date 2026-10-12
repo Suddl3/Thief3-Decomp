@@ -13,7 +13,7 @@ struct Struct_10B193E0
     float Unknown410;
 };
 
-int FUN_10b1dad0(int Value);
+int WrapAngle(int Value);
 
 // FUNCTION: 0x10B193E0 ?FUN_10b193e0@Class_10B193E0@@QAEXPAUStruct_10B193E0@@@Z
 void Class_10B193E0::FUN_10b193e0(Struct_10B193E0* Object)
@@ -21,7 +21,7 @@ void Class_10B193E0::FUN_10b193e0(Struct_10B193E0* Object)
     int Key[3];
     FUN_10b19260(Object, 1.0f);
     FUN_10b19140(Key, Object);
-    int Delta = FUN_10b1dad0(Object->Unknown3C - Object->Unknown404);
+    int Delta = WrapAngle(Object->Unknown3C - Object->Unknown404);
     if (Key[1] != -1 && abs(Delta) > Key[1])
         Object->Unknown404 = (int)(Object->Unknown404 - Object->Unknown410);
     else

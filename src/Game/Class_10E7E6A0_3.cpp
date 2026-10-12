@@ -31,7 +31,7 @@ class Class_10B3AE70 : public Class_10AA82D0
 public:
     virtual void Virtual1();
 
-    void FUN_10b3ae70(AGarrett* Garrett);
+    void ForceBody(AGarrett* Garrett);
 
     char Unknown04[0xC];
 };
@@ -86,7 +86,7 @@ void Class_10E7E6A0::FUN_10b4a330(AGarrett* Garrett)
     m_NoiseDisabled = false;
     FUN_10b49f60();
     StopBody(Garrett);
-    FUN_10b3ae70(Garrett);
+    ForceBody(Garrett);
     Garrett->bUpdatePhysHeight = 0;
     Garrett->SetNoiseEnabled(1);
 }

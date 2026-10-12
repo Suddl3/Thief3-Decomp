@@ -26,7 +26,7 @@ public:
 
     void FUN_10b1a400(FArchive& Ar);
     void FUN_10b1a840();
-    void FUN_10b1aba0();
+    void EmptyArrays();
     void FUN_10b1b220(int p1, int p2);
     void FUN_10b1b8a0(Class_10B1B8A0_Arg* p1);
     void FUN_10b1abd0(int A);

@@ -11,7 +11,7 @@ class Class_10B42BD0;
 class Class_10B175C0 : public WindowManager
 {
 public:
-    Class_10B314F0* FUN_10b16fb0();
+    Class_10B314F0* GetFMVWindow();
     void FUN_10b175c0(void* A, int B, void (*C)(Class_10B42BD0*), void* D);
 };
 

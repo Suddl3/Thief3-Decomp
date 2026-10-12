@@ -6,7 +6,7 @@
 
 extern const char DAT_10e662b4[];
 
-Class_10A174E0* FUN_10a18230();
+Class_10A174E0* GetStats();
 
 extern Class_10F46DA0* DAT_10f46da0;
 
@@ -30,7 +30,7 @@ void FUN_10b697a0()
 {
     if (DAT_10f35dec->Unknown08->Unknown474 == 0)
     {
-        if (FUN_10a18230()->Virtual0(DAT_10e662b4) == 1)
+        if (GetStats()->Virtual0(DAT_10e662b4) == 1)
             DAT_10f46da0->Virtual5(0x49, DAT_10f35dec->Unknown08, -1, 0);
     }
 }

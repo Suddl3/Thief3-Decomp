@@ -12,7 +12,7 @@ public:
     virtual void Virtual0();
     virtual void Virtual1();
 
-    void FUN_10b3ae70(AGarrett* Garrett);
+    void ForceBody(AGarrett* Garrett);
 
     char Unknown04[0xC];
 };
@@ -54,7 +54,7 @@ void Class_10E7E730::FUN_10b4a120(AGarrett* Garrett)
     Unknown14 = -1.0f;
     Unknown10 = FUN_10b190e0()->FUN_10aa9dc0();
     FUN_10b3b0b0(Garrett);
-    FUN_10b3ae70(Garrett);
+    ForceBody(Garrett);
 }
 
 // FUNCTION: 0x10B4A160 ?FUN_10b4a160@Class_10E7E6E8@@UAEXPAVAGarrett@@@Z

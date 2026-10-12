@@ -20,6 +20,6 @@ void Class_10E7EB20::FUN_10b4f430(AGarrett* Garrett)
         ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(0xaf, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
     else
         ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(0xa9, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
-    FUN_10b3ae70(Garrett);
+    ForceBody(Garrett);
     FUN_10b3b400(Garrett);
 }

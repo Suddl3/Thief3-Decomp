@@ -33,23 +33,23 @@ class Class_10B19940
 {
 public:
     int FUN_10af4cc0(int A, int B);
-    int FUN_10b19940(const Item_10B19940& Item);
+    int AddItem(const Item_10B19940& Item);
 
-    Item_10B19940* Unknown00;
+    Item_10B19940* m_Items;
     int Unknown04;
     int Unknown08;
 };
 
-// FUNCTION: 0x10B19940 ?FUN_10b19940@Class_10B19940@@QAEHABUItem_10B19940@@@Z
-int Class_10B19940::FUN_10b19940(const Item_10B19940& Item)
+// FUNCTION: 0x10B19940 ?AddItem@Class_10B19940@@QAEHABUItem_10B19940@@@Z
+int Class_10B19940::AddItem(const Item_10B19940& Item)
 {
     int Index = FUN_10af4cc0(sizeof(Item_10B19940), 1);
-    Unknown00[Index] = Item;
+    m_Items[Index] = Item;
     return Index;
 }
 
-// FUNCTION: 0x10B199A0 ?FUN_10b199a0@Class_10B199A0@@QAEXHH@Z
-void Class_10B199A0::FUN_10b199a0(int Index, int Count)
+// FUNCTION: 0x10B199A0 ?Remove@Class_10B199A0@@QAEXHH@Z
+void Class_10B199A0::Remove(int Index, int Count)
 {
     for (int i = Index; i < Index + Count; i++)
         ((Struct_10B199A0*)Unknown00)[i].Unknown00.~FStringNoInit();

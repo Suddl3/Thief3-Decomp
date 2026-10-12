@@ -57,8 +57,8 @@ public:
     bool Unknown52;
 };
 
-// FUNCTION: 0x10B25CD0 ?FUN_10b25cd0@@YAPAVClass_10B255F0@@XZ
-Class_10B255F0* FUN_10b25cd0()
+// FUNCTION: 0x10B25CD0 ?GetSelection@@YAPAVClass_10B255F0@@XZ
+Class_10B255F0* GetSelection()
 {
     static Class_10B255F0 Instance;
     return &Instance;
@@ -82,8 +82,8 @@ void Class_10B25D90::StepBack()
         m_Index = FindPrevFromListB(&m_InListA);
 }
 
-// FUNCTION: 0x10B26910 ?FUN_10b26910@Class_10E7AAAC@@UAEXH@Z
-void Class_10E7AAAC::FUN_10b26910(int p1)
+// FUNCTION: 0x10B26910 ?Reset@Class_10E7AAAC@@UAEXH@Z
+void Class_10E7AAAC::Reset(int p1)
 {
     Unknown10 = 0;
     Unknown0C = 0;

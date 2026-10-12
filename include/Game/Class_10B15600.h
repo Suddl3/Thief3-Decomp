@@ -6,10 +6,10 @@
 class Class_10B15600
 {
 public:
-    void FUN_10b15600();
+    void SetStartTime();
 
     char Unknown00[0x268];
-    double Unknown268;
+    double m_StartTime;
 };
 
 #endif // GAME_CLASS_10B15600_H

@@ -9,7 +9,7 @@ class AGarrett;
 
 extern Struct_10AA3520* DAT_10f35dec;
 
-void FUN_10b54790();
+void DestroyLockPickWindowManager();
 
 class AGarrett
 {
@@ -42,6 +42,6 @@ void Class_10E7ED00::FUN_10b3f000(AGarrett* Garrett)
         int Value = 0;
         Garrett->Unknown458->FUN_1098e3d0(0x8007cc, &Value);
     }
-    FUN_10b54790();
+    DestroyLockPickWindowManager();
     ClearVelocity(Garrett);
 }

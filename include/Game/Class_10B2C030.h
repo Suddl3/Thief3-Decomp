@@ -83,7 +83,7 @@ public:
     void FUN_10b2bb70();
     void FUN_10b2c030(int p1);
     void FUN_10b2c050();
-    void FUN_10b2c100();
+    void EnterUnEquip();
 
     char Pad04[0x118];
     int Unknown11C;

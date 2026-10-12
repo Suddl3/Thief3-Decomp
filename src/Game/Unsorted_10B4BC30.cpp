@@ -17,7 +17,7 @@ public:
     int Unknown10;
 };
 
-void FUN_10b1f260(int A);
+void MoveTowardTarget(int A);
 
 void FUN_10b1f370(int A, int B);
 
@@ -32,7 +32,7 @@ int Class_10E7E7C0::OnAnimationEnd(Object_10B4BC30* A, int B)
 // FUNCTION: 0x10B4BCB0 ?FUN_10b4bcb0@Class_10E7E808@@UAEXH@Z
 void Class_10E7E808::FUN_10b4bcb0(int A)
 {
-    FUN_10b1f260(A);
+    MoveTowardTarget(A);
     FUN_10b1f370(A, 0);
     Virtual4();
 }

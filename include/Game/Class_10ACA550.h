@@ -6,11 +6,11 @@
 class Class_10ACA550
 {
 public:
-    void FUN_10aca550(int A);
+    void SetState(int A);
 
     int Unknown00;
-    int Unknown04;
-    float Unknown08;
+    int m_State;
+    float m_Timer;
 };
 
 #endif // GAME_CLASS_10ACA550_H

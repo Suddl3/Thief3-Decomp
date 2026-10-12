@@ -13,7 +13,7 @@ struct Struct_10B6BC80;
 
 class Class_10B154C0;
 
-void* FUN_10b154c0();
+void* GetWindowManager();
 
 class Class_10F3A3D8
 {
@@ -42,5 +42,5 @@ void Class_10B6BC80::FUN_10b6bc80()
     }
     Unknown198->FUN_10b66060((int)this, Value);
     Unknown198->Virtual56(2);
-    ((Class_10B154C0*)FUN_10b154c0())->Virtual4(Unknown198);
+    ((Class_10B154C0*)GetWindowManager())->Virtual4(Unknown198);
 }

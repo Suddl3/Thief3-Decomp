@@ -178,19 +178,19 @@ void Class_10B16930::ShowJunkItemWindow(int A)
         Window = ((WindowManager*)this)->FindWindowByName(Name);
     }
     ((Class_10B2E9D0*)Window)->FUN_10b2e9d0(A);
-    ((Class_10B2E720*)Window)->FUN_10b2e720(0, 1);
-    ((Class_10B2F6A0*)Window)->FUN_10b2f6a0(1);
+    ((Class_10B2E720*)Window)->SetVisibility(0, 1);
+    ((Class_10B2F6A0*)Window)->SetHideCount(1);
     ((Class_10B16860_Window*)Window)->Virtual56(1);
     Struct_10B16860 S;
     S.Unknown00 = 0;
     S.Unknown04 = 0x4000;
     S.Unknown08 = 0;
-    ((Class_10B2EEA0*)Window)->FUN_10b2eea0(&S, -1.0f);
+    ((Class_10B2EEA0*)Window)->MoveTo(&S, -1.0f);
     ((Class_10E7B6E8*)Window)->FUN_10b2e840(true);
 }
 
-// FUNCTION: 0x10B16D80 ?FUN_10b16d80@Class_10B16D80@@QAEXH@Z
-void Class_10B16D80::FUN_10b16d80(int A)
+// FUNCTION: 0x10B16D80 ?ToggleLockPickWindow@Class_10B16D80@@QAEXH@Z
+void Class_10B16D80::ToggleLockPickWindow(int A)
 {
     Class_10B16D80_Window* Window;
     {

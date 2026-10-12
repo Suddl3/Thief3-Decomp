@@ -24,7 +24,7 @@ FColor GetFlavorColor(int A);
 
 void FUN_10a27a60(void* A, void* B);
 
-void* FUN_10b154c0();
+void* GetWindowManager();
 
 // FUNCTION: 0x10B36E40 ?FUN_10b36e40@@YGHHHPAVClass_10B36E40_Arg@@@Z
 int __stdcall FUN_10b36e40(int A, int B, Class_10B36E40_Arg* C)
@@ -34,7 +34,7 @@ int __stdcall FUN_10b36e40(int A, int B, Class_10B36E40_Arg* C)
         cString Text(*(Class_1090A780*)C->Virtual4(0)->GetName());
         cString Key;
         FUN_10a27a60(&Text, &Key);
-        ((Class_10B154C0*)FUN_10b154c0())->FUN_10b15e30(&Key, GetFlavorColor(0).Unknown00);
+        ((Class_10B154C0*)GetWindowManager())->FUN_10b15e30(&Key, GetFlavorColor(0).Unknown00);
     }
     return 1;
 }

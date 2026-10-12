@@ -13,7 +13,7 @@ public:
     virtual void Virtual1();
     virtual void Virtual1_();
 
-    void FUN_10b3ae70(AGarrett* Garrett);
+    void ForceBody(AGarrett* Garrett);
 
     char Unknown04[4];
     int Unknown08;

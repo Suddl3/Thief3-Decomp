@@ -23,7 +23,7 @@ public:
         Unknown00 = DAT_10e7b89c;
     }
 
-    void FUN_10b2e690(const Struct_10B2E690& A, const Struct_10B2E690& B, int C);
+    void Init(const Struct_10B2E690& A, const Struct_10B2E690& B, int C);
 
     void** Unknown00;
     float Unknown04;
@@ -199,15 +199,15 @@ public:
     virtual void Virtual78(Class_10B2E690* Obj);
 };
 
-// FUNCTION: 0x10B2EEA0 ?FUN_10b2eea0@Class_10B2EEA0@@QAEXPAUStruct_10B16860@@M@Z
-void Class_10B2EEA0::FUN_10b2eea0(Struct_10B16860* A, float M)
+// FUNCTION: 0x10B2EEA0 ?MoveTo@Class_10B2EEA0@@QAEXPAUStruct_10B16860@@M@Z
+void Class_10B2EEA0::MoveTo(Struct_10B16860* A, float M)
 {
     if (Unknown149)
     {
         if (Unknown11C)
         {
             Class_10B2E690* Obj = new(0, 0, 0, 0, 0) Class_10B2E690;
-            Obj->FUN_10b2e690(Unknown11C->Virtual17(), *(const Struct_10B2E690*)A, *(int*)&M);
+            Obj->Init(Unknown11C->Virtual17(), *(const Struct_10B2E690*)A, *(int*)&M);
             Unknown11C->Virtual78(Obj);
         }
     }
@@ -216,15 +216,15 @@ void Class_10B2EEA0::FUN_10b2eea0(Struct_10B16860* A, float M)
         if (Unknown118)
         {
             Class_10B2E690* Obj = new(0, 0, 0, 0, 0) Class_10B2E690;
-            Obj->FUN_10b2e690(Unknown118->Virtual17(), *(const Struct_10B2E690*)A, *(int*)&M);
+            Obj->Init(Unknown118->Virtual17(), *(const Struct_10B2E690*)A, *(int*)&M);
             Unknown118->Virtual78(Obj);
         }
     }
 }
 
-// FUNCTION: 0x10B2F6A0 ?FUN_10b2f6a0@Class_10B2F6A0@@QAEXE@Z
-void Class_10B2F6A0::FUN_10b2f6a0(unsigned char param)
+// FUNCTION: 0x10B2F6A0 ?SetHideCount@Class_10B2F6A0@@QAEXE@Z
+void Class_10B2F6A0::SetHideCount(unsigned char param)
 {
-    Unknown148 = param;
+    m_HideCount = param;
     RefreshLabel();
 }

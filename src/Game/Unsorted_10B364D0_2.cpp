@@ -115,8 +115,8 @@ public:
 
 void FUN_10a53400();
 
-// FUNCTION: 0x10B364D0 ?FUN_10b364d0@Class_10E7C428@@QAEPAV1@XZ
-Class_10E7C428* Class_10E7C428::FUN_10b364d0()
+// FUNCTION: 0x10B364D0 ?Init@Class_10E7C428@@QAEPAV1@XZ
+Class_10E7C428* Class_10E7C428::Init()
 {
     *(void**)this = DAT_10e7c428;
     return this;
@@ -128,8 +128,8 @@ void Class_10B396A0::FUN_10b396a0()
     Field0c->Reset();
 }
 
-// FUNCTION: 0x10B3A470 ?FUN_10b3a470@Class_10B3A470@@QAEPAV1@XZ
-Class_10B3A470* Class_10B3A470::FUN_10b3a470()
+// FUNCTION: 0x10B3A470 ?Init@Class_10B3A470@@QAEPAV1@XZ
+Class_10B3A470* Class_10B3A470::Init()
 {
     Unknown00 = 0;
     Unknown01 = 0;

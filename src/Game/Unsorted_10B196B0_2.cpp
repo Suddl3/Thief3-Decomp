@@ -16,8 +16,8 @@ struct Struct_10AA3520
 
 extern Struct_10AA3520* DAT_10f35dec;
 
-// FUNCTION: 0x10B196B0 ?FUN_10b196b0@@YGPAUInfo_10B196B0@@H@Z
-Info_10B196B0* __stdcall FUN_10b196b0(int Index)
+// FUNCTION: 0x10B196B0 ?GetInfo@@YGPAUInfo_10B196B0@@H@Z
+Info_10B196B0* __stdcall GetInfo(int Index)
 {
     return &DAT_10f35dec->Unknown08->Unknown478[Index];
 }

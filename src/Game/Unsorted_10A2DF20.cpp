@@ -25,12 +25,12 @@ public:
     unsigned long Value;
 };
 
-Class_10A174E0* FUN_10a18230();
+Class_10A174E0* GetStats();
 
 // FUNCTION: 0x10A2E400 ?CacheGameDayIndex@Class_10A2E400@@QAEXXZ
 void Class_10A2E400::CacheGameDayIndex()
 {
-    m_GameDayIndex = FUN_10a18230()->Virtual0(FName(DAT_10e662b4));
+    m_GameDayIndex = GetStats()->Virtual0(FName(DAT_10e662b4));
 }
 
 // FUNCTION: 0x10A2E430 ?MatchesMask@Class_10A2E430@@QAE_NI@Z

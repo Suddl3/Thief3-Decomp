@@ -10,7 +10,7 @@ class Class_10B2E690
 public:
     Class_10B2E690();
 
-    void FUN_10b2e690(const Struct_10B2E690& A, const Struct_10B2E690& B, int C);
+    void Init(const Struct_10B2E690& A, const Struct_10B2E690& B, int C);
 
     int Unknown00;
     int Unknown04;

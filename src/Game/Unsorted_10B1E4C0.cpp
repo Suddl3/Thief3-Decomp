@@ -12,7 +12,7 @@ struct Struct_10B1EF90_Param
     FVector Unknown50;
 };
 
-bool FUN_10b1e150(FVector* A, FVector* B, float Cos);
+bool IsAlignedXY(FVector* A, FVector* B, float Cos);
 
 // FUNCTION: 0x10B1EF90 ?FUN_10b1ef90@@YAHPAUStruct_10B1EF90_Param@@0@Z
 UBOOL FUN_10b1ef90(Struct_10B1EF90_Param* A, Struct_10B1EF90_Param* B)
@@ -28,7 +28,7 @@ UBOOL FUN_10b1ef90(Struct_10B1EF90_Param* A, Struct_10B1EF90_Param* B)
     FVector V44 = A->Unknown44;
     V44.Z = 0.0f;
     V44.Normalize();
-    if (FUN_10b1e150(&Delta, &V50, 0.8f) || FUN_10b1e150(&Delta, &V44, 0.8f))
+    if (IsAlignedXY(&Delta, &V50, 0.8f) || IsAlignedXY(&Delta, &V44, 0.8f))
         return 1;
     return 0;
 }

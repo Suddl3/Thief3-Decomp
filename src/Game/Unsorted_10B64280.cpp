@@ -3,7 +3,7 @@
 #include "Game/Class_10B15960.h"
 #include "Game/Class_10B64280.h"
 
-void* FUN_10b154c0();
+void* GetWindowManager();
 
 // FUNCTION: 0x10B64280 ?FUN_10b64280@Class_10B64280@@QAEXXZ
 void Class_10B64280::FUN_10b64280()
@@ -11,5 +11,5 @@ void Class_10B64280::FUN_10b64280()
     bool Hidden = !Unknown17C;
     FUN_10b744b0();
     if (Hidden)
-        static_cast<Class_10B15960*>(FUN_10b154c0())->OpenMainMenuWindow(0);
+        static_cast<Class_10B15960*>(GetWindowManager())->OpenMainMenuWindow(0);
 }

@@ -8,7 +8,7 @@ extern float DAT_10e49984;
 
 extern float DAT_10eafbdc;
 
-Class_10A174E0* FUN_10a18230();
+Class_10A174E0* GetStats();
 
 class Class_10E82AF8
 {
@@ -88,7 +88,7 @@ void Class_10E82AF8::FUN_10b5aee0(int Param2)
     {
         if (m_HammerFaction != 0)
         {
-            Class_10A174E0* Obj = FUN_10a18230();
+            Class_10A174E0* Obj = GetStats();
             float Diff;
             {
                 FName Name("sta_HammerFactionTotal");
@@ -101,7 +101,7 @@ void Class_10E82AF8::FUN_10b5aee0(int Param2)
         }
         if (m_PaganFaction != 0)
         {
-            Class_10A174E0* Obj = FUN_10a18230();
+            Class_10A174E0* Obj = GetStats();
             float Diff;
             {
                 FName Name("sta_PaganFactionTotal");

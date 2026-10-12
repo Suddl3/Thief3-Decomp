@@ -154,7 +154,7 @@ public:
     virtual void Virtual123(Struct_10B2A750* Value);
     virtual void Virtual124(Struct_10B2A750* Value);
 
-    void FUN_10b2a510();
+    void AdvanceFade();
     void UpdateFade(float Delta);
 
     char Unknown0EC[0xF4];
@@ -168,7 +168,7 @@ void Class_10E80798::UpdateFade(float Delta)
     FUN_10a53560(*(int*)&Delta);
     m_FadeElapsed = Delta + m_FadeElapsed;
     if (m_FadeElapsed >= m_FadeDuration)
-        FUN_10b2a510();
+        AdvanceFade();
     Struct_10B2A750 Color;
     Virtual124(&Color);
     Color.Unknown03 = (unsigned char)((m_FadeDuration - m_FadeElapsed) / m_FadeDuration * 255.0f);

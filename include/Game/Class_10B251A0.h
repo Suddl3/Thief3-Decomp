@@ -7,7 +7,7 @@ class Class_10B251A0
 {
 public:
     int FUN_10b25080();
-    void FUN_10b251a0();
+    void Refresh();
 
     char Unknown00[0x2C];
     int Unknown2C;

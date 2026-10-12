@@ -3,14 +3,14 @@
 #ifndef GAME_CLASS_10B22C40_H
 #define GAME_CLASS_10B22C40_H
 
-#include "Game/Class_10B22D60.h"
+#include "Game/PlayerStateController.h"
 
 class Class_10B22C40_Unknown90;
 
-class Class_10B22C40 : public Class_10B22D60
+class Class_10B22C40 : public PlayerStateController
 {
 public:
-    void FUN_10b22c40(int A);
+    void RefreshSlot(int A);
 
     Class_10B22C40_Unknown90* Unknown90;
     char Pad94[0x8];

@@ -40,18 +40,18 @@ extern const char DAT_10e47660[];
 
 extern char DAT_10eb810c[];
 
-int __stdcall FUN_10aae2a0(const DIDEVICEINSTANCEA* Instance, void* Ref);
+int __stdcall EnumJoysticksCallback(const DIDEVICEINSTANCEA* Instance, void* Ref);
 
 int __stdcall FUN_10aaf1b0(const DIDEVICEOBJECTINSTANCEA* Object, void* Ref);
 
-// FUNCTION: 0x10AAF250 ?FUN_10aaf250@Class_10AAF250@@QAEXPAPBD@Z
-void Class_10AAF250::FUN_10aaf250(const char** Name)
+// FUNCTION: 0x10AAF250 ?InitJoystick@Class_10AAF250@@QAEXPAPBD@Z
+void Class_10AAF250::InitJoystick(const char** Name)
 {
     const char* Text = *Name;
     if (!Text)
         Text = DAT_10e47660;
     DAT_10f3a250 = Text;
-    DAT_10f3a36c->EnumDevices(4, FUN_10aae2a0, 0, 1);
+    DAT_10f3a36c->EnumDevices(4, EnumJoysticksCallback, 0, 1);
     if (DAT_10f3a368)
     {
         if (DAT_10f3a368->SetDataFormat(DAT_10eb810c) >= 0)
@@ -64,10 +64,10 @@ void Class_10AAF250::FUN_10aaf250(const char** Name)
                 if (DAT_10f3a368->GetCapabilities(&Caps) >= 0)
                 {
                     if (Caps.dwFlags & 2)
-                        Unknown811 = true;
+                        m_IsPolled = true;
                     if (Caps.dwFlags & 0x100)
                     {
-                        Unknown812 = true;
+                        m_HasForceFeedback = true;
                         DAT_10f3a368->EnumObjects(FUN_10aaf1b0, 0, 0);
                     }
                 }

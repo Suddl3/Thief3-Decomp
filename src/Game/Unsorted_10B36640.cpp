@@ -48,7 +48,7 @@ Class_10E7C3BC* Class_10E7958C::FUN_10b36690()
     Class_10E7C3BC* Result = 0;
     void* Memory = operator new(sizeof(Class_10E7C3BC), 0, 0, 0, 0, 0);
     if (Memory)
-        Result = static_cast<Class_10E7C3BC*>(Memory)->FUN_10b36310();
+        Result = static_cast<Class_10E7C3BC*>(Memory)->Construct();
     GetAllocator()->Virtual9();
     return Result;
 }
@@ -72,7 +72,7 @@ Class_10E7C3D4* Class_10E79594::FUN_10b36730()
     Class_10E7C3D4* Result = 0;
     void* Memory = operator new(sizeof(Class_10E7C3D4), 0, 0, 0, 0, 0);
     if (Memory)
-        Result = static_cast<Class_10E7C3D4*>(Memory)->FUN_10b36350();
+        Result = static_cast<Class_10E7C3D4*>(Memory)->Construct();
     GetAllocator()->Virtual9();
     return Result;
 }
@@ -84,7 +84,7 @@ Class_10E7C3E0* Class_10E79598::FUN_10b36780()
     Class_10E7C3E0* Result = 0;
     void* Memory = operator new(sizeof(Class_10E7C3E0), 0, 0, 0, 0, 0);
     if (Memory)
-        Result = static_cast<Class_10E7C3E0*>(Memory)->FUN_10b36370();
+        Result = static_cast<Class_10E7C3E0*>(Memory)->Construct();
     GetAllocator()->Virtual9();
     return Result;
 }
@@ -120,7 +120,7 @@ Class_10E7C404* Class_10E795A4::FUN_10b36870()
     Class_10E7C404* Result = 0;
     void* Memory = operator new(sizeof(Class_10E7C404), 0, 0, 0, 0, 0);
     if (Memory)
-        Result = static_cast<Class_10E7C404*>(Memory)->FUN_10b36410();
+        Result = static_cast<Class_10E7C404*>(Memory)->Construct();
     GetAllocator()->Virtual9();
     return Result;
 }
@@ -156,7 +156,7 @@ Class_10E7C428* Class_10E79574::FUN_10b36960()
     Class_10E7C428* Result = 0;
     void* Memory = operator new(sizeof(Class_10E7C428), 0, 0, 0, 0, 0);
     if (Memory)
-        Result = static_cast<Class_10E7C428*>(Memory)->FUN_10b364d0();
+        Result = static_cast<Class_10E7C428*>(Memory)->Init();
     GetAllocator()->Virtual9();
     return Result;
 }

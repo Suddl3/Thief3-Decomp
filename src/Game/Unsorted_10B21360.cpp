@@ -4,7 +4,7 @@
 #include "Game/Class_10B255F0.h"
 #include "Game/Info_10B21360.h"
 
-Class_10B255F0* FUN_10b25cd0();
+Class_10B255F0* GetSelection();
 
 class AGarrett
 {
@@ -143,5 +143,5 @@ void Class_10B21360::FUN_10b21360(const Info_10B21360* In)
 // FUNCTION: 0x10B21380 ?FUN_10b21380@AGarrett@@UAEPAXXZ
 void* AGarrett::FUN_10b21380()
 {
-    return FUN_10b25cd0()->FUN_10b24f70();
+    return GetSelection()->FUN_10b24f70();
 }

@@ -10,9 +10,9 @@ public:
     void FUN_10aca180(void* Elem, float Time);
 
     int Unknown00;
-    int Unknown04;
+    int m_Count;
     int Unknown08;
-    void** Unknown0C;
+    void** m_Elements;
 };
 
 #endif // GAME_CLASS_10ACA3E0_H

@@ -7,6 +7,6 @@
 void Class_10ACA3E0::FUN_10aca3e0(float Time)
 {
     Time += TimeManager::Instance()->FUN_10d3edc0();
-    for (int i = 0; i < Unknown04; i++)
-        FUN_10aca180(Unknown0C[i], Time);
+    for (int i = 0; i < m_Count; i++)
+        FUN_10aca180(m_Elements[i], Time);
 }

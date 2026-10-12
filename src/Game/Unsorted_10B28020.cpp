@@ -15,7 +15,7 @@ public:
 
 extern WindowManager* GWindowManager;
 
-void* FUN_10b154c0();
+void* GetWindowManager();
 
 class Class_10A52A40_Member;
 
@@ -680,6 +680,6 @@ void Class_10B28390::FUN_10b28390()
 {
     Virtual56(0);
     GWindowManager->FUN_109e8930(this);
-    ((WindowManager*)FUN_10b154c0())->Unknown264 = 0;
-    ((WindowManager*)FUN_10b154c0())->OpenTitleLoadWindow();
+    ((WindowManager*)GetWindowManager())->Unknown264 = 0;
+    ((WindowManager*)GetWindowManager())->OpenTitleLoadWindow();
 }

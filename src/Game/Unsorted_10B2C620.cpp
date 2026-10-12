@@ -18,7 +18,7 @@ public:
 class Class_10B2D600 : public Class_10A52EE0
 {
 public:
-    void FUN_10b2d600();
+    void RefreshNextSlots();
     void FUN_10b2c2e0(Class_10B2BC90_Unknown* Item, int Index);
 
     char Pad0C4[0x64];
@@ -26,8 +26,8 @@ public:
     int Head;
 };
 
-// FUNCTION: 0x10B2D600 ?FUN_10b2d600@Class_10B2D600@@QAEXXZ
-void Class_10B2D600::FUN_10b2d600()
+// FUNCTION: 0x10B2D600 ?RefreshNextSlots@Class_10B2D600@@QAEXXZ
+void Class_10B2D600::RefreshNextSlots()
 {
     for (int i = 1; i <= 3; i++)
     {

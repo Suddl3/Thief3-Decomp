@@ -1,4 +1,4 @@
-// Game/Class_10E6DC54.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/XBInputInterface.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Config.h"
 
@@ -18,7 +18,7 @@ extern float DAT_10e49684;
 
 extern "C" int __stdcall DirectInput8Create(int Instance, unsigned int Version, void* Iid, IDirectInput8A** Out, void* Outer);
 
-class Class_10E6DC54
+class XBInputInterface
 {
 public:
     bool GetNormalizedAxis(int A, float* Out);
@@ -30,8 +30,8 @@ public:
     float m_DeadZoneScale;
 };
 
-// FUNCTION: 0x10AAEB00 ?InitDirectInput@Class_10E6DC54@@QAEXXZ
-void Class_10E6DC54::InitDirectInput()
+// FUNCTION: 0x10AAEB00 ?InitDirectInput@XBInputInterface@@QAEXXZ
+void XBInputInterface::InitDirectInput()
 {
     int Result = DirectInput8Create(DAT_10f3a374, 0x800, DAT_10eb840c, &DAT_10f3a36c, 0);
     if (Result < 0)
@@ -40,8 +40,8 @@ void Class_10E6DC54::InitDirectInput()
         m_DeadZoneScale = DAT_10e49684 / (DAT_10e49684 - m_DeadZonePercent);
 }
 
-// FUNCTION: 0x10AAEB70 ?GetNormalizedAxis@Class_10E6DC54@@QAE_NHPAM@Z
-bool Class_10E6DC54::GetNormalizedAxis(int A, float* Out)
+// FUNCTION: 0x10AAEB70 ?GetNormalizedAxis@XBInputInterface@@QAE_NHPAM@Z
+bool XBInputInterface::GetNormalizedAxis(int A, float* Out)
 {
     if ((A >= 200 && A <= 215) || (A >= 240 && A <= 243))
     {

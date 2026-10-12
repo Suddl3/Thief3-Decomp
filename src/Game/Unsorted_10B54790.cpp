@@ -4,8 +4,8 @@
 
 extern Class_10B542D0* DAT_10ff6580;
 
-// FUNCTION: 0x10B54790 ?FUN_10b54790@@YAXXZ
-void FUN_10b54790()
+// FUNCTION: 0x10B54790 ?DestroyLockPickWindowManager@@YAXXZ
+void DestroyLockPickWindowManager()
 {
     if (DAT_10ff6580)
     {

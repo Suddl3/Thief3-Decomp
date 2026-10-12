@@ -105,7 +105,7 @@ public:
         Unknown00 = DAT_10e7b89c;
     }
 
-    void FUN_10b2e690(const Struct_10B2E690& A, const Struct_10B2E690& B, int C);
+    void Init(const Struct_10B2E690& A, const Struct_10B2E690& B, int C);
 
     void** Unknown00;
     float Unknown04;
@@ -119,7 +119,7 @@ void Class_10B2F050::FUN_10b2f050(const Struct_10B2E690& A, int B)
     if (Unknown124 != 0)
     {
         Class_10B2E690* Obj = new(0, 0, 0, 0, 0) Class_10B2E690;
-        Obj->FUN_10b2e690(Unknown124->Virtual17(), A, B);
+        Obj->Init(Unknown124->Virtual17(), A, B);
         Unknown124->Virtual78(Obj);
     }
 }

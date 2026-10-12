@@ -9,7 +9,7 @@ public:
     bool FUN_10b15620();
 
     char Unknown00[0x268];
-    double Unknown268;
+    double m_StartTime;
 };
 
 #endif // GAME_CLASS_10B15620_H

@@ -6,7 +6,7 @@
 class Class_10B24DB0
 {
 public:
-    bool FUN_10b24db0();
+    bool HasJunkItem();
 
     char Unknown00[0x28];
     int Unknown28;

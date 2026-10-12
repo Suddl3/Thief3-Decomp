@@ -11,10 +11,10 @@ class Class_10B1B8A0
 {
 public:
     void FUN_10b1a840();
-    void FUN_10b1aba0();
+    void EmptyArrays();
 
     char Unknown00[4];
-    Class_10ABDAE0 Unknown04[8];
+    Class_10ABDAE0 m_Arrays[8];
 };
 
 struct Struct_10B1BC90
@@ -35,11 +35,11 @@ void Class_10B197E0::Free()
     }
 }
 
-// FUNCTION: 0x10B1ABA0 ?FUN_10b1aba0@Class_10B1B8A0@@QAEXXZ
-void Class_10B1B8A0::FUN_10b1aba0()
+// FUNCTION: 0x10B1ABA0 ?EmptyArrays@Class_10B1B8A0@@QAEXXZ
+void Class_10B1B8A0::EmptyArrays()
 {
     for (int i = 0; i < 8; i++)
-        Unknown04[i].FUN_10abdae0(0);
+        m_Arrays[i].FUN_10abdae0(0);
     FUN_10b1a840();
 }
 

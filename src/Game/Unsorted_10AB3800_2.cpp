@@ -5,8 +5,8 @@
 
 bool FUN_1094c430(const cString& A, const cString& B);
 
-// FUNCTION: 0x10AB3C20 ?FUN_10ab3c20@Class_10AB3C20@@QAEXABVcString@@@Z
-void Class_10AB3C20::FUN_10ab3c20(const cString& Value)
+// FUNCTION: 0x10AB3C20 ?SetValue@Class_10AB3C20@@QAEXABVcString@@@Z
+void Class_10AB3C20::SetValue(const cString& Value)
 {
     if (FUN_1094c430(Unknown04, Value))
     {

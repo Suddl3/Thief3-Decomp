@@ -268,8 +268,8 @@ void FUN_10acfdd0()
     FUN_10acf940();
 }
 
-// FUNCTION: 0x10AD0040 ?FUN_10ad0040@Class_10ACFDE0@@QAEHHPAUStruct_10AD0040@@@Z
-int Class_10ACFDE0::FUN_10ad0040(int A, Struct_10AD0040* B)
+// FUNCTION: 0x10AD0040 ?Matches@Class_10ACFDE0@@QAEHHPAUStruct_10AD0040@@@Z
+int Class_10ACFDE0::Matches(int A, Struct_10AD0040* B)
 {
     return FUN_10acfde0(A, B->UnknownEC == 0 ? 0 : B->UnknownE8);
 }

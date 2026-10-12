@@ -3,7 +3,7 @@
 #include "Core/Core.h"
 #include "Game/Class_10B1D1B0.h"
 #include "Game/Class_10B1D3D0.h"
-#include "Game/Class_10B22D60.h"
+#include "Game/PlayerStateController.h"
 #include "Game/Class_10B3AF40_UnknownB0.h"
 #include "Game/Class_10B48890.h"
 
@@ -123,14 +123,14 @@ public:
 struct Struct_10B1D1B0_Unknown00
 {
     char Unknown00[4];
-    Class_10B22D60* Unknown04;
+    PlayerStateController* Unknown04;
 };
 
 // AT3PlayerController (0x2C0 is its bIsActive bitfield).
 class Class_10B1D500
 {
 public:
-    void FUN_10b1d500(bool A, bool B);
+    void SetActive(bool A, bool B);
 
     char Unknown00[0xC0];
     APawn* Pawn;
@@ -139,8 +139,8 @@ public:
     Class_10B1D1B0 Unknown2C4;
 };
 
-// FUNCTION: 0x10B1D500 ?FUN_10b1d500@Class_10B1D500@@QAEX_N0@Z
-void Class_10B1D500::FUN_10b1d500(bool A, bool B)
+// FUNCTION: 0x10B1D500 ?SetActive@Class_10B1D500@@QAEX_N0@Z
+void Class_10B1D500::SetActive(bool A, bool B)
 {
     bIsActive = A;
     if (bIsActive)
@@ -148,7 +148,7 @@ void Class_10B1D500::FUN_10b1d500(bool A, bool B)
         if (B)
         {
             Struct_10B1D1B0_Unknown00* Holder = Unknown2C4.Unknown00;
-            Class_10B22D60* Target;
+            PlayerStateController* Target;
             if (!Holder)
                 Target = 0;
             else

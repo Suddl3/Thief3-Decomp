@@ -17,7 +17,7 @@ public:
     virtual int Virtual10(int A, int B);
 };
 
-class Class_10B22D60
+class PlayerStateController
 {
 public:
     void SetSlot(void** Slot, int Value);
@@ -27,16 +27,16 @@ public:
     char m_Slots[0x88];
 };
 
-class Class_10B22C40 : public Class_10B22D60
+class Class_10B22C40 : public PlayerStateController
 {
 public:
-    void FUN_10b22c40(int A);
+    void RefreshSlot(int A);
 
     Class_10B22C40_Unknown90* Unknown90;
 };
 
-// FUNCTION: 0x10B22C40 ?FUN_10b22c40@Class_10B22C40@@QAEXH@Z
-void Class_10B22C40::FUN_10b22c40(int A)
+// FUNCTION: 0x10B22C40 ?RefreshSlot@Class_10B22C40@@QAEXH@Z
+void Class_10B22C40::RefreshSlot(int A)
 {
     int Value = Unknown90->Virtual10(m_Body, A);
     if (Value != Unknown90->Virtual4())

@@ -153,8 +153,8 @@ struct Struct_10B1DAF0
     int Unknown35C;
 };
 
-// FUNCTION: 0x10B196A0 ?FUN_10b196a0@@YAHXZ
-int FUN_10b196a0()
+// FUNCTION: 0x10B196A0 ?GetInfoCount@@YAHXZ
+int GetInfoCount()
 {
     return DAT_10f35dec->Unknown08->Unknown47C;
 }

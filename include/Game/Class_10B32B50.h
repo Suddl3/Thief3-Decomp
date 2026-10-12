@@ -8,7 +8,7 @@ class Class_10B21340;
 class Class_10B32B50
 {
 public:
-    void FUN_10b32b50(Class_10B21340* A);
+    void BeginArrowAttach(Class_10B21340* A);
     void FUN_10b31fb0(int* A, Class_10B21340* B);
     void FUN_10b32620(Class_10B21340* A);
     void FUN_10b326b0(Class_10B21340* A);

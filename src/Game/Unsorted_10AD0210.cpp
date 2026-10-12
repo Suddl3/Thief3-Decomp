@@ -20,8 +20,8 @@ public:
 
 extern Class_10A73EF0_Table* DAT_10f3eda4;
 
-// FUNCTION: 0x10AD0210 ?FUN_10ad0210@Class_10AD0210@@QAEXHH@Z
-void Class_10AD0210::FUN_10ad0210(int Handle, int B)
+// FUNCTION: 0x10AD0210 ?CreateItem@Class_10AD0210@@QAEXHH@Z
+void Class_10AD0210::CreateItem(int Handle, int B)
 {
     Class_10ABCC20* Item = 0;
     Class_10A73EF0_Object* Obj = DAT_10f3eda4->Unknown08[Handle & 0xffff];
@@ -32,8 +32,8 @@ void Class_10AD0210::FUN_10ad0210(int Handle, int B)
     FUN_10ad9c90(Handle, Item);
 }
 
-// FUNCTION: 0x10AD0490 ?FUN_10ad0490@Class_10AD0490@@QAEXPAVClass_1098E3D0@@@Z
-void Class_10AD0490::FUN_10ad0490(Class_1098E3D0* Obj)
+// FUNCTION: 0x10AD0490 ?Lock@Class_10AD0490@@QAEXPAVClass_1098E3D0@@@Z
+void Class_10AD0490::Lock(Class_1098E3D0* Obj)
 {
     int Value = 1;
     Obj->FUN_1098e3d0(0x800182, &Value);

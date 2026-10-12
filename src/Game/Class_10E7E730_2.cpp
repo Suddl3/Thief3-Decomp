@@ -15,7 +15,7 @@ extern float DAT_10eafbdc;
 
 Class_10B19300* FUN_10b190e0();
 
-float FUN_10b1e1e0();
+float GetMoveSpeedMultiplier();
 
 // Class_10E7E730 as include/Game/Class_10E7E730.h has it, without the base
 // Class_10B3AE70: the header's base would move Unknown10 past 0x10, and the
@@ -60,7 +60,7 @@ int Class_10E7E730::FUN_10b4a180(Struct_10B193E0* X)
     }
     if (FUN_10b3b540(X, 0, 0))
         return 1;
-    if (FUN_10b1e1e0() != DAT_10eafbdc)
+    if (GetMoveSpeedMultiplier() != DAT_10eafbdc)
     {
         X->Unknown400 = X->Unknown38;
         return 8;

@@ -19,10 +19,10 @@ public:
     unsigned long Value;
 };
 
-Class_10A174E0* FUN_10a18230();
+Class_10A174E0* GetStats();
 
 // FUNCTION: 0x10B3AD90 ?FUN_10b3ad90@Class_10B3AD90@@QAEXH@Z
 void Class_10B3AD90::FUN_10b3ad90(int A)
 {
-    FUN_10a18230()->Virtual3(DAT_10e78dc4);
+    GetStats()->Virtual3(DAT_10e78dc4);
 }

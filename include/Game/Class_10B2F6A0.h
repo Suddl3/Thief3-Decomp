@@ -9,7 +9,7 @@ class Class_10B2F6A0
 {
 public:
     void RefreshLabel();
-    void FUN_10b2f6a0(unsigned char param);
+    void SetHideCount(unsigned char param);
     void SetName(const cString& Name);
     void SetCount(int p1);
 
@@ -19,7 +19,7 @@ public:
     cString m_Name;
     char Pad140[0x4];
     int m_Count;
-    unsigned char Unknown148;
+    unsigned char m_HideCount;
 };
 
 #endif // GAME_CLASS_10B2F6A0_H

@@ -49,13 +49,13 @@ public:
     int Unknown08;
 };
 
-// FUNCTION: 0x10B111A0 ?FUN_10b111a0@Class_10E782A0@@UAE_NH@Z
-bool Class_10E782A0::FUN_10b111a0(int A)
+// FUNCTION: 0x10B111A0 ?RemoveKey@Class_10E782A0@@UAE_NH@Z
+bool Class_10E782A0::RemoveKey(int A)
 {
     bool Result = false;
-    for (int i = 0; i < Unknown04; i++)
+    for (int i = 0; i < m_BucketCount; i++)
     {
-        Class_10B111A0_Unknown0C* Bucket = Unknown0C[i];
+        Class_10B111A0_Unknown0C* Bucket = m_Buckets[i];
         if (!Bucket)
             continue;
         Struct_10B111A0_Node* Node = Bucket->Head;
@@ -131,17 +131,17 @@ void Class_10B116B0::Resize(int NewCount)
     Count = NewCount;
 }
 
-// FUNCTION: 0x10B11600 ?FUN_10b11600@Class_10B11600@@QAEXHHH@Z
-void Class_10B11600::FUN_10b11600(int From, int To, int Count)
+// FUNCTION: 0x10B11600 ?MoveRange@Class_10B11600@@QAEXHHH@Z
+void Class_10B11600::MoveRange(int From, int To, int Count)
 {
     if (From != To && Count != 0)
     {
-        memmove(Unknown08 + To, Unknown08 + From, Count * sizeof(Class_10B11600_Unknown08));
+        memmove(m_Elements + To, m_Elements + From, Count * sizeof(Class_10B11600_Unknown08));
         if (From < To)
         {
             for (int I = From; I < To; I++)
             {
-                Class_10B11600_Unknown08* Item = Unknown08 + I;
+                Class_10B11600_Unknown08* Item = m_Elements + I;
                 if (Item)
                 {
                     Item->Unknown00 = 0;
@@ -154,7 +154,7 @@ void Class_10B11600::FUN_10b11600(int From, int To, int Count)
         {
             for (int I = To + Count; I < From + Count; I++)
             {
-                Class_10B11600_Unknown08* Item = Unknown08 + I;
+                Class_10B11600_Unknown08* Item = m_Elements + I;
                 if (Item)
                 {
                     Item->Unknown00 = 0;

@@ -6,7 +6,7 @@
 class Class_10B3A470
 {
 public:
-    Class_10B3A470* FUN_10b3a470();
+    Class_10B3A470* Init();
 
     char Unknown00;
     char Unknown01;

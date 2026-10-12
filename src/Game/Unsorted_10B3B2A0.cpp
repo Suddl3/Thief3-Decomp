@@ -118,8 +118,8 @@ int __stdcall FUN_10b3bb10(int Mode, FVector* V)
     return 4;
 }
 
-// FUNCTION: 0x10B3C050 ?FUN_10b3c050@@YGPAVAPawn@@PAVAGarrett@@@Z
-APawn* __stdcall FUN_10b3c050(AGarrett* Garrett)
+// FUNCTION: 0x10B3C050 ?GetClosestAIInRange@@YGPAVAPawn@@PAVAGarrett@@@Z
+APawn* __stdcall GetClosestAIInRange(AGarrett* Garrett)
 {
     AActor* Actor = Garrett->closestAIInRange;
     if (Actor)

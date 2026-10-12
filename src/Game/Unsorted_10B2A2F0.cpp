@@ -18,8 +18,8 @@ public:
     void* Value;
 };
 
-// FUNCTION: 0x10B2A2F0 ?FUN_10b2a2f0@Class_10B2A2F0@@QAEXPAX@Z
-void Class_10B2A2F0::FUN_10b2a2f0(void* Value)
+// FUNCTION: 0x10B2A2F0 ?Append@Class_10B2A2F0@@QAEXPAX@Z
+void Class_10B2A2F0::Append(void* Value)
 {
     int Link = 0;
     Class_10B2A2F0_Node* Node = new(Link, 0, 0, 0, 0) Class_10B2A2F0_Node();

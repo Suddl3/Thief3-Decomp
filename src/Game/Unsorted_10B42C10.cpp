@@ -29,7 +29,7 @@ class Class_10B42BD0;
 
 void FUN_10b42bd0(Class_10B42BD0* A);
 
-void* FUN_10b154c0();
+void* GetWindowManager();
 
 class Class_10E809B8 : public Window
 {
@@ -230,8 +230,8 @@ void Class_10E809B8::Update(int A)
     if (Unknown124 > Unknown128)
     {
         Virtual56(0);
-        ((Class_10B175C0*)FUN_10b154c0())->FUN_10b175c0(&Unknown12C, 1, FUN_10b42bd0, this);
-        Unknown118 = ((Class_10B175C0*)FUN_10b154c0())->FUN_10b16fb0();
+        ((Class_10B175C0*)GetWindowManager())->FUN_10b175c0(&Unknown12C, 1, FUN_10b42bd0, this);
+        Unknown118 = ((Class_10B175C0*)GetWindowManager())->GetFMVWindow();
         Unknown118->FUN_10b314f0(false);
     }
 }

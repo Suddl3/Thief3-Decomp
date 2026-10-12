@@ -9,8 +9,8 @@ public:
     void FUN_10b547c0(int A, int B);
     void FUN_10b54920(int A);
 
-    int Unknown00;
-    int Unknown04;
+    int m_CurrentIndex;
+    int m_Count;
     char Unknown08[8];
     int* Unknown10;
     char Unknown14[4];

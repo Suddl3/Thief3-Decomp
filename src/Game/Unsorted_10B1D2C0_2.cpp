@@ -23,8 +23,8 @@ public:
     char Pad00[0x18];
 };
 
-// FUNCTION: 0x10B1D2C0 ?FUN_10b1d2c0@Class_10B1D2C0@@QAEPAV1@PAVClass_109A62E0@@@Z
-Class_10B1D2C0* Class_10B1D2C0::FUN_10b1d2c0(Class_109A62E0* Arg)
+// FUNCTION: 0x10B1D2C0 ?Init@Class_10B1D2C0@@QAEPAV1@PAVClass_109A62E0@@@Z
+Class_10B1D2C0* Class_10B1D2C0::Init(Class_109A62E0* Arg)
 {
     Unknown00 = 0;
     Unknown04 = 0;

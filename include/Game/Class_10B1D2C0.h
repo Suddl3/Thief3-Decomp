@@ -8,7 +8,7 @@ class Class_109A62E0;
 class Class_10B1D2C0
 {
 public:
-    Class_10B1D2C0* FUN_10b1d2c0(Class_109A62E0* Arg);
+    Class_10B1D2C0* Init(Class_109A62E0* Arg);
 
     void* Unknown00;
     void* Unknown04;

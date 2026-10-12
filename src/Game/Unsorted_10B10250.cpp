@@ -32,8 +32,8 @@ Class_10E779F0::Class_10E779F0(std::string A, int B) : Class_10E77978(A), Unknow
 // FUNCTION: 0x10B10870 ??_GClass_10E779F0@@UAEPAXI@Z
 // Compiler-generated: emitted with the class's vtable by 0x10B10790's definition in this unit.
 
-// FUNCTION: 0x10B10A70 ?FUN_10b10a70@Class_10B10A70@@QAEPAV1@XZ
-Class_10B10A70* Class_10B10A70::FUN_10b10a70()
+// FUNCTION: 0x10B10A70 ?Init@Class_10B10A70@@QAEPAV1@XZ
+Class_10B10A70* Class_10B10A70::Init()
 {
     memset(Unknown00, 0, sizeof(Unknown00));
     if (!DAT_10ff35ce)

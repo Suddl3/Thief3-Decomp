@@ -23,7 +23,7 @@ void FUN_10a26c10(cString* A, cString* B);
 
 void FUN_10a293b0(cString* A, int B);
 
-void* FUN_10b154c0();
+void* GetWindowManager();
 
 class Class_10E7C3C8
 {
@@ -47,7 +47,7 @@ int __stdcall Class_10E7C3C8::FUN_10b36f40(int A, Class_10B36E40_Arg* C)
         cString Key;
         FUN_10a26c10(&Text, &Key);
         FUN_10a293b0(&Key, 0);
-        ((Class_10B154C0*)FUN_10b154c0())->FUN_10b15e30(&Key, GetFlavorColor(0).Unknown00);
+        ((Class_10B154C0*)GetWindowManager())->FUN_10b15e30(&Key, GetFlavorColor(0).Unknown00);
     }
     return 1;
 }

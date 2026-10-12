@@ -8,7 +8,7 @@
 class Class_10B19530
 {
 public:
-    Struct_10B19530_Item* FUN_10b19530(int Index);
+    Struct_10B19530_Item* GetItem(int Index);
 
     int Unknown00;
     Struct_10B19530_Item Items[1];

@@ -9,7 +9,7 @@ class Class_10AB3C20
 {
 public:
     void FUN_10ab3ab0();
-    void FUN_10ab3c20(const cString& Value);
+    void SetValue(const cString& Value);
 
     char Unknown00[4];
     cString Unknown04;

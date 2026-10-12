@@ -143,7 +143,7 @@ public:
 
 extern Class_10B435B0* DAT_10ff6530;
 
-void* FUN_10b154c0();
+void* GetWindowManager();
 
 extern Class_1092D420* DAT_10f31b88;
 
@@ -168,7 +168,7 @@ public:
 // FUNCTION: 0x10B42BD0 ?FUN_10b42bd0@@YAXPAVClass_10B42BD0@@@Z
 void FUN_10b42bd0(Class_10B42BD0* P)
 {
-    ((Class_10B16930*)FUN_10b154c0())->FUN_10b16ef0(0);
+    ((Class_10B16930*)GetWindowManager())->FUN_10b16ef0(0);
     P->Unknown120->Virtual3();
     if (P->Unknown130)
         DAT_10f31b88->FUN_1092d350(-1, -1);

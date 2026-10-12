@@ -38,7 +38,7 @@ public:
     virtual void Virtual0();
     virtual void Virtual1();
 
-    void FUN_10b3ae70(AGarrett* Garrett);
+    void ForceBody(AGarrett* Garrett);
 
     char Unknown04[0xC];
 };
@@ -61,7 +61,7 @@ public:
 void Class_10E7E658::MountRope(AGarrett* Garrett)
 {
     Unknown10 = true;
-    FUN_10b3ae70(Garrett);
+    ForceBody(Garrett);
     Unknown18 = 0;
     Unknown20 = 1;
     Unknown1C = 1;

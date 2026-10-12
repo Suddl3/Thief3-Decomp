@@ -41,7 +41,7 @@ class Class_10B3AE70 : public GSMantle
 public:
     virtual void Virtual1();
 
-    void FUN_10b3ae70(AGarrett* Garrett);
+    void ForceBody(AGarrett* Garrett);
 
     char Unknown04[0xC];
 };
@@ -73,7 +73,7 @@ void Class_10E81548::FUN_10b4bf20(AGarrett* Garrett)
         ForceArms(Garrett);
         break;
     default:
-        FUN_10b3ae70(Garrett);
+        ForceBody(Garrett);
         break;
     }
     ((Class_10B39530*)GetLinkedObject())->FUN_10b39530(Garrett->Unknown344, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);

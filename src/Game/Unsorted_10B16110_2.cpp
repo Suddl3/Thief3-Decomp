@@ -8,7 +8,7 @@
 
 class Class_10B255F0;
 
-Class_10B255F0* FUN_10b25cd0();
+Class_10B255F0* GetSelection();
 
 class Class_10B16930
 {
@@ -34,8 +34,8 @@ void Class_10B16930::FUN_10b16300(int A, int B, bool C)
     if (C)
     {
         if (Item)
-            Item->FUN_10b2d600();
-        Class_10B255F0* Obj = FUN_10b25cd0();
+            Item->RefreshNextSlots();
+        Class_10B255F0* Obj = GetSelection();
         if ((char)A)
             ((Class_10B25D90*)Obj)->StepBack();
         else

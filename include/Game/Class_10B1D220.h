@@ -8,7 +8,7 @@
 class Class_10B1D220
 {
 public:
-    Class_10B1D220* FUN_10b1d220(const Class_10B1D220& Other);
+    Class_10B1D220* CopyFrom(const Class_10B1D220& Other);
 
     FString Unknown00;
     FString Unknown0C;

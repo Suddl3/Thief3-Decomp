@@ -14,11 +14,11 @@ public:
 class Class_10E7018C : public cActorManager
 {
 public:
-    Class_10E7018C* FUN_10ace3b0();
+    Class_10E7018C* Construct();
 };
 
-// FUNCTION: 0x10ACE3B0 ?FUN_10ace3b0@Class_10E7018C@@QAEPAV1@XZ
-Class_10E7018C* Class_10E7018C::FUN_10ace3b0()
+// FUNCTION: 0x10ACE3B0 ?Construct@Class_10E7018C@@QAEPAV1@XZ
+Class_10E7018C* Class_10E7018C::Construct()
 {
     this->cActorManager::cActorManager();
     Unknown00 = DAT_10e7018c;

@@ -3150,3 +3150,152 @@ field Class_10AB9FF0::Unknown00 m_Object Pointer swapped in FUN_10ab9ff0; Virtua
 field Class_10ABB200::Unknown08 m_Elements Element array base that FUN_10abb200 memmoves within.
 field Class_10ABB480::Unknown04 m_Count Loop bound of FUN_10abb480 over the element pointers.
 field Class_10ABB480::Unknown0C m_Elements Element pointer array; FUN_10abb480 calls Virtual1 on each.
+class Class_10B22D60 PlayerStateController Xbox string pair 'PlayerStateController: No body was set...' is in HandleBodyCarryNotification, a method of this class.
+class Class_10B215D0 cVector Three float fields, a three-float constructor and the named Dot: a 3D vector.
+class Class_10E6DC54 XBInputInterface Xbox twin's debug string names XBInputInterface; config keys InputSystem and DeadZonePercent match.
+class Class_10AF9A90 FNameEntry String 'FNameEntry::m_Concretes' is the debug name of the field its only method initialises.
+function 0x10AD0490 Lock Writes 1 to property 0x800182; FUN_10acffa0 writes 0 to it, and FUN_10ad04c0 calls both.
+function 0x10ACFFA0 Unlock Writes 0 to property 0x800182 (FUN_10ad0490 writes 1); OnLockPicked calls it after a lock is picked.
+function 0x10A18230 GetStats Returns the table OnLockPicked counts sta_lockspicked in (Virtual0 reads it, Virtual1 writes it).
+function 0x10AD0210 CreateItem Same body as Class_10A73EF0::CreateItem at 0x10A73EF0, a matched method already named CreateItem.
+function 0x10B120F0 Init Sets Unknown00 to 1, clears the 7-word Unknown04 table and returns this.
+function 0x10B10A70 Init Clears its 4 words; the first call also clears DAT_10f7b5c8 and sets DAT_10ff35ce.
+function 0x10B12BC0 Init Runs the base constructor on this, stores DAT_10e78608 in Unknown00 and returns this.
+function 0x10B111A0 RemoveKey Unlinks and deletes every bucket node whose Key equals A; returns whether any was removed.
+function 0x10B11600 MoveRange memmove of Count elements from From to To in Unknown08, then zeroes the vacated elements.
+function 0x10B154C0 GetWindowManager Returns GWindowManager[0], the window manager global.
+function 0x10B129C0 ConstructAT3PlayerController Placement-new of AT3PlayerController into the given memory.
+function 0x10B16C10 SetHUDMode String 'HUDWindow' looked up with FindWindowByName; Flag picks the window's mode (2 or 0), with LayoutTitleBar when set.
+function 0x10B16FB0 GetFMVWindow String 'FMVWindow' looked up with FindWindowByName and returned as the window; called from Class_10E809B8::Update.
+function 0x10B18E10 GetAngleDelta Returns abs(Unknown3C - Unknown404), normalized by FUN_10b1dad0 when past 0x7fff; *Overflow reports that.
+function 0x10B19530 GetItem Returns &Items[Index], the element at the index passed in; no other member is touched.
+function 0x10B1BEF0 GetStateName switch maps State 0-4 to the strings Incomplete, Complete, Cancelled, Failed, Hidden
+function 0x10B1D220 CopyFrom copies the seven members of Other one by one, FString operator= among them, and returns this
+function 0x10B1D2C0 Init placement new builds three subobjects into Unknown00, Unknown04 and Unknown08, then returns this
+function 0x10B1D500 SetActive stores bIsActive (the 0x2C0 bitfield); deactivating zeroes the body's two FVector fields
+function 0x10B1DAD0 WrapAngle wraps by 0xffff past the +-0x7fff bound, a 16-bit rotation wrap
+function 0x10B1DBD0 LerpScaled returns ((D - C) * A + C) * B: a lerp from C to D by A, scaled by B
+function 0x10B1F490 GetForward transforms the unit X axis (1,0,0), UE2's forward, by the frame FUN_10b1dca0 builds from p1
+function 0x10B1F4F0 GetFlatForward FlatNormal of FUN_10b1f490 (UE2 forward flattened onto the ground plane and normalized)
+function 0x10B215D0 Reflect Returns this - 2*(this.Dot(N))*N: the reflection of this about normal N, using the named Dot.
+function 0x10B22C10 SetSlots Two SetSlot calls: Unknown90 to state 0x11, Unknown94 to state 0x17; takes no arguments.
+function 0x10B22C40 RefreshSlot Asks Unknown90 for a state from m_Body and A; calls SetSlot when it changed, as UpdateSlot does.
+function 0x10B22D20 RefreshSlot Asks Unknown90 for a state from m_Body; calls SetSlot when it changed, as UpdateSlot does.
+function 0x10B22910 CheckPendingReset Calls ResetIfPending on Unknown90 only when its Virtual4 state is 0xB.
+function 0x10B22640 Clear Destroys each element (calls ??1Class_10A46510), zeroes the count, stores Slack; ClearGoals calls it.
+function 0x10B36240 Construct Stores DAT_10e7c380 in Field00 and returns this, as Class_10E7C398::Construct does.
+function 0x10B36260 Construct Stores DAT_10e7c38c in Field00 and returns this, as Class_10E7C398::Construct does.
+function 0x10B362D0 Construct Stores DAT_10e7c3a4 in Field00 and returns this, as Class_10E7C398::Construct does.
+function 0x10B36310 Construct Writes DAT_10e7c3bc to offset 0 and returns this, as Class_10E7C3B0::Construct does.
+function 0x10B36350 Construct Writes DAT_10e7c3d4 to offset 0 and returns this, as Class_10E7C3C8::Construct does.
+function 0x10B36370 Construct Stores DAT_10e7c3e0 in Unknown00 and returns this, as Class_10E7C3EC::Construct does.
+function 0x10B36410 Construct Stores DAT_10e7c404 in Unknown00 and returns this, as Class_10E7C3F8::Construct does.
+function 0x10B2A2F0 Append Adds a node at Tail, Count++, and indexes its Value in Index (list plus hash index class).
+function 0x10B2A480 RemoveValue Unlinks the node whose key is A from the list and Index, deletes it, Count--; returns A.
+function 0x10B2A510 AdvanceFade Called by UpdateFade when m_FadeElapsed reaches m_FadeDuration; resets m_FadeElapsed and pops the list head into Unknown1E8.
+function 0x10B2FEF0 PrevPage Unknown160 -= Unknown168 while Unknown160 >= Unknown168 and Unknown134 holds more than Unknown168 entries; shows m_Text on Unknown118.
+function 0x10B2FCE0 UpdateFade Steps Unknown14C (Virtual5), writes its level (Virtual3) to Unknown134 via FUN_10a24370; returns true when Virtual1() reports done.
+function 0x10B32B50 BeginArrowAttach Plays the animation named 'GarBowToArrowAttach' on DAT_10f35dec->Unknown64; sets Unknown32 at entry.
+function 0x10B33D70 Next Unknown18C++ only while below Unknown190 - 1; then calls FUN_10b332d0() and UpdateEndStyles().
+function 0x10B358D0 Create Returns a new Class_10E7C30C, built between GetAllocator()->Virtual8 and Virtual9 calls.
+function 0x10B364D0 Init Stores the vtable pointer in place and returns this; called by FUN_10b36960, which returns a Class_10E7C428*.
+function 0x10B3A470 Init Sets nine fields to defaults and returns this, the shape of Class_10B42340::Init.
+function 0x10B3D220 Init Calls base Init FUN_10b3acb0, then stores vtable DAT_10e7e808; called by FUN_10b3d510.
+function 0x10B3D240 Init Calls base Init FUN_10b3acb0, then stores vtable DAT_10e7e850; called by FUN_10b3d510.
+function 0x10B3AE70 ForceBody Sets AGarrett::ArmUse to EAU_FORCED_BODY, as GSMantle::ForceArms does for EAU_FORCED_ARMS.
+function 0x10B3C050 GetClosestAIInRange Returns AGarrett::closestAIInRange cast to APawn; null when unset or not a pawn.
+function 0x10B3B220 GrabItem Called by GSMantle::TryGrab; takes the item from P->Unknown0B0, calls its Virtual19(1), sets flag 0x2 in P->Unknown450.
+function 0x10B546F0 GetLockPickWindowManager Xbox twin (~88%) cites 'cT3LockPickWindowManager' in T3LockpickWindow.cpp; creates and returns the singleton in DAT_10ff6580.
+function 0x10B54790 DestroyLockPickWindowManager Deletes and nulls DAT_10ff6580, the singleton FUN_10b546f0 creates; called by Class_10E7ED00::FUN_10b3f000.
+function 0x10B54760 AdvanceToNext After Virtual70(2) on Unknown10[Unknown00], increments Unknown00 and calls UpdatePosition (FUN_10b53fd0); called by OnLockPicked.
+function 0x10B53FD0 UpdatePosition Reads Unknown18's location via Virtual8, moves X by 10 - Unknown00*6, writes it back via Virtual5.
+function 0x10AAE2A0 EnumJoysticksCallback EnumDevices callback passed by InitJoystick; creates the device whose product name matches DAT_10f3a250.
+function 0x10AAE320 IsAxis Same axis-code test as GetNormalizedAxis (200-215, 240-243); called by FUN_10aaede0.
+function 0x10AAEBD0 Advance Unknown814 += Unknown81c * param; FUN_10a88f80 calls it together with Class_10AAEBF0::Advance.
+function 0x10AAEBF0 Advance Unknown818 += Unknown81c * param; FUN_10a88f80 calls it together with Class_10AAEBD0::Advance.
+function 0x10AAF250 InitJoystick Stores *Name in DAT_10f3a250; EnumDevices(4) creates that device, then SetDataFormat, SetCooperativeLevel, GetCapabilities.
+function 0x10AB0C40 Destroy Explicit ~vector() on Unknown10, then Unknown04.FUN_10ab0400(); called by FUN_10a734d0.
+function 0x10AB37D0 Init Sets Unknown00-08 to 0 and Unknown0C-14 to -1; called by constructors ??0Class_10E6D990 and ??0Class_10E6DA1C.
+function 0x10AB3C20 SetValue Assigns Value to Unknown04 when FUN_1094c430 reports a change, then calls FUN_10ab3ab0.
+function 0x10AB3CC0 Construct Calls the UObject constructor ??0UObject@@QAE@XZ, sets vtable DAT_10e6e1f8, returns this.
+function 0x10AB3D60 Construct Calls the AActor constructor ??0AActor@@QAE@XZ, sets vtable DAT_10e6e278, returns this.
+function 0x10AB3E00 Construct Calls the AActor constructor ??0AActor@@QAE@XZ, sets vtable DAT_10e6e3f0, returns this.
+function 0x10AB4000 Construct Calls the AActor constructor ??0AActor@@QAE@XZ, sets vtable DAT_10e6e6e0, returns this.
+function 0x10AC67F0 GetOrigin Returns the member m_Origin, named in the class header.
+function 0x10AC6820 GetBounds Returns the member m_Bounds, named in the class header.
+function 0x10AD0040 Matches Calls FUN_10acfde0(A, target), the per-element test MatchesAny uses; target is UnknownE8 when UnknownEC is set.
+function 0x10ACB0C0 HandleEvent Slot 0 override: dispatches Code 0xD to FUN_10acae80; the constructor registers 0xD with DAT_10f46da0.
+function 0x10ACE5B0 HandleEvent Slot 0 override: dispatches Code 0x10 to FUN_10ace4d0; same slot as cActorManager's FUN_10a4c470.
+function 0x10ACA550 SetState Sends message 10 with the old Unknown04, stores A there; timer 10.0 or 1.5 by 'sta_SpecialDeathState' lookup.
+function 0x10ACB7A0 Free Calls FUN_10acb460(0), then frees Unknown08 through GetAllocator()->Virtual5 and zeroes Unknown04.
+function 0x10ACE3B0 Construct Runs cActorManager's constructor, stores DAT_10e7018c in Unknown00, returns this; called by FUN_10aba1a0.
+function 0x10AE5090 Serialize Base slot 8, called by UBitfieldEnum::FUN_10ad73f0 (its override); UBitfieldProperty's slot 8 is Serialize.
+function 0x10AD73F0 Serialize Calls the base's slot-8 function, then serializes Unknown34 with FUN_109bc520; UBitfieldProperty's slot 8 is Serialize.
+function 0x10ADD850 InternalConstructor EInternal placement new of UBitfieldEnum; UBitfieldProperty's class registration passes InternalConstructor.
+function 0x10AEB200 GetExecutableBaseName GetModuleFileNameA base name cached in DAT_10f3ec70; 'T3UnrealEd' maps to 'Unreal'.
+function 0x10AF01B0 ImportText Xbox message 'Importing text for bitfield property %s had invalid text import data.'; parses '(A,B)' into a bit mask.
+function 0x10AF9A90 InitConcretes Initialises Unknown10 with element size 4 and debug name 'FNameEntry::m_Concretes'; returns this.
+function 0x10B12D80 Remove Destroys Class_10B12120 elements Index to Index+Count-1, then calls base FUN_10af3bd0(Index, Count, 0x1C).
+function 0x10B15600 SetStartTime Stores TimeManager::GetGameTime() in Unknown268; FUN_10b15620 measures 3.0 seconds from it.
+function 0x10B15CC0 OpenMissionCompleteWindow String 'MissionCompleteWindow' names it; Virtual4(Window) runs only when it is not current, then returns true.
+function 0x10B16D80 ToggleLockPickWindow String 'HUDWindow.LockPickHUDWindow'; Virtual54() true calls Virtual56(0), else Virtual56(1): a toggle.
+function 0x10B196A0 GetInfoCount Returns DAT_10f35dec->Unknown08->Unknown47C, the Info count; Virtual6 loops over its result.
+function 0x10B196B0 GetInfo Returns &DAT_10f35dec->Unknown08->Unknown478[Index], an Info; Virtual6 reads its Unknown0C and Unknown10.
+function 0x10B196D0 FindInfoIndex Returns the first Info index whose FUN_10af8020(Key) matches, else -1; called by FUN_10b19e30 and FUN_10b1b3b0.
+function 0x10B19740 GetItem Returns &DAT_10f35dec->Unknown08->Unknown484[Index], a 0x1C-byte Struct_10B19740_Item; called by FUN_10b60910.
+function 0x10B19940 AddItem Index from FUN_10af4cc0(sizeof(Item), 1) receives Item; returns that index; called by FUN_10b19e30.
+function 0x10B199A0 Remove Destructs Count FStringNoInit entries from Index, then base FUN_10af3bd0(Index, Count, 0x10).
+function 0x10B1ABA0 EmptyArrays Calls FUN_10abdae0(0) on each of the eight Unknown04 arrays, then FUN_10b1a840().
+function 0x10B1E1E0 GetMoveSpeedMultiplier Config keys 'WalkMultiplier' and 'CreepMultiplier' in section 'T3Settings' set the returned speed scale.
+function 0x10B1E150 IsAlignedXY XY-normalized dot of both vectors compared to a constant within Tol; calls Normalize, called by FUN_10b1ef90.
+function 0x10B1F260 MoveTowardTarget Clamps Unknown350 minus Unknown2C to Unknown454*100 and writes the result to Virtual6()->Unknown14.
+function 0x10B23FA0 ToggleMainStoreWindow Looks up 'MainStoreWindow'; Virtual4 when it is not current, else FUN_109e6b20(1).
+function 0x10B24070 ToggleFenceWindow Looks up 'FenceWindow'; Virtual4 when it is not current, else FUN_109e6b20(1).
+function 0x10B248D0 Register Calls p1->AddToLists(0xef, this), so the object enrolls itself in p1's list 0xef.
+function 0x10B24D70 SetJunkState Sets Unknown28 and Unknown48 to 3, as SetJunkItem does, without storing the item or showing its window.
+function 0x10B24DB0 HasJunkItem Returns true while Unknown28 or Unknown48 is 3, the value SetJunkItem stores.
+function 0x10B251A0 Refresh Stores FUN_10b25080() in Unknown2C; called from Class_10B16930::FUN_10b164e0.
+function 0x10B251B0 Refresh Stores FUN_10b25100() in Unknown2C; called from Class_10B16930::FUN_10b164e0.
+function 0x10B25CD0 GetSelection Returns the static Class_10B255F0; its GetSelectedValue and GetEntryValue read m_ItemIndex and m_EntryIndex.
+function 0x10B26910 Reset Zeroes all eight state fields, Unknown04 to Unknown20; the int parameter is unused.
+function 0x10B266E0 GetMenuInput Returns the static Class_10E7AAAC; its constructor reads MenuInputInitialDelay and MenuInputRepeatDelay.
+function 0x10B2BD70 GetStateName Returns View, UnEquip, CantEquip, Moving, Settle, Compact for states 1 to 6; virtual slot 108 of Class_10E7B360; derived Class_10E80088 and Class_10E80250 not checked.
+function 0x10B2BC90 GetSlotLocation Returns the FVector from GetItem(m_Slots[Index])->Virtual8(), zero when no item is there.
+function 0x10B2C100 EnterUnEquip Unless the state is already 2, calls FUN_10b2c050 and sets it to 2, which GetStateName names UnEquip.
+function 0x10B2D600 RefreshNextSlots Loops over the three slots after Head, calling FUN_10b2c2e0 on items whose first value is zero or missing; FUN_10b16300 calls it before stepping.
+function 0x10B2E690 Init Zeroes Unknown10; stores A in Unknown14 and Unknown20, B in Unknown2C, C in Unknown0C.
+function 0x10B2E720 SetVisibility Passes A and B as 1 or 0 to slot 56 of the children at 0x124 and 0x128; ShowJunkItemWindow passes 0, 1.
+function 0x10B2E890 SetVisible Passes A as 1 or 0 to slot 56 of Unknown120; ShowJunkItemWindow shows its window with slot 56 set to 1.
+function 0x10B2EEA0 MoveTo Builds a motion from the child's Virtual17 position to *A with M and hands it to Virtual78; ShowJunkItemWindow passes -1.0.
+function 0x10B2F6A0 SetHideCount Stores its byte in Unknown148, the flag RefreshLabel reads to hide the count label; ShowJunkItemWindow passes 1.
+function 0x10A3B460 HandleEvent vtable slot 0: the same virtual function as Class_10E6FC80::HandleEvent (0x10AC8E80)
+field Class_10E782A0::Unknown04 m_BucketCount Loop bound for the bucket array Unknown0C in FUN_10b111a0.
+field Class_10E782A0::Unknown0C m_Buckets Indexed by the loop in FUN_10b111a0; each element heads a node list.
+field Class_10B11600::Unknown08 m_Elements Array of 12-byte elements that FUN_10b11600 memmoves and zeroes by index.
+field Class_10B2A480::Unknown0C m_Index Hash table (Class_10B2A160 base) searched by FUN_10c49740 and removed from by key, as Class_10B2A2F0::Index.
+field Class_10B33D70::Unknown18C m_Index FUN_10b33d70 increments it below Unknown190 - 1; UpdateEndStyles tests it against 0 and Unknown190 - 1.
+field Class_10B33D70::Unknown190 m_Count Upper bound in FUN_10b33d70 (Unknown190 - 1); UpdateEndStyles tests it against 0.
+field Class_10B2FCE0::Unknown14C m_Fade FUN_10b2fce0 steps it (Virtual5), reads its level (Virtual3), and deletes it when Virtual1() reports done.
+field Class_10B54760::Unknown00 m_CurrentIndex Index into Unknown10; AdvanceToNext increments it, UpdatePosition scales it by 6.
+field Class_10B54760::Unknown10 m_Elements Array indexed by Unknown00; AdvanceToNext calls Virtual70(2) on the element at that index.
+field Class_10B54050::Unknown00 m_CurrentIndex Index into Unknown10; FUN_10b54050 calls Virtual70(2) on the element at that index.
+field Class_10B54050::Unknown10 m_Elements Array indexed by Unknown00; the element at that index gets Virtual70(2) in FUN_10b54050.
+field Class_10B54920::Unknown00 m_CurrentIndex Compared with Unknown04 and used to index Unknown10 in FUN_10b54920.
+field Class_10B54920::Unknown04 m_Count Bound for Unknown00 in FUN_10b54920: Unknown00 < Unknown04 guards each Unknown10 access.
+field Class_10AAF250::Unknown811 m_IsPolled Set when GetCapabilities reports DIDC_POLLEDDEVICE (flag 2) in InitJoystick.
+field Class_10AAF250::Unknown812 m_HasForceFeedback Set when GetCapabilities reports DIDC_FORCEFEEDBACK (0x100); then EnumObjects runs in InitJoystick.
+field Class_10ACA3E0::Unknown04 m_Count Loop bound in FUN_10aca3e0 over the elements.
+field Class_10ACA3E0::Unknown0C m_Elements Indexed in FUN_10aca3e0 and passed to FUN_10aca180.
+field Class_10ACA550::Unknown04 m_State Stored from SetState's argument after message 10 is sent with the old value.
+field Class_10ACA550::Unknown08 m_Timer Assigned 10.0 or 1.5 in SetState, chosen by the sta_SpecialDeathState check.
+field Class_10ACB7A0::Unknown08 m_Buffer Passed to GetAllocator()->Virtual5 and zeroed in FUN_10acb7a0, after the count test.
+field Class_10E55E78::Unknown30 m_pAssociatedLink The constructor zeroes m_pAssociatedLink, the header's only pointer field; FUN_10b0f4a0 reads it.
+field FNameEntry::Unknown10 m_Concretes Initialised with debug name 'FNameEntry::m_Concretes' by its only method.
+field Class_10B15600::Unknown268 m_StartTime Written with TimeManager game time by FUN_10b15600; FUN_10b15620 measures 3.0 seconds from it.
+field Class_10B15620::Unknown268 m_StartTime FUN_10b15620 tests TimeManager game time minus this field against 3.0 seconds.
+field Class_10B196D0::Unknown478 m_Infos Array indexed by FUN_10b196b0 and FUN_10b196d0; Virtual6 reads Info entries from it.
+field Class_10B196D0::Unknown47C m_InfoCount Loop bound in FUN_10b196d0; returned by FUN_10b196a0 as the Info count.
+field Class_10B19940::Unknown00 m_Items Unknown00[Index] stores the Item that FUN_10b19940 appends at the index FUN_10af4cc0 returns.
+field Class_10B1B8A0::Unknown04 m_Arrays Eight Class_10ABDAE0 arrays, each emptied by FUN_10b1aba0 through FUN_10abdae0(0).
+field Class_10B2F6A0::Unknown148 m_HideCount RefreshLabel shows the count label only while this is zero and m_Count is 1 or more.
+field Class_10B2BC90::Unknown128 m_Slots FUN_10b2bc90 reads GetItem(m_Slots[Index]); Class_10B2D600 indexes its Slots the same way.

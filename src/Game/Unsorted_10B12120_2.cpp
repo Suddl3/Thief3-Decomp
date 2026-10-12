@@ -17,8 +17,8 @@ public:
     AT3PlayerController();
 };
 
-// FUNCTION: 0x10B129C0 ?FUN_10b129c0@@YAXPAX@Z
-void FUN_10b129c0(void* Memory)
+// FUNCTION: 0x10B129C0 ?ConstructAT3PlayerController@@YAXPAX@Z
+void ConstructAT3PlayerController(void* Memory)
 {
     new ((EInternal*)Memory) AT3PlayerController();
 }
