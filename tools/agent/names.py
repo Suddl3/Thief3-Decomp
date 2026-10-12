@@ -31,6 +31,7 @@ Names change no code: after configure.py and ninja, compare the report (nothing 
 import argparse
 import json
 import keyword
+import os
 import re
 import sys
 from pathlib import Path
@@ -221,7 +222,9 @@ def unit_renames(p: Project, classes: Dict[str, str]) -> List[Tuple[str, str]]:
 
 
 def rename_units(p: Project, units: List[Tuple[str, str]]) -> None:
-    if units:
+    """T3_NAMES_KEEP_UNITS=1 leaves the units as they are (a wave whose queued tasks name units by file);
+    `names.py units` renames them afterwards."""
+    if units and not os.environ.get("T3_NAMES_KEEP_UNITS"):
         import unitnames
         unitnames.apply(p, units)
 
