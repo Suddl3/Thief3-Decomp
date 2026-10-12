@@ -30,27 +30,27 @@ struct Class_10A34C10_Node
     Class_10A34C10_Node* Next;
 };
 
-// FUNCTION: 0x10A34810 ?FUN_10a34810@Class_10A34B90@@QAEXH@Z
-void Class_10A34B90::FUN_10a34810(int Size)
+// FUNCTION: 0x10A34810 ?Rehash@Class_10A34B90@@QAEXH@Z
+void Class_10A34B90::Rehash(int Size)
 {
-    int OldSize = Unknown0C;
-    Class_10A34B90_Node** OldBuckets = Unknown14;
+    int OldSize = m_BucketCount;
+    Class_10A34B90_Node** OldBuckets = m_Buckets;
     Class_10A34B90_Node** Buckets = new(0, 0, 0, 0, 0) Class_10A34B90_Node*[Size];
-    Unknown0C = Size;
-    Unknown14 = Buckets;
-    Unknown08 = 0;
+    m_BucketCount = Size;
+    m_Buckets = Buckets;
+    m_BucketBits = 0;
     while (Size >>= 1)
-        Unknown08++;
+        m_BucketBits++;
     Unknown04 = 0;
     Unknown00 = 0;
-    for (int i = 0; i < Unknown0C; i++)
-        Unknown14[i] = 0;
+    for (int i = 0; i < m_BucketCount; i++)
+        m_Buckets[i] = 0;
     for (int j = 0; j < OldSize; j++)
     {
         Class_10A34B90_Node* Node = OldBuckets[j];
         while (Node)
         {
-            FUN_10a34420(Node, &Node->Unknown10);
+            Insert(Node, &Node->Unknown10);
             Class_10A34B90_Node* Next = Node->Next;
             delete Node;
             Node = Next;
@@ -59,8 +59,8 @@ void Class_10A34B90::FUN_10a34810(int Size)
     delete OldBuckets;
 }
 
-// FUNCTION: 0x10A349E0 ?FUN_10a349e0@Class_10A34C10@@QAEXH@Z
-void Class_10A34C10::FUN_10a349e0(int NewSize)
+// FUNCTION: 0x10A349E0 ?Rehash@Class_10A34C10@@QAEXH@Z
+void Class_10A34C10::Rehash(int NewSize)
 {
     int OldSize = Size;
     Class_10A34C10_Node** OldTable = Table;

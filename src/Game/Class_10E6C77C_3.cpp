@@ -19,16 +19,16 @@ public:
     virtual void Virtual0();
     virtual void Virtual1();
     virtual void Virtual2();
-    virtual Class_109081E0 FUN_10a8d220();
+    virtual Class_109081E0 GetText();
 
-    FName Unknown04;
+    FName m_Name;
 };
 
-// FUNCTION: 0x10A8D220 ?FUN_10a8d220@Class_10E6C77C@@UAE?AVClass_109081E0@@XZ
-Class_109081E0 Class_10E6C77C::FUN_10a8d220()
+// FUNCTION: 0x10A8D220 ?GetText@Class_10E6C77C@@UAE?AVClass_109081E0@@XZ
+Class_109081E0 Class_10E6C77C::GetText()
 {
-    if (!Unknown04.Value)
+    if (!m_Name.Value)
         return Class_109081E0(DAT_10e5d9f0);
-    FName Name = Unknown04;
+    FName Name = m_Name;
     return Class_109081E0(Name.FUN_10af9730());
 }

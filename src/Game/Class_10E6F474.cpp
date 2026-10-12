@@ -12,10 +12,10 @@ public:
     virtual int Virtual4(int A);
 };
 
-// FUNCTION: 0x10ABB4E0 ?FUN_10abb4e0@Class_10E6F474@@QAEHH@Z
-int Class_10E6F474::FUN_10abb4e0(int A)
+// FUNCTION: 0x10ABB4E0 ?FindMatchIndex@Class_10E6F474@@QAEHH@Z
+int Class_10E6F474::FindMatchIndex(int A)
 {
-    for (int i = 0; i < Unknown04; i++)
+    for (int i = 0; i < m_EntryCount; i++)
     {
         if (Unknown0C[i]->Virtual4(A))
             return i;

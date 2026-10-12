@@ -6,7 +6,7 @@
 class Class_10E9C990
 {
 public:
-    virtual void FUN_10c5f030(int Code, int A, int B, int C);
+    virtual void HandleMessage(int Code, int A, int B, int C);
 
     void FUN_10c5e750();
     void FUN_10c5e7d0();

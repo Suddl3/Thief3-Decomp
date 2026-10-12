@@ -33,5 +33,5 @@ void Class_10B2A2F0::FUN_10b2a2f0(void* Value)
     if (!Head)
         Head = Node;
     Count++;
-    Index.FUN_10b2a160((int)Value, Link);
+    Index.Insert((int)Value, Link);
 }

@@ -10,14 +10,14 @@ class Class_109081E0;
 class Class_10914D60
 {
 public:
-    unsigned char FUN_10914d60();
+    unsigned char GetField08();
     void FUN_109152e0(int A, Class_109081E0& B, int C);
-    void FUN_10915160(int A, Class_109081E0& B, int C);
+    void Dispatch(int A, Class_109081E0& B, int C);
 
     char Unknown00[0x8];
     unsigned char Field08;
     char Unknown09[0x3];
-    Class_10C49740 Unknown0C;
+    Class_10C49740 m_Entries;
 };
 
 #endif // GAME_CLASS_10914D60_H

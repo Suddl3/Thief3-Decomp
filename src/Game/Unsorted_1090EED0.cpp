@@ -13,10 +13,10 @@ int Class_1090FD40::Add(const Class_109081E0& Item)
     return Index;
 }
 
-// FUNCTION: 0x1090FF70 ?FUN_1090ff70@Class_1090FF70@@QAEXXZ
-void Class_1090FF70::FUN_1090ff70()
+// FUNCTION: 0x1090FF70 ?Free@Class_1090FF70@@QAEXXZ
+void Class_1090FF70::Free()
 {
-    FUN_1090fc80(0x40);
+    Empty(0x40);
     ::operator delete(m_Table);
     m_Count = 0;
     m_Size = 0;

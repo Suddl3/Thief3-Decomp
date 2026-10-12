@@ -52,25 +52,25 @@ public:
     virtual void Virtual0();
     virtual void Virtual1();
     virtual void Virtual2();
-    virtual Class_10AAB970_Unknown0C* FUN_10aab970(const char** Name, int A);
+    virtual Class_10AAB970_Unknown0C* FindByName(const char** Name, int A);
 
-    Class_10E6DA64* FUN_10aab8b0();
+    Class_10E6DA64* Init();
 
-    int Unknown04;
+    int m_Count;
     int Unknown08;
-    Class_10AAB970_Unknown0C** Unknown0C;
+    Class_10AAB970_Unknown0C** m_Elements;
     int Unknown10;
     int Unknown14;
     int Unknown18;
 };
 
-// FUNCTION: 0x10AAB970 ?FUN_10aab970@Class_10E6DA64@@UAEPAVClass_10AAB970_Unknown0C@@PAPBDH@Z
-Class_10AAB970_Unknown0C* Class_10E6DA64::FUN_10aab970(const char** Name, int A)
+// FUNCTION: 0x10AAB970 ?FindByName@Class_10E6DA64@@UAEPAVClass_10AAB970_Unknown0C@@PAPBDH@Z
+Class_10AAB970_Unknown0C* Class_10E6DA64::FindByName(const char** Name, int A)
 {
     char* Key;
-    for (int i = 0; i < Unknown04; i++)
+    for (int i = 0; i < m_Count; i++)
     {
-        const char** Slot = Unknown0C[i]->Unknown24->Virtual25(&Key);
+        const char** Slot = m_Elements[i]->Unknown24->Virtual25(&Key);
         const char* Want = DAT_10e47660;
         if (*Slot)
             Want = *Slot;
@@ -83,7 +83,7 @@ Class_10AAB970_Unknown0C* Class_10E6DA64::FUN_10aab970(const char** Name, int A)
             Key = 0;
         }
         if (Equal)
-            return Unknown0C[i];
+            return m_Elements[i];
     }
     return 0;
 }

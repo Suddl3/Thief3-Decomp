@@ -42,7 +42,7 @@ void FUN_10918380()
     Class_1092D990* Member = DAT_10f2c734->Unknown0D8;
     if (Member)
         Member->FUN_1092d990();
-    DAT_10f319a0->FUN_10924c60();
+    DAT_10f319a0->Refresh();
     if (DAT_10f2c744)
         DAT_10f2c744->Virtual11();
     FUN_10929650();

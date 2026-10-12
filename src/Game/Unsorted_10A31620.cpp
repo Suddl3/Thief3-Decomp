@@ -43,14 +43,14 @@ int Class_10A31F00::FUN_10a31f00()
     return Result;
 }
 
-// FUNCTION: 0x10A32270 ?FUN_10a32270@Class_10A32270@@QAEXXZ
-void Class_10A32270::FUN_10a32270()
+// FUNCTION: 0x10A32270 ?Clear@Class_10A32270@@QAEXXZ
+void Class_10A32270::Clear()
 {
-    FUN_10a31f30(0);
-    if (Unknown04)
+    SetCount(0);
+    if (m_CapacityBytes)
     {
-        GetAllocator()->Virtual5(Unknown08);
-        Unknown08 = 0;
-        Unknown04 = 0;
+        GetAllocator()->Virtual5(m_Data);
+        m_Data = 0;
+        m_CapacityBytes = 0;
     }
 }

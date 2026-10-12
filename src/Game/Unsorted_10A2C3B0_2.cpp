@@ -6,8 +6,8 @@
 
 Class_10905A90_Member* GetAllocator();
 
-// FUNCTION: 0x10A2C3B0 ?FUN_10a2c3b0@Class_10A2C610@@QAEXH@Z
-void Class_10A2C610::FUN_10a2c3b0(int NewCount)
+// FUNCTION: 0x10A2C3B0 ?SetCount@Class_10A2C610@@QAEXH@Z
+void Class_10A2C610::SetCount(int NewCount)
 {
     int Capacity = !Unknown08 ? 0 : Unknown04 / sizeof(Struct_10A2DA00);
     GetAllocator()->Virtual8(0, 0);

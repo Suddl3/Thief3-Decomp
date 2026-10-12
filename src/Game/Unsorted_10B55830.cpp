@@ -10,8 +10,8 @@ public:
     virtual bool Virtual1(int A, int B, int C);
 };
 
-// FUNCTION: 0x10B559A0 ?FUN_10b559a0@Class_10B559A0@@QAEXHH@Z
-void Class_10B559A0::FUN_10b559a0(int A, int B)
+// FUNCTION: 0x10B559A0 ?SetState@Class_10B559A0@@QAEXHH@Z
+void Class_10B559A0::SetState(int A, int B)
 {
     switch (A)
     {
@@ -23,7 +23,7 @@ void Class_10B559A0::FUN_10b559a0(int A, int B)
         FUN_10b55830();
         break;
     }
-    Unknown0E4 = A;
+    m_State = A;
 }
 
 // FUNCTION: 0x10B56210 ?FUN_10b56210@Class_10E81DE8@@UAE_NHHH@Z

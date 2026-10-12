@@ -21,8 +21,8 @@ class Class_10E662D0 : public Class_10E662C0
 public:
     Class_10E662D0() : Class_10E662C0(0), Unknown08(0) {}
 
-    virtual Class_10E662D0* FUN_10a2f300();
-    virtual int FUN_10a2ed70(Class_10E662D0* Other);
+    virtual Class_10E662D0* Clone();
+    virtual int IsCompatibleWith(Class_10E662D0* Other);
 
     int Unknown08;
 };
@@ -44,15 +44,15 @@ class Class_10E662E0 : public Class_10E5D5E0
 public:
     Class_10E662E0() : Unknown08(-1), Unknown0C(-1), Unknown10(0) {}
 
-    virtual Class_10E662E0* FUN_10a2f360();
+    virtual Class_10E662E0* Clone();
 
     int Unknown08;
     int Unknown0C;
     int Unknown10;
 };
 
-// FUNCTION: 0x10A2F300 ?FUN_10a2f300@Class_10E662D0@@UAEPAV1@XZ
-Class_10E662D0* Class_10E662D0::FUN_10a2f300()
+// FUNCTION: 0x10A2F300 ?Clone@Class_10E662D0@@UAEPAV1@XZ
+Class_10E662D0* Class_10E662D0::Clone()
 {
     Class_10E662D0* Copy = new(0, 0, 0, 0, 0) Class_10E662D0();
     Copy->Unknown04 = Unknown04;
@@ -60,8 +60,8 @@ Class_10E662D0* Class_10E662D0::FUN_10a2f300()
     return Copy;
 }
 
-// FUNCTION: 0x10A2F360 ?FUN_10a2f360@Class_10E662E0@@UAEPAV1@XZ
-Class_10E662E0* Class_10E662E0::FUN_10a2f360()
+// FUNCTION: 0x10A2F360 ?Clone@Class_10E662E0@@UAEPAV1@XZ
+Class_10E662E0* Class_10E662E0::Clone()
 {
     Class_10E662E0* Copy = new(0, 0, 0, 0, 0) Class_10E662E0();
     Copy->Unknown04 = Unknown04;

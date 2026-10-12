@@ -88,7 +88,7 @@ Class_10E66530* Class_10E666A0::Create(int A)
 void Class_10A37F30::FUN_10a37f30(Struct_10A378B0* A)
 {
     A->Unknown40 = false;
-    DAT_10f2c734->FUN_10925cf0(A->Unknown04);
+    DAT_10f2c734->RemoveItem(A->Unknown04);
     if (!Unknown59C)
     {
         GEngine->Client->Unknown70 = Virtual15();

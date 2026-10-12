@@ -17,13 +17,13 @@ public:
     Class_10E6C364();
 
     char Unknown04[4];
-    int Unknown08;
+    int m_Count;
     union
     {
         char Unknown0C[4];
         int Unknown0c;
     };
-    Class_10E6C364_Unknown10** Unknown10;
+    Class_10E6C364_Unknown10** m_Entries;
 };
 
 #endif // GAME_CLASS_10E6C364_H

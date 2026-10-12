@@ -57,20 +57,20 @@ extern Class_10B0AED0* DAT_10f3a248;
 class Class_10AA6050
 {
 public:
-    Struct_10AA6050* FUN_10aa6050(int Value);
+    Struct_10AA6050* FindEntry(int Value);
 
     char Unknown00[4];
-    int Unknown04;
+    int m_Count;
     char Unknown08[4];
-    Struct_10AA6050** Unknown0C;
+    Struct_10AA6050** m_Entries;
 };
 
-// FUNCTION: 0x10AA6050 ?FUN_10aa6050@Class_10AA6050@@QAEPAUStruct_10AA6050@@H@Z
-Struct_10AA6050* Class_10AA6050::FUN_10aa6050(int Value)
+// FUNCTION: 0x10AA6050 ?FindEntry@Class_10AA6050@@QAEPAUStruct_10AA6050@@H@Z
+Struct_10AA6050* Class_10AA6050::FindEntry(int Value)
 {
-    for (int i = 0; i < Unknown04; i++)
+    for (int i = 0; i < m_Count; i++)
     {
-        Struct_10AA6050* Entry = Unknown0C[i];
+        Struct_10AA6050* Entry = m_Entries[i];
         if (Entry->Unknown00 == Value)
             return Entry;
     }

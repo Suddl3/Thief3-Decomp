@@ -7,7 +7,7 @@
 class Class_1091E940
 {
 public:
-    void FUN_1091e940(int A, int B);
+    void SetProjection(int A, int B);
 
     int Unknown00;
     Struct_10917D20 Unknown04;
@@ -28,7 +28,7 @@ void FUN_10917d20(const Struct_10917D20* Matrix, float A, int B, int C)
         DAT_10f2c738->Unknown184 = B;
         DAT_10f2c738->Unknown180 = A;
         DAT_10f2c738->Unknown04 = *Matrix;
-        DAT_10f2c738->FUN_1091e940(C, 1);
+        DAT_10f2c738->SetProjection(C, 1);
         DAT_10f319a0->Class_10E6D8F0::FUN_10c3e130((int)DAT_10f2c738);
     }
 }

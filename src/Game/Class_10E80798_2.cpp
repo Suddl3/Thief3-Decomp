@@ -155,22 +155,22 @@ public:
     virtual void Virtual124(Struct_10B2A750* Value);
 
     void FUN_10b2a510();
-    void FUN_10b2a750(float Delta);
+    void UpdateFade(float Delta);
 
     char Unknown0EC[0xF4];
-    float Unknown1E0;
-    float Unknown1E4;
+    float m_FadeDuration;
+    float m_FadeElapsed;
 };
 
-// FUNCTION: 0x10B2A750 ?FUN_10b2a750@Class_10E80798@@QAEXM@Z
-void Class_10E80798::FUN_10b2a750(float Delta)
+// FUNCTION: 0x10B2A750 ?UpdateFade@Class_10E80798@@QAEXM@Z
+void Class_10E80798::UpdateFade(float Delta)
 {
     FUN_10a53560(*(int*)&Delta);
-    Unknown1E4 = Delta + Unknown1E4;
-    if (Unknown1E4 >= Unknown1E0)
+    m_FadeElapsed = Delta + m_FadeElapsed;
+    if (m_FadeElapsed >= m_FadeDuration)
         FUN_10b2a510();
     Struct_10B2A750 Color;
     Virtual124(&Color);
-    Color.Unknown03 = (unsigned char)((Unknown1E0 - Unknown1E4) / Unknown1E0 * 255.0f);
+    Color.Unknown03 = (unsigned char)((m_FadeDuration - m_FadeElapsed) / m_FadeDuration * 255.0f);
     Virtual123(&Color);
 }

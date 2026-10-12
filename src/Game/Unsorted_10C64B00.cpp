@@ -1,6 +1,6 @@
 // Game/Unsorted_10C64B00.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10AB5B20.h"
+#include "Game/cRefPtr.h"
 #include "Game/Class_10C662F0.h"
 #include "Game/Object_10AB5B20.h"
 #include "Game/Struct_10C64E10.h"
@@ -18,8 +18,8 @@ void Class_10C662F0::AddRef(Class_10E9CB00* A)
     }
 }
 
-// FUNCTION: 0x10C64E50 ?FUN_10c64e50@@YA?AVClass_10AB5B20@@PAV1@@Z
-Class_10AB5B20 FUN_10c64e50(Class_10AB5B20* Other)
+// FUNCTION: 0x10C64E50 ?FUN_10c64e50@@YA?AVcRefPtr@@PAV1@@Z
+cRefPtr FUN_10c64e50(cRefPtr* Other)
 {
     return *Other;
 }

@@ -16,7 +16,7 @@ public:
     int FUN_1091cb20();
     void FUN_1091be70();
     int FUN_1091cb40();
-    int FUN_1091cb80(unsigned int Index);
+    int GetValue(unsigned int Index);
     Class_109081E0 FUN_1091cbc0(int B, int C);
     int Count()
     {

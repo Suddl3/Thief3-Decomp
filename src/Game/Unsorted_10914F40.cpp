@@ -29,8 +29,8 @@ public:
 
 extern "C" char* _strupr(char* String);
 
-// FUNCTION: 0x10915160 ?FUN_10915160@Class_10914D60@@QAEXHAAVClass_109081E0@@H@Z
-void Class_10914D60::FUN_10915160(int A, Class_109081E0& B, int C)
+// FUNCTION: 0x10915160 ?Dispatch@Class_10914D60@@QAEXHAAVClass_109081E0@@H@Z
+void Class_10914D60::Dispatch(int A, Class_109081E0& B, int C)
 {
     Class_109081E0 Name(*(const Class_109081E0*)A);
     if (Name.Unknown00)
@@ -38,7 +38,7 @@ void Class_10914D60::FUN_10915160(int A, Class_109081E0& B, int C)
         _strupr(Name.Unknown00);
     }
     Entry_10C32C30* Found = 0;
-    Unknown0C.FUN_10c49740((int*)&Name, &Found);
+    m_Entries.FUN_10c49740((int*)&Name, &Found);
     if (Found)
     {
         Found->FUN_10916440(B, C);

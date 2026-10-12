@@ -8,12 +8,12 @@ class Class_10A32370;
 class Class_10A32D60
 {
 public:
-    void FUN_10a32c30(int Count);
-    void FUN_10a32d60();
+    void SetCount(int Count);
+    void Clear();
 
-    int Unknown00;
-    int Unknown04;
-    Class_10A32370* Unknown08;
+    int m_Count;
+    int m_CapacityBytes;
+    Class_10A32370* m_Elements;
 };
 
 #endif // GAME_CLASS_10A32D60_H

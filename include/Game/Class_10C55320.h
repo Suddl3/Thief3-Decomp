@@ -3,13 +3,13 @@
 #ifndef GAME_CLASS_10C55320_H
 #define GAME_CLASS_10C55320_H
 
-class Class_10AB5B20;
+class cRefPtr;
 struct Struct_10C55320;
 
 class Class_10C55320
 {
 public:
-    Class_10AB5B20 FUN_10c55320();
+    cRefPtr FUN_10c55320();
 
     char Unknown00[0x20];
     Struct_10C55320* Unknown20;

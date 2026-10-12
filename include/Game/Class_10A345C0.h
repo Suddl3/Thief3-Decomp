@@ -10,19 +10,19 @@ class Class_10A345C0_Node;
 class Class_10A345C0
 {
 public:
-    unsigned int FUN_10a34420(__int64* Key, int* Value);
-    void FUN_10a34810(int Size);
-    unsigned int FUN_10a34510(__int64* Key, int* Value);
+    unsigned int Insert(__int64* Key, int* Value);
+    void Rehash(int Size);
+    unsigned int InsertOrAssign(__int64* Key, int* Value);
     bool FUN_10a345c0(__int64* Range, int* Index);
 
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
+    int m_Collisions;
+    int m_Count;
+    int m_Bits;
+    int m_Size;
     bool Unknown10;
     char Pad11[0x3];
-    Class_10A345C0_Node** Unknown14;
-    Class_10A34420_Unknown18 Unknown18;
+    Class_10A345C0_Node** m_Buckets;
+    Class_10A34420_Unknown18 m_KeyOps;
 };
 
 #endif // GAME_CLASS_10A345C0_H

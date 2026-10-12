@@ -3,13 +3,13 @@
 #ifndef GAME_CLASS_10C54970_H
 #define GAME_CLASS_10C54970_H
 
-class Class_10AB5B20;
+class cRefPtr;
 class Object_10AB5B20;
 
 class Class_10C54970
 {
 public:
-    Class_10AB5B20 FUN_10c54970();
+    cRefPtr FUN_10c54970();
 
     char Unknown00[0x28];
     Object_10AB5B20* Unknown28;

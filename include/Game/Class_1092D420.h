@@ -9,8 +9,8 @@ class Class_1092D420 : public Class_1092D3D0
 {
 public:
     void FUN_1092d440();
-    Class_1092D420* FUN_1092d420();
-    bool FUN_1092d4b0();
+    Class_1092D420* Initialize();
+    bool Release();
     void FUN_1092d350(int A, int B);
 };
 

@@ -40,8 +40,8 @@ struct Class_1091E400 {
     void* FUN_1091e400();
 };
 
-// FUNCTION: 0x10914D60 ?FUN_10914d60@Class_10914D60@@QAEEXZ
-unsigned char Class_10914D60::FUN_10914d60()
+// FUNCTION: 0x10914D60 ?GetField08@Class_10914D60@@QAEEXZ
+unsigned char Class_10914D60::GetField08()
 {
     return Field08;
 }

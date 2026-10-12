@@ -7,12 +7,12 @@ class Class_109262B0
 {
 public:
     void FUN_10926020(int A);
-    void FUN_109262b0();
-    void FUN_10931f10(const Class_109262B0& Other);
+    void Clear();
+    void CopyFrom(const Class_109262B0& Other);
 
-    int Unknown00;
-    int Unknown04;
-    void* Unknown08;
+    int m_Count;
+    int m_CapacityBytes;
+    void* m_Data;
 };
 
 #endif // GAME_CLASS_109262B0_H

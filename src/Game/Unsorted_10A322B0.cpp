@@ -61,14 +61,14 @@ void Class_10A322B0::FUN_10a322b0(int A, int B)
     Unknown08[B] = Temp;
 }
 
-// FUNCTION: 0x10A32370 ?FUN_10a32370@Class_10A32370@@QAEXH@Z
-void Class_10A32370::FUN_10a32370(int NewCount)
+// FUNCTION: 0x10A32370 ?SetCount@Class_10A32370@@QAEXH@Z
+void Class_10A32370::SetCount(int NewCount)
 {
-    int OldCount = Unknown00;
-    int Capacity = !Unknown08 ? 0 : Unknown04 / sizeof(Class_10A32AB0_Element*);
+    int OldCount = m_Count;
+    int Capacity = !m_Elements ? 0 : m_CapacityBytes / sizeof(Class_10A32AB0_Element*);
     for (int i = NewCount; i < OldCount; i++)
     {
-        Class_10A32AB0_Element** Slot = Unknown08 + i;
+        Class_10A32AB0_Element** Slot = m_Elements + i;
         if (*Slot)
         {
             (*Slot)->Virtual2();
@@ -80,32 +80,32 @@ void Class_10A32370::FUN_10a32370(int NewCount)
         int NewCapacity = NewCount;
         if (Capacity)
             NewCapacity = (NewCount & ~15) + 16;
-        Unknown08 = (Class_10A32AB0_Element**)GetAllocator()->Virtual3(Unknown08, NewCapacity * sizeof(Class_10A32AB0_Element*), 0, 0, 0, 0);
-        Unknown04 = NewCapacity * sizeof(Class_10A32AB0_Element*);
+        m_Elements = (Class_10A32AB0_Element**)GetAllocator()->Virtual3(m_Elements, NewCapacity * sizeof(Class_10A32AB0_Element*), 0, 0, 0, 0);
+        m_CapacityBytes = NewCapacity * sizeof(Class_10A32AB0_Element*);
     }
     else if (NewCount <= Capacity - 16)
     {
         if (NewCount == 0)
         {
-            GetAllocator()->Virtual5(Unknown08);
-            Unknown08 = 0;
-            Unknown04 = 0;
+            GetAllocator()->Virtual5(m_Elements);
+            m_Elements = 0;
+            m_CapacityBytes = 0;
         }
         else
         {
             int NewCapacity = (NewCount & ~15) + 16;
-            Unknown08 = (Class_10A32AB0_Element**)GetAllocator()->Virtual3(Unknown08, NewCapacity * sizeof(Class_10A32AB0_Element*), 0, 0, 0, 0);
-            Unknown04 = NewCapacity * sizeof(Class_10A32AB0_Element*);
+            m_Elements = (Class_10A32AB0_Element**)GetAllocator()->Virtual3(m_Elements, NewCapacity * sizeof(Class_10A32AB0_Element*), 0, 0, 0, 0);
+            m_CapacityBytes = NewCapacity * sizeof(Class_10A32AB0_Element*);
         }
     }
     for (int j = OldCount; j < NewCount; j++)
     {
-        Class_10A32AB0_Element** Element = Unknown08 + j;
+        Class_10A32AB0_Element** Element = m_Elements + j;
         if (Element)
         {
             *Element = 0;
         }
     }
     GetAllocator()->Virtual9();
-    Unknown00 = NewCount;
+    m_Count = NewCount;
 }

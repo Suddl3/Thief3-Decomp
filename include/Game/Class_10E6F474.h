@@ -12,13 +12,13 @@ class Class_10E6F474
 public:
     virtual ~Class_10E6F474();
 
-    int FUN_10abb4e0(int A);
-    void FUN_10abb720(int Item);
+    int FindMatchIndex(int A);
+    void AddUnique(int Item);
 
-    int Unknown04;
+    int m_EntryCount;
     char Pad08[0x4];
     Class_10ABB4E0_Element** Unknown0C;
-    cIntArray Unknown10;
+    cIntArray m_MembraneMaterials;
 };
 
 #endif // GAME_CLASS_10E6F474_H

@@ -6,12 +6,12 @@
 class Class_10E6DA64
 {
 public:
-    Class_10E6DA64* FUN_10aab8b0();
+    Class_10E6DA64* Init();
 
     void** Unknown00;
-    int Unknown04;
+    int m_Count;
     int Unknown08;
-    int Unknown0C;
+    int m_Elements;
     int Unknown10;
     int Unknown14;
     int Unknown18;

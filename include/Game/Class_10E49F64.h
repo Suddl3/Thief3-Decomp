@@ -14,13 +14,13 @@ public:
     virtual void Virtual5();
     virtual void Virtual6();
     virtual void Virtual7();
-    virtual int FUN_10934a40(int A);
+    virtual int SetStreamSource(int A);
 
     char Unknown04[0x10];
-    int Unknown14;
+    int m_Buffer;
     char Unknown18[4];
-    int Unknown1C;
-    int Unknown20;
+    int m_Size;
+    int m_Stride;
 };
 
 #endif // GAME_CLASS_10E49F64_H

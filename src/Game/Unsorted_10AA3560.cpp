@@ -9,11 +9,11 @@ Class_10905A90_Member* GetAllocator();
 // Ion Storm's placement new (0x10905C10).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 
-// FUN_10aa3550 is the constructor: it stores the vtable and returns this.
+// Construct is the constructor: it stores the vtable and returns this.
 class Class_10E6D498
 {
 public:
-    Class_10E6D498* FUN_10aa3550();
+    Class_10E6D498* Construct();
 
     void* Unknown00;
 };
@@ -25,7 +25,7 @@ Class_10E6D498* Class_10E5D9D8::FUN_10aa3580()
     Class_10E6D498* Result = 0;
     void* Memory = operator new(sizeof(Class_10E6D498), 0, 0, 0, 0, 0);
     if (Memory)
-        Result = static_cast<Class_10E6D498*>(Memory)->FUN_10aa3550();
+        Result = static_cast<Class_10E6D498*>(Memory)->Construct();
     GetAllocator()->Virtual9();
     return Result;
 }

@@ -39,10 +39,10 @@ struct Struct_10925390
     int Unknown40;
 };
 
-// FUNCTION: 0x10924BE0 ?FUN_10924be0@Class_10924AE0@@QAE_NPAVClass_10924BE0@@@Z
-bool Class_10924AE0::FUN_10924be0(Class_10924BE0* A)
+// FUNCTION: 0x10924BE0 ?Initialize@Class_10924AE0@@QAE_NPAVClass_10924BE0@@@Z
+bool Class_10924AE0::Initialize(Class_10924BE0* A)
 {
-    if (!Unknown00)
+    if (!m_Initialized)
     {
         Unknown04 = A;
         A->Virtual1();
@@ -53,7 +53,7 @@ bool Class_10924AE0::FUN_10924be0(Class_10924BE0* A)
         Unknown04->Virtual32(&Unknown08);
         Unknown04->Virtual33(&Unknown0C);
         FUN_10924ae0();
-        Unknown00 = true;
+        m_Initialized = true;
     }
     return true;
 }

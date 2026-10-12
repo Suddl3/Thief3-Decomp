@@ -14,7 +14,7 @@ public:
     ~Class_10924B70();
 
     void FUN_109243f0();
-    void FUN_10924a90();
+    void Release();
 
     Class_1094D700 Unknown30;
     Class_1094D9A0 Unknown48[3];

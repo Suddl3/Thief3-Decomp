@@ -119,10 +119,10 @@ public:
 
     void FUN_10b55830();
     void FUN_10b55930();
-    void FUN_10b559a0(int A, int B);
+    void SetState(int A, int B);
 
     char Unknown04[0xE0];
-    int Unknown0E4;
+    int m_State;
     char PadE8[0x44];
     int Unknown12C;
 };

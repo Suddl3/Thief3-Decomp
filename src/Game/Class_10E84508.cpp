@@ -41,11 +41,11 @@ class Class_10E84508 : public Class_10E87B68
 {
 public:
     Class_10E84508* FUN_10b64410();
-    Class_109081E0 FUN_10b642c0();
+    Class_109081E0 GetTitle();
 };
 
-// FUNCTION: 0x10B642C0 ?FUN_10b642c0@Class_10E84508@@QAE?AVClass_109081E0@@XZ
-Class_109081E0 Class_10E84508::FUN_10b642c0()
+// FUNCTION: 0x10B642C0 ?GetTitle@Class_10E84508@@QAE?AVClass_109081E0@@XZ
+Class_109081E0 Class_10E84508::GetTitle()
 {
     Class_109081E0 Local = FUN_1090a660("<string=T_TabScreenTitleLoadGameTitle>");
     return Local;

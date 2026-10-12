@@ -6,13 +6,13 @@
 class Class_10E97ADC
 {
 public:
-    Class_10E97ADC* FUN_10bff720();
+    Class_10E97ADC* Init();
 
     void** Unknown00;
     int Unknown04;
     int Unknown08;
     int Unknown0C;
-    int Unknown10;
+    int m_PathPoints;
     int Unknown14;
     int Unknown18;
     int Unknown1C;

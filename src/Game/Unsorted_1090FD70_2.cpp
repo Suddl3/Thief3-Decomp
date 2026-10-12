@@ -16,14 +16,14 @@ public:
     int Unknown04;
 };
 
-// FUNCTION: 0x1090FD70 ?FUN_1090fd70@Class_10910040@@QAEXH@Z
-void Class_10910040::FUN_1090fd70(int NewCount)
+// FUNCTION: 0x1090FD70 ?SetCount@Class_10910040@@QAEXH@Z
+void Class_10910040::SetCount(int NewCount)
 {
-    int OldCount = Unknown00;
-    int Capacity = !Unknown08 ? 0 : Unknown04 / sizeof(Class_1090ECF0);
+    int OldCount = m_Count;
+    int Capacity = !m_Data ? 0 : m_CapacityBytes / sizeof(Class_1090ECF0);
     for (int i = NewCount; i < OldCount; i++)
     {
-        Class_1090ECF0* Element = (Class_1090ECF0*)((char*)Unknown08 + i * sizeof(Class_1090ECF0));
+        Class_1090ECF0* Element = (Class_1090ECF0*)((char*)m_Data + i * sizeof(Class_1090ECF0));
         Element->FUN_1090ecf0();
     }
     GetAllocator()->Virtual8(0, 0);
@@ -32,29 +32,29 @@ void Class_10910040::FUN_1090fd70(int NewCount)
         int NewCapacity = NewCount;
         if (Capacity)
             NewCapacity = (NewCount & ~15) + 16;
-        void* Block = GetAllocator()->Virtual3(Unknown08, NewCapacity * sizeof(Class_1090ECF0), 0, 0, 0, 0);
-        Unknown04 = NewCapacity * sizeof(Class_1090ECF0);
-        Unknown08 = Block;
+        void* Block = GetAllocator()->Virtual3(m_Data, NewCapacity * sizeof(Class_1090ECF0), 0, 0, 0, 0);
+        m_CapacityBytes = NewCapacity * sizeof(Class_1090ECF0);
+        m_Data = Block;
     }
     else if (NewCount <= Capacity - 16)
     {
         if (NewCount == 0)
         {
-            GetAllocator()->Virtual5(Unknown08);
-            Unknown08 = 0;
-            Unknown04 = 0;
+            GetAllocator()->Virtual5(m_Data);
+            m_Data = 0;
+            m_CapacityBytes = 0;
         }
         else
         {
             int NewCapacity = (NewCount & ~15) + 16;
-            void* Block = GetAllocator()->Virtual3(Unknown08, NewCapacity * sizeof(Class_1090ECF0), 0, 0, 0, 0);
-            Unknown04 = NewCapacity * sizeof(Class_1090ECF0);
-            Unknown08 = Block;
+            void* Block = GetAllocator()->Virtual3(m_Data, NewCapacity * sizeof(Class_1090ECF0), 0, 0, 0, 0);
+            m_CapacityBytes = NewCapacity * sizeof(Class_1090ECF0);
+            m_Data = Block;
         }
     }
     for (int j = OldCount; j < NewCount; j++)
     {
-        Class_1090ECF0* Element = (Class_1090ECF0*)((char*)Unknown08 + j * sizeof(Class_1090ECF0));
+        Class_1090ECF0* Element = (Class_1090ECF0*)((char*)m_Data + j * sizeof(Class_1090ECF0));
         if (Element)
         {
             Element->Unknown00 = 0;
@@ -62,5 +62,5 @@ void Class_10910040::FUN_1090fd70(int NewCount)
         }
     }
     GetAllocator()->Virtual9();
-    Unknown00 = NewCount;
+    m_Count = NewCount;
 }

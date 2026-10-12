@@ -9,10 +9,10 @@ struct Struct_1092E970
     int Unknown08;
 };
 
-// FUNCTION: 0x1092E970 ?FUN_1092e970@Class_1092E8F0@@QAEXABV1@@Z
-void Class_1092E8F0::FUN_1092e970(const Class_1092E8F0& Other)
+// FUNCTION: 0x1092E970 ?CopyFrom@Class_1092E8F0@@QAEXABV1@@Z
+void Class_1092E8F0::CopyFrom(const Class_1092E8F0& Other)
 {
-    FUN_1091f380(Other.Unknown00);
-    for (int i = 0; i < Unknown00; i++)
-        Unknown08[i] = Other.Unknown08[i];
+    FUN_1091f380(Other.m_Count);
+    for (int i = 0; i < m_Count; i++)
+        m_Data[i] = Other.m_Data[i];
 }

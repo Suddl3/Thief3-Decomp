@@ -20,8 +20,8 @@ class Class_10E6F474
 public:
     virtual ~Class_10E6F474();
 
-    cIntArray Unknown04;
-    cIntArray Unknown10;
+    cIntArray m_EntryCount;
+    cIntArray m_MembraneMaterials;
 };
 
 // FUNCTION: 0x10ABB600 ??1Class_10E6F474@@UAE@XZ

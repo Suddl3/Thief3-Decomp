@@ -1,7 +1,7 @@
 // Game/Unsorted_10AB7330.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10905A90_Member.h"
-#include "Game/Class_10AB7500.h"
+#include "Game/cDifficulty.h"
 
 Class_10905A90_Member* GetAllocator();
 
@@ -46,8 +46,8 @@ public:
     char Pad00[0x1];
 };
 
-// FUNCTION: 0x10AB7330 ?FUN_10ab7330@Class_10AB7500@@QAEXXZ
-void Class_10AB7500::FUN_10ab7330()
+// FUNCTION: 0x10AB7330 ?LoadDifficulty@cDifficulty@@QAEXXZ
+void cDifficulty::LoadDifficulty()
 {
     Class_109081E0 Name;
     if (Config::Instance()->GetString("T3Settings", "CurrentDifficulty", Name, 0))

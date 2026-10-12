@@ -2,8 +2,8 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_1091CB20.h"
 
-// FUNCTION: 0x1091CB80 ?FUN_1091cb80@Class_1091CB20@@QAEHI@Z
-int Class_1091CB20::FUN_1091cb80(unsigned int Index)
+// FUNCTION: 0x1091CB80 ?GetValue@Class_1091CB20@@QAEHI@Z
+int Class_1091CB20::GetValue(unsigned int Index)
 {
     if (Index >= Count())
         Index = Count() - 1;

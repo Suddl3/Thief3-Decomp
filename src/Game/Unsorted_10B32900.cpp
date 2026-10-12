@@ -32,7 +32,7 @@ public:
     virtual void Virtual0();
 
     void FUN_10b32750(Class_1098E330* A);
-    void FUN_10b327c0(Class_10B21350* A);
+    void PlayBowToArrowAttach(Class_10B21350* A);
     void FUN_10b329f0(Class_1098E330* A);
 
     char Unknown04[0x18];
@@ -55,10 +55,10 @@ void Class_10B32750::FUN_10b329f0(Class_1098E330* A)
     if (Y == DAT_10eafbdc && Unknown32)
         FUN_10b32750(A);
     if (Unknown3C && !Unknown30 && Y < 0.15f && Unknown1C - Y > A->Unknown454 * 0.01f)
-        FUN_10b327c0(A);
+        PlayBowToArrowAttach(A);
     if (((Class_10A18FA0*)FUN_10a18fc0())->FUN_10a18fa0(12))
     {
-        FUN_10b327c0(A);
+        PlayBowToArrowAttach(A);
         Unknown1C = Y;
         return;
     }

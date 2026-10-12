@@ -21,19 +21,19 @@ public:
 class Class_10E6F474
 {
 public:
-    void FUN_10abb720(int Item);
+    void AddUnique(int Item);
 
     char Unknown00[0x10];
-    cIntArray Unknown10;
+    cIntArray m_MembraneMaterials;
 };
 
-// FUNCTION: 0x10ABB720 ?FUN_10abb720@Class_10E6F474@@QAEXH@Z
-void Class_10E6F474::FUN_10abb720(int Item)
+// FUNCTION: 0x10ABB720 ?AddUnique@Class_10E6F474@@QAEXH@Z
+void Class_10E6F474::AddUnique(int Item)
 {
-    for (int i = 0; i < Unknown10.Unknown00; i++)
+    for (int i = 0; i < m_MembraneMaterials.Unknown00; i++)
     {
-        if (Item == Unknown10.Unknown08[i])
+        if (Item == m_MembraneMaterials.Unknown08[i])
             return;
     }
-    Unknown10.Append(Item);
+    m_MembraneMaterials.Append(Item);
 }

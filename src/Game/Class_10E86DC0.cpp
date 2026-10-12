@@ -140,7 +140,7 @@ public:
 class Class_10E86DC0 : public Class_10B59730
 {
 public:
-    virtual void FUN_10b6e090(int A);
+    virtual void Update(int A);
 
     char Unknown154[0x178];
     Struct_10B6E090* Unknown2CC;
@@ -148,8 +148,8 @@ public:
     Struct_10B6E090* Unknown2E0;
 };
 
-// FUNCTION: 0x10B6E090 ?FUN_10b6e090@Class_10E86DC0@@UAEXH@Z
-void Class_10E86DC0::FUN_10b6e090(int A)
+// FUNCTION: 0x10B6E090 ?Update@Class_10E86DC0@@UAEXH@Z
+void Class_10E86DC0::Update(int A)
 {
     FUN_10b79860(A);
     if (Unknown2CC && Unknown2CC->Unknown1A4 && Unknown150 != 4)

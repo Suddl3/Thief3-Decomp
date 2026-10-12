@@ -12,5 +12,5 @@ class Item_10943600;
 // FUNCTION: 0x10C609D0 ??1Class_10C609D0@@QAE@XZ
 Class_10C609D0::~Class_10C609D0()
 {
-    ((Class_10C60480*)this)->FUN_10c60480();
+    ((Class_10C60480*)this)->Clear();
 }

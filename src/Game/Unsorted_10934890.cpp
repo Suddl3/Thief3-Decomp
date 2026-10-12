@@ -77,14 +77,14 @@ int Class_10E49EE0::FUN_10934a20()
     return m_Member->Virtual12();
 }
 
-// FUNCTION: 0x10934A40 ?FUN_10934a40@Class_10E49F64@@UAEHH@Z
-int Class_10E49F64::FUN_10934a40(int A)
+// FUNCTION: 0x10934A40 ?SetStreamSource@Class_10E49F64@@UAEHH@Z
+int Class_10E49F64::SetStreamSource(int A)
 {
-    if (Unknown14 == 0)
+    if (m_Buffer == 0)
         return 0x80040721;
-    if (Unknown1C == 0)
+    if (m_Size == 0)
         return 0x80040722;
-    DAT_10f31be0->SetStreamSource(Unknown14, Unknown20);
+    DAT_10f31be0->SetStreamSource(m_Buffer, m_Stride);
     return 0;
 }
 

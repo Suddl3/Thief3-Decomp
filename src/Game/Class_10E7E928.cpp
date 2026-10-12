@@ -28,7 +28,7 @@ public:
 class Class_10E7E928
 {
 public:
-    void FUN_10b327c0(Class_10B21350* A);
+    void PlayBowToArrowAttach(Class_10B21350* A);
 
     char Unknown00[0x30];
     bool Unknown30;
@@ -42,8 +42,8 @@ extern const char* DAT_10ff3810;
 
 extern Struct_10AA3520* DAT_10f35dec;
 
-// FUNCTION: 0x10B327C0 ?FUN_10b327c0@Class_10E7E928@@QAEXPAVClass_10B21350@@@Z
-void Class_10E7E928::FUN_10b327c0(Class_10B21350* A)
+// FUNCTION: 0x10B327C0 ?PlayBowToArrowAttach@Class_10E7E928@@QAEXPAVClass_10B21350@@@Z
+void Class_10E7E928::PlayBowToArrowAttach(Class_10B21350* A)
 {
     if (!Unknown30)
     {

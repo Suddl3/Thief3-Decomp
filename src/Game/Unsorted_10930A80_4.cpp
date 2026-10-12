@@ -25,14 +25,14 @@ public:
     int Unknown40;
 };
 
-// FUNCTION: 0x10931F10 ?FUN_10931f10@Class_109262B0@@QAEXABV1@@Z
-void Class_109262B0::FUN_10931f10(const Class_109262B0& Other)
+// FUNCTION: 0x10931F10 ?CopyFrom@Class_109262B0@@QAEXABV1@@Z
+void Class_109262B0::CopyFrom(const Class_109262B0& Other)
 {
-    FUN_10926020(Other.Unknown00);
-    for (int i = 0; i < Unknown00; i++)
+    FUN_10926020(Other.m_Count);
+    for (int i = 0; i < m_Count; i++)
     {
-        Class_10931F10_Unknown08* Src = (Class_10931F10_Unknown08*)Other.Unknown08 + i;
-        Class_10931F10_Unknown08* Dst = (Class_10931F10_Unknown08*)Unknown08 + i;
+        Class_10931F10_Unknown08* Src = (Class_10931F10_Unknown08*)Other.m_Data + i;
+        Class_10931F10_Unknown08* Dst = (Class_10931F10_Unknown08*)m_Data + i;
         Dst->Unknown00 = Src->Unknown00;
         Dst->Unknown0C = Src->Unknown0C;
         cIntArray& Dst10 = Dst->Unknown10;

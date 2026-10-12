@@ -132,7 +132,7 @@ public:
     virtual void Virtual119();
 
     void FUN_10b79860(int A);
-    void FUN_10b67ee0(int A);
+    void Update(int A);
     bool FUN_10b79560(int A, int B, bool C);
 
     char Unknown04[0x14C];
@@ -151,8 +151,8 @@ bool Class_10E858D0::FUN_10b67ea0(int A, int B, bool C)
     return false;
 }
 
-// FUNCTION: 0x10B67EE0 ?FUN_10b67ee0@Class_10E858D0@@QAEXH@Z
-void Class_10E858D0::FUN_10b67ee0(int A)
+// FUNCTION: 0x10B67EE0 ?Update@Class_10E858D0@@QAEXH@Z
+void Class_10E858D0::Update(int A)
 {
     FUN_10b79860(A);
     if (Unknown2E0 && Unknown2E0->Unknown1A4 && Unknown150 != 4)

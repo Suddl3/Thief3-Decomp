@@ -31,14 +31,14 @@ void Class_10A32BF0::FUN_10a32bf0()
     }
 }
 
-// FUNCTION: 0x10A32D60 ?FUN_10a32d60@Class_10A32D60@@QAEXXZ
-void Class_10A32D60::FUN_10a32d60()
+// FUNCTION: 0x10A32D60 ?Clear@Class_10A32D60@@QAEXXZ
+void Class_10A32D60::Clear()
 {
-    FUN_10a32c30(0);
-    if (Unknown04)
+    SetCount(0);
+    if (m_CapacityBytes)
     {
-        GetAllocator()->Virtual5(Unknown08);
-        Unknown08 = 0;
-        Unknown04 = 0;
+        GetAllocator()->Virtual5(m_Elements);
+        m_Elements = 0;
+        m_CapacityBytes = 0;
     }
 }

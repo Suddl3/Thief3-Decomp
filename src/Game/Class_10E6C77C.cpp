@@ -26,13 +26,13 @@ public:
     virtual void Virtual7();
     virtual void Virtual8();
     virtual void Virtual9();
-    virtual void FUN_10a8d0a0(int A, void* Stream);
+    virtual void WriteValue(int A, void* Stream);
 
-    FName Unknown04;
+    FName m_Name;
 };
 
-// FUNCTION: 0x10A8D0A0 ?FUN_10a8d0a0@Class_10E6C77C@@UAEXHPAX@Z
-void Class_10E6C77C::FUN_10a8d0a0(int A, void* Stream)
+// FUNCTION: 0x10A8D0A0 ?WriteValue@Class_10E6C77C@@UAEXHPAX@Z
+void Class_10E6C77C::WriteValue(int A, void* Stream)
 {
-    WriteString(Stream, (int*)&Unknown04.FUN_10af9730());
+    WriteString(Stream, (int*)&m_Name.FUN_10af9730());
 }

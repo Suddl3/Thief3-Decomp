@@ -9,11 +9,11 @@ class Class_10E871D0 : public Window
 {
 public:
     void FUN_10b70ac0(int A);
-    void FUN_10b70f20(int A);
+    void Update(int A);
 };
 
-// FUNCTION: 0x10B70F20 ?FUN_10b70f20@Class_10E871D0@@QAEXH@Z
-void Class_10E871D0::FUN_10b70f20(int A)
+// FUNCTION: 0x10B70F20 ?Update@Class_10E871D0@@QAEXH@Z
+void Class_10E871D0::Update(int A)
 {
     FUN_10a53560(A);
     if (FUN_10b70460()->Unknown102F4 > 0)

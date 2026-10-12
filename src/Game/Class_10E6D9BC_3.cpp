@@ -14,7 +14,7 @@ public:
 class Class_10E6D9BC
 {
 public:
-    int FUN_10aaa050(Class_10AAA050_Param* Writer);
+    int Write(Class_10AAA050_Param* Writer);
 
     char Unknown00[0x4];
     Class_10B36120 Unknown04;
@@ -30,8 +30,8 @@ public:
     int Unknown30;
 };
 
-// FUNCTION: 0x10AAA050 ?FUN_10aaa050@Class_10E6D9BC@@QAEHPAVClass_10AAA050_Param@@@Z
-int Class_10E6D9BC::FUN_10aaa050(Class_10AAA050_Param* Writer)
+// FUNCTION: 0x10AAA050 ?Write@Class_10E6D9BC@@QAEHPAVClass_10AAA050_Param@@@Z
+int Class_10E6D9BC::Write(Class_10AAA050_Param* Writer)
 {
     Writer->Virtual0(Unknown04.FUN_10b36120());
     Writer->Virtual0(Unknown08);

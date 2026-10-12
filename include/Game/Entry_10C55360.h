@@ -3,12 +3,12 @@
 #ifndef GAME_ENTRY_10C55360_H
 #define GAME_ENTRY_10C55360_H
 
-#include "Game/Class_10AB5B20.h"
+#include "Game/cRefPtr.h"
 
 struct Entry_10C55360
 {
     char Unknown00[0x14];
-    Class_10AB5B20 Value;
+    cRefPtr Value;
 };
 
 #endif // GAME_ENTRY_10C55360_H

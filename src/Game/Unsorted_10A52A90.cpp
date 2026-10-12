@@ -1,7 +1,7 @@
 // Game/Unsorted_10A52A90.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10A52B30.h"
-#include "Game/Class_10E67FB0.h"
+#include "Game/cFloatInterpolator.h"
 #include "Game/Class_10E67FD0.h"
 #include "Game/WindowManager.h"
 
@@ -16,17 +16,17 @@ void Class_10E67FD0::FUN_10a52a90(int A)
         Virtual88(Virtual54());
 }
 
-// FUNCTION: 0x10A52AF0 ?FUN_10a52af0@Class_10E67FB0@@UAEXM@Z
-void Class_10E67FB0::FUN_10a52af0(float DeltaTime)
+// FUNCTION: 0x10A52AF0 ?Update@cFloatInterpolator@@UAEXM@Z
+void cFloatInterpolator::Update(float DeltaTime)
 {
-    if (Unknown14)
+    if (m_Finished)
         return;
-    Unknown1C += DeltaTime;
-    Unknown04 = Unknown08 + Unknown10 * (Unknown1C / Unknown18);
-    if (Unknown1C >= Unknown18)
+    m_Elapsed += DeltaTime;
+    m_Value = m_Start + m_Delta * (m_Elapsed / m_Duration);
+    if (m_Elapsed >= m_Duration)
     {
-        Unknown04 = Unknown0C;
-        Unknown14 = true;
+        m_Value = m_End;
+        m_Finished = true;
     }
 }
 

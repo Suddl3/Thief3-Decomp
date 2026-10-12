@@ -39,7 +39,7 @@ void FUN_10919240(Class_1091E940* A, int B)
     DAT_10f2c8c4 = B;
     DAT_10f2c8c0 = A;
     GDirect3DDevice8->SetViewport(&DAT_10f2c780);
-    A->FUN_1091ea50(&DAT_10f2c780, 1);
+    A->SetViewport(&DAT_10f2c780, 1);
     A->FUN_1091eb80();
     DAT_10f319a0->Class_10E6D8F0::FUN_10c3e130((int)A);
     DAT_10f319a0->Unknown18 = DAT_10f2c780;

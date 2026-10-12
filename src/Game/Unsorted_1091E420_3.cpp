@@ -5,7 +5,7 @@
 #include "Game/IDirect3DDevice8.h"
 #include "Game/Struct_10917D20.h"
 
-// The D3DVIEWPORT8 FUN_1091ea50 copies in (its Width and Height are DWORDs).
+// The D3DVIEWPORT8 SetViewport copies in (its Width and Height are DWORDs).
 struct Struct_10924210
 {
     unsigned int X;
@@ -29,15 +29,15 @@ extern IDirect3DDevice8* GDirect3DDevice8;
 class Class_1091E940
 {
 public:
-    void FUN_1091e940(float A, bool B);
-    void FUN_1091ea50(Struct_10924210* A, bool B);
+    void SetProjection(float A, bool B);
+    void SetViewport(Struct_10924210* A, bool B);
     void FUN_1091eb80();
     void FUN_1091e690();
 
     int Unknown00;
     Struct_10917D20 Unknown04;
     char Unknown44[0x20];
-    D3DXMATRIX Unknown64;
+    D3DXMATRIX m_Projection;
     D3DXMATRIX Unknown0A4;
     D3DXMATRIX Unknown0E4;
     D3DXMATRIX Unknown124;
@@ -45,36 +45,36 @@ public:
     float Unknown17C;
     float Unknown180;
     int Unknown184;
-    float Unknown188;
-    float Unknown18C;
-    float Unknown190;
-    float Unknown194;
+    float m_ViewportWidth;
+    float m_ViewportHeight;
+    float m_HalfWidth;
+    float m_HalfHeight;
     float Unknown198;
     float Unknown19C;
 };
 
-// FUNCTION: 0x1091EA50 ?FUN_1091ea50@Class_1091E940@@QAEXPAUStruct_10924210@@_N@Z
-void Class_1091E940::FUN_1091ea50(Struct_10924210* A, bool B)
+// FUNCTION: 0x1091EA50 ?SetViewport@Class_1091E940@@QAEXPAUStruct_10924210@@_N@Z
+void Class_1091E940::SetViewport(Struct_10924210* A, bool B)
 {
     Viewport = *A;
-    Unknown188 = (float)Viewport.Width;
-    Unknown18C = (float)Viewport.Height;
-    float Q = Unknown188 / Unknown18C;
-    FUN_10d68fc9(&Unknown64, Unknown17C / Q, Q, Unknown180, Unknown184);
-    GDirect3DDevice8->SetTransform(3, &Unknown64);
-    float W = Unknown188 * 0.5f;
-    Unknown190 = W;
-    float H = Unknown18C * 0.5f;
-    Unknown0A4 = Unknown64;
-    Unknown194 = H;
-    Unknown198 = W * Unknown64.m[0][0];
-    Unknown19C = -(H * Unknown64.m[1][1]);
+    m_ViewportWidth = (float)Viewport.Width;
+    m_ViewportHeight = (float)Viewport.Height;
+    float Q = m_ViewportWidth / m_ViewportHeight;
+    FUN_10d68fc9(&m_Projection, Unknown17C / Q, Q, Unknown180, Unknown184);
+    GDirect3DDevice8->SetTransform(3, &m_Projection);
+    float W = m_ViewportWidth * 0.5f;
+    m_HalfWidth = W;
+    float H = m_ViewportHeight * 0.5f;
+    Unknown0A4 = m_Projection;
+    m_HalfHeight = H;
+    Unknown198 = W * m_Projection.m[0][0];
+    Unknown19C = -(H * m_Projection.m[1][1]);
     if (B)
     {
         FUN_1091e690();
     }
     else
     {
-        FUN_10d67f9a(&Unknown124, &Unknown0E4, &Unknown64);
+        FUN_10d67f9a(&Unknown124, &Unknown0E4, &m_Projection);
     }
 }

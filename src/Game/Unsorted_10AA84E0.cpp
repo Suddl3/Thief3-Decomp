@@ -13,7 +13,7 @@ public:
     virtual void Virtual0();
     virtual void Virtual1();
     virtual void Virtual2();
-    virtual void FUN_10aa90b0(void* A, int, int);
+    virtual void WriteToStream(void* A, int, int);
 
     char Unknown04[4];
     int Unknown08;
@@ -57,8 +57,8 @@ Class_10E6D990::Class_10E6D990()
     Unknown20.FUN_10ab37d0();
 }
 
-// FUNCTION: 0x10AA90B0 ?FUN_10aa90b0@Class_10E6C290@@UAEXPAXHH@Z
-void Class_10E6C290::FUN_10aa90b0(void* A, int, int)
+// FUNCTION: 0x10AA90B0 ?WriteToStream@Class_10E6C290@@UAEXPAXHH@Z
+void Class_10E6C290::WriteToStream(void* A, int, int)
 {
     WriteInt(A, Unknown08);
     for (int i = 0; i < Unknown08; i++)

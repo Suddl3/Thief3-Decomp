@@ -15,9 +15,9 @@ public:
 // FUNCTION: 0x10A84680 ?FUN_10a84680@Class_10E6C364@@UAEHH@Z
 int Class_10E6C364::FUN_10a84680(int A)
 {
-    for (int i = 0; i < Unknown08; i++)
+    for (int i = 0; i < m_Count; i++)
     {
-        if (Unknown10[i]->Virtual4(A))
+        if (m_Entries[i]->Virtual4(A))
             return 1;
     }
     return 0;

@@ -28,8 +28,8 @@ void Class_10C27410::FUN_10c27410(int A)
     }
 }
 
-// FUNCTION: 0x10C27460 ?FUN_10c27460@Class_10E99350@@UAEXPAVClass_10C27460_Param@@@Z
-void Class_10E99350::FUN_10c27460(Class_10C27460_Param* p1)
+// FUNCTION: 0x10C27460 ?Serialize@Class_10E99350@@UAEXPAVClass_10C27460_Param@@@Z
+void Class_10E99350::Serialize(Class_10C27460_Param* p1)
 {
     p1->Virtual1(&Unknown04, 4);
 }

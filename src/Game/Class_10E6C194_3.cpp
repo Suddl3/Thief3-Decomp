@@ -19,13 +19,13 @@ public:
     virtual void Virtual1();
     virtual void Virtual2();
     virtual void Virtual3();
-    virtual int FUN_10aa8240(Class_10AA8240* Obj);
+    virtual int Read(Class_10AA8240* Obj);
 
     Class_109081E0 Unknown04;
 };
 
-// FUNCTION: 0x10AA8240 ?FUN_10aa8240@Class_10E6C194@@UAEHPAVClass_10AA8240@@@Z
-int Class_10E6C194::FUN_10aa8240(Class_10AA8240* Obj)
+// FUNCTION: 0x10AA8240 ?Read@Class_10E6C194@@UAEHPAVClass_10AA8240@@@Z
+int Class_10E6C194::Read(Class_10AA8240* Obj)
 {
     Unknown04 = Obj->Virtual2();
     return 1;

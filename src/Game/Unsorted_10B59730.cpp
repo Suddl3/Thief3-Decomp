@@ -8,11 +8,11 @@ Class_10905A90_Member* GetAllocator();
 // FUNCTION: 0x10B59770 ?FUN_10b59770@Class_10B59770@@QAEXXZ
 void Class_10B59770::FUN_10b59770()
 {
-    FUN_10abc210(0);
-    if (Unknown04)
+    Resize(0);
+    if (m_AllocBytes)
     {
         GetAllocator()->Virtual5(Unknown08);
         Unknown08 = 0;
-        Unknown04 = 0;
+        m_AllocBytes = 0;
     }
 }

@@ -29,12 +29,12 @@ Class_10E664A4::Class_10E664A4()
 {
 }
 
-// FUNCTION: 0x10A34D50 ?FUN_10a34d50@Class_10A34D50@@QAEHABUEntry_10A34D50@@@Z
-int Class_10A34D50::FUN_10a34d50(const Entry_10A34D50& Item)
+// FUNCTION: 0x10A34D50 ?Append@Class_10A34D50@@QAEHABUEntry_10A34D50@@@Z
+int Class_10A34D50::Append(const Entry_10A34D50& Item)
 {
-    int Index = Unknown00;
+    int Index = m_Count;
     FUN_10a33fd0(Index + 1);
-    Unknown08[Index] = Item;
+    m_Items[Index] = Item;
     return Index;
 }
 

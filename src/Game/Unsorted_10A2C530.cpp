@@ -23,10 +23,10 @@ bool Class_10A2C2F0::FUN_10a2c580(void* A, void* B, void* C)
     return false;
 }
 
-// FUNCTION: 0x10A2C610 ?FUN_10a2c610@Class_10A2C610@@QAEXXZ
-void Class_10A2C610::FUN_10a2c610()
+// FUNCTION: 0x10A2C610 ?Clear@Class_10A2C610@@QAEXXZ
+void Class_10A2C610::Clear()
 {
-    FUN_10a2c3b0(0);
+    SetCount(0);
     if (Unknown04)
     {
         GetAllocator()->Virtual5(Unknown08);

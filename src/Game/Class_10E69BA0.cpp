@@ -124,7 +124,7 @@ public:
     virtual void Virtual103();
     virtual void Virtual104();
     virtual void Virtual105();
-    virtual void FUN_10a5e950(int A);
+    virtual void Update(int A);
     virtual void Virtual107();
     virtual void Virtual108();
     virtual void Virtual109(cIntArray& Found);
@@ -151,7 +151,7 @@ public:
 class Class_10E69BA0 : public Window
 {
 public:
-    virtual void FUN_10a5e950(int A);
+    virtual void Update(int A);
     virtual void Virtual110(cIntArray& Found);
     virtual void Virtual111(cIntArray& Found);
 
@@ -166,8 +166,8 @@ public:
 
 void FUN_10a49da0(cIntArray* Result, void* Source, float Scale, int A, int B, int C);
 
-// FUNCTION: 0x10A5E950 ?FUN_10a5e950@Class_10E69BA0@@UAEXH@Z
-void Class_10E69BA0::FUN_10a5e950(int A)
+// FUNCTION: 0x10A5E950 ?Update@Class_10E69BA0@@UAEXH@Z
+void Class_10E69BA0::Update(int A)
 {
     if (Unknown128 || Unknown12C || Unknown130)
     {

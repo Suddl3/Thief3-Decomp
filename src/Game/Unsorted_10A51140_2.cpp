@@ -160,7 +160,7 @@ public:
     virtual void Virtual118(int A);
 
     void FUN_10a57910(int p1);
-    void FUN_10a51200(bool A);
+    void SetInOverlay(bool A);
 
     char Pad04[0x124];
     TArray<AActor*> Unknown128;
@@ -169,8 +169,8 @@ public:
     int Unknown1F4;
 };
 
-// FUNCTION: 0x10A51200 ?FUN_10a51200@Class_10A57910@@QAEX_N@Z
-void Class_10A57910::FUN_10a51200(bool A)
+// FUNCTION: 0x10A51200 ?SetInOverlay@Class_10A57910@@QAEX_N@Z
+void Class_10A57910::SetInOverlay(bool A)
 {
     if (Unknown128(Virtual71()) != 0)
     {

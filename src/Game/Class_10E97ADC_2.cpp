@@ -100,14 +100,14 @@ class Class_10E97ADC
 {
 public:
     virtual void Virtual0();
-    virtual void FUN_10bff8c0(Class_10BFF8C0_Param* Param);
+    virtual void AddPathPoints(Class_10BFF8C0_Param* Param);
 
     cIntArray Unknown04;
-    cIntArray Unknown10;
+    cIntArray m_PathPoints;
 };
 
-// FUNCTION: 0x10BFF8C0 ?FUN_10bff8c0@Class_10E97ADC@@UAEXPAVClass_10BFF8C0_Param@@@Z
-void Class_10E97ADC::FUN_10bff8c0(Class_10BFF8C0_Param* Param)
+// FUNCTION: 0x10BFF8C0 ?AddPathPoints@Class_10E97ADC@@UAEXPAVClass_10BFF8C0_Param@@@Z
+void Class_10E97ADC::AddPathPoints(Class_10BFF8C0_Param* Param)
 {
     if (Param)
     {
@@ -116,7 +116,7 @@ void Class_10E97ADC::FUN_10bff8c0(Class_10BFF8C0_Param* Param)
             AAIPathPoint* Point = Param->Unknown2C[i];
             if (Point && Point->IsA(AAIPathPoint::StaticClass()))
             {
-                cIntArray* List = &Unknown10;
+                cIntArray* List = &m_PathPoints;
                 int Index = List->Count;
                 List->SetCount(Index + 1);
                 List->Data[Index] = (int)Point;

@@ -6,7 +6,7 @@ class Class_10E6D208
 {
 public:
     virtual ~Class_10E6D208() {}
-    virtual Class_10E6D208* FUN_10a2f220();
+    virtual Class_10E6D208* Clone();
 };
 
 class Class_10E66500 : public Class_10E6D208

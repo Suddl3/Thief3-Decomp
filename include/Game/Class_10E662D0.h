@@ -8,8 +8,8 @@
 class Class_10E662D0 : public Class_10E662C0
 {
 public:
-    virtual Class_10E662D0* FUN_10a2f300();
-    virtual int FUN_10a2ed70(Class_10E662D0* Other);
+    virtual Class_10E662D0* Clone();
+    virtual int IsCompatibleWith(Class_10E662D0* Other);
     virtual void Virtual2();
 
     Class_10E662D0() : Class_10E662C0(0), Unknown08(0) {}

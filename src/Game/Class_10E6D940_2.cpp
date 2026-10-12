@@ -11,7 +11,7 @@ public:
     virtual void Virtual2();
     virtual void Virtual3();
     virtual void Virtual4();
-    virtual int FUN_10aa77c0(Class_10AAB590_Param* Writer);
+    virtual int Write(Class_10AAB590_Param* Writer);
 
     int Unknown04;
     Object_10AA7BF0* Unknown08;
@@ -20,8 +20,8 @@ public:
     int Unknown18;
 };
 
-// FUNCTION: 0x10AA77C0 ?FUN_10aa77c0@Class_10E6D940@@UAEHPAVClass_10AAB590_Param@@@Z
-int Class_10E6D940::FUN_10aa77c0(Class_10AAB590_Param* Writer)
+// FUNCTION: 0x10AA77C0 ?Write@Class_10E6D940@@UAEHPAVClass_10AAB590_Param@@@Z
+int Class_10E6D940::Write(Class_10AAB590_Param* Writer)
 {
     Writer->Virtual0(&Unknown04);
     Writer->Virtual0(Unknown08->Virtual5());

@@ -346,8 +346,8 @@ Class_10E6D0F8* Class_10E6D0F8::FUN_10a99610()
     return this;
 }
 
-// FUNCTION: 0x10A99620 ?FUN_10a99620@Class_10E6D104@@QAEPAV1@XZ
-Class_10E6D104* Class_10E6D104::FUN_10a99620()
+// FUNCTION: 0x10A99620 ?Construct@Class_10E6D104@@QAEPAV1@XZ
+Class_10E6D104* Class_10E6D104::Construct()
 {
     *(void**)this = DAT_10e6d104;
     return this;
@@ -359,8 +359,8 @@ unsigned int FUN_10a99630()
     return 0xb2;
 }
 
-// FUNCTION: 0x10A99640 ?FUN_10a99640@Class_10E6D110@@QAEPAV1@XZ
-Class_10E6D110* Class_10E6D110::FUN_10a99640()
+// FUNCTION: 0x10A99640 ?Construct@Class_10E6D110@@QAEPAV1@XZ
+Class_10E6D110* Class_10E6D110::Construct()
 {
     *(void**)this = DAT_10e6d110;
     return this;
@@ -1139,8 +1139,8 @@ int __stdcall FUN_10aa3520(int A, Class_10AA3520* Obj, int C)
     return 1;
 }
 
-// FUNCTION: 0x10AA3550 ?FUN_10aa3550@Class_10E6D498@@QAEPAV1@XZ
-Class_10E6D498* Class_10E6D498::FUN_10aa3550()
+// FUNCTION: 0x10AA3550 ?Construct@Class_10E6D498@@QAEPAV1@XZ
+Class_10E6D498* Class_10E6D498::Construct()
 {
     *(void**)this = DAT_10e6d498;
     return this;

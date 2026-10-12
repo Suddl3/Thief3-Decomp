@@ -5,8 +5,8 @@
 
 extern Class_1090A780 DAT_10ff7060;
 
-// FUNCTION: 0x10C12A70 ?FUN_10c12a70@Class_10E984BC@@UAEHXZ
-int Class_10E984BC::FUN_10c12a70()
+// FUNCTION: 0x10C12A70 ?IsEmpty@Class_10E984BC@@UAEHXZ
+int Class_10E984BC::IsEmpty()
 {
     return DAT_10ff7060.IsEmpty();
 }

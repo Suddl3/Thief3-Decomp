@@ -51,27 +51,27 @@ void Class_1092D960::FUN_1092d960()
     }
 }
 
-// FUNCTION: 0x1092E8F0 ?FUN_1092e8f0@Class_1092E8F0@@QAEXXZ
-void Class_1092E8F0::FUN_1092e8f0()
+// FUNCTION: 0x1092E8F0 ?Clear@Class_1092E8F0@@QAEXXZ
+void Class_1092E8F0::Clear()
 {
     FUN_1091f380(0);
-    if (Unknown04)
+    if (m_CapacityBytes)
     {
-        GetAllocator()->Virtual5(Unknown08);
-        Unknown08 = 0;
-        Unknown04 = 0;
+        GetAllocator()->Virtual5(m_Data);
+        m_Data = 0;
+        m_CapacityBytes = 0;
     }
 }
 
-// FUNCTION: 0x1092E930 ?FUN_1092e930@Class_1092E930@@QAEXXZ
-void Class_1092E930::FUN_1092e930()
+// FUNCTION: 0x1092E930 ?Clear@Class_1092E930@@QAEXXZ
+void Class_1092E930::Clear()
 {
-    FUN_10a51140(0);
-    if (Unknown04)
+    SetCount(0);
+    if (m_CapacityBytes)
     {
-        GetAllocator()->Virtual5(Unknown08);
-        Unknown08 = 0;
-        Unknown04 = 0;
+        GetAllocator()->Virtual5(m_Data);
+        m_Data = 0;
+        m_CapacityBytes = 0;
     }
 }
 

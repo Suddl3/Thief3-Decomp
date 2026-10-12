@@ -14,10 +14,10 @@ public:
     ~Class_10924100();
 
     bool FUN_109228a0(int A, int B);
-    void FUN_1091f5b0();
+    void Reset();
     void FUN_10924100();
     void FUN_1091f6a0();
-    bool FUN_1091f6e0(Class_10924100_Unknown44* Item);
+    bool Contains(Class_10924100_Unknown44* Item);
     void FUN_10920a30(Class_10A1E620_Inner* Inner);
 
     char Unknown00[0x4];

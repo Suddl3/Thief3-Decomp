@@ -20,17 +20,17 @@ public:
 class Class_10E99350
 {
 public:
-    void FUN_10c274e0();
+    void Empty();
 
     void** VTable;
     int Unknown04;
-    cIntArray Unknown08;
+    cIntArray m_Objects;
 };
 
-// FUNCTION: 0x10C274E0 ?FUN_10c274e0@Class_10E99350@@QAEXXZ
-void Class_10E99350::FUN_10c274e0()
+// FUNCTION: 0x10C274E0 ?Empty@Class_10E99350@@QAEXXZ
+void Class_10E99350::Empty()
 {
-    cIntArray& Array = Unknown08;
+    cIntArray& Array = m_Objects;
     VTable = DAT_10e99350;
     for (int i = 0; i < Array.Unknown00; i++)
         delete Array.Unknown08[i];

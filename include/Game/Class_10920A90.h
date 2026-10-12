@@ -11,10 +11,10 @@ struct Struct_109236B0;
 class Class_10920A90
 {
 public:
-    void FUN_109236b0(Struct_109236B0* A, int B, int C);
+    void VisitTree(Struct_109236B0* A, int B, int C);
     void FUN_10920fa0(Struct_109236B0* A, int B, int C);
     void FUN_00000000(int Child, int B, int C);
-    void FUN_10920a90(Class_10E4AA80* Item);
+    void RemoveItem(Class_10E4AA80* Item);
     void FUN_10923f30(Class_10E4AA80* Obj);
     void FUN_10923490(Class_10E4AA80* Item);
     void FUN_1091f850();
@@ -22,7 +22,7 @@ public:
     char Unknown00[0xC];
     int Unknown0C;
     char Unknown10[0x2C];
-    Class_10A0C5F0 Unknown3C;
+    Class_10A0C5F0 m_Items;
 };
 
 #endif // GAME_CLASS_10920A90_H

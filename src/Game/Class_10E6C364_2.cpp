@@ -9,22 +9,22 @@ class Class_10E6C364
 public:
     virtual void Virtual0();
     virtual void Virtual1();
-    virtual void FUN_10a845a0(void* Stream, int A, int B);
+    virtual void WriteToStream(void* Stream, int A, int B);
 
     int Unknown04;
-    int Unknown08;
+    int m_Count;
     char Unknown0C[4];
-    Class_10A84610_Unknown10** Unknown10;
+    Class_10A84610_Unknown10** m_Entries;
 };
 
-// FUNCTION: 0x10A845A0 ?FUN_10a845a0@Class_10E6C364@@UAEXPAXHH@Z
-void Class_10E6C364::FUN_10a845a0(void* Stream, int A, int B)
+// FUNCTION: 0x10A845A0 ?WriteToStream@Class_10E6C364@@UAEXPAXHH@Z
+void Class_10E6C364::WriteToStream(void* Stream, int A, int B)
 {
     WriteInt(Stream, Unknown04);
-    WriteInt(Stream, Unknown08);
-    for (int i = 0; i < Unknown08; i++)
+    WriteInt(Stream, m_Count);
+    for (int i = 0; i < m_Count; i++)
     {
-        WriteInt(Stream, Unknown10[i]->Virtual1());
-        Unknown10[i]->Virtual2(Stream, A, B);
+        WriteInt(Stream, m_Entries[i]->Virtual1());
+        m_Entries[i]->Virtual2(Stream, A, B);
     }
 }

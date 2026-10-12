@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10925FC0.h"
 #include "Game/Object_10AB5B20.h"
-#include "Game/Class_10AB5B20.h"
+#include "Game/cRefPtr.h"
 
 class cIntArray
 {
@@ -41,8 +41,8 @@ void Class_10925F10::FUN_10925f10(int Item)
     UnknownA4.AddUnique(Item);
 }
 
-// FUNCTION: 0x10925FC0 ?FUN_10925fc0@Class_10925FC0@@QAE?AVClass_10AB5B20@@H@Z
-Class_10AB5B20 Class_10925FC0::FUN_10925fc0(int Index)
+// FUNCTION: 0x10925FC0 ?FUN_10925fc0@Class_10925FC0@@QAE?AVcRefPtr@@H@Z
+cRefPtr Class_10925FC0::FUN_10925fc0(int Index)
 {
     return UnknownCC[Index];
 }

@@ -5,8 +5,8 @@
 #include "Game/Class_1090F080_Node.h"
 #include "Game/Class_1090FF70.h"
 
-// FUNCTION: 0x1090FC80 ?FUN_1090fc80@Class_1090FF70@@QAEXH@Z
-void Class_1090FF70::FUN_1090fc80(int Size)
+// FUNCTION: 0x1090FC80 ?Empty@Class_1090FF70@@QAEXH@Z
+void Class_1090FF70::Empty(int Size)
 {
     for (int i = 0; i < m_Size; i++)
     {

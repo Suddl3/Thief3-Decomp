@@ -13,8 +13,8 @@ void Class_10924100::FUN_1091f6a0()
     }
 }
 
-// FUNCTION: 0x1091F6E0 ?FUN_1091f6e0@Class_10924100@@QAE_NPAVClass_10924100_Unknown44@@@Z
-bool Class_10924100::FUN_1091f6e0(Class_10924100_Unknown44* Item)
+// FUNCTION: 0x1091F6E0 ?Contains@Class_10924100@@QAE_NPAVClass_10924100_Unknown44@@@Z
+bool Class_10924100::Contains(Class_10924100_Unknown44* Item)
 {
     if (Item)
     {

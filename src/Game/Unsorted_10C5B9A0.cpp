@@ -27,8 +27,8 @@ Class_10C5BA80 Class_10C5BFA0::FUN_10c5bfa0()
     return Class_10C5BA80(Unknown00->Unknown04);
 }
 
-// FUNCTION: 0x10C5C3A0 ?FUN_10c5c3a0@Class_10C5C3A0@@QAEXXZ
-void Class_10C5C3A0::FUN_10c5c3a0()
+// FUNCTION: 0x10C5C3A0 ?Init@Class_10C5C3A0@@QAEXXZ
+void Class_10C5C3A0::Init()
 {
     Unknown20 = -1;
     FUN_10c5bf20(0x40);

@@ -3,10 +3,10 @@
 #include "Game/Class_10B59770.h"
 #include "Game/Struct_10B597B0.h"
 
-// FUNCTION: 0x10B597B0 ?FUN_10b597b0@Class_10B59770@@QAEXABV1@@Z
-void Class_10B59770::FUN_10b597b0(const Class_10B59770& Other)
+// FUNCTION: 0x10B597B0 ?CopyFrom@Class_10B59770@@QAEXABV1@@Z
+void Class_10B59770::CopyFrom(const Class_10B59770& Other)
 {
-    FUN_10abc210(Other.Count);
+    Resize(Other.Count);
     for (int i = 0; i < Count; i++)
         Data[i] = Other.Data[i];
 }

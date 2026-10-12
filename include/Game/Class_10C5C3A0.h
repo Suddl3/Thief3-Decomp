@@ -7,15 +7,15 @@ class Class_10C5C3A0
 {
 public:
     void FUN_10c5bf20(int p1);
-    void FUN_10c5c3a0();
-    void FUN_10c5c3b0();
+    void Init();
+    void Release();
 
     int Unknown00;
     int Unknown04;
     char Unknown08[4];
     int Unknown0C;
     char Unknown10[4];
-    void* Unknown14;
+    void* m_Buffer;
     char Pad18[0x8];
     int Unknown20;
 };

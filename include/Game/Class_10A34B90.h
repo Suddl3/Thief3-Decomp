@@ -8,18 +8,18 @@ class Class_10A34B90_Node;
 class Class_10A34B90
 {
 public:
-    void FUN_10a34b90(int A);
-    void FUN_10a35140();
-    void FUN_10a34810(int Size);
-    void FUN_10a34420(Class_10A34B90_Node* Node, int* Key);
+    void Reset(int A);
+    void Release();
+    void Rehash(int Size);
+    void Insert(Class_10A34B90_Node* Node, int* Key);
 
     int Unknown00;
     int Unknown04;
-    int Unknown08;
-    int Unknown0C;
+    int m_BucketBits;
+    int m_BucketCount;
     bool Unknown10;
     char Pad11[0x3];
-    Class_10A34B90_Node** Unknown14;
+    Class_10A34B90_Node** m_Buckets;
 };
 
 #endif // GAME_CLASS_10A34B90_H

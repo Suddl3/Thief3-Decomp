@@ -34,16 +34,16 @@ public:
     virtual void Virtual8();
     virtual void Virtual9();
     virtual void Virtual10();
-    virtual bool FUN_10a8d190(int A, void* Reader);
+    virtual bool ReadValue(int A, void* Reader);
 
-    FName Unknown04;
+    FName m_Name;
 };
 
-// FUNCTION: 0x10A8D190 ?FUN_10a8d190@Class_10E6C77C@@UAE_NHPAX@Z
-bool Class_10E6C77C::FUN_10a8d190(int A, void* Reader)
+// FUNCTION: 0x10A8D190 ?ReadValue@Class_10E6C77C@@UAE_NHPAX@Z
+bool Class_10E6C77C::ReadValue(int A, void* Reader)
 {
     Class_109081E0 Text;
     ReadString(Reader, (int*)&Text);
-    Unknown04 = FName(Text.Unknown00 ? Text.Unknown00 : DAT_10e47660, FNAME_Intrinsic);
+    m_Name = FName(Text.Unknown00 ? Text.Unknown00 : DAT_10e47660, FNAME_Intrinsic);
     return true;
 }

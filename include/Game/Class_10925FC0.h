@@ -3,15 +3,15 @@
 #ifndef GAME_CLASS_10925FC0_H
 #define GAME_CLASS_10925FC0_H
 
-class Class_10AB5B20;
+class cRefPtr;
 
 class Class_10925FC0
 {
 public:
-    Class_10AB5B20 FUN_10925fc0(int Index);
+    cRefPtr FUN_10925fc0(int Index);
 
     char Unknown00[0xcc];
-    Class_10AB5B20* UnknownCC;
+    cRefPtr* UnknownCC;
 };
 
 #endif // GAME_CLASS_10925FC0_H

@@ -41,10 +41,10 @@ public:
 class Class_10E6CE50 : public Class_10AAB5C0
 {
 public:
-    virtual void FUN_10a958f0();
+    virtual void SetTimeRemaining();
 
     char Unknown04[8];
-    int Unknown0C;
+    int m_TimeRemaining;
 };
 
 Class_10905A90_Member* GetAllocator();
@@ -156,8 +156,8 @@ Class_10E6CE1C* Class_10E5D968::FUN_10a95590()
     return Result;
 }
 
-// FUNCTION: 0x10A958F0 ?FUN_10a958f0@Class_10E6CE50@@UAEXXZ
-void Class_10E6CE50::FUN_10a958f0()
+// FUNCTION: 0x10A958F0 ?SetTimeRemaining@Class_10E6CE50@@UAEXXZ
+void Class_10E6CE50::SetTimeRemaining()
 {
-    Unknown0C = ((Class_10AAB5C0_Result*)FUN_10aab5c0())->Virtual7(0);
+    m_TimeRemaining = ((Class_10AAB5C0_Result*)FUN_10aab5c0())->Virtual7(0);
 }

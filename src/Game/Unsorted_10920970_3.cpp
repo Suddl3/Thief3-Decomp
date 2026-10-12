@@ -12,10 +12,10 @@ struct Struct_109236B0
     Struct_109236B0** Unknown14;
 };
 
-// FUNCTION: 0x109236B0 ?FUN_109236b0@Class_10920A90@@QAEXPAUStruct_109236B0@@HH@Z
-void Class_10920A90::FUN_109236b0(Struct_109236B0* A, int B, int C)
+// FUNCTION: 0x109236B0 ?VisitTree@Class_10920A90@@QAEXPAUStruct_109236B0@@HH@Z
+void Class_10920A90::VisitTree(Struct_109236B0* A, int B, int C)
 {
     FUN_10920fa0(A, B, C);
     for (int i = 0; i < A->Unknown0C; i++)
-        FUN_109236b0(A->Unknown14[i], B, C);
+        VisitTree(A->Unknown14[i], B, C);
 }

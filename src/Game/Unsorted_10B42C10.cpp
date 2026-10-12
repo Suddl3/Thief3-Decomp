@@ -136,7 +136,7 @@ public:
     virtual void Virtual103();
     virtual void Virtual104();
     virtual void Virtual105();
-    virtual void FUN_10b42c10(int A);
+    virtual void Update(int A);
 
     char Unknown0EC[0x2C];
     Class_10B314F0* Unknown118;
@@ -222,8 +222,8 @@ public:
     virtual void Virtual70(int A);
 };
 
-// FUNCTION: 0x10B42C10 ?FUN_10b42c10@Class_10E809B8@@UAEXH@Z
-void Class_10E809B8::FUN_10b42c10(int A)
+// FUNCTION: 0x10B42C10 ?Update@Class_10E809B8@@UAEXH@Z
+void Class_10E809B8::Update(int A)
 {
     FUN_10a53560(A);
     Unknown124 += *(float*)&A;

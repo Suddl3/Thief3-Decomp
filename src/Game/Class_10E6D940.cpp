@@ -23,7 +23,7 @@ public:
     virtual ~Class_10E6D940();
     virtual void Virtual1();
     virtual void Virtual2();
-    virtual void FUN_10aa7750(void* Stream, int A, int B);
+    virtual void WriteToStream(void* Stream, int A, int B);
 
     Object_10AA7BA0* Unknown08;
     int Unknown0C;
@@ -32,8 +32,8 @@ public:
     int Unknown18;
 };
 
-// FUNCTION: 0x10AA7750 ?FUN_10aa7750@Class_10E6D940@@UAEXPAXHH@Z
-void Class_10E6D940::FUN_10aa7750(void* Stream, int A, int B)
+// FUNCTION: 0x10AA7750 ?WriteToStream@Class_10E6D940@@UAEXPAXHH@Z
+void Class_10E6D940::WriteToStream(void* Stream, int A, int B)
 {
     WriteInt(Stream, Unknown14);
     WriteInt(Stream, Unknown18);

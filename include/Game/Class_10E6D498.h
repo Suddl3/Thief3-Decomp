@@ -7,7 +7,7 @@ class Class_10E6D498
 {
 public:
     int FUN_10aa3510();
-    Class_10E6D498* FUN_10aa3550();
+    Class_10E6D498* Construct();
 
     void* Unknown00;
     char Pad04[0x1];

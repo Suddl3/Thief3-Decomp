@@ -5,7 +5,7 @@
 #include "Game/Class_10A34B90.h"
 #include "Game/Class_10A34CD0.h"
 #include "Game/Class_10A34D50.h"
-#include "Game/Class_10AB5B20.h"
+#include "Game/cRefPtr.h"
 #include "Game/Class_10E6649C.h"
 #include "Game/Entry_10A34D50.h"
 #include "Game/Object_10AB5B20.h"
@@ -13,7 +13,7 @@
 struct Info_10A34730
 {
     char Unknown00[0x10];
-    Class_10AB5B20 Unknown10;
+    cRefPtr Unknown10;
 };
 
 Class_10905A90_Member* GetAllocator();
@@ -40,20 +40,20 @@ void __stdcall FUN_10a33ee0(Struct_10A33EE0* A, Struct_10A33EE0* B, const Struct
         B->Unknown2C = *D;
 }
 
-// FUNCTION: 0x10A346F0 ?FUN_10a346f0@Class_10A34D50@@QAEXXZ
-void Class_10A34D50::FUN_10a346f0()
+// FUNCTION: 0x10A346F0 ?Clear@Class_10A34D50@@QAEXXZ
+void Class_10A34D50::Clear()
 {
     FUN_10a33fd0(0);
-    if (Unknown04)
+    if (m_CapacityBytes)
     {
-        GetAllocator()->Virtual5(Unknown08);
-        Unknown08 = 0;
-        Unknown04 = 0;
+        GetAllocator()->Virtual5(m_Items);
+        m_Items = 0;
+        m_CapacityBytes = 0;
     }
 }
 
-// FUNCTION: 0x10A34730 ?FUN_10a34730@Class_10A34730@@QAE?AVClass_10AB5B20@@XZ
-Class_10AB5B20 Class_10A34730::FUN_10a34730()
+// FUNCTION: 0x10A34730 ?FUN_10a34730@Class_10A34730@@QAE?AVcRefPtr@@XZ
+cRefPtr Class_10A34730::FUN_10a34730()
 {
     return Unknown00->Unknown10;
 }
@@ -65,14 +65,14 @@ void Class_10E6649C::FUN_10a34760(int p1, int* p2, int* p3)
     *p3 = 0x10;
 }
 
-// FUNCTION: 0x10A35140 ?FUN_10a35140@Class_10A34B90@@QAEXXZ
-void Class_10A34B90::FUN_10a35140()
+// FUNCTION: 0x10A35140 ?Release@Class_10A34B90@@QAEXXZ
+void Class_10A34B90::Release()
 {
-    FUN_10a34b90(0x40);
-    ::operator delete(Unknown14);
+    Reset(0x40);
+    ::operator delete(m_Buckets);
     Unknown04 = 0;
-    Unknown0C = 0;
-    Unknown14 = 0;
+    m_BucketCount = 0;
+    m_Buckets = 0;
     Unknown00 = 0;
 }
 

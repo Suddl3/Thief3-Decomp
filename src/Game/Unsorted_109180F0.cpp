@@ -20,7 +20,7 @@ public:
     void FUN_10925230();
     void FUN_10926f20(int A, int B);
     void FUN_10925290(int A, int B);
-    void FUN_10925cf0(void* Item);
+    void RemoveItem(void* Item);
     void FUN_10925c60(void* A, int B);
 
     char Unknown00[0xD8];

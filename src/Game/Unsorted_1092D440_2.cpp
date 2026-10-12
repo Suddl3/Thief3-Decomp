@@ -13,7 +13,7 @@ void FUN_1092bdb0(void* X);
 class Class_1092D420
 {
 public:
-    bool FUN_1092d4b0();
+    bool Release();
 
     int Unknown00;
     int Unknown04;
@@ -21,8 +21,8 @@ public:
     bool Unknown0C;
 };
 
-// FUNCTION: 0x1092D4B0 ?FUN_1092d4b0@Class_1092D420@@QAE_NXZ
-bool Class_1092D420::FUN_1092d4b0()
+// FUNCTION: 0x1092D4B0 ?Release@Class_1092D420@@QAE_NXZ
+bool Class_1092D420::Release()
 {
     bool Result = false;
     if (Unknown08)

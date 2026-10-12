@@ -1,28 +1,28 @@
-// Game/Class_10E67FB0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/cFloatInterpolator.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-class Class_10E67FB0
+class cFloatInterpolator
 {
 public:
-    virtual void FUN_10b30150(const float* A, const float* B, int C);
+    virtual void Start(const float* A, const float* B, int C);
 
-    float Unknown04;
-    float Unknown08;
-    float Unknown0C;
-    float Unknown10;
-    bool Unknown14;
-    int Unknown18;
-    int Unknown1C;
+    float m_Value;
+    float m_Start;
+    float m_End;
+    float m_Delta;
+    bool m_Finished;
+    int m_Duration;
+    int m_Elapsed;
 };
 
-// FUNCTION: 0x10B30150 ?FUN_10b30150@Class_10E67FB0@@UAEXPBM0H@Z
-void Class_10E67FB0::FUN_10b30150(const float* A, const float* B, int C)
+// FUNCTION: 0x10B30150 ?Start@cFloatInterpolator@@UAEXPBM0H@Z
+void cFloatInterpolator::Start(const float* A, const float* B, int C)
 {
-    Unknown08 = *A;
-    Unknown0C = *B;
-    Unknown10 = *B - *A;
-    Unknown18 = C;
-    Unknown1C = 0;
-    Unknown04 = Unknown08;
-    Unknown14 = false;
+    m_Start = *A;
+    m_End = *B;
+    m_Delta = *B - *A;
+    m_Duration = C;
+    m_Elapsed = 0;
+    m_Value = m_Start;
+    m_Finished = false;
 }

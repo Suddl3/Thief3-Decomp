@@ -17,13 +17,13 @@ public:
     void FUN_10925230();
     void FUN_10926f20(int A, int B);
     void FUN_10925290(int A, int B);
-    void FUN_10925cf0(void* Item);
+    void RemoveItem(void* Item);
     void FUN_10925c60(void* A, int B);
     void FUN_109251c0(float Value);
 
     char Pad01[0xbb];
     char Pad1A3[0x1];
-    cIntArray UnknownBC;
+    cIntArray m_Items;
     char PadC8[0x10];
     Class_1092D990* Unknown0D8;
 };

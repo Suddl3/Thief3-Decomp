@@ -5,10 +5,10 @@
 #include "Game/Struct_10AA6050.h"
 #include "Game/Struct_10AA6340.h"
 
-// FUNCTION: 0x10AA6340 ?FUN_10aa6340@Class_10AA6050@@QAEXHABUStruct_10AA6340@@ABVcIntArray@@@Z
-void Class_10AA6050::FUN_10aa6340(int Value, const Struct_10AA6340& A, const cIntArray& B)
+// FUNCTION: 0x10AA6340 ?SetEntry@Class_10AA6050@@QAEXHABUStruct_10AA6340@@ABVcIntArray@@@Z
+void Class_10AA6050::SetEntry(int Value, const Struct_10AA6340& A, const cIntArray& B)
 {
-    Struct_10AA6050* Entry = FUN_10aa6050(Value);
+    Struct_10AA6050* Entry = FindEntry(Value);
     Entry->Unknown04 = A;
     Entry->Unknown20 = B;
 }

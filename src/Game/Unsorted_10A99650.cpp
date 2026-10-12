@@ -32,7 +32,7 @@ Class_10E6D104* Class_10E5D870::FUN_10a996a0()
     Class_10E6D104* Result = 0;
     void* Memory = operator new(sizeof(Class_10E6D104), 0, 0, 0, 0, 0);
     if (Memory)
-        Result = static_cast<Class_10E6D104*>(Memory)->FUN_10a99620();
+        Result = static_cast<Class_10E6D104*>(Memory)->Construct();
     GetAllocator()->Virtual9();
     return Result;
 }
@@ -44,7 +44,7 @@ Class_10E6D110* Class_10E5D86C::FUN_10a99c90()
     Class_10E6D110* Result = 0;
     void* Memory = operator new(sizeof(Class_10E6D110), 0, 0, 0, 0, 0);
     if (Memory)
-        Result = static_cast<Class_10E6D110*>(Memory)->FUN_10a99640();
+        Result = static_cast<Class_10E6D110*>(Memory)->Construct();
     GetAllocator()->Virtual9();
     return Result;
 }

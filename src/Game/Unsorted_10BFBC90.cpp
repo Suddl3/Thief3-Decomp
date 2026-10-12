@@ -51,14 +51,14 @@ void Class_10BFF240::FUN_10bff240(unsigned char param)
     Unknown10 = param;
 }
 
-// FUNCTION: 0x10BFF720 ?FUN_10bff720@Class_10E97ADC@@QAEPAV1@XZ
-Class_10E97ADC* Class_10E97ADC::FUN_10bff720()
+// FUNCTION: 0x10BFF720 ?Init@Class_10E97ADC@@QAEPAV1@XZ
+Class_10E97ADC* Class_10E97ADC::Init()
 {
     Unknown00 = DAT_10e97adc;
     Unknown04 = 0;
     Unknown08 = 0;
     Unknown0C = 0;
-    Unknown10 = 0;
+    m_PathPoints = 0;
     Unknown14 = 0;
     Unknown18 = 0;
     Unknown1C = 0;

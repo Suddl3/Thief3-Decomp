@@ -20,11 +20,11 @@ public:
     Class_10A345C0_Node* Next;
 };
 
-// FUNCTION: 0x10A34420 ?FUN_10a34420@Class_10A345C0@@QAEIPA_JPAH@Z
-unsigned int Class_10A345C0::FUN_10a34420(__int64* Key, int* Value)
+// FUNCTION: 0x10A34420 ?Insert@Class_10A345C0@@QAEIPA_JPAH@Z
+unsigned int Class_10A345C0::Insert(__int64* Key, int* Value)
 {
-    if (!Unknown10 && Unknown00 > Unknown0C * 0.2)
-        FUN_10a34810(Unknown0C * 2);
+    if (!Unknown10 && m_Collisions > m_Size * 0.2)
+        Rehash(m_Size * 2);
     Class_10A345C0_Node* Node = new(0, 0, 0, 0, 0) Class_10A345C0_Node;
     memcpy(Node->Key, Key, sizeof(Node->Key));
     Node->Value = *Value;
@@ -32,13 +32,13 @@ unsigned int Class_10A345C0::FUN_10a34420(__int64* Key, int* Value)
     {
         const void* Data;
         int Length;
-        Unknown18.Virtual0(Key, &Data, &Length);
-        Index = HashBytes(Data, Length) & ((1 << Unknown08) - 1);
+        m_KeyOps.Virtual0(Key, &Data, &Length);
+        Index = HashBytes(Data, Length) & ((1 << m_Bits) - 1);
     }
-    if (Unknown14[Index])
-        Unknown00++;
-    Node->Next = Unknown14[Index];
-    Unknown14[Index] = Node;
-    Unknown04++;
+    if (m_Buckets[Index])
+        m_Collisions++;
+    Node->Next = m_Buckets[Index];
+    m_Buckets[Index] = Node;
+    m_Count++;
     return Index;
 }

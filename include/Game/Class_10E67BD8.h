@@ -130,7 +130,7 @@ public:
     void** Unknown118;
     int Unknown11C;
     char Unknown120[8];
-    void** Unknown128;
+    void** m_Windows;
     char Pad12C[0x28];
 };
 

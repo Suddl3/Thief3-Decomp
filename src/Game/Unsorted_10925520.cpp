@@ -5,17 +5,17 @@
 class Class_10924E80
 {
 public:
-    void FUN_10925cf0(void* Item);
+    void RemoveItem(void* Item);
 
     char Unknown00[0xBC];
-    cIntArray UnknownBC;
+    cIntArray m_Items;
 };
 
-// FUNCTION: 0x10925CF0 ?FUN_10925cf0@Class_10924E80@@QAEXPAX@Z
-void Class_10924E80::FUN_10925cf0(void* Item)
+// FUNCTION: 0x10925CF0 ?RemoveItem@Class_10924E80@@QAEXPAX@Z
+void Class_10924E80::RemoveItem(void* Item)
 {
-    int Count = UnknownBC.Unknown00;
-    cIntArray* Set = &UnknownBC;
+    int Count = m_Items.Unknown00;
+    cIntArray* Set = &m_Items;
     int Index = -1;
     for (int i = 0; i < Count; i++)
     {

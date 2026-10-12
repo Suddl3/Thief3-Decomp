@@ -9,12 +9,12 @@ class Class_10A34D50
 {
 public:
     void FUN_10a33fd0(int NewCount);
-    void FUN_10a346f0();
-    int FUN_10a34d50(const Entry_10A34D50& Item);
+    void Clear();
+    int Append(const Entry_10A34D50& Item);
 
-    int Unknown00;
-    int Unknown04;
-    Entry_10A34D50* Unknown08;
+    int m_Count;
+    int m_CapacityBytes;
+    Entry_10A34D50* m_Items;
 };
 
 #endif // GAME_CLASS_10A34D50_H

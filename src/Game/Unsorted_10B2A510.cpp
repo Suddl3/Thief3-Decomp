@@ -150,7 +150,7 @@ public:
 
     char Unknown04[0x1B4];
     Class_10B2A480 Unknown1B8;
-    int Unknown1E4;
+    int m_FadeElapsed;
     Class_10B2A510_Unknown08 Unknown1E8;
 };
 
@@ -158,7 +158,7 @@ public:
 void Class_10E80798::FUN_10b2a510()
 {
     Class_10B2A480* Obj = &Unknown1B8;
-    Unknown1E4 = 0;
+    m_FadeElapsed = 0;
     if (Unknown1B8.Unknown00 <= 0)
     {
         if (Unknown1E8.Unknown00.Unknown00)

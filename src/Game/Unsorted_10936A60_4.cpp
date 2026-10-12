@@ -101,7 +101,7 @@ class Class_109367A0
 {
 public:
     void FUN_109367a0();
-    void FUN_10936a60();
+    void Reset();
 
     char Unknown00[0x2c];
     float Unknown2c[96][4];
@@ -110,8 +110,8 @@ public:
     int Unknown6b0;
 };
 
-// FUNCTION: 0x10936A60 ?FUN_10936a60@Class_109367A0@@QAEXXZ
-void Class_109367A0::FUN_10936a60()
+// FUNCTION: 0x10936A60 ?Reset@Class_109367A0@@QAEXXZ
+void Class_109367A0::Reset()
 {
     float* Value = &Unknown2c[0][0];
     for (int i = 0; i < 96; i++)

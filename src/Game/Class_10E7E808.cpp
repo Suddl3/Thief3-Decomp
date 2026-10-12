@@ -46,7 +46,7 @@ class Class_10E7E808 : public Class_10E7E730
 public:
     virtual void FUN_10b4bcb0(int A);
     virtual void FUN_10b4bce0(AGarrett* Garrett);
-    virtual void FUN_10b4bd30(AGarrett* Garrett);
+    virtual void ReleaseArmsForBody(AGarrett* Garrett);
     virtual void Virtual4();
 
     char Unknown04[0xC];

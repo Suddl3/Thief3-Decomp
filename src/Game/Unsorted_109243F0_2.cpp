@@ -14,9 +14,9 @@ public:
     void FUN_109243f0();
 
     char Unknown00[4];
-    IDirect3DDevice8* Unknown04;
-    IDirect3DSurface8* Unknown08;
-    IDirect3DSurface8* Unknown0C;
+    IDirect3DDevice8* m_Device;
+    IDirect3DSurface8* m_RenderTarget;
+    IDirect3DSurface8* m_DepthStencil;
     char Unknown10[0x98];
     int UnknownA8;
 };
@@ -24,11 +24,11 @@ public:
 // FUNCTION: 0x109243F0 ?FUN_109243f0@Class_10924B70@@QAEXXZ
 void Class_10924B70::FUN_109243f0()
 {
-    if (Unknown04)
+    if (m_Device)
     {
-        if (Unknown08 && Unknown0C && UnknownA8 != -1)
-            Unknown04->SetRenderTarget(Unknown08, Unknown0C);
-        Unknown04->SetRenderState(0xa1, 1);
+        if (m_RenderTarget && m_DepthStencil && UnknownA8 != -1)
+            m_Device->SetRenderTarget(m_RenderTarget, m_DepthStencil);
+        m_Device->SetRenderState(0xa1, 1);
         if (UnknownA8 != -1)
             DAT_10f31be0->FUN_10936a40();
         UnknownA8 = -1;

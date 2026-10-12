@@ -17,11 +17,11 @@ public:
     virtual void Virtual4();
     virtual void Virtual5();
     virtual void Virtual6();
-    virtual int FUN_10c12a70();
+    virtual int IsEmpty();
 
     Class_10E984BC();
 
-    Class_1090A780 FUN_10c12da0();
+    Class_1090A780 GetValue();
 
     int Unknown04;
 };

@@ -25,7 +25,7 @@ extern Class_10F46DA0* DAT_10f46da0;
 class Class_10E7C268 : public Class_10E7C268_Primary, public Class_10E7C268_Secondary
 {
 public:
-    virtual void FUN_10b35120();
+    virtual void Register();
 };
 
 template <class T> class TArray
@@ -69,8 +69,8 @@ int Class_10E7C178::IsDone()
     return !Pending;
 }
 
-// FUNCTION: 0x10B35120 ?FUN_10b35120@Class_10E7C268@@UAEXXZ
-void Class_10E7C268::FUN_10b35120()
+// FUNCTION: 0x10B35120 ?Register@Class_10E7C268@@UAEXXZ
+void Class_10E7C268::Register()
 {
     DAT_10f46da0->Virtual1(this, 0x3E, DAT_10f35dec->Unknown08, -1);
 }

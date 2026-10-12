@@ -35,9 +35,9 @@ public:
 
     void** Unknown00;
     char Unknown04[4];
-    int Unknown08;
+    int m_Count;
     int Unknown0c;
-    int Unknown10;
+    int m_Entries;
 };
 
 // FUNCTION: 0x10A823C0 ?AddConEvent@cConversation@@UAEXH@Z
@@ -61,7 +61,7 @@ Class_10E6C290::Class_10E6C290() : Unknown14(0), Unknown18(-1)
 Class_10E6C364::Class_10E6C364()
 {
     Unknown00 = DAT_10e6c364;
-    Unknown08 = 0;
+    m_Count = 0;
     Unknown0c = 0;
-    Unknown10 = 0;
+    m_Entries = 0;
 }

@@ -3,8 +3,8 @@
 #include "Game/Class_10E9C990.h"
 #include "Game/Class_10E9C9A8.h"
 
-// FUNCTION: 0x10C5F030 ?FUN_10c5f030@Class_10E9C990@@UAEXHHHH@Z
-void Class_10E9C990::FUN_10c5f030(int Code, int A, int B, int C)
+// FUNCTION: 0x10C5F030 ?HandleMessage@Class_10E9C990@@UAEXHHHH@Z
+void Class_10E9C990::HandleMessage(int Code, int A, int B, int C)
 {
     switch (Code)
     {

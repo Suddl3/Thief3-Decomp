@@ -88,7 +88,7 @@ public:
     virtual void Virtual1();
     virtual int FUN_10a9a4a0(int A, Class_10A9A4A0_Param2* B, Class_10A9A4A0_Param3* C);
 
-    Class_10E6D110* FUN_10a99640();
+    Class_10E6D110* Construct();
     void FUN_10a9a350(void* Item, Class_10A9A4A0_Param3* C);
 
     void* Unknown00;
@@ -126,7 +126,7 @@ public:
     virtual void Virtual1();
     virtual int FUN_10a9a5d0(int A, Class_10A9A5D0_Param2* B, Class_10A9A5D0_Param3* C);
 
-    Class_10E6D104* FUN_10a99640();
+    Class_10E6D104* Construct();
     void FUN_10a9a700(void* Item, Class_10A9A5D0_Param3* C);
 
     void* Unknown00;

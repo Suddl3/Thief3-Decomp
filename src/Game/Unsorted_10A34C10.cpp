@@ -15,18 +15,18 @@ public:
     virtual void Virtual2();
 };
 
-// FUNCTION: 0x10A34C10 ?FUN_10a34c10@Class_10A34C10@@QAEIABVClass_109081E0@@PAPAVClass_10A34C10_Unknown10@@@Z
-unsigned int Class_10A34C10::FUN_10a34c10(const Class_109081E0& Key, Class_10A34C10_Unknown10** Value)
+// FUNCTION: 0x10A34C10 ?InsertOrAssign@Class_10A34C10@@QAEIABVClass_109081E0@@PAPAVClass_10A34C10_Unknown10@@@Z
+unsigned int Class_10A34C10::InsertOrAssign(const Class_109081E0& Key, Class_10A34C10_Unknown10** Value)
 {
     const void* Data;
     int Length;
-    Unknown18.Virtual0(Key, &Data, &Length);
+    m_KeyOps.Virtual0(Key, &Data, &Length);
     unsigned int Index = HashBytes(Data, Length) & ((1 << Unknown08) - 1);
     if (!Unknown14)
         return (unsigned int)-1;
     for (Class_10A34C10_Node* Node = Unknown14[Index]; Node; Node = Node->Next)
     {
-        if (Unknown18.Virtual1(Key, Node->Key) == 0)
+        if (m_KeyOps.Virtual1(Key, Node->Key) == 0)
         {
             Class_10A34C10_Unknown10* New = *Value;
             Class_10A34C10_Unknown10* Old = Node->Unknown10;

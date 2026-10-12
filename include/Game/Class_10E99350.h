@@ -10,14 +10,14 @@ class Class_10C27460_Param;
 class Class_10E99350
 {
 public:
-    virtual void FUN_10c27460(Class_10C27460_Param* p1);
+    virtual void Serialize(Class_10C27460_Param* p1);
 
     Class_10E99350(int Value);
 
-    void FUN_10c274e0();
+    void Empty();
 
     int Unknown04;
-    cIntArray Unknown08;
+    cIntArray m_Objects;
     int Unknown14;
 };
 

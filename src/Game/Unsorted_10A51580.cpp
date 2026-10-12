@@ -12,10 +12,10 @@ public:
 class Class_1092E930
 {
 public:
-    void FUN_10a51140(int A);
+    void SetCount(int A);
 
-    int Unknown00;
-    int Unknown04;
+    int m_Count;
+    int m_CapacityBytes;
 };
 
 class Class_10A51A40 : public Class_10E67BD8
@@ -135,10 +135,10 @@ void Class_10A51A40::FUN_10a51a40(int A, int B)
     if (A >= Virtual96())
         return;
     int Next = A + 1;
-    if (Unknown120.Unknown00 < Next)
-        Unknown120.FUN_10a51140(Next);
-    if (Unknown12C.Unknown00 < Next)
-        Unknown12C.FUN_10a51140(Next);
+    if (Unknown120.m_Count < Next)
+        Unknown120.SetCount(Next);
+    if (Unknown12C.m_Count < Next)
+        Unknown12C.SetCount(Next);
     Unknown134[A] = B;
     FUN_10a514e0(A);
 }

@@ -21,7 +21,7 @@ class Class_10924B70 : public Class_10924B70_Base
 public:
     ~Class_10924B70();
 
-    void FUN_10924a90();
+    void Release();
 
     Class_1094D700 Unknown30;
     Class_1094D9A0 Unknown48[3];
@@ -30,5 +30,5 @@ public:
 // FUNCTION: 0x10924B70 ??1Class_10924B70@@QAE@XZ
 Class_10924B70::~Class_10924B70()
 {
-    FUN_10924a90();
+    Release();
 }

@@ -13,11 +13,11 @@ void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
 unsigned int HashBytes(const void* Data, int Length);
 
-// FUNCTION: 0x10B2A160 ?FUN_10b2a160@Class_10B2A160@@QAEIABH0@Z
-unsigned int Class_10B2A160::FUN_10b2a160(const int& Key, const int& Value)
+// FUNCTION: 0x10B2A160 ?Insert@Class_10B2A160@@QAEIABH0@Z
+unsigned int Class_10B2A160::Insert(const int& Key, const int& Value)
 {
-    if (!Unknown10 && Unknown00 > Unknown0C * 0.2)
-        FUN_10b2a220(Unknown0C * 2);
+    if (!m_NoAutoResize && m_Collisions > m_BucketCount * 0.2)
+        Rehash(m_BucketCount * 2);
     Class_10B2A160_Node* Node = new(0, 0, 0, 0, 0) Class_10B2A160_Node;
     Node->Key = Key;
     Node->Value = Value;
@@ -26,36 +26,36 @@ unsigned int Class_10B2A160::FUN_10b2a160(const int& Key, const int& Value)
         const void* Data;
         int Length;
         Unknown18.Virtual0(Key, &Data, &Length);
-        Index = HashBytes(Data, Length) & ((1 << Unknown08) - 1);
+        Index = HashBytes(Data, Length) & ((1 << m_BucketBits) - 1);
     }
-    if (Unknown14[Index])
-        Unknown00++;
-    Node->Next = Unknown14[Index];
-    Unknown14[Index] = Node;
-    Unknown04++;
+    if (m_Buckets[Index])
+        m_Collisions++;
+    Node->Next = m_Buckets[Index];
+    m_Buckets[Index] = Node;
+    m_Count++;
     return Index;
 }
 
-// FUNCTION: 0x10B2A220 ?FUN_10b2a220@Class_10B2A160@@QAEXH@Z
-void Class_10B2A160::FUN_10b2a220(int Size)
+// FUNCTION: 0x10B2A220 ?Rehash@Class_10B2A160@@QAEXH@Z
+void Class_10B2A160::Rehash(int Size)
 {
-    int OldSize = Unknown0C;
-    Class_10B2A160_Node** OldBuckets = Unknown14;
-    Unknown14 = new(0, 0, 0, 0, 0) Class_10B2A160_Node*[Size];
-    Unknown0C = Size;
-    Unknown08 = 0;
+    int OldSize = m_BucketCount;
+    Class_10B2A160_Node** OldBuckets = m_Buckets;
+    m_Buckets = new(0, 0, 0, 0, 0) Class_10B2A160_Node*[Size];
+    m_BucketCount = Size;
+    m_BucketBits = 0;
     while (Size >>= 1)
-        Unknown08++;
-    Unknown04 = 0;
-    Unknown00 = 0;
-    for (int i = 0; i < Unknown0C; i++)
-        Unknown14[i] = 0;
+        m_BucketBits++;
+    m_Count = 0;
+    m_Collisions = 0;
+    for (int i = 0; i < m_BucketCount; i++)
+        m_Buckets[i] = 0;
     for (int j = 0; j < OldSize; j++)
     {
         Class_10B2A160_Node* Node = OldBuckets[j];
         while (Node)
         {
-            FUN_10b2a160(Node->Key, Node->Value);
+            Insert(Node->Key, Node->Value);
             Class_10B2A160_Node* Next = Node->Next;
             delete Node;
             Node = Next;

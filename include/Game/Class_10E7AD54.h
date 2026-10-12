@@ -8,14 +8,14 @@ class Class_10E7AD54
 public:
     virtual void Virtual0();
     virtual void Virtual1();
-    virtual void FUN_10b289c0(float Delta);
+    virtual void Update(float Delta);
     virtual void FUN_10b28b60();
 
     void FUN_10b289f0(bool p1);
 
     char Unknown04[8];
-    float Unknown0C;
-    int Unknown10;
+    float m_Elapsed;
+    int m_Duration;
 };
 
 #endif // GAME_CLASS_10E7AD54_H

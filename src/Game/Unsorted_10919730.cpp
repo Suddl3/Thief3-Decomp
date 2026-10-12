@@ -110,7 +110,7 @@ bool FUN_10919a10(IDirect3D8* D3D, IDirect3DDevice8* Device, bool Flag)
         if (!Flag)
         {
             GetAllocator()->Virtual8(0, 0);
-            bool Ok = DAT_10f3199c->FUN_10924be0((Class_10924BE0*)GDirect3DDevice8);
+            bool Ok = DAT_10f3199c->Initialize((Class_10924BE0*)GDirect3DDevice8);
             GetAllocator()->Virtual9();
             if (Ok)
             {

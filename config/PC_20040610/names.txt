@@ -1633,3 +1633,231 @@ field Class_10E7EBB0::Unknown08 m_Animation Passed to Class_10B396B0::FUN_10b396
 field Class_10E7EC40::Unknown08 m_Animation Passed to Class_10B39530::FUN_10b39530 in FUN_10b48430; OnAnimationEnd passes it to FUN_10b395b0 when B is 0x41.
 field Class_10E81590::Unknown10 m_AnimationEnded OnAnimationEnd sets it to 1; FUN_10b4cd30 returns 0x17 early while it is set.
 field Class_10E822B0::Unknown150 m_StateMachine Class_10B7B910 member; its Field00 is the state UpdateState switches on and advances.
+class Class_1092A370 cHashTable Chained buckets of HashBytes-hashed keys; its Insert, Rehash and Remove grow and shrink the bucket array.
+class Class_10E67FB0 cFloatInterpolator Update lerps one float from a start to an end value over a duration, then stops.
+class Class_10AB5B20 cRefPtr Copy constructor calls Virtual1 (add reference), destructor calls Virtual2 (release) on Unknown00.
+class Class_10AB7500 cDifficulty Holds Difficulty, which FUN_10ab7330 reads from the T3Settings CurrentDifficulty string.
+function 0x10A811B0 Construct Calls the base constructor, sets the vtable pointer and returns this.
+function 0x10AA8220 Write Writes Unknown04 to the parameter through Virtual0; vtable slot 5.
+function 0x10AA8240 Read Reads Unknown04 from Obj through Virtual2; vtable slot 4.
+function 0x10AA90B0 WriteToStream WriteInt and WriteString to the stream: count, strings and Unknown14.
+function 0x10AA9100 Write Writes Unknown04, Unknown14, Unknown08 and the Unknown10 strings through Writer->Virtual0 and Virtual1.
+function 0x10AA9350 Read Reads Unknown04, Unknown14, the count and the strings through Writer->Virtual2 and Virtual3.
+function 0x10A845A0 WriteToStream WriteInt to the stream for Unknown04, Unknown08, then each entry's Virtual1 and Virtual2.
+function 0x10A84610 Write Writes Unknown04, Unknown08 and each entry's Virtual1 id through Ar, then Virtual7(Ar).
+function 0x10A8D0A0 WriteValue Writes the name text with WriteString; same signature and job as cTriggerOperatorParam::WriteValue.
+function 0x10A8D190 ReadValue Reads a string into the name as an intrinsic FName; same signature as cTriggerOperatorParam::ReadValue.
+function 0x10A8D220 GetText Returns the name text, 'GlobalInt' when unset; same signature and job as cTriggerOperatorParam::GetText.
+function 0x10AA7750 WriteToStream WriteInt and WriteString to the stream, then Unknown08->Virtual16 with the stream.
+function 0x10AA77C0 Write Writes Unknown04, Unknown14 and Unknown18 through Writer, then Unknown08->Virtual19.
+function 0x10AA7A40 Read Reads Unknown04, Unknown14 and Unknown18 from Src, then Unknown08->Virtual18(Src).
+function 0x10A34810 Rehash Allocates Size buckets, re-inserts every node, frees the old buckets; called by Reset.
+function 0x10A34B90 Reset Frees every node and the bucket array, then calls Rehash(Size) unless Unknown10 is set.
+function 0x10A35140 Release Calls Reset(0x40), then frees the bucket array and zeroes the counters.
+function 0x10A85940 Insert Allocates a node for Key and Value, links it at its bucket head, returns the bucket index.
+function 0x10A85A00 Rehash Allocates Size buckets, re-inserts every node with Insert, frees the old buckets; called by Class_10A873D0::Reset.
+function 0x10A86390 Remove Finds the node whose key matches, unlinks and deletes it, returns false when none does.
+function 0x10A51200 SetInOverlay Writes the AEmitter InOverlay field and the AActor bShouldNotTick field from its bool argument.
+function 0x10ABC210 Resize Reallocates Data to NewCount rounded up to 16 entries, frees it at zero, then sets Count.
+function 0x10B597B0 CopyFrom Resizes to Other.Count, then copies each Data element from Other.
+function 0x10A958F0 SetTimeRemaining Stores FUN_10aab5c0()->Virtual7(0) in m_TimeRemaining, which UpdateTimer counts down.
+function 0x10A95910 UpdateTimer Subtracts clock time since m_LastTime from m_TimeRemaining; returns 1 once below zero.
+function 0x10B327C0 PlayBowToArrowAttach String GarBowToArrowAttach is passed as the animation name to the Virtual4 call.
+function 0x10B2A100 LoadFadeTime Reads the FadeTime config key with Config::GetFloat after the base load, defaults to 1.0 and resets the elapsed timer.
+function 0x10B2A750 UpdateFade Accumulates Delta into the elapsed timer, fires the completion call at the end, sets the color alpha from the remaining fraction.
+function 0x10B642C0 GetTitle Returns the localized string T_TabScreenTitleLoadGameTitle as the screen title.
+function 0x10BAD900 Init Zeroes Unknown04, sets the vtable, copies *A, *B and *C into Unknown08, Unknown14 and Unknown20; returns this.
+function 0x10BED0D0 Init Calls the base constructor with E and F, stores A to D, sets Unknown40 to 1 and the vtable; returns this.
+function 0x10BFF720 Init Sets the vtable and zeroes Unknown04 through Unknown34; returns this.
+function 0x10BFF8C0 AddPathPoints For each AAIPathPoint in Param's array, appends it to Unknown10 and, when Virtual96() is 1, to Unknown04.
+function 0x10C12A70 IsEmpty Returns DAT_10ff7060.IsEmpty(), the value GetValue copies.
+function 0x10C12DA0 GetValue Returns a copy of DAT_10ff7060 as Class_1090A780, the value IsEmpty tests.
+function 0x10C27460 Serialize Passes &Unknown04 and 4 bytes to p1->Virtual1, the Serialize pattern of Class_10E97370 for ints.
+function 0x10C274E0 Empty Deletes each element of Unknown08, then calls SetCount(0) and frees its buffer.
+function 0x1090FC80 Empty Deletes every node and the table, zeroes the counts, then Rehash(Size) unless m_NoResize.
+function 0x1090FF70 Free Calls FUN_1090fc80(0x40), then frees m_Table and zeroes the counts.
+function 0x1090FD70 SetCount Resizes to NewCount, destroying dropped elements and storing the count; cIntArray has SetCount too.
+function 0x10910040 Empty Calls SetCount(0), then frees the buffer and zeroes its capacity and pointer.
+function 0x10914D60 GetField08 Returns Field08.
+function 0x10915160 Dispatch Upper-cases the key, finds its Entry_10C32C30 in Unknown0C, and calls its FUN_10916440(B, C).
+function 0x10B4BD30 ReleaseArmsForBody FatalAttackState ArmsPrepared becomes BodyPrepared; calls ClearVelocity and ReleaseArm.
+function 0x1091CB80 GetValue Clamps Index to Count()-1, then returns Unknown08[Index].
+function 0x1091F5B0 Reset Releases Unknown0C, Unknown10 and DAT_10f31958, DAT_10f31960, DAT_10f3195c, then zeroes the fields.
+function 0x1091F6E0 Contains Linear search of Unknown44 for Item; false for a null Item.
+function 0x10920A90 RemoveItem Calls FUN_1094ca70(1) on Item, then removes it from Unknown3C found by FindIndex.
+function 0x109236B0 VisitTree Calls FUN_10920fa0 on A, then recurses into A's Unknown14 children, Unknown0C of them.
+function 0x10924BE0 Initialize Called by InitDirect3D; one-time setup that stores A, reads three values from it, runs FUN_10924ae0.
+function 0x10924C60 Refresh Re-reads the three values from Unknown04, then repeats FUN_10924ae0's Unknown48 steps.
+function 0x10925CF0 RemoveItem Linear search of UnknownBC for Item, then swap-removes the match and shrinks the cIntArray.
+function 0x1092A370 Insert Chains a node at its bucket head, counts collisions, rehashes past 20%; returns the bucket index.
+function 0x1092A450 Rehash Allocates Size buckets, reinserts every node through FUN_1092a370, deletes the old buckets.
+function 0x1092B8F0 Remove Unlinks the node whose key matches, shrinks below 5% use, returns true when found.
+function 0x10B2A160 Insert Links a new Class_10B2A160_Node at bucket Unknown14[hash], counts it in Unknown04, returns the bucket index.
+function 0x10B2A220 Rehash Allocates a bucket array of Size, re-inserts every node through FUN_10b2a160, then deletes the old buckets.
+function 0x10B2A380 Remove Finds the node whose key matches, unlinks and deletes it, returns true; false when no key matches.
+function 0x10B3D1D0 Init Calls Class_10E7E4E0's FUN_10b3acb0, sets Unknown00 from DAT_10e7e778 and returns this; FUN_10b3d510 calls it.
+function 0x10B559A0 SetState Stores its argument A in Unknown0E4 after switching on it to run the entry work for cases 2 and 3.
+function 0x10934A40 SetStreamSource Calls cD3DStateCache::SetStreamSource on its buffer and stride; overrides Class_10E49EE0::FUN_109342f0.
+function 0x10934B10 CreateBuffer Creates a stride-times-count buffer through FUN_10934bd0, then locks it into *Out; fails if already created.
+function 0x10B30150 Start Stores the start and end values and duration, resets the elapsed time and clears the finished flag.
+function 0x10A52AF0 Update Adds DeltaTime to the elapsed time, interpolates the value, and sets the end value when the duration ends.
+function 0x10AAA050 Write Writer parameter; its fields go to Writer->Virtual0 or Writer->Virtual1 one by one; returns 1.
+function 0x10AAB8B0 Init Sets Unknown00, zeroes Unknown04 to Unknown18, returns this; ??0Class_10A85AD0 calls it.
+function 0x10AAB970 FindByName strcmp of *Name against each element's key from Unknown24->Virtual25; returns the matching element or 0.
+function 0x10ABB4E0 FindMatchIndex Returns the first index whose Unknown0C[i]->Virtual4(A) is true, else -1.
+function 0x10ABB720 AddUnique Appends Item to the cIntArray Unknown10 unless an equal value is already there.
+function 0x10B289C0 Update Adds Delta to Unknown0C, then calls FUN_10b289f0(true) once Unknown0C exceeds Unknown10.
+function 0x10B35120 Register Calls DAT_10f46da0->Virtual1(this, 0x3E, ...) to register this; the destructors call Virtual2(this).
+function 0x10ACC050 Init Calls the cActorManager constructor, sets Unknown00, returns this; FUN_10aba1a0 calls it.
+function 0x1091E940 SetProjection Stores A in Unknown17C, builds the projection from the aspect ratio and sets transform 3 (projection).
+function 0x1091EA50 SetViewport Copies the Struct_10924210 argument into Viewport, then rebuilds the projection and sets transform 3.
+function 0x109262B0 Clear Sets the count to zero through FUN_10926020, frees Unknown08 through the allocator, zeroes Unknown04.
+function 0x10931F10 CopyFrom Resizes to Other.Unknown00 and copies each element's arrays from Other; FUN_10932030 calls it.
+function 0x10924A90 Release Calls FUN_109243f0, then Virtual2 on and nulls the three held pointers; the destructor calls it.
+function 0x1092D420 Initialize Zeroes Unknown00 to Unknown0C, stores this in DAT_10f31b88 and returns this; FUN_10e3c110 calls it.
+function 0x1092D4B0 Release Hides the cursor, frees Unknown08 through FUN_1092bdb0, zeroes the fields; returns whether a resource was held.
+function 0x1092E8F0 Clear Sets the count to zero through FUN_1091f380, frees Unknown08 through the allocator, zeroes Unknown04.
+function 0x1092E970 CopyFrom Resizes to Other.Unknown00 through FUN_1091f380, then copies each Unknown08 entry; FUN_1092eaf0 calls it.
+function 0x1092E930 Clear Sets the count to zero through SetCount, frees Unknown08 through the allocator, zeroes Unknown04.
+function 0x10A51140 SetCount Sets the count and reallocates Unknown08 by capacity, the cIntArray::SetCount layout that FUN_10931f10 calls.
+function 0x10936A60 Reset Fills Unknown2c with -100, calls FUN_109367a0, resets device slots 76 and 88, sets Unknown6ac and Unknown6b0 to -1.
+function 0x10A2C3B0 SetCount Sets Unknown00 to NewCount and reallocates Unknown08 in 16-entry steps; FUN_10a2c610 calls it with 0.
+function 0x10A2C610 Clear Calls FUN_10a2c3b0(0), then frees Unknown08 and zeroes Unknown04 when it is nonzero.
+function 0x10A2ED70 IsCompatibleWith Virtual slot 2 of Class_10E662D0; returns 0 when both Unknown04 values are nonzero and differ.
+function 0x10A2F300 Clone Virtual slot 1 of Class_10E662D0; allocates a copy and copies Unknown04 and Unknown08.
+function 0x10A31F30 SetCount Sets Unknown00 to NewCount and reallocates Unknown08 in 16-byte steps; FUN_10a32270 calls it with 0.
+function 0x10A32270 Clear Calls FUN_10a31f30(0), then frees Unknown08 and zeroes Unknown04 when it is nonzero.
+function 0x10A32370 SetCount Calls Virtual2 on elements past NewCount, reallocates Unknown08 in 16-entry steps, zeroes new slots.
+function 0x10A32AB0 Append Grows the array by one via FUN_10a32370(Index + 1), stores the element at the old count, returns that index.
+function 0x10A32C30 SetCount Destructs slots past NewCount, reallocates Unknown08 in 16-entry steps, constructs new slots; FUN_10a32d60 calls it with 0.
+function 0x10A32D60 Clear Calls FUN_10a32c30(0), then frees Unknown08 and zeroes Unknown04 when it is nonzero.
+function 0x10A346F0 Clear Calls FUN_10a33fd0(0), then frees Unknown08 and zeroes Unknown04 when it is nonzero.
+function 0x10A34D50 Append Calls FUN_10a33fd0(Index + 1), copies Item into Unknown08[Index], returns Index.
+function 0x10A34420 Insert Allocates a node and links it into its key's bucket; grows via FUN_10a34810 when collisions exceed 0.2 times Unknown0C.
+function 0x10A34510 InsertOrAssign Hashes the key; overwrites Value when a node matches, else calls FUN_10a34420 to insert.
+function 0x10A349E0 Rehash Allocates a table of NewSize, sets Bits to log2(NewSize), reinserts old nodes through FUN_10a348e0, frees the old table.
+function 0x10A34C10 InsertOrAssign Hashes the key; if a node matches, swaps in the new Unknown10 and releases the old, else inserts via FUN_10a348e0.
+function 0x10A99620 Construct Stores the vtable DAT_10e6d104 into this and returns this.
+function 0x10A99640 Construct Stores the vtable DAT_10e6d110 into this and returns this.
+function 0x10AA3550 Construct Stores the vtable DAT_10e6d498 into this and returns this.
+function 0x10AA6050 FindEntry Returns the entry whose Unknown00 equals Value, scanning Unknown0C up to Unknown04; else 0.
+function 0x10AA6340 SetEntry Finds entry Value with FUN_10aa6050, assigns A to its Unknown04 and B to its Unknown20.
+function 0x10AB5B00 NotEqual Returns Unknown00 != Other.Unknown00, the body of the inequality operator.
+function 0x10AB5B20 Copy Returns *this by value; the copy constructor calls Virtual1 (add reference).
+function 0x10AB7330 LoadDifficulty Reads T3Settings CurrentDifficulty, maps easy, normal, hard, expert to 0-3, 1 when absent.
+function 0x10AB7500 Init Registers this for messages 0x25 and 0x5a on DAT_10f46da0, then calls FUN_10ab7330.
+function 0x10ABB100 Resize Stores NewCount in Unknown00, reallocates in 16-element steps, initializes the new elements.
+function 0x10ABB580 Free Calls FUN_10abb100(0), then frees the block through the allocator and zeroes Unknown04 and Unknown08.
+function 0x10ACFFF0 MatchesAny Returns true as soon as FUN_10acfde0(A, item) is nonzero for an item of list B.
+function 0x10C5C3A0 Init Sets Unknown20 to -1, then calls FUN_10c5bf20(0x40), which FUN_10c5c3b0 also calls.
+function 0x10C5C3B0 Release Calls FUN_10c5bf20(0x40), deletes Unknown14 with ::operator delete, then zeroes Unknown00, Unknown04, Unknown0C, Unknown14.
+function 0x10C5F030 HandleMessage Vtable slot 0; switch on Code: 0x5a calls FUN_10c5e750, 0x70 calls FUN_10c5e270; FUN_10c5e7d0 sends both codes.
+function 0x10C60420 ClearItems Loops over Unknown00 items: calls FUN_10c4f690(0), frees its Unknown08 when its Unknown04 is set, zeroes Unknown00.
+function 0x10C60480 Clear Calls FUN_10c60420, clears Unknown38, calls FUN_10953ec0 and deletes each Unknown14 entry; Class_10C609D0's destructor calls it.
+function 0x10A5E950 Update vtable slot 106: the same virtual function as Class_10E6A9F8::Update (0x10A629B0)
+function 0x10B42C10 Update vtable slot 106: the same virtual function as Class_10E6A9F8::Update (0x10A629B0)
+function 0x10B67EE0 Update vtable slot 106: the same virtual function as Class_10E6A9F8::Update (0x10A629B0)
+function 0x10B6E090 Update vtable slot 106: the same virtual function as Class_10E6A9F8::Update (0x10A629B0)
+function 0x10B70F20 Update vtable slot 106: the same virtual function as Class_10E6A9F8::Update (0x10A629B0)
+function 0x10A2F220 Clone vtable slot 1: the same virtual function as Class_10E66310::Clone (0x10A2F460)
+function 0x10A2F360 Clone vtable slot 1: the same virtual function as Class_10E66310::Clone (0x10A2F460)
+function 0x10A2F3E0 Clone vtable slot 1: the same virtual function as Class_10E66310::Clone (0x10A2F460)
+field Class_10E6C77C::Unknown04 m_Name FName read and written as text; GetText returns 'GlobalInt' when it is unset.
+field Class_10E6C364::Unknown08 m_Count Bound of the Unknown10 loops in three methods; the constructor zeroes it.
+field Class_10E6C364::Unknown10 m_Entries Array of entry pointers, walked up to Unknown08 by every method using it.
+field Class_10A34B90::Unknown08 m_BucketBits Rehash stores log2 of the new bucket count in it.
+field Class_10A34B90::Unknown0C m_BucketCount Rehash sets it to the new bucket count; the bucket loops run to it.
+field Class_10A34B90::Unknown14 m_Buckets Node chain heads; Rehash, Reset and Release allocate and free the array.
+field Class_10B59770::Unknown04 m_AllocBytes Resize derives Capacity from it divided by the element size, and sets it to capacity times element size.
+field Class_10E6CE50::Unknown0C m_TimeRemaining Set by SetTimeRemaining, counted down by UpdateTimer's elapsed clock time.
+field Class_10E6CE50::Unknown10 m_LastTime Holds the previous clock reading; UpdateTimer measures elapsed time from it.
+field Class_10E80798::Unknown1E0 m_FadeDuration UpdateFade divides by it for the alpha ramp and compares the elapsed timer against it.
+field Class_10E80798::Unknown1E4 m_FadeElapsed UpdateFade adds Delta to it and LoadFadeTime resets it to 0.
+field Class_10910040::Unknown00 m_Count SetCount reads it as the old count and stores NewCount in it.
+field Class_10910040::Unknown04 m_CapacityBytes Capacity is Unknown04 / sizeof(element): the buffer size in bytes, as cIntArray::m_CapacityBytes.
+field Class_10910040::Unknown08 m_Data Element buffer that SetCount indexes and Empty frees; cIntArray names its buffer Data.
+field Class_10E99350::Unknown08 m_Objects The constructor appends two new objects to it; Empty deletes each element.
+field Class_10E97ADC::Unknown10 m_PathPoints AddPathPoints appends each AAIPathPoint of Param's array to it.
+field Class_10914D60::Unknown0C m_Entries Dispatch looks up the Entry_10C32C30 for an upper-cased key in it.
+field Class_10920A90::Unknown3C m_Items RemoveItem searches it with FindIndex and removes entries by index.
+field Class_10924AE0::Unknown00 m_Initialized Initialize returns early once set and sets it after its one-time setup.
+field Class_10924E80::UnknownBC m_Items RemoveItem linear-searches this cIntArray and swap-removes the match.
+field cHashTable::Unknown00 m_Collisions Insert counts an occupied bucket; Insert rehashes when this exceeds 20% of buckets.
+field cHashTable::Unknown04 m_Count Insert adds one and Remove subtracts one; Remove shrinks when it falls below 5%.
+field cHashTable::Unknown08 m_BucketBits Rehash sets it to log2 of the bucket count; Insert and Remove mask hashes with it.
+field cHashTable::Unknown0C m_BucketCount Rehash sets it to Size; Insert and Remove compare against it to grow or shrink.
+field cHashTable::Unknown10 m_NoAutoResize Insert and Remove skip their automatic Rehash while this is true.
+field cHashTable::Unknown14 m_Buckets Array of chain heads that Insert, Rehash and Remove index by hash.
+field cHashTable::Unknown18 m_KeyTraits Virtual0 yields a key's hash bytes; Virtual1 compares two keys.
+field Class_10B2A160::Unknown00 m_Collisions Insert counts a node added to an occupied bucket; Remove undoes it; growth triggers past 0.2 times the bucket count.
+field Class_10B2A160::Unknown04 m_Count Insert increments it, Remove decrements it, Rehash zeroes it; Remove shrinks when it falls below 5% of the bucket count.
+field Class_10B2A160::Unknown08 m_BucketBits Rehash stores the log2 of the bucket count here; Insert and Remove mask their hash with (1 << value) - 1.
+field Class_10B2A160::Unknown0C m_BucketCount Rehash stores Size here; Insert calls Rehash with twice this value, Remove with half.
+field Class_10B2A160::Unknown10 m_NoAutoResize Insert and Remove skip their automatic Rehash calls while it is set.
+field Class_10B2A160::Unknown14 m_Buckets Node pointer array that Rehash allocates, clears and fills; Insert and Remove index it by hash.
+field Class_10B559A0::Unknown0E4 m_State Written by SetState, which switches on the same value it stores here.
+field Class_10E49F64::Unknown14 m_Buffer Output of FUN_10934bd0 in FUN_10934b10; passed to SetStreamSource.
+field Class_10E49F64::Unknown1C m_Size Set to stride times count in FUN_10934b10; nonzero means the buffer exists.
+field Class_10E49F64::Unknown20 m_Stride Passed as the stride to SetStreamSource and multiplied by the count in FUN_10934b10.
+field Class_10E49F64::Unknown24 m_Count Set to FUN_10934bd0's size output divided by the stride, the vertex count.
+field cFloatInterpolator::Unknown04 m_Value Current value: set from the start in Start and interpolated in Update.
+field cFloatInterpolator::Unknown08 m_Start Start value copied in Start and used by Update's interpolation.
+field cFloatInterpolator::Unknown0C m_End End value copied in Start; Update sets the value to it when the duration ends.
+field cFloatInterpolator::Unknown10 m_Delta End minus start, set in Start and used by Update's interpolation.
+field cFloatInterpolator::Unknown14 m_Finished Cleared by Start; Update sets it once elapsed time reaches the duration.
+field cFloatInterpolator::Unknown18 m_Duration Third argument of Start; Update compares elapsed time against it.
+field cFloatInterpolator::Unknown1C m_Elapsed Reset to zero by Start and advanced by DeltaTime in Update.
+field Class_10E67BD8::Unknown128 m_Windows Indexed array of window pointers; FUN_10a514e0 passes an entry to the window manager and nulls it.
+field Class_10E6DA64::Unknown04 m_Count Loop bound of FUN_10aab970 over the element array; zeroed by FUN_10aab8b0.
+field Class_10E6DA64::Unknown0C m_Elements Element pointer array indexed by FUN_10aab970's loop; zeroed by FUN_10aab8b0.
+field Class_10E6F474::Unknown04 m_EntryCount Loop bound over Unknown0C in FUN_10abb4e0; cHighlightMgr::FindIndex bounds its entries by m_EntryCount.
+field Class_10E6F474::Unknown10 m_MembraneMaterials cIntArray deduplicated by FUN_10abb720; cHighlightMgr::FindMembraneMaterials appends to m_MembraneMaterials.
+field Class_10E7AD54::Unknown0C m_Elapsed Float that FUN_10b289c0 adds Delta to on every update.
+field Class_10E7AD54::Unknown10 m_Duration Int that FUN_10b289c0 compares the accumulated Unknown0C against.
+field Class_1091E940::Unknown64 m_Projection Built by FUN_10d68fc9 and passed to SetTransform(3, ...), the projection slot.
+field Class_1091E940::Unknown188 m_ViewportWidth Float copy of Viewport.Width in FUN_1091ea50, of Unknown16C in FUN_1091e940.
+field Class_1091E940::Unknown18C m_ViewportHeight Float copy of Viewport.Height in FUN_1091ea50, of Unknown170 in FUN_1091e940.
+field Class_1091E940::Unknown190 m_HalfWidth Set to Unknown188 * 0.5 in both methods.
+field Class_1091E940::Unknown194 m_HalfHeight Set to Unknown18C * 0.5 in both methods.
+field Class_10924B70::Unknown04 m_Device SetRenderState and SetRenderTarget are called on it in FUN_109243f0.
+field Class_10924B70::Unknown08 m_RenderTarget First argument of SetRenderTarget in FUN_109243f0.
+field Class_10924B70::Unknown0C m_DepthStencil Second argument of SetRenderTarget in FUN_109243f0.
+field Class_109262B0::Unknown00 m_Count Passed to FUN_10926020 and looped over as the count in FUN_10931f10.
+field Class_109262B0::Unknown04 m_CapacityBytes Tested before the free in FUN_109262b0; same layout as Class_1092E930, where it is capacity in bytes.
+field Class_109262B0::Unknown08 m_Data Freed through the allocator in FUN_109262b0, copied element-wise in FUN_10931f10.
+field Class_1092E8F0::Unknown00 m_Count Looped over in FUN_1092e970 and passed as the size to FUN_1091f380.
+field Class_1092E8F0::Unknown04 m_CapacityBytes Tested before the free in FUN_1092e8f0; same layout as Class_1092E930.
+field Class_1092E8F0::Unknown08 m_Data Freed through the allocator in FUN_1092e8f0, copied element-wise in FUN_1092e970.
+field Class_1092E930::Unknown00 m_Count Stored from NewCount at the end of FUN_10a51140.
+field Class_1092E930::Unknown04 m_CapacityBytes Capacity is Unknown04 divided by the element size in FUN_10a51140.
+field Class_1092E930::Unknown08 m_Data Reallocated and freed through the allocator in FUN_10a51140.
+field Class_10A32270::Unknown00 m_Count FUN_10a31f30 stores NewCount in it.
+field Class_10A32270::Unknown04 m_CapacityBytes FUN_10a31f30 sets it to NewCapacity and zeroes the bytes past the old capacity.
+field Class_10A32270::Unknown08 m_Data FUN_10a31f30 reallocates it; FUN_10a32270 frees it.
+field Class_10A32370::Unknown00 m_Count FUN_10a32370 stores NewCount; FUN_10a32ab0 appends at this index.
+field Class_10A32370::Unknown04 m_CapacityBytes FUN_10a32370 sets it to NewCapacity * sizeof(element pointer).
+field Class_10A32370::Unknown08 m_Elements FUN_10a32370 reallocates it and calls Virtual2 on elements past NewCount.
+field Class_10A32D60::Unknown00 m_Count FUN_10a32c30 stores NewCount; it constructs slots from the old count up.
+field Class_10A32D60::Unknown04 m_CapacityBytes FUN_10a32c30 sets it to NewCapacity * sizeof(Class_10A32370).
+field Class_10A32D60::Unknown08 m_Elements FUN_10a32c30 reallocates it; FUN_10a32d60 frees it.
+field Class_10A34D50::Unknown00 m_Count FUN_10a34d50 appends at Unknown00 and returns that index.
+field Class_10A34D50::Unknown04 m_CapacityBytes FUN_10a346f0 frees Unknown08 only while this is nonzero, then zeroes it.
+field Class_10A34D50::Unknown08 m_Items FUN_10a34d50 stores the Entry_10A34D50 at Unknown08[Index].
+field Class_10A345C0::Unknown00 m_Collisions FUN_10a34420 increments it when the target bucket already holds a node.
+field Class_10A345C0::Unknown04 m_Count FUN_10a34420 increments it once per insert.
+field Class_10A345C0::Unknown08 m_Bits FUN_10a34420 and FUN_10a34510 mask hashes with (1 << Unknown08) - 1.
+field Class_10A345C0::Unknown0C m_Size FUN_10a34420 grows the table to twice this when collisions exceed 0.2 times it.
+field Class_10A345C0::Unknown14 m_Buckets FUN_10a34420 links nodes into Unknown14[Index]; FUN_10a34510 walks that chain.
+field Class_10A345C0::Unknown18 m_KeyOps FUN_10a34420 and FUN_10a34510 call its Virtual0 for hash bytes and Virtual1 to compare keys.
+field Class_10A34C10::Unknown18 m_KeyOps FUN_10a34c10 calls its Virtual0 for hash bytes and Virtual1 to compare keys.
+field cRefPtr::Unknown00 m_Object The object pointer the handle adds and releases a reference on; compared in FUN_10ab5b00.
+field Class_10AA6050::Unknown04 m_Count Entry count: the loop bound of FUN_10aa6050 over Unknown0C.
+field Class_10AA6050::Unknown0C m_Entries Array of Struct_10AA6050 pointers that FUN_10aa6050 indexes up to Unknown04.
+field Class_10ABB580::Unknown00 m_Count Element count: FUN_10abb100 reads it as OldCount and stores NewCount in it.
+field Class_10ABB580::Unknown04 m_AllocBytes Bytes allocated for the block: FUN_10abb100 divides it by the element size.
+field Class_10ABB580::Unknown08 m_Data Element block that FUN_10abb100 reallocates and FUN_10abb580 frees through the allocator.
+field Class_10C5C3A0::Unknown14 m_Buffer Heap block freed with ::operator delete in FUN_10c5c3b0 and zeroed there.
+field Class_10C60480::Unknown00 m_NumItems Loop bound for Unknown08 items in FUN_10c60420; zeroed after the loop.
+field Class_10C60480::Unknown08 m_Items Indexed as Unknown08[i] over Unknown00 items in FUN_10c60420.
+field Class_10C60480::Unknown0C m_NumObjects Loop bound for Unknown14 in FUN_10c60480; zeroed after the loop.
+field Class_10C60480::Unknown14 m_Objects Array of Class_10953EC0 pointers, each torn down and freed in FUN_10c60480.

@@ -17,7 +17,7 @@
 class Class_10A34B90
 {
 public:
-    void FUN_10a34b90(int A);
+    void Reset(int A);
 };
 
 class Class_10A35300
@@ -56,7 +56,7 @@ extern void* DAT_10e66700[];
 // FUNCTION: 0x10A35300 ?FUN_10a35300@Class_10A35300@@QAEXH@Z
 void Class_10A35300::FUN_10a35300(int A)
 {
-    Unknown04.FUN_10a34b90(0x80);
+    Unknown04.Reset(0x80);
     Unknown20.FUN_10a34cd0(0x80);
 }
 

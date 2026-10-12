@@ -10,7 +10,7 @@ class Class_10E97370 : public Class_10E90D70
 public:
     Class_10E97370(int A, int B, int C, int D, int E, int F);
 
-    Class_10E97370* FUN_10bed0d0(int A, int B, int C, int D, int E, int F);
+    Class_10E97370* Init(int A, int B, int C, int D, int E, int F);
 
     char Unknown40;
     char Pad41[0x3];

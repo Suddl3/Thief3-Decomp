@@ -5,14 +5,14 @@
 #include "Game/Class_10E4AA80.h"
 #include "Game/Struct_109236B0.h"
 
-// FUNCTION: 0x10920A90 ?FUN_10920a90@Class_10920A90@@QAEXPAVClass_10E4AA80@@@Z
-void Class_10920A90::FUN_10920a90(Class_10E4AA80* Item)
+// FUNCTION: 0x10920A90 ?RemoveItem@Class_10920A90@@QAEXPAVClass_10E4AA80@@@Z
+void Class_10920A90::RemoveItem(Class_10E4AA80* Item)
 {
-    if (Item && Unknown3C.Unknown00)
+    if (Item && m_Items.Unknown00)
     {
         Item->FUN_1094ca70(1);
-        int Index = Unknown3C.FindIndex(Item);
+        int Index = m_Items.FindIndex(Item);
         if (Index != -1)
-            Unknown3C.FUN_10a0c5f0(Index);
+            m_Items.FUN_10a0c5f0(Index);
     }
 }

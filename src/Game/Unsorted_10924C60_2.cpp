@@ -8,8 +8,8 @@
 
 Class_10905A90_Member* GetAllocator();
 
-// FUNCTION: 0x10924C60 ?FUN_10924c60@Class_10924AE0@@QAEXXZ
-void Class_10924AE0::FUN_10924c60()
+// FUNCTION: 0x10924C60 ?Refresh@Class_10924AE0@@QAEXXZ
+void Class_10924AE0::Refresh()
 {
     Unknown04->Virtual41(&Unknown18);
     Unknown04->Virtual32(&Unknown08);

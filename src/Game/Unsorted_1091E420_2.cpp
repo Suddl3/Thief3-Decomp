@@ -20,15 +20,15 @@ extern IDirect3DDevice8* GDirect3DDevice8;
 class Class_1091E940
 {
 public:
-    void FUN_1091e940(float A, bool B);
-    void FUN_1091ea50(Struct_10924210* A, int B);
+    void SetProjection(float A, bool B);
+    void SetViewport(Struct_10924210* A, int B);
     void FUN_1091eb80();
     void FUN_1091e690();
 
     int Unknown00;
     Struct_10917D20 Unknown04;
     char Unknown44[0x20];
-    D3DXMATRIX Unknown64;
+    D3DXMATRIX m_Projection;
     D3DXMATRIX Unknown0A4;
     D3DXMATRIX Unknown0E4;
     D3DXMATRIX Unknown124;
@@ -39,36 +39,36 @@ public:
     float Unknown17C;
     float Unknown180;
     int Unknown184;
-    float Unknown188;
-    float Unknown18C;
-    float Unknown190;
-    float Unknown194;
+    float m_ViewportWidth;
+    float m_ViewportHeight;
+    float m_HalfWidth;
+    float m_HalfHeight;
     float Unknown198;
     float Unknown19C;
 };
 
-// FUNCTION: 0x1091E940 ?FUN_1091e940@Class_1091E940@@QAEXM_N@Z
-void Class_1091E940::FUN_1091e940(float A, bool B)
+// FUNCTION: 0x1091E940 ?SetProjection@Class_1091E940@@QAEXM_N@Z
+void Class_1091E940::SetProjection(float A, bool B)
 {
     Unknown17C = A;
-    Unknown188 = (float)Unknown16C;
-    Unknown18C = (float)Unknown170;
-    float Q = Unknown188 / Unknown18C;
-    FUN_10d68fc9(&Unknown64, A / Q, Q, Unknown180, Unknown184);
-    GDirect3DDevice8->SetTransform(3, &Unknown64);
-    float W = Unknown188 * 0.5f;
-    Unknown190 = W;
-    float H = Unknown18C * 0.5f;
-    Unknown0A4 = Unknown64;
-    Unknown194 = H;
-    Unknown198 = W * Unknown64.m[0][0];
-    Unknown19C = -(H * Unknown64.m[1][1]);
+    m_ViewportWidth = (float)Unknown16C;
+    m_ViewportHeight = (float)Unknown170;
+    float Q = m_ViewportWidth / m_ViewportHeight;
+    FUN_10d68fc9(&m_Projection, A / Q, Q, Unknown180, Unknown184);
+    GDirect3DDevice8->SetTransform(3, &m_Projection);
+    float W = m_ViewportWidth * 0.5f;
+    m_HalfWidth = W;
+    float H = m_ViewportHeight * 0.5f;
+    Unknown0A4 = m_Projection;
+    m_HalfHeight = H;
+    Unknown198 = W * m_Projection.m[0][0];
+    Unknown19C = -(H * m_Projection.m[1][1]);
     if (B)
     {
         FUN_1091e690();
     }
     else
     {
-        FUN_10d67f9a(&Unknown124, &Unknown0E4, &Unknown64);
+        FUN_10d67f9a(&Unknown124, &Unknown0E4, &m_Projection);
     }
 }

@@ -35,19 +35,19 @@ public:
     virtual void Virtual3();
     virtual void Virtual4();
     virtual void Virtual5();
-    virtual int FUN_10934b10(int A, int B, void** Out);
+    virtual int CreateBuffer(int A, int B, void** Out);
 
     Class_10934B10_Unknown04* Unknown04;
     char Unknown08[0xc];
-    Class_10934B10_Unknown14* Unknown14;
+    Class_10934B10_Unknown14* m_Buffer;
     unsigned int Unknown18;
-    int Unknown1C;
-    unsigned int Unknown20;
-    unsigned int Unknown24;
+    int m_Size;
+    unsigned int m_Stride;
+    unsigned int m_Count;
 };
 
-// FUNCTION: 0x10934B10 ?FUN_10934b10@Class_10E49F64@@UAEHHHPAPAX@Z
-int Class_10E49F64::FUN_10934b10(int A, int B, void** Out)
+// FUNCTION: 0x10934B10 ?CreateBuffer@Class_10E49F64@@UAEHHHPAPAX@Z
+int Class_10E49F64::CreateBuffer(int A, int B, void** Out)
 {
     if (Out == 0)
         return 0x80070057;
@@ -58,16 +58,16 @@ int Class_10E49F64::FUN_10934b10(int A, int B, void** Out)
             return 0x80070057;
         if (B == 0)
             return 0x80070057;
-        if (Unknown1C != 0)
+        if (m_Size != 0)
             return 0x80040720;
-        int Hr = Unknown04->FUN_10934bd0(Unknown20 * B, Unknown20, &Unknown14, &Unknown18);
+        int Hr = Unknown04->FUN_10934bd0(m_Stride * B, m_Stride, &m_Buffer, &Unknown18);
         if (Hr >= 0)
         {
-            Hr = Unknown14->Virtual11(Unknown18, Unknown20 * B, Out, Unknown18 != 0 ? 0x1000 : 0x2000);
+            Hr = m_Buffer->Virtual11(Unknown18, m_Stride * B, Out, Unknown18 != 0 ? 0x1000 : 0x2000);
             if (Hr >= 0)
             {
-                Unknown1C = Unknown20 * B;
-                Unknown24 = Unknown18 / Unknown20;
+                m_Size = m_Stride * B;
+                m_Count = Unknown18 / m_Stride;
             }
         }
         return Hr;

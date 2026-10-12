@@ -8,8 +8,8 @@ struct Struct_10A2DA00;
 class Class_10A2C610
 {
 public:
-    void FUN_10a2c3b0(int Count);
-    void FUN_10a2c610();
+    void SetCount(int Count);
+    void Clear();
 
     int Unknown00;
     int Unknown04;

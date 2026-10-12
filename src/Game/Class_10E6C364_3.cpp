@@ -13,23 +13,23 @@ public:
     virtual void Virtual4();
     virtual void Virtual5();
     virtual void Virtual6();
-    virtual int FUN_10a84610(Class_10AAB590_Param* Ar);
+    virtual int Write(Class_10AAB590_Param* Ar);
 
     int Unknown04;
-    int Unknown08;
+    int m_Count;
     char Unknown0C[4];
-    Class_10A84610_Unknown10** Unknown10;
+    Class_10A84610_Unknown10** m_Entries;
 };
 
-// FUNCTION: 0x10A84610 ?FUN_10a84610@Class_10E6C364@@UAEHPAVClass_10AAB590_Param@@@Z
-int Class_10E6C364::FUN_10a84610(Class_10AAB590_Param* Ar)
+// FUNCTION: 0x10A84610 ?Write@Class_10E6C364@@UAEHPAVClass_10AAB590_Param@@@Z
+int Class_10E6C364::Write(Class_10AAB590_Param* Ar)
 {
     Ar->Virtual1(Unknown04);
-    Ar->Virtual1(Unknown08);
-    for (int i = 0; i < Unknown08; i++)
+    Ar->Virtual1(m_Count);
+    for (int i = 0; i < m_Count; i++)
     {
-        Ar->Virtual1(Unknown10[i]->Virtual1());
-        Unknown10[i]->Virtual7(Ar);
+        Ar->Virtual1(m_Entries[i]->Virtual1());
+        m_Entries[i]->Virtual7(Ar);
     }
     return 1;
 }

@@ -77,8 +77,8 @@ public:
     virtual ~Class_10E6D940();
     virtual void Virtual1();
     virtual void Virtual2();
-    virtual void FUN_10aa7750(void* Stream, int A, int B);
-    virtual int FUN_10aa7a40(Class_10AAB590_Param* Src);
+    virtual void WriteToStream(void* Stream, int A, int B);
+    virtual int Read(Class_10AAB590_Param* Src);
 
     Class_109081E0 Unknown04;
     Object_10AA7BA0* Unknown08;
@@ -88,8 +88,8 @@ public:
     int Unknown18;
 };
 
-// FUNCTION: 0x10AA7A40 ?FUN_10aa7a40@Class_10E6D940@@UAEHPAVClass_10AAB590_Param@@@Z
-int Class_10E6D940::FUN_10aa7a40(Class_10AAB590_Param* Src)
+// FUNCTION: 0x10AA7A40 ?Read@Class_10E6D940@@UAEHPAVClass_10AAB590_Param@@@Z
+int Class_10E6D940::Read(Class_10AAB590_Param* Src)
 {
     Unknown04 = Src->Virtual2();
     Class_109081E0 Name = Src->Virtual2();

@@ -33,13 +33,13 @@ Class_10E6DA40* Class_10E6DA40::FUN_10aab5d0()
     return this;
 }
 
-// FUNCTION: 0x10AAB8B0 ?FUN_10aab8b0@Class_10E6DA64@@QAEPAV1@XZ
-Class_10E6DA64* Class_10E6DA64::FUN_10aab8b0()
+// FUNCTION: 0x10AAB8B0 ?Init@Class_10E6DA64@@QAEPAV1@XZ
+Class_10E6DA64* Class_10E6DA64::Init()
 {
     Unknown00 = DAT_10e6da64;
-    Unknown04 = 0;
+    m_Count = 0;
     Unknown08 = 0;
-    Unknown0C = 0;
+    m_Elements = 0;
     Unknown10 = 0;
     Unknown14 = 0;
     Unknown18 = 0;

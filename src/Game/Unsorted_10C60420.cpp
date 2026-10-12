@@ -8,19 +8,19 @@ public:
     void FUN_10953ec0();
 };
 
-// FUNCTION: 0x10C60480 ?FUN_10c60480@Class_10C60480@@QAEXXZ
-void Class_10C60480::FUN_10c60480()
+// FUNCTION: 0x10C60480 ?Clear@Class_10C60480@@QAEXXZ
+void Class_10C60480::Clear()
 {
-    FUN_10c60420();
+    ClearItems();
     Unknown38 = false;
-    for (int i = 0; i < Unknown0C; i++)
+    for (int i = 0; i < m_NumObjects; i++)
     {
-        Class_10953EC0* Item = Unknown14[i];
+        Class_10953EC0* Item = m_Objects[i];
         if (Item)
         {
             Item->FUN_10953ec0();
             ::operator delete(Item);
         }
     }
-    Unknown0C = 0;
+    m_NumObjects = 0;
 }

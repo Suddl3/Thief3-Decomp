@@ -21,13 +21,13 @@ public:
     int Flag;
 };
 
-// Class_10E6D208: a polymorphic base of Class_10E66500 (its vtable 0x10E6D208 holds the destructor and FUN_10a2f220).
+// Class_10E6D208: a polymorphic base of Class_10E66500 (its vtable 0x10E6D208 holds the destructor and Clone).
 class Class_10E6D208
 {
 public:
     Class_10E6D208() : Unknown04(0) {}
     virtual ~Class_10E6D208() {}
-    virtual Class_10E6D208* FUN_10a2f220();
+    virtual Class_10E6D208* Clone();
 
     int Unknown04;
 };

@@ -5,39 +5,39 @@
 #include "Game/Class_10A32370.h"
 #include "Game/Class_10A32D60.h"
 
-// FUNCTION: 0x10A32C30 ?FUN_10a32c30@Class_10A32D60@@QAEXH@Z
-void Class_10A32D60::FUN_10a32c30(int NewCount)
+// FUNCTION: 0x10A32C30 ?SetCount@Class_10A32D60@@QAEXH@Z
+void Class_10A32D60::SetCount(int NewCount)
 {
-    int OldCount = Unknown00;
-    int Capacity = !Unknown08 ? 0 : Unknown04 / sizeof(Class_10A32370);
+    int OldCount = m_Count;
+    int Capacity = !m_Elements ? 0 : m_CapacityBytes / sizeof(Class_10A32370);
     for (int i = NewCount; i < OldCount; i++)
-        Unknown08[i].~Class_10A32370();
+        m_Elements[i].~Class_10A32370();
     GetAllocator()->Virtual8(0, 0);
     if (NewCount > Capacity)
     {
         int NewCapacity = NewCount;
         if (Capacity)
             NewCapacity = (NewCount & ~15) + 16;
-        Unknown08 = (Class_10A32370*)GetAllocator()->Virtual3(Unknown08, NewCapacity * sizeof(Class_10A32370), 0, 0, 0, 0);
-        Unknown04 = NewCapacity * sizeof(Class_10A32370);
+        m_Elements = (Class_10A32370*)GetAllocator()->Virtual3(m_Elements, NewCapacity * sizeof(Class_10A32370), 0, 0, 0, 0);
+        m_CapacityBytes = NewCapacity * sizeof(Class_10A32370);
     }
     else if (NewCount <= Capacity - 16)
     {
         if (NewCount == 0)
         {
-            GetAllocator()->Virtual5(Unknown08);
-            Unknown08 = 0;
-            Unknown04 = 0;
+            GetAllocator()->Virtual5(m_Elements);
+            m_Elements = 0;
+            m_CapacityBytes = 0;
         }
         else
         {
             int NewCapacity = (NewCount & ~15) + 16;
-            Unknown08 = (Class_10A32370*)GetAllocator()->Virtual3(Unknown08, NewCapacity * sizeof(Class_10A32370), 0, 0, 0, 0);
-            Unknown04 = NewCapacity * sizeof(Class_10A32370);
+            m_Elements = (Class_10A32370*)GetAllocator()->Virtual3(m_Elements, NewCapacity * sizeof(Class_10A32370), 0, 0, 0, 0);
+            m_CapacityBytes = NewCapacity * sizeof(Class_10A32370);
         }
     }
     for (int j = OldCount; j < NewCount; j++)
-        new (&Unknown08[j]) Class_10A32370;
+        new (&m_Elements[j]) Class_10A32370;
     GetAllocator()->Virtual9();
-    Unknown00 = NewCount;
+    m_Count = NewCount;
 }

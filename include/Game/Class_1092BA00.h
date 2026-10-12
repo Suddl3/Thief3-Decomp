@@ -3,9 +3,9 @@
 #ifndef GAME_CLASS_1092BA00_H
 #define GAME_CLASS_1092BA00_H
 
-#include "Game/Class_1092A370.h"
+#include "Game/cHashTable.h"
 
-class Class_1092BA00 : public Class_1092A370
+class Class_1092BA00 : public cHashTable
 {
 public:
     void FUN_1092ba00(int Param);

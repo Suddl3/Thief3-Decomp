@@ -16,7 +16,7 @@ public:
     char Unknown00[0x11C];
     void* Unknown11C;
     char Unknown120[8];
-    void** Unknown128;
+    void** m_Windows;
 };
 
 Class_10905A90_Member* GetAllocator();
@@ -26,47 +26,47 @@ struct Struct_1092E930_Element
     char Unknown00[4];
 };
 
-// FUNCTION: 0x10A51140 ?FUN_10a51140@Class_1092E930@@QAEXH@Z
-void Class_1092E930::FUN_10a51140(int NewCount)
+// FUNCTION: 0x10A51140 ?SetCount@Class_1092E930@@QAEXH@Z
+void Class_1092E930::SetCount(int NewCount)
 {
-    int Capacity = !Unknown08 ? 0 : Unknown04 / sizeof(Struct_1092E930_Element);
+    int Capacity = !m_Data ? 0 : m_CapacityBytes / sizeof(Struct_1092E930_Element);
     GetAllocator()->Virtual8(0, 0);
     if (NewCount > Capacity)
     {
         int NewCapacity = NewCount;
         if (Capacity)
             NewCapacity = (NewCount & ~3) + 4;
-        Unknown08 = GetAllocator()->Virtual3(Unknown08, NewCapacity * sizeof(Struct_1092E930_Element), 0, 0, 0, 0);
-        Unknown04 = NewCapacity * sizeof(Struct_1092E930_Element);
+        m_Data = GetAllocator()->Virtual3(m_Data, NewCapacity * sizeof(Struct_1092E930_Element), 0, 0, 0, 0);
+        m_CapacityBytes = NewCapacity * sizeof(Struct_1092E930_Element);
     }
     else if (NewCount <= Capacity - 4)
     {
         if (NewCount == 0)
         {
-            GetAllocator()->Virtual5(Unknown08);
-            Unknown08 = 0;
-            Unknown04 = 0;
+            GetAllocator()->Virtual5(m_Data);
+            m_Data = 0;
+            m_CapacityBytes = 0;
         }
         else
         {
             int NewCapacity = (NewCount & ~3) + 4;
-            Unknown08 = GetAllocator()->Virtual3(Unknown08, NewCapacity * sizeof(Struct_1092E930_Element), 0, 0, 0, 0);
-            Unknown04 = NewCapacity * sizeof(Struct_1092E930_Element);
+            m_Data = GetAllocator()->Virtual3(m_Data, NewCapacity * sizeof(Struct_1092E930_Element), 0, 0, 0, 0);
+            m_CapacityBytes = NewCapacity * sizeof(Struct_1092E930_Element);
         }
     }
     GetAllocator()->Virtual9();
-    Unknown00 = NewCount;
+    m_Count = NewCount;
 }
 
 // FUNCTION: 0x10A514E0 ?FUN_10a514e0@Class_10E67BD8@@QAEXH@Z
 void Class_10E67BD8::FUN_10a514e0(int Index)
 {
-    if (Unknown128[Index])
+    if (m_Windows[Index])
     {
-        if (Unknown11C == Unknown128[Index])
+        if (Unknown11C == m_Windows[Index])
             Unknown11C = 0;
-        GWindowManager->FUN_109e3d60(Unknown128[Index]);
-        Unknown128[Index] = 0;
+        GWindowManager->FUN_109e3d60(m_Windows[Index]);
+        m_Windows[Index] = 0;
     }
 }
 

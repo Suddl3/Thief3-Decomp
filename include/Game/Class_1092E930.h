@@ -6,12 +6,12 @@
 class Class_1092E930
 {
 public:
-    void FUN_10a51140(int A);
-    void FUN_1092e930();
+    void SetCount(int A);
+    void Clear();
 
-    int Unknown00;
-    int Unknown04;
-    void* Unknown08;
+    int m_Count;
+    int m_CapacityBytes;
+    void* m_Data;
 };
 
 #endif // GAME_CLASS_1092E930_H

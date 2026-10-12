@@ -10,9 +10,9 @@ class Class_10A85940_Node;
 class Class_10A85940
 {
 public:
-    unsigned int FUN_10a85940(const int& Key, const int& Value);
-    void FUN_10a85a00(int Size);
-    bool FUN_10a86390(const int& Key);
+    unsigned int Insert(const int& Key, const int& Value);
+    void Rehash(int Size);
+    bool Remove(const int& Key);
 
     int Unknown00;
     int Unknown04;

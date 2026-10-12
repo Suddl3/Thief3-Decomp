@@ -9,7 +9,7 @@ void Class_109140C0::FUN_109140c0(int A, Class_109081E0& B, int C)
 {
     for (int i = Unknown04 - 1; i >= 0; i--)
     {
-        Unknown0C[i]->FUN_10915160(A, B, C);
+        Unknown0C[i]->Dispatch(A, B, C);
         if (B.Unknown00 && ((int*)B.Unknown00)[-1])
             break;
     }

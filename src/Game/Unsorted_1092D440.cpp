@@ -16,7 +16,7 @@ class Class_1092D420 : public Class_1092D410
 public:
     ~Class_1092D420();
 
-    bool FUN_1092d4b0();
+    bool Release();
 
     int Unknown00;
     int Unknown04;
@@ -29,7 +29,7 @@ Class_1092D420::~Class_1092D420()
 {
     try
     {
-        FUN_1092d4b0();
+        Release();
     }
     catch (...)
     {

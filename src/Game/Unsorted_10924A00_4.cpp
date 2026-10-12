@@ -12,36 +12,36 @@ public:
 class Class_10924B70
 {
 public:
-    void FUN_10924a90();
+    void Release();
     void FUN_109243f0();
 
     bool Unknown00;
-    Object_10924A90* Unknown04;
-    Object_10924A90* Unknown08;
-    Object_10924A90* Unknown0C;
+    Object_10924A90* m_Device;
+    Object_10924A90* m_RenderTarget;
+    Object_10924A90* m_DepthStencil;
     int Unknown10;
     char Unknown14[0x94];
     int UnknownA8;
 };
 
-// FUNCTION: 0x10924A90 ?FUN_10924a90@Class_10924B70@@QAEXXZ
-void Class_10924B70::FUN_10924a90()
+// FUNCTION: 0x10924A90 ?Release@Class_10924B70@@QAEXXZ
+void Class_10924B70::Release()
 {
     FUN_109243f0();
-    if (Unknown08)
+    if (m_RenderTarget)
     {
-        Unknown08->Virtual2();
-        Unknown08 = 0;
+        m_RenderTarget->Virtual2();
+        m_RenderTarget = 0;
     }
-    if (Unknown0C)
+    if (m_DepthStencil)
     {
-        Unknown0C->Virtual2();
-        Unknown0C = 0;
+        m_DepthStencil->Virtual2();
+        m_DepthStencil = 0;
     }
-    if (Unknown04)
+    if (m_Device)
     {
-        Unknown04->Virtual2();
-        Unknown04 = 0;
+        m_Device->Virtual2();
+        m_Device = 0;
     }
     Unknown10 = 0;
     Unknown00 = false;

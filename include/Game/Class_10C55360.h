@@ -6,12 +6,12 @@
 #include <list>
 #include "Game/Entry_10C55360.h"
 
-class Class_10AB5B20;
+class cRefPtr;
 
 class Class_10C55360
 {
 public:
-    Class_10AB5B20 FUN_10c55360();
+    cRefPtr FUN_10c55360();
 
     char Unknown00[0x1C];
     std::list<Entry_10C55360> Unknown1C;

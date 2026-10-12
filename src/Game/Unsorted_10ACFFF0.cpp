@@ -11,8 +11,8 @@ struct List_10ACFFF0
     Class_1098E330** Unknown08;
 };
 
-// FUNCTION: 0x10ACFFF0 ?FUN_10acfff0@Class_10ACFDE0@@QAE_NHPAUList_10ACFFF0@@@Z
-bool Class_10ACFDE0::FUN_10acfff0(int A, List_10ACFFF0* B)
+// FUNCTION: 0x10ACFFF0 ?MatchesAny@Class_10ACFDE0@@QAE_NHPAUList_10ACFFF0@@@Z
+bool Class_10ACFDE0::MatchesAny(int A, List_10ACFFF0* B)
 {
     for (int i = 0; i < B->Unknown00; i++)
     {

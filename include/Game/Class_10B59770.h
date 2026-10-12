@@ -12,29 +12,29 @@ struct Struct_10B597B0;
 class Class_10B59770
 {
 public:
-    Class_10B59770() : Unknown00(0), Unknown04(0), Unknown08(0) {}
+    Class_10B59770() : Unknown00(0), m_AllocBytes(0), Unknown08(0) {}
     // The game's (0x10B59770): inlined on normal paths, called from unwind funclets.
     ~Class_10B59770()
     {
-        FUN_10abc210(0);
-        if (Unknown04)
+        Resize(0);
+        if (m_AllocBytes)
         {
             GetAllocator()->Virtual5(Unknown08);
             Unknown08 = 0;
-            Unknown04 = 0;
+            m_AllocBytes = 0;
         }
     }
 
-    void FUN_10abc210(int Value);
+    void Resize(int Value);
     void FUN_10b59770();
-    void FUN_10b597b0(const Class_10B59770& Other);
+    void CopyFrom(const Class_10B59770& Other);
 
     union
     {
         int Unknown00;
         int Count;
     };
-    int Unknown04;
+    int m_AllocBytes;
     union
     {
         int* Unknown08;

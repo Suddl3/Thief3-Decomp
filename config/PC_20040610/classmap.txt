@@ -12,6 +12,7 @@ Class_1091ca00           Class_1091CA00                   the same address as Cl
 Class_1091e360           Class_10E499F4                   0x1091E360: slot of 0x10E499F4
 Class_10925d80           Class_10925D80                   the same address as Class_10925D80, in capitals
 Class_10925db0           Class_10925DB0                   the same address as Class_10925DB0, in capitals
+Class_1092A370           cHashTable                       named: Chained buckets of HashBytes-hashed keys; its Insert, Rehash and Remove grow and shrink the bucket array.
 Class_10930110           Vocabulary                       0x1092FF00: called on this by 0x10930300
 Class_109301D0           Vocabulary                       0x109301D0: called on this by 0x10930300
 Class_109333a0           Class_109333A0                   the same address as Class_109333A0, in capitals
@@ -223,7 +224,9 @@ Class_10AACF40           cConCameraController             0x10AACF40: slot of 0x
 Class_10AAEB00           Class_10E6DC54                   0x10AAEB00: slot of 0x10E6DC54
 Class_10AAEB70           Class_10E6DC54                   0x10AAEB70: slot of 0x10E6DC54
 Class_10AAF4D0           Class_10E6DC54                   0x10AAF4D0: slot of 0x10E6DC54
+Class_10AB5B20           cRefPtr                          named: Copy constructor calls Virtual1 (add reference), destructor calls Virtual2 (release) on Unknown00.
 Class_10AB72D0           Class_10E6F3EC                   0x10AB72D0: called on this by 0x10ABA020
+Class_10AB7500           cDifficulty                      named: Holds Difficulty, which FUN_10ab7330 reads from the T3Settings CurrentDifficulty string.
 Class_10ABA190           Class_10E6F388                   0x10ABA190: stores 0x10E6F388
 Class_10ABB4E0           Class_10E6F474                   0x10ABB4E0: called on this by 0x10ABBE40
 Class_10ABB720           Class_10E6F474                   0x10ABB720: called on this by 0x10ABBE40
@@ -536,6 +539,7 @@ Class_10E6561C           cBuildFleshBSP                   named: Xbox twin vtabl
 Class_10E66474           cSoundStreamingManager           named: Xbox messages name cSoundStreamingManager (unhandled event; move event for an actor that isn't the player); the event switch agrees.
 Class_10E667AC           Class_10E66700                   0x10A39EA0: stores 0x10E66700
 Class_10E67938           cActorManager                    named: Xbox messages 'cActorManager::GetUserLink...' and 'cActorManager::results' pair with Virtual2 by vtable.
+Class_10E67FB0           cFloatInterpolator               named: Update lerps one float from a start to an end value over a duration, then stops.
 Class_10E682F0           cFMVWindow                       named: Xbox callee file WmFMVWindow.cpp; cMovieSubtitles calls its constructor and its Stop.
 Class_10E68938           cRadioWindow                     named: Xbox names cRadioWindow with file WmRadioWindow.cpp; SetSelectedIndex leaves exactly one child selected.
 Class_10E69470           cConsoleWindow                   named: Xbox twin vtable (T3Opt 133/118 slots): its own methods' and constructors' debug names say cConsoleWindow (2), source WmConsoleWindow.cpp

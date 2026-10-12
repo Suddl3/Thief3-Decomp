@@ -13,8 +13,8 @@ class Class_10A34C10
 {
 public:
     unsigned int FUN_10a348e0(const Class_109081E0& Key, Class_10A34C10_Unknown10** Value);
-    void FUN_10a349e0(int NewSize);
-    unsigned int FUN_10a34c10(const Class_109081E0& Key, Class_10A34C10_Unknown10** Value);
+    void Rehash(int NewSize);
+    unsigned int InsertOrAssign(const Class_109081E0& Key, Class_10A34C10_Unknown10** Value);
 
     int Collisions;
     int Count;
@@ -31,7 +31,7 @@ public:
         Class_10A34C10_Node** Table;
         Class_10A34C10_Node** Unknown14;
     };
-    Class_10A34C10_Field18 Unknown18;
+    Class_10A34C10_Field18 m_KeyOps;
 };
 
 #endif // GAME_CLASS_10A34C10_H

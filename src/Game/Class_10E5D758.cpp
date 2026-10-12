@@ -26,10 +26,10 @@ extern void* DAT_10e6c77c[];
 class Class_10E6C77C
 {
 public:
-    Class_10E6C77C() : VTable(DAT_10e6c77c), Unknown04(NAME_None) {}
+    Class_10E6C77C() : VTable(DAT_10e6c77c), m_Name(NAME_None) {}
 
     void** VTable;
-    FName Unknown04;
+    FName m_Name;
 };
 
 // FUNCTION: 0x10A8D110 ?FUN_10a8d110@Class_10E5D758@@UAEPAVClass_10E6C77C@@HH@Z

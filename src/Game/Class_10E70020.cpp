@@ -14,11 +14,11 @@ public:
 class Class_10E70020 : public cActorManager
 {
 public:
-    Class_10E70020* FUN_10acc050();
+    Class_10E70020* Init();
 };
 
-// FUNCTION: 0x10ACC050 ?FUN_10acc050@Class_10E70020@@QAEPAV1@XZ
-Class_10E70020* Class_10E70020::FUN_10acc050()
+// FUNCTION: 0x10ACC050 ?Init@Class_10E70020@@QAEPAV1@XZ
+Class_10E70020* Class_10E70020::Init()
 {
     this->cActorManager::cActorManager();
     Unknown00 = DAT_10e70020;

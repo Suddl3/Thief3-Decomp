@@ -39,7 +39,7 @@ int Class_10B2A480::FUN_10b2a480(int A)
     Node->Prev = (Entry_10C32C30*)-1;
     Count--;
     Key = A;
-    Unknown0C.FUN_10b2a380(Key);
+    Unknown0C.Remove(Key);
     delete Node;
     return A;
 }

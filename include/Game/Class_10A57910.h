@@ -127,7 +127,7 @@ public:
     virtual void Virtual118(int A);
 
     void FUN_10a57910(int p1);
-    void FUN_10a51200(bool A);
+    void SetInOverlay(bool A);
 
     char Pad04[0x1ec];
     int Unknown1F0;

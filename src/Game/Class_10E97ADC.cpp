@@ -8,11 +8,11 @@
 class Class_10E97ADC
 {
 public:
-    Class_10E97ADC* FUN_10bff720();
+    Class_10E97ADC* Init();
     virtual ~Class_10E97ADC();
 
     cIntArray Unknown04;
-    cIntArray Unknown10;
+    cIntArray m_PathPoints;
     cIntArray Unknown1C;
     int Unknown28;
     int Unknown2C;

@@ -12,24 +12,24 @@ Class_10905A90_Member* GetAllocator();
 class Class_10A32370
 {
 public:
-    Class_10A32370() : Unknown00(0), Unknown04(0), Unknown08(0) {}
+    Class_10A32370() : m_Count(0), m_CapacityBytes(0), m_Elements(0) {}
     ~Class_10A32370()
     {
-        FUN_10a32370(0);
-        if (Unknown04)
+        SetCount(0);
+        if (m_CapacityBytes)
         {
-            GetAllocator()->Virtual5(Unknown08);
-            Unknown08 = 0;
-            Unknown04 = 0;
+            GetAllocator()->Virtual5(m_Elements);
+            m_Elements = 0;
+            m_CapacityBytes = 0;
         }
     }
 
-    void FUN_10a32370(int NewCount);
-    int FUN_10a32ab0(Class_10A32AB0_Element** A);
+    void SetCount(int NewCount);
+    int Append(Class_10A32AB0_Element** A);
 
-    int Unknown00;
-    int Unknown04;
-    Class_10A32AB0_Element** Unknown08;
+    int m_Count;
+    int m_CapacityBytes;
+    Class_10A32AB0_Element** m_Elements;
 };
 
 #endif // GAME_CLASS_10A32370_H

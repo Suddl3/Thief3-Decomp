@@ -19,5 +19,5 @@ void FUN_10918230()
     DAT_10efef54 = -1;
     DAT_10f2c724 = 0;
     if (DAT_10f2c740)
-        DAT_10f2c740->FUN_1091f5b0();
+        DAT_10f2c740->Reset();
 }

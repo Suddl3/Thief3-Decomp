@@ -8,36 +8,36 @@ Class_10905A90_Member* GetAllocator();
 
 extern "C" void* memset(void*, int, unsigned);
 
-// FUNCTION: 0x10A31F30 ?FUN_10a31f30@Class_10A32270@@QAEXH@Z
-void Class_10A32270::FUN_10a31f30(int NewCount)
+// FUNCTION: 0x10A31F30 ?SetCount@Class_10A32270@@QAEXH@Z
+void Class_10A32270::SetCount(int NewCount)
 {
-    int Capacity = !Unknown08 ? 0 : Unknown04;
+    int Capacity = !m_Data ? 0 : m_CapacityBytes;
     GetAllocator()->Virtual8(0, 0);
     if (NewCount > Capacity)
     {
         int NewCapacity = NewCount;
         if (Capacity)
             NewCapacity = (NewCount & ~15) + 16;
-        void* NewData = GetAllocator()->Virtual3(Unknown08, NewCapacity, 0, 0, 0, 0);
-        Unknown04 = NewCapacity;
-        Unknown08 = NewData;
+        void* NewData = GetAllocator()->Virtual3(m_Data, NewCapacity, 0, 0, 0, 0);
+        m_CapacityBytes = NewCapacity;
+        m_Data = NewData;
         memset((char*)NewData + Capacity, 0, NewCapacity - Capacity);
     }
     else if (NewCount <= Capacity - 16)
     {
         if (NewCount == 0)
         {
-            GetAllocator()->Virtual5(Unknown08);
-            Unknown08 = 0;
-            Unknown04 = 0;
+            GetAllocator()->Virtual5(m_Data);
+            m_Data = 0;
+            m_CapacityBytes = 0;
         }
         else
         {
             int NewCapacity = (NewCount & ~15) + 16;
-            Unknown08 = GetAllocator()->Virtual3(Unknown08, NewCapacity, 0, 0, 0, 0);
-            Unknown04 = NewCapacity;
+            m_Data = GetAllocator()->Virtual3(m_Data, NewCapacity, 0, 0, 0, 0);
+            m_CapacityBytes = NewCapacity;
         }
     }
     GetAllocator()->Virtual9();
-    Unknown00 = NewCount;
+    m_Count = NewCount;
 }

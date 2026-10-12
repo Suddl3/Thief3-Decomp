@@ -46,15 +46,15 @@ class Class_10E7E808 : public Class_10E7E730
 public:
     virtual void FUN_10b4bcb0(int A);
     virtual void FUN_10b4bce0(AGarrett* Garrett);
-    virtual void FUN_10b4bd30(AGarrett* Garrett);
+    virtual void ReleaseArmsForBody(AGarrett* Garrett);
     virtual void Virtual4();
 
     char Unknown04[0xC];
     float Unknown10;
 };
 
-// FUNCTION: 0x10B4BD30 ?FUN_10b4bd30@Class_10E7E808@@UAEXPAVAGarrett@@@Z
-void Class_10E7E808::FUN_10b4bd30(AGarrett* Garrett)
+// FUNCTION: 0x10B4BD30 ?ReleaseArmsForBody@Class_10E7E808@@UAEXPAVAGarrett@@@Z
+void Class_10E7E808::ReleaseArmsForBody(AGarrett* Garrett)
 {
     ClearVelocity(Garrett);
     ReleaseArm(Garrett);

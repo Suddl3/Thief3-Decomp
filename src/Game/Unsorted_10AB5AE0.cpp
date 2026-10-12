@@ -7,7 +7,7 @@
 #include "Game/Class_10E6F4B4.h"
 #include "Game/Object_10AB5B20.h"
 #include "Game/Struct_10AC1830.h"
-#include "Game/Class_10AB5B20.h"
+#include "Game/cRefPtr.h"
 #include "Game/Class_10AC1830.h"
 
 void FUN_10dd3d40();
@@ -39,8 +39,8 @@ public:
 
 void FUN_10ac2fb0();
 
-// FUNCTION: 0x10AB5B20 ?FUN_10ab5b20@Class_10AB5B20@@QAE?AV1@XZ
-Class_10AB5B20 Class_10AB5B20::FUN_10ab5b20()
+// FUNCTION: 0x10AB5B20 ?Copy@cRefPtr@@QAE?AV1@XZ
+cRefPtr cRefPtr::Copy()
 {
     return *this;
 }

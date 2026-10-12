@@ -11,11 +11,11 @@ void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
 unsigned int HashBytes(const void* Data, int Length);
 
-// FUNCTION: 0x10A86390 ?FUN_10a86390@Class_10A85940@@QAE_NABH@Z
-bool Class_10A85940::FUN_10a86390(const int& Key)
+// FUNCTION: 0x10A86390 ?Remove@Class_10A85940@@QAE_NABH@Z
+bool Class_10A85940::Remove(const int& Key)
 {
     if (!Unknown10 && Unknown04 < Unknown0C * 0.05 && Unknown0C > 64)
-        FUN_10a85a00(Unknown0C / 2);
+        Rehash(Unknown0C / 2);
     unsigned int Index;
     {
         const void* Data;

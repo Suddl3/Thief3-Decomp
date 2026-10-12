@@ -35,17 +35,17 @@ public:
 
     void* Unknown00;
     int Unknown04;
-    cIntArray Unknown08;
+    cIntArray m_Objects;
     int Unknown14;
 };
 
 // FUNCTION: 0x10C27540 ??0Class_10E99350@@QAE@H@Z
-Class_10E99350::Class_10E99350(int Value) : Unknown00(DAT_10e99350), Unknown04(0), Unknown08(), Unknown14(Value)
+Class_10E99350::Class_10E99350(int Value) : Unknown00(DAT_10e99350), Unknown04(0), m_Objects(), Unknown14(Value)
 {
     GetAllocator()->Virtual8(0, 0);
     int Tag = 0;
     Class_10E99340* First = new(Tag, 0, 0, 0, 0) Class_10E99340;
-    cIntArray* List = &Unknown08;
+    cIntArray* List = &m_Objects;
     int Index = List->Count;
     List->SetCount(Index + 1);
     List->Data[Index] = (int)First;

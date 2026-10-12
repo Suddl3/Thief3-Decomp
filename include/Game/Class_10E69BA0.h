@@ -13,7 +13,7 @@ struct List_10A5E900;
 class Class_10E69BA0 : public Window
 {
 public:
-    virtual void FUN_10a5e950(int A);
+    virtual void Update(int A);
     virtual void Virtual110(cIntArray& Found);
     virtual void Virtual111(cIntArray& Found);
     virtual void Virtual3();

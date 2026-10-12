@@ -11,11 +11,11 @@ void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
 unsigned int HashBytes(const void* Data, int Length);
 
-// FUNCTION: 0x10A85940 ?FUN_10a85940@Class_10A85940@@QAEIABH0@Z
-unsigned int Class_10A85940::FUN_10a85940(const int& Key, const int& Value)
+// FUNCTION: 0x10A85940 ?Insert@Class_10A85940@@QAEIABH0@Z
+unsigned int Class_10A85940::Insert(const int& Key, const int& Value)
 {
     if (!Unknown10 && Unknown00 > Unknown0C * 0.2)
-        FUN_10a85a00(Unknown0C * 2);
+        Rehash(Unknown0C * 2);
     Class_10A85940_Node* Node = new(0, 0, 0, 0, 0) Class_10A85940_Node;
     Node->Key = Key;
     Node->Value = Value;
@@ -34,8 +34,8 @@ unsigned int Class_10A85940::FUN_10a85940(const int& Key, const int& Value)
     return Index;
 }
 
-// FUNCTION: 0x10A85A00 ?FUN_10a85a00@Class_10A85940@@QAEXH@Z
-void Class_10A85940::FUN_10a85a00(int Size)
+// FUNCTION: 0x10A85A00 ?Rehash@Class_10A85940@@QAEXH@Z
+void Class_10A85940::Rehash(int Size)
 {
     int OldSize = Unknown0C;
     Class_10A85940_Node** OldBuckets = Unknown14;
@@ -53,7 +53,7 @@ void Class_10A85940::FUN_10a85a00(int Size)
         Class_10A85940_Node* Node = OldBuckets[j];
         while (Node)
         {
-            FUN_10a85940(Node->Key, Node->Value);
+            Insert(Node->Key, Node->Value);
             Class_10A85940_Node* Next = Node->Next;
             delete Node;
             Node = Next;

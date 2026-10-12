@@ -40,7 +40,7 @@ Struct_10A2DA00* Class_10A2C2F0::FindOrAddEntry(Class_10B21820* A, void* B)
     int Count = Unknown08.Unknown00;
     Class_10A2C610* Array = &Unknown08;
     Item.Unknown7A = false;
-    Array->FUN_10a2c3b0(Count + 1);
+    Array->SetCount(Count + 1);
     Struct_10A2DA00* Dest = Array->Unknown08 + Count;
     *Dest = Item;
     return Unknown08.Unknown08 + Count;

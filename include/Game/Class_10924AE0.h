@@ -13,10 +13,10 @@ class Class_10924AE0
 public:
     bool FUN_10924ae0();
     bool FUN_10924490(int A, int B, int C, int D, Struct_1094D980* E);
-    bool FUN_10924be0(Class_10924BE0* A);
-    void FUN_10924c60();
+    bool Initialize(Class_10924BE0* A);
+    void Refresh();
 
-    bool Unknown00;
+    bool m_Initialized;
     char Pad01[0x3];
     Class_10924BE0* Unknown04;
     int Unknown08;

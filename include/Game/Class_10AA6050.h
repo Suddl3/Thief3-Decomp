@@ -11,22 +11,22 @@ struct Struct_10AA6340;
 class Class_10AA6050
 {
 public:
-    Struct_10AA6050* FUN_10aa6050(int Value)
+    Struct_10AA6050* FindEntry(int Value)
     {
-        for (int i = 0; i < Unknown04; i++)
+        for (int i = 0; i < m_Count; i++)
         {
-            Struct_10AA6050* Entry = Unknown0C[i];
+            Struct_10AA6050* Entry = m_Entries[i];
             if (Entry->Unknown00 == Value)
                 return Entry;
         }
         return 0;
     }
-    void FUN_10aa6340(int Value, const Struct_10AA6340& A, const cIntArray& B);
+    void SetEntry(int Value, const Struct_10AA6340& A, const cIntArray& B);
 
     char Unknown00[4];
-    int Unknown04;
+    int m_Count;
     char Unknown08[4];
-    Struct_10AA6050** Unknown0C;
+    Struct_10AA6050** m_Entries;
 };
 
 #endif // GAME_CLASS_10AA6050_H

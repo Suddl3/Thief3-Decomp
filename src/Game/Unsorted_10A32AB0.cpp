@@ -3,14 +3,14 @@
 #include "Game/Class_10A32370.h"
 #include "Game/Class_10A32AB0_Element.h"
 
-// FUNCTION: 0x10A32AB0 ?FUN_10a32ab0@Class_10A32370@@QAEHPAPAVClass_10A32AB0_Element@@@Z
-int Class_10A32370::FUN_10a32ab0(Class_10A32AB0_Element** A)
+// FUNCTION: 0x10A32AB0 ?Append@Class_10A32370@@QAEHPAPAVClass_10A32AB0_Element@@@Z
+int Class_10A32370::Append(Class_10A32AB0_Element** A)
 {
-    int Index = Unknown00;
-    FUN_10a32370(Index + 1);
-    Class_10A32AB0_Element* Old = Unknown08[Index];
+    int Index = m_Count;
+    SetCount(Index + 1);
+    Class_10A32AB0_Element* Old = m_Elements[Index];
     Class_10A32AB0_Element* New = *A;
-    Unknown08[Index] = New;
+    m_Elements[Index] = New;
     if (New)
         New->Virtual1();
     if (Old)

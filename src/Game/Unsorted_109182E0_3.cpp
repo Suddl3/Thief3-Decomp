@@ -23,7 +23,7 @@ bool FUN_10918e10(int Key)
             int Last = DAT_10f2c768.Unknown00 - 1;
             DAT_10f2c770[i] = DAT_10f2c770[Last];
             DAT_10f2c770[Last] = Found;
-            DAT_10f2c768.FUN_10abc210(DAT_10f2c768.Unknown00 - 1);
+            DAT_10f2c768.Resize(DAT_10f2c768.Unknown00 - 1);
             return true;
         }
     }

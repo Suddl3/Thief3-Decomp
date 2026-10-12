@@ -9,15 +9,15 @@ class Class_10C50320;
 class Class_10C60480
 {
 public:
-    void FUN_10c60420();
-    void FUN_10c60480();
+    void ClearItems();
+    void Clear();
 
-    int Unknown00;
+    int m_NumItems;
     int Unknown04;
-    Class_10C50320* Unknown08;
-    int Unknown0C;
+    Class_10C50320* m_Items;
+    int m_NumObjects;
     char Unknown10[4];
-    Class_10953EC0** Unknown14;
+    Class_10953EC0** m_Objects;
     char Unknown18[0x20];
     bool Unknown38;
     char Pad39[0x3];

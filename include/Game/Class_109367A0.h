@@ -7,7 +7,7 @@ class Class_109367A0
 {
 public:
     void FUN_109367a0();
-    void FUN_10936a60();
+    void Reset();
 
     char Unknown00[0x62C];
     union

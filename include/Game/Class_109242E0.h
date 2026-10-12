@@ -10,7 +10,7 @@ class Class_109242E0 : public Class_10E6D8F0
 {
 public:
     void FUN_109242e0(int p1);
-    void FUN_10924c60();
+    void Refresh();
 
     Struct_10924210 Unknown18;
     char Pad30[0x8];

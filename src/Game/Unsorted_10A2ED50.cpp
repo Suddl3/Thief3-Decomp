@@ -18,8 +18,8 @@ int FUN_10a2ed50(Struct_10A2ED50* p1)
     return FUN_10a2e900(p1);
 }
 
-// FUNCTION: 0x10A2ED70 ?FUN_10a2ed70@Class_10E662D0@@UAEHPAV1@@Z
-int Class_10E662D0::FUN_10a2ed70(Class_10E662D0* Other)
+// FUNCTION: 0x10A2ED70 ?IsCompatibleWith@Class_10E662D0@@UAEHPAV1@@Z
+int Class_10E662D0::IsCompatibleWith(Class_10E662D0* Other)
 {
     if (Unknown04 != 0 && Other->Unknown04 != 0 && Unknown04 != Other->Unknown04)
         return 0;

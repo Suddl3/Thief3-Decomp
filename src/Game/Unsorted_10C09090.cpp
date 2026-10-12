@@ -21,8 +21,8 @@ extern void* DAT_10e98c84[];
 
 double GetTimeSeconds();
 
-// FUNCTION: 0x10C12DA0 ?FUN_10c12da0@Class_10E984BC@@QAE?AVClass_1090A780@@XZ
-Class_1090A780 Class_10E984BC::FUN_10c12da0()
+// FUNCTION: 0x10C12DA0 ?GetValue@Class_10E984BC@@QAE?AVClass_1090A780@@XZ
+Class_1090A780 Class_10E984BC::GetValue()
 {
     return Class_1090A780(DAT_10ff7060);
 }

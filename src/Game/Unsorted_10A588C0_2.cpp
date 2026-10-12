@@ -5,7 +5,7 @@
 // FUNCTION: 0x10A588C0 ?FUN_10a588c0@Class_10A57910@@UAEX_N@Z
 void Class_10A57910::FUN_10a588c0(bool A)
 {
-    FUN_10a51200(A);
+    SetInOverlay(A);
     if (A)
     {
         if (Virtual54())

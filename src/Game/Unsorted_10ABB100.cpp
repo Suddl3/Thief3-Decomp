@@ -29,40 +29,40 @@ public:
     bool Unknown10;
 };
 
-// FUNCTION: 0x10ABB100 ?FUN_10abb100@Class_10ABB580@@QAEXH@Z
-void Class_10ABB580::FUN_10abb100(int NewCount)
+// FUNCTION: 0x10ABB100 ?Resize@Class_10ABB580@@QAEXH@Z
+void Class_10ABB580::Resize(int NewCount)
 {
-    int OldCount = Unknown00;
-    int Capacity = !Unknown08 ? 0 : Unknown04 / sizeof(Class_10ABB100_Unknown08);
+    int OldCount = m_Count;
+    int Capacity = !m_Data ? 0 : m_AllocBytes / sizeof(Class_10ABB100_Unknown08);
     GetAllocator()->Virtual8(0, 0);
     if (NewCount > Capacity)
     {
         int NewCapacity = NewCount;
         if (Capacity)
             NewCapacity = (NewCount & ~15) + 16;
-        void* Block = GetAllocator()->Virtual3(Unknown08, NewCapacity * sizeof(Class_10ABB100_Unknown08), 0, 0, 0, 0);
-        Unknown04 = NewCapacity * sizeof(Class_10ABB100_Unknown08);
-        Unknown08 = Block;
+        void* Block = GetAllocator()->Virtual3(m_Data, NewCapacity * sizeof(Class_10ABB100_Unknown08), 0, 0, 0, 0);
+        m_AllocBytes = NewCapacity * sizeof(Class_10ABB100_Unknown08);
+        m_Data = Block;
     }
     else if (NewCount <= Capacity - 16)
     {
         if (NewCount == 0)
         {
-            GetAllocator()->Virtual5(Unknown08);
-            Unknown08 = 0;
-            Unknown04 = 0;
+            GetAllocator()->Virtual5(m_Data);
+            m_Data = 0;
+            m_AllocBytes = 0;
         }
         else
         {
             int NewCapacity = (NewCount & ~15) + 16;
-            void* Block = GetAllocator()->Virtual3(Unknown08, NewCapacity * sizeof(Class_10ABB100_Unknown08), 0, 0, 0, 0);
-            Unknown04 = NewCapacity * sizeof(Class_10ABB100_Unknown08);
-            Unknown08 = Block;
+            void* Block = GetAllocator()->Virtual3(m_Data, NewCapacity * sizeof(Class_10ABB100_Unknown08), 0, 0, 0, 0);
+            m_AllocBytes = NewCapacity * sizeof(Class_10ABB100_Unknown08);
+            m_Data = Block;
         }
     }
     for (int j = OldCount; j < NewCount; j++)
     {
-        Class_10ABB100_Unknown08* Element = (Class_10ABB100_Unknown08*)((char*)Unknown08 + j * sizeof(Class_10ABB100_Unknown08));
+        Class_10ABB100_Unknown08* Element = (Class_10ABB100_Unknown08*)((char*)m_Data + j * sizeof(Class_10ABB100_Unknown08));
         if (Element)
         {
             Element->Unknown00 = 0;
@@ -73,7 +73,7 @@ void Class_10ABB580::FUN_10abb100(int NewCount)
         }
     }
     GetAllocator()->Virtual9();
-    Unknown00 = NewCount;
+    m_Count = NewCount;
 }
 
 // FUNCTION: 0x10ABB200 ?FUN_10abb200@Class_10ABB200@@QAEXHHH@Z
