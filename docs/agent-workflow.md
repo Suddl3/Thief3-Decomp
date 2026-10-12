@@ -328,6 +328,23 @@ is never reused. Workflows need Claude Code with the workflow feature (an
 opt-in: the request to run it is the opt-in); without it, launch the same
 prompts with the Agent tool as below.
 
+[.claude/workflows/t3-match.js](../.claude/workflows/t3-match.js) is the
+same loop for one model at a steady width: a fixed number of lanes, each
+starting the next worker as its own returns, bands taken in turn by their
+`share`, a band dropped once a claim finds its queue empty, and a stamp
+helper every ten workers. A workflow runs 16 agents at most, so two runs of
+10 lanes make 20 workers:
+
+```
+prefix: "y1a", lanes: 10, workers: 150, model: "haiku", effort: "medium",
+bands: [{letter: "u", filters: "--min-size 80 --max-size 159", n: 6, count: 1, cap: 10, share: 3},
+        {letter: "x", filters: "--min-size 160 --max-size 319 --by-class", n: 4, count: 1, cap: 10, share: 1}]
+```
+
+Set `effort`: a workflow agent inherits the lead's otherwise. Before a run
+that follows a naming pass, give the decompiler the names
+(`ghidra_headless.py names`) and fill the queue's cached readings again.
+
 ## Workers are Agent-tool sub-agents
 
 The lead launches workers with the Agent tool: `subagent_type: t3-matcher`,
