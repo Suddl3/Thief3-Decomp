@@ -9,16 +9,16 @@ public:
 
     virtual ~Class_10E6B5B8();
 
-    void FUN_10a68cb0();
+    void Clear();
 
-    cIntArray Unknown04;
+    cIntArray m_Count;
     cIntArray Unknown10;
 };
 
 // FUNCTION: 0x10A68E90 ??0Class_10E6B5B8@@QAE@XZ
 Class_10E6B5B8::Class_10E6B5B8()
 {
-    FUN_10a68cb0();
+    Clear();
 }
 
 // FUNCTION: 0x10A690B0 ??_GClass_10E6B5B8@@UAEPAXI@Z

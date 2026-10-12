@@ -17,8 +17,8 @@ class cActorManager;
 
 extern Class_10A4C550 DAT_10f3a068;
 
-// FUNCTION: 0x10A4C740 ?FUN_10a4c740@@YAXI@Z
-void FUN_10a4c740(unsigned int Key)
+// FUNCTION: 0x10A4C740 ?NotifyActorDestroyed@@YAXI@Z
+void NotifyActorDestroyed(unsigned int Key)
 {
     Class_10A4C550_Iterator It = DAT_10f3a068.FUN_10a4c550(Key);
     Struct_10A4C940_Node* Node = It.Unknown00;

@@ -7,5 +7,5 @@
 // FUNCTION: 0x10C603C0 ?FUN_10c603c0@Class_10C603C0@@QAEXXZ
 void Class_10C603C0::FUN_10c603c0()
 {
-    Field00->Field24.FUN_10a68ae0();
+    Field00->Field24.CopyFrom();
 }

@@ -8,8 +8,8 @@
 class Class_10A68AE0 : public Class_10943600
 {
 public:
-    void FUN_10a68ae0(const Class_10A68AE0& Other);
-    void FUN_10a68ae0();
+    void CopyFrom(const Class_10A68AE0& Other);
+    void CopyFrom();
 };
 
 #endif // GAME_CLASS_10A68AE0_H

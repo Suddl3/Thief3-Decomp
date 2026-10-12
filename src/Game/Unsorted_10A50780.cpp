@@ -3,8 +3,8 @@
 
 #include "Game/FArchive.h"
 
-// FUNCTION: 0x10A50780 ?FUN_10a50780@@YAPAVFArchive@@PAV1@PAH@Z
-FArchive* FUN_10a50780(FArchive* Ar, int* Data)
+// FUNCTION: 0x10A50780 ?SerializeRecord@@YAPAVFArchive@@PAV1@PAH@Z
+FArchive* SerializeRecord(FArchive* Ar, int* Data)
 {
     int Key = *Data;
     Ar->Serialize(&Key, 4);

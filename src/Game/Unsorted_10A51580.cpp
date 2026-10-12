@@ -6,7 +6,7 @@ class Class_10E67BD8
 public:
     virtual void Virtual0();
 
-    void FUN_10a514e0(int A);
+    void RemoveWindow(int A);
 };
 
 class Class_1092E930
@@ -140,5 +140,5 @@ void Class_10A51A40::FUN_10a51a40(int A, int B)
     if (Unknown12C.m_Count < Next)
         Unknown12C.SetCount(Next);
     Unknown134[A] = B;
-    FUN_10a514e0(A);
+    RemoveWindow(A);
 }

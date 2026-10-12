@@ -6,7 +6,7 @@
 class Class_10E6BBCC {
 public:
     void* Field00;
-    Class_10E6BBCC* FUN_10a74820();
+    Class_10E6BBCC* Init();
 };
 
 #endif // GAME_CLASS_10E6BBCC_H

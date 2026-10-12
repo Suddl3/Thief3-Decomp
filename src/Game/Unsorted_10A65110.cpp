@@ -35,14 +35,14 @@ public:
     Class_10919C40* Unknown20;
 };
 
-// FUNCTION: 0x10A65480 ?FUN_10a65480@Class_10A65480@@QAEHXZ
-int Class_10A65480::FUN_10a65480()
+// FUNCTION: 0x10A65480 ?GetMaxTextWidth@Class_10A65480@@QAEHXZ
+int Class_10A65480::GetMaxTextWidth()
 {
     int Max = 0;
-    for (int I = 0; I < Unknown18C->FUN_1091cb20(); I++)
+    for (int I = 0; I < m_Strings->FUN_1091cb20(); I++)
     {
-        cString Name = Unknown18C->FUN_1091cbc0(I, 4);
-        float Value = Unknown154->MeasureText((const Struct_1091A610*)&Name, 8);
+        cString Name = m_Strings->FUN_1091cbc0(I, 4);
+        float Value = m_Font->MeasureText((const Struct_1091A610*)&Name, 8);
         int Ms = (int)FUN_10d20ec0(Value);
         if (Ms > Max)
             Max = Ms;

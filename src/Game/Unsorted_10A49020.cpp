@@ -8,9 +8,9 @@
 #include "Game/cString.h"
 #include "Game/Class_10A492B0_Node.h"
 
-int FUN_10a48b30(int A, int B);
+int FindBoneIndex(int A, int B);
 
-void FUN_10a4a100(int A, int B, int C, int D);
+void GetBoneLocationAndRotation(int A, int B, int C, int D);
 
 struct Struct_10A4C4A0_Pair
 {
@@ -25,7 +25,7 @@ struct Struct_10A4C4A0
     Struct_10A4C4A0_Pair Unknown08;
 };
 
-void FUN_10a48f20(int A, int B, FCoords* Out);
+void GetBoneCoords(int A, int B, FCoords* Out);
 
 // Ion Storm's placement new and its delete (0x10905C10; the delete folded into ::operator delete).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
@@ -57,20 +57,20 @@ unsigned int Class_10A492B0::Insert(const cString& Key, const int& Value)
     return Index;
 }
 
-// FUNCTION: 0x10A4A100 ?FUN_10a4a100@@YAXHHPAVFVector@@PAVFRotator@@@Z
-void FUN_10a4a100(int A, int B, FVector* OutLocation, FRotator* OutRotation)
+// FUNCTION: 0x10A4A100 ?GetBoneLocationAndRotation@@YAXHHPAVFVector@@PAVFRotator@@@Z
+void GetBoneLocationAndRotation(int A, int B, FVector* OutLocation, FRotator* OutRotation)
 {
     FCoords Coords;
-    FUN_10a48f20(A, B, &Coords);
+    GetBoneCoords(A, B, &Coords);
     *OutRotation = Coords.OrthoRotation();
     *OutLocation = Coords.Origin;
 }
 
-// FUNCTION: 0x10A4A160 ?FUN_10a4a160@@YAXHHHH@Z
-void FUN_10a4a160(int A, int B, int C, int D)
+// FUNCTION: 0x10A4A160 ?GetBoneLocationAndRotationByName@@YAXHHHH@Z
+void GetBoneLocationAndRotationByName(int A, int B, int C, int D)
 {
-    int Value = FUN_10a48b30(A, B);
-    FUN_10a4a100(A, Value, C, D);
+    int Value = FindBoneIndex(A, B);
+    GetBoneLocationAndRotation(A, Value, C, D);
 }
 
 // FUNCTION: 0x10A4C4A0 ?FUN_10a4c4a0@Class_10A4C4A0@@QAEXHHPAUStruct_10A4C4A0_Pair@@@Z

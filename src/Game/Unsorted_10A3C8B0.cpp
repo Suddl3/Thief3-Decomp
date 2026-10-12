@@ -5,8 +5,8 @@
 #include "Game/Class_10A3C640_Node.h"
 #include "Game/Class_10A3C8B0.h"
 
-// FUNCTION: 0x10A3C8B0 ?FUN_10a3c8b0@Class_10A3C8B0@@QAEXH@Z
-void Class_10A3C8B0::FUN_10a3c8b0(int Size)
+// FUNCTION: 0x10A3C8B0 ?Clear@Class_10A3C8B0@@QAEXH@Z
+void Class_10A3C8B0::Clear(int Size)
 {
     for (int i = 0; i < m_BucketCount; i++)
     {

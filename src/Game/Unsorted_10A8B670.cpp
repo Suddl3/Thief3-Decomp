@@ -79,8 +79,8 @@ int cTriggerBoolPropertyParam::IsLoaded()
     return !Pending;
 }
 
-// FUNCTION: 0x10A8C030 ?FUN_10a8c030@Class_10E5D74C@@UAEPAVClass_10E6C6C4@@HH@Z
-Class_10E6C6C4* Class_10E5D74C::FUN_10a8c030(int A, int B)
+// FUNCTION: 0x10A8C030 ?CreateFlagParam@Class_10E5D74C@@UAEPAVClass_10E6C6C4@@HH@Z
+Class_10E6C6C4* Class_10E5D74C::CreateFlagParam(int A, int B)
 {
     GetAllocator()->Virtual8(0, 0);
     Class_10E6C6C4* Result = new(0, 0, 0, 0, 0) Class_10E6C6C4;

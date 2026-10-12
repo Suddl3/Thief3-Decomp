@@ -3,8 +3,8 @@
 #include "Game/Class_10A64D00.h"
 #include "Game/Class_10A64D50.h"
 
-// FUNCTION: 0x10A64D00 ?FUN_10a64d00@Class_10A64D00@@QAEXHHHH_NH@Z
-void Class_10A64D00::FUN_10a64d00(int A, int B, int C, int D, bool E, int F)
+// FUNCTION: 0x10A64D00 ?Init@Class_10A64D00@@QAEXHHHH_NH@Z
+void Class_10A64D00::Init(int A, int B, int C, int D, bool E, int F)
 {
     Unknown10 = C;
     Unknown14 = D;
@@ -19,8 +19,8 @@ void Class_10A64D00::FUN_10a64d00(int A, int B, int C, int D, bool E, int F)
     Unknown21 = false;
 }
 
-// FUNCTION: 0x10A64D50 ?FUN_10a64d50@Class_10A64D50@@QAEXXZ
-void Class_10A64D50::FUN_10a64d50()
+// FUNCTION: 0x10A64D50 ?Reset@Class_10A64D50@@QAEXXZ
+void Class_10A64D50::Reset()
 {
     Unknown08 = 0;
     Unknown18 = Unknown10;

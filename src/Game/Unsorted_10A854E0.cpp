@@ -174,8 +174,8 @@ void Class_10E6C390::HandleMessage(int Message, int Value, int A, int B)
     }
 }
 
-// FUNCTION: 0x10A857A0 ?FUN_10a857a0@Class_10A857A0@@QAEPAVClass_10E6DA64@@HH@Z
-Class_10E6DA64* Class_10A857A0::FUN_10a857a0(int A, int B)
+// FUNCTION: 0x10A857A0 ?Create@Class_10A857A0@@QAEPAVClass_10E6DA64@@HH@Z
+Class_10E6DA64* Class_10A857A0::Create(int A, int B)
 {
     DAT_10f46da0->Virtual3(this, 0x26, -1, -1);
     GetAllocator()->Virtual8(0, 0);

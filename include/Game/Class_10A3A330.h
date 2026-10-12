@@ -9,7 +9,7 @@
 class Class_10A3A330 : public Class_10A3A330_Primary, public Class_10E667AC
 {
 public:
-    virtual void FUN_10a3a330();
+    virtual void RegisterMessages();
 };
 
 #endif // GAME_CLASS_10A3A330_H

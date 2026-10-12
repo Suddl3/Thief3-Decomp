@@ -11,14 +11,14 @@ struct Entry_10C32C30;
 class Class_10A3C550
 {
 public:
-    void FUN_10a3c550(cString Name);
+    void Start(cString Name);
 
     char Unknown00[0x4];
-    Class_10C49740 Unknown04;
+    Class_10C49740 m_Entries;
     char Unknown05[0x1B];
     int Unknown20;
-    int Unknown24;
-    Entry_10C32C30* Unknown28;
+    int m_Index;
+    Entry_10C32C30* m_Entry;
     bool Unknown2C;
     char Unknown2D;
     bool Unknown2E;

@@ -3,8 +3,8 @@
 #include "Core/Core.h"
 #include "Game/Class_10A46300.h"
 
-// FUNCTION: 0x10A46300 ?FUN_10a46300@Class_10A46300@@QAEPAV1@ABV1@@Z
-Class_10A46300* Class_10A46300::FUN_10a46300(const Class_10A46300& Other)
+// FUNCTION: 0x10A46300 ?CopyFrom@Class_10A46300@@QAEPAV1@ABV1@@Z
+Class_10A46300* Class_10A46300::CopyFrom(const Class_10A46300& Other)
 {
     Unknown00 = Other.Unknown00;
     Unknown04 = Other.Unknown04;

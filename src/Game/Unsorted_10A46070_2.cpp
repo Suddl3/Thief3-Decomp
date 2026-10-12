@@ -145,8 +145,8 @@ void Class_10A4EB50::FUN_10a4eb50()
     Field1c.FUN_10a4e580();
 }
 
-// FUNCTION: 0x10A50750 ?FUN_10a50750@Class_10A50750@@QAEPAV1@XZ
-Class_10A50750* Class_10A50750::FUN_10a50750()
+// FUNCTION: 0x10A50750 ?Init@Class_10A50750@@QAEPAV1@XZ
+Class_10A50750* Class_10A50750::Init()
 {
     Unknown00 = 0;
     Unknown04 = 0;

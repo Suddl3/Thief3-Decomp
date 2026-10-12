@@ -7,7 +7,7 @@
 #include "Game/Class_10A671D0.h"
 #include "Core/Core.h"
 #include "Game/Class_1098CB90.h"
-#include "Game/Class_10A67000.h"
+#include "Game/cVolume.h"
 
 extern void* DAT_10e47850[];
 
@@ -79,7 +79,7 @@ public:
 
 extern Class_10A73EF0_Table* DAT_10f3eda4;
 
-class Class_10A67000;
+class cVolume;
 
 class Class_10A67000_Result
 {
@@ -115,13 +115,13 @@ public:
     virtual void Virtual28();
     virtual void Virtual29();
     virtual void Virtual30();
-    virtual int Virtual31(Class_1098CB90* A, Class_10A67000* B, FVector C, FVector D, int E);
+    virtual int Virtual31(Class_1098CB90* A, cVolume* B, FVector C, FVector D, int E);
 };
 
-// FUNCTION: 0x10A67000 ?FUN_10a67000@Class_10A67000@@QAEHVFVector@@@Z
-int Class_10A67000::FUN_10a67000(FVector Param)
+// FUNCTION: 0x10A67000 ?ContainsPoint@cVolume@@QAEHVFVector@@@Z
+int cVolume::ContainsPoint(FVector Param)
 {
-    if (!Unknown144 || Param.X < Unknown12C.X || Param.X > Unknown138.X || Param.Y < Unknown12C.Y || Param.Y > Unknown138.Y || Param.Z < Unknown12C.Z || Param.Z > Unknown138.Z)
+    if (!m_Enabled || Param.X < m_Min.X || Param.X > m_Max.X || Param.Y < m_Min.Y || Param.Y > m_Max.Y || Param.Z < m_Min.Z || Param.Z > m_Max.Z)
         return 0;
     Class_10A67000_Result* Result = FUN_10991ef0();
     if (Result == 0)
@@ -131,8 +131,8 @@ int Class_10A67000::FUN_10a67000(FVector Param)
     return Result->Virtual31(&Buf, this, Param, FVector(0, 0, 0), 0) == 0;
 }
 
-// FUNCTION: 0x10A671D0 ?FUN_10a671d0@Class_10A671D0@@QAEXHH@Z
-void Class_10A671D0::FUN_10a671d0(int Handle, int B)
+// FUNCTION: 0x10A671D0 ?CreateItem@Class_10A671D0@@QAEXHH@Z
+void Class_10A671D0::CreateItem(int Handle, int B)
 {
     Class_10A671D0_Item* Item = 0;
     Class_10A73EF0_Object* Obj = DAT_10f3eda4->Unknown08[Handle & 0xffff];

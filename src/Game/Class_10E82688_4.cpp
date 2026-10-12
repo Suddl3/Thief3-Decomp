@@ -73,7 +73,7 @@ void Class_10E82688::StartSequence()
         if (!m_FrameCount)
             m_FrameCount = 1;
         m_Elapsed = 0;
-        Unknown134.FUN_10a64d50();
+        Unknown134.Reset();
         Unknown130 = 0;
         if (Unknown11C)
             Unknown11C->FUN_10a55050(Unknown130);

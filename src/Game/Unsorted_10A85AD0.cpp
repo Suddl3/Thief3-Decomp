@@ -12,8 +12,8 @@ extern int DAT_10f3a1cc;
 
 extern Object_10A858C0** DAT_10f3a1d0;
 
-// FUNCTION: 0x10A86120 ?FUN_10a86120@@YAXXZ
-void FUN_10a86120()
+// FUNCTION: 0x10A86120 ?ClearObjects@@YAXXZ
+void ClearObjects()
 {
     for (int i = 0; i < DAT_10f3a1c8; i++)
     {

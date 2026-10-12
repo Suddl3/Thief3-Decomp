@@ -101,11 +101,11 @@ public:
     virtual void Virtual90();
     virtual void Virtual91();
     virtual void Virtual92();
-    virtual int FUN_10a3da80(int p1, int p2);
+    virtual int RunTest(int p1, int p2);
 };
 
-// FUNCTION: 0x10A3DA80 ?FUN_10a3da80@AObjSysTest@@UAEHHH@Z
-int AObjSysTest::FUN_10a3da80(int p1, int p2)
+// FUNCTION: 0x10A3DA80 ?RunTest@AObjSysTest@@UAEHHH@Z
+int AObjSysTest::RunTest(int p1, int p2)
 {
     FUN_10af37a0(p1, DAT_10e66888);
     return 0;

@@ -33,8 +33,8 @@ public:
     int Unknown14;
 };
 
-// FUNCTION: 0x10A86210 ?FUN_10a86210@@YAXPAVClass_10A86210_Arg@@@Z
-void FUN_10a86210(Class_10A86210_Arg* Ar)
+// FUNCTION: 0x10A86210 ?SerializeObjects@@YAXPAVClass_10A86210_Arg@@@Z
+void SerializeObjects(Class_10A86210_Arg* Ar)
 {
     int Count = DAT_10f3a1c8.Count;
     Ar->Virtual1(&Count, 4);

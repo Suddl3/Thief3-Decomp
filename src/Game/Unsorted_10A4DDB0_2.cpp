@@ -21,12 +21,12 @@ public:
 
 Object_10A18FC0* FUN_10a18fc0();
 
-// FUNCTION: 0x10A4DEA0 ?FUN_10a4dea0@Class_10A4DEA0@@QAEXPAVcIntArray@@@Z
-void Class_10A4DEA0::FUN_10a4dea0(cIntArray* Set)
+// FUNCTION: 0x10A4DEA0 ?DispatchUnlistedKeys@Class_10A4DEA0@@QAEXPAVcIntArray@@@Z
+void Class_10A4DEA0::DispatchUnlistedKeys(cIntArray* Set)
 {
     for (int i = 0; i < 0xff; i++)
     {
-        if (Unknown324[i] != 0x40)
+        if (m_KeyBindings[i] != 0x40)
         {
             if (Set->FindIndex(i) == -1)
                 FUN_10a18fc0()->Virtual5(0, i, 3, 0);

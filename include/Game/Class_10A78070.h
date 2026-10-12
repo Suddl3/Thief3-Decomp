@@ -10,13 +10,13 @@ class FVector;
 class Class_10A78070
 {
 public:
-    Class_1096D780* FUN_10a78070(int A, const FVector* B, const FRotator* C, int D, int E, int F, int G);
+    Class_1096D780* Spawn(int A, const FVector* B, const FRotator* C, int D, int E, int F, int G);
 
     char Unknown00[4];
-    int Unknown04;
+    int m_PoolCount;
     char Unknown08[4];
-    Class_1096D780** Unknown0C;
-    int Unknown10;
+    Class_1096D780** m_Pool;
+    int m_NextIndex;
 };
 
 #endif // GAME_CLASS_10A78070_H

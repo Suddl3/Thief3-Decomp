@@ -6,8 +6,8 @@
 
 class ULodMesh;
 
-// FUNCTION: 0x10A486D0 ?FUN_10a486d0@@YAPAVUSkeletalMesh@@PAVClass_10C66590@@@Z
-USkeletalMesh* FUN_10a486d0(Class_10C66590* A)
+// FUNCTION: 0x10A486D0 ?GetSkeletalMesh@@YAPAVUSkeletalMesh@@PAVClass_10C66590@@@Z
+USkeletalMesh* GetSkeletalMesh(Class_10C66590* A)
 {
     return Cast<USkeletalMesh>((UObject*)A->FUN_10c66590());
 }

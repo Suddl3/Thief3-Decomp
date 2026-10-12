@@ -45,7 +45,7 @@ public:
     virtual void Virtual0();
     virtual void AddCopy(Struct_10A76C50* Source);
 
-    cIntArray Unknown04;
+    cIntArray m_CopyCount;
 };
 
 class Class_10E5D360
@@ -83,8 +83,8 @@ void Class_10E6BC80::AddCopy(Struct_10A76C50* Source)
         Copy->Unknown10 = Source->Unknown38;
         Result = Copy;
     }
-    int Index = Unknown04.Unknown00;
-    cIntArray* Array = &Unknown04;
+    int Index = m_CopyCount.Unknown00;
+    cIntArray* Array = &m_CopyCount;
     Array->SetCount(Index + 1);
     Array->Unknown08[Index] = Result;
 }

@@ -29,8 +29,8 @@ cRadioWindow::~cRadioWindow()
     delete Unknown118;
 }
 
-// FUNCTION: 0x10A56860 ?FUN_10a56860@Class_10A56860@@QAEXH@Z
-void Class_10A56860::FUN_10a56860(int Item)
+// FUNCTION: 0x10A56860 ?SetSelectedItem@Class_10A56860@@QAEXH@Z
+void Class_10A56860::SetSelectedItem(int Item)
 {
     SetSelectedIndex(FindIndex(Item));
 }

@@ -3,10 +3,10 @@
 #include "Game/Class_10A68150.h"
 #include "Game/cIntArray.h"
 
-// FUNCTION: 0x10A68150 ?FUN_10a68150@Class_10A68150@@QAEXH@Z
-void Class_10A68150::FUN_10a68150(int Item)
+// FUNCTION: 0x10A68150 ?Remove@Class_10A68150@@QAEXH@Z
+void Class_10A68150::Remove(int Item)
 {
-    int Index = Unknown10.FindIndex(Item);
+    int Index = m_Items.FindIndex(Item);
     if (Index != -1)
-        Unknown10.RemoveAt(Index);
+        m_Items.RemoveAt(Index);
 }

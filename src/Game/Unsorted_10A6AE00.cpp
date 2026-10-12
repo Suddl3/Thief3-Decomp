@@ -67,8 +67,8 @@ void Class_10E6B764::FUN_10a6aea0(AActor* A, Object_10A6AEA0_B* B, Object_10A6AE
     }
 }
 
-// FUNCTION: 0x10A6B140 ?FUN_10a6b140@@YA?AUStruct_10A6B140@@MABU1@@Z
-Struct_10A6B140 FUN_10a6b140(float Scale, const Struct_10A6B140& In)
+// FUNCTION: 0x10A6B140 ?ScaleIntVector@@YA?AUStruct_10A6B140@@MABU1@@Z
+Struct_10A6B140 ScaleIntVector(float Scale, const Struct_10A6B140& In)
 {
     return Struct_10A6B140((int)(In.Unknown00 * Scale), (int)(In.Unknown04 * Scale), (int)(In.Unknown08 * Scale));
 }

@@ -15,8 +15,8 @@ public:
 
 void FUN_10a68270(int A, int B, int C, int D, int E, int F);
 
-// FUNCTION: 0x10A68DB0 ?FUN_10a68db0@@YAXHPAXMPAUStruct_10BBFB80@@H@Z
-void FUN_10a68db0(int A, void* B, float C, Struct_10BBFB80* D, int E)
+// FUNCTION: 0x10A68DB0 ?DrawCircle@@YAXHPAXMPAUStruct_10BBFB80@@H@Z
+void DrawCircle(int A, void* B, float C, Struct_10BBFB80* D, int E)
 {
     Class_10A68DB0_Arg* Arg = (Class_10A68DB0_Arg*)A;
     float* Center = (float*)B;

@@ -37,32 +37,32 @@ public:
     }
 };
 
-// FUNCTION: 0x10A93520 ?FUN_10a93520@Class_10E5D918@@UAEPAVClass_10E6CC64@@XZ
-Class_10E6CC64* Class_10E5D918::FUN_10a93520()
+// FUNCTION: 0x10A93520 ?Create@Class_10E5D918@@UAEPAVClass_10E6CC64@@XZ
+Class_10E6CC64* Class_10E5D918::Create()
 {
     GetAllocator()->Virtual8(0, 0);
     Class_10E6CC64* Result = 0;
     void* Memory = operator new(sizeof(Class_10E6CC64), 0, 0, 0, 0, 0);
     if (Memory)
-        Result = static_cast<Class_10E6CC64*>(Memory)->FUN_10a93350();
+        Result = static_cast<Class_10E6CC64*>(Memory)->Construct();
     GetAllocator()->Virtual9();
     return Result;
 }
 
-// FUNCTION: 0x10A93570 ?FUN_10a93570@Class_10E5D91C@@UAEPAVClass_10E6CC70@@XZ
-Class_10E6CC70* Class_10E5D91C::FUN_10a93570()
+// FUNCTION: 0x10A93570 ?Create@Class_10E5D91C@@UAEPAVClass_10E6CC70@@XZ
+Class_10E6CC70* Class_10E5D91C::Create()
 {
     GetAllocator()->Virtual8(0, 0);
     Class_10E6CC70* Result = 0;
     void* Memory = operator new(sizeof(Class_10E6CC70), 0, 0, 0, 0, 0);
     if (Memory)
-        Result = static_cast<Class_10E6CC70*>(Memory)->FUN_10a93370();
+        Result = static_cast<Class_10E6CC70*>(Memory)->Construct();
     GetAllocator()->Virtual9();
     return Result;
 }
 
-// FUNCTION: 0x10A935C0 ?FUN_10a935c0@Class_10E5D7EC@@UAEPAVClass_10E6CC7C@@XZ
-Class_10E6CC7C* Class_10E5D7EC::FUN_10a935c0()
+// FUNCTION: 0x10A935C0 ?Create@Class_10E5D7EC@@UAEPAVClass_10E6CC7C@@XZ
+Class_10E6CC7C* Class_10E5D7EC::Create()
 {
     GetAllocator()->Virtual8(0, 0);
     Class_10E6CC7C* Result = new(0, 0, 0, 0, 0) Class_10E6CC7C;
@@ -70,14 +70,14 @@ Class_10E6CC7C* Class_10E5D7EC::FUN_10a935c0()
     return Result;
 }
 
-// FUNCTION: 0x10A93870 ?FUN_10a93870@Class_10E5D914@@UAEPAVClass_10E6CC98@@XZ
-Class_10E6CC98* Class_10E5D914::FUN_10a93870()
+// FUNCTION: 0x10A93870 ?Create@Class_10E5D914@@UAEPAVClass_10E6CC98@@XZ
+Class_10E6CC98* Class_10E5D914::Create()
 {
     GetAllocator()->Virtual8(0, 0);
     Class_10E6CC98* Result = 0;
     void* Memory = operator new(sizeof(Class_10E6CC98), 0, 0, 0, 0, 0);
     if (Memory)
-        Result = static_cast<Class_10E6CC98*>(Memory)->FUN_10a93500();
+        Result = static_cast<Class_10E6CC98*>(Memory)->Construct();
     GetAllocator()->Virtual9();
     return Result;
 }

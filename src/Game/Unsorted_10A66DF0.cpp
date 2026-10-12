@@ -2,8 +2,8 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10A66DF0.h"
 
-// FUNCTION: 0x10A66DF0 ?FUN_10a66df0@Class_10A66DF0@@QAE_NH@Z
-bool Class_10A66DF0::FUN_10a66df0(int A)
+// FUNCTION: 0x10A66DF0 ?Close@Class_10A66DF0@@QAE_NH@Z
+bool Class_10A66DF0::Close(int A)
 {
     bool Result = false;
     if (Unknown08 && A)

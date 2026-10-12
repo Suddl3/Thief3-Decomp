@@ -10,10 +10,10 @@ class cIntArray;
 class Class_10A4E230
 {
 public:
-    void FUN_10a4e230(int Value, cIntArray* B);
+    void AddMatchingIndices(int Value, cIntArray* B);
 
     char Unknown00[0x720];
-    Struct_10A4E230 Unknown720[14];
+    Struct_10A4E230 m_Groups[14];
 };
 
 #endif // GAME_CLASS_10A4E230_H

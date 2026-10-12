@@ -95,8 +95,8 @@ int Class_10E6C904::Virtual0(int A, int B, Struct_10A8F9A0* C, int* D)
         return FUN_10978090()->Virtual3(Virtual4(), FUN_10aab5c0());
 }
 
-// FUNCTION: 0x10A8F9F0 ?FUN_10a8f9f0@Class_10E5D788@@UAEPAVClass_10E6C908@@XZ
-Class_10E6C908* Class_10E5D788::FUN_10a8f9f0()
+// FUNCTION: 0x10A8F9F0 ?CreateClass_10E6C908@Class_10E5D788@@UAEPAVClass_10E6C908@@XZ
+Class_10E6C908* Class_10E5D788::CreateClass_10E6C908()
 {
     GetAllocator()->Virtual8(0, 0);
     Class_10E6C908* Result = new(0, 0, 0, 0, 0) Class_10E6C908;

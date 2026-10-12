@@ -9,14 +9,14 @@ class Class_10E667AC
 {
 public:
     virtual ~Class_10E667AC();
-    virtual void FUN_10a3ac50(int A);
-    virtual void FUN_10a3a330();
+    virtual void UpdateItems(int A);
+    virtual void RegisterMessages();
     virtual void FUN_10a3a380();
 
     char Unknown04[0x40];
-    int Unknown44;
+    int m_ItemCount;
     char Unknown48[4];
-    Class_10A3AC50_Item** Unknown4C;
+    Class_10A3AC50_Item** m_Items;
 };
 
 #endif // GAME_CLASS_10E667AC_H

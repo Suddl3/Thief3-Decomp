@@ -22,7 +22,7 @@ public:
     virtual void Virtual9();
     virtual int Virtual10(int A);
 
-    bool FUN_10a6e690(int A);
+    bool HasOwner(int A);
 };
 
 class Class_10E6B594
@@ -88,8 +88,8 @@ void Class_10E6B9F8::HandleEvent(int Event, UObject* A, int B, int C)
     }
 }
 
-// FUNCTION: 0x10A6E690 ?FUN_10a6e690@Class_10E6BC8C@@QAE_NH@Z
-bool Class_10E6BC8C::FUN_10a6e690(int A)
+// FUNCTION: 0x10A6E690 ?HasOwner@Class_10E6BC8C@@QAE_NH@Z
+bool Class_10E6BC8C::HasOwner(int A)
 {
     return Virtual10(A) != 0;
 }

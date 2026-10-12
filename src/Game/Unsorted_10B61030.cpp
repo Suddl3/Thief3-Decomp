@@ -6,7 +6,7 @@
 class Class_10A58B70
 {
 public:
-    int FUN_10a58b70(int Index);
+    int GetValueAt(int Index);
 };
 
 class Class_10E83E20 : public Class_10A58B70
@@ -35,7 +35,7 @@ void Class_10B61030::FUN_10b61030(int A)
 // FUNCTION: 0x10B61080 ?FUN_10b61080@Class_10E83E20@@QAEHH@Z
 int Class_10E83E20::FUN_10b61080(int Index)
 {
-    int Result = FUN_10a58b70(Index);
+    int Result = GetValueAt(Index);
     if (Unknown1D4 == 3)
         Result += Unknown1FC;
     return Result;

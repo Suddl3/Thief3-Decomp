@@ -6,7 +6,7 @@
 class Class_10E69B9C
 {
 public:
-    virtual void FUN_10a5e7b0(int Event, int A, int B, int C);
+    virtual void HandleEvent(int Event, int A, int B, int C);
 };
 
 #endif // GAME_CLASS_10E69B9C_H

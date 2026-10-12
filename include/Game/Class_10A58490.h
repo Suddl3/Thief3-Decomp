@@ -8,12 +8,12 @@
 class Class_10A58490
 {
 public:
-    void FUN_10a58490(const FVector& A);
+    void SetEnd(const FVector& A);
 
     char Unknown00[0x10];
-    FVector Unknown10;
-    FVector Unknown1C;
-    FVector Unknown28;
+    FVector m_Start;
+    FVector m_End;
+    FVector m_Delta;
 };
 
 #endif // GAME_CLASS_10A58490_H

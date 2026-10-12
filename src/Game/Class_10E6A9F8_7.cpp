@@ -158,7 +158,7 @@ public:
     virtual void Virtual135(int A);
 
     char Unknown0EC[0xE8];
-    Class_10E6A9F8* Unknown1D4;
+    Class_10E6A9F8* m_FirstNode;
     char Unknown1D8[4];
     bool Unknown1DC;
     char Unknown1DD[3];
@@ -169,7 +169,7 @@ public:
 // FUNCTION: 0x10A629B0 ?Update@Class_10E6A9F8@@UAEXH@Z
 void Class_10E6A9F8::Update(int A)
 {
-    Virtual134(Unknown1D4);
+    Virtual134(m_FirstNode);
     if (Unknown1DC && m_TimerAction != 0x40)
     {
         m_Timer = *(float*)&A + m_Timer;

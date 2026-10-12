@@ -139,13 +139,13 @@ public:
     virtual Class_10E6A9F8* GetLastNode(int* Count);
 
     char Unknown04[0x1D0];
-    Class_10E6A9F8* Unknown1D4;
+    Class_10E6A9F8* m_FirstNode;
 };
 
 // FUNCTION: 0x10A62710 ?GetLastNode@Class_10E6A9F8@@UAEPAV1@PAH@Z
 Class_10E6A9F8* Class_10E6A9F8::GetLastNode(int* Count)
 {
-    Class_10E6A9F8* Node = Unknown1D4;
+    Class_10E6A9F8* Node = m_FirstNode;
     *Count = 0;
     while (Node)
     {

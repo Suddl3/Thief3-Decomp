@@ -18,12 +18,12 @@ public:
     virtual void Virtual4(int A);
 };
 
-// FUNCTION: 0x10A3AC50 ?FUN_10a3ac50@Class_10A3AC50@@UAEXH@Z
-void Class_10A3AC50::FUN_10a3ac50(int A)
+// FUNCTION: 0x10A3AC50 ?UpdateItems@Class_10A3AC50@@UAEXH@Z
+void Class_10A3AC50::UpdateItems(int A)
 {
-    for (int i = 0; i < Unknown44; i++)
+    for (int i = 0; i < m_ItemCount; i++)
     {
-        Class_10A3AC50_Item* Item = Unknown4C[i];
+        Class_10A3AC50_Item* Item = m_Items[i];
         Item->Virtual4(A);
         if (Item->Virtual3())
             FUN_10a3abd0(i);

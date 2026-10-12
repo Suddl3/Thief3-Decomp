@@ -27,8 +27,8 @@ extern "C" unsigned int strlen(const char*);
 
 extern Struct_10AA3520* DAT_10f35dec;
 
-// FUNCTION: 0x10A5DF10 ?FUN_10a5df10@Class_10A5DF10@@QAEPAV1@ABV1@@Z
-Class_10A5DF10* Class_10A5DF10::FUN_10a5df10(const Class_10A5DF10& Other)
+// FUNCTION: 0x10A5DF10 ?CopyFrom@Class_10A5DF10@@QAEPAV1@ABV1@@Z
+Class_10A5DF10* Class_10A5DF10::CopyFrom(const Class_10A5DF10& Other)
 {
     Unknown00 = Other.Unknown00;
     Unknown10 = Other.Unknown10;

@@ -27,8 +27,8 @@ public:
     int m_Name;
 };
 
-// FUNCTION: 0x10A8C470 ?FUN_10a8c470@Class_10E5D750@@UAEPAVcTriggerByteEnumParam@@HH@Z
-cTriggerByteEnumParam* Class_10E5D750::FUN_10a8c470(int A, int B)
+// FUNCTION: 0x10A8C470 ?CreateByteEnumParam@Class_10E5D750@@UAEPAVcTriggerByteEnumParam@@HH@Z
+cTriggerByteEnumParam* Class_10E5D750::CreateByteEnumParam(int A, int B)
 {
     GetAllocator()->Virtual8(0, 0);
     cTriggerByteEnumParam* Result = new(0, 0, 0, 0, 0) cTriggerByteEnumParam;

@@ -9,7 +9,7 @@
 class Class_10A71C40
 {
 public:
-    void FUN_10a71c40();
+    void DestroyMembers();
 
     char Unknown00[8];
     Class_10AB0400 Unknown08;

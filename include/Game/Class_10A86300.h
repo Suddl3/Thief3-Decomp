@@ -6,7 +6,7 @@
 class Class_10A86300
 {
 public:
-    int FUN_10a87340(int A);
+    int Remove(int A);
     void FUN_10a86300(int A);
 
     int Unknown00;

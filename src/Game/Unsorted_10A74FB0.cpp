@@ -3,8 +3,8 @@
 
 #include "Game/Class_Field04.h"
 
-// FUNCTION: 0x10A74FB0 ?FUN_10a74fb0@@YG_NPAVClass_Field04@@H@Z
-bool __stdcall FUN_10a74fb0(Class_Field04* Field, int Id)
+// FUNCTION: 0x10A74FB0 ?HasFieldString@@YG_NPAVClass_Field04@@H@Z
+bool __stdcall HasFieldString(Class_Field04* Field, int Id)
 {
     FString Name;
     if (Field->FUN_1098e290(Id, &Name))

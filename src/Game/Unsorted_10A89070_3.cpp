@@ -18,8 +18,8 @@ public:
     int Unknown04;
 };
 
-// FUNCTION: 0x10A891A0 ?FUN_10a891a0@Class_10E5D734@@UAEPAVcTriggerClassParam@@HH@Z
-cTriggerClassParam* Class_10E5D734::FUN_10a891a0(int A, int B)
+// FUNCTION: 0x10A891A0 ?CreateClassParam@Class_10E5D734@@UAEPAVcTriggerClassParam@@HH@Z
+cTriggerClassParam* Class_10E5D734::CreateClassParam(int A, int B)
 {
     GetAllocator()->Virtual8(0, 0);
     cTriggerClassParam* Result = new(0, 0, 0, 0, 0) cTriggerClassParam;

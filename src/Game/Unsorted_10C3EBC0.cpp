@@ -5,9 +5,9 @@
 
 extern const char DAT_10e9b568[];
 
-int FUN_10a48b30(int A, int B);
+int FindBoneIndex(int A, int B);
 
-void FUN_10a4a100(int A, int B, FVector* C, FRotator* D);
+void GetBoneLocationAndRotation(int A, int B, FVector* C, FRotator* D);
 
 class Class_10C3EC80_Param0
 {
@@ -21,9 +21,9 @@ FVector FUN_10c3ebc0(int Param)
 {
     FVector Dir(0.0f, 0.0f, 0.0f);
     FRotator Rot(0, 0, 0);
-    int Index = FUN_10a48b30(Param, (int)&FString(DAT_10e9b568));
+    int Index = FindBoneIndex(Param, (int)&FString(DAT_10e9b568));
     if (Index >= 0)
-        FUN_10a4a100(Param, Index, &Dir, &Rot);
+        GetBoneLocationAndRotation(Param, Index, &Dir, &Rot);
     return *(FVector*)&Rot;
 }
 
@@ -32,10 +32,10 @@ FVector FUN_10c3ec80(int Param)
 {
     FVector Dir(0.0f, 0.0f, 0.0f);
     FRotator Rot(0, 0, 0);
-    int Index = FUN_10a48b30(Param, (int)&FString(DAT_10e9b568));
+    int Index = FindBoneIndex(Param, (int)&FString(DAT_10e9b568));
     if (Index >= 0)
     {
-        FUN_10a4a100(Param, Index, &Dir, &Rot);
+        GetBoneLocationAndRotation(Param, Index, &Dir, &Rot);
         return Dir;
     }
     Class_10C3EC80_Param0* Obj = (Class_10C3EC80_Param0*)Param;

@@ -19,7 +19,7 @@ struct Struct_10A67E10
 
 extern float DAT_10e49684;
 
-int FUN_10a68190(int A);
+int FindOrAddIndex(int A);
 
 void FUN_10a67e10(Struct_10A67E10* A, int B, int C, int D);
 
@@ -29,14 +29,14 @@ void FUN_10a67da0(int A, int B, int C, int D, int E, int F, int G);
 void FUN_10a68590(int A, int B, int C, int D, int E, int F)
 {
     Struct_10A67E10 Result;
-    int Value = FUN_10a68190(((Struct_10A68590*)B)->Unknown04);
+    int Value = FindOrAddIndex(((Struct_10A68590*)B)->Unknown04);
     FUN_10a67e10(&Result, D, B, Value);
     if (!(Result.Unknown08 > DAT_10e49684))
         FUN_10a67da0(A, B, C, Result.Unknown00, Result.Unknown04, E, F);
 }
 
-// FUNCTION: 0x10A68AE0 ?FUN_10a68ae0@Class_10A68AE0@@QAEXABV1@@Z
-void Class_10A68AE0::FUN_10a68ae0(const Class_10A68AE0& Other)
+// FUNCTION: 0x10A68AE0 ?CopyFrom@Class_10A68AE0@@QAEXABV1@@Z
+void Class_10A68AE0::CopyFrom(const Class_10A68AE0& Other)
 {
     FUN_10da4f50(Other.Unknown00);
     for (int i = 0; i < Unknown00; i++)

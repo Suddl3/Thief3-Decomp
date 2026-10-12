@@ -32,8 +32,8 @@ public:
     FName m_Name;
 };
 
-// FUNCTION: 0x10A8D110 ?FUN_10a8d110@Class_10E5D758@@UAEPAVClass_10E6C77C@@HH@Z
-Class_10E6C77C* Class_10E5D758::FUN_10a8d110(int A, int B)
+// FUNCTION: 0x10A8D110 ?CreateGlobalIntParam@Class_10E5D758@@UAEPAVClass_10E6C77C@@HH@Z
+Class_10E6C77C* Class_10E5D758::CreateGlobalIntParam(int A, int B)
 {
     GetAllocator()->Virtual8(0, 0);
     Class_10E6C77C* Result = new(0, 0, 0, 0, 0) Class_10E6C77C;

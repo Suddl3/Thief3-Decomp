@@ -2622,3 +2622,230 @@ field Class_10A31F00::Unknown00 m_Owner Typed Class_10A31F00_Owner; Remove calls
 field Class_10A31F00::Unknown0C m_Index Passed to owner Virtual2 as the index, then set to -1 by Remove.
 field Class_10A30690::Unknown10 m_Registered Destroy clears it right after DAT_10f46da0->Virtual2(this), and only acts while it is set.
 field Class_10A35EE0::Unknown84 m_Font Reset stores the Class_1091DEE0::GetFont(2) result here; null when that global is missing.
+class Class_10E68F94 cVectorTween FVector start, end and delta eased over a duration by a sine table with a finished flag; FUN_10a58250 advances it.
+class Class_10A67000 cVolume cVolumeManager::ContainsPoint takes this class as its volume and calls its point test.
+function 0x10A3C600 Compare Returns -1, 0 or 1 from the sign of FUN_1090ecc0(A, B, 1).
+function 0x10A3DA80 RunTest Passes 'No test defined, obj system test failed' to FUN_10af37a0 with p1, then returns 0.
+function 0x10A3C8B0 Clear Frees every node and bucket and zeroes the counts; Rehash(Size) runs only when not m_FixedSize.
+function 0x10A3C550 Start Looks up Name, resets Unknown24 to 0 and dispatches the entry's first item to Virtual6.
+function 0x10A46300 CopyFrom Copies the eight members of Other into this, FString assignment included, and returns this.
+function 0x10A50750 Init Zeroes every field, sets Unknown20 to -1.0f and returns this, as Class_10E6798C::Init does.
+function 0x10A48F20 GetBoneCoords Fills bone B's FCoords from the mesh's bone transform; 9999 falls back to the actor frame.
+function 0x10A48FF0 GetWorldCoordinatesForBone Xbox twin logs cGameUtils::GetWorldCoordinatesForBone's bone-not-found message; calls FindBoneIndex, then GetBoneCoords.
+function 0x10A4A100 GetBoneLocationAndRotation Calls GetBoneCoords; returns its Origin as location and OrthoRotation as rotation.
+function 0x10A4A160 GetBoneLocationAndRotationByName Finds the bone index with FindBoneIndex, then calls GetBoneLocationAndRotation.
+function 0x10A48B30 FindBoneIndex Returns the bone index GetBoneCoords takes; GetWorldCoordinatesForBone's Xbox twin logs a missing bone name.
+function 0x10A4B710 Reset Deletes every node and the bucket array, zeroes the counts, then Rehash(Size) unless m_FixedSize.
+function 0x10A4C130 AllocBuffer operator new of Count*4 bytes, bracketed by GetAllocator Virtual8/Virtual9 when Unknown04 is set.
+function 0x10A4C740 NotifyActorDestroyed Called from AActor::Destroy; for each registration with the actor's id, calls the owner's Virtual0(1).
+function 0x109E5700 ClearList Empties the circular list at Unknown18 and deletes its nodes; ~Class_10A4CB00 calls it.
+function 0x10A53C00 GetStateName Returns cString for state 0..3: 'Normal', 'Selected', 'Pressed', 'Disabled'; default DAT_10e47660.
+function 0x10A52F10 IndexOf Linear search of UnknownC0 for Value over UnknownB8 entries; returns index or -1 when absent.
+function 0x10A514E0 RemoveWindow Clears m_Windows[Index], resets Unknown11C if it matches, releases the window via GWindowManager->FUN_109e3d60.
+function 0x10A56860 SetSelectedItem Calls FindIndex(Item) then SetSelectedIndex(); selects the entry whose value is Item.
+function 0x10A57820 HandleNavigation Direction key codes step m_Index to m_NextIndex, wrapping via Virtual80, and return whether the key was handled.
+function 0x10A58250 Update Adds Delta to the elapsed time, then eases the current value from start toward end over the duration.
+function 0x10A58490 SetEnd Stores A as the end point, then recomputes the delta as end minus start.
+function 0x10A64D00 Init Called by FUN_10b5a7e0; sets every field from its arguments and clears the counters and flags.
+function 0x10A64D50 Reset ResetFrame and StartSequence of Class_10E82688 call it; it restores Unknown18 from Unknown10.
+function 0x10A65480 GetMaxTextWidth Measures each string of Unknown18C with Unknown154's MeasureText and returns the widest.
+function 0x10A66C80 VectorsNearlyEqual IsEqual calls it with FLT_EPSILON; it compares the three floats of both vectors within R.
+function 0x10A66DF0 Close Calls Virtual3 and Virtual4, then clears Unknown08 when it is set and A is nonzero.
+function 0x10A67000 ContainsPoint cVolumeManager::ContainsPoint calls it; it tests the point against the FVector bounds Unknown12C and Unknown138.
+function 0x10A671D0 CreateItem Gets item memory from the table slot for Handle (Virtual51), placement-news Class_10A671D0_Item, then passes it to FUN_10ad9c90 with Handle.
+function 0x10A67170 GetLoginManager Returns the LoginManager singleton in DAT_10f3a0f8, creating it on the first call.
+function 0x10A68CB0 Clear Deletes each item pointer up to m_Count after FUN_10a680c0, then zeroes the count; ctor and dtor call it.
+function 0x10A68DB0 DrawCircle Sin/cos points on a circle of radius C around Center, one segment per step through FUN_10a68270.
+function 0x10A69540 Init Sets the vtable pointer, registers for messages 0x25 and 0x24 with DAT_10f46da0, returns this.
+function 0x10A69C00 InitPrimaryColors Appends red, green and blue Color items to Unknown08 through FUN_10af4cc0, which adds one and returns its index.
+function 0x10A6B140 ScaleIntVector Truncates each int member times Scale into a new Struct_10A6B140 built by its (X, Y, Z) constructor.
+function 0x10A6E690 HasOwner Returns Virtual10(A) != 0; vtable slot 10 is cActorManager::GetOwner, which returns the owner pointer.
+function 0x10A680C0 Empty Body is only Unknown08.Empty(); called by Class_10E6B5B8::Clear.
+function 0x10A7A770 ReadField Copies Src text from *Pos up to the next '|' into a new FString, then steps *Pos past the separator.
+function 0x10A7D2A0 GatherAttachments Appends A's links of type 0x281B9D0, the type Detach checks, to Out when their far end passes FUN_10ad18b0.
+function 0x10A78070 Spawn Takes the pooled item at cursor Unknown10, sets its rotation C and location B, and adds it via Virtual17.
+function 0x10A79DD0 AddEntry Builds a Class_10E6BD88 from parts A and B, *C and D, and appends it to Unknown04 (cIntArray).
+function 0x10A857A0 Create Allocates a Class_10E6DA64, calls its Virtual1 with A and B, returns it; calls DAT_10f46da0->Virtual1 for each nonzero element of its cIntArray.
+function 0x10A858C0 HasObject Returns true when an element of the global object array has Virtual16() equal to A.
+function 0x10A86120 ClearObjects Deletes every element of the global object array, frees its block and sets the count to zero.
+function 0x10A86210 SerializeObjects Moves the count through Ar->Virtual1; when Ar->Unknown14 is set, sets the count and creates objects; each runs Virtual19(Ar).
+function 0x10A87340 Remove Unlinks the node keyed A from the list and the hash index Unknown0C, deletes it and returns A.
+function 0x10A87F40 Clear Calls FUN_10a87cd0(0) first; when Unknown04 is set, frees Unknown08 and zeroes both.
+function 0x10A88910 ReadOrDefault Stores Virtual4(Id) into Unknown04[Id] when it succeeds; otherwise 1.0 for Mode 1 and 0.0 for Mode 3.
+function 0x10A88970 ReadOrDefault Stores Virtual4(Index) into Unknown400[Index] when it succeeds; otherwise 1.0 for Mode 1 and 0.0 for Mode 3.
+function 0x10A891A0 CreateClassParam Returns a new cTriggerClassParam between the allocator's Virtual8 and Virtual9 calls.
+function 0x10A8A790 SetByteProperty Stores a UByteProperty in Unknown04 through FUN_10b26930, which assigns its argument to Field04.
+function 0x10A8C030 CreateFlagParam Returns a new Class_10E6C6C4, whose GetValue falls back to the text 'Flag'.
+function 0x10A8C470 CreateByteEnumParam Returns a new cTriggerByteEnumParam between the allocator's Virtual8 and Virtual9 calls.
+function 0x10A8D110 CreateGlobalIntParam Returns a new Class_10E6C77C, whose GetText falls back to the text 'GlobalInt'.
+function 0x10A8D440 CreateOperatorParam Returns a new cTriggerOperatorParam between the allocator's Virtual8 and Virtual9 calls.
+function 0x10A901A0 Create Allocates and returns a new Class_10E6C950 between GetAllocator() Virtual8 and Virtual9 calls; slot 0 of table 0x10E5D798, whose slots 1-6 have the same shape.
+function 0x10A90280 Create Allocates and returns a new Class_10E6C974 between GetAllocator() Virtual8 and Virtual9 calls (placement new).
+function 0x10A903F0 Create Allocates and returns a new Class_10E6C990 between GetAllocator() Virtual8 and Virtual9 calls (placement new).
+function 0x10A90490 Create Allocates and returns a new Class_10E6C9B0 between GetAllocator() Virtual8 and Virtual9 calls (placement new).
+function 0x10A90AD0 Create Allocates and returns a new Class_10E6C9E0 between GetAllocator() Virtual8 and Virtual9 calls (placement new).
+function 0x10A90C10 Create Allocates and returns a new Class_10E6C9FC between GetAllocator() Virtual8 and Virtual9 calls (placement new).
+function 0x10A90D10 Create Allocates and returns a new Class_10E6CA24 between GetAllocator() Virtual8 and Virtual9 calls (placement new).
+function 0x10A932B0 Create Allocates Class_10E6CC2C with placement new between the allocator's Virtual8 and Virtual9 calls and returns it.
+function 0x10A93460 Create Allocates Class_10E6CC48 with placement new between the allocator's Virtual8 and Virtual9 calls and returns it.
+function 0x10A93520 Create Allocates Class_10E6CC64 with operator new, calls its FUN_10a93350 on it and returns the result.
+function 0x10A93570 Create Allocates Class_10E6CC70 with operator new, calls its FUN_10a93370 on it and returns the result.
+function 0x10A935C0 Create Allocates Class_10E6CC7C with placement new between the allocator's Virtual8 and Virtual9 calls and returns it.
+function 0x10A93870 Create Allocates Class_10E6CC98 with operator new, calls its FUN_10a93500 on it and returns the result.
+function 0x10A93E40 Create Allocates Class_10E6CCA4 with operator new, calls its FUN_10a93d40 on it and returns the result.
+function 0x10A93E90 Create Allocates Class_10E6CCB0 with operator new, calls its FUN_10a93db0 on it and returns the result.
+function 0x10A93EE0 Create Allocates Class_10E6CCBC with placement new between the allocator's Virtual8 and Virtual9 calls and returns it.
+function 0x10A93F80 Create Allocates Class_10E6CCD8 with operator new, calls its FUN_10a93e30 on it and returns the result.
+function 0x10A940D0 Create Allocates Class_10E6CCE8 with placement new between the allocator's Virtual8 and Virtual9 calls and returns it.
+function 0x10A941C0 Create Allocates Class_10E6CCE8 with placement new between the allocator's Virtual8 and Virtual9 calls and returns it.
+function 0x10A94330 Create Allocates Class_10E6CD08 with placement new between the allocator's Virtual8 and Virtual9 calls and returns it.
+function 0x10A943E0 Create Allocates Class_10E6CD24 with placement new between the allocator's Virtual8 and Virtual9 calls and returns it.
+function 0x10A94510 Create Allocates Class_10E6CD40 with operator new, calls its FUN_10a943d0 on it and returns the result.
+function 0x10A94640 Create Allocates Class_10E6CD50 with placement new between the allocator's Virtual8 and Virtual9 calls and returns it.
+function 0x10A382D0 FindItemByName Loops the items, comparing each name (Unknown00) with the wanted name through appStricmp; returns the first match.
+function 0x10A3A330 RegisterMessages Overrides Class_10E667AC's slot; calls DAT_10f46da0->Virtual1(this, msg, -1, -1) for messages 59, 39, 38, 6 that FUN_10a3b460 handles.
+function 0x10A3AC50 UpdateItems Overrides Class_10E667AC's slot; loops Unknown44 items calling Virtual4(A) and removes those whose Virtual3() is true.
+function 0x10A46770 Empty Parameter Slack; destructs all Unknown04 elements, zeroes Unknown04, stores Slack in Unknown08.
+function 0x10A467C0 Remove Destructs elements Index to Index+Count-1, then passes Index and Count to FUN_10af3bd0.
+function 0x10A46810 Remove Destructs elements Index to Index+Count-1, then passes Index and Count to FUN_10af3bd0.
+function 0x10A480B0 GetNormalized Copies *this, normalizes the copy via FUN_10967210 (callee FVector::Normalize), returns it.
+function 0x10A480F0 Reset Zeroes Unknown00 and Unknown04, rebuilds FCoords Unknown08 with zero origin, returns this.
+function 0x10A48140 Reset Sets Unknown00, Unknown28, Unknown38, Unknown60 to 0 and Unknown2C, Unknown30, Unknown64, Unknown68 to -1; returns this.
+function 0x10A486D0 GetSkeletalMesh Returns Cast<USkeletalMesh>(A->FUN_10c66590()); string 'Engine' names the USkeletalMesh package.
+function 0x10A4D350 GetModeName Returns 'Look at Actor', 'Face Path', 'Interpolation' for Mode 1 to 3, else 'None'.
+function 0x10A4D4E0 GetNextKey FindIndex(Key), then the entry after it; the last or an absent Key wraps to the first.
+function 0x10A4DD60 GetEffectiveValue First Unknown0C entry whose Unknown328[Index] is not 0x40, else default Unknown340[Index].
+function 0x10A4DDA0 Reset Body only assigns 0 to Unknown00, Unknown04 and Unknown08.
+function 0x10A4DEA0 DispatchUnlistedKeys Calls FUN_10a18fc0()->Virtual5(0, i, 3, 0) for each bound key i missing from Set.
+function 0x10A4E230 AddMatchingIndices Appends group index i to B for each entry of group i whose key equals Value; B is not cleared.
+function 0x10A4E630 AddBoundKeys Appends each i with Unknown324[i] != 0x40 to Set unless present; EInputKey lookup when present.
+function 0x10A50780 SerializeRecord Ar->Serialize on nine Data ints; Key and Data[2] are written back when Ar->Unknown14 is set.
+function 0x10A64CD0 Reset Zeroes all eleven fields and returns this; called by the Class_10E82688 constructor.
+function 0x10A62BC0 GetFirstNode Returns Unknown1D4, the chain head GetLastNode walks from via Virtual14.
+function 0x10A58B70 GetValueAt Returns Unknown15C[Index], or -1 when Index >= Unknown154; indexed read of an int array.
+function 0x10A59370 SetStringAt Stores Value at Unknown1BC[Index] for Index 0 to 3 only (cString operator=).
+function 0x10A5B530 Clear Frees the cString buffer at Unknown1E4 when Unknown1DC is set; zeroes Unknown1D4, Unknown1D8, Unknown1C8.
+function 0x10A5DAB0 FreeBuffer Frees the block at Unknown24 - 1 through GetAllocator()->Virtual5, then nulls Unknown24.
+function 0x10A5DF10 CopyFrom Copies Unknown00, Unknown10, Unknown20 and Unknown24 (cString operator=) from Other; returns this.
+function 0x10A5E7B0 HandleEvent Switch on Event (42-48) dispatching to Virtual114-117 of Class_10A5E7B0_OwnerPrimary; slot declared in Class_10E69B9C, overridden here.
+function 0x10A67C40 GetSimtimePlayedTimer Reads script field SimtimePlayedTimer of the APlayerPawn cast from DAT_10f35dec's object, else 0.0.
+function 0x10A67CA0 ResetSimtimePlayedTimer Writes 0.0f to script field SimtimePlayedTimer of the APlayerPawn cast from DAT_10f35dec's object.
+function 0x10A68100 AddUnique Appends to Unknown10 (cIntArray) only after FindIndex returns -1.
+function 0x10A68150 Remove FindIndex on Unknown10 (cIntArray), then RemoveAt at the index found.
+function 0x10A68AE0 CopyFrom Sets its count to Other.Unknown00 via FUN_10da4f50, then copies Other's Unknown08 items.
+function 0x10A74820 Init Stores DAT_10e6bbcc in Field00 and returns this, as Class_10E6B5A0::Init does.
+function 0x10A68B70 GetSizeBytes Returns m_Items << 4: m_Items times the 16-byte Struct_10A68B80 entry size.
+function 0x10A68190 FindOrAddIndex Searches DAT_10f3a12c by key A; if absent, appends Class_109EF3F0(A, A->Unknown190) and returns the index.
+function 0x10A6F9B0 DestroyMembers Destroys Unknown14 (vector) and Unknown08 (calls FUN_10a6e990), then resets Field00 to the vtable; called by FUN_10a6f990.
+function 0x10A71C40 DestroyMembers Destroys Unknown14 (vector) and Unknown08 (calls FUN_10a6e990); Class_10E6B594::FUN_10a6f9b0 has the same body with the vtable reset.
+function 0x10A70B80 Release Calls FUN_10dd4d40(0), frees Unknown08 via GetAllocator()->Virtual5, zeroes Unknown04 and Unknown08; header destructor has this body.
+function 0x10A70FD0 Allocate Allocates A*52 bytes via the tagged Ion Storm operator new, bracketed by GetAllocator()->Virtual8/Virtual9 when Unknown04 is set.
+function 0x10A73EF0 CreateItem Placement-news Class_10ABCC20 into memory from the handle's object (Virtual51), initializes it (Virtual45), then calls FUN_10ad9c90(Handle, Item).
+function 0x10A74B20 HasObjectString Looks up Handle's object (FUN_10af33e0) and returns whether Virtual45 gives a non-empty FString for *Id.
+function 0x10A74FB0 HasFieldString Returns true when Field->FUN_1098e290(Id, &Name) succeeds and Name.Len() is non-zero.
+function 0x10A73790 HandleEvent Vtable slot 0 with the signature of Class_10E6BBD0::HandleEvent; handles code 0x20 by calling Virtual1.
+function 0x10A74470 HandleEvent Override of the HandleEvent slot; handles 0x24 with Virtual15, then calls cActorManager::FUN_10a4c470.
+function 0x10A90DD0 Construct Stores its vtable and returns this; factory Class_10E5D910::FUN_10a90de0 calls ??0Class_10E6CA40@@QAE@XZ on new memory.
+function 0x10A92670 Construct Stores its vtable and returns this; factory Class_10E5D944::FUN_10a928d0 calls ??0Class_10E6CBEC@@QAE@XZ on new memory.
+function 0x10A928C0 Construct Stores its vtable and returns this; factory Class_10E5D940::FUN_10a92920 calls ??0Class_10E6CBF8@@QAE@XZ on new memory.
+function 0x10A93350 Construct Stores its vtable and returns this; factory Class_10E5D918::FUN_10a93520 calls ??0Class_10E6CC64@@QAE@XZ on new memory.
+function 0x10A93370 Construct Stores its vtable and returns this; factory Class_10E5D91C::FUN_10a93570 calls ??0Class_10E6CC70@@QAE@XZ on new memory.
+function 0x10A93500 Construct Stores its vtable and returns this; factory Class_10E5D914::FUN_10a93870 calls ??0Class_10E6CC98@@QAE@XZ on new memory.
+function 0x10A93D40 Construct Stores its vtable and returns this; factory Class_10E5D960::FUN_10a93e40 calls ??0Class_10E6CCA4@@QAE@XZ on new memory.
+function 0x10A93DB0 Construct Stores its vtable and returns this; factory Class_10E5D964::FUN_10a93e90 calls ??0Class_10E6CCB0@@QAE@XZ on new memory.
+function 0x10A93E30 Construct Stores its vtable and returns this; factory Class_10E5D95C::FUN_10a93f80 calls ??0Class_10E6CCD8@@QAE@XZ on new memory.
+function 0x10A943D0 Construct Stores its vtable and returns this; factory Class_10E5D868::FUN_10a94510 calls ??0Class_10E6CD40@@QAE@XZ on new memory.
+function 0x10A94B00 Construct Stores its vtable and returns this; factory Class_10E5D96C::FUN_10a95050 calls ??0Class_10E6CDC4@@QAE@XZ on new memory.
+function 0x10A94B70 Construct Stores its vtable and returns this; factory Class_10E5D970::FUN_10a950a0 calls ??0Class_10E6CDD0@@QAE@XZ on new memory.
+function 0x10A94C00 Construct Stores its vtable and returns this; factory Class_10E5D974::FUN_10a950f0 calls ??0Class_10E6CDDC@@QAE@XZ on new memory.
+function 0x10A94C80 Construct Stores its vtable and returns this; factory Class_10E5D978::FUN_10a95140 calls ??0Class_10E6CDE8@@QAE@XZ on new memory.
+function 0x10A94C90 Construct Stores its vtable and returns this; factory Class_10E5D97C::FUN_10a95190 calls ??0Class_10E6CDF4@@QAE@XZ on new memory.
+function 0x10A95040 Construct Stores its vtable and returns this; factory Class_10E5D968::FUN_10a95590 calls ??0Class_10E6CE1C@@QAE@XZ on new memory.
+function 0x10A95AF0 Construct Stores its vtable and returns this; factory Class_10E5D9DC::FUN_10a95b00 calls ??0Class_10E6CE6C@@QAE@XZ on new memory.
+function 0x10A95B60 Construct Stores its vtable and returns this; factory Class_10E5D9AC::FUN_10a95c50 calls ??0Class_10E6CE94@@QAE@XZ on new memory.
+function 0x10A95D90 Construct Stores its vtable and returns this; factory Class_10E5D928::FUN_10a95ee0 calls ??0Class_10E6CEC4@@QAE@XZ on new memory.
+function 0x10A95DB0 Construct Stores its vtable and returns this; factory Class_10E5D92C::FUN_10a95f30 calls ??0Class_10E6CED0@@QAE@XZ on new memory.
+function 0x10A95DD0 Construct Stores its vtable and returns this; factory Class_10E5D930::FUN_10a95f80 calls ??0Class_10E6CEDC@@QAE@XZ on new memory.
+function 0x10A95DF0 Construct Stores its vtable and returns this; factory Class_10E5D934::FUN_10a95fd0 calls ??0Class_10E6CEE8@@QAE@XZ on new memory.
+function 0x10A95E10 Construct Stores its vtable and returns this; factory Class_10E5D920::FUN_10a96020 calls ??0Class_10E6CEF4@@QAE@XZ on new memory.
+function 0x10A95E30 Construct Stores its vtable and returns this; factory Class_10E5D9B0::FUN_10a96070 calls ??0Class_10E6CF00@@QAE@XZ on new memory.
+function 0x10A95E50 Construct Stores its vtable and returns this; factory Class_10E5D9B4::FUN_10a960c0 calls ??0Class_10E6CF0C@@QAE@XZ on new memory.
+function 0x10A95E70 Construct Stores its vtable and returns this; factory Class_10E5D9B8::FUN_10a96110 calls ??0Class_10E6CF18@@QAE@XZ on new memory.
+function 0x10A95E90 Construct Stores its vtable and returns this; factory Class_10E5D938::FUN_10a96160 calls ??0Class_10E6CF24@@QAE@XZ on new memory.
+function 0x10A95EB0 Construct Stores its vtable and returns this; factory Class_10E5D93C::FUN_10a961b0 calls ??0Class_10E6CF30@@QAE@XZ on new memory.
+function 0x10A95ED0 Construct Stores its vtable and returns this; factory Class_10E5D924::FUN_10a96390 calls ??0Class_10E6CF3C@@QAE@XZ on new memory.
+function 0x10A8D310 Reset Body only sets Field8 to 0; Class_10A8D320 increments the same field.
+function 0x10A8D320 Increment Body only increments Field8; Class_10A8D310 sets the same field to 0.
+function 0x10A8D720 CreateClass_10E6C818 Constructs a Class_10E6C818 with the tagged operator new between GetAllocator() Virtual8 and Virtual9 calls; returns it.
+function 0x10A8D7F0 CreateClass_10E6C838 Constructs a Class_10E6C838 with the tagged operator new between GetAllocator() Virtual8 and Virtual9 calls; returns it.
+function 0x10A8D890 CreateClass_10E6C858 Constructs a Class_10E6C858 with the tagged operator new between GetAllocator() Virtual8 and Virtual9 calls; returns it.
+function 0x10A8D9E0 CreateClass_10E6C890 Constructs a Class_10E6C890 with the tagged operator new between GetAllocator() Virtual8 and Virtual9 calls; returns it.
+function 0x10A8E0C0 CreateClass_10E6C8AC Constructs a Class_10E6C8AC with the tagged operator new between GetAllocator() Virtual8 and Virtual9 calls; returns it.
+function 0x10A8F790 CreateClass_10E6C8E8 Constructs a Class_10E6C8E8 with the tagged operator new between GetAllocator() Virtual8 and Virtual9 calls; returns it.
+function 0x10A8F900 CreateClass_10E6C90C Constructs a Class_10E6C90C with the tagged operator new between GetAllocator() Virtual8 and Virtual9 calls; returns it.
+function 0x10A8F9F0 CreateClass_10E6C908 Constructs a Class_10E6C908 with the tagged operator new between GetAllocator() Virtual8 and Virtual9 calls; returns it.
+function 0x10A8FB50 CreateClass_10E6C928 Constructs a Class_10E6C928 with the tagged operator new between GetAllocator() Virtual8 and Virtual9 calls; returns it.
+function 0x10A8FBF0 CreateClass_10E6C930 Constructs a Class_10E6C930 with the tagged operator new between GetAllocator() Virtual8 and Virtual9 calls; returns it.
+function 0x10A90060 CreateClass_10E6C950 Constructs a Class_10E6C950 with the tagged operator new between GetAllocator() Virtual8 and Virtual9 calls; returns it.
+field Class_10A3C550::Unknown04 m_Entries The cString Name is looked up in it through FUN_10c49740, which yields an Entry_10C32C30*.
+field Class_10A3C550::Unknown24 m_Index Reset to 0 in FUN_10a3c550 and used as Unknown28->Data[Unknown24].
+field Class_10A3C550::Unknown28 m_Entry Out-parameter of FUN_10c49740; its Data[Unknown24] is passed to Virtual6.
+field Class_10A3C3B0::Unknown24 m_Index Indexes Unknown28->Unknown08 in FUN_10a3c3b0.
+field Class_10A3C3B0::Unknown28 m_Table When set, FUN_10a3c3b0 dispatches Unknown28->Unknown08[Unknown24] to Virtual6.
+field cVectorTween::Unknown04 m_Current Receives the eased value on each update and the end value when finished.
+field cVectorTween::Unknown10 m_Start The eased value starts here; FUN_10a58490 makes the delta end minus start.
+field cVectorTween::Unknown1C m_End Copied to the current value on finish; FUN_10a58490 stores the end here.
+field cVectorTween::Unknown28 m_Delta Scaled by the eased alpha; FUN_10a58490 sets it to end minus start.
+field cVectorTween::Unknown34 m_Finished FUN_10a58250 returns early when set and sets it once the duration elapses.
+field cVectorTween::Unknown38 m_Duration Elapsed time is compared with it and divided into the ratio.
+field cVectorTween::Unknown3C m_Elapsed FUN_10a58250 adds Delta to it on every call.
+field Class_10A58490::Unknown10 m_Start Subtracted from the end point to form the delta.
+field Class_10A58490::Unknown1C m_End Assigned the argument; the delta is this minus m_Start.
+field Class_10A58490::Unknown28 m_Delta Assigned end minus start.
+field Class_10A56860::Unknown120 m_ItemCount FindIndex loops from zero to Unknown120 over the Unknown128 entries.
+field Class_10A56860::Unknown128 m_Items FindIndex compares each entry with Item and returns its position.
+field Class_10A52BE0::UnknownB8 m_ChildCount Bounds the loop that calls FUN_10a52be0 on each child.
+field Class_10A52BE0::UnknownC0 m_Children Array of child pointers; each child gets FUN_10a52be0(Param).
+field cVolume::Unknown12C m_Min ContainsPoint tests each axis of the point against Unknown12C as the lower bound.
+field cVolume::Unknown138 m_Max ContainsPoint tests each axis of the point against Unknown138 as the upper bound.
+field cVolume::Unknown144 m_Enabled ContainsPoint returns 0 at once when this bool is false.
+field Class_10A65480::Unknown154 m_Font MeasureText on it gives each string's width; Class_10919B90 also has DrawText.
+field Class_10A65480::Unknown18C m_Strings FUN_1091cb20 counts it and FUN_1091cbc0 returns a cString per index; both feed the measuring loop.
+field Class_10E6B5B8::Unknown04 m_Count Clear loops to this count, deletes each item, then sets it to zero.
+field Class_10E6B5B8::Unknown0C m_Items Clear deletes each pointer in this array up to m_Count.
+field Class_10A6B450::Unknown18 m_MinLength Vectors shorter than this get a random length between it and m_MaxLength.
+field Class_10A6B450::Unknown1C m_MaxLength Longer vectors clamp to this; also the upper end of the random range.
+field Class_10A78070::Unknown04 m_PoolCount FUN_10a78070 returns 0 when the cursor reaches it and wraps the cursor at it.
+field Class_10A78070::Unknown0C m_Pool Array of Class_1096D780* that FUN_10a78070 indexes with the cursor.
+field Class_10A78070::Unknown10 m_NextIndex Cursor: FUN_10a78070 reads it as the next index, advances it and wraps it to 0.
+field Class_10A79DD0::Unknown04 m_Entries cIntArray that FUN_10a79dd0 appends each new Class_10E6BD88 to.
+field Class_10E6BC80::Unknown04 m_CopyCount Loop bound over m_Copies in FindBySource; AddCopy uses it too.
+field Class_10A84FD0::Unknown4C m_Offset Subtracted from each of Unknown3C-48 before FUN_10a84fd0 writes them back through FUN_10c3f120.
+field Class_10A87C00::Unknown0C m_Index The hash table indexing the nodes (unit comment); FUN_10c49740 lookups, Remove(key), Reset(0x40) in the destructor.
+field Class_10A87F40::Unknown08 m_Data The block that FUN_10a87f40 frees through GetAllocator()->Virtual5 and zeroes.
+field Class_10A88910::Unknown04 m_Values Receives the read or default value for each Id in FUN_10a88910.
+field Class_10A88970::Unknown400 m_Values Receives the read or default value for each Index in FUN_10a88970.
+field Class_10A382D0::Unknown590 m_ItemCount Loop bound in FUN_10a382d0's name search.
+field Class_10A382D0::Unknown598 m_Items Item pointer array that FUN_10a382d0 searches.
+field Class_10E667AC::Unknown44 m_ItemCount Loop bound in FUN_10a3ac50, the item walk.
+field Class_10E667AC::Unknown4C m_Items Item pointer array walked by FUN_10a3ac50.
+field Class_10E667C4::Unknown28 m_Target NoTarget = Unknown28 == 0 gates the Unknown04.Virtual5 forward in FUN_10a3b460.
+field Class_10A46770::Unknown00 m_Data Indexed as the element buffer by the destructor loop in FUN_10a46770.
+field Class_10A46770::Unknown04 m_Count Bound of the destructor loop; zeroed by FUN_10a46770.
+field Class_10A467C0::Unknown00 m_Data Indexed as the element buffer by the destructor loop in FUN_10a467c0.
+field Class_10A46810::Unknown00 m_Data Indexed as the element buffer by the destructor loop in FUN_10a46810.
+field Class_10A480F0::Unknown08 m_Coords FCoords rebuilt with zero origin and identity axes by FUN_10a480f0.
+field Class_10A4D4E0::UnknownC0 m_Keys Int list read by FindIndex and GetNextKey, bounded by UnknownC4.
+field Class_10A4D4E0::UnknownC4 m_Count Length bound in FindIndex and the last-entry test in GetNextKey.
+field Class_10A4DD60::Unknown04 m_Count Loop bound over the Unknown0C entries in GetEffectiveValue.
+field Class_10A4DD60::Unknown0C m_Entries Pointer array of Struct_10A4DD60 scanned in order by GetEffectiveValue.
+field Class_10A4DD60::Unknown340 m_Defaults Returned by GetEffectiveValue when no entry holds a value other than 0x40.
+field Class_10A4DEA0::Unknown324 m_KeyBindings Read per key i below 0xff and compared with 0x40 in DispatchUnlistedKeys.
+field Class_10A4E230::Unknown720 m_Groups 14 items (i below 14), each a count and a list of keyed entries, read by AddMatchingIndices.
+field Class_10A4E630::Unknown324 m_KeyBindings Read per key i below 0xff and compared with 0x40; EInputKey named on repeats in AddBoundKeys.
+field Class_10E6A9F8::Unknown1D4 m_FirstNode GetLastNode walks the chain from it through Virtual14; GetFirstNode returns it.
+field Class_10A58B70::Unknown154 m_Count Bound checked by GetValueAt: Index >= Unknown154 returns -1.
+field Class_10A58B70::Unknown15C m_Values Indexed by GetValueAt: returns Unknown15C[Index].
+field Class_10A59370::Unknown1BC m_Strings Four cString elements; SetStringAt writes element Index in 0 to 3.
+field Class_10A68100::Unknown10 m_Items cIntArray that AddUnique searches with FindIndex and appends to.
+field Class_10A68150::Unknown10 m_Items cIntArray that Remove searches with FindIndex and removes an entry from.

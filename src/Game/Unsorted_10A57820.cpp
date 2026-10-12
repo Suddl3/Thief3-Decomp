@@ -18,7 +18,7 @@ class Class_10E68D80
 {
 public:
     virtual void Virtual0();
-    virtual bool FUN_10a57820(int Kind, int Unused, bool Force);
+    virtual bool HandleNavigation(int Kind, int Unused, bool Force);
     virtual void Virtual2();
     virtual void Virtual3();
     virtual void Virtual4();
@@ -108,8 +108,8 @@ public:
     int m_NextIndex;
 };
 
-// FUNCTION: 0x10A57820 ?FUN_10a57820@Class_10E68D80@@UAE_NHH_N@Z
-bool Class_10E68D80::FUN_10a57820(int Kind, int Unused, bool Force)
+// FUNCTION: 0x10A57820 ?HandleNavigation@Class_10E68D80@@UAE_NHH_N@Z
+bool Class_10E68D80::HandleNavigation(int Kind, int Unused, bool Force)
 {
     if (!Force)
         return false;

@@ -147,7 +147,7 @@ public:
 
 Class_10E6C390* FUN_10a86080();
 
-bool FUN_10a858c0(int Key);
+bool HasObject(int Key);
 
 void FUN_10a85900(int Key);
 
@@ -162,7 +162,7 @@ void Class_10E95780::FUN_10be1a70()
             FUN_10a86080()->Virtual8();
             return;
         }
-        if (FUN_10a858c0((int)Obj))
+        if (HasObject((int)Obj))
             FUN_10a85900((int)Obj);
     }
 }

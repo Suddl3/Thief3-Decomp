@@ -33,8 +33,8 @@ public:
     Struct_10A4C550_Node* Unknown00;
 };
 
-// FUNCTION: 0x10A71C40 ?FUN_10a71c40@Class_10A71C40@@QAEXXZ
-void Class_10A71C40::FUN_10a71c40()
+// FUNCTION: 0x10A71C40 ?DestroyMembers@Class_10A71C40@@QAEXXZ
+void Class_10A71C40::DestroyMembers()
 {
     Unknown14.~vector();
     Unknown08.FUN_10ab0400();

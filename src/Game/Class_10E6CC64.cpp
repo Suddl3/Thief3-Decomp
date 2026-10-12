@@ -30,7 +30,7 @@ int Class_10E6CC64::FUN_10a939b0(int A, int B, int C)
         {
             APlayerPawn* Pawn = FUN_10983ca0(Obj);
             if (Pawn)
-                Pawn->Unknown208.FUN_10a46770(0);
+                Pawn->Unknown208.Empty(0);
         }
     }
     return 1;

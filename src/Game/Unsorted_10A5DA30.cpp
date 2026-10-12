@@ -5,8 +5,8 @@
 
 Class_10905A90_Member* GetAllocator();
 
-// FUNCTION: 0x10A5DAB0 ?FUN_10a5dab0@Class_10A5DAB0@@QAEXXZ
-void Class_10A5DAB0::FUN_10a5dab0()
+// FUNCTION: 0x10A5DAB0 ?FreeBuffer@Class_10A5DAB0@@QAEXXZ
+void Class_10A5DAB0::FreeBuffer()
 {
     if (Unknown24)
     {

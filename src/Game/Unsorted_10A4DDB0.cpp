@@ -10,15 +10,15 @@ struct Struct_10A4E230_Entry
     int Unknown04;
 };
 
-// FUNCTION: 0x10A4E230 ?FUN_10a4e230@Class_10A4E230@@QAEXHPAVcIntArray@@@Z
-void Class_10A4E230::FUN_10a4e230(int Value, cIntArray* B)
+// FUNCTION: 0x10A4E230 ?AddMatchingIndices@Class_10A4E230@@QAEXHPAVcIntArray@@@Z
+void Class_10A4E230::AddMatchingIndices(int Value, cIntArray* B)
 {
     for (int i = 0; i < 14; i++)
     {
-        int Count = Unknown720[i].Unknown00;
+        int Count = m_Groups[i].Unknown00;
         for (int j = 0; j < Count; j++)
         {
-            if (Unknown720[i].Unknown08[j].Unknown00 == Value)
+            if (m_Groups[i].Unknown08[j].Unknown00 == Value)
             {
                 int Index = B->Unknown00;
                 B->SetCount(Index + 1);

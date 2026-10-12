@@ -63,9 +63,9 @@ public:
     virtual bool Virtual54();
 
     char Unknown04[0xB4];
-    int UnknownB8;
+    int m_ChildCount;
     char UnknownBC[4];
-    Class_10A52BE0** UnknownC0;
+    Class_10A52BE0** m_Children;
 };
 
 #endif // GAME_CLASS_10A52BE0_H

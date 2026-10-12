@@ -14,7 +14,7 @@ public:
 
     Class_10A3B460_Member Unknown04;
     char Unknown08[0x20];
-    int Unknown28;
+    int m_Target;
 };
 
 // FUNCTION: 0x10A3AD10 ??0Class_10A3AD10@@QAE@ABV0@@Z
@@ -28,7 +28,7 @@ Class_10A3AD10::Class_10A3AD10(const Class_10A3AD10& Other)
 // FUNCTION: 0x10A3B460 ?FUN_10a3b460@Class_10E667C4@@UAEXHHHH@Z
 void Class_10E667C4::FUN_10a3b460(int Message, int Param, int C, int D)
 {
-    bool NoTarget = Unknown28 == 0;
+    bool NoTarget = m_Target == 0;
     switch (Message)
     {
     case 59:

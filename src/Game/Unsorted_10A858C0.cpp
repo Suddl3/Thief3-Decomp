@@ -6,8 +6,8 @@ extern int DAT_10f3a1c8;
 
 extern Object_10A858C0** DAT_10f3a1d0;
 
-// FUNCTION: 0x10A858C0 ?FUN_10a858c0@@YA_NH@Z
-bool FUN_10a858c0(int A)
+// FUNCTION: 0x10A858C0 ?HasObject@@YA_NH@Z
+bool HasObject(int A)
 {
     for (int i = 0; i < DAT_10f3a1c8; i++)
     {

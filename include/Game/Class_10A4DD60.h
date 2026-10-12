@@ -8,14 +8,14 @@ struct Struct_10A4DD60;
 class Class_10A4DD60
 {
 public:
-    int FUN_10a4dd60(int Index);
+    int GetEffectiveValue(int Index);
 
     char Unknown00[4];
-    int Unknown04;
+    int m_Count;
     char Unknown08[4];
-    Struct_10A4DD60** Unknown0C;
+    Struct_10A4DD60** m_Entries;
     char Unknown10[0x330];
-    int Unknown340[6];
+    int m_Defaults[6];
 };
 
 #endif // GAME_CLASS_10A4DD60_H

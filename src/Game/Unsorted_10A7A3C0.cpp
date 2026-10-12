@@ -11,8 +11,8 @@ class AActor
 
 int FUN_10977fa0(int Unknown);
 
-// FUNCTION: 0x10A7A770 ?FUN_10a7a770@@YG?AVFString@@PAVClass_10AF7F80@@PAH@Z
-FString __stdcall FUN_10a7a770(Class_10AF7F80* Src, int* Pos)
+// FUNCTION: 0x10A7A770 ?ReadField@@YG?AVFString@@PAVClass_10AF7F80@@PAH@Z
+FString __stdcall ReadField(Class_10AF7F80* Src, int* Pos)
 {
     char Buf[128];
     int Count = 0;

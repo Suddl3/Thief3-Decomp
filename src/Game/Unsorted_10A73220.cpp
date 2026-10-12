@@ -12,15 +12,15 @@
 
 extern Class_10A73EF0_Table* DAT_10f3eda4;
 
-// FUNCTION: 0x10A73790 ?FUN_10a73790@Class_10E6BB0C@@UAEXHHHH@Z
-void Class_10E6BB0C::FUN_10a73790(int Code, int A, int B, int C)
+// FUNCTION: 0x10A73790 ?HandleEvent@Class_10E6BB0C@@UAEXHHHH@Z
+void Class_10E6BB0C::HandleEvent(int Code, int A, int B, int C)
 {
     if (Code == 0x20)
         Virtual1(A, B, C);
 }
 
-// FUNCTION: 0x10A73EF0 ?FUN_10a73ef0@Class_10A73EF0@@QAEXHH@Z
-void Class_10A73EF0::FUN_10a73ef0(int Handle, int B)
+// FUNCTION: 0x10A73EF0 ?CreateItem@Class_10A73EF0@@QAEXHH@Z
+void Class_10A73EF0::CreateItem(int Handle, int B)
 {
     Class_10ABCC20* Item = 0;
     Class_10A73EF0_Object* Obj = DAT_10f3eda4->Unknown08[Handle & 0xffff];

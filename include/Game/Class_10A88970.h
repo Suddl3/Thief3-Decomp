@@ -12,10 +12,10 @@ public:
     virtual void Virtual3();
     virtual bool Virtual4(int Index, float* Out);
 
-    void FUN_10a88970(int Index, int Mode);
+    void ReadOrDefault(int Index, int Mode);
 
     char Unknown04[0x3FC];
-    float Unknown400[1];
+    float m_Values[1];
 };
 
 #endif // GAME_CLASS_10A88970_H

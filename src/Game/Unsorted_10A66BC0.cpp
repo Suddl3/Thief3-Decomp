@@ -1,8 +1,8 @@
 // Game/Unsorted_10A66BC0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-// FUNCTION: 0x10A66C80 ?FUN_10a66c80@@YAHPAX0M@Z
-int FUN_10a66c80(void* A, void* B, float R)
+// FUNCTION: 0x10A66C80 ?VectorsNearlyEqual@@YAHPAX0M@Z
+int VectorsNearlyEqual(void* A, void* B, float R)
 {
     float* Pa = (float*)A;
     float* Pb = (float*)B;

@@ -25,7 +25,7 @@ class Class_10E6B5A0
 {
 public:
     Class_10E6B5A0* Init();
-    int FUN_10a68b70();
+    int GetSizeBytes();
 
     void* VTable;
     int Unknown04;
@@ -47,10 +47,10 @@ void FUN_10a4c5f0();
 
 extern void* DAT_10e6b978;
 
-class Class_10A67000
+class cVolume
 {
 public:
-    bool FUN_10a67000(FVector V);
+    bool ContainsPoint(FVector V);
 };
 
 extern void* DAT_10e6bbcc[];
@@ -85,8 +85,8 @@ Class_10E6B5A0* Class_10E6B5A0::Init()
     return this;
 }
 
-// FUNCTION: 0x10A68B70 ?FUN_10a68b70@Class_10E6B5A0@@QAEHXZ
-int Class_10E6B5A0::FUN_10a68b70()
+// FUNCTION: 0x10A68B70 ?GetSizeBytes@Class_10E6B5A0@@QAEHXZ
+int Class_10E6B5A0::GetSizeBytes()
 {
     return Field14 << 4;
 }
@@ -116,14 +116,14 @@ void Class_10E6B978::FUN_10a6da70() {
     FUN_10a4c5f0();
 }
 
-// FUNCTION: 0x10A70FA0 ?ContainsPoint@cVolumeManager@@UAE_NABVFVector@@PAVClass_10A67000@@@Z
-bool cVolumeManager::ContainsPoint(const FVector& A, Class_10A67000* B)
+// FUNCTION: 0x10A70FA0 ?ContainsPoint@cVolumeManager@@UAE_NABVFVector@@PAVcVolume@@@Z
+bool cVolumeManager::ContainsPoint(const FVector& A, cVolume* B)
 {
-    return B->FUN_10a67000(A);
+    return B->ContainsPoint(A);
 }
 
-// FUNCTION: 0x10A74820 ?FUN_10a74820@Class_10E6BBCC@@QAEPAV1@XZ
-Class_10E6BBCC* Class_10E6BBCC::FUN_10a74820()
+// FUNCTION: 0x10A74820 ?Init@Class_10E6BBCC@@QAEPAV1@XZ
+Class_10E6BBCC* Class_10E6BBCC::Init()
 {
     Field00 = DAT_10e6bbcc;
     return this;

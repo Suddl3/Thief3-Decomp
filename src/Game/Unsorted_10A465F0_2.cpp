@@ -4,8 +4,8 @@
 #include "Game/Class_10A46770.h"
 #include "Game/Class_10AF4BB0.h"
 
-// FUNCTION: 0x10A46770 ?FUN_10a46770@Class_10A46770@@QAEXH@Z
-void Class_10A46770::FUN_10a46770(int Slack)
+// FUNCTION: 0x10A46770 ?Empty@Class_10A46770@@QAEXH@Z
+void Class_10A46770::Empty(int Slack)
 {
     for (int i = 0; i < Unknown04; i++)
         ((Class_10A462B0*)Unknown00)[i].~Class_10A462B0();

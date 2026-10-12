@@ -129,5 +129,5 @@ public:
 // FUNCTION: 0x10A46A80 ?ClearGoals@APlayerPawn@@UAEXXZ
 void APlayerPawn::ClearGoals()
 {
-    Unknown208.FUN_10a46770(0);
+    Unknown208.Empty(0);
 }

@@ -7,7 +7,7 @@ class Class_10E66700
 {
 public:
     virtual ~Class_10E66700();
-    virtual void FUN_10a3ac50(int A) = 0;
+    virtual void UpdateItems(int A) = 0;
 };
 
 #endif // GAME_CLASS_10E66700_H

@@ -78,8 +78,8 @@ void FUN_10a48d80(FCoords* A, int B, int C);
 
 void FUN_10a48d00(FCoords* A, int B);
 
-// FUNCTION: 0x10A48F20 ?FUN_10a48f20@@YAXHHPAVFCoords@@@Z
-void FUN_10a48f20(int A, int B, FCoords* C)
+// FUNCTION: 0x10A48F20 ?GetBoneCoords@@YAXHHPAVFCoords@@@Z
+void GetBoneCoords(int A, int B, FCoords* C)
 {
     USkeletalMesh* Mesh = Cast<USkeletalMesh>((UObject*)((Class_10C66590*)A)->FUN_10c66590());
     if (Mesh && B != 9999)

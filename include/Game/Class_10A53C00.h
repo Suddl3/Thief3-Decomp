@@ -8,7 +8,7 @@ class cString;
 class Class_10A53C00
 {
 public:
-    cString FUN_10a53c00(int State);
+    cString GetStateName(int State);
 };
 
 #endif // GAME_CLASS_10A53C00_H

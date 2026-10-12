@@ -29,7 +29,7 @@ public:
 
 Class_10905A90_Member* GetAllocator();
 
-void FUN_10a48ff0(int A, int B, int C);
+void GetWorldCoordinatesForBone(int A, int B, int C);
 
 // Ion Storm's string (0x109081E0): a char pointer to a block allocated 4 bytes before it.
 class cString
@@ -147,7 +147,7 @@ public:
 void Class_10E955F0::FUN_10bdfe10(const FCoords& Coords, FRotator& Out)
 {
     FString Text(Unknown5C.FUN_10af9730());
-    FUN_10a48ff0(Unknown48, (int)&Text, (int)&Coords);
+    GetWorldCoordinatesForBone(Unknown48, (int)&Text, (int)&Coords);
     Out = Coords.OrthoRotation();
     Out.Roll = 0;
     Out.Pitch = 0;

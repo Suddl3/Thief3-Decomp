@@ -38,8 +38,8 @@ public:
     virtual void FUN_10bbe970();
 };
 
-// FUNCTION: 0x10A8D720 ?FUN_10a8d720@Class_10E5D768@@UAEPAVClass_10E6C818@@XZ
-Class_10E6C818* Class_10E5D768::FUN_10a8d720()
+// FUNCTION: 0x10A8D720 ?CreateClass_10E6C818@Class_10E5D768@@UAEPAVClass_10E6C818@@XZ
+Class_10E6C818* Class_10E5D768::CreateClass_10E6C818()
 {
     GetAllocator()->Virtual8(0, 0);
     Class_10E6C818* Result = new(0, 0, 0, 0, 0) Class_10E6C818;

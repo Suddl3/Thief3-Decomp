@@ -7,8 +7,8 @@
 
 class UProperty;
 
-// FUNCTION: 0x10A8A790 ?FUN_10a8a790@Class_10A8A790@@QAEXPAVUObject@@@Z
-void Class_10A8A790::FUN_10a8a790(UObject* Src)
+// FUNCTION: 0x10A8A790 ?SetByteProperty@Class_10A8A790@@QAEXPAVUObject@@@Z
+void Class_10A8A790::SetByteProperty(UObject* Src)
 {
     if (Src)
     {

@@ -6,7 +6,7 @@
 class Class_10A4C130
 {
 public:
-    void* FUN_10a4c130(int Count, int B);
+    void* AllocBuffer(int Count, int B);
 
     int Unknown00;
     int Unknown04;

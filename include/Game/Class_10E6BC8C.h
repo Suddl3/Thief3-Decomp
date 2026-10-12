@@ -22,7 +22,7 @@ public:
 
     Class_10E6BC8C();
 
-    bool FUN_10a6e690(int A);
+    bool HasOwner(int A);
 };
 
 #endif // GAME_CLASS_10E6BC8C_H

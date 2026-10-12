@@ -6,7 +6,7 @@
 class Class_10A64D00
 {
 public:
-    void FUN_10a64d00(int A, int B, int C, int D, bool E, int F);
+    void Init(int A, int B, int C, int D, bool E, int F);
 
     int Unknown00;
     int Unknown04;

@@ -8,7 +8,7 @@ class Class_10A8D310
 public:
     char Unknown00[0x8];
     int Field8;
-    void FUN_10a8d310();
+    void Reset();
 };
 
 #endif // GAME_CLASS_10A8D310_H

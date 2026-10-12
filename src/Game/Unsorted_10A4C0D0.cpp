@@ -23,8 +23,8 @@ Struct_10A4C4A0* Class_10A4C4A0::Allocate(int A, int B)
     return (Struct_10A4C4A0*)Memory;
 }
 
-// FUNCTION: 0x10A4C130 ?FUN_10a4c130@Class_10A4C130@@QAEPAXHH@Z
-void* Class_10A4C130::FUN_10a4c130(int Count, int B)
+// FUNCTION: 0x10A4C130 ?AllocBuffer@Class_10A4C130@@QAEPAXHH@Z
+void* Class_10A4C130::AllocBuffer(int Count, int B)
 {
     if (Unknown04)
         GetAllocator()->Virtual8(0, 0);

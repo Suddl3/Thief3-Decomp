@@ -48,7 +48,7 @@ int Class_10E6CE6C::FUN_10a95980(int A, int B, int C)
     {
         Class_10A67CA0* Obj = DAT_10f35dec->Unknown70;
         if (Obj)
-            Obj->FUN_10a67ca0();
+            Obj->ResetSimtimePlayedTimer();
     }
     return 1;
 }

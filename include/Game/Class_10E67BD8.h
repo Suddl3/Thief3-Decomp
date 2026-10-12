@@ -124,7 +124,7 @@ public:
 
     Class_10E67BD8();
 
-    void FUN_10a514e0(int Index);
+    void RemoveWindow(int Index);
 
     char Unknown04[0x114];
     void** Unknown118;

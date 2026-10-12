@@ -8,40 +8,40 @@
 
 extern float DAT_10e49684;
 
-// FUNCTION: 0x10A88910 ?FUN_10a88910@Class_10A88910@@QAEXHH@Z
-void Class_10A88910::FUN_10a88910(int Id, int Mode)
+// FUNCTION: 0x10A88910 ?ReadOrDefault@Class_10A88910@@QAEXHH@Z
+void Class_10A88910::ReadOrDefault(int Id, int Mode)
 {
     float Value = 0;
     if (Virtual4(Id, &Value))
     {
-        Unknown04[Id] = Value;
+        m_Values[Id] = Value;
         return;
     }
     if (Mode == 1)
     {
-        Unknown04[Id] = 1.0f;
+        m_Values[Id] = 1.0f;
         return;
     }
     if (Mode == 3)
-        Unknown04[Id] = 0.0f;
+        m_Values[Id] = 0.0f;
 }
 
-// FUNCTION: 0x10A88970 ?FUN_10a88970@Class_10A88970@@QAEXHH@Z
-void Class_10A88970::FUN_10a88970(int Index, int Mode)
+// FUNCTION: 0x10A88970 ?ReadOrDefault@Class_10A88970@@QAEXHH@Z
+void Class_10A88970::ReadOrDefault(int Index, int Mode)
 {
     float Value = 0.0f;
     if (this->Virtual4(Index, &Value))
     {
-        Unknown400[Index] = Value;
+        m_Values[Index] = Value;
         return;
     }
     if (Mode == 1)
     {
-        Unknown400[Index] = 1.0f;
+        m_Values[Index] = 1.0f;
         return;
     }
     if (Mode == 3)
-        Unknown400[Index] = 0.0f;
+        m_Values[Index] = 0.0f;
 }
 
 // FUNCTION: 0x10A889E0 ?ClampedLength2D@Class_10A88D00@@QAEMMM@Z

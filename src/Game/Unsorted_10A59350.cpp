@@ -3,9 +3,9 @@
 #include "Game/cString.h"
 #include "Game/Class_10A59370.h"
 
-// FUNCTION: 0x10A59370 ?FUN_10a59370@Class_10A59370@@QAEXHABVcString@@@Z
-void Class_10A59370::FUN_10a59370(int Index, const cString& Value)
+// FUNCTION: 0x10A59370 ?SetStringAt@Class_10A59370@@QAEXHABVcString@@@Z
+void Class_10A59370::SetStringAt(int Index, const cString& Value)
 {
     if (Index > -1 && Index < 4)
-        Unknown1BC[Index] = Value;
+        m_Strings[Index] = Value;
 }

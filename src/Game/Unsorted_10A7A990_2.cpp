@@ -247,8 +247,8 @@ void cRigidAttachmentManager::Detach(int A, int B, Class_10AAB5C0*& ObjRef)
     }
 }
 
-// FUNCTION: 0x10A7D2A0 ?FUN_10a7d2a0@@YGXHPAVcIntArray@@@Z
-void __stdcall FUN_10a7d2a0(int A, cIntArray* Out)
+// FUNCTION: 0x10A7D2A0 ?GatherAttachments@@YGXHPAVcIntArray@@@Z
+void __stdcall GatherAttachments(int A, cIntArray* Out)
 {
     if (((Class_10C08940*)A)->FUN_10ad18b0() == 0)
     {

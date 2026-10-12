@@ -20,8 +20,8 @@ public:
     char Unknown08[4];
 };
 
-// FUNCTION: 0x10A8D440 ?FUN_10a8d440@Class_10E5D75C@@UAEPAVcTriggerOperatorParam@@HH@Z
-cTriggerOperatorParam* Class_10E5D75C::FUN_10a8d440(int A, int B)
+// FUNCTION: 0x10A8D440 ?CreateOperatorParam@Class_10E5D75C@@UAEPAVcTriggerOperatorParam@@HH@Z
+cTriggerOperatorParam* Class_10E5D75C::CreateOperatorParam(int A, int B)
 {
     GetAllocator()->Virtual8(0, 0);
     cTriggerOperatorParam* Result = new(0, 0, 0, 0, 0) cTriggerOperatorParam;

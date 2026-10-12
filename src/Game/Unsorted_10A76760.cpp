@@ -44,7 +44,7 @@ class ULevelBase;
 // FUNCTION: 0x10A76760 ?FindBySource@Class_10E6BC80@@UAEPAVObject_10A76760@@H@Z
 Object_10A76760* Class_10E6BC80::FindBySource(int Value)
 {
-    for (int i = 0; i < Unknown04; i++)
+    for (int i = 0; i < m_CopyCount; i++)
     {
         if (m_Copies[i]->Unknown00 == Value)
             return m_Copies[i];

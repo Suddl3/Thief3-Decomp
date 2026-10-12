@@ -15,8 +15,8 @@ public:
 
 extern Class_10F46DA0* DAT_10f46da0;
 
-// FUNCTION: 0x10A3A330 ?FUN_10a3a330@Class_10A3A330@@UAEXXZ
-void Class_10A3A330::FUN_10a3a330()
+// FUNCTION: 0x10A3A330 ?RegisterMessages@Class_10A3A330@@UAEXXZ
+void Class_10A3A330::RegisterMessages()
 {
     DAT_10f46da0->Virtual1(this, 0x3b, -1, -1);
     DAT_10f46da0->Virtual1(this, 0x27, -1, -1);

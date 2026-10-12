@@ -6,7 +6,7 @@
 class Class_10A67CA0
 {
 public:
-    void FUN_10a67ca0();
+    void ResetSimtimePlayedTimer();
 };
 
 #endif // GAME_CLASS_10A67CA0_H

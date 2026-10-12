@@ -6,22 +6,22 @@
 class Class_10A56860
 {
 public:
-    void FUN_10a56860(int Item);
+    void SetSelectedItem(int Item);
     void SetSelectedIndex(int Index);
     int FindIndex(int Item)
     {
-        for (int i = 0; i < Unknown120; i++)
+        for (int i = 0; i < m_ItemCount; i++)
         {
-            if (Unknown128[i] == Item)
+            if (m_Items[i] == Item)
                 return i;
         }
         return -1;
     }
 
     char Unknown00[0x120];
-    int Unknown120;
+    int m_ItemCount;
     int Unknown124;
-    int* Unknown128;
+    int* m_Items;
     unsigned char Unknown12C;
 };
 

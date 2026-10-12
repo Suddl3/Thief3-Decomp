@@ -8,7 +8,7 @@ class cTriggerByteEnumParam;
 class Class_10E5D750
 {
 public:
-    virtual cTriggerByteEnumParam* FUN_10a8c470(int A, int B);
+    virtual cTriggerByteEnumParam* CreateByteEnumParam(int A, int B);
 };
 
 #endif // GAME_CLASS_10E5D750_H

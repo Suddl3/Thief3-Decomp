@@ -6,7 +6,7 @@
 #include "Game/Class_10A66E50.h"
 #include "Game/Class_10A66E70.h"
 
-int FUN_10a66c80(void* A, void* B, float Epsilon);
+int VectorsNearlyEqual(void* A, void* B, float Epsilon);
 
 class Class_10E6B4AC
 {
@@ -38,5 +38,5 @@ void Class_10A66E70::FUN_10a66e70(const Info_10A66E70* In)
 // FUNCTION: 0x10A66E90 ?IsEqual@Class_10E6B4AC@@UAE_NPAV1@@Z
 bool Class_10E6B4AC::IsEqual(Class_10E6B4AC* Other)
 {
-    return FUN_10a66c80(&m_Value, &Other->m_Value, FLT_EPSILON) == 1;
+    return VectorsNearlyEqual(&m_Value, &Other->m_Value, FLT_EPSILON) == 1;
 }

@@ -5,8 +5,8 @@
 
 extern float DAT_10eafbdc;
 
-// FUNCTION: 0x10A52F10 ?FUN_10a52f10@Class_10A52F10@@QAEHH@Z
-int Class_10A52F10::FUN_10a52f10(int Value)
+// FUNCTION: 0x10A52F10 ?IndexOf@Class_10A52F10@@QAEHH@Z
+int Class_10A52F10::IndexOf(int Value)
 {
     int i;
     for (i = 0; i < UnknownB8; i++)

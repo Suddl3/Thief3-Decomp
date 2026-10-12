@@ -2,10 +2,10 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10A58B70.h"
 
-// FUNCTION: 0x10A58B70 ?FUN_10a58b70@Class_10A58B70@@QAEHH@Z
-int Class_10A58B70::FUN_10a58b70(int Index)
+// FUNCTION: 0x10A58B70 ?GetValueAt@Class_10A58B70@@QAEHH@Z
+int Class_10A58B70::GetValueAt(int Index)
 {
-    if (Index >= Unknown154)
+    if (Index >= m_Count)
         return -1;
-    return Unknown15C[Index];
+    return m_Values[Index];
 }

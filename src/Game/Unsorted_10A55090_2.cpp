@@ -65,12 +65,12 @@ class Class_10E6A9F8
 public:
     void FUN_10a626f0();
     void MarkDirty();
-    int FUN_10a62bc0();
+    int GetFirstNode();
 
     char Unknown00[0x1D4];
     union
     {
-        Object_10A626F0* Unknown1D4;
+        Object_10A626F0* m_FirstNode;
         int Field1d4;
     };
     int Unknown1D8;
@@ -189,12 +189,12 @@ void Class_10E696A8::FUN_10a5d420()
 void Class_10E6A9F8::FUN_10a626f0()
 {
     Unknown1D8 = 0;
-    Unknown1D4->Virtual9();
+    m_FirstNode->Virtual9();
     MarkDirty();
 }
 
-// FUNCTION: 0x10A62BC0 ?FUN_10a62bc0@Class_10E6A9F8@@QAEHXZ
-int Class_10E6A9F8::FUN_10a62bc0()
+// FUNCTION: 0x10A62BC0 ?GetFirstNode@Class_10E6A9F8@@QAEHXZ
+int Class_10E6A9F8::GetFirstNode()
 {
     return Field1d4;
 }
@@ -217,8 +217,8 @@ Class_1090A780 Class_10E6AC98::FUN_10a63210()
 // FUNCTION: 0x10A63480 ??_GClass_10E6AC50@@UAEPAXI@Z
 // Compiler-generated: emitted with the class's vtable by 0x10A62CB0's definition in this unit.
 
-// FUNCTION: 0x10A64CD0 ?FUN_10a64cd0@Class_10A64CD0@@QAEPAV1@XZ
-Class_10A64CD0* Class_10A64CD0::FUN_10a64cd0()
+// FUNCTION: 0x10A64CD0 ?Reset@Class_10A64CD0@@QAEPAV1@XZ
+Class_10A64CD0* Class_10A64CD0::Reset()
 {
     Unknown00 = 0;
     Unknown04 = 0;

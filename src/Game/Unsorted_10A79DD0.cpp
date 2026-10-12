@@ -85,14 +85,14 @@ public:
 class Class_10A79DD0
 {
 public:
-    void FUN_10a79dd0(Struct_10A79DD0Part* A, Struct_10A79DD0Part* B, int* C, int D);
+    void AddEntry(Struct_10A79DD0Part* A, Struct_10A79DD0Part* B, int* C, int D);
 
     char Unknown00[4];
-    cIntArray Unknown04;
+    cIntArray m_Entries;
 };
 
-// FUNCTION: 0x10A79DD0 ?FUN_10a79dd0@Class_10A79DD0@@QAEXPAUStruct_10A79DD0Part@@0PAHH@Z
-void Class_10A79DD0::FUN_10a79dd0(Struct_10A79DD0Part* A, Struct_10A79DD0Part* B, int* C, int D)
+// FUNCTION: 0x10A79DD0 ?AddEntry@Class_10A79DD0@@QAEXPAUStruct_10A79DD0Part@@0PAHH@Z
+void Class_10A79DD0::AddEntry(Struct_10A79DD0Part* A, Struct_10A79DD0Part* B, int* C, int D)
 {
     Class_10E6BD88* Obj = new(0, 0, 0, 0, 0) Class_10E6BD88;
     Obj->Unknown0C = *A;
@@ -100,7 +100,7 @@ void Class_10A79DD0::FUN_10a79dd0(Struct_10A79DD0Part* A, Struct_10A79DD0Part* B
     int Value = *C;
     Obj->Unknown08 = D;
     Obj->Unknown04 = Value;
-    cIntArray* Array = &Unknown04;
+    cIntArray* Array = &m_Entries;
     int Index = Array->Count;
     Array->SetCount(Index + 1);
     Array->Unknown08[Index] = Obj;

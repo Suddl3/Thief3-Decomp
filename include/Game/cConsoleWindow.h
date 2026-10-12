@@ -66,7 +66,7 @@ public:
     virtual void Virtual55();
     virtual void Virtual56(int A);
 
-    void FUN_10a5b530();
+    void Clear();
 
     char Unknown04[0x1C4];
     int Unknown1C8;

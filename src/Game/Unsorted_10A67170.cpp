@@ -19,8 +19,8 @@ public:
 
 extern LoginManager* DAT_10f3a0f8;
 
-// FUNCTION: 0x10A67170 ?FUN_10a67170@@YAPAVLoginManager@@XZ
-LoginManager* FUN_10a67170()
+// FUNCTION: 0x10A67170 ?GetLoginManager@@YAPAVLoginManager@@XZ
+LoginManager* GetLoginManager()
 {
     if (!DAT_10f3a0f8)
     {

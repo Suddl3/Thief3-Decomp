@@ -8,7 +8,7 @@
 class Class_10A46770 : public Class_10AF4BB0
 {
 public:
-    void FUN_10a46770(int p1);
+    void Empty(int p1);
 };
 
 #endif // GAME_CLASS_10A46770_H

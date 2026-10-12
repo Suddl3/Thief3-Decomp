@@ -8,7 +8,7 @@
 class Class_10A46300
 {
 public:
-    Class_10A46300* FUN_10a46300(const Class_10A46300& Other);
+    Class_10A46300* CopyFrom(const Class_10A46300& Other);
 
     INT Unknown00;
     FString Unknown04;

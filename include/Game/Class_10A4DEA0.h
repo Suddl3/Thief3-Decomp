@@ -8,10 +8,10 @@ class cIntArray;
 class Class_10A4DEA0
 {
 public:
-    void FUN_10a4dea0(cIntArray* Set);
+    void DispatchUnlistedKeys(cIntArray* Set);
 
     char Unknown00[0x324];
-    int Unknown324[0xff];
+    int m_KeyBindings[0xff];
 };
 
 #endif // GAME_CLASS_10A4DEA0_H

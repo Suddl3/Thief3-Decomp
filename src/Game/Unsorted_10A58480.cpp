@@ -3,9 +3,9 @@
 #include "Core/Core.h"
 #include "Game/Class_10A58490.h"
 
-// FUNCTION: 0x10A58490 ?FUN_10a58490@Class_10A58490@@QAEXABVFVector@@@Z
-void Class_10A58490::FUN_10a58490(const FVector& A)
+// FUNCTION: 0x10A58490 ?SetEnd@Class_10A58490@@QAEXABVFVector@@@Z
+void Class_10A58490::SetEnd(const FVector& A)
 {
-    Unknown1C = A;
-    Unknown28 = Unknown1C - Unknown10;
+    m_End = A;
+    m_Delta = m_End - m_Start;
 }

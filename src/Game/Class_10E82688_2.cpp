@@ -11,7 +11,7 @@ public:
 class Class_10A64CD0
 {
 public:
-    Class_10A64CD0* FUN_10a64cd0();
+    Class_10A64CD0* Reset();
 };
 
 class Class_10E82688 : public Class_10E67FD0
@@ -45,7 +45,7 @@ Class_10E82688::Class_10E82688()
     m_Elapsed = 0;
     m_FrameCount = 0;
     m_Frame = 0;
-    Unknown134.FUN_10a64cd0();
+    Unknown134.Reset();
     Unknown158 = 0;
     Unknown15C = 0;
     Unknown15D = 0;

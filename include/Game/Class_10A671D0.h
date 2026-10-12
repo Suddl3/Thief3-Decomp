@@ -8,7 +8,7 @@
 class Class_10A671D0 : public Class_10B06220
 {
 public:
-    void FUN_10a671d0(int Handle, int B);
+    void CreateItem(int Handle, int B);
 };
 
 #endif // GAME_CLASS_10A671D0_H

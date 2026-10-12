@@ -184,8 +184,8 @@ public:
 
 void FUN_10a4b790(cString* Text, FArray* Items);
 
-// FUNCTION: 0x10A74B20 ?FUN_10a74b20@@YG_NPAHH@Z
-bool __stdcall FUN_10a74b20(int* Id, int Handle)
+// FUNCTION: 0x10A74B20 ?HasObjectString@@YG_NPAHH@Z
+bool __stdcall HasObjectString(int* Id, int Handle)
 {
     Class_10A73EF0_Object* Obj = FUN_10af3470()->FUN_10af33e0(Handle);
     if (!Obj)

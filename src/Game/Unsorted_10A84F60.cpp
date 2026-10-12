@@ -16,8 +16,8 @@ void Class_10A84FD0::FUN_10a84fd0()
     Unknown44 = C * 0.01f;
     int D = FUN_10c3fb10()->FUN_10c3f110(3);
     Unknown48 = D * 0.01f;
-    FUN_10c3fb10()->FUN_10c3f120(0, Unknown3C - Unknown4C);
-    FUN_10c3fb10()->FUN_10c3f120(1, Unknown40 - Unknown4C);
-    FUN_10c3fb10()->FUN_10c3f120(2, Unknown44 - Unknown4C);
-    FUN_10c3fb10()->FUN_10c3f120(3, Unknown48 - Unknown4C);
+    FUN_10c3fb10()->FUN_10c3f120(0, Unknown3C - m_Offset);
+    FUN_10c3fb10()->FUN_10c3f120(1, Unknown40 - m_Offset);
+    FUN_10c3fb10()->FUN_10c3f120(2, Unknown44 - m_Offset);
+    FUN_10c3fb10()->FUN_10c3f120(3, Unknown48 - m_Offset);
 }

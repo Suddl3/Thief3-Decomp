@@ -35,21 +35,21 @@ public:
 class Class_10A68100
 {
 public:
-    void FUN_10a68100(int Item);
+    void AddUnique(int Item);
 
     char Unknown00[0x10];
-    cIntArray Unknown10;
+    cIntArray m_Items;
 };
 
-// FUNCTION: 0x10A680C0 ?FUN_10a680c0@Class_10A680C0@@QAEXXZ
-void Class_10A680C0::FUN_10a680c0()
+// FUNCTION: 0x10A680C0 ?Empty@Class_10A680C0@@QAEXXZ
+void Class_10A680C0::Empty()
 {
     Unknown08.Empty();
 }
 
-// FUNCTION: 0x10A68100 ?FUN_10a68100@Class_10A68100@@QAEXH@Z
-void Class_10A68100::FUN_10a68100(int Item)
+// FUNCTION: 0x10A68100 ?AddUnique@Class_10A68100@@QAEXH@Z
+void Class_10A68100::AddUnique(int Item)
 {
-    if (Unknown10.FindIndex(Item) == -1)
-        Unknown10.Append(Item);
+    if (m_Items.FindIndex(Item) == -1)
+        m_Items.Append(Item);
 }

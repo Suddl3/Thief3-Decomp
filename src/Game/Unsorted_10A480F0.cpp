@@ -27,24 +27,24 @@ public:
 class Class_10A480F0
 {
 public:
-    Class_10A480F0* FUN_10a480f0();
+    Class_10A480F0* Reset();
 
     int Unknown00;
     int Unknown04;
-    FCoords Unknown08;
+    FCoords m_Coords;
 };
 
-// FUNCTION: 0x10A480F0 ?FUN_10a480f0@Class_10A480F0@@QAEPAV1@XZ
-Class_10A480F0* Class_10A480F0::FUN_10a480f0()
+// FUNCTION: 0x10A480F0 ?Reset@Class_10A480F0@@QAEPAV1@XZ
+Class_10A480F0* Class_10A480F0::Reset()
 {
     Unknown00 = 0;
     Unknown04 = 0;
-    Unknown08.FCoords::FCoords(FVector(0, 0, 0));
+    m_Coords.FCoords::FCoords(FVector(0, 0, 0));
     return this;
 }
 
-// FUNCTION: 0x10A48140 ?FUN_10a48140@Class_10A48140@@QAEPAV1@XZ
-Class_10A48140* Class_10A48140::FUN_10a48140()
+// FUNCTION: 0x10A48140 ?Reset@Class_10A48140@@QAEPAV1@XZ
+Class_10A48140* Class_10A48140::Reset()
 {
     Unknown00 = 0;
     Unknown28 = 0;

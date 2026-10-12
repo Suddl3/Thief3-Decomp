@@ -8,7 +8,7 @@ class cTriggerClassParam;
 class Class_10E5D734
 {
 public:
-    virtual cTriggerClassParam* FUN_10a891a0(int A, int B);
+    virtual cTriggerClassParam* CreateClassParam(int A, int B);
 };
 
 #endif // GAME_CLASS_10E5D734_H

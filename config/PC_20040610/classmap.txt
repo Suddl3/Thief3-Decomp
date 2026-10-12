@@ -96,6 +96,7 @@ Class_10A5E8A0           Class_10E69BA0                   0x10A5E8A0: slot of 0x
 Class_10A5E900           Class_10E69BA0                   0x10A5E900: slot of 0x10E69BA0
 Class_10A626F0           Class_10E6A9F8                   0x10A626F0: slot of 0x10E6A9F8
 Class_10A62BC0           Class_10E6A9F8                   0x10A62BC0: slot of 0x10E6A9F8
+Class_10A67000           cVolume                          named: cVolumeManager::ContainsPoint takes this class as its volume and calls its point test.
 Class_10A67B70           Class_10E6B594                   0x10A67B70: stores 0x10E6B594
 Class_10A68B70           Class_10E6B5A0                   0x10A68B70: slot of 0x10E6B5A0
 Class_10A6E690           Class_10E6BC8C                   0x10A6E690: called on this by 0x10A76FA0
@@ -550,6 +551,7 @@ Class_10E67938           cActorManager                    named: Xbox messages '
 Class_10E67FB0           cFloatInterpolator               named: Update lerps one float from a start to an end value over a duration, then stops.
 Class_10E682F0           cFMVWindow                       named: Xbox callee file WmFMVWindow.cpp; cMovieSubtitles calls its constructor and its Stop.
 Class_10E68938           cRadioWindow                     named: Xbox names cRadioWindow with file WmRadioWindow.cpp; SetSelectedIndex leaves exactly one child selected.
+Class_10E68F94           cVectorTween                     named: FVector start, end and delta eased over a duration by a sine table with a finished flag; FUN_10a58250 advances it.
 Class_10E69470           cConsoleWindow                   named: Xbox twin vtable (T3Opt 133/118 slots): its own methods' and constructors' debug names say cConsoleWindow (2), source WmConsoleWindow.cpp
 Class_10E698F0           cIconWindow                      named: Xbox twin vtable (T3Opt 131/128 slots): its own methods' and constructors' debug names say cIconWindow (2)
 Class_10E6AC20           cMenu                            named: Xbox twin vtable (T3Opt 11/11 slots): its own methods' and constructors' debug names say cMenu (1), source WmMenu.cpp

@@ -39,7 +39,7 @@ extern int DAT_10e6b594;
 class Class_10E6B594
 {
 public:
-    void FUN_10a6f9b0();
+    void DestroyMembers();
 
     void* Field00;
     char Unknown04[4];
@@ -48,8 +48,8 @@ public:
     std::vector<void*> Unknown14;
 };
 
-// FUNCTION: 0x10A6F9B0 ?FUN_10a6f9b0@Class_10E6B594@@QAEXXZ
-void Class_10E6B594::FUN_10a6f9b0()
+// FUNCTION: 0x10A6F9B0 ?DestroyMembers@Class_10E6B594@@QAEXXZ
+void Class_10E6B594::DestroyMembers()
 {
     Unknown14.~vector();
     Unknown08.FUN_10ab0400();

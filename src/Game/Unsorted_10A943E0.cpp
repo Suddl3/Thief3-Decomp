@@ -33,8 +33,8 @@ public:
     }
 };
 
-// FUNCTION: 0x10A943E0 ?FUN_10a943e0@Class_10E5D7F8@@UAEPAVClass_10E6CD24@@XZ
-Class_10E6CD24* Class_10E5D7F8::FUN_10a943e0()
+// FUNCTION: 0x10A943E0 ?Create@Class_10E5D7F8@@UAEPAVClass_10E6CD24@@XZ
+Class_10E6CD24* Class_10E5D7F8::Create()
 {
     GetAllocator()->Virtual8(0, 0);
     Class_10E6CD24* Result = new(0, 0, 0, 0, 0) Class_10E6CD24;
@@ -42,14 +42,14 @@ Class_10E6CD24* Class_10E5D7F8::FUN_10a943e0()
     return Result;
 }
 
-// FUNCTION: 0x10A94510 ?FUN_10a94510@Class_10E5D868@@UAEPAVClass_10E6CD40@@XZ
-Class_10E6CD40* Class_10E5D868::FUN_10a94510()
+// FUNCTION: 0x10A94510 ?Create@Class_10E5D868@@UAEPAVClass_10E6CD40@@XZ
+Class_10E6CD40* Class_10E5D868::Create()
 {
     GetAllocator()->Virtual8(0, 0);
     Class_10E6CD40* Result = 0;
     void* Memory = operator new(sizeof(Class_10E6CD40), 0, 0, 0, 0, 0);
     if (Memory)
-        Result = static_cast<Class_10E6CD40*>(Memory)->FUN_10a943d0();
+        Result = static_cast<Class_10E6CD40*>(Memory)->Construct();
     GetAllocator()->Virtual9();
     return Result;
 }

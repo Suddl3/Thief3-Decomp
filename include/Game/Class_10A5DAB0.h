@@ -6,7 +6,7 @@
 class Class_10A5DAB0
 {
 public:
-    void FUN_10a5dab0();
+    void FreeBuffer();
 
     char Unknown00[0x24];
     int* Unknown24;

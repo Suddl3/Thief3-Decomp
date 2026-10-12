@@ -3,8 +3,8 @@
 
 #include "Core/Core.h"
 
-// FUNCTION: 0x10A4D350 ?FUN_10a4d350@@YG?AVFString@@H@Z
-FString __stdcall FUN_10a4d350(int Mode)
+// FUNCTION: 0x10A4D350 ?GetModeName@@YG?AVFString@@H@Z
+FString __stdcall GetModeName(int Mode)
 {
     FString Name;
     if (Mode == 1)

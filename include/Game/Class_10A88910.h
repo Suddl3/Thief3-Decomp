@@ -11,9 +11,9 @@ public:
     virtual void Virtual2();
     virtual void Virtual3();
     virtual bool Virtual4(int Id, float* Out);
-    void FUN_10a88910(int Id, int Mode);
+    void ReadOrDefault(int Id, int Mode);
 
-    float Unknown04[0x20];
+    float m_Values[0x20];
 };
 
 #endif // GAME_CLASS_10A88910_H

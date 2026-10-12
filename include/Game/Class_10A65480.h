@@ -9,12 +9,12 @@ class Class_1091CB20;
 class Class_10A65480
 {
 public:
-    int FUN_10a65480();
+    int GetMaxTextWidth();
 
     char Unknown00[0x154];
-    Class_10919B90* Unknown154;
+    Class_10919B90* m_Font;
     char Unknown158[0x34];
-    Class_1091CB20* Unknown18C;
+    Class_1091CB20* m_Strings;
 };
 
 #endif // GAME_CLASS_10A65480_H

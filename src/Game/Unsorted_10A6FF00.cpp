@@ -62,8 +62,8 @@ bool cDelayedDeleter::Find(int Key, int* Out)
     return false;
 }
 
-// FUNCTION: 0x10A70B80 ?FUN_10a70b80@Class_10A70B80@@QAEXXZ
-void Class_10A70B80::FUN_10a70b80()
+// FUNCTION: 0x10A70B80 ?Release@Class_10A70B80@@QAEXXZ
+void Class_10A70B80::Release()
 {
     FUN_10dd4d40(0);
     if (Unknown04)

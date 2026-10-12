@@ -14,12 +14,12 @@ public:
     const char* Unknown00;
 };
 
-// FUNCTION: 0x10A382D0 ?FUN_10a382d0@Class_10A382D0@@QAEPAVClass_10A382D0_Item@@PAPBD@Z
-Class_10A382D0_Item* Class_10A382D0::FUN_10a382d0(const char** Name)
+// FUNCTION: 0x10A382D0 ?FindItemByName@Class_10A382D0@@QAEPAVClass_10A382D0_Item@@PAPBD@Z
+Class_10A382D0_Item* Class_10A382D0::FindItemByName(const char** Name)
 {
-    for (int i = 0; i < Unknown590; i++)
+    for (int i = 0; i < m_ItemCount; i++)
     {
-        Class_10A382D0_Item* Item = Unknown598[i];
+        Class_10A382D0_Item* Item = m_Items[i];
         const char* Want = *Name;
         if (!Want)
             Want = DAT_10e47660;

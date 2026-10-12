@@ -12,8 +12,8 @@ public:
     void FUN_10a6b450(Struct_10A6B450_Param* Out, FVector* In);
 
     char Pad00[0x18];
-    float Unknown18;
-    float Unknown1C;
+    float m_MinLength;
+    float m_MaxLength;
 };
 
 #endif // GAME_CLASS_10A6B450_H

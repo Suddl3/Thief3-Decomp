@@ -19,12 +19,12 @@ Class_10B9D4B0_Result* FUN_10adc3b0(void* Package, int Class, const char* Name, 
 
 extern void* DAT_10f3e46c;
 
-// FUNCTION: 0x10A4E630 ?FUN_10a4e630@Class_10A4E630@@QAEXPAVcIntArray@@@Z
-void Class_10A4E630::FUN_10a4e630(cIntArray* Set)
+// FUNCTION: 0x10A4E630 ?AddBoundKeys@Class_10A4E630@@QAEXPAVcIntArray@@@Z
+void Class_10A4E630::AddBoundKeys(cIntArray* Set)
 {
     for (int i = 0; i < 0xff; i++)
     {
-        if (Unknown324[i] != 0x40)
+        if (m_KeyBindings[i] != 0x40)
         {
             if (Set->FindIndex(i) == -1)
             {

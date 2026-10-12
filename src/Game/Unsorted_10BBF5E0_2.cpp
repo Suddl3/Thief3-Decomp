@@ -18,7 +18,7 @@ struct Struct_10BBFB80
     unsigned char Unknown03;
 };
 
-void FUN_10a68db0(int A, void* B, float C, Struct_10BBFB80* D, int E);
+void DrawCircle(int A, void* B, float C, Struct_10BBFB80* D, int E);
 
 // FUNCTION: 0x10BBFB80 ?FUN_10bbfb80@@YGXPAVClass_1098E330@@H@Z
 void __stdcall FUN_10bbfb80(Class_1098E330* A, int B)
@@ -32,6 +32,6 @@ void __stdcall FUN_10bbfb80(Class_1098E330* A, int B)
         Color.Unknown02 = 0;
         Color.Unknown01 = 0x80;
         Color.Unknown03 = 0xff;
-        FUN_10a68db0(B, &A->Unknown2C, Scale, &Color, 8);
+        DrawCircle(B, &A->Unknown2C, Scale, &Color, 8);
     }
 }

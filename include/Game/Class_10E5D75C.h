@@ -8,7 +8,7 @@ class cTriggerOperatorParam;
 class Class_10E5D75C
 {
 public:
-    virtual cTriggerOperatorParam* FUN_10a8d440(int A, int B);
+    virtual cTriggerOperatorParam* CreateOperatorParam(int A, int B);
 };
 
 #endif // GAME_CLASS_10E5D75C_H

@@ -8,10 +8,10 @@
 class Class_10A68150
 {
 public:
-    void FUN_10a68150(int Item);
+    void Remove(int Item);
 
     char Unknown00[0x10];
-    cIntArray Unknown10;
+    cIntArray m_Items;
 };
 
 #endif // GAME_CLASS_10A68150_H

@@ -8,7 +8,7 @@ class Class_10E6C77C;
 class Class_10E5D758
 {
 public:
-    virtual Class_10E6C77C* FUN_10a8d110(int A, int B);
+    virtual Class_10E6C77C* CreateGlobalIntParam(int A, int B);
 };
 
 #endif // GAME_CLASS_10E5D758_H

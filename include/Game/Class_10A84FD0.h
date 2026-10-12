@@ -13,7 +13,7 @@ public:
     float Unknown40;
     float Unknown44;
     float Unknown48;
-    float Unknown4C;
+    float m_Offset;
 };
 
 #endif // GAME_CLASS_10A84FD0_H

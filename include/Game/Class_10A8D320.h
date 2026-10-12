@@ -8,7 +8,7 @@ class Class_10A8D320
 public:
     char Unknown00[0x8];
     int Field8;
-    void FUN_10a8d320();
+    void Increment();
 };
 
 #endif // GAME_CLASS_10A8D320_H

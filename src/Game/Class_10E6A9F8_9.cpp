@@ -24,7 +24,7 @@ public:
     FColor Unknown1C0;
     FColor Unknown1C4;
     FString Unknown1C8;
-    int Unknown1D4;
+    int m_FirstNode;
     int Unknown1D8;
     bool Unknown1DC;
     unsigned int m_TimerAction;
@@ -34,7 +34,7 @@ public:
 
 // FUNCTION: 0x10A62E20 ??0Class_10E6A9F8@@QAE@XZ
 Class_10E6A9F8::Class_10E6A9F8()
-    : Unknown1B8(0), Unknown1BC(0), Unknown1C0(0xFF, 0xFF, 0x00), Unknown1C4(0xFF, 0xFF, 0xFF, 0x80), Unknown1D4(0),
+    : Unknown1B8(0), Unknown1BC(0), Unknown1C0(0xFF, 0xFF, 0x00), Unknown1C4(0xFF, 0xFF, 0xFF, 0x80), m_FirstNode(0),
       Unknown1D8(0), Unknown1DC(false), m_TimerAction(0x40), m_Timer(0), Unknown1E8("   ")
 {
     Unknown0E8 = 2;

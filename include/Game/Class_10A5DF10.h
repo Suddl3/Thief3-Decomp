@@ -9,7 +9,7 @@
 class Class_10A5DF10
 {
 public:
-    Class_10A5DF10* FUN_10a5df10(const Class_10A5DF10& Other);
+    Class_10A5DF10* CopyFrom(const Class_10A5DF10& Other);
 
     Struct_10A5DF10 Unknown00;
     Struct_10A5DF10 Unknown10;

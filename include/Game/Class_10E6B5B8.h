@@ -14,11 +14,11 @@ public:
 
     Class_10E6B5B8();
 
-    void FUN_10a68cb0();
+    void Clear();
 
-    int Unknown04;
+    int m_Count;
     char Pad08[0x4];
-    Class_10A680C0** Unknown0C;
+    Class_10A680C0** m_Items;
     cIntArray Unknown10;
 };
 

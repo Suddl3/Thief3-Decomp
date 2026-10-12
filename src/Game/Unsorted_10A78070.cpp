@@ -20,16 +20,16 @@ extern Struct_10AA3520* DAT_10f35dec;
 
 extern Class_10A12AE0* DAT_10f39874;
 
-// FUNCTION: 0x10A78070 ?FUN_10a78070@Class_10A78070@@QAEPAVClass_1096D780@@HPBVFVector@@PBVFRotator@@HHHH@Z
-Class_1096D780* Class_10A78070::FUN_10a78070(int A, const FVector* B, const FRotator* C, int D, int E, int F, int G)
+// FUNCTION: 0x10A78070 ?Spawn@Class_10A78070@@QAEPAVClass_1096D780@@HPBVFVector@@PBVFRotator@@HHHH@Z
+Class_1096D780* Class_10A78070::Spawn(int A, const FVector* B, const FRotator* C, int D, int E, int F, int G)
 {
-    int Index = Unknown10;
-    if (Index >= Unknown04)
+    int Index = m_NextIndex;
+    if (Index >= m_PoolCount)
         return 0;
-    Unknown10 = Index + 1;
-    Class_1096D780* Item = Unknown0C[Index];
-    if (Index + 1 >= Unknown04)
-        Unknown10 = 0;
+    m_NextIndex = Index + 1;
+    Class_1096D780* Item = m_Pool[Index];
+    if (Index + 1 >= m_PoolCount)
+        m_NextIndex = 0;
     int Key = 1;
     ((Class_1098E3D0*)Item)->FUN_1098e3d0(0x40800056, &Key);
     ((Class_1098E3D0*)Item)->FUN_1098e3d0(0x100272, &F);

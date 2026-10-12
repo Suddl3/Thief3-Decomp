@@ -9,7 +9,7 @@ class UObject;
 class Class_10A8A790
 {
 public:
-    void FUN_10a8a790(UObject* Src);
+    void SetByteProperty(UObject* Src);
 
     char Unknown00[0x4];
     Class_10B26930* Unknown04;

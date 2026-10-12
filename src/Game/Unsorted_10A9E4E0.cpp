@@ -8,9 +8,9 @@ class ULevel;
 
 class AAIPathPoint;
 
-int FUN_10a48b30(int A, int B);
+int FindBoneIndex(int A, int B);
 
-void FUN_10a4a160(int A, int B, int C, int D);
+void GetBoneLocationAndRotationByName(int A, int B, int C, int D);
 
 AAIPathPoint* FUN_10a49f00(ULevel* Level, UClass* Class, int C, int D, FVector E, FVector F, FRotator G,
                            FRotator H, bool I);
@@ -34,11 +34,11 @@ void __stdcall FUN_10a9e4e0(UClass* Class, int B, int C, Class_10A9E4E0_Param* P
 {
     if (B && Class)
     {
-        if (FUN_10a48b30(B, C) != -1)
+        if (FindBoneIndex(B, C) != -1)
         {
             FVector Lc;
             FRotator L18;
-            FUN_10a4a160(B, C, (int)&Lc, (int)&L18);
+            GetBoneLocationAndRotationByName(B, C, (int)&Lc, (int)&L18);
             if (P->Virtual8()->Get())
             {
                 FUN_10a49f00((ULevel*)P->Virtual8()->Get(), Class, 1, 0, Lc, FVector(0, 0, 0), L18,

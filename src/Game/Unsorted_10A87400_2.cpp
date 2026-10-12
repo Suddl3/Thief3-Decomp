@@ -18,7 +18,7 @@ public:
     int Count;
     Class_10A87C00_Node* Head;
     Class_10A87C00_Node* Tail;
-    Class_10A873D0 Unknown0C;
+    Class_10A873D0 m_Index;
 };
 
 Class_10905A90_Member* GetAllocator();
@@ -41,17 +41,17 @@ Class_10A87C00::~Class_10A87C00()
         Count--;
         delete Node;
     }
-    Unknown0C.Reset(0x40);
+    m_Index.Reset(0x40);
 }
 
-// FUNCTION: 0x10A87F40 ?FUN_10a87f40@Class_10A87F40@@QAEXXZ
-void Class_10A87F40::FUN_10a87f40()
+// FUNCTION: 0x10A87F40 ?Clear@Class_10A87F40@@QAEXXZ
+void Class_10A87F40::Clear()
 {
     FUN_10a87cd0(0);
     if (Unknown04)
     {
-        GetAllocator()->Virtual5(Unknown08);
-        Unknown08 = 0;
+        GetAllocator()->Virtual5(m_Data);
+        m_Data = 0;
         Unknown04 = 0;
     }
 }

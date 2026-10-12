@@ -9,7 +9,7 @@ public:
     Class_10A4DDA0();
     ~Class_10A4DDA0();
 
-    void FUN_10a4dda0();
+    void Reset();
 
     int Unknown00;
     int Unknown04;

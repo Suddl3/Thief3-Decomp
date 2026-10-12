@@ -6,7 +6,7 @@
 class Class_10A480B0
 {
 public:
-    Class_10A480B0 FUN_10a480b0();
+    Class_10A480B0 GetNormalized();
     void FUN_10967210();
 
     int Unknown00;

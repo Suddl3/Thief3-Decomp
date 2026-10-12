@@ -10,9 +10,9 @@ struct Struct_10A378B0;
 // FUNCTION: 0x10A38F40 ?FUN_10a38f40@Class_10A37F30@@QAEMXZ
 float Class_10A37F30::FUN_10a38f40()
 {
-    if (Unknown59C != 0 && FUN_10a382d0(*Unknown5A4)->Unknown40)
+    if (Unknown59C != 0 && FindItemByName(*Unknown5A4)->Unknown40)
     {
-        Class_10A382D0* Result = FUN_10a382d0(FUN_10a38f00());
+        Class_10A382D0* Result = FindItemByName(FUN_10a38f00());
         float Value = Result->Unknown38;
         if (Value != 0.0f)
             return Value;

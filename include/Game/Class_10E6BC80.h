@@ -13,7 +13,7 @@ public:
     virtual void AddCopy(Struct_10A76C50* Source);
     virtual Object_10A76760* FindBySource(int Value);
 
-    int Unknown04;
+    int m_CopyCount;
     int Unknown08;
     Object_10A76760** m_Copies;
 };

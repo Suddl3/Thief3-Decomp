@@ -11,8 +11,8 @@ struct Struct_10AA3520
 
 extern Struct_10AA3520* DAT_10f35dec;
 
-// FUNCTION: 0x10A67CA0 ?FUN_10a67ca0@Class_10A67CA0@@QAEXXZ
-void Class_10A67CA0::FUN_10a67ca0()
+// FUNCTION: 0x10A67CA0 ?ResetSimtimePlayedTimer@Class_10A67CA0@@QAEXXZ
+void Class_10A67CA0::ResetSimtimePlayedTimer()
 {
     UObject* Obj = DAT_10f35dec->Unknown08;
     if (Obj)

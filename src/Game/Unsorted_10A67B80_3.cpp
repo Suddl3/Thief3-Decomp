@@ -11,8 +11,8 @@ struct Struct_10AA3520
 
 extern Struct_10AA3520* DAT_10f35dec;
 
-// FUNCTION: 0x10A67C40 ?FUN_10a67c40@@YANXZ
-double FUN_10a67c40()
+// FUNCTION: 0x10A67C40 ?GetSimtimePlayedTimer@@YANXZ
+double GetSimtimePlayedTimer()
 {
     UObject* Obj = DAT_10f35dec->Unknown08;
     if (Obj)

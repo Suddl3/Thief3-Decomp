@@ -8,10 +8,10 @@ class cIntArray;
 class Class_10A4E630
 {
 public:
-    void FUN_10a4e630(cIntArray* Set);
+    void AddBoundKeys(cIntArray* Set);
 
     char Unknown00[0x324];
-    int Unknown324[0xff];
+    int m_KeyBindings[0xff];
 };
 
 #endif // GAME_CLASS_10A4E630_H

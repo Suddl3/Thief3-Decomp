@@ -11,7 +11,7 @@ extern WindowManager* GWindowManager;
 class Class_10E67BD8
 {
 public:
-    void FUN_10a514e0(int Index);
+    void RemoveWindow(int Index);
 
     char Unknown00[0x11C];
     void* Unknown11C;
@@ -58,8 +58,8 @@ void Class_1092E930::SetCount(int NewCount)
     m_Count = NewCount;
 }
 
-// FUNCTION: 0x10A514E0 ?FUN_10a514e0@Class_10E67BD8@@QAEXH@Z
-void Class_10E67BD8::FUN_10a514e0(int Index)
+// FUNCTION: 0x10A514E0 ?RemoveWindow@Class_10E67BD8@@QAEXH@Z
+void Class_10E67BD8::RemoveWindow(int Index)
 {
     if (m_Windows[Index])
     {

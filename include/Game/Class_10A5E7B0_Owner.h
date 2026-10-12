@@ -9,7 +9,7 @@
 class Class_10A5E7B0_Owner : public Class_10A5E7B0_OwnerPrimary, public Class_10E69B9C
 {
 public:
-    virtual void FUN_10a5e7b0(int Event, int A, int B, int C);
+    virtual void HandleEvent(int Event, int A, int B, int C);
 };
 
 #endif // GAME_CLASS_10A5E7B0_OWNER_H

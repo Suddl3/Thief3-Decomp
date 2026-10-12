@@ -24,7 +24,7 @@ public:
     }
 
     void FUN_10dd4d40(int Count);
-    void FUN_10a70b80();
+    void Release();
 
     int Unknown00;
     int Unknown04;

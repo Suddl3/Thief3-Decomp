@@ -68,7 +68,7 @@ Class_10C4F7E0* Class_10C4F7E0::FUN_10c4f7e0(const Class_10C4F7E0& Other)
     Unknown04 = 0;
     Unknown00 = 0;
     Unknown08 = 0;
-    Class_10A68AE0::FUN_10a68ae0(Other);
+    Class_10A68AE0::CopyFrom(Other);
     Unknown0C = Other.Unknown0C;
     Unknown18 = Other.Unknown18;
     Unknown1C = Other.Unknown1C;

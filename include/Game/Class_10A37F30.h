@@ -29,7 +29,7 @@ public:
 
     void FUN_10a37f30(Struct_10A378B0* A);
     cString FUN_10a38f00();
-    Class_10A382D0* FUN_10a382d0(const cString& Name);
+    Class_10A382D0* FindItemByName(const cString& Name);
     float FUN_10a38f40();
 
     char Unknown04[0x40];

@@ -7,7 +7,7 @@ void Class_10A52BE0::FUN_10a52be0(bool Param)
 {
     if (Param && Virtual54())
     {
-        for (int i = 0; i < UnknownB8; i++)
-            UnknownC0[i]->FUN_10a52be0(Param);
+        for (int i = 0; i < m_ChildCount; i++)
+            m_Children[i]->FUN_10a52be0(Param);
     }
 }

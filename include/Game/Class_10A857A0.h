@@ -8,7 +8,7 @@ class Class_10E6DA64;
 class Class_10A857A0
 {
 public:
-    Class_10E6DA64* FUN_10a857a0(int A, int B);
+    Class_10E6DA64* Create(int A, int B);
 
     char Unknown00[0x4];
     int Unknown04;

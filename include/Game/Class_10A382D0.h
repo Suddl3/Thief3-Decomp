@@ -8,16 +8,16 @@ class Class_10A382D0_Item;
 class Class_10A382D0
 {
 public:
-    Class_10A382D0_Item* FUN_10a382d0(const char** Name);
+    Class_10A382D0_Item* FindItemByName(const char** Name);
 
     char Unknown00[0x38];
     float Unknown38;
     char Unknown3C[4];
     bool Unknown40;
     char Pad41[0x54f];
-    int Unknown590;
+    int m_ItemCount;
     char Unknown594[4];
-    Class_10A382D0_Item** Unknown598;
+    Class_10A382D0_Item** m_Items;
 };
 
 #endif // GAME_CLASS_10A382D0_H

@@ -20,15 +20,15 @@ void Class_10A6B450::FUN_10a6b450(Struct_10A6B450_Param* Out, FVector* In)
     FVector Dir = V;
     float Len = sqrt(In->X * In->X + In->Y * In->Y + In->Z * In->Z);
     float Scale;
-    if (Len < Unknown18)
+    if (Len < m_MinLength)
     {
-        float Hi = Unknown1C;
-        float Lo = Unknown18;
+        float Hi = m_MaxLength;
+        float Lo = m_MinLength;
         Scale = (Hi - Lo) * appFrand() + Lo;
     }
     else
     {
-        Scale = Len > Unknown1C ? Unknown1C : Len;
+        Scale = Len > m_MaxLength ? m_MaxLength : Len;
     }
     Out->Unknown04 = Dir * Scale;
 }

@@ -35,7 +35,7 @@ public:
 
 extern Class_10F352D8* DAT_10f352d8;
 
-bool FUN_10a858c0(int Key);
+bool HasObject(int Key);
 
 void FUN_10a871d0(int Key);
 
@@ -49,7 +49,7 @@ int Class_10E6D330::FUN_10aa0a30(int A, int B, Class_10AA0A30* C)
     {
         if (R->Virtual10())
         {
-            if (!FUN_10a858c0((int)R))
+            if (!HasObject((int)R))
                 FUN_10a871d0((int)R);
         }
         else

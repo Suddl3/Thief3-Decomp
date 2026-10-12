@@ -19,8 +19,8 @@ public:
 
 extern const char DAT_10e47660[];
 
-// FUNCTION: 0x10A53C00 ?FUN_10a53c00@Class_10A53C00@@QAE?AVcString@@H@Z
-cString Class_10A53C00::FUN_10a53c00(int State)
+// FUNCTION: 0x10A53C00 ?GetStateName@Class_10A53C00@@QAE?AVcString@@H@Z
+cString Class_10A53C00::GetStateName(int State)
 {
     switch (State)
     {

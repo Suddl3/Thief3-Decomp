@@ -25,8 +25,8 @@ public:
 
 extern Class_10B59770 DAT_10f3a12c;
 
-// FUNCTION: 0x10A68190 ?FUN_10a68190@@YAHH@Z
-int FUN_10a68190(int A)
+// FUNCTION: 0x10A68190 ?FindOrAddIndex@@YAHH@Z
+int FindOrAddIndex(int A)
 {
     for (int i = 0; i < DAT_10f3a12c.Count; i++)
     {

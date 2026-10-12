@@ -92,7 +92,7 @@ public:
 void Class_10E82688::ResetFrame()
 {
     m_Elapsed = 0;
-    Unknown134.FUN_10a64d50();
+    Unknown134.Reset();
     Unknown130 = 0;
     if (Unknown11C)
         Unknown11C->FUN_10a55050(Unknown130);

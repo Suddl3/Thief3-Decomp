@@ -8,10 +8,10 @@
 class Class_10A59370
 {
 public:
-    void FUN_10a59370(int Index, const cString& Value);
+    void SetStringAt(int Index, const cString& Value);
 
     char Unknown00[0x1BC];
-    cString Unknown1BC[4];
+    cString m_Strings[4];
 };
 
 #endif // GAME_CLASS_10A59370_H

@@ -45,7 +45,7 @@ void FUN_10a87950(int A)
         if (DAT_10f35dec->UnknownBC->Virtual14(A, DAT_10f3a198))
             return;
         if (DAT_10f3a198->Virtual5(A))
-            DAT_10f3a1a0.FUN_10a87340(A);
+            DAT_10f3a1a0.Remove(A);
     }
     else
     {
@@ -57,6 +57,6 @@ void FUN_10a87950(int A)
         if (DAT_10f35dec->UnknownBC->Virtual14(A, FUN_10a86080()))
             return;
         if (FUN_10a86080()->Virtual5(A))
-            DAT_10f3a1a0.FUN_10a87340(A);
+            DAT_10f3a1a0.Remove(A);
     }
 }

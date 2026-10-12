@@ -6,7 +6,7 @@
 class Class_10A52F10
 {
 public:
-    int FUN_10a52f10(int Value);
+    int IndexOf(int Value);
 
     char Unknown00[0xB8];
     int UnknownB8;

@@ -17,8 +17,8 @@ struct Struct_10A69C00
     Class_10B19940 Unknown08;
 };
 
-// FUNCTION: 0x10A69C00 ?FUN_10a69c00@@YAXPAUStruct_10A69C00@@@Z
-void FUN_10a69c00(Struct_10A69C00* A)
+// FUNCTION: 0x10A69C00 ?InitPrimaryColors@@YAXPAUStruct_10A69C00@@@Z
+void InitPrimaryColors(Struct_10A69C00* A)
 {
     A->Unknown00 = 1.0f;
     A->Unknown04 = 1.0f;

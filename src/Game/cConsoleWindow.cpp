@@ -4,8 +4,8 @@
 #include "Game/cString.h"
 #include "Game/cConsoleWindow.h"
 
-// FUNCTION: 0x10A5B530 ?FUN_10a5b530@cConsoleWindow@@QAEXXZ
-void cConsoleWindow::FUN_10a5b530()
+// FUNCTION: 0x10A5B530 ?Clear@cConsoleWindow@@QAEXXZ
+void cConsoleWindow::Clear()
 {
     GetAllocator()->Virtual8(0, 0);
     if (Unknown1DC)

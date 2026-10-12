@@ -11,8 +11,8 @@ public:
     void FUN_10a3c3b0();
 
     char Unknown00[0x24];
-    int Unknown24;
-    Class_10A3C3B0_Unknown28* Unknown28;
+    int m_Index;
+    Class_10A3C3B0_Unknown28* m_Table;
     bool Unknown2C;
     bool Unknown2D;
     float Unknown30;

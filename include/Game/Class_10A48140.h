@@ -17,7 +17,7 @@ public:
     int Unknown64;
     int Unknown68;
 
-    Class_10A48140* FUN_10a48140();
+    Class_10A48140* Reset();
 };
 
 #endif // GAME_CLASS_10A48140_H

@@ -37,14 +37,14 @@ public:
 class Class_10A3C550
 {
 public:
-    void FUN_10a3c550(cString Name);
+    void Start(cString Name);
 
     char Unknown00[0x4];
-    Class_10C49740 Unknown04;
+    Class_10C49740 m_Entries;
     char Unknown05[0x1B];
     int Unknown20;
-    int Unknown24;
-    Entry_10C32C30* Unknown28;
+    int m_Index;
+    Entry_10C32C30* m_Entry;
     bool Unknown2C;
     char Unknown2D;
     bool Unknown2E;
@@ -55,10 +55,10 @@ void Class_10A3C3B0::FUN_10a3c3b0()
 {
     Unknown2C = false;
     Unknown2D = false;
-    if (Unknown28)
+    if (m_Table)
     {
         Object_10A18FC0* Obj = FUN_10a18fc0();
-        Obj->Virtual6(Unknown28->Unknown08[Unknown24].Unknown04, Unknown28->Unknown08[Unknown24].Unknown08);
+        Obj->Virtual6(m_Table->Unknown08[m_Index].Unknown04, m_Table->Unknown08[m_Index].Unknown08);
         return;
     }
     if (Unknown30 > DAT_10eafbdc || *(int*)&Unknown30 == 0xBF800000)
@@ -68,17 +68,17 @@ void Class_10A3C3B0::FUN_10a3c3b0()
     }
 }
 
-// FUNCTION: 0x10A3C550 ?FUN_10a3c550@Class_10A3C550@@QAEXVcString@@@Z
-void Class_10A3C550::FUN_10a3c550(cString Name)
+// FUNCTION: 0x10A3C550 ?Start@Class_10A3C550@@QAEXVcString@@@Z
+void Class_10A3C550::Start(cString Name)
 {
     if (!Unknown2C && Unknown2E)
     {
         Unknown20 = 0;
-        Unknown24 = 0;
-        Unknown04.FUN_10c49740((int*)&Name, &Unknown28);
-        if (Unknown28)
+        m_Index = 0;
+        m_Entries.FUN_10c49740((int*)&Name, &m_Entry);
+        if (m_Entry)
         {
-            FUN_10a18fc0()->Virtual6(Unknown28->Data[Unknown24].Unknown04, (int)Unknown28->Data[Unknown24].Data);
+            FUN_10a18fc0()->Virtual6(m_Entry->Data[m_Index].Unknown04, (int)m_Entry->Data[m_Index].Data);
         }
     }
 }

@@ -43,8 +43,8 @@ public:
     }
 };
 
-// FUNCTION: 0x10A8D9E0 ?FUN_10a8d9e0@Class_10E5D77C@@UAEPAVClass_10E6C890@@XZ
-Class_10E6C890* Class_10E5D77C::FUN_10a8d9e0()
+// FUNCTION: 0x10A8D9E0 ?CreateClass_10E6C890@Class_10E5D77C@@UAEPAVClass_10E6C890@@XZ
+Class_10E6C890* Class_10E5D77C::CreateClass_10E6C890()
 {
     GetAllocator()->Virtual8(0, 0);
     Class_10E6C890* Result = new(0, 0, 0, 0, 0) Class_10E6C890;
@@ -52,8 +52,8 @@ Class_10E6C890* Class_10E5D77C::FUN_10a8d9e0()
     return Result;
 }
 
-// FUNCTION: 0x10A8E0C0 ?FUN_10a8e0c0@Class_10E5D778@@UAEPAVClass_10E6C8AC@@XZ
-Class_10E6C8AC* Class_10E5D778::FUN_10a8e0c0()
+// FUNCTION: 0x10A8E0C0 ?CreateClass_10E6C8AC@Class_10E5D778@@UAEPAVClass_10E6C8AC@@XZ
+Class_10E6C8AC* Class_10E5D778::CreateClass_10E6C8AC()
 {
     GetAllocator()->Virtual8(0, 0);
     Class_10E6C8AC* Result = new(0, 0, 0, 0, 0) Class_10E6C8AC;

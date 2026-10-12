@@ -9,7 +9,7 @@
 class Class_10A3AC50 : public Class_10A3AC50_Primary, public Class_10E667AC
 {
 public:
-    virtual void FUN_10a3ac50(int A);
+    virtual void UpdateItems(int A);
     void FUN_10a3abd0(int Index);
 };
 

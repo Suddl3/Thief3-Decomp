@@ -126,7 +126,7 @@ public:
 class cRadioWindow
 {
 public:
-    void FUN_10a56860(int Item);
+    void SetSelectedItem(int Item);
     void SetSelectedIndex(int Index);
     int FindIndex(int Item)
     {

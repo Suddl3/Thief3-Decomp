@@ -6,12 +6,12 @@
 class Class_10A58B70
 {
 public:
-    int FUN_10a58b70(int Index);
+    int GetValueAt(int Index);
 
     char Unknown00[0x154];
-    int Unknown154;
+    int m_Count;
     int Unknown158;
-    int* Unknown15C;
+    int* m_Values;
 };
 
 #endif // GAME_CLASS_10A58B70_H

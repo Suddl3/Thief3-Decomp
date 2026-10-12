@@ -11,7 +11,7 @@ class Class_10E667C4 : public cActorManager, public Class_10E66700
 {
 public:
     virtual void FUN_10a4c470(int A, int B, int C, int D);
-    virtual void FUN_10a3ac50(int A);
+    virtual void UpdateItems(int A);
 
     Class_10E667C4();
 

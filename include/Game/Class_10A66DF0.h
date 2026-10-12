@@ -12,7 +12,7 @@ public:
     virtual void Virtual3();
     virtual void Virtual4();
 
-    bool FUN_10a66df0(int A);
+    bool Close(int A);
 
     char Unknown04[4];
     int Unknown08;
