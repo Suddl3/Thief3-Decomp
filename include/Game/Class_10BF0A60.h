@@ -19,16 +19,16 @@ public:
         FUN_10befb10(0);
         if (Unknown04)
         {
-            GetAllocator()->Virtual5(Unknown08);
-            Unknown08 = 0;
+            GetAllocator()->Virtual5(m_Items);
+            m_Items = 0;
             Unknown04 = 0;
         }
     }
-    int FUN_10bf15d0(const Class_10BEFA30& Item);
+    int Add(const Class_10BEFA30& Item);
 
-    int Unknown00;
+    int m_Count;
     int Unknown04;
-    Class_10BEFA30* Unknown08;
+    Class_10BEFA30* m_Items;
 };
 
 #endif // GAME_CLASS_10BF0A60_H

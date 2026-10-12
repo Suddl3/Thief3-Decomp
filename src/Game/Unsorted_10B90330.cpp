@@ -61,12 +61,12 @@ void Class_10B912E0::FUN_10b912e0()
     }
 }
 
-// FUNCTION: 0x10B91800 ?FUN_10b91800@Class_10B91800@@QAEPAV1@H@Z
-Class_10B91800* Class_10B91800::FUN_10b91800(int A)
+// FUNCTION: 0x10B91800 ?Assign@Class_10B91800@@QAEPAV1@H@Z
+Class_10B91800* Class_10B91800::Assign(int A)
 {
     Unknown04 = 0;
     Unknown00 = 0;
     Unknown08 = 0;
-    FUN_10b91320(A);
+    CopyFrom(A);
     return this;
 }

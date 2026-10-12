@@ -307,20 +307,20 @@ void FUN_10b40a80()
     FUN_10b40820();
 }
 
-// FUNCTION: 0x10B42340 ?FUN_10b42340@Class_10B42340@@QAEPAV1@HH@Z
-Class_10B42340* Class_10B42340::FUN_10b42340(int A, int B)
+// FUNCTION: 0x10B42340 ?Init@Class_10B42340@@QAEPAV1@HH@Z
+Class_10B42340* Class_10B42340::Init(int A, int B)
 {
-    Unknown08 = 0;
+    m_Count = 0;
     Unknown0C = 0;
-    Unknown10 = 0;
+    m_Entries = 0;
     Unknown00 = A;
     Unknown04 = B;
     Unknown14 = 0.03f;
     return this;
 }
 
-// FUNCTION: 0x10B42640 ?FUN_10b42640@Class_10B42640@@QAEXXZ
-void Class_10B42640::FUN_10b42640()
+// FUNCTION: 0x10B42640 ?Clear@Class_10B42640@@QAEXXZ
+void Class_10B42640::Clear()
 {
     Field1C = 0;
 }

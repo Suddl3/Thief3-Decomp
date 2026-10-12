@@ -11,9 +11,9 @@ class FVector;
 class Class_10953B60
 {
 public:
-    void FUN_10953b60();
+    void ApplyWorldMatrix();
     void FUN_10953c90(int Arg);
-    void FUN_10953e40();
+    void Reset();
     void FUN_109538b0();
     void FUN_10953fa0(const FVector& P);
 
@@ -33,7 +33,7 @@ public:
     int Unknown34;
     int Unknown38;
     float Unknown3C;
-    Class_10953AC0 Unknown40;
+    Class_10953AC0 m_Items;
     char Unknown4C[8];
     int Unknown54;
     int Unknown58;

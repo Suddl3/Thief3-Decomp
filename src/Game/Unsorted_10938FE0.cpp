@@ -8,7 +8,7 @@ void Class_109528B0::ClearSlots()
 {
     for (int i = 0; i < 9; i++)
     {
-        m_Slots[i].FUN_10955c30();
+        m_Slots[i].Destroy();
         if (Virtual7(i))
             Virtual9(i);
         m_SlotMask &= ~(1 << i);

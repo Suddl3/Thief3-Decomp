@@ -31,8 +31,8 @@ extern D3DXMATRIX DAT_10f341b0;
 
 extern unsigned int DAT_10f341f0;
 
-// FUNCTION: 0x10953B60 ?FUN_10953b60@Class_10953B60@@QAEXXZ
-void Class_10953B60::FUN_10953b60()
+// FUNCTION: 0x10953B60 ?ApplyWorldMatrix@Class_10953B60@@QAEXXZ
+void Class_10953B60::ApplyWorldMatrix()
 {
     if (Unknown5C)
     {
@@ -49,15 +49,15 @@ void Class_10953B60::FUN_10953b60()
     }
 }
 
-// FUNCTION: 0x10953BE0 ?FUN_10953be0@Class_10953AC0@@QAEXXZ
-void Class_10953AC0::FUN_10953be0()
+// FUNCTION: 0x10953BE0 ?Free@Class_10953AC0@@QAEXXZ
+void Class_10953AC0::Free()
 {
     FUN_10953ac0(0);
-    if (Unknown04)
+    if (m_Capacity)
     {
-        GetAllocator()->Virtual5(Unknown08);
-        Unknown08 = 0;
-        Unknown04 = 0;
+        GetAllocator()->Virtual5(m_Items);
+        m_Items = 0;
+        m_Capacity = 0;
     }
 }
 

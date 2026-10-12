@@ -9,8 +9,8 @@ class Class_10C08E90
 {
 public:
     void FUN_10c089b0(int Count);
-    void FUN_10c08e90();
-    int FUN_10c091a0(Item_10C091A0* Item);
+    void Empty();
+    int Add(Item_10C091A0* Item);
 
     int Unknown00;
     int Unknown04;

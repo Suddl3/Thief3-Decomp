@@ -11,22 +11,22 @@ int FUN_1095af30(int A);
 
 void* FUN_1092cac0(const char* Name, int A, int B, int C, int D, int E);
 
-// FUNCTION: 0x10955C30 ?FUN_10955c30@Class_10955C30@@QAEXXZ
-void Class_10955C30::FUN_10955c30()
+// FUNCTION: 0x10955C30 ?Destroy@Class_10955C30@@QAEXXZ
+void Class_10955C30::Destroy()
 {
-    if (Unknown1C)
-        delete Unknown1C;
-    else if (Unknown18)
-        FUN_1092bdb0(Unknown18);
-    Unknown1C = 0;
-    Unknown18 = 0;
+    if (m_Object)
+        delete m_Object;
+    else if (m_Handle)
+        FUN_1092bdb0(m_Handle);
+    m_Object = 0;
+    m_Handle = 0;
 }
 
-// FUNCTION: 0x10956270 ?FUN_10956270@Class_10955C30@@QAEXXZ
-void Class_10955C30::FUN_10956270()
+// FUNCTION: 0x10956270 ?Create@Class_10955C30@@QAEXXZ
+void Class_10955C30::Create()
 {
     const char* Name = DAT_10e47660;
-    if (Unknown00)
-        Name = Unknown00;
-    Unknown18 = FUN_1092cac0(Name, Unknown08, FUN_1095af30(Unknown08), 0, 0, 0);
+    if (m_Name)
+        Name = m_Name;
+    m_Handle = FUN_1092cac0(Name, Unknown08, FUN_1095af30(Unknown08), 0, 0, 0);
 }

@@ -1861,3 +1861,163 @@ field Class_10C60480::Unknown00 m_NumItems Loop bound for Unknown08 items in FUN
 field Class_10C60480::Unknown08 m_Items Indexed as Unknown08[i] over Unknown00 items in FUN_10c60420.
 field Class_10C60480::Unknown0C m_NumObjects Loop bound for Unknown14 in FUN_10c60480; zeroed after the loop.
 field Class_10C60480::Unknown14 m_Objects Array of Class_10953EC0 pointers, each torn down and freed in FUN_10c60480.
+function 0x1094E5D0 GetItemValue Returns the int Virtual11 writes for item B of slot A; 0 when B is out of range or the call fails.
+function 0x1094E7A0 GetHandleValue Returns Virtual6's int output on Unknown114[DAT_10f2c720] for the handle Unknown108[Unknown110].Unknown20.
+function 0x10951660 Reset Clears mode Unknown28 (flag 0x400 when 1), deletes Unknown24, and releases Unknown20 via the manager's FUN_1093bce0.
+function 0x10951900 Acquire Calls Reset, stores mode B, and takes Unknown20 from the manager's FUN_1093bd40 when B is set.
+function 0x109516E0 RemoveMatching Deletes each Unknown48 item whose FUN_10951540(&Unknown4C) returns true, and nulls its slot.
+function 0x10951A40 SetFilter Copies the argument into Unknown4C, the criteria FUN_10951540 tests, then calls RemoveMatching.
+function 0x109523D0 HasAllBits Returns false unless every bit of Mask is set in Unknown30, bits 0 to 8.
+function 0x10952590 UpdateState Sets Unknown28 to 0-3 from Unknown30 mask tests and FUN_10952410's result.
+function 0x10953B60 ApplyWorldMatrix With Unknown5C and Unknown61 set, sets D3D transform 0x100 (world) from FUN_10953730, then calls FUN_109538b0.
+function 0x10953E40 Reset Clears Unknown40 and Unknown5C, zeroes the fields, and sets Unknown00, 14, 28 and 3C to 1.0f.
+function 0x10953BE0 Free Calls FUN_10953ac0(0), then frees Unknown08 through GetAllocator()->Virtual5 when Unknown04 is set.
+function 0x10BB5810 CopyFrom Resizes to Other's count via FUN_10953ac0, then copies Other's Unknown08 items.
+function 0x10955C30 Destroy Deletes Unknown1C, or frees Unknown18 through FUN_1092bdb0, then clears both.
+function 0x10956270 Create Sets Unknown18 from FUN_1092cac0 with Unknown00 as the name, or DAT_10e47660 when it is null.
+function 0x10A4FC00 Empty Parameter Slack; destroys every element, sets the count to 0 and Unknown08 to Slack, then base FUN_10af3b50(0x1c).
+function 0x10A4FC50 RemoveRange Destroys elements Index to Index+Count-1, then base FUN_10af3bd0 removes that range with element size 0x1c.
+function 0x10A52EE0 GetItem Returns UnknownC0[Index] when 0 <= Index < UnknownB8, else 0; callers read the result as an item pointer.
+function 0x10A55380 AddItem Stores an Item built from A at index Unknown00 after Resize(Unknown00+1).
+function 0x10A550B0 Resize Callers grow to Index+1 before storing Unknown08[Index], and pass 0 before freeing Unknown08.
+function 0x10C4EDA0 Free Resizes to 0, then frees Unknown08 through GetAllocator() when Unknown04 is set, and clears both.
+function 0x10A63340 EraseAt Shifts later pointers down over Index, then shrinks by one; same shape as cIntArray::RemoveAt.
+function 0x10A63370 MoveItems memmove of Count pointers from From to To in Unknown08; parameters From, To, Count.
+function 0x10A66E90 IsEqual Returns FUN_10a66c80(&Unknown08, &Other->Unknown08, FLT_EPSILON) == 1.
+function 0x10B197E0 Free Destructor body: empties the array and frees its buffer through GetAllocator()->Virtual5.
+function 0x10B19820 CopyFrom Resizes to the source's count, then copies each element from the const Other.
+function 0x10B29810 Init Assigns default values to five fields and returns this.
+function 0x10B42340 Init Sets Unknown00 and Unknown04 from the arguments, zeroes the counts and returns this.
+function 0x10B42640 Clear Sets Count, the Field1C union member, to zero and nothing else.
+function 0x10BA1330 Insert Pushes a new node onto its bucket chain and returns the bucket index; FUN_10ba13f0 re-inserts through it.
+function 0x10BA13F0 Resize Allocates Size buckets, stores log2 of Size in Unknown08, re-inserts every old node via FUN_10ba1330.
+function 0x10BA15C0 Reset Deletes every node and the bucket array, zeroes the counts, then calls FUN_10ba13f0(Size) unless Unknown10.
+function 0x10BA1660 Free Calls FUN_10ba15c0(0x40), then deletes the bucket array and zeroes Unknown04, Unknown0C, Unknown14 and Unknown00.
+function 0x10B9F620 Resize Reallocates the buffer for NewCount rounded up to 16, zero-fills the new bytes, then stores the count.
+function 0x10B9FBE0 Free Calls FUN_10b9f620(0), then frees the buffer through GetAllocator and zeroes its capacity and pointer.
+function 0x10BAD970 Init Stores the vtable pointer, *A, *B and C into the object, zeroes Unknown04, and returns this.
+function 0x10BABDD0 GetCachedIndex Fills Unknown84 once: reads an FName from Unknown34 (property 0x10005d0), looks up its string, copies it to Out.
+function 0x10BABE80 GetCachedValue Returns -1 without an object; else fills Unknown8C once from Obj->FUN_109b5860(index), guarded by UnknownB4.
+function 0x10BADAB0 Resize Sets the count, reallocates the block for NewCount rounded up to 16 elements, zeroes four fields per new element.
+function 0x10BAE0C0 Free Calls FUN_10badab0(0), then frees the block through GetAllocator and zeroes its byte size and pointer.
+function 0x10C30DD0 Insert Allocates a Node, links it at the head of bucket HashBytes(key) and returns the bucket index.
+function 0x10C30F60 Rehash Allocates Size buckets, re-inserts the old nodes with Insert, then deletes the old array.
+function 0x10C325E0 Reset Frees every node and bucket, then calls Rehash(Size) unless m_FixedSize.
+function 0x10C32C70 Release Calls Reset(0x40), then frees the buckets and zeroes the counters.
+function 0x10C3EA10 Reset Frees every node and bucket, then calls Rehash(Size) unless m_FixedSize.
+function 0x10C3EA90 Release The destructor's body: calls Reset(0x40), frees the buckets and zeroes the counters.
+function 0x10C39220 GetCurrent Copies m_Entries[m_Index], or m_FixedEntry when m_Mode is 1 or 7; false once m_Index reaches m_Count.
+function 0x10C39D90 MoveToCurrent Calls GetCurrent, passes its entry to FUN_10c37cb0, and returns early when FUN_10c05a80 is below DAT_10e49684.
+function 0x10C38E40 Rebind Removes the old FUN_10c7d570 result when m_HasHandle is set, then adds the new one at FUN_10c099a0(A).
+function 0x10C39C90 Advance Clears m_Output, increments m_Index, then appends m_Items[m_Index] to m_Output when it is below m_ItemCount.
+function 0x10C3CF70 Init Sets every member from A, B and C, with 90.0f defaults, and returns this.
+function 0x10C483E0 CompareUnsigned Returns 0 when *A equals *B, otherwise 1 or -1 by unsigned order.
+function 0x10B92660 Init Runs the base constructor with (0, A, B), stores its vtable, returns this; FUN_10b7f800 calls it.
+function 0x10B88A80 Insert HashBytes of the key picks the bucket; node pushed on its chain; calls FUN_10b88b60 (Rehash) when collisions pass 20%.
+function 0x10B88B60 Rehash Allocates Size buckets, sets the hash mask from Size, reinserts every node via FUN_10b88a80 (Insert), frees old buckets.
+function 0x10B8C7B0 Refresh For each entry calls Virtual18(-1.0f) and FUN_10d9e490; in single mode only m_Single; ExitSingleMode calls it.
+function 0x10B8CC60 ExitSingleMode If in single mode: removes m_Single via FUN_10d9e5e0, clears m_SingleMode, then calls Refresh.
+function 0x10B8C810 Clear Removes the second list (when Unknown19 is set) and the entries (or m_Single in single mode) from the singleton; ~Class_10B8D520 calls it.
+function 0x10B8CC90 EnterSingleMode Skipped while m_SingleMode or Unknown19 is set; else Clear, shows m_Single alone, sets m_SingleMode.
+function 0x10B91320 CopyFrom Takes another instance; copies its count via base FUN_10b90980, then each element via FUN_10daaf90.
+function 0x10B91800 Assign Zeroes Unknown00, Unknown04 and Unknown08, calls CopyFrom(A), returns this; FUN_10b91f10 calls it.
+function 0x10B92BF0 Init Stores its vtable and p1 in Unknown04, returns this; called by three functions.
+function 0x10BA4230 Init Stores its vtable and returns this; FUN_10ba41f0 (a virtual of Class_10E8C668) calls it.
+function 0x10BEF550 GetRandomInRange Min + (Max - Min) * appFrand(), Min and Max read via FUN_10dbd510 ids 0x100645 and 0x100646.
+function 0x10BF15D0 Add Index is m_Count before growing by one; stores Item at m_Items[Index], returns Index.
+function 0x10C01730 Clear Deletes every node and the bucket array, then Rehash(Size) unless m_NoResize is set; the destructor calls it.
+function 0x10C01F50 Free Clear(0x40), then deletes the bucket array and zeroes the counts.
+function 0x10C016B0 Clear Deletes every node and the bucket array, then calls base FUN_10c012d0(Size) unless its flag is set.
+function 0x10C01FC0 Free Same body as the inline destructor: Clear(0x40), delete the bucket array, zero the counts.
+function 0x10C01200 Rehash Allocates Size bucket pointers, re-inserts the old nodes through FUN_10c00f60, frees the old buckets.
+function 0x10C014C0 Remove Unlinks and deletes the node whose key compares equal, returns true; shrinks when under 5% full.
+function 0x10C01C10 RemoveEntry RemoveAt(A) and delete entry A at once if its Unknown08 is null; otherwise only if Virtual10 left Count unchanged.
+function 0x10C01CE0 RemoveAll Calls RemoveEntry(0) until Unknown00 reaches zero.
+function 0x10C08E30 AddUnique Appends Item to m_ItemIds only when FindIndex(Item) is -1.
+function 0x10C09200 AddItem Fills an Item_10C091A0 from its arguments, adds it to m_Items, then calls AddUnique(A).
+function 0x10C08E90 Empty Calls FUN_10c089b0(0), then frees m_Items through the allocator if one was allocated.
+function 0x10C091A0 Add Index is m_Count; grows the array by one, copies Item into m_Items[Index], returns Index.
+field Class_1094E7A0::Unknown108 m_Slots Indexed by slot A in GetItemValue and by Unknown110 in GetHandleValue.
+field Class_1094E7A0::Unknown110 m_CurrentSlot Index into Unknown108 in GetHandleValue.
+field Class_10951900::Unknown04 m_Flags Bit 0x400 set by Acquire in mode 1 and cleared by Reset.
+field Class_10951900::Unknown20 m_Handle Taken from FUN_1093bd40 in Acquire, returned via FUN_1093bce0 in Reset.
+field Class_10951900::Unknown28 m_Mode Set to Acquire's argument, cleared by Reset, compared with 1.
+field Class_10951A40::Unknown40 m_Count Loop bound in RemoveMatching.
+field Class_10951A40::Unknown48 m_Items Array walked by RemoveMatching; items are deleted and their slots nulled.
+field Class_10951A40::Unknown4C m_Filter Copied by SetFilter and passed to FUN_10951540 in RemoveMatching.
+field Class_109523D0::Unknown28 m_State Set to 0-3 by UpdateState from mask tests.
+field Class_109523D0::Unknown30 m_Flags Bit mask tested bit by bit in HasAllBits.
+field Class_10953B60::Unknown40 m_Items Class_10953AC0 array cleared through FUN_10953ac0(0) in Reset.
+field Class_10953AC0::Unknown00 m_Count Element count, set by FUN_10953ac0 and walked in CopyFrom.
+field Class_10953AC0::Unknown04 m_Capacity Nonzero when Unknown08 is allocated; Free releases it.
+field Class_10953AC0::Unknown08 m_Items Item array copied in CopyFrom and freed in Free.
+field Class_10955C30::Unknown00 m_Name Overrides default name DAT_10e47660 as FUN_1092cac0's name in Create.
+field Class_10955C30::Unknown18 m_Handle Set by Create from FUN_1092cac0, freed by Destroy via FUN_1092bdb0.
+field Class_10955C30::Unknown1C m_Object Deleted by Destroy, then cleared.
+field Class_10A52EE0::UnknownB8 m_Count Bound checked in FUN_10a52ee0 before UnknownC0[Index] is read.
+field Class_10A52EE0::UnknownC0 m_Items Read by FUN_10a52ee0 (GetItem) at Index; callers take the value as an item pointer.
+field Class_10C4EDA0::Unknown00 m_Count FUN_10a55380 stores at Index = Unknown00, then Resize(Index+1).
+field Class_10C4EDA0::Unknown08 m_Items FUN_10a55380 stores Item at Unknown08[Index]; FUN_10c4eda0 frees it.
+field Class_10E6B4AC::Unknown08 m_Value FUN_10a66e20 copies its Value parameter into Unknown08; FUN_10a66e90 compares it.
+field Class_10B197E0::Unknown00 m_Count Copy loop bound and the count passed to FUN_10b19550 from Other.
+field Class_10B197E0::Unknown08 m_Items Indexed in the copy loop and passed to GetAllocator()->Virtual5 when freed.
+field Class_10B42340::Unknown08 m_Count Loop bound over the entries in FUN_10b42300; zeroed by FUN_10b42340.
+field Class_10B42340::Unknown10 m_Entries FUN_10b42300 indexes it as Struct_10B42300* entries; the header types it int.
+field Class_10BA1330::Unknown00 m_Collisions FUN_10ba1330 increments it when the bucket is already occupied; growth tests it against 20% of buckets.
+field Class_10BA1330::Unknown04 m_Count FUN_10ba1330 increments it once per node; FUN_10ba13f0 zeroes it before re-inserting.
+field Class_10BA1330::Unknown08 m_BucketBits FUN_10ba13f0 stores log2 of the bucket count; FUN_10ba1330 masks the hash with 1<<Unknown08.
+field Class_10BA1330::Unknown0C m_BucketCount FUN_10ba13f0 stores the new bucket count; growth doubles it.
+field Class_10BA1330::Unknown10 m_FixedSize FUN_10ba1330 skips growth when set; derived FUN_10ba15c0 skips its FUN_10ba13f0 call when set.
+field Class_10BA1330::Unknown14 m_Buckets Array of bucket heads: allocated and deleted in FUN_10ba13f0, deleted too in FUN_10ba15c0 and FUN_10ba1660.
+field Class_10B9FBE0::Unknown00 m_Count FUN_10b9f620 zero-fills from the old value to NewCount, then stores NewCount.
+field Class_10B9FBE0::Unknown04 m_Capacity FUN_10b9f620 compares NewCount with it and stores the rounded capacity.
+field Class_10B9FBE0::Unknown08 m_Data Buffer allocated and freed through GetAllocator in FUN_10b9f620 and FUN_10b9fbe0.
+field Class_10BAE0C0::Unknown00 m_Count FUN_10badab0 zero-fills elements from the old value to NewCount, then stores NewCount.
+field Class_10BAE0C0::Unknown04 m_CapacityBytes Byte size of the block; FUN_10badab0 divides it by the element size to get capacity.
+field Class_10BAE0C0::Unknown08 m_Data Block reallocated in FUN_10badab0 and freed in FUN_10bae0c0 through GetAllocator.
+field Class_10BAA580::Unknown84 m_CachedIndex FUN_10babdd0 fills it once while it is 0, from the lookup of the FName string on Unknown34.
+field Class_10BAA580::Unknown8C m_CachedValue FUN_10babe80 stores Obj->FUN_109b5860 of the index here once, guarded by UnknownB4.
+field Class_10BAA580::UnknownB4 m_CacheValid FUN_10babe80 sets it after filling Unknown8C; later calls return Unknown8C unchanged.
+field Class_10BAA8A0::Unknown34 m_Pawn AAIPawn pointer; FUN_10baa750 reads its Controller and casts it to AAIPawnController.
+field Class_10C30DD0::Unknown00 m_Collisions Insert increments it when the chosen bucket is already taken.
+field Class_10C30DD0::Unknown04 m_Count Insert increments it per node; Rehash zeroes it before re-inserting.
+field Class_10C30DD0::Unknown08 m_BucketBits Rehash counts the halvings of Size; Insert masks the hash with (1 << Unknown08) - 1.
+field Class_10C30DD0::Unknown0C m_BucketCount Rehash stores Size here; Insert compares m_Collisions with 20 percent of it.
+field Class_10C30DD0::Unknown10 m_FixedSize Insert grows the table only while this is false.
+field Class_10C30DD0::Unknown14 m_Buckets Insert indexes it by hash; Rehash allocates it and frees the old array.
+field Class_10C39220::Unknown28 m_FixedEntry GetCurrent copies it instead of m_Entries when m_Mode is 1 or 7.
+field Class_10C39220::UnknownA0 m_Count GetCurrent fails once m_Index reaches it.
+field Class_10C39220::UnknownA8 m_Entries GetCurrent copies element m_Index from it.
+field Class_10C39220::UnknownAC m_Index GetCurrent copies the entry at this index.
+field Class_10C39220::UnknownFC m_Mode GetCurrent takes m_FixedEntry instead of m_Entries when this is 1 or 7.
+field Class_10C38E40::Unknown0A0 m_Output Advance sets its count to 0 each call, then appends into it.
+field Class_10C38E40::Unknown0B0 m_Index Advance increments it, then indexes m_Objects and m_Items with it.
+field Class_10C38E40::Unknown88 m_ObjectCount Advance tests m_Index against it before indexing m_Objects.
+field Class_10C38E40::Unknown90 m_Objects Advance indexes it with m_Index and m_Index + 1.
+field Class_10C38E40::Unknown94 m_ItemCount Advance tests m_Index against it before indexing m_Items.
+field Class_10C38E40::Unknown9C m_Items Advance copies m_Items[m_Index] into m_Output.
+field Class_10C38E40::Unknown106 m_HasHandle Rebind removes the previous handle only while this is set; the first call sets it.
+field Class_10B88A80::Unknown00 m_Collisions Incremented when an insert lands in an occupied bucket; Insert rehashes above 20% of buckets.
+field Class_10B88A80::Unknown04 m_Count Incremented by every insert; Rehash zeroes it, then counts the reinserted nodes.
+field Class_10B88A80::Unknown08 m_HashBits Hash mask is (1 << Unknown08) - 1; Rehash sets Unknown08 to log2 of the new bucket count.
+field Class_10B88A80::Unknown0C m_BucketCount Rehash stores the new bucket count; the 20% growth check and doubling use it.
+field Class_10B88A80::Unknown10 m_FixedSize Insert grows the table only while this bool is false; Rehash never writes it.
+field Class_10B88A80::Unknown14 m_Buckets Node** array indexed by HashBytes(key) & mask; Rehash allocates Size entries.
+field Class_10B8C7B0::Unknown00 m_EntryCount Loop bound over the entries array in Refresh.
+field Class_10B8C7B0::Unknown08 m_Entries Struct pointer array; Refresh passes each entry to the singleton outside single mode.
+field Class_10B8C7B0::Unknown20 m_Single Struct pointer shown alone in single mode, by Refresh and ExitSingleMode.
+field Class_10B8C7B0::Unknown24 m_SingleMode Bool: Refresh shows only m_Single while set; ExitSingleMode clears it.
+field Class_10B8C810::Unknown00 m_EntryCount Loop bound over the entries array in Clear.
+field Class_10B8C810::Unknown08 m_Entries Struct pointer array; Clear removes each entry from the singleton outside single mode.
+field Class_10B8C810::Unknown20 m_Single Struct pointer shown alone in single mode, by Clear and EnterSingleMode.
+field Class_10B8C810::Unknown24 m_SingleMode Bool: EnterSingleMode sets it; Clear removes only m_Single while set.
+field Class_10C00F60::Unknown04 m_Count Remove decrements it per deleted node; it shrinks buckets when under 5% of m_BucketCount.
+field Class_10C00F60::Unknown08 m_BucketBits Rehash counts the halvings of Size into it, so it is log2 of the bucket count.
+field Class_10C00F60::Unknown0C m_BucketCount Rehash sets it to the new array size; Remove halves it when sparse and above 64.
+field Class_10C00F60::Unknown10 m_NoResize When set, Remove skips its shrink, and Clear skips its Rehash.
+field Class_10C00F60::Unknown14 m_Buckets Rehash allocates Size node pointers here; Remove indexes them by key hash.
+field Class_10C00F60::Unknown18 m_KeyCompare Remove calls its Virtual1(Key, Node->Key); 0 means the key matches.
+field Class_10C08E30::Unknown08 m_Items FUN_10c09200 appends each new Item_10C091A0 to it through Add.
+field Class_10C08E30::Unknown14 m_ItemIds AddUnique appends the id to it only when FindIndex misses.
+field Class_10BF0A60::Unknown00 m_Count Add reads it as the new item's index, then grows the array to one past it.
+field Class_10BF0A60::Unknown08 m_Items Add stores the item at m_Count; FUN_10bf0a60 frees it through the allocator.

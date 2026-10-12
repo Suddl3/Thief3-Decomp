@@ -37,12 +37,12 @@ char Class_10C26070::FUN_10c26070(float Margin)
         Class_10B9FBE0* Array = &Unknown00->Unknown10;
         FUN_10c25ef0(Array);
         int Index = FUN_10b0fdb0() * Row + Column;
-        Array->Unknown08[Index] = 0;
+        Array->m_Data[Index] = 0;
     }
     Column = Unknown08;
     Row = Unknown04;
     Class_10B9FBE0* Array = &Unknown00->Unknown10;
     FUN_10c25ef0(Array);
     int Index = FUN_10b0fdb0() * Row + Column;
-    return Array->Unknown08[Index];
+    return Array->m_Data[Index];
 }

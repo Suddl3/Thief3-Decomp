@@ -110,5 +110,5 @@ bool MC_MoveToPoint::FUN_10c27090(int A)
 {
     if (!Unknown48)
         return false;
-    return Unknown48->FUN_10c39220(A);
+    return Unknown48->GetCurrent(A);
 }

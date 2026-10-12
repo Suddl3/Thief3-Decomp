@@ -47,8 +47,8 @@ unsigned int Class_10E9BB60::FUN_10c48200(int p1, unsigned int p2, unsigned int 
     return Avail;
 }
 
-// FUNCTION: 0x10C483E0 ?FUN_10c483e0@Class_10E9BB80@@UAEHPAI0@Z
-int Class_10E9BB80::FUN_10c483e0(unsigned int* A, unsigned int* B)
+// FUNCTION: 0x10C483E0 ?CompareUnsigned@Class_10E9BB80@@UAEHPAI0@Z
+int Class_10E9BB80::CompareUnsigned(unsigned int* A, unsigned int* B)
 {
     unsigned int X = *A;
     unsigned int Y = *B;

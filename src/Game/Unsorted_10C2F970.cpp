@@ -150,10 +150,10 @@ bool cMotionControllerAnim::LocomotionCommandQueue(void* A)
     return true;
 }
 
-// FUNCTION: 0x10C32C70 ?FUN_10c32c70@Class_10C32C70@@QAEXXZ
-void Class_10C32C70::FUN_10c32c70()
+// FUNCTION: 0x10C32C70 ?Release@Class_10C32C70@@QAEXXZ
+void Class_10C32C70::Release()
 {
-    FUN_10c325e0(0x40);
+    Reset(0x40);
     ::operator delete(m_Buckets);
     m_Count = 0;
     m_BucketCount = 0;

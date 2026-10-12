@@ -10,21 +10,21 @@ class Class_10C30DD0_Node;
 class Class_10C30DD0
 {
 public:
-    Class_10C30DD0() : Unknown00(0), Unknown04(0), Unknown0C(0), Unknown10(false), Unknown14(0)
+    Class_10C30DD0() : m_Collisions(0), m_Count(0), m_BucketCount(0), m_FixedSize(false), m_Buckets(0)
     {
-        FUN_10c30f60(0x40);
+        Rehash(0x40);
     }
 
-    unsigned int FUN_10c30dd0(const int& Key, const int& Value);
-    void FUN_10c30f60(int Size);
+    unsigned int Insert(const int& Key, const int& Value);
+    void Rehash(int Size);
 
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    bool Unknown10;
+    int m_Collisions;
+    int m_Count;
+    int m_BucketBits;
+    int m_BucketCount;
+    bool m_FixedSize;
     char Pad11[0x3];
-    Class_10C30DD0_Node** Unknown14;
+    Class_10C30DD0_Node** m_Buckets;
     Class_10C30DD0_Field18 Unknown18;
 };
 

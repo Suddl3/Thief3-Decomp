@@ -13,25 +13,25 @@ class Class_10C80360;
 class Class_10C38E40
 {
 public:
-    void FUN_10c38e40(int A);
-    void FUN_10c39c90();
+    void Rebind(int A);
+    void Advance();
 
     char Unknown00[0x3C];
     Item_10943600 Unknown3C;
     Class_10C38EB0_Member* Unknown48;
     char Unknown4C[0x3C];
-    int Unknown88;
+    int m_ObjectCount;
     char Unknown8C[0x4];
-    Class_10C80360** Unknown90;
-    int Unknown94;
+    Class_10C80360** m_Objects;
+    int m_ItemCount;
     char Unknown98[0x4];
-    Item_10943600* Unknown9C;
-    Class_10943600 Unknown0A0;
+    Item_10943600* m_Items;
+    Class_10943600 m_Output;
     int Unknown0AC;
-    int Unknown0B0;
+    int m_Index;
     Class_10C20BC0* Unknown0B4;
     char Unknown0B8[0x4E];
-    bool Unknown106;
+    bool m_HasHandle;
     char Pad107[0x1];
 };
 

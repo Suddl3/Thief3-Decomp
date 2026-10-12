@@ -23,14 +23,14 @@ struct Struct_10B1BC90
     int Unknown110;
 };
 
-// FUNCTION: 0x10B197E0 ?FUN_10b197e0@Class_10B197E0@@QAEXXZ
-void Class_10B197E0::FUN_10b197e0()
+// FUNCTION: 0x10B197E0 ?Free@Class_10B197E0@@QAEXXZ
+void Class_10B197E0::Free()
 {
     FUN_10b19550(0);
     if (Unknown04)
     {
-        GetAllocator()->Virtual5(Unknown08);
-        Unknown08 = 0;
+        GetAllocator()->Virtual5(m_Items);
+        m_Items = 0;
         Unknown04 = 0;
     }
 }

@@ -21,8 +21,8 @@ void Class_10A4EFB0::Free()
     }
 }
 
-// FUNCTION: 0x10A4FC00 ?FUN_10a4fc00@Class_10A4FC00@@QAEXH@Z
-void Class_10A4FC00::FUN_10a4fc00(int Slack)
+// FUNCTION: 0x10A4FC00 ?Empty@Class_10A4FC00@@QAEXH@Z
+void Class_10A4FC00::Empty(int Slack)
 {
     for (int i = 0; i < Unknown04; i++)
         ((Class_10BB7C00*)Unknown00)[i].FUN_10bb7c00();

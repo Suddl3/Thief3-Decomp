@@ -9,20 +9,20 @@ struct Struct_10D9E5E0_Param;
 class Class_10B8C810
 {
 public:
-    void FUN_10b8c810();
-    void FUN_10b8cc90();
+    void Clear();
+    void EnterSingleMode();
 
-    int Unknown00;
+    int m_EntryCount;
     char Pad04[4];
-    Struct_10D9E5E0_Param** Unknown08;
+    Struct_10D9E5E0_Param** m_Entries;
     int Unknown0C;
     char Pad10[4];
     Class_10B8C810_Unknown14** Unknown14;
     char Pad18;
     bool Unknown19;
     char Unknown1A[6];
-    Struct_10D9E5E0_Param* Unknown20;
-    bool Unknown24;
+    Struct_10D9E5E0_Param* m_Single;
+    bool m_SingleMode;
     char Pad25[0x3];
 };
 

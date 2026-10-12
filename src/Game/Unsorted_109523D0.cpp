@@ -7,13 +7,13 @@
 
 extern cD3DStateCache* DAT_10f31be0;
 
-// FUNCTION: 0x109523D0 ?FUN_109523d0@Class_109523D0@@QAE_NH@Z
-bool Class_109523D0::FUN_109523d0(int Mask)
+// FUNCTION: 0x109523D0 ?HasAllBits@Class_109523D0@@QAE_NH@Z
+bool Class_109523D0::HasAllBits(int Mask)
 {
     for (int i = 0; i < 9; i++)
     {
         int Bit = 1 << i;
-        if ((Mask & Bit) && !(Unknown30 & Bit))
+        if ((Mask & Bit) && !(m_Flags & Bit))
             return false;
     }
     return true;

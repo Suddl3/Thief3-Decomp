@@ -72,6 +72,6 @@ public:
 // FUNCTION: 0x10BE1E00 ?FUN_10be1e00@Class_10E95AC8@@UAEXXZ
 void Class_10E95AC8::FUN_10be1e00()
 {
-    static_cast<Class_10C01CE0*>(Unknown04->Unknown08->FUN_10ba9ec0())->FUN_10c01ce0();
+    static_cast<Class_10C01CE0*>(Unknown04->Unknown08->FUN_10ba9ec0())->RemoveAll();
     PopState();
 }

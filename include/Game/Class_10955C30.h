@@ -8,17 +8,17 @@ class Class_1095AFD0;
 class Class_10955C30
 {
 public:
-    void FUN_10955c30();
+    void Destroy();
     void FUN_10956110(int A);
-    void FUN_10956270();
+    void Create();
 
-    const char* Unknown00;
+    const char* m_Name;
     char Unknown04[4];
     int Unknown08;
     bool Unknown0C;
     char Pad0D[0xb];
-    void* Unknown18;
-    Class_1095AFD0* Unknown1C;
+    void* m_Handle;
+    Class_1095AFD0* m_Object;
     char Pad20[0x18];
 };
 

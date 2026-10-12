@@ -9,16 +9,16 @@ struct Struct_10A55380;
 class Class_10C4EDA0
 {
 public:
-    Class_10C4EDA0() : Unknown00(0), Unknown04(0), Unknown08(0) {}
+    Class_10C4EDA0() : m_Count(0), Unknown04(0), m_Items(0) {}
     ~Class_10C4EDA0();
 
-    void FUN_10a550b0(int Count);
-    void FUN_10a55380(const Struct_10A55380& A);
-    void FUN_10c4eda0();
+    void Resize(int Count);
+    void AddItem(const Struct_10A55380& A);
+    void Free();
 
-    int Unknown00;
+    int m_Count;
     int Unknown04;
-    Item_10A55380* Unknown08;
+    Item_10A55380* m_Items;
     char Unknown0C[8];
     int Unknown14;
 };

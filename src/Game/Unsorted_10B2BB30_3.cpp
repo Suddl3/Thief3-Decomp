@@ -6,7 +6,7 @@
 class Class_10A52EE0
 {
 public:
-    Class_10B2BC90_Unknown* FUN_10a52ee0(int A);
+    Class_10B2BC90_Unknown* GetItem(int A);
 };
 
 class Class_10B2BC90 : public Class_10A52EE0
@@ -21,7 +21,7 @@ public:
 // FUNCTION: 0x10B2BC90 ?FUN_10b2bc90@Class_10B2BC90@@QAE?AVFVector@@H@Z
 FVector Class_10B2BC90::FUN_10b2bc90(int Index)
 {
-    Class_10B2BC90_Unknown* Obj = FUN_10a52ee0(Unknown128[Index]);
+    Class_10B2BC90_Unknown* Obj = GetItem(Unknown128[Index]);
     if (Obj)
         return *Obj->Virtual8();
     return FVector(0, 0, 0);

@@ -11,10 +11,10 @@ extern int DAT_10f341a0;
 class Class_10955C30
 {
 public:
-    void FUN_10955c30();
+    void Destroy();
     void FUN_10956110(int A);
 
-    char Unknown00[0x18];
+    char m_Name[0x18];
 };
 
 class Class_109528B0
@@ -37,7 +37,7 @@ void Class_109528B0::FUN_109528b0()
     int Type = UnknownA8->Unknown30;
     if (Type == DAT_10f3419c || Type == DAT_10f341a0)
     {
-        m_Slots.FUN_10955c30();
+        m_Slots.Destroy();
         m_Slots.FUN_10956110(0);
     }
 }

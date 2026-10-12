@@ -51,10 +51,10 @@ public:
 class Class_10C08E30
 {
 public:
-    void FUN_10c08e30(int Item);
+    void AddUnique(int Item);
 
     char Unknown00[0x14];
-    cIntArray Unknown14;
+    cIntArray m_ItemIds;
 };
 
 // FUNCTION: 0x10C08DE0 ?FUN_10c08de0@Class_10C08DE0@@QAEXXZ
@@ -78,9 +78,9 @@ void Class_10C08DE0::FUN_10c08de0()
     FUN_10c08d60();
 }
 
-// FUNCTION: 0x10C08E30 ?FUN_10c08e30@Class_10C08E30@@QAEXH@Z
-void Class_10C08E30::FUN_10c08e30(int Item)
+// FUNCTION: 0x10C08E30 ?AddUnique@Class_10C08E30@@QAEXH@Z
+void Class_10C08E30::AddUnique(int Item)
 {
-    if (Unknown14.FindIndex(Item) == -1)
-        Unknown14.Append(Item);
+    if (m_ItemIds.FindIndex(Item) == -1)
+        m_ItemIds.Append(Item);
 }

@@ -7,7 +7,7 @@ class Class_10E9BB80
 {
 public:
     virtual void FUN_10c3e9f0(int p1, int* p2, int* p3);
-    virtual int FUN_10c483e0(unsigned int* A, unsigned int* B);
+    virtual int CompareUnsigned(unsigned int* A, unsigned int* B);
 };
 
 #endif // GAME_CLASS_10E9BB80_H

@@ -33,7 +33,7 @@ class Class_10E6B4AC : public Class_10EB7660
 public:
     Class_10E6B4AC* FUN_10a66e20(const Struct_10A66E20& Value);
 
-    Struct_10A66E20 Unknown08;
+    Struct_10A66E20 m_Value;
 };
 
 // FUNCTION: 0x10A66DD0 ?FUN_10a66dd0@Class_10E6B490@@UAE_NPAV1@@Z
@@ -47,6 +47,6 @@ Class_10E6B4AC* Class_10E6B4AC::FUN_10a66e20(const Struct_10A66E20& Value)
 {
     this->Class_10EB7660::Class_10EB7660();
     VTable = DAT_10e6b4ac;
-    Unknown08 = Value;
+    m_Value = Value;
     return this;
 }

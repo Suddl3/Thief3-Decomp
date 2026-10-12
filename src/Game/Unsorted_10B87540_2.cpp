@@ -91,7 +91,7 @@ public:
 void Class_10E893B0::FUN_10b876c0()
 {
     if (Unknown78)
-        Unknown78->FUN_10b8c7b0();
+        Unknown78->Refresh();
 }
 
 // FUNCTION: 0x10B87900 ?FUN_10b87900@Class_10E896A8@@QAE_NXZ

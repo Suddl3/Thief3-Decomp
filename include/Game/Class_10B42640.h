@@ -14,7 +14,7 @@ public:
 
     Class_10B42640() { Unknown1C = 0; Unknown20 = 0; Unknown24 = 0; }
 
-    void FUN_10b42640();
+    void Clear();
     void FUN_10b42650(int A, int B);
 
     union

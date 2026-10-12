@@ -13,10 +13,10 @@ public:
     virtual int __stdcall Virtual2();
 };
 
-// FUNCTION: 0x10953E40 ?FUN_10953e40@Class_10953B60@@QAEXXZ
-void Class_10953B60::FUN_10953e40()
+// FUNCTION: 0x10953E40 ?Reset@Class_10953B60@@QAEXXZ
+void Class_10953B60::Reset()
 {
-    Unknown40.FUN_10953ac0(0);
+    m_Items.FUN_10953ac0(0);
     Unknown54 = 0;
     Unknown58 = 0;
     if (Unknown5C)

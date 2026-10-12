@@ -17,21 +17,21 @@ bool Class_10C00C70::FUN_10c00c70()
     return Unknown00 > 0;
 }
 
-// FUNCTION: 0x10C01F50 ?FUN_10c01f50@Class_10C01F50@@QAEXXZ
-void Class_10C01F50::FUN_10c01f50()
+// FUNCTION: 0x10C01F50 ?Free@Class_10C01F50@@QAEXXZ
+void Class_10C01F50::Free()
 {
-    FUN_10c01730(0x40);
-    ::operator delete(Unknown14);
-    Unknown04 = 0;
-    Unknown0C = 0;
-    Unknown14 = 0;
+    Clear(0x40);
+    ::operator delete(m_Buckets);
+    m_Count = 0;
+    m_BucketCount = 0;
+    m_Buckets = 0;
     Unknown00 = 0;
 }
 
-// FUNCTION: 0x10C01FC0 ?FUN_10c01fc0@Class_10C01FC0@@QAEXXZ
-void Class_10C01FC0::FUN_10c01fc0()
+// FUNCTION: 0x10C01FC0 ?Free@Class_10C01FC0@@QAEXXZ
+void Class_10C01FC0::Free()
 {
-    FUN_10c016b0(0x40);
+    Clear(0x40);
     ::operator delete(Unknown14);
     Unknown04 = 0;
     Unknown0C = 0;

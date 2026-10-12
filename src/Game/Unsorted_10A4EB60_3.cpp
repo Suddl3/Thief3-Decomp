@@ -5,8 +5,8 @@
 #include "Game/Class_10AF4BB0.h"
 #include "Game/Class_10BB7C00.h"
 
-// FUNCTION: 0x10A4FC50 ?FUN_10a4fc50@Class_10A4FC00@@QAEXHH@Z
-void Class_10A4FC00::FUN_10a4fc50(int Index, int Count)
+// FUNCTION: 0x10A4FC50 ?RemoveRange@Class_10A4FC00@@QAEXHH@Z
+void Class_10A4FC00::RemoveRange(int Index, int Count)
 {
     for (int i = Index; i < Index + Count; i++)
         ((Class_10BB7C00*)Unknown00)[i].FUN_10bb7c00();

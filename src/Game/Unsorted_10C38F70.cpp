@@ -3,15 +3,15 @@
 #include "Game/Class_10C39220.h"
 #include "Game/Struct_10C39220.h"
 
-// FUNCTION: 0x10C39220 ?FUN_10c39220@Class_10C39220@@QAE_NH@Z
-bool Class_10C39220::FUN_10c39220(int A)
+// FUNCTION: 0x10C39220 ?GetCurrent@Class_10C39220@@QAE_NH@Z
+bool Class_10C39220::GetCurrent(int A)
 {
     Struct_10C39220* Out = (Struct_10C39220*)A;
-    if (UnknownAC >= UnknownA0)
+    if (m_Index >= m_Count)
         return false;
-    if (UnknownFC == 1 || UnknownFC == 7)
-        *Out = Unknown28;
+    if (m_Mode == 1 || m_Mode == 7)
+        *Out = m_FixedEntry;
     else
-        *Out = UnknownA8[UnknownAC];
+        *Out = m_Entries[m_Index];
     return true;
 }

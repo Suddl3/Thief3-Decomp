@@ -8,7 +8,7 @@ extern void* DAT_10e8d7b8[];
 class Class_10E8D7B8
 {
 public:
-    Class_10E8D7B8* FUN_10bad970(Struct_10BAD970* A, int* B, int C);
+    Class_10E8D7B8* Init(Struct_10BAD970* A, int* B, int C);
 
     void** Unknown00;
     int Unknown04;
@@ -26,8 +26,8 @@ int Class_10BAC050::FUN_10bac050(int A)
     return 0;
 }
 
-// FUNCTION: 0x10BAD970 ?FUN_10bad970@Class_10E8D7B8@@QAEPAV1@PAUStruct_10BAD970@@PAHH@Z
-Class_10E8D7B8* Class_10E8D7B8::FUN_10bad970(Struct_10BAD970* A, int* B, int C)
+// FUNCTION: 0x10BAD970 ?Init@Class_10E8D7B8@@QAEPAV1@PAUStruct_10BAD970@@PAHH@Z
+Class_10E8D7B8* Class_10E8D7B8::Init(Struct_10BAD970* A, int* B, int C)
 {
     Unknown04 = 0;
     Unknown00 = DAT_10e8d7b8;

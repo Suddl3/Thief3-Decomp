@@ -164,8 +164,8 @@ float Class_10BEF4F0::FUN_10bef4f0()
     return Result;
 }
 
-// FUNCTION: 0x10BEF550 ?FUN_10bef550@Class_10BF0360@@QAEMXZ
-float Class_10BF0360::FUN_10bef550()
+// FUNCTION: 0x10BEF550 ?GetRandomInRange@Class_10BF0360@@QAEMXZ
+float Class_10BF0360::GetRandomInRange()
 {
     float Min = Unknown04->Unknown08->FUN_10dbd510(0x100645)->FUN_10bbdc80();
     float Max = Unknown04->Unknown08->FUN_10dbd510(0x100646)->FUN_10bbdc80();

@@ -32,7 +32,7 @@ public:
 // FUNCTION: 0x10BAA750 ?FUN_10baa750@Class_10BAA8A0@@QAEPAVClass_10B9CAC0@@XZ
 Class_10B9CAC0* Class_10BAA8A0::FUN_10baa750()
 {
-    AAIPawnController* Ctrl = Cast<AAIPawnController>(Unknown34->Controller);
+    AAIPawnController* Ctrl = Cast<AAIPawnController>(m_Pawn->Controller);
     if (Ctrl && Ctrl->Unknown118)
         return Ctrl->Unknown118->Unknown08;
     return 0;

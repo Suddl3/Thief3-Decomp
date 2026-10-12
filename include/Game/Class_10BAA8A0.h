@@ -13,7 +13,7 @@ public:
     bool FUN_10baa8a0();
 
     char Unknown00[0x34];
-    AAIPawn* Unknown34;
+    AAIPawn* m_Pawn;
 };
 
 #endif // GAME_CLASS_10BAA8A0_H

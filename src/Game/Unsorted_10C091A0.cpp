@@ -6,8 +6,8 @@
 #include "Game/Item_10C091A0.h"
 #include "Game/Struct_10C091A0.h"
 
-// FUNCTION: 0x10C091A0 ?FUN_10c091a0@Class_10C08E90@@QAEHPAUItem_10C091A0@@@Z
-int Class_10C08E90::FUN_10c091a0(Item_10C091A0* Item)
+// FUNCTION: 0x10C091A0 ?Add@Class_10C08E90@@QAEHPAUItem_10C091A0@@@Z
+int Class_10C08E90::Add(Item_10C091A0* Item)
 {
     int Index = Unknown00;
     FUN_10c089b0(Index + 1);

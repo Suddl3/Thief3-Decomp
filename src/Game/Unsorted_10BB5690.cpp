@@ -3,10 +3,10 @@
 #include "Game/Class_10953AC0.h"
 #include "Game/Item_10953AC0.h"
 
-// FUNCTION: 0x10BB5810 ?FUN_10bb5810@Class_10953AC0@@QAEXABV1@@Z
-void Class_10953AC0::FUN_10bb5810(const Class_10953AC0& Other)
+// FUNCTION: 0x10BB5810 ?CopyFrom@Class_10953AC0@@QAEXABV1@@Z
+void Class_10953AC0::CopyFrom(const Class_10953AC0& Other)
 {
-    FUN_10953ac0(Other.Unknown00);
-    for (int i = 0; i < Unknown00; i++)
-        Unknown08[i] = Other.Unknown08[i];
+    FUN_10953ac0(Other.m_Count);
+    for (int i = 0; i < m_Count; i++)
+        m_Items[i] = Other.m_Items[i];
 }

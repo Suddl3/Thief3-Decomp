@@ -11,11 +11,11 @@ public:
     Class_1090A780 FUN_1091d800(int A, int B);
 };
 
-// FUNCTION: 0x10A63340 ?FUN_10a63340@Class_10A63340@@QAEXH@Z
-void Class_10A63340::FUN_10a63340(int Index)
+// FUNCTION: 0x10A63340 ?EraseAt@Class_10A63340@@QAEXH@Z
+void Class_10A63340::EraseAt(int Index)
 {
     if (Index != Unknown00 - 1)
-        FUN_10a63370(Index + 1, Index, Unknown00 - Index - 1);
+        MoveItems(Index + 1, Index, Unknown00 - Index - 1);
     SetCount(Unknown00 - 1);
 }
 

@@ -423,8 +423,8 @@ void FUN_10ba41e0()
     FUN_10c13220();
 }
 
-// FUNCTION: 0x10BA4230 ?FUN_10ba4230@Class_10E8C728@@QAEPAV1@XZ
-Class_10E8C728* Class_10E8C728::FUN_10ba4230()
+// FUNCTION: 0x10BA4230 ?Init@Class_10E8C728@@QAEPAV1@XZ
+Class_10E8C728* Class_10E8C728::Init()
 {
     *(void**)this = DAT_10e8c728;
     return this;

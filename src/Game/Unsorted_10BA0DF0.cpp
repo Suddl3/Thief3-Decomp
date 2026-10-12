@@ -36,7 +36,7 @@ void __stdcall FUN_10ba0df0(Class_10BAA580* Obj)
 {
     if (Obj)
     {
-        Obj->FUN_10babe80();
+        Obj->GetCachedValue();
         ((Class_1098E330*)Obj->FUN_10c7d570())->FUN_10991eb0();
         Class_109BC840* Mode = Obj->FUN_10baa580();
         if (Mode)

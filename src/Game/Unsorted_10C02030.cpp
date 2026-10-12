@@ -40,5 +40,5 @@ Class_10C02460::~Class_10C02460()
         Count--;
         delete Node;
     }
-    Unknown0C.FUN_10c016b0(0x40);
+    Unknown0C.Clear(0x40);
 }

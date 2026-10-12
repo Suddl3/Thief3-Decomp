@@ -15,7 +15,7 @@ struct Item_10C22A70
 class Class_10BAE0C0
 {
 public:
-    void FUN_10badab0(int A);
+    void Resize(int A);
 };
 
 class Class_10C22A70 : public Class_10BAE0C0
@@ -31,7 +31,7 @@ public:
 // FUNCTION: 0x10C22A70 ?FUN_10c22a70@Class_10C22A70@@QAEXABV1@@Z
 void Class_10C22A70::FUN_10c22a70(const Class_10C22A70& Other)
 {
-    FUN_10badab0(Other.Unknown00);
+    Resize(Other.Unknown00);
     for (int i = 0; i < Unknown00; i++)
         Unknown08[i] = Other.Unknown08[i];
 }

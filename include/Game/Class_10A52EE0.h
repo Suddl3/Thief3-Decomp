@@ -6,12 +6,12 @@
 class Class_10A52EE0
 {
 public:
-    int FUN_10a52ee0(int Index);
+    int GetItem(int Index);
 
     char Unknown00[0xB8];
-    int UnknownB8;
+    int m_Count;
     char UnknownBC[4];
-    int* UnknownC0;
+    int* m_Items;
 };
 
 #endif // GAME_CLASS_10A52EE0_H

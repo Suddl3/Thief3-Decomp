@@ -26,6 +26,6 @@ public:
 int Class_10E6B5A0::SetItems(const Struct_10A68BB0* Items, int Count)
 {
     m_Items.FUN_10953ac0(Count);
-    memcpy(m_Items.Unknown08, Items, Count * sizeof(Struct_10A68BB0));
+    memcpy(m_Items.m_Items, Items, Count * sizeof(Struct_10A68BB0));
     return ++Unknown10;
 }

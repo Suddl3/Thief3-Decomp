@@ -10,8 +10,8 @@ class Class_10A4FC00 : public Class_10AF4BB0
 public:
     ~Class_10A4FC00();
 
-    void FUN_10a4fc00(int Slack);
-    void FUN_10a4fc50(int Index, int Count);
+    void Empty(int Slack);
+    void RemoveRange(int Index, int Count);
 };
 
 #endif // GAME_CLASS_10A4FC00_H

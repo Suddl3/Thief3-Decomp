@@ -33,8 +33,8 @@ struct Item_10C091A0
     bool Unknown24;
 };
 
-// FUNCTION: 0x10C09200 ?FUN_10c09200@Class_10C08E30@@QAEXHPAVClass_10913D70@@HPAHH@Z
-void Class_10C08E30::FUN_10c09200(int A, Class_10913D70* B, int C, int* D, int E)
+// FUNCTION: 0x10C09200 ?AddItem@Class_10C08E30@@QAEXHPAVClass_10913D70@@HPAHH@Z
+void Class_10C08E30::AddItem(int A, Class_10913D70* B, int C, int* D, int E)
 {
     Item_10C091A0 Item;
     ((Class_10913D70*)&Item.Unknown04)->FUN_10913d70(B);
@@ -45,8 +45,8 @@ void Class_10C08E30::FUN_10c09200(int A, Class_10913D70* B, int C, int* D, int E
     Item.Unknown18 = D[1];
     Item.Unknown1C = D[2];
     Item.Unknown24 = false;
-    Unknown08.FUN_10c091a0(&Item);
-    FUN_10c08e30(A);
+    m_Items.Add(&Item);
+    AddUnique(A);
 }
 
 // FUNCTION: 0x10C093C0 ?FUN_10c093c0@Class_10C093C0@@QAEXXZ

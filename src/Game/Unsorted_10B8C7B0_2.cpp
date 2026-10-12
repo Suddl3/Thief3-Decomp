@@ -28,20 +28,20 @@ struct Struct_10D9E5E0_Param
 
 Class_10D9B090* FUN_10d9dcb0();
 
-// FUNCTION: 0x10B8C7B0 ?FUN_10b8c7b0@Class_10B8C7B0@@QAEXXZ
-void Class_10B8C7B0::FUN_10b8c7b0()
+// FUNCTION: 0x10B8C7B0 ?Refresh@Class_10B8C7B0@@QAEXXZ
+void Class_10B8C7B0::Refresh()
 {
     if (Unknown0C)
     {
-        if (Unknown24)
+        if (m_SingleMode)
         {
-            FUN_10d9dcb0()->FUN_10d9e490(Unknown20);
+            FUN_10d9dcb0()->FUN_10d9e490(m_Single);
             return;
         }
-        for (int i = 0; i < Unknown00; i++)
+        for (int i = 0; i < m_EntryCount; i++)
         {
-            Unknown08[i]->Virtual18(-1.0f);
-            FUN_10d9dcb0()->FUN_10d9e490(Unknown08[i]);
+            m_Entries[i]->Virtual18(-1.0f);
+            FUN_10d9dcb0()->FUN_10d9e490(m_Entries[i]);
         }
     }
 }

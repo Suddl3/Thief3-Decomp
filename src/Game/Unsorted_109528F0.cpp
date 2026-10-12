@@ -9,6 +9,6 @@ void Class_109528B0::FUN_10953450()
     for (int i = 0; i < 9; i++)
     {
         if (m_Slots[i].Unknown0C && !Virtual7(i))
-            m_Slots[i].FUN_10956270();
+            m_Slots[i].Create();
     }
 }

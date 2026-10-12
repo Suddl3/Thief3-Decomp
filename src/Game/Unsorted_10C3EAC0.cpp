@@ -12,11 +12,11 @@ void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
 // The class whose vtable is DAT_10ebff38: a Class_10E9BB80 whose slot 1 (FUN_10daf820) overrides
-// FUN_10c483e0 and whose slot 2 (FUN_10daf850) is its own.
+// CompareUnsigned and whose slot 2 (FUN_10daf850) is its own.
 class Class_10EBFF38 : public Class_10E9BB80
 {
 public:
-    virtual int FUN_10c483e0(unsigned int* A, unsigned int* B);
+    virtual int CompareUnsigned(unsigned int* A, unsigned int* B);
     virtual void Virtual2();
 };
 
@@ -26,21 +26,21 @@ class Class_10C30DD0_Node;
 class Class_10C30DD0
 {
 public:
-    Class_10C30DD0() : Unknown00(0), Unknown04(0), Unknown0C(0), Unknown10(false), Unknown14(0)
+    Class_10C30DD0() : m_Collisions(0), m_Count(0), m_BucketCount(0), m_FixedSize(false), m_Buckets(0)
     {
-        FUN_10c30f60(0x40);
+        Rehash(0x40);
     }
 
-    unsigned int FUN_10c30dd0(const int& Key, const int& Value);
-    void FUN_10c30f60(int Size);
+    unsigned int Insert(const int& Key, const int& Value);
+    void Rehash(int Size);
 
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    bool Unknown10;
+    int m_Collisions;
+    int m_Count;
+    int m_BucketBits;
+    int m_BucketCount;
+    bool m_FixedSize;
     char Pad11[0x3];
-    Class_10C30DD0_Node** Unknown14;
+    Class_10C30DD0_Node** m_Buckets;
     Class_10EBFF38 Unknown18;
 };
 
@@ -54,8 +54,8 @@ public:
         Unknown1C = 0;
     }
 
-    void FUN_10c3ea10(int A);
-    void FUN_10c3ea90();
+    void Reset(int A);
+    void Release();
 
     union
     {

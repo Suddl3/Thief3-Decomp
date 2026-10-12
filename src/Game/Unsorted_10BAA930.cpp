@@ -6,27 +6,27 @@ class Class_10BAA580
 {
 public:
     Class_109BC840* FUN_10baa580();
-    int* FUN_10babdd0(int* Out);
-    int FUN_10babe80();
+    int* GetCachedIndex(int* Out);
+    int GetCachedValue();
 
     char Unknown00[0x8C];
-    int Unknown8C;
+    int m_CachedValue;
     char Unknown90[0x24];
-    bool UnknownB4;
+    bool m_CacheValid;
 };
 
-// FUNCTION: 0x10BABE80 ?FUN_10babe80@Class_10BAA580@@QAEHXZ
-int Class_10BAA580::FUN_10babe80()
+// FUNCTION: 0x10BABE80 ?GetCachedValue@Class_10BAA580@@QAEHXZ
+int Class_10BAA580::GetCachedValue()
 {
     Class_109BC840* Obj = FUN_10baa580();
     if (!Obj)
         return -1;
-    if (!UnknownB4)
+    if (!m_CacheValid)
     {
         int Value;
-        int* Ptr = FUN_10babdd0(&Value);
-        Unknown8C = Obj->FUN_109b5860(*Ptr);
-        UnknownB4 = true;
+        int* Ptr = GetCachedIndex(&Value);
+        m_CachedValue = Obj->FUN_109b5860(*Ptr);
+        m_CacheValid = true;
     }
-    return Unknown8C;
+    return m_CachedValue;
 }

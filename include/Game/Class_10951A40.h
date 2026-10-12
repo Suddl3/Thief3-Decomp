@@ -10,14 +10,14 @@ class Class_10951540;
 class Class_10951A40
 {
 public:
-    void FUN_10951a40(const Struct_10951A40* In);
-    void FUN_109516e0();
+    void SetFilter(const Struct_10951A40* In);
+    void RemoveMatching();
 
     char Unknown00[0x40];
-    int Unknown40;
+    int m_Count;
     int Unknown44;
-    Class_10951540** Unknown48;
-    Struct_10951A40 Unknown4C;
+    Class_10951540** m_Items;
+    Struct_10951A40 m_Filter;
 };
 
 #endif // GAME_CLASS_10951A40_H

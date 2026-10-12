@@ -8,10 +8,10 @@
 class Class_10C3EA90 : public Class_10C30DD0
 {
 public:
-    ~Class_10C3EA90() { FUN_10c3ea90(); }
+    ~Class_10C3EA90() { Release(); }
 
-    void FUN_10c3ea10(int A);
-    void FUN_10c3ea90();
+    void Reset(int A);
+    void Release();
 
     union
     {

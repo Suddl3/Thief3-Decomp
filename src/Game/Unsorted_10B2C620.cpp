@@ -3,16 +3,16 @@
 #include "Game/cIntArray.h"
 #include "Game/Class_10B2BC90_Unknown.h"
 
-// Copied whole from include/Game/Class_10A52EE0.h, with FUN_10a52ee0 returning the object symbols.txt names.
+// Copied whole from include/Game/Class_10A52EE0.h, with GetItem returning the object symbols.txt names.
 class Class_10A52EE0
 {
 public:
-    Class_10B2BC90_Unknown* FUN_10a52ee0(int Index);
+    Class_10B2BC90_Unknown* GetItem(int Index);
 
     char Unknown00[0xB8];
-    int UnknownB8;
+    int m_Count;
     char UnknownBC[4];
-    int* UnknownC0;
+    int* m_Items;
 };
 
 class Class_10B2D600 : public Class_10A52EE0
@@ -31,7 +31,7 @@ void Class_10B2D600::FUN_10b2d600()
 {
     for (int i = 1; i <= 3; i++)
     {
-        Class_10B2BC90_Unknown* Item = FUN_10a52ee0(Slots[(Head + i) % 5]);
+        Class_10B2BC90_Unknown* Item = GetItem(Slots[(Head + i) % 5]);
         if (Item)
         {
             cIntArray Found;

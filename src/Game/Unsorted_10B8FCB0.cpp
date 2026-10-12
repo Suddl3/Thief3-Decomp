@@ -22,7 +22,7 @@ public:
 class Class_10E89A10 : public Class_10E89AA0
 {
 public:
-    Class_10E89A10* FUN_10b92660(int A, int B);
+    Class_10E89A10* Init(int A, int B);
 };
 
 Class_10905A90_Member* GetAllocator();
@@ -61,8 +61,8 @@ Class_10E8984C::Class_10E8984C()
     Unknown04 = 0;
 }
 
-// FUNCTION: 0x10B92660 ?FUN_10b92660@Class_10E89A10@@QAEPAV1@HH@Z
-Class_10E89A10* Class_10E89A10::FUN_10b92660(int A, int B)
+// FUNCTION: 0x10B92660 ?Init@Class_10E89A10@@QAEPAV1@HH@Z
+Class_10E89A10* Class_10E89A10::Init(int A, int B)
 {
     this->Class_10E89AA0::Class_10E89AA0(0, A, B);
     Unknown00 = DAT_10e89a10;

@@ -11,15 +11,15 @@ class Class_10B88A80_Node;
 class Class_10B88A80
 {
 public:
-    unsigned int FUN_10b88a80(const Class_109081E0& Key, const int& Value);
-    void FUN_10b88b60(int Size);
+    unsigned int Insert(const Class_109081E0& Key, const int& Value);
+    void Rehash(int Size);
 
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    bool Unknown10;
-    Class_10B88A80_Node** Unknown14;
+    int m_Collisions;
+    int m_Count;
+    int m_HashBits;
+    int m_BucketCount;
+    bool m_FixedSize;
+    Class_10B88A80_Node** m_Buckets;
     Class_10B88A80_Field18 Unknown18;
 };
 

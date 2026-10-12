@@ -10,7 +10,7 @@ struct Struct_10BF0360;
 class Class_10BF0360
 {
 public:
-    float FUN_10bef550();
+    float GetRandomInRange();
     void FUN_10bf0360(FVector A, float B);
 
     char Unknown00[4];

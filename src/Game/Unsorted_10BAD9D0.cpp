@@ -68,15 +68,15 @@ void Class_10BAE080::Clear()
     }
 }
 
-// FUNCTION: 0x10BAE0C0 ?FUN_10bae0c0@Class_10BAE0C0@@QAEXXZ
-void Class_10BAE0C0::FUN_10bae0c0()
+// FUNCTION: 0x10BAE0C0 ?Free@Class_10BAE0C0@@QAEXXZ
+void Class_10BAE0C0::Free()
 {
-    FUN_10badab0(0);
-    if (Unknown04)
+    Resize(0);
+    if (m_CapacityBytes)
     {
-        GetAllocator()->Virtual5(Unknown08);
-        Unknown08 = 0;
-        Unknown04 = 0;
+        GetAllocator()->Virtual5(m_Data);
+        m_Data = 0;
+        m_CapacityBytes = 0;
     }
 }
 

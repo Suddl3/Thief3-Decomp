@@ -59,26 +59,26 @@ public:
 
 Class_10D9B090* FUN_10d9dcb0();
 
-// FUNCTION: 0x10B8C810 ?FUN_10b8c810@Class_10B8C810@@QAEXXZ
-void Class_10B8C810::FUN_10b8c810()
+// FUNCTION: 0x10B8C810 ?Clear@Class_10B8C810@@QAEXXZ
+void Class_10B8C810::Clear()
 {
     if (Unknown0C && Unknown19)
     {
         for (int i = 0; i < Unknown0C; i++)
             FUN_10d9dcb0()->FUN_10d9a3b0(Unknown14[i]);
-        for (int i = 0; i < Unknown00; i++)
+        for (int i = 0; i < m_EntryCount; i++)
         {
-            Struct_10D9E5E0_Param* Element = Unknown08[i];
+            Struct_10D9E5E0_Param* Element = m_Entries[i];
             if (Element && Element->Unknown08 == 3)
                 Element->FUN_10b8a880(0);
         }
         Unknown19 = false;
     }
-    if (Unknown24)
+    if (m_SingleMode)
     {
-        FUN_10d9dcb0()->FUN_10d9e5e0(Unknown20);
+        FUN_10d9dcb0()->FUN_10d9e5e0(m_Single);
         return;
     }
-    for (int i = 0; i < Unknown00; i++)
-        FUN_10d9dcb0()->FUN_10d9e5e0(Unknown08[i]);
+    for (int i = 0; i < m_EntryCount; i++)
+        FUN_10d9dcb0()->FUN_10d9e5e0(m_Entries[i]);
 }

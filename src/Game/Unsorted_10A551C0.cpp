@@ -60,8 +60,8 @@ void Class_10E684A8::SetLocation(FVector* A)
     *Current = *A;
 }
 
-// FUNCTION: 0x10A55380 ?FUN_10a55380@Class_10C4EDA0@@QAEXABUStruct_10A55380@@@Z
-void Class_10C4EDA0::FUN_10a55380(const Struct_10A55380& A)
+// FUNCTION: 0x10A55380 ?AddItem@Class_10C4EDA0@@QAEXABUStruct_10A55380@@@Z
+void Class_10C4EDA0::AddItem(const Struct_10A55380& A)
 {
     Item_10A55380 Item;
     Item.Unknown00 = A;
@@ -69,10 +69,10 @@ void Class_10C4EDA0::FUN_10a55380(const Struct_10A55380& A)
         Item.Unknown0C = DAT_10e49684 / A.Unknown08;
     else
         Item.Unknown0C = 0.0f;
-    int Index = Unknown00;
+    int Index = m_Count;
     Item.Unknown10 = Unknown14;
-    FUN_10a550b0(Index + 1);
-    Unknown08[Index] = Item;
+    Resize(Index + 1);
+    m_Items[Index] = Item;
 }
 
 // FUNCTION: 0x10A556F0 ?SetNameByIndex@Class_10E684A8@@QAEXH@Z

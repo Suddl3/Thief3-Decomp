@@ -6,14 +6,14 @@
 class Class_109523D0
 {
 public:
-    bool FUN_109523d0(int Mask);
+    bool HasAllBits(int Mask);
     int FUN_10952410(int* Key);
-    void FUN_10952590();
+    void UpdateState();
 
     char Unknown00[0x28];
-    int Unknown28;
+    int m_State;
     char Unknown2C[0x4];
-    int Unknown30;
+    int m_Flags;
 };
 
 #endif // GAME_CLASS_109523D0_H

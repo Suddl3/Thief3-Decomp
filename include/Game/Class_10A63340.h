@@ -8,8 +8,8 @@
 class Class_10A63340 : public cIntArray
 {
 public:
-    void FUN_10a63340(int Index);
-    void FUN_10a63370(int A, int B, int C);
+    void EraseAt(int Index);
+    void MoveItems(int A, int B, int C);
 };
 
 #endif // GAME_CLASS_10A63340_H

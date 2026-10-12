@@ -27,24 +27,24 @@ class Class_10BAA580
 {
 public:
     Class_109BC840* FUN_10baa580();
-    int* FUN_10babdd0(int* Out);
-    int FUN_10babe80();
+    int* GetCachedIndex(int* Out);
+    int GetCachedValue();
     int* FUN_10babab0(int* A, Class_109081E0* B);
 
     char Unknown00[0x34];
     Class_1098E330* Unknown34;
     char Unknown38[0x4c];
-    int Unknown84;
+    int m_CachedIndex;
     char Unknown88[0x4];
-    int Unknown8C;
+    int m_CachedValue;
     char Unknown90[0x24];
-    bool UnknownB4;
+    bool m_CacheValid;
 };
 
-// FUNCTION: 0x10BABDD0 ?FUN_10babdd0@Class_10BAA580@@QAEPAHPAH@Z
-int* Class_10BAA580::FUN_10babdd0(int* Out)
+// FUNCTION: 0x10BABDD0 ?GetCachedIndex@Class_10BAA580@@QAEPAHPAH@Z
+int* Class_10BAA580::GetCachedIndex(int* Out)
 {
-    if (Unknown84 == 0 && Unknown34 != 0)
+    if (m_CachedIndex == 0 && Unknown34 != 0)
     {
         FName Name;
         Name.Value = 0;
@@ -52,9 +52,9 @@ int* Class_10BAA580::FUN_10babdd0(int* Out)
         {
             Class_109081E0 Str = Name.FUN_10af9730();
             int Index;
-            Unknown84 = *FUN_10babab0(&Index, &Str);
+            m_CachedIndex = *FUN_10babab0(&Index, &Str);
         }
     }
-    *Out = Unknown84;
+    *Out = m_CachedIndex;
     return Out;
 }

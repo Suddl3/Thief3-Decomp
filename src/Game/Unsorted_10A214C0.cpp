@@ -15,12 +15,12 @@ class Class_10953AC0
 {
 public:
     void FUN_10953ac0(int A);
-    void FUN_10953be0();
-    void FUN_10bb5810(const Class_10953AC0& Other);
+    void Free();
+    void CopyFrom(const Class_10953AC0& Other);
 
-    int Unknown00;
-    int Unknown04;
-    Item_10A21A60* Unknown08;
+    int m_Count;
+    int m_Capacity;
+    Item_10A21A60* m_Items;
 };
 
 class Class_10A21A60
@@ -40,16 +40,16 @@ int Class_10A21A60::FUN_10a21a60(const Item_10A21A60* P)
     Item.Unknown04 = P->Unknown04;
     Item.Unknown08 = P->Unknown08;
     Item.Unknown0C = -P->Unknown0C;
-    int Count = Unknown1C.Unknown00;
+    int Count = Unknown1C.m_Count;
     Class_10953AC0* Array = &Unknown1C;
     for (int i = 0; i < Count; i++)
     {
-        Item_10A21A60* Entry = &Unknown1C.Unknown08[i];
+        Item_10A21A60* Entry = &Unknown1C.m_Items[i];
         if (Item.Unknown08 * Entry->Unknown08 + Item.Unknown04 * Entry->Unknown04 + Item.Unknown00 * Entry->Unknown00 > 0.999 && fabs(Entry->Unknown0C - Item.Unknown0C) < 0.001)
             return i;
     }
-    int Index = Array->Unknown00;
+    int Index = Array->m_Count;
     Array->FUN_10953ac0(Index + 1);
-    Array->Unknown08[Index] = Item;
+    Array->m_Items[Index] = Item;
     return Index;
 }

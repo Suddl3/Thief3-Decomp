@@ -9,13 +9,13 @@ struct Struct_1094E7A0;
 class Class_1094E7A0
 {
 public:
-    int FUN_1094e5d0(int A, int B);
-    int FUN_1094e7a0(int A);
+    int GetItemValue(int A, int B);
+    int GetHandleValue(int A);
 
     char Unknown00[0x108];
-    Struct_1094E7A0* Unknown108;
+    Struct_1094E7A0* m_Slots;
     int Unknown10C;
-    int Unknown110;
+    int m_CurrentSlot;
     Class_1094E7A0_Unknown114* Unknown114[1];
 };
 

@@ -12,22 +12,22 @@ class Class_10953590;
 
 extern Class_10939570* DAT_10f323fc;
 
-// FUNCTION: 0x10951660 ?FUN_10951660@Class_10951900@@QAEXXZ
-void Class_10951900::FUN_10951660()
+// FUNCTION: 0x10951660 ?Reset@Class_10951900@@QAEXXZ
+void Class_10951900::Reset()
 {
-    if (Unknown28 == 1 && Unknown18 == 0x3f800000)
-        Unknown04 &= ~0x400;
-    Unknown28 = 0;
+    if (m_Mode == 1 && Unknown18 == 0x3f800000)
+        m_Flags &= ~0x400;
+    m_Mode = 0;
     if (Unknown24)
     {
         Unknown24->FUN_109514c0();
         delete Unknown24;
         Unknown24 = 0;
     }
-    if (Unknown20)
+    if (m_Handle)
     {
-        DAT_10f323fc->FUN_1093bce0(Unknown20);
-        Unknown20 = 0;
+        DAT_10f323fc->FUN_1093bce0(m_Handle);
+        m_Handle = 0;
     }
 }
 
@@ -43,9 +43,9 @@ Class_109516C0_Entry* Class_109516C0::FUN_109516c0(int Index)
     return &Unknown4C;
 }
 
-// FUNCTION: 0x10951A40 ?FUN_10951a40@Class_10951A40@@QAEXPBUStruct_10951A40@@@Z
-void Class_10951A40::FUN_10951a40(const Struct_10951A40* In)
+// FUNCTION: 0x10951A40 ?SetFilter@Class_10951A40@@QAEXPBUStruct_10951A40@@@Z
+void Class_10951A40::SetFilter(const Struct_10951A40* In)
 {
-    Unknown4C = *In;
-    FUN_109516e0();
+    m_Filter = *In;
+    RemoveMatching();
 }

@@ -4,8 +4,8 @@
 
 extern "C" void* memmove(void* Dest, const void* Src, unsigned Count);
 
-// FUNCTION: 0x10A63370 ?FUN_10a63370@Class_10A63340@@QAEXHHH@Z
-void Class_10A63340::FUN_10a63370(int From, int To, int Count)
+// FUNCTION: 0x10A63370 ?MoveItems@Class_10A63340@@QAEXHHH@Z
+void Class_10A63340::MoveItems(int From, int To, int Count)
 {
     if (From != To && Count)
         memmove(Unknown08 + To, Unknown08 + From, Count * sizeof(void*));

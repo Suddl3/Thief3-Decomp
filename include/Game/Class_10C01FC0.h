@@ -12,7 +12,7 @@ class Class_10C01FC0 : public Class_10C01140
 public:
     ~Class_10C01FC0()
     {
-        FUN_10c016b0(0x40);
+        Clear(0x40);
         ::operator delete(Unknown14);
         Unknown04 = 0;
         Unknown0C = 0;
@@ -20,8 +20,8 @@ public:
         Unknown00 = 0;
     }
 
-    void FUN_10c016b0(int A);
-    void FUN_10c01fc0();
+    void Clear(int A);
+    void Free();
 };
 
 #endif // GAME_CLASS_10C01FC0_H

@@ -27,7 +27,7 @@ extern void* DAT_10e6f614[];
 class Class_10E7AE9C
 {
 public:
-    Class_10E7AE9C* FUN_10b29810();
+    Class_10E7AE9C* Init();
 
     void** Unknown00;        // +0x00: DAT_10e7ae9c
     float Unknown04;
@@ -137,8 +137,8 @@ void Class_10E7AD44::FUN_10b28420()
     Field00 = (void*)DAT_10e7ad44;
 }
 
-// FUNCTION: 0x10B29810 ?FUN_10b29810@Class_10E7AE9C@@QAEPAV1@XZ
-Class_10E7AE9C* Class_10E7AE9C::FUN_10b29810()
+// FUNCTION: 0x10B29810 ?Init@Class_10E7AE9C@@QAEPAV1@XZ
+Class_10E7AE9C* Class_10E7AE9C::Init()
 {
     Unknown04 = 1.0f;
     Unknown08 = 0;

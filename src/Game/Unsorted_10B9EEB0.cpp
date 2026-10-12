@@ -76,13 +76,13 @@ Class_10E8C00C* Class_10E8C00C::Construct(int A)
     return this;
 }
 
-// FUNCTION: 0x10BA1660 ?FUN_10ba1660@Class_10BA1660@@QAEXXZ
-void Class_10BA1660::FUN_10ba1660()
+// FUNCTION: 0x10BA1660 ?Free@Class_10BA1660@@QAEXXZ
+void Class_10BA1660::Free()
 {
-    FUN_10ba15c0(0x40);
-    ::operator delete(Unknown14);
-    Unknown04 = 0;
-    Unknown0C = 0;
-    Unknown14 = 0;
-    Unknown00 = 0;
+    Reset(0x40);
+    ::operator delete(m_Buckets);
+    m_Count = 0;
+    m_BucketCount = 0;
+    m_Buckets = 0;
+    m_Collisions = 0;
 }

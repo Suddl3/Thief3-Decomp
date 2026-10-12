@@ -69,7 +69,7 @@ void Class_10BF0360::FUN_10bf0360(FVector A, float B)
     Unknown1D0 = A;
     Unknown1DC = B;
     Unknown118 = 2;
-    Unknown11C = FUN_10bef550();
+    Unknown11C = GetRandomInRange();
     Unknown114 = 3;
 }
 

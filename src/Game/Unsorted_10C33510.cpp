@@ -12,7 +12,7 @@ class Class_10C32C70 : public Class_10C30D10
 public:
     ~Class_10C32C70()
     {
-        FUN_10c325e0(0x40);
+        Reset(0x40);
         ::operator delete(Unknown14);
         Unknown04 = 0;
         Unknown0C = 0;
@@ -20,8 +20,8 @@ public:
         Unknown00 = 0;
     }
 
-    void FUN_10c325e0(int A);
-    void FUN_10c32c70();
+    void Reset(int A);
+    void Release();
 
     int Unknown00;
     int Unknown04;
@@ -67,5 +67,5 @@ Class_10C352D0::~Class_10C352D0()
         Count--;
         delete Node;
     }
-    Unknown0C.FUN_10c325e0(0x40);
+    Unknown0C.Reset(0x40);
 }

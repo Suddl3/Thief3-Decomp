@@ -210,8 +210,8 @@ void FUN_10953a90(int Red, int Green, int Blue)
 void FUN_10953ea0()
 {
     DAT_10f341f8.FUN_10953c90(0);
-    DAT_10f341f8.FUN_10953b60();
-    DAT_10f341f8.FUN_10953e40();
+    DAT_10f341f8.ApplyWorldMatrix();
+    DAT_10f341f8.Reset();
 }
 
 // FUNCTION: 0x109562B0 ?FUN_109562b0@Class_10E4AE20@@QAEXXZ

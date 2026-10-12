@@ -14,15 +14,15 @@ extern Class_10939570* DAT_10f323fc;
 class Class_10951900
 {
 public:
-    void FUN_10951660();
-    void FUN_10951900(int* A, int B);
+    void Reset();
+    void Acquire(int* A, int B);
 
     char Unknown00[4];
-    int Unknown04;
+    int m_Flags;
     char Unknown08[0x18];
-    void* Unknown20;
+    void* m_Handle;
     char Unknown24[4];
-    int Unknown28;
+    int m_Mode;
 };
 
 class Class_10951540
@@ -31,16 +31,16 @@ public:
     bool FUN_10951540(void* A);
 };
 
-// FUNCTION: 0x109516E0 ?FUN_109516e0@Class_10951A40@@QAEXXZ
-void Class_10951A40::FUN_109516e0()
+// FUNCTION: 0x109516E0 ?RemoveMatching@Class_10951A40@@QAEXXZ
+void Class_10951A40::RemoveMatching()
 {
-    for (int i = 0; i < Unknown40; i++)
+    for (int i = 0; i < m_Count; i++)
     {
-        Class_10951540* Item = Unknown48[i];
-        if (Item->FUN_10951540(&Unknown4C))
+        Class_10951540* Item = m_Items[i];
+        if (Item->FUN_10951540(&m_Filter))
         {
             delete Item;
-            Unknown48[i] = 0;
+            m_Items[i] = 0;
         }
     }
 }
@@ -61,18 +61,18 @@ Class_10E4AC6C::Class_10E4AC6C() : Unknown04(0)
     Unknown3C = 0;
 }
 
-// FUNCTION: 0x10951900 ?FUN_10951900@Class_10951900@@QAEXPAHH@Z
-void Class_10951900::FUN_10951900(int* A, int B)
+// FUNCTION: 0x10951900 ?Acquire@Class_10951900@@QAEXPAHH@Z
+void Class_10951900::Acquire(int* A, int B)
 {
-    FUN_10951660();
-    Unknown28 = B;
+    Reset();
+    m_Mode = B;
     if (B)
     {
-        Unknown20 = DAT_10f323fc->FUN_1093bd40(A, 0, 0);
-        if (!Unknown20)
-            Unknown28 = 0;
-        else if (Unknown28 == 1)
-            Unknown04 |= 0x400;
+        m_Handle = DAT_10f323fc->FUN_1093bd40(A, 0, 0);
+        if (!m_Handle)
+            m_Mode = 0;
+        else if (m_Mode == 1)
+            m_Flags |= 0x400;
     }
 }
 

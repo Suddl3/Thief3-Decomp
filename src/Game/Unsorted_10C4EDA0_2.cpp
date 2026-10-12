@@ -16,14 +16,14 @@ public:
     Class_10C4E970 Unknown08;
 };
 
-// FUNCTION: 0x10C4EDA0 ?FUN_10c4eda0@Class_10C4EDA0@@QAEXXZ
-void Class_10C4EDA0::FUN_10c4eda0()
+// FUNCTION: 0x10C4EDA0 ?Free@Class_10C4EDA0@@QAEXXZ
+void Class_10C4EDA0::Free()
 {
-    FUN_10a550b0(0);
+    Resize(0);
     if (Unknown04)
     {
-        GetAllocator()->Virtual5(Unknown08);
-        Unknown08 = 0;
+        GetAllocator()->Virtual5(m_Items);
+        m_Items = 0;
         Unknown04 = 0;
     }
 }

@@ -11,8 +11,8 @@ public:
     char Unknown00[0x10];
 };
 
-// FUNCTION: 0x10B91320 ?FUN_10b91320@Class_10B91800@@QAEXH@Z
-void Class_10B91800::FUN_10b91320(int A)
+// FUNCTION: 0x10B91320 ?CopyFrom@Class_10B91800@@QAEXH@Z
+void Class_10B91800::CopyFrom(int A)
 {
     Class_10B91800* Other = (Class_10B91800*)A;
     FUN_10b90980(Other->Unknown00);

@@ -13,9 +13,9 @@ void Class_10953FA0::FUN_10953fa0(const Struct_10953FA0* A)
     Item.Unknown00 = *A;
     Item.Unknown0C = Unknown54;
     Class_10953AC0* Array = &Unknown40;
-    int Index = Array->Unknown00;
+    int Index = Array->m_Count;
     Array->FUN_10953ac0(Index + 1);
-    Array->Unknown08[Index] = Item;
+    Array->m_Items[Index] = Item;
 }
 
 // FUNCTION: 0x10955AA0 ?FUN_10955aa0@Class_10955AA0@@QAEXH@Z

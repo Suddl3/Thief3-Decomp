@@ -39,7 +39,7 @@ void Class_10B9E410::FUN_10b9e660()
 // FUNCTION: 0x10B9E690 ?FUN_10b9e690@Class_10B9E410@@QAEXH@Z
 void Class_10B9E410::FUN_10b9e690(int A)
 {
-    static_cast<Class_10C01CE0*>(Unknown0C->Unknown08->FUN_10ba9ec0())->FUN_10c01ce0();
+    static_cast<Class_10C01CE0*>(Unknown0C->Unknown08->FUN_10ba9ec0())->RemoveAll();
     Class_10B9E410_Member* Obj = Unknown38;
     Class_10B9E410_Unknown0C* Key = Unknown0C;
     int Next = Obj->Virtual48(Key, A);

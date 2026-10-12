@@ -22,7 +22,7 @@ extern void* DAT_10e9afa4[];
 class Class_10E9AFA4
 {
 public:
-    Class_10E9AFA4* FUN_10c3cf70(int A, int B, int C);
+    Class_10E9AFA4* Init(int A, int B, int C);
 
     void* Unknown00;
     float Unknown04;
@@ -99,8 +99,8 @@ public:
     int Field7C;
 };
 
-// FUNCTION: 0x10C3CF70 ?FUN_10c3cf70@Class_10E9AFA4@@QAEPAV1@HHH@Z
-Class_10E9AFA4* Class_10E9AFA4::FUN_10c3cf70(int A, int B, int C)
+// FUNCTION: 0x10C3CF70 ?Init@Class_10E9AFA4@@QAEPAV1@HHH@Z
+Class_10E9AFA4* Class_10E9AFA4::Init(int A, int B, int C)
 {
     Unknown04 = 90.0f;
     Unknown08 = 90.0f;

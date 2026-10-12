@@ -14,15 +14,15 @@ struct Struct_10BA0080
     Class_10E8C008** Items;
 };
 
-// FUNCTION: 0x10B9FBE0 ?FUN_10b9fbe0@Class_10B9FBE0@@QAEXXZ
-void Class_10B9FBE0::FUN_10b9fbe0()
+// FUNCTION: 0x10B9FBE0 ?Free@Class_10B9FBE0@@QAEXXZ
+void Class_10B9FBE0::Free()
 {
-    FUN_10b9f620(0);
-    if (Unknown04)
+    Resize(0);
+    if (m_Capacity)
     {
-        GetAllocator()->Virtual5(Unknown08);
-        Unknown08 = 0;
-        Unknown04 = 0;
+        GetAllocator()->Virtual5(m_Data);
+        m_Data = 0;
+        m_Capacity = 0;
     }
 }
 

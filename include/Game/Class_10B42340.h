@@ -8,13 +8,13 @@ class Class_10B42340
 public:
     void FUN_10b42300(int A, int B);
     void FUN_10b425b0(float A);
-    Class_10B42340* FUN_10b42340(int A, int B);
+    Class_10B42340* Init(int A, int B);
 
     int Unknown00;
     int Unknown04;
-    int Unknown08;
+    int m_Count;
     int Unknown0C;
-    int Unknown10;
+    int m_Entries;
     float Unknown14;
 };
 

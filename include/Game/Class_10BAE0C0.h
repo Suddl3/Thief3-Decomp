@@ -6,12 +6,12 @@
 class Class_10BAE0C0
 {
 public:
-    void FUN_10badab0(int Count);
-    void FUN_10bae0c0();
+    void Resize(int Count);
+    void Free();
 
-    int Unknown00;
-    int Unknown04;
-    void* Unknown08;
+    int m_Count;
+    int m_CapacityBytes;
+    void* m_Data;
 };
 
 #endif // GAME_CLASS_10BAE0C0_H

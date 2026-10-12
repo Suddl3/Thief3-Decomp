@@ -28,14 +28,14 @@ struct Struct_10D9E5E0_Param
 
 Class_10D9B090* FUN_10d9dcb0();
 
-// FUNCTION: 0x10B8CC90 ?FUN_10b8cc90@Class_10B8C810@@QAEXXZ
-void Class_10B8C810::FUN_10b8cc90()
+// FUNCTION: 0x10B8CC90 ?EnterSingleMode@Class_10B8C810@@QAEXXZ
+void Class_10B8C810::EnterSingleMode()
 {
-    if (!Unknown24 && !Unknown19)
+    if (!m_SingleMode && !Unknown19)
     {
-        FUN_10b8c810();
-        FUN_10d9dcb0()->FUN_10d9e490(Unknown20);
-        Unknown24 = true;
-        Unknown20->Virtual18(-1.0f);
+        Clear();
+        FUN_10d9dcb0()->FUN_10d9e490(m_Single);
+        m_SingleMode = true;
+        m_Single->Virtual18(-1.0f);
     }
 }

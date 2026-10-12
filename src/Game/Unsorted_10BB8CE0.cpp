@@ -9,5 +9,5 @@ void Class_10BB8CE0::FUN_10bb8ce0()
 {
     Unknown334 = false;
     Unknown335 = false;
-    static_cast<Class_10C01CE0*>(Unknown08->FUN_10ba9ec0())->FUN_10c01ce0();
+    static_cast<Class_10C01CE0*>(Unknown08->FUN_10ba9ec0())->RemoveAll();
 }

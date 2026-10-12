@@ -4,7 +4,7 @@
 class Class_10A63340
 {
 public:
-    void FUN_10a63340(int Index);
+    void EraseAt(int Index);
 };
 
 class Object_10A63310
@@ -42,5 +42,5 @@ public:
 void Class_10E6AC50::RemoveItemAt(int Index)
 {
     m_Items[Index]->Virtual1(0);
-    m_Count.FUN_10a63340(Index);
+    m_Count.EraseAt(Index);
 }

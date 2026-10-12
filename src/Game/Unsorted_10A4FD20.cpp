@@ -15,5 +15,5 @@ public:
 // FUNCTION: 0x10A4FD20 ??1Class_10A4FD00@@QAE@XZ
 Class_10A4FD00::~Class_10A4FD00()
 {
-    Unknown04.FUN_10a4fc00(0);
+    Unknown04.Empty(0);
 }

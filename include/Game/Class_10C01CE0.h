@@ -6,8 +6,8 @@
 class Class_10C01CE0
 {
 public:
-    void FUN_10c01ce0();
-    void FUN_10c01c10(int A);
+    void RemoveAll();
+    void RemoveEntry(int A);
 
     int Unknown00;
 };

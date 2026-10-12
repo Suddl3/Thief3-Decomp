@@ -19,11 +19,11 @@ struct Item_10C4F870
 class Class_10C4EDA0
 {
 public:
-    void FUN_10a550b0(int Count);
+    void Resize(int Count);
 
-    int Unknown00;
+    int m_Count;
     int Unknown04;
-    Item_10C4F870* Unknown08;
+    Item_10C4F870* m_Items;
 };
 
 class Class_10C4F870
@@ -91,8 +91,8 @@ int Class_10C4F870::FUN_10c4f870(const Struct_10C4F870& A, float B)
     Item.Unknown04 = A;
     Item.Unknown10 = B;
     Class_10C4EDA0* Array = &Unknown38;
-    int Index = Array->Unknown00;
-    Array->FUN_10a550b0(Index + 1);
-    Array->Unknown08[Index] = Item;
+    int Index = Array->m_Count;
+    Array->Resize(Index + 1);
+    Array->m_Items[Index] = Item;
     return Item.Unknown00;
 }

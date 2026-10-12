@@ -12,13 +12,13 @@ class Class_10C39220
 public:
     virtual ~Class_10C39220();
 
-    bool FUN_10c39220(int A);
+    bool GetCurrent(int A);
     int FUN_10c3c2c0(int A);
     bool FUN_10c38810();
-    void FUN_10c39d90();
+    void MoveToCurrent();
 
     char Pad04[0x24];
-    Struct_10C39220 Unknown28;
+    Struct_10C39220 m_FixedEntry;
     char Unknown34[0x14];
     Class_10C39D90_Unknown48* Unknown48;
     char Unknown4C[0x1C];
@@ -27,12 +27,12 @@ public:
     int Unknown80;
     int Unknown84;
     char Unknown88[0x18];
-    int UnknownA0;
+    int m_Count;
     char UnknownA4[4];
-    Struct_10C39220* UnknownA8;
-    int UnknownAC;
+    Struct_10C39220* m_Entries;
+    int m_Index;
     char UnknownB0[0x4C];
-    int UnknownFC;
+    int m_Mode;
 };
 
 #endif // GAME_CLASS_10C39220_H

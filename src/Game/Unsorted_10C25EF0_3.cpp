@@ -27,6 +27,6 @@ void Class_10C25EB0::FUN_10c25ff0(char Value)
         Class_10B9FBE0* Array = &Unknown00->Unknown10;
         FUN_10c25ef0(Array);
         int Index = FUN_10b0fdb0() * X + Y;
-        Array->Unknown08[Index] = Value;
+        Array->m_Data[Index] = Value;
     }
 }

@@ -12,10 +12,10 @@ struct Item_10B197E0
     BITFIELD Unknown18 : 1;
 };
 
-// FUNCTION: 0x10B19820 ?FUN_10b19820@Class_10B197E0@@QAEXABV1@@Z
-void Class_10B197E0::FUN_10b19820(const Class_10B197E0& Other)
+// FUNCTION: 0x10B19820 ?CopyFrom@Class_10B197E0@@QAEXABV1@@Z
+void Class_10B197E0::CopyFrom(const Class_10B197E0& Other)
 {
-    FUN_10b19550(Other.Unknown00);
-    for (int i = 0; i < Unknown00; i++)
-        Unknown08[i] = Other.Unknown08[i];
+    FUN_10b19550(Other.m_Count);
+    for (int i = 0; i < m_Count; i++)
+        m_Items[i] = Other.m_Items[i];
 }

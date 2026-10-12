@@ -12,5 +12,5 @@ void Class_10E7AAE8::FUN_10b26970(int A, int B)
     for (int i = 0; i < Unknown08; i++)
         Unknown10[i]->FUN_10b42300(A, B);
     FUN_10b42920()->FUN_10b42650(A, B);
-    FUN_10b42920()->FUN_10b42640();
+    FUN_10b42920()->Clear();
 }

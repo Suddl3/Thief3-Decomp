@@ -12,7 +12,7 @@ class Class_10E8D7B8
 public:
     virtual void FUN_10bad9b0(Class_10A68D20* Owner);
 
-    Class_10E8D7B8* FUN_10bad970(Struct_10BAD970* A, int* B, int C);
+    Class_10E8D7B8* Init(Struct_10BAD970* A, int* B, int C);
 
     int Unknown04;
     Struct_10BAD970 Unknown08;

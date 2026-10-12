@@ -82,7 +82,7 @@ void Class_10E95780::FUN_10be2b90(int A)
             Result->FUN_10bf7f90(0, 1);
     }
     FUN_10be2a70();
-    ((Class_10C01CE0*)Unknown04->Unknown08->FUN_10ba9ec0())->FUN_10c01ce0();
+    ((Class_10C01CE0*)Unknown04->Unknown08->FUN_10ba9ec0())->RemoveAll();
     Unknown04->FUN_10bb8300();
     DAT_10ff667c->Unknown28->FUN_10bfb8d0(3);
 }

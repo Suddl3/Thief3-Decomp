@@ -35,13 +35,13 @@ public:
     virtual int Virtual6(int A, int B, int* C);
 };
 
-// FUNCTION: 0x1094E7A0 ?FUN_1094e7a0@Class_1094E7A0@@QAEHH@Z
-int Class_1094E7A0::FUN_1094e7a0(int A)
+// FUNCTION: 0x1094E7A0 ?GetHandleValue@Class_1094E7A0@@QAEHH@Z
+int Class_1094E7A0::GetHandleValue(int A)
 {
     int Result = 0;
     if (Unknown114[DAT_10f2c720])
     {
-        int Handle = Unknown108[Unknown110].Unknown20;
+        int Handle = m_Slots[m_CurrentSlot].Unknown20;
         if (Unknown114[DAT_10f2c720]->Virtual6(0, Handle, &Result) < 0)
             return 0;
     }

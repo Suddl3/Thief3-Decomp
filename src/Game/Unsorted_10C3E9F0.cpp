@@ -10,13 +10,13 @@ void Class_10E9BB80::FUN_10c3e9f0(int p1, int* p2, int* p3)
     *p3 = 4;
 }
 
-// FUNCTION: 0x10C3EA90 ?FUN_10c3ea90@Class_10C3EA90@@QAEXXZ
-void Class_10C3EA90::FUN_10c3ea90()
+// FUNCTION: 0x10C3EA90 ?Release@Class_10C3EA90@@QAEXXZ
+void Class_10C3EA90::Release()
 {
-    FUN_10c3ea10(0x40);
-    ::operator delete(Unknown14);
-    Unknown04 = 0;
-    Unknown0C = 0;
-    Unknown14 = 0;
-    Unknown00 = 0;
+    Reset(0x40);
+    ::operator delete(m_Buckets);
+    m_Count = 0;
+    m_BucketCount = 0;
+    m_Buckets = 0;
+    m_Collisions = 0;
 }

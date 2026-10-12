@@ -8,16 +8,16 @@ struct Struct_10D9E5E0_Param;
 class Class_10B8C7B0
 {
 public:
-    void FUN_10b8c7b0();
-    void FUN_10b8cc60();
+    void Refresh();
+    void ExitSingleMode();
 
-    int Unknown00;
+    int m_EntryCount;
     char Unknown04[4];
-    Struct_10D9E5E0_Param** Unknown08;
+    Struct_10D9E5E0_Param** m_Entries;
     int Unknown0C;
     char Unknown10[0x10];
-    Struct_10D9E5E0_Param* Unknown20;
-    bool Unknown24;
+    Struct_10D9E5E0_Param* m_Single;
+    bool m_SingleMode;
     char Pad25[0x3];
 };
 

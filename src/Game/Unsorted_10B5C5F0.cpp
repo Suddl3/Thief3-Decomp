@@ -147,7 +147,7 @@ void Class_10B5E2E0::FUN_10b5e2e0()
         Class_10B197E0 Tmp = FUN_10b1b600()->FUN_10b1a0c0(I);
         Unknown1E8.FUN_10b5cee0(Tmp);
     }
-    int Count = Unknown1E8.Unknown00;
+    int Count = Unknown1E8.m_Count;
     int Limit = Unknown1D0;
     bool Flag = false;
     int Diff = 0;

@@ -21,15 +21,15 @@ void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 class Class_10BAA580 : public Class_10C7D570
 {
 public:
-    int FUN_10babe80();
+    int GetCachedValue();
     Class_109BC840* FUN_10baa580();
-    int* FUN_10babdd0(int* Out);
+    int* GetCachedIndex(int* Out);
     int* FUN_10babab0(int* Out, Class_109081E0* Name);
 
     char Pad01[0x8b];
-    int Unknown8C;
+    int m_CachedValue;
     char Unknown90[0x24];
-    bool UnknownB4;
+    bool m_CacheValid;
     char PadB5[0x3];
 };
 

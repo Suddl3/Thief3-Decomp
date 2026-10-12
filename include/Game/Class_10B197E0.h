@@ -17,20 +17,20 @@ public:
         FUN_10b19550(0);
         if (Unknown04)
         {
-            GetAllocator()->Virtual5(Unknown08);
-            Unknown08 = 0;
+            GetAllocator()->Virtual5(m_Items);
+            m_Items = 0;
             Unknown04 = 0;
         }
     }
 
     void FUN_10b19550(int Count);
-    void FUN_10b197e0();
-    void FUN_10b19820(const Class_10B197E0& Other);
+    void Free();
+    void CopyFrom(const Class_10B197E0& Other);
     void FUN_10b5cee0(const Class_10B197E0& Other);
 
-    int Unknown00;
+    int m_Count;
     int Unknown04;
-    Item_10B197E0* Unknown08;
+    Item_10B197E0* m_Items;
 };
 
 #endif // GAME_CLASS_10B197E0_H

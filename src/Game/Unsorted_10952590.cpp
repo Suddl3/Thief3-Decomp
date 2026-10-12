@@ -2,28 +2,28 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_109523D0.h"
 
-// FUNCTION: 0x10952590 ?FUN_10952590@Class_109523D0@@QAEXXZ
-void Class_109523D0::FUN_10952590()
+// FUNCTION: 0x10952590 ?UpdateState@Class_109523D0@@QAEXXZ
+void Class_109523D0::UpdateState()
 {
     int Key;
     int Result = FUN_10952410(&Key);
-    Unknown28 = 0;
-    if (FUN_109523d0(6) || FUN_109523d0(0x84))
+    m_State = 0;
+    if (HasAllBits(6) || HasAllBits(0x84))
     {
-        Unknown28 = 3;
+        m_State = 3;
         return;
     }
-    if ((FUN_109523d0(0x42) || FUN_109523d0(0xc0)) && Result == 2)
+    if ((HasAllBits(0x42) || HasAllBits(0xc0)) && Result == 2)
     {
-        Unknown28 = 0;
+        m_State = 0;
         return;
     }
-    if (!FUN_109523d0(2) && !FUN_109523d0(0x80))
+    if (!HasAllBits(2) && !HasAllBits(0x80))
     {
-        if (!FUN_109523d0(4))
+        if (!HasAllBits(4))
             return;
-        Unknown28 = 1;
+        m_State = 1;
         return;
     }
-    Unknown28 = 2;
+    m_State = 2;
 }

@@ -4,8 +4,8 @@
 #include "Game/Class_10C01140_Node.h"
 #include "Game/Class_10C01FC0.h"
 
-// FUNCTION: 0x10C016B0 ?FUN_10c016b0@Class_10C01FC0@@QAEXH@Z
-void Class_10C01FC0::FUN_10c016b0(int Size)
+// FUNCTION: 0x10C016B0 ?Clear@Class_10C01FC0@@QAEXH@Z
+void Class_10C01FC0::Clear(int Size)
 {
     for (int i = 0; i < Unknown0C; i++)
     {

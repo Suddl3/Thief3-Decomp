@@ -14,17 +14,17 @@ public:
     void FUN_10b42300(int A, int B);
 
     char Unknown00[8];
-    int Unknown08;
+    int m_Count;
     char Unknown0C[4];
-    Struct_10B42300** Unknown10;
+    Struct_10B42300** m_Entries;
 };
 
 // FUNCTION: 0x10B42300 ?FUN_10b42300@Class_10B42340@@QAEXHH@Z
 void Class_10B42340::FUN_10b42300(int A, int B)
 {
-    for (int i = 0; i < Unknown08; i++)
+    for (int i = 0; i < m_Count; i++)
     {
-        Struct_10B42300* Entry = Unknown10[i];
+        Struct_10B42300* Entry = m_Entries[i];
         for (int j = Entry->Unknown968; j != Entry->Unknown96C; j++)
         {
             if (j + 1 == 200)

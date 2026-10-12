@@ -30,5 +30,5 @@ public:
 void Class_10E893B0::FUN_10b876d0()
 {
     if (Unknown78)
-        Unknown78->FUN_10b8c810();
+        Unknown78->Clear();
 }

@@ -27,14 +27,14 @@ Struct_10B8C9B0* Class_10B8C9B0::FUN_10b8c9b0(int Value)
     return 0;
 }
 
-// FUNCTION: 0x10B8CC60 ?FUN_10b8cc60@Class_10B8C7B0@@QAEXXZ
-void Class_10B8C7B0::FUN_10b8cc60()
+// FUNCTION: 0x10B8CC60 ?ExitSingleMode@Class_10B8C7B0@@QAEXXZ
+void Class_10B8C7B0::ExitSingleMode()
 {
-    if (Unknown24)
+    if (m_SingleMode)
     {
-        FUN_10d9dcb0()->FUN_10d9e5e0(Unknown20);
-        Unknown24 = false;
-        FUN_10b8c7b0();
+        FUN_10d9dcb0()->FUN_10d9e5e0(m_Single);
+        m_SingleMode = false;
+        Refresh();
     }
 }
 

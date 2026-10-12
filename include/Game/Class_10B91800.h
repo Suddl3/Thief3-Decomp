@@ -8,8 +8,8 @@
 class Class_10B91800 : public Class_10B912E0
 {
 public:
-    Class_10B91800* FUN_10b91800(int A);
-    void FUN_10b91320(int A);
+    Class_10B91800* Assign(int A);
+    void CopyFrom(int A);
 };
 
 #endif // GAME_CLASS_10B91800_H

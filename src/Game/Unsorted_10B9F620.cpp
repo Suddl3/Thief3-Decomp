@@ -6,41 +6,41 @@
 
 Class_10905A90_Member* GetAllocator();
 
-// FUNCTION: 0x10B9F620 ?FUN_10b9f620@Class_10B9FBE0@@QAEXH@Z
-void Class_10B9FBE0::FUN_10b9f620(int NewCount)
+// FUNCTION: 0x10B9F620 ?Resize@Class_10B9FBE0@@QAEXH@Z
+void Class_10B9FBE0::Resize(int NewCount)
 {
-    int OldCount = Unknown00;
-    int Capacity = !Unknown08 ? 0 : Unknown04;
+    int OldCount = m_Count;
+    int Capacity = !m_Data ? 0 : m_Capacity;
     GetAllocator()->Virtual8(0, 0);
     if (NewCount > Capacity)
     {
         int NewCapacity = NewCount;
         if (Capacity)
             NewCapacity = (NewCount & ~15) + 16;
-        Unknown08 = (char*)GetAllocator()->Virtual3(Unknown08, NewCapacity, 0, 0, 0, 0);
-        Unknown04 = NewCapacity;
+        m_Data = (char*)GetAllocator()->Virtual3(m_Data, NewCapacity, 0, 0, 0, 0);
+        m_Capacity = NewCapacity;
     }
     else if (NewCount <= Capacity - 16)
     {
         if (NewCount == 0)
         {
-            GetAllocator()->Virtual5(Unknown08);
-            Unknown08 = 0;
-            Unknown04 = 0;
+            GetAllocator()->Virtual5(m_Data);
+            m_Data = 0;
+            m_Capacity = 0;
         }
         else
         {
             int NewCapacity = (NewCount & ~15) + 16;
-            Unknown08 = (char*)GetAllocator()->Virtual3(Unknown08, NewCapacity, 0, 0, 0, 0);
-            Unknown04 = NewCapacity;
+            m_Data = (char*)GetAllocator()->Virtual3(m_Data, NewCapacity, 0, 0, 0, 0);
+            m_Capacity = NewCapacity;
         }
     }
     for (int i = OldCount; i < NewCount; i++)
     {
-        char* Element = Unknown08 + i;
+        char* Element = m_Data + i;
         if (Element)
             *Element = 0;
     }
     GetAllocator()->Virtual9();
-    Unknown00 = NewCount;
+    m_Count = NewCount;
 }

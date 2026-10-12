@@ -15,7 +15,7 @@ public:
 
     Class_10E9AFA4(int A, int B, int C);
 
-    Class_10E9AFA4* FUN_10c3cf70(int A, int B, int C);
+    Class_10E9AFA4* Init(int A, int B, int C);
 
     float Unknown04;
     float Unknown08;

@@ -11,12 +11,12 @@ class Class_10913D70;
 class Class_10C08E30
 {
 public:
-    void FUN_10c08e30(int Item);
-    void FUN_10c09200(int A, Class_10913D70* B, int C, int* D, int E);
+    void AddUnique(int Item);
+    void AddItem(int A, Class_10913D70* B, int C, int* D, int E);
 
     char Unknown00[0x8];
-    Class_10C08E90 Unknown08;
-    cIntArray Unknown14;
+    Class_10C08E90 m_Items;
+    cIntArray m_ItemIds;
 };
 
 #endif // GAME_CLASS_10C08E30_H

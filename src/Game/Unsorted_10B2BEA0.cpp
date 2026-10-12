@@ -119,13 +119,13 @@ public:
 class Class_10A52EE0
 {
 public:
-    Class_10B2BC90_Unknown* FUN_10a52ee0(int Index);
+    Class_10B2BC90_Unknown* GetItem(int Index);
     void FUN_10b2bf10(Class_10B2BF10_Param0* Target, int Index, int Unknown);
 
     char Unknown00[0xB8];
-    int UnknownB8;
+    int m_Count;
     char UnknownBC[4];
-    int* UnknownC0;
+    int* m_Items;
     char UnknownC4[0x58];
     int Unknown11C;
     char Unknown120[8];
@@ -138,7 +138,7 @@ void Class_10A52EE0::FUN_10b2bf10(Class_10B2BF10_Param0* Target, int Index, int 
     Object_10B2BF10* Obj = new(0, 0, 0, 0, 0) Object_10B2BF10;
     char Buffer[12];
     FVector Vector;
-    Class_10B2BC90_Unknown* Elem = FUN_10a52ee0(Unknown128[Index]);
+    Class_10B2BC90_Unknown* Elem = GetItem(Unknown128[Index]);
     if (Elem)
         Vector = *Elem->Virtual8();
     else

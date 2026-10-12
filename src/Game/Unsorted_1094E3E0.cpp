@@ -60,11 +60,11 @@ struct Struct_1094E5D0_Item
     Object_1094E5D0* Unknown08;
 };
 
-// FUNCTION: 0x1094E5D0 ?FUN_1094e5d0@Class_1094E7A0@@QAEHHH@Z
-int Class_1094E7A0::FUN_1094e5d0(int A, int B)
+// FUNCTION: 0x1094E5D0 ?GetItemValue@Class_1094E7A0@@QAEHHH@Z
+int Class_1094E7A0::GetItemValue(int A, int B)
 {
     int Result = 0;
-    Struct_1094E7A0* Slot = &Unknown108[A];
+    Struct_1094E7A0* Slot = &m_Slots[A];
     if (B < Slot->Unknown14)
     {
         Struct_1094E5D0_Item* Item = &Slot->Unknown10[B];

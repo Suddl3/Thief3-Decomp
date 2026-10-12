@@ -54,12 +54,12 @@ public:
 class Class_10C01CE0 : public cIntArray
 {
 public:
-    void FUN_10c01ce0();
-    void FUN_10c01c10(int A);
+    void RemoveAll();
+    void RemoveEntry(int A);
 };
 
-// FUNCTION: 0x10C01C10 ?FUN_10c01c10@Class_10C01CE0@@QAEXH@Z
-void Class_10C01CE0::FUN_10c01c10(int A)
+// FUNCTION: 0x10C01C10 ?RemoveEntry@Class_10C01CE0@@QAEXH@Z
+void Class_10C01CE0::RemoveEntry(int A)
 {
     Class_10C00BA0* Entry = (Class_10C00BA0*)Data[A];
     bool Empty = Entry->Unknown08 == 0;

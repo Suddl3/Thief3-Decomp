@@ -11,7 +11,7 @@ public:
 
     Class_10E89A8C(int Value) : Unknown04(Value) {}
 
-    Class_10E89A8C* FUN_10b92bf0(int p1);
+    Class_10E89A8C* Init(int p1);
 
     int Unknown04;
 };

@@ -9,17 +9,17 @@ class Class_10953590;
 class Class_10951900
 {
 public:
-    void FUN_10951660();
-    void FUN_10951900(int* A, int B);
+    void Reset();
+    void Acquire(int* A, int B);
 
     char Unknown00[4];
-    int Unknown04;
+    int m_Flags;
     char Unknown08[0x10];
     int Unknown18;
     char Unknown1C[4];
-    Class_10953590* Unknown20;
+    Class_10953590* m_Handle;
     Class_109514C0* Unknown24;
-    int Unknown28;
+    int m_Mode;
 };
 
 #endif // GAME_CLASS_10951900_H

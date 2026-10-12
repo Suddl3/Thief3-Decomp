@@ -50,7 +50,7 @@ void Class_10E89210::FUN_10b82130()
 {
     Class_10B8C810* Owner = Unknown78;
     if (Owner)
-        Owner->FUN_10b8c810();
+        Owner->Clear();
     if (Unknown8C && Unknown8C->Unknown08)
     {
         Class_10D9B090* Manager = FUN_10d9dcb0();

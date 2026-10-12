@@ -26,7 +26,7 @@ void Class_109535D0::FUN_109535d0()
         if (Unknown90[i].Unknown0C)
         {
             Class_10955C30* Obj = &Unknown90[i];
-            if (Obj->Unknown18 == 0 || ((Class_109535D0_Unknown18*)Obj->Unknown18)->Unknown30 == 0)
+            if (Obj->m_Handle == 0 || ((Class_109535D0_Unknown18*)Obj->m_Handle)->Unknown30 == 0)
             {
                 if (!FUN_10939410(i))
                 {
@@ -39,7 +39,7 @@ void Class_109535D0::FUN_109535d0()
         }
         else
         {
-            Unknown90[i].FUN_10955c30();
+            Unknown90[i].Destroy();
             if (Virtual7(i))
                 Virtual9(i);
             Unknown30 &= ~(1 << i);

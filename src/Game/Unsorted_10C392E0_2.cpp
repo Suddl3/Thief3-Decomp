@@ -235,46 +235,46 @@ int Class_10C399C0::FindTarget()
     return 0;
 }
 
-// FUNCTION: 0x10C39C90 ?FUN_10c39c90@Class_10C38E40@@QAEXXZ
-void Class_10C38E40::FUN_10c39c90()
+// FUNCTION: 0x10C39C90 ?Advance@Class_10C38E40@@QAEXXZ
+void Class_10C38E40::Advance()
 {
-    Class_10943600* List = &Unknown0A0;
+    Class_10943600* List = &m_Output;
     List->Unknown00 = 0;
     Class_10C20BC0* Pending = Unknown0B4;
     Unknown0AC = 0;
     if (Pending)
         Pending->FUN_10c20bc0();
-    if (Unknown88 > ++Unknown0B0)
+    if (m_ObjectCount > ++m_Index)
     {
-        Class_10C80360* Obj = Unknown90[Unknown0B0];
+        Class_10C80360* Obj = m_Objects[m_Index];
         if (Obj->FUN_10c80360() & 8)
-            FUN_10c38e40((int)Obj);
-        else if (Unknown88 > Unknown0B0 + 1)
+            Rebind((int)Obj);
+        else if (m_ObjectCount > m_Index + 1)
         {
-            Obj = Unknown90[Unknown0B0 + 1];
+            Obj = m_Objects[m_Index + 1];
             if (Obj->FUN_10c80360() & 8)
-                FUN_10c38e40((int)Obj);
+                Rebind((int)Obj);
         }
     }
-    if (Unknown0B0 < Unknown94)
+    if (m_Index < m_ItemCount)
     {
         Unknown3C = ((Class_10C39C90_Result*)Unknown48->Virtual34()->FUN_10c7d570())->Unknown2C;
-        Item_10943600* Src = &Unknown9C[Unknown0B0];
+        Item_10943600* Src = &m_Items[m_Index];
         int Count = List->Unknown00;
         List->FUN_10da4f50(Count + 1);
         List->Unknown08[Count] = *Src;
     }
 }
 
-// FUNCTION: 0x10C39D90 ?FUN_10c39d90@Class_10C39220@@QAEXXZ
-void Class_10C39220::FUN_10c39d90()
+// FUNCTION: 0x10C39D90 ?MoveToCurrent@Class_10C39220@@QAEXXZ
+void Class_10C39220::MoveToCurrent()
 {
     Struct_10C05A80 Pos;
     Class_10C39D90_Result39* Obj = Unknown48->Virtual39();
     if (Obj != 0)
     {
         Class_10C39D90_Result12* Sub = Obj->Virtual12();
-        if (Sub != 0 && FUN_10c39220((int)&Pos) == 1)
+        if (Sub != 0 && GetCurrent((int)&Pos) == 1)
         {
             Struct_10C05A80 Copy = *Sub->Virtual21();
             if (FUN_10c05a80(&Pos, &Copy) < DAT_10e49684)
@@ -283,7 +283,7 @@ void Class_10C39220::FUN_10c39d90()
             }
         }
     }
-    if (!FUN_10c39220((int)&Pos))
+    if (!GetCurrent((int)&Pos))
     {
         FUN_10c37d30(Unknown48, Unknown84, 1, -1.0f, 1.0f, 1, 1, Struct_10C37D30());
         return;
