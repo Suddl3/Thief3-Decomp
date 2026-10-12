@@ -16,27 +16,27 @@ class Class_10E9B168
 public:
     virtual void Virtual0();
     virtual void Virtual1();
-    virtual void FUN_10c3d160(Object_10C3D160* Obj);
+    virtual void CopyFrom(Object_10C3D160* Obj);
     virtual void FUN_10c3de20(int A);
 
     char Unknown04[0x18];
     FVector Unknown1C;
-    float Unknown28;
+    float m_Range;
     bool Unknown2C;
     char Unknown2D[0xF];
     int Unknown3C;
     int Unknown40;
     int Unknown44;
     char Unknown48[0xC];
-    int Unknown54;
+    int m_Handle;
     char Unknown58[0xC];
-    Class_109BBBA0* Unknown64;
+    Class_109BBBA0* m_Manager;
 };
 
-// FUNCTION: 0x10C3D160 ?FUN_10c3d160@Class_10E9B168@@UAEXPAVObject_10C3D160@@@Z
-void Class_10E9B168::FUN_10c3d160(Object_10C3D160* Obj)
+// FUNCTION: 0x10C3D160 ?CopyFrom@Class_10E9B168@@UAEXPAVObject_10C3D160@@@Z
+void Class_10E9B168::CopyFrom(Object_10C3D160* Obj)
 {
     Unknown1C = *Obj->Virtual21();
-    Unknown28 = Obj->Virtual23();
+    m_Range = Obj->Virtual23();
     Unknown2C = Obj->Virtual25();
 }

@@ -73,14 +73,14 @@ public:
     virtual int FUN_10b4cd30(Class_1098E330* A);
 
     char Unknown04[0xC];
-    bool Unknown10;
+    bool m_AnimationEnded;
 };
 
 // FUNCTION: 0x10B4CD30 ?FUN_10b4cd30@Class_10E81590@@UAEHPAVClass_1098E330@@@Z
 int Class_10E81590::FUN_10b4cd30(Class_1098E330* A)
 {
     DAT_10f3a3d8->Unknown13C->FUN_10ac92f0();
-    if (Unknown10)
+    if (m_AnimationEnded)
         return 0x17;
     if (!A->FUN_10b22000())
     {

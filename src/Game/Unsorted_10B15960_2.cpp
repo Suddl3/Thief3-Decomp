@@ -9,7 +9,7 @@ extern const char DAT_10e79098[];
 class WindowManager : public Class_109E6D60
 {
 public:
-    int FUN_109e5960(const Class_109081E0& Name);
+    int FindWindowByName(const Class_109081E0& Name);
 };
 
 class Class_10B15CC0 : public WindowManager
@@ -24,7 +24,7 @@ bool Class_10B15CC0::FUN_10b15cc0()
     int Window;
     {
         Class_109081E0 Name(DAT_10e79098);
-        Window = FUN_109e5960(Name);
+        Window = FindWindowByName(Name);
     }
     if (Window && !FUN_109e6d60(Window))
     {

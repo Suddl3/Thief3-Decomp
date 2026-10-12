@@ -23,7 +23,7 @@ class Class_10BBB410
 {
 public:
     char Unknown00[8];
-    Class_10BA9F70* Unknown08;
+    Class_10BA9F70* m_Owner;
 };
 
 class Class_10E96810 : public Class_10E95F40
@@ -43,6 +43,6 @@ Class_10E96810::Class_10E96810(int A, int B)
 {
     *(void**)this = DAT_10e96810;
     Unknown6C = 0;
-    Unknown04->Unknown08->FUN_10ba9f70(1);
-    Unknown68 = Unknown04->Unknown08->FUN_10dbd510()->GetFloat(0x40100717);
+    Unknown04->m_Owner->FUN_10ba9f70(1);
+    Unknown68 = Unknown04->m_Owner->FUN_10dbd510()->GetFloat(0x40100717);
 }

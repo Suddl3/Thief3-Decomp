@@ -10,7 +10,7 @@ public:
     virtual void Virtual3();
     virtual int Virtual4();
 
-    void FUN_10b3ea80();
+    void Reset();
 };
 
 class Class_10E7ED00 : public Class_10B3ED20
@@ -28,6 +28,6 @@ public:
 // FUNCTION: 0x10B3EFE0 ?FUN_10b3efe0@Class_10E7ED00@@UAEXH@Z
 void Class_10E7ED00::FUN_10b3efe0(int p1)
 {
-    FUN_10b3ea80();
+    Reset();
     Virtual4();
 }

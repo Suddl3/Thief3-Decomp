@@ -13,10 +13,10 @@ extern void* DAT_10e89720[];
 class Class_10E89720
 {
 public:
-    Class_10E89720() : VTable(DAT_10e89720), Unknown04(3) {}
+    Class_10E89720() : VTable(DAT_10e89720), m_StateIndex(3) {}
 
     void** VTable;
-    int Unknown04;
+    int m_StateIndex;
 };
 
 // FUNCTION: 0x10B8EC50 ?FUN_10b8ec50@Class_10E88D3C@@UAEPAVClass_10E89720@@HH@Z

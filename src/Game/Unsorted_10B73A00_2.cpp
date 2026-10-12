@@ -32,7 +32,7 @@ class Class_10B73810
 public:
     virtual void Virtual0();
 
-    void FUN_10b737b0();
+    void ApplyValues();
 };
 
 class Struct_10B73810
@@ -338,7 +338,7 @@ void Class_10B73C30::FUN_10b73a00(bool Param)
     {
         for (int i = 0; i < Unknown19C; i++)
             Unknown1B0[i] = GetOptions()->Get(Unknown1A4[i]->Unknown00);
-        Class_10B73810::FUN_10b737b0();
+        Class_10B73810::ApplyValues();
         if (Virtual53())
             GetOptions()->FUN_10ab5a90();
     }

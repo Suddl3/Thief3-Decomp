@@ -25,13 +25,13 @@ extern Class_10923F30_Element** DAT_10f31988;
 class Class_10E4AA80
 {
 public:
-    virtual void FUN_1094cf80(int A);
+    virtual void Update(int A);
 
     void FUN_1094ca70(int A);
     float FUN_1094c700();
     void FUN_1094b730();
     void FUN_10948e80();
-    void FUN_10949060(int A);
+    void IntegrateOffsets(int A);
     void FUN_1094cfd0(int A);
     void FUN_1094d500(int A);
 

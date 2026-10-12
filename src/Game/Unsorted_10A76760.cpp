@@ -28,7 +28,7 @@ public:
     int Unknown1C;
     int Unknown20;
     int Unknown24;
-    int Unknown28;
+    int m_Items;
     int Unknown2C;
     int Unknown30;
 };
@@ -89,7 +89,7 @@ Class_10E6BD68* Class_10E6BD68::FUN_10a796a0()
     Unknown1C = 0;
     Unknown20 = 0;
     Unknown24 = 0;
-    Unknown28 = 0;
+    m_Items = 0;
     Unknown2C = 0;
     Unknown30 = 0;
     return this;

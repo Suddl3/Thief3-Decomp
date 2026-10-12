@@ -19,22 +19,22 @@ public:
     virtual int Virtual5();
     virtual int Virtual6();
     virtual void Virtual7();
-    virtual void FUN_10c3ddd0();
+    virtual void Start();
 
     char Unknown04[4];
     Class_10C341B0* Unknown08;
     int Unknown0C;
     int Unknown10;
     char Unknown14[4];
-    bool Unknown18;
+    bool m_Active;
     char Unknown19[0x17];
     Class_10E9B168_Unknown30 Unknown30;
     char Unknown34[0x20];
-    int Unknown54;
+    int m_Handle;
     unsigned char Unknown58;
     char Unknown59[7];
     float Unknown60;
-    Class_109BBBA0* Unknown64;
+    Class_109BBBA0* m_Manager;
     char Unknown68[0x10];
     int Unknown78;
 };

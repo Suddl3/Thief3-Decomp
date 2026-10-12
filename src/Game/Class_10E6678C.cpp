@@ -6,7 +6,7 @@
 // FUNCTION: 0x10A3A3F0 ?FUN_10a3a3f0@Class_10E6678C@@UAEXXZ
 void Class_10E6678C::FUN_10a3a3f0()
 {
-    for (int i = 0; i < UnknownF4; i++)
-        UnknownFC[i]->Virtual2();
+    for (int i = 0; i < m_Count; i++)
+        m_Entries[i]->Virtual2();
     Unknown134 = 0;
 }

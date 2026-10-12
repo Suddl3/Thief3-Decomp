@@ -12,29 +12,29 @@ Class_10905A90_Member* GetAllocator();
 class Class_1090FD40
 {
 public:
-    int FUN_1090fd40(const Class_109081E0& Item);
+    int Add(const Class_109081E0& Item);
     int FUN_1090f160(const Class_109081E0& Item);
     void FUN_1090f2c0(int Count);
     void FUN_1090fd00();
     void FUN_10a37f80(int A, int B, int C);
-    void FUN_10a39200(int Index);
-    void FUN_10a391a0(int Index, const Class_109081E0& Value);
+    void RemoveAt(int Index);
+    void Insert(int Index, const Class_109081E0& Value);
     void FUN_10a5b5b0(int A, int B);
-    void FUN_10a5c560(int Index);
+    void RemoveUnordered(int Index);
     void Empty()
     {
         FUN_1090f2c0(0);
         if (Unknown04)
         {
-            GetAllocator()->Virtual5(Unknown08);
-            Unknown08 = 0;
+            GetAllocator()->Virtual5(m_Items);
+            m_Items = 0;
             Unknown04 = 0;
         }
     }
 
-    int Unknown00;
+    int m_Count;
     int Unknown04;
-    Class_109081E0* Unknown08;
+    Class_109081E0* m_Items;
 };
 
 // The pointee of cConversation's Unknown0C: slot 1 says whether to skip the item.
@@ -96,15 +96,15 @@ void cConversation::FUN_10a83ac0(Class_1090FD40* A)
             Class_10A83AC0_Unknown0C* Item = Unknown0C[i];
             if (A->FUN_1090f160(Item->Unknown10) == -1)
             {
-                int Count = A->Unknown00;
+                int Count = A->m_Count;
                 A->FUN_1090f2c0(Count + 1);
-                A->Unknown08[Count] = Item->Unknown10;
+                A->m_Items[Count] = Item->Unknown10;
             }
             if (A->FUN_1090f160(Item->Unknown1C) == -1)
             {
-                int Count = A->Unknown00;
+                int Count = A->m_Count;
                 A->FUN_1090f2c0(Count + 1);
-                A->Unknown08[Count] = Item->Unknown1C;
+                A->m_Items[Count] = Item->Unknown1C;
             }
         }
     }

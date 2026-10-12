@@ -16,8 +16,8 @@ public:
     ~Class_10E4A538();
 
     char FUN_10940970();
-    void FUN_10940c50();
-    void FUN_1093ffe0(int Width, int Height, Struct_1093FFE0* Out);
+    void Reset();
+    void BuildTextureMatrix(int Width, int Height, Struct_1093FFE0* Out);
 
     bool Unknown04;
     Class_109081E0 Unknown08[47];
@@ -30,7 +30,7 @@ public:
     int Unknown304;
     int Unknown308;
     int Unknown30C;
-    char Unknown310[0x40];
+    char m_TextureMatrix[0x40];
     int Unknown350;
     int Unknown354;
     int Unknown358;
@@ -53,7 +53,7 @@ Class_10E4A538::Class_10E4A538()
     Unknown04 = false;
     Unknown2FC = 0;
     Unknown350 = 0;
-    FUN_1093ffe0(0x100, 0x100, (Struct_1093FFE0*)Unknown310);
+    BuildTextureMatrix(0x100, 0x100, (Struct_1093FFE0*)m_TextureMatrix);
     Unknown354 = 0;
     Unknown358 = 0;
 }

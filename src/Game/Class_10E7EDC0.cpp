@@ -34,18 +34,18 @@ public:
     virtual void Virtual3();
     virtual int Virtual4();
 
-    void FUN_10b3ea80();
-    void FUN_10b3ed20();
+    void Reset();
+    void ResetIfPending();
 
     char Unknown04[0x48];
-    bool Unknown4C;
+    bool m_ResetPending;
 };
 
-// FUNCTION: 0x10B3ED20 ?FUN_10b3ed20@Class_10B3ED20@@QAEXXZ
-void Class_10B3ED20::FUN_10b3ed20()
+// FUNCTION: 0x10B3ED20 ?ResetIfPending@Class_10B3ED20@@QAEXXZ
+void Class_10B3ED20::ResetIfPending()
 {
-    if (Unknown4C)
-        FUN_10b3ea80();
+    if (m_ResetPending)
+        Reset();
 }
 
 // FUNCTION: 0x10B3FD90 ?FUN_10b3fd90@Class_10E7EDC0@@QAEPAV1@XZ

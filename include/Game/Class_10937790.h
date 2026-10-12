@@ -10,17 +10,17 @@ class Class_10937790
 {
 public:
     void FUN_10937790();
-    void FUN_10937430(void* A, void* B, void* C);
+    void SetTransforms(void* A, void* B, void* C);
     void FUN_10938ee0(Class_1091E3F0* Obj);
     void FUN_10938da0(void* A, Struct_10938DA0* B, void* C);
 
     char Unknown00[0x6FC];
     int Unknown6FC;
     char Pad700[0x3c];
-    char Unknown73C[0x40];
-    char Unknown77C[0x40];
-    char Unknown7BC[0x40];
-    char Unknown7FC[0x18];
+    char m_Projection[0x40];
+    char m_World[0x40];
+    char m_View[0x40];
+    char m_Viewport[0x18];
 };
 
 #endif // GAME_CLASS_10937790_H

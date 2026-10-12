@@ -30,42 +30,42 @@ public:
     int Unknown2C;
 };
 
-// FUNCTION: 0x10BAD9D0 ?FUN_10bad9d0@Class_10BAE080@@QAEXH@Z
-void Class_10BAE080::FUN_10bad9d0(int NewCount)
+// FUNCTION: 0x10BAD9D0 ?Resize@Class_10BAE080@@QAEXH@Z
+void Class_10BAE080::Resize(int NewCount)
 {
-    int OldCount = Unknown00;
-    int Capacity = !Unknown08 ? 0 : Unknown04 / sizeof(VisualSubsystem);
+    int OldCount = m_Count;
+    int Capacity = !m_Items ? 0 : m_CapacityBytes / sizeof(VisualSubsystem);
     GetAllocator()->Virtual8(0, 0);
     if (NewCount > Capacity)
     {
         int NewCapacity = NewCount;
         if (Capacity)
             NewCapacity = (NewCount & ~15) + 16;
-        void* Block = GetAllocator()->Virtual3(Unknown08, NewCapacity * sizeof(VisualSubsystem), 0, 0, 0, 0);
-        Unknown04 = NewCapacity * sizeof(VisualSubsystem);
-        Unknown08 = (VisualSubsystem*)Block;
+        void* Block = GetAllocator()->Virtual3(m_Items, NewCapacity * sizeof(VisualSubsystem), 0, 0, 0, 0);
+        m_CapacityBytes = NewCapacity * sizeof(VisualSubsystem);
+        m_Items = (VisualSubsystem*)Block;
     }
     else if (NewCount <= Capacity - 16)
     {
         if (NewCount == 0)
         {
-            GetAllocator()->Virtual5(Unknown08);
-            Unknown08 = 0;
-            Unknown04 = 0;
+            GetAllocator()->Virtual5(m_Items);
+            m_Items = 0;
+            m_CapacityBytes = 0;
         }
         else
         {
             int NewCapacity = (NewCount & ~15) + 16;
-            void* Block = GetAllocator()->Virtual3(Unknown08, NewCapacity * sizeof(VisualSubsystem), 0, 0, 0, 0);
-            Unknown04 = NewCapacity * sizeof(VisualSubsystem);
-            Unknown08 = (VisualSubsystem*)Block;
+            void* Block = GetAllocator()->Virtual3(m_Items, NewCapacity * sizeof(VisualSubsystem), 0, 0, 0, 0);
+            m_CapacityBytes = NewCapacity * sizeof(VisualSubsystem);
+            m_Items = (VisualSubsystem*)Block;
         }
     }
     for (int j = OldCount; j < NewCount; j++)
     {
-        VisualSubsystem* Element = Unknown08 + j;
+        VisualSubsystem* Element = m_Items + j;
         new ((EInternal*)Element) VisualSubsystem();
     }
     GetAllocator()->Virtual9();
-    Unknown00 = NewCount;
+    m_Count = NewCount;
 }

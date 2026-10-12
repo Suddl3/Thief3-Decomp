@@ -135,8 +135,8 @@ int Class_109E53B0::FUN_109e53b0(int A)
     return 0;
 }
 
-// FUNCTION: 0x109E55C0 ?FUN_109e55c0@Class_10E5B7C8@@QAEXPAVClass_109E55C0_Param@@@Z
-void Class_10E5B7C8::FUN_109e55c0(Class_109E55C0_Param* Param)
+// FUNCTION: 0x109E55C0 ?VisitParam@Class_10E5B7C8@@QAEXPAVClass_109E55C0_Param@@@Z
+void Class_10E5B7C8::VisitParam(Class_109E55C0_Param* Param)
 {
     Param->Virtual57();
     if (Param->Virtual54())
@@ -146,7 +146,7 @@ void Class_10E5B7C8::FUN_109e55c0(Class_109E55C0_Param* Param)
         {
             Class_109E55C0_Param* Child = List->Data[i];
             if (Child)
-                FUN_109e55c0(Child);
+                VisitParam(Child);
         }
     }
 }

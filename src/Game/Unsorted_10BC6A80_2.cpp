@@ -17,7 +17,7 @@ public:
 class Class_10BC9A50
 {
 public:
-    void FUN_10bc7f30();
+    void CheckDeathGrunt();
     void FUN_10bc7d70(Class_10E97B00* Name, int Flags, int Count, Class_109081E0* Out, bool Flag);
 
     char Unknown00[4];
@@ -30,8 +30,8 @@ inline Class_10E97B00* AddressOf(const Class_10E97B00& Object)
     return (Class_10E97B00*)&Object;
 }
 
-// FUNCTION: 0x10BC7F30 ?FUN_10bc7f30@Class_10BC9A50@@QAEXXZ
-void Class_10BC9A50::FUN_10bc7f30()
+// FUNCTION: 0x10BC7F30 ?CheckDeathGrunt@Class_10BC9A50@@QAEXXZ
+void Class_10BC9A50::CheckDeathGrunt()
 {
     if (this->Unknown04->Unknown08->FUN_10dbd510(0x100647)->GetFloat() > 0.0)
     {

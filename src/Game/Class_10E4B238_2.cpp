@@ -12,6 +12,6 @@ void FUN_10d660b0();
 // FUNCTION: 0x10961570 ?FUN_10961570@Class_10E4B238@@UAEXXZ
 void Class_10E4B238::FUN_10961570()
 {
-    Class_10E4B180::FUN_10b7c770();
+    Class_10E4B180::Shutdown();
     FUN_10d660b0();
 }

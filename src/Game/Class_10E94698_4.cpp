@@ -57,7 +57,7 @@ public:
 void Class_10E94698::FUN_10bded50(int A)
 {
     FUN_10bc4160();
-    Class_10BFF460* Obj = Unknown04->FUN_10bbb410();
+    Class_10BFF460* Obj = Unknown04->GetCurrent();
     if (Obj && Obj->FUN_10bff280())
     {
         FUN_10bdcc50(Obj->FUN_10bff280() + 0x2c, Unknown54);

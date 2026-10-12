@@ -67,17 +67,17 @@ public:
     virtual void Virtual60();
     virtual void Virtual61();
     virtual void Virtual62();
-    virtual void FUN_10a528d0();
+    virtual void PropagateFlag2ToParents();
     virtual bool Virtual64(int A);
     virtual void Virtual65(int A);
 };
 
-// FUNCTION: 0x10A528D0 ?FUN_10a528d0@Class_10E5B2C0@@UAEXXZ
-void Class_10E5B2C0::FUN_10a528d0()
+// FUNCTION: 0x10A528D0 ?PropagateFlag2ToParents@Class_10E5B2C0@@UAEXXZ
+void Class_10E5B2C0::PropagateFlag2ToParents()
 {
     if (Virtual64(2) && Virtual41())
     {
         Virtual41()->Virtual65(2);
-        Virtual41()->FUN_10a528d0();
+        Virtual41()->PropagateFlag2ToParents();
     }
 }

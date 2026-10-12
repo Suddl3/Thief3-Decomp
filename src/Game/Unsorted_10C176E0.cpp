@@ -3,11 +3,11 @@
 #include "Game/Class_10BAE080.h"
 #include "Game/VisualSubsystem.h"
 
-// FUNCTION: 0x10C176E0 ?FUN_10c176e0@Class_10BAE080@@QAEHABVVisualSubsystem@@@Z
-int Class_10BAE080::FUN_10c176e0(const VisualSubsystem& Item)
+// FUNCTION: 0x10C176E0 ?Add@Class_10BAE080@@QAEHABVVisualSubsystem@@@Z
+int Class_10BAE080::Add(const VisualSubsystem& Item)
 {
-    int Index = Unknown00;
-    FUN_10bad9d0(Index + 1);
-    Unknown08[Index] = Item;
+    int Index = m_Count;
+    Resize(Index + 1);
+    m_Items[Index] = Item;
     return Index;
 }

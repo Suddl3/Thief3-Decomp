@@ -12,10 +12,10 @@ class Class_10E97B00;
 class Class_10BC9A50 : public Class_10BEFAB0
 {
 public:
-    bool FUN_10bc9a50();
+    bool ShopOwnerNoCash();
     void FUN_10bc7d70(Class_10E97B00* Name, int Flags, int Count, Class_109081E0* Out, bool Flag);
-    void FUN_10bc7f30();
-    void FUN_10bf0ae0(Class_10BFF460* Target);
+    void CheckDeathGrunt();
+    void UpdateSummon(Class_10BFF460* Target);
 
     char Pad08[0x258];
     float Unknown260;

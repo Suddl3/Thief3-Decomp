@@ -12,7 +12,7 @@ public:
     virtual int Virtual4();
 
     char Unknown04[0x48];
-    bool Unknown4C;
+    bool m_ResetPending;
 };
 
 class Class_10E7ED00 : public Class_10B3ED20

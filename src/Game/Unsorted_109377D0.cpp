@@ -7,5 +7,5 @@
 // FUNCTION: 0x10938EE0 ?FUN_10938ee0@Class_10937790@@QAEXPAVClass_1091E3F0@@@Z
 void Class_10937790::FUN_10938ee0(Class_1091E3F0* Obj)
 {
-    FUN_10937430(Obj->FUN_1091e3e0(), Obj->FUN_1091e3f0(), &Unknown6FC);
+    SetTransforms(Obj->FUN_1091e3e0(), Obj->FUN_1091e3f0(), &Unknown6FC);
 }

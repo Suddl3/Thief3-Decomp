@@ -5,7 +5,7 @@
 class Class_10E4AE20 : public Class_10953590
 {
 public:
-    virtual void FUN_109567e0();
+    virtual void Reset();
 
     char Unknown04[8];
     int Unknown0C;
@@ -22,8 +22,8 @@ public:
     float Unknown2A0;
 };
 
-// FUNCTION: 0x109567E0 ?FUN_109567e0@Class_10E4AE20@@UAEXXZ
-void Class_10E4AE20::FUN_109567e0()
+// FUNCTION: 0x109567E0 ?Reset@Class_10E4AE20@@UAEXXZ
+void Class_10E4AE20::Reset()
 {
     FUN_10953590();
     Unknown294 = 0;

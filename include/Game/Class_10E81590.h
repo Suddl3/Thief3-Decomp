@@ -21,7 +21,7 @@ public:
 
     Class_10E81590* FUN_10b4ccf0();
 
-    bool Unknown10;
+    bool m_AnimationEnded;
     bool Unknown11;
     char Pad12[0x2];
 };

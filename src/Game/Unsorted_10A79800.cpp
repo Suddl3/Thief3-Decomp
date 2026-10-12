@@ -40,7 +40,7 @@ public:
     virtual void FUN_10a795d0();
     virtual void FUN_10a79610();
     virtual void Virtual2();
-    virtual void FUN_10a79d30(int Item);
+    virtual void AddItem(int Item);
     virtual void Virtual4();
     virtual void Virtual5();
     virtual void Virtual6();
@@ -53,14 +53,14 @@ public:
     int Unknown14;
     Class_10E6BD68_Unknown18** Unknown18;
     char Unknown1C[0xC];
-    cIntArray Unknown28;
+    cIntArray m_Items;
 };
 
-// FUNCTION: 0x10A79D30 ?FUN_10a79d30@Class_10E6BD68@@UAEXH@Z
-void Class_10E6BD68::FUN_10a79d30(int Item)
+// FUNCTION: 0x10A79D30 ?AddItem@Class_10E6BD68@@UAEXH@Z
+void Class_10E6BD68::AddItem(int Item)
 {
-    if (Unknown28.FindIndex(Item) < 0)
-        Unknown28.Append(Item);
+    if (m_Items.FindIndex(Item) < 0)
+        m_Items.Append(Item);
 }
 
 // FUNCTION: 0x10A7A390 ?Attach@cRigidAttachmentManager@@UAEXHH@Z

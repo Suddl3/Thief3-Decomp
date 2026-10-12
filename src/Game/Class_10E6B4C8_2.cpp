@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/cIntArray.h"
 #include "Game/Class_10AAB5C0.h"
-#include "Game/Class_10E6B4C8.h"
+#include "Game/LoginManager.h"
 
 class UClass;
 
@@ -19,8 +19,8 @@ public:
 
 cUObjectLinkManager* GetUObjectLinkManager();
 
-// FUNCTION: 0x10A676A0 ?FUN_10a676a0@Class_10E6B4C8@@UAEXHHPAVcIntArray@@@Z
-void Class_10E6B4C8::FUN_10a676a0(int A, int B, cIntArray* Out)
+// FUNCTION: 0x10A676A0 ?FollowPlayerSetupLinks@LoginManager@@UAEXHHPAVcIntArray@@@Z
+void LoginManager::FollowPlayerSetupLinks(int A, int B, cIntArray* Out)
 {
     int Count = Out->Count;
     Out->SetCount(Count + 1);
@@ -34,6 +34,6 @@ void Class_10E6B4C8::FUN_10a676a0(int A, int B, cIntArray* Out)
                 break;
         }
         Virtual6(A, ID);
-        FUN_10a676a0(A, ID, Out);
+        FollowPlayerSetupLinks(A, ID, Out);
     }
 }

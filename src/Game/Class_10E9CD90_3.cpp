@@ -16,15 +16,15 @@ public:
     virtual void Virtual9();
     virtual void Virtual10();
     virtual void Virtual11();
-    virtual int FUN_10c64010();
+    virtual int IsAtEnd();
 
     char Unknown04[0x34];
-    int Unknown38;
-    int Unknown3C;
+    int m_Size;
+    int m_Position;
 };
 
-// FUNCTION: 0x10C64010 ?FUN_10c64010@Class_10E9CD90@@UAEHXZ
-int Class_10E9CD90::FUN_10c64010()
+// FUNCTION: 0x10C64010 ?IsAtEnd@Class_10E9CD90@@UAEHXZ
+int Class_10E9CD90::IsAtEnd()
 {
-    return Unknown3C >= Unknown38;
+    return m_Position >= m_Size;
 }

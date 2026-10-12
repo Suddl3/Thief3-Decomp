@@ -31,14 +31,14 @@ public:
     virtual void* Virtual16();
 
     void FUN_10a84e50();
-    void FUN_10a84d70();
-    void FUN_10a84d10();
+    void Reset();
+    void Destroy();
     void FUN_10a85110(Struct_10A85890* Ar);
     void FUN_10a852e0(Struct_10A85890* Ar);
     void FUN_10a85890(Struct_10A85890* Ar);
     void FUN_10a84e90();
     void FUN_10a84e60();
-    void FUN_10a850c0();
+    void PushFloats();
 
     int Unknown04;
     int Unknown08;

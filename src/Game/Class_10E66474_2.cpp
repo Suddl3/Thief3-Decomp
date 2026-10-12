@@ -1,10 +1,10 @@
 // Game/Class_10E66474_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10E66474.h"
+#include "Game/cSoundStreamingManager.h"
 #include "Game/Struct_10A334E0.h"
 
-// FUNCTION: 0x10A33CE0 ?FUN_10a33ce0@Class_10E66474@@UAEXHHHH@Z
-void Class_10E66474::FUN_10a33ce0(int A, int B, int C, int D)
+// FUNCTION: 0x10A33CE0 ?HandleEvent@cSoundStreamingManager@@UAEXHHHH@Z
+void cSoundStreamingManager::HandleEvent(int A, int B, int C, int D)
 {
     switch (A)
     {
@@ -15,12 +15,12 @@ void Class_10E66474::FUN_10a33ce0(int A, int B, int C, int D)
         FUN_10a33c60();
         if (Unknown54)
         {
-            FUN_10a334e0();
+            ClearItems();
             FUN_10a33c60();
         }
         break;
     case 0x70:
-        FUN_10a33b70(B, C, D);
+        HandleMoveEvent(B, C, D);
         break;
     }
 }

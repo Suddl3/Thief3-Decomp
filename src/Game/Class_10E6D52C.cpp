@@ -15,13 +15,13 @@ public:
 class Class_10E6D52C : public Class_10EB7660
 {
 public:
-    Class_10E6D52C* FUN_10aa4a00();
+    Class_10E6D52C* Construct();
 
     int Unknown08;
 };
 
-// FUNCTION: 0x10AA4A00 ?FUN_10aa4a00@Class_10E6D52C@@QAEPAV1@XZ
-Class_10E6D52C* Class_10E6D52C::FUN_10aa4a00()
+// FUNCTION: 0x10AA4A00 ?Construct@Class_10E6D52C@@QAEPAV1@XZ
+Class_10E6D52C* Class_10E6D52C::Construct()
 {
     this->Class_10EB7660::Class_10EB7660();
     VTable = DAT_10e6d52c;

@@ -13,6 +13,6 @@ void* FUN_10b154c0();
 int Class_10E7C410::FUN_10b36450(int A, int B, int C)
 {
     if (GWindowManager)
-        ((Class_10B15960*)FUN_10b154c0())->FUN_10b15960(0);
+        ((Class_10B15960*)FUN_10b154c0())->OpenMainMenuWindow(0);
     return 1;
 }

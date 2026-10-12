@@ -37,7 +37,7 @@ public:
 class Class_1090FD40
 {
 public:
-    Class_1090FD40() : Unknown00(0), Unknown04(0), Unknown08(0) {}
+    Class_1090FD40() : m_Count(0), Unknown04(0), m_Items(0) {}
     ~Class_1090FD40() { Empty(); }
     void FUN_1090f2c0(int Count);
     void Empty()
@@ -45,15 +45,15 @@ public:
         FUN_1090f2c0(0);
         if (Unknown04)
         {
-            GetAllocator()->Virtual5(Unknown08);
-            Unknown08 = 0;
+            GetAllocator()->Virtual5(m_Items);
+            m_Items = 0;
             Unknown04 = 0;
         }
     }
 
-    int Unknown00;
+    int m_Count;
     int Unknown04;
-    Class_109081E0* Unknown08;
+    Class_109081E0* m_Items;
 };
 
 class Class_10B37370_Arg
@@ -82,9 +82,9 @@ int Class_10E7C3B0::ShowOkMessage(int A, int B, Class_10B37370_Arg* C)
         Class_10AB37C0* Item = C->Virtual4(0);
         Class_1090FD40 Array;
         Class_109081E0 Text("<string=T_OK>");
-        int Count = Array.Unknown00;
+        int Count = Array.m_Count;
         Array.FUN_1090f2c0(Count + 1);
-        Array.Unknown08[Count] = Text;
+        Array.m_Items[Count] = Text;
         ((Class_10B154C0*)FUN_10b154c0())->FUN_10b15770(0, Item->FUN_10ab37c0(), &Array, 0, 0, 5.0f);
     }
     return 1;

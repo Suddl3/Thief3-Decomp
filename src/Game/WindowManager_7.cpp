@@ -8,7 +8,7 @@
 
 extern const char DAT_10e790b0[];
 
-// The header's class with FUN_10b15d70 added (copied whole; the lead merges it).
+// The header's class with OpenCreditsWindow added (copied whole; the lead merges it).
 // Virtual4 takes an int here: the header's Class_10B45AD0* parameter would not override slot 4.
 class WindowManager : public Class_109E6D60
 {
@@ -21,15 +21,15 @@ public:
 
     void FUN_109e3d60(void* Window);
     void FUN_109e8ae0(void* Window);
-    int FUN_109e5960(const Class_109081E0& Name);
+    int FindWindowByName(const Class_109081E0& Name);
     void FUN_109e6b20(int A);
     void FUN_109e8930(void* Window);
-    void FUN_10b158b0();
+    void OpenTitleLoadWindow();
     void FUN_10b16110(int A, int B);
     void GetUIScreenSize(FVector* Out);
-    FVector FUN_109e4290(int X, int Y);
-    void FUN_109e4300(FVector* Pos, int* OutX, int* OutY);
-    bool FUN_10b15d70(int A);
+    FVector ScreenToUIPosition(int X, int Y);
+    void UIPositionToScreen(FVector* Pos, int* OutX, int* OutY);
+    bool OpenCreditsWindow(int A);
 
     char Unknown04[0x94];
     int Unknown98;
@@ -42,13 +42,13 @@ public:
     char Unknown264;
 };
 
-// FUNCTION: 0x10B15D70 ?FUN_10b15d70@WindowManager@@QAE_NH@Z
-bool WindowManager::FUN_10b15d70(int A)
+// FUNCTION: 0x10B15D70 ?OpenCreditsWindow@WindowManager@@QAE_NH@Z
+bool WindowManager::OpenCreditsWindow(int A)
 {
     int Window;
     {
         Class_109081E0 Name(DAT_10e790b0);
-        Window = FUN_109e5960(Name);
+        Window = FindWindowByName(Name);
     }
     if (Window && !FUN_109e6d60(Window))
     {

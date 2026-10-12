@@ -11,7 +11,7 @@ public:
     virtual void Virtual0();
     virtual void Virtual1();
     virtual void Virtual2();
-    virtual int FUN_10b559e0(char* Command, int Unknown);
+    virtual int HandleCheatCommand(char* Command, int Unknown);
 
     Class_10E80418* FUN_10b40a00();
 

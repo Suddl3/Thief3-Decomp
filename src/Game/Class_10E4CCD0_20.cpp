@@ -1,6 +1,6 @@
 // Game/Class_10E4CCD0_20.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10E93F68.h"
+#include "Game/cTacticWeaponEquip.h"
 
 // Ion Storm's placement new and its delete (0x10905C10; the delete folded into ::operator delete).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
@@ -48,11 +48,11 @@ public:
     virtual void Virtual33();
     virtual void Virtual34();
     virtual void Virtual35();
-    virtual Class_10E93F68* FUN_10b98200(Struct_10B98E00* A, int B, bool C);
+    virtual cTacticWeaponEquip* FUN_10b98200(Struct_10B98E00* A, int B, bool C);
 };
 
-// FUNCTION: 0x10B98200 ?FUN_10b98200@Class_10E4CCD0@@UAEPAVClass_10E93F68@@PAUStruct_10B98E00@@H_N@Z
-Class_10E93F68* Class_10E4CCD0::FUN_10b98200(Struct_10B98E00* A, int B, bool C)
+// FUNCTION: 0x10B98200 ?FUN_10b98200@Class_10E4CCD0@@UAEPAVcTacticWeaponEquip@@PAUStruct_10B98E00@@H_N@Z
+cTacticWeaponEquip* Class_10E4CCD0::FUN_10b98200(Struct_10B98E00* A, int B, bool C)
 {
-    return new(0, 0, 0, 0, 0) Class_10E93F68((int)A, (int)this, B, false, C);
+    return new(0, 0, 0, 0, 0) cTacticWeaponEquip((int)A, (int)this, B, false, C);
 }

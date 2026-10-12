@@ -226,5 +226,5 @@ void Class_10B2EEA0::FUN_10b2eea0(Struct_10B16860* A, float M)
 void Class_10B2F6A0::FUN_10b2f6a0(unsigned char param)
 {
     Unknown148 = param;
-    FUN_10b2f590();
+    RefreshLabel();
 }

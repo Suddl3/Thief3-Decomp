@@ -49,5 +49,5 @@ Class_10E960D8::Class_10E960D8(int A, int B)
     m_Interval = 0;
     Class_10BF7F90* Info = FUN_10bc4160();
     Info->FUN_10bf7f90(0, 1);
-    Unknown04->FUN_10bbb410();
+    Unknown04->GetCurrent();
 }

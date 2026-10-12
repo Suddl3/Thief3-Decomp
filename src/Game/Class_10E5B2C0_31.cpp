@@ -22,14 +22,14 @@ public:
 
     void FUN_109e3d60(void* Window);
     void FUN_109e8ae0(void* Window);
-    int FUN_109e5960(const Class_109081E0& Name);
+    int FindWindowByName(const Class_109081E0& Name);
     void FUN_109e6b20(int A);
     void FUN_109e8930(void* Window);
-    void FUN_10b158b0();
+    void OpenTitleLoadWindow();
     void FUN_10b16110(int A, int B);
     void GetUIScreenSize(FVector* Out);
-    FVector FUN_109e4290(int X, int Y);
-    void FUN_109e4300(FVector* Pos, int* OutX, int* OutY);
+    FVector ScreenToUIPosition(int X, int Y);
+    void UIPositionToScreen(FVector* Pos, int* OutX, int* OutY);
 
     char Unknown04[0x94];
     int Unknown98;

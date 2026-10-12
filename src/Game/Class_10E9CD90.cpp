@@ -8,21 +8,21 @@ extern void* DAT_10e9cd90[];
 class Class_10E9CD90 : public Class_10E4E098
 {
 public:
-    Class_10E9CD90* FUN_10c63f70(int A, int B);
+    Class_10E9CD90* Init(int A, int B);
 
-    int Unknown34;
-    int Unknown38;
-    int Unknown3C;
+    int m_Buffer;
+    int m_Size;
+    int m_Position;
 };
 
-// FUNCTION: 0x10C63F70 ?FUN_10c63f70@Class_10E9CD90@@QAEPAV1@HH@Z
-Class_10E9CD90* Class_10E9CD90::FUN_10c63f70(int A, int B)
+// FUNCTION: 0x10C63F70 ?Init@Class_10E9CD90@@QAEPAV1@HH@Z
+Class_10E9CD90* Class_10E9CD90::Init(int A, int B)
 {
     this->Class_10E4E098::Class_10E4E098();
     Unknown00 = DAT_10e9cd90;
-    Unknown34 = A;
-    Unknown38 = B;
-    Unknown3C = 0;
+    m_Buffer = A;
+    m_Size = B;
+    m_Position = 0;
     Unknown14 = Unknown1C = 1;
     return this;
 }

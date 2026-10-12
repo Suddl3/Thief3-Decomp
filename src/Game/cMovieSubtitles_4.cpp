@@ -5,16 +5,16 @@
 
 class Class_10AF7F80;
 
-class Class_10E682F0
+class cFMVWindow
 {
 public:
-    virtual ~Class_10E682F0();
+    virtual ~cFMVWindow();
     virtual void LoadConfig(Class_10AF7F80* A, Class_10AF7F80* B);
 
-    void FUN_10a54c70(float A);
+    void Update(float A);
 };
 
-class cMovieSubtitles : public Class_10E682F0
+class cMovieSubtitles : public cFMVWindow
 {
 public:
     virtual void Virtual2();
@@ -137,7 +137,7 @@ extern WindowManager* GWindowManager;
 // FUNCTION: 0x10B31580 ?FUN_10b31580@cMovieSubtitles@@UAEXM@Z
 void cMovieSubtitles::FUN_10b31580(float Value)
 {
-    FUN_10a54c70(Value);
+    Update(Value);
     if (IsPlaying() && Unknown138)
     {
         Unknown140 = Value + Unknown140;

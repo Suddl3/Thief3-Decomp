@@ -10,7 +10,7 @@ class Class_10941C40
 public:
     void FUN_10941b10(int A);
     void FUN_10941c40();
-    void FUN_10941980(short A, short B, short C);
+    void AddEntry(short A, short B, short C);
     void FUN_10941cb0(int A, int B, int C, int D, int E, int F, int G, int H, int I, int J, int K, int L);
     void FUN_10941db0(int A, int B, int C, int D, int E, int F, int G, int H, int I, int J, int K, int L, int M);
     void FUN_10941c70(void* A, int B, int C, int D);

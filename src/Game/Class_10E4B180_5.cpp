@@ -18,23 +18,23 @@ class Class_10E4B180
 public:
     virtual void Virtual0();
 
-    void FUN_10b7e620(int Mask, Class_10E4B180_Unknown70* Obj);
+    void AddToMaskedLists(int Mask, Class_10E4B180_Unknown70* Obj);
 
     char Unknown04[0x34];
-    cIntArray Unknown38[8];
+    cIntArray m_MaskLists[8];
 };
 
-// FUNCTION: 0x10B7E620 ?FUN_10b7e620@Class_10E4B180@@QAEXHPAVClass_10E4B180_Unknown70@@@Z
-void Class_10E4B180::FUN_10b7e620(int Mask, Class_10E4B180_Unknown70* Obj)
+// FUNCTION: 0x10B7E620 ?AddToMaskedLists@Class_10E4B180@@QAEXHPAVClass_10E4B180_Unknown70@@@Z
+void Class_10E4B180::AddToMaskedLists(int Mask, Class_10E4B180_Unknown70* Obj)
 {
     unsigned int Bit = 1;
     for (int i = 0; i < 8; i++, Bit <<= 1)
     {
         if (Mask & Bit)
         {
-            int Index = Unknown38[i].Count;
-            Unknown38[i].SetCount(Index + 1);
-            Unknown38[i].Data[Index] = Obj;
+            int Index = m_MaskLists[i].Count;
+            m_MaskLists[i].SetCount(Index + 1);
+            m_MaskLists[i].Data[Index] = Obj;
         }
     }
 }

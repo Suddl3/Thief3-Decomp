@@ -25,7 +25,7 @@ extern Struct_10AA3520* DAT_10f35dec;
 class Class_10E6C390
 {
 public:
-    virtual void FUN_10a85660(int Message, int Value, int A, int B);
+    virtual void HandleMessage(int Message, int Value, int A, int B);
     virtual void Virtual1();
     virtual void Virtual2();
     virtual bool Virtual3();
@@ -43,14 +43,14 @@ public:
     virtual int Virtual15(int A);
 
     void FUN_10a84e50();
-    void FUN_10a84d70();
-    void FUN_10a84d10();
+    void Reset();
+    void Destroy();
     void FUN_10a85110(Struct_10A85890* Ar);
     void FUN_10a852e0(Struct_10A85890* Ar);
     void FUN_10a85890(Struct_10A85890* Ar);
     void FUN_10a84e90();
     void FUN_10a84e60();
-    void FUN_10a850c0();
+    void PushFloats();
 
     int Unknown04;
     int Unknown08;
@@ -128,8 +128,8 @@ public:
 
 extern Class_10F46DA0* DAT_10f46da0;
 
-// FUNCTION: 0x10A85660 ?FUN_10a85660@Class_10E6C390@@UAEXHHHH@Z
-void Class_10E6C390::FUN_10a85660(int Message, int Value, int A, int B)
+// FUNCTION: 0x10A85660 ?HandleMessage@Class_10E6C390@@UAEXHHHH@Z
+void Class_10E6C390::HandleMessage(int Message, int Value, int A, int B)
 {
     switch (Message)
     {

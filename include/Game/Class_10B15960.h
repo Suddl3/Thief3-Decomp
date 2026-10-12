@@ -10,8 +10,8 @@ class Class_10B15960
 public:
     Class_10B2ADA0* FUN_10b15ed0();
     void FUN_10b160b0(int A, void* B, bool C);
-    void FUN_10b15d70(int A);
-    bool FUN_10b15960(int A);
+    void OpenCreditsWindow(int A);
+    bool OpenMainMenuWindow(int A);
 
     char Pad00[0x1];
 };

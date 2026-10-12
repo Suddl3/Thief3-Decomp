@@ -3,15 +3,15 @@
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10B0D530.h"
 #include "Game/Class_10E6BF84.h"
-#include "Game/Class_10E6C580.h"
+#include "Game/cTriggerPropertyParam.h"
 #include "Game/Class_10F3A1D8.h"
 
 Class_10905A90_Member* GetAllocator();
 
 extern Class_10F3A1D8* DAT_10f3a1d8;
 
-// FUNCTION: 0x10A8A030 ??1Class_10E6C580@@UAE@XZ
-Class_10E6C580::~Class_10E6C580()
+// FUNCTION: 0x10A8A030 ??1cTriggerPropertyParam@@UAE@XZ
+cTriggerPropertyParam::~cTriggerPropertyParam()
 {
     if (DAT_10f3a1d8)
     {
@@ -26,5 +26,5 @@ Class_10E6C580::~Class_10E6C580()
     }
 }
 
-// FUNCTION: 0x10A8A0C0 ??_GClass_10E6C580@@UAEPAXI@Z
+// FUNCTION: 0x10A8A0C0 ??_GcTriggerPropertyParam@@UAEPAXI@Z
 // Compiler-generated: emitted with the class's vtable by 0x10A8A030's definition in this unit.

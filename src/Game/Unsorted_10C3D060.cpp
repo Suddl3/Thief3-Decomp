@@ -36,13 +36,13 @@ public:
     virtual void Virtual21();
     virtual void Virtual22();
     virtual void Virtual23();
-    virtual int FUN_10c3d0a0();
+    virtual int IsInRange();
 
     Struct_10C3D0A0* Unknown04;
     char Unknown08[0x14];
     Struct_10C05A50 Unknown1C;
     char Unknown24[4];
-    float Unknown28;
+    float m_Range;
 };
 
 // FUNCTION: 0x10C3D080 ?FUN_10c3d080@@YAXM@Z
@@ -52,10 +52,10 @@ void FUN_10c3d080(float Arg)
         DAT_10f069d8 = Arg;
 }
 
-// FUNCTION: 0x10C3D0A0 ?FUN_10c3d0a0@Class_10E9B168@@UAEHXZ
-int Class_10E9B168::FUN_10c3d0a0()
+// FUNCTION: 0x10C3D0A0 ?IsInRange@Class_10E9B168@@UAEHXZ
+int Class_10E9B168::IsInRange()
 {
-    if (FUN_10c05a20(&Unknown04->Unknown2C, &Unknown1C) < Unknown28)
+    if (FUN_10c05a20(&Unknown04->Unknown2C, &Unknown1C) < m_Range)
         return 1;
     return 0;
 }

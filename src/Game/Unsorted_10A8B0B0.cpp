@@ -9,7 +9,7 @@ void WriteString(void* Stream, int* Value);
 
 void WriteInt(void* Stream, int Value);
 
-class Class_10E6C580
+class cTriggerPropertyParam
 {
 public:
     virtual void Virtual0();
@@ -22,7 +22,7 @@ public:
     virtual void Virtual7();
     virtual void Virtual8();
     virtual void Virtual9();
-    virtual void FUN_10a8b640(int A, void* Stream);
+    virtual void WriteValue(int A, void* Stream);
 
     char Unknown04[4];
     int Unknown08;
@@ -82,8 +82,8 @@ void cTriggerSoundSchemaParam::Reset()
     Mgr->Virtual8(&Event);
 }
 
-// FUNCTION: 0x10A8B640 ?FUN_10a8b640@Class_10E6C580@@UAEXHPAX@Z
-void Class_10E6C580::FUN_10a8b640(int A, void* Stream)
+// FUNCTION: 0x10A8B640 ?WriteValue@cTriggerPropertyParam@@UAEXHPAX@Z
+void cTriggerPropertyParam::WriteValue(int A, void* Stream)
 {
     WriteInt(Stream, Unknown08);
     WriteString(Stream, &Unknown0C);

@@ -8,7 +8,7 @@ void Class_109528B0::FUN_10953450()
 {
     for (int i = 0; i < 9; i++)
     {
-        if (Unknown90[i].Unknown0C && !Virtual7(i))
-            Unknown90[i].FUN_10956270();
+        if (m_Slots[i].Unknown0C && !Virtual7(i))
+            m_Slots[i].FUN_10956270();
     }
 }

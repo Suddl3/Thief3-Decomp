@@ -96,7 +96,7 @@ public:
 // FUNCTION: 0x10BDB0A0 ?FUN_10bdb0a0@cMeleeStrafeTarget@@UAEXXZ
 void cMeleeStrafeTarget::FUN_10bdb0a0()
 {
-    Class_10BFF460* Obj = Unknown04->FUN_10bbb410();
+    Class_10BFF460* Obj = Unknown04->GetCurrent();
     if (Obj)
     {
         if (!Obj->FUN_10bff330())

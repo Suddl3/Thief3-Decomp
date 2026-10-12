@@ -56,7 +56,7 @@ public:
     virtual void Virtual47(int A);
 };
 
-class Class_10E68938
+class cRadioWindow
 {
 public:
     virtual void Virtual0();
@@ -111,9 +111,9 @@ public:
     char Unknown04[0xCA];
     bool Unknown0CE;
     char Unknown0CF[0x51];
-    int Unknown120;
+    int m_ChildCount;
     int Unknown124;
-    Class_10E68938_Unknown128** Unknown128;
+    Class_10E68938_Unknown128** m_Children;
 };
 
 class Class_10E69080
@@ -145,13 +145,13 @@ Class_10E68738::~Class_10E68738()
 {
 }
 
-// FUNCTION: 0x10A56430 ?FUN_10a56430@Class_10E68938@@UAEXH@Z
-void Class_10E68938::FUN_10a56430(int A)
+// FUNCTION: 0x10A56430 ?FUN_10a56430@cRadioWindow@@UAEXH@Z
+void cRadioWindow::FUN_10a56430(int A)
 {
     Unknown0CE = false;
-    for (int i = 0; i < Unknown120; i++)
+    for (int i = 0; i < m_ChildCount; i++)
     {
-        Class_10E68938_Unknown128* Child = Unknown128[i];
+        Class_10E68938_Unknown128* Child = m_Children[i];
         if (Child)
             Child->Virtual47(A);
     }

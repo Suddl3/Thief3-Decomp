@@ -19,12 +19,12 @@ public:
     virtual void FUN_10a3a3f0();
 
     char Unknown04[0xE4];
-    int Unknown0E8;
+    int m_Items;
     char Unknown0EC[4];
     Class_10A3A4C0** Unknown0F0;
-    int UnknownF4;
+    int m_Count;
     char UnknownF8[4];
-    Class_10E6678C_UnknownFC** UnknownFC;
+    Class_10E6678C_UnknownFC** m_Entries;
     char Unknown100[0x34];
     char Unknown134;
     char Pad135[0x3];

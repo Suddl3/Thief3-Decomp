@@ -11,5 +11,5 @@ void Class_10B64280::FUN_10b64280()
     bool Hidden = !Unknown17C;
     FUN_10b744b0();
     if (Hidden)
-        static_cast<Class_10B15960*>(FUN_10b154c0())->FUN_10b15960(0);
+        static_cast<Class_10B15960*>(FUN_10b154c0())->OpenMainMenuWindow(0);
 }

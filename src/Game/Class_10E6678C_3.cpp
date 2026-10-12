@@ -21,7 +21,7 @@ class Class_10E6678C
 {
 public:
     virtual void Virtual0();
-    virtual void FUN_10a3ab10(int Count, Struct_10A3AB10* Items);
+    virtual void SetItems(int Count, Struct_10A3AB10* Items);
     virtual void Virtual2();
     virtual void Virtual3();
     virtual void Virtual4();
@@ -31,15 +31,15 @@ public:
     void FUN_10a39ed0(Struct_10A3AB10* Item);
 
     char Unknown04[0xe4];
-    cIntArray Unknown0E8;
+    cIntArray m_Items;
     char Unknown0F4[0x5c];
     int Unknown150;
 };
 
-// FUNCTION: 0x10A3AB10 ?FUN_10a3ab10@Class_10E6678C@@UAEXHPAUStruct_10A3AB10@@@Z
-void Class_10E6678C::FUN_10a3ab10(int Count, Struct_10A3AB10* Items)
+// FUNCTION: 0x10A3AB10 ?SetItems@Class_10E6678C@@UAEXHPAUStruct_10A3AB10@@@Z
+void Class_10E6678C::SetItems(int Count, Struct_10A3AB10* Items)
 {
-    cIntArray* Array = &Unknown0E8;
+    cIntArray* Array = &m_Items;
     while (Count > Array->Count)
     {
         int Item = FUN_10aa54a0(Unknown150);
@@ -51,7 +51,7 @@ void Class_10E6678C::FUN_10a3ab10(int Count, Struct_10A3AB10* Items)
     {
         Struct_10A3AB10 Local = Items[i];
         FUN_10a39ed0(&Local);
-        ((Class_10A3AB10_Data*)Unknown0E8.Data[i])->Virtual1(&Local);
+        ((Class_10A3AB10_Data*)m_Items.Data[i])->Virtual1(&Local);
     }
     Virtual7();
 }

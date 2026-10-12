@@ -12,27 +12,27 @@ public:
 class Class_10E5B7C8
 {
 public:
-    void FUN_109e5180(int Param);
+    void UpdateItems(int Param);
 
     char Unknown00[0x1E8];
-    int Unknown1E8;
+    int m_ItemCount;
     char Unknown1EC[4];
-    Class_109E5180_Item** Unknown1F0;
+    Class_109E5180_Item** m_Items;
 };
 
-// FUNCTION: 0x109E5180 ?FUN_109e5180@Class_10E5B7C8@@QAEXH@Z
-void Class_10E5B7C8::FUN_109e5180(int Param)
+// FUNCTION: 0x109E5180 ?UpdateItems@Class_10E5B7C8@@QAEXH@Z
+void Class_10E5B7C8::UpdateItems(int Param)
 {
-    for (int i = 0; i < Unknown1E8; i++)
+    for (int i = 0; i < m_ItemCount; i++)
     {
-        Class_109E5180_Item* Child = Unknown1F0[i];
+        Class_109E5180_Item* Child = m_Items[i];
         if (Child)
         {
             Child->Virtual2(Param);
-            if (Unknown1F0[i]->Virtual0())
+            if (m_Items[i]->Virtual0())
             {
-                delete Unknown1F0[i];
-                Unknown1F0[i] = 0;
+                delete m_Items[i];
+                m_Items[i] = 0;
             }
         }
     }

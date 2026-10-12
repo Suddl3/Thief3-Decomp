@@ -5,20 +5,20 @@
 class Class_10BBB410
 {
 public:
-    Class_10BFF460* FUN_10bbb410();
-    void FUN_10bbb330();
+    Class_10BFF460* GetCurrent();
+    void CancelCurrent();
 
     char Unknown00[0x210];
-    Class_10BFF460* Unknown210;
+    Class_10BFF460* m_Current;
 };
 
-// FUNCTION: 0x10BBB410 ?FUN_10bbb410@Class_10BBB410@@QAEPAVClass_10BFF460@@XZ
-Class_10BFF460* Class_10BBB410::FUN_10bbb410()
+// FUNCTION: 0x10BBB410 ?GetCurrent@Class_10BBB410@@QAEPAVClass_10BFF460@@XZ
+Class_10BFF460* Class_10BBB410::GetCurrent()
 {
-    if (Unknown210)
+    if (m_Current)
     {
-        if (Unknown210->FUN_10bff460() != 1)
-            FUN_10bbb330();
+        if (m_Current->FUN_10bff460() != 1)
+            CancelCurrent();
     }
-    return Unknown210;
+    return m_Current;
 }

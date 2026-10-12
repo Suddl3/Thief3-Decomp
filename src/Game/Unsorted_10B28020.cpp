@@ -7,7 +7,7 @@ class WindowManager
 {
 public:
     void FUN_109e8930(void* Window);
-    void FUN_10b158b0();
+    void OpenTitleLoadWindow();
 
     char Unknown00[0x264];
     char Unknown264;
@@ -681,5 +681,5 @@ void Class_10B28390::FUN_10b28390()
     Virtual56(0);
     GWindowManager->FUN_109e8930(this);
     ((WindowManager*)FUN_10b154c0())->Unknown264 = 0;
-    ((WindowManager*)FUN_10b154c0())->FUN_10b158b0();
+    ((WindowManager*)FUN_10b154c0())->OpenTitleLoadWindow();
 }

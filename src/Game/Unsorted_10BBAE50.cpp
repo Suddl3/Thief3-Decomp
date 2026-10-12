@@ -52,17 +52,17 @@ class Class_10BBB410 : public Class_10BB9FC0
 {
 public:
     void FUN_10bb9f60(int A, int B);
-    Class_10BFF460* FUN_10bbb410();
-    void FUN_10bbb330();
-    void FUN_10bbb540(int Item);
+    Class_10BFF460* GetCurrent();
+    void CancelCurrent();
+    void RemoveItem(int Item);
     int FUN_10bbb730();
 
     char Unknown288[0x44];
     int Unknown2cc;
 };
 
-// FUNCTION: 0x10BBB330 ?FUN_10bbb330@Class_10BBB410@@QAEXXZ
-void Class_10BBB410::FUN_10bbb330()
+// FUNCTION: 0x10BBB330 ?CancelCurrent@Class_10BBB410@@QAEXXZ
+void Class_10BBB410::CancelCurrent()
 {
     if (Unknown210 != 0)
     {

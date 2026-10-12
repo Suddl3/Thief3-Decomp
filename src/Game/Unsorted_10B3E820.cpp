@@ -44,31 +44,31 @@ public:
     virtual void Virtual3();
     virtual int Virtual4();
 
-    void FUN_10b3ed20();
-    void FUN_10b3ea80();
-    void FUN_10b3e820(int Index);
+    void ResetIfPending();
+    void Reset();
+    void ClearSlots(int Index);
 
     char Unknown04[0x48];
-    bool Unknown4C;
+    bool m_ResetPending;
     char Pad4D[0x3];
     char Pad50[0xC];
-    Class_10B3E820_Unknown5C* Unknown5C[4];
+    Class_10B3E820_Unknown5C* m_Slots[4];
 };
 
-// FUNCTION: 0x10B3E820 ?FUN_10b3e820@Class_10B3ED20@@QAEXH@Z
-void Class_10B3ED20::FUN_10b3e820(int Index)
+// FUNCTION: 0x10B3E820 ?ClearSlots@Class_10B3ED20@@QAEXH@Z
+void Class_10B3ED20::ClearSlots(int Index)
 {
     if (Index == 4)
     {
         for (int i = 0; i < 4; i++)
         {
-            bool Valid = Unknown5C[i] != 0;
+            bool Valid = m_Slots[i] != 0;
             if (Valid)
             {
-                Unknown5C[i]->Unknown08->Virtual10();
+                m_Slots[i]->Unknown08->Virtual10();
                 Class_10C56E40 Guard;
-                Class_10B3E820_Unknown5C* Item = Unknown5C[i];
-                Unknown5C[i] = 0;
+                Class_10B3E820_Unknown5C* Item = m_Slots[i];
+                m_Slots[i] = 0;
                 if (Item)
                     Item->Virtual2();
             }
@@ -76,13 +76,13 @@ void Class_10B3ED20::FUN_10b3e820(int Index)
     }
     else
     {
-        bool Valid = Unknown5C[Index] != 0;
+        bool Valid = m_Slots[Index] != 0;
         if (Valid)
         {
-            Unknown5C[Index]->Unknown08->Virtual10();
+            m_Slots[Index]->Unknown08->Virtual10();
             Class_10C56E40 Guard;
-            Class_10B3E820_Unknown5C* Item = Unknown5C[Index];
-            Unknown5C[Index] = 0;
+            Class_10B3E820_Unknown5C* Item = m_Slots[Index];
+            m_Slots[Index] = 0;
             if (Item)
                 Item->Virtual2();
         }

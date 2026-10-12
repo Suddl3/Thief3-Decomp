@@ -14,11 +14,11 @@ public:
     virtual void Virtual3();
     virtual int Virtual4();
 
-    void FUN_10b3ed20();
-    void FUN_10b3ea80();
+    void ResetIfPending();
+    void Reset();
 
     char Unknown04[0x48];
-    bool Unknown4C;
+    bool m_ResetPending;
     char Pad4D[0x3];
 };
 

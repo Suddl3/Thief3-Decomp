@@ -278,14 +278,14 @@ extern const char DAT_10e6d548[];
 
 extern void* DAT_10e6d59c[];
 
-class Class_10E6D5B0
+class SwooshGeometryTriStrip
 {
 public:
     virtual void Virtual0();
     virtual void Virtual1();
     virtual void Virtual2();
 
-    void FUN_10aa4cf0(int A, int B, int C, int D);
+    void SetParameters(int A, int B, int C, int D);
 
     int Unknown04;
     int Unknown08;
@@ -1152,8 +1152,8 @@ void Class_10AA4650::FUN_10aa4650()
 	Field00 = (void*)DAT_10e6d4f0;
 }
 
-// FUNCTION: 0x10AA4A40 ?FUN_10aa4a40@Class_10E6D52C@@QAE?AVClass_109081E0@@XZ
-Class_109081E0 Class_10E6D52C::FUN_10aa4a40()
+// FUNCTION: 0x10AA4A40 ?GetTypeName@Class_10E6D52C@@QAE?AVClass_109081E0@@XZ
+Class_109081E0 Class_10E6D52C::GetTypeName()
 {
     return Class_109081E0(DAT_10e6d548);
 }
@@ -1164,8 +1164,8 @@ void Class_10AA4CC0::FUN_10aa4cc0()
 	Field00 = (void*)DAT_10e6d59c;
 }
 
-// FUNCTION: 0x10AA4CF0 ?FUN_10aa4cf0@Class_10E6D5B0@@QAEXHHHH@Z
-void Class_10E6D5B0::FUN_10aa4cf0(int A, int B, int C, int D)
+// FUNCTION: 0x10AA4CF0 ?SetParameters@SwooshGeometryTriStrip@@QAEXHHHH@Z
+void SwooshGeometryTriStrip::SetParameters(int A, int B, int C, int D)
 {
     Unknown08 = A;
     Unknown0C = B;

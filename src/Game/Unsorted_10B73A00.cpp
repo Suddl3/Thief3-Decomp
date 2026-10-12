@@ -10,23 +10,23 @@ public:
 class Class_10B73810
 {
 public:
-    void FUN_10b737b0();
+    void ApplyValues();
     void FUN_10b73b40(int A);
 
     char Unknown00[0xC4];
     int Unknown0C4;
     char Unknown0C8[0xC8];
-    int Unknown190;
+    int m_ChildCount;
     char Unknown194[4];
-    Class_10B73130** Unknown198;
+    Class_10B73130** m_Children;
 };
 
 // FUNCTION: 0x10B73B40 ?FUN_10b73b40@Class_10B73810@@QAEXH@Z
 void Class_10B73810::FUN_10b73b40(int A)
 {
-    for (int i = 0; i < Unknown190; i++)
+    for (int i = 0; i < m_ChildCount; i++)
     {
-        if (Unknown198[i]->FUN_10b73130(A, Unknown0C4))
-            FUN_10b737b0();
+        if (m_Children[i]->FUN_10b73130(A, Unknown0C4))
+            ApplyValues();
     }
 }

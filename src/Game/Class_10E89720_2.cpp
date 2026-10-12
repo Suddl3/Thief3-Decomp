@@ -4,8 +4,8 @@
 
 extern int DAT_10ff6600;
 
-// FUNCTION: 0x10B8EC30 ?FUN_10b8ec30@Class_10E89720@@UAE_NXZ
-bool Class_10E89720::FUN_10b8ec30()
+// FUNCTION: 0x10B8EC30 ?IsAtEnd@Class_10E89720@@UAE_NXZ
+bool Class_10E89720::IsAtEnd()
 {
     return DAT_10ff6600 >= 4;
 }

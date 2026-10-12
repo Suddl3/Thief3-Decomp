@@ -1,4 +1,4 @@
-// Game/Class_10E68938.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/cRadioWindow.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
 class Class_10E5B2C0
@@ -77,24 +77,24 @@ public:
     virtual void FUN_10a52920(int A);
 };
 
-class Class_10E68938 : public Class_10E5B2C0
+class cRadioWindow : public Class_10E5B2C0
 {
 public:
     virtual void FUN_10a563e0(int A);
 
     char Unknown04[0x11C];
-    int Unknown120;
+    int m_ChildCount;
     int Unknown124;
-    Class_10E5B2C0** Unknown128;
+    Class_10E5B2C0** m_Children;
 };
 
-// FUNCTION: 0x10A563E0 ?FUN_10a563e0@Class_10E68938@@UAEXH@Z
-void Class_10E68938::FUN_10a563e0(int A)
+// FUNCTION: 0x10A563E0 ?FUN_10a563e0@cRadioWindow@@UAEXH@Z
+void cRadioWindow::FUN_10a563e0(int A)
 {
     Class_10E5B2C0::FUN_10a52920(A);
-    for (int i = 0; i < Unknown120; i++)
+    for (int i = 0; i < m_ChildCount; i++)
     {
-        Class_10E5B2C0* Child = Unknown128[i];
+        Class_10E5B2C0* Child = m_Children[i];
         if (Child)
             Child->FUN_10a52920(A);
     }

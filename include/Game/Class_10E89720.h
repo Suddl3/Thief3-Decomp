@@ -11,16 +11,16 @@ public:
     virtual void Virtual0();
     virtual void Virtual1();
     virtual void Virtual2();
-    virtual Class_109081E0 FUN_10b8eca0();
+    virtual Class_109081E0 GetStateName();
     virtual void Virtual4();
     virtual void Virtual5();
-    virtual void FUN_10b8ec10();
-    virtual bool FUN_10b8ec30();
-    virtual Class_109081E0 FUN_10b8ecd0();
+    virtual void Advance();
+    virtual bool IsAtEnd();
+    virtual Class_109081E0 GetCurrentStateName();
 
     Class_10E89720();
 
-    int Unknown04;
+    int m_StateIndex;
 };
 
 #endif // GAME_CLASS_10E89720_H

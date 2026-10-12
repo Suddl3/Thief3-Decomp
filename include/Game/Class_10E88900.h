@@ -5,7 +5,7 @@
 
 #include "Game/Class_10B59770.h"
 #include "Game/cIntArray.h"
-#include "Game/Class_10E68938.h"
+#include "Game/cRadioWindow.h"
 #include "Game/Class_10E822B0.h"
 
 class Class_10E88900 : public Class_10E822B0
@@ -23,7 +23,7 @@ public:
     cIntArray Unknown170;
     bool Unknown17C;
     char Pad17D[0x3];
-    Class_10E68938 Unknown180;
+    cRadioWindow Unknown180;
     int Unknown2B8;
     int Unknown2BC;
     Class_10B59770 Unknown2C0;

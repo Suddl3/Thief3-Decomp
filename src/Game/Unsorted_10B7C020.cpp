@@ -41,8 +41,8 @@ Class_10905A90_Member* GetAllocator();
 
 Class_10D9B090* FUN_10d9dcb0();
 
-// FUNCTION: 0x10B7C030 ?FUN_10b7c030@Class_10E4B180@@UAEXPAUStruct_10B7C030_Param@@@Z
-void Class_10E4B180::FUN_10b7c030(Struct_10B7C030_Param* A)
+// FUNCTION: 0x10B7C030 ?DestroyPhysicsObject@Class_10E4B180@@UAEXPAUStruct_10B7C030_Param@@@Z
+void Class_10E4B180::DestroyPhysicsObject(Struct_10B7C030_Param* A)
 {
     GetAllocator()->Virtual8(0, 0);
     if (A && A->UnknownB0)

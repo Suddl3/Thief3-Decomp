@@ -75,7 +75,7 @@ void Class_10E49F90::SetRenderStates(int A, int B)
 // FUNCTION: 0x10936180 ??1Class_10E49F90@@QAE@XZ
 Class_10E49F90::~Class_10E49F90()
 {
-    FUN_10940c50();
+    Reset();
 }
 
 // FUNCTION: 0x109367A0 ?FUN_109367a0@Class_109367A0@@QAEXXZ

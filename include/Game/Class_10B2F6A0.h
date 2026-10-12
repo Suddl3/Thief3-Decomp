@@ -8,17 +8,17 @@
 class Class_10B2F6A0
 {
 public:
-    void FUN_10b2f590();
+    void RefreshLabel();
     void FUN_10b2f6a0(unsigned char param);
-    void FUN_10b2f6c0(const Class_109081E0& Name);
-    void FUN_10b2f6f0(int p1);
+    void SetName(const Class_109081E0& Name);
+    void SetCount(int p1);
 
     char Unknown00[0x120];
-    void* Unknown120;
+    void* m_Label;
     char Unknown124[0x18];
-    Class_109081E0 Unknown13C;
+    Class_109081E0 m_Name;
     char Pad140[0x4];
-    int Unknown144;
+    int m_Count;
     unsigned char Unknown148;
 };
 

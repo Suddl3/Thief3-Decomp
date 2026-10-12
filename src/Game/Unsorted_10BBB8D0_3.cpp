@@ -35,22 +35,22 @@ class Class_10BBB410
 {
 public:
     void FUN_10bb9f60(int A, int B);
-    Class_10BFF460* FUN_10bbb410();
-    void FUN_10bbb330();
-    void FUN_10bbb540(int Item);
+    Class_10BFF460* GetCurrent();
+    void CancelCurrent();
+    void RemoveItem(int Item);
     int FUN_10bbb730();
     void FUN_10bb7c10();
-    void FUN_10bb9260();
+    void UpdateReprimand();
     void FUN_10bb88a0();
     void FUN_10bbc590();
     void FUN_10bbb8d0();
     void FUN_10bb8ae0();
     void FUN_10bba260();
     void FUN_10bb8740();
-    void FUN_10bbd0a0();
+    void Update();
 
     char Unknown00[8];
-    Class_10DBD510* Unknown08;
+    Class_10DBD510* m_Owner;
     char Unknown0C[4];
     Class_10C29540* Unknown10;
     cIntArray Unknown14;
@@ -58,26 +58,26 @@ public:
     Class_10C28570* Unknown2C;
     Class_10BFD710 Unknown30;
     Class_10C276C0 Unknown94;
-    Class_10BFF460* Unknown210;
+    Class_10BFF460* m_Current;
 };
 
-// FUNCTION: 0x10BBD0A0 ?FUN_10bbd0a0@Class_10BBB410@@QAEXXZ
-void Class_10BBB410::FUN_10bbd0a0()
+// FUNCTION: 0x10BBD0A0 ?Update@Class_10BBB410@@QAEXXZ
+void Class_10BBB410::Update()
 {
-    if (((Class_10BBDB10*)Unknown08->FUN_10dbd510())->FUN_10bbdb10(0x40800544) == 0)
+    if (((Class_10BBDB10*)m_Owner->FUN_10dbd510())->FUN_10bbdb10(0x40800544) == 0)
     {
         Unknown30.FUN_10bfd710();
         Unknown94.FUN_10c276c0();
         FUN_10bb7c10();
     }
     Unknown2C->FUN_10c28570();
-    FUN_10bb9260();
-    if (Unknown210)
+    UpdateReprimand();
+    if (m_Current)
     {
-        if (Unknown210->FUN_10bff460() != 1)
-            FUN_10bbb330();
+        if (m_Current->FUN_10bff460() != 1)
+            CancelCurrent();
     }
-    Class_10BFF460* Obj = Unknown210;
+    Class_10BFF460* Obj = m_Current;
     if (Obj && !Obj->FUN_10bff460())
     {
         void* P = Obj->FUN_10bff2a0();

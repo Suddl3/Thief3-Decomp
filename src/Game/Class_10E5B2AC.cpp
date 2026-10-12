@@ -59,8 +59,8 @@ public:
     int Unknown24;
 };
 
-// FUNCTION: 0x109E3560 ?FUN_109e3560@Class_10E5B2AC@@QAEXXZ
-void Class_10E5B2AC::FUN_109e3560()
+// FUNCTION: 0x109E3560 ?IterateActors@Class_10E5B2AC@@QAEXXZ
+void Class_10E5B2AC::IterateActors()
 {
     Class_1096C8D0 Iter(AActor::StaticClass());
     while (Iter.IsValid())

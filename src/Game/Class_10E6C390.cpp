@@ -21,7 +21,7 @@ struct Struct_10A84D10
 class Class_10E6C390
 {
 public:
-    void FUN_10a84d10();
+    void Destroy();
 
     void** Unknown00;
     char Unknown04[0x18];
@@ -30,8 +30,8 @@ public:
     Struct_10A84D10* Unknown24;
 };
 
-// FUNCTION: 0x10A84D10 ?FUN_10a84d10@Class_10E6C390@@QAEXXZ
-void Class_10E6C390::FUN_10a84d10()
+// FUNCTION: 0x10A84D10 ?Destroy@Class_10E6C390@@QAEXXZ
+void Class_10E6C390::Destroy()
 {
     Unknown00 = DAT_10e6c390;
     DAT_10f46da0->Virtual2(this);

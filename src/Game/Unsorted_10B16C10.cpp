@@ -77,7 +77,7 @@ void Class_10B16C10::FUN_10b16c10(bool Flag)
     Class_10B16C10_Window* Window;
     {
         Class_109081E0 Name(DAT_10e79144);
-        Window = (Class_10B16C10_Window*)FUN_109e5960(Name);
+        Window = (Class_10B16C10_Window*)FindWindowByName(Name);
     }
     if (Window)
     {

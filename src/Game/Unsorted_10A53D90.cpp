@@ -14,15 +14,15 @@ public:
     bool IsPlaying();
 };
 
-class Class_10E682F0 : public Window
+class cFMVWindow : public Window
 {
 public:
     virtual void LoadConfig(Class_10AF7F80* File, Class_10AF7F80* Section);
 
-    void FUN_10a54c70(int A);
+    void Update(int A);
 
-    Class_10950230* Unknown118;
-    Class_1090A780 Unknown11C;
+    Class_10950230* m_Stream;
+    Class_1090A780 m_MovieName;
     char Unknown120;
     bool AlterGamma;
 };
@@ -62,21 +62,21 @@ Class_10E5B588::~Class_10E5B588()
     }
 }
 
-// FUNCTION: 0x10A54C20 ?LoadConfig@Class_10E682F0@@UAEXPAVClass_10AF7F80@@0@Z
-void Class_10E682F0::LoadConfig(Class_10AF7F80* File, Class_10AF7F80* Section)
+// FUNCTION: 0x10A54C20 ?LoadConfig@cFMVWindow@@UAEXPAVClass_10AF7F80@@0@Z
+void cFMVWindow::LoadConfig(Class_10AF7F80* File, Class_10AF7F80* Section)
 {
     Window::LoadConfig(File, Section);
     Config::Instance()->GetBool(Section->FUN_10af7f80(), "AlterGamma", &AlterGamma, File->FUN_10af7f80());
 }
 
-// FUNCTION: 0x10A54C70 ?FUN_10a54c70@Class_10E682F0@@QAEXH@Z
-void Class_10E682F0::FUN_10a54c70(int A)
+// FUNCTION: 0x10A54C70 ?Update@cFMVWindow@@QAEXH@Z
+void cFMVWindow::Update(int A)
 {
     FUN_10a53560(A);
-    if (Unknown118)
+    if (m_Stream)
     {
-        Unknown118->FUN_10950230();
-        if (Unknown118->FUN_10dbbbb0())
+        m_Stream->FUN_10950230();
+        if (m_Stream->FUN_10dbbbb0())
             Virtual109();
     }
 }

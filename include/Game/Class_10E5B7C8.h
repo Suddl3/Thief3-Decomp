@@ -17,20 +17,20 @@ public:
     virtual void Virtual2();
     virtual void FUN_109e64e0();
     virtual void FUN_109e87f0(int p1);
-    virtual bool FUN_109e3c60(int p1);
+    virtual bool SetPending(int p1);
 
-    void FUN_109e3c70();
-    void FUN_109e4fb0();
-    void FUN_109e5180(int Param);
-    void FUN_109e55c0(Class_109E55C0_Param* Param);
+    void FlushPending();
+    void ClearItems();
+    void UpdateItems(int Param);
+    void VisitParam(Class_109E55C0_Param* Param);
 
     char Unknown04[0x84];
     std::list<Class_10E5B7C8_Unknown88*> Unknown88;
-    int Unknown94;
+    int m_Pending;
     char Pad98[0x150];
-    int Unknown1E8;
+    int m_ItemCount;
     int Unknown1EC;
-    Struct_109E4FB0_Item** Unknown1F0;
+    Struct_109E4FB0_Item** m_Items;
 };
 
 #endif // GAME_CLASS_10E5B7C8_H

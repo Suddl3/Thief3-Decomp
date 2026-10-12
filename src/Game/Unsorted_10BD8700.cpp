@@ -133,7 +133,7 @@ Class_10BD8880::Class_10BD8880(int A, int B)
 // FUNCTION: 0x10BD92E0 ?FUN_10bd92e0@cCombatBase@@UAEXXZ
 void cCombatBase::FUN_10bd92e0()
 {
-    Class_10BFF460* Obj = Unknown04->FUN_10bbb410();
+    Class_10BFF460* Obj = Unknown04->GetCurrent();
     Class_10C7D570* C = Unknown04->Unknown08;
     Unknown48 = FUN_10ba91e0(&((Class_10C7D570_Result*)C->FUN_10c7d570())->Unknown2C, Virtual70());
     Unknown58 = Obj && !Obj->FUN_10bff330() && Virtual73(0.5f);

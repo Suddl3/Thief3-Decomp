@@ -10,11 +10,11 @@ public:
     float AssumedUIScreenWidth;
     float AssumedUIScreenHeight;
 
-    void FUN_109e4300(FVector* Pos, int* OutX, int* OutY);
+    void UIPositionToScreen(FVector* Pos, int* OutX, int* OutY);
 };
 
-// FUNCTION: 0x109E4300 ?FUN_109e4300@WindowManager@@QAEXPAVFVector@@PAH1@Z
-void WindowManager::FUN_109e4300(FVector* Pos, int* OutX, int* OutY)
+// FUNCTION: 0x109E4300 ?UIPositionToScreen@WindowManager@@QAEXPAVFVector@@PAH1@Z
+void WindowManager::UIPositionToScreen(FVector* Pos, int* OutX, int* OutY)
 {
     *OutX = (int)((Pos->X + 1.0f) * (AssumedUIScreenWidth * 0.5f));
     *OutY = (int)((1.0f - Pos->Y) * (AssumedUIScreenHeight * 0.5f));

@@ -28,8 +28,8 @@ public:
     Class_10E5B2C0* FUN_109e3630();
 };
 
-// FUNCTION: 0x109E3510 ?FUN_109e3510@Class_10E5B2AC@@UAEXHHHH@Z
-void Class_10E5B2AC::FUN_109e3510(int Msg, int A, int B, int C)
+// FUNCTION: 0x109E3510 ?HandleMessage@Class_10E5B2AC@@UAEXHHHH@Z
+void Class_10E5B2AC::HandleMessage(int Msg, int A, int B, int C)
 {
     switch (Msg)
     {

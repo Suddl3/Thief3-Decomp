@@ -12,28 +12,28 @@ Class_10905A90_Member* GetAllocator();
 class Class_1090FD40
 {
 public:
-    int FUN_1090fd40(const Class_109081E0& Item);
+    int Add(const Class_109081E0& Item);
     void FUN_1090f2c0(int Count);
     void FUN_1090fd00();
     void FUN_10a37f80(int A, int B, int C);
-    void FUN_10a39200(int Index);
-    void FUN_10a391a0(int Index, const Class_109081E0& Value);
+    void RemoveAt(int Index);
+    void Insert(int Index, const Class_109081E0& Value);
     void FUN_10a5b5b0(int A, int B);
-    void FUN_10a5c560(int Index);
+    void RemoveUnordered(int Index);
     void Empty()
     {
         FUN_1090f2c0(0);
         if (Unknown04)
         {
-            GetAllocator()->Virtual5(Unknown08);
-            Unknown08 = 0;
+            GetAllocator()->Virtual5(m_Items);
+            m_Items = 0;
             Unknown04 = 0;
         }
     }
 
-    int Unknown00;
+    int m_Count;
     int Unknown04;
-    Class_109081E0* Unknown08;
+    Class_109081E0* m_Items;
 };
 
 #endif // GAME_CLASS_1090FD40_H

@@ -53,6 +53,6 @@ extern IDirect3DDevice8* GDirect3DDevice8;
 // FUNCTION: 0x10937790 ?FUN_10937790@Class_10937790@@QAEXXZ
 void Class_10937790::FUN_10937790()
 {
-    GDirect3DDevice8->SetViewport(&Unknown7FC);
-    FUN_10937430(&Unknown73C, &Unknown7BC, &Unknown77C);
+    GDirect3DDevice8->SetViewport(&m_Viewport);
+    SetTransforms(&m_Projection, &m_View, &m_World);
 }

@@ -10,11 +10,11 @@ public:
     float AssumedUIScreenWidth;
     float AssumedUIScreenHeight;
 
-    FVector FUN_109e4290(int X, int Y);
+    FVector ScreenToUIPosition(int X, int Y);
 };
 
-// FUNCTION: 0x109E4290 ?FUN_109e4290@WindowManager@@QAE?AVFVector@@HH@Z
-FVector WindowManager::FUN_109e4290(int X, int Y)
+// FUNCTION: 0x109E4290 ?ScreenToUIPosition@WindowManager@@QAE?AVFVector@@HH@Z
+FVector WindowManager::ScreenToUIPosition(int X, int Y)
 {
     FVector Result;
     Result.X = X / (AssumedUIScreenWidth * 0.5f) - 1.0f;

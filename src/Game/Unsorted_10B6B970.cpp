@@ -230,7 +230,7 @@ void cDifficultyPane::FUN_10b6b970()
         int Index = 1;
         if (Value)
             Index = Value->Unknown174;
-        ((Class_10A56860*)Unknown190)->FUN_10a56480(Index);
+        ((Class_10A56860*)Unknown190)->SetSelectedIndex(Index);
     }
     if (Unknown198)
     {

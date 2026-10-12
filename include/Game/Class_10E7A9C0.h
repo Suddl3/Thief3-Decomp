@@ -22,7 +22,7 @@ public:
 
     Class_10E7A9C0();
 
-    Class_10E7A9C0* FUN_10b248f0();
+    Class_10E7A9C0* Construct();
 
     int Unknown04;
 };

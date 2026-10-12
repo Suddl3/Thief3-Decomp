@@ -11,8 +11,8 @@ public:
     virtual void FUN_10a795d0();
     virtual void FUN_10a79610();
     virtual void Virtual2();
-    virtual void FUN_10a79d30(int Item);
-    virtual void FUN_10a79d70(int Item);
+    virtual void AddItem(int Item);
+    virtual void RemoveItem(int Item);
     virtual void FUN_10a795c0();
     virtual void FUN_10a7a340(void* A, int B);
 
@@ -28,7 +28,7 @@ public:
     int Unknown14;
     int Unknown18;
     cIntArray Unknown1C;
-    cIntArray Unknown28;
+    cIntArray m_Items;
 };
 
 #endif // GAME_CLASS_10E6BD68_H

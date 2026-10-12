@@ -3,12 +3,12 @@
 #ifndef GAME_CLASS_10E8C690_H
 #define GAME_CLASS_10E8C690_H
 
-class Class_10E8C7A0;
+class cStatePatrol;
 
 class Class_10E8C690
 {
 public:
-    virtual Class_10E8C7A0* FUN_10ba4560();
+    virtual cStatePatrol* FUN_10ba4560();
 };
 
 #endif // GAME_CLASS_10E8C690_H

@@ -15,12 +15,12 @@ public:
     char Unknown0EC[0x68];
 };
 
-class Class_10E68938
+class cRadioWindow
 {
 public:
-    Class_10E68938();
+    cRadioWindow();
 
-    virtual ~Class_10E68938();
+    virtual ~cRadioWindow();
 
     char Unknown04[0x134];
 };
@@ -39,7 +39,7 @@ public:
     cIntArray Unknown164;
     cIntArray Unknown170;
     bool Unknown17C;
-    Class_10E68938 Unknown180;
+    cRadioWindow Unknown180;
     int Unknown2B8;
     int Unknown2BC;
     Class_10B59770 Unknown2C0;

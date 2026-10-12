@@ -114,12 +114,12 @@ void Class_10E79228::Tick(float A)
                 {
                     FUN_10a36cf0();
                     m_Closing = false;
-                    ((Class_10E5B7C8*)this)->FUN_109e3c70();
+                    ((Class_10E5B7C8*)this)->FlushPending();
                 }
             }
         }
         else
-            ((Class_10E5B7C8*)this)->FUN_109e3c70();
+            ((Class_10E5B7C8*)this)->FlushPending();
     }
     FUN_109e70e0(A);
 }

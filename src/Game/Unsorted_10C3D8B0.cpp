@@ -36,7 +36,7 @@ public:
     void FUN_10c3dc80(FArchive& Ar);
 
     FVector Unknown1C;
-    float Unknown28;
+    float m_Range;
     bool Unknown2C;
 };
 
@@ -45,7 +45,7 @@ void Class_10E9B168::FUN_10c3dc80(FArchive& Ar)
 {
     FUN_10c3db00(Ar);
     FUN_10b052a0(Ar, &Unknown1C);
-    Ar.Serialize(&Unknown28, 4);
+    Ar.Serialize(&m_Range, 4);
     Ar.Serialize(&Unknown2C, 1);
 }
 

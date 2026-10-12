@@ -32,14 +32,14 @@ public:
     virtual void Virtual24();
     virtual void Virtual25();
     virtual void Virtual26();
-    virtual void FUN_109e60a0(int Index, const int* Item);
+    virtual void SetValueAt(int Index, const int* Item);
 
     char Unknown04[0xEC];
     cIntArray Unknown0F0;
 };
 
-// FUNCTION: 0x109E60A0 ?FUN_109e60a0@Class_10E5B2C0@@UAEXHPBH@Z
-void Class_10E5B2C0::FUN_109e60a0(int Index, const int* Item)
+// FUNCTION: 0x109E60A0 ?SetValueAt@Class_10E5B2C0@@UAEXHPBH@Z
+void Class_10E5B2C0::SetValueAt(int Index, const int* Item)
 {
     if (Unknown0F0.Count < Index + 1)
         Unknown0F0.SetCount(Index + 1);

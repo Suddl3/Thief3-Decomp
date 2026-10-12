@@ -38,9 +38,9 @@ public:
     virtual void Virtual10();
     virtual void Virtual11();
     virtual void Virtual12();
-    virtual void FUN_10bfbb80(int param);
+    virtual void SetPosition(int param);
     char Unknown04[0x38];
-    int Unknown3C;
+    int m_Position;
 };
 
 typedef int INT;
@@ -136,8 +136,8 @@ void Class_10E6D8F0::FUN_10bfbb50(int param)
     Unknown18 = param;
 }
 
-// FUNCTION: 0x10BFBB80 ?FUN_10bfbb80@Class_10E9CD90@@UAEXH@Z
-void Class_10E9CD90::FUN_10bfbb80(int param)
+// FUNCTION: 0x10BFBB80 ?SetPosition@Class_10E9CD90@@UAEXH@Z
+void Class_10E9CD90::SetPosition(int param)
 {
-    Unknown3C = param;
+    m_Position = param;
 }

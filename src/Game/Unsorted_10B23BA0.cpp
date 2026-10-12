@@ -9,7 +9,7 @@ bool FUN_10abc140();
 class WindowManager : public Class_109E6D60
 {
 public:
-    int FUN_109e5960(const Class_109081E0& Name);
+    int FindWindowByName(const Class_109081E0& Name);
     void FUN_109e6b20(int A);
 };
 
@@ -24,7 +24,7 @@ void __stdcall FUN_10b23fa0(int A, int B, int C)
 {
     if (FUN_10abc140())
     {
-        int Window = GWindowManager->FUN_109e5960(DAT_10e790f4);
+        int Window = GWindowManager->FindWindowByName(DAT_10e790f4);
         if (Window)
         {
             if (!GWindowManager->FUN_109e6d60(Window))
@@ -40,7 +40,7 @@ void __stdcall FUN_10b24070(int A, int B, int C)
 {
     if (FUN_10abc140())
     {
-        int Window = GWindowManager->FUN_109e5960(DAT_10e79120);
+        int Window = GWindowManager->FindWindowByName(DAT_10e79120);
         if (Window)
         {
             if (!GWindowManager->FUN_109e6d60(Window))

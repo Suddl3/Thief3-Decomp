@@ -90,7 +90,7 @@ bool Class_10E82688::FUN_10b5a400(int A, int B, int C)
     {
         Virtual56(0);
         GWindowManager->FUN_109e8930(this);
-        static_cast<Class_10B15960*>(FUN_10b154c0())->FUN_10b15960(0);
+        static_cast<Class_10B15960*>(FUN_10b154c0())->OpenMainMenuWindow(0);
         return true;
     }
     return Class_10E5B2C0::FUN_10a52e70(A, B, C);

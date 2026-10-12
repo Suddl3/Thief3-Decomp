@@ -11,7 +11,7 @@ extern const char DAT_10e791d8[];
 
 void FUN_10a36cd0();
 
-// The header's WindowManager, copied whole with FUN_10b17030 added. The slot this function calls
+// The header's WindowManager, copied whole with SetDeferredMissionFailedWindow added. The slot this function calls
 // (0x14) takes one int, so it is the first virtual WindowManager adds. The base Class_109E6D60 is
 // 0x90 bytes, so the header's fields after it sit 0x8C past their header offsets: the flag at 0x25C
 // and the float at 0x260 (object offsets, as the code reads them) follow after PadD4 of 0xFC.
@@ -27,15 +27,15 @@ public:
 
     void FUN_109e3d60(void* Window);
     void FUN_109e8ae0(void* Window);
-    int FUN_109e5960(const Class_109081E0& Name);
+    int FindWindowByName(const Class_109081E0& Name);
     void FUN_109e6b20(int A);
     void FUN_109e8930(void* Window);
-    void FUN_10b158b0();
+    void OpenTitleLoadWindow();
     void FUN_10b16110(int A, int B);
     void GetUIScreenSize(FVector* Out);
-    FVector FUN_109e4290(int X, int Y);
-    void FUN_109e4300(FVector* Pos, int* OutX, int* OutY);
-    bool FUN_10b17030();
+    FVector ScreenToUIPosition(int X, int Y);
+    void UIPositionToScreen(FVector* Pos, int* OutX, int* OutY);
+    bool SetDeferredMissionFailedWindow();
 
     char Unknown04[0x94];
     int Unknown98;
@@ -45,29 +45,29 @@ public:
     float AssumedUIScreenWidth;
     float AssumedUIScreenHeight;
     char PadD4[0xFC];
-    char Unknown25C;
+    char DeferredArmed;
     char Pad25D[0x3];
-    float Unknown260;
+    float DeferredDelay;
     char Unknown264;
 };
 
-// FUNCTION: 0x10B17030 ?FUN_10b17030@WindowManager@@QAE_NXZ
-bool WindowManager::FUN_10b17030()
+// FUNCTION: 0x10B17030 ?SetDeferredMissionFailedWindow@WindowManager@@QAE_NXZ
+bool WindowManager::SetDeferredMissionFailedWindow()
 {
     int Window;
     {
         Class_109081E0 Name(DAT_10e791d8);
-        Window = FUN_109e5960(Name);
+        Window = FindWindowByName(Name);
     }
     if (!Window)
     {
         return false;
     }
-    if (!Unknown25C)
+    if (!DeferredArmed)
     {
         Virtual5(Window);
-        Unknown25C = 1;
-        Unknown260 = 5.0f;
+        DeferredArmed = 1;
+        DeferredDelay = 5.0f;
         FUN_10a36cd0();
     }
     return true;

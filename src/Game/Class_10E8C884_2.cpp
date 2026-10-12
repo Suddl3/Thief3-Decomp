@@ -62,7 +62,7 @@ int Class_10E8C884::FUN_10bb1240(int A, Class_10BB1020_B* B, int C)
         {
             Class_10B39870* Obj = Owner->Unknown118->Unknown08->FUN_10aa82d0();
             Class_10E9CD90* Light = &Obj->Unknown30;
-            Light->Class_10E9CD90::FUN_10bfbb80(0.0f);
+            Light->Class_10E9CD90::SetPosition(0.0f);
             ((Class_10E74F70*)Light)->Class_10E74F70::FUN_10bfbb90(0);
             return 1;
         }

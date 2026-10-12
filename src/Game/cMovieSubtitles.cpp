@@ -21,22 +21,22 @@ public:
     char Unknown0EC[0x2C];
 };
 
-class Class_10E682F0 : public Class_10E67FD0
+class cFMVWindow : public Class_10E67FD0
 {
 public:
-    Class_10E682F0();
+    cFMVWindow();
 
-    virtual ~Class_10E682F0();
+    virtual ~cFMVWindow();
 
     void FUN_10a54d50();
 
-    int Unknown118;
-    int Unknown11C;
+    int m_Stream;
+    int m_MovieName;
     char Unknown120;
     char Unknown121;
 };
 
-class cMovieSubtitles : public Class_10E682F0
+class cMovieSubtitles : public cFMVWindow
 {
 public:
     cMovieSubtitles();

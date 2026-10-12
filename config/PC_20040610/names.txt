@@ -1431,3 +1431,205 @@ field Class_10E96510::Unknown54 m_LastKnownPosition Set from the vector Virtual1
 field Class_10E69050::Unknown0C m_Count Bounds the index checks in IsFinished and UpdateCurrent; the destructor reads it as an array count.
 field Class_10E69050::Unknown14 m_Items Pointer array indexed by Unknown18 in five methods; the destructor deletes its elements.
 field Class_10E69050::Unknown18 m_Current Index of the current item: the destructor zeroes it and UpdateCurrent advances it.
+class Class_10E66474 cSoundStreamingManager Xbox messages name cSoundStreamingManager (unhandled event; move event for an actor that isn't the player); the event switch agrees.
+class Class_10E68938 cRadioWindow Xbox names cRadioWindow with file WmRadioWindow.cpp; SetSelectedIndex leaves exactly one child selected.
+class Class_10E682F0 cFMVWindow Xbox callee file WmFMVWindow.cpp; cMovieSubtitles calls its constructor and its Stop.
+class Class_10E6B4C8 LoginManager Xbox twin's class names LoginManager and ILoginManager, file LoginManager.cpp; code walks PlayerSetupInfoLinks.
+class Class_10E6C580 cTriggerPropertyParam Xbox file TriggerPropertyParam.cpp; sibling cTriggerClassParam (file TriggerClassParam.cpp) shares this vtable layout.
+class Class_10E6D5B0 SwooshGeometryTriStrip Xbox twin (5 slots) names SwooshGeometryTriStrip, file SwooshTriStrip.cpp; code releases two owned objects.
+class Class_10E93F68 cTacticWeaponEquip Xbox twin cTacticWeaponEquip (AIWeaponStates.cpp) with the same 70-slot vtable; a state on Class_10E90D70.
+class Class_10E49F38 cD3DVertexBuffer Holds an IDirect3DVertexBuffer8 (Unknown14) and its stride (Unknown1C); LockVertices and BindStreamSource use both.
+class Class_10E8C7A0 cStatePatrol Its handler FUN_10bb3a50 passes the string 'STATE_PATROL' to FUN_10bb3730.
+class Class_10E8C7B8 cStateGuard Its handler FUN_10bb1910 passes the string 'STATE_GUARD' to FUN_10bb0b10.
+class Class_10E8C7C4 cStateFlee Its handler FUN_10bb1c40 passes the string 'STATE_FLEE' to FUN_10bb0b10.
+function 0x1093FFE0 BuildTextureMatrix Writes a clip-to-texture matrix with 0.5 scale and 0.5/Width, 0.5/Height half-texel offsets from its size arguments.
+function 0x109400A0 UpdateTextureMatrix Rebuilds Arg's matrix via BuildTextureMatrix from its texture size or Virtual14 descriptor; sets flag 0x800 when neither exists.
+function 0x10940C50 Reset Destructor calls it: releases four owned objects, clears the per-entry arrays and flag; constructor clears the arrays too.
+function 0x10949060 IntegrateOffsets Adds each rate vector times A to its offset while the matching flag is set, else zeroes it; second offset then goes through FUN_10957150.
+function 0x1094CF80 Update Vtable slot 0: reads and clears the flags word, runs three Class_1094CA70 steps when set, then calls IntegrateOffsets(A).
+function 0x10A2FA00 Clone Returns a new Class_10E66300 built from this object's two ints; vtable slot 1.
+function 0x10A2F110 IsEqual Returns 1 when Other's two ints match this object's; vtable slot 2.
+function 0x10A2F140 Contains Returns 1 when A equals either stored int; vtable slot 3.
+function 0x10A334E0 ClearItems Loops i < 5 calling FUN_10a33040 with a default Struct_10A334E0; HandleEvent calls it for event 0x5A.
+function 0x10A33B70 HandleMoveEvent Xbox callee message: Recieved a move event for an actor that isn't the player; HandleEvent calls it for event 0x70.
+function 0x10A33CE0 HandleEvent Vtable slot 0: switches on the event code (1, 0x5A, 0x70); Xbox vtable message: Recieved an unhandled event.
+function 0x10A54C70 Update Forwards A to Window's FUN_10a53560, ticks the stream, and calls Virtual109 when FUN_10dbbbb0 is true; cMovieSubtitles calls it.
+function 0x10A54EB0 Play Called by FUN_10b31980; calls Stop first, then creates the stream for Name and stores Name.
+function 0x10A56480 SetSelectedIndex Stores Index in m_SelectedIndex, then sets each child's state: the child at Index gets 2, the others 0.
+function 0x10A79D30 AddItem Appends Item to Unknown28 unless FindIndex already finds it.
+function 0x10A79D70 RemoveItem Finds Item in Unknown28, swaps it with the last element and drops that element.
+function 0x10A84D10 Destroy Unregisters from DAT_10f46da0, then deletes and nulls Unknown24, Unknown20 and Unknown1C; called by FUN_10a854e0.
+function 0x10A84D70 Reset Zeroes counters and flags, sets Unknown30 to -1, then calls DAT_10f46da0->Virtual3 with 0x26.
+function 0x10A850C0 PushFloats Passes Unknown3C, 40, 44 and 48 to FUN_10c3f120 at indices 0 to 3 of FUN_10c3fb10().
+function 0x10A85660 HandleMessage Vtable slot 0; switches on Message with cases 38, 27, 11, 116 and 117.
+function 0x10BB9260 UpdateReprimand Ends the timed reprimand once Unknown1DC plus a config float passes GetTimeSeconds(); sends '+reprimandplayer:ramp_down'.
+function 0x10BBB330 CancelCurrent Runs on an unfinished current object: clears Unknown2cc, hands its payload to Unknown220 when keyed to this actor, then deletes it.
+function 0x10BBB410 GetCurrent Returns Unknown210, first cancelling it through FUN_10bbb330 when FUN_10bff460 is not 1.
+function 0x10BBB540 RemoveItem Finds Item in Unknown14 with FindIndex and removes that entry through FUN_109dff50; called from FUN_10c283f0.
+function 0x10BBD0A0 Update Per-frame step: calls UpdateReprimand, the Unknown14 loop and several update methods in a fixed order; called by FUN_10b9c7a0.
+function 0x109E3C60 SetPending Stores p1 in Unknown94, which FlushPending hands to FUN_109e87f0; always returns true.
+function 0x109E3C70 FlushPending Clears Unknown94 and passes its old value to the virtual FUN_109e87f0; called from Class_10E79228::Tick.
+function 0x109E4FB0 ClearItems Deletes each non-null Unknown1F0 entry up to Unknown1E8 and nulls it; called by the Class_109E8FB0 destructor.
+function 0x109E5000 RecenterCursor Moves the cursor to the window centre via ClientToScreen (Unknown98->Virtual42), or to (-1,-1) when the mode flags are off.
+function 0x109E5180 UpdateItems Calls each Unknown1F0 item's Virtual2(Param), then deletes items whose Virtual0() is true; called from FUN_109e70e0.
+function 0x109E55C0 VisitParam Calls Param->Virtual57(), then recurses into each Virtual43() child while Virtual54() is true.
+function 0x10A37C10 Create Heap-allocates Class_10E66530(this, A) and returns it; cT3Camera::FUN_10ac43f0 is the caller.
+function 0x10A37DC0 ChangeState Records the old id, calls Virtual12()->Virtual0 to change it, then Virtual3 notifies Unknown20 or Unknown28 with new and old ids.
+function 0x1090FD40 Add Stores Item at index Unknown00 after growing the count by one; returns that index.
+function 0x1090FFA0 AddUnique strcmp scan returns an equal item's index; otherwise appends Item and returns the new index.
+function 0x10A391A0 Insert Index equal to the count appends; otherwise shifts the tail up (FUN_10a37f80) and stores Value at Index.
+function 0x10A39200 RemoveAt Shifts the tail down over Index (FUN_10a37f80), then shrinks the count by one.
+function 0x10A5C560 RemoveUnordered Moves the last item into Index (FUN_10a5b5b0), then shrinks the count by one.
+function 0x10B16860 ShowJunkItemWindow String 'HUDWindow.JunkItemWindow' names the window; its last call passes true to FUN_10b2e840.
+function 0x109E2C10 RemoveFromBucket Deletes the node for Obj from m_Buckets[Index]; else calls FUN_109e2b40(Obj).
+function 0x109E2CE0 RemoveZone Casts to AZoneProperties, calls FUN_109e2c10 with its m_FleshBSPZone; events 38 and 39 dispatch here.
+function 0x109E2FA0 AddZone Events 36 and 37: FUN_109e2d50 adds the zone at its m_FleshBSPZone, then notifies codes 0x26, 0x27, 0x70.
+function 0x109E30D0 HandleEvent Virtual slot 0: switch sends events 36-39 to the add and remove handlers, 112 to FUN_109e3060.
+function 0x10956E10 GetEntry Returns Unknown29C[A] when Virtual10() holds, else Unknown0A8[A].Unknown00 when Virtual7(A), else 0.
+function 0x10956F20 FreeEntry If Unknown29C[Index] is set, frees it through FUN_1092bdb0 and clears the slot.
+function 0x10957000 IsBitSet Returns whether bit Bit is set in Unknown298 (m_Flags).
+function 0x10A3AB10 SetItems Grows m_Items to Count entries, then fills each from Items via Virtual1.
+function 0x10B3E820 ClearSlots Index 4 clears all four Unknown5C slots, else only Index; each item's Unknown08 gets Virtual10, then Virtual2.
+function 0x10B3EA80 Reset Clears Unknown4C, then calls FUN_10b3e820(4), which clears all four slots.
+function 0x10B3ED20 ResetIfPending Calls FUN_10b3ea80 (Reset) only while Unknown4C is set.
+function 0x10B3F830 OnLockPicked Increments the stats 'sta_lockspicked' and 'sta_lockspickedtotal'; also uses 'LPOpenLock'.
+function 0x10B8EC10 Advance Increments DAT_10ff6600 while below 4; IsAtEnd (FUN_10b8ec30) tests the same limit.
+function 0x10B8EC30 IsAtEnd Returns DAT_10ff6600 >= 4, the limit Advance (FUN_10b8ec10) stops at.
+function 0x10B8ECA0 GetStateName Returns the name at DAT_10f05b98[Unknown04]; its string is 'DoorState_Open'.
+function 0x10B8ECD0 GetCurrentStateName Returns the name at DAT_10f05b98[DAT_10ff6600], the index Advance moves; string 'DoorState_Open'.
+function 0x10B251C0 SetJunkItem Xbox InGameInv message 'tried to set a junk item' (T3Opt calls pair); stores its argument in m_JunkItem.
+function 0x10B25200 ClearJunkItem Zeroes m_JunkItem and both state fields, the inverse of SetJunkItem.
+function 0x10B2F590 RefreshLabel String '<shadow=0,0,0><dc=122,112,188><font=Papyrus14>%d' formats m_Count into the label text.
+function 0x10B2F6C0 SetName Copies its Name argument into m_Name when the label exists, then refreshes it.
+function 0x10B2F6F0 SetCount Stores p1 in m_Count when it changes, then refreshes the label.
+function 0x10B737B0 ApplyValues Writes m_Values[base+i] into each m_Children element; cT3OptionsWindow::ResetToDefaults calls it.
+function 0x10BAD9D0 Resize Resizes the m_Items block and constructs new elements from the old count; sets m_Count.
+function 0x10BAE080 Clear Calls Resize(0), then frees and nulls m_Items and zeroes m_CapacityBytes.
+function 0x10BAE2B0 Assign Resizes to Other's count, then copies each element of Other's array.
+function 0x10C176E0 Add Resizes to m_Count+1, stores Item at the old count and returns that index.
+function 0x10BED130 FUN_10bed130_Tick Calls PopState() when Unknown44 is 0, otherwise FUN_10bece10; placeholder name kept, no clear verb.
+function 0x10BC7F30 CheckDeathGrunt String '+death:grunt' is sent when Unknown04->Unknown08 GetFloat(0x100647) > 0.
+function 0x10BC9A50 ShopOwnerNoCash String '+shopowner:nocash' passed to FUN_10bc7d70 as the speech name.
+function 0x10BF0AE0 UpdateSummon String '+summon:fight' and 'summon' sent when target is in range and Unknown260 < 0.
+function 0x10A676A0 FollowPlayerSetupLinks Recurses along the first outgoing PlayerSetupInfoLink, recording IDs in Out; Xbox message names those links.
+function 0x10A2F3C0 Construct Sets Unknown00 from DAT_10e6bb18, zeroes Unknown04 and Unknown08, returns this: a constructor body.
+function 0x10AA4A00 Construct Calls the base constructor, sets VTable and Unknown08, returns this: in-place construction.
+function 0x10B248F0 Construct Sets Unknown00 from DAT_10e7a9c0, zeroes Unknown04, returns this: the in-place constructor body.
+function 0x10A89960 IsDone Returns true once DAT_10f3a1d8 has no pending work; sibling cTriggerClassParam slot 7 has the same shape.
+function 0x10A8B640 WriteValue Same signature and slot 10 as cTriggerClassParam::WriteValue; writes Unknown08 and Unknown0C to the stream.
+function 0x10AA4A40 GetTypeName Returns a Class_109081E0 built from string 'uncatactors', as cTriggerClassParam::GetTypeName does with 'Class'.
+function 0x10AA4CF0 SetParameters Stores four ints in Unknown08..14, then calls Virtual2 (Release), which frees the owned objects.
+function 0x10AA4D20 Release Calls Virtual1 and Virtual2 on the two owned objects, clears both pointers and Unknown04.
+function 0x109E4290 ScreenToUIPosition Maps pixel X and Y to [-1,1] using AssumedUIScreenWidth and AssumedUIScreenHeight; inverse of UIPositionToScreen.
+function 0x109E4300 UIPositionToScreen Maps a [-1,1] FVector back to pixels with AssumedUIScreenWidth and AssumedUIScreenHeight; inverse of ScreenToUIPosition.
+function 0x109E5960 FindWindowByName Every caller passes a window name such as 'MainMenuWindow' or 'HUDWindow' and uses the int result as the window.
+function 0x10B158B0 OpenTitleLoadWindow Finds 'TitleLoadWindow'; unless FUN_109e6d60 rejects it, calls Virtual4 on it and returns true.
+function 0x10B15960 OpenMainMenuWindow Finds 'MainMenuWindow'; for type 0x72 calls FUN_10b27fd0 and ProcessState(A) on it, then calls Virtual4.
+function 0x10B15B20 OpenEnterMissionWindow Finds 'EnterMissionWindow'; for type 0x7c stores A in its Unknown2F4, then calls Virtual4 on it.
+function 0x10B15BF0 OpenRestartMissionWindow Finds 'RestartMissionWindow'; for type 0x7d clears its Unknown2F4, then calls Virtual4 on it.
+function 0x10B15D70 OpenCreditsWindow Finds 'T3Credits', stores A in its Unknown15D, calls Virtual4; the Xbox credits-type message names this window.
+function 0x10B16CD0 IsHUDWindowVisible Returns 1 when 'HUDWindow' exists and its Virtual53 is true, else 0.
+function 0x10B16E40 ToggleBowDiagnosticWindow Finds 'HUDWindow.BowDiagnosticWindow' and calls Virtual56 with the opposite of Virtual54's state.
+function 0x10B17030 SetDeferredMissionFailedWindow Xbox message 'Unable to properly set deferred mission failed window!' names it; finds 'MissionFailedWindow', calls Virtual5.
+function 0x10C1B270 Serialize FArchive& override: calls the base serializer FUN_10c1b1a0 first, then serializes Unknown48.
+function 0x10B559E0 HandleCheatCommand Matches 'HURTME' and 'HEALME' through ParseCommand, acts on the player, and returns 1 when a cheat matched.
+function 0x109E48B0 SetChildFlags Loops over UnknownC0 up to UnknownB8, calls SetFlag (vtable 65) on each child, then recurses into it.
+function 0x109E4900 ClearChildFlags Loops over UnknownC0 up to UnknownB8, calls ClearFlag (vtable 66) on each child, then recurses into it.
+function 0x10A528D0 PropagateFlag2ToParents If HasFlag(2) and GetParent() is set, calls SetFlag(2) on the parent, then recurses up the chain.
+function 0x109E60E0 AddValue Appends Value to the int list in Unknown0B8, growing it by one.
+function 0x109E60A0 SetValueAt Grows the int list in Unknown0F0 to Index+1, then stores *Item at Index.
+function 0x10C3DD80 Serialize Virtual slot 17; serializes Unknown1C, Unknown28 and Unknown2C after the base serialize, then Unknown30.
+function 0x10C3DDD0 Start Gets handle Unknown54 from Unknown08 and passes it to Unknown64->Virtual60; sets Unknown18.
+function 0x10C3D570 Stop Releases handle Unknown54 through Unknown64->FUN_109bbba0 and clears Unknown18; the destructor repeats this body.
+function 0x10C3D0A0 IsInRange Returns 1 when FUN_10c05a20(Unknown04->Unknown2C, Unknown1C) is below Unknown28; virtual slot 24.
+function 0x10C3D160 CopyFrom Copies Unknown1C, Unknown28 and Unknown2C from Obj's Virtual21, Virtual23 and Virtual25 accessors.
+function 0x10B7C030 DestroyPhysicsObject Removes A->UnknownB0 through FUN_10d9dcb0()->FUN_10d9e5e0, the removal FUN_10b7dc60 also uses.
+function 0x10B7C170 Trace Zeroes a Hit record, passes it to FUN_10d9d640, copies Hit.Unknown00 to Out.
+function 0x10B7C770 Shutdown Calls Virtual1 on each Unknown4C item, then deletes Unknown34; FUN_10961570 of Class_10E4B238 calls it.
+function 0x10B7E620 AddToMaskedLists Appends Obj to Unknown38[i] for each bit i set in Mask; FUN_10b7e660 calls it.
+function 0x10C63F70 Init stores A and B as buffer and size, cursor 0, sets vtable, returns this
+function 0x10C63FD0 Read memcpy from Unknown34 + Unknown3C for Count bytes, then advances Unknown3C
+function 0x10C64010 IsAtEnd returns Unknown3C >= Unknown38, the read cursor against the buffer size
+function 0x10BFBB80 SetPosition stores its argument in Unknown3C, the cursor that Read and IsAtEnd use
+function 0x10937430 SetTransforms SetTransform calls with 3, 2 and 0x100 (projection, view, world), then vertex shader constants
+function 0x10939050 ClearSlots loops the nine Unknown90 slots, clearing each bit of Unknown30, then zeroes it
+function 0x10941980 AddEntry appends a three-short record to the array at Unknown1C->Unknown2C, growing it first
+function 0x10934810 LockVertices Calls IDirect3DVertexBuffer8::Lock on Unknown14, offsets scaled by the stride Unknown1C.
+function 0x10934860 BindStreamSource Passes Unknown14 and Unknown1C to cD3DStateCache::SetStreamSource; returns 0x80040721 when Unknown14 is 0.
+function 0x109567E0 Reset Calls FUN_10953590, then reinitializes the fields FUN_10956780 sets; virtual slot 12.
+function 0x10A2EE80 Matches Returns 1 when Unknown08 is equal and Unknown04 is equal, or either object has Unknown04 zero.
+function 0x10A2F460 Clone Allocates a new Class_10E66310 and copies Unknown04 and Unknown08 into it.
+function 0x109E3510 HandleMessage Switch on Msg: 5 calls FUN_109e3320; 0x24 and 0x25 call FUN_109e3420; the class's only virtual.
+function 0x109E32B0 SendMessages Sends messages 0x24, 0x25 and 5 with this to DAT_10f46da0, the codes FUN_109e3510 switches on.
+function 0x109E3560 IterateActors Walks every AActor object with an object iterator, calling FUN_109e3320 on each.
+function 0x10B7AA50 UpdateState Switches on Unknown150.Field00 (states 1 and 4), advances it via Virtual114/Virtual115, then calls FUN_10a53560.
+function 0x10BA45A0 Construct Writes DAT_10e8c7a0, this class's vtable address, to its first field and returns this; called by Class_10E8C690::FUN_10ba4560.
+function 0x10BA4640 Construct Writes DAT_10e8c7b8, this class's vtable address, to its first field and returns this; called by Class_10E8C698::FUN_10ba4600.
+function 0x10BA4690 Construct Writes DAT_10e8c7c4, this class's vtable address, to its first field and returns this; called by Class_10E8C69C::FUN_10ba4650.
+function 0x10BA47A0 Construct Writes &DAT_10e8c7e8, this class's vtable address, to its first field and returns this; called by Class_10E8C6A8::FUN_10ba4760.
+function 0x10BA4920 Construct Writes DAT_10e8c818, this class's vtable address, to its first field and returns this; called by Class_10E8C6B8::FUN_10ba48e0.
+field Class_10E4A538::Unknown310 m_TextureMatrix Constructor passes it as the BuildTextureMatrix output for a 256 by 256 size.
+field cFMVWindow::Unknown118 m_Stream Play creates it, Stop deletes it, and Update ticks it.
+field cFMVWindow::Unknown11C m_MovieName Play assigns Name to it; Stop destroys it.
+field cRadioWindow::Unknown120 m_ChildCount Loop bound for the child array in three methods.
+field cRadioWindow::Unknown128 m_Children Array of child pointers walked up to m_ChildCount.
+field cRadioWindow::Unknown12C m_SelectedIndex SetSelectedIndex stores its Index argument here first.
+field Class_10E6BD68::Unknown28 m_Items AddItem and RemoveItem keep Item values in it, without duplicates.
+field Class_10BBB410::Unknown210 m_Current The object FUN_10bbb410 returns and FUN_10bbb330 deletes when it is unfinished.
+field Class_10BBB410::Unknown1E4 m_ReprimandActive Gates the timeout in UpdateReprimand and is cleared when the reprimand ends.
+field Class_10BBB410::Unknown1DC m_ReprimandStartTime Timeout is this value plus a config float, compared with GetTimeSeconds(); zeroed on expiry.
+field Class_10BBB410::Unknown08 m_Owner FUN_10c7d570() on it gives the actor and FUN_10dbd510() the properties, in most methods.
+field Class_10E5B7C8::Unknown94 m_Pending Set by SetPending and consumed by FlushPending, which passes it to FUN_109e87f0.
+field Class_10E5B7C8::Unknown1E8 m_ItemCount Loop bound over Unknown1F0 in ClearItems and UpdateItems.
+field Class_10E5B7C8::Unknown1F0 m_Items Array of item pointers that ClearItems and UpdateItems delete entry by entry.
+field Class_10E5B7C8::Unknown98 m_Window Virtual42() gives the handle passed to ClientToScreen; Unknown6C and Unknown70 halve to the centre.
+field Class_10E5B7C8::Unknown210 m_CursorX Read from FUN_10a18fc0()'s Virtual2 before RecenterCursor moves the cursor.
+field Class_10E5B7C8::Unknown214 m_CursorY Read from FUN_10a18fc0()'s Virtual3 before RecenterCursor moves the cursor.
+field Class_10E666A0::Unknown20 m_Handler ChangeState notifies it with Virtual3 after a successful change; used before Unknown28.
+field Class_10E666A0::Unknown28 m_FallbackHandler ChangeState notifies it with Virtual3 only when Unknown20 is null.
+field Class_1090FD40::Unknown00 m_Count Add, AddUnique and Insert grow from it; RemoveAt and RemoveUnordered shrink it by one.
+field Class_1090FD40::Unknown08 m_Items Add, AddUnique and Insert store items through it; the header's Empty frees it with the allocator.
+field Class_10E4AE8C::Unknown298 m_Flags Bit tested by FUN_10957000: (Unknown298 & (1 << Bit)) != 0, a bitmask of flags.
+field Class_10E5B2A8::Unknown04 m_BucketCount Index < Unknown04 bounds-checks the bucket array in FUN_109e2c10.
+field Class_10E5B2A8::Unknown0C m_Buckets Indexed by Index in FUN_109e2c10: Class_109E2A90* bucket with a Head list.
+field Class_10E6678C::Unknown0E8 m_Items Class_10BFBD70 array in FUN_10a3ab10: Count and Data grow and fill it.
+field Class_10E6678C::UnknownF4 m_Count Loop bound for UnknownFC[i] in FUN_10a3a3f0 and FUN_10a3a630.
+field Class_10E6678C::UnknownFC m_Entries Object pointers indexed up to UnknownF4 in FUN_10a3a3f0 and FUN_10a3a630.
+field Class_10B3ED20::Unknown4C m_ResetPending Cleared by Reset (FUN_10b3ea80); ResetIfPending (FUN_10b3ed20) calls Reset while it is set.
+field Class_10B3ED20::Unknown5C m_Slots Four item pointers; ClearSlots (FUN_10b3e820) releases one, or all four when Index is 4.
+field Class_10E89720::Unknown04 m_StateIndex Indexes name table DAT_10f05b98 in FUN_10b8eca0; that function's string is 'DoorState_Open'.
+field Class_10B25200::Unknown4C m_JunkItem SetJunkItem stores its argument here; ClearJunkItem zeroes it.
+field Class_10B2F6A0::Unknown120 m_Label Widget with SetNameByIndex and Virtual89; RefreshLabel sets its text and visibility.
+field Class_10B2F6A0::Unknown13C m_Name SetName copies its text argument here.
+field Class_10B2F6A0::Unknown144 m_Count SetCount stores it; RefreshLabel formats it with %d.
+field Class_10B73810::Unknown190 m_ChildCount Loop bound over the m_Children array in ApplyValues and FUN_10b73b40.
+field Class_10B73810::Unknown198 m_Children Array of child pointers; ApplyValues calls FUN_10b735c0 on each.
+field Class_10B73810::Unknown1A4 m_Values Value table read at base+i and sent to each child in ApplyValues.
+field Class_10BAE080::Unknown00 m_Count Resize stores NewCount here; Add uses it as the next index.
+field Class_10BAE080::Unknown04 m_CapacityBytes Capacity is this divided by sizeof(VisualSubsystem) in Resize.
+field Class_10BAE080::Unknown08 m_Items VisualSubsystem array that Resize reallocates and Assign and Add index.
+field WindowManager::Unknown25C DeferredArmed Guards the once-only Virtual5 call in SetDeferredMissionFailedWindow; set to 1 after it.
+field WindowManager::Unknown260 DeferredDelay Set to 5.0f right after the Virtual5 call in SetDeferredMissionFailedWindow.
+field Class_10E5B2C0::UnknownB8 m_NumChildren Loop bound for the UnknownC0 child array in the child-flag and child-loop methods.
+field Class_10E5B2C0::UnknownC0 m_Children Child pointers that the child-flag methods call SetFlag and ClearFlag on and recurse through.
+field Class_10E9B168::Unknown18 m_Active Set true by Start when a handle is acquired; cleared by Stop and the destructor.
+field Class_10E9B168::Unknown28 m_Range Compared with FUN_10c05a20's float result in FUN_10c3d0a0; serialized as 4 bytes.
+field Class_10E9B168::Unknown54 m_Handle -1 when unset; Start stores Unknown08's FUN_10c341b0 result, Stop releases it.
+field Class_10E9B168::Unknown64 m_Manager Start, Stop and FUN_10c3de20 call its methods FUN_109b2990, FUN_109bbba0 and FUN_109b5d00.
+field Class_10E4B180::Unknown38 m_MaskLists Eight lists indexed by Mask bit; AddToMaskedLists appends to each list whose bit is set.
+field Class_10E9CD90::Unknown34 m_Buffer base of the memcpy source in Read; stored from Init's first argument
+field Class_10E9CD90::Unknown38 m_Size IsAtEnd compares the cursor with it; stored from Init's second argument
+field Class_10E9CD90::Unknown3C m_Position Read advances it, SetPosition writes it, IsAtEnd compares it
+field Class_10937790::Unknown73C m_Projection first argument of SetTransforms in FUN_10937790, SetTransform(3)
+field Class_10937790::Unknown7BC m_View second argument of SetTransforms in FUN_10937790, SetTransform(2)
+field Class_10937790::Unknown77C m_World third argument of SetTransforms in FUN_10937790, SetTransform(0x100)
+field Class_10937790::Unknown7FC m_Viewport passed to SetViewport in FUN_10937790
+field Class_109528B0::Unknown30 m_SlotMask bit i cleared per Unknown90 slot in ClearSlots, then zeroed
+field Class_109528B0::Unknown90 m_Slots nine Class_10955C30 items indexed 0 to 8 in ClearSlots and FUN_10953450
+field cD3DVertexBuffer::Unknown14 m_VertexBuffer Cast to IDirect3DVertexBuffer8 and locked in FUN_10934810; passed to SetStreamSource in FUN_10934860.
+field cD3DVertexBuffer::Unknown1C m_Stride Scales Lock offsets in FUN_10934810; passed with Unknown14 to SetStreamSource in FUN_10934860.
+field Class_10E7E898::Unknown08 m_Animation Set to 0x100, the animation id FUN_10b4bd80 passes to Class_10B39530::FUN_10b39530.
+field Class_10E7EBB0::Unknown08 m_Animation Passed to Class_10B396B0::FUN_10b396b0 in FUN_10b4e380; OnAnimationEnd and FUN_10b4e380 reset it to 0x101.
+field Class_10E7EC40::Unknown08 m_Animation Passed to Class_10B39530::FUN_10b39530 in FUN_10b48430; OnAnimationEnd passes it to FUN_10b395b0 when B is 0x41.
+field Class_10E81590::Unknown10 m_AnimationEnded OnAnimationEnd sets it to 1; FUN_10b4cd30 returns 0x17 early while it is set.
+field Class_10E822B0::Unknown150 m_StateMachine Class_10B7B910 member; its Field00 is the state UpdateState switches on and advances.

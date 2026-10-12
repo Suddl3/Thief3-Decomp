@@ -6,16 +6,16 @@
 class Class_10B25200
 {
 public:
-    void FUN_10b25200();
+    void ClearJunkItem();
     void FUN_10b24d70();
     void FUN_10b24d90();
-    void FUN_10b251c0(int A);
+    void SetJunkItem(int A);
 
     char Unknown00[0x28];
     int Unknown28;
     char Unknown2C[0x1C];
     int Unknown48;
-    int Unknown4C;
+    int m_JunkItem;
 };
 
 #endif // GAME_CLASS_10B25200_H

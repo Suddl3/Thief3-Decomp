@@ -12,7 +12,7 @@ public:
     virtual void Virtual0();
 
     void FUN_10b73810();
-    void FUN_10b737b0();
+    void ApplyValues();
     void FUN_10b73850();
     void FUN_10b73b40(int A);
 
@@ -21,11 +21,11 @@ public:
     char PadC8[0xc0];
     Struct_10B73810* Unknown188;
     char Unknown18C[4];
-    int Unknown190;
+    int m_ChildCount;
     char Unknown194[4];
-    Class_10B735C0** Unknown198;
+    Class_10B735C0** m_Children;
     char Unknown19C[8];
-    int* Unknown1A4;
+    int* m_Values;
 };
 
 #endif // GAME_CLASS_10B73810_H

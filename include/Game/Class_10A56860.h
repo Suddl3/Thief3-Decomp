@@ -7,7 +7,7 @@ class Class_10A56860
 {
 public:
     void FUN_10a56860(int Item);
-    void FUN_10a56480(int Index);
+    void SetSelectedIndex(int Index);
     int FindIndex(int Item)
     {
         for (int i = 0; i < Unknown120; i++)

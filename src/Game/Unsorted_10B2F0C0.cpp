@@ -107,38 +107,38 @@ public:
 class Class_10B2F6A0
 {
 public:
-    void FUN_10b2f590();
+    void RefreshLabel();
     void FUN_10b2f6a0(unsigned char param);
-    void FUN_10b2f6c0(const Class_109081E0& Name);
-    void FUN_10b2f6f0(int p1);
+    void SetName(const Class_109081E0& Name);
+    void SetCount(int p1);
 
     char Unknown00[0x120];
-    Class_10E684A8* Unknown120;
+    Class_10E684A8* m_Label;
     char Unknown124[0x18];
-    Class_109081E0 Unknown13C;
+    Class_109081E0 m_Name;
     char Pad140[0x4];
-    int Unknown144;
+    int m_Count;
     unsigned char Unknown148;
 };
 
-// FUNCTION: 0x10B2F590 ?FUN_10b2f590@Class_10B2F6A0@@QAEXXZ
-void Class_10B2F6A0::FUN_10b2f590()
+// FUNCTION: 0x10B2F590 ?RefreshLabel@Class_10B2F6A0@@QAEXXZ
+void Class_10B2F6A0::RefreshLabel()
 {
-    if (Unknown120)
+    if (m_Label)
     {
         Class_109081E0 Text(FUN_1090a660(DAT_10e47660));
-        if (Unknown144 > 0)
+        if (m_Count > 0)
         {
-            Text = FUN_1090a660(DAT_10e7b930, Unknown144);
+            Text = FUN_1090a660(DAT_10e7b930, m_Count);
         }
-        Unknown120->SetNameByIndex((int)&Text);
-        if (!Unknown148 && Unknown144 >= 1)
+        m_Label->SetNameByIndex((int)&Text);
+        if (!Unknown148 && m_Count >= 1)
         {
-            Unknown120->Virtual89(true, 1);
+            m_Label->Virtual89(true, 1);
         }
         else
         {
-            Unknown120->Virtual89(false, 1);
+            m_Label->Virtual89(false, 1);
         }
     }
 }

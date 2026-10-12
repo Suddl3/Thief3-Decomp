@@ -10,7 +10,7 @@ public:
     virtual void FUN_10a795d0();
     virtual void FUN_10a79610();
     virtual void Virtual2();
-    virtual void FUN_10a79d30(int Item);
+    virtual void AddItem(int Item);
     virtual void Virtual4();
     virtual void Virtual5();
     virtual void Virtual6();
@@ -23,7 +23,7 @@ public:
     int Unknown14;
     Class_10E6BD68_Unknown18** Unknown18;
     char Unknown1C[0xC];
-    cIntArray Unknown28;
+    cIntArray m_Items;
 };
 
 // FUNCTION: 0x10A79610 ?FUN_10a79610@Class_10E6BD68@@UAEXXZ

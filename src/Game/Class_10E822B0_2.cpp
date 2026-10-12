@@ -123,7 +123,7 @@ public:
     virtual void Virtual103();
     virtual void Virtual104();
     virtual void Virtual105();
-    virtual void FUN_10b7aa50(int A);
+    virtual void UpdateState(int A);
     virtual void Virtual107();
     virtual void Virtual108();
     virtual void Virtual109();
@@ -137,22 +137,22 @@ public:
     void FUN_10a53560(int A);
 
     char Unknown04[0x14C];
-    Class_10B7B910 Unknown150;
+    Class_10B7B910 m_StateMachine;
 };
 
-// FUNCTION: 0x10B7AA50 ?FUN_10b7aa50@Class_10E822B0@@UAEXH@Z
-void Class_10E822B0::FUN_10b7aa50(int A)
+// FUNCTION: 0x10B7AA50 ?UpdateState@Class_10E822B0@@UAEXH@Z
+void Class_10E822B0::UpdateState(int A)
 {
-    int State = Unknown150.Field00;
+    int State = m_StateMachine.Field00;
     bool Hold = false;
     switch (State)
     {
     case 1:
         if (Virtual81() || Virtual80())
         {
-            if (Unknown150.FUN_10b7b920(this))
+            if (m_StateMachine.FUN_10b7b920(this))
             {
-                Unknown150.Field00 = 2;
+                m_StateMachine.Field00 = 2;
                 Virtual115();
             }
         }
@@ -164,9 +164,9 @@ void Class_10E822B0::FUN_10b7aa50(int A)
     case 4:
         if (Virtual81() || Virtual80())
         {
-            if (Unknown150.FUN_10b7b920(this))
+            if (m_StateMachine.FUN_10b7b920(this))
             {
-                Unknown150.Field00 = 0;
+                m_StateMachine.Field00 = 0;
                 Virtual114();
             }
         }
@@ -178,8 +178,8 @@ void Class_10E822B0::FUN_10b7aa50(int A)
     }
     if (Hold)
     {
-        Virtual77(Unknown150.FUN_10b7b980(this, State));
-        Virtual78(Unknown150.FUN_10b7bd10(this, State));
+        Virtual77(m_StateMachine.FUN_10b7b980(this, State));
+        Virtual78(m_StateMachine.FUN_10b7bd10(this, State));
     }
     FUN_10a53560(A);
 }

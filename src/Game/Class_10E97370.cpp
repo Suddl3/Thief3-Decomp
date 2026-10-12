@@ -29,7 +29,7 @@ public:
 class Class_10E97258 : public State_Patrol
 {
 public:
-    virtual void FUN_10bed130();
+    virtual void FUN_10bed130_Tick();
 
     int Unknown44;
 };
@@ -70,8 +70,8 @@ Class_10E97370* Class_10E97370::FUN_10bed0d0(int A, int B, int C, int D, int E, 
     return this;
 }
 
-// FUNCTION: 0x10BED130 ?FUN_10bed130@Class_10E97258@@UAEXXZ
-void Class_10E97258::FUN_10bed130()
+// FUNCTION: 0x10BED130 ?FUN_10bed130_Tick@Class_10E97258@@UAEXXZ
+void Class_10E97258::FUN_10bed130_Tick()
 {
     if (Unknown44 == 0)
         PopState();

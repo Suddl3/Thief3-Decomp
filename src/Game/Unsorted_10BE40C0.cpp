@@ -251,7 +251,7 @@ unsigned char Class_10BE4120::FUN_10be4120()
 // FUNCTION: 0x10BE4170 ?FUN_10be4170@Class_10E960D8@@UAEHXZ
 int Class_10E960D8::FUN_10be4170()
 {
-    Class_10BFF460* Obj = Unknown04->FUN_10bbb410();
+    Class_10BFF460* Obj = Unknown04->GetCurrent();
     if (Obj && Obj->FUN_10bff280() && Obj->FUN_10bff330())
         return Obj->FUN_10bff280();
     return 0;

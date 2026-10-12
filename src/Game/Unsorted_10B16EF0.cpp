@@ -16,7 +16,7 @@ public:
     void FUN_10b166a0();
     void FUN_10b16930();
     void FUN_10b16780();
-    void FUN_10b16860(int A);
+    void ShowJunkItemWindow(int A);
     void FUN_10b16ef0(bool A);
 
     char Pad00[0x1];
@@ -28,7 +28,7 @@ void Class_10B16930::FUN_10b16ef0(bool A)
     Class_10B45AD0* Window;
     {
         Class_109081E0 Name("FMVWindow");
-        Window = (Class_10B45AD0*)((WindowManager*)this)->FUN_109e5960(Name);
+        Window = (Class_10B45AD0*)((WindowManager*)this)->FindWindowByName(Name);
     }
     if (Window)
     {

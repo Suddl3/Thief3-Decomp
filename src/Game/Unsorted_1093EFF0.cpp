@@ -73,8 +73,8 @@ int cItemArray::Add(const Item_1093F140* Item)
     return Index;
 }
 
-// FUNCTION: 0x1093FFE0 ?FUN_1093ffe0@Class_10E4A538@@QAEXHHPAUStruct_1093FFE0@@@Z
-void Class_10E4A538::FUN_1093ffe0(int Width, int Height, Struct_1093FFE0* Out)
+// FUNCTION: 0x1093FFE0 ?BuildTextureMatrix@Class_10E4A538@@QAEXHHPAUStruct_1093FFE0@@@Z
+void Class_10E4A538::BuildTextureMatrix(int Width, int Height, Struct_1093FFE0* Out)
 {
     float OffsetX = 0.5f + 0.5f / Width;
     float OffsetY = 0.5f + 0.5f / Height;

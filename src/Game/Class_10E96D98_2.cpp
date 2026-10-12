@@ -56,7 +56,7 @@ void Class_10E96D98::FUN_10be9720()
     }
     FUN_10be94c0();
     Struct_10BC4240_Param* P = 0;
-    Class_10BFF460* Obj = Unknown04->FUN_10bbb410();
+    Class_10BFF460* Obj = Unknown04->GetCurrent();
     Class_10BE9720_Unknown40* O = Unknown40;
     if (Obj && O != Obj->FUN_10bff2a0())
     {

@@ -56,15 +56,15 @@ void FUN_10badd90(Struct_10BADCE0* Data, float Angle, int A, int B)
     FUN_10badc40(Data, Rotation, 400.0f, A, B);
 }
 
-// FUNCTION: 0x10BAE080 ?FUN_10bae080@Class_10BAE080@@QAEXXZ
-void Class_10BAE080::FUN_10bae080()
+// FUNCTION: 0x10BAE080 ?Clear@Class_10BAE080@@QAEXXZ
+void Class_10BAE080::Clear()
 {
-    FUN_10bad9d0(0);
-    if (Unknown04)
+    Resize(0);
+    if (m_CapacityBytes)
     {
-        GetAllocator()->Virtual5(Unknown08);
-        Unknown08 = 0;
-        Unknown04 = 0;
+        GetAllocator()->Virtual5(m_Items);
+        m_Items = 0;
+        m_CapacityBytes = 0;
     }
 }
 

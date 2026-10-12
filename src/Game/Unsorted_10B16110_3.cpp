@@ -20,7 +20,7 @@ public:
     void FUN_10b166a0();
     void FUN_10b16930();
     void FUN_10b16780();
-    void FUN_10b16860(int A);
+    void ShowJunkItemWindow(int A);
     void FUN_10b16ef0(int A);
 
     char Pad00[0x1];

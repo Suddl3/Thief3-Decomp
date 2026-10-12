@@ -112,7 +112,7 @@ public:
     virtual void Virtual103();
     virtual void Virtual104();
     virtual void Virtual105();
-    virtual void FUN_10b7aa50(int A);
+    virtual void UpdateState(int A);
     virtual void Virtual107();
     virtual void Virtual108();
     virtual void Virtual109();
@@ -127,7 +127,7 @@ public:
 
     void FUN_10a53560(int A);
 
-    Class_10B7B910 Unknown150;
+    Class_10B7B910 m_StateMachine;
 };
 
 #endif // GAME_CLASS_10E822B0_H

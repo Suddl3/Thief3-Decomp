@@ -78,8 +78,8 @@ public:
 
 extern UEngine* GEngine;
 
-// FUNCTION: 0x10A37C10 ?FUN_10a37c10@Class_10E666A0@@UAEPAVClass_10E66530@@H@Z
-Class_10E66530* Class_10E666A0::FUN_10a37c10(int A)
+// FUNCTION: 0x10A37C10 ?Create@Class_10E666A0@@UAEPAVClass_10E66530@@H@Z
+Class_10E66530* Class_10E666A0::Create(int A)
 {
     return new(0, 0, 0, 0, 0) Class_10E66530(this, A);
 }

@@ -1,7 +1,7 @@
 // Game/Class_10E66474_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Core/Core.h"
-#include "Game/Class_10E66474.h"
+#include "Game/cSoundStreamingManager.h"
 
 struct Struct_10A334E0;
 
@@ -27,8 +27,8 @@ class AActor
     DECLARE_CLASS(AActor, UObject, 0x800, Engine)
 };
 
-// FUNCTION: 0x10A33B70 ?FUN_10a33b70@Class_10E66474@@QAEXHHH@Z
-void Class_10E66474::FUN_10a33b70(int A, int B, int C)
+// FUNCTION: 0x10A33B70 ?HandleMoveEvent@cSoundStreamingManager@@QAEXHHH@Z
+void cSoundStreamingManager::HandleMoveEvent(int A, int B, int C)
 {
     if (A)
     {

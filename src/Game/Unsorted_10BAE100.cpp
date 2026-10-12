@@ -10,12 +10,12 @@ extern const char DAT_10e8d7d0[];
 
 extern const char DAT_10e48c2c[];
 
-// FUNCTION: 0x10BAE2B0 ?FUN_10bae2b0@Class_10BAE080@@QAEXABV1@@Z
-void Class_10BAE080::FUN_10bae2b0(const Class_10BAE080& Other)
+// FUNCTION: 0x10BAE2B0 ?Assign@Class_10BAE080@@QAEXABV1@@Z
+void Class_10BAE080::Assign(const Class_10BAE080& Other)
 {
-    FUN_10bad9d0(Other.Unknown00);
-    for (int i = 0; i < Unknown00; i++)
-        Unknown08[i] = Other.Unknown08[i];
+    Resize(Other.m_Count);
+    for (int i = 0; i < m_Count; i++)
+        m_Items[i] = Other.m_Items[i];
 }
 
 // FUNCTION: 0x10BAE330 ?FUN_10bae330@@YA?AVClass_109081E0@@H@Z

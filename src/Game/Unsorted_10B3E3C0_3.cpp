@@ -18,20 +18,20 @@ public:
 class Class_10B3ED20 : public Class_10AA82D0
 {
 public:
-    void FUN_10b3ea80();
-    void FUN_10b3e820(int A);
+    void Reset();
+    void ClearSlots(int A);
 
     char Unknown04[0x48];
-    char Unknown4C;
+    char m_ResetPending;
 };
 
-// FUNCTION: 0x10B3EA80 ?FUN_10b3ea80@Class_10B3ED20@@QAEXXZ
-void Class_10B3ED20::FUN_10b3ea80()
+// FUNCTION: 0x10B3EA80 ?Reset@Class_10B3ED20@@QAEXXZ
+void Class_10B3ED20::Reset()
 {
-    Unknown4C = 0;
+    m_ResetPending = 0;
     ((Class_10B39530*)FUN_10aa82d0())->FUN_10b39530(0xb5, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
     ((Class_10B396B0*)FUN_10aa82d0())->FUN_10b396b0(0xb9);
     ((Class_10B396B0*)FUN_10aa82d0())->FUN_10b396b0(0xb8);
     DAT_10f35dec->Unknown94->Reset();
-    FUN_10b3e820(4);
+    ClearSlots(4);
 }

@@ -169,13 +169,13 @@ void Class_10B16930::FUN_10b16780()
         ((Class_10B2B9E0*)Second.Data[0])->FUN_10b2b9e0();
 }
 
-// FUNCTION: 0x10B16860 ?FUN_10b16860@Class_10B16930@@QAEXH@Z
-void Class_10B16930::FUN_10b16860(int A)
+// FUNCTION: 0x10B16860 ?ShowJunkItemWindow@Class_10B16930@@QAEXH@Z
+void Class_10B16930::ShowJunkItemWindow(int A)
 {
     int Window;
     {
         Class_109081E0 Name("HUDWindow.JunkItemWindow");
-        Window = ((WindowManager*)this)->FUN_109e5960(Name);
+        Window = ((WindowManager*)this)->FindWindowByName(Name);
     }
     ((Class_10B2E9D0*)Window)->FUN_10b2e9d0(A);
     ((Class_10B2E720*)Window)->FUN_10b2e720(0, 1);
@@ -195,7 +195,7 @@ void Class_10B16D80::FUN_10b16d80(int A)
     Class_10B16D80_Window* Window;
     {
         Class_109081E0 Name(DAT_10e7919c);
-        Window = (Class_10B16D80_Window*)FUN_109e5960(Name);
+        Window = (Class_10B16D80_Window*)FindWindowByName(Name);
     }
     if (Window)
     {

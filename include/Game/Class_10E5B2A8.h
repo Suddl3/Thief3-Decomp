@@ -11,20 +11,20 @@ class UObject;
 class Class_10E5B2A8
 {
 public:
-    virtual void FUN_109e30d0(int Event, UObject* A, int B, int C);
+    virtual void HandleEvent(int Event, UObject* A, int B, int C);
 
     Class_10E5B2A8();
 
-    void FUN_109e2c10(INT A, AZoneProperties* B);
-    void FUN_109e2ce0(UObject* Obj, int A, int B);
-    void FUN_109e2fa0(UObject* A, int B, int C);
+    void RemoveFromBucket(INT A, AZoneProperties* B);
+    void RemoveZone(UObject* Obj, int A, int B);
+    void AddZone(UObject* A, int B, int C);
     void FUN_109e3060(UObject* A, int B, int C);
     void FUN_109e2b40(AZoneProperties* A);
     void FUN_109e2d50(int A, AZoneProperties* B);
 
-    int Unknown04;
+    int m_BucketCount;
     int Unknown08;
-    int Unknown0C;
+    int m_Buckets;
     int Unknown10;
 };
 

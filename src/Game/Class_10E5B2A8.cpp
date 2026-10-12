@@ -14,9 +14,9 @@ public:
     INT m_FleshBSPZone;                     // 0x90: inherited from AActor
 };
 
-// FUNCTION: 0x109E2CE0 ?FUN_109e2ce0@Class_10E5B2A8@@QAEXPAVUObject@@HH@Z
-void Class_10E5B2A8::FUN_109e2ce0(UObject* Obj, int A, int B)
+// FUNCTION: 0x109E2CE0 ?RemoveZone@Class_10E5B2A8@@QAEXPAVUObject@@HH@Z
+void Class_10E5B2A8::RemoveZone(UObject* Obj, int A, int B)
 {
     AZoneProperties* Zone = Cast<AZoneProperties>(Obj);
-    FUN_109e2c10(Zone->m_FleshBSPZone, Zone);
+    RemoveFromBucket(Zone->m_FleshBSPZone, Zone);
 }

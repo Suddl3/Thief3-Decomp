@@ -8,8 +8,8 @@
 class Class_10E9CD90 : public Class_10E4E098
 {
 public:
-    virtual void FUN_10bfbb80(float param);
-    virtual void FUN_10c63fd0(void* Dest, unsigned Count);
+    virtual void SetPosition(float param);
+    virtual void Read(void* Dest, unsigned Count);
     virtual void Virtual2();
     virtual void Virtual3();
     virtual void Virtual4();
@@ -20,17 +20,17 @@ public:
     virtual void Virtual9();
     virtual void Virtual10();
     virtual void Virtual11();
-    virtual int FUN_10c64010();
+    virtual int IsAtEnd();
     virtual void Virtual13();
 
-    Class_10E9CD90* FUN_10c63f70(int A, int B);
+    Class_10E9CD90* Init(int A, int B);
 
     char Pad34[0x4];
-    int Unknown34;
+    int m_Buffer;
     union
     {
-        int Unknown38;
-        int Unknown3C;
+        int m_Size;
+        int m_Position;
     };
     char Pad40[0x4];
 };

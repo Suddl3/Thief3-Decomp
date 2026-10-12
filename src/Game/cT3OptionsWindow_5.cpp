@@ -7,7 +7,7 @@ Options* GetOptions();
 class Class_10B73810
 {
 public:
-    void FUN_10b737b0();
+    void ApplyValues();
 };
 
 class Class_10B739C0_Unknown1A4
@@ -32,6 +32,6 @@ void cT3OptionsWindow::ResetToDefaults()
 {
     for (int i = 0; i < m_OptionCount; i++)
         GetOptions()->Set(m_Options[i]->Unknown00, GetOptions()->SetDefaults(m_Options[i]->Unknown00));
-    FUN_10b737b0();
+    ApplyValues();
     GetOptions()->FUN_10ab6420();
 }

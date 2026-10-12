@@ -59,7 +59,7 @@ class Class_10E81590 : public Class_10E7E4E0
 public:
     Class_10E81590* FUN_10b4ccf0();
 
-    bool Unknown10;
+    bool m_AnimationEnded;
     bool Unknown11;
 };
 
@@ -85,7 +85,7 @@ int Class_10E7EA00::OnAnimationEnd(int A, int B)
 Class_10E81590* Class_10E81590::FUN_10b4ccf0()
 {
     FUN_10b3acb0();
-    Unknown10 = false;
+    m_AnimationEnded = false;
     Unknown11 = false;
     Unknown00 = DAT_10e81590;
     return this;

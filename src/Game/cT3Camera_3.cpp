@@ -43,5 +43,5 @@ Class_10E66530* cT3Camera::FUN_10ac43f0(int A)
 {
     if (A && ((UObject*)A)->IsA(AGarrett::StaticClass()))
         return (Class_10E66530*)new Class_10AC3EA0(this, A);
-    return ((Class_10E666A0*)this)->Class_10E666A0::FUN_10a37c10(A);
+    return ((Class_10E666A0*)this)->Class_10E666A0::Create(A);
 }

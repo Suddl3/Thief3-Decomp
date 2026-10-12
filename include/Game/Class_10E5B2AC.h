@@ -6,14 +6,14 @@
 class Class_10E5B2AC
 {
 public:
-    virtual void FUN_109e3510(int Msg, int A, int B, int C);
+    virtual void HandleMessage(int Msg, int A, int B, int C);
 
     Class_10E5B2AC();
 
-    void FUN_109e32b0();
+    void SendMessages();
     void FUN_109e3320(int A, int B, int C);
     void FUN_109e3420(int A, int B, int C);
-    void FUN_109e3560();
+    void IterateActors();
 };
 
 #endif // GAME_CLASS_10E5B2AC_H

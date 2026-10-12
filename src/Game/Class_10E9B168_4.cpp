@@ -35,20 +35,20 @@ public:
     virtual void Virtual14();
     virtual void Virtual15();
     virtual void Virtual16();
-    virtual void FUN_10c3dd80(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 
     FVector Unknown1C;
-    float Unknown28;
+    float m_Range;
     bool Unknown2C;
     Class_10C3DA10 Unknown30;
 };
 
-// FUNCTION: 0x10C3DD80 ?FUN_10c3dd80@Class_10E9B168@@UAEXAAVFArchive@@@Z
-void Class_10E9B168::FUN_10c3dd80(FArchive& Ar)
+// FUNCTION: 0x10C3DD80 ?Serialize@Class_10E9B168@@UAEXAAVFArchive@@@Z
+void Class_10E9B168::Serialize(FArchive& Ar)
 {
     FUN_10c3db00(Ar);
     FUN_10b052a0(Ar, &Unknown1C);
-    Ar.Serialize(&Unknown28, 4);
+    Ar.Serialize(&m_Range, 4);
     Ar.Serialize(&Unknown2C, 1);
     Unknown30.FUN_10c3da10((int)&Ar);
 }

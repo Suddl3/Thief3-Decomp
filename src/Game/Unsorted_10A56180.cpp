@@ -23,16 +23,16 @@ public:
     char Unknown0EC[0x2C];
 };
 
-class Class_10E68938 : public Class_10E67FD0
+class cRadioWindow : public Class_10E67FD0
 {
 public:
-    Class_10E68938();
+    cRadioWindow();
 
-    virtual ~Class_10E68938();
+    virtual ~cRadioWindow();
 
     int Unknown118;
     FArray Unknown11C;
-    FArray Unknown128;
+    FArray m_Children;
     bool Unknown134;
 };
 
@@ -173,11 +173,11 @@ void Class_10E69080::FUN_10a56180(bool Param)
     Class_10A52BE0::FUN_10a52be0(Param);
 }
 
-// FUNCTION: 0x10A56620 ??0Class_10E68938@@QAE@XZ
-Class_10E68938::Class_10E68938() : Unknown118(0), Unknown134(false)
+// FUNCTION: 0x10A56620 ??0cRadioWindow@@QAE@XZ
+cRadioWindow::cRadioWindow() : Unknown118(0), Unknown134(false)
 {
     Unknown0E8 = 6;
 }
 
-// FUNCTION: 0x10A568A0 ??_GClass_10E68938@@UAEPAXI@Z
+// FUNCTION: 0x10A568A0 ??_GcRadioWindow@@UAEPAXI@Z
 // Compiler-generated: emitted with the class's vtable by 0x10A56620's definition in this unit.

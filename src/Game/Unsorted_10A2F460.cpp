@@ -24,13 +24,13 @@ class Class_10E66310 : public Class_10E5D5E0
 public:
     Class_10E66310() : Unknown08(1) {}
 
-    virtual Class_10E66310* FUN_10a2f460();
+    virtual Class_10E66310* Clone();
 
     int Unknown08;
 };
 
-// FUNCTION: 0x10A2F460 ?FUN_10a2f460@Class_10E66310@@UAEPAV1@XZ
-Class_10E66310* Class_10E66310::FUN_10a2f460()
+// FUNCTION: 0x10A2F460 ?Clone@Class_10E66310@@UAEPAV1@XZ
+Class_10E66310* Class_10E66310::Clone()
 {
     Class_10E66310* Copy = new(0, 0, 0, 0, 0) Class_10E66310();
     Copy->Unknown08 = Unknown08;

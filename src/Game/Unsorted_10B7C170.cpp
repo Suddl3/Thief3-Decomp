@@ -10,8 +10,8 @@ struct Struct_10B7C030_Param;
 
 Class_10D9B090* FUN_10d9dcb0();
 
-// FUNCTION: 0x10B7C170 ?FUN_10b7c170@Class_10E4B180@@UAEHHHPAVFVector@@@Z
-int Class_10E4B180::FUN_10b7c170(int A, int B, FVector* Out)
+// FUNCTION: 0x10B7C170 ?Trace@Class_10E4B180@@UAEHHHPAVFVector@@@Z
+int Class_10E4B180::Trace(int A, int B, FVector* Out)
 {
     Struct_10B7C170 Hit;
     Hit.Unknown00.X = 0.0f;

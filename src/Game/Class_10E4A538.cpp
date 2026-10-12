@@ -6,5 +6,5 @@
 // FUNCTION: 0x10941030 ??1Class_10E4A538@@QAE@XZ
 Class_10E4A538::~Class_10E4A538()
 {
-    FUN_10940c50();
+    Reset();
 }

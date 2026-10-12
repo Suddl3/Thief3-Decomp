@@ -9,10 +9,10 @@ public:
     virtual void Virtual2();
     virtual void Virtual3();
     virtual void Virtual4();
-    virtual bool FUN_109e3c60(int p1);
+    virtual bool SetPending(int p1);
 
     char Unknown04[0x90];
-    int Unknown94;
+    int m_Pending;
 };
 
 class Class_10E79228 : public Class_10E5B7C8
@@ -29,5 +29,5 @@ bool Class_10E79228::FUN_10b155b0(int p1)
 {
     if (m_Closing)
         return false;
-    return Class_10E5B7C8::FUN_109e3c60(p1);
+    return Class_10E5B7C8::SetPending(p1);
 }

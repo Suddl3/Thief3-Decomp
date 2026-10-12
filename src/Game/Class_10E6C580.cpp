@@ -1,6 +1,6 @@
-// Game/Class_10E6C580.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/cTriggerPropertyParam.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10E6C580.h"
+#include "Game/cTriggerPropertyParam.h"
 #include "Game/Class_10F3A1D8.h"
 
 template <class T> class TArray
@@ -26,8 +26,8 @@ public:
 
 extern Class_10F3A1D8* DAT_10f3a1d8;
 
-// FUNCTION: 0x10A89960 ?FUN_10a89960@Class_10E6C580@@UAEHXZ
-int Class_10E6C580::FUN_10a89960()
+// FUNCTION: 0x10A89960 ?IsDone@cTriggerPropertyParam@@UAEHXZ
+int cTriggerPropertyParam::IsDone()
 {
     int Pending;
     if (DAT_10f3a1d8->Unknown04 == 0)

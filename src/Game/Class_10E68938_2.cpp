@@ -123,50 +123,50 @@ public:
     bool Unknown1CC;
 };
 
-class Class_10E68938
+class cRadioWindow
 {
 public:
     void FUN_10a56860(int Item);
-    void FUN_10a56480(int Index);
+    void SetSelectedIndex(int Index);
     int FindIndex(int Item)
     {
-        for (int i = 0; i < Unknown120; i++)
+        for (int i = 0; i < m_ChildCount; i++)
         {
-            if (Unknown128[i] == Item)
+            if (m_Children[i] == Item)
                 return i;
         }
         return -1;
     }
 
     char Unknown00[0x120];
-    int Unknown120;
+    int m_ChildCount;
     int Unknown124;
-    int* Unknown128;
-    int Unknown12C;
+    int* m_Children;
+    int m_SelectedIndex;
     char Pad130[0x4];
     bool Unknown134;
 };
 
-// FUNCTION: 0x10A56480 ?FUN_10a56480@Class_10E68938@@QAEXH@Z
-void Class_10E68938::FUN_10a56480(int Index)
+// FUNCTION: 0x10A56480 ?SetSelectedIndex@cRadioWindow@@QAEXH@Z
+void cRadioWindow::SetSelectedIndex(int Index)
 {
-    Unknown12C = Index;
-    for (int i = 0; i < Unknown120; i++)
+    m_SelectedIndex = Index;
+    for (int i = 0; i < m_ChildCount; i++)
     {
-        Class_10E68738* Item = (Class_10E68738*)Unknown128[i];
+        Class_10E68738* Item = (Class_10E68738*)m_Children[i];
         if (Item)
         {
             Item->Virtual111(0);
-            ((Class_10E68738*)Unknown128[i])->Unknown1CC = true;
+            ((Class_10E68738*)m_Children[i])->Unknown1CC = true;
             bool Same = i == Index;
-            int Mode = ((Class_10E68738*)Unknown128[i])->Virtual71();
-            ((Class_10E68738*)Unknown128[i])->Virtual70(Mode == 3 ? 3 : (Same ? 2 : 0));
+            int Mode = ((Class_10E68738*)m_Children[i])->Virtual71();
+            ((Class_10E68738*)m_Children[i])->Virtual70(Mode == 3 ? 3 : (Same ? 2 : 0));
             if (Same)
-                ((Class_10E68738*)Unknown128[i])->Unknown1CC = false;
+                ((Class_10E68738*)m_Children[i])->Unknown1CC = false;
             if (Unknown134)
             {
-                ((Class_10E68738*)Unknown128[i])->Unknown1CC = false;
-                ((Class_10E68738*)Unknown128[i])->ApplyEntry(Same ? 0 : 3);
+                ((Class_10E68738*)m_Children[i])->Unknown1CC = false;
+                ((Class_10E68738*)m_Children[i])->ApplyEntry(Same ? 0 : 3);
             }
         }
     }

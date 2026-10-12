@@ -67,8 +67,8 @@ void Class_10A84CE0::FUN_10a84ce0(const Class_109022E0& Name)
     Unknown04 = FName(Text, FNAME_Add);
 }
 
-// FUNCTION: 0x10A84D70 ?FUN_10a84d70@Class_10E6C390@@QAEXXZ
-void Class_10E6C390::FUN_10a84d70()
+// FUNCTION: 0x10A84D70 ?Reset@Class_10E6C390@@QAEXXZ
+void Class_10E6C390::Reset()
 {
     Unknown04 = 0;
     Unknown08 = 0;

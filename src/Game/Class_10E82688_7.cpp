@@ -16,7 +16,7 @@ class FVector;
 
 class Window;
 
-// Copied whole from Game/WindowManager.h with FUN_10b16cd0 and FUN_10b16c10 added.
+// Copied whole from Game/WindowManager.h with IsHUDWindowVisible and FUN_10b16c10 added.
 class WindowManager : public Class_109E6D60
 {
 public:
@@ -28,16 +28,16 @@ public:
 
     void FUN_109e3d60(void* Window);
     void FUN_109e8ae0(void* Window);
-    int FUN_109e5960(const Class_109081E0& Name);
+    int FindWindowByName(const Class_109081E0& Name);
     void FUN_109e6b20(int A);
     void FUN_109e8930(void* Window);
-    void FUN_10b158b0();
+    void OpenTitleLoadWindow();
     void FUN_10b16110(int A, int B);
-    int FUN_10b16cd0();
+    int IsHUDWindowVisible();
     void FUN_10b16c10(unsigned char A);
     void GetUIScreenSize(FVector* Out);
-    FVector FUN_109e4290(int X, int Y);
-    void FUN_109e4300(FVector* Pos, int* OutX, int* OutY);
+    FVector ScreenToUIPosition(int X, int Y);
+    void UIPositionToScreen(FVector* Pos, int* OutX, int* OutY);
 
     char Unknown04[0x94];
     int Unknown98;
@@ -172,7 +172,7 @@ void Class_10E82688::FUN_10b5a6f0(int A)
     {
         Virtual67(0x10);
         FUN_10b18b20()->FUN_10b18b60(2);
-        Unknown15C = ((WindowManager*)FUN_10b154c0())->FUN_10b16cd0();
+        Unknown15C = ((WindowManager*)FUN_10b154c0())->IsHUDWindowVisible();
         ((WindowManager*)FUN_10b154c0())->FUN_10b16c10(0);
         Unknown15E = DAT_10f31b88->Unknown0C;
         if (Unknown15E)

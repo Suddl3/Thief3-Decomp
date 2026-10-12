@@ -1,4 +1,4 @@
-// Game/Class_10E682F0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/cFMVWindow.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_109501A0.h"
 #include "Game/Class_10905A90_Member.h"
@@ -50,7 +50,7 @@ public:
     int Unknown04;
 };
 
-class Class_10E682F0
+class cFMVWindow
 {
 public:
     virtual void Virtual0();
@@ -165,23 +165,23 @@ public:
     virtual void FUN_10a54d50();
 
     char Unknown04[0x114];
-    Class_109501A0* Unknown118;
-    Class_109081E0 Unknown11C;
+    Class_109501A0* m_Stream;
+    Class_109081E0 m_MovieName;
     bool Unknown120;
 };
 
-// FUNCTION: 0x10A54D50 ?FUN_10a54d50@Class_10E682F0@@UAEXXZ
-void Class_10E682F0::FUN_10a54d50()
+// FUNCTION: 0x10A54D50 ?FUN_10a54d50@cFMVWindow@@UAEXXZ
+void cFMVWindow::FUN_10a54d50()
 {
-    Class_109501A0* Stream = Unknown118;
+    Class_109501A0* Stream = m_Stream;
     if (Stream)
     {
         Stream->FUN_109501a0();
         delete Stream;
-        Unknown118 = 0;
+        m_Stream = 0;
         Class_10E682E0 Local;
         DAT_10f46da0->Virtual5(0x77, -1, &Local, 0);
-        Unknown11C.~Class_109081E0();
+        m_MovieName.~Class_109081E0();
         Unknown120 = false;
     }
 }

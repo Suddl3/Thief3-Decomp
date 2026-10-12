@@ -6,15 +6,15 @@ struct Struct_109E4FB0_Item
 {
 };
 
-// FUNCTION: 0x109E4FB0 ?FUN_109e4fb0@Class_10E5B7C8@@QAEXXZ
-void Class_10E5B7C8::FUN_109e4fb0()
+// FUNCTION: 0x109E4FB0 ?ClearItems@Class_10E5B7C8@@QAEXXZ
+void Class_10E5B7C8::ClearItems()
 {
-    for (int i = 0; i < Unknown1E8; i++)
+    for (int i = 0; i < m_ItemCount; i++)
     {
-        if (Unknown1F0[i])
+        if (m_Items[i])
         {
-            delete Unknown1F0[i];
-            Unknown1F0[i] = 0;
+            delete m_Items[i];
+            m_Items[i] = 0;
         }
     }
 }

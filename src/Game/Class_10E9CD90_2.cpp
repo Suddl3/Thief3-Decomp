@@ -7,17 +7,17 @@ class Class_10E9CD90
 {
 public:
     virtual void Virtual0();
-    virtual void FUN_10c63fd0(void* Dest, unsigned Count);
+    virtual void Read(void* Dest, unsigned Count);
 
     char Unknown04[0x30];
-    char* Unknown34;
-    int Unknown38;
-    int Unknown3C;
+    char* m_Buffer;
+    int m_Size;
+    int m_Position;
 };
 
-// FUNCTION: 0x10C63FD0 ?FUN_10c63fd0@Class_10E9CD90@@UAEXPAXI@Z
-void Class_10E9CD90::FUN_10c63fd0(void* Dest, unsigned Count)
+// FUNCTION: 0x10C63FD0 ?Read@Class_10E9CD90@@UAEXPAXI@Z
+void Class_10E9CD90::Read(void* Dest, unsigned Count)
 {
-    memcpy(Dest, Unknown34 + Unknown3C, Count);
-    Unknown3C += Count;
+    memcpy(Dest, m_Buffer + m_Position, Count);
+    m_Position += Count;
 }

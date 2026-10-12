@@ -45,7 +45,7 @@ void Class_10A3A300::FUN_10a3a300(int A)
 // FUNCTION: 0x10A3A4C0 ?FUN_10a3a4c0@Class_10E6678C@@UAE_NXZ
 bool Class_10E6678C::FUN_10a3a4c0()
 {
-    if (Unknown0E8 == 0)
+    if (m_Items == 0)
         return true;
     return (*Unknown0F0)->Virtual4() == 0;
 }

@@ -5,7 +5,7 @@
 #include "Game/Class_10BD8650.h"
 #include "Game/Class_10DBD510.h"
 #include "Game/Struct_10BD8630.h"
-#include "Game/Class_10E93F68.h"
+#include "Game/cTacticWeaponEquip.h"
 
 void __stdcall FUN_109e3c90(int A);
 
@@ -23,8 +23,8 @@ float Class_10BD8650::FUN_10bd8650()
     return Value;
 }
 
-// FUNCTION: 0x10BD9640 ?FUN_10bd9640@Class_10E93F68@@UAEXH@Z
-void Class_10E93F68::FUN_10bd9640(int A)
+// FUNCTION: 0x10BD9640 ?FUN_10bd9640@cTacticWeaponEquip@@UAEXH@Z
+void cTacticWeaponEquip::FUN_10bd9640(int A)
 {
     FUN_109e3c90(A);
     if (Unknown48 == A)

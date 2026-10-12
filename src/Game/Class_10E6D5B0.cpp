@@ -1,6 +1,6 @@
-// Game/Class_10E6D5B0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/SwooshGeometryTriStrip.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10E6D5B0.h"
+#include "Game/SwooshGeometryTriStrip.h"
 
 class Object_10AA4D20_A
 {
@@ -17,8 +17,8 @@ public:
     virtual int __stdcall Virtual2();
 };
 
-// FUNCTION: 0x10AA4D20 ?FUN_10aa4d20@Class_10E6D5B0@@UAEXXZ
-void Class_10E6D5B0::FUN_10aa4d20()
+// FUNCTION: 0x10AA4D20 ?Release@SwooshGeometryTriStrip@@UAEXXZ
+void SwooshGeometryTriStrip::Release()
 {
     if (Unknown18)
     {

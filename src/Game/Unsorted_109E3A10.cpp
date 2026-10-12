@@ -11,9 +11,9 @@ int Class_109E3C40::FUN_109e3c40()
     return 0;
 }
 
-// FUNCTION: 0x109E3C60 ?FUN_109e3c60@Class_10E5B7C8@@UAE_NH@Z
-bool Class_10E5B7C8::FUN_109e3c60(int p1)
+// FUNCTION: 0x109E3C60 ?SetPending@Class_10E5B7C8@@UAE_NH@Z
+bool Class_10E5B7C8::SetPending(int p1)
 {
-    Unknown94 = p1;
+    m_Pending = p1;
     return true;
 }

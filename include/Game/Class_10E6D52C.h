@@ -10,8 +10,8 @@ class Class_109081E0;
 class Class_10E6D52C : public Class_10EB7660
 {
 public:
-    Class_109081E0 FUN_10aa4a40();
-    Class_10E6D52C* FUN_10aa4a00();
+    Class_109081E0 GetTypeName();
+    Class_10E6D52C* Construct();
 
     int Unknown08;
     char Pad0C[0x38];

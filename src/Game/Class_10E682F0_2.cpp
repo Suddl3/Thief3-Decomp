@@ -56,7 +56,7 @@ public:
 
 extern Class_10F46DA0* DAT_10f46da0;
 
-class Class_10E682F0
+class cFMVWindow
 {
 public:
     virtual void Virtual0();
@@ -171,23 +171,23 @@ public:
     virtual void FUN_10a54d50();
 
     char Unknown04[0x114];
-    Class_109501A0* Unknown118;
-    Class_109081E0 Unknown11C;
+    Class_109501A0* m_Stream;
+    Class_109081E0 m_MovieName;
     bool Unknown120;
     unsigned char Unknown121;
 
-    void FUN_10a54eb0(const Class_109081E0& Name, int Flag);
+    void Play(const Class_109081E0& Name, int Flag);
 };
 
-// FUNCTION: 0x10A54EB0 ?FUN_10a54eb0@Class_10E682F0@@QAEXABVClass_109081E0@@H@Z
-void Class_10E682F0::FUN_10a54eb0(const Class_109081E0& Name, int Flag)
+// FUNCTION: 0x10A54EB0 ?Play@cFMVWindow@@QAEXABVClass_109081E0@@H@Z
+void cFMVWindow::Play(const Class_109081E0& Name, int Flag)
 {
-    if (Unknown118)
+    if (m_Stream)
         FUN_10a54d50();
     Class_109081E0 Desc;
     FUN_10db58f0()->Virtual24(*Name, 9, &Desc, 1);
-    Unknown118 = new(0, 0, 0, 0, 0) Class_109501A0(Desc, Flag, 1.0f, Unknown121);
-    Unknown11C = Name;
+    m_Stream = new(0, 0, 0, 0, 0) Class_109501A0(Desc, Flag, 1.0f, Unknown121);
+    m_MovieName = Name;
     Unknown120 = false;
     Class_10E682E0 Local;
     DAT_10f46da0->Virtual5(0x77, -1, &Local, 0);

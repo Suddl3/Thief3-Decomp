@@ -136,7 +136,7 @@ public:
     virtual void Virtual30();
     virtual void Virtual31();
     virtual void FUN_10b7e660(int p1);
-    virtual void FUN_10b7c770();
+    virtual void Shutdown();
     virtual void FUN_10b7c670(int Param);
     virtual void FUN_10b7c6a0(int A);
     virtual void Virtual36();
@@ -145,18 +145,18 @@ public:
     virtual void Virtual39();
     virtual void Virtual40(Class_10B7DC60_Param0* A);
     virtual void FUN_10b7dc60(Class_10B7DC60_Param0* Obj);
-    virtual void FUN_10b7c030(Struct_10B7C030_Param* A);
-    virtual int FUN_10b7c170(int A, int B, FVector* Out);
+    virtual void DestroyPhysicsObject(Struct_10B7C030_Param* A);
+    virtual int Trace(int A, int B, FVector* Out);
 
     Class_10E4B180();
 
-    void FUN_10b7e620(int Mask, Class_10E4B180_Unknown70* Obj);
+    void AddToMaskedLists(int Mask, Class_10E4B180_Unknown70* Obj);
 
     char Unknown04[0x28];
     void** Unknown2C;
     char Pad30[0x4];
     Class_10D9D740* Unknown34;
-    char Unknown38[0xC];
+    char m_MaskLists[0xC];
     int Unknown44;
     char Unknown48[4];
     Class_10E4B180_Unknown4C** Unknown4C;

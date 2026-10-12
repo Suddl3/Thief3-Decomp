@@ -7,9 +7,9 @@ class Class_10E66300
 {
 public:
     virtual void Virtual0();
-    virtual Class_10E66300* FUN_10a2fa00();
-    virtual int FUN_10a2f110(Class_10E66300* Other);
-    virtual int FUN_10a2f140(int A);
+    virtual Class_10E66300* Clone();
+    virtual int IsEqual(Class_10E66300* Other);
+    virtual int Contains(int A);
 
     Class_10E66300(int A, int B) : Unknown04(A), Unknown08(B) {}
 

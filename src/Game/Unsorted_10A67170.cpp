@@ -9,23 +9,23 @@ void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D
 
 extern void* DAT_10e6b4c8[];
 
-class Class_10E6B4C8
+class LoginManager
 {
 public:
-    Class_10E6B4C8() : VTable(DAT_10e6b4c8) {}
+    LoginManager() : VTable(DAT_10e6b4c8) {}
 
     void** VTable;
 };
 
-extern Class_10E6B4C8* DAT_10f3a0f8;
+extern LoginManager* DAT_10f3a0f8;
 
-// FUNCTION: 0x10A67170 ?FUN_10a67170@@YAPAVClass_10E6B4C8@@XZ
-Class_10E6B4C8* FUN_10a67170()
+// FUNCTION: 0x10A67170 ?FUN_10a67170@@YAPAVLoginManager@@XZ
+LoginManager* FUN_10a67170()
 {
     if (!DAT_10f3a0f8)
     {
         GetAllocator()->Virtual8(0, 0);
-        Class_10E6B4C8* Result = new(0, 0, 0, 0, 0) Class_10E6B4C8;
+        LoginManager* Result = new(0, 0, 0, 0, 0) LoginManager;
         DAT_10f3a0f8 = Result;
         GetAllocator()->Virtual9();
     }

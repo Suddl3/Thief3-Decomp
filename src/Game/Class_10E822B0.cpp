@@ -17,11 +17,11 @@ public:
     Class_10E822B0();
     virtual ~Class_10E822B0();
 
-    Class_10B7B910 Unknown150;
+    Class_10B7B910 m_StateMachine;
 };
 
 // FUNCTION: 0x10B7A6A0 ??0Class_10E822B0@@QAE@XZ
 Class_10E822B0::Class_10E822B0()
 {
-    Unknown150.FUN_10b7b910();
+    m_StateMachine.FUN_10b7b910();
 }

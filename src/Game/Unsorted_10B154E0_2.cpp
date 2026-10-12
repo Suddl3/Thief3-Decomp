@@ -13,7 +13,7 @@ public:
     virtual void FUN_109e87f0(int p1);
 
     char Unknown04[0x90];
-    int Unknown94;
+    int m_Pending;
 };
 
 class Class_10E79228 : public Class_10E5B7C8

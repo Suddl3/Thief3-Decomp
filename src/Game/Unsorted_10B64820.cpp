@@ -302,7 +302,7 @@ void cT3AVOptionsWindow::ShowMainMenu()
         Class_10B28330* Window;
         {
             Class_109081E0 Name(DAT_10e79040);
-            Window = (Class_10B28330*)GWindowManager->FUN_109e5960(Name);
+            Window = (Class_10B28330*)GWindowManager->FindWindowByName(Name);
         }
         if (Unknown1B4 && Unknown1B4->Unknown1A4)
         {

@@ -19,8 +19,8 @@ inline Class_10E97B00* AddressOf(const Class_10E97B00& Object)
     return (Class_10E97B00*)&Object;
 }
 
-// FUNCTION: 0x10BF0AE0 ?FUN_10bf0ae0@Class_10BC9A50@@QAEXPAVClass_10BFF460@@@Z
-void Class_10BC9A50::FUN_10bf0ae0(Class_10BFF460* Target)
+// FUNCTION: 0x10BF0AE0 ?UpdateSummon@Class_10BC9A50@@QAEXPAVClass_10BFF460@@@Z
+void Class_10BC9A50::UpdateSummon(Class_10BFF460* Target)
 {
     if (Unknown260 >= 0.0f)
     {

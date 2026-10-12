@@ -22,7 +22,7 @@ public:
     virtual void FUN_10a399e0(const Info_10A399C0* In);
     virtual void Virtual9();
     virtual void Virtual10();
-    virtual Class_10E66530* FUN_10a37c10(int A);
+    virtual Class_10E66530* Create(int A);
     virtual Object_10A37820* Virtual12();
     virtual void Virtual13();
     virtual void FUN_10a39ba0(int A);

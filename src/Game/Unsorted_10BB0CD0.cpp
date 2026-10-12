@@ -87,7 +87,7 @@ int Class_10E8C86C::FUN_10bb1140(int p1, Class_10BB1140_Item* Item, Class_10BB11
         {
             float Value = Source->Virtual4(0)->Class_10C3D3B0::FUN_10c3d3b0();
             Class_10E9CD90* Light = (Class_10E9CD90*)(((Class_10AA82D0*)Obj)->FUN_10aa82d0() + 0x30);
-            Light->Class_10E9CD90::FUN_10bfbb80(Value);
+            Light->Class_10E9CD90::SetPosition(Value);
             return 1;
         }
     }

@@ -1,16 +1,16 @@
 // Game/Class_10E8C69C.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10E8C69C.h"
-#include "Game/Class_10E8C7C4.h"
+#include "Game/cStateFlee.h"
 
 // Ion Storm's placement new (0x10905C10).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 
-// FUNCTION: 0x10BA4650 ?FUN_10ba4650@Class_10E8C69C@@UAEPAVClass_10E8C7C4@@XZ
-Class_10E8C7C4* Class_10E8C69C::FUN_10ba4650()
+// FUNCTION: 0x10BA4650 ?FUN_10ba4650@Class_10E8C69C@@UAEPAVcStateFlee@@XZ
+cStateFlee* Class_10E8C69C::FUN_10ba4650()
 {
-    Class_10E8C7C4* Object = (Class_10E8C7C4*)operator new(sizeof(Class_10E8C7C4), 0, 0, 0, 0, 0);
+    cStateFlee* Object = (cStateFlee*)operator new(sizeof(cStateFlee), 0, 0, 0, 0, 0);
     if (Object)
-        return Object->FUN_10ba4690();
+        return Object->Construct();
     return 0;
 }

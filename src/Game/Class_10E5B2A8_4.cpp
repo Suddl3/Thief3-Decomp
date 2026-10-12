@@ -7,8 +7,8 @@
 
 extern Class_10F46DA0* DAT_10f46da0;
 
-// FUNCTION: 0x109E2FA0 ?FUN_109e2fa0@Class_10E5B2A8@@QAEXPAVUObject@@HH@Z
-void Class_10E5B2A8::FUN_109e2fa0(UObject* A, int B, int C)
+// FUNCTION: 0x109E2FA0 ?AddZone@Class_10E5B2A8@@QAEXPAVUObject@@HH@Z
+void Class_10E5B2A8::AddZone(UObject* A, int B, int C)
 {
     if (!A->IsA(AZoneProperties::StaticClass()))
         return;

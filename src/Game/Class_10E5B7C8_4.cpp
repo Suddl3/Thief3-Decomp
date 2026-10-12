@@ -72,35 +72,35 @@ public:
 class Class_10E5B7C8
 {
 public:
-    void FUN_109e5000();
+    void RecenterCursor();
 
     char Unknown00[0x98];
-    Class_109E5000_Unknown98* Unknown98;
+    Class_109E5000_Unknown98* m_Window;
     char Unknown9C[0x174];
-    int Unknown210;
-    int Unknown214;
+    int m_CursorX;
+    int m_CursorY;
     int Unknown218;
     int Unknown21C;
 };
 
-// FUNCTION: 0x109E5000 ?FUN_109e5000@Class_10E5B7C8@@QAEXXZ
-void Class_10E5B7C8::FUN_109e5000()
+// FUNCTION: 0x109E5000 ?RecenterCursor@Class_10E5B7C8@@QAEXXZ
+void Class_10E5B7C8::RecenterCursor()
 {
     if (Unknown21C == 0 && Unknown218 == 1)
     {
-        Unknown98->Virtual44(0, 0, 0);
+        m_Window->Virtual44(0, 0, 0);
         Object_10A18FC0* Object = FUN_10a18fc0();
-        Unknown210 = Object->Virtual2();
-        Unknown214 = Object->Virtual3();
-        int X = Unknown98->Unknown6C / 2;
-        int Y = Unknown98->Unknown70 / 2;
+        m_CursorX = Object->Virtual2();
+        m_CursorY = Object->Virtual3();
+        int X = m_Window->Unknown6C / 2;
+        int Y = m_Window->Unknown70 / 2;
         FUN_10a18fc0()->Virtual4(X, Y);
-        if (Unknown98->Virtual35() == 0)
+        if (m_Window->Virtual35() == 0)
         {
             tagPOINT Point;
             Point.x = X;
             Point.y = Y;
-            ClientToScreen(Unknown98->Virtual42(), &Point);
+            ClientToScreen(m_Window->Virtual42(), &Point);
             X = Point.x;
             Y = Point.y;
         }

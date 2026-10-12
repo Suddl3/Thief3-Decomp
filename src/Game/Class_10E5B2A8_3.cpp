@@ -18,28 +18,28 @@ struct Struct_109E2A90_Node
 class Class_10E5B2A8
 {
 public:
-    virtual void FUN_109e30d0(int Event, UObject* A, int B, int C);
+    virtual void HandleEvent(int Event, UObject* A, int B, int C);
 
     Class_10E5B2A8();
 
-    void FUN_109e2c10(INT A, AZoneProperties* B);
-    void FUN_109e2ce0(UObject* Obj, int A, int B);
-    void FUN_109e2fa0(UObject* A, int B, int C);
+    void RemoveFromBucket(INT A, AZoneProperties* B);
+    void RemoveZone(UObject* Obj, int A, int B);
+    void AddZone(UObject* A, int B, int C);
     void FUN_109e3060(UObject* A, int B, int C);
     void FUN_109e2b40(AZoneProperties* A);
 
-    int Unknown04;
+    int m_BucketCount;
     int Unknown08;
-    Class_109E2A90** Unknown0C;
+    Class_109E2A90** m_Buckets;
     int Unknown10;
 };
 
-// FUNCTION: 0x109E2C10 ?FUN_109e2c10@Class_10E5B2A8@@QAEXHPAVAZoneProperties@@@Z
-void Class_10E5B2A8::FUN_109e2c10(INT Index, AZoneProperties* Obj)
+// FUNCTION: 0x109E2C10 ?RemoveFromBucket@Class_10E5B2A8@@QAEXHPAVAZoneProperties@@@Z
+void Class_10E5B2A8::RemoveFromBucket(INT Index, AZoneProperties* Obj)
 {
-    if (Index >= 0 && Index < Unknown04)
+    if (Index >= 0 && Index < m_BucketCount)
     {
-        Class_109E2A90* Bucket = Unknown0C[Index];
+        Class_109E2A90* Bucket = m_Buckets[Index];
         if (Bucket)
         {
             for (Struct_109E2A90_Node* Node = Bucket->Head; Node; Node = Node->Next)

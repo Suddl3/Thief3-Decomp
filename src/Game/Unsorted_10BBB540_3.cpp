@@ -6,25 +6,25 @@
 class Class_10BBB410
 {
 public:
-    void FUN_10bbb330();
-    void FUN_10bbb540(int Item);
+    void CancelCurrent();
+    void RemoveItem(int Item);
     int FUN_10bbb730();
 
     char Unknown00[0x14];
     cIntArray Unknown14;
     char Unknown20[0x1F0];
-    Class_10BFF460* Unknown210;
+    Class_10BFF460* m_Current;
 };
 
 // FUNCTION: 0x10BBB730 ?FUN_10bbb730@Class_10BBB410@@QAEHXZ
 int Class_10BBB410::FUN_10bbb730()
 {
-    if (Unknown210)
+    if (m_Current)
     {
-        if (Unknown210->FUN_10bff460() != 1)
-            FUN_10bbb330();
+        if (m_Current->FUN_10bff460() != 1)
+            CancelCurrent();
     }
-    if (Unknown210 && Unknown210->FUN_10bff330() == 1)
+    if (m_Current && m_Current->FUN_10bff330() == 1)
         return 1;
     return 0;
 }

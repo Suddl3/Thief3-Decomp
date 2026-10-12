@@ -34,7 +34,7 @@ public:
 // FUNCTION: 0x10BE4A20 ?FUN_10be4a20@Class_10E96810@@UAEXXZ
 void Class_10E96810::FUN_10be4a20()
 {
-    Class_10BFF460* Obj = Unknown04->FUN_10bbb410();
+    Class_10BFF460* Obj = Unknown04->GetCurrent();
     if (Obj && Obj->FUN_10bff330())
     {
         Class_10BBB410* Ctrl = Unknown04;

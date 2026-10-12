@@ -23,7 +23,7 @@ public:
     void FUN_109528b0();
 
     char Unknown00[0x90];
-    Class_10955C30 Unknown90;
+    Class_10955C30 m_Slots;
     Struct_109528B0* UnknownA8;
 };
 
@@ -37,8 +37,8 @@ void Class_109528B0::FUN_109528b0()
     int Type = UnknownA8->Unknown30;
     if (Type == DAT_10f3419c || Type == DAT_10f341a0)
     {
-        Unknown90.FUN_10955c30();
-        Unknown90.FUN_10956110(0);
+        m_Slots.FUN_10955c30();
+        m_Slots.FUN_10956110(0);
     }
 }
 

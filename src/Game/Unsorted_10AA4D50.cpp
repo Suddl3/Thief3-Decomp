@@ -9,10 +9,10 @@ void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D
 
 extern void* DAT_10e6d5b0[];
 
-class Class_10E6D5B0
+class SwooshGeometryTriStrip
 {
 public:
-    Class_10E6D5B0()
+    SwooshGeometryTriStrip()
     {
         Unknown04 = 0;
         Unknown08 = 0;
@@ -34,11 +34,11 @@ public:
     int Unknown1C;
 };
 
-// FUNCTION: 0x10AA5110 ?FUN_10aa5110@@YAPAVClass_10E6D5B0@@XZ
-Class_10E6D5B0* FUN_10aa5110()
+// FUNCTION: 0x10AA5110 ?FUN_10aa5110@@YAPAVSwooshGeometryTriStrip@@XZ
+SwooshGeometryTriStrip* FUN_10aa5110()
 {
     GetAllocator()->Virtual8(0, 0);
-    Class_10E6D5B0* Result = new(0, 0, 0, 0, 0) Class_10E6D5B0;
+    SwooshGeometryTriStrip* Result = new(0, 0, 0, 0, 0) SwooshGeometryTriStrip;
     GetAllocator()->Virtual9();
     return Result;
 }

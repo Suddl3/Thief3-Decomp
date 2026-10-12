@@ -308,7 +308,7 @@ bool Class_10C39E90::FUN_10c39e90(int* Out)
     }
     Class_10B9BCA0* Obj = FUN_10baa660((AAIPawn*)((Class_10C7D570*)Unknown48->Virtual34())->FUN_10c7d570());
     Class_10AA82D0* Owner = Obj && Obj->Unknown118 ? Obj->Unknown118->Unknown08 : 0;
-    Class_10BFF460* Item = ((Class_10BBB410*)Owner->FUN_10aa82d0())->FUN_10bbb410();
+    Class_10BFF460* Item = ((Class_10BBB410*)Owner->FUN_10aa82d0())->GetCurrent();
     if (Item && Item->FUN_10bff2a0() && (int)Item->FUN_10bff2a0() == *Out && Item->FUN_10bff330())
         return true;
     return false;

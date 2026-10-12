@@ -8,14 +8,14 @@ class VisualSubsystem;
 class Class_10BAE080
 {
 public:
-    void FUN_10bad9d0(int Count);
-    void FUN_10bae080();
-    int FUN_10c176e0(const VisualSubsystem& Item);
-    void FUN_10bae2b0(const Class_10BAE080& Other);
+    void Resize(int Count);
+    void Clear();
+    int Add(const VisualSubsystem& Item);
+    void Assign(const Class_10BAE080& Other);
 
-    int Unknown00;
-    int Unknown04;
-    VisualSubsystem* Unknown08;
+    int m_Count;
+    int m_CapacityBytes;
+    VisualSubsystem* m_Items;
 };
 
 #endif // GAME_CLASS_10BAE080_H

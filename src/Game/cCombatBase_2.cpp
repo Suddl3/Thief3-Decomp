@@ -87,7 +87,7 @@ public:
 // FUNCTION: 0x10BD86B0 ?GetLastKnownPosition@cCombatBase@@UAEPAVFVector@@XZ
 FVector* cCombatBase::GetLastKnownPosition()
 {
-    Class_10BFF460* Obj = Unknown04->FUN_10bbb410();
+    Class_10BFF460* Obj = Unknown04->GetCurrent();
     if (!Obj)
         return &m_LastKnownPosition;
     m_LastKnownPosition = Obj->FUN_10bff360();

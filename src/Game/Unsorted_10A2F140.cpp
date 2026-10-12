@@ -12,8 +12,8 @@ public:
     int Unknown04;
 };
 
-// FUNCTION: 0x10A2F140 ?FUN_10a2f140@Class_10E66300@@UAEHH@Z
-int Class_10E66300::FUN_10a2f140(int A)
+// FUNCTION: 0x10A2F140 ?Contains@Class_10E66300@@UAEHH@Z
+int Class_10E66300::Contains(int A)
 {
     if (A == Unknown04 || A == Unknown08)
         return 1;

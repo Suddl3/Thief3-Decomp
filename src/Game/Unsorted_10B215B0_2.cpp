@@ -170,7 +170,7 @@ public:
     virtual void Virtual3();
     virtual int Virtual4();
 
-    void FUN_10b3ed20();
+    void ResetIfPending();
 };
 
 class Class_10B22D60
@@ -200,7 +200,7 @@ float Class_10B21820::FUN_10b21820()
 void Class_10B22910::FUN_10b22910()
 {
     if (Unknown90->Virtual4() == 0xB)
-        Unknown90->FUN_10b3ed20();
+        Unknown90->ResetIfPending();
 }
 
 // FUNCTION: 0x10B22C10 ?FUN_10b22c10@Class_10B22D60@@QAEXXZ

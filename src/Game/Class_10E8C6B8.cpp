@@ -11,6 +11,6 @@ Class_10E8C818* Class_10E8C6B8::FUN_10ba48e0()
 {
     Class_10E8C818* Object = (Class_10E8C818*)operator new(sizeof(Class_10E8C818), 0, 0, 0, 0, 0);
     if (Object)
-        return Object->FUN_10ba4920();
+        return Object->Construct();
     return 0;
 }

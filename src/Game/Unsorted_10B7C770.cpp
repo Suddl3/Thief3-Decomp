@@ -27,8 +27,8 @@ public:
     virtual void Virtual1();
 };
 
-// FUNCTION: 0x10B7C770 ?FUN_10b7c770@Class_10E4B180@@UAEXXZ
-void Class_10E4B180::FUN_10b7c770()
+// FUNCTION: 0x10B7C770 ?Shutdown@Class_10E4B180@@UAEXXZ
+void Class_10E4B180::Shutdown()
 {
     for (int i = 0; i < Unknown44; i++)
         Unknown4C[i]->Virtual1();

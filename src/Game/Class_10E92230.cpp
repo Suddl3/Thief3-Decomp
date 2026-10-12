@@ -74,7 +74,7 @@ void Class_10E92230::NotifyActivated(int Unused)
     Class_10BF7F90* Obj = FUN_10bc4160();
     Obj->FUN_10bf7f90(0, 1);
     Class_10E97B00 Name("+fatigue:episode");
-    Class_10BFF460* Item = ((Class_10BBB410*)Unknown04)->FUN_10bbb410();
+    Class_10BFF460* Item = ((Class_10BBB410*)Unknown04)->GetCurrent();
     if (Item && Item->FUN_10bff330())
     {
         Name = Class_10E97B00(",?evidence:clearly_seen");

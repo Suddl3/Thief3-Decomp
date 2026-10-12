@@ -12,19 +12,19 @@ public:
     virtual ~Class_10E67FD0();
 };
 
-class Class_10E68938 : public Class_10E67FD0
+class cRadioWindow : public Class_10E67FD0
 {
 public:
-    virtual ~Class_10E68938();
+    virtual ~cRadioWindow();
 
     char Unknown04[0x114];
     Class_10A249B0* Unknown118;
     Class_109081E0 Unknown11C;
-    cIntArray Unknown120;
+    cIntArray m_ChildCount;
 };
 
-// FUNCTION: 0x10A56670 ??1Class_10E68938@@UAE@XZ
-Class_10E68938::~Class_10E68938()
+// FUNCTION: 0x10A56670 ??1cRadioWindow@@UAE@XZ
+cRadioWindow::~cRadioWindow()
 {
     delete Unknown118;
 }
@@ -32,5 +32,5 @@ Class_10E68938::~Class_10E68938()
 // FUNCTION: 0x10A56860 ?FUN_10a56860@Class_10A56860@@QAEXH@Z
 void Class_10A56860::FUN_10a56860(int Item)
 {
-    FUN_10a56480(FindIndex(Item));
+    SetSelectedIndex(FindIndex(Item));
 }

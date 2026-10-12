@@ -43,7 +43,7 @@ public:
     virtual void Virtual2();
     virtual void Virtual3();
     virtual void Virtual4();
-    virtual bool FUN_10a37dc0(int A, int B, int C);
+    virtual bool ChangeState(int A, int B, int C);
     virtual void Virtual6();
     virtual void Virtual7();
     virtual void Virtual8();
@@ -53,9 +53,9 @@ public:
     virtual Class_10A37DC0_Child* Virtual12();
 
     char Unknown04[0x1C];
-    Class_10A37DC0_Handler* Unknown20;
+    Class_10A37DC0_Handler* m_Handler;
     int Unknown24;
-    Class_10A37DC0_Handler* Unknown28;
+    Class_10A37DC0_Handler* m_FallbackHandler;
 };
 
 extern float DAT_10eafbdc;
@@ -83,22 +83,22 @@ public:
     virtual bool Virtual7(float A);
 };
 
-// FUNCTION: 0x10A37DC0 ?FUN_10a37dc0@Class_10E666A0@@UAE_NHHH@Z
-bool Class_10E666A0::FUN_10a37dc0(int A, int B, int C)
+// FUNCTION: 0x10A37DC0 ?ChangeState@Class_10E666A0@@UAE_NHHH@Z
+bool Class_10E666A0::ChangeState(int A, int B, int C)
 {
     int Result = 0;
     if (Virtual12()->Virtual1())
         Result = Virtual12()->Virtual1()->Virtual4();
     if (Virtual12()->Virtual0(this, A, B, C))
     {
-        if (Unknown20 || Unknown28)
+        if (m_Handler || m_FallbackHandler)
         {
             int Other = 0;
             if (Virtual12()->Virtual1())
                 Other = Virtual12()->Virtual1()->Virtual4();
-            Class_10A37DC0_Handler* Handler = Unknown20;
+            Class_10A37DC0_Handler* Handler = m_Handler;
             if (!Handler)
-                Handler = Unknown28;
+                Handler = m_FallbackHandler;
             Handler->Virtual3(Other, Result, this);
         }
         DAT_10f46da0->Virtual5(0x80, 0, -1, 0);

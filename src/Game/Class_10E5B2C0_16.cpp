@@ -90,39 +90,39 @@ public:
     virtual void Virtual64();
     virtual void Virtual65(int Param);
     virtual void Virtual66(int Param);
-    virtual void FUN_109e48b0(int Param);
-    virtual void FUN_109e4900(int Param);
+    virtual void SetChildFlags(int Param);
+    virtual void ClearChildFlags(int Param);
 
     char Unknown04[0xB4];
-    int UnknownB8;
+    int m_NumChildren;
     char UnknownBC[4];
-    Class_10E5B2C0** UnknownC0;
+    Class_10E5B2C0** m_Children;
 };
 
-// FUNCTION: 0x109E48B0 ?FUN_109e48b0@Class_10E5B2C0@@UAEXH@Z
-void Class_10E5B2C0::FUN_109e48b0(int Param)
+// FUNCTION: 0x109E48B0 ?SetChildFlags@Class_10E5B2C0@@UAEXH@Z
+void Class_10E5B2C0::SetChildFlags(int Param)
 {
-    for (int i = 0; i < UnknownB8; i++)
+    for (int i = 0; i < m_NumChildren; i++)
     {
-        Class_10E5B2C0* Child = UnknownC0[i];
+        Class_10E5B2C0* Child = m_Children[i];
         if (Child)
         {
             Child->Virtual65(Param);
-            UnknownC0[i]->FUN_109e48b0(Param);
+            m_Children[i]->SetChildFlags(Param);
         }
     }
 }
 
-// FUNCTION: 0x109E4900 ?FUN_109e4900@Class_10E5B2C0@@UAEXH@Z
-void Class_10E5B2C0::FUN_109e4900(int Param)
+// FUNCTION: 0x109E4900 ?ClearChildFlags@Class_10E5B2C0@@UAEXH@Z
+void Class_10E5B2C0::ClearChildFlags(int Param)
 {
-    for (int i = 0; i < UnknownB8; i++)
+    for (int i = 0; i < m_NumChildren; i++)
     {
-        Class_10E5B2C0* Child = UnknownC0[i];
+        Class_10E5B2C0* Child = m_Children[i];
         if (Child)
         {
             Child->Virtual66(Param);
-            UnknownC0[i]->FUN_109e4900(Param);
+            m_Children[i]->ClearChildFlags(Param);
         }
     }
 }

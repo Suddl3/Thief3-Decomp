@@ -38,5 +38,5 @@ public:
 void Class_10E79228::CheckGameOver()
 {
     if (FUN_10a18230()->Virtual3(DAT_10e6f4d8))
-        GWindowManager->FUN_10b15d70(1);
+        GWindowManager->OpenCreditsWindow(1);
 }

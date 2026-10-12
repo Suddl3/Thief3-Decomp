@@ -9,13 +9,13 @@ public:
     void FUN_10b735c0(int A);
 };
 
-// FUNCTION: 0x10B737B0 ?FUN_10b737b0@Class_10B73810@@QAEXXZ
-void Class_10B73810::FUN_10b737b0()
+// FUNCTION: 0x10B737B0 ?ApplyValues@Class_10B73810@@QAEXXZ
+void Class_10B73810::ApplyValues()
 {
     Struct_10B73810* Obj = Unknown188;
     int Base = (int)Obj;
     if (Obj)
         Base = Obj->Unknown1F0;
-    for (int i = 0; i < Unknown190; i++)
-        Unknown198[i]->FUN_10b735c0(Unknown1A4[Base + i]);
+    for (int i = 0; i < m_ChildCount; i++)
+        m_Children[i]->FUN_10b735c0(m_Values[Base + i]);
 }

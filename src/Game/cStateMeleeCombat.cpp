@@ -42,7 +42,7 @@ public:
 // FUNCTION: 0x10BF69F0 ?FUN_10bf69f0@cStateMeleeCombat@@UAEXXZ
 void cStateMeleeCombat::FUN_10bf69f0()
 {
-    Class_10BFF280* Info = (Class_10BFF280*)Unknown04->FUN_10bbb410();
+    Class_10BFF280* Info = (Class_10BFF280*)Unknown04->GetCurrent();
     if (Info && Info->FUN_10bff280())
     {
         Struct_10BF69F0_Data* Data = (Struct_10BF69F0_Data*)Info->FUN_10bff280();

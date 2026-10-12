@@ -9,7 +9,7 @@ extern void* DAT_10e6bb18[];
 
 class Class_10E6BB18 {
 public:
-    Class_10E6BB18* FUN_10a2f3c0();
+    Class_10E6BB18* Construct();
 
     void* Unknown00;
     int Unknown04;
@@ -51,8 +51,8 @@ bool Class_10E66368::FUN_10a2f0f0(int p1)
     return Unknown38 == p1;
 }
 
-// FUNCTION: 0x10A2F110 ?FUN_10a2f110@Class_10E66300@@UAEHPAV1@@Z
-int Class_10E66300::FUN_10a2f110(Class_10E66300* Other)
+// FUNCTION: 0x10A2F110 ?IsEqual@Class_10E66300@@UAEHPAV1@@Z
+int Class_10E66300::IsEqual(Class_10E66300* Other)
 {
     if (Other->Unknown04 == Unknown04 && Other->Unknown08 == Unknown08)
         return 1;
@@ -69,8 +69,8 @@ Class_10A2F180* Class_10A2F180::FUN_10a2f180()
     return this;
 }
 
-// FUNCTION: 0x10A2F3C0 ?FUN_10a2f3c0@Class_10E6BB18@@QAEPAV1@XZ
-Class_10E6BB18* Class_10E6BB18::FUN_10a2f3c0()
+// FUNCTION: 0x10A2F3C0 ?Construct@Class_10E6BB18@@QAEPAV1@XZ
+Class_10E6BB18* Class_10E6BB18::Construct()
 {
     Unknown04 = 0;
     Unknown00 = DAT_10e6bb18;

@@ -8,7 +8,7 @@ extern const char DAT_10e79040[];
 
 bool FUN_10abc140();
 
-// The object FUN_109e5960 returns (a getter's result, not named anywhere yet): only its slot 39 is used here.
+// The object FindWindowByName returns (a getter's result, not named anywhere yet): only its slot 39 is used here.
 class Class_10B15960_Window
 {
 public:
@@ -54,7 +54,7 @@ public:
     virtual int Virtual39();
 };
 
-// The header's WindowManager, copied whole with FUN_10b15960 added; Virtual4 takes an int (the base's slot 4).
+// The header's WindowManager, copied whole with OpenMainMenuWindow added; Virtual4 takes an int (the base's slot 4).
 class WindowManager : public Class_109E6D60
 {
 public:
@@ -64,17 +64,17 @@ public:
     virtual void Virtual3();
     virtual void Virtual4(int Window);
 
-    int FUN_109e5960(const Class_109081E0& Name);
-    bool FUN_10b15960(int A);
+    int FindWindowByName(const Class_109081E0& Name);
+    bool OpenMainMenuWindow(int A);
 };
 
-// FUNCTION: 0x10B15960 ?FUN_10b15960@WindowManager@@QAE_NH@Z
-bool WindowManager::FUN_10b15960(int A)
+// FUNCTION: 0x10B15960 ?OpenMainMenuWindow@WindowManager@@QAE_NH@Z
+bool WindowManager::OpenMainMenuWindow(int A)
 {
     int Window;
     {
         Class_109081E0 Name(DAT_10e79040);
-        Window = FUN_109e5960(Name);
+        Window = FindWindowByName(Name);
     }
     if (Window && !FUN_109e6d60(Window))
     {

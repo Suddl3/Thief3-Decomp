@@ -11,7 +11,7 @@ class Class_10BFF460 : public Class_10BFF280
 class Class_10BBB410 : public Class_10BB8360
 {
 public:
-    Class_10BFF460* FUN_10bbb410();
+    Class_10BFF460* GetCurrent();
 };
 
 class cMeleeStrafeTarget
@@ -31,7 +31,7 @@ public:
 // FUNCTION: 0x10BDAFA0 ?FUN_10bdafa0@cMeleeStrafeTarget@@UAEXXZ
 void cMeleeStrafeTarget::FUN_10bdafa0()
 {
-    Class_10BFF460* Obj = Unknown04->FUN_10bbb410();
+    Class_10BFF460* Obj = Unknown04->GetCurrent();
     if (Obj)
     {
         Class_10BBB410* Ctrl = Unknown04;

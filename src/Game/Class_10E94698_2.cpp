@@ -36,7 +36,7 @@ public:
 // FUNCTION: 0x10BDAF60 ?FUN_10bdaf60@Class_10E94698@@UAEXXZ
 void Class_10E94698::FUN_10bdaf60()
 {
-    Class_10BFF460* Obj = Unknown04->FUN_10bbb410();
+    Class_10BFF460* Obj = Unknown04->GetCurrent();
     if (Obj && Obj->FUN_10bff460() && !Obj->FUN_10bff330())
         Obj->FUN_10bff240(1);
 }

@@ -25,10 +25,10 @@ public:
     int Unknown04[15];
 };
 
-class Class_10E93F68 : public Class_10E90D70
+class cTacticWeaponEquip : public Class_10E90D70
 {
 public:
-    Class_10E93F68* FUN_10bd97d0(int A, int B, int C, bool D, bool E);
+    cTacticWeaponEquip* FUN_10bd97d0(int A, int B, int C, bool D, bool E);
 
     int Unknown40;
     bool Unknown44;
@@ -79,8 +79,8 @@ public:
     Object_10BDAEB0* Unknown40;
 };
 
-// FUNCTION: 0x10BD97D0 ?FUN_10bd97d0@Class_10E93F68@@QAEPAV1@HHH_N0@Z
-Class_10E93F68* Class_10E93F68::FUN_10bd97d0(int A, int B, int C, bool D, bool E)
+// FUNCTION: 0x10BD97D0 ?FUN_10bd97d0@cTacticWeaponEquip@@QAEPAV1@HHH_N0@Z
+cTacticWeaponEquip* cTacticWeaponEquip::FUN_10bd97d0(int A, int B, int C, bool D, bool E)
 {
     this->Class_10E90D70::Class_10E90D70(A, B);
     Unknown00 = DAT_10e93f68;
@@ -101,7 +101,7 @@ void Class_10E94218::FUN_10bdaeb0()
 {
     if (Unknown40)
         Unknown40->Virtual2();
-    Class_10BFF460* Obj = Unknown04->FUN_10bbb410();
+    Class_10BFF460* Obj = Unknown04->GetCurrent();
     if (!Obj || !Obj->FUN_10bff460() || FUN_10bc4160()->FUN_10aa82d0() == 0)
         PopState();
 }

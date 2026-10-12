@@ -1,8 +1,8 @@
-// Game/Class_10E6B4C8.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/LoginManager.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Core/Core.h"
 #include "Game/Class_10A37700.h"
-#include "Game/Class_10E6B4C8.h"
+#include "Game/LoginManager.h"
 
 class Object_10A67120
 {
@@ -116,8 +116,8 @@ struct Struct_10AA3520
 
 extern Struct_10AA3520* DAT_10f35dec;
 
-// FUNCTION: 0x10A67120 ?FUN_10a67120@Class_10E6B4C8@@UAEXPAVObject_10A67120@@H@Z
-void Class_10E6B4C8::FUN_10a67120(Object_10A67120* Obj, int Param)
+// FUNCTION: 0x10A67120 ?FUN_10a67120@LoginManager@@UAEXPAVObject_10A67120@@H@Z
+void LoginManager::FUN_10a67120(Object_10A67120* Obj, int Param)
 {
     FRotator Saved = Obj->Unknown38;
     Obj->Virtual95(Param, 0);

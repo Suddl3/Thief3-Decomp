@@ -66,7 +66,7 @@ Class_10E86DC0::Class_10E86DC0(int A)
 void Class_10B64280::FUN_10b6f870()
 {
     FUN_10b744b0();
-    static_cast<Class_10B15960*>(FUN_10b154c0())->FUN_10b15960(0);
+    static_cast<Class_10B15960*>(FUN_10b154c0())->OpenMainMenuWindow(0);
 }
 
 // FUNCTION: 0x10B6F9E0 ?Construct@Class_10E86FD0@@QAEPAV1@XZ

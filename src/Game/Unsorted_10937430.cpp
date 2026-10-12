@@ -12,8 +12,8 @@ extern "C" D3DXMATRIX* __stdcall FUN_10d681e3(D3DXMATRIX* pOut, const D3DXMATRIX
 
 extern IDirect3DDevice8* GDirect3DDevice8;
 
-// FUNCTION: 0x10937430 ?FUN_10937430@Class_10937790@@QAEXPAX00@Z
-void Class_10937790::FUN_10937430(void* A, void* B, void* C)
+// FUNCTION: 0x10937430 ?SetTransforms@Class_10937790@@QAEXPAX00@Z
+void Class_10937790::SetTransforms(void* A, void* B, void* C)
 {
     D3DXMATRIX World = *(D3DXMATRIX*)C;
     GDirect3DDevice8->SetTransform(3, (D3DXMATRIX*)A);

@@ -93,32 +93,32 @@ inline Class_10E97B00* AddressOf(const Class_10E97B00& Object)
 class Class_10BBB410 : public Class_10BB7F30
 {
 public:
-    void FUN_10bb9260();
+    void UpdateReprimand();
 
     char Pad0C[0x1C0];
     FVector Unknown1CC;
     char Pad1D8[0x4];
-    float Unknown1DC;
+    float m_ReprimandStartTime;
     char Pad1E0[0x4];
-    int Unknown1E4;
+    int m_ReprimandActive;
     char Pad1E8[0x4];
     bool Unknown1EC;
 };
 
-// FUNCTION: 0x10BB9260 ?FUN_10bb9260@Class_10BBB410@@QAEXXZ
-void Class_10BBB410::FUN_10bb9260()
+// FUNCTION: 0x10BB9260 ?UpdateReprimand@Class_10BBB410@@QAEXXZ
+void Class_10BBB410::UpdateReprimand()
 {
-    if (Unknown1E4 != 0)
+    if (m_ReprimandActive != 0)
     {
         float Value = Unknown08->FUN_10dbd510(0x10024f)->GetFloat();
         if (Value > DAT_10eafbdc)
         {
-            double Limit = Value + Unknown1DC;
+            double Limit = Value + m_ReprimandStartTime;
             if (Limit < GetTimeSeconds())
             {
-                Unknown1DC = 0.0f;
+                m_ReprimandStartTime = 0.0f;
                 memset(&Unknown1CC, 0, sizeof(FVector));
-                Unknown1E4 = 0;
+                m_ReprimandActive = 0;
                 Unknown1EC = false;
                 if (FUN_10bb7f30()->GetCurrent()->Virtual63())
                 {

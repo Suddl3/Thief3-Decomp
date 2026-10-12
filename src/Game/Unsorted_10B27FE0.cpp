@@ -69,5 +69,5 @@ void Class_10B283D0::FUN_10b283d0()
 {
     static_cast<Class_109E8930*>(GWindowManager[0])->FUN_109e8930(this);
     Virtual56(0);
-    static_cast<Class_10B15960*>(FUN_10b154c0())->FUN_10b15d70(0);
+    static_cast<Class_10B15960*>(FUN_10b154c0())->OpenCreditsWindow(0);
 }

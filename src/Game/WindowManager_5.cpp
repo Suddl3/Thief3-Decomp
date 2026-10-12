@@ -7,7 +7,7 @@
 
 extern const char DAT_10e7906c[];
 
-// The object FUN_109e5960 returns (a getter's result, not named anywhere yet).
+// The object FindWindowByName returns (a getter's result, not named anywhere yet).
 class Class_10B15B20_Window
 {
 public:
@@ -68,15 +68,15 @@ public:
 
     void FUN_109e3d60(void* Window);
     void FUN_109e8ae0(void* Window);
-    int FUN_109e5960(const Class_109081E0& Name);
+    int FindWindowByName(const Class_109081E0& Name);
     void FUN_109e6b20(int A);
     void FUN_109e8930(void* Window);
-    void FUN_10b158b0();
+    void OpenTitleLoadWindow();
     void FUN_10b16110(int A, int B);
     void GetUIScreenSize(FVector* Out);
-    FVector FUN_109e4290(int X, int Y);
-    void FUN_109e4300(FVector* Pos, int* OutX, int* OutY);
-    bool FUN_10b15b20(bool A);
+    FVector ScreenToUIPosition(int X, int Y);
+    void UIPositionToScreen(FVector* Pos, int* OutX, int* OutY);
+    bool OpenEnterMissionWindow(bool A);
 
     char Unknown04[0x94];
     int Unknown98;
@@ -89,13 +89,13 @@ public:
     char Unknown264;
 };
 
-// FUNCTION: 0x10B15B20 ?FUN_10b15b20@WindowManager@@QAE_N_N@Z
-bool WindowManager::FUN_10b15b20(bool A)
+// FUNCTION: 0x10B15B20 ?OpenEnterMissionWindow@WindowManager@@QAE_N_N@Z
+bool WindowManager::OpenEnterMissionWindow(bool A)
 {
     int Window;
     {
         Class_109081E0 Name(DAT_10e7906c);
-        Window = FUN_109e5960(Name);
+        Window = FindWindowByName(Name);
     }
     if (Window && !FUN_109e6d60(Window))
     {

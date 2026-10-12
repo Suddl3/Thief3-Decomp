@@ -3,12 +3,12 @@
 #ifndef GAME_CLASS_10E8C698_H
 #define GAME_CLASS_10E8C698_H
 
-class Class_10E8C7B8;
+class cStateGuard;
 
 class Class_10E8C698
 {
 public:
-    virtual Class_10E8C7B8* FUN_10ba4600();
+    virtual cStateGuard* FUN_10ba4600();
 };
 
 #endif // GAME_CLASS_10E8C698_H

@@ -31,16 +31,16 @@ public:
     Class_10E5B2A8()
     {
         VTable = DAT_10e5b2a8;
-        Unknown04 = 0;
+        m_BucketCount = 0;
         Unknown08 = 0;
-        Unknown0C = 0;
+        m_Buckets = 0;
         Unknown10 = 0;
     }
 
     void** VTable;
-    int Unknown04;
+    int m_BucketCount;
     int Unknown08;
-    int Unknown0C;
+    int m_Buckets;
     int Unknown10;
 };
 
@@ -154,8 +154,8 @@ Class_10E5B2A8* FUN_109e2c70()
     return DAT_10f35dbc;
 }
 
-// FUNCTION: 0x109E32B0 ?FUN_109e32b0@Class_10E5B2AC@@QAEXXZ
-void Class_10E5B2AC::FUN_109e32b0()
+// FUNCTION: 0x109E32B0 ?SendMessages@Class_10E5B2AC@@QAEXXZ
+void Class_10E5B2AC::SendMessages()
 {
     if (DAT_10f46da0)
     {

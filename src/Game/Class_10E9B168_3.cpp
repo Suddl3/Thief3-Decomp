@@ -17,18 +17,18 @@ class Class_10E9B168 : public Class_10E9AFD0, public Class_10E9B088
 public:
     virtual ~Class_10E9B168();
     virtual bool FUN_10c3d590(Class_10E9B168* A);
-    int Unknown54;
+    int m_Handle;
     char Unknown58[0xc];
-    Class_109BBBA0* Unknown64;
+    Class_109BBBA0* m_Manager;
 };
 
 // FUNCTION: 0x10C3DCC0 ??1Class_10E9B168@@UAE@XZ
 Class_10E9B168::~Class_10E9B168()
 {
-    if (Unknown54 >= 0)
+    if (m_Handle >= 0)
     {
-        Unknown64->FUN_109bbba0(Unknown54);
-        Unknown54 = -1;
+        m_Manager->FUN_109bbba0(m_Handle);
+        m_Handle = -1;
     }
     Unknown18 = false;
 }

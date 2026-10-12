@@ -25,9 +25,9 @@ public:
     ~Class_10E4A538();
 
     char FUN_10940970();
-    void FUN_10940c50();
-    void FUN_1093ffe0(int Width, int Height, Struct_1093FFE0* Out);
-    void FUN_109400a0(Class_109400A0_Arg* Arg);
+    void Reset();
+    void BuildTextureMatrix(int Width, int Height, Struct_1093FFE0* Out);
+    void UpdateTextureMatrix(Class_109400A0_Arg* Arg);
 
     int Unknown04;
     Class_109081E0 Unknown08[47];
@@ -93,12 +93,12 @@ public:
     Struct_1093FFE0 Unknown1C4;
 };
 
-// FUNCTION: 0x109400A0 ?FUN_109400a0@Class_10E4A538@@QAEXPAVClass_109400A0_Arg@@@Z
-void Class_10E4A538::FUN_109400a0(Class_109400A0_Arg* Arg)
+// FUNCTION: 0x109400A0 ?UpdateTextureMatrix@Class_10E4A538@@QAEXPAVClass_109400A0_Arg@@@Z
+void Class_10E4A538::UpdateTextureMatrix(Class_109400A0_Arg* Arg)
 {
     if (Arg->Unknown13C != 0)
     {
-        FUN_1093ffe0((int)(float)Arg->Unknown13C->Width, (int)(float)Arg->Unknown13C->Height, &Arg->Unknown1C4);
+        BuildTextureMatrix((int)(float)Arg->Unknown13C->Width, (int)(float)Arg->Unknown13C->Height, &Arg->Unknown1C4);
         return;
     }
     if (Arg->Unknown140 != 0)
@@ -106,7 +106,7 @@ void Class_10E4A538::FUN_109400a0(Class_109400A0_Arg* Arg)
         Struct_109400A0 Desc;
         memset(&Desc, 0, sizeof(Desc));
         Arg->Unknown140->Virtual14(0, &Desc);
-        FUN_1093ffe0((int)(float)Desc.Width, (int)(float)Desc.Height, &Arg->Unknown1C4);
+        BuildTextureMatrix((int)(float)Desc.Width, (int)(float)Desc.Height, &Arg->Unknown1C4);
         return;
     }
     Arg->Unknown5C |= 0x800;

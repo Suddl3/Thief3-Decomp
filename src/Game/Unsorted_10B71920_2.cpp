@@ -10,5 +10,5 @@ void Class_10B73810::FUN_10b73810()
         Unknown188->Virtual122();
     else
         Unknown188->Virtual123();
-    FUN_10b737b0();
+    ApplyValues();
 }

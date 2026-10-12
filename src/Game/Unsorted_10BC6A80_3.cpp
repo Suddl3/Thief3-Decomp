@@ -5,8 +5,8 @@
 #include "Game/Class_109081E0.h"
 #include "Game/Class_10BC9A50.h"
 
-// FUNCTION: 0x10BC9A50 ?FUN_10bc9a50@Class_10BC9A50@@QAE_NXZ
-bool Class_10BC9A50::FUN_10bc9a50()
+// FUNCTION: 0x10BC9A50 ?ShopOwnerNoCash@Class_10BC9A50@@QAE_NXZ
+bool Class_10BC9A50::ShopOwnerNoCash()
 {
     Class_10E97B00 Name("+shopowner:nocash");
     Class_109081E0 Text(DAT_10e47660);

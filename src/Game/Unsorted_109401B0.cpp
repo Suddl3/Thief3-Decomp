@@ -64,8 +64,8 @@ void Class_10941570::FUN_10941570()
         Unknown0C[i].FUN_10941480();
 }
 
-// FUNCTION: 0x10941980 ?FUN_10941980@Class_10941C40@@QAEXFFF@Z
-void Class_10941C40::FUN_10941980(short A, short B, short C)
+// FUNCTION: 0x10941980 ?AddEntry@Class_10941C40@@QAEXFFF@Z
+void Class_10941C40::AddEntry(short A, short B, short C)
 {
     Class_109418E0* Item = Unknown1C;
     Struct_10941980 Value;

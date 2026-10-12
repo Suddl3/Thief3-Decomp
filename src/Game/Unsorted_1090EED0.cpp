@@ -4,12 +4,12 @@
 #include "Game/Class_1090FD40.h"
 #include "Game/Class_1090FF70.h"
 
-// FUNCTION: 0x1090FD40 ?FUN_1090fd40@Class_1090FD40@@QAEHABVClass_109081E0@@@Z
-int Class_1090FD40::FUN_1090fd40(const Class_109081E0& Item)
+// FUNCTION: 0x1090FD40 ?Add@Class_1090FD40@@QAEHABVClass_109081E0@@@Z
+int Class_1090FD40::Add(const Class_109081E0& Item)
 {
-    int Index = Unknown00;
+    int Index = m_Count;
     FUN_1090f2c0(Index + 1);
-    Unknown08[Index] = Item;
+    m_Items[Index] = Item;
     return Index;
 }
 

@@ -167,8 +167,8 @@ public:
     virtual void Virtual5(void* A, int B, Struct_10B559E0* C, int D);
 };
 
-// FUNCTION: 0x10B559E0 ?FUN_10b559e0@Class_10E80418@@UAEHPADH@Z
-int Class_10E80418::FUN_10b559e0(char* Command, int Unknown)
+// FUNCTION: 0x10B559E0 ?HandleCheatCommand@Class_10E80418@@UAEHPADH@Z
+int Class_10E80418::HandleCheatCommand(char* Command, int Unknown)
 {
     if (FUN_10af42f0((int)&Command, "HURTME"))
     {

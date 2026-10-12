@@ -69,7 +69,7 @@ public:
     virtual void Virtual56(int A);
 };
 
-// The header's class with FUN_10b16e40 added (copied whole; the lead merges it).
+// The header's class with ToggleBowDiagnosticWindow added (copied whole; the lead merges it).
 class WindowManager : public Class_109E6D60
 {
 public:
@@ -81,15 +81,15 @@ public:
 
     void FUN_109e3d60(void* Window);
     void FUN_109e8ae0(void* Window);
-    int FUN_109e5960(const Class_109081E0& Name);
+    int FindWindowByName(const Class_109081E0& Name);
     void FUN_109e6b20(int A);
     void FUN_109e8930(void* Window);
-    void FUN_10b158b0();
+    void OpenTitleLoadWindow();
     void FUN_10b16110(int A, int B);
     void GetUIScreenSize(FVector* Out);
-    FVector FUN_109e4290(int X, int Y);
-    void FUN_109e4300(FVector* Pos, int* OutX, int* OutY);
-    void FUN_10b16e40();
+    FVector ScreenToUIPosition(int X, int Y);
+    void UIPositionToScreen(FVector* Pos, int* OutX, int* OutY);
+    void ToggleBowDiagnosticWindow();
 
     char Unknown04[0x94];
     int Unknown98;
@@ -102,13 +102,13 @@ public:
     char Unknown264;
 };
 
-// FUNCTION: 0x10B16E40 ?FUN_10b16e40@WindowManager@@QAEXXZ
-void WindowManager::FUN_10b16e40()
+// FUNCTION: 0x10B16E40 ?ToggleBowDiagnosticWindow@WindowManager@@QAEXXZ
+void WindowManager::ToggleBowDiagnosticWindow()
 {
     Class_10B16E40_Window* Window;
     {
         Class_109081E0 Name("HUDWindow.BowDiagnosticWindow");
-        Window = (Class_10B16E40_Window*)FUN_109e5960(Name);
+        Window = (Class_10B16E40_Window*)FindWindowByName(Name);
     }
     if (Window)
     {

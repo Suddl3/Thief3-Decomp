@@ -4,11 +4,11 @@
 #include "Game/cIntArray.h"
 #include "Game/Class_10E6BD68.h"
 
-// FUNCTION: 0x10A79D70 ?FUN_10a79d70@Class_10E6BD68@@UAEXH@Z
-void Class_10E6BD68::FUN_10a79d70(int Item)
+// FUNCTION: 0x10A79D70 ?RemoveItem@Class_10E6BD68@@UAEXH@Z
+void Class_10E6BD68::RemoveItem(int Item)
 {
-    int Count = Unknown28.Unknown00;
-    cIntArray* Set = &Unknown28;
+    int Count = m_Items.Unknown00;
+    cIntArray* Set = &m_Items;
     int Index = -1;
     for (int i = 0; i < Count; i++)
     {

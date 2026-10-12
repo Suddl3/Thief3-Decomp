@@ -28,13 +28,13 @@ public:
     virtual void Virtual3();
     virtual int Virtual4();
 
-    void FUN_10b3ed20();
-    void FUN_10b3ea80();
+    void ResetIfPending();
+    void Reset();
     void FUN_10b3f280(Class_10B3F830_Arg* A);
-    void FUN_10b3f830(Class_10B3F830_Arg* A);
+    void OnLockPicked(Class_10B3F830_Arg* A);
 
     char Unknown04[0x48];
-    bool Unknown4C;
+    bool m_ResetPending;
     char Pad4D[0x3];
 };
 
@@ -46,10 +46,10 @@ Class_10B542D0* FUN_10b546f0();
 
 Class_10A174E0* FUN_10a18230();
 
-// FUNCTION: 0x10B3F830 ?FUN_10b3f830@Class_10B3ED20@@QAEXPAVClass_10B3F830_Arg@@@Z
-void Class_10B3ED20::FUN_10b3f830(Class_10B3F830_Arg* A)
+// FUNCTION: 0x10B3F830 ?OnLockPicked@Class_10B3ED20@@QAEXPAVClass_10B3F830_Arg@@@Z
+void Class_10B3ED20::OnLockPicked(Class_10B3F830_Arg* A)
 {
-    FUN_10b3ea80();
+    Reset();
     ((Class_10A3C550*)DAT_10f35dec->Unknown94)->FUN_10a3c550(Class_109081E0("LPOpenLock"));
     ((Class_10B54760*)FUN_10b546f0())->FUN_10b54760();
     DAT_10f3a3d8->UnknownFC->FUN_10acffa0(A->Unknown458);

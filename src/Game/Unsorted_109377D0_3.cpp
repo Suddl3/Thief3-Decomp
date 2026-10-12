@@ -59,7 +59,7 @@ void Class_10937790::FUN_10938da0(void* A, Struct_10938DA0* B, void* C)
     FUN_10d690fe((char*)&Proj, 4.0f, 4.0f, 0.2f, 20.0f);
     FUN_10d67f9a(&ViewProj, &View, &Proj);
     FUN_10d68867(&Translation, B->Unknown08 + 1.0f, B->Unknown0C + 1.0f, 1.0f);
-    this->FUN_10937430(&Proj, &Unknown6FC, &Unknown6FC);
+    this->SetTransforms(&Proj, &Unknown6FC, &Unknown6FC);
     FUN_10d67f9a(&Combined, &Translation, &ViewProj);
     FUN_10d681e3(&Combined, &Combined);
     GDirect3DDevice8->SetVertexShaderConstant(1, &Combined, 4);

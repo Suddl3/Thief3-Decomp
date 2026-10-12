@@ -22,8 +22,8 @@ public:
     virtual void Virtual2();
 
     char FUN_10940970();
-    void FUN_10940c50();
-    void FUN_1093ffe0(int Width, int Height, Struct_1093FFE0* Out);
+    void Reset();
+    void BuildTextureMatrix(int Width, int Height, Struct_1093FFE0* Out);
 
     int Unknown04;
     Class_109081E0 Unknown08[47];

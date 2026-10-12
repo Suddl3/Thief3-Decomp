@@ -19,15 +19,15 @@ public:
     virtual void Virtual8();
     virtual void Virtual9(int A);
 
-    void FUN_10939050();
+    void ClearSlots();
     void FUN_109528b0();
     void FUN_10952870(int Index);
     void FUN_10953450();
 
     char Unknown04[0x2C];
-    int Unknown30;
+    int m_SlotMask;
     char Unknown34[0x5C];
-    Class_10955C30 Unknown90[9];
+    Class_10955C30 m_Slots[9];
 };
 
 #endif // GAME_CLASS_109528B0_H

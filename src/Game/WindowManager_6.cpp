@@ -6,7 +6,7 @@
 
 extern const char DAT_10e79080[];
 
-// The object FUN_109e5960 returns (a getter's result, not named anywhere yet).
+// The object FindWindowByName returns (a getter's result, not named anywhere yet).
 class Class_10B15BF0_Window
 {
 public:
@@ -65,17 +65,17 @@ public:
     virtual void Virtual3();
     virtual void Virtual4(int Window);
 
-    int FUN_109e5960(const Class_109081E0& Name);
-    bool FUN_10b15bf0();
+    int FindWindowByName(const Class_109081E0& Name);
+    bool OpenRestartMissionWindow();
 };
 
-// FUNCTION: 0x10B15BF0 ?FUN_10b15bf0@WindowManager@@QAE_NXZ
-bool WindowManager::FUN_10b15bf0()
+// FUNCTION: 0x10B15BF0 ?OpenRestartMissionWindow@WindowManager@@QAE_NXZ
+bool WindowManager::OpenRestartMissionWindow()
 {
     int Window;
     {
         Class_109081E0 Name(DAT_10e79080);
-        Window = FUN_109e5960(Name);
+        Window = FindWindowByName(Name);
     }
     if (Window && !FUN_109e6d60(Window))
     {

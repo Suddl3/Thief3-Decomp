@@ -4,10 +4,10 @@
 
 class Class_109081E0;
 
-// FUNCTION: 0x10A39200 ?FUN_10a39200@Class_1090FD40@@QAEXH@Z
-void Class_1090FD40::FUN_10a39200(int Index)
+// FUNCTION: 0x10A39200 ?RemoveAt@Class_1090FD40@@QAEXH@Z
+void Class_1090FD40::RemoveAt(int Index)
 {
-    if (Index != Unknown00 - 1)
-        FUN_10a37f80(Index + 1, Index, Unknown00 - Index - 1);
-    FUN_1090f2c0(Unknown00 - 1);
+    if (Index != m_Count - 1)
+        FUN_10a37f80(Index + 1, Index, m_Count - Index - 1);
+    FUN_1090f2c0(m_Count - 1);
 }

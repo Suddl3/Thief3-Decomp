@@ -5,8 +5,8 @@
 
 extern char DAT_10f05b98[][32];
 
-// FUNCTION: 0x10B8ECA0 ?FUN_10b8eca0@Class_10E89720@@UAE?AVClass_109081E0@@XZ
-Class_109081E0 Class_10E89720::FUN_10b8eca0()
+// FUNCTION: 0x10B8ECA0 ?GetStateName@Class_10E89720@@UAE?AVClass_109081E0@@XZ
+Class_109081E0 Class_10E89720::GetStateName()
 {
-    return Class_109081E0(DAT_10f05b98[Unknown04]);
+    return Class_109081E0(DAT_10f05b98[m_StateIndex]);
 }

@@ -55,7 +55,7 @@ public:
     virtual void Virtual41();
     virtual void Virtual42();
     virtual void Virtual43();
-    virtual void FUN_109e60e0(int Value);
+    virtual void AddValue(int Value);
 
     char Unknown04[0xB4];
     cIntArray Unknown0B8;
@@ -84,8 +84,8 @@ Entry_10C32C30* Class_109E59D0::FUN_109e59d0(int* Key)
     return Entry;
 }
 
-// FUNCTION: 0x109E60E0 ?FUN_109e60e0@Class_10E5B2C0@@UAEXH@Z
-void Class_10E5B2C0::FUN_109e60e0(int Value)
+// FUNCTION: 0x109E60E0 ?AddValue@Class_10E5B2C0@@UAEXH@Z
+void Class_10E5B2C0::AddValue(int Value)
 {
     cIntArray* List = &Unknown0B8;
     int Index = List->Count;

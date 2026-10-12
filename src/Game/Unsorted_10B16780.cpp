@@ -20,7 +20,7 @@ class Class_10B314F0;
 Class_10B314F0* Class_10B175C0::FUN_10b16fb0()
 {
     Class_109081E0 Name("FMVWindow");
-    int Result = FUN_109e5960(Name);
+    int Result = FindWindowByName(Name);
     return (Class_10B314F0*)Result;
 }
 

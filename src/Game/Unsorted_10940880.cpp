@@ -178,8 +178,8 @@ public:
     ~Class_10E4A538();
 
     char FUN_10940970();
-    void FUN_10940c50();
-    void FUN_1093ffe0(int Width, int Height, Struct_1093FFE0* Out);
+    void Reset();
+    void BuildTextureMatrix(int Width, int Height, Struct_1093FFE0* Out);
 
     bool Unknown04;
     Class_109081E0 Unknown08[47];
@@ -216,8 +216,8 @@ void FUN_10940880()
     DAT_10f31be0->FUN_10937140(0x21, Value);
 }
 
-// FUNCTION: 0x10940C50 ?FUN_10940c50@Class_10E4A538@@QAEXXZ
-void Class_10E4A538::FUN_10940c50()
+// FUNCTION: 0x10940C50 ?Reset@Class_10E4A538@@QAEXXZ
+void Class_10E4A538::Reset()
 {
     Class_10940C50_Unknown300* Object = Unknown300;
     Unknown2FC = 0;

@@ -98,17 +98,17 @@ public:
     virtual void FUN_10a52fc0(int A, bool B);
 
     char Unknown04[0xB4];
-    int UnknownB8;
+    int m_NumChildren;
     char UnknownBC[4];
-    Class_10A52D70_Item** UnknownC0;
+    Class_10A52D70_Item** m_Children;
 };
 
 // FUNCTION: 0x10A52FC0 ?FUN_10a52fc0@Class_10E5B2C0@@UAEXH_N@Z
 void Class_10E5B2C0::FUN_10a52fc0(int A, bool B)
 {
-    for (int i = 0; i < UnknownB8; i++)
+    for (int i = 0; i < m_NumChildren; i++)
     {
-        Class_10A52D70_Item* Item = UnknownC0[i];
+        Class_10A52D70_Item* Item = m_Children[i];
         if (Item)
         {
             Item->Virtual70(A);

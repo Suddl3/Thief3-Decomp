@@ -3,12 +3,12 @@
 #include "Game/Class_109081E0.h"
 #include "Game/Class_10B2F6A0.h"
 
-// FUNCTION: 0x10B2F6C0 ?FUN_10b2f6c0@Class_10B2F6A0@@QAEXABVClass_109081E0@@@Z
-void Class_10B2F6A0::FUN_10b2f6c0(const Class_109081E0& Name)
+// FUNCTION: 0x10B2F6C0 ?SetName@Class_10B2F6A0@@QAEXABVClass_109081E0@@@Z
+void Class_10B2F6A0::SetName(const Class_109081E0& Name)
 {
-    if (Unknown120)
+    if (m_Label)
     {
-        Unknown13C = Name;
-        FUN_10b2f590();
+        m_Name = Name;
+        RefreshLabel();
     }
 }

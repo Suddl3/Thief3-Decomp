@@ -2,8 +2,8 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10E4AA80.h"
 
-// FUNCTION: 0x1094CF80 ?FUN_1094cf80@Class_10E4AA80@@UAEXH@Z
-void Class_10E4AA80::FUN_1094cf80(int A)
+// FUNCTION: 0x1094CF80 ?Update@Class_10E4AA80@@UAEXH@Z
+void Class_10E4AA80::Update(int A)
 {
     if ((Unknown5C & 3) == 0)
     {
@@ -20,5 +20,5 @@ void Class_10E4AA80::FUN_1094cf80(int A)
     if (Unknown5C & 0x80)
         FUN_1094b730();
     Unknown5C = 0;
-    FUN_10949060(A);
+    IntegrateOffsets(A);
 }

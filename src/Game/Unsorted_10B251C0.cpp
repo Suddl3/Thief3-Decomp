@@ -5,11 +5,11 @@
 
 void* FUN_10b154c0();
 
-// FUNCTION: 0x10B251C0 ?FUN_10b251c0@Class_10B25200@@QAEXH@Z
-void Class_10B25200::FUN_10b251c0(int A)
+// FUNCTION: 0x10B251C0 ?SetJunkItem@Class_10B25200@@QAEXH@Z
+void Class_10B25200::SetJunkItem(int A)
 {
-    Unknown4C = A;
-    ((Class_10B16930*)FUN_10b154c0())->FUN_10b16860(A);
+    m_JunkItem = A;
+    ((Class_10B16930*)FUN_10b154c0())->ShowJunkItemWindow(A);
     Unknown48 = Unknown28 = 3;
     ((Class_10B16930*)FUN_10b154c0())->FUN_10b166a0();
 }

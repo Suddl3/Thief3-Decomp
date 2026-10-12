@@ -28,10 +28,10 @@ int Class_10B255F0::GetEntryValue()
     return FUN_10b1b600()->Unknown1C.Get(Index);
 }
 
-// FUNCTION: 0x10B25200 ?FUN_10b25200@Class_10B25200@@QAEXXZ
-void Class_10B25200::FUN_10b25200()
+// FUNCTION: 0x10B25200 ?ClearJunkItem@Class_10B25200@@QAEXXZ
+void Class_10B25200::ClearJunkItem()
 {
-    Unknown4C = 0;
+    m_JunkItem = 0;
     ((Class_10B16930*)FUN_10b154c0())->FUN_10b16930();
     Unknown28 = 0;
     Unknown48 = 0;

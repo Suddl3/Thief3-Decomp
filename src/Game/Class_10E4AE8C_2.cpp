@@ -4,14 +4,14 @@
 class Class_10E4AE8C
 {
 public:
-    int FUN_10957000(int Bit);
+    int IsBitSet(int Bit);
 
     char Unknown00[0x298];
-    unsigned Unknown298;
+    unsigned m_Flags;
 };
 
-// FUNCTION: 0x10957000 ?FUN_10957000@Class_10E4AE8C@@QAEHH@Z
-int Class_10E4AE8C::FUN_10957000(int Bit)
+// FUNCTION: 0x10957000 ?IsBitSet@Class_10E4AE8C@@QAEHH@Z
+int Class_10E4AE8C::IsBitSet(int Bit)
 {
-    return (Unknown298 & (1 << Bit)) != 0;
+    return (m_Flags & (1 << Bit)) != 0;
 }

@@ -8,7 +8,7 @@
 // FUNCTION: 0x10BF0870 ?FUN_10bf0870@Class_10BF0870@@QAE_NXZ
 bool Class_10BF0870::FUN_10bf0870()
 {
-    Class_10BFF460* Obj = Unknown04->FUN_10bbb410();
+    Class_10BFF460* Obj = Unknown04->GetCurrent();
     if (!Obj)
         return false;
     bool R = true;

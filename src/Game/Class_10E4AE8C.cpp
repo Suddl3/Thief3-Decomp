@@ -9,7 +9,7 @@ public:
     virtual void Virtual1();
     virtual void Virtual2();
     virtual void Virtual3();
-    virtual int FUN_10956e10(int A);
+    virtual int GetEntry(int A);
     virtual void Virtual5();
     virtual void Virtual6();
     virtual bool Virtual7(int A);
@@ -23,8 +23,8 @@ public:
     int Unknown29C[8];
 };
 
-// FUNCTION: 0x10956E10 ?FUN_10956e10@Class_10E4AE8C@@UAEHH@Z
-int Class_10E4AE8C::FUN_10956e10(int A)
+// FUNCTION: 0x10956E10 ?GetEntry@Class_10E4AE8C@@UAEHH@Z
+int Class_10E4AE8C::GetEntry(int A)
 {
     if (Virtual10())
         return Unknown29C[A];

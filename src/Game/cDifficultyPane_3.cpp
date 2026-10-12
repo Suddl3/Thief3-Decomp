@@ -49,5 +49,5 @@ void cDifficultyPane::SetData(Struct_10B6C180* Src)
         ApplySelection();
     }
     else
-        Unknown190->FUN_10a56480(Value->Unknown174);
+        Unknown190->SetSelectedIndex(Value->Unknown174);
 }

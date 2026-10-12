@@ -59,15 +59,15 @@ public:
     char Unknown04[0x114];
 };
 
-class Class_10E682F0 : public Class_10E67FD0
+class cFMVWindow : public Class_10E67FD0
 {
 public:
-    Class_10E682F0();
+    cFMVWindow();
 
-    virtual ~Class_10E682F0();
+    virtual ~cFMVWindow();
 
-    int Unknown118;
-    Class_1090A780 Unknown11C;
+    int m_Stream;
+    Class_1090A780 m_MovieName;
     char Unknown120;
     char Unknown121;
 };
@@ -211,12 +211,12 @@ unsigned char Class_10A54CC0::FUN_10a54cc0()
     return Field120;
 }
 
-// FUNCTION: 0x10A54D20 ??0Class_10E682F0@@QAE@XZ
-Class_10E682F0::Class_10E682F0() : Unknown118(0), Unknown120(0), Unknown121(1)
+// FUNCTION: 0x10A54D20 ??0cFMVWindow@@QAE@XZ
+cFMVWindow::cFMVWindow() : m_Stream(0), Unknown120(0), Unknown121(1)
 {
 }
 
-// FUNCTION: 0x10A54DF0 ??_GClass_10E682F0@@UAEPAXI@Z
+// FUNCTION: 0x10A54DF0 ??_GcFMVWindow@@UAEPAXI@Z
 // Compiler-generated: emitted with the class's vtable by 0x10A54D20's definition in this unit.
 
 // FUNCTION: 0x10A55080 ?FUN_10a55080@Class_10A55080@@QAEXE@Z

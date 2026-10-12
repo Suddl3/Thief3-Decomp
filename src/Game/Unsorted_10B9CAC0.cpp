@@ -53,5 +53,5 @@ bool Class_10B9D080::FUN_10b9d080()
 // FUNCTION: 0x10B9D0A0 ?FUN_10b9d0a0@Class_10B9D0A0@@QAE_NXZ
 bool Class_10B9D0A0::FUN_10b9d0a0()
 {
-    return (Unknown10 == 0 ? 0 : Unknown18[Unknown10 - 1])->FUN_10bc9a50();
+    return (Unknown10 == 0 ? 0 : Unknown18[Unknown10 - 1])->ShopOwnerNoCash();
 }

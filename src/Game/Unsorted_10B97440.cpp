@@ -10,7 +10,7 @@
 #include "Game/Class_10E8C77C.h"
 #include "Game/Class_10E8C788.h"
 #include "Game/Class_10E8C794.h"
-#include "Game/Class_10E8C7A0.h"
+#include "Game/cStatePatrol.h"
 #include "Game/Class_10E8C7AC.h"
 #include "Game/Class_10E8C7F4.h"
 #include "Game/Class_10E8C800.h"
@@ -116,20 +116,20 @@ extern void* DAT_10e8c7ac[];
 
 extern void* DAT_10e8c7b8[];
 
-class Class_10E8C7B8
+class cStateGuard
 {
 public:
-    Class_10E8C7B8* FUN_10ba4640();
+    cStateGuard* Construct();
 
     void* Unknown00;
 };
 
 extern void* DAT_10e8c7c4[];
 
-class Class_10E8C7C4
+class cStateFlee
 {
 public:
-    Class_10E8C7C4* FUN_10ba4690();
+    cStateFlee* Construct();
 
     void* Unknown00;
 };
@@ -162,7 +162,7 @@ class Class_10E8C7E8 {
 public:
     void* Field00;
 
-    Class_10E8C7E8* FUN_10ba47a0();
+    Class_10E8C7E8* Construct();
 };
 
 int FUN_10b3d310();
@@ -523,8 +523,8 @@ Class_10E8C794* Class_10E8C794::FUN_10ba4550()
     return this;
 }
 
-// FUNCTION: 0x10BA45A0 ?FUN_10ba45a0@Class_10E8C7A0@@QAEPAV1@XZ
-Class_10E8C7A0* Class_10E8C7A0::FUN_10ba45a0()
+// FUNCTION: 0x10BA45A0 ?Construct@cStatePatrol@@QAEPAV1@XZ
+cStatePatrol* cStatePatrol::Construct()
 {
     Unknown00 = DAT_10e8c7a0;
     return this;
@@ -537,15 +537,15 @@ Class_10E8C7AC* Class_10E8C7AC::FUN_10ba45f0()
     return this;
 }
 
-// FUNCTION: 0x10BA4640 ?FUN_10ba4640@Class_10E8C7B8@@QAEPAV1@XZ
-Class_10E8C7B8* Class_10E8C7B8::FUN_10ba4640()
+// FUNCTION: 0x10BA4640 ?Construct@cStateGuard@@QAEPAV1@XZ
+cStateGuard* cStateGuard::Construct()
 {
     Unknown00 = DAT_10e8c7b8;
     return this;
 }
 
-// FUNCTION: 0x10BA4690 ?FUN_10ba4690@Class_10E8C7C4@@QAEPAV1@XZ
-Class_10E8C7C4* Class_10E8C7C4::FUN_10ba4690()
+// FUNCTION: 0x10BA4690 ?Construct@cStateFlee@@QAEPAV1@XZ
+cStateFlee* cStateFlee::Construct()
 {
     Unknown00 = DAT_10e8c7c4;
     return this;
@@ -577,8 +577,8 @@ void FUN_10ba4750()
     FUN_10b3d480();
 }
 
-// FUNCTION: 0x10BA47A0 ?FUN_10ba47a0@Class_10E8C7E8@@QAEPAV1@XZ
-Class_10E8C7E8* Class_10E8C7E8::FUN_10ba47a0()
+// FUNCTION: 0x10BA47A0 ?Construct@Class_10E8C7E8@@QAEPAV1@XZ
+Class_10E8C7E8* Class_10E8C7E8::Construct()
 {
     Field00 = &DAT_10e8c7e8;
     return this;
@@ -629,8 +629,8 @@ void FUN_10ba48d0()
     FUN_10b3d4e0();
 }
 
-// FUNCTION: 0x10BA4920 ?FUN_10ba4920@Class_10E8C818@@QAEPAV1@XZ
-Class_10E8C818* Class_10E8C818::FUN_10ba4920()
+// FUNCTION: 0x10BA4920 ?Construct@Class_10E8C818@@QAEPAV1@XZ
+Class_10E8C818* Class_10E8C818::Construct()
 {
     Unknown00 = DAT_10e8c818;
     return this;
