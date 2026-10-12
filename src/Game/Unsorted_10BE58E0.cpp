@@ -29,5 +29,5 @@ public:
 Class_10BE5EF0::Class_10BE5EF0(int A, int B) : Class_10BE4DD0(A, B)
 {
     Unknown00 = DAT_10e96510;
-    Unknown68 = Unknown04->Unknown08->FUN_10dbd510()->FUN_10bbdb40(0x40100717);
+    Unknown68 = Unknown04->Unknown08->FUN_10dbd510()->GetFloat(0x40100717);
 }

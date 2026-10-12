@@ -30,38 +30,38 @@ class Class_10ABFB00
 public:
     void FUN_10abf660(int A);
     void FUN_10abf7c0(int A);
-    void FUN_10abfb00(int A, bool State);
+    void SetState(int A, bool State);
     void FUN_10abfb50(int A, int B);
-    void FUN_10abfa30(int A, int B, float C);
+    void Update(int A, int B, float C);
 
-    bool Unknown00;
+    bool m_State;
     char Unknown01[0xB];
-    float Unknown0C;
+    float m_Level;
     char Unknown10[0x4];
     Class_10ABFA30_Unknown14 Unknown14;
-    Class_10ABFB00_Member Unknown20;
+    Class_10ABFB00_Member m_Interpolator;
 };
 
-// FUNCTION: 0x10ABFA30 ?FUN_10abfa30@Class_10ABFB00@@QAEXHHM@Z
-void Class_10ABFB00::FUN_10abfa30(int A, int B, float C)
+// FUNCTION: 0x10ABFA30 ?Update@Class_10ABFB00@@QAEXHHM@Z
+void Class_10ABFB00::Update(int A, int B, float C)
 {
     bool State = FUN_10abf300(A, B);
     if (State)
     {
-        if (!Unknown00)
+        if (!m_State)
         {
-            Unknown00 = true;
+            m_State = true;
             float Value = 1.0f;
-            Unknown20.Virtual0(&Unknown0C, &Value, 0.25f);
+            m_Interpolator.Virtual0(&m_Level, &Value, 0.25f);
         }
     }
     else
     {
-        if (Unknown00)
+        if (m_State)
         {
-            Unknown00 = false;
+            m_State = false;
             float Value = 0.0f;
-            Unknown20.Virtual0(&Unknown0C, &Value, 0.25f);
+            m_Interpolator.Virtual0(&m_Level, &Value, 0.25f);
         }
     }
     Class_10ABFA30_Unknown14* Obj = &Unknown14;
@@ -72,9 +72,9 @@ void Class_10ABFB00::FUN_10abfa30(int A, int B, float C)
         else
             Obj->Virtual5(C * Obj->Unknown04);
         float V = Obj->Virtual3();
-        if (Unknown0C != V)
+        if (m_Level != V)
         {
-            Unknown0C = V;
+            m_Level = V;
             FUN_10abf660(A);
             FUN_10abf7c0(A);
         }

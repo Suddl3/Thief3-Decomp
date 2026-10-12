@@ -4,7 +4,7 @@
 #include "Game/Class_109434F0.h"
 #include "Game/Class_10943520.h"
 #include "Game/Class_109435A0.h"
-#include "Game/Class_10946110.h"
+#include "Game/cEntryArray.h"
 
 Class_10905A90_Member* GetAllocator();
 
@@ -88,15 +88,15 @@ void Class_10E4A668::FUN_10942c20(int Param)
     }
 }
 
-// FUNCTION: 0x10943160 ?FUN_10943160@Class_109435A0@@QAEXXZ
-void Class_109435A0::FUN_10943160()
+// FUNCTION: 0x10943160 ?Clear@Class_109435A0@@QAEXXZ
+void Class_109435A0::Clear()
 {
-    FUN_10942c60(0);
-    if (Unknown04)
+    Resize(0);
+    if (m_CapacityBytes)
     {
-        GetAllocator()->Virtual5(Unknown08);
-        Unknown08 = 0;
-        Unknown04 = 0;
+        GetAllocator()->Virtual5(m_Items);
+        m_Items = 0;
+        m_CapacityBytes = 0;
     }
 }
 
@@ -121,14 +121,14 @@ void Class_10943520::FUN_10943520()
     }
 }
 
-// FUNCTION: 0x10943560 ?FUN_10943560@Class_10946110@@QAEXXZ
-void Class_10946110::FUN_10943560()
+// FUNCTION: 0x10943560 ?Free@cEntryArray@@QAEXXZ
+void cEntryArray::Free()
 {
-    FUN_10943350(0);
-    if (Unknown04)
+    Resize(0);
+    if (m_Capacity)
     {
-        GetAllocator()->Virtual5(Unknown08);
-        Unknown08 = 0;
-        Unknown04 = 0;
+        GetAllocator()->Virtual5(m_Entries);
+        m_Entries = 0;
+        m_Capacity = 0;
     }
 }

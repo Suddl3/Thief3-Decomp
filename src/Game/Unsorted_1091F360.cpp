@@ -12,14 +12,14 @@ class IDirect3DBaseTexture8;
 
 extern IDirect3DDevice8* GDirect3DDevice8;
 
-class Class_10936AC0
+class cD3DStateCache
 {
 public:
     char Unknown00[0x7FC];
     Struct_10924210 Unknown7FC;
 };
 
-extern Class_10936AC0* DAT_10f31be0;
+extern cD3DStateCache* DAT_10f31be0;
 
 // FUNCTION: 0x1091F360 ?FUN_1091f360@Class_10E49A0C@@UAEXHH@Z
 void Class_10E49A0C::FUN_1091f360(int A, int B)

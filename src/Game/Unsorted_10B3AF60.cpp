@@ -46,7 +46,7 @@ extern void* DAT_10e7e658[];
 class Class_10E7E658 : public Class_10E7E4E0
 {
 public:
-    Class_10E7E658* FUN_10b3d150();
+    Class_10E7E658* Init();
 };
 
 extern void* DAT_10e7e6a0[];
@@ -121,8 +121,8 @@ Class_10E7E610* Class_10E7E610::FUN_10b3d130()
     return this;
 }
 
-// FUNCTION: 0x10B3D150 ?FUN_10b3d150@Class_10E7E658@@QAEPAV1@XZ
-Class_10E7E658* Class_10E7E658::FUN_10b3d150()
+// FUNCTION: 0x10B3D150 ?Init@Class_10E7E658@@QAEPAV1@XZ
+Class_10E7E658* Class_10E7E658::Init()
 {
     FUN_10b3acb0();
     Unknown00 = DAT_10e7e658;

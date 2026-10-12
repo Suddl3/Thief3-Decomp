@@ -99,7 +99,7 @@ void Class_10E96D98::FUN_10be90f0()
     Class_10E96D98_Unknown04* P = Unknown04;
     Class_10DBD510* Q = P->Unknown08;
     float L = P->Unknown30.FUN_10bfc3a0();
-    float V = Q->FUN_10dbd510(0x40100244)->FUN_10bbdb40();
+    float V = Q->FUN_10dbd510(0x40100244)->GetFloat();
     if (V < L)
         FUN_10bc45a0(1);
     else

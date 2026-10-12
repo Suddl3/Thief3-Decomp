@@ -25,8 +25,8 @@ public:
     Class_10B3AF40_UnknownB0* m_physicsObject;
 };
 
-// FUNCTION: 0x10B3AED0 ?FUN_10b3aed0@Class_10E7E4E0@@UAEXPAVAGarrett@@@Z
-void Class_10E7E4E0::FUN_10b3aed0(AGarrett* Garrett)
+// FUNCTION: 0x10B3AED0 ?ApplyVelocity@Class_10E7E4E0@@UAEXPAVAGarrett@@@Z
+void Class_10E7E4E0::ApplyVelocity(AGarrett* Garrett)
 {
     Struct_10B48890* Body = Garrett->m_physicsObject->Virtual6();
     Body->Unknown2C = Garrett->Velocity;

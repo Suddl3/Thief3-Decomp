@@ -77,7 +77,7 @@ void FUN_10919640(bool Param)
         delete DAT_10f2c8e4;
         DAT_10f2c8e4 = 0;
     }
-    DAT_10f340ac->FUN_1093e550();
+    DAT_10f340ac->Release();
     DAT_10f340c0->FUN_1093edb0();
     if (DAT_10f323fc->Unknown1C50)
         DAT_10f323fc->FUN_1093b560();

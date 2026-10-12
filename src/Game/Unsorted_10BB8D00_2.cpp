@@ -25,7 +25,7 @@ void Class_10BB8D00::FUN_10bb8d00()
     Class_10B9BCA0* Controller = FUN_10baa660((AAIPawn*)Unknown08->FUN_10c7d570());
     Class_10BC9D40* Target;
     if (Controller && Controller->Unknown118 && Controller->Unknown118->Unknown08)
-        Target = Controller->Unknown118->Unknown08->FUN_10b9cac0();
+        Target = Controller->Unknown118->Unknown08->GetCurrent();
     else
         Target = 0;
     Target->Virtual25();

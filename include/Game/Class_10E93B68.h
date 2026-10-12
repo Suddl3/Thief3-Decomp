@@ -82,7 +82,7 @@ public:
     virtual void M69() {}
     virtual void M70() {}
     virtual void M71() {}
-    virtual void FUN_10bd7f70(int Index);
+    virtual void ProcessEntry(int Index);
     virtual void Virtual73(int* A, int* B);
 
     Class_10E93B68(int A, int B);
@@ -112,9 +112,9 @@ public:
     int Unknown78;
     bool Unknown7C;
     char Pad7D[0x3];
-    int Unknown80;
+    int EntryCount;
     int Unknown84;
-    Struct_10BD7F70* Unknown88;
+    Struct_10BD7F70* Entries;
 };
 
 #endif // GAME_CLASS_10E93B68_H

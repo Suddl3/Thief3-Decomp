@@ -24,9 +24,9 @@ void FUN_1095ae50(Class_1095AE50_Elem* Elems, int Count, char* Data, int Flags)
     {
         short Value = *(short*)(Data + Pos);
         Pos += 2;
-        Elems[i].Unknown14.FUN_1095a5a0(Value);
-        int Size = Elems[i].Unknown14.Unknown00 * 0x5c;
-        memcpy(Elems[i].Unknown14.Unknown08, Data + Pos, Size);
+        Elems[i].Unknown14.SetCount(Value);
+        int Size = Elems[i].Unknown14.m_Count * 0x5c;
+        memcpy(Elems[i].Unknown14.m_Elements, Data + Pos, Size);
         Pos += Size;
         int Len = *(int*)(Data + Pos);
         Pos += 4;

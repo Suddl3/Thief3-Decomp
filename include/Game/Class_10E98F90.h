@@ -10,7 +10,7 @@ class FArchive;
 class Class_10E98F90 : public Class_10E98D08
 {
 public:
-    virtual void FUN_10c1b710(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
     virtual void Virtual1();
     virtual void Virtual2();
     virtual int FUN_10c1af40(Class_10E98F90* Other);
@@ -22,7 +22,7 @@ public:
     virtual void Virtual9();
     virtual void Virtual10();
     virtual void Virtual11();
-    virtual bool FUN_10c1ad90(int A);
+    virtual bool Matches(int A);
 
     int Unknown04;
     char Pad08[0x1c];

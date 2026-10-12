@@ -162,7 +162,7 @@ extern void* DAT_10e95be8[];
 
 void FUN_10bc6a80(void);
 
-class Class_10E95BE8 {
+class State_FrobAlarm {
 public:
     void FUN_10be2e20();
 };
@@ -356,8 +356,8 @@ int __cdecl FUN_10be1d80(void)
     return 0x2a;
 }
 
-// FUNCTION: 0x10BE2E20 ?FUN_10be2e20@Class_10E95BE8@@QAEXXZ
-void Class_10E95BE8::FUN_10be2e20()
+// FUNCTION: 0x10BE2E20 ?FUN_10be2e20@State_FrobAlarm@@QAEXXZ
+void State_FrobAlarm::FUN_10be2e20()
 {
     *(void**)this = (void*)DAT_10e95be8;
     FUN_10bc6a80();

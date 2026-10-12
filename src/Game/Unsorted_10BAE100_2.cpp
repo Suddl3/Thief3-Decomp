@@ -16,38 +16,38 @@ public:
     char Pad04[0x10];
 };
 
-// FUNCTION: 0x10BAE100 ?FUN_10bae100@Class_10BAEC00@@QAEXH@Z
-void Class_10BAEC00::FUN_10bae100(int NewCount)
+// FUNCTION: 0x10BAE100 ?SetCount@Class_10BAEC00@@QAEXH@Z
+void Class_10BAEC00::SetCount(int NewCount)
 {
-    int OldCount = Unknown00;
-    int Capacity = !Unknown08 ? 0 : Unknown04 / sizeof(Class_10E8D7C0);
+    int OldCount = m_Count;
+    int Capacity = !m_Data ? 0 : m_BlockBytes / sizeof(Class_10E8D7C0);
     GetAllocator()->Virtual8(0, 0);
     if (NewCount > Capacity) {
         int NewCapacity = NewCount;
         if (Capacity)
             NewCapacity = (NewCount & ~15) + 16;
-        void* Block = GetAllocator()->Virtual3(Unknown08, NewCapacity * sizeof(Class_10E8D7C0), 0, 0, 0, 0);
-        Unknown04 = NewCapacity * sizeof(Class_10E8D7C0);
-        Unknown08 = Block;
+        void* Block = GetAllocator()->Virtual3(m_Data, NewCapacity * sizeof(Class_10E8D7C0), 0, 0, 0, 0);
+        m_BlockBytes = NewCapacity * sizeof(Class_10E8D7C0);
+        m_Data = Block;
     }
     else if (NewCount <= Capacity - 16) {
         if (NewCount == 0) {
-            GetAllocator()->Virtual5(Unknown08);
-            Unknown08 = 0;
-            Unknown04 = 0;
+            GetAllocator()->Virtual5(m_Data);
+            m_Data = 0;
+            m_BlockBytes = 0;
         }
         else {
             int NewCapacity = (NewCount & ~15) + 16;
-            void* Block = GetAllocator()->Virtual3(Unknown08, NewCapacity * sizeof(Class_10E8D7C0), 0, 0, 0, 0);
-            Unknown04 = NewCapacity * sizeof(Class_10E8D7C0);
-            Unknown08 = Block;
+            void* Block = GetAllocator()->Virtual3(m_Data, NewCapacity * sizeof(Class_10E8D7C0), 0, 0, 0, 0);
+            m_BlockBytes = NewCapacity * sizeof(Class_10E8D7C0);
+            m_Data = Block;
         }
     }
     for (int j = OldCount; j < NewCount; j++) {
-        Class_10E8D7C0* Element = (Class_10E8D7C0*)((char*)Unknown08 + j * sizeof(Class_10E8D7C0));
+        Class_10E8D7C0* Element = (Class_10E8D7C0*)((char*)m_Data + j * sizeof(Class_10E8D7C0));
         if (Element)
             Element->VTable = DAT_10e8d7c0;
     }
     GetAllocator()->Virtual9();
-    Unknown00 = NewCount;
+    m_Count = NewCount;
 }

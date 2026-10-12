@@ -20,7 +20,7 @@ int FUN_10b98c90(Struct_10B98C90* P)
     if (Id)
     {
         Class_10DBD510* Owner = P->Unknown08;
-        if (Owner->FUN_10dbd510(Id)->FUN_10bbdb40() > DAT_10eafbdc)
+        if (Owner->FUN_10dbd510(Id)->GetFloat() > DAT_10eafbdc)
             return 1;
     }
     return 0;

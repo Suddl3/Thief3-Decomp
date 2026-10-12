@@ -19,12 +19,12 @@ double GetTimeSeconds();
 // FUNCTION: 0x10C29380 ?FUN_10c29380@Class_10C29410@@QAEXH@Z
 void Class_10C29410::FUN_10c29380(int Value)
 {
-    double Scale = Unknown00->FUN_10bb8e70();
+    double Scale = Unknown00->GetRandomInRange();
     Unknown18 = GetTimeSeconds() + Scale;
     float Local = 0.0f;
     ((Class_1098E330*)Value)->FUN_1098e330(0x100790, (int*)&Local);
     ((Class_10C292E0*)Value)->FUN_10c292e0(0x40100781, GetTimeSeconds() + Local);
-    Unknown1C = Unknown00->FUN_10bb8e00();
+    Unknown1C = Unknown00->RollChance();
     if (!Unknown1C)
         ((Class_10971570*)Value)->FUN_10971570(0x4200077e, &Unknown1D);
     Unknown20 = 0;

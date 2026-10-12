@@ -8,17 +8,17 @@
 class Class_10914D80
 {
 public:
-    Class_10914D80() : Unknown00(0), Unknown04(0), Unknown0C(0), Unknown10(false), Unknown14(0) {}
+    Class_10914D80() : m_Collisions(0), m_Count(0), m_Size(0), m_NoResize(false), m_Table(0) {}
 
-    void FUN_10914e60(int Size);
+    void Rehash(int Size);
 
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    bool Unknown10;
-    void* Unknown14;
-    Class_10E499A8 Unknown18;
+    int m_Collisions;
+    int m_Count;
+    int m_Bits;
+    int m_Size;
+    bool m_NoResize;
+    void* m_Table;
+    Class_10E499A8 m_KeyTraits;
 };
 
 class Class_10E495F8
@@ -38,7 +38,7 @@ public:
 Class_10E495F8::Class_10E495F8()
     : Unknown09(false)
 {
-    Unknown0C.FUN_10914e60(0x40);
+    Unknown0C.Rehash(0x40);
 }
 
 // FUNCTION: 0x10915AE0 ??_GClass_10E495F8@@UAEPAXI@Z

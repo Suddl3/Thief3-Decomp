@@ -30,13 +30,13 @@ Class_10E6D498* Class_10E5D9D8::FUN_10aa3580()
     return Result;
 }
 
-// FUNCTION: 0x10AA44B0 ?FUN_10aa44b0@Class_10AA44B0@@QAEXXZ
-void Class_10AA44B0::FUN_10aa44b0()
+// FUNCTION: 0x10AA44B0 ?Free@Class_10AA44B0@@QAEXXZ
+void Class_10AA44B0::Free()
 {
-    FUN_10aa3830(0x40);
-    ::operator delete(Unknown14);
-    Unknown04 = 0;
-    Unknown0C = 0;
-    Unknown14 = 0;
-    Unknown00 = 0;
+    Clear(0x40);
+    ::operator delete(m_Buckets);
+    m_Count = 0;
+    m_BucketCount = 0;
+    m_Buckets = 0;
+    m_Collisions = 0;
 }

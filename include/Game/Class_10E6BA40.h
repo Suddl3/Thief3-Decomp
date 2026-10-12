@@ -11,7 +11,7 @@ public:
     virtual void Virtual0();
     virtual int FUN_10a6f160(int Key, float Value);
 
-    Class_10A6F0C0 Unknown04;
+    Class_10A6F0C0 m_Entries;
 };
 
 #endif // GAME_CLASS_10E6BA40_H

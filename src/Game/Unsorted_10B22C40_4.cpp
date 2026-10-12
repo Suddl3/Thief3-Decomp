@@ -12,12 +12,12 @@ struct Struct_10B22C80
 class Class_10B22D60
 {
 public:
-    void FUN_10b229c0(void** Slot, int Value);
+    void SetSlot(void** Slot, int Value);
     void FUN_10b22c80();
 
     char Unknown00[4];
-    Struct_10B22C80* Unknown04;
-    char Unknown08[0x88];
+    Struct_10B22C80* m_Body;
+    char m_Slots[0x88];
     void* Unknown90;
     void* Unknown94;
 };
@@ -25,10 +25,10 @@ public:
 // FUNCTION: 0x10B22C80 ?FUN_10b22c80@Class_10B22D60@@QAEXXZ
 void Class_10B22D60::FUN_10b22c80()
 {
-    FUN_10b229c0(&Unknown90, 0);
-    if (Unknown04->Unknown440)
-        FUN_10b229c0(&Unknown94, 0x1a);
+    SetSlot(&Unknown90, 0);
+    if (m_Body->Unknown440)
+        SetSlot(&Unknown94, 0x1a);
     else
-        FUN_10b229c0(&Unknown94, 0x17);
-    Unknown04->Unknown460 = 0;
+        SetSlot(&Unknown94, 0x17);
+    m_Body->Unknown460 = 0;
 }

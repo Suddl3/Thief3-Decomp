@@ -6,30 +6,30 @@ class IDirect3DIndexBuffer8;
 
 extern IDirect3DDevice8* GDirect3DDevice8;
 
-class Class_10936AC0
+class cD3DStateCache
 {
 public:
-    void FUN_10936b20(int Indices, int BaseVertexIndex);
+    void SetIndices(int Indices, int BaseVertexIndex);
 
     char Unknown00[0x14];
-    int Unknown14;
-    int Unknown18;
+    int m_IndexBuffer;
+    int m_BaseVertexIndex;
 };
 
-// FUNCTION: 0x10936B20 ?FUN_10936b20@Class_10936AC0@@QAEXHH@Z
-void Class_10936AC0::FUN_10936b20(int Indices, int BaseVertexIndex)
+// FUNCTION: 0x10936B20 ?SetIndices@cD3DStateCache@@QAEXHH@Z
+void cD3DStateCache::SetIndices(int Indices, int BaseVertexIndex)
 {
     if (Indices)
     {
-        if (Indices != Unknown14 || BaseVertexIndex != Unknown18)
+        if (Indices != m_IndexBuffer || BaseVertexIndex != m_BaseVertexIndex)
         {
             GDirect3DDevice8->SetIndices((IDirect3DIndexBuffer8*)Indices, BaseVertexIndex);
-            Unknown14 = Indices;
-            Unknown18 = BaseVertexIndex;
+            m_IndexBuffer = Indices;
+            m_BaseVertexIndex = BaseVertexIndex;
         }
     }
     else
     {
-        Unknown14 = 0;
+        m_IndexBuffer = 0;
     }
 }

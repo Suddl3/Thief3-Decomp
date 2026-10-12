@@ -103,6 +103,6 @@ public:
 // FUNCTION: 0x10BD1D10 ?FUN_10bd1d10@Class_10E939E0@@UAEMXZ
 float Class_10E939E0::FUN_10bd1d10()
 {
-    float Value = Unknown04->Unknown08->FUN_10dbd510(0x100619)->FUN_10bbdb40();
+    float Value = Unknown04->Unknown08->FUN_10dbd510(0x100619)->GetFloat();
     return Value;
 }

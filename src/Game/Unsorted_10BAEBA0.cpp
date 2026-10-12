@@ -5,26 +5,26 @@
 #include "Game/Class_10BAEC40.h"
 #include "Game/Class_10BAEC80.h"
 
-// FUNCTION: 0x10BAEC00 ?FUN_10baec00@Class_10BAEC00@@QAEXXZ
-void Class_10BAEC00::FUN_10baec00()
+// FUNCTION: 0x10BAEC00 ?Empty@Class_10BAEC00@@QAEXXZ
+void Class_10BAEC00::Empty()
 {
-    FUN_10bae100(0);
-    if (Unknown04)
+    SetCount(0);
+    if (m_BlockBytes)
     {
-        GetAllocator()->Virtual5(Unknown08);
-        Unknown08 = 0;
-        Unknown04 = 0;
+        GetAllocator()->Virtual5(m_Data);
+        m_Data = 0;
+        m_BlockBytes = 0;
     }
 }
 
 // FUNCTION: 0x10BAEC40 ?FUN_10baec40@Class_10BAEC40@@QAEXXZ
 void Class_10BAEC40::FUN_10baec40()
 {
-    FUN_10bae1d0(0);
+    SetCount(0);
     if (Unknown04)
     {
-        GetAllocator()->Virtual5(Unknown08);
-        Unknown08 = 0;
+        GetAllocator()->Virtual5(m_Items);
+        m_Items = 0;
         Unknown04 = 0;
     }
 }
@@ -33,10 +33,10 @@ void Class_10BAEC40::FUN_10baec40()
 void Class_10BAEC80::FUN_10baec80()
 {
     FUN_10a211e0(0);
-    if (Unknown04)
+    if (m_BlockBytes)
     {
         GetAllocator()->Virtual5(Unknown08);
         Unknown08 = 0;
-        Unknown04 = 0;
+        m_BlockBytes = 0;
     }
 }

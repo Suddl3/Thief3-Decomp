@@ -62,7 +62,7 @@ void Class_10E96D98::FUN_10be9720()
     {
         Struct_10BE9720_Target* T = (Struct_10BE9720_Target*)Unknown04->Unknown08->FUN_10c7d570();
         FVector Delta = T->Unknown2C - O->Unknown2C;
-        float R = Unknown04->Unknown08->FUN_10dbd510(0x10069a)->FUN_10bbdb40() * 16.0f;
+        float R = Unknown04->Unknown08->FUN_10dbd510(0x10069a)->GetFloat() * 16.0f;
         if (Delta.X * Delta.X + Delta.Y * Delta.Y + Delta.Z * Delta.Z <= R * R)
             P = FUN_10bc58f0(0, 0, 1);
     }

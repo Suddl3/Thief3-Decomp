@@ -15,7 +15,7 @@ public:
     virtual void Virtual2();
     virtual void Virtual3();
     virtual void Virtual4();
-    virtual int FUN_10b49200(int A, int B);
+    virtual int OnAnimationEnd(int A, int B);
     virtual void Virtual6();
     virtual void FUN_10b49220(Struct_10B19300_Param* A);
 

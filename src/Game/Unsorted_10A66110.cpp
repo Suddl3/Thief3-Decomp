@@ -24,7 +24,7 @@ extern int DAT_10f11380;
 class Class_10E6B5A0
 {
 public:
-    Class_10E6B5A0* FUN_10a68b30();
+    Class_10E6B5A0* Init();
     int FUN_10a68b70();
 
     void* VTable;
@@ -34,11 +34,11 @@ public:
     int Unknown10;
     union
     {
-        int Unknown14;
+        int m_Items;
         int Field14;
     };
     int Unknown18;
-    int Unknown1C;
+    int m_Entries;
 };
 
 typedef void (*VFunc)(void);
@@ -71,17 +71,17 @@ void Class_10E6B594::FUN_10a67b70()
     Field00 = (void*)&DAT_10e6b594;
 }
 
-// FUNCTION: 0x10A68B30 ?FUN_10a68b30@Class_10E6B5A0@@QAEPAV1@XZ
-Class_10E6B5A0* Class_10E6B5A0::FUN_10a68b30()
+// FUNCTION: 0x10A68B30 ?Init@Class_10E6B5A0@@QAEPAV1@XZ
+Class_10E6B5A0* Class_10E6B5A0::Init()
 {
     VTable = DAT_10e4dd6c;
     Unknown04 = 0x10;
     Unknown0C = 1;
     Unknown10 = DAT_10f11380++;
     VTable = DAT_10e6b5a0;
-    Unknown14 = 0;
+    m_Items = 0;
     Unknown18 = 0;
-    Unknown1C = 0;
+    m_Entries = 0;
     return this;
 }
 

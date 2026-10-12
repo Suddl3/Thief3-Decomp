@@ -28,7 +28,7 @@ public:
     virtual void Virtual2();
     virtual void FUN_10b483c0(Class_10B22020* A);
     virtual int Virtual4();
-    virtual int FUN_10b48400(Object_10B4BC30* A, int B);
+    virtual int OnAnimationEnd(Object_10B4BC30* A, int B);
 
     int m_State;
 };
@@ -55,8 +55,8 @@ void Class_10E7E538::FUN_10b483c0(Class_10B22020* A)
     m_State = 4;
 }
 
-// FUNCTION: 0x10B48400 ?FUN_10b48400@Class_10E7E538@@UAEHPAVObject_10B4BC30@@H@Z
-int Class_10E7E538::FUN_10b48400(Object_10B4BC30* A, int B)
+// FUNCTION: 0x10B48400 ?OnAnimationEnd@Class_10E7E538@@UAEHPAVObject_10B4BC30@@H@Z
+int Class_10E7E538::OnAnimationEnd(Object_10B4BC30* A, int B)
 {
     if (m_State == 3)
     {

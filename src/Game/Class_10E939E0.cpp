@@ -99,5 +99,5 @@ public:
 // FUNCTION: 0x10BD1CB0 ?FUN_10bd1cb0@Class_10E939E0@@UAEMXZ
 float Class_10E939E0::FUN_10bd1cb0()
 {
-    return Unknown04->Unknown08->FUN_10dbd510(0x100623)->FUN_10bbdb40() * 16.0f;
+    return Unknown04->Unknown08->FUN_10dbd510(0x100623)->GetFloat() * 16.0f;
 }

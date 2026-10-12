@@ -12,10 +12,10 @@ public:
     virtual void Virtual3();
     virtual float FUN_10a53260();
     virtual void Virtual5();
-    virtual void FUN_10b30030(const float* p1);
+    virtual void SetValue(const float* p1);
 
     void FUN_10a53250();
-    Class_10E7BB2C* FUN_10b30000();
+    Class_10E7BB2C* Init();
 
         // +0x00: DAT_10e7bb2c
     float Unknown04;
@@ -23,7 +23,7 @@ public:
     void** Unknown0C;
     char Pad10[0x4];
     float Unknown14;
-    float Unknown18;
+    float m_Value;
     float Unknown1C;
     unsigned char Unknown20;
     char Pad21[0x3];

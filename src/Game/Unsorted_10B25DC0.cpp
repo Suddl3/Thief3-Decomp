@@ -79,30 +79,30 @@ void* Class_10B255F0::FUN_10b25dc0(int A)
     {
     case -1:
     {
-        if (Obj->Unknown10 != 0)
-            Obj->Unknown04 = ((Class_10B25D60*)this)->FUN_10b253e0(&Obj->Unknown10);
+        if (Obj->m_InListA != 0)
+            Obj->m_Index = ((Class_10B25D60*)this)->FindNextFromListA(&Obj->m_InListA);
         else
-            Obj->Unknown04 = ((Class_10B25D60*)this)->FUN_10b254f0(&Obj->Unknown10);
+            Obj->m_Index = ((Class_10B25D60*)this)->FindNextFromListB(&Obj->m_InListA);
         void* Result = FUN_10b24f70();
-        if (Obj->Unknown10 != 0)
-            Obj->Unknown04 = Obj->FUN_10b25240(&Obj->Unknown10);
+        if (Obj->m_InListA != 0)
+            Obj->m_Index = Obj->FindPrevFromListA(&Obj->m_InListA);
         else
-            Obj->Unknown04 = Obj->FUN_10b25310(&Obj->Unknown10);
+            Obj->m_Index = Obj->FindPrevFromListB(&Obj->m_InListA);
         return Result;
     }
     case 0:
         return FUN_10b24f70();
     case 1:
     {
-        if (Obj->Unknown10 != 0)
-            Obj->Unknown04 = Obj->FUN_10b25240(&Obj->Unknown10);
+        if (Obj->m_InListA != 0)
+            Obj->m_Index = Obj->FindPrevFromListA(&Obj->m_InListA);
         else
-            Obj->Unknown04 = Obj->FUN_10b25310(&Obj->Unknown10);
+            Obj->m_Index = Obj->FindPrevFromListB(&Obj->m_InListA);
         void* Result = FUN_10b24f70();
-        if (Obj->Unknown10 != 0)
-            Obj->Unknown04 = ((Class_10B25D60*)this)->FUN_10b253e0(&Obj->Unknown10);
+        if (Obj->m_InListA != 0)
+            Obj->m_Index = ((Class_10B25D60*)this)->FindNextFromListA(&Obj->m_InListA);
         else
-            Obj->Unknown04 = ((Class_10B25D60*)this)->FUN_10b254f0(&Obj->Unknown10);
+            Obj->m_Index = ((Class_10B25D60*)this)->FindNextFromListB(&Obj->m_InListA);
         return Result;
     }
     }

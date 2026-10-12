@@ -20,8 +20,8 @@ public:
     virtual void Virtual9();
     virtual void Virtual10();
     virtual void Virtual11();
-    virtual int FUN_10a7ddc0(int A);
-    virtual void FUN_10a7dde0(int A, BYTE* Data, int C, int D);
+    virtual int GetRawTextureData(int A);
+    virtual void FillRawTextureData(int A, BYTE* Data, int C, int D);
 };
 
 #endif // GAME_CLASS_10E6BED8_H

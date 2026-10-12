@@ -33,15 +33,15 @@ public:
 class Class_10E98FD8 : public Class_10E98D08
 {
 public:
-    virtual void FUN_10c1b790(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 
     char Unknown04[0x44];
     int Unknown48;
     void* Unknown4C;
 };
 
-// FUNCTION: 0x10C1B790 ?FUN_10c1b790@Class_10E98FD8@@UAEXAAVFArchive@@@Z
-void Class_10E98FD8::FUN_10c1b790(FArchive& Ar)
+// FUNCTION: 0x10C1B790 ?Serialize@Class_10E98FD8@@UAEXAAVFArchive@@@Z
+void Class_10E98FD8::Serialize(FArchive& Ar)
 {
     FUN_10c1b1a0(Ar);
     Ar.Serialize(&Unknown48, 4);

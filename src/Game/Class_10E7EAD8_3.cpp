@@ -80,7 +80,7 @@ public:
     virtual void Virtual2();
     virtual void Virtual3();
     virtual int Virtual4();
-    virtual int FUN_10b4ec60(Class_10B21570* A, Class_1098E3D0* B);
+    virtual int OnAnimationEnd(Class_10B21570* A, Class_1098E3D0* B);
 
     char Unknown04[0xC];
     int Unknown10;
@@ -90,8 +90,8 @@ public:
 
 extern Class_10F3A3D8* DAT_10f3a3d8;
 
-// FUNCTION: 0x10B4EC60 ?FUN_10b4ec60@Class_10E7EAD8@@UAEHPAVClass_10B21570@@PAVClass_1098E3D0@@@Z
-int Class_10E7EAD8::FUN_10b4ec60(Class_10B21570* A, Class_1098E3D0* B)
+// FUNCTION: 0x10B4EC60 ?OnAnimationEnd@Class_10E7EAD8@@UAEHPAVClass_10B21570@@PAVClass_1098E3D0@@@Z
+int Class_10E7EAD8::OnAnimationEnd(Class_10B21570* A, Class_1098E3D0* B)
 {
     if (B == (Class_1098E3D0*)0xa8)
     {

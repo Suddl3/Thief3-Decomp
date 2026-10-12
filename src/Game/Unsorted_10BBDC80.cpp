@@ -8,7 +8,7 @@ class Class_10BBDB40
 {
 public:
     bool FUN_10bbd870(int A, float* B);
-    float FUN_10bbdb40(int A);
+    float GetFloat(int A);
     float FUN_10bbdc80(int A);
 
     char Unknown00[8];

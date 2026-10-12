@@ -3,7 +3,7 @@
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_109081E0.h"
 
-void FUN_10d3d990(void* Stream, int* Value);
+void WriteString(void* Stream, int* Value);
 
 class cTriggerOperatorParam
 {
@@ -24,5 +24,5 @@ public:
 // FUNCTION: 0x10A8D350 ?WriteValue@cTriggerOperatorParam@@UAEXHPAX@Z
 void cTriggerOperatorParam::WriteValue(int A, void* Stream)
 {
-    FUN_10d3d990(Stream, (int*)&Virtual3());
+    WriteString(Stream, (int*)&Virtual3());
 }

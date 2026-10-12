@@ -18,11 +18,11 @@ struct Struct_10B98E00
     Class_10C7D570* Unknown08;
 };
 
-// Copied from include/Game/Class_10E95BE8.h with the (int, int, int) constructor at 0x10BE2DF0 added.
-class Class_10E95BE8 : public Class_10E90D70
+// Copied from include/Game/State_FrobAlarm.h with the (int, int, int) constructor at 0x10BE2DF0 added.
+class State_FrobAlarm : public Class_10E90D70
 {
 public:
-    Class_10E95BE8(int A, int B, int C);
+    State_FrobAlarm(int A, int B, int C);
     virtual void Virtual0();
     virtual void Virtual1();
     virtual void Virtual2();
@@ -75,7 +75,7 @@ public:
     virtual void FUN_10be2e30(int A);
 
     void FUN_10be2e20();
-    Class_10E95BE8* FUN_10be2df0(int A, int B, int C);
+    State_FrobAlarm* FUN_10be2df0(int A, int B, int C);
 
     int Unknown40;
     int Unknown44;
@@ -102,14 +102,14 @@ public:
     virtual void Virtual15();
     virtual void Virtual16();
     virtual void Virtual17();
-    virtual Class_10E95BE8* FUN_10b99920(Struct_10B98E00* A, int B);
+    virtual State_FrobAlarm* FUN_10b99920(Struct_10B98E00* A, int B);
 };
 
-// FUNCTION: 0x10B99920 ?FUN_10b99920@Class_10E4CCD0@@UAEPAVClass_10E95BE8@@PAUStruct_10B98E00@@H@Z
-Class_10E95BE8* Class_10E4CCD0::FUN_10b99920(Struct_10B98E00* A, int B)
+// FUNCTION: 0x10B99920 ?FUN_10b99920@Class_10E4CCD0@@UAEPAVState_FrobAlarm@@PAUStruct_10B98E00@@H@Z
+State_FrobAlarm* Class_10E4CCD0::FUN_10b99920(Struct_10B98E00* A, int B)
 {
     int Id = FUN_10be2e50();
-    if (Id && A->Unknown08->FUN_10dbd510(Id)->FUN_10bbdb40() > 0.0f)
-        return new(0, 0, 0, 0, 0) Class_10E95BE8((int)A, (int)this, B);
+    if (Id && A->Unknown08->FUN_10dbd510(Id)->GetFloat() > 0.0f)
+        return new(0, 0, 0, 0, 0) State_FrobAlarm((int)A, (int)this, B);
     return 0;
 }

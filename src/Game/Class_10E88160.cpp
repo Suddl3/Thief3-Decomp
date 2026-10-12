@@ -5,8 +5,8 @@
 
 extern void* DAT_10e88160;
 
-// FUNCTION: 0x10B762F0 ?FUN_10b762f0@Class_10E88160@@QAEPAV1@XZ
-Class_10E88160* Class_10E88160::FUN_10b762f0()
+// FUNCTION: 0x10B762F0 ?Construct@Class_10E88160@@QAEPAV1@XZ
+Class_10E88160* Class_10E88160::Construct()
 {
     FUN_10b78780();
     Unknown00 = &DAT_10e88160;

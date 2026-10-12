@@ -10,14 +10,14 @@ class Class_10ABFB00
 public:
     void FUN_10abf660(int A);
     void FUN_10abf7c0(int A);
-    void FUN_10abfb00(int A, bool State);
+    void SetState(int A, bool State);
     void FUN_10abfb50(int A, int B);
 
-    bool Unknown00;
+    bool m_State;
     char Unknown01[0xB];
-    float Unknown0C;
+    float m_Level;
     char Unknown10[0x10];
-    Class_10ABFB00_Member Unknown20;
+    Class_10ABFB00_Member m_Interpolator;
 };
 
 #endif // GAME_CLASS_10ABFB00_H

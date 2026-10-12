@@ -8,17 +8,17 @@ class Class_10AA44B0_Node;
 class Class_10AA44B0
 {
 public:
-    void FUN_10aa3830(int A);
-    void FUN_10aa44b0();
-    void FUN_10aa36b0(int Size);
+    void Clear(int A);
+    void Free();
+    void Rehash(int Size);
 
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    bool Unknown10;
+    int m_Collisions;
+    int m_Count;
+    int m_BucketBits;
+    int m_BucketCount;
+    bool m_FixedSize;
     char Pad11[0x3];
-    Class_10AA44B0_Node** Unknown14;
+    Class_10AA44B0_Node** m_Buckets;
 };
 
 #endif // GAME_CLASS_10AA44B0_H

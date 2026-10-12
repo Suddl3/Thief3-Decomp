@@ -47,11 +47,11 @@ public:
 class Class_10E7E658 : public Class_10E7E6A0
 {
 public:
-    virtual void FUN_10b494c0(AGarrett* Garrett);
+    virtual void DismountRope(AGarrett* Garrett);
 };
 
-// FUNCTION: 0x10B494C0 ?FUN_10b494c0@Class_10E7E658@@UAEXPAVAGarrett@@@Z
-void Class_10E7E658::FUN_10b494c0(AGarrett* Garrett)
+// FUNCTION: 0x10B494C0 ?DismountRope@Class_10E7E658@@UAEXPAVAGarrett@@@Z
+void Class_10E7E658::DismountRope(AGarrett* Garrett)
 {
     ReleaseArm(Garrett);
     ClearVelocity(Garrett);

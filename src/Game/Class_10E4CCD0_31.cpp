@@ -42,7 +42,7 @@ public:
 Class_10E97370* Class_10E4CCD0::FUN_10b996b0(Struct_10B98E00* A, int B, int C, int D, int E)
 {
     int Id = FUN_10bed150();
-    if (Id && A->Unknown08->FUN_10dbd510(Id)->FUN_10bbdb40() > 0.0f)
+    if (Id && A->Unknown08->FUN_10dbd510(Id)->GetFloat() > 0.0f)
         return new(0, 0, 0, 0, 0) Class_10E97370(B, C, D, E, (int)A, (int)this);
     return 0;
 }

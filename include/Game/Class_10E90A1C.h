@@ -8,7 +8,7 @@ class Class_10DBD510;
 class Class_10E90A1C
 {
 public:
-    void FUN_10bb7f90();
+    void RollInterval();
     void FUN_10bb8430();
 
     char Unknown00[8];

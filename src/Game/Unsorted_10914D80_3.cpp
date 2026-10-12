@@ -20,7 +20,7 @@ void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D
 
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
-// A bucket entry (12 bytes; FUN_10914d80 allocates it).
+// A bucket entry (12 bytes; Insert allocates it).
 struct Class_10914D80_Node
 {
     Class_109081E0 Key;
@@ -28,8 +28,8 @@ struct Class_10914D80_Node
     Class_10914D80_Node* Next;
 };
 
-// FUNCTION: 0x10914E60 ?FUN_10914e60@Class_10914D80@@QAEXH@Z
-void Class_10914D80::FUN_10914e60(int NewSize)
+// FUNCTION: 0x10914E60 ?Rehash@Class_10914D80@@QAEXH@Z
+void Class_10914D80::Rehash(int NewSize)
 {
     int OldSize = Size;
     Class_10914D80_Node** OldTable = Table;
@@ -47,7 +47,7 @@ void Class_10914D80::FUN_10914e60(int NewSize)
         Class_10914D80_Node* Node = OldTable[j];
         while (Node)
         {
-            FUN_10914d80(Node->Key, Node->Value);
+            Insert(Node->Key, Node->Value);
             Class_10914D80_Node* Next = Node->Next;
             delete Node;
             Node = Next;

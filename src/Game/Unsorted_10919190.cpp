@@ -1,12 +1,12 @@
 // Game/Unsorted_10919190.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_1091E400.h"
-#include "Game/Class_10936AC0.h"
+#include "Game/cD3DStateCache.h"
 #include "Game/D3DXMATRIX.h"
 #include "Game/IDirect3DDevice8.h"
 #include "Game/Struct_10919190.h"
 
-extern Class_10936AC0* DAT_10f31be0;
+extern cD3DStateCache* DAT_10f31be0;
 
 // D3DX's matrix product and transpose.
 extern "C" D3DXMATRIX* __stdcall FUN_10d67f9a(D3DXMATRIX* pOut, const D3DXMATRIX* pM1, const D3DXMATRIX* pM2);
@@ -36,6 +36,6 @@ void FUN_10919190(Struct_10919190* P)
 // FUNCTION: 0x109192E0 ?FUN_109192e0@@YAXHHH@Z
 void FUN_109192e0(int A, int B, int C)
 {
-    DAT_10f31be0->FUN_10936ac0(A, B);
-    DAT_10f31be0->FUN_10936b20(C, 0);
+    DAT_10f31be0->SetStreamSource(A, B);
+    DAT_10f31be0->SetIndices(C, 0);
 }

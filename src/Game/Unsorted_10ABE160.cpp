@@ -5,14 +5,14 @@
 
 Class_10905A90_Member* GetAllocator();
 
-// FUNCTION: 0x10ABE1D0 ?FUN_10abe1d0@Class_10ABDAE0@@QAEXXZ
-void Class_10ABDAE0::FUN_10abe1d0()
+// FUNCTION: 0x10ABE1D0 ?Clear@Class_10ABDAE0@@QAEXXZ
+void Class_10ABDAE0::Clear()
 {
     FUN_10abdae0(0);
     if (Unknown04)
     {
-        GetAllocator()->Virtual5(Unknown08);
-        Unknown08 = 0;
+        GetAllocator()->Virtual5(m_Data);
+        m_Data = 0;
         Unknown04 = 0;
     }
 }

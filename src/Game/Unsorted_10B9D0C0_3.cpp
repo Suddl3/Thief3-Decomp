@@ -8,17 +8,17 @@ public:
     bool FUN_10b9d0e0(int A);
 
     char Unknown00[0x10];
-    int Unknown10;
+    int m_Count;
     char Unknown14[4];
-    Object_10B9CAC0** Unknown18;
+    Object_10B9CAC0** m_Stack;
 };
 
 // FUNCTION: 0x10B9D0E0 ?FUN_10b9d0e0@Class_10B9CAC0@@QAE_NH@Z
 bool Class_10B9CAC0::FUN_10b9d0e0(int A)
 {
-    if (Unknown10)
+    if (m_Count)
     {
-        Object_10B9CAC0* Obj = Unknown18[Unknown10 - 1];
+        Object_10B9CAC0* Obj = m_Stack[m_Count - 1];
         if (Obj)
             return Obj->Virtual56(A);
     }

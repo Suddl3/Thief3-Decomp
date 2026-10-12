@@ -6,9 +6,9 @@
 
 void FUN_10d3d360(void* A, int* B);
 
-void FUN_10d3d3b0(void* A, int* B);
+void ReadInt(void* A, int* B);
 
-void FUN_10d3ddc0(void* A, int* B);
+void ReadString(void* A, int* B);
 
 class Class_10A8C610_Unknown60
 {
@@ -67,9 +67,9 @@ bool cTriggerByteEnumParam::Read(int A, void* Reader)
         }
         return true;
     }
-    FUN_10d3d3b0(Reader, &m_Index);
+    ReadInt(Reader, &m_Index);
     Class_109081E0 Text;
-    FUN_10d3ddc0(Reader, (int*)&Text);
+    ReadString(Reader, (int*)&Text);
     m_Name = FName(Text.Unknown00 ? Text.Unknown00 : DAT_10e47660, FNAME_Add);
     return true;
 }

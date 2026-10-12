@@ -15,7 +15,7 @@ public:
 class Class_10E948D8 : public Class_10E90D70
 {
 public:
-    Class_10E948D8* FUN_10bdba10(int A, int B, int C, int D);
+    Class_10E948D8* Init(int A, int B, int C, int D);
 
     int Unknown40;
     int Unknown44[3];
@@ -23,8 +23,8 @@ public:
     int Unknown54;
 };
 
-// FUNCTION: 0x10BDBA10 ?FUN_10bdba10@Class_10E948D8@@QAEPAV1@HHHH@Z
-Class_10E948D8* Class_10E948D8::FUN_10bdba10(int A, int B, int C, int D)
+// FUNCTION: 0x10BDBA10 ?Init@Class_10E948D8@@QAEPAV1@HHHH@Z
+Class_10E948D8* Class_10E948D8::Init(int A, int B, int C, int D)
 {
     this->Class_10E90D70::Class_10E90D70(A, B);
     Unknown40 = C;

@@ -11,7 +11,7 @@ public:
     virtual void Virtual2();
     virtual void Virtual3();
     virtual int Virtual4();
-    virtual int FUN_10b4bc30(Object_10B4BC30* A, int B);
+    virtual int OnAnimationEnd(Object_10B4BC30* A, int B);
 
     char Unknown04[0xC];
     int Unknown10;
@@ -21,8 +21,8 @@ void FUN_10b1f260(int A);
 
 void FUN_10b1f370(int A, int B);
 
-// FUNCTION: 0x10B4BC30 ?FUN_10b4bc30@Class_10E7E7C0@@UAEHPAVObject_10B4BC30@@H@Z
-int Class_10E7E7C0::FUN_10b4bc30(Object_10B4BC30* A, int B)
+// FUNCTION: 0x10B4BC30 ?OnAnimationEnd@Class_10E7E7C0@@UAEHPAVObject_10B4BC30@@H@Z
+int Class_10E7E7C0::OnAnimationEnd(Object_10B4BC30* A, int B)
 {
     if (B == A->Unknown344)
         return Unknown10;

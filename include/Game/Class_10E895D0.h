@@ -19,7 +19,7 @@ public:
     int Unknown04;
     Struct_10B8B830* Unknown08;
     int Unknown0C;
-    Class_10B8B9F0_Unknown10* Unknown10;
+    Class_10B8B9F0_Unknown10* m_Controller;
     char Pad14[0x20];
     bool Unknown34;
     char Pad35[0x3];

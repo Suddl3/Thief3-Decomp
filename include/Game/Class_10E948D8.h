@@ -14,7 +14,7 @@ public:
 
     Class_10E948D8(int A, int B, int C, int D);
 
-    Class_10E948D8* FUN_10bdba10(int A, int B, int C, int D);
+    Class_10E948D8* Init(int A, int B, int C, int D);
     float FUN_10bdc290();
 
     int Unknown40;

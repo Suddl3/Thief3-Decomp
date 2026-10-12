@@ -154,13 +154,13 @@ public:
 // FUNCTION: 0x10BD1AA0 ?FUN_10bd1aa0@Class_10E93878@@UAENXZ
 double Class_10E93878::FUN_10bd1aa0()
 {
-    float Value = Unknown04->Unknown08->FUN_10dbd510(0x40100240)->FUN_10bbdb40();
+    float Value = Unknown04->Unknown08->FUN_10dbd510(0x40100240)->GetFloat();
     return Value;
 }
 
 // FUNCTION: 0x10BD1C90 ?FUN_10bd1c90@Class_10E939E0@@UAEMXZ
 float Class_10E939E0::FUN_10bd1c90()
 {
-    float Value = Unknown04->Unknown08->FUN_10dbd510(0x40100241)->FUN_10bbdb40();
+    float Value = Unknown04->Unknown08->FUN_10dbd510(0x40100241)->GetFloat();
     return Value;
 }

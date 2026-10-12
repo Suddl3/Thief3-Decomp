@@ -5,7 +5,7 @@
 
 Class_10905A90_Member* GetAllocator();
 
-void FUN_10d3ddc0(void* A, int* B);
+void ReadString(void* A, int* B);
 
 class Class_109081E0
 {
@@ -51,15 +51,15 @@ public:
 // FUNCTION: 0x10AA7250 ?FUN_10aa7250@Class_10E6C128@@QAEXPAXHH@Z
 void Class_10E6C128::FUN_10aa7250(void* A, int Count, int Unused)
 {
-    FUN_10d3ddc0(A, (int*)&Unknown24);
+    ReadString(A, (int*)&Unknown24);
     if (Count < 0x10)
     {
-        FUN_10d3ddc0(A, (int*)&Unknown0C);
-        FUN_10d3ddc0(A, (int*)&Unknown18);
+        ReadString(A, (int*)&Unknown0C);
+        ReadString(A, (int*)&Unknown18);
     }
-    FUN_10d3ddc0(A, (int*)&Unknown20);
-    FUN_10d3ddc0(A, (int*)&Unknown10);
-    FUN_10d3ddc0(A, (int*)&Unknown1C);
+    ReadString(A, (int*)&Unknown20);
+    ReadString(A, (int*)&Unknown10);
+    ReadString(A, (int*)&Unknown1C);
     Unknown0C = DAT_10f35dec->Virtual3(Unknown10);
     Unknown18 = DAT_10f35dec->Virtual3(Unknown1C);
 }

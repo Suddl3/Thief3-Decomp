@@ -9,7 +9,7 @@ class Class_10E7E4E0
 {
 public:
     virtual void Virtual0();
-    virtual void FUN_10b3aed0(AGarrett* Garrett);
+    virtual void ApplyVelocity(AGarrett* Garrett);
     virtual void Virtual2();
     virtual void Virtual3();
     virtual void Virtual4();

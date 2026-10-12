@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include <vector>
 #include "Game/Class_10AB0400.h"
-#include "Game/Class_10E6BA88.h"
+#include "Game/cDelayedDeleter.h"
 #include "Game/Struct_10AA3520.h"
 #include "Game/Struct_10AB0400.h"
 #include "Game/Class_10A6FED0_Owner.h"
@@ -65,13 +65,13 @@ void __stdcall FUN_10a6fed0(Struct_10A6FED0* Obj, int B)
     DAT_10f35dec->Unknown1C->Virtual1(Obj, 0, 0);
 }
 
-// FUNCTION: 0x10A70BC0 ??0Class_10E6BA88@@QAE@XZ
-Class_10E6BA88::Class_10E6BA88()
+// FUNCTION: 0x10A70BC0 ??0cDelayedDeleter@@QAE@XZ
+cDelayedDeleter::cDelayedDeleter()
 {
-    Unknown04 = 0;
+    m_Entries = 0;
     Unknown08 = 0;
     Unknown0C = 0;
 }
 
-// FUNCTION: 0x10A70C90 ??_GClass_10E6BA88@@UAEPAXI@Z
+// FUNCTION: 0x10A70C90 ??_GcDelayedDeleter@@UAEPAXI@Z
 // Compiler-generated: emitted with the class's vtable by 0x10A70BC0's definition in this unit.

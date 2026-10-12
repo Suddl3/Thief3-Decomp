@@ -3791,7 +3791,7 @@ Game/Unsorted_10A6A150.cpp:
 	.text  start:0x10A6A150 end:0x10A6A179
 	.text  start:0x10A6AD50 end:0x10A6AD75
 
-Game/Class_10E6B660.cpp:
+Game/cFootstepListener.cpp:
 	.text  start:0x10A6AC80 end:0x10A6AD4C
 
 Game/Class_10E6B764.cpp:
@@ -3859,11 +3859,11 @@ Game/Unsorted_10A6FF60.cpp:
 	.text  start:0x10A707F0 end:0x10A7085A
 	.text  start:0x10E139E0 end:0x10E139F2  # .text$x: EH handlers and unwind funclets
 
-Game/Class_10E6BA88.cpp:
+Game/cDelayedDeleter.cpp:
 	.text  start:0x10A70BE0 end:0x10A70C8B
 	.text  start:0x10E13A60 end:0x10E13A75  # .text$x: EH handlers and unwind funclets
 
-Game/Class_10E6BA88_2.cpp:
+Game/cDelayedDeleter_2.cpp:
 	.text  start:0x10A70CB0 end:0x10A70D55
 
 Game/Unsorted_10A70CB0.cpp:
@@ -10671,7 +10671,7 @@ Game/Class_10E95780_5.cpp:
 Game/Class_10E95780_6.cpp:
 	.text  start:0x10BE2B90 end:0x10BE2BF9
 
-Game/Class_10E95BE8.cpp:
+Game/State_FrobAlarm.cpp:
 	.text  start:0x10BE2E30 end:0x10BE2E4F
 
 Game/Class_10E95D00.cpp:
@@ -10689,7 +10689,7 @@ Game/State_Fetch.cpp:
 Game/State_Fetch_2.cpp:
 	.text  start:0x10BE2FA0 end:0x10BE2FB3
 
-Game/Class_10E95BE8_2.cpp:
+Game/State_FrobAlarm_2.cpp:
 	.text  start:0x10BE3010 end:0x10BE3052
 	.text  start:0x10BE3E40 end:0x10BE3E48
 
@@ -10948,7 +10948,7 @@ Game/Unsorted_10BEFAB0.cpp:
 Game/Unsorted_10BF0410.cpp:
 	.text  start:0x10BF0870 end:0x10BF08C8
 
-Game/Class_10E97720.cpp:
+Game/cStateRangedCombat.cpp:
 	.text  start:0x10BF08D0 end:0x10BF08F8
 
 Game/Unsorted_10BF0A60_2.cpp:
@@ -10978,7 +10978,7 @@ Game/Unsorted_10BF1630_2.cpp:
 Game/Unsorted_10BF1630.cpp:
 	.text  start:0x10BF23A0 end:0x10BF2457
 
-Game/Class_10E97720_2.cpp:
+Game/cStateRangedCombat_2.cpp:
 	.text  start:0x10BF2F70 end:0x10BF2FD6
 
 Game/Unsorted_10BF2FE0.cpp:

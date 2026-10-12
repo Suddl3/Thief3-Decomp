@@ -50,7 +50,7 @@ public:
 Class_10BE9D40* Class_10E4CCD0::FUN_10b993a0(Struct_10B98E00* A, int B, int C, int D)
 {
     int Id = FUN_10be9ab0();
-    if (Id && A->Unknown08->FUN_10dbd510(Id)->FUN_10bbdb40() > 0.0f)
+    if (Id && A->Unknown08->FUN_10dbd510(Id)->GetFloat() > 0.0f)
         return new(0, 0, 0, 0, 0) Class_10BE9D40(A, this, B, C, D);
     return 0;
 }

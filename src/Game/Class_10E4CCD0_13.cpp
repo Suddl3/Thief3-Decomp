@@ -22,7 +22,7 @@ class Class_10E95288;
 Class_10E95898* Class_10E4CCD0::FUN_10b98f60(Struct_10B98E00* A, int B, bool C)
 {
     void* Id = FUN_10be1c60();
-    if (Id && A->Unknown08->FUN_10dbd510((int)Id)->FUN_10bbdb40() > DAT_10eafbdc)
+    if (Id && A->Unknown08->FUN_10dbd510((int)Id)->GetFloat() > DAT_10eafbdc)
         return new(0, 0, 0, 0, 0) Class_10E95898((int)A, (int)this, B, C);
     return 0;
 }

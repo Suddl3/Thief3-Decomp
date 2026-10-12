@@ -9,7 +9,7 @@ class Class_10A359D0
 {
 public:
     int FUN_10a358b0();
-    void FUN_10a359d0();
+    void Reset();
     void FUN_10a35a20();
     void FUN_10a35e50(int A);
 

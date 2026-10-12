@@ -1,7 +1,7 @@
 // Game/Unsorted_10934890.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10934DB0.h"
-#include "Game/Class_10936AC0.h"
+#include "Game/cD3DStateCache.h"
 #include "Game/Class_10E49EE0_Member.h"
 #include "Game/Class_10E49F64.h"
 
@@ -21,7 +21,7 @@ public:
     Class_10E49EE0_Member* m_Member;
 };
 
-extern Class_10936AC0* DAT_10f31be0;
+extern cD3DStateCache* DAT_10f31be0;
 
 class Class_10934DB0_Member
 {
@@ -84,7 +84,7 @@ int Class_10E49F64::FUN_10934a40(int A)
         return 0x80040721;
     if (Unknown1C == 0)
         return 0x80040722;
-    DAT_10f31be0->FUN_10936ac0(Unknown14, Unknown20);
+    DAT_10f31be0->SetStreamSource(Unknown14, Unknown20);
     return 0;
 }
 

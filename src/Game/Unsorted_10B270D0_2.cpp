@@ -74,30 +74,30 @@ public:
 class Class_10B27220
 {
 public:
-    void FUN_10b27220(int Index);
-    void FUN_10b270d0();
-    void FUN_10b271d0(float A);
+    void RequestStop(int Index);
+    void Stop();
+    void Update(float A);
 
     char Unknown00[8];
-    char* Unknown08;
+    char* m_Active;
     char Unknown0C[8];
     Class_109081E0* Unknown14;
     char Unknown18[8];
     int* Unknown20;
     char Unknown24[0xC];
     Class_10B270D0_Unknown30* Unknown30;
-    float Unknown34;
-    bool Unknown38;
+    float m_Elapsed;
+    bool m_StopPending;
     char Pad39[0x3];
 };
 
-// FUNCTION: 0x10B270D0 ?FUN_10b270d0@Class_10B27220@@QAEXXZ
-void Class_10B27220::FUN_10b270d0()
+// FUNCTION: 0x10B270D0 ?Stop@Class_10B27220@@QAEXXZ
+void Class_10B27220::Stop()
 {
     int Index = 0;
     for (int i = 0; i < 4; i++)
     {
-        if (Unknown08[i] != 0)
+        if (m_Active[i] != 0)
         {
             Index = i;
             break;
@@ -110,9 +110,9 @@ void Class_10B27220::FUN_10b270d0()
         ((Class_10B17210*)FUN_10b154c0())->FUN_10b17210(Items);
         Unknown30 = 0;
     }
-    Unknown08[Index] = 0;
+    m_Active[Index] = 0;
     Unknown14[Index] = Class_109081E0(DAT_10e47660);
     Unknown20[Index] = 0;
-    Unknown38 = false;
+    m_StopPending = false;
     ((Class_10B27090*)this)->FUN_10b26e00();
 }

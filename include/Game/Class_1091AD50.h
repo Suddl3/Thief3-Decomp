@@ -11,8 +11,8 @@ class Class_1091AD50_Node;
 class Class_1091AD50
 {
 public:
-    unsigned int FUN_1091ad50(const Class_109081E0& Key, const int& Value);
-    void FUN_1091ae30(int Size);
+    unsigned int Insert(const Class_109081E0& Key, const int& Value);
+    void Rehash(int Size);
 
     union
     {

@@ -10,7 +10,7 @@ public:
     virtual void Virtual2();
     virtual void Virtual3();
     virtual int Virtual4();
-    virtual int FUN_10b49200(int A, int B);
+    virtual int OnAnimationEnd(int A, int B);
 };
 
 struct Struct_10B491C0_Result
@@ -61,8 +61,8 @@ int Class_10E7E580::FUN_10b491c0(Struct_10B19300_Param* A)
     return Virtual4();
 }
 
-// FUNCTION: 0x10B49200 ?FUN_10b49200@Class_10E7E5C8@@UAEHHH@Z
-int Class_10E7E5C8::FUN_10b49200(int A, int B)
+// FUNCTION: 0x10B49200 ?OnAnimationEnd@Class_10E7E5C8@@UAEHHH@Z
+int Class_10E7E5C8::OnAnimationEnd(int A, int B)
 {
     if (B == 0x3c || B == 0x44)
         return 0;

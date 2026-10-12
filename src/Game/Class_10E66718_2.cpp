@@ -3,8 +3,8 @@
 #include "Core/Core.h"
 #include "Game/Class_10E66718.h"
 
-// FUNCTION: 0x10A3A950 ?FUN_10a3a950@Class_10E66718@@UAE?AVFVector@@XZ
-FVector Class_10E66718::FUN_10a3a950()
+// FUNCTION: 0x10A3A950 ?GetMidpoint@Class_10E66718@@UAE?AVFVector@@XZ
+FVector Class_10E66718::GetMidpoint()
 {
     FVector Result = (Unknown120 + Unknown114) * 0.5f;
     return Result;

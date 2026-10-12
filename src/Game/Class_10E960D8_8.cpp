@@ -132,11 +132,11 @@ void Class_10E960D8::UpdateRandomTimer()
     FUN_10be7ae0();
     if (GetTimeSeconds() - m_IntervalStart > m_Interval)
     {
-        float Max = Unknown04->Unknown08->FUN_10dbd510(0x100592)->FUN_10bbdb40();
+        float Max = Unknown04->Unknown08->FUN_10dbd510(0x100592)->GetFloat();
         if (Max > 0.0f)
         {
             Virtual85();
-            float Min = Unknown04->Unknown08->FUN_10dbd510(0x100591)->FUN_10bbdb40();
+            float Min = Unknown04->Unknown08->FUN_10dbd510(0x100591)->GetFloat();
             m_Interval = (Max - Min) * appFrand() + Min;
         }
     }

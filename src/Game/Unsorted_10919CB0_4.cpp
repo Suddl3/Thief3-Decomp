@@ -10,13 +10,13 @@ void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D
 
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
-unsigned int FUN_1090e9b0(const void* Data, int Length);
+unsigned int HashBytes(const void* Data, int Length);
 
-// FUNCTION: 0x1091AD50 ?FUN_1091ad50@Class_1091AD50@@QAEIABVClass_109081E0@@ABH@Z
-unsigned int Class_1091AD50::FUN_1091ad50(const Class_109081E0& Key, const int& Value)
+// FUNCTION: 0x1091AD50 ?Insert@Class_1091AD50@@QAEIABVClass_109081E0@@ABH@Z
+unsigned int Class_1091AD50::Insert(const Class_109081E0& Key, const int& Value)
 {
     if (!Unknown10 && Unknown00 > Unknown0C * 0.2)
-        FUN_1091ae30(Unknown0C * 2);
+        Rehash(Unknown0C * 2);
     Class_1091AD50_Node* Node = new(0, 0, 0, 0, 0) Class_1091AD50_Node;
     Node->Key = Key;
     Node->Value = Value;
@@ -25,7 +25,7 @@ unsigned int Class_1091AD50::FUN_1091ad50(const Class_109081E0& Key, const int& 
         const void* Data;
         int Length;
         Unknown18.Virtual0(Key, &Data, &Length);
-        Index = FUN_1090e9b0(Data, Length) & ((1 << Unknown08) - 1);
+        Index = HashBytes(Data, Length) & ((1 << Unknown08) - 1);
     }
     if (Unknown14[Index])
         Unknown00++;

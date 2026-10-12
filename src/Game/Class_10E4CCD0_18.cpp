@@ -35,7 +35,7 @@ class Class_10E96510;
 Class_10E93878* Class_10E4CCD0::FUN_10b99ce0(Struct_10B98E00* A)
 {
     int Id = FUN_10bd1810();
-    if (Id && A->Unknown08->FUN_10dbd510(Id)->FUN_10bbdb40() > DAT_10eafbdc)
+    if (Id && A->Unknown08->FUN_10dbd510(Id)->GetFloat() > DAT_10eafbdc)
         return new(0, 0, 0, 0, 0) Class_10E93878((int)A, (int)this);
     return 0;
 }

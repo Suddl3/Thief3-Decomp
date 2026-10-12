@@ -30,8 +30,8 @@ public:
 
 int FUN_10977fa0(int A);
 
-// FUNCTION: 0x10A695B0 ?FUN_10a695b0@Class_10E6B614@@UAEXHHHH@Z
-void Class_10E6B614::FUN_10a695b0(int A, int B, int C, int D)
+// FUNCTION: 0x10A695B0 ?HandleEvent@Class_10E6B614@@UAEXHHHH@Z
+void Class_10E6B614::HandleEvent(int A, int B, int C, int D)
 {
     if (A >= 0x24 && A <= 0x25)
     {

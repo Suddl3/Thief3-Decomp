@@ -6,15 +6,15 @@
 class Class_10B27220
 {
 public:
-    void FUN_10b27220(int Index);
-    void FUN_10b270d0();
-    void FUN_10b271d0(float A);
+    void RequestStop(int Index);
+    void Stop();
+    void Update(float A);
 
     char Unknown00[8];
-    char* Unknown08;
+    char* m_Active;
     char Unknown0C[0x28];
-    float Unknown34;
-    bool Unknown38;
+    float m_Elapsed;
+    bool m_StopPending;
     char Pad39[0x3];
 };
 

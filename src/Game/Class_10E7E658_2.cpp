@@ -46,9 +46,9 @@ public:
 class Class_10E7E658 : public Class_10B3AE70
 {
 public:
-    virtual void FUN_10b49450(AGarrett* Garrett);
+    virtual void MountRope(AGarrett* Garrett);
 
-    void FUN_10b3b030(AGarrett* Garrett);
+    void StopBody(AGarrett* Garrett);
 
     bool Unknown10;
     int Unknown14;
@@ -57,15 +57,15 @@ public:
     int Unknown20;
 };
 
-// FUNCTION: 0x10B49450 ?FUN_10b49450@Class_10E7E658@@UAEXPAVAGarrett@@@Z
-void Class_10E7E658::FUN_10b49450(AGarrett* Garrett)
+// FUNCTION: 0x10B49450 ?MountRope@Class_10E7E658@@UAEXPAVAGarrett@@@Z
+void Class_10E7E658::MountRope(AGarrett* Garrett)
 {
     Unknown10 = true;
     FUN_10b3ae70(Garrett);
     Unknown18 = 0;
     Unknown20 = 1;
     Unknown1C = 1;
-    FUN_10b3b030(Garrett);
+    StopBody(Garrett);
     Unknown14 = 0;
     DAT_10f3a3d8->Unknown108->FUN_109e38b0((int)Garrett->ropeToMount, (int)&Garrett->Location);
     Garrett->bUpdatePhysHeight = 0;

@@ -17,7 +17,7 @@ public:
     virtual void Virtual0();
     virtual void FUN_10c4d230(Struct_10C4D230* p1);
 
-    char Unknown04[0x3c];
+    char m_Entries[0x3c];
     Class_10C4D140 Unknown40;
 };
 

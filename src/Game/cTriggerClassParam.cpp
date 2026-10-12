@@ -4,7 +4,7 @@
 #include "Game/Object_10C12B50.h"
 #include "Game/Class_109081E0.h"
 
-void FUN_10d3d990(void* Stream, int* Value);
+void WriteString(void* Stream, int* Value);
 
 class cTriggerClassParam
 {
@@ -27,5 +27,5 @@ public:
 // FUNCTION: 0x10A89130 ?WriteValue@cTriggerClassParam@@UAEXHPAX@Z
 void cTriggerClassParam::WriteValue(int A, void* Stream)
 {
-    FUN_10d3d990(Stream, (int*)&Unknown04->Virtual25());
+    WriteString(Stream, (int*)&Unknown04->Virtual25());
 }

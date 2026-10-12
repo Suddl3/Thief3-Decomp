@@ -34,14 +34,14 @@ void Class_1091A4F0::FUN_1091a920()
     }
 }
 
-// FUNCTION: 0x1091B3F0 ?FUN_1091b3f0@Class_1091B3F0@@QAEXXZ
-void Class_1091B3F0::FUN_1091b3f0()
+// FUNCTION: 0x1091B3F0 ?Free@Class_1091B3F0@@QAEXXZ
+void Class_1091B3F0::Free()
 {
     FUN_1091af10(0);
     if (Unknown04)
     {
-        GetAllocator()->Virtual5(Unknown08);
-        Unknown08 = 0;
+        GetAllocator()->Virtual5(Items);
+        Items = 0;
         Unknown04 = 0;
     }
 }

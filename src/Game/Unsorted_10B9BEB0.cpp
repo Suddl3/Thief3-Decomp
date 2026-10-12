@@ -21,18 +21,18 @@ class Class_10B9CAC0 : public Class_10B9E410
 public:
     bool FUN_10b9d0c0(int A);
     bool FUN_10b9d0e0(int A);
-    Class_10BC9D40* FUN_10b9cac0(int A);
-    Class_10BC9D40* FUN_10b9cac0();
+    Class_10BC9D40* GetCurrent(int A);
+    Class_10BC9D40* GetCurrent();
     int FUN_10b9d040(int A, int B);
-    void FUN_10b9d330(int A);
+    void NotifyAllyKilled(int A);
     void* FUN_10aa9da0();
 
     char Pad01[0xb];
     char Pad47[0x1];
     Class_10BB8300* Unknown0C;
-    int Unknown10;
+    int m_Count;
     char Unknown14[4];
-    Class_10BC9D40** Unknown18;
+    Class_10BC9D40** m_Stack;
 };
 
 // FUNCTION: 0x10B9BF60 ?FUN_10b9bf60@Class_10B9BDB0@@QAEXXZ
@@ -51,7 +51,7 @@ void Class_10B9BDB0::FUN_10b9bf60()
     Class_10B9CAC0* Items = Unknown118->Unknown08;
     for (int i = *(int*)Items->FUN_10aa9da0(); i > 1; i--)
     {
-        switch (Items->FUN_10b9cac0()->Virtual3())
+        switch (Items->GetCurrent()->Virtual3())
         {
         case 1:
         case 6:

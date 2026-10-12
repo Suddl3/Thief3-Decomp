@@ -10,8 +10,8 @@ public:
     virtual int __stdcall Virtual2();
 };
 
-// FUNCTION: 0x1093E550 ?FUN_1093e550@Class_1093E930@@QAEXXZ
-void Class_1093E930::FUN_1093e550()
+// FUNCTION: 0x1093E550 ?Release@Class_1093E930@@QAEXXZ
+void Class_1093E930::Release()
 {
     if (Unknown00)
     {

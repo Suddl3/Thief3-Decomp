@@ -103,5 +103,5 @@ public:
 // FUNCTION: 0x10BD2E60 ?FUN_10bd2e60@Class_10E939E0@@UAENXZ
 double Class_10E939E0::FUN_10bd2e60()
 {
-    return cos(Unknown04->Unknown08->FUN_10dbd510(0x100496)->FUN_10bbdb40() * 0.017453292519943295);
+    return cos(Unknown04->Unknown08->FUN_10dbd510(0x100496)->GetFloat() * 0.017453292519943295);
 }

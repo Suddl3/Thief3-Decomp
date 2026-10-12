@@ -30,7 +30,7 @@ void Class_10E6C390::FUN_10a85890(Struct_10A85890* Ar)
 // FUNCTION: 0x10A873D0 ?FUN_10a873d0@Class_10A873D0@@QAEXXZ
 void Class_10A873D0::FUN_10a873d0()
 {
-    FUN_10a86490(0x40);
+    Reset(0x40);
     ::operator delete(Unknown14);
     Unknown04 = 0;
     Unknown0C = 0;

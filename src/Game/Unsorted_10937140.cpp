@@ -18,33 +18,33 @@ struct Struct_109371D0
     float Unknown0C;
 };
 
-class Class_10936AC0
+class cD3DStateCache
 {
 public:
-    void FUN_10936ac0(int A, int B);
-    void FUN_10936b20(int A, int B);
-    void FUN_1091ef90();
+    void SetStreamSource(int A, int B);
+    void SetIndices(int A, int B);
+    void ClearTextures();
     void FUN_10937280(int A, Info_10952690* Info);
-    void FUN_109371d0(int p1, int p2);
-    void FUN_10937310(int Index, int Value);
+    void SetVertexShaderConstantScalar(int p1, int p2);
+    void SetPixelShaderConstantScalar(int Index, int Value);
     void FUN_10936bf0(int A);
 
     char Pad01[0xb];
     char Pad81F[0x1];
-    int Unknown0C;
-    int Unknown10;
-    int Unknown14;
-    int Unknown18;
-    IDirect3DBaseTexture8* Unknown1C[4];
-    Struct_109371D0 Unknown2C[104];
+    int m_VertexBuffer;
+    int m_VertexStride;
+    int m_IndexBuffer;
+    int m_BaseVertexIndex;
+    IDirect3DBaseTexture8* m_Textures[4];
+    Struct_109371D0 m_VertexConstants[104];
     char Pad6AC[0x4];
     int Unknown6B0;
     char Pad6B4[0x148];
     Struct_10924210 Unknown7FC;
 };
 
-// FUNCTION: 0x109371D0 ?FUN_109371d0@Class_10936AC0@@QAEXHH@Z
-void Class_10936AC0::FUN_109371d0(int Index, int Value)
+// FUNCTION: 0x109371D0 ?SetVertexShaderConstantScalar@cD3DStateCache@@QAEXHH@Z
+void cD3DStateCache::SetVertexShaderConstantScalar(int Index, int Value)
 {
     if (Unknown6B0)
     {
@@ -54,7 +54,7 @@ void Class_10936AC0::FUN_109371d0(int Index, int Value)
         Color.Unknown04 = V;
         Color.Unknown08 = V;
         Color.Unknown0C = V;
-        Struct_109371D0* Entry = &Unknown2C[Index];
+        Struct_109371D0* Entry = &m_VertexConstants[Index];
         if (Entry->Unknown00 != V || Entry->Unknown04 != V
             || Entry->Unknown08 != V || Entry->Unknown0C != V)
         {

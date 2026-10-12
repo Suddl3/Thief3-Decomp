@@ -19,20 +19,20 @@ public:
     virtual void Virtual2();
     virtual void Virtual3();
     virtual void Virtual4();
-    virtual void FUN_10c49a60(int A);
+    virtual void RemoveEntry(int A);
 
-    Class_10C49740 Unknown04;
+    Class_10C49740 m_Entries;
     char Unknown05[0x37];
     Class_10E9BBC0_Unknown3C* Unknown3C;
 };
 
-// FUNCTION: 0x10C49A60 ?FUN_10c49a60@Class_10E9BBC0@@UAEXH@Z
-void Class_10E9BBC0::FUN_10c49a60(int A)
+// FUNCTION: 0x10C49A60 ?RemoveEntry@Class_10E9BBC0@@UAEXH@Z
+void Class_10E9BBC0::RemoveEntry(int A)
 {
     Entry_10C32C30* Entry = 0;
-    if (Unknown04.FUN_10c49740(&A, &Entry))
+    if (m_Entries.FUN_10c49740(&A, &Entry))
     {
         Unknown3C->Virtual1(Entry);
-        Unknown04.FUN_10c49ab0(&A);
+        m_Entries.FUN_10c49ab0(&A);
     }
 }

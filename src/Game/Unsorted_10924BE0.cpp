@@ -28,7 +28,7 @@ struct Struct_109250C0_Entry
 class Class_10E499F4
 {
 public:
-    void FUN_1091e340();
+    void ResetVTable();
 };
 
 struct Struct_10925390
@@ -87,7 +87,7 @@ void Class_10925390::FUN_10925390(int Index)
             Class_10E499F4* Object = UnknownE4[Index].Unknown0C;
             if (Object)
             {
-                Object->FUN_1091e340();
+                Object->ResetVTable();
                 delete Object;
                 UnknownE4[Index].Unknown0C = 0;
             }

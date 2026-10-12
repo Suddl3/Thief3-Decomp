@@ -6,7 +6,7 @@ class Class_10BBDB40
 {
 public:
     bool FUN_10bbd870(int A, float* B);
-    float FUN_10bbdb40(int A);
+    float GetFloat(int A);
     float FUN_10bbdc80(int A);
 
     char Unknown00[8];
@@ -15,8 +15,8 @@ public:
     Class_1098E330* Unknown10;
 };
 
-// FUNCTION: 0x10BBDB40 ?FUN_10bbdb40@Class_10BBDB40@@QAEMH@Z
-float Class_10BBDB40::FUN_10bbdb40(int A)
+// FUNCTION: 0x10BBDB40 ?GetFloat@Class_10BBDB40@@QAEMH@Z
+float Class_10BBDB40::GetFloat(int A)
 {
     float Result = 0.0f;
     if (FUN_10bbd870(A, &Result) != true)

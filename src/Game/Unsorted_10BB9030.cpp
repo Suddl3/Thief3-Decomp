@@ -110,7 +110,7 @@ void Class_10BBB410::FUN_10bb9260()
 {
     if (Unknown1E4 != 0)
     {
-        float Value = Unknown08->FUN_10dbd510(0x10024f)->FUN_10bbdb40();
+        float Value = Unknown08->FUN_10dbd510(0x10024f)->GetFloat();
         if (Value > DAT_10eafbdc)
         {
             double Limit = Value + Unknown1DC;
@@ -120,10 +120,10 @@ void Class_10BBB410::FUN_10bb9260()
                 memset(&Unknown1CC, 0, sizeof(FVector));
                 Unknown1E4 = 0;
                 Unknown1EC = false;
-                if (FUN_10bb7f30()->FUN_10b9cac0()->Virtual63())
+                if (FUN_10bb7f30()->GetCurrent()->Virtual63())
                 {
                     Class_109081E0 Text(DAT_10e47660);
-                    ((Class_10BC9A50*)FUN_10bb7f30()->FUN_10b9cac0())->FUN_10bc7d70(AddressOf(Class_10E97B00("+reprimandplayer:ramp_down")), 0x14, 1, &Text, true);
+                    ((Class_10BC9A50*)FUN_10bb7f30()->GetCurrent())->FUN_10bc7d70(AddressOf(Class_10E97B00("+reprimandplayer:ramp_down")), 0x14, 1, &Text, true);
                 }
             }
         }

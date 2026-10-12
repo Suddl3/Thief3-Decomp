@@ -29,7 +29,7 @@ int Class_10C24940::FUN_10c24bc0(const Item_10C24BC0& Item)
     Dest->Unknown00 = Item.Unknown00;
     Dest->Unknown04 = Item.Unknown04;
     Dest->Unknown10 = Item.Unknown10;
-    Dest->Unknown14.FUN_10c22ad0(Item.Unknown14);
+    Dest->Unknown14.CopyFrom(Item.Unknown14);
     Dest->Unknown20 = Item.Unknown20;
     return Index;
 }

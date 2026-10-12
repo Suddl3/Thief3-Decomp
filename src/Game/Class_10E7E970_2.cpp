@@ -21,11 +21,11 @@ public:
     virtual void Virtual2();
     virtual void Virtual3();
     virtual int Virtual4();
-    virtual int FUN_10b4d9b0(int A, int B);
+    virtual int OnAnimationEnd(int A, int B);
 };
 
-// FUNCTION: 0x10B4D9B0 ?FUN_10b4d9b0@Class_10E7E970@@UAEHHH@Z
-int Class_10E7E970::FUN_10b4d9b0(int A, int B)
+// FUNCTION: 0x10B4D9B0 ?OnAnimationEnd@Class_10E7E970@@UAEHHH@Z
+int Class_10E7E970::OnAnimationEnd(int A, int B)
 {
     ((Class_10B396B0*)FUN_10aa82d0())->FUN_10b396b0(B);
     Unknown08 = 0x101;

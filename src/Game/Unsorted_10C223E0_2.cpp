@@ -26,8 +26,8 @@ public:
     char Unknown18[0x5A];
 };
 
-// FUNCTION: 0x10C22AD0 ?FUN_10c22ad0@Class_10BAEC80@@QAEXABV1@@Z
-void Class_10BAEC80::FUN_10c22ad0(const Class_10BAEC80& Other)
+// FUNCTION: 0x10C22AD0 ?CopyFrom@Class_10BAEC80@@QAEXABV1@@Z
+void Class_10BAEC80::CopyFrom(const Class_10BAEC80& Other)
 {
     FUN_10a211e0(Other.Count);
     for (int i = 0; i < Count; i++)

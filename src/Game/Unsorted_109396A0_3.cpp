@@ -25,26 +25,26 @@ public:
     Class_1093AF30_Node* Next;
 };
 
-// FUNCTION: 0x1093B040 ?FUN_1093b040@Class_1093AF30@@QAEXH@Z
-void Class_1093AF30::FUN_1093b040(int Size)
+// FUNCTION: 0x1093B040 ?Rehash@Class_1093AF30@@QAEXH@Z
+void Class_1093AF30::Rehash(int Size)
 {
-    int OldSize = Unknown0C;
-    Class_1093AF30_Node** OldBuckets = Unknown14;
-    Unknown14 = new(0, 0, 0, 0, 0) Class_1093AF30_Node*[Size];
-    Unknown0C = Size;
-    Unknown08 = 0;
+    int OldSize = m_BucketCount;
+    Class_1093AF30_Node** OldBuckets = m_Buckets;
+    m_Buckets = new(0, 0, 0, 0, 0) Class_1093AF30_Node*[Size];
+    m_BucketCount = Size;
+    m_BucketBits = 0;
     while (Size >>= 1)
-        Unknown08++;
-    Unknown04 = 0;
-    Unknown00 = 0;
-    for (int i = 0; i < Unknown0C; i++)
-        Unknown14[i] = 0;
+        m_BucketBits++;
+    m_Count = 0;
+    m_Collisions = 0;
+    for (int i = 0; i < m_BucketCount; i++)
+        m_Buckets[i] = 0;
     for (int j = 0; j < OldSize; j++)
     {
         Class_1093AF30_Node* Node = OldBuckets[j];
         while (Node)
         {
-            FUN_1093af30(Node->Key, Node->Value);
+            Insert(Node->Key, Node->Value);
             Class_1093AF30_Node* Next = Node->Next;
             delete Node;
             Node = Next;

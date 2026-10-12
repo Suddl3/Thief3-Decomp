@@ -128,7 +128,7 @@ public:
     Class_1091CD10* Unknown120;
 };
 
-void FUN_10d3d990(void* Stream, int* Value);
+void WriteString(void* Stream, int* Value);
 
 // FUNCTION: 0x10AA6D90 ?FUN_10aa6d90@Class_10E822B0@@QAEX_N@Z
 void Class_10E822B0::FUN_10aa6d90(bool A)
@@ -163,8 +163,8 @@ void Class_10E822B0::FUN_10aa7100(bool A)
 // FUNCTION: 0x10AA7150 ?FUN_10aa7150@Class_10E6C128@@UAEXPAXHH@Z
 void Class_10E6C128::FUN_10aa7150(void* Stream, int A, int B)
 {
-    FUN_10d3d990(Stream, &Unknown24);
-    FUN_10d3d990(Stream, &Unknown20);
-    FUN_10d3d990(Stream, &Unknown10);
-    FUN_10d3d990(Stream, &Unknown1C);
+    WriteString(Stream, &Unknown24);
+    WriteString(Stream, &Unknown20);
+    WriteString(Stream, &Unknown10);
+    WriteString(Stream, &Unknown1C);
 }

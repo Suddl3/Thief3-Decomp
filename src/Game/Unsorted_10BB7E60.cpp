@@ -9,7 +9,7 @@ extern float DAT_10eafbdc;
 // FUNCTION: 0x10BB7E60 ?FUN_10bb7e60@Class_10BB7E60@@QAE_NXZ
 bool Class_10BB7E60::FUN_10bb7e60()
 {
-    float Value = Unknown08->FUN_10dbd510(0x1004b6)->FUN_10bbdb40();
+    float Value = Unknown08->FUN_10dbd510(0x1004b6)->GetFloat();
     if (Value > DAT_10eafbdc && Value < Unknown260)
         return true;
     return false;
@@ -18,7 +18,7 @@ bool Class_10BB7E60::FUN_10bb7e60()
 // FUNCTION: 0x10BB7EA0 ?FUN_10bb7ea0@Class_10BB7E60@@QAE_NXZ
 bool Class_10BB7E60::FUN_10bb7ea0()
 {
-    float Value = Unknown08->FUN_10dbd510(0x100838)->FUN_10bbdb40();
+    float Value = Unknown08->FUN_10dbd510(0x100838)->GetFloat();
     if (Value > DAT_10eafbdc && Value < Unknown260)
         return true;
     return false;

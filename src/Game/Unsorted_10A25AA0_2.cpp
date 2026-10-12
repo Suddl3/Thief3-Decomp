@@ -3,7 +3,7 @@
 
 #include "Game/Class_109081E0.h"
 
-unsigned int FUN_1090e9b0(const void* Data, int Length);
+unsigned int HashBytes(const void* Data, int Length);
 
 class Class_10A250D0_Field18
 {
@@ -20,43 +20,43 @@ public:
     Class_10A250D0_Node* Next;
 };
 
-// Copied from include/Game/Class_10A250D0.h with FUN_10a26430 added.
+// Copied from include/Game/Class_10A250D0.h with Set added.
 class Class_10A250D0
 {
 public:
-    unsigned int FUN_10a250d0(const Class_109081E0& Key, const Class_109081E0& Value);
-    void FUN_10a251b0(int Size);
-    unsigned int FUN_10a26430(const Class_109081E0& Key, const Class_109081E0& Value);
+    unsigned int Insert(const Class_109081E0& Key, const Class_109081E0& Value);
+    void Rehash(int Size);
+    unsigned int Set(const Class_109081E0& Key, const Class_109081E0& Value);
 
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    bool Unknown10;
+    int m_Collisions;
+    int m_Count;
+    int m_BucketBits;
+    int m_BucketCount;
+    bool m_FixedSize;
     char Pad11[0x3];
-    Class_10A250D0_Node** Unknown14;
-    Class_10A250D0_Field18 Unknown18;
+    Class_10A250D0_Node** m_Buckets;
+    Class_10A250D0_Field18 m_KeyTraits;
 };
 
-// FUNCTION: 0x10A26430 ?FUN_10a26430@Class_10A250D0@@QAEIABVClass_109081E0@@0@Z
-unsigned int Class_10A250D0::FUN_10a26430(const Class_109081E0& Key, const Class_109081E0& Value)
+// FUNCTION: 0x10A26430 ?Set@Class_10A250D0@@QAEIABVClass_109081E0@@0@Z
+unsigned int Class_10A250D0::Set(const Class_109081E0& Key, const Class_109081E0& Value)
 {
     unsigned int Index;
     {
         const void* Data;
         int Length;
-        Unknown18.Virtual0(Key, &Data, &Length);
-        Index = FUN_1090e9b0(Data, Length) & ((1 << Unknown08) - 1);
+        m_KeyTraits.Virtual0(Key, &Data, &Length);
+        Index = HashBytes(Data, Length) & ((1 << m_BucketBits) - 1);
     }
-    if (!Unknown14)
+    if (!m_Buckets)
         return (unsigned int)-1;
-    for (Class_10A250D0_Node* Node = Unknown14[Index]; Node; Node = Node->Next)
+    for (Class_10A250D0_Node* Node = m_Buckets[Index]; Node; Node = Node->Next)
     {
-        if (Unknown18.Virtual1(Key, Node->Key) == 0)
+        if (m_KeyTraits.Virtual1(Key, Node->Key) == 0)
         {
             Node->Value = Value;
             return Index;
         }
     }
-    return FUN_10a250d0(Key, Value);
+    return Insert(Key, Value);
 }

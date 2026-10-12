@@ -41,7 +41,7 @@ Class_10A87C00::~Class_10A87C00()
         Count--;
         delete Node;
     }
-    Unknown0C.FUN_10a86490(0x40);
+    Unknown0C.Reset(0x40);
 }
 
 // FUNCTION: 0x10A87F40 ?FUN_10a87f40@Class_10A87F40@@QAEXXZ

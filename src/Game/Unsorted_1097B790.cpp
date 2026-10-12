@@ -46,8 +46,8 @@ void Class_1097B790::FUN_1097b790(Struct_1097B790* A)
     }
 }
 
-// FUNCTION: 0x1097C880 ?FUN_1097c880@Class_1097CBE0@@QAEXH@Z
-void Class_1097CBE0::FUN_1097c880(int Size)
+// FUNCTION: 0x1097C880 ?Clear@Class_1097CBE0@@QAEXH@Z
+void Class_1097CBE0::Clear(int Size)
 {
     for (int i = 0; i < Unknown0C; i++)
     {

@@ -3,9 +3,9 @@
 #include "Game/Class_1090A780.h"
 #include "Game/Class_10AB3800.h"
 
-void FUN_10d3d2d0(void* A, int B);
+void WriteInt(void* A, int B);
 
-void FUN_10d3d990(void* Stream, int* Value);
+void WriteString(void* Stream, int* Value);
 
 class Class_10E6DA1C
 {
@@ -24,8 +24,8 @@ public:
 // FUNCTION: 0x10AAAFB0 ?WriteFields@Class_10E6DA1C@@UAEXPAXHH@Z
 void Class_10E6DA1C::WriteFields(void* A, int B, int C)
 {
-    FUN_10d3d2d0(A, Unknown08);
-    FUN_10d3d990(A, &Unknown0C);
-    FUN_10d3d990(A, (int*)&Unknown10.FUN_10ab3800());
-    FUN_10d3d990(A, (int*)Unknown10.FUN_10ab37c0());
+    WriteInt(A, Unknown08);
+    WriteString(A, &Unknown0C);
+    WriteString(A, (int*)&Unknown10.FUN_10ab3800());
+    WriteString(A, (int*)Unknown10.FUN_10ab37c0());
 }

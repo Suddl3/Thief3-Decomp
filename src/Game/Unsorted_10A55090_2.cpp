@@ -32,7 +32,7 @@ extern void* DAT_10e68f94[];
 class Class_10E68F9C
 {
 public:
-    Class_10E68F9C* FUN_10a58420();
+    Class_10E68F9C* Init();
 
     void** Unknown00;        // +0x00: DAT_10e68f9c
     float Unknown04;
@@ -138,8 +138,8 @@ void FUN_10a58320()
     FUN_10a581b0();
 }
 
-// FUNCTION: 0x10A58420 ?FUN_10a58420@Class_10E68F9C@@QAEPAV1@XZ
-Class_10E68F9C* Class_10E68F9C::FUN_10a58420()
+// FUNCTION: 0x10A58420 ?Init@Class_10E68F9C@@QAEPAV1@XZ
+Class_10E68F9C* Class_10E68F9C::Init()
 {
     Unknown04 = 1.0f;
     Unknown08 = 0;

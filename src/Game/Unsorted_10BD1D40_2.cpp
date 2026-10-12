@@ -188,5 +188,5 @@ Class_10E933B8* Class_10E933B8::FUN_10bd1e70(int A, int B)
 // FUNCTION: 0x10BD2D10 ?FUN_10bd2d10@Class_10E93878@@UAENXZ
 double Class_10E93878::FUN_10bd2d10()
 {
-    return cos(Unknown04->Unknown08->FUN_10dbd510(0x100493)->FUN_10bbdb40() * 0.017453292519943295);
+    return cos(Unknown04->Unknown08->FUN_10dbd510(0x100493)->GetFloat() * 0.017453292519943295);
 }

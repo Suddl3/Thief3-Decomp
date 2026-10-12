@@ -21,7 +21,7 @@ void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D
 
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
-unsigned int FUN_1090e9b0(const void* Data, int Length);
+unsigned int HashBytes(const void* Data, int Length);
 
 // FUNCTION: 0x10C49260 ?FUN_10c49260@Class_10C49100@@QAEXH@Z
 void Class_10C49100::FUN_10c49260(int Size)
@@ -56,5 +56,5 @@ void Class_10C49100::FUN_10c49260(int Size)
 void Class_10E9BBC0::FUN_10c49860(Struct_10C49860* A)
 {
     int Key = A->Unknown04;
-    Unknown04.FUN_10d3f830(&Key);
+    m_Entries.FUN_10d3f830(&Key);
 }

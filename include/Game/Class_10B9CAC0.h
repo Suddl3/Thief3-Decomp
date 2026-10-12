@@ -13,17 +13,17 @@ class Class_10B9CAC0 : public Class_10B9E410
 public:
     bool FUN_10b9d0c0(int A);
     bool FUN_10b9d0e0(int A);
-    Class_10BC9D40* FUN_10b9cac0(int A);
-    Class_10BC9D40* FUN_10b9cac0();
+    Class_10BC9D40* GetCurrent(int A);
+    Class_10BC9D40* GetCurrent();
     int FUN_10b9d040(int A, int B);
-    void FUN_10b9d330(int A);
+    void NotifyAllyKilled(int A);
 
     char Pad01[0xb];
     char Pad47[0x1];
     Class_10BB8300* Unknown0C;
-    int Unknown10;
+    int m_Count;
     char Unknown14[4];
-    Class_10BC9D40** Unknown18;
+    Class_10BC9D40** m_Stack;
 };
 
 #endif // GAME_CLASS_10B9CAC0_H

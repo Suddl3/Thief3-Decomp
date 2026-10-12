@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10A84610_Unknown10.h"
 
-void FUN_10d3d2d0(void* Stream, int Value);
+void WriteInt(void* Stream, int Value);
 
 class Class_10E6C364
 {
@@ -20,11 +20,11 @@ public:
 // FUNCTION: 0x10A845A0 ?FUN_10a845a0@Class_10E6C364@@UAEXPAXHH@Z
 void Class_10E6C364::FUN_10a845a0(void* Stream, int A, int B)
 {
-    FUN_10d3d2d0(Stream, Unknown04);
-    FUN_10d3d2d0(Stream, Unknown08);
+    WriteInt(Stream, Unknown04);
+    WriteInt(Stream, Unknown08);
     for (int i = 0; i < Unknown08; i++)
     {
-        FUN_10d3d2d0(Stream, Unknown10[i]->Virtual1());
+        WriteInt(Stream, Unknown10[i]->Virtual1());
         Unknown10[i]->Virtual2(Stream, A, B);
     }
 }

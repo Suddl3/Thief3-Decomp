@@ -11,9 +11,9 @@ public:
     unsigned long Value;
 };
 
-void FUN_10d3d2d0(void* A, int B);
+void WriteInt(void* A, int B);
 
-void FUN_10d3d990(void* Stream, int* Value);
+void WriteString(void* Stream, int* Value);
 
 class cTriggerByteEnumParam
 {
@@ -38,6 +38,6 @@ public:
 // FUNCTION: 0x10A8C390 ?Write@cTriggerByteEnumParam@@UAEXHPAX@Z
 void cTriggerByteEnumParam::Write(int A, void* B)
 {
-    FUN_10d3d2d0(B, m_Index);
-    FUN_10d3d990(B, (int*)&m_Name.FUN_10af9730());
+    WriteInt(B, m_Index);
+    WriteString(B, (int*)&m_Name.FUN_10af9730());
 }

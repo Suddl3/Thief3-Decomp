@@ -22,11 +22,11 @@ public:
     virtual void Virtual2();
     virtual void Virtual3();
     virtual int Virtual4();
-    virtual int FUN_10b48510(int A, int B);
+    virtual int OnAnimationEnd(int A, int B);
 };
 
-// FUNCTION: 0x10B48510 ?FUN_10b48510@Class_10E7EC40@@UAEHHH@Z
-int Class_10E7EC40::FUN_10b48510(int A, int B)
+// FUNCTION: 0x10B48510 ?OnAnimationEnd@Class_10E7EC40@@UAEHHH@Z
+int Class_10E7EC40::OnAnimationEnd(int A, int B)
 {
     if (B == 0x41)
     {

@@ -40,14 +40,14 @@ public:
     virtual void* Virtual12(void* A);
 };
 
-// FUNCTION: 0x10B229C0 ?FUN_10b229c0@Class_10B22D60@@QAEXPAPAXH@Z
-void Class_10B22D60::FUN_10b229c0(void** A, int B)
+// FUNCTION: 0x10B229C0 ?SetSlot@Class_10B22D60@@QAEXPAPAXH@Z
+void Class_10B22D60::SetSlot(void** A, int B)
 {
     char Local[0x14];
-    ((Class_10B22D60_Unknown08*)*A)->Virtual3(Unknown04);
-    *A = Unknown08[B];
-    ((Class_10B22D60_Unknown08*)*A)->Virtual2(Unknown04);
-    DAT_10f46da0->Virtual5(0x4a, Unknown04, -1, 0);
+    ((Class_10B22D60_Unknown08*)*A)->Virtual3(m_Body);
+    *A = m_Slots[B];
+    ((Class_10B22D60_Unknown08*)*A)->Virtual2(m_Body);
+    DAT_10f46da0->Virtual5(0x4a, m_Body, -1, 0);
     if (*A == Unknown90)
     {
         FUN_10b190e0()->FUN_10de9b20(((Class_10B22D60_Unknown08*)*A)->Virtual12(Local));

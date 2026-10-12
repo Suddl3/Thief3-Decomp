@@ -37,10 +37,10 @@ float Class_10919CB0::FUN_10919cb0(unsigned char A, unsigned char B)
     return (int)Result;
 }
 
-// FUNCTION: 0x1091C820 ?FUN_1091c820@Class_1091C820@@QAEXXZ
-void Class_1091C820::FUN_1091c820()
+// FUNCTION: 0x1091C820 ?Free@Class_1091C820@@QAEXXZ
+void Class_1091C820::Free()
 {
-    FUN_1091b370(0x40);
+    Clear(0x40);
     ::operator delete(Unknown14);
     Unknown04 = 0;
     Unknown0C = 0;

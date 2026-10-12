@@ -11,7 +11,7 @@ class Class_10A163F0
 {
 public:
     int FUN_10a15ef0(int* Key, Struct_10A16B60* Value);
-    void FUN_10a15ff0(int Size);
+    void Rehash(int Size);
 
     int Unknown00;
     int Unknown04;
@@ -21,8 +21,8 @@ public:
     Class_10A163F0_Node** Unknown14;
 };
 
-// FUNCTION: 0x10A15FF0 ?FUN_10a15ff0@Class_10A163F0@@QAEXH@Z
-void Class_10A163F0::FUN_10a15ff0(int Size)
+// FUNCTION: 0x10A15FF0 ?Rehash@Class_10A163F0@@QAEXH@Z
+void Class_10A163F0::Rehash(int Size)
 {
     int OldSize = Unknown0C;
     Class_10A163F0_Node** OldBuckets = Unknown14;

@@ -8,9 +8,9 @@
 // FUNCTION: 0x109E7C30 ?FUN_109e7c30@Class_109E7C30@@QAEXH@Z
 void Class_109E7C30::FUN_109e7c30(int Size)
 {
-    for (int i = 0; i < Unknown0C; i++)
+    for (int i = 0; i < m_BucketCount; i++)
     {
-        Class_109E6520_Node* Node = Unknown14[i];
+        Class_109E6520_Node* Node = m_Buckets[i];
         while (Node)
         {
             Class_109E6520_Node* Next = Node->Next;
@@ -19,11 +19,11 @@ void Class_109E7C30::FUN_109e7c30(int Size)
             Node = Next;
         }
     }
-    Unknown04 = 0;
-    Unknown0C = 0;
-    Unknown00 = 0;
-    ::operator delete(Unknown14);
-    Unknown14 = 0;
-    if (!Unknown10)
-        FUN_109e6600(Size);
+    m_Count = 0;
+    m_BucketCount = 0;
+    m_Collisions = 0;
+    ::operator delete(m_Buckets);
+    m_Buckets = 0;
+    if (!m_FixedSize)
+        Rehash(Size);
 }

@@ -12,7 +12,7 @@ public:
     virtual void FUN_10a3a300(int A);
     virtual void Virtual1();
     virtual void Virtual2();
-    virtual FVector FUN_10a3a950();
+    virtual FVector GetMidpoint();
     virtual void Virtual4();
     virtual void Virtual5();
     virtual void Virtual6();

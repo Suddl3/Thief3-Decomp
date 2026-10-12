@@ -8,5 +8,5 @@ void Class_10B22D60::FUN_10b22bd0(int A)
 {
     int Value = Unknown90->Virtual8(A);
     if (Value != Unknown90->Virtual4())
-        FUN_10b229c0((void**)&Unknown90, Value);
+        SetSlot((void**)&Unknown90, Value);
 }

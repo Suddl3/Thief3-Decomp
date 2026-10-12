@@ -6,14 +6,14 @@
 class Class_10B25D60
 {
 public:
-    int FUN_10b253e0(int* A);
-    int FUN_10b254f0(int* A);
-    void FUN_10b25d60();
+    int FindNextFromListA(int* A);
+    int FindNextFromListB(int* A);
+    void Advance();
 
     char Unknown00[4];
-    int Unknown04;
+    int m_Index;
     char Unknown08[8];
-    int Unknown10;
+    int m_InListA;
 };
 
 #endif // GAME_CLASS_10B25D60_H

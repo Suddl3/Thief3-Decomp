@@ -6,12 +6,12 @@
 class Class_1095A760
 {
 public:
-    void FUN_1095a5a0(int A);
-    void FUN_1095a760();
+    void SetCount(int A);
+    void Clear();
 
-    int Unknown00;
-    int Unknown04;
-    void* Unknown08;
+    int m_Count;
+    int m_CapacityBytes;
+    void* m_Elements;
 };
 
 #endif // GAME_CLASS_1095A760_H

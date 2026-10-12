@@ -138,11 +138,11 @@ Class_109081E0 FUN_1090a660(const char* Text);
 class Class_10E858D0
 {
 public:
-    Class_109081E0 FUN_10b69050();
+    Class_109081E0 GetMissionCompleteTitle();
 };
 
-// FUNCTION: 0x10B69050 ?FUN_10b69050@Class_10E858D0@@QAE?AVClass_109081E0@@XZ
-Class_109081E0 Class_10E858D0::FUN_10b69050()
+// FUNCTION: 0x10B69050 ?GetMissionCompleteTitle@Class_10E858D0@@QAE?AVClass_109081E0@@XZ
+Class_109081E0 Class_10E858D0::GetMissionCompleteTitle()
 {
     Class_109081E0 Local = FUN_1090a660("<string=T_TabScreenMissionCompleteTitle>");
     return Local;

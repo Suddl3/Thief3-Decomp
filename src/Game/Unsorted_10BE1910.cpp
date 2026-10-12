@@ -75,8 +75,8 @@ struct Struct_10BE1910
 // FUNCTION: 0x10BE1910 ?FUN_10be1910@Class_10BE1910@@QAEXXZ
 void Class_10BE1910::FUN_10be1910()
 {
-    float Min = Unknown04->Unknown08->FUN_10dbd510(0x1006dd)->FUN_10bbdb40();
-    float Max = Unknown04->Unknown08->FUN_10dbd510(0x1006de)->FUN_10bbdb40();
+    float Min = Unknown04->Unknown08->FUN_10dbd510(0x1006dd)->GetFloat();
+    float Max = Unknown04->Unknown08->FUN_10dbd510(0x1006de)->GetFloat();
     Unknown4C = Min + (Max - Min) * appFrand();
 }
 

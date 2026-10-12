@@ -25,13 +25,13 @@ public:
 
 Class_10B1B8A0* FUN_10b1b600();
 
-// FUNCTION: 0x10B25240 ?FUN_10b25240@Class_10B25D90@@QAEHPAH@Z
-int Class_10B25D90::FUN_10b25240(int* A)
+// FUNCTION: 0x10B25240 ?FindPrevFromListA@Class_10B25D90@@QAEHPAH@Z
+int Class_10B25D90::FindPrevFromListA(int* A)
 {
     *A = 1;
-    if (Unknown04 > 0)
+    if (m_Index > 0)
     {
-        for (int Index = Unknown04 - 1; Index >= 0; Index--)
+        for (int Index = m_Index - 1; Index >= 0; Index--)
         {
             if (FUN_10b1b600()->ListA[Index].Count > 0)
                 return Index;
@@ -44,7 +44,7 @@ int Class_10B25D90::FUN_10b25240(int* A)
             return Index;
     }
     *A = 1;
-    for (int Index = FUN_10b1b600()->ListA.Num() - 1; Index > Unknown04; Index--)
+    for (int Index = FUN_10b1b600()->ListA.Num() - 1; Index > m_Index; Index--)
     {
         if (FUN_10b1b600()->ListA[Index].Count > 0)
             return Index;
@@ -52,13 +52,13 @@ int Class_10B25D90::FUN_10b25240(int* A)
     return 0;
 }
 
-// FUNCTION: 0x10B25310 ?FUN_10b25310@Class_10B25D90@@QAEHPAH@Z
-int Class_10B25D90::FUN_10b25310(int* A)
+// FUNCTION: 0x10B25310 ?FindPrevFromListB@Class_10B25D90@@QAEHPAH@Z
+int Class_10B25D90::FindPrevFromListB(int* A)
 {
     *A = 0;
-    if (Unknown04 > 0)
+    if (m_Index > 0)
     {
-        for (int Index = Unknown04 - 1; Index > 0; Index--)
+        for (int Index = m_Index - 1; Index > 0; Index--)
         {
             if (FUN_10b1b600()->ListB[Index].Count > 0)
                 return Index;
@@ -71,7 +71,7 @@ int Class_10B25D90::FUN_10b25310(int* A)
             return Index;
     }
     *A = 0;
-    for (int Index = FUN_10b1b600()->ListB.Num() - 1; Index > Unknown04; Index--)
+    for (int Index = FUN_10b1b600()->ListB.Num() - 1; Index > m_Index; Index--)
     {
         if (FUN_10b1b600()->ListB[Index].Count > 0)
             return Index;
@@ -79,13 +79,13 @@ int Class_10B25D90::FUN_10b25310(int* A)
     return 0;
 }
 
-// FUNCTION: 0x10B253E0 ?FUN_10b253e0@Class_10B25D60@@QAEHPAH@Z
-int Class_10B25D60::FUN_10b253e0(int* A)
+// FUNCTION: 0x10B253E0 ?FindNextFromListA@Class_10B25D60@@QAEHPAH@Z
+int Class_10B25D60::FindNextFromListA(int* A)
 {
     *A = 1;
-    if (Unknown04 < FUN_10b1b600()->ListA.Num() - 1)
+    if (m_Index < FUN_10b1b600()->ListA.Num() - 1)
     {
-        for (int Index = Unknown04 + 1; Index < FUN_10b1b600()->ListA.Num(); Index++)
+        for (int Index = m_Index + 1; Index < FUN_10b1b600()->ListA.Num(); Index++)
         {
             if (FUN_10b1b600()->ListA[Index].Count > 0)
                 return Index;
@@ -98,7 +98,7 @@ int Class_10B25D60::FUN_10b253e0(int* A)
             return Index;
     }
     *A = 1;
-    for (int Index = 0; Index < Unknown04; Index++)
+    for (int Index = 0; Index < m_Index; Index++)
     {
         if (FUN_10b1b600()->ListA[Index].Count > 0)
             return Index;
@@ -106,13 +106,13 @@ int Class_10B25D60::FUN_10b253e0(int* A)
     return 0;
 }
 
-// FUNCTION: 0x10B254F0 ?FUN_10b254f0@Class_10B25D60@@QAEHPAH@Z
-int Class_10B25D60::FUN_10b254f0(int* A)
+// FUNCTION: 0x10B254F0 ?FindNextFromListB@Class_10B25D60@@QAEHPAH@Z
+int Class_10B25D60::FindNextFromListB(int* A)
 {
     *A = 0;
-    if (Unknown04 < FUN_10b1b600()->ListB.Num() - 1)
+    if (m_Index < FUN_10b1b600()->ListB.Num() - 1)
     {
-        for (int Index = Unknown04 + 1; Index < FUN_10b1b600()->ListB.Num(); Index++)
+        for (int Index = m_Index + 1; Index < FUN_10b1b600()->ListB.Num(); Index++)
         {
             if (FUN_10b1b600()->ListB[Index].Count > 0)
                 return Index;
@@ -125,7 +125,7 @@ int Class_10B25D60::FUN_10b254f0(int* A)
             return Index;
     }
     *A = 0;
-    for (int Index = 1; Index < Unknown04; Index++)
+    for (int Index = 1; Index < m_Index; Index++)
     {
         if (FUN_10b1b600()->ListB[Index].Count > 0)
             return Index;

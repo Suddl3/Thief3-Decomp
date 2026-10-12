@@ -11,7 +11,7 @@ public:
     unsigned long Value;
 };
 
-void FUN_10d3d990(void* Stream, int* Value);
+void WriteString(void* Stream, int* Value);
 
 class Class_10E6C77C
 {
@@ -34,5 +34,5 @@ public:
 // FUNCTION: 0x10A8D0A0 ?FUN_10a8d0a0@Class_10E6C77C@@UAEXHPAX@Z
 void Class_10E6C77C::FUN_10a8d0a0(int A, void* Stream)
 {
-    FUN_10d3d990(Stream, (int*)&Unknown04.FUN_10af9730());
+    WriteString(Stream, (int*)&Unknown04.FUN_10af9730());
 }

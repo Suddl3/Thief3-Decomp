@@ -42,16 +42,16 @@ class Class_10E9CA9C
 {
 public:
     virtual void Virtual0();
-    virtual void __stdcall FUN_10c62760(const char* Text);
+    virtual void __stdcall SetText(const char* Text);
     virtual void FUN_10c61c20(Class_10C61C20_Param* p1);
 
     char Unknown04;
     char Pad05[0x3];
-    Class_109081E0 Unknown08;
+    Class_109081E0 m_Name;
 };
 
-// FUNCTION: 0x10C62760 ?FUN_10c62760@Class_10E9CA9C@@UAGXPBD@Z
-void __stdcall Class_10E9CA9C::FUN_10c62760(const char* Text)
+// FUNCTION: 0x10C62760 ?SetText@Class_10E9CA9C@@UAGXPBD@Z
+void __stdcall Class_10E9CA9C::SetText(const char* Text)
 {
-    Unknown08 = Text;
+    m_Name = Text;
 }

@@ -44,5 +44,5 @@ Class_10E96810::Class_10E96810(int A, int B)
     *(void**)this = DAT_10e96810;
     Unknown6C = 0;
     Unknown04->Unknown08->FUN_10ba9f70(1);
-    Unknown68 = Unknown04->Unknown08->FUN_10dbd510()->FUN_10bbdb40(0x40100717);
+    Unknown68 = Unknown04->Unknown08->FUN_10dbd510()->GetFloat(0x40100717);
 }

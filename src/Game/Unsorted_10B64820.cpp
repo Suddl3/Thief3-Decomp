@@ -296,7 +296,7 @@ public:
 void Class_10E84730::FUN_10b64ce0()
 {
     Virtual56(0);
-    ((Class_10E81DE8*)this)->FUN_10b45d10();
+    ((Class_10E81DE8*)this)->Close();
     if (Unknown1B0)
     {
         Class_10B28330* Window;

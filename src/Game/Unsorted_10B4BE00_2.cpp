@@ -37,7 +37,7 @@ public:
     virtual void Virtual2();
     virtual void Virtual3();
     virtual int Virtual4();
-    virtual int FUN_10b4cc70(int A, int B);
+    virtual int OnAnimationEnd(int A, int B);
 
     char Unknown04[0xC];
     int Unknown10;
@@ -71,8 +71,8 @@ void Class_10E7E778::FUN_10b4be90(AGarrett* Param)
     FUN_10b3adc0(Param);
 }
 
-// FUNCTION: 0x10B4CC70 ?FUN_10b4cc70@Class_10E7EA00@@UAEHHH@Z
-int Class_10E7EA00::FUN_10b4cc70(int A, int B)
+// FUNCTION: 0x10B4CC70 ?OnAnimationEnd@Class_10E7EA00@@UAEHHH@Z
+int Class_10E7EA00::OnAnimationEnd(int A, int B)
 {
     if (B == 0x6e)
         return Virtual4();

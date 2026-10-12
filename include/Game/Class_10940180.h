@@ -8,7 +8,7 @@ struct Struct_10940180;
 class Class_10940180
 {
 public:
-    void FUN_10940180(Struct_10940180* P);
+    void Dispatch(Struct_10940180* P);
     void FUN_1093fed0(Struct_10940180* P);
     void FUN_1093ff60(Struct_10940180* P);
 

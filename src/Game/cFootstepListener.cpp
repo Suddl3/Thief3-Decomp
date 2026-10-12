@@ -1,10 +1,10 @@
-// Game/Class_10E6B660.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/cFootstepListener.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Engine/EngineClasses.h"
 #include "Game/Class_10AF7F80.h"
 #include "Game/Class_10BA9FD0.h"
 #include "Game/Class_10BB7600.h"
-#include "Game/Class_10E6B660.h"
+#include "Game/cFootstepListener.h"
 
 class Class_10BABED0;
 
@@ -46,8 +46,8 @@ public:
     int Unknown44;
 };
 
-// FUNCTION: 0x10A6AC80 ?FUN_10a6ac80@Class_10E6B660@@QAEXHHH@Z
-void Class_10E6B660::FUN_10a6ac80(int A, int B, int C)
+// FUNCTION: 0x10A6AC80 ?HandleNoteTrack@cFootstepListener@@QAEXHHH@Z
+void cFootstepListener::HandleNoteTrack(int A, int B, int C)
 {
     if (A)
     {

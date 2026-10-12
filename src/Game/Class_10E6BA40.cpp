@@ -13,7 +13,7 @@ struct Struct_10A6F160
 int Class_10E6BA40::FUN_10a6f160(int Key, float Value)
 {
     Struct_10A6F160* Entry;
-    Unknown04.FUN_10a6f0c0(&Entry, &Key);
+    m_Entries.FUN_10a6f0c0(&Entry, &Key);
     if (Value - Entry->Unknown0C >= 1.0f)
     {
         Entry->Unknown0C = Value;

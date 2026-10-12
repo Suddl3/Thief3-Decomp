@@ -4,13 +4,13 @@
 #include "Game/cTriggerOperatorParam.h"
 #include "Game/Class_109081E0.h"
 
-void FUN_10d3ddc0(void* Reader, int* Out);
+void ReadString(void* Reader, int* Out);
 
 // FUNCTION: 0x10A8D3C0 ?ReadValue@cTriggerOperatorParam@@UAE_NHPAX@Z
 bool cTriggerOperatorParam::ReadValue(int A, void* Reader)
 {
     Class_109081E0 Text;
-    FUN_10d3ddc0(Reader, (int*)&Text);
+    ReadString(Reader, (int*)&Text);
     Virtual4(&Text);
     return true;
 }

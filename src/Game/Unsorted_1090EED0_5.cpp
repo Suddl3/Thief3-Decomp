@@ -8,9 +8,9 @@
 // FUNCTION: 0x1090FC80 ?FUN_1090fc80@Class_1090FF70@@QAEXH@Z
 void Class_1090FF70::FUN_1090fc80(int Size)
 {
-    for (int i = 0; i < Unknown0C; i++)
+    for (int i = 0; i < m_Size; i++)
     {
-        Class_1090F080_Node* Node = Unknown14[i];
+        Class_1090F080_Node* Node = m_Table[i];
         while (Node)
         {
             Class_1090F080_Node* Next = Node->Next;
@@ -19,11 +19,11 @@ void Class_1090FF70::FUN_1090fc80(int Size)
             Node = Next;
         }
     }
-    Unknown04 = 0;
-    Unknown0C = 0;
-    Unknown00 = 0;
-    ::operator delete(Unknown14);
-    Unknown14 = 0;
-    if (!Unknown10)
-        FUN_1090f1e0(Size);
+    m_Count = 0;
+    m_Size = 0;
+    m_Collisions = 0;
+    ::operator delete(m_Table);
+    m_Table = 0;
+    if (!m_NoResize)
+        Rehash(Size);
 }

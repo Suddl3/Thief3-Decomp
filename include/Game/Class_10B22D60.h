@@ -12,17 +12,17 @@ class Class_10B22D60
 public:
     void FUN_10b22c80();
     void FUN_10b22c10();
-    void FUN_10b229c0(void** A, int B);
+    void SetSlot(void** A, int B);
     int FUN_10b22ac0();
-    void FUN_10b22b90(int A);
+    void UpdateSlot(int A);
     Class_10B22D60_Slot** FUN_10b22940(int A);
     void FUN_10b22bd0(int A);
     void FUN_10b22d60();
-    void FUN_10b22ce0(int A);
+    void HandleBodyCarryNotification(int A);
 
     char Unknown00[4];
-    int Unknown04;
-    void* Unknown08[0x22];
+    int m_Body;
+    void* m_Slots[0x22];
     Class_10B22D60_Unknown90* Unknown90;
     Class_10B22D60_Unknown94* Unknown94;
 };

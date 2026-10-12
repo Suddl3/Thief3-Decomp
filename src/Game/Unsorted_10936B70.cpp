@@ -77,8 +77,8 @@ extern IDirect3DDevice8* GDirect3DDevice8;
 
 extern int DAT_10efefb8;
 
-// FUNCTION: 0x10936CF0 ?FUN_10936cf0@Class_109373D0@@QAEXXZ
-void Class_109373D0::FUN_10936cf0()
+// FUNCTION: 0x10936CF0 ?ResetTextureStages@Class_109373D0@@QAEXXZ
+void Class_109373D0::ResetTextureStages()
 {
     for (int i = 0; i < 4; i++)
     {

@@ -18,15 +18,15 @@ public:
     virtual void Virtual2();
     virtual void Virtual3();
     virtual void Virtual4();
-    virtual void FUN_10a68b80(int Index, const Struct_10A68B80& Value);
+    virtual void SetAt(int Index, const Struct_10A68B80& Value);
 
     int Unknown04;
     int Unknown08;
     int Unknown0C;
     int Unknown10;
-    int Unknown14;
+    int m_Items;
     int Unknown18;
-    Struct_10A68B80* Unknown1C;
+    Struct_10A68B80* m_Entries;
 };
 
 void FUN_10a68270(int A, int B, int C, int D, int E, int F);
@@ -44,10 +44,10 @@ struct Struct_10A68D80
 
 void FUN_10a68600(int A, int B, int C, int D, int E, int F);
 
-// FUNCTION: 0x10A68B80 ?FUN_10a68b80@Class_10E6B5A0@@UAEXHABUStruct_10A68B80@@@Z
-void Class_10E6B5A0::FUN_10a68b80(int Index, const Struct_10A68B80& Value)
+// FUNCTION: 0x10A68B80 ?SetAt@Class_10E6B5A0@@UAEXHABUStruct_10A68B80@@@Z
+void Class_10E6B5A0::SetAt(int Index, const Struct_10A68B80& Value)
 {
-    Unknown1C[Index] = Value;
+    m_Entries[Index] = Value;
     Unknown10++;
 }
 

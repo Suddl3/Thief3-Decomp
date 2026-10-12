@@ -7,8 +7,8 @@
 
 float appFrand();
 
-// FUNCTION: 0x10BB8E70 ?FUN_10bb8e70@Class_10BBA080@@QAEMXZ
-float Class_10BBA080::FUN_10bb8e70()
+// FUNCTION: 0x10BB8E70 ?GetRandomInRange@Class_10BBA080@@QAEMXZ
+float Class_10BBA080::GetRandomInRange()
 {
     float Min;
     float Max;

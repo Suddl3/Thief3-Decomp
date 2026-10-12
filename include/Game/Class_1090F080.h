@@ -11,38 +11,38 @@ class Class_1090F080_Node;
 class Class_1090F080
 {
 public:
-    unsigned int FUN_1090f080(const Class_109081E0& Key, const int& Value);
-    void FUN_1090f1e0(int Size);
-    bool FUN_1090fb70(const Class_109081E0& Key);
+    unsigned int Insert(const Class_109081E0& Key, const int& Value);
+    void Rehash(int Size);
+    bool Remove(const Class_109081E0& Key);
 
     union
     {
-        int Unknown00;
+        int m_Collisions;
         int Collisions;
     };
     union
     {
-        int Unknown04;
+        int m_Count;
         int Count;
     };
     union
     {
-        int Unknown08;
+        int m_Bits;
         int Bits;
     };
     union
     {
-        int Unknown0C;
+        int m_Size;
         int Size;
     };
-    bool Unknown10;
+    bool m_NoResize;
     char Pad11[0x3];
     union
     {
-        Class_1090F080_Node** Unknown14;
+        Class_1090F080_Node** m_Table;
         Class_1090F080_Node** Table;
     };
-    Class_1090F080_Field18 Unknown18;
+    Class_1090F080_Field18 m_KeyTraits;
 };
 
 #endif // GAME_CLASS_1090F080_H

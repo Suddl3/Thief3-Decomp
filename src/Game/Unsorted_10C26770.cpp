@@ -14,8 +14,8 @@ public:
     virtual void Virtual2();
     virtual void FUN_10c26920();
 
-    void FUN_10c265c0();
-    void FUN_10c26600();
+    void Register();
+    void Unregister();
 
     char Unknown04[0x20];
     float Unknown24;
@@ -48,8 +48,8 @@ void Class_10E992D4::FUN_10c26920()
     if (!Unknown34)
     {
         if (Unknown38 > 0)
-            FUN_10c265c0();
+            Register();
     }
     else if (Unknown38 == 0 && fabs(Unknown24) < DAT_10e49684 && fabs(Unknown28) < DAT_10e49684 && fabs(Unknown2C) < DAT_10e49684)
-        FUN_10c26600();
+        Unregister();
 }

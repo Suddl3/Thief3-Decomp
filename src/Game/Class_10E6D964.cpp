@@ -2,9 +2,9 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Object_10AA7BA0.h"
 
-void FUN_10d3ddc0(void* Stream, int* Value);
+void ReadString(void* Stream, int* Value);
 
-void FUN_10d3d3b0(void* Stream, int* Value);
+void ReadInt(void* Stream, int* Value);
 
 class Class_10F46D9C;
 
@@ -41,10 +41,10 @@ public:
 // FUNCTION: 0x10AA7B40 ?FUN_10aa7b40@Class_10E6D964@@UAEXPAXHH@Z
 void Class_10E6D964::FUN_10aa7b40(void* Stream, int Version, int B)
 {
-    FUN_10d3ddc0(Stream, &Unknown10);
+    ReadString(Stream, &Unknown10);
     int Key = 1;
     if (Version >= 7)
-        FUN_10d3d3b0(Stream, &Key);
+        ReadInt(Stream, &Key);
     Unknown08 = DAT_10f46d9c->Virtual3();
     Unknown08->Virtual17(Key, Stream, DAT_10f46d9c);
 }

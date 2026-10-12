@@ -40,26 +40,26 @@ int Class_10915210::FUN_10915810(const Class_1090A780& A, const Class_1090A780& 
     return Obj->FUN_109169e0(B);
 }
 
-// FUNCTION: 0x10915830 ?FUN_10915830@Class_10915830@@QAEXXZ
-void Class_10915830::FUN_10915830()
+// FUNCTION: 0x10915830 ?Free@Class_10915830@@QAEXXZ
+void Class_10915830::Free()
 {
-    FUN_109154f0(0x40);
-    ::operator delete(Unknown14);
-    Unknown04 = 0;
-    Unknown0C = 0;
-    Unknown14 = 0;
-    Unknown00 = 0;
+    Clear(0x40);
+    ::operator delete(m_Table);
+    m_Count = 0;
+    m_Size = 0;
+    m_Table = 0;
+    m_Collisions = 0;
 }
 
-// FUNCTION: 0x10916CA0 ?FUN_10916ca0@Class_10916CA0@@QAEXXZ
-void Class_10916CA0::FUN_10916ca0()
+// FUNCTION: 0x10916CA0 ?Free@Class_10916CA0@@QAEXXZ
+void Class_10916CA0::Free()
 {
-    FUN_10916b80(0x40);
-    ::operator delete(Unknown14);
-    Unknown04 = 0;
-    Unknown0C = 0;
-    Unknown14 = 0;
-    Unknown00 = 0;
+    Clear(0x40);
+    ::operator delete(m_Table);
+    m_Count = 0;
+    m_Size = 0;
+    m_Table = 0;
+    m_Collisions = 0;
 }
 
 // FUNCTION: 0x10917C50 ?FUN_10917c50@@YAXH@Z

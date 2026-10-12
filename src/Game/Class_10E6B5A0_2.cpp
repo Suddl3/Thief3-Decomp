@@ -9,16 +9,16 @@ public:
     virtual void Virtual1();
     virtual void Virtual2();
     virtual void Virtual3();
-    virtual void FUN_10a68bf0(int p1);
+    virtual void SetCount(int p1);
 
     char Unknown04[0xC];
     int Unknown10;
-    Class_10953AC0 Unknown14;
+    Class_10953AC0 m_Items;
 };
 
-// FUNCTION: 0x10A68BF0 ?FUN_10a68bf0@Class_10E6B5A0@@UAEXH@Z
-void Class_10E6B5A0::FUN_10a68bf0(int p1)
+// FUNCTION: 0x10A68BF0 ?SetCount@Class_10E6B5A0@@UAEXH@Z
+void Class_10E6B5A0::SetCount(int p1)
 {
-    Unknown14.FUN_10953ac0(p1);
+    m_Items.FUN_10953ac0(p1);
     Unknown10++;
 }

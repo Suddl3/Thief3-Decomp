@@ -5,9 +5,9 @@
 
 class Class_10E6C740_Member;
 
-void FUN_10d3d3b0(void* Reader, int* Out);
+void ReadInt(void* Reader, int* Out);
 
-void FUN_10d3ddc0(void* Reader, int* Out);
+void ReadString(void* Reader, int* Out);
 
 // cTriggerSuperEnumParam from include/Game/cTriggerSuperEnumParam.h, copied whole: slot 4 takes a string and slot 11 is this function.
 class cTriggerSuperEnumParam
@@ -36,12 +36,12 @@ bool cTriggerSuperEnumParam::Load(int A, void* Reader)
 {
     if (A < 8)
     {
-        FUN_10d3d3b0(Reader, &m_Value);
+        ReadInt(Reader, &m_Value);
         return true;
     }
     Class_109081E0 Text;
     m_Value = -1;
-    FUN_10d3ddc0(Reader, (int*)&Text);
+    ReadString(Reader, (int*)&Text);
     Virtual4(&Text);
     return true;
 }

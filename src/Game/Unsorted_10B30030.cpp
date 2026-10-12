@@ -71,11 +71,11 @@ public:
     virtual void Virtual56(int A);
 };
 
-// FUNCTION: 0x10B30030 ?FUN_10b30030@Class_10E7BB2C@@UAEXPBM@Z
-void Class_10E7BB2C::FUN_10b30030(const float* p1)
+// FUNCTION: 0x10B30030 ?SetValue@Class_10E7BB2C@@UAEXPBM@Z
+void Class_10E7BB2C::SetValue(const float* p1)
 {
-    Unknown18 = *p1;
-    Unknown1C = Unknown18 - Unknown14;
+    m_Value = *p1;
+    Unknown1C = m_Value - Unknown14;
 }
 
 // FUNCTION: 0x10B30190 ?FUN_10b30190@Class_10B30190@@QAE?AVClass_1090A780@@H@Z

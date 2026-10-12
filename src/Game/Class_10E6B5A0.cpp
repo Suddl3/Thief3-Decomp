@@ -15,17 +15,17 @@ public:
     virtual void Virtual0();
     virtual void Virtual1();
     virtual void Virtual2();
-    virtual int FUN_10a68bb0(const Struct_10A68BB0* Items, int Count);
+    virtual int SetItems(const Struct_10A68BB0* Items, int Count);
 
     char Unknown04[0xC];
     int Unknown10;
-    Class_10953AC0 Unknown14;
+    Class_10953AC0 m_Items;
 };
 
-// FUNCTION: 0x10A68BB0 ?FUN_10a68bb0@Class_10E6B5A0@@UAEHPBUStruct_10A68BB0@@H@Z
-int Class_10E6B5A0::FUN_10a68bb0(const Struct_10A68BB0* Items, int Count)
+// FUNCTION: 0x10A68BB0 ?SetItems@Class_10E6B5A0@@UAEHPBUStruct_10A68BB0@@H@Z
+int Class_10E6B5A0::SetItems(const Struct_10A68BB0* Items, int Count)
 {
-    Unknown14.FUN_10953ac0(Count);
-    memcpy(Unknown14.Unknown08, Items, Count * sizeof(Struct_10A68BB0));
+    m_Items.FUN_10953ac0(Count);
+    memcpy(m_Items.Unknown08, Items, Count * sizeof(Struct_10A68BB0));
     return ++Unknown10;
 }

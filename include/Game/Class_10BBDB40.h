@@ -10,13 +10,13 @@ class Class_1098E330;
 class Class_10BBDB40 : public Class_10BBDC30
 {
 public:
-    float FUN_10bbdb40();
+    float GetFloat();
     void FUN_10bbd460(int A, int B);
     void FUN_10bbd550(int A, int B);
     void FUN_10bbd640(int A, int B);
     void FUN_10bbd730(int A, int B);
     bool FUN_10bbd870(int A, float* B);
-    float FUN_10bbdb40(int A);
+    float GetFloat(int A);
     float FUN_10bbdc80(int A);
     unsigned char FUN_10bbdb80(int A);
     unsigned char FUN_10bbdb80();

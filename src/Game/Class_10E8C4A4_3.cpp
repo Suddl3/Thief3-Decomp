@@ -4,7 +4,7 @@
 #include "Game/Object_10C12B50.h"
 #include "Game/Class_109081E0.h"
 
-void FUN_10d3d990(void* Stream, int* Value);
+void WriteString(void* Stream, int* Value);
 
 class Class_10E8C4A4
 {
@@ -28,5 +28,5 @@ public:
 // FUNCTION: 0x10C12B50 ?FUN_10c12b50@Class_10E8C4A4@@UAEXHPAX@Z
 void Class_10E8C4A4::FUN_10c12b50(int A, void* Stream)
 {
-    FUN_10d3d990(Stream, (int*)&Unknown08->Virtual25());
+    WriteString(Stream, (int*)&Unknown08->Virtual25());
 }

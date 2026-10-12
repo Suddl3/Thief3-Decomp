@@ -3,11 +3,11 @@
 #include "Game/Class_109373D0.h"
 #include "Game/Class_10937400.h"
 
-class Class_10936AC0 : public Class_10937400
+class cD3DStateCache : public Class_10937400
 {
 };
 
-extern Class_10936AC0* DAT_10f31be0;
+extern cD3DStateCache* DAT_10f31be0;
 
 class Class_10952690
 {
@@ -54,7 +54,7 @@ bool Class_10E49F90::FUN_10936240(Class_109526D0* Item, int A)
 {
     if (Item && (Item->Unknown30 & 4) && (Item->Unknown34 & 8) && !Item->Unknown4E)
     {
-        DAT_10f31be0->FUN_109373d0(Unknown114);
+        DAT_10f31be0->SetVertexShader(Unknown114);
         DAT_10f31be0->FUN_10937400(Unknown28C);
         Item->FUN_109526d0();
         Item->FUN_10952690();

@@ -54,16 +54,16 @@ public:
     virtual int FUN_10a6f160(int Key, float Value);
     virtual void Virtual2();
     virtual void Virtual3();
-    virtual void FUN_10a6fd60(int A, int Key);
+    virtual void RemoveEntry(int A, int Key);
 
-    stdext::hash_map<int, Struct_10E6BA40_Value> Unknown04;
+    stdext::hash_map<int, Struct_10E6BA40_Value> m_Entries;
 };
 
-// FUNCTION: 0x10A6FD60 ?FUN_10a6fd60@Class_10E6BA40@@UAEXHH@Z
-void Class_10E6BA40::FUN_10a6fd60(int A, int Key)
+// FUNCTION: 0x10A6FD60 ?RemoveEntry@Class_10E6BA40@@UAEXHH@Z
+void Class_10E6BA40::RemoveEntry(int A, int Key)
 {
-    stdext::hash_map<int, Struct_10E6BA40_Value>::iterator It = Unknown04.find(Key);
-    if (It == Unknown04.end())
+    stdext::hash_map<int, Struct_10E6BA40_Value>::iterator It = m_Entries.find(Key);
+    if (It == m_Entries.end())
         return;
     if (It->second.Unknown04)
     {
@@ -72,5 +72,5 @@ void Class_10E6BA40::FUN_10a6fd60(int A, int Key)
         Event.Unknown04 = A;
         DAT_10f46da0->Virtual5(0x29, Key, &Event, 0);
     }
-    Unknown04.erase(Key);
+    m_Entries.erase(Key);
 }

@@ -59,13 +59,13 @@ public:
 
 extern IDirect3DDevice8* GDirect3DDevice8;
 
-class Class_10936AC0
+class cD3DStateCache
 {
 public:
-    void FUN_10937010();
+    void ResetTextureStagesBiased();
 };
 
-extern Class_10936AC0* DAT_10f31be0;
+extern cD3DStateCache* DAT_10f31be0;
 
 class Class_10955C80
 {
@@ -100,7 +100,7 @@ public:
 // FUNCTION: 0x109568F0 ?FUN_109568f0@Class_109568F0@@QAEXH@Z
 void Class_109568F0::FUN_109568f0(int A)
 {
-    DAT_10f31be0->FUN_10937010();
+    DAT_10f31be0->ResetTextureStagesBiased();
     GDirect3DDevice8->Virtual50(0x3c, (int)(Alpha * 255.5f) * 0x01010101);
     int Index;
     int Result = FUN_10952410(&Index);

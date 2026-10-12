@@ -17,7 +17,7 @@ struct Struct_10BE9A40
 // FUNCTION: 0x10BE9A40 ?FUN_10be9a40@Class_10BE9A40@@QAEXXZ
 void Class_10BE9A40::FUN_10be9a40()
 {
-    float Min = Unknown04->Unknown08->FUN_10dbd510(0x100856)->FUN_10bbdb40();
-    float Max = Unknown04->Unknown08->FUN_10dbd510(0x100857)->FUN_10bbdb40();
+    float Min = Unknown04->Unknown08->FUN_10dbd510(0x100856)->GetFloat();
+    float Max = Unknown04->Unknown08->FUN_10dbd510(0x100857)->GetFloat();
     Unknown78 = GetTimeSeconds() + (Min + (Max - Min) * appFrand());
 }

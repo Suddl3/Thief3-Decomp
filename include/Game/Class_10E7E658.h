@@ -10,9 +10,9 @@ class AGarrett;
 class Class_10E7E658 : public Class_10B3AE70
 {
 public:
-    virtual void FUN_10b49450(AGarrett* Garrett);
+    virtual void MountRope(AGarrett* Garrett);
 
-    void FUN_10b3b030(AGarrett* Garrett);
+    void StopBody(AGarrett* Garrett);
 
     bool Unknown10;
     char Pad11[0x3];

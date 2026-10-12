@@ -2,11 +2,11 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10936A40.h"
 #include "Game/IDirect3DDevice8.h"
-#include "Game/Class_10936AC0.h"
+#include "Game/cD3DStateCache.h"
 
 class IDirect3DSurface8;
 
-extern Class_10936AC0* DAT_10f31be0;
+extern cD3DStateCache* DAT_10f31be0;
 
 class Class_10924B70
 {

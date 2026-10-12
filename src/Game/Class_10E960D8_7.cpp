@@ -161,7 +161,7 @@ bool Class_10E960D8::FUN_10be4420()
         return false;
     Class_10BB8A30* Owner = Unknown04;
     float L = Owner->Unknown30.FUN_10bfc3a0();
-    float Y = Unknown04->Unknown08->FUN_10dbd510(0x40100577)->FUN_10bbdb40();
+    float Y = Unknown04->Unknown08->FUN_10dbd510(0x40100577)->GetFloat();
     if (Y > L)
         return true;
     return false;

@@ -5,9 +5,9 @@
 #include "Game/Class_10AB37F0.h"
 #include "Game/Class_10AB3C20.h"
 
-void FUN_10d3d3b0(void* Reader, int* Out);
+void ReadInt(void* Reader, int* Out);
 
-void FUN_10d3ddc0(void* Reader, int* Out);
+void ReadString(void* Reader, int* Out);
 
 class Class_10E6DA1C
 {
@@ -28,13 +28,13 @@ void Class_10E6DA1C::ReadFields(void* Reader, int Version, int Unused)
     Class_109081E0 Text10;
     Class_109081E0 Text0C;
     int Count;
-    FUN_10d3d3b0(Reader, &Count);
+    ReadInt(Reader, &Count);
     Unknown08 = Count;
-    FUN_10d3ddc0(Reader, &Unknown0C);
-    FUN_10d3ddc0(Reader, (int*)&Text10);
+    ReadString(Reader, &Unknown0C);
+    ReadString(Reader, (int*)&Text10);
     if (Version > 0x1b)
     {
-        FUN_10d3ddc0(Reader, (int*)&Text0C);
+        ReadString(Reader, (int*)&Text0C);
     }
     Unknown10.FUN_10ab37f0(Text10);
     ((Class_10AB3C20*)&Unknown10)->FUN_10ab3c20(Text0C);

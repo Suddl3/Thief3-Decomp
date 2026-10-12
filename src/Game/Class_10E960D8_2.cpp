@@ -91,9 +91,9 @@ public:
 float Class_10E960D8::FUN_10be4340()
 {
     float L = Unknown04->Unknown30.FUN_10bfc3a0();
-    float V = Unknown04->Unknown08->FUN_10dbd510(0x40100243)->FUN_10bbdb40();
+    float V = Unknown04->Unknown08->FUN_10dbd510(0x40100243)->GetFloat();
     if (V < L)
         return DAT_10e499a0;
-    float R = Unknown04->Unknown08->FUN_10dbd510(0x4010023f)->FUN_10bbdb40();
+    float R = Unknown04->Unknown08->FUN_10dbd510(0x4010023f)->GetFloat();
     return R;
 }

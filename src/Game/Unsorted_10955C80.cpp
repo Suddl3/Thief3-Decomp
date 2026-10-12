@@ -128,15 +128,15 @@ public:
 extern IDirect3DDevice8* GDirect3DDevice8;
 
 // The global's array sits at +0x1c here (as Class_109373D0's Unknown1C does in 0x10940880), not where
-// Game/Class_10936AC0.h puts it
-class Class_10936AC0
+// Game/cD3DStateCache.h puts it
+class cD3DStateCache
 {
 public:
     char Pad00[0x1c];
-    IDirect3DBaseTexture8* Unknown1C[4];
+    IDirect3DBaseTexture8* m_Textures[4];
 };
 
-extern Class_10936AC0* DAT_10f31be0;
+extern cD3DStateCache* DAT_10f31be0;
 
 class Class_10955C80_Unknown18
 {
@@ -183,7 +183,7 @@ void Class_10955C80::FUN_10955c80(int A, bool B)
     if (Unknown0C && Unknown04 != -1)
     {
         IDirect3DBaseTexture8* Texture = Unknown18->Unknown30;
-        IDirect3DBaseTexture8** Slot = &DAT_10f31be0->Unknown1C[Unknown04];
+        IDirect3DBaseTexture8** Slot = &DAT_10f31be0->m_Textures[Unknown04];
         if (*Slot != Texture)
         {
             GDirect3DDevice8->SetTexture(Unknown04, Texture);

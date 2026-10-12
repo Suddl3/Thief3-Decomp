@@ -17,9 +17,9 @@ bool Class_10BB7620::FUN_10bb7620()
         Class_10B9CAC0* P = Unknown0C->FUN_10baa750();
         if (P)
         {
-            if (P->FUN_10b9cac0())
+            if (P->GetCurrent())
             {
-                if (P->FUN_10b9cac0()->Virtual3() == 1)
+                if (P->GetCurrent()->Virtual3() == 1)
                     return false;
             }
         }

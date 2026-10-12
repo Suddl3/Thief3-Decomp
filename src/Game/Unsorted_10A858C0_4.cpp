@@ -4,8 +4,8 @@
 #include "Game/Class_10A85940_Node.h"
 #include "Game/Class_10A873D0.h"
 
-// FUNCTION: 0x10A86490 ?FUN_10a86490@Class_10A873D0@@QAEXH@Z
-void Class_10A873D0::FUN_10a86490(int Size)
+// FUNCTION: 0x10A86490 ?Reset@Class_10A873D0@@QAEXH@Z
+void Class_10A873D0::Reset(int Size)
 {
     for (int i = 0; i < Unknown0C; i++)
     {

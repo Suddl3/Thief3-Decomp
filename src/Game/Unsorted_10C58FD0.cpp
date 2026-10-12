@@ -4,7 +4,7 @@
 #include "Game/Class_10C59030_Field18.h"
 #include "Game/Class_10C59030_Value.h"
 
-unsigned int FUN_1090e9b0(const void* Data, int Length);
+unsigned int HashBytes(const void* Data, int Length);
 
 // A chained hash table's entry: 24 bytes.
 class Class_10C59030_Node
@@ -39,7 +39,7 @@ unsigned int Class_10C59030::FUN_10c59030(const Class_109081E0& Key, const Class
         const void* Data;
         int Length;
         Unknown18.Virtual0(Key, &Data, &Length);
-        Index = FUN_1090e9b0(Data, Length) & ((1 << Unknown08) - 1);
+        Index = HashBytes(Data, Length) & ((1 << Unknown08) - 1);
     }
     if (!Unknown14)
         return (unsigned int)-1;

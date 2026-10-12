@@ -64,22 +64,22 @@ Class_10B255F0* FUN_10b25cd0()
     return &Instance;
 }
 
-// FUNCTION: 0x10B25D60 ?FUN_10b25d60@Class_10B25D60@@QAEXXZ
-void Class_10B25D60::FUN_10b25d60()
+// FUNCTION: 0x10B25D60 ?Advance@Class_10B25D60@@QAEXXZ
+void Class_10B25D60::Advance()
 {
-    if (Unknown10)
-        Unknown04 = FUN_10b253e0(&Unknown10);
+    if (m_InListA)
+        m_Index = FindNextFromListA(&m_InListA);
     else
-        Unknown04 = FUN_10b254f0(&Unknown10);
+        m_Index = FindNextFromListB(&m_InListA);
 }
 
-// FUNCTION: 0x10B25D90 ?FUN_10b25d90@Class_10B25D90@@QAEXXZ
-void Class_10B25D90::FUN_10b25d90()
+// FUNCTION: 0x10B25D90 ?StepBack@Class_10B25D90@@QAEXXZ
+void Class_10B25D90::StepBack()
 {
-    if (Unknown10)
-        Unknown04 = FUN_10b25240(&Unknown10);
+    if (m_InListA)
+        m_Index = FindPrevFromListA(&m_InListA);
     else
-        Unknown04 = FUN_10b25310(&Unknown10);
+        m_Index = FindPrevFromListB(&m_InListA);
 }
 
 // FUNCTION: 0x10B26910 ?FUN_10b26910@Class_10E7AAAC@@UAEXH@Z

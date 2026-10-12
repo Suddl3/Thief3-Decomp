@@ -25,7 +25,7 @@ class Class_10AA9DA0
 public:
     void* FUN_10aa9da0();
     void FUN_10914470(Class_109081E0& Name, bool& Flag);
-    void FUN_109145f0(Class_109081E0& Name);
+    void RemoveByName(Class_109081E0& Name);
 
     char Unknown00[0x10];
     void* Unknown10;
@@ -48,7 +48,7 @@ bool Class_1090FE50::FUN_1090fe50(Class_10AA9DA0* A, Class_109081E0& B, Class_10
             CloseHandle(File);
             bool Flag = false;
             A->FUN_10914470(B, Flag);
-            A->FUN_109145f0(B);
+            A->RemoveByName(B);
             this->FUN_1090f400(B, A->FUN_10aa9da0(), 1, Flag);
             return true;
         }

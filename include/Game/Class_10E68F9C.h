@@ -14,7 +14,7 @@ public:
     virtual Struct_10A58450 FUN_10a58450();
     virtual float FUN_10b2be50();
 
-    Class_10E68F9C* FUN_10a58420();
+    Class_10E68F9C* Init();
 
         // +0x00: DAT_10e68f9c
     float Unknown04;

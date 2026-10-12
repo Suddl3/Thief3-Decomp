@@ -27,9 +27,9 @@ public:
 float Class_10E96510::FUN_10be4800()
 {
     float L = Unknown04->Unknown30.FUN_10bfc3a0();
-    float V = Unknown04->Unknown08->FUN_10dbd510(0x40100244)->FUN_10bbdb40();
+    float V = Unknown04->Unknown08->FUN_10dbd510(0x40100244)->GetFloat();
     if (V < L)
         return DAT_10e499a0;
-    float R = Unknown04->Unknown08->FUN_10dbd510(0x40100240)->FUN_10bbdb40();
+    float R = Unknown04->Unknown08->FUN_10dbd510(0x40100240)->GetFloat();
     return R;
 }

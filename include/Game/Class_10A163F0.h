@@ -8,7 +8,7 @@ struct Struct_10A16B60;
 class Class_10A163F0
 {
 public:
-    int FUN_10a163f0(int* Key, Struct_10A16B60* Info);
+    int Set(int* Key, Struct_10A16B60* Info);
 };
 
 #endif // GAME_CLASS_10A163F0_H

@@ -1,7 +1,7 @@
 // Game/Unsorted_10A160C0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-unsigned int FUN_1090e9b0(const void* Data, int Length);
+unsigned int HashBytes(const void* Data, int Length);
 
 // A chained hash table's entry: the key is its first field, Next is at +0xC.
 class Class_10A16270_Node
@@ -12,7 +12,7 @@ public:
     Class_10A16270_Node* Next;
 };
 
-// The table's key hasher: slot 0 gives the bytes FUN_1090e9b0 hashes,
+// The table's key hasher: slot 0 gives the bytes HashBytes hashes,
 // slot 1 compares a key with an entry's key (0 when they are equal).
 class Class_10A16270_Field18
 {
@@ -21,13 +21,13 @@ public:
     virtual int Virtual1(int* Key, int* Other);
 };
 
-// The copy of Class_10A15B20.h with its fields and FUN_10a15e20 added.
+// The copy of Class_10A15B20.h with its fields and Rehash added.
 class Class_10A15B20
 {
 public:
     bool FUN_10a15b20(int* A);
     bool FUN_10a16270(int* A);
-    void FUN_10a15e20(int Size);
+    void Rehash(int Size);
 
     int Unknown00;
     int Unknown04;
@@ -42,13 +42,13 @@ public:
 bool Class_10A15B20::FUN_10a16270(int* Key)
 {
     if (!Unknown10 && Unknown04 < Unknown0C * 0.05 && Unknown0C > 64)
-        FUN_10a15e20(Unknown0C / 2);
+        Rehash(Unknown0C / 2);
     unsigned int Index;
     {
         const void* Data;
         int Length;
         Unknown18.Virtual0(Key, &Data, &Length);
-        Index = FUN_1090e9b0(Data, Length) & ((1 << Unknown08) - 1);
+        Index = HashBytes(Data, Length) & ((1 << Unknown08) - 1);
     }
     for (Class_10A16270_Node* Node = Unknown14[Index], *Prev = 0; Node; Prev = Node, Node = Node->Next)
     {

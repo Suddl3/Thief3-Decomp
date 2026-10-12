@@ -10,13 +10,13 @@ void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D
 
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
-unsigned int FUN_1090e9b0(const void* Data, int Length);
+unsigned int HashBytes(const void* Data, int Length);
 
-// FUNCTION: 0x10A15D50 ?FUN_10a15d50@Class_10A15D50@@QAEIABHABUStruct_10A15D50_Value@@@Z
-unsigned int Class_10A15D50::FUN_10a15d50(const int& Key, const Struct_10A15D50_Value& Value)
+// FUNCTION: 0x10A15D50 ?Insert@Class_10A15D50@@QAEIABHABUStruct_10A15D50_Value@@@Z
+unsigned int Class_10A15D50::Insert(const int& Key, const Struct_10A15D50_Value& Value)
 {
-    if (!Unknown10 && Unknown00 > Unknown0C * 0.2)
-        FUN_10a15e20(Unknown0C * 2);
+    if (!m_FixedSize && m_Collisions > m_BucketCount * 0.2)
+        Rehash(m_BucketCount * 2);
     Class_10A15D50_Node* Node = new(0, 0, 0, 0, 0) Class_10A15D50_Node;
     Node->Key = Key;
     Node->Value = Value;
@@ -24,13 +24,13 @@ unsigned int Class_10A15D50::FUN_10a15d50(const int& Key, const Struct_10A15D50_
     {
         const void* Data;
         int Length;
-        Unknown18.Virtual0(Key, &Data, &Length);
-        Index = FUN_1090e9b0(Data, Length) & ((1 << Unknown08) - 1);
+        m_KeyTraits.Virtual0(Key, &Data, &Length);
+        Index = HashBytes(Data, Length) & ((1 << m_BucketBits) - 1);
     }
-    if (Unknown14[Index])
-        Unknown00++;
-    Node->Next = Unknown14[Index];
-    Unknown14[Index] = Node;
-    Unknown04++;
+    if (m_Buckets[Index])
+        m_Collisions++;
+    Node->Next = m_Buckets[Index];
+    m_Buckets[Index] = Node;
+    m_Count++;
     return Index;
 }

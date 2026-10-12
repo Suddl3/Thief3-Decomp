@@ -56,11 +56,11 @@ void Class_10B27090::FUN_10b27090(int Index, const Class_109081E0& Name, int Val
     FUN_10b26e00();
 }
 
-// FUNCTION: 0x10B27220 ?FUN_10b27220@Class_10B27220@@QAEXH@Z
-void Class_10B27220::FUN_10b27220(int Index)
+// FUNCTION: 0x10B27220 ?RequestStop@Class_10B27220@@QAEXH@Z
+void Class_10B27220::RequestStop(int Index)
 {
     if (DAT_10f0328c[Index].Unknown00 > DAT_10eafbdc)
-        Unknown38 = true;
+        m_StopPending = true;
     else
-        FUN_10b270d0();
+        Stop();
 }

@@ -111,7 +111,7 @@ public:
 Class_10E95780* Class_10E4CCD0::FUN_10b99230(Struct_10B98E00* A)
 {
     void* Id = FUN_10be1a60();
-    if (Id && A->Unknown08->FUN_10dbd510((int)Id)->FUN_10bbdb40() > 0.0f)
+    if (Id && A->Unknown08->FUN_10dbd510((int)Id)->GetFloat() > 0.0f)
         return new(0, 0, 0, 0, 0) Class_10E95780((int)A, (int)this);
     return 0;
 }

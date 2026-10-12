@@ -6,7 +6,7 @@
 class Class_10E6B614
 {
 public:
-    virtual void FUN_10a695b0(int A, int B, int C, int D);
+    virtual void HandleEvent(int A, int B, int C, int D);
     virtual void Virtual1();
     virtual void Virtual2(int A);
 

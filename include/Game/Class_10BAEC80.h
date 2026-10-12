@@ -17,21 +17,21 @@ public:
     void Empty()
     {
         FUN_10a211e0(0);
-        if (Unknown04)
+        if (m_BlockBytes)
         {
             GetAllocator()->Virtual5(Unknown08);
             Unknown08 = 0;
-            Unknown04 = 0;
+            m_BlockBytes = 0;
         }
     }
-    void FUN_10c22ad0(const Class_10BAEC80& Other);
+    void CopyFrom(const Class_10BAEC80& Other);
 
     union
     {
         int Unknown00;
         int Count;
     };
-    int Unknown04;
+    int m_BlockBytes;
     union
     {
         void* Unknown08;

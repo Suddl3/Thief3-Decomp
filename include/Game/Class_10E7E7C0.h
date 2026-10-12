@@ -14,7 +14,7 @@ public:
     virtual void Virtual2();
     virtual void Virtual3();
     virtual int Virtual4();
-    virtual int FUN_10b4bc30(Object_10B4BC30* A, int B);
+    virtual int OnAnimationEnd(Object_10B4BC30* A, int B);
     virtual void Virtual6();
     virtual void FUN_10b4bc50(Object_10B4BC30* A);
 

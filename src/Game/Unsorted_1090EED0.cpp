@@ -17,9 +17,9 @@ int Class_1090FD40::FUN_1090fd40(const Class_109081E0& Item)
 void Class_1090FF70::FUN_1090ff70()
 {
     FUN_1090fc80(0x40);
-    ::operator delete(Unknown14);
-    Unknown04 = 0;
-    Unknown0C = 0;
-    Unknown14 = 0;
-    Unknown00 = 0;
+    ::operator delete(m_Table);
+    m_Count = 0;
+    m_Size = 0;
+    m_Table = 0;
+    m_Collisions = 0;
 }

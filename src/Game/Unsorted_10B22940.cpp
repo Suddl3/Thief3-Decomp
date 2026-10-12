@@ -32,14 +32,14 @@ int Class_10B22D60::FUN_10b22ac0()
     return 0;
 }
 
-// FUNCTION: 0x10B22B90 ?FUN_10b22b90@Class_10B22D60@@QAEXH@Z
-void Class_10B22D60::FUN_10b22b90(int A)
+// FUNCTION: 0x10B22B90 ?UpdateSlot@Class_10B22D60@@QAEXH@Z
+void Class_10B22D60::UpdateSlot(int A)
 {
     Class_10B22D60_Slot** Slot = FUN_10b22940(A);
     if (Slot)
     {
-        int Value = (*Slot)->Virtual5(Unknown04, A);
+        int Value = (*Slot)->Virtual5(m_Body, A);
         if (Value != (*Slot)->Virtual4())
-            FUN_10b229c0((void**)Slot, Value);
+            SetSlot((void**)Slot, Value);
     }
 }

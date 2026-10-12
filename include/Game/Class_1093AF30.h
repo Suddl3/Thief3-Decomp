@@ -11,16 +11,16 @@ class Class_1093AF30_Node;
 class Class_1093AF30
 {
 public:
-    unsigned int FUN_1093af30(const Class_109081E0& Key, const int& Value);
-    void FUN_1093b040(int Size);
+    unsigned int Insert(const Class_109081E0& Key, const int& Value);
+    void Rehash(int Size);
 
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    bool Unknown10;
+    int m_Collisions;
+    int m_Count;
+    int m_BucketBits;
+    int m_BucketCount;
+    bool m_NoAutoGrow;
     char Pad11[0x3];
-    Class_1093AF30_Node** Unknown14;
+    Class_1093AF30_Node** m_Buckets;
     Class_1093AF30_Field18 Unknown18;
 };
 

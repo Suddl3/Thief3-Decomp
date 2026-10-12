@@ -24,14 +24,14 @@ struct Struct_10C1BF40
 class Class_10E98F90 : public Class_10C1B840
 {
 public:
-    Class_10E98F90* FUN_10c1bf40(Struct_10C1BF40* A, int B, int C, int D, float E, float F);
+    Class_10E98F90* Init(Struct_10C1BF40* A, int B, int C, int D, float E, float F);
 
     int Unknown48;
     FVector Unknown4C;
 };
 
-// FUNCTION: 0x10C1BF40 ?FUN_10c1bf40@Class_10E98F90@@QAEPAV1@PAUStruct_10C1BF40@@HHHMM@Z
-Class_10E98F90* Class_10E98F90::FUN_10c1bf40(Struct_10C1BF40* A, int B, int C, int D, float E, float F)
+// FUNCTION: 0x10C1BF40 ?Init@Class_10E98F90@@QAEPAV1@PAUStruct_10C1BF40@@HHHMM@Z
+Class_10E98F90* Class_10E98F90::Init(Struct_10C1BF40* A, int B, int C, int D, float E, float F)
 {
     this->Class_10C1B840::Class_10C1B840((int)A, C, D, (int)E, (int)F, 1.0f);
     Unknown00 = DAT_10e98f90;

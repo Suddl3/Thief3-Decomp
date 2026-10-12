@@ -120,7 +120,7 @@ public:
 Class_10E97488* Class_10E4CCD0::FUN_10b99850(Struct_10B98E00* A, const FVector& B, float C, const Class_109081E0& D, int E, int F, int G)
 {
     int Id = FUN_10bed050();
-    if (Id && A->Unknown08->FUN_10dbd510(Id)->FUN_10bbdb40() > DAT_10eafbdc)
+    if (Id && A->Unknown08->FUN_10dbd510(Id)->GetFloat() > DAT_10eafbdc)
         return new(0, 0, 0, 0, 0) Class_10E97488((int)A, (int)this, B, C, D, E, F, G);
     return 0;
 }

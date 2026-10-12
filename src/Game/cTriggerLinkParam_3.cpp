@@ -4,7 +4,7 @@
 #include "Game/Class_109081E0.h"
 #include "Game/Class_10E6BF84.h"
 
-void FUN_10d3d990(void* Stream, int* Value);
+void WriteString(void* Stream, int* Value);
 
 void FUN_10d3d230(void* Stream, unsigned char Value);
 
@@ -36,9 +36,9 @@ public:
 // FUNCTION: 0x10A805C0 ?Save@cTriggerLinkParam@@UAEXHPAX@Z
 void cTriggerLinkParam::Save(int A, void* Stream)
 {
-    FUN_10d3d990(Stream, (int*)&FUN_10a801e0());
+    WriteString(Stream, (int*)&FUN_10a801e0());
     FUN_10d3d230(Stream, Unknown05);
     FUN_10d3d230(Stream, Unknown07);
-    FUN_10d3d990(Stream, &Unknown10);
+    WriteString(Stream, &Unknown10);
     FUN_10d3d230(Stream, Unknown06);
 }

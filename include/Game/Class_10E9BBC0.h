@@ -20,14 +20,14 @@ public:
     virtual void Virtual2();
     virtual void Virtual3();
     virtual void Virtual4();
-    virtual void FUN_10c49a60(int A);
+    virtual void RemoveEntry(int A);
     virtual void Virtual6();
     virtual void Virtual7();
     virtual void Virtual8(Info_10C47FC0* Info);
     virtual void FUN_10c49860(Struct_10C49860* A);
-    virtual void FUN_10c49880(Struct_10C49880* A);
+    virtual void AddEntry(Struct_10C49880* A);
 
-    Class_10D3F830 Unknown04;
+    Class_10D3F830 m_Entries;
     char Unknown05[0x37];
     Class_10E9BBC0_Unknown3C* Unknown3C;
     Class_10C4D140 Unknown40;

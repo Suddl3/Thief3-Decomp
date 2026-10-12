@@ -10,15 +10,15 @@ public:
     virtual void Virtual2();
     virtual void Virtual3();
     virtual void Virtual4();
-    virtual int FUN_10aa7f30(Class_10AAB590_Param* Writer);
+    virtual int CopyToParam(Class_10AAB590_Param* Writer);
 
     int Unknown04;
     int Unknown08;
     int Unknown0C;
 };
 
-// FUNCTION: 0x10AA7F30 ?FUN_10aa7f30@Class_10E6C14C@@UAEHPAVClass_10AAB590_Param@@@Z
-int Class_10E6C14C::FUN_10aa7f30(Class_10AAB590_Param* Writer)
+// FUNCTION: 0x10AA7F30 ?CopyToParam@Class_10E6C14C@@UAEHPAVClass_10AAB590_Param@@@Z
+int Class_10E6C14C::CopyToParam(Class_10AAB590_Param* Writer)
 {
     Writer->Virtual0(&Unknown04);
     Writer->Virtual0(&Unknown08);

@@ -337,8 +337,8 @@ void Class_10B43D40::FUN_10b43d40(void* p1)
     Field150 = p1;
 }
 
-// FUNCTION: 0x10B43D50 ?FUN_10b43d50@Class_10E80C78@@QAE?AVClass_109081E0@@XZ
-Class_109081E0 Class_10E80C78::FUN_10b43d50()
+// FUNCTION: 0x10B43D50 ?GetPaneFileName@Class_10E80C78@@QAE?AVClass_109081E0@@XZ
+Class_109081E0 Class_10E80C78::GetPaneFileName()
 {
     return Class_109081E0(DAT_10e80e74);
 }

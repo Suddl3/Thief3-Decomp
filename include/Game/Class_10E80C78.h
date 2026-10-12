@@ -11,7 +11,7 @@ class Class_10B43160_Member;
 class Class_10E80C78 : public Class_10B78320
 {
 public:
-    Class_109081E0 FUN_10b43d50();
+    Class_109081E0 GetPaneFileName();
     void FUN_10b43160();
 
     Class_10B43160_Member* Unknown1A4;

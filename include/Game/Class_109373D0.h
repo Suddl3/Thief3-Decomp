@@ -8,14 +8,14 @@ class IDirect3DBaseTexture8;
 class Class_109373D0
 {
 public:
-    void FUN_109373d0(unsigned long Value);
-    void FUN_10936cf0();
-    void FUN_10937010();
+    void SetVertexShader(unsigned long Value);
+    void ResetTextureStages();
+    void ResetTextureStagesBiased();
 
     char Unknown00[0x1C];
     IDirect3DBaseTexture8* Unknown1C[4];
     char Unknown2C[0x684];
-    unsigned long Unknown6B0;
+    unsigned long m_VertexShader;
 };
 
 #endif // GAME_CLASS_109373D0_H

@@ -10,40 +10,40 @@ void operator delete(void* Ptr);
 class Class_10AA44B0
 {
 public:
-    void FUN_10aa3830(int A);
-    void FUN_10aa44b0();
-    void FUN_10aa36b0(int Size);
-    unsigned int FUN_10aa35d0(const Class_10E97B00& Key, const Class_109081E0& Value);
+    void Clear(int A);
+    void Free();
+    void Rehash(int Size);
+    unsigned int Insert(const Class_10E97B00& Key, const Class_109081E0& Value);
 
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    bool Unknown10;
+    int m_Collisions;
+    int m_Count;
+    int m_BucketBits;
+    int m_BucketCount;
+    bool m_FixedSize;
     char Pad11[0x3];
-    Class_10AA44B0_Node** Unknown14;
+    Class_10AA44B0_Node** m_Buckets;
 };
 
-// FUNCTION: 0x10AA36B0 ?FUN_10aa36b0@Class_10AA44B0@@QAEXH@Z
-void Class_10AA44B0::FUN_10aa36b0(int Size)
+// FUNCTION: 0x10AA36B0 ?Rehash@Class_10AA44B0@@QAEXH@Z
+void Class_10AA44B0::Rehash(int Size)
 {
-    int OldSize = Unknown0C;
-    Class_10AA44B0_Node** OldTable = Unknown14;
-    Unknown14 = (Class_10AA44B0_Node**)operator new(Size * sizeof(Class_10AA44B0_Node*), 0, 0, 0, 0, 0);
-    Unknown0C = Size;
-    Unknown08 = 0;
+    int OldSize = m_BucketCount;
+    Class_10AA44B0_Node** OldTable = m_Buckets;
+    m_Buckets = (Class_10AA44B0_Node**)operator new(Size * sizeof(Class_10AA44B0_Node*), 0, 0, 0, 0, 0);
+    m_BucketCount = Size;
+    m_BucketBits = 0;
     while (Size >>= 1)
-        Unknown08++;
-    Unknown04 = 0;
-    Unknown00 = 0;
-    for (int i = 0; i < Unknown0C; i++)
-        Unknown14[i] = 0;
+        m_BucketBits++;
+    m_Count = 0;
+    m_Collisions = 0;
+    for (int i = 0; i < m_BucketCount; i++)
+        m_Buckets[i] = 0;
     for (int j = 0; j < OldSize; j++)
     {
         Class_10AA44B0_Node* Node = OldTable[j];
         while (Node)
         {
-            FUN_10aa35d0(*Node, Node->Unknown04);
+            Insert(*Node, Node->Unknown04);
             Class_10AA44B0_Node* Next = Node->Next;
             delete Node;
             Node = Next;

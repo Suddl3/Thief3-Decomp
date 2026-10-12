@@ -67,8 +67,8 @@ public:
     virtual void Virtual55();
     virtual void Virtual56(int A);
 
-    void FUN_10b56520();
-    void FUN_10b45d10();
+    void SaveAndClose();
+    void Close();
 };
 
 // FUNCTION: 0x10B55810 ?FUN_10b55810@Class_10E81C20@@UAE?AUStruct_10B55810@@XZ
@@ -77,10 +77,10 @@ Struct_10B55810 Class_10E81C20::FUN_10b55810()
     return Unknown54;
 }
 
-// FUNCTION: 0x10B56520 ?FUN_10b56520@Class_10E81DE8@@QAEXXZ
-void Class_10E81DE8::FUN_10b56520()
+// FUNCTION: 0x10B56520 ?SaveAndClose@Class_10E81DE8@@QAEXXZ
+void Class_10E81DE8::SaveAndClose()
 {
     GetOptions()->Save();
     Virtual56(0);
-    FUN_10b45d10();
+    Close();
 }

@@ -54,8 +54,8 @@ Class_10E95288::Class_10E95288(Struct_10B98E00* A, Class_10E4CCD0* B, int C)
     *(void**)this = DAT_10e96d98;
     Unknown40 = C;
     Unknown44 = 0;
-    Unknown48 = Unknown04[0]->Unknown08->FUN_10dbd510(0x100698)->FUN_10bbdb40() * 16.0f;
-    Unknown4C = Unknown04[0]->Unknown08->FUN_10dbd510(0x100699)->FUN_10bbdb40() * 16.0f;
-    Unknown50 = Unknown04[0]->Unknown08->FUN_10dbd510(0x10069a)->FUN_10bbdb40() * 16.0f;
+    Unknown48 = Unknown04[0]->Unknown08->FUN_10dbd510(0x100698)->GetFloat() * 16.0f;
+    Unknown4C = Unknown04[0]->Unknown08->FUN_10dbd510(0x100699)->GetFloat() * 16.0f;
+    Unknown50 = Unknown04[0]->Unknown08->FUN_10dbd510(0x10069a)->GetFloat() * 16.0f;
     A->FUN_10bb80c0(C);
 }

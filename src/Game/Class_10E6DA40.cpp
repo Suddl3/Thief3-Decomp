@@ -1,7 +1,7 @@
 // Game/Class_10E6DA40.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-void FUN_10d3d2d0(void* Writer, int Value);
+void WriteInt(void* Writer, int Value);
 
 class Class_10E6DA40
 {
@@ -18,5 +18,5 @@ public:
 // FUNCTION: 0x10AAB570 ?FUN_10aab570@Class_10E6DA40@@UAEXPAXHH@Z
 void Class_10E6DA40::FUN_10aab570(void* Writer, int Unused1, int Unused2)
 {
-    FUN_10d3d2d0(Writer, Unknown08);
+    WriteInt(Writer, Unknown08);
 }

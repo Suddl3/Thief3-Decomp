@@ -12,16 +12,16 @@ struct Struct_10E6BA88_Entry
     int Unknown04;
 };
 
-class Class_10E6BA88
+class cDelayedDeleter
 {
 public:
     virtual void Virtual0();
     virtual void Virtual1();
     virtual void Virtual2();
     virtual void Virtual3();
-    virtual bool FUN_10a70b40(int Key, int* Out);
+    virtual bool Find(int Key, int* Out);
 
-    int Unknown04;
+    int m_Entries;
     char Unknown08[4];
     Struct_10E6BA88_Entry* Unknown0C;
 };
@@ -46,11 +46,11 @@ Class_10E6BA58::Class_10E6BA58()
     DAT_10f46da0->Virtual1(this, 0x26, -1, -1);
 }
 
-// FUNCTION: 0x10A70B40 ?FUN_10a70b40@Class_10E6BA88@@UAE_NHPAH@Z
-bool Class_10E6BA88::FUN_10a70b40(int Key, int* Out)
+// FUNCTION: 0x10A70B40 ?Find@cDelayedDeleter@@UAE_NHPAH@Z
+bool cDelayedDeleter::Find(int Key, int* Out)
 {
     *Out = 0;
-    for (int i = 0; i < Unknown04; i++)
+    for (int i = 0; i < m_Entries; i++)
     {
         Struct_10E6BA88_Entry* Item = &Unknown0C[i];
         if (Item->Unknown00 == Key)

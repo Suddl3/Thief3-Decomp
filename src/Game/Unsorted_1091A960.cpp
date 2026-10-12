@@ -11,34 +11,34 @@ struct Struct_10A3ACD0_Element
     char Unknown00[0x1C];
 };
 
-// FUNCTION: 0x1091A960 ?FUN_1091a960@Class_10A3ACD0@@QAEXH@Z
-void Class_10A3ACD0::FUN_1091a960(int NewCount)
+// FUNCTION: 0x1091A960 ?Resize@Class_10A3ACD0@@QAEXH@Z
+void Class_10A3ACD0::Resize(int NewCount)
 {
-    int Capacity = !Unknown08 ? 0 : Unknown04 / sizeof(Struct_10A3ACD0_Element);
+    int Capacity = !Elements ? 0 : CapacityBytes / sizeof(Struct_10A3ACD0_Element);
     GetAllocator()->Virtual8(0, 0);
     if (NewCount > Capacity)
     {
         int NewCapacity = NewCount;
         if (Capacity)
             NewCapacity = (NewCount & ~15) + 16;
-        Unknown08 = GetAllocator()->Virtual3(Unknown08, NewCapacity * sizeof(Struct_10A3ACD0_Element), 0, 0, 0, 0);
-        Unknown04 = NewCapacity * sizeof(Struct_10A3ACD0_Element);
+        Elements = GetAllocator()->Virtual3(Elements, NewCapacity * sizeof(Struct_10A3ACD0_Element), 0, 0, 0, 0);
+        CapacityBytes = NewCapacity * sizeof(Struct_10A3ACD0_Element);
     }
     else if (NewCount <= Capacity - 16)
     {
         if (NewCount == 0)
         {
-            GetAllocator()->Virtual5(Unknown08);
-            Unknown08 = 0;
-            Unknown04 = 0;
+            GetAllocator()->Virtual5(Elements);
+            Elements = 0;
+            CapacityBytes = 0;
         }
         else
         {
             int NewCapacity = (NewCount & ~15) + 16;
-            Unknown08 = GetAllocator()->Virtual3(Unknown08, NewCapacity * sizeof(Struct_10A3ACD0_Element), 0, 0, 0, 0);
-            Unknown04 = NewCapacity * sizeof(Struct_10A3ACD0_Element);
+            Elements = GetAllocator()->Virtual3(Elements, NewCapacity * sizeof(Struct_10A3ACD0_Element), 0, 0, 0, 0);
+            CapacityBytes = NewCapacity * sizeof(Struct_10A3ACD0_Element);
         }
     }
     GetAllocator()->Virtual9();
-    Unknown00 = NewCount;
+    Count = NewCount;
 }

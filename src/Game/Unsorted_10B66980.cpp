@@ -21,7 +21,7 @@ class Class_10E84D80 : public Class_10B787F0
 {
 public:
     void FUN_10b671a0();
-    Class_109081E0 FUN_10b671d0();
+    Class_109081E0 GetMissionStatsPaneFile();
 
     void* Field00;
 };
@@ -385,8 +385,8 @@ void Class_10E84D80::FUN_10b671a0()
     FUN_10b787f0();
 }
 
-// FUNCTION: 0x10B671D0 ?FUN_10b671d0@Class_10E84D80@@QAE?AVClass_109081E0@@XZ
-Class_109081E0 Class_10E84D80::FUN_10b671d0()
+// FUNCTION: 0x10B671D0 ?GetMissionStatsPaneFile@Class_10E84D80@@QAE?AVClass_109081E0@@XZ
+Class_109081E0 Class_10E84D80::GetMissionStatsPaneFile()
 {
     return Class_109081E0(DAT_10e84f7c);
 }

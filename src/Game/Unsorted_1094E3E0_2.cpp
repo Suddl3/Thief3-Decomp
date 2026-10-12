@@ -34,37 +34,37 @@ public:
     virtual void Virtual1();
 };
 
-// FUNCTION: 0x1094E3E0 ?FUN_1094e3e0@Class_1094E3A0@@QAE_NHH@Z
-bool Class_1094E3A0::FUN_1094e3e0(int Index, int Value)
+// FUNCTION: 0x1094E3E0 ?CreateVertex@Class_1094E3A0@@QAE_NHH@Z
+bool Class_1094E3A0::CreateVertex(int Index, int Value)
 {
-    Unknown108[Index].Unknown00 = Value;
+    m_Elements[Index].Unknown00 = Value;
     if (Index == 0)
     {
         GetAllocator()->Virtual8(0, 0);
-        if (Unknown0E8)
+        if (m_VertexBuffer0)
         {
-            Unknown0E8->Virtual1();
-            Unknown0E8 = 0;
+            m_VertexBuffer0->Virtual1();
+            m_VertexBuffer0 = 0;
         }
-        if (Unknown0EC)
+        if (m_VertexBuffer1)
         {
-            Unknown0EC->Virtual1();
-            Unknown0EC = 0;
+            m_VertexBuffer1->Virtual1();
+            m_VertexBuffer1 = 0;
         }
-        int Result0 = DAT_10f2c744->Virtual3(0, 0x20, 0, "BlendMesh::m_Vertex", &Unknown0E8);
-        int Result1 = DAT_10f2c744->Virtual3(1, 0x20, 0, "BlendMesh::m_Vertex", &Unknown0EC);
+        int Result0 = DAT_10f2c744->Virtual3(0, 0x20, 0, "BlendMesh::m_Vertex", &m_VertexBuffer0);
+        int Result1 = DAT_10f2c744->Virtual3(1, 0x20, 0, "BlendMesh::m_Vertex", &m_VertexBuffer1);
         GetAllocator()->Virtual9();
         if (Result0 < 0 || Result1 < 0)
         {
-            if (Unknown0E8)
+            if (m_VertexBuffer0)
             {
-                Unknown0E8->Virtual1();
-                Unknown0E8 = 0;
+                m_VertexBuffer0->Virtual1();
+                m_VertexBuffer0 = 0;
             }
-            if (Unknown0EC)
+            if (m_VertexBuffer1)
             {
-                Unknown0EC->Virtual1();
-                Unknown0EC = 0;
+                m_VertexBuffer1->Virtual1();
+                m_VertexBuffer1 = 0;
             }
             return false;
         }

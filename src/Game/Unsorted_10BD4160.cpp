@@ -37,14 +37,14 @@ public:
     virtual unsigned char Virtual1(Struct_10BD4670* A, int* B);
 };
 
-// FUNCTION: 0x10BD4160 ?FUN_10bd4160@Class_10BAEC40@@QAEXABV1@@Z
-void Class_10BAEC40::FUN_10bd4160(const Class_10BAEC40& Other)
+// FUNCTION: 0x10BD4160 ?CopyFrom@Class_10BAEC40@@QAEXABV1@@Z
+void Class_10BAEC40::CopyFrom(const Class_10BAEC40& Other)
 {
-    FUN_10bae1d0(Other.Unknown00);
-    for (int i = 0; i < Unknown00; i++)
+    SetCount(Other.m_Count);
+    for (int i = 0; i < m_Count; i++)
     {
-        const Struct_10BAEC40_Unknown08& Source = Other.Unknown08[i];
-        Struct_10BAEC40_Unknown08& Item = Unknown08[i];
+        const Struct_10BAEC40_Unknown08& Source = Other.m_Items[i];
+        Struct_10BAEC40_Unknown08& Item = m_Items[i];
         Item.Unknown04 = Source.Unknown04;
         Item.Unknown08 = Source.Unknown08;
         Item.Unknown0C = Source.Unknown0C;

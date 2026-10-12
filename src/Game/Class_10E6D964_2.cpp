@@ -3,9 +3,9 @@
 #include "Game/Class_10F46D9C.h"
 #include "Game/Object_10AA7BA0.h"
 
-void FUN_10d3d990(void* Stream, int* Value);
+void WriteString(void* Stream, int* Value);
 
-void FUN_10d3d2d0(void* Stream, int Value);
+void WriteInt(void* Stream, int Value);
 
 extern Class_10F46D9C* DAT_10f46d9c;
 
@@ -35,7 +35,7 @@ public:
 // FUNCTION: 0x10AA7BA0 ?FUN_10aa7ba0@Class_10E6D964@@UAEXPAXHH@Z
 void Class_10E6D964::FUN_10aa7ba0(void* Stream, int A, int B)
 {
-    FUN_10d3d990(Stream, &Unknown10);
-    FUN_10d3d2d0(Stream, DAT_10f46d9c->Virtual34());
+    WriteString(Stream, &Unknown10);
+    WriteInt(Stream, DAT_10f46d9c->Virtual34());
     Unknown08->Virtual16(DAT_10f46d9c->Virtual34(), Stream);
 }

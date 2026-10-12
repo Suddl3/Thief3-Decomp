@@ -33,7 +33,7 @@ inline Class_10E97B00* AddressOf(const Class_10E97B00& Object)
 // FUNCTION: 0x10BC7F30 ?FUN_10bc7f30@Class_10BC9A50@@QAEXXZ
 void Class_10BC9A50::FUN_10bc7f30()
 {
-    if (this->Unknown04->Unknown08->FUN_10dbd510(0x100647)->FUN_10bbdb40() > 0.0)
+    if (this->Unknown04->Unknown08->FUN_10dbd510(0x100647)->GetFloat() > 0.0)
     {
         Class_109081E0 Text(DAT_10e47660);
         FUN_10bc7d70(AddressOf(Class_10E97B00("+death:grunt")), 10, 8, &Text, true);

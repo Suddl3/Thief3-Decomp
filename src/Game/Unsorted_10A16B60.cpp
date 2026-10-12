@@ -25,5 +25,5 @@ int Class_10A16B60::FUN_10a16b60(int Key, int B, int C, int D, int E, short F, s
     Info.Unknown10 = E;
     Info.Unknown00 = F;
     Info.Unknown02 = G;
-    return Unknown04.FUN_10a163f0(&Key, &Info);
+    return Unknown04.Set(&Key, &Info);
 }

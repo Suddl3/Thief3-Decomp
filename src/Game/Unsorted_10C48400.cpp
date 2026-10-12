@@ -12,7 +12,7 @@ void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D
 
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
-unsigned int FUN_1090e9b0(const void* Data, int Length);
+unsigned int HashBytes(const void* Data, int Length);
 
 // FUNCTION: 0x10C48400 ?FUN_10c48400@Class_10C48260@@QAEXH@Z
 void Class_10C48260::FUN_10c48400(int Size)

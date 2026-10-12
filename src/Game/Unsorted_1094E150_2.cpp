@@ -80,10 +80,10 @@ public:
     int Unknown110;
 };
 
-// FUNCTION: 0x1094E3A0 ?FUN_1094e3a0@Class_1094E3A0@@QAEPAUElem_1094E3A0@@XZ
-Elem_1094E3A0* Class_1094E3A0::FUN_1094e3a0()
+// FUNCTION: 0x1094E3A0 ?GetCurrentElement@Class_1094E3A0@@QAEPAUElem_1094E3A0@@XZ
+Elem_1094E3A0* Class_1094E3A0::GetCurrentElement()
 {
-    return &Unknown108[Unknown110];
+    return &m_Elements[m_CurrentIndex];
 }
 
 // FUNCTION: 0x1094E650 ?FUN_1094e650@Class_1094E650@@QAEXHHPAUStruct_1094E650@@@Z

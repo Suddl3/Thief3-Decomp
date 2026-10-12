@@ -10,7 +10,7 @@ class FArchive;
 class Class_10E99020 : public Class_10C1B1A0
 {
 public:
-    virtual void FUN_10c1b7d0(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 };
 
 #endif // GAME_CLASS_10E99020_H

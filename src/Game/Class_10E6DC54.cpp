@@ -21,27 +21,27 @@ extern "C" int __stdcall DirectInput8Create(int Instance, unsigned int Version, 
 class Class_10E6DC54
 {
 public:
-    bool FUN_10aaeb70(int A, float* Out);
+    bool GetNormalizedAxis(int A, float* Out);
     unsigned char FUN_10aae350(int A);
-    void FUN_10aaeb00();
+    void InitDirectInput();
 
     char Unknown00[0x808];
-    float Unknown808;
-    float Unknown80C;
+    float m_DeadZonePercent;
+    float m_DeadZoneScale;
 };
 
-// FUNCTION: 0x10AAEB00 ?FUN_10aaeb00@Class_10E6DC54@@QAEXXZ
-void Class_10E6DC54::FUN_10aaeb00()
+// FUNCTION: 0x10AAEB00 ?InitDirectInput@Class_10E6DC54@@QAEXXZ
+void Class_10E6DC54::InitDirectInput()
 {
     int Result = DirectInput8Create(DAT_10f3a374, 0x800, DAT_10eb840c, &DAT_10f3a36c, 0);
     if (Result < 0)
         DAT_10f3a36c = 0;
-    if (Config::Instance()->GetFloat(DAT_10e6dc48, DAT_10e6dc68, &Unknown808, 0))
-        Unknown80C = DAT_10e49684 / (DAT_10e49684 - Unknown808);
+    if (Config::Instance()->GetFloat(DAT_10e6dc48, DAT_10e6dc68, &m_DeadZonePercent, 0))
+        m_DeadZoneScale = DAT_10e49684 / (DAT_10e49684 - m_DeadZonePercent);
 }
 
-// FUNCTION: 0x10AAEB70 ?FUN_10aaeb70@Class_10E6DC54@@QAE_NHPAM@Z
-bool Class_10E6DC54::FUN_10aaeb70(int A, float* Out)
+// FUNCTION: 0x10AAEB70 ?GetNormalizedAxis@Class_10E6DC54@@QAE_NHPAM@Z
+bool Class_10E6DC54::GetNormalizedAxis(int A, float* Out)
 {
     if ((A >= 200 && A <= 215) || (A >= 240 && A <= 243))
     {

@@ -26,8 +26,8 @@ template AAIPawnController* Cast<AAIPawnController>(UObject* Src);
 // FUNCTION: 0x10BAA8A0 ?FUN_10baa8a0@Class_10BAA8A0@@QAE_NXZ
 bool Class_10BAA8A0::FUN_10baa8a0()
 {
-    if (FUN_10baa750() && FUN_10baa750()->FUN_10b9cac0())
-        return FUN_10baa750()->FUN_10b9cac0()->Virtual3() == 5;
+    if (FUN_10baa750() && FUN_10baa750()->GetCurrent())
+        return FUN_10baa750()->GetCurrent()->Virtual3() == 5;
     return false;
 }
 

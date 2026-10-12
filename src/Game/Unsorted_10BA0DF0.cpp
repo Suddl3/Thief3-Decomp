@@ -45,7 +45,7 @@ void __stdcall FUN_10ba0df0(Class_10BAA580* Obj)
             Mode->Unknown4A0 = true;
             Mode->Unknown4A1 = false;
         }
-        if (((Class_10DBD510*)Obj)->FUN_10dbd510(0x100647)->FUN_10bbdb40() > 0.0)
+        if (((Class_10DBD510*)Obj)->FUN_10dbd510(0x100647)->GetFloat() > 0.0)
         {
             ((Class_1098E330*)Obj->FUN_10c7d570())->Unknown0C4 |= 0x10000000;
         }
@@ -60,7 +60,7 @@ void __stdcall FUN_10ba0e70(Class_10BAA8A0* A)
         Class_10B9CAC0* P = A->FUN_10baa750();
         if (P)
         {
-            Class_10BC9D40* Q = P->FUN_10b9cac0();
+            Class_10BC9D40* Q = P->GetCurrent();
             if (Q)
             {
                 int R = Q->Virtual3();

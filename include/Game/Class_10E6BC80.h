@@ -10,12 +10,12 @@ class Class_10E6BC80
 {
 public:
     virtual void Virtual0();
-    virtual void FUN_10a76c50(Struct_10A76C50* Source);
-    virtual Object_10A76760* FUN_10a76760(int Value);
+    virtual void AddCopy(Struct_10A76C50* Source);
+    virtual Object_10A76760* FindBySource(int Value);
 
     int Unknown04;
     int Unknown08;
-    Object_10A76760** Unknown0C;
+    Object_10A76760** m_Copies;
 };
 
 #endif // GAME_CLASS_10E6BC80_H

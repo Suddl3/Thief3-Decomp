@@ -16,6 +16,8 @@ Class_10930110           Vocabulary                       0x1092FF00: called on 
 Class_109301D0           Vocabulary                       0x109301D0: called on this by 0x10930300
 Class_109333a0           Class_109333A0                   the same address as Class_109333A0, in capitals
 Class_10935D10           Class_10E49F90                   0x10935D10: called on this by 0x109361D0
+Class_10936AC0           cD3DStateCache                   named: Methods set and cache Direct3D stream, index, texture and shader constant state.
+Class_1093EFB0           cItemArray                       named: Add stores an Item at the count's index after Resize(index + 1); Free releases the block.
 Class_1093bcb0           Class_1093BCB0                   the same address as Class_1093BCB0, in capitals
 Class_10940970           Class_10E4A538                   0x1093FFE0: called on this by 0x10940B50
 Class_109421A0           Class_10E4A668                   0x109421A0: slot of 0x10E4A668
@@ -26,6 +28,8 @@ Class_109437C0           Class_10E4A668                   0x109437C0: slot of 0x
 Class_109437D0           Class_10E4A668                   0x109437D0: slot of 0x10E4A668
 Class_10943800           Class_10E4A668                   0x10943800: slot of 0x10E4A668
 Class_10943970           Class_10E4A668                   0x10943970: slot of 0x10E4A668
+Class_10946110           cEntryArray                      named: Add stores an Entry at the count's index after Resize(index + 1); Free releases the block.
+Class_1094C3F0           cElementArray                    named: Resize grows capacity in steps of 16 and zeroes new elements; Free releases the block.
 Class_1094C700           Class_10E4AA80                   0x1094C700: slot of 0x10E4AA80
 Class_1094CA70           Class_10E4AA80                   0x1094CF80: slot of 0x10E4AA80
 Class_1094E0F0           Class_10E4AB88                   0x1094E0F0: slot of 0x10E4AB88
@@ -429,7 +433,7 @@ Class_10BDEEF0           Class_10E94B20                   0x10BDEEE0: slot of 0x
 Class_10BDF8D0           State_MunchCorpse                0x10BDF8D0: stores 0x10E954D0
 Class_10BDFA90           Class_10E955F0                   0x10BDFA90: stores 0x10E955F0
 Class_10BE1F80           Class_10E95780                   0x10BE1F80: slot of 0x10E95780
-Class_10BE2E20           Class_10E95BE8                   0x10BE2E20: stores 0x10E95BE8
+Class_10BE2E20           State_FrobAlarm                  0x10BE2E20: stores 0x10E95BE8
 Class_10BE2EC0           Class_10E95D00                   0x10BE2EC0: stores 0x10E95D00
 Class_10BE2ED0           Class_10E95D00                   0x10BE2ED0: slot of 0x10E95D00
 Class_10BE2F90           State_Fetch                      0x10BE2F90: stores 0x10E95E18
@@ -448,10 +452,10 @@ Class_10BE8810           Class_10E96510                   0x10BE8810: slot of 0x
 Class_10BE8840           Class_10E96810                   0x10BE8840: slot of 0x10E96810
 Class_10BE8F70           Class_10E960D8                   0x10BE8F70: slot of 0x10E960D8
 Class_10BE99E0           State_Flee                       0x10BE99E0: called on this by 0x10BE9D40
-Class_10BEF080           Class_10E97720                   0x10BEF080: called on this by 0x10BF5890
-Class_10BF08D0           Class_10E97720                   0x10BF08D0: called on this by 0x10BF5890
-Class_10BF1500           Class_10E97720                   0x10BF1500: called on this by 0x10BF2990
-Class_10BF2F70           Class_10E97720                   0x10BF2F70: slot of 0x10E97720
+Class_10BEF080           cStateRangedCombat               0x10BEF080: called on this by 0x10BF5890
+Class_10BF08D0           cStateRangedCombat               0x10BF08D0: called on this by 0x10BF5890
+Class_10BF1500           cStateRangedCombat               0x10BF1500: called on this by 0x10BF2990
+Class_10BF2F70           cStateRangedCombat               0x10BF2F70: slot of 0x10E97720
 Class_10BF6B10           Class_10E97880                   0x10BF6B10: called on this by 0x10BF6EC0
 Class_10BF6B30           Class_10E97880                   0x10BF6B30: called on this by 0x10BF6EC0
 Class_10C047F0           AudioController                  0x10C047F0: slot of 0x10E97AF4
@@ -533,6 +537,8 @@ Class_10E69470           cConsoleWindow                   named: Xbox twin vtabl
 Class_10E698F0           cIconWindow                      named: Xbox twin vtable (T3Opt 131/128 slots): its own methods' and constructors' debug names say cIconWindow (2)
 Class_10E6AC20           cMenu                            named: Xbox twin vtable (T3Opt 11/11 slots): its own methods' and constructors' debug names say cMenu (1), source WmMenu.cpp
 Class_10E6B5C0           cCauseManager                    named: Xbox twin's paired functions come from CauseManager.cpp; keyed lists of causes with 10 s timers.
+Class_10E6B660           cFootstepListener                named: Xbox message: FootstepListener got a note track it was not expecting; string 'footstep'
+Class_10E6BA88           cDelayedDeleter                  named: Destructor deletes every queued Obj; DeleteAfter queues one with a delay and Tick deletes it when the delay runs out.
 Class_10E6BAB0           cVolumeManager                   named: Xbox twin's Class:: name is cVolumeManager; ContainsPoint tests a point against a volume.
 Class_10E6BB40           cRadiusPinger                    named: Xbox twin vtable (T3Opt 18/18 slots): its own methods' and constructors' debug names say cRadiusPinger (1), source RadiusPinger.cpp
 Class_10E6BD90           cRigidAttachmentManager          named: Xbox twin names it cRigidAttachmentManager 18 times (RigidAttachmentManager.cpp 5); code links objects by rigid link type.
@@ -573,9 +579,11 @@ Class_10E93CA0           cCombatBase                      named: Xbox twin's cla
 Class_10E94578           cTacticMoveToPoint               named: Xbox twin's class name (AICombatTactics.cpp); its '+Inform:arrive' message agrees
 Class_10E947B8           cMeleeStrafeTarget               named: Xbox AICombatTactics.cpp debug name cMeleeStrafeTarget; the class derives from cTacticMoveToPoint, a tactic.
 Class_10E954D0           State_MunchCorpse                named: Xbox twin vtable (T3Opt 71/71 slots): its own methods' and constructors' debug names say State_MunchCorpse (2), source AI_IdleStates.cpp
+Class_10E95BE8           State_FrobAlarm                  named: Xbox vtable pair names State_FrobAlarm (AI_SummonStates.cpp); its code keeps one int id in Unknown40.
 Class_10E95E18           State_Fetch                      named: Xbox AI_SummonStates.cpp debug name State_Fetch; a state that ends with PopState and clears its stored reference.
 Class_10E970F0           State_Flee                       named: Xbox twin's class name State_Flee (3 Class:: names, AI_FleeStates.cpp); FUN_10be9c30 calls UObject::ProcessState.
 Class_10E975A0           State_Patrol                     named: Xbox twin vtable (T3Opt 70/70 slots): its own methods' and constructors' debug names say State_Patrol (3), source AI_PatrolStates.cpp
+Class_10E97720           cStateRangedCombat               named: Xbox vtable pair names cStateRangedCombat; code tests property 0x8007b1 and sets Unknown138 when a result is missing or 0x11.
 Class_10E979DC           MovementController               named: Xbox twin vtable (T3Opt 2/2 slots): its own methods' and constructors' debug names say MovementController (2), source AI_MovementController.cpp
 Class_10E97AF4           AudioController                  named: Xbox twin vtable (T3Opt 1/1 slots): its own methods' and constructors' debug names say AudioController (1), source AI_AudioController.cpp
 Class_10E97C18           cAIManager                       named: Xbox twin vtable (T3Opt 25/25 slots): its own methods' and constructors' debug names say cAIManager (3)

@@ -28,11 +28,11 @@ public:
 class Class_10E992D4 : public Class_10E9925C
 {
 public:
-    void FUN_10c26600();
+    void Unregister();
 };
 
-// FUNCTION: 0x10C26600 ?FUN_10c26600@Class_10E992D4@@QAEXXZ
-void Class_10E992D4::FUN_10c26600()
+// FUNCTION: 0x10C26600 ?Unregister@Class_10E992D4@@QAEXXZ
+void Class_10E992D4::Unregister()
 {
     if (Unknown34 && FUN_10c26490() && Unknown0C >= 0)
     {

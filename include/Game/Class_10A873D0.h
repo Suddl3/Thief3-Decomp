@@ -12,7 +12,7 @@ class Class_10A873D0 : public Class_10A85940
 public:
     ~Class_10A873D0()
     {
-        FUN_10a86490(0x40);
+        Reset(0x40);
         ::operator delete(Unknown14);
         Unknown04 = 0;
         Unknown0C = 0;
@@ -20,7 +20,7 @@ public:
         Unknown00 = 0;
     }
 
-    void FUN_10a86490(int A);
+    void Reset(int A);
     void FUN_10a873d0();
 };
 

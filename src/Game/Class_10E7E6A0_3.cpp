@@ -39,7 +39,7 @@ public:
 class Class_10E7E658 : public Class_10B3AE70
 {
 public:
-    void FUN_10b3b030(AGarrett* Garrett);
+    void StopBody(AGarrett* Garrett);
 };
 
 class Class_10E7E6A0 : public Class_10E7E658
@@ -85,7 +85,7 @@ void Class_10E7E6A0::FUN_10b4a330(AGarrett* Garrett)
     Unknown10 = 1;
     m_NoiseDisabled = false;
     FUN_10b49f60();
-    FUN_10b3b030(Garrett);
+    StopBody(Garrett);
     FUN_10b3ae70(Garrett);
     Garrett->bUpdatePhysHeight = 0;
     Garrett->SetNoiseEnabled(1);

@@ -13,7 +13,7 @@ public:
     float FUN_1091a610(const Struct_1091A610* A, int B);
     bool FUN_10919d30(Class_10941C40* A, const char* Text, int Length, float* X, float* Y, unsigned long Color,
                       float ScaleX, float ScaleY, unsigned long Flags);
-    bool FUN_1091a640(Class_10941C40* A, const Struct_1091A610* Text, float* X, float* Y, unsigned long Color,
+    bool DrawText(Class_10941C40* A, const Struct_1091A610* Text, float* X, float* Y, unsigned long Color,
                       float ScaleX, float ScaleY, unsigned long Flags);
 
     char Pad00[0x1];

@@ -60,10 +60,10 @@ extern void* DAT_10e6c6c4[];
 class Class_10E6C6C4
 {
 public:
-    Class_10E6C6C4() : VTable(DAT_10e6c6c4), Unknown04(NAME_None) {}
+    Class_10E6C6C4() : VTable(DAT_10e6c6c4), m_Value(NAME_None) {}
 
     void** VTable;
-    FName Unknown04;
+    FName m_Value;
 };
 
 // FUNCTION: 0x10A8B860 ?IsLoaded@cTriggerBoolPropertyParam@@UAEHXZ

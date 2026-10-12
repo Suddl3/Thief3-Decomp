@@ -10,20 +10,20 @@ class Class_10ABDAE0
 {
 public:
     void FUN_10abdae0(int A);
-    void FUN_10abe1d0();
-    void FUN_10abe210(const Class_10ABDAE0& Other);
+    void Clear();
+    void CopyFrom(const Class_10ABDAE0& Other);
     void FUN_10b199f0(int A, int B, int C);
-    void FUN_10b1a7d0(int Index, const Class_10B1A7D0Item& Value);
+    void Insert(int Index, const Class_10B1A7D0Item& Value);
 
     union
     {
-        int Unknown00;
+        int m_Count;
         int Count;
     };
     int Unknown04;
     union
     {
-        Class_10B1A7D0Item* Unknown08;
+        Class_10B1A7D0Item* m_Data;
         Struct_10ABE210* Data;
     };
 };

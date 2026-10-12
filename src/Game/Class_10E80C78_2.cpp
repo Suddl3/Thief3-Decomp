@@ -483,7 +483,7 @@ public:
 class Class_10E80C78 : public cDifficultyPane
 {
 public:
-    void FUN_10b42f70(int Arg);
+    void SetDifficulty(int Arg);
 
     char Pad1A0[0x4];
     Class_10B42F70_Unknown1A4* Unknown1A4;
@@ -495,8 +495,8 @@ public:
     bool Unknown1C4;
 };
 
-// FUNCTION: 0x10B42F70 ?FUN_10b42f70@Class_10E80C78@@QAEXH@Z
-void Class_10E80C78::FUN_10b42f70(int Arg)
+// FUNCTION: 0x10B42F70 ?SetDifficulty@Class_10E80C78@@QAEXH@Z
+void Class_10E80C78::SetDifficulty(int Arg)
 {
     Unknown1C4 = true;
     Unknown190 = 0;

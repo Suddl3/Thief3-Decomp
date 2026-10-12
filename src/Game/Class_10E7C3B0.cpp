@@ -71,11 +71,11 @@ class Class_10E7C3B0
 public:
     virtual void Virtual0();
     virtual void Virtual1();
-    virtual int FUN_10b37370(int A, int B, Class_10B37370_Arg* C);
+    virtual int ShowOkMessage(int A, int B, Class_10B37370_Arg* C);
 };
 
-// FUNCTION: 0x10B37370 ?FUN_10b37370@Class_10E7C3B0@@UAEHHHPAVClass_10B37370_Arg@@@Z
-int Class_10E7C3B0::FUN_10b37370(int A, int B, Class_10B37370_Arg* C)
+// FUNCTION: 0x10B37370 ?ShowOkMessage@Class_10E7C3B0@@UAEHHHPAVClass_10B37370_Arg@@@Z
+int Class_10E7C3B0::ShowOkMessage(int A, int B, Class_10B37370_Arg* C)
 {
     if (GWindowManager)
     {

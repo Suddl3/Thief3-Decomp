@@ -130,9 +130,9 @@ public:
     virtual void Virtual118();
     virtual void Virtual119();
     virtual void Virtual120();
-    virtual Class_109081E0 FUN_10b6f890();
+    virtual Class_109081E0 GetTitle();
 
-    Class_10E86FD0* FUN_10b6f9e0();
+    Class_10E86FD0* Construct();
 };
 
 #endif // GAME_CLASS_10E86FD0_H

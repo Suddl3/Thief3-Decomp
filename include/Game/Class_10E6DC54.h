@@ -13,9 +13,9 @@ public:
     void FUN_10aaf320(int A);
     void FUN_10aae8b0();
     void FUN_10aaf4d0(int A);
-    bool FUN_10aaeb70(int A, float* Out);
+    bool GetNormalizedAxis(int A, float* Out);
     unsigned char FUN_10aae350(int A);
-    void FUN_10aaeb00();
+    void InitDirectInput();
 
     char Pad810[0x2];
     bool Unknown812;

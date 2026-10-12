@@ -53,7 +53,7 @@ public:
     virtual void Virtual2();
     virtual void FUN_10a6f010(int A, Class_10BFBD70* Arr);
 
-    Class_10A6F0C0 Unknown04;
+    Class_10A6F0C0 m_Entries;
     char Pad05[0x7];
     Class_10A6F010_Unknown0C* Unknown0C;
 };

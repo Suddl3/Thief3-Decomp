@@ -59,15 +59,15 @@ Class_1095A490* Class_1095A490::FUN_1095a490(float A, float B, float C, float D,
     return this;
 }
 
-// FUNCTION: 0x1095A760 ?FUN_1095a760@Class_1095A760@@QAEXXZ
-void Class_1095A760::FUN_1095a760()
+// FUNCTION: 0x1095A760 ?Clear@Class_1095A760@@QAEXXZ
+void Class_1095A760::Clear()
 {
-    FUN_1095a5a0(0);
-    if (Unknown04)
+    SetCount(0);
+    if (m_CapacityBytes)
     {
-        GetAllocator()->Virtual5(Unknown08);
-        Unknown08 = 0;
-        Unknown04 = 0;
+        GetAllocator()->Virtual5(m_Elements);
+        m_Elements = 0;
+        m_CapacityBytes = 0;
     }
 }
 

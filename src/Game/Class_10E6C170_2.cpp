@@ -1,7 +1,7 @@
 // Game/Class_10E6C170_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-void FUN_10d3d990(void* Reader, int* Out);
+void WriteString(void* Reader, int* Out);
 
 class Class_10E6C170
 {
@@ -19,5 +19,5 @@ public:
 void Class_10E6C170::Load(void* Reader, int Version, int Flag)
 {
     if (Flag == 0)
-        FUN_10d3d990(Reader, &Unknown08);
+        WriteString(Reader, &Unknown08);
 }

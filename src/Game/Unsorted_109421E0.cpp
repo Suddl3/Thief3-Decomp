@@ -30,11 +30,11 @@ int Class_10942BF0::FUN_10942bf0(int Flag)
     return Unknown158 & 0x7ffff;
 }
 
-// FUNCTION: 0x109435A0 ?FUN_109435a0@Class_109435A0@@QAEHPBF@Z
-int Class_109435A0::FUN_109435a0(const short* Item)
+// FUNCTION: 0x109435A0 ?Append@Class_109435A0@@QAEHPBF@Z
+int Class_109435A0::Append(const short* Item)
 {
-    int Index = Unknown00;
-    FUN_10942c60(Index + 1);
-    Unknown08[Index] = *Item;
+    int Index = m_Count;
+    Resize(Index + 1);
+    m_Items[Index] = *Item;
     return Index;
 }

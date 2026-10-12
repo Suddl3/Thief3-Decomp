@@ -20,7 +20,7 @@ void FUN_10919610()
 {
     if (DAT_10f2c8e4)
         DAT_10f2c8e4->Virtual2();
-    DAT_10f340ac->FUN_1093e550();
+    DAT_10f340ac->Release();
     DAT_10f340c0->FUN_1093edb0();
     DAT_10f31bdc->FUN_10937730();
 }

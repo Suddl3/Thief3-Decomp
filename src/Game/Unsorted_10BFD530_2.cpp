@@ -58,13 +58,13 @@ void Class_10BFD780::FUN_10bfd780(int Key)
             Obj->Virtual13(Key);
         }
     }
-    for (int j = 0; j < Unknown54.Unknown00; j++)
+    for (int j = 0; j < Unknown54.m_Count; j++)
     {
-        Struct_10BFD780_Elem* Elem = (Struct_10BFD780_Elem*)Unknown54.Unknown08;
+        Struct_10BFD780_Elem* Elem = (Struct_10BFD780_Elem*)Unknown54.m_Data;
         if (Elem[j].Key == Key)
         {
-            Unknown54.FUN_10bfc320(j, Unknown54.Unknown00 - 1);
-            Unknown54.FUN_10bae100(Unknown54.Unknown00 - 1);
+            Unknown54.FUN_10bfc320(j, Unknown54.m_Count - 1);
+            Unknown54.SetCount(Unknown54.m_Count - 1);
             j--;
         }
     }

@@ -6,13 +6,13 @@
 #include "Game/Class_109526F0.h"
 #include "Game/Class_10955DB0.h"
 
-class Class_10936AC0 : public Class_10937400
+class cD3DStateCache : public Class_10937400
 {
 public:
     void FUN_10937140(int A, float* B);
 };
 
-extern Class_10936AC0* DAT_10f31be0;
+extern cD3DStateCache* DAT_10f31be0;
 
 extern IDirect3DDevice8* GDirect3DDevice8;
 
@@ -56,7 +56,7 @@ bool Class_10E49F90::FUN_10935f00(Class_10935F00_Arg* A, int B)
 {
     if (A && A->Unknown4E && (A->Unknown34 & 4))
     {
-        DAT_10f31be0->FUN_109373d0(Unknown150);
+        DAT_10f31be0->SetVertexShader(Unknown150);
         DAT_10f31be0->FUN_10937400(Unknown2C8);
         ((Class_10952640*)A)->FUN_10952640();
         ((Class_109526F0*)A)->FUN_109526f0();

@@ -12,12 +12,12 @@ struct Struct_10C27380
 class Class_10BAEC40
 {
 public:
-    void FUN_10bae1d0(int A);
-    void FUN_10bf7ad0(int A, int B, int C);
+    void SetCount(int A);
+    void MoveRange(int A, int B, int C);
 
-    int Unknown00;
+    int m_Count;
     int Unknown04;
-    Struct_10C27380* Unknown08;
+    Struct_10C27380* m_Items;
 };
 
 class Class_10C27380
@@ -32,13 +32,13 @@ public:
 // FUNCTION: 0x10C27380 ?FUN_10c27380@Class_10C27380@@QAEXH@Z
 void Class_10C27380::FUN_10c27380(int A)
 {
-    for (int I = Unknown30.Unknown00 - 1; I >= 0; I--)
+    for (int I = Unknown30.m_Count - 1; I >= 0; I--)
     {
-        if (Unknown30.Unknown08[I].Unknown04 == A)
+        if (Unknown30.m_Items[I].Unknown04 == A)
         {
-            if (I != Unknown30.Unknown00 - 1)
-                Unknown30.FUN_10bf7ad0(I + 1, I, Unknown30.Unknown00 - I - 1);
-            Unknown30.FUN_10bae1d0(Unknown30.Unknown00 - 1);
+            if (I != Unknown30.m_Count - 1)
+                Unknown30.MoveRange(I + 1, I, Unknown30.m_Count - I - 1);
+            Unknown30.SetCount(Unknown30.m_Count - 1);
         }
     }
 }

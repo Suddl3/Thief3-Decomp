@@ -177,7 +177,7 @@ class Class_10B22D60
 {
 public:
     void FUN_10b22c10();
-    void FUN_10b229c0(void** A, int B);
+    void SetSlot(void** A, int B);
 
     char Unknown00[0x90];
     void* Unknown90;
@@ -206,6 +206,6 @@ void Class_10B22910::FUN_10b22910()
 // FUNCTION: 0x10B22C10 ?FUN_10b22c10@Class_10B22D60@@QAEXXZ
 void Class_10B22D60::FUN_10b22c10()
 {
-    FUN_10b229c0(&Unknown90, 0x11);
-    FUN_10b229c0(&Unknown94, 0x17);
+    SetSlot(&Unknown90, 0x11);
+    SetSlot(&Unknown94, 0x17);
 }

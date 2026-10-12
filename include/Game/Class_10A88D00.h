@@ -8,7 +8,7 @@ class FVector;
 class Class_10A88D00
 {
 public:
-    float FUN_10a889e0(float A, float B);
+    float ClampedLength2D(float A, float B);
     float FUN_10a88ad0(int B, FVector* Dir, int C);
     float FUN_10a88d00(FVector* A, int B, int C);
 

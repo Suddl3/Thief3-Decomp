@@ -41,7 +41,7 @@ public:
     virtual void Virtual0();
     virtual void Virtual1();
     virtual void FUN_10c262b0(int p1, int p2, int p3, int p4);
-    virtual void FUN_10c266d0();
+    virtual void SyncRegistration();
     virtual void Virtual4();
     virtual void Virtual5();
     virtual void Virtual6();
@@ -51,8 +51,8 @@ public:
     virtual void Virtual10();
 
     unsigned char FUN_10c270b0();
-    void FUN_10c265c0();
-    void FUN_10c26600();
+    void Register();
+    void Unregister();
 
     int Unknown38;
     char Pad3C[0x8];

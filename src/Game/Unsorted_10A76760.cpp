@@ -41,13 +41,13 @@ public:
 
 class ULevelBase;
 
-// FUNCTION: 0x10A76760 ?FUN_10a76760@Class_10E6BC80@@UAEPAVObject_10A76760@@H@Z
-Object_10A76760* Class_10E6BC80::FUN_10a76760(int Value)
+// FUNCTION: 0x10A76760 ?FindBySource@Class_10E6BC80@@UAEPAVObject_10A76760@@H@Z
+Object_10A76760* Class_10E6BC80::FindBySource(int Value)
 {
     for (int i = 0; i < Unknown04; i++)
     {
-        if (Unknown0C[i]->Unknown00 == Value)
-            return Unknown0C[i];
+        if (m_Copies[i]->Unknown00 == Value)
+            return m_Copies[i];
     }
     return 0;
 }

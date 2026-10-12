@@ -36,7 +36,7 @@ public:
 class Class_10E7E658 : public Class_10B3AE70
 {
 public:
-    void FUN_10b3b030(AGarrett* Garrett);
+    void StopBody(AGarrett* Garrett);
 };
 
 class Class_10E7E610 : public Class_10E7E658
@@ -57,7 +57,7 @@ void Class_10E7E610::FUN_10b492f0(AGarrett* Garrett)
     Unknown10 = 1;
     FUN_10b3ae70(Garrett);
     ((Class_10B39530*)FUN_10aa82d0())->FUN_10b39530(0x48, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
-    FUN_10b3b030(Garrett);
+    StopBody(Garrett);
     Unknown18 = 0;
     Unknown20 = 1;
     Unknown1C = 1;

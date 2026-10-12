@@ -30,7 +30,7 @@ class Class_10E96FD0;
 Class_10E91EE8* Class_10E4CCD0::FUN_10b999e0(Struct_10B98E00* A, int B)
 {
     int Id = FUN_10bcba80();
-    if (Id && A->Unknown08->FUN_10dbd510(Id)->FUN_10bbdb40() > DAT_10eafbdc)
+    if (Id && A->Unknown08->FUN_10dbd510(Id)->GetFloat() > DAT_10eafbdc)
         return new(0, 0, 0, 0, 0) Class_10E91EE8((int)A, (int)this, B);
     return 0;
 }

@@ -5,12 +5,12 @@
 #include "Game/Class_1093AF30_Node.h"
 #include "Game/Class_1093C750.h"
 
-// FUNCTION: 0x1093B450 ?FUN_1093b450@Class_1093C750@@QAEXH@Z
-void Class_1093C750::FUN_1093b450(int Size)
+// FUNCTION: 0x1093B450 ?Reset@Class_1093C750@@QAEXH@Z
+void Class_1093C750::Reset(int Size)
 {
-    for (int i = 0; i < Unknown0C; i++)
+    for (int i = 0; i < m_BucketCount; i++)
     {
-        Class_1093AF30_Node* Node = Unknown14[i];
+        Class_1093AF30_Node* Node = m_Buckets[i];
         while (Node)
         {
             Class_1093AF30_Node* Next = Node->Next;
@@ -19,11 +19,11 @@ void Class_1093C750::FUN_1093b450(int Size)
             Node = Next;
         }
     }
-    Unknown04 = 0;
-    Unknown0C = 0;
-    Unknown00 = 0;
-    ::operator delete(Unknown14);
-    Unknown14 = 0;
-    if (!Unknown10)
-        FUN_1093b040(Size);
+    m_Count = 0;
+    m_BucketCount = 0;
+    m_Collisions = 0;
+    ::operator delete(m_Buckets);
+    m_Buckets = 0;
+    if (!m_NoAutoGrow)
+        Rehash(Size);
 }

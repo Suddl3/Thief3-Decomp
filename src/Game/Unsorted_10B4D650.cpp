@@ -24,7 +24,7 @@ public:
     virtual void Virtual2();
     virtual void Virtual3();
     virtual void Virtual4();
-    virtual int FUN_10b4db40(int A, int B);
+    virtual int OnAnimationEnd(int A, int B);
 
     char Unknown10[4];
     int Unknown14;
@@ -56,8 +56,8 @@ void Class_10E7EBF8::FUN_10b4d6f0(Class_10B22020* A)
     A->Unknown54E = false;
 }
 
-// FUNCTION: 0x10B4DB40 ?FUN_10b4db40@Class_10E7EBB0@@UAEHHH@Z
-int Class_10E7EBB0::FUN_10b4db40(int A, int B)
+// FUNCTION: 0x10B4DB40 ?OnAnimationEnd@Class_10E7EBB0@@UAEHHH@Z
+int Class_10E7EBB0::OnAnimationEnd(int A, int B)
 {
     ((Class_10B396B0*)FUN_10aa82d0())->FUN_10b396b0(B);
     Unknown08 = 0x101;

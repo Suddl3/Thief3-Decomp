@@ -6,39 +6,39 @@ class IDirect3DVertexBuffer8;
 
 extern IDirect3DDevice8* GDirect3DDevice8;
 
-class Class_10936AC0
+class cD3DStateCache
 {
 public:
-    void FUN_10936ac0(int VertexBuffer, int Stride);
+    void SetStreamSource(int VertexBuffer, int Stride);
 
     char Unknown00[0xC];
-    int Unknown0C;
-    int Unknown10;
+    int m_VertexBuffer;
+    int m_VertexStride;
 };
 
-// FUNCTION: 0x10936AC0 ?FUN_10936ac0@Class_10936AC0@@QAEXHH@Z
-void Class_10936AC0::FUN_10936ac0(int VertexBuffer, int Stride)
+// FUNCTION: 0x10936AC0 ?SetStreamSource@cD3DStateCache@@QAEXHH@Z
+void cD3DStateCache::SetStreamSource(int VertexBuffer, int Stride)
 {
     if (VertexBuffer != 0)
     {
         if (Stride != 0)
         {
-            if (VertexBuffer != Unknown0C || Stride != Unknown10)
+            if (VertexBuffer != m_VertexBuffer || Stride != m_VertexStride)
             {
                 GDirect3DDevice8->SetStreamSource(0, (IDirect3DVertexBuffer8*)VertexBuffer, Stride);
-                Unknown0C = VertexBuffer;
-                Unknown10 = Stride;
+                m_VertexBuffer = VertexBuffer;
+                m_VertexStride = Stride;
             }
         }
         else
         {
-            Unknown0C = 0;
-            Unknown10 = 0;
+            m_VertexBuffer = 0;
+            m_VertexStride = 0;
         }
     }
     else
     {
-        Unknown0C = 0;
-        Unknown10 = 0;
+        m_VertexBuffer = 0;
+        m_VertexStride = 0;
     }
 }

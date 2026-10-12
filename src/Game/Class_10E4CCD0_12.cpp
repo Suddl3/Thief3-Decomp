@@ -33,7 +33,7 @@ int FUN_10b98c50(Struct_10B98C50* P)
     if (Id)
     {
         Class_10DBD510* Owner = P->Unknown08;
-        if (Owner->FUN_10dbd510((int)Id)->FUN_10bbdb40() > DAT_10eafbdc)
+        if (Owner->FUN_10dbd510((int)Id)->GetFloat() > DAT_10eafbdc)
             return 1;
     }
     return 0;
@@ -43,7 +43,7 @@ int FUN_10b98c50(Struct_10B98C50* P)
 Class_10E95288* Class_10E4CCD0::FUN_10b98e00(Struct_10B98E00* A)
 {
     void* Id = FUN_10bdf650();
-    if (Id && A->Unknown08->FUN_10dbd510((int)Id)->FUN_10bbdb40() > DAT_10eafbdc)
+    if (Id && A->Unknown08->FUN_10dbd510((int)Id)->GetFloat() > DAT_10eafbdc)
         return new(0, 0, 0, 0, 0) Class_10E95288((int)A, (int)this);
     return 0;
 }

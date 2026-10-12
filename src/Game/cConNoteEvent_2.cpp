@@ -1,7 +1,7 @@
 // Game/cConNoteEvent_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-void FUN_10d3d990(void* Writer, int* Value);
+void WriteString(void* Writer, int* Value);
 
 class cConNoteEvent
 {
@@ -18,5 +18,5 @@ public:
 // FUNCTION: 0x10AAAA40 ?WriteNote@cConNoteEvent@@UAEXPAXHH@Z
 void cConNoteEvent::WriteNote(void* Writer, int Unused1, int Unused2)
 {
-    FUN_10d3d990(Writer, &m_Note);
+    WriteString(Writer, &m_Note);
 }

@@ -56,10 +56,10 @@ void Class_1091B480::FUN_1091b480(int NewSize)
     operator delete(OldTable);
 }
 
-// FUNCTION: 0x1091B560 ?FUN_1091b560@Class_1091B3F0@@QAEXABV1@@Z
-void Class_1091B3F0::FUN_1091b560(const Class_1091B3F0& Other)
+// FUNCTION: 0x1091B560 ?CopyFrom@Class_1091B3F0@@QAEXABV1@@Z
+void Class_1091B3F0::CopyFrom(const Class_1091B3F0& Other)
 {
-    FUN_1091af10(Other.Unknown00);
-    for (int i = 0; i < Unknown00; i++)
-        Unknown08[i] = Other.Unknown08[i];
+    FUN_1091af10(Other.Count);
+    for (int i = 0; i < Count; i++)
+        Items[i] = Other.Items[i];
 }

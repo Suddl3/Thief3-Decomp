@@ -14,12 +14,12 @@ void Class_10ABFB00::FUN_10abfb50(int A, int B)
 {
     bool State = FUN_10abf300(A, B);
     float Level = State ? DAT_10e49684 : DAT_10eafbdc;
-    float* Value = &Unknown0C;
+    float* Value = &m_Level;
     *Value = Level;
-    Unknown00 = State;
-    Class_10ABFB00_Member* Member = &Unknown20;
+    m_State = State;
+    Class_10ABFB00_Member* Member = &m_Interpolator;
     Member->Virtual0(Value, Value, 0);
-    Unknown00 = State;
+    m_State = State;
     FUN_10abf660(A);
     FUN_10abf7c0(A);
 }

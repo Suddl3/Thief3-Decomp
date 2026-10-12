@@ -14,8 +14,8 @@ struct FColor
     BYTE A;
 };
 
-// FUNCTION: 0x10A7DDE0 ?FUN_10a7dde0@Class_10E6BED8@@UAEXHPAEHH@Z
-void Class_10E6BED8::FUN_10a7dde0(int A, BYTE* Data, int C, int D)
+// FUNCTION: 0x10A7DDE0 ?FillRawTextureData@Class_10E6BED8@@UAEXHPAEHH@Z
+void Class_10E6BED8::FillRawTextureData(int A, BYTE* Data, int C, int D)
 {
     FColor* Dest = (FColor*)Data;
     FColor Color(10, 5, 60, 255);

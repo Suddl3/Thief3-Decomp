@@ -5,12 +5,12 @@
 
 extern IDirect3DDevice8* GDirect3DDevice8;
 
-// FUNCTION: 0x109373D0 ?FUN_109373d0@Class_109373D0@@QAEXK@Z
-void Class_109373D0::FUN_109373d0(unsigned long Shader)
+// FUNCTION: 0x109373D0 ?SetVertexShader@Class_109373D0@@QAEXK@Z
+void Class_109373D0::SetVertexShader(unsigned long Shader)
 {
-    if (Shader && Unknown6B0 != Shader)
+    if (Shader && m_VertexShader != Shader)
     {
         GDirect3DDevice8->SetVertexShader(Shader);
-        Unknown6B0 = Shader;
+        m_VertexShader = Shader;
     }
 }

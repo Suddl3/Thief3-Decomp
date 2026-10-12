@@ -23,7 +23,7 @@ public:
     virtual void Virtual6() = 0;
 };
 
-class Class_10E97720
+class cStateRangedCombat
 {
 public:
     virtual void Virtual0();
@@ -50,8 +50,8 @@ void Class_10BEF080::FUN_10bef080()
     Unknown220 = GetTimeSeconds() + 1.0;
 }
 
-// FUNCTION: 0x10BEF0F0 ?FUN_10bef0f0@Class_10E97720@@UAEXXZ
-void Class_10E97720::FUN_10bef0f0()
+// FUNCTION: 0x10BEF0F0 ?FUN_10bef0f0@cStateRangedCombat@@UAEXXZ
+void cStateRangedCombat::FUN_10bef0f0()
 {
     if (Unknown25C)
     {

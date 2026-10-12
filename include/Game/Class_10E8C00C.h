@@ -8,13 +8,13 @@ class FArchive;
 class Class_10E8C00C
 {
 public:
-    virtual void FUN_10c068f0(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 
-    Class_10E8C00C* FUN_10ba01f0(int A);
+    Class_10E8C00C* Construct(int A);
 
-    int Unknown04;
+    int m_ChildCount;
     int Unknown08;
-    Class_10E8C00C** Unknown0C;
+    Class_10E8C00C** m_Children;
     int Unknown10;
     int Unknown14;
     int Unknown18;

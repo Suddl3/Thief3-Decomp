@@ -6,13 +6,13 @@
 class Class_10BAEC00
 {
 public:
-    void FUN_10bae100(int Count);
-    void FUN_10baec00();
+    void SetCount(int Count);
+    void Empty();
     void FUN_10bfc320(int A, int B);
 
-    int Unknown00;
-    int Unknown04;
-    void* Unknown08;
+    int m_Count;
+    int m_BlockBytes;
+    void* m_Data;
 };
 
 #endif // GAME_CLASS_10BAEC00_H

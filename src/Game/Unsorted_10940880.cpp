@@ -125,13 +125,13 @@ public:
 
 extern IDirect3DDevice8* GDirect3DDevice8;
 
-class Class_10936AC0 : public Class_109373D0
+class cD3DStateCache : public Class_109373D0
 {
 public:
     void FUN_10937140(int Index, float* Value);
 };
 
-extern Class_10936AC0* DAT_10f31be0;
+extern cD3DStateCache* DAT_10f31be0;
 
 struct Struct_1093FFE0;
 

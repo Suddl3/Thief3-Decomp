@@ -4,11 +4,11 @@
 #include "Game/Class_10937400.h"
 #include "Game/Class_1093F9F0.h"
 
-class Class_10936AC0 : public Class_10937400
+class cD3DStateCache : public Class_10937400
 {
 };
 
-extern Class_10936AC0* DAT_10f31be0;
+extern cD3DStateCache* DAT_10f31be0;
 
 class Class_1093F9F0_Param
 {
@@ -23,22 +23,22 @@ void Class_1093F9F0::FUN_1093f9f0(Class_1093F9F0_Param* Param, int B)
     int Kind = Param->Unknown64;
     if (Kind != 3 && Kind != 4 && Kind != 5)
     {
-        DAT_10f31be0->FUN_109373d0(2);
+        DAT_10f31be0->SetVertexShader(2);
         DAT_10f31be0->FUN_10937400(0);
         return;
     }
     switch (Kind)
     {
     case 3:
-        DAT_10f31be0->FUN_109373d0(Unknown174);
+        DAT_10f31be0->SetVertexShader(Unknown174);
         DAT_10f31be0->FUN_10937400(Unknown2EC);
         break;
     case 4:
-        DAT_10f31be0->FUN_109373d0(Unknown178);
+        DAT_10f31be0->SetVertexShader(Unknown178);
         DAT_10f31be0->FUN_10937400(Unknown2F0);
         return;
     case 5:
-        DAT_10f31be0->FUN_109373d0(Unknown17C);
+        DAT_10f31be0->SetVertexShader(Unknown17C);
         DAT_10f31be0->FUN_10937400(Unknown2F4);
         return;
     }

@@ -101,7 +101,7 @@ extern bool DAT_10f31a58;
 // FUNCTION: 0x10B154E0 ?Tick@Class_10E79228@@UAEXM@Z
 void Class_10E79228::Tick(float A)
 {
-    Unknown220.FUN_10b271d0(A);
+    Unknown220.Update(A);
     FUN_10b266e0()->Virtual5(A);
     if (Unknown94 && !TimeManager::Instance()->IsPaused())
     {

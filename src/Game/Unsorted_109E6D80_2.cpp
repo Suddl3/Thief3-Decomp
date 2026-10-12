@@ -1,7 +1,7 @@
 // Game/Unsorted_109E6D80_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-unsigned int FUN_1090e9b0(const void* Data, int Length);
+unsigned int HashBytes(const void* Data, int Length);
 
 // Ion Storm's string (0x109081E0): a char pointer, null when default constructed.
 class Class_109081E0
@@ -23,7 +23,7 @@ public:
     Class_109E6520_Node* Next;
 };
 
-// The table's key hasher: slot 0 gives the bytes FUN_1090e9b0 hashes,
+// The table's key hasher: slot 0 gives the bytes HashBytes hashes,
 // slot 1 compares a key with an entry's key (0 when they are equal).
 class Class_109E6520_Field18
 {
@@ -32,47 +32,47 @@ public:
     virtual int Virtual1(const Class_109081E0& Key, const Class_109081E0& Other);
 };
 
-// The hash table of Class_109E6520's header, with FUN_109e7b20 added.
+// The hash table of Class_109E6520's header, with Remove added.
 class Class_109E6520
 {
 public:
-    unsigned int FUN_109e6520(const Class_109081E0& Key, const int& Value);
-    void FUN_109e6600(int Size);
-    bool FUN_109e7b20(const Class_109081E0& Key);
+    unsigned int Insert(const Class_109081E0& Key, const int& Value);
+    void Rehash(int Size);
+    bool Remove(const Class_109081E0& Key);
 
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    bool Unknown10;
+    int m_Collisions;
+    int m_Count;
+    int m_BucketBits;
+    int m_BucketCount;
+    bool m_FixedSize;
     char Pad11[0x3];
-    Class_109E6520_Node** Unknown14;
-    Class_109E6520_Field18 Unknown18;
+    Class_109E6520_Node** m_Buckets;
+    Class_109E6520_Field18 m_KeyTraits;
 };
 
-// FUNCTION: 0x109E7B20 ?FUN_109e7b20@Class_109E6520@@QAE_NABVClass_109081E0@@@Z
-bool Class_109E6520::FUN_109e7b20(const Class_109081E0& Key)
+// FUNCTION: 0x109E7B20 ?Remove@Class_109E6520@@QAE_NABVClass_109081E0@@@Z
+bool Class_109E6520::Remove(const Class_109081E0& Key)
 {
-    if (!Unknown10 && Unknown04 < Unknown0C * 0.05 && Unknown0C > 64)
-        FUN_109e6600(Unknown0C / 2);
+    if (!m_FixedSize && m_Count < m_BucketCount * 0.05 && m_BucketCount > 64)
+        Rehash(m_BucketCount / 2);
     unsigned int Index;
     {
         const void* Data;
         int Length;
-        Unknown18.Virtual0(Key, &Data, &Length);
-        Index = FUN_1090e9b0(Data, Length) & ((1 << Unknown08) - 1);
+        m_KeyTraits.Virtual0(Key, &Data, &Length);
+        Index = HashBytes(Data, Length) & ((1 << m_BucketBits) - 1);
     }
-    for (Class_109E6520_Node* Node = Unknown14[Index], *Prev = 0; Node; Prev = Node, Node = Node->Next)
+    for (Class_109E6520_Node* Node = m_Buckets[Index], *Prev = 0; Node; Prev = Node, Node = Node->Next)
     {
-        if (Unknown18.Virtual1(Key, Node->Key) == 0)
+        if (m_KeyTraits.Virtual1(Key, Node->Key) == 0)
         {
             if (Prev || Node->Next)
-                Unknown00--;
+                m_Collisions--;
             if (!Prev)
-                Unknown14[Index] = Node->Next;
+                m_Buckets[Index] = Node->Next;
             else
                 Prev->Next = Node->Next;
-            Unknown04--;
+            m_Count--;
             delete Node;
             return true;
         }

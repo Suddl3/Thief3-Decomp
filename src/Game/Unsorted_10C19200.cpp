@@ -174,8 +174,8 @@ int FUN_10c1afb0()
     return 0x1005cd;
 }
 
-// FUNCTION: 0x10C1B7D0 ?FUN_10c1b7d0@Class_10E99020@@UAEXAAVFArchive@@@Z
-void Class_10E99020::FUN_10c1b7d0(FArchive& Ar)
+// FUNCTION: 0x10C1B7D0 ?Serialize@Class_10E99020@@UAEXAAVFArchive@@@Z
+void Class_10E99020::Serialize(FArchive& Ar)
 {
     FUN_10c1b1a0(Ar);
 }

@@ -23,7 +23,7 @@ public:
     FString Unknown48;
 };
 
-class Class_10E97720
+class cStateRangedCombat
 {
 public:
     bool FUN_10bf1500();
@@ -32,8 +32,8 @@ public:
     Struct_10BF1500* Unknown04;
 };
 
-// FUNCTION: 0x10BF1500 ?FUN_10bf1500@Class_10E97720@@QAE_NXZ
-bool Class_10E97720::FUN_10bf1500()
+// FUNCTION: 0x10BF1500 ?FUN_10bf1500@cStateRangedCombat@@QAE_NXZ
+bool cStateRangedCombat::FUN_10bf1500()
 {
     Class_1098E330* Obj = ((Object_10BF1500*)Unknown04->Unknown08->FUN_10c7d570())->Virtual98();
     if (Obj)

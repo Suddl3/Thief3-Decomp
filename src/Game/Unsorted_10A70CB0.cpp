@@ -11,14 +11,14 @@ struct Struct_10A70DF0
 
 extern float DAT_10eafbdc;
 
-class Class_10E6BA88
+class cDelayedDeleter
 {
 public:
     virtual void Virtual0();
     virtual void Virtual1();
-    virtual void FUN_10a70df0(float A, Class_10A70DF0_Obj* Obj);
+    virtual void DeleteAfter(float A, Class_10A70DF0_Obj* Obj);
 
-    Class_10A70B80 Unknown04;
+    Class_10A70B80 m_Entries;
 };
 
 class cActorManager
@@ -52,8 +52,8 @@ public:
     virtual void Virtual19(int A, int B, int C);
 };
 
-// FUNCTION: 0x10A70DF0 ?FUN_10a70df0@Class_10E6BA88@@UAEXMPAVClass_10A70DF0_Obj@@@Z
-void Class_10E6BA88::FUN_10a70df0(float A, Class_10A70DF0_Obj* Obj)
+// FUNCTION: 0x10A70DF0 ?DeleteAfter@cDelayedDeleter@@UAEXMPAVClass_10A70DF0_Obj@@@Z
+void cDelayedDeleter::DeleteAfter(float A, Class_10A70DF0_Obj* Obj)
 {
     if (A <= DAT_10eafbdc)
     {
@@ -64,7 +64,7 @@ void Class_10E6BA88::FUN_10a70df0(float A, Class_10A70DF0_Obj* Obj)
     Struct_10A70DF0 Entry;
     Entry.Unknown00 = Obj;
     Entry.Unknown04 = A;
-    Class_10A70B80* Queue = &Unknown04;
+    Class_10A70B80* Queue = &m_Entries;
     int Index = Queue->Unknown00;
     Queue->FUN_10dd4d40(Index + 1);
     Queue->Unknown08[Index] = Entry;

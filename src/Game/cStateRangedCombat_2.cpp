@@ -1,11 +1,11 @@
-// Game/Class_10E97720_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/cStateRangedCombat_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_1098E330.h"
 #include "Game/Class_10C7D570.h"
 #include "Game/Object_10BF1500.h"
 #include "Game/Struct_10BF1500.h"
 
-class Class_10E97720
+class cStateRangedCombat
 {
 public:
     virtual void Virtual0();
@@ -90,8 +90,8 @@ public:
     int Unknown23C;
 };
 
-// FUNCTION: 0x10BF2F70 ?FUN_10bf2f70@Class_10E97720@@QAEXH@Z
-void Class_10E97720::FUN_10bf2f70(int A)
+// FUNCTION: 0x10BF2F70 ?FUN_10bf2f70@cStateRangedCombat@@QAEXH@Z
+void cStateRangedCombat::FUN_10bf2f70(int A)
 {
     if (Unknown13C == 2)
     {

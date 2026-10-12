@@ -1,8 +1,8 @@
 // Game/Unsorted_109526D0_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10936AC0.h"
+#include "Game/cD3DStateCache.h"
 
-extern Class_10936AC0* DAT_10f31be0;
+extern cD3DStateCache* DAT_10f31be0;
 
 class Class_109526D0
 {
@@ -16,5 +16,5 @@ public:
 // FUNCTION: 0x109526D0 ?FUN_109526d0@Class_109526D0@@QAEXXZ
 void Class_109526D0::FUN_109526d0()
 {
-    DAT_10f31be0->FUN_109371d0(0x10, Unknown38);
+    DAT_10f31be0->SetVertexShaderConstantScalar(0x10, Unknown38);
 }

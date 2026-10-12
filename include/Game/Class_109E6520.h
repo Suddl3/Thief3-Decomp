@@ -11,17 +11,17 @@ class Class_109E6520_Node;
 class Class_109E6520
 {
 public:
-    unsigned int FUN_109e6520(const Class_109081E0& Key, const int& Value);
-    void FUN_109e6600(int Size);
+    unsigned int Insert(const Class_109081E0& Key, const int& Value);
+    void Rehash(int Size);
 
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    bool Unknown10;
+    int m_Collisions;
+    int m_Count;
+    int m_BucketBits;
+    int m_BucketCount;
+    bool m_FixedSize;
     char Pad11[0x3];
-    Class_109E6520_Node** Unknown14;
-    Class_109E6520_Field18 Unknown18;
+    Class_109E6520_Node** m_Buckets;
+    Class_109E6520_Field18 m_KeyTraits;
 };
 
 #endif // GAME_CLASS_109E6520_H

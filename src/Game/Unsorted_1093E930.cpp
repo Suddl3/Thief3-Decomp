@@ -8,8 +8,8 @@ extern int DAT_10f340ac;
 
 extern Class_1093E930* DAT_10f340b0;
 
-// FUNCTION: 0x1093E930 ?FUN_1093e930@Class_1093E930@@QAEPAV1@XZ
-Class_1093E930* Class_1093E930::FUN_1093e930()
+// FUNCTION: 0x1093E930 ?Init@Class_1093E930@@QAEPAV1@XZ
+Class_1093E930* Class_1093E930::Init()
 {
     DAT_10f340ac = (int)this;
     Unknown00 = 0;

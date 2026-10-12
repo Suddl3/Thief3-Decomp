@@ -11,7 +11,7 @@ public:
     unsigned long Value;
 };
 
-void FUN_10d3d990(void* Stream, int* Value);
+void WriteString(void* Stream, int* Value);
 
 class Class_10E6C6C4
 {
@@ -26,13 +26,13 @@ public:
     virtual void Virtual7();
     virtual void Virtual8();
     virtual void Virtual9();
-    virtual void FUN_10a8bfc0(int A, void* Stream);
+    virtual void WriteValue(int A, void* Stream);
 
-    FName Unknown04;
+    FName m_Value;
 };
 
-// FUNCTION: 0x10A8BFC0 ?FUN_10a8bfc0@Class_10E6C6C4@@UAEXHPAX@Z
-void Class_10E6C6C4::FUN_10a8bfc0(int A, void* Stream)
+// FUNCTION: 0x10A8BFC0 ?WriteValue@Class_10E6C6C4@@UAEXHPAX@Z
+void Class_10E6C6C4::WriteValue(int A, void* Stream)
 {
-    FUN_10d3d990(Stream, (int*)&Unknown04.FUN_10af9730());
+    WriteString(Stream, (int*)&m_Value.FUN_10af9730());
 }

@@ -6,13 +6,13 @@
 class Class_109435A0
 {
 public:
-    int FUN_109435a0(const short* Item);
-    void FUN_10942c60(int NewCount);
-    void FUN_10943160();
+    int Append(const short* Item);
+    void Resize(int NewCount);
+    void Clear();
 
-    int Unknown00;
-    int Unknown04;
-    short* Unknown08;
+    int m_Count;
+    int m_CapacityBytes;
+    short* m_Items;
 };
 
 #endif // GAME_CLASS_109435A0_H

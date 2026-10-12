@@ -3,7 +3,7 @@
 #include "Game/Class_10A163F0_Node.h"
 #include "Game/Struct_10A16B60.h"
 
-unsigned int FUN_1090e9b0(const void* Data, int Length);
+unsigned int HashBytes(const void* Data, int Length);
 
 class Class_10A163F0_Field18
 {
@@ -15,7 +15,7 @@ public:
 class Class_10A163F0
 {
 public:
-    int FUN_10a163f0(int* Key, Struct_10A16B60* Info);
+    int Set(int* Key, Struct_10A16B60* Info);
     int FUN_10a15ef0(int* Key, Struct_10A16B60* Info);
 
     char Pad00[0x8];
@@ -25,13 +25,13 @@ public:
     Class_10A163F0_Field18 Unknown18;
 };
 
-// FUNCTION: 0x10A163F0 ?FUN_10a163f0@Class_10A163F0@@QAEHPAHPAUStruct_10A16B60@@@Z
-int Class_10A163F0::FUN_10a163f0(int* Key, Struct_10A16B60* Info)
+// FUNCTION: 0x10A163F0 ?Set@Class_10A163F0@@QAEHPAHPAUStruct_10A16B60@@@Z
+int Class_10A163F0::Set(int* Key, Struct_10A16B60* Info)
 {
     const void* Data;
     int Length;
     Unknown18.Virtual0(Key, &Data, &Length);
-    unsigned int Index = FUN_1090e9b0(Data, Length) & ((1 << Unknown08) - 1);
+    unsigned int Index = HashBytes(Data, Length) & ((1 << Unknown08) - 1);
     if (!Unknown14)
         return -1;
     for (Class_10A163F0_Node* Node = Unknown14[Index]; Node; Node = Node->Next)

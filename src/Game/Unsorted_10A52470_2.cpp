@@ -141,8 +141,8 @@ void Class_10A52A40::FUN_10a52a40(Class_10A52A40_Member* P)
         P->Virtual70(1);
 }
 
-// FUNCTION: 0x10A52B80 ?FUN_10a52b80@Class_10E67FD0@@UAE?AVFBox@@XZ
-FBox Class_10E67FD0::FUN_10a52b80()
+// FUNCTION: 0x10A52B80 ?GetBounds@Class_10E67FD0@@UAE?AVFBox@@XZ
+FBox Class_10E67FD0::GetBounds()
 {
     FBox Box(0);
     return Box;

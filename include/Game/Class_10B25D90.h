@@ -6,14 +6,14 @@
 class Class_10B25D90
 {
 public:
-    int FUN_10b25240(int* A);
-    int FUN_10b25310(int* A);
-    void FUN_10b25d90();
+    int FindPrevFromListA(int* A);
+    int FindPrevFromListB(int* A);
+    void StepBack();
 
     char Unknown00[4];
-    int Unknown04;
+    int m_Index;
     char Unknown08[8];
-    int Unknown10;
+    int m_InListA;
 };
 
 #endif // GAME_CLASS_10B25D90_H

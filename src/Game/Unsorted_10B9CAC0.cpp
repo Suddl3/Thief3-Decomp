@@ -10,12 +10,12 @@ class Class_10BC9D40;
 class Class_10B9CAC0
 {
 public:
-    Class_10BC9D40* FUN_10b9cac0();
+    Class_10BC9D40* GetCurrent();
 
     char Unknown00[0x10];
-    int Unknown10;
+    int m_Count;
     char Unknown14[4];
-    Class_10BC9D40** Unknown18;
+    Class_10BC9D40** m_Stack;
 };
 
 class Class_10BC9780
@@ -30,12 +30,12 @@ public:
     bool FUN_10bc9930();
 };
 
-// FUNCTION: 0x10B9CAC0 ?FUN_10b9cac0@Class_10B9CAC0@@QAEPAVClass_10BC9D40@@XZ
-Class_10BC9D40* Class_10B9CAC0::FUN_10b9cac0()
+// FUNCTION: 0x10B9CAC0 ?GetCurrent@Class_10B9CAC0@@QAEPAVClass_10BC9D40@@XZ
+Class_10BC9D40* Class_10B9CAC0::GetCurrent()
 {
-    if (Unknown10 == 0)
+    if (m_Count == 0)
         return 0;
-    return Unknown18[Unknown10 - 1];
+    return m_Stack[m_Count - 1];
 }
 
 // FUNCTION: 0x10B9D060 ?FUN_10b9d060@Class_10B9D060@@QAE_NXZ

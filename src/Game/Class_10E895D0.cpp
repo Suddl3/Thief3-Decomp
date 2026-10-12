@@ -16,14 +16,14 @@ extern float DAT_10e895f8;
 void Class_10E895D0::FUN_10b8b9f0(int A)
 {
     Class_10D9FEE0* Obj = (Class_10D9FEE0*)Unknown08;
-    Class_10B8B9F0_Unknown10* Ctrl = Unknown10;
+    Class_10B8B9F0_Unknown10* Ctrl = m_Controller;
     if (!Ctrl || Ctrl->FUN_10dab5a0())
         return;
     float V = DAT_10eafbdc;
-    if (Unknown10->Unknown04 == 0)
-        V = Unknown10->FUN_10dab640();
-    else if (Unknown10->Unknown04 == 1)
-        V = Unknown10->FUN_10dad300();
+    if (m_Controller->Unknown04 == 0)
+        V = m_Controller->FUN_10dab640();
+    else if (m_Controller->Unknown04 == 1)
+        V = m_Controller->FUN_10dad300();
     switch (Unknown0C)
     {
     case 1:

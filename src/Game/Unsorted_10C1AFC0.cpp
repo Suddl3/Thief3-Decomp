@@ -29,7 +29,7 @@ public:
 class Class_10E98D98 : public Class_10E98D08
 {
 public:
-    virtual void FUN_10c1b270(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 
     char Unknown04[0x44];
     float Unknown48[3];
@@ -86,8 +86,8 @@ void Class_10C1B0F0::FUN_10c1b0f0(float Value)
     Unknown34 = Clamped;
 }
 
-// FUNCTION: 0x10C1B270 ?FUN_10c1b270@Class_10E98D98@@UAEXAAVFArchive@@@Z
-void Class_10E98D98::FUN_10c1b270(FArchive& Ar)
+// FUNCTION: 0x10C1B270 ?Serialize@Class_10E98D98@@UAEXAAVFArchive@@@Z
+void Class_10E98D98::Serialize(FArchive& Ar)
 {
     FUN_10c1b1a0(Ar);
     FUN_10b052a0(Ar, Unknown48);

@@ -9,11 +9,11 @@ public:
     virtual void Virtual1(void* A, int B);
 };
 
-// FUNCTION: 0x10C068F0 ?FUN_10c068f0@Class_10E8C00C@@UAEXAAVFArchive@@@Z
-void Class_10E8C00C::FUN_10c068f0(FArchive& Ar)
+// FUNCTION: 0x10C068F0 ?Serialize@Class_10E8C00C@@UAEXAAVFArchive@@@Z
+void Class_10E8C00C::Serialize(FArchive& Ar)
 {
-    int Count = Unknown04;
+    int Count = m_ChildCount;
     Ar.Virtual1(&Count, 4);
     for (int i = 0; i < Count; i++)
-        Unknown0C[i]->FUN_10c068f0(Ar);
+        m_Children[i]->Serialize(Ar);
 }

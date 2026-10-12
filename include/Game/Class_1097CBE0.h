@@ -8,8 +8,8 @@
 class Class_1097CBE0 : public Class_1097B240
 {
 public:
-    void FUN_1097c880(int A);
-    void FUN_1097cbe0();
+    void Clear(int A);
+    void Free();
 };
 
 #endif // GAME_CLASS_1097CBE0_H

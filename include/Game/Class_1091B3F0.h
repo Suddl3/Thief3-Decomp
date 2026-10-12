@@ -9,12 +9,12 @@ class Class_1091B3F0
 {
 public:
     void FUN_1091af10(int A);
-    void FUN_1091b3f0();
-    void FUN_1091b560(const Class_1091B3F0& Other);
+    void Free();
+    void CopyFrom(const Class_1091B3F0& Other);
 
-    int Unknown00;
+    int Count;
     int Unknown04;
-    Item_1091B3F0* Unknown08;
+    Item_1091B3F0* Items;
 };
 
 #endif // GAME_CLASS_1091B3F0_H

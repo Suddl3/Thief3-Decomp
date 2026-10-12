@@ -6,7 +6,7 @@
 // FUNCTION: 0x10A88D00 ?FUN_10a88d00@Class_10A88D00@@QAEMPAVFVector@@HH@Z
 float Class_10A88D00::FUN_10a88d00(FVector* A, int B, int C)
 {
-    float Scale = FUN_10a889e0(A->X, A->Y);
+    float Scale = ClampedLength2D(A->X, A->Y);
     A->Normalize();
     return FUN_10a88ad0(B, A, C) * Scale;
 }

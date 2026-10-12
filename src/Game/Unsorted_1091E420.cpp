@@ -16,13 +16,13 @@ class IDirect3DBaseTexture8;
 
 extern IDirect3DDevice8* GDirect3DDevice8;
 
-class Class_10936AC0
+class cD3DStateCache
 {
 public:
-    void FUN_1091ef90();
+    void ClearTextures();
 
     char Unknown00[0x1C];
-    IDirect3DBaseTexture8* Unknown1C[4];
+    IDirect3DBaseTexture8* m_Textures[4];
 };
 
 extern float DAT_10e49684;
@@ -51,12 +51,12 @@ int __stdcall FUN_1091ef40(float* A, float* B)
     return 2;
 }
 
-// FUNCTION: 0x1091EF90 ?FUN_1091ef90@Class_10936AC0@@QAEXXZ
-void Class_10936AC0::FUN_1091ef90()
+// FUNCTION: 0x1091EF90 ?ClearTextures@cD3DStateCache@@QAEXXZ
+void cD3DStateCache::ClearTextures()
 {
     for (int i = 0; i < 4; i++)
     {
-        Unknown1C[i] = 0;
+        m_Textures[i] = 0;
         if (GDirect3DDevice8)
             GDirect3DDevice8->SetTexture(i, 0);
     }

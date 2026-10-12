@@ -18,7 +18,7 @@ extern void* DAT_10e499f4[];
 class Class_10E499F4
 {
 public:
-    void FUN_1091e340();
+    void ResetVTable();
     float FUN_1091e360();
 
     void* VTable;
@@ -89,8 +89,8 @@ Class_1091CCF0::Class_1091CCF0()
     Unknown00 = 0;
 }
 
-// FUNCTION: 0x1091E340 ?FUN_1091e340@Class_10E499F4@@QAEXXZ
-void Class_10E499F4::FUN_1091e340()
+// FUNCTION: 0x1091E340 ?ResetVTable@Class_10E499F4@@QAEXXZ
+void Class_10E499F4::ResetVTable()
 {
     VTable = DAT_10e499f4;
 }

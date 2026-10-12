@@ -8,7 +8,7 @@ class UObject;
 class Class_10E6B9F8
 {
 public:
-    virtual void FUN_10a6e5e0(int Event, UObject* A, int B, int C);
+    virtual void HandleEvent(int Event, UObject* A, int B, int C);
     virtual ~Class_10E6B9F8();
 
     void FUN_10a6e1c0(UObject* A, int B, int C);

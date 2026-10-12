@@ -7,11 +7,11 @@ class Class_10E89A6C
 {
 public:
     virtual ~Class_10E89A6C();
-    virtual Class_10E89A6C* FUN_10b92b50();
+    virtual Class_10E89A6C* Clone();
 
     Class_10E89A6C(int Value) : Unknown04(Value) {}
 
-    Class_10E89A6C* FUN_10b92b30(int p1);
+    Class_10E89A6C* Construct(int p1);
 
     int Unknown04;
 };

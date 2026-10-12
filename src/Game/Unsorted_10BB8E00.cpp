@@ -9,8 +9,8 @@ float appFrand();
 
 class Class_1098E330;
 
-// FUNCTION: 0x10BB8E00 ?FUN_10bb8e00@Class_10BBA080@@QAE_NXZ
-bool Class_10BBA080::FUN_10bb8e00()
+// FUNCTION: 0x10BB8E00 ?RollChance@Class_10BBA080@@QAE_NXZ
+bool Class_10BBA080::RollChance()
 {
     if (FUN_10bb8c60() <= 1)
     {

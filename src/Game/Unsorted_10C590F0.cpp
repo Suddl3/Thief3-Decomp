@@ -1,7 +1,7 @@
 // Game/Unsorted_10C590F0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-unsigned int FUN_1090e9b0(const void* Data, int Length);
+unsigned int HashBytes(const void* Data, int Length);
 
 // A chained hash table's entry: 12 bytes, allocated per insert.
 class Class_10C591A0_Node
@@ -12,7 +12,7 @@ public:
     Class_10C591A0_Node* Next;
 };
 
-// The table's key hasher: slot 0 gives the bytes FUN_1090e9b0 hashes,
+// The table's key hasher: slot 0 gives the bytes HashBytes hashes,
 // slot 1 compares a key with an entry's key (0 when they are equal).
 class Class_10C591A0_Field18
 {
@@ -47,7 +47,7 @@ bool Class_10C591A0::FUN_10c591a0(int* A)
         const void* Data;
         int Length;
         Unknown18.Virtual0(*A, &Data, &Length);
-        Index = FUN_1090e9b0(Data, Length) & ((1 << Unknown08) - 1);
+        Index = HashBytes(Data, Length) & ((1 << Unknown08) - 1);
     }
     for (Class_10C591A0_Node* Node = Unknown14[Index], *Prev = 0; Node; Prev = Node, Node = Node->Next)
     {

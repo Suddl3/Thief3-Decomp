@@ -44,14 +44,14 @@ void Class_10E895D0::FUN_10b8bf80()
         FUN_10b8b830(1);
     Class_10B8B9F0_Unknown10* Ctrl = FUN_10b8b8a0();
     Class_10D9FEE0* Obj = (Class_10D9FEE0*)Unknown08;
-    Unknown10 = Ctrl;
+    m_Controller = Ctrl;
     Struct_10B8BF80_Out Out;
     ((Struct_10B8BF80_Obj*)Obj)->Unknown04->FUN_10b82390(0x803b9, &Out);
-    if (Unknown10 == 0)
+    if (m_Controller == 0)
         return;
     Unknown34 = false;
     Obj->FUN_10da0000(false);
-    Ctrl = Unknown10;
+    Ctrl = m_Controller;
     if (Ctrl->Unknown04 == 0)
     {
         float Delta = 6.2831855f;

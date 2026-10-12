@@ -25,7 +25,7 @@ public:
 // FUNCTION: 0x10BE99E0 ?RollRandomRange@State_Flee@@QAEXXZ
 void State_Flee::RollRandomRange()
 {
-    float Min = Unknown04->Unknown08->FUN_10dbd510(0x1005e6)->FUN_10bbdb40();
-    float Max = Unknown04->Unknown08->FUN_10dbd510(0x1005e7)->FUN_10bbdb40();
+    float Min = Unknown04->Unknown08->FUN_10dbd510(0x1005e6)->GetFloat();
+    float Max = Unknown04->Unknown08->FUN_10dbd510(0x1005e7)->GetFloat();
     m_RandomValue = Min + (Max - Min) * appFrand();
 }

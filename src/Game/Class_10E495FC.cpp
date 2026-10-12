@@ -6,17 +6,17 @@
 class Class_10915D50
 {
 public:
-    Class_10915D50() : Unknown00(0), Unknown04(0), Unknown0C(0), Unknown10(false), Unknown14(0) {}
+    Class_10915D50() : m_Collisions(0), m_Count(0), m_Size(0), m_NoResize(false), m_Table(0) {}
 
-    void FUN_10915e30(int Size);
+    void Rehash(int Size);
 
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    bool Unknown10;
-    void* Unknown14;
-    Class_10E499A8 Unknown18;
+    int m_Collisions;
+    int m_Count;
+    int m_Bits;
+    int m_Size;
+    bool m_NoResize;
+    void* m_Table;
+    Class_10E499A8 m_KeyTraits;
 };
 
 class Class_10E495FC
@@ -33,7 +33,7 @@ public:
 // FUNCTION: 0x10916CD0 ??0Class_10E495FC@@QAE@XZ
 Class_10E495FC::Class_10E495FC()
 {
-    Unknown08.FUN_10915e30(8);
+    Unknown08.Rehash(8);
 }
 
 // FUNCTION: 0x10917500 ??_GClass_10E495FC@@UAEPAXI@Z

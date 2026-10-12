@@ -5,12 +5,12 @@
 #include "Game/Class_10914D80_Node.h"
 #include "Game/Class_10915830.h"
 
-// FUNCTION: 0x109154F0 ?FUN_109154f0@Class_10915830@@QAEXH@Z
-void Class_10915830::FUN_109154f0(int Size)
+// FUNCTION: 0x109154F0 ?Clear@Class_10915830@@QAEXH@Z
+void Class_10915830::Clear(int Size)
 {
-    for (int i = 0; i < Unknown0C; i++)
+    for (int i = 0; i < m_Size; i++)
     {
-        Class_10914D80_Node* Node = Unknown14[i];
+        Class_10914D80_Node* Node = m_Table[i];
         while (Node)
         {
             Class_10914D80_Node* Next = Node->Next;
@@ -19,11 +19,11 @@ void Class_10915830::FUN_109154f0(int Size)
             Node = Next;
         }
     }
-    Unknown04 = 0;
-    Unknown0C = 0;
-    Unknown00 = 0;
-    ::operator delete(Unknown14);
-    Unknown14 = 0;
-    if (!Unknown10)
-        FUN_10914e60(Size);
+    m_Count = 0;
+    m_Size = 0;
+    m_Collisions = 0;
+    ::operator delete(m_Table);
+    m_Table = 0;
+    if (!m_NoResize)
+        Rehash(Size);
 }

@@ -5,7 +5,7 @@
 
 class Class_109081E0;
 
-// The table's key hasher: slot 0 gives the bytes FUN_1090e9b0 hashes.
+// The table's key hasher: slot 0 gives the bytes HashBytes hashes.
 class Class_10B88A80_Field18
 {
 public:

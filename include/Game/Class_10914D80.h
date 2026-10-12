@@ -11,40 +11,40 @@ class Class_10914D80_Node;
 class Class_10914D80
 {
 public:
-    Class_10914D80() : Unknown00(0), Unknown04(0), Unknown0C(0), Unknown10(false), Unknown14(0) {}
+    Class_10914D80() : m_Collisions(0), m_Count(0), m_Size(0), m_NoResize(false), m_Table(0) {}
 
-    unsigned int FUN_10914d80(const Class_109081E0& Key, const int& Value);
-    void FUN_10914e60(int Size);
-    bool FUN_109153e0(const Class_109081E0& Key);
+    unsigned int Insert(const Class_109081E0& Key, const int& Value);
+    void Rehash(int Size);
+    bool Remove(const Class_109081E0& Key);
 
     union
     {
-        int Unknown00;
+        int m_Collisions;
         int Collisions;
     };
     union
     {
-        int Unknown04;
+        int m_Count;
         int Count;
     };
     union
     {
-        int Unknown08;
+        int m_Bits;
         int Bits;
     };
     union
     {
-        int Unknown0C;
+        int m_Size;
         int Size;
     };
-    bool Unknown10;
+    bool m_NoResize;
     char Pad11[0x3];
     union
     {
-        Class_10914D80_Node** Unknown14;
+        Class_10914D80_Node** m_Table;
         Class_10914D80_Node** Table;
     };
-    Class_10914D80_Field18 Unknown18;
+    Class_10914D80_Field18 m_KeyTraits;
 };
 
 #endif // GAME_CLASS_10914D80_H

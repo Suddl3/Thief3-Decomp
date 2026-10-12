@@ -44,8 +44,8 @@ void Class_10A88970::FUN_10a88970(int Index, int Mode)
         Unknown400[Index] = 0.0f;
 }
 
-// FUNCTION: 0x10A889E0 ?FUN_10a889e0@Class_10A88D00@@QAEMMM@Z
-float Class_10A88D00::FUN_10a889e0(float A, float B)
+// FUNCTION: 0x10A889E0 ?ClampedLength2D@Class_10A88D00@@QAEMMM@Z
+float Class_10A88D00::ClampedLength2D(float A, float B)
 {
     FVector V;
     FVector Absolute(fabs(A), fabs(B), 0.0f);

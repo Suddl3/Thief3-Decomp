@@ -5,9 +5,9 @@
 #include "Game/cTriggerSoundSchemaParam.h"
 #include "Game/Class_10C4CD50.h"
 
-void FUN_10d3d990(void* Stream, int* Value);
+void WriteString(void* Stream, int* Value);
 
-void FUN_10d3d2d0(void* Stream, int Value);
+void WriteInt(void* Stream, int Value);
 
 class Class_10E6C580
 {
@@ -50,9 +50,9 @@ public:
     virtual void Virtual1();
     virtual void Virtual2();
     virtual void Virtual3();
-    virtual int FUN_10a8c080(const Class_109022E0& Name);
+    virtual int SetValue(const Class_109022E0& Name);
 
-    FName Unknown04;
+    FName m_Value;
 };
 
 extern int DAT_10f3a1dc;
@@ -85,14 +85,14 @@ void cTriggerSoundSchemaParam::Reset()
 // FUNCTION: 0x10A8B640 ?FUN_10a8b640@Class_10E6C580@@UAEXHPAX@Z
 void Class_10E6C580::FUN_10a8b640(int A, void* Stream)
 {
-    FUN_10d3d2d0(Stream, Unknown08);
-    FUN_10d3d990(Stream, &Unknown0C);
+    WriteInt(Stream, Unknown08);
+    WriteString(Stream, &Unknown0C);
 }
 
-// FUNCTION: 0x10A8C080 ?FUN_10a8c080@Class_10E6C6C4@@UAEHABVClass_109022E0@@@Z
-int Class_10E6C6C4::FUN_10a8c080(const Class_109022E0& Name)
+// FUNCTION: 0x10A8C080 ?SetValue@Class_10E6C6C4@@UAEHABVClass_109022E0@@@Z
+int Class_10E6C6C4::SetValue(const Class_109022E0& Name)
 {
     const char* Text = Name.Unknown00 ? Name.Unknown00 : DAT_10e47660;
-    Unknown04 = FName(Text, FNAME_Add);
+    m_Value = FName(Text, FNAME_Add);
     return 0;
 }

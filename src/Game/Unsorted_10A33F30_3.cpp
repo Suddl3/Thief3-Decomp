@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10A34510_Field18.h"
 
-unsigned int FUN_1090e9b0(const void* Data, int Length);
+unsigned int HashBytes(const void* Data, int Length);
 
 class Class_10A34510_Node
 {
@@ -36,7 +36,7 @@ unsigned int Class_10A345C0::FUN_10a34510(__int64* Key, int* Value)
         const void* Data;
         int Length;
         Unknown18.Virtual0(Key, &Data, &Length);
-        Index = FUN_1090e9b0(Data, Length) & ((1 << Unknown08) - 1);
+        Index = HashBytes(Data, Length) & ((1 << Unknown08) - 1);
     }
     if (!Unknown14)
         return (unsigned int)-1;

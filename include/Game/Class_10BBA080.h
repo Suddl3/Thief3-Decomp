@@ -11,8 +11,8 @@ class Class_10BBA080
 public:
     unsigned char FUN_10bb8c60();
     int FUN_10bba080(Class_1098E330* Obj);
-    float FUN_10bb8e70();
-    bool FUN_10bb8e00();
+    float GetRandomInRange();
+    bool RollChance();
 
     char Unknown00[8];
     Class_10DBD510* Unknown08;

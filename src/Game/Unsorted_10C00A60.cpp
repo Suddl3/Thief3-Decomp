@@ -6,7 +6,7 @@
 #include "Game/Class_10C00A60.h"
 #include "Game/Class_10905A90_Member.h"
 
-unsigned int FUN_1090e9b0(const void* Data, int Length);
+unsigned int HashBytes(const void* Data, int Length);
 
 Class_10905A90_Member* GetAllocator();
 
@@ -52,5 +52,5 @@ unsigned int Class_10C00B40::FUN_10c00b40(const int& Key)
     const void* Data;
     int Length;
     Unknown18.Virtual0(Key, &Data, &Length);
-    return FUN_1090e9b0(Data, Length) & ((1 << Unknown08) - 1);
+    return HashBytes(Data, Length) & ((1 << Unknown08) - 1);
 }

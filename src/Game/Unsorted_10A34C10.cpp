@@ -5,7 +5,7 @@
 #include "Game/Class_10A34C10_Field18.h"
 #include "Game/Class_10A34C10_Node.h"
 
-unsigned int FUN_1090e9b0(const void* Data, int Length);
+unsigned int HashBytes(const void* Data, int Length);
 
 class Class_10A34C10_Unknown10
 {
@@ -21,7 +21,7 @@ unsigned int Class_10A34C10::FUN_10a34c10(const Class_109081E0& Key, Class_10A34
     const void* Data;
     int Length;
     Unknown18.Virtual0(Key, &Data, &Length);
-    unsigned int Index = FUN_1090e9b0(Data, Length) & ((1 << Unknown08) - 1);
+    unsigned int Index = HashBytes(Data, Length) & ((1 << Unknown08) - 1);
     if (!Unknown14)
         return (unsigned int)-1;
     for (Class_10A34C10_Node* Node = Unknown14[Index]; Node; Node = Node->Next)

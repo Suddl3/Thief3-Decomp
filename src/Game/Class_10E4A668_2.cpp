@@ -1,11 +1,11 @@
 // Game/Class_10E4A668_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10936AC0.h"
+#include "Game/cD3DStateCache.h"
 #include "Game/Struct_10919190.h"
 
 void FUN_10919190(Struct_10919190* Matrix);
 
-extern Class_10936AC0* DAT_10f31be0;
+extern cD3DStateCache* DAT_10f31be0;
 
 class Class_10E4A668_Field164
 {
@@ -46,5 +46,5 @@ void Class_10E4A668::FUN_10942860()
 {
     FUN_10919190(&Unknown04);
     Unknown164->Virtual8(0);
-    DAT_10f31be0->FUN_10936b20(Unknown168, Unknown164->Virtual9());
+    DAT_10f31be0->SetIndices(Unknown168, Unknown164->Virtual9());
 }

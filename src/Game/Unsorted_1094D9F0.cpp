@@ -71,14 +71,14 @@ public:
 
 extern IDirect3DDevice8* GDirect3DDevice8;
 
-class Class_10936AC0
+class cD3DStateCache
 {
 public:
     char Unknown00[0x1C];
-    void* Unknown1C[8];
+    void* m_Textures[8];
 };
 
-extern Class_10936AC0* DAT_10f31be0;
+extern cD3DStateCache* DAT_10f31be0;
 
 struct Struct_1094D9F0
 {
@@ -93,7 +93,7 @@ void Class_1094D9F0::FUN_1094d9f0(int Stage)
     if (Info)
     {
         void* Texture = Info->Unknown30;
-        void** Slot = &DAT_10f31be0->Unknown1C[Stage];
+        void** Slot = &DAT_10f31be0->m_Textures[Stage];
         if (*Slot != Texture)
         {
             GDirect3DDevice8->SetTexture(Stage, Texture);
@@ -102,7 +102,7 @@ void Class_1094D9F0::FUN_1094d9f0(int Stage)
     }
     else
     {
-        void** Slot = &DAT_10f31be0->Unknown1C[Stage];
+        void** Slot = &DAT_10f31be0->m_Textures[Stage];
         if (*Slot)
         {
             GDirect3DDevice8->SetTexture(Stage, 0);

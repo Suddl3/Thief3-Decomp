@@ -96,7 +96,7 @@ bool Class_10B9BCA0::FUN_10b9bca0(int A)
 {
     if (Unknown118 == 0)
         return false;
-    return Unknown118->Unknown08->FUN_10b9cac0(A)->FUN_10bc9d40();
+    return Unknown118->Unknown08->GetCurrent(A)->FUN_10bc9d40();
 }
 
 // FUNCTION: 0x10B9BDA0 ?FUN_10b9bda0@AAIPawnController@@UAEXXZ

@@ -88,7 +88,7 @@ public:
 State_Fetch* Class_10E4CCD0::FUN_10b99fb0(Struct_10B98E00* A, int B, int C)
 {
     int Id = FUN_10be2fe0();
-    if (Id && A->Unknown08->FUN_10dbd510(Id)->FUN_10bbdb40() > 0.0f)
+    if (Id && A->Unknown08->FUN_10dbd510(Id)->GetFloat() > 0.0f)
         return new(0, 0, 0, 0, 0) State_Fetch((int)A, (int)this, B, C);
     return 0;
 }

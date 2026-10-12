@@ -74,7 +74,7 @@ public:
     virtual void Virtual67();
     virtual void Virtual68();
     virtual void Virtual69();
-    virtual void FUN_10bd7eb0(float Value);
+    virtual void AddSample(float Value);
 
     char Unknown04[0x64];
     float MaxValue;
@@ -82,8 +82,8 @@ public:
     int Count;
 };
 
-// FUNCTION: 0x10BD7EB0 ?FUN_10bd7eb0@Class_10E93B68@@UAEXM@Z
-void Class_10E93B68::FUN_10bd7eb0(float Value)
+// FUNCTION: 0x10BD7EB0 ?AddSample@Class_10E93B68@@UAEXM@Z
+void Class_10E93B68::AddSample(float Value)
 {
     if (Value > MaxValue)
         MaxValue = Value;

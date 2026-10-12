@@ -22,7 +22,7 @@ class Class_10AA9DA0
 {
 public:
     void* FUN_10aa9da0();
-    void FUN_109145f0(Class_109081E0& Item);
+    void RemoveByName(Class_109081E0& Item);
 
     int Unknown00;
     int Unknown04;
@@ -31,8 +31,8 @@ public:
     void* Unknown10;
 };
 
-// FUNCTION: 0x109145F0 ?FUN_109145f0@Class_10AA9DA0@@QAEXAAVClass_109081E0@@@Z
-void Class_10AA9DA0::FUN_109145f0(Class_109081E0& Item)
+// FUNCTION: 0x109145F0 ?RemoveByName@Class_10AA9DA0@@QAEXAAVClass_109081E0@@@Z
+void Class_10AA9DA0::RemoveByName(Class_109081E0& Item)
 {
     Class_10BFBD70* Array = (Class_10BFBD70*)&Unknown04;
     for (int i = 0; i < Array->Count; i++)

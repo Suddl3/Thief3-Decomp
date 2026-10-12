@@ -28,22 +28,22 @@ public:
 class Class_10B9CAC0
 {
 public:
-    void FUN_10b9d330(int A);
+    void NotifyAllyKilled(int A);
 
     char Unknown00[0xC];
     Class_10BB8300* Unknown0C;
-    int Unknown10;
+    int m_Count;
     char Unknown14[4];
-    Object_10B9CAC0** Unknown18;
+    Object_10B9CAC0** m_Stack;
 };
 
-// FUNCTION: 0x10B9D330 ?FUN_10b9d330@Class_10B9CAC0@@QAEXH@Z
-void Class_10B9CAC0::FUN_10b9d330(int A)
+// FUNCTION: 0x10B9D330 ?NotifyAllyKilled@Class_10B9CAC0@@QAEXH@Z
+void Class_10B9CAC0::NotifyAllyKilled(int A)
 {
     if (Unknown0C->FUN_10bb8c00())
     {
         Class_109081E0 Name("+combatwitness:ally_killed");
-        (Unknown10 == 0 ? 0 : Unknown18[Unknown10 - 1])->Virtual35(Name, 1);
+        (m_Count == 0 ? 0 : m_Stack[m_Count - 1])->Virtual35(Name, 1);
     }
 }
 

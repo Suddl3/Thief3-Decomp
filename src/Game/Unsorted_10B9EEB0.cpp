@@ -12,12 +12,12 @@ extern void* DAT_10e8c00c[];
 class Class_10E8C00C
 {
 public:
-    Class_10E8C00C* FUN_10ba01f0(int A);
+    Class_10E8C00C* Construct(int A);
 
     void** Unknown00;
-    int Unknown04;
+    int m_ChildCount;
     int Unknown08;
-    int Unknown0C;
+    int m_Children;
     int Unknown10;
     int Unknown14;
     int Unknown18;
@@ -59,13 +59,13 @@ int Class_10BFBD70::FUN_10b9fa20(int* Item)
     return Index;
 }
 
-// FUNCTION: 0x10BA01F0 ?FUN_10ba01f0@Class_10E8C00C@@QAEPAV1@H@Z
-Class_10E8C00C* Class_10E8C00C::FUN_10ba01f0(int A)
+// FUNCTION: 0x10BA01F0 ?Construct@Class_10E8C00C@@QAEPAV1@H@Z
+Class_10E8C00C* Class_10E8C00C::Construct(int A)
 {
     Unknown00 = DAT_10e8c00c;
-    Unknown04 = 0;
+    m_ChildCount = 0;
     Unknown08 = 0;
-    Unknown0C = 0;
+    m_Children = 0;
     Unknown10 = A;
     Unknown14 = 0;
     Unknown18 = 0;

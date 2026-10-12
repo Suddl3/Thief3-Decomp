@@ -3,9 +3,9 @@
 #include "Game/Class_109081E0.h"
 #include "Game/Class_10AB37D0.h"
 
-void FUN_10d3d2d0(void* A, int B);
+void WriteInt(void* A, int B);
 
-void FUN_10d3d990(void* A, int* B);
+void WriteString(void* A, int* B);
 
 class Class_10E6C290
 {
@@ -60,8 +60,8 @@ Class_10E6D990::Class_10E6D990()
 // FUNCTION: 0x10AA90B0 ?FUN_10aa90b0@Class_10E6C290@@UAEXPAXHH@Z
 void Class_10E6C290::FUN_10aa90b0(void* A, int, int)
 {
-    FUN_10d3d2d0(A, Unknown08);
+    WriteInt(A, Unknown08);
     for (int i = 0; i < Unknown08; i++)
-        FUN_10d3d990(A, &Unknown10[i]);
-    FUN_10d3d2d0(A, Unknown14);
+        WriteString(A, &Unknown10[i]);
+    WriteInt(A, Unknown14);
 }

@@ -10,7 +10,7 @@ void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D
 
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
-unsigned int FUN_1090e9b0(const void* Data, int Length);
+unsigned int HashBytes(const void* Data, int Length);
 
 class Class_10C48260
 {
@@ -38,30 +38,30 @@ public:
     virtual void Virtual2();
     virtual void Virtual3();
     virtual void Virtual4();
-    virtual void FUN_10c49a60(int A);
+    virtual void RemoveEntry(int A);
     virtual void Virtual6();
     virtual void Virtual7();
     virtual void Virtual8();
     virtual void Virtual9();
-    virtual void FUN_10c49880(Struct_10C49880* A);
+    virtual void AddEntry(Struct_10C49880* A);
 
-    Class_10D3F830 Unknown04;
+    Class_10D3F830 m_Entries;
     char Unknown05[0x37];
     Class_10E9BBC0_Unknown3C* Unknown3C;
 };
 
-// FUNCTION: 0x10C49880 ?FUN_10c49880@Class_10E9BBC0@@UAEXPAUStruct_10C49880@@@Z
-void Class_10E9BBC0::FUN_10c49880(Struct_10C49880* A)
+// FUNCTION: 0x10C49880 ?AddEntry@Class_10E9BBC0@@UAEXPAUStruct_10C49880@@@Z
+void Class_10E9BBC0::AddEntry(Struct_10C49880* A)
 {
     int Key = A->Unknown04;
-    if (Unknown04.FUN_10d3f830(&Key))
+    if (m_Entries.FUN_10d3f830(&Key))
         return;
     int Value = A->Unknown04;
     Key = Unknown3C->Virtual0(Value);
     if (Key)
     {
         int Index = A->Unknown04;
-        Unknown04.FUN_10c48260(Index, Key);
+        m_Entries.FUN_10c48260(Index, Key);
     }
 }
 
@@ -75,7 +75,7 @@ bool Class_10C48320::FUN_10c49960(const int& Key)
         const void* Data;
         int Length;
         Unknown18.Virtual0(Key, &Data, &Length);
-        Index = FUN_1090e9b0(Data, Length) & ((1 << Unknown08) - 1);
+        Index = HashBytes(Data, Length) & ((1 << Unknown08) - 1);
     }
     for (Class_10C48320_Node* Node = Unknown14[Index], *Prev = 0; Node; Prev = Node, Node = Node->Next)
     {

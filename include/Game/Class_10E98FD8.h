@@ -11,7 +11,7 @@ class FVector;
 class Class_10E98FD8 : public Class_10E98D08
 {
 public:
-    virtual void FUN_10c1b790(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
     virtual bool FUN_10c1ade0(FVector* Out, int Unused);
     virtual void Virtual2();
     virtual bool FUN_10c1b750(Class_10E98FD8* A);

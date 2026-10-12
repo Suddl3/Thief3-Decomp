@@ -30,14 +30,14 @@ void Class_10A3AC50::FUN_10a3ac50(int A)
     }
 }
 
-// FUNCTION: 0x10A3ACD0 ?FUN_10a3acd0@Class_10A3ACD0@@QAEXXZ
-void Class_10A3ACD0::FUN_10a3acd0()
+// FUNCTION: 0x10A3ACD0 ?Free@Class_10A3ACD0@@QAEXXZ
+void Class_10A3ACD0::Free()
 {
-    FUN_1091a960(0);
-    if (Unknown04)
+    Resize(0);
+    if (CapacityBytes)
     {
-        GetAllocator()->Virtual5(Unknown08);
-        Unknown08 = 0;
-        Unknown04 = 0;
+        GetAllocator()->Virtual5(Elements);
+        Elements = 0;
+        CapacityBytes = 0;
     }
 }

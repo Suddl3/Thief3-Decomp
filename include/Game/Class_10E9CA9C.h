@@ -12,14 +12,14 @@ class Class_10E9CA9C
 {
 public:
     virtual void Virtual0();
-    virtual void __stdcall FUN_10c62760(const char* Text);
+    virtual void __stdcall SetText(const char* Text);
     virtual void FUN_10c61c20(Class_10C61C20_Param* p1);
     virtual void Virtual3();
-    virtual Class_10C62290* FUN_10c62550(int A, const char* B);
+    virtual Class_10C62290* Create(int A, const char* B);
 
     char Unknown04;
     char Pad05[0x3];
-    Class_109081E0 Unknown08;
+    Class_109081E0 m_Name;
 };
 
 #endif // GAME_CLASS_10E9CA9C_H

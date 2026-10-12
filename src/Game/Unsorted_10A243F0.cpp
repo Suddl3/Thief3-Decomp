@@ -44,26 +44,26 @@ void Class_10A243F0::FUN_10a24580()
     }
 }
 
-// FUNCTION: 0x10A251B0 ?FUN_10a251b0@Class_10A250D0@@QAEXH@Z
-void Class_10A250D0::FUN_10a251b0(int Size)
+// FUNCTION: 0x10A251B0 ?Rehash@Class_10A250D0@@QAEXH@Z
+void Class_10A250D0::Rehash(int Size)
 {
-    int OldSize = Unknown0C;
-    Class_10A250D0_Node** OldBuckets = Unknown14;
-    Unknown14 = new(0, 0, 0, 0, 0) Class_10A250D0_Node*[Size];
-    Unknown0C = Size;
-    Unknown08 = 0;
+    int OldSize = m_BucketCount;
+    Class_10A250D0_Node** OldBuckets = m_Buckets;
+    m_Buckets = new(0, 0, 0, 0, 0) Class_10A250D0_Node*[Size];
+    m_BucketCount = Size;
+    m_BucketBits = 0;
     while (Size >>= 1)
-        Unknown08++;
-    Unknown04 = 0;
-    Unknown00 = 0;
-    for (int i = 0; i < Unknown0C; i++)
-        Unknown14[i] = 0;
+        m_BucketBits++;
+    m_Count = 0;
+    m_Collisions = 0;
+    for (int i = 0; i < m_BucketCount; i++)
+        m_Buckets[i] = 0;
     for (int j = 0; j < OldSize; j++)
     {
         Class_10A250D0_Node* Node = OldBuckets[j];
         while (Node)
         {
-            FUN_10a250d0(Node->Key, Node->Value);
+            Insert(Node->Key, Node->Value);
             Class_10A250D0_Node* Next = Node->Next;
             delete Node;
             Node = Next;

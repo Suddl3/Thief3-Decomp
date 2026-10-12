@@ -19,7 +19,7 @@ void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D
 
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
-unsigned int FUN_1090e9b0(const void* Data, int Length);
+unsigned int HashBytes(const void* Data, int Length);
 
 // A chained hash table's entry: 12 bytes, allocated per insert.
 class Class_10915D50_Node
@@ -30,29 +30,29 @@ public:
     Class_10915D50_Node* Next;
 };
 
-// FUNCTION: 0x10916A70 ?FUN_10916a70@Class_10915D50@@QAE_NABVClass_109081E0@@@Z
-bool Class_10915D50::FUN_10916a70(const Class_109081E0& Key)
+// FUNCTION: 0x10916A70 ?Remove@Class_10915D50@@QAE_NABVClass_109081E0@@@Z
+bool Class_10915D50::Remove(const Class_109081E0& Key)
 {
-    if (!Unknown10 && Unknown04 < Unknown0C * 0.05 && Unknown0C > 64)
-        FUN_10915e30(Unknown0C / 2);
+    if (!m_NoResize && m_Count < m_Size * 0.05 && m_Size > 64)
+        Rehash(m_Size / 2);
     unsigned int Index;
     {
         const void* Data;
         int Length;
-        Unknown18.Virtual0(Key, &Data, &Length);
-        Index = FUN_1090e9b0(Data, Length) & ((1 << Unknown08) - 1);
+        m_KeyTraits.Virtual0(Key, &Data, &Length);
+        Index = HashBytes(Data, Length) & ((1 << m_Bits) - 1);
     }
-    for (Class_10915D50_Node* Node = Unknown14[Index], *Prev = 0; Node; Prev = Node, Node = Node->Next)
+    for (Class_10915D50_Node* Node = m_Table[Index], *Prev = 0; Node; Prev = Node, Node = Node->Next)
     {
-        if (Unknown18.Virtual1(Key, Node->Key) == 0)
+        if (m_KeyTraits.Virtual1(Key, Node->Key) == 0)
         {
             if (Prev || Node->Next)
-                Unknown00--;
+                m_Collisions--;
             if (!Prev)
-                Unknown14[Index] = Node->Next;
+                m_Table[Index] = Node->Next;
             else
                 Prev->Next = Node->Next;
-            Unknown04--;
+            m_Count--;
             delete Node;
             return true;
         }

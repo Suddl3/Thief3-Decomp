@@ -2,8 +2,8 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10E98F90.h"
 
-// FUNCTION: 0x10C1AD90 ?FUN_10c1ad90@Class_10E98F90@@UAE_NH@Z
-bool Class_10E98F90::FUN_10c1ad90(int A)
+// FUNCTION: 0x10C1AD90 ?Matches@Class_10E98F90@@UAE_NH@Z
+bool Class_10E98F90::Matches(int A)
 {
     if (A == Unknown48)
         return true;

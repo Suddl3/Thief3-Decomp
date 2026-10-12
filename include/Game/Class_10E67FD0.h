@@ -23,7 +23,7 @@ public:
     virtual void Virtual12();
     virtual void Virtual13();
     virtual int FUN_109e3730(int A);
-    virtual FBox FUN_10a52b80();
+    virtual FBox GetBounds();
     virtual void Virtual16();
     virtual void Virtual17();
     virtual void Virtual18();

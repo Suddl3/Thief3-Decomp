@@ -12,24 +12,24 @@ Class_10905A90_Member* GetAllocator();
 class Class_10BAEC40
 {
 public:
-    void FUN_10bae1d0(int Count);
+    void SetCount(int Count);
     void FUN_10baec40();
     void Empty()
     {
-        FUN_10bae1d0(0);
+        SetCount(0);
         if (Unknown04)
         {
-            GetAllocator()->Virtual5(Unknown08);
-            Unknown08 = 0;
+            GetAllocator()->Virtual5(m_Items);
+            m_Items = 0;
             Unknown04 = 0;
         }
     }
-    void FUN_10bd4160(const Class_10BAEC40& Other);
-    void FUN_10bf7ad0(int A, int B, int C);
+    void CopyFrom(const Class_10BAEC40& Other);
+    void MoveRange(int A, int B, int C);
 
-    int Unknown00;
+    int m_Count;
     int Unknown04;
-    Struct_10BAEC40_Unknown08* Unknown08;
+    Struct_10BAEC40_Unknown08* m_Items;
 };
 
 #endif // GAME_CLASS_10BAEC40_H

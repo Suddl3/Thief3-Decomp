@@ -24,8 +24,8 @@ public:
     char Unknown04[0x138];
 };
 
-// FUNCTION: 0x10C62550 ?FUN_10c62550@Class_10E9CA9C@@UAEPAVClass_10C62290@@HPBD@Z
-Class_10C62290* Class_10E9CA9C::FUN_10c62550(int A, const char* B)
+// FUNCTION: 0x10C62550 ?Create@Class_10E9CA9C@@UAEPAVClass_10C62290@@HPBD@Z
+Class_10C62290* Class_10E9CA9C::Create(int A, const char* B)
 {
     if (Unknown04)
     {

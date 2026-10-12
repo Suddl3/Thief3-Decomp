@@ -126,33 +126,33 @@ public:
 
 extern IDirect3DDevice8* GDirect3DDevice8;
 
-class Class_10936AC0
+class cD3DStateCache
 {
 public:
-    void FUN_10936ac0(int A, int B);
-    void FUN_10936b20(int A, int B);
-    void FUN_1091ef90();
+    void SetStreamSource(int A, int B);
+    void SetIndices(int A, int B);
+    void ClearTextures();
     void FUN_10937280(int A, Info_10952690* Info);
-    void FUN_109371d0(int p1, int p2);
-    void FUN_10937310(int Index, int Value);
+    void SetVertexShaderConstantScalar(int p1, int p2);
+    void SetPixelShaderConstantScalar(int Index, int Value);
     void FUN_10936bf0(int A);
 
     char Pad01[0xb];
     char Pad81F[0x1];
-    int Unknown0C;
-    int Unknown10;
-    int Unknown14;
-    int Unknown18;
-    IDirect3DBaseTexture8* Unknown1C[4];
+    int m_VertexBuffer;
+    int m_VertexStride;
+    int m_IndexBuffer;
+    int m_BaseVertexIndex;
+    IDirect3DBaseTexture8* m_Textures[4];
     char Pad2C[0x600];
-    float Unknown62C[32];
+    float m_PixelConstants[32];
     unsigned long Unknown6AC;
     char Pad6B0[0x14C];
     Struct_10924210 Unknown7FC;
 };
 
-// FUNCTION: 0x10937310 ?FUN_10937310@Class_10936AC0@@QAEXHH@Z
-void Class_10936AC0::FUN_10937310(int Index, int Value)
+// FUNCTION: 0x10937310 ?SetPixelShaderConstantScalar@cD3DStateCache@@QAEXHH@Z
+void cD3DStateCache::SetPixelShaderConstantScalar(int Index, int Value)
 {
     if (Unknown6AC)
     {
@@ -161,7 +161,7 @@ void Class_10936AC0::FUN_10937310(int Index, int Value)
         Local[1] = *(float*)&Value;
         Local[2] = *(float*)&Value;
         Local[3] = *(float*)&Value;
-        float* Current = &Unknown62C[Index * 4];
+        float* Current = &m_PixelConstants[Index * 4];
         if (Current[0] != *(float*)&Value || Current[1] != *(float*)&Value || Current[2] != *(float*)&Value || Current[3] != *(float*)&Value)
         {
             GDirect3DDevice8->SetPixelShaderConstant(Index, Local, 1);

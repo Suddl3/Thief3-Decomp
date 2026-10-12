@@ -9,17 +9,17 @@ struct Elem_1094E3A0;
 class Class_1094E3A0
 {
 public:
-    Elem_1094E3A0* FUN_1094e3a0();
-    void FUN_1094e3c0(int Index, float Value);
-    bool FUN_1094e3e0(int Index, int Value);
+    Elem_1094E3A0* GetCurrentElement();
+    void SetElementValue(int Index, float Value);
+    bool CreateVertex(int Index, int Value);
 
     char Unknown00[0xE8];
-    Class_1094E3E0_Unknown0E8* Unknown0E8;
-    Class_1094E3E0_Unknown0E8* Unknown0EC;
+    Class_1094E3E0_Unknown0E8* m_VertexBuffer0;
+    Class_1094E3E0_Unknown0E8* m_VertexBuffer1;
     char Unknown0F0[0x18];
-    Elem_1094E3A0* Unknown108;
+    Elem_1094E3A0* m_Elements;
     char Unknown10C[4];
-    int Unknown110;
+    int m_CurrentIndex;
 };
 
 #endif // GAME_CLASS_1094E3A0_H

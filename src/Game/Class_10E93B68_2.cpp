@@ -77,21 +77,21 @@ public:
     virtual void Virtual69();
     virtual void Virtual70();
     virtual void Virtual71();
-    virtual void FUN_10bd7f70(int Index);
+    virtual void ProcessEntry(int Index);
     virtual void Virtual73(int* A, int* B);
 
     char Unknown04[0x7C];
-    int Unknown80;
+    int EntryCount;
     int Unknown84;
-    Struct_10BD7F70* Unknown88;
+    Struct_10BD7F70* Entries;
 };
 
-// FUNCTION: 0x10BD7F70 ?FUN_10bd7f70@Class_10E93B68@@UAEXH@Z
-void Class_10E93B68::FUN_10bd7f70(int Index)
+// FUNCTION: 0x10BD7F70 ?ProcessEntry@Class_10E93B68@@UAEXH@Z
+void Class_10E93B68::ProcessEntry(int Index)
 {
-    if (Index >= 0 && Index < Unknown80)
+    if (Index >= 0 && Index < EntryCount)
     {
-        Struct_10BD7F70* Entry = &Unknown88[Index];
+        Struct_10BD7F70* Entry = &Entries[Index];
         Virtual73(Entry->Unknown00, Entry->Unknown0C);
     }
 }

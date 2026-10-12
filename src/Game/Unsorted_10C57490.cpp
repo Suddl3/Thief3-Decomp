@@ -10,7 +10,7 @@
 // Ion Storm's placement new and its delete (0x10905C10; the delete folded into ::operator delete).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 
-unsigned int FUN_1090e9b0(const void* Data, int Length);
+unsigned int HashBytes(const void* Data, int Length);
 
 // FUNCTION: 0x10C57530 ?FUN_10c57530@Class_10C59030@@QAEIABVClass_109081E0@@ABVClass_10C59030_Value@@@Z
 unsigned int Class_10C59030::FUN_10c57530(const Class_109081E0& Key, const Class_10C59030_Value& Value)
@@ -25,7 +25,7 @@ unsigned int Class_10C59030::FUN_10c57530(const Class_109081E0& Key, const Class
         const void* Data;
         int Length;
         Unknown18.Virtual0(Key, &Data, &Length);
-        Index = FUN_1090e9b0(Data, Length) & ((1 << Unknown08) - 1);
+        Index = HashBytes(Data, Length) & ((1 << Unknown08) - 1);
     }
     if (Unknown14[Index])
         Unknown00++;

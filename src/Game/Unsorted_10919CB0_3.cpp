@@ -10,8 +10,8 @@
 
 class Class_10941C40;
 
-// FUNCTION: 0x1091A640 ?FUN_1091a640@Class_10919B90@@QAE_NPAVClass_10941C40@@PBUStruct_1091A610@@PAM2KMMK@Z
-bool Class_10919B90::FUN_1091a640(Class_10941C40* A, const Struct_1091A610* Text, float* X, float* Y,
+// FUNCTION: 0x1091A640 ?DrawText@Class_10919B90@@QAE_NPAVClass_10941C40@@PBUStruct_1091A610@@PAM2KMMK@Z
+bool Class_10919B90::DrawText(Class_10941C40* A, const Struct_1091A610* Text, float* X, float* Y,
                                   unsigned long Color, float ScaleX, float ScaleY, unsigned long Flags)
 {
     int Length = !Text->Unknown00 ? 0 : ((Struct_1091A610Header*)Text->Unknown00 - 1)->Unknown00;

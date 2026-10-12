@@ -34,12 +34,12 @@ int Class_10B9CC00::FUN_10b9cc00(Struct_10B9CC00* Arg)
         case 0x1b:
             break;
         case 1:
-            if (Unknown0C->Unknown08->FUN_10dbd510(0x100837)->FUN_10bbdb40() < Arg->Unknown00)
+            if (Unknown0C->Unknown08->FUN_10dbd510(0x100837)->GetFloat() < Arg->Unknown00)
                 return 0;
         default:
             {
                 Class_10C7D570* Obj = Unknown0C->Unknown08;
-                if (appFrand() < Obj->FUN_10dbd510(0x100835)->FUN_10bbdb40())
+                if (appFrand() < Obj->FUN_10dbd510(0x100835)->GetFloat())
                     return 0x28;
             }
             break;

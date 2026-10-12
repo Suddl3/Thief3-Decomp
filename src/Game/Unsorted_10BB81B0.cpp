@@ -12,8 +12,8 @@ float appFrand();
 // FUNCTION: 0x10BB81B0 ?FUN_10bb81b0@Class_10BB81B0@@QAEXXZ
 void Class_10BB81B0::FUN_10bb81b0()
 {
-    float Min = Unknown08->FUN_10dbd510(0x1006df)->FUN_10bbdb40();
-    float Max = Unknown08->FUN_10dbd510(0x1006e0)->FUN_10bbdb40();
+    float Min = Unknown08->FUN_10dbd510(0x1006df)->GetFloat();
+    float Max = Unknown08->FUN_10dbd510(0x1006e0)->GetFloat();
     Unknown2BC = Min + (Max - Min) * appFrand();
 }
 

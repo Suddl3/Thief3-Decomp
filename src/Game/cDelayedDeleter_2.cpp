@@ -1,4 +1,4 @@
-// Game/Class_10E6BA88_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/cDelayedDeleter_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10A70B80.h"
 #include "Game/Class_10A70DF0_Obj.h"
@@ -11,34 +11,34 @@ struct Struct_10A70DF0
 
 extern float DAT_10eafbdc;
 
-// Game/Class_10E6BA88.h copied whole, with the array at 0x4 typed as Class_10A70B80 and slot 1 named.
-class Class_10E6BA88
+// Game/cDelayedDeleter.h copied whole, with the array at 0x4 typed as Class_10A70B80 and slot 1 named.
+class cDelayedDeleter
 {
 public:
-    virtual ~Class_10E6BA88();
-    virtual void FUN_10a70cb0(float Limit);
-    virtual void FUN_10a70df0(float A, Class_10A70DF0_Obj* Obj);
+    virtual ~cDelayedDeleter();
+    virtual void Tick(float Limit);
+    virtual void DeleteAfter(float A, Class_10A70DF0_Obj* Obj);
     virtual void Virtual3();
-    virtual bool FUN_10a70b40(int Key, int* Out);
+    virtual bool Find(int Key, int* Out);
 
-    Class_10E6BA88();
+    cDelayedDeleter();
 
-    Class_10A70B80 Unknown04;
+    Class_10A70B80 m_Entries;
 };
 
-// FUNCTION: 0x10A70CB0 ?FUN_10a70cb0@Class_10E6BA88@@UAEXM@Z
-void Class_10E6BA88::FUN_10a70cb0(float Limit)
+// FUNCTION: 0x10A70CB0 ?Tick@cDelayedDeleter@@UAEXM@Z
+void cDelayedDeleter::Tick(float Limit)
 {
-    for (int i = 0; i < Unknown04.Unknown00; i++)
+    for (int i = 0; i < m_Entries.Unknown00; i++)
     {
-        Struct_10A70DF0& Entry = Unknown04.Unknown08[i];
+        Struct_10A70DF0& Entry = m_Entries.Unknown08[i];
         Entry.Unknown04 -= Limit;
         if (Entry.Unknown04 <= DAT_10eafbdc)
         {
             Class_10A70DF0_Obj* Obj = Entry.Obj;
             Obj->Virtual1();
             delete Obj;
-            Class_10A70B80* Array = &Unknown04;
+            Class_10A70B80* Array = &m_Entries;
             int Last = Array->Unknown00 - 1;
             Struct_10A70DF0 Removed = Array->Unknown08[i];
             Array->Unknown08[i] = Array->Unknown08[Last];

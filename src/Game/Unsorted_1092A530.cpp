@@ -14,7 +14,7 @@ public:
     char* Unknown00;
 };
 
-unsigned int FUN_1090e9b0(const void* Data, int Length);
+unsigned int HashBytes(const void* Data, int Length);
 
 // A chained hash table's entry: 12 bytes, allocated per insert.
 class Class_1092A370_Node
@@ -35,7 +35,7 @@ bool Class_1092A370::FUN_1092b8f0(const Class_109081E0& Key)
         const void* Data;
         int Length;
         Unknown18.Virtual0(Key, &Data, &Length);
-        Index = FUN_1090e9b0(Data, Length) & ((1 << Unknown08) - 1);
+        Index = HashBytes(Data, Length) & ((1 << Unknown08) - 1);
     }
     for (Class_1092A370_Node* Node = Unknown14[Index], *Prev = 0; Node; Prev = Node, Node = Node->Next)
     {

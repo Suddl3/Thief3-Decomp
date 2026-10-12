@@ -16,13 +16,13 @@ public:
     virtual void Virtual9() = 0;
     virtual void Virtual10() = 0;
     virtual void Virtual11() = 0;
-    virtual int FUN_10a8d090(const Class_10E6C6C4* p1);
+    virtual int CopyValueFrom(const Class_10E6C6C4* p1);
 
-    int Unknown04;
+    int m_Value;
 };
 
-// FUNCTION: 0x10A8D090 ?FUN_10a8d090@Class_10E6C6C4@@UAEHPBV1@@Z
-int Class_10E6C6C4::FUN_10a8d090(const Class_10E6C6C4* p1)
+// FUNCTION: 0x10A8D090 ?CopyValueFrom@Class_10E6C6C4@@UAEHPBV1@@Z
+int Class_10E6C6C4::CopyValueFrom(const Class_10E6C6C4* p1)
 {
-    return Unknown04 = p1->Unknown04;
+    return m_Value = p1->m_Value;
 }

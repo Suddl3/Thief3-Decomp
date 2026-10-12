@@ -10,7 +10,7 @@ void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D
 
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
-unsigned int FUN_1090e9b0(const void* Data, int Length);
+unsigned int HashBytes(const void* Data, int Length);
 
 // FUNCTION: 0x10A4AB10 ?FUN_10a4ab10@Class_10A492B0@@QAEXH@Z
 void Class_10A492B0::FUN_10a4ab10(int Size)

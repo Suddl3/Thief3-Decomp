@@ -5,8 +5,8 @@
 #include "Game/Class_1091AD50_Node.h"
 #include "Game/Class_1091C820.h"
 
-// FUNCTION: 0x1091B370 ?FUN_1091b370@Class_1091C820@@QAEXH@Z
-void Class_1091C820::FUN_1091b370(int Size)
+// FUNCTION: 0x1091B370 ?Clear@Class_1091C820@@QAEXH@Z
+void Class_1091C820::Clear(int Size)
 {
     for (int i = 0; i < Unknown0C; i++)
     {
@@ -25,5 +25,5 @@ void Class_1091C820::FUN_1091b370(int Size)
     ::operator delete(Unknown14);
     Unknown14 = 0;
     if (!Unknown10)
-        FUN_1091ae30(Size);
+        Rehash(Size);
 }

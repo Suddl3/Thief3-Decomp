@@ -10,8 +10,8 @@ struct Struct_10ABE210
     Class_109081E0 Unknown08;
 };
 
-// FUNCTION: 0x10ABE210 ?FUN_10abe210@Class_10ABDAE0@@QAEXABV1@@Z
-void Class_10ABDAE0::FUN_10abe210(const Class_10ABDAE0& Other)
+// FUNCTION: 0x10ABE210 ?CopyFrom@Class_10ABDAE0@@QAEXABV1@@Z
+void Class_10ABDAE0::CopyFrom(const Class_10ABDAE0& Other)
 {
     FUN_10abdae0(Other.Count);
     for (int i = 0; i < Count; i++)

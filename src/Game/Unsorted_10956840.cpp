@@ -1,6 +1,6 @@
 // Game/Unsorted_10956840.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10936AC0.h"
+#include "Game/cD3DStateCache.h"
 #include "Game/Class_10955C80.h"
 
 void FUN_1092bdb0(void* Memory);
@@ -32,11 +32,11 @@ public:
     int Unknown29C[9];
 };
 
-class Class_10936AC0;
+class cD3DStateCache;
 
 class Class_10955C80;
 
-extern Class_10936AC0* DAT_10f31be0;
+extern cD3DStateCache* DAT_10f31be0;
 
 class Class_10E4AE58
 {
@@ -46,7 +46,7 @@ public:
     virtual void FUN_10956880(bool A);
 
     char Unknown04[0x2C];
-    unsigned int Unknown30;
+    unsigned int m_Flags;
     char Unknown34[0x94];
     Class_10955C80 Unknown0C8;
     char Unknown0C9[0x37];
@@ -58,15 +58,15 @@ public:
 // FUNCTION: 0x10956880 ?FUN_10956880@Class_10E4AE58@@UAEX_N@Z
 void Class_10E4AE58::FUN_10956880(bool A)
 {
-    if (Unknown30 & 2)
+    if (m_Flags & 2)
         Unknown0C8.FUN_10955c80(0, 0);
-    else if (Unknown30 & 0x80)
+    else if (m_Flags & 0x80)
         Unknown218.FUN_10955c80(0, 0);
     else
         DAT_10f31be0->FUN_10936bf0(0);
     if (A)
     {
-        if (Unknown30 & 4)
+        if (m_Flags & 4)
             Unknown100.FUN_10955c80(0, 1);
         else
         {

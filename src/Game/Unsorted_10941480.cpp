@@ -17,15 +17,15 @@ class IDirect3DVertexBuffer8;
 struct Struct_10924210;
 
 // The global's class as this function sees it: its texture slots sit at 0x1C.
-class Class_10936AC0
+class cD3DStateCache
 {
 public:
-    void FUN_109373d0(unsigned long Value);
+    void SetVertexShader(unsigned long Value);
     void FUN_10937400(unsigned long Value);
     void FUN_109241e0(unsigned long Stage, IDirect3DBaseTexture8* Texture);
 
     char Unknown00[0x1C];
-    IDirect3DBaseTexture8* Unknown1C[4];
+    IDirect3DBaseTexture8* m_Textures[4];
 };
 
 enum D3DPRIMITIVETYPE
@@ -143,7 +143,7 @@ public:
     IDirect3DBaseTexture8* Unknown30;
 };
 
-extern Class_10936AC0* DAT_10f31be0;
+extern cD3DStateCache* DAT_10f31be0;
 
 extern IDirect3DDevice8* GDirect3DDevice8;
 
@@ -158,14 +158,14 @@ void Class_10941480::FUN_10941480()
             DAT_10f31be0->FUN_109241e0(0, Unknown00->Unknown30);
         else
         {
-            IDirect3DBaseTexture8** Slot = &DAT_10f31be0->Unknown1C[0];
+            IDirect3DBaseTexture8** Slot = &DAT_10f31be0->m_Textures[0];
             if (*Slot)
             {
                 GDirect3DDevice8->SetTexture(0, 0);
                 *Slot = 0;
             }
         }
-        DAT_10f31be0->FUN_109373d0(0x144);
+        DAT_10f31be0->SetVertexShader(0x144);
         DAT_10f31be0->FUN_10937400(0);
         if (Unknown06)
         {

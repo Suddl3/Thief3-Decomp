@@ -12,7 +12,7 @@ void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D
 
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
-unsigned int FUN_1090e9b0(const void* Data, int Length);
+unsigned int HashBytes(const void* Data, int Length);
 
 // FUNCTION: 0x10C48260 ?FUN_10c48260@Class_10C48260@@QAEIABH0@Z
 unsigned int Class_10C48260::FUN_10c48260(const int& Key, const int& Value)
@@ -27,7 +27,7 @@ unsigned int Class_10C48260::FUN_10c48260(const int& Key, const int& Value)
         const void* Data;
         int Length;
         Unknown18.Virtual0(Key, &Data, &Length);
-        Index = FUN_1090e9b0(Data, Length) & ((1 << Unknown08) - 1);
+        Index = HashBytes(Data, Length) & ((1 << Unknown08) - 1);
     }
     if (Unknown14[Index])
         Unknown00++;
@@ -50,7 +50,7 @@ unsigned int Class_10C48320::FUN_10c48320(const int& Key, const int& Value)
         const void* Data;
         int Length;
         Unknown18.Virtual0(Key, &Data, &Length);
-        Index = FUN_1090e9b0(Data, Length) & ((1 << Unknown08) - 1);
+        Index = HashBytes(Data, Length) & ((1 << Unknown08) - 1);
     }
     if (Unknown14[Index])
         Unknown00++;

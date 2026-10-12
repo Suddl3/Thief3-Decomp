@@ -59,10 +59,10 @@ public:
     int Unknown04[15];
 };
 
-class Class_10E95BE8 : public Class_10E90D70
+class State_FrobAlarm : public Class_10E90D70
 {
 public:
-    Class_10E95BE8* FUN_10be2df0(int A, int B, int C);
+    State_FrobAlarm* FUN_10be2df0(int A, int B, int C);
 
     int Unknown40;
     int Unknown44;
@@ -81,8 +81,8 @@ void Class_10E95780::FUN_10be2de0(unsigned char p1)
     FUN_10be2a70();
 }
 
-// FUNCTION: 0x10BE2DF0 ?FUN_10be2df0@Class_10E95BE8@@QAEPAV1@HHH@Z
-Class_10E95BE8* Class_10E95BE8::FUN_10be2df0(int A, int B, int C)
+// FUNCTION: 0x10BE2DF0 ?FUN_10be2df0@State_FrobAlarm@@QAEPAV1@HHH@Z
+State_FrobAlarm* State_FrobAlarm::FUN_10be2df0(int A, int B, int C)
 {
     this->Class_10E90D70::Class_10E90D70(A, B);
     Unknown00 = DAT_10e95be8;

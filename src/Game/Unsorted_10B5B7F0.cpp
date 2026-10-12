@@ -72,15 +72,15 @@ public:
     virtual void Virtual55();
     virtual void Virtual56(int A);
 
-    void FUN_10b5b7f0();
-    void FUN_10b45d10();
+    void CancelAndClose();
+    void Close();
 };
 
-// FUNCTION: 0x10B5B7F0 ?FUN_10b5b7f0@Class_10E81DE8@@QAEXXZ
-void Class_10E81DE8::FUN_10b5b7f0()
+// FUNCTION: 0x10B5B7F0 ?CancelAndClose@Class_10E81DE8@@QAEXXZ
+void Class_10E81DE8::CancelAndClose()
 {
     Virtual56(0);
-    FUN_10b45d10();
+    Close();
 }
 
 // FUNCTION: 0x10B5BF10 ?FUN_10b5bf10@@YA_NXZ

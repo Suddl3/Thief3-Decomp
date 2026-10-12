@@ -3,7 +3,7 @@
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_109081E0.h"
 
-void FUN_10d3ddc0(void* Reader, int* Out);
+void ReadString(void* Reader, int* Out);
 
 enum EFindName
 {
@@ -34,16 +34,16 @@ public:
     virtual void Virtual8();
     virtual void Virtual9();
     virtual void Virtual10();
-    virtual bool FUN_10a8c0b0(int A, void* Reader);
+    virtual bool ReadValue(int A, void* Reader);
 
-    FName Unknown04;
+    FName m_Value;
 };
 
-// FUNCTION: 0x10A8C0B0 ?FUN_10a8c0b0@Class_10E6C6C4@@UAE_NHPAX@Z
-bool Class_10E6C6C4::FUN_10a8c0b0(int A, void* Reader)
+// FUNCTION: 0x10A8C0B0 ?ReadValue@Class_10E6C6C4@@UAE_NHPAX@Z
+bool Class_10E6C6C4::ReadValue(int A, void* Reader)
 {
     Class_109081E0 Text;
-    FUN_10d3ddc0(Reader, (int*)&Text);
-    Unknown04 = FName(Text.Unknown00 ? Text.Unknown00 : DAT_10e47660, FNAME_Intrinsic);
+    ReadString(Reader, (int*)&Text);
+    m_Value = FName(Text.Unknown00 ? Text.Unknown00 : DAT_10e47660, FNAME_Intrinsic);
     return true;
 }

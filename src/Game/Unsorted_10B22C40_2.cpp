@@ -4,11 +4,11 @@
 class Class_10B22D60
 {
 public:
-    void FUN_10b229c0(void** Slot, int Value);
+    void SetSlot(void** Slot, int Value);
 
     char Unknown00[4];
-    int Unknown04;
-    char Unknown08[0x88];
+    int m_Body;
+    char m_Slots[0x88];
 };
 
 class Class_10B22D20_Unknown90
@@ -39,7 +39,7 @@ public:
 // FUNCTION: 0x10B22D20 ?FUN_10b22d20@Class_10B22D20@@QAEXXZ
 void Class_10B22D20::FUN_10b22d20()
 {
-    int Value = Unknown90->Virtual11(Unknown04);
+    int Value = Unknown90->Virtual11(m_Body);
     if (Value != Unknown90->Virtual4())
-        FUN_10b229c0((void**)&Unknown90, Value);
+        SetSlot((void**)&Unknown90, Value);
 }

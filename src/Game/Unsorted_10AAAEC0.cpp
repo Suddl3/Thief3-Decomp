@@ -4,7 +4,7 @@
 #include "Game/Class_10AB3800.h"
 #include "Game/Class_10AAB060.h"
 
-void FUN_10d3d3b0(void* Reader, int* Out);
+void ReadInt(void* Reader, int* Out);
 
 class Class_10E6DA40
 {
@@ -28,7 +28,7 @@ void Class_10E6DA40::FUN_10aab540(void* Reader, int Version, int Unused)
 {
     if (Version > 12)
     {
-        FUN_10d3d3b0(Reader, &Version);
+        ReadInt(Reader, &Version);
         Unknown08 = Version;
     }
 }

@@ -27,7 +27,7 @@ public:
     int Unknown74;
     int Unknown78;
     bool Unknown7C;
-    Struct_10BD7FA0 Unknown80;
+    Struct_10BD7FA0 EntryCount;
 };
 
 // FUNCTION: 0x10BD7FA0 ?FUN_10bd7fa0@Class_10E93B68@@QAEPAV1@HH@Z
@@ -41,6 +41,6 @@ Class_10E93B68* Class_10E93B68::FUN_10bd7fa0(int A, int B)
     Unknown78 = 0;
     Unknown7C = false;
     Unknown00 = DAT_10e93b68;
-    Unknown80.Struct_10BD7FA0::Struct_10BD7FA0();
+    EntryCount.Struct_10BD7FA0::Struct_10BD7FA0();
     return this;
 }

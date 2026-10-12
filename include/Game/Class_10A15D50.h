@@ -11,17 +11,17 @@ struct Struct_10A15D50_Value;
 class Class_10A15D50
 {
 public:
-    unsigned int FUN_10a15d50(const int& Key, const Struct_10A15D50_Value& Value);
-    void FUN_10a15e20(int Size);
+    unsigned int Insert(const int& Key, const Struct_10A15D50_Value& Value);
+    void Rehash(int Size);
 
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    bool Unknown10;
+    int m_Collisions;
+    int m_Count;
+    int m_BucketBits;
+    int m_BucketCount;
+    bool m_FixedSize;
     char Pad11[0x3];
-    Class_10A15D50_Node** Unknown14;
-    Class_10A15D50_Unknown18 Unknown18;
+    Class_10A15D50_Node** m_Buckets;
+    Class_10A15D50_Unknown18 m_KeyTraits;
 };
 
 #endif // GAME_CLASS_10A15D50_H

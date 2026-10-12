@@ -1,4 +1,4 @@
-// Game/Class_10E95BE8_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/State_FrobAlarm_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10E95D00.h"
 
@@ -23,7 +23,7 @@ public:
     virtual void Serialize(FArchive& Ar);
 };
 
-class Class_10E95BE8 : public Class_10E8BE68
+class State_FrobAlarm : public Class_10E8BE68
 {
 public:
     virtual void Virtual1();
@@ -96,8 +96,8 @@ public:
     int Unknown44;
 };
 
-// FUNCTION: 0x10BE3010 ?Serialize@Class_10E95BE8@@UAEXAAVFArchive@@@Z
-void Class_10E95BE8::Serialize(FArchive& Ar)
+// FUNCTION: 0x10BE3010 ?Serialize@State_FrobAlarm@@UAEXAAVFArchive@@@Z
+void State_FrobAlarm::Serialize(FArchive& Ar)
 {
     Class_10E8BE68::Serialize(Ar);
     Ar.Virtual6(&Unknown40);

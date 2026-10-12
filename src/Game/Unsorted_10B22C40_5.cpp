@@ -3,10 +3,10 @@
 #include "Game/Class_10B22D60.h"
 #include "Game/Class_10B22D60_Unknown90.h"
 
-// FUNCTION: 0x10B22CE0 ?FUN_10b22ce0@Class_10B22D60@@QAEXH@Z
-void Class_10B22D60::FUN_10b22ce0(int A)
+// FUNCTION: 0x10B22CE0 ?HandleBodyCarryNotification@Class_10B22D60@@QAEXH@Z
+void Class_10B22D60::HandleBodyCarryNotification(int A)
 {
-    int Value = Unknown90->Virtual9(Unknown04, A);
+    int Value = Unknown90->Virtual9(m_Body, A);
     if (Value != Unknown90->Virtual4())
-        FUN_10b229c0((void**)&Unknown90, Value);
+        SetSlot((void**)&Unknown90, Value);
 }

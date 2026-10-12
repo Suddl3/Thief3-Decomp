@@ -49,15 +49,15 @@ public:
 class Class_10E98EB8 : public Class_10E98D08
 {
 public:
-    virtual void FUN_10c1b530(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 
     char Unknown04[0x44];
     float Unknown48[3];
     int Unknown54;
 };
 
-// FUNCTION: 0x10C1B530 ?FUN_10c1b530@Class_10E98EB8@@UAEXAAVFArchive@@@Z
-void Class_10E98EB8::FUN_10c1b530(FArchive& Ar)
+// FUNCTION: 0x10C1B530 ?Serialize@Class_10E98EB8@@UAEXAAVFArchive@@@Z
+void Class_10E98EB8::Serialize(FArchive& Ar)
 {
     FUN_10c1b1a0(Ar);
     FUN_10b052a0(Ar, Unknown48);

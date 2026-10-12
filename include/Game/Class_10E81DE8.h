@@ -126,11 +126,11 @@ public:
     virtual void Virtual114();
     virtual void Virtual115();
 
-    void FUN_10b45d10();
-    void FUN_10b56520();
+    void Close();
+    void SaveAndClose();
     void FUN_10b45af0(int A);
     void FUN_10b56980();
-    void FUN_10b5b7f0();
+    void CancelAndClose();
 
     char Unknown04[0x154];
     Struct_10B45D10* Unknown158;

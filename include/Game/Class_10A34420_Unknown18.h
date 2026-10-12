@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_10A34420_UNKNOWN18_H
 #define GAME_CLASS_10A34420_UNKNOWN18_H
 
-// The table's key hasher: slot 0 gives the bytes FUN_1090e9b0 hashes.
+// The table's key hasher: slot 0 gives the bytes HashBytes hashes.
 class Class_10A34420_Unknown18
 {
 public:

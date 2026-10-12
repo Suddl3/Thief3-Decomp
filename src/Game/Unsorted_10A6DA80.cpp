@@ -70,8 +70,8 @@ Class_10E6B610::Class_10E6B610(Class_1098E330* A)
     A->FUN_1098e330(0x1003f4, &Unknown04);
 }
 
-// FUNCTION: 0x10A6E5E0 ?FUN_10a6e5e0@Class_10E6B9F8@@UAEXHPAVUObject@@HH@Z
-void Class_10E6B9F8::FUN_10a6e5e0(int Event, UObject* A, int B, int C)
+// FUNCTION: 0x10A6E5E0 ?HandleEvent@Class_10E6B9F8@@UAEXHPAVUObject@@HH@Z
+void Class_10E6B9F8::HandleEvent(int Event, UObject* A, int B, int C)
 {
     switch (Event)
     {

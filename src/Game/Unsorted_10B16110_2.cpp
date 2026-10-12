@@ -37,9 +37,9 @@ void Class_10B16930::FUN_10b16300(int A, int B, bool C)
             Item->FUN_10b2d600();
         Class_10B255F0* Obj = FUN_10b25cd0();
         if ((char)A)
-            ((Class_10B25D90*)Obj)->FUN_10b25d90();
+            ((Class_10B25D90*)Obj)->StepBack();
         else
-            ((Class_10B25D60*)Obj)->FUN_10b25d60();
+            ((Class_10B25D60*)Obj)->Advance();
     }
     if (Item)
         ((Class_10B2E000*)Item)->FUN_10b2e000(A, B);

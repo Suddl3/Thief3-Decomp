@@ -85,7 +85,7 @@ class Class_10E4AE58 : public Class_10E4ADC0
 {
 public:
     void FUN_10956830();
-    Class_10E4AE58* FUN_10956f70(int A);
+    Class_10E4AE58* Init(int A);
 
     union
     {
@@ -239,8 +239,8 @@ unsigned char Class_10956F60::FUN_10956f60()
     return Field294;
 }
 
-// FUNCTION: 0x10956F70 ?FUN_10956f70@Class_10E4AE58@@QAEPAV1@H@Z
-Class_10E4AE58* Class_10E4AE58::FUN_10956f70(int A)
+// FUNCTION: 0x10956F70 ?Init@Class_10E4AE58@@QAEPAV1@H@Z
+Class_10E4AE58* Class_10E4AE58::Init(int A)
 {
     this->Class_10E4ADC0::Class_10E4ADC0(A, 0);
     Unknown00 = DAT_10e4ae58;

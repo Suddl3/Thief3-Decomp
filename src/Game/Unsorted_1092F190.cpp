@@ -14,11 +14,11 @@ extern int DAT_10f31ba0;
 
 extern IDirect3DDevice8* GDirect3DDevice8;
 
-class Class_10936AC0 : public Class_109373D0
+class cD3DStateCache : public Class_109373D0
 {
 };
 
-extern Class_10936AC0* DAT_10f31be0;
+extern cD3DStateCache* DAT_10f31be0;
 
 void FUN_109192e0(int A, int B, int C);
 
@@ -79,7 +79,7 @@ void Class_1092F330::FUN_1092f330()
             *Slot = 0;
         }
         FUN_109192e0(Unknown1C, 0x14, 0);
-        DAT_10f31be0->FUN_109373d0(0x44);
+        DAT_10f31be0->SetVertexShader(0x44);
         if (Unknown10)
             GDirect3DDevice8->DrawPrimitive(D3DPT_LINELIST, 0, Unknown0C);
         else

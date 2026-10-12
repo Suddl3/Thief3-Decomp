@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "Game/Class_10905A90_Member.h"
-#include "Game/Class_1093EFB0.h"
+#include "Game/cItemArray.h"
 #include "Game/Class_10940180.h"
 #include "Game/Class_109418E0.h"
 #include "Game/Class_10941C40.h"
@@ -71,20 +71,20 @@ void FUN_1093ee10(Class_109081E0* Out, const char* Format, ...)
     }
 }
 
-// FUNCTION: 0x1093EFB0 ?FUN_1093efb0@Class_1093EFB0@@QAEXXZ
-void Class_1093EFB0::FUN_1093efb0()
+// FUNCTION: 0x1093EFB0 ?Free@cItemArray@@QAEXXZ
+void cItemArray::Free()
 {
-    FUN_1093ee90(0);
-    if (Unknown04)
+    Resize(0);
+    if (m_Capacity)
     {
-        GetAllocator()->Virtual5(Unknown08);
-        Unknown08 = 0;
-        Unknown04 = 0;
+        GetAllocator()->Virtual5(m_Items);
+        m_Items = 0;
+        m_Capacity = 0;
     }
 }
 
-// FUNCTION: 0x10940180 ?FUN_10940180@Class_10940180@@QAEXPAUStruct_10940180@@@Z
-void Class_10940180::FUN_10940180(Struct_10940180* P)
+// FUNCTION: 0x10940180 ?Dispatch@Class_10940180@@QAEXPAUStruct_10940180@@@Z
+void Class_10940180::Dispatch(Struct_10940180* P)
 {
     switch (P->Unknown64)
     {
