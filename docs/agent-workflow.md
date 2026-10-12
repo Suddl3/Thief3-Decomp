@@ -603,6 +603,19 @@ The report must not move. A derived method named like its base one, whose
 body called the base's placeholder unqualified, now calls itself: name the
 base (`Base::Name()`), as the original's direct call does.
 
+A wave runs as a workflow, [.claude/workflows/t3-names.js](../.claude/workflows/t3-names.js):
+a queue of tasks and a fixed number of lanes, each taking the next task as
+its worker returns; a task whose worker is lost goes back in two halves. A
+workflow runs 16 agents at most, so two runs of 10 lanes make the 20 workers
+of a batch. Set the workers' effort (`effort: 'medium'`): a workflow agent
+otherwise inherits the lead's, and a Haiku worker at the highest effort
+writes past the 64K output limit again and again (20 workers returned two
+plans in 20 minutes before the runs were stopped and started again). Tasks
+are classes (`CLASSES=`, the classes with two placeholder methods or more),
+then neighbouring units (`UNITS=`, `classinfo.py --units`): free functions
+and the classes with a single placeholder method, 18 such functions a task
+in address order, since neighbours come from one source file of the game.
+
 A plan's `fields` go through `tools/agent/fields.py apply <plan>` after
 names.py (a class key that names.py has renamed resolves to the new name).
 `Unknown0E0` is a member of hundreds of classes, so a field is renamed where

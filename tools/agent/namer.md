@@ -3,8 +3,8 @@
 You give placeholder classes and functions of the decompilation the names
 their evidence supports. Matched code compiles to the game's bytes whatever
 its names; names are what make it readable. Your prompt gives ID and
-CLASSES. Paths are relative to the repository root; run Python as
-`.venv/Scripts/python`.
+CLASSES, or ID and UNITS. Paths are relative to the repository root; run
+Python as `.venv/Scripts/python`.
 
 ## Tool
 
@@ -19,6 +19,13 @@ file names, debug names like `cTriggerSystem::m_ConditionTypes`);
 tools/agent/xbox.py paired their functions and vtables with this program's.
 A `string` pair is reliable; `vtable` and `calls` pairs are right about nine
 times in ten, so check them against the code.
+
+    .venv/Scripts/python tools/agent/classinfo.py --units <UNITS> [--max-lines N]
+
+prints, for a UNITS task, each unit's declarations and every function the
+same way. Neighbouring units hold what one source file of the game compiled
+to, so a named neighbour, a shared class or an Xbox source file says what
+the functions around it belong to.
 
 ## Loop, for each class of CLASSES
 
@@ -46,6 +53,14 @@ times in ten, so check them against the code.
    a name when the methods using a field make its meaning plain (`m_` and
    camelCase for Ion Storm's classes, as their debug names show:
    `m_ConditionTypes`).
+
+## A UNITS task
+
+Run classinfo.py once with all your units. Name each placeholder function
+in them, free (`FUN_10a47040`) or a method, by steps 3 and 4; a placeholder
+class with a method there by step 2 (run classinfo.py on that class when its
+unit shows too little of it); and such a class's fields by step 5. Functions
+the packet shows only as callees may be named by step 4.
 
 ## Rules
 
