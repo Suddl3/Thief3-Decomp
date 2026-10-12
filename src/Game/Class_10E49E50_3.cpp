@@ -11,14 +11,14 @@ public:
     virtual void Virtual3();
     virtual void Virtual4();
     virtual void Virtual5();
-    virtual int FUN_10939680();
+    virtual int GetCount();
 
     char Unknown04[0x1C];
-    std::vector<void*> Unknown20;
+    std::vector<void*> m_vecItems;
 };
 
-// FUNCTION: 0x10939680 ?FUN_10939680@Class_10E49E50@@UAEHXZ
-int Class_10E49E50::FUN_10939680()
+// FUNCTION: 0x10939680 ?GetCount@Class_10E49E50@@UAEHXZ
+int Class_10E49E50::GetCount()
 {
-    return Unknown20.size();
+    return m_vecItems.size();
 }

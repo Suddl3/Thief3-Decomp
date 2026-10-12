@@ -5,7 +5,7 @@
 class Class_Field0c_D
 {
 public:
-    int FUN_10b47020(int A);
+    int FindIndex(int A);
     unsigned char FUN_10b470d0(int A);
 
     char Unknown00[8];
@@ -15,7 +15,7 @@ public:
 // FUNCTION: 0x10B470D0 ?FUN_10b470d0@Class_Field0c_D@@QAEEH@Z
 unsigned char Class_Field0c_D::FUN_10b470d0(int A)
 {
-    int Index = FUN_10b47020(A);
+    int Index = FindIndex(A);
     if (Index >= 0)
         return Unknown08[Index]->FUN_10c3e140();
     return 0;

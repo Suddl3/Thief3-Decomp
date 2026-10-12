@@ -7,5 +7,5 @@ Class_10B255F0* FUN_10b25cd0();
 // FUNCTION: 0x10B2BA30 ?FUN_10b2ba30@@YAHXZ
 int FUN_10b2ba30()
 {
-    return FUN_10b25cd0()->FUN_10b25010();
+    return FUN_10b25cd0()->GetEntryValue();
 }

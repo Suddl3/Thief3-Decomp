@@ -14,11 +14,11 @@ public:
 class Class_10E9AF04 : public Class_10E9ADE8
 {
 public:
-    Class_10E9AF04* FUN_10c382f0(int A, int B, int C, int D, int E, int F);
+    Class_10E9AF04* Init(int A, int B, int C, int D, int E, int F);
 };
 
-// FUNCTION: 0x10C382F0 ?FUN_10c382f0@Class_10E9AF04@@QAEPAV1@HHHHHH@Z
-Class_10E9AF04* Class_10E9AF04::FUN_10c382f0(int A, int B, int C, int D, int E, int F)
+// FUNCTION: 0x10C382F0 ?Init@Class_10E9AF04@@QAEPAV1@HHHHHH@Z
+Class_10E9AF04* Class_10E9AF04::Init(int A, int B, int C, int D, int E, int F)
 {
     this->Class_10E9ADE8::Class_10E9ADE8(A, B, C, D, 0, 0, 0, E);
     Unknown00 = DAT_10e9af04;

@@ -6,8 +6,8 @@ extern float DAT_10eafbdc;
 
 double GetTimeSeconds();
 
-// FUNCTION: 0x10C2E500 ?FUN_10c2e500@Class_10E9AA38@@UAE_NXZ
-bool Class_10E9AA38::FUN_10c2e500()
+// FUNCTION: 0x10C2E500 ?IsFinished@Class_10E9AA38@@UAE_NXZ
+bool Class_10E9AA38::IsFinished()
 {
     if (Unknown5C != DAT_10eafbdc)
     {

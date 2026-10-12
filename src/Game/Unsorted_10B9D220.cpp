@@ -51,7 +51,7 @@ void Class_10B9CAC0::FUN_10b9d330(int A)
 void Class_10B9E410::FUN_10b9dc80(int A)
 {
     Class_10B9E410_Member* Obj = Unknown38;
-    Class_10B9E410_Item* Top = Unknown10 == 0 ? 0 : Unknown18[Unknown10 - 1];
+    Class_10B9E410_Item* Top = m_Count == 0 ? 0 : m_Stack[m_Count - 1];
     int Key = Unknown0C;
     FUN_10b9d740(Obj->Virtual44(Key, Top, A));
 }
@@ -59,9 +59,9 @@ void Class_10B9E410::FUN_10b9dc80(int A)
 // FUNCTION: 0x10B9DCC0 ?FUN_10b9dcc0@Class_10B9E410@@QAEXXZ
 void Class_10B9E410::FUN_10b9dcc0()
 {
-    if (Unknown10)
+    if (m_Count)
     {
-        Class_10B9E410_Item* Top = Unknown18[Unknown10 - 1];
+        Class_10B9E410_Item* Top = m_Stack[m_Count - 1];
         if (Top && Top->Virtual3() == 7)
             FUN_10b9d8d0();
     }

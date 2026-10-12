@@ -8,8 +8,8 @@
 class Class_10E49EE0 : public Class_10E49F0C
 {
 public:
-    virtual int FUN_109341e0();
-    virtual int FUN_109341f0();
+    virtual int AddRef();
+    virtual int Release();
     virtual void Virtual2();
     virtual unsigned int FUN_10934260();
     virtual void Virtual4();
@@ -20,7 +20,7 @@ public:
     virtual void Virtual9();
     virtual void Virtual10();
 
-    int Unknown14;
+    int m_Member;
     int Unknown18;
     union
     {

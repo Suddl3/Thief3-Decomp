@@ -19,7 +19,7 @@ public:
     char Unknown00[8];
     int Unknown08;
     char Unknown0C[4];
-    Struct_10A2C2A0* Unknown10;
+    Struct_10A2C2A0* m_Entries;
 };
 
 // FUNCTION: 0x10A2C2A0 ?FUN_10a2c2a0@Class_10A2C2F0@@QAEXPAXPAH@Z
@@ -27,9 +27,9 @@ void Class_10A2C2F0::FUN_10a2c2a0(void* A, int* B)
 {
     for (int i = 0; i < Unknown08; i++)
     {
-        if (Unknown10[i].Unknown00 == A && Unknown10[i].Unknown1C == *B)
+        if (m_Entries[i].Unknown00 == A && m_Entries[i].Unknown1C == *B)
         {
-            Unknown10[i].Unknown7D = 1;
+            m_Entries[i].Unknown7D = 1;
             return;
         }
     }

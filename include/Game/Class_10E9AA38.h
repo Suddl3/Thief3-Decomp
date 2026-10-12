@@ -9,8 +9,8 @@
 class Class_10E9AA38 : public Class_10E99314
 {
 public:
-    virtual bool FUN_10c2e500();
-    virtual Class_109081E0 FUN_10c2e690();
+    virtual bool IsFinished();
+    virtual Class_109081E0 GetDescription();
     virtual ~Class_10E9AA38();
 
     bool Unknown4C;

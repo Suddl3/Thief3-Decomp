@@ -19,8 +19,8 @@ class Class_10E7E6A0
 public:
     virtual void Virtual0();
 
-    void FUN_10b3ae90(AGarrett* Garrett);
-    void FUN_10b3b130(AGarrett* Garrett);
+    void ReleaseArm(AGarrett* Garrett);
+    void ClearVelocity(AGarrett* Garrett);
 };
 
 class Class_10E816E0 : public Class_10E7E6A0

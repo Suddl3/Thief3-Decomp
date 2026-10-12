@@ -20,7 +20,7 @@ public:
 class Class_10E7BF50 : public Class_10E81130
 {
 public:
-    Class_10E7BF50* FUN_10b33da0();
+    Class_10E7BF50* InitDefaults();
 
     int Unknown164;
     int Unknown168;
@@ -50,12 +50,12 @@ void Class_10B33D70::FUN_10b33d70()
     {
         Unknown18C++;
         FUN_10b332d0();
-        FUN_10b33000();
+        UpdateEndStyles();
     }
 }
 
-// FUNCTION: 0x10B33DA0 ?FUN_10b33da0@Class_10E7BF50@@QAEPAV1@XZ
-Class_10E7BF50* Class_10E7BF50::FUN_10b33da0()
+// FUNCTION: 0x10B33DA0 ?InitDefaults@Class_10E7BF50@@QAEPAV1@XZ
+Class_10E7BF50* Class_10E7BF50::InitDefaults()
 {
     FUN_10b46080();
     Unknown00 = DAT_10e7bf50;

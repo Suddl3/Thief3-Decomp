@@ -360,3 +360,121 @@ field Class_10E6A9F8::Unknown1E4 m_Timer float accumulated by Update, zeroed by 
 field Class_10E85AD8::Unknown158 m_CurrentIndex FindCurrentIndex stores the found index here; ResetState sets it to -1
 field Class_10E85AD8::UnknownC4 m_SearchValue FindCurrentIndex compares each entry of Unknown14C against it
 field Class_10E85AD8::Unknown180 m_State ResetState sets it to 0; FUN_10b6b3f0 branches on 0 versus 1 and 2
+class Class_10E7B120 cT3SubtitleWindow Xbox build names this class cT3SubtitleWindow; its Cadence and NumLinesToShow config reads agree.
+class Class_10E9CC20 cTagVocabulary Xbox messages in its vtable mention cTagVocabulary; FUN_10c635a0 assigns a string member
+class Class_10E6F7D4 cVertexBufferInfo Accessor-only class; returns UnknownD0 and Unknown108 as structs; no Xbox twin name found
+class Class_10E49DFC VBPoolStaticPermanent Xbox twin debug name VBPoolStaticPermanent (2 Xbox names)
+class Class_10E6BAB0 cVolumeManager Xbox twin's Class:: name is cVolumeManager; ContainsPoint tests a point against a volume.
+function 0x10B2A7D0 LoadConfig Reads subtitle Config keys (Cadence, NumLinesToShow, CalculateFixedCenter) into fields after the base loader call.
+function 0x10B2AB70 Construct Constructs the base object, sets subtitle defaults (18.0, 3.0, 1.0, 3 lines) and returns this.
+function 0x10B36330 Construct Stores the vtable pointer into the object and returns this; called by Class_10E79590's FUN_10b366e0.
+function 0x10B3D490 Construct Calls base constructor FUN_10b3acb0, stores the vtable pointer and returns this; called by FUN_10b3d510.
+function 0x10B4FF00 Construct Calls base constructor FUN_10b3acb0, stores the vtable pointer, zeroes fields and returns this; called by FUN_10b3d510.
+function 0x10BA0DA0 Serialize Virtual FArchive& method gated on archive version Ar.Unknown0C; serializes Unknown2C, UnknownB0 and Unknown30.
+function 0x10BE9D00 Serialize overrides UObject-style Serialize: calls Class_10E8BE68::Serialize(Ar) then serializes Unknown40 and Unknown44
+function 0x10BE9BD0 Serialize FArchive& virtual that serializes Unknown04 through Unknown19 in order, the Serialize pattern
+function 0x10C1B400 Serialize FArchive& override: calls base FUN_10c1b1a0 then serializes Unknown48, Unknown54 and Unknown58
+function 0x10C2E500 IsFinished returns true once GetTimeSeconds passes Unknown5C plus Unknown60, else Unknown4C
+function 0x10C2E690 GetDescription builds MC_PlayAnimation: %s from DAT_10ff66b0[Unknown50] and returns it as a string
+function 0x10C382F0 Init calls base Class_10E9ADE8 constructor with its args and sets Unknown00 vptr, returns this
+function 0x10C38400 Serialize FUN_10c38400 override calls FUN_10c372e0 then serializes Unknown94 through the object's Virtual1 archive hook
+function 0x10AAAEC0 ReadFields Callees FUN_10d3d3b0 and FUN_10d3ddc0 read Count and the two strings from the Reader; FUN_10aaafb0 writes them back.
+function 0x10AAAFB0 WriteFields Writes Unknown08, Unknown0C and the two Unknown10 parts via FUN_10d3d2d0 and FUN_10d3d990; mirror of FUN_10aaaec0.
+function 0x10B33000 UpdateEndStyles Unknown18C at 0 gives child A style 3 and value 0; at the last index child B gets them.
+function 0x10B33DA0 InitDefaults Zeroes members, sets the default 0.65f and the vtable, returns this; called by FUN_10b40ba0.
+function 0x10B5AEA0 InitDefaults Calls base init FUN_10b78780, clears both faction pointers, sets the vtable, returns this; called by FUN_10b40ba0.
+function 0x10B5AFF0 ResetStyles Virtual70(0) on both faction objects 0x190 and 0x194 resets their style.
+function 0x10C62D60 FlushPending Virtual slot 4; calls Virtual3 with DAT_10ff711c; no string evidence, name is weak
+function 0x10C62D70 GetSlot Clamps Index to 0..5 and returns &Unknown08[Index]
+function 0x10C62D90 Apply Calls Unknown08->Virtual48(B) and Virtual5(Unknown04) on the struct
+function 0x10C635A0 SetString Assigns argument to Unknown38 (std::string assign call)
+function 0x10AC67F0 GetUnknownD0 Returns UnknownD0 by value; accessor
+function 0x10AC6820 GetUnknown108 Returns Unknown108 by value; accessor
+function 0x10AC6850 GetField168 Returns float Field168; virtual slot 3
+function 0x10AC6860 GetField1B0 Returns int Field1B0; virtual slot 4
+function 0x109333B0 GetCount Returns Unknown40.size()
+function 0x109333D0 Remove Searches Unknown3C.Unknown04 for Item and erases it
+function 0x10933960 Divide Returns Unknown38 divided by param; no string evidence
+function 0x10933730 Remove Erases Item from Unknown20 by linear search
+function 0x10933670 Release Calls Virtual2 on each Item->Unknown14 and clears it; guarded by Unknown14 & 2
+function 0x10939680 GetCount Returns Unknown20.size(); called from FUN_10c532c0 and FUN_10dc7670
+function 0x10933910 Init Sets Unknown04, Unknown08, Unknown0C, copies Struct_10932ED0 into Unknown10
+function 0x10933970 Remove Erases Item from Unknown40 by linear search
+function 0x10933F10 CreateBuffer Calls CreateVertexBuffer on the device when Unknown1C is null, then adds it to Unknown20
+function 0x10BBEF10 PostLoad Header vtable slot 7 is PostLoad; ACityPopPoint::PostLoad calls it; the body calls AActor::PostLoad first.
+function 0x10B476D0 Reset Writes default values (0x101, -1.0f, 0) to six fields; resets Unknown4C and both Unknown08 elements.
+function 0x10B47020 FindIndex Returns the index i of the entry whose FUN_10aab5c0() equals A and FUN_10c3e140() holds, else -1.
+function 0x10B3B130 ClearVelocity Zeroes Garrett->Velocity and the physics body's three FVector fields.
+function 0x10B3AE90 ReleaseArm Sets Garrett->ArmUse to EAU_FREE.
+function 0x10A2C2F0 FindEntry Loops over the entries, returning the one matching A and *B, else 0; the class's lookups call it.
+function 0x10A2DA00 FindOrAddEntry Returns FindEntry's match, else appends a new entry to the table and returns it.
+function 0x10A2C530 IsAngleBelow Converts UnknownAC to degrees, negates it below DAT_10eafbdc, and returns true when it is below C.
+function 0x10C374E0 GetMotionControllerName Returns the name 'MC_Follow'; vtable slot 1, overridden in Class_10E9AE88 by FUN_10c38040.
+function 0x10C27140 GetStateFromFlags Maps the bits of m_Flags (Unknown18) to codes 0x14-0x1b, default 0x15; called by FUN_10c36f40.
+function 0x10C36F40 GetState Returns GetStateFromFlags' code, but 0x16 instead of 0x15 when Unknown8C is 1; vtable slot 5.
+function 0x10C38040 GetMotionControllerName Returns the name 'MC_StayNear'; overrides FUN_10c374e0 (GetMotionControllerName), vtable slot 1.
+function 0x10C37E90 Construct Runs the Class_10E9ADE8 constructor with 0 as its fifth argument and stores the vtable; called by FUN_10bf8400.
+function 0x10A551C0 SetLocation Stores the FVector argument in m_Location and sets m_Dirty when a component differs.
+function 0x10A556F0 SetNameByIndex Looks index A up in m_Names into m_Name, clears Unknown134 and sets m_Dirty.
+function 0x10A70F00 HandleEvent Event 36 and 37 call Virtual17, 5 calls Virtual19, 38 calls Virtual18; other events go to cActorManager.
+function 0x10A70FA0 ContainsPoint Forwards the point to Class_10A67000::FUN_10a67000, a volume test; the Xbox twin is cVolumeManager.
+function 0x10A73200 FindValue Looks Key up in m_Values and returns the address of the found node's value field.
+function 0x10B8C690 ClampToMax Returns the smaller of Value and m_MaxValue (Unknown128); the Unused argument is ignored.
+function 0x109E4970 Construct Runs the Class_10E67FD0 constructor, stores the vtable and clears Unknown124; called by FUN_109e49c0.
+function 0x109E6110 AppendTo Appends Unknown124 to the Class_10BFBD70 array argument (Count, Data); parameter A is unused.
+function 0x10B97D80 CreatePlayAnimState Its only work is an unguarded new State_PlayAnim(A, this, B, C).
+function 0x10B98B30 CreateMunchCorpseState Its only work is an unguarded new State_MunchCorpse(A, this, B).
+function 0x10AA65C0 FindItemWithValue Loops over Unknown08.Count items calling Virtual13 and returns the first index found, else -1.
+function 0x10AA6600 FindValueIndex Scans item Index's values, Virtual1 and Virtual6, for Value and returns its position or -1.
+function 0x10AA66B0 GetValueCount Returns item Index's Virtual1() value count, the bound FindValueIndex scans to.
+function 0x10AA6680 GetValue Returns item Index's Virtual6(B), the element FindValueIndex compares against Value.
+function 0x10AA6C20 RemoveValue Finds Arg0 with Virtual12 and Virtual13, removes it from its entry, notifies event 0x16.
+function 0x10AA6B50 RemoveEntry Deletes Data[Arg0] when Virtual4 holds, compacts the array, notifies event 0x16 with Virtual5.
+function 0x10AA69A0 Resize Stores A in Unknown04 and resizes Unknown08 to A, zeroing the new slots.
+function 0x10AA66D0 SwapEntries Swaps Data[A] and Data[B] when either holds a Virtual5 value, then notifies event 0x17.
+function 0x10B9DAC0 PopToBase Pops entries until one remains, then calls Member Virtual9 and FUN_10b9d740 on the result.
+function 0x10B9DCF0 MoveToPathPoint String 'AICore'; resolves point A, requires IsA AAIPathPoint, passes it to Member Virtual12.
+function 0x10B3AF10 GetLocationZ Returns the Z of the FVector Location read from Obj->FUN_10991e10()->Unknown4A4.
+function 0x10BCEA30 Serialize Override of Class_10E8BE68::Serialize: calls the base, then serializes Unknown40 and Unknown4C to the FArchive.
+function 0x10B24F00 GetSelectedValue Returns Entries.Data[Unknown04].Unknown04 from ListA when Unknown10 is set, else ListB; 0 when none.
+function 0x10B25010 GetEntryValue Returns FUN_10b1b600()->Unknown1C.Get(Unknown2C); 0 when Unknown2C is 0.
+function 0x10929510 GetPixel Reads the 32-bit pixel at X, Y from Surface Bits and Pitch into the out int.
+function 0x10929530 SetPixel Writes the 32-bit pixel at X, Y into Surface Bits and Pitch.
+function 0x109298C0 GetLuminance Weights the Virtual8 color by 0.3, 0.59 and 0.11 into one float.
+function 0x10929920 SetPixelColor Packs the FVector color and alpha into ARGB bytes and calls Virtual1 (SetPixel).
+function 0x109299D0 GetPixelColor Calls FUN_10929510 (GetPixel) and maps each byte channel to a float color.
+function 0x109341E0 AddRef Increments the reference count Unknown08 and returns it.
+function 0x109341F0 Release Decrements Unknown08; at zero calls Unknown04->Virtual9(this) and deletes itself.
+field Class_10E82AF8::Unknown190 m_HammerFaction FUN_10b5aee0 scales this object by sta_HammerFactionTotal, the Hammer faction string.
+field Class_10E82AF8::Unknown194 m_PaganFaction FUN_10b5aee0 scales this object by sta_PaganFactionTotal, the Pagan faction string.
+field cTagVocabulary::Unknown04 m_Index Passed as the Virtual5 argument in FUN_10c62d90; name is weak
+field cTagVocabulary::Unknown08 m_Slots Array of six ints indexed and clamped in FUN_10c62d70
+field cTagVocabulary::Unknown38 m_Text std::string assigned in FUN_10c635a0
+field cVertexBufferInfo::Unknown108 m_Bounds Returned by FUN_10ac6820 as a struct; name is weak
+field cVertexBufferInfo::UnknownD0 m_Origin Returned by FUN_10ac67f0 as a struct; name is weak
+field VBPoolStaticPermanent::Unknown3C m_Pending Holds a list searched and erased in FUN_109333d0
+field VBPoolStaticPermanent::Unknown40 m_Items Its size is returned by FUN_109333b0
+field VBPoolStaticPermanent::Unknown38 m_Count Used as the numerator in FUN_10933960
+field Class_10E49E50::Unknown20 m_vecItems Iterated and erased in FUN_10933670, FUN_10933730 and FUN_10939680
+field Class_10E49E50::Unknown14 m_Flags Tested with bit 2 as an early-return guard in FUN_10933670
+field Class_10E49EB8::Unknown20 m_vecD3DVBs Constructor string 'VBPoolDynamic::m_vecD3DVBs' names this member
+field Class_10E49EB8::Unknown3C m_vecVertexBuffers Constructor string 'VBPoolDynamic::m_vecVertexBuffers' names this member
+field Class_10E49EB8::Unknown40 m_Items Searched and erased in FUN_10933970
+field Class_10E7E6A0::Unknown1C m_NoiseDisabled Set true beside SetNoiseEnabled(0) in FUN_10b49d10, false beside SetNoiseEnabled(1) in FUN_10b4a330.
+field Class_10A2C2F0::Unknown10 m_Entries Indexed by i up to Unknown08 in each entry scan, so an array of entries.
+field Class_10E9ADE8::Unknown18 m_Flags GetStateFromFlags tests its bits as flags.
+field Class_10E684A8::Unknown1C m_Location SetLocation compares the FVector argument with it and stores the argument.
+field Class_10E684A8::Unknown120 m_Dirty Set by SetLocation and SetNameByIndex when a value changes; the constructor clears it.
+field Class_10E684A8::Unknown124 m_Name SetNameByIndex stores the name it looks up here.
+field Class_10E684A8::Unknown128 m_Names SetNameByIndex looks index A up in this object to get a name.
+field cVolumeManager::Unknown04 m_Values FindValue looks Key up in this member and returns the value.
+field Class_10E896A8::Unknown128 m_MaxValue ClampToMax returns the smaller of its argument and this field.
+field Class_10E6D8F0::Unknown10 m_Items Indexed as Class_10AA66B0_Unknown10 item pointers; FindValueIndex and GetValue read through them.
+field Class_10B9E410::Unknown10 m_Count Top returns null at zero and indexes Unknown18[Unknown10 - 1]; PopToBase shrinks it.
+field Class_10B9E410::Unknown18 m_Stack Item-pointer array; Top returns Unknown18[Unknown10 - 1]; PopToBase pops it.
+field Class_10E6C5D0::Unknown04 m_Next ~Class_10E6C5D0 deletes it; every method calls the same method on it, and FUN_10a8a510 walks p2->Unknown04 alongside.
+field Class_10E7E538::Unknown10 m_State FUN_10b48400 consumes codes 0x3c/0x3e/0x40 only while it is 3, then sets 4; FUN_10b483c0 sets 4.
+field Class_10B255F0::Unknown04 m_ItemIndex Index of the selected ListA or ListB entry, 0 for none (FUN_10b24f00).
+field Class_10B255F0::Unknown10 m_UseListA Nonzero selects ListA, zero selects ListB (FUN_10b24f00).
+field Class_10B255F0::Unknown2C m_EntryIndex Index into the list's Unknown1C, 0 for none (FUN_10b25010, FUN_10b25030).
+field Class_10E49EE0::Unknown14 m_Member Destructor calls Virtual2 on it and zeroes it; FUN_10934a20 calls Virtual12 on it.

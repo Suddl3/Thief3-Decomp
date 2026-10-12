@@ -16,11 +16,11 @@ public:
     virtual void Virtual2();
     virtual void Virtual3();
     virtual void Virtual4();
-    virtual int FUN_10c27140();
+    virtual int GetStateFromFlags();
 
     Class_10E9ADE8(int A, int B, int C, int D, int E, int F, int G, int H);
 
-    Class_109081E0 FUN_10c374e0();
+    Class_109081E0 GetMotionControllerName();
 
     Class_10E98C8C Unknown4C;
     char Pad54[0x38];

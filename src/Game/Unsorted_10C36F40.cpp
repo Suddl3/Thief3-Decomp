@@ -10,9 +10,9 @@ public:
     virtual void Virtual2();
     virtual void Virtual3();
     virtual void Virtual4();
-    virtual int FUN_10c36f40();
+    virtual int GetState();
 
-    int FUN_10c27140();
+    int GetStateFromFlags();
 
     char Unknown04[0x88];
     unsigned char Unknown8C;
@@ -35,10 +35,10 @@ public:
     Class_10E98C8C Unknown4C;
 };
 
-// FUNCTION: 0x10C36F40 ?FUN_10c36f40@Class_10E9ADE8@@UAEHXZ
-int Class_10E9ADE8::FUN_10c36f40()
+// FUNCTION: 0x10C36F40 ?GetState@Class_10E9ADE8@@UAEHXZ
+int Class_10E9ADE8::GetState()
 {
-    int Result = FUN_10c27140();
+    int Result = GetStateFromFlags();
     if (Result == 0x15 && Unknown8C == 1)
         return 0x16;
     return Result;

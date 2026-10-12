@@ -72,7 +72,7 @@ class Class_10E99314
 {
 public:
     Class_10E99314(int A, const Class_10E93B5C& B, int C);
-    virtual bool FUN_10c2e500();
+    virtual bool IsFinished();
 
     ~Class_10E99314();
 
@@ -92,8 +92,8 @@ class Class_10E9AA38 : public Class_10E99314
 {
 public:
     Class_10E9AA38(Class_10C37960* A, const Class_10E93B5C& B, int C, const Class_109081E0& E, int F, int G, int H, int I);
-    virtual bool FUN_10c2e500();
-    virtual Class_109081E0 FUN_10c2e690();
+    virtual bool IsFinished();
+    virtual Class_109081E0 GetDescription();
     virtual ~Class_10E9AA38();
 
     bool Unknown4C;

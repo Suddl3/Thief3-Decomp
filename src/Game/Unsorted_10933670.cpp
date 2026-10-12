@@ -7,7 +7,7 @@ class Class_10E49EB8
 {
 public:
     virtual void Virtual0();
-    virtual int FUN_10933910(int A, int B, Struct_10932ED0* C, int D);
+    virtual int Init(int A, int B, Struct_10932ED0* C, int D);
 
     int Unknown04;
     int Unknown08;
@@ -42,20 +42,20 @@ public:
     virtual void Virtual4();
     virtual void Virtual5();
     virtual void Virtual6();
-    virtual void FUN_10933670();
+    virtual void Release();
 
     char Unknown04[0x10];
-    int Unknown14;
+    int m_Flags;
     char Unknown18[8];
-    std::vector<Struct_10933670_Item*> Unknown20;
+    std::vector<Struct_10933670_Item*> m_vecItems;
 };
 
-// FUNCTION: 0x10933670 ?FUN_10933670@Class_10E49E50@@UAEXXZ
-void Class_10E49E50::FUN_10933670()
+// FUNCTION: 0x10933670 ?Release@Class_10E49E50@@UAEXXZ
+void Class_10E49E50::Release()
 {
-    if (Unknown14 & 2)
+    if (m_Flags & 2)
         return;
-    for (std::vector<Struct_10933670_Item*>::iterator It = Unknown20.begin(); It != Unknown20.end(); ++It)
+    for (std::vector<Struct_10933670_Item*>::iterator It = m_vecItems.begin(); It != m_vecItems.end(); ++It)
     {
         Struct_10933670_Item* Item = *It;
         if (Item->Unknown14)
@@ -66,8 +66,8 @@ void Class_10E49E50::FUN_10933670()
     }
 }
 
-// FUNCTION: 0x10933910 ?FUN_10933910@Class_10E49EB8@@UAEHHHPAUStruct_10932ED0@@H@Z
-int Class_10E49EB8::FUN_10933910(int A, int B, Struct_10932ED0* C, int D)
+// FUNCTION: 0x10933910 ?Init@Class_10E49EB8@@UAEHHHPAUStruct_10932ED0@@H@Z
+int Class_10E49EB8::Init(int A, int B, Struct_10932ED0* C, int D)
 {
     Unknown04 = A;
     Unknown08 = B;

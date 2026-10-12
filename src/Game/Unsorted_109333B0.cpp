@@ -3,7 +3,7 @@
 #include <vector>
 #include "Game/Class_10933420.h"
 
-class Class_10E49DFC {
+class VBPoolStaticPermanent {
 public:
     virtual void Virtual0();
     virtual void Virtual1();
@@ -11,16 +11,16 @@ public:
     virtual void Virtual3();
     virtual void Virtual4();
     virtual void Virtual5();
-    virtual int FUN_109333b0();
+    virtual int GetCount();
 
     char Unknown04[0x3C];
-    std::vector<void*> Unknown40;
+    std::vector<void*> m_Items;
 };
 
-// FUNCTION: 0x109333B0 ?FUN_109333b0@Class_10E49DFC@@UAEHXZ
-int Class_10E49DFC::FUN_109333b0()
+// FUNCTION: 0x109333B0 ?GetCount@VBPoolStaticPermanent@@UAEHXZ
+int VBPoolStaticPermanent::GetCount()
 {
-    return Unknown40.size();
+    return m_Items.size();
 }
 
 // FUNCTION: 0x10933420 ?FUN_10933420@Class_10933420@@QAE?AViterator@?$vector@PAXV?$allocator@PAX@std@@@std@@V234@@Z

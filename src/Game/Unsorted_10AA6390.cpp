@@ -100,7 +100,7 @@ Class_10E6D8F0::Class_10E6D8F0()
     Unknown04 = 0x7fffffff;
     Unknown08 = 0;
     Unknown0C = 0;
-    Unknown10 = 0;
+    m_Items = 0;
     Unknown14 = 0;
     Unknown18 = 0;
     Unknown1C = 0;

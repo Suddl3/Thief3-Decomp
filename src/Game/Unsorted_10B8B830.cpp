@@ -43,10 +43,10 @@ void Class_10B8B830::FUN_10b8b830(int Arg)
     }
 }
 
-// FUNCTION: 0x10B8C690 ?FUN_10b8c690@Class_10E896A8@@UAEMMH@Z
-float Class_10E896A8::FUN_10b8c690(float Value, int Unused)
+// FUNCTION: 0x10B8C690 ?ClampToMax@Class_10E896A8@@UAEMMH@Z
+float Class_10E896A8::ClampToMax(float Value, int Unused)
 {
-    if (Unknown128 > Value)
+    if (m_MaxValue > Value)
         return Value;
-    return Unknown128;
+    return m_MaxValue;
 }

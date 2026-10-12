@@ -5,10 +5,10 @@
 
 extern float DAT_10eafbdc;
 
-// FUNCTION: 0x10A2C530 ?FUN_10a2c530@Class_10A2C2F0@@QAE_NPAXPAHM@Z
-bool Class_10A2C2F0::FUN_10a2c530(void* A, int* B, float C)
+// FUNCTION: 0x10A2C530 ?IsAngleBelow@Class_10A2C2F0@@QAE_NPAXPAHM@Z
+bool Class_10A2C2F0::IsAngleBelow(void* A, int* B, float C)
 {
-    Struct_10A2C500* Entry = (Struct_10A2C500*)FUN_10a2c2f0(A, B);
+    Struct_10A2C500* Entry = (Struct_10A2C500*)FindEntry(A, B);
     if (Entry && !Entry->Unknown7D)
     {
         float Value = Entry->UnknownAC * 180.0f * 0.3183098861837907;

@@ -23,20 +23,20 @@ public:
     virtual void Virtual15();
     virtual void Virtual16();
     virtual void Virtual17();
-    virtual int FUN_10aa66b0(int Index);
+    virtual int GetValueCount(int Index);
 
     char Unknown04[4];
     int Unknown08;
     char Unknown0C[4];
-    Class_10AA66B0_Unknown10** Unknown10;
+    Class_10AA66B0_Unknown10** m_Items;
 };
 
-// FUNCTION: 0x10AA66B0 ?FUN_10aa66b0@Class_10E6D8F0@@UAEHH@Z
-int Class_10E6D8F0::FUN_10aa66b0(int Index)
+// FUNCTION: 0x10AA66B0 ?GetValueCount@Class_10E6D8F0@@UAEHH@Z
+int Class_10E6D8F0::GetValueCount(int Index)
 {
     if (Index < Unknown08)
     {
-        Class_10AA66B0_Unknown10* Item = Unknown10[Index];
+        Class_10AA66B0_Unknown10* Item = m_Items[Index];
         if (Item)
             return Item->Virtual1();
     }

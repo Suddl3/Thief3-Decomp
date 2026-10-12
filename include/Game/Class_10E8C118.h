@@ -13,7 +13,7 @@ class Class_10E8C118
 {
 public:
     virtual void Virtual0();
-    virtual void FUN_10ba0da0(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
     virtual void Virtual2();
     virtual void Virtual3();
     virtual void FUN_10ba0fc0();

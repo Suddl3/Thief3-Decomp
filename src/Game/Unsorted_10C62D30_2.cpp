@@ -8,13 +8,13 @@
 
 extern int DAT_10ff711c;
 
-class Class_10E9CC20 {
+class cTagVocabulary {
 public:
     virtual void Virtual0() = 0;
     virtual void Virtual1() = 0;
     virtual void Virtual2() = 0;
     virtual void Virtual3(int p1) = 0;
-    virtual void FUN_10c62d60();
+    virtual void FlushPending();
 };
 
 class Class_10C63A00_Member {
@@ -70,8 +70,8 @@ public:
     virtual void F16() = 0;
 };
 
-// FUNCTION: 0x10C62D60 ?FUN_10c62d60@Class_10E9CC20@@UAEXXZ
-void Class_10E9CC20::FUN_10c62d60()
+// FUNCTION: 0x10C62D60 ?FlushPending@cTagVocabulary@@UAEXXZ
+void cTagVocabulary::FlushPending()
 {
     Virtual3(DAT_10ff711c);
 }

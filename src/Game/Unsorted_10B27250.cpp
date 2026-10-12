@@ -24,12 +24,12 @@ void Class_10B27450::FUN_10b27450(int A, int B)
 void Class_10B274B0::FUN_10b274b0(int p1)
 {
     if (Unknown1D0)
-        Unknown1D0->FUN_10a556f0(p1);
+        Unknown1D0->SetNameByIndex(p1);
 }
 
 // FUNCTION: 0x10B274D0 ?FUN_10b274d0@Class_10B274D0@@QAEXH@Z
 void Class_10B274D0::FUN_10b274d0(int p1)
 {
     if (Unknown1D4)
-        Unknown1D4->FUN_10a556f0(p1);
+        Unknown1D4->SetNameByIndex(p1);
 }

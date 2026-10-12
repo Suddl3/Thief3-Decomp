@@ -56,7 +56,7 @@ public:
     bool Unknown19;
     bool Unknown1A;
     bool Unknown1B;
-    bool Unknown1C;
+    bool m_NoiseDisabled;
     char Pad1D[0x3];
 };
 
@@ -83,7 +83,7 @@ void Class_10E7E6A0::FUN_10b4a330(AGarrett* Garrett)
     Unknown1B = false;
     Unknown1A = false;
     Unknown10 = 1;
-    Unknown1C = false;
+    m_NoiseDisabled = false;
     FUN_10b49f60();
     FUN_10b3b030(Garrett);
     FUN_10b3ae70(Garrett);

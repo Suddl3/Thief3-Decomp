@@ -11,7 +11,7 @@ class Class_10E970E8
 {
 public:
     virtual void FUN_10be9800(void* p1);
-    virtual void FUN_10be9bd0(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 
     int Unknown04;
     FVector Unknown08;

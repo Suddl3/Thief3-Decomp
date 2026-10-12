@@ -17,17 +17,17 @@ public:
     virtual void Virtual3();
 
     void FUN_10b3adc0(Object_10B3ADC0* param);
-    void FUN_10b3ae90(AGarrett* Garrett);
+    void ReleaseArm(AGarrett* Garrett);
     Class_10E7E6A0* FUN_10b3d170();
-    void FUN_10b3b130(AGarrett* Garrett);
+    void ClearVelocity(AGarrett* Garrett);
     void FUN_10b3ed30(AGarrett* Garrett);
     void FUN_10b3adc0(AGarrett* Garrett);
     void FUN_10b49d10(AGarrett* Garrett);
     int FUN_10b49d40(int A);
-    void FUN_10b3ae90(Object_10B3ADC0* A);
+    void ReleaseArm(Object_10B3ADC0* A);
 
     char Unknown04[0x18];
-    bool Unknown1C;
+    bool m_NoiseDisabled;
     char Pad1D[0x3];
 };
 

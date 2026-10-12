@@ -14,17 +14,17 @@ public:
     int FUN_10b25030();
 
     char Unknown00[0x2C];
-    int Unknown2C;
+    int m_EntryIndex;
 };
 
 // FUNCTION: 0x10B25030 ?FUN_10b25030@Class_10B255F0@@QAEHXZ
 int Class_10B255F0::FUN_10b25030()
 {
-    if (Unknown2C == 0)
+    if (m_EntryIndex == 0)
         return 0;
     int Result = 0;
-    if (FUN_10b1b600()->Unknown1C[Unknown2C].Unknown00)
-        Result = FUN_10b1b600()->Unknown1C[Unknown2C].Unknown00;
+    if (FUN_10b1b600()->Unknown1C[m_EntryIndex].Unknown00)
+        Result = FUN_10b1b600()->Unknown1C[m_EntryIndex].Unknown00;
     return Result;
 }
 

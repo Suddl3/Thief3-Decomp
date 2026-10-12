@@ -8,7 +8,7 @@ public:
     virtual void Virtual0();
     virtual void Virtual1();
     virtual void Virtual2();
-    virtual void FUN_10aa69a0(int A);
+    virtual void Resize(int A);
     virtual void Virtual4();
     virtual void Virtual5();
     virtual void Virtual6();
@@ -17,7 +17,7 @@ public:
     virtual void Virtual9();
     virtual void Virtual10();
     virtual void Virtual11();
-    virtual int FUN_10aa65c0(int A);
+    virtual int FindItemWithValue(int A);
     virtual int Virtual13(int A, int B);
 
     int Unknown04;
@@ -144,8 +144,8 @@ int Class_10E6D8CC::FUN_10aa6430(Class_10AA6430_A* A, int B)
     return Count + B <= A->Virtual83();
 }
 
-// FUNCTION: 0x10AA65C0 ?FUN_10aa65c0@Class_10E6D8F0@@UAEHH@Z
-int Class_10E6D8F0::FUN_10aa65c0(int A)
+// FUNCTION: 0x10AA65C0 ?FindItemWithValue@Class_10E6D8F0@@UAEHH@Z
+int Class_10E6D8F0::FindItemWithValue(int A)
 {
     for (int i = 0; i < Unknown08.Count; i++)
     {

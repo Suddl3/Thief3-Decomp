@@ -9,16 +9,16 @@ public:
     virtual void Virtual2();
     virtual void Virtual3();
     virtual void Virtual4();
-    virtual int FUN_10c27140();
+    virtual int GetStateFromFlags();
 
     char Unknown04[0x14];
-    unsigned int Unknown18;
+    unsigned int m_Flags;
 };
 
-// FUNCTION: 0x10C27140 ?FUN_10c27140@Class_10E9ADE8@@UAEHXZ
-int Class_10E9ADE8::FUN_10c27140()
+// FUNCTION: 0x10C27140 ?GetStateFromFlags@Class_10E9ADE8@@UAEHXZ
+int Class_10E9ADE8::GetStateFromFlags()
 {
-    unsigned int Flags = Unknown18;
+    unsigned int Flags = m_Flags;
     if (Flags & 0x2)
         return 0x15;
     if (Flags & 0x1)

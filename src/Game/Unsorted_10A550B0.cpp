@@ -57,8 +57,8 @@ public:
     bool Unknown118;
     bool Unknown119;
     int Unknown11C;
-    bool Unknown120;
-    FArray Unknown124;
+    bool m_Dirty;
+    FArray m_Name;
     int Unknown130;
     int Unknown134;
     int Unknown138;
@@ -70,7 +70,7 @@ public:
 
 // FUNCTION: 0x10A55150 ??0Class_10E684A8@@QAE@XZ
 Class_10E684A8::Class_10E684A8()
-    : Unknown118(false), Unknown119(false), Unknown11C(0), Unknown120(false), Unknown130(0), Unknown134(0),
+    : Unknown118(false), Unknown119(false), Unknown11C(0), m_Dirty(false), Unknown130(0), Unknown134(0),
       Unknown138(0), Unknown13C(0), Unknown140(0), Unknown144(false), Unknown148(0)
 {
 }

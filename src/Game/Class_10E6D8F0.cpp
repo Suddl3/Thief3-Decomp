@@ -29,16 +29,16 @@ public:
     virtual void Virtual10();
     virtual void Virtual11();
     virtual void Virtual12();
-    virtual int FUN_10aa6600(int Index, int Value);
+    virtual int FindValueIndex(int Index, int Value);
 
     char Unknown04[0xC];
-    Class_10E6D8F0_Unknown10** Unknown10;
+    Class_10E6D8F0_Unknown10** m_Items;
 };
 
-// FUNCTION: 0x10AA6600 ?FUN_10aa6600@Class_10E6D8F0@@UAEHHH@Z
-int Class_10E6D8F0::FUN_10aa6600(int Index, int Value)
+// FUNCTION: 0x10AA6600 ?FindValueIndex@Class_10E6D8F0@@UAEHHH@Z
+int Class_10E6D8F0::FindValueIndex(int Index, int Value)
 {
-    Class_10E6D8F0_Unknown10* Item = Unknown10[Index];
+    Class_10E6D8F0_Unknown10* Item = m_Items[Index];
     if (Item)
     {
         for (int i = 0; i < Item->Virtual1(); i++)

@@ -21,8 +21,8 @@ public:
 class Class_10E49EE0
 {
 public:
-    virtual int FUN_109341e0();
-    virtual int FUN_109341f0();
+    virtual int AddRef();
+    virtual int Release();
     virtual void Virtual2();
     virtual void Virtual3();
     virtual void Virtual4();
@@ -37,8 +37,8 @@ public:
     int Unknown08;
 };
 
-// FUNCTION: 0x109341F0 ?FUN_109341f0@Class_10E49EE0@@UAEHXZ
-int Class_10E49EE0::FUN_109341f0()
+// FUNCTION: 0x109341F0 ?Release@Class_10E49EE0@@UAEHXZ
+int Class_10E49EE0::Release()
 {
     int Count = --Unknown08;
     if (Count == 0)

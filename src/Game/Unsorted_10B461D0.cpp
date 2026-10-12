@@ -25,7 +25,7 @@ struct Info_10B49420
     int Unknown10;
 };
 
-void FUN_10b3ae90();
+void ReleaseArm();
 
 class UnknownClass_10B4BD70 {
 public:
@@ -35,7 +35,7 @@ public:
 
 extern void __stdcall FUN_10b4bd70(UnknownClass_10B4BD70* p1);
 
-void FUN_10b3b130();
+void ClearVelocity();
 
 struct Info_10B4EC30
 {
@@ -221,7 +221,7 @@ void __stdcall FUN_10b49420(Info_10B49420* Out)
 // FUNCTION: 0x10B4BC20 ?FUN_10b4bc20@@YAXXZ
 void FUN_10b4bc20()
 {
-    FUN_10b3ae90();
+    ReleaseArm();
 }
 
 // FUNCTION: 0x10B4BD70 ?FUN_10b4bd70@@YGXPAVUnknownClass_10B4BD70@@@Z
@@ -233,7 +233,7 @@ void __stdcall FUN_10b4bd70(UnknownClass_10B4BD70* p1)
 // FUNCTION: 0x10B4BDF0 ?FUN_10b4bdf0@@YAXXZ
 void FUN_10b4bdf0()
 {
-    FUN_10b3b130();
+    ClearVelocity();
 }
 
 // FUNCTION: 0x10B4CD10 ?FUN_10b4cd10@@YAHXZ

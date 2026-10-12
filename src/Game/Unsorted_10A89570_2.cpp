@@ -10,8 +10,8 @@ extern int DAT_10f3a1e0;
 // FUNCTION: 0x10A8A550 ?FUN_10a8a550@Class_10E6C5D0@@UAEXXZ
 void Class_10E6C5D0::FUN_10a8a550()
 {
-    if (Unknown04)
-        Unknown04->FUN_10a8a550();
+    if (m_Next)
+        m_Next->FUN_10a8a550();
 }
 
 // FUNCTION: 0x10A8AC00 ?IncrementCount@cTriggerSoundSchemaParam@@UAEXXZ

@@ -40,10 +40,10 @@ public:
     virtual ~Class_10E49EB8();
 
     int Unknown1C;
-    Class_1095D6C0 Unknown20;
+    Class_1095D6C0 m_vecD3DVBs;
     int Unknown34;
     int Unknown38;
-    Class_1095D6C0 Unknown3C;
+    Class_1095D6C0 m_vecVertexBuffers;
 };
 
 // FUNCTION: 0x10933A40 ??_GClass_10E49EB8@@UAEPAXI@Z
@@ -52,11 +52,11 @@ public:
 // FUNCTION: 0x10933A60 ??1Class_10E49EB8@@UAE@XZ
 Class_10E49EB8::~Class_10E49EB8()
 {
-    Unknown3C.FUN_1095d6c0();
+    m_vecVertexBuffers.FUN_1095d6c0();
     Unknown34 = 0;
     Unknown38 = 0;
     Unknown1C = 0;
-    for (Class_10933A60_Element** It = Unknown20.Unknown08; It != Unknown20.Unknown0C; ++It)
+    for (Class_10933A60_Element** It = m_vecD3DVBs.Unknown08; It != m_vecD3DVBs.Unknown0C; ++It)
     {
         if (*It)
         {
@@ -64,5 +64,5 @@ Class_10E49EB8::~Class_10E49EB8()
             *It = 0;
         }
     }
-    Unknown20.FUN_1095d6c0();
+    m_vecD3DVBs.FUN_1095d6c0();
 }

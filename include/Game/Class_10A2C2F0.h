@@ -12,22 +12,22 @@ class Class_10A2C2F0
 public:
     Class_10A2C2F0();
 
-    int FUN_10a2c2f0(void* A, void* B);
+    int FindEntry(void* A, void* B);
     bool FUN_10a2c500(void* A, void* B);
     void FUN_10a2c200(void* A, int* B);
     void FUN_10a2c250(void* A, int* B);
     void FUN_10a2c2a0(void* A, int* B);
     bool FUN_10a2c580(void* A, void* B, void* C);
-    bool FUN_10a2c530(void* A, int* B, float C);
-    Struct_10A2DA00* FUN_10a2da00(Class_10B21820* A, void* B);
-    bool FUN_10a2c530(void* A, int* B, int C);
+    bool IsAngleBelow(void* A, int* B, float C);
+    Struct_10A2DA00* FindOrAddEntry(Class_10B21820* A, void* B);
+    bool IsAngleBelow(void* A, int* B, int C);
     void FUN_10a2daa0(void* A, int B, int* C, int D);
 
     int Unknown00;
     int Unknown04;
     int Unknown08;
     int Unknown0C;
-    Struct_10A2C2F0_Unknown10* Unknown10;
+    Struct_10A2C2F0_Unknown10* m_Entries;
 };
 
 #endif // GAME_CLASS_10A2C2F0_H

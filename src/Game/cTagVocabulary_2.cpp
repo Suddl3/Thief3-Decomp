@@ -1,6 +1,6 @@
-// Game/Class_10E9CC20_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/cTagVocabulary_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10E9CC20.h"
+#include "Game/cTagVocabulary.h"
 
 class Class_10C62D90_Member
 {
@@ -62,9 +62,9 @@ struct Struct_10C62D90
     Class_10C62D90_Member* Unknown08;
 };
 
-// FUNCTION: 0x10C62D90 ?FUN_10c62d90@Class_10E9CC20@@UAEXPAPAUStruct_10C62D90@@H@Z
-void Class_10E9CC20::FUN_10c62d90(Struct_10C62D90** P, int B)
+// FUNCTION: 0x10C62D90 ?Apply@cTagVocabulary@@UAEXPAPAUStruct_10C62D90@@H@Z
+void cTagVocabulary::Apply(Struct_10C62D90** P, int B)
 {
     (*P)->Unknown08->Virtual48(B);
-    (*P)->Unknown08->Virtual5(Unknown04);
+    (*P)->Unknown08->Virtual5(m_Index);
 }

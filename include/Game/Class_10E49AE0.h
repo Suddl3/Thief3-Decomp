@@ -9,13 +9,13 @@ struct Struct_10929D60;
 class Class_10E49AE0
 {
 public:
-    virtual void FUN_10929510(Struct_10929510* p1, int p2, int p3, unsigned long* p4);
-    virtual void FUN_10929530(Struct_10929510* p1, int p2, int p3, int p4);
+    virtual void GetPixel(Struct_10929510* p1, int p2, int p3, unsigned long* p4);
+    virtual void SetPixel(Struct_10929510* p1, int p2, int p3, int p4);
     virtual void Virtual2();
     virtual void Virtual3();
-    virtual void FUN_109298c0(Struct_10929510* p1, int p2, int p3, float* p4);
+    virtual void GetLuminance(Struct_10929510* p1, int p2, int p3, float* p4);
     virtual void Virtual5();
-    virtual void FUN_109299d0(Struct_10929510* Surface, int X, int Y, Struct_10929D60* Out);
+    virtual void GetPixelColor(Struct_10929510* Surface, int X, int Y, Struct_10929D60* Out);
     virtual void Virtual7();
     virtual void Virtual8(Struct_10929510* p1, float* R, float* G, float* B, float* A, int p2, int p3);
 };

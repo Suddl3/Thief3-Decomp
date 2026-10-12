@@ -10,11 +10,11 @@ class Object_10B5AFF0;
 class Class_10E82AF8 : public Class_10B78780
 {
 public:
-    void FUN_10b5aff0();
-    Class_10E82AF8* FUN_10b5aea0();
+    void ResetStyles();
+    Class_10E82AF8* InitDefaults();
 
-    Object_10B5AFF0* Unknown190;
-    Object_10B5AFF0* Unknown194;
+    Object_10B5AFF0* m_HammerFaction;
+    Object_10B5AFF0* m_PaganFaction;
 };
 
 #endif // GAME_CLASS_10E82AF8_H

@@ -45,7 +45,7 @@ void Class_10A2C350::FUN_10a2c350(int A, int B)
 // FUNCTION: 0x10A2C500 ?FUN_10a2c500@Class_10A2C2F0@@QAE_NPAX0@Z
 bool Class_10A2C2F0::FUN_10a2c500(void* A, void* B)
 {
-    Struct_10A2C500* Entry = (Struct_10A2C500*)FUN_10a2c2f0(A, B);
+    Struct_10A2C500* Entry = (Struct_10A2C500*)FindEntry(A, B);
     if (Entry && !Entry->Unknown7D)
         return true;
     return false;

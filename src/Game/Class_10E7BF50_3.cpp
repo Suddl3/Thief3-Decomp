@@ -44,7 +44,7 @@ class Class_10E7BF50 : public Class_10E81130
 public:
     virtual void Virtual0();
     ~Class_10E7BF50();
-    Class_10E7BF50* FUN_10b33da0();
+    Class_10E7BF50* InitDefaults();
 
     int Unknown164;
     int Unknown168;

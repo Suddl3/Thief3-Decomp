@@ -8,7 +8,7 @@ class Class_10B7AC10;
 class Class_Field0c_D
 {
 public:
-    int FUN_10b47020(int A);
+    int FindIndex(int A);
     float FUN_10b471f0(int A);
     unsigned char FUN_10b470d0(int A);
     float FUN_10b47100(int A);

@@ -16,22 +16,22 @@ public:
     virtual void Virtual5();
     virtual void Virtual6();
     virtual void Virtual7();
-    virtual void FUN_10933f10(IDirect3DDevice8* Device);
+    virtual void CreateBuffer(IDirect3DDevice8* Device);
 
     char Unknown04[0xC];
     unsigned int Unknown10;
     unsigned int Unknown14;
     char Unknown18[4];
     IDirect3DVertexBuffer8* Unknown1C;
-    Class_109343B0 Unknown20;
+    Class_109343B0 m_vecD3DVBs;
 };
 
-// FUNCTION: 0x10933F10 ?FUN_10933f10@Class_10E49EB8@@UAEXPAVIDirect3DDevice8@@@Z
-void Class_10E49EB8::FUN_10933f10(IDirect3DDevice8* Device)
+// FUNCTION: 0x10933F10 ?CreateBuffer@Class_10E49EB8@@UAEXPAVIDirect3DDevice8@@@Z
+void Class_10E49EB8::CreateBuffer(IDirect3DDevice8* Device)
 {
     if (Unknown1C == 0)
     {
         Device->CreateVertexBuffer(Unknown10, 0x208, 0, (Unknown14 >> 1) & 1, &Unknown1C);
-        Unknown20.FUN_109343b0(&Unknown1C);
+        m_vecD3DVBs.FUN_109343b0(&Unknown1C);
     }
 }

@@ -70,7 +70,7 @@ public:
     virtual bool Virtual54();
 
     char Unknown04[0x11C];
-    bool Unknown120;
+    bool m_Dirty;
 };
 
 // FUNCTION: 0x10A55000 ?FUN_10a55000@Class_10A55000@@QAEHXZ
@@ -85,7 +85,7 @@ int Class_10A55000::FUN_10a55000()
 void Class_10E684A8::FUN_10a55020(bool Param)
 {
     if (Virtual54())
-        Unknown120 = true;
+        m_Dirty = true;
     Class_10A52BE0::FUN_10a52be0(Param);
 }
 

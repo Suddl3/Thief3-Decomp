@@ -159,9 +159,9 @@ public:
     void FUN_10b9cfa0();
     Class_10B9E410_Item* Top()
     {
-        if (Unknown10 == 0)
+        if (m_Count == 0)
             return 0;
-        return Unknown18[Unknown10 - 1];
+        return m_Stack[m_Count - 1];
     }
     void FUN_10b9cf20();
     void FUN_10b9e410();
@@ -177,9 +177,9 @@ public:
 
     char Unknown00[0xC];
     Class_10BB9FC0* Unknown0C;
-    int Unknown10;
+    int m_Count;
     char Unknown14[4];
-    Class_10B9E410_Item** Unknown18;
+    Class_10B9E410_Item** m_Stack;
     int Unknown1C;
     int Unknown20;
     char Unknown24[0x14];

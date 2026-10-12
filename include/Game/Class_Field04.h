@@ -16,7 +16,7 @@ public:
     void FUN_10b46fb0();
     void FUN_10bb83e0();
     void FUN_10b47310(int A);
-    void FUN_10b476d0();
+    void Reset();
     int FUN_1098e290(int Id, FString* Out);
     void FUN_1098e290();
 

@@ -477,7 +477,7 @@ void Class_10B6AED0::FUN_10b6aed0()
     {
         Class_109081E0 Text(FUN_1090a660(DAT_10e47660));
         FUN_10b69ec0(Index, &Text);
-        Unknown128->FUN_10a556f0((int)&Text);
+        Unknown128->SetNameByIndex((int)&Text);
     }
 }
 

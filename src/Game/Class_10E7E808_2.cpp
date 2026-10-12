@@ -56,8 +56,8 @@ public:
 // FUNCTION: 0x10B4BD30 ?FUN_10b4bd30@Class_10E7E808@@UAEXPAVAGarrett@@@Z
 void Class_10E7E808::FUN_10b4bd30(AGarrett* Garrett)
 {
-    FUN_10b3b130(Garrett);
-    FUN_10b3ae90(Garrett);
+    ClearVelocity(Garrett);
+    ReleaseArm(Garrett);
     Garrett->bUpdatePhysHeight = 1;
     if (Garrett->FatalAttackState == eFAS_ArmsPrepared)
         Garrett->FatalAttackState = eFAS_BodyPrepared;

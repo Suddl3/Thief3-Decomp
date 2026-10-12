@@ -14,12 +14,12 @@
 
 extern void* DAT_10e7c428[];
 
-void FUN_10b476d0();
+void Reset();
 
 class Class_Field04
 {
 public:
-    void FUN_10b476d0();
+    void Reset();
 };
 
 struct Static_10B3AC60
@@ -125,7 +125,7 @@ Class_10E7C428* Class_10E7C428::FUN_10b364d0()
 // FUNCTION: 0x10B396A0 ?FUN_10b396a0@Class_10B396A0@@QAEXXZ
 void Class_10B396A0::FUN_10b396a0()
 {
-    Field0c->FUN_10b476d0();
+    Field0c->Reset();
 }
 
 // FUNCTION: 0x10B3A470 ?FUN_10b3a470@Class_10B3A470@@QAEPAV1@XZ

@@ -16,8 +16,8 @@ public:
 
 extern Class_10FF667C* DAT_10ff667c;
 
-// FUNCTION: 0x10BE9BD0 ?FUN_10be9bd0@Class_10E970E8@@UAEXAAVFArchive@@@Z
-void Class_10E970E8::FUN_10be9bd0(FArchive& Ar)
+// FUNCTION: 0x10BE9BD0 ?Serialize@Class_10E970E8@@UAEXAAVFArchive@@@Z
+void Class_10E970E8::Serialize(FArchive& Ar)
 {
     DAT_10ff667c->Unknown18->Virtual1(Ar, &Unknown04);
     FUN_10b052a0(Ar, &Unknown08);

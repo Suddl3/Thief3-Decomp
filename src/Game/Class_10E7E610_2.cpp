@@ -22,8 +22,8 @@ public:
     virtual void Virtual1();
     virtual void Virtual2();
 
-    void FUN_10b3ae90(AGarrett* Garrett);
-    void FUN_10b3b130(AGarrett* Garrett);
+    void ReleaseArm(AGarrett* Garrett);
+    void ClearVelocity(AGarrett* Garrett);
 };
 
 class Class_10E7E610 : public Class_10E7E6A0
@@ -35,8 +35,8 @@ public:
 // FUNCTION: 0x10B49360 ?FUN_10b49360@Class_10E7E610@@UAEXPAVAGarrett@@@Z
 void Class_10E7E610::FUN_10b49360(AGarrett* Garrett)
 {
-    FUN_10b3ae90(Garrett);
-    FUN_10b3b130(Garrett);
+    ReleaseArm(Garrett);
+    ClearVelocity(Garrett);
     ((Class_10B396A0*)FUN_10aa82d0())->FUN_10b396a0();
     Garrett->bUpdatePhysHeight = 1;
     Garrett->SetNoiseEnabled(0);

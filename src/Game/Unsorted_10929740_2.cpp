@@ -8,8 +8,8 @@
 
 typedef unsigned long DWORD;
 
-// FUNCTION: 0x109298C0 ?FUN_109298c0@Class_10E49AE0@@UAEXPAUStruct_10929510@@HHPAM@Z
-void Class_10E49AE0::FUN_109298c0(Struct_10929510* p1, int p2, int p3, float* p4)
+// FUNCTION: 0x109298C0 ?GetLuminance@Class_10E49AE0@@UAEXPAUStruct_10929510@@HHPAM@Z
+void Class_10E49AE0::GetLuminance(Struct_10929510* p1, int p2, int p3, float* p4)
 {
     float R, G, B, A;
     Virtual8(p1, &R, &G, &B, &A, p2, p3);

@@ -78,7 +78,7 @@ public:
     virtual void Virtual61();
     virtual void Virtual62();
     virtual void Virtual63();
-    virtual void FUN_10be9d00(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 
     char Unknown04[0x3C];
     int Unknown40;
@@ -125,8 +125,8 @@ public:
     bool Unknown64;
 };
 
-// FUNCTION: 0x10BE9D00 ?FUN_10be9d00@Class_10E96FD0@@UAEXAAVFArchive@@@Z
-void Class_10E96FD0::FUN_10be9d00(FArchive& Ar)
+// FUNCTION: 0x10BE9D00 ?Serialize@Class_10E96FD0@@UAEXAAVFArchive@@@Z
+void Class_10E96FD0::Serialize(FArchive& Ar)
 {
     Class_10E8BE68::Serialize(Ar);
     DAT_10ff667c->Unknown18->Virtual1(Ar, &Unknown40);

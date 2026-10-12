@@ -64,22 +64,22 @@ public:
     virtual void Virtual3();
     virtual int Virtual4();
 
-    void FUN_10b3ae90(AGarrett* Garrett);
-    void FUN_10b3b130(AGarrett* Garrett);
+    void ReleaseArm(AGarrett* Garrett);
+    void ClearVelocity(AGarrett* Garrett);
     void FUN_10b49d10(AGarrett* Garrett);
     int FUN_10b49d40(int A);
 
     char Unknown04[0x18];
-    bool Unknown1C;
+    bool m_NoiseDisabled;
     char Pad1D[0x3];
 };
 
 // FUNCTION: 0x10B49D10 ?FUN_10b49d10@Class_10E7E6A0@@QAEXPAVAGarrett@@@Z
 void Class_10E7E6A0::FUN_10b49d10(AGarrett* Garrett)
 {
-    Unknown1C = true;
-    FUN_10b3b130(Garrett);
-    FUN_10b3ae90(Garrett);
+    m_NoiseDisabled = true;
+    ClearVelocity(Garrett);
+    ReleaseArm(Garrett);
     Garrett->bUpdatePhysHeight = 1;
     Garrett->SetNoiseEnabled(0);
 }
@@ -87,7 +87,7 @@ void Class_10E7E6A0::FUN_10b49d10(AGarrett* Garrett)
 // FUNCTION: 0x10B49D40 ?FUN_10b49d40@Class_10E7E6A0@@QAEHH@Z
 int Class_10E7E6A0::FUN_10b49d40(int A)
 {
-    if (Unknown1C)
+    if (m_NoiseDisabled)
         return Virtual4();
     switch (A)
     {

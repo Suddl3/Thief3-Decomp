@@ -14,11 +14,11 @@ public:
 class Class_10E9AE88 : public Class_10E9ADE8
 {
 public:
-    Class_10E9AE88* FUN_10c37e90(int A, int B, int C, int D, int E, int F, int G);
+    Class_10E9AE88* Construct(int A, int B, int C, int D, int E, int F, int G);
 };
 
-// FUNCTION: 0x10C37E90 ?FUN_10c37e90@Class_10E9AE88@@QAEPAV1@HHHHHHH@Z
-Class_10E9AE88* Class_10E9AE88::FUN_10c37e90(int A, int B, int C, int D, int E, int F, int G)
+// FUNCTION: 0x10C37E90 ?Construct@Class_10E9AE88@@QAEPAV1@HHHHHHH@Z
+Class_10E9AE88* Class_10E9AE88::Construct(int A, int B, int C, int D, int E, int F, int G)
 {
     this->Class_10E9ADE8::Class_10E9ADE8(A, B, C, D, 0, E, F, G);
     Unknown00 = DAT_10e9ae88;

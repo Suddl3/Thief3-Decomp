@@ -8,7 +8,7 @@ class Class_10B33D70
 public:
     void FUN_10b33d70();
     void FUN_10b332d0();
-    void FUN_10b33000();
+    void UpdateEndStyles();
 
     char Unknown00[0x18C];
     int Unknown18C;

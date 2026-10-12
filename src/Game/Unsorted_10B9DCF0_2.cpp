@@ -76,9 +76,9 @@ public:
     void FUN_10b9cfa0();
     Class_10B9E410_Item* Top()
     {
-        if (Unknown10 == 0)
+        if (m_Count == 0)
             return 0;
-        return Unknown18[Unknown10 - 1];
+        return m_Stack[m_Count - 1];
     }
     void FUN_10b9cf20();
     void FUN_10b9e410();
@@ -90,27 +90,27 @@ public:
     void FUN_10b9e660();
     void FUN_10b9e690(int A);
     void FUN_10b9eee0();
-    void FUN_10b9dcf0(int A);
+    void MoveToPathPoint(int A);
 
     char Unknown00[0xC];
     Class_10B9E410_Unknown0C* Unknown0C;
-    int Unknown10;
+    int m_Count;
     char Unknown14[4];
-    Class_10B9E410_Item** Unknown18;
+    Class_10B9E410_Item** m_Stack;
     int Unknown1C;
     int Unknown20;
     char Unknown24[0x14];
     Class_10B9E410_Member* Unknown38;
 };
 
-// FUNCTION: 0x10B9DCF0 ?FUN_10b9dcf0@Class_10B9E410@@QAEXH@Z
-void Class_10B9E410::FUN_10b9dcf0(int A)
+// FUNCTION: 0x10B9DCF0 ?MoveToPathPoint@Class_10B9E410@@QAEXH@Z
+void Class_10B9E410::MoveToPathPoint(int A)
 {
     Class_10C7D570* Owner = Unknown0C->Unknown08;
     UObject* Point = FUN_10c00710(Owner->FUN_10c7d570(), A);
     if (Point && Point->IsA(AAIPathPoint::StaticClass()))
     {
-        if (Unknown38 && Unknown10 > 0)
+        if (Unknown38 && m_Count > 0)
         {
             int Result = Unknown38->Virtual12(Unknown0C, DAT_10f35dec->Unknown08, 0, Point);
             if (Result)

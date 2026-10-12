@@ -60,6 +60,6 @@ void Class_10E7E730::FUN_10b4a120(AGarrett* Garrett)
 // FUNCTION: 0x10B4A160 ?FUN_10b4a160@Class_10E7E6E8@@UAEXPAVAGarrett@@@Z
 void Class_10E7E6E8::FUN_10b4a160(AGarrett* Param)
 {
-    FUN_10b3ae90(Param);
-    FUN_10b3b130(Param);
+    ReleaseArm(Param);
+    ClearVelocity(Param);
 }

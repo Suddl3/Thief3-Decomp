@@ -13,11 +13,11 @@ public:
     virtual void Virtual4();
     virtual void Virtual5();
     virtual void Virtual6();
-    virtual void FUN_10929920(int A, int B, int C, FVector* D, FLOAT E);
+    virtual void SetPixelColor(int A, int B, int C, FVector* D, FLOAT E);
 };
 
-// FUNCTION: 0x10929920 ?FUN_10929920@Class_10E49AE0@@UAEXHHHPAVFVector@@M@Z
-void Class_10E49AE0::FUN_10929920(int A, int B, int C, FVector* D, FLOAT E)
+// FUNCTION: 0x10929920 ?SetPixelColor@Class_10E49AE0@@UAEXHHHPAVFVector@@M@Z
+void Class_10E49AE0::SetPixelColor(int A, int B, int C, FVector* D, FLOAT E)
 {
     FVector Scaled = (*D + FVector(1.0f, 1.0f, 1.0f)) * 127.5f;
     FLOAT Alpha = E * 127.5f;

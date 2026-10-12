@@ -60,7 +60,7 @@ Class_10E7C3C8* Class_10E79590::FUN_10b366e0()
     Class_10E7C3C8* Result = 0;
     void* Memory = operator new(sizeof(Class_10E7C3C8), 0, 0, 0, 0, 0);
     if (Memory)
-        Result = static_cast<Class_10E7C3C8*>(Memory)->FUN_10b36330();
+        Result = static_cast<Class_10E7C3C8*>(Memory)->Construct();
     GetAllocator()->Virtual9();
     return Result;
 }

@@ -6,14 +6,14 @@
 class Class_Field0c_D
 {
 public:
-    int FUN_10b47020(int A);
+    int FindIndex(int A);
 
     char Unknown00[8];
     Class_10C3E140* Unknown08[2];
 };
 
-// FUNCTION: 0x10B47020 ?FUN_10b47020@Class_Field0c_D@@QAEHH@Z
-int Class_Field0c_D::FUN_10b47020(int A)
+// FUNCTION: 0x10B47020 ?FindIndex@Class_Field0c_D@@QAEHH@Z
+int Class_Field0c_D::FindIndex(int A)
 {
     for (int i = 0; i < 2; i++)
     {

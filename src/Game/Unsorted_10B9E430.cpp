@@ -20,7 +20,7 @@ public:
 
     char Unknown00[0xC];
     Class_10B9E410_Unknown0C* Unknown0C;
-    char Unknown10[0x28];
+    char m_Count[0x28];
     Class_10B9E410_Member* Unknown38;
 };
 

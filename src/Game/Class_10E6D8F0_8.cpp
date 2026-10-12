@@ -45,13 +45,13 @@ public:
     virtual void Virtual8();
     virtual void Virtual9();
     virtual void Virtual10();
-    virtual void FUN_10aa6b50(int Arg0);
+    virtual void RemoveEntry(int Arg0);
 
     int Unknown14;
 };
 
-// FUNCTION: 0x10AA6B50 ?FUN_10aa6b50@Class_10E6D8F0@@UAEXH@Z
-void Class_10E6D8F0::FUN_10aa6b50(int Arg0)
+// FUNCTION: 0x10AA6B50 ?RemoveEntry@Class_10E6D8F0@@UAEXH@Z
+void Class_10E6D8F0::RemoveEntry(int Arg0)
 {
     Class_10AA6B50_Data* Elem = (Class_10AA6B50_Data*)Data[Arg0];
     int Value = Elem->Virtual5();

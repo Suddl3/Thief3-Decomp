@@ -14,7 +14,7 @@ class Class_10E6DA1C
 public:
     virtual void Virtual0();
     virtual void Virtual1();
-    virtual void FUN_10aaaec0(void* Reader, int Version, int Unused);
+    virtual void ReadFields(void* Reader, int Version, int Unused);
 
     int Unknown04;
     int Unknown08;
@@ -22,8 +22,8 @@ public:
     Class_10AB37F0 Unknown10;
 };
 
-// FUNCTION: 0x10AAAEC0 ?FUN_10aaaec0@Class_10E6DA1C@@UAEXPAXHH@Z
-void Class_10E6DA1C::FUN_10aaaec0(void* Reader, int Version, int Unused)
+// FUNCTION: 0x10AAAEC0 ?ReadFields@Class_10E6DA1C@@UAEXPAXHH@Z
+void Class_10E6DA1C::ReadFields(void* Reader, int Version, int Unused)
 {
     Class_109081E0 Text10;
     Class_109081E0 Text0C;

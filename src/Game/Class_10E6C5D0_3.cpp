@@ -5,7 +5,7 @@
 // FUNCTION: 0x10A8A530 ?FUN_10a8a530@Class_10E6C5D0@@UAEHH@Z
 int Class_10E6C5D0::FUN_10a8a530(int p1)
 {
-    if (!Unknown04)
+    if (!m_Next)
         return 0;
-    return Unknown04->FUN_10a8a530(p1);
+    return m_Next->FUN_10a8a530(p1);
 }

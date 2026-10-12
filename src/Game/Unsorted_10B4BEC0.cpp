@@ -84,8 +84,8 @@ void Class_10E7E778::FUN_10b4bec0(Struct_10B4BEC0* A)
 // FUNCTION: 0x10B4C060 ?FUN_10b4c060@Class_10E81548@@UAEXPAVAGarrett@@@Z
 void Class_10E81548::FUN_10b4c060(AGarrett* Garrett)
 {
-    FUN_10b3ae90(Garrett);
-    FUN_10b3b130(Garrett);
+    ReleaseArm(Garrett);
+    ClearVelocity(Garrett);
     Garrett->m_physicsObjectPadding->Virtual17();
     Garrett->bUpdatePhysHeight = 1;
 }

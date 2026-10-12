@@ -10,6 +10,6 @@ Class_10A2C2F0* FUN_10a2c6b0();
 bool Class_10BB82C0::FUN_10bb82c0(int A)
 {
     if (Unknown284)
-        return FUN_10a2c6b0()->FUN_10a2c530(Unknown08->FUN_10c7d570(), &Unknown284, A);
+        return FUN_10a2c6b0()->IsAngleBelow(Unknown08->FUN_10c7d570(), &Unknown284, A);
     return false;
 }

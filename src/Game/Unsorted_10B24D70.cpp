@@ -13,16 +13,16 @@ Class_10B1B8A0* FUN_10b1b600();
 class Class_10B255F0
 {
 public:
-    int FUN_10b25010();
+    int GetEntryValue();
 
     char Unknown00[0x2C];
-    int Unknown2C;
+    int m_EntryIndex;
 };
 
-// FUNCTION: 0x10B25010 ?FUN_10b25010@Class_10B255F0@@QAEHXZ
-int Class_10B255F0::FUN_10b25010()
+// FUNCTION: 0x10B25010 ?GetEntryValue@Class_10B255F0@@QAEHXZ
+int Class_10B255F0::GetEntryValue()
 {
-    int Index = Unknown2C;
+    int Index = m_EntryIndex;
     if (Index == 0)
         return 0;
     return FUN_10b1b600()->Unknown1C.Get(Index);

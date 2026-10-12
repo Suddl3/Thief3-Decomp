@@ -17,17 +17,17 @@ extern FCoords DAT_10f46de8;
 class Class_10A2C2F0
 {
 public:
-    int FUN_10a2c2f0(void* A, void* B);
-    Struct_10A2DA00* FUN_10a2da00(Class_10B21820* A, void* B);
+    int FindEntry(void* A, void* B);
+    Struct_10A2DA00* FindOrAddEntry(Class_10B21820* A, void* B);
 
     char Unknown00[8];
     Class_10A2C610 Unknown08;
 };
 
-// FUNCTION: 0x10A2DA00 ?FUN_10a2da00@Class_10A2C2F0@@QAEPAUStruct_10A2DA00@@PAVClass_10B21820@@PAX@Z
-Struct_10A2DA00* Class_10A2C2F0::FUN_10a2da00(Class_10B21820* A, void* B)
+// FUNCTION: 0x10A2DA00 ?FindOrAddEntry@Class_10A2C2F0@@QAEPAUStruct_10A2DA00@@PAVClass_10B21820@@PAX@Z
+Struct_10A2DA00* Class_10A2C2F0::FindOrAddEntry(Class_10B21820* A, void* B)
 {
-    int Found = FUN_10a2c2f0(A, B);
+    int Found = FindEntry(A, B);
     if (Found != 0)
         return (Struct_10A2DA00*)Found;
     Struct_10A2DA00 Item;

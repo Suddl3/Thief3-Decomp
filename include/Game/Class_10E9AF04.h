@@ -20,10 +20,10 @@ public:
     virtual void Virtual7();
     virtual void Virtual8();
     virtual void Virtual9();
-    virtual void FUN_10c38400(Object_10BCE8D0* A);
+    virtual void Serialize(Object_10BCE8D0* A);
 
     void FUN_10c372e0(Object_10BCE8D0* A);
-    Class_10E9AF04* FUN_10c382f0(int A, int B, int C, int D, int E, int F);
+    Class_10E9AF04* Init(int A, int B, int C, int D, int E, int F);
 
     int Unknown94;
     char Pad98[0x90];

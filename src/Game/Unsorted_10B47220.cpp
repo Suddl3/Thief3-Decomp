@@ -30,7 +30,7 @@ public:
     virtual int Virtual4();
     virtual int FUN_10b48400(Object_10B4BC30* A, int B);
 
-    int Unknown10;
+    int m_State;
 };
 
 // FUNCTION: 0x10B47C50 ?FUN_10b47c50@Class_10B47C50@@QAEXXZ
@@ -52,20 +52,20 @@ void Class_10E7E538::FUN_10b483c0(Class_10B22020* A)
         ((Class_10B395B0*)FUN_10aa82d0())->FUN_10b395b0(Unknown08);
         ((Class_10B39700*)FUN_10aa82d0())->FUN_10b39700();
     }
-    Unknown10 = 4;
+    m_State = 4;
 }
 
 // FUNCTION: 0x10B48400 ?FUN_10b48400@Class_10E7E538@@UAEHPAVObject_10B4BC30@@H@Z
 int Class_10E7E538::FUN_10b48400(Object_10B4BC30* A, int B)
 {
-    if (Unknown10 == 3)
+    if (m_State == 3)
     {
         switch (B)
         {
         case 0x3c:
         case 0x3e:
         case 0x40:
-            Unknown10 = 4;
+            m_State = 4;
             return 0;
         }
     }

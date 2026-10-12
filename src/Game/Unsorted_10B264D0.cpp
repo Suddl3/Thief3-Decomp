@@ -309,8 +309,8 @@ int FUN_10b36320()
     return 0x8d;
 }
 
-// FUNCTION: 0x10B36330 ?FUN_10b36330@Class_10E7C3C8@@QAEPAV1@XZ
-Class_10E7C3C8* Class_10E7C3C8::FUN_10b36330()
+// FUNCTION: 0x10B36330 ?Construct@Class_10E7C3C8@@QAEPAV1@XZ
+Class_10E7C3C8* Class_10E7C3C8::Construct()
 {
     *(void**)this = DAT_10e7c3c8;
     return this;

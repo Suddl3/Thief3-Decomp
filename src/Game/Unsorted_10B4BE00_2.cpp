@@ -12,8 +12,8 @@ public:
     virtual void Virtual2();
 
     void FUN_10b3adc0(AGarrett* Param);
-    void FUN_10b3ae90(AGarrett* Param);
-    void FUN_10b3b130(AGarrett* Param);
+    void ReleaseArm(AGarrett* Param);
+    void ClearVelocity(AGarrett* Param);
 };
 
 class Class_10E7E778 : public Class_10E7E6A0
@@ -66,8 +66,8 @@ public:
 // FUNCTION: 0x10B4BE90 ?FUN_10b4be90@Class_10E7E778@@UAEXPAVAGarrett@@@Z
 void Class_10E7E778::FUN_10b4be90(AGarrett* Param)
 {
-    FUN_10b3b130(Param);
-    FUN_10b3ae90(Param);
+    ClearVelocity(Param);
+    ReleaseArm(Param);
     FUN_10b3adc0(Param);
 }
 

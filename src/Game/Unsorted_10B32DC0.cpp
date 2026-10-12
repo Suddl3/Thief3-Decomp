@@ -236,7 +236,7 @@ public:
 
     void FUN_10b33d70();
     void FUN_10b332d0();
-    void FUN_10b33000();
+    void UpdateEndStyles();
 
     char Unknown04[0x188];
     int Unknown18C;
@@ -268,8 +268,8 @@ int Class_10B32F20::FUN_10b32f20(int Param)
     return -1;
 }
 
-// FUNCTION: 0x10B33000 ?FUN_10b33000@Class_10E7BF50@@QAEXXZ
-void Class_10E7BF50::FUN_10b33000()
+// FUNCTION: 0x10B33000 ?UpdateEndStyles@Class_10E7BF50@@QAEXXZ
+void Class_10E7BF50::UpdateEndStyles()
 {
     int AStyle = 0;
     int BStyle = 0;

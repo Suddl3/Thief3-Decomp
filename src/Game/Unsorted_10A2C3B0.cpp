@@ -72,15 +72,15 @@ class Class_10A2C2F0
 public:
     Class_10A2C2F0();
 
-    int FUN_10a2c2f0(void* A, void* B);
+    int FindEntry(void* A, void* B);
     bool FUN_10a2c500(void* A, void* B);
     void FUN_10a2c200(void* A, int* B);
     void FUN_10a2c250(void* A, int* B);
     void FUN_10a2c2a0(void* A, int* B);
     bool FUN_10a2c580(void* A, void* B, void* C);
-    bool FUN_10a2c530(void* A, int* B, float C);
-    Struct_10A2DA00* FUN_10a2da00(Class_10B21820* A, void* B);
-    bool FUN_10a2c530(void* A, int* B, int C);
+    bool IsAngleBelow(void* A, int* B, float C);
+    Struct_10A2DA00* FindOrAddEntry(Class_10B21820* A, void* B);
+    bool IsAngleBelow(void* A, int* B, int C);
     void FUN_10a2daa0(void* A, int B, int* C, int D);
     void FUN_10a2c470(Class_10B21820* A, FString* B, Class_109700E0* C);
 
@@ -88,7 +88,7 @@ public:
     int Unknown04;
     int Unknown08;
     int Unknown0C;
-    Struct_10A2C2F0_Unknown10* Unknown10;
+    Struct_10A2C2F0_Unknown10* m_Entries;
 };
 
 // FUNCTION: 0x10A2C470 ?FUN_10a2c470@Class_10A2C2F0@@QAEXPAVClass_10B21820@@PAVFString@@PAVClass_109700E0@@@Z
@@ -98,7 +98,7 @@ void Class_10A2C2F0::FUN_10a2c470(Class_10B21820* A, FString* B, Class_109700E0*
     if (!Text)
         Text = DAT_10e47660;
     FName Key(Text, FNAME_Add);
-    Struct_10A2DA00* Entry = (Struct_10A2DA00*)FUN_10a2c2f0(A, &Key);
+    Struct_10A2DA00* Entry = (Struct_10A2DA00*)FindEntry(A, &Key);
     if (Entry)
     {
         void* Sub = &Entry->Unknown18->Unknown414;

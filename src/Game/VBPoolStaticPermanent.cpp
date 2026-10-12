@@ -1,9 +1,9 @@
-// Game/Class_10E49DFC.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/VBPoolStaticPermanent.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include <vector>
 #include "Game/Class_10933420.h"
 
-class Class_10E49DFC
+class VBPoolStaticPermanent
 {
 public:
     virtual void Virtual0();
@@ -15,21 +15,21 @@ public:
     virtual void Virtual6();
     virtual void Virtual7();
     virtual void Virtual8();
-    virtual void FUN_109333d0(void* Item);
+    virtual void Remove(void* Item);
 
     char Unknown04[0x38];
-    Class_10933420 Unknown3C;
+    Class_10933420 m_Pending;
 };
 
-// FUNCTION: 0x109333D0 ?FUN_109333d0@Class_10E49DFC@@UAEXPAX@Z
-void Class_10E49DFC::FUN_109333d0(void* Item)
+// FUNCTION: 0x109333D0 ?Remove@VBPoolStaticPermanent@@UAEXPAX@Z
+void VBPoolStaticPermanent::Remove(void* Item)
 {
-    Class_10933420& List = Unknown3C;
+    Class_10933420& List = m_Pending;
     for (unsigned int i = 0; i < List.Unknown04.size(); i++)
     {
-        if (Unknown3C.Unknown04[i] == Item)
+        if (m_Pending.Unknown04[i] == Item)
         {
-            List.FUN_10933420(Unknown3C.Unknown04.begin() + i);
+            List.FUN_10933420(m_Pending.Unknown04.begin() + i);
             return;
         }
     }

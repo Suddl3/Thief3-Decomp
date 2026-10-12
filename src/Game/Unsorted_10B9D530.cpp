@@ -117,9 +117,9 @@ public:
     void FUN_10b9cfa0();
     Class_10B9E410_Item* Top()
     {
-        if (Unknown10 == 0)
+        if (m_Count == 0)
             return 0;
-        return Unknown18[Unknown10 - 1];
+        return m_Stack[m_Count - 1];
     }
     void FUN_10b9cf20();
     void FUN_10b9e410();
@@ -131,32 +131,32 @@ public:
     void FUN_10b9e660();
     void FUN_10b9e690(int A);
     void FUN_10b9eee0();
-    void FUN_10b9dac0(int A, int B, int C);
+    void PopToBase(int A, int B, int C);
     int FUN_10b9cc00(int A);
     void FUN_10b9cad0(Class_10B9E410_Item* Item, int Value, int Flag);
 
     char Unknown00[0xC];
     Class_10B9E410_Unknown0C* Unknown0C;
-    int Unknown10;
+    int m_Count;
     char Unknown14[4];
-    Class_10B9E410_Item** Unknown18;
+    Class_10B9E410_Item** m_Stack;
     int Unknown1C;
     int Unknown20;
     char Unknown24[0x14];
     Class_10B9E410_Member* Unknown38;
 };
 
-// FUNCTION: 0x10B9DAC0 ?FUN_10b9dac0@Class_10B9E410@@QAEXHHH@Z
-void Class_10B9E410::FUN_10b9dac0(int A, int B, int C)
+// FUNCTION: 0x10B9DAC0 ?PopToBase@Class_10B9E410@@QAEXHHH@Z
+void Class_10B9E410::PopToBase(int A, int B, int C)
 {
-    Class_10BFBD70* Array = (Class_10BFBD70*)&Unknown10;
-    int N = Unknown10;
+    Class_10BFBD70* Array = (Class_10BFBD70*)&m_Count;
+    int N = m_Count;
     while (N > 1)
     {
         if (N > 0)
         {
             int I = N - 1;
-            Class_10B9E410_Item* Item = Unknown18[I];
+            Class_10B9E410_Item* Item = m_Stack[I];
             Item->Virtual21();
             ((Class_10BC4020*)Item)->FUN_10bc4020(0);
             int R = Item->Virtual3();
@@ -171,7 +171,7 @@ void Class_10B9E410::FUN_10b9dac0(int A, int B, int C)
             Array->FUN_10bfbd70(Array->Count - 1);
             Item->Virtual4(1);
             if (Array->Count > 0)
-                FUN_10b9cad0(Unknown18[Array->Count - 1], R, 1);
+                FUN_10b9cad0(m_Stack[Array->Count - 1], R, 1);
         }
         N = Array->Count;
     }

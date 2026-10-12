@@ -37,26 +37,26 @@ public:
     virtual void Virtual2();
     virtual void Virtual3();
     virtual void Virtual4();
-    virtual void FUN_10a551c0(FVector* A);
+    virtual void SetLocation(FVector* A);
 
-    void FUN_10a556f0(int A);
+    void SetNameByIndex(int A);
 
     char Unknown04[0x18];
-    FVector Unknown1C;
+    FVector m_Location;
     char Unknown28[0xF8];
-    bool Unknown120;
+    bool m_Dirty;
     char Unknown121[3];
-    Class_109081E0 Unknown124;
-    Class_1090C880 Unknown128;
+    Class_109081E0 m_Name;
+    Class_1090C880 m_Names;
     int Unknown134;
 };
 
-// FUNCTION: 0x10A551C0 ?FUN_10a551c0@Class_10E684A8@@UAEXPAVFVector@@@Z
-void Class_10E684A8::FUN_10a551c0(FVector* A)
+// FUNCTION: 0x10A551C0 ?SetLocation@Class_10E684A8@@UAEXPAVFVector@@@Z
+void Class_10E684A8::SetLocation(FVector* A)
 {
-    FVector* Current = &Unknown1C;
+    FVector* Current = &m_Location;
     if (A->X != Current->X || A->Y != Current->Y || A->Z != Current->Z)
-        Unknown120 = true;
+        m_Dirty = true;
     *Current = *A;
 }
 
@@ -75,10 +75,10 @@ void Class_10C4EDA0::FUN_10a55380(const Struct_10A55380& A)
     Unknown08[Index] = Item;
 }
 
-// FUNCTION: 0x10A556F0 ?FUN_10a556f0@Class_10E684A8@@QAEXH@Z
-void Class_10E684A8::FUN_10a556f0(int A)
+// FUNCTION: 0x10A556F0 ?SetNameByIndex@Class_10E684A8@@QAEXH@Z
+void Class_10E684A8::SetNameByIndex(int A)
 {
-    Unknown124 = Unknown128.FUN_1090c880(A);
+    m_Name = m_Names.FUN_1090c880(A);
     Unknown134 = 0;
-    Unknown120 = true;
+    m_Dirty = true;
 }

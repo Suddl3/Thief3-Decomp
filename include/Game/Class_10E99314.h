@@ -8,7 +8,7 @@
 class Class_10E99314
 {
 public:
-    virtual bool FUN_10c2e500();
+    virtual bool IsFinished();
 
     ~Class_10E99314();
 

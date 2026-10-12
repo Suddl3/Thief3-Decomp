@@ -28,9 +28,9 @@ public:
     virtual void FUN_10b3e160(int p1);
     virtual Static_10B18DC0 FUN_10b3ad40();
     virtual void Virtual13();
-    virtual float FUN_10b3af10(Class_10B21820* Obj);
+    virtual float GetLocationZ(Class_10B21820* Obj);
 
-    int Unknown10;
+    int m_State;
     char Pad14[0x18];
 };
 

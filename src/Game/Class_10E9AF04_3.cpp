@@ -3,8 +3,8 @@
 #include "Game/Object_10BCE8D0.h"
 #include "Game/Class_10E9AF04.h"
 
-// FUNCTION: 0x10C38400 ?FUN_10c38400@Class_10E9AF04@@UAEXPAVObject_10BCE8D0@@@Z
-void Class_10E9AF04::FUN_10c38400(Object_10BCE8D0* A)
+// FUNCTION: 0x10C38400 ?Serialize@Class_10E9AF04@@UAEXPAVObject_10BCE8D0@@@Z
+void Class_10E9AF04::Serialize(Object_10BCE8D0* A)
 {
     FUN_10c372e0(A);
     A->Virtual1(&Unknown94, 4);

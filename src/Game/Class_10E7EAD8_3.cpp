@@ -115,7 +115,7 @@ int Class_10E7EAD8::FUN_10b4ec60(Class_10B21570* A, Class_1098E3D0* B)
 // FUNCTION: 0x10B4F490 ?FUN_10b4f490@Class_10E7EB20@@UAEXPAVAGarrett@@@Z
 void Class_10E7EB20::FUN_10b4f490(AGarrett* Param)
 {
-    FUN_10b3ae90(Param);
+    ReleaseArm(Param);
     FUN_10b3adc0(Param);
 }
 

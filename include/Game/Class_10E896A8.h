@@ -29,7 +29,7 @@ public:
     virtual void Virtual18();
     virtual void Virtual19();
     virtual void Virtual20();
-    virtual float FUN_10b8c690(float Value, int Unused);
+    virtual float ClampToMax(float Value, int Unused);
 
     void FUN_10b8c6c0();
     bool FUN_10b87900();
@@ -37,7 +37,7 @@ public:
     char Pad04[0x74];
     Class_10B87900_Member* Unknown78;
     char Pad7C[0xac];
-    float Unknown128;
+    float m_MaxValue;
 };
 
 #endif // GAME_CLASS_10E896A8_H

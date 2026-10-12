@@ -25,9 +25,9 @@ public:
     bool Unknown118;
     bool Unknown119;
     int Unknown11C;
-    bool Unknown120;
-    Class_109081E0 Unknown124;
-    Class_109081E0 Unknown128;
+    bool m_Dirty;
+    Class_109081E0 m_Name;
+    Class_109081E0 m_Names;
     Class_10A249B0* Unknown12C;
     Class_1091CD10* Unknown130;
     char Unknown134[0x14];

@@ -15,8 +15,8 @@ public:
     int Unknown00[21];
 };
 
-// FUNCTION: 0x10B98B30 ?FUN_10b98b30@Class_10E4CCD0@@UAEPAVState_MunchCorpse@@HH@Z
-State_MunchCorpse* Class_10E4CCD0::FUN_10b98b30(int A, int B)
+// FUNCTION: 0x10B98B30 ?CreateMunchCorpseState@Class_10E4CCD0@@UAEPAVState_MunchCorpse@@HH@Z
+State_MunchCorpse* Class_10E4CCD0::CreateMunchCorpseState(int A, int B)
 {
     return new(0, 0, 0, 0, 0) State_MunchCorpse(A, (int)this, B);
 }

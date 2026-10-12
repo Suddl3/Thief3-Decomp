@@ -40,8 +40,8 @@ public:
     virtual void Virtual1();
     virtual void Virtual2();
 
-    void FUN_10b3ae90(AGarrett* Garrett);
-    void FUN_10b3b130(AGarrett* Garrett);
+    void ReleaseArm(AGarrett* Garrett);
+    void ClearVelocity(AGarrett* Garrett);
 };
 
 class Class_10E7E658 : public Class_10E7E6A0
@@ -53,8 +53,8 @@ public:
 // FUNCTION: 0x10B494C0 ?FUN_10b494c0@Class_10E7E658@@UAEXPAVAGarrett@@@Z
 void Class_10E7E658::FUN_10b494c0(AGarrett* Garrett)
 {
-    FUN_10b3ae90(Garrett);
-    FUN_10b3b130(Garrett);
+    ReleaseArm(Garrett);
+    ClearVelocity(Garrett);
     ((Class_10B396A0*)FUN_10aa82d0())->FUN_10b396a0();
     DAT_10f3a3d8->Unknown108->FUN_109e38b0((int)Garrett->ropeToMount, (int)&Garrett->Location);
     Garrett->bUpdatePhysHeight = 1;

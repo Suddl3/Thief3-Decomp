@@ -17,7 +17,7 @@ struct Struct_10A2C580
 // FUNCTION: 0x10A2C580 ?FUN_10a2c580@Class_10A2C2F0@@QAE_NPAX00@Z
 bool Class_10A2C2F0::FUN_10a2c580(void* A, void* B, void* C)
 {
-    Struct_10A2C580* Entry = (Struct_10A2C580*)FUN_10a2c2f0(A, C);
+    Struct_10A2C580* Entry = (Struct_10A2C580*)FindEntry(A, C);
     if (Entry && !Entry->Unknown7D && Entry->Unknown08 == B)
         return true;
     return false;

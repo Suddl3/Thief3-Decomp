@@ -53,7 +53,7 @@ public:
     virtual void Virtual34();
     virtual void Virtual35();
     virtual void Virtual36();
-    virtual void FUN_109e6110(int A, Class_10BFBD70* Array);
+    virtual void AppendTo(int A, Class_10BFBD70* Array);
 
     char Unknown04[0x120];
     int Unknown124;
@@ -64,8 +64,8 @@ struct Struct_109E6220_Item {
     int Unknown08;
 };
 
-// FUNCTION: 0x109E6110 ?FUN_109e6110@Class_10E5B588@@UAEXHPAVClass_10BFBD70@@@Z
-void Class_10E5B588::FUN_109e6110(int A, Class_10BFBD70* Array)
+// FUNCTION: 0x109E6110 ?AppendTo@Class_10E5B588@@UAEXHPAVClass_10BFBD70@@@Z
+void Class_10E5B588::AppendTo(int A, Class_10BFBD70* Array)
 {
     if (Array)
     {

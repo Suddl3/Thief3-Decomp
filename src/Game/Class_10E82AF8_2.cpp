@@ -72,12 +72,12 @@ public:
     virtual void FUN_10b5aee0(int A);
 
     void FUN_10b77ee0(int A);
-    void FUN_10b5aff0();
-    Class_10E82AF8* FUN_10b5aea0();
+    void ResetStyles();
+    Class_10E82AF8* InitDefaults();
 
     char Pad04[0x18C];
-    Object_10B5AFF0* Unknown190;
-    Object_10B5AFF0* Unknown194;
+    Object_10B5AFF0* m_HammerFaction;
+    Object_10B5AFF0* m_PaganFaction;
 };
 
 // FUNCTION: 0x10B5AEE0 ?FUN_10b5aee0@Class_10E82AF8@@UAEXH@Z
@@ -86,7 +86,7 @@ void Class_10E82AF8::FUN_10b5aee0(int Param2)
     FUN_10b77ee0(Param2);
     if (Param2 != 0)
     {
-        if (Unknown190 != 0)
+        if (m_HammerFaction != 0)
         {
             Class_10A174E0* Obj = FUN_10a18230();
             float Diff;
@@ -96,10 +96,10 @@ void Class_10E82AF8::FUN_10b5aee0(int Param2)
             }
             if (Diff <= DAT_10eafbdc)
                 Diff = DAT_10eafbdc;
-            Unknown190->FUN_10b5ad60(Diff * 0.01f);
-            Unknown190->Virtual56(Param2);
+            m_HammerFaction->FUN_10b5ad60(Diff * 0.01f);
+            m_HammerFaction->Virtual56(Param2);
         }
-        if (Unknown194 != 0)
+        if (m_PaganFaction != 0)
         {
             Class_10A174E0* Obj = FUN_10a18230();
             float Diff;
@@ -109,8 +109,8 @@ void Class_10E82AF8::FUN_10b5aee0(int Param2)
             }
             if (Diff <= DAT_10eafbdc)
                 Diff = DAT_10eafbdc;
-            Unknown194->FUN_10b5ad60(Diff * 0.01f);
-            Unknown194->Virtual56(Param2);
+            m_PaganFaction->FUN_10b5ad60(Diff * 0.01f);
+            m_PaganFaction->Virtual56(Param2);
         }
     }
 }

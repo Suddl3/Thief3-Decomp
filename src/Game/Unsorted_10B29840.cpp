@@ -26,10 +26,10 @@ public:
     char Unknown0EC[0xCC];
 };
 
-class Class_10E7B120 : public Class_10E6B078
+class cT3SubtitleWindow : public Class_10E6B078
 {
 public:
-    Class_10E7B120* FUN_10b2ab70();
+    cT3SubtitleWindow* Construct();
 
     FArray Unknown1B8;
     bool Unknown1C4;
@@ -99,8 +99,8 @@ void Class_10E7AE9C::FUN_10b29840(float A)
     }
 }
 
-// FUNCTION: 0x10B2AB70 ?FUN_10b2ab70@Class_10E7B120@@QAEPAV1@XZ
-Class_10E7B120* Class_10E7B120::FUN_10b2ab70()
+// FUNCTION: 0x10B2AB70 ?Construct@cT3SubtitleWindow@@QAEPAV1@XZ
+cT3SubtitleWindow* cT3SubtitleWindow::Construct()
 {
     this->Class_10E6B078::Class_10E6B078();
     Unknown00 = DAT_10e7b120;

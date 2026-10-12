@@ -8,7 +8,7 @@ extern const char DAT_10e6c608[];
 // FUNCTION: 0x10A8A670 ?FUN_10a8a670@Class_10E6C5D0@@UAE?AVClass_109081E0@@XZ
 Class_109081E0 Class_10E6C5D0::FUN_10a8a670()
 {
-    if (!Unknown04)
+    if (!m_Next)
         return Class_109081E0(DAT_10e6c608);
-    return Unknown04->FUN_10a8a670();
+    return m_Next->FUN_10a8a670();
 }

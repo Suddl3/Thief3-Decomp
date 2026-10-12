@@ -22,7 +22,7 @@ class Class_Field04
 {
 public:
     void FUN_10b47310(int A);
-    void FUN_10b476d0();
+    void Reset();
 
     char Unknown00[8];
     Class_10EC0E20* Unknown08[2];
@@ -48,8 +48,8 @@ void Class_Field04::FUN_10b47310(int A)
     Unknown48 = DAT_10f35dec->Unknown08->FUN_10b21560();
 }
 
-// FUNCTION: 0x10B476D0 ?FUN_10b476d0@Class_Field04@@QAEXXZ
-void Class_Field04::FUN_10b476d0()
+// FUNCTION: 0x10B476D0 ?Reset@Class_Field04@@QAEXXZ
+void Class_Field04::Reset()
 {
     Unknown4C.FUN_10bfbd70(0);
     for (int i = 0; i < 2; i++)

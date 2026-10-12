@@ -6,9 +6,9 @@
 // FUNCTION: 0x10A8A570 ?FUN_10a8a570@Class_10E6C5D0@@UAEHXZ
 int Class_10E6C5D0::FUN_10a8a570()
 {
-    if (!Unknown04)
+    if (!m_Next)
         return 1;
-    return Unknown04->FUN_10a8a570();
+    return m_Next->FUN_10a8a570();
 }
 
 // FUNCTION: 0x10A8ABE0 ?IsRelated@cTriggerSoundSchemaParam@@UAEHHPAV1@@Z

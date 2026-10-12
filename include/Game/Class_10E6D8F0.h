@@ -9,7 +9,7 @@ public:
     virtual ~Class_10E6D8F0();
     virtual void FUN_10c3e130(int Value);
     virtual void Virtual2();
-    virtual void FUN_10aa69a0(int A);
+    virtual void Resize(int A);
     virtual void Virtual4();
     virtual int FUN_10aa6390();
     virtual void FUN_10bfbb50(int param);
@@ -18,13 +18,13 @@ public:
     virtual void Virtual9();
     virtual void Virtual10();
     virtual void Virtual11();
-    virtual int FUN_10aa65c0(int A);
-    virtual int FUN_10aa6600(int Index, int Value);
+    virtual int FindItemWithValue(int A);
+    virtual int FindValueIndex(int Index, int Value);
     virtual void Virtual14();
     virtual void Virtual15();
     virtual int FUN_10aa6650(int Index);
-    virtual int FUN_10aa6680(int Index, int B);
-    virtual int FUN_10aa66b0(int Index);
+    virtual int GetValue(int Index, int B);
+    virtual int GetValueCount(int Index);
 
     Class_10E6D8F0();
 
@@ -33,7 +33,7 @@ public:
     int Unknown04;
     int Unknown08;
     int Unknown0C;
-    int Unknown10;
+    int m_Items;
     int Unknown14;
     int Unknown18;
     int Unknown1C;

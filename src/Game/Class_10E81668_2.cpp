@@ -15,7 +15,7 @@ public:
 class Class_10E81668 : public Class_10E7E4E0
 {
 public:
-    Class_10E81668* FUN_10b4ff00();
+    Class_10E81668* Construct();
 
     char Unknown10[0x18];
     char Unknown28;
@@ -26,8 +26,8 @@ public:
     int Unknown50[3];
 };
 
-// FUNCTION: 0x10B4FF00 ?FUN_10b4ff00@Class_10E81668@@QAEPAV1@XZ
-Class_10E81668* Class_10E81668::FUN_10b4ff00()
+// FUNCTION: 0x10B4FF00 ?Construct@Class_10E81668@@QAEPAV1@XZ
+Class_10E81668* Class_10E81668::Construct()
 {
     FUN_10b3acb0();
     Unknown00 = DAT_10e81668;

@@ -11,7 +11,7 @@ extern const char DAT_10e7b930[];
 Class_109081E0 FUN_1090a660(const char* Format, ...);
 
 // Copied whole from include/Game/Class_10E684A8.h. Its virtuals named Virtual18
-// to Virtual54 override the base's slots; FUN_10a55020 and FUN_10a551c0 are the
+// to Virtual54 override the base's slots; FUN_10a55020 and SetLocation are the
 // first new slots (55, 56). The placeholders fill slots 57 to 88 so that
 // Virtual89 (a flag and an int) sits at slot 89, 0x164 in the vtable.
 class Class_10E684A8 : public Class_10A52BE0
@@ -22,7 +22,7 @@ public:
     virtual void Virtual19();
     virtual void Virtual20();
     virtual void Virtual21();
-    virtual void FUN_10a551c0(FVector* A);
+    virtual void SetLocation(FVector* A);
     virtual void Virtual23();
     virtual void Virtual24();
     virtual void Virtual25();
@@ -89,15 +89,15 @@ public:
     virtual void Virtual88();
     virtual void Virtual89(bool A, int B);
 
-    void FUN_10a556f0(int A);
+    void SetNameByIndex(int A);
 
     char Unknown04[0x18];
-    FVector Unknown1C;
+    FVector m_Location;
     char Pad28[0xf8];
-    bool Unknown120;
+    bool m_Dirty;
     char Unknown121[3];
-    Class_109081E0 Unknown124;
-    Class_1090C880 Unknown128;
+    Class_109081E0 m_Name;
+    Class_1090C880 m_Names;
     int Unknown134;
     char Pad138[0xc0];
 };
@@ -131,7 +131,7 @@ void Class_10B2F6A0::FUN_10b2f590()
         {
             Text = FUN_1090a660(DAT_10e7b930, Unknown144);
         }
-        Unknown120->FUN_10a556f0((int)&Text);
+        Unknown120->SetNameByIndex((int)&Text);
         if (!Unknown148 && Unknown144 >= 1)
         {
             Unknown120->Virtual89(true, 1);

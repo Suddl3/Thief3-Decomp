@@ -16,7 +16,7 @@ public:
     virtual void FUN_10b4fa70(Struct_10B53A00* A);
 
     void FUN_10b3b260(Struct_10B53A00* P);
-    Class_10E81668* FUN_10b4ff00();
+    Class_10E81668* Construct();
 
     int Unknown10;
     char Pad14[0x14];

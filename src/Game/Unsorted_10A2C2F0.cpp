@@ -12,22 +12,22 @@ struct Struct_10A2C2F0
 class Class_10A2C2F0
 {
 public:
-    int FUN_10a2c2f0(void* A, void* B);
+    int FindEntry(void* A, void* B);
 
     int Unknown00;
     int Unknown04;
     int Unknown08;
     int Unknown0C;
-    Struct_10A2C2F0* Unknown10;
+    Struct_10A2C2F0* m_Entries;
 };
 
-// FUNCTION: 0x10A2C2F0 ?FUN_10a2c2f0@Class_10A2C2F0@@QAEHPAX0@Z
-int Class_10A2C2F0::FUN_10a2c2f0(void* A, void* B)
+// FUNCTION: 0x10A2C2F0 ?FindEntry@Class_10A2C2F0@@QAEHPAX0@Z
+int Class_10A2C2F0::FindEntry(void* A, void* B)
 {
     for (int i = 0; i < Unknown08; i++)
     {
-        if (Unknown10[i].Unknown00 == A && Unknown10[i].Unknown80 == *(int*)B)
-            return (int)&Unknown10[i];
+        if (m_Entries[i].Unknown00 == A && m_Entries[i].Unknown80 == *(int*)B)
+            return (int)&m_Entries[i];
     }
     return 0;
 }

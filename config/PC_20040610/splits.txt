@@ -704,10 +704,10 @@ Game/Unsorted_109333B0.cpp:
 	.text  start:0x109333B0 end:0x109333C3
 	.text  start:0x10933420 end:0x10933450
 
-Game/Class_10E49DFC.cpp:
+Game/VBPoolStaticPermanent.cpp:
 	.text  start:0x109333D0 end:0x1093341A
 
-Game/Class_10E49DFC_2.cpp:
+Game/VBPoolStaticPermanent_2.cpp:
 	.text  start:0x109334C0 end:0x109335B7
 	.text  start:0x10E04EC0 end:0x10E04EE8  # .text$x: EH handlers and unwind funclets
 
@@ -6720,7 +6720,7 @@ Game/Unsorted_10B2A510.cpp:
 Game/Class_10E80798_2.cpp:
 	.text  start:0x10B2A750 end:0x10B2A7C6
 
-Game/Class_10E7B120.cpp:
+Game/cT3SubtitleWindow.cpp:
 	.text  start:0x10B2A7D0 end:0x10B2A897
 
 Game/Unsorted_10B29840_2.cpp:
@@ -13028,16 +13028,16 @@ Game/Unsorted_10C62D30_2.cpp:
 	.text  start:0x10C63A00 end:0x10C63A08
 	.text  start:0x10C63A30 end:0x10C63A4A
 
-Game/Class_10E9CC20.cpp:
+Game/cTagVocabulary.cpp:
 	.text  start:0x10C62D70 end:0x10C62D86
 
-Game/Class_10E9CC20_2.cpp:
+Game/cTagVocabulary_2.cpp:
 	.text  start:0x10C62D90 end:0x10C62DBD
 
 Game/Unsorted_10C62EA0.cpp:
 	.text  start:0x10C63530 end:0x10C63595
 
-Game/Class_10E9CC20_3.cpp:
+Game/cTagVocabulary_3.cpp:
 	.text  start:0x10C635A0 end:0x10C635B4
 
 Game/Class_10E9CD18.cpp:

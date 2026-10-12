@@ -52,16 +52,16 @@ public:
     virtual void Virtual7();
     virtual void Virtual8();
     virtual void Virtual9();
-    virtual void FUN_10aa6c20(int Arg0);
-    virtual void FUN_10aa6b50(int Arg0);
+    virtual void RemoveValue(int Arg0);
+    virtual void RemoveEntry(int Arg0);
     virtual int Virtual12(int Arg0);
     virtual int Virtual13(int Arg0, int Arg1);
 
     int Unknown14;
 };
 
-// FUNCTION: 0x10AA6C20 ?FUN_10aa6c20@Class_10E6D8F0@@UAEXH@Z
-void Class_10E6D8F0::FUN_10aa6c20(int Arg0)
+// FUNCTION: 0x10AA6C20 ?RemoveValue@Class_10E6D8F0@@UAEXH@Z
+void Class_10E6D8F0::RemoveValue(int Arg0)
 {
     int Index = Virtual12(Arg0);
     int Value = Virtual13(Index, Arg0);

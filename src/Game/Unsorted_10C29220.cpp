@@ -97,7 +97,7 @@ class Class_10E9AE88 : public Class_10E9AF04
 public:
     virtual void FUN_10c37e80(Object_10BCE8D0* A);
 
-    Class_109081E0 FUN_10c38040();
+    Class_109081E0 GetMotionControllerName();
 };
 
 extern const char DAT_10e9aef4[];
@@ -227,8 +227,8 @@ void FUN_10c36f30()
     FUN_10c36a20();
 }
 
-// FUNCTION: 0x10C374E0 ?FUN_10c374e0@Class_10E9ADE8@@QAE?AVClass_109081E0@@XZ
-Class_109081E0 Class_10E9ADE8::FUN_10c374e0()
+// FUNCTION: 0x10C374E0 ?GetMotionControllerName@Class_10E9ADE8@@QAE?AVClass_109081E0@@XZ
+Class_109081E0 Class_10E9ADE8::GetMotionControllerName()
 {
     return Class_109081E0(DAT_10e9ae18);
 }
@@ -245,8 +245,8 @@ void Class_10E9AE88::FUN_10c37e80(Object_10BCE8D0* A)
     FUN_10c372e0(A);
 }
 
-// FUNCTION: 0x10C38040 ?FUN_10c38040@Class_10E9AE88@@QAE?AVClass_109081E0@@XZ
-Class_109081E0 Class_10E9AE88::FUN_10c38040()
+// FUNCTION: 0x10C38040 ?GetMotionControllerName@Class_10E9AE88@@QAE?AVClass_109081E0@@XZ
+Class_109081E0 Class_10E9AE88::GetMotionControllerName()
 {
     return Class_109081E0(DAT_10e9aeb8);
 }

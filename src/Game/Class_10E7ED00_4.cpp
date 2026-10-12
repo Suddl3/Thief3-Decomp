@@ -35,7 +35,7 @@ void Class_10E7ED00::FUN_10b3f000(AGarrett* Garrett)
 {
     DAT_10f35dec->Unknown94->FUN_10a3c2e0();
     FUN_10b3ed30(Garrett);
-    FUN_10b3ae90(Garrett);
+    ReleaseArm(Garrett);
     FUN_10b3adc0(Garrett);
     Garrett->CanUseItems = 1;
     {
@@ -43,5 +43,5 @@ void Class_10E7ED00::FUN_10b3f000(AGarrett* Garrett)
         Garrett->Unknown458->FUN_1098e3d0(0x8007cc, &Value);
     }
     FUN_10b54790();
-    FUN_10b3b130(Garrett);
+    ClearVelocity(Garrett);
 }

@@ -6,7 +6,7 @@
 #include "Game/Class_10AB0400.h"
 #include "Game/Struct_10AB0400.h"
 #include "Game/Class_10A71C40.h"
-#include "Game/Class_10E6BAB0.h"
+#include "Game/cVolumeManager.h"
 
 class Class_10A72DB0 : public Class_10A111B0
 {
@@ -40,9 +40,9 @@ void Class_10A71C40::FUN_10a71c40()
     Unknown08.FUN_10ab0400();
 }
 
-// FUNCTION: 0x10A73200 ?FUN_10a73200@Class_10E6BAB0@@UAEPAHI@Z
-int* Class_10E6BAB0::FUN_10a73200(unsigned int Key)
+// FUNCTION: 0x10A73200 ?FindValue@cVolumeManager@@UAEPAHI@Z
+int* cVolumeManager::FindValue(unsigned int Key)
 {
-    Class_10A4C550_Iterator It = Unknown04.FUN_10a4c550(Key);
+    Class_10A4C550_Iterator It = m_Values.FUN_10a4c550(Key);
     return &It.Unknown00->Unknown0C;
 }

@@ -21,9 +21,9 @@ public:
     virtual Class_109081E0 FUN_10a8a6b0();
     virtual int FUN_10a8a590();
 
-    Class_10E6C5D0() : Unknown04(0) {}
+    Class_10E6C5D0() : m_Next(0) {}
 
-    Class_10E6C5D0* Unknown04;
+    Class_10E6C5D0* m_Next;
 };
 
 #endif // GAME_CLASS_10E6C5D0_H

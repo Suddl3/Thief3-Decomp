@@ -288,12 +288,12 @@ void FUN_10b5ac10()
     FUN_10a593a0();
 }
 
-// FUNCTION: 0x10B5AEA0 ?FUN_10b5aea0@Class_10E82AF8@@QAEPAV1@XZ
-Class_10E82AF8* Class_10E82AF8::FUN_10b5aea0()
+// FUNCTION: 0x10B5AEA0 ?InitDefaults@Class_10E82AF8@@QAEPAV1@XZ
+Class_10E82AF8* Class_10E82AF8::InitDefaults()
 {
     FUN_10b78780();
-    Unknown190 = 0;
-    Unknown194 = 0;
+    m_HammerFaction = 0;
+    m_PaganFaction = 0;
     Unknown00 = DAT_10e82af8;
     return this;
 }

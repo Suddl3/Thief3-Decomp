@@ -7,7 +7,7 @@ extern float DAT_10e499a4;
 class Class_Field0c_D
 {
 public:
-    int FUN_10b47020(int A);
+    int FindIndex(int A);
     float FUN_10b471c0(int A, int B);
 
     char Unknown00[8];
@@ -17,7 +17,7 @@ public:
 // FUNCTION: 0x10B471C0 ?FUN_10b471c0@Class_Field0c_D@@QAEMHH@Z
 float Class_Field0c_D::FUN_10b471c0(int A, int B)
 {
-    int Index = FUN_10b47020(A);
+    int Index = FindIndex(A);
     if (Index >= 0)
         return Unknown08[Index]->FUN_10b7ad20(B);
     return DAT_10e499a4;

@@ -15,7 +15,7 @@ Class_10A2C2F0* FUN_10a2c6b0();
 bool Class_10BB8330::FUN_10bb8330()
 {
     Class_10C7D570* Item = Unknown08;
-    return FUN_10a2c6b0()->FUN_10a2c2f0(Item->FUN_10c7d570(), &Unknown284) != 0;
+    return FUN_10a2c6b0()->FindEntry(Item->FUN_10c7d570(), &Unknown284) != 0;
 }
 
 // FUNCTION: 0x10BB84F0 ?FUN_10bb84f0@Class_10BB84F0@@QAEXHH@Z

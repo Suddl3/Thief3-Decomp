@@ -65,7 +65,7 @@ int Class_10E7EA90::FUN_10b4eb40(int p1)
 // FUNCTION: 0x10B4EC00 ?FUN_10b4ec00@Class_10E7EAD8@@UAEXPAVObject_10B3ADC0@@@Z
 void Class_10E7EAD8::FUN_10b4ec00(Object_10B3ADC0* A)
 {
-    FUN_10b3ae90(A);
+    ReleaseArm(A);
     FUN_10b3adc0(A);
     DAT_10f3a3d8->Unknown13C->FUN_10ac92f0();
 }

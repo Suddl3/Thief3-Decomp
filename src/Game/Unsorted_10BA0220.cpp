@@ -22,8 +22,8 @@ public:
     void FUN_10c074f0(FArchive& Ar);
 };
 
-// FUNCTION: 0x10BA0DA0 ?FUN_10ba0da0@Class_10E8C118@@UAEXAAVFArchive@@@Z
-void Class_10E8C118::FUN_10ba0da0(FArchive& Ar)
+// FUNCTION: 0x10BA0DA0 ?Serialize@Class_10E8C118@@UAEXAAVFArchive@@@Z
+void Class_10E8C118::Serialize(FArchive& Ar)
 {
     if (Ar.Unknown0C >= 0x5E)
         Unknown2C->FUN_10c084a0(Ar);

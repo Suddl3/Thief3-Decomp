@@ -7,5 +7,5 @@
 void Class_10B65E70::FUN_10b65e70(int A)
 {
     if (Unknown200)
-        Unknown200->FUN_10a556f0(A);
+        Unknown200->SetNameByIndex(A);
 }

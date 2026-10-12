@@ -32,7 +32,7 @@ public:
     virtual void Virtual1();
     virtual int __stdcall FUN_10b36f40(int A, Class_10B36E40_Arg* C);
 
-    Class_10E7C3C8* FUN_10b36330();
+    Class_10E7C3C8* Construct();
 
     void* Unknown00;
 };

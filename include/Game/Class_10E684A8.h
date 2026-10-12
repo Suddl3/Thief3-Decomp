@@ -16,7 +16,7 @@ public:
     virtual void Virtual19();
     virtual void Virtual20();
     virtual void Virtual21();
-    virtual void FUN_10a551c0(FVector* A);
+    virtual void SetLocation(FVector* A);
     virtual void Virtual23();
     virtual void Virtual24();
     virtual void Virtual25();
@@ -50,15 +50,15 @@ public:
     virtual void Virtual53();
     virtual bool Virtual54();
 
-    void FUN_10a556f0(int A);
+    void SetNameByIndex(int A);
 
     char Unknown04[0x18];
-    FVector Unknown1C;
+    FVector m_Location;
     char Pad28[0xf8];
-    bool Unknown120;
+    bool m_Dirty;
     char Unknown121[3];
-    Class_109081E0 Unknown124;
-    Class_1090C880 Unknown128;
+    Class_109081E0 m_Name;
+    Class_1090C880 m_Names;
     int Unknown134;
     char Pad138[0xc0];
 };

@@ -10,10 +10,10 @@
 // FUNCTION: 0x10934340 ??1Class_10E49EE0@@UAE@XZ
 Class_10E49EE0::~Class_10E49EE0()
 {
-    if (Unknown14)
+    if (m_Member)
     {
-        ((Class_10E49EE0_Member*)Unknown14)->Virtual2();
-        Unknown14 = 0;
+        ((Class_10E49EE0_Member*)m_Member)->Virtual2();
+        m_Member = 0;
     }
     Unknown18 = 0;
     Unknown1C = 0;

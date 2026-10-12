@@ -4,7 +4,7 @@
 #include "Game/Class_10A69170.h"
 #include "Game/Class_10A6A140.h"
 #include "Game/Class_10E6B978.h"
-#include "Game/Class_10E6BAB0.h"
+#include "Game/cVolumeManager.h"
 #include "Game/Class_10E6BBCC.h"
 
 extern int DAT_10e6b594;
@@ -116,8 +116,8 @@ void Class_10E6B978::FUN_10a6da70() {
     FUN_10a4c5f0();
 }
 
-// FUNCTION: 0x10A70FA0 ?FUN_10a70fa0@Class_10E6BAB0@@UAE_NABVFVector@@PAVClass_10A67000@@@Z
-bool Class_10E6BAB0::FUN_10a70fa0(const FVector& A, Class_10A67000* B)
+// FUNCTION: 0x10A70FA0 ?ContainsPoint@cVolumeManager@@UAE_NABVFVector@@PAVClass_10A67000@@@Z
+bool cVolumeManager::ContainsPoint(const FVector& A, Class_10A67000* B)
 {
     return B->FUN_10a67000(A);
 }

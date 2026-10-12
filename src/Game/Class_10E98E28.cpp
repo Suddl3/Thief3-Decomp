@@ -26,7 +26,7 @@ public:
     virtual void Virtual7();
     virtual void Virtual8();
     virtual void Virtual9();
-    virtual void FUN_10c1b400(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 
     char Unknown04[0x44];
     FVector Unknown48;
@@ -34,8 +34,8 @@ public:
     int Unknown58;
 };
 
-// FUNCTION: 0x10C1B400 ?FUN_10c1b400@Class_10E98E28@@UAEXAAVFArchive@@@Z
-void Class_10E98E28::FUN_10c1b400(FArchive& Ar)
+// FUNCTION: 0x10C1B400 ?Serialize@Class_10E98E28@@UAEXAAVFArchive@@@Z
+void Class_10E98E28::Serialize(FArchive& Ar)
 {
     FUN_10c1b1a0(Ar);
     FUN_10b052a0(Ar, &Unknown48);

@@ -12,5 +12,5 @@ public:
 // FUNCTION: 0x10A8A4C0 ??1Class_10E6C5D0@@UAE@XZ
 Class_10E6C5D0::~Class_10E6C5D0()
 {
-    delete Unknown04;
+    delete m_Next;
 }

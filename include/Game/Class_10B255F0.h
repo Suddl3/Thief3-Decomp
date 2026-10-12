@@ -16,8 +16,8 @@ public:
 
     void FUN_10b24dd0(FArchive& Ar);
     void* FUN_10b24f70();
-    int FUN_10b25010();
-    int FUN_10b24f00();
+    int GetEntryValue();
+    int GetSelectedValue();
     int FUN_10b25030();
     int FUN_10b256a0();
     int FUN_10dc1760();
@@ -28,7 +28,7 @@ public:
     int Unknown30;
     union
     {
-        int Unknown04;
+        int m_ItemIndex;
         int Unknown34;
     };
     union
@@ -39,7 +39,7 @@ public:
     int Unknown0C;
     union
     {
-        int Unknown10;
+        int m_UseListA;
         float Unknown40;
     };
     union
@@ -57,7 +57,7 @@ public:
     float Unknown20;
     int Unknown24;
     int Unknown28;
-    int Unknown2C;
+    int m_EntryIndex;
     char Pad60[0xc];
     bool Unknown3C;
     char Pad3D[0x3];

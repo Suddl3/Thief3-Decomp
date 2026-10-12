@@ -3,11 +3,11 @@
 #include "Game/Class_10E82AF8.h"
 #include "Game/Object_10B5AFF0.h"
 
-// FUNCTION: 0x10B5AFF0 ?FUN_10b5aff0@Class_10E82AF8@@QAEXXZ
-void Class_10E82AF8::FUN_10b5aff0()
+// FUNCTION: 0x10B5AFF0 ?ResetStyles@Class_10E82AF8@@QAEXXZ
+void Class_10E82AF8::ResetStyles()
 {
-    if (Unknown190)
-        Unknown190->Virtual70(0);
-    if (Unknown194)
-        Unknown194->Virtual70(0);
+    if (m_HammerFaction)
+        m_HammerFaction->Virtual70(0);
+    if (m_PaganFaction)
+        m_PaganFaction->Virtual70(0);
 }

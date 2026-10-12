@@ -15,11 +15,11 @@ void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D
 class Class_10E6C5D0
 {
 public:
-    Class_10E6C5D0() : Unknown04(0) {}
+    Class_10E6C5D0() : m_Next(0) {}
 
     virtual ~Class_10E6C5D0();
 
-    int Unknown04;
+    int m_Next;
 };
 
 // FUNCTION: 0x10A8A5B0 ??_GClass_10E6C5D0@@UAEPAXI@Z

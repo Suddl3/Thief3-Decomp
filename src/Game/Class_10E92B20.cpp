@@ -13,15 +13,15 @@ public:
 class Class_10E92B20 : public Class_10E8BE68
 {
 public:
-    virtual void FUN_10bcea30(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 
     char Unknown04[0x3C];
     float Unknown40[3];
     char Unknown4C;
 };
 
-// FUNCTION: 0x10BCEA30 ?FUN_10bcea30@Class_10E92B20@@UAEXAAVFArchive@@@Z
-void Class_10E92B20::FUN_10bcea30(FArchive& Ar)
+// FUNCTION: 0x10BCEA30 ?Serialize@Class_10E92B20@@UAEXAAVFArchive@@@Z
+void Class_10E92B20::Serialize(FArchive& Ar)
 {
     Class_10E8BE68::Serialize(Ar);
     FUN_10b052a0(Ar, Unknown40);

@@ -24,7 +24,7 @@
 #include "Game/Class_10F3A3D8.h"
 #include "Game/Struct_10AC67F0.h"
 #include "Game/Struct_10AC6820.h"
-#include "Game/Class_10E6F7D4.h"
+#include "Game/cVertexBufferInfo.h"
 #include "Game/Class_10E701C8.h"
 #include "Game/Class_10B82390.h"
 
@@ -107,26 +107,26 @@ extern void* DAT_10e70908[];
 
 extern void* DAT_10e70914[];
 
-// FUNCTION: 0x10AC67F0 ?FUN_10ac67f0@Class_10E6F7D4@@QAE?AUStruct_10AC67F0@@XZ
-Struct_10AC67F0 Class_10E6F7D4::FUN_10ac67f0()
+// FUNCTION: 0x10AC67F0 ?GetUnknownD0@cVertexBufferInfo@@QAE?AUStruct_10AC67F0@@XZ
+Struct_10AC67F0 cVertexBufferInfo::GetUnknownD0()
 {
-    return UnknownD0;
+    return m_Origin;
 }
 
-// FUNCTION: 0x10AC6820 ?FUN_10ac6820@Class_10E6F7D4@@QAE?AUStruct_10AC6820@@XZ
-Struct_10AC6820 Class_10E6F7D4::FUN_10ac6820()
+// FUNCTION: 0x10AC6820 ?GetUnknown108@cVertexBufferInfo@@QAE?AUStruct_10AC6820@@XZ
+Struct_10AC6820 cVertexBufferInfo::GetUnknown108()
 {
-    return Unknown108;
+    return m_Bounds;
 }
 
-// FUNCTION: 0x10AC6850 ?FUN_10ac6850@Class_10E6F7D4@@UAEMXZ
-float Class_10E6F7D4::FUN_10ac6850()
+// FUNCTION: 0x10AC6850 ?GetField168@cVertexBufferInfo@@UAEMXZ
+float cVertexBufferInfo::GetField168()
 {
     return Field168;
 }
 
-// FUNCTION: 0x10AC6860 ?FUN_10ac6860@Class_10E6F7D4@@QAEHXZ
-int Class_10E6F7D4::FUN_10ac6860()
+// FUNCTION: 0x10AC6860 ?GetField1B0@cVertexBufferInfo@@QAEHXZ
+int cVertexBufferInfo::GetField1B0()
 {
     return Field1B0;
 }

@@ -12,10 +12,10 @@ public:
     Class_10B255F0()
     {
         Unknown00 = DAT_10e7aa60;
-        Unknown04 = 0;
-        Unknown2C = 0;
+        m_ItemIndex = 0;
+        m_EntryIndex = 0;
         Unknown14 = 1;
-        Unknown10 = 1;
+        m_UseListA = 1;
         Unknown38 = 1;
         Unknown18 = 1;
         Unknown1C = false;
@@ -33,17 +33,17 @@ public:
     }
 
     void** Unknown00;
-    int Unknown04;
+    int m_ItemIndex;
     int Unknown08;
     int Unknown0C;
-    int Unknown10;
+    int m_UseListA;
     int Unknown14;
     int Unknown18;
     bool Unknown1C;
     float Unknown20;
     int Unknown24;
     int Unknown28;
-    int Unknown2C;
+    int m_EntryIndex;
     int Unknown30;
     int Unknown34;
     int Unknown38;

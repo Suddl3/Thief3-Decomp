@@ -24,7 +24,7 @@ public:
 class cActorManager
 {
 public:
-    virtual void FUN_10a70f00(int A, int B, int C, int D);
+    virtual void HandleEvent(int A, int B, int C, int D);
     virtual void FUN_10a4c470(int A, int B, int C, int D);
     virtual void Virtual2();
     virtual void Virtual3();
@@ -43,10 +43,10 @@ public:
     virtual void Virtual16();
 };
 
-class Class_10E6BAB0 : public cActorManager
+class cVolumeManager : public cActorManager
 {
 public:
-    virtual void FUN_10a70f00(int Event, int A, int B, int C);
+    virtual void HandleEvent(int Event, int A, int B, int C);
     virtual void Virtual17(int A, int B, int C);
     virtual void Virtual18(int A, int B, int C);
     virtual void Virtual19(int A, int B, int C);
@@ -70,8 +70,8 @@ void Class_10E6BA88::FUN_10a70df0(float A, Class_10A70DF0_Obj* Obj)
     Queue->Unknown08[Index] = Entry;
 }
 
-// FUNCTION: 0x10A70F00 ?FUN_10a70f00@Class_10E6BAB0@@UAEXHHHH@Z
-void Class_10E6BAB0::FUN_10a70f00(int Event, int A, int B, int C)
+// FUNCTION: 0x10A70F00 ?HandleEvent@cVolumeManager@@UAEXHHHH@Z
+void cVolumeManager::HandleEvent(int Event, int A, int B, int C)
 {
     switch (Event)
     {

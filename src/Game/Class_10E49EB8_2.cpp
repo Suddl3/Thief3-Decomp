@@ -15,20 +15,20 @@ public:
     virtual void Virtual6();
     virtual void Virtual7();
     virtual void Virtual8();
-    virtual void FUN_10933970(void* Item);
+    virtual void Remove(void* Item);
 
     char Unknown04[0x3C];
-    std::vector<void*> Unknown40;
+    std::vector<void*> m_Items;
 };
 
-// FUNCTION: 0x10933970 ?FUN_10933970@Class_10E49EB8@@UAEXPAX@Z
-void Class_10E49EB8::FUN_10933970(void* Item)
+// FUNCTION: 0x10933970 ?Remove@Class_10E49EB8@@UAEXPAX@Z
+void Class_10E49EB8::Remove(void* Item)
 {
-    for (unsigned int i = 0; i < Unknown40.size(); i++)
+    for (unsigned int i = 0; i < m_Items.size(); i++)
     {
-        if (Unknown40[i] == Item)
+        if (m_Items[i] == Item)
         {
-            Unknown40.erase(Unknown40.begin() + i);
+            m_Items.erase(m_Items.begin() + i);
             return;
         }
     }

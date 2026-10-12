@@ -18,7 +18,7 @@ public:
     virtual int FUN_10934a20();
 
     char Unknown04[0x10];
-    Class_10E49EE0_Member* Unknown14;
+    Class_10E49EE0_Member* m_Member;
 };
 
 extern Class_10936AC0* DAT_10f31be0;
@@ -72,9 +72,9 @@ int Class_10E49D44::FUN_10934930(unsigned int A, int B, int C, int D, int* Out)
 // FUNCTION: 0x10934A20 ?FUN_10934a20@Class_10E49EE0@@UAEHXZ
 int Class_10E49EE0::FUN_10934a20()
 {
-    if (Unknown14 == 0)
+    if (m_Member == 0)
         return 0x80040721;
-    return Unknown14->Virtual12();
+    return m_Member->Virtual12();
 }
 
 // FUNCTION: 0x10934A40 ?FUN_10934a40@Class_10E49F64@@UAEHH@Z

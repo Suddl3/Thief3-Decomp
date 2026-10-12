@@ -16,14 +16,14 @@ public:
     virtual void Virtual4();
     virtual void Virtual5();
     virtual void Virtual6();
-    virtual void FUN_10bbef10();
+    virtual void PostLoad();
 
     char Unknown04[0xBC];
     Class_10BC2330 UnknownC0;
 };
 
-// FUNCTION: 0x10BBEF10 ?FUN_10bbef10@AAIPathPoint@@UAEXXZ
-void AAIPathPoint::FUN_10bbef10()
+// FUNCTION: 0x10BBEF10 ?PostLoad@AAIPathPoint@@UAEXXZ
+void AAIPathPoint::PostLoad()
 {
     FUN_10993fc0();
     UnknownC0.FUN_10bc2330(this);

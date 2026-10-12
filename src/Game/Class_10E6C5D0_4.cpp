@@ -5,6 +5,6 @@
 // FUNCTION: 0x10A8A560 ?FUN_10a8a560@Class_10E6C5D0@@UAEXXZ
 void Class_10E6C5D0::FUN_10a8a560()
 {
-    if (Unknown04)
-        Unknown04->FUN_10a8a560();
+    if (m_Next)
+        m_Next->FUN_10a8a560();
 }
