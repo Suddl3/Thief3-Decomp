@@ -32,9 +32,9 @@ public:
     Class_10A64CD0 Unknown134;
     char Unknown135[0x23];
     int Unknown158;
-    char Unknown15C;
+    char m_WasHUDVisible;
     char Unknown15D;
-    char Unknown15E;
+    char m_CursorWasVisible;
 };
 
 // FUNCTION: 0x10B5A470 ??0Class_10E82688@@QAE@XZ
@@ -47,8 +47,8 @@ Class_10E82688::Class_10E82688()
     m_Frame = 0;
     Unknown134.Reset();
     Unknown158 = 0;
-    Unknown15C = 0;
+    m_WasHUDVisible = 0;
     Unknown15D = 0;
-    Unknown15E = 0;
+    m_CursorWasVisible = 0;
     Unknown0E8 = 0x16;
 }

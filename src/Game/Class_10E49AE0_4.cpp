@@ -3,7 +3,7 @@
 
 #include "Core/Core.h"
 
-class Class_10E49AE0
+class cPixelAccessor
 {
 public:
     virtual void Virtual0();
@@ -16,8 +16,8 @@ public:
     virtual void SetPixelColor(int A, int B, int C, FVector* D, FLOAT E);
 };
 
-// FUNCTION: 0x10929920 ?SetPixelColor@Class_10E49AE0@@UAEXHHHPAVFVector@@M@Z
-void Class_10E49AE0::SetPixelColor(int A, int B, int C, FVector* D, FLOAT E)
+// FUNCTION: 0x10929920 ?SetPixelColor@cPixelAccessor@@UAEXHHHPAVFVector@@M@Z
+void cPixelAccessor::SetPixelColor(int A, int B, int C, FVector* D, FLOAT E)
 {
     FVector Scaled = (*D + FVector(1.0f, 1.0f, 1.0f)) * 127.5f;
     FLOAT Alpha = E * 127.5f;

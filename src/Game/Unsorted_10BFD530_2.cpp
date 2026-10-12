@@ -1,7 +1,7 @@
 // Game/Unsorted_10BFD530_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/cIntArray.h"
-#include "Game/Class_10BAEC00.h"
+#include "Game/cObjectArray.h"
 #include "Game/Class_10BFD780.h"
 
 class Class_10BFD780_Unknown10

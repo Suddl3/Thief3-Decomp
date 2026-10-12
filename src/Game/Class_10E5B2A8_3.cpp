@@ -15,12 +15,12 @@ struct Struct_109E2A90_Node
     AZoneProperties* Unknown08;
 };
 
-class Class_10E5B2A8
+class cZoneManager
 {
 public:
     virtual void HandleEvent(int Event, UObject* A, int B, int C);
 
-    Class_10E5B2A8();
+    cZoneManager();
 
     void RemoveFromBucket(INT A, AZoneProperties* B);
     void RemoveZone(UObject* Obj, int A, int B);
@@ -34,8 +34,8 @@ public:
     int Unknown10;
 };
 
-// FUNCTION: 0x109E2C10 ?RemoveFromBucket@Class_10E5B2A8@@QAEXHPAVAZoneProperties@@@Z
-void Class_10E5B2A8::RemoveFromBucket(INT Index, AZoneProperties* Obj)
+// FUNCTION: 0x109E2C10 ?RemoveFromBucket@cZoneManager@@QAEXHPAVAZoneProperties@@@Z
+void cZoneManager::RemoveFromBucket(INT Index, AZoneProperties* Obj)
 {
     if (Index >= 0 && Index < m_BucketCount)
     {

@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_10B228E0_H
 #define GAME_CLASS_10B228E0_H
 
-class Class_10B3ED20;
+class cLockPickController;
 
 class Class_10B228E0
 {
@@ -11,7 +11,7 @@ public:
     bool FUN_10b228e0();
 
     char Unknown00[0x90];
-    Class_10B3ED20* Unknown90;
+    cLockPickController* Unknown90;
 };
 
 #endif // GAME_CLASS_10B228E0_H

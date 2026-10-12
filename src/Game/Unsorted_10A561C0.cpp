@@ -131,17 +131,17 @@ public:
     virtual void FUN_10a51530(int A, void* B, int C, int D);
 };
 
-class Class_10E68738 : public Class_10E69080, public Class_10E7EDB8
+class cOptionToggle : public Class_10E69080, public Class_10E7EDB8
 {
 public:
-    ~Class_10E68738();
+    ~cOptionToggle();
 
     char Unknown11C[0xBC];
     cIntArray Unknown1D8;
 };
 
-// FUNCTION: 0x10A561E0 ??1Class_10E68738@@QAE@XZ
-Class_10E68738::~Class_10E68738()
+// FUNCTION: 0x10A561E0 ??1cOptionToggle@@QAE@XZ
+cOptionToggle::~cOptionToggle()
 {
 }
 

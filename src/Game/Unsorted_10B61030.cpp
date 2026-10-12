@@ -15,9 +15,9 @@ public:
     int GetAdjustedValueAt(int Index);
 
     char Unknown00[0x1D4];
-    int Unknown1D4;
+    int m_AdjustMode;
     char Unknown1D8[0x24];
-    int Unknown1FC;
+    int m_Adjustment;
 };
 
 // FUNCTION: 0x10B61030 ?FUN_10b61030@Class_10B61030@@QAEXH@Z
@@ -36,7 +36,7 @@ void Class_10B61030::FUN_10b61030(int A)
 int Class_10E83E20::GetAdjustedValueAt(int Index)
 {
     int Result = GetValueAt(Index);
-    if (Unknown1D4 == 3)
-        Result += Unknown1FC;
+    if (m_AdjustMode == 3)
+        Result += m_Adjustment;
     return Result;
 }

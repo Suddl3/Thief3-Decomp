@@ -37,22 +37,22 @@ public:
 class Class_1090FD40
 {
 public:
-    Class_1090FD40() : m_Count(0), Unknown04(0), m_Items(0) {}
+    Class_1090FD40() : m_Count(0), m_CapacityBytes(0), m_Items(0) {}
     ~Class_1090FD40() { Empty(); }
-    void FUN_1090f2c0(int Count);
+    void SetCount(int Count);
     void Empty()
     {
-        FUN_1090f2c0(0);
-        if (Unknown04)
+        SetCount(0);
+        if (m_CapacityBytes)
         {
             GetAllocator()->Virtual5(m_Items);
             m_Items = 0;
-            Unknown04 = 0;
+            m_CapacityBytes = 0;
         }
     }
 
     int m_Count;
-    int Unknown04;
+    int m_CapacityBytes;
     cString* m_Items;
 };
 
@@ -83,7 +83,7 @@ int Class_10E7C3B0::ShowOkMessage(int A, int B, Class_10B37370_Arg* C)
         Class_1090FD40 Array;
         cString Text("<string=T_OK>");
         int Count = Array.m_Count;
-        Array.FUN_1090f2c0(Count + 1);
+        Array.SetCount(Count + 1);
         Array.m_Items[Count] = Text;
         ((Class_10B154C0*)GetWindowManager())->FUN_10b15770(0, Item->GetName(), &Array, 0, 0, 5.0f);
     }

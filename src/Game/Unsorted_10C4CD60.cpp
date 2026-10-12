@@ -56,7 +56,7 @@ void cResSkeletalAnimInfo::FUN_10c4d3b0(int p1)
 // FUNCTION: 0x10C4DE40 ?FUN_10c4de40@Class_10C4DE40@@QAEHH@Z
 int Class_10C4DE40::FUN_10c4de40(int Index)
 {
-    return Unknown10[Index].Unknown04;
+    return m_Elements[Index].Unknown04;
 }
 
 // FUNCTION: 0x10C4ED70 ?FUN_10c4ed70@Class_10C4ED70@@QAEXHHPAH@Z

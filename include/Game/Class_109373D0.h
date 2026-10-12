@@ -13,7 +13,7 @@ public:
     void ResetTextureStagesBiased();
 
     char Unknown00[0x1C];
-    IDirect3DBaseTexture8* Unknown1C[4];
+    IDirect3DBaseTexture8* m_StageTextures[4];
     char Unknown2C[0x684];
     unsigned long m_VertexShader;
 };

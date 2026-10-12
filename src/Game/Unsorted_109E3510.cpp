@@ -25,7 +25,7 @@ public:
     char Unknown04[0x114];
     void** Unknown118;
 
-    Class_10E5B2C0* FUN_109e3630();
+    Class_10E5B2C0* Init();
 };
 
 // FUNCTION: 0x109E3510 ?HandleMessage@Class_10E5B2AC@@UAEXHHHH@Z
@@ -43,8 +43,8 @@ void Class_10E5B2AC::HandleMessage(int Msg, int A, int B, int C)
     }
 }
 
-// FUNCTION: 0x109E3630 ?FUN_109e3630@Class_10E5B2C0@@QAEPAV1@XZ
-Class_10E5B2C0* Class_10E5B2C0::FUN_109e3630()
+// FUNCTION: 0x109E3630 ?Init@Class_10E5B2C0@@QAEPAV1@XZ
+Class_10E5B2C0* Class_10E5B2C0::Init()
 {
     this->Class_10E67BD8::Class_10E67BD8();
     vtable = DAT_10e5b2c0;

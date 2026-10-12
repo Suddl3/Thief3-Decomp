@@ -3,17 +3,17 @@
 #include "Game/Class_10B59FA0_Member.h"
 #include "Game/Class_10B59F20_Member.h"
 
-class Class_10E88900
+class cT3TabbedWindow
 {
 public:
-    Class_10E88900();
+    cT3TabbedWindow();
 
-    virtual ~Class_10E88900();
+    virtual ~cT3TabbedWindow();
 
     char Unknown04[0x2C8];
 };
 
-class Class_10E858D0 : public Class_10E88900
+class Class_10E858D0 : public cT3TabbedWindow
 {
 public:
     Class_10E858D0();

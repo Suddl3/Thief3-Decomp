@@ -17,7 +17,7 @@ public:
 
     int m_EntryCount;
     char Pad08[0x4];
-    Class_10ABB4E0_Element** Unknown0C;
+    Class_10ABB4E0_Element** m_Entries;
     cIntArray m_MembraneMaterials;
 };
 

@@ -1,6 +1,6 @@
 // Game/Class_10E69050_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10E69050.h"
+#include "Game/cSequence.h"
 
 class Class_10A58BE0_Member
 {
@@ -9,8 +9,8 @@ public:
     virtual bool Virtual1();
 };
 
-// FUNCTION: 0x10A58BB0 ?IsFinished@Class_10E69050@@UAEHXZ
-int Class_10E69050::IsFinished()
+// FUNCTION: 0x10A58BB0 ?IsFinished@cSequence@@UAEHXZ
+int cSequence::IsFinished()
 {
     int Index = m_Current;
     if (Index == m_Count - 1)

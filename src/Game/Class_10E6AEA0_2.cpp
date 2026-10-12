@@ -21,12 +21,12 @@ public:
     char Unknown04[0x114];
 };
 
-class Class_10E6AEA0 : public Class_10E67FD0
+class cBorderWindow : public Class_10E67FD0
 {
 public:
-    Class_10E6AEA0();
+    cBorderWindow();
 
-    virtual ~Class_10E6AEA0();
+    virtual ~cBorderWindow();
 
     int Unknown118;
     bool Unknown11C;
@@ -40,11 +40,11 @@ public:
     int Unknown14C;
 };
 
-// FUNCTION: 0x10A66270 ??_GClass_10E6AEA0@@UAEPAXI@Z
+// FUNCTION: 0x10A66270 ??_GcBorderWindow@@UAEPAXI@Z
 // Compiler-generated: emitted with the class's vtable by 0x10A66580's definition in this unit.
 
-// FUNCTION: 0x10A66580 ??0Class_10E6AEA0@@QAE@XZ
-Class_10E6AEA0::Class_10E6AEA0()
+// FUNCTION: 0x10A66580 ??0cBorderWindow@@QAE@XZ
+cBorderWindow::cBorderWindow()
     : Unknown118(0), Unknown11C(false), Unknown120(0), Unknown130(0), Unknown134(0), Unknown138(0),
       Unknown13C(0), Unknown14C(0)
 {

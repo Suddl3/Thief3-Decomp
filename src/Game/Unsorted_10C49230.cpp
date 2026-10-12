@@ -4,7 +4,7 @@
 #include "Game/Class_10C58C80.h"
 #include "Game/Class_10C58C90.h"
 
-void FUN_10c4c2d0();
+void GetCadenceFactory();
 
 class Class_10E9BE7C;
 
@@ -27,10 +27,10 @@ struct Info_10C58C90
     Class_10C49740 UnknownDC;
 };
 
-// FUNCTION: 0x10C4CD50 ?FUN_10c4cd50@@YAXXZ
-void FUN_10c4cd50()
+// FUNCTION: 0x10C4CD50 ?EnsureCadenceFactory@@YAXXZ
+void EnsureCadenceFactory()
 {
-    FUN_10c4c2d0();
+    GetCadenceFactory();
 }
 
 // FUNCTION: 0x10C515F0 ?FUN_10c515f0@@YAPAVClass_10E9BE7C@@XZ

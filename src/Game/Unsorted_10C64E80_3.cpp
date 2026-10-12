@@ -20,8 +20,8 @@ public:
 
 extern Class_10C662F0* DAT_10ff7120;
 
-// FUNCTION: 0x10C65090 ?FUN_10c65090@@YGPAVClass_10C662F0@@HPAH@Z
-Class_10C662F0* FUN_10c65090()
+// FUNCTION: 0x10C65090 ?GetSchemaMetaFile@@YGPAVClass_10C662F0@@HPAH@Z
+Class_10C662F0* GetSchemaMetaFile()
 {
     if (!DAT_10ff7120)
     {

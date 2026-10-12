@@ -1,13 +1,13 @@
 // Game/Class_10E49AE0_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10E49AE0.h"
+#include "Game/cPixelAccessor.h"
 #include "Game/Struct_10929510.h"
 #include "Game/Struct_10929D60.h"
 
 extern float DAT_10e49684;
 
-// FUNCTION: 0x109299D0 ?GetPixelColor@Class_10E49AE0@@UAEXPAUStruct_10929510@@HHPAUStruct_10929D60@@@Z
-void Class_10E49AE0::GetPixelColor(Struct_10929510* Surface, int X, int Y, Struct_10929D60* Out)
+// FUNCTION: 0x109299D0 ?GetPixelColor@cPixelAccessor@@UAEXPAUStruct_10929510@@HHPAUStruct_10929D60@@@Z
+void cPixelAccessor::GetPixelColor(Struct_10929510* Surface, int X, int Y, Struct_10929D60* Out)
 {
     unsigned long Pixel;
     GetPixel(Surface, X, Y, &Pixel);

@@ -16,10 +16,10 @@ public:
     char Unknown00[0x30];
 };
 
-class Class_10924B70 : public Class_10924B70_Base
+class cRenderTargetState : public Class_10924B70_Base
 {
 public:
-    ~Class_10924B70();
+    ~cRenderTargetState();
 
     void Release();
 
@@ -27,8 +27,8 @@ public:
     Class_1094D9A0 Unknown48[3];
 };
 
-// FUNCTION: 0x10924B70 ??1Class_10924B70@@QAE@XZ
-Class_10924B70::~Class_10924B70()
+// FUNCTION: 0x10924B70 ??1cRenderTargetState@@QAE@XZ
+cRenderTargetState::~cRenderTargetState()
 {
     Release();
 }

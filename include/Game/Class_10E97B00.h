@@ -10,7 +10,7 @@ class Class_1090A780;
 class Class_10E97B00
 {
 public:
-    virtual void FUN_10c01ff0(void* A);
+    virtual void Serialize(void* A);
 
     Class_10E97B00(const char* Name);
     Class_10E97B00(const Class_10E97B00& Other);

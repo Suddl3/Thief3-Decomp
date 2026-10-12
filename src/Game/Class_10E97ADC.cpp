@@ -1,15 +1,15 @@
-// Game/Class_10E97ADC.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/cPathPointList.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Game/cIntArray.h"
 
-// Copied from include/Game/Class_10E97ADC.h with the virtual destructor added
+// Copied from include/Game/cPathPointList.h with the virtual destructor added
 // and the three cIntArray members the destructor tears down.
-class Class_10E97ADC
+class cPathPointList
 {
 public:
-    Class_10E97ADC* Init();
-    virtual ~Class_10E97ADC();
+    cPathPointList* Init();
+    virtual ~cPathPointList();
 
     cIntArray Unknown04;
     cIntArray m_PathPoints;
@@ -20,10 +20,10 @@ public:
     int Unknown34;
 };
 
-// FUNCTION: 0x10BFF760 ??1Class_10E97ADC@@UAE@XZ
-Class_10E97ADC::~Class_10E97ADC()
+// FUNCTION: 0x10BFF760 ??1cPathPointList@@UAE@XZ
+cPathPointList::~cPathPointList()
 {
 }
 
-// FUNCTION: 0x10BFF8A0 ??_GClass_10E97ADC@@UAEPAXI@Z
+// FUNCTION: 0x10BFF8A0 ??_GcPathPointList@@UAEPAXI@Z
 // Compiler-generated: emitted with the class's vtable by 0x10BFF760's definition in this unit.

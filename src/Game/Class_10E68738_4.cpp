@@ -10,7 +10,7 @@ struct Struct_10A58AE0
     Class_1098E330* Unknown00;
 };
 
-class Class_10E68738
+class cOptionToggle
 {
 public:
     virtual void Virtual0();
@@ -137,8 +137,8 @@ public:
     int* Unknown15C;
 };
 
-// FUNCTION: 0x10A58AE0 ?ApplyEntry@Class_10E68738@@QAEXH@Z
-void Class_10E68738::ApplyEntry(int A)
+// FUNCTION: 0x10A58AE0 ?ApplyEntry@cOptionToggle@@QAEXH@Z
+void cOptionToggle::ApplyEntry(int A)
 {
     Class_1098E330* Obj = Unknown128->Unknown00;
     if (Obj && m_Entries > A && Unknown15C[A] != -1)

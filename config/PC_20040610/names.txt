@@ -4453,3 +4453,177 @@ field cResSound::UnknownF8 m_Data ReleaseData deletes it, and its size UnknownFC
 field cResSound::UnknownFC m_DataSize ReleaseData subtracts it from Unknown10 when it frees UnknownF8.
 field cResSound::Unknown10 m_LoadedSize ReleaseData subtracts UnknownFC from it when it frees UnknownF8.
 field Class_10C60FA0::Unknown1C m_Format RoundToBlockAlign reads its 0x0C block-align and 0x0E bit-depth fields: a WAVE format header.
+class Class_10E68738 cOptionToggle Its key handler cycles or toggles m_Selection; SetThirdStateEnabled adds a third value; T3AVOptionsWindow::RefreshRow calls it.
+class Class_10E69050 cSequence UpdateCurrent advances m_Current through m_Items as each finishes; IsFinished tests the last item.
+class Class_10E6AEA0 cBorderWindow LoadConfig reads 'BorderWidth' and the 'Texture_Corner', 'Texture_Mid', 'Texture_Vert' and 'Texture_Horiz' keys.
+class Class_10E89720 cDoorState 'DoorState_Open' string; GetStateName indexes a state-name table by m_StateIndex.
+class Class_10E5B2A8 cZoneManager Adds and removes AZoneProperties zones in per-BSP-zone buckets on HandleEvent (36-39).
+class Class_10E9B240 cLocomotionCommand Xbox source file AI_LocomotionCommand.cpp; Stop clears m_Active and passes its handle to FUN_109bbba0.
+class Class_10E96510 cYellowAlert String 'yellowalert' in GetYellowAlertName; UpdateLastKnownPosition stores a position and the current time.
+class Class_10E6DA1C cConGoalCompleteEvent Xbox file ConGoalCompleteEvent.cpp; prints the 'GoalComplete' string; constructor calls cConEvent's.
+class Class_10E97CB4 cContextVolumeList Message 0x5A scans the level's actors, collecting AAIContextVolume into m_ContextVolumes.
+class Class_10E6B5B8 cPtrArray Clear deletes each m_Items pointer and resets m_Count; base of Class_10B42640.
+class Class_10E6B078 cTextWindow Xbox twin's debug name cTextWindow (vtable match, 128 slots); cT3ReadBookWindow::HandleKey calls its HandleKey.
+class Class_10B25D60 cListCursor Advance and FindNextFromListA/B walk m_Index forward over ListA and ListB entries with Count above zero.
+class Class_10B25D90 cListReverseCursor StepBack and FindPrevFromListA/B walk m_Index backward over ListA and ListB entries with Count above zero.
+class Class_10E93B68 cSampleStats AddSample keeps MaxValue, Sum and Count; ProcessEntry walks Entries and calls Virtual73 on each.
+class Class_10E82AF8 cFactionPane Fields m_HammerFaction and m_PaganFaction, strings sta_HammerFactionTotal and sta_PaganFactionTotal, vtable slot 119 GetFactionPaneFileName.
+class Class_10BAEC40 cStructArray Counted growable array of structs with allocator-backed storage; SetCount, Empty, CopyFrom and MoveRange operate on it.
+class Class_10E88900 cT3TabbedWindow Xbox source file T3TabbedWindow.cpp pairs with its constructor; holds a cRadioWindow member
+class Class_10E86FD0 cTabScreenMainMenu GetTitle returns <string=T_TabScreenMainMenuTitle>; derives from Class_10E87B68, a cT3TabbedWindow subclass
+class Class_10E7AAAC cMenuInput GetMenuInput() returns it; its constructor reads MenuInputInitialDelay and MenuInputRepeatDelay from T3Settings.
+class Class_10E6BC80 cCopyList m_CopyCount and m_Copies hold the list; AddCopy appends a copy per source, FindBySource searches them.
+class Class_10C00F60 cHashMap Int-keyed chained hash map: Remove unlinks nodes and shrinks buckets; Rehash reinserts them, like Class_10BA1330.
+class Class_10BAEC00 cObjectArray SetCount grows a block in 16-element steps and writes each new element's VTable; Empty frees it.
+class Class_10E9AA38 MC_PlayAnimation Description 'MC_PlayAnimation: %s'; sibling MC_Follow also derives from MoveCommand.
+class Class_10E871D0 cSmokeySoup LoadConfig looks up the 'SmokeySoup' and 'SmokeySoupAlpha' names and passes them to the soup manager.
+class Class_10E49AE0 cPixelAccessor GetPixel and SetPixel read and write packed pixels of a Surface struct; GetLuminance and GetPixelColor convert them.
+class Class_10E7E658 cRopeMotion MountRope and DismountRope drive Garrett->ropeToMount, bUpdatePhysHeight and SetNoiseEnabled.
+class Class_10E9CD90 cMemoryStream Read copies from m_Buffer at m_Position; IsAtEnd tests m_Position against m_Size; Init takes the buffer and size.
+class Class_10E97ADC cPathPointList AddPathPoints appends each AAIPathPoint of its parameter to m_PathPoints, and to Unknown04 when Virtual96() is 1.
+class Class_10B3ED20 cLockPickController OnLockPicked starts LPOpenLock, advances the lockpick window, unlocks; sta_lockspicked stats.
+class Class_10B2F6A0 cCountLabel RefreshLabel shows m_Count with %d on m_Label, hidden when m_Count < 1 or m_HideCount is set.
+class Class_10E81DE8 cOptionsWindow SaveAndClose calls GetOptions()->Save(); cT3AVOptionsWindow::ShowMainMenu calls its Close().
+class Class_10E7FD18 cHUDLightGem String 'HUDLightGem_%2.2d' builds 16 HUD gem handles, released in the destructor.
+class Class_10924B70 cRenderTargetState Holds m_RenderTarget and m_DepthStencil; FUN_109243f0 applies them with SetRenderTarget and ApplyViewport; Release frees them.
+class Class_10BC9A50 cAISpeech Plays speech concepts (+death:grunt, +shopowner:nocash, +summon:fight) from its three methods.
+class Class_109E6520 cStringIntHashTable Same table as Class_10A250D0 with const int& values: Insert(const cString&, const int&) and Remove by cString.
+class Class_109435A0 cShortArray Items are short*; Append adds one at the end; Resize grows the buffer in 16-item steps.
+class Class_10E83230 cTabScreenMissionFailed GetTitle returns the string <string=T_TabScreenMissionFailedTitle>; the tab screen of the mission-failed screen.
+class Class_10E90A1C cRandomInterval RollInterval rolls m_Interval from schema Min/Max and appFrand; StartInterval sets m_EndTime from a schema float.
+function 0x109E3630 Init In-place constructor: calls base constructor Class_10E67BD8, sets vtable and Unknown118, returns this; as Class_10E69050::Init.
+function 0x10A56130 Init In-place constructor: calls base constructor Class_10E69080, sets m_Selection and Unknown1D4, returns this; as Class_10E69050::Init.
+function 0x10934260 GetVertexCount Returns Unknown1c divided by the stride Unknown20: the vertex count, as cD3DVertexBuffer::GetVertexCount.
+function 0x109342F0 BindStreamSource Calls cD3DStateCache::SetStreamSource with m_Member and the stride; cD3DVertexBuffer::BindStreamSource has the same signature.
+function 0x10B155B0 SetPending Returns false while m_Closing; otherwise calls the base Class_10E5B7C8::SetPending(int) that its header declares.
+function 0x109E2D50 AddToBucket Called by AddZone with m_FleshBSPZone and the zone; mirrors RemoveFromBucket(Index, Zone).
+function 0x10B3D0D0 Initialize Calls the base initializer, stores the vtable and returns this; factory FUN_10b3d510 calls it.
+function 0x10C27050 Init Calls the base constructor with four ints and stores the vtable; FindOrCreate calls it.
+function 0x10B1BD10 Release Clears Unknown08 and calls its Virtual2, as the destructor does.
+function 0x10AAB080 Print fprintf to a FILE* with the 'GoalComplete' string and the event's name.
+function 0x10B24D90 ClearJunkState Zeroes Unknown28 and Unknown48, the inverse of SetJunkState; called by ReleaseArm.
+function 0x10ABDAE0 SetCount Clear, CopyFrom and Insert pass it the new element count; cIntArray has SetCount too.
+function 0x10B199F0 MoveElements Insert calls it as (Index, Index + 1, m_Count - Index - 1) to shift the tail up one slot.
+function 0x10B98200 CreateTacticWeaponEquip Returns new cTacticWeaponEquip(A, this, B, false, C).
+function 0x10B98290 CreateTacticWeaponHolster Returns new cTacticWeaponHolster(A, this).
+function 0x10B98320 CreateMeleeStrafeTarget Returns new cMeleeStrafeTarget(A, this, B, C).
+function 0x10B97F30 CreateSearchLookState Returns new State_SearchLook(A, this).
+function 0x10B98050 CreatePlayActionState Returns new State_PlayAction(A, this, B, C).
+function 0x10B99780 CreatePatrolLookState Returns new State_PatrolLook when its config float lookup is above DAT_10eafbdc.
+function 0x10B99920 CreateFrobAlarmState Returns new State_FrobAlarm(A, this, B) when its config float is positive.
+function 0x10B999E0 CreateGassedState Returns new State_Gassed(A, this, B) when GetGassedEnableId's config float is above DAT_10eafbdc.
+function 0x10B99B60 CreateBlindedState Returns new State_Blinded(A, this, B) when GetBlindedEnableId's config float is positive.
+function 0x10B99C20 CreateChokingState Returns new State_Choking(A, this, B) when GetChokingEnableId's config float is positive.
+function 0x10B99FB0 CreateFetchState Returns new State_Fetch(A, this, B, C) when its config float lookup is positive.
+function 0x10BD7FA0 Construct Base ctor call, vtable store and field init, same shape as Class_10E94100::Construct and Class_10E92730::Construct.
+function 0x10B256A0 GetEntryCount Returns 1 plus Unknown1C entries with nonzero Count and Unknown00; GetEntryValue indexes the same list.
+function 0x10B255F0 GetItemCount Returns 1 plus ListB then ListA entries with nonzero Count and Unknown00; GetSelectedValue indexes the same lists.
+function 0x10BED110 ClearHandle Clears m_Handle when it equals the argument; calls FUN_109e3c90 first.
+function 0x10AA6D90 ReleaseOwnedObject Deletes the object in Unknown120 when A is set, clears the pointer, then calls Virtual109.
+function 0x10B3D350 Init Same shape as Class_10E7E808::Init: base init, Unknown00 = DAT_10e7ea00, returns this.
+function 0x10B5AEE0 UpdateFactions Reads sta_HammerFactionTotal and sta_PaganFactionTotal, then calls each faction's FUN_10b5ad60 and Virtual56.
+function 0x10AA8490 WriteKeyValue fprintf writes Unknown08 and GetName() as one pair; TryReadKeyValue splits such lines at '='.
+function 0x10AA8A40 TryReadKeyValue Splits a line at '=', returns 0 when FUN_1094c430 tests true against Unknown08, else stores the line in Unknown20.
+function 0x10B39500 ForwardToChildren Loop calls FUN_10b48300 with its argument on each of the eight children.
+function 0x10C015B0 Remove Unlinks the key's node from its bucket and deletes it, returning whether it was found; Class_10C01EC0::Remove calls it.
+function 0x10A51FC0 LoadConfigVector Signature takes FVector& out, a key prefix, File and Section; LoadConfig passes the prefix 'ClearPos_'.
+function 0x10C00F60 Insert Same signature as Class_10BA1330::Insert; Rehash reinserts each node through it.
+function 0x1090F2C0 SetCount Add, Insert, RemoveAt and Empty pass the new count, as cIntArray::SetCount does.
+function 0x10A37F80 MoveItems Insert and RemoveAt call it to shift the tail one slot, as cIntArray's InsertAt and RemoveAt do with memmove.
+function 0x10C12970 Compare Op 1 returns 1 when Unknown08 equals Other's, op 6 when it differs; other ops return 0.
+function 0x10C12CC0 GetName Returns Unknown08's name (Virtual25, the string Save writes) or a default string when Unknown08 is null.
+function 0x10C131D0 GetObjectName Returns the name of the object the Unknown04 holder resolves to, from a GObjObjects index or its Unknown10 entry.
+function 0x10B7DC60 UpdatePhysicsObject Creates a missing physics object when a 0x2000533 query returns 0xE, then adds or removes it by a link-manager lookup; Xbox callee CreatePhysicsObject.
+function 0x10B67EA0 HandleKey Returns true if FUN_10b79560(A, B, C) does, or for Enter (13) with C set.
+function 0x10B550C0 ReleaseGems Releases each gem handle through the manager and zeroes the count; destructor and CreateGems call it.
+function 0x10B55300 CreateGems Calls ReleaseGems, then loads 16 'HUDLightGem_%2.2d' objects into the handle array.
+function 0x10BD0190 ClearIfEqual Resets Unknown1c to 0 when p1 equals it; no other use in the class.
+function 0x10C01FF0 Serialize Serializes m_Name through FUN_10b232e0; State_PlayAction::Serialize passes its archive here.
+function 0x109243F0 ApplyRenderTarget Calls m_Device->SetRenderTarget(m_RenderTarget, m_DepthStencil), then DAT_10f31be0->ApplyViewport().
+function 0x10BCC240 Update Pops the state when the owner check fails or FUN_10bc40e0 is true; else applies a transition param.
+function 0x10BC3FC0 CanExit False until Virtual65()+Unknown0C seconds pass and owner's FUN_10c00c70 is not 1.
+function 0x10BD1BC0 Update Calls FUN_10bd1900, then resets the owner's timer once 10 s have passed and Unknown50 is at least 7.
+function 0x10A795C0 ClearAll Calls Virtual0 and Virtual1, which each delete their list's objects and empty it.
+function 0x10A796A0 Init Sets Unknown00 from DAT_10e6bd68, zeroes the other fields and returns this.
+function 0x10B3D170 Init Calls base FUN_10b3acb0, sets Unknown00 from DAT_10e7e6a0 and returns this.
+function 0x10BDFA30 Init Calls base constructor Class_10E95050(A, B), stores C to F in fields, sets Unknown00 and returns this.
+function 0x10C4A150 Clear Same body as Class_10C49200::Clear: Reset(0x40), delete buckets, zero counters and buckets.
+function 0x10C49DA0 Reset Clear calls it with 0x40 as Class_10C49200::Clear calls Reset; it is among Rehash's callers.
+function 0x10C4C2D0 GetCadenceFactory Xbox twin named CadenceFactory (CadenceFactory.cpp); lazily creates and returns the DAT_10ff70b8 singleton.
+function 0x10C47F80 DestroyCadenceFactory Deletes and nulls DAT_10ff70b8, the singleton GetCadenceFactory creates.
+function 0x10C4CD50 EnsureCadenceFactory Only calls GetCadenceFactory and discards the result: creates the singleton when absent.
+function 0x10C49E20 AllocateId Returns the list's front when non-empty, else the post-incremented Unknown0C counter.
+function 0x10C48200 ClampToAvailable Returns p4 unless p3 - p2 is smaller: a clamp of the count to the span from p2 to p3.
+function 0x10C65090 GetSchemaMetaFile Lazily news the singleton; Xbox twin cSchemaMetaFile::pSingleton in Src/SchemaMetaFile.cpp.
+function 0x10C64AC0 GetElem Returns &Unknown1C[Index], an element of the Elem_10C64AC0 array.
+function 0x10C64AA0 Split Hi = Value >> 29 and Lo = Value & 0x1fffffff, written through two out-parameters.
+function 0x10C64900 GetSoundName Returns the sound's text from its resource, or '(no res sound)' when it has none.
+function 0x10C64E50 CopyRef Returns *Other by value: a copy of the cRefPtr passed in.
+function 0x10C63EF0 SetItem Unlinks the old Unknown18 (FUN_10c5d5b0), stores NewItem, then links it to this (FUN_10c5d830).
+function 0x10A3B460 HandleEvent vtable slot 0: the same virtual function as Class_10E6FC80::HandleEvent (0x10AC8E80)
+field Class_10E9B168::Unknown1C m_Position CopyFrom copies it from Virtual21(); IsInRange takes its distance to a point against m_Range.
+field Class_10E82688::Unknown15C m_WasHUDVisible Saved from IsHUDWindowVisible() on open; SetHUDMode restores it when the window closes.
+field Class_10E82688::Unknown15E m_CursorWasVisible Saved from DAT_10f31b88->Unknown0C; HideCursor() when set on open; FUN_1092d350 on close.
+field Class_10E4AB88::Unknown0F4 m_NumEntries Bounds the Unknown0FC entry loops in CollectValues, FUN_1094e9d0 and FUN_1094e9f0.
+field cOptionToggle::Unknown1D4 m_ThirdStateEnabled SetThirdStateEnabled writes it; HandleKey cycles three values only while it is set.
+field Class_10E49EE0::Unknown04 m_Owner Release passes this to Unknown04's Virtual9 before deleting the object.
+field Class_10E49EE0::Unknown08 m_RefCount AddRef increments and Release decrements it; Release deletes the object at zero.
+field Class_10E49EE0::Unknown1c m_Size FUN_10934260 divides Unknown1c by the stride Unknown20 to get the vertex count.
+field Class_10E49EE0::Unknown20 m_Stride Passed as the stride to SetStreamSource in FUN_109342f0.
+field Class_10E809B8::Unknown118 m_FMVWindow Set from GetFMVWindow() in Update, then FUN_10b314f0(false) is called on it.
+field cLocomotionCommand::Unknown60 m_Handle Stop passes it to FUN_109bbba0 while it is >= 0, then sets -1.
+field Class_10E83E20::Unknown1D4 m_AdjustMode GetAdjustedValueAt adds Unknown1FC to the value only when this equals 3.
+field Class_10E83E20::Unknown1FC m_Adjustment The amount GetAdjustedValueAt adds to GetValueAt's result when Unknown1D4 is 3.
+field Class_10E7A768::Unknown08 m_Objects Ctor fills 34 entries via FUN_10b3d510(i); dtor deletes each.
+field Class_10E49F90::Unknown114 m_VertexShader Passed to SetVertexShader in FUN_10936240, the only method using it.
+field Class_10E7EA00::Unknown10 m_AnimationEnded OnAnimationEnd sets it to 1 when the animation ends; FUN_10b4d050 clears it.
+field Class_10E7BB2C::Unknown1C m_Delta SetValue stores m_Value minus Unknown14 here.
+field Class_10E7C584::Unknown08 m_Registry Ctor calls FUN_109a62c0(this) on it; dtor calls FUN_109a62e0(this) on it.
+field Class_10E7C584::Unknown0C m_Children Ctor allocates eight Class_10B48300 children; dtor deletes them; FUN_10b39500 loops over them.
+field Class_10E4AA80::Unknown5C m_PendingFlags Update tests its bits on each call and clears it; the bits decide which passes run.
+field Class_10E4AA80::Unknown204 m_HasVelocity When set, IntegrateOffsets adds the velocity to the offset; when clear, it zeroes the offset.
+field Class_10E4AA80::Unknown205 m_HasAngularVelocity When set, IntegrateOffsets adds the angular velocity to the angles and wraps them; when clear, zeroes them.
+field Class_10E4AA80::Unknown208 m_Velocity Multiplied by IntegrateOffsets' argument and added to the offset while m_HasVelocity is set.
+field Class_10E4AA80::Unknown214 m_AngularVelocity Multiplied by IntegrateOffsets' argument and added to the angles while m_HasAngularVelocity is set.
+field Class_10E4AA80::Unknown220 m_Offset Vector accumulated by IntegrateOffsets; zeroed when m_HasVelocity is clear, and its Z is always zeroed.
+field Class_10E4AA80::Unknown22C m_Angles Angle triple that IntegrateOffsets wraps with WrapAngles; zeroed when m_HasAngularVelocity is clear.
+field cStructArray::Unknown04 m_AllocBytes Nonzero while m_Items is allocated; Empty frees it and clears it, as Class_10B59770's m_AllocBytes does.
+field Class_10E7F770::Unknown154 m_ClearPos LoadConfig zeroes it, then loads it from config under the prefix 'ClearPos_'.
+field Class_10E77978::Unknown04 m_Name The constructor stores its Name argument in this std::string.
+field Class_10C59030::Unknown00 m_Collisions Insert increments it on an occupied bucket and tests it against 0.2 * m_BucketCount, as in Class_10C576F0::Insert.
+field Class_10C59030::Unknown08 m_BucketBits Insert masks the hash with (1 << Unknown08) - 1, as m_BucketBits does in Class_10C576F0::Insert.
+field Class_10C59030::Unknown10 m_FixedSize Insert skips growing while Unknown10 is set, as m_FixedSize does in Class_10C576F0::Insert.
+field Class_10C59030::Unknown14 m_Buckets Set reads Unknown14[Index] as the bucket chain head; Insert indexes the same slot as m_Buckets.
+field Class_10C59030::Unknown18 m_KeyTraits Insert and Set call Unknown18.Virtual0 for the key's hash bytes and Virtual1 to compare keys.
+field Class_10C576F0::Unknown18 m_KeyTraits Insert calls Unknown18.Virtual0 to get the int key's bytes for HashBytes.
+field cHashMap::Unknown00 m_Collisions Rehash zeroes it; Remove decrements it when the node shares its bucket, as Class_10BA1330::m_Collisions.
+field Class_10BA1330::Unknown18 m_KeyHash Insert passes the key to its Virtual0 and hashes the bytes returned; Class_10C00F60 has m_KeyCompare.
+field Class_10E49EB8::Unknown1C m_pVB CreateBuffer creates the D3D vertex buffer into it; Xbox message checks 'm_pVB == 0'.
+field Class_10E49E50::Unknown1C m_vecVertexBuffers Constructor's allocator string 'VBPoolStaticImpermanent::m_vecVertexBuffers' names this member.
+field Class_1090FD40::Unknown04 m_CapacityBytes Nonzero while m_Items is allocated; cIntArray's m_CapacityBytes is cleared the same way.
+field MC_PlayAnimation::Unknown4C m_Failed Constructor sets it when FUN_10c37920 fails; IsFinished returns it.
+field MC_PlayAnimation::Unknown50 m_AnimIndex GetDescription prints DAT_10ff66b0[Unknown50].Unknown00 as the animation name.
+field MC_PlayAnimation::Unknown5C m_Duration IsFinished adds it to the start time and compares GetTimeSeconds() with the sum.
+field MC_PlayAnimation::Unknown60 m_StartTime Constructor stores GetTimeSeconds() here; IsFinished adds the duration to it.
+field MC_PlayAnimation::Unknown64 m_AnimName Copied from the constructor's name argument, which the constructor passes to FUN_10c37920.
+field Class_10C0C150::Unknown00 m_Count Add indexes the element at Unknown00; Resize sets it to the new count.
+field Class_10C0C150::Unknown04 m_CapacityBytes Resize divides Unknown04 by sizeof(item) for the capacity and stores capacity times sizeof(item).
+field Class_10C0C150::Unknown08 m_Items Add stores the item at Unknown08[Index]; RemoveAt swaps elements of the same array.
+field Class_10AA44B0::Unknown18 m_KeyAdapter Insert calls Unknown18.Virtual0 to get the key's bytes before hashing them.
+field cHUDLightGem::Unknown12C m_Gems Handle array (cIntArray): CreateGems appends one handle per gem; ReleaseGems frees them.
+field Class_10E6F474::Unknown0C m_Entries FindMatchIndex loops i < m_EntryCount over Unknown0C[i], calling Virtual4 on each entry.
+field cAISpeech::Unknown260 m_SummonCooldown Counts down each frame; reset to a random range after the summon line plays.
+field cAISpeech::Unknown264 m_SummonRange Target distance must be under this for UpdateSummon to play the summon line.
+field Class_10A34B90::Unknown00 m_Collisions Same layout as Class_10A250D0, where m_Collisions sits at this offset and Rehash zeroes it.
+field Class_10A34B90::Unknown04 m_Count Same layout as Class_10A250D0, where m_Count sits at this offset; Rehash, Reset and Release zero it.
+field Class_10A34B90::Unknown10 m_FixedSize Same offset as Class_10A250D0's m_FixedSize, which gates its rehashing; Reset rehashes only when it is clear.
+field Class_109373D0::Unknown1C m_StageTextures Texture pointer per stage: both resets clear Unknown1C[i] beside SetTexture(i, 0).
+field Class_10C4A150::Unknown00 m_Collisions Zeroed by Clear as Class_10C49200::Clear zeroes m_Collisions; same layout as Class_10C49100.
+field Class_10C4A150::Unknown04 m_Count Zeroed by Clear as Class_10C49200::Clear zeroes m_Count; same layout as Class_10C49100.
+field Class_10C4A150::Unknown0C m_BucketCount Zeroed by Clear as Class_10C49200::Clear zeroes m_BucketCount; same layout as Class_10C49100.
+field Class_10C4A150::Unknown14 m_Buckets Deleted then zeroed by Clear, as Class_10C49200::Clear does with m_Buckets.
+field Class_10C49E20::Unknown00 m_FreeIds AllocateId pops recycled ids from it before it uses the counter Unknown0C.
+field Class_10C49E20::Unknown0C m_NextId AllocateId returns ++Unknown0C - 1 when the list is empty: the next new id.
+field Class_10C4DE40::Unknown10 m_Elements FUN_10c4de40 indexes it as an array of Elem_10C4DE40 records.
+field Class_10C64AC0::Unknown1C m_Elements Array of Elem_10C64AC0 indexed by GetElem's Index.
+field Class_10C63EF0::Unknown18 m_Item Holds the item SetItem stores; the previous one is unlinked first.

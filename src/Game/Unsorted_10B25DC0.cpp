@@ -2,8 +2,8 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Game/Class_10AA9D90.h"
-#include "Game/Class_10B25D90.h"
-#include "Game/Class_10B25D60.h"
+#include "Game/cListReverseCursor.h"
+#include "Game/cListCursor.h"
 
 class FArchive;
 
@@ -21,11 +21,11 @@ public:
     int GetEntryValue();
     int GetSelectedValue();
     int FUN_10b25030();
-    int FUN_10b256a0();
+    int GetEntryCount();
     int FUN_10dc1760();
     void FUN_10b25700(int p1);
     void* FUN_10b25dc0(int p1);
-    int FUN_10b255f0();
+    int GetItemCount();
 
     int Unknown30;
     union
@@ -74,15 +74,15 @@ public:
 // FUNCTION: 0x10B25DC0 ?FUN_10b25dc0@Class_10B255F0@@QAEPAXH@Z
 void* Class_10B255F0::FUN_10b25dc0(int A)
 {
-    Class_10B25D90* Obj = (Class_10B25D90*)this;
+    cListReverseCursor* Obj = (cListReverseCursor*)this;
     switch (A)
     {
     case -1:
     {
         if (Obj->m_InListA != 0)
-            Obj->m_Index = ((Class_10B25D60*)this)->FindNextFromListA(&Obj->m_InListA);
+            Obj->m_Index = ((cListCursor*)this)->FindNextFromListA(&Obj->m_InListA);
         else
-            Obj->m_Index = ((Class_10B25D60*)this)->FindNextFromListB(&Obj->m_InListA);
+            Obj->m_Index = ((cListCursor*)this)->FindNextFromListB(&Obj->m_InListA);
         void* Result = FUN_10b24f70();
         if (Obj->m_InListA != 0)
             Obj->m_Index = Obj->FindPrevFromListA(&Obj->m_InListA);
@@ -100,9 +100,9 @@ void* Class_10B255F0::FUN_10b25dc0(int A)
             Obj->m_Index = Obj->FindPrevFromListB(&Obj->m_InListA);
         void* Result = FUN_10b24f70();
         if (Obj->m_InListA != 0)
-            Obj->m_Index = ((Class_10B25D60*)this)->FindNextFromListA(&Obj->m_InListA);
+            Obj->m_Index = ((cListCursor*)this)->FindNextFromListA(&Obj->m_InListA);
         else
-            Obj->m_Index = ((Class_10B25D60*)this)->FindNextFromListB(&Obj->m_InListA);
+            Obj->m_Index = ((cListCursor*)this)->FindNextFromListB(&Obj->m_InListA);
         return Result;
     }
     }

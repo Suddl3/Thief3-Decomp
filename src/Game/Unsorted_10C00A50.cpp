@@ -25,7 +25,7 @@ void Class_10C01F50::Free()
     m_Count = 0;
     m_BucketCount = 0;
     m_Buckets = 0;
-    Unknown00 = 0;
+    m_Collisions = 0;
 }
 
 // FUNCTION: 0x10C01FC0 ?Free@Class_10C01FC0@@QAEXXZ

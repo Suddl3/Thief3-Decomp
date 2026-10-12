@@ -7,7 +7,7 @@ class Class_10E79488
 {
 public:
     virtual void Virtual0();
-    virtual void FUN_10b1bd10();
+    virtual void Release();
     virtual void Virtual2();
     virtual void Virtual3();
     virtual void Virtual4();

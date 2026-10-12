@@ -15,7 +15,7 @@ public:
     unsigned int Insert(const cString& Key, const Class_10C59030_Value& Value);
     unsigned int Set(const cString& Key, const Class_10C59030_Value& Value);
 
-    Class_10C57530_Unknown18 Unknown18;
+    Class_10C57530_Unknown18 m_KeyTraits;
 };
 
 #endif // GAME_CLASS_10C59030_H

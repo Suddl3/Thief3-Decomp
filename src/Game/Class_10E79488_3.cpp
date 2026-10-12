@@ -34,14 +34,14 @@ class Class_10E79488
 {
 public:
     virtual void Virtual0();
-    virtual void FUN_10b1bd10();
+    virtual void Release();
 
     int Unknown04;
     Object_10B1BD10* Unknown08;
 };
 
-// FUNCTION: 0x10B1BD10 ?FUN_10b1bd10@Class_10E79488@@UAEXXZ
-void Class_10E79488::FUN_10b1bd10()
+// FUNCTION: 0x10B1BD10 ?Release@Class_10E79488@@UAEXXZ
+void Class_10E79488::Release()
 {
     if (Unknown08)
         Unknown08->Unknown08->Virtual10();

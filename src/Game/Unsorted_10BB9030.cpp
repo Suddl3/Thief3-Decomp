@@ -7,7 +7,7 @@
 #include "Game/Class_10C7D570.h"
 #include "Game/cString.h"
 #include "Game/Class_10E97B00.h"
-#include "Game/Class_10BC9A50.h"
+#include "Game/cAISpeech.h"
 
 extern float DAT_10eafbdc;
 
@@ -123,7 +123,7 @@ void Class_10BBB410::UpdateReprimand()
                 if (FUN_10bb7f30()->GetCurrent()->Virtual63())
                 {
                     cString Text(DAT_10e47660);
-                    ((Class_10BC9A50*)FUN_10bb7f30()->GetCurrent())->FUN_10bc7d70(AddressOf(Class_10E97B00("+reprimandplayer:ramp_down")), 0x14, 1, &Text, true);
+                    ((cAISpeech*)FUN_10bb7f30()->GetCurrent())->FUN_10bc7d70(AddressOf(Class_10E97B00("+reprimandplayer:ramp_down")), 0x14, 1, &Text, true);
                 }
             }
         }

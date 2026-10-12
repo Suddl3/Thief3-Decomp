@@ -3,9 +3,9 @@
 #ifndef GAME_CLASS_10E696A8_H
 #define GAME_CLASS_10E696A8_H
 
-#include "Game/Class_10E6B078.h"
+#include "Game/cTextWindow.h"
 
-class Class_10E696A8 : public Class_10E6B078
+class Class_10E696A8 : public cTextWindow
 {
 public:
     virtual ~Class_10E696A8();

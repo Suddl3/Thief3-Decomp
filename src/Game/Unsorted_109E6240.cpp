@@ -3,7 +3,7 @@
 #include <list>
 #include "Game/Class_109E6520_Field18.h"
 #include "Game/Class_10E5B7C8.h"
-#include "Game/Class_109E6520.h"
+#include "Game/cStringIntHashTable.h"
 #include "Game/TimeManager.h"
 #include "Game/Class_109E6410.h"
 
@@ -210,8 +210,8 @@ void Class_10E5B7C8::FUN_109e64e0()
     }
 }
 
-// FUNCTION: 0x109E6520 ?Insert@Class_109E6520@@QAEIABVcString@@ABH@Z
-unsigned int Class_109E6520::Insert(const cString& Key, const int& Value)
+// FUNCTION: 0x109E6520 ?Insert@cStringIntHashTable@@QAEIABVcString@@ABH@Z
+unsigned int cStringIntHashTable::Insert(const cString& Key, const int& Value)
 {
     if (!m_FixedSize && m_Collisions > m_BucketCount * 0.2)
         Rehash(m_BucketCount * 2);
@@ -233,8 +233,8 @@ unsigned int Class_109E6520::Insert(const cString& Key, const int& Value)
     return Index;
 }
 
-// FUNCTION: 0x109E6600 ?Rehash@Class_109E6520@@QAEXH@Z
-void Class_109E6520::Rehash(int Size)
+// FUNCTION: 0x109E6600 ?Rehash@cStringIntHashTable@@QAEXH@Z
+void cStringIntHashTable::Rehash(int Size)
 {
     int OldSize = m_BucketCount;
     Class_109E6520_Node** OldBuckets = m_Buckets;

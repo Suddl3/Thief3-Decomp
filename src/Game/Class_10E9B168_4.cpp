@@ -38,7 +38,7 @@ public:
     virtual void Virtual16();
     virtual void Serialize(FArchive& Ar);
 
-    FVector Unknown1C;
+    FVector m_Position;
     float m_Range;
     bool Unknown2C;
     Class_10E9B088 Unknown30;
@@ -48,7 +48,7 @@ public:
 void Class_10E9B168::Serialize(FArchive& Ar)
 {
     FUN_10c3db00(Ar);
-    FUN_10b052a0(Ar, &Unknown1C);
+    FUN_10b052a0(Ar, &m_Position);
     Ar.Serialize(&m_Range, 4);
     Ar.Serialize(&Unknown2C, 1);
     Unknown30.FUN_10c3da10((int)&Ar);

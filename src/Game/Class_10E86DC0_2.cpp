@@ -15,25 +15,25 @@ public:
     void** Unknown00;
 };
 
-class Class_10E86FD0 : public Class_10E87B68
+class cTabScreenMainMenu : public Class_10E87B68
 {
 public:
-    Class_10E86FD0* Construct();
+    cTabScreenMainMenu* Construct();
 };
 
 void* GetWindowManager();
 
-class Class_10E88900
+class cT3TabbedWindow
 {
 public:
-    Class_10E88900();
+    cT3TabbedWindow();
 
-    virtual ~Class_10E88900();
+    virtual ~cT3TabbedWindow();
 
     char Unknown04[0x2C8];
 };
 
-class Class_10E86DC0 : public Class_10E88900
+class Class_10E86DC0 : public cT3TabbedWindow
 {
 public:
     Class_10E86DC0(int A);
@@ -69,8 +69,8 @@ void Class_10B64280::FUN_10b6f870()
     static_cast<Class_10B15960*>(GetWindowManager())->OpenMainMenuWindow(0);
 }
 
-// FUNCTION: 0x10B6F9E0 ?Construct@Class_10E86FD0@@QAEPAV1@XZ
-Class_10E86FD0* Class_10E86FD0::Construct()
+// FUNCTION: 0x10B6F9E0 ?Construct@cTabScreenMainMenu@@QAEPAV1@XZ
+cTabScreenMainMenu* cTabScreenMainMenu::Construct()
 {
     this->Class_10E87B68::Class_10E87B68();
     Unknown00 = DAT_10e86fd0;

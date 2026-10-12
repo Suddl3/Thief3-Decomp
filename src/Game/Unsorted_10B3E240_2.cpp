@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10B39530.h"
 
-class Class_10B3ED20
+class cLockPickController
 {
 public:
     virtual void Virtual0();
@@ -15,7 +15,7 @@ public:
     bool m_ResetPending;
 };
 
-class Class_10E7ED00 : public Class_10B3ED20
+class Class_10E7ED00 : public cLockPickController
 {
 public:
     virtual void Virtual5();

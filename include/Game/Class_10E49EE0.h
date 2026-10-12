@@ -11,10 +11,10 @@ public:
     virtual int AddRef();
     virtual int Release();
     virtual void Virtual2();
-    virtual unsigned int FUN_10934260();
+    virtual unsigned int GetVertexCount();
     virtual void Virtual4();
     virtual int UnlockVertices();
-    virtual int FUN_109342f0(int A);
+    virtual int BindStreamSource(int A);
     virtual void Virtual7();
     virtual ~Class_10E49EE0();
     virtual void Virtual9();
@@ -24,10 +24,10 @@ public:
     int Unknown18;
     union
     {
-        unsigned int Unknown1c;
+        unsigned int m_Size;
         int Unknown1C;
     };
-    unsigned int Unknown20;
+    unsigned int m_Stride;
     int Unknown24;
 };
 

@@ -1,7 +1,7 @@
 // Game/Unsorted_10BF79D0_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-#include "Game/Class_10BAEC40.h"
+#include "Game/cStructArray.h"
 
 extern "C" void* memmove(void* Dest, const void* Src, unsigned Count);
 
@@ -15,8 +15,8 @@ struct Struct_10BAEC40_Unknown08
     bool Unknown0C;
 };
 
-// FUNCTION: 0x10BF7AD0 ?MoveRange@Class_10BAEC40@@QAEXHHH@Z
-void Class_10BAEC40::MoveRange(int From, int To, int Count)
+// FUNCTION: 0x10BF7AD0 ?MoveRange@cStructArray@@QAEXHHH@Z
+void cStructArray::MoveRange(int From, int To, int Count)
 {
     if (From != To && Count != 0)
     {

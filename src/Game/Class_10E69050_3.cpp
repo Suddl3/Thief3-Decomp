@@ -10,7 +10,7 @@ public:
     virtual void Virtual3(int A);
 };
 
-class Class_10E69050
+class cSequence
 {
 public:
     virtual void Virtual0();
@@ -23,8 +23,8 @@ public:
     int m_Current;
 };
 
-// FUNCTION: 0x10A58C10 ?FUN_10a58c10@Class_10E69050@@UAEHH@Z
-int Class_10E69050::FUN_10a58c10(int A)
+// FUNCTION: 0x10A58C10 ?FUN_10a58c10@cSequence@@UAEHH@Z
+int cSequence::FUN_10a58c10(int A)
 {
     m_Items[m_Current]->Virtual3(A);
     return A;

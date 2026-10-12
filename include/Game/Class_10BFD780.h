@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_10BFD780_H
 #define GAME_CLASS_10BFD780_H
 
-#include "Game/Class_10BAEC00.h"
+#include "Game/cObjectArray.h"
 #include "Game/cIntArray.h"
 
 class Class_10BFD780_Unknown10;
@@ -19,7 +19,7 @@ public:
     Class_10BFD780_Unknown10* Unknown18;
     Class_10BFD780_Unknown10* Unknown1C;
     char Pad20[0x34];
-    Class_10BAEC00 m_Entries;
+    cObjectArray m_Entries;
 };
 
 #endif // GAME_CLASS_10BFD780_H

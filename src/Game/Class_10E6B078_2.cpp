@@ -5,7 +5,7 @@
 #include "Game/Class_10A66190.h"
 #include "Game/Class_10E6B288.h"
 
-class Class_10E6AEA0 : public Class_10E6B288
+class cBorderWindow : public Class_10E6B288
 {
 public:
     virtual void FUN_10a66560();
@@ -83,10 +83,10 @@ public:
     virtual void Virtual109();
 };
 
-class Class_10E6B078 : public Class_10A66190
+class cTextWindow : public Class_10A66190
 {
 public:
-    virtual ~Class_10E6B078();
+    virtual ~cTextWindow();
 
     char Unknown04[0x154];
     FString Unknown158;
@@ -94,8 +94,8 @@ public:
     Class_1091AA50* Unknown18C;
 };
 
-// FUNCTION: 0x10A663B0 ??1Class_10E6B078@@UAE@XZ
-Class_10E6B078::~Class_10E6B078()
+// FUNCTION: 0x10A663B0 ??1cTextWindow@@UAE@XZ
+cTextWindow::~cTextWindow()
 {
     Class_1091AA50* Object = Unknown18C;
     if (Object)
@@ -105,11 +105,11 @@ Class_10E6B078::~Class_10E6B078()
     }
 }
 
-// FUNCTION: 0x10A66430 ??_GClass_10E6B078@@UAEPAXI@Z
+// FUNCTION: 0x10A66430 ??_GcTextWindow@@UAEPAXI@Z
 // Compiler-generated: emitted with the class's vtable by 0x10A663B0's definition in this unit.
 
-// FUNCTION: 0x10A66560 ?FUN_10a66560@Class_10E6AEA0@@UAEXXZ
-void Class_10E6AEA0::FUN_10a66560()
+// FUNCTION: 0x10A66560 ?FUN_10a66560@cBorderWindow@@UAEXXZ
+void cBorderWindow::FUN_10a66560()
 {
     Class_10E6B288::FUN_10aa6d70();
     if (!Unknown120)

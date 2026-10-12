@@ -1,13 +1,13 @@
 // Game/Unsorted_10942C60.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-#include "Game/Class_109435A0.h"
+#include "Game/cShortArray.h"
 #include "Game/Class_10905A90_Member.h"
 
 Class_10905A90_Member* GetAllocator();
 
-// FUNCTION: 0x10942C60 ?Resize@Class_109435A0@@QAEXH@Z
-void Class_109435A0::Resize(int NewCount)
+// FUNCTION: 0x10942C60 ?Resize@cShortArray@@QAEXH@Z
+void cShortArray::Resize(int NewCount)
 {
     int Capacity = !m_Items ? 0 : m_CapacityBytes / sizeof(short);
     GetAllocator()->Virtual8(0, 0);

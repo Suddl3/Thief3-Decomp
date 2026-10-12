@@ -39,7 +39,7 @@ void Class_10B197E0::Free()
 void Class_10B1B8A0::EmptyArrays()
 {
     for (int i = 0; i < 8; i++)
-        m_Arrays[i].FUN_10abdae0(0);
+        m_Arrays[i].SetCount(0);
     FUN_10b1a840();
 }
 

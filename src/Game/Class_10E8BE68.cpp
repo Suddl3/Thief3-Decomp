@@ -20,7 +20,7 @@ public:
     virtual void Virtual2();
     virtual void Virtual3();
     virtual void Virtual4();
-    virtual bool FUN_10bc3fc0();
+    virtual bool CanExit();
     virtual void Virtual6();
     virtual void Virtual7();
     virtual void Virtual8();
@@ -87,8 +87,8 @@ public:
     float Unknown0C;
 };
 
-// FUNCTION: 0x10BC3FC0 ?FUN_10bc3fc0@Class_10E8BE68@@UAE_NXZ
-bool Class_10E8BE68::FUN_10bc3fc0()
+// FUNCTION: 0x10BC3FC0 ?CanExit@Class_10E8BE68@@UAE_NXZ
+bool Class_10E8BE68::CanExit()
 {
     double Limit = Virtual65() + Unknown0C;
     if (GetTimeSeconds() < Limit)

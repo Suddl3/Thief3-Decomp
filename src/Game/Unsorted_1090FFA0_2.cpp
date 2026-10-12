@@ -14,26 +14,26 @@ class Class_1090FD40
 public:
     int Add(const cString& Item);
     int AddUnique(const cString& Item);
-    void FUN_1090f2c0(int Count);
+    void SetCount(int Count);
     void FUN_1090fd00();
-    void FUN_10a37f80(int A, int B, int C);
+    void MoveItems(int A, int B, int C);
     void RemoveAt(int Index);
     void Insert(int Index, const cString& Value);
     void FUN_10a5b5b0(int A, int B);
     void RemoveUnordered(int Index);
     void Empty()
     {
-        FUN_1090f2c0(0);
-        if (Unknown04)
+        SetCount(0);
+        if (m_CapacityBytes)
         {
             GetAllocator()->Virtual5(m_Items);
             m_Items = 0;
-            Unknown04 = 0;
+            m_CapacityBytes = 0;
         }
     }
 
     int m_Count;
-    int Unknown04;
+    int m_CapacityBytes;
     cString* m_Items;
 };
 
@@ -46,7 +46,7 @@ int Class_1090FD40::AddUnique(const cString& Item)
         if (strcmp(*m_Items[i], *Item) == 0)
             return i;
     }
-    FUN_1090f2c0(Count + 1);
+    SetCount(Count + 1);
     m_Items[Count] = Item;
     return Count;
 }

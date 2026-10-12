@@ -9,7 +9,7 @@ class Class_10C4DE40
 {
 public:
     char Unknown00[0x10];
-    Elem_10C4DE40* Unknown10;
+    Elem_10C4DE40* m_Elements;
 
     int FUN_10c4de40(int Index);
 };

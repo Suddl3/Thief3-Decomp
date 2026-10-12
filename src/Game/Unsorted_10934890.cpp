@@ -17,7 +17,7 @@ public:
     virtual void Virtual6();
     virtual int UnlockVertices();
 
-    char Unknown04[0x10];
+    char m_Owner[0x10];
     Class_10E49EE0_Member* m_Member;
 };
 

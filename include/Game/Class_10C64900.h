@@ -9,7 +9,7 @@ struct Struct_10C64900;
 class Class_10C64900
 {
 public:
-    cString FUN_10c64900();
+    cString GetSoundName();
 
     char Unknown00[8];
     Struct_10C64900* Unknown08;

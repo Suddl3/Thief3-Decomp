@@ -3,13 +3,13 @@
 #include "Game/Class_10905A90_Member.h"
 #include "Game/cIntArray.h"
 
-class Class_10E6AEA0
+class cBorderWindow
 {
 public:
-    virtual ~Class_10E6AEA0();
+    virtual ~cBorderWindow();
 };
 
-class Class_10E84BB8 : public Class_10E6AEA0
+class Class_10E84BB8 : public cBorderWindow
 {
 public:
     virtual ~Class_10E84BB8();

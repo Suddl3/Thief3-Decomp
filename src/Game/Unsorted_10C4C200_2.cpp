@@ -15,8 +15,8 @@ class Class_10C47F80;
 
 extern Class_10C47F80* DAT_10ff70b8;
 
-// FUNCTION: 0x10C4C2D0 ?FUN_10c4c2d0@@YAPAVClass_10C4B2A0@@XZ
-Class_10C4B2A0* FUN_10c4c2d0()
+// FUNCTION: 0x10C4C2D0 ?GetCadenceFactory@@YAPAVClass_10C4B2A0@@XZ
+Class_10C4B2A0* GetCadenceFactory()
 {
     if (!DAT_10ff70b8)
     {

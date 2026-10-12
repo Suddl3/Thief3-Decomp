@@ -44,14 +44,14 @@ public:
     void ClearVelocity(AGarrett* Garrett);
 };
 
-class Class_10E7E658 : public Class_10E7E6A0
+class cRopeMotion : public Class_10E7E6A0
 {
 public:
     virtual void DismountRope(AGarrett* Garrett);
 };
 
-// FUNCTION: 0x10B494C0 ?DismountRope@Class_10E7E658@@UAEXPAVAGarrett@@@Z
-void Class_10E7E658::DismountRope(AGarrett* Garrett)
+// FUNCTION: 0x10B494C0 ?DismountRope@cRopeMotion@@UAEXPAVAGarrett@@@Z
+void cRopeMotion::DismountRope(AGarrett* Garrett)
 {
     ReleaseArm(Garrett);
     ClearVelocity(Garrett);

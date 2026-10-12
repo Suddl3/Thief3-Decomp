@@ -8,6 +8,6 @@ class cString;
 void Class_1090FD40::RemoveAt(int Index)
 {
     if (Index != m_Count - 1)
-        FUN_10a37f80(Index + 1, Index, m_Count - Index - 1);
-    FUN_1090f2c0(m_Count - 1);
+        MoveItems(Index + 1, Index, m_Count - Index - 1);
+    SetCount(m_Count - 1);
 }

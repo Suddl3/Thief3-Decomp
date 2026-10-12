@@ -9,12 +9,12 @@ bool FUN_10c5d5b0(int p1, int p2);
 
 void FUN_10c5d830(void* Item, Class_10C63EF0* Owner);
 
-// FUNCTION: 0x10C63EF0 ?FUN_10c63ef0@Class_10C63EF0@@QAEXPAX@Z
-void Class_10C63EF0::FUN_10c63ef0(void* NewItem)
+// FUNCTION: 0x10C63EF0 ?SetItem@Class_10C63EF0@@QAEXPAX@Z
+void Class_10C63EF0::SetItem(void* NewItem)
 {
-    if (Unknown18)
-        FUN_10c5d5b0((int)this, (int)Unknown18);
-    Unknown18 = NewItem;
+    if (m_Item)
+        FUN_10c5d5b0((int)this, (int)m_Item);
+    m_Item = NewItem;
     FUN_10c5d830(NewItem, this);
 }
 

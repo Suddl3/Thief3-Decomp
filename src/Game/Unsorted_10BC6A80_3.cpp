@@ -3,10 +3,10 @@
 // Class_10E97B00's destructor is implicit (inlined on the normal path).
 #include "Game/Class_10E97B00.h"
 #include "Game/cString.h"
-#include "Game/Class_10BC9A50.h"
+#include "Game/cAISpeech.h"
 
-// FUNCTION: 0x10BC9A50 ?ShopOwnerNoCash@Class_10BC9A50@@QAE_NXZ
-bool Class_10BC9A50::ShopOwnerNoCash()
+// FUNCTION: 0x10BC9A50 ?ShopOwnerNoCash@cAISpeech@@QAE_NXZ
+bool cAISpeech::ShopOwnerNoCash()
 {
     Class_10E97B00 Name("+shopowner:nocash");
     cString Text(DAT_10e47660);

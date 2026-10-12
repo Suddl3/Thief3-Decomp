@@ -5,7 +5,7 @@
 #include "Game/Class_1098E330.h"
 #include "Game/Class_10A58B40.h"
 #include "Game/Class_10A58BE0_Member.h"
-#include "Game/Class_10E69050.h"
+#include "Game/cSequence.h"
 #include "Game/Object_10970890.h"
 
 class Class_10E68D80
@@ -91,8 +91,8 @@ int Class_10A58B40::FUN_10a58b40()
     return Result;
 }
 
-// FUNCTION: 0x10A58BE0 ?FUN_10a58be0@Class_10E69050@@UAEXXZ
-void Class_10E69050::FUN_10a58be0()
+// FUNCTION: 0x10A58BE0 ?FUN_10a58be0@cSequence@@UAEXXZ
+void cSequence::FUN_10a58be0()
 {
     m_Items[m_Current]->Virtual2();
 }

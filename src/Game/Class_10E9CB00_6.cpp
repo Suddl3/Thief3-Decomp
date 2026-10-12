@@ -7,7 +7,7 @@ class cResSound;
 
 Class_10DB58F0* FUN_10db58f0();
 
-Class_10C662F0* FUN_10c65090();
+Class_10C662F0* GetSchemaMetaFile();
 
 class cResSound
 {
@@ -38,5 +38,5 @@ void cResSound::FUN_10c61030()
     if (Virtual17())
         FUN_10db58f0()->Virtual14(this);
     else
-        FUN_10c65090()->Release(this);
+        GetSchemaMetaFile()->Release(this);
 }

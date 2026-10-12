@@ -74,7 +74,7 @@ public:
     FLOAT Unknown13C;
 };
 
-class Class_10E6AEA0
+class cBorderWindow
 {
 public:
     virtual void Virtual0();
@@ -127,8 +127,8 @@ FVector Class_10E68B10::FUN_10a56c50()
     return Ext + Virtual6();
 }
 
-// FUNCTION: 0x10A572C0 ?AddToArray@Class_10E6AEA0@@UAEXPAVcIntArray@@H@Z
-void Class_10E6AEA0::AddToArray(cIntArray* Array, int B)
+// FUNCTION: 0x10A572C0 ?AddToArray@cBorderWindow@@UAEXPAVcIntArray@@H@Z
+void cBorderWindow::AddToArray(cIntArray* Array, int B)
 {
     if (Array && Unknown118)
     {

@@ -15,7 +15,7 @@ public:
     int GetLinkedObject();
 };
 
-class Class_10B3ED20 : public Class_10AA82D0
+class cLockPickController : public Class_10AA82D0
 {
 public:
     void Reset();
@@ -25,8 +25,8 @@ public:
     char m_ResetPending;
 };
 
-// FUNCTION: 0x10B3EA80 ?Reset@Class_10B3ED20@@QAEXXZ
-void Class_10B3ED20::Reset()
+// FUNCTION: 0x10B3EA80 ?Reset@cLockPickController@@QAEXXZ
+void cLockPickController::Reset()
 {
     m_ResetPending = 0;
     ((Class_10B39530*)GetLinkedObject())->Play(0xb5, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);

@@ -40,7 +40,7 @@ public:
 
     Struct_10C3D0A0* Unknown04;
     char Unknown08[0x14];
-    Struct_10C05A50 Unknown1C;
+    Struct_10C05A50 m_Position;
     char Unknown24[4];
     float m_Range;
 };
@@ -55,7 +55,7 @@ void FUN_10c3d080(float Arg)
 // FUNCTION: 0x10C3D0A0 ?IsInRange@Class_10E9B168@@UAEHXZ
 int Class_10E9B168::IsInRange()
 {
-    if (Distance2D(&Unknown04->Unknown2C, &Unknown1C) < m_Range)
+    if (Distance2D(&Unknown04->Unknown2C, &m_Position) < m_Range)
         return 1;
     return 0;
 }

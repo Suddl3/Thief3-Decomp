@@ -59,11 +59,11 @@ void Class_10B37FA0::FUN_10b37fa0(int A, int B, int C)
     FUN_10b37640(B, C);
 }
 
-// FUNCTION: 0x10B39500 ?FUN_10b39500@Class_10E7C584@@UAEXH@Z
-void Class_10E7C584::FUN_10b39500(int A)
+// FUNCTION: 0x10B39500 ?ForwardToChildren@Class_10E7C584@@UAEXH@Z
+void Class_10E7C584::ForwardToChildren(int A)
 {
     for (int i = 0; i < 8; i++)
-        Unknown0C[i]->FUN_10b48300(A);
+        m_Children[i]->FUN_10b48300(A);
 }
 
 // FUNCTION: 0x10B39580 ?FUN_10b39580@Class_10B39580@@QAEXHH@Z

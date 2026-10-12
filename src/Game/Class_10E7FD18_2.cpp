@@ -12,19 +12,19 @@ public:
 
 struct Struct_10C08690;
 
-class Class_10E7FD18 : public Class_10E67FD0
+class cHUDLightGem : public Class_10E67FD0
 {
 public:
-    virtual ~Class_10E7FD18();
-    void FUN_10b550c0();
+    virtual ~cHUDLightGem();
+    void ReleaseGems();
 
     char Unknown04[0x124];
     cString Unknown128;
-    cIntArray Unknown12C;
+    cIntArray m_Gems;
 };
 
-// FUNCTION: 0x10B55110 ??1Class_10E7FD18@@UAE@XZ
-Class_10E7FD18::~Class_10E7FD18()
+// FUNCTION: 0x10B55110 ??1cHUDLightGem@@UAE@XZ
+cHUDLightGem::~cHUDLightGem()
 {
-    FUN_10b550c0();
+    ReleaseGems();
 }

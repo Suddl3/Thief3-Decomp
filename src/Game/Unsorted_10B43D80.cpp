@@ -6,10 +6,10 @@
 
 extern void* DAT_10e81130[];
 
-class Class_10E6AEA0
+class cBorderWindow
 {
 public:
-    Class_10E6AEA0();
+    cBorderWindow();
 
     void** Unknown00;
     char Unknown04[0xE4];
@@ -17,7 +17,7 @@ public:
     char Unknown0EC[0x64];
 };
 
-class Class_10E81130 : public Class_10E6AEA0
+class Class_10E81130 : public cBorderWindow
 {
 public:
     Class_10E81130* FUN_10b46080();
@@ -47,7 +47,7 @@ Class_10E80C78::~Class_10E80C78()
 // FUNCTION: 0x10B46080 ?FUN_10b46080@Class_10E81130@@QAEPAV1@XZ
 Class_10E81130* Class_10E81130::FUN_10b46080()
 {
-    this->Class_10E6AEA0::Class_10E6AEA0();
+    this->cBorderWindow::cBorderWindow();
     Unknown150 = 0;
     Unknown154 = 0;
     Unknown158 = 0;

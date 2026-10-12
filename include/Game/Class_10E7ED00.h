@@ -3,11 +3,11 @@
 #ifndef GAME_CLASS_10E7ED00_H
 #define GAME_CLASS_10E7ED00_H
 
-#include "Game/Class_10B3ED20.h"
+#include "Game/cLockPickController.h"
 
 struct Struct_10B3ACE0;
 
-class Class_10E7ED00 : public Class_10B3ED20
+class Class_10E7ED00 : public cLockPickController
 {
 public:
     virtual void FUN_10b3e380(Struct_10B3ACE0* A, float B, float C);

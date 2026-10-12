@@ -17,7 +17,7 @@ public:
 
 extern Class_10FF667C* DAT_10ff667c;
 
-class Class_10B3ED20
+class cLockPickController
 {
 public:
     virtual void Virtual0();

@@ -3,9 +3,9 @@
 #ifndef GAME_CLASS_109E7C30_H
 #define GAME_CLASS_109E7C30_H
 
-#include "Game/Class_109E6520.h"
+#include "Game/cStringIntHashTable.h"
 
-class Class_109E7C30 : public Class_109E6520
+class Class_109E7C30 : public cStringIntHashTable
 {
 public:
     void Reset(int Size);

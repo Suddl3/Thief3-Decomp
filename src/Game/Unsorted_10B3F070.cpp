@@ -19,7 +19,7 @@ public:
     Class_1098E3D0* Unknown458;
 };
 
-class Class_10B3ED20 : public Class_10E7E538
+class cLockPickController : public Class_10E7E538
 {
 public:
     virtual void Virtual0();
@@ -46,8 +46,8 @@ Class_10B542D0* GetLockPickWindowManager();
 
 Class_10A174E0* GetStats();
 
-// FUNCTION: 0x10B3F830 ?OnLockPicked@Class_10B3ED20@@QAEXPAVClass_10B3F830_Arg@@@Z
-void Class_10B3ED20::OnLockPicked(Class_10B3F830_Arg* A)
+// FUNCTION: 0x10B3F830 ?OnLockPicked@cLockPickController@@QAEXPAVClass_10B3F830_Arg@@@Z
+void cLockPickController::OnLockPicked(Class_10B3F830_Arg* A)
 {
     Reset();
     ((Class_10A3C550*)DAT_10f35dec->Unknown94)->Start(cString("LPOpenLock"));

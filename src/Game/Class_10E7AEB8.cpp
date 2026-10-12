@@ -2,13 +2,13 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10B27FE0.h"
 
-class Class_10E6AEA0
+class cBorderWindow
 {
 public:
-    virtual ~Class_10E6AEA0();
+    virtual ~cBorderWindow();
 };
 
-class cT3MainMenuWindow : public Class_10E6AEA0
+class cT3MainMenuWindow : public cBorderWindow
 {
 public:
     ~cT3MainMenuWindow();

@@ -17,6 +17,6 @@ Class_10E49EE0::~Class_10E49EE0()
     }
     Unknown18 = 0;
     Unknown1C = 0;
-    Unknown20 = 0;
+    m_Stride = 0;
     Unknown24 = 0;
 }

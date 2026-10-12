@@ -29,7 +29,7 @@ class Class_10E95288;
 
 class Class_10E95898;
 
-class Class_10E96510;
+class cYellowAlert;
 
 // FUNCTION: 0x10B99CE0 ?FUN_10b99ce0@Class_10E4CCD0@@UAEPAVClass_10E93878@@PAUStruct_10B98E00@@@Z
 Class_10E93878* Class_10E4CCD0::FUN_10b99ce0(Struct_10B98E00* A)

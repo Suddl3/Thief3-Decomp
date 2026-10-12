@@ -6,7 +6,7 @@
 #include "Game/Struct_10C0EE30.h"
 #include "Game/Class_10E8C4A4.h"
 #include "Game/cIntArray.h"
-#include "Game/Class_10E97CB4.h"
+#include "Game/cContextVolumeList.h"
 #include "Game/Class_10E97CC0.h"
 
 extern const char DAT_10e47600[];
@@ -161,20 +161,20 @@ public:
     Class_10E984F4* Init();
 };
 
-class Class_10E97CB4;
+class cContextVolumeList;
 
 class Class_10F46DA0
 {
 public:
     virtual void Virtual0();
     virtual void Virtual1();
-    virtual void Virtual2(Class_10E97CB4* Obj);
+    virtual void Virtual2(cContextVolumeList* Obj);
 };
 
 extern Class_10F46DA0* DAT_10f46da0;
 
-// FUNCTION: 0x10C0E510 ??1Class_10E97CB4@@UAE@XZ
-Class_10E97CB4::~Class_10E97CB4()
+// FUNCTION: 0x10C0E510 ??1cContextVolumeList@@UAE@XZ
+cContextVolumeList::~cContextVolumeList()
 {
     DAT_10f46da0->Virtual2(this);
 }

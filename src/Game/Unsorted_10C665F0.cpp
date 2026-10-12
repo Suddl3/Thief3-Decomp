@@ -64,7 +64,7 @@ public:
     virtual Class_10C56E40 Virtual27(Class_10C56E40& Owner);
 };
 
-Class_10C4B2A0* FUN_10c4c2d0();
+Class_10C4B2A0* GetCadenceFactory();
 
 Class_10C66610_Item* FUN_10d3f2e0(int A);
 
@@ -73,7 +73,7 @@ void FUN_10d3f2c0(Class_10C66610_Item** Item);
 // FUNCTION: 0x10C66610 ?FUN_10c66610@Class_10C66610@@QAEXH@Z
 void Class_10C66610::FUN_10c66610(int A)
 {
-    Class_10C66610_Obj* Obj = FUN_10c4c2d0()->Virtual14();
+    Class_10C66610_Obj* Obj = GetCadenceFactory()->Virtual14();
     Class_10C66610_Item* Item = FUN_10d3f2e0(1);
     Item->Unknown04 = A;
     Class_10C56E40 Owner = Obj->Virtual21();

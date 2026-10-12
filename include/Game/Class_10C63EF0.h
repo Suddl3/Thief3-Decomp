@@ -6,10 +6,10 @@
 class Class_10C63EF0
 {
 public:
-    void FUN_10c63ef0(void* NewItem);
+    void SetItem(void* NewItem);
 
     char Unknown00[0x18];
-    void* Unknown18;
+    void* m_Item;
 };
 
 #endif // GAME_CLASS_10C63EF0_H

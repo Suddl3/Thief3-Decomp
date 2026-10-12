@@ -3,7 +3,7 @@
 
 extern "C" void* memcpy(void* Dest, const void* Src, unsigned Count);
 
-class Class_10E9CD90
+class cMemoryStream
 {
 public:
     virtual void Virtual0();
@@ -15,8 +15,8 @@ public:
     int m_Position;
 };
 
-// FUNCTION: 0x10C63FD0 ?Read@Class_10E9CD90@@UAEXPAXI@Z
-void Class_10E9CD90::Read(void* Dest, unsigned Count)
+// FUNCTION: 0x10C63FD0 ?Read@cMemoryStream@@UAEXPAXI@Z
+void cMemoryStream::Read(void* Dest, unsigned Count)
 {
     memcpy(Dest, m_Buffer + m_Position, Count);
     m_Position += Count;

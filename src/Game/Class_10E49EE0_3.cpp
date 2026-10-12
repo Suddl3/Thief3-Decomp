@@ -5,11 +5,11 @@
 
 extern cD3DStateCache* DAT_10f31be0;
 
-// FUNCTION: 0x109342F0 ?FUN_109342f0@Class_10E49EE0@@UAEHH@Z
-int Class_10E49EE0::FUN_109342f0(int A)
+// FUNCTION: 0x109342F0 ?BindStreamSource@Class_10E49EE0@@UAEHH@Z
+int Class_10E49EE0::BindStreamSource(int A)
 {
     if (m_Member == 0)
         return 0x80040721;
-    DAT_10f31be0->SetStreamSource(m_Member, Unknown20);
+    DAT_10f31be0->SetStreamSource(m_Member, m_Stride);
     return 0;
 }

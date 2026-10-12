@@ -6,15 +6,15 @@
 class Class_10C4A150
 {
 public:
-    void FUN_10c49da0(int A);
-    void FUN_10c4a150();
+    void Reset(int A);
+    void Clear();
 
-    int Unknown00;
-    int Unknown04;
+    int m_Collisions;
+    int m_Count;
     char Unknown08[4];
-    int Unknown0C;
+    int m_BucketCount;
     char Unknown10[4];
-    void* Unknown14;
+    void* m_Buckets;
 };
 
 #endif // GAME_CLASS_10C4A150_H

@@ -36,7 +36,7 @@ public:
     void FUN_1094d500(int A);
 
     char Unknown04[0x58];
-    int Unknown5C;
+    int m_PendingFlags;
     int Unknown60;
     char Pad64[0x14];
     float Field78;

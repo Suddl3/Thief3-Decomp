@@ -13,7 +13,7 @@
 #include "Game/Class_10BDF0A0.h"
 #include "Game/Class_10E95F40.h"
 #include "Game/Class_10E960D8.h"
-#include "Game/Class_10E96510.h"
+#include "Game/cYellowAlert.h"
 #include "Game/Class_10E96810.h"
 #include "Game/Class_10E97B00.h"
 
@@ -191,7 +191,7 @@ public:
 
 void FUN_10bcac50();
 
-void FUN_10bc3fc0();
+void CanExit();
 
 extern const char DAT_10e960c8[];
 
@@ -434,7 +434,7 @@ void Class_10BE40B0::FUN_10be40b0()
 // FUNCTION: 0x10BE43A0 ?FUN_10be43a0@@YAXXZ
 void FUN_10be43a0()
 {
-    FUN_10bc3fc0();
+    CanExit();
 }
 
 // FUNCTION: 0x10BE4570 ?FUN_10be4570@@YAPAXXZ
@@ -473,8 +473,8 @@ void FUN_10be58b0()
     FUN_10be3f90();
 }
 
-// FUNCTION: 0x10BE5F60 ?Serialize@Class_10E96510@@UAEXPAVObject_10BE58C0@@@Z
-void Class_10E96510::Serialize(Object_10BE58C0* Ar)
+// FUNCTION: 0x10BE5F60 ?Serialize@cYellowAlert@@UAEXPAVObject_10BE58C0@@@Z
+void cYellowAlert::Serialize(Object_10BE58C0* Ar)
 {
     FUN_10be4ef0(Ar);
 }
@@ -485,8 +485,8 @@ void FUN_10be7e90()
     FUN_10be5000();
 }
 
-// FUNCTION: 0x10BE8810 ?GetYellowAlertName@Class_10E96510@@QAE?AVcString@@XZ
-cString Class_10E96510::GetYellowAlertName()
+// FUNCTION: 0x10BE8810 ?GetYellowAlertName@cYellowAlert@@QAE?AVcString@@XZ
+cString cYellowAlert::GetYellowAlertName()
 {
     return cString(DAT_10e8c048);
 }

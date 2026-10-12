@@ -1,4 +1,4 @@
-// Game/Class_10E88900.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/cT3TabbedWindow.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10B59770.h"
 #include "Game/cIntArray.h"
@@ -25,12 +25,12 @@ public:
     char Unknown04[0x134];
 };
 
-class Class_10E88900 : public Class_10E822B0
+class cT3TabbedWindow : public Class_10E822B0
 {
 public:
-    Class_10E88900();
+    cT3TabbedWindow();
 
-    virtual ~Class_10E88900();
+    virtual ~cT3TabbedWindow();
 
     int Unknown154;
     int Unknown158;
@@ -45,13 +45,13 @@ public:
     Class_10B59770 Unknown2C0;
 };
 
-// FUNCTION: 0x10B7A6F0 ??0Class_10E88900@@QAE@XZ
-Class_10E88900::Class_10E88900()
+// FUNCTION: 0x10B7A6F0 ??0cT3TabbedWindow@@QAE@XZ
+cT3TabbedWindow::cT3TabbedWindow()
     : Unknown154(0), Unknown158(0), Unknown15C(-1), Unknown160(-1), Unknown17C(false), Unknown2B8(0),
       Unknown2BC(0)
 {
     Unknown0E8 = 6;
 }
 
-// FUNCTION: 0x10B7A7B0 ??_GClass_10E88900@@UAEPAXI@Z
+// FUNCTION: 0x10B7A7B0 ??_GcT3TabbedWindow@@UAEPAXI@Z
 // Compiler-generated: emitted with the class's vtable by 0x10B7A6F0's definition in this unit.

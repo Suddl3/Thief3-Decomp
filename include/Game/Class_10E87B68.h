@@ -3,9 +3,9 @@
 #ifndef GAME_CLASS_10E87B68_H
 #define GAME_CLASS_10E87B68_H
 
-#include "Game/Class_10E88900.h"
+#include "Game/cT3TabbedWindow.h"
 
-class Class_10E87B68 : public Class_10E88900
+class Class_10E87B68 : public cT3TabbedWindow
 {
 public:
     virtual ~Class_10E87B68();

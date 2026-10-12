@@ -1,6 +1,6 @@
 // Game/Unsorted_10B2EEA0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10B2F6A0.h"
+#include "Game/cCountLabel.h"
 #include "Game/Struct_10B2E690.h"
 #include "Game/Class_10B2EEA0.h"
 
@@ -222,8 +222,8 @@ void Class_10B2EEA0::MoveTo(Struct_10B16860* A, float M)
     }
 }
 
-// FUNCTION: 0x10B2F6A0 ?SetHideCount@Class_10B2F6A0@@QAEXE@Z
-void Class_10B2F6A0::SetHideCount(unsigned char param)
+// FUNCTION: 0x10B2F6A0 ?SetHideCount@cCountLabel@@QAEXE@Z
+void cCountLabel::SetHideCount(unsigned char param)
 {
     m_HideCount = param;
     RefreshLabel();

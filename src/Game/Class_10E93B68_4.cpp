@@ -3,7 +3,7 @@
 
 void FUN_10bd8300();
 
-class Class_10E93B68
+class cSampleStats
 {
 public:
     virtual void Virtual0();
@@ -29,8 +29,8 @@ public:
     virtual void FUN_10bd8440(int p1);
 };
 
-// FUNCTION: 0x10BD8440 ?FUN_10bd8440@Class_10E93B68@@UAEXH@Z
-void Class_10E93B68::FUN_10bd8440(int p1)
+// FUNCTION: 0x10BD8440 ?FUN_10bd8440@cSampleStats@@UAEXH@Z
+void cSampleStats::FUN_10bd8440(int p1)
 {
     FUN_10bd8300();
 }

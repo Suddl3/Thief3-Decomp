@@ -3,7 +3,7 @@
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_109434F0.h"
 #include "Game/Class_10943520.h"
-#include "Game/Class_109435A0.h"
+#include "Game/cShortArray.h"
 #include "Game/cEntryArray.h"
 
 Class_10905A90_Member* GetAllocator();
@@ -88,8 +88,8 @@ void Class_10E4A668::FUN_10942c20(int Param)
     }
 }
 
-// FUNCTION: 0x10943160 ?Clear@Class_109435A0@@QAEXXZ
-void Class_109435A0::Clear()
+// FUNCTION: 0x10943160 ?Clear@cShortArray@@QAEXXZ
+void cShortArray::Clear()
 {
     Resize(0);
     if (m_CapacityBytes)

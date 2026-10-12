@@ -9,14 +9,14 @@ class Class_10B48300;
 class Class_10E7C584
 {
 public:
-    virtual void FUN_10b39500(int A);
+    virtual void ForwardToChildren(int A);
 
     ~Class_10E7C584();
     Class_10E7C584(Class_109A62E0* A);
 
     int Unknown04;
-    Class_109A62E0* Unknown08;
-    Class_10B48300* Unknown0C[8];
+    Class_109A62E0* m_Registry;
+    Class_10B48300* m_Children[8];
 };
 
 #endif // GAME_CLASS_10E7C584_H

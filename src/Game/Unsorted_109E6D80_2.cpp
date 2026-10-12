@@ -32,8 +32,8 @@ public:
     virtual int Virtual1(const cString& Key, const cString& Other);
 };
 
-// The hash table of Class_109E6520's header, with Remove added.
-class Class_109E6520
+// The hash table of cStringIntHashTable's header, with Remove added.
+class cStringIntHashTable
 {
 public:
     unsigned int Insert(const cString& Key, const int& Value);
@@ -50,8 +50,8 @@ public:
     Class_109E6520_Field18 m_KeyTraits;
 };
 
-// FUNCTION: 0x109E7B20 ?Remove@Class_109E6520@@QAE_NABVcString@@@Z
-bool Class_109E6520::Remove(const cString& Key)
+// FUNCTION: 0x109E7B20 ?Remove@cStringIntHashTable@@QAE_NABVcString@@@Z
+bool cStringIntHashTable::Remove(const cString& Key)
 {
     if (!m_FixedSize && m_Count < m_BucketCount * 0.05 && m_BucketCount > 64)
         Rehash(m_BucketCount / 2);

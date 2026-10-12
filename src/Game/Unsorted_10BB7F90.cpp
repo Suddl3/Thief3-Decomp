@@ -4,14 +4,14 @@
 #include "Game/Class_10BBDB40.h"
 #include "Game/Class_10BFD210.h"
 #include "Game/Class_10DBD510.h"
-#include "Game/Class_10E90A1C.h"
+#include "Game/cRandomInterval.h"
 
 extern float DAT_10eafbdc;
 
 float appFrand();
 
-// FUNCTION: 0x10BB7F90 ?RollInterval@Class_10E90A1C@@QAEXXZ
-void Class_10E90A1C::RollInterval()
+// FUNCTION: 0x10BB7F90 ?RollInterval@cRandomInterval@@QAEXXZ
+void cRandomInterval::RollInterval()
 {
     float Min = m_Schema->FUN_10dbd510(0x100251)->GetFloat();
     float Max = m_Schema->FUN_10dbd510(0x100252)->GetFloat();

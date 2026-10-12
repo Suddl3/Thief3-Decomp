@@ -70,10 +70,10 @@ void Class_10A34B90::Release()
 {
     Reset(0x40);
     ::operator delete(m_Buckets);
-    Unknown04 = 0;
+    m_Count = 0;
     m_BucketCount = 0;
     m_Buckets = 0;
-    Unknown00 = 0;
+    m_Collisions = 0;
 }
 
 // FUNCTION: 0x10A35170 ?Release@Class_10A34CD0@@QAEXXZ

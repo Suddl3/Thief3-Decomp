@@ -3,19 +3,19 @@
 #include "Game/Class_10E878B8.h"
 #include "Game/cIntArray.h"
 
-class Class_10E88900
+class cT3TabbedWindow
 {
 public:
-    Class_10E88900();
+    cT3TabbedWindow();
 
-    virtual ~Class_10E88900();
+    virtual ~cT3TabbedWindow();
 
     char Unknown04[0xE4];
     int Unknown0E8;
     char Unknown0EC[0x1E0];
 };
 
-class Class_10E87B68 : public Class_10E88900
+class Class_10E87B68 : public cT3TabbedWindow
 {
 public:
     Class_10E87B68();

@@ -46,8 +46,8 @@ void cConversationManager::Clear()
         m_Children[i] = 0;
     }
     m_ChildCount.FUN_10c00a60(0);
-    Unknown14.FUN_1090f2c0(0);
-    Unknown14.FUN_1090f2c0(0);
+    Unknown14.SetCount(0);
+    Unknown14.SetCount(0);
 }
 
 // FUNCTION: 0x10A151A0 ?Free@Class_10A151A0@@QAEXXZ

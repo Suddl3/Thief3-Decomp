@@ -8,10 +8,10 @@ class IDirect3DSurface8;
 
 extern cD3DStateCache* DAT_10f31be0;
 
-class Class_10924B70
+class cRenderTargetState
 {
 public:
-    void FUN_109243f0();
+    void ApplyRenderTarget();
 
     char Unknown00[4];
     IDirect3DDevice8* m_Device;
@@ -21,8 +21,8 @@ public:
     int UnknownA8;
 };
 
-// FUNCTION: 0x109243F0 ?FUN_109243f0@Class_10924B70@@QAEXXZ
-void Class_10924B70::FUN_109243f0()
+// FUNCTION: 0x109243F0 ?ApplyRenderTarget@cRenderTargetState@@QAEXXZ
+void cRenderTargetState::ApplyRenderTarget()
 {
     if (m_Device)
     {

@@ -4,7 +4,7 @@
 #include "Game/Class_10C3D3B0.h"
 #include "Game/Class_10E8C848.h"
 #include "Game/Class_10E8C86C.h"
-#include "Game/Class_10E9CD90.h"
+#include "Game/cMemoryStream.h"
 #include "Game/Struct_10BB0B90.h"
 #include "Game/Class_10BB1020_B.h"
 
@@ -86,8 +86,8 @@ int Class_10E8C86C::FUN_10bb1140(int p1, Class_10BB1140_Item* Item, Class_10BB11
         if (Obj)
         {
             float Value = Source->Virtual4(0)->Class_10C3D3B0::FUN_10c3d3b0();
-            Class_10E9CD90* Light = (Class_10E9CD90*)(((Class_10AA82D0*)Obj)->GetLinkedObject() + 0x30);
-            Light->Class_10E9CD90::SetPosition(Value);
+            cMemoryStream* Light = (cMemoryStream*)(((Class_10AA82D0*)Obj)->GetLinkedObject() + 0x30);
+            Light->cMemoryStream::SetPosition(Value);
             return 1;
         }
     }

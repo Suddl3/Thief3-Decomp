@@ -102,11 +102,11 @@ public:
     virtual void Virtual15();
     virtual void Virtual16();
     virtual void Virtual17();
-    virtual State_FrobAlarm* FUN_10b99920(Struct_10B98E00* A, int B);
+    virtual State_FrobAlarm* CreateFrobAlarmState(Struct_10B98E00* A, int B);
 };
 
-// FUNCTION: 0x10B99920 ?FUN_10b99920@Class_10E4CCD0@@UAEPAVState_FrobAlarm@@PAUStruct_10B98E00@@H@Z
-State_FrobAlarm* Class_10E4CCD0::FUN_10b99920(Struct_10B98E00* A, int B)
+// FUNCTION: 0x10B99920 ?CreateFrobAlarmState@Class_10E4CCD0@@UAEPAVState_FrobAlarm@@PAUStruct_10B98E00@@H@Z
+State_FrobAlarm* Class_10E4CCD0::CreateFrobAlarmState(Struct_10B98E00* A, int B)
 {
     int Id = FUN_10be2e50();
     if (Id && A->Unknown08->FUN_10dbd510(Id)->GetFloat() > 0.0f)

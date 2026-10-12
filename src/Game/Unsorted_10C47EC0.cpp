@@ -48,8 +48,8 @@ cCadenceFactory* cCadenceFactory::Initialize(bool A)
     return this;
 }
 
-// FUNCTION: 0x10C47F80 ?FUN_10c47f80@@YAXXZ
-void FUN_10c47f80()
+// FUNCTION: 0x10C47F80 ?DestroyCadenceFactory@@YAXXZ
+void DestroyCadenceFactory()
 {
     delete DAT_10ff70b8;
     DAT_10ff70b8 = 0;

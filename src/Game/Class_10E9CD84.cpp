@@ -71,8 +71,8 @@ Class_10E9CD84::Class_10E9CD84(Struct_10C64030_Param* A)
 // FUNCTION: 0x10C648E0 ??_GClass_10E9CD84@@UAEPAXI@Z
 // Compiler-generated: emitted with the class's vtable by 0x10C64030's definition in this unit.
 
-// FUNCTION: 0x10C64900 ?FUN_10c64900@Class_10C64900@@QAE?AVcString@@XZ
-cString Class_10C64900::FUN_10c64900()
+// FUNCTION: 0x10C64900 ?GetSoundName@Class_10C64900@@QAE?AVcString@@XZ
+cString Class_10C64900::GetSoundName()
 {
     if (Unknown08->Unknown04)
         return Unknown08->Unknown04->Virtual2();

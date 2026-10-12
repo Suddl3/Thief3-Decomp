@@ -9,10 +9,10 @@ struct Struct_10ABE210;
 class Class_10ABDAE0
 {
 public:
-    void FUN_10abdae0(int A);
+    void SetCount(int A);
     void Clear();
     void CopyFrom(const Class_10ABDAE0& Other);
-    void FUN_10b199f0(int A, int B, int C);
+    void MoveElements(int A, int B, int C);
     void Insert(int Index, const Class_10B1A7D0Item& Value);
 
     union

@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Struct_10BD7F70.h"
 
-class Class_10E93B68
+class cSampleStats
 {
 public:
     virtual void Virtual0();
@@ -86,8 +86,8 @@ public:
     Struct_10BD7F70* Entries;
 };
 
-// FUNCTION: 0x10BD7F70 ?ProcessEntry@Class_10E93B68@@UAEXH@Z
-void Class_10E93B68::ProcessEntry(int Index)
+// FUNCTION: 0x10BD7F70 ?ProcessEntry@cSampleStats@@UAEXH@Z
+void cSampleStats::ProcessEntry(int Index)
 {
     if (Index >= 0 && Index < EntryCount)
     {

@@ -41,8 +41,8 @@ void Class_10A34B90::Rehash(int Size)
     m_BucketBits = 0;
     while (Size >>= 1)
         m_BucketBits++;
-    Unknown04 = 0;
-    Unknown00 = 0;
+    m_Count = 0;
+    m_Collisions = 0;
     for (int i = 0; i < m_BucketCount; i++)
         m_Buckets[i] = 0;
     for (int j = 0; j < OldSize; j++)

@@ -10,20 +10,20 @@ void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D
 
 extern void* DAT_10e89720[];
 
-class Class_10E89720
+class cDoorState
 {
 public:
-    Class_10E89720() : VTable(DAT_10e89720), m_StateIndex(3) {}
+    cDoorState() : VTable(DAT_10e89720), m_StateIndex(3) {}
 
     void** VTable;
     int m_StateIndex;
 };
 
-// FUNCTION: 0x10B8EC50 ?CreateState@Class_10E88D3C@@UAEPAVClass_10E89720@@HH@Z
-Class_10E89720* Class_10E88D3C::CreateState(int A, int B)
+// FUNCTION: 0x10B8EC50 ?CreateState@Class_10E88D3C@@UAEPAVcDoorState@@HH@Z
+cDoorState* Class_10E88D3C::CreateState(int A, int B)
 {
     GetAllocator()->Virtual8(0, 0);
-    Class_10E89720* Result = new(0, 0, 0, 0, 0) Class_10E89720;
+    cDoorState* Result = new(0, 0, 0, 0, 0) cDoorState;
     GetAllocator()->Virtual9();
     return Result;
 }

@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_10BAF8A0_H
 #define GAME_CLASS_10BAF8A0_H
 
-#include "Game/Class_10BAEC40.h"
+#include "Game/cStructArray.h"
 
 class Class_10BAF8A0
 {
@@ -11,7 +11,7 @@ public:
     void Empty();
 
     char Unknown00[0x28];
-    Class_10BAEC40 Unknown28;
+    cStructArray Unknown28;
 };
 
 #endif // GAME_CLASS_10BAF8A0_H

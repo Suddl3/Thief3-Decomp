@@ -15,7 +15,7 @@ public:
     virtual ~Class_10E7A768();
 
     int Unknown04;
-    Object_10B22790* Unknown08[34];
+    Object_10B22790* m_Objects[34];
     Object_10B22790* Unknown90;
     Object_10B22790* Unknown94;
     int Unknown98;
@@ -42,12 +42,12 @@ Class_10E7A768::Class_10E7A768(int A, int B)
     UnknownA8 = -1;
     for (int i = 0; i < 34; i++)
     {
-        Unknown08[i] = FUN_10b3d510(i);
-        if (Unknown08[i])
-            Unknown08[i]->FUN_10cab310(B);
+        m_Objects[i] = FUN_10b3d510(i);
+        if (m_Objects[i])
+            m_Objects[i]->FUN_10cab310(B);
     }
-    Unknown94 = Unknown08[23];
-    Unknown90 = Unknown08[0];
+    Unknown94 = m_Objects[23];
+    Unknown90 = m_Objects[0];
     Unknown90->Virtual2(Unknown04);
     Struct_10B226C0 Info;
     FUN_10b190e0()->FUN_10de9b20(Unknown90->Virtual12(&Info));

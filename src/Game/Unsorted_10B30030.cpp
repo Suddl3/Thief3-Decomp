@@ -75,7 +75,7 @@ public:
 void Class_10E7BB2C::SetValue(const float* p1)
 {
     m_Value = *p1;
-    Unknown1C = m_Value - Unknown14;
+    m_Delta = m_Value - Unknown14;
 }
 
 // FUNCTION: 0x10B30190 ?FUN_10b30190@Class_10B30190@@QAE?AVClass_1090A780@@H@Z

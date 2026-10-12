@@ -66,7 +66,7 @@ void FUN_10bd8300();
 
 void FUN_10bd8300(void);
 
-class Class_10E93B68
+class cSampleStats
 {
 public:
     virtual void M0() {}
@@ -285,8 +285,8 @@ void FUN_10bd78c0()
     FUN_10bd5bd0();
 }
 
-// FUNCTION: 0x10BD7EA0 ?FUN_10bd7ea0@Class_10E93B68@@QAEXXZ
-void Class_10E93B68::FUN_10bd7ea0()
+// FUNCTION: 0x10BD7EA0 ?FUN_10bd7ea0@cSampleStats@@QAEXXZ
+void cSampleStats::FUN_10bd7ea0()
 {
     M71();
 }
@@ -297,8 +297,8 @@ void FUN_10bd8450()
     FUN_10bd8300();
 }
 
-// FUNCTION: 0x10BD8460 ?FUN_10bd8460@Class_10E93B68@@QAEXXZ
-void Class_10E93B68::FUN_10bd8460()
+// FUNCTION: 0x10BD8460 ?FUN_10bd8460@cSampleStats@@QAEXXZ
+void cSampleStats::FUN_10bd8460()
 {
     Unknown78++;
     FUN_10bd8300();

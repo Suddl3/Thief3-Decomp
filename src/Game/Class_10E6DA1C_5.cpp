@@ -12,7 +12,7 @@ public:
     virtual void Virtual1(int Value);
 };
 
-class Class_10E6DA1C
+class cConGoalCompleteEvent
 {
 public:
     virtual void Virtual0();
@@ -28,8 +28,8 @@ public:
     Class_10AB3800 Unknown10;
 };
 
-// FUNCTION: 0x10AAB200 ?FUN_10aab200@Class_10E6DA1C@@UAEHPAVClass_10AAB200_Param@@@Z
-int Class_10E6DA1C::FUN_10aab200(Class_10AAB200_Param* Writer)
+// FUNCTION: 0x10AAB200 ?FUN_10aab200@cConGoalCompleteEvent@@UAEHPAVClass_10AAB200_Param@@@Z
+int cConGoalCompleteEvent::FUN_10aab200(Class_10AAB200_Param* Writer)
 {
     Writer->Virtual0(Unknown04.FUN_10b36120());
     Writer->Virtual1(Unknown08);

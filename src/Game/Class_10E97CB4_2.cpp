@@ -18,7 +18,7 @@ UClass* FUN_10901650();
 
 extern Struct_10AA3520* DAT_10f35dec;
 
-class Class_10E97CB4
+class cContextVolumeList
 {
 public:
     virtual void HandleMessage(int Message, int A, Class_10C0E5E0_Param* Param, int B);
@@ -27,8 +27,8 @@ public:
     cIntArray Unknown10;
 };
 
-// FUNCTION: 0x10C0E5E0 ?HandleMessage@Class_10E97CB4@@UAEXHHPAVClass_10C0E5E0_Param@@H@Z
-void Class_10E97CB4::HandleMessage(int Message, int A, Class_10C0E5E0_Param* Param, int B)
+// FUNCTION: 0x10C0E5E0 ?HandleMessage@cContextVolumeList@@UAEXHHPAVClass_10C0E5E0_Param@@H@Z
+void cContextVolumeList::HandleMessage(int Message, int A, Class_10C0E5E0_Param* Param, int B)
 {
     if (Message == 0x5a && Param && Param->Unknown08 == 0)
     {

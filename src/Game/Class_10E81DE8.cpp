@@ -1,7 +1,7 @@
-// Game/Class_10E81DE8.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/cOptionsWindow.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_109E8930.h"
-#include "Game/Class_10E81DE8.h"
+#include "Game/cOptionsWindow.h"
 #include "Game/WindowManager.h"
 
 extern WindowManager* GWindowManager;
@@ -27,8 +27,8 @@ struct Struct_10B45D10
     virtual void Virtual16(int A);
 };
 
-// FUNCTION: 0x10B45D10 ?Close@Class_10E81DE8@@QAEXXZ
-void Class_10E81DE8::Close()
+// FUNCTION: 0x10B45D10 ?Close@cOptionsWindow@@QAEXXZ
+void cOptionsWindow::Close()
 {
     Virtual115();
     GWindowManager->FUN_109e8930(this);

@@ -67,14 +67,14 @@ public:
 
     virtual ~Class_10E49E50();
 
-    std::vector<void*, Allocator_109335C0<void*> > Unknown1C;
+    std::vector<void*, Allocator_109335C0<void*> > m_vecVertexBuffers;
     int Unknown30;
     int Unknown34;
 };
 
 // FUNCTION: 0x109335C0 ??0Class_10E49E50@@QAE@XZ
 Class_10E49E50::Class_10E49E50()
-    : Unknown1C(Allocator_109335C0<void*>(0x1a, "VBPoolStaticImpermanent::m_vecVertexBuffers"))
+    : m_vecVertexBuffers(Allocator_109335C0<void*>(0x1a, "VBPoolStaticImpermanent::m_vecVertexBuffers"))
 {
     Unknown30 = 0;
     Unknown34 = 0;

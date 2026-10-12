@@ -21,7 +21,7 @@ class Class_10E95288;
 
 class Class_10E95898;
 
-class Class_10E96510;
+class cYellowAlert;
 
 class State_Gassed;
 
@@ -31,8 +31,8 @@ class Class_10E96EB0;
 
 class Class_10E96FD0;
 
-// FUNCTION: 0x10B99780 ?FUN_10b99780@Class_10E4CCD0@@UAEPAVState_PatrolLook@@PAUStruct_10B98E00@@HHHHHH@Z
-State_PatrolLook* Class_10E4CCD0::FUN_10b99780(Struct_10B98E00* A, int B, int C, int D, int E, int F, int G)
+// FUNCTION: 0x10B99780 ?CreatePatrolLookState@Class_10E4CCD0@@UAEPAVState_PatrolLook@@PAUStruct_10B98E00@@HHHHHH@Z
+State_PatrolLook* Class_10E4CCD0::CreatePatrolLookState(Struct_10B98E00* A, int B, int C, int D, int E, int F, int G)
 {
     int Id = FUN_10bed050();
     if (Id && A->Unknown08->FUN_10dbd510(Id)->GetFloat() > DAT_10eafbdc)

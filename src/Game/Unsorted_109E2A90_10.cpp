@@ -25,10 +25,10 @@ void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D
 
 extern void* DAT_10e5b2a8[];
 
-class Class_10E5B2A8
+class cZoneManager
 {
 public:
-    Class_10E5B2A8()
+    cZoneManager()
     {
         VTable = DAT_10e5b2a8;
         m_BucketCount = 0;
@@ -44,7 +44,7 @@ public:
     int Unknown10;
 };
 
-extern Class_10E5B2A8* DAT_10f35dbc;
+extern cZoneManager* DAT_10f35dbc;
 
 class Class_10E5B2AC;
 
@@ -141,13 +141,13 @@ int Class_109E2BD0::FindBucketIndex(int Value)
     return -1;
 }
 
-// FUNCTION: 0x109E2C70 ?GetZoneManager@@YAPAVClass_10E5B2A8@@XZ
-Class_10E5B2A8* GetZoneManager()
+// FUNCTION: 0x109E2C70 ?GetZoneManager@@YAPAVcZoneManager@@XZ
+cZoneManager* GetZoneManager()
 {
     if (DAT_10f35dbc == 0)
     {
         GetAllocator()->Virtual8(0, 0);
-        Class_10E5B2A8* Result = new(0, 0, 0, 0, 0) Class_10E5B2A8;
+        cZoneManager* Result = new(0, 0, 0, 0, 0) cZoneManager;
         DAT_10f35dbc = Result;
         GetAllocator()->Virtual9();
     }

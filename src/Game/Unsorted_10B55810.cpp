@@ -6,7 +6,7 @@
 
 Options* GetOptions();
 
-class Class_10E81DE8
+class cOptionsWindow
 {
 public:
     virtual void Virtual0();
@@ -77,8 +77,8 @@ Struct_10B55810 Class_10E81C20::FUN_10b55810()
     return Unknown54;
 }
 
-// FUNCTION: 0x10B56520 ?SaveAndClose@Class_10E81DE8@@QAEXXZ
-void Class_10E81DE8::SaveAndClose()
+// FUNCTION: 0x10B56520 ?SaveAndClose@cOptionsWindow@@QAEXXZ
+void cOptionsWindow::SaveAndClose()
 {
     GetOptions()->Save();
     Virtual56(0);

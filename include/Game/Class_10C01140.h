@@ -12,7 +12,7 @@ class Class_10C01140
 public:
     unsigned int Insert(const int& Key, const int& Value);
     void Rehash(int Size);
-    bool FUN_10c015b0(const int& Key);
+    bool Remove(const int& Key);
 
     int Unknown00;
     int Unknown04;

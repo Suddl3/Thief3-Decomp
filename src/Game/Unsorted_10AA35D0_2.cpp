@@ -41,7 +41,7 @@ public:
     bool m_FixedSize;
     char Pad11[0x3];
     Class_10AA44B0_Node** m_Buckets;
-    Class_10AA44B0_Field18 Unknown18;
+    Class_10AA44B0_Field18 m_KeyAdapter;
 };
 
 // FUNCTION: 0x10AA35D0 ?Insert@Class_10AA44B0@@QAEIABHABVcString@@@Z
@@ -56,7 +56,7 @@ unsigned int Class_10AA44B0::Insert(const int& Key, const cString& Value)
     {
         const void* Data;
         int Length;
-        Unknown18.Virtual0(Key, &Data, &Length);
+        m_KeyAdapter.Virtual0(Key, &Data, &Length);
         Index = HashBytes(Data, Length) & ((1 << m_BucketBits) - 1);
     }
     if (m_Buckets[Index])

@@ -14,10 +14,10 @@ public:
     int ArrayMax;
 };
 
-class Class_10E6B078
+class cTextWindow
 {
 public:
-    Class_10E6B078();
+    cTextWindow();
 
     void** Unknown00;
     char Unknown04[0xE4];
@@ -25,7 +25,7 @@ public:
     char Unknown0EC[0xCC];
 };
 
-class cIconWindow : public Class_10E6B078
+class cIconWindow : public cTextWindow
 {
 public:
     cIconWindow* FUN_10a5ddc0();
@@ -53,7 +53,7 @@ void Class_10A5DA00::FUN_10a5da00(int A, int B)
 // FUNCTION: 0x10A5DDC0 ?FUN_10a5ddc0@cIconWindow@@QAEPAV1@XZ
 cIconWindow* cIconWindow::FUN_10a5ddc0()
 {
-    this->Class_10E6B078::Class_10E6B078();
+    this->cTextWindow::cTextWindow();
     Unknown1B8 = false;
     Unknown00 = DAT_10e698f0;
     Unknown1B9 = true;

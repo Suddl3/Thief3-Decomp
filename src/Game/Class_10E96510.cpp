@@ -1,4 +1,4 @@
-// Game/Class_10E96510.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/cYellowAlert.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10C28F00.h"
 #include "Game/Class_10C7D570.h"
@@ -32,7 +32,7 @@ public:
     Class_10C28F00* Unknown10;
 };
 
-class Class_10E96510 : public Class_10BC4160
+class cYellowAlert : public Class_10BC4160
 {
 public:
     virtual void Virtual0();
@@ -131,8 +131,8 @@ public:
     int Unknown10;
 };
 
-// FUNCTION: 0x10BE4580 ?FUN_10be4580@Class_10E96510@@UAEX_N@Z
-void Class_10E96510::FUN_10be4580(bool A)
+// FUNCTION: 0x10BE4580 ?FUN_10be4580@cYellowAlert@@UAEX_N@Z
+void cYellowAlert::FUN_10be4580(bool A)
 {
     if (Unknown10 != 4)
     {
@@ -148,14 +148,14 @@ void Class_10E96510::FUN_10be4580(bool A)
     }
 }
 
-// FUNCTION: 0x10BE45D0 ?FUN_10be45d0@Class_10E96510@@QAEHXZ
-int Class_10E96510::FUN_10be45d0()
+// FUNCTION: 0x10BE45D0 ?FUN_10be45d0@cYellowAlert@@QAEHXZ
+int cYellowAlert::FUN_10be45d0()
 {
     return Virtual77() ? 0 : 47;
 }
 
-// FUNCTION: 0x10BE45F0 ?FUN_10be45f0@Class_10E96510@@QAEHXZ
-int Class_10E96510::FUN_10be45f0()
+// FUNCTION: 0x10BE45F0 ?FUN_10be45f0@cYellowAlert@@QAEHXZ
+int cYellowAlert::FUN_10be45f0()
 {
     return Virtual77() ? 0 : 50;
 }

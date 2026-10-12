@@ -57,11 +57,11 @@ public:
     virtual void Virtual35();
     virtual void Virtual36();
     virtual void Virtual37();
-    virtual cMeleeStrafeTarget* FUN_10b98320(Struct_10B98E00* A, int B, int C);
+    virtual cMeleeStrafeTarget* CreateMeleeStrafeTarget(Struct_10B98E00* A, int B, int C);
 };
 
-// FUNCTION: 0x10B98320 ?FUN_10b98320@Class_10E4CCD0@@UAEPAVcMeleeStrafeTarget@@PAUStruct_10B98E00@@HH@Z
-cMeleeStrafeTarget* Class_10E4CCD0::FUN_10b98320(Struct_10B98E00* A, int B, int C)
+// FUNCTION: 0x10B98320 ?CreateMeleeStrafeTarget@Class_10E4CCD0@@UAEPAVcMeleeStrafeTarget@@PAUStruct_10B98E00@@HH@Z
+cMeleeStrafeTarget* Class_10E4CCD0::CreateMeleeStrafeTarget(Struct_10B98E00* A, int B, int C)
 {
     return new(0, 0, 0, 0, 0) cMeleeStrafeTarget((int)A, (int)this, B, C);
 }

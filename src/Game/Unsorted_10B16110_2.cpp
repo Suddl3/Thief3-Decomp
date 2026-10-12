@@ -1,8 +1,8 @@
 // Game/Unsorted_10B16110_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/cIntArray.h"
-#include "Game/Class_10B25D90.h"
-#include "Game/Class_10B25D60.h"
+#include "Game/cListReverseCursor.h"
+#include "Game/cListCursor.h"
 #include "Game/Class_10B2D600.h"
 #include "Game/Class_10B2E000.h"
 
@@ -37,9 +37,9 @@ void Class_10B16930::FUN_10b16300(int A, int B, bool C)
             Item->RefreshNextSlots();
         Class_10B255F0* Obj = GetSelection();
         if ((char)A)
-            ((Class_10B25D90*)Obj)->StepBack();
+            ((cListReverseCursor*)Obj)->StepBack();
         else
-            ((Class_10B25D60*)Obj)->Advance();
+            ((cListCursor*)Obj)->Advance();
     }
     if (Item)
         ((Class_10B2E000*)Item)->FUN_10b2e000(A, B);

@@ -39,7 +39,7 @@ public:
     Struct_10A76C50Copy** Unknown08;
 };
 
-class Class_10E6BC80
+class cCopyList
 {
 public:
     virtual void Virtual0();
@@ -71,8 +71,8 @@ public:
 
 extern Class_10F46DA0* DAT_10f46da0;
 
-// FUNCTION: 0x10A76C50 ?AddCopy@Class_10E6BC80@@UAEXPAUStruct_10A76C50@@@Z
-void Class_10E6BC80::AddCopy(Struct_10A76C50* Source)
+// FUNCTION: 0x10A76C50 ?AddCopy@cCopyList@@UAEXPAUStruct_10A76C50@@@Z
+void cCopyList::AddCopy(Struct_10A76C50* Source)
 {
     Struct_10A76C50Copy* Result = 0;
     Struct_10A76C50Copy* Copy = new(0, 0, 0, 0, 0) Struct_10A76C50Copy;

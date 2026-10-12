@@ -32,18 +32,18 @@ public:
     char Unknown18[0x18];
 };
 
-class Class_10924B70 : public Class_10924B70_Base
+class cRenderTargetState : public Class_10924B70_Base
 {
 public:
-    Class_10924B70();
+    cRenderTargetState();
 
     Class_1094D700 Unknown30;
     Class_1094D9A0 Unknown48[3];
     int UnknownA8;
 };
 
-// FUNCTION: 0x10924A00 ??0Class_10924B70@@QAE@XZ
-Class_10924B70::Class_10924B70()
+// FUNCTION: 0x10924A00 ??0cRenderTargetState@@QAE@XZ
+cRenderTargetState::cRenderTargetState()
 {
     DAT_10f319a0 = (Class_109242E0*)this;
     Unknown00 = false;

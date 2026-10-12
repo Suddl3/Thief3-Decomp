@@ -8,7 +8,7 @@
 int Class_1090FD40::Add(const cString& Item)
 {
     int Index = m_Count;
-    FUN_1090f2c0(Index + 1);
+    SetCount(Index + 1);
     m_Items[Index] = Item;
     return Index;
 }

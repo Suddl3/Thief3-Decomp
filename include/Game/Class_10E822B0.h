@@ -4,9 +4,9 @@
 #define GAME_CLASS_10E822B0_H
 
 #include "Game/Class_10B7B910.h"
-#include "Game/Class_10E6AEA0.h"
+#include "Game/cBorderWindow.h"
 
-class Class_10E822B0 : public Class_10E6AEA0
+class Class_10E822B0 : public cBorderWindow
 {
 public:
     virtual ~Class_10E822B0();

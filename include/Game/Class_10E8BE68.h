@@ -18,10 +18,10 @@ public:
     virtual void Virtual2();
     virtual void Virtual3();
     virtual void Virtual4();
-    virtual bool FUN_10bc3fc0();
+    virtual bool CanExit();
     virtual void FUN_10bc4200();
     virtual void FUN_10bc4c30();
-    virtual void FUN_10bcc240();
+    virtual void Update();
     virtual void Virtual9();
     virtual void Virtual10();
     virtual void Virtual11();

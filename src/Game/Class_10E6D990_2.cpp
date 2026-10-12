@@ -51,7 +51,7 @@ public:
     virtual void Virtual3();
     virtual void Virtual4();
     virtual void Virtual5();
-    virtual int FUN_10aa8a40(FILE* File, int Arg2);
+    virtual int TryReadKeyValue(FILE* File, int Arg2);
 
     char Unknown04[0x4];
     cString Unknown08;
@@ -59,8 +59,8 @@ public:
     Class_10AB37F0 Unknown20;
 };
 
-// FUNCTION: 0x10AA8A40 ?FUN_10aa8a40@Class_10E6D990@@UAEHPAU_iobuf@@H@Z
-int Class_10E6D990::FUN_10aa8a40(FILE* File, int Arg2)
+// FUNCTION: 0x10AA8A40 ?TryReadKeyValue@Class_10E6D990@@UAEHPAU_iobuf@@H@Z
+int Class_10E6D990::TryReadKeyValue(FILE* File, int Arg2)
 {
     cString Line = FUN_10a83850(File, Arg2);
     cString Value = Line.FUN_1095b160('=');

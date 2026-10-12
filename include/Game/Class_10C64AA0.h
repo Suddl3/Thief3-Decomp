@@ -6,7 +6,7 @@
 class Class_10C64AA0
 {
 public:
-    void FUN_10c64aa0(unsigned Value, unsigned* Hi, unsigned* Lo);
+    void Split(unsigned Value, unsigned* Hi, unsigned* Lo);
 };
 
 #endif // GAME_CLASS_10C64AA0_H

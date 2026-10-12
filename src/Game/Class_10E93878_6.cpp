@@ -18,7 +18,7 @@ public:
     virtual void Virtual5();
     virtual void Virtual6();
     virtual void Virtual7();
-    virtual void FUN_10bd1bc0();
+    virtual void Update();
 
     Class_10BB89D0* Unknown04;
     char Unknown08[4];
@@ -27,8 +27,8 @@ public:
     unsigned char Unknown50;
 };
 
-// FUNCTION: 0x10BD1BC0 ?FUN_10bd1bc0@Class_10E93878@@UAEXXZ
-void Class_10E93878::FUN_10bd1bc0()
+// FUNCTION: 0x10BD1BC0 ?Update@Class_10E93878@@UAEXXZ
+void Class_10E93878::Update()
 {
     FUN_10bd1900();
     if (!(GetTimeSeconds() - Unknown0C < 10.0) && Unknown50 >= 7)

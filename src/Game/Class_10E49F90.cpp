@@ -44,7 +44,7 @@ public:
     virtual bool FUN_10936240(Class_109526D0* Item, int A);
 
     char Unknown04[0x110];
-    int Unknown114;
+    int m_VertexShader;
     char Unknown118[0x174];
     int Unknown28C;
 };
@@ -54,7 +54,7 @@ bool Class_10E49F90::FUN_10936240(Class_109526D0* Item, int A)
 {
     if (Item && (Item->Unknown30 & 4) && (Item->Unknown34 & 8) && !Item->Unknown4E)
     {
-        DAT_10f31be0->SetVertexShader(Unknown114);
+        DAT_10f31be0->SetVertexShader(m_VertexShader);
         DAT_10f31be0->FUN_10937400(Unknown28C);
         Item->FUN_109526d0();
         Item->FUN_10952690();

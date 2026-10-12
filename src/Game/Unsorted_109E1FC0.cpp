@@ -36,7 +36,7 @@ extern bool DAT_10effbec;
 void ResetLoadingScreen()
 {
     DAT_10f35d9c = cString(DAT_10e47660);
-    DAT_10f35da0.FUN_1090f2c0(0);
+    DAT_10f35da0.SetCount(0);
     for (int i = 0; i < 2; i++)
     {
         Class_1091CD10* Element = DAT_10f35b38[i];

@@ -12,28 +12,28 @@ public:
     virtual ~Class_10E67FD0();
 };
 
-class Class_10E7FD18 : public Class_10E67FD0
+class cHUDLightGem : public Class_10E67FD0
 {
 public:
-    virtual ~Class_10E7FD18();
-    void FUN_10b550c0();
-    void FUN_10b55300();
+    virtual ~cHUDLightGem();
+    void ReleaseGems();
+    void CreateGems();
 
     char Unknown04[0x124];
     cString Unknown128;
-    cIntArray Unknown12C;
+    cIntArray m_Gems;
 };
 
 extern Class_10939570* DAT_10f323fc;
 
 void FormatString(cString* Out, const char* Format, ...);
 
-// FUNCTION: 0x10B55300 ?FUN_10b55300@Class_10E7FD18@@QAEXXZ
-void Class_10E7FD18::FUN_10b55300()
+// FUNCTION: 0x10B55300 ?CreateGems@cHUDLightGem@@QAEXXZ
+void cHUDLightGem::CreateGems()
 {
-    FUN_10b550c0();
+    ReleaseGems();
     int Gem = 0;
-    cIntArray& Handles = Unknown12C;
+    cIntArray& Handles = m_Gems;
     do
     {
         cString GemName;

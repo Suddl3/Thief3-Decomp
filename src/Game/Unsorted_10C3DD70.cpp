@@ -50,7 +50,7 @@ public:
     virtual void FUN_10c3de20(int A);
 
     char Unknown04[0x18];
-    FVector Unknown1C;
+    FVector m_Position;
     float m_Range;
     bool Unknown2C;
     char Unknown2D[0xF];

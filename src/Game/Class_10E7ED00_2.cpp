@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10A18FA0.h"
 #include "Game/Class_10E7E538.h"
-#include "Game/Class_10B3ED20.h"
+#include "Game/cLockPickController.h"
 #include "Game/Class_10E7ED00.h"
 
 struct Struct_10B3ACE0;

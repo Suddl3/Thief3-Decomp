@@ -1,8 +1,8 @@
 // Game/Unsorted_10B25240.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10B25D60.h"
-#include "Game/Class_10B25D90.h"
-#include "Game/Class_10E7AAAC.h"
+#include "Game/cListCursor.h"
+#include "Game/cListReverseCursor.h"
+#include "Game/cMenuInput.h"
 
 extern void* DAT_10e7aa60[];
 
@@ -64,8 +64,8 @@ Class_10B255F0* GetSelection()
     return &Instance;
 }
 
-// FUNCTION: 0x10B25D60 ?Advance@Class_10B25D60@@QAEXXZ
-void Class_10B25D60::Advance()
+// FUNCTION: 0x10B25D60 ?Advance@cListCursor@@QAEXXZ
+void cListCursor::Advance()
 {
     if (m_InListA)
         m_Index = FindNextFromListA(&m_InListA);
@@ -73,8 +73,8 @@ void Class_10B25D60::Advance()
         m_Index = FindNextFromListB(&m_InListA);
 }
 
-// FUNCTION: 0x10B25D90 ?StepBack@Class_10B25D90@@QAEXXZ
-void Class_10B25D90::StepBack()
+// FUNCTION: 0x10B25D90 ?StepBack@cListReverseCursor@@QAEXXZ
+void cListReverseCursor::StepBack()
 {
     if (m_InListA)
         m_Index = FindPrevFromListA(&m_InListA);
@@ -82,8 +82,8 @@ void Class_10B25D90::StepBack()
         m_Index = FindPrevFromListB(&m_InListA);
 }
 
-// FUNCTION: 0x10B26910 ?Reset@Class_10E7AAAC@@UAEXH@Z
-void Class_10E7AAAC::Reset(int p1)
+// FUNCTION: 0x10B26910 ?Reset@cMenuInput@@UAEXH@Z
+void cMenuInput::Reset(int p1)
 {
     Unknown10 = 0;
     Unknown0C = 0;

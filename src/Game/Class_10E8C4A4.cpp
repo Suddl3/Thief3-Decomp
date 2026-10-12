@@ -2,8 +2,8 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10E8C4A4.h"
 
-// FUNCTION: 0x10C12970 ?FUN_10c12970@Class_10E8C4A4@@UAEHHPAV1@@Z
-int Class_10E8C4A4::FUN_10c12970(int A, Class_10E8C4A4* Other)
+// FUNCTION: 0x10C12970 ?Compare@Class_10E8C4A4@@UAEHHPAV1@@Z
+int Class_10E8C4A4::Compare(int A, Class_10E8C4A4* Other)
 {
     switch (A)
     {

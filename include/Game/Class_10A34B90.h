@@ -13,11 +13,11 @@ public:
     void Rehash(int Size);
     void Insert(Class_10A34B90_Node* Node, int* Key);
 
-    int Unknown00;
-    int Unknown04;
+    int m_Collisions;
+    int m_Count;
     int m_BucketBits;
     int m_BucketCount;
-    bool Unknown10;
+    bool m_FixedSize;
     char Pad11[0x3];
     Class_10A34B90_Node** m_Buckets;
 };

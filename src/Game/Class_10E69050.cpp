@@ -1,12 +1,12 @@
-// Game/Class_10E69050.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/cSequence.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
 extern void* DAT_10e69050[];
 
-class Class_10E69050
+class cSequence
 {
 public:
-    Class_10E69050* Init();
+    cSequence* Init();
 
     void** Unknown00;
     float Unknown04;
@@ -16,8 +16,8 @@ public:
     int m_Items;
 };
 
-// FUNCTION: 0x10A58B90 ?Init@Class_10E69050@@QAEPAV1@XZ
-Class_10E69050* Class_10E69050::Init()
+// FUNCTION: 0x10A58B90 ?Init@cSequence@@QAEPAV1@XZ
+cSequence* cSequence::Init()
 {
     Unknown04 = 1.0f;
     Unknown08 = 0;

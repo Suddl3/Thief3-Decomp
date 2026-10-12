@@ -15,8 +15,8 @@ public:
     char Unknown00[0x48];
 };
 
-// FUNCTION: 0x10B97F30 ?FUN_10b97f30@Class_10E4CCD0@@UAEPAVState_SearchLook@@H@Z
-State_SearchLook* Class_10E4CCD0::FUN_10b97f30(int A)
+// FUNCTION: 0x10B97F30 ?CreateSearchLookState@Class_10E4CCD0@@UAEPAVState_SearchLook@@H@Z
+State_SearchLook* Class_10E4CCD0::CreateSearchLookState(int A)
 {
     return new(0, 0, 0, 0, 0) State_SearchLook(A, (int)this);
 }

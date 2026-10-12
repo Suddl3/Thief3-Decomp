@@ -56,7 +56,7 @@ public:
     virtual void Virtual46();
     virtual void Virtual47();
     virtual void Virtual48();
-    virtual void FUN_10bed110(int A);
+    virtual void ClearHandle(int A);
 
     Class_10E95898(int A, int B, int C, bool D);
 

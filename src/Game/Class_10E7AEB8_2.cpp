@@ -9,17 +9,17 @@ extern const char DAT_10e7b07c[];
 
 extern int DAT_10f0407c;
 
-class Class_10E6AEA0
+class cBorderWindow
 {
 public:
-    Class_10E6AEA0();
+    cBorderWindow();
 
-    virtual ~Class_10E6AEA0();
+    virtual ~cBorderWindow();
 };
 
 class Class_10B27FE0;
 
-class cT3MainMenuWindow : public Class_10E6AEA0
+class cT3MainMenuWindow : public cBorderWindow
 {
 public:
     cT3MainMenuWindow();

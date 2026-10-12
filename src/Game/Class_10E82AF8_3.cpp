@@ -162,7 +162,7 @@ public:
     virtual bool Virtual1(int A, int B, bool C);
 };
 
-class Class_10E82AF8
+class cFactionPane
 {
 public:
     virtual void Virtual0();
@@ -218,8 +218,8 @@ public:
     Class_10B78260_Unknown188* Unknown188;
 };
 
-// FUNCTION: 0x10B78260 ?FUN_10b78260@Class_10E82AF8@@UAE_NHH_N@Z
-bool Class_10E82AF8::FUN_10b78260(int A, int B, bool C)
+// FUNCTION: 0x10B78260 ?FUN_10b78260@cFactionPane@@UAE_NHH_N@Z
+bool cFactionPane::FUN_10b78260(int A, int B, bool C)
 {
     if (C && UnknownC4 == Unknown188 && Unknown188 != 0)
     {

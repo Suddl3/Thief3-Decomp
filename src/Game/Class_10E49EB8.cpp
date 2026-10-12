@@ -75,7 +75,7 @@ public:
 
     virtual ~Class_10E49EB8();
 
-    int Unknown1C;
+    int m_pVB;
     Class_1095D6C0 m_vecD3DVBs;
     int Unknown34;
     int Unknown38;
@@ -90,7 +90,7 @@ Class_10E49EB8::Class_10E49EB8()
     : m_vecD3DVBs(Allocator_109335C0<void*>(0x1b, "VBPoolDynamic::m_vecD3DVBs")),
       m_vecVertexBuffers(Allocator_109335C0<void*>(0x1b, "VBPoolDynamic::m_vecVertexBuffers"))
 {
-    Unknown1C = 0;
+    m_pVB = 0;
     Unknown34 = 0;
     Unknown38 = 0;
     Unknown50 = 0;

@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/cIntArray.h"
 
-class Class_10E68738
+class cOptionToggle
 {
 public:
     void SetEntry(int Index, int Value);
@@ -11,8 +11,8 @@ public:
     cIntArray m_Entries;
 };
 
-// FUNCTION: 0x10A58FE0 ?SetEntry@Class_10E68738@@QAEXHH@Z
-void Class_10E68738::SetEntry(int Index, int Value)
+// FUNCTION: 0x10A58FE0 ?SetEntry@cOptionToggle@@QAEXHH@Z
+void cOptionToggle::SetEntry(int Index, int Value)
 {
     if (m_Entries.Count < Index + 1)
         m_Entries.SetCount(Index + 1);

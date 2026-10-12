@@ -1,7 +1,7 @@
 // Game/Class_10E68738_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-class Class_10E68738
+class cOptionToggle
 {
 public:
     virtual void Virtual0();
@@ -84,15 +84,15 @@ public:
 
     char Unknown04[0x1CC];
     int m_Selection;
-    char Unknown1D4[0xC];
+    char m_ThirdStateEnabled[0xC];
     int* m_Values;
 };
 
-// FUNCTION: 0x10A560C0 ?SetThirdStateEnabled@Class_10E68738@@QAEX_N@Z
-void Class_10E68738::SetThirdStateEnabled(bool A)
+// FUNCTION: 0x10A560C0 ?SetThirdStateEnabled@cOptionToggle@@QAEX_N@Z
+void cOptionToggle::SetThirdStateEnabled(bool A)
 {
     int Index = m_Selection;
-    Unknown1D4[0] = A;
+    m_ThirdStateEnabled[0] = A;
     if (!A && Index == 2)
         Index = 0;
     m_Selection = Index;

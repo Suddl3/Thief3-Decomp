@@ -1,6 +1,6 @@
 // Game/Unsorted_10BD4160.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10BAEC40.h"
+#include "Game/cStructArray.h"
 #include "Game/Class_10BD4600.h"
 #include "Game/Class_10BD4670.h"
 #include "Game/Struct_10BAEC40_Unknown08.h"
@@ -37,8 +37,8 @@ public:
     virtual unsigned char Virtual1(Struct_10BD4670* A, int* B);
 };
 
-// FUNCTION: 0x10BD4160 ?CopyFrom@Class_10BAEC40@@QAEXABV1@@Z
-void Class_10BAEC40::CopyFrom(const Class_10BAEC40& Other)
+// FUNCTION: 0x10BD4160 ?CopyFrom@cStructArray@@QAEXABV1@@Z
+void cStructArray::CopyFrom(const cStructArray& Other)
 {
     SetCount(Other.m_Count);
     for (int i = 0; i < m_Count; i++)

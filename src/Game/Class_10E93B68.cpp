@@ -1,7 +1,7 @@
-// Game/Class_10E93B68.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/cSampleStats.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-class Class_10E93B68
+class cSampleStats
 {
 public:
     virtual void Virtual0();
@@ -82,8 +82,8 @@ public:
     int Count;
 };
 
-// FUNCTION: 0x10BD7EB0 ?AddSample@Class_10E93B68@@UAEXM@Z
-void Class_10E93B68::AddSample(float Value)
+// FUNCTION: 0x10BD7EB0 ?AddSample@cSampleStats@@UAEXM@Z
+void cSampleStats::AddSample(float Value)
 {
     if (Value > MaxValue)
         MaxValue = Value;

@@ -102,9 +102,9 @@ public:
     char Pad138[0xc0];
 };
 
-// Copied whole from include/Game/Class_10B2F6A0.h, with Unknown120 typed as the
+// Copied whole from include/Game/cCountLabel.h, with Unknown120 typed as the
 // Class_10E684A8 the function calls through (the header has void*).
-class Class_10B2F6A0
+class cCountLabel
 {
 public:
     void RefreshLabel();
@@ -121,8 +121,8 @@ public:
     unsigned char m_HideCount;
 };
 
-// FUNCTION: 0x10B2F590 ?RefreshLabel@Class_10B2F6A0@@QAEXXZ
-void Class_10B2F6A0::RefreshLabel()
+// FUNCTION: 0x10B2F590 ?RefreshLabel@cCountLabel@@QAEXXZ
+void cCountLabel::RefreshLabel()
 {
     if (m_Label)
     {

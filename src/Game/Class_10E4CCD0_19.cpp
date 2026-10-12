@@ -21,7 +21,7 @@ class Class_10E95288;
 
 class Class_10E95898;
 
-class Class_10E96510;
+class cYellowAlert;
 
 class State_Gassed;
 

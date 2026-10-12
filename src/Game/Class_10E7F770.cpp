@@ -5,7 +5,7 @@
 
 class Class_10AF7F80;
 
-void FUN_10a51fc0(FVector& Out, const FString& Prefix, Class_10AF7F80* File, Class_10AF7F80* Section);
+void LoadConfigVector(FVector& Out, const FString& Prefix, Class_10AF7F80* File, Class_10AF7F80* Section);
 
 class Window
 {
@@ -29,13 +29,13 @@ public:
     virtual void LoadConfig(Class_10AF7F80* File, Class_10AF7F80* Section);
 
     char Unknown04[0x150];
-    FVector Unknown154;
+    FVector m_ClearPos;
 };
 
 // FUNCTION: 0x10B46C90 ?LoadConfig@Class_10E7F770@@UAEXPAVClass_10AF7F80@@0@Z
 void Class_10E7F770::LoadConfig(Class_10AF7F80* File, Class_10AF7F80* Section)
 {
     Class_10E67BD8::LoadConfig(File, Section);
-    Unknown154 = FVector(0.0f, 0.0f, 0.0f);
-    FUN_10a51fc0(Unknown154, "ClearPos_", File, Section);
+    m_ClearPos = FVector(0.0f, 0.0f, 0.0f);
+    LoadConfigVector(m_ClearPos, "ClearPos_", File, Section);
 }

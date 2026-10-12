@@ -2,30 +2,30 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10A58FE0.h"
 
-class Class_10E6B078 : public Class_10A58FE0
+class cTextWindow : public Class_10A58FE0
 {
 public:
     virtual bool HandleKey(int A, int B, bool C);
 };
 
-class Class_10E68738 : public Class_10E6B078
+class cOptionToggle : public cTextWindow
 {
 public:
     virtual void FUN_10a56060(int A, int B, bool C);
 
     char Unknown04[0x1CC];
     int m_Selection;
-    bool Unknown1D4;
+    bool m_ThirdStateEnabled;
 };
 
-// FUNCTION: 0x10A56060 ?FUN_10a56060@Class_10E68738@@UAEXHH_N@Z
-void Class_10E68738::FUN_10a56060(int A, int B, bool C)
+// FUNCTION: 0x10A56060 ?FUN_10a56060@cOptionToggle@@UAEXHH_N@Z
+void cOptionToggle::FUN_10a56060(int A, int B, bool C)
 {
     if (C && A == 0x1d)
     {
         int Value = m_Selection;
         int Mode;
-        if (Unknown1D4)
+        if (m_ThirdStateEnabled)
         {
             Mode = Value + 1;
             if (Mode == 3)
@@ -37,5 +37,5 @@ void Class_10E68738::FUN_10a56060(int A, int B, bool C)
         }
         SetSelection(Mode);
     }
-    Class_10E6B078::HandleKey(A, B, C);
+    cTextWindow::HandleKey(A, B, C);
 }

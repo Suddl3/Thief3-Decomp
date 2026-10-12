@@ -10,11 +10,11 @@ public:
     virtual void Virtual3();
     virtual void Virtual4();
     virtual void Virtual5();
-    virtual void FUN_10a795c0();
+    virtual void ClearAll();
 };
 
-// FUNCTION: 0x10A795C0 ?FUN_10a795c0@Class_10E6BD68@@UAEXXZ
-void Class_10E6BD68::FUN_10a795c0()
+// FUNCTION: 0x10A795C0 ?ClearAll@Class_10E6BD68@@UAEXXZ
+void Class_10E6BD68::ClearAll()
 {
     Virtual0();
     Virtual1();

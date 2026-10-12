@@ -1,7 +1,7 @@
-// Game/Class_10E68738.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/cOptionToggle.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-class Class_10E68738
+class cOptionToggle
 {
 public:
     virtual void Virtual0();
@@ -83,12 +83,12 @@ public:
 
     char Unknown04[0x1CC];
     int m_Selection;
-    char Unknown1D4[0xC];
+    char m_ThirdStateEnabled[0xC];
     int* m_Values;
 };
 
-// FUNCTION: 0x10A56010 ?SetSelection@Class_10E68738@@QAEXH@Z
-void Class_10E68738::SetSelection(int A)
+// FUNCTION: 0x10A56010 ?SetSelection@cOptionToggle@@QAEXH@Z
+void cOptionToggle::SetSelection(int A)
 {
     m_Selection = A;
     int Value = m_Values[A];

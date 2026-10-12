@@ -3,9 +3,9 @@
 #ifndef GAME_CLASS_10C01F50_H
 #define GAME_CLASS_10C01F50_H
 
-#include "Game/Class_10C00F60.h"
+#include "Game/cHashMap.h"
 
-class Class_10C01F50 : public Class_10C00F60
+class Class_10C01F50 : public cHashMap
 {
 public:
     void Clear(int A);

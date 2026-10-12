@@ -68,15 +68,15 @@ struct Class_10E6C610
     void* VTable;
 };
 
-Class_10C4CD50* FUN_10c4cd50();
+Class_10C4CD50* EnsureCadenceFactory();
 
 // FUNCTION: 0x10A8B1E0 ?Reset@cTriggerSoundSchemaParam@@UAEXXZ
 void cTriggerSoundSchemaParam::Reset()
 {
     FUN_10c3fbd0();
-    DAT_10f3a1e0.FUN_1090f2c0(0);
+    DAT_10f3a1e0.SetCount(0);
     DAT_10f3a1dc = 0;
-    Class_10C4CD50* Mgr = FUN_10c4cd50();
+    Class_10C4CD50* Mgr = EnsureCadenceFactory();
     Class_10E6C610 Event;
     Event.VTable = DAT_10e6c610;
     Mgr->Virtual8(&Event);

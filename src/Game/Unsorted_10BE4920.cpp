@@ -88,7 +88,7 @@ struct Struct_10BE4980
     Class_10DBD510* Unknown08;
 };
 
-class Class_10E96510
+class cYellowAlert
 {
 public:
     bool FUN_10be4980();
@@ -97,8 +97,8 @@ public:
     Struct_10BE4980* Unknown04;
 };
 
-// FUNCTION: 0x10BE4980 ?FUN_10be4980@Class_10E96510@@QAE_NXZ
-bool Class_10E96510::FUN_10be4980()
+// FUNCTION: 0x10BE4980 ?FUN_10be4980@cYellowAlert@@QAE_NXZ
+bool cYellowAlert::FUN_10be4980()
 {
     int Value = Unknown04->Unknown08->FUN_10dbd510(0x42000585)->FUN_10bbdb80();
     if (Value > 0 && Value <= 2)

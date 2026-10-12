@@ -7,7 +7,7 @@ void WriteInt(void* A, int B);
 
 void WriteString(void* Stream, int* Value);
 
-class Class_10E6DA1C
+class cConGoalCompleteEvent
 {
 public:
     virtual void Virtual0();
@@ -21,8 +21,8 @@ public:
     Class_10AB3800 Unknown10;
 };
 
-// FUNCTION: 0x10AAAFB0 ?WriteFields@Class_10E6DA1C@@UAEXPAXHH@Z
-void Class_10E6DA1C::WriteFields(void* A, int B, int C)
+// FUNCTION: 0x10AAAFB0 ?WriteFields@cConGoalCompleteEvent@@UAEXPAXHH@Z
+void cConGoalCompleteEvent::WriteFields(void* A, int B, int C)
 {
     WriteInt(A, Unknown08);
     WriteString(A, &Unknown0C);

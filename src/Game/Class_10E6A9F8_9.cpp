@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Core/Core.h"
 #include "Game/cString.h"
-#include "Game/Class_10E6B078.h"
+#include "Game/cTextWindow.h"
 
 struct FColor
 {
@@ -14,7 +14,7 @@ struct FColor
     BYTE A;
 };
 
-class Class_10E6A9F8 : public Class_10E6B078
+class Class_10E6A9F8 : public cTextWindow
 {
 public:
     Class_10E6A9F8();

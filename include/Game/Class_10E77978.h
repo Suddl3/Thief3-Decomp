@@ -13,7 +13,7 @@ public:
 
     Class_10E77978(std::string Name);
 
-    std::string Unknown04;
+    std::string m_Name;
 };
 
 #endif // GAME_CLASS_10E77978_H

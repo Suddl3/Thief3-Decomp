@@ -13,7 +13,7 @@ public:
     int Unknown08;
     int Unknown0C;
     Struct_10932ED0 Unknown10;
-    char Unknown1C[0x18];
+    char m_pVB[0x18];
     int Unknown34;
     float Unknown38;
 };

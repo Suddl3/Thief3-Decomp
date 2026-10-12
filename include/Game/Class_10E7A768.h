@@ -13,7 +13,7 @@ public:
     Class_10E7A768(int A, int B);
 
     int Unknown04;
-    Object_10B22790* Unknown08[34];
+    Object_10B22790* m_Objects[34];
     int Unknown90;
     int Unknown94;
     int Unknown98;

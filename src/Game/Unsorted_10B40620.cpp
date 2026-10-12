@@ -26,12 +26,12 @@ public:
     char Unknown04[0x114];
 };
 
-class Class_10E7FD18 : public Class_10E67FD0
+class cHUDLightGem : public Class_10E67FD0
 {
 public:
-    Class_10E7FD18();
+    cHUDLightGem();
 
-    virtual ~Class_10E7FD18();
+    virtual ~cHUDLightGem();
 
     int Unknown118;
     int Unknown11C;
@@ -94,12 +94,12 @@ Class_10E7FB08::Class_10E7FB08()
 {
 }
 
-// FUNCTION: 0x10B40710 ??0Class_10E7FD18@@QAE@XZ
-Class_10E7FD18::Class_10E7FD18() : Unknown118(0), Unknown11C(0), Unknown124(-1), Unknown134(0)
+// FUNCTION: 0x10B40710 ??0cHUDLightGem@@QAE@XZ
+cHUDLightGem::cHUDLightGem() : Unknown118(0), Unknown11C(0), Unknown124(-1), Unknown134(0)
 {
 }
 
-// FUNCTION: 0x10B40760 ??_GClass_10E7FD18@@UAEPAXI@Z
+// FUNCTION: 0x10B40760 ??_GcHUDLightGem@@UAEPAXI@Z
 // Compiler-generated: emitted with the class's vtable by 0x10B40710's definition in this unit.
 
 // FUNCTION: 0x10B40900 ??_GClass_10E7FB08@@UAEPAXI@Z

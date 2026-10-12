@@ -1,7 +1,7 @@
 // Game/Unsorted_10C00C80.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10C00F30.h"
-#include "Game/Class_10C00F60.h"
+#include "Game/cHashMap.h"
 #include "Game/Class_10C00F60_Field18.h"
 #include "Game/Class_10C00F60_Node.h"
 #include "Game/Class_10C01140.h"
@@ -55,8 +55,8 @@ unsigned int Class_10C01140::Insert(const int& Key, const int& Value)
     return Index;
 }
 
-// FUNCTION: 0x10C01200 ?Rehash@Class_10C00F60@@QAEXH@Z
-void Class_10C00F60::Rehash(int Size)
+// FUNCTION: 0x10C01200 ?Rehash@cHashMap@@QAEXH@Z
+void cHashMap::Rehash(int Size)
 {
     int OldSize = m_BucketCount;
     Class_10C00F60_Node** OldBuckets = m_Buckets;
@@ -66,7 +66,7 @@ void Class_10C00F60::Rehash(int Size)
     while (Size >>= 1)
         m_BucketBits++;
     m_Count = 0;
-    Unknown00 = 0;
+    m_Collisions = 0;
     for (int i = 0; i < m_BucketCount; i++)
         m_Buckets[i] = 0;
     for (int j = 0; j < OldSize; j++)
@@ -74,7 +74,7 @@ void Class_10C00F60::Rehash(int Size)
         Class_10C00F60_Node* Node = OldBuckets[j];
         while (Node)
         {
-            FUN_10c00f60(Node->Key, Node->Value);
+            Insert(Node->Key, Node->Value);
             Class_10C00F60_Node* Next = Node->Next;
             delete Node;
             Node = Next;

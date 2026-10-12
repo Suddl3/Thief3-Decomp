@@ -14,7 +14,7 @@ public:
 class Class_10E7E538 : public Class_10E7E4E0
 {
 public:
-    Class_10E7E538* FUN_10b3d0d0();
+    Class_10E7E538* Initialize();
 };
 
 extern void* DAT_10e7e580[];
@@ -43,10 +43,10 @@ public:
 
 extern void* DAT_10e7e658[];
 
-class Class_10E7E658 : public Class_10E7E4E0
+class cRopeMotion : public Class_10E7E4E0
 {
 public:
-    Class_10E7E658* Init();
+    cRopeMotion* Init();
 };
 
 extern void* DAT_10e7e6a0[];
@@ -54,7 +54,7 @@ extern void* DAT_10e7e6a0[];
 class Class_10E7E6A0 : public Class_10E7E4E0
 {
 public:
-    Class_10E7E6A0* FUN_10b3d170();
+    Class_10E7E6A0* Init();
 };
 
 extern void* DAT_10e7e6e8[];
@@ -89,8 +89,8 @@ public:
     Class_10E7E7C0* FUN_10b3d1f0();
 };
 
-// FUNCTION: 0x10B3D0D0 ?FUN_10b3d0d0@Class_10E7E538@@QAEPAV1@XZ
-Class_10E7E538* Class_10E7E538::FUN_10b3d0d0()
+// FUNCTION: 0x10B3D0D0 ?Initialize@Class_10E7E538@@QAEPAV1@XZ
+Class_10E7E538* Class_10E7E538::Initialize()
 {
     FUN_10b3acb0();
     Unknown00 = DAT_10e7e538;
@@ -121,16 +121,16 @@ Class_10E7E610* Class_10E7E610::FUN_10b3d130()
     return this;
 }
 
-// FUNCTION: 0x10B3D150 ?Init@Class_10E7E658@@QAEPAV1@XZ
-Class_10E7E658* Class_10E7E658::Init()
+// FUNCTION: 0x10B3D150 ?Init@cRopeMotion@@QAEPAV1@XZ
+cRopeMotion* cRopeMotion::Init()
 {
     FUN_10b3acb0();
     Unknown00 = DAT_10e7e658;
     return this;
 }
 
-// FUNCTION: 0x10B3D170 ?FUN_10b3d170@Class_10E7E6A0@@QAEPAV1@XZ
-Class_10E7E6A0* Class_10E7E6A0::FUN_10b3d170()
+// FUNCTION: 0x10B3D170 ?Init@Class_10E7E6A0@@QAEPAV1@XZ
+Class_10E7E6A0* Class_10E7E6A0::Init()
 {
     FUN_10b3acb0();
     Unknown00 = DAT_10e7e6a0;

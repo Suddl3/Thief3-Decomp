@@ -72,7 +72,7 @@ void Class_1092F330::Draw()
         GDirect3DDevice8->SetRenderState(7, 1);
         GDirect3DDevice8->SetRenderState(0x89, 0);
         GDirect3DDevice8->SetRenderState(0x8d, 1);
-        IDirect3DBaseTexture8** Slot = &DAT_10f31be0->Unknown1C[0];
+        IDirect3DBaseTexture8** Slot = &DAT_10f31be0->m_StageTextures[0];
         if (*Slot)
         {
             GDirect3DDevice8->SetTexture(0, 0);

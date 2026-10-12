@@ -10,7 +10,7 @@ extern float DAT_10eafbdc;
 
 Class_10A174E0* GetStats();
 
-class Class_10E82AF8
+class cFactionPane
 {
 public:
     virtual void Virtual0();
@@ -69,19 +69,19 @@ public:
     virtual void Virtual53();
     virtual void Virtual54();
     virtual void Virtual55();
-    virtual void FUN_10b5aee0(int A);
+    virtual void UpdateFactions(int A);
 
     void FUN_10b77ee0(int A);
     void ResetStyles();
-    Class_10E82AF8* InitDefaults();
+    cFactionPane* InitDefaults();
 
     char Pad04[0x18C];
     Object_10B5AFF0* m_HammerFaction;
     Object_10B5AFF0* m_PaganFaction;
 };
 
-// FUNCTION: 0x10B5AEE0 ?FUN_10b5aee0@Class_10E82AF8@@UAEXH@Z
-void Class_10E82AF8::FUN_10b5aee0(int Param2)
+// FUNCTION: 0x10B5AEE0 ?UpdateFactions@cFactionPane@@UAEXH@Z
+void cFactionPane::UpdateFactions(int Param2)
 {
     FUN_10b77ee0(Param2);
     if (Param2 != 0)

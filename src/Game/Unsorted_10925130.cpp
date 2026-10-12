@@ -1,6 +1,6 @@
 // Game/Unsorted_10925130.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10924B70.h"
+#include "Game/cRenderTargetState.h"
 #include "Game/Class_109251C0.h"
 
 class Class_10950230;
@@ -11,7 +11,7 @@ extern Class_10950230* DAT_10f31a64;
 
 extern bool DAT_10efef51;
 
-class Class_109242E0 : public Class_10924B70
+class Class_109242E0 : public cRenderTargetState
 {
 };
 
@@ -37,7 +37,7 @@ void Class_109251C0::FUN_109251c0(int Value)
         if (DAT_10efef51)
             FUN_109189c0();
         else
-            DAT_10f319a0->FUN_109243f0();
+            DAT_10f319a0->ApplyRenderTarget();
         Unknown04 = Value;
         for (int i = 0; i < UnknownBC; i++)
         {

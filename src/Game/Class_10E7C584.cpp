@@ -18,13 +18,13 @@ class Class_10E7C584;
 Class_10E7C584::Class_10E7C584(Class_109A62E0* A)
 {
     Unknown04 = 0;
-    Unknown08 = A;
+    m_Registry = A;
     int Index = 0;
     for (int i = 0; i < 8; i++)
     {
-        Unknown0C[i] = new(0, 0, 0, 0, 0) Class_10B48300(A, Index, Index + 1);
+        m_Children[i] = new(0, 0, 0, 0, 0) Class_10B48300(A, Index, Index + 1);
         Index += 2;
     }
-    Unknown0C[0]->FUN_10b470c0();
+    m_Children[0]->FUN_10b470c0();
     A->FUN_109a62c0(this);
 }

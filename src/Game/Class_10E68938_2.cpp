@@ -1,7 +1,7 @@
 // Game/Class_10E68938_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-class Class_10E68738
+class cOptionToggle
 {
 public:
     virtual void Virtual0();
@@ -153,20 +153,20 @@ void cRadioWindow::SetSelectedIndex(int Index)
     m_SelectedIndex = Index;
     for (int i = 0; i < m_ChildCount; i++)
     {
-        Class_10E68738* Item = (Class_10E68738*)m_Children[i];
+        cOptionToggle* Item = (cOptionToggle*)m_Children[i];
         if (Item)
         {
             Item->Virtual111(0);
-            ((Class_10E68738*)m_Children[i])->Unknown1CC = true;
+            ((cOptionToggle*)m_Children[i])->Unknown1CC = true;
             bool Same = i == Index;
-            int Mode = ((Class_10E68738*)m_Children[i])->Virtual71();
-            ((Class_10E68738*)m_Children[i])->Virtual70(Mode == 3 ? 3 : (Same ? 2 : 0));
+            int Mode = ((cOptionToggle*)m_Children[i])->Virtual71();
+            ((cOptionToggle*)m_Children[i])->Virtual70(Mode == 3 ? 3 : (Same ? 2 : 0));
             if (Same)
-                ((Class_10E68738*)m_Children[i])->Unknown1CC = false;
+                ((cOptionToggle*)m_Children[i])->Unknown1CC = false;
             if (Unknown134)
             {
-                ((Class_10E68738*)m_Children[i])->Unknown1CC = false;
-                ((Class_10E68738*)m_Children[i])->ApplyEntry(Same ? 0 : 3);
+                ((cOptionToggle*)m_Children[i])->Unknown1CC = false;
+                ((cOptionToggle*)m_Children[i])->ApplyEntry(Same ? 0 : 3);
             }
         }
     }

@@ -22,7 +22,7 @@ public:
     virtual void Virtual5();
     virtual void Virtual6();
     virtual void Virtual7();
-    virtual void FUN_10bcc240();
+    virtual void Update();
 
     bool FUN_10bc40e0();
     void FUN_10bc4240(Struct_10BC4240_Param* Param, bool A);
@@ -32,8 +32,8 @@ public:
     Class_10BB8300* Unknown04;
 };
 
-// FUNCTION: 0x10BCC240 ?FUN_10bcc240@Class_10E8BE68@@UAEXXZ
-void Class_10E8BE68::FUN_10bcc240()
+// FUNCTION: 0x10BCC240 ?Update@Class_10E8BE68@@UAEXXZ
+void Class_10E8BE68::Update()
 {
     if (!Unknown04->m_Owner->FUN_10babed0(false))
     {

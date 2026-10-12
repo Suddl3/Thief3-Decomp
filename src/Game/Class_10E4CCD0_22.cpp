@@ -13,7 +13,7 @@ class Class_10E948D8;
 
 class cCombatBase;
 
-class Class_10E96510;
+class cYellowAlert;
 
 class State_Gassed;
 
@@ -31,7 +31,7 @@ class State_SearchLook;
 
 class Class_10E93878;
 
-class Class_10E93B68;
+class cSampleStats;
 
 class cTacticWeaponHolster;
 
@@ -57,7 +57,7 @@ public:
     virtual void Virtual2();
     virtual Class_10E95898* FUN_10b98f60(Struct_10B98E00* A, int B, bool C);
     virtual void Virtual4();
-    virtual Class_10E96510* FUN_10b990d0(Struct_10B98E00* A);
+    virtual cYellowAlert* FUN_10b990d0(Struct_10B98E00* A);
     virtual void Virtual6();
     virtual void Virtual7();
     virtual void Virtual8();
@@ -69,9 +69,9 @@ public:
     virtual void Virtual14();
     virtual void Virtual15();
     virtual void Virtual16();
-    virtual State_PatrolLook* FUN_10b99780(Struct_10B98E00* A, int B, int C, int D, int E, int F, int G);
+    virtual State_PatrolLook* CreatePatrolLookState(Struct_10B98E00* A, int B, int C, int D, int E, int F, int G);
     virtual void Virtual18();
-    virtual State_Gassed* FUN_10b999e0(Struct_10B98E00* A, int B);
+    virtual State_Gassed* CreateGassedState(Struct_10B98E00* A, int B);
     virtual void Virtual20();
     virtual void Virtual21();
     virtual void Virtual22();
@@ -79,17 +79,17 @@ public:
     virtual void Virtual24();
     virtual void Virtual25();
     virtual void Virtual26();
-    virtual State_SearchLook* FUN_10b97f30(int A);
+    virtual State_SearchLook* CreateSearchLookState(int A);
     virtual void Virtual28();
     virtual void Virtual29();
-    virtual Class_10E93B68* FUN_10b980e0(int A);
+    virtual cSampleStats* FUN_10b980e0(int A);
     virtual void Virtual31();
     virtual void Virtual32();
     virtual void Virtual33();
-    virtual State_PlayAction* FUN_10b98050(Struct_10B98E00* A, bool B, bool C);
+    virtual State_PlayAction* CreatePlayActionState(Struct_10B98E00* A, bool B, bool C);
     virtual cCombatBase* FUN_10b98170(Struct_10B98E00* A);
     virtual void Virtual36();
-    virtual cTacticWeaponHolster* FUN_10b98290(int A);
+    virtual cTacticWeaponHolster* CreateTacticWeaponHolster(int A);
     virtual void Virtual38();
     virtual void Virtual39();
     virtual Class_10E948D8* FUN_10b98450(Struct_10B98E00* A, int B, int C);

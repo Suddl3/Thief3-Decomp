@@ -39,7 +39,7 @@ class Class_10E49EB8 : public Class_10E49D1C
 public:
     virtual ~Class_10E49EB8();
 
-    int Unknown1C;
+    int m_pVB;
     Class_1095D6C0 m_vecD3DVBs;
     int Unknown34;
     int Unknown38;
@@ -55,7 +55,7 @@ Class_10E49EB8::~Class_10E49EB8()
     m_vecVertexBuffers.FUN_1095d6c0();
     Unknown34 = 0;
     Unknown38 = 0;
-    Unknown1C = 0;
+    m_pVB = 0;
     for (Class_10933A60_Element** It = m_vecD3DVBs.Unknown08; It != m_vecD3DVBs.Unknown0C; ++It)
     {
         if (*It)

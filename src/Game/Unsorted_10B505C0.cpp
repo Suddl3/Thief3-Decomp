@@ -1,7 +1,7 @@
 // Game/Unsorted_10B505C0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Core/Core.h"
-#include "Game/Class_10B3ED20.h"
+#include "Game/cLockPickController.h"
 #include "Game/Class_10F3A3D8.h"
 #include "Game/Struct_10AC8540_Param.h"
 #include "Game/Struct_10B7C170.h"
@@ -19,7 +19,7 @@ struct Struct_10B505C0_Param
 };
 
 // Game/Class_10E7ED00.h copied whole, with the method this function calls added.
-class Class_10E7ED00 : public Class_10B3ED20
+class Class_10E7ED00 : public cLockPickController
 {
 public:
     virtual void FUN_10b3e380(Struct_10B3ACE0* A, float B, float C);

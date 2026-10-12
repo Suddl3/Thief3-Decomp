@@ -1,9 +1,9 @@
-// Game/Class_10E6AEA0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/cBorderWindow.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Core/Core.h"
 
-class Class_10E6AEA0
+class cBorderWindow
 {
 public:
     virtual void Virtual0();
@@ -46,8 +46,8 @@ public:
     float Unknown13C;
 };
 
-// FUNCTION: 0x10A64F30 ?FUN_10a64f30@Class_10E6AEA0@@UAE?AVFVector@@XZ
-FVector Class_10E6AEA0::FUN_10a64f30()
+// FUNCTION: 0x10A64F30 ?FUN_10a64f30@cBorderWindow@@UAE?AVFVector@@XZ
+FVector cBorderWindow::FUN_10a64f30()
 {
     FVector Ext(Unknown13C + Unknown13C, Unknown13C + Unknown13C, 0.0f);
     return *Virtual33() - Ext;

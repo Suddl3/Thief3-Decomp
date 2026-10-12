@@ -48,11 +48,11 @@ public:
     virtual void Virtual33();
     virtual void Virtual34();
     virtual void Virtual35();
-    virtual cTacticWeaponEquip* FUN_10b98200(Struct_10B98E00* A, int B, bool C);
+    virtual cTacticWeaponEquip* CreateTacticWeaponEquip(Struct_10B98E00* A, int B, bool C);
 };
 
-// FUNCTION: 0x10B98200 ?FUN_10b98200@Class_10E4CCD0@@UAEPAVcTacticWeaponEquip@@PAUStruct_10B98E00@@H_N@Z
-cTacticWeaponEquip* Class_10E4CCD0::FUN_10b98200(Struct_10B98E00* A, int B, bool C)
+// FUNCTION: 0x10B98200 ?CreateTacticWeaponEquip@Class_10E4CCD0@@UAEPAVcTacticWeaponEquip@@PAUStruct_10B98E00@@H_N@Z
+cTacticWeaponEquip* Class_10E4CCD0::CreateTacticWeaponEquip(Struct_10B98E00* A, int B, bool C)
 {
     return new(0, 0, 0, 0, 0) cTacticWeaponEquip((int)A, (int)this, B, false, C);
 }

@@ -38,7 +38,7 @@ public:
 
 Class_10E871C8* GetSoupManager();
 
-class Class_10E871D0
+class cSmokeySoup
 {
 public:
     virtual void Virtual0();
@@ -112,8 +112,8 @@ public:
     void LoadConfig(Class_10AF7F80* File, Class_10AF7F80* Section);
 };
 
-// FUNCTION: 0x10B70990 ?LoadConfig@Class_10E871D0@@QAEXPAVClass_10AF7F80@@0@Z
-void Class_10E871D0::LoadConfig(Class_10AF7F80* File, Class_10AF7F80* Section)
+// FUNCTION: 0x10B70990 ?LoadConfig@cSmokeySoup@@QAEXPAVClass_10AF7F80@@0@Z
+void cSmokeySoup::LoadConfig(Class_10AF7F80* File, Class_10AF7F80* Section)
 {
     ((Class_10E67BD8*)this)->Class_10E67BD8::LoadConfig(File, Section);
     void* Result1;

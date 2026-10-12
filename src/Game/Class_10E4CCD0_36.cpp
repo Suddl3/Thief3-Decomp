@@ -42,11 +42,11 @@ public:
     virtual void Virtual19();
     virtual void Virtual20();
     virtual void Virtual21();
-    virtual State_Choking* FUN_10b99c20(Struct_10B98E00* A, int B);
+    virtual State_Choking* CreateChokingState(Struct_10B98E00* A, int B);
 };
 
-// FUNCTION: 0x10B99C20 ?FUN_10b99c20@Class_10E4CCD0@@UAEPAVState_Choking@@PAUStruct_10B98E00@@H@Z
-State_Choking* Class_10E4CCD0::FUN_10b99c20(Struct_10B98E00* A, int B)
+// FUNCTION: 0x10B99C20 ?CreateChokingState@Class_10E4CCD0@@UAEPAVState_Choking@@PAUStruct_10B98E00@@H@Z
+State_Choking* Class_10E4CCD0::CreateChokingState(Struct_10B98E00* A, int B)
 {
     int Id = GetChokingEnableId();
     if (Id && A->Unknown08->FUN_10dbd510(Id)->GetFloat() > 0.0f)

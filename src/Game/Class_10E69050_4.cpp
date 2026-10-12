@@ -10,7 +10,7 @@ public:
     void FUN_10a53220(float A);
 };
 
-class Class_10E69050
+class cSequence
 {
 public:
     virtual void Virtual0();
@@ -27,8 +27,8 @@ public:
     int m_Current;
 };
 
-// FUNCTION: 0x10A58C30 ?UpdateCurrent@Class_10E69050@@UAEXM@Z
-void Class_10E69050::UpdateCurrent(float A)
+// FUNCTION: 0x10A58C30 ?UpdateCurrent@cSequence@@UAEXM@Z
+void cSequence::UpdateCurrent(float A)
 {
     m_Items[m_Current]->FUN_10a53220(A);
     if (m_Items[m_Current]->Virtual1())

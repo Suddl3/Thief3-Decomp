@@ -24,7 +24,7 @@ unsigned int Class_10C59030::Insert(const cString& Key, const Class_10C59030_Val
     {
         const void* Data;
         int Length;
-        Unknown18.Virtual0(Key, &Data, &Length);
+        m_KeyTraits.Virtual0(Key, &Data, &Length);
         Index = HashBytes(Data, Length) & ((1 << Unknown08) - 1);
     }
     if (m_Buckets[Index])

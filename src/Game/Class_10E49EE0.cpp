@@ -33,17 +33,17 @@ public:
     virtual void Virtual9();
     virtual ~Class_10E49EE0();
 
-    Class_10E49EE0_Owner* Unknown04;
-    int Unknown08;
+    Class_10E49EE0_Owner* m_Owner;
+    int m_RefCount;
 };
 
 // FUNCTION: 0x109341F0 ?Release@Class_10E49EE0@@UAEHXZ
 int Class_10E49EE0::Release()
 {
-    int Count = --Unknown08;
+    int Count = --m_RefCount;
     if (Count == 0)
     {
-        Unknown04->Virtual9(this);
+        m_Owner->Virtual9(this);
         delete this;
     }
     return Count;

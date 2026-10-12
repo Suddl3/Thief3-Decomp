@@ -13,7 +13,7 @@ struct Struct_10ABE210
 // FUNCTION: 0x10ABE210 ?CopyFrom@Class_10ABDAE0@@QAEXABV1@@Z
 void Class_10ABDAE0::CopyFrom(const Class_10ABDAE0& Other)
 {
-    FUN_10abdae0(Other.Count);
+    SetCount(Other.Count);
     for (int i = 0; i < Count; i++)
         Data[i] = Other.Data[i];
 }

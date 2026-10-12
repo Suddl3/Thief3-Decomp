@@ -3,14 +3,14 @@
 #include <list>
 #include "Game/Class_10C49E20.h"
 
-// FUNCTION: 0x10C49E20 ?FUN_10c49e20@Class_10C49E20@@QAEHXZ
-int Class_10C49E20::FUN_10c49e20()
+// FUNCTION: 0x10C49E20 ?AllocateId@Class_10C49E20@@QAEHXZ
+int Class_10C49E20::AllocateId()
 {
-    if (!Unknown00.empty())
+    if (!m_FreeIds.empty())
     {
-        int Value = Unknown00.front();
-        Unknown00.pop_front();
+        int Value = m_FreeIds.front();
+        m_FreeIds.pop_front();
         return Value;
     }
-    return ++Unknown0C - 1;
+    return ++m_NextId - 1;
 }

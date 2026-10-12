@@ -139,7 +139,7 @@ public:
     virtual void Update(int A);
 
     char Unknown0EC[0x2C];
-    Class_10B314F0* Unknown118;
+    Class_10B314F0* m_FMVWindow;
     char Unknown11C[8];
     float m_Elapsed;
     float m_Duration;
@@ -231,8 +231,8 @@ void Class_10E809B8::Update(int A)
     {
         Virtual56(0);
         ((Class_10B175C0*)GetWindowManager())->FUN_10b175c0(&Unknown12C, 1, FUN_10b42bd0, this);
-        Unknown118 = ((Class_10B175C0*)GetWindowManager())->GetFMVWindow();
-        Unknown118->FUN_10b314f0(false);
+        m_FMVWindow = ((Class_10B175C0*)GetWindowManager())->GetFMVWindow();
+        m_FMVWindow->FUN_10b314f0(false);
     }
 }
 

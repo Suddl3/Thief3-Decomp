@@ -37,18 +37,18 @@ public:
     ~Class_10AB37D0();
 };
 
-class Class_10E6DA1C : public cConEvent
+class cConGoalCompleteEvent : public cConEvent
 {
 public:
-    Class_10E6DA1C();
+    cConGoalCompleteEvent();
 
     int Unknown08;
     cString Unknown0C;
     Class_10AB37D0 Unknown10;
 };
 
-// FUNCTION: 0x10AAB0D0 ??0Class_10E6DA1C@@QAE@XZ
-Class_10E6DA1C::Class_10E6DA1C()
+// FUNCTION: 0x10AAB0D0 ??0cConGoalCompleteEvent@@QAE@XZ
+cConGoalCompleteEvent::cConGoalCompleteEvent()
 {
     Unknown08 = 0;
     Unknown0C.FUN_1090a590(DAT_10e6c100);

@@ -35,7 +35,7 @@ public:
     Class_10B3E820_Unknown08* Unknown08;
 };
 
-class Class_10B3ED20 : public Class_10E7E538
+class cLockPickController : public Class_10E7E538
 {
 public:
     virtual void Virtual0();
@@ -55,8 +55,8 @@ public:
     Class_10B3E820_Unknown5C* m_Slots[4];
 };
 
-// FUNCTION: 0x10B3E820 ?ClearSlots@Class_10B3ED20@@QAEXH@Z
-void Class_10B3ED20::ClearSlots(int Index)
+// FUNCTION: 0x10B3E820 ?ClearSlots@cLockPickController@@QAEXH@Z
+void cLockPickController::ClearSlots(int Index)
 {
     if (Index == 4)
     {

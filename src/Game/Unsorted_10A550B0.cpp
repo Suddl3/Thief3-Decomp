@@ -17,13 +17,13 @@ public:
     char Unknown11C[0xB4];
 };
 
-class Class_10E68738 : public Class_10E69080
+class cOptionToggle : public Class_10E69080
 {
 public:
-    Class_10E68738* FUN_10a56130();
+    cOptionToggle* Init();
 
     int m_Selection;
-    char Unknown1D4;
+    char m_ThirdStateEnabled;
     Struct_10A56130 Unknown1D8;
 };
 
@@ -78,14 +78,14 @@ Class_10E684A8::Class_10E684A8()
 // FUNCTION: 0x10A55FF0 ??_GClass_10E684A8@@UAEPAXI@Z
 // Compiler-generated: emitted with the class's vtable by 0x10A55150's definition in this unit.
 
-// FUNCTION: 0x10A56130 ?FUN_10a56130@Class_10E68738@@QAEPAV1@XZ
-Class_10E68738* Class_10E68738::FUN_10a56130()
+// FUNCTION: 0x10A56130 ?Init@cOptionToggle@@QAEPAV1@XZ
+cOptionToggle* cOptionToggle::Init()
 {
     this->Class_10E69080::Class_10E69080();
     Unknown00 = DAT_10e68738;
     Unknown118 = DAT_10e7edb8;
     m_Selection = 0;
-    Unknown1D4 = 0;
+    m_ThirdStateEnabled = 0;
     Unknown1D8.Struct_10A56130::Struct_10A56130();
     return this;
 }

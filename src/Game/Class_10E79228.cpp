@@ -18,14 +18,14 @@ public:
 class Class_10E79228 : public Class_10E5B7C8
 {
 public:
-    virtual bool FUN_10b155b0(int p1);
+    virtual bool SetPending(int p1);
 
     char Unknown98[0x1C4];
     bool m_Closing;
 };
 
-// FUNCTION: 0x10B155B0 ?FUN_10b155b0@Class_10E79228@@UAE_NH@Z
-bool Class_10E79228::FUN_10b155b0(int p1)
+// FUNCTION: 0x10B155B0 ?SetPending@Class_10E79228@@UAE_NH@Z
+bool Class_10E79228::SetPending(int p1)
 {
     if (m_Closing)
         return false;

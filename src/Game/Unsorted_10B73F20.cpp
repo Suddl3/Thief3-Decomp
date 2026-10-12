@@ -231,7 +231,7 @@ class Class_10E858D0
 {
 public:
     virtual void Virtual0();
-    virtual bool FUN_10b67ea0(int A, int B, bool C);
+    virtual bool HandleKey(int A, int B, bool C);
 
     bool FUN_10b79560(int A, int B, bool C);
 

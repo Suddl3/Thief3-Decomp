@@ -64,20 +64,20 @@ public:
     virtual ~Class_10A59050_Element();
 };
 
-class Class_10E69050 : public Class_10E68F74
+class cSequence : public Class_10E68F74
 {
 public:
-    virtual ~Class_10E69050();
+    virtual ~cSequence();
 
     cIntArray m_Count;
     int m_Current;
 };
 
-// FUNCTION: 0x10A59030 ??_GClass_10E69050@@UAEPAXI@Z
+// FUNCTION: 0x10A59030 ??_GcSequence@@UAEPAXI@Z
 // Compiler-generated: emitted with the class's vtable by 0x10A59050's definition in this unit.
 
-// FUNCTION: 0x10A59050 ??1Class_10E69050@@UAE@XZ
-Class_10E69050::~Class_10E69050()
+// FUNCTION: 0x10A59050 ??1cSequence@@UAE@XZ
+cSequence::~cSequence()
 {
     int Count = m_Count.Unknown00;
     m_Current = 0;

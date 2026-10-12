@@ -1,7 +1,7 @@
 // Game/Unsorted_10BAE100_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-#include "Game/Class_10BAEC00.h"
+#include "Game/cObjectArray.h"
 #include "Game/Class_10905A90_Member.h"
 
 Class_10905A90_Member* GetAllocator();
@@ -16,8 +16,8 @@ public:
     char Pad04[0x10];
 };
 
-// FUNCTION: 0x10BAE100 ?SetCount@Class_10BAEC00@@QAEXH@Z
-void Class_10BAEC00::SetCount(int NewCount)
+// FUNCTION: 0x10BAE100 ?SetCount@cObjectArray@@QAEXH@Z
+void cObjectArray::SetCount(int NewCount)
 {
     int OldCount = m_Count;
     int Capacity = !m_Data ? 0 : m_BlockBytes / sizeof(Class_10E8D7C0);

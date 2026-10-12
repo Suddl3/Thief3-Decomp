@@ -40,7 +40,7 @@ public:
     virtual int OnAnimationEnd(int A, int B);
 
     char Unknown04[0xC];
-    int Unknown10;
+    int m_AnimationEnded;
 };
 
 extern void* DAT_10e81590[];
@@ -77,7 +77,7 @@ int Class_10E7EA00::OnAnimationEnd(int A, int B)
     if (B == 0x6e)
         return Virtual4();
     ((Class_10B398B0*)GetLinkedObject())->FUN_10b398b0(0);
-    Unknown10 = 1;
+    m_AnimationEnded = 1;
     return 0x17;
 }
 

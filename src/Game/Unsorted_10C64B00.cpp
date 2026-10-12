@@ -18,8 +18,8 @@ void Class_10C662F0::AddRef(cResSound* A)
     }
 }
 
-// FUNCTION: 0x10C64E50 ?FUN_10c64e50@@YA?AVcRefPtr@@PAV1@@Z
-cRefPtr FUN_10c64e50(cRefPtr* Other)
+// FUNCTION: 0x10C64E50 ?CopyRef@@YA?AVcRefPtr@@PAV1@@Z
+cRefPtr CopyRef(cRefPtr* Other)
 {
     return *Other;
 }

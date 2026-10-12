@@ -5,7 +5,7 @@
 #include "Game/Struct_10B651B0.h"
 #include "Core/Core.h"
 #include "Game/Class_109E6D60.h"
-#include "Game/Class_10E81DE8.h"
+#include "Game/cOptionsWindow.h"
 #include "Game/Class_10AB5A90.h"
 #include "Game/Class_10B28330.h"
 #include "Game/Options.h"
@@ -296,7 +296,7 @@ public:
 void cT3AVOptionsWindow::ShowMainMenu()
 {
     Virtual56(0);
-    ((Class_10E81DE8*)this)->Close();
+    ((cOptionsWindow*)this)->Close();
     if (Unknown1B0)
     {
         Class_10B28330* Window;

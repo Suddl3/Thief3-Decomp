@@ -17,7 +17,7 @@ int Class_10E6F474::FindMatchIndex(int A)
 {
     for (int i = 0; i < m_EntryCount; i++)
     {
-        if (Unknown0C[i]->Virtual4(A))
+        if (m_Entries[i]->Virtual4(A))
             return i;
     }
     return -1;

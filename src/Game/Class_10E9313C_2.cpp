@@ -40,7 +40,7 @@ extern Class_10FF667C* DAT_10ff667c;
 void Class_10E9313C::Serialize(FArchive& Ar)
 {
     FUN_10c11ff0(Ar, &Unknown04);
-    Unknown08.FUN_10c01ff0(&Ar);
+    Unknown08.Serialize(&Ar);
     FUN_10b052a0(Ar, &Unknown10);
     DAT_10ff667c->Unknown18->Virtual1(Ar, &Unknown1C);
     BYTE Flag = Unknown20;

@@ -16,8 +16,8 @@ int Class_10C63EE0::FUN_10c63ee0()
     return Unknown08->Unknown40;
 }
 
-// FUNCTION: 0x10C64AC0 ?FUN_10c64ac0@Class_10C64AC0@@QAEPAUElem_10C64AC0@@H@Z
-Elem_10C64AC0* Class_10C64AC0::FUN_10c64ac0(int Index)
+// FUNCTION: 0x10C64AC0 ?GetElem@Class_10C64AC0@@QAEPAUElem_10C64AC0@@H@Z
+Elem_10C64AC0* Class_10C64AC0::GetElem(int Index)
 {
-    return &Unknown1C[Index];
+    return &m_Elements[Index];
 }

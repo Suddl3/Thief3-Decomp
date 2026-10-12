@@ -27,5 +27,5 @@ Class_10B255F0* GetSelection();
 void Class_10E7E6A0::ReleaseArm(AGarrett* Garrett)
 {
     Garrett->ArmUse = EAU_FREE;
-    GetSelection()->FUN_10b24d90();
+    GetSelection()->ClearJunkState();
 }

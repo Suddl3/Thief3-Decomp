@@ -1,6 +1,6 @@
 // Game/Unsorted_10929740_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10E49AE0.h"
+#include "Game/cPixelAccessor.h"
 #include "Game/Class_10E49B08.h"
 #include "Game/Class_10E49B28.h"
 #include "Game/Struct_10929510.h"
@@ -8,8 +8,8 @@
 
 typedef unsigned long DWORD;
 
-// FUNCTION: 0x109298C0 ?GetLuminance@Class_10E49AE0@@UAEXPAUStruct_10929510@@HHPAM@Z
-void Class_10E49AE0::GetLuminance(Struct_10929510* p1, int p2, int p3, float* p4)
+// FUNCTION: 0x109298C0 ?GetLuminance@cPixelAccessor@@UAEXPAUStruct_10929510@@HHPAM@Z
+void cPixelAccessor::GetLuminance(Struct_10929510* p1, int p2, int p3, float* p4)
 {
     float R, G, B, A;
     Virtual8(p1, &R, &G, &B, &A, p2, p3);

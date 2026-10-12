@@ -21,14 +21,14 @@ public:
     unsigned int Insert(const cString& Key, const Class_10C59030_Value& Value);
     unsigned int Set(const cString& Key, const Class_10C59030_Value& Value);
 
-    int Unknown00;
+    int m_Collisions;
     int Unknown04;
-    int Unknown08;
+    int m_BucketBits;
     int Unknown0C;
-    bool Unknown10;
+    bool m_FixedSize;
     char Pad11[0x3];
-    Class_10C59030_Node** Unknown14;
-    Class_10C59030_Field18 Unknown18;
+    Class_10C59030_Node** m_Buckets;
+    Class_10C59030_Field18 m_KeyTraits;
 };
 
 // FUNCTION: 0x10C59030 ?Set@Class_10C59030@@QAEIABVcString@@ABVClass_10C59030_Value@@@Z
@@ -38,14 +38,14 @@ unsigned int Class_10C59030::Set(const cString& Key, const Class_10C59030_Value&
     {
         const void* Data;
         int Length;
-        Unknown18.Virtual0(Key, &Data, &Length);
-        Index = HashBytes(Data, Length) & ((1 << Unknown08) - 1);
+        m_KeyTraits.Virtual0(Key, &Data, &Length);
+        Index = HashBytes(Data, Length) & ((1 << m_BucketBits) - 1);
     }
-    if (!Unknown14)
+    if (!m_Buckets)
         return (unsigned int)-1;
-    for (Class_10C59030_Node* Node = Unknown14[Index]; Node; Node = Node->Next)
+    for (Class_10C59030_Node* Node = m_Buckets[Index]; Node; Node = Node->Next)
     {
-        if (Unknown18.Virtual1(Key, Node->Key) == 0)
+        if (m_KeyTraits.Virtual1(Key, Node->Key) == 0)
         {
             Node->Value = Value;
             return Index;

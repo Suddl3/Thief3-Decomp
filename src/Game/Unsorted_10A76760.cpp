@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Core/Core.h"
 #include "Game/cActorManager.h"
-#include "Game/Class_10E6BC80.h"
+#include "Game/cCopyList.h"
 #include "Game/Class_10E6BD64.h"
 #include "Game/Class_10E6BD18.h"
 #include "Game/ULevel.h"
@@ -16,7 +16,7 @@ extern void* DAT_10e6bd68[];
 class Class_10E6BD68
 {
 public:
-    Class_10E6BD68* FUN_10a796a0();
+    Class_10E6BD68* Init();
 
     void** Unknown00;
     int Unknown04;
@@ -41,8 +41,8 @@ public:
 
 class ULevelBase;
 
-// FUNCTION: 0x10A76760 ?FindBySource@Class_10E6BC80@@UAEPAVObject_10A76760@@H@Z
-Object_10A76760* Class_10E6BC80::FindBySource(int Value)
+// FUNCTION: 0x10A76760 ?FindBySource@cCopyList@@UAEPAVObject_10A76760@@H@Z
+Object_10A76760* cCopyList::FindBySource(int Value)
 {
     for (int i = 0; i < m_CopyCount; i++)
     {
@@ -76,8 +76,8 @@ void Class_10E6BD64::FUN_10a79670()
     VTable = DAT_10e6bd60;
 }
 
-// FUNCTION: 0x10A796A0 ?FUN_10a796a0@Class_10E6BD68@@QAEPAV1@XZ
-Class_10E6BD68* Class_10E6BD68::FUN_10a796a0()
+// FUNCTION: 0x10A796A0 ?Init@Class_10E6BD68@@QAEPAV1@XZ
+Class_10E6BD68* Class_10E6BD68::Init()
 {
     Unknown00 = DAT_10e6bd68;
     Unknown04 = 0;

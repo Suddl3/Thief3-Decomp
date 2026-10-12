@@ -24,16 +24,16 @@ public:
     char Unknown11C[0x38];
 };
 
-class Class_10E871D0 : public Class_10E67BD8
+class cSmokeySoup : public Class_10E67BD8
 {
 public:
-    ~Class_10E871D0();
+    ~cSmokeySoup();
 
     cIntArray Unknown154;
 };
 
-// FUNCTION: 0x10B708D0 ??1Class_10E871D0@@QAE@XZ
-Class_10E871D0::~Class_10E871D0()
+// FUNCTION: 0x10B708D0 ??1cSmokeySoup@@QAE@XZ
+cSmokeySoup::~cSmokeySoup()
 {
     Unknown00 = DAT_10e871d0;
     Unknown118 = DAT_10e7edb8;

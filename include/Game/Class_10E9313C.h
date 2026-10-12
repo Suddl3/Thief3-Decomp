@@ -12,7 +12,7 @@ class FArchive;
 class Class_10E9313C
 {
 public:
-    virtual void FUN_10bd0190(int p1);
+    virtual void ClearIfEqual(int p1);
     virtual void Serialize(FArchive& Ar);
 
     Class_10E9313C();

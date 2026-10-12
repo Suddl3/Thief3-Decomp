@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_10B22910_H
 #define GAME_CLASS_10B22910_H
 
-class Class_10B3ED20;
+class cLockPickController;
 
 class Class_10B22910
 {
@@ -11,7 +11,7 @@ public:
     void CheckPendingReset();
 
     char Unknown00[0x90];
-    Class_10B3ED20* Unknown90;
+    cLockPickController* Unknown90;
 };
 
 #endif // GAME_CLASS_10B22910_H

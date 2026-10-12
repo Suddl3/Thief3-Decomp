@@ -29,7 +29,7 @@ public:
 class Class_10E6D990 : public Class_10AA83E0
 {
 public:
-    virtual int FUN_10aa8490(FILE* File, int Param);
+    virtual int WriteKeyValue(FILE* File, int Param);
 
     char Unknown04[4];
     char* Unknown08;
@@ -60,8 +60,8 @@ Class_10AA8420::~Class_10AA8420()
     }
 }
 
-// FUNCTION: 0x10AA8490 ?FUN_10aa8490@Class_10E6D990@@UAEHPAU_iobuf@@H@Z
-int Class_10E6D990::FUN_10aa8490(FILE* File, int Param)
+// FUNCTION: 0x10AA8490 ?WriteKeyValue@Class_10E6D990@@UAEHPAU_iobuf@@H@Z
+int Class_10E6D990::WriteKeyValue(FILE* File, int Param)
 {
     fprintf(File, DAT_10e6c0f0, Unknown08, GetName().Unknown00);
     return 1;

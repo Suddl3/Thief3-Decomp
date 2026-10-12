@@ -13,10 +13,10 @@ public:
     virtual void Virtual2();
     virtual void AddItem(int Item);
     virtual void RemoveItem(int Item);
-    virtual void FUN_10a795c0();
+    virtual void ClearAll();
     virtual void FUN_10a7a340(void* A, int B);
 
-    Class_10E6BD68* FUN_10a796a0();
+    Class_10E6BD68* Init();
     void FUN_10a7a120(void* A, int B);
     void FUN_10a79800(void* A, int B);
     void FUN_10a79aa0(void* A, int B);

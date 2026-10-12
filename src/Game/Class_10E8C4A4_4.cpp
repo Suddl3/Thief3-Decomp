@@ -11,20 +11,20 @@ public:
     virtual void Virtual0();
     virtual void Virtual1();
     virtual void Virtual2();
-    virtual cString FUN_10c12cc0();
+    virtual cString GetName();
     virtual void Virtual4();
     virtual void Virtual5();
     virtual void Virtual6();
     virtual void Virtual7();
-    virtual cString FUN_10c131d0();
+    virtual cString GetObjectName();
     virtual bool FUN_10c129b0();
 
     Class_1096C8D0* Unknown04;
     Class_10E8C4A4_Member* Unknown08;
 };
 
-// FUNCTION: 0x10C12CC0 ?FUN_10c12cc0@Class_10E8C4A4@@UAE?AVcString@@XZ
-cString Class_10E8C4A4::FUN_10c12cc0()
+// FUNCTION: 0x10C12CC0 ?GetName@Class_10E8C4A4@@UAE?AVcString@@XZ
+cString Class_10E8C4A4::GetName()
 {
     if (Unknown08)
         return Unknown08->Virtual25();

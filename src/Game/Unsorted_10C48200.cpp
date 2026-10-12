@@ -38,8 +38,8 @@ public:
     Object_10C4A030* Unknown7C;
 };
 
-// FUNCTION: 0x10C48200 ?FUN_10c48200@Class_10E9BB60@@UAEIHIII@Z
-unsigned int Class_10E9BB60::FUN_10c48200(int p1, unsigned int p2, unsigned int p3, unsigned int p4)
+// FUNCTION: 0x10C48200 ?ClampToAvailable@Class_10E9BB60@@UAEIHIII@Z
+unsigned int Class_10E9BB60::ClampToAvailable(int p1, unsigned int p2, unsigned int p3, unsigned int p4)
 {
     unsigned int Avail = p3 - p2;
     if (p4 < Avail)
@@ -92,16 +92,16 @@ void CadenceFactory::FUN_10c4a030()
 {
     Unknown7C->Virtual1();
     Unknown10.Virtual6();
-    Unknown60.FUN_10c49da0(0x40);
+    Unknown60.Reset(0x40);
 }
 
-// FUNCTION: 0x10C4A150 ?FUN_10c4a150@Class_10C4A150@@QAEXXZ
-void Class_10C4A150::FUN_10c4a150()
+// FUNCTION: 0x10C4A150 ?Clear@Class_10C4A150@@QAEXXZ
+void Class_10C4A150::Clear()
 {
-    FUN_10c49da0(0x40);
-    ::operator delete(Unknown14);
-    Unknown04 = 0;
-    Unknown0C = 0;
-    Unknown14 = 0;
-    Unknown00 = 0;
+    Reset(0x40);
+    ::operator delete(m_Buckets);
+    m_Count = 0;
+    m_BucketCount = 0;
+    m_Buckets = 0;
+    m_Collisions = 0;
 }

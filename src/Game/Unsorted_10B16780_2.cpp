@@ -5,7 +5,7 @@
 #include "Game/Class_10B2B9E0.h"
 #include "Game/WindowManager.h"
 #include "Game/Class_10B2E720.h"
-#include "Game/Class_10B2F6A0.h"
+#include "Game/cCountLabel.h"
 #include "Core/Core.h"
 #include "Game/Class_109E6D60.h"
 #include "Game/Class_10905A90_Member.h"
@@ -179,7 +179,7 @@ void Class_10B16930::ShowJunkItemWindow(int A)
     }
     ((Class_10B2E9D0*)Window)->FUN_10b2e9d0(A);
     ((Class_10B2E720*)Window)->SetVisibility(0, 1);
-    ((Class_10B2F6A0*)Window)->SetHideCount(1);
+    ((cCountLabel*)Window)->SetHideCount(1);
     ((Class_10B16860_Window*)Window)->Virtual56(1);
     Struct_10B16860 S;
     S.Unknown00 = 0;

@@ -9,7 +9,7 @@
 class Class_10E79228 : public Class_10E5B7C8
 {
 public:
-    virtual bool FUN_10b155b0(int p1);
+    virtual bool SetPending(int p1);
     virtual void Virtual1();
     virtual void Tick(float A);
 

@@ -39,7 +39,7 @@ int Class_10C01EC0::Remove(int A)
     Node->Prev = (Entry_10C32C30*)-1;
     Count--;
     Key = A;
-    m_Index.FUN_10c015b0(Key);
+    m_Index.Remove(Key);
     delete Node;
     return A;
 }

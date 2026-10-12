@@ -14,7 +14,7 @@ public:
     Class_10C7D570* Unknown08;
 };
 
-class Class_10BC9A50
+class cAISpeech
 {
 public:
     void CheckDeathGrunt();
@@ -30,8 +30,8 @@ inline Class_10E97B00* AddressOf(const Class_10E97B00& Object)
     return (Class_10E97B00*)&Object;
 }
 
-// FUNCTION: 0x10BC7F30 ?CheckDeathGrunt@Class_10BC9A50@@QAEXXZ
-void Class_10BC9A50::CheckDeathGrunt()
+// FUNCTION: 0x10BC7F30 ?CheckDeathGrunt@cAISpeech@@QAEXXZ
+void cAISpeech::CheckDeathGrunt()
 {
     if (this->Unknown04->Unknown08->FUN_10dbd510(0x100647)->GetFloat() > 0.0)
     {

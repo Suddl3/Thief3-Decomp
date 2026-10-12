@@ -3,11 +3,11 @@
 #ifndef GAME_CLASS_10B42640_H
 #define GAME_CLASS_10B42640_H
 
-#include "Game/Class_10E6B5B8.h"
+#include "Game/cPtrArray.h"
 
 struct Struct_10B42650;
 
-class Class_10B42640 : public Class_10E6B5B8
+class Class_10B42640 : public cPtrArray
 {
 public:
     virtual ~Class_10B42640();

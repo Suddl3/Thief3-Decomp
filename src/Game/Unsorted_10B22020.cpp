@@ -4,7 +4,7 @@
 #include "Game/Class_10B228E0.h"
 #include "Game/Class_10B22640.h"
 
-class Class_10B3ED20
+class cLockPickController
 {
 public:
     virtual void Virtual0();

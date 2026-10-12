@@ -9,7 +9,7 @@ void ReadInt(void* Reader, int* Out);
 
 void ReadString(void* Reader, int* Out);
 
-class Class_10E6DA1C
+class cConGoalCompleteEvent
 {
 public:
     virtual void Virtual0();
@@ -22,8 +22,8 @@ public:
     Class_10AB37F0 Unknown10;
 };
 
-// FUNCTION: 0x10AAAEC0 ?ReadFields@Class_10E6DA1C@@UAEXPAXHH@Z
-void Class_10E6DA1C::ReadFields(void* Reader, int Version, int Unused)
+// FUNCTION: 0x10AAAEC0 ?ReadFields@cConGoalCompleteEvent@@UAEXPAXHH@Z
+void cConGoalCompleteEvent::ReadFields(void* Reader, int Version, int Unused)
 {
     cString Text10;
     cString Text0C;

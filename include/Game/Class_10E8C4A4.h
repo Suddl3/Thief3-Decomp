@@ -12,13 +12,13 @@ class Class_10E8C4A4 : public Class_10E98530
 public:
     virtual ~Class_10E8C4A4();
     virtual void Virtual1();
-    virtual int FUN_10c12970(int A, Class_10E8C4A4* Other);
-    virtual cString FUN_10c12cc0();
+    virtual int Compare(int A, Class_10E8C4A4* Other);
+    virtual cString GetName();
     virtual void Virtual4(int* A);
     virtual void Virtual5();
     virtual void Virtual6();
     virtual int FUN_10c13170();
-    virtual cString FUN_10c131d0();
+    virtual cString GetObjectName();
     virtual bool FUN_10c129b0();
     virtual void Save(int A, void* Stream);
     virtual bool Load(int A, void* Reader);

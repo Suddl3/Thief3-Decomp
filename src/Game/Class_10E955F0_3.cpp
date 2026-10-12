@@ -24,7 +24,7 @@ public:
 class Class_10E955F0 : public Class_10E95050
 {
 public:
-    Class_10E955F0* FUN_10bdfa30(int A, int B, int C, int D, int E, bool F);
+    Class_10E955F0* Init(int A, int B, int C, int D, int E, bool F);
 
     int Unknown48;
     bool Unknown4C;
@@ -40,8 +40,8 @@ public:
     bool Unknown68;
 };
 
-// FUNCTION: 0x10BDFA30 ?FUN_10bdfa30@Class_10E955F0@@QAEPAV1@HHHHH_N@Z
-Class_10E955F0* Class_10E955F0::FUN_10bdfa30(int A, int B, int C, int D, int E, bool F)
+// FUNCTION: 0x10BDFA30 ?Init@Class_10E955F0@@QAEPAV1@HHHHH_N@Z
+Class_10E955F0* Class_10E955F0::Init(int A, int B, int C, int D, int E, bool F)
 {
     this->Class_10E95050::Class_10E95050(A, B);
     Unknown48 = C;

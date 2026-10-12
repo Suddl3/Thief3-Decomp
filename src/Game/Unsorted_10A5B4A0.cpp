@@ -5,10 +5,10 @@
 
 extern void* DAT_10e696a8[];
 
-class Class_10E6B078
+class cTextWindow
 {
 public:
-    Class_10E6B078();
+    cTextWindow();
 
     void** Unknown00;
     char Unknown04[0xE4];
@@ -16,7 +16,7 @@ public:
     char Unknown0EC[0xCC];
 };
 
-class Class_10E696A8 : public Class_10E6B078
+class Class_10E696A8 : public cTextWindow
 {
 public:
     Class_10E696A8* FUN_10a5d3c0();
@@ -32,13 +32,13 @@ public:
 void Class_1090FD40::RemoveUnordered(int Index)
 {
     FUN_10a5b5b0(Index, m_Count - 1);
-    FUN_1090f2c0(m_Count - 1);
+    SetCount(m_Count - 1);
 }
 
 // FUNCTION: 0x10A5D3C0 ?FUN_10a5d3c0@Class_10E696A8@@QAEPAV1@XZ
 Class_10E696A8* Class_10E696A8::FUN_10a5d3c0()
 {
-    this->Class_10E6B078::Class_10E6B078();
+    this->cTextWindow::cTextWindow();
     Unknown1B8 = 0;
     Unknown1BC = 0;
     Unknown1C0 = 0;

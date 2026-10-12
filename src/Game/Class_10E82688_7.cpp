@@ -159,9 +159,9 @@ public:
     Class_10E82688* Unknown118;
     Class_10E82688* Unknown11C;
     char Pad120[0x3C];
-    unsigned char Unknown15C;
+    unsigned char m_WasHUDVisible;
     char Pad15D[0x1];
-    bool Unknown15E;
+    bool m_CursorWasVisible;
 };
 
 // FUNCTION: 0x10B5A6F0 ?FUN_10b5a6f0@Class_10E82688@@UAEXH@Z
@@ -172,18 +172,18 @@ void Class_10E82688::FUN_10b5a6f0(int A)
     {
         Virtual67(0x10);
         FUN_10b18b20()->FUN_10b18b60(2);
-        Unknown15C = ((WindowManager*)GetWindowManager())->IsHUDWindowVisible();
+        m_WasHUDVisible = ((WindowManager*)GetWindowManager())->IsHUDWindowVisible();
         ((WindowManager*)GetWindowManager())->SetHUDMode(0);
-        Unknown15E = DAT_10f31b88->Unknown0C;
-        if (Unknown15E)
+        m_CursorWasVisible = DAT_10f31b88->Unknown0C;
+        if (m_CursorWasVisible)
             DAT_10f31b88->HideCursor();
     }
     else
     {
         Virtual68(0x10);
         FUN_10b18b20()->FUN_10b18ac0();
-        ((WindowManager*)GetWindowManager())->SetHUDMode(Unknown15C);
-        if (Unknown15E)
+        ((WindowManager*)GetWindowManager())->SetHUDMode(m_WasHUDVisible);
+        if (m_CursorWasVisible)
             DAT_10f31b88->FUN_1092d350(-1, -1);
     }
     if (Unknown118)

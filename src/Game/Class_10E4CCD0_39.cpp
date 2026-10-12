@@ -81,11 +81,11 @@ public:
     virtual void Virtual49();
     virtual void Virtual50();
     virtual void Virtual51();
-    virtual State_Fetch* FUN_10b99fb0(Struct_10B98E00* A, int B, int C);
+    virtual State_Fetch* CreateFetchState(Struct_10B98E00* A, int B, int C);
 };
 
-// FUNCTION: 0x10B99FB0 ?FUN_10b99fb0@Class_10E4CCD0@@UAEPAVState_Fetch@@PAUStruct_10B98E00@@HH@Z
-State_Fetch* Class_10E4CCD0::FUN_10b99fb0(Struct_10B98E00* A, int B, int C)
+// FUNCTION: 0x10B99FB0 ?CreateFetchState@Class_10E4CCD0@@UAEPAVState_Fetch@@PAUStruct_10B98E00@@HH@Z
+State_Fetch* Class_10E4CCD0::CreateFetchState(Struct_10B98E00* A, int B, int C)
 {
     int Id = FUN_10be2fe0();
     if (Id && A->Unknown08->FUN_10dbd510(Id)->GetFloat() > 0.0f)

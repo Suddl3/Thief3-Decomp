@@ -150,7 +150,7 @@ public:
     virtual void Virtual122();
 };
 
-class Class_10E81DE8
+class cOptionsWindow
 {
 public:
     virtual void Virtual0();
@@ -219,8 +219,8 @@ public:
     int Unknown1D4;
 };
 
-// FUNCTION: 0x10B57CB0 ?FUN_10b57cb0@Class_10E81DE8@@UAEXH@Z
-void Class_10E81DE8::FUN_10b57cb0(int A)
+// FUNCTION: 0x10B57CB0 ?FUN_10b57cb0@cOptionsWindow@@UAEXH@Z
+void cOptionsWindow::FUN_10b57cb0(int A)
 {
     FUN_10b45af0(A);
     if (Unknown1D0)

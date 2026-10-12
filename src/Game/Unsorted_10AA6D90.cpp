@@ -122,7 +122,7 @@ public:
     virtual void Virtual108();
     virtual void Virtual109();
 
-    void FUN_10aa6d90(bool A);
+    void ReleaseOwnedObject(bool A);
 
     char Unknown04[0x11C];
     Class_1091CD10* Unknown120;
@@ -130,8 +130,8 @@ public:
 
 void WriteString(void* Stream, int* Value);
 
-// FUNCTION: 0x10AA6D90 ?FUN_10aa6d90@Class_10E822B0@@QAEX_N@Z
-void Class_10E822B0::FUN_10aa6d90(bool A)
+// FUNCTION: 0x10AA6D90 ?ReleaseOwnedObject@Class_10E822B0@@QAEX_N@Z
+void Class_10E822B0::ReleaseOwnedObject(bool A)
 {
     if (A)
     {

@@ -15,18 +15,18 @@ public:
     void IntegrateOffsets(float A);
 
     char Unknown04[0x58];
-    int Unknown5C;
+    int m_PendingFlags;
     int Unknown60;
     char Pad64[0x14];
     float Field78;
     char Pad7C[0x188];
-    bool Unknown204;
-    bool Unknown205;
+    bool m_HasVelocity;
+    bool m_HasAngularVelocity;
     char Pad206[2];
-    FVector Unknown208;
-    FVector Unknown214;
-    FVector Unknown220;
-    FVector Unknown22C;
+    FVector m_Velocity;
+    FVector m_AngularVelocity;
+    FVector m_Offset;
+    FVector m_Angles;
 };
 
 void WrapAngles(FVector* A);
@@ -34,24 +34,24 @@ void WrapAngles(FVector* A);
 // FUNCTION: 0x10949060 ?IntegrateOffsets@Class_10E4AA80@@QAEXM@Z
 void Class_10E4AA80::IntegrateOffsets(float A)
 {
-    if (Unknown204)
-        Unknown220 += Unknown208 * A;
+    if (m_HasVelocity)
+        m_Offset += m_Velocity * A;
     else
     {
-        Unknown220.X = 0.0f;
-        Unknown220.Y = 0.0f;
-        Unknown220.Z = 0.0f;
+        m_Offset.X = 0.0f;
+        m_Offset.Y = 0.0f;
+        m_Offset.Z = 0.0f;
     }
-    Unknown220.Z = 0.0f;
-    if (Unknown205)
+    m_Offset.Z = 0.0f;
+    if (m_HasAngularVelocity)
     {
-        Unknown22C += Unknown214 * A;
-        WrapAngles(&Unknown22C);
+        m_Angles += m_AngularVelocity * A;
+        WrapAngles(&m_Angles);
     }
     else
     {
-        Unknown22C.X = 0.0f;
-        Unknown22C.Y = 0.0f;
-        Unknown22C.Z = 0.0f;
+        m_Angles.X = 0.0f;
+        m_Angles.Y = 0.0f;
+        m_Angles.Z = 0.0f;
     }
 }

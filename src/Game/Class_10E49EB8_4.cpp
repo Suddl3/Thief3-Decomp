@@ -22,16 +22,16 @@ public:
     unsigned int Unknown10;
     unsigned int Unknown14;
     char Unknown18[4];
-    IDirect3DVertexBuffer8* Unknown1C;
+    IDirect3DVertexBuffer8* m_pVB;
     Class_109343B0 m_vecD3DVBs;
 };
 
 // FUNCTION: 0x10933F10 ?CreateBuffer@Class_10E49EB8@@UAEXPAVIDirect3DDevice8@@@Z
 void Class_10E49EB8::CreateBuffer(IDirect3DDevice8* Device)
 {
-    if (Unknown1C == 0)
+    if (m_pVB == 0)
     {
-        Device->CreateVertexBuffer(Unknown10, 0x208, 0, (Unknown14 >> 1) & 1, &Unknown1C);
-        m_vecD3DVBs.FUN_109343b0(&Unknown1C);
+        Device->CreateVertexBuffer(Unknown10, 0x208, 0, (Unknown14 >> 1) & 1, &m_pVB);
+        m_vecD3DVBs.FUN_109343b0(&m_pVB);
     }
 }

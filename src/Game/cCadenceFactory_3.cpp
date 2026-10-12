@@ -11,13 +11,13 @@ void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D
 
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
-Class_10C4B2A0* FUN_10c4c2d0();
+Class_10C4B2A0* GetCadenceFactory();
 
 class cResSound;
 
 struct Struct_10C64E10;
 
-Class_10C662F0* FUN_10c65090();
+Class_10C662F0* GetSchemaMetaFile();
 
 class Class_10E9BB4C_Arg;
 
@@ -47,7 +47,7 @@ Class_10C68070* cCadenceFactory::CreateSoundSchema(int A)
 {
     if (Unknown08 != -1 && m_NumLoadedSchemas >= Unknown08)
     {
-        if (!FUN_10c4c2d0()->FUN_10c48d90())
+        if (!GetCadenceFactory()->FUN_10c48d90())
             return 0;
     }
     GetAllocator()->Virtual8(0, 0);
@@ -56,7 +56,7 @@ Class_10C68070* cCadenceFactory::CreateSoundSchema(int A)
     Obj->Virtual6(A);
     if (m_bUseLoader)
     {
-        if (!FUN_10c65090()->FUN_10c66230(A, Obj))
+        if (!GetSchemaMetaFile()->FUN_10c66230(A, Obj))
         {
             delete Obj;
             Obj = 0;

@@ -3,7 +3,7 @@
 #include "Game/Class_109E8930.h"
 #include "Game/WindowManager.h"
 
-class Class_10E6B078
+class cTextWindow
 {
 public:
     virtual void Virtual0();
@@ -12,7 +12,7 @@ public:
     char Unknown04[0x1b4];
 };
 
-class Class_10E696A8 : public Class_10E6B078
+class Class_10E696A8 : public cTextWindow
 {
 public:
     virtual bool HandleKey(int A, int B, bool C);
@@ -168,7 +168,7 @@ bool Class_10E696A8::HandleKey(int A, int B, bool C)
 {
     if (Unknown1b8 == 0 && Unknown1bc == 0 && Unknown1c0 == 0)
         return true;
-    return Class_10E6B078::HandleKey(A, B, C);
+    return cTextWindow::HandleKey(A, B, C);
 }
 
 // FUNCTION: 0x10A5D460 ?FUN_10a5d460@Class_10E7FB08@@QAEXXZ

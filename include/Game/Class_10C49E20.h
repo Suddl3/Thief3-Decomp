@@ -8,10 +8,10 @@
 class Class_10C49E20
 {
 public:
-    int FUN_10c49e20();
+    int AllocateId();
 
-    std::list<int> Unknown00;
-    int Unknown0C;
+    std::list<int> m_FreeIds;
+    int m_NextId;
 };
 
 #endif // GAME_CLASS_10C49E20_H

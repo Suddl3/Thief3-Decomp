@@ -65,7 +65,7 @@ public:
     char PadEC[0x8];
     union
     {
-        int Unknown0F4;
+        int m_NumEntries;
         int UnknownF4;
     };
     union

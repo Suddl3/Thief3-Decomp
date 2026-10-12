@@ -32,8 +32,8 @@ class Class_10E49EE0 {
 public:
     virtual int AddRef();
 
-    char Unknown04[4];
-    int Unknown08;
+    char m_Owner[4];
+    int m_RefCount;
 };
 
 // FUNCTION: 0x10933630 ?Init@Class_10E49D1C@@UAEHHHPAUStruct_10932ED0@@H@Z
@@ -65,7 +65,7 @@ void Class_10E49F0C::FUN_109341c0()
 // FUNCTION: 0x109341E0 ?AddRef@Class_10E49EE0@@UAEHXZ
 int Class_10E49EE0::AddRef()
 {
-    return ++Unknown08;
+    return ++m_RefCount;
 }
 
 // FUNCTION: 0x10934800 ?GetVertexCount@cD3DVertexBuffer@@UAEIXZ

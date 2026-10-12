@@ -51,11 +51,11 @@ void Class_10A34B90::Reset(int Size)
             Node = Next;
         }
     }
-    Unknown04 = 0;
+    m_Count = 0;
     m_BucketCount = 0;
-    Unknown00 = 0;
+    m_Collisions = 0;
     ::operator delete(m_Buckets);
     m_Buckets = 0;
-    if (!Unknown10)
+    if (!m_FixedSize)
         Rehash(Size);
 }

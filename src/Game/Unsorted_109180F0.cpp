@@ -5,10 +5,10 @@
 #include "Game/Class_10924B30.h"
 #include "Game/cIntArray.h"
 
-class Class_10924B70 : public Class_10924B30
+class cRenderTargetState : public Class_10924B30
 {
 public:
-    void FUN_109243f0();
+    void ApplyRenderTarget();
 };
 
 class Class_10924E80
@@ -35,7 +35,7 @@ extern float DAT_10efef60;
 
 extern Class_10924E80* DAT_10f2c734;
 
-extern Class_10924B70* DAT_10f319a0;
+extern cRenderTargetState* DAT_10f319a0;
 
 extern char DAT_10f2c75a;
 
@@ -58,7 +58,7 @@ void FUN_109180f0()
 {
     if (DAT_10efef60 == DAT_10e49684 && !DAT_10f2c734->Unknown0D8->FUN_1092d950())
     {
-        DAT_10f319a0->FUN_109243f0();
+        DAT_10f319a0->ApplyRenderTarget();
         DAT_10f2c75a = 0;
         DAT_10f2c75b = 0;
         return;

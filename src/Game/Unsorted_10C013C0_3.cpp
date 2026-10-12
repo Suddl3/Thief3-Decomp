@@ -1,6 +1,6 @@
 // Game/Unsorted_10C013C0_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10C00F60.h"
+#include "Game/cHashMap.h"
 #include "Game/Class_10C00F60_Node.h"
 #include "Game/Class_10C01140.h"
 #include "Game/Class_10C01140_Field18.h"
@@ -14,8 +14,8 @@ void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
 unsigned int HashBytes(const void* Data, int Length);
 
-// FUNCTION: 0x10C015B0 ?FUN_10c015b0@Class_10C01140@@QAE_NABH@Z
-bool Class_10C01140::FUN_10c015b0(const int& Key)
+// FUNCTION: 0x10C015B0 ?Remove@Class_10C01140@@QAE_NABH@Z
+bool Class_10C01140::Remove(const int& Key)
 {
     if (!Unknown10 && Unknown04 < Unknown0C * 0.05 && Unknown0C > 64)
         Rehash(Unknown0C / 2);
@@ -59,7 +59,7 @@ void Class_10C01F50::Clear(int Size)
     }
     m_Count = 0;
     m_BucketCount = 0;
-    Unknown00 = 0;
+    m_Collisions = 0;
     ::operator delete(m_Buckets);
     m_Buckets = 0;
     if (!m_NoResize)

@@ -50,7 +50,7 @@ static inline FVector Flatten(const FVector& V)
     return FVector(V.X, V.Y, V.Z * 0.0f);
 }
 
-class Class_10E9B240
+class cLocomotionCommand
 {
 public:
     virtual void Virtual0();
@@ -84,8 +84,8 @@ public:
     unsigned char Unknown39;
 };
 
-// FUNCTION: 0x10C3D6F0 ?SetFlatDirection@Class_10E9B240@@UAEXABVFRotator@@@Z
-void Class_10E9B240::SetFlatDirection(const FRotator& Rot)
+// FUNCTION: 0x10C3D6F0 ?SetFlatDirection@cLocomotionCommand@@UAEXABVFRotator@@@Z
+void cLocomotionCommand::SetFlatDirection(const FRotator& Rot)
 {
     Unknown1C = FVector(0.0f, 0.0f, 0.0f);
     m_FlatDirection = Flatten(Rot.Vector()).FUN_10967580();

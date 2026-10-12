@@ -20,7 +20,7 @@ public:
     virtual void FUN_10c3de20(int A);
 
     char Unknown04[0x18];
-    FVector Unknown1C;
+    FVector m_Position;
     float m_Range;
     bool Unknown2C;
     char Unknown2D[0xF];
@@ -36,7 +36,7 @@ public:
 // FUNCTION: 0x10C3D160 ?CopyFrom@Class_10E9B168@@UAEXPAVObject_10C3D160@@@Z
 void Class_10E9B168::CopyFrom(Object_10C3D160* Obj)
 {
-    Unknown1C = *Obj->Virtual21();
+    m_Position = *Obj->Virtual21();
     m_Range = Obj->Virtual23();
     Unknown2C = Obj->Virtual25();
 }

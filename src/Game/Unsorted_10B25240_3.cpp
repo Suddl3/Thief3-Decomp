@@ -1,7 +1,7 @@
 // Game/Unsorted_10B25240_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10B25D90.h"
-#include "Game/Class_10B25D60.h"
+#include "Game/cListReverseCursor.h"
+#include "Game/cListCursor.h"
 #include "Game/Struct_10B1B8A0_Item.h"
 
 struct Struct_10B1B8A0_List
@@ -25,8 +25,8 @@ public:
 
 Class_10B1B8A0* FUN_10b1b600();
 
-// FUNCTION: 0x10B25240 ?FindPrevFromListA@Class_10B25D90@@QAEHPAH@Z
-int Class_10B25D90::FindPrevFromListA(int* A)
+// FUNCTION: 0x10B25240 ?FindPrevFromListA@cListReverseCursor@@QAEHPAH@Z
+int cListReverseCursor::FindPrevFromListA(int* A)
 {
     *A = 1;
     if (m_Index > 0)
@@ -52,8 +52,8 @@ int Class_10B25D90::FindPrevFromListA(int* A)
     return 0;
 }
 
-// FUNCTION: 0x10B25310 ?FindPrevFromListB@Class_10B25D90@@QAEHPAH@Z
-int Class_10B25D90::FindPrevFromListB(int* A)
+// FUNCTION: 0x10B25310 ?FindPrevFromListB@cListReverseCursor@@QAEHPAH@Z
+int cListReverseCursor::FindPrevFromListB(int* A)
 {
     *A = 0;
     if (m_Index > 0)
@@ -79,8 +79,8 @@ int Class_10B25D90::FindPrevFromListB(int* A)
     return 0;
 }
 
-// FUNCTION: 0x10B253E0 ?FindNextFromListA@Class_10B25D60@@QAEHPAH@Z
-int Class_10B25D60::FindNextFromListA(int* A)
+// FUNCTION: 0x10B253E0 ?FindNextFromListA@cListCursor@@QAEHPAH@Z
+int cListCursor::FindNextFromListA(int* A)
 {
     *A = 1;
     if (m_Index < FUN_10b1b600()->ListA.Num() - 1)
@@ -106,8 +106,8 @@ int Class_10B25D60::FindNextFromListA(int* A)
     return 0;
 }
 
-// FUNCTION: 0x10B254F0 ?FindNextFromListB@Class_10B25D60@@QAEHPAH@Z
-int Class_10B25D60::FindNextFromListB(int* A)
+// FUNCTION: 0x10B254F0 ?FindNextFromListB@cListCursor@@QAEHPAH@Z
+int cListCursor::FindNextFromListB(int* A)
 {
     *A = 0;
     if (m_Index < FUN_10b1b600()->ListB.Num() - 1)

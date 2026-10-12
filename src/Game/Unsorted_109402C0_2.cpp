@@ -147,7 +147,7 @@ void Class_109403A0::SetMaterialTextures(Struct_109403A0* Material, bool Enable)
     {
         DAT_10f31be0->SetStageBorder(2, false);
         GDirect3DDevice8->SetTextureStageState(2, 24, 0);
-        IDirect3DBaseTexture8** Slot = &DAT_10f31be0->Unknown1C[2];
+        IDirect3DBaseTexture8** Slot = &DAT_10f31be0->m_StageTextures[2];
         IDirect3DBaseTexture8* Texture = Unknown308;
         if (*Slot != Texture)
         {
@@ -157,7 +157,7 @@ void Class_109403A0::SetMaterialTextures(Struct_109403A0* Material, bool Enable)
     }
     DAT_10f31be0->SetStageBorder(3, false);
     GDirect3DDevice8->SetTextureStageState(3, 24, 0x104);
-    IDirect3DBaseTexture8** Slot = &DAT_10f31be0->Unknown1C[3];
+    IDirect3DBaseTexture8** Slot = &DAT_10f31be0->m_StageTextures[3];
     IDirect3DBaseTexture8* Texture = Material->Unknown140;
     if (Texture)
     {

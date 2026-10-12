@@ -19,11 +19,11 @@ public:
     int GetEntryValue();
     int GetSelectedValue();
     int FUN_10b25030();
-    int FUN_10b256a0();
+    int GetEntryCount();
     int FUN_10dc1760();
     void FUN_10b25700(int p1);
     void FUN_10b25dc0(int p1);
-    int FUN_10b255f0();
+    int GetItemCount();
 
     int Unknown30;
     union

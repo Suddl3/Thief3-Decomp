@@ -17,13 +17,13 @@ void Class_10ABDAE0::Insert(int Index, const Class_10B1A7D0Item& Value)
     int Count = m_Count;
     if (Index == Count)
     {
-        FUN_10abdae0(Count + 1);
+        SetCount(Count + 1);
         m_Data[Count] = Value;
     }
     else
     {
-        FUN_10abdae0(Count + 1);
-        FUN_10b199f0(Index, Index + 1, m_Count - Index - 1);
+        SetCount(Count + 1);
+        MoveElements(Index, Index + 1, m_Count - Index - 1);
         m_Data[Index] = Value;
     }
 }

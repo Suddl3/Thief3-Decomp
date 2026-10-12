@@ -4,7 +4,7 @@
 #include "Game/cCadenceFactory.h"
 #include "Game/Class_10C4B2A0.h"
 
-Class_10C4B2A0* FUN_10c4c2d0();
+Class_10C4B2A0* GetCadenceFactory();
 
 class Class_10E9BB4C_Arg
 {
@@ -24,7 +24,7 @@ void cCadenceFactory::Release(Class_10E9BB4C_Arg* Param)
     {
         if (Param->Virtual5() != -1)
         {
-            Class_10C4B2A0* Owner = FUN_10c4c2d0();
+            Class_10C4B2A0* Owner = GetCadenceFactory();
             Owner->Unknown80.FUN_10c4d140(Param->Virtual5());
         }
     }

@@ -4,7 +4,7 @@
 #include "Game/Class_10E7A768.h"
 #include "Game/Object_10B22790.h"
 
-class Class_10B3ED20
+class cLockPickController
 {
 public:
     virtual void Virtual0();
@@ -27,10 +27,10 @@ Class_10E7A768::~Class_10E7A768()
 {
     for (int i = 0; i < 34; i++)
     {
-        if (Unknown08[i])
+        if (m_Objects[i])
         {
-            delete Unknown08[i];
-            Unknown08[i] = 0;
+            delete m_Objects[i];
+            m_Objects[i] = 0;
         }
     }
     Unknown90 = 0;

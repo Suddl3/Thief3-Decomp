@@ -10,8 +10,8 @@ void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
 struct Struct_10B98E00;
 
-// FUNCTION: 0x10B98050 ?FUN_10b98050@Class_10E4CCD0@@UAEPAVState_PlayAction@@PAUStruct_10B98E00@@_N1@Z
-State_PlayAction* Class_10E4CCD0::FUN_10b98050(Struct_10B98E00* A, bool B, bool C)
+// FUNCTION: 0x10B98050 ?CreatePlayActionState@Class_10E4CCD0@@UAEPAVState_PlayAction@@PAUStruct_10B98E00@@_N1@Z
+State_PlayAction* Class_10E4CCD0::CreatePlayActionState(Struct_10B98E00* A, bool B, bool C)
 {
     return new(0, 0, 0, 0, 0) State_PlayAction((int)A, (int)this, B, C);
 }

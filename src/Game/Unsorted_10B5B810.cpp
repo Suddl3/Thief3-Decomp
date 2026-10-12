@@ -103,7 +103,7 @@ public:
     int Unknown190;
 };
 
-class Class_10E83230
+class cTabScreenMissionFailed
 {
 public:
     virtual void Virtual0();
@@ -240,8 +240,8 @@ Class_10E82E90::~Class_10E82E90()
 {
 }
 
-// FUNCTION: 0x10B5BEA0 ?FUN_10b5bea0@Class_10E83230@@UAEXH@Z
-void Class_10E83230::FUN_10b5bea0(int A)
+// FUNCTION: 0x10B5BEA0 ?FUN_10b5bea0@cTabScreenMissionFailed@@UAEXH@Z
+void cTabScreenMissionFailed::FUN_10b5bea0(int A)
 {
     FUN_10b79aa0(A);
     if (A)

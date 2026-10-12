@@ -38,8 +38,8 @@ Class_10E92D60* Class_10E92D60::Initialize(int A, int B, bool C, int D, void* E,
     return this;
 }
 
-// FUNCTION: 0x10BD0190 ?FUN_10bd0190@Class_10E9313C@@UAEXH@Z
-void Class_10E9313C::FUN_10bd0190(int p1)
+// FUNCTION: 0x10BD0190 ?ClearIfEqual@Class_10E9313C@@UAEXH@Z
+void Class_10E9313C::ClearIfEqual(int p1)
 {
     if (p1 == Unknown1c)
         Unknown1c = 0;

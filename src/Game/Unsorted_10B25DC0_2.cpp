@@ -19,10 +19,10 @@ extern float DAT_10f03038;
 
 extern float DAT_10f0303c;
 
-class Class_10E7AAAC
+class cMenuInput
 {
 public:
-    Class_10E7AAAC();
+    cMenuInput();
 
     void** Unknown00;
     int Unknown04;
@@ -44,8 +44,8 @@ void __stdcall FUN_10b265b0(int* A, int* B, int C)
     *A = 0;
 }
 
-// FUNCTION: 0x10B26690 ??0Class_10E7AAAC@@QAE@XZ
-Class_10E7AAAC::Class_10E7AAAC()
+// FUNCTION: 0x10B26690 ??0cMenuInput@@QAE@XZ
+cMenuInput::cMenuInput()
 {
     Unknown00 = DAT_10e7aaac;
     Config::Instance()->GetFloat("T3Settings", "MenuInputInitialDelay", &DAT_10f03038, 0);

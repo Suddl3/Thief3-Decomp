@@ -1,19 +1,19 @@
-// Game/Class_10E9AA38.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/MC_PlayAnimation.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10E9AA38.h"
+#include "Game/MC_PlayAnimation.h"
 
 extern float DAT_10eafbdc;
 
 double GetTimeSeconds();
 
-// FUNCTION: 0x10C2E500 ?IsFinished@Class_10E9AA38@@UAE_NXZ
-bool Class_10E9AA38::IsFinished()
+// FUNCTION: 0x10C2E500 ?IsFinished@MC_PlayAnimation@@UAE_NXZ
+bool MC_PlayAnimation::IsFinished()
 {
-    if (Unknown5C != DAT_10eafbdc)
+    if (m_Duration != DAT_10eafbdc)
     {
-        double EndTime = Unknown5C + Unknown60;
+        double EndTime = m_Duration + m_StartTime;
         if (GetTimeSeconds() > EndTime)
             return true;
     }
-    return Unknown4C;
+    return m_Failed;
 }

@@ -43,7 +43,7 @@ public:
     char Unknown04[0xC];
 };
 
-class Class_10E7E658 : public Class_10B3AE70
+class cRopeMotion : public Class_10B3AE70
 {
 public:
     virtual void MountRope(AGarrett* Garrett);
@@ -57,8 +57,8 @@ public:
     int Unknown20;
 };
 
-// FUNCTION: 0x10B49450 ?MountRope@Class_10E7E658@@UAEXPAVAGarrett@@@Z
-void Class_10E7E658::MountRope(AGarrett* Garrett)
+// FUNCTION: 0x10B49450 ?MountRope@cRopeMotion@@UAEXPAVAGarrett@@@Z
+void cRopeMotion::MountRope(AGarrett* Garrett)
 {
     Unknown10 = true;
     ForceBody(Garrett);

@@ -51,11 +51,11 @@ Class_10E7C584::~Class_10E7C584()
 {
     for (int i = 0; i < 8; i++)
     {
-        if (Unknown0C[i])
+        if (m_Children[i])
         {
-            delete Unknown0C[i];
-            Unknown0C[i] = 0;
+            delete m_Children[i];
+            m_Children[i] = 0;
         }
     }
-    Unknown08->FUN_109a62e0(this);
+    m_Registry->FUN_109a62e0(this);
 }

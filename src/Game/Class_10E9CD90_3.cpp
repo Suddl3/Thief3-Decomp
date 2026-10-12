@@ -1,7 +1,7 @@
 // Game/Class_10E9CD90_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-class Class_10E9CD90
+class cMemoryStream
 {
 public:
     virtual void Virtual0();
@@ -23,8 +23,8 @@ public:
     int m_Position;
 };
 
-// FUNCTION: 0x10C64010 ?IsAtEnd@Class_10E9CD90@@UAEHXZ
-int Class_10E9CD90::IsAtEnd()
+// FUNCTION: 0x10C64010 ?IsAtEnd@cMemoryStream@@UAEHXZ
+int cMemoryStream::IsAtEnd()
 {
     return m_Position >= m_Size;
 }

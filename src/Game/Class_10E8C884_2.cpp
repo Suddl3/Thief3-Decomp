@@ -1,7 +1,7 @@
 // Game/Class_10E8C884_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Core/Core.h"
-#include "Game/Class_10E9CD90.h"
+#include "Game/cMemoryStream.h"
 #include "Game/Class_10E74F70.h"
 #include "Game/Struct_10BB0B90.h"
 #include "Game/Class_10BB1020_B.h"
@@ -37,7 +37,7 @@ public:
     char Unknown00[0xC];
     Class_10B47720* Unknown0C;
     char Pad10[0x20];
-    Class_10E9CD90 Unknown30;
+    cMemoryStream Unknown30;
 };
 
 class Class_10E8C884
@@ -61,8 +61,8 @@ int Class_10E8C884::FUN_10bb1240(int A, Class_10BB1020_B* B, int C)
         if (Owner && Owner->Unknown118 && Owner->Unknown118->Unknown08)
         {
             Class_10B39870* Obj = Owner->Unknown118->Unknown08->GetLinkedObject();
-            Class_10E9CD90* Light = &Obj->Unknown30;
-            Light->Class_10E9CD90::SetPosition(0.0f);
+            cMemoryStream* Light = &Obj->Unknown30;
+            Light->cMemoryStream::SetPosition(0.0f);
             ((Class_10E74F70*)Light)->Class_10E74F70::FUN_10bfbb90(0);
             return 1;
         }

@@ -43,13 +43,13 @@ class Class_10E49E50 : public Class_10E49D1C
 public:
     virtual ~Class_10E49E50();
 
-    Class_1095D6C0 Unknown1C;
+    Class_1095D6C0 m_vecVertexBuffers;
 };
 
 // FUNCTION: 0x109337B0 ??1Class_10E49E50@@UAE@XZ
 Class_10E49E50::~Class_10E49E50()
 {
-    for (Class_109337B0_Element** It = Unknown1C.Unknown08; It != Unknown1C.Unknown0C; It = Unknown1C.Unknown08)
+    for (Class_109337B0_Element** It = m_vecVertexBuffers.Unknown08; It != m_vecVertexBuffers.Unknown0C; It = m_vecVertexBuffers.Unknown08)
     {
         if (*It)
         {
@@ -59,9 +59,9 @@ Class_10E49E50::~Class_10E49E50()
         else
         {
             Class_109337B0_Element** Next = It + 1;
-            memmove(It, Next, (Unknown1C.Unknown0C - Next) * 4);
-            Unknown1C.Unknown0C--;
+            memmove(It, Next, (m_vecVertexBuffers.Unknown0C - Next) * 4);
+            m_vecVertexBuffers.Unknown0C--;
         }
     }
-    Unknown1C.FUN_1095d6c0();
+    m_vecVertexBuffers.FUN_1095d6c0();
 }

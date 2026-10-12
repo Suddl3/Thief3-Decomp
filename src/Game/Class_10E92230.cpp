@@ -5,12 +5,12 @@
 #include "Game/Class_10BFF460.h"
 #include "Game/Class_1090A780.h"
 #include "Game/cString.h"
-#include "Game/Class_10BC9A50.h"
+#include "Game/cAISpeech.h"
 
 class Class_10E97B00
 {
 public:
-    virtual void FUN_10c01ff0(void* A);
+    virtual void Serialize(void* A);
 
     Class_10E97B00(const char* Name);
     Class_10E97B00(const Class_10E97B00& Other);
@@ -81,6 +81,6 @@ void Class_10E92230::NotifyActivated(int Unused)
     }
     {
         cString Text(DAT_10e47660);
-        ((Class_10BC9A50*)this)->FUN_10bc7d70(&Name, 0x14, 2, &Text, true);
+        ((cAISpeech*)this)->FUN_10bc7d70(&Name, 0x14, 2, &Text, true);
     }
 }

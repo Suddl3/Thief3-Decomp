@@ -3,12 +3,12 @@
 #ifndef GAME_CLASS_10E88D3C_H
 #define GAME_CLASS_10E88D3C_H
 
-class Class_10E89720;
+class cDoorState;
 
 class Class_10E88D3C
 {
 public:
-    virtual Class_10E89720* CreateState(int A, int B);
+    virtual cDoorState* CreateState(int A, int B);
 };
 
 #endif // GAME_CLASS_10E88D3C_H

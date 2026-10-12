@@ -8,10 +8,10 @@
 class Class_10C64AC0
 {
 public:
-    Elem_10C64AC0* FUN_10c64ac0(int Index);
+    Elem_10C64AC0* GetElem(int Index);
 
     char Unknown00[0x1c];
-    Elem_10C64AC0 Unknown1C[1];
+    Elem_10C64AC0 m_Elements[1];
 };
 
 #endif // GAME_CLASS_10C64AC0_H

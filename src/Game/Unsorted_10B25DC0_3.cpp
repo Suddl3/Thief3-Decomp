@@ -1,10 +1,10 @@
 // Game/Unsorted_10B25DC0_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10E7AAAC.h"
+#include "Game/cMenuInput.h"
 
-// FUNCTION: 0x10B266E0 ?GetMenuInput@@YAPAVClass_10E7AAAC@@XZ
-Class_10E7AAAC* GetMenuInput()
+// FUNCTION: 0x10B266E0 ?GetMenuInput@@YAPAVcMenuInput@@XZ
+cMenuInput* GetMenuInput()
 {
-    static Class_10E7AAAC GSingleton;
+    static cMenuInput GSingleton;
     return &GSingleton;
 }

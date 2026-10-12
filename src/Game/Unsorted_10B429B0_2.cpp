@@ -67,7 +67,7 @@ public:
 
     virtual ~Class_10E809B8();
 
-    int Unknown118;
+    int m_FMVWindow;
     char Unknown11C[0x4];
     int Unknown120;
     int m_Elapsed;
@@ -91,7 +91,7 @@ void Class_10B429B0::Reset()
 }
 
 // FUNCTION: 0x10B429E0 ??0Class_10E809B8@@QAE@XZ
-Class_10E809B8::Class_10E809B8() : Unknown118(0), Unknown120(0), m_Elapsed(0)
+Class_10E809B8::Class_10E809B8() : m_FMVWindow(0), Unknown120(0), m_Elapsed(0)
 {
     Unknown0E8 = 0x16;
 }

@@ -20,14 +20,14 @@ class Class_10E95288;
 
 class Class_10E95898;
 
-class Class_10E96510;
+class cYellowAlert;
 
 class Class_10E93878;
 
 class Class_10E96FD0;
 
-// FUNCTION: 0x10B999E0 ?FUN_10b999e0@Class_10E4CCD0@@UAEPAVState_Gassed@@PAUStruct_10B98E00@@H@Z
-State_Gassed* Class_10E4CCD0::FUN_10b999e0(Struct_10B98E00* A, int B)
+// FUNCTION: 0x10B999E0 ?CreateGassedState@Class_10E4CCD0@@UAEPAVState_Gassed@@PAUStruct_10B98E00@@H@Z
+State_Gassed* Class_10E4CCD0::CreateGassedState(Struct_10B98E00* A, int B)
 {
     int Id = GetGassedEnableId();
     if (Id && A->Unknown08->FUN_10dbd510(Id)->GetFloat() > DAT_10eafbdc)

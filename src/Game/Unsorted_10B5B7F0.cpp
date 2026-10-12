@@ -11,7 +11,7 @@ public:
     bool FUN_10b17220();
 };
 
-class Class_10E81DE8
+class cOptionsWindow
 {
 public:
     virtual void Virtual0();
@@ -76,8 +76,8 @@ public:
     void Close();
 };
 
-// FUNCTION: 0x10B5B7F0 ?CancelAndClose@Class_10E81DE8@@QAEXXZ
-void Class_10E81DE8::CancelAndClose()
+// FUNCTION: 0x10B5B7F0 ?CancelAndClose@cOptionsWindow@@QAEXXZ
+void cOptionsWindow::CancelAndClose()
 {
     Virtual56(0);
     Close();

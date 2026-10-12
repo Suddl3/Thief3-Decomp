@@ -7,5 +7,5 @@ Class_10B255F0* GetSelection();
 // FUNCTION: 0x10B2BA90 ?FUN_10b2ba90@@YAHXZ
 int FUN_10b2ba90()
 {
-    return GetSelection()->FUN_10b255f0();
+    return GetSelection()->GetItemCount();
 }

@@ -9,13 +9,13 @@ void Class_1090FD40::Insert(int Index, const cString& Value)
     int Count = m_Count;
     if (Index == Count)
     {
-        FUN_1090f2c0(Count + 1);
+        SetCount(Count + 1);
         m_Items[Count] = Value;
     }
     else
     {
-        FUN_1090f2c0(Count + 1);
-        FUN_10a37f80(Index, Index + 1, m_Count - Index - 1);
+        SetCount(Count + 1);
+        MoveItems(Index, Index + 1, m_Count - Index - 1);
         m_Items[Index] = Value;
     }
 }

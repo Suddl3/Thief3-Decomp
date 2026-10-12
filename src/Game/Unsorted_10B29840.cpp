@@ -15,10 +15,10 @@ public:
     int ArrayMax;
 };
 
-class Class_10E6B078
+class cTextWindow
 {
 public:
-    Class_10E6B078();
+    cTextWindow();
 
     void** Unknown00;
     char Unknown04[0xE4];
@@ -26,7 +26,7 @@ public:
     char Unknown0EC[0xCC];
 };
 
-class cT3SubtitleWindow : public Class_10E6B078
+class cT3SubtitleWindow : public cTextWindow
 {
 public:
     cT3SubtitleWindow* Construct();
@@ -102,7 +102,7 @@ void Class_10E7AE9C::FUN_10b29840(float A)
 // FUNCTION: 0x10B2AB70 ?Construct@cT3SubtitleWindow@@QAEPAV1@XZ
 cT3SubtitleWindow* cT3SubtitleWindow::Construct()
 {
-    this->Class_10E6B078::Class_10E6B078();
+    this->cTextWindow::cTextWindow();
     Unknown00 = DAT_10e7b120;
     Unknown1B8.FArray::FArray();
     Unknown1C4 = true;

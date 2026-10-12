@@ -36,13 +36,13 @@ public:
     char Unknown04[0xC];
 };
 
-class Class_10E7E658 : public Class_10B3AE70
+class cRopeMotion : public Class_10B3AE70
 {
 public:
     void StopBody(AGarrett* Garrett);
 };
 
-class Class_10E7E6A0 : public Class_10E7E658
+class Class_10E7E6A0 : public cRopeMotion
 {
 public:
     virtual void FUN_10b4a330(AGarrett* Garrett);

@@ -11,10 +11,10 @@ class Class_10B2F950_Unknown120;
 
 class Class_10B2F950_Unknown124;
 
-class Class_10E6B078
+class cTextWindow
 {
 public:
-    virtual ~Class_10E6B078();
+    virtual ~cTextWindow();
     virtual bool HandleKey(int A, bool B, bool C);
     virtual void Virtual2();
     virtual void Virtual3();
@@ -80,7 +80,7 @@ public:
     virtual void Virtual63();
     virtual bool Virtual64(int A);
 
-    Class_10E6B078();
+    cTextWindow();
 
     char Unknown04[0xC0];
     Class_10E6B078_Member* Unknown0C4;
@@ -327,7 +327,7 @@ public:
     bool Unknown1A4;
 };
 
-class cT3ReadBookWindow : public Class_10E6B078
+class cT3ReadBookWindow : public cTextWindow
 {
 public:
     virtual bool HandleKey(int A, bool B, bool C);
@@ -356,5 +356,5 @@ bool cT3ReadBookWindow::HandleKey(int A, bool B, bool C)
             Unknown120->Virtual70(2);
         return true;
     }
-    return Class_10E6B078::HandleKey(A, B, C);
+    return cTextWindow::HandleKey(A, B, C);
 }

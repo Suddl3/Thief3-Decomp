@@ -5,8 +5,8 @@
 
 void* GetWindowManager();
 
-// FUNCTION: 0x10B24D90 ?FUN_10b24d90@Class_10B25200@@QAEXXZ
-void Class_10B25200::FUN_10b24d90()
+// FUNCTION: 0x10B24D90 ?ClearJunkState@Class_10B25200@@QAEXXZ
+void Class_10B25200::ClearJunkState()
 {
     Unknown28 = 0;
     Unknown48 = 0;

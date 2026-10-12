@@ -3,7 +3,7 @@
 #include "Game/Class_10BB8480.h"
 #include "Game/Class_10BBDB40.h"
 #include "Game/Class_10DBD510.h"
-#include "Game/Class_10E90A1C.h"
+#include "Game/cRandomInterval.h"
 #include "Game/SoundSchema.h"
 
 double GetTimeSeconds();
@@ -16,8 +16,8 @@ public:
 
 int FUN_10c28bc0();
 
-// FUNCTION: 0x10BB8430 ?StartInterval@Class_10E90A1C@@QAEXXZ
-void Class_10E90A1C::StartInterval()
+// FUNCTION: 0x10BB8430 ?StartInterval@cRandomInterval@@QAEXXZ
+void cRandomInterval::StartInterval()
 {
     m_Schema->FUN_10ba9f90(0);
     ((Class_10C28BD0*)FUN_10c28bc0())->FUN_10c28bd0();

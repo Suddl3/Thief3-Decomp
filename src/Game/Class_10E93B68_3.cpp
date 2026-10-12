@@ -14,10 +14,10 @@ public:
     int Unknown04[15];
 };
 
-class Class_10E93B68 : public Class_10E90D70
+class cSampleStats : public Class_10E90D70
 {
 public:
-    Class_10E93B68* FUN_10bd7fa0(int A, int B);
+    cSampleStats* Construct(int A, int B);
 
     char Unknown40[0x24];
     int Unknown64;
@@ -30,8 +30,8 @@ public:
     Struct_10BD7FA0 EntryCount;
 };
 
-// FUNCTION: 0x10BD7FA0 ?FUN_10bd7fa0@Class_10E93B68@@QAEPAV1@HH@Z
-Class_10E93B68* Class_10E93B68::FUN_10bd7fa0(int A, int B)
+// FUNCTION: 0x10BD7FA0 ?Construct@cSampleStats@@QAEPAV1@HH@Z
+cSampleStats* cSampleStats::Construct(int A, int B)
 {
     this->Class_10E90D70::Class_10E90D70(A, B);
     Unknown64 = 0;

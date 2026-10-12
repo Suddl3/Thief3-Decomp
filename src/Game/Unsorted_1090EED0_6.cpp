@@ -8,11 +8,11 @@ class cString;
 // FUNCTION: 0x1090FD00 ?FUN_1090fd00@Class_1090FD40@@QAEXXZ
 void Class_1090FD40::FUN_1090fd00()
 {
-    FUN_1090f2c0(0);
-    if (Unknown04)
+    SetCount(0);
+    if (m_CapacityBytes)
     {
         GetAllocator()->Virtual5(m_Items);
         m_Items = 0;
-        Unknown04 = 0;
+        m_CapacityBytes = 0;
     }
 }

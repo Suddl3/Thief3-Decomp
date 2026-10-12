@@ -161,7 +161,7 @@ public:
     Struct_10B21820_Object* FUN_10991e10();
 };
 
-class Class_10B3ED20
+class cLockPickController
 {
 public:
     virtual void Virtual0();

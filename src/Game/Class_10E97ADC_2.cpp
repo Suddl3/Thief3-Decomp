@@ -96,7 +96,7 @@ public:
     int Unknown30;
 };
 
-class Class_10E97ADC
+class cPathPointList
 {
 public:
     virtual void Virtual0();
@@ -106,8 +106,8 @@ public:
     cIntArray m_PathPoints;
 };
 
-// FUNCTION: 0x10BFF8C0 ?AddPathPoints@Class_10E97ADC@@UAEXPAVClass_10BFF8C0_Param@@@Z
-void Class_10E97ADC::AddPathPoints(Class_10BFF8C0_Param* Param)
+// FUNCTION: 0x10BFF8C0 ?AddPathPoints@cPathPointList@@UAEXPAVClass_10BFF8C0_Param@@@Z
+void cPathPointList::AddPathPoints(Class_10BFF8C0_Param* Param)
 {
     if (Param)
     {

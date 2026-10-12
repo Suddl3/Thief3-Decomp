@@ -75,7 +75,7 @@ public:
     virtual char Virtual17(cString* A, int B, int C);
 };
 
-Class_10C4CD50* FUN_10c4cd50();
+Class_10C4CD50* EnsureCadenceFactory();
 
 // Copied whole from include/Game/SoundSchema.h; slot 17 is FUN_10c66790 (bool, int), not Virtual17().
 class SoundSchema
@@ -152,7 +152,7 @@ public:
 bool SoundSchema::FUN_10c66790(int A)
 {
     static cString NoiseType("+noisetype");
-    Class_10C4CD50* Manager = FUN_10c4cd50();
+    Class_10C4CD50* Manager = EnsureCadenceFactory();
     Class_10C66790_Result* Found = Manager->Virtual14();
     if (Found)
         return Found->Virtual17(&NoiseType, Unknown88, A) != 0;

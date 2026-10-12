@@ -6,7 +6,7 @@
 #include "Game/Class_10BFF240.h"
 #include "Game/Class_10C16580.h"
 #include "Game/Class_10E97AD4.h"
-#include "Game/Class_10E97ADC.h"
+#include "Game/cPathPointList.h"
 
 void DeleteAllObjects(int* A);
 
@@ -51,8 +51,8 @@ void Class_10BFF240::FUN_10bff240(unsigned char param)
     Unknown10 = param;
 }
 
-// FUNCTION: 0x10BFF720 ?Init@Class_10E97ADC@@QAEPAV1@XZ
-Class_10E97ADC* Class_10E97ADC::Init()
+// FUNCTION: 0x10BFF720 ?Init@cPathPointList@@QAEPAV1@XZ
+cPathPointList* cPathPointList::Init()
 {
     Unknown00 = DAT_10e97adc;
     Unknown04 = 0;

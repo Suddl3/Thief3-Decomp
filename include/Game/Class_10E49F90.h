@@ -28,7 +28,7 @@ public:
     void FUN_10935930(int A, int B);
 
     char Unknown04[0x110];
-    int Unknown114;
+    int m_VertexShader;
     char Unknown118[0x174];
     int Unknown28C;
 };

@@ -22,7 +22,7 @@ public:
     virtual void FUN_10bf8c90(int Code, int A, int B, int C);
 };
 
-class Class_10E9CD90
+class cMemoryStream
 {
 public:
     virtual void Virtual0();
@@ -136,8 +136,8 @@ void Class_10E6D8F0::FUN_10bfbb50(int param)
     Unknown18 = param;
 }
 
-// FUNCTION: 0x10BFBB80 ?SetPosition@Class_10E9CD90@@UAEXH@Z
-void Class_10E9CD90::SetPosition(int param)
+// FUNCTION: 0x10BFBB80 ?SetPosition@cMemoryStream@@UAEXH@Z
+void cMemoryStream::SetPosition(int param)
 {
     m_Position = param;
 }

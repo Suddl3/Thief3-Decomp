@@ -18,7 +18,7 @@ public:
 
     void FUN_10b3adc0(Object_10B3ADC0* param);
     void ReleaseArm(AGarrett* Garrett);
-    Class_10E7E6A0* FUN_10b3d170();
+    Class_10E7E6A0* Init();
     void ClearVelocity(AGarrett* Garrett);
     void FUN_10b3ed30(AGarrett* Garrett);
     void FUN_10b3adc0(AGarrett* Garrett);

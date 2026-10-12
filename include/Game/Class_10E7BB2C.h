@@ -24,7 +24,7 @@ public:
     char Pad10[0x4];
     float Unknown14;
     float m_Value;
-    float Unknown1C;
+    float m_Delta;
     unsigned char Unknown20;
     char Pad21[0x3];
     float Unknown24;

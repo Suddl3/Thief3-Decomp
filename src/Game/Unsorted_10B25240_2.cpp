@@ -22,8 +22,8 @@ public:
 
 Class_10B1B8A0* FUN_10b1b600();
 
-// FUNCTION: 0x10B256A0 ?FUN_10b256a0@Class_10B255F0@@QAEHXZ
-int Class_10B255F0::FUN_10b256a0()
+// FUNCTION: 0x10B256A0 ?GetEntryCount@Class_10B255F0@@QAEHXZ
+int Class_10B255F0::GetEntryCount()
 {
     int Result = 1;
     int Index = 0;

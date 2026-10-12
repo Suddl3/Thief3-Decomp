@@ -1,7 +1,7 @@
 // Game/Class_10E7ED00_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-class Class_10B3ED20
+class cLockPickController
 {
 public:
     virtual void Virtual0();
@@ -13,7 +13,7 @@ public:
     void Reset();
 };
 
-class Class_10E7ED00 : public Class_10B3ED20
+class Class_10E7ED00 : public cLockPickController
 {
 public:
     virtual void Virtual5();

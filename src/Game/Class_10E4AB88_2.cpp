@@ -18,7 +18,7 @@ public:
     virtual void FUN_1094e9d0(int p1, int p2);
 
     char Unknown04[0xF0];
-    int Unknown0F4;
+    int m_NumEntries;
     char Unknown0F8[4];
     Struct_1094E9D0** Unknown0FC;
 };
@@ -26,7 +26,7 @@ public:
 // FUNCTION: 0x1094E9D0 ?FUN_1094e9d0@Class_10E4AB88@@UAEXHH@Z
 void Class_10E4AB88::FUN_1094e9d0(int p1, int p2)
 {
-    if (p1 >= Unknown0F4)
+    if (p1 >= m_NumEntries)
         return;
     Unknown0FC[p1]->Unknown00 = p2;
 }

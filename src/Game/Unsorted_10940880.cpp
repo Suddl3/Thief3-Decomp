@@ -199,7 +199,7 @@ void ResetTextureStages()
 {
     for (int i = 0; i < 4; i++)
     {
-        IDirect3DBaseTexture8** Slot = &DAT_10f31be0->Unknown1C[i];
+        IDirect3DBaseTexture8** Slot = &DAT_10f31be0->m_StageTextures[i];
         if (*Slot)
         {
             GDirect3DDevice8->SetTexture(i, 0);

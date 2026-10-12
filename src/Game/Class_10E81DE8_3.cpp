@@ -9,7 +9,7 @@ struct Struct_10B45D10;
 
 void FUN_10a4fb00(cString& Label, int A);
 
-class Class_10E81DE8
+class cOptionsWindow
 {
 public:
     virtual void Virtual0();
@@ -142,8 +142,8 @@ public:
     int Unknown1D4;
 };
 
-// FUNCTION: 0x10B56C00 ?FUN_10b56c00@Class_10E81DE8@@UAEXXZ
-void Class_10E81DE8::FUN_10b56c00()
+// FUNCTION: 0x10B56C00 ?FUN_10b56c00@cOptionsWindow@@UAEXXZ
+void cOptionsWindow::FUN_10b56c00()
 {
     {
         cString Label("Game");

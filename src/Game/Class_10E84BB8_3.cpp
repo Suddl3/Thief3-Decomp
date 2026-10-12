@@ -18,19 +18,19 @@ public:
     int* Unknown08;
 };
 
-class Class_10E6AEA0
+class cBorderWindow
 {
 public:
-    Class_10E6AEA0();
+    cBorderWindow();
 
-    virtual ~Class_10E6AEA0();
+    virtual ~cBorderWindow();
 
     char Unknown04[0xE4];
     int Unknown0E8;
     char Unknown0EC[0x64];
 };
 
-class Class_10E84BB8 : public Class_10E6AEA0
+class Class_10E84BB8 : public cBorderWindow
 {
 public:
     Class_10E84BB8();

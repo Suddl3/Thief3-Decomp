@@ -11,7 +11,7 @@
 #include "Game/cString.h"
 #include "Game/Class_10B56C80.h"
 #include "Game/Class_10B66060.h"
-#include "Game/Class_10E82AF8.h"
+#include "Game/cFactionPane.h"
 
 extern void* DAT_10e82058;
 
@@ -105,19 +105,19 @@ void FUN_10b45c20();
 
 extern void* DAT_10e83230[];
 
-class Class_10E88900
+class cT3TabbedWindow
 {
 public:
-    Class_10E88900();
+    cT3TabbedWindow();
 
     void** Unknown00;
     char Unknown04[0x2C8];
 };
 
-class Class_10E83230 : public Class_10E88900
+class cTabScreenMissionFailed : public cT3TabbedWindow
 {
 public:
-    Class_10E83230* Initialize();
+    cTabScreenMissionFailed* Initialize();
 
     int Unknown2CC;
     int Unknown2D0;
@@ -288,8 +288,8 @@ void FUN_10b5ac10()
     FUN_10a593a0();
 }
 
-// FUNCTION: 0x10B5AEA0 ?InitDefaults@Class_10E82AF8@@QAEPAV1@XZ
-Class_10E82AF8* Class_10E82AF8::InitDefaults()
+// FUNCTION: 0x10B5AEA0 ?InitDefaults@cFactionPane@@QAEPAV1@XZ
+cFactionPane* cFactionPane::InitDefaults()
 {
     FUN_10b78780();
     m_HammerFaction = 0;
@@ -323,10 +323,10 @@ void FUN_10b5b750()
     FUN_10b45c20();
 }
 
-// FUNCTION: 0x10B5C400 ?Initialize@Class_10E83230@@QAEPAV1@XZ
-Class_10E83230* Class_10E83230::Initialize()
+// FUNCTION: 0x10B5C400 ?Initialize@cTabScreenMissionFailed@@QAEPAV1@XZ
+cTabScreenMissionFailed* cTabScreenMissionFailed::Initialize()
 {
-    this->Class_10E88900::Class_10E88900();
+    this->cT3TabbedWindow::cT3TabbedWindow();
     Unknown2CC = 0;
     Unknown2D0 = 0;
     Unknown2D4 = 0;

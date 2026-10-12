@@ -9,11 +9,11 @@ public:
     virtual void __stdcall Virtual2();
 };
 
-class Class_10924B70
+class cRenderTargetState
 {
 public:
     void Release();
-    void FUN_109243f0();
+    void ApplyRenderTarget();
 
     bool Unknown00;
     Object_10924A90* m_Device;
@@ -24,10 +24,10 @@ public:
     int UnknownA8;
 };
 
-// FUNCTION: 0x10924A90 ?Release@Class_10924B70@@QAEXXZ
-void Class_10924B70::Release()
+// FUNCTION: 0x10924A90 ?Release@cRenderTargetState@@QAEXXZ
+void cRenderTargetState::Release()
 {
-    FUN_109243f0();
+    ApplyRenderTarget();
     if (m_RenderTarget)
     {
         m_RenderTarget->Virtual2();

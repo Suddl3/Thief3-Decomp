@@ -35,7 +35,7 @@ class Class_10E95288;
 
 class Class_10E95898;
 
-class Class_10E96510;
+class cYellowAlert;
 
 class Class_10E4CCD0
 {
@@ -45,7 +45,7 @@ public:
     virtual void Virtual2();
     virtual Class_10E95898* FUN_10b98f60(Struct_10B98E00* A, int B, bool C);
     virtual void Virtual4();
-    virtual Class_10E96510* FUN_10b990d0(Struct_10B98E00* A);
+    virtual cYellowAlert* FUN_10b990d0(Struct_10B98E00* A);
     virtual void Virtual6();
     virtual void Virtual7();
     virtual void Virtual8();

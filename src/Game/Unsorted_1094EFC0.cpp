@@ -46,7 +46,7 @@ public:
     virtual void CollectValues(cIntArray* Out, int Param);
 
     char Unknown04[0xF0];
-    int Unknown0F4;
+    int m_NumEntries;
     int Unknown0F8;
     Struct_1094F6F0_Item** Unknown0FC;
 };
@@ -98,7 +98,7 @@ void Class_1094EFC0::Resize(int A, int B)
 // FUNCTION: 0x1094F6F0 ?CollectValues@Class_10E4AB88@@UAEXPAVcIntArray@@H@Z
 void Class_10E4AB88::CollectValues(cIntArray* Out, int Param)
 {
-    for (int i = 0; i < Unknown0F4; i++)
+    for (int i = 0; i < m_NumEntries; i++)
     {
         Class_10953590* Obj = Unknown0FC[i]->Unknown00;
         if (Obj)

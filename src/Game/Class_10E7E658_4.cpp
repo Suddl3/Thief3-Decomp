@@ -4,7 +4,7 @@
 #include "Game/Class_10B39700.h"
 #include "Game/Class_10E81548.h"
 
-class Class_10E7E658 : public Class_10E81548
+class cRopeMotion : public Class_10E81548
 {
 public:
     virtual void FUN_10b49990(int A);
@@ -15,8 +15,8 @@ public:
     void FUN_10b49640(int A);
 };
 
-// FUNCTION: 0x10B49990 ?FUN_10b49990@Class_10E7E658@@UAEXH@Z
-void Class_10E7E658::FUN_10b49990(int A)
+// FUNCTION: 0x10B49990 ?FUN_10b49990@cRopeMotion@@UAEXH@Z
+void cRopeMotion::FUN_10b49990(int A)
 {
     if (!FUN_10b3af60(A))
         ((Class_10B39700*)GetLinkedObject())->FUN_10b39700();

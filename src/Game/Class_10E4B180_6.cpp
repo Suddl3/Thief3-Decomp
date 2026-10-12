@@ -144,7 +144,7 @@ public:
     virtual void FUN_10b7c720(Class_10B8AC90* A, int B);
     virtual void Virtual39();
     virtual void Virtual40(Class_10B7DC60_Param0* A);
-    virtual void FUN_10b7dc60(Class_10B7DC60_Param0* Obj);
+    virtual void UpdatePhysicsObject(Class_10B7DC60_Param0* Obj);
     virtual void DestroyPhysicsObject(Struct_10B7C030_Param* A);
     virtual int Trace(int A, int B, FVector* Out);
 
@@ -187,8 +187,8 @@ public:
     virtual void Virtual5(int A, int B, int C, int D, int E);
 };
 
-// FUNCTION: 0x10B7DC60 ?FUN_10b7dc60@Class_10E4B180@@UAEXPAVClass_10B7DC60_Param0@@@Z
-void Class_10E4B180::FUN_10b7dc60(Class_10B7DC60_Param0* Obj)
+// FUNCTION: 0x10B7DC60 ?UpdatePhysicsObject@Class_10E4B180@@UAEXPAVClass_10B7DC60_Param0@@@Z
+void Class_10E4B180::UpdatePhysicsObject(Class_10B7DC60_Param0* Obj)
 {
     if (!Obj)
         return;

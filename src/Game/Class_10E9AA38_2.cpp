@@ -3,12 +3,12 @@
 #include "Game/Class_10905A90_Member.h"
 #include "Game/MoveCommand.h"
 #include "Game/cString.h"
-#include "Game/Class_10E9AA38.h"
+#include "Game/MC_PlayAnimation.h"
 
-// FUNCTION: 0x10C2E540 ??1Class_10E9AA38@@UAE@XZ
-Class_10E9AA38::~Class_10E9AA38()
+// FUNCTION: 0x10C2E540 ??1MC_PlayAnimation@@UAE@XZ
+MC_PlayAnimation::~MC_PlayAnimation()
 {
 }
 
-// FUNCTION: 0x10C2E670 ??_GClass_10E9AA38@@UAEPAXI@Z
+// FUNCTION: 0x10C2E670 ??_GMC_PlayAnimation@@UAEPAXI@Z
 // Compiler-generated: emitted with the class's vtable by 0x10C2E540's definition in this unit.

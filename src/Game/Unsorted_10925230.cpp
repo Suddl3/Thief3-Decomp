@@ -10,7 +10,7 @@ extern Class_10950230* DAT_10f31a64;
 class Class_109242E0
 {
 public:
-    void FUN_109243f0();
+    void ApplyRenderTarget();
 };
 
 extern Class_109242E0* DAT_10f319a0;
@@ -47,7 +47,7 @@ void Class_10924E80::FUN_10925230()
 {
     if (DAT_10f31a60 || DAT_10f31a64)
         return;
-    DAT_10f319a0->FUN_109243f0();
+    DAT_10f319a0->ApplyRenderTarget();
     for (int i = 0; i < Unknown0BC; i++)
     {
         Class_10925230* Obj = Unknown0C4[i];

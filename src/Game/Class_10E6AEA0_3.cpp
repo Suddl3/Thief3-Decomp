@@ -4,7 +4,7 @@
 #include "Game/Class_10AF7F80.h"
 #include "Game/Config.h"
 
-class Class_10E6AEA0 : public Window
+class cBorderWindow : public Window
 {
 public:
     virtual void LoadConfig(Class_10AF7F80* File, Class_10AF7F80* Section);
@@ -20,8 +20,8 @@ public:
     char* TextureHoriz;
 };
 
-// FUNCTION: 0x10A66470 ?LoadConfig@Class_10E6AEA0@@UAEXPAVClass_10AF7F80@@0@Z
-void Class_10E6AEA0::LoadConfig(Class_10AF7F80* File, Class_10AF7F80* Section)
+// FUNCTION: 0x10A66470 ?LoadConfig@cBorderWindow@@UAEXPAVClass_10AF7F80@@0@Z
+void cBorderWindow::LoadConfig(Class_10AF7F80* File, Class_10AF7F80* Section)
 {
     Window::LoadConfig(File, Section);
     Config::Instance()->GetFloat(Section->FUN_10af7f80(), "BorderWidth", &BorderWidth, File->FUN_10af7f80());

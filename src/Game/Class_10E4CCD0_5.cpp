@@ -14,8 +14,8 @@ public:
     cTacticWeaponHolster(int A, int B);
 };
 
-// FUNCTION: 0x10B98290 ?FUN_10b98290@Class_10E4CCD0@@UAEPAVcTacticWeaponHolster@@H@Z
-cTacticWeaponHolster* Class_10E4CCD0::FUN_10b98290(int A)
+// FUNCTION: 0x10B98290 ?CreateTacticWeaponHolster@Class_10E4CCD0@@UAEPAVcTacticWeaponHolster@@H@Z
+cTacticWeaponHolster* Class_10E4CCD0::CreateTacticWeaponHolster(int A)
 {
     return new(0, 0, 0, 0, 0) cTacticWeaponHolster(A, (int)this);
 }

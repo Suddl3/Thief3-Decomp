@@ -1,4 +1,4 @@
-// Game/Class_10E83230.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/cTabScreenMissionFailed.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10905A90_Member.h"
 
@@ -27,14 +27,14 @@ public:
 
 cString FUN_1090a660(const char* Text);
 
-class Class_10E83230
+class cTabScreenMissionFailed
 {
 public:
     cString GetTitle();
 };
 
-// FUNCTION: 0x10B5C2A0 ?GetTitle@Class_10E83230@@QAE?AVcString@@XZ
-cString Class_10E83230::GetTitle()
+// FUNCTION: 0x10B5C2A0 ?GetTitle@cTabScreenMissionFailed@@QAE?AVcString@@XZ
+cString cTabScreenMissionFailed::GetTitle()
 {
     cString Local = FUN_1090a660("<string=T_TabScreenMissionFailedTitle>");
     return Local;

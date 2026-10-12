@@ -9,14 +9,14 @@ struct Struct_10C27380
     int Unknown0C;
 };
 
-class Class_10BAEC40
+class cStructArray
 {
 public:
     void SetCount(int A);
     void MoveRange(int A, int B, int C);
 
     int m_Count;
-    int Unknown04;
+    int m_AllocBytes;
     Struct_10C27380* m_Items;
 };
 
@@ -26,7 +26,7 @@ public:
     void RemoveMatching(int A);
 
     char Unknown00[0x30];
-    Class_10BAEC40 m_Entries;
+    cStructArray m_Entries;
 };
 
 // FUNCTION: 0x10C27380 ?RemoveMatching@Class_10C27380@@QAEXH@Z

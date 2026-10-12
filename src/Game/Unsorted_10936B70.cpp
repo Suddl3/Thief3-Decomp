@@ -82,7 +82,7 @@ void Class_109373D0::ResetTextureStages()
 {
     for (int i = 0; i < 4; i++)
     {
-        Unknown1C[i] = 0;
+        m_StageTextures[i] = 0;
         GDirect3DDevice8->SetTexture(i, 0);
         GDirect3DDevice8->SetTextureStageState(i, 11, i);
         GDirect3DDevice8->SetTextureStageState(i, 24, 0);

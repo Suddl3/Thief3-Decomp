@@ -3,7 +3,7 @@
 #include "Game/Class_10B27220.h"
 #include "Game/Class_10E5B7C8.h"
 #include "Game/TimeManager.h"
-#include "Game/Class_10E7AAAC.h"
+#include "Game/cMenuInput.h"
 
 class Class_10B154E0_Unknown94
 {
@@ -92,7 +92,7 @@ public:
     float m_CloseTimer;
 };
 
-Class_10E7AAAC* GetMenuInput();
+cMenuInput* GetMenuInput();
 
 void FUN_10a36cf0();
 

@@ -43,7 +43,7 @@ public:
 
 double GetTimeSeconds();
 
-class Class_10E96510 : public Class_10E960D8
+class cYellowAlert : public Class_10E960D8
 {
 public:
     void UpdateLastKnownPosition();
@@ -54,8 +54,8 @@ public:
     FVector m_LastKnownPosition;
 };
 
-// FUNCTION: 0x10BE8710 ?UpdateLastKnownPosition@Class_10E96510@@QAEXXZ
-void Class_10E96510::UpdateLastKnownPosition()
+// FUNCTION: 0x10BE8710 ?UpdateLastKnownPosition@cYellowAlert@@QAEXXZ
+void cYellowAlert::UpdateLastKnownPosition()
 {
     FVector Out;
     int Flag;

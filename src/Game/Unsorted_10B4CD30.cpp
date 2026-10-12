@@ -48,7 +48,7 @@ public:
     void FUN_10b4cad0(Object_10B4D050* P);
 
     char Unknown04[0xC];
-    int Unknown10;
+    int m_AnimationEnded;
     int Unknown14;
 };
 
@@ -106,7 +106,7 @@ void Class_10E7EA00::FUN_10b4d050(Object_10B4D050* P)
     if (P->Unknown440 != 0 && P->Unknown44C != 0)
     {
         Unknown14 = 0;
-        Unknown10 = 0;
+        m_AnimationEnded = 0;
         FUN_10b4cad0(P);
     }
 }

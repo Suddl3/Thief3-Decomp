@@ -11,7 +11,7 @@ class Class_10E858D0
 {
 public:
     virtual void Virtual0();
-    virtual bool FUN_10b67ea0(int A, int B, bool C);
+    virtual bool HandleKey(int A, int B, bool C);
     virtual void Virtual2();
     virtual void Virtual3();
     virtual void Virtual4();
@@ -141,8 +141,8 @@ public:
     Struct_10B67EE0* Unknown2E0;
 };
 
-// FUNCTION: 0x10B67EA0 ?FUN_10b67ea0@Class_10E858D0@@UAE_NHH_N@Z
-bool Class_10E858D0::FUN_10b67ea0(int A, int B, bool C)
+// FUNCTION: 0x10B67EA0 ?HandleKey@Class_10E858D0@@UAE_NHH_N@Z
+bool Class_10E858D0::HandleKey(int A, int B, bool C)
 {
     if (FUN_10b79560(A, B, C))
         return true;

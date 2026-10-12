@@ -3,7 +3,7 @@
 #include "Game/Class_10B9D060.h"
 #include "Game/Class_10B9D080.h"
 #include "Game/Class_10B9D0A0.h"
-#include "Game/Class_10BC9A50.h"
+#include "Game/cAISpeech.h"
 
 class Class_10BC9D40;
 

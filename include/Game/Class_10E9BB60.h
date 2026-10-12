@@ -13,7 +13,7 @@ public:
     virtual int FUN_10c481d0(int p1, int p2, int p3, int* p4, int p5, int p6, int* p7);
     virtual void Virtual5();
     virtual void Virtual6();
-    virtual unsigned int FUN_10c48200(int p1, unsigned int p2, unsigned int p3, unsigned int p4);
+    virtual unsigned int ClampToAvailable(int p1, unsigned int p2, unsigned int p3, unsigned int p4);
 };
 
 #endif // GAME_CLASS_10E9BB60_H

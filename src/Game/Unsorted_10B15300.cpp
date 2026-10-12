@@ -10,7 +10,7 @@ class Class_10B255F0;
 
 class Class_10B1B8A0;
 
-class Class_10E7AAAC;
+class cMenuInput;
 
 Class_10E7A9C0* FUN_10dd85a0();
 
@@ -20,7 +20,7 @@ Class_10B255F0* GetSelection();
 
 Class_10B1B8A0* FUN_10b1b600();
 
-Class_10E7AAAC* GetMenuInput();
+cMenuInput* GetMenuInput();
 
 // FUNCTION: 0x10B15300 ?FUN_10b15300@Class_10B152C0@@QAEXH@Z
 void Class_10B152C0::FUN_10b15300(int A)

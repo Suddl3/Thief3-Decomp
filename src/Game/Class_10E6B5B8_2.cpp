@@ -2,12 +2,12 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/cIntArray.h"
 
-class Class_10E6B5B8
+class cPtrArray
 {
 public:
-    Class_10E6B5B8();
+    cPtrArray();
 
-    virtual ~Class_10E6B5B8();
+    virtual ~cPtrArray();
 
     void Clear();
 
@@ -15,11 +15,11 @@ public:
     cIntArray Unknown10;
 };
 
-// FUNCTION: 0x10A68E90 ??0Class_10E6B5B8@@QAE@XZ
-Class_10E6B5B8::Class_10E6B5B8()
+// FUNCTION: 0x10A68E90 ??0cPtrArray@@QAE@XZ
+cPtrArray::cPtrArray()
 {
     Clear();
 }
 
-// FUNCTION: 0x10A690B0 ??_GClass_10E6B5B8@@UAEPAXI@Z
+// FUNCTION: 0x10A690B0 ??_GcPtrArray@@UAEPAXI@Z
 // Compiler-generated: emitted with the class's vtable by 0x10A68E90's definition in this unit.
