@@ -10,7 +10,10 @@ export const meta = {
 // args: {
 //   prefix: 'w2a',                      worker ids are <prefix>-<nnn>; never reuse a prefix
 //   kind: 'CLASSES',                    or 'UNITS': what a task lists (namer.md has both)
-//   tasks: [['ClassA', 'ClassB'], ...], the classes or units of each task
+//   tasks: [['ClassA', 'ClassB'], ...], the classes or units of each task; or, for a long list of units,
+//   queue: 'build/scratch/names/queue-ua.json', sizes: [8, 7, ...]   the file (a JSON list of unit lists) and
+//                                       each task's number of units: a worker's UNITS is then `@<file>:<n>`,
+//                                       which classinfo.py --units reads
 //   lanes: 10,                          workers at a time (a workflow runs 16 at most; two runs make 20)
 //   model: 'haiku',                     the pilot's verdict: Haiku names more per token than Sonnet
 //   effort: 'medium',                   set it: a worker otherwise inherits the lead's effort, and at the
@@ -23,7 +26,10 @@ const KIND = A.kind === 'UNITS' ? 'UNITS' : 'CLASSES'
 const LANES = A.lanes || 10
 const MODEL = A.model || 'haiku'
 const EFFORT = A.effort || 'medium'
-const queue = (A.tasks || []).map((items, i) => ({ id: `${PREFIX}-${String(i + 1).padStart(3, '0')}`, items }))
+const ident = i => `${PREFIX}-${String(i + 1).padStart(3, '0')}`
+const queue = A.queue
+  ? (A.sizes || []).map((size, i) => ({ id: ident(i), n: i + 1, from: 0, to: size, items: [`@${A.queue}:${i + 1}`] }))
+  : (A.tasks || []).map((items, i) => ({ id: ident(i), items }))
 
 const REPORT = {
   type: 'object',
@@ -48,11 +54,18 @@ async function lane() {
     const r = await agent(
       `Read tools/agent/namer.md and follow it exactly. ID=${task.id} ${KIND}=${task.items.join(',')}\n\n` +
       `Work from the repository root. Write only build/scratch/names/${task.id}.json; do not edit any other file.`,
-      { label: `${task.id} ${short(task.items[0])}${task.items.length > 1 ? ` +${task.items.length - 1}` : ''}`,
+      { label: task.n ? `${task.id} units ${task.from}-${task.to}`
+          : `${task.id} ${short(task.items[0])}${task.items.length > 1 ? ` +${task.items.length - 1}` : ''}`,
         phase: 'Name', agentType: 'general-purpose', model: MODEL, effort: EFFORT, schema: REPORT })
     if (!r) {
       // Lost to an error: its classes or units go back in halves, then one each.
-      if (task.items.length > 1) {
+      if (task.n && task.to - task.from > 1) {
+        const mid = task.from + Math.ceil((task.to - task.from) / 2)
+        const piece = (id, from, to) => ({ id, n: task.n, from, to, items: [`@${A.queue}:${task.n}[${from}:${to}]`] })
+        queue.push(piece(`${task.id}a`, task.from, mid), piece(`${task.id}b`, mid, task.to))
+        tally.split++
+        log(`${task.id}: lost; queued again in two halves`)
+      } else if (!task.n && task.items.length > 1) {
         const half = Math.ceil(task.items.length / 2)
         queue.push({ id: `${task.id}a`, items: task.items.slice(0, half) })
         queue.push({ id: `${task.id}b`, items: task.items.slice(half) })

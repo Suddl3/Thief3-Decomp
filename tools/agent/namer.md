@@ -56,7 +56,8 @@ the functions around it belong to.
 
 ## A UNITS task
 
-Run classinfo.py once with all your units. Name each placeholder function
+Run classinfo.py once with all your units (UNITS as your prompt gives it:
+a list, or `@<file>:<n>`, which classinfo.py reads). Name each placeholder function
 in them, free (`FUN_10a47040`) or a method, by steps 3 and 4; a placeholder
 class with a method there by step 2 (run classinfo.py on that class when its
 unit shows too little of it); and such a class's fields by step 5. Functions

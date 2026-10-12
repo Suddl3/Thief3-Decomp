@@ -146,6 +146,17 @@ class Packet:
             self.fields[f].add(short.group(1) if short else fmt_addr(address))
 
 
+def task_units(spec: str) -> list:
+    """The units of `--units`: a comma-separated list, or `@<file>:<n>` for the nth task (from 1) of a JSON
+    list of unit lists, `@<file>:<n>[a:b]` for a slice of it (a wave's queue file names the task)."""
+    m = re.match(r"^@(.+):(\d+)(?:\[(\d*):(\d*)\])?$", spec)
+    if not m:
+        return [u for u in spec.split(",") if u]
+    import json
+    task = json.loads(Path(m.group(1)).read_text(encoding="utf-8"))[int(m.group(2)) - 1]
+    return task[int(m.group(3) or 0):int(m.group(4)) if m.group(4) else len(task)]
+
+
 def units_packet(p: Project, units: list, max_lines: int) -> None:
     packet = Packet(p, max_lines)
     for rel in units:
@@ -235,7 +246,7 @@ def main() -> None:
     args = ap.parse_args()
     p = Project()
     if args.units:
-        units_packet(p, [u for u in args.units.split(",") if u], args.max_lines)
+        units_packet(p, task_units(args.units), args.max_lines)
     elif args.cls:
         class_packet(p, args.cls, args.max_lines)
     else:
