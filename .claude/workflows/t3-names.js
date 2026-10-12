@@ -14,6 +14,7 @@ export const meta = {
 //   queue: 'build/scratch/names/queue-ua.json', sizes: [8, 7, ...]   the file (a JSON list of unit lists) and
 //                                       each task's number of units: a worker's UNITS is then `@<file>:<n>`,
 //                                       which classinfo.py --units reads
+//   extra: 'PASS=classes',              more of the prompt's first line (namer.md, "A class pass")
 //   lanes: 10,                          workers at a time (a workflow runs 16 at most; two runs make 20)
 //   model: 'haiku',                     the pilot's verdict: Haiku names more per token than Sonnet
 //   effort: 'medium',                   set it: a worker otherwise inherits the lead's effort, and at the
@@ -50,7 +51,8 @@ log(`${queue.length} ${KIND.toLowerCase()} tasks, ${LANES} at a time, ids ${PREF
 
 function work(task) {
   return agent(
-    `Read tools/agent/namer.md and follow it exactly. ID=${task.id} ${KIND}=${task.items.join(',')}\n\n` +
+    `Read tools/agent/namer.md and follow it exactly. ID=${task.id} ${KIND}=${task.items.join(',')}` +
+    `${A.extra ? ` ${A.extra}` : ''}\n\n` +
     `Work from the repository root. Write only build/scratch/names/${task.id}.json; do not edit any other file.`,
     { label: task.n ? `${task.id} units ${task.from}-${task.to}`
         : `${task.id} ${short(task.items[0])}${task.items.length > 1 ? ` +${task.items.length - 1}` : ''}`,

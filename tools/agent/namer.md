@@ -63,6 +63,18 @@ class with a method there by step 2 (run classinfo.py on that class when its
 unit shows too little of it); and such a class's fields by step 5. Functions
 the packet shows only as callees may be named by step 4.
 
+## A class pass (your prompt adds PASS=classes)
+
+Your classes are placeholders whose methods and fields earlier passes
+named. Say what each class is. Read its packet as before; the class's role
+shows in its fields and what its methods do with them, in the names of its
+methods, in who creates it and who calls it. When the role is plain, name
+the class for it in the original style (`cGoalList`, `cSoundHandle`,
+`sAnimEvent` for a plain struct; an Xbox twin's name wins when there is
+one): a name says what the class is, never one of its methods. Leave a
+class whose role you cannot say in a sentence. Then name what else of the
+class became clear, by steps 3 to 5.
+
 ## Rules
 
 - Name only what the evidence supports. A wrong name misleads every
