@@ -11,7 +11,7 @@ struct Struct_10B4A260;
 class Class_10E7E730 : public Class_10B3AE70
 {
 public:
-    virtual void FUN_10b4a120(AGarrett* Garrett);
+    virtual void Enter(AGarrett* Garrett);
     virtual void Virtual1();
     virtual void Virtual2();
     virtual void Virtual3();
@@ -25,10 +25,10 @@ public:
     virtual void Virtual11();
     virtual void FUN_10b4a260(Struct_10B4A260* Out);
 
-    void FUN_10b3b0b0(AGarrett* Garrett);
+    void StopBody(AGarrett* Garrett);
 
     int Unknown10;
-    float Unknown14;
+    float m_Timer;
     char Pad18[0x24];
 };
 

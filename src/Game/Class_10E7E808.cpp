@@ -38,7 +38,7 @@ public:
 class Class_10E7E730 : public Class_10B3AE70
 {
 public:
-    void FUN_10b3b0b0(AGarrett* Garrett);
+    void StopBody(AGarrett* Garrett);
 };
 
 class Class_10E7E808 : public Class_10E7E730
@@ -66,6 +66,6 @@ void Class_10E7E808::FUN_10b4bce0(AGarrett* Garrett)
         ForceBody(Garrett);
         break;
     }
-    FUN_10b3b0b0(Garrett);
+    StopBody(Garrett);
     Garrett->bUpdatePhysHeight = 0;
 }

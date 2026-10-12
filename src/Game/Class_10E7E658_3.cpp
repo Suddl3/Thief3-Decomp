@@ -3,7 +3,7 @@
 #include "Game/Class_10AA82D0.h"
 #include "Game/Class_10B396A0.h"
 #include "Game/Class_10F3A3D8.h"
-#include "Game/Class_10E7ED00.h"
+#include "Game/cGarrettLockPickController.h"
 
 class AActor;
 

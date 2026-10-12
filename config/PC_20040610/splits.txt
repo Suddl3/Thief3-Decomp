@@ -7213,7 +7213,7 @@ Game/Class_10E7E6A0.cpp:
 Game/Class_10E7E4E0.cpp:
 	.text  start:0x10B3AED0 end:0x10B3AF0C
 
-Game/Class_10E81548_3.cpp:
+Game/GState_3.cpp:
 	.text  start:0x10B3AF60 end:0x10B3B027
 
 Game/Class_10E7E658.cpp:
@@ -7303,13 +7303,13 @@ Game/Unsorted_10B3E240_2.cpp:
 	.text  start:0x10B3E240 end:0x10B3E25C
 	.text  start:0x10B3E340 end:0x10B3E37C
 
-Game/Class_10E7ED00.cpp:
+Game/cGarrettLockPickController.cpp:
 	.text  start:0x10B3E260 end:0x10B3E2B8
 
 Game/Unsorted_10B3E2C0.cpp:
 	.text  start:0x10B3E2C0 end:0x10B3E334
 
-Game/Class_10E7ED00_2.cpp:
+Game/cGarrettLockPickController_2.cpp:
 	.text  start:0x10B3E380 end:0x10B3E3BF
 
 Game/Unsorted_10B3E3C0_2.cpp:
@@ -7330,10 +7330,10 @@ Game/Class_10E7EDC0.cpp:
 	.text  start:0x10B3ED20 end:0x10B3ED2D
 	.text  start:0x10B3FD90 end:0x10B3FDBA
 
-Game/Class_10E7ED00_3.cpp:
+Game/cGarrettLockPickController_3.cpp:
 	.text  start:0x10B3EFE0 end:0x10B3EFF3
 
-Game/Class_10E7ED00_4.cpp:
+Game/cGarrettLockPickController_4.cpp:
 	.text  start:0x10B3F000 end:0x10B3F06E
 
 Game/Unsorted_10B3F070.cpp:
@@ -7567,10 +7567,10 @@ Game/Class_10E7E730_2.cpp:
 Game/Class_10E7E6A0_3.cpp:
 	.text  start:0x10B4A2A0 end:0x10B4A37B
 
-Game/Class_10E81548.cpp:
+Game/GState.cpp:
 	.text  start:0x10B4BB40 end:0x10B4BB59
 
-Game/Class_10E81548_2.cpp:
+Game/GState_2.cpp:
 	.text  start:0x10B4BB60 end:0x10B4BB78
 
 Game/Unsorted_10B4BC30.cpp:
@@ -7598,7 +7598,7 @@ Game/Unsorted_10B4BEC0.cpp:
 	.text  start:0x10B4BEC0 end:0x10B4BEF8
 	.text  start:0x10B4C060 end:0x10B4C095
 
-Game/Class_10E81548_4.cpp:
+Game/GState_4.cpp:
 	.text  start:0x10B4BF20 end:0x10B4C057
 
 Game/Class_10E7E7C0_2.cpp:

@@ -25,7 +25,7 @@ public:
 class Class_10E7E730 : public Class_10B3AE70
 {
 public:
-    void FUN_10b3b0b0(AGarrett* Garrett);
+    void StopBody(AGarrett* Garrett);
 };
 
 class Class_10E7E6E8 : public Class_10E7E730
@@ -41,7 +41,7 @@ public:
 void Class_10E7E6E8::FUN_10b4a0d0(AGarrett* Garrett)
 {
     ((Class_10B39530*)GetLinkedObject())->Play(0xa3, 0.0f, 1.0f, 0x101, 0, 0, -1.0f);
-    FUN_10b3b0b0(Garrett);
+    StopBody(Garrett);
     ForceBody(Garrett);
     Unknown10 = false;
     Unknown14 = 1.5f;

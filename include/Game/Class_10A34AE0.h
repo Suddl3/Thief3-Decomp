@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_10A34AE0_H
 #define GAME_CLASS_10A34AE0_H
 
-#include "Game/Class_10A345C0.h"
+#include "Game/cInt64HashTable.h"
 
 struct Struct_10A34AE0;
 
@@ -13,7 +13,7 @@ public:
     bool AddPair(Struct_10A34AE0* A, int B);
 
     int Unknown00;
-    Class_10A345C0 m_PairCounts;
+    cInt64HashTable m_PairCounts;
 };
 
 #endif // GAME_CLASS_10A34AE0_H

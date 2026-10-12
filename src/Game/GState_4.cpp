@@ -1,4 +1,4 @@
-// Game/Class_10E81548_4.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/GState_4.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Core/Core.h"
@@ -49,23 +49,23 @@ public:
 class Class_10E7E730 : public Class_10B3AE70
 {
 public:
-    void FUN_10b3b0b0(AGarrett* Garrett);
+    void StopBody(AGarrett* Garrett);
 };
 
-class Class_10E81548 : public Class_10E7E730
+class GState : public Class_10E7E730
 {
 public:
-    virtual void FUN_10b4bf20(AGarrett* Garrett);
+    virtual void Enter(AGarrett* Garrett);
 
     int Unknown10;
 };
 
 void FUN_109672e0(const Struct_10B1DCA0& Coords, const FVector& V, FVector& Out);
 
-// FUNCTION: 0x10B4BF20 ?FUN_10b4bf20@Class_10E81548@@UAEXPAVAGarrett@@@Z
-void Class_10E81548::FUN_10b4bf20(AGarrett* Garrett)
+// FUNCTION: 0x10B4BF20 ?Enter@GState@@UAEXPAVAGarrett@@@Z
+void GState::Enter(AGarrett* Garrett)
 {
-    FUN_10b3b0b0(Garrett);
+    StopBody(Garrett);
     Unknown10 = Garrett->Unknown348;
     switch (Unknown10)
     {

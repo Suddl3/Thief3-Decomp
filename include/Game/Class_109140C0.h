@@ -4,7 +4,7 @@
 #define GAME_CLASS_109140C0_H
 
 class cString;
-class Class_10914D60;
+class cDispatchTable;
 
 class Class_109140C0
 {
@@ -15,7 +15,7 @@ public:
     char Unknown00[4];
     int m_HandlerCount;
     char Unknown08[4];
-    Class_10914D60** m_Handlers;
+    cDispatchTable** m_Handlers;
 };
 
 #endif // GAME_CLASS_109140C0_H

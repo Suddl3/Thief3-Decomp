@@ -41,7 +41,7 @@ void Class_10953B60::ApplyWorldMatrix()
             if (!(DAT_10f341f0 & 1))
                 DAT_10f341f0 |= 1;
             D3DXMATRIX Matrix;
-            D3DXMATRIX* Src = DAT_10f2c8c0->Unknown04.FUN_10953730(&Matrix, this);
+            D3DXMATRIX* Src = DAT_10f2c8c0->Unknown04.GetWorldMatrix(&Matrix, this);
             DAT_10f341b0 = *Src;
             GDirect3DDevice8->SetTransform(0x100, &DAT_10f341b0);
         }

@@ -8,7 +8,7 @@ Class_10905A90_Member* GetAllocator();
 // FUNCTION: 0x109262B0 ?Clear@Class_109262B0@@QAEXXZ
 void Class_109262B0::Clear()
 {
-    FUN_10926020(0);
+    SetCount(0);
     if (m_CapacityBytes)
     {
         GetAllocator()->Virtual5(m_Data);

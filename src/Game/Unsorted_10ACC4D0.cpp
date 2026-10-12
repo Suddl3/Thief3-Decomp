@@ -38,7 +38,7 @@ Class_10E70098::Class_10E70098()
 // FUNCTION: 0x10ACCFB0 ?Free@Class_10ACCFB0@@QAEXXZ
 void Class_10ACCFB0::Free()
 {
-    FUN_10acc790(0);
+    SetCount(0);
     if (Unknown04)
     {
         GetAllocator()->Virtual5(Unknown08);

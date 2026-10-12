@@ -12,8 +12,8 @@ public:
     Class_10B3AF40_UnknownB0* m_physicsObjectPadding;
 };
 
-// FUNCTION: 0x10B3B0B0 ?FUN_10b3b0b0@Class_10E7E730@@QAEXPAVAGarrett@@@Z
-void Class_10E7E730::FUN_10b3b0b0(AGarrett* Garrett)
+// FUNCTION: 0x10B3B0B0 ?StopBody@Class_10E7E730@@QAEXPAVAGarrett@@@Z
+void Class_10E7E730::StopBody(AGarrett* Garrett)
 {
     Class_10B48890* Body = Garrett->m_physicsObjectPadding->Virtual6();
     Body->Unknown20 = FVector(0.0f, 0.0f, 0.0f);

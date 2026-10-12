@@ -20,7 +20,7 @@ public:
     bool m_FixedSize;
     char Pad11[0x3];
     Class_10C48260_Node** m_Buckets;
-    Class_10C48260_Field18 Unknown18;
+    Class_10C48260_Field18 m_KeyTraits;
 };
 
 #endif // GAME_CLASS_10C48260_H

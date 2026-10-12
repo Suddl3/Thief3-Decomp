@@ -2,13 +2,13 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10924E80.h"
 
-class Class_1091E940;
+class cCamera;
 
 class Class_10924100;
 
-void SetCurrentCamera(Class_1091E940* A, int B);
+void SetCurrentCamera(cCamera* A, int B);
 
-extern Class_1091E940* DAT_10f2c738;
+extern cCamera* DAT_10f2c738;
 
 extern Class_10924100* DAT_10f2c740;
 

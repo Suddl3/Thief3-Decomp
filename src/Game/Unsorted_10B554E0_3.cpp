@@ -40,7 +40,7 @@ class Class_10ACF3A0;
 
 class Class_10B1D500;
 
-class Class_10E7ED00;
+class cGarrettLockPickController;
 
 class UObject;
 
@@ -56,7 +56,7 @@ public:
     char PadEC[0x10];
     Class_10ACF3A0* UnknownFC;
     char Pad100[0x8];
-    Class_10E7ED00* Unknown108;
+    cGarrettLockPickController* Unknown108;
     char Pad10C[0x4];
     Class_10ACB8B0* Unknown110;
     char Pad114[0xc];

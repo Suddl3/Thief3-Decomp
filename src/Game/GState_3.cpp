@@ -1,4 +1,4 @@
-// Game/Class_10E81548_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/GState_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Core/Core.h"
@@ -49,23 +49,23 @@ public:
     Class_10B3AF60_Unknown0B0* Unknown0B0;
 };
 
-class Class_10E81548
+class GState
 {
 public:
     virtual void Virtual0();
-    virtual void FUN_10b4bb60(int p1);
+    virtual void Update(int p1);
     virtual void Virtual2();
     virtual void Virtual3();
     virtual void Virtual4();
 
-    bool FUN_10b3af60(int A);
+    bool ApplyAnimMotion(int A);
 
     char Pad04[0x8];
     Class_10B39870* Unknown0C;
 };
 
-// FUNCTION: 0x10B3AF60 ?FUN_10b3af60@Class_10E81548@@QAE_NH@Z
-bool Class_10E81548::FUN_10b3af60(int A)
+// FUNCTION: 0x10B3AF60 ?ApplyAnimMotion@GState@@QAE_NH@Z
+bool GState::ApplyAnimMotion(int A)
 {
     Struct_10B48890* Result = ((Class_10B3AF60_A*)A)->Unknown0B0->Virtual6();
     Struct_10B4C2C0 Vec;

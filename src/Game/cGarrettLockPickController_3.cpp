@@ -1,4 +1,4 @@
-// Game/Class_10E7ED00_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/cGarrettLockPickController_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
 class cLockPickController
@@ -13,7 +13,7 @@ public:
     void Reset();
 };
 
-class Class_10E7ED00 : public cLockPickController
+class cGarrettLockPickController : public cLockPickController
 {
 public:
     virtual void Virtual5();
@@ -25,8 +25,8 @@ public:
     virtual void FUN_10b3efe0(int p1);
 };
 
-// FUNCTION: 0x10B3EFE0 ?FUN_10b3efe0@Class_10E7ED00@@UAEXH@Z
-void Class_10E7ED00::FUN_10b3efe0(int p1)
+// FUNCTION: 0x10B3EFE0 ?FUN_10b3efe0@cGarrettLockPickController@@UAEXH@Z
+void cGarrettLockPickController::FUN_10b3efe0(int p1)
 {
     Reset();
     Virtual4();

@@ -9,7 +9,7 @@ struct D3DXMATRIX;
 class Class_10953730
 {
 public:
-    D3DXMATRIX* FUN_10953730(D3DXMATRIX* Out, Class_10953B60* Obj);
+    D3DXMATRIX* GetWorldMatrix(D3DXMATRIX* Out, Class_10953B60* Obj);
 };
 
 #endif // GAME_CLASS_10953730_H

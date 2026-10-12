@@ -26,12 +26,12 @@ Class_10B19300* FUN_10b190e0();
 class Class_10E7E730 : public Class_10B3AE70
 {
 public:
-    virtual void FUN_10b4a120(AGarrett* Garrett);
+    virtual void Enter(AGarrett* Garrett);
 
-    void FUN_10b3b0b0(AGarrett* Garrett);
+    void StopBody(AGarrett* Garrett);
 
     void* Unknown10;
-    float Unknown14;
+    float m_Timer;
 };
 
 class Class_10E7E6E8 : public Class_10E7E6A0
@@ -48,12 +48,12 @@ bool Class_10B49D90::FUN_10b49d90(int A, int B)
     return false;
 }
 
-// FUNCTION: 0x10B4A120 ?FUN_10b4a120@Class_10E7E730@@UAEXPAVAGarrett@@@Z
-void Class_10E7E730::FUN_10b4a120(AGarrett* Garrett)
+// FUNCTION: 0x10B4A120 ?Enter@Class_10E7E730@@UAEXPAVAGarrett@@@Z
+void Class_10E7E730::Enter(AGarrett* Garrett)
 {
-    Unknown14 = -1.0f;
+    m_Timer = -1.0f;
     Unknown10 = FUN_10b190e0()->FUN_10aa9dc0();
-    FUN_10b3b0b0(Garrett);
+    StopBody(Garrett);
     ForceBody(Garrett);
 }
 

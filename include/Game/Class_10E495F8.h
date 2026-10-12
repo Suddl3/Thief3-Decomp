@@ -19,7 +19,7 @@ public:
     char Unknown08;
     bool Unknown09;
     char Pad0A[0x2];
-    Class_10914D80 Unknown0C;
+    Class_10914D80 m_Map;
 };
 
 #endif // GAME_CLASS_10E495F8_H

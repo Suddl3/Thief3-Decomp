@@ -5,7 +5,7 @@
 #include "Game/Struct_10924210.h"
 #include "Game/Struct_109E44B0.h"
 #include "Game/Class_1091E400.h"
-#include "Game/Class_1091E940.h"
+#include "Game/cCamera.h"
 
 class Class_10E6D8F0
 {
@@ -33,8 +33,8 @@ extern Class_109242E0* DAT_10f319a0;
 
 extern Struct_109E44B0 DAT_10f2c8e8;
 
-// FUNCTION: 0x10919240 ?SetCurrentCamera@@YAXPAVClass_1091E940@@H@Z
-void SetCurrentCamera(Class_1091E940* A, int B)
+// FUNCTION: 0x10919240 ?SetCurrentCamera@@YAXPAVcCamera@@H@Z
+void SetCurrentCamera(cCamera* A, int B)
 {
     DAT_10f2c8c4 = B;
     DAT_10f2c8c0 = A;

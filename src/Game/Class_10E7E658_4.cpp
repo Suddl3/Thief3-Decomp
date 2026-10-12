@@ -2,9 +2,9 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10AA82D0.h"
 #include "Game/Class_10B39700.h"
-#include "Game/Class_10E81548.h"
+#include "Game/GState.h"
 
-class cRopeMotion : public Class_10E81548
+class cRopeMotion : public GState
 {
 public:
     virtual void FUN_10b49990(int A);
@@ -18,7 +18,7 @@ public:
 // FUNCTION: 0x10B49990 ?FUN_10b49990@cRopeMotion@@UAEXH@Z
 void cRopeMotion::FUN_10b49990(int A)
 {
-    if (!FUN_10b3af60(A))
+    if (!ApplyAnimMotion(A))
         ((Class_10B39700*)GetLinkedObject())->FUN_10b39700();
     FUN_10b49640(A);
     Virtual4();

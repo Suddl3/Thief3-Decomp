@@ -1,4 +1,4 @@
-// Game/Class_10E7ED00_4.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/cGarrettLockPickController_4.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_1098E3D0.h"
 #include "Game/Class_10A3C2E0.h"
@@ -24,14 +24,14 @@ public:
     Class_1098E3D0* Unknown458;
 };
 
-class Class_10E7ED00 : public Class_10E7E6A0
+class cGarrettLockPickController : public Class_10E7E6A0
 {
 public:
-    virtual void FUN_10b3f000(AGarrett* Garrett);
+    virtual void Exit(AGarrett* Garrett);
 };
 
-// FUNCTION: 0x10B3F000 ?FUN_10b3f000@Class_10E7ED00@@UAEXPAVAGarrett@@@Z
-void Class_10E7ED00::FUN_10b3f000(AGarrett* Garrett)
+// FUNCTION: 0x10B3F000 ?Exit@cGarrettLockPickController@@UAEXPAVAGarrett@@@Z
+void cGarrettLockPickController::Exit(AGarrett* Garrett)
 {
     DAT_10f35dec->Unknown94->Reset();
     FUN_10b3ed30(Garrett);

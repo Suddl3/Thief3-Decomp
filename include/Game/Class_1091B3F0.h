@@ -8,12 +8,12 @@ struct Item_1091B3F0;
 class Class_1091B3F0
 {
 public:
-    void FUN_1091af10(int A);
+    void SetCount(int A);
     void Free();
     void CopyFrom(const Class_1091B3F0& Other);
 
     int Count;
-    int Unknown04;
+    int m_Capacity;
     Item_1091B3F0* Items;
 };
 

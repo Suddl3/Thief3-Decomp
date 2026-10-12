@@ -1,10 +1,10 @@
 // Game/Unsorted_10A32AB0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10A32370.h"
+#include "Game/cRefArray.h"
 #include "Game/Class_10A32AB0_Element.h"
 
-// FUNCTION: 0x10A32AB0 ?Append@Class_10A32370@@QAEHPAPAVClass_10A32AB0_Element@@@Z
-int Class_10A32370::Append(Class_10A32AB0_Element** A)
+// FUNCTION: 0x10A32AB0 ?Append@cRefArray@@QAEHPAPAVClass_10A32AB0_Element@@@Z
+int cRefArray::Append(Class_10A32AB0_Element** A)
 {
     int Index = m_Count;
     SetCount(Index + 1);

@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_10A32D60_H
 #define GAME_CLASS_10A32D60_H
 
-class Class_10A32370;
+class cRefArray;
 
 class Class_10A32D60
 {
@@ -13,7 +13,7 @@ public:
 
     int m_Count;
     int m_CapacityBytes;
-    Class_10A32370* m_Elements;
+    cRefArray* m_Elements;
 };
 
 #endif // GAME_CLASS_10A32D60_H

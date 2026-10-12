@@ -10,7 +10,7 @@ class AGarrett;
 class Class_10E7EB20 : public Class_10B3AE70
 {
 public:
-    virtual void FUN_10b4f430(AGarrett* Garrett);
+    virtual void Enter(AGarrett* Garrett);
     virtual void Virtual1();
     virtual void Virtual2();
     virtual void Virtual3();

@@ -22,7 +22,7 @@ public:
     void Resize(int Count);
 
     int m_Count;
-    int Unknown04;
+    int m_Capacity;
     Item_10C4F870* m_Items;
 };
 

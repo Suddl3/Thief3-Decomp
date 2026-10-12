@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10A31F00.h"
-#include "Game/Class_10A32270.h"
+#include "Game/cByteArray.h"
 #include "Game/Class_10E663C8.h"
 
 class Class_10A31F00;
@@ -43,8 +43,8 @@ int Class_10A31F00::Remove()
     return Result;
 }
 
-// FUNCTION: 0x10A32270 ?Clear@Class_10A32270@@QAEXXZ
-void Class_10A32270::Clear()
+// FUNCTION: 0x10A32270 ?Clear@cByteArray@@QAEXXZ
+void cByteArray::Clear()
 {
     SetCount(0);
     if (m_CapacityBytes)

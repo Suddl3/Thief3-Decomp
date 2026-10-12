@@ -4,9 +4,12 @@
 #   <placeholder> <class> <evidence>
 Class_10905e90           Class_10905E90                   the same address as Class_10905E90, in capitals
 Class_109081E0           cString                          named: Derives from the counted char buffer Class_1090A780; adds const char* construction, assignment and operator* with a DAT_10e47660 fallback.
+Class_10914D60           cDispatchTable                   named: Name-keyed table (m_Entries); Dispatch upper-cases the name and forwards the call to the matching entry.
+Class_10919B90           cTextRenderer                    named: MeasureText and DrawText take a text struct; DrawText also takes position, color, scale and flags.
 Class_10919b80           Class_10919B80                   the same address as Class_10919B80, in capitals
 Class_10919ca0           Class_10919CA0                   the same address as Class_10919CA0, in capitals
 Class_1091E340           Class_10E499F4                   0x1091E340: stores 0x10E499F4
+Class_1091E940           cCamera                          named: SetCurrentCamera takes it and calls SetViewport; it holds the projection matrix, viewport and half size.
 Class_1091ED80           cVector3                         named: Three float fields; FUN_1091ed80 takes their sqrtf length and scales all three.
 Class_1091F350           Class_10E49A0C                   0x1091F350: stores 0x10E49A0C
 Class_1091c710           Class_1091C710                   the same address as Class_1091C710, in capitals
@@ -45,6 +48,7 @@ Class_1094e3a0           Class_1094E3A0                   the same address as Cl
 Class_1094f9b0           Class_10E4AB88                   0x1094F9B0: slot of 0x10E4AB88
 Class_109501A0           cBinkMovie                       named: Bink movie: its constructor takes a movie name; its only method calls _BinkClose on the handle.
 Class_109514B0           Class_10E4AC64                   0x109514B0: stores 0x10E4AC64
+Class_10951A40           cFilteredList                    named: m_Items and m_Count hold objects; SetFilter stores the filter, RemoveMatching deletes the matching ones.
 Class_10951DE0           Class_10E4AC78                   0x10951DE0: slot of 0x10E4AC78
 Class_10951E80           Class_10E4AC78                   0x10951E80: slot of 0x10E4AC78
 Class_10951EB0           Class_10E4AC78                   0x10951EB0: slot of 0x10E4AC78
@@ -77,7 +81,10 @@ Class_10A1F950           Class_10E65590                   0x10A1F950: called on 
 Class_10A2C2F0           cBoneAimController               named: Xbox twin BoneAimController.cpp names the class cBoneAimController; entries hold aim angles (IsAngleBelow).
 Class_10A2FC00           Class_10E66368                   0x10A2FC00: called on this by 0x10A2FBE0
 Class_10A311E0           Class_10E663C8                   0x10A30F20: stores 0x10E663C8
+Class_10A32270           cByteArray                       named: SetCount memsets newly grown bytes to zero; m_Data is a raw void buffer with Clear.
+Class_10A32370           cRefArray                        named: Append AddRefs (Virtual1) the new element and releases (Virtual2) the replaced one.
 Class_10A33ED0           Class_10E9CD18                   0x10A33ED0: slot of 0x10E9CD18
+Class_10A345C0           cInt64HashTable                  named: Hash table keyed by __int64 with int values; Insert and InsertOrAssign index m_Buckets.
 Class_10A39E70           Class_10E666E0                   0x10A39E70: stores 0x10E666E0
 Class_10A3A020           Class_10E66718                   0x10A3A020: slot of 0x10E66718
 Class_10A3A1D0           Class_10E66718                   0x10A3A1D0: slot of 0x10E66718
@@ -314,7 +321,7 @@ Class_10B3ACB0           Class_10E7E4E0                   0x10B3ACB0: stores 0x1
 Class_10B3ADC0           Class_10E7E6A0                   0x10B49D10: slot of 0x10E7E6A0
 Class_10B3AE50           GSMantle                         0x10B3AE50: called on this by 0x10B53B30
 Class_10B3B700           Class_10E7E6A0                   0x10B3B700: called on this by 0x10B4A8B0
-Class_10B3E260           Class_10E7ED00                   0x10B3E260: called on this by 0x10B3F910
+Class_10B3E260           cGarrettLockPickController       0x10B3E260: called on this by 0x10B3F910
 Class_10B42F70           Class_10E80C78                   0x10B42F70: slot of 0x10E80C78
 Class_10B43160           Class_10E80C78                   0x10B43160: slot of 0x10E80C78
 Class_10B432A0           Class_10E80C78                   0x10B432A0: slot of 0x10E80C78
@@ -558,6 +565,7 @@ Class_10C66500           SoundSchema                      0x10C66500: slot of 0x
 Class_10C66560           SoundSchema                      0x10C66560: slot of 0x10E9CFE0
 Class_10E49AE0           cPixelAccessor                   named: GetPixel and SetPixel read and write packed pixels of a Surface struct; GetLuminance and GetPixelColor convert them.
 Class_10E49C6C           Vocabulary                       named: Xbox twin's class name (6-slot vtable match); dispatches category codes to its item array.
+Class_10E49D14           Archetype                        named: Xbox T3Opt vtable twin is class Archetype in Archetype.cpp (two slots).
 Class_10E49DFC           VBPoolStaticPermanent            named: Xbox twin debug name VBPoolStaticPermanent (2 Xbox names)
 Class_10E49F38           cD3DVertexBuffer                 named: Holds an IDirect3DVertexBuffer8 (Unknown14) and its stride (Unknown1C); LockVertices and BindStreamSource use both.
 Class_10E49F64           cD3DDynamicVertexBuffer          named: SetStreamSource binds it via cD3DStateCache; CreateBuffer locks with D3DLOCK_NOOVERWRITE/DISCARD flags.
@@ -639,9 +647,11 @@ Class_10E7B970           cT3ReadBookWindow                named: Xbox source fil
 Class_10E7BBC8           cMovieSubtitles                  named: MovieSubtitles path format loads a movie's subtitle schema; Tick drives its player.
 Class_10E7E658           cRopeMotion                      named: MountRope and DismountRope drive Garrett->ropeToMount, bUpdatePhysHeight and SetNoiseEnabled.
 Class_10E7EC88           GSLean                           named: Xbox message 'Garrett entered lean state without a valid button press.' in Enter; GS prefix from GSMantle's message.
+Class_10E7ED00           cGarrettLockPickController       named: Derives cLockPickController; its exit releases Garrett's arm and destroys the lock-pick window.
 Class_10E7FD18           cHUDLightGem                     named: String 'HUDLightGem_%2.2d' builds 16 HUD gem handles, released in the destructor.
 Class_10E80418           cCheatHandler                    named: HandleCheatCommand matches the HURTME and HEALME strings and applies both cheats to the player.
 Class_10E80798           cFade                            named: LoadFadeTime reads the FadeTime config key; UpdateFade sets the colour's alpha from elapsed/duration and calls AdvanceFade.
+Class_10E81548           GState                           named: Xbox string 'GState: anim controller was never set.' is in its FUN_10b3af60 (T3Opt pair).
 Class_10E816E0           GSMantle                         named: Xbox message 'GSMantle, got an end of animation notification for an animation that was not exp' in OnAnimationEnd.
 Class_10E81DE8           cOptionsWindow                   named: SaveAndClose calls GetOptions()->Save(); cT3AVOptionsWindow::ShowMainMenu calls its Close().
 Class_10E82AF8           cFactionPane                     named: Fields m_HammerFaction and m_PaganFaction, strings sta_HammerFactionTotal and sta_PaganFactionTotal, vtable slot 119 GetFactionPaneFileName.

@@ -18,8 +18,8 @@ struct Struct_10B505C0_Param
     float Unknown34;
 };
 
-// Game/Class_10E7ED00.h copied whole, with the method this function calls added.
-class Class_10E7ED00 : public cLockPickController
+// Game/cGarrettLockPickController.h copied whole, with the method this function calls added.
+class cGarrettLockPickController : public cLockPickController
 {
 public:
     virtual void FUN_10b3e380(Struct_10B3ACE0* A, float B, float C);
@@ -36,7 +36,7 @@ public:
     virtual void FUN_10b3e240(int A, int B);
 
     void FUN_109e38b0(int A, int B);
-    void FUN_10b3e260();
+    void ResetPickState();
     FVector GetSideDirection(Struct_10AC8540_Param* A);
 
     char Unknown50[0x20];

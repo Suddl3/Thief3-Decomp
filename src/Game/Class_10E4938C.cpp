@@ -5,7 +5,7 @@
 #include "Game/Class_10E4938C.h"
 
 // FUNCTION: 0x109141F0 ??0Class_10E4938C@@QAE@ABVcString@@@Z
-Class_10E4938C::Class_10E4938C(const cString& A) : Unknown10(A)
+Class_10E4938C::Class_10E4938C(const cString& A) : m_Name(A)
 {
 }
 

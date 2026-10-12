@@ -5,7 +5,7 @@
 #include "Game/Class_109516C0.h"
 #include "Game/Class_109516C0_Entry.h"
 #include "Game/Class_10951900.h"
-#include "Game/Class_10951A40.h"
+#include "Game/cFilteredList.h"
 #include "Game/Struct_10951A40.h"
 
 class Class_10953590;
@@ -43,8 +43,8 @@ Class_109516C0_Entry* Class_109516C0::GetEntry(int Index)
     return &m_DefaultEntry;
 }
 
-// FUNCTION: 0x10951A40 ?SetFilter@Class_10951A40@@QAEXPBUStruct_10951A40@@@Z
-void Class_10951A40::SetFilter(const Struct_10951A40* In)
+// FUNCTION: 0x10951A40 ?SetFilter@cFilteredList@@QAEXPBUStruct_10951A40@@@Z
+void cFilteredList::SetFilter(const Struct_10951A40* In)
 {
     m_Filter = *In;
     RemoveMatching();

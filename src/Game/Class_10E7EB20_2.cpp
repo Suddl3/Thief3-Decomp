@@ -13,8 +13,8 @@ public:
     unsigned isCrouching : 1;
 };
 
-// FUNCTION: 0x10B4F430 ?FUN_10b4f430@Class_10E7EB20@@UAEXPAVAGarrett@@@Z
-void Class_10E7EB20::FUN_10b4f430(AGarrett* Garrett)
+// FUNCTION: 0x10B4F430 ?Enter@Class_10E7EB20@@UAEXPAVAGarrett@@@Z
+void Class_10E7EB20::Enter(AGarrett* Garrett)
 {
     if (Garrett->isCrouching)
         ((Class_10B39530*)GetLinkedObject())->Play(0xaf, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);

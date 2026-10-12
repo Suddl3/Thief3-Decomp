@@ -20,11 +20,11 @@ public:
 void Class_10C4EDA0::Free()
 {
     Resize(0);
-    if (Unknown04)
+    if (m_Capacity)
     {
         GetAllocator()->Virtual5(m_Items);
         m_Items = 0;
-        Unknown04 = 0;
+        m_Capacity = 0;
     }
 }
 

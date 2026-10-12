@@ -15,7 +15,7 @@ public:
     bool m_ResetPending;
 };
 
-class Class_10E7ED00 : public cLockPickController
+class cGarrettLockPickController : public cLockPickController
 {
 public:
     virtual void Virtual5();
@@ -54,8 +54,8 @@ public:
     int Unknown40;
 };
 
-// FUNCTION: 0x10B3E240 ?FUN_10b3e240@Class_10E7ED00@@UAEXHH@Z
-void Class_10E7ED00::FUN_10b3e240(int A, int B)
+// FUNCTION: 0x10B3E240 ?FUN_10b3e240@cGarrettLockPickController@@UAEXHH@Z
+void cGarrettLockPickController::FUN_10b3e240(int A, int B)
 {
     FUN_109e38b0(A, B);
     Unknown70 = true;

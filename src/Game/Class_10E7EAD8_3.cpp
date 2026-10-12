@@ -50,7 +50,7 @@ class AGarrett;
 class Class_10E7EB20 : public Class_10E7E6A0
 {
 public:
-    virtual void FUN_10b4f490(AGarrett* Param);
+    virtual void Exit(AGarrett* Param);
 };
 
 class Class_1098E3D0;
@@ -112,8 +112,8 @@ int Class_10E7EAD8::OnAnimationEnd(Class_10B21570* A, Class_1098E3D0* B)
     return Virtual4();
 }
 
-// FUNCTION: 0x10B4F490 ?FUN_10b4f490@Class_10E7EB20@@UAEXPAVAGarrett@@@Z
-void Class_10E7EB20::FUN_10b4f490(AGarrett* Param)
+// FUNCTION: 0x10B4F490 ?Exit@Class_10E7EB20@@UAEXPAVAGarrett@@@Z
+void Class_10E7EB20::Exit(AGarrett* Param)
 {
     ReleaseArm(Param);
     FUN_10b3adc0(Param);

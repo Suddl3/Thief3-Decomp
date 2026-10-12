@@ -4,7 +4,7 @@
 #include "Game/ListPool.h"
 #include "Game/Class_10932760.h"
 #include "Game/Class_10943600.h"
-#include "Game/Class_10E49D14.h"
+#include "Game/Archetype.h"
 
 class Item_10943600;
 
@@ -27,11 +27,11 @@ public:
     char Unknown0B0[0x20];
 };
 
-// FUNCTION: 0x10932690 ??_GClass_10E49D14@@UAEPAXI@Z
+// FUNCTION: 0x10932690 ??_GArchetype@@UAEPAXI@Z
 // Compiler-generated: emitted with the class's vtable by 0x109326B0's definition in this unit.
 
-// FUNCTION: 0x109326B0 ??1Class_10E49D14@@UAE@XZ
-Class_10E49D14::~Class_10E49D14()
+// FUNCTION: 0x109326B0 ??1Archetype@@UAE@XZ
+Archetype::~Archetype()
 {
     FUN_10954ce0();
 }

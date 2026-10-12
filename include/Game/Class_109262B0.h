@@ -6,7 +6,7 @@
 class Class_109262B0
 {
 public:
-    void FUN_10926020(int A);
+    void SetCount(int A);
     void Clear();
     void CopyFrom(const Class_109262B0& Other);
 

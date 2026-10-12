@@ -35,7 +35,7 @@ public:
 class Class_10E7E730 : public Class_10B3AE70
 {
 public:
-    void FUN_10b3b0b0(AGarrett* Garrett);
+    void StopBody(AGarrett* Garrett);
 };
 
 class Class_10E7E898 : public Class_10E7E730
@@ -49,7 +49,7 @@ public:
 // FUNCTION: 0x10B4BD80 ?FUN_10b4bd80@Class_10E7E898@@UAEXPAVAGarrett@@@Z
 void Class_10E7E898::FUN_10b4bd80(AGarrett* Garrett)
 {
-    FUN_10b3b0b0(Garrett);
+    StopBody(Garrett);
     Garrett->HeadRot = Garrett->Rotation;
     Unknown10 = 2.0f;
     Unknown08 = 0x100;

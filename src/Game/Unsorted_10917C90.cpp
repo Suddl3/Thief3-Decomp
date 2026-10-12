@@ -4,7 +4,7 @@
 #include "Game/Struct_10917D20.h"
 #include "Game/Class_109242E0.h"
 
-class Class_1091E940
+class cCamera
 {
 public:
     void SetProjection(int A, int B);
@@ -16,7 +16,7 @@ public:
     int Unknown184;
 };
 
-extern Class_1091E940* DAT_10f2c738;
+extern cCamera* DAT_10f2c738;
 
 extern Class_109242E0* DAT_10f319a0;
 

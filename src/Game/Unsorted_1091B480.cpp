@@ -59,7 +59,7 @@ void Class_1091B480::Rehash(int NewSize)
 // FUNCTION: 0x1091B560 ?CopyFrom@Class_1091B3F0@@QAEXABV1@@Z
 void Class_1091B3F0::CopyFrom(const Class_1091B3F0& Other)
 {
-    FUN_1091af10(Other.Count);
+    SetCount(Other.Count);
     for (int i = 0; i < Count; i++)
         Items[i] = Other.Items[i];
 }

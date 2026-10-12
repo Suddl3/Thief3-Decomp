@@ -40,10 +40,10 @@ public:
     unsigned bUpdatePhysHeight : 1;
 };
 
-class Class_10E81548 : public Class_10E7E6A0
+class GState : public Class_10E7E6A0
 {
 public:
-    virtual void FUN_10b4c060(AGarrett* Garrett);
+    virtual void Exit(AGarrett* Garrett);
 };
 
 struct Struct_10B4BEC0_Vec
@@ -81,8 +81,8 @@ void Class_10E7E778::FUN_10b4bec0(Struct_10B4BEC0* A)
     Virtual4();
 }
 
-// FUNCTION: 0x10B4C060 ?FUN_10b4c060@Class_10E81548@@UAEXPAVAGarrett@@@Z
-void Class_10E81548::FUN_10b4c060(AGarrett* Garrett)
+// FUNCTION: 0x10B4C060 ?Exit@GState@@UAEXPAVAGarrett@@@Z
+void GState::Exit(AGarrett* Garrett)
 {
     ReleaseArm(Garrett);
     ClearVelocity(Garrett);

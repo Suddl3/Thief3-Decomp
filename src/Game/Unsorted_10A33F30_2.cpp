@@ -1,7 +1,7 @@
 // Game/Unsorted_10A33F30_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10A34420_Unknown18.h"
-#include "Game/Class_10A345C0.h"
+#include "Game/cInt64HashTable.h"
 
 extern "C" void* memcpy(void* Dest, const void* Src, unsigned int Size);
 
@@ -20,8 +20,8 @@ public:
     Class_10A345C0_Node* Next;
 };
 
-// FUNCTION: 0x10A34420 ?Insert@Class_10A345C0@@QAEIPA_JPAH@Z
-unsigned int Class_10A345C0::Insert(__int64* Key, int* Value)
+// FUNCTION: 0x10A34420 ?Insert@cInt64HashTable@@QAEIPA_JPAH@Z
+unsigned int cInt64HashTable::Insert(__int64* Key, int* Value)
 {
     if (!Unknown10 && m_Collisions > m_Size * 0.2)
         Rehash(m_Size * 2);

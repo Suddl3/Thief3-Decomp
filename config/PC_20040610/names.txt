@@ -4681,3 +4681,42 @@ field Class_10C01F50::Unknown00 m_Count Clear and Free set it to zero alongside 
 field Class_10C01CE0::Unknown00 m_Count RemoveAll loops while it is positive and RemoveEntry compares it before and after the child call
 field Class_10C01CE0::Unknown08 m_Child RemoveEntry reads it as the entry's child pointer and tests whether it is set
 field Class_10B88A80::Unknown18 m_Hasher Insert gets the key's bytes from Unknown18.Virtual0 before HashBytes.
+class Class_10914D60 cDispatchTable Name-keyed table (m_Entries); Dispatch upper-cases the name and forwards the call to the matching entry.
+class Class_10E49D14 Archetype Xbox T3Opt vtable twin is class Archetype in Archetype.cpp (two slots).
+class Class_10A345C0 cInt64HashTable Hash table keyed by __int64 with int values; Insert and InsertOrAssign index m_Buckets.
+class Class_10A32370 cRefArray Append AddRefs (Virtual1) the new element and releases (Virtual2) the replaced one.
+class Class_10A32270 cByteArray SetCount memsets newly grown bytes to zero; m_Data is a raw void buffer with Clear.
+class Class_10951A40 cFilteredList m_Items and m_Count hold objects; SetFilter stores the filter, RemoveMatching deletes the matching ones.
+class Class_1091E940 cCamera SetCurrentCamera takes it and calls SetViewport; it holds the projection matrix, viewport and half size.
+class Class_10919B90 cTextRenderer MeasureText and DrawText take a text struct; DrawText also takes position, color, scale and flags.
+class Class_10E81548 GState Xbox string 'GState: anim controller was never set.' is in its FUN_10b3af60 (T3Opt pair).
+class Class_10E7ED00 cGarrettLockPickController Derives cLockPickController; its exit releases Garrett's arm and destroys the lock-pick window.
+function 0x10ACC790 SetCount Free calls it with 0 before releasing Data; CopyFrom calls it with Other.Count before copying.
+function 0x10B3B0B0 StopBody Zeroes Body->Unknown20 and Unknown2C, then calls Virtual18(6, 1, 0); called by eight functions.
+function 0x10B3D1B0 Init Calls Class_10E7E4E0::FUN_10b3acb0, sets Unknown00 from DAT_10e7e730, returns this; called by FUN_10b3d510.
+function 0x10B4A120 Enter Vtable slot 2: resets timer Unknown14 to -1, stores Unknown10, calls FUN_10b3b0b0 and ForceBody.
+function 0x10B4A180 Update Vtable slot 7: while the timer runs, subtracts X->Unknown454 from Unknown14; returns 1, 8 or Virtual4().
+function 0x10951540 MatchesFilter RemoveMatching deletes each item for which this, given &m_Filter, returns true.
+function 0x10953730 GetWorldMatrix ApplyWorldMatrix passes it the instance and uploads the matrix it returns as the world transform.
+function 0x10926020 SetCount Clear calls it with 0 and CopyFrom with Other.m_Count before copying the elements.
+function 0x1091AF10 SetCount Free calls it with 0 and CopyFrom with Other.Count before copying the items.
+function 0x10919B90 MeasureChars MeasureText passes it the text's characters and length and returns the float width.
+function 0x10919D30 DrawChars DrawText passes it the target, characters, length, position, color, scale and flags; returns its result.
+function 0x10B3AF60 ApplyAnimMotion Reads the anim controller's motion vector and stores it in the result struct; false when blocked.
+function 0x10B4BB60 Update Vtable slot 1: calls ApplyAnimMotion, then Virtual4.
+function 0x10B4BF20 Enter Vtable slot 2: sets the anim type, forces body or arms, plays Garrett's entry anim.
+function 0x10B4C060 Exit Vtable slot 3: releases the arm, clears velocity, restores the physics height flag.
+function 0x10B3F000 Exit Vtable slot 3: ends lock-pick mode, releasing the arm and destroying the lock-pick window.
+function 0x10B3E260 ResetPickState Zeroes four ints, stores two input values in floats, sets a flag; called from three functions.
+function 0x10B4F430 Enter Vtable slot 2: plays the crouch or stand animation by isCrouching, forces body, clears a handle.
+function 0x10B4F490 Exit Vtable slot 3: releases the arm, then runs FUN_10b3adc0, as Class_10E7ED00's exit does.
+field Class_10E7E730::Unknown14 m_Timer Set to -1 in FUN_10b4a120, set to 0.3 in FUN_10b4a180 on a flag change, counted down by X->Unknown454.
+field Class_10E495FC::Unknown08 m_Map Constructor calls Rehash(8) on a Class_10915D50 map, keyed by cString with int values.
+field Class_10E495F8::Unknown0C m_Map Constructor calls Rehash(0x40) on a Class_10914D80 map: cString keys, int values, Insert and Remove.
+field Class_10E4938C::Unknown10 m_Name Constructor copies its cString argument; the caller FUN_1090f400 names its cString parameter Name.
+field Class_10C4EDA0::Unknown04 m_Capacity Free releases m_Items only while Unknown04 is nonzero, and zeroes Unknown04 with m_Items.
+field Class_10C49100::Unknown18 m_KeyTraits Insert gets the key's bytes from Unknown18.Virtual0 before HashBytes; Class_10C48320 names this field m_KeyTraits.
+field Class_10C48260::Unknown18 m_KeyTraits Insert gets the key's bytes from Unknown18.Virtual0 before HashBytes; Class_10C48320 names this field m_KeyTraits.
+field cCamera::Unknown198 m_ProjectionScaleX Set to half width times projection matrix [0][0] in both SetProjection and SetViewport.
+field cCamera::Unknown19C m_ProjectionScaleY Set to negated half height times projection matrix [1][1] in both SetProjection and SetViewport.
+field Class_1091B3F0::Unknown04 m_Capacity Free frees Items only while it is set, then resets it to 0.

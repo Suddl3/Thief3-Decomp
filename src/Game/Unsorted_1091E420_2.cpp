@@ -15,9 +15,9 @@ void __stdcall FUN_10d68fc9(D3DXMATRIX* Out, float A, float B, float C, int D);
 
 extern IDirect3DDevice8* GDirect3DDevice8;
 
-// Class_1091E940 as include/Game/Class_1091E940.h declares it, flat: its base
+// cCamera as include/Game/cCamera.h declares it, flat: its base
 // class is 0x68 bytes or more, and this function's fields start at 0x04.
-class Class_1091E940
+class cCamera
 {
 public:
     void SetProjection(float A, bool B);
@@ -43,12 +43,12 @@ public:
     float m_ViewportHeight;
     float m_HalfWidth;
     float m_HalfHeight;
-    float Unknown198;
-    float Unknown19C;
+    float m_ProjectionScaleX;
+    float m_ProjectionScaleY;
 };
 
-// FUNCTION: 0x1091E940 ?SetProjection@Class_1091E940@@QAEXM_N@Z
-void Class_1091E940::SetProjection(float A, bool B)
+// FUNCTION: 0x1091E940 ?SetProjection@cCamera@@QAEXM_N@Z
+void cCamera::SetProjection(float A, bool B)
 {
     Unknown17C = A;
     m_ViewportWidth = (float)Unknown16C;
@@ -61,8 +61,8 @@ void Class_1091E940::SetProjection(float A, bool B)
     float H = m_ViewportHeight * 0.5f;
     Unknown0A4 = m_Projection;
     m_HalfHeight = H;
-    Unknown198 = W * m_Projection.m[0][0];
-    Unknown19C = -(H * m_Projection.m[1][1]);
+    m_ProjectionScaleX = W * m_Projection.m[0][0];
+    m_ProjectionScaleY = -(H * m_Projection.m[1][1]);
     if (B)
     {
         FUN_1091e690();

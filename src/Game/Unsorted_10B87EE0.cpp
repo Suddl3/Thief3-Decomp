@@ -10,7 +10,7 @@ struct Struct_10B87F00
 // FUNCTION: 0x10B87F00 ?CopyFrom@Class_10ACCFB0@@QAEXABV1@@Z
 void Class_10ACCFB0::CopyFrom(const Class_10ACCFB0& Other)
 {
-    FUN_10acc790(Other.Count);
+    SetCount(Other.Count);
     for (int i = 0; i < Count; i++)
         Data[i] = Other.Data[i];
 }

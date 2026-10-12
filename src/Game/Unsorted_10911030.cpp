@@ -1,7 +1,7 @@
 // Game/Unsorted_10911030.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Core/Core.h"
-#include "Game/Class_10914D60.h"
+#include "Game/cDispatchTable.h"
 #include "Game/Class_10914D70.h"
 #include "Game/Class_10919B80.h"
 #include "Game/Class_10919CA0.h"
@@ -40,8 +40,8 @@ struct Class_1091E400 {
     void* FUN_1091e400();
 };
 
-// FUNCTION: 0x10914D60 ?GetField08@Class_10914D60@@QAEEXZ
-unsigned char Class_10914D60::GetField08()
+// FUNCTION: 0x10914D60 ?GetField08@cDispatchTable@@QAEEXZ
+unsigned char cDispatchTable::GetField08()
 {
     return Field08;
 }

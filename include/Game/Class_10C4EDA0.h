@@ -9,7 +9,7 @@ struct Struct_10A55380;
 class Class_10C4EDA0
 {
 public:
-    Class_10C4EDA0() : m_Count(0), Unknown04(0), m_Items(0) {}
+    Class_10C4EDA0() : m_Count(0), m_Capacity(0), m_Items(0) {}
     ~Class_10C4EDA0();
 
     void Resize(int Count);
@@ -17,7 +17,7 @@ public:
     void Free();
 
     int m_Count;
-    int Unknown04;
+    int m_Capacity;
     Item_10A55380* m_Items;
     char Unknown0C[8];
     int Unknown14;

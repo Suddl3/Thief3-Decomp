@@ -31,14 +31,14 @@ public:
     cString Unknown04;
     char Unknown08;
     bool Unknown09;
-    Class_10914D80 Unknown0C;
+    Class_10914D80 m_Map;
 };
 
 // FUNCTION: 0x10915860 ??0Class_10E495F8@@QAE@XZ
 Class_10E495F8::Class_10E495F8()
     : Unknown09(false)
 {
-    Unknown0C.Rehash(0x40);
+    m_Map.Rehash(0x40);
 }
 
 // FUNCTION: 0x10915AE0 ??_GClass_10E495F8@@UAEPAXI@Z

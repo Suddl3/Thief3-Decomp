@@ -28,7 +28,7 @@ public:
 // FUNCTION: 0x10931F10 ?CopyFrom@Class_109262B0@@QAEXABV1@@Z
 void Class_109262B0::CopyFrom(const Class_109262B0& Other)
 {
-    FUN_10926020(Other.m_Count);
+    SetCount(Other.m_Count);
     for (int i = 0; i < m_Count; i++)
     {
         Class_10931F10_Unknown08* Src = (Class_10931F10_Unknown08*)Other.m_Data + i;

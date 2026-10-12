@@ -13,7 +13,7 @@ public:
     Class_10A34510_Node* Next;
 };
 
-class Class_10A345C0
+class cInt64HashTable
 {
 public:
     unsigned int Insert(__int64* Key, int* Value);
@@ -28,8 +28,8 @@ public:
     Class_10A34510_Field18 m_KeyOps;
 };
 
-// FUNCTION: 0x10A34510 ?InsertOrAssign@Class_10A345C0@@QAEIPA_JPAH@Z
-unsigned int Class_10A345C0::InsertOrAssign(__int64* Key, int* Value)
+// FUNCTION: 0x10A34510 ?InsertOrAssign@cInt64HashTable@@QAEIPA_JPAH@Z
+unsigned int cInt64HashTable::InsertOrAssign(__int64* Key, int* Value)
 {
     unsigned int Index;
     {

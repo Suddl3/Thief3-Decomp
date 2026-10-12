@@ -27,13 +27,13 @@ public:
     virtual ~Class_10E495FC();
 
     cString Unknown04;
-    Class_10915D50 Unknown08;
+    Class_10915D50 m_Map;
 };
 
 // FUNCTION: 0x10916CD0 ??0Class_10E495FC@@QAE@XZ
 Class_10E495FC::Class_10E495FC()
 {
-    Unknown08.Rehash(8);
+    m_Map.Rehash(8);
 }
 
 // FUNCTION: 0x10917500 ??_GClass_10E495FC@@UAEPAXI@Z

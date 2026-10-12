@@ -8,7 +8,7 @@ struct Struct_10B87F00;
 class Class_10ACCFB0
 {
 public:
-    void FUN_10acc790(int Count);
+    void SetCount(int Count);
     void Free();
     void CopyFrom(const Class_10ACCFB0& Other);
 

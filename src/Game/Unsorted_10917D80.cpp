@@ -43,13 +43,13 @@ public:
     virtual int __stdcall Virtual28(IDirect3DSurface8* Source, const void* SourceRects, unsigned Count, IDirect3DSurface8* Dest, const void* DestPoints);
 };
 
-class Class_1091E940;
+class cCamera;
 
 class Class_10924100;
 
 void UpdateVideos(float Value);
 
-extern Class_1091E940* DAT_10f2c738;
+extern cCamera* DAT_10f2c738;
 
 extern Class_10924100* DAT_10f2c740;
 

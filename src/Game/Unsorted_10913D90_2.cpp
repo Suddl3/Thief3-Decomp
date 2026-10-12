@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/cString.h"
 #include "Game/Class_109140C0.h"
-#include "Game/Class_10914D60.h"
+#include "Game/cDispatchTable.h"
 
 // FUNCTION: 0x109140C0 ?DispatchToHandlers@Class_109140C0@@QAEXHAAVcString@@H@Z
 void Class_109140C0::DispatchToHandlers(int A, cString& B, int C)

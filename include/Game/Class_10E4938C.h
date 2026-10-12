@@ -14,7 +14,7 @@ public:
     virtual ~Class_10E4938C();
 
     cIntArray Unknown04;
-    cString Unknown10;
+    cString m_Name;
 };
 
 #endif // GAME_CLASS_10E4938C_H

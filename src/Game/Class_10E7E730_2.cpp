@@ -24,38 +24,38 @@ float GetMoveSpeedMultiplier();
 class Class_10E7E730
 {
 public:
-    virtual void FUN_10b4a120(AGarrett* Garrett);
+    virtual void Enter(AGarrett* Garrett);
     virtual void Virtual1();
     virtual void Virtual2();
     virtual void Virtual3();
     virtual int Virtual4();
     virtual void Virtual5();
     virtual void Virtual6();
-    virtual int FUN_10b4a180(Struct_10B193E0* X);
+    virtual int Update(Struct_10B193E0* X);
     virtual void Virtual8();
     virtual void Virtual9();
     virtual void Virtual10();
     virtual void Virtual11();
     virtual void FUN_10b4a260(Struct_10B4A260* Out);
 
-    void FUN_10b3b0b0(AGarrett* Garrett);
+    void StopBody(AGarrett* Garrett);
     bool FUN_10b3b540(Struct_10B193E0* A, int B, int C);
 
     char Pad04[0xc];
     int Unknown10;
-    float Unknown14;
+    float m_Timer;
     char Pad18[0x24];
 };
 
-// FUNCTION: 0x10B4A180 ?FUN_10b4a180@Class_10E7E730@@UAEHPAUStruct_10B193E0@@@Z
-int Class_10E7E730::FUN_10b4a180(Struct_10B193E0* X)
+// FUNCTION: 0x10B4A180 ?Update@Class_10E7E730@@UAEHPAUStruct_10B193E0@@@Z
+int Class_10E7E730::Update(Struct_10B193E0* X)
 {
     ((Class_10B193E0*)FUN_10b190e0())->FUN_10b193e0(X);
-    if (Unknown14 != -1.0f)
+    if (m_Timer != -1.0f)
     {
-        if (Unknown14 < DAT_10eafbdc)
+        if (m_Timer < DAT_10eafbdc)
             return 8;
-        Unknown14 = Unknown14 - X->Unknown454;
+        m_Timer = m_Timer - X->Unknown454;
         return Virtual4();
     }
     if (FUN_10b3b540(X, 0, 0))
@@ -67,6 +67,6 @@ int Class_10E7E730::FUN_10b4a180(Struct_10B193E0* X)
     }
     if ((((Class_10AA9DC0*)FUN_10b190e0())->FUN_10aa9dc0() == 0 && Unknown10 == 1)
         || ((int)((Class_10AA9DC0*)FUN_10b190e0())->FUN_10aa9dc0() == 1 && Unknown10 == 0))
-        Unknown14 = 0.3f;
+        m_Timer = 0.3f;
     return Virtual4();
 }
