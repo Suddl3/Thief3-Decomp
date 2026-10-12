@@ -7,7 +7,7 @@ class Class_1091CCB0
 {
 public:
     void FUN_1091c8d0(int A);
-    void FUN_1091ccb0();
+    void Free();
 
     int Unknown00;
     int Unknown04;

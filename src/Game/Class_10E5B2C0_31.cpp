@@ -1,7 +1,7 @@
 // Game/Class_10E5B2C0_31.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-class Class_109081E0;
+class cString;
 
 class Class_10B45AD0;
 
@@ -22,7 +22,7 @@ public:
 
     void FUN_109e3d60(void* Window);
     void FUN_109e8ae0(void* Window);
-    int FindWindowByName(const Class_109081E0& Name);
+    int FindWindowByName(const cString& Name);
     void FUN_109e6b20(int A);
     void FUN_109e8930(void* Window);
     void OpenTitleLoadWindow();

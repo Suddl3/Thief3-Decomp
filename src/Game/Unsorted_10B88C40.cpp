@@ -7,7 +7,7 @@
 #include "Game/ElevatorController.h"
 #include "Game/Class_10C49740.h"
 #include "Game/Class_10905A90_Member.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_1091ABB0.h"
 #include "Game/Class_10B89070.h"
 
@@ -46,7 +46,7 @@ Entry_10C32C30* Class_10B89070::FUN_10b89070(Class_1091ABB0* Arg)
 {
     Entry_10C32C30* Found = 0;
     {
-        Class_109081E0 Name = Arg->FUN_1091abb0();
+        cString Name = Arg->FUN_1091abb0();
         if (Name.Unknown00)
         {
             _strlwr(Name.Unknown00);

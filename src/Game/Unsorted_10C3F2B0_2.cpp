@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include <string.h>
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10905A90_Member.h"
 
 extern const char* DAT_10f06a9c[];
@@ -16,8 +16,8 @@ struct Struct_10C3F6E0
     char Text[4];
 };
 
-// FUNCTION: 0x10C3F6E0 ?FUN_10c3f6e0@@YAXABVClass_109081E0@@@Z
-void FUN_10c3f6e0(const Class_109081E0& Name)
+// FUNCTION: 0x10C3F6E0 ?FUN_10c3f6e0@@YAXABVcString@@@Z
+void FUN_10c3f6e0(const cString& Name)
 {
     int Best = 0;
     for (int i = 0; i < 6; i++)

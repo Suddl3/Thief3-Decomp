@@ -8,13 +8,13 @@
 class Class_109516C0
 {
 public:
-    Class_109516C0_Entry* FUN_109516c0(int Index);
+    Class_109516C0_Entry* GetEntry(int Index);
 
     char Unknown00[0x40];
-    int Unknown40;
+    int m_EntryCount;
     int Unknown44;
-    Class_109516C0_Entry** Unknown48;
-    Class_109516C0_Entry Unknown4C;
+    Class_109516C0_Entry** m_Entries;
+    Class_109516C0_Entry m_DefaultEntry;
 };
 
 #endif // GAME_CLASS_109516C0_H

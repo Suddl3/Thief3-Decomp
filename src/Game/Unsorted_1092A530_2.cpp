@@ -1,7 +1,7 @@
 // Game/Unsorted_1092A530_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 class Class_1092AC20_Unknown30
 {
@@ -14,9 +14,9 @@ public:
 class Class_1090B040
 {
 public:
-    Class_109081E0 FUN_1090b040(int A);
+    cString FUN_1090b040(int A);
 
-    Class_109081E0 Unknown00;
+    cString Unknown00;
     char Pad04[0x14];
     int Unknown18;
     int Unknown1C;

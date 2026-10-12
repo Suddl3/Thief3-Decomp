@@ -8,10 +8,10 @@ struct Struct_1094D9F0;
 class Class_1094D9F0
 {
 public:
-    void FUN_1094d9f0(int Stage);
+    void SetStageTexture(int Stage);
 
     char Unknown00[0x14];
-    Struct_1094D9F0* Unknown14[8];
+    Struct_1094D9F0* m_Stages[8];
 };
 
 #endif // GAME_CLASS_1094D9F0_H

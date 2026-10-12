@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Core/Core.h"
 #include "Game/Class_10905A90_Member.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 void FUN_10d3d360(void* A, int* B);
 
@@ -68,7 +68,7 @@ bool cTriggerByteEnumParam::Read(int A, void* Reader)
         return true;
     }
     ReadInt(Reader, &m_Index);
-    Class_109081E0 Text;
+    cString Text;
     ReadString(Reader, (int*)&Text);
     m_Name = FName(Text.Unknown00 ? Text.Unknown00 : DAT_10e47660, FNAME_Add);
     return true;

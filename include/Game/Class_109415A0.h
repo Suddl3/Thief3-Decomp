@@ -8,14 +8,14 @@ class Class_109416F0;
 class Class_109415A0
 {
 public:
-    void FUN_109415a0();
+    void Reset();
     bool FUN_10941890(int A, int B);
 
     bool Unknown00;
     char Unknown01[3];
-    int Unknown04;
+    int m_Count;
     char Unknown08[4];
-    Class_109416F0* Unknown0C;
+    Class_109416F0* m_Items;
     char Unknown10[8];
     int Unknown18;
     int Unknown1C;

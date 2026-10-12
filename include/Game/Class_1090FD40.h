@@ -5,19 +5,19 @@
 
 #include "Game/Class_10905A90_Member.h"
 
-class Class_109081E0;
+class cString;
 
 Class_10905A90_Member* GetAllocator();
 
 class Class_1090FD40
 {
 public:
-    int Add(const Class_109081E0& Item);
+    int Add(const cString& Item);
     void FUN_1090f2c0(int Count);
     void FUN_1090fd00();
     void FUN_10a37f80(int A, int B, int C);
     void RemoveAt(int Index);
-    void Insert(int Index, const Class_109081E0& Value);
+    void Insert(int Index, const cString& Value);
     void FUN_10a5b5b0(int A, int B);
     void RemoveUnordered(int Index);
     void Empty()
@@ -33,7 +33,7 @@ public:
 
     int m_Count;
     int Unknown04;
-    Class_109081E0* m_Items;
+    cString* m_Items;
 };
 
 #endif // GAME_CLASS_1090FD40_H

@@ -1,10 +1,10 @@
 // Game/cConversation_7.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10905A90_Member.h"
 
-class Class_109081E0;
+class cString;
 
 Class_10905A90_Member* GetAllocator();
 
@@ -12,13 +12,13 @@ Class_10905A90_Member* GetAllocator();
 class Class_1090FD40
 {
 public:
-    int Add(const Class_109081E0& Item);
-    int FUN_1090f160(const Class_109081E0& Item);
+    int Add(const cString& Item);
+    int FUN_1090f160(const cString& Item);
     void FUN_1090f2c0(int Count);
     void FUN_1090fd00();
     void FUN_10a37f80(int A, int B, int C);
     void RemoveAt(int Index);
-    void Insert(int Index, const Class_109081E0& Value);
+    void Insert(int Index, const cString& Value);
     void FUN_10a5b5b0(int A, int B);
     void RemoveUnordered(int Index);
     void Empty()
@@ -34,7 +34,7 @@ public:
 
     int m_Count;
     int Unknown04;
-    Class_109081E0* m_Items;
+    cString* m_Items;
 };
 
 // The pointee of cConversation's Unknown0C: slot 1 says whether to skip the item.
@@ -45,9 +45,9 @@ public:
     virtual int Virtual1();
 
     char Unknown04[0xC];
-    Class_109081E0 Unknown10;
+    cString Unknown10;
     char Unknown14[0x8];
-    Class_109081E0 Unknown1C;
+    cString Unknown1C;
 };
 
 class cConversation

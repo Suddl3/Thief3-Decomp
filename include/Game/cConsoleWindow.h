@@ -3,7 +3,7 @@
 #ifndef GAME_CCONSOLEWINDOW_H
 #define GAME_CCONSOLEWINDOW_H
 
-class Class_109081E0;
+class cString;
 
 class cConsoleWindow
 {
@@ -75,7 +75,7 @@ public:
     int Unknown1D8;
     int Unknown1DC;
     char Unknown1E0[0x4];
-    Class_109081E0* Unknown1E4;
+    cString* Unknown1E4;
 };
 
 #endif // GAME_CCONSOLEWINDOW_H

@@ -3,14 +3,14 @@
 #ifndef GAME_CLASS_10A34C10_NODE_H
 #define GAME_CLASS_10A34C10_NODE_H
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 class Class_10A34C10_Unknown10;
 
 struct Class_10A34C10_Node
 {
 public:
-    Class_109081E0 Key;
+    cString Key;
     char Unknown04[0xC];
     union
     {

@@ -6,7 +6,7 @@
 class Class_10919B80
 {
 public:
-    void FUN_10919b80(int p1);
+    void SetField28(int p1);
 
     char Unknown00[0x28];
     int Field28;

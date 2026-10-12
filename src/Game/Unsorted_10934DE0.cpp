@@ -20,8 +20,8 @@ bool Class_10E49F90::FUN_10934fe0(Struct_10934FE0* P, int B)
     return true;
 }
 
-// FUNCTION: 0x10936870 ?FUN_10936870@Class_10936870@@QAEXI@Z
-void Class_10936870::FUN_10936870(unsigned int Flags)
+// FUNCTION: 0x10936870 ?AddFlags@Class_10936870@@QAEXI@Z
+void Class_10936870::AddFlags(unsigned int Flags)
 {
-    Unknown6b4 |= Flags;
+    m_Flags |= Flags;
 }

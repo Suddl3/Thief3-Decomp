@@ -3,12 +3,12 @@
 #ifndef GAME_CLASS_1090C880_H
 #define GAME_CLASS_1090C880_H
 
-class Class_109081E0;
+class cString;
 
 class Class_1090C880
 {
 public:
-    Class_109081E0 FUN_1090c880(int A);
+    cString FUN_1090c880(int A);
 
     char Unknown00[0xC];
 };

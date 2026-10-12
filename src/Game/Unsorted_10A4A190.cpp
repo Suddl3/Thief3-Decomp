@@ -1,6 +1,6 @@
 // Game/Unsorted_10A4A190.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10A492B0.h"
 #include "Game/Class_10A492B0_Field18.h"
 #include "Game/Class_10A492B0_Node.h"
@@ -33,7 +33,7 @@ void Class_10A492B0::Rehash(int Size)
         {
             Insert(Node->Key, Node->Value);
             Class_10A492B0_Node* Next = Node->Next;
-            Node->Key.~Class_109081E0();
+            Node->Key.~cString();
             ::operator delete(Node);
             Node = Next;
         }

@@ -34,24 +34,24 @@ extern Struct_10929600** DAT_10f31adc;
 
 struct Struct_10928B50;
 
-void FUN_10928b50(Struct_10928B50* Video);
+void AdvanceVideo(Struct_10928B50* Video);
 
 extern int DAT_10f31ac8;
 
 extern Struct_10928B50** DAT_10f31ad0;
 
-// FUNCTION: 0x109295C0 ?FUN_109295c0@@YAXM@Z
-void FUN_109295c0(float Value)
+// FUNCTION: 0x109295C0 ?UpdateVideos@@YAXM@Z
+void UpdateVideos(float Value)
 {
     if (Value != 0.0f)
     {
         for (int i = 0; i < DAT_10f31ac8; i++)
-            FUN_10928b50(DAT_10f31ad0[i]);
+            AdvanceVideo(DAT_10f31ad0[i]);
     }
 }
 
-// FUNCTION: 0x10929600 ?FUN_10929600@@YAXXZ
-void FUN_10929600()
+// FUNCTION: 0x10929600 ?ReleaseTextures@@YAXXZ
+void ReleaseTextures()
 {
     for (int i = 0; i < DAT_10f31ad4; i++)
     {
@@ -63,8 +63,8 @@ void FUN_10929600()
     }
 }
 
-// FUNCTION: 0x10929D60 ?FUN_10929d60@Class_10E49B48@@UAEXHHHPAUStruct_10929D60@@@Z
-void Class_10E49B48::FUN_10929d60(int A, int B, int C, Struct_10929D60* Out)
+// FUNCTION: 0x10929D60 ?GetVector@Class_10E49B48@@UAEXHHHPAUStruct_10929D60@@@Z
+void Class_10E49B48::GetVector(int A, int B, int C, Struct_10929D60* Out)
 {
     DWORD Packed;
     Virtual0(A, B, C, &Packed);

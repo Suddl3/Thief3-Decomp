@@ -8,7 +8,7 @@ class Class_1092D960_Member;
 class Class_1092D960
 {
 public:
-    void FUN_1092d960();
+    void Release();
 
     Class_1092D960_Member* Unknown00;
     Class_1092D960_Member* Unknown04;

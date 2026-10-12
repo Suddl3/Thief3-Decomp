@@ -13,7 +13,7 @@ public:
     virtual unsigned int FUN_10934260() = 0;
     virtual void Virtual5();
     virtual void Virtual6() = 0;
-    virtual int FUN_10934a20() = 0;
+    virtual int UnlockVertices() = 0;
     virtual int FUN_109342f0(int A) = 0;
     virtual void Virtual9() = 0;
     virtual ~Class_10E49F0C()

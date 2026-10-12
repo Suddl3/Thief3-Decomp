@@ -3,7 +3,7 @@
 #ifndef GAME_CTRIGGERBOOLPROPERTYPARAM_H
 #define GAME_CTRIGGERBOOLPROPERTYPARAM_H
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10E6BF84.h"
 
 class cTriggerBoolPropertyParam : public Class_10E6BF84
@@ -17,7 +17,7 @@ public:
     virtual void Virtual5();
     virtual void FUN_10a8bf80();
     virtual int IsLoaded();
-    virtual Class_109081E0 FUN_10a8bbc0();
+    virtual cString FUN_10a8bbc0();
 
     cTriggerBoolPropertyParam();
 
@@ -25,7 +25,7 @@ public:
 
     int Unknown04;
     int Unknown08;
-    Class_109081E0 Unknown0C;
+    cString Unknown0C;
 };
 
 #endif // GAME_CTRIGGERBOOLPROPERTYPARAM_H

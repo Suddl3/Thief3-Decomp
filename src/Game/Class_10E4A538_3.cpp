@@ -1,7 +1,7 @@
 // Game/Class_10E4A538_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 struct Struct_1093FFE0;
 
@@ -20,9 +20,9 @@ public:
     void BuildTextureMatrix(int Width, int Height, Struct_1093FFE0* Out);
 
     bool Unknown04;
-    Class_109081E0 Unknown08[47];
+    cString Unknown08[47];
     int UnknownC4[47];
-    Class_109081E0 Unknown180[47];
+    cString Unknown180[47];
     int Unknown23C[47];
     int Unknown2F8;
     int Unknown2FC;

@@ -10,7 +10,7 @@ class Class_1095A7C0;
 class Class_109480B0
 {
 public:
-    void FUN_109480b0();
+    void Free();
 
     char Unknown00[0x4c];
     Class_1095A7C0* Unknown4C;

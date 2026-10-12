@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_10F352D8_H
 #define GAME_CLASS_10F352D8_H
 
-class Class_109081E0;
+class cString;
 class Class_10F352D8_Result;
 
 class Class_10F352D8
@@ -24,7 +24,7 @@ public:
     virtual void Virtual12();
     virtual void Virtual13();
     virtual void Virtual14();
-    virtual void Virtual15(const Class_109081E0& Ref);
+    virtual void Virtual15(const cString& Ref);
     virtual void Virtual16();
     virtual void Virtual17();
     virtual void Virtual18();

@@ -38,21 +38,21 @@ void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D
 
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
-// FUNCTION: 0x10914530 ?FUN_10914530@Class_10914530@@QAEXHHHH@Z
-void Class_10914530::FUN_10914530(int A, int B, int C, int D)
+// FUNCTION: 0x10914530 ?AddEntry@Class_10914530@@QAEXHHHH@Z
+void Class_10914530::AddEntry(int A, int B, int C, int D)
 {
     GetAllocator()->Virtual8(0, 0);
     Class_10E495F8* Obj = new(0, 0, 0, 0, 0) Class_10E495F8;
     GetAllocator()->Virtual9();
-    int Index = Unknown04.Count;
-    cIntArray* List = &Unknown04;
+    int Index = m_Entries.Count;
+    cIntArray* List = &m_Entries;
     List->SetCount(Index + 1);
     List->Data[Index] = (int)Obj;
     Obj->FUN_10915570(A, B, C, D);
 }
 
-// FUNCTION: 0x109149C0 ?FUN_109149c0@@YAPBDH@Z
-const char* FUN_109149c0(int Error)
+// FUNCTION: 0x109149C0 ?GetMapiErrorString@@YAPBDH@Z
+const char* GetMapiErrorString(int Error)
 {
     switch (Error)
     {

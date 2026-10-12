@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10E98C8C.h"
 #include "Game/Class_10905A90_Member.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 class Class_10C00BA0_Unknown08_Unknown00
 {
@@ -34,12 +34,12 @@ class Class_10C00BA0
 public:
     ~Class_10C00BA0();
 
-    Class_109081E0 Unknown00;
+    cString Unknown00;
     char Pad04[0x4];
     Class_10C56E40 Unknown08;
     Class_10E98C8C* Unknown10;
     char Pad14[0x8];
-    Class_109081E0 Unknown1C;
+    cString Unknown1C;
 };
 
 // FUNCTION: 0x10C00BA0 ??1Class_10C00BA0@@QAE@XZ

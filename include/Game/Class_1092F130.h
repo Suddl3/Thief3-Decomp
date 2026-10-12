@@ -10,9 +10,9 @@ public:
     void FUN_1092e9c0();
 
     char Unknown00[0xC];
-    int Unknown0C;
+    int m_ChildCount;
     char Unknown10[4];
-    Class_1092F130** Unknown14;
+    Class_1092F130** m_Children;
 };
 
 #endif // GAME_CLASS_1092F130_H

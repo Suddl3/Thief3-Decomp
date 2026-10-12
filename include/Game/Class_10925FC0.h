@@ -8,10 +8,10 @@ class cRefPtr;
 class Class_10925FC0
 {
 public:
-    cRefPtr FUN_10925fc0(int Index);
+    cRefPtr GetRef(int Index);
 
     char Unknown00[0xcc];
-    cRefPtr* UnknownCC;
+    cRefPtr* m_Refs;
 };
 
 #endif // GAME_CLASS_10925FC0_H

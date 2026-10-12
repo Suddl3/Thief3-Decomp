@@ -10,7 +10,7 @@
 #include "Game/Class_10941C40.h"
 #include "Game/Class_10951730.h"
 #include "Game/IDirect3DDevice8.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_1093EDB0.h"
 #include "Game/Struct_10940180.h"
 
@@ -35,8 +35,8 @@ public:
     int Unknown0C;
 };
 
-// FUNCTION: 0x1093EDB0 ?FUN_1093edb0@Class_1093EDB0@@QAE_NXZ
-bool Class_1093EDB0::FUN_1093edb0()
+// FUNCTION: 0x1093EDB0 ?DeleteShaders@Class_1093EDB0@@QAE_NXZ
+bool Class_1093EDB0::DeleteShaders()
 {
     int Count = Unknown00;
     for (int i = 0; i < Count; i++)
@@ -53,8 +53,8 @@ bool Class_1093EDB0::FUN_1093edb0()
     return true;
 }
 
-// FUNCTION: 0x1093EE10 ?FUN_1093ee10@@YAXPAVClass_109081E0@@PBDZZ
-void FUN_1093ee10(Class_109081E0* Out, const char* Format, ...)
+// FUNCTION: 0x1093EE10 ?FormatString@@YAXPAVcString@@PBDZZ
+void FormatString(cString* Out, const char* Format, ...)
 {
     char Buffer[0x1000];
     if (Format)
@@ -100,10 +100,10 @@ void Class_10940180::Dispatch(Struct_10940180* P)
 // FUNCTION: 0x10941C40 ?FUN_10941c40@Class_10941C40@@QAEXXZ
 void Class_10941C40::FUN_10941c40()
 {
-    if (Unknown1C == 0)
+    if (m_Item == 0)
         FUN_10941b10(0);
-    int Value = Unknown10;
-    Class_109418E0* Item = Unknown1C;
+    int Value = m_Value;
+    Class_109418E0* Item = m_Item;
     Item->Unknown06 = 0;
     Item->Unknown38 = Value;
     Item->FUN_109418e0();

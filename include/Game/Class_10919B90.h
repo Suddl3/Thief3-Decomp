@@ -10,7 +10,7 @@ class Class_10919B90
 {
 public:
     float FUN_10919b90(const char* A, int B, int C);
-    float FUN_1091a610(const Struct_1091A610* A, int B);
+    float MeasureText(const Struct_1091A610* A, int B);
     bool FUN_10919d30(Class_10941C40* A, const char* Text, int Length, float* X, float* Y, unsigned long Color,
                       float ScaleX, float ScaleY, unsigned long Flags);
     bool DrawText(Class_10941C40* A, const Struct_1091A610* Text, float* X, float* Y, unsigned long Color,

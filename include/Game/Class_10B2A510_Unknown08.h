@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_10B2A510_UNKNOWN08_H
 #define GAME_CLASS_10B2A510_UNKNOWN08_H
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 class Class_10B2A510_Unknown08
 {
@@ -15,7 +15,7 @@ public:
         return *this;
     }
 
-    Class_109081E0 Unknown00;
+    cString Unknown00;
     int Unknown04;
 };
 

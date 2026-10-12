@@ -24,11 +24,11 @@ public:
     char* Unknown00;
 };
 
-// Copied from include/Game/Class_109081E0.h (its destructor kept).
-class Class_109081E0 : public Class_1090A780
+// Copied from include/Game/cString.h (its destructor kept).
+class cString : public Class_1090A780
 {
 public:
-    ~Class_109081E0()
+    ~cString()
     {
         if (Unknown00)
         {
@@ -37,13 +37,13 @@ public:
             Unknown00 = 0;
         }
     }
-    Class_109081E0(const char* In);
-    Class_109081E0(const Class_109081E0& Other);
-    Class_109081E0(const Class_1090A780& Other) : Class_1090A780(Other) {}
+    cString(const char* In);
+    cString(const cString& Other);
+    cString(const Class_1090A780& Other) : Class_1090A780(Other) {}
 
     void FUN_10907870(int Length, int Flag);
-    Class_109081E0& operator=(const Class_109081E0& Other);
-    Class_109081E0& FUN_1090a590(const char* In);
+    cString& operator=(const cString& Other);
+    cString& FUN_1090a590(const char* In);
     const char* operator*() const { return Unknown00 ? Unknown00 : DAT_10e47660; }
     bool IsEmpty() const
     {
@@ -72,7 +72,7 @@ public:
     virtual void Virtual14();
     virtual void Virtual15();
     virtual void Virtual16();
-    virtual char Virtual17(Class_109081E0* A, int B, int C);
+    virtual char Virtual17(cString* A, int B, int C);
 };
 
 Class_10C4CD50* FUN_10c4cd50();
@@ -151,7 +151,7 @@ public:
 // FUNCTION: 0x10C66790 ?FUN_10c66790@SoundSchema@@UAE_NH@Z
 bool SoundSchema::FUN_10c66790(int A)
 {
-    static Class_109081E0 NoiseType("+noisetype");
+    static cString NoiseType("+noisetype");
     Class_10C4CD50* Manager = FUN_10c4cd50();
     Class_10C66790_Result* Found = Manager->Virtual14();
     if (Found)

@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_10E495F8_H
 #define GAME_CLASS_10E495F8_H
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10914D80.h"
 
 class Class_10E495F8
@@ -15,7 +15,7 @@ public:
 
     void FUN_10915570(int A, int B, int C, int D);
 
-    Class_109081E0 Unknown04;
+    cString Unknown04;
     char Unknown08;
     bool Unknown09;
     char Pad0A[0x2];

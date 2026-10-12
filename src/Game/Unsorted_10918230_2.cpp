@@ -11,8 +11,8 @@ extern int DAT_10efef54;
 
 extern char DAT_10f2c724;
 
-// FUNCTION: 0x10918230 ?FUN_10918230@@YAXXZ
-void FUN_10918230()
+// FUNCTION: 0x10918230 ?ResetState@@YAXXZ
+void ResetState()
 {
     if (DAT_10f2c734)
         DAT_10f2c734->FUN_10925060();

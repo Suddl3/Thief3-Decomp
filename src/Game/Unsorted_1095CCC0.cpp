@@ -11,17 +11,17 @@ struct Struct_1095CCC0
     bool Unknown11;
 };
 
-// FUNCTION: 0x1095CCC0 ?FUN_1095ccc0@Class_1095CCC0@@QAEXPAUStruct_1095CCC0@@@Z
-void Class_1095CCC0::FUN_1095ccc0(Struct_1095CCC0* N)
+// FUNCTION: 0x1095CCC0 ?RotateLeft@Class_1095CCC0@@QAEXPAUStruct_1095CCC0@@@Z
+void Class_1095CCC0::RotateLeft(Struct_1095CCC0* N)
 {
     Struct_1095CCC0* P = N->Unknown08;
     N->Unknown08 = P->Unknown00;
     if (!P->Unknown00->Unknown11)
         P->Unknown00->Unknown04 = N;
     P->Unknown04 = N->Unknown04;
-    if (N == Unknown1C->Unknown04)
+    if (N == m_Head->Unknown04)
     {
-        Unknown1C->Unknown04 = P;
+        m_Head->Unknown04 = P;
         P->Unknown00 = N;
         N->Unknown04 = P;
         return;

@@ -6,12 +6,12 @@
 class Class_1094AED0
 {
 public:
-    bool FUN_1094aed0(int* A, int B);
+    bool ContainsAny(int* A, int B);
 
     char Unknown00[0x12C];
-    int Unknown12C;
+    int m_Count;
     char Unknown130[4];
-    int* Unknown134;
+    int* m_Items;
 };
 
 #endif // GAME_CLASS_1094AED0_H

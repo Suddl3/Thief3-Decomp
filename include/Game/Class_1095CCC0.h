@@ -8,10 +8,10 @@ struct Struct_1095CCC0;
 class Class_1095CCC0
 {
 public:
-    void FUN_1095ccc0(Struct_1095CCC0* N);
+    void RotateLeft(Struct_1095CCC0* N);
 
     char Unknown00[0x1C];
-    Struct_1095CCC0* Unknown1C;
+    Struct_1095CCC0* m_Head;
 };
 
 #endif // GAME_CLASS_1095CCC0_H

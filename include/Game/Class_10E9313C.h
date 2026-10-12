@@ -4,7 +4,7 @@
 #define GAME_CLASS_10E9313C_H
 
 #include "Core/Core.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10E97B00.h"
 
 class FArchive;
@@ -32,7 +32,7 @@ public:
     int Unknown2C;
     bool Unknown30;
     char Pad31[0x3];
-    Class_109081E0 Unknown34;
+    cString Unknown34;
     bool Unknown38;
     char Pad39[0x3];
 };

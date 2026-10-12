@@ -1,15 +1,15 @@
 // Game/cFMVWindow.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_109501A0.h"
+#include "Game/cBinkMovie.h"
 #include "Game/Class_10905A90_Member.h"
 
 Class_10905A90_Member* GetAllocator();
 
 // Ion Storm's string (0x109081E0): a char pointer to a block allocated 4 bytes before it.
-class Class_109081E0
+class cString
 {
 public:
-    ~Class_109081E0()
+    ~cString()
     {
         if (Unknown00)
         {
@@ -165,23 +165,23 @@ public:
     virtual void FUN_10a54d50();
 
     char Unknown04[0x114];
-    Class_109501A0* m_Stream;
-    Class_109081E0 m_MovieName;
+    cBinkMovie* m_Stream;
+    cString m_MovieName;
     bool Unknown120;
 };
 
 // FUNCTION: 0x10A54D50 ?FUN_10a54d50@cFMVWindow@@UAEXXZ
 void cFMVWindow::FUN_10a54d50()
 {
-    Class_109501A0* Stream = m_Stream;
+    cBinkMovie* Stream = m_Stream;
     if (Stream)
     {
-        Stream->FUN_109501a0();
+        Stream->Close();
         delete Stream;
         m_Stream = 0;
         Class_10E682E0 Local;
         DAT_10f46da0->Virtual5(0x77, -1, &Local, 0);
-        m_MovieName.~Class_109081E0();
+        m_MovieName.~cString();
         Unknown120 = false;
     }
 }

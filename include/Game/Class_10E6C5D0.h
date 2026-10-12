@@ -5,7 +5,7 @@
 
 #include "Game/Class_10E6BF84.h"
 
-class Class_109081E0;
+class cString;
 
 class Class_10E6C5D0 : public Class_10E6BF84
 {
@@ -13,12 +13,12 @@ public:
     virtual ~Class_10E6C5D0();
     virtual void Virtual1();
     virtual int FUN_10a8a510(int p1, Class_10E6C5D0* p2);
-    virtual Class_109081E0 FUN_10a8a670();
+    virtual cString FUN_10a8a670();
     virtual int FUN_10a8a530(int p1);
     virtual void FUN_10a8a550();
     virtual void FUN_10a8a560();
     virtual int FUN_10a8a570();
-    virtual Class_109081E0 FUN_10a8a6b0();
+    virtual cString FUN_10a8a6b0();
     virtual int FUN_10a8a590();
 
     Class_10E6C5D0() : m_Next(0) {}

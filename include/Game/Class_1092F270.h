@@ -9,7 +9,7 @@ class Class_10E4AC6C;
 class Class_1092F270
 {
 public:
-    Class_10951900* FUN_1092f270(bool A);
+    Class_10951900* GetOrCreate(bool A);
 
     union
     {

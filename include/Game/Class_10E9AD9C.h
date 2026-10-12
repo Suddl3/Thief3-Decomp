@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_10E9AD9C_H
 #define GAME_CLASS_10E9AD9C_H
 
-class Class_109081E0;
+class cString;
 
 class Class_10E9AD9C
 {
@@ -18,7 +18,7 @@ public:
     virtual void FUN_10c365d0(int A, float B);
     virtual void FUN_10c365f0(int A, int B);
 
-    Class_109081E0 GetControllerName();
+    cString GetControllerName();
 
     char Unknown04[0x48];
     bool Unknown4C;

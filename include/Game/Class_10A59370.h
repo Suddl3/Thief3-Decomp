@@ -3,15 +3,15 @@
 #ifndef GAME_CLASS_10A59370_H
 #define GAME_CLASS_10A59370_H
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 class Class_10A59370
 {
 public:
-    void FUN_10a59370(int Index, const Class_109081E0& Value);
+    void FUN_10a59370(int Index, const cString& Value);
 
     char Unknown00[0x1BC];
-    Class_109081E0 Unknown1BC[4];
+    cString Unknown1BC[4];
 };
 
 #endif // GAME_CLASS_10A59370_H

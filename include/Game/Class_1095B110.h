@@ -6,7 +6,7 @@
 class Class_1095B110
 {
 public:
-    void FUN_1095b110();
+    void Randomize();
 
     float Unknown00;
     char Unknown04[8];

@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_10BD8880_H
 #define GAME_CLASS_10BD8880_H
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10E90D70.h"
 #include "Game/Struct_10BCB770_Value.h"
 
@@ -22,7 +22,7 @@ public:
     bool Unknown60;
     char Pad61[0x3];
     float Unknown64;
-    Class_109081E0 Unknown68;
+    cString Unknown68;
     float Unknown6C;
 };
 

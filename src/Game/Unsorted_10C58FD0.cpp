@@ -1,6 +1,6 @@
 // Game/Unsorted_10C58FD0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10C59030_Field18.h"
 #include "Game/Class_10C59030_Value.h"
 
@@ -10,7 +10,7 @@ unsigned int HashBytes(const void* Data, int Length);
 class Class_10C59030_Node
 {
 public:
-    Class_109081E0 Key;
+    cString Key;
     Class_10C59030_Value Value;
     Class_10C59030_Node* Next;
 };
@@ -18,8 +18,8 @@ public:
 class Class_10C59030
 {
 public:
-    unsigned int Insert(const Class_109081E0& Key, const Class_10C59030_Value& Value);
-    unsigned int Set(const Class_109081E0& Key, const Class_10C59030_Value& Value);
+    unsigned int Insert(const cString& Key, const Class_10C59030_Value& Value);
+    unsigned int Set(const cString& Key, const Class_10C59030_Value& Value);
 
     int Unknown00;
     int Unknown04;
@@ -31,8 +31,8 @@ public:
     Class_10C59030_Field18 Unknown18;
 };
 
-// FUNCTION: 0x10C59030 ?Set@Class_10C59030@@QAEIABVClass_109081E0@@ABVClass_10C59030_Value@@@Z
-unsigned int Class_10C59030::Set(const Class_109081E0& Key, const Class_10C59030_Value& Value)
+// FUNCTION: 0x10C59030 ?Set@Class_10C59030@@QAEIABVcString@@ABVClass_10C59030_Value@@@Z
+unsigned int Class_10C59030::Set(const cString& Key, const Class_10C59030_Value& Value)
 {
     unsigned int Index;
     {

@@ -3,12 +3,12 @@
 #ifndef GAME_CLASS_1091AA10_H
 #define GAME_CLASS_1091AA10_H
 
-class Class_109081E0;
+class cString;
 
 class Class_1091AA10
 {
 public:
-    Class_109081E0 FUN_1091aa10(int A);
+    cString GetFontName(int A);
 };
 
 #endif // GAME_CLASS_1091AA10_H

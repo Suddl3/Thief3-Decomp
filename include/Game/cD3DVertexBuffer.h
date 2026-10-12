@@ -10,7 +10,7 @@ public:
     virtual void Virtual1();
     virtual void Virtual2();
     virtual void Virtual3();
-    virtual unsigned int FUN_10934800();
+    virtual unsigned int GetVertexCount();
     virtual void Virtual5();
     virtual int LockVertices(int A, int B, unsigned char** Out);
     virtual void Virtual7();
@@ -18,7 +18,7 @@ public:
 
     char Unknown04[0x10];
     int m_VertexBuffer;
-    unsigned int Unknown18;
+    unsigned int m_Length;
     union
     {
         unsigned int Unknown1c;

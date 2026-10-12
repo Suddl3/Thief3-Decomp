@@ -3,14 +3,14 @@
 #ifndef GAME_CLASS_10914380_H
 #define GAME_CLASS_10914380_H
 
-class Class_109081E0;
+class cString;
 class Class_1090A780;
 
 class Class_10914380
 {
 public:
-    bool FUN_10914380(const Class_1090A780& A, const Class_1090A780& B, Class_109081E0& Out, void* Filter);
-    Class_109081E0* FUN_10913fc0(const Class_1090A780& A, const Class_1090A780& B, void* Filter, void** Index);
+    bool FindEntry(const Class_1090A780& A, const Class_1090A780& B, cString& Out, void* Filter);
+    cString* FUN_10913fc0(const Class_1090A780& A, const Class_1090A780& B, void* Filter, void** Index);
 };
 
 #endif // GAME_CLASS_10914380_H

@@ -3,13 +3,13 @@
 #ifndef GAME_CLASS_1092A370_FIELD18_H
 #define GAME_CLASS_1092A370_FIELD18_H
 
-class Class_109081E0;
+class cString;
 
 class Class_1092A370_Field18
 {
 public:
-    virtual void Virtual0(const Class_109081E0& Key, const void** Data, int* Length);
-    virtual int Virtual1(const Class_109081E0& Key, const Class_109081E0& Other);
+    virtual void Virtual0(const cString& Key, const void** Data, int* Length);
+    virtual int Virtual1(const cString& Key, const cString& Other);
 };
 
 #endif // GAME_CLASS_1092A370_FIELD18_H

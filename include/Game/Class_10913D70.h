@@ -3,15 +3,15 @@
 #ifndef GAME_CLASS_10913D70_H
 #define GAME_CLASS_10913D70_H
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 class Class_10913D70
 {
 public:
-    Class_10913D70* FUN_10913d70(Class_10913D70* Other);
+    Class_10913D70* Assign(Class_10913D70* Other);
 
     int Unknown00;
-    Class_109081E0 Unknown04;
+    cString Unknown04;
 };
 
 #endif // GAME_CLASS_10913D70_H

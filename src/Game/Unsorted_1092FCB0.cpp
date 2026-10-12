@@ -15,8 +15,8 @@ public:
     int Unknown158;
 };
 
-// FUNCTION: 0x1092FD50 ?FUN_1092fd50@@YAHPAPAVClass_1092FD50_Item@@0@Z
-int FUN_1092fd50(Class_1092FD50_Item** A, Class_1092FD50_Item** B)
+// FUNCTION: 0x1092FD50 ?CompareItems@@YAHPAPAVClass_1092FD50_Item@@0@Z
+int CompareItems(Class_1092FD50_Item** A, Class_1092FD50_Item** B)
 {
     float FA = (*A)->Unknown148 - (*A)->Unknown144;
     float FB = (*B)->Unknown148 - (*B)->Unknown144;

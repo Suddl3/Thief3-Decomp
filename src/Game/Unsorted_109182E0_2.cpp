@@ -22,7 +22,7 @@ extern Class_109242E0* DAT_10f319a0;
 
 extern Class_10F2C744* DAT_10f2c744;
 
-void FUN_10929650();
+void CreateTextures();
 
 extern Class_1092D420* DAT_10f31b88;
 
@@ -36,16 +36,16 @@ public:
 
 extern Struct_10918E10* DAT_10f2c770;
 
-// FUNCTION: 0x10918380 ?FUN_10918380@@YAXXZ
-void FUN_10918380()
+// FUNCTION: 0x10918380 ?RefreshForResolution@@YAXXZ
+void RefreshForResolution()
 {
     Class_1092D990* Member = DAT_10f2c734->Unknown0D8;
     if (Member)
-        Member->FUN_1092d990();
+        Member->CreateRenderTargets();
     DAT_10f319a0->Refresh();
     if (DAT_10f2c744)
         DAT_10f2c744->Virtual11();
-    FUN_10929650();
+    CreateTextures();
     DAT_10f31b88->FUN_1092d440();
     for (int i = 0; i < DAT_10f2c768.Unknown00; i++)
         DAT_10f2c770[i].Unknown00->Virtual0(1, 0, DAT_10f2c770[i].Unknown04);

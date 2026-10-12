@@ -3,12 +3,12 @@
 #ifndef GAME_CLASS_10A8D160_H
 #define GAME_CLASS_10A8D160_H
 
-class Class_109081E0;
+class cString;
 
 class Class_10A8D160
 {
 public:
-    Class_109081E0 FUN_10a8d160();
+    cString FUN_10a8d160();
 };
 
 #endif // GAME_CLASS_10A8D160_H

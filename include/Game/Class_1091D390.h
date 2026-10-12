@@ -8,7 +8,7 @@ class Class_1091D390_Unknown24;
 class Class_1091D390
 {
 public:
-    bool FUN_1091d390(int A, int B, int C, unsigned int D, int E, int F, int G);
+    bool Draw(int A, int B, int C, unsigned int D, int E, int F, int G);
     bool FUN_1091a690(Class_1091D390_Unknown24* A, int B, int C, int D, unsigned int E, int F, int G, int H);
 
     char Unknown00[0x24];

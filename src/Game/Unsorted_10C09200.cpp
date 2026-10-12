@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10C08960.h"
 #include "Game/Class_10C093C0.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10913D70.h"
 #include "Game/Class_10E97B00.h"
 #include "Game/Class_10C08E90.h"
@@ -37,7 +37,7 @@ struct Item_10C091A0
 void Class_10C08E30::AddItem(int A, Class_10913D70* B, int C, int* D, int E)
 {
     Item_10C091A0 Item;
-    ((Class_10913D70*)&Item.Unknown04)->FUN_10913d70(B);
+    ((Class_10913D70*)&Item.Unknown04)->Assign(B);
     Item.Unknown20 = E;
     Item.Unknown10 = C;
     Item.Unknown14 = D[0];

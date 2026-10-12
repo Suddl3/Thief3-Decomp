@@ -22,7 +22,7 @@ class cD3DStateCache
 public:
     void SetVertexShader(unsigned long Value);
     void FUN_10937400(unsigned long Value);
-    void FUN_109241e0(unsigned long Stage, IDirect3DBaseTexture8* Texture);
+    void SetTexture(unsigned long Stage, IDirect3DBaseTexture8* Texture);
 
     char Unknown00[0x1C];
     IDirect3DBaseTexture8* m_Textures[4];
@@ -147,15 +147,15 @@ extern cD3DStateCache* DAT_10f31be0;
 
 extern IDirect3DDevice8* GDirect3DDevice8;
 
-void FUN_109192e0(int A, int B, int C);
+void SetStreamAndIndices(int A, int B, int C);
 
-// FUNCTION: 0x10941480 ?FUN_10941480@Class_10941480@@QAEXXZ
-void Class_10941480::FUN_10941480()
+// FUNCTION: 0x10941480 ?Draw@Class_10941480@@QAEXXZ
+void Class_10941480::Draw()
 {
-    if (Unknown2C > 0 && Unknown08)
+    if (m_PrimitiveCount > 0 && Unknown08)
     {
         if (Unknown00)
-            DAT_10f31be0->FUN_109241e0(0, Unknown00->Unknown30);
+            DAT_10f31be0->SetTexture(0, Unknown00->Unknown30);
         else
         {
             IDirect3DBaseTexture8** Slot = &DAT_10f31be0->m_Textures[0];
@@ -174,13 +174,13 @@ void Class_10941480::FUN_10941480()
             {
                 if (Unknown14)
                 {
-                    FUN_109192e0(Texture, 0x1c, Unknown14);
-                    GDirect3DDevice8->DrawIndexedPrimitive((D3DPRIMITIVETYPE)Unknown3C, 0, Unknown20, 0, Unknown2C);
+                    SetStreamAndIndices(Texture, 0x1c, Unknown14);
+                    GDirect3DDevice8->DrawIndexedPrimitive((D3DPRIMITIVETYPE)m_PrimitiveType, 0, m_VertexCount, 0, m_PrimitiveCount);
                     return;
                 }
-                FUN_109192e0(Texture, 0x1c, 0);
-                if (Unknown3C == 4)
-                    GDirect3DDevice8->DrawPrimitive(D3DPT_TRIANGLELIST, 0, Unknown2C);
+                SetStreamAndIndices(Texture, 0x1c, 0);
+                if (m_PrimitiveType == 4)
+                    GDirect3DDevice8->DrawPrimitive(D3DPT_TRIANGLELIST, 0, m_PrimitiveCount);
             }
         }
     }

@@ -1,7 +1,7 @@
 // Game/Unsorted_10B2FC10.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Core/Core.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10A242D0.h"
 #include "Game/Class_10AF7F80.h"
 #include "Game/Class_10B2FCE0.h"
@@ -121,7 +121,7 @@ public:
     virtual void Virtual108();
     virtual void Virtual109();
     virtual void Virtual110();
-    virtual void Virtual111(const Class_109081E0& Text, float Scale, int Flag);
+    virtual void Virtual111(const cString& Text, float Scale, int Flag);
 };
 
 extern float DAT_10eafbdc;
@@ -194,7 +194,7 @@ void cT3ReadBookWindow::FUN_10b2fef0()
                 if (Unknown118 != 0 && Unknown118->Virtual54() && m_Text.Len() > 0)
                 {
                     {
-                        Class_109081E0 Text(((Class_10AF7F80*)&m_Text)->FUN_10af7f80());
+                        cString Text(((Class_10AF7F80*)&m_Text)->FUN_10af7f80());
                         Unknown118->Virtual111(Text, -1.1f, 0);
                     }
                     Unknown118->Virtual36();

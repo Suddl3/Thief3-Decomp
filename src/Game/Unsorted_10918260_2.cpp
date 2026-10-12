@@ -11,10 +11,10 @@ extern int DAT_10efef54;
 
 extern char DAT_10f2c724;
 
-void FUN_1092f190();
+void FreeItems();
 
-// FUNCTION: 0x10918260 ?FUN_10918260@@YAXXZ
-void FUN_10918260()
+// FUNCTION: 0x10918260 ?DestroyState@@YAXXZ
+void DestroyState()
 {
     if (DAT_10f2c734)
         DAT_10f2c734->FUN_10925060();
@@ -25,5 +25,5 @@ void FUN_10918260()
         delete DAT_10f2c740;
         DAT_10f2c740 = 0;
     }
-    FUN_1092f190();
+    FreeItems();
 }

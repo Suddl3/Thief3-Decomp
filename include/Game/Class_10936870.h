@@ -7,9 +7,9 @@ class Class_10936870
 {
 public:
     char Unknown00[0x6b4];
-    unsigned int Unknown6b4;
+    unsigned int m_Flags;
 
-    void FUN_10936870(unsigned int Flags);
+    void AddFlags(unsigned int Flags);
 };
 
 #endif // GAME_CLASS_10936870_H

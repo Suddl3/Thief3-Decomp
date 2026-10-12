@@ -30,7 +30,7 @@ void Class_10924B70::FUN_109243f0()
             m_Device->SetRenderTarget(m_RenderTarget, m_DepthStencil);
         m_Device->SetRenderState(0xa1, 1);
         if (UnknownA8 != -1)
-            DAT_10f31be0->FUN_10936a40();
+            DAT_10f31be0->ApplyViewport();
         UnknownA8 = -1;
     }
 }

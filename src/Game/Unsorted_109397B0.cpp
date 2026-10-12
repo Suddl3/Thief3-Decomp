@@ -6,11 +6,11 @@ int __stricmp(const char* A, const char* B);
 
 extern const char DAT_10e47660[];
 
-// FUNCTION: 0x1093AED0 ?FUN_1093aed0@Class_1093AED0@@QAEHPAPBD@Z
-int Class_1093AED0::FUN_1093aed0(const char** Name)
+// FUNCTION: 0x1093AED0 ?GetCategoryIndex@Class_1093AED0@@QAEHPAPBD@Z
+int Class_1093AED0::GetCategoryIndex(const char** Name)
 {
-    const char** Item = Unknown24;
-    const char** End = Unknown28;
+    const char** Item = m_CategoriesBegin;
+    const char** End = m_CategoriesEnd;
     int Index = 0;
     for (; Item != End; Item++, Index++)
     {

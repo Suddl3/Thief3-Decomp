@@ -6,7 +6,7 @@
 #include "Game/Class_10912800.h"
 #include <stdarg.h>
 #include <string.h>
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 typedef struct HKEY__* HKEY;
 
@@ -36,8 +36,8 @@ extern void* DAT_10e48f28[];
 
 int FUN_10d1fec0(void* Table, int C);
 
-// FUNCTION: 0x109119B0 ?FUN_109119b0@@YAHPAPADHHHPBDZZ
-int FUN_109119b0(char** Out, int A, int B, int C, const char* Fmt, ...)
+// FUNCTION: 0x109119B0 ?AppendFormatted@@YAHPAPADHHHPBDZZ
+int AppendFormatted(char** Out, int A, int B, int C, const char* Fmt, ...)
 {
     char Buf[256];
     const char* Src = Fmt;
@@ -72,8 +72,8 @@ int FUN_109119b0(char** Out, int A, int B, int C, const char* Fmt, ...)
     return Count + Len;
 }
 
-// FUNCTION: 0x10911A80 ?FUN_10911a80@@YA?AVClass_109081E0@@PBD0_N@Z
-Class_109081E0 FUN_10911a80(const char* SubKey, const char* ValueName, bool LocalMachine)
+// FUNCTION: 0x10911A80 ?GetRegistryString@@YA?AVcString@@PBD0_N@Z
+cString GetRegistryString(const char* SubKey, const char* ValueName, bool LocalMachine)
 {
     HKEY hKey;
     unsigned long dwSize;
@@ -85,13 +85,13 @@ Class_109081E0 FUN_10911a80(const char* SubKey, const char* ValueName, bool Loca
         long Result = RegQueryValueExA(hKey, ValueName, 0, 0, (unsigned char*)szBuffer, &dwSize);
         RegCloseKey(hKey);
         if (Result == ERROR_SUCCESS)
-            return Class_109081E0(szBuffer);
+            return cString(szBuffer);
     }
-    return Class_109081E0();
+    return cString();
 }
 
-// FUNCTION: 0x10912800 ?FUN_10912800@Class_10912800@@QAEXXZ
-void Class_10912800::FUN_10912800()
+// FUNCTION: 0x10912800 ?Shutdown@Class_10912800@@QAEXXZ
+void Class_10912800::Shutdown()
 {
     if (Unknown1C)
         Unknown1C(GetCurrentProcess());
@@ -108,8 +108,8 @@ void Class_10912800::FUN_10912800()
     }
 }
 
-// FUNCTION: 0x10912850 ?FUN_10912850@@YGHPAXPBX0IPAI@Z
-int __stdcall FUN_10912850(void* Process, const void* Address, void* Buffer, unsigned int Size, unsigned int* BytesRead)
+// FUNCTION: 0x10912850 ?ReadLocalMemory@@YGHPAXPBX0IPAI@Z
+int __stdcall ReadLocalMemory(void* Process, const void* Address, void* Buffer, unsigned int Size, unsigned int* BytesRead)
 {
     if (IsBadReadPtr(Address, Size))
         return 0;

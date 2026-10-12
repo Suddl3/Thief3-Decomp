@@ -1,6 +1,6 @@
 // Game/Unsorted_109E5770.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_109E5910.h"
 #include "Game/Class_10D3F830.h"
 #include "Game/Entry_10C32C30.h"
@@ -63,8 +63,8 @@ public:
 
 int FUN_10af36e0(const char* A, const char* B);
 
-// FUNCTION: 0x109E5910 ?FUN_109e5910@Class_109E5910@@QAEHABVClass_109081E0@@@Z
-int Class_109E5910::FUN_109e5910(const Class_109081E0& Name)
+// FUNCTION: 0x109E5910 ?FUN_109e5910@Class_109E5910@@QAEHABVcString@@@Z
+int Class_109E5910::FUN_109e5910(const cString& Name)
 {
     if (!FUN_10af36e0(Name.Unknown00 ? Name.Unknown00 : DAT_10e47660, "ABSOLUTE"))
         return 1;

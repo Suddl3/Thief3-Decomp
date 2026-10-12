@@ -16,8 +16,8 @@ struct Struct_10939730_Table
     Struct_10939730_Entry** Items;
 };
 
-// FUNCTION: 0x10939730 ?FUN_10939730@Class_10939730@@QAEXXZ
-void Class_10939730::FUN_10939730()
+// FUNCTION: 0x10939730 ?Advance@Class_10939730@@QAEXXZ
+void Class_10939730::Advance()
 {
     if (Current)
     {

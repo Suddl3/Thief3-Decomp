@@ -1,6 +1,6 @@
 // Game/Unsorted_10914D80_4.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10914D80.h"
 #include "Game/Class_10914D80_Field18.h"
 #include "Game/Class_10914D80_Node.h"
@@ -19,8 +19,8 @@ void Class_10915210::FUN_109152a0(const Class_1090A780& Name, int B)
         Obj->FUN_109172f0(B);
 }
 
-// FUNCTION: 0x109153E0 ?Remove@Class_10914D80@@QAE_NABVClass_109081E0@@@Z
-bool Class_10914D80::Remove(const Class_109081E0& Key)
+// FUNCTION: 0x109153E0 ?Remove@Class_10914D80@@QAE_NABVcString@@@Z
+bool Class_10914D80::Remove(const cString& Key)
 {
     if (!m_NoResize && m_Count < m_Size * 0.05 && m_Size > 64)
         Rehash(m_Size / 2);
@@ -42,7 +42,7 @@ bool Class_10914D80::Remove(const Class_109081E0& Key)
             else
                 Prev->Next = Node->Next;
             m_Count--;
-            Node->Key.~Class_109081E0();
+            Node->Key.~cString();
             ::operator delete(Node);
             return true;
         }

@@ -3,8 +3,8 @@
 #include "Game/Class_10955AA0.h"
 #include "Game/Class_10E4ADC0.h"
 
-// FUNCTION: 0x109524A0 ?FUN_109524a0@Class_10E4ADC0@@UAEXXZ
-void Class_10E4ADC0::FUN_109524a0()
+// FUNCTION: 0x109524A0 ?Reset@Class_10E4ADC0@@UAEXXZ
+void Class_10E4ADC0::Reset()
 {
     for (int i = 0; i < 9; i++)
         Unknown90[i].FUN_10955aa0(i);

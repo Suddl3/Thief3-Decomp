@@ -29,7 +29,7 @@ void VBPoolStaticPermanent::Remove(void* Item)
     {
         if (m_Pending.Unknown04[i] == Item)
         {
-            List.FUN_10933420(m_Pending.Unknown04.begin() + i);
+            List.Erase(m_Pending.Unknown04.begin() + i);
             return;
         }
     }

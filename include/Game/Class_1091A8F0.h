@@ -6,7 +6,7 @@
 class Class_1091A8F0
 {
 public:
-    void FUN_1091a8f0();
+    void Free();
 
     char Unknown00[8];
     int* Unknown08;

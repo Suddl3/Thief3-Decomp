@@ -11,14 +11,14 @@ class Class_1091F740_Unknown44;
 class Class_1091F740
 {
 public:
-    void FUN_1091f740(Class_1091F740_Param0* Param);
+    void ClearFlags(Class_1091F740_Param0* Param);
 
     char Unknown00[0xC];
     Class_1091F740_Unknown0C* Unknown0C;
     char Unknown10[0x20];
-    int Unknown30;
+    int m_NumItems;
     char Unknown34[4];
-    Class_1091F740_Item** Unknown38;
+    Class_1091F740_Item** m_Items;
     int Unknown3C;
     char Unknown40[4];
     Class_1091F740_Unknown44** Unknown44;

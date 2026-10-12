@@ -5,15 +5,15 @@
 
 #include "Game/Class_1090F080_Field18.h"
 
-class Class_109081E0;
+class cString;
 class Class_1090F080_Node;
 
 class Class_1090F080
 {
 public:
-    unsigned int Insert(const Class_109081E0& Key, const int& Value);
+    unsigned int Insert(const cString& Key, const int& Value);
     void Rehash(int Size);
-    bool Remove(const Class_109081E0& Key);
+    bool Remove(const cString& Key);
 
     union
     {

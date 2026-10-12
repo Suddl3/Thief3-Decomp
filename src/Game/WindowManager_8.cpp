@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Core/Core.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_109E6D60.h"
 
 class Class_10B45AD0;
@@ -80,7 +80,7 @@ public:
 
     void FUN_109e3d60(void* Window);
     void FUN_109e8ae0(void* Window);
-    int FindWindowByName(const Class_109081E0& Name);
+    int FindWindowByName(const cString& Name);
     void FUN_109e6b20(int A);
     void FUN_109e8930(void* Window);
     void OpenTitleLoadWindow();
@@ -106,7 +106,7 @@ int WindowManager::IsHUDWindowVisible()
 {
     Class_10B16CD0_Window* Window;
     {
-        Class_109081E0 Name(DAT_10e79144);
+        cString Name(DAT_10e79144);
         Window = (Class_10B16CD0_Window*)FindWindowByName(Name);
     }
     if (Window && Window->Virtual53())

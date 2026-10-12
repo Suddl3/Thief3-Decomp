@@ -29,20 +29,20 @@ public:
 class Class_10925F10
 {
 public:
-    void FUN_10925f10(int Item);
+    void AddUnique(int Item);
 
     char Unknown00[0xA4];
-    cIntArray UnknownA4;
+    cIntArray m_Items;
 };
 
-// FUNCTION: 0x10925F10 ?FUN_10925f10@Class_10925F10@@QAEXH@Z
-void Class_10925F10::FUN_10925f10(int Item)
+// FUNCTION: 0x10925F10 ?AddUnique@Class_10925F10@@QAEXH@Z
+void Class_10925F10::AddUnique(int Item)
 {
-    UnknownA4.AddUnique(Item);
+    m_Items.AddUnique(Item);
 }
 
-// FUNCTION: 0x10925FC0 ?FUN_10925fc0@Class_10925FC0@@QAE?AVcRefPtr@@H@Z
-cRefPtr Class_10925FC0::FUN_10925fc0(int Index)
+// FUNCTION: 0x10925FC0 ?GetRef@Class_10925FC0@@QAE?AVcRefPtr@@H@Z
+cRefPtr Class_10925FC0::GetRef(int Index)
 {
-    return UnknownCC[Index];
+    return m_Refs[Index];
 }

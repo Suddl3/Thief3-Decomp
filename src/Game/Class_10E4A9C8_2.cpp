@@ -8,16 +8,16 @@ class Class_1091E2E0
 {
 public:
     virtual void Virtual0() = 0;
-    void FUN_1091e2e0();
+    void Reset();
 
-    char Unknown04[0x40];
+    char m_Matrix[0x40];
 };
 
 class Class_10E4A9C8 : public Class_1091E2E0
 {
 public:
     ~Class_10E4A9C8();
-    Class_10E4A9C8* FUN_10948600();
+    Class_10E4A9C8* Init();
     void FUN_10948680();
 
     int Unknown44;

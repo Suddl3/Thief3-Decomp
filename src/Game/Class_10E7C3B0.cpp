@@ -12,15 +12,15 @@ Class_10905A90_Member* GetAllocator();
 
 void* FUN_10b154c0();
 
-// Game/Class_109081E0.h copied without its base: the destructor is the base's body as this class's own,
+// Game/cString.h copied without its base: the destructor is the base's body as this class's own,
 // and this unit's temporary is destroyed without the zero store the inherited one makes.
-class Class_109081E0
+class cString
 {
 public:
-    Class_109081E0() : Unknown00(0) {}
-    Class_109081E0(const char* In);
-    Class_109081E0(const Class_109081E0& Other);
-    ~Class_109081E0()
+    cString() : Unknown00(0) {}
+    cString(const char* In);
+    cString(const cString& Other);
+    ~cString()
     {
         if (Unknown00)
         {
@@ -28,7 +28,7 @@ public:
             GetAllocator()->Virtual5(Block);
         }
     }
-    Class_109081E0& operator=(const Class_109081E0& Other);
+    cString& operator=(const cString& Other);
 
     char* Unknown00;
 };
@@ -53,7 +53,7 @@ public:
 
     int m_Count;
     int Unknown04;
-    Class_109081E0* m_Items;
+    cString* m_Items;
 };
 
 class Class_10B37370_Arg
@@ -81,7 +81,7 @@ int Class_10E7C3B0::ShowOkMessage(int A, int B, Class_10B37370_Arg* C)
     {
         Class_10AB37C0* Item = C->Virtual4(0);
         Class_1090FD40 Array;
-        Class_109081E0 Text("<string=T_OK>");
+        cString Text("<string=T_OK>");
         int Count = Array.m_Count;
         Array.FUN_1090f2c0(Count + 1);
         Array.m_Items[Count] = Text;

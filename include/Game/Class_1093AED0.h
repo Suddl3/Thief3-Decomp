@@ -6,11 +6,11 @@
 class Class_1093AED0
 {
 public:
-    int FUN_1093aed0(const char** Name);
+    int GetCategoryIndex(const char** Name);
 
     int Unknown00[9];
-    const char** Unknown24;
-    const char** Unknown28;
+    const char** m_CategoriesBegin;
+    const char** m_CategoriesEnd;
 };
 
 #endif // GAME_CLASS_1093AED0_H

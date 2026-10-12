@@ -1,7 +1,7 @@
 // Game/Unsorted_10B9D4B0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 typedef unsigned long DWORD;
 
@@ -35,7 +35,7 @@ public:
     UBOOL operator==(const FName& Other) const { return Value == Other.Value; }
     UBOOL operator!=(const FName& Other) const { return Value != Other.Value; }
 
-    Class_109081E0 FUN_10af9730() const;
+    cString FUN_10af9730() const;
 
     DWORD Value;
 };
@@ -55,8 +55,8 @@ void FUN_10ad1fa0();
 
 Class_10B9D4B0_Result* FUN_10adc3b0(void* Package, int Class, const char* Name, int Exact);
 
-// FUNCTION: 0x10B9D4B0 ?FUN_10b9d4b0@@YA?AVClass_109081E0@@PAPBDH@Z
-Class_109081E0 FUN_10b9d4b0(const char** Name, int Index)
+// FUNCTION: 0x10B9D4B0 ?FUN_10b9d4b0@@YA?AVcString@@PAPBDH@Z
+cString FUN_10b9d4b0(const char** Name, int Index)
 {
     const char* Str = DAT_10e47660;
     if (*Name)
@@ -68,6 +68,6 @@ Class_109081E0 FUN_10b9d4b0(const char** Name, int Index)
     }
     Class_10B9D4B0_Result* Found = FUN_10adc3b0(DAT_10f3e46c, -1, Str, 0);
     if (Found == 0)
-        return Class_109081E0(DAT_10e47660);
+        return cString(DAT_10e47660);
     return Found->Unknown34[Index].FUN_10af9730();
 }

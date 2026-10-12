@@ -1,10 +1,10 @@
 // Game/Unsorted_10A38F40.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_1090FD40.h"
 
-// FUNCTION: 0x10A391A0 ?Insert@Class_1090FD40@@QAEXHABVClass_109081E0@@@Z
-void Class_1090FD40::Insert(int Index, const Class_109081E0& Value)
+// FUNCTION: 0x10A391A0 ?Insert@Class_1090FD40@@QAEXHABVcString@@@Z
+void Class_1090FD40::Insert(int Index, const cString& Value)
 {
     int Count = m_Count;
     if (Index == Count)

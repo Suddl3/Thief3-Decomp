@@ -1,8 +1,8 @@
 // Game/Unsorted_10947430.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-// FUNCTION: 0x10947430 ?FUN_10947430@@YGPBDI@Z
-const char* __stdcall FUN_10947430(unsigned int Type)
+// FUNCTION: 0x10947430 ?GetBspInfoTypeName@@YGPBDI@Z
+const char* __stdcall GetBspInfoTypeName(unsigned int Type)
 {
     const char* Names[19] =
     {

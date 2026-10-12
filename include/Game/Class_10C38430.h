@@ -3,12 +3,12 @@
 #ifndef GAME_CLASS_10C38430_H
 #define GAME_CLASS_10C38430_H
 
-class Class_109081E0;
+class cString;
 
 class Class_10C38430
 {
 public:
-    Class_109081E0 GetMotionControllerName();
+    cString GetMotionControllerName();
 };
 
 #endif // GAME_CLASS_10C38430_H

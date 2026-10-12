@@ -47,8 +47,8 @@ bool FUN_10917ff0(int A, int B)
     return true;
 }
 
-// FUNCTION: 0x10918040 ?FUN_10918040@@YAHI@Z
-int FUN_10918040(unsigned int Adapter)
+// FUNCTION: 0x10918040 ?GetDeviceRef@@YAHI@Z
+int GetDeviceRef(unsigned int Adapter)
 {
     D3DADAPTER_IDENTIFIER8 Identifier;
     char Device[32];

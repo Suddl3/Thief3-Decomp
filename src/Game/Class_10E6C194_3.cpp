@@ -2,14 +2,14 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Core/Core.h"
 #include "Game/Class_10905A90_Member.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 class Class_10AA8240
 {
 public:
     virtual void Virtual0();
     virtual void Virtual1();
-    virtual Class_109081E0 Virtual2();
+    virtual cString Virtual2();
 };
 
 class Class_10E6C194
@@ -21,7 +21,7 @@ public:
     virtual void Virtual3();
     virtual int Read(Class_10AA8240* Obj);
 
-    Class_109081E0 Unknown04;
+    cString Unknown04;
 };
 
 // FUNCTION: 0x10AA8240 ?Read@Class_10E6C194@@UAEHPAVClass_10AA8240@@@Z

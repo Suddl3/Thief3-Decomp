@@ -1,6 +1,6 @@
 // Game/cTriggerBoolPropertyParam_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_1096A960.h"
 #include "Game/cTriggerBoolPropertyParam.h"
 
@@ -44,8 +44,8 @@ class Class_10F3A1EC : public Class_1096C8D0
 
 extern Class_10F3A1EC* DAT_10f3a1ec;
 
-// FUNCTION: 0x10A8BBC0 ?FUN_10a8bbc0@cTriggerBoolPropertyParam@@UAE?AVClass_109081E0@@XZ
-Class_109081E0 cTriggerBoolPropertyParam::FUN_10a8bbc0()
+// FUNCTION: 0x10A8BBC0 ?FUN_10a8bbc0@cTriggerBoolPropertyParam@@UAE?AVcString@@XZ
+cString cTriggerBoolPropertyParam::FUN_10a8bbc0()
 {
     Class_1096C8D0* Holder = DAT_10f3a1ec;
     Class_1096A960* Obj;

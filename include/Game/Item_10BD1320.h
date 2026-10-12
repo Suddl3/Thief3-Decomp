@@ -3,7 +3,7 @@
 #ifndef GAME_ITEM_10BD1320_H
 #define GAME_ITEM_10BD1320_H
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 class FArchive;
 
@@ -12,7 +12,7 @@ struct Item_10BD1320
 public:
     virtual void Virtual0(FArchive& Ar);
 
-    Class_109081E0 Unknown04;
+    cString Unknown04;
     int Unknown08;
     int Unknown0C;
 };

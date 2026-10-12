@@ -10,13 +10,13 @@ class Class_1094EFC0_Unknown108;
 class Class_1094EFC0
 {
 public:
-    void FUN_1094efc0(int A, int B);
+    void Resize(int A, int B);
 
     char Pad00[0xF0];
     int Unknown0F0;
-    cIntArray Unknown0F4;
+    cIntArray m_Items;
     char Pad100[0x8];
-    Class_1094EFC0_Unknown108* Unknown108;
+    Class_1094EFC0_Unknown108* m_Slots;
 };
 
 #endif // GAME_CLASS_1094EFC0_H

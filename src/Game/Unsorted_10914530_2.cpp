@@ -3,7 +3,7 @@
 
 #include <string.h>
 #include "Game/cIntArray.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 // Game/Class_10AB37C0.h without its char unknown_00[4]: that slot is the vtable pointer,
 // since the entries are deleted through a virtual destructor (slot 0).
@@ -22,7 +22,7 @@ class Class_10AA9DA0
 {
 public:
     void* FUN_10aa9da0();
-    void RemoveByName(Class_109081E0& Item);
+    void RemoveByName(cString& Item);
 
     int Unknown00;
     int Unknown04;
@@ -31,13 +31,13 @@ public:
     void* Unknown10;
 };
 
-// FUNCTION: 0x109145F0 ?RemoveByName@Class_10AA9DA0@@QAEXAAVClass_109081E0@@@Z
-void Class_10AA9DA0::RemoveByName(Class_109081E0& Item)
+// FUNCTION: 0x109145F0 ?RemoveByName@Class_10AA9DA0@@QAEXAAVcString@@@Z
+void Class_10AA9DA0::RemoveByName(cString& Item)
 {
     cIntArray* Array = (cIntArray*)&Unknown04;
     for (int i = 0; i < Array->Count; i++)
     {
-        Class_109081E0* Name = (Class_109081E0*)Items[i]->FUN_10ab37c0();
+        cString* Name = (cString*)Items[i]->FUN_10ab37c0();
         if (strcmp(**Name, *Item) == 0)
         {
             delete Items[i];

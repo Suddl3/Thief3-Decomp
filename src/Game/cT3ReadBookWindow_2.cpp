@@ -1,7 +1,7 @@
 // Game/cT3ReadBookWindow_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Core/Core.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 class Class_10E67FD0
 {
@@ -30,7 +30,7 @@ public:
     int Unknown12C;
     int Unknown130;
     int Unknown134;
-    Class_109081E0 Unknown138;
+    cString Unknown138;
     int Unknown13C;
     int Unknown140;
     int Unknown144;
@@ -41,7 +41,7 @@ public:
     int Unknown160;
     bool Unknown164;
     int Unknown168;
-    Class_109081E0 Unknown16C;
+    cString Unknown16C;
 };
 
 // FUNCTION: 0x10B2FB10 ??0cT3ReadBookWindow@@QAE@XZ

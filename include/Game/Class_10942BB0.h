@@ -6,7 +6,7 @@
 class Class_10942BB0
 {
 public:
-    void FUN_10942bb0(int Flag, unsigned int Value);
+    void SetBits(int Flag, unsigned int Value);
 
     char Unknown00[0x158];
     unsigned int Unknown158Bits0To18 : 19;

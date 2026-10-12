@@ -5,7 +5,7 @@
 #include "Game/Class_10BBA020.h"
 #include "Game/Class_10BBDB40.h"
 #include "Game/Class_10C7D570.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 class Class_10E50610
 {
@@ -16,12 +16,12 @@ public:
 class Class_10E90914 : public Class_10E50610
 {
 public:
-    Class_10E90914(const Class_109081E0& A);
+    Class_10E90914(const cString& A);
 
     virtual void Virtual1();
     virtual bool FUN_10bb44f0(Class_10E90914* Other);
 
-    Class_109081E0 Unknown04;
+    cString Unknown04;
 };
 
 // Ion Storm's placement new (0x10905C10).
@@ -138,7 +138,7 @@ char Class_10E8BE68::FUN_10bc5bc0()
     return true;
 }
 
-// FUNCTION: 0x10BC6A30 ??0Class_10E90914@@QAE@ABVClass_109081E0@@@Z
-Class_10E90914::Class_10E90914(const Class_109081E0& A) : Unknown04(A)
+// FUNCTION: 0x10BC6A30 ??0Class_10E90914@@QAE@ABVcString@@@Z
+Class_10E90914::Class_10E90914(const cString& A) : Unknown04(A)
 {
 }

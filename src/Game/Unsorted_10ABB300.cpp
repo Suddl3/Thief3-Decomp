@@ -56,10 +56,10 @@ void Class_10ABB300::FUN_10abb300(Struct_10ABB300* P)
         if (Inner->UnknownB0)
         {
             P->Unknown04 = true;
-            Obj = Inner->FUN_1092f270(0);
+            Obj = Inner->GetOrCreate(0);
         }
         else
-            Obj = Inner->FUN_1092f270(1);
+            Obj = Inner->GetOrCreate(1);
         Obj->Acquire(&Unknown10[Unknown04 % Unknown08]->Unknown04, 2);
     }
 }

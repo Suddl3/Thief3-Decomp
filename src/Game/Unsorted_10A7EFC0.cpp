@@ -1,7 +1,7 @@
 // Game/Unsorted_10A7EFC0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10905A90_Member.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/cTriggerLinkParam.h"
 #include "Game/Class_1096A960.h"
 #include "Game/cEngineTriggerRegistrar.h"
@@ -56,8 +56,8 @@ cTriggerLinkParam* cEngineTriggerRegistrar::FUN_10a7f220(int A, const int* B)
     bool Flag;
     {
         char Storage[4];
-        Flag = FUN_1090f010(B, (const int*)new ((EInternal*)Storage) Class_109081E0("NoSelf"));
-        ((Class_109081E0*)Storage)->~Class_109081E0();
+        Flag = FUN_1090f010(B, (const int*)new ((EInternal*)Storage) cString("NoSelf"));
+        ((cString*)Storage)->~cString();
     }
     cTriggerLinkParam* Result;
     if (Flag)

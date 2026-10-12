@@ -100,8 +100,8 @@ void Class_109435A0::Clear()
     }
 }
 
-// FUNCTION: 0x109434F0 ?FUN_109434f0@Class_109434F0@@QAEHABUStruct_109434F0@@@Z
-int Class_109434F0::FUN_109434f0(const Struct_109434F0& Item)
+// FUNCTION: 0x109434F0 ?Append@Class_109434F0@@QAEHABUStruct_109434F0@@@Z
+int Class_109434F0::Append(const Struct_109434F0& Item)
 {
     int Index = Unknown00;
     FUN_10dcd540(Index + 1);
@@ -109,8 +109,8 @@ int Class_109434F0::FUN_109434f0(const Struct_109434F0& Item)
     return Index;
 }
 
-// FUNCTION: 0x10943520 ?FUN_10943520@Class_10943520@@QAEXXZ
-void Class_10943520::FUN_10943520()
+// FUNCTION: 0x10943520 ?Clear@Class_10943520@@QAEXXZ
+void Class_10943520::Clear()
 {
     FUN_10943240(0);
     if (Unknown04)

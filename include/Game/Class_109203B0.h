@@ -6,9 +6,9 @@
 class Class_109203B0
 {
 public:
-    Class_109203B0* FUN_109203b0();
+    Class_109203B0* Init();
 
-    long Unknown00;
+    long m_InitTime;
     int Unknown04;
     int Unknown08;
     int Unknown0C;

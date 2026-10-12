@@ -6,9 +6,9 @@
 class Class_10941E90
 {
 public:
-    void FUN_10941e90();
+    void Free();
 
-    void* Unknown00;
+    void* m_Buffer;
 };
 
 #endif // GAME_CLASS_10941E90_H

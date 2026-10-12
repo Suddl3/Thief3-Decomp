@@ -1,7 +1,7 @@
 // Game/Class_10E69BA0_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_1096A960.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10AF7F80.h"
 #include "Game/Class_10E69BA0.h"
 
@@ -45,6 +45,6 @@ void Class_10E69BA0::FUN_10a5f040(Class_1096A960* A, Class_10A5F040_Arg* B, int 
             Name->FUN_10af7f80();
     }
     Class_1096A960* Owner = B->Unknown38;
-    Class_109081E0 Text = A->FUN_1096a960();
-    Class_109081E0 Other = Owner->FUN_1096a960();
+    cString Text = A->FUN_1096a960();
+    cString Other = Owner->FUN_1096a960();
 }

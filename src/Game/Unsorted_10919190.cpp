@@ -17,8 +17,8 @@ extern IDirect3DDevice8* GDirect3DDevice8;
 
 extern Class_1091E400* DAT_10f2c8c0;
 
-// FUNCTION: 0x10919190 ?FUN_10919190@@YAXPAUStruct_10919190@@@Z
-void FUN_10919190(Struct_10919190* P)
+// FUNCTION: 0x10919190 ?SetWorldTransform@@YAXPAUStruct_10919190@@@Z
+void SetWorldTransform(Struct_10919190* P)
 {
     if (DAT_10f2c8c0)
     {
@@ -33,8 +33,8 @@ void FUN_10919190(Struct_10919190* P)
     }
 }
 
-// FUNCTION: 0x109192E0 ?FUN_109192e0@@YAXHHH@Z
-void FUN_109192e0(int A, int B, int C)
+// FUNCTION: 0x109192E0 ?SetStreamAndIndices@@YAXHHH@Z
+void SetStreamAndIndices(int A, int B, int C)
 {
     DAT_10f31be0->SetStreamSource(A, B);
     DAT_10f31be0->SetIndices(C, 0);

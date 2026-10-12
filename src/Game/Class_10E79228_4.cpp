@@ -1,6 +1,6 @@
 // Game/Class_10E79228_4.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_1093BCB0.h"
 #include "Game/Class_10E79228.h"
 #include "Game/Struct_1093BCB0.h"
@@ -37,7 +37,7 @@ void Class_10E79228::LayoutTitleBar()
     Struct_1093BCB0* Info = 0;
     bool Found;
     {
-        Class_109081E0 Name("META_TabScreenTitleBar");
+        cString Name("META_TabScreenTitleBar");
         Found = DAT_10f323fc->FUN_1093b260(Name, &Info);
     }
     if (Found)

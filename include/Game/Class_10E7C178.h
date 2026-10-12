@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_10E7C178_H
 #define GAME_CLASS_10E7C178_H
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 class Class_10E7C178
 {
@@ -11,15 +11,15 @@ public:
     virtual ~Class_10E7C178();
     virtual void Virtual1();
     virtual void Virtual2();
-    virtual Class_109081E0 GetClassName();
+    virtual cString GetClassName();
     virtual void Virtual4();
     virtual void Virtual5();
     virtual void Virtual6();
     virtual int IsDone();
-    virtual Class_109081E0 GetCurrent();
+    virtual cString GetCurrent();
     virtual int IsInventoryClass();
 
-    Class_109081E0 m_ClassName;
+    cString m_ClassName;
 };
 
 #endif // GAME_CLASS_10E7C178_H

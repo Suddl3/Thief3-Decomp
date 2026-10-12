@@ -1,6 +1,6 @@
 // Game/Unsorted_10B364D0_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10B396A0.h"
 #include "Game/Class_10B3A470.h"
 #include "Game/Class_10B3AC50.h"
@@ -337,10 +337,10 @@ void Class_10B43D40::FUN_10b43d40(void* p1)
     Field150 = p1;
 }
 
-// FUNCTION: 0x10B43D50 ?GetPaneFileName@Class_10E80C78@@QAE?AVClass_109081E0@@XZ
-Class_109081E0 Class_10E80C78::GetPaneFileName()
+// FUNCTION: 0x10B43D50 ?GetPaneFileName@Class_10E80C78@@QAE?AVcString@@XZ
+cString Class_10E80C78::GetPaneFileName()
 {
-    return Class_109081E0(DAT_10e80e74);
+    return cString(DAT_10e80e74);
 }
 
 // FUNCTION: 0x10B460F0 ??0Class_10E81300@@QAE@XZ

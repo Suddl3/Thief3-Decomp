@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_10E8C4A4_MEMBER_H
 #define GAME_CLASS_10E8C4A4_MEMBER_H
 
-class Class_109081E0;
+class cString;
 
 class Class_10E8C4A4_Member
 {
@@ -33,7 +33,7 @@ public:
     virtual void Virtual22();
     virtual void Virtual23();
     virtual void Virtual24();
-    virtual Class_109081E0 Virtual25();
+    virtual cString Virtual25();
 };
 
 #endif // GAME_CLASS_10E8C4A4_MEMBER_H

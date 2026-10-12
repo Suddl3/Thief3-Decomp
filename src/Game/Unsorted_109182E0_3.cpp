@@ -12,8 +12,8 @@ extern Class_10B59770 DAT_10f2c768;
 
 extern Struct_10918E10* DAT_10f2c770;
 
-// FUNCTION: 0x10918E10 ?FUN_10918e10@@YA_NH@Z
-bool FUN_10918e10(int Key)
+// FUNCTION: 0x10918E10 ?RemoveByKey@@YA_NH@Z
+bool RemoveByKey(int Key)
 {
     for (int i = 0; i < DAT_10f2c768.Unknown00; i++)
     {

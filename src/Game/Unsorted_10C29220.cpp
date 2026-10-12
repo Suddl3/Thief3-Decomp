@@ -1,6 +1,6 @@
 // Game/Unsorted_10C29220.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10B26930.h"
 #include "Game/Class_10C38430.h"
 #include "Game/Class_10E99370.h"
@@ -30,7 +30,7 @@ class MC_MoveToPoint
 {
 public:
     void FUN_10c2eb30();
-    Class_109081E0 GetClassName();
+    cString GetClassName();
 
     void* Field00;
 };
@@ -97,7 +97,7 @@ class Class_10E9AE88 : public Class_10E9AF04
 public:
     virtual void FUN_10c37e80(Object_10BCE8D0* A);
 
-    Class_109081E0 GetMotionControllerName();
+    cString GetMotionControllerName();
 };
 
 extern const char DAT_10e9aef4[];
@@ -137,10 +137,10 @@ void MC_MoveToPoint::FUN_10c2eb30()
     FUN_10c27290();
 }
 
-// FUNCTION: 0x10C2EBD0 ?GetClassName@MC_MoveToPoint@@QAE?AVClass_109081E0@@XZ
-Class_109081E0 MC_MoveToPoint::GetClassName()
+// FUNCTION: 0x10C2EBD0 ?GetClassName@MC_MoveToPoint@@QAE?AVcString@@XZ
+cString MC_MoveToPoint::GetClassName()
 {
-    return Class_109081E0(DAT_10e9aaa8);
+    return cString(DAT_10e9aaa8);
 }
 
 // FUNCTION: 0x10C2ECF0 ?FUN_10c2ecf0@cMotionControllerAnim@@QAEEXZ
@@ -215,10 +215,10 @@ void cMotionControllerAnim::FUN_10c356a0()
     Field9f = 0;
 }
 
-// FUNCTION: 0x10C36860 ?GetControllerName@Class_10E9AD9C@@QAE?AVClass_109081E0@@XZ
-Class_109081E0 Class_10E9AD9C::GetControllerName()
+// FUNCTION: 0x10C36860 ?GetControllerName@Class_10E9AD9C@@QAE?AVcString@@XZ
+cString Class_10E9AD9C::GetControllerName()
 {
-    return Class_109081E0(DAT_10e9adc8);
+    return cString(DAT_10e9adc8);
 }
 
 // FUNCTION: 0x10C36F30 ?FUN_10c36f30@@YAXXZ
@@ -227,16 +227,16 @@ void FUN_10c36f30()
     FUN_10c36a20();
 }
 
-// FUNCTION: 0x10C374E0 ?GetMotionControllerName@Class_10E9ADE8@@QAE?AVClass_109081E0@@XZ
-Class_109081E0 Class_10E9ADE8::GetMotionControllerName()
+// FUNCTION: 0x10C374E0 ?GetMotionControllerName@Class_10E9ADE8@@QAE?AVcString@@XZ
+cString Class_10E9ADE8::GetMotionControllerName()
 {
-    return Class_109081E0(DAT_10e9ae18);
+    return cString(DAT_10e9ae18);
 }
 
-// FUNCTION: 0x10C378A0 ?GetMotionControllerName@Class_10E9AE24@@QAE?AVClass_109081E0@@XZ
-Class_109081E0 Class_10E9AE24::GetMotionControllerName()
+// FUNCTION: 0x10C378A0 ?GetMotionControllerName@Class_10E9AE24@@QAE?AVcString@@XZ
+cString Class_10E9AE24::GetMotionControllerName()
 {
-    return Class_109081E0(DAT_10e9ae54);
+    return cString(DAT_10e9ae54);
 }
 
 // FUNCTION: 0x10C37E80 ?FUN_10c37e80@Class_10E9AE88@@UAEXPAVObject_10BCE8D0@@@Z
@@ -245,16 +245,16 @@ void Class_10E9AE88::FUN_10c37e80(Object_10BCE8D0* A)
     FUN_10c372e0(A);
 }
 
-// FUNCTION: 0x10C38040 ?GetMotionControllerName@Class_10E9AE88@@QAE?AVClass_109081E0@@XZ
-Class_109081E0 Class_10E9AE88::GetMotionControllerName()
+// FUNCTION: 0x10C38040 ?GetMotionControllerName@Class_10E9AE88@@QAE?AVcString@@XZ
+cString Class_10E9AE88::GetMotionControllerName()
 {
-    return Class_109081E0(DAT_10e9aeb8);
+    return cString(DAT_10e9aeb8);
 }
 
-// FUNCTION: 0x10C382B0 ?GetMotionControllerName@Class_10E9AEC8@@QAE?AVClass_109081E0@@XZ
-Class_109081E0 Class_10E9AEC8::GetMotionControllerName()
+// FUNCTION: 0x10C382B0 ?GetMotionControllerName@Class_10E9AEC8@@QAE?AVcString@@XZ
+cString Class_10E9AEC8::GetMotionControllerName()
 {
-    return Class_109081E0(DAT_10e9aef4);
+    return cString(DAT_10e9aef4);
 }
 
 // FUNCTION: 0x10C382E0 ?FUN_10c382e0@@YAHXZ
@@ -263,10 +263,10 @@ int FUN_10c382e0()
     return 0x3;
 }
 
-// FUNCTION: 0x10C38430 ?GetMotionControllerName@Class_10C38430@@QAE?AVClass_109081E0@@XZ
-Class_109081E0 Class_10C38430::GetMotionControllerName()
+// FUNCTION: 0x10C38430 ?GetMotionControllerName@Class_10C38430@@QAE?AVcString@@XZ
+cString Class_10C38430::GetMotionControllerName()
 {
-    return Class_109081E0(DAT_10e9af34);
+    return cString(DAT_10e9af34);
 }
 
 // FUNCTION: 0x10C384F0 ?FUN_10c384f0@Class_10E9AAD0@@QAEXXZ

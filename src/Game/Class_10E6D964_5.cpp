@@ -1,6 +1,6 @@
 // Game/Class_10E6D964_5.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10AAB590_Param.h"
 
 class Object_10AA7BA0;
@@ -55,7 +55,7 @@ public:
     virtual void Virtual0();
     virtual void Virtual1();
     virtual void Virtual2();
-    virtual void Virtual3(const Class_109081E0& A);
+    virtual void Virtual3(const cString& A);
     virtual void Virtual4();
     virtual void Virtual5();
     virtual void Virtual6();
@@ -82,10 +82,10 @@ public:
     virtual void Virtual3();
     virtual int FUN_10aa7db0(Class_10AAB590_Param* Src);
 
-    Class_109081E0 Unknown04;
+    cString Unknown04;
     Object_10AA7BA0* Unknown08;
     int Unknown0C;
-    Class_109081E0 Unknown10;
+    cString Unknown10;
 };
 
 // FUNCTION: 0x10AA7DB0 ?FUN_10aa7db0@Class_10E6D964@@UAEHPAVClass_10AAB590_Param@@@Z
@@ -93,7 +93,7 @@ int Class_10E6D964::FUN_10aa7db0(Class_10AAB590_Param* Src)
 {
     Unknown04 = Src->Virtual2();
     Unknown10 = Src->Virtual2();
-    Class_109081E0 Name = Src->Virtual2();
+    cString Name = Src->Virtual2();
     Unknown08 = DAT_10f46d9c->Virtual3();
     Unknown08->Virtual3(Name);
     Unknown08->Virtual18(Src, DAT_10f46d9c);

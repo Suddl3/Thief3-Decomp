@@ -5,13 +5,13 @@
 
 #include "Game/Class_10C49100_Field18.h"
 
-class Class_109081E0;
+class cString;
 class Class_10C49100_Node;
 
 class Class_10C49100
 {
 public:
-    unsigned int Insert(const Class_109081E0& Key, const int& Value);
+    unsigned int Insert(const cString& Key, const int& Value);
     void Rehash(int Size);
 
     int m_Collisions;

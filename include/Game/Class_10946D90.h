@@ -9,12 +9,12 @@ struct Struct_10946D90_Plane;
 class Class_10946D90
 {
 public:
-    void FUN_10946d90(float* Point, float Radius, int* Out, int* Count, unsigned int Index);
+    void CollectInSphere(float* Point, float Radius, int* Out, int* Count, unsigned int Index);
 
     char Unknown00[0x2C];
-    Struct_10946D90_Node* Unknown2C;
+    Struct_10946D90_Node* m_Nodes;
     int Unknown30;
-    Struct_10946D90_Plane* Unknown34;
+    Struct_10946D90_Plane* m_Planes;
 };
 
 #endif // GAME_CLASS_10946D90_H

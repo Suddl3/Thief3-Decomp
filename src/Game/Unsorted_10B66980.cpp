@@ -1,6 +1,6 @@
 // Game/Unsorted_10B66980.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10B71110.h"
 #include "Game/Class_10B71140.h"
 #include "Game/Class_10B73E80.h"
@@ -21,7 +21,7 @@ class Class_10E84D80 : public Class_10B787F0
 {
 public:
     void FUN_10b671a0();
-    Class_109081E0 GetMissionStatsPaneFile();
+    cString GetMissionStatsPaneFile();
 
     void* Field00;
 };
@@ -38,7 +38,7 @@ class cDifficultyPane : public Class_10B787F0
 {
 public:
     void FUN_10b6b930();
-    Class_109081E0 GetPaneFileName();
+    cString GetPaneFileName();
 
     void* Field00;
 };
@@ -385,10 +385,10 @@ void Class_10E84D80::FUN_10b671a0()
     FUN_10b787f0();
 }
 
-// FUNCTION: 0x10B671D0 ?GetMissionStatsPaneFile@Class_10E84D80@@QAE?AVClass_109081E0@@XZ
-Class_109081E0 Class_10E84D80::GetMissionStatsPaneFile()
+// FUNCTION: 0x10B671D0 ?GetMissionStatsPaneFile@Class_10E84D80@@QAE?AVcString@@XZ
+cString Class_10E84D80::GetMissionStatsPaneFile()
 {
-    return Class_109081E0(DAT_10e84f7c);
+    return cString(DAT_10e84f7c);
 }
 
 // FUNCTION: 0x10B67F20 ?FUN_10b67f20@@YAXXZ
@@ -410,10 +410,10 @@ void cDifficultyPane::FUN_10b6b930()
     FUN_10b787f0();
 }
 
-// FUNCTION: 0x10B6BE00 ?GetPaneFileName@cDifficultyPane@@QAE?AVClass_109081E0@@XZ
-Class_109081E0 cDifficultyPane::GetPaneFileName()
+// FUNCTION: 0x10B6BE00 ?GetPaneFileName@cDifficultyPane@@QAE?AVcString@@XZ
+cString cDifficultyPane::GetPaneFileName()
 {
-    return Class_109081E0(DAT_10e85fdc);
+    return cString(DAT_10e85fdc);
 }
 
 // FUNCTION: 0x10B71110 ?FUN_10b71110@Class_10B71110@@QAEXXZ
@@ -434,10 +434,10 @@ void Class_10B71140::FUN_10b71140()
         Unknown04->Virtual124();
 }
 
-// FUNCTION: 0x10B718F0 ?GetPaneFileName@cT3OptionsWindow@@QAE?AVClass_109081E0@@XZ
-Class_109081E0 cT3OptionsWindow::GetPaneFileName()
+// FUNCTION: 0x10B718F0 ?GetPaneFileName@cT3OptionsWindow@@QAE?AVcString@@XZ
+cString cT3OptionsWindow::GetPaneFileName()
 {
-    return Class_109081E0(DAT_10e875ac);
+    return cString(DAT_10e875ac);
 }
 
 // FUNCTION: 0x10B73E60 ?FUN_10b73e60@Class_10E876D0@@QAEXXZ

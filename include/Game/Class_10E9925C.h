@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_10E9925C_H
 #define GAME_CLASS_10E9925C_H
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 class Class_109B6D50;
 
@@ -32,7 +32,7 @@ public:
 
     char Unknown04[8];
     int Unknown0C;
-    Class_109081E0 Unknown10;
+    cString Unknown10;
     char Unknown14[0x20];
     bool Unknown34;
     bool Unknown35;

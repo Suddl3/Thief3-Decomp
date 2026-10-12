@@ -19,8 +19,8 @@ bool Class_109523D0::HasAllBits(int Mask)
     return true;
 }
 
-// FUNCTION: 0x10952640 ?FUN_10952640@Class_10952640@@QAEXXZ
-void Class_10952640::FUN_10952640()
+// FUNCTION: 0x10952640 ?Apply@Class_10952640@@QAEXXZ
+void Class_10952640::Apply()
 {
     float W = 0.0f;
     if (Unknown4C)

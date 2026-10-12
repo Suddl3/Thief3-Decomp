@@ -65,10 +65,10 @@ public:
 
 extern IDirect3DDevice8* GDirect3DDevice8;
 
-int FUN_10918e90();
+int GetFrameBufferBytes();
 
-// FUNCTION: 0x10918E90 ?FUN_10918e90@@YAHXZ
-int FUN_10918e90()
+// FUNCTION: 0x10918E90 ?GetFrameBufferBytes@@YAHXZ
+int GetFrameBufferBytes()
 {
     IDirect3DSurface8* Surface;
     D3DDISPLAYMODE Mode;

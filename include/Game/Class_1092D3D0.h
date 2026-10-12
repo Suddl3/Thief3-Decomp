@@ -6,7 +6,7 @@
 class Class_1092D3D0
 {
 public:
-    void FUN_1092d3d0();
+    void HideCursor();
 
     char Unknown00[8];
     void* Unknown08;

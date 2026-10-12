@@ -128,7 +128,7 @@ extern IDirect3DDevice8* GDirect3DDevice8;
 class cD3DStateCache : public Class_109373D0
 {
 public:
-    void FUN_10936f60(int A, bool B);
+    void SetStageBorder(int A, bool B);
 };
 
 extern cD3DStateCache* DAT_10f31be0;
@@ -139,13 +139,13 @@ struct Struct_109403A0
     IDirect3DBaseTexture8* Unknown140;
 };
 
-// FUNCTION: 0x109403A0 ?FUN_109403a0@Class_109403A0@@QAEXPAUStruct_109403A0@@_N@Z
-void Class_109403A0::FUN_109403a0(Struct_109403A0* Material, bool Enable)
+// FUNCTION: 0x109403A0 ?SetMaterialTextures@Class_109403A0@@QAEXPAUStruct_109403A0@@_N@Z
+void Class_109403A0::SetMaterialTextures(Struct_109403A0* Material, bool Enable)
 {
     FUN_1093fcd0(Material);
     if (Enable)
     {
-        DAT_10f31be0->FUN_10936f60(2, false);
+        DAT_10f31be0->SetStageBorder(2, false);
         GDirect3DDevice8->SetTextureStageState(2, 24, 0);
         IDirect3DBaseTexture8** Slot = &DAT_10f31be0->Unknown1C[2];
         IDirect3DBaseTexture8* Texture = Unknown308;
@@ -155,7 +155,7 @@ void Class_109403A0::FUN_109403a0(Struct_109403A0* Material, bool Enable)
             *Slot = Texture;
         }
     }
-    DAT_10f31be0->FUN_10936f60(3, false);
+    DAT_10f31be0->SetStageBorder(3, false);
     GDirect3DDevice8->SetTextureStageState(3, 24, 0x104);
     IDirect3DBaseTexture8** Slot = &DAT_10f31be0->Unknown1C[3];
     IDirect3DBaseTexture8* Texture = Material->Unknown140;

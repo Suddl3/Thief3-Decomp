@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_10A37F30_H
 #define GAME_CLASS_10A37F30_H
 
-class Class_109081E0;
+class cString;
 class Class_10A382D0;
 struct Struct_10A378B0;
 
@@ -28,8 +28,8 @@ public:
     virtual float Virtual15();
 
     void FUN_10a37f30(Struct_10A378B0* A);
-    Class_109081E0 FUN_10a38f00();
-    Class_10A382D0* FUN_10a382d0(const Class_109081E0& Name);
+    cString FUN_10a38f00();
+    Class_10A382D0* FUN_10a382d0(const cString& Name);
     float FUN_10a38f40();
 
     char Unknown04[0x40];
@@ -37,7 +37,7 @@ public:
     char Pad48[0x554];
     int Unknown59C;
     char Unknown5A0[4];
-    Class_109081E0* Unknown5A4;
+    cString* Unknown5A4;
 };
 
 #endif // GAME_CLASS_10A37F30_H

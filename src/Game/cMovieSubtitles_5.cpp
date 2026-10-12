@@ -1,6 +1,6 @@
 // Game/cMovieSubtitles_5.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10A55050.h"
 #include "Game/Class_10A55080.h"
 #include "Game/Class_10A55090.h"
@@ -8,9 +8,9 @@
 
 extern const char DAT_10e7bda0[];
 
-Class_109081E0 FUN_10950e50(const Class_109081E0& Text);
+cString FUN_10950e50(const cString& Text);
 
-Class_109081E0 FUN_1090a660(const char* Format, ...);
+cString FUN_1090a660(const char* Format, ...);
 
 class cMovieSubtitles
 {
@@ -35,7 +35,7 @@ void cMovieSubtitles::LoadSubtitles()
         Unknown138 = 0;
         return;
     }
-    Class_109081E0 Movie = FUN_10950e50(FUN_1090a660(DAT_10e7bda0, Unknown12C.FUN_1091abb0().Unknown00));
+    cString Movie = FUN_10950e50(FUN_1090a660(DAT_10e7bda0, Unknown12C.FUN_1091abb0().Unknown00));
     ((Class_10A55050*)Unknown134)->FUN_10a55780((int)&Movie);
     ((Class_10A55080*)Unknown134)->FUN_10a55080(1);
     ((Class_10A55090*)Unknown134)->FUN_10a55090(0);

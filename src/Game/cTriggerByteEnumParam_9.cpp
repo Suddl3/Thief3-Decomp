@@ -1,13 +1,13 @@
 // Game/cTriggerByteEnumParam_9.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Struct_10A8C2B0_Outer.h"
 
 class FName
 {
 public:
-    Class_109081E0 FUN_10af9730() const;
+    cString FUN_10af9730() const;
 
     unsigned long Value;
 };
@@ -30,7 +30,7 @@ public:
     virtual void FirstValue();
     virtual void NextValue();
     virtual int IsAtEnd();
-    virtual Class_109081E0 GetCurrentValue();
+    virtual cString GetCurrentValue();
     virtual bool HasIndex();
     virtual void Virtual10();
     virtual void Virtual11();
@@ -49,17 +49,17 @@ extern const char DAT_10e6c100[];
 
 extern const char DAT_10e48c2c[];
 
-Class_109081E0 FUN_1090a660(const char* Format, int Value);
+cString FUN_1090a660(const char* Format, int Value);
 
-// FUNCTION: 0x10A8C830 ?GetCurrentValue@cTriggerByteEnumParam@@UAE?AVClass_109081E0@@XZ
-Class_109081E0 cTriggerByteEnumParam::GetCurrentValue()
+// FUNCTION: 0x10A8C830 ?GetCurrentValue@cTriggerByteEnumParam@@UAE?AVcString@@XZ
+cString cTriggerByteEnumParam::GetCurrentValue()
 {
     if (Unknown04 && Unknown04->Unknown60)
     {
         int Count = Unknown04->Unknown60->Unknown38;
         if (DAT_10f3a1f0 < Count)
-            return Class_109081E0(Unknown04->Unknown60->Unknown34[DAT_10f3a1f0].FUN_10af9730());
-        return Class_109081E0(DAT_10e6c100);
+            return cString(Unknown04->Unknown60->Unknown34[DAT_10f3a1f0].FUN_10af9730());
+        return cString(DAT_10e6c100);
     }
-    return Class_109081E0(FUN_1090a660(DAT_10e48c2c, DAT_10f3a1f0));
+    return cString(FUN_1090a660(DAT_10e48c2c, DAT_10f3a1f0));
 }

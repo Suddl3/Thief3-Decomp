@@ -7,10 +7,10 @@ Class_10905A90_Member* GetAllocator();
 
 void ReadString(void* A, int* B);
 
-class Class_109081E0
+class cString
 {
 public:
-    ~Class_109081E0()
+    ~cString()
     {
         if (Unknown00)
         {
@@ -18,7 +18,7 @@ public:
             GetAllocator()->Virtual5(Block);
         }
     }
-    Class_109081E0& operator=(const Class_109081E0& Other);
+    cString& operator=(const cString& Other);
 
     char* Unknown00;
 };
@@ -28,7 +28,7 @@ struct Struct_10AA3520
     virtual void Virtual0();
     virtual void Virtual1();
     virtual void Virtual2();
-    virtual Class_109081E0 Virtual3(const Class_109081E0& Key);
+    virtual cString Virtual3(const cString& Key);
 };
 
 extern Struct_10AA3520* DAT_10f35dec;
@@ -39,11 +39,11 @@ public:
     void Load(void* A, int Count, int Unused);
 
     char Pad00[0xc];
-    Class_109081E0 Unknown0C;
-    Class_109081E0 Unknown10;
+    cString Unknown0C;
+    cString Unknown10;
     char Pad14[0x4];
-    Class_109081E0 Unknown18;
-    Class_109081E0 Unknown1C;
+    cString Unknown18;
+    cString Unknown1C;
     int Unknown20;
     int Unknown24;
 };

@@ -5,7 +5,7 @@
 #include "Game/Class_1090FD40.h"
 #include "Game/Class_10C5E4E0.h"
 
-class Class_109081E0;
+class cString;
 
 class Class_10E9C990;
 

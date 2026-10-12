@@ -3,13 +3,13 @@
 #ifndef GAME_CLASS_10C57310_H
 #define GAME_CLASS_10C57310_H
 
-class Class_109081E0;
+class cString;
 class Class_10C57310_Unknown00;
 
 class Class_10C57310
 {
 public:
-    bool FUN_10c57310(Class_109081E0* A, float B);
+    bool FUN_10c57310(cString* A, float B);
 
     Class_10C57310_Unknown00* Unknown00;
 };

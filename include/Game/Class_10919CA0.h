@@ -6,7 +6,7 @@
 class Class_10919CA0
 {
 public:
-    float FUN_10919ca0(int p1);
+    float GetField14(int p1);
 
     char Unknown00[0x14];
     float Field14;

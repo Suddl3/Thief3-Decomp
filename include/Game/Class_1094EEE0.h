@@ -20,7 +20,7 @@ public:
     virtual void Virtual9();
     virtual void Virtual10(int Index, void* Value);
 
-    void FUN_1094eee0(const char* Name, int Index);
+    void Load(const char* Name, int Index);
 
     char Pad04[0xEC];
     int UnknownF0;

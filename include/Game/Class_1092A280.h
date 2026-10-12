@@ -8,7 +8,7 @@ class Class_1092A280_Node;
 class Class_1092A280
 {
 public:
-    Class_1092A280_Node* FUN_1092a280();
+    Class_1092A280_Node* AllocNode();
 
     Class_1092A280_Node* Head;
     Class_1092A280_Node* Tail;

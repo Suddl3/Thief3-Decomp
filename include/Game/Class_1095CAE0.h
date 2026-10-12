@@ -6,10 +6,10 @@
 class Class_1095CAE0
 {
 public:
-    Class_1095CAE0* FUN_1095cae0(int A);
+    Class_1095CAE0* Init(int A);
 
     int* Unknown00;
-    int Unknown04;
+    int m_Count;
 };
 
 #endif // GAME_CLASS_1095CAE0_H

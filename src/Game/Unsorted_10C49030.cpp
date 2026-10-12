@@ -6,7 +6,7 @@
 #include "Game/Class_10C491E0.h"
 #include "Game/Struct_10C49030.h"
 #include "Game/Class_10C49100.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10C49100_Node.h"
 #include "Game/Class_10E9BB8C.h"
 
@@ -17,8 +17,8 @@ void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
 unsigned int HashBytes(const void* Data, int Length);
 
-// FUNCTION: 0x10C49100 ?Insert@Class_10C49100@@QAEIABVClass_109081E0@@ABH@Z
-unsigned int Class_10C49100::Insert(const Class_109081E0& Key, const int& Value)
+// FUNCTION: 0x10C49100 ?Insert@Class_10C49100@@QAEIABVcString@@ABH@Z
+unsigned int Class_10C49100::Insert(const cString& Key, const int& Value)
 {
     if (!m_FixedSize && m_Collisions > m_BucketCount * 0.2)
         Rehash(m_BucketCount * 2);

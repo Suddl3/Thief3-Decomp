@@ -3,7 +3,7 @@
 #ifndef GAME_CMENU_H
 #define GAME_CMENU_H
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 class Class_1090A780;
 
@@ -20,10 +20,10 @@ public:
     virtual void Virtual7();
     virtual void Virtual8();
     virtual Class_1090A780 FUN_10c26a40();
-    virtual void FUN_10a634d0(const Class_109081E0& A);
+    virtual void FUN_10a634d0(const cString& A);
 
     char Unknown04[0xC];
-    Class_109081E0 Unknown10;
+    cString Unknown10;
 };
 
 #endif // GAME_CMENU_H

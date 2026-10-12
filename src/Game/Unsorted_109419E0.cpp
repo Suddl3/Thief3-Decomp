@@ -11,8 +11,8 @@ public:
     char Unknown00[0x44];
 };
 
-// FUNCTION: 0x10941AC0 ?FUN_10941ac0@Class_10941AC0@@QAEXXZ
-void Class_10941AC0::FUN_10941ac0()
+// FUNCTION: 0x10941AC0 ?Reset@Class_10941AC0@@QAEXXZ
+void Class_10941AC0::Reset()
 {
     for (int i = 0; i < Unknown04.Unknown00; i++)
         ((Class_109415F0*)Unknown04.Unknown08)[i].FUN_109415f0();

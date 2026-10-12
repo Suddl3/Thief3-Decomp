@@ -3,7 +3,7 @@
 #include "Game/Class_10B1B8A0.h"
 #include "Game/Class_10B374A0.h"
 #include "Game/WindowManager.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10AB37C0.h"
 #include "Game/Class_10B154C0.h"
 #include "Game/Class_10B36E40_Arg.h"
@@ -31,8 +31,8 @@ int __stdcall FUN_10b36e40(int A, int B, Class_10B36E40_Arg* C)
 {
     if (GWindowManager)
     {
-        Class_109081E0 Text(*(Class_1090A780*)C->Virtual4(0)->FUN_10ab37c0());
-        Class_109081E0 Key;
+        cString Text(*(Class_1090A780*)C->Virtual4(0)->FUN_10ab37c0());
+        cString Key;
         FUN_10a27a60(&Text, &Key);
         ((Class_10B154C0*)FUN_10b154c0())->FUN_10b15e30(&Key, FUN_10abc760(0).Unknown00);
     }

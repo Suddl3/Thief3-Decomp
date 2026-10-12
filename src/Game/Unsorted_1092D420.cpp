@@ -24,8 +24,8 @@ Class_1092D420* Class_1092D420::Initialize()
     return this;
 }
 
-// FUNCTION: 0x1092D940 ?FUN_1092d940@Class_1092D940@@QAEEE@Z
-unsigned char Class_1092D940::FUN_1092d940(unsigned char param)
+// FUNCTION: 0x1092D940 ?Exchange@Class_1092D940@@QAEEE@Z
+unsigned char Class_1092D940::Exchange(unsigned char param)
 {
     unsigned char old = Unknown7D;
     Unknown7D = param;

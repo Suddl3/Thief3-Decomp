@@ -8,7 +8,7 @@
 class Class_109329F0 : public Class_10932830
 {
 public:
-    void FUN_109329f0(int Param);
+    void Reset(int Param);
 };
 
 #endif // GAME_CLASS_109329F0_H

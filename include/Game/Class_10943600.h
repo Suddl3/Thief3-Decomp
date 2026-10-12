@@ -18,7 +18,7 @@ public:
         Empty();
     }
 
-    int FUN_10943600(const Item_10943600* Item);
+    int Add(const Item_10943600* Item);
     void FUN_10da4f50(int NewCount);
     void Empty()
     {

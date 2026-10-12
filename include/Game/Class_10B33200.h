@@ -3,16 +3,16 @@
 #ifndef GAME_CLASS_10B33200_H
 #define GAME_CLASS_10B33200_H
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 class Class_10B33200
 {
 public:
-    Class_10B33200(int A, const Class_109081E0& B, const Class_109081E0& C, int D);
+    Class_10B33200(int A, const cString& B, const cString& C, int D);
 
     int Unknown00;
-    Class_109081E0 Unknown04;
-    Class_109081E0 Unknown08;
+    cString Unknown04;
+    cString Unknown08;
     int Unknown0C;
 };
 

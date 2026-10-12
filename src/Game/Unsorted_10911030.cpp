@@ -19,7 +19,7 @@ class Class_10E499F4
 {
 public:
     void ResetVTable();
-    float FUN_1091e360();
+    float GetField180();
 
     void* VTable;
     char Pad04[0x17c];
@@ -46,8 +46,8 @@ unsigned char Class_10914D60::GetField08()
     return Field08;
 }
 
-// FUNCTION: 0x10914D70 ?FUN_10914d70@Class_10914D70@@QAEEXZ
-unsigned char Class_10914D70::FUN_10914d70()
+// FUNCTION: 0x10914D70 ?GetField09@Class_10914D70@@QAEEXZ
+unsigned char Class_10914D70::GetField09()
 {
     return Field09;
 }
@@ -64,14 +64,14 @@ float FUN_10919180()
     return DAT_10f2c8e0;
 }
 
-// FUNCTION: 0x10919B80 ?FUN_10919b80@Class_10919B80@@QAEXH@Z
-void Class_10919B80::FUN_10919b80(int p1)
+// FUNCTION: 0x10919B80 ?SetField28@Class_10919B80@@QAEXH@Z
+void Class_10919B80::SetField28(int p1)
 {
     Field28 = p1;
 }
 
-// FUNCTION: 0x10919CA0 ?FUN_10919ca0@Class_10919CA0@@QAEMH@Z
-float Class_10919CA0::FUN_10919ca0(int p1)
+// FUNCTION: 0x10919CA0 ?GetField14@Class_10919CA0@@QAEMH@Z
+float Class_10919CA0::GetField14(int p1)
 {
     return Field14;
 }
@@ -95,8 +95,8 @@ void Class_10E499F4::ResetVTable()
     VTable = DAT_10e499f4;
 }
 
-// FUNCTION: 0x1091E360 ?FUN_1091e360@Class_10E499F4@@QAEMXZ
-float Class_10E499F4::FUN_1091e360()
+// FUNCTION: 0x1091E360 ?GetField180@Class_10E499F4@@QAEMXZ
+float Class_10E499F4::GetField180()
 {
     return Field180;
 }

@@ -5,14 +5,14 @@
 
 #include "Game/Class_1091AA10.h"
 
-class Class_109081E0;
+class cString;
 class Class_1091CA00;
 
 class Class_1091DEE0 : public Class_1091AA10
 {
 public:
-    Class_1091CA00* FUN_1091dee0(int A);
-    Class_1091CA00* FUN_1091dc40(const Class_109081E0& Name);
+    Class_1091CA00* GetFont(int A);
+    Class_1091CA00* FUN_1091dc40(const cString& Name);
 
     char Pad01[0x27];
     float Unknown28;

@@ -75,7 +75,7 @@ void cFMVWindow::Update(int A)
     FUN_10a53560(A);
     if (m_Stream)
     {
-        m_Stream->FUN_10950230();
+        m_Stream->DecodeFrame();
         if (m_Stream->FUN_10dbbbb0())
             Virtual109();
     }

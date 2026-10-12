@@ -102,8 +102,8 @@ public:
     Struct_1091F740_Unknown54* Unknown54;
 };
 
-// FUNCTION: 0x1091F740 ?FUN_1091f740@Class_1091F740@@QAEXPAVClass_1091F740_Param0@@@Z
-void Class_1091F740::FUN_1091f740(Class_1091F740_Param0* Param)
+// FUNCTION: 0x1091F740 ?ClearFlags@Class_1091F740@@QAEXPAVClass_1091F740_Param0@@@Z
+void Class_1091F740::ClearFlags(Class_1091F740_Param0* Param)
 {
     if (Param)
     {
@@ -120,8 +120,8 @@ void Class_1091F740::FUN_1091f740(Class_1091F740_Param0* Param)
                 Unknown0C->Unknown50[i].Unknown10[j]->Unknown48 = false;
         }
     }
-    for (int i = 0; i < Unknown30; i++)
-        Unknown38[i]->Unknown48 = false;
+    for (int i = 0; i < m_NumItems; i++)
+        m_Items[i]->Unknown48 = false;
     for (int i = 0; i < Unknown3C; i++)
     {
         Unknown44[i]->Unknown48 = false;
@@ -141,14 +141,14 @@ void Class_1091F9B0::FUN_1091f9b0()
         for (int i = 0; i < Unknown0C->Unknown0C; i++)
             Unknown0C->Unknown54[i].FUN_10948260();
     }
-    for (int i = 0; i < Unknown30; i++)
-        Unknown38[i]->FUN_10948260();
+    for (int i = 0; i < m_NumItems; i++)
+        m_Items[i]->FUN_10948260();
 }
 
-// FUNCTION: 0x109203B0 ?FUN_109203b0@Class_109203B0@@QAEPAV1@XZ
-Class_109203B0* Class_109203B0::FUN_109203b0()
+// FUNCTION: 0x109203B0 ?Init@Class_109203B0@@QAEPAV1@XZ
+Class_109203B0* Class_109203B0::Init()
 {
-    Unknown00 = _time32(0);
+    m_InitTime = _time32(0);
     Unknown30 = 0;
     Unknown34 = 0;
     Unknown38 = 0;

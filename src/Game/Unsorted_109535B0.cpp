@@ -1,7 +1,7 @@
 // Game/Unsorted_109535B0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10955C30.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_109535D0.h"
 
 extern const char DAT_10e4a3c8[];
@@ -51,7 +51,7 @@ void Class_109535D0::FUN_109535d0()
         Unknown2C = 1;
         if (Bad)
         {
-            ((Class_109081E0*)Unknown90)->FUN_1090a590(DAT_10e4a3c8);
+            ((cString*)Unknown90)->FUN_1090a590(DAT_10e4a3c8);
             FUN_10939410(0);
         }
     }

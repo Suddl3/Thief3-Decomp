@@ -5,7 +5,7 @@
 
 #include "Game/Class_10A905A0.h"
 
-class Class_109081E0;
+class cString;
 
 class Class_10E66390 : public Class_10A905A0
 {
@@ -14,7 +14,7 @@ public:
     virtual int FUN_10a2fcb0(Class_10E66390* A);
     virtual void Virtual2();
 
-    Class_10E66390(const Class_109081E0& A);
+    Class_10E66390(const cString& A);
 
     int Unknown04;
 };

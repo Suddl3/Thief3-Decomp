@@ -52,7 +52,7 @@ public:
 // FUNCTION: 0x10942050 ?FUN_10942050@Class_10E4A668@@UAE_NXZ
 bool Class_10E4A668::FUN_10942050()
 {
-    if (((Class_109481D0*)this)->FUN_109481d0(0x400))
+    if (((Class_109481D0*)this)->HasFlags(0x400))
         return false;
     for (int i = 0; i < Unknown0F0; i++)
     {

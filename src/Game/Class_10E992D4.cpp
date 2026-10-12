@@ -1,6 +1,6 @@
 // Game/Class_10E992D4.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_109B6D50.h"
 
 class Class_10E9925C
@@ -20,7 +20,7 @@ public:
 
     char Unknown04[8];
     int Unknown0C;
-    Class_109081E0 Unknown10;
+    cString Unknown10;
     char Unknown14[0x20];
     bool Unknown34;
 };

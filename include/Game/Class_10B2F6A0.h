@@ -3,20 +3,20 @@
 #ifndef GAME_CLASS_10B2F6A0_H
 #define GAME_CLASS_10B2F6A0_H
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 class Class_10B2F6A0
 {
 public:
     void RefreshLabel();
     void FUN_10b2f6a0(unsigned char param);
-    void SetName(const Class_109081E0& Name);
+    void SetName(const cString& Name);
     void SetCount(int p1);
 
     char Unknown00[0x120];
     void* m_Label;
     char Unknown124[0x18];
-    Class_109081E0 m_Name;
+    cString m_Name;
     char Pad140[0x4];
     int m_Count;
     unsigned char Unknown148;

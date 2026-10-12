@@ -1,7 +1,7 @@
 // Game/Class_10E7B360_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 extern const char DAT_10e47660[];
 
@@ -35,26 +35,26 @@ public:
     virtual void Virtual96(); virtual void Virtual97(); virtual void Virtual98(); virtual void Virtual99();
     virtual void Virtual100(); virtual void Virtual101(); virtual void Virtual102(); virtual void Virtual103();
     virtual void Virtual104(); virtual void Virtual105(); virtual void Virtual106(); virtual void Virtual107();
-    virtual Class_109081E0 FUN_10b2bd70(int State);
+    virtual cString FUN_10b2bd70(int State);
 };
 
-// FUNCTION: 0x10B2BD70 ?FUN_10b2bd70@Class_10E7B360@@UAE?AVClass_109081E0@@H@Z
-Class_109081E0 Class_10E7B360::FUN_10b2bd70(int State)
+// FUNCTION: 0x10B2BD70 ?FUN_10b2bd70@Class_10E7B360@@UAE?AVcString@@H@Z
+cString Class_10E7B360::FUN_10b2bd70(int State)
 {
     switch (State)
     {
     case 1:
-        return Class_109081E0("View");
+        return cString("View");
     case 2:
-        return Class_109081E0("UnEquip");
+        return cString("UnEquip");
     case 6:
-        return Class_109081E0("CantEquip");
+        return cString("CantEquip");
     case 3:
-        return Class_109081E0("Moving");
+        return cString("Moving");
     case 4:
-        return Class_109081E0("Settle");
+        return cString("Settle");
     case 5:
-        return Class_109081E0("Compact");
+        return cString("Compact");
     }
-    return Class_109081E0(DAT_10e47660);
+    return cString(DAT_10e47660);
 }

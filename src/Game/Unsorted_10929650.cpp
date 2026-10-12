@@ -19,8 +19,8 @@ extern int DAT_10f31ad4;
 
 extern Struct_10929600** DAT_10f31adc;
 
-// FUNCTION: 0x10929650 ?FUN_10929650@@YAXXZ
-void FUN_10929650()
+// FUNCTION: 0x10929650 ?CreateTextures@@YAXXZ
+void CreateTextures()
 {
     for (int i = 0; i < DAT_10f31ad4; i++)
     {

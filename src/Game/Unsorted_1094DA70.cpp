@@ -6,7 +6,7 @@
 #include "Game/Info_1094DF40.h"
 #include "Game/Struct_1094DF00.h"
 #include "Game/Class_10905A90_Member.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10E4AA94.h"
 
 extern "C" int memcmp(const void*, const void*, unsigned);
@@ -44,12 +44,12 @@ void Class_1094DF40::FUN_1094df40(const Info_1094DF40* In)
     Unknown14C = *In;
 }
 
-// FUNCTION: 0x1094DF60 ?FUN_1094df60@Class_1094DF60@@QAEXH@Z
-void Class_1094DF60::FUN_1094df60(int A)
+// FUNCTION: 0x1094DF60 ?SetCurrentIndex@Class_1094DF60@@QAEXH@Z
+void Class_1094DF60::SetCurrentIndex(int A)
 {
-    Unknown110 = A;
-    if (Unknown110 >= Unknown10C)
-        Unknown110 = Unknown10C - 1;
-    if (Unknown110 < 0)
-        Unknown110 = 0;
+    m_CurrentIndex = A;
+    if (m_CurrentIndex >= m_Count)
+        m_CurrentIndex = m_Count - 1;
+    if (m_CurrentIndex < 0)
+        m_CurrentIndex = 0;
 }

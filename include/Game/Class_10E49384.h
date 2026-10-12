@@ -8,10 +8,10 @@ class Class_10E49384
 public:
     ~Class_10E49384();
 
-    Class_10E49384* FUN_10913a40();
+    Class_10E49384* Init();
 
     void** VTable;
-    int Unknown04;
+    int m_Block;
 };
 
 #endif // GAME_CLASS_10E49384_H

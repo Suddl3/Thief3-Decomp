@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_10C5BA80_H
 #define GAME_CLASS_10C5BA80_H
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Struct_10C5BA20.h"
 
 class Class_10C5BA80
@@ -12,8 +12,8 @@ public:
     Class_10C5BA80(const Class_10C5BA80& Other);
     ~Class_10C5BA80();
 
-    Class_109081E0 Unknown00;
-    Class_109081E0 Unknown04;
+    cString Unknown00;
+    cString Unknown04;
     bool Unknown08;
     char Pad09[0x3];
     Struct_10C5BA20 Unknown0C;

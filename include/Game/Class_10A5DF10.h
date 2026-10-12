@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_10A5DF10_H
 #define GAME_CLASS_10A5DF10_H
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Struct_10A5DF10.h"
 
 class Class_10A5DF10
@@ -14,7 +14,7 @@ public:
     Struct_10A5DF10 Unknown00;
     Struct_10A5DF10 Unknown10;
     int Unknown20;
-    Class_109081E0 Unknown24;
+    cString Unknown24;
 };
 
 #endif // GAME_CLASS_10A5DF10_H

@@ -9,12 +9,12 @@ class Class_10915210;
 class Class_10914180
 {
 public:
-    void FUN_10914180(const Class_1090A780& A, int B);
+    void SetAll(const Class_1090A780& A, int B);
 
     int Unknown00;
-    int Unknown04;
+    int m_ChildCount;
     int Unknown08;
-    Class_10915210** Unknown0C;
+    Class_10915210** m_Children;
 };
 
 #endif // GAME_CLASS_10914180_H

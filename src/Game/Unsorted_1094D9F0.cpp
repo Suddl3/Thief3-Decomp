@@ -86,10 +86,10 @@ struct Struct_1094D9F0
     void* Unknown30;
 };
 
-// FUNCTION: 0x1094D9F0 ?FUN_1094d9f0@Class_1094D9F0@@QAEXH@Z
-void Class_1094D9F0::FUN_1094d9f0(int Stage)
+// FUNCTION: 0x1094D9F0 ?SetStageTexture@Class_1094D9F0@@QAEXH@Z
+void Class_1094D9F0::SetStageTexture(int Stage)
 {
-    Struct_1094D9F0* Info = Unknown14[Stage];
+    Struct_1094D9F0* Info = m_Stages[Stage];
     if (Info)
     {
         void* Texture = Info->Unknown30;

@@ -10,7 +10,7 @@ struct Struct_109401B0;
 class Class_109401B0
 {
 public:
-    void FUN_109401b0(Struct_109401B0* P, bool B);
+    void SetVertexShaderMatrix(Struct_109401B0* P, bool B);
 
     char Unknown00[0x310];
     D3DXMATRIX Unknown310;

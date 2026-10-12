@@ -1,12 +1,12 @@
 // Game/Class_10E682F0_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_109081E0.h"
-#include "Game/Class_109501A0.h"
+#include "Game/cString.h"
+#include "Game/cBinkMovie.h"
 #include "Game/Class_10DB58F0.h"
 
 class Class_10E9CB00;
 
-class Class_109501A0;
+class cBinkMovie;
 
 class Class_10B697A0;
 
@@ -171,22 +171,22 @@ public:
     virtual void FUN_10a54d50();
 
     char Unknown04[0x114];
-    Class_109501A0* m_Stream;
-    Class_109081E0 m_MovieName;
+    cBinkMovie* m_Stream;
+    cString m_MovieName;
     bool Unknown120;
     unsigned char Unknown121;
 
-    void Play(const Class_109081E0& Name, int Flag);
+    void Play(const cString& Name, int Flag);
 };
 
-// FUNCTION: 0x10A54EB0 ?Play@cFMVWindow@@QAEXABVClass_109081E0@@H@Z
-void cFMVWindow::Play(const Class_109081E0& Name, int Flag)
+// FUNCTION: 0x10A54EB0 ?Play@cFMVWindow@@QAEXABVcString@@H@Z
+void cFMVWindow::Play(const cString& Name, int Flag)
 {
     if (m_Stream)
         FUN_10a54d50();
-    Class_109081E0 Desc;
+    cString Desc;
     FUN_10db58f0()->Virtual24(*Name, 9, &Desc, 1);
-    m_Stream = new(0, 0, 0, 0, 0) Class_109501A0(Desc, Flag, 1.0f, Unknown121);
+    m_Stream = new(0, 0, 0, 0, 0) cBinkMovie(Desc, Flag, 1.0f, Unknown121);
     m_MovieName = Name;
     Unknown120 = false;
     Class_10E682E0 Local;

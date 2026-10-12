@@ -1,8 +1,8 @@
 // Game/Unsorted_10919390.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-// FUNCTION: 0x10919390 ?FUN_10919390@@YAXPBMPAE@Z
-void FUN_10919390(const float* Normal, unsigned char* Color)
+// FUNCTION: 0x10919390 ?PackNormalColor@@YAXPBMPAE@Z
+void PackNormalColor(const float* Normal, unsigned char* Color)
 {
     float Biased[3];
     Color[3] = 0xff;

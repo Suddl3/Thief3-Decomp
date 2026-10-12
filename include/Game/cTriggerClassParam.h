@@ -5,7 +5,7 @@
 
 #include "Game/Class_10E6BF84.h"
 
-class Class_109081E0;
+class cString;
 
 class cTriggerClassParam : public Class_10E6BF84
 {
@@ -13,12 +13,12 @@ public:
     virtual ~cTriggerClassParam();
     virtual void Virtual1();
     virtual void Virtual2();
-    virtual Class_109081E0 GetTypeName();
+    virtual cString GetTypeName();
     virtual void Virtual4();
     virtual void Virtual5();
     virtual void FUN_10a89560();
     virtual int FUN_10a89230();
-    virtual Class_109081E0 FUN_10a89290();
+    virtual cString FUN_10a89290();
     virtual void Virtual9();
     virtual void WriteValue(int A, void* Stream);
     virtual void Virtual11() = 0;

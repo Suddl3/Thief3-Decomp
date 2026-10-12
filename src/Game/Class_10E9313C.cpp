@@ -1,7 +1,7 @@
 // Game/Class_10E9313C.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Core/Core.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10E9313C.h"
 #include "Game/Class_10E97B00.h"
 

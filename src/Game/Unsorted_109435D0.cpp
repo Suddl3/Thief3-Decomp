@@ -9,17 +9,17 @@ struct Struct_109435D0
     char Unknown00[0x30];
 };
 
-// FUNCTION: 0x109435D0 ?FUN_109435d0@Class_109435D0@@QAEHABUStruct_109435D0@@@Z
-int Class_109435D0::FUN_109435d0(const Struct_109435D0& Item)
+// FUNCTION: 0x109435D0 ?Add@Class_109435D0@@QAEHABUStruct_109435D0@@@Z
+int Class_109435D0::Add(const Struct_109435D0& Item)
 {
-    int Index = Unknown00;
+    int Index = m_Count;
     FUN_10942d20(Index + 1);
-    Unknown08[Index] = Item;
+    m_Items[Index] = Item;
     return Index;
 }
 
-// FUNCTION: 0x10943600 ?FUN_10943600@Class_10943600@@QAEHPBUItem_10943600@@@Z
-int Class_10943600::FUN_10943600(const Item_10943600* Item)
+// FUNCTION: 0x10943600 ?Add@Class_10943600@@QAEHPBUItem_10943600@@@Z
+int Class_10943600::Add(const Item_10943600* Item)
 {
     int Index = Unknown00;
     FUN_10da4f50(Index + 1);

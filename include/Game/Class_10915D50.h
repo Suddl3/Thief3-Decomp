@@ -5,7 +5,7 @@
 
 #include "Game/Class_10915D50_Field18.h"
 
-class Class_109081E0;
+class cString;
 class Class_10915D50_Node;
 
 class Class_10915D50
@@ -13,9 +13,9 @@ class Class_10915D50
 public:
     Class_10915D50() : m_Collisions(0), m_Count(0), m_Size(0), m_NoResize(false), m_Table(0) {}
 
-    unsigned int Insert(const Class_109081E0& Key, const int& Value);
+    unsigned int Insert(const cString& Key, const int& Value);
     void Rehash(int Size);
-    bool Remove(const Class_109081E0& Key);
+    bool Remove(const cString& Key);
 
     union
     {

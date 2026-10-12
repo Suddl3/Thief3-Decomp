@@ -50,8 +50,8 @@ extern const char DAT_10e47660[];
 
 extern MiniDumpWriteDumpFn DAT_10f2c418;
 
-// FUNCTION: 0x10911C40 ?FUN_10911c40@@YGHPBDPAG@Z
-int __stdcall FUN_10911c40(const char* Name, wchar_t* Out)
+// FUNCTION: 0x10911C40 ?ConvertFontName@@YGHPBDPAG@Z
+int __stdcall ConvertFontName(const char* Name, wchar_t* Out)
 {
     char Buf[33];
     if (Name)
@@ -66,8 +66,8 @@ int __stdcall FUN_10911c40(const char* Name, wchar_t* Out)
     return MultiByteToWideChar(GetACP(), 1, Buf, Length, Out, Length) + 1;
 }
 
-// FUNCTION: 0x10911EC0 ?FUN_10911ec0@@YGHPAUStruct_10911EC0@@@Z
-int __stdcall FUN_10911ec0(Struct_10911EC0* Param)
+// FUNCTION: 0x10911EC0 ?WriteMiniDump@@YGHPAUStruct_10911EC0@@@Z
+int __stdcall WriteMiniDump(Struct_10911EC0* Param)
 {
     HMODULE Module = LoadLibraryA("dbghelp.dll");
     if (!Module)

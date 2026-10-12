@@ -9,8 +9,8 @@ public:
     char Pad00[0x9C];
     int Unknown9C;
     char PadA0[0x8];
-    Node_10932350* UnknownA8;
-    Node_10932350* UnknownAC;
+    Node_10932350* m_Prev;
+    Node_10932350* m_Next;
     char* UnknownB0;
 };
 

@@ -1,6 +1,6 @@
 // Game/Unsorted_10B270D0_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/cIntArray.h"
 #include "Game/Class_10B27090.h"
 #include "Game/Class_10B17210.h"
@@ -81,7 +81,7 @@ public:
     char Unknown00[8];
     char* m_Active;
     char Unknown0C[8];
-    Class_109081E0* Unknown14;
+    cString* Unknown14;
     char Unknown18[8];
     int* Unknown20;
     char Unknown24[0xC];
@@ -111,7 +111,7 @@ void Class_10B27220::Stop()
         Unknown30 = 0;
     }
     m_Active[Index] = 0;
-    Unknown14[Index] = Class_109081E0(DAT_10e47660);
+    Unknown14[Index] = cString(DAT_10e47660);
     Unknown20[Index] = 0;
     m_StopPending = false;
     ((Class_10B27090*)this)->FUN_10b26e00();

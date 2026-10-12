@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Core/Core.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10970890.h"
 #include "Game/Class_1098E330.h"
 
@@ -13,7 +13,7 @@ class Object_10970890
 public:
     virtual void Virtual0();
     virtual void Virtual1();
-    virtual Class_109081E0 Virtual2();
+    virtual cString Virtual2();
     virtual void Virtual3();
     virtual void Virtual4();
     virtual void Virtual5();
@@ -33,7 +33,7 @@ public:
     virtual void Virtual19();
     virtual void Virtual20();
     virtual int Virtual21();
-    virtual Class_109081E0& Virtual22(int Index);
+    virtual cString& Virtual22(int Index);
 };
 
 class Class_10A773F0_Param

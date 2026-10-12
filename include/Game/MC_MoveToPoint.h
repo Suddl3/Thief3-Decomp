@@ -5,7 +5,7 @@
 
 #include "Game/Class_10C271A0.h"
 
-class Class_109081E0;
+class cString;
 class Class_10C39220;
 class FArchive;
 
@@ -18,7 +18,7 @@ public:
     virtual bool FUN_10c27090(int A);
 
     void FUN_10c2eb30();
-    Class_109081E0 GetClassName();
+    cString GetClassName();
 
     char Unknown04[0x44];
     Class_10C39220* Unknown48;

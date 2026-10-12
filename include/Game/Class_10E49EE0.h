@@ -13,7 +13,7 @@ public:
     virtual void Virtual2();
     virtual unsigned int FUN_10934260();
     virtual void Virtual4();
-    virtual int FUN_10934a20();
+    virtual int UnlockVertices();
     virtual int FUN_109342f0(int A);
     virtual void Virtual7();
     virtual ~Class_10E49EE0();

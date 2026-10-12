@@ -3,8 +3,8 @@
 #include "Game/Class_109296A0.h"
 #include "Game/Struct_109296A0_Node.h"
 
-// FUNCTION: 0x109296A0 ?FUN_109296a0@Class_109296A0@@QAEXPAUStruct_109296A0_Node@@@Z
-void Class_109296A0::FUN_109296a0(Struct_109296A0_Node* Node)
+// FUNCTION: 0x109296A0 ?MoveToBack@Class_109296A0@@QAEXPAUStruct_109296A0_Node@@@Z
+void Class_109296A0::MoveToBack(Struct_109296A0_Node* Node)
 {
     if (!Node)
         return;

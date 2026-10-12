@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10E65558.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 extern const char DAT_10e5027c[];
 
@@ -12,7 +12,7 @@ public:
     cTaggedAnimSeq();
     virtual ~cTaggedAnimSeq();
 
-    Class_109081E0 m_Name;
+    cString m_Name;
 };
 
 // FUNCTION: 0x10A1EDE0 ??0cTaggedAnimSeq@@QAE@XZ

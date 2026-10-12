@@ -5,7 +5,7 @@
 #include "Game/Class_10B9CAC0.h"
 #include "Game/Class_10BBDB40.h"
 #include "Game/Class_10C7D570.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10E97B00.h"
 #include "Game/Class_10BC9A50.h"
 
@@ -122,7 +122,7 @@ void Class_10BBB410::UpdateReprimand()
                 Unknown1EC = false;
                 if (FUN_10bb7f30()->GetCurrent()->Virtual63())
                 {
-                    Class_109081E0 Text(DAT_10e47660);
+                    cString Text(DAT_10e47660);
                     ((Class_10BC9A50*)FUN_10bb7f30()->GetCurrent())->FUN_10bc7d70(AddressOf(Class_10E97B00("+reprimandplayer:ramp_down")), 0x14, 1, &Text, true);
                 }
             }

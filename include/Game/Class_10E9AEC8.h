@@ -6,7 +6,7 @@
 #include "Game/Class_10C270C0.h"
 #include "Game/Struct_10C05A50.h"
 
-class Class_109081E0;
+class cString;
 
 class Class_10E9AEC8 : public Class_10C270C0
 {
@@ -19,7 +19,7 @@ public:
     virtual void Virtual5();
     virtual void Trigger();
 
-    Class_109081E0 GetMotionControllerName();
+    cString GetMotionControllerName();
 
     char Unknown08[0x50];
     unsigned char m_bTriggered;

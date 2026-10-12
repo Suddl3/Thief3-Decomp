@@ -1,7 +1,7 @@
 // Game/Class_10E7EBB0_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_109B6D50.h"
 #include "Game/Class_10B39530.h"
 #include "Game/Class_10B396B0.h"
@@ -60,7 +60,7 @@ void Class_10E7EBB0::FUN_10b4e380(Class_10B21820* A)
     ((Class_10B398B0*)FUN_10aa82d0())->FUN_10b398b0(0);
     Struct_10B21820_Object* Obj = A->FUN_10991e10();
     {
-        Class_109081E0 Name(DAT_10e7a624);
+        cString Name(DAT_10e7a624);
         ((Class_109B6D50*)Obj)->FUN_109c33f0(A->Unknown37C, Name);
     }
     Unknown08 = 0x101;

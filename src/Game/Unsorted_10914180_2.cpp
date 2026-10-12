@@ -5,9 +5,9 @@
 
 class Class_1090A780;
 
-// FUNCTION: 0x10914180 ?FUN_10914180@Class_10914180@@QAEXABVClass_1090A780@@H@Z
-void Class_10914180::FUN_10914180(const Class_1090A780& A, int B)
+// FUNCTION: 0x10914180 ?SetAll@Class_10914180@@QAEXABVClass_1090A780@@H@Z
+void Class_10914180::SetAll(const Class_1090A780& A, int B)
 {
-    for (int i = 0; i < Unknown04; i++)
-        Unknown0C[i]->FUN_109152a0(A, B);
+    for (int i = 0; i < m_ChildCount; i++)
+        m_Children[i]->FUN_109152a0(A, B);
 }

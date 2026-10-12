@@ -5,13 +5,13 @@
 
 #include "Game/Class_10B78320.h"
 
-class Class_109081E0;
+class cString;
 class Class_10B43160_Member;
 
 class Class_10E80C78 : public Class_10B78320
 {
 public:
-    Class_109081E0 GetPaneFileName();
+    cString GetPaneFileName();
     void FUN_10b43160();
 
     Class_10B43160_Member* Unknown1A4;

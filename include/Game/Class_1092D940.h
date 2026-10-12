@@ -9,7 +9,7 @@ public:
     char Unknown00[0x7D];
     unsigned char Unknown7D;
 
-    unsigned char FUN_1092d940(unsigned char param);
+    unsigned char Exchange(unsigned char param);
 };
 
 #endif // GAME_CLASS_1092D940_H

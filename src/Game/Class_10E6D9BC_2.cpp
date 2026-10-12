@@ -1,7 +1,7 @@
 // Game/Class_10E6D9BC_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 extern const char DAT_10e6c100[];
 
@@ -21,13 +21,13 @@ public:
     Class_10E6D9BC();
     virtual void Virtual0();
 
-    Class_109081E0 Unknown08;
-    Class_109081E0 Unknown0C;
-    Class_109081E0 Unknown10;
-    Class_109081E0 Unknown14;
-    Class_109081E0 Unknown18;
-    Class_109081E0 Unknown1C;
-    Class_109081E0 Unknown20;
+    cString Unknown08;
+    cString Unknown0C;
+    cString Unknown10;
+    cString Unknown14;
+    cString Unknown18;
+    cString Unknown1C;
+    cString Unknown20;
     int Unknown24;
     int Unknown28;
     int Unknown2C;

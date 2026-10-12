@@ -71,25 +71,25 @@ public:
 
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 
-// FUNCTION: 0x1094EFC0 ?FUN_1094efc0@Class_1094EFC0@@QAEXHH@Z
-void Class_1094EFC0::FUN_1094efc0(int A, int B)
+// FUNCTION: 0x1094EFC0 ?Resize@Class_1094EFC0@@QAEXHH@Z
+void Class_1094EFC0::Resize(int A, int B)
 {
-    Unknown108[A].Unknown08.FUN_10da4f50(B);
-    Unknown108[A].Unknown14 = B;
+    m_Slots[A].Unknown08.FUN_10da4f50(B);
+    m_Slots[A].Unknown14 = B;
     for (int i = 0; i < B; i++)
     {
-        Unknown108[A].Unknown08.Unknown08[i].Unknown00 = 0;
-        Unknown108[A].Unknown08.Unknown08[i].Unknown04 = 0;
-        Unknown108[A].Unknown08.Unknown08[i].Unknown08 = 0;
+        m_Slots[A].Unknown08.Unknown08[i].Unknown00 = 0;
+        m_Slots[A].Unknown08.Unknown08[i].Unknown04 = 0;
+        m_Slots[A].Unknown08.Unknown08[i].Unknown08 = 0;
     }
     if (A == 0)
     {
         Unknown0F0 = 0;
-        Unknown0F4.SetCount(B);
+        m_Items.SetCount(B);
         GetAllocator()->Virtual8(0, 0);
         for (int i = 0; i < B; i++)
         {
-            Unknown0F4.Data[i] = (int)(new(0, 0, 0, 0, 0) Class_1094EFC0_Item);
+            m_Items.Data[i] = (int)(new(0, 0, 0, 0, 0) Class_1094EFC0_Item);
         }
         GetAllocator()->Virtual9();
     }
@@ -114,8 +114,8 @@ void Class_10E4AB88::CollectValues(cIntArray* Out, int Param)
     }
 }
 
-// FUNCTION: 0x1094F750 ?FUN_1094f750@Class_1094F750@@QAEXXZ
-void Class_1094F750::FUN_1094f750()
+// FUNCTION: 0x1094F750 ?Free@Class_1094F750@@QAEXXZ
+void Class_1094F750::Free()
 {
     FUN_1094f510(0);
     if (Unknown04)

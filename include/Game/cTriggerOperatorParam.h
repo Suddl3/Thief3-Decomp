@@ -3,7 +3,7 @@
 #ifndef GAME_CTRIGGEROPERATORPARAM_H
 #define GAME_CTRIGGEROPERATORPARAM_H
 
-class Class_109081E0;
+class cString;
 class Class_1090A780;
 
 class cTriggerOperatorParam
@@ -12,8 +12,8 @@ public:
     virtual void Virtual0();
     virtual void Virtual1();
     virtual int TestRelation(int A, cTriggerOperatorParam* B);
-    virtual Class_109081E0 GetText();
-    virtual void Virtual4(Class_109081E0* Text);
+    virtual cString GetText();
+    virtual void Virtual4(cString* Text);
     virtual void Virtual5() = 0;
     virtual void Virtual6() = 0;
     virtual bool FUN_10a8d330();

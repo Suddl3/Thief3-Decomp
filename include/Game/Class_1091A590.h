@@ -3,15 +3,15 @@
 #ifndef GAME_CLASS_1091A590_H
 #define GAME_CLASS_1091A590_H
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 class Class_1091A590
 {
 public:
     ~Class_1091A590();
 
-    Class_109081E0 Unknown00;
-    Class_109081E0 Unknown04;
+    cString Unknown00;
+    cString Unknown04;
 };
 
 #endif // GAME_CLASS_1091A590_H

@@ -4,14 +4,14 @@
 
 class Class_1091F710_Unknown38;
 
-// FUNCTION: 0x1091F710 ?FUN_1091f710@Class_1091F710@@QAE_NPAVClass_1091F710_Unknown38@@@Z
-bool Class_1091F710::FUN_1091f710(Class_1091F710_Unknown38* Item)
+// FUNCTION: 0x1091F710 ?HasItem@Class_1091F710@@QAE_NPAVClass_1091F710_Unknown38@@@Z
+bool Class_1091F710::HasItem(Class_1091F710_Unknown38* Item)
 {
     if (Item)
     {
-        for (int i = 0; i < Unknown30; i++)
+        for (int i = 0; i < m_NumItems; i++)
         {
-            if (Unknown38[i] == Item)
+            if (m_Items[i] == Item)
                 return true;
         }
     }

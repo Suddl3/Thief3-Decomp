@@ -19,7 +19,7 @@ public:
     virtual void Virtual8();
     virtual void Virtual9();
     virtual void Virtual10();
-    virtual void FUN_109524a0();
+    virtual void Reset();
 
     Class_10E4ADC0(int A, int B);
 

@@ -8,7 +8,7 @@ class Class_1093F9F0_Param;
 class Class_1093F9F0
 {
 public:
-    void FUN_1093f9f0(Class_1093F9F0_Param* Param, int B);
+    void SetShaderForKind(Class_1093F9F0_Param* Param, int B);
 
     char Unknown00[0x174];
     unsigned long Unknown174;

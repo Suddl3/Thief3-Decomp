@@ -23,8 +23,8 @@ int VBPoolStaticPermanent::GetCount()
     return m_Items.size();
 }
 
-// FUNCTION: 0x10933420 ?FUN_10933420@Class_10933420@@QAE?AViterator@?$vector@PAXV?$allocator@PAX@std@@@std@@V234@@Z
-std::vector<void*>::iterator Class_10933420::FUN_10933420(std::vector<void*>::iterator Where)
+// FUNCTION: 0x10933420 ?Erase@Class_10933420@@QAE?AViterator@?$vector@PAXV?$allocator@PAX@std@@@std@@V234@@Z
+std::vector<void*>::iterator Class_10933420::Erase(std::vector<void*>::iterator Where)
 {
     return Unknown04.erase(Where);
 }

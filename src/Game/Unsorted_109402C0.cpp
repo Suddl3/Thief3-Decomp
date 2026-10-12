@@ -2,15 +2,15 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10940830.h"
 
-// FUNCTION: 0x10940830 ?FUN_10940830@Class_10940830@@QAEMM@Z
-float Class_10940830::FUN_10940830(float Scale)
+// FUNCTION: 0x10940830 ?SampleTable@Class_10940830@@QAEMM@Z
+float Class_10940830::SampleTable(float Scale)
 {
-    unsigned int Count = Unknown358;
+    unsigned int Count = m_Count;
     if (Count <= 0)
         return Scale;
     unsigned int Last = Count - 1;
     unsigned int Index = (unsigned int)((float)Last * Scale);
     if (Index >= Count)
         Index = Last;
-    return Unknown354[Index];
+    return m_Table[Index];
 }

@@ -3,18 +3,18 @@
 #ifndef GAME_CLASS_10E4938C_H
 #define GAME_CLASS_10E4938C_H
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/cIntArray.h"
 
 class Class_10E4938C
 {
 public:
-    Class_10E4938C(const Class_109081E0& A);
+    Class_10E4938C(const cString& A);
 
     virtual ~Class_10E4938C();
 
     cIntArray Unknown04;
-    Class_109081E0 Unknown10;
+    cString Unknown10;
 };
 
 #endif // GAME_CLASS_10E4938C_H

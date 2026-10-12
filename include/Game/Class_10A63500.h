@@ -3,14 +3,14 @@
 #ifndef GAME_CLASS_10A63500_H
 #define GAME_CLASS_10A63500_H
 
-class Class_109081E0;
+class cString;
 class Class_10919C40;
 class Class_1091CB20;
 
 class Class_10A63500
 {
 public:
-    void FUN_10a63500(const Class_109081E0& Name, Class_10919C40* Value);
+    void FUN_10a63500(const cString& Name, Class_10919C40* Value);
 
     char Unknown00[0xC];
     Class_1091CB20* Unknown0C;

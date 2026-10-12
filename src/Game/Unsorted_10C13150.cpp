@@ -1,6 +1,6 @@
 // Game/Unsorted_10C13150.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 extern float DAT_10e499a0;
 
@@ -17,7 +17,7 @@ public:
 
     char Unknown04[4];
     int Field08;
-    Class_109081E0 Field0c;
+    cString Field0c;
 };
 
 // FUNCTION: 0x10C13150 ?CopyFrom@Class_10E8C4A4@@UAEXPBV1@@Z

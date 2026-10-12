@@ -4,13 +4,13 @@
 
 // A string-keyed hash table: buckets of singly linked nodes.
 
-class Class_109081E0
+class cString
 {
 public:
-    Class_109081E0() : Unknown00(0) {}
-    ~Class_109081E0();
+    cString() : Unknown00(0) {}
+    ~cString();
 
-    Class_109081E0& operator=(const Class_109081E0& Other);
+    cString& operator=(const cString& Other);
 
     char* Unknown00;
 };
@@ -23,7 +23,7 @@ void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 // A bucket entry (12 bytes; Insert allocates it).
 struct Class_1091AD50_Node
 {
-    Class_109081E0 Key;
+    cString Key;
     int Value;
     Class_1091AD50_Node* Next;
 };

@@ -16,7 +16,7 @@
 #include "Game/Class_10E7BB2C.h"
 #include "Game/InnerClass_10A4EB40.h"
 #include "Game/InnerClass_10A4EB50.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10A4EB40.h"
 #include "Game/Class_10A4EB50.h"
 
@@ -194,10 +194,10 @@ void Class_10E7BB2C::FUN_10a53250() {
     Unknown20 = 1;
 }
 
-// FUNCTION: 0x10A53BD0 ?FUN_10a53bd0@Class_10A53BD0@@QAE?AVClass_109081E0@@H@Z
-Class_109081E0 Class_10A53BD0::FUN_10a53bd0(int A)
+// FUNCTION: 0x10A53BD0 ?FUN_10a53bd0@Class_10A53BD0@@QAE?AVcString@@H@Z
+cString Class_10A53BD0::FUN_10a53bd0(int A)
 {
-    return Class_109081E0(DAT_10e47660);
+    return cString(DAT_10e47660);
 }
 
 // FUNCTION: 0x10A53D80 ?FUN_10a53d80@Class_10E67FB8@@QAEXXZ

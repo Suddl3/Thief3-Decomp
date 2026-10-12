@@ -36,8 +36,8 @@ public:
     virtual int __stdcall Virtual2();
 };
 
-// FUNCTION: 0x1092D960 ?FUN_1092d960@Class_1092D960@@QAEXXZ
-void Class_1092D960::FUN_1092d960()
+// FUNCTION: 0x1092D960 ?Release@Class_1092D960@@QAEXXZ
+void Class_1092D960::Release()
 {
     if (Unknown00)
     {

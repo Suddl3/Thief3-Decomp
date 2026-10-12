@@ -8,7 +8,7 @@ public:
     int Field00;
     unsigned char Field04;
 
-    void FUN_1094aec0();
+    void Reset();
 };
 
 #endif // GAME_CLASS_1094AEC0_H

@@ -1,13 +1,13 @@
 // Game/Unsorted_10B33E20.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10B34130.h"
 
 struct Item_10B34130
 {
     int Unknown00;
-    Class_109081E0 Unknown04;
-    Class_109081E0 Unknown08;
+    cString Unknown04;
+    cString Unknown08;
     int Unknown0C;
 };
 

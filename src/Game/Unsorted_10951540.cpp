@@ -20,7 +20,7 @@ void Class_10951900::Reset()
     m_Mode = 0;
     if (Unknown24)
     {
-        Unknown24->FUN_109514c0();
+        Unknown24->ReleaseAll();
         delete Unknown24;
         Unknown24 = 0;
     }
@@ -31,16 +31,16 @@ void Class_10951900::Reset()
     }
 }
 
-// FUNCTION: 0x109516C0 ?FUN_109516c0@Class_109516C0@@QAEPAUClass_109516C0_Entry@@H@Z
-Class_109516C0_Entry* Class_109516C0::FUN_109516c0(int Index)
+// FUNCTION: 0x109516C0 ?GetEntry@Class_109516C0@@QAEPAUClass_109516C0_Entry@@H@Z
+Class_109516C0_Entry* Class_109516C0::GetEntry(int Index)
 {
-    if (Unknown40 > Index)
+    if (m_EntryCount > Index)
     {
-        Class_109516C0_Entry* Entry = Unknown48[Index];
+        Class_109516C0_Entry* Entry = m_Entries[Index];
         if (Entry)
             return Entry;
     }
-    return &Unknown4C;
+    return &m_DefaultEntry;
 }
 
 // FUNCTION: 0x10951A40 ?SetFilter@Class_10951A40@@QAEXPBUStruct_10951A40@@@Z

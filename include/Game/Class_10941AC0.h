@@ -8,7 +8,7 @@
 class Class_10941AC0
 {
 public:
-    void FUN_10941ac0();
+    void Reset();
 
     bool Unknown00;
     Class_1091CCB0 Unknown04;

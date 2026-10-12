@@ -20,13 +20,13 @@ struct Struct_10946D90_Node
     char Unknown0C[0x18];
 };
 
-// FUNCTION: 0x10946D90 ?FUN_10946d90@Class_10946D90@@QAEXPAMMPAH1I@Z
-void Class_10946D90::FUN_10946d90(float* Point, float Radius, int* Out, int* Count, unsigned int Index)
+// FUNCTION: 0x10946D90 ?CollectInSphere@Class_10946D90@@QAEXPAMMPAH1I@Z
+void Class_10946D90::CollectInSphere(float* Point, float Radius, int* Out, int* Count, unsigned int Index)
 {
     while (Index != 0xffffffff)
     {
-        Struct_10946D90_Node* Node = &Unknown2C[Index];
-        Struct_10946D90_Plane* Plane = &Unknown34[Node->Flags >> 2];
+        Struct_10946D90_Node* Node = &m_Nodes[Index];
+        Struct_10946D90_Plane* Plane = &m_Planes[Node->Flags >> 2];
         float Dist = Plane->Z * Point[2] + Plane->Y * Point[1] + Point[0] * Plane->X + Plane->W;
         if (Dist - Radius < DAT_10e4a750)
         {
@@ -36,7 +36,7 @@ void Class_10946D90::FUN_10946d90(float* Point, float Radius, int* Out, int* Cou
                 (*Count)++;
             }
             else
-                FUN_10946d90(Point, Radius, Out, Count, Node->Unknown08);
+                CollectInSphere(Point, Radius, Out, Count, Node->Unknown08);
         }
         if (!(Dist + Radius > DAT_10e4a750))
             return;

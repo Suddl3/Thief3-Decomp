@@ -3,7 +3,7 @@
 #include <string.h>
 #include "Game/Class_10915B00.h"
 #include "Game/Class_10E499A8.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 class Class_10914D80
 {
@@ -28,7 +28,7 @@ public:
 
     virtual ~Class_10E495F8();
 
-    Class_109081E0 Unknown04;
+    cString Unknown04;
     char Unknown08;
     bool Unknown09;
     Class_10914D80 Unknown0C;
@@ -44,14 +44,14 @@ Class_10E495F8::Class_10E495F8()
 // FUNCTION: 0x10915AE0 ??_GClass_10E495F8@@UAEPAXI@Z
 // Compiler-generated: emitted with the class's vtable by 0x10915860's definition in this unit.
 
-// FUNCTION: 0x10915B00 ?FUN_10915b00@Class_10915B00@@QAEHPBD@Z
-int Class_10915B00::FUN_10915b00(const char* Needle)
+// FUNCTION: 0x10915B00 ?FindSubstring@Class_10915B00@@QAEHPBD@Z
+int Class_10915B00::FindSubstring(const char* Needle)
 {
-    if (Unknown00)
+    if (m_Text)
     {
-        char* Found = strstr(Unknown00, Needle);
+        char* Found = strstr(m_Text, Needle);
         if (Found)
-            return Found - Unknown00;
+            return Found - m_Text;
     }
     return -1;
 }

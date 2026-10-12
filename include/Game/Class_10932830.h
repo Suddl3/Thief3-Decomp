@@ -5,22 +5,22 @@
 
 #include "Game/Class_10932830_Field18.h"
 
-class Class_109081E0;
+class cString;
 class Class_10932830_Node;
 
 class Class_10932830
 {
 public:
-    unsigned int FUN_10932830(const Class_109081E0& Key, const int& Value);
-    void FUN_10932910(int Size);
+    unsigned int Insert(const cString& Key, const int& Value);
+    void Rehash(int Size);
 
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    bool Unknown10;
+    int m_Collisions;
+    int m_Count;
+    int m_BucketBits;
+    int m_BucketCount;
+    bool m_FixedSize;
     char Pad11[0x3];
-    Class_10932830_Node** Unknown14;
+    Class_10932830_Node** m_Buckets;
     Class_10932830_Field18 Unknown18;
 };
 

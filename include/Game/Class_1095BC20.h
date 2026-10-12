@@ -6,7 +6,7 @@
 class Class_1095BC20
 {
 public:
-    Class_1095BC20* FUN_1095bc20();
+    Class_1095BC20* Init();
 
     int Unknown00;
     int Unknown04;

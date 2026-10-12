@@ -3,7 +3,7 @@
 #ifndef GAME_OBJECT_10C12B50_H
 #define GAME_OBJECT_10C12B50_H
 
-class Class_109081E0;
+class cString;
 
 class Object_10C12B50
 {
@@ -33,7 +33,7 @@ public:
     virtual void Virtual22();
     virtual void Virtual23();
     virtual void Virtual24();
-    virtual Class_109081E0 Virtual25();
+    virtual cString Virtual25();
 };
 
 #endif // GAME_OBJECT_10C12B50_H

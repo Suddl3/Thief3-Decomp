@@ -5,22 +5,22 @@
 
 #include "Game/Class_10932910_Field18.h"
 
-class Class_109081E0;
+class cString;
 class Class_10932910_Node;
 
 // The hash table of 0x1090F080 (Class_1090F080), another instance of it.
 class Class_10932910
 {
 public:
-    unsigned int FUN_10932830(const Class_109081E0& Key, const int& Value);
-    void FUN_10932910(int Size);
+    unsigned int Insert(const cString& Key, const int& Value);
+    void Rehash(int Size);
 
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
+    int m_Collisions;
+    int m_Count;
+    int m_BucketBits;
+    int m_BucketCount;
     bool Unknown10;
-    Class_10932910_Node** Unknown14;
+    Class_10932910_Node** m_Buckets;
     Class_10932910_Field18 Unknown18;
 };
 

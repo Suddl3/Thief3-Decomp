@@ -16,8 +16,8 @@ extern Class_109242E0* DAT_10f319a0;
 
 extern Struct_10924210 DAT_10f2c780;
 
-// FUNCTION: 0x10917C90 ?FUN_10917c90@@YAXHHHH@Z
-void FUN_10917c90(int A, int B, int C, int D)
+// FUNCTION: 0x10917C90 ?SetViewport@@YAXHHHH@Z
+void SetViewport(int A, int B, int C, int D)
 {
     Struct_10924210 Viewport;
     Viewport.X = A;

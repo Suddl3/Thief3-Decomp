@@ -1,7 +1,7 @@
 // Game/Class_10E80C78_4.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 extern const char DAT_10e47660[];
 
@@ -138,7 +138,7 @@ public:
     void FUN_10b44550();
 
     char Pad00[0x164];
-    Class_109081E0 Unknown168;
+    cString Unknown168;
     char Pad16C[0x28];
     int Unknown194;
 };
@@ -149,10 +149,10 @@ void Class_10E80C78::FUN_10b44550()
     switch (Unknown194)
     {
     case 0:
-        Unknown168 = Class_109081E0(DAT_10e47660);
+        Unknown168 = cString(DAT_10e47660);
         break;
     case 1:
-        Unknown168 = Class_109081E0(DAT_10e47660);
+        Unknown168 = cString(DAT_10e47660);
         break;
     }
     FUN_10b43e00();

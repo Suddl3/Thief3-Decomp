@@ -8,10 +8,10 @@ void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
 // Ion Storm's string: a char buffer it frees on destruction.
-class Class_109081E0
+class cString
 {
 public:
-    ~Class_109081E0();
+    ~cString();
 
     char* Unknown00;
 };
@@ -20,7 +20,7 @@ public:
 class Class_1093AF30_Node
 {
 public:
-    Class_109081E0 Key;
+    cString Key;
     int Value;
     Class_1093AF30_Node* Next;
 };

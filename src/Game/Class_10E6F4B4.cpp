@@ -96,7 +96,7 @@ void Class_10E6F4B4::FUN_10abbf70(int Arg0, int Arg1)
         Class_1092F270* Sub = Obj->UnknownB4;
         if (Sub)
         {
-            Class_10951900* Result = Sub->FUN_1092f270(1);
+            Class_10951900* Result = Sub->GetOrCreate(1);
             if (Result)
             {
                 Obj->IsA(APlayerPawn::StaticClass());

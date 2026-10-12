@@ -6,7 +6,7 @@
 class Class_10914D70
 {
 public:
-    unsigned char FUN_10914d70();
+    unsigned char GetField09();
 
     char Unknown00[0x9];
     unsigned char Field09;

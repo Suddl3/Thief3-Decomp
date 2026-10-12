@@ -75,10 +75,10 @@ public:
     char* Unknown00;
 };
 
-class Class_109081E0 : public Class_1090A780
+class cString : public Class_1090A780
 {
 public:
-    ~Class_109081E0()
+    ~cString()
     {
         if (Unknown00)
         {
@@ -89,7 +89,7 @@ public:
     }
 };
 
-Class_109081E0 FUN_1090a660(const char* Format, ...);
+cString FUN_1090a660(const char* Format, ...);
 
 extern Class_10939570* DAT_10f323fc;
 
@@ -111,7 +111,7 @@ void cHighlightMgr::FindMembraneMaterials()
         do
         {
             ++Index;
-            Class_109081E0 Name = FUN_1090a660("MetaselectionFrob_M%03d", Index);
+            cString Name = FUN_1090a660("MetaselectionFrob_M%03d", Index);
             void* Value = DAT_10f323fc->FUN_1093bd40((int*)&Name, 0, 0);
             m_MembraneMaterials.Add((int)Value);
         } while (Index < 16);

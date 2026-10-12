@@ -14,9 +14,9 @@ public:
     char Unknown00[0xC];
     Class_1091F9B0_Unknown0C* Unknown0C;
     char Unknown10[0x20];
-    int Unknown30;
+    int m_NumItems;
     char Unknown34[4];
-    Class_10948260** Unknown38;
+    Class_10948260** m_Items;
 };
 
 #endif // GAME_CLASS_1091F9B0_H

@@ -5,16 +5,16 @@
 
 #include "Game/Class_10A34C10_Field18.h"
 
-class Class_109081E0;
+class cString;
 struct Class_10A34C10_Node;
 class Class_10A34C10_Unknown10;
 
 class Class_10A34C10
 {
 public:
-    unsigned int FUN_10a348e0(const Class_109081E0& Key, Class_10A34C10_Unknown10** Value);
+    unsigned int FUN_10a348e0(const cString& Key, Class_10A34C10_Unknown10** Value);
     void Rehash(int NewSize);
-    unsigned int InsertOrAssign(const Class_109081E0& Key, Class_10A34C10_Unknown10** Value);
+    unsigned int InsertOrAssign(const cString& Key, Class_10A34C10_Unknown10** Value);
 
     int Collisions;
     int Count;

@@ -1,12 +1,12 @@
 // Game/cTriggerSuperEnumParam_7.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10905A90_Member.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 class FName
 {
 public:
-    Class_109081E0 FUN_10af9730() const;
+    cString FUN_10af9730() const;
 
     unsigned long Value;
 };
@@ -36,21 +36,21 @@ public:
     virtual void Virtual5();
     virtual void Virtual6();
     virtual void Virtual7();
-    virtual Class_109081E0 GetCurrentName();
+    virtual cString GetCurrentName();
 
     Class_10A8CF70_Unknown04* m_SuperEnum;
 };
 
-// FUNCTION: 0x10A8CF70 ?GetCurrentName@cTriggerSuperEnumParam@@UAE?AVClass_109081E0@@XZ
-Class_109081E0 cTriggerSuperEnumParam::GetCurrentName()
+// FUNCTION: 0x10A8CF70 ?GetCurrentName@cTriggerSuperEnumParam@@UAE?AVcString@@XZ
+cString cTriggerSuperEnumParam::GetCurrentName()
 {
     if (m_SuperEnum)
     {
         int Count = m_SuperEnum->Unknown38;
         if (DAT_10f3a1f4 == Count)
-            return Class_109081E0(DAT_10e6c778);
+            return cString(DAT_10e6c778);
         if (DAT_10f3a1f4 < Count)
-            return Class_109081E0(m_SuperEnum->Unknown34[DAT_10f3a1f4].FUN_10af9730());
+            return cString(m_SuperEnum->Unknown34[DAT_10f3a1f4].FUN_10af9730());
     }
-    return Class_109081E0(DAT_10e6c100);
+    return cString(DAT_10e6c100);
 }

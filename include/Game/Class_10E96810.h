@@ -5,7 +5,7 @@
 
 #include "Game/Class_10E960D8.h"
 
-class Class_109081E0;
+class cString;
 class Object_10BE58C0;
 
 class Class_10E96810 : public Class_10E960D8
@@ -100,7 +100,7 @@ public:
     virtual int FUN_10be4b30();
     virtual int FUN_10be4b50();
 
-    Class_109081E0 FUN_10be8840();
+    cString FUN_10be8840();
 
     bool Unknown6C;
     char Pad6D[0x3];

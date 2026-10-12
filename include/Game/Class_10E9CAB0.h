@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_10E9CAB0_H
 #define GAME_CLASS_10E9CAB0_H
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 class Class_10E9CAB0
 {
@@ -13,8 +13,8 @@ public:
     virtual ~Class_10E9CAB0();
 
     int Unknown04;
-    Class_109081E0 Unknown08;
-    Class_109081E0 Unknown0C;
+    cString Unknown08;
+    cString Unknown0C;
     int Unknown10;
     int Unknown14;
     int Unknown18;

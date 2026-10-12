@@ -8,10 +8,10 @@
 class Class_10914530
 {
 public:
-    void FUN_10914530(int A, int B, int C, int D);
+    void AddEntry(int A, int B, int C, int D);
 
     int Unknown00;
-    cIntArray Unknown04;
+    cIntArray m_Entries;
 };
 
 #endif // GAME_CLASS_10914530_H

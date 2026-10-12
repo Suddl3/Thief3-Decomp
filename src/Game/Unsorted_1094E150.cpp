@@ -12,14 +12,14 @@ struct Struct_1094E150_Item
     Class_10953590* Unknown00;
 };
 
-// FUNCTION: 0x1094E150 ?FUN_1094e150@Class_1094E150@@QAEXXZ
-void Class_1094E150::FUN_1094e150()
+// FUNCTION: 0x1094E150 ?DeleteItems@Class_1094E150@@QAEXXZ
+void Class_1094E150::DeleteItems()
 {
-    for (int i = 0; i < Unknown0F0; i++)
+    for (int i = 0; i < m_Count; i++)
     {
-        DAT_10f323fc->FUN_1093bce0(Unknown0FC[i]->Unknown00);
-        if (Unknown0FC[i])
-            delete Unknown0FC[i];
-        Unknown0FC[i] = 0;
+        DAT_10f323fc->FUN_1093bce0(m_Items[i]->Unknown00);
+        if (m_Items[i])
+            delete m_Items[i];
+        m_Items[i] = 0;
     }
 }

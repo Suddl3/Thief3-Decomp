@@ -3,14 +3,14 @@
 #ifndef GAME_CLASS_10943490_H
 #define GAME_CLASS_10943490_H
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 class Class_10943490
 {
 public:
     Class_10943490();
 
-    Class_109081E0 Unknown00;
+    cString Unknown00;
     int Unknown04;
     int Unknown08;
     int Unknown0C;

@@ -5,13 +5,13 @@
 
 #include "Game/Class_10C49740.h"
 
-class Class_109081E0;
+class cString;
 struct Entry_10C32C30;
 
 class Class_10A3C550
 {
 public:
-    void FUN_10a3c550(Class_109081E0 Name);
+    void FUN_10a3c550(cString Name);
 
     char Unknown00[0x4];
     Class_10C49740 Unknown04;

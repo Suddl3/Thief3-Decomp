@@ -12,12 +12,12 @@ public:
     char* Unknown00;
 };
 
-class Class_109081E0 : public Class_1090A780
+class cString : public Class_1090A780
 {
 public:
-    Class_109081E0& operator=(const Class_109081E0& Other);
+    cString& operator=(const cString& Other);
 
-    ~Class_109081E0()
+    ~cString()
     {
         if (Unknown00)
         {
@@ -28,9 +28,9 @@ public:
     }
 };
 
-Class_109081E0 FUN_10c12e40(const Class_1090A780& Name, int Value);
+cString FUN_10c12e40(const Class_1090A780& Name, int Value);
 
-extern Class_109081E0 DAT_10ff7064;
+extern cString DAT_10ff7064;
 
 class Class_10E8C378
 {

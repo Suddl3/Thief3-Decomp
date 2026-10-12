@@ -18,7 +18,7 @@ public:
 class Class_109242E0 : public Class_10E6D8F0
 {
 public:
-    Struct_10924210 Unknown18;
+    Struct_10924210 m_Viewport;
 };
 
 extern int DAT_10f2c8c4;
@@ -33,8 +33,8 @@ extern Class_109242E0* DAT_10f319a0;
 
 extern Struct_109E44B0 DAT_10f2c8e8;
 
-// FUNCTION: 0x10919240 ?FUN_10919240@@YAXPAVClass_1091E940@@H@Z
-void FUN_10919240(Class_1091E940* A, int B)
+// FUNCTION: 0x10919240 ?SetCurrentCamera@@YAXPAVClass_1091E940@@H@Z
+void SetCurrentCamera(Class_1091E940* A, int B)
 {
     DAT_10f2c8c4 = B;
     DAT_10f2c8c0 = A;
@@ -42,6 +42,6 @@ void FUN_10919240(Class_1091E940* A, int B)
     A->SetViewport(&DAT_10f2c780, 1);
     A->FUN_1091eb80();
     DAT_10f319a0->Class_10E6D8F0::FUN_10c3e130((int)A);
-    DAT_10f319a0->Unknown18 = DAT_10f2c780;
+    DAT_10f319a0->m_Viewport = DAT_10f2c780;
     DAT_10f2c8e8 = *(Struct_109E44B0*)A->FUN_1091e3e0();
 }

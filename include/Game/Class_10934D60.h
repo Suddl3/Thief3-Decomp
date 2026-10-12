@@ -8,9 +8,9 @@ class IDirect3DSurface8;
 class Class_10934D60
 {
 public:
-    Class_10934D60* FUN_10934d60();
+    Class_10934D60* CreateSurface();
 
-    IDirect3DSurface8* Unknown00;
+    IDirect3DSurface8* m_Surface;
 };
 
 #endif // GAME_CLASS_10934D60_H

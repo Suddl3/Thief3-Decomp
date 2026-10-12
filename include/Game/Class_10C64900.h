@@ -3,13 +3,13 @@
 #ifndef GAME_CLASS_10C64900_H
 #define GAME_CLASS_10C64900_H
 
-class Class_109081E0;
+class cString;
 struct Struct_10C64900;
 
 class Class_10C64900
 {
 public:
-    Class_109081E0 FUN_10c64900();
+    cString FUN_10c64900();
 
     char Unknown00[8];
     Struct_10C64900* Unknown08;

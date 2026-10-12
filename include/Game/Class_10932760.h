@@ -3,19 +3,19 @@
 #ifndef GAME_CLASS_10932760_H
 #define GAME_CLASS_10932760_H
 
-#include "Game/Class_10932350.h"
+#include "Game/ListPool.h"
 
 struct Node_10932350;
 
 class Class_10932760
 {
 public:
-    Node_10932350* FUN_10932760();
+    Node_10932350* Alloc();
 
-    Node_10932350* Unknown00;
-    Node_10932350* Unknown04;
-    int Unknown08;
-    Class_10932350 Unknown0C;
+    Node_10932350* m_Head;
+    Node_10932350* m_Tail;
+    int m_Count;
+    ListPool m_FreeList;
 };
 
 #endif // GAME_CLASS_10932760_H

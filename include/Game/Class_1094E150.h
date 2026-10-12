@@ -8,12 +8,12 @@ struct Struct_1094E150_Item;
 class Class_1094E150
 {
 public:
-    void FUN_1094e150();
+    void DeleteItems();
 
     char Unknown00[0xF0];
-    int Unknown0F0;
+    int m_Count;
     char Unknown0F4[8];
-    Struct_1094E150_Item** Unknown0FC;
+    Struct_1094E150_Item** m_Items;
 };
 
 #endif // GAME_CLASS_1094E150_H

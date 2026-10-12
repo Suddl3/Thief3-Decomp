@@ -29,10 +29,10 @@ extern int DAT_10f2c710;
 
 extern int DAT_10f2c714;
 
-void FUN_10917c90(int A, int B, int C, int D);
+void SetViewport(int A, int B, int C, int D);
 
-// FUNCTION: 0x10915810 ?FUN_10915810@Class_10915210@@QAEHABVClass_1090A780@@0@Z
-int Class_10915210::FUN_10915810(const Class_1090A780& A, const Class_1090A780& B)
+// FUNCTION: 0x10915810 ?Lookup@Class_10915210@@QAEHABVClass_1090A780@@0@Z
+int Class_10915210::Lookup(const Class_1090A780& A, const Class_1090A780& B)
 {
     Class_109169E0* Obj = FUN_10915210(A);
     if (Obj == 0)
@@ -84,5 +84,5 @@ void FUN_10917fc0(int A)
 void FUN_10918200()
 {
     if (DAT_10f2c75a)
-        FUN_10917c90(DAT_10f2c708, DAT_10f2c70c, DAT_10f2c710, DAT_10f2c714);
+        SetViewport(DAT_10f2c708, DAT_10f2c70c, DAT_10f2c710, DAT_10f2c714);
 }

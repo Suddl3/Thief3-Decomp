@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_10A174E0_H
 #define GAME_CLASS_10A174E0_H
 
-class Class_109081E0;
+class cString;
 class FName;
 
 class Class_10A174E0
@@ -16,7 +16,7 @@ public:
 
     ~Class_10A174E0();
 
-    void FUN_10a16700(const Class_109081E0& Name);
+    void FUN_10a16700(const cString& Name);
 };
 
 #endif // GAME_CLASS_10A174E0_H

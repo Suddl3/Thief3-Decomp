@@ -37,8 +37,8 @@ extern Struct_109480B0* DAT_10f340f8;
 
 extern int DAT_10f34100;
 
-// FUNCTION: 0x109480B0 ?FUN_109480b0@Class_109480B0@@QAEXXZ
-void Class_109480B0::FUN_109480b0()
+// FUNCTION: 0x109480B0 ?Free@Class_109480B0@@QAEXXZ
+void Class_109480B0::Free()
 {
     if (Unknown4C)
         delete[] Unknown4C;
@@ -64,8 +64,8 @@ void Class_109480B0::FUN_109480b0()
     DAT_10f34100 = 0;
 }
 
-// FUNCTION: 0x10948190 ?FUN_10948190@Class_10948190@@QAEHPAV1@@Z
-int Class_10948190::FUN_10948190(Class_10948190* A)
+// FUNCTION: 0x10948190 ?IsDifferent@Class_10948190@@QAEHPAV1@@Z
+int Class_10948190::IsDifferent(Class_10948190* A)
 {
     return A->Unknown00 != Unknown00 || A->Unknown04 != Unknown04 || A->Unknown08 != Unknown08;
 }

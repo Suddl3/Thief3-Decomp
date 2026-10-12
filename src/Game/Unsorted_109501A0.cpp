@@ -1,6 +1,6 @@
 // Game/Unsorted_109501A0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_109501A0.h"
+#include "Game/cBinkMovie.h"
 
 extern "C" __declspec(dllimport) void __stdcall _BinkClose(void* Handle);
 
@@ -80,8 +80,8 @@ public:
 
 extern UEngine* GEngine;
 
-// FUNCTION: 0x109501A0 ?FUN_109501a0@Class_109501A0@@QAEXXZ
-void Class_109501A0::FUN_109501a0()
+// FUNCTION: 0x109501A0 ?Close@cBinkMovie@@QAEXXZ
+void cBinkMovie::Close()
 {
     _BinkClose(Unknown00->Unknown00);
     if (Unknown00->Unknown04 != 0)

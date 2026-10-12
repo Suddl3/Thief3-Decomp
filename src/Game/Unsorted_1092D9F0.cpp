@@ -10,8 +10,8 @@ Class_10905A90_Member* GetAllocator();
 // FUNCTION: 0x1092D9F0 ??0Class_1092D9F0@@QAE@XZ
 Class_1092D9F0::Class_1092D9F0()
 {
-    Unknown00 = 0;
-    Unknown04 = 0;
+    m_RenderTarget0 = 0;
+    m_RenderTarget1 = 0;
     Unknown08 = 0;
     Unknown0C = 0;
     Unknown10 = 0;
@@ -31,7 +31,7 @@ Class_1092D9F0::Class_1092D9F0()
     Unknown58.FUN_10d3c300(0x40000000);
     Unknown64.FUN_10d3c300(0x41000000);
     Unknown7D = true;
-    FUN_1092d990();
+    CreateRenderTargets();
     FUN_1092d700();
     GetAllocator()->Virtual9();
 }

@@ -1,13 +1,13 @@
 // Game/Class_10E81DE8_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 class Object_10B56210;
 
 struct Struct_10B45D10;
 
-void FUN_10a4fb00(Class_109081E0& Label, int A);
+void FUN_10a4fb00(cString& Label, int A);
 
 class Class_10E81DE8
 {
@@ -146,7 +146,7 @@ public:
 void Class_10E81DE8::FUN_10b56c00()
 {
     {
-        Class_109081E0 Label("Game");
+        cString Label("Game");
         FUN_10a4fb00(Label, 0);
     }
     FUN_10b56980();

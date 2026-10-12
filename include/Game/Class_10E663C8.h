@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_10E663C8_H
 #define GAME_CLASS_10E663C8_H
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
@@ -22,7 +22,7 @@ public:
     }
 
     int Unknown04;
-    Class_109081E0 Unknown08;
+    cString Unknown08;
     char Pad0C[0x4];
 };
 

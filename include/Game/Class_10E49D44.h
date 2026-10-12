@@ -13,7 +13,7 @@ public:
     virtual int AddRef();
     virtual int Release();
     virtual void Virtual2();
-    virtual int FUN_10934930(unsigned int A, int B, int C, int D, int* Out);
+    virtual int LockVertices(unsigned int A, int B, int C, int D, int* Out);
     virtual void Virtual4();
     virtual int GetItemData(unsigned int Index, Data_10932FB0* Out);
     virtual void Virtual6();

@@ -1,6 +1,6 @@
 // Game/Unsorted_10B26940.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10B26D00.h"
 #include "Game/Class_10B27090.h"
 #include "Game/Class_10B27220.h"
@@ -47,8 +47,8 @@ bool Class_10B26D00::FUN_10b26d00(int A, int B, int C)
     return false;
 }
 
-// FUNCTION: 0x10B27090 ?FUN_10b27090@Class_10B27090@@QAEXHABVClass_109081E0@@H@Z
-void Class_10B27090::FUN_10b27090(int Index, const Class_109081E0& Name, int Value)
+// FUNCTION: 0x10B27090 ?FUN_10b27090@Class_10B27090@@QAEXHABVcString@@H@Z
+void Class_10B27090::FUN_10b27090(int Index, const cString& Name, int Value)
 {
     Unknown08[Index] = true;
     Unknown14[Index] = Name;

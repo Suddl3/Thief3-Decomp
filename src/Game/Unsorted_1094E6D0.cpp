@@ -17,18 +17,18 @@ struct Struct_1094E6D0_Group
     int Unknown24;
 };
 
-// FUNCTION: 0x1094E6D0 ?FUN_1094e6d0@Class_1094E6D0@@QAEXHHHHH@Z
-void Class_1094E6D0::FUN_1094e6d0(int Index, int A, int B, int C, int D)
+// FUNCTION: 0x1094E6D0 ?SetShadowGroup@Class_1094E6D0@@QAEXHHHHH@Z
+void Class_1094E6D0::SetShadowGroup(int Index, int A, int B, int C, int D)
 {
-    Unknown108[Index].Unknown18 = A;
-    Unknown108[Index].Unknown1C = B;
-    Unknown108[Index].Unknown20 = C;
-    Unknown108[Index].Unknown24 = D;
+    m_Groups[Index].Unknown18 = A;
+    m_Groups[Index].Unknown1C = B;
+    m_Groups[Index].Unknown20 = C;
+    m_Groups[Index].Unknown24 = D;
     if (Index == 0)
     {
         GetAllocator()->Virtual8(0, 0);
-        DAT_10f2c744->Virtual3(0, 0x10, 0, "BlendMesh::m_ShadowVertex", &Unknown114);
-        DAT_10f2c744->Virtual3(1, 0x10, 0, "BlendMesh::m_ShadowVertex", &Unknown118);
+        DAT_10f2c744->Virtual3(0, 0x10, 0, "BlendMesh::m_ShadowVertex", &m_ShadowVertex0);
+        DAT_10f2c744->Virtual3(1, 0x10, 0, "BlendMesh::m_ShadowVertex", &m_ShadowVertex1);
         GetAllocator()->Virtual9();
     }
 }

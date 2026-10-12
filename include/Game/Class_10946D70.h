@@ -5,7 +5,7 @@
 
 class Class_10946D70 {
 public:
-    void FUN_10946d70(void* P);
+    void Free(void* P);
 };
 
 #endif // GAME_CLASS_10946D70_H

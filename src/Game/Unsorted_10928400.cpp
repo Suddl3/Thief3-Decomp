@@ -3,8 +3,8 @@
 
 #include "Core/Core.h"
 
-// FUNCTION: 0x10928AA0 ?FUN_10928aa0@@YAIABVFVector@@@Z
-unsigned int FUN_10928aa0(const FVector& V)
+// FUNCTION: 0x10928AA0 ?NormalToColor@@YAIABVFVector@@@Z
+unsigned int NormalToColor(const FVector& V)
 {
     FVector N = (V + FVector(1.0f, 1.0f, 1.0f)) * 127.5f;
     unsigned int Color = 0xFFFFFFFF;

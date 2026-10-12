@@ -4,12 +4,12 @@
 #include "Game/Class_1090F080.h"
 
 // Ion Storm's string (0x109081E0): a char pointer, null when default constructed.
-class Class_109081E0
+class cString
 {
 public:
-    Class_109081E0() : Unknown00(0) {}
-    ~Class_109081E0();
-    Class_109081E0& operator=(const Class_109081E0& Other);
+    cString() : Unknown00(0) {}
+    ~cString();
+    cString& operator=(const cString& Other);
 
     char* Unknown00;
 };
@@ -25,13 +25,13 @@ unsigned int HashBytes(const void* Data, int Length);
 class Class_1090F080_Node
 {
 public:
-    Class_109081E0 Key;
+    cString Key;
     int Value;
     Class_1090F080_Node* Next;
 };
 
-// FUNCTION: 0x1090FB70 ?Remove@Class_1090F080@@QAE_NABVClass_109081E0@@@Z
-bool Class_1090F080::Remove(const Class_109081E0& Key)
+// FUNCTION: 0x1090FB70 ?Remove@Class_1090F080@@QAE_NABVcString@@@Z
+bool Class_1090F080::Remove(const cString& Key)
 {
     if (!m_NoResize && m_Count < m_Size * 0.05 && m_Size > 64)
         Rehash(m_Size / 2);

@@ -1,13 +1,13 @@
 // Game/Unsorted_1091B430.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_1091B430.h"
 
 struct Struct_1091B430
 {
     int Unknown00;
     int Unknown04;
-    Class_109081E0 Unknown08;
+    cString Unknown08;
     int Unknown0C;
     int Unknown10;
     int Unknown14;
@@ -20,8 +20,8 @@ struct Struct_1091B430_Node
     Struct_1091B430 Unknown04;
 };
 
-// FUNCTION: 0x1091B430 ?FUN_1091b430@Class_1091B430@@QAE?AUStruct_1091B430@@XZ
-Struct_1091B430 Class_1091B430::FUN_1091b430()
+// FUNCTION: 0x1091B430 ?GetValue@Class_1091B430@@QAE?AUStruct_1091B430@@XZ
+Struct_1091B430 Class_1091B430::GetValue()
 {
-    return Unknown00->Unknown04;
+    return m_Node->Unknown04;
 }

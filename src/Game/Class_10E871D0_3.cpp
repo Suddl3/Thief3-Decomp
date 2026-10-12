@@ -5,7 +5,7 @@
 #include "Game/Window.h"
 #include "Game/Class_10E67BD8.h"
 #include "Game/Class_10AF7F80.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10B6FC70.h"
 #include "Game/Class_10B6FDA0.h"
 
@@ -118,12 +118,12 @@ void Class_10E871D0::LoadConfig(Class_10AF7F80* File, Class_10AF7F80* Section)
     ((Class_10E67BD8*)this)->Class_10E67BD8::LoadConfig(File, Section);
     void* Result1;
     {
-        Class_109081E0 Name(DAT_10e873a0);
+        cString Name(DAT_10e873a0);
         Result1 = FUN_10a51100((int)&Name);
     }
     void* Result2;
     {
-        Class_109081E0 Alpha(DAT_10e87390);
+        cString Alpha(DAT_10e87390);
         Result2 = FUN_10a51100((int)&Alpha);
     }
     FUN_10b70460()->FUN_10b700a0(Result1, Result2, !(Virtual54() && Virtual55()));

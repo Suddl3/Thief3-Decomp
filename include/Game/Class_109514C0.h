@@ -8,10 +8,10 @@ class Class_109514C0
 public:
     virtual ~Class_109514C0();
 
-    void FUN_109514c0();
+    void ReleaseAll();
 
     char Pad04[0x8];
-    void* Unknown0C[9];
+    void* m_Blocks[9];
 };
 
 #endif // GAME_CLASS_109514C0_H

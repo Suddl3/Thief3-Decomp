@@ -1,7 +1,7 @@
 // Game/Class_10E90D70_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10E97B00.h"
 
 class Class_10E90D70
@@ -47,7 +47,7 @@ public:
     Class_10E90D70(int A, int B);
     ~Class_10E90D70();
 
-    int FUN_10bc7d70(Class_10E97B00* Name, int Flags, int Count, Class_109081E0* Out, bool Flag);
+    int FUN_10bc7d70(Class_10E97B00* Name, int Flags, int Count, cString* Out, bool Flag);
 
     int Unknown04[15];
 };
@@ -56,6 +56,6 @@ public:
 int Class_10E90D70::FUN_10bc8840(const Class_1090A780& Name, bool Flag)
 {
     int Count = Flag ? 3 : 6;
-    Class_109081E0 Text(DAT_10e47660);
+    cString Text(DAT_10e47660);
     return FUN_10bc7d70(&Class_10E97B00(Name), 0x1e, Count, &Text, true);
 }

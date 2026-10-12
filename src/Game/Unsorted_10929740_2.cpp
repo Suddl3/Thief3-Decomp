@@ -16,8 +16,8 @@ void Class_10E49AE0::GetLuminance(Struct_10929510* p1, int p2, int p3, float* p4
     *p4 = R * 0.3f + G * 0.59f + B * 0.11f;
 }
 
-// FUNCTION: 0x10929B10 ?FUN_10929b10@Class_10E49B08@@UAEXMMMPAM@Z
-void Class_10E49B08::FUN_10929b10(float A, float B, float C, float* Out)
+// FUNCTION: 0x10929B10 ?GetLuminance@Class_10E49B08@@UAEXMMMPAM@Z
+void Class_10E49B08::GetLuminance(float A, float B, float C, float* Out)
 {
     float Unused;
     Virtual2(A, B, C, &C, &B, &A, &Unused);

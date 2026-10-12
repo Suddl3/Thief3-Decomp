@@ -71,7 +71,7 @@ void Class_10924100::Reset()
     }
     if (Unknown0C)
     {
-        Unknown0C->FUN_109480b0();
+        Unknown0C->Free();
         ::operator delete(Unknown0C);
     }
     if (DAT_10f31960)

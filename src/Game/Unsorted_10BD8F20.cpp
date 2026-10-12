@@ -1,6 +1,6 @@
 // Game/Unsorted_10BD8F20.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10BB8300.h"
 #include "Game/Class_10BDAF90.h"
 #include "Game/Class_10BDF6F0.h"
@@ -485,16 +485,16 @@ void FUN_10be7e90()
     FUN_10be5000();
 }
 
-// FUNCTION: 0x10BE8810 ?GetYellowAlertName@Class_10E96510@@QAE?AVClass_109081E0@@XZ
-Class_109081E0 Class_10E96510::GetYellowAlertName()
+// FUNCTION: 0x10BE8810 ?GetYellowAlertName@Class_10E96510@@QAE?AVcString@@XZ
+cString Class_10E96510::GetYellowAlertName()
 {
-    return Class_109081E0(DAT_10e8c048);
+    return cString(DAT_10e8c048);
 }
 
-// FUNCTION: 0x10BE8840 ?FUN_10be8840@Class_10E96810@@QAE?AVClass_109081E0@@XZ
-Class_109081E0 Class_10E96810::FUN_10be8840()
+// FUNCTION: 0x10BE8840 ?FUN_10be8840@Class_10E96810@@QAE?AVcString@@XZ
+cString Class_10E96810::FUN_10be8840()
 {
-    return Class_109081E0(DAT_10e8c03c);
+    return cString(DAT_10e8c03c);
 }
 
 // FUNCTION: 0x10BE8C20 ?FUN_10be8c20@@YAXXZ

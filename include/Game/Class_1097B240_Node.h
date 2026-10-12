@@ -3,12 +3,12 @@
 #ifndef GAME_CLASS_1097B240_NODE_H
 #define GAME_CLASS_1097B240_NODE_H
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 struct Class_1097B240_Node
 {
 public:
-    Class_109081E0 Key;
+    cString Key;
     int Value;
     int Unknown08;
     int Unknown0C;

@@ -8,5 +8,5 @@ extern Class_10950230* DAT_10f31a64;
 void FUN_109e29c0()
 {
     if (DAT_10f31a64)
-        DAT_10f31a64->FUN_10950230();
+        DAT_10f31a64->DecodeFrame();
 }

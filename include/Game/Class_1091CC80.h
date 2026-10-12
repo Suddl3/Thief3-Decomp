@@ -19,7 +19,7 @@ public:
     }
 
     void FUN_1091c850(int A);
-    void FUN_1091cc80();
+    void Free();
 
     int Unknown00;
     int Unknown04;

@@ -1,6 +1,6 @@
 // Game/Unsorted_10914F40.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10C49740.h"
 #include "Game/Class_10914D60.h"
 
@@ -24,15 +24,15 @@ public:
     };
     Group_10BA14C0* Data;
 
-    void FUN_10916440(Class_109081E0& B, int C);
+    void FUN_10916440(cString& B, int C);
 };
 
 extern "C" char* _strupr(char* String);
 
-// FUNCTION: 0x10915160 ?Dispatch@Class_10914D60@@QAEXHAAVClass_109081E0@@H@Z
-void Class_10914D60::Dispatch(int A, Class_109081E0& B, int C)
+// FUNCTION: 0x10915160 ?Dispatch@Class_10914D60@@QAEXHAAVcString@@H@Z
+void Class_10914D60::Dispatch(int A, cString& B, int C)
 {
-    Class_109081E0 Name(*(const Class_109081E0*)A);
+    cString Name(*(const cString*)A);
     if (Name.Unknown00)
     {
         _strupr(Name.Unknown00);

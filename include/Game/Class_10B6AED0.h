@@ -3,14 +3,14 @@
 #ifndef GAME_CLASS_10B6AED0_H
 #define GAME_CLASS_10B6AED0_H
 
-class Class_109081E0;
+class cString;
 class Class_10E684A8;
 
 class Class_10B6AED0
 {
 public:
     void FUN_10b6aed0();
-    void FUN_10b69ec0(int Index, Class_109081E0* Text);
+    void FUN_10b69ec0(int Index, cString* Text);
 
     char Unknown00[0x128];
     Class_10E684A8* Unknown128;

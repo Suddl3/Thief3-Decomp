@@ -1,7 +1,7 @@
 // Game/Unsorted_10919CB0_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10905A90_Member.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10919B90.h"
 #include "Game/Class_1091A8F0.h"
 #include "Game/Class_1091AA10.h"
@@ -19,8 +19,8 @@ bool Class_10919B90::DrawText(Class_10941C40* A, const Struct_1091A610* Text, fl
     return FUN_10919d30(A, Chars, Length, X, Y, Color, ScaleX, ScaleY, Flags);
 }
 
-// FUNCTION: 0x1091A8F0 ?FUN_1091a8f0@Class_1091A8F0@@QAEXXZ
-void Class_1091A8F0::FUN_1091a8f0()
+// FUNCTION: 0x1091A8F0 ?Free@Class_1091A8F0@@QAEXXZ
+void Class_1091A8F0::Free()
 {
     if (Unknown08)
     {
@@ -30,10 +30,10 @@ void Class_1091A8F0::FUN_1091a8f0()
     }
 }
 
-// FUNCTION: 0x1091AA10 ?FUN_1091aa10@Class_1091AA10@@QAE?AVClass_109081E0@@H@Z
-Class_109081E0 Class_1091AA10::FUN_1091aa10(int A)
+// FUNCTION: 0x1091AA10 ?GetFontName@Class_1091AA10@@QAE?AVcString@@H@Z
+cString Class_1091AA10::GetFontName(int A)
 {
     if (A != 0)
-        return Class_109081E0("MediumFont16");
-    return Class_109081E0("font6");
+        return cString("MediumFont16");
+    return cString("font6");
 }

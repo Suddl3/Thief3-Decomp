@@ -3,12 +3,12 @@
 #ifndef GAME_CLASS_10A3C640_NODE_H
 #define GAME_CLASS_10A3C640_NODE_H
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 class Class_10A3C640_Node
 {
 public:
-    Class_109081E0 Key;
+    cString Key;
     int Value;
     Class_10A3C640_Node* Next;
 };

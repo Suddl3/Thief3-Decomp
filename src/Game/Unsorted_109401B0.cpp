@@ -42,8 +42,8 @@ struct Struct_109401B0
     D3DXMATRIX Unknown184;
 };
 
-// FUNCTION: 0x109401B0 ?FUN_109401b0@Class_109401B0@@QAEXPAUStruct_109401B0@@_N@Z
-void Class_109401B0::FUN_109401b0(Struct_109401B0* P, bool B)
+// FUNCTION: 0x109401B0 ?SetVertexShaderMatrix@Class_109401B0@@QAEXPAUStruct_109401B0@@_N@Z
+void Class_109401B0::SetVertexShaderMatrix(Struct_109401B0* P, bool B)
 {
     D3DXMATRIX Product;
     D3DXMATRIX Matrix;
@@ -57,17 +57,17 @@ void Class_109401B0::FUN_109401b0(Struct_109401B0* P, bool B)
         GDirect3DDevice8->SetVertexShaderConstant(0x16, &Matrix, 4);
 }
 
-// FUNCTION: 0x10941570 ?FUN_10941570@Class_10941570@@QAEXXZ
-void Class_10941570::FUN_10941570()
+// FUNCTION: 0x10941570 ?DrawAll@Class_10941570@@QAEXXZ
+void Class_10941570::DrawAll()
 {
-    for (int i = 0; i < Unknown04; i++)
-        Unknown0C[i].FUN_10941480();
+    for (int i = 0; i < m_Count; i++)
+        m_Items[i].Draw();
 }
 
 // FUNCTION: 0x10941980 ?AddEntry@Class_10941C40@@QAEXFFF@Z
 void Class_10941C40::AddEntry(short A, short B, short C)
 {
-    Class_109418E0* Item = Unknown1C;
+    Class_109418E0* Item = m_Item;
     Struct_10941980 Value;
     Value.Unknown00 = A;
     Value.Unknown02 = B;

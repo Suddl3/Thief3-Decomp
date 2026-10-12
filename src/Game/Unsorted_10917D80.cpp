@@ -47,7 +47,7 @@ class Class_1091E940;
 
 class Class_10924100;
 
-void FUN_109295c0(float Value);
+void UpdateVideos(float Value);
 
 extern Class_1091E940* DAT_10f2c738;
 
@@ -73,7 +73,7 @@ void FUN_10917e40(float Param)
     if (DAT_10f2c738 && DAT_10f2c740)
     {
         DAT_10f2c734->FUN_109251c0(Param);
-        FUN_109295c0(Param);
+        UpdateVideos(Param);
     }
     if (DAT_10f2c6ec > DAT_10efef6c)
     {

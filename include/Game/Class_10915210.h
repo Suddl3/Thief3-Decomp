@@ -12,7 +12,7 @@ public:
     void FUN_109152c0(const Class_1090A780& A);
     void FUN_109152a0(const Class_1090A780& A, int B);
     Class_109169E0* FUN_10915210(const Class_1090A780& Name);
-    int FUN_10915810(const Class_1090A780& A, const Class_1090A780& B);
+    int Lookup(const Class_1090A780& A, const Class_1090A780& B);
 
     char Pad00[0x1];
 };

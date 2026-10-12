@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_10E97B00_H
 #define GAME_CLASS_10E97B00_H
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 class Class_1090A780;
 
@@ -16,7 +16,7 @@ public:
     Class_10E97B00(const Class_10E97B00& Other);
     Class_10E97B00(const Class_1090A780& Name);
 
-    Class_109081E0 Unknown04;
+    cString Unknown04;
 };
 
 #endif // GAME_CLASS_10E97B00_H

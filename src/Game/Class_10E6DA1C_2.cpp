@@ -1,7 +1,7 @@
 // Game/Class_10E6DA1C_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10905A90_Member.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10AB37F0.h"
 #include "Game/Class_10AB3C20.h"
 
@@ -25,8 +25,8 @@ public:
 // FUNCTION: 0x10AAAEC0 ?ReadFields@Class_10E6DA1C@@UAEXPAXHH@Z
 void Class_10E6DA1C::ReadFields(void* Reader, int Version, int Unused)
 {
-    Class_109081E0 Text10;
-    Class_109081E0 Text0C;
+    cString Text10;
+    cString Text0C;
     int Count;
     ReadInt(Reader, &Count);
     Unknown08 = Count;

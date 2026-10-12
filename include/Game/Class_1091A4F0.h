@@ -9,7 +9,7 @@ class Class_1091A4F0
 {
 public:
     void FUN_1091a4f0(int A);
-    void FUN_1091a920();
+    void Free();
 
     int Unknown00;
     int Unknown04;

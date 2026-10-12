@@ -6,7 +6,7 @@
 class Class_109522D0
 {
 public:
-    void FUN_109522d0(float A, float* B, float* C);
+    void Advance(float A, float* B, float* C);
 
     char Unknown00[0x18];
     float Unknown18;

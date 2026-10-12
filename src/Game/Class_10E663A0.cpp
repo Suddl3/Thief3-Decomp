@@ -2,13 +2,13 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10A30060.h"
 
-class Class_109081E0
+class cString
 {
 public:
-    Class_109081E0() : Unknown00(0) {}
-    ~Class_109081E0();
+    cString() : Unknown00(0) {}
+    ~cString();
 
-    Class_109081E0& operator=(const Class_109081E0& Other);
+    cString& operator=(const cString& Other);
 
     char* Unknown00;
 };
@@ -16,13 +16,13 @@ public:
 class Class_10E663A0 : public Class_10A30060
 {
 public:
-    Class_10E663A0(const Class_109081E0& A);
+    Class_10E663A0(const cString& A);
 
-    Class_109081E0 Unknown04;
+    cString Unknown04;
 };
 
-// FUNCTION: 0x10A30060 ??0Class_10E663A0@@QAE@ABVClass_109081E0@@@Z
-Class_10E663A0::Class_10E663A0(const Class_109081E0& A)
+// FUNCTION: 0x10A30060 ??0Class_10E663A0@@QAE@ABVcString@@@Z
+Class_10E663A0::Class_10E663A0(const cString& A)
 {
     Unknown04 = A;
 }

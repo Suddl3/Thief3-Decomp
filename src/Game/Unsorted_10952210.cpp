@@ -18,8 +18,8 @@ struct Struct_10952390_B
 // Declarations first.
 extern float DAT_10eafbdc;
 
-// FUNCTION: 0x109522D0 ?FUN_109522d0@Class_109522D0@@QAEXMPAM0@Z
-void Class_109522D0::FUN_109522d0(float A, float* B, float* C)
+// FUNCTION: 0x109522D0 ?Advance@Class_109522D0@@QAEXMPAM0@Z
+void Class_109522D0::Advance(float A, float* B, float* C)
 {
     if (Unknown18 != DAT_10eafbdc)
     {

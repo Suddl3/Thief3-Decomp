@@ -8,7 +8,7 @@
 class Class_1092BA00 : public cHashTable
 {
 public:
-    void FUN_1092ba00(int Param);
+    void Clear(int Param);
 };
 
 #endif // GAME_CLASS_1092BA00_H

@@ -8,7 +8,7 @@ struct Struct_10919190
     int Unknown00;
 };
 
-void FUN_10919190(Struct_10919190* P);
+void SetWorldTransform(Struct_10919190* P);
 
 class Class_1094E050
 {
@@ -87,6 +87,6 @@ void Class_1094DFD0::FUN_1094dfd0()
 // FUNCTION: 0x1094E050 ?FUN_1094e050@Class_10E4AB88@@UAEXXZ
 void Class_10E4AB88::FUN_1094e050()
 {
-    FUN_10919190(&Unknown04);
+    SetWorldTransform(&Unknown04);
     Unknown0E8[DAT_10f2c720]->Virtual8(0);
 }

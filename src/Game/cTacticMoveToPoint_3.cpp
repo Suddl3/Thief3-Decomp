@@ -3,7 +3,7 @@
 
 #include "Game/Class_10BC4160.h"
 #include "Game/Class_10BB8600.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10E97B00.h"
 
 class Class_10E90C5C;
@@ -46,7 +46,7 @@ public:
     void FUN_10bcb850(FArchive& Ar);
     bool FUN_10bc40e0();
     void InformArrival();
-    void FUN_10bc7d70(Class_10E97B00* Name, int Flags, int Count, Class_109081E0* Out, bool Flag);
+    void FUN_10bc7d70(Class_10E97B00* Name, int Flags, int Count, cString* Out, bool Flag);
 
     char Pad04[0x18];
     Class_10E90C5C* Unknown1C;
@@ -57,7 +57,7 @@ void cTacticMoveToPoint::InformArrival()
 {
     if (!((Class_10BB8600*)Unknown04)->FUN_10bb8600())
     {
-        Class_109081E0 Text("redalert");
+        cString Text("redalert");
         FUN_10bc7d70(&Class_10E97B00("+Inform:arrive,+ArrivalStatus:present"), 0x28, 4, &Text, true);
     }
 }

@@ -1,7 +1,7 @@
 // Game/State_PatrolLook_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Core/Core.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10E90D70.h"
 
 double GetTimeSeconds();
@@ -19,7 +19,7 @@ public:
 class State_PatrolLook : public Class_10BD3140
 {
 public:
-    State_PatrolLook(int A, int B, const FVector& C, float D, const Class_109081E0& E, int F, int G, int H);
+    State_PatrolLook(int A, int B, const FVector& C, float D, const cString& E, int F, int G, int H);
 
     float m_EndTime;
     float Unknown48;
@@ -28,12 +28,12 @@ public:
     int m_Count;
     int Unknown60;
     int Unknown64;
-    Class_109081E0 Unknown68;
+    cString Unknown68;
     int Unknown6C;
 };
 
-// FUNCTION: 0x10BED9E0 ??0State_PatrolLook@@QAE@HHABVFVector@@MABVClass_109081E0@@HHH@Z
-State_PatrolLook::State_PatrolLook(int A, int B, const FVector& C, float D, const Class_109081E0& E, int F, int G, int H)
+// FUNCTION: 0x10BED9E0 ??0State_PatrolLook@@QAE@HHABVFVector@@MABVcString@@HHH@Z
+State_PatrolLook::State_PatrolLook(int A, int B, const FVector& C, float D, const cString& E, int F, int G, int H)
     : Class_10BD3140(A, B), m_EndTime(GetTimeSeconds() + D), Unknown48(D), Unknown4C(C), m_Limit(F), m_Count(0),
       Unknown60(0), Unknown64(G), Unknown68(E), Unknown6C(H)
 {

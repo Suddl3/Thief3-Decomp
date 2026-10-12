@@ -3,14 +3,14 @@
 #ifndef GAME_CLASS_1091B480_H
 #define GAME_CLASS_1091B480_H
 
-class Class_109081E0;
+class cString;
 struct Class_1091B480_Node;
 
 class Class_1091B480
 {
 public:
-    void FUN_1091b480(int NewSize);
-    void FUN_1091b280(const Class_109081E0& Key, const int& Value);
+    void Rehash(int NewSize);
+    void FUN_1091b280(const cString& Key, const int& Value);
 
     int Collisions;
     int Count;

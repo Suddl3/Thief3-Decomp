@@ -8,10 +8,10 @@ class IDirect3DBaseTexture8;
 class Class_109241E0
 {
 public:
-    void FUN_109241e0(unsigned long Stage, IDirect3DBaseTexture8* Texture);
+    void SetTexture(unsigned long Stage, IDirect3DBaseTexture8* Texture);
 
     char Unknown00[0x1C];
-    IDirect3DBaseTexture8* Unknown1C[1];
+    IDirect3DBaseTexture8* m_Textures[1];
 };
 
 #endif // GAME_CLASS_109241E0_H

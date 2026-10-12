@@ -24,8 +24,8 @@ void FUN_10905a90()
     GetAllocator()->F1();
 }
 
-// FUNCTION: 0x10905E60 ?FUN_10905e60@Class_10905E60@@QAEXXZ
-void Class_10905E60::FUN_10905e60()
+// FUNCTION: 0x10905E60 ?Close@Class_10905E60@@QAEXXZ
+void Class_10905E60::Close()
 {
     if (Handle != (void*)-1)
     {
@@ -42,8 +42,8 @@ Class_10905E90* Class_10905E90::FUN_10905e90(int p1)
     return this;
 }
 
-// FUNCTION: 0x10905F10 ?FUN_10905f10@Class_10905F10@@QAEXXZ
-void Class_10905F10::FUN_10905f10()
+// FUNCTION: 0x10905F10 ?Close@Class_10905F10@@QAEXXZ
+void Class_10905F10::Close()
 {
     if (Handle != (void*)-1)
     {

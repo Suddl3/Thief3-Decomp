@@ -3,7 +3,7 @@
 #include "Game/Class_1090A780.h"
 #include "Game/Class_10BAFBF0.h"
 #include "Game/Struct_10BAFBF0.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 extern const char DAT_10e8d954[];
 
@@ -23,16 +23,16 @@ public:
     Class_1090A780 Unknown18;
 };
 
-// FUNCTION: 0x10BAEB60 ?FUN_10baeb60@@YA?AVClass_109081E0@@XZ
-Class_109081E0 FUN_10baeb60()
+// FUNCTION: 0x10BAEB60 ?FUN_10baeb60@@YA?AVcString@@XZ
+cString FUN_10baeb60()
 {
-    return Class_109081E0(DAT_10e8d954);
+    return cString(DAT_10e8d954);
 }
 
-// FUNCTION: 0x10BAEB80 ?FUN_10baeb80@@YA?AVClass_109081E0@@XZ
-Class_109081E0 FUN_10baeb80()
+// FUNCTION: 0x10BAEB80 ?FUN_10baeb80@@YA?AVcString@@XZ
+cString FUN_10baeb80()
 {
-    return Class_109081E0(DAT_10e8d95c);
+    return cString(DAT_10e8d95c);
 }
 
 // FUNCTION: 0x10BAFBF0 ??0Class_10E8DBA4@@QAE@ABUStruct_10BAFBF0@@ABHABVClass_1090A780@@@Z

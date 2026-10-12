@@ -8,7 +8,7 @@ class Class_1093F090_Unknown08;
 class Class_1093F090
 {
 public:
-    int FUN_1093f090(const char** Name, int A, int B);
+    int Lookup(const char** Name, int A, int B);
 
     int Unknown00;
     int Unknown04;

@@ -14,16 +14,16 @@ public:
     {
         Unknown04 = 0;
         Unknown08 = -1;
-        memset(&Unknown10, 0, sizeof(Unknown10));
+        memset(&m_Desc, 0, sizeof(m_Desc));
         Unknown0C = 0;
     }
-    virtual int FUN_10933630(int A, int B, Struct_10932ED0* C, int D);
+    virtual int Init(int A, int B, Struct_10932ED0* C, int D);
 
     Class_10E49D1C()
     {
         Unknown04 = 0;
         Unknown08 = -1;
-        memset(&Unknown10, 0, sizeof(Unknown10));
+        memset(&m_Desc, 0, sizeof(m_Desc));
         Unknown0C = 0;
     }
 
@@ -32,7 +32,7 @@ public:
     int Unknown04;
     int Unknown08;
     int Unknown0C;
-    Struct_10932ED0 Unknown10;
+    Struct_10932ED0 m_Desc;
 };
 
 #endif // GAME_CLASS_10E49D1C_H

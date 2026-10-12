@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_1091AD50_Field18.h"
 #include "Game/Class_1091AD50.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_1091AD50_Node.h"
 
 // Ion Storm's placement new and its delete (0x10905C10; the delete folded into ::operator delete).
@@ -12,8 +12,8 @@ void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
 unsigned int HashBytes(const void* Data, int Length);
 
-// FUNCTION: 0x1091AD50 ?Insert@Class_1091AD50@@QAEIABVClass_109081E0@@ABH@Z
-unsigned int Class_1091AD50::Insert(const Class_109081E0& Key, const int& Value)
+// FUNCTION: 0x1091AD50 ?Insert@Class_1091AD50@@QAEIABVcString@@ABH@Z
+unsigned int Class_1091AD50::Insert(const cString& Key, const int& Value)
 {
     if (!Unknown10 && Unknown00 > Unknown0C * 0.2)
         Rehash(Unknown0C * 2);

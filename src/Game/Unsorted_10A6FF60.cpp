@@ -3,7 +3,7 @@
 #include "Game/Class_1098E330.h"
 #include "Game/Class_10A707F0.h"
 #include "Game/Class_10B06220.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_1091CA00.h"
 #include "Game/Class_1091DEE0.h"
 #include "Core/Core.h"
@@ -36,7 +36,7 @@ void Class_10A701F0::FUN_10a701f0(bool Flag)
     {
         Class_1091CA00* Font;
         {
-            Class_109081E0 Name("font10");
+            cString Name("font10");
             Font = DAT_10f2c928->FUN_1091dc40(Name);
         }
         Font->FUN_1091ca00(Unknown10);

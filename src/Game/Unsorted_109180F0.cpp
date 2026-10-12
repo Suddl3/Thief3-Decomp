@@ -27,7 +27,7 @@ public:
     Class_1092D950* Unknown0D8;
 };
 
-void FUN_10917c90(int A, int B, int C, int D);
+void SetViewport(int A, int B, int C, int D);
 
 extern float DAT_10e49684;
 
@@ -78,5 +78,5 @@ void FUN_109180f0()
     if (Scaled2 < Limit2)
         DAT_10f2c6fc = Scaled2 + 1;
     DAT_10f319a0->FUN_10924b30(0, 0);
-    FUN_10917c90(DAT_10f2c6f0, DAT_10f2c6f4, DAT_10f2c6f8, DAT_10f2c6fc);
+    SetViewport(DAT_10f2c6f0, DAT_10f2c6f4, DAT_10f2c6f8, DAT_10f2c6fc);
 }

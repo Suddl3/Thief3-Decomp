@@ -15,8 +15,8 @@ extern Class_1092F130** DAT_10f31ba4;
 // FUNCTION: 0x1092F130 ?FUN_1092f130@Class_1092F130@@QAEXXZ
 void Class_1092F130::FUN_1092f130()
 {
-    for (int i = 0; i < Unknown0C; i++)
-        Unknown14[i]->FUN_1092f130();
+    for (int i = 0; i < m_ChildCount; i++)
+        m_Children[i]->FUN_1092f130();
     GetAllocator()->Virtual8(0, 0);
     int Index = DAT_10f31b9c.Unknown00;
     DAT_10f31b9c.SetCount(DAT_10f31b9c.Unknown00 + 1);

@@ -1,6 +1,6 @@
 // Game/Unsorted_10B32D70.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10B330D0.h"
 #include "Game/Class_10B33D70.h"
 #include "Game/cIntArray.h"
@@ -37,8 +37,8 @@ public:
     bool Unknown1A4;
 };
 
-// FUNCTION: 0x10B33200 ??0Class_10B33200@@QAE@HABVClass_109081E0@@0H@Z
-Class_10B33200::Class_10B33200(int A, const Class_109081E0& B, const Class_109081E0& C, int D)
+// FUNCTION: 0x10B33200 ??0Class_10B33200@@QAE@HABVcString@@0H@Z
+Class_10B33200::Class_10B33200(int A, const cString& B, const cString& C, int D)
     : Unknown00(A), Unknown04(B), Unknown08(C), Unknown0C(D)
 {
 }

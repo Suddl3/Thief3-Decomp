@@ -3,8 +3,8 @@
 #include "Game/Class_1095CF00.h"
 #include "Game/Struct_1095CF00.h"
 
-// FUNCTION: 0x1095CF00 ?FUN_1095cf00@@YG_NPAUStruct_1095CF00@@PAVClass_1095CF00@@@Z
-bool __stdcall FUN_1095cf00(Struct_1095CF00* Key, Class_1095CF00* Set)
+// FUNCTION: 0x1095CF00 ?ContainsExact@@YG_NPAUStruct_1095CF00@@PAVClass_1095CF00@@@Z
+bool __stdcall ContainsExact(Struct_1095CF00* Key, Class_1095CF00* Set)
 {
     for (int i = 0; i < (Set->Unknown08 == 0 ? 0 : Set->Unknown0C - Set->Unknown08); i++)
     {

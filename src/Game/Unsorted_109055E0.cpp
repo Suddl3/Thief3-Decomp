@@ -26,8 +26,8 @@ extern "C" __declspec(dllimport) unsigned int __stdcall HeapSize(void* hHeap, un
 
 void FUN_109057d0();
 
-// FUNCTION: 0x10905760 ?FUN_10905760@Class_10905760@@QAEXH@Z
-void Class_10905760::FUN_10905760(int Slack)
+// FUNCTION: 0x10905760 ?Empty@Class_10905760@@QAEXH@Z
+void Class_10905760::Empty(int Slack)
 {
     for (int i = 0; i < Unknown04; i++)
         ((Class_10AF7F50*)Unknown00)[i].FUN_10af7f50();

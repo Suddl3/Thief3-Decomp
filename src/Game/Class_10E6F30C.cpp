@@ -3,7 +3,7 @@
 #include "Game/Class_10AB90F0.h"
 #include "Game/cActorManager.h"
 #include "Game/Class_10905A90_Member.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10E6F30C.h"
 
 extern const char DAT_10e6f2fc[];
@@ -18,7 +18,7 @@ void* FUN_10a4bd70(int A);
 
 class Class_10953590;
 
-// Copied from Game/Class_10939570.h with FUN_1093aed0 added.
+// Copied from Game/Class_10939570.h with GetCategoryIndex added.
 class Class_10939570
 {
 public:
@@ -26,7 +26,7 @@ public:
     void FUN_1093bce0(Class_10953590* Param);
     void* FUN_1093bd40(int* A, int B, int C);
     void FUN_1093b5e0();
-    int FUN_1093aed0(const char** Name);
+    int GetCategoryIndex(const char** Name);
 
     char Pad00[0x1];
 };
@@ -49,15 +49,15 @@ extern Class_10F46DA0* DAT_10f46da0;
 void Class_10E6F30C::FUN_10ab85a0()
 {
     {
-        Class_109081E0 Splash(DAT_10e6f2fc);
+        cString Splash(DAT_10e6f2fc);
         Unknown10 = (int)FUN_10a4bd70((int)&Splash);
     }
     {
-        Class_109081E0 Ripple(DAT_10e6f2f0);
+        cString Ripple(DAT_10e6f2f0);
         Unknown14 = (int)FUN_10a4bd70((int)&Ripple);
     }
-    Unknown20 = DAT_10f323fc->FUN_1093aed0(&DAT_10f3a3d0);
-    Unknown24 = DAT_10f323fc->FUN_1093aed0(&DAT_10f3a3d4);
+    Unknown20 = DAT_10f323fc->GetCategoryIndex(&DAT_10f3a3d0);
+    Unknown24 = DAT_10f323fc->GetCategoryIndex(&DAT_10f3a3d4);
     Unknown18 = -1;
     Unknown1C = -1;
     Unknown28 = 0;

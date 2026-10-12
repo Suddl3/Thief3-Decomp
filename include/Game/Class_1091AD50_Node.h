@@ -3,12 +3,12 @@
 #ifndef GAME_CLASS_1091AD50_NODE_H
 #define GAME_CLASS_1091AD50_NODE_H
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 class Class_1091AD50_Node
 {
 public:
-    Class_109081E0 Key;
+    cString Key;
     int Value;
     Class_1091AD50_Node* Next;
 };

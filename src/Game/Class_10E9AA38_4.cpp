@@ -1,6 +1,6 @@
 // Game/Class_10E9AA38_4.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10E93B5C.h"
 #include "Game/Class_10C37960.h"
 
@@ -31,9 +31,9 @@ public:
 class Class_10E9AA38 : public Class_10E99314
 {
 public:
-    Class_10E9AA38(Class_10C37960* A, const Class_10E93B5C& B, int C, const Class_109081E0& E, int F, int G, int H, int I);
+    Class_10E9AA38(Class_10C37960* A, const Class_10E93B5C& B, int C, const cString& E, int F, int G, int H, int I);
     virtual bool IsFinished();
-    virtual Class_109081E0 GetDescription();
+    virtual cString GetDescription();
     virtual ~Class_10E9AA38();
 
     bool Unknown4C;
@@ -44,11 +44,11 @@ public:
     int Unknown58;
     float Unknown5C;
     float Unknown60;
-    Class_109081E0 Unknown64;
+    cString Unknown64;
 };
 
-// FUNCTION: 0x10C2E800 ??0Class_10E9AA38@@QAE@PAVClass_10C37960@@ABVClass_10E93B5C@@HABVClass_109081E0@@HHHH@Z
-Class_10E9AA38::Class_10E9AA38(Class_10C37960* A, const Class_10E93B5C& B, int C, const Class_109081E0& E, int F, int G, int H, int I)
+// FUNCTION: 0x10C2E800 ??0Class_10E9AA38@@QAE@PAVClass_10C37960@@ABVClass_10E93B5C@@HABVcString@@HHHH@Z
+Class_10E9AA38::Class_10E9AA38(Class_10C37960* A, const Class_10E93B5C& B, int C, const cString& E, int F, int G, int H, int I)
     : Class_10E99314((int)A, B, C), Unknown4C(false), Unknown50(0), Unknown54((char)F), Unknown58(G), Unknown5C(0.0f), Unknown64(E)
 {
     Unknown60 = (float)GetTimeSeconds();

@@ -1,6 +1,6 @@
 // Game/Unsorted_10A65110.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10919B90.h"
 #include "Game/Struct_1091A610.h"
 #include "Game/Class_10A65480.h"
@@ -17,7 +17,7 @@ public:
     void FUN_1091be70();
     int FUN_1091cb40();
     int GetValue(unsigned int Index);
-    Class_109081E0 FUN_1091cbc0(int B, int C);
+    cString FUN_1091cbc0(int B, int C);
     int Count()
     {
         if (!Unknown0C)
@@ -41,8 +41,8 @@ int Class_10A65480::FUN_10a65480()
     int Max = 0;
     for (int I = 0; I < Unknown18C->FUN_1091cb20(); I++)
     {
-        Class_109081E0 Name = Unknown18C->FUN_1091cbc0(I, 4);
-        float Value = Unknown154->FUN_1091a610((const Struct_1091A610*)&Name, 8);
+        cString Name = Unknown18C->FUN_1091cbc0(I, 4);
+        float Value = Unknown154->MeasureText((const Struct_1091A610*)&Name, 8);
         int Ms = (int)FUN_10d20ec0(Value);
         if (Ms > Max)
             Max = Ms;

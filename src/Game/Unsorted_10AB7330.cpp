@@ -11,12 +11,12 @@ int FUN_10af3690(const char* A, const char* B);
 
 extern "C" char* _strlwr(char* String);
 
-// Game/Class_109081E0.h copied without its base, with the destructor's own body: the code computes Unknown00 - 4 before GetAllocator().
-class Class_109081E0
+// Game/cString.h copied without its base, with the destructor's own body: the code computes Unknown00 - 4 before GetAllocator().
+class cString
 {
 public:
-    Class_109081E0() { Unknown00 = 0; }
-    ~Class_109081E0()
+    cString() { Unknown00 = 0; }
+    ~cString()
     {
         if (Unknown00)
         {
@@ -41,7 +41,7 @@ public:
     bool FUN_10910a20(const char* Section, const char* Key, int* Value, int D);
     bool GetBool(const char* Section, const char* Key, bool* Value, const char* File);
     bool GetFloat(const char* Section, const char* Key, float* Value, const char* File);
-    bool GetString(const char* Section, const char* Key, Class_109081E0& Value, const char* File);
+    bool GetString(const char* Section, const char* Key, cString& Value, const char* File);
 
     char Pad00[0x1];
 };
@@ -49,7 +49,7 @@ public:
 // FUNCTION: 0x10AB7330 ?LoadDifficulty@cDifficulty@@QAEXXZ
 void cDifficulty::LoadDifficulty()
 {
-    Class_109081E0 Name;
+    cString Name;
     if (Config::Instance()->GetString("T3Settings", "CurrentDifficulty", Name, 0))
     {
         if (Name.Unknown00)

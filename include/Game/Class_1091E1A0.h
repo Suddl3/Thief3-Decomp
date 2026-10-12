@@ -6,11 +6,11 @@
 class Class_1091E1A0
 {
 public:
-    void FUN_1091e1a0();
+    void Normalize();
 
-    float Unknown00;
-    float Unknown04;
-    float Unknown08;
+    float m_x;
+    float m_y;
+    float m_z;
 };
 
 #endif // GAME_CLASS_1091E1A0_H

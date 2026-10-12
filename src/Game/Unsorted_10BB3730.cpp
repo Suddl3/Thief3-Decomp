@@ -5,7 +5,7 @@
 #include "Game/Class_10E8C7D0.h"
 #include "Game/Class_10E8C7DC.h"
 #include "Game/Class_10E8C8E4.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 void FUN_10bb3830(int A, int B, int C);
 
@@ -23,19 +23,19 @@ public:
 
 extern Class_10BB48E0* DAT_10ff6694;
 
-int FUN_10bb3730(int A, int B, int C, const Class_109081E0& Name);
+int FUN_10bb3730(int A, int B, int C, const cString& Name);
 
 // FUNCTION: 0x10BB3930 ?FUN_10bb3930@Class_10E8C7D0@@UAEHHHH@Z
 int Class_10E8C7D0::FUN_10bb3930(int A, int B, int C)
 {
-    Class_109081E0 Name("STATE_GUARD");
+    cString Name("STATE_GUARD");
     return FUN_10bb3730(A, B, C, Name);
 }
 
 // FUNCTION: 0x10BB39C0 ?FUN_10bb39c0@Class_10E8C7DC@@UAEHHHH@Z
 int Class_10E8C7DC::FUN_10bb39c0(int A, int B, int C)
 {
-    Class_109081E0 Name("STATE_FLEE");
+    cString Name("STATE_FLEE");
     return FUN_10bb3730(A, B, C, Name);
 }
 

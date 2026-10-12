@@ -8,7 +8,7 @@
 class Class_10905760 : public Class_10AF4BB0
 {
 public:
-    void FUN_10905760(int Slack);
+    void Empty(int Slack);
 };
 
 #endif // GAME_CLASS_10905760_H

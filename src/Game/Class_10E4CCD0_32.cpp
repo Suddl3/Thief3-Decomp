@@ -12,7 +12,7 @@ void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
 class FVector;
 
-class Class_109081E0;
+class cString;
 
 int FUN_10bed050();
 
@@ -80,7 +80,7 @@ public:
     virtual void FUN_10bed060(int A);
 
     State_PatrolLook(int A, int B, int C, int D, int E, int F, int G, int H);
-    State_PatrolLook(int A, int B, const FVector& C, float D, const Class_109081E0& E, int F, int G, int H);
+    State_PatrolLook(int A, int B, const FVector& C, float D, const cString& E, int F, int G, int H);
 
     int Unknown40;
     float m_EndTime;
@@ -113,11 +113,11 @@ public:
     virtual void Virtual13();
     virtual void Virtual14();
     virtual void Virtual15();
-    virtual State_PatrolLook* FUN_10b99850(Struct_10B98E00* A, const FVector& B, float C, const Class_109081E0& D, int E, int F, int G);
+    virtual State_PatrolLook* FUN_10b99850(Struct_10B98E00* A, const FVector& B, float C, const cString& D, int E, int F, int G);
 };
 
-// FUNCTION: 0x10B99850 ?FUN_10b99850@Class_10E4CCD0@@UAEPAVState_PatrolLook@@PAUStruct_10B98E00@@ABVFVector@@MABVClass_109081E0@@HHH@Z
-State_PatrolLook* Class_10E4CCD0::FUN_10b99850(Struct_10B98E00* A, const FVector& B, float C, const Class_109081E0& D, int E, int F, int G)
+// FUNCTION: 0x10B99850 ?FUN_10b99850@Class_10E4CCD0@@UAEPAVState_PatrolLook@@PAUStruct_10B98E00@@ABVFVector@@MABVcString@@HHH@Z
+State_PatrolLook* Class_10E4CCD0::FUN_10b99850(Struct_10B98E00* A, const FVector& B, float C, const cString& D, int E, int F, int G)
 {
     int Id = FUN_10bed050();
     if (Id && A->Unknown08->FUN_10dbd510(Id)->GetFloat() > DAT_10eafbdc)

@@ -8,7 +8,7 @@ struct Struct_1091E290;
 class Class_1091E290
 {
 public:
-    void FUN_1091e290(const Struct_1091E290& A);
+    void SetMatrix(const Struct_1091E290& A);
 
     int Unknown00;
     int Unknown04;

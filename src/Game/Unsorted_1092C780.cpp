@@ -9,8 +9,8 @@ extern "C" __declspec(dllimport) int __stdcall ShowCursor(int Show);
 
 extern IDirect3DDevice8* GDirect3DDevice8;
 
-// FUNCTION: 0x1092D3D0 ?FUN_1092d3d0@Class_1092D3D0@@QAEXXZ
-void Class_1092D3D0::FUN_1092d3d0()
+// FUNCTION: 0x1092D3D0 ?HideCursor@Class_1092D3D0@@QAEXXZ
+void Class_1092D3D0::HideCursor()
 {
     SetCursor(0);
     ShowCursor(0);

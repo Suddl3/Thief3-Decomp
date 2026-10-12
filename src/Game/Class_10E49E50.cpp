@@ -48,7 +48,7 @@ public:
     {
         Unknown04 = 0;
         Unknown08 = -1;
-        memset(&Unknown10, 0, sizeof(Unknown10));
+        memset(&m_Desc, 0, sizeof(m_Desc));
         Unknown0C = 0;
     }
 
@@ -57,7 +57,7 @@ public:
     int Unknown04;
     int Unknown08;
     int Unknown0C;
-    Struct_10932ED0 Unknown10;
+    Struct_10932ED0 m_Desc;
 };
 
 class Class_10E49E50 : public Class_10E49D1C

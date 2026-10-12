@@ -6,13 +6,13 @@
 
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 
-class Class_109081E0
+class cString
 {
 public:
-    Class_109081E0() : Unknown00(0) {}
-    ~Class_109081E0();
+    cString() : Unknown00(0) {}
+    ~cString();
 
-    Class_109081E0& operator=(const Class_109081E0& Other);
+    cString& operator=(const cString& Other);
 
     char* Unknown00;
 };
@@ -24,7 +24,7 @@ class Class_10A34C10_Unknown10;
 // A bucket entry (0x18 bytes).
 struct Class_10A34C10_Node
 {
-    Class_109081E0 Key;
+    cString Key;
     char Unknown04[0xC];
     Class_10A34C10_Unknown10* Value;
     Class_10A34C10_Node* Next;

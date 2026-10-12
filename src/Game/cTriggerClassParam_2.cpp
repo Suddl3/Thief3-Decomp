@@ -1,6 +1,6 @@
 // Game/cTriggerClassParam_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 class Class_10A891F0_Member
 {
@@ -30,7 +30,7 @@ public:
     virtual void Virtual22();
     virtual void Virtual23();
     virtual void Virtual24();
-    virtual Class_109081E0 Virtual25();
+    virtual cString Virtual25();
 };
 
 class cTriggerClassParam
@@ -39,16 +39,16 @@ public:
     virtual void Virtual0();
     virtual void Virtual1();
     virtual void Virtual2();
-    virtual Class_109081E0 GetTypeName();
+    virtual cString GetTypeName();
 
     Class_10A891F0_Member* Unknown04;
 };
 
-// FUNCTION: 0x10A891F0 ?GetTypeName@cTriggerClassParam@@UAE?AVClass_109081E0@@XZ
-Class_109081E0 cTriggerClassParam::GetTypeName()
+// FUNCTION: 0x10A891F0 ?GetTypeName@cTriggerClassParam@@UAE?AVcString@@XZ
+cString cTriggerClassParam::GetTypeName()
 {
     Class_10A891F0_Member* Inner = Unknown04;
     if (Inner)
         return Inner->Virtual25();
-    return Class_109081E0("Class");
+    return cString("Class");
 }

@@ -7,12 +7,12 @@
 #include "Game/Class_10B88A80.h"
 
 // Ion Storm's string (0x109081E0): a char pointer, null when default constructed.
-class Class_109081E0
+class cString
 {
 public:
-    Class_109081E0() : Unknown00(0) {}
-    ~Class_109081E0();
-    Class_109081E0& operator=(const Class_109081E0& Other);
+    cString() : Unknown00(0) {}
+    ~cString();
+    cString& operator=(const cString& Other);
 
     char* Unknown00;
 };
@@ -28,7 +28,7 @@ unsigned int HashBytes(const void* Data, int Length);
 class Class_10B88A80_Node
 {
 public:
-    Class_109081E0 Key;
+    cString Key;
     int Value;
     Class_10B88A80_Node* Next;
 };
@@ -97,8 +97,8 @@ void __stdcall FUN_10b88900(Class_10B88900_Arg1* A, Class_10B88900_Arg2* B, int 
     }
 }
 
-// FUNCTION: 0x10B88A80 ?Insert@Class_10B88A80@@QAEIABVClass_109081E0@@ABH@Z
-unsigned int Class_10B88A80::Insert(const Class_109081E0& Key, const int& Value)
+// FUNCTION: 0x10B88A80 ?Insert@Class_10B88A80@@QAEIABVcString@@ABH@Z
+unsigned int Class_10B88A80::Insert(const cString& Key, const int& Value)
 {
     if (!m_FixedSize && m_Collisions > m_BucketCount * 0.2)
         Rehash(m_BucketCount * 2);
@@ -141,7 +141,7 @@ void Class_10B88A80::Rehash(int Size)
         {
             Insert(Node->Key, Node->Value);
             Class_10B88A80_Node* Next = Node->Next;
-            Node->Key.~Class_109081E0();
+            Node->Key.~cString();
             ::operator delete(Node);
             Node = Next;
         }

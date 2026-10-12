@@ -8,7 +8,7 @@
 class Class_10936A40
 {
 public:
-    void FUN_10936a40();
+    void ApplyViewport();
 
     char Unknown00[0x7FC];
     D3DVIEWPORT8 Viewport;

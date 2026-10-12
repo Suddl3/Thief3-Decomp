@@ -1,7 +1,7 @@
 // Game/Unsorted_10BAA930_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 class Class_109BC840;
 
@@ -10,7 +10,7 @@ class Class_1098E330;
 class FName
 {
 public:
-    Class_109081E0 FUN_10af9730() const;
+    cString FUN_10af9730() const;
 
     unsigned long Value;
 };
@@ -29,7 +29,7 @@ public:
     Class_109BC840* FUN_10baa580();
     int* GetCachedIndex(int* Out);
     int GetCachedValue();
-    int* FUN_10babab0(int* A, Class_109081E0* B);
+    int* FUN_10babab0(int* A, cString* B);
 
     char Unknown00[0x34];
     Class_1098E330* Unknown34;
@@ -50,7 +50,7 @@ int* Class_10BAA580::GetCachedIndex(int* Out)
         Name.Value = 0;
         if (Unknown34->FUN_1098e330(0x10005d0, (int*)&Name.Value))
         {
-            Class_109081E0 Str = Name.FUN_10af9730();
+            cString Str = Name.FUN_10af9730();
             int Index;
             m_CachedIndex = *FUN_10babab0(&Index, &Str);
         }

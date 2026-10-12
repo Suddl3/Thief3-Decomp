@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_1090FD40.h"
 
-class Class_109081E0;
+class cString;
 
 // FUNCTION: 0x10A39200 ?RemoveAt@Class_1090FD40@@QAEXH@Z
 void Class_1090FD40::RemoveAt(int Index)

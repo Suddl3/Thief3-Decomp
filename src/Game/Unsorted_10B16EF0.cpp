@@ -4,7 +4,7 @@
 #include "Game/Class_109E6D60.h"
 #include "Game/cIntArray.h"
 #include "Game/WindowManager.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10B45AD0.h"
 
 class Class_10B45AD0;
@@ -27,7 +27,7 @@ void Class_10B16930::FUN_10b16ef0(bool A)
 {
     Class_10B45AD0* Window;
     {
-        Class_109081E0 Name("FMVWindow");
+        cString Name("FMVWindow");
         Window = (Class_10B45AD0*)((WindowManager*)this)->FindWindowByName(Name);
     }
     if (Window)

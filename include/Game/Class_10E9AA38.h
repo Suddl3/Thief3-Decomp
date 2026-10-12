@@ -3,14 +3,14 @@
 #ifndef GAME_CLASS_10E9AA38_H
 #define GAME_CLASS_10E9AA38_H
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10E99314.h"
 
 class Class_10E9AA38 : public Class_10E99314
 {
 public:
     virtual bool IsFinished();
-    virtual Class_109081E0 GetDescription();
+    virtual cString GetDescription();
     virtual ~Class_10E9AA38();
 
     bool Unknown4C;
@@ -19,7 +19,7 @@ public:
     char Pad54[0x8];
     float Unknown5C;
     float Unknown60;
-    Class_109081E0 Unknown64;
+    cString Unknown64;
 };
 
 #endif // GAME_CLASS_10E9AA38_H

@@ -5,7 +5,7 @@
 
 #include "Game/Class_1090A780.h"
 
-class Class_109081E0;
+class cString;
 class Class_1091D800;
 
 class Class_10E6AC98
@@ -25,7 +25,7 @@ public:
     virtual void Virtual11();
     virtual void FUN_10c63a40(int p1);
     virtual Class_1090A780 FUN_10a63210();
-    virtual void FUN_10a634a0(const Class_109081E0& A);
+    virtual void FUN_10a634a0(const cString& A);
 
     char Unknown04[8];
     Class_1091D800* Unknown0C;

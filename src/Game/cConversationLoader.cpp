@@ -3,7 +3,7 @@
 #include "Game/Class_10905A90_Member.h"
 #include "Game/cConversationLoader.h"
 #include "Game/Class_10F352D8.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 extern void* DAT_10f3986c;
 

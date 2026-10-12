@@ -1,7 +1,7 @@
 // Game/Class_10E4A538_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 extern "C" void* memset(void*, int, unsigned);
 
@@ -30,9 +30,9 @@ public:
     void UpdateTextureMatrix(Class_109400A0_Arg* Arg);
 
     int Unknown04;
-    Class_109081E0 Unknown08[47];
+    cString Unknown08[47];
     char UnknownC4[0xBC];
-    Class_109081E0 Unknown180[47];
+    cString Unknown180[47];
     char Pad23C[0xc0];
     int Unknown2FC;
 };

@@ -12,9 +12,9 @@ public:
     void FUN_109141c0(const Class_1090A780& A);
 
     int Unknown00;
-    int Unknown04;
+    int m_ChildCount;
     int Unknown08;
-    Class_10915210** Unknown0C;
+    Class_10915210** m_Children;
 };
 
 #endif // GAME_CLASS_109141C0_H

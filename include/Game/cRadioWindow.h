@@ -3,7 +3,7 @@
 #ifndef GAME_CRADIOWINDOW_H
 #define GAME_CRADIOWINDOW_H
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10E67FD0.h"
 
 class Class_10E68938_Unknown128;
@@ -70,7 +70,7 @@ public:
     bool Unknown0CE;
     char PadCF[0x49];
     int Unknown118;
-    Class_109081E0 Unknown11C;
+    cString Unknown11C;
     int m_ChildCount;
     int Unknown124;
     Class_10E68938_Unknown128** m_Children;

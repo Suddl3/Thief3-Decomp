@@ -9,12 +9,12 @@ class IDirect3DVertexBuffer8;
 
 Class_10905A90_Member* GetAllocator();
 
-// FUNCTION: 0x10934D10 ?FUN_10934d10@Class_10934D10@@QAEJXZ
-long Class_10934D10::FUN_10934d10()
+// FUNCTION: 0x10934D10 ?CreateDynamicVertexBuffer@Class_10934D10@@QAEJXZ
+long Class_10934D10::CreateDynamicVertexBuffer()
 {
     GetAllocator()->Virtual8(0, 0);
-    long Result = Unknown0C->CreateVertexBuffer(Unknown10, 0x208, 0, 0, &Unknown1C);
+    long Result = m_Device->CreateVertexBuffer(m_Length, 0x208, 0, 0, &m_VertexBuffer);
     GetAllocator()->Virtual9();
-    Unknown20.FUN_109343b0(&Unknown1C);
+    Unknown20.FUN_109343b0(&m_VertexBuffer);
     return Result;
 }

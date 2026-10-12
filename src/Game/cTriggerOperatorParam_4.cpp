@@ -11,21 +11,21 @@ public:
     char* Unknown00;
 };
 
-class Class_109081E0 : public Class_1090A780
+class cString : public Class_1090A780
 {
 public:
-    Class_109081E0(const char* In);
-    Class_109081E0(const Class_1090A780& Other) : Class_1090A780(Other) {}
+    cString(const char* In);
+    cString(const Class_1090A780& Other) : Class_1090A780(Other) {}
 };
 
 extern Class_1090A780 DAT_10f3a1f8[];
 
 extern const char DAT_10e6c7ec[];
 
-// FUNCTION: 0x10A8D490 ?GetText@cTriggerOperatorParam@@UAE?AVClass_109081E0@@XZ
-Class_109081E0 cTriggerOperatorParam::GetText()
+// FUNCTION: 0x10A8D490 ?GetText@cTriggerOperatorParam@@UAE?AVcString@@XZ
+cString cTriggerOperatorParam::GetText()
 {
     if (Unknown04 >= 0 && Unknown04 < 4)
-        return Class_109081E0(DAT_10f3a1f8[Unknown04]);
-    return Class_109081E0(DAT_10e6c7ec);
+        return cString(DAT_10f3a1f8[Unknown04]);
+    return cString(DAT_10e6c7ec);
 }

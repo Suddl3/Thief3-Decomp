@@ -1,6 +1,6 @@
 // Game/Unsorted_10A300C0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10A304C0.h"
 
 struct Item_10A304C0
@@ -22,9 +22,9 @@ public:
     virtual void Virtual0();
     virtual Class_10E66390* Virtual1();
 
-    Class_10E66390(const Class_109081E0& In);
+    Class_10E66390(const cString& In);
 
-    Class_109081E0 Unknown04;
+    cString Unknown04;
 };
 
 // FUNCTION: 0x10A300C0 ?Virtual1@Class_10E66390@@UAEPAV1@XZ

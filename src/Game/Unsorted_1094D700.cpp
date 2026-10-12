@@ -11,8 +11,8 @@ public:
     virtual int __stdcall Virtual2();
 };
 
-// FUNCTION: 0x1094D700 ?FUN_1094d700@Class_1094D700@@QAEXXZ
-void Class_1094D700::FUN_1094d700()
+// FUNCTION: 0x1094D700 ?ReleaseAll@Class_1094D700@@QAEXXZ
+void Class_1094D700::ReleaseAll()
 {
     if (Unknown04)
     {

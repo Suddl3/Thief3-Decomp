@@ -3,7 +3,7 @@
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_1090C880.h"
 #include "Game/Class_10C4EDA0.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 class FVector
 {
@@ -46,7 +46,7 @@ public:
     char Unknown28[0xF8];
     bool m_Dirty;
     char Unknown121[3];
-    Class_109081E0 m_Name;
+    cString m_Name;
     Class_1090C880 m_Names;
     int Unknown134;
 };

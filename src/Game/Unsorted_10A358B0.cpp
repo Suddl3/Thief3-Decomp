@@ -9,9 +9,9 @@ int Class_10A359D0::FUN_10a358b0()
 {
     if (Unknown0D)
     {
-        float A = Unknown88->FUN_10919ca0(Unknown10);
+        float A = Unknown88->GetField14(Unknown10);
         return (int)(((Class_10919C40*)Unknown88)->FUN_10919c40(Unknown10) * A);
     }
-    float A = Unknown84->FUN_10919ca0(Unknown10);
+    float A = Unknown84->GetField14(Unknown10);
     return (int)(((Class_10919C40*)Unknown84)->FUN_10919c40(Unknown10) * A);
 }

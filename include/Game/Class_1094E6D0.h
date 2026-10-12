@@ -8,13 +8,13 @@ struct Struct_1094E6D0_Group;
 class Class_1094E6D0
 {
 public:
-    void FUN_1094e6d0(int Index, int A, int B, int C, int D);
+    void SetShadowGroup(int Index, int A, int B, int C, int D);
 
     char Unknown00[0x108];
-    Struct_1094E6D0_Group* Unknown108;
+    Struct_1094E6D0_Group* m_Groups;
     char Unknown10C[8];
-    int Unknown114;
-    int Unknown118;
+    int m_ShadowVertex0;
+    int m_ShadowVertex1;
 };
 
 #endif // GAME_CLASS_1094E6D0_H

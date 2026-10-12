@@ -18,8 +18,8 @@ public:
     virtual void Virtual7();
 };
 
-// FUNCTION: 0x10944CD0 ?FUN_10944cd0@@YGXPAVObject_10944D50@@PAVClass_10A32000@@PAH@Z
-void __stdcall FUN_10944cd0(Object_10944D50* A, Class_10A32000* C, int* Offset)
+// FUNCTION: 0x10944CD0 ?AppendBuffer@@YGXPAVObject_10944D50@@PAVClass_10A32000@@PAH@Z
+void __stdcall AppendBuffer(Object_10944D50* A, Class_10A32000* C, int* Offset)
 {
     int Base = 0;
     A->Virtual6(0, 0, &Base);

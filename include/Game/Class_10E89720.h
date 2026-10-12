@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_10E89720_H
 #define GAME_CLASS_10E89720_H
 
-class Class_109081E0;
+class cString;
 
 class Class_10E89720
 {
@@ -11,12 +11,12 @@ public:
     virtual void Virtual0();
     virtual void Virtual1();
     virtual void Virtual2();
-    virtual Class_109081E0 GetStateName();
+    virtual cString GetStateName();
     virtual void Virtual4();
     virtual void Virtual5();
     virtual void Advance();
     virtual bool IsAtEnd();
-    virtual Class_109081E0 GetCurrentStateName();
+    virtual cString GetCurrentStateName();
 
     Class_10E89720();
 

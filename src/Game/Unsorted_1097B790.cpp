@@ -1,7 +1,7 @@
 // Game/Unsorted_1097B790.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Core/Core.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_1096BD50.h"
 #include "Game/Class_1097B240.h"
 #include "Game/Class_1097B790.h"
@@ -55,7 +55,7 @@ void Class_1097CBE0::Clear(int Size)
         while (Node)
         {
             Class_1097B240_Node* Next = Node->Next;
-            Node->Key.~Class_109081E0();
+            Node->Key.~cString();
             ::operator delete(Node);
             Node = Next;
         }

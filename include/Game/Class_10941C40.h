@@ -16,9 +16,9 @@ public:
     void FUN_10941c70(void* A, int B, int C, int D);
 
     char Unknown00[0x10];
-    int Unknown10;
+    int m_Value;
     char Unknown14[8];
-    Class_109418E0* Unknown1C;
+    Class_109418E0* m_Item;
 };
 
 #endif // GAME_CLASS_10941C40_H

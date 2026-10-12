@@ -1,7 +1,7 @@
 // Game/Class_10E9CD84.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Core/Core.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10C60C60.h"
 #include "Game/Class_10C64900.h"
 #include "Game/Class_10C64030_Member.h"
@@ -13,7 +13,7 @@ class Class_10C64900_Inner
 public:
     virtual void Virtual0();
     virtual void Virtual1();
-    virtual Class_109081E0 Virtual2();
+    virtual cString Virtual2();
 };
 
 struct Struct_10C64900
@@ -71,10 +71,10 @@ Class_10E9CD84::Class_10E9CD84(Struct_10C64030_Param* A)
 // FUNCTION: 0x10C648E0 ??_GClass_10E9CD84@@UAEPAXI@Z
 // Compiler-generated: emitted with the class's vtable by 0x10C64030's definition in this unit.
 
-// FUNCTION: 0x10C64900 ?FUN_10c64900@Class_10C64900@@QAE?AVClass_109081E0@@XZ
-Class_109081E0 Class_10C64900::FUN_10c64900()
+// FUNCTION: 0x10C64900 ?FUN_10c64900@Class_10C64900@@QAE?AVcString@@XZ
+cString Class_10C64900::FUN_10c64900()
 {
     if (Unknown08->Unknown04)
         return Unknown08->Unknown04->Virtual2();
-    return Class_109081E0(DAT_10e9cdec);
+    return cString(DAT_10e9cdec);
 }

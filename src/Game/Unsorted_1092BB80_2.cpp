@@ -8,10 +8,10 @@ extern const char DAT_10e47660[];
 
 Class_10905A90_Member* GetAllocator();
 
-class Class_109081E0 : public Class_1090A780
+class cString : public Class_1090A780
 {
 public:
-    ~Class_109081E0()
+    ~cString()
     {
         if (Unknown00)
         {
@@ -20,13 +20,13 @@ public:
             Unknown00 = 0;
         }
     }
-    Class_109081E0(const char* In);
-    Class_109081E0(const Class_109081E0& Other);
-    Class_109081E0(const Class_1090A780& Other) : Class_1090A780(Other) {}
+    cString(const char* In);
+    cString(const cString& Other);
+    cString(const Class_1090A780& Other) : Class_1090A780(Other) {}
 
     void FUN_10907870(int Length, int Flag);
-    Class_109081E0& operator=(const Class_109081E0& Other);
-    Class_109081E0& FUN_1090a590(const char* In);
+    cString& operator=(const cString& Other);
+    cString& FUN_1090a590(const char* In);
     const char* operator*() const { return Unknown00 ? Unknown00 : DAT_10e47660; }
     bool IsEmpty() const
     {
@@ -35,26 +35,26 @@ public:
     }
 
     char Unknown04[8];
-    Class_109081E0* Unknown0C;
-    Class_109081E0* Unknown10;
+    cString* Unknown0C;
+    cString* Unknown10;
 };
 
-// FUNCTION: 0x1092C0A0 ?FUN_1092c0a0@Class_1092C0A0@@QAEXXZ
-void Class_1092C0A0::FUN_1092c0a0()
+// FUNCTION: 0x1092C0A0 ?Clear@Class_1092C0A0@@QAEXXZ
+void Class_1092C0A0::Clear()
 {
-    Class_109081E0* P = Unknown00;
-    while (P && Unknown08)
+    cString* P = m_Head;
+    while (P && m_Count)
     {
-        Class_109081E0* Next = P->Unknown10;
+        cString* Next = P->Unknown10;
         if (!P->Unknown0C)
-            Unknown00 = P->Unknown10;
+            m_Head = P->Unknown10;
         else
             P->Unknown0C->Unknown10 = P->Unknown10;
         if (!P->Unknown10)
-            Unknown04 = P->Unknown0C;
+            m_Tail = P->Unknown0C;
         else
             P->Unknown10->Unknown0C = P->Unknown0C;
-        Unknown08--;
+        m_Count--;
         delete P;
         P = Next;
     }

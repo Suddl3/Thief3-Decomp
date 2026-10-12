@@ -3,7 +3,7 @@
 #ifndef GAME_ITEM_10A5E900_H
 #define GAME_ITEM_10A5E900_H
 
-class Class_109081E0;
+class cString;
 
 struct Item_10A5E900
 {
@@ -33,7 +33,7 @@ public:
     virtual void Virtual22();
     virtual void Virtual23();
     virtual void Virtual24();
-    virtual Class_109081E0 Virtual25();
+    virtual cString Virtual25();
 
     char Pad04[0x28];
     char Unknown2C[0xC];

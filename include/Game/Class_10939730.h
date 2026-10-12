@@ -9,7 +9,7 @@ struct Struct_10939730_Table;
 class Class_10939730
 {
 public:
-    void FUN_10939730();
+    void Advance();
 
     Struct_10939730_Entry* Current;
     Struct_10939730_Table* Container;

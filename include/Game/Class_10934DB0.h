@@ -8,7 +8,7 @@ class Class_10934DB0_Member;
 class Class_10934DB0
 {
 public:
-    void FUN_10934db0();
+    void Release();
 
     Class_10934DB0_Member* Unknown00;
 };

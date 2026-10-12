@@ -3,12 +3,12 @@
 #ifndef GAME_CLASS_109E6520_NODE_H
 #define GAME_CLASS_109E6520_NODE_H
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 class Class_109E6520_Node
 {
 public:
-    Class_109081E0 Key;
+    cString Key;
     int Value;
     Class_109E6520_Node* Next;
 };

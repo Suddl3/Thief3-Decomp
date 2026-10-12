@@ -1,6 +1,6 @@
 // Game/Unsorted_10940880.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_109373D0.h"
 
 struct D3DXMATRIX;
@@ -182,9 +182,9 @@ public:
     void BuildTextureMatrix(int Width, int Height, Struct_1093FFE0* Out);
 
     bool Unknown04;
-    Class_109081E0 Unknown08[47];
+    cString Unknown08[47];
     void* UnknownC4[47];
-    Class_109081E0 Unknown180[47];
+    cString Unknown180[47];
     void* Unknown23C[47];
     char Pad2F8[4];
     int Unknown2FC;
@@ -194,8 +194,8 @@ public:
     Class_10940C50_Unknown30C* Unknown30C;
 };
 
-// FUNCTION: 0x10940880 ?FUN_10940880@@YAXXZ
-void FUN_10940880()
+// FUNCTION: 0x10940880 ?ResetTextureStages@@YAXXZ
+void ResetTextureStages()
 {
     for (int i = 0; i < 4; i++)
     {

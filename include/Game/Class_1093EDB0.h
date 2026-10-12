@@ -9,7 +9,7 @@ class Class_1093EDB0
 {
 public:
     void FUN_1093f7a0();
-    bool FUN_1093edb0();
+    bool DeleteShaders();
 
     int Unknown00;
     int Unknown04;

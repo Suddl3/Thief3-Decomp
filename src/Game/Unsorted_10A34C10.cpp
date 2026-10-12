@@ -1,6 +1,6 @@
 // Game/Unsorted_10A34C10.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10A34C10.h"
 #include "Game/Class_10A34C10_Field18.h"
 #include "Game/Class_10A34C10_Node.h"
@@ -15,8 +15,8 @@ public:
     virtual void Virtual2();
 };
 
-// FUNCTION: 0x10A34C10 ?InsertOrAssign@Class_10A34C10@@QAEIABVClass_109081E0@@PAPAVClass_10A34C10_Unknown10@@@Z
-unsigned int Class_10A34C10::InsertOrAssign(const Class_109081E0& Key, Class_10A34C10_Unknown10** Value)
+// FUNCTION: 0x10A34C10 ?InsertOrAssign@Class_10A34C10@@QAEIABVcString@@PAPAVClass_10A34C10_Unknown10@@@Z
+unsigned int Class_10A34C10::InsertOrAssign(const cString& Key, Class_10A34C10_Unknown10** Value)
 {
     const void* Data;
     int Length;

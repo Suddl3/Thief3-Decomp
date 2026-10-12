@@ -10,7 +10,7 @@ public:
     virtual void Virtual1();
     virtual void Virtual2(float A, float B, float C, float* D, float* E, float* F, float* G);
     virtual void Virtual3();
-    virtual void FUN_10929b10(float A, float B, float C, float* Out);
+    virtual void GetLuminance(float A, float B, float C, float* Out);
 };
 
 #endif // GAME_CLASS_10E49B08_H

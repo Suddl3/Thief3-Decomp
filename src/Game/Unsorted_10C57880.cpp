@@ -3,7 +3,7 @@
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_1091CA00.h"
 #include "Game/Class_1091DEE0.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10C59EE0.h"
 
 extern Class_1091DEE0* DAT_10f2c928;
@@ -32,7 +32,7 @@ void Class_10C59EE0::FUN_10c58bb0(bool A, bool B)
     {
         Class_1091CA00* Font;
         {
-            Class_109081E0 Name("font10");
+            cString Name("font10");
             Font = DAT_10f2c928->FUN_1091dc40(Name);
         }
         if (Font)

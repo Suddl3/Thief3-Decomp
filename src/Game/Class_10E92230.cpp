@@ -4,7 +4,7 @@
 #include "Game/Class_10BBB410.h"
 #include "Game/Class_10BFF460.h"
 #include "Game/Class_1090A780.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10BC9A50.h"
 
 class Class_10E97B00
@@ -17,7 +17,7 @@ public:
     Class_10E97B00(const Class_1090A780& Name);
     Class_10E97B00& operator=(const Class_10E97B00& Other);
 
-    Class_109081E0 Unknown04;
+    cString Unknown04;
 };
 
 class Class_10bf7f90
@@ -80,7 +80,7 @@ void Class_10E92230::NotifyActivated(int Unused)
         Name = Class_10E97B00(",?evidence:clearly_seen");
     }
     {
-        Class_109081E0 Text(DAT_10e47660);
+        cString Text(DAT_10e47660);
         ((Class_10BC9A50*)this)->FUN_10bc7d70(&Name, 0x14, 2, &Text, true);
     }
 }

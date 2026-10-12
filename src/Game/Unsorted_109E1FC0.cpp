@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_1090FD40.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_1091CD10.h"
 
 // COM interface behind DAT_10f35b10 and DAT_10f35b14: only Release (slot 2) is called.
@@ -16,7 +16,7 @@ public:
 
 extern const char DAT_10e47660[];
 
-extern Class_109081E0 DAT_10f35d9c;
+extern cString DAT_10f35d9c;
 
 extern Class_1090FD40 DAT_10f35da0;
 
@@ -35,7 +35,7 @@ extern bool DAT_10effbec;
 // FUNCTION: 0x109E2840 ?FUN_109e2840@@YAXXZ
 void FUN_109e2840()
 {
-    DAT_10f35d9c = Class_109081E0(DAT_10e47660);
+    DAT_10f35d9c = cString(DAT_10e47660);
     DAT_10f35da0.FUN_1090f2c0(0);
     for (int i = 0; i < 2; i++)
     {

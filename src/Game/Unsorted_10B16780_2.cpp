@@ -9,7 +9,7 @@
 #include "Core/Core.h"
 #include "Game/Class_109E6D60.h"
 #include "Game/Class_10905A90_Member.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10B16D80.h"
 #include "Game/Class_10B2EEA0.h"
 #include "Game/Class_10E7B6E8.h"
@@ -174,7 +174,7 @@ void Class_10B16930::ShowJunkItemWindow(int A)
 {
     int Window;
     {
-        Class_109081E0 Name("HUDWindow.JunkItemWindow");
+        cString Name("HUDWindow.JunkItemWindow");
         Window = ((WindowManager*)this)->FindWindowByName(Name);
     }
     ((Class_10B2E9D0*)Window)->FUN_10b2e9d0(A);
@@ -194,7 +194,7 @@ void Class_10B16D80::FUN_10b16d80(int A)
 {
     Class_10B16D80_Window* Window;
     {
-        Class_109081E0 Name(DAT_10e7919c);
+        cString Name(DAT_10e7919c);
         Window = (Class_10B16D80_Window*)FindWindowByName(Name);
     }
     if (Window)

@@ -14,7 +14,7 @@ void Class_10A6A150::FUN_10a6a150()
     Class_1091DEE0* Mgr = DAT_10f2c928;
     if (Mgr)
     {
-        Class_1091CA00* Obj = Mgr->FUN_1091dee0(0);
+        Class_1091CA00* Obj = Mgr->GetFont(0);
         if (Obj)
             Obj->FUN_1091ca00(Unknown08);
     }

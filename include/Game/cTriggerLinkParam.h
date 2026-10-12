@@ -3,7 +3,7 @@
 #ifndef GAME_CTRIGGERLINKPARAM_H
 #define GAME_CTRIGGERLINKPARAM_H
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10E6BF84.h"
 
 class cTriggerLinkParam : public Class_10E6BF84
@@ -23,7 +23,7 @@ public:
     cTriggerLinkParam(bool A);
 
     int Unknown04;
-    Class_109081E0 m_Flavor;
+    cString m_Flavor;
     int Unknown0C;
     int Unknown10;
 };

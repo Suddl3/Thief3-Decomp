@@ -9,7 +9,7 @@ struct Struct_1094E650_Unknown108;
 class Class_1094E650
 {
 public:
-    void FUN_1094e650(int A, int B, Struct_1094E650* Out);
+    void GetEntry(int A, int B, Struct_1094E650* Out);
 
     char Unknown00[0x108];
     Struct_1094E650_Unknown108* Unknown108;

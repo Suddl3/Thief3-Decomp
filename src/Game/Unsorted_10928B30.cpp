@@ -52,8 +52,8 @@ struct Struct_10928B50
     Class_10928B50_Unknown34* Unknown34;
 };
 
-// FUNCTION: 0x10928B50 ?FUN_10928b50@@YAXPAUStruct_10928B50@@@Z
-void FUN_10928b50(Struct_10928B50* A)
+// FUNCTION: 0x10928B50 ?AdvanceVideo@@YAXPAUStruct_10928B50@@@Z
+void AdvanceVideo(Struct_10928B50* A)
 {
     Class_10928B50_Unknown34* Bink = A->Unknown34;
     if (Bink)

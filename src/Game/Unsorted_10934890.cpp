@@ -15,7 +15,7 @@ public:
     virtual void Virtual4();
     virtual void Virtual5();
     virtual void Virtual6();
-    virtual int FUN_10934a20();
+    virtual int UnlockVertices();
 
     char Unknown04[0x10];
     Class_10E49EE0_Member* m_Member;
@@ -46,15 +46,15 @@ public:
     virtual void Virtual0();
     virtual void Virtual1();
     virtual void Virtual2();
-    virtual int FUN_10934930(unsigned int A, int B, int C, int D, int* Out);
+    virtual int LockVertices(unsigned int A, int B, int C, int D, int* Out);
 
     char Unknown04[8];
     unsigned int Unknown0C;
     Class_10934990** Unknown10;
 };
 
-// FUNCTION: 0x10934930 ?FUN_10934930@Class_10E49D44@@UAEHIHHHPAH@Z
-int Class_10E49D44::FUN_10934930(unsigned int A, int B, int C, int D, int* Out)
+// FUNCTION: 0x10934930 ?LockVertices@Class_10E49D44@@UAEHIHHHPAH@Z
+int Class_10E49D44::LockVertices(unsigned int A, int B, int C, int D, int* Out)
 {
     if (!Out)
         return 0x80070057;
@@ -69,8 +69,8 @@ int Class_10E49D44::FUN_10934930(unsigned int A, int B, int C, int D, int* Out)
     return 0x80070057;
 }
 
-// FUNCTION: 0x10934A20 ?FUN_10934a20@Class_10E49EE0@@UAEHXZ
-int Class_10E49EE0::FUN_10934a20()
+// FUNCTION: 0x10934A20 ?UnlockVertices@Class_10E49EE0@@UAEHXZ
+int Class_10E49EE0::UnlockVertices()
 {
     if (m_Member == 0)
         return 0x80040721;
@@ -88,8 +88,8 @@ int Class_10E49F64::SetStreamSource(int A)
     return 0;
 }
 
-// FUNCTION: 0x10934DB0 ?FUN_10934db0@Class_10934DB0@@QAEXXZ
-void Class_10934DB0::FUN_10934db0()
+// FUNCTION: 0x10934DB0 ?Release@Class_10934DB0@@QAEXXZ
+void Class_10934DB0::Release()
 {
     if (Unknown00)
     {

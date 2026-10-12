@@ -1,6 +1,6 @@
 // Game/cTriggerSoundSchemaParam_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10A036A0.h"
 
 class cTriggerSoundSchemaParam
@@ -21,7 +21,7 @@ public:
     virtual void CopyFrom(cTriggerSoundSchemaParam* Other);
 
     Class_10A036A0 m_Schema;
-    Class_109081E0 Unknown14;
+    cString Unknown14;
 };
 
 // FUNCTION: 0x10A8B080 ?CopyFrom@cTriggerSoundSchemaParam@@UAEXPAV1@@Z

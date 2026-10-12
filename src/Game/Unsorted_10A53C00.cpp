@@ -11,27 +11,27 @@ public:
     char* Unknown00;
 };
 
-class Class_109081E0 : public Class_1090A780
+class cString : public Class_1090A780
 {
 public:
-    Class_109081E0(const char* In);
+    cString(const char* In);
 };
 
 extern const char DAT_10e47660[];
 
-// FUNCTION: 0x10A53C00 ?FUN_10a53c00@Class_10A53C00@@QAE?AVClass_109081E0@@H@Z
-Class_109081E0 Class_10A53C00::FUN_10a53c00(int State)
+// FUNCTION: 0x10A53C00 ?FUN_10a53c00@Class_10A53C00@@QAE?AVcString@@H@Z
+cString Class_10A53C00::FUN_10a53c00(int State)
 {
     switch (State)
     {
     case 0:
-        return Class_109081E0("Normal");
+        return cString("Normal");
     case 1:
-        return Class_109081E0("Selected");
+        return cString("Selected");
     case 2:
-        return Class_109081E0("Pressed");
+        return cString("Pressed");
     case 3:
-        return Class_109081E0("Disabled");
+        return cString("Disabled");
     }
-    return Class_109081E0(DAT_10e47660);
+    return cString(DAT_10e47660);
 }

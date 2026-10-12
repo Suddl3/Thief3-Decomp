@@ -1,14 +1,14 @@
 // Game/Unsorted_1091B480.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_1091B3F0.h"
 #include "Game/Class_1090A780.h"
 #include "Game/Class_1091B480.h"
 
 struct Item_1091B3F0
 {
-    Class_109081E0 Unknown00;
-    Class_109081E0 Unknown04;
+    cString Unknown00;
+    cString Unknown04;
     int Unknown08;
     int Unknown0C;
     int Unknown10;
@@ -21,14 +21,14 @@ void operator delete(void* Ptr);
 
 struct Class_1091B480_Node
 {
-    Class_109081E0 Key;
+    cString Key;
     int Value;
     char Unknown08[0x18];
     Class_1091B480_Node* Next;
 };
 
-// FUNCTION: 0x1091B480 ?FUN_1091b480@Class_1091B480@@QAEXH@Z
-void Class_1091B480::FUN_1091b480(int NewSize)
+// FUNCTION: 0x1091B480 ?Rehash@Class_1091B480@@QAEXH@Z
+void Class_1091B480::Rehash(int NewSize)
 {
     int OldSize = Size;
     Class_1091B480_Node** OldTable = Table;

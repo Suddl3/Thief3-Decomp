@@ -6,7 +6,7 @@
 class Class_10905F10
 {
 public:
-    void FUN_10905f10();
+    void Close();
 
     char Unknown00[0x10C];
     void* Handle;

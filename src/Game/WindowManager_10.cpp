@@ -3,7 +3,7 @@
 #include "Core/Core.h"
 #include "Game/Class_109E6D60.h"
 #include "Game/Class_10905A90_Member.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 class Class_10B45AD0;
 
@@ -27,7 +27,7 @@ public:
 
     void FUN_109e3d60(void* Window);
     void FUN_109e8ae0(void* Window);
-    int FindWindowByName(const Class_109081E0& Name);
+    int FindWindowByName(const cString& Name);
     void FUN_109e6b20(int A);
     void FUN_109e8930(void* Window);
     void OpenTitleLoadWindow();
@@ -56,7 +56,7 @@ bool WindowManager::SetDeferredMissionFailedWindow()
 {
     int Window;
     {
-        Class_109081E0 Name(DAT_10e791d8);
+        cString Name(DAT_10e791d8);
         Window = FindWindowByName(Name);
     }
     if (!Window)

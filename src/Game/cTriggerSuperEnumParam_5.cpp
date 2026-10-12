@@ -1,7 +1,7 @@
 // Game/cTriggerSuperEnumParam_5.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10905A90_Member.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 class Class_10E6C740_Member;
 
@@ -17,7 +17,7 @@ public:
     virtual void Virtual1();
     virtual int TestRelation(int A, const cTriggerSuperEnumParam* B);
     virtual void Virtual3();
-    virtual void Virtual4(Class_109081E0* Text);
+    virtual void Virtual4(cString* Text);
     virtual void Virtual5();
     virtual void AdvanceCursor();
     virtual int IsDone();
@@ -39,7 +39,7 @@ bool cTriggerSuperEnumParam::Load(int A, void* Reader)
         ReadInt(Reader, &m_Value);
         return true;
     }
-    Class_109081E0 Text;
+    cString Text;
     m_Value = -1;
     ReadString(Reader, (int*)&Text);
     Virtual4(&Text);

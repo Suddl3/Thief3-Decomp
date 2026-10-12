@@ -8,10 +8,10 @@
 class Class_10925F60
 {
 public:
-    void FUN_10925f60(int Item);
+    void Remove(int Item);
 
     char Unknown00[0xA4];
-    cIntArray Unknown0A4;
+    cIntArray m_Items;
 };
 
 #endif // GAME_CLASS_10925F60_H

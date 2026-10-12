@@ -9,11 +9,11 @@ struct Struct_1095D090;
 class Class_1095D090
 {
 public:
-    Class_1095D090_Item* FUN_1095d090(Struct_1095D090* Param1, int Param2);
+    Class_1095D090_Item* FindFree(Struct_1095D090* Param1, int Param2);
     int FUN_1095cf50(Struct_1095D090* Param1, int Param2);
 
     char Unknown00[0x1C];
-    float Unknown1C;
+    float m_Cursor;
     bool Unknown20;
 };
 

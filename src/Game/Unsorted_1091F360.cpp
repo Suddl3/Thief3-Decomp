@@ -27,13 +27,13 @@ void Class_10E49A0C::FUN_1091f360(int A, int B)
     Virtual2(A, B, &B);
 }
 
-// FUNCTION: 0x109241E0 ?FUN_109241e0@Class_109241E0@@QAEXKPAVIDirect3DBaseTexture8@@@Z
-void Class_109241E0::FUN_109241e0(unsigned long Stage, IDirect3DBaseTexture8* Texture)
+// FUNCTION: 0x109241E0 ?SetTexture@Class_109241E0@@QAEXKPAVIDirect3DBaseTexture8@@@Z
+void Class_109241E0::SetTexture(unsigned long Stage, IDirect3DBaseTexture8* Texture)
 {
-    if (Unknown1C[Stage] != Texture)
+    if (m_Textures[Stage] != Texture)
     {
         GDirect3DDevice8->SetTexture(Stage, Texture);
-        Unknown1C[Stage] = Texture;
+        m_Textures[Stage] = Texture;
     }
 }
 

@@ -200,8 +200,8 @@ Struct_10952710 Class_10952710::FUN_10952710()
     return Unknown70;
 }
 
-// FUNCTION: 0x10953A90 ?FUN_10953a90@@YAXHHH@Z
-void FUN_10953a90(int Red, int Green, int Blue)
+// FUNCTION: 0x10953A90 ?SetColor@@YAXHHH@Z
+void SetColor(int Red, int Green, int Blue)
 {
     DAT_10f3424c = (0xff << 24) | ((Red & 0xff) << 16) | ((Green & 0xff) << 8) | (Blue & 0xff);
 }

@@ -5,7 +5,7 @@
 #include "Game/Class_10A37F30.h"
 #include "Game/Class_10E666A0.h"
 #include "Game/Struct_10A378B0.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 // Ion Storm's placement new (0x10905C10).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);

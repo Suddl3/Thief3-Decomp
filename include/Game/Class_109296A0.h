@@ -8,7 +8,7 @@ struct Struct_109296A0_Node;
 class Class_109296A0
 {
 public:
-    void FUN_109296a0(Struct_109296A0_Node* Node);
+    void MoveToBack(Struct_109296A0_Node* Node);
 
     Struct_109296A0_Node* Unknown00;
     Struct_109296A0_Node* Unknown04;

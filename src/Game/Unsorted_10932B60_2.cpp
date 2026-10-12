@@ -4,7 +4,7 @@
 #include "Game/cIntArray.h"
 #include "Game/Struct_109323A0_Node.h"
 
-class Class_10932450
+class cNodeList
 {
 public:
     void FUN_10932450();
@@ -14,9 +14,9 @@ public:
     int Count;
 };
 
-extern Class_10932450 DAT_10f31bb8;
+extern cNodeList DAT_10f31bb8;
 
-extern Class_10932450 DAT_10f31bc4;
+extern cNodeList DAT_10f31bc4;
 
 extern bool DAT_10f31bb4;
 
@@ -24,8 +24,8 @@ extern Class_109329F0 DAT_10eff31c;
 
 extern cIntArray DAT_10f31bd0;
 
-// FUNCTION: 0x10932B60 ?FUN_10932b60@@YAXXZ
-void FUN_10932b60()
+// FUNCTION: 0x10932B60 ?ReleaseAllNodes@@YAXXZ
+void ReleaseAllNodes()
 {
     Struct_109323A0_Node* Node = DAT_10f31bb8.Head;
     while (Node)
@@ -54,7 +54,7 @@ void FUN_10932b60()
     }
     DAT_10f31bb8.FUN_10932450();
     DAT_10f31bc4.FUN_10932450();
-    DAT_10eff31c.FUN_109329f0(0x40);
+    DAT_10eff31c.Reset(0x40);
     DAT_10f31bd0.SetCount(0);
     DAT_10f31bb4 = false;
 }

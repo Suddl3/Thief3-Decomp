@@ -51,8 +51,8 @@ public:
 
 extern IDirect3DDevice8* GDirect3DDevice8;
 
-// FUNCTION: 0x10936A40 ?FUN_10936a40@Class_10936A40@@QAEXXZ
-void Class_10936A40::FUN_10936a40()
+// FUNCTION: 0x10936A40 ?ApplyViewport@Class_10936A40@@QAEXXZ
+void Class_10936A40::ApplyViewport()
 {
     GDirect3DDevice8->SetViewport(&Viewport);
 }

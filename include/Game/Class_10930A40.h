@@ -7,11 +7,11 @@ class Class_10930A40
 {
 public:
     void FUN_10930450(int A);
-    void FUN_10930a40();
+    void Free();
 
     int Unknown00;
     int Unknown04;
-    void* Unknown08;
+    void* m_Data;
 };
 
 #endif // GAME_CLASS_10930A40_H

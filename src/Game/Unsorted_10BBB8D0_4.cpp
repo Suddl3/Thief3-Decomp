@@ -5,7 +5,7 @@
 #include "Game/Class_10AAF570.h"
 #include "Game/Class_10C7D570.h"
 #include "Game/Class_10E9925C.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10905A90_Member.h"
 
 class Class_109BC840;
@@ -24,7 +24,7 @@ public:
     int GetCachedValue();
     Class_109BC840* FUN_10baa580();
     int* GetCachedIndex(int* Out);
-    int* FUN_10babab0(int* Out, Class_109081E0* Name);
+    int* FUN_10babab0(int* Out, cString* Name);
 
     char Pad01[0x8b];
     int m_CachedValue;
@@ -72,8 +72,8 @@ public:
     cIntArray Unknown14;
 };
 
-// FUNCTION: 0x10BBC190 ?FUN_10bbc190@@YAHPAVClass_10BBB440@@HPAVClass_109081E0@@@Z
-int FUN_10bbc190(Class_10BBB440* Self, int Key, Class_109081E0* Name)
+// FUNCTION: 0x10BBC190 ?FUN_10bbc190@@YAHPAVClass_10BBB440@@HPAVcString@@@Z
+int FUN_10bbc190(Class_10BBB440* Self, int Key, cString* Name)
 {
     int Found = Self->FUN_10bbb440(Key);
     if (Found)

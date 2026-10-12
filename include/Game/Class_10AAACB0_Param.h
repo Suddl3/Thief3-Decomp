@@ -3,14 +3,14 @@
 #ifndef GAME_CLASS_10AAACB0_PARAM_H
 #define GAME_CLASS_10AAACB0_PARAM_H
 
-class Class_109081E0;
+class cString;
 
 class Class_10AAACB0_Param
 {
 public:
     virtual void Virtual0();
     virtual void Virtual1();
-    virtual Class_109081E0 Virtual2();
+    virtual cString Virtual2();
 };
 
 #endif // GAME_CLASS_10AAACB0_PARAM_H

@@ -45,7 +45,7 @@ public:
 Class_10919B80* cConversationManager::FUN_10a12e60(int A)
 {
     Class_10919B80* Result = Virtual0();
-    Result->FUN_10919b80(A);
+    Result->SetField28(A);
     return Result;
 }
 

@@ -1,14 +1,14 @@
 // Game/Unsorted_10B76350.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 int FUN_10af3690(const char* A, const char* B);
 
 class FName
 {
 public:
-    Class_109081E0 FUN_10af9730() const;
+    cString FUN_10af9730() const;
 
     unsigned long Value;
 };

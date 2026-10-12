@@ -9,9 +9,9 @@
 
 extern IDirect3DDevice8* GDirect3DDevice8;
 
-void FUN_10919190(Struct_10919190* Matrix);
+void SetWorldTransform(Struct_10919190* Matrix);
 
-void FUN_109192e0(int A, int B, int C);
+void SetStreamAndIndices(int A, int B, int C);
 
 Class_10905A90_Member* GetAllocator();
 
@@ -62,7 +62,7 @@ void Class_1095A660::FUN_1095a660()
         0.0f, 0.0f, 1.0f, 0.0f,
         0.0f, 0.0f, 0.0f, 1.0f
     };
-    FUN_10919190(&Identity);
-    FUN_109192e0(Unknown04, Unknown00, 0);
+    SetWorldTransform(&Identity);
+    SetStreamAndIndices(Unknown04, Unknown00, 0);
     GDirect3DDevice8->DrawPrimitive(D3DPT_TRIANGLEFAN, 0, Unknown14 - 2);
 }

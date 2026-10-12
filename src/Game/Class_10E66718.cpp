@@ -3,10 +3,10 @@
 #include "Game/Class_10E66718.h"
 #include "Game/Struct_10919190.h"
 
-void FUN_10919190(Struct_10919190* Matrix);
+void SetWorldTransform(Struct_10919190* Matrix);
 
 // FUNCTION: 0x10A3A030 ?FUN_10a3a030@Class_10E66718@@UAEXXZ
 void Class_10E66718::FUN_10a3a030()
 {
-    FUN_10919190(&Unknown04);
+    SetWorldTransform(&Unknown04);
 }

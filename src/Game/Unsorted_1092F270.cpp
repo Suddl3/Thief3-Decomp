@@ -11,8 +11,8 @@ void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D
 
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
-// FUNCTION: 0x1092F270 ?FUN_1092f270@Class_1092F270@@QAEPAVClass_10951900@@_N@Z
-Class_10951900* Class_1092F270::FUN_1092f270(bool A)
+// FUNCTION: 0x1092F270 ?GetOrCreate@Class_1092F270@@QAEPAVClass_10951900@@_N@Z
+Class_10951900* Class_1092F270::GetOrCreate(bool A)
 {
     if (Unknown0B0 == 0 && A)
     {

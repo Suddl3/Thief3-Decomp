@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Core/Core.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 struct Struct_10B21820_Object
 {
@@ -75,8 +75,8 @@ public:
     Struct_10B21820_Object* FUN_10991e10();
 };
 
-// FUNCTION: 0x10ACA950 ?FUN_10aca950@@YGXPAVClass_10B21820@@VClass_109081E0@@@Z
-void __stdcall FUN_10aca950(Class_10B21820* A, Class_109081E0 Name)
+// FUNCTION: 0x10ACA950 ?FUN_10aca950@@YGXPAVClass_10B21820@@VcString@@@Z
+void __stdcall FUN_10aca950(Class_10B21820* A, cString Name)
 {
     Struct_10B21820_Object* Obj = A->FUN_10991e10();
     int R = Obj->Virtual47(Name.Unknown00);

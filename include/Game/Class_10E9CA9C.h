@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_10E9CA9C_H
 #define GAME_CLASS_10E9CA9C_H
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 class Class_10C61C20_Param;
 class Class_10C62290;
@@ -19,7 +19,7 @@ public:
 
     char Unknown04;
     char Pad05[0x3];
-    Class_109081E0 m_Name;
+    cString m_Name;
 };
 
 #endif // GAME_CLASS_10E9CA9C_H

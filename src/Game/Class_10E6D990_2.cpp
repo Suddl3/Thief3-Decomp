@@ -7,19 +7,19 @@
 
 extern const char DAT_10e47660[];
 
-// Copy of include/Game/Class_109081E0.h: adds FUN_1095b160, which returns a string by value.
-class Class_109081E0 : public Class_1090A780
+// Copy of include/Game/cString.h: adds FUN_1095b160, which returns a string by value.
+class cString : public Class_1090A780
 {
 public:
-    Class_109081E0() {}
-    Class_109081E0(const char* In);
-    Class_109081E0(const Class_109081E0& Other);
-    Class_109081E0(const Class_1090A780& Other) : Class_1090A780(Other) {}
+    cString() {}
+    cString(const char* In);
+    cString(const cString& Other);
+    cString(const Class_1090A780& Other) : Class_1090A780(Other) {}
 
     void FUN_10907870(int Length, int Flag);
-    Class_109081E0& operator=(const Class_109081E0& Other);
-    Class_109081E0& FUN_1090a590(const char* In);
-    Class_109081E0 FUN_1095b160(char Sep);
+    cString& operator=(const cString& Other);
+    cString& FUN_1090a590(const char* In);
+    cString FUN_1095b160(char Sep);
     const char* operator*() const { return Unknown00 ? Unknown00 : DAT_10e47660; }
     bool IsEmpty() const
     {
@@ -32,15 +32,15 @@ public:
 class Class_10AB37F0
 {
 public:
-    void FUN_10ab37f0(const Class_109081E0& Value);
+    void FUN_10ab37f0(const cString& Value);
     void FUN_10ab3ab0();
 
-    Class_109081E0 Unknown00;
+    cString Unknown00;
 };
 
-Class_109081E0 FUN_10a83850(FILE* File, int A);
+cString FUN_10a83850(FILE* File, int A);
 
-bool FUN_1094c430(const Class_109081E0& A, const Class_109081E0& B);
+bool FUN_1094c430(const cString& A, const cString& B);
 
 class Class_10E6D990
 {
@@ -54,7 +54,7 @@ public:
     virtual int FUN_10aa8a40(FILE* File, int Arg2);
 
     char Unknown04[0x4];
-    Class_109081E0 Unknown08;
+    cString Unknown08;
     char Unknown0C[0x14];
     Class_10AB37F0 Unknown20;
 };
@@ -62,8 +62,8 @@ public:
 // FUNCTION: 0x10AA8A40 ?FUN_10aa8a40@Class_10E6D990@@UAEHPAU_iobuf@@H@Z
 int Class_10E6D990::FUN_10aa8a40(FILE* File, int Arg2)
 {
-    Class_109081E0 Line = FUN_10a83850(File, Arg2);
-    Class_109081E0 Value = Line.FUN_1095b160('=');
+    cString Line = FUN_10a83850(File, Arg2);
+    cString Value = Line.FUN_1095b160('=');
     if (FUN_1094c430(Value, Unknown08))
         return 0;
     Unknown20.FUN_10ab37f0(Line);

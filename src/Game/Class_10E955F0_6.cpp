@@ -32,14 +32,14 @@ Class_10905A90_Member* GetAllocator();
 void FUN_10a48ff0(int A, int B, int C);
 
 // Ion Storm's string (0x109081E0): a char pointer to a block allocated 4 bytes before it.
-class Class_109081E0
+class cString
 {
 public:
     operator const char*() const
     {
         return Unknown00 ? Unknown00 : DAT_10e47660;
     }
-    ~Class_109081E0()
+    ~cString()
     {
         if (Unknown00)
         {
@@ -55,7 +55,7 @@ public:
 class FName
 {
 public:
-    Class_109081E0 FUN_10af9730() const;
+    cString FUN_10af9730() const;
 
     unsigned int Value;
 };

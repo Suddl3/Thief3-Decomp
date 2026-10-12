@@ -6,7 +6,7 @@
 class Class_1094D950
 {
 public:
-    Class_1094D950* FUN_1094d950();
+    Class_1094D950* Reset();
 
     int Unknown00;
     int Unknown04;

@@ -4,10 +4,10 @@
 
 Class_10905A90_Member* GetAllocator();
 
-class Class_109081E0
+class cString
 {
 public:
-    ~Class_109081E0()
+    ~cString()
     {
         if (Unknown00)
         {
@@ -15,7 +15,7 @@ public:
             GetAllocator()->Virtual5(Block);
         }
     }
-    Class_109081E0& operator=(const Class_109081E0& Other);
+    cString& operator=(const cString& Other);
 
     char* Unknown00;
 };
@@ -25,7 +25,7 @@ class Class_10AA8110_Param
 public:
     virtual void Virtual0();
     virtual void Virtual1();
-    virtual Class_109081E0 Virtual2();
+    virtual cString Virtual2();
 };
 
 class Class_10E6C170
@@ -37,8 +37,8 @@ public:
     virtual void Virtual3();
     virtual int CopyFromParam(Class_10AA8110_Param* Src);
 
-    Class_109081E0 Unknown04;
-    Class_109081E0 Unknown08;
+    cString Unknown04;
+    cString Unknown08;
 };
 
 // FUNCTION: 0x10AA8110 ?CopyFromParam@Class_10E6C170@@UAEHPAVClass_10AA8110_Param@@@Z

@@ -32,14 +32,14 @@ public:
 class Class_1093C7F0
 {
 public:
-    void FUN_1093c7f0();
+    void Clear();
 
     char Unknown00[0x1C5C];
     Class_1093C670 Unknown1C5C;
 };
 
-// FUNCTION: 0x1093C7F0 ?FUN_1093c7f0@Class_1093C7F0@@QAEXXZ
-void Class_1093C7F0::FUN_1093c7f0()
+// FUNCTION: 0x1093C7F0 ?Clear@Class_1093C7F0@@QAEXXZ
+void Class_1093C7F0::Clear()
 {
     if (!DAT_10ffc855)
         Unknown1C5C.Clear();

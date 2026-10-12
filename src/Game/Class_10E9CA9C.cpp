@@ -1,6 +1,6 @@
 // Game/Class_10E9CA9C.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-// This module calls Class_109081E0's destructor out of line where the rest of the game inlines it:
+// This module calls cString's destructor out of line where the rest of the game inlines it:
 // the class as it compiles here.
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_1090A780.h"
@@ -8,10 +8,10 @@
 extern const char DAT_10e47660[];
 Class_10905A90_Member* GetAllocator();
 
-class Class_109081E0 : public Class_1090A780
+class cString : public Class_1090A780
 {
 public:
-    ~Class_109081E0()
+    ~cString()
     {
         if (Unknown00)
         {
@@ -20,13 +20,13 @@ public:
             Unknown00 = 0;
         }
     }
-    Class_109081E0(const char* In);
-    Class_109081E0(const Class_109081E0& Other);
-    Class_109081E0(const Class_1090A780& Other) : Class_1090A780(Other) {}
+    cString(const char* In);
+    cString(const cString& Other);
+    cString(const Class_1090A780& Other) : Class_1090A780(Other) {}
 
     void FUN_10907870(int Length, int Flag);
-    Class_109081E0& operator=(const Class_109081E0& Other);
-    Class_109081E0& FUN_1090a590(const char* In);
+    cString& operator=(const cString& Other);
+    cString& FUN_1090a590(const char* In);
     const char* operator*() const { return Unknown00 ? Unknown00 : DAT_10e47660; }
     bool IsEmpty() const
     {
@@ -47,7 +47,7 @@ public:
 
     char Unknown04;
     char Pad05[0x3];
-    Class_109081E0 m_Name;
+    cString m_Name;
 };
 
 // FUNCTION: 0x10C62760 ?SetText@Class_10E9CA9C@@UAGXPBD@Z

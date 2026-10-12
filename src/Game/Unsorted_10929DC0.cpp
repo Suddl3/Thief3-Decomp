@@ -24,8 +24,8 @@ public:
     char Pad14[0x2c];
 };
 
-// FUNCTION: 0x1092A280 ?FUN_1092a280@Class_1092A280@@QAEPAVClass_1092A280_Node@@XZ
-Class_1092A280_Node* Class_1092A280::FUN_1092a280()
+// FUNCTION: 0x1092A280 ?AllocNode@Class_1092A280@@QAEPAVClass_1092A280_Node@@XZ
+Class_1092A280_Node* Class_1092A280::AllocNode()
 {
     Class_1092A280_Node* Node = FreeHead;
     if (Node)

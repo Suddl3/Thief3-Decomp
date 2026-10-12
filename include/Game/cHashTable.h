@@ -5,15 +5,15 @@
 
 #include "Game/Class_1092A370_Field18.h"
 
-class Class_109081E0;
+class cString;
 class Class_1092A370_Node;
 
 class cHashTable
 {
 public:
-    unsigned int Insert(const Class_109081E0& Key, const int& Value);
+    unsigned int Insert(const cString& Key, const int& Value);
     void Rehash(int Size);
-    bool Remove(const Class_109081E0& Key);
+    bool Remove(const cString& Key);
 
     int m_Collisions;
     int m_Count;

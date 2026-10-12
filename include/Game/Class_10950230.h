@@ -9,7 +9,7 @@ class Class_10950230
 {
 public:
     bool FUN_10dbbbb0();
-    bool FUN_10950230();
+    bool DecodeFrame();
 
     Class_10950230_Unknown00* Unknown00;
     bool Unknown04;

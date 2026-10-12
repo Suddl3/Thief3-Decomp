@@ -109,7 +109,7 @@ struct Struct_1094E9D0
 // FUNCTION: 0x1094E860 ?IsReady@Class_10E4AB88@@UAE_NXZ
 bool Class_10E4AB88::IsReady()
 {
-    if (((Class_109481D0*)this)->FUN_109481d0(0x400))
+    if (((Class_109481D0*)this)->HasFlags(0x400))
         return false;
     for (int i = 0; i < UnknownF4; i++)
     {

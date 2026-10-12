@@ -4,13 +4,13 @@
 
 extern const char DAT_10e6c100[];
 
-class Class_109081E0
+class cString
 {
 public:
-    Class_109081E0() : Unknown00(0) {}
-    ~Class_109081E0();
+    cString() : Unknown00(0) {}
+    ~cString();
 
-    Class_109081E0& FUN_1090a590(const char* In);
+    cString& FUN_1090a590(const char* In);
 
     char* Unknown00;
 };
@@ -20,7 +20,7 @@ class Class_10A810F0
 public:
     Class_10A810F0() { Unknown00.FUN_1090a590(DAT_10e6c100); }
 
-    Class_109081E0 Unknown00;
+    cString Unknown00;
 };
 
 class Class_10E6C104 : public Class_10A810F0
@@ -41,7 +41,7 @@ public:
     virtual void WriteNote(void* Writer, int Unused1, int Unused2);
     virtual int CopyFrom(Class_10AAACB0_Param* Src);
 
-    Class_109081E0 m_Note;
+    cString m_Note;
 };
 
 // FUNCTION: 0x10AAAB10 ??0cConNoteEvent@@QAE@XZ

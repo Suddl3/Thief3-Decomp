@@ -1,6 +1,6 @@
 // Game/Class_10E7FD18_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/cIntArray.h"
 
 // Game/Class_10E67FD0.h makes the base 0x150 bytes, past this class's fields at 0x128: the base is declared here by its vtable only.
@@ -19,7 +19,7 @@ public:
     void FUN_10b550c0();
 
     char Unknown04[0x124];
-    Class_109081E0 Unknown128;
+    cString Unknown128;
     cIntArray Unknown12C;
 };
 

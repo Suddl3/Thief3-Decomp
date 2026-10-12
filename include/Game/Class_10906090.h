@@ -6,7 +6,7 @@
 class Class_10906090
 {
 public:
-    Class_10906090* FUN_10906090(int A, const char* B, const char* C, int D);
+    Class_10906090* Init(int A, const char* B, const char* C, int D);
 
     int Unknown00;
     int Unknown04;

@@ -10,7 +10,7 @@
 #include "Game/Class_10B28330.h"
 #include "Game/Options.h"
 #include "Game/Class_10905A90_Member.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/WindowManager.h"
 
 class Class_10B651B0_Member
@@ -301,7 +301,7 @@ void cT3AVOptionsWindow::ShowMainMenu()
     {
         Class_10B28330* Window;
         {
-            Class_109081E0 Name(DAT_10e79040);
+            cString Name(DAT_10e79040);
             Window = (Class_10B28330*)GWindowManager->FindWindowByName(Name);
         }
         if (Unknown1B4 && Unknown1B4->Unknown1A4)

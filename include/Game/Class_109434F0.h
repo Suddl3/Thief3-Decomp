@@ -8,7 +8,7 @@ struct Struct_109434F0;
 class Class_109434F0
 {
 public:
-    int FUN_109434f0(const Struct_109434F0& Item);
+    int Append(const Struct_109434F0& Item);
     void FUN_10dcd540(int Count);
 
     int Unknown00;

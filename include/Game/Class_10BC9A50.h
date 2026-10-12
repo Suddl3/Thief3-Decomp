@@ -5,7 +5,7 @@
 
 #include "Game/Class_10BEFAB0.h"
 
-class Class_109081E0;
+class cString;
 class Class_10BFF460;
 class Class_10E97B00;
 
@@ -13,7 +13,7 @@ class Class_10BC9A50 : public Class_10BEFAB0
 {
 public:
     bool ShopOwnerNoCash();
-    void FUN_10bc7d70(Class_10E97B00* Name, int Flags, int Count, Class_109081E0* Out, bool Flag);
+    void FUN_10bc7d70(Class_10E97B00* Name, int Flags, int Count, cString* Out, bool Flag);
     void CheckDeathGrunt();
     void UpdateSummon(Class_10BFF460* Target);
 

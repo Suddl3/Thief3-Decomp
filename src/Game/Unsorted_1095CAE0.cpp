@@ -5,12 +5,12 @@
 // Ion Storm's placement new (0x10905C10).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 
-// FUNCTION: 0x1095CAE0 ?FUN_1095cae0@Class_1095CAE0@@QAEPAV1@H@Z
-Class_1095CAE0* Class_1095CAE0::FUN_1095cae0(int A)
+// FUNCTION: 0x1095CAE0 ?Init@Class_1095CAE0@@QAEPAV1@H@Z
+Class_1095CAE0* Class_1095CAE0::Init(int A)
 {
-    Unknown04 = A;
+    m_Count = A;
     Unknown00 = (int*)operator new(A * sizeof(int), 0, 0, 0, 0, 0);
-    for (int i = 0; i < Unknown04; i++)
+    for (int i = 0; i < m_Count; i++)
         Unknown00[i] = -1;
     return this;
 }

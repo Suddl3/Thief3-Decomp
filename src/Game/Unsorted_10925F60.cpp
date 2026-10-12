@@ -3,11 +3,11 @@
 #include "Game/Class_10925F60.h"
 #include "Game/cIntArray.h"
 
-// FUNCTION: 0x10925F60 ?FUN_10925f60@Class_10925F60@@QAEXH@Z
-void Class_10925F60::FUN_10925f60(int Item)
+// FUNCTION: 0x10925F60 ?Remove@Class_10925F60@@QAEXH@Z
+void Class_10925F60::Remove(int Item)
 {
-    int Count = Unknown0A4.Count;
-    cIntArray* Set = &Unknown0A4;
+    int Count = m_Items.Count;
+    cIntArray* Set = &m_Items;
     int Index = -1;
     for (int i = 0; i < Count; i++)
     {

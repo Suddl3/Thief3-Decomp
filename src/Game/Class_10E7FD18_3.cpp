@@ -1,7 +1,7 @@
 // Game/Class_10E7FD18_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/cIntArray.h"
 #include "Game/Class_10939570.h"
 
@@ -20,13 +20,13 @@ public:
     void FUN_10b55300();
 
     char Unknown04[0x124];
-    Class_109081E0 Unknown128;
+    cString Unknown128;
     cIntArray Unknown12C;
 };
 
 extern Class_10939570* DAT_10f323fc;
 
-void FUN_1093ee10(Class_109081E0* Out, const char* Format, ...);
+void FormatString(cString* Out, const char* Format, ...);
 
 // FUNCTION: 0x10B55300 ?FUN_10b55300@Class_10E7FD18@@QAEXXZ
 void Class_10E7FD18::FUN_10b55300()
@@ -36,9 +36,9 @@ void Class_10E7FD18::FUN_10b55300()
     cIntArray& Handles = Unknown12C;
     do
     {
-        Class_109081E0 GemName;
+        cString GemName;
         Gem++;
-        FUN_1093ee10(&GemName, "HUDLightGem_%2.2d", Gem);
+        FormatString(&GemName, "HUDLightGem_%2.2d", Gem);
         void* Handle = DAT_10f323fc->FUN_1093bd40(reinterpret_cast<int*>(&GemName), 0, 0);
         int Index = Handles.Count;
         Handles.SetCount(Index + 1);

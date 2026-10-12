@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_1096A960.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 enum EName
 {

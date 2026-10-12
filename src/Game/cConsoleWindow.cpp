@@ -1,7 +1,7 @@
 // Game/cConsoleWindow.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10905A90_Member.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/cConsoleWindow.h"
 
 // FUNCTION: 0x10A5B530 ?FUN_10a5b530@cConsoleWindow@@QAEXXZ
@@ -10,7 +10,7 @@ void cConsoleWindow::FUN_10a5b530()
     GetAllocator()->Virtual8(0, 0);
     if (Unknown1DC)
     {
-        Class_109081E0* Str = Unknown1E4;
+        cString* Str = Unknown1E4;
         if (Str->Unknown00)
         {
             char* Block = Str->Unknown00 - 4;

@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_10D3A700_H
 #define GAME_CLASS_10D3A700_H
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10A4DDA0.h"
 
 class Class_10D3A700
@@ -12,7 +12,7 @@ public:
     Class_10D3A700();
 
     int Unknown00;
-    Class_109081E0 Unknown04[12];
+    cString Unknown04[12];
     Class_10A4DDA0 Unknown34[12];
 };
 

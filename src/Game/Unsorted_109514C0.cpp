@@ -4,13 +4,13 @@
 
 void FUN_1092bdb0(void* Memory);
 
-// FUNCTION: 0x109514C0 ?FUN_109514c0@Class_109514C0@@QAEXXZ
-void Class_109514C0::FUN_109514c0()
+// FUNCTION: 0x109514C0 ?ReleaseAll@Class_109514C0@@QAEXXZ
+void Class_109514C0::ReleaseAll()
 {
     for (int i = 0; i < 9; i++)
     {
-        if (Unknown0C[i])
-            FUN_1092bdb0(Unknown0C[i]);
-        Unknown0C[i] = 0;
+        if (m_Blocks[i])
+            FUN_1092bdb0(m_Blocks[i]);
+        m_Blocks[i] = 0;
     }
 }

@@ -3,15 +3,15 @@
 #ifndef GAME_CLASS_10A250D0_NODE_H
 #define GAME_CLASS_10A250D0_NODE_H
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 class Class_10A250D0_Node
 {
 public:
     ~Class_10A250D0_Node();
 
-    Class_109081E0 Unknown00;
-    Class_109081E0 Unknown04;
+    cString Unknown00;
+    cString Unknown04;
     Class_10A250D0_Node* Next;
 };
 

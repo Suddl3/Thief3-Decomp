@@ -58,8 +58,8 @@ public:
     unsigned int Unknown0C;
 };
 
-// FUNCTION: 0x10950230 ?FUN_10950230@Class_10950230@@QAE_NXZ
-bool Class_10950230::FUN_10950230()
+// FUNCTION: 0x10950230 ?DecodeFrame@Class_10950230@@QAE_NXZ
+bool Class_10950230::DecodeFrame()
 {
     if (Unknown00->Unknown04 && Unknown00->Unknown00 && !Unknown04)
     {

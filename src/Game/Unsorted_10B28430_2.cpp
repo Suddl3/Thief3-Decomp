@@ -2,10 +2,10 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_109E6D60.h"
 #include "Game/Class_10905A90_Member.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10B28870.h"
 
-class Class_109081E0;
+class cString;
 
 class Class_10B45AD0;
 
@@ -27,7 +27,7 @@ public:
 
     void FUN_109e3d60(void* Window);
     void FUN_109e8ae0(void* Window);
-    int FindWindowByName(const Class_109081E0& Name);
+    int FindWindowByName(const cString& Name);
     void FUN_109e6b20(int A);
     void FUN_109e8930(void* Window);
     void OpenTitleLoadWindow();
@@ -69,7 +69,7 @@ void Class_10B28870::FUN_10b28870()
     ((Class_10B154C0_Result*)FUN_10b154c0())->Unknown264 = 0;
     int Window;
     {
-        Class_109081E0 Name(DAT_10e7ad64);
+        cString Name(DAT_10e7ad64);
         Window = GWindowManager->FindWindowByName(Name);
     }
     if (Window)

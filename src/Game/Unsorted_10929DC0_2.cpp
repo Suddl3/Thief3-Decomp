@@ -4,12 +4,12 @@
 #include "Game/cHashTable.h"
 
 // Ion Storm's string (0x109081E0): a char pointer, null when default constructed.
-class Class_109081E0
+class cString
 {
 public:
-    Class_109081E0() : Unknown00(0) {}
-    ~Class_109081E0();
-    Class_109081E0& operator=(const Class_109081E0& Other);
+    cString() : Unknown00(0) {}
+    ~cString();
+    cString& operator=(const cString& Other);
 
     char* Unknown00;
 };
@@ -25,13 +25,13 @@ unsigned int HashBytes(const void* Data, int Length);
 class Class_1092A370_Node
 {
 public:
-    Class_109081E0 Key;
+    cString Key;
     int Value;
     Class_1092A370_Node* Next;
 };
 
-// FUNCTION: 0x1092A370 ?Insert@cHashTable@@QAEIABVClass_109081E0@@ABH@Z
-unsigned int cHashTable::Insert(const Class_109081E0& Key, const int& Value)
+// FUNCTION: 0x1092A370 ?Insert@cHashTable@@QAEIABVcString@@ABH@Z
+unsigned int cHashTable::Insert(const cString& Key, const int& Value)
 {
     if (!m_NoAutoResize && m_Collisions > m_BucketCount * 0.2)
         Rehash(m_BucketCount * 2);

@@ -22,10 +22,10 @@ public:
     char* Unknown00;
 };
 
-class Class_109081E0 : public Class_1090A780
+class cString : public Class_1090A780
 {
 public:
-    ~Class_109081E0()
+    ~cString()
     {
         if (Unknown00)
         {
@@ -35,19 +35,19 @@ public:
     }
 };
 
-Class_109081E0 FUN_1090a660(const char* Text);
+cString FUN_1090a660(const char* Text);
 
 class Class_10E84508 : public Class_10E87B68
 {
 public:
     Class_10E84508* FUN_10b64410();
-    Class_109081E0 GetTitle();
+    cString GetTitle();
 };
 
-// FUNCTION: 0x10B642C0 ?GetTitle@Class_10E84508@@QAE?AVClass_109081E0@@XZ
-Class_109081E0 Class_10E84508::GetTitle()
+// FUNCTION: 0x10B642C0 ?GetTitle@Class_10E84508@@QAE?AVcString@@XZ
+cString Class_10E84508::GetTitle()
 {
-    Class_109081E0 Local = FUN_1090a660("<string=T_TabScreenTitleLoadGameTitle>");
+    cString Local = FUN_1090a660("<string=T_TabScreenTitleLoadGameTitle>");
     return Local;
 }
 

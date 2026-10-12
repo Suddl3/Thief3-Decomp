@@ -6,7 +6,7 @@ class Class_1091E940;
 
 class Class_10924100;
 
-void FUN_10919240(Class_1091E940* A, int B);
+void SetCurrentCamera(Class_1091E940* A, int B);
 
 extern Class_1091E940* DAT_10f2c738;
 
@@ -23,7 +23,7 @@ void FUN_10917f30(int A, int B)
 {
     if (DAT_10f2c738 && DAT_10f2c740)
     {
-        FUN_10919240(DAT_10f2c738, DAT_10f2c73c);
+        SetCurrentCamera(DAT_10f2c738, DAT_10f2c73c);
         DAT_10efef54 = A;
         DAT_10f2c734->FUN_10925290(A, B);
     }

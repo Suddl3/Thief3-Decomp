@@ -55,7 +55,7 @@ void FUN_1092bb50()
 {
     if (!DAT_10f31aa4)
     {
-        DAT_10eff23c.FUN_1092ba00(0x40);
+        DAT_10eff23c.Clear(0x40);
         DAT_10f31aa4 = true;
         DAT_10f31aa8 = 0;
     }

@@ -8,7 +8,7 @@ struct Struct_109481D0;
 class Class_109481D0
 {
 public:
-    bool FUN_109481d0(int Mask);
+    bool HasFlags(int Mask);
 
     char Unknown00[0xB0];
     Struct_109481D0* UnknownB0;

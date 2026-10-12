@@ -3,18 +3,18 @@
 #ifndef GAME_CLASS_10B27090_H
 #define GAME_CLASS_10B27090_H
 
-class Class_109081E0;
+class cString;
 
 class Class_10B27090
 {
 public:
     void FUN_10b26e00();
-    void FUN_10b27090(int Index, const Class_109081E0& Name, int Value);
+    void FUN_10b27090(int Index, const cString& Name, int Value);
 
     char Unknown00[8];
     bool* Unknown08;
     char Unknown0C[8];
-    Class_109081E0* Unknown14;
+    cString* Unknown14;
     char Unknown18[8];
     int* Unknown20;
 };

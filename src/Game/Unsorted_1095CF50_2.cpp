@@ -18,8 +18,8 @@ struct Struct_1095D090
     Class_1095D090_Item** Unknown0C;
 };
 
-// FUNCTION: 0x1095D090 ?FUN_1095d090@Class_1095D090@@QAEPAVClass_1095D090_Item@@PAUStruct_1095D090@@H@Z
-Class_1095D090_Item* Class_1095D090::FUN_1095d090(Struct_1095D090* Param1, int Param2)
+// FUNCTION: 0x1095D090 ?FindFree@Class_1095D090@@QAEPAVClass_1095D090_Item@@PAUStruct_1095D090@@H@Z
+Class_1095D090_Item* Class_1095D090::FindFree(Struct_1095D090* Param1, int Param2)
 {
     Class_1095D090_Item* Result = 0;
     int Count;
@@ -34,9 +34,9 @@ Class_1095D090_Item* Class_1095D090::FUN_1095d090(Struct_1095D090* Param1, int P
         Unknown20 = false;
     }
     else
-        Index = (int)(((float)Count - 1.0f) * Unknown1C);
+        Index = (int)(((float)Count - 1.0f) * m_Cursor);
     if (Index == -1)
-        Index = (int)(((float)Count - 1.0f) * Unknown1C);
+        Index = (int)(((float)Count - 1.0f) * m_Cursor);
     if (Count)
     {
         int i = Index;
@@ -52,14 +52,14 @@ Class_1095D090_Item* Class_1095D090::FUN_1095d090(Struct_1095D090* Param1, int P
                 i = 0;
         } while (i != Index);
     }
-    Unknown1C += 0.1f;
-    if (Unknown1C > 1.0f)
-        Unknown1C = 0.05f;
+    m_Cursor += 0.1f;
+    if (m_Cursor > 1.0f)
+        m_Cursor = 0.05f;
     return Result;
 }
 
-// FUNCTION: 0x1095D150 ?FUN_1095d150@@YG_NPAVClass_1095CF00@@PAUStruct_1095CF00@@@Z
-bool __stdcall FUN_1095d150(Class_1095CF00* Set, Struct_1095CF00* Key)
+// FUNCTION: 0x1095D150 ?HasMissingValue@@YG_NPAVClass_1095CF00@@PAUStruct_1095CF00@@@Z
+bool __stdcall HasMissingValue(Class_1095CF00* Set, Struct_1095CF00* Key)
 {
     bool Found2 = false;
     bool Found1 = false;

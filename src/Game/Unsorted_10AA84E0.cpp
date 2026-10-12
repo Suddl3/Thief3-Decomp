@@ -1,6 +1,6 @@
 // Game/Unsorted_10AA84E0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10AB37D0.h"
 
 void WriteInt(void* A, int B);
@@ -40,12 +40,12 @@ public:
     Class_10E6D990();
     virtual void Virtual0();
 
-    Class_109081E0 Unknown08;
+    cString Unknown08;
     int Unknown0C;
     int Unknown10;
     int Unknown14;
     int Unknown18;
-    Class_109081E0 Unknown1C;
+    cString Unknown1C;
     Class_10AB37D0 Unknown20;
 };
 

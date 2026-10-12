@@ -1,7 +1,7 @@
 // Game/Unsorted_10C5BB10.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 // The placement delete that pairs with Ion Storm's new.
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Struct_10C5BA20.h"
 #include "Game/Class_10C5BB10.h"
 #include "Game/Class_10C5BB10_Unknown18.h"
@@ -14,8 +14,8 @@ public:
     Class_10C5BA20() : Unknown08(false), Unknown1C(-1.0f), Unknown20(-1.0f), Unknown24(0) {}
     Class_10C5BA20* FUN_10c5ba20(const Class_10C5BA20& A);
 
-    Class_109081E0 Unknown00;
-    Class_109081E0 Unknown04;
+    cString Unknown00;
+    cString Unknown04;
     bool Unknown08;
     Struct_10C5BA20 Unknown0C;
     int Unknown18;

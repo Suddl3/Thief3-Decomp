@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_1093E930.h"
 #include "Game/Class_1093EDB0.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_1091E400.h"
 #include "Game/IDirect3DDevice8.h"
 #include "Game/Class_10937730.h"
@@ -26,9 +26,9 @@ public:
     void BuildTextureMatrix(int Width, int Height, Struct_1093FFE0* Out);
 
     int Unknown04;
-    Class_109081E0 Unknown08[47];
+    cString Unknown08[47];
     char UnknownC4[0xBC];
-    Class_109081E0 Unknown180[47];
+    cString Unknown180[47];
     char Pad23C[0xc0];
     int Unknown2FC;
 };
@@ -78,7 +78,7 @@ void FUN_10919640(bool Param)
         DAT_10f2c8e4 = 0;
     }
     DAT_10f340ac->Release();
-    DAT_10f340c0->FUN_1093edb0();
+    DAT_10f340c0->DeleteShaders();
     if (DAT_10f323fc->Unknown1C50)
         DAT_10f323fc->FUN_1093b560();
     DAT_10f31bdc->FUN_10937730();

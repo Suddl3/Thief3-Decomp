@@ -4,7 +4,7 @@
 #include "Game/Class_10A243F0.h"
 #include "Game/Class_10A24540.h"
 #include "Game/Class_10A250D0_Field18.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10A250D0.h"
 
 // Ion Storm's placement new and its delete (0x10905C10; the delete folded into ::operator delete).
@@ -17,8 +17,8 @@ void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 class Class_10A250D0_Node
 {
 public:
-    Class_109081E0 Key;
-    Class_109081E0 Value;
+    cString Key;
+    cString Value;
     Class_10A250D0_Node* Next;
 };
 

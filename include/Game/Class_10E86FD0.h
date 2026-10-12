@@ -5,7 +5,7 @@
 
 #include "Game/Class_10E87B68.h"
 
-class Class_109081E0;
+class cString;
 
 class Class_10E86FD0 : public Class_10E87B68
 {
@@ -130,7 +130,7 @@ public:
     virtual void Virtual118();
     virtual void Virtual119();
     virtual void Virtual120();
-    virtual Class_109081E0 GetTitle();
+    virtual cString GetTitle();
 
     Class_10E86FD0* Construct();
 };

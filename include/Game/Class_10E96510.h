@@ -6,7 +6,7 @@
 #include "Core/Core.h"
 #include "Game/Class_10E960D8.h"
 
-class Class_109081E0;
+class cString;
 class Object_10BE58C0;
 struct Struct_10BE4800;
 
@@ -17,7 +17,7 @@ public:
 
     float FUN_10be4800();
     void UpdateLastKnownPosition();
-    Class_109081E0 GetYellowAlertName();
+    cString GetYellowAlertName();
     bool FUN_10be4980();
 
     Struct_10BE4800* Unknown04;

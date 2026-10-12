@@ -3,14 +3,14 @@
 #ifndef GAME_CLASS_1090FE50_H
 #define GAME_CLASS_1090FE50_H
 
-class Class_109081E0;
+class cString;
 class Class_10AA9DA0;
 
 class Class_1090FE50
 {
 public:
-    bool FUN_1090fe50(Class_10AA9DA0* A, Class_109081E0& B, Class_109081E0& C);
-    void FUN_1090f400(Class_109081E0& Name, void* Data, int Mode, bool Flag);
+    bool SaveToFile(Class_10AA9DA0* A, cString& B, cString& C);
+    void FUN_1090f400(cString& Name, void* Data, int Mode, bool Flag);
 };
 
 #endif // GAME_CLASS_1090FE50_H

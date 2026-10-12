@@ -29,16 +29,16 @@ public:
     float M20, M21, M22;
 };
 
-// FUNCTION: 0x1091E240 ?FUN_1091e240@Class_1091E240@@QAE?AVStruct_1091E240@@XZ
-Struct_1091E240 Class_1091E240::FUN_1091e240()
+// FUNCTION: 0x1091E240 ?GetMatrix@Class_1091E240@@QAE?AVStruct_1091E240@@XZ
+Struct_1091E240 Class_1091E240::GetMatrix()
 {
     return Struct_1091E240(Unknown00.X, Unknown00.Y, Unknown00.Z,
                            Unknown10.X, Unknown10.Y, Unknown10.Z,
                            Unknown20.X, Unknown20.Y, Unknown20.Z);
 }
 
-// FUNCTION: 0x1091E290 ?FUN_1091e290@Class_1091E290@@QAEXABUStruct_1091E290@@@Z
-void Class_1091E290::FUN_1091e290(const Struct_1091E290& A)
+// FUNCTION: 0x1091E290 ?SetMatrix@Class_1091E290@@QAEXABUStruct_1091E290@@@Z
+void Class_1091E290::SetMatrix(const Struct_1091E290& A)
 {
     Unknown00 = A.Unknown00;
     Unknown04 = A.Unknown04;

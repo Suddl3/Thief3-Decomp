@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_10B277B0_H
 #define GAME_CLASS_10B277B0_H
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 class Class_10B277B0
 {
@@ -128,10 +128,10 @@ public:
     virtual void Virtual117();
     virtual void Virtual118(int A);
 
-    void FUN_10b277b0(const Class_109081E0& Name);
+    void FUN_10b277b0(const cString& Name);
 
     char Unknown04[0x18C];
-    Class_109081E0 Unknown190;
+    cString Unknown190;
 };
 
 #endif // GAME_CLASS_10B277B0_H

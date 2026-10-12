@@ -7,10 +7,10 @@
 
 Class_10905A90_Member* GetAllocator();
 
-class Class_109081E0
+class cString
 {
 public:
-    ~Class_109081E0()
+    ~cString()
     {
         if (Unknown00)
         {
@@ -18,7 +18,7 @@ public:
             GetAllocator()->Virtual5(Block);
         }
     }
-    Class_109081E0& operator=(const Class_109081E0& Other);
+    cString& operator=(const cString& Other);
 
     char* Unknown00;
 };
@@ -32,8 +32,8 @@ public:
     virtual void Virtual3();
     virtual int CopyFrom(Class_10AAACB0_Param* Src);
 
-    Class_109081E0 Unknown04;
-    Class_109081E0 m_Note;
+    cString Unknown04;
+    cString m_Note;
 };
 
 extern const char DAT_10e47660[];

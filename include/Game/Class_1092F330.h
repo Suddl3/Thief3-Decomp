@@ -6,11 +6,11 @@
 class Class_1092F330
 {
 public:
-    void FUN_1092f330();
+    void Draw();
 
     char Unknown00[0x0C];
-    int Unknown0C;
-    bool Unknown10;
+    int m_PrimitiveCount;
+    bool m_LineList;
     char Unknown11[0x0B];
     int Unknown1C;
 };

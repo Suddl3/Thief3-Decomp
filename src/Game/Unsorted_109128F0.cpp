@@ -9,8 +9,8 @@ extern "C" void* memset(void*, int, unsigned);
 
 Class_10905A90_Member* GetAllocator();
 
-// FUNCTION: 0x109128F0 ?FUN_109128f0@@YAPAHPAHPBD@Z
-int* FUN_109128f0(int* A, const char* B)
+// FUNCTION: 0x109128F0 ?SetUpperBaseName@@YAPAHPAHPBD@Z
+int* SetUpperBaseName(int* A, const char* B)
 {
     char Dir[256];
     char Ext[256];

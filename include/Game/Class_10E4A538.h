@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_10E4A538_H
 #define GAME_CLASS_10E4A538_H
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 struct Struct_1093FFE0;
 
@@ -21,9 +21,9 @@ public:
     void BuildTextureMatrix(int Width, int Height, Struct_1093FFE0* Out);
 
     int Unknown04;
-    Class_109081E0 Unknown08[47];
+    cString Unknown08[47];
     char UnknownC4[0xBC];
-    Class_109081E0 Unknown180[47];
+    cString Unknown180[47];
     char Pad23C[0xc0];
     int Unknown2FC;
 };

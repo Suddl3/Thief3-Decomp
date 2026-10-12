@@ -1,6 +1,6 @@
 // Game/Unsorted_10914D80_6.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10914D80.h"
 #include "Game/Class_10914D80_Node.h"
 #include "Game/Class_10915830.h"
@@ -14,7 +14,7 @@ void Class_10915830::Clear(int Size)
         while (Node)
         {
             Class_10914D80_Node* Next = Node->Next;
-            Node->Key.~Class_109081E0();
+            Node->Key.~cString();
             ::operator delete(Node);
             Node = Next;
         }

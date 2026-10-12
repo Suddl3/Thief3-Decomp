@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10A38090.h"
 #include "Game/Class_10EC1058.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10A382D0.h"
 #include "Game/Class_10A38340.h"
 

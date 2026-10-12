@@ -8,10 +8,10 @@ class IDirect3DTexture8;
 class Class_1092D990
 {
 public:
-    void FUN_1092d990();
+    void CreateRenderTargets();
 
-    IDirect3DTexture8* Unknown00;
-    IDirect3DTexture8* Unknown04;
+    IDirect3DTexture8* m_RenderTarget0;
+    IDirect3DTexture8* m_RenderTarget1;
 };
 
 #endif // GAME_CLASS_1092D990_H

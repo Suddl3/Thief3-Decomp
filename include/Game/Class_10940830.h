@@ -6,11 +6,11 @@
 class Class_10940830
 {
 public:
-    float FUN_10940830(float Scale);
+    float SampleTable(float Scale);
 
     char Unknown00[0x354];
-    float* Unknown354;
-    unsigned int Unknown358;
+    float* m_Table;
+    unsigned int m_Count;
 };
 
 #endif // GAME_CLASS_10940830_H

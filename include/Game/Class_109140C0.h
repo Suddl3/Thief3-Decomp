@@ -3,19 +3,19 @@
 #ifndef GAME_CLASS_109140C0_H
 #define GAME_CLASS_109140C0_H
 
-class Class_109081E0;
+class cString;
 class Class_10914D60;
 
 class Class_109140C0
 {
 public:
-    void FUN_109140c0(int A, Class_109081E0& B, int C);
-    void FUN_10914100(int A, Class_109081E0& B, int C);
+    void DispatchToHandlers(int A, cString& B, int C);
+    void FUN_10914100(int A, cString& B, int C);
 
     char Unknown00[4];
-    int Unknown04;
+    int m_HandlerCount;
     char Unknown08[4];
-    Class_10914D60** Unknown0C;
+    Class_10914D60** m_Handlers;
 };
 
 #endif // GAME_CLASS_109140C0_H

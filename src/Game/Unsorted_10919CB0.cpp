@@ -48,8 +48,8 @@ void Class_1091C820::Free()
     Unknown00 = 0;
 }
 
-// FUNCTION: 0x1091CC80 ?FUN_1091cc80@Class_1091CC80@@QAEXXZ
-void Class_1091CC80::FUN_1091cc80()
+// FUNCTION: 0x1091CC80 ?Free@Class_1091CC80@@QAEXXZ
+void Class_1091CC80::Free()
 {
     FUN_1091c850(0x40);
     ::operator delete(Unknown14);

@@ -3,14 +3,14 @@
 #ifndef GAME_CLASS_10AB37F0_H
 #define GAME_CLASS_10AB37F0_H
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 class Class_10AB37F0
 {
 public:
-    void FUN_10ab37f0(const Class_109081E0& Value);
+    void FUN_10ab37f0(const cString& Value);
 
-    Class_109081E0 Unknown00;
+    cString Unknown00;
 };
 
 #endif // GAME_CLASS_10AB37F0_H

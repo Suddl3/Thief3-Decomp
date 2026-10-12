@@ -2,14 +2,14 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_109E6D60.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 bool FUN_10abc140();
 
 class WindowManager : public Class_109E6D60
 {
 public:
-    int FindWindowByName(const Class_109081E0& Name);
+    int FindWindowByName(const cString& Name);
     void FUN_109e6b20(int A);
 };
 

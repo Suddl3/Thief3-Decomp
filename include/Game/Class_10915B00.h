@@ -6,9 +6,9 @@
 class Class_10915B00
 {
 public:
-    int FUN_10915b00(const char* Needle);
+    int FindSubstring(const char* Needle);
 
-    char* Unknown00;
+    char* m_Text;
 };
 
 #endif // GAME_CLASS_10915B00_H

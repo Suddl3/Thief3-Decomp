@@ -6,10 +6,10 @@
 class Class_10941F40
 {
 public:
-    void FUN_10941f40();
+    void Free();
 
     char Unknown00[4];
-    void* Unknown04;
+    void* m_Buffer;
 };
 
 #endif // GAME_CLASS_10941F40_H

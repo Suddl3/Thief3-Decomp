@@ -5,12 +5,12 @@
 
 #include "Game/Class_10EB7660.h"
 
-class Class_109081E0;
+class cString;
 
 class Class_10E6D52C : public Class_10EB7660
 {
 public:
-    Class_109081E0 GetTypeName();
+    cString GetTypeName();
     Class_10E6D52C* Construct();
 
     int Unknown08;

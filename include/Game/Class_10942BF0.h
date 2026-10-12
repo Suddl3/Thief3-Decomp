@@ -6,7 +6,7 @@
 class Class_10942BF0
 {
 public:
-    int FUN_10942bf0(int Flag);
+    int GetBits(int Flag);
 
     char Unknown00[0x158];
     int Unknown158;

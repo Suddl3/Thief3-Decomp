@@ -9,9 +9,9 @@ struct Struct_1091B430_Node;
 class Class_1091B430
 {
 public:
-    Struct_1091B430 FUN_1091b430();
+    Struct_1091B430 GetValue();
 
-    Struct_1091B430_Node* Unknown00;
+    Struct_1091B430_Node* m_Node;
 };
 
 #endif // GAME_CLASS_1091B430_H

@@ -1,6 +1,6 @@
 // Game/Class_10E6C14C_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10AAB590_Param.h"
 
 class Class_10E6C14C
@@ -12,8 +12,8 @@ public:
     virtual void Virtual3();
     virtual int CopyFromParam(Class_10AAB590_Param* Writer);
 
-    Class_109081E0 Unknown04;
-    Class_109081E0 Unknown08;
+    cString Unknown04;
+    cString Unknown08;
     int Unknown0C;
 };
 

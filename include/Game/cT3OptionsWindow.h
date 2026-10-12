@@ -5,7 +5,7 @@
 
 #include "Game/Class_10B78320.h"
 
-class Class_109081E0;
+class cString;
 class Class_10B70F80;
 class Class_10B71220_Member;
 class Class_10B71A80_Unknown1C4;
@@ -138,7 +138,7 @@ public:
     virtual void Virtual122();
     virtual void Virtual123();
 
-    Class_109081E0 GetPaneFileName();
+    cString GetPaneFileName();
     void FUN_10b71200(bool p1);
     int GetValue();
     void FUN_10b71a80();

@@ -10,7 +10,7 @@ class Class_10C5A160_Y;
 
 class Class_10B45AD0;
 
-class Class_109081E0;
+class cString;
 
 class FVector;
 
@@ -28,7 +28,7 @@ public:
 
     void FUN_109e3d60(void* Window);
     void FUN_109e8ae0(void* Window);
-    int FindWindowByName(const Class_109081E0& Name);
+    int FindWindowByName(const cString& Name);
     void FUN_109e6b20(int A);
     void FUN_109e8930(void* Window);
     void OpenTitleLoadWindow();
@@ -176,7 +176,7 @@ void Class_10E82688::FUN_10b5a6f0(int A)
         ((WindowManager*)FUN_10b154c0())->FUN_10b16c10(0);
         Unknown15E = DAT_10f31b88->Unknown0C;
         if (Unknown15E)
-            DAT_10f31b88->FUN_1092d3d0();
+            DAT_10f31b88->HideCursor();
     }
     else
     {

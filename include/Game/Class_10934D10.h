@@ -11,13 +11,13 @@ class IDirect3DVertexBuffer8;
 class Class_10934D10
 {
 public:
-    long FUN_10934d10();
+    long CreateDynamicVertexBuffer();
 
     char Unknown00[0xC];
-    IDirect3DDevice8* Unknown0C;
-    unsigned int Unknown10;
+    IDirect3DDevice8* m_Device;
+    unsigned int m_Length;
     char Unknown14[8];
-    IDirect3DVertexBuffer8* Unknown1C;
+    IDirect3DVertexBuffer8* m_VertexBuffer;
     Class_109343B0 Unknown20;
 };
 

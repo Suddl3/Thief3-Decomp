@@ -8,7 +8,7 @@ class Class_10941480_Unknown00;
 class Class_10941480
 {
 public:
-    void FUN_10941480();
+    void Draw();
 
     Class_10941480_Unknown00* Unknown00;
     char Unknown04[0x1];
@@ -18,11 +18,11 @@ public:
     int Unknown08[3];
     int Unknown14;
     char Unknown18[0x8];
-    int Unknown20;
+    int m_VertexCount;
     char Unknown24[0x8];
-    int Unknown2C;
+    int m_PrimitiveCount;
     char Unknown30[0xC];
-    int Unknown3C;
+    int m_PrimitiveType;
     char Pad40[0x4];
 };
 

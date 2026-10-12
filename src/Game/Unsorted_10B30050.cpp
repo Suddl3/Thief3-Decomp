@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_Field04.h"
 #include "Game/Class_10AF7F80.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10B154C0.h"
 
 struct FColor
@@ -11,9 +11,9 @@ struct FColor
     int Unknown00;
 };
 
-void FUN_10a26c10(Class_109081E0* A, Class_109081E0* B);
+void FUN_10a26c10(cString* A, cString* B);
 
-void FUN_10a293b0(Class_109081E0* A, int B);
+void FUN_10a293b0(cString* A, int B);
 
 FColor FUN_10abc760(int A);
 
@@ -24,9 +24,9 @@ void __stdcall FUN_10b30050(int A)
 {
     FString Name;
     ((Class_Field04*)A)->FUN_1098e290(0x401c7, &Name);
-    Class_109081E0 Key;
+    cString Key;
     {
-        Class_109081E0 Text(((Class_10AF7F80*)&Name)->FUN_10af7f80());
+        cString Text(((Class_10AF7F80*)&Name)->FUN_10af7f80());
         FUN_10a26c10(&Text, &Key);
     }
     FUN_10a293b0(&Key, 1);

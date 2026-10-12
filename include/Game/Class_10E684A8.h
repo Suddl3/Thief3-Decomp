@@ -4,7 +4,7 @@
 #define GAME_CLASS_10E684A8_H
 
 #include "Core/Core.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_1090C880.h"
 #include "Game/Class_10A52BE0.h"
 
@@ -57,7 +57,7 @@ public:
     char Pad28[0xf8];
     bool m_Dirty;
     char Unknown121[3];
-    Class_109081E0 m_Name;
+    cString m_Name;
     Class_1090C880 m_Names;
     int Unknown134;
     char Pad138[0xc0];

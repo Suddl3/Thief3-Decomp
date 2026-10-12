@@ -1,6 +1,6 @@
 // Game/Unsorted_10BF0AE0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10E97B00.h"
 #include "Game/Class_10BEFAB0.h"
 #include "Game/Class_10BC9A50.h"
@@ -32,7 +32,7 @@ void Class_10BC9A50::UpdateSummon(Class_10BFF460* Target)
         if (Target->FUN_10bff250() < Unknown264 && Unknown260 < 0.0f)
         {
             {
-                Class_109081E0 Text("summon");
+                cString Text("summon");
                 FUN_10bc7d70(AddressOf(Class_10E97B00("+summon:fight")), 0x14, 9, &Text, true);
             }
             Unknown260 = FUN_10befab0();

@@ -36,12 +36,12 @@ public:
     int Unknown08;
 };
 
-// FUNCTION: 0x10933630 ?FUN_10933630@Class_10E49D1C@@UAEHHHPAUStruct_10932ED0@@H@Z
-int Class_10E49D1C::FUN_10933630(int A, int B, Struct_10932ED0* C, int D)
+// FUNCTION: 0x10933630 ?Init@Class_10E49D1C@@UAEHHHPAUStruct_10932ED0@@H@Z
+int Class_10E49D1C::Init(int A, int B, Struct_10932ED0* C, int D)
 {
     Unknown04 = A;
     Unknown08 = B;
-    Unknown10 = *C;
+    m_Desc = *C;
     Unknown0C = D;
     return 0;
 }
@@ -68,8 +68,8 @@ int Class_10E49EE0::AddRef()
     return ++Unknown08;
 }
 
-// FUNCTION: 0x10934800 ?FUN_10934800@cD3DVertexBuffer@@UAEIXZ
-unsigned int cD3DVertexBuffer::FUN_10934800()
+// FUNCTION: 0x10934800 ?GetVertexCount@cD3DVertexBuffer@@UAEIXZ
+unsigned int cD3DVertexBuffer::GetVertexCount()
 {
-    return Unknown18 / Unknown1c;
+    return m_Length / Unknown1c;
 }

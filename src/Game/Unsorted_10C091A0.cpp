@@ -1,6 +1,6 @@
 // Game/Unsorted_10C091A0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10913D70.h"
 #include "Game/Class_10C08E90.h"
 #include "Game/Item_10C091A0.h"
@@ -12,7 +12,7 @@ int Class_10C08E90::Add(Item_10C091A0* Item)
     int Index = Unknown00;
     FUN_10c089b0(Index + 1);
     Item_10C091A0* Dest = &Unknown08[Index];
-    Dest->Unknown04.FUN_10913d70(&Item->Unknown04);
+    Dest->Unknown04.Assign(&Item->Unknown04);
     Dest->Unknown0C = Item->Unknown0C;
     Dest->Unknown10 = Item->Unknown10;
     Dest->Unknown14 = Item->Unknown14;

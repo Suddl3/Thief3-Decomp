@@ -71,7 +71,7 @@ void Class_109E6AA0::FUN_109e6aa0()
 {
     if (Unknown218 == 0 && Unknown21C == 0)
     {
-        DAT_10f31b88->FUN_1092d3d0();
+        DAT_10f31b88->HideCursor();
         if (Unknown210 != -1 && Unknown214 != -1)
             FUN_10a18fc0()->Virtual4(Unknown210, Unknown214);
         Unknown210 = -1;

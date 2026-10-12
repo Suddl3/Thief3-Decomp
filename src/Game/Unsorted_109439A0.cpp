@@ -18,8 +18,8 @@ struct Entry_10946110
 
 extern "C" void* memcpy(void*, const void*, unsigned int);
 
-// FUNCTION: 0x10944D50 ?FUN_10944d50@@YGXPAVObject_10944D50@@HHPAVClass_10A32000@@PAH@Z
-void __stdcall FUN_10944d50(Object_10944D50* A, int B, int Size, Class_10A32000* C, int* Offset)
+// FUNCTION: 0x10944D50 ?AppendBufferRange@@YGXPAVObject_10944D50@@HHPAVClass_10A32000@@PAH@Z
+void __stdcall AppendBufferRange(Object_10944D50* A, int B, int Size, Class_10A32000* C, int* Offset)
 {
     int Base = 0;
     A->Virtual6(0, 0, &Base);

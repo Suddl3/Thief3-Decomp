@@ -6,7 +6,7 @@
 class Class_10912800
 {
 public:
-    void FUN_10912800();
+    void Shutdown();
 
     char Unknown00[0x18];
     int (__stdcall* Unknown18)(void* Process, unsigned int Address);

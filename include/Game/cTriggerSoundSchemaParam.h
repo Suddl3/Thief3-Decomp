@@ -3,7 +3,7 @@
 #ifndef GAME_CTRIGGERSOUNDSCHEMAPARAM_H
 #define GAME_CTRIGGERSOUNDSCHEMAPARAM_H
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 class Object_10A8AC40;
 
@@ -27,7 +27,7 @@ public:
     Object_10A8AC40* m_Schema;
     int Unknown08;
     char Pad0C[0x8];
-    Class_109081E0 Unknown14;
+    cString Unknown14;
 };
 
 #endif // GAME_CTRIGGERSOUNDSCHEMAPARAM_H

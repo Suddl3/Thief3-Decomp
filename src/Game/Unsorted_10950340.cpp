@@ -9,14 +9,14 @@ extern const char DAT_10e47660[];
 
 extern int DAT_10eff700;
 
-// Game/Class_109081E0.h copied without its base, with the destructor's own body: the code computes Unknown00 - 4 before GetAllocator().
-class Class_109081E0
+// Game/cString.h copied without its base, with the destructor's own body: the code computes Unknown00 - 4 before GetAllocator().
+class cString
 {
 public:
-    Class_109081E0() {}
-    Class_109081E0(const char* In);
-    Class_109081E0(const Class_109081E0& Other);
-    ~Class_109081E0()
+    cString() {}
+    cString(const char* In);
+    cString(const cString& Other);
+    ~cString()
     {
         if (Unknown00)
         {
@@ -26,8 +26,8 @@ public:
     }
 
     void FUN_10907870(int Length, int Flag);
-    Class_109081E0& operator=(const Class_109081E0& Other);
-    Class_109081E0& FUN_1090a590(const char* In);
+    cString& operator=(const cString& Other);
+    cString& FUN_1090a590(const char* In);
     bool FUN_10911cc0(const char* In);
     const char* operator*() const { return Unknown00 ? Unknown00 : DAT_10e47660; }
     bool IsEmpty() const
@@ -50,17 +50,17 @@ public:
     bool FUN_10910a20(const char* Section, const char* Key, int* Value, int D);
     bool GetBool(const char* Section, const char* Key, bool* Value, const char* File);
     bool GetFloat(const char* Section, const char* Key, float* Value, const char* File);
-    bool GetString(const char* Section, const char* Key, Class_109081E0& Value, const char* File);
+    bool GetString(const char* Section, const char* Key, cString& Value, const char* File);
 
     char Pad00[0x1];
 };
 
-// FUNCTION: 0x10950940 ?FUN_10950940@@YAHXZ
-int FUN_10950940()
+// FUNCTION: 0x10950940 ?GetMovieFramerate@@YAHXZ
+int GetMovieFramerate()
 {
     if (DAT_10eff700 == -1)
     {
-        Class_109081E0 Text("30");
+        cString Text("30");
         if (Config::Instance()->GetString("locale", "ForceMovieFramerate", Text, 0))
         {
             if (Text.FUN_10911cc0("30"))

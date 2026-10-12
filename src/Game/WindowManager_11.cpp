@@ -1,6 +1,6 @@
 // Game/WindowManager_11.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_109E6D60.h"
 #include "Game/Class_10B27FD0.h"
 
@@ -64,7 +64,7 @@ public:
     virtual void Virtual3();
     virtual void Virtual4(int Window);
 
-    int FindWindowByName(const Class_109081E0& Name);
+    int FindWindowByName(const cString& Name);
     bool OpenMainMenuWindow(int A);
 };
 
@@ -73,7 +73,7 @@ bool WindowManager::OpenMainMenuWindow(int A)
 {
     int Window;
     {
-        Class_109081E0 Name(DAT_10e79040);
+        cString Name(DAT_10e79040);
         Window = FindWindowByName(Name);
     }
     if (Window && !FUN_109e6d60(Window))

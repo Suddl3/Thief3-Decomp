@@ -3,16 +3,16 @@
 #ifndef GAME_CLASS_10AB3C20_H
 #define GAME_CLASS_10AB3C20_H
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 class Class_10AB3C20
 {
 public:
     void FUN_10ab3ab0();
-    void FUN_10ab3c20(const Class_109081E0& Value);
+    void FUN_10ab3c20(const cString& Value);
 
     char Unknown00[4];
-    Class_109081E0 Unknown04;
+    cString Unknown04;
 };
 
 #endif // GAME_CLASS_10AB3C20_H

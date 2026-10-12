@@ -3,15 +3,15 @@
 #ifndef GAME_CLASS_10E4AA94_H
 #define GAME_CLASS_10E4AA94_H
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 class Class_10E4AA94
 {
 public:
     virtual ~Class_10E4AA94();
 
-    Class_109081E0 Unknown04;
-    Class_109081E0 Unknown08;
+    cString Unknown04;
+    cString Unknown08;
     int Unknown0C;
     int Unknown10;
     void* Unknown14[4];

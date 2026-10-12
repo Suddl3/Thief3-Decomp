@@ -1,6 +1,6 @@
 // Game/Unsorted_10B6A3A0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10AC99D0.h"
 #include "Game/Class_10E684A8.h"
 #include "Game/Class_10F3A3D8.h"
@@ -9,7 +9,7 @@
 
 extern Class_10F3A3D8* DAT_10f3a3d8;
 
-Class_109081E0 FUN_1090a660(const char* In);
+cString FUN_1090a660(const char* In);
 
 class Class_10A52A40_Member;
 
@@ -462,7 +462,7 @@ void Class_10B6AED0::FUN_10b6aed0()
     int Index = DAT_10f3a3d8->Unknown138->FUN_10ac99d0(Unknown158);
     if (Index != 0)
     {
-        Class_109081E0 Text(FUN_1090a660(DAT_10e47660));
+        cString Text(FUN_1090a660(DAT_10e47660));
         FUN_10b69ec0(Index, &Text);
         Unknown128->SetNameByIndex((int)&Text);
     }

@@ -3,7 +3,7 @@
 #include "Game/Object_10A18FC0.h"
 #include "Game/Entry_10C32C30.h"
 #include "Game/Class_10905A90_Member.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10A3C3B0.h"
 #include "Game/Group_10BA14C0.h"
 
@@ -37,7 +37,7 @@ public:
 class Class_10A3C550
 {
 public:
-    void FUN_10a3c550(Class_109081E0 Name);
+    void FUN_10a3c550(cString Name);
 
     char Unknown00[0x4];
     Class_10C49740 Unknown04;
@@ -68,8 +68,8 @@ void Class_10A3C3B0::FUN_10a3c3b0()
     }
 }
 
-// FUNCTION: 0x10A3C550 ?FUN_10a3c550@Class_10A3C550@@QAEXVClass_109081E0@@@Z
-void Class_10A3C550::FUN_10a3c550(Class_109081E0 Name)
+// FUNCTION: 0x10A3C550 ?FUN_10a3c550@Class_10A3C550@@QAEXVcString@@@Z
+void Class_10A3C550::FUN_10a3c550(cString Name)
 {
     if (!Unknown2C && Unknown2E)
     {

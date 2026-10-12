@@ -8,7 +8,7 @@
 class Class_1095C2B0
 {
 public:
-    Class_1095C2B0* FUN_1095c2b0();
+    Class_1095C2B0* Init();
 
     Struct_1095C2B0 Unknown00;
     int Unknown08;

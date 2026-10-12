@@ -86,14 +86,14 @@ Elem_1094E3A0* Class_1094E3A0::GetCurrentElement()
     return &m_Elements[m_CurrentIndex];
 }
 
-// FUNCTION: 0x1094E650 ?FUN_1094e650@Class_1094E650@@QAEXHHPAUStruct_1094E650@@@Z
-void Class_1094E650::FUN_1094e650(int A, int B, Struct_1094E650* Out)
+// FUNCTION: 0x1094E650 ?GetEntry@Class_1094E650@@QAEXHHPAUStruct_1094E650@@@Z
+void Class_1094E650::GetEntry(int A, int B, Struct_1094E650* Out)
 {
     *Out = Unknown108->Unknown10[A].Unknown00[B];
 }
 
-// FUNCTION: 0x1094E690 ?FUN_1094e690@Class_1094E690@@QAEXHHPAUStruct_1094E690@@@Z
-void Class_1094E690::FUN_1094e690(int A, int B, Struct_1094E690* In)
+// FUNCTION: 0x1094E690 ?SetEntry@Class_1094E690@@QAEXHHPAUStruct_1094E690@@@Z
+void Class_1094E690::SetEntry(int A, int B, Struct_1094E690* In)
 {
     Unknown108->Unknown10[A].Unknown00[B] = *In;
 }

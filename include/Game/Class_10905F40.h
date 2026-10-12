@@ -6,7 +6,7 @@
 class Class_10905F40
 {
 public:
-    bool FUN_10905f40(const char* Name);
+    bool Acquire(const char* Name);
 
     char SemaphoreName[0x10A];
     char Pad10A[2];

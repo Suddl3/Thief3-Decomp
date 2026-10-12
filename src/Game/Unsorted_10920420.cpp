@@ -26,14 +26,14 @@ public:
 class Class_10920930
 {
 public:
-    void FUN_10920930(int Item);
+    void AddUnique(int Item);
 
     char Unknown00[8];
     cIntArray Unknown08;
 };
 
-// FUNCTION: 0x10920930 ?FUN_10920930@Class_10920930@@QAEXH@Z
-void Class_10920930::FUN_10920930(int Item)
+// FUNCTION: 0x10920930 ?AddUnique@Class_10920930@@QAEXH@Z
+void Class_10920930::AddUnique(int Item)
 {
     Unknown08.AddUnique(Item);
 }

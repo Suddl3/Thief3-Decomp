@@ -6,11 +6,11 @@
 class Class_1094DF60
 {
 public:
-    void FUN_1094df60(int A);
+    void SetCurrentIndex(int A);
 
     char Unknown00[0x10C];
-    int Unknown10C;
-    int Unknown110;
+    int m_Count;
+    int m_CurrentIndex;
 };
 
 #endif // GAME_CLASS_1094DF60_H

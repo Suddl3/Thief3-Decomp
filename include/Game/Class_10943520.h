@@ -7,7 +7,7 @@ class Class_10943520
 {
 public:
     void FUN_10943240(int A);
-    void FUN_10943520();
+    void Clear();
 
     int Unknown00;
     int Unknown04;

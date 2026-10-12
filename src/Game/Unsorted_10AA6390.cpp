@@ -24,7 +24,7 @@
 #include "Game/Class_10E6D8F0.h"
 #include "Game/cConCameraController.h"
 #include "Game/Class_10EC0808.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10AAA130.h"
 #include "Game/Class_10AAE310.h"
 #include "Game/Class_10AB37F0.h"
@@ -292,8 +292,8 @@ void* Class_10AB37C0::FUN_10ab37c0() {
 	return &unknown_04;
 }
 
-// FUNCTION: 0x10AB37F0 ?FUN_10ab37f0@Class_10AB37F0@@QAEXABVClass_109081E0@@@Z
-void Class_10AB37F0::FUN_10ab37f0(const Class_109081E0& Value)
+// FUNCTION: 0x10AB37F0 ?FUN_10ab37f0@Class_10AB37F0@@QAEXABVcString@@@Z
+void Class_10AB37F0::FUN_10ab37f0(const cString& Value)
 {
     Unknown00 = Value;
 }

@@ -3,9 +3,11 @@
 # tools/agent/classmap.py from T3Main.exe and src/; tools/agent/restructure.py applies it.
 #   <placeholder> <class> <evidence>
 Class_10905e90           Class_10905E90                   the same address as Class_10905E90, in capitals
+Class_109081E0           cString                          named: Derives from the counted char buffer Class_1090A780; adds const char* construction, assignment and operator* with a DAT_10e47660 fallback.
 Class_10919b80           Class_10919B80                   the same address as Class_10919B80, in capitals
 Class_10919ca0           Class_10919CA0                   the same address as Class_10919CA0, in capitals
 Class_1091E340           Class_10E499F4                   0x1091E340: stores 0x10E499F4
+Class_1091ED80           cVector3                         named: Three float fields; FUN_1091ed80 takes their sqrtf length and scales all three.
 Class_1091F350           Class_10E49A0C                   0x1091F350: stores 0x10E49A0C
 Class_1091c710           Class_1091C710                   the same address as Class_1091C710, in capitals
 Class_1091ca00           Class_1091CA00                   the same address as Class_1091CA00, in capitals
@@ -15,6 +17,8 @@ Class_10925db0           Class_10925DB0                   the same address as Cl
 Class_1092A370           cHashTable                       named: Chained buckets of HashBytes-hashed keys; its Insert, Rehash and Remove grow and shrink the bucket array.
 Class_10930110           Vocabulary                       0x1092FF00: called on this by 0x10930300
 Class_109301D0           Vocabulary                       0x109301D0: called on this by 0x10930300
+Class_10932350           ListPool                         named: xbox callee pair 'ListPool' (CustomTemplates.h) on FUN_10932760; code is a doubly linked list removal
+Class_10932450           cNodeList                        named: Head, Tail and Count of a doubly linked node list (Node Next/Prev); FUN_10932b60 moves nodes between two of them.
 Class_109333a0           Class_109333A0                   the same address as Class_109333A0, in capitals
 Class_10935D10           Class_10E49F90                   0x10935D10: called on this by 0x109361D0
 Class_10936AC0           cD3DStateCache                   named: Methods set and cache Direct3D stream, index, texture and shader constant state.
@@ -37,6 +41,7 @@ Class_1094E0F0           Class_10E4AB88                   0x1094E0F0: slot of 0x
 Class_1094E120           Class_10E4AB88                   0x1094E120: slot of 0x10E4AB88
 Class_1094e3a0           Class_1094E3A0                   the same address as Class_1094E3A0, in capitals
 Class_1094f9b0           Class_10E4AB88                   0x1094F9B0: slot of 0x10E4AB88
+Class_109501A0           cBinkMovie                       named: Bink movie: its constructor takes a movie name; its only method calls _BinkClose on the handle.
 Class_109514B0           Class_10E4AC64                   0x109514B0: stores 0x10E4AC64
 Class_10951DE0           Class_10E4AC78                   0x10951DE0: slot of 0x10E4AC78
 Class_10951E80           Class_10E4AC78                   0x10951E80: slot of 0x10E4AC78
@@ -51,6 +56,7 @@ Class_10956F20           Class_10E4AE8C                   0x10956F20: slot of 0x
 Class_10956f50           Class_10956F50                   the same address as Class_10956F50, in capitals
 Class_10957000           Class_10E4AE8C                   0x10957000: slot of 0x10E4AE8C
 Class_109570A0           Class_10E4AE8C                   0x109570A0: stores 0x10E4AE8C
+Class_1095B0A0           cRandom                          named: Linear congruential seed (214013, 2531011); its method draws a random float in a range.
 Class_109E4860           Class_10E5B7C4                   0x109E4860: slot of 0x10E5B7C4
 Class_109E4FB0           Class_10E5B7C8                   0x109E4FB0: called on this by 0x109E8FB0
 Class_109E5000           Class_10E5B7C8                   0x109E5000: called on this by 0x109E87F0

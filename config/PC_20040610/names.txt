@@ -2021,3 +2021,321 @@ field Class_10C08E30::Unknown08 m_Items FUN_10c09200 appends each new Item_10C09
 field Class_10C08E30::Unknown14 m_ItemIds AddUnique appends the id to it only when FindIndex misses.
 field Class_10BF0A60::Unknown00 m_Count Add reads it as the new item's index, then grows the array to one past it.
 field Class_10BF0A60::Unknown08 m_Items Add stores the item at m_Count; FUN_10bf0a60 frees it through the allocator.
+class Class_10932450 cNodeList Head, Tail and Count of a doubly linked node list (Node Next/Prev); FUN_10932b60 moves nodes between two of them.
+class Class_109501A0 cBinkMovie Bink movie: its constructor takes a movie name; its only method calls _BinkClose on the handle.
+class Class_1095B0A0 cRandom Linear congruential seed (214013, 2531011); its method draws a random float in a range.
+class Class_109081E0 cString Derives from the counted char buffer Class_1090A780; adds const char* construction, assignment and operator* with a DAT_10e47660 fallback.
+class Class_1091ED80 cVector3 Three float fields; FUN_1091ed80 takes their sqrtf length and scales all three.
+class Class_10932350 ListPool xbox callee pair 'ListPool' (CustomTemplates.h) on FUN_10932760; code is a doubly linked list removal
+function 0x10901710 GetStaticClassADifficultyInfo Caches GetPrivateStaticClass("T3Game") for ADifficultyInfo on first call.
+function 0x10901740 GetStaticClassASpellProjectile Caches GetPrivateStaticClass("T3Game") for ASpellProjectile on first call.
+function 0x10905E60 Close CloseHandle on Handle, then Handle set to -1.
+function 0x10905F10 Close CloseHandle on Handle when valid, then Handle set to -1.
+function 0x10905760 Empty Destroys FString elements, zeroes count, sets max to Slack, calls FUN_10af3b50(0xc).
+function 0x10905F40 Acquire Creates named semaphore '$$s$$'+Name; returns false on ERROR_ALREADY_EXISTS (183).
+function 0x10906090 Init Stores A and D, copies B and C into 0x101 and 0xC01 byte buffers.
+function 0x10906CB0 RunShutdownCallbacks Waits on lock flag, calls and clears the DAT_10f2bec8 callback table; called by ForceExit.
+function 0x10906D20 IsDebuggerAttached Resolves IsDebuggerPresent from kernel32.dll strings once, returns its result.
+function 0x109140C0 DispatchToHandlers Calls Dispatch on each Unknown0C handler, last to first; stops once B has content.
+function 0x10914150 CollectAll Passes Out to FUN_109159b0 of every child in Unknown0C, in index order.
+function 0x10914180 SetAll Passes A and B to FUN_109152a0 of each child; that hands B to the entry for A.
+function 0x10914380 FindEntry Calls FUN_10913fc0 with both keys and Filter; copies the found Class_109081E0 into Out, false if none.
+function 0x10914530 AddEntry Creates a Class_10E495F8, appends it to Unknown04, then passes A-D to its FUN_10915570.
+function 0x109149C0 GetMapiErrorString Switch over MAPI_* codes returning messages such as 'Login Failure'; 0 for other codes.
+function 0x10914D70 GetField09 Returns Field09; same accessor form as GetField08 in Class_10914D60.
+function 0x10919B80 SetField28 Assigns its argument to Field28 and nothing else.
+function 0x10919CA0 GetField14 Returns Field14; its int argument is unused.
+function 0x1091E360 GetField180 Returns Field180 as a float.
+function 0x10915810 Lookup Returns 0 when no entry exists for A, else the entry's FUN_109169e0(B).
+function 0x10918040 GetDeviceRef Xbox twin uses string 'DX8::device_ref'; Config lookup by Vendor_%04x and device id, then 'other', default 1.
+function 0x10918230 ResetState Calls Class_10924100::Reset() on DAT_10f2c740 and sets DAT_10efef54 to -1.
+function 0x10918260 DestroyState Deletes and nulls DAT_10f2c740 (Class_10924100), sets DAT_10efef54 to -1, then calls FUN_1092f190.
+function 0x10918380 RefreshForResolution Called by UD3DRenderDevice::SetRes; calls Class_10924AE0::Refresh and FUN_1092d990, which creates two textures.
+function 0x10918E10 RemoveByKey Swap-removes the entry whose key equals Key from DAT_10f2c768, then Resize(count - 1); called by ~Class_109E8FB0.
+function 0x10918E90 GetFrameBufferBytes Sums GetDesc sizes of back-buffer and depth-stencil surfaces, plus width*height*4 from GetDisplayMode.
+function 0x1091CC80 Free Same body as Class_1091C820::Free: Clear(0x40), delete of Unknown14, zeroed fields.
+function 0x1091A610 MeasureText Returns FUN_10919b90's float for the text and its header length; no draw arguments, unlike DrawText.
+function 0x1091A920 Free Same body as Class_1091B3F0::Free: FUN_1091a4f0(0), then the allocator frees Unknown08.
+function 0x1091A8F0 Free Frees the buffer behind its length header (Unknown08 - 1) through the allocator, then nulls Unknown08.
+function 0x1091AA10 GetFontName Returns 'MediumFont16' when A is nonzero, else 'font6'.
+function 0x1091B430 GetValue Returns by value the Struct_1091B430 held in the node Unknown00 points to (its Unknown04).
+function 0x1091B480 Rehash Reallocates Table to NewSize, resets Bits, Count and Collisions, reinserts every node via FUN_1091b280.
+function 0x1091CCB0 Free Same body as Class_1091B3F0::Free: FUN_1091c8d0(0), then the allocator frees Unknown08.
+function 0x1091D390 Draw Returns true without work when the colour's alpha byte (D >> 24) is zero; else forwards to FUN_1091a690.
+function 0x1091DEE0 GetFont Passes FUN_1091aa10's font name to FUN_1091dc40 and returns the Class_1091CA00 found.
+function 0x1091E1A0 Normalize sqrtf of the three floats; scales each by 1/length unless the length is under 0.0001.
+function 0x1091E1F0 Set Stores its nine arguments in Unknown00 to Unknown20 in order and returns this.
+function 0x1091E2E0 Reset Writes an identity 4x4 into Unknown04 and defaults into the rest; a constructor calls it.
+function 0x1091E240 GetMatrix Returns the X, Y, Z of its three FVector fields as one 3x3 float matrix.
+function 0x1091E290 SetMatrix Copies a 3x3 int matrix into three rows of four ints, zeroing each fourth slot.
+function 0x1092D3D0 HideCursor Calls SetCursor(0), ShowCursor(0) and IDirect3DDevice8::ShowCursor(0), then clears Unknown0C.
+function 0x1092D990 CreateRenderTargets Two IDirect3DDevice8::CreateTexture calls: 256x128 A8R8G8B8, usage 1 (D3DUSAGE_RENDERTARGET), into Unknown00 and Unknown04.
+function 0x1092C0A0 Clear Unlinks and deletes nodes until the count Unknown08 reaches zero, leaving the list empty.
+function 0x1092BA00 Clear Deletes every node and the bucket array, zeroes the counts, then Rehash(Size) unless m_NoAutoResize.
+function 0x1092D940 Exchange Returns the previous Unknown7D and stores the parameter in it.
+function 0x1092D960 Release Calls Virtual2() on both members, then nulls them.
+function 0x10932B60 ReleaseAllNodes Calls FUN_10954ce0 on each node of DAT_10f31bb8, moves it to DAT_10f31bc4, then resets the table with size 0x40.
+function 0x10932C50 CreateNamedEntry Takes a node from DAT_10f31bb8 via FUN_10932760, sets its refcount to 1, copies the name, passes it to B.
+function 0x10932D40 InsertNamedEntry Converts the name to a key, then inserts it into DAT_10eff31c via FUN_10932830, the table's Insert.
+function 0x10932DC0 CreateAndInsertNamed Makes a loader with FUN_10955790(B), creates and inserts the entry for A, then deletes the loader.
+function 0x10932E00 AcquireByName Finds the name's entry and adds a reference at Unknown9C; on a miss makes a loader with FUN_10955860, then creates and inserts it.
+function 0x10933420 Erase Returns Unknown04.erase(Where) on a std::vector<void*>; VBPoolStaticPermanent::Remove calls it.
+function 0x10933630 Init Copies its pDesc argument into Unknown10 and stores A, B and D; the Xbox vtable asserts 'pDesc != 0'.
+function 0x10934800 GetVertexCount Returns Unknown18 / m_Stride, a byte length over the stride, which is the vertex count.
+function 0x10934930 LockVertices Same guards as cD3DVertexBuffer::LockVertices: zeroes Out, checks B and the item, passes Out to its FUN_10934990.
+function 0x10934A20 UnlockVertices Returns m_Member->Virtual12(), slot 12 of IDirect3DVertexBuffer8 (Unlock); 0x80040721 when m_Member is null.
+function 0x10934DB0 Release Calls Unknown00->Virtual2(), the Release slot of a COM-style member (as in the Class_10E49EE0 destructor), then clears it.
+function 0x10934D10 CreateDynamicVertexBuffer Calls CreateVertexBuffer with usage 0x208 (WRITEONLY | DYNAMIC), FVF 0 and pool 0, then stores the buffer.
+function 0x10934D60 CreateSurface Calls CreateImageSurface(128, 128, format 0x16) into Unknown00 and returns this.
+function 0x10932760 Alloc Reuses a node from the free list or news one, appends it at the tail and counts it.
+function 0x109329F0 Reset Deletes every node and the bucket array, then sizes the buckets with FUN_10932910 unless Unknown10 is set.
+function 0x10932830 Insert FUN_10932910 re-inserts each node's Key and Value through it when it rehashes the table.
+function 0x1093EDB0 DeleteShaders Passes each element's handle to device slot 78 (kind 0) or 90, the D3D8 shader deletes, then zeroes it.
+function 0x1093EE10 FormatString vsnprintf into a 4 KB buffer, then strcpy into Out; format is a localized %d string key.
+function 0x1093F090 Lookup Returns the value of the entry whose name, A and B match (null name means DAT_10e47660), else 0.
+function 0x1093F9F0 SetShaderForKind Switches Param->Unknown64 (3, 4, 5) to its vertex shader and state; other kinds use shader 2.
+function 0x109401B0 SetVertexShaderMatrix Multiplies P's two matrices with Unknown310, transposes, uploads as constants 0x1D or 0x16 by B.
+function 0x10940880 ResetTextureStages Loops stages 0-3: clears each texture slot and resets its stage states, then sets float vector 0x21.
+function 0x10940830 SampleTable Returns the float table entry at Scale times (Count - 1), or Scale when the table is empty.
+function 0x109403A0 SetMaterialTextures Sets stage 2 (when Enable) to Unknown308, and stage 3 to Material->Unknown140 or Unknown300.
+function 0x109413A0 EnsureVertexBuffers Recreates two vertex buffers of Unknown20 * 28 bytes unless present and large enough; false on failure.
+function 0x10941480 Draw Binds texture 0 and vertex shader 0x144, then DrawIndexedPrimitive or DrawPrimitive with its counts.
+function 0x10941570 DrawAll Calls each item's FUN_10941480 (named Draw) in index order over Unknown04 items.
+function 0x109415A0 Reset Clears each item's flags and counters, then sets Unknown1C to 0, Unknown18 to -1, Unknown00 to false.
+function 0x109435D0 Add Reads count Unknown00 as the new index, grows via FUN_10942d20, stores Item, returns index; same body as cEntryArray::Add.
+function 0x10943600 Add Same body as cEntryArray::Add: count Unknown00 is the new index, grows via FUN_10da4f50, stores *Item, returns index.
+function 0x10944CD0 AppendBuffer Virtual6(0, 0, &Base) and Virtual7() bracket a copy of Virtual4()*Virtual3() bytes to C->Unknown08 at *Offset; advances *Offset.
+function 0x10944D50 AppendBufferRange As AppendBuffer, but copies Size bytes from byte offset B of the Virtual6 pointer instead of the whole buffer.
+function 0x10946B30 IsUseNewConversion Reads config Flesh/UseNewConversion once, caches it in DAT_10f340f0 behind the DAT_10f34104 flag.
+function 0x10946D70 Free Calls operator delete on P when non-null; called by FUN_10973e80.
+function 0x10946D90 CollectInSphere Walks the node chain from Index with plane tests on Point and Radius; appends entries to Out[*Count].
+function 0x10947430 GetBspInfoTypeName Returns a 'BSP ...' stat label for Type; default message '<undefined bspinfo type>'.
+function 0x10947500 GetMemTypeName Returns 'BSP Runtime' or 'BSP Mesh' for Type; default message '<undefined mem type>'.
+function 0x109481D0 HasFlags Returns true when the struct at UnknownB0 has a Mask bit set in its word at +04; IsReady calls it.
+function 0x109480B0 Free Deletes its owned arrays and objects and the static buffers; called by Class_10924100::Reset and its destructor.
+function 0x10948190 IsDifferent Returns true when any of its three floats differs from the same float in A.
+function 0x10948600 Init Called from constructors ??0Class_10E4A668 and ??0Class_10E4AD48; sets default values, empties FArrays, returns this.
+function 0x1094E6D0 SetShadowGroup Stores four ints in group Index; group 0 creates two 'BlendMesh::m_ShadowVertex' buffers.
+function 0x1094EEE0 Load Name is resolved by the manager (FUN_1093bd40) and passed to Virtual10 at Index; the old object is released (FUN_1093bce0).
+function 0x1094EFC0 Resize Sizes slot Index's container (FUN_10da4f50) and sets its count; slot 0 also sizes Unknown0F4 and allocates items.
+function 0x1094F750 Free Frees Unknown08 through GetAllocator()->Virtual5 when Unknown04 is set, after FUN_1094f510(0).
+function 0x10950180 SetMovieFramerate Stores 25 or 30 in DAT_10eff700, the value GetMovieFramerate reads from ForceMovieFramerate.
+function 0x10950310 SetVolume _BinkSetVolume on track 0 of the Bink handle, with the float volume converted by FUN_109e29f0 first.
+function 0x109501A0 Close _BinkClose on the Bink handle, then deletes its state and clears DAT_10f31a64.
+function 0x10950230 DecodeFrame _BinkWait, _BinkDoFrame, then _BinkCopyToBuffer into a locked texture; _BinkNextFrame between frames.
+function 0x10950940 GetMovieFramerate Reads locale/ForceMovieFramerate once into DAT_10eff700 (25 or 30, default 30) and returns it.
+function 0x10953A90 SetColor Packs Red, Green and Blue into an opaque ARGB value stored in DAT_10f3424c.
+function 0x1095B0A0 RandomFloat LCG step on the seed; _time32 bits xor seed bits give a 15-bit draw scaled into [A, B).
+function 0x1095B110 Randomize Seeds a temporary generator from _time32; stores its draw in [0, Unknown0C/Unknown10] in Unknown00.
+function 0x1095BC20 Init Sets all three fields to starting values (1, 0, 0) and returns this.
+function 0x1095C2B0 Init Assigns a default Struct_1095C2B0, zeroes three ints and returns this.
+function 0x1095CAE0 Init Sets the count, allocates that many ints, fills them with -1 and returns this.
+function 0x1095CCC0 RotateLeft Right child P takes node N's place and N becomes its left child; the root is Unknown1C->Unknown04.
+function 0x1095CF00 ContainsExact Returns true when some set element equals Key in all three fields.
+function 0x1095D090 FindFree Scans round-robin from the cursor for the first item with negative Unknown0C; null when none.
+function 0x1095D150 HasMissingValue Returns false only when all three Key values occur in some element of Set.
+function 0x109070D0 GetIniFile strstr for 'default.ini' and 'user.ini'; loads each once through FUN_10907030 and returns its cached buffer and size.
+function 0x10908230 GetBoundedLength Returns strlen(Str) only when FUN_10907af0(Str, Max) accepts it and Max is at least 1; otherwise 0.
+function 0x1090F3C0 Compare Vtable slot 1: returns 0 when FUN_1090f010 holds, else 1 when FUN_1090ecc0(A, B, 1) is positive, else -1.
+function 0x1090FE50 SaveToFile CreateFileA with CREATE_ALWAYS, then WriteFile of C's length-prefixed bytes; true only when every byte is written.
+function 0x109119B0 AppendFormatted Formats Fmt into *Out, then appends A, B and C on a new line; xbox: 'formatting string longer than working buffer, giving up'.
+function 0x10911A80 GetRegistryString RegOpenKeyA, RegQueryValueExA and RegCloseKey; LocalMachine picks HKEY_LOCAL_MACHINE or HKEY_CURRENT_USER.
+function 0x10912800 Shutdown Calls Unknown1C(process) and Unknown18(process, 0), then FreeLibrary on Unknown24 and Unknown28, clearing both.
+function 0x10912850 ReadLocalMemory IsBadReadPtr then memcpy from Address; Process is unused; FUN_109128a0 passes it as the read routine of its 9-argument call.
+function 0x10911C40 ConvertFontName Default 'MS Sans Serif'; copies at most 32 chars, cuts at '.', converts with MultiByteToWideChar and GetACP.
+function 0x10911EC0 WriteMiniDump Strings 'dbghelp.dll' and 'MiniDumpWriteDump'; writes the dump to Param->FileName, or DAT_10e47660 when null.
+function 0x109128A0 GetCallerAddress Calls Unknown04 with 0x14c, both handles and FUN_10912850 as read routine; returns Unknown2C if at least 0x400000, else 0.
+function 0x109128F0 SetUpperBaseName _splitpath, then upper-cases the base name into a block from GetAllocator()->Virtual2 that A points at.
+function 0x10912D80 FormatHex Format string '0x%08X' through wsprintfA; returns the text as a new string.
+function 0x10913A40 Init Sets VTable to DAT_10e49384, zeroes Unknown04 and returns this; the Config constructor calls it.
+function 0x10913D70 Assign Copies Unknown04 from Other through the string's operator= and returns this.
+function 0x10915B00 FindSubstring strstr of Needle in Unknown00; returns the offset of the first match, or -1.
+function 0x109178D0 PaddingToAlign Rounds Value up to a multiple of Alignment and returns the difference: the padding.
+function 0x10917C90 SetViewport Fills a D3DVIEWPORT8 from four ints (MinZ 0, MaxZ 1) and calls GDirect3DDevice8->SetViewport.
+function 0x10919190 SetWorldTransform SetTransform(0x100 = D3DTS_WORLD) on P's matrix; uploads World*camera and World to VS constants 1 and 12
+function 0x109192E0 SetStreamAndIndices Calls cD3DStateCache::SetStreamSource(A, B) and SetIndices(C, 0)
+function 0x10919240 SetCurrentCamera Stores A in the global FUN_10919190 multiplies World by; sets device and A viewports and projection
+function 0x10919390 PackNormalColor Maps each normal component from [-1,1] to bytes 0..255 into a BGRA color with alpha 0xff
+function 0x10919310 PackNormalColorSse SSE variant of 0x10919390 (_mm_ intrinsics, same arithmetic and byte order)
+function 0x109241E0 SetTexture Calls GDirect3DDevice8->SetTexture(Stage, Texture) when the cached Unknown1C[Stage] differs.
+function 0x1091F710 HasItem Linear search of Unknown38 (Unknown30 entries) for Item; returns bool.
+function 0x1091F740 ClearFlags Sets bool flags (Unknown48, Unknown49, Unknown04) false across item lists; zeroes three Param pointers.
+function 0x109203B0 Init Sets its fields and globals to defaults, stamps _time32(0) into Unknown00, returns this.
+function 0x10920930 AddUnique Forwards Item to Unknown08.AddUnique (cIntArray); nothing else.
+function 0x1091EF40 ClassifyPointToPlane Dot of point A with plane B's normal plus B[3]; 1 below -0.001, 0 above 0.001, else 2.
+function 0x10925F10 AddUnique Body is UnknownA4.AddUnique(Item), the cIntArray::AddUnique callee.
+function 0x10925F60 Remove Finds Item in Unknown0A4, swaps it with the last element, then SetCount(Count - 1).
+function 0x10925FC0 GetRef Returns the cRefPtr element UnknownCC[Index] by value.
+function 0x10928AA0 NormalToColor Packs (V+1)*127.5 into ARGB with alpha FF, as Class_10E49AE0::SetPixelColor does.
+function 0x10928B50 AdvanceVideo Bink calls: BinkWait, BinkDoFrame, BinkCopyToBuffer into a locked surface, BinkNextFrame.
+function 0x109295C0 UpdateVideos When Value != 0 calls FUN_10928b50 (AdvanceVideo) on each DAT_10f31ad0 entry.
+function 0x10929600 ReleaseTextures Calls Virtual2 (IUnknown::Release) on each entry's Unknown30 texture, then clears it.
+function 0x10929650 CreateTextures D3D8 CreateTexture per entry: A8R8G8B8, usage 1 (render target), result into Unknown30.
+function 0x10929D60 GetVector Same signature and job as Class_10E49B28::GetVector (packed fetch, three components out).
+function 0x10929B10 GetLuminance Virtual2 yields RGB, then 0.3/0.59/0.11 weights as Class_10E49AE0::GetLuminance.
+function 0x109296A0 MoveToBack Unlinks Node from its list, relinks it after Unknown10 as last, increments Unknown14.
+function 0x1092A280 AllocNode Takes Node from FreeHead or creates one, appends it to Head/Tail, Count++.
+function 0x1092F190 FreeItems Deletes each Class_1092F130 in the global array, then frees its storage and zeroes the count
+function 0x1092F330 Draw Sets render states and calls DrawPrimitive with LINELIST or LINESTRIP chosen by Unknown10
+function 0x1092F270 GetOrCreate Returns Unknown0B0, allocating a Class_10E4AC6C when it is null and the flag A is set
+function 0x1092FD50 CompareItems Comparator: orders items by Unknown148 minus Unknown144, ties broken by UnknownE4 and Unknown158
+function 0x10930A40 Free Calls FUN_10930450(0), then frees the data buffer Unknown08 through the allocator and zeroes Unknown04
+function 0x109323A0 GetMemoryUsage Sums node byte sizes and subtracts entry byte sizes into Total
+function 0x10932350 Remove Unlinks a node: updates head Unknown00, tail Unknown04 and count Unknown08
+function 0x10932910 Rehash Allocates Size buckets, reinserts every node through FUN_10932830, then deletes the old buckets
+function 0x10936870 AddFlags Body is Unknown6b4 |= Flags; bits are added, never cleared.
+function 0x10936A40 ApplyViewport Passes its Viewport member to GDirect3DDevice8->SetViewport.
+function 0x10936E00 SetStageWrap ADDRESSU/V (stage states 13, 14) set to D3DTADDRESS_WRAP (1); texcoord wrap render state set to 8.
+function 0x10936EB0 SetStageClamp ADDRESSU/V (stage states 13, 14) set to D3DTADDRESS_CLAMP (3); texcoord wrap render state cleared.
+function 0x10936F60 SetStageBorder ADDRESSU/V (stage states 13, 14) set to D3DTADDRESS_BORDER (4); texcoord wrap render state cleared.
+function 0x10939380 RotateRight Node's left child takes Node's place and Node becomes its right child, under header Unknown1C.
+function 0x109394C0 Reset Zeroes Unknown08, Unknown0c and Unknown10, then returns this.
+function 0x10939730 Advance Steps Current to Current->Next, else scans Container->Items from Index for a non-empty bucket.
+function 0x1093AED0 GetCategoryIndex Xbox message 'Asked for index of nonexistent material category' (MaterialMgr.cpp); returns the index or -1.
+function 0x1093C7F0 Clear Calls Unknown1C5C.Clear() unless global DAT_10ffc855 is set.
+function 0x10941AC0 Reset Calls FUN_109415f0 on each element, FUN_1091c8d0(0) on the array, then resets Unknown1C, Unknown18 and Unknown00.
+function 0x10941E90 Free Deletes Unknown00 and sets it to null.
+function 0x10941F40 Free Deletes Unknown04 and sets it to null.
+function 0x1094AEC0 Reset Zeroes both members, Field00 and Field04.
+function 0x1094D950 Reset Sets every member to a default value and returns this.
+function 0x10942760 ReadData memcpy of Size*Count bytes from Source plus *Position, then advances *Position by that count.
+function 0x10942BB0 SetBits Flag 0 writes the high 13 bits (19-31) of Unknown158, otherwise the low 19 bits (0-18).
+function 0x10942BF0 GetBits Flag 0 returns the high 13 bits of Unknown158, otherwise the low 19 bits: FUN_10942bb0's ranges.
+function 0x109434F0 Append Resizes to Index+1 through FUN_10dcd540, stores Item at Index and returns Index, as Class_109435A0::Append does.
+function 0x10943520 Clear Calls FUN_10943240(0), then frees Unknown08 and zeroes it and Unknown04, as Class_109435A0::Clear does.
+function 0x1094AED0 ContainsAny Loops the member list, comparing each value with the argument array; true on the first match.
+function 0x1094B600 SwapItems Exchanges two Item entries of the array through a temporary.
+function 0x1094CFD0 AddUniqueItem Its whole body forwards the item to the cIntArray member's AddUnique.
+function 0x1094D6E0 Init Zeroes all six fields and returns this; called from Class_10924B70's constructor.
+function 0x1094D700 ReleaseAll Calls Virtual2 (COM Release) on each held object and nulls its slot; called from Class_10924B70's destructor.
+function 0x1094D9F0 SetStageTexture Calls SetTexture(Stage, ...) on the device, skipping it when m_Textures[Stage] already matches.
+function 0x1094DF60 SetCurrentIndex Stores the argument clamped to 0..Unknown10C - 1.
+function 0x1094E150 DeleteItems Passes each entry's object to FUN_1093bce0 on DAT_10f323fc, then deletes the entry and nulls its slot.
+function 0x1094E650 GetEntry Copies the table entry indexed by the two ints into the Out parameter.
+function 0x1094E690 SetEntry Stores the In struct into the table entry indexed by the two ints.
+function 0x109514C0 ReleaseAll Loops all nine Unknown0C slots, frees each non-null one and nulls it.
+function 0x109516C0 GetEntry Returns Unknown48[Index] when Index is below Unknown40 and the slot is set; else embedded Unknown4C.
+function 0x109522D0 Advance Adds A times each rate to two offsets, wrapping past limits; fixed values where a rate equals DAT_10eafbdc.
+function 0x109524A0 Reset Sets every field to its default and resets the nine Unknown90 entries; the constructor calls it.
+function 0x10952640 Apply Passes Unknown70, Unknown74, Unknown78 and W (Unknown7C when Unknown4C) to cD3DStateCache::FUN_10937280.
+field Class_109140C0::Unknown04 m_HandlerCount Loop count over Unknown0C in FUN_109140c0, run from count minus one down.
+field Class_109140C0::Unknown0C m_Handlers Class_10914D60 pointers; FUN_109140c0 calls Dispatch on each.
+field Class_10914530::Unknown04 m_Entries cIntArray; AddEntry appends each new Class_10E495F8 to it.
+field Class_10914150::Unknown04 m_ChildCount Loop count over Unknown0C in FUN_10914150.
+field Class_10914150::Unknown0C m_Children Class_109159B0 pointers; FUN_10914150 passes Out to each.
+field Class_10914180::Unknown04 m_ChildCount Loop count over Unknown0C in FUN_10914180.
+field Class_10914180::Unknown0C m_Children Class_10915210 pointers; FUN_10914180 calls FUN_109152a0 on each.
+field Class_109141C0::Unknown04 m_ChildCount Loop count over Unknown0C in FUN_109141c0.
+field Class_109141C0::Unknown0C m_Children Class_10915210 pointers; FUN_109141c0 calls FUN_109152c0 on each.
+field Class_1091E1A0::Unknown00 m_x Normalize treats the three floats as one vector and scales each by its length.
+field Class_1091E1A0::Unknown04 m_y Normalize treats the three floats as one vector and scales each by its length.
+field Class_1091E1A0::Unknown08 m_z Normalize treats the three floats as one vector and scales each by its length.
+field Class_1091E2E0::Unknown04 m_Matrix Reset writes the identity into this 4x4 float array.
+field Class_1091B430::Unknown00 m_Node GetValue reads Unknown00->Unknown04, so Unknown00 points to a Struct_1091B430_Node.
+field Class_1092C0A0::Unknown00 m_Head The method at 0x1092C0A0 starts its walk here and sets it to the next node when the first node is unlinked.
+field Class_1092C0A0::Unknown04 m_Tail The method at 0x1092C0A0 sets it to the previous node when the last node is unlinked.
+field Class_1092C0A0::Unknown08 m_Count The method at 0x1092C0A0 decrements it per deleted node and stops its walk at zero.
+field Class_1092F130::Unknown0C m_ChildCount Loop bound of the method at 0x1092F130, which calls the method on each Unknown14 element.
+field Class_1092F130::Unknown14 m_Children The method at 0x1092F130 calls itself on each of the first Unknown0C elements before its own work.
+field Class_1092D990::Unknown00 m_RenderTarget0 Created as a 256x128 render-target texture (usage 1) by the method at 0x1092D990.
+field Class_1092D990::Unknown04 m_RenderTarget1 Second 256x128 render-target texture created by the method at 0x1092D990.
+field Class_10E49D1C::Unknown10 m_Desc Init copies its pDesc argument into Unknown10.
+field cD3DVertexBuffer::Unknown18 m_Length FUN_10934800 divides Unknown18 by m_Stride, so it holds the byte length.
+field Class_10934D10::Unknown0C m_Device Calls CreateVertexBuffer on it, so it is the IDirect3DDevice8 pointer.
+field Class_10934D10::Unknown10 m_Length Passed as the Length argument of CreateVertexBuffer.
+field Class_10934D10::Unknown1C m_VertexBuffer Receives the buffer that CreateVertexBuffer creates.
+field Class_10934D60::Unknown00 m_Surface Receives the surface that CreateImageSurface creates.
+field Class_1093F090_Unknown08::Unknown00 m_Name Compared with the lookup name in Lookup; null taken as DAT_10e47660.
+field Class_1093F090_Unknown08::Unknown04 m_Value Returned by Lookup when the name and both keys match.
+field Class_109413A0::Unknown08 m_VertexBuffers Two vertex buffers created and released in EnsureVertexBuffers.
+field Class_109413A0::Unknown10 m_BufferSize Byte size, compared with and set to Unknown20 * 28 in EnsureVertexBuffers.
+field Class_109413A0::Unknown20 m_VertexCount Vertex count; buffers hold Unknown20 * 28 bytes (28 per vertex).
+field Class_109415A0::Unknown04 m_Count Loop bound over the items in Reset (FUN_109415a0).
+field Class_109415A0::Unknown0C m_Items Array of Class_109416F0 items cleared in Reset (FUN_109415a0).
+field Class_10941570::Unknown04 m_Count Loop bound in DrawAll (FUN_10941570).
+field Class_10941570::Unknown0C m_Items Array of draw items; DrawAll calls FUN_10941480 on each.
+field Class_10941480::Unknown20 m_VertexCount NumVertices argument of DrawIndexedPrimitive in Draw (FUN_10941480).
+field Class_10941480::Unknown2C m_PrimitiveCount Draw gate (Unknown2C > 0) and PrimitiveCount in both draw calls.
+field Class_10941480::Unknown3C m_PrimitiveType Cast to D3DPRIMITIVETYPE in Draw; value 4 selects the triangle list.
+field Class_10941C40::Unknown1C m_Item Current item: null-checked, then written by FUN_10941c40 and AddEntry.
+field Class_10941C40::Unknown10 m_Value Copied into the current item's Unknown38 in FUN_10941c40.
+field Class_10940830::Unknown354 m_Table Float table indexed by Scale times (Count - 1) in SampleTable.
+field Class_10940830::Unknown358 m_Count Table length checked and used in SampleTable (FUN_10940830).
+field Class_1093F9F0_Param::Unknown64 m_Kind Switched on in FUN_1093f9f0 (named SetShaderForKind), cases 3, 4 and 5.
+field Class_109435D0::Unknown00 m_Count Add reads it as the new item's index and grows the array to index+1.
+field Class_109435D0::Unknown08 m_Items Add stores each Item at Unknown08[index].
+field Class_10946D90::Unknown2C m_Nodes FUN_10946d90 takes Node = &Unknown2C[Index].
+field Class_10946D90::Unknown34 m_Planes FUN_10946d90 takes Plane = &Unknown34[Node->Flags >> 2].
+field Class_1094E6D0::Unknown108 m_Groups Array indexed by SetShadowGroup's Index, elements Struct_1094E6D0_Group.
+field Class_1094E6D0::Unknown114 m_ShadowVertex0 Buffer from DAT_10f2c744->Virtual3 with debug name 'BlendMesh::m_ShadowVertex', index 0.
+field Class_1094E6D0::Unknown118 m_ShadowVertex1 Buffer from DAT_10f2c744->Virtual3 with debug name 'BlendMesh::m_ShadowVertex', index 1.
+field Class_1094EFC0::Unknown0F4 m_Items cIntArray of Class_1094EFC0_Item pointers, sized and filled by FUN_1094efc0 for slot 0.
+field Class_1094EFC0::Unknown108 m_Slots Array indexed by FUN_1094efc0's Index, each entry with a container and a count.
+field cRandom::Unknown00 m_Seed Advanced by Unknown00 * 214013 + 2531011 on each draw.
+field Class_1095CAE0::Unknown04 m_Count Set to the argument A; the loop bound while filling Unknown00 with -1.
+field Class_1095CCC0::Unknown1C m_Head Head node whose Unknown04 holds the root; the rotation tests the node against it.
+field Class_1095D090::Unknown1C m_Cursor Start index is (Count-1) times this; advances 0.1 per call and resets to 0.05 past 1.0.
+field Class_10E49384::Unknown04 m_Block The destructor frees it through GetAllocator()->Virtual5; FUN_10913a40 zeroes it.
+field Class_109128A0::Unknown04 m_StackWalk Called with 0x14c, the process and thread, and FUN_10912850 as read routine.
+field Class_10915B00::Unknown00 m_Text FUN_10915b00 runs strstr on Unknown00: a C string searched for Needle.
+field Class_109242E0::Unknown18 m_Viewport FUN_10919240 copies the device viewport DAT_10f2c780 into Unknown18
+field Class_109241E0::Unknown1C m_Textures Per-stage texture cache that SetTexture compares; cD3DStateCache keeps m_Textures at 0x1C.
+field Class_1091F710::Unknown30 m_NumItems Loop count of Unknown38 searched by HasItem.
+field Class_1091F710::Unknown38 m_Items Pointer array that HasItem searches for Item.
+field Class_1091F740::Unknown30 m_NumItems Loop count of Unknown38, whose item flags ClearFlags clears.
+field Class_1091F740::Unknown38 m_Items Item pointer array; ClearFlags sets each item's Unknown48 false.
+field Class_1091F9B0::Unknown30 m_NumItems Loop count of the Unknown38 array walked by FUN_1091f9b0.
+field Class_1091F9B0::Unknown38 m_Items Pointer array of Class_10948260 walked by FUN_1091f9b0 up to Unknown30.
+field Class_109203B0::Unknown00 m_InitTime A long set from _time32(0) in the init method.
+field Class_10925F10::UnknownA4 m_Items Only user is FUN_10925f10, which adds unique ints to this cIntArray.
+field Class_10925FC0::UnknownCC m_Refs cRefPtr array indexed by FUN_10925fc0, its only user.
+field Class_10925F60::Unknown0A4 m_Items cIntArray searched and removed from by FUN_10925f60, its only user.
+field ListPool::Unknown00 m_Head Remove sets Unknown00 to the next node when the removed node has no predecessor
+field ListPool::Unknown04 m_Tail Remove sets Unknown04 to the previous node when the removed node has no successor
+field ListPool::Unknown08 m_Count Remove decrements Unknown08 once per unlinked node
+field Class_10932760::Unknown00 m_Head Alloc appends at the tail and sets Unknown00 when the active list is empty
+field Class_10932760::Unknown04 m_Tail Alloc reads Unknown04 as the last node before appending
+field Class_10932760::Unknown08 m_Count Alloc increments Unknown08 for each appended node
+field Class_10932760::Unknown0C m_FreeList Alloc takes a recycled node from this Class_10932350 list before allocating
+field Class_10932830::Unknown00 m_Collisions Insert increments Unknown00 when the target bucket is already occupied
+field Class_10932830::Unknown04 m_Count Insert increments Unknown04 per entry; Reset zeroes it
+field Class_10932830::Unknown08 m_BucketBits Rehash stores log2 of the bucket count; Insert masks the hash with it
+field Class_10932830::Unknown0C m_BucketCount Rehash stores the bucket count; Insert's growth test compares against it
+field Class_10932830::Unknown10 m_FixedSize Insert skips growth and Reset skips rehashing while this flag is set
+field Class_10932830::Unknown14 m_Buckets Rehash allocates Size node pointers; Insert indexes them by hash
+field Class_10932910::Unknown00 m_Collisions Rehash zeroes it before reinserting; the layout matches Class_10932830, whose Insert counts occupied buckets
+field Class_10932910::Unknown04 m_Count Rehash zeroes it before reinserting entries
+field Class_10932910::Unknown08 m_BucketBits Rehash stores the bucket count's log2 here
+field Class_10932910::Unknown0C m_BucketCount Rehash stores Size here and keeps the old count to reinsert from
+field Class_10932910::Unknown14 m_Buckets Rehash allocates the new array and deletes the old one
+field Class_10930A40::Unknown08 m_Data Free passes Unknown08 to the allocator's Virtual5 and zeroes it
+field Class_1092F330::Unknown0C m_PrimitiveCount Passed as the primitive count to DrawPrimitive
+field Class_1092F330::Unknown10 m_LineList Selects D3DPT_LINELIST over D3DPT_LINESTRIP in Draw
+field Node_10932350::UnknownA8 m_Prev Remove and Alloc read and write it as the previous link
+field Node_10932350::UnknownAC m_Next Remove and Alloc read and write it as the next link
+field Class_10937400::Unknown6AC m_PixelShader Cached bound pixel shader: FUN_10937400 compares and stores it around SetPixelShader.
+field Class_10936870::Unknown6b4 m_Flags Only FUN_10936870 uses it, ORing its Flags argument in.
+field Class_10939380::Unknown1C m_Head Tree header: its Unknown04 is the root, which RotateRight reads and rewrites.
+field Class_1093AED0::Unknown24 m_CategoriesBegin Start of the const char* names that GetCategoryIndex scans.
+field Class_1093AED0::Unknown28 m_CategoriesEnd End of the const char* names that GetCategoryIndex scans.
+field Class_10941E90::Unknown00 m_Buffer Released with operator delete in FUN_10941e90, its only user.
+field Class_10941F40::Unknown04 m_Buffer Released with operator delete in FUN_10941f40, its only user.
+field Class_1094AED0::Unknown12C m_Count Loop bound of the scan over Unknown134, the list's entry count.
+field Class_1094AED0::Unknown134 m_Items Int array read by index up to the count and compared with the argument values.
+field Class_1094B600::Unknown08 m_Items Item array whose entries SwapItems exchanges by index.
+field Class_1094CFD0::Unknown12C m_Items cIntArray that AddUniqueItem appends unique values to.
+field Class_1094D9F0::Unknown14 m_Stages Eight entries indexed by Stage; each holds the stage texture at +0x30.
+field Class_1094DF60::Unknown10C m_Count Upper bound: SetCurrentIndex clamps to Unknown10C - 1.
+field Class_1094DF60::Unknown110 m_CurrentIndex Index that SetCurrentIndex clamps into 0..count-1 and stores.
+field Class_1094E150::Unknown0F0 m_Count Loop bound of DeleteItems over the entry array.
+field Class_1094E150::Unknown0FC m_Items Array of entry pointers that DeleteItems deletes and nulls.
+field Class_109514C0::Unknown0C m_Blocks Nine owned pointers that ReleaseAll frees and nulls.
+field Class_109516C0::Unknown40 m_EntryCount Index must be below Unknown40 before GetEntry reads Unknown48.
+field Class_109516C0::Unknown48 m_Entries Array of entry pointers indexed by Index in GetEntry.
+field Class_109516C0::Unknown4C m_DefaultEntry Embedded entry that GetEntry returns by address when a slot is empty.
+field Class_10951900::Unknown04 m_Flags Bit 0x400 is set by one method of the class and cleared by another.
+field Class_10951A40::Unknown40 m_ItemCount RemoveMatching loops Unknown40 times over Unknown48.
+field Class_10951A40::Unknown48 m_Items Array of Class_10951540 pointers that RemoveMatching deletes and nulls.
+field Class_10951A40::Unknown4C m_Filter SetFilter stores its argument here; RemoveMatching passes it to each item.
+field Class_109523D0::Unknown28 m_State UpdateState assigns it 0 or 3 from HasAllBits results.
+field Class_109523D0::Unknown30 m_Flags HasAllBits tests Mask bits 0 to 8 against it.

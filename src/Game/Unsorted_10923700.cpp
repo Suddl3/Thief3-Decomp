@@ -32,7 +32,7 @@ public:
     void FUN_1094b730();
     void FUN_10948e80();
     void IntegrateOffsets(int A);
-    void FUN_1094cfd0(int A);
+    void AddUniqueItem(int A);
     void FUN_1094d500(int A);
 
     char Unknown04[0x58];
@@ -98,7 +98,7 @@ void Class_10920A90::FUN_10923f30(Class_10E4AA80* Obj)
         for (int i = 0; i < DAT_10f31974; i++)
             Obj->FUN_1094d500(DAT_10f3197c[i]);
         for (int i = 0; i < DAT_10f31980; i++)
-            Obj->FUN_1094cfd0(DAT_10f31988[i]->Unknown30);
+            Obj->AddUniqueItem(DAT_10f31988[i]->Unknown30);
         Obj->Unknown60 &= ~0x40;
     }
 }

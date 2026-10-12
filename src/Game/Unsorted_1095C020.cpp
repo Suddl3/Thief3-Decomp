@@ -24,8 +24,8 @@ struct Arg_10D52FA0
 
 void FUN_10d52fa0(int A, int B, int C, Class_1095D720* Owner, Arg_10D52FA0 Flags);
 
-// FUNCTION: 0x1095C2B0 ?FUN_1095c2b0@Class_1095C2B0@@QAEPAV1@XZ
-Class_1095C2B0* Class_1095C2B0::FUN_1095c2b0()
+// FUNCTION: 0x1095C2B0 ?Init@Class_1095C2B0@@QAEPAV1@XZ
+Class_1095C2B0* Class_1095C2B0::Init()
 {
     Struct_1095C2B0 Temp;
     Unknown00 = Temp;

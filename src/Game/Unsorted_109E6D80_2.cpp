@@ -4,12 +4,12 @@
 unsigned int HashBytes(const void* Data, int Length);
 
 // Ion Storm's string (0x109081E0): a char pointer, null when default constructed.
-class Class_109081E0
+class cString
 {
 public:
-    Class_109081E0() : Unknown00(0) {}
-    ~Class_109081E0();
-    Class_109081E0& operator=(const Class_109081E0& Other);
+    cString() : Unknown00(0) {}
+    ~cString();
+    cString& operator=(const cString& Other);
 
     char* Unknown00;
 };
@@ -18,7 +18,7 @@ public:
 class Class_109E6520_Node
 {
 public:
-    Class_109081E0 Key;
+    cString Key;
     int Value;
     Class_109E6520_Node* Next;
 };
@@ -28,17 +28,17 @@ public:
 class Class_109E6520_Field18
 {
 public:
-    virtual void Virtual0(const Class_109081E0& Key, const void** Data, int* Length);
-    virtual int Virtual1(const Class_109081E0& Key, const Class_109081E0& Other);
+    virtual void Virtual0(const cString& Key, const void** Data, int* Length);
+    virtual int Virtual1(const cString& Key, const cString& Other);
 };
 
 // The hash table of Class_109E6520's header, with Remove added.
 class Class_109E6520
 {
 public:
-    unsigned int Insert(const Class_109081E0& Key, const int& Value);
+    unsigned int Insert(const cString& Key, const int& Value);
     void Rehash(int Size);
-    bool Remove(const Class_109081E0& Key);
+    bool Remove(const cString& Key);
 
     int m_Collisions;
     int m_Count;
@@ -50,8 +50,8 @@ public:
     Class_109E6520_Field18 m_KeyTraits;
 };
 
-// FUNCTION: 0x109E7B20 ?Remove@Class_109E6520@@QAE_NABVClass_109081E0@@@Z
-bool Class_109E6520::Remove(const Class_109081E0& Key)
+// FUNCTION: 0x109E7B20 ?Remove@Class_109E6520@@QAE_NABVcString@@@Z
+bool Class_109E6520::Remove(const cString& Key)
 {
     if (!m_FixedSize && m_Count < m_BucketCount * 0.05 && m_BucketCount > 64)
         Rehash(m_BucketCount / 2);

@@ -3,14 +3,14 @@
 #ifndef GAME_CLASS_109B6D50_H
 #define GAME_CLASS_109B6D50_H
 
-class Class_109081E0;
+class cString;
 
 class Class_109B6D50
 {
 public:
-    void FUN_109bf5f0(int A, const Class_109081E0& B);
+    void FUN_109bf5f0(int A, const cString& B);
     int FUN_109b6c50(int A);
-    void FUN_109c33f0(int A, const Class_109081E0& B);
+    void FUN_109c33f0(int A, const cString& B);
     bool FUN_109b6d50(int A);
     void FUN_109bf7f0(int A, float B);
     void FUN_109b6d10(int A);

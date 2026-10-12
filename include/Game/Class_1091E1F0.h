@@ -6,7 +6,7 @@
 class Class_1091E1F0
 {
 public:
-    Class_1091E1F0* FUN_1091e1f0(int A, int B, int C, int D, int E, int F, int G, int H, int I);
+    Class_1091E1F0* Set(int A, int B, int C, int D, int E, int F, int G, int H, int I);
 
     int Unknown00;
     int Unknown04;

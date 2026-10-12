@@ -11,7 +11,7 @@ class Class_10B799A0;
 
 struct Struct_10B6C180;
 
-class Class_109081E0;
+class cString;
 
 class Class_10A2AEF0;
 
@@ -150,7 +150,7 @@ public:
 
     void SetData(Struct_10B6C180* A);
     void FUN_10b6b930();
-    Class_109081E0 GetPaneFileName();
+    cString GetPaneFileName();
     int GetData();
     void FUN_10b6bb80(int A, int B, int C, int D, int E, int F);
     int GetSelectedValue();

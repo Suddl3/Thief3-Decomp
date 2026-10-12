@@ -8,7 +8,7 @@
 class Class_10933420
 {
 public:
-    std::vector<void*>::iterator FUN_10933420(std::vector<void*>::iterator Where);
+    std::vector<void*>::iterator Erase(std::vector<void*>::iterator Where);
 
     char Unknown00[4];
     std::vector<void*> Unknown04;

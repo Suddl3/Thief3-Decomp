@@ -1,6 +1,6 @@
 // Game/Class_10E7C178_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10E7C178.h"
 
 template <class T> class TArray
@@ -47,7 +47,7 @@ public:
     virtual void Virtual22();
     virtual void Virtual23();
     virtual void Virtual24();
-    virtual Class_109081E0 Virtual25();
+    virtual cString Virtual25();
 };
 
 struct Struct_10B34BE0
@@ -68,8 +68,8 @@ public:
 
 extern Class_1096C8D0* DAT_10ff3818;
 
-// FUNCTION: 0x10B34BE0 ?GetCurrent@Class_10E7C178@@UAE?AVClass_109081E0@@XZ
-Class_109081E0 Class_10E7C178::GetCurrent()
+// FUNCTION: 0x10B34BE0 ?GetCurrent@Class_10E7C178@@UAE?AVcString@@XZ
+cString Class_10E7C178::GetCurrent()
 {
     Class_1096C8D0* Holder = DAT_10ff3818;
     Class_10B34BE0_Member* Obj;

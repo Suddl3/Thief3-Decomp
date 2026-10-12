@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Game/Class_10C49740.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 struct Group_10BA14C0;
 
@@ -38,20 +38,20 @@ public:
     virtual ~Class_10E4A668();
 };
 
-Class_109081E0 FUN_10932a70(const char* Name);
+cString FUN_10932a70(const char* Name);
 
 Class_10E4A668* FUN_10955860(const char* Name);
 
-int FUN_10932c50(int A, Class_10E4A668* P);
+int CreateNamedEntry(int A, Class_10E4A668* P);
 
-void FUN_10932d40(int A, int B);
+void InsertNamedEntry(int A, int B);
 
 extern Class_10C49740 DAT_10eff31c;
 
-// FUNCTION: 0x10932E00 ?FUN_10932e00@@YAHPBD@Z
-int FUN_10932e00(const char* Name)
+// FUNCTION: 0x10932E00 ?AcquireByName@@YAHPBD@Z
+int AcquireByName(const char* Name)
 {
-    Class_109081E0 Key = FUN_10932a70(Name);
+    cString Key = FUN_10932a70(Name);
     Entry_10C32C30* Found = 0;
     DAT_10eff31c.FUN_10c49740((int*)&Key, &Found);
     int Result;
@@ -65,8 +65,8 @@ int FUN_10932e00(const char* Name)
         Class_10E4A668* Obj = FUN_10955860(Name);
         if (Obj)
         {
-            Result = FUN_10932c50((int)&Key, Obj);
-            FUN_10932d40((int)&Key, Result);
+            Result = CreateNamedEntry((int)&Key, Obj);
+            InsertNamedEntry((int)&Key, Result);
             delete Obj;
         }
         else

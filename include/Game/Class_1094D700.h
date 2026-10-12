@@ -11,7 +11,7 @@ public:
     Class_1094D700();
     ~Class_1094D700();
 
-    void FUN_1094d700();
+    void ReleaseAll();
 
     char Unknown00[4];
     Class_1094D700_Element* Unknown04;

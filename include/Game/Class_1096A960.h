@@ -3,13 +3,13 @@
 #ifndef GAME_CLASS_1096A960_H
 #define GAME_CLASS_1096A960_H
 
-class Class_109081E0;
+class cString;
 
 class Class_1096A960
 {
 public:
     char** FUN_1096a960(char** Out);
-    Class_109081E0 FUN_1096a960();
+    cString FUN_1096a960();
 
     char Pad00[0x1];
 };

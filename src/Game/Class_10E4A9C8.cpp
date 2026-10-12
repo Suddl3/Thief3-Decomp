@@ -16,16 +16,16 @@ public:
 class Class_1091E2E0
 {
 public:
-    void FUN_1091e2e0();
+    void Reset();
 
     void** Unknown00;
-    char Unknown04[0x40];
+    char m_Matrix[0x40];
 };
 
 class Class_10E4A9C8 : public Class_1091E2E0
 {
 public:
-    Class_10E4A9C8* FUN_10948600();
+    Class_10E4A9C8* Init();
 
     int Unknown44;
     bool Unknown48;
@@ -47,10 +47,10 @@ public:
     bool UnknownE0;
 };
 
-// FUNCTION: 0x10948600 ?FUN_10948600@Class_10E4A9C8@@QAEPAV1@XZ
-Class_10E4A9C8* Class_10E4A9C8::FUN_10948600()
+// FUNCTION: 0x10948600 ?Init@Class_10E4A9C8@@QAEPAV1@XZ
+Class_10E4A9C8* Class_10E4A9C8::Init()
 {
-    FUN_1091e2e0();
+    Reset();
     Unknown00 = DAT_10e4a9c8;
     Unknown64.FArray::FArray();
     Unknown70.FArray::FArray();

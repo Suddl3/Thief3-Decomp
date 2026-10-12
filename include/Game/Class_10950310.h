@@ -8,7 +8,7 @@ struct Struct_10950310;
 class Class_10950310
 {
 public:
-    void FUN_10950310(float Volume);
+    void SetVolume(float Volume);
 
     Struct_10950310* Unknown00;
 };

@@ -6,7 +6,7 @@
 class Class_10948190
 {
 public:
-    int FUN_10948190(Class_10948190* A);
+    int IsDifferent(Class_10948190* A);
 
     float Unknown00;
     float Unknown04;

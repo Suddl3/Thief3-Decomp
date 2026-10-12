@@ -3,7 +3,7 @@
 #ifndef GAME_CCONVERSATIONLOADER_H
 #define GAME_CCONVERSATIONLOADER_H
 
-class Class_109081E0;
+class cString;
 
 class cConversationLoader
 {
@@ -12,7 +12,7 @@ public:
     virtual void FUN_10a0e150(const char* Name);
     virtual void Virtual2();
 
-    Class_109081E0 FUN_10a0e070(const char* Name);
+    cString FUN_10a0e070(const char* Name);
 };
 
 #endif // GAME_CCONVERSATIONLOADER_H

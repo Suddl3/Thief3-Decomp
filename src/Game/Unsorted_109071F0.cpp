@@ -3,10 +3,10 @@
 
 #include <string.h>
 
-class Class_109081E0
+class cString
 {
 public:
-    Class_109081E0(const char* In);
+    cString(const char* In);
 
     void FUN_10907870(int Length, int Flag);
 
@@ -15,8 +15,8 @@ public:
 
 bool FUN_10907af0(const char* Str, int Max);
 
-// FUNCTION: 0x109081E0 ??0Class_109081E0@@QAE@PBD@Z
-Class_109081E0::Class_109081E0(const char* In)
+// FUNCTION: 0x109081E0 ??0cString@@QAE@PBD@Z
+cString::cString(const char* In)
 {
     Unknown00 = 0;
     if (In)
@@ -30,8 +30,8 @@ Class_109081E0::Class_109081E0(const char* In)
     }
 }
 
-// FUNCTION: 0x10908230 ?FUN_10908230@@YAHPBDH@Z
-int FUN_10908230(const char* Str, int Max)
+// FUNCTION: 0x10908230 ?GetBoundedLength@@YAHPBDH@Z
+int GetBoundedLength(const char* Str, int Max)
 {
     if (Str && Max >= 1 && FUN_10907af0(Str, Max))
         return strlen(Str);

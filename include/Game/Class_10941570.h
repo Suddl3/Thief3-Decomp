@@ -8,12 +8,12 @@ class Class_10941480;
 class Class_10941570
 {
 public:
-    void FUN_10941570();
+    void DrawAll();
 
     char Unknown00[4];
-    int Unknown04;
+    int m_Count;
     char Unknown08[4];
-    Class_10941480* Unknown0C;
+    Class_10941480* m_Items;
 };
 
 #endif // GAME_CLASS_10941570_H

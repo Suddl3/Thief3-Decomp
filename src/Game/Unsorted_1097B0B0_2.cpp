@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_1090A780.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_1097B240_Node.h"
 
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
@@ -13,7 +13,7 @@ class Class_1097B240
 {
 public:
     void FUN_1097b240(int Size);
-    unsigned int FUN_109792b0(const Class_109081E0& Key, const int& Value);
+    unsigned int FUN_109792b0(const cString& Key, const int& Value);
 
     int Unknown00;
     int Unknown04;
@@ -44,7 +44,7 @@ void Class_1097B240::FUN_1097b240(int Size)
         {
             FUN_109792b0(Node->Key, Node->Value);
             Class_1097B240_Node* Next = Node->Next;
-            Node->Key.~Class_109081E0();
+            Node->Key.~cString();
             ::operator delete(Node);
             Node = Next;
         }

@@ -9,12 +9,12 @@ class Class_109159B0;
 class Class_10914150
 {
 public:
-    void FUN_10914150(Class_1090FD40* Out);
+    void CollectAll(Class_1090FD40* Out);
 
     int Unknown00;
-    int Unknown04;
+    int m_ChildCount;
     int Unknown08;
-    Class_109159B0** Unknown0C;
+    Class_109159B0** m_Children;
 };
 
 #endif // GAME_CLASS_10914150_H

@@ -3,7 +3,7 @@
 
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_1090A780.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10932830.h"
 #include "Game/Class_109329F0.h"
 
@@ -20,32 +20,32 @@ public:
 
 Class_10E4A668* FUN_10955790(int B);
 
-int FUN_10932c50(int A, Class_10E4A668* P);
+int CreateNamedEntry(int A, Class_10E4A668* P);
 
-void FUN_10932d40(int A, int B);
+void InsertNamedEntry(int A, int B);
 
 Class_10905A90_Member* GetAllocator();
 
 extern const char DAT_10e47660[];
 
-Class_109081E0 FUN_10932a70(const char* Param1);
+cString FUN_10932a70(const char* Param1);
 
 extern Class_109329F0 DAT_10eff31c;
 
-// FUNCTION: 0x10932D40 ?FUN_10932d40@@YAXABVClass_109081E0@@H@Z
-void FUN_10932d40(const Class_109081E0& Param1, int Param2)
+// FUNCTION: 0x10932D40 ?InsertNamedEntry@@YAXABVcString@@H@Z
+void InsertNamedEntry(const cString& Param1, int Param2)
 {
-    Class_109081E0 Name = FUN_10932a70(*Param1);
-    DAT_10eff31c.FUN_10932830(Name, Param2);
+    cString Name = FUN_10932a70(*Param1);
+    DAT_10eff31c.Insert(Name, Param2);
 }
 
-// FUNCTION: 0x10932DC0 ?FUN_10932dc0@@YAXHH@Z
-void FUN_10932dc0(int A, int B)
+// FUNCTION: 0x10932DC0 ?CreateAndInsertNamed@@YAXHH@Z
+void CreateAndInsertNamed(int A, int B)
 {
     Class_10E4A668* P = FUN_10955790(B);
     if (P)
     {
-        FUN_10932d40(A, FUN_10932c50(A, P));
+        InsertNamedEntry(A, CreateNamedEntry(A, P));
         delete P;
     }
 }

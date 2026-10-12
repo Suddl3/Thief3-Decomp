@@ -47,20 +47,20 @@ void Class_10941C40::FUN_10941db0(int A, int B, int C, int D, int E, int F, int 
     FUN_10941cb0(B, C, D, E, F, G, H, I, J, K, H, I);
 }
 
-// FUNCTION: 0x10941E90 ?FUN_10941e90@Class_10941E90@@QAEXXZ
-void Class_10941E90::FUN_10941e90()
+// FUNCTION: 0x10941E90 ?Free@Class_10941E90@@QAEXXZ
+void Class_10941E90::Free()
 {
-    if (Unknown00)
-        ::operator delete(Unknown00);
-    Unknown00 = 0;
+    if (m_Buffer)
+        ::operator delete(m_Buffer);
+    m_Buffer = 0;
 }
 
-// FUNCTION: 0x10941F40 ?FUN_10941f40@Class_10941F40@@QAEXXZ
-void Class_10941F40::FUN_10941f40()
+// FUNCTION: 0x10941F40 ?Free@Class_10941F40@@QAEXXZ
+void Class_10941F40::Free()
 {
-    if (Unknown04)
-        ::operator delete(Unknown04);
-    Unknown04 = 0;
+    if (m_Buffer)
+        ::operator delete(m_Buffer);
+    m_Buffer = 0;
 }
 
 // FUNCTION: 0x10942000 ?FUN_10942000@Class_10E4A668@@UAEXH@Z

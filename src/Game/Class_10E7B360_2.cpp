@@ -3,7 +3,7 @@
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10E67FD0.h"
 #include "Game/Class_10E68F9C.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 class Class_10E7B360
 {
@@ -11,7 +11,7 @@ public:
     ~Class_10E7B360();
 
     Class_10E67FD0 Unknown00;
-    Class_109081E0 Unknown150;
+    cString Unknown150;
 };
 
 // FUNCTION: 0x10B2BD00 ??1Class_10E7B360@@QAE@XZ

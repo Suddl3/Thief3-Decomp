@@ -74,8 +74,8 @@ extern IDirect3DDevice8* GDirect3DDevice8;
 
 extern int DAT_10efefb8;
 
-// FUNCTION: 0x10936E00 ?FUN_10936e00@@YGXH_N@Z
-void __stdcall FUN_10936e00(int A, bool B)
+// FUNCTION: 0x10936E00 ?SetStageWrap@@YGXH_N@Z
+void __stdcall SetStageWrap(int A, bool B)
 {
     if (A != -1)
     {
@@ -95,8 +95,8 @@ void __stdcall FUN_10936e00(int A, bool B)
     }
 }
 
-// FUNCTION: 0x10936EB0 ?FUN_10936eb0@@YGXH_N@Z
-void __stdcall FUN_10936eb0(int Stage, bool Flag)
+// FUNCTION: 0x10936EB0 ?SetStageClamp@@YGXH_N@Z
+void __stdcall SetStageClamp(int Stage, bool Flag)
 {
     if (Stage == -1)
         return;
@@ -115,8 +115,8 @@ void __stdcall FUN_10936eb0(int Stage, bool Flag)
     GDirect3DDevice8->Virtual50(Stage + 0x80, 0);
 }
 
-// FUNCTION: 0x10936F60 ?FUN_10936f60@@YGXH_N@Z
-void __stdcall FUN_10936f60(int Stage, bool Flag)
+// FUNCTION: 0x10936F60 ?SetStageBorder@@YGXH_N@Z
+void __stdcall SetStageBorder(int Stage, bool Flag)
 {
     if (Stage != -1)
     {

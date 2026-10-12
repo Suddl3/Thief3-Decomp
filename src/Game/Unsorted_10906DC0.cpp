@@ -17,8 +17,8 @@ extern int DAT_10efeed8;
 
 int FUN_10907030(void** Handle, const char* Name);
 
-// FUNCTION: 0x109070D0 ?FUN_109070d0@@YA_NPBDPAPAXPAH@Z
-bool FUN_109070d0(const char* Name, void** Out, int* Out2)
+// FUNCTION: 0x109070D0 ?GetIniFile@@YA_NPBDPAPAXPAH@Z
+bool GetIniFile(const char* Name, void** Out, int* Out2)
 {
     *Out = 0;
     *Out2 = 0;

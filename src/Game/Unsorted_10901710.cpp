@@ -15,8 +15,8 @@ int FUN_10ab5210(const char* Name);
 
 void FUN_10ab4b00();
 
-// FUNCTION: 0x10901710 ?FUN_10901710@@YAHXZ
-int FUN_10901710()
+// FUNCTION: 0x10901710 ?GetStaticClassADifficultyInfo@@YAHXZ
+int GetStaticClassADifficultyInfo()
 {
     if (DAT_10f3a39c == 0)
     {
@@ -26,8 +26,8 @@ int FUN_10901710()
     return DAT_10f3a39c;
 }
 
-// FUNCTION: 0x10901740 ?FUN_10901740@@YAHXZ
-int FUN_10901740()
+// FUNCTION: 0x10901740 ?GetStaticClassASpellProjectile@@YAHXZ
+int GetStaticClassASpellProjectile()
 {
     if (DAT_10f3a3a8 == 0)
     {

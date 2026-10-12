@@ -4,7 +4,7 @@
 #include "Game/Class_10E5B7C8.h"
 #include "Game/WindowManager.h"
 #include "Game/Class_10B175C0.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 class Class_10E79228 : public Class_10E5B7C8
 {
@@ -19,7 +19,7 @@ class Class_10B314F0;
 // FUNCTION: 0x10B16FB0 ?FUN_10b16fb0@Class_10B175C0@@QAEPAVClass_10B314F0@@XZ
 Class_10B314F0* Class_10B175C0::FUN_10b16fb0()
 {
-    Class_109081E0 Name("FMVWindow");
+    cString Name("FMVWindow");
     int Result = FindWindowByName(Name);
     return (Class_10B314F0*)Result;
 }

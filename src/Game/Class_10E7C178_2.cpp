@@ -1,15 +1,15 @@
 // Game/Class_10E7C178_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10905A90_Member.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10E7C178.h"
 
-bool FUN_1094c430(const Class_109081E0& A, const Class_109081E0& B) throw();
+bool FUN_1094c430(const cString& A, const cString& B) throw();
 
 extern const char DAT_10e795b0[];
 
 // FUNCTION: 0x10B34B30 ?IsInventoryClass@Class_10E7C178@@UAEHXZ
 int Class_10E7C178::IsInventoryClass()
 {
-    return FUN_1094c430(m_ClassName, Class_109081E0(DAT_10e795b0));
+    return FUN_1094c430(m_ClassName, cString(DAT_10e795b0));
 }

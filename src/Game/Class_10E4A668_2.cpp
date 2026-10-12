@@ -3,7 +3,7 @@
 #include "Game/cD3DStateCache.h"
 #include "Game/Struct_10919190.h"
 
-void FUN_10919190(Struct_10919190* Matrix);
+void SetWorldTransform(Struct_10919190* Matrix);
 
 extern cD3DStateCache* DAT_10f31be0;
 
@@ -44,7 +44,7 @@ public:
 // FUNCTION: 0x10942860 ?BindIndices@Class_10E4A668@@UAEXXZ
 void Class_10E4A668::BindIndices()
 {
-    FUN_10919190(&Unknown04);
+    SetWorldTransform(&Unknown04);
     Unknown164->Virtual8(0);
     DAT_10f31be0->SetIndices(Unknown168, Unknown164->Virtual9());
 }

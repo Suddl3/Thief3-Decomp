@@ -20,10 +20,10 @@ class cD3DStateCache : public Class_109373D0
 
 extern cD3DStateCache* DAT_10f31be0;
 
-void FUN_109192e0(int A, int B, int C);
+void SetStreamAndIndices(int A, int B, int C);
 
-// FUNCTION: 0x1092F190 ?FUN_1092f190@@YAXXZ
-void FUN_1092f190()
+// FUNCTION: 0x1092F190 ?FreeItems@@YAXXZ
+void FreeItems()
 {
     for (int i = 0; i < DAT_10f31b9c.Count; i++)
     {
@@ -64,8 +64,8 @@ void FUN_1092f190()
     DAT_10f31b9c.Count = NewCount;
 }
 
-// FUNCTION: 0x1092F330 ?FUN_1092f330@Class_1092F330@@QAEXXZ
-void Class_1092F330::FUN_1092f330()
+// FUNCTION: 0x1092F330 ?Draw@Class_1092F330@@QAEXXZ
+void Class_1092F330::Draw()
 {
     if (Unknown1C)
     {
@@ -78,11 +78,11 @@ void Class_1092F330::FUN_1092f330()
             GDirect3DDevice8->SetTexture(0, 0);
             *Slot = 0;
         }
-        FUN_109192e0(Unknown1C, 0x14, 0);
+        SetStreamAndIndices(Unknown1C, 0x14, 0);
         DAT_10f31be0->SetVertexShader(0x44);
-        if (Unknown10)
-            GDirect3DDevice8->DrawPrimitive(D3DPT_LINELIST, 0, Unknown0C);
+        if (m_LineList)
+            GDirect3DDevice8->DrawPrimitive(D3DPT_LINELIST, 0, m_PrimitiveCount);
         else
-            GDirect3DDevice8->DrawPrimitive(D3DPT_LINESTRIP, 0, Unknown0C);
+            GDirect3DDevice8->DrawPrimitive(D3DPT_LINESTRIP, 0, m_PrimitiveCount);
     }
 }

@@ -3,22 +3,22 @@
 
 #include <string.h>
 #include "Game/Class_10905A90_Member.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
-class Class_109081E0;
+class cString;
 
 Class_10905A90_Member* GetAllocator();
 
 class Class_1090FD40
 {
 public:
-    int Add(const Class_109081E0& Item);
-    int AddUnique(const Class_109081E0& Item);
+    int Add(const cString& Item);
+    int AddUnique(const cString& Item);
     void FUN_1090f2c0(int Count);
     void FUN_1090fd00();
     void FUN_10a37f80(int A, int B, int C);
     void RemoveAt(int Index);
-    void Insert(int Index, const Class_109081E0& Value);
+    void Insert(int Index, const cString& Value);
     void FUN_10a5b5b0(int A, int B);
     void RemoveUnordered(int Index);
     void Empty()
@@ -34,11 +34,11 @@ public:
 
     int m_Count;
     int Unknown04;
-    Class_109081E0* m_Items;
+    cString* m_Items;
 };
 
-// FUNCTION: 0x1090FFA0 ?AddUnique@Class_1090FD40@@QAEHABVClass_109081E0@@@Z
-int Class_1090FD40::AddUnique(const Class_109081E0& Item)
+// FUNCTION: 0x1090FFA0 ?AddUnique@Class_1090FD40@@QAEHABVcString@@@Z
+int Class_1090FD40::AddUnique(const cString& Item)
 {
     int Count = m_Count;
     for (int i = 0; i < Count; i++)

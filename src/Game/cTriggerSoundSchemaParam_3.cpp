@@ -58,11 +58,11 @@ public:
     char* Unknown00;
 };
 
-// Copied from include/Game/Class_109081E0.h with a default constructor added.
-class Class_109081E0 : public Class_1090A780
+// Copied from include/Game/cString.h with a default constructor added.
+class cString : public Class_1090A780
 {
 public:
-    ~Class_109081E0()
+    ~cString()
     {
         if (Unknown00)
         {
@@ -71,14 +71,14 @@ public:
             Unknown00 = 0;
         }
     }
-    Class_109081E0() : Class_1090A780() {}
-    Class_109081E0(const char* In);
-    Class_109081E0(const Class_109081E0& Other);
-    Class_109081E0(const Class_1090A780& Other) : Class_1090A780(Other) {}
+    cString() : Class_1090A780() {}
+    cString(const char* In);
+    cString(const cString& Other);
+    cString(const Class_1090A780& Other) : Class_1090A780(Other) {}
 
     void FUN_10907870(int Length, int Flag);
-    Class_109081E0& operator=(const Class_109081E0& Other);
-    Class_109081E0& FUN_1090a590(const char* In);
+    cString& operator=(const cString& Other);
+    cString& FUN_1090a590(const char* In);
     const char* operator*() const { return Unknown00 ? Unknown00 : DAT_10e47660; }
     bool IsEmpty() const
     {
@@ -94,7 +94,7 @@ public:
     virtual ~cTriggerSoundSchemaParam();
 
     Class_10A036A0 m_Schema;
-    Class_109081E0 Unknown14;
+    cString Unknown14;
 };
 
 // FUNCTION: 0x10A8AEE0 ??0cTriggerSoundSchemaParam@@QAE@XZ

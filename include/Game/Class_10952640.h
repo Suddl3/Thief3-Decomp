@@ -6,7 +6,7 @@
 class Class_10952640
 {
 public:
-    void FUN_10952640();
+    void Apply();
 
     char Unknown00[0x4C];
     bool Unknown4C;

@@ -16,8 +16,8 @@ Class_109475E0::~Class_109475E0()
 {
 }
 
-// FUNCTION: 0x109481D0 ?FUN_109481d0@Class_109481D0@@QAE_NH@Z
-bool Class_109481D0::FUN_109481d0(int Mask)
+// FUNCTION: 0x109481D0 ?HasFlags@Class_109481D0@@QAE_NH@Z
+bool Class_109481D0::HasFlags(int Mask)
 {
     if (UnknownB0)
     {

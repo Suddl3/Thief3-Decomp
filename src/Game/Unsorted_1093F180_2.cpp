@@ -14,13 +14,13 @@ class Class_1093F9F0_Param
 {
 public:
     char Unknown00[0x64];
-    int Unknown64;
+    int m_Kind;
 };
 
-// FUNCTION: 0x1093F9F0 ?FUN_1093f9f0@Class_1093F9F0@@QAEXPAVClass_1093F9F0_Param@@H@Z
-void Class_1093F9F0::FUN_1093f9f0(Class_1093F9F0_Param* Param, int B)
+// FUNCTION: 0x1093F9F0 ?SetShaderForKind@Class_1093F9F0@@QAEXPAVClass_1093F9F0_Param@@H@Z
+void Class_1093F9F0::SetShaderForKind(Class_1093F9F0_Param* Param, int B)
 {
-    int Kind = Param->Unknown64;
+    int Kind = Param->m_Kind;
     if (Kind != 3 && Kind != 4 && Kind != 5)
     {
         DAT_10f31be0->SetVertexShader(2);

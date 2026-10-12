@@ -2,14 +2,14 @@
 // Declarations above the functions belong in include/ once they settle.
 // Class_10E97B00's destructor is implicit (inlined on the normal path).
 #include "Game/Class_10E97B00.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10BC9A50.h"
 
 // FUNCTION: 0x10BC9A50 ?ShopOwnerNoCash@Class_10BC9A50@@QAE_NXZ
 bool Class_10BC9A50::ShopOwnerNoCash()
 {
     Class_10E97B00 Name("+shopowner:nocash");
-    Class_109081E0 Text(DAT_10e47660);
+    cString Text(DAT_10e47660);
     FUN_10bc7d70(&Name, 0x28, 4, &Text, true);
     return true;
 }

@@ -8,12 +8,12 @@
 Object_10A18FC0* FUN_10a18fc0();
 
 // Ion Storm's string (0x109081E0): a char pointer, null when default constructed.
-class Class_109081E0
+class cString
 {
 public:
-    Class_109081E0() : Unknown00(0) {}
-    ~Class_109081E0();
-    Class_109081E0& operator=(const Class_109081E0& Other);
+    cString() : Unknown00(0) {}
+    ~cString();
+    cString& operator=(const cString& Other);
 
     char* Unknown00;
 };
@@ -29,7 +29,7 @@ unsigned int HashBytes(const void* Data, int Length);
 class Class_10A3C640_Node
 {
 public:
-    Class_109081E0 Key;
+    cString Key;
     int Value;
     Class_10A3C640_Node* Next;
 };
@@ -44,8 +44,8 @@ void Class_10A3C2E0::Reset()
     FUN_10a18fc0()->Virtual6(0, 0);
 }
 
-// FUNCTION: 0x10A3C640 ?Insert@Class_10A3C640@@QAEIABVClass_109081E0@@ABH@Z
-unsigned int Class_10A3C640::Insert(const Class_109081E0& Key, const int& Value)
+// FUNCTION: 0x10A3C640 ?Insert@Class_10A3C640@@QAEIABVcString@@ABH@Z
+unsigned int Class_10A3C640::Insert(const cString& Key, const int& Value)
 {
     if (!m_FixedSize && m_Collisions > m_BucketCount * 0.2)
         Rehash(m_BucketCount * 2);

@@ -168,8 +168,8 @@ int FUN_10948e70()
     return 0x238;
 }
 
-// FUNCTION: 0x1094AEC0 ?FUN_1094aec0@Class_1094AEC0@@QAEXXZ
-void Class_1094AEC0::FUN_1094aec0()
+// FUNCTION: 0x1094AEC0 ?Reset@Class_1094AEC0@@QAEXXZ
+void Class_1094AEC0::Reset()
 {
     Field00 = 0;
     Field04 = 0;
@@ -181,8 +181,8 @@ float Class_10E4AA80::FUN_1094c700()
     return Field78;
 }
 
-// FUNCTION: 0x1094D950 ?FUN_1094d950@Class_1094D950@@QAEPAV1@XZ
-Class_1094D950* Class_1094D950::FUN_1094d950()
+// FUNCTION: 0x1094D950 ?Reset@Class_1094D950@@QAEPAV1@XZ
+Class_1094D950* Class_1094D950::Reset()
 {
     Unknown00 = 0;
     Unknown04 = 0;

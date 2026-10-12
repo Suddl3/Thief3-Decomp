@@ -1,7 +1,7 @@
 // Game/Class_10E94B20_5.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10E97B00.h"
 
 extern const char DAT_10e94f94[];
@@ -50,7 +50,7 @@ class Class_10E94B20 : public Class_10BC4160
 public:
     virtual void NotifyGrenadeThrown(int A);
 
-    void FUN_10bc7d70(Class_10E97B00* Name, int Flags, int Count, Class_109081E0* Out, bool Flag);
+    void FUN_10bc7d70(Class_10E97B00* Name, int Flags, int Count, cString* Out, bool Flag);
 
     char Unknown08[0x4D];
     bool Unknown55;
@@ -62,7 +62,7 @@ void Class_10E94B20::NotifyGrenadeThrown(int A)
     FUN_10bc4160()->FUN_10bf7f90(0, 1);
     if (!Unknown55)
     {
-        Class_109081E0 Text(DAT_10e47660);
+        cString Text(DAT_10e47660);
         FUN_10bc7d70(&Class_10E97B00(DAT_10e94f94), 0x14, 0, &Text, true);
     }
 }

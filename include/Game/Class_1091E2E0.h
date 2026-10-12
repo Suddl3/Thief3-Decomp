@@ -6,10 +6,10 @@
 class Class_1091E2E0
 {
 public:
-    void FUN_1091e2e0();
+    void Reset();
 
     int Unknown00;
-    float Unknown04[4][4];
+    float m_Matrix[4][4];
     int Unknown44;
     bool Unknown48;
     bool Unknown49;

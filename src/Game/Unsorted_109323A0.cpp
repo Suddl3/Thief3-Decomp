@@ -22,10 +22,10 @@ extern int DAT_10f31bd0;
 
 extern Struct_109323A0_Entry** DAT_10f31bd8;
 
-int FUN_109323a0();
+int GetMemoryUsage();
 
-// FUNCTION: 0x109323A0 ?FUN_109323a0@@YAHXZ
-int FUN_109323a0()
+// FUNCTION: 0x109323A0 ?GetMemoryUsage@@YAHXZ
+int GetMemoryUsage()
 {
     Struct_109323A0_Node* Node = DAT_10f31bb8;
     int Total = 0;

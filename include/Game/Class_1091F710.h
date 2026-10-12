@@ -8,12 +8,12 @@ class Class_1091F710_Unknown38;
 class Class_1091F710
 {
 public:
-    bool FUN_1091f710(Class_1091F710_Unknown38* Item);
+    bool HasItem(Class_1091F710_Unknown38* Item);
 
     char Unknown00[0x30];
-    int Unknown30;
+    int m_NumItems;
     char Unknown34[4];
-    Class_1091F710_Unknown38** Unknown38;
+    Class_1091F710_Unknown38** m_Items;
 };
 
 #endif // GAME_CLASS_1091F710_H

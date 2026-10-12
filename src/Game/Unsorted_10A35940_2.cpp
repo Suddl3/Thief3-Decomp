@@ -58,7 +58,7 @@ void Class_10A35EE0::Reset()
     Unknown0A = 0;
     if (DAT_10f2c928)
     {
-        Class_1091CA00* Ptr = DAT_10f2c928->FUN_1091dee0(2);
+        Class_1091CA00* Ptr = DAT_10f2c928->GetFont(2);
         Unknown84 = Ptr;
         Unknown88 = Ptr;
         int Result = FUN_10a358b0();

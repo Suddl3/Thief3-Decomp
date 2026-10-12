@@ -3,16 +3,16 @@
 #ifndef GAME_CLASS_1092C0A0_H
 #define GAME_CLASS_1092C0A0_H
 
-class Class_109081E0;
+class cString;
 
 class Class_1092C0A0
 {
 public:
-    void FUN_1092c0a0();
+    void Clear();
 
-    Class_109081E0* Unknown00;
-    Class_109081E0* Unknown04;
-    int Unknown08;
+    cString* m_Head;
+    cString* m_Tail;
+    int m_Count;
 };
 
 #endif // GAME_CLASS_1092C0A0_H

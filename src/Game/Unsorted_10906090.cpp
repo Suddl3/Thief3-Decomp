@@ -7,7 +7,7 @@ Class_10905A90_Member* GetAllocator();
 
 int FUN_10901770();
 
-void FUN_10906cb0();
+void RunShutdownCallbacks();
 
 void RelaunchForLevelChange();
 
@@ -55,8 +55,8 @@ extern void* DAT_10e48070[];
 
 extern FARPROC DAT_10f2bfe0;
 
-// FUNCTION: 0x10906090 ?FUN_10906090@Class_10906090@@QAEPAV1@HPBD0H@Z
-Class_10906090* Class_10906090::FUN_10906090(int A, const char* B, const char* C, int D)
+// FUNCTION: 0x10906090 ?Init@Class_10906090@@QAEPAV1@HPBD0H@Z
+Class_10906090* Class_10906090::Init(int A, const char* B, const char* C, int D)
 {
     Unknown00 = A;
     Unknown04 = D;
@@ -94,8 +94,8 @@ Class_10906090* Class_10906090::FUN_10906090(int A, const char* B, const char* C
     return this;
 }
 
-// FUNCTION: 0x10906CB0 ?FUN_10906cb0@@YAXXZ
-void FUN_10906cb0()
+// FUNCTION: 0x10906CB0 ?RunShutdownCallbacks@@YAXXZ
+void RunShutdownCallbacks()
 {
     while (DAT_10f2bfdc)
         Sleep(50);
@@ -110,8 +110,8 @@ void FUN_10906cb0()
     DAT_10f2bfdc = false;
 }
 
-// FUNCTION: 0x10906D20 ?FUN_10906d20@@YA_NXZ
-bool FUN_10906d20()
+// FUNCTION: 0x10906D20 ?IsDebuggerAttached@@YA_NXZ
+bool IsDebuggerAttached()
 {
     if (!DAT_10f2bfe0)
     {
@@ -131,7 +131,7 @@ void ForceExit()
 {
     if (FUN_10901770())
         GetAllocator()->Virtual7(0);
-    FUN_10906cb0();
+    RunShutdownCallbacks();
     RelaunchForLevelChange();
     FUN_10918880(1);
     TerminateProcess(GetCurrentProcess(), -1);

@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Core/Core.h"
 #include "Game/Class_10905A90_Member.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10BAE080.h"
 #include "Game/Class_10BAE0C0.h"
 #include "Game/FCoords.h"
@@ -80,10 +80,10 @@ void Class_10BAE0C0::Free()
     }
 }
 
-// FUNCTION: 0x10BAEA20 ?FUN_10baea20@@YA?AVClass_109081E0@@M@Z
-Class_109081E0 FUN_10baea20(float Value)
+// FUNCTION: 0x10BAEA20 ?FUN_10baea20@@YA?AVcString@@M@Z
+cString FUN_10baea20(float Value)
 {
     char Buffer[0x20];
     sprintf(Buffer, DAT_10e8d924, Value);
-    return Class_109081E0(Buffer);
+    return cString(Buffer);
 }

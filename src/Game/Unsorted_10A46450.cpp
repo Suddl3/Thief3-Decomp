@@ -4,7 +4,7 @@
 #include "Core/Core.h"
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10A46450.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 class Class_10E50610
 {
@@ -18,7 +18,7 @@ public:
     ~Class_10A46520();
 
     Class_10E50610 Unknown00;
-    Class_109081E0 Unknown04;
+    cString Unknown04;
 };
 
 extern float DAT_10eafbdc;

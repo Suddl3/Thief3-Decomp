@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_10E979EC_H
 #define GAME_CLASS_10E979EC_H
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/cIntArray.h"
 
 class Class_10E979EC
@@ -13,7 +13,7 @@ public:
 
     cIntArray Unknown04;
     int Unknown10[3];
-    Class_109081E0 Unknown1C;
+    cString Unknown1C;
 };
 
 #endif // GAME_CLASS_10E979EC_H

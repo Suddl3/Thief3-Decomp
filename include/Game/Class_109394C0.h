@@ -9,7 +9,7 @@ public:
     int Unknown08;
     int Unknown0c;
     int Unknown10;
-    Class_109394C0* FUN_109394c0();
+    Class_109394C0* Reset();
 };
 
 #endif // GAME_CLASS_109394C0_H

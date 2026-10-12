@@ -10,7 +10,7 @@ class Struct_1091E240;
 class Class_1091E240
 {
 public:
-    Struct_1091E240 FUN_1091e240();
+    Struct_1091E240 GetMatrix();
 
     FVector Unknown00;
     char Unknown0C[4];

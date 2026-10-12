@@ -8,7 +8,7 @@
 #include "Game/Class_10B64430.h"
 #include "Game/Class_10B78780.h"
 #include "Game/Info_10B66060.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10B56C80.h"
 #include "Game/Class_10B66060.h"
 #include "Game/Class_10E82AF8.h"
@@ -159,7 +159,7 @@ class cT3InventoryWindow
 {
 public:
     void* FUN_10b61c90();
-    Class_109081E0 GetInventoryPaneFileName();
+    cString GetInventoryPaneFileName();
 
     char Unknown00[0x1ac];
     void* Field1AC;
@@ -311,10 +311,10 @@ void FUN_10b5aed0()
     FUN_10b78080();
 }
 
-// FUNCTION: 0x10B5B050 ?FUN_10b5b050@Class_10B5B050@@QAE?AVClass_109081E0@@XZ
-Class_109081E0 Class_10B5B050::FUN_10b5b050()
+// FUNCTION: 0x10B5B050 ?FUN_10b5b050@Class_10B5B050@@QAE?AVcString@@XZ
+cString Class_10B5B050::FUN_10b5b050()
 {
-    return Class_109081E0(DAT_10e82cf4);
+    return cString(DAT_10e82cf4);
 }
 
 // FUNCTION: 0x10B5B750 ?FUN_10b5b750@@YAXXZ
@@ -378,10 +378,10 @@ void FUN_10b61d20()
     ((Class_10B61D20*)DAT_10ff659c[0])->FUN_10b61be0();
 }
 
-// FUNCTION: 0x10B61EA0 ?GetInventoryPaneFileName@cT3InventoryWindow@@QAE?AVClass_109081E0@@XZ
-Class_109081E0 cT3InventoryWindow::GetInventoryPaneFileName()
+// FUNCTION: 0x10B61EA0 ?GetInventoryPaneFileName@cT3InventoryWindow@@QAE?AVcString@@XZ
+cString cT3InventoryWindow::GetInventoryPaneFileName()
 {
-    return Class_109081E0(DAT_10e84284);
+    return cString(DAT_10e84284);
 }
 
 // FUNCTION: 0x10B64260 ?FUN_10b64260@@YAXXZ

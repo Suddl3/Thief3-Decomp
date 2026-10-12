@@ -13,7 +13,7 @@ void* FUN_10be4c10();
 
 extern float DAT_10eafbdc;
 
-class Class_109081E0;
+class cString;
 
 class Object_10BE58C0;
 
@@ -125,7 +125,7 @@ public:
     virtual int FUN_10be4b30();
     virtual int FUN_10be4b50();
 
-    Class_109081E0 FUN_10be8840();
+    cString FUN_10be8840();
 
     char Pad04[0x68];
     bool Unknown6C;

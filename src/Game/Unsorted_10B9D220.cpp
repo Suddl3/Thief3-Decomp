@@ -9,11 +9,11 @@
 
 Class_10905A90_Member* GetAllocator();
 
-class Class_109081E0
+class cString
 {
 public:
-    Class_109081E0(const char* In);
-    ~Class_109081E0()
+    cString(const char* In);
+    ~cString()
     {
         if (Unknown00)
         {
@@ -42,7 +42,7 @@ void Class_10B9CAC0::NotifyAllyKilled(int A)
 {
     if (Unknown0C->FUN_10bb8c00())
     {
-        Class_109081E0 Name("+combatwitness:ally_killed");
+        cString Name("+combatwitness:ally_killed");
         (m_Count == 0 ? 0 : m_Stack[m_Count - 1])->Virtual35(Name, 1);
     }
 }

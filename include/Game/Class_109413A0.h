@@ -8,17 +8,17 @@ class IDirect3DVertexBuffer8;
 class Class_109413A0
 {
 public:
-    bool FUN_109413a0();
+    bool EnsureVertexBuffers();
 
     char Unknown00[0x4];
     char Unknown04;
     char Unknown05;
     char Unknown06;
     char Pad07[0x1];
-    IDirect3DVertexBuffer8* Unknown08[2];
-    int Unknown10;
+    IDirect3DVertexBuffer8* m_VertexBuffers[2];
+    int m_BufferSize;
     char Unknown14[0xC];
-    int Unknown20;
+    int m_VertexCount;
 };
 
 #endif // GAME_CLASS_109413A0_H

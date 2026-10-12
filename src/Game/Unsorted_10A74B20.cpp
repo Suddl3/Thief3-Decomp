@@ -7,7 +7,7 @@
 #include "Game/Class_10AF7F80.h"
 #include "Game/Class_10E6BBD0.h"
 #include "Game/Class_10905A90_Member.h"
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 class Class_10A73EF0_Object
 {
@@ -182,7 +182,7 @@ public:
     char Pad2D5[0x3];
 };
 
-void FUN_10a4b790(Class_109081E0* Text, FArray* Items);
+void FUN_10a4b790(cString* Text, FArray* Items);
 
 // FUNCTION: 0x10A74B20 ?FUN_10a74b20@@YG_NPAHH@Z
 bool __stdcall FUN_10a74b20(int* Id, int Handle)
@@ -209,7 +209,7 @@ void Class_10E6BBD0::FUN_10a74ec0(int A)
         FArray Tmp;
         ((Class_Field04*)A)->Virtual70(&Tmp);
         FArray Items = Tmp;
-        Class_109081E0 Text(((Class_10AF7F80*)&Name)->FUN_10af7f80());
+        cString Text(((Class_10AF7F80*)&Name)->FUN_10af7f80());
         FUN_10a4b790(&Text, &Items);
     }
 }

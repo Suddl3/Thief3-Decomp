@@ -19,12 +19,12 @@ public:
     char Unknown30[0x14];
 };
 
-// FUNCTION: 0x109415A0 ?FUN_109415a0@Class_109415A0@@QAEXXZ
-void Class_109415A0::FUN_109415a0()
+// FUNCTION: 0x109415A0 ?Reset@Class_109415A0@@QAEXXZ
+void Class_109415A0::Reset()
 {
-    for (int i = 0; i < Unknown04; i++)
+    for (int i = 0; i < m_Count; i++)
     {
-        Class_109416F0* Item = &Unknown0C[i];
+        Class_109416F0* Item = &m_Items[i];
         Item->Unknown04 = false;
         Item->Unknown05 = false;
         Item->Unknown20 = 0;

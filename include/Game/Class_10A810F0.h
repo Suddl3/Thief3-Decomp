@@ -3,12 +3,12 @@
 #ifndef GAME_CLASS_10A810F0_H
 #define GAME_CLASS_10A810F0_H
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 
 class Class_10A810F0
 {
 public:
-    Class_109081E0 Unknown00;
+    cString Unknown00;
 };
 
 #endif // GAME_CLASS_10A810F0_H

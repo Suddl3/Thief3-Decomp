@@ -9,14 +9,14 @@ struct Item_1094B600
     int Unknown04;
 };
 
-// FUNCTION: 0x1094AED0 ?FUN_1094aed0@Class_1094AED0@@QAE_NPAHH@Z
-bool Class_1094AED0::FUN_1094aed0(int* A, int B)
+// FUNCTION: 0x1094AED0 ?ContainsAny@Class_1094AED0@@QAE_NPAHH@Z
+bool Class_1094AED0::ContainsAny(int* A, int B)
 {
     if (B)
     {
-        for (int i = 0; i < Unknown12C; i++)
+        for (int i = 0; i < m_Count; i++)
         {
-            int Value = Unknown134[i];
+            int Value = m_Items[i];
             for (int j = 0; j < B; j++)
             {
                 if (Value == A[j])
@@ -27,10 +27,10 @@ bool Class_1094AED0::FUN_1094aed0(int* A, int B)
     return false;
 }
 
-// FUNCTION: 0x1094B600 ?FUN_1094b600@Class_1094B600@@QAEXHH@Z
-void Class_1094B600::FUN_1094b600(int A, int B)
+// FUNCTION: 0x1094B600 ?SwapItems@Class_1094B600@@QAEXHH@Z
+void Class_1094B600::SwapItems(int A, int B)
 {
-    Item_1094B600 Temp = Unknown08[A];
-    Unknown08[A] = Unknown08[B];
-    Unknown08[B] = Temp;
+    Item_1094B600 Temp = m_Items[A];
+    m_Items[A] = m_Items[B];
+    m_Items[B] = Temp;
 }

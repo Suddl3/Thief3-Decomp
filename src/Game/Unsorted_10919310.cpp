@@ -8,8 +8,8 @@ extern Class_10939570* DAT_10f323fc;
 
 extern Class_10E4A538* DAT_10f2c8e4;
 
-// FUNCTION: 0x10919310 ?FUN_10919310@@YAXPBMPAE@Z
-void FUN_10919310(const float* Normal, unsigned char* Color)
+// FUNCTION: 0x10919310 ?PackNormalColorSse@@YAXPBMPAE@Z
+void PackNormalColorSse(const float* Normal, unsigned char* Color)
 {
     __m128 V = _mm_loadu_ps(Normal);
     __declspec(align(16)) int Result[4];

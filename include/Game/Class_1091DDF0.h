@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_1091DDF0_H
 #define GAME_CLASS_1091DDF0_H
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_1091CC80.h"
 
 class Class_1091CD10;
@@ -14,9 +14,9 @@ class Class_1091DDF0
 public:
     ~Class_1091DDF0();
 
-    Class_109081E0 Unknown00;
+    cString Unknown00;
     void* Unknown04;
-    Class_109081E0 Unknown08;
+    cString Unknown08;
     Class_1091DDF0_Unknown0C* Unknown0C;
     char Pad10[0x14];
     Class_1091CD10* Unknown24;

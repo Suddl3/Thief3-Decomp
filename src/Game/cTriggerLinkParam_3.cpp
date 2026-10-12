@@ -1,7 +1,7 @@
 // Game/cTriggerLinkParam_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-#include "Game/Class_109081E0.h"
+#include "Game/cString.h"
 #include "Game/Class_10E6BF84.h"
 
 void WriteString(void* Stream, int* Value);
@@ -22,13 +22,13 @@ public:
     virtual void Save(int A, void* Stream);
     virtual void Virtual9();
 
-    Class_109081E0 FUN_10a801e0();
+    cString FUN_10a801e0();
 
     char Pad04;
     unsigned char Unknown05;
     unsigned char Unknown06;
     unsigned char Unknown07;
-    Class_109081E0 m_Flavor;
+    cString m_Flavor;
     int Unknown0C;
     int Unknown10;
 };

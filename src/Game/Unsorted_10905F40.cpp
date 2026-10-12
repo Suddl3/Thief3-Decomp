@@ -21,8 +21,8 @@ extern "C" __declspec(dllimport) unsigned long __stdcall GetLastError(void);
 
 void FUN_10905eb0(char* Name, int Length);
 
-// FUNCTION: 0x10905F40 ?FUN_10905f40@Class_10905F40@@QAE_NPBD@Z
-bool Class_10905F40::FUN_10905f40(const char* Name)
+// FUNCTION: 0x10905F40 ?Acquire@Class_10905F40@@QAE_NPBD@Z
+bool Class_10905F40::Acquire(const char* Name)
 {
     memset(SemaphoreName, 0, 0x10A);
     strcpy(SemaphoreName, "$$s$$");

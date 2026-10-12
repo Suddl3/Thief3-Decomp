@@ -27,20 +27,20 @@ public:
 class Class_1094CFD0
 {
 public:
-    void FUN_1094cfd0(int Item);
+    void AddUniqueItem(int Item);
 
     char Unknown00[0x12C];
-    cIntArray Unknown12C;
+    cIntArray m_Items;
 };
 
-// FUNCTION: 0x1094CFD0 ?FUN_1094cfd0@Class_1094CFD0@@QAEXH@Z
-void Class_1094CFD0::FUN_1094cfd0(int Item)
+// FUNCTION: 0x1094CFD0 ?AddUniqueItem@Class_1094CFD0@@QAEXH@Z
+void Class_1094CFD0::AddUniqueItem(int Item)
 {
-    Unknown12C.AddUnique(Item);
+    m_Items.AddUnique(Item);
 }
 
-// FUNCTION: 0x1094D6E0 ?FUN_1094d6e0@Class_1094D6E0@@QAEPAV1@XZ
-Class_1094D6E0* Class_1094D6E0::FUN_1094d6e0()
+// FUNCTION: 0x1094D6E0 ?Init@Class_1094D6E0@@QAEPAV1@XZ
+Class_1094D6E0* Class_1094D6E0::Init()
 {
     Unknown04 = 0;
     Unknown00 = 0;

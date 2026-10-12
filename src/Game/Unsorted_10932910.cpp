@@ -4,12 +4,12 @@
 #include "Game/Class_10932910.h"
 
 // Ion Storm's string (0x109081E0): a char pointer, null when default constructed.
-class Class_109081E0
+class cString
 {
 public:
-    Class_109081E0() : Unknown00(0) {}
-    ~Class_109081E0();
-    Class_109081E0& operator=(const Class_109081E0& Other);
+    cString() : Unknown00(0) {}
+    ~cString();
+    cString& operator=(const cString& Other);
 
     char* Unknown00;
 };
@@ -25,31 +25,31 @@ unsigned int HashBytes(const void* Data, int Length);
 class Class_10932910_Node
 {
 public:
-    Class_109081E0 Key;
+    cString Key;
     int Value;
     Class_10932910_Node* Next;
 };
 
-// FUNCTION: 0x10932910 ?FUN_10932910@Class_10932910@@QAEXH@Z
-void Class_10932910::FUN_10932910(int Size)
+// FUNCTION: 0x10932910 ?Rehash@Class_10932910@@QAEXH@Z
+void Class_10932910::Rehash(int Size)
 {
-    int OldSize = Unknown0C;
-    Class_10932910_Node** OldBuckets = Unknown14;
-    Unknown14 = new(0, 0, 0, 0, 0) Class_10932910_Node*[Size];
-    Unknown0C = Size;
-    Unknown08 = 0;
+    int OldSize = m_BucketCount;
+    Class_10932910_Node** OldBuckets = m_Buckets;
+    m_Buckets = new(0, 0, 0, 0, 0) Class_10932910_Node*[Size];
+    m_BucketCount = Size;
+    m_BucketBits = 0;
     while (Size >>= 1)
-        Unknown08++;
-    Unknown04 = 0;
-    Unknown00 = 0;
-    for (int i = 0; i < Unknown0C; i++)
-        Unknown14[i] = 0;
+        m_BucketBits++;
+    m_Count = 0;
+    m_Collisions = 0;
+    for (int i = 0; i < m_BucketCount; i++)
+        m_Buckets[i] = 0;
     for (int j = 0; j < OldSize; j++)
     {
         Class_10932910_Node* Node = OldBuckets[j];
         while (Node)
         {
-            FUN_10932830(Node->Key, Node->Value);
+            Insert(Node->Key, Node->Value);
             Class_10932910_Node* Next = Node->Next;
             delete Node;
             Node = Next;
