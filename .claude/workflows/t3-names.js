@@ -42,39 +42,54 @@ const REPORT = {
   },
   required: ['id', 'functions'],
 }
-const tally = { workers: 0, classes: 0, functions: 0, fields: 0, split: 0, failed: [] }
+const tally = { workers: 0, classes: 0, functions: 0, fields: 0, split: 0, failed: [], unreported: [] }
 const short = s => s.replace(/^Game\//, '').replace(/\.cpp$/, '')
 
 phase('Name')
 log(`${queue.length} ${KIND.toLowerCase()} tasks, ${LANES} at a time, ids ${PREFIX}-*, ${MODEL} at ${EFFORT} effort`)
 
+function work(task) {
+  return agent(
+    `Read tools/agent/namer.md and follow it exactly. ID=${task.id} ${KIND}=${task.items.join(',')}\n\n` +
+    `Work from the repository root. Write only build/scratch/names/${task.id}.json; do not edit any other file.`,
+    { label: task.n ? `${task.id} units ${task.from}-${task.to}`
+        : `${task.id} ${short(task.items[0])}${task.items.length > 1 ? ` +${task.items.length - 1}` : ''}`,
+      phase: 'Name', agentType: 'general-purpose', model: MODEL, effort: EFFORT, schema: REPORT })
+}
+
+// A task lost to an error goes back in halves, then one class or unit each.
+function requeue(task) {
+  if (task.n && task.to - task.from > 1) {
+    const mid = task.from + Math.ceil((task.to - task.from) / 2)
+    const piece = (id, from, to) => ({ id, n: task.n, from, to, items: [`@${A.queue}:${task.n}[${from}:${to}]`] })
+    queue.push(piece(`${task.id}a`, task.from, mid), piece(`${task.id}b`, mid, task.to))
+  } else if (!task.n && task.items.length > 1) {
+    const half = Math.ceil(task.items.length / 2)
+    queue.push({ id: `${task.id}a`, items: task.items.slice(0, half) })
+    queue.push({ id: `${task.id}b`, items: task.items.slice(half) })
+  } else {
+    tally.failed.push(`${task.id} ${task.items[0]}`)
+    log(`${task.id}: lost (${task.items[0]})`)
+    return
+  }
+  tally.split++
+  log(`${task.id}: lost; queued again in two halves`)
+}
+
 async function lane() {
   while (queue.length) {
     const task = queue.shift()
-    const r = await agent(
-      `Read tools/agent/namer.md and follow it exactly. ID=${task.id} ${KIND}=${task.items.join(',')}\n\n` +
-      `Work from the repository root. Write only build/scratch/names/${task.id}.json; do not edit any other file.`,
-      { label: task.n ? `${task.id} units ${task.from}-${task.to}`
-          : `${task.id} ${short(task.items[0])}${task.items.length > 1 ? ` +${task.items.length - 1}` : ''}`,
-        phase: 'Name', agentType: 'general-purpose', model: MODEL, effort: EFFORT, schema: REPORT })
+    let r = null
+    try {
+      r = await work(task)
+    } catch (e) {
+      // The worker ended without its report (its plan is usually written): the lane goes on.
+      tally.unreported.push(task.id)
+      log(`${task.id}: ended without a report (${String(e).slice(0, 80)})`)
+      continue
+    }
     if (!r) {
-      // Lost to an error: its classes or units go back in halves, then one each.
-      if (task.n && task.to - task.from > 1) {
-        const mid = task.from + Math.ceil((task.to - task.from) / 2)
-        const piece = (id, from, to) => ({ id, n: task.n, from, to, items: [`@${A.queue}:${task.n}[${from}:${to}]`] })
-        queue.push(piece(`${task.id}a`, task.from, mid), piece(`${task.id}b`, mid, task.to))
-        tally.split++
-        log(`${task.id}: lost; queued again in two halves`)
-      } else if (!task.n && task.items.length > 1) {
-        const half = Math.ceil(task.items.length / 2)
-        queue.push({ id: `${task.id}a`, items: task.items.slice(0, half) })
-        queue.push({ id: `${task.id}b`, items: task.items.slice(half) })
-        tally.split++
-        log(`${task.id}: lost; queued again in two halves`)
-      } else {
-        tally.failed.push(`${task.id} ${task.items[0]}`)
-        log(`${task.id}: lost (${task.items[0]})`)
-      }
+      requeue(task)
       continue
     }
     tally.workers++
