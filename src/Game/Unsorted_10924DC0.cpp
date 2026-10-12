@@ -1,9 +1,10 @@
 // Game/Unsorted_10924DC0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10BFBD70.h"
 #include "Game/Class_10936A40.h"
 #include "Game/Struct_10924210.h"
+#include "Game/Class_10924E80.h"
+#include "Game/Class_10925410.h"
 
 class IDirect3DBaseTexture8;
 
@@ -127,40 +128,6 @@ public:
     virtual long __stdcall SetPixelShader(unsigned long Handle);
     virtual int __stdcall Virtual89();
     virtual int __stdcall Virtual90(int Handle);
-};
-
-class Class_10925410
-{
-public:
-    int FUN_10925410(int Index);
-
-    char Unknown00[0x40];
-    unsigned char Unknown40;
-    char Pad41[0x3];
-    int Unknown44;
-    char Pad48[0x94];
-    int UnknownDC;
-    char UnknownE0[4];
-    Entry_10925410* UnknownE4;
-};
-
-class Class_10924E80 : public Class_10925410
-{
-public:
-    void FUN_10925db0(int Item);
-    void FUN_10924e80(int A);
-    void FUN_10925060();
-    void FUN_10925230();
-    void FUN_10926f20(int A, int B);
-    void FUN_10925290(int A, int B);
-    void FUN_10925cf0(void* Item);
-    void FUN_10925c60(void* A, int B);
-
-    char Pad01[0xbb];
-    char Pad1A3[0x1];
-    Class_10BFBD70 UnknownBC;
-    char PadC8[0x10];
-    Class_1092D990* Unknown0D8;
 };
 
 class Class_10936AC0 : public Class_10936A40

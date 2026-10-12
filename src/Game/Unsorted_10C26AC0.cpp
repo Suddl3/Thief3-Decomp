@@ -4,33 +4,13 @@
 #include "Game/Class_10BFBD70.h"
 #include "Game/Class_10C26A60.h"
 #include "Game/Class_10C26B60.h"
+#include "Game/Class_10E9AFA4.h"
 
 struct Struct_10C26A60;
 
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
-
-class Class_10E9AFA4
-{
-public:
-    Class_10E9AFA4(int A, int B, int C);
-
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void FUN_10c3cfa0(int* p1, int* p2, int* p3);
-
-    Class_10E9AFA4* FUN_10c3cf70(int A, int B, int C);
-
-    float Unknown04;
-    float Unknown08;
-    int Unknown0C;
-    int Unknown10;
-    int Unknown14;
-};
 
 void operator delete(void* Ptr);
 

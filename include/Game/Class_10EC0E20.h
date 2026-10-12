@@ -5,6 +5,8 @@
 
 #include "Game/Class_10B7AB80.h"
 
+class Class_10B7B820_Unknown04;
+
 class Class_10EC0E20 : public Class_10B7AB80
 {
 public:
@@ -18,15 +20,28 @@ public:
     void FUN_10b7b460(int A, int B, int C, int D);
     void FUN_10b7b610(int A, int B);
     bool FUN_10b7b8d0(int A);
+    void FUN_10b7abb0(float A);
+    void FUN_10b7b460(int A, float B, int C, float D);
 
-    char Pad01[0x7];
-    char Pad4F[0x1];
+    char Pad00[0x4];
+    Class_10B7B820_Unknown04* Unknown04;
     int Unknown08;
     int Unknown0C;
     int Unknown10;
     int Unknown14;
     bool Unknown18;
     char Pad19[0x3];
+    char Pad1C[0xC];
+    int Unknown28;
+    char Pad2C[0x4];
+    int* Unknown30;
+    int Unknown34;
+    char Pad38[0x4];
+    int* Unknown3C;
+    char Pad40[0x8];
+    char Pad01[0x7];
+    char Pad4F[0x1];
+    char Pad50[0x14];
 };
 
 #endif // GAME_CLASS_10EC0E20_H

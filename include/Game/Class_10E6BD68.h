@@ -13,7 +13,6 @@ public:
     virtual void Virtual2();
     virtual void FUN_10a79d30(int Item);
     virtual void FUN_10a79d70(int Item);
-    virtual void Virtual5();
     virtual void FUN_10a795c0();
     virtual void FUN_10a7a340(void* A, int B);
 
@@ -28,9 +27,7 @@ public:
     int Unknown10;
     int Unknown14;
     int Unknown18;
-    int Unknown1C;
-    int Unknown20;
-    int Unknown24;
+    Class_10BFBD70 Unknown1C;
     Class_10BFBD70 Unknown28;
 };
 

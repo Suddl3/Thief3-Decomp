@@ -9,6 +9,9 @@ public:
     virtual void Virtual0();
     virtual void Virtual1();
     virtual void FUN_10b26910(int p1);
+    virtual void Virtual3();
+    virtual void Virtual4();
+    virtual void Virtual5(float A);
 
     Class_10E7AAAC();
 

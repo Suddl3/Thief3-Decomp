@@ -6,9 +6,11 @@
 class Class_10B27FD0
 {
 public:
+    void FUN_10b27fd0(unsigned char param);
+    void ProcessState(int Delta);
+
     char Unknown00[0x178];
     unsigned char Field178;
-    void FUN_10b27fd0(unsigned char param);
 };
 
 #endif // GAME_CLASS_10B27FD0_H

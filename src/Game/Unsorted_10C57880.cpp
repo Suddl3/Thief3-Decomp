@@ -4,6 +4,7 @@
 #include "Game/Class_1091CA00.h"
 #include "Game/Class_1091DEE0.h"
 #include "Game/Class_109081E0.h"
+#include "Game/Class_10C59EE0.h"
 
 extern Class_1091DEE0* DAT_10f2c928;
 
@@ -15,15 +16,6 @@ public:
     bool Unknown0A;
     char Pad0B[1];
     int Unknown0C;
-};
-
-class Class_10C59EE0
-{
-public:
-    void FUN_10c59ee0(bool Flag);
-    void FUN_10c58bb0(bool A, bool B);
-
-    Class_10C59EE0_Unknown00* Unknown00;
 };
 
 // FUNCTION: 0x10C58BB0 ?FUN_10c58bb0@Class_10C59EE0@@QAEX_N0@Z

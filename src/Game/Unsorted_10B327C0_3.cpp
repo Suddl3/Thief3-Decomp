@@ -7,20 +7,7 @@
 #include "Game/Class_10B39580.h"
 #include "Game/Struct_10AA3520.h"
 #include "Game/Class_10B32B50.h"
-
-class Class_10B21340
-{
-public:
-    char Unknown00[0x400];
-    int Unknown400;
-    char Unknown404[0x3C];
-    int Unknown440;
-    int Unknown444;
-    char Unknown448[0x1C];
-    int Unknown464;
-
-    void FUN_10b21340();
-};
+#include "Game/Class_10B21340.h"
 
 class Object_10B4CA50_A
 {

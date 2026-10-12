@@ -7,8 +7,10 @@
 
 struct Struct_10C3D0A0
 {
+public:
     char Unknown00[0x2C];
     Struct_10C05A50 Unknown2C;
+    char Pad34[0x4];
 };
 
 #endif // GAME_STRUCT_10C3D0A0_H

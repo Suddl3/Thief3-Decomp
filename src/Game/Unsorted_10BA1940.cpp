@@ -3,34 +3,7 @@
 #include <new>
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10BA1940.h"
-
-Class_10905A90_Member* GetAllocator();
-
-// Game/Class_10C4F450.h copied whole, with the constructor and the destructor the
-// element's code inlines.
-class Class_10C4F450
-{
-public:
-    Class_10C4F450() : Unknown00(0), Unknown04(0), Unknown08(0) {}
-
-    ~Class_10C4F450()
-    {
-        FUN_10c4eea0(0);
-        if (Unknown04)
-        {
-            GetAllocator()->Virtual5(Unknown08);
-            Unknown08 = 0;
-            Unknown04 = 0;
-        }
-    }
-
-    void FUN_10c4eea0(int Count);
-    void FUN_10c4f450();
-
-    int Unknown00;
-    int Unknown04;
-    void* Unknown08;
-};
+#include "Game/Class_10C4F450.h"
 
 // FUNCTION: 0x10BA1940 ?FUN_10ba1940@Class_10BA1940@@QAEXH@Z
 void Class_10BA1940::FUN_10ba1940(int NewCount)

@@ -1,21 +1,13 @@
 // Game/Class_10E6BC44_4.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10BFBD70.h"
+#include "Game/Class_10E6BC44.h"
 
 class Class_Field04;
 
 class Class_10A76DA0_Arg2;
 
 class Class_10A76CD0_Arg3;
-
-class Class_10E6BC44
-{
-public:
-    void FUN_10a76b20(Class_Field04* Param1, Class_10A76DA0_Arg2* Param2, Class_10BFBD70* Found);
-    void FUN_10a76a60(Class_Field04* Param1, Class_10BFBD70* Found);
-    void FUN_10a76cd0(Class_Field04* Param1, Class_10A76DA0_Arg2* Param2, Class_10A76CD0_Arg3* Param3);
-};
 
 void FUN_10a49da0(Class_10BFBD70* Result, void* Source, float Scale, int A, int B, int C);
 

@@ -5,6 +5,7 @@
 
 #include "Game/Class_10E4A538.h"
 
+class Class_10935F00_Arg;
 class Class_109526D0;
 struct Struct_10934FE0;
 
@@ -18,6 +19,8 @@ public:
     virtual void Virtual4();
     virtual bool FUN_10936240(Class_109526D0* Item, int A);
     virtual bool FUN_10934fe0(Struct_10934FE0* P, int B);
+    virtual void Virtual7();
+    virtual bool FUN_10935f00(Class_10935F00_Arg* A, int B);
 
     ~Class_10E49F90();
 

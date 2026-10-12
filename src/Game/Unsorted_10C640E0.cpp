@@ -4,46 +4,8 @@
 #include "Game/Class_10C562C0.h"
 #include "Game/Class_10C647F0.h"
 #include "Game/Struct_10C647F0_Vec.h"
-
-class Object_10AB5B20
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual Struct_10C647F0_Vec* Virtual3();
-};
-
-class Class_10AB5B20
-{
-public:
-    Class_10AB5B20(const Class_10AB5B20& Other)
-    {
-        Unknown00 = Other.Unknown00;
-        if (Unknown00)
-            Unknown00->Virtual1();
-    }
-    ~Class_10AB5B20()
-    {
-        if (Unknown00)
-            Unknown00->Virtual2();
-    }
-    Class_10AB5B20()
-    {
-        Unknown00 = 0;
-    }
-    Class_10AB5B20(Object_10AB5B20* P)
-    {
-        Unknown00 = P;
-        if (Unknown00)
-            Unknown00->Virtual1();
-    }
-
-    Class_10AB5B20 FUN_10ab5b20();
-    bool FUN_10ab5b00(const Class_10AB5B20& Other);
-
-    Object_10AB5B20* Unknown00;
-};
+#include "Game/Class_10AB5B20.h"
+#include "Game/Object_10AB5B20.h"
 
 Class_10C562C0* FUN_10c562c0();
 

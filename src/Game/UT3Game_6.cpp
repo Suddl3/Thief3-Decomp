@@ -1,18 +1,12 @@
 // Game/UT3Game_6.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Engine/EngineClasses.h"
+#include "Game/Class_10B152C0.h"
 
 class Class_10B15450_Item
 {
 public:
     virtual void Virtual0();
-};
-
-class Class_10B152C0
-{
-public:
-    void FUN_10b15300(int Value);
 };
 
 class UT3Game

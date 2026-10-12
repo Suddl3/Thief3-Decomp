@@ -3,10 +3,15 @@
 #ifndef GAME_CLASS_10B31BE0_H
 #define GAME_CLASS_10B31BE0_H
 
+class Class_10B21820;
+
 class Class_10B31BE0
 {
 public:
     void FUN_10b31be0(int A);
+    void FUN_10b31b70(Class_10B21820* A, int B);
+
+    char Pad00[0x1];
 };
 
 #endif // GAME_CLASS_10B31BE0_H

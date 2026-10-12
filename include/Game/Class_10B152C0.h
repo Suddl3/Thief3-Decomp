@@ -11,8 +11,11 @@ class Class_10B152C0
 {
 public:
     void FUN_10b152c0(int Mask, Class_10E7A9C0* Obj);
+    void FUN_10b15300(int Value);
 
-    char Unknown00[0x3C];
+    char Unknown00[0x34];
+    Class_10E7A9C0* Unknown34;
+    char Unknown38[0x4];
     Class_10BFBD70 Unknown3C[32];
 };
 

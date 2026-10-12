@@ -3,15 +3,7 @@
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_1090A780.h"
 #include "Game/Class_10B36120.h"
-
-class Class_10AB3800
-{
-public:
-    Class_1090A780 FUN_10ab3800();
-    void* FUN_10ab37c0();
-
-    char Unknown00[0xC];
-};
+#include "Game/Class_10AB3800.h"
 
 class Class_10AAB200_Param
 {

@@ -10,6 +10,11 @@ class Class_10C30DD0_Node;
 class Class_10C30DD0
 {
 public:
+    Class_10C30DD0() : Unknown00(0), Unknown04(0), Unknown0C(0), Unknown10(false), Unknown14(0)
+    {
+        FUN_10c30f60(0x40);
+    }
+
     unsigned int FUN_10c30dd0(const int& Key, const int& Value);
     void FUN_10c30f60(int Size);
 

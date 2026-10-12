@@ -3,14 +3,26 @@
 #ifndef GAME_CLASS_10BFF600_H
 #define GAME_CLASS_10BFF600_H
 
+#include "Game/Struct_10C05A80.h"
+
+class Class_10BFF600_Unknown18;
+
 class Class_10BFF600
 {
 public:
     int FUN_10bff600(int A, const float* B);
     bool FUN_10bff6d0(int A, const float* B);
     void* FUN_10bff6f0(int A, const float* B, char C);
+    char FUN_10bff820(int A, const float* B, bool C);
 
     char Pad00[0x1];
+    char Pad01[0xf];
+    int Unknown10;
+    char Pad14[0x4];
+    Class_10BFF600_Unknown18** Unknown18;
+    char Pad1C[0xc];
+    Struct_10C05A80 Unknown28;
+    int Unknown34;
 };
 
 #endif // GAME_CLASS_10BFF600_H

@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Core/Core.h"
 #include "Game/Struct_10B82770_Param.h"
+#include "Game/Class_10B83DC0.h"
 
 struct __declspec(align(16)) Struct_10B7C800
 {
@@ -13,20 +14,6 @@ struct __declspec(align(16)) Struct_10B7C800
 Struct_10B7C800 FUN_10b7c800(const FVector& V);
 
 class Class_10943600;
-
-class Class_10B83DC0
-{
-public:
-    int FUN_10b83dc0(Class_10943600* Out);
-    void FUN_10b82770(Struct_10B82770_Param* P);
-
-    char Pad00[0xA0];
-    FVector UnknownA0;
-    char PadAC[0xC];
-    float UnknownB8;
-    char PadBC[0x4];
-    int UnknownC0;
-};
 
 class Allocator_10FFA700
 {

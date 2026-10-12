@@ -1,8 +1,8 @@
 // Game/Unsorted_10BD38D0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
 #include "Game/FCoords.h"
+#include "Game/Class_10BD3830.h"
 
 class FVector;
 
@@ -18,17 +18,6 @@ class Class_10B056C0
 {
 public:
     void FUN_10b056c0(FRotator& Rot);
-};
-
-class Class_10BD3830
-{
-public:
-    int FUN_10bd2340(int A, const FVector& B, const FVector& C, int D, int E);
-    int FUN_10bd3830(int A, Object_10BD3830* Obj, int C, int D);
-    void FUN_10bd38d0(int A, const FVector& B, Class_10B056C0* Owner, int D, int E, FLOAT F, FLOAT G);
-
-    char Unknown00[4];
-    Struct_10BD3830_Owner* Unknown04;
 };
 
 // FUNCTION: 0x10BD38D0 ?FUN_10bd38d0@Class_10BD3830@@QAEXHABVFVector@@PAVClass_10B056C0@@HHMM@Z

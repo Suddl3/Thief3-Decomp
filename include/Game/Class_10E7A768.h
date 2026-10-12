@@ -10,10 +10,18 @@ class Class_10E7A768
 public:
     virtual ~Class_10E7A768();
 
+    Class_10E7A768(int A, int B);
+
     int Unknown04;
     Object_10B22790* Unknown08[34];
     int Unknown90;
     int Unknown94;
+    int Unknown98;
+    int Unknown9C;
+    int UnknownA0;
+    bool UnknownA4;
+    char PadA5[0x3];
+    int UnknownA8;
 };
 
 #endif // GAME_CLASS_10E7A768_H

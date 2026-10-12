@@ -3,17 +3,36 @@
 #ifndef GAME_CLASS_10C38E40_H
 #define GAME_CLASS_10C38E40_H
 
+#include "Game/Class_10943600.h"
+#include "Game/Item_10943600.h"
+
+class Class_10C20BC0;
 class Class_10C38EB0_Member;
+class Class_10C80360;
 
 class Class_10C38E40
 {
 public:
     void FUN_10c38e40(int A);
+    void FUN_10c39c90();
 
-    char Unknown00[0x48];
+    char Unknown00[0x3C];
+    Item_10943600 Unknown3C;
     Class_10C38EB0_Member* Unknown48;
-    char Unknown4C[0xBA];
+    char Unknown4C[0x3C];
+    int Unknown88;
+    char Unknown8C[0x4];
+    Class_10C80360** Unknown90;
+    int Unknown94;
+    char Unknown98[0x4];
+    Item_10943600* Unknown9C;
+    Class_10943600 Unknown0A0;
+    int Unknown0AC;
+    int Unknown0B0;
+    Class_10C20BC0* Unknown0B4;
+    char Unknown0B8[0x4E];
     bool Unknown106;
+    char Pad107[0x1];
 };
 
 #endif // GAME_CLASS_10C38E40_H

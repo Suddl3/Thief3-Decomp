@@ -3,7 +3,8 @@
 #ifndef GAME_CLASS_10937790_H
 #define GAME_CLASS_10937790_H
 
-class Class_1091E3F0;
+struct Class_1091E3F0;
+struct Struct_10938DA0;
 
 class Class_10937790
 {
@@ -11,6 +12,7 @@ public:
     void FUN_10937790();
     void FUN_10937430(void* A, void* B, void* C);
     void FUN_10938ee0(Class_1091E3F0* Obj);
+    void FUN_10938da0(void* A, Struct_10938DA0* B, void* C);
 
     char Unknown00[0x6FC];
     int Unknown6FC;

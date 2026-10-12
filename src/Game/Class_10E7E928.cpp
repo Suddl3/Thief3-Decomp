@@ -7,23 +7,11 @@
 #include "Game/Struct_10AA3520.h"
 #include "Game/Class_10AA82D0.h"
 #include "Game/Class_10B32160.h"
+#include "Game/Class_10B21350.h"
 
 class Class_10B39870;
 
 class Class_1098E330;
-
-// Copied whole from include/Game/Class_10B21350.h with the padding at +0x440 named.
-class Class_10B21350
-{
-public:
-    void FUN_10b21350();
-
-    char Unknown00[0x440];
-    int Unknown440;
-    int Unknown444;
-    char Unknown448[0x1C];
-    int Unknown464;
-};
 
 class Object_10B4CA50_A
 {

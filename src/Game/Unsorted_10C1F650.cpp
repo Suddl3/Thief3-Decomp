@@ -7,22 +7,11 @@
 #include "Game/Class_10978090.h"
 #include "Game/Class_Field04.h"
 #include "Game/Class_10C1F650.h"
+#include "Game/Class_10AF4BB0.h"
 
 extern void* DAT_10e991d4[];
 
 extern Class_10FF667C* DAT_10ff667c;
-
-class Class_10AF4BB0
-{
-public:
-    Class_10AF4BB0* FUN_10af4bb0(int A, int B, int C, int D);
-    void FUN_10af3b50(int A);
-    void FUN_10af3bd0(int A, int B, int C);
-
-    void* Unknown00;
-    int Unknown04;
-    int Unknown08;
-};
 
 class Class_1096A980
 {

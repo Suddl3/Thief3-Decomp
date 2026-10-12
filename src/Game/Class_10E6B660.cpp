@@ -1,10 +1,10 @@
 // Game/Class_10E6B660.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Engine/EngineClasses.h"
 #include "Game/Class_10AF7F80.h"
 #include "Game/Class_10BA9FD0.h"
 #include "Game/Class_10BB7600.h"
+#include "Game/Class_10E6B660.h"
 
 class Class_10BABED0;
 
@@ -44,16 +44,6 @@ public:
     char Unknown30[0x10];
     int Unknown40;
     int Unknown44;
-};
-
-// Copied from include/Game/Class_10E6B660.h with the method added.
-class Class_10E6B660
-{
-public:
-    virtual void FUN_10a6ad50(int Type, int A, int B, int C);
-
-    void FUN_10a6ac80(int A, int B, int C);
-    bool FUN_10a6aa30(int A, void* B);
 };
 
 // FUNCTION: 0x10A6AC80 ?FUN_10a6ac80@Class_10E6B660@@QAEXHHH@Z

@@ -3,6 +3,8 @@
 #ifndef GAME_CLASS_10BB8A30_H
 #define GAME_CLASS_10BB8A30_H
 
+#include "Game/Class_10BFD210.h"
+
 class Class_10BC9D40;
 class Class_10C7D570;
 
@@ -13,6 +15,9 @@ public:
 
     char Unknown00[8];
     Class_10C7D570* Unknown08;
+    char Unknown0C[0x24];
+    Class_10BFD210 Unknown30;
+    char Pad31[0x3];
 };
 
 #endif // GAME_CLASS_10BB8A30_H

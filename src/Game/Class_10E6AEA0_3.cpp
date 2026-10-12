@@ -1,23 +1,8 @@
 // Game/Class_10E6AEA0_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Window.h"
 #include "Game/Class_10AF7F80.h"
-
-class Config
-{
-public:
-    Config();
-    ~Config();
-
-    static Config* Instance();
-    bool FUN_10910a20(const char* Section, const char* Key, int* Value, int D);
-    bool GetBool(const char* Section, const char* Key, bool* Value, const char* File);
-    bool GetFloat(const char* Section, const char* Key, float* Value, const char* File);
-    bool GetString(const char* Section, const char* Key, char** Value, const char* File);
-
-    char Pad00[0x1];
-};
+#include "Game/Config.h"
 
 class Class_10E6AEA0 : public Window
 {

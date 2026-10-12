@@ -3,6 +3,8 @@
 #ifndef GAME_CLASS_10E6F414_H
 #define GAME_CLASS_10E6F414_H
 
+class AActor;
+class Class_1096D780;
 class Class_10E6F414_Member;
 
 class Class_10E6F414
@@ -11,6 +13,18 @@ public:
     virtual void Virtual0();
     virtual Class_10E6F414_Member* Virtual1(int A);
     virtual int FUN_10ac0560(int A, int B, int C, int D, int E, int F, int G, int H);
+    virtual void Virtual3();
+    virtual void Virtual4();
+    virtual void Virtual5();
+    virtual void Virtual6();
+    virtual void Virtual7();
+    virtual void Virtual8();
+    virtual void Virtual9();
+    virtual void Virtual10();
+    virtual void Virtual11();
+    virtual void Virtual12();
+    virtual void Virtual13();
+    virtual void FUN_10ac0830(Class_1096D780* A, AActor* B);
 };
 
 #endif // GAME_CLASS_10E6F414_H

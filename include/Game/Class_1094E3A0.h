@@ -3,6 +3,7 @@
 #ifndef GAME_CLASS_1094E3A0_H
 #define GAME_CLASS_1094E3A0_H
 
+class Class_1094E3E0_Unknown0E8;
 struct Elem_1094E3A0;
 
 class Class_1094E3A0
@@ -10,8 +11,12 @@ class Class_1094E3A0
 public:
     Elem_1094E3A0* FUN_1094e3a0();
     void FUN_1094e3c0(int Index, float Value);
+    bool FUN_1094e3e0(int Index, int Value);
 
-    char Unknown00[0x108];
+    char Unknown00[0xE8];
+    Class_1094E3E0_Unknown0E8* Unknown0E8;
+    Class_1094E3E0_Unknown0E8* Unknown0EC;
+    char Unknown0F0[0x18];
     Elem_1094E3A0* Unknown108;
     char Unknown10C[4];
     int Unknown110;

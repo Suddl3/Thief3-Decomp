@@ -9,6 +9,8 @@ class Class_10B15CC0 : public WindowManager
 {
 public:
     bool FUN_10b15cc0();
+
+    char Pad90[0x264];
 };
 
 #endif // GAME_CLASS_10B15CC0_H

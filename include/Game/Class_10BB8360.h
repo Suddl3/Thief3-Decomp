@@ -14,6 +14,7 @@ public:
     void FUN_10bb8360(int A, float B, int C);
     void FUN_10bb83a0(int A, float B, int C);
     int FUN_10bbac00(int Type);
+    int FUN_10bb85d0();
 
     char Pad01[0x7];
     char Pad28F[0x1];

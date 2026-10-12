@@ -12,10 +12,13 @@ class Class_10E99350
 public:
     virtual void FUN_10c27460(Class_10C27460_Param* p1);
 
+    Class_10E99350(int Value);
+
     void FUN_10c274e0();
 
     int Unknown04;
     Class_10BFBD70 Unknown08;
+    int Unknown14;
 };
 
 #endif // GAME_CLASS_10E99350_H

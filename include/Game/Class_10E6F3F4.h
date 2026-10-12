@@ -9,9 +9,11 @@
 class Class_10E6F3F4 : public Class_10E5BBE0
 {
 public:
+    virtual ~Class_10E6F3F4();
+
     Class_10E6F3F4();
 
-    virtual ~Class_10E6F3F4();
+    void FUN_10abaca0();
 
     int UnknownD8;
     int UnknownDC;

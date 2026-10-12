@@ -9,6 +9,7 @@ class Class_10B9BDB0
 {
 public:
     void FUN_10b9bdb0();
+    void FUN_10b9bf60();
 
     char Unknown00[0x118];
     Struct_10B9BDB0_Unknown118* Unknown118;

@@ -1,8 +1,8 @@
 // Game/WindowManager_11.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_109081E0.h"
 #include "Game/Class_109E6D60.h"
+#include "Game/Class_10B27FD0.h"
 
 extern const char DAT_10e79040[];
 
@@ -52,16 +52,6 @@ public:
     virtual void Virtual37();
     virtual void Virtual38();
     virtual int Virtual39();
-};
-
-// The header's Class_10B27FD0, copied whole with the one member this function calls on it added.
-class Class_10B27FD0
-{
-public:
-    char Unknown00[0x178];
-    unsigned char Field178;
-    void FUN_10b27fd0(unsigned char param);
-    void ProcessState(int Delta);
 };
 
 // The header's WindowManager, copied whole with FUN_10b15960 added; Virtual4 takes an int (the base's slot 4).

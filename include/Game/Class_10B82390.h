@@ -9,6 +9,8 @@ class Class_10B82390 : public Class_10C08940
 {
 public:
     int FUN_10b82390(int A, void* B);
+
+    char Pad38[0xb4];
 };
 
 #endif // GAME_CLASS_10B82390_H

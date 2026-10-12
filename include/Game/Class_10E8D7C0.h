@@ -12,6 +12,7 @@ public:
 
     int Unknown04;
     int Unknown08;
+    char Pad0C[0x8];
 };
 
 #endif // GAME_CLASS_10E8D7C0_H

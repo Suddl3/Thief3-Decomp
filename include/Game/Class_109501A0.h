@@ -3,11 +3,14 @@
 #ifndef GAME_CLASS_109501A0_H
 #define GAME_CLASS_109501A0_H
 
+class Class_109081E0;
 struct Struct_109501A0;
 
 class Class_109501A0
 {
 public:
+    Class_109501A0(const Class_109081E0& Name, int Flag, float Scale, unsigned char Byte);
+
     void FUN_109501a0();
 
     Struct_109501A0* Unknown00;

@@ -1,7 +1,7 @@
 // Game/Class_10E98E28_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10C7D570.h"
+#include "Game/Class_10C1B840.h"
 
 typedef float FLOAT;
 
@@ -15,18 +15,6 @@ public:
 };
 
 extern void* DAT_10e98e28[];
-
-class Class_10C1B840
-{
-public:
-    Class_10C1B840(int A, int B, int C, int D, int E, float F);
-    ~Class_10C1B840();
-
-    void** Unknown00;
-    int Unknown04[4];
-    float Unknown14;
-    int Unknown18[12];
-};
 
 class Class_10E98E28 : public Class_10C1B840
 {

@@ -7,9 +7,12 @@ class Class_10C1B840
 {
 public:
     Class_10C1B840(int A, int B, int C, int D, int E, float F);
+    ~Class_10C1B840();
 
     void** Unknown00;
-    int Unknown04[17];
+    int Unknown04[4];
+    float Unknown14;
+    int Unknown18[12];
 };
 
 #endif // GAME_CLASS_10C1B840_H

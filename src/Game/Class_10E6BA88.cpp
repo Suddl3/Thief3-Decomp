@@ -3,30 +3,7 @@
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10A70DF0_Obj.h"
 #include "Game/Struct_10A70DF0.h"
-
-Class_10905A90_Member* GetAllocator();
-
-class Class_10A70B80
-{
-public:
-    void FUN_10dd4d40(int Count);
-    void FUN_10a70b80();
-
-    ~Class_10A70B80()
-    {
-        FUN_10dd4d40(0);
-        if (Unknown04)
-        {
-            GetAllocator()->Virtual5(Unknown08);
-            Unknown08 = 0;
-            Unknown04 = 0;
-        }
-    }
-
-    int Unknown00;
-    int Unknown04;
-    Struct_10A70DF0* Unknown08;
-};
+#include "Game/Class_10A70B80.h"
 
 class Class_10E6BA88
 {

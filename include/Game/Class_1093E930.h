@@ -10,6 +10,7 @@ class Class_1093E930
 public:
     void FUN_1093e550();
     Class_1093E930* FUN_1093e930();
+    bool FUN_1093ec90();
 
     Class_1093E930_Member* Unknown00;
     Class_1093E930_Member* Unknown04;

@@ -21,6 +21,8 @@
 #include "Game/Class_10AA82D0.h"
 #include "Game/Class_10C399C0.h"
 #include "Game/Class_10C39E90.h"
+#include "Game/Class_10C38E40.h"
+#include "Game/Class_10C39220.h"
 
 class Class_10FF667C
 {
@@ -36,30 +38,6 @@ class Class_10C39C90_Result
 public:
     char Unknown00[0x2C];
     Item_10943600 Unknown2C;
-};
-
-class Class_10C38E40
-{
-public:
-    void FUN_10c38e40(int A);
-    void FUN_10c39c90();
-
-    char Unknown00[0x3C];
-    Item_10943600 Unknown3C;
-    Class_10C38EB0_Member* Unknown48;
-    char Unknown4C[0x3C];
-    int Unknown88;
-    char Unknown8C[0x4];
-    Class_10C80360** Unknown90;
-    int Unknown94;
-    char Unknown98[0x4];
-    Item_10943600* Unknown9C;
-    Class_10943600 Unknown0A0;
-    int Unknown0AC;
-    int Unknown0B0;
-    Class_10C20BC0* Unknown0B4;
-    char Unknown0B8[0x4E];
-    bool Unknown106;
 };
 
 extern float DAT_10e49684;
@@ -163,34 +141,6 @@ void FUN_10c37cb0(void* A, Struct_10C05A80* B, int C, int D, int E, bool F);
 bool FUN_10c37d30(void* A, int B, int C, float D, float E, int F, int G, Struct_10C37D30 H);
 
 float FUN_10c05a80(const Struct_10C05A80* A, const Struct_10C05A80* B);
-
-class Class_10C39220
-{
-public:
-    virtual ~Class_10C39220();
-
-    bool FUN_10c39220(int A);
-    int FUN_10c3c2c0(int A);
-    bool FUN_10c38810();
-    void FUN_10c39d90();
-
-    char Pad04[0x24];
-    Struct_10C39220 Unknown28;
-    char Unknown34[0x14];
-    Class_10C39D90_Unknown48* Unknown48;
-    char Unknown4C[0x1C];
-    bool Unknown68;
-    char Unknown69[0x17];
-    int Unknown80;
-    int Unknown84;
-    char Unknown88[0x18];
-    int UnknownA0;
-    char UnknownA4[4];
-    Struct_10C39220* UnknownA8;
-    int UnknownAC;
-    char UnknownB0[0x4C];
-    int UnknownFC;
-};
 
 class AAIPawn;
 

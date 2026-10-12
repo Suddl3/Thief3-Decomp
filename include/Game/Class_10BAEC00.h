@@ -8,6 +8,7 @@ class Class_10BAEC00
 public:
     void FUN_10bae100(int Count);
     void FUN_10baec00();
+    void FUN_10bfc320(int A, int B);
 
     int Unknown00;
     int Unknown04;

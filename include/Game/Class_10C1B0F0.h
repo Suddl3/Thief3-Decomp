@@ -6,9 +6,17 @@
 class Class_10C1B0F0
 {
 public:
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual void Virtual2();
+    virtual void Virtual3();
+    virtual void Virtual4();
+    virtual void Virtual5();
+    virtual float Virtual6(int A);
+
     void FUN_10c1b0f0(float Value);
 
-    char Unknown00[0x2C];
+    char Unknown04[0x28];
     float Unknown2C;
     char Unknown30[4];
     float Unknown34;

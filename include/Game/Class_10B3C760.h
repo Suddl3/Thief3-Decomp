@@ -12,6 +12,8 @@ class Class_10B3C760
 public:
     bool FUN_10b3c430(Struct_10B3C760_Param* A, const FVector& V, bool C);
     bool FUN_10b3c760(Struct_10B3C760_Param* A, int Index, bool C);
+    bool FUN_10b3c860(Struct_10B3C760_Param* A, const FVector& V, bool C);
+    int FUN_10b4fac0(Struct_10B3C760_Param* A, bool B, float C);
 
     char Unknown00[0xC];
     Class_10B39890* Unknown0C;

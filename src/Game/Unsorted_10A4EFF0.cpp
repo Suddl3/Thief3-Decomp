@@ -2,23 +2,9 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10A243F0.h"
 #include "Game/Class_10905A90_Member.h"
+#include "Game/Class_10A4EFB0.h"
 
 Class_10905A90_Member* GetAllocator();
-
-class Class_10A4EFB0
-{
-public:
-    void FUN_10a4e9d0(int Count);
-    void FUN_10a4efb0();
-    void FUN_10a4f120();
-
-    int Unknown00;
-    int Unknown04;
-    void* Unknown08;
-    Class_10A243F0 Unknown0C[0x42];
-    int Unknown324[0xff];
-    Class_10A243F0 Unknown720[0xe];
-};
 
 // FUNCTION: 0x10A4F120 ?FUN_10a4f120@Class_10A4EFB0@@QAEXXZ
 void Class_10A4EFB0::FUN_10a4f120()

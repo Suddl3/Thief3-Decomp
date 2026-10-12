@@ -9,6 +9,7 @@ class Class_1095CAA0
 {
 public:
     bool FUN_1095caa0(Struct_1095CAA0* Other);
+    bool FUN_1095d210(int* Key, void* Set);
 
     char Unknown00[0x20];
     int Unknown20;

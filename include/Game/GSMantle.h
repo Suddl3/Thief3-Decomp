@@ -21,6 +21,8 @@ public:
     void ForceArms(AGarrett* Garrett);
     void ReleaseItem(Struct_10B53A00* P);
     GSMantle* FUN_10b53a30();
+    void FUN_10b3b220(Struct_10B53A00* P);
+    bool TryGrab(Struct_10B53A00* P);
 
     char Unknown10[0x10];
     int Unknown20;

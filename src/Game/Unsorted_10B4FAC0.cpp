@@ -3,6 +3,7 @@
 #include <math.h>
 #include "Core/Core.h"
 #include "Game/Struct_10B3C760_Param.h"
+#include "Game/Class_10B3C760.h"
 
 extern float DAT_10eafbdc;
 
@@ -11,17 +12,6 @@ bool FUN_10b1e4c0(Struct_10B3C760_Param* A);
 int FUN_10b1dad0(int Value);
 
 class Class_10B39890;
-
-class Class_10B3C760
-{
-public:
-    bool FUN_10b3c430(Struct_10B3C760_Param* A, const FVector& V, bool C);
-    bool FUN_10b3c760(Struct_10B3C760_Param* A, int Index, bool C);
-    int FUN_10b4fac0(Struct_10B3C760_Param* A, bool B, float C);
-
-    char Unknown00[0xC];
-    Class_10B39890* Unknown0C;
-};
 
 // FUNCTION: 0x10B4FAC0 ?FUN_10b4fac0@Class_10B3C760@@QAEHPAUStruct_10B3C760_Param@@_NM@Z
 int Class_10B3C760::FUN_10b4fac0(Struct_10B3C760_Param* A, bool B, float C)

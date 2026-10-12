@@ -13,6 +13,8 @@ public:
     virtual void Virtual4();
     virtual void FUN_10c3cfa0(int* p1, int* p2, int* p3);
 
+    Class_10E9AFA4(int A, int B, int C);
+
     Class_10E9AFA4* FUN_10c3cf70(int A, int B, int C);
 
     float Unknown04;

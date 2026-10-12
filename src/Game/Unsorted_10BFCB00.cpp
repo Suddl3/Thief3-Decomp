@@ -1,34 +1,14 @@
 // Game/Unsorted_10BFCB00.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
 #include "Game/Class_10C7D570.h"
 #include "Game/Class_10978090.h"
 #include "Game/Class_Field04.h"
 #include "Game/Class_10AF4B90.h"
+#include "Game/Class_10AF4BB0.h"
+#include "Game/Class_10C1B0F0.h"
 
 extern float DAT_10eafbdc;
-
-class Class_10C1B0F0
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual float Virtual6(int A);
-
-    void FUN_10c1b0f0(float Value);
-
-    char Unknown04[0x28];
-    float Unknown2C;
-    char Unknown30[4];
-    float Unknown34;
-    char Unknown38[4];
-    float Unknown3C;
-};
 
 class Class_10BFD210
 {
@@ -42,29 +22,12 @@ public:
     char Pad00[0x1];
 };
 
-extern void* DAT_10e47850[];
-
 extern float DAT_10e49684;
 
 struct Class_10BFCF80_Unknown00
 {
     float Unknown00;
     float Unknown04;
-    int Unknown08;
-};
-
-// Class_10AF4BB0 as its header has it, with the constructor (inline, calling 0x10AF4B90)
-// and the destructor (0x10AF4BE0) declared.
-class Class_10AF4BB0
-{
-public:
-    Class_10AF4BB0() { ((Class_10AF4B90*)this)->FUN_10af4b90(0x27, DAT_10e47850); }
-    ~Class_10AF4BB0();
-    void FUN_10af3b50(int A);
-    void FUN_10af3bd0(int A, int B, int C);
-
-    void* Unknown00;
-    int Unknown04;
     int Unknown08;
 };
 

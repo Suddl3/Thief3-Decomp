@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/D3DXMATRIX.h"
 #include "Game/IDirect3DDevice8.h"
+#include "Game/Class_10937790.h"
 
 // A three-float vector (D3DXVECTOR3).
 struct D3DXVECTOR3
@@ -32,25 +33,6 @@ struct Struct_10938DA0
 };
 
 class Class_1091E3F0;
-
-// Class_10937790 copied whole from include/Game/Class_10937790.h, with the
-// method FUN_10938da0 added.
-class Class_10937790
-{
-public:
-    void FUN_10937790();
-    void FUN_10937430(void* A, void* B, void* C);
-    void FUN_10938ee0(Class_1091E3F0* Obj);
-    void FUN_10938da0(void* A, Struct_10938DA0* B, void* C);
-
-    char Unknown00[0x6FC];
-    int Unknown6FC;
-    char Pad700[0x3c];
-    char Unknown73C[0x40];
-    char Unknown77C[0x40];
-    char Unknown7BC[0x40];
-    char Unknown7FC[0x18];
-};
 
 // FUNCTION: 0x10938DA0 ?FUN_10938da0@Class_10937790@@QAEXPAXPAUStruct_10938DA0@@0@Z
 void Class_10937790::FUN_10938da0(void* A, Struct_10938DA0* B, void* C)

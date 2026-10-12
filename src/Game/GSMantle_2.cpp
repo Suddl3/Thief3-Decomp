@@ -4,6 +4,7 @@
 #include "Game/Struct_10B53A00.h"
 #include "Game/Class_10B3B220_Item.h"
 #include "Game/Class_10B3B220_Unknown0B0.h"
+#include "Game/GSMantle.h"
 
 class AGarrett;
 
@@ -19,28 +20,6 @@ public:
 Class_10DD7640* FUN_10dd7640();
 
 unsigned char FUN_10cd3a40(Struct_10B53A00* P);
-
-class GSMantle : public Class_10E7E4E0
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual int OnAnimationEnd(Struct_10B53A00* P, int Code);
-
-    void ForceArms(AGarrett* Garrett);
-    void FUN_10b3b220(Struct_10B53A00* P);
-    void ReleaseItem(Struct_10B53A00* P);
-    bool TryGrab(Struct_10B53A00* P);
-    GSMantle* FUN_10b53a30();
-
-    char Unknown10[0x10];
-    int Unknown20;
-    int Unknown24;
-    float Unknown28;
-};
 
 // FUNCTION: 0x10B3BC50 ?TryGrab@GSMantle@@QAE_NPAUStruct_10B53A00@@@Z
 bool GSMantle::TryGrab(Struct_10B53A00* P)

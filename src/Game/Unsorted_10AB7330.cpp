@@ -1,6 +1,7 @@
 // Game/Unsorted_10AB7330.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10905A90_Member.h"
+#include "Game/Class_10AB7500.h"
 
 Class_10905A90_Member* GetAllocator();
 
@@ -43,16 +44,6 @@ public:
     bool GetString(const char* Section, const char* Key, Class_109081E0& Value, const char* File);
 
     char Pad00[0x1];
-};
-
-class Class_10AB7500
-{
-public:
-    void FUN_10ab7330();
-    void FUN_10ab7500();
-
-    char Unknown00[8];
-    int Difficulty;
 };
 
 // FUNCTION: 0x10AB7330 ?FUN_10ab7330@Class_10AB7500@@QAEXXZ

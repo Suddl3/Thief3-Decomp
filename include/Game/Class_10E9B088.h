@@ -6,6 +6,8 @@
 #include "Game/Class_10E9B020.h"
 
 class Class_10E9B088_Unknown2C;
+class FArchive;
+class UObject;
 
 class Class_10E9B088 : public Class_10E9B020
 {
@@ -16,13 +18,51 @@ public:
     virtual void Virtual3();
     virtual void Virtual4();
     virtual void FUN_10c3d410(unsigned char Value);
+    virtual void Virtual6();
+    virtual void Virtual7();
+    virtual void Virtual8();
+    virtual void Virtual9();
+    virtual void Virtual10();
+    virtual void Virtual11();
+    virtual void Virtual12();
+    virtual void Virtual13();
+    virtual void Virtual14();
+    virtual void Virtual15();
+    virtual void Virtual16();
+    virtual void Virtual17();
+    virtual void Virtual18();
+    virtual void Virtual19();
+    virtual void Virtual20();
+    virtual void Virtual21();
+    virtual void Virtual22();
+    virtual void Virtual23();
+    virtual void Virtual24();
+    virtual void Virtual25();
+    virtual void Virtual26(void* A, FArchive& Ar);
 
-    char Unknown04[0x25];
+    void FUN_10c3da10(int A);
+
+    int Unknown04;
+    int Unknown08;
+    int Unknown0C;
+    int Unknown10;
+    int Unknown14;
+    int Unknown18;
+    int Unknown1C;
+    int Unknown20;
+    int Unknown24;
+    char Unknown28;
     unsigned char Unknown29;
-    char Pad2A[0x2];
+    char Unknown2A;
+    char Unknown2B;
     Class_10E9B088_Unknown2C* Unknown2C;
     int Unknown30;
-    char Pad34[0x4];
+    union
+    {
+        char Pad34[0x4];
+        UObject* Unknown34;
+    };
+    char Unknown38[0xC];
 };
 
 #endif // GAME_CLASS_10E9B088_H

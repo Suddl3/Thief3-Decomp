@@ -6,11 +6,18 @@
 class Class_10BEFA10
 {
 public:
-    char Unknown00[0x124];
-    unsigned char Unknown124;
-    char Unknown125[0x133];
-    int Unknown258;
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual void Virtual2();
+    virtual int Virtual3();
+
     void FUN_10befa10();
+
+    char Pad04[0x120];
+    unsigned char Unknown124;
+    char Pad125[0x133];
+    int Unknown258;
+    char Pad25C[0x4];
 };
 
 #endif // GAME_CLASS_10BEFA10_H

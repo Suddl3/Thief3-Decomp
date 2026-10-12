@@ -1,7 +1,7 @@
 // Game/Class_10E66474_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
+#include "Game/Class_10E66474.h"
 
 struct Struct_10A334E0;
 
@@ -25,25 +25,6 @@ struct Struct_10A33B70_Param
 class AActor
 {
     DECLARE_CLASS(AActor, UObject, 0x800, Engine)
-};
-
-class Class_10E66474
-{
-public:
-    virtual void FUN_10a33ce0(int A, int B, int C, int D);
-
-    Class_10E66474();
-
-    void FUN_10a33040(int Index, Struct_10A334E0 Item);
-    void FUN_10a334e0();
-    void FUN_10a33b70(int A, int B, int C);
-    void FUN_10a33c60();
-    void FUN_10a32450(int A, Struct_10A32090* B);
-    void FUN_10a33930(int A, int* B);
-
-    char Unknown04[0x50];
-    bool Unknown54;
-    char Pad55[0x3];
 };
 
 // FUNCTION: 0x10A33B70 ?FUN_10a33b70@Class_10E66474@@QAEXHHH@Z

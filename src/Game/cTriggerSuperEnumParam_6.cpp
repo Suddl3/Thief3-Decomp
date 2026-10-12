@@ -1,7 +1,7 @@
 // Game/cTriggerSuperEnumParam_6.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_109081E0.h"
+#include "Game/Class_10E6C740_Member.h"
 
 class FName
 {
@@ -9,15 +9,6 @@ public:
     Class_109081E0 FUN_10af9730() const;
 
     unsigned long Value;
-};
-
-class Class_10E6C740_Member
-{
-public:
-    int Unknown00;
-    char Pad04[0x30];
-    FName* Unknown34;
-    int Unknown38;
 };
 
 class cTriggerSuperEnumParam

@@ -1,7 +1,7 @@
 // Game/Class_10E98DE0_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10C7D570.h"
+#include "Game/Class_10C1B840.h"
 
 typedef float FLOAT;
 
@@ -14,20 +14,6 @@ public:
     FVector(FLOAT InX, FLOAT InY, FLOAT InZ) : X(InX), Y(InY), Z(InZ) {}
 
     FLOAT X, Y, Z;
-};
-
-// Class_10C1B840 from its header, with the float at +0x14 and the destructor
-// the unit's EH frame unwinds the base with.
-class Class_10C1B840
-{
-public:
-    Class_10C1B840(int A, int B, int C, int D, int E, float F);
-    ~Class_10C1B840();
-
-    void** Unknown00;
-    int Unknown04[4];
-    float Unknown14;
-    int Unknown18[12];
 };
 
 class Class_10E98DE0 : public Class_10C1B840

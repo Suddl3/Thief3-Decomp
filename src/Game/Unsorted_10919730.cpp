@@ -4,6 +4,7 @@
 #include "Game/Class_10924AE0.h"
 #include "Game/Struct_10924210.h"
 #include "Game/Class_10937730.h"
+#include "Game/Class_1093E930.h"
 
 class IDirect3D8;
 
@@ -57,20 +58,6 @@ public:
     virtual int __stdcall Virtual39();
     virtual int __stdcall Virtual40();
     virtual long __stdcall Virtual41(const Struct_10924210* Viewport);
-};
-
-// Copied from include/Game/Class_1093E930.h with FUN_1093ec90 added.
-class Class_1093E930
-{
-public:
-    void FUN_1093e550();
-    Class_1093E930* FUN_1093e930();
-    bool FUN_1093ec90();
-
-    Class_1093E930_Member* Unknown00;
-    Class_1093E930_Member* Unknown04;
-    bool Unknown08;
-    char Pad09[0x3];
 };
 
 // Copied from include/Game/Class_10939570.h with FUN_109397b0 added.

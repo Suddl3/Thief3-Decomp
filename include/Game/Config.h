@@ -13,6 +13,8 @@ public:
     bool FUN_10910a20(const char* Section, const char* Key, int* Value, int D);
     bool GetBool(const char* Section, const char* Key, bool* Value, const char* File);
     bool GetFloat(const char* Section, const char* Key, float* Value, const char* File);
+    bool GetString(const char* Section, const char* Key, char** Value, const char* File);
+    bool FUN_10910ca0(const char* Section, const char* Key, char* Value, int Size, int Default);
 
     char Pad00[0x1];
 };

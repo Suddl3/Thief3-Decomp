@@ -13,6 +13,8 @@ class Class_10E7E898 : public Class_10E7E4E0
 public:
     Class_10E7E898* FUN_10b3d270();
     Struct_10B48890* FUN_10b3af40(Struct_10B3AF40_Param* A);
+
+    char Pad04[0xc];
 };
 
 #endif // GAME_CLASS_10E7E898_H

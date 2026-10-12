@@ -29,6 +29,10 @@ public:
     virtual void Virtual18();
     virtual void Virtual19();
     virtual void FUN_10bcbb00(int p1);
+
+    Class_10E92000(int A, int B, int C);
+
+    char Pad08[0x54];
 };
 
 #endif // GAME_CLASS_10E92000_H

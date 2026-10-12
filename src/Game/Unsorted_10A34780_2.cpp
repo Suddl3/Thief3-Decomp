@@ -2,26 +2,9 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10A34B90_Node.h"
 #include "Game/Class_10A34C10.h"
+#include "Game/Class_10A34B90.h"
 
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
-
-// The class of include/Game/Class_10A34B90.h, with FUN_10a34420 added.
-class Class_10A34B90
-{
-public:
-    void FUN_10a34b90(int A);
-    void FUN_10a35140();
-    void FUN_10a34810(int Size);
-    void FUN_10a34420(Class_10A34B90_Node* Node, int* Key);
-
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    bool Unknown10;
-    char Pad11[0x3];
-    Class_10A34B90_Node** Unknown14;
-};
 
 class Class_109081E0
 {

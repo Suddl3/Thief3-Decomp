@@ -11,8 +11,11 @@ class Class_10E66350 : public Class_10E66320
 public:
     virtual ~Class_10E66350();
     virtual int FUN_10a2f0c0(Class_10E66320* Other);
+    virtual void Virtual2();
 
     Class_10E66350();
+
+    void FUN_10a2eeb0(FString* Name, UBOOL* Found, FString* Source);
 
     int Unknown14;
     FString Unknown18;

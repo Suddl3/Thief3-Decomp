@@ -5,9 +5,32 @@
 
 #include "Game/cActorManager.h"
 
+class Class_1098E330;
+class Class_10A6E080_Arg2;
+class Class_10E5D360;
+class Class_10E6B610;
+struct Struct_10A6DFC0_Param;
+
 class Class_10E6B9B8 : public cActorManager
 {
 public:
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual void Virtual2();
+    virtual void Virtual3();
+    virtual void Virtual4();
+    virtual void Virtual5(Class_1098E330* A, Class_10E6B610* B, int C, int D);
+    virtual void Virtual6();
+    virtual void Virtual7(Class_1098E330* A);
+    virtual void FUN_10a6dfc0(Class_1098E330* Obj, Class_10E5D360* Msg, Struct_10A6DFC0_Param* Param);
+    virtual void Virtual9();
+    virtual void Virtual10();
+    virtual void Virtual11();
+    virtual void Virtual12();
+    virtual int FUN_10a6e080(int A, Class_10A6E080_Arg2* Obj, float Dt);
+    virtual void Virtual14();
+    virtual void Virtual15(int A, int B);
+
     Class_10E6B9B8();
 };
 

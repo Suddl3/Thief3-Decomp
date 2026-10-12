@@ -3,9 +3,21 @@
 #ifndef GAME_CLASS_1091CC80_H
 #define GAME_CLASS_1091CC80_H
 
+void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
+
 class Class_1091CC80
 {
 public:
+    ~Class_1091CC80()
+    {
+        FUN_1091c850(0x40);
+        delete Unknown14;
+        Unknown04 = 0;
+        Unknown0C = 0;
+        Unknown14 = 0;
+        Unknown00 = 0;
+    }
+
     void FUN_1091c850(int A);
     void FUN_1091cc80();
 

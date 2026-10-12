@@ -1,28 +1,9 @@
 // Game/Class_10E5B2A8_4.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
 #include "Engine/EngineClasses.h"
 #include "Game/Class_10F46DA0.h"
-
-class Class_10E5B2A8
-{
-public:
-    virtual void FUN_109e30d0(int Event, UObject* A, int B, int C);
-
-    Class_10E5B2A8();
-
-    void FUN_109e2c10(INT A, AZoneProperties* B);
-    void FUN_109e2ce0(UObject* Obj, int A, int B);
-    void FUN_109e2fa0(UObject* A, int B, int C);
-    void FUN_109e3060(UObject* A, int B, int C);
-    void FUN_109e2d50(int A, AZoneProperties* B);
-
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    int Unknown10;
-};
+#include "Game/Class_10E5B2A8.h"
 
 extern Class_10F46DA0* DAT_10f46da0;
 

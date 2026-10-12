@@ -10,6 +10,8 @@ public:
     void FUN_10cb1b90(int A);
 
     char Pad00[0x1];
+    char Pad01[0xC3];
+    int Unknown0C4;
 };
 
 #endif // GAME_CLASS_10CAFD00_H

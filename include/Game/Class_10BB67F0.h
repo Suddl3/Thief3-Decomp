@@ -4,6 +4,7 @@
 #define GAME_CLASS_10BB67F0_H
 
 class Class_10BAA3C0;
+class Class_10EC0808;
 
 class Class_10BB67F0
 {
@@ -12,6 +13,8 @@ public:
     void* FUN_10bb67f0(int B, void* C, Class_10BAA3C0* D);
     void* FUN_10bb7130(void* A, int B, int C, int D, int E, Class_10BAA3C0* F, int G, int H);
     void* FUN_10bb7490(int A, int B, int C, int D, Class_10BAA3C0* E, int F, int G);
+    bool FUN_10bb4590(int A, int B, int C);
+    void* FUN_10bb6810(int Unused, Class_10EC0808* Owner, int B, void* C, Class_10BAA3C0* D);
 
     void* Unknown00;
 };

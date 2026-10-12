@@ -5,12 +5,19 @@
 
 #include "Game/Class_10AAB060.h"
 
+class Class_10AAB200_Param;
+
 typedef struct _iobuf FILE;
 
 class Class_10E6DA1C : public Class_10AAB060
 {
 public:
     virtual int FUN_10aab080(FILE* File, int Param);
+    virtual void Virtual1();
+    virtual void ReadFields(void* Reader, int Version, int Unused);
+    virtual void WriteFields(void* A, int B, int C);
+    virtual void Virtual4();
+    virtual int FUN_10aab200(Class_10AAB200_Param* Writer);
 };
 
 #endif // GAME_CLASS_10E6DA1C_H

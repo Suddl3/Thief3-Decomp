@@ -5,14 +5,22 @@
 
 #include "Game/Class_10BFBD70.h"
 
+class Class_10BBA080;
+
 class Class_10C29410
 {
 public:
     void FUN_10c29410(int Value);
     void FUN_10c29380(int Value);
 
-    char Unknown00[4];
+    Class_10BBA080* Unknown00;
     Class_10BFBD70 Unknown04;
+    char Pad10[0x8];
+    float Unknown18;
+    bool Unknown1C;
+    bool Unknown1D;
+    char Pad1E[0x2];
+    int Unknown20;
 };
 
 #endif // GAME_CLASS_10C29410_H

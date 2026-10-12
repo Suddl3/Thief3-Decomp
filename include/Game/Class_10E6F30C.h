@@ -9,16 +9,21 @@
 class Class_10E6F30C : public cActorManager
 {
 public:
-    Class_10E6F30C();
     virtual ~Class_10E6F30C();
-
     virtual void FUN_10ab9d90(int Type, int A, int B, int C);
+
+    Class_10E6F30C();
 
     void FUN_10ab85a0();
 
     Class_10AB90F0 Unknown04;
     int Unknown10;
     int Unknown14;
+    int Unknown18;
+    int Unknown1C;
+    int Unknown20;
+    int Unknown24;
+    int Unknown28;
 };
 
 #endif // GAME_CLASS_10E6F30C_H

@@ -13,6 +13,7 @@ public:
     void FUN_109e32b0();
     void FUN_109e3320(int A, int B, int C);
     void FUN_109e3420(int A, int B, int C);
+    void FUN_109e3560();
 };
 
 #endif // GAME_CLASS_10E5B2AC_H

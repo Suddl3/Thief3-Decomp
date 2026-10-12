@@ -1,7 +1,7 @@
 // Game/Unsorted_10BFF480.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Struct_10C05A80.h"
+#include "Game/Class_10BFF600.h"
 
 float FUN_10c05a80(const Struct_10C05A80* A, const Struct_10C05A80* B);
 
@@ -110,23 +110,6 @@ public:
     Struct_10C05A80 Unknown2C;
     char Pad38[0x3c];
     unsigned char Unknown74;
-};
-
-// Copied whole from include/Game/Class_10BFF600.h, with the fields this function reads.
-class Class_10BFF600
-{
-public:
-    int FUN_10bff600(int A, const float* B);
-    bool FUN_10bff6d0(int A, const float* B);
-    void* FUN_10bff6f0(int A, const float* B, char C);
-
-    char Pad00[0x10];
-    int Unknown10;
-    char Pad14[0x4];
-    Class_10BFF600_Unknown18** Unknown18;
-    char Pad1C[0xc];
-    Struct_10C05A80 Unknown28;
-    int Unknown34;
 };
 
 // FUNCTION: 0x10BFF600 ?FUN_10bff600@Class_10BFF600@@QAEHHPBM@Z

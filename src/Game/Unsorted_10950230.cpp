@@ -1,5 +1,6 @@
 // Game/Unsorted_10950230.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10950230.h"
 
 extern "C" __declspec(dllimport) int __stdcall _BinkWait(void* Bink);
 
@@ -55,17 +56,6 @@ public:
     IDirect3DTexture8* Unknown04;
     char Unknown08[0x4];
     unsigned int Unknown0C;
-};
-
-class Class_10950230
-{
-public:
-    bool FUN_10950230();
-    bool FUN_10dbbbb0();
-
-    Class_10950230_Unknown00* Unknown00;
-    bool Unknown04;
-    bool Unknown05;
 };
 
 // FUNCTION: 0x10950230 ?FUN_10950230@Class_10950230@@QAE_NXZ

@@ -5,13 +5,19 @@
 
 #include "Game/Class_10905A90_Member.h"
 
-struct Item_10943600;
+class Item_10943600;
 
 Class_10905A90_Member* GetAllocator();
 
 class Class_10943600
 {
 public:
+    Class_10943600() : Unknown00(0), Unknown04(0), Unknown08(0) {}
+    ~Class_10943600()
+    {
+        Empty();
+    }
+
     int FUN_10943600(const Item_10943600* Item);
     void FUN_10da4f50(int NewCount);
     void Empty()

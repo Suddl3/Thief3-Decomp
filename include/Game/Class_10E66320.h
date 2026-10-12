@@ -10,11 +10,11 @@ class Class_10E66320 : public Class_10A905A0
 {
 public:
     virtual ~Class_10E66320();
-    virtual void Virtual1();
     virtual int FUN_10a2f0c0(Class_10E66320* Other);
     virtual bool FUN_10a2f0f0(int p1);
     virtual void FUN_109b1f50(FString* p1);
     virtual FString* FUN_10a2f510();
+    virtual void Virtual5();
 
     Class_10E66320();
 

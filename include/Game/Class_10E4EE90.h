@@ -9,10 +9,13 @@
 class Class_10E4EE90 : public Class_10E4B040
 {
 public:
-    ~Class_10E4EE90();
-
     virtual void FUN_10adb3a0();
     virtual void Virtual0();
+    virtual Class_10E4EE90* FUN_1097d720(unsigned int Flags);
+
+    ~Class_10E4EE90();
+
+    void FUN_1097d750();
 
     char Unknown30[0xC8];
     Class_1097D530 UnknownF8;

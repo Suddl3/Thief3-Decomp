@@ -1,44 +1,17 @@
 // Game/Unsorted_10C29020_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10BFBD70.h"
 #include "Game/Class_10971570.h"
 #include "Game/Class_1098E330.h"
+#include "Game/Class_10BBA080.h"
+#include "Game/Class_10C29410.h"
 
 class Class_10DBD510;
-
-class Class_10BBA080
-{
-public:
-    unsigned char FUN_10bb8c60();
-    int FUN_10bba080(Class_1098E330* Obj);
-    float FUN_10bb8e70();
-    bool FUN_10bb8e00();
-
-    char Unknown00[8];
-    Class_10DBD510* Unknown08;
-};
 
 class Class_10C292E0
 {
 public:
     void FUN_10c292e0(int Id, double Value);
-};
-
-class Class_10C29410
-{
-public:
-    void FUN_10c29410(int Value);
-    void FUN_10c29380(int Value);
-
-    Class_10BBA080* Unknown00;
-    Class_10BFBD70 Unknown04;
-    char Pad10[0x8];
-    float Unknown18;
-    bool Unknown1C;
-    bool Unknown1D;
-    char Pad1E[0x2];
-    int Unknown20;
 };
 
 double GetTimeSeconds();

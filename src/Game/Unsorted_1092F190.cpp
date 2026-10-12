@@ -3,12 +3,8 @@
 #include "Game/Class_10BFBD70.h"
 #include "Game/IDirect3DDevice8.h"
 #include "Game/Class_1092F330.h"
-
-class Class_1092F130
-{
-public:
-    void FUN_1092e9c0();
-};
+#include "Game/Class_1092F130.h"
+#include "Game/Class_109373D0.h"
 
 extern Class_10BFBD70 DAT_10f31b9c;
 
@@ -17,17 +13,6 @@ extern Class_1092F130** DAT_10f31ba4;
 extern int DAT_10f31ba0;
 
 extern IDirect3DDevice8* GDirect3DDevice8;
-
-class Class_109373D0
-{
-public:
-    void FUN_109373d0(unsigned long Value);
-
-    char Unknown00[0x1C];
-    IDirect3DBaseTexture8* Unknown1C[4];
-    char Unknown2C[0x684];
-    unsigned long Unknown6B0;
-};
 
 class Class_10936AC0 : public Class_109373D0
 {

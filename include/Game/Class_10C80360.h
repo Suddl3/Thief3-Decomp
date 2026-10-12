@@ -17,6 +17,7 @@ public:
     void FUN_10c5dc60(float A);
     void FUN_10c5e810();
     void FUN_10c5daf0();
+    void FUN_10c5f060();
 
     char Pad01[0xc];
     bool Unknown0D;

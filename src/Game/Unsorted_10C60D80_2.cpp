@@ -2,25 +2,10 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10C64AA0.h"
 #include "Game/Class_10C60D80.h"
+#include "Game/Class_10C64AC0.h"
+#include "Game/Elem_10C64AC0.h"
 
 class Class_10C662F0;
-
-struct Elem_10C64AC0
-{
-    void FUN_10d57770(int A);
-    void FUN_10d577b0(void* A, int B);
-
-    char Unknown00[0x38];
-};
-
-class Class_10C64AC0
-{
-public:
-    char Unknown00[0x1c];
-    Elem_10C64AC0 Unknown1C[1];
-
-    Elem_10C64AC0* FUN_10c64ac0(int Index);
-};
 
 void operator delete(void* Ptr);
 

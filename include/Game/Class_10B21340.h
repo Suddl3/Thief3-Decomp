@@ -3,12 +3,18 @@
 #ifndef GAME_CLASS_10B21340_H
 #define GAME_CLASS_10B21340_H
 
-class Class_10B21340 {
+class Class_10B21340
+{
 public:
-    char Unknown00[0x464];
-    int Unknown464;
-
     void FUN_10b21340();
+
+    char Unknown00[0x400];
+    int Unknown400;
+    char Unknown404[0x3C];
+    int Unknown440;
+    int Unknown444;
+    char Unknown448[0x1C];
+    int Unknown464;
 };
 
 #endif // GAME_CLASS_10B21340_H

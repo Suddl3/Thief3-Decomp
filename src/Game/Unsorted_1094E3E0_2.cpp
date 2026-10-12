@@ -1,7 +1,8 @@
 // Game/Unsorted_1094E3E0_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10905A90_Member.h"
+#include "Game/Class_1094E3A0.h"
+#include "Game/Elem_1094E3A0.h"
 
 Class_10905A90_Member* GetAllocator();
 
@@ -31,30 +32,6 @@ class Class_1094E3E0_Unknown0E8
 public:
     virtual void Virtual0();
     virtual void Virtual1();
-};
-
-// One element of Unknown108: 0x28 bytes.
-struct Elem_1094E3A0
-{
-    int Unknown00;
-    float Unknown04;
-    char Unknown08[0x20];
-};
-
-class Class_1094E3A0
-{
-public:
-    Elem_1094E3A0* FUN_1094e3a0();
-    void FUN_1094e3c0(int Index, float Value);
-    bool FUN_1094e3e0(int Index, int Value);
-
-    char Unknown00[0xE8];
-    Class_1094E3E0_Unknown0E8* Unknown0E8;
-    Class_1094E3E0_Unknown0E8* Unknown0EC;
-    char Unknown0F0[0x18];
-    Elem_1094E3A0* Unknown108;
-    char Unknown10C[4];
-    int Unknown110;
 };
 
 // FUNCTION: 0x1094E3E0 ?FUN_1094e3e0@Class_1094E3A0@@QAE_NHH@Z

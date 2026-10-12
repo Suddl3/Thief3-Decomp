@@ -14,6 +14,7 @@ public:
     Class_10E81A60();
 
     FArray Unknown118;
+    char Pad124[0x38];
 };
 
 #endif // GAME_CLASS_10E81A60_H

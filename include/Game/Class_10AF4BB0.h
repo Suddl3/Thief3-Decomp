@@ -3,11 +3,19 @@
 #ifndef GAME_CLASS_10AF4BB0_H
 #define GAME_CLASS_10AF4BB0_H
 
+#include "Game/Class_10AF4B90.h"
+
+extern void* DAT_10e47850[];
+
 class Class_10AF4BB0
 {
 public:
+    Class_10AF4BB0() { ((Class_10AF4B90*)this)->FUN_10af4b90(0x27, DAT_10e47850); }
+    ~Class_10AF4BB0();
+
     void FUN_10af3b50(int A);
     void FUN_10af3bd0(int A, int B, int C);
+    Class_10AF4BB0* FUN_10af4bb0(int A, int B, int C, int D);
 
     void* Unknown00;
     int Unknown04;

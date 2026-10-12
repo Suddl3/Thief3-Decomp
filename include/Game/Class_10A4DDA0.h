@@ -3,8 +3,12 @@
 #ifndef GAME_CLASS_10A4DDA0_H
 #define GAME_CLASS_10A4DDA0_H
 
-class Class_10A4DDA0 {
+class Class_10A4DDA0
+{
 public:
+    Class_10A4DDA0();
+    ~Class_10A4DDA0();
+
     void FUN_10a4dda0();
 
     int Unknown00;

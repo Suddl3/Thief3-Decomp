@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Engine/EngineClasses.h"
 #include "Game/Class_10B37DE0.h"
+#include "Game/Class_1096D780.h"
 
 class ULevel;
 
@@ -14,19 +15,6 @@ class Class_10F3A3D8;
 class Class_10F46DA0;
 
 class Class_10B37DE0;
-
-class Class_1096D780
-{
-public:
-    void* Get();
-
-    char Unknown00[0x98];
-    void* Field98;
-    char Unknown9C[0x14];
-    Class_10DA0870* UnknownB0;
-    char UnknownB4[0x440 - 0xB4];
-    int Unknown440;
-};
 
 class AAIPathPoint : public AMarker
 {

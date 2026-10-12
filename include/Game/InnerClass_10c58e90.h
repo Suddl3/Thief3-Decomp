@@ -11,6 +11,7 @@ class InnerClass_10c58e90
 public:
     ~InnerClass_10c58e90();
     InnerClass_10c58e90(int B);
+    InnerClass_10c58e90(int& B);
 
     void FUN_10c58e90();
 

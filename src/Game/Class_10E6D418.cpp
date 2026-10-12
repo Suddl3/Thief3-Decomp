@@ -1,8 +1,8 @@
 // Game/Class_10E6D418.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
 #include "Game/Class_10978090.h"
+#include "Game/Class_10A37700.h"
 
 class Class_10AA2A60_Param
 {
@@ -12,22 +12,6 @@ public:
     virtual void Virtual2();
     virtual void Virtual3();
     virtual Class_10978090* Virtual4(int A);
-};
-
-class Class_10A37700
-{
-public:
-    void FUN_10a37700();
-    void FUN_10a384c0(char* A);
-
-    char Unknown00[0xC];
-    FRotator Unknown0C;
-    char Pad18[0x314];
-    unsigned char Unknown32C;
-    char Unknown32D[0x257];
-    unsigned char Unknown584;
-    char Unknown585[3];
-    int Unknown588;
 };
 
 class Class_10B1D660;

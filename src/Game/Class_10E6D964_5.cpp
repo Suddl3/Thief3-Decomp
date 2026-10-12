@@ -1,17 +1,7 @@
 // Game/Class_10E6D964_5.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_109081E0.h"
-
-// include/Game/Class_10AAB590_Param.h copied whole, with the slots this function calls.
-class Class_10AAB590_Param
-{
-public:
-    virtual void Virtual0(int* Value);
-    virtual void Virtual1(int Value);
-    virtual Class_109081E0 Virtual2();
-    virtual int Virtual3();
-};
+#include "Game/Class_10AAB590_Param.h"
 
 class Object_10AA7BA0;
 

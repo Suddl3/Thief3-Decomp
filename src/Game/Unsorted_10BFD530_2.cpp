@@ -1,19 +1,8 @@
 // Game/Unsorted_10BFD530_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10BFBD70.h"
-
-class Class_10BAEC00
-{
-public:
-    void FUN_10bae100(int Count);
-    void FUN_10baec00();
-    void FUN_10bfc320(int A, int B);
-
-    int Unknown00;
-    int Unknown04;
-    void* Unknown08;
-};
+#include "Game/Class_10BAEC00.h"
+#include "Game/Class_10BFD780.h"
 
 class Class_10BFD780_Unknown10
 {
@@ -39,20 +28,6 @@ struct Struct_10BFD780_Elem
     int Unknown00;
     int Key;
     char Pad08[0xc];
-};
-
-class Class_10BFD780
-{
-public:
-    void FUN_10bfd780(int Key);
-
-    char Unknown00[8];
-    Class_10BFBD70 Unknown08;
-    Class_10BFD780_Unknown10* Unknown14;
-    Class_10BFD780_Unknown10* Unknown18;
-    Class_10BFD780_Unknown10* Unknown1C;
-    char Pad20[0x34];
-    Class_10BAEC00 Unknown54;
 };
 
 // FUNCTION: 0x10BFD780 ?FUN_10bfd780@Class_10BFD780@@QAEXH@Z

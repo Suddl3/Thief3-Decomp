@@ -5,12 +5,34 @@
 
 #include "Game/cActorManager.h"
 
+class Class_10A76830;
+class Class_10A76CD0_Arg3;
+class Class_10A76DA0_Arg2;
+class Class_10BFBD70;
+class Class_10E5D360;
+class Class_Field04;
+struct Struct_10A769A0_Data;
+struct Struct_10A769A0_Param;
+
 class Class_10E6BC44 : public cActorManager
 {
 public:
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual void Virtual2();
+    virtual void Virtual3();
+    virtual void Virtual4();
+    virtual void Virtual5(Struct_10A769A0_Param* A, Class_10A76830* Result, int B, int C);
+    virtual void Virtual6();
+    virtual void Virtual7(Struct_10A769A0_Param* A);
+    virtual void FUN_10a769a0(Struct_10A769A0_Param* A, Class_10E5D360* B, Struct_10A769A0_Data* C);
+
     Class_10E6BC44();
 
     void FUN_10a76750();
+    void FUN_10a76a60(Class_Field04* A, Class_10BFBD70* B);
+    void FUN_10a76b20(Class_Field04* Param1, Class_10A76DA0_Arg2* Param2, Class_10BFBD70* Found);
+    void FUN_10a76cd0(Class_Field04* Param1, Class_10A76DA0_Arg2* Param2, Class_10A76CD0_Arg3* Param3);
 };
 
 #endif // GAME_CLASS_10E6BC44_H

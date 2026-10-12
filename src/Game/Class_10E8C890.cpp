@@ -3,6 +3,7 @@
 #include "Game/Class_1090A780.h"
 #include "Game/Class_10C7D570.h"
 #include "Game/Struct_10BB0B90.h"
+#include "Game/Class_10C13130.h"
 
 class Class_10BBDB40;
 
@@ -13,21 +14,6 @@ class Class_10BB12A0_C;
 class Class_10C13130;
 
 class Struct_10BB0B90;
-
-class Class_10C13130
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4(const Class_1090A780& A);
-    Class_1090A780 FUN_10c13130();
-
-    char Unknown04[4];
-    int Unknown08;
-    Class_1090A780 Unknown0C;
-};
 
 class Class_10BB12A0_B
 {

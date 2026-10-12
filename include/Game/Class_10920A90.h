@@ -15,8 +15,13 @@ public:
     void FUN_10920fa0(Struct_109236B0* A, int B, int C);
     void FUN_00000000(int Child, int B, int C);
     void FUN_10920a90(Class_10E4AA80* Item);
+    void FUN_10923f30(Class_10E4AA80* Obj);
+    void FUN_10923490(Class_10E4AA80* Item);
+    void FUN_1091f850();
 
-    char Unknown00[0x3C];
+    char Unknown00[0xC];
+    int Unknown0C;
+    char Unknown10[0x2C];
     Class_10A0C5F0 Unknown3C;
 };
 

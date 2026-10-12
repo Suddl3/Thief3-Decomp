@@ -3,6 +3,9 @@
 #ifndef GAME_CLASS_10BD3830_H
 #define GAME_CLASS_10BD3830_H
 
+#include "Core/Core.h"
+
+class Class_10B056C0;
 class FVector;
 class Object_10BD3830;
 struct Struct_10BD3830_Owner;
@@ -12,6 +15,7 @@ class Class_10BD3830
 public:
     int FUN_10bd2340(int A, const FVector& B, const FVector& C, int D, int E);
     int FUN_10bd3830(int A, Object_10BD3830* Obj, int C, int D);
+    void FUN_10bd38d0(int A, const FVector& B, Class_10B056C0* Owner, int D, int E, FLOAT F, FLOAT G);
 
     char Unknown00[4];
     Struct_10BD3830_Owner* Unknown04;

@@ -1,8 +1,8 @@
 // Game/Class_10E5B2AC.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
 #include "Game/Class_10B0D530.h"
+#include "Game/Class_10E5B2AC.h"
 
 class AActor
 {
@@ -57,19 +57,6 @@ public:
     Class_10B0D530 Unknown14;
     char Pad15[0xf];
     int Unknown24;
-};
-
-class Class_10E5B2AC
-{
-public:
-    virtual void FUN_109e3510(int Msg, int A, int B, int C);
-
-    Class_10E5B2AC();
-
-    void FUN_109e32b0();
-    void FUN_109e3320(int A, int B, int C);
-    void FUN_109e3420(int A, int B, int C);
-    void FUN_109e3560();
 };
 
 // FUNCTION: 0x109E3560 ?FUN_109e3560@Class_10E5B2AC@@QAEXXZ

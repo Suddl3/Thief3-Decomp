@@ -3,10 +3,13 @@
 #ifndef GAME_CLASS_10AC9AE0_H
 #define GAME_CLASS_10AC9AE0_H
 
+class AGarrett;
+
 class Class_10AC9AE0
 {
 public:
     void FUN_10ac9ae0();
+    void FUN_10ac9b40(AGarrett* Garrett);
 
     char Unknown00[4];
     void* Unknown04;

@@ -3,11 +3,14 @@
 #ifndef GAME_CLASS_10E6C740_MEMBER_H
 #define GAME_CLASS_10E6C740_MEMBER_H
 
+class FName;
+
 class Class_10E6C740_Member
 {
 public:
     int Unknown00;
-    char Pad04[0x34];
+    char Pad04[0x30];
+    FName* Unknown34;
     int Unknown38;
 };
 

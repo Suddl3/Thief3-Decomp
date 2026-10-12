@@ -3,12 +3,20 @@
 #ifndef GAME_CLASS_10B22020_H
 #define GAME_CLASS_10B22020_H
 
+#include "Core/Core.h"
+
 class Class_10B22020
 {
 public:
     void FUN_10b22020(int A);
 
-    char Unknown00[0x460];
+    char Unknown00[0x38];
+    FRotator Unknown38;
+    char Unknown44[0x3C0];
+    int Unknown404;
+    char Unknown408[8];
+    float Unknown410;
+    char Unknown414[0x4C];
     int Unknown460;
     char Unknown464[0x58];
     int Unknown4BC;

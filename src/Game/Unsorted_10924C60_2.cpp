@@ -4,30 +4,7 @@
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Struct_1094D980.h"
 #include "Game/Class_10924BE0.h"
-
-class Class_10924AE0
-{
-public:
-    bool FUN_10924ae0();
-    bool FUN_10924490(int A, int B, int C, int D, Struct_1094D980* E);
-    bool FUN_10924be0(Class_10924BE0* A);
-    void FUN_10924c60();
-
-    bool Unknown00;
-    char Pad01[0x3];
-    Class_10924BE0* Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    char Unknown10[0x8];
-    int Unknown18;
-    char Unknown1C[0x14];
-    Class_10BCE8F0 Unknown30;
-    char Pad31[0x17];
-    Struct_1094D980 Unknown48;
-    char Pad5C[0x4c];
-    int UnknownA8;
-    char PadAC[0x14];
-};
+#include "Game/Class_10924AE0.h"
 
 Class_10905A90_Member* GetAllocator();
 

@@ -1,6 +1,7 @@
 // Game/Unsorted_10B3C860.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Struct_10B3C760_Param.h"
+#include "Game/Class_10B3C760.h"
 
 class FVector;
 
@@ -11,17 +12,6 @@ class Class_10B39890;
 class Class_10B3C860_Unknown0B0;
 
 class Class_10B3C860_Result;
-
-class Class_10B3C760
-{
-public:
-    bool FUN_10b3c430(Struct_10B3C760_Param* A, const FVector& V, bool C);
-    bool FUN_10b3c760(Struct_10B3C760_Param* A, int Index, bool C);
-    bool FUN_10b3c860(Struct_10B3C760_Param* A, const FVector& V, bool C);
-
-    char Unknown00[0xC];
-    Class_10B39890* Unknown0C;
-};
 
 class Class_10B3C860_Unknown0B0
 {

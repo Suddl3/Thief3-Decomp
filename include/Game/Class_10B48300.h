@@ -3,12 +3,31 @@
 #ifndef GAME_CLASS_10B48300_H
 #define GAME_CLASS_10B48300_H
 
+class Class_109A62E0;
+class Class_10EC0E20;
+
 class Class_10B48300
 {
 public:
     virtual ~Class_10B48300();
 
+    Class_10B48300(Class_109A62E0* A, int B, int C);
+
     void FUN_10b48300(int A);
+    void FUN_10b470c0();
+    void FUN_10b478e0();
+
+    char Unknown04[0x4];
+    Class_10EC0E20* Unknown08[2];
+    char Pad10[0x4];
+    int Unknown14;
+    int Unknown18;
+    char Pad1C[0x1C];
+    int Unknown38;
+    int Unknown3C;
+    char Pad40[0x4];
+    float Unknown44;
+    char Pad48[0x10];
 };
 
 #endif // GAME_CLASS_10B48300_H

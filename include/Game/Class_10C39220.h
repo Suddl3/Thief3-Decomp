@@ -5,6 +5,8 @@
 
 #include "Game/Struct_10C39220.h"
 
+class Class_10C39D90_Unknown48;
+
 class Class_10C39220
 {
 public:
@@ -12,10 +14,19 @@ public:
 
     bool FUN_10c39220(int A);
     int FUN_10c3c2c0(int A);
+    bool FUN_10c38810();
+    void FUN_10c39d90();
 
     char Pad04[0x24];
     Struct_10C39220 Unknown28;
-    char Unknown34[0x6C];
+    char Unknown34[0x14];
+    Class_10C39D90_Unknown48* Unknown48;
+    char Unknown4C[0x1C];
+    bool Unknown68;
+    char Unknown69[0x17];
+    int Unknown80;
+    int Unknown84;
+    char Unknown88[0x18];
     int UnknownA0;
     char UnknownA4[4];
     Struct_10C39220* UnknownA8;

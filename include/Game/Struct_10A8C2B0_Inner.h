@@ -5,6 +5,7 @@
 
 struct Struct_10A8C2B0_Inner
 {
+public:
     char Unknown00[0x34];
     int* Unknown34;
     int Unknown38;

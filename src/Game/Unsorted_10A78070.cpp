@@ -6,22 +6,9 @@
 #include "Game/Class_10A78070.h"
 #include "Game/Struct_10AA3520.h"
 #include "Game/Struct_10AA3520_Unknown78.h"
+#include "Game/Class_1096D780.h"
 
 class Class_10DA0870;
-
-// Copied from Game/Class_1096D780.h with the rotation at +0x38 added.
-class Class_1096D780
-{
-public:
-    void* Get();
-
-    char Unknown00[0x38];
-    FRotator Unknown38;
-    char Unknown44[0x54];
-    void* Field98;
-    char Unknown9C[0x14];
-    Class_10DA0870* UnknownB0;
-};
 
 class Class_10A12AE0
 {

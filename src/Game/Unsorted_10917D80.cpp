@@ -1,6 +1,7 @@
 // Game/Unsorted_10917D80.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/IDirect3DSurface8.h"
+#include "Game/Class_10924E80.h"
 
 struct Struct_10917E40
 {
@@ -45,12 +46,6 @@ public:
 class Class_1091E940;
 
 class Class_10924100;
-
-class Class_10924E80
-{
-public:
-    void FUN_109251c0(float Value);
-};
 
 void FUN_109295c0(float Value);
 

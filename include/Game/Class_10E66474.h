@@ -3,6 +3,7 @@
 #ifndef GAME_CLASS_10E66474_H
 #define GAME_CLASS_10E66474_H
 
+struct Struct_10A32090;
 struct Struct_10A334E0;
 
 class Class_10E66474
@@ -16,6 +17,8 @@ public:
     void FUN_10a334e0();
     void FUN_10a33b70(int A, int B, int C);
     void FUN_10a33c60();
+    void FUN_10a32450(int A, Struct_10A32090* B);
+    void FUN_10a33930(int A, int* B);
 
     char Unknown04[0x50];
     bool Unknown54;

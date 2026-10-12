@@ -79,6 +79,8 @@ public:
     virtual void Virtual66();
     virtual void Virtual67(int* A);
 
+    Class_10E94100(int A, int B);
+
     void FUN_10bc4e30(int A);
     void FUN_10bdb390();
     int FUN_10bc68a0(int A);
@@ -89,6 +91,7 @@ public:
     int FUN_10bc4bf0();
 
     Class_10BC4BF0_Member* Unknown04;
+    char Unknown28[0x2C];
 };
 
 #endif // GAME_CLASS_10E94100_H

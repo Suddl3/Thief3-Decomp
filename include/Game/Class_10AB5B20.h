@@ -14,7 +14,11 @@ public:
         if (Unknown00)
             Unknown00->Virtual1();
     }
-    ~Class_10AB5B20();
+    ~Class_10AB5B20()
+    {
+        if (Unknown00)
+            Unknown00->Virtual2();
+    }
     Class_10AB5B20()
     {
         Unknown00 = 0;

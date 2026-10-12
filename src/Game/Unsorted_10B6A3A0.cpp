@@ -5,26 +5,13 @@
 #include "Game/Class_10E684A8.h"
 #include "Game/Class_10F3A3D8.h"
 #include "Game/Class_10B6AED0.h"
+#include "Game/Class_10A52A40.h"
 
 extern Class_10F3A3D8* DAT_10f3a3d8;
 
 Class_109081E0 FUN_1090a660(const char* In);
 
 class Class_10A52A40_Member;
-
-// Copied from include/Game/Class_10A52A40.h. The header's class has no virtual method, but
-// Class_10E85AD8 derives from it at offset 0 (the function passes its this to FUN_10a52a40),
-// so it needs a vptr: Unknown00[0xC4] becomes Unknown04[0xC0], keeping Unknown0C4 at 0xC4.
-class Class_10A52A40
-{
-public:
-    virtual void Virtual0();
-
-    void FUN_10a52a40(Class_10A52A40_Member* P);
-
-    char Unknown04[0xC0];
-    Class_10A52A40_Member* Unknown0C4;
-};
 
 class Class_10B6B3F0_Unknown118
 {

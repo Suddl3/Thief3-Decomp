@@ -31,6 +31,8 @@ public:
     void FUN_10a757a0();
     void FUN_10a759b0(int A, int B);
     void FUN_10a76260(int A, int B);
+    void FUN_10a76500(int A, int B, int C);
+    void FUN_10a765b0(int A, int B);
 };
 
 #endif // GAME_CLASS_10E6BBE8_H

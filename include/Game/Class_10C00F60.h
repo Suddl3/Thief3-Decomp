@@ -12,6 +12,8 @@ class Class_10C00F60
 public:
     unsigned int FUN_10c00f60(const int& Key, const int& Value);
     void FUN_10c01200(int Size);
+    unsigned int FUN_10c00b40(const int& Key);
+    bool FUN_10c014c0(const int& Key);
 
     int Unknown00;
     int Unknown04;

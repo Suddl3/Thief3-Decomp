@@ -5,6 +5,8 @@
 
 #include "Game/Struct_10B55810.h"
 
+struct Struct_10DD7DC0Arg;
+
 class Class_10E81C20
 {
 public:
@@ -13,8 +15,15 @@ public:
     virtual void Virtual2();
     virtual Struct_10B55810 FUN_10b55810();
 
-    char Unknown04[0x50];
+    Class_10E81C20();
+
+    void FUN_10dd7dc0(const Struct_10DD7DC0Arg& A, const Struct_10DD7DC0Arg& B, const Struct_10DD7DC0Arg& C, float D, int E, float F, float G, float H);
+
+    float Unknown04;
+    int Unknown08;
+    char Pad0C[0x48];
     Struct_10B55810 Unknown54;
+    char Pad60[0x14];
 };
 
 #endif // GAME_CLASS_10E81C20_H

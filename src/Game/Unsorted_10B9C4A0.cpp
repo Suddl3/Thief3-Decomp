@@ -6,6 +6,7 @@
 #include "Game/Class_10974340.h"
 #include "Game/Class_1098E330.h"
 #include "Game/Class_10B9C570.h"
+#include "Game/Class_10967060.h"
 
 class Class_109BC840;
 
@@ -13,18 +14,6 @@ class Class_109B2980
 {
 public:
     int FUN_109b2980();
-};
-
-// The header's class with FUN_109671b0 added (copied whole; the lead merges it).
-class Class_10967060
-{
-public:
-    Class_10967060 FUN_10967060(const Class_10967060& A);
-    float FUN_109671b0();
-
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
 };
 
 class Class_10B9C570_Actor

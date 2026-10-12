@@ -18,13 +18,33 @@ public:
     virtual void Virtual6();
     virtual void Virtual7();
     virtual void FUN_10a3a030();
+    virtual void Virtual9();
+    virtual void Virtual10();
+    virtual void Virtual11();
+    virtual void Virtual12();
+    virtual void Virtual13();
+    virtual void Virtual14();
+    virtual void Virtual15();
+    virtual void Virtual16();
+    virtual void Virtual17();
+    virtual void Virtual18();
+    virtual void Virtual19();
+    virtual void Virtual20();
+    virtual void Virtual21();
+    virtual void Virtual22();
+    virtual void Virtual23();
+    virtual bool Virtual24();
 
     void FUN_10948bd0();
+    void FUN_10948960(int A);
 
     Struct_10919190 Unknown04;
-    char Unknown44[0x18];
+    char Unknown44[0x14];
+    unsigned char Unknown58;
+    char Pad59[0x3];
     int Unknown5C;
-    char Pad60[0xb4];
+    int Unknown60;
+    char Pad64[0xb0];
     FVector Unknown114;
     FVector Unknown120;
     char Pad12C[0x4];

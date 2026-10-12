@@ -3,12 +3,15 @@
 #ifndef GAME_CLASS_10905530_H
 #define GAME_CLASS_10905530_H
 
-class Class_10905530
+#include "Game/Class_10AF4B90.h"
+
+extern void* DAT_10e5b760[];
+
+class Class_10905530 : public Class_10AF4B90
 {
 public:
     ~Class_10905530();
-
-    char Unknown00[0xC];
+    Class_10905530() { FUN_10af4b90(0x13, DAT_10e5b760); }
 };
 
 #endif // GAME_CLASS_10905530_H

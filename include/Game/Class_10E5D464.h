@@ -3,11 +3,21 @@
 #ifndef GAME_CLASS_10E5D464_H
 #define GAME_CLASS_10E5D464_H
 
+#include "Game/Class_10BFBD70.h"
+
 class Class_10E5D464
 {
 public:
     virtual void FUN_10a11ec0(int Type, int A, int B, int C);
     virtual void Virtual1(int A, int B, int C);
+
+    Class_10E5D464(int Value);
+    ~Class_10E5D464();
+
+    int Unknown04;
+    Class_10BFBD70 Unknown08;
+    Class_10BFBD70 Unknown14;
+    Class_10BFBD70 Unknown20;
 };
 
 #endif // GAME_CLASS_10E5D464_H

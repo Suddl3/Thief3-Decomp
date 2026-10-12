@@ -1,5 +1,6 @@
 // Game/Unsorted_10936B70_4.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_109373D0.h"
 
 class IDirect3DBaseTexture8;
 
@@ -125,20 +126,6 @@ public:
 extern IDirect3DDevice8* GDirect3DDevice8;
 
 extern int DAT_10efefb8;
-
-// Copied whole from include/Game/Class_109373D0.h with the texture array at 0x1C and this unit's methods added.
-class Class_109373D0
-{
-public:
-    void FUN_10936cf0();
-    void FUN_10937010();
-    void FUN_109373d0(unsigned long Value);
-
-    char Unknown00[0x1C];
-    IDirect3DBaseTexture8* Unknown1C[4];
-    char Unknown2C[0x684];
-    unsigned long Unknown6B0;
-};
 
 // FUNCTION: 0x10937010 ?FUN_10937010@Class_109373D0@@QAEXXZ
 void Class_109373D0::FUN_10937010()

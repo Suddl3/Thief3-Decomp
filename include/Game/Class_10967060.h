@@ -7,6 +7,7 @@ class Class_10967060
 {
 public:
     Class_10967060 FUN_10967060(const Class_10967060& A);
+    float FUN_109671b0();
 
     int Unknown00;
     int Unknown04;

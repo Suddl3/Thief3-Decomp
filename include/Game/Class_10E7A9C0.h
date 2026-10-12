@@ -20,6 +20,8 @@ public:
     virtual void Virtual9();
     virtual void FUN_10b248d0(Class_10B152C0* p1);
 
+    Class_10E7A9C0();
+
     Class_10E7A9C0* FUN_10b248f0();
 
     int Unknown04;

@@ -9,6 +9,8 @@ class Class_10E99348
 {
 public:
     virtual bool FUN_10c274b0(Struct_10C274B0* List);
+
+    Class_10E99348();
 };
 
 #endif // GAME_CLASS_10E99348_H

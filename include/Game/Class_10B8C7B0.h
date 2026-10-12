@@ -11,7 +11,11 @@ public:
     void FUN_10b8c7b0();
     void FUN_10b8cc60();
 
-    char Unknown00[0x20];
+    int Unknown00;
+    char Unknown04[4];
+    Struct_10D9E5E0_Param** Unknown08;
+    int Unknown0C;
+    char Unknown10[0x10];
     Struct_10D9E5E0_Param* Unknown20;
     bool Unknown24;
     char Pad25[0x3];

@@ -6,7 +6,7 @@
 struct Elem_1094E3A0
 {
 public:
-    char Unknown00[4];
+    int Unknown00;
     float Unknown04;
     char Unknown08[0x20];
 };

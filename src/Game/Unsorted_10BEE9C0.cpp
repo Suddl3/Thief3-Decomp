@@ -3,17 +3,7 @@
 #include "Game/Class_10C7D570.h"
 #include "Game/Class_10971570.h"
 #include "Game/Class_10BEEB50.h"
-
-class Class_10BFF600
-{
-public:
-    int FUN_10bff600(int A, const float* B);
-    bool FUN_10bff6d0(int A, const float* B);
-    void* FUN_10bff6f0(int A, const float* B, char C);
-    char FUN_10bff820(int A, const float* B, bool C);
-
-    char Pad00[0x1];
-};
+#include "Game/Class_10BFF600.h"
 
 class Class_10FF667C
 {

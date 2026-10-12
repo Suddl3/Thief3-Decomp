@@ -10,7 +10,11 @@ class Class_10925410
 public:
     int FUN_10925410(int Index);
 
-    char Unknown00[0xDC];
+    char Unknown00[0x40];
+    unsigned char Unknown40;
+    char Pad41[0x3];
+    int Unknown44;
+    char Pad48[0x94];
     int UnknownDC;
     char UnknownE0[4];
     Entry_10925410* UnknownE4;

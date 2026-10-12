@@ -3,13 +3,18 @@
 #ifndef GAME_CLASS_10950230_H
 #define GAME_CLASS_10950230_H
 
+class Class_10950230_Unknown00;
+
 class Class_10950230
 {
 public:
-    void FUN_10950230();
     bool FUN_10dbbbb0();
+    bool FUN_10950230();
 
-    char Pad00[0x1];
+    Class_10950230_Unknown00* Unknown00;
+    bool Unknown04;
+    bool Unknown05;
+    char Pad06[0x2];
 };
 
 #endif // GAME_CLASS_10950230_H

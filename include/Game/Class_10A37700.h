@@ -9,6 +9,7 @@ class Class_10A37700
 {
 public:
     void FUN_10a37700();
+    void FUN_10a384c0(char* A);
 
     char Unknown00[0xC];
     FRotator Unknown0C;

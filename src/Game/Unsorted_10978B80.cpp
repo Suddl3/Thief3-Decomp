@@ -1,22 +1,7 @@
 // Game/Unsorted_10978B80.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_109081E0.h"
-
-class Config
-{
-public:
-    Config();
-    ~Config();
-
-    static Config* Instance();
-    bool FUN_10910a20(const char* Section, const char* Key, int* Value, int D);
-    bool GetBool(const char* Section, const char* Key, bool* Value, const char* File);
-    bool GetFloat(const char* Section, const char* Key, float* Value, const char* File);
-    bool FUN_10910ca0(const char* Section, const char* Key, char* Value, int Size, int Default);
-
-    char Pad00[0x1];
-};
+#include "Game/Config.h"
 
 extern const char DAT_10e47820[];
 

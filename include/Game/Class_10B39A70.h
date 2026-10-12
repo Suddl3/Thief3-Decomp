@@ -5,6 +5,7 @@
 
 class Class_10B39A70_Unknown08;
 class Class_10B47C90;
+struct Struct_10B21820_Object;
 
 class Class_10B39A70
 {
@@ -12,7 +13,8 @@ public:
     void FUN_10b399f0();
     void FUN_10b39a70(int A);
 
-    char Unknown00[8];
+    char Unknown00[4];
+    Struct_10B21820_Object* Unknown04;
     Class_10B39A70_Unknown08* Unknown08;
     Class_10B47C90* Unknown0C[8];
 };

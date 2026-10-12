@@ -8,7 +8,10 @@ class Class_10B21350
 public:
     void FUN_10b21350();
 
-    char Unknown00[0x464];
+    char Unknown00[0x440];
+    int Unknown440;
+    int Unknown444;
+    char Unknown448[0x1C];
     int Unknown464;
 };
 

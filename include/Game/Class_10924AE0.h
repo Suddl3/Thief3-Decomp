@@ -14,6 +14,7 @@ public:
     bool FUN_10924ae0();
     bool FUN_10924490(int A, int B, int C, int D, Struct_1094D980* E);
     bool FUN_10924be0(Class_10924BE0* A);
+    void FUN_10924c60();
 
     bool Unknown00;
     char Pad01[0x3];

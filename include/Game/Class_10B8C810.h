@@ -3,6 +3,7 @@
 #ifndef GAME_CLASS_10B8C810_H
 #define GAME_CLASS_10B8C810_H
 
+class Class_10B8C810_Unknown14;
 struct Struct_10D9E5E0_Param;
 
 class Class_10B8C810
@@ -11,7 +12,13 @@ public:
     void FUN_10b8c810();
     void FUN_10b8cc90();
 
-    char Unknown00[0x19];
+    int Unknown00;
+    char Pad04[4];
+    Struct_10D9E5E0_Param** Unknown08;
+    int Unknown0C;
+    char Pad10[4];
+    Class_10B8C810_Unknown14** Unknown14;
+    char Pad18;
     bool Unknown19;
     char Unknown1A[6];
     Struct_10D9E5E0_Param* Unknown20;

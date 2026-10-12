@@ -8,6 +8,9 @@ class Class_10AB7500
 public:
     void FUN_10ab7330();
     void FUN_10ab7500();
+
+    char Unknown00[8];
+    int Difficulty;
 };
 
 #endif // GAME_CLASS_10AB7500_H

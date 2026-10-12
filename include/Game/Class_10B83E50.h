@@ -3,12 +3,21 @@
 #ifndef GAME_CLASS_10B83E50_H
 #define GAME_CLASS_10B83E50_H
 
+#include "Core/Core.h"
+#include "Game/Class_10B83DC0.h"
+
 class Class_10943600;
 
-class Class_10B83E50
+class Class_10B83E50 : public Class_10B83DC0
 {
 public:
     int FUN_10b83e50(Class_10943600* Out);
+
+    char Unknown00[0xAC];
+    FVector Unknown0AC;
+    float Unknown0B8;
+    char Unknown0BC[4];
+    int Unknown0C0;
 };
 
 #endif // GAME_CLASS_10B83E50_H

@@ -3,15 +3,34 @@
 #ifndef GAME_CLASS_10B197E0_H
 #define GAME_CLASS_10B197E0_H
 
+#include "Game/Class_10905A90_Member.h"
+
+struct Item_10B197E0;
+
+Class_10905A90_Member* GetAllocator();
+
 class Class_10B197E0
 {
 public:
+    ~Class_10B197E0()
+    {
+        FUN_10b19550(0);
+        if (Unknown04)
+        {
+            GetAllocator()->Virtual5(Unknown08);
+            Unknown08 = 0;
+            Unknown04 = 0;
+        }
+    }
+
     void FUN_10b19550(int Count);
     void FUN_10b197e0();
+    void FUN_10b19820(const Class_10B197E0& Other);
+    void FUN_10b5cee0(const Class_10B197E0& Other);
 
     int Unknown00;
     int Unknown04;
-    void* Unknown08;
+    Item_10B197E0* Unknown08;
 };
 
 #endif // GAME_CLASS_10B197E0_H

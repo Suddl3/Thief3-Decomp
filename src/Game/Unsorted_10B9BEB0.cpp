@@ -7,6 +7,7 @@
 #include "Game/Class_10B9E410.h"
 #include "Game/Class_10FF667C.h"
 #include "Game/Struct_10B9BDB0_Unknown118.h"
+#include "Game/Class_10B9BDB0.h"
 
 class Class_10BB8300;
 
@@ -32,17 +33,6 @@ public:
     int Unknown10;
     char Unknown14[4];
     Class_10BC9D40** Unknown18;
-};
-
-// Game/Class_10B9BDB0.h's copy, with the method this function is.
-class Class_10B9BDB0
-{
-public:
-    void FUN_10b9bdb0();
-    void FUN_10b9bf60();
-
-    char Unknown00[0x118];
-    Struct_10B9BDB0_Unknown118* Unknown118;
 };
 
 // FUNCTION: 0x10B9BF60 ?FUN_10b9bf60@Class_10B9BDB0@@QAEXXZ

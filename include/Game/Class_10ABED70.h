@@ -8,9 +8,12 @@ class Class_10ABED70
 public:
     void FUN_10abe520(int p1, int p2);
     void FUN_10abed70();
+    void FUN_10abed20(int A, bool B);
 
-    char Unknown00[0xC];
+    char Unknown00[8];
+    int Unknown08;
     int Unknown0C;
+    int Unknown10;
 };
 
 #endif // GAME_CLASS_10ABED70_H

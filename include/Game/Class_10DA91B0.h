@@ -11,7 +11,7 @@ public:
 
     void FUN_10da91d0();
 
-    char Unknown00[0x18];
+    int Unknown00[6];
     char Pad18[0x14];
 };
 

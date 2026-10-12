@@ -91,6 +91,14 @@ public:
     virtual void Virtual80();
     virtual void Virtual81();
     virtual bool Virtual82();
+    virtual void Virtual83();
+    virtual void Virtual84();
+    virtual void Virtual85();
+    virtual void Virtual86();
+    virtual void Virtual87();
+    virtual double Virtual88();
+
+    void FUN_10bd46e0();
 
     char Unknown04[0x7C];
     FVector Unknown80;

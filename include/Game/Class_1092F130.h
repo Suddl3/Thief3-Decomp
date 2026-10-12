@@ -7,6 +7,7 @@ class Class_1092F130
 {
 public:
     void FUN_1092f130();
+    void FUN_1092e9c0();
 
     char Unknown00[0xC];
     int Unknown0C;

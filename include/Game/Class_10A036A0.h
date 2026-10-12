@@ -3,12 +3,20 @@
 #ifndef GAME_CLASS_10A036A0_H
 #define GAME_CLASS_10A036A0_H
 
+class Class_10A9C200_Unknown00;
+
 class Class_10A036A0
 {
 public:
+    ~Class_10A036A0();
+    Class_10A036A0() : Unknown00(0), Unknown04(-1), Unknown08(-1), Unknown0C(-1) {}
+
     Class_10A036A0& FUN_10a036a0(const Class_10A036A0& Other);
 
-    char Unknown00[0x10];
+    Class_10A9C200_Unknown00* Unknown00;
+    int Unknown04;
+    int Unknown08;
+    int Unknown0C;
 };
 
 #endif // GAME_CLASS_10A036A0_H

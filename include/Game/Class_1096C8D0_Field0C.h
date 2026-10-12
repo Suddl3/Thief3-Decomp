@@ -6,7 +6,11 @@
 class Class_1096C8D0_Field0C
 {
 public:
-    char Unknown00[0x1C];
+    union
+    {
+        char Unknown00[0x1C];
+        char Pad00[0x1c];
+    };
     int Unknown1C;
 };
 

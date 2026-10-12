@@ -1,7 +1,7 @@
 // Game/GSLean_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
+#include "Game/Class_10AC9AE0.h"
 
 class AGarrett
 {
@@ -18,16 +18,6 @@ public:
 };
 
 Static_10B3AC60* FUN_10b3ac60();
-
-class Class_10AC9AE0
-{
-public:
-    void FUN_10ac9ae0();
-    void FUN_10ac9b40(AGarrett* Garrett);
-
-    char Unknown00[4];
-    void* Unknown04;
-};
 
 class Class_10ABB6B0;
 

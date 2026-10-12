@@ -9,7 +9,7 @@ class Class_10C59EE0
 {
 public:
     void FUN_10c59ee0(bool Flag);
-    void FUN_10c58bb0(int A, int B);
+    void FUN_10c58bb0(bool A, bool B);
 
     Class_10C59EE0_Unknown00* Unknown00;
 };

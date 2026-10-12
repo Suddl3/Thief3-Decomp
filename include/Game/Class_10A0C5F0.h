@@ -9,7 +9,6 @@ class Class_10A0C5F0
 {
 public:
     void FUN_10a0c5f0(int Index);
-
     int FindIndex(Class_10E4AA80* Item)
     {
         for (int i = 0; i < Unknown00; i++)

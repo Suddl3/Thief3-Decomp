@@ -3,7 +3,9 @@
 #ifndef GAME_CLASS_10924100_H
 #define GAME_CLASS_10924100_H
 
+class Class_10924100_Unknown38;
 class Class_10924100_Unknown44;
+class Class_1092F130;
 class Class_10A1E620_Inner;
 
 class Class_10924100
@@ -18,11 +20,19 @@ public:
     bool FUN_1091f6e0(Class_10924100_Unknown44* Item);
     void FUN_10920a30(Class_10A1E620_Inner* Inner);
 
-    char Unknown00[0xC];
+    char Unknown00[0x4];
+    int Unknown04;
+    int Unknown08;
     int Unknown0C;
-    char Pad10[0x1c];
+    Class_1092F130* Unknown10;
+    int Unknown14;
+    int Unknown18;
+    int Unknown1C;
+    char Pad20[0xC];
     int Unknown2C;
-    char Pad30[0xc];
+    int Unknown30;
+    char Pad34[0x4];
+    Class_10924100_Unknown38** Unknown38;
     int Unknown3C;
     char Unknown40[4];
     Class_10924100_Unknown44** Unknown44;

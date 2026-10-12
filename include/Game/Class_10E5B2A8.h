@@ -19,6 +19,8 @@ public:
     void FUN_109e2ce0(UObject* Obj, int A, int B);
     void FUN_109e2fa0(UObject* A, int B, int C);
     void FUN_109e3060(UObject* A, int B, int C);
+    void FUN_109e2b40(AZoneProperties* A);
+    void FUN_109e2d50(int A, AZoneProperties* B);
 
     int Unknown04;
     int Unknown08;

@@ -8,9 +8,16 @@
 class Class_10C13130
 {
 public:
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual void Virtual2();
+    virtual void Virtual3();
+    virtual void Virtual4(const Class_1090A780& A);
+
     Class_1090A780 FUN_10c13130();
 
-    char Unknown00[0xC];
+    char Unknown04[4];
+    int Unknown08;
     Class_1090A780 Unknown0C;
 };
 

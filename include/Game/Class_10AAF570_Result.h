@@ -55,6 +55,7 @@ public:
     virtual bool Virtual46();
     virtual void Virtual47();
     virtual int Virtual48();
+    virtual void Virtual49(int A);
 };
 
 #endif // GAME_CLASS_10AAF570_RESULT_H

@@ -3,6 +3,7 @@
 #include "Game/Class_10AAB5C0.h"
 #include "Game/Class_10A98570_Unknown08.h"
 #include "Game/Info_10B196B0.h"
+#include "Game/Static_10B3AC60.h"
 
 class Class_10E6BF84
 {
@@ -31,11 +32,6 @@ class Class_10B3AC90_Result
 public:
     char Unknown00[0x474];
     int Unknown474;
-};
-
-struct Static_10B3AC60
-{
-    Class_10B3AC90_Result* FUN_10b3ac90();
 };
 
 Static_10B3AC60* FUN_10b3ac60();

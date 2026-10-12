@@ -1,8 +1,8 @@
 // Game/Vocabulary_6.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10936A40.h"
 #include "Game/Struct_10924210.h"
+#include "Game/Vocabulary.h"
 
 class IDirect3DBaseTexture8;
 
@@ -74,17 +74,6 @@ public:
     int Unknown64;
     int Unknown68;
     Struct_109301D0* Unknown6C;
-};
-
-class Vocabulary
-{
-public:
-    void FUN_109301d0();
-
-    char Unknown00[0x50];
-    int m_ItemCount;
-    int Unknown54;
-    Class_109301D0_Unknown58** m_Items;
 };
 
 // FUNCTION: 0x109301D0 ?FUN_109301d0@Vocabulary@@QAEXXZ

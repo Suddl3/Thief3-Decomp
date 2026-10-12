@@ -11,6 +11,7 @@ public:
     void FUN_10a34b90(int A);
     void FUN_10a35140();
     void FUN_10a34810(int Size);
+    void FUN_10a34420(Class_10A34B90_Node* Node, int* Key);
 
     int Unknown00;
     int Unknown04;

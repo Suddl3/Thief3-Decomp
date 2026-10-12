@@ -5,6 +5,10 @@
 
 struct Elem_10C64AC0
 {
+public:
+    void FUN_10d57770(int A);
+    void FUN_10d577b0(void* A, int B);
+
     char Unknown00[0x38];
 };
 

@@ -3,6 +3,8 @@
 #ifndef GAME_CLASS_10914D60_H
 #define GAME_CLASS_10914D60_H
 
+#include "Game/Class_10C49740.h"
+
 class Class_109081E0;
 
 class Class_10914D60
@@ -14,6 +16,8 @@ public:
 
     char Unknown00[0x8];
     unsigned char Field08;
+    char Unknown09[0x3];
+    Class_10C49740 Unknown0C;
 };
 
 #endif // GAME_CLASS_10914D60_H

@@ -3,11 +3,15 @@
 #ifndef GAME_OBJECT_10AB5B20_H
 #define GAME_OBJECT_10AB5B20_H
 
+struct Struct_10C647F0_Vec;
+
 class Object_10AB5B20
 {
 public:
     virtual void Virtual0();
     virtual void Virtual1();
+    virtual void Virtual2();
+    virtual Struct_10C647F0_Vec* Virtual3();
 };
 
 #endif // GAME_OBJECT_10AB5B20_H

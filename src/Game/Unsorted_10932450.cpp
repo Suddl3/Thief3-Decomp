@@ -3,48 +3,10 @@
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10932350.h"
 #include "Game/Class_10932760.h"
+#include "Game/Class_10943600.h"
+#include "Game/Class_10E49D14.h"
 
 class Item_10943600;
-
-Class_10905A90_Member* GetAllocator();
-
-class Class_10943600
-{
-public:
-    ~Class_10943600()
-    {
-        Empty();
-    }
-
-    int FUN_10943600(const Item_10943600* Item);
-    void FUN_10da4f50(int NewCount);
-    void Empty()
-    {
-        FUN_10da4f50(0);
-        if (Unknown04)
-        {
-            GetAllocator()->Virtual5(Unknown08);
-            Unknown08 = 0;
-            Unknown04 = 0;
-        }
-    }
-
-    int Unknown00;
-    int Unknown04;
-    Item_10943600* Unknown08;
-};
-
-class Class_10E49D14
-{
-public:
-    virtual ~Class_10E49D14();
-
-    void FUN_10954ce0();
-
-    char Unknown04[0xB4];
-    Class_10943600 Unknown0B8;
-    Class_10943600 Unknown0C4;
-};
 
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 

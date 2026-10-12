@@ -1,6 +1,7 @@
 // Game/Class_10E696A8.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10A52A40_Member.h"
+#include "Game/Class_10A52A40.h"
 
 struct Struct_10A5D4F0
 {
@@ -69,17 +70,6 @@ public:
     virtual void Virtual54();
     virtual void Virtual55();
     virtual void Virtual56(int A);
-};
-
-class Class_10A52A40
-{
-public:
-    virtual void Virtual0();
-
-    void FUN_10a52a40(Class_10A52A40_Member* P);
-
-    char Unknown04[0xC0];
-    Class_10A52A40_Member* Unknown0C4;
 };
 
 class Class_10E696A8 : public Class_10A52A40

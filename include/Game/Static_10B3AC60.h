@@ -5,10 +5,14 @@
 
 #include "Game/Class_10B3AC90.h"
 
+class Class_10B3AC90_Result;
+
 struct Static_10B3AC60 : Class_10B3AC90
 {
 public:
     Static_10B3AC60();
+
+    Class_10B3AC90_Result* FUN_10b3ac90();
 
     char Pad01[0x3];
     char Pad07[0x1];

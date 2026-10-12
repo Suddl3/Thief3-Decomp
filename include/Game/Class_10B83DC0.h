@@ -3,12 +3,23 @@
 #ifndef GAME_CLASS_10B83DC0_H
 #define GAME_CLASS_10B83DC0_H
 
+#include "Core/Core.h"
+
 class Class_10943600;
+struct Struct_10B82770_Param;
 
 class Class_10B83DC0
 {
 public:
     int FUN_10b83dc0(Class_10943600* Out);
+    void FUN_10b82770(Struct_10B82770_Param* P);
+
+    char Pad00[0xA0];
+    FVector UnknownA0;
+    char PadAC[0xC];
+    float UnknownB8;
+    char PadBC[0x4];
+    int UnknownC0;
 };
 
 #endif // GAME_CLASS_10B83DC0_H

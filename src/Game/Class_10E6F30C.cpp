@@ -4,6 +4,7 @@
 #include "Game/cActorManager.h"
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_109081E0.h"
+#include "Game/Class_10E6F30C.h"
 
 extern const char DAT_10e6f2fc[];
 
@@ -43,27 +44,6 @@ public:
 };
 
 extern Class_10F46DA0* DAT_10f46da0;
-
-// Copied from Game/Class_10E6F30C.h with the fields at +0x18 to +0x28 added.
-class Class_10E6F30C : public cActorManager
-{
-public:
-    Class_10E6F30C();
-    virtual ~Class_10E6F30C();
-
-    virtual void FUN_10ab9d90(int Type, int A, int B, int C);
-
-    void FUN_10ab85a0();
-
-    Class_10AB90F0 Unknown04;
-    int Unknown10;
-    int Unknown14;
-    int Unknown18;
-    int Unknown1C;
-    int Unknown20;
-    int Unknown24;
-    int Unknown28;
-};
 
 // FUNCTION: 0x10AB85A0 ?FUN_10ab85a0@Class_10E6F30C@@QAEXXZ
 void Class_10E6F30C::FUN_10ab85a0()

@@ -5,6 +5,8 @@
 
 #include "Game/Class_10928760.h"
 
+class Class_109301D0_Unknown58;
+
 class Vocabulary : public Class_10928760
 {
 public:
@@ -19,11 +21,14 @@ public:
     void FUN_10930110(int Param1, int Param2);
     bool FUN_10925160(int A);
     void FUN_10930170(int A, int B);
+    void FUN_1092ff60(int A, int B);
+    void FUN_1092fcb0(int A, int B, int C);
+    void FUN_109301d0();
 
     char Pad04[0x4c];
     int m_ItemCount;
-    char Unknown54[4];
-    void** m_Items;
+    int Unknown54;
+    Class_109301D0_Unknown58** m_Items;
 };
 
 #endif // GAME_VOCABULARY_H

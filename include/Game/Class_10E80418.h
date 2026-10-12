@@ -14,6 +14,8 @@ public:
     virtual int FUN_10b559e0(char* Command, int Unknown);
 
     Class_10E80418* FUN_10b40a00();
+
+    char Pad04[0x158];
 };
 
 #endif // GAME_CLASS_10E80418_H

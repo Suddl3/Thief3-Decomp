@@ -10,9 +10,15 @@ struct Struct_10924210;
 class Class_1091E940 : public Class_1091E400
 {
 public:
-    void FUN_1091e940(int A, int B);
-    void FUN_1091ea50(Struct_10924210* A, int B);
     void FUN_1091eb80();
+    void FUN_1091e940(float A, bool B);
+    void FUN_1091e690();
+    void FUN_1091ea50(Struct_10924210* A, bool B);
+
+    float Unknown190;
+    float Unknown194;
+    float Unknown198;
+    float Unknown19C;
 };
 
 #endif // GAME_CLASS_1091E940_H

@@ -3,6 +3,7 @@
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10C4B2A0.h"
 #include "Game/Class_10C68070.h"
+#include "Game/Class_10C662F0.h"
 
 Class_10905A90_Member* GetAllocator();
 
@@ -15,21 +16,6 @@ Class_10C4B2A0* FUN_10c4c2d0();
 class Class_10E9CB00;
 
 struct Struct_10C64E10;
-
-// Copied whole from include/Game/Class_10C662F0.h, with FUN_10c66230 added.
-class Class_10C662F0
-{
-public:
-    bool FUN_10c662f0(int A, int B, int C);
-    void FUN_10c64e10(Class_10E9CB00* A);
-    void FUN_10c64ff0(Class_10E9CB00* A);
-    bool FUN_10c66230(int A, Class_10C68070* B);
-
-    char Unknown00[0x178];
-    int Unknown178;
-    int Unknown17C;
-    Struct_10C64E10* Unknown180;
-};
 
 Class_10C662F0* FUN_10c65090();
 

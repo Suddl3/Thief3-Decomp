@@ -12,6 +12,7 @@ public:
     virtual void FUN_10b39500(int A);
 
     ~Class_10E7C584();
+    Class_10E7C584(Class_109A62E0* A);
 
     int Unknown04;
     Class_109A62E0* Unknown08;

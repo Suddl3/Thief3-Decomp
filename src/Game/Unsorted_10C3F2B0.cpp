@@ -1,9 +1,9 @@
 // Game/Unsorted_10C3F2B0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10C3F110.h"
 #include "Game/Class_10C62A40.h"
+#include "Game/Class_10C80360.h"
 
 Class_10905A90_Member* GetAllocator();
 
@@ -27,25 +27,6 @@ class Class_10C80360_Unknown14;
 class Class_10C80360_Unknown18;
 
 class Class_10C80360_Unknown1C;
-
-// Copied from include/Game/Class_10C80360.h with FUN_10c5f060 added.
-class Class_10C80360 : public Class_10C62A40
-{
-public:
-    unsigned char FUN_10c80360();
-    void FUN_10c5dc60(float A);
-    void FUN_10c5e810();
-    void FUN_10c5daf0();
-    void FUN_10c5f060();
-
-    char Pad01[0xc];
-    bool Unknown0D;
-    char Unknown0E[2];
-    Class_10C80360_Unknown10* Unknown10;
-    Class_10C80360_Unknown14* Unknown14;
-    Class_10C80360_Unknown18* Unknown18;
-    Class_10C80360_Unknown1C* Unknown1C;
-};
 
 Class_10C80360* FUN_10c5f280();
 

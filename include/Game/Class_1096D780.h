@@ -3,6 +3,8 @@
 #ifndef GAME_CLASS_1096D780_H
 #define GAME_CLASS_1096D780_H
 
+#include "Core/Core.h"
+
 class Class_10DA0870;
 
 class Class_1096D780
@@ -10,10 +12,14 @@ class Class_1096D780
 public:
     void* Get();
 
-    char Unknown00[0x98];
+    char Unknown00[0x38];
+    FRotator Unknown38;
+    char Unknown44[0x54];
     void* Field98;
     char Unknown9C[0x14];
     Class_10DA0870* UnknownB0;
+    char UnknownB4[0x440 - 0xB4];
+    int Unknown440;
 };
 
 #endif // GAME_CLASS_1096D780_H

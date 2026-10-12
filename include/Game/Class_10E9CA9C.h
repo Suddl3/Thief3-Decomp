@@ -6,6 +6,7 @@
 #include "Game/Class_109081E0.h"
 
 class Class_10C61C20_Param;
+class Class_10C62290;
 
 class Class_10E9CA9C
 {
@@ -13,6 +14,8 @@ public:
     virtual void Virtual0();
     virtual void __stdcall FUN_10c62760(const char* Text);
     virtual void FUN_10c61c20(Class_10C61C20_Param* p1);
+    virtual void Virtual3();
+    virtual Class_10C62290* FUN_10c62550(int A, const char* B);
 
     char Unknown04;
     char Pad05[0x3];

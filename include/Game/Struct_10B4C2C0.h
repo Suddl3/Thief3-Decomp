@@ -5,6 +5,7 @@
 
 struct Struct_10B4C2C0
 {
+public:
     int X;
     int Y;
     int Z;

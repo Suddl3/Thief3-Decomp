@@ -9,7 +9,13 @@
 class Class_10E4B040 : public Class_10B7C000, public Class_10E5B578
 {
 public:
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual Class_10E4B040* FUN_10961620(unsigned int Flags);
+
     ~Class_10E4B040();
+
+    void FUN_109615b0();
 };
 
 #endif // GAME_CLASS_10E4B040_H

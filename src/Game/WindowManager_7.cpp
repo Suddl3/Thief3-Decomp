@@ -4,20 +4,9 @@
 #include "Game/Class_109E6D60.h"
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_109081E0.h"
+#include "Game/Class_10B45AD0.h"
 
 extern const char DAT_10e790b0[];
-
-// The header's class with the field at 0x15D added (copied whole; the lead merges it).
-class Class_10B45AD0
-{
-public:
-    void FUN_10b45ad0(int A);
-
-    char Unknown00[0x158];
-    int Unknown158;
-    char Pad15C[0x1];
-    char Unknown15D;
-};
 
 // The header's class with FUN_10b15d70 added (copied whole; the lead merges it).
 // Virtual4 takes an int here: the header's Class_10B45AD0* parameter would not override slot 4.

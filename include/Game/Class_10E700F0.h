@@ -3,8 +3,8 @@
 #ifndef GAME_CLASS_10E700F0_H
 #define GAME_CLASS_10E700F0_H
 
-#include "Game/cActorManager.h"
 #include "Game/Class_10E70060.h"
+#include "Game/cActorManager.h"
 
 class Class_10E700F0 : public cActorManager, public Class_10E70060
 {

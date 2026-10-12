@@ -7,8 +7,12 @@ class Class_109523D0
 {
 public:
     bool FUN_109523d0(int Mask);
+    int FUN_10952410(int* Key);
+    void FUN_10952590();
 
-    char Unknown00[0x30];
+    char Unknown00[0x28];
+    int Unknown28;
+    char Unknown2C[0x4];
     int Unknown30;
 };
 
