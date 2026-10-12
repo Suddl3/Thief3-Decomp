@@ -1,6 +1,6 @@
 // Game/Unsorted_10C3EA10.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10C30DD0.h"
+#include "Game/cIntHashTable.h"
 #include "Game/Class_10C30DD0_Node.h"
 #include "Game/Class_10C3EA90.h"
 

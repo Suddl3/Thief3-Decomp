@@ -10,7 +10,7 @@ class Class_10E81DD4
 public:
     virtual ~Class_10E81DD4();
 
-    void* Unknown04;
+    void* m_Window;
     Struct_10E81DD4_Unknown08 Unknown08[2];
 };
 

@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10C26980.h"
 #include "Game/Class_10C26E80.h"
-#include "Game/Class_10C39220.h"
+#include "Game/cPositionList.h"
 #include "Game/MC_MoveToPoint.h"
 
 extern void* DAT_10e99298[];

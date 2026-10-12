@@ -54,7 +54,7 @@ void Class_1092D960::Release()
 // FUNCTION: 0x1092E8F0 ?Clear@Class_1092E8F0@@QAEXXZ
 void Class_1092E8F0::Clear()
 {
-    FUN_1091f380(0);
+    SetCount(0);
     if (m_CapacityBytes)
     {
         GetAllocator()->Virtual5(m_Data);

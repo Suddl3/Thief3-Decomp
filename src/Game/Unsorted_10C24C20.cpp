@@ -17,7 +17,7 @@ void Class_10C25010::FUN_10c25010(int, Class_10C25010_Param1* Param1, int* Index
 {
     Unknown18.SetCount(0);
     FUN_10c20da0(&Unknown18, Param1->Unknown08 + *Index);
-    Unknown24.FUN_10c24260(0);
+    Unknown24.SetCount(0);
     FUN_10c24c80(&Unknown18, Value);
     Unknown30 = 0;
     FUN_10c21510(&Unknown40, &Unknown4C, Value);

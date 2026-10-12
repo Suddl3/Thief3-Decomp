@@ -13,7 +13,7 @@ public:
     void Enqueue(int Value);
     void Start(int Value);
 
-    Class_10BBA080* Unknown00;
+    Class_10BBA080* m_Random;
     cIntArray m_Queue;
     char Pad10[0x8];
     float m_EndTime;

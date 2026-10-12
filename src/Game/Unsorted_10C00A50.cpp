@@ -3,7 +3,7 @@
 #include "Game/Class_10C00A50.h"
 #include "Game/Class_10C00C70.h"
 #include "Game/Class_10C01F50.h"
-#include "Game/Class_10C01FC0.h"
+#include "Game/cNodeHashMap.h"
 
 // FUNCTION: 0x10C00A50 ?GetElementPtr@Class_10C00A50@@QAEPAHH@Z
 int* Class_10C00A50::GetElementPtr(int p1)
@@ -28,8 +28,8 @@ void Class_10C01F50::Free()
     m_Collisions = 0;
 }
 
-// FUNCTION: 0x10C01FC0 ?Free@Class_10C01FC0@@QAEXXZ
-void Class_10C01FC0::Free()
+// FUNCTION: 0x10C01FC0 ?Free@cNodeHashMap@@QAEXXZ
+void cNodeHashMap::Free()
 {
     Clear(0x40);
     ::operator delete(Unknown14);

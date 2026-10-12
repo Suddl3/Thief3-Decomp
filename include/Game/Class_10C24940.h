@@ -8,7 +8,7 @@ struct Item_10C24BC0;
 class Class_10C24940
 {
 public:
-    void FUN_10c24260(int Count);
+    void SetCount(int Count);
     void Clear();
     int AddItem(const Item_10C24BC0& Item);
 

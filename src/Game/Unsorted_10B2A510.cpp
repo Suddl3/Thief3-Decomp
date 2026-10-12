@@ -22,7 +22,7 @@ public:
     char Unknown08[0x24];
 };
 
-class Class_10E80798
+class cFade
 {
 public:
     virtual void Virtual0();
@@ -155,7 +155,7 @@ public:
 };
 
 // FUNCTION: 0x10B2A510 ?AdvanceFade@Class_10B2A750@@QAEXXZ
-void Class_10E80798::AdvanceFade()
+void cFade::AdvanceFade()
 {
     Class_10B2A480* Obj = &Unknown1B8;
     m_FadeElapsed = 0;

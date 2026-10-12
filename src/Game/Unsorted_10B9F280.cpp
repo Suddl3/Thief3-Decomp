@@ -3,7 +3,7 @@
 #include "Game/Class_10AAB5C0.h"
 #include "Game/Class_10B9F450.h"
 #include "Game/Class_10B9F480.h"
-#include "Game/Class_10E5BC3C.h"
+#include "Game/cObjectTable.h"
 #include "Game/Object_10BE58C0.h"
 #include "Game/Class_10B9F2F0.h"
 #include "Game/Class_10C04AA0.h"
@@ -41,8 +41,8 @@ void SetBit(int Bit, bool Clear)
     }
 }
 
-// FUNCTION: 0x10B9F3B0 ?SerializeRef@Class_10E5BC3C@@UAEXPAVObject_10BE58C0@@AAPAVClass_10AAB5C0@@@Z
-void Class_10E5BC3C::SerializeRef(Object_10BE58C0* Ar, Class_10AAB5C0*& Obj)
+// FUNCTION: 0x10B9F3B0 ?SerializeRef@cObjectTable@@UAEXPAVObject_10BE58C0@@AAPAVClass_10AAB5C0@@@Z
+void cObjectTable::SerializeRef(Object_10BE58C0* Ar, Class_10AAB5C0*& Obj)
 {
     int Index = 0;
     if (Ar->Unknown14)

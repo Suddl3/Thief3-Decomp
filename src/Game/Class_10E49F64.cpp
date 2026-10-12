@@ -1,4 +1,4 @@
-// Game/Class_10E49F64.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/cD3DDynamicVertexBuffer.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
 class Class_10934B10_Unknown14;
@@ -26,7 +26,7 @@ public:
     virtual int __stdcall Virtual11(unsigned int A, unsigned int B, void** C, unsigned int D);
 };
 
-class Class_10E49F64
+class cD3DDynamicVertexBuffer
 {
 public:
     virtual void Virtual0();
@@ -37,17 +37,17 @@ public:
     virtual void Virtual5();
     virtual int CreateBuffer(int A, int B, void** Out);
 
-    Class_10934B10_Unknown04* Unknown04;
+    Class_10934B10_Unknown04* m_Pool;
     char Unknown08[0xc];
     Class_10934B10_Unknown14* m_Buffer;
-    unsigned int Unknown18;
+    unsigned int m_Offset;
     int m_Size;
     unsigned int m_Stride;
     unsigned int m_Count;
 };
 
-// FUNCTION: 0x10934B10 ?CreateBuffer@Class_10E49F64@@UAEHHHPAPAX@Z
-int Class_10E49F64::CreateBuffer(int A, int B, void** Out)
+// FUNCTION: 0x10934B10 ?CreateBuffer@cD3DDynamicVertexBuffer@@UAEHHHPAPAX@Z
+int cD3DDynamicVertexBuffer::CreateBuffer(int A, int B, void** Out)
 {
     if (Out == 0)
         return 0x80070057;
@@ -60,14 +60,14 @@ int Class_10E49F64::CreateBuffer(int A, int B, void** Out)
             return 0x80070057;
         if (m_Size != 0)
             return 0x80040720;
-        int Hr = Unknown04->FUN_10934bd0(m_Stride * B, m_Stride, &m_Buffer, &Unknown18);
+        int Hr = m_Pool->FUN_10934bd0(m_Stride * B, m_Stride, &m_Buffer, &m_Offset);
         if (Hr >= 0)
         {
-            Hr = m_Buffer->Virtual11(Unknown18, m_Stride * B, Out, Unknown18 != 0 ? 0x1000 : 0x2000);
+            Hr = m_Buffer->Virtual11(m_Offset, m_Stride * B, Out, m_Offset != 0 ? 0x1000 : 0x2000);
             if (Hr >= 0)
             {
                 m_Size = m_Stride * B;
-                m_Count = Unknown18 / m_Stride;
+                m_Count = m_Offset / m_Stride;
             }
         }
         return Hr;

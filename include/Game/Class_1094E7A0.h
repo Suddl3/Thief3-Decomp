@@ -16,7 +16,7 @@ public:
     Struct_1094E7A0* m_Slots;
     int Unknown10C;
     int m_CurrentSlot;
-    Class_1094E7A0_Unknown114* Unknown114[1];
+    Class_1094E7A0_Unknown114* m_Handlers[1];
 };
 
 #endif // GAME_CLASS_1094E7A0_H

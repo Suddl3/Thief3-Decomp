@@ -11,7 +11,7 @@ public:
     virtual void Virtual3();
     virtual void Virtual4();
     virtual void Virtual5();
-    virtual bool FUN_10a66dd0(Class_10E6B490* p1);
+    virtual bool IsEqual(Class_10E6B490* p1);
 
     int Unknown04;
     int Unknown08;
@@ -36,8 +36,8 @@ public:
     Struct_10A66E20 m_Value;
 };
 
-// FUNCTION: 0x10A66DD0 ?FUN_10a66dd0@Class_10E6B490@@UAE_NPAV1@@Z
-bool Class_10E6B490::FUN_10a66dd0(Class_10E6B490* p1)
+// FUNCTION: 0x10A66DD0 ?IsEqual@Class_10E6B490@@UAE_NPAV1@@Z
+bool Class_10E6B490::IsEqual(Class_10E6B490* p1)
 {
     return p1->Unknown08 == Unknown08;
 }

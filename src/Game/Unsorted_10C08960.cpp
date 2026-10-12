@@ -48,7 +48,7 @@ public:
     int* Unknown08;
 };
 
-class Class_10C08E30
+class cItemList
 {
 public:
     void AddUnique(int Item);
@@ -78,8 +78,8 @@ void Class_10C08DE0::FUN_10c08de0()
     FUN_10c08d60();
 }
 
-// FUNCTION: 0x10C08E30 ?AddUnique@Class_10C08E30@@QAEXH@Z
-void Class_10C08E30::AddUnique(int Item)
+// FUNCTION: 0x10C08E30 ?AddUnique@cItemList@@QAEXH@Z
+void cItemList::AddUnique(int Item)
 {
     if (m_ItemIds.FindIndex(Item) == -1)
         m_ItemIds.Append(Item);

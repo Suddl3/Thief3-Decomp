@@ -6,7 +6,7 @@
 #include "Game/Class_10C271A0.h"
 
 class cString;
-class Class_10C39220;
+class cPositionList;
 class FArchive;
 
 class MC_MoveToPoint : public Class_10C271A0
@@ -21,7 +21,7 @@ public:
     cString GetClassName();
 
     char Unknown04[0x44];
-    Class_10C39220* Unknown48;
+    cPositionList* Unknown48;
     float m_Point[3];
 };
 

@@ -4627,3 +4627,57 @@ field Class_10C49E20::Unknown0C m_NextId AllocateId returns ++Unknown0C - 1 when
 field Class_10C4DE40::Unknown10 m_Elements FUN_10c4de40 indexes it as an array of Elem_10C4DE40 records.
 field Class_10C64AC0::Unknown1C m_Elements Array of Elem_10C64AC0 indexed by GetElem's Index.
 field Class_10C63EF0::Unknown18 m_Item Holds the item SetItem stores; the previous one is unlinked first.
+class Class_10E5BC3C cObjectTable m_Objects is the table SerializeRef indexes when loading object references.
+class Class_10E49F64 cD3DDynamicVertexBuffer SetStreamSource binds it via cD3DStateCache; CreateBuffer locks with D3DLOCK_NOOVERWRITE/DISCARD flags.
+class Class_10C39220 cPositionList m_Entries, m_Index and m_Count hold 3D positions; GetCurrent copies the current one for MoveToCurrent.
+class Class_10C30DD0 cIntHashTable Chained hash table from int keys to int values: Insert hashes the key with m_KeyTraits; Rehash resizes the buckets.
+class Class_10E80798 cFade LoadFadeTime reads the FadeTime config key; UpdateFade sets the colour's alpha from elapsed/duration and calls AdvanceFade.
+class Class_10E80418 cCheatHandler HandleCheatCommand matches the HURTME and HEALME strings and applies both cheats to the player.
+class Class_10E667C4 cProximityManager Xbox twin's matched functions are in ProximityManager.cpp.
+class Class_10C0C090 cEntryTable Owns m_Entries array of Struct_10C0BFC0*; FindEntry looks up by two keys and UpdatePosition stamps time and position into the found entry
+class Class_10C08E30 cItemList Holds Class_10C08E90 m_Items and cIntArray m_ItemIds; AddItem appends a new item then AddUnique records its id
+class Class_10C01FC0 cNodeHashMap Derives Class_10C01140; Clear frees every Class_10C01140_Node chain in its bucket array and Free wraps Clear with the array delete
+class Class_10B9FBE0 cCharArray Fields m_Count, m_Capacity, m_Data; Resize reallocates m_Data in 16-byte steps and zero-fills new chars.
+class Class_10ACA620 cTimer Tick subtracts its argument from Remaining; at zero it calls DAT_10f46da0->Virtual5(0xb); Fire ends it early.
+class Class_10A63340 cRemovableIntArray Derives from cIntArray; EraseAt moves the items after Index down one place, then calls SetCount with one less.
+function 0x10C24260 SetCount Header parameter Count; Clear passes 0, AddItem passes Index+1 before writing m_Items[Index].
+function 0x10A4E9D0 Resize Free and Reset call it with 0 before freeing or resetting its buffers; its parameter is Count.
+function 0x10A33FD0 Resize Append grows it to Index+1 before storing an item; Clear calls it with 0 before freeing the items.
+function 0x1091F380 SetCount Clear passes 0 and CopyFrom passes Other's count before copying, as Class_1092E930::Clear does for SetCount.
+function 0x10A2F510 GetName Returns &m_Name when m_HasName is set, else null.
+function 0x10A66DD0 IsEqual Returns p1->Unknown08 == Unknown08; Class_10E6B4AC::IsEqual has the same shape.
+function 0x10A66F50 GetXAxis Recomputes Unknown0C from Unknown08's rotation via FCoords::FUN_10961af0; returns &Unknown0C.XAxis.
+function 0x10C0BFC0 FindEntry Scans m_Entries comparing Unknown30 and Unknown2C to the two keys; the method name and loop body agree
+function 0x10C0C090 UpdatePosition Calls FindEntry, then writes GetTimeSeconds() into Unknown5C and position into Unknown38 of the found entry
+function 0x10C08E90 Empty Calls FUN_10c089b0(0) to clear the count, then frees Unknown08 through the allocator when Unknown04 is set
+function 0x10C091A0 Add Grows the array to Unknown00 + 1 and copies the item's fields into the new slot, returning its index
+function 0x10C08E30 AddUnique Appends the id to m_ItemIds only when FindIndex reports it absent; the method name and body agree
+function 0x10C09200 AddItem Builds a local Item_10C091A0, adds it to m_Items, then calls AddUnique with the same id
+function 0x10C016B0 Clear Frees every node chain in the bucket array, zeroes the counts, deletes the array and rehashes unless the table is marked fixed
+function 0x10C01FC0 Free Calls Clear(0x40), deletes the bucket array and zeroes the members; the method name and body agree
+function 0x10C01730 Clear Frees every node chain in m_Buckets, zeroes the counts, deletes the array and rehashes unless m_NoResize is set
+function 0x10C01F50 Free Calls Clear(0x40), deletes m_Buckets and zeroes the counts; the method name and body agree
+function 0x10C01C10 RemoveEntry Removes the entry at index A from Data and deletes it, after a virtual call when the entry has a child
+function 0x10C01CE0 RemoveAll Loops RemoveEntry(0) until Unknown00 reaches zero; the method name and body agree
+function 0x10A3B460 HandleEvent vtable slot 0: the same virtual function as Class_10E6FC80::HandleEvent (0x10AC8E80)
+field cD3DDynamicVertexBuffer::Unknown04 m_Pool CreateBuffer sub-allocates each buffer through it: size, stride, buffer and offset outputs.
+field cD3DDynamicVertexBuffer::Unknown18 m_Offset Allocation's output offset, passed as the byte offset argument of CreateBuffer's lock call.
+field cPositionList::Unknown48 m_Mover MoveToCurrent reads its position and passes it with the current entry to FUN_10c37cb0.
+field cIntHashTable::Unknown18 m_KeyTraits Insert calls its Virtual0 on the key for hash bytes; Class_10C30D10 names the same field m_KeyTraits.
+field Class_10C29410::Unknown00 m_Random Start calls GetRandomInRange and RollChance on it for the delay and the chance.
+field Class_10A492B0::Unknown18 m_KeyAccessor Insert passes each key to its Virtual0, which yields the bytes HashBytes hashes.
+field Class_10A3C640::Unknown18 m_KeyAccessor Insert passes each key to its Virtual0, which yields the bytes HashBytes hashes.
+field Class_1094E7A0::Unknown114 m_Handlers GetHandleValue indexes it by a global and calls Virtual6 on the entry with the slot's handle.
+field Class_1093AF30::Unknown18 m_KeyTraits Insert calls its Virtual0 on the key to get the bytes it hashes.
+field Class_10E6B490::Unknown0C m_Coords FUN_10a66f50 stores the axes of an FCoords here and returns &Unknown0C.XAxis.
+field Class_10E82214::Unknown0C m_Elements Destructor deletes each Class_10B59320_Element in it, up to its count (Unknown00).
+field Class_10E81DD4::Unknown04 m_Window Destructor passes it to a GWindowManager call when non-null.
+field cEntryTable::Unknown2C m_KeyB FindEntry compares it to the second argument B against entry Unknown2C
+field cEntryTable::Unknown30 m_KeyA FindEntry compares it to the first argument A against entry Unknown30
+field cEntryTable::Unknown38 m_Position UpdatePosition assigns the FVector* argument into this entry field
+field cEntryTable::Unknown5C m_UpdateTime UpdatePosition assigns GetTimeSeconds() into this entry field
+field cItemList::Unknown04 m_Dummy Shadowed by the Item_10C091A0 Unknown04 field in AddItem; not a class member
+field Class_10C01F50::Unknown00 m_Count Clear and Free set it to zero alongside the node chains
+field Class_10C01CE0::Unknown00 m_Count RemoveAll loops while it is positive and RemoveEntry compares it before and after the child call
+field Class_10C01CE0::Unknown08 m_Child RemoveEntry reads it as the entry's child pointer and tests whether it is set
+field Class_10B88A80::Unknown18 m_Hasher Insert gets the key's bytes from Unknown18.Virtual0 before HashBytes.

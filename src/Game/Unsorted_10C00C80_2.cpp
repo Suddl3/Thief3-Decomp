@@ -19,6 +19,6 @@ Class_10C01990::Class_10C01990(int A, const Class_1090A780& B) : Unknown00(A), U
 // FUNCTION: 0x10C01CE0 ?RemoveAll@Class_10C01CE0@@QAEXXZ
 void Class_10C01CE0::RemoveAll()
 {
-    while (Unknown00 > 0)
+    while (m_Count > 0)
         RemoveEntry(0);
 }

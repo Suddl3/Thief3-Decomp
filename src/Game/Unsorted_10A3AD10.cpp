@@ -5,7 +5,7 @@
 #include "Game/cIntArray.h"
 #include "Game/Class_10A3AD10.h"
 
-class Class_10E667C4
+class cProximityManager
 {
 public:
     virtual void HandleEvent(int Message, int Param, int C, int D);
@@ -25,8 +25,8 @@ Class_10A3AD10::Class_10A3AD10(const Class_10A3AD10& Other)
 {
 }
 
-// FUNCTION: 0x10A3B460 ?HandleEvent@Class_10E667C4@@UAEXHHHH@Z
-void Class_10E667C4::HandleEvent(int Message, int Param, int C, int D)
+// FUNCTION: 0x10A3B460 ?HandleEvent@cProximityManager@@UAEXHHHH@Z
+void cProximityManager::HandleEvent(int Message, int Param, int C, int D)
 {
     bool NoTarget = m_Target == 0;
     switch (Message)

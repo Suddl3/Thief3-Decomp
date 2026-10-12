@@ -1,12 +1,12 @@
-// Game/Class_10E5BC3C.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/cObjectTable.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Game/cIntArray.h"
 
-class Class_10E5BC3C
+class cObjectTable
 {
 public:
-    virtual ~Class_10E5BC3C();
+    virtual ~cObjectTable();
     void FUN_10ba04c0();
 
     int Unknown04;
@@ -16,8 +16,8 @@ public:
     cIntArray Unknown24;
 };
 
-// FUNCTION: 0x10BA0790 ??1Class_10E5BC3C@@UAE@XZ
-Class_10E5BC3C::~Class_10E5BC3C()
+// FUNCTION: 0x10BA0790 ??1cObjectTable@@UAE@XZ
+cObjectTable::~cObjectTable()
 {
     Unknown04 = 0;
     Unknown08 = 0;

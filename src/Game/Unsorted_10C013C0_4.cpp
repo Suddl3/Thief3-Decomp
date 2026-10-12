@@ -2,10 +2,10 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10C01140.h"
 #include "Game/Class_10C01140_Node.h"
-#include "Game/Class_10C01FC0.h"
+#include "Game/cNodeHashMap.h"
 
-// FUNCTION: 0x10C016B0 ?Clear@Class_10C01FC0@@QAEXH@Z
-void Class_10C01FC0::Clear(int Size)
+// FUNCTION: 0x10C016B0 ?Clear@cNodeHashMap@@QAEXH@Z
+void cNodeHashMap::Clear(int Size)
 {
     for (int i = 0; i < Unknown0C; i++)
     {

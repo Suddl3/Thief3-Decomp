@@ -1,9 +1,9 @@
-// Game/Class_10E667C4.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/cProximityManager.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10A3BA50.h"
 #include "Game/cActorManager.h"
 #include "Game/Class_10E66700.h"
-#include "Game/Class_10E667C4.h"
+#include "Game/cProximityManager.h"
 
 struct Struct_10A3BD30
 {
@@ -11,8 +11,8 @@ struct Struct_10A3BD30
     int Unknown04;
 };
 
-// FUNCTION: 0x10A3BD30 ??0Class_10E667C4@@QAE@XZ
-Class_10E667C4::Class_10E667C4()
+// FUNCTION: 0x10A3BD30 ??0cProximityManager@@QAE@XZ
+cProximityManager::cProximityManager()
     : cActorManager(), Class_10E66700()
 {
     char Flag;

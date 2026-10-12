@@ -3,7 +3,7 @@
 #include "Game/Class_10934DB0.h"
 #include "Game/cD3DStateCache.h"
 #include "Game/Class_10E49EE0_Member.h"
-#include "Game/Class_10E49F64.h"
+#include "Game/cD3DDynamicVertexBuffer.h"
 
 class Class_10E49EE0
 {
@@ -77,8 +77,8 @@ int Class_10E49EE0::UnlockVertices()
     return m_Member->Virtual12();
 }
 
-// FUNCTION: 0x10934A40 ?SetStreamSource@Class_10E49F64@@UAEHH@Z
-int Class_10E49F64::SetStreamSource(int A)
+// FUNCTION: 0x10934A40 ?SetStreamSource@cD3DDynamicVertexBuffer@@UAEHH@Z
+int cD3DDynamicVertexBuffer::SetStreamSource(int A)
 {
     if (m_Buffer == 0)
         return 0x80040721;

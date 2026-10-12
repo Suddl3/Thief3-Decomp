@@ -1,7 +1,7 @@
 // Game/Unsorted_10C0BDE0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Core/Core.h"
-#include "Game/Class_10C0C090.h"
+#include "Game/cEntryTable.h"
 #include "Game/Class_10C0C150.h"
 #include "Game/Class_10C0C8E0.h"
 #include "Game/Item_10C0C150.h"
@@ -34,8 +34,8 @@ struct Struct_10C0C0D0
     bool Unknown15;
 };
 
-// FUNCTION: 0x10C0C090 ?UpdatePosition@Class_10C0C090@@QAEXHHPAVFVector@@H@Z
-void Class_10C0C090::UpdatePosition(int A, int B, FVector* Pos, int D)
+// FUNCTION: 0x10C0C090 ?UpdatePosition@cEntryTable@@QAEXHHPAVFVector@@H@Z
+void cEntryTable::UpdatePosition(int A, int B, FVector* Pos, int D)
 {
     Struct_10C0BFC0* Obj = FindEntry(A, B);
     Obj->Unknown5C = GetTimeSeconds();

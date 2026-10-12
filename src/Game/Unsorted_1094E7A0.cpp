@@ -39,10 +39,10 @@ public:
 int Class_1094E7A0::GetHandleValue(int A)
 {
     int Result = 0;
-    if (Unknown114[DAT_10f2c720])
+    if (m_Handlers[DAT_10f2c720])
     {
         int Handle = m_Slots[m_CurrentSlot].Unknown20;
-        if (Unknown114[DAT_10f2c720]->Virtual6(0, Handle, &Result) < 0)
+        if (m_Handlers[DAT_10f2c720]->Virtual6(0, Handle, &Result) < 0)
             return 0;
     }
     return Result;

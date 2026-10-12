@@ -18,7 +18,7 @@ public:
     virtual int FUN_10a2f0c0(Class_10E66320* Other);
     virtual bool FUN_10a2f0f0(int p1);
     virtual void FUN_109b1f50(FString* p1);
-    virtual FString* FUN_10a2f510();
+    virtual FString* GetName();
 
     Class_10E66320();
 
@@ -50,6 +50,6 @@ Class_10E66320* Class_10E66350::Virtual1()
     Class_10E66350* Copy = ::new(0, 0, 0, 0, 0) Class_10E66350();
     Copy->CopyOptionalString(&Copy->Unknown18, &Copy->Unknown30, Unknown30 != 0 ? &Unknown18 : 0);
     Copy->CopyOptionalString(&Copy->Unknown24, &Copy->Unknown34, Unknown34 != 0 ? &Unknown24 : 0);
-    Copy->FUN_109b1f50(FUN_10a2f510());
+    Copy->FUN_109b1f50(GetName());
     return Copy;
 }

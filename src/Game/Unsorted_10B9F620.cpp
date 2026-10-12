@@ -1,13 +1,13 @@
 // Game/Unsorted_10B9F620.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-#include "Game/Class_10B9FBE0.h"
+#include "Game/cCharArray.h"
 #include "Game/Class_10905A90_Member.h"
 
 Class_10905A90_Member* GetAllocator();
 
-// FUNCTION: 0x10B9F620 ?Resize@Class_10B9FBE0@@QAEXH@Z
-void Class_10B9FBE0::Resize(int NewCount)
+// FUNCTION: 0x10B9F620 ?Resize@cCharArray@@QAEXH@Z
+void cCharArray::Resize(int NewCount)
 {
     int OldCount = m_Count;
     int Capacity = !m_Data ? 0 : m_Capacity;

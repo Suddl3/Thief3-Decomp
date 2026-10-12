@@ -3,9 +3,9 @@
 #ifndef GAME_CLASS_10C3EA90_H
 #define GAME_CLASS_10C3EA90_H
 
-#include "Game/Class_10C30DD0.h"
+#include "Game/cIntHashTable.h"
 
-class Class_10C3EA90 : public Class_10C30DD0
+class Class_10C3EA90 : public cIntHashTable
 {
 public:
     ~Class_10C3EA90() { Release(); }

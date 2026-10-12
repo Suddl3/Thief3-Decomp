@@ -21,7 +21,7 @@ public:
     bool m_NoAutoGrow;
     char Pad11[0x3];
     Class_1093AF30_Node** m_Buckets;
-    Class_1093AF30_Field18 Unknown18;
+    Class_1093AF30_Field18 m_KeyTraits;
 };
 
 #endif // GAME_CLASS_1093AF30_H

@@ -8,7 +8,7 @@
 class Class_10A4EFB0
 {
 public:
-    void FUN_10a4e9d0(int Count);
+    void Resize(int Count);
     void Free();
     void Reset();
 

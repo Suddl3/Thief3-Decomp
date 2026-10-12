@@ -22,7 +22,7 @@
 #include "Game/Class_10C399C0.h"
 #include "Game/Class_10C39E90.h"
 #include "Game/Class_10C38E40.h"
-#include "Game/Class_10C39220.h"
+#include "Game/cPositionList.h"
 
 class Class_10FF667C
 {
@@ -266,11 +266,11 @@ void Class_10C38E40::Advance()
     }
 }
 
-// FUNCTION: 0x10C39D90 ?MoveToCurrent@Class_10C39220@@QAEXXZ
-void Class_10C39220::MoveToCurrent()
+// FUNCTION: 0x10C39D90 ?MoveToCurrent@cPositionList@@QAEXXZ
+void cPositionList::MoveToCurrent()
 {
     Struct_10C05A80 Pos;
-    Class_10C39D90_Result39* Obj = Unknown48->Virtual39();
+    Class_10C39D90_Result39* Obj = m_Mover->Virtual39();
     if (Obj != 0)
     {
         Class_10C39D90_Result12* Sub = Obj->Virtual12();
@@ -285,12 +285,12 @@ void Class_10C39220::MoveToCurrent()
     }
     if (!GetCurrent((int)&Pos))
     {
-        FUN_10c37d30(Unknown48, Unknown84, 1, -1.0f, 1.0f, 1, 1, Struct_10C37D30());
+        FUN_10c37d30(m_Mover, Unknown84, 1, -1.0f, 1.0f, 1, 1, Struct_10C37D30());
         return;
     }
 
     const bool& Flag = Unknown68 || FUN_10c38810();
-    FUN_10c37cb0(Unknown48, &Pos, 0x15, Unknown80, 1, Flag);
+    FUN_10c37cb0(m_Mover, &Pos, 0x15, Unknown80, 1, Flag);
 }
 
 // FUNCTION: 0x10C39E90 ?FUN_10c39e90@Class_10C39E90@@QAE_NPAH@Z

@@ -19,24 +19,24 @@ public:
     virtual void Virtual1();
     virtual void Virtual2();
     virtual void Virtual3();
-    virtual FVector* FUN_10a66f50();
+    virtual FVector* GetXAxis();
 
     int Unknown04;
     Class_10A66F50* Unknown08;
-    FCoords Unknown0C;
+    FCoords m_Coords;
 };
 
-// FUNCTION: 0x10A66F50 ?FUN_10a66f50@Class_10E6B490@@UAEPAVFVector@@XZ
-FVector* Class_10E6B490::FUN_10a66f50()
+// FUNCTION: 0x10A66F50 ?GetXAxis@Class_10E6B490@@UAEPAVFVector@@XZ
+FVector* Class_10E6B490::GetXAxis()
 {
     if (Unknown08)
     {
         const FRotator& Rotation = Unknown08->Unknown38;
         FCoords Coords = DAT_10f46de8;
         FCoords Result = Coords.FUN_10961af0(Rotation);
-        Unknown0C.XAxis = Result.XAxis;
-        Unknown0C.YAxis = Result.YAxis;
-        Unknown0C.ZAxis = Result.ZAxis;
+        m_Coords.XAxis = Result.XAxis;
+        m_Coords.YAxis = Result.YAxis;
+        m_Coords.ZAxis = Result.ZAxis;
     }
-    return &Unknown0C.XAxis;
+    return &m_Coords.XAxis;
 }

@@ -3,7 +3,7 @@
 #include "Game/Class_10C30D10.h"
 #include "Game/Class_10C30D10_Field18.h"
 #include "Game/Class_10C30D10_Node.h"
-#include "Game/Class_10C30DD0.h"
+#include "Game/cIntHashTable.h"
 #include "Game/Class_10C30DD0_Field18.h"
 #include "Game/Class_10C30DD0_Node.h"
 
@@ -37,8 +37,8 @@ unsigned int Class_10C30D10::Insert(const int& Key, const int& Value)
     return Index;
 }
 
-// FUNCTION: 0x10C30DD0 ?Insert@Class_10C30DD0@@QAEIABH0@Z
-unsigned int Class_10C30DD0::Insert(const int& Key, const int& Value)
+// FUNCTION: 0x10C30DD0 ?Insert@cIntHashTable@@QAEIABH0@Z
+unsigned int cIntHashTable::Insert(const int& Key, const int& Value)
 {
     if (!m_FixedSize && m_Collisions > m_BucketCount * 0.2)
         Rehash(m_BucketCount * 2);
@@ -49,7 +49,7 @@ unsigned int Class_10C30DD0::Insert(const int& Key, const int& Value)
     {
         const void* Data;
         int Length;
-        Unknown18.Virtual0(Key, &Data, &Length);
+        m_KeyTraits.Virtual0(Key, &Data, &Length);
         Index = HashBytes(Data, Length) & ((1 << m_BucketBits) - 1);
     }
     if (m_Buckets[Index])
@@ -88,8 +88,8 @@ void Class_10C30D10::Rehash(int Size)
     delete OldBuckets;
 }
 
-// FUNCTION: 0x10C30F60 ?Rehash@Class_10C30DD0@@QAEXH@Z
-void Class_10C30DD0::Rehash(int Size)
+// FUNCTION: 0x10C30F60 ?Rehash@cIntHashTable@@QAEXH@Z
+void cIntHashTable::Rehash(int Size)
 {
     int OldSize = m_BucketCount;
     Class_10C30DD0_Node** OldBuckets = m_Buckets;

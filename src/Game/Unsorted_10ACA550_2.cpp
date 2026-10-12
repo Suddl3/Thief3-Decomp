@@ -1,6 +1,6 @@
 // Game/Unsorted_10ACA550_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10ACA620.h"
+#include "Game/cTimer.h"
 
 class Class_10F46DA0
 {
@@ -17,8 +17,8 @@ extern float DAT_10eafbdc;
 
 extern Class_10F46DA0* DAT_10f46da0;
 
-// FUNCTION: 0x10ACA5B0 ?Tick@Class_10ACA620@@QAEXM@Z
-void Class_10ACA620::Tick(float A)
+// FUNCTION: 0x10ACA5B0 ?Tick@cTimer@@QAEXM@Z
+void cTimer::Tick(float A)
 {
     if (Remaining > DAT_10eafbdc)
     {

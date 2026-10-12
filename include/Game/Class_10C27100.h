@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_10C27100_H
 #define GAME_CLASS_10C27100_H
 
-class Class_10C39220;
+class cPositionList;
 
 class Class_10C27100
 {
@@ -14,7 +14,7 @@ public:
     bool m_Active;
     bool m_Finished;
     char Unknown46[2];
-    Class_10C39220* m_Child;
+    cPositionList* m_Child;
 };
 
 #endif // GAME_CLASS_10C27100_H

@@ -1,7 +1,7 @@
 // Game/Class_10E6AC50_5.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-class Class_10A63340
+class cRemovableIntArray
 {
 public:
     void EraseAt(int Index);
@@ -33,7 +33,7 @@ public:
     virtual void RemoveItemAt(int Index);
 
     char Unknown04[0x10];
-    Class_10A63340 m_Count;
+    cRemovableIntArray m_Count;
     char Unknown15[7];
     Object_10A63310** m_Items;
 };

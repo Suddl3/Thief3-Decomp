@@ -99,6 +99,7 @@ Class_10A5E8A0           Class_10E69BA0                   0x10A5E8A0: slot of 0x
 Class_10A5E900           Class_10E69BA0                   0x10A5E900: slot of 0x10E69BA0
 Class_10A626F0           Class_10E6A9F8                   0x10A626F0: slot of 0x10E6A9F8
 Class_10A62BC0           Class_10E6A9F8                   0x10A62BC0: slot of 0x10E6A9F8
+Class_10A63340           cRemovableIntArray               named: Derives from cIntArray; EraseAt moves the items after Index down one place, then calls SetCount with one less.
 Class_10A67000           cVolume                          named: cVolumeManager::ContainsPoint takes this class as its volume and calls its point test.
 Class_10A67B70           Class_10E6B594                   0x10A67B70: stores 0x10E6B594
 Class_10A68B70           Class_10E6B5A0                   0x10A68B70: slot of 0x10E6B5A0
@@ -252,6 +253,7 @@ Class_10AC6850           cVertexBufferInfo                0x10AC6850: slot of 0x
 Class_10AC6860           cVertexBufferInfo                0x10AC6860: slot of 0x10E6F7D4
 Class_10AC8660           Class_10E6FC78                   0x10AC8660: stores 0x10E6FC78
 Class_10AC87C0           Class_10E6FC7C                   0x10AC87C0: stores 0x10E6FC7C
+Class_10ACA620           cTimer                           named: Tick subtracts its argument from Remaining; at zero it calls DAT_10f46da0->Virtual5(0xb); Fire ends it early.
 Class_10ACA670           Class_10E6FEDC                   0x10ACA670: stores 0x10E6FEDC
 Class_10ACE4A0           Class_10E701C8                   0x10ACE4A0: stores 0x10E701C8
 Class_10AD0AA0           Class_10E708CC                   0x10AD0AA0: stores 0x10E708CC
@@ -277,8 +279,8 @@ Class_10B28020           cT3MainMenuWindow                0x10B28020: called on 
 Class_10B282E0           cT3MainMenuWindow                0x10B282E0: slot of 0x10E7AEB8
 Class_10B283D0           cT3MainMenuWindow                0x10B283D0: called on this by 0x10B29D70
 Class_10B28420           Class_10E7AD44                   0x10B28420: stores 0x10E7AD44
-Class_10B2A100           Class_10E80798                   0x10B2A100: slot of 0x10E80798
-Class_10B2A750           Class_10E80798                   0x10B2A510: called on this by 0x10B2A750
+Class_10B2A100           cFade                            0x10B2A100: slot of 0x10E80798
+Class_10B2A750           cFade                            0x10B2A510: called on this by 0x10B2A750
 Class_10B2B9D0           Class_10E7FED0                   0x10B2B9D0: slot of 0x10E7FED0
 Class_10B2BA10           Class_10E80250                   0x10B2BA10: slot of 0x10E80250
 Class_10B2BA60           Class_10E80088                   0x10B2BA60: slot of 0x10E80088
@@ -396,6 +398,7 @@ Class_10B8FC80           Class_10E89818                   0x10B8FC80: stores 0x1
 Class_10B8FCA0           Class_10E89824                   0x10B8FCA0: stores 0x10E89824
 Class_10B92690           Class_10E89A10                   0x10B92690: stores 0x10E89A10
 Class_10B9E410           cStateStack                      named: Top() reads the top of m_Stack, PopToBase pops it, and Top() is cast to State_Patrol.
+Class_10B9FBE0           cCharArray                       named: Fields m_Count, m_Capacity, m_Data; Resize reallocates m_Data in 16-byte steps and zero-fills new chars.
 Class_10BA4230           Class_10E8C728                   0x10BA4230: stores 0x10E8C728
 Class_10BA4290           Class_10E8C734                   0x10BA4290: stores 0x10E8C734
 Class_10BA42F0           Class_10E8C740                   0x10BA42F0: stores 0x10E8C740
@@ -490,11 +493,14 @@ Class_10BF6B30           cStateMeleeCombat                0x10BF6B30: called on 
 Class_10BFBD70           cIntArray                        named: Count, capacity in bytes and Data form a growable int array, grown and freed through GetAllocator().
 Class_10C00A60           cIntArray                        0x10C00A60: called on this by 0x10A81B10
 Class_10C00F60           cHashMap                         named: Int-keyed chained hash map: Remove unlinks nodes and shrinks buckets; Rehash reinserts them, like Class_10BA1330.
+Class_10C01FC0           cNodeHashMap                     named: Derives Class_10C01140; Clear frees every Class_10C01140_Node chain in its bucket array and Free wraps Clear with the array delete
 Class_10C047F0           AudioController                  0x10C047F0: slot of 0x10E97AF4
 Class_10C05E30           cLineSegment                     named: Constructor stores two endpoints with their X and Y deltas and the slope, FLT_MAX when vertical.
 Class_10C08880           Class_10E97BB8                   0x10C08880: stores 0x10E97BB8
+Class_10C08E30           cItemList                        named: Holds Class_10C08E90 m_Items and cIntArray m_ItemIds; AddItem appends a new item then AddUnique records its id
 Class_10C0AA00           Class_10E97BE8                   0x10C0AA00: called on this by 0x10C0AB40
 Class_10C0B960           cAIManager                       0x10C0B960: slot of 0x10E97C18
+Class_10C0C090           cEntryTable                      named: Owns m_Entries array of Struct_10C0BFC0*; FindEntry looks up by two keys and UpdatePosition stamps time and position into the found entry
 Class_10C12DA0           Class_10E984BC                   0x10C12DA0: slot of 0x10E984BC
 Class_10C15BB0           Class_10E98C80                   0x10C15BB0: stores 0x10E98C80
 Class_10C15DB0           Class_10E98C84                   0x10C15D60: stores 0x10E98C84
@@ -518,6 +524,7 @@ Class_10C2F600           cMotionControllerAnim            0x10C2F600: called on 
 Class_10C2F870           cMotionControllerAnim            0x10C2F870: slot of 0x10E9AC80
 Class_10C2F960           cMotionControllerAnim            0x10C2F960: slot of 0x10E9AC80
 Class_10C306B0           cMotionControllerAnim            0x10C306B0: called on this by 0x10C357D0
+Class_10C30DD0           cIntHashTable                    named: Chained hash table from int keys to int values: Insert hashes the key with m_KeyTraits; Rehash resizes the buckets.
 Class_10C311D0           cMotionControllerAnim            0x10C311D0: called on this by 0x10C357D0
 Class_10C323A0           cIndexedList                     named: Node list with Head, Tail and Count; header: values also indexed by a hash table.
 Class_10C35650           cMotionControllerAnim            0x10C35650: slot of 0x10E9AC80
@@ -532,6 +539,7 @@ Class_10C382B0           MC_PullToPoint                   0x10C382B0: slot of 0x
 Class_10C38350           Class_10E9AF04                   0x10C38350: called on this by 0x10C38330
 Class_10C38430           Class_10E9AF04                   0x10C38430: slot of 0x10E9AF04
 Class_10C384F0           Class_10E9AAD0                   0x10C384F0: stores 0x10E9AAD0
+Class_10C39220           cPositionList                    named: m_Entries, m_Index and m_Count hold 3D positions; GetCurrent copies the current one for MoveToCurrent.
 Class_10C3DA10           Class_10E9B088                   0x10C3DA10: slot of 0x10E9B088
 Class_10C3EFC0           Class_10E9B580                   0x10C3EFC0: stores 0x10E9B580
 Class_10C3F1F0           CadenceManager                   0x10C3F1F0: slot of 0x10E9B5C0
@@ -552,6 +560,7 @@ Class_10E49AE0           cPixelAccessor                   named: GetPixel and Se
 Class_10E49C6C           Vocabulary                       named: Xbox twin's class name (6-slot vtable match); dispatches category codes to its item array.
 Class_10E49DFC           VBPoolStaticPermanent            named: Xbox twin debug name VBPoolStaticPermanent (2 Xbox names)
 Class_10E49F38           cD3DVertexBuffer                 named: Holds an IDirect3DVertexBuffer8 (Unknown14) and its stride (Unknown1C); LockVertices and BindStreamSource use both.
+Class_10E49F64           cD3DDynamicVertexBuffer          named: SetStreamSource binds it via cD3DStateCache; CreateBuffer locks with D3DLOCK_NOOVERWRITE/DISCARD flags.
 Class_10E55F00           UAlarmLinkDataObject             0x1099F2A0: stores 0x10E55F00
 Class_10E55F88           UAmmoLinkDataObject              0x1099F330: stores 0x10E55F88
 Class_10E56450           UBreakingBeamLinkDataObject      0x1099F8E0: stores 0x10E56450
@@ -563,6 +572,7 @@ Class_10E572A8           UPlayerSetupInfoLinkDataObject   0x109A09E0: stores 0x1
 Class_10E57330           UPowerLinkDataObject             0x109A0A70: stores 0x10E57330
 Class_10E573B8           UProjectileLinkDataObject        0x109A0B00: stores 0x10E573B8
 Class_10E5B2A8           cZoneManager                     named: Adds and removes AZoneProperties zones in per-BSP-zone buckets on HandleEvent (36-39).
+Class_10E5BC3C           cObjectTable                     named: m_Objects is the table SerializeRef indexes when loading object references.
 Class_10E5D380           cConversationLoader              named: Xbox twin vtable (T3Opt 5/5 slots): its own methods' and constructors' debug names say cConversationLoader (2)
 Class_10E5D498           cFlagElementLogic                named: Xbox twin vtable (T3Opt 8/8 slots): its own methods' and constructors' debug names say cFlagElementLogic (2), source Conversation.cpp, ConversationManager.cpp
 Class_10E5D548           cConversationManager             named: Xbox twin vtable (T3Opt 34/34 slots): its own methods' and constructors' debug names say cConversationManager (3), source ConversationManager.cpp
@@ -572,6 +582,7 @@ Class_10E65574           cTaggedAnimSeq                   named: Xbox twin vtabl
 Class_10E6561C           cBuildFleshBSP                   named: Xbox twin vtable (T3Opt 1/1 slots): its own methods' and constructors' debug names say cBuildFleshBSP (2), source BuildFleshBSP.cpp
 Class_10E66474           cSoundStreamingManager           named: Xbox messages name cSoundStreamingManager (unhandled event; move event for an actor that isn't the player); the event switch agrees.
 Class_10E667AC           Class_10E66700                   0x10A39EA0: stores 0x10E66700
+Class_10E667C4           cProximityManager                named: Xbox twin's matched functions are in ProximityManager.cpp.
 Class_10E67938           cActorManager                    named: Xbox messages 'cActorManager::GetUserLink...' and 'cActorManager::results' pair with Virtual2 by vtable.
 Class_10E67FB0           cFloatInterpolator               named: Update lerps one float from a start to an end value over a duration, then stops.
 Class_10E682F0           cFMVWindow                       named: Xbox callee file WmFMVWindow.cpp; cMovieSubtitles calls its constructor and its Stop.
@@ -629,6 +640,8 @@ Class_10E7BBC8           cMovieSubtitles                  named: MovieSubtitles 
 Class_10E7E658           cRopeMotion                      named: MountRope and DismountRope drive Garrett->ropeToMount, bUpdatePhysHeight and SetNoiseEnabled.
 Class_10E7EC88           GSLean                           named: Xbox message 'Garrett entered lean state without a valid button press.' in Enter; GS prefix from GSMantle's message.
 Class_10E7FD18           cHUDLightGem                     named: String 'HUDLightGem_%2.2d' builds 16 HUD gem handles, released in the destructor.
+Class_10E80418           cCheatHandler                    named: HandleCheatCommand matches the HURTME and HEALME strings and applies both cheats to the player.
+Class_10E80798           cFade                            named: LoadFadeTime reads the FadeTime config key; UpdateFade sets the colour's alpha from elapsed/duration and calls AdvanceFade.
 Class_10E816E0           GSMantle                         named: Xbox message 'GSMantle, got an end of animation notification for an animation that was not exp' in OnAnimationEnd.
 Class_10E81DE8           cOptionsWindow                   named: SaveAndClose calls GetOptions()->Save(); cT3AVOptionsWindow::ShowMainMenu calls its Close().
 Class_10E82AF8           cFactionPane                     named: Fields m_HammerFaction and m_PaganFaction, strings sta_HammerFactionTotal and sta_PaganFactionTotal, vtable slot 119 GetFactionPaneFileName.

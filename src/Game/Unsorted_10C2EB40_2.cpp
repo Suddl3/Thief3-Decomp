@@ -1,6 +1,6 @@
 // Game/Unsorted_10C2EB40_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10C39220.h"
+#include "Game/cPositionList.h"
 #include "Game/Struct_10C2EB70.h"
 #include "Game/Class_10C2EB70.h"
 
@@ -15,7 +15,7 @@ public:
     void Reset();
 
     char Unknown04[0x44];
-    Class_10C39220* Unknown48;
+    cPositionList* Unknown48;
 };
 
 class MC_MoveToPoint : public Class_10C270D0

@@ -13,7 +13,7 @@ public:
     virtual int FUN_10a2f0c0(Class_10E66320* Other);
     virtual bool FUN_10a2f0f0(int p1);
     virtual void FUN_109b1f50(FString* p1);
-    virtual FString* FUN_10a2f510();
+    virtual FString* GetName();
     virtual void Virtual5();
 
     Class_10E66320();

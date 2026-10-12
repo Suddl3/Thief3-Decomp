@@ -3,8 +3,8 @@
 #include "Core/Core.h"
 #include "Game/Class_10E66320.h"
 
-// FUNCTION: 0x10A2F510 ?FUN_10a2f510@Class_10E66320@@UAEPAVFString@@XZ
-FString* Class_10E66320::FUN_10a2f510()
+// FUNCTION: 0x10A2F510 ?GetName@Class_10E66320@@UAEPAVFString@@XZ
+FString* Class_10E66320::GetName()
 {
     if (m_HasName)
         return &m_Name;

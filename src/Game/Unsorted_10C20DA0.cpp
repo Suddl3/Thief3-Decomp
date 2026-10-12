@@ -32,7 +32,7 @@ void Class_10C223A0::Clear()
 // FUNCTION: 0x10C24940 ?Clear@Class_10C24940@@QAEXXZ
 void Class_10C24940::Clear()
 {
-    FUN_10c24260(0);
+    SetCount(0);
     if (m_Capacity)
     {
         GetAllocator()->Virtual5(m_Items);

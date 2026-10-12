@@ -29,7 +29,7 @@ struct Struct_10B2A750
     unsigned char Unknown03;
 };
 
-class Class_10E80798 : public Window
+class cFade : public Window
 {
 public:
     virtual void Virtual4();
@@ -162,8 +162,8 @@ public:
     float m_FadeElapsed;
 };
 
-// FUNCTION: 0x10B2A750 ?UpdateFade@Class_10E80798@@QAEXM@Z
-void Class_10E80798::UpdateFade(float Delta)
+// FUNCTION: 0x10B2A750 ?UpdateFade@cFade@@QAEXM@Z
+void cFade::UpdateFade(float Delta)
 {
     FUN_10a53560(*(int*)&Delta);
     m_FadeElapsed = Delta + m_FadeElapsed;

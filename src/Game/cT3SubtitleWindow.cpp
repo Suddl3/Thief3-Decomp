@@ -4,14 +4,14 @@
 #include "Game/Config.h"
 #include "Game/Class_10AF7F80.h"
 
-class Class_10E80798
+class cFade
 {
 public:
     virtual void Virtual0();
     void FUN_10a65730(Class_10AF7F80* File, Class_10AF7F80* Section);
 };
 
-class cT3SubtitleWindow : public Class_10E80798
+class cT3SubtitleWindow : public cFade
 {
 public:
     virtual void Virtual1();

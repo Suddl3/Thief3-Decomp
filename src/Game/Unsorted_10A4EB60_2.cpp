@@ -12,7 +12,7 @@ Class_10905A90_Member* GetAllocator();
 // FUNCTION: 0x10A4EFB0 ?Free@Class_10A4EFB0@@QAEXXZ
 void Class_10A4EFB0::Free()
 {
-    FUN_10a4e9d0(0);
+    Resize(0);
     if (m_BufferSize)
     {
         GetAllocator()->Virtual5(m_Buffer);

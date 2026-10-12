@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_1090A780.h"
 #include "Game/Class_10E6AC98.h"
-#include "Game/Class_10A63340.h"
+#include "Game/cRemovableIntArray.h"
 #include "Game/cIntArray.h"
 
 class Class_1091D800
@@ -11,8 +11,8 @@ public:
     Class_1090A780 FUN_1091d800(int A, int B);
 };
 
-// FUNCTION: 0x10A63340 ?EraseAt@Class_10A63340@@QAEXH@Z
-void Class_10A63340::EraseAt(int Index)
+// FUNCTION: 0x10A63340 ?EraseAt@cRemovableIntArray@@QAEXH@Z
+void cRemovableIntArray::EraseAt(int Index)
 {
     if (Index != Unknown00 - 1)
         MoveItems(Index + 1, Index, Unknown00 - Index - 1);

@@ -159,7 +159,7 @@ class Class_10E82214 : public Class_10E68F74
 public:
     virtual ~Class_10E82214();
 
-    cIntArray Unknown0C;
+    cIntArray m_Elements;
     int Unknown18;
 };
 
@@ -169,10 +169,10 @@ public:
 // FUNCTION: 0x10B59320 ??1Class_10E82214@@UAE@XZ
 Class_10E82214::~Class_10E82214()
 {
-    int Count = Unknown0C.Unknown00;
+    int Count = m_Elements.Unknown00;
     Unknown18 = 0;
     for (int i = 0; i < Count; i++)
-        delete (Class_10B59320_Element*)Unknown0C.Unknown08[i];
+        delete (Class_10B59320_Element*)m_Elements.Unknown08[i];
 }
 
 // FUNCTION: 0x10B59640 ?FUN_10b59640@Class_10B59640@@QAEXH@Z

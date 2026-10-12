@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_10C02460_H
 #define GAME_CLASS_10C02460_H
 
-#include "Game/Class_10C01FC0.h"
+#include "Game/cNodeHashMap.h"
 
 struct Class_10C02460_Node;
 
@@ -15,7 +15,7 @@ public:
     int Count;
     Class_10C02460_Node* Head;
     Class_10C02460_Node* Tail;
-    Class_10C01FC0 Unknown0C;
+    cNodeHashMap Unknown0C;
 };
 
 #endif // GAME_CLASS_10C02460_H

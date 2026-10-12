@@ -4,7 +4,7 @@
 #include "Game/Class_10A174E0.h"
 #include "Game/Class_10ACA550.h"
 #include "Game/Class_10ACA600.h"
-#include "Game/Class_10ACA620.h"
+#include "Game/cTimer.h"
 
 extern float DAT_10eafbdc;
 
@@ -44,8 +44,8 @@ int Class_10ACA600::FUN_10aca600()
     return 0;
 }
 
-// FUNCTION: 0x10ACA620 ?Fire@Class_10ACA620@@QAEXXZ
-void Class_10ACA620::Fire()
+// FUNCTION: 0x10ACA620 ?Fire@cTimer@@QAEXXZ
+void cTimer::Fire()
 {
     if (Remaining > DAT_10eafbdc)
     {

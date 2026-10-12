@@ -33,7 +33,7 @@ Class_10E664A4::Class_10E664A4()
 int Class_10A34D50::Append(const Entry_10A34D50& Item)
 {
     int Index = m_Count;
-    FUN_10a33fd0(Index + 1);
+    Resize(Index + 1);
     m_Items[Index] = Item;
     return Index;
 }

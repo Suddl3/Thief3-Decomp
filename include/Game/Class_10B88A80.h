@@ -20,7 +20,7 @@ public:
     int m_BucketCount;
     bool m_FixedSize;
     Class_10B88A80_Node** m_Buckets;
-    Class_10B88A80_Field18 Unknown18;
+    Class_10B88A80_Field18 m_Hasher;
 };
 
 #endif // GAME_CLASS_10B88A80_H

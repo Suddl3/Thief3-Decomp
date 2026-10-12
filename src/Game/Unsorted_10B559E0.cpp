@@ -3,7 +3,7 @@
 #include "Game/Struct_10AA3520.h"
 #include "Game/Static_10B3AC60.h"
 #include "Game/Class_10E68F8C.h"
-#include "Game/Class_10E80418.h"
+#include "Game/cCheatHandler.h"
 #include "Game/Object_10B55450.h"
 #include "Game/Struct_10DD7DC0Arg.h"
 
@@ -167,8 +167,8 @@ public:
     virtual void Virtual5(void* A, int B, Struct_10B559E0* C, int D);
 };
 
-// FUNCTION: 0x10B559E0 ?HandleCheatCommand@Class_10E80418@@UAEHPADH@Z
-int Class_10E80418::HandleCheatCommand(char* Command, int Unknown)
+// FUNCTION: 0x10B559E0 ?HandleCheatCommand@cCheatHandler@@UAEHPADH@Z
+int cCheatHandler::HandleCheatCommand(char* Command, int Unknown)
 {
     if (FUN_10af42f0((int)&Command, "HURTME"))
     {

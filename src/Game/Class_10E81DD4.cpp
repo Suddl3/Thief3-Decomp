@@ -9,8 +9,8 @@ extern WindowManager* GWindowManager;
 // FUNCTION: 0x10B561D0 ??1Class_10E81DD4@@UAE@XZ
 Class_10E81DD4::~Class_10E81DD4()
 {
-    if (Unknown04)
-        GWindowManager->FUN_109e8ae0(Unknown04);
+    if (m_Window)
+        GWindowManager->FUN_109e8ae0(m_Window);
     for (int i = 0; i < 2; i++)
     {
         if (Unknown08[i].Unknown00)

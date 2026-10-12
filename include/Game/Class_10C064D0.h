@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_10C064D0_H
 #define GAME_CLASS_10C064D0_H
 
-#include "Game/Class_10B9FBE0.h"
+#include "Game/cCharArray.h"
 #include "Game/Struct_10C26030.h"
 
 class FVector;
@@ -14,8 +14,8 @@ public:
     FVector FUN_10c064d0(int A, int B);
 
     int Unknown00;
-    Class_10B9FBE0 Unknown04;
-    Class_10B9FBE0 Unknown10;
+    cCharArray Unknown04;
+    cCharArray Unknown10;
     Struct_10C26030 Unknown1C;
 };
 

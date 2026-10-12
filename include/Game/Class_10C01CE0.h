@@ -9,7 +9,7 @@ public:
     void RemoveAll();
     void RemoveEntry(int A);
 
-    int Unknown00;
+    int m_Count;
 };
 
 #endif // GAME_CLASS_10C01CE0_H

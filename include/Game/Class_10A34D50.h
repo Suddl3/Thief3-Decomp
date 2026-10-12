@@ -8,7 +8,7 @@ struct Entry_10A34D50;
 class Class_10A34D50
 {
 public:
-    void FUN_10a33fd0(int NewCount);
+    void Resize(int NewCount);
     void Clear();
     int Append(const Entry_10A34D50& Item);
 

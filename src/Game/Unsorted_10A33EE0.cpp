@@ -43,7 +43,7 @@ void __stdcall FUN_10a33ee0(Struct_10A33EE0* A, Struct_10A33EE0* B, const Struct
 // FUNCTION: 0x10A346F0 ?Clear@Class_10A34D50@@QAEXXZ
 void Class_10A34D50::Clear()
 {
-    FUN_10a33fd0(0);
+    Resize(0);
     if (m_CapacityBytes)
     {
         GetAllocator()->Virtual5(m_Items);

@@ -6,7 +6,7 @@
 #include "Game/Class_10913D70.h"
 #include "Game/Class_10E97B00.h"
 #include "Game/Class_10C08E90.h"
-#include "Game/Class_10C08E30.h"
+#include "Game/cItemList.h"
 
 // The field at 0x10 of the object: a flag at 0x24 is read through it.
 class Class_10C08960_Unknown10
@@ -33,8 +33,8 @@ struct Item_10C091A0
     bool Unknown24;
 };
 
-// FUNCTION: 0x10C09200 ?AddItem@Class_10C08E30@@QAEXHPAVClass_10913D70@@HPAHH@Z
-void Class_10C08E30::AddItem(int A, Class_10913D70* B, int C, int* D, int E)
+// FUNCTION: 0x10C09200 ?AddItem@cItemList@@QAEXHPAVClass_10913D70@@HPAHH@Z
+void cItemList::AddItem(int A, Class_10913D70* B, int C, int* D, int E)
 {
     Item_10C091A0 Item;
     ((Class_10913D70*)&Item.Unknown04)->Assign(B);

@@ -22,11 +22,11 @@ public:
 
 class Class_10C30DD0_Node;
 
-// Game/Class_10C30DD0.h copied whole, with the constructor its objects run (the header has none).
-class Class_10C30DD0
+// Game/cIntHashTable.h copied whole, with the constructor its objects run (the header has none).
+class cIntHashTable
 {
 public:
-    Class_10C30DD0() : m_Collisions(0), m_Count(0), m_BucketCount(0), m_FixedSize(false), m_Buckets(0)
+    cIntHashTable() : m_Collisions(0), m_Count(0), m_BucketCount(0), m_FixedSize(false), m_Buckets(0)
     {
         Rehash(0x40);
     }
@@ -41,12 +41,12 @@ public:
     bool m_FixedSize;
     char Pad11[0x3];
     Class_10C30DD0_Node** m_Buckets;
-    Class_10EBFF38 Unknown18;
+    Class_10EBFF38 m_KeyTraits;
 };
 
 // Game/Class_10C3EA90.h copied whole, minus its destructor (not used here) and the 4 bytes after
 // the union (the object is 0x20 bytes: the new passes 0x20).
-class Class_10C3EA90 : public Class_10C30DD0
+class Class_10C3EA90 : public cIntHashTable
 {
 public:
     Class_10C3EA90()

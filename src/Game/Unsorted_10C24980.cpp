@@ -24,7 +24,7 @@ struct Item_10C24BC0
 int Class_10C24940::AddItem(const Item_10C24BC0& Item)
 {
     int Index = m_Count;
-    FUN_10c24260(Index + 1);
+    SetCount(Index + 1);
     Item_10C24BC0* Dest = &m_Items[Index];
     Dest->Unknown00 = Item.Unknown00;
     Dest->Unknown04 = Item.Unknown04;
