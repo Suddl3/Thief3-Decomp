@@ -15,7 +15,7 @@ placeholder class or function is. For each class, `apply`:
   1. renames the members where the class is declared: its header (include/Game/, or a package
      header) and each unit's own definition of it;
   2. compiles every unit that declares the class, includes its header or uses the old names, and
-     renames exactly the uses MSVC no longer resolves (C2039 "is not a member", C2065 "undeclared
+     renames exactly the uses MSVC no longer resolves (C2039 "is not a member", C2065 and C3861 "undeclared
      identifier" on an old name, in the unit or in a header), until each compiles;
   3. keeps the class's renames only if every such unit then compiles to the code of its last built
      object (build/<version>/src/), and else puts every file back as it was.
@@ -37,7 +37,7 @@ import headers  # noqa: E402
 import names  # noqa: E402
 
 PLACEHOLDER = re.compile(r"^(?:Unknown|Pad)[0-9A-Fa-f]+(?:_\d+)?$")
-ERROR = re.compile(r"^(?P<file>.*?)\((?P<line>\d+)\) : error (?:(?:C2039|C2065): '(?P<ident>\w+)'"
+ERROR = re.compile(r"^(?P<file>.*?)\((?P<line>\d+)\) : error (?:(?:C2039|C2065|C3861): '(?P<ident>\w+)'"
                    r"|C2614: '\w+' : illegal member initialization: '(?P<init>\w+)' is not a base or member)")
 ROUNDS = 12
 
