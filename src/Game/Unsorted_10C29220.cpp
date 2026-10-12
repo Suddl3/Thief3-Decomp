@@ -215,8 +215,8 @@ void cMotionControllerAnim::FUN_10c356a0()
     Field9f = 0;
 }
 
-// FUNCTION: 0x10C36860 ?FUN_10c36860@Class_10E9AD9C@@QAE?AVClass_109081E0@@XZ
-Class_109081E0 Class_10E9AD9C::FUN_10c36860()
+// FUNCTION: 0x10C36860 ?GetControllerName@Class_10E9AD9C@@QAE?AVClass_109081E0@@XZ
+Class_109081E0 Class_10E9AD9C::GetControllerName()
 {
     return Class_109081E0(DAT_10e9adc8);
 }
@@ -251,8 +251,8 @@ Class_109081E0 Class_10E9AE88::GetMotionControllerName()
     return Class_109081E0(DAT_10e9aeb8);
 }
 
-// FUNCTION: 0x10C382B0 ?FUN_10c382b0@Class_10E9AEC8@@QAE?AVClass_109081E0@@XZ
-Class_109081E0 Class_10E9AEC8::FUN_10c382b0()
+// FUNCTION: 0x10C382B0 ?GetMotionControllerName@Class_10E9AEC8@@QAE?AVClass_109081E0@@XZ
+Class_109081E0 Class_10E9AEC8::GetMotionControllerName()
 {
     return Class_109081E0(DAT_10e9aef4);
 }

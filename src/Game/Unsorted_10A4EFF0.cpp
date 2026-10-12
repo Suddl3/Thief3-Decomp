@@ -6,8 +6,8 @@
 
 Class_10905A90_Member* GetAllocator();
 
-// FUNCTION: 0x10A4F120 ?FUN_10a4f120@Class_10A4EFB0@@QAEXXZ
-void Class_10A4EFB0::FUN_10a4f120()
+// FUNCTION: 0x10A4F120 ?Reset@Class_10A4EFB0@@QAEXXZ
+void Class_10A4EFB0::Reset()
 {
     FUN_10a4e9d0(0);
     for (int i = 0; i < 0x42; i++)

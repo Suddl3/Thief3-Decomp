@@ -45,10 +45,10 @@ public:
     char Pad18[0xc];
     float Unknown24;
     char Pad28[0x4];
-    float Unknown2C;
+    float m_Value;
     float Unknown30;
-    float Unknown34;
-    float Unknown38;
+    float m_CachedValue;
+    float m_LastTime;
 };
 
 // FUNCTION: 0x10C1B000 ?FUN_10c1b000@Class_10E98D08@@UAEM_N@Z
@@ -59,26 +59,26 @@ float Class_10E98D08::FUN_10c1b000(bool B)
         float Now = GetTimeSeconds();
         if (Now < Unknown30 + Unknown24)
             return DAT_10eafbdc;
-        if (Now - Unknown38 < 0.01f)
-            return Unknown34;
-        Unknown38 = Now;
+        if (Now - m_LastTime < 0.01f)
+            return m_CachedValue;
+        m_LastTime = Now;
         Class_10C1B000_Unknown04* Obj = Unknown04;
         if (!Obj || (Obj->Unknown1C & 0x800000))
         {
             float Result = DAT_10eafbdc;
-            Unknown34 = 0;
+            m_CachedValue = 0;
             return Result;
         }
         if (!FUN_10c00680(Obj) && Virtual15())
         {
             float Result = DAT_10eafbdc;
-            Unknown34 = 0;
+            m_CachedValue = 0;
             return Result;
         }
         if (Virtual16())
         {
             float Result = DAT_10eafbdc;
-            Unknown34 = 0;
+            m_CachedValue = 0;
             return Result;
         }
         FVector Vec = Unknown0C;
@@ -86,10 +86,10 @@ float Class_10E98D08::FUN_10c1b000(bool B)
         if (!Virtual1(&Vec, &Flag))
         {
             float Result = DAT_10eafbdc;
-            Unknown34 = 0;
+            m_CachedValue = 0;
             return Result;
         }
-        Unknown34 = Unknown2C;
+        m_CachedValue = m_Value;
     }
-    return Unknown2C;
+    return m_Value;
 }

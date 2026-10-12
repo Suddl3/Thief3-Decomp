@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_10B47C50_H
 #define GAME_CLASS_10B47C50_H
 
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 class Class_10B47C50
 {
@@ -12,7 +12,7 @@ public:
     void FUN_10b47c50();
 
     char Unknown00[0x4C];
-    Class_10BFBD70 Unknown4C;
+    cIntArray Unknown4C;
 };
 
 #endif // GAME_CLASS_10B47C50_H

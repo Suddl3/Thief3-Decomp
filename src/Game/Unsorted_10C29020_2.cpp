@@ -1,6 +1,6 @@
 // Game/Unsorted_10C29020_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/Class_10971570.h"
 #include "Game/Class_1098E330.h"
 #include "Game/Class_10BBA080.h"
@@ -16,11 +16,11 @@ public:
 
 double GetTimeSeconds();
 
-// FUNCTION: 0x10C29380 ?FUN_10c29380@Class_10C29410@@QAEXH@Z
-void Class_10C29410::FUN_10c29380(int Value)
+// FUNCTION: 0x10C29380 ?Start@Class_10C29410@@QAEXH@Z
+void Class_10C29410::Start(int Value)
 {
     double Scale = Unknown00->GetRandomInRange();
-    Unknown18 = GetTimeSeconds() + Scale;
+    m_EndTime = GetTimeSeconds() + Scale;
     float Local = 0.0f;
     ((Class_1098E330*)Value)->FUN_1098e330(0x100790, (int*)&Local);
     ((Class_10C292E0*)Value)->FUN_10c292e0(0x40100781, GetTimeSeconds() + Local);

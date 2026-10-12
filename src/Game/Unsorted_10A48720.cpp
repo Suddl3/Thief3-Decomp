@@ -1,6 +1,6 @@
 // Game/Unsorted_10A48720.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 class Class_10A48A50_Member
 {
@@ -30,8 +30,8 @@ struct Struct_10A48AB0
     Class_10A48AB0_Member** Unknown08;
 };
 
-// FUNCTION: 0x10A48A50 ?FUN_10a48a50@@YAXPAUStruct_10A48A50@@PAVClass_10BFBD70@@@Z
-void FUN_10a48a50(Struct_10A48A50* A, Class_10BFBD70* B)
+// FUNCTION: 0x10A48A50 ?FUN_10a48a50@@YAXPAUStruct_10A48A50@@PAVcIntArray@@@Z
+void FUN_10a48a50(Struct_10A48A50* A, cIntArray* B)
 {
     B->Unknown00 = 0;
     for (int i = 0; i < A->Unknown00; i++)
@@ -40,14 +40,14 @@ void FUN_10a48a50(Struct_10A48A50* A, Class_10BFBD70* B)
         if (Value)
         {
             int Index = B->Unknown00;
-            B->FUN_10bfbd70(Index + 1);
+            B->SetCount(Index + 1);
             B->Unknown08[Index] = Value;
         }
     }
 }
 
-// FUNCTION: 0x10A48AB0 ?FUN_10a48ab0@@YAXPAUStruct_10A48AB0@@PAVClass_10BFBD70@@@Z
-void FUN_10a48ab0(Struct_10A48AB0* A, Class_10BFBD70* B)
+// FUNCTION: 0x10A48AB0 ?FUN_10a48ab0@@YAXPAUStruct_10A48AB0@@PAVcIntArray@@@Z
+void FUN_10a48ab0(Struct_10A48AB0* A, cIntArray* B)
 {
     B->Unknown00 = 0;
     for (int i = 0; i < A->Unknown00; i++)
@@ -56,7 +56,7 @@ void FUN_10a48ab0(Struct_10A48AB0* A, Class_10BFBD70* B)
         if (Value)
         {
             int Index = B->Unknown00;
-            B->FUN_10bfbd70(Index + 1);
+            B->SetCount(Index + 1);
             B->Unknown08[Index] = Value;
         }
     }

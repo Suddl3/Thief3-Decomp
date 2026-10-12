@@ -4,7 +4,7 @@
 #include "Game/Entry_10C32C30.h"
 #include "Game/Struct_10C32C30.h"
 #include "Game/Class_10C32C30.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 class cMotionControllerAnim
 {
@@ -31,14 +31,14 @@ public:
     virtual void RemoveMotionCallback(int Item);
 
     char Unknown04[0x134];
-    Class_10BFBD70 m_MotionCallbacks;
+    cIntArray m_MotionCallbacks;
 };
 
 // FUNCTION: 0x10C32B40 ?RemoveMotionCallback@cMotionControllerAnim@@UAEXH@Z
 void cMotionControllerAnim::RemoveMotionCallback(int Item)
 {
     int Count = m_MotionCallbacks.Unknown00;
-    Class_10BFBD70* Set = &m_MotionCallbacks;
+    cIntArray* Set = &m_MotionCallbacks;
     for (int i = 0; i < Count; i++)
     {
         if (m_MotionCallbacks.Unknown08[i] == Item)
@@ -48,7 +48,7 @@ void cMotionControllerAnim::RemoveMotionCallback(int Item)
             int Old = Set->Unknown08[i];
             Set->Unknown08[i] = Moved;
             Set->Unknown08[Last] = Old;
-            Set->FUN_10bfbd70(Set->Unknown00 - 1);
+            Set->SetCount(Set->Unknown00 - 1);
             return;
         }
     }

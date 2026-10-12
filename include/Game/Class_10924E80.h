@@ -4,7 +4,7 @@
 #define GAME_CLASS_10924E80_H
 
 #include "Game/Class_10925410.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 class Class_1092D990;
 
@@ -23,7 +23,7 @@ public:
 
     char Pad01[0xbb];
     char Pad1A3[0x1];
-    Class_10BFBD70 UnknownBC;
+    cIntArray UnknownBC;
     char PadC8[0x10];
     Class_1092D990* Unknown0D8;
 };

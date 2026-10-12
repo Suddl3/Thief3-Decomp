@@ -55,7 +55,7 @@ public:
 class Class_10C399C0
 {
 public:
-    bool FUN_10c3b570(int* Obj);
+    bool TrackTarget(int* Obj);
     bool FUN_10c3a3f0(Struct_10C05A80* A, int* Obj, int B, int C);
     float FUN_10c38640(int Obj);
 
@@ -64,25 +64,25 @@ public:
     char Unknown4C[0x4];
     int Unknown50;
     char Unknown54[0x40];
-    int Unknown94;
+    int m_PathCount;
     char Unknown98[0x4];
-    Struct_10C05A80* Unknown9C;
+    Struct_10C05A80* m_PathPoints;
     char UnknownA0[0x10];
     int Unknown0B0;
     char UnknownB4[0x40];
-    int UnknownF4;
-    int UnknownF8;
+    int m_LastTarget;
+    int m_SeenCount;
 };
 
-// FUNCTION: 0x10C3B570 ?FUN_10c3b570@Class_10C399C0@@QAE_NPAH@Z
-bool Class_10C399C0::FUN_10c3b570(int* Obj)
+// FUNCTION: 0x10C3B570 ?TrackTarget@Class_10C399C0@@QAE_NPAH@Z
+bool Class_10C399C0::TrackTarget(int* Obj)
 {
     float Span = (float)Unknown50 + (float)Unknown50;
-    if (Unknown0B0 >= Unknown94)
+    if (Unknown0B0 >= m_PathCount)
         return true;
     Struct_10C3D0A0* Actor = (Struct_10C3D0A0*)Unknown48->Virtual34()->FUN_10c7d570();
     Struct_10C05A80 ActorPos = Actor->Unknown2C;
-    Struct_10C05A80 Pos = Unknown9C[Unknown0B0];
+    Struct_10C05A80 Pos = m_PathPoints[Unknown0B0];
     if (*Obj == 0)
     {
         if (FUN_10c3a3f0(&Pos, Obj, 0, 0))
@@ -94,14 +94,14 @@ bool Class_10C399C0::FUN_10c3b570(int* Obj)
     float Sum = FUN_10c38640(*Obj) + Span;
     if (Dist < Sum * Sum)
     {
-        if (*Obj == UnknownF4)
-            UnknownF8++;
+        if (*Obj == m_LastTarget)
+            m_SeenCount++;
         else
         {
-            UnknownF8 = 0;
-            UnknownF4 = *Obj;
+            m_SeenCount = 0;
+            m_LastTarget = *Obj;
         }
-        if (UnknownF8 > 3)
+        if (m_SeenCount > 3)
             return true;
     }
     return false;

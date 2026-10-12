@@ -19,8 +19,8 @@ extern Class_10C19FD0* DAT_10ff7088;
 
 void FUN_10c17bc0(void* A, Struct_10C17BC0* B);
 
-// FUNCTION: 0x10C17C10 ?FUN_10c17c10@Class_10E98CA4@@UAEXPAX@Z
-void Class_10E98CA4::FUN_10c17c10(void* A)
+// FUNCTION: 0x10C17C10 ?ClearReferences@Class_10E98CA4@@UAEXPAX@Z
+void Class_10E98CA4::ClearReferences(void* A)
 {
     FUN_10c17bc0(A, &Unknown10);
     FUN_10c17bc0(A, &Unknown1C);

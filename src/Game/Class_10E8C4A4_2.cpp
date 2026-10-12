@@ -4,8 +4,8 @@
 
 void ReadString(void* Reader, int* Out);
 
-// FUNCTION: 0x10C129C0 ?FUN_10c129c0@Class_10E8C4A4@@UAE_NHPAX@Z
-bool Class_10E8C4A4::FUN_10c129c0(int A, void* Reader)
+// FUNCTION: 0x10C129C0 ?Load@Class_10E8C4A4@@UAE_NHPAX@Z
+bool Class_10E8C4A4::Load(int A, void* Reader)
 {
     ReadString(Reader, &Unknown0C);
     Virtual4(&Unknown0C);

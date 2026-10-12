@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_10B9F950_H
 #define GAME_CLASS_10B9F950_H
 
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 class FArchive;
 
@@ -13,7 +13,7 @@ public:
     void FUN_10b9f950(FArchive& Ar, int Count);
 
     char Unknown00[0x18];
-    Class_10BFBD70 Unknown18;
+    cIntArray Unknown18;
 };
 
 #endif // GAME_CLASS_10B9F950_H

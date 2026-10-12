@@ -38,5 +38,5 @@ void Class_10E9CB00::FUN_10c61000()
     if (Virtual17())
         FUN_10db58f0()->Virtual13(this);
     else
-        FUN_10c65090()->FUN_10c64e10(this);
+        FUN_10c65090()->AddRef(this);
 }

@@ -23,7 +23,7 @@ class Class_10E95898;
 
 class Class_10E96510;
 
-class Class_10E91EE8;
+class State_Gassed;
 
 class Class_10E93878;
 

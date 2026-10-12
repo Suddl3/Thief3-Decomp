@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Core/Core.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 class AMarker;
 
@@ -26,8 +26,8 @@ public:
     int Unknown30;
 };
 
-// FUNCTION: 0x10BFF980 ?FUN_10bff980@@YAXPAVClass_10BFF980_Param@@PAVClass_10BFBD70@@1@Z
-void FUN_10bff980(Class_10BFF980_Param* Param, Class_10BFBD70* A, Class_10BFBD70* B)
+// FUNCTION: 0x10BFF980 ?FUN_10bff980@@YAXPAVClass_10BFF980_Param@@PAVcIntArray@@1@Z
+void FUN_10bff980(Class_10BFF980_Param* Param, cIntArray* A, cIntArray* B)
 {
     for (int i = 0; i < Param->Unknown30; i++)
     {
@@ -37,13 +37,13 @@ void FUN_10bff980(Class_10BFF980_Param* Param, Class_10BFBD70* A, Class_10BFBD70
             if (Point->IsA(AAIPathPoint::StaticClass()))
             {
                 int Index = A->Count;
-                A->FUN_10bfbd70(Index + 1);
+                A->SetCount(Index + 1);
                 A->Data[Index] = (int)Point;
             }
             else if (Point->IsA(APawn::StaticClass()))
             {
                 int Index = B->Count;
-                B->FUN_10bfbd70(Index + 1);
+                B->SetCount(Index + 1);
                 B->Data[Index] = (int)Point;
             }
         }

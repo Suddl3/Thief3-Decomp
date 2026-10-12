@@ -1,6 +1,6 @@
 // Game/cConversation_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 class cConversation
 {
@@ -10,7 +10,7 @@ public:
     virtual void Virtual2(int A);
     virtual void ReplaceConEvent(int Item, int Param3);
 
-    Class_10BFBD70 m_ConEvents;
+    cIntArray m_ConEvents;
 };
 
 // FUNCTION: 0x10A823F0 ?ReplaceConEvent@cConversation@@UAEXHH@Z
@@ -25,7 +25,7 @@ void cConversation::ReplaceConEvent(int Item, int Param3)
     {
         if (Item == m_ConEvents.Data[i])
         {
-            m_ConEvents.FUN_10a81b10(i, &Param3);
+            m_ConEvents.InsertAt(i, &Param3);
             return;
         }
     }

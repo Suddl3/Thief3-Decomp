@@ -17,13 +17,13 @@ class Class_10E682E0 : public Class_10E662C0
 public:
     Class_10E682E0(int Value) : Unknown04(Value) {}
 
-    virtual Class_10E682E0* FUN_10a54ce0();
+    virtual Class_10E682E0* Clone();
 
     int Unknown04;
 };
 
-// FUNCTION: 0x10A54CE0 ?FUN_10a54ce0@Class_10E682E0@@UAEPAV1@XZ
-Class_10E682E0* Class_10E682E0::FUN_10a54ce0()
+// FUNCTION: 0x10A54CE0 ?Clone@Class_10E682E0@@UAEPAV1@XZ
+Class_10E682E0* Class_10E682E0::Clone()
 {
     return new(0, 0, 0, 0, 0) Class_10E682E0(Unknown04);
 }

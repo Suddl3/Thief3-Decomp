@@ -3,11 +3,11 @@
 #ifndef GAME_CLASS_10E98C88_H
 #define GAME_CLASS_10E98C88_H
 
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 class Class_10E98C8C;
 
-class Class_10E98C88 : public Class_10BFBD70
+class Class_10E98C88 : public cIntArray
 {
 public:
     virtual ~Class_10E98C88();

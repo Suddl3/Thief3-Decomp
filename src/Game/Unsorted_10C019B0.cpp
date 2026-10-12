@@ -1,7 +1,7 @@
 // Game/Unsorted_10C019B0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 class Class_10C01C10_Unknown08_Unknown08
 {
@@ -51,7 +51,7 @@ public:
     Class_10C01C10_Unknown08_Unknown08* Unknown00;
 };
 
-class Class_10C01CE0 : public Class_10BFBD70
+class Class_10C01CE0 : public cIntArray
 {
 public:
     void FUN_10c01ce0();
@@ -65,7 +65,7 @@ void Class_10C01CE0::FUN_10c01c10(int A)
     bool Empty = Entry->Unknown08 == 0;
     if (Empty)
     {
-        FUN_109dff50(A);
+        RemoveAt(A);
         delete Entry;
         return;
     }
@@ -74,7 +74,7 @@ void Class_10C01CE0::FUN_10c01c10(int A)
     Ref.Unknown00->Virtual10();
     if (Count == Saved)
     {
-        FUN_109dff50(A);
+        RemoveAt(A);
         delete Entry;
     }
 }

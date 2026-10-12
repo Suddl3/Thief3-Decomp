@@ -7,7 +7,7 @@
 #include "Game/Class_10B47660_Member.h"
 #include "Game/Class_10B7AB80.h"
 #include "Game/Class_10B7AC30.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/Class_10C3E140.h"
 #include "Game/Class_10EC0E20.h"
 

@@ -13,7 +13,7 @@ class Class_10E9313C
 {
 public:
     virtual void FUN_10bd0190(int p1);
-    virtual void FUN_10bd1240(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 
     Class_10E9313C();
     Class_10E9313C(const Class_10E9313C& Other);

@@ -18,8 +18,8 @@ public:
 class Class_10C59030
 {
 public:
-    unsigned int FUN_10c57530(const Class_109081E0& Key, const Class_10C59030_Value& Value);
-    unsigned int FUN_10c59030(const Class_109081E0& Key, const Class_10C59030_Value& Value);
+    unsigned int Insert(const Class_109081E0& Key, const Class_10C59030_Value& Value);
+    unsigned int Set(const Class_109081E0& Key, const Class_10C59030_Value& Value);
 
     int Unknown00;
     int Unknown04;
@@ -31,8 +31,8 @@ public:
     Class_10C59030_Field18 Unknown18;
 };
 
-// FUNCTION: 0x10C59030 ?FUN_10c59030@Class_10C59030@@QAEIABVClass_109081E0@@ABVClass_10C59030_Value@@@Z
-unsigned int Class_10C59030::FUN_10c59030(const Class_109081E0& Key, const Class_10C59030_Value& Value)
+// FUNCTION: 0x10C59030 ?Set@Class_10C59030@@QAEIABVClass_109081E0@@ABVClass_10C59030_Value@@@Z
+unsigned int Class_10C59030::Set(const Class_109081E0& Key, const Class_10C59030_Value& Value)
 {
     unsigned int Index;
     {
@@ -51,5 +51,5 @@ unsigned int Class_10C59030::FUN_10c59030(const Class_109081E0& Key, const Class
             return Index;
         }
     }
-    return FUN_10c57530(Key, Value);
+    return Insert(Key, Value);
 }

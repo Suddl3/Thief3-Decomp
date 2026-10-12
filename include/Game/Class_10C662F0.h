@@ -12,17 +12,17 @@ class Class_10C662F0
 public:
     Class_10C662F0();
 
-    bool FUN_10c662f0(int A, int B, int C);
-    void FUN_10c64e10(Class_10E9CB00* A);
-    void FUN_10c64ff0(Class_10E9CB00* A);
+    bool TryCreate(int A, int B, int C);
+    void AddRef(Class_10E9CB00* A);
+    void Release(Class_10E9CB00* A);
     bool FUN_10c66230(int A, Class_10C68070* B);
     void FUN_10c65bf0(int A, Class_10C68070* B);
 
     char Unknown00[0x1C];
     char Pad1C[0x15c];
-    int Unknown178;
+    int m_EntryCount;
     int Unknown17C;
-    Struct_10C64E10* Unknown180;
+    Struct_10C64E10* m_Entries;
     char Pad184[0x58];
 };
 

@@ -154,9 +154,9 @@ bool cMotionControllerAnim::LocomotionCommandQueue(void* A)
 void Class_10C32C70::FUN_10c32c70()
 {
     FUN_10c325e0(0x40);
-    ::operator delete(Unknown14);
-    Unknown04 = 0;
-    Unknown0C = 0;
-    Unknown14 = 0;
-    Unknown00 = 0;
+    ::operator delete(m_Buckets);
+    m_Count = 0;
+    m_BucketCount = 0;
+    m_Buckets = 0;
+    m_Collisions = 0;
 }

@@ -3,7 +3,7 @@
 #include "Game/Class_1090A780.h"
 #include "Game/Class_10E6AC98.h"
 #include "Game/Class_10A63340.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 class Class_1091D800
 {
@@ -16,7 +16,7 @@ void Class_10A63340::FUN_10a63340(int Index)
 {
     if (Index != Unknown00 - 1)
         FUN_10a63370(Index + 1, Index, Unknown00 - Index - 1);
-    FUN_10bfbd70(Unknown00 - 1);
+    SetCount(Unknown00 - 1);
 }
 
 // FUNCTION: 0x10A63440 ?FUN_10a63440@Class_10E6AC98@@UAE?AVClass_1090A780@@XZ

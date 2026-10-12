@@ -4,7 +4,7 @@
 #include <string.h>
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10BC4020.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 extern "C" void* memmove(void* Dest, const void* Src, unsigned int Count);
 
@@ -149,7 +149,7 @@ public:
 // FUNCTION: 0x10B9DAC0 ?PopToBase@Class_10B9E410@@QAEXHHH@Z
 void Class_10B9E410::PopToBase(int A, int B, int C)
 {
-    Class_10BFBD70* Array = (Class_10BFBD70*)&m_Count;
+    cIntArray* Array = (cIntArray*)&m_Count;
     int N = m_Count;
     while (N > 1)
     {
@@ -168,7 +168,7 @@ void Class_10B9E410::PopToBase(int A, int B, int C)
                 if (From != To && Count)
                     memmove(Array->Data + To, Array->Data + From, Count * sizeof(int));
             }
-            Array->FUN_10bfbd70(Array->Count - 1);
+            Array->SetCount(Array->Count - 1);
             Item->Virtual4(1);
             if (Array->Count > 0)
                 FUN_10b9cad0(m_Stack[Array->Count - 1], R, 1);

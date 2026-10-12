@@ -1,6 +1,6 @@
 // Game/Class_10E5B2C0_18.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 class Class_10E5B2C0
 {
@@ -35,13 +35,13 @@ public:
     virtual void FUN_109e60a0(int Index, const int* Item);
 
     char Unknown04[0xEC];
-    Class_10BFBD70 Unknown0F0;
+    cIntArray Unknown0F0;
 };
 
 // FUNCTION: 0x109E60A0 ?FUN_109e60a0@Class_10E5B2C0@@UAEXHPBH@Z
 void Class_10E5B2C0::FUN_109e60a0(int Index, const int* Item)
 {
     if (Unknown0F0.Count < Index + 1)
-        Unknown0F0.FUN_10bfbd70(Index + 1);
+        Unknown0F0.SetCount(Index + 1);
     Unknown0F0.Data[Index] = *Item;
 }

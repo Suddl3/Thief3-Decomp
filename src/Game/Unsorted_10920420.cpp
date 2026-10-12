@@ -1,10 +1,10 @@
 // Game/Unsorted_10920420.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-class Class_10BFBD70
+class cIntArray
 {
 public:
-    void FUN_10bfbd70(int NewCount);
+    void SetCount(int NewCount);
 
     void AddUnique(int Item)
     {
@@ -14,12 +14,12 @@ public:
             if (Unknown08[i] == Item)
                 return;
         }
-        FUN_10bfbd70(Count + 1);
+        SetCount(Count + 1);
         Unknown08[Count] = Item;
     }
 
     int Unknown00;
-    int Unknown04;
+    int m_CapacityBytes;
     int* Unknown08;
 };
 
@@ -29,7 +29,7 @@ public:
     void FUN_10920930(int Item);
 
     char Unknown00[8];
-    Class_10BFBD70 Unknown08;
+    cIntArray Unknown08;
 };
 
 // FUNCTION: 0x10920930 ?FUN_10920930@Class_10920930@@QAEXH@Z

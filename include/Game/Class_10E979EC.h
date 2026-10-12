@@ -4,14 +4,14 @@
 #define GAME_CLASS_10E979EC_H
 
 #include "Game/Class_109081E0.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 class Class_10E979EC
 {
 public:
     virtual ~Class_10E979EC();
 
-    Class_10BFBD70 Unknown04;
+    cIntArray Unknown04;
     int Unknown10[3];
     Class_109081E0 Unknown1C;
 };

@@ -3,11 +3,11 @@
 #ifndef GAME_CLASS_10C084A0_H
 #define GAME_CLASS_10C084A0_H
 
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 class FArchive;
 
-class Class_10C084A0 : public Class_10BFBD70
+class Class_10C084A0 : public cIntArray
 {
 public:
     void FUN_10c084a0(FArchive& Ar);

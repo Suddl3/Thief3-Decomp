@@ -18,28 +18,28 @@ public:
     virtual void Virtual5();
     virtual void Virtual6();
     virtual void Virtual7();
-    virtual void FUN_10c3de70();
+    virtual void Start();
 
     char Unknown04[4];
     Class_10C341B0* Unknown08;
     char Unknown0C[0xC];
-    bool Unknown18;
+    bool m_bActive;
     char Unknown19[0x27];
-    int Unknown40;
+    int m_Handle;
     unsigned char Unknown44;
     char Unknown45[7];
     int Unknown4C;
     Class_109B2990* Unknown50;
 };
 
-// FUNCTION: 0x10C3DE70 ?FUN_10c3de70@Class_10E9B370@@UAEXXZ
-void Class_10E9B370::FUN_10c3de70()
+// FUNCTION: 0x10C3DE70 ?Start@Class_10E9B370@@UAEXXZ
+void Class_10E9B370::Start()
 {
-    Unknown40 = Unknown08->FUN_10c341b0();
-    if (Unknown40 != -1)
+    m_Handle = Unknown08->FUN_10c341b0();
+    if (m_Handle != -1)
     {
-        Unknown50->Virtual60(Unknown40);
+        Unknown50->Virtual60(m_Handle);
         Unknown50->FUN_109b2990(Unknown4C, FUN_10c3dbc0(this), 0, Unknown44, -1.0f, -1, 0);
-        Unknown18 = true;
+        m_bActive = true;
     }
 }

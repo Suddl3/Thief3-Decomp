@@ -34,10 +34,10 @@ struct Struct_10C0C0D0
     bool Unknown15;
 };
 
-// FUNCTION: 0x10C0C090 ?FUN_10c0c090@Class_10C0C090@@QAEXHHPAVFVector@@H@Z
-void Class_10C0C090::FUN_10c0c090(int A, int B, FVector* Pos, int D)
+// FUNCTION: 0x10C0C090 ?UpdatePosition@Class_10C0C090@@QAEXHHPAVFVector@@H@Z
+void Class_10C0C090::UpdatePosition(int A, int B, FVector* Pos, int D)
 {
-    Struct_10C0BFC0* Obj = FUN_10c0bfc0(A, B);
+    Struct_10C0BFC0* Obj = FindEntry(A, B);
     Obj->Unknown5C = GetTimeSeconds();
     Obj->Unknown38 = *Pos;
 }

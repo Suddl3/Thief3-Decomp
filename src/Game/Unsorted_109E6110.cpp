@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_109081E0.h"
 #include "Game/Class_109E6220.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 class Class_10E5B2C0
 {
@@ -53,7 +53,7 @@ public:
     virtual void Virtual34();
     virtual void Virtual35();
     virtual void Virtual36();
-    virtual void AppendTo(int A, Class_10BFBD70* Array);
+    virtual void AppendTo(int A, cIntArray* Array);
 
     char Unknown04[0x120];
     int Unknown124;
@@ -64,13 +64,13 @@ struct Struct_109E6220_Item {
     int Unknown08;
 };
 
-// FUNCTION: 0x109E6110 ?AppendTo@Class_10E5B588@@UAEXHPAVClass_10BFBD70@@@Z
-void Class_10E5B588::AppendTo(int A, Class_10BFBD70* Array)
+// FUNCTION: 0x109E6110 ?AppendTo@Class_10E5B588@@UAEXHPAVcIntArray@@@Z
+void Class_10E5B588::AppendTo(int A, cIntArray* Array)
 {
     if (Array)
     {
         int Index = Array->Count;
-        Array->FUN_10bfbd70(Index + 1);
+        Array->SetCount(Index + 1);
         Array->Data[Index] = Unknown124;
     }
 }

@@ -14,19 +14,19 @@ public:
     virtual void Virtual0();
     virtual void Virtual1();
     virtual void Virtual2();
-    virtual void FUN_10c38210();
+    virtual void CheckDistance();
     virtual void Virtual4();
     virtual void Virtual5();
-    virtual void FUN_10c380d0();
+    virtual void Trigger();
 
-    Class_109081E0 FUN_10c382b0();
+    Class_109081E0 GetMotionControllerName();
 
     char Unknown08[0x50];
-    unsigned char Unknown58;
+    unsigned char m_bTriggered;
     char Pad59[0x3];
-    Struct_10C05A50 Unknown5C;
+    Struct_10C05A50 m_Point;
     char Unknown64[4];
-    float Unknown68;
+    float m_Threshold;
 };
 
 #endif // GAME_CLASS_10E9AEC8_H

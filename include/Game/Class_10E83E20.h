@@ -114,13 +114,13 @@ public:
     virtual void Virtual103();
     virtual void Virtual104();
     virtual void Virtual105();
-    virtual void FUN_10b61680(float A);
+    virtual void ProcessState(float A);
 
     void FUN_10b613c0();
     void FUN_10a58950(int A);
 
     char Pad118[0xb8];
-    float Unknown1D0;
+    float m_Countdown;
     char Pad1D4[0x8];
     Object_10B60F60* Unknown1DC;
 };

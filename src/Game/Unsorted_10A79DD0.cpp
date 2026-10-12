@@ -10,20 +10,20 @@ class Class_10E6BD88;
 
 struct Struct_10C08690;
 
-class Class_10BFBD70
+class cIntArray
 {
 public:
-    Class_10BFBD70() : Unknown00(0), Unknown04(0), Unknown08(0) {}
-    Class_10BFBD70(const Class_10BFBD70& Other)
+    cIntArray() : Unknown00(0), m_CapacityBytes(0), Unknown08(0) {}
+    cIntArray(const cIntArray& Other)
     {
-        Unknown00 = Unknown04 = 0;
+        Unknown00 = m_CapacityBytes = 0;
         Unknown08 = 0;
-        FUN_10a58cb0(Other);
+        CopyFrom(Other);
     }
 
-    void FUN_10a58c70(const Class_10BFBD70& Other);
-    void FUN_10bfbd70(int Count);
-    void FUN_109dff50(int Index);
+    void AppendAll(const cIntArray& Other);
+    void SetCount(int Count);
+    void RemoveAt(int Index);
     int FindIndex(int Item)
     {
         for (int i = 0; i < Count; i++)
@@ -33,21 +33,21 @@ public:
         }
         return -1;
     }
-    int FUN_1092a330(const int* Item);
-    void FUN_109dff00();
-    void FUN_10a58cb0(const Class_10BFBD70& Other);
-    void FUN_10a81b10(int Index, int* Value);
-    Class_10BFBD70& operator=(const Class_10BFBD70& Other)
+    int FindOrAdd(const int* Item);
+    void Clear();
+    void CopyFrom(const cIntArray& Other);
+    void InsertAt(int Index, int* Value);
+    cIntArray& operator=(const cIntArray& Other)
     {
         Unknown00 = 0;
-        FUN_10a58c70(Other);
+        AppendAll(Other);
         return *this;
     }
     int FUN_10b9fa20(int* Item);
-    void FUN_10b9f810();
-    void FUN_10ba91a0(const int* Item);
-    void FUN_10c08510(int Item);
-    void FUN_10c08550(int Item);
+    void DeleteAll();
+    void PushFront(const int* Item);
+    void AddUnique(int Item);
+    void Remove(int Item);
     void FUN_10c08690(Struct_10C08690* Item);
 
     union
@@ -55,7 +55,7 @@ public:
         int Unknown00;
         int Count;
     };
-    int Unknown04;
+    int m_CapacityBytes;
     union
     {
         Class_10E6BD88** Unknown08;
@@ -88,7 +88,7 @@ public:
     void FUN_10a79dd0(Struct_10A79DD0Part* A, Struct_10A79DD0Part* B, int* C, int D);
 
     char Unknown00[4];
-    Class_10BFBD70 Unknown04;
+    cIntArray Unknown04;
 };
 
 // FUNCTION: 0x10A79DD0 ?FUN_10a79dd0@Class_10A79DD0@@QAEXPAUStruct_10A79DD0Part@@0PAHH@Z
@@ -100,8 +100,8 @@ void Class_10A79DD0::FUN_10a79dd0(Struct_10A79DD0Part* A, Struct_10A79DD0Part* B
     int Value = *C;
     Obj->Unknown08 = D;
     Obj->Unknown04 = Value;
-    Class_10BFBD70* Array = &Unknown04;
+    cIntArray* Array = &Unknown04;
     int Index = Array->Count;
-    Array->FUN_10bfbd70(Index + 1);
+    Array->SetCount(Index + 1);
     Array->Unknown08[Index] = Obj;
 }

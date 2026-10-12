@@ -11,29 +11,29 @@ void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
 unsigned int HashBytes(const void* Data, int Length);
 
-// FUNCTION: 0x10C324E0 ?FUN_10c324e0@Class_10C30D10@@QAE_NABH@Z
-bool Class_10C30D10::FUN_10c324e0(const int& Key)
+// FUNCTION: 0x10C324E0 ?Remove@Class_10C30D10@@QAE_NABH@Z
+bool Class_10C30D10::Remove(const int& Key)
 {
-    if (!Unknown10 && Unknown04 < Unknown0C * 0.05 && Unknown0C > 64)
-        FUN_10c30e90(Unknown0C / 2);
+    if (!m_FixedSize && m_Count < m_BucketCount * 0.05 && m_BucketCount > 64)
+        Rehash(m_BucketCount / 2);
     unsigned int Index;
     {
         const void* Data;
         int Length;
-        Unknown18.Virtual0(Key, &Data, &Length);
-        Index = HashBytes(Data, Length) & ((1 << Unknown08) - 1);
+        m_KeyTraits.Virtual0(Key, &Data, &Length);
+        Index = HashBytes(Data, Length) & ((1 << m_BucketBits) - 1);
     }
-    for (Class_10C30D10_Node* Node = Unknown14[Index], *Prev = 0; Node; Prev = Node, Node = Node->Next)
+    for (Class_10C30D10_Node* Node = m_Buckets[Index], *Prev = 0; Node; Prev = Node, Node = Node->Next)
     {
-        if (Unknown18.Virtual1(Key, Node->Key) == 0)
+        if (m_KeyTraits.Virtual1(Key, Node->Key) == 0)
         {
             if (Prev || Node->Next)
-                Unknown00--;
+                m_Collisions--;
             if (!Prev)
-                Unknown14[Index] = Node->Next;
+                m_Buckets[Index] = Node->Next;
             else
                 Prev->Next = Node->Next;
-            Unknown04--;
+            m_Count--;
             delete Node;
             return true;
         }

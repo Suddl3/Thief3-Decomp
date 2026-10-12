@@ -10,13 +10,13 @@ public:
     virtual void Virtual1(Class_10E6AC50* Owner);
 };
 
-class Class_10BFBD70
+class cIntArray
 {
 public:
-    void FUN_10bfbd70(int NewCount);
+    void SetCount(int NewCount);
 
     int Count;
-    int Unknown04;
+    int m_CapacityBytes;
     Object_10A632E0** Data;
 };
 
@@ -37,15 +37,15 @@ public:
     virtual void AddItem(Object_10A632E0* Obj);
 
     char Unknown04[0x10];
-    Class_10BFBD70 m_Count;
+    cIntArray m_Count;
 };
 
 // FUNCTION: 0x10A632E0 ?AddItem@Class_10E6AC50@@UAEXPAVObject_10A632E0@@@Z
 void Class_10E6AC50::AddItem(Object_10A632E0* Obj)
 {
-    Class_10BFBD70* Array = &m_Count;
+    cIntArray* Array = &m_Count;
     int Index = Array->Count;
-    Array->FUN_10bfbd70(Index + 1);
+    Array->SetCount(Index + 1);
     Array->Data[Index] = Obj;
     Obj->Virtual1(this);
 }

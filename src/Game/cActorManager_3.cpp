@@ -4,13 +4,13 @@
 
 class cActorManager;
 
-class Class_10BFBD70
+class cIntArray
 {
 public:
-    void FUN_10bfbd70(int NewCount);
+    void SetCount(int NewCount);
 
     int Count;
-    int Unknown04;
+    int m_CapacityBytes;
     struct Struct_10A4C500_Entry** Data;
 };
 
@@ -35,8 +35,8 @@ struct Struct_10A4C500_Node
 
 extern int DAT_10f3a084;
 
-// FUNCTION: 0x10A4C500 ?FUN_10a4c500@cActorManager@@UAEXPAVClass_10BFBD70@@@Z
-void cActorManager::FUN_10a4c500(Class_10BFBD70* Array)
+// FUNCTION: 0x10A4C500 ?FUN_10a4c500@cActorManager@@UAEXPAVcIntArray@@@Z
+void cActorManager::FUN_10a4c500(cIntArray* Array)
 {
     for (Struct_10A4C500_Node* It = ((Struct_10A4C500_Node*)DAT_10f3a084)->Next;
          It != (Struct_10A4C500_Node*)DAT_10f3a084; It = It->Next)
@@ -44,7 +44,7 @@ void cActorManager::FUN_10a4c500(Class_10BFBD70* Array)
         if (It->Value.Unknown04->Unknown08 == this)
         {
             int Index = Array->Count;
-            Array->FUN_10bfbd70(Index + 1);
+            Array->SetCount(Index + 1);
             Array->Data[Index] = &It->Value;
         }
     }

@@ -62,7 +62,7 @@ int Class_10C4DE40::FUN_10c4de40(int Index)
 // FUNCTION: 0x10C4ED70 ?FUN_10c4ed70@Class_10C4ED70@@QAEXHHPAH@Z
 void Class_10C4ED70::FUN_10c4ed70(int A, int B, int* C)
 {
-    Struct_10C4ED70* Node = (Struct_10C4ED70*)FUN_10c5cc60(1, 0);
+    Struct_10C4ED70* Node = (Struct_10C4ED70*)Allocate(1, 0);
     if (Node)
     {
         Node->Unknown00 = A;

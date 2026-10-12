@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_10E6FD20_H
 #define GAME_CLASS_10E6FD20_H
 
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 class Class_10E6FD20
 {
@@ -13,7 +13,7 @@ public:
     void FUN_10aca430(int A, float B, float C);
 
     void* VTable;
-    Class_10BFBD70 Unknown04;
+    cIntArray Unknown04;
 };
 
 #endif // GAME_CLASS_10E6FD20_H

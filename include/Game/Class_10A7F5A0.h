@@ -3,12 +3,12 @@
 #ifndef GAME_CLASS_10A7F5A0_H
 #define GAME_CLASS_10A7F5A0_H
 
-class Class_10BFBD70;
+class cIntArray;
 
 class Class_10A7F5A0
 {
 public:
-    Class_10BFBD70 FUN_10a7f5a0(int A, int B);
+    cIntArray FUN_10a7f5a0(int A, int B);
 };
 
 #endif // GAME_CLASS_10A7F5A0_H

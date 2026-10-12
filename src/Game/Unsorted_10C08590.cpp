@@ -2,10 +2,10 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Struct_10C08690.h"
 
-class Class_10BFBD70
+class cIntArray
 {
 public:
-    void FUN_109dff50(int Index);
+    void RemoveAt(int Index);
     void FUN_10c08690(Struct_10C08690* Item);
 
     int FindIndex(Struct_10C08690* Item)
@@ -19,17 +19,17 @@ public:
     }
 
     int Unknown00;
-    int Unknown04;
+    int m_CapacityBytes;
     Struct_10C08690** Unknown08;
 };
 
-// FUNCTION: 0x10C08690 ?FUN_10c08690@Class_10BFBD70@@QAEXPAUStruct_10C08690@@@Z
-void Class_10BFBD70::FUN_10c08690(Struct_10C08690* Item)
+// FUNCTION: 0x10C08690 ?FUN_10c08690@cIntArray@@QAEXPAUStruct_10C08690@@@Z
+void cIntArray::FUN_10c08690(Struct_10C08690* Item)
 {
     if (Item->Unknown78 & 4)
     {
         int Index = FindIndex(Item);
         if (Index != -1)
-            FUN_109dff50(Index);
+            RemoveAt(Index);
     }
 }

@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_10914530_H
 #define GAME_CLASS_10914530_H
 
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 class Class_10914530
 {
@@ -11,7 +11,7 @@ public:
     void FUN_10914530(int A, int B, int C, int D);
 
     int Unknown00;
-    Class_10BFBD70 Unknown04;
+    cIntArray Unknown04;
 };
 
 #endif // GAME_CLASS_10914530_H

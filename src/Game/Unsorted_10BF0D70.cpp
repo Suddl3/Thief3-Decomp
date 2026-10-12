@@ -14,10 +14,10 @@ public:
     virtual void Virtual0();
 };
 
-class Class_10E97880 : public Class_10E90D70
+class cStateMeleeCombat : public Class_10E90D70
 {
 public:
-    ~Class_10E97880();
+    ~cStateMeleeCombat();
 
     char Unknown04[0x44];
     FString Unknown48;
@@ -45,7 +45,7 @@ bool cStateRangedCombat::FUN_10bf1500()
     return false;
 }
 
-// FUNCTION: 0x10BF6990 ??1Class_10E97880@@QAE@XZ
-Class_10E97880::~Class_10E97880()
+// FUNCTION: 0x10BF6990 ??1cStateMeleeCombat@@QAE@XZ
+cStateMeleeCombat::~cStateMeleeCombat()
 {
 }

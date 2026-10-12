@@ -109,8 +109,8 @@ Class_10E6D8F0::Class_10E6D8F0()
 // FUNCTION: 0x10AA69E0 ??_GClass_10E6D8F0@@UAEPAXI@Z
 // Compiler-generated: emitted with the class's vtable by 0x10AA6860's definition in this unit.
 
-// FUNCTION: 0x10AA71F0 ?FUN_10aa71f0@Class_10E6C128@@QAEHPAU_iobuf@@H@Z
-int Class_10E6C128::FUN_10aa71f0(FILE* File, int Param)
+// FUNCTION: 0x10AA71F0 ?Dump@Class_10E6C128@@QAEHPAU_iobuf@@H@Z
+int Class_10E6C128::Dump(FILE* File, int Param)
 {
     fprintf(File, DAT_10e6c0f0, Unknown0C, Unknown20);
     return 1;

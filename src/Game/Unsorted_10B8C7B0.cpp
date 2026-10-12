@@ -4,7 +4,7 @@
 #include "Game/Class_10B8C9B0.h"
 #include "Game/Class_10D9B090.h"
 #include "Game/Class_10B8DC70.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 struct Struct_10D9E5E0_Param;
 
@@ -44,7 +44,7 @@ void Class_10B8DC70::FUN_10b8dc70(int Item)
     if (Item)
     {
         int Index = Unknown00;
-        FUN_10bfbd70(Index + 1);
+        SetCount(Index + 1);
         Unknown08[Index] = Item;
     }
 }

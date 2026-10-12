@@ -4,7 +4,7 @@
 #define GAME_CLASS_10E4938C_H
 
 #include "Game/Class_109081E0.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 class Class_10E4938C
 {
@@ -13,7 +13,7 @@ public:
 
     virtual ~Class_10E4938C();
 
-    Class_10BFBD70 Unknown04;
+    cIntArray Unknown04;
     Class_109081E0 Unknown10;
 };
 

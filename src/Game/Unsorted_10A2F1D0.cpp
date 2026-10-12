@@ -10,7 +10,7 @@ public:
     Class_10E5D5E0() : Unknown04(0) {}
 
     virtual ~Class_10E5D5E0();
-    virtual Class_10E5D5E0* FUN_10a2f1d0();
+    virtual Class_10E5D5E0* Clone();
 
     int Unknown04;
 };
@@ -21,7 +21,7 @@ public:
     Class_10E662C0(int Value) : Unknown04(Value) {}
 
     virtual ~Class_10E662C0();
-    virtual Class_10E662C0* FUN_10a2f2c0();
+    virtual Class_10E662C0* Clone();
 
     int Unknown04;
 };
@@ -29,16 +29,16 @@ public:
 // FUNCTION: 0x10A15B00 ??_GClass_10E5D5E0@@UAEPAXI@Z
 // Compiler-generated: emitted with the class's vtable by 0x10A2F1D0's definition in this unit.
 
-// FUNCTION: 0x10A2F1D0 ?FUN_10a2f1d0@Class_10E5D5E0@@UAEPAV1@XZ
-Class_10E5D5E0* Class_10E5D5E0::FUN_10a2f1d0()
+// FUNCTION: 0x10A2F1D0 ?Clone@Class_10E5D5E0@@UAEPAV1@XZ
+Class_10E5D5E0* Class_10E5D5E0::Clone()
 {
     Class_10E5D5E0* Copy = new(0, 0, 0, 0, 0) Class_10E5D5E0();
     Copy->Unknown04 = Unknown04;
     return Copy;
 }
 
-// FUNCTION: 0x10A2F2C0 ?FUN_10a2f2c0@Class_10E662C0@@UAEPAV1@XZ
-Class_10E662C0* Class_10E662C0::FUN_10a2f2c0()
+// FUNCTION: 0x10A2F2C0 ?Clone@Class_10E662C0@@UAEPAV1@XZ
+Class_10E662C0* Class_10E662C0::Clone()
 {
     return new(0, 0, 0, 0, 0) Class_10E662C0(Unknown04);
 }

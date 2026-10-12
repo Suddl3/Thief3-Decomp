@@ -1,7 +1,7 @@
 // Game/Class_10E97B68_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 extern "C" void* memset(void*, int, unsigned int);
 
@@ -23,13 +23,13 @@ public:
     virtual ~Class_10E97B68();
 
     int Unknown04;
-    Class_10BFBD70 Unknown08[5];
+    cIntArray Unknown08[5];
     char Unknown44[0xA];
     char Unknown4E[0x2];
-    Class_10BFBD70 Unknown50;
+    cIntArray Unknown50;
     char Unknown5C[0xA];
     char Unknown66[0x2];
-    Class_10BFBD70 Unknown68[5];
+    cIntArray Unknown68[5];
     int Unknown0A4;
 };
 

@@ -20,14 +20,14 @@ public:
 
 Class_10905A90_Member* GetAllocator();
 
-class Class_10BFBD70
+class cIntArray
 {
 public:
-    void FUN_10bfbd70(int Count);
-    void FUN_10b9f810();
+    void SetCount(int Count);
+    void DeleteAll();
 
     int Unknown00;
-    int Unknown04;
+    int m_CapacityBytes;
     Struct_10B9F810** Unknown08;
 };
 
@@ -46,17 +46,17 @@ void Class_10B9F5B0::FUN_10b9f5b0(Class_10B9F5B0_Param* A)
     }
 }
 
-// FUNCTION: 0x10B9F810 ?FUN_10b9f810@Class_10BFBD70@@QAEXXZ
-void Class_10BFBD70::FUN_10b9f810()
+// FUNCTION: 0x10B9F810 ?DeleteAll@cIntArray@@QAEXXZ
+void cIntArray::DeleteAll()
 {
     for (int i = 0; i < Unknown00; i++)
         delete Unknown08[i];
     Unknown00 = 0;
-    FUN_10bfbd70(0);
-    if (Unknown04)
+    SetCount(0);
+    if (m_CapacityBytes)
     {
         GetAllocator()->Virtual5(Unknown08);
         Unknown08 = 0;
-        Unknown04 = 0;
+        m_CapacityBytes = 0;
     }
 }

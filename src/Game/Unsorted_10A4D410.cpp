@@ -4,7 +4,7 @@
 #include "Game/Class_10A4DDA0.h"
 #include "Game/Class_10A4E2A0.h"
 #include "Game/Class_10A4EAE0.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 struct Struct_10A4DD60
 {
@@ -64,9 +64,9 @@ void Class_10A4DDA0::FUN_10a4dda0()
     Unknown08 = 0;
 }
 
-// FUNCTION: 0x10A4EAE0 ?FUN_10a4eae0@Class_10A4EAE0@@QAEXHPAVClass_10BFBD70@@@Z
-void Class_10A4EAE0::FUN_10a4eae0(int A, Class_10BFBD70* B)
+// FUNCTION: 0x10A4EAE0 ?FUN_10a4eae0@Class_10A4EAE0@@QAEXHPAVcIntArray@@@Z
+void Class_10A4EAE0::FUN_10a4eae0(int A, cIntArray* B)
 {
-    B->FUN_10bfbd70(0);
+    B->SetCount(0);
     Unknown1C.FUN_10a4e2a0(A, B);
 }

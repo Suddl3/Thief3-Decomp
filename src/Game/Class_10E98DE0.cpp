@@ -8,11 +8,11 @@
 
 float FUN_10ba91e0(const Struct_10BA91E0* A, const Struct_10BA91E0* B);
 
-// FUNCTION: 0x10C1AB00 ?FUN_10c1ab00@Class_10E98DE0@@UAEHPAV1@@Z
-int Class_10E98DE0::FUN_10c1ab00(Class_10E98DE0* Other)
+// FUNCTION: 0x10C1AB00 ?IsWithinRange@Class_10E98DE0@@UAEHPAV1@@Z
+int Class_10E98DE0::IsWithinRange(Class_10E98DE0* Other)
 {
     float Limit = Unknown08->FUN_10dbd510()->FUN_10bbdad0(0x40100373) * 16.0f;
-    if (FUN_10ba91e0(&Unknown48, &Other->Unknown48) < Limit)
+    if (FUN_10ba91e0(&m_Position, &Other->m_Position) < Limit)
         return 1;
     return 0;
 }

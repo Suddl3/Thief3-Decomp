@@ -5,21 +5,21 @@
 class Class_10E93020
 {
 public:
-    void FUN_10bd03d0();
+    void PopAction();
 
     char Unknown00[0x40];
-    Class_10BD0270* Unknown40;
-    int Unknown44[4];
+    Class_10BD0270* m_CurrentAction;
+    int m_ActionQueue[4];
 };
 
-// FUNCTION: 0x10BD03D0 ?FUN_10bd03d0@Class_10E93020@@QAEXXZ
-void Class_10E93020::FUN_10bd03d0()
+// FUNCTION: 0x10BD03D0 ?PopAction@Class_10E93020@@QAEXXZ
+void Class_10E93020::PopAction()
 {
-    if (Unknown40)
+    if (m_CurrentAction)
     {
-        delete Unknown40;
-        Unknown40 = 0;
+        delete m_CurrentAction;
+        m_CurrentAction = 0;
         for (int i = 0; i < 3; i++)
-            Unknown44[i] = Unknown44[i + 1];
+            m_ActionQueue[i] = m_ActionQueue[i + 1];
     }
 }

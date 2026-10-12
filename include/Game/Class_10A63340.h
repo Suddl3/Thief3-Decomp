@@ -3,9 +3,9 @@
 #ifndef GAME_CLASS_10A63340_H
 #define GAME_CLASS_10A63340_H
 
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
-class Class_10A63340 : public Class_10BFBD70
+class Class_10A63340 : public cIntArray
 {
 public:
     void FUN_10a63340(int Index);

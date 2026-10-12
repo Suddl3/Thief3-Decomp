@@ -3,7 +3,7 @@
 
 #include "Game/Class_10ACF9A0.h"
 #include "Game/Class_10AAB5C0.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 class cUObjectLinkManager
 {
@@ -12,7 +12,7 @@ public:
     virtual void Virtual1();
     virtual void Virtual2();
     virtual void Virtual3();
-    virtual void Virtual4(int A, int B, int C, Class_10BFBD70* D);
+    virtual void Virtual4(int A, int B, int C, cIntArray* D);
 };
 
 cUObjectLinkManager* GetUObjectLinkManager();
@@ -20,7 +20,7 @@ cUObjectLinkManager* GetUObjectLinkManager();
 // FUNCTION: 0x10ACF690 ?FUN_10acf690@Class_10ACF9A0@@QAEPAVClass_10B82390@@H@Z
 Class_10B82390* Class_10ACF9A0::FUN_10acf690(int A)
 {
-    Class_10BFBD70 Items;
+    cIntArray Items;
     GetUObjectLinkManager()->Virtual4(A, 0, 0x64d9226, &Items);
     if (Items.Count)
         return (Class_10B82390*)((Class_10AAB5C0*)Items.Data[0])->FUN_10aab5c0();

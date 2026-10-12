@@ -123,8 +123,8 @@ public:
     virtual void Virtual114();
 
     void FUN_10b65220();
-    void FUN_10b650f0();
-    void FUN_10b64ce0();
+    void ApplyOptions();
+    void ShowMainMenu();
 
     char Unknown04[0x1AC];
     char Unknown1B0;

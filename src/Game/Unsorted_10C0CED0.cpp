@@ -5,7 +5,7 @@
 #include "Game/Class_10E98530.h"
 #include "Game/Struct_10C0EE30.h"
 #include "Game/Class_10E8C4A4.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/Class_10E97CB4.h"
 #include "Game/Class_10E97CC0.h"
 

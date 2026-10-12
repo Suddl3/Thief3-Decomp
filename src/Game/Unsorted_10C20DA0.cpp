@@ -29,14 +29,14 @@ void Class_10C223A0::FUN_10c223a0()
     }
 }
 
-// FUNCTION: 0x10C24940 ?FUN_10c24940@Class_10C24940@@QAEXXZ
-void Class_10C24940::FUN_10c24940()
+// FUNCTION: 0x10C24940 ?Clear@Class_10C24940@@QAEXXZ
+void Class_10C24940::Clear()
 {
     FUN_10c24260(0);
-    if (Unknown04)
+    if (m_Capacity)
     {
-        GetAllocator()->Virtual5(Unknown08);
-        Unknown08 = 0;
-        Unknown04 = 0;
+        GetAllocator()->Virtual5(m_Items);
+        m_Items = 0;
+        m_Capacity = 0;
     }
 }

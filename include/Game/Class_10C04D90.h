@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_10C04D90_H
 #define GAME_CLASS_10C04D90_H
 
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 class Class_10C04D90
 {
@@ -11,7 +11,7 @@ public:
     bool FUN_10c04d90(int Value);
 
     char Unknown00[0x20];
-    Class_10BFBD70 Unknown20;
+    cIntArray Unknown20;
 };
 
 #endif // GAME_CLASS_10C04D90_H

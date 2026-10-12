@@ -22,7 +22,7 @@ public:
 
     void** Unknown118;
     char Unknown11C[0xB4];
-    float Unknown1D0;
+    float m_Countdown;
     int Unknown1D4;
     int Unknown1D8;
     int Unknown1DC;
@@ -38,7 +38,7 @@ public:
 
 // FUNCTION: 0x10B610A0 ??0Class_10E83E20@@QAE@XZ
 Class_10E83E20::Class_10E83E20()
-    : Class_10E69080(), Unknown118(DAT_10e7edb8), Unknown1D0(0.3f), Unknown1D4(0), Unknown1D8(0), Unknown1DC(0),
+    : Class_10E69080(), Unknown118(DAT_10e7edb8), m_Countdown(0.3f), Unknown1D4(0), Unknown1D8(0), Unknown1DC(0),
       Unknown1E0(false), Unknown1E4(DAT_10e47660), Unknown1E8(false), Unknown1EC(0), Unknown1F8(0), Unknown1FC(0)
 {
 }

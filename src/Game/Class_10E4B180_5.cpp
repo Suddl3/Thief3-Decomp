@@ -3,13 +3,13 @@
 
 class Class_10E4B180_Unknown70;
 
-class Class_10BFBD70
+class cIntArray
 {
 public:
-    void FUN_10bfbd70(int NewCount);
+    void SetCount(int NewCount);
 
     int Count;
-    int Unknown04;
+    int m_CapacityBytes;
     Class_10E4B180_Unknown70** Data;
 };
 
@@ -21,7 +21,7 @@ public:
     void FUN_10b7e620(int Mask, Class_10E4B180_Unknown70* Obj);
 
     char Unknown04[0x34];
-    Class_10BFBD70 Unknown38[8];
+    cIntArray Unknown38[8];
 };
 
 // FUNCTION: 0x10B7E620 ?FUN_10b7e620@Class_10E4B180@@QAEXHPAVClass_10E4B180_Unknown70@@@Z
@@ -33,7 +33,7 @@ void Class_10E4B180::FUN_10b7e620(int Mask, Class_10E4B180_Unknown70* Obj)
         if (Mask & Bit)
         {
             int Index = Unknown38[i].Count;
-            Unknown38[i].FUN_10bfbd70(Index + 1);
+            Unknown38[i].SetCount(Index + 1);
             Unknown38[i].Data[Index] = Obj;
         }
     }

@@ -1,12 +1,12 @@
 // Game/Unsorted_1092F190.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/IDirect3DDevice8.h"
 #include "Game/Class_1092F330.h"
 #include "Game/Class_1092F130.h"
 #include "Game/Class_109373D0.h"
 
-extern Class_10BFBD70 DAT_10f31b9c;
+extern cIntArray DAT_10f31b9c;
 
 extern Class_1092F130** DAT_10f31ba4;
 

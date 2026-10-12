@@ -12,8 +12,8 @@ class Class_10C59030_Value;
 class Class_10C59030 : public Class_10C592B0
 {
 public:
-    unsigned int FUN_10c57530(const Class_109081E0& Key, const Class_10C59030_Value& Value);
-    unsigned int FUN_10c59030(const Class_109081E0& Key, const Class_10C59030_Value& Value);
+    unsigned int Insert(const Class_109081E0& Key, const Class_10C59030_Value& Value);
+    unsigned int Set(const Class_109081E0& Key, const Class_10C59030_Value& Value);
 
     Class_10C57530_Unknown18 Unknown18;
 };

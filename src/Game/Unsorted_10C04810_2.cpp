@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10C04810.h"
 #include "Game/Class_10C04820.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/Class_10C04D90.h"
 
 extern float DAT_10e97b5c;
@@ -22,9 +22,9 @@ unsigned char Class_10C04820::FUN_10c04820(int index)
 // FUNCTION: 0x10C04D90 ?FUN_10c04d90@Class_10C04D90@@QAE_NH@Z
 bool Class_10C04D90::FUN_10c04d90(int Value)
 {
-    Class_10BFBD70* Array = &Unknown20;
+    cIntArray* Array = &Unknown20;
     int Index = Array->Unknown00;
-    Array->FUN_10bfbd70(Index + 1);
+    Array->SetCount(Index + 1);
     Array->Unknown08[Index] = Value;
     return true;
 }

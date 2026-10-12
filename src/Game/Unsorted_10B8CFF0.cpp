@@ -3,7 +3,7 @@
 #include "Game/Class_10B8CFF0.h"
 #include "Game/Class_10D3E450.h"
 #include "Game/Class_10B8D4C0.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 class Class_10D9FEE0
 {

@@ -70,7 +70,7 @@ public:
     void FUN_10bcb850(FArchive& Ar);
 };
 
-class Class_10E92578 : public cTacticMoveToPoint
+class State_Choking : public cTacticMoveToPoint
 {
 public:
     virtual void FUN_10bcc1e0(int A, int B, int C, int D, int E);
@@ -120,8 +120,8 @@ public:
     bool Unknown5D;
 };
 
-// FUNCTION: 0x10BCC1E0 ?FUN_10bcc1e0@Class_10E92578@@UAEXHHHHH@Z
-void Class_10E92578::FUN_10bcc1e0(int A, int B, int C, int D, int E)
+// FUNCTION: 0x10BCC1E0 ?FUN_10bcc1e0@State_Choking@@UAEXHHHHH@Z
+void State_Choking::FUN_10bcc1e0(int A, int B, int C, int D, int E)
 {
     cTacticMoveToPoint::FUN_10bcac50(A, B, C, D, E);
     if (D != 0x17)

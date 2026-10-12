@@ -15,18 +15,18 @@ public:
 class Class_10E9AE24 : public Class_10E9ADE8
 {
 public:
-    Class_10E9AE24* FUN_10c37700(int A, int B, int C, int D, int E, int F, int G, int H);
+    Class_10E9AE24* Initialize(int A, int B, int C, int D, int E, int F, int G, int H);
 
-    int Unknown94;
-    int Unknown98;
+    int m_OffsetX;
+    int m_OffsetY;
 };
 
-// FUNCTION: 0x10C37700 ?FUN_10c37700@Class_10E9AE24@@QAEPAV1@HHHHHHHH@Z
-Class_10E9AE24* Class_10E9AE24::FUN_10c37700(int A, int B, int C, int D, int E, int F, int G, int H)
+// FUNCTION: 0x10C37700 ?Initialize@Class_10E9AE24@@QAEPAV1@HHHHHHHH@Z
+Class_10E9AE24* Class_10E9AE24::Initialize(int A, int B, int C, int D, int E, int F, int G, int H)
 {
     this->Class_10E9ADE8::Class_10E9ADE8(A, B, C, D, 0, 0, G, H);
-    Unknown94 = E;
+    m_OffsetX = E;
     Unknown00 = DAT_10e9ae24;
-    Unknown98 = F;
+    m_OffsetY = F;
     return this;
 }

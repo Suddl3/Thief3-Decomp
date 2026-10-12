@@ -17,15 +17,15 @@ extern float DAT_10eafbdc;
 
 extern Class_10F46DA0* DAT_10f46da0;
 
-// FUNCTION: 0x10ACA5B0 ?FUN_10aca5b0@Class_10ACA620@@QAEXM@Z
-void Class_10ACA620::FUN_10aca5b0(float A)
+// FUNCTION: 0x10ACA5B0 ?Tick@Class_10ACA620@@QAEXM@Z
+void Class_10ACA620::Tick(float A)
 {
-    if (Unknown08 > DAT_10eafbdc)
+    if (Remaining > DAT_10eafbdc)
     {
-        Unknown08 -= A;
-        if (Unknown08 <= DAT_10eafbdc)
+        Remaining -= A;
+        if (Remaining <= DAT_10eafbdc)
         {
-            Unknown08 = 0.0f;
+            Remaining = 0.0f;
             DAT_10f46da0->Virtual5(0xb, Unknown04, -1, 0);
         }
     }

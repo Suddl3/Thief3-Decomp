@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_10E97BE8_H
 #define GAME_CLASS_10E97BE8_H
 
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/Class_10C09A40.h"
 #include "Game/Class_10C0A6F0.h"
 
@@ -13,11 +13,11 @@ public:
     virtual ~Class_10E97BE8();
 
     int FUN_10c09910(int Item, int Arg);
-    void FUN_10c0aa00(int Arg, Class_10BFBD70* Src);
+    void FUN_10c0aa00(int Arg, cIntArray* Src);
 
     Class_10C0A6F0 Unknown04;
     Class_10C09A40 Unknown10;
-    Class_10BFBD70 Unknown1C;
+    cIntArray Unknown1C;
 };
 
 #endif // GAME_CLASS_10E97BE8_H

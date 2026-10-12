@@ -36,7 +36,7 @@ extern Struct_10AA3520* DAT_10f35dec;
 class Class_10E6C128
 {
 public:
-    void FUN_10aa7250(void* A, int Count, int Unused);
+    void Load(void* A, int Count, int Unused);
 
     char Pad00[0xc];
     Class_109081E0 Unknown0C;
@@ -48,8 +48,8 @@ public:
     int Unknown24;
 };
 
-// FUNCTION: 0x10AA7250 ?FUN_10aa7250@Class_10E6C128@@QAEXPAXHH@Z
-void Class_10E6C128::FUN_10aa7250(void* A, int Count, int Unused)
+// FUNCTION: 0x10AA7250 ?Load@Class_10E6C128@@QAEXPAXHH@Z
+void Class_10E6C128::Load(void* A, int Count, int Unused)
 {
     ReadString(A, (int*)&Unknown24);
     if (Count < 0x10)

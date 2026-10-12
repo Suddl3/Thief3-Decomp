@@ -30,7 +30,7 @@ public:
     virtual void Virtual5();
     virtual void Virtual6();
     virtual void Virtual7();
-    virtual void FUN_10be1c00();
+    virtual void CheckTimeout();
     virtual void Virtual9();
     virtual void Virtual10();
     virtual void Virtual11();
@@ -89,15 +89,15 @@ public:
     virtual void Serialize(FArchive& Ar);
 
     char Unknown04[0x3C];
-    float Unknown40;
-    int Unknown44;
+    float m_StartTime;
+    int m_Handle;
     unsigned char Unknown48;
     unsigned char Unknown49;
 };
 
-// FUNCTION: 0x10BE1C00 ?FUN_10be1c00@Class_10E95898@@UAEXXZ
-void Class_10E95898::FUN_10be1c00()
+// FUNCTION: 0x10BE1C00 ?CheckTimeout@Class_10E95898@@UAEXXZ
+void Class_10E95898::CheckTimeout()
 {
-    if (Unknown40 + 1.0f < GetTimeSeconds())
+    if (m_StartTime + 1.0f < GetTimeSeconds())
         PopState();
 }

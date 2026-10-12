@@ -1,6 +1,6 @@
 // Game/Class_10E6D8F0_9.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/Class_10AA6B50_Unknown04.h"
 
 class Class_10E6D8F0;
@@ -39,7 +39,7 @@ public:
 
 extern Class_10F46DA0* DAT_10f46da0;
 
-class Class_10E6D8F0 : public Class_10AA6B50_Unknown04, public Class_10BFBD70
+class Class_10E6D8F0 : public Class_10AA6B50_Unknown04, public cIntArray
 {
 public:
     virtual void Virtual0();
@@ -74,10 +74,10 @@ void Class_10E6D8F0::RemoveValue(int Arg0)
         {
             int Last = Count - 1;
             int Tmp = Data[Index];
-            Class_10BFBD70& Arr = *this;
+            cIntArray& Arr = *this;
             Data[Index] = Data[Last];
             Arr.Data[Last] = Tmp;
-            Arr.FUN_10bfbd70(Arr.Count - 1);
+            Arr.SetCount(Arr.Count - 1);
         }
     }
     Class_10E662E0 Notice;

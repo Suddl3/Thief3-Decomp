@@ -31,7 +31,7 @@ void Class_10E84BB8::FUN_10b66980(int Index)
     Object->Virtual124();
     int Slot = Unknown150 + Index;
     int Field = Object->Unknown1F0;
-    int Value = Unknown184->FUN_10b6bd50(Slot, Field);
-    Unknown184->FUN_10b6ba50(Slot, &Unknown158, Value);
+    int Value = Unknown184->LookupValue(Slot, Field);
+    Unknown184->SetField(Slot, &Unknown158, Value);
     FUN_10b66770(Index);
 }

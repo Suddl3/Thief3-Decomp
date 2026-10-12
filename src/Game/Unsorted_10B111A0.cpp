@@ -86,40 +86,40 @@ bool Class_10E782A0::FUN_10b111a0(int A)
     return Result;
 }
 
-// FUNCTION: 0x10B11520 ?FUN_10b11520@Class_10B116B0@@QAEXH@Z
-void Class_10B116B0::FUN_10b11520(int NewCount)
+// FUNCTION: 0x10B11520 ?Resize@Class_10B116B0@@QAEXH@Z
+void Class_10B116B0::Resize(int NewCount)
 {
-    int OldCount = Unknown00;
-    int Capacity = !Unknown08 ? 0 : Unknown04 / sizeof(Class_10B11520_Unknown08);
+    int OldCount = Count;
+    int Capacity = !Data ? 0 : AllocBytes / sizeof(Class_10B11520_Unknown08);
     GetAllocator()->Virtual8(0, 0);
     if (NewCount > Capacity)
     {
         int NewCapacity = NewCount;
         if (Capacity)
             NewCapacity = (NewCount & ~15) + 16;
-        void* Block = GetAllocator()->Virtual3(Unknown08, NewCapacity * sizeof(Class_10B11520_Unknown08), 0, 0, 0, 0);
-        Unknown04 = NewCapacity * sizeof(Class_10B11520_Unknown08);
-        Unknown08 = Block;
+        void* Block = GetAllocator()->Virtual3(Data, NewCapacity * sizeof(Class_10B11520_Unknown08), 0, 0, 0, 0);
+        AllocBytes = NewCapacity * sizeof(Class_10B11520_Unknown08);
+        Data = Block;
     }
     else if (NewCount <= Capacity - 16)
     {
         if (NewCount == 0)
         {
-            GetAllocator()->Virtual5(Unknown08);
-            Unknown08 = 0;
-            Unknown04 = 0;
+            GetAllocator()->Virtual5(Data);
+            Data = 0;
+            AllocBytes = 0;
         }
         else
         {
             int NewCapacity = (NewCount & ~15) + 16;
-            void* Block = GetAllocator()->Virtual3(Unknown08, NewCapacity * sizeof(Class_10B11520_Unknown08), 0, 0, 0, 0);
-            Unknown04 = NewCapacity * sizeof(Class_10B11520_Unknown08);
-            Unknown08 = Block;
+            void* Block = GetAllocator()->Virtual3(Data, NewCapacity * sizeof(Class_10B11520_Unknown08), 0, 0, 0, 0);
+            AllocBytes = NewCapacity * sizeof(Class_10B11520_Unknown08);
+            Data = Block;
         }
     }
     for (int j = OldCount; j < NewCount; j++)
     {
-        Class_10B11520_Unknown08* Element = (Class_10B11520_Unknown08*)((char*)Unknown08 + j * sizeof(Class_10B11520_Unknown08));
+        Class_10B11520_Unknown08* Element = (Class_10B11520_Unknown08*)((char*)Data + j * sizeof(Class_10B11520_Unknown08));
         if (Element)
         {
             Element->Unknown00 = 0;
@@ -128,7 +128,7 @@ void Class_10B116B0::FUN_10b11520(int NewCount)
         }
     }
     GetAllocator()->Virtual9();
-    Unknown00 = NewCount;
+    Count = NewCount;
 }
 
 // FUNCTION: 0x10B11600 ?FUN_10b11600@Class_10B11600@@QAEXHHH@Z
@@ -166,14 +166,14 @@ void Class_10B11600::FUN_10b11600(int From, int To, int Count)
     }
 }
 
-// FUNCTION: 0x10B116B0 ?FUN_10b116b0@Class_10B116B0@@QAEXXZ
-void Class_10B116B0::FUN_10b116b0()
+// FUNCTION: 0x10B116B0 ?Free@Class_10B116B0@@QAEXXZ
+void Class_10B116B0::Free()
 {
-    FUN_10b11520(0);
-    if (Unknown04)
+    Resize(0);
+    if (AllocBytes)
     {
-        GetAllocator()->Virtual5(Unknown08);
-        Unknown08 = 0;
-        Unknown04 = 0;
+        GetAllocator()->Virtual5(Data);
+        Data = 0;
+        AllocBytes = 0;
     }
 }

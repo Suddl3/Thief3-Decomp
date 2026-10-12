@@ -8,17 +8,17 @@
 
 class Class_1092F100;
 
-class Class_10BFBD70
+class cIntArray
 {
 public:
-    void FUN_10bfbd70(int Count);
+    void SetCount(int Count);
 
     int Unknown00;
-    int Unknown04;
+    int m_CapacityBytes;
     Class_1092F100** Unknown08;
 };
 
-extern Class_10BFBD70 DAT_10f31b9c;
+extern cIntArray DAT_10f31b9c;
 
 struct Struct_1092FCA0
 {
@@ -79,7 +79,7 @@ void Class_1092E930::FUN_1092e930()
 void Class_1092F100::FUN_1092f100()
 {
     int Index = DAT_10f31b9c.Unknown00;
-    DAT_10f31b9c.FUN_10bfbd70(DAT_10f31b9c.Unknown00 + 1);
+    DAT_10f31b9c.SetCount(DAT_10f31b9c.Unknown00 + 1);
     DAT_10f31b9c.Unknown08[Index] = this;
 }
 

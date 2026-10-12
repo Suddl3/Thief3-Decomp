@@ -1,6 +1,6 @@
 // Game/Class_10E90A68.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/Class_10E90A68.h"
 
 class Class_10BBD9D0_CC
@@ -63,7 +63,7 @@ extern Struct_10AA3520* DAT_10f35dec;
 
 class Class_10E90A68;
 
-void FUN_10bbd8f0(Class_10BFBD70* A);
+void FUN_10bbd8f0(cIntArray* A);
 
 void FUN_10c27990(Class_10E90A68* A);
 

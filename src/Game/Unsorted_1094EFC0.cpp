@@ -3,7 +3,7 @@
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_1094F750.h"
 #include "Game/Class_10953590.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/Class_10943600.h"
 #include "Game/Item_10943600.h"
 #include "Game/Class_1094EFC0.h"
@@ -43,7 +43,7 @@ public:
     virtual void Virtual24();
     virtual void Virtual25();
     virtual void Virtual26();
-    virtual void CollectValues(Class_10BFBD70* Out, int Param);
+    virtual void CollectValues(cIntArray* Out, int Param);
 
     char Unknown04[0xF0];
     int Unknown0F4;
@@ -85,7 +85,7 @@ void Class_1094EFC0::FUN_1094efc0(int A, int B)
     if (A == 0)
     {
         Unknown0F0 = 0;
-        Unknown0F4.FUN_10bfbd70(B);
+        Unknown0F4.SetCount(B);
         GetAllocator()->Virtual8(0, 0);
         for (int i = 0; i < B; i++)
         {
@@ -95,8 +95,8 @@ void Class_1094EFC0::FUN_1094efc0(int A, int B)
     }
 }
 
-// FUNCTION: 0x1094F6F0 ?CollectValues@Class_10E4AB88@@UAEXPAVClass_10BFBD70@@H@Z
-void Class_10E4AB88::CollectValues(Class_10BFBD70* Out, int Param)
+// FUNCTION: 0x1094F6F0 ?CollectValues@Class_10E4AB88@@UAEXPAVcIntArray@@H@Z
+void Class_10E4AB88::CollectValues(cIntArray* Out, int Param)
 {
     for (int i = 0; i < Unknown0F4; i++)
     {
@@ -107,7 +107,7 @@ void Class_10E4AB88::CollectValues(Class_10BFBD70* Out, int Param)
             if (Value)
             {
                 int Index = Out->Unknown00;
-                Out->FUN_10bfbd70(Index + 1);
+                Out->SetCount(Index + 1);
                 Out->Unknown08[Index] = Value;
             }
         }

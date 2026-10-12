@@ -13,15 +13,15 @@ extern float DAT_10e49c68;
 class Class_10E8C4A4
 {
 public:
-    virtual void FUN_10c13150(const Class_10E8C4A4* p1);
+    virtual void CopyFrom(const Class_10E8C4A4* p1);
 
     char Unknown04[4];
     int Field08;
     Class_109081E0 Field0c;
 };
 
-// FUNCTION: 0x10C13150 ?FUN_10c13150@Class_10E8C4A4@@UAEXPBV1@@Z
-void Class_10E8C4A4::FUN_10c13150(const Class_10E8C4A4* p1)
+// FUNCTION: 0x10C13150 ?CopyFrom@Class_10E8C4A4@@UAEXPBV1@@Z
+void Class_10E8C4A4::CopyFrom(const Class_10E8C4A4* p1)
 {
     Field08 = p1->Field08;
     Field0c = p1->Field0c;

@@ -1,7 +1,7 @@
 // Game/Unsorted_10B73EE0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10E878B8.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 class Class_10E88900
 {
@@ -40,14 +40,14 @@ public:
 // FUNCTION: 0x10B64440 ??_GClass_10E87B68@@UAEPAXI@Z
 // Compiler-generated: emitted with the class's vtable by 0x10B755F0's definition in this unit.
 
-// FUNCTION: 0x10B73EE0 ?FUN_10b73ee0@Class_10E878B8@@QAE?AVClass_10BFBD70@@XZ
-Class_10BFBD70 Class_10E878B8::FUN_10b73ee0()
+// FUNCTION: 0x10B73EE0 ?FUN_10b73ee0@Class_10E878B8@@QAE?AVcIntArray@@XZ
+cIntArray Class_10E878B8::FUN_10b73ee0()
 {
     return FUN_10a5aac0();
 }
 
-// FUNCTION: 0x10B73F00 ?FUN_10b73f00@Class_10E878B8@@QAE?AVClass_10BFBD70@@XZ
-Class_10BFBD70 Class_10E878B8::FUN_10b73f00()
+// FUNCTION: 0x10B73F00 ?FUN_10b73f00@Class_10E878B8@@QAE?AVcIntArray@@XZ
+cIntArray Class_10E878B8::FUN_10b73f00()
 {
     return FUN_10a5a920();
 }

@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10B395B0.h"
 #include "Game/Class_10B39700.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/Class_10B47C50.h"
 
 class Class_10B22020;
@@ -40,7 +40,7 @@ void Class_10B47C50::FUN_10b47c50()
     if (Count > 0)
     {
         FUN_10b47b20(Unknown4C.Unknown08[Count - 1], -1.0f, 1.0f, 0x101, 0, true, false, -1.0f);
-        Unknown4C.FUN_109dff50(Count - 1);
+        Unknown4C.RemoveAt(Count - 1);
     }
 }
 

@@ -20,14 +20,14 @@ public:
     virtual void Virtual13();
     virtual void Virtual14();
     virtual void Virtual15();
-    virtual void FUN_10b876e0(int A, int B);
+    virtual void SetState(int A, int B);
 
     char Unknown04[8];
-    int Unknown0C;
+    int m_State;
 };
 
-// FUNCTION: 0x10B876E0 ?FUN_10b876e0@Class_10E89210@@UAEXHH@Z
-void Class_10E89210::FUN_10b876e0(int A, int B)
+// FUNCTION: 0x10B876E0 ?SetState@Class_10E89210@@UAEXHH@Z
+void Class_10E89210::SetState(int A, int B)
 {
     switch (A)
     {
@@ -38,8 +38,8 @@ void Class_10E89210::FUN_10b876e0(int A, int B)
     case 7:
         break;
     default:
-        FUN_10b876e0(5, 0);
+        SetState(5, 0);
         break;
     }
-    Unknown0C = A;
+    m_State = A;
 }

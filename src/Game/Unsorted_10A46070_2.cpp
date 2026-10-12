@@ -105,8 +105,8 @@ bool cActorManager::FUN_10a4c4d0(int A)
     return A != DAT_10f3a084;
 }
 
-// FUNCTION: 0x10A4D310 ?FUN_10a4d310@Class_10E6798C@@QAEPAV1@XZ
-Class_10E6798C* Class_10E6798C::FUN_10a4d310()
+// FUNCTION: 0x10A4D310 ?Init@Class_10E6798C@@QAEPAV1@XZ
+Class_10E6798C* Class_10E6798C::Init()
 {
     Unknown00 = DAT_10e6798c;
     Unknown28 = 0;

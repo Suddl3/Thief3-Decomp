@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include <math.h>
 #include "Game/Struct_10BA91E0.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 extern "C" void* memmove(void* Dest, const void* Src, unsigned Count);
 
@@ -35,10 +35,10 @@ int FUN_10ba90a0()
     return (int)DAT_10ff6684;
 }
 
-// FUNCTION: 0x10BA91A0 ?FUN_10ba91a0@Class_10BFBD70@@QAEXPBH@Z
-void Class_10BFBD70::FUN_10ba91a0(const int* Item)
+// FUNCTION: 0x10BA91A0 ?PushFront@cIntArray@@QAEXPBH@Z
+void cIntArray::PushFront(const int* Item)
 {
-    FUN_10bfbd70(Unknown00 + 1);
+    SetCount(Unknown00 + 1);
     int Count = Unknown00 - 1;
     if (Count)
         memmove(Unknown08 + 1, Unknown08, Count * sizeof(int));

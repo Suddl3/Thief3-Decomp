@@ -94,7 +94,7 @@ int Class_10A58B40::FUN_10a58b40()
 // FUNCTION: 0x10A58BE0 ?FUN_10a58be0@Class_10E69050@@UAEXXZ
 void Class_10E69050::FUN_10a58be0()
 {
-    Unknown14[Unknown18]->Virtual2();
+    m_Items[m_Current]->Virtual2();
 }
 
 // FUNCTION: 0x10A59320 ?GetItem@Class_10E68D80@@UAE?AVClass_1090A780@@H@Z

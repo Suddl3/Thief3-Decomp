@@ -1,7 +1,7 @@
 // Game/Class_10E97BC0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/FArchive.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/Class_10C08E90.h"
 #include "Game/Class_10FF667C.h"
 #include "Game/Class_10FF667C_Unknown18.h"
@@ -19,7 +19,7 @@ public:
 
     int Unknown04;
     Class_10C08E90 Unknown08;
-    Class_10BFBD70 Unknown14;
+    cIntArray Unknown14;
     char Unknown20;
 };
 
@@ -40,7 +40,7 @@ void Class_10E97BC0::FUN_10c08fa0(FArchive& Ar)
     int Count2 = Unknown14.Count;
     Ar.Serialize(&Count2, 4);
     if (Ar.Unknown14)
-        Unknown14.FUN_10bfbd70(Count2);
+        Unknown14.SetCount(Count2);
     for (int j = 0; j < Count2; j++)
         DAT_10ff667c->Unknown18->Virtual1(Ar, &Unknown14.Data[j]);
 }

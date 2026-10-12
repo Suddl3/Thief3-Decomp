@@ -13,18 +13,18 @@ public:
     virtual void Virtual2();
     virtual Struct_10B2EE40 FUN_10b2ee40();
 
-    void FUN_10b2ee90();
+    void ResetValue();
 
     char Unknown04[8];
     union
     {
         int Field0C;
-        float Unknown0C;
+        float m_Value;
     };
     union
     {
         int Field10;
-        float Unknown10;
+        float m_MaxValue;
     };
     Struct_10B2EE40 Unknown14;
 };

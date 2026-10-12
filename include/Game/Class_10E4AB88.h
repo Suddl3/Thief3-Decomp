@@ -9,7 +9,7 @@
 
 class Class_1094E050;
 class Class_10951730;
-class Class_10BFBD70;
+class cIntArray;
 struct Struct_1094E820B;
 struct Struct_1094E9D0;
 
@@ -43,7 +43,7 @@ public:
     virtual void Virtual24();
     virtual void Virtual25();
     virtual void Virtual26();
-    virtual void CollectValues(Class_10BFBD70* Out, int Param);
+    virtual void CollectValues(cIntArray* Out, int Param);
     virtual void FUN_1094eea0(int Param);
 
     Struct_1094E0F0 FUN_1094e0f0();

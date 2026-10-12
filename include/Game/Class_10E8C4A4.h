@@ -20,8 +20,8 @@ public:
     virtual int FUN_10c13170();
     virtual Class_109081E0 FUN_10c131d0();
     virtual bool FUN_10c129b0();
-    virtual void FUN_10c12b50(int A, void* Stream);
-    virtual bool FUN_10c129c0(int A, void* Reader);
+    virtual void Save(int A, void* Stream);
+    virtual bool Load(int A, void* Reader);
 
     Class_10E8C4A4() {}
 };

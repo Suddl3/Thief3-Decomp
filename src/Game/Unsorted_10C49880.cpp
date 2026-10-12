@@ -15,7 +15,7 @@ unsigned int HashBytes(const void* Data, int Length);
 class Class_10C48260
 {
 public:
-    unsigned int FUN_10c48260(const int& A, const int& B);
+    unsigned int Insert(const int& A, const int& B);
 };
 
 class Class_10D3F830 : public Class_10C48260
@@ -61,33 +61,33 @@ void Class_10E9BBC0::AddEntry(Struct_10C49880* A)
     if (Key)
     {
         int Index = A->Unknown04;
-        m_Entries.FUN_10c48260(Index, Key);
+        m_Entries.Insert(Index, Key);
     }
 }
 
-// FUNCTION: 0x10C49960 ?FUN_10c49960@Class_10C48320@@QAE_NABH@Z
-bool Class_10C48320::FUN_10c49960(const int& Key)
+// FUNCTION: 0x10C49960 ?Remove@Class_10C48320@@QAE_NABH@Z
+bool Class_10C48320::Remove(const int& Key)
 {
-    if (!Unknown10 && Unknown04 < Unknown0C * 0.05 && Unknown0C > 64)
-        FUN_10c484d0(Unknown0C / 2);
+    if (!m_FixedSize && m_Count < m_BucketCount * 0.05 && m_BucketCount > 64)
+        Rehash(m_BucketCount / 2);
     unsigned int Index;
     {
         const void* Data;
         int Length;
-        Unknown18.Virtual0(Key, &Data, &Length);
-        Index = HashBytes(Data, Length) & ((1 << Unknown08) - 1);
+        m_KeyTraits.Virtual0(Key, &Data, &Length);
+        Index = HashBytes(Data, Length) & ((1 << m_BucketBits) - 1);
     }
-    for (Class_10C48320_Node* Node = Unknown14[Index], *Prev = 0; Node; Prev = Node, Node = Node->Next)
+    for (Class_10C48320_Node* Node = m_Buckets[Index], *Prev = 0; Node; Prev = Node, Node = Node->Next)
     {
-        if (Unknown18.Virtual1(Key, Node->Key) == 0)
+        if (m_KeyTraits.Virtual1(Key, Node->Key) == 0)
         {
             if (Prev || Node->Next)
-                Unknown00--;
+                m_Collisions--;
             if (!Prev)
-                Unknown14[Index] = Node->Next;
+                m_Buckets[Index] = Node->Next;
             else
                 Prev->Next = Node->Next;
-            Unknown04--;
+            m_Count--;
             delete Node;
             return true;
         }

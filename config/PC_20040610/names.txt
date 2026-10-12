@@ -1176,3 +1176,258 @@ field Class_10BAEC00::Unknown00 m_Count SetCount reads it as the old count and s
 field Class_10BAEC00::Unknown04 m_BlockBytes Block size in bytes (capacity times element size); zeroed when the block is freed.
 field Class_10BAEC00::Unknown08 m_Data Block pointer passed to the allocator's Virtual3 and freed with Virtual5 in Empty.
 field Class_10BAEC80::Unknown04 m_BlockBytes Tested before the Unknown08 block is freed in FUN_10baec80, then zeroed.
+class Class_10E84730 cT3AVOptionsWindow Xbox twin's name, T3AVOptionsWindow.cpp; its Options Save and ApplyVideo fit an options window.
+class Class_10E953A8 State_Sit Xbox twin names State_Sit, source AI_IdleStates.cpp; the class has no message contradicting it.
+class Class_10E97488 State_PatrolLook Xbox twin names State_PatrolLook, source AI_PatrolStates.cpp; its update pops the state when the timer passes.
+class Class_10E97880 cStateMeleeCombat Xbox twin names cStateMeleeCombat, source AICombatMelee.cpp; its accessors read properties 0x100458 and 0x100459.
+class Class_10E91EE8 State_Gassed Xbox AI_ReactionStates.cpp names State_Gassed; a reaction state whose override FUN_10bcb8e0 sets its state fields.
+class Class_10E92118 State_Blinded Xbox AI_ReactionStates.cpp names State_Blinded; override FUN_10bcbd10 sets Unknown5C and pops the state.
+class Class_10E92348 State_SlipAndFall Xbox AI_ReactionStates.cpp names State_SlipAndFall; its methods play effect 0x807ff and set a 0.5f value.
+class Class_10E92578 State_Choking Xbox AI_ReactionStates.cpp names State_Choking; override FUN_10bcc1e0 sets Unknown5C and pops, as State_Blinded does.
+class Class_10E93E48 cTacticWeaponHolster Xbox AIWeaponStates.cpp names cTacticWeaponHolster; FUN_10bd97b0 drives a weapon object through Virtual96.
+class Class_10BFBD70 cIntArray Count, capacity in bytes and Data form a growable int array, grown and freed through GetAllocator().
+class Class_10E9BB4C cCadenceFactory Xbox source CadenceFactory.cpp and CADENCE INTERNAL ERROR messages; config section 'Cadence'.
+class Class_10E6D600 SwooshPointTracker Xbox twin names SwooshPointTracker; a ring buffer of points, with 'Out of bounds' in its vtable.
+class Class_10E6F6A8 cCameraModeHandler Xbox twin names cCameraModeHandler in T3Camera.cpp; its state is serialized and applied to an object.
+function 0x10A35940 Reset Resets fields to defaults; sets Unknown84/88 from DAT_10f2c928 or null, Unknown38/3C from FUN_10a358b0 or 1; called by FUN_10a2a490, FUN_10a35ee0.
+function 0x10A3C2E0 Reset Clears Unknown20, 24, 28 and 30 and calls FUN_10a18fc0()->Virtual6(0, 0); FUN_10a3c300(false) repeats it.
+function 0x10A3C640 Insert Hashes Key to a bucket, pushes a new node at the bucket head, returns the index.
+function 0x10A3C7D0 Rehash Reallocates Size buckets, reinserts every node through Insert, frees the old buckets.
+function 0x10A492B0 Insert Same code as Class_10A3C640 Insert: hashes Key to a bucket, pushes the node, returns the index.
+function 0x10A4AB10 Rehash Same code as Class_10A3C7D0: reallocates Size buckets, reinserts nodes through Insert, frees the old ones.
+function 0x10A4C0D0 Allocate Allocates A*16 bytes with operator new, bracketed by allocator Virtual8 and Virtual9 calls when Unknown04 is set.
+function 0x10A4D310 Init Stores DAT_10e6798c, the class's vtable address, zeroes Unknown28-48 and returns this; called by FUN_10e3c250.
+function 0x10A4EFB0 Free Calls FUN_10a4e9d0(0), then frees buffer Unknown08 through the allocator when Unknown04 is set.
+function 0x10A4F120 Reset Calls FUN_10a4e9d0(0), resets 0x42 per-entry buffers, refills Unknown324 with 0x40, resets 14 Unknown720 entries.
+function 0x10ACCFB0 Free Calls FUN_10acc790(0), then frees the Data block through GetAllocator()->Virtual5 and zeroes Unknown04 and the pointer.
+function 0x10B87F00 CopyFrom Calls FUN_10acc790(Other.Count), then copies Other.Data element by element into Data.
+function 0x10B116B0 Free Calls FUN_10b11520(0), then frees the block through GetAllocator()->Virtual5 and zeroes its pointer and byte size.
+function 0x10B11520 Resize Sets Unknown00 to NewCount, reallocating in 16-element steps and zeroing new elements; FUN_10b116b0 calls it with 0.
+function 0x10B152C0 AddToLists For each bit set in Mask, appends Obj to list Unknown3C[bit], growing it with FUN_10bfbd70.
+function 0x10ACF9A0 CanLockpick Checks the 'PlayerCanLockpick' FName through FUN_10a18230()->Virtual3, then returns whether FUN_10acf690(A) finds an object.
+function 0x10ACA5B0 Tick Subtracts A from Unknown08 while it is above DAT_10eafbdc; at zero it sends event 0xb to DAT_10f46da0.
+function 0x10ACA620 Fire Zeroes Unknown08 and sends event 0xb to DAT_10f46da0 at once while it is above DAT_10eafbdc.
+function 0x10C0BFC0 FindEntry Returns the Unknown0C entry whose Unknown30 is A and Unknown2C is B, else null.
+function 0x10C0C090 UpdatePosition Stores Pos and GetTimeSeconds() in the entry FindEntry returns for A and B.
+function 0x10C0C410 ExpireStale Calls FUN_10c0c200 on each entry whose Unknown5C is over 60 seconds old.
+function 0x10C17C10 ClearReferences Calls FUN_10c17bc0(A, member) on three members and nulls UnknownA4 when it equals A.
+function 0x10C1B7D0 Serialize FArchive& override that forwards to its base FUN_10c1b1a0.
+function 0x10C1C000 Initialize Calls base constructor Class_10C1B840 with its arguments, sets Unknown00, returns this.
+function 0x10C24940 Clear Empties the list via FUN_10c24260(0) and frees the Unknown08 buffer through the allocator.
+function 0x10C24BC0 AddItem Grows via FUN_10c24260, copies Item to Unknown08[Unknown00], returns the index it wrote.
+function 0x10C29410 Enqueue Appends Value to Unknown04 and calls FUN_10c29380 when Value is at the head.
+function 0x10C29380 Start Sets Unknown18 to now plus Unknown00's duration, sends events to Value, resets Unknown20.
+function 0x10B64CE0 ShowMainMenu Looks up 'MainMenuWindow' in WindowManager and shows it; ApplyOptions calls it when Unknown170 is set.
+function 0x10B650F0 ApplyOptions Calls Options::Save, then ApplyVideo when keys 9, 0xB or 0xF changed; ShowMainMenu when Unknown170 is set.
+function 0x10B65250 BindControls Calls Class_10B651B0::FUN_10b651b0 on each control with its option entry, then Virtual16, Virtual115 and Virtual102.
+function 0x10B65D70 ResetDefaults Options::SetDefaults and Set for each entry, then Options::FUN_10ab6420 and BindControls.
+function 0x10B876E0 SetState Stores A in Unknown0C; the Xbox message 'Object %s has invalid state %d' is in this method.
+function 0x10BD03D0 PopAction Deletes Unknown40 (the current action) and shifts the Unknown44 queue down one slot.
+function 0x10B70430 Init Runs base constructor Class_10E67BD8 and the FArray constructor, then returns this
+function 0x10BDBB80 Init Runs base constructor Class_10E90D70(A, B), sets Unknown40 from C and Unknown54 from D
+function 0x10BDBC70 Init Runs base constructor Class_10E90D70(A, B), sets Unknown40 from C and Unknown54 from D
+function 0x10BE1C00 CheckTimeout Pops state once Unknown40 plus 1.0 is below GetTimeSeconds
+function 0x10BDF660 Init Calls base constructor Class_10E95050(A, B), then sets this class's fields from its arguments.
+function 0x10C1B130 Merge Keeps the larger Unknown28, sums both Virtual6(0) values capped at DAT_10e49984, returns Other's Virtual6(1).
+function 0x10C1B300 Serialize Override: calls its base FUN_10c1b1a0 (named Serialize), then serializes Unknown48 and Unknown54.
+function 0x10C1AB00 IsWithinRange Returns 1 when FUN_10ba91e0 of both Unknown48 positions is under property 0x40100373 times 16.
+function 0x10C36860 GetControllerName Returns a Class_109081E0 built from the string 'MC_Turn'.
+function 0x10BD1240 Serialize Serializes each field through FArchive with a version gate on ArVer >= 0x65; same role as other classes' Serialize.
+function 0x10BFBD70 SetCount Sets Count and resizes Data through the allocator's Virtual3 and Virtual5 calls.
+function 0x1092A330 FindOrAdd Returns the index of *Item, appending it when no element matches.
+function 0x109DFF00 Clear Frees each element through the allocator's Virtual5, then zeroes Count.
+function 0x109DFF50 RemoveAt Shifts later elements down with memmove, then calls SetCount(Count - 1).
+function 0x10A81B10 InsertAt Grows by one, shifts elements from Index up with memmove, stores *Value at Index.
+function 0x10BA91A0 PushFront Grows by one, shifts all elements up with memmove, stores *Item at index 0.
+function 0x10A58C70 AppendAll Grows by Other.Count and copies Other's elements to the end; operator= calls it after zeroing Count.
+function 0x10A58CB0 CopyFrom Resizes to Other.Count and copies Other's elements; the copy constructor calls it.
+function 0x10C08510 AddUnique Appends Item when FindIndex finds no match.
+function 0x10C08550 Remove Finds Item with FindIndex and calls RemoveAt on its index when present.
+function 0x10C2A2D0 SetMember Flag 1 appends Item when absent; otherwise removes it with RemoveAt when present.
+function 0x10B9F810 DeleteAll Deletes each element with operator delete, zeroes Count, then frees the buffer.
+function 0x10942860 BindIndices Calls cD3DStateCache::SetIndices with Unknown168 and Unknown164->Virtual9().
+function 0x10C30D10 Insert Pushes a new Node onto its hash bucket and doubles the table past 20% collisions.
+function 0x10C30E90 Rehash Allocates Size buckets, reinserts every node through Insert, then frees the old buckets.
+function 0x10C324E0 Remove Unlinks and deletes the node matching Key; halves the table below 5% load, returns whether found.
+function 0x10C48320 Insert Pushes a new Node onto its hash bucket and doubles the table past 20% collisions.
+function 0x10C484D0 Rehash Allocates Size buckets, reinserts every node through Insert, then frees the old buckets.
+function 0x10C49960 Remove Unlinks and deletes the node matching Key; halves the table below 5% load, returns whether found.
+function 0x10C38D90 CheckInRange Returns Obj if it lies within property 0x1003d4 (x16) of the actor's position, else 0.
+function 0x10C399C0 FindTarget Scans Unknown90 from the path index for items with flag 8; returns the first passing CheckInRange.
+function 0x10C3B570 TrackTarget True when the path index passes its end, or *Obj is seen near the actor on four checks.
+function 0x10C64E10 AddRef Adds one to the count of every entry whose object is A; creates no entries.
+function 0x10C64FF0 Release Subtracts one from A's entry count; at zero deletes A, removes the entry and shrinks the array.
+function 0x10C662F0 TryCreate If Unknown1C[B>>29] accepts slot A, news a Class_10C68070 with id B, registers it, returns true.
+function 0x10B6BA50 SetField Switch on index A stores C into the matching field of B for indices 0 to 12; bit indices 4 and 5.
+function 0x10B6BD50 LookupValue For key 8 with B not -1 returns DAT_10ff65a8[B]; otherwise returns B. Source file cDifficultyPane.cpp.
+function 0x10929C90 GetVector Reads the packed pixel through Virtual0 and unpacks three signed bytes into Out at 2/255 scale.
+function 0x10929C10 SetVector Packs D times 127.5 into bytes X, Y, Z and E times 127.5 into the top byte; stores it via Virtual1.
+function 0x10C48260 Insert Links a new node at its bucket head; doubles the table past 20 percent collisions unless Unknown10 is set.
+function 0x10C48400 Rehash Reallocates buckets to Size, sets the index bits from log2(Size), reinserts every node.
+function 0x10C48B80 Reset Frees every node and the bucket array, then rehashes to Size unless Unknown10 is set.
+function 0x10C49200 Clear Calls Reset(0x40), then frees the bucket array and zeroes the counts; leaves no buckets.
+function 0x10C48C00 Reset Frees every node and the bucket array, then rehashes to Size unless Unknown10 is set.
+function 0x10C49230 Clear Calls Reset(0x40), then frees the bucket array and zeroes the counts; leaves no buckets.
+function 0x10C49100 Insert Links a new node at its bucket head; doubles the table past 20 percent collisions unless Unknown10 is set.
+function 0x10C49260 Rehash Reallocates buckets to Size, sets the index bits from log2(Size), reinserts every node.
+function 0x10C5CC60 Allocate Allocates A*12 bytes with operator new, bracketed by GetAllocator Virtual8 and Virtual9 when Unknown04 is set.
+function 0x10C576F0 Insert Links a new node at its bucket head; doubles the table past 20 percent collisions unless Unknown10 is set.
+function 0x10C577B0 Rehash Reallocates buckets to Size, sets the index bits from log2(Size), reinserts every node.
+function 0x10C57530 Insert Links a new node at its bucket head; doubles the table past 20 percent collisions unless Unknown10 is set.
+function 0x10C59030 Set Overwrites the value of an equal key, else calls Insert (FUN_10c57530).
+function 0x1090E9B0 HashBytes Hashes key bytes from Virtual0 (Data, Length); callers mask the result to the bucket count.
+function 0x10AA7150 Save Passes Unknown24, 20, 10 and 1C to FUN_10d3d990 on the stream; Load reads the same four back.
+function 0x10AA7190 Serialize Visits seven fields through ClassArg's Virtual0 and returns 1; Class_10E6C170 has Serialize.
+function 0x10AA71F0 Dump fprintf of Unknown0C and Unknown20 to the FILE; same signature as Class_10E6C170::Dump.
+function 0x10AA7250 Load Reads the saved fields back via FUN_10d3ddc0, then sets Unknown0C and Unknown18; pairs with Save.
+function 0x10A756F0 HandleEvent Switch on Event: 36/37, 39, 42/43 and 1 call the four handlers in this class.
+function 0x10A64E40 GetBounds Returns an FBox (bounding box) built from Unknown34 and Unknown38.
+function 0x10935D10 SetRenderStates Sets render states 0x1b, 0x13, 0x14 and 0xe on GDirect3DDevice8, then calls FUN_10935930.
+function 0x10C37700 Initialize Calls the base constructor with A to D, G and H; stores E and F in the two offsets.
+function 0x10C37860 Serialize Calls the base serializer, then writes the two offsets, 4 bytes each, through Virtual1.
+function 0x10C380D0 Trigger Sets m_bTriggered and calls Virtual44 on Unknown04; CheckDistance does the same once.
+function 0x10C38210 CheckDistance Until triggered, tests the actor's distance from m_Point against m_Threshold, then sets the flag and notifies.
+function 0x10C382B0 GetMotionControllerName Returns the controller name 'MC_PullToPoint', as Class_10E9AE24::GetMotionControllerName does.
+function 0x10C38260 Serialize Calls the base serializer, then serializes m_bTriggered, m_Point and m_Threshold in turn.
+function 0x10C3DE70 Start Gets a handle from FUN_10c341b0; when valid, passes it to Virtual60 and calls FUN_109b2990, then sets m_bActive.
+function 0x10C3D5E0 Stop When m_Handle is set, calls FUN_109bbba0 with it, resets it to -1 and clears m_bActive.
+function 0x10C47F30 Initialize Strings 'Cadence' and 'MaxLoadedSchemas'; sets m_bUseLoader from its argument; the owner's constructor calls it.
+function 0x10C4CBD0 CreateSoundSchema Xbox string 'SoundSchema' (vtable pairing); allocates a Class_10C68070 under the MaxLoadedSchemas limit.
+function 0x10C4D1E0 Release Deletes its argument and decrements m_NumLoadedSchemas; passes its id to the owner's cache when m_bUseLoader is clear.
+function 0x10AA5390 AddPoint Writes at (Unknown04 + Unknown0C) % Unknown08; calls Virtual2(1) to drop the oldest when full.
+function 0x10AA5360 RemoveFront Advances the head by A and lowers the count; AddPoint calls it with 1 when full.
+function 0x10AA53E0 GetPoint Returns the item at (Unknown04 + A) % Unknown08; the Xbox twin's vtable shows 'Out of bounds'.
+function 0x10AC3DE0 Serialize FArchive parameter; calls Ar.Serialize(&Unknownd0, 4) and serializes its state fields.
+function 0x10AC6AD0 ApplyTo After Result->Virtual0(A, B), writes Unknown14 and Unknown08 to object B via Virtual8 and Virtual7.
+function 0x10B2EE90 ResetValue Copies Unknown10 into Unknown0C: the current value becomes the maximum.
+function 0x10B5C2A0 GetTitle Returns the string <string=T_TabScreenMissionFailedTitle>, the screen's title.
+function 0x10B61680 ProcessState Overrides UObject::ProcessState(float): subtracts the delta from Unknown1D0, calls FUN_10b613c0 at zero.
+function 0x10C129C0 Load Passes Reader and &Unknown0C to FUN_10d3ddc0, then applies Unknown0C through Virtual4; pairs with Save.
+function 0x10C12B50 Save Passes Stream and Unknown08's Virtual25 result to FUN_10d3d990; pairs with Load.
+function 0x10C13150 CopyFrom Assigns Field08 and Field0c from the other object's same-named fields.
+function 0x10BE8810 GetYellowAlertName Its only string is 'yellowalert', returned as the Class_109081E0 result.
+function 0x10BE8710 UpdateLastKnownPosition Sets Unknown50 to GetTimeSeconds() and Unknown54 to Virtual1's vector when it returns 1.
+function 0x10A58B90 Init Zeroes Unknown08, Unknown0C, Unknown10 and Unknown14, sets Unknown04 to 1.0f, returns this.
+function 0x10A58BB0 IsFinished Returns 1 when the current index is the last and that item's Virtual1() is true.
+function 0x10A58C30 UpdateCurrent Forwards A to the current item's FUN_10a53220; advances the index when that item's Virtual1() is true.
+function 0x10A5E8A0 ReplaceStarsWithSpaces Loops over the string and replaces each '*' with ' '.
+function 0x10A2F1D0 Clone vtable slot 1: the same virtual function as Class_10E89A6C::Clone (0x10B92B50)
+function 0x10A2F2C0 Clone vtable slot 1: the same virtual function as Class_10E89A6C::Clone (0x10B92B50)
+function 0x10A2F9B0 Clone vtable slot 1: the same virtual function as Class_10E89A6C::Clone (0x10B92B50)
+function 0x10A54CE0 Clone vtable slot 1: the same virtual function as Class_10E89A6C::Clone (0x10B92B50)
+function 0x10A905B0 Clone vtable slot 1: the same virtual function as Class_10E89A6C::Clone (0x10B92B50)
+function 0x10B92C10 Clone vtable slot 1: the same virtual function as Class_10E89A6C::Clone (0x10B92B50)
+function 0x10B9CA60 Clone vtable slot 1: the same virtual function as Class_10E89A6C::Clone (0x10B92B50)
+function 0x10BB7BA0 Clone vtable slot 1: the same virtual function as Class_10E89A6C::Clone (0x10B92B50)
+field Class_10A492B0::Unknown00 m_Collisions Insert counts inserts into an occupied bucket; growth starts when this passes 0.2 of the buckets.
+field Class_10A492B0::Unknown04 m_Count Insert adds one per node; Rehash clears it and counts the nodes it reinserts.
+field Class_10A492B0::Unknown08 m_BucketBits Insert masks the hash with (1 << Unknown08) - 1; Rehash sets it to log2 of the bucket count.
+field Class_10A492B0::Unknown0C m_BucketCount Rehash stores the bucket count here; Insert calls Rehash with twice this count.
+field Class_10A492B0::Unknown10 m_FixedSize Insert skips the automatic rehash while this flag is set.
+field Class_10A492B0::Unknown14 m_Buckets Insert indexes it by hash; Rehash allocates a new array and frees the old one.
+field Class_10A3C640::Unknown00 m_Collisions Insert counts inserts into an occupied bucket; growth starts when this passes 0.2 of the buckets.
+field Class_10A3C640::Unknown04 m_Count Insert adds one per node; Rehash clears it and counts the nodes it reinserts.
+field Class_10A3C640::Unknown08 m_BucketBits Insert masks the hash with (1 << Unknown08) - 1; Rehash sets it to log2 of the bucket count.
+field Class_10A3C640::Unknown0C m_BucketCount Rehash stores the bucket count here; Insert calls Rehash with twice this count.
+field Class_10A3C640::Unknown10 m_FixedSize Insert skips the automatic rehash while this flag is set.
+field Class_10A3C640::Unknown14 m_Buckets Insert indexes it by hash; Rehash allocates a new array and frees the old one.
+field Class_10A4EFB0::Unknown04 m_BufferSize Free releases Unknown08 only while this is set; per-entry Unknown04 holds byte capacity in Reset.
+field Class_10A4EFB0::Unknown08 m_Buffer Free releases this allocation through the allocator and clears it.
+field Class_10B116B0::Unknown00 Count Element count: FUN_10b11520 stores NewCount here after looping from the old count.
+field Class_10B116B0::Unknown04 AllocBytes Byte size of the block, set to NewCapacity * sizeof(element) on each reallocation and zeroed on free.
+field Class_10B116B0::Unknown08 Data Block pointer: reallocated through GetAllocator()->Virtual3 and freed through Virtual5.
+field Class_10ACA620::Unknown08 Remaining Float countdown: FUN_10aca5b0 subtracts A from it, and the event fires when it reaches zero.
+field Class_10B152C0::Unknown3C BitLists Thirty-two Class_10BFBD70 lists; FUN_10b152c0 appends an object to list i for each mask bit i set.
+field Class_10B9CDE0::Unknown10 m_Count Both methods loop from Unknown10 - 1 down to 0 over Unknown18, so it is the item count.
+field Class_10B9CDE0::Unknown18 m_Items Both methods index Unknown18[i] as an array of Object_10B9CDE0 pointers bounded by the count.
+field Class_10B9D100::Unknown10 m_Count FUN_10b9d100 tests Unknown10 as a count; FUN_10b9d150 loops i below Unknown10.
+field Class_10B9D100::Unknown18 m_Items FUN_10b9d100 and FUN_10b9d150 index Unknown18 as an array of Class_10BC9B10 pointers.
+field Class_10C0C090::Unknown04 m_Count Loop bound in FUN_10c0bfc0 over the entries.
+field Class_10C0C090::Unknown0C m_Entries Struct_10C0BFC0 pointer array that FUN_10c0bfc0 indexes up to Unknown04.
+field Class_10C0C8E0::Unknown04 m_Count Loop bound in FUN_10c0c410 over the entries.
+field Class_10C0C8E0::Unknown0C m_Entries Entry pointer array that FUN_10c0c410 walks up to Unknown04.
+field Class_10C24940::Unknown00 m_Count Next index in FUN_10c24bc0; FUN_10c24940 empties it via FUN_10c24260(0).
+field Class_10C24940::Unknown04 m_Capacity Gates freeing Unknown08 in FUN_10c24940 and is zeroed with it.
+field Class_10C24940::Unknown08 m_Items Item array freed by FUN_10c24940 and written at Unknown00 by FUN_10c24bc0.
+field Class_10C29410::Unknown04 m_Queue Class_10BFBD70 array that FUN_10c29410 appends to and scans.
+field Class_10C29410::Unknown18 m_EndTime Set to GetTimeSeconds() plus a duration in FUN_10c29380.
+field cT3AVOptionsWindow::Unknown184 m_Controls Each element gets its option entry through FUN_10b651b0 in BindControls.
+field cT3AVOptionsWindow::Unknown188 m_OptionCount Loop bound over Unknown190 in ApplyOptions and ResetDefaults.
+field cT3AVOptionsWindow::Unknown190 m_Options Array indexed by the option count; each element's Unknown00 is the key passed to Options::Set.
+field cT3AVOptionsWindow::Unknown19C m_OriginalValues ApplyOptions compares each option's current value with this array to detect changes.
+field Class_10E89210::Unknown0C m_State SetState stores its argument here; the Xbox message names an invalid object state.
+field Class_10E93020::Unknown40 m_CurrentAction Deleted by PopAction and cleared in the constructor; Xbox message 'Current Action does not match' names it.
+field Class_10E93020::Unknown44 m_ActionQueue Shifted down by PopAction; the Xbox message refers to the action at the front of the queue.
+field Class_10E94C58::Unknown54 m_Handle Set from Init argument D; cleared in FUN_10bdb360 when the notified value equals it
+field Class_10E95898::Unknown40 m_StartTime Float compared with GetTimeSeconds in FUN_10be1c00 after adding 1.0
+field Class_10E95898::Unknown44 m_Handle Passed to FUN_10bb8360 when nonzero; cleared in FUN_10bed110 when equal to A
+field State_PatrolLook::Unknown44 m_EndTime Set to GetTimeSeconds() plus D in the constructor; the update pops the state once time passes it.
+field State_PatrolLook::Unknown58 m_Limit Constructor argument F; the timer applies only below 1, and FUN_10bee9a0 pops when m_Count reaches it.
+field State_PatrolLook::Unknown5C m_Count Starts at 0 in the constructor; FUN_10bee9a0 pops the state when it reaches m_Limit.
+field Class_10E98D08::Unknown2C m_Value Returned by FUN_10c1b000 and set by Merge; Unknown34 caches it.
+field Class_10E98D08::Unknown34 m_CachedValue FUN_10c1b000 returns it within 0.01 s of the last evaluation.
+field Class_10E98D08::Unknown38 m_LastTime FUN_10c1b000 stores GetTimeSeconds() here and compares the next call against it.
+field Class_10E98DE0::Unknown48 m_Position Copied from an FVector in the constructor; IsWithinRange measures its distance to another instance's.
+field cIntArray::Unknown04 m_CapacityBytes Capacity in bytes: Capacity = Unknown04 / sizeof(int); set to NewCapacity * sizeof(int).
+field Class_10C30D10::Unknown00 m_Collisions Insert adds one when the bucket was occupied; Remove subtracts when it unlinks a chained node.
+field Class_10C30D10::Unknown04 m_Count Insert increments it, Remove decrements it, Rehash resets it; Remove shrinks when it falls under 5%.
+field Class_10C30D10::Unknown08 m_BucketBits Rehash stores log2 of Size; Insert and Remove mask the hash with its shift.
+field Class_10C30D10::Unknown0C m_BucketCount Rehash stores Size here; Insert grows the table when collisions pass 20% of it.
+field Class_10C30D10::Unknown10 m_FixedSize Insert and Remove skip automatic resizing while it is set.
+field Class_10C30D10::Unknown14 m_Buckets Rehash allocates it; Insert and Remove index it by hash and walk each chain.
+field Class_10C30D10::Unknown18 m_KeyTraits Virtual0 yields the key bytes FUN_1090e9b0 hashes; Virtual1 compares two keys.
+field Class_10C48320::Unknown00 m_Collisions Insert adds one when the bucket was occupied; Remove subtracts when it unlinks a chained node.
+field Class_10C48320::Unknown04 m_Count Insert increments it, Remove decrements it, Rehash resets it; Remove shrinks when it falls under 5%.
+field Class_10C48320::Unknown08 m_BucketBits Rehash stores log2 of Size; Insert and Remove mask the hash with its shift.
+field Class_10C48320::Unknown0C m_BucketCount Rehash stores Size here; Insert grows the table when collisions pass 20% of it.
+field Class_10C48320::Unknown10 m_FixedSize Insert and Remove skip automatic resizing while it is set.
+field Class_10C48320::Unknown14 m_Buckets Rehash allocates it; Insert and Remove index it by hash and walk each chain.
+field Class_10C48320::Unknown18 m_KeyTraits Virtual0 yields the key bytes FUN_1090e9b0 hashes; Virtual1 compares two keys.
+field Class_10C399C0::Unknown88 m_ItemCount Loop bound of FUN_10c399c0's scan over Unknown90.
+field Class_10C399C0::Unknown90 m_Items FUN_10c399c0 scans this array from the path index up to Unknown88.
+field Class_10C399C0::Unknown94 m_PathCount FUN_10c3b570 returns true once the path index reaches it.
+field Class_10C399C0::Unknown9C m_PathPoints FUN_10c3b570 reads its current position from Unknown9C at the path index.
+field Class_10C399C0::UnknownB0 m_PathIndex FUN_10c399c0 starts its scan one before it; FUN_10c3b570 indexes Unknown9C with it.
+field Class_10C399C0::UnknownF4 m_LastTarget FUN_10c3b570 keeps the target it saw last here and compares the next one to it.
+field Class_10C399C0::UnknownF8 m_SeenCount FUN_10c3b570 counts sightings of the same target; resets on a new one; true above 3.
+field Class_10C662F0::Unknown178 m_EntryCount Loop bound over the entry array in FUN_10c64e10; the count word of the array at 0x178.
+field Class_10C662F0::Unknown180 m_Entries FUN_10c64e10 indexes it as Struct_10C64E10 entries: an object pointer and a count.
+field Class_10C48260::Unknown00 m_Collisions Incremented when an insert lands in an occupied bucket; reset by Rehash.
+field Class_10C48260::Unknown04 m_Count Incremented per inserted node; zeroed by Rehash before it reinserts the nodes.
+field Class_10C48260::Unknown08 m_BucketBits Rehash sets it to log2 of the bucket count; Insert masks the hash with (1 << it) - 1.
+field Class_10C48260::Unknown0C m_BucketCount Rehash stores the new bucket count; Insert doubles it to grow past 20 percent collisions.
+field Class_10C48260::Unknown10 m_FixedSize When set, Insert never grows the table.
+field Class_10C48260::Unknown14 m_Buckets Array of bucket chain heads; Rehash allocates it and frees the old array.
+field Class_10C49100::Unknown00 m_Collisions Incremented when an insert lands in an occupied bucket; reset by Rehash.
+field Class_10C49100::Unknown04 m_Count Incremented per inserted node; zeroed by Rehash before it reinserts the nodes.
+field Class_10C49100::Unknown08 m_BucketBits Rehash sets it to log2 of the bucket count; Insert masks the hash with (1 << it) - 1.
+field Class_10C49100::Unknown0C m_BucketCount Rehash stores the new bucket count; Insert doubles it to grow past 20 percent collisions.
+field Class_10C49100::Unknown10 m_FixedSize When set, Insert never grows the table.
+field Class_10C49100::Unknown14 m_Buckets Array of bucket chain heads; Rehash allocates it and frees the old array.
+field Class_10C576F0::Unknown00 m_Collisions Incremented when an insert lands in an occupied bucket; reset by Rehash.
+field Class_10C576F0::Unknown04 m_Count Incremented per inserted node; zeroed by Rehash before it reinserts the nodes.
+field Class_10C576F0::Unknown08 m_BucketBits Rehash sets it to log2 of the bucket count; Insert masks the hash with (1 << it) - 1.
+field Class_10C576F0::Unknown0C m_BucketCount Rehash stores the new bucket count; Insert doubles it to grow past 20 percent collisions.
+field Class_10C576F0::Unknown10 m_FixedSize When set, Insert never grows the table.
+field Class_10C576F0::Unknown14 m_Buckets Array of bucket chain heads; Rehash allocates it and frees the old array.
+field Class_10E9AE24::Unknown94 m_OffsetX Added to the location's X in FUN_10c377c0; stored from FUN_10c37700's argument E.
+field Class_10E9AE24::Unknown98 m_OffsetY Added to the location's Y in FUN_10c377c0; stored from FUN_10c37700's argument F.
+field Class_10E9AEC8::Unknown58 m_bTriggered Set to 1 by Trigger and by CheckDistance; serialized as one byte.
+field Class_10E9AEC8::Unknown68 m_Threshold CheckDistance compares the actor's distance from m_Point with it; serialized as a float.
+field Class_10E9AEC8::Unknown5C m_Point The point CheckDistance measures the actor's distance from, via FUN_10c05a20; serialized.
+field Class_10E9B370::Unknown18 m_bActive Set true by Start after its calls, false by Stop.
+field Class_10E9B370::Unknown40 m_Handle Set from FUN_10c341b0; -1 when none; Stop passes it to FUN_109bbba0.
+field cCadenceFactory::Unknown04 m_bUseLoader Selects the loader path in FUN_10c47e70, FUN_10c4cbd0 and FUN_10c4d1e0; set from Initialize's argument.
+field cCadenceFactory::Unknown0C m_NumLoadedSchemas Incremented by CreateSoundSchema, decremented by Release, compared with MaxLoadedSchemas.
+field SwooshPointTracker::Unknown04 m_Head Head offset: RemoveFront and GetPoint index from it modulo Unknown08.
+field SwooshPointTracker::Unknown08 m_Capacity Modulus of every index; AddPoint compares Unknown0C with it to detect a full buffer.
+field SwooshPointTracker::Unknown0C m_Count AddPoint increments it, RemoveFront lowers it, and it is tested against the capacity.
+field SwooshPointTracker::Unknown10 m_Points Array addressed by the ring index: AddPoint writes an element, GetPoint returns it.
+field Class_10E7B89C::Unknown0C m_Value ResetValue copies Unknown10 into it; FUN_10b2ee60 compares it with Unknown10.
+field Class_10E7B89C::Unknown10 m_MaxValue Upper bound: FUN_10b2ee60 tests Unknown10 >= Unknown0C; ResetValue copies it.
+field Class_10E83E20::Unknown1D0 m_Countdown ProcessState subtracts the frame delta; FUN_10b613c0 runs when it passes zero.
+field Class_10E96510::Unknown50 m_LastKnownTime Set to GetTimeSeconds() in UpdateLastKnownPosition (0x10BE8710).
+field Class_10E96510::Unknown54 m_LastKnownPosition Set from the vector Virtual1 fills, in UpdateLastKnownPosition (0x10BE8710).
+field Class_10E69050::Unknown0C m_Count Bounds the index checks in IsFinished and UpdateCurrent; the destructor reads it as an array count.
+field Class_10E69050::Unknown14 m_Items Pointer array indexed by Unknown18 in five methods; the destructor deletes its elements.
+field Class_10E69050::Unknown18 m_Current Index of the current item: the destructor zeroes it and UpdateCurrent advances it.

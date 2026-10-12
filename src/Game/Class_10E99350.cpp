@@ -7,13 +7,13 @@ extern void* DAT_10e99350[];
 
 Class_10905A90_Member* GetAllocator();
 
-class Class_10BFBD70
+class cIntArray
 {
 public:
-    void FUN_10bfbd70(int Count);
+    void SetCount(int Count);
 
     int Unknown00;
-    int Unknown04;
+    int m_CapacityBytes;
     Struct_10B9F810** Unknown08;
 };
 
@@ -24,22 +24,22 @@ public:
 
     void** VTable;
     int Unknown04;
-    Class_10BFBD70 Unknown08;
+    cIntArray Unknown08;
 };
 
 // FUNCTION: 0x10C274E0 ?FUN_10c274e0@Class_10E99350@@QAEXXZ
 void Class_10E99350::FUN_10c274e0()
 {
-    Class_10BFBD70& Array = Unknown08;
+    cIntArray& Array = Unknown08;
     VTable = DAT_10e99350;
     for (int i = 0; i < Array.Unknown00; i++)
         delete Array.Unknown08[i];
     Array.Unknown00 = 0;
-    Array.FUN_10bfbd70(0);
-    if (Array.Unknown04)
+    Array.SetCount(0);
+    if (Array.m_CapacityBytes)
     {
         GetAllocator()->Virtual5(Array.Unknown08);
         Array.Unknown08 = 0;
-        Array.Unknown04 = 0;
+        Array.m_CapacityBytes = 0;
     }
 }

@@ -31,7 +31,7 @@ public:
 
     Class_10BB8360* Unknown04;
     char Unknown08[0x3C];
-    int Unknown44;
+    int m_Handle;
 };
 
 class Object_10BE1AD0
@@ -116,7 +116,7 @@ void Class_10E95780::FUN_10be1b00(int A, int B, int C, int D, int E)
 // FUNCTION: 0x10BE1C40 ?FUN_10be1c40@Class_10E95898@@UAEXH@Z
 void Class_10E95898::FUN_10be1c40(int p1)
 {
-    int Value = Unknown44;
+    int Value = m_Handle;
     if (Value)
         Unknown04->FUN_10bb8360(Value, 10.0f, 0);
 }

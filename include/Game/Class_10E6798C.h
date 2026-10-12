@@ -6,7 +6,7 @@
 class Class_10E6798C
 {
 public:
-    Class_10E6798C* FUN_10a4d310();
+    Class_10E6798C* Init();
     void FUN_10a4d340();
 
     union

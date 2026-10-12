@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10BBDB40.h"
 #include "Game/Class_10C7D570.h"
-#include "Game/Class_10E92578.h"
+#include "Game/State_Choking.h"
 
 // Ion Storm's placement new and its delete (0x10905C10; the delete folded into ::operator delete).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
@@ -42,14 +42,14 @@ public:
     virtual void Virtual19();
     virtual void Virtual20();
     virtual void Virtual21();
-    virtual Class_10E92578* FUN_10b99c20(Struct_10B98E00* A, int B);
+    virtual State_Choking* FUN_10b99c20(Struct_10B98E00* A, int B);
 };
 
-// FUNCTION: 0x10B99C20 ?FUN_10b99c20@Class_10E4CCD0@@UAEPAVClass_10E92578@@PAUStruct_10B98E00@@H@Z
-Class_10E92578* Class_10E4CCD0::FUN_10b99c20(Struct_10B98E00* A, int B)
+// FUNCTION: 0x10B99C20 ?FUN_10b99c20@Class_10E4CCD0@@UAEPAVState_Choking@@PAUStruct_10B98E00@@H@Z
+State_Choking* Class_10E4CCD0::FUN_10b99c20(Struct_10B98E00* A, int B)
 {
     int Id = FUN_10bcc1d0();
     if (Id && A->Unknown08->FUN_10dbd510(Id)->GetFloat() > 0.0f)
-        return new(0, 0, 0, 0, 0) Class_10E92578((int)A, (int)this, B);
+        return new(0, 0, 0, 0, 0) State_Choking((int)A, (int)this, B);
     return 0;
 }

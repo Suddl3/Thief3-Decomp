@@ -4,7 +4,7 @@
 #include "Game/Class_109081E0.h"
 #include "Game/Class_10AC47F0.h"
 #include "Game/Class_10AC4920.h"
-#include "Game/Class_10E6F6A8.h"
+#include "Game/cCameraModeHandler.h"
 
 // FUNCTION: 0x10AC47F0 ?FUN_10ac47f0@Class_10AC47F0@@QAEPAV1@ABV1@@Z
 Class_10AC47F0* Class_10AC47F0::FUN_10ac47f0(const Class_10AC47F0& Other)
@@ -39,8 +39,8 @@ void Class_10AC4920::FUN_10ac4920()
     }
 }
 
-// FUNCTION: 0x10AC5C10 ?FUN_10ac5c10@Class_10E6F6A8@@UAE_NXZ
-bool Class_10E6F6A8::FUN_10ac5c10()
+// FUNCTION: 0x10AC5C10 ?FUN_10ac5c10@cCameraModeHandler@@UAE_NXZ
+bool cCameraModeHandler::FUN_10ac5c10()
 {
     return Unknownd0 != 0;
 }

@@ -1,6 +1,6 @@
 // Game/Class_10E85AD8_4.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 class Class_10E67FD0
 {
@@ -100,7 +100,7 @@ public:
     int Unknown140;
     Class_10E67FD0* Unknown144;
     Class_10E67FD0* Unknown148;
-    Class_10BFBD70 Unknown14C;
+    cIntArray Unknown14C;
     int m_CurrentIndex;
     int Unknown15C;
     int Unknown160;

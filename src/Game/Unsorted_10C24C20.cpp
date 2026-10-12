@@ -1,7 +1,7 @@
 // Game/Unsorted_10C24C20.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Core/Core.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/Class_10C24940.h"
 #include "Game/Class_10C25010.h"
 
@@ -15,7 +15,7 @@ public:
 // FUNCTION: 0x10C25010 ?FUN_10c25010@Class_10C25010@@QAEXHPAVClass_10C25010_Param1@@PAHH@Z
 void Class_10C25010::FUN_10c25010(int, Class_10C25010_Param1* Param1, int* Index, int Value)
 {
-    Unknown18.FUN_10bfbd70(0);
+    Unknown18.SetCount(0);
     FUN_10c20da0(&Unknown18, Param1->Unknown08 + *Index);
     Unknown24.FUN_10c24260(0);
     FUN_10c24c80(&Unknown18, Value);

@@ -92,13 +92,13 @@ public:
     virtual int Virtual85();
 };
 
-class Class_10BFBD70
+class cIntArray
 {
 public:
-    void FUN_10bfbd70(int A);
+    void SetCount(int A);
 
     int Unknown00;
-    int Unknown04;
+    int m_CapacityBytes;
     void** Unknown08;
 };
 
@@ -110,7 +110,7 @@ public:
 
     int Unknown00;
     int Unknown04;
-    Class_10BFBD70 Unknown08[5];
+    cIntArray Unknown08[5];
     short Unknown44[5];
 };
 
@@ -146,9 +146,9 @@ void Class_10C07690::FUN_10c07690(Class_10C07690Arg* A, int B)
     int Kind = Obj->Virtual85();
     if (Kind != 1 && Kind != 2)
         Unknown44[B]++;
-    Class_10BFBD70& Arr = Unknown08[B];
+    cIntArray& Arr = Unknown08[B];
     int Count = Arr.Unknown00;
-    Arr.FUN_10bfbd70(Count + 1);
+    Arr.SetCount(Count + 1);
     Arr.Unknown08[Count] = Obj;
 }
 

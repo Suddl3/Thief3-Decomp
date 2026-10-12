@@ -5,10 +5,10 @@
 #include "Game/Class_10943600.h"
 #include "Game/Class_10A680C0.h"
 
-class Class_10BFBD70
+class cIntArray
 {
 public:
-    void FUN_10bfbd70(int NewCount);
+    void SetCount(int NewCount);
 
     int FindIndex(int Item)
     {
@@ -23,12 +23,12 @@ public:
     void Append(int Item)
     {
         int Index = Unknown00;
-        FUN_10bfbd70(Index + 1);
+        SetCount(Index + 1);
         Unknown08[Index] = Item;
     }
 
     int Unknown00;
-    int Unknown04;
+    int m_CapacityBytes;
     int* Unknown08;
 };
 
@@ -38,7 +38,7 @@ public:
     void FUN_10a68100(int Item);
 
     char Unknown00[0x10];
-    Class_10BFBD70 Unknown10;
+    cIntArray Unknown10;
 };
 
 // FUNCTION: 0x10A680C0 ?FUN_10a680c0@Class_10A680C0@@QAEXXZ

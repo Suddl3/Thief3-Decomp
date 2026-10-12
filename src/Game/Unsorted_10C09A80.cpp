@@ -4,7 +4,7 @@
 #include "Game/Class_1098E330.h"
 #include "Game/Struct_10C099A0.h"
 #include "Game/Class_10C099A0.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/Class_10C09B60.h"
 
 // FUNCTION: 0x10C09B60 ??1Class_10C09B60@@QAE@XZ

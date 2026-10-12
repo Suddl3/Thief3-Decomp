@@ -12,9 +12,9 @@ class Class_10C399C0
 {
 public:
     bool FUN_10c38d30(Class_1098E330* Obj);
-    int FUN_10c38d90(int Obj);
-    int FUN_10c399c0();
-    bool FUN_10c3b570(int* Obj);
+    int CheckInRange(int Obj);
+    int FindTarget();
+    bool TrackTarget(int* Obj);
     bool FUN_10c3a3f0(Struct_10C05A80* A, int* Obj, int B, int C);
     float FUN_10c38640(int Obj);
 
@@ -23,21 +23,21 @@ public:
     char Unknown4C[0x4];
     int Unknown50;
     char Pad54[0x34];
-    int Unknown88;
+    int m_ItemCount;
     char Unknown8C[4];
-    Class_10C80360** Unknown90;
-    int Unknown94;
+    Class_10C80360** m_Items;
+    int m_PathCount;
     char Unknown98[0x4];
-    Struct_10C05A80* Unknown9C;
+    Struct_10C05A80* m_PathPoints;
     char UnknownA0[0x10];
     union
     {
-        int UnknownB0;
+        int m_PathIndex;
         int Unknown0B0;
     };
     char UnknownB4[0x40];
-    int UnknownF4;
-    int UnknownF8;
+    int m_LastTarget;
+    int m_SeenCount;
 };
 
 #endif // GAME_CLASS_10C399C0_H

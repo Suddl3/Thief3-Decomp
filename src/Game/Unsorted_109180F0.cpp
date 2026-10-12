@@ -3,7 +3,7 @@
 
 #include "Game/Class_1092D950.h"
 #include "Game/Class_10924B30.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 class Class_10924B70 : public Class_10924B30
 {

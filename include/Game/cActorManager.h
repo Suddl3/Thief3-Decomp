@@ -3,7 +3,7 @@
 #ifndef GAME_CACTORMANAGER_H
 #define GAME_CACTORMANAGER_H
 
-class Class_10BFBD70;
+class cIntArray;
 struct Struct_10A4C940_Owner;
 
 class cActorManager
@@ -19,7 +19,7 @@ public:
     virtual bool FUN_10a4c4d0(int A);
     virtual void Virtual7(int A);
     virtual void Virtual8(int A, int B, int C);
-    virtual void FUN_10a4c500(Class_10BFBD70* Array);
+    virtual void FUN_10a4c500(cIntArray* Array);
     virtual Struct_10A4C940_Owner* GetOwner(unsigned int Key);
     virtual void Virtual11();
     virtual void Virtual12();

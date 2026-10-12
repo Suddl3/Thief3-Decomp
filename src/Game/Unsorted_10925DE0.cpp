@@ -4,10 +4,10 @@
 #include "Game/Object_10AB5B20.h"
 #include "Game/Class_10AB5B20.h"
 
-class Class_10BFBD70
+class cIntArray
 {
 public:
-    void FUN_10bfbd70(int NewCount);
+    void SetCount(int NewCount);
 
     void AddUnique(int Item)
     {
@@ -17,12 +17,12 @@ public:
             if (Unknown08[i] == Item)
                 return;
         }
-        FUN_10bfbd70(Count + 1);
+        SetCount(Count + 1);
         Unknown08[Count] = Item;
     }
 
     int Unknown00;
-    int Unknown04;
+    int m_CapacityBytes;
     int* Unknown08;
 };
 
@@ -32,7 +32,7 @@ public:
     void FUN_10925f10(int Item);
 
     char Unknown00[0xA4];
-    Class_10BFBD70 UnknownA4;
+    cIntArray UnknownA4;
 };
 
 // FUNCTION: 0x10925F10 ?FUN_10925f10@Class_10925F10@@QAEXH@Z

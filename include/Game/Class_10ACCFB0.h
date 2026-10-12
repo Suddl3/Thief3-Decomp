@@ -9,8 +9,8 @@ class Class_10ACCFB0
 {
 public:
     void FUN_10acc790(int Count);
-    void FUN_10accfb0();
-    void FUN_10b87f00(const Class_10ACCFB0& Other);
+    void Free();
+    void CopyFrom(const Class_10ACCFB0& Other);
 
     union
     {

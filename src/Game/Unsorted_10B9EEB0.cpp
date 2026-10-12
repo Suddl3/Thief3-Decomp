@@ -3,7 +3,7 @@
 #include "Game/Class_10B9EEB0.h"
 #include "Game/Class_10BA1660.h"
 #include "Game/Class_10C7D570.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 extern __int64 DAT_10f05c70;
 
@@ -50,11 +50,11 @@ int FUN_10b9f250(int Bit)
     return 0;
 }
 
-// FUNCTION: 0x10B9FA20 ?FUN_10b9fa20@Class_10BFBD70@@QAEHPAH@Z
-int Class_10BFBD70::FUN_10b9fa20(int* Item)
+// FUNCTION: 0x10B9FA20 ?FUN_10b9fa20@cIntArray@@QAEHPAH@Z
+int cIntArray::FUN_10b9fa20(int* Item)
 {
     int Index = Unknown00;
-    FUN_10bfbd70(Index + 1);
+    SetCount(Index + 1);
     Unknown08[Index] = *Item;
     return Index;
 }

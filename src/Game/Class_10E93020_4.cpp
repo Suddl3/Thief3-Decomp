@@ -8,8 +8,8 @@ class Class_10E93020 : public Class_10E90D70
 public:
     ~Class_10E93020();
 
-    int Unknown40;
-    Class_10BD0270* Unknown44[4];
+    int m_CurrentAction;
+    Class_10BD0270* m_ActionQueue[4];
     bool Unknown54;
     bool Unknown55;
     bool Unknown56;
@@ -21,10 +21,10 @@ Class_10E93020::~Class_10E93020()
 {
     for (int i = 0; i < 4; i++)
     {
-        if (Unknown44[i])
+        if (m_ActionQueue[i])
         {
-            delete Unknown44[i];
-            Unknown44[i] = 0;
+            delete m_ActionQueue[i];
+            m_ActionQueue[i] = 0;
         }
     }
 }

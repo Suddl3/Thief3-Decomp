@@ -36,8 +36,8 @@ public:
 
 extern Class_10FF667C* DAT_10ff667c;
 
-// FUNCTION: 0x10BD1240 ?FUN_10bd1240@Class_10E9313C@@UAEXAAVFArchive@@@Z
-void Class_10E9313C::FUN_10bd1240(FArchive& Ar)
+// FUNCTION: 0x10BD1240 ?Serialize@Class_10E9313C@@UAEXAAVFArchive@@@Z
+void Class_10E9313C::Serialize(FArchive& Ar)
 {
     FUN_10c11ff0(Ar, &Unknown04);
     Unknown08.FUN_10c01ff0(&Ar);

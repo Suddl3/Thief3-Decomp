@@ -11,18 +11,18 @@ class Class_10E69050 : public Class_10E68F74
 {
 public:
     virtual ~Class_10E69050();
-    virtual int FUN_10a58bb0();
+    virtual int IsFinished();
     virtual void FUN_10a58be0();
     virtual int FUN_10a58c10(int A);
     virtual void Virtual4();
-    virtual void FUN_10a58c30(float A);
+    virtual void UpdateCurrent(float A);
 
-    Class_10E69050* FUN_10a58b90();
+    Class_10E69050* Init();
 
-    int Unknown0C;
+    int m_Count;
     int Unknown10;
-    Class_10A58BE0_Member** Unknown14;
-    int Unknown18;
+    Class_10A58BE0_Member** m_Items;
+    int m_Current;
 };
 
 #endif // GAME_CLASS_10E69050_H

@@ -3,12 +3,12 @@
 #ifndef GAME_CLASS_10A4DEA0_H
 #define GAME_CLASS_10A4DEA0_H
 
-class Class_10BFBD70;
+class cIntArray;
 
 class Class_10A4DEA0
 {
 public:
-    void FUN_10a4dea0(Class_10BFBD70* Set);
+    void FUN_10a4dea0(cIntArray* Set);
 
     char Unknown00[0x324];
     int Unknown324[0xff];

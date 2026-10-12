@@ -1,6 +1,6 @@
 // Game/Unsorted_10B16110_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/Class_10B25D90.h"
 #include "Game/Class_10B25D60.h"
 #include "Game/Class_10B2D600.h"
@@ -13,7 +13,7 @@ Class_10B255F0* FUN_10b25cd0();
 class Class_10B16930
 {
 public:
-    Class_10BFBD70 FUN_109e6d80(int A);
+    cIntArray FUN_109e6d80(int A);
     void FUN_10b166a0();
     void FUN_10b16930();
     void FUN_10b16780();
@@ -28,7 +28,7 @@ public:
 void Class_10B16930::FUN_10b16300(int A, int B, bool C)
 {
     Class_10B2D600* Item = 0;
-    Class_10BFBD70 Found = FUN_109e6d80(0x69);
+    cIntArray Found = FUN_109e6d80(0x69);
     if (Found.Count > 0)
         Item = (Class_10B2D600*)Found.Data[0];
     if (C)

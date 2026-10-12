@@ -15,13 +15,13 @@ public:
     virtual void FUN_10c3e2d0(int A);
 
     char Unknown04[0x14];
-    bool Unknown18;
+    bool m_bActive;
     char Unknown19[0xF];
     int Unknown28;
     int Unknown2C;
     int Unknown30;
     char Unknown34[0xC];
-    int Unknown40;
+    int m_Handle;
     char Unknown44[0xC];
     Class_109BBBA0* Unknown50;
 };
@@ -30,5 +30,5 @@ public:
 void Class_10E9B370::FUN_10c3e2d0(int A)
 {
     Arg_10A48720 Flags;
-    FUN_10a48720(A, &Unknown28, Unknown30, Unknown2C, Unknown50, Unknown40, Flags);
+    FUN_10a48720(A, &Unknown28, Unknown30, Unknown2C, Unknown50, m_Handle, Flags);
 }

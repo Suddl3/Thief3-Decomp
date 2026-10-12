@@ -6,7 +6,7 @@
 class Class_10C4ED70
 {
 public:
-    void* FUN_10c5cc60(int A, int B);
+    void* Allocate(int A, int B);
     void FUN_10c4ed70(int A, int B, int* C);
 
     char Unknown00[0x4];

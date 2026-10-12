@@ -328,7 +328,7 @@ Class_10B61CE0           cT3InventoryWindow               0x10B61CE0: called on 
 Class_10B61EA0           cT3InventoryWindow               0x10B61EA0: slot of 0x10E84088
 Class_10B61F80           cT3InventoryWindow               0x10B61F80: slot of 0x10E84088
 Class_10B642C0           Class_10E84508                   0x10B642C0: slot of 0x10E84508
-Class_10B65220           Class_10E84730                   0x10B65220: slot of 0x10E84730
+Class_10B65220           cT3AVOptionsWindow               0x10B65220: slot of 0x10E84730
 Class_10B65DE0           Class_10E68D80                   0x10B65DE0: stores 0x10E68D80
 Class_10B65FD0           Class_10E84BB8                   0x10B65FD0: slot of 0x10E84BB8
 Class_10B66020           Class_10E84BB8                   0x10B66020: called on this by 0x10B66DE0
@@ -456,8 +456,9 @@ Class_10BEF080           cStateRangedCombat               0x10BEF080: called on 
 Class_10BF08D0           cStateRangedCombat               0x10BF08D0: called on this by 0x10BF5890
 Class_10BF1500           cStateRangedCombat               0x10BF1500: called on this by 0x10BF2990
 Class_10BF2F70           cStateRangedCombat               0x10BF2F70: slot of 0x10E97720
-Class_10BF6B10           Class_10E97880                   0x10BF6B10: called on this by 0x10BF6EC0
-Class_10BF6B30           Class_10E97880                   0x10BF6B30: called on this by 0x10BF6EC0
+Class_10BF6B10           cStateMeleeCombat                0x10BF6B10: called on this by 0x10BF6EC0
+Class_10BF6B30           cStateMeleeCombat                0x10BF6B30: called on this by 0x10BF6EC0
+Class_10BFBD70           cIntArray                        named: Count, capacity in bytes and Data form a growable int array, grown and freed through GetAllocator().
 Class_10C047F0           AudioController                  0x10C047F0: slot of 0x10E97AF4
 Class_10C08880           Class_10E97BB8                   0x10C08880: stores 0x10E97BB8
 Class_10C0AA00           Class_10E97BE8                   0x10C0AA00: called on this by 0x10C0AB40
@@ -551,10 +552,12 @@ Class_10E6C68C           cTriggerBoolPropertyParam        named: Xbox twin's pai
 Class_10E6C6FC           cTriggerByteEnumParam            named: Xbox source file TriggerByteEnumParam.cpp; its message 'RelationType %d not supported for ByteEnum!' pairs with FUN_10a8c200.
 Class_10E6C740           cTriggerSuperEnumParam           named: Xbox twin's source file is TriggerSuperEnumParam.cpp; its relation test says 'super enum'.
 Class_10E6C7B4           cTriggerOperatorParam            named: Xbox source file TriggerOperatorParam.cpp; its RelationType message fits FUN_10a8d2d0's relation switch.
+Class_10E6D600           SwooshPointTracker               named: Xbox twin names SwooshPointTracker; a ring buffer of points, with 'Out of bounds' in its vtable.
 Class_10E6D9E8           cConNoteEvent                    named: Xbox source ConNoteEvent.cpp pairs with its code, which reads and writes a 'Note' line.
 Class_10E6DA90           cConCameraController             named: Xbox source file ConCameraController.cpp; reads the ConversationCamera config section.
 Class_10E6F47C           cHighlightMgr                    named: Xbox source file HighlightMgr.cpp; FX material and membrane material messages.
 Class_10E6F5F0           GarrettOnCamera                  named: Xbox twin vtable (T3Opt 9/9 slots): its own methods' and constructors' debug names say GarrettOnCamera (2)
+Class_10E6F6A8           cCameraModeHandler               named: Xbox twin names cCameraModeHandler in T3Camera.cpp; its state is serialized and applied to an object.
 Class_10E6F7D4           cVertexBufferInfo                named: Accessor-only class; returns UnknownD0 and Unknown108 as structs; no Xbox twin name found
 Class_10E6F910           cT3Camera                        named: Xbox source file T3Camera.cpp; rotation setter zeroes roll; makes a Class_10AC3EA0 for AGarrett actors.
 Class_10E77578           cUObjectLinkManager              named: Xbox twin vtable (T3Opt 17/17 slots): its own methods' and constructors' debug names say cUObjectLinkManager (11), source ULinkManager.cpp
@@ -567,23 +570,32 @@ Class_10E7BBC8           cMovieSubtitles                  named: MovieSubtitles 
 Class_10E7EC88           GSLean                           named: Xbox message 'Garrett entered lean state without a valid button press.' in Enter; GS prefix from GSMantle's message.
 Class_10E816E0           GSMantle                         named: Xbox message 'GSMantle, got an end of animation notification for an animation that was not exp' in OnAnimationEnd.
 Class_10E84088           cT3InventoryWindow               named: Xbox source file T3InventoryWindow.cpp (named like its siblings cT3OptionsWindow, cT3ReadBookWindow); a Window subclass that loads 'InventoryPane.txt'
+Class_10E84730           cT3AVOptionsWindow               named: Xbox twin's name, T3AVOptionsWindow.cpp; its Options Save and ApplyVideo fit an options window.
 Class_10E85DE0           cDifficultyPane                  named: FUN_10b6be00 returns the string 'DifficultyPane.txt', the pane's own file.
 Class_10E873B0           cT3OptionsWindow                 named: Xbox twin vtable (T3Opt 127/124 slots): its own methods' and constructors' debug names say cT3OptionsWindow (1), source T3OptionsWindow.cpp
 Class_10E89478           ElevatorController               named: Xbox twin vtable (T3Opt 10/10 slots): its own methods' and constructors' debug names say ElevatorController (3)
 Class_10E8D7A8           VisualSubsystem                  named: Xbox twin vtable (T3Opt 1/1 slots): its own methods' and constructors' debug names say VisualSubsystem (2), source AI_VisualSubsystem.cpp
+Class_10E91EE8           State_Gassed                     named: Xbox AI_ReactionStates.cpp names State_Gassed; a reaction state whose override FUN_10bcb8e0 sets its state fields.
+Class_10E92118           State_Blinded                    named: Xbox AI_ReactionStates.cpp names State_Blinded; override FUN_10bcbd10 sets Unknown5C and pops the state.
+Class_10E92348           State_SlipAndFall                named: Xbox AI_ReactionStates.cpp names State_SlipAndFall; its methods play effect 0x807ff and set a 0.5f value.
+Class_10E92578           State_Choking                    named: Xbox AI_ReactionStates.cpp names State_Choking; override FUN_10bcc1e0 sets Unknown5C and pops, as State_Blinded does.
 Class_10E92A00           State_PlayingPossum              named: Xbox twin vtable (T3Opt 72/72 slots): its own methods' and constructors' debug names say State_PlayingPossum (2), source AI_DeathStates.cpp
 Class_10E93148           State_PlayAnim                   named: Xbox twin vtable (T3Opt 70/70 slots): its own methods' and constructors' debug names say State_PlayAnim (2), source AI_PlayAnimStates.cpp
 Class_10E934D0           State_SearchLook                 named: Xbox twin's class name State_SearchLook (2 hits); its NotifyActivated message names this class.
 Class_10E93710           State_Search                     named: Xbox twin vtable (T3Opt 89/89 slots): its own methods' and constructors' debug names say State_Search (9), source AI_SearchStates.cpp
 Class_10E93CA0           cCombatBase                      named: Xbox twin's class name cCombatBase; the twin's functions sit in AICombatBase.cpp (3 hits).
+Class_10E93E48           cTacticWeaponHolster             named: Xbox AIWeaponStates.cpp names cTacticWeaponHolster; FUN_10bd97b0 drives a weapon object through Virtual96.
 Class_10E94578           cTacticMoveToPoint               named: Xbox twin's class name (AICombatTactics.cpp); its '+Inform:arrive' message agrees
 Class_10E947B8           cMeleeStrafeTarget               named: Xbox AICombatTactics.cpp debug name cMeleeStrafeTarget; the class derives from cTacticMoveToPoint, a tactic.
+Class_10E953A8           State_Sit                        named: Xbox twin names State_Sit, source AI_IdleStates.cpp; the class has no message contradicting it.
 Class_10E954D0           State_MunchCorpse                named: Xbox twin vtable (T3Opt 71/71 slots): its own methods' and constructors' debug names say State_MunchCorpse (2), source AI_IdleStates.cpp
 Class_10E95BE8           State_FrobAlarm                  named: Xbox vtable pair names State_FrobAlarm (AI_SummonStates.cpp); its code keeps one int id in Unknown40.
 Class_10E95E18           State_Fetch                      named: Xbox AI_SummonStates.cpp debug name State_Fetch; a state that ends with PopState and clears its stored reference.
 Class_10E970F0           State_Flee                       named: Xbox twin's class name State_Flee (3 Class:: names, AI_FleeStates.cpp); FUN_10be9c30 calls UObject::ProcessState.
+Class_10E97488           State_PatrolLook                 named: Xbox twin names State_PatrolLook, source AI_PatrolStates.cpp; its update pops the state when the timer passes.
 Class_10E975A0           State_Patrol                     named: Xbox twin vtable (T3Opt 70/70 slots): its own methods' and constructors' debug names say State_Patrol (3), source AI_PatrolStates.cpp
 Class_10E97720           cStateRangedCombat               named: Xbox vtable pair names cStateRangedCombat; code tests property 0x8007b1 and sets Unknown138 when a result is missing or 0x11.
+Class_10E97880           cStateMeleeCombat                named: Xbox twin names cStateMeleeCombat, source AICombatMelee.cpp; its accessors read properties 0x100458 and 0x100459.
 Class_10E979DC           MovementController               named: Xbox twin vtable (T3Opt 2/2 slots): its own methods' and constructors' debug names say MovementController (2), source AI_MovementController.cpp
 Class_10E97AF4           AudioController                  named: Xbox twin vtable (T3Opt 1/1 slots): its own methods' and constructors' debug names say AudioController (1), source AI_AudioController.cpp
 Class_10E97C18           cAIManager                       named: Xbox twin vtable (T3Opt 25/25 slots): its own methods' and constructors' debug names say cAIManager (3)
@@ -591,6 +603,7 @@ Class_10E98CEC           SoundNotifier                    named: Xbox twin vtabl
 Class_10E9AA7C           MC_MoveToPoint                   named: Xbox twin vtable (T3Opt 11/11 slots): its own methods' and constructors' debug names say MC_MoveToPoint (1), source AI_MC_MoveToPoint.cpp
 Class_10E9AC80           cMotionControllerAnim            named: Xbox twin vtable names cMotionControllerAnim (5 votes), source AI_MotionControllerAnim.cpp; its code adds and removes MotionCallbacks and queues locomotion commands.
 Class_10E9B5C0           CadenceManager                   named: Xbox twin CadenceManager (CadenceManager.cpp); its update's callees log CadenceTimingDetails.
+Class_10E9BB4C           cCadenceFactory                  named: Xbox source CadenceFactory.cpp and CADENCE INTERNAL ERROR messages; config section 'Cadence'.
 Class_10E9BC18           CadenceFactory                   named: Xbox twin vtable (T3Opt 20/20 slots): its own methods' and constructors' debug names say CadenceFactory (2), source CadenceFactory.cpp
 Class_10E9C330           SoundSimulator                   named: Xbox twin in SoundSimulator.cpp; its message names SoundSimulator as a sound's listener (FUN_10c556d0).
 Class_10E9CC20           cTagVocabulary                   named: Xbox messages in its vtable mention cTagVocabulary; FUN_10c635a0 assigns a string member

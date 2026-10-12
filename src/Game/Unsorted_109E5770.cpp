@@ -6,7 +6,7 @@
 #include "Game/Entry_10C32C30.h"
 #include "Game/Class_109E59D0.h"
 #include "Game/Class_10C49740.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 class Class_10E5B2C0
 {
@@ -58,7 +58,7 @@ public:
     virtual void FUN_109e60e0(int Value);
 
     char Unknown04[0xB4];
-    Class_10BFBD70 Unknown0B8;
+    cIntArray Unknown0B8;
 };
 
 int FUN_10af36e0(const char* A, const char* B);
@@ -87,8 +87,8 @@ Entry_10C32C30* Class_109E59D0::FUN_109e59d0(int* Key)
 // FUNCTION: 0x109E60E0 ?FUN_109e60e0@Class_10E5B2C0@@UAEXH@Z
 void Class_10E5B2C0::FUN_109e60e0(int Value)
 {
-    Class_10BFBD70* List = &Unknown0B8;
+    cIntArray* List = &Unknown0B8;
     int Index = List->Count;
-    List->FUN_10bfbd70(Index + 1);
+    List->SetCount(Index + 1);
     List->Data[Index] = Value;
 }

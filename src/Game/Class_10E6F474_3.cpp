@@ -1,20 +1,20 @@
 // Game/Class_10E6F474_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-class Class_10BFBD70
+class cIntArray
 {
 public:
-    void FUN_10bfbd70(int NewCount);
+    void SetCount(int NewCount);
 
     void Append(int Item)
     {
         int Index = Unknown00;
-        FUN_10bfbd70(Index + 1);
+        SetCount(Index + 1);
         Unknown08[Index] = Item;
     }
 
     int Unknown00;
-    int Unknown04;
+    int m_CapacityBytes;
     int* Unknown08;
 };
 
@@ -24,7 +24,7 @@ public:
     void FUN_10abb720(int Item);
 
     char Unknown00[0x10];
-    Class_10BFBD70 Unknown10;
+    cIntArray Unknown10;
 };
 
 // FUNCTION: 0x10ABB720 ?FUN_10abb720@Class_10E6F474@@QAEXH@Z

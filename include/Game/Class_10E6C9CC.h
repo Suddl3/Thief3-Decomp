@@ -9,7 +9,7 @@ public:
     Class_10E6C9CC(int Value) : Unknown04(Value) {}
 
     virtual ~Class_10E6C9CC();
-    virtual Class_10E6C9CC* FUN_10a905b0();
+    virtual Class_10E6C9CC* Clone();
 
     int Unknown04;
 };

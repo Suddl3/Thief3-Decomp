@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Engine/EngineClasses.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/Class_1096D780.h"
 
 class AAIPathPoint;
@@ -97,10 +97,10 @@ public:
     virtual int Virtual94();
 
     void* FUN_10bbefa0();
-    int FUN_10bbf140(Class_10BFBD70* B, Class_10BFBD70* A);
+    int FUN_10bbf140(cIntArray* B, cIntArray* A);
 };
 
-void FUN_10bff980(Class_10BFF980_Param* Value, Class_10BFBD70* B, Class_10BFBD70* A);
+void FUN_10bff980(Class_10BFF980_Param* Value, cIntArray* B, cIntArray* A);
 
 // FUNCTION: 0x10BFFDE0 ?FUN_10bffde0@@YGHPAVClass_1096D780@@@Z
 int __stdcall FUN_10bffde0(Class_1096D780* Param)
@@ -108,8 +108,8 @@ int __stdcall FUN_10bffde0(Class_1096D780* Param)
     AAIPathPoint* Point = ((Class_10BBEFC0*)Param)->FUN_10bbefc0();
     if (Point != 0 && Point->IsA(AAIPathPoint::StaticClass()) && Point->Virtual94() == 1 && Point->FUN_10bbefa0() != 0)
     {
-        Class_10BFBD70 B;
-        Class_10BFBD70 A;
+        cIntArray B;
+        cIntArray A;
         FUN_10bff980((Class_10BFF980_Param*)Param->Get(), &B, &A);
         return Point->FUN_10bbf140(&B, &A);
     }

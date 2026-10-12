@@ -15,7 +15,7 @@ class cCombatBase;
 
 class Class_10E96510;
 
-class Class_10E91EE8;
+class State_Gassed;
 
 class Class_10E92460;
 
@@ -33,7 +33,7 @@ class Class_10E93878;
 
 class Class_10E93B68;
 
-class Class_10E93E48;
+class cTacticWeaponHolster;
 
 class Class_10E95288;
 
@@ -47,7 +47,7 @@ class Class_10E96EB0;
 
 class Class_10E96FD0;
 
-class Class_10E97488;
+class State_PatrolLook;
 
 class Class_10E4CCD0
 {
@@ -69,9 +69,9 @@ public:
     virtual void Virtual14();
     virtual void Virtual15();
     virtual void Virtual16();
-    virtual Class_10E97488* FUN_10b99780(Struct_10B98E00* A, int B, int C, int D, int E, int F, int G);
+    virtual State_PatrolLook* FUN_10b99780(Struct_10B98E00* A, int B, int C, int D, int E, int F, int G);
     virtual void Virtual18();
-    virtual Class_10E91EE8* FUN_10b999e0(Struct_10B98E00* A, int B);
+    virtual State_Gassed* FUN_10b999e0(Struct_10B98E00* A, int B);
     virtual void Virtual20();
     virtual void Virtual21();
     virtual void Virtual22();
@@ -89,7 +89,7 @@ public:
     virtual Class_10E93020* FUN_10b98050(Struct_10B98E00* A, bool B, bool C);
     virtual cCombatBase* FUN_10b98170(Struct_10B98E00* A);
     virtual void Virtual36();
-    virtual Class_10E93E48* FUN_10b98290(int A);
+    virtual cTacticWeaponHolster* FUN_10b98290(int A);
     virtual void Virtual38();
     virtual void Virtual39();
     virtual Class_10E948D8* FUN_10b98450(Struct_10B98E00* A, int B, int C);

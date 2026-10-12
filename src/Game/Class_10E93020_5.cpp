@@ -134,8 +134,8 @@ public:
     void FUN_10bc4360(int A);
     void FUN_10bd0d80(Class_10BD0270* A, int B);
 
-    Class_10BD0270* Unknown40;
-    Class_10BD0270* Unknown44[4];
+    Class_10BD0270* m_CurrentAction;
+    Class_10BD0270* m_ActionQueue[4];
     bool Unknown54;
     bool Unknown55;
     bool Unknown56;
@@ -147,16 +147,16 @@ void Class_10E93020::FUN_10bd0f30()
 {
     if (!(FUN_10bc4160() && FUN_10bc4160()->FUN_10aa82d0() != 0))
     {
-        if (Unknown40)
+        if (m_CurrentAction)
         {
-            delete Unknown40;
-            Unknown40 = 0;
+            delete m_CurrentAction;
+            m_CurrentAction = 0;
             for (int I = 0; I < 3; I++)
-                Unknown44[I] = Unknown44[I + 1];
+                m_ActionQueue[I] = m_ActionQueue[I + 1];
         }
-        if (Unknown44[0])
+        if (m_ActionQueue[0])
         {
-            FUN_10bd0d80(Unknown44[0], 0);
+            FUN_10bd0d80(m_ActionQueue[0], 0);
             return;
         }
         if (!Unknown56 || !((Class_10C00C70*)Unknown04[0]->Unknown08->FUN_10ba9ec0())->FUN_10c00c70())

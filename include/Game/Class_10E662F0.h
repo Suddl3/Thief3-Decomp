@@ -9,7 +9,7 @@ public:
     Class_10E662F0(int A, int B) : Unknown04(A), Unknown08(B) {}
 
     virtual ~Class_10E662F0();
-    virtual Class_10E662F0* FUN_10a2f9b0();
+    virtual Class_10E662F0* Clone();
 
     int Unknown04;
     int Unknown08;

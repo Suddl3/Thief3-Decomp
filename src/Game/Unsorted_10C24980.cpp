@@ -20,12 +20,12 @@ struct Item_10C24BC0
     int Unknown20;
 };
 
-// FUNCTION: 0x10C24BC0 ?FUN_10c24bc0@Class_10C24940@@QAEHABUItem_10C24BC0@@@Z
-int Class_10C24940::FUN_10c24bc0(const Item_10C24BC0& Item)
+// FUNCTION: 0x10C24BC0 ?AddItem@Class_10C24940@@QAEHABUItem_10C24BC0@@@Z
+int Class_10C24940::AddItem(const Item_10C24BC0& Item)
 {
-    int Index = Unknown00;
+    int Index = m_Count;
     FUN_10c24260(Index + 1);
-    Item_10C24BC0* Dest = &Unknown08[Index];
+    Item_10C24BC0* Dest = &m_Items[Index];
     Dest->Unknown00 = Item.Unknown00;
     Dest->Unknown04 = Item.Unknown04;
     Dest->Unknown10 = Item.Unknown10;

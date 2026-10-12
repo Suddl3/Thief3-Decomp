@@ -37,12 +37,12 @@ public:
     virtual void Virtual6();
     virtual void Virtual7();
     virtual void Virtual8();
-    virtual void FUN_10c3d5e0();
+    virtual void Stop();
 
     char Unknown04[0x14];
-    bool Unknown18;
+    bool m_bActive;
     char Unknown19[0x27];
-    int Unknown40;
+    int m_Handle;
     char Unknown44[0xC];
     Class_109BBBA0* Unknown50;
 };
@@ -58,15 +58,15 @@ void Class_10E9B168::FUN_10c3d570()
     Unknown18 = 0;
 }
 
-// FUNCTION: 0x10C3D5E0 ?FUN_10c3d5e0@Class_10E9B370@@UAEXXZ
-void Class_10E9B370::FUN_10c3d5e0()
+// FUNCTION: 0x10C3D5E0 ?Stop@Class_10E9B370@@UAEXXZ
+void Class_10E9B370::Stop()
 {
-    if (Unknown40 >= 0)
+    if (m_Handle >= 0)
     {
-        Unknown50->FUN_109bbba0(Unknown40);
-        Unknown40 = -1;
+        Unknown50->FUN_109bbba0(m_Handle);
+        m_Handle = -1;
     }
-    Unknown18 = false;
+    m_bActive = false;
 }
 
 // FUNCTION: 0x10C3D890 ?Stop@Class_10E9B240@@UAEXXZ

@@ -32,7 +32,7 @@ public:
 class Class_10E9AE24 : public Class_10E9AF04
 {
 public:
-    virtual void FUN_10c37860(Object_10BCE8D0* A);
+    virtual void Serialize(Object_10BCE8D0* A);
     virtual FVector FUN_10c377c0();
 
     char Unknown04[0x48];
@@ -40,8 +40,8 @@ public:
     char Unknown54[0x28];
     FVector Unknown7C;
     char Unknown88[0xC];
-    float Unknown94;
-    float Unknown98;
+    float m_OffsetX;
+    float m_OffsetY;
 };
 
 // FUNCTION: 0x10C377C0 ?FUN_10c377c0@Class_10E9AE24@@UAE?AVFVector@@XZ
@@ -50,8 +50,8 @@ FVector Class_10E9AE24::FUN_10c377c0()
     if (!Unknown4C.FUN_10978090())
         return FVector(0.0f, 0.0f, 0.0f);
     FVector Location = Unknown4C.FUN_10978090()->Unknown2C;
-    Location.X += Unknown94;
-    Location.Y += Unknown98;
+    Location.X += m_OffsetX;
+    Location.Y += m_OffsetY;
     Location += Unknown7C;
     return Location;
 }

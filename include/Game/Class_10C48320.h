@@ -10,18 +10,18 @@ class Class_10C48320_Node;
 class Class_10C48320
 {
 public:
-    unsigned int FUN_10c48320(const int& Key, const int& Value);
-    void FUN_10c484d0(int Size);
-    bool FUN_10c49960(const int& Key);
+    unsigned int Insert(const int& Key, const int& Value);
+    void Rehash(int Size);
+    bool Remove(const int& Key);
 
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    bool Unknown10;
+    int m_Collisions;
+    int m_Count;
+    int m_BucketBits;
+    int m_BucketCount;
+    bool m_FixedSize;
     char Pad11[0x3];
-    Class_10C48320_Node** Unknown14;
-    Class_10C48320_Field18 Unknown18;
+    Class_10C48320_Node** m_Buckets;
+    Class_10C48320_Field18 m_KeyTraits;
 };
 
 #endif // GAME_CLASS_10C48320_H

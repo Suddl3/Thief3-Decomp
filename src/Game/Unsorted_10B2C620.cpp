@@ -1,6 +1,6 @@
 // Game/Unsorted_10B2C620.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/Class_10B2BC90_Unknown.h"
 
 // Copied whole from include/Game/Class_10A52EE0.h, with FUN_10a52ee0 returning the object symbols.txt names.
@@ -34,7 +34,7 @@ void Class_10B2D600::FUN_10b2d600()
         Class_10B2BC90_Unknown* Item = FUN_10a52ee0(Slots[(Head + i) % 5]);
         if (Item)
         {
-            Class_10BFBD70 Found;
+            cIntArray Found;
             Item->Virtual38(Found);
             if (Found.Count == 0 || *Found.Data == 0)
                 FUN_10b2c2e0(Item, i);

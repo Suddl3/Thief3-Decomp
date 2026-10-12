@@ -44,7 +44,7 @@ public:
     virtual void Virtual5();
     virtual void Virtual6();
     virtual void Virtual7();
-    virtual void FUN_10be1c00();
+    virtual void CheckTimeout();
     virtual void Virtual9();
     virtual void Virtual10();
     virtual void Virtual11();
@@ -103,8 +103,8 @@ public:
     virtual void Serialize(FArchive& Ar);
 
     char Unknown04[0x3C];
-    float Unknown40;
-    int Unknown44;
+    float m_StartTime;
+    int m_Handle;
     unsigned char Unknown48;
     unsigned char Unknown49;
 };
@@ -221,8 +221,8 @@ void Class_10BE1F80::FUN_10be1f80(UObject* Obj)
 void Class_10E95898::Serialize(FArchive& Ar)
 {
     Class_10E8BE68::Serialize(Ar);
-    Ar.Serialize(&Unknown40, 4);
-    DAT_10ff667c->Unknown18->Virtual1(Ar, &Unknown44);
+    Ar.Serialize(&m_StartTime, 4);
+    DAT_10ff667c->Unknown18->Virtual1(Ar, &m_Handle);
     Ar.Serialize(&Unknown48, 1);
     Ar.Serialize(&Unknown49, 1);
 }

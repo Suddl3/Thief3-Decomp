@@ -1,6 +1,6 @@
 // Game/Unsorted_10C084A0_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/Class_10C084A0.h"
 
 class FArchive
@@ -40,7 +40,7 @@ void Class_10C084A0::FUN_10c084a0(FArchive& Ar)
     int Num = Count;
     Ar.Virtual1(&Num, 4);
     if (Ar.Unknown14)
-        FUN_10bfbd70(Num);
+        SetCount(Num);
     for (int i = 0; i < Count; i++)
         DAT_10ff667c->Unknown18->Virtual1(Ar, &Data[i]);
 }

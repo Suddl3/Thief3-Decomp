@@ -11,7 +11,7 @@ extern int DAT_10f3a064;
 
 extern bool DAT_10f3a060;
 
-class Class_10BFBD70;
+class cIntArray;
 
 class cActorManager;
 

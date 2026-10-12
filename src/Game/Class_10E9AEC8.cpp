@@ -11,16 +11,16 @@ public:
     virtual void Virtual3();
     virtual void Virtual4();
     virtual void Virtual5();
-    virtual void FUN_10c380d0();
+    virtual void Trigger();
 
     Class_10c380d0_Member* Unknown04;
     char Unknown08[0x50];
-    unsigned char Unknown58;
+    unsigned char m_bTriggered;
 };
 
-// FUNCTION: 0x10C380D0 ?FUN_10c380d0@Class_10E9AEC8@@UAEXXZ
-void Class_10E9AEC8::FUN_10c380d0()
+// FUNCTION: 0x10C380D0 ?Trigger@Class_10E9AEC8@@UAEXXZ
+void Class_10E9AEC8::Trigger()
 {
-    Unknown58 = 1;
+    m_bTriggered = 1;
     Unknown04->Virtual44();
 }

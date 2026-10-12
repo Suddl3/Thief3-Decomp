@@ -6,12 +6,12 @@
 class Class_10ACA620
 {
 public:
-    void FUN_10aca620();
-    void FUN_10aca5b0(float A);
+    void Fire();
+    void Tick(float A);
 
     char Unknown00[4];
     int Unknown04;
-    float Unknown08;
+    float Remaining;
 };
 
 #endif // GAME_CLASS_10ACA620_H

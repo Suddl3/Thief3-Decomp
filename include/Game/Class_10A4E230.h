@@ -5,12 +5,12 @@
 
 #include "Game/Struct_10A4E230.h"
 
-class Class_10BFBD70;
+class cIntArray;
 
 class Class_10A4E230
 {
 public:
-    void FUN_10a4e230(int Value, Class_10BFBD70* B);
+    void FUN_10a4e230(int Value, cIntArray* B);
 
     char Unknown00[0x720];
     Struct_10A4E230 Unknown720[14];

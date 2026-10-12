@@ -12,9 +12,9 @@ public:
     void FUN_10b9ce20();
 
     char Unknown00[0x10];
-    int Unknown10;
+    int m_Count;
     char Unknown14[4];
-    Object_10B9CDE0** Unknown18;
+    Object_10B9CDE0** m_Items;
 };
 
 #endif // GAME_CLASS_10B9CDE0_H

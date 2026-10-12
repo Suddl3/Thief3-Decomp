@@ -3,7 +3,7 @@
 
 #include "Core/Core.h"
 #include "Game/Class_10A6F0C0.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/Class_10F46DA0.h"
 
 class Class_10B697A0;
@@ -51,15 +51,15 @@ public:
     virtual void Virtual0();
     virtual int FUN_10a6f160(int Key, float Value);
     virtual void Virtual2();
-    virtual void FUN_10a6f010(int A, Class_10BFBD70* Arr);
+    virtual void FUN_10a6f010(int A, cIntArray* Arr);
 
     Class_10A6F0C0 m_Entries;
     char Pad05[0x7];
     Class_10A6F010_Unknown0C* Unknown0C;
 };
 
-// FUNCTION: 0x10A6F010 ?FUN_10a6f010@Class_10E6BA40@@UAEXHPAVClass_10BFBD70@@@Z
-void Class_10E6BA40::FUN_10a6f010(int A, Class_10BFBD70* Arr)
+// FUNCTION: 0x10A6F010 ?FUN_10a6f010@Class_10E6BA40@@UAEXHPAVcIntArray@@@Z
+void Class_10E6BA40::FUN_10a6f010(int A, cIntArray* Arr)
 {
     Class_10E66500 Local;
     Class_10A6F010_Unknown0C* Node = this->Unknown0C->Next;

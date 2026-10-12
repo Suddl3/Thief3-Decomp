@@ -4,7 +4,7 @@
 #define GAME_CLASS_10E88900_H
 
 #include "Game/Class_10B59770.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/Class_10E68938.h"
 #include "Game/Class_10E822B0.h"
 
@@ -19,8 +19,8 @@ public:
     int Unknown158;
     int Unknown15C;
     int Unknown160;
-    Class_10BFBD70 Unknown164;
-    Class_10BFBD70 Unknown170;
+    cIntArray Unknown164;
+    cIntArray Unknown170;
     bool Unknown17C;
     char Pad17D[0x3];
     Class_10E68938 Unknown180;

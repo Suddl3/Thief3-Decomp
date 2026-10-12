@@ -27,10 +27,10 @@ public:
     void** Unknown00;
 };
 
-class Class_10E93E48 : public Class_10E90D70
+class cTacticWeaponHolster : public Class_10E90D70
 {
 public:
-    Class_10E93E48* FUN_10bd9780(int A, int B);
+    cTacticWeaponHolster* FUN_10bd9780(int A, int B);
 };
 
 class Class_10E8BE68
@@ -207,8 +207,8 @@ extern const char DAT_10e8c03c[];
 
 void FUN_10be7f20();
 
-// FUNCTION: 0x10BD9780 ?FUN_10bd9780@Class_10E93E48@@QAEPAV1@HH@Z
-Class_10E93E48* Class_10E93E48::FUN_10bd9780(int A, int B)
+// FUNCTION: 0x10BD9780 ?FUN_10bd9780@cTacticWeaponHolster@@QAEPAV1@HH@Z
+cTacticWeaponHolster* cTacticWeaponHolster::FUN_10bd9780(int A, int B)
 {
     this->Class_10E90D70::Class_10E90D70(A, B);
     Unknown00 = DAT_10e93e48;
@@ -485,8 +485,8 @@ void FUN_10be7e90()
     FUN_10be5000();
 }
 
-// FUNCTION: 0x10BE8810 ?FUN_10be8810@Class_10E96510@@QAE?AVClass_109081E0@@XZ
-Class_109081E0 Class_10E96510::FUN_10be8810()
+// FUNCTION: 0x10BE8810 ?GetYellowAlertName@Class_10E96510@@QAE?AVClass_109081E0@@XZ
+Class_109081E0 Class_10E96510::GetYellowAlertName()
 {
     return Class_109081E0(DAT_10e8c048);
 }

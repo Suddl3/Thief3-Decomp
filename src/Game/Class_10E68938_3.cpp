@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10A56860.h"
 #include "Game/Class_109081E0.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/Class_10A249B0.h"
 
 // Game/Class_10E67FD0.h makes the base 0x150 bytes, past this class's fields at 0x118: the base is declared here by its vtable only.
@@ -20,7 +20,7 @@ public:
     char Unknown04[0x114];
     Class_10A249B0* Unknown118;
     Class_109081E0 Unknown11C;
-    Class_10BFBD70 Unknown120;
+    cIntArray Unknown120;
 };
 
 // FUNCTION: 0x10A56670 ??1Class_10E68938@@UAE@XZ

@@ -2,11 +2,11 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10B61CA0.h"
 
-class Class_10BFBD70
+class cIntArray
 {
 public:
     int Unknown00;
-    int Unknown04;
+    int m_CapacityBytes;
     void** Unknown08;
 };
 
@@ -18,7 +18,7 @@ public:
     char Unknown00[0xC4];
     void* UnknownC4;
     char UnknownC8[0xD4];
-    Class_10BFBD70 Unknown19C;
+    cIntArray Unknown19C;
 };
 
 // FUNCTION: 0x10B61CA0 ?FUN_10b61ca0@Class_10B61CA0@@QAEHXZ

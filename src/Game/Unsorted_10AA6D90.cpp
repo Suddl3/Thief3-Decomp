@@ -160,8 +160,8 @@ void Class_10E822B0::FUN_10aa7100(bool A)
     Class_10A52BE0::FUN_10a52be0(A);
 }
 
-// FUNCTION: 0x10AA7150 ?FUN_10aa7150@Class_10E6C128@@UAEXPAXHH@Z
-void Class_10E6C128::FUN_10aa7150(void* Stream, int A, int B)
+// FUNCTION: 0x10AA7150 ?Save@Class_10E6C128@@UAEXPAXHH@Z
+void Class_10E6C128::Save(void* Stream, int A, int B)
 {
     WriteString(Stream, &Unknown24);
     WriteString(Stream, &Unknown20);

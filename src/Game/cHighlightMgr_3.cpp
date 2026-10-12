@@ -6,20 +6,20 @@
 
 struct Struct_10C08690;
 
-class Class_10BFBD70
+class cIntArray
 {
 public:
-    Class_10BFBD70() : Unknown00(0), Unknown04(0), Unknown08(0) {}
-    Class_10BFBD70(const Class_10BFBD70& Other)
+    cIntArray() : Unknown00(0), m_CapacityBytes(0), Unknown08(0) {}
+    cIntArray(const cIntArray& Other)
     {
-        Unknown00 = Unknown04 = 0;
+        Unknown00 = m_CapacityBytes = 0;
         Unknown08 = 0;
-        FUN_10a58cb0(Other);
+        CopyFrom(Other);
     }
 
-    void FUN_10a58c70(const Class_10BFBD70& Other);
-    void FUN_10bfbd70(int Count);
-    void FUN_109dff50(int Index);
+    void AppendAll(const cIntArray& Other);
+    void SetCount(int Count);
+    void RemoveAt(int Index);
     int FindIndex(int Item)
     {
         for (int i = 0; i < Count; i++)
@@ -29,26 +29,26 @@ public:
         }
         return -1;
     }
-    int FUN_1092a330(const int* Item);
-    void FUN_109dff00();
-    void FUN_10a58cb0(const Class_10BFBD70& Other);
-    void FUN_10a81b10(int Index, int* Value);
-    Class_10BFBD70& operator=(const Class_10BFBD70& Other)
+    int FindOrAdd(const int* Item);
+    void Clear();
+    void CopyFrom(const cIntArray& Other);
+    void InsertAt(int Index, int* Value);
+    cIntArray& operator=(const cIntArray& Other)
     {
         Unknown00 = 0;
-        FUN_10a58c70(Other);
+        AppendAll(Other);
         return *this;
     }
     int FUN_10b9fa20(int* Item);
-    void FUN_10b9f810();
-    void FUN_10ba91a0(const int* Item);
-    void FUN_10c08510(int Item);
-    void FUN_10c08550(int Item);
+    void DeleteAll();
+    void PushFront(const int* Item);
+    void AddUnique(int Item);
+    void Remove(int Item);
     void FUN_10c08690(Struct_10C08690* Item);
     void Add(int Item)
     {
         int Index = Count;
-        FUN_10bfbd70(Index + 1);
+        SetCount(Index + 1);
         Data[Index] = Item;
     }
 
@@ -57,7 +57,7 @@ public:
         int Unknown00;
         int Count;
     };
-    int Unknown04;
+    int m_CapacityBytes;
     union
     {
         int* Unknown08;
@@ -99,7 +99,7 @@ public:
     void FindMembraneMaterials();
 
     char Pad00[0x8];
-    Class_10BFBD70 m_MembraneMaterials;
+    cIntArray m_MembraneMaterials;
 };
 
 // FUNCTION: 0x10ABB900 ?FindMembraneMaterials@cHighlightMgr@@QAEXXZ

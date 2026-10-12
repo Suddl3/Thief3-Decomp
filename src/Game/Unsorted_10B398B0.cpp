@@ -4,7 +4,7 @@
 #include "Game/Class_10B39A70.h"
 #include "Game/Class_10B39AB0.h"
 #include "Game/Class_10B3A460.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/Struct_10AA3520.h"
 
 class Class_10B21560
@@ -18,7 +18,7 @@ extern Struct_10AA3520* DAT_10f35dec;
 class Class_10B48220
 {
 public:
-    void FUN_10b48220(Class_10BFBD70* A, int B, int C);
+    void FUN_10b48220(cIntArray* A, int B, int C);
 };
 
 Class_10B3A460* FUN_10b3abf0();
@@ -90,8 +90,8 @@ public:
     virtual void Virtual55(int A);
 };
 
-// FUNCTION: 0x10B399B0 ?FUN_10b399b0@Class_10B399B0@@QAEXPAVClass_10BFBD70@@HH@Z
-void Class_10B399B0::FUN_10b399b0(Class_10BFBD70* A, int B, int C)
+// FUNCTION: 0x10B399B0 ?FUN_10b399b0@Class_10B399B0@@QAEXPAVcIntArray@@HH@Z
+void Class_10B399B0::FUN_10b399b0(cIntArray* A, int B, int C)
 {
     if (A->Unknown00 > 0)
     {

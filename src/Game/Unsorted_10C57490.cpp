@@ -12,8 +12,8 @@ void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D
 
 unsigned int HashBytes(const void* Data, int Length);
 
-// FUNCTION: 0x10C57530 ?FUN_10c57530@Class_10C59030@@QAEIABVClass_109081E0@@ABVClass_10C59030_Value@@@Z
-unsigned int Class_10C59030::FUN_10c57530(const Class_109081E0& Key, const Class_10C59030_Value& Value)
+// FUNCTION: 0x10C57530 ?Insert@Class_10C59030@@QAEIABVClass_109081E0@@ABVClass_10C59030_Value@@@Z
+unsigned int Class_10C59030::Insert(const Class_109081E0& Key, const Class_10C59030_Value& Value)
 {
     if (!Unknown10 && Unknown00 > Unknown0C * 0.2)
         FUN_10c57620(Unknown0C * 2);

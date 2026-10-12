@@ -4,7 +4,7 @@
 #define GAME_CLASS_10C25010_H
 
 #include "Core/Core.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/Class_10C24940.h"
 
 class Class_10C25010_Param1;
@@ -13,12 +13,12 @@ class Class_10C25010
 {
 public:
     void FUN_10c25010(int, Class_10C25010_Param1* Param1, int* Index, int Value);
-    void FUN_10c20da0(Class_10BFBD70* Items, FVector* Point);
-    void FUN_10c24c80(Class_10BFBD70* Items, int Value);
+    void FUN_10c20da0(cIntArray* Items, FVector* Point);
+    void FUN_10c24c80(cIntArray* Items, int Value);
     void FUN_10c21510(FVector* From, FVector* To, int Value);
 
     char Unknown00[0x18];
-    Class_10BFBD70 Unknown18;
+    cIntArray Unknown18;
     Class_10C24940 Unknown24;
     int Unknown30;
     char Unknown34[0xC];

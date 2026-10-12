@@ -15,13 +15,13 @@ public:
     virtual ~Class_10E6C128();
     virtual void Virtual1();
     virtual void Virtual2();
-    virtual void FUN_10aa7150(void* Stream, int A, int B);
+    virtual void Save(void* Stream, int A, int B);
     virtual void Virtual4();
-    virtual int FUN_10aa7190(ClassArg_10AA7190* A);
+    virtual int Serialize(ClassArg_10AA7190* A);
 
     Class_10E6C128();
 
-    int FUN_10aa71f0(FILE* File, int Param);
+    int Dump(FILE* File, int Param);
 
     int Unknown0C;
     int Unknown10;

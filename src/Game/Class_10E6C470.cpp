@@ -12,32 +12,32 @@ struct Struct_10A88D40
 {
 };
 
-// The header's Class_10BFBD70 copied whole, with the union's pointer typed as the array of Struct_10A88D40 pointers
+// The header's cIntArray copied whole, with the union's pointer typed as the array of Struct_10A88D40 pointers
 // and the first-element removal the destructor inlines.
-class Class_10BFBD70
+class cIntArray
 {
 public:
-    Class_10BFBD70() : Unknown00(0), Unknown04(0), Unknown08(0) {}
-    Class_10BFBD70(const Class_10BFBD70& Other)
+    cIntArray() : Unknown00(0), m_CapacityBytes(0), Unknown08(0) {}
+    cIntArray(const cIntArray& Other)
     {
-        Unknown00 = Unknown04 = 0;
+        Unknown00 = m_CapacityBytes = 0;
         Unknown08 = 0;
-        FUN_10a58cb0(Other);
+        CopyFrom(Other);
     }
-    ~Class_10BFBD70()
+    ~cIntArray()
     {
-        FUN_10bfbd70(0);
-        if (Unknown04)
+        SetCount(0);
+        if (m_CapacityBytes)
         {
             GetAllocator()->Virtual5(Unknown08);
             Unknown08 = 0;
-            Unknown04 = 0;
+            m_CapacityBytes = 0;
         }
     }
 
-    void FUN_10a58c70(const Class_10BFBD70& Other);
-    void FUN_10bfbd70(int Count);
-    void FUN_109dff50(int Index);
+    void AppendAll(const cIntArray& Other);
+    void SetCount(int Count);
+    void RemoveAt(int Index);
     int FindIndex(int Item)
     {
         for (int i = 0; i < Count; i++)
@@ -47,28 +47,28 @@ public:
         }
         return -1;
     }
-    int FUN_1092a330(const int* Item);
-    void FUN_109dff00();
-    void FUN_10a58cb0(const Class_10BFBD70& Other);
-    void FUN_10a81b10(int Index, int* Value);
-    Class_10BFBD70& operator=(const Class_10BFBD70& Other)
+    int FindOrAdd(const int* Item);
+    void Clear();
+    void CopyFrom(const cIntArray& Other);
+    void InsertAt(int Index, int* Value);
+    cIntArray& operator=(const cIntArray& Other)
     {
         Unknown00 = 0;
-        FUN_10a58c70(Other);
+        AppendAll(Other);
         return *this;
     }
     int FUN_10b9fa20(int* Item);
-    void FUN_10b9f810();
-    void FUN_10ba91a0(const int* Item);
-    void FUN_10c08510(int Item);
-    void FUN_10c08550(int Item);
+    void DeleteAll();
+    void PushFront(const int* Item);
+    void AddUnique(int Item);
+    void Remove(int Item);
     void FUN_10c08690(Struct_10C08690* Item);
     void RemoveFirst()
     {
         int Rest = Count - 1;
         if (Rest != 0)
             memmove(Data, Data + 1, Rest * 4);
-        FUN_10bfbd70(Count - 1);
+        SetCount(Count - 1);
     }
 
     union
@@ -76,7 +76,7 @@ public:
         int Unknown00;
         int Count;
     };
-    int Unknown04;
+    int m_CapacityBytes;
     union
     {
         Struct_10A88D40** Unknown08;
@@ -90,7 +90,7 @@ public:
     virtual ~Class_10E6C470();
 
     char Unknown04[0x7F8];
-    Class_10BFBD70 Unknown7FC;
+    cIntArray Unknown7FC;
 };
 
 // FUNCTION: 0x10A88D40 ??1Class_10E6C470@@UAE@XZ

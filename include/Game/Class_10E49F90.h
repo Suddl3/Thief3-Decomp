@@ -24,7 +24,7 @@ public:
 
     ~Class_10E49F90();
 
-    void FUN_10935d10(int A, int B);
+    void SetRenderStates(int A, int B);
     void FUN_10935930(int A, int B);
 
     char Unknown04[0x110];

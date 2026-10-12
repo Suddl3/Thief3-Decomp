@@ -17,8 +17,8 @@ public:
     virtual void Virtual3();
     virtual void Virtual4();
     virtual void Virtual5();
-    virtual void FUN_10929c90(int A, int B, int C, Struct_10929D60* Out);
-    virtual void FUN_10929c10(int A, int B, int C, FVector* D, FLOAT E);
+    virtual void GetVector(int A, int B, int C, Struct_10929D60* Out);
+    virtual void SetVector(int A, int B, int C, FVector* D, FLOAT E);
 };
 
 #endif // GAME_CLASS_10E49B28_H

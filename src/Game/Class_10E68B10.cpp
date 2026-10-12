@@ -31,15 +31,15 @@ public:
     virtual void Virtual12();
     virtual void Virtual13();
     virtual void Virtual14();
-    virtual FBox FUN_10a64e40();
+    virtual FBox GetBounds();
 
     char Unknown04[0x30];
     FLOAT Unknown34;
     FLOAT Unknown38;
 };
 
-// FUNCTION: 0x10A64E40 ?FUN_10a64e40@Class_10E68B10@@UAE?AVFBox@@XZ
-FBox Class_10E68B10::FUN_10a64e40()
+// FUNCTION: 0x10A64E40 ?GetBounds@Class_10E68B10@@UAE?AVFBox@@XZ
+FBox Class_10E68B10::GetBounds()
 {
     return FBox(FVector(0.0f, Unknown38, 0.0f), FVector(Unknown34, 0.0f, 0.0f));
 }

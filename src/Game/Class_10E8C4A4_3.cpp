@@ -19,14 +19,14 @@ public:
     virtual void Virtual7();
     virtual void Virtual8();
     virtual void Virtual9();
-    virtual void FUN_10c12b50(int A, void* Stream);
+    virtual void Save(int A, void* Stream);
 
     char Unknown04[4];
     Object_10C12B50* Unknown08;
 };
 
-// FUNCTION: 0x10C12B50 ?FUN_10c12b50@Class_10E8C4A4@@UAEXHPAX@Z
-void Class_10E8C4A4::FUN_10c12b50(int A, void* Stream)
+// FUNCTION: 0x10C12B50 ?Save@Class_10E8C4A4@@UAEXHPAX@Z
+void Class_10E8C4A4::Save(int A, void* Stream)
 {
     WriteString(Stream, (int*)&Unknown08->Virtual25());
 }

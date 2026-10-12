@@ -56,7 +56,7 @@ public:
     void PopState();
 };
 
-class Class_10E97488 : public cTacticMoveToPoint
+class State_PatrolLook : public cTacticMoveToPoint
 {
 public:
     virtual void Virtual0();
@@ -65,8 +65,8 @@ public:
     void FUN_10bedca0();
 
     char Unknown04[0x54];
-    int Unknown58;
-    int Unknown5C;
+    int m_Limit;
+    int m_Count;
 };
 
 class Class_10E8BE68
@@ -302,12 +302,12 @@ State_Patrol* State_Patrol::Init(int A, int B)
     return this;
 }
 
-// FUNCTION: 0x10BEE9A0 ?FUN_10bee9a0@Class_10E97488@@UAEXXZ
-void Class_10E97488::FUN_10bee9a0()
+// FUNCTION: 0x10BEE9A0 ?FUN_10bee9a0@State_PatrolLook@@UAEXXZ
+void State_PatrolLook::FUN_10bee9a0()
 {
-    if (Unknown58 >= 1)
+    if (m_Limit >= 1)
     {
-        if (Unknown5C >= Unknown58)
+        if (m_Count >= m_Limit)
             PopState();
         else
             FUN_10bedca0();

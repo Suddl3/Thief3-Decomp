@@ -4,7 +4,7 @@
 #include "Core/Core.h"
 #include "Engine/EngineClasses.h"
 #include "Game/Class_10AAB5C0.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 class cUObjectLinkManager
 {
@@ -13,7 +13,7 @@ public:
     virtual void Virtual1();
     virtual void Virtual2();
     virtual void Virtual3();
-    virtual void Virtual4(int A, int B, int C, Class_10BFBD70& D);
+    virtual void Virtual4(int A, int B, int C, cIntArray& D);
 };
 
 cUObjectLinkManager* GetUObjectLinkManager();
@@ -34,7 +34,7 @@ public:
     virtual bool FUN_10a4c4d0(int A);
     virtual void Virtual7(int A);
     virtual void Virtual8(int A, int B, int C);
-    virtual void FUN_10a4c500(Class_10BFBD70* Array);
+    virtual void FUN_10a4c500(cIntArray* Array);
     virtual Struct_10A4C940_Owner* GetOwner(unsigned int Key);
     virtual void Virtual11();
     virtual void Virtual12();
@@ -51,7 +51,7 @@ public:
 // FUNCTION: 0x10A4C230 ?Virtual2@cActorManager@@UAEPAVUObject@@H@Z
 UObject* cActorManager::Virtual2(int A)
 {
-    Class_10BFBD70 Items;
+    cIntArray Items;
     GetUObjectLinkManager()->Virtual4(A, 0, 0x2F186B8, Items);
     if (Items.Count)
     {

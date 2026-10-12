@@ -35,8 +35,8 @@ Class_10E70098::Class_10E70098()
     DAT_10f46da0->Virtual1(this, 0x25, -1, -1);
 }
 
-// FUNCTION: 0x10ACCFB0 ?FUN_10accfb0@Class_10ACCFB0@@QAEXXZ
-void Class_10ACCFB0::FUN_10accfb0()
+// FUNCTION: 0x10ACCFB0 ?Free@Class_10ACCFB0@@QAEXXZ
+void Class_10ACCFB0::Free()
 {
     FUN_10acc790(0);
     if (Unknown04)

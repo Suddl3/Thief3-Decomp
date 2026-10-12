@@ -5,13 +5,13 @@
 
 Class_10905A90_Member* GetAllocator();
 
-// Game/Class_10BFBD70.h has no destructor and an out-of-line FUN_10bfbd70; this copy inlines both, as the function does.
-class Class_10BFBD70
+// Game/cIntArray.h has no destructor and an out-of-line SetCount; this copy inlines both, as the function does.
+class cIntArray
 {
 public:
-    void FUN_10bfbd70(int NewCount)
+    void SetCount(int NewCount)
     {
-        int Capacity = !Unknown08 ? 0 : Unknown04 / sizeof(void*);
+        int Capacity = !Unknown08 ? 0 : m_CapacityBytes / sizeof(void*);
         GetAllocator()->Virtual8(0, 0);
         if (NewCount > Capacity)
         {
@@ -19,7 +19,7 @@ public:
             if (Capacity)
                 NewCapacity = (NewCount & ~15) + 16;
             Unknown08 = (void**)GetAllocator()->Virtual3(Unknown08, NewCapacity * sizeof(void*), 0, 0, 0, 0);
-            Unknown04 = NewCapacity * sizeof(void*);
+            m_CapacityBytes = NewCapacity * sizeof(void*);
         }
         else if (NewCount <= Capacity - 16)
         {
@@ -27,32 +27,32 @@ public:
             {
                 GetAllocator()->Virtual5(Unknown08);
                 Unknown08 = 0;
-                Unknown04 = 0;
+                m_CapacityBytes = 0;
             }
             else
             {
                 int NewCapacity = (NewCount & ~15) + 16;
                 Unknown08 = (void**)GetAllocator()->Virtual3(Unknown08, NewCapacity * sizeof(void*), 0, 0, 0, 0);
-                Unknown04 = NewCapacity * sizeof(void*);
+                m_CapacityBytes = NewCapacity * sizeof(void*);
             }
         }
         GetAllocator()->Virtual9();
         Unknown00 = NewCount;
     }
 
-    ~Class_10BFBD70()
+    ~cIntArray()
     {
-        FUN_10bfbd70(0);
-        if (Unknown04)
+        SetCount(0);
+        if (m_CapacityBytes)
         {
             GetAllocator()->Virtual5(Unknown08);
             Unknown08 = 0;
-            Unknown04 = 0;
+            m_CapacityBytes = 0;
         }
     }
 
     int Unknown00;
-    int Unknown04;
+    int m_CapacityBytes;
     void** Unknown08;
 };
 
@@ -135,7 +135,7 @@ public:
 // FUNCTION: 0x10A9A4A0 ?FUN_10a9a4a0@Class_10E6D110@@UAEHHPAVClass_10A9A4A0_Param2@@PAVClass_10A9A4A0_Param3@@@Z
 int Class_10E6D110::FUN_10a9a4a0(int A, Class_10A9A4A0_Param2* B, Class_10A9A4A0_Param3* C)
 {
-    Class_10BFBD70 Local = C->Virtual4(2)->FUN_10a7f5a0(B->Virtual8(), 0);
+    cIntArray Local = C->Virtual4(2)->FUN_10a7f5a0(B->Virtual8(), 0);
     for (int i = 0; i < Local.Unknown00; i++)
         FUN_10a9a350(Local.Unknown08[i], C);
     return 1;
@@ -144,7 +144,7 @@ int Class_10E6D110::FUN_10a9a4a0(int A, Class_10A9A4A0_Param2* B, Class_10A9A4A0
 // FUNCTION: 0x10A9A5D0 ?FUN_10a9a5d0@Class_10E6D104@@UAEHHPAVClass_10A9A5D0_Param2@@PAVClass_10A9A5D0_Param3@@@Z
 int Class_10E6D104::FUN_10a9a5d0(int A, Class_10A9A5D0_Param2* B, Class_10A9A5D0_Param3* C)
 {
-    Class_10BFBD70 Local = C->Virtual4(2)->FUN_10a7f5a0(B->Virtual8(), 0);
+    cIntArray Local = C->Virtual4(2)->FUN_10a7f5a0(B->Virtual8(), 0);
     for (int i = 0; i < Local.Unknown00; i++)
         FUN_10a9a700(Local.Unknown08[i], C);
     return 1;

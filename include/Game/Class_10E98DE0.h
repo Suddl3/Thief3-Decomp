@@ -15,7 +15,7 @@ public:
     virtual void Serialize(FArchive& Ar);
     virtual void Virtual1();
     virtual void Virtual2();
-    virtual int FUN_10c1ab00(Class_10E98DE0* Other);
+    virtual int IsWithinRange(Class_10E98DE0* Other);
     virtual void Virtual4();
     virtual void Virtual5();
     virtual void Virtual6();
@@ -33,7 +33,7 @@ public:
     int Unknown04;
     Class_10DBD510* Unknown08;
     char Unknown0C[0x3C];
-    Struct_10BA91E0 Unknown48;
+    Struct_10BA91E0 m_Position;
     int Unknown54;
 };
 

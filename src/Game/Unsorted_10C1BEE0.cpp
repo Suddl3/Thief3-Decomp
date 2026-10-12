@@ -10,7 +10,7 @@ extern void* DAT_10e99020[];
 class Class_10E99020 : public Class_10C1B840
 {
 public:
-    Class_10E99020* FUN_10c1c000(int A, int B, int C, int D, float E, float F);
+    Class_10E99020* Initialize(int A, int B, int C, int D, float E, float F);
 };
 
 extern void* DAT_10e99068[];
@@ -19,8 +19,8 @@ extern void* DAT_10e990b0[];
 
 extern void* DAT_10e990f8[];
 
-// FUNCTION: 0x10C1C000 ?FUN_10c1c000@Class_10E99020@@QAEPAV1@HHHHMM@Z
-Class_10E99020* Class_10E99020::FUN_10c1c000(int A, int B, int C, int D, float E, float F)
+// FUNCTION: 0x10C1C000 ?Initialize@Class_10E99020@@QAEPAV1@HHHHMM@Z
+Class_10E99020* Class_10E99020::Initialize(int A, int B, int C, int D, float E, float F)
 {
     this->Class_10C1B840::Class_10C1B840(D, A, C, (int)E, (int)F, 1.0f);
     Unknown00 = DAT_10e99020;

@@ -6,7 +6,7 @@
 #include "Game/Class_109254A0.h"
 #include "Game/Class_109254D0.h"
 #include "Game/Class_10925D50.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 struct Entry_10925410
 {
@@ -83,8 +83,8 @@ void Class_109254D0::FUN_109254d0(int Index, char Value)
 // FUNCTION: 0x10925D50 ?FUN_10925d50@Class_10925D50@@QAEXH@Z
 void Class_10925D50::FUN_10925d50(int Value)
 {
-    Class_10BFBD70* Array = &Unknown68;
+    cIntArray* Array = &Unknown68;
     int Index = Array->Unknown00;
-    Array->FUN_10bfbd70(Index + 1);
+    Array->SetCount(Index + 1);
     Array->Unknown08[Index] = Value;
 }

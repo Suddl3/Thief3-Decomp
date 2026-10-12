@@ -10,13 +10,13 @@ class AAIPawnController
     DECLARE_CLASS(AAIPawnController, AAIController, 0x0, AICore)
 };
 
-class Class_10BFBD70
+class cIntArray
 {
 public:
-    void FUN_10bfbd70(int Count);
+    void SetCount(int Count);
 
     int Unknown00;
-    char Unknown04[4];
+    char m_CapacityBytes[4];
     UObject** Unknown08;
 };
 
@@ -28,7 +28,7 @@ public:
     virtual void AddPawnController(UObject* Obj);
 
     char m_Active[0x10];
-    Class_10BFBD70 m_Controllers;
+    cIntArray m_Controllers;
 };
 
 // FUNCTION: 0x10C0BC50 ?AddPawnController@cAIManager@@UAEXPAVUObject@@@Z
@@ -36,9 +36,9 @@ void cAIManager::AddPawnController(UObject* Obj)
 {
     if (Obj && Obj->IsA(AAIPawnController::StaticClass()))
     {
-        Class_10BFBD70* List = &m_Controllers;
+        cIntArray* List = &m_Controllers;
         int Index = List->Unknown00;
-        List->FUN_10bfbd70(Index + 1);
+        List->SetCount(Index + 1);
         List->Unknown08[Index] = Obj;
     }
 }

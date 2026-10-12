@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Core/Core.h"
 #include "Game/Class_109E6D60.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/WindowManager.h"
 #include "Game/Class_109081E0.h"
 #include "Game/Class_10B45AD0.h"
@@ -12,7 +12,7 @@ class Class_10B45AD0;
 class Class_10B16930
 {
 public:
-    Class_10BFBD70 FUN_109e6d80(int A);
+    cIntArray FUN_109e6d80(int A);
     void FUN_10b166a0();
     void FUN_10b16930();
     void FUN_10b16780();

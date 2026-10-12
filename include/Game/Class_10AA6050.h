@@ -5,7 +5,7 @@
 
 #include "Game/Struct_10AA6050.h"
 
-class Class_10BFBD70;
+class cIntArray;
 struct Struct_10AA6340;
 
 class Class_10AA6050
@@ -21,7 +21,7 @@ public:
         }
         return 0;
     }
-    void FUN_10aa6340(int Value, const Struct_10AA6340& A, const Class_10BFBD70& B);
+    void FUN_10aa6340(int Value, const Struct_10AA6340& A, const cIntArray& B);
 
     char Unknown00[4];
     int Unknown04;

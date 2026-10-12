@@ -60,8 +60,8 @@ public:
 
     Class_10E95898(int A, int B, int C, bool D);
 
-    float Unknown40;
-    int Unknown44;
+    float m_StartTime;
+    int m_Handle;
     bool Unknown48;
     bool Unknown49;
     char Pad4A[0x2];

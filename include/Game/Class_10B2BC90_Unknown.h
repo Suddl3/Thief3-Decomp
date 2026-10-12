@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_10B2BC90_UNKNOWN_H
 #define GAME_CLASS_10B2BC90_UNKNOWN_H
 
-class Class_10BFBD70;
+class cIntArray;
 class FVector;
 
 class Class_10B2BC90_Unknown
@@ -47,7 +47,7 @@ public:
     virtual void Virtual35();
     virtual void Virtual36();
     virtual void Virtual37();
-    virtual void Virtual38(Class_10BFBD70& Found);
+    virtual void Virtual38(cIntArray& Found);
 };
 
 #endif // GAME_CLASS_10B2BC90_UNKNOWN_H

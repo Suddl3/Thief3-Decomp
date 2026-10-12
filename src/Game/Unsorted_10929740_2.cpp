@@ -27,8 +27,8 @@ void Class_10E49B08::FUN_10929b10(float A, float B, float C, float* Out)
     *Out = Sum;
 }
 
-// FUNCTION: 0x10929C90 ?FUN_10929c90@Class_10E49B28@@UAEXHHHPAUStruct_10929D60@@@Z
-void Class_10E49B28::FUN_10929c90(int A, int B, int C, Struct_10929D60* Out)
+// FUNCTION: 0x10929C90 ?GetVector@Class_10E49B28@@UAEXHHHPAUStruct_10929D60@@@Z
+void Class_10E49B28::GetVector(int A, int B, int C, Struct_10929D60* Out)
 {
     DWORD Packed;
     Virtual0(A, B, C, &Packed);

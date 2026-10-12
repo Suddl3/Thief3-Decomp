@@ -3,7 +3,7 @@
 #ifndef GAME_STRUCT_10AA6050_H
 #define GAME_STRUCT_10AA6050_H
 
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/Struct_10AA6340.h"
 
 struct Struct_10AA6050
@@ -11,7 +11,7 @@ struct Struct_10AA6050
 public:
     int Unknown00;
     Struct_10AA6340 Unknown04;
-    Class_10BFBD70 Unknown20;
+    cIntArray Unknown20;
 };
 
 #endif // GAME_STRUCT_10AA6050_H

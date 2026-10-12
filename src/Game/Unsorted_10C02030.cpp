@@ -3,7 +3,7 @@
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10C01FC0.h"
 #include "Game/Class_10C02460.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/Class_10C020A0.h"
 
 struct Class_10C02460_Node

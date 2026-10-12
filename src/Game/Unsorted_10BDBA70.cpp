@@ -27,7 +27,7 @@ extern void* DAT_10e94a00[];
 class Class_10E94A00 : public Class_10E90D70
 {
 public:
-    Class_10E94A00* FUN_10bdbb80(int A, int B, int C, int D);
+    Class_10E94A00* Init(int A, int B, int C, int D);
 
     int Unknown40;
     int Unknown44[3];
@@ -72,17 +72,17 @@ extern void* DAT_10e94c58[];
 class Class_10E94C58 : public Class_10E90D70
 {
 public:
-    Class_10E94C58* FUN_10bdbc70(int A, int B, int C, int D);
+    Class_10E94C58* Init(int A, int B, int C, int D);
 
     int Unknown40;
     int Unknown44[3];
     float Unknown50;
-    int Unknown54;
+    int m_Handle;
     bool Unknown58;
 };
 
-// FUNCTION: 0x10BDBB80 ?FUN_10bdbb80@Class_10E94A00@@QAEPAV1@HHHH@Z
-Class_10E94A00* Class_10E94A00::FUN_10bdbb80(int A, int B, int C, int D)
+// FUNCTION: 0x10BDBB80 ?Init@Class_10E94A00@@QAEPAV1@HHHH@Z
+Class_10E94A00* Class_10E94A00::Init(int A, int B, int C, int D)
 {
     this->Class_10E90D70::Class_10E90D70(A, B);
     Unknown40 = C;
@@ -109,8 +109,8 @@ Class_10E94B20* Class_10E94B20::Init(int A, int B, int C, const FVector& D, int 
     return this;
 }
 
-// FUNCTION: 0x10BDBC70 ?FUN_10bdbc70@Class_10E94C58@@QAEPAV1@HHHH@Z
-Class_10E94C58* Class_10E94C58::FUN_10bdbc70(int A, int B, int C, int D)
+// FUNCTION: 0x10BDBC70 ?Init@Class_10E94C58@@QAEPAV1@HHHH@Z
+Class_10E94C58* Class_10E94C58::Init(int A, int B, int C, int D)
 {
     this->Class_10E90D70::Class_10E90D70(A, B);
     Unknown40 = C;
@@ -118,7 +118,7 @@ Class_10E94C58* Class_10E94C58::FUN_10bdbc70(int A, int B, int C, int D)
         Unknown44[i] = 0;
     Unknown50 = -1.0f;
     Unknown00 = DAT_10e94c58;
-    Unknown54 = D;
+    m_Handle = D;
     Unknown58 = false;
     return this;
 }

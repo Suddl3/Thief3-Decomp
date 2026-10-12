@@ -3,9 +3,9 @@
 #ifndef GAME_CLASS_10BAF8E0_H
 #define GAME_CLASS_10BAF8E0_H
 
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
-class Class_10BAF8E0 : public Class_10BFBD70
+class Class_10BAF8E0 : public cIntArray
 {
 public:
     void FUN_10baf8e0(int Param);

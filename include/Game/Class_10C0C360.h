@@ -3,13 +3,13 @@
 #ifndef GAME_CLASS_10C0C360_H
 #define GAME_CLASS_10C0C360_H
 
-class Class_10BFBD70;
+class cIntArray;
 struct Struct_10C05A80;
 
 class Class_10C0C360
 {
 public:
-    void FUN_10c0c360(Class_10BFBD70* Out, const Struct_10C05A80* Center, float Radius);
+    void FUN_10c0c360(cIntArray* Out, const Struct_10C05A80* Center, float Radius);
 
     int Unknown00;
     int Unknown04;

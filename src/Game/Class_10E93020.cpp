@@ -17,8 +17,8 @@ class Class_10E93020 : public Class_10E90D70
 public:
     Class_10E93020* FUN_10bd01b0(int A, int B, bool C, bool D);
 
-    int Unknown40;
-    int Unknown44[4];
+    int m_CurrentAction;
+    int m_ActionQueue[4];
     bool Unknown54;
     bool Unknown55;
     bool Unknown56;
@@ -28,12 +28,12 @@ public:
 Class_10E93020* Class_10E93020::FUN_10bd01b0(int A, int B, bool C, bool D)
 {
     this->Class_10E90D70::Class_10E90D70(A, B);
-    Unknown40 = 0;
+    m_CurrentAction = 0;
     Unknown54 = false;
     Unknown00 = DAT_10e93020;
     Unknown55 = D;
     Unknown56 = C;
     for (int i = 0; i < 4; i++)
-        Unknown44[i] = 0;
+        m_ActionQueue[i] = 0;
     return this;
 }

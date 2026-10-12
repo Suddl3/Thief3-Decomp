@@ -21,10 +21,10 @@ class Class_10B9CAC0 : public Class_10B9CA00
 {
 };
 
-class Class_10BFBD70
+class cIntArray
 {
 public:
-    void FUN_10bfbd70(int NewCount);
+    void SetCount(int NewCount);
 
     int FindIndex(int Item)
     {
@@ -39,12 +39,12 @@ public:
     void Append(int Item)
     {
         int Index = Unknown00;
-        FUN_10bfbd70(Index + 1);
+        SetCount(Index + 1);
         Unknown08[Index] = Item;
     }
 
     int Unknown00;
-    int Unknown04;
+    int m_CapacityBytes;
     int* Unknown08;
 };
 
@@ -54,7 +54,7 @@ public:
     void FUN_10c08e30(int Item);
 
     char Unknown00[0x14];
-    Class_10BFBD70 Unknown14;
+    cIntArray Unknown14;
 };
 
 // FUNCTION: 0x10C08DE0 ?FUN_10c08de0@Class_10C08DE0@@QAEXXZ

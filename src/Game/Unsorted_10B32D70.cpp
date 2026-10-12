@@ -3,7 +3,7 @@
 #include "Game/Class_109081E0.h"
 #include "Game/Class_10B330D0.h"
 #include "Game/Class_10B33D70.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/Class_10B33200.h"
 
 extern void* DAT_10e7bf50[];
@@ -25,7 +25,7 @@ public:
     int Unknown164;
     int Unknown168;
     int Unknown16C;
-    Class_10BFBD70 Unknown170;
+    cIntArray Unknown170;
     float Unknown17C;
     int Unknown180;
     int Unknown184;
@@ -62,7 +62,7 @@ Class_10E7BF50* Class_10E7BF50::InitDefaults()
     Unknown164 = 0;
     Unknown168 = 0;
     Unknown16C = 0;
-    Unknown170.Class_10BFBD70::Class_10BFBD70();
+    Unknown170.cIntArray::cIntArray();
     Unknown17C = 0.65f;
     Unknown180 = 0;
     Unknown184 = 0;

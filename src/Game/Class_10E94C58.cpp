@@ -88,7 +88,7 @@ public:
     virtual void Serialize(FArchive& Ar);
 
     char Unknown04[0x50];
-    int Unknown54;
+    int m_Handle;
     char Unknown58;
 };
 
@@ -96,6 +96,6 @@ public:
 void Class_10E94C58::Serialize(FArchive& Ar)
 {
     Class_10E8BE68::Serialize(Ar);
-    Ar.Virtual6(&Unknown54);
+    Ar.Virtual6(&m_Handle);
     Ar.Serialize(&Unknown58, 1);
 }

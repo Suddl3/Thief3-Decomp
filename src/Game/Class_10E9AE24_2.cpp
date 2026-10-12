@@ -23,8 +23,8 @@ class Class_10E9AE24 : public Class_10E9ADE8
 public:
     ~Class_10E9AE24();
 
-    int Unknown94;
-    int Unknown98;
+    int m_OffsetX;
+    int m_OffsetY;
 };
 
 // FUNCTION: 0x10C37770 ??1Class_10E9AE24@@QAE@XZ

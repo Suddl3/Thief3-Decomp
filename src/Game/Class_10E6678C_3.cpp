@@ -1,7 +1,7 @@
 // Game/Class_10E6678C_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 struct Struct_10A3AB10
 {
@@ -31,7 +31,7 @@ public:
     void FUN_10a39ed0(Struct_10A3AB10* Item);
 
     char Unknown04[0xe4];
-    Class_10BFBD70 Unknown0E8;
+    cIntArray Unknown0E8;
     char Unknown0F4[0x5c];
     int Unknown150;
 };
@@ -39,12 +39,12 @@ public:
 // FUNCTION: 0x10A3AB10 ?FUN_10a3ab10@Class_10E6678C@@UAEXHPAUStruct_10A3AB10@@@Z
 void Class_10E6678C::FUN_10a3ab10(int Count, Struct_10A3AB10* Items)
 {
-    Class_10BFBD70* Array = &Unknown0E8;
+    cIntArray* Array = &Unknown0E8;
     while (Count > Array->Count)
     {
         int Item = FUN_10aa54a0(Unknown150);
         int Index = Array->Count;
-        Array->FUN_10bfbd70(Index + 1);
+        Array->SetCount(Index + 1);
         Array->Data[Index] = Item;
     }
     for (int i = 0; i < Count; i++)

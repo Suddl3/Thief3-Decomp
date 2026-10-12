@@ -19,9 +19,9 @@ public:
 // FUNCTION: 0x10B9CDE0 ?FUN_10b9cde0@Class_10B9CDE0@@QAEXXZ
 void Class_10B9CDE0::FUN_10b9cde0()
 {
-    for (int i = Unknown10 - 1; i >= 0; i--)
+    for (int i = m_Count - 1; i >= 0; i--)
     {
-        Object_10B9CDE0* Item = Unknown18[i];
+        Object_10B9CDE0* Item = m_Items[i];
         if (Item->Virtual3() == 5 && !Item->Unknown48)
             Item->Unknown48 = true;
     }
@@ -30,9 +30,9 @@ void Class_10B9CDE0::FUN_10b9cde0()
 // FUNCTION: 0x10B9CE20 ?FUN_10b9ce20@Class_10B9CDE0@@QAEXXZ
 void Class_10B9CDE0::FUN_10b9ce20()
 {
-    for (int i = Unknown10 - 1; i >= 0; i--)
+    for (int i = m_Count - 1; i >= 0; i--)
     {
-        Object_10B9CDE0* Item = Unknown18[i];
+        Object_10B9CDE0* Item = m_Items[i];
         if (Item->Virtual3() == 0x23 && !Item->Unknown40)
             Item->Unknown40 = true;
     }

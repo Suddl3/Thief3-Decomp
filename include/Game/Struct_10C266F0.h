@@ -3,9 +3,9 @@
 #ifndef GAME_STRUCT_10C266F0_H
 #define GAME_STRUCT_10C266F0_H
 
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
-struct Struct_10C266F0 : public Class_10BFBD70
+struct Struct_10C266F0 : public cIntArray
 {
 public:
 };

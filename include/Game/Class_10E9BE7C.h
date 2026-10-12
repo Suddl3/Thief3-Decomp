@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_10E9BE7C_H
 #define GAME_CLASS_10E9BE7C_H
 
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/Class_10C4E880_Primary.h"
 #include "Game/Class_10C4E8D0.h"
 #include "Game/Class_10C4EDA0.h"
@@ -24,7 +24,7 @@ public:
     int FUN_10c4eb60(const FVector* Point);
 
     Class_10C50EC0 Unknown08;
-    Class_10BFBD70 Unknown14;
+    cIntArray Unknown14;
     float Unknown20;
     int Unknown24;
     Class_10C4E8D0 Unknown28;

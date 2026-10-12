@@ -9,7 +9,7 @@ struct Struct_10A4C4A0_Pair;
 class Class_10A4C4A0
 {
 public:
-    Struct_10A4C4A0* FUN_10a4c0d0(int A, int B);
+    Struct_10A4C4A0* Allocate(int A, int B);
     void FUN_10a4c4a0(int A, int B, Struct_10A4C4A0_Pair* C);
 
     char Unknown00[0x4];

@@ -1,13 +1,13 @@
 // Game/Unsorted_10A81B10.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/Class_10C00A60.h"
 
 extern "C" void* memmove(void* Dest, const void* Src, unsigned Count);
 
-// FUNCTION: 0x10A81B10 ?FUN_10a81b10@Class_10BFBD70@@QAEXHPAH@Z
-void Class_10BFBD70::FUN_10a81b10(int Index, int* Value)
+// FUNCTION: 0x10A81B10 ?InsertAt@cIntArray@@QAEXHPAH@Z
+void cIntArray::InsertAt(int Index, int* Value)
 {
     int Old = Unknown00;
     if (Index == Old)

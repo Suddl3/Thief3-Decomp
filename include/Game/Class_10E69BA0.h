@@ -7,15 +7,15 @@
 
 class Class_1096A960;
 class Class_10A5F040_Arg;
-class Class_10BFBD70;
+class cIntArray;
 struct List_10A5E900;
 
 class Class_10E69BA0 : public Window
 {
 public:
     virtual void FUN_10a5e950(int A);
-    virtual void Virtual110(Class_10BFBD70& Found);
-    virtual void Virtual111(Class_10BFBD70& Found);
+    virtual void Virtual110(cIntArray& Found);
+    virtual void Virtual111(cIntArray& Found);
     virtual void Virtual3();
     virtual void Virtual4();
     virtual void Virtual5();
@@ -130,7 +130,7 @@ public:
     virtual void Virtual114();
     virtual void FUN_10a5f040(Class_1096A960* A, Class_10A5F040_Arg* B, int C);
 
-    void FUN_10a5e8a0(char* Text);
+    void ReplaceStarsWithSpaces(char* Text);
     void FUN_10a5e900(List_10A5E900* List);
 
     char Unknown118[0x10];

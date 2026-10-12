@@ -1,6 +1,6 @@
 // Game/Unsorted_10B2E9D0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/Class_10B2ED00.h"
 
 // The object at +0x118: its slot 38 fills the array passed in.
@@ -45,7 +45,7 @@ public:
     virtual void Virtual35();
     virtual void Virtual36();
     virtual void Virtual37();
-    virtual void Virtual38(Class_10BFBD70* Out);
+    virtual void Virtual38(cIntArray* Out);
 };
 
 // The object at +0x11C: its slot 38 fills the array passed in.
@@ -90,7 +90,7 @@ public:
     virtual void Virtual35();
     virtual void Virtual36();
     virtual void Virtual37();
-    virtual void Virtual38(Class_10BFBD70* Out);
+    virtual void Virtual38(cIntArray* Out);
 };
 
 // FUNCTION: 0x10B2ED00 ?FUN_10b2ed00@Class_10B2ED00@@QAE_NXZ
@@ -100,7 +100,7 @@ bool Class_10B2ED00::FUN_10b2ed00()
     {
         if (Unknown11c != 0)
         {
-            Class_10BFBD70 Items;
+            cIntArray Items;
             Unknown11c->Virtual38(&Items);
             int Value;
             if (Items.Count != 0)
@@ -114,7 +114,7 @@ bool Class_10B2ED00::FUN_10b2ed00()
     {
         if (Unknown118 != 0)
         {
-            Class_10BFBD70 Items;
+            cIntArray Items;
             Unknown118->Virtual38(&Items);
             int Value;
             if (Items.Count != 0)

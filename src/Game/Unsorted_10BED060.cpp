@@ -26,7 +26,7 @@ public:
 
 void __stdcall FUN_109e3c90(int A);
 
-class Class_10E97488
+class State_PatrolLook
 {
 public:
     virtual void Virtual0();
@@ -84,8 +84,8 @@ public:
     int Unknown6C;
 };
 
-// FUNCTION: 0x10BED060 ?FUN_10bed060@Class_10E97488@@UAEXH@Z
-void Class_10E97488::FUN_10bed060(int A)
+// FUNCTION: 0x10BED060 ?FUN_10bed060@State_PatrolLook@@UAEXH@Z
+void State_PatrolLook::FUN_10bed060(int A)
 {
     FUN_109e3c90(A);
     if (Unknown6C == A)

@@ -69,8 +69,8 @@ void cDifficultyPane::FUN_10b6bb80(int A, int B, int C, int D, int E, int F)
     Unknown160->FUN_10a2aef0(&Unknown168, A, B, Unknown194 + C, D, E, F, 0, &Unknown16C);
 }
 
-// FUNCTION: 0x10B6BD50 ?FUN_10b6bd50@Class_10B6BD50@@QAEHHH@Z
-int Class_10B6BD50::FUN_10b6bd50(int A, int B)
+// FUNCTION: 0x10B6BD50 ?LookupValue@Class_10B6BD50@@QAEHHH@Z
+int Class_10B6BD50::LookupValue(int A, int B)
 {
     if (A == 8 && B != -1)
         return DAT_10ff65a8[B];

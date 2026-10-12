@@ -15,7 +15,7 @@ public:
     virtual void Virtual2();
     virtual void Virtual3();
     virtual void Virtual4();
-    virtual int FUN_10aa7190(ClassArg_10AA7190* A);
+    virtual int Serialize(ClassArg_10AA7190* A);
 
     int Unknown04;
     int Unknown08;
@@ -28,8 +28,8 @@ public:
     int Unknown24;
 };
 
-// FUNCTION: 0x10AA7190 ?FUN_10aa7190@Class_10E6C128@@UAEHPAVClassArg_10AA7190@@@Z
-int Class_10E6C128::FUN_10aa7190(ClassArg_10AA7190* A)
+// FUNCTION: 0x10AA7190 ?Serialize@Class_10E6C128@@UAEHPAVClassArg_10AA7190@@@Z
+int Class_10E6C128::Serialize(ClassArg_10AA7190* A)
 {
     A->Virtual0(&Unknown04);
     A->Virtual0(&Unknown0C);

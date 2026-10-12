@@ -4,12 +4,12 @@
 #define GAME_CLASS_10B399B0_H
 
 class Class_10B48220;
-class Class_10BFBD70;
+class cIntArray;
 
 class Class_10B399B0
 {
 public:
-    void FUN_10b399b0(Class_10BFBD70* A, int B, int C);
+    void FUN_10b399b0(cIntArray* A, int B, int C);
 
     char Unknown00[0xC];
     Class_10B48220* Unknown0C[1];

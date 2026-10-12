@@ -67,7 +67,7 @@ void UT3GameEngine::FUN_10b23b60(int A)
 // FUNCTION: 0x10B248D0 ?FUN_10b248d0@Class_10E7A9C0@@UAEXPAVClass_10B152C0@@@Z
 void Class_10E7A9C0::FUN_10b248d0(Class_10B152C0* p1)
 {
-    p1->FUN_10b152c0(0xef, this);
+    p1->AddToLists(0xef, this);
 }
 
 // FUNCTION: 0x10B24D00 ?FUN_10b24d00@Class_10B24D00@@QAEXHE@Z

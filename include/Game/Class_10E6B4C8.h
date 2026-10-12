@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_10E6B4C8_H
 #define GAME_CLASS_10E6B4C8_H
 
-class Class_10BFBD70;
+class cIntArray;
 class Object_10A67120;
 
 class Class_10E6B4C8
@@ -14,7 +14,7 @@ public:
     virtual void Virtual2();
     virtual void Virtual3();
     virtual void FUN_10a67120(Object_10A67120* Obj, int Param);
-    virtual void FUN_10a676a0(int A, int B, Class_10BFBD70* Out);
+    virtual void FUN_10a676a0(int A, int B, cIntArray* Out);
     virtual void Virtual6(int A, int B);
 
     Class_10E6B4C8();

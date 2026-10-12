@@ -3,12 +3,12 @@
 #ifndef GAME_CLASS_10B17210_H
 #define GAME_CLASS_10B17210_H
 
-class Class_10BFBD70;
+class cIntArray;
 
 class Class_10B17210
 {
 public:
-    void FUN_10b17210(Class_10BFBD70& Found);
+    void FUN_10b17210(cIntArray& Found);
 
     char Pad00[0x1];
 };

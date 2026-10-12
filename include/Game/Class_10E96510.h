@@ -16,14 +16,14 @@ public:
     virtual void Serialize(Object_10BE58C0* Ar);
 
     float FUN_10be4800();
-    void FUN_10be8710();
-    Class_109081E0 FUN_10be8810();
+    void UpdateLastKnownPosition();
+    Class_109081E0 GetYellowAlertName();
     bool FUN_10be4980();
 
     Struct_10BE4800* Unknown04;
     char Unknown08[0x48];
-    float Unknown50;
-    FVector Unknown54;
+    float m_LastKnownTime;
+    FVector m_LastKnownPosition;
     char Pad60[0x70];
 };
 

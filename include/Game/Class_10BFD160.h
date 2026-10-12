@@ -4,13 +4,13 @@
 #define GAME_CLASS_10BFD160_H
 
 class Class_10978090;
-class Class_10BFBD70;
+class cIntArray;
 class Class_10C08940;
 
 class Class_10BFD160
 {
 public:
-    void FUN_10bfd160(Class_10C08940* Owner, Class_10BFBD70* Ids, float Limit, Class_10BFBD70* Out);
+    void FUN_10bfd160(Class_10C08940* Owner, cIntArray* Ids, float Limit, cIntArray* Out);
 
     char Pad00[0x8];
     int Unknown08;

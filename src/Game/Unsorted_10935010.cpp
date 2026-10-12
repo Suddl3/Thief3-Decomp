@@ -62,8 +62,8 @@ public:
 
 extern IDirect3DDevice8* GDirect3DDevice8;
 
-// FUNCTION: 0x10935D10 ?FUN_10935d10@Class_10E49F90@@QAEXHH@Z
-void Class_10E49F90::FUN_10935d10(int A, int B)
+// FUNCTION: 0x10935D10 ?SetRenderStates@Class_10E49F90@@QAEXHH@Z
+void Class_10E49F90::SetRenderStates(int A, int B)
 {
     GDirect3DDevice8->Virtual50(0x1b, 1);
     GDirect3DDevice8->Virtual50(0x13, 2);

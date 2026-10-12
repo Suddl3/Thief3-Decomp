@@ -7,12 +7,12 @@
 
 class Class_10E9CB00;
 
-// FUNCTION: 0x10C64E10 ?FUN_10c64e10@Class_10C662F0@@QAEXPAVClass_10E9CB00@@@Z
-void Class_10C662F0::FUN_10c64e10(Class_10E9CB00* A)
+// FUNCTION: 0x10C64E10 ?AddRef@Class_10C662F0@@QAEXPAVClass_10E9CB00@@@Z
+void Class_10C662F0::AddRef(Class_10E9CB00* A)
 {
-    for (int i = 0; i < Unknown178; i++)
+    for (int i = 0; i < m_EntryCount; i++)
     {
-        Struct_10C64E10* Entry = &Unknown180[i];
+        Struct_10C64E10* Entry = &m_Entries[i];
         if (Entry->Unknown00 == A)
             Entry->Unknown04++;
     }

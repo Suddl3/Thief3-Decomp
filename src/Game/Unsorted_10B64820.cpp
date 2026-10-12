@@ -162,8 +162,8 @@ public:
     bool Unknown1A4;
 };
 
-// include/Game/Class_10E84730.h, copied whole with Unknown1B4 added.
-class Class_10E84730
+// include/Game/cT3AVOptionsWindow.h, copied whole with Unknown1B4 added.
+class cT3AVOptionsWindow
 {
 public:
     virtual void Virtual0();
@@ -283,8 +283,8 @@ public:
     virtual void Virtual114();
 
     void FUN_10b65220();
-    void FUN_10b650f0();
-    void FUN_10b64ce0();
+    void ApplyOptions();
+    void ShowMainMenu();
 
     char Unknown04[0x1AC];
     char Unknown1B0;
@@ -292,8 +292,8 @@ public:
     Class_10B64CE0_Unknown1B4* Unknown1B4;
 };
 
-// FUNCTION: 0x10B64CE0 ?FUN_10b64ce0@Class_10E84730@@QAEXXZ
-void Class_10E84730::FUN_10b64ce0()
+// FUNCTION: 0x10B64CE0 ?ShowMainMenu@cT3AVOptionsWindow@@QAEXXZ
+void cT3AVOptionsWindow::ShowMainMenu()
 {
     Virtual56(0);
     ((Class_10E81DE8*)this)->Close();

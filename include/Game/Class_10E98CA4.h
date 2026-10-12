@@ -14,7 +14,7 @@ public:
     virtual void Virtual1();
     virtual void Virtual2();
     virtual void Virtual3();
-    virtual void FUN_10c17c10(void* A);
+    virtual void ClearReferences(void* A);
 
     void FUN_10c19b90();
     void FUN_10c19810(int Value);

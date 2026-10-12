@@ -1,6 +1,6 @@
 // Game/Unsorted_10AA63C0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/Class_10E6D8CC.h"
 
 class cConversation
@@ -40,8 +40,8 @@ int cConversation::GetConEvent(int index)
 // FUNCTION: 0x10AA67A0 ?FUN_10aa67a0@Class_10E6D8CC@@UAEXH@Z
 void Class_10E6D8CC::FUN_10aa67a0(int Value)
 {
-    Class_10BFBD70* Array = &Unknown04;
+    cIntArray* Array = &Unknown04;
     int Index = Array->Unknown00;
-    Array->FUN_10bfbd70(Index + 1);
+    Array->SetCount(Index + 1);
     Array->Unknown08[Index] = Value;
 }

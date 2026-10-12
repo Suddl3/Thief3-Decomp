@@ -1,7 +1,7 @@
 // Game/Class_10E6D8CC.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10905A90_Member.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 extern void* DAT_10e6d8cc[];
 
@@ -11,7 +11,7 @@ public:
     void FUN_10aa63f0();
 
     void** VTable;
-    Class_10BFBD70 Unknown04;
+    cIntArray Unknown04;
     int Unknown10;
 };
 
@@ -19,5 +19,5 @@ public:
 void Class_10E6D8CC::FUN_10aa63f0()
 {
     VTable = DAT_10e6d8cc;
-    Unknown04.~Class_10BFBD70();
+    Unknown04.~cIntArray();
 }

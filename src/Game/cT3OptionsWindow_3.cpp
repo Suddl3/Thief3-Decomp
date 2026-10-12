@@ -1,7 +1,7 @@
 // Game/cT3OptionsWindow_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10B717E0.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 class FArray
 {
@@ -51,9 +51,9 @@ public:
 
     virtual ~cT3OptionsWindow();
 
-    Class_10BFBD70 Unknown190;
-    Class_10BFBD70 m_OptionCount;
-    Class_10BFBD70 Unknown1A8;
+    cIntArray Unknown190;
+    cIntArray m_OptionCount;
+    cIntArray Unknown1A8;
     int Unknown1B4;
     int Unknown1B8;
     int Unknown1BC;
@@ -61,9 +61,9 @@ public:
     int Unknown1C4;
     char Unknown1C8[4];
     int Unknown1CC;
-    Class_10BFBD70 Unknown1D0;
-    Class_10BFBD70 Unknown1DC;
-    Class_10BFBD70 Unknown1E8;
+    cIntArray Unknown1D0;
+    cIntArray Unknown1DC;
+    cIntArray Unknown1E8;
     int Unknown1F4;
 };
 

@@ -1,7 +1,7 @@
 // Game/Class_10E7BF50_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10905A90_Member.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 struct Item_10B34130;
 
@@ -49,7 +49,7 @@ public:
     int Unknown164;
     int Unknown168;
     int Unknown16C;
-    Class_10BFBD70 Unknown170;
+    cIntArray Unknown170;
     float Unknown17C;
     int Unknown180;
     int Unknown184;

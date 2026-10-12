@@ -1,7 +1,7 @@
 // Game/Unsorted_10BBB8D0_4.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/Class_10AAF570.h"
 #include "Game/Class_10C7D570.h"
 #include "Game/Class_10E9925C.h"
@@ -69,7 +69,7 @@ public:
     Class_10BAA580* Unknown08;
     Class_10AAF570* Unknown0C;
     char Pad10[0x4];
-    Class_10BFBD70 Unknown14;
+    cIntArray Unknown14;
 };
 
 // FUNCTION: 0x10BBC190 ?FUN_10bbc190@@YAHPAVClass_10BBB440@@HPAVClass_109081E0@@@Z
@@ -87,8 +87,8 @@ int FUN_10bbc190(Class_10BBB440* Self, int Key, Class_109081E0* Name)
     Class_10E992D4* Obj = new(0, 0, 0, 0, 0) Class_10E992D4(Self->Unknown0C->FUN_10aaf570(), Self->Unknown08, &Info, Key);
     GetAllocator()->Virtual9();
     int Index = Self->Unknown14.Count;
-    Class_10BFBD70* List = &Self->Unknown14;
-    List->FUN_10bfbd70(Index + 1);
+    cIntArray* List = &Self->Unknown14;
+    List->SetCount(Index + 1);
     List->Data[Index] = (int)Obj;
     return (int)Obj;
 }

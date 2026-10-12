@@ -6,7 +6,7 @@
 class Class_10A3C2E0
 {
 public:
-    void FUN_10a3c2e0();
+    void Reset();
     void FUN_10a3c300(bool A);
 
     char Unknown00[0x20];

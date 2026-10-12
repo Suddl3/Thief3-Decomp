@@ -9,13 +9,13 @@ struct Struct_10C0BFC0;
 class Class_10C0C090
 {
 public:
-    Struct_10C0BFC0* FUN_10c0bfc0(int A, int B);
-    void FUN_10c0c090(int A, int B, FVector* Pos, int D);
+    Struct_10C0BFC0* FindEntry(int A, int B);
+    void UpdatePosition(int A, int B, FVector* Pos, int D);
 
     char Unknown00[4];
-    int Unknown04;
+    int m_Count;
     char Unknown08[4];
-    Struct_10C0BFC0** Unknown0C;
+    Struct_10C0BFC0** m_Entries;
 };
 
 #endif // GAME_CLASS_10C0C090_H

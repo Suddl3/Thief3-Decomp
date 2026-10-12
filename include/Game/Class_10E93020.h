@@ -12,10 +12,10 @@ public:
 
     void FUN_10bd0260();
     Class_10E93020* FUN_10bd01b0(int A, int B, bool C, bool D);
-    void FUN_10bd03d0();
+    void PopAction();
 
-    int Unknown40;
-    int Unknown44[4];
+    int m_CurrentAction;
+    int m_ActionQueue[4];
     bool Unknown54;
     bool Unknown55;
     bool Unknown56;

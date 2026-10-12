@@ -5,16 +5,16 @@
 
 extern void* DAT_10e84d80[];
 
-class Class_10BFBD70
+class cIntArray
 {
 public:
-    Class_10BFBD70(int Count) : Unknown00(Count), Unknown04(0), Unknown08(0) { FUN_10bfbd70(Count); }
-    ~Class_10BFBD70();
+    cIntArray(int Count) : Unknown00(Count), m_CapacityBytes(0), Unknown08(0) { SetCount(Count); }
+    ~cIntArray();
 
-    void FUN_10bfbd70(int NewCount);
+    void SetCount(int NewCount);
 
     int Unknown00;
-    int Unknown04;
+    int m_CapacityBytes;
     int* Unknown08;
 };
 
@@ -41,7 +41,7 @@ public:
     int Unknown184;
     int Unknown188;
     int Unknown18C;
-    Class_10BFBD70 Unknown190;
+    cIntArray Unknown190;
     unsigned int Unknown19C;
     int Unknown1A0;
     int Unknown1A4;

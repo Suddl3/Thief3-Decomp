@@ -1,6 +1,6 @@
 // Game/Unsorted_10B275E0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/Class_10970890.h"
 #include "Game/Class_1098E330.h"
 #include "Game/Class_10B27700.h"
@@ -46,7 +46,7 @@ public:
     virtual void Virtual35();
     virtual void Virtual36();
     virtual void Virtual37();
-    virtual void Virtual38(Class_10BFBD70& Found);
+    virtual void Virtual38(cIntArray& Found);
 };
 
 // FUNCTION: 0x10B27700 ?FUN_10b27700@Class_10B27700@@QAEXH@Z
@@ -54,7 +54,7 @@ void Class_10B27700::FUN_10b27700(int Param)
 {
     if (Unknown1D8)
     {
-        Class_10BFBD70 Found;
+        cIntArray Found;
         Unknown1D8->Virtual38(Found);
         Class_1098E330* Item = (Class_1098E330*)Found.Data[0];
         if (Item && Param != -1)

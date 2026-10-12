@@ -26,7 +26,7 @@ class Class_10C591A0
 {
 public:
     bool FUN_10c591a0(int* A);
-    void FUN_10c577b0(int Size);
+    void Rehash(int Size);
 
     int Unknown00;
     int Unknown04;
@@ -41,7 +41,7 @@ public:
 bool Class_10C591A0::FUN_10c591a0(int* A)
 {
     if (!Unknown10 && Unknown04 < Unknown0C * 0.05 && Unknown0C > 64)
-        FUN_10c577b0(Unknown0C / 2);
+        Rehash(Unknown0C / 2);
     unsigned int Index;
     {
         const void* Data;

@@ -1,19 +1,19 @@
 // Game/Class_10E97ADC.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 // Copied from include/Game/Class_10E97ADC.h with the virtual destructor added
-// and the three Class_10BFBD70 members the destructor tears down.
+// and the three cIntArray members the destructor tears down.
 class Class_10E97ADC
 {
 public:
     Class_10E97ADC* FUN_10bff720();
     virtual ~Class_10E97ADC();
 
-    Class_10BFBD70 Unknown04;
-    Class_10BFBD70 Unknown10;
-    Class_10BFBD70 Unknown1C;
+    cIntArray Unknown04;
+    cIntArray Unknown10;
+    cIntArray Unknown1C;
     int Unknown28;
     int Unknown2C;
     int Unknown30;

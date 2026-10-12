@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Engine/EngineClasses.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 class AAIPathPoint : public AMarker
 {
@@ -102,8 +102,8 @@ public:
     virtual void Virtual0();
     virtual void FUN_10bff8c0(Class_10BFF8C0_Param* Param);
 
-    Class_10BFBD70 Unknown04;
-    Class_10BFBD70 Unknown10;
+    cIntArray Unknown04;
+    cIntArray Unknown10;
 };
 
 // FUNCTION: 0x10BFF8C0 ?FUN_10bff8c0@Class_10E97ADC@@UAEXPAVClass_10BFF8C0_Param@@@Z
@@ -116,15 +116,15 @@ void Class_10E97ADC::FUN_10bff8c0(Class_10BFF8C0_Param* Param)
             AAIPathPoint* Point = Param->Unknown2C[i];
             if (Point && Point->IsA(AAIPathPoint::StaticClass()))
             {
-                Class_10BFBD70* List = &Unknown10;
+                cIntArray* List = &Unknown10;
                 int Index = List->Count;
-                List->FUN_10bfbd70(Index + 1);
+                List->SetCount(Index + 1);
                 List->Data[Index] = (int)Point;
                 if (Point->Virtual96() == 1)
                 {
                     List = &Unknown04;
                     Index = List->Count;
-                    List->FUN_10bfbd70(Index + 1);
+                    List->SetCount(Index + 1);
                     List->Data[Index] = (int)Point;
                 }
             }

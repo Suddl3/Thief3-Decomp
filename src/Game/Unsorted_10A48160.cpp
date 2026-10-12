@@ -4,7 +4,7 @@
 #include "Game/Class_10A1F880.h"
 #include "Game/Class_10A1F9D0.h"
 #include "Game/Class_10A1FB50.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/Class_10E678F0.h"
 
 class Class_10E678F0;

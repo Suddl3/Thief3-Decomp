@@ -1,7 +1,7 @@
 // Game/State_Flee_7.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/Class_10E90D70.h"
 #include "Game/Struct_10BE9AC0.h"
 #include "Game/Struct_10C08690.h"
@@ -19,14 +19,14 @@ public:
     ~State_Flee();
 
     char Unknown40[0x14];
-    Class_10BFBD70 Unknown54;
+    cIntArray Unknown54;
     Struct_10BE9AC0* Unknown60;
 };
 
 // FUNCTION: 0x10BE9E80 ??1State_Flee@@QAE@XZ
 State_Flee::~State_Flee()
 {
-    Class_10BFBD70* Items = &Unknown54;
+    cIntArray* Items = &Unknown54;
     for (int i = 0; i < Items->Count; i++)
         delete (Struct_10C08690*)Items->Data[i];
     Items->Count = 0;

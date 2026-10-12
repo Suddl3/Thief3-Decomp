@@ -4,7 +4,7 @@
 #include "Game/Class_10978090.h"
 #include "Game/Class_10BFF240.h"
 #include "Game/Class_10BFF280.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/Class_10C7D570.h"
 #include "Game/Class_1098E330.h"
 
@@ -42,7 +42,7 @@ public:
     char Unknown0C[0x204];
     Class_10BFF460* Unknown210;
     char Unknown214[0xc];
-    Class_10BFBD70 Unknown220;
+    cIntArray Unknown220;
     char Unknown22C[0x58];
     int Unknown284;
 };

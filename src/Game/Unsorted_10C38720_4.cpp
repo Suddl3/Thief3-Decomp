@@ -166,8 +166,8 @@ public:
     int Unknown108;
 };
 
-// FUNCTION: 0x10C38D90 ?FUN_10c38d90@Class_10C399C0@@QAEHH@Z
-int Class_10C399C0::FUN_10c38d90(int Obj)
+// FUNCTION: 0x10C38D90 ?CheckInRange@Class_10C399C0@@QAEHH@Z
+int Class_10C399C0::CheckInRange(int Obj)
 {
     Class_1098E330* Target = (Class_1098E330*)Obj;
     if (FUN_10c38d30(Target))

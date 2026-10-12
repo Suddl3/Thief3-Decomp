@@ -5,12 +5,12 @@
 
 #include "Game/Class_10A4E2A0.h"
 
-class Class_10BFBD70;
+class cIntArray;
 
 class Class_10A4EAE0
 {
 public:
-    void FUN_10a4eae0(int A, Class_10BFBD70* B);
+    void FUN_10a4eae0(int A, cIntArray* B);
 
     char Unknown00[0x1C];
     Class_10A4E2A0 Unknown1C;

@@ -33,7 +33,7 @@ public:
     virtual void Virtual5();
     virtual void Virtual6();
     virtual void Virtual7();
-    virtual void FUN_10942860();
+    virtual void BindIndices();
 
     Struct_10919190 Unknown04;
     char Unknown44[0x120];
@@ -41,8 +41,8 @@ public:
     int Unknown168;
 };
 
-// FUNCTION: 0x10942860 ?FUN_10942860@Class_10E4A668@@UAEXXZ
-void Class_10E4A668::FUN_10942860()
+// FUNCTION: 0x10942860 ?BindIndices@Class_10E4A668@@UAEXXZ
+void Class_10E4A668::BindIndices()
 {
     FUN_10919190(&Unknown04);
     Unknown164->Virtual8(0);

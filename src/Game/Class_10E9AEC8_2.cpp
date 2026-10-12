@@ -23,24 +23,24 @@ public:
     virtual void Virtual1();
     virtual void Virtual2();
     virtual void Virtual3();
-    virtual void FUN_10c38210();
+    virtual void CheckDistance();
 
     char Unknown08[0x50];
-    unsigned char Unknown58;
-    Struct_10C05A50 Unknown5C;
+    unsigned char m_bTriggered;
+    Struct_10C05A50 m_Point;
     char Unknown64[4];
-    float Unknown68;
+    float m_Threshold;
 };
 
-// FUNCTION: 0x10C38210 ?FUN_10c38210@Class_10E9AEC8@@UAEXXZ
-void Class_10E9AEC8::FUN_10c38210()
+// FUNCTION: 0x10C38210 ?CheckDistance@Class_10E9AEC8@@UAEXXZ
+void Class_10E9AEC8::CheckDistance()
 {
-    if (!Unknown58)
+    if (!m_bTriggered)
     {
         Struct_10C3D0A0* Actor = (Struct_10C3D0A0*)FUN_10c270c0()->FUN_10c7d570();
-        if (FUN_10c05a20(&Unknown5C, &Actor->Unknown2C) > Unknown68)
+        if (FUN_10c05a20(&m_Point, &Actor->Unknown2C) > m_Threshold)
         {
-            Unknown58 = 1;
+            m_bTriggered = 1;
             Unknown04->Virtual44();
         }
     }

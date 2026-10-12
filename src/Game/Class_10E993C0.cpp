@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Game/Class_10943600.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/FArchive.h"
 #include "Game/Item_10943600.h"
 
@@ -14,7 +14,7 @@ public:
 
     int Unknown04;
     Class_10943600 Unknown08;
-    Class_10BFBD70 Unknown14;
+    cIntArray Unknown14;
 };
 
 FArchive& FUN_10b052a0(FArchive& Ar, void* V);
@@ -31,7 +31,7 @@ void Class_10E993C0::FUN_10c29ab0(FArchive& Ar)
     int Count2 = Unknown14.Count;
     Ar.Serialize(&Count2, 4);
     if (Ar.Unknown14)
-        Unknown14.FUN_10bfbd70(Count2);
+        Unknown14.SetCount(Count2);
     for (int j = 0; j < Count2; j++)
         Ar.Serialize(&Unknown14.Data[j], 4);
 }

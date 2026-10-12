@@ -6,7 +6,7 @@
 #include "Core/Core.h"
 #include "Game/Class_10E67FD0.h"
 
-class Class_10BFBD70;
+class cIntArray;
 class FVector;
 
 class Class_10E6AEA0 : public Class_10E67FD0
@@ -48,7 +48,7 @@ public:
     virtual FVector FUN_10a64f30();
     virtual void Virtual35();
     virtual void Virtual36();
-    virtual void AddToArray(Class_10BFBD70* Array, int B);
+    virtual void AddToArray(cIntArray* Array, int B);
 
     Class_10E6AEA0();
 

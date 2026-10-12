@@ -11,15 +11,15 @@ public:
 
 extern void* DAT_10e9bb4c[];
 
-class Class_10E9BB4C
+class cCadenceFactory
 {
 public:
-    Class_10E9BB4C* FUN_10c47f30(bool A);
+    cCadenceFactory* Initialize(bool A);
 
     void** Unknown00;
-    bool Unknown04;
+    bool m_bUseLoader;
     int MaxLoadedSchemas;
-    int Unknown0C;
+    int m_NumLoadedSchemas;
 };
 
 class Class_10C47F80
@@ -30,12 +30,12 @@ public:
 
 extern Class_10C47F80* DAT_10ff70b8;
 
-// FUNCTION: 0x10C47F30 ?FUN_10c47f30@Class_10E9BB4C@@QAEPAV1@_N@Z
-Class_10E9BB4C* Class_10E9BB4C::FUN_10c47f30(bool A)
+// FUNCTION: 0x10C47F30 ?Initialize@cCadenceFactory@@QAEPAV1@_N@Z
+cCadenceFactory* cCadenceFactory::Initialize(bool A)
 {
     Unknown00 = DAT_10e9bb4c;
-    Unknown04 = A;
-    Unknown0C = 0;
+    m_bUseLoader = A;
+    m_NumLoadedSchemas = 0;
     if (A)
     {
         MaxLoadedSchemas = 500;

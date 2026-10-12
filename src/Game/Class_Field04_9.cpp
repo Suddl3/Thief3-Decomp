@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10B26930.h"
 #include "Game/Struct_10AA3520.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 class Class_10EC0E20 : public Class_10B26930
 {
@@ -36,7 +36,7 @@ public:
     int Unknown44;
     unsigned char Unknown48;
     char Unknown49[3];
-    Class_10BFBD70 Unknown4C;
+    cIntArray Unknown4C;
 };
 
 // FUNCTION: 0x10B47310 ?FUN_10b47310@Class_Field04@@QAEXH@Z
@@ -51,7 +51,7 @@ void Class_Field04::FUN_10b47310(int A)
 // FUNCTION: 0x10B476D0 ?Reset@Class_Field04@@QAEXXZ
 void Class_Field04::Reset()
 {
-    Unknown4C.FUN_10bfbd70(0);
+    Unknown4C.SetCount(0);
     for (int i = 0; i < 2; i++)
         Unknown08[i]->FUN_10b7b8a0();
     Unknown14 = 0x101;

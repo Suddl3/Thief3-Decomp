@@ -16,7 +16,7 @@ public:
 class Class_10A35EE0 : public Class_10A359D0
 {
 public:
-    void FUN_10a35940();
+    void Reset();
 
     Struct_10A35940 Unknown00;
     Struct_10A35940 Unknown04;
@@ -36,8 +36,8 @@ public:
     Class_1091CA00* Unknown88;
 };
 
-// FUNCTION: 0x10A35940 ?FUN_10a35940@Class_10A35EE0@@QAEXXZ
-void Class_10A35EE0::FUN_10a35940()
+// FUNCTION: 0x10A35940 ?Reset@Class_10A35EE0@@QAEXXZ
+void Class_10A35EE0::Reset()
 {
     Struct_10A35940 Value;
     Value.Unknown00 = 0;

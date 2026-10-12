@@ -16,25 +16,25 @@ public:
 class Class_10C662F0
 {
 public:
-    bool FUN_10c662f0(int A, int B, int C);
-    void FUN_10c64e10(Class_10E9CB00* A);
-    void FUN_10c64ff0(Class_10E9CB00* A);
+    bool TryCreate(int A, int B, int C);
+    void AddRef(Class_10E9CB00* A);
+    void Release(Class_10E9CB00* A);
 
     char Unknown00[0x178];
-    Class_10D4C990 Unknown178;
+    Class_10D4C990 m_EntryCount;
 };
 
-// FUNCTION: 0x10C64FF0 ?FUN_10c64ff0@Class_10C662F0@@QAEXPAVClass_10E9CB00@@@Z
-void Class_10C662F0::FUN_10c64ff0(Class_10E9CB00* A)
+// FUNCTION: 0x10C64FF0 ?Release@Class_10C662F0@@QAEXPAVClass_10E9CB00@@@Z
+void Class_10C662F0::Release(Class_10E9CB00* A)
 {
-    for (int i = 0; i < Unknown178.Unknown00; i++)
+    for (int i = 0; i < m_EntryCount.Unknown00; i++)
     {
-        if (Unknown178.Unknown08[i].Unknown00 == A)
+        if (m_EntryCount.Unknown08[i].Unknown00 == A)
         {
-            if (--Unknown178.Unknown08[i].Unknown04 == 0)
+            if (--m_EntryCount.Unknown08[i].Unknown04 == 0)
             {
-                delete Unknown178.Unknown08[i].Unknown00;
-                Class_10D4C990* Array = &Unknown178;
+                delete m_EntryCount.Unknown08[i].Unknown00;
+                Class_10D4C990* Array = &m_EntryCount;
                 int Last = Array->Unknown00 - 1;
                 Struct_10C64E10 Removed = Array->Unknown08[i];
                 Array->Unknown08[i] = Array->Unknown08[Last];

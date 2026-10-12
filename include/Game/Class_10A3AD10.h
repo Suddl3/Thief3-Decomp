@@ -4,7 +4,7 @@
 #define GAME_CLASS_10A3AD10_H
 
 #include "Core/Core.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 class Class_10A3AD10
 {
@@ -18,7 +18,7 @@ public:
     int Unknown18;
     int Unknown1C;
     bool Unknown20;
-    Class_10BFBD70 Unknown24;
+    cIntArray Unknown24;
 };
 
 #endif // GAME_CLASS_10A3AD10_H

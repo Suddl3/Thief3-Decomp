@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_10E6F474_H
 #define GAME_CLASS_10E6F474_H
 
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 class Class_10ABB4E0_Element;
 
@@ -18,7 +18,7 @@ public:
     int Unknown04;
     char Pad08[0x4];
     Class_10ABB4E0_Element** Unknown0C;
-    Class_10BFBD70 Unknown10;
+    cIntArray Unknown10;
 };
 
 #endif // GAME_CLASS_10E6F474_H

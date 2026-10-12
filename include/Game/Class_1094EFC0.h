@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_1094EFC0_H
 #define GAME_CLASS_1094EFC0_H
 
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 class Class_1094EFC0_Unknown108;
 
@@ -14,7 +14,7 @@ public:
 
     char Pad00[0xF0];
     int Unknown0F0;
-    Class_10BFBD70 Unknown0F4;
+    cIntArray Unknown0F4;
     char Pad100[0x8];
     Class_1094EFC0_Unknown108* Unknown108;
 };

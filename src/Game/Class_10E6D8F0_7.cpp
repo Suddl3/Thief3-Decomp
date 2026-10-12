@@ -1,6 +1,6 @@
 // Game/Class_10E6D8F0_7.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/Class_10AA6B50_Data.h"
 #include "Game/Class_10AA6B50_Unknown04.h"
 
@@ -22,7 +22,7 @@ public:
 extern Class_10F46DA0* DAT_10f46da0;
 
 // Include/Game/Class_10E6D8F0.h, copied whole with slot 19 (SwapEntries) added and the bases of the accepted sibling.
-class Class_10E6D8F0 : public Class_10AA6B50_Unknown04, public Class_10BFBD70
+class Class_10E6D8F0 : public Class_10AA6B50_Unknown04, public cIntArray
 {
 public:
     virtual ~Class_10E6D8F0();

@@ -9,7 +9,7 @@ class Class_10E5D5E0 : public Class_10E5D5E0Base
 {
 public:
     virtual ~Class_10E5D5E0() {}
-    virtual Class_10E5D5E0* FUN_10a2f1d0();
+    virtual Class_10E5D5E0* Clone();
 };
 
 #endif // GAME_CLASS_10E5D5E0_H

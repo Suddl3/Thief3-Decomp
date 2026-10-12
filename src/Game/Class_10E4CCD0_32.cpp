@@ -24,8 +24,8 @@ struct Struct_10B98E00
 
 extern float DAT_10eafbdc;
 
-// include/Game/Class_10E97488.h, copied whole with the constructor this function calls (0x10BED9E0).
-class Class_10E97488 : public Class_10E90D70
+// include/Game/State_PatrolLook.h, copied whole with the constructor this function calls (0x10BED9E0).
+class State_PatrolLook : public Class_10E90D70
 {
 public:
     virtual void Virtual0();
@@ -79,15 +79,15 @@ public:
     virtual void Virtual48();
     virtual void FUN_10bed060(int A);
 
-    Class_10E97488(int A, int B, int C, int D, int E, int F, int G, int H);
-    Class_10E97488(int A, int B, const FVector& C, float D, const Class_109081E0& E, int F, int G, int H);
+    State_PatrolLook(int A, int B, int C, int D, int E, int F, int G, int H);
+    State_PatrolLook(int A, int B, const FVector& C, float D, const Class_109081E0& E, int F, int G, int H);
 
     int Unknown40;
-    float Unknown44;
+    float m_EndTime;
     int Unknown48;
     int Unknown4C[3];
-    int Unknown58;
-    int Unknown5C;
+    int m_Limit;
+    int m_Count;
     int Unknown60;
     int Unknown64;
     int Unknown68;
@@ -113,14 +113,14 @@ public:
     virtual void Virtual13();
     virtual void Virtual14();
     virtual void Virtual15();
-    virtual Class_10E97488* FUN_10b99850(Struct_10B98E00* A, const FVector& B, float C, const Class_109081E0& D, int E, int F, int G);
+    virtual State_PatrolLook* FUN_10b99850(Struct_10B98E00* A, const FVector& B, float C, const Class_109081E0& D, int E, int F, int G);
 };
 
-// FUNCTION: 0x10B99850 ?FUN_10b99850@Class_10E4CCD0@@UAEPAVClass_10E97488@@PAUStruct_10B98E00@@ABVFVector@@MABVClass_109081E0@@HHH@Z
-Class_10E97488* Class_10E4CCD0::FUN_10b99850(Struct_10B98E00* A, const FVector& B, float C, const Class_109081E0& D, int E, int F, int G)
+// FUNCTION: 0x10B99850 ?FUN_10b99850@Class_10E4CCD0@@UAEPAVState_PatrolLook@@PAUStruct_10B98E00@@ABVFVector@@MABVClass_109081E0@@HHH@Z
+State_PatrolLook* Class_10E4CCD0::FUN_10b99850(Struct_10B98E00* A, const FVector& B, float C, const Class_109081E0& D, int E, int F, int G)
 {
     int Id = FUN_10bed050();
     if (Id && A->Unknown08->FUN_10dbd510(Id)->GetFloat() > DAT_10eafbdc)
-        return new(0, 0, 0, 0, 0) Class_10E97488((int)A, (int)this, B, C, D, E, F, G);
+        return new(0, 0, 0, 0, 0) State_PatrolLook((int)A, (int)this, B, C, D, E, F, G);
     return 0;
 }

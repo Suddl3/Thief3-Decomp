@@ -27,7 +27,7 @@ class Class_10E8BF90 : public Class_10E662C0
 public:
     Class_10E8BF90(int Value) : Unknown04(Value) {}
 
-    virtual Class_10E8BF90* FUN_10b9ca60();
+    virtual Class_10E8BF90* Clone();
 
     int Unknown04;
 };
@@ -39,8 +39,8 @@ void Class_10B9CA00::FUN_10b9ca00()
         Unknown0C->FUN_10bb8ee0(0);
 }
 
-// FUNCTION: 0x10B9CA60 ?FUN_10b9ca60@Class_10E8BF90@@UAEPAV1@XZ
-Class_10E8BF90* Class_10E8BF90::FUN_10b9ca60()
+// FUNCTION: 0x10B9CA60 ?Clone@Class_10E8BF90@@UAEPAV1@XZ
+Class_10E8BF90* Class_10E8BF90::Clone()
 {
     return new(0, 0, 0, 0, 0) Class_10E8BF90(Unknown04);
 }

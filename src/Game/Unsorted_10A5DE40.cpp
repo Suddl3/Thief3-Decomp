@@ -37,8 +37,8 @@ Class_10A5DF10* Class_10A5DF10::FUN_10a5df10(const Class_10A5DF10& Other)
     return this;
 }
 
-// FUNCTION: 0x10A5E8A0 ?FUN_10a5e8a0@Class_10E69BA0@@QAEXPAD@Z
-void Class_10E69BA0::FUN_10a5e8a0(char* Text)
+// FUNCTION: 0x10A5E8A0 ?ReplaceStarsWithSpaces@Class_10E69BA0@@QAEXPAD@Z
+void Class_10E69BA0::ReplaceStarsWithSpaces(char* Text)
 {
     int Length = strlen(Text);
     for (int i = 0; i < Length; i++)

@@ -7,7 +7,7 @@ class Class_10E89A8C
 {
 public:
     virtual ~Class_10E89A8C();
-    virtual Class_10E89A8C* FUN_10b92c10();
+    virtual Class_10E89A8C* Clone();
 
     Class_10E89A8C(int Value) : Unknown04(Value) {}
 

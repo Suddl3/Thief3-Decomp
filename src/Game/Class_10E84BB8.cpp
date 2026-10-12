@@ -31,7 +31,7 @@ void Class_10E84BB8::FUN_10b66900(int A)
     Element->Virtual123();
     int Index = Unknown150 + A;
     int Key = Element->Unknown1F0;
-    int Value = Unknown184->FUN_10b6bd50(Index, Key);
-    Unknown184->FUN_10b6ba50(Index, &Unknown158, Value);
+    int Value = Unknown184->LookupValue(Index, Key);
+    Unknown184->SetField(Index, &Unknown158, Value);
     FUN_10b66770(A);
 }

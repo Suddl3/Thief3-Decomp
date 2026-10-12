@@ -7,8 +7,8 @@ struct Struct_10B87F00
     char Unknown00[0x74];
 };
 
-// FUNCTION: 0x10B87F00 ?FUN_10b87f00@Class_10ACCFB0@@QAEXABV1@@Z
-void Class_10ACCFB0::FUN_10b87f00(const Class_10ACCFB0& Other)
+// FUNCTION: 0x10B87F00 ?CopyFrom@Class_10ACCFB0@@QAEXABV1@@Z
+void Class_10ACCFB0::CopyFrom(const Class_10ACCFB0& Other)
 {
     FUN_10acc790(Other.Count);
     for (int i = 0; i < Count; i++)

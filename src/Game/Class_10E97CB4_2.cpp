@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Core/Core.h"
 #include "AICore/AICoreClasses.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/Struct_10AA3520.h"
 #include "Game/Struct_109E3CB0.h"
 #include "Game/ULevel.h"
@@ -23,8 +23,8 @@ class Class_10E97CB4
 public:
     virtual void FUN_10c0e5e0(int Message, int A, Class_10C0E5E0_Param* Param, int B);
 
-    Class_10BFBD70 Unknown04;
-    Class_10BFBD70 Unknown10;
+    cIntArray Unknown04;
+    cIntArray Unknown10;
 };
 
 // FUNCTION: 0x10C0E5E0 ?FUN_10c0e5e0@Class_10E97CB4@@UAEXHHPAVClass_10C0E5E0_Param@@H@Z
@@ -42,9 +42,9 @@ void Class_10E97CB4::FUN_10c0e5e0(int Message, int A, Class_10C0E5E0_Param* Para
                 {
                     if (Actor->IsA(AAIContextVolume::StaticClass()))
                     {
-                        Class_10BFBD70* List = &Unknown04;
+                        cIntArray* List = &Unknown04;
                         int Index = List->Count;
-                        List->FUN_10bfbd70(Index + 1);
+                        List->SetCount(Index + 1);
                         List->Data[Index] = (int)Actor;
                     }
                     else if (Actor->IsA(FUN_10901650()))

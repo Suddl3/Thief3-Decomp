@@ -8,7 +8,7 @@ class Class_10B82390;
 class Class_10ACF9A0
 {
 public:
-    int FUN_10acf9a0(int A);
+    int CanLockpick(int A);
     Class_10B82390* FUN_10acf690(int A);
 };
 

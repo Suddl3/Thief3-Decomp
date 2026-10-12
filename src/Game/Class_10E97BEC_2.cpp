@@ -4,13 +4,13 @@
 
 Class_10905A90_Member* GetAllocator();
 
-// The header's Class_10BFBD70, copied whole with its inline FUN_10bfbd70 added (the header only declares it).
-class Class_10BFBD70
+// The header's cIntArray, copied whole with its inline SetCount added (the header only declares it).
+class cIntArray
 {
 public:
-    void FUN_10bfbd70(int NewCount)
+    void SetCount(int NewCount)
     {
-        int Capacity = !Unknown08 ? 0 : Unknown04 / sizeof(void*);
+        int Capacity = !Unknown08 ? 0 : m_CapacityBytes / sizeof(void*);
         GetAllocator()->Virtual8(0, 0);
         if (NewCount > Capacity)
         {
@@ -18,7 +18,7 @@ public:
             if (Capacity)
                 NewCapacity = (NewCount & ~15) + 16;
             Unknown08 = (int*)GetAllocator()->Virtual3(Unknown08, NewCapacity * sizeof(void*), 0, 0, 0, 0);
-            Unknown04 = NewCapacity * sizeof(void*);
+            m_CapacityBytes = NewCapacity * sizeof(void*);
         }
         else if (NewCount <= Capacity - 16)
         {
@@ -26,13 +26,13 @@ public:
             {
                 GetAllocator()->Virtual5(Unknown08);
                 Unknown08 = 0;
-                Unknown04 = 0;
+                m_CapacityBytes = 0;
             }
             else
             {
                 int NewCapacity = (NewCount & ~15) + 16;
                 Unknown08 = (int*)GetAllocator()->Virtual3(Unknown08, NewCapacity * sizeof(void*), 0, 0, 0, 0);
-                Unknown04 = NewCapacity * sizeof(void*);
+                m_CapacityBytes = NewCapacity * sizeof(void*);
             }
         }
         GetAllocator()->Virtual9();
@@ -44,7 +44,7 @@ public:
         int Unknown00;
         int Count;
     };
-    int Unknown04;
+    int m_CapacityBytes;
     union
     {
         int* Unknown08;
@@ -59,7 +59,7 @@ public:
     int Unknown00;
 };
 
-class Class_10E97BEC : public Class_10BFBD70
+class Class_10E97BEC : public cIntArray
 {
 public:
     virtual ~Class_10E97BEC();
@@ -72,5 +72,5 @@ void Class_10E97BEC::FUN_10c0add0(int Value)
 {
     for (int i = 0; i < Count; i++)
         ((Class_10C0ADD0_Data*)Data[i])->Unknown00 = Value;
-    FUN_10bfbd70(0);
+    SetCount(0);
 }

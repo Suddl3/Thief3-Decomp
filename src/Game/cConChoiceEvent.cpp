@@ -1,6 +1,6 @@
 // Game/cConChoiceEvent.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 class Class_10E6C104
 {
@@ -19,7 +19,7 @@ public:
 
     virtual ~cConChoiceEvent();
 
-    Class_10BFBD70 Unknown08;
+    cIntArray Unknown08;
 };
 
 // FUNCTION: 0x10A84000 ??0cConChoiceEvent@@QAE@XZ

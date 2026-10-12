@@ -3,14 +3,14 @@
 #ifndef GAME_CLASS_10A04080_H
 #define GAME_CLASS_10A04080_H
 
-class Class_10BFBD70;
+class cIntArray;
 
 // The object FUN_10a030c0 returns: FUN_10a04080 collects its items whose
 // Unknown04 matches an id, creating one when asked and none is found.
 class Class_10A04080
 {
 public:
-    void FUN_10a04080(int Id, Class_10BFBD70& Found, bool Create);
+    void FUN_10a04080(int Id, cIntArray& Found, bool Create);
 };
 
 #endif // GAME_CLASS_10A04080_H

@@ -9,12 +9,12 @@ class Class_10C24940
 {
 public:
     void FUN_10c24260(int Count);
-    void FUN_10c24940();
-    int FUN_10c24bc0(const Item_10C24BC0& Item);
+    void Clear();
+    int AddItem(const Item_10C24BC0& Item);
 
-    int Unknown00;
-    int Unknown04;
-    Item_10C24BC0* Unknown08;
+    int m_Count;
+    int m_Capacity;
+    Item_10C24BC0* m_Items;
 };
 
 #endif // GAME_CLASS_10C24940_H

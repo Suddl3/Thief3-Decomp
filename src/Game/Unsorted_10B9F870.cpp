@@ -1,6 +1,6 @@
 // Game/Unsorted_10B9F870.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10B9F2F0.h"
 #include "Game/Class_10B9F950.h"
@@ -16,7 +16,7 @@ void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 void Class_10B9F950::FUN_10b9f950(FArchive& Ar, int Count)
 {
     int Start = Unknown18.Count;
-    Unknown18.FUN_10bfbd70(Start + Count);
+    Unknown18.SetCount(Start + Count);
     for (int i = 0; i < Count; i++)
     {
         GetAllocator()->Virtual8(0, 0);

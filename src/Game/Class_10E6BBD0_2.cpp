@@ -2,8 +2,8 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10E6BBD0.h"
 
-// FUNCTION: 0x10A756F0 ?FUN_10a756f0@Class_10E6BBD0@@UAEXHHHH@Z
-void Class_10E6BBD0::FUN_10a756f0(int Event, int A, int B, int C)
+// FUNCTION: 0x10A756F0 ?HandleEvent@Class_10E6BBD0@@UAEXHHHH@Z
+void Class_10E6BBD0::HandleEvent(int Event, int A, int B, int C)
 {
     switch (Event)
     {

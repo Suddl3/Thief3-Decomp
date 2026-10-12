@@ -46,16 +46,16 @@ double GetTimeSeconds();
 class Class_10E96510 : public Class_10E960D8
 {
 public:
-    void FUN_10be8710();
+    void UpdateLastKnownPosition();
 
     Class_10BE8710_Unknown04* Unknown04;
     char Unknown08[0x48];
-    float Unknown50;
-    FVector Unknown54;
+    float m_LastKnownTime;
+    FVector m_LastKnownPosition;
 };
 
-// FUNCTION: 0x10BE8710 ?FUN_10be8710@Class_10E96510@@QAEXXZ
-void Class_10E96510::FUN_10be8710()
+// FUNCTION: 0x10BE8710 ?UpdateLastKnownPosition@Class_10E96510@@QAEXXZ
+void Class_10E96510::UpdateLastKnownPosition()
 {
     FVector Out;
     int Flag;
@@ -63,9 +63,9 @@ void Class_10E96510::FUN_10be8710()
     Object_10BE8710* Object = static_cast<Object_10BE8710*>(Owner->Unknown30.FUN_10c88610());
     if (Object && Object->Virtual1(&Out, &Flag) == 1)
     {
-        Unknown50 = (float)GetTimeSeconds();
-        Unknown54 = Out;
-        Unknown04->FUN_10bb83a0((int)&Unknown54, 5.0f, 0);
+        m_LastKnownTime = (float)GetTimeSeconds();
+        m_LastKnownPosition = Out;
+        Unknown04->FUN_10bb83a0((int)&m_LastKnownPosition, 5.0f, 0);
     }
     FUN_10be7ea0();
 }

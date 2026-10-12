@@ -23,7 +23,7 @@ public:
     virtual void Virtual5();
     virtual float Virtual6(int A);
     virtual void Virtual7();
-    virtual float FUN_10c1b130(Class_10E98D08* Other);
+    virtual float Merge(Class_10E98D08* Other);
     virtual void Virtual9();
 
     void FUN_10c1b1a0(FArchive& Ar);
@@ -34,10 +34,10 @@ public:
     FVector Unknown18;
     int Unknown24;
     float Unknown28;
-    float Unknown2C;
+    float m_Value;
     int Unknown30;
-    float Unknown34;
-    int Unknown38;
+    float m_CachedValue;
+    int m_LastTime;
     float Unknown3C;
     int Unknown40;
     char Unknown44;
@@ -46,8 +46,8 @@ public:
     char Unknown47;
 };
 
-// FUNCTION: 0x10C1B130 ?FUN_10c1b130@Class_10E98D08@@UAEMPAV1@@Z
-float Class_10E98D08::FUN_10c1b130(Class_10E98D08* Other)
+// FUNCTION: 0x10C1B130 ?Merge@Class_10E98D08@@UAEMPAV1@@Z
+float Class_10E98D08::Merge(Class_10E98D08* Other)
 {
     if (Other->Unknown28 > Unknown28)
         Unknown28 = Other->Unknown28;
@@ -55,9 +55,9 @@ float Class_10E98D08::FUN_10c1b130(Class_10E98D08* Other)
     float Value = Virtual6(0) + OtherValue;
     if (!(Value <= DAT_10e49984))
         Value = DAT_10e49984;
-    Unknown2C = Value;
+    m_Value = Value;
     Unknown3C = Value;
-    Unknown34 = Value;
+    m_CachedValue = Value;
     return Other->Virtual6(1);
 }
 
@@ -69,10 +69,10 @@ void Class_10E98D08::FUN_10c1b1a0(FArchive& Ar)
     FUN_10b052a0(Ar, &Unknown18);
     Ar.Serialize(&Unknown24, 4);
     Ar.Serialize(&Unknown28, 4);
-    Ar.Serialize(&Unknown2C, 4);
+    Ar.Serialize(&m_Value, 4);
     Ar.Serialize(&Unknown30, 4);
-    Ar.Serialize(&Unknown34, 4);
-    Ar.Serialize(&Unknown38, 4);
+    Ar.Serialize(&m_CachedValue, 4);
+    Ar.Serialize(&m_LastTime, 4);
     Ar.Serialize(&Unknown3C, 4);
     Ar.Serialize(&Unknown40, 4);
     Ar.Serialize(&Unknown44, 1);

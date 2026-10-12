@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Game/Class_10905A90_Member.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 Class_10905A90_Member* GetAllocator();
 
@@ -22,7 +22,7 @@ public:
     virtual void Virtual0();
     virtual void Virtual1();
     virtual void Virtual2();
-    virtual void Virtual3(int A, Class_10BFBD70& B);
+    virtual void Virtual3(int A, cIntArray& B);
 };
 
 class Class_10E6BA00
@@ -50,7 +50,7 @@ void Class_10E6BA00::FUN_10a6e760(int A)
     Class_10A6E760_Virtual11* Obj = Virtual11(A);
     if (Obj)
     {
-        Class_10BFBD70 Items;
+        cIntArray Items;
         Obj->Virtual3(A, Items);
     }
     Virtual7(A);

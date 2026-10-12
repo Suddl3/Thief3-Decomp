@@ -2,10 +2,10 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_1094D6E0.h"
 
-class Class_10BFBD70
+class cIntArray
 {
 public:
-    void FUN_10bfbd70(int NewCount);
+    void SetCount(int NewCount);
 
     void AddUnique(int Item)
     {
@@ -15,12 +15,12 @@ public:
             if (Unknown08[i] == Item)
                 return;
         }
-        FUN_10bfbd70(Count + 1);
+        SetCount(Count + 1);
         Unknown08[Count] = Item;
     }
 
     int Unknown00;
-    int Unknown04;
+    int m_CapacityBytes;
     int* Unknown08;
 };
 
@@ -30,7 +30,7 @@ public:
     void FUN_1094cfd0(int Item);
 
     char Unknown00[0x12C];
-    Class_10BFBD70 Unknown12C;
+    cIntArray Unknown12C;
 };
 
 // FUNCTION: 0x1094CFD0 ?FUN_1094cfd0@Class_1094CFD0@@QAEXH@Z

@@ -3,20 +3,20 @@
 #ifndef GAME_CLASS_10C29410_H
 #define GAME_CLASS_10C29410_H
 
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 class Class_10BBA080;
 
 class Class_10C29410
 {
 public:
-    void FUN_10c29410(int Value);
-    void FUN_10c29380(int Value);
+    void Enqueue(int Value);
+    void Start(int Value);
 
     Class_10BBA080* Unknown00;
-    Class_10BFBD70 Unknown04;
+    cIntArray m_Queue;
     char Pad10[0x8];
-    float Unknown18;
+    float m_EndTime;
     bool Unknown1C;
     bool Unknown1D;
     char Pad1E[0x2];

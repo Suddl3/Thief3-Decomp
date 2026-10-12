@@ -112,22 +112,22 @@ public:
     virtual void Virtual103();
     virtual void Virtual104();
     virtual void Virtual105();
-    virtual void FUN_10b61680(float A);
+    virtual void ProcessState(float A);
 
     void FUN_10b613c0();
     void FUN_10a58950(int A);
 
     char Unknown04[0x1CC];
-    float Unknown1D0;
+    float m_Countdown;
 };
 
-// FUNCTION: 0x10B61680 ?FUN_10b61680@Class_10E83E20@@UAEXM@Z
-void Class_10E83E20::FUN_10b61680(float A)
+// FUNCTION: 0x10B61680 ?ProcessState@Class_10E83E20@@UAEXM@Z
+void Class_10E83E20::ProcessState(float A)
 {
-    if (Virtual71() == 1 && Unknown1D0 >= DAT_10eafbdc)
+    if (Virtual71() == 1 && m_Countdown >= DAT_10eafbdc)
     {
-        Unknown1D0 -= A;
-        if (Unknown1D0 < DAT_10eafbdc)
+        m_Countdown -= A;
+        if (m_Countdown < DAT_10eafbdc)
             FUN_10b613c0();
     }
     FUN_10a58950(*(int*)&A);

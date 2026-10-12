@@ -29,13 +29,13 @@ struct Struct_10A76C50
     Struct_10A76C50Part Unknown38;
 };
 
-class Class_10BFBD70
+class cIntArray
 {
 public:
-    void FUN_10bfbd70(int A);
+    void SetCount(int A);
 
     int Unknown00;
-    int Unknown04;
+    int m_CapacityBytes;
     Struct_10A76C50Copy** Unknown08;
 };
 
@@ -45,7 +45,7 @@ public:
     virtual void Virtual0();
     virtual void AddCopy(Struct_10A76C50* Source);
 
-    Class_10BFBD70 Unknown04;
+    cIntArray Unknown04;
 };
 
 class Class_10E5D360
@@ -84,8 +84,8 @@ void Class_10E6BC80::AddCopy(Struct_10A76C50* Source)
         Result = Copy;
     }
     int Index = Unknown04.Unknown00;
-    Class_10BFBD70* Array = &Unknown04;
-    Array->FUN_10bfbd70(Index + 1);
+    cIntArray* Array = &Unknown04;
+    Array->SetCount(Index + 1);
     Array->Unknown08[Index] = Result;
 }
 

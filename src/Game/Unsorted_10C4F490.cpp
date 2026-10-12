@@ -36,11 +36,11 @@ public:
     Class_10C4EDA0 Unknown38;
 };
 
-class Class_10BFBD70
+class cIntArray
 {
 public:
     int Unknown00;
-    int Unknown04;
+    int m_CapacityBytes;
     int* Unknown08;
 };
 
@@ -49,11 +49,11 @@ class Class_10C4F7E0 : public Class_10A68AE0
 public:
     Class_10C4F7E0* FUN_10c4f7e0(const Class_10C4F7E0& Other);
 
-    Class_10BFBD70 Unknown0C;
+    cIntArray Unknown0C;
     int Unknown18;
     int Unknown1C;
     int Unknown20;
-    Class_10BFBD70 Unknown24;
+    cIntArray Unknown24;
     int Unknown30;
     bool Unknown34;
     int Unknown38;

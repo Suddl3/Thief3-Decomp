@@ -239,8 +239,8 @@ void cDifficultyPane::FUN_10b6b970()
     }
 }
 
-// FUNCTION: 0x10B6BA50 ?FUN_10b6ba50@Class_10B6BD50@@QAEXHPAVClass_10B66980_Unknown158@@H@Z
-void Class_10B6BD50::FUN_10b6ba50(int A, Class_10B66980_Unknown158* B, int C)
+// FUNCTION: 0x10B6BA50 ?SetField@Class_10B6BD50@@QAEXHPAVClass_10B66980_Unknown158@@H@Z
+void Class_10B6BD50::SetField(int A, Class_10B66980_Unknown158* B, int C)
 {
     switch (A)
     {

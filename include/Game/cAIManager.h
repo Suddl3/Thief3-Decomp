@@ -3,7 +3,7 @@
 #ifndef GAME_CAIMANAGER_H
 #define GAME_CAIMANAGER_H
 
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 class FArchive;
 struct Struct_10C0B6B0;
@@ -44,7 +44,7 @@ public:
     int Unknown08;
     int m_UpdateIndex;
     char Pad10[0x4];
-    Class_10BFBD70 m_Controllers;
+    cIntArray m_Controllers;
     int Unknown20;
     int Unknown24;
     int Unknown28;

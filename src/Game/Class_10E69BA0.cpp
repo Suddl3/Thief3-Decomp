@@ -1,7 +1,7 @@
 // Game/Class_10E69BA0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Core/Core.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/Struct_10AA3520.h"
 #include "Game/Class_10A5E950_Unknown2C.h"
 
@@ -14,7 +14,7 @@ struct List_10A5E900;
 typedef int BOOL;
 
 // Window copied whole from include/Game/Window.h, with slot 106 named as this function and slot 109 taking the
-// Class_10BFBD70 it is called with.
+// cIntArray it is called with.
 class Window
 {
 public:
@@ -127,7 +127,7 @@ public:
     virtual void FUN_10a5e950(int A);
     virtual void Virtual107();
     virtual void Virtual108();
-    virtual void Virtual109(Class_10BFBD70& Found);
+    virtual void Virtual109(cIntArray& Found);
 
     void FUN_10a53560(int A);
     bool FUN_109e39e0();
@@ -152,10 +152,10 @@ class Class_10E69BA0 : public Window
 {
 public:
     virtual void FUN_10a5e950(int A);
-    virtual void Virtual110(Class_10BFBD70& Found);
-    virtual void Virtual111(Class_10BFBD70& Found);
+    virtual void Virtual110(cIntArray& Found);
+    virtual void Virtual111(cIntArray& Found);
 
-    void FUN_10a5e8a0(char* Text);
+    void ReplaceStarsWithSpaces(char* Text);
     void FUN_10a5e900(List_10A5E900* List);
 
     char Unknown118[0x10];
@@ -164,14 +164,14 @@ public:
     int Unknown130;
 };
 
-void FUN_10a49da0(Class_10BFBD70* Result, void* Source, float Scale, int A, int B, int C);
+void FUN_10a49da0(cIntArray* Result, void* Source, float Scale, int A, int B, int C);
 
 // FUNCTION: 0x10A5E950 ?FUN_10a5e950@Class_10E69BA0@@UAEXH@Z
 void Class_10E69BA0::FUN_10a5e950(int A)
 {
     if (Unknown128 || Unknown12C || Unknown130)
     {
-        Class_10BFBD70 Found;
+        cIntArray Found;
         FUN_10a49da0(&Found, &DAT_10f35dec->Unknown08->Unknown2C, 240.0f, 0, 0, 7);
         if (Unknown128)
             Virtual110(Found);

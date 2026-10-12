@@ -185,29 +185,29 @@ public:
 
 class UClass;
 
-class Class_10BFBD70;
+class cIntArray;
 
 Class_10905A90_Member* GetAllocator();
 
-class Class_10BFBD70
+class cIntArray
 {
 public:
-    Class_10BFBD70() : Unknown00(0), Unknown04(0), Unknown08(0) {}
-    ~Class_10BFBD70()
+    cIntArray() : Unknown00(0), m_CapacityBytes(0), Unknown08(0) {}
+    ~cIntArray()
     {
-        FUN_10bfbd70(0);
-        if (Unknown04)
+        SetCount(0);
+        if (m_CapacityBytes)
         {
             GetAllocator()->Virtual5(Unknown08);
             Unknown08 = 0;
-            Unknown04 = 0;
+            m_CapacityBytes = 0;
         }
     }
 
-    void FUN_10bfbd70(int Count);
+    void SetCount(int Count);
 
     int Unknown00;
-    int Unknown04;
+    int m_CapacityBytes;
     Class_10AAB5C0** Unknown08;
 };
 
@@ -218,7 +218,7 @@ public:
     virtual void Virtual1(int A, int B, UClass* C, int D);
     virtual void Virtual2();
     virtual void Virtual3();
-    virtual void Virtual4(int A, int B, int C, Class_10BFBD70& Found);
+    virtual void Virtual4(int A, int B, int C, cIntArray& Found);
     virtual void Virtual5(int A, int B, int C, int D, int E);
 };
 
@@ -247,12 +247,12 @@ void cRigidAttachmentManager::Detach(int A, int B, Class_10AAB5C0*& ObjRef)
     }
 }
 
-// FUNCTION: 0x10A7D2A0 ?FUN_10a7d2a0@@YGXHPAVClass_10BFBD70@@@Z
-void __stdcall FUN_10a7d2a0(int A, Class_10BFBD70* Out)
+// FUNCTION: 0x10A7D2A0 ?FUN_10a7d2a0@@YGXHPAVcIntArray@@@Z
+void __stdcall FUN_10a7d2a0(int A, cIntArray* Out)
 {
     if (((Class_10C08940*)A)->FUN_10ad18b0() == 0)
     {
-        Class_10BFBD70 Found;
+        cIntArray Found;
         GetUObjectLinkManager()->Virtual4(A, 0, 0x281B9D0, Found);
         for (int i = 0; i < Found.Unknown00; i++)
         {
@@ -260,7 +260,7 @@ void __stdcall FUN_10a7d2a0(int A, Class_10BFBD70* Out)
             if (((Class_10C08940*)Item->FUN_10aab5c0())->FUN_10ad18b0() == 0)
             {
                 int Count = Out->Unknown00;
-                Out->FUN_10bfbd70(Count + 1);
+                Out->SetCount(Count + 1);
                 Out->Unknown08[Count] = Item;
             }
         }

@@ -22,17 +22,17 @@ public:
 class Class_10E9AE24 : public Class_10E9AF04
 {
 public:
-    virtual void FUN_10c37860(Object_10BCE8D0* A);
+    virtual void Serialize(Object_10BCE8D0* A);
 
     char Unknown04[0x90];
-    int Unknown94;
-    int Unknown98;
+    int m_OffsetX;
+    int m_OffsetY;
 };
 
-// FUNCTION: 0x10C37860 ?FUN_10c37860@Class_10E9AE24@@UAEXPAVObject_10BCE8D0@@@Z
-void Class_10E9AE24::FUN_10c37860(Object_10BCE8D0* A)
+// FUNCTION: 0x10C37860 ?Serialize@Class_10E9AE24@@UAEXPAVObject_10BCE8D0@@@Z
+void Class_10E9AE24::Serialize(Object_10BCE8D0* A)
 {
     FUN_10c372e0(A);
-    A->Virtual1(&Unknown94, 4);
-    A->Virtual1(&Unknown98, 4);
+    A->Virtual1(&m_OffsetX, 4);
+    A->Virtual1(&m_OffsetY, 4);
 }

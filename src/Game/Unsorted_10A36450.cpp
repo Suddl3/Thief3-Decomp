@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Game/Class_10AAB5C0.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 class cUObjectLinkManager
 {
@@ -11,8 +11,8 @@ public:
     virtual void Virtual1();
     virtual void Virtual2();
     virtual void Virtual3();
-    virtual void Virtual4(int A, int B, int C, Class_10BFBD70& Found);
-    virtual void Virtual5(int A, int B, int C, Class_10BFBD70& Found, int E);
+    virtual void Virtual4(int A, int B, int C, cIntArray& Found);
+    virtual void Virtual5(int A, int B, int C, cIntArray& Found, int E);
 };
 
 cUObjectLinkManager* GetUObjectLinkManager();
@@ -50,7 +50,7 @@ Struct_10A36570* __stdcall FUN_10a36570(Struct_10A36570* Out, int Id, int Index)
     Result.Unknown00 = 0.0f;
     Result.Unknown04 = 0.0f;
     Result.Unknown08 = 0.0f;
-    Class_10BFBD70 Found;
+    cIntArray Found;
     GetUObjectLinkManager()->Virtual5(Id, 0, 0x2e2eda5, Found, 3);
     if (Found.Count != 0)
     {

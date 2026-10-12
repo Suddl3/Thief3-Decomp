@@ -14,26 +14,26 @@ class Class_10E69050
 {
 public:
     virtual void Virtual0();
-    virtual int FUN_10a58bb0();
+    virtual int IsFinished();
     virtual void FUN_10a58be0();
     virtual int FUN_10a58c10(int A);
     virtual void Virtual4();
-    virtual void FUN_10a58c30(float A);
+    virtual void UpdateCurrent(float A);
 
     char Unknown04[8];
-    int Unknown0C;
+    int m_Count;
     int Unknown10;
-    Class_10A53220** Unknown14;
-    int Unknown18;
+    Class_10A53220** m_Items;
+    int m_Current;
 };
 
-// FUNCTION: 0x10A58C30 ?FUN_10a58c30@Class_10E69050@@UAEXM@Z
-void Class_10E69050::FUN_10a58c30(float A)
+// FUNCTION: 0x10A58C30 ?UpdateCurrent@Class_10E69050@@UAEXM@Z
+void Class_10E69050::UpdateCurrent(float A)
 {
-    Unknown14[Unknown18]->FUN_10a53220(A);
-    if (Unknown14[Unknown18]->Virtual1())
+    m_Items[m_Current]->FUN_10a53220(A);
+    if (m_Items[m_Current]->Virtual1())
     {
-        if (Unknown18 + 1 < Unknown0C)
-            Unknown18++;
+        if (m_Current + 1 < m_Count)
+            m_Current++;
     }
 }

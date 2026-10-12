@@ -1,11 +1,11 @@
 // Game/Unsorted_10A58C30_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
-// FUNCTION: 0x10A58CB0 ?FUN_10a58cb0@Class_10BFBD70@@QAEXABV1@@Z
-void Class_10BFBD70::FUN_10a58cb0(const Class_10BFBD70& Other)
+// FUNCTION: 0x10A58CB0 ?CopyFrom@cIntArray@@QAEXABV1@@Z
+void cIntArray::CopyFrom(const cIntArray& Other)
 {
-    FUN_10bfbd70(Other.Count);
+    SetCount(Other.Count);
     for (int i = 0; i < Count; i++)
         Data[i] = Other.Data[i];
 }

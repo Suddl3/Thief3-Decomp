@@ -21,7 +21,7 @@ class Class_10E98DE0 : public Class_10C1B840
 public:
     Class_10E98DE0(int A, FVector* B, Class_10C7D570* C, int D, void* E, float F, float G, float H);
 
-    FVector Unknown48;
+    FVector m_Position;
     void* Unknown54;
 };
 
@@ -38,7 +38,7 @@ Class_10E98DE0::Class_10E98DE0(int A, FVector* B, Class_10C7D570* C, int D, void
     : Class_10C1B840(A, (int)C, D, (int)F, (int)G, H)
 {
     Unknown00 = DAT_10e98de0;
-    Unknown48 = *B;
+    m_Position = *B;
     Unknown54 = E;
     Unknown14 = ((Class_10C1B9B0_FUN_10c7d570*)C->FUN_10c7d570())->Unknown118 + Unknown14;
 }

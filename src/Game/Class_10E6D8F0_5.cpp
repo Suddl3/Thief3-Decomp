@@ -1,6 +1,6 @@
 // Game/Class_10E6D8F0_5.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 class Class_10E6D8F0
 {
@@ -21,7 +21,7 @@ public:
     virtual int Virtual13(int A, int B);
 
     int Unknown04;
-    Class_10BFBD70 Unknown08;
+    cIntArray Unknown08;
 };
 
 // FUNCTION: 0x10AA69A0 ?Resize@Class_10E6D8F0@@UAEXH@Z
@@ -29,7 +29,7 @@ void Class_10E6D8F0::Resize(int A)
 {
     int Old = Unknown08.Count;
     Unknown04 = A;
-    Unknown08.FUN_10bfbd70(A);
+    Unknown08.SetCount(A);
     for (int i = Old; i < A; i++)
         Unknown08.Data[i] = 0;
 }

@@ -3,7 +3,7 @@
 #include "Core/Core.h"
 #include "Game/Class_10A73EF0_Table.h"
 #include "Game/Class_10BB8300.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/Class_10AF7F80.h"
 #include "Game/Class_10E6BBD0.h"
 #include "Game/Class_10905A90_Member.h"
@@ -171,7 +171,7 @@ public:
     int Unknown44;
     unsigned char Unknown48;
     char Unknown49[3];
-    Class_10BFBD70 Unknown4C;
+    cIntArray Unknown4C;
     char Pad58[0x6c];
     FString UnknownC4;
     FString UnknownD0;

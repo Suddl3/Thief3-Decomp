@@ -8,6 +8,6 @@ void __stdcall FUN_109e3c90(int A);
 void Class_10E95898::FUN_10bed110(int A)
 {
     FUN_109e3c90(A);
-    if (Unknown44 == A)
-        Unknown44 = 0;
+    if (m_Handle == A)
+        m_Handle = 0;
 }

@@ -3,7 +3,7 @@
 #include "Engine/EngineClasses.h"
 #include "Game/Class_1096D780.h"
 #include "Game/Class_10AAAEB0.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/Class_10E6F414.h"
 
 class Class_10DA0870;
@@ -66,7 +66,7 @@ void Class_10E6F414::FUN_10ac0830(Class_1096D780* P1, AActor* P2)
     {
         Class_10DA91B0 Lock;
         FUN_10d9dcb0()->FUN_10d9d270(Target, &Lock);
-        Class_10BFBD70* Map = (Class_10BFBD70*)((Class_10AAAEB0*)&Lock)->FUN_10aaaeb0();
+        cIntArray* Map = (cIntArray*)((Class_10AAAEB0*)&Lock)->FUN_10aaaeb0();
         if (Map->Count > 0)
             FUN_10d9dcb0()->FUN_10d9e5e0((Struct_10D9E5E0_Param*)Target);
         int Count = Map->Count;

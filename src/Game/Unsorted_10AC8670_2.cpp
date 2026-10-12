@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10AC8770.h"
 #include "Game/Class_10AA82D0.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/Struct_10AA3520.h"
 #include "Game/Object_10B4CA50_A.h"
 
@@ -33,7 +33,7 @@ public:
     virtual void Virtual1(int A, int B, UClass* C, int D);
     virtual void Virtual2();
     virtual void Virtual3();
-    virtual void Virtual4(int A, int B, int C, Class_10BFBD70& Found);
+    virtual void Virtual4(int A, int B, int C, cIntArray& Found);
     virtual void Virtual5(int A, int B, int C, int D, int E);
 };
 
@@ -62,7 +62,7 @@ void Class_10AC8770::FUN_10ac8690(int A, int B, float C, int D)
     int X = (int)((D - Src->Unknown00) * C);
     int Z = Src->Unknown08;
     int Y = Src->Unknown04;
-    Class_10BFBD70 Found;
+    cIntArray Found;
     GetUObjectLinkManager()->Virtual4(0, A, 0x281B9D0, Found);
     Class_10AC8690_Unknown78 Value;
     Value.Unknown00 = X;

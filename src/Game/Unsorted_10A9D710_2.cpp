@@ -10,30 +10,30 @@ Class_10905A90_Member* GetAllocator();
 
 void* FUN_10a030c0();
 
-// Game/Class_10BFBD70.h's copy, with the item type this array holds.
-class Class_10BFBD70
+// Game/cIntArray.h's copy, with the item type this array holds.
+class cIntArray
 {
 public:
-    Class_10BFBD70() : Unknown00(0), Unknown04(0), Unknown08(0) {}
-    ~Class_10BFBD70()
+    cIntArray() : Unknown00(0), m_CapacityBytes(0), Unknown08(0) {}
+    ~cIntArray()
     {
-        FUN_10bfbd70(0);
-        if (Unknown04)
+        SetCount(0);
+        if (m_CapacityBytes)
         {
             GetAllocator()->Virtual5(Unknown08);
             Unknown08 = 0;
-            Unknown04 = 0;
+            m_CapacityBytes = 0;
         }
     }
 
-    void FUN_10bfbd70(int Count);
+    void SetCount(int Count);
 
     union
     {
         int Unknown00;
         int Count;
     };
-    int Unknown04;
+    int m_CapacityBytes;
     union
     {
         Class_10A03780** Unknown08;
@@ -52,7 +52,7 @@ void __stdcall FUN_10a9d710(int Id, int Value, int A, int B, int C)
 {
     if (!Id)
         return;
-    Class_10BFBD70 Found;
+    cIntArray Found;
     ((Class_10A04080*)FUN_10a030c0())->FUN_10a04080(Id, Found, true);
     for (int i = 0; i < Found.Unknown00; i++)
     {

@@ -11,12 +11,12 @@ class Class_10C0C8E0
 public:
     void FUN_10c0c8e0(const Struct_10C0C8E0* In);
     void FUN_10c0c200(int A, int B);
-    void FUN_10c0c410();
+    void ExpireStale();
 
     char Unknown00[4];
-    int Unknown04;
+    int m_Count;
     char Unknown08[4];
-    Class_10C0C8E0_Unknown0C** Unknown0C;
+    Class_10C0C8E0_Unknown0C** m_Entries;
 };
 
 #endif // GAME_CLASS_10C0C8E0_H

@@ -4,7 +4,7 @@
 #define GAME_CLASS_10E97B50_H
 
 #include "Game/Class_10943600.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 class FArchive;
 
@@ -21,7 +21,7 @@ public:
     bool Unknown0C;
     int Unknown10;
     Class_10943600 Unknown14;
-    Class_10BFBD70 Unknown20;
+    cIntArray Unknown20;
 };
 
 #endif // GAME_CLASS_10E97B50_H

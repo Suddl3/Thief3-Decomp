@@ -48,7 +48,7 @@ public:
     virtual void Virtual36();
     virtual void FUN_10b70f60(int p1, int p2);
 
-    Class_10E871D0* FUN_10b70430();
+    Class_10E871D0* Init();
 
     FArray Unknown154;
 };

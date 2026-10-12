@@ -79,7 +79,7 @@ public:
     virtual void FUN_10bdb360(int A);
 
     char Unknown04[0x50];
-    int Unknown54;
+    int m_Handle;
 };
 
 // FUNCTION: 0x10BDB320 ?FUN_10bdb320@Class_10E94B20@@QAEMXZ
@@ -100,9 +100,9 @@ float Class_10E94B20::FUN_10bdb340()
 void Class_10E94C58::FUN_10bdb360(int A)
 {
     FUN_109e3c90(A);
-    if (A == Unknown54)
+    if (A == m_Handle)
     {
-        Unknown54 = 0;
+        m_Handle = 0;
         PopState();
     }
 }

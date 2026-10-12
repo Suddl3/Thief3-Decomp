@@ -1,11 +1,11 @@
 // Game/Unsorted_109DFBA0_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 extern "C" void* memmove(void* Dest, const void* Src, unsigned Count);
 
-// FUNCTION: 0x109DFF00 ?FUN_109dff00@Class_10BFBD70@@QAEXXZ
-void Class_10BFBD70::FUN_109dff00()
+// FUNCTION: 0x109DFF00 ?Clear@cIntArray@@QAEXXZ
+void cIntArray::Clear()
 {
     for (int i = 0; i < Unknown00; i++)
     {
@@ -20,8 +20,8 @@ void Class_10BFBD70::FUN_109dff00()
     Unknown00 = 0;
 }
 
-// FUNCTION: 0x109DFF50 ?FUN_109dff50@Class_10BFBD70@@QAEXH@Z
-void Class_10BFBD70::FUN_109dff50(int Index)
+// FUNCTION: 0x109DFF50 ?RemoveAt@cIntArray@@QAEXH@Z
+void cIntArray::RemoveAt(int Index)
 {
     if (Index != Unknown00 - 1)
     {
@@ -31,5 +31,5 @@ void Class_10BFBD70::FUN_109dff50(int Index)
         if (From != To && Count)
             memmove(Unknown08 + To, Unknown08 + From, Count * sizeof(int));
     }
-    FUN_10bfbd70(Unknown00 - 1);
+    SetCount(Unknown00 - 1);
 }

@@ -27,17 +27,17 @@ struct Struct_10C64E10;
 class Class_10C662F0
 {
 public:
-    bool FUN_10c662f0(int A, int B, int C);
-    void FUN_10c64e10(Class_10E9CB00* A);
-    void FUN_10c64ff0(Class_10E9CB00* A);
+    bool TryCreate(int A, int B, int C);
+    void AddRef(Class_10E9CB00* A);
+    void Release(Class_10E9CB00* A);
     void FUN_10c65bf0(int A, Class_10C68070* B);
 
     char Unknown00[0x1C];
     Class_10C662F0_Unknown1C Unknown1C[8];
 };
 
-// FUNCTION: 0x10C662F0 ?FUN_10c662f0@Class_10C662F0@@QAE_NHHH@Z
-bool Class_10C662F0::FUN_10c662f0(int A, int B, int C)
+// FUNCTION: 0x10C662F0 ?TryCreate@Class_10C662F0@@QAE_NHHH@Z
+bool Class_10C662F0::TryCreate(int A, int B, int C)
 {
     unsigned int Index = (unsigned int)B >> 29;
     if (Unknown1C[Index].FUN_10d57ac0(A))

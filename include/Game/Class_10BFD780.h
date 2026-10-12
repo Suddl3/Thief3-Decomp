@@ -4,7 +4,7 @@
 #define GAME_CLASS_10BFD780_H
 
 #include "Game/Class_10BAEC00.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 class Class_10BFD780_Unknown10;
 
@@ -14,7 +14,7 @@ public:
     void FUN_10bfd780(int Key);
 
     char Unknown00[8];
-    Class_10BFBD70 Unknown08;
+    cIntArray Unknown08;
     Class_10BFD780_Unknown10* Unknown14;
     Class_10BFD780_Unknown10* Unknown18;
     Class_10BFD780_Unknown10* Unknown1C;

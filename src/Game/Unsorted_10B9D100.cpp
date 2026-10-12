@@ -84,17 +84,17 @@ extern Struct_10AA3520* DAT_10f35dec;
 // FUNCTION: 0x10B9D100 ?FUN_10b9d100@Class_10B9D100@@QAEXH@Z
 void Class_10B9D100::FUN_10b9d100(int A)
 {
-    if (Unknown10)
+    if (m_Count)
     {
-        Class_10BC9B10* Item = Unknown18[Unknown10 - 1];
+        Class_10BC9B10* Item = m_Items[m_Count - 1];
         if (Item && Item->Virtual63())
-            (Unknown10 == 0 ? 0 : Unknown18[Unknown10 - 1])->FUN_10bc9b10(A, 0x14, DAT_10f35dec->Unknown08);
+            (m_Count == 0 ? 0 : m_Items[m_Count - 1])->FUN_10bc9b10(A, 0x14, DAT_10f35dec->Unknown08);
     }
 }
 
 // FUNCTION: 0x10B9D150 ?FUN_10b9d150@Class_10B9D100@@QAEXH@Z
 void Class_10B9D100::FUN_10b9d150(int A)
 {
-    for (int i = 0; i < Unknown10; i++)
-        Unknown18[i]->Virtual49(A);
+    for (int i = 0; i < m_Count; i++)
+        m_Items[i]->Virtual49(A);
 }

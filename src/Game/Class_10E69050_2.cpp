@@ -9,13 +9,13 @@ public:
     virtual bool Virtual1();
 };
 
-// FUNCTION: 0x10A58BB0 ?FUN_10a58bb0@Class_10E69050@@UAEHXZ
-int Class_10E69050::FUN_10a58bb0()
+// FUNCTION: 0x10A58BB0 ?IsFinished@Class_10E69050@@UAEHXZ
+int Class_10E69050::IsFinished()
 {
-    int Index = Unknown18;
-    if (Index == Unknown0C - 1)
+    int Index = m_Current;
+    if (Index == m_Count - 1)
     {
-        if (Unknown14[Index]->Virtual1())
+        if (m_Items[Index]->Virtual1())
             return 1;
     }
     return 0;

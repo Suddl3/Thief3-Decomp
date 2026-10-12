@@ -1,7 +1,7 @@
 // Game/Unsorted_10A4E2A0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Core/Core.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/Class_10A4E630.h"
 
 class AActor
@@ -19,8 +19,8 @@ Class_10B9D4B0_Result* FUN_10adc3b0(void* Package, int Class, const char* Name, 
 
 extern void* DAT_10f3e46c;
 
-// FUNCTION: 0x10A4E630 ?FUN_10a4e630@Class_10A4E630@@QAEXPAVClass_10BFBD70@@@Z
-void Class_10A4E630::FUN_10a4e630(Class_10BFBD70* Set)
+// FUNCTION: 0x10A4E630 ?FUN_10a4e630@Class_10A4E630@@QAEXPAVcIntArray@@@Z
+void Class_10A4E630::FUN_10a4e630(cIntArray* Set)
 {
     for (int i = 0; i < 0xff; i++)
     {
@@ -29,7 +29,7 @@ void Class_10A4E630::FUN_10a4e630(Class_10BFBD70* Set)
             if (Set->FindIndex(i) == -1)
             {
                 int Count = Set->Count;
-                Set->FUN_10bfbd70(Count + 1);
+                Set->SetCount(Count + 1);
                 Set->Data[Count] = i;
             }
             else

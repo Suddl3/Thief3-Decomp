@@ -33,7 +33,7 @@ public:
 // FUNCTION: 0x10B3F000 ?FUN_10b3f000@Class_10E7ED00@@UAEXPAVAGarrett@@@Z
 void Class_10E7ED00::FUN_10b3f000(AGarrett* Garrett)
 {
-    DAT_10f35dec->Unknown94->FUN_10a3c2e0();
+    DAT_10f35dec->Unknown94->Reset();
     FUN_10b3ed30(Garrett);
     ReleaseArm(Garrett);
     FUN_10b3adc0(Garrett);

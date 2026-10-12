@@ -3,20 +3,20 @@
 #ifndef GAME_CLASS_10B152C0_H
 #define GAME_CLASS_10B152C0_H
 
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 class Class_10E7A9C0;
 
 class Class_10B152C0
 {
 public:
-    void FUN_10b152c0(int Mask, Class_10E7A9C0* Obj);
+    void AddToLists(int Mask, Class_10E7A9C0* Obj);
     void FUN_10b15300(int Value);
 
     char Unknown00[0x34];
     Class_10E7A9C0* Unknown34;
     char Unknown38[0x4];
-    Class_10BFBD70 Unknown3C[32];
+    cIntArray BitLists[32];
 };
 
 #endif // GAME_CLASS_10B152C0_H

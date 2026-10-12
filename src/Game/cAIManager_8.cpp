@@ -1,6 +1,6 @@
 // Game/cAIManager_8.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/cAIManager.h"
 
 class FArchive
@@ -24,7 +24,7 @@ void cAIManager::Serialize(FArchive& Ar)
     int Count = m_Controllers.Count;
     Ar.Virtual1(&Count, 4);
     if (Ar.Unknown14)
-        m_Controllers.FUN_10bfbd70(Count);
+        m_Controllers.SetCount(Count);
     for (int i = 0; i < Count; i++)
         Ar.Virtual6(&m_Controllers.Data[i]);
 }

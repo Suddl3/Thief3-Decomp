@@ -218,18 +218,18 @@ inline int FindIndex(const Struct_10DC1750_Result_1C& List, int Item)
     return -1;
 }
 
-// FUNCTION: 0x10C399C0 ?FUN_10c399c0@Class_10C399C0@@QAEHXZ
-int Class_10C399C0::FUN_10c399c0()
+// FUNCTION: 0x10C399C0 ?FindTarget@Class_10C399C0@@QAEHXZ
+int Class_10C399C0::FindTarget()
 {
-    int Start = UnknownB0 - 1;
-    for (int i = Start > 0 ? Start : 0; i < Unknown88; i++)
+    int Start = m_PathIndex - 1;
+    for (int i = Start > 0 ? Start : 0; i < m_ItemCount; i++)
     {
-        Class_10C80360* Item = Unknown90[i];
+        Class_10C80360* Item = m_Items[i];
         if (Item->FUN_10c80360() & 8)
         {
             int Result = DAT_10ff667c->Unknown1C->FUN_10c099a0((int)Item);
             if (Result != 0)
-                return FUN_10c38d90(Result);
+                return CheckInRange(Result);
         }
     }
     return 0;

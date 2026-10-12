@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_10B8D4C0_H
 #define GAME_CLASS_10B8D4C0_H
 
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/Class_10D3E450.h"
 
 class Class_10B8D4C0
@@ -11,8 +11,8 @@ class Class_10B8D4C0
 public:
     Class_10B8D4C0();
 
-    Class_10BFBD70 Unknown00;
-    Class_10BFBD70 Unknown0C;
+    cIntArray Unknown00;
+    cIntArray Unknown0C;
     char Unknown18;
     bool Unknown19;
     char Unknown1A[6];

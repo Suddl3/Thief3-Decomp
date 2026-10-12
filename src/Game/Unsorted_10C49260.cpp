@@ -23,26 +23,26 @@ void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
 unsigned int HashBytes(const void* Data, int Length);
 
-// FUNCTION: 0x10C49260 ?FUN_10c49260@Class_10C49100@@QAEXH@Z
-void Class_10C49100::FUN_10c49260(int Size)
+// FUNCTION: 0x10C49260 ?Rehash@Class_10C49100@@QAEXH@Z
+void Class_10C49100::Rehash(int Size)
 {
-    int OldSize = Unknown0C;
-    Class_10C49100_Node** OldBuckets = Unknown14;
-    Unknown14 = new(0, 0, 0, 0, 0) Class_10C49100_Node*[Size];
-    Unknown0C = Size;
-    Unknown08 = 0;
+    int OldSize = m_BucketCount;
+    Class_10C49100_Node** OldBuckets = m_Buckets;
+    m_Buckets = new(0, 0, 0, 0, 0) Class_10C49100_Node*[Size];
+    m_BucketCount = Size;
+    m_BucketBits = 0;
     while (Size >>= 1)
-        Unknown08++;
-    Unknown04 = 0;
-    Unknown00 = 0;
-    for (int i = 0; i < Unknown0C; i++)
-        Unknown14[i] = 0;
+        m_BucketBits++;
+    m_Count = 0;
+    m_Collisions = 0;
+    for (int i = 0; i < m_BucketCount; i++)
+        m_Buckets[i] = 0;
     for (int j = 0; j < OldSize; j++)
     {
         Class_10C49100_Node* Node = OldBuckets[j];
         while (Node)
         {
-            FUN_10c49100(Node->Key, Node->Value);
+            Insert(Node->Key, Node->Value);
             Class_10C49100_Node* Next = Node->Next;
             Node->Key.~Class_109081E0();
             ::operator delete(Node);

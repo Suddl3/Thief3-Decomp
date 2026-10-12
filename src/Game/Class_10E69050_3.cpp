@@ -19,13 +19,13 @@ public:
     virtual int FUN_10a58c10(int A);
 
     char Unknown04[0x10];
-    Class_10A58C10Item** Unknown14;
-    int Unknown18;
+    Class_10A58C10Item** m_Items;
+    int m_Current;
 };
 
 // FUNCTION: 0x10A58C10 ?FUN_10a58c10@Class_10E69050@@UAEHH@Z
 int Class_10E69050::FUN_10a58c10(int A)
 {
-    Unknown14[Unknown18]->Virtual3(A);
+    m_Items[m_Current]->Virtual3(A);
     return A;
 }

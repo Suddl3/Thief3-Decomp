@@ -1,6 +1,6 @@
 // Game/Unsorted_10914530.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/Class_10914530.h"
 #include "Game/Class_10E495F8.h"
 
@@ -45,8 +45,8 @@ void Class_10914530::FUN_10914530(int A, int B, int C, int D)
     Class_10E495F8* Obj = new(0, 0, 0, 0, 0) Class_10E495F8;
     GetAllocator()->Virtual9();
     int Index = Unknown04.Count;
-    Class_10BFBD70* List = &Unknown04;
-    List->FUN_10bfbd70(Index + 1);
+    cIntArray* List = &Unknown04;
+    List->SetCount(Index + 1);
     List->Data[Index] = (int)Obj;
     Obj->FUN_10915570(A, B, C, D);
 }

@@ -65,26 +65,26 @@ int Class_10E9BB8C::FUN_10c49020()
     return *Unknown20;
 }
 
-// FUNCTION: 0x10C49200 ?FUN_10c49200@Class_10C49200@@QAEXXZ
-void Class_10C49200::FUN_10c49200()
+// FUNCTION: 0x10C49200 ?Clear@Class_10C49200@@QAEXXZ
+void Class_10C49200::Clear()
 {
-    FUN_10c48b80(0x40);
-    ::operator delete(Unknown14);
-    Unknown04 = 0;
-    Unknown0C = 0;
-    Unknown14 = 0;
-    Unknown00 = 0;
+    Reset(0x40);
+    ::operator delete(m_Buckets);
+    m_Count = 0;
+    m_BucketCount = 0;
+    m_Buckets = 0;
+    m_Collisions = 0;
 }
 
-// FUNCTION: 0x10C49230 ?FUN_10c49230@Class_10C49230@@QAEXXZ
-void Class_10C49230::FUN_10c49230()
+// FUNCTION: 0x10C49230 ?Clear@Class_10C49230@@QAEXXZ
+void Class_10C49230::Clear()
 {
-    FUN_10c48c00(0x40);
-    ::operator delete(Unknown14);
-    Unknown04 = 0;
-    Unknown0C = 0;
-    Unknown14 = 0;
-    Unknown00 = 0;
+    Reset(0x40);
+    ::operator delete(m_Buckets);
+    m_Count = 0;
+    m_BucketCount = 0;
+    m_Buckets = 0;
+    m_Collisions = 0;
 }
 
 // FUNCTION: 0x10C4A030 ?FUN_10c4a030@CadenceFactory@@UAEXXZ

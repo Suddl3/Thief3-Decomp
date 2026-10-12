@@ -3,20 +3,20 @@
 #include "Game/Struct_10C06540.h"
 #include "Game/Class_10C06540.h"
 
-class Class_10BFBD70
+class cIntArray
 {
 public:
-    void FUN_10bfbd70(int NewCount);
+    void SetCount(int NewCount);
 
     void Append(int Item)
     {
         int Index = Unknown00;
-        FUN_10bfbd70(Index + 1);
+        SetCount(Index + 1);
         Unknown08[Index] = Item;
     }
 
     int Unknown00;
-    int Unknown04;
+    int m_CapacityBytes;
     int* Unknown08;
 };
 
@@ -26,7 +26,7 @@ public:
     void FUN_10c07300(int Item);
 
     char Unknown00[0x50];
-    Class_10BFBD70 Unknown50;
+    cIntArray Unknown50;
 };
 
 // FUNCTION: 0x10C06540 ?FUN_10c06540@Class_10C06540@@QAE?AUStruct_10C06540@@XZ

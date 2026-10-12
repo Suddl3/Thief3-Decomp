@@ -10,24 +10,24 @@
 
 Class_10905A90_Member* GetAllocator();
 
-class Class_10BFBD70
+class cIntArray
 {
 public:
-    void FUN_10bfbd70(int NewCount);
+    void SetCount(int NewCount);
 
-    ~Class_10BFBD70()
+    ~cIntArray()
     {
-        FUN_10bfbd70(0);
-        if (Unknown04)
+        SetCount(0);
+        if (m_CapacityBytes)
         {
             GetAllocator()->Virtual5(Data);
             Data = 0;
-            Unknown04 = 0;
+            m_CapacityBytes = 0;
         }
     }
 
     int Count;
-    int Unknown04;
+    int m_CapacityBytes;
     Class_10B2C030** Data;
 };
 
@@ -125,11 +125,11 @@ void Class_10B15960::FUN_10b160b0(int A, void* B, bool C)
 // FUNCTION: 0x10B166A0 ?FUN_10b166a0@Class_10B16930@@QAEXXZ
 void Class_10B16930::FUN_10b166a0()
 {
-    Class_10BFBD70 First = FUN_109e6d80(0x69);
+    cIntArray First = FUN_109e6d80(0x69);
     if (First.Count > 0 && First.Data[0])
         First.Data[0]->FUN_10b2c130();
 
-    Class_10BFBD70 Second = FUN_109e6d80(0x6a);
+    cIntArray Second = FUN_109e6d80(0x6a);
     if (Second.Count > 0 && Second.Data[0])
         Second.Data[0]->FUN_10b2c130();
 }

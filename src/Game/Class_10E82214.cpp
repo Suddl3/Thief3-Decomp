@@ -97,12 +97,12 @@ Class_10905A90_Member* GetAllocator();
 
 // A growable array of pointers: a count, the bytes allocated and the block,
 // grown and shrunk 16 entries at a time.
-class Class_10BFBD70
+class cIntArray
 {
 public:
-    void FUN_10bfbd70(int NewCount)
+    void SetCount(int NewCount)
     {
-        int Capacity = !Unknown08 ? 0 : Unknown04 / sizeof(void*);
+        int Capacity = !Unknown08 ? 0 : m_CapacityBytes / sizeof(void*);
         GetAllocator()->Virtual8(0, 0);
         if (NewCount > Capacity)
         {
@@ -110,7 +110,7 @@ public:
             if (Capacity)
                 NewCapacity = (NewCount & ~15) + 16;
             Unknown08 = (void**)GetAllocator()->Virtual3(Unknown08, NewCapacity * sizeof(void*), 0, 0, 0, 0);
-            Unknown04 = NewCapacity * sizeof(void*);
+            m_CapacityBytes = NewCapacity * sizeof(void*);
         }
         else if (NewCount <= Capacity - 16)
         {
@@ -118,32 +118,32 @@ public:
             {
                 GetAllocator()->Virtual5(Unknown08);
                 Unknown08 = 0;
-                Unknown04 = 0;
+                m_CapacityBytes = 0;
             }
             else
             {
                 int NewCapacity = (NewCount & ~15) + 16;
                 Unknown08 = (void**)GetAllocator()->Virtual3(Unknown08, NewCapacity * sizeof(void*), 0, 0, 0, 0);
-                Unknown04 = NewCapacity * sizeof(void*);
+                m_CapacityBytes = NewCapacity * sizeof(void*);
             }
         }
         GetAllocator()->Virtual9();
         Unknown00 = NewCount;
     }
 
-    ~Class_10BFBD70()
+    ~cIntArray()
     {
-        FUN_10bfbd70(0);
-        if (Unknown04)
+        SetCount(0);
+        if (m_CapacityBytes)
         {
             GetAllocator()->Virtual5(Unknown08);
             Unknown08 = 0;
-            Unknown04 = 0;
+            m_CapacityBytes = 0;
         }
     }
 
     int Unknown00;
-    int Unknown04;
+    int m_CapacityBytes;
     void** Unknown08;
 };
 
@@ -159,7 +159,7 @@ class Class_10E82214 : public Class_10E68F74
 public:
     virtual ~Class_10E82214();
 
-    Class_10BFBD70 Unknown0C;
+    cIntArray Unknown0C;
     int Unknown18;
 };
 

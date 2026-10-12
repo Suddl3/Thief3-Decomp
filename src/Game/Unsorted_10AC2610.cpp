@@ -3,7 +3,7 @@
 #include "Game/Class_10AC2E40.h"
 #include "Game/GarrettOnCamera.h"
 #include "Game/Options.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/Class_10E6F61C.h"
 
 class UClient
@@ -97,5 +97,5 @@ float Class_10AC2E40::FUN_10ac2e40()
 void Class_10E6F61C::FUN_10ac39b0(int p1, int p2, int p3, int p4)
 {
     if (p1 == 0x5a)
-        Unknown558.FUN_10bfbd70(0);
+        Unknown558.SetCount(0);
 }

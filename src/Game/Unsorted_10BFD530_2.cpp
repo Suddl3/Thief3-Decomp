@@ -1,6 +1,6 @@
 // Game/Unsorted_10BFD530_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/Class_10BAEC00.h"
 #include "Game/Class_10BFD780.h"
 
@@ -44,12 +44,12 @@ void Class_10BFD780::FUN_10bfd780(int Key)
                 Unknown18 = 0;
             if (Unknown1C == Obj)
                 Unknown1C = 0;
-            Class_10BFBD70* Arr = &Unknown08;
+            cIntArray* Arr = &Unknown08;
             int Tmp = Arr->Data[i];
             int Last = Arr->Count - 1;
             Arr->Data[i] = Arr->Data[Last];
             Arr->Data[Last] = Tmp;
-            Arr->FUN_10bfbd70(Arr->Count - 1);
+            Arr->SetCount(Arr->Count - 1);
             i--;
             Obj->Virtual5(1);
         }

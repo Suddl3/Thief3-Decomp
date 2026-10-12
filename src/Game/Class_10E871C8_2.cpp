@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Struct_10E871C8Item.h"
 #include "Game/Window.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 class Class_10E871C8
 {
@@ -21,10 +21,10 @@ void Class_10E871C8::FUN_10b70d40(int p1, int p2)
 {
     for (int i = 0; i < Unknown102F4; i++)
     {
-        Class_10BFBD70* Dest = (Class_10BFBD70*)p1;
+        cIntArray* Dest = (cIntArray*)p1;
         Window* Parent = Unknown04[i].Unknown00 ? Unknown04[i].Unknown00->Parent : 0;
         int Index = Dest->Unknown00;
-        Dest->FUN_10bfbd70(Index + 1);
+        Dest->SetCount(Index + 1);
         Dest->Unknown08[Index] = (int)Parent;
     }
 }

@@ -8,7 +8,7 @@
 
 extern int DAT_10f3a084;
 
-class Class_10BFBD70;
+class cIntArray;
 
 class cActorManager;
 

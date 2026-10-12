@@ -26,7 +26,7 @@ class Class_10B7DC60_Param0;
 
 class cUObjectLinkManager;
 
-class Class_10BFBD70;
+class cIntArray;
 
 UClass* FUN_109015c0();
 
@@ -36,22 +36,22 @@ Class_10D9B090* FUN_10d9dcb0();
 
 Class_10905A90_Member* GetAllocator();
 
-// The header's copy of Class_10BFBD70, with the destructor out of line: the game calls it (0x109ED5E0) here.
-class Class_10BFBD70
+// The header's copy of cIntArray, with the destructor out of line: the game calls it (0x109ED5E0) here.
+class cIntArray
 {
 public:
-    Class_10BFBD70() : Unknown00(0), Unknown04(0), Unknown08(0) {}
-    Class_10BFBD70(const Class_10BFBD70& Other)
+    cIntArray() : Unknown00(0), m_CapacityBytes(0), Unknown08(0) {}
+    cIntArray(const cIntArray& Other)
     {
-        Unknown00 = Unknown04 = 0;
+        Unknown00 = m_CapacityBytes = 0;
         Unknown08 = 0;
-        FUN_10a58cb0(Other);
+        CopyFrom(Other);
     }
-    ~Class_10BFBD70();
+    ~cIntArray();
 
-    void FUN_10a58c70(const Class_10BFBD70& Other);
-    void FUN_10bfbd70(int Count);
-    void FUN_109dff50(int Index);
+    void AppendAll(const cIntArray& Other);
+    void SetCount(int Count);
+    void RemoveAt(int Index);
     int FindIndex(int Item)
     {
         for (int i = 0; i < Count; i++)
@@ -61,21 +61,21 @@ public:
         }
         return -1;
     }
-    int FUN_1092a330(const int* Item);
-    void FUN_109dff00();
-    void FUN_10a58cb0(const Class_10BFBD70& Other);
-    void FUN_10a81b10(int Index, int* Value);
-    Class_10BFBD70& operator=(const Class_10BFBD70& Other)
+    int FindOrAdd(const int* Item);
+    void Clear();
+    void CopyFrom(const cIntArray& Other);
+    void InsertAt(int Index, int* Value);
+    cIntArray& operator=(const cIntArray& Other)
     {
         Unknown00 = 0;
-        FUN_10a58c70(Other);
+        AppendAll(Other);
         return *this;
     }
     int FUN_10b9fa20(int* Item);
-    void FUN_10b9f810();
-    void FUN_10ba91a0(const int* Item);
-    void FUN_10c08510(int Item);
-    void FUN_10c08550(int Item);
+    void DeleteAll();
+    void PushFront(const int* Item);
+    void AddUnique(int Item);
+    void Remove(int Item);
     void FUN_10c08690(Struct_10C08690* Item);
 
     union
@@ -83,7 +83,7 @@ public:
         int Unknown00;
         int Count;
     };
-    int Unknown04;
+    int m_CapacityBytes;
     union
     {
         int* Unknown08;
@@ -183,7 +183,7 @@ public:
     virtual void Virtual1(int A, int B, UClass* C, int D);
     virtual void Virtual2();
     virtual void Virtual3();
-    virtual void Virtual4(int A, int B, int C, Class_10BFBD70& Found);
+    virtual void Virtual4(int A, int B, int C, cIntArray& Found);
     virtual void Virtual5(int A, int B, int C, int D, int E);
 };
 
@@ -208,7 +208,7 @@ void Class_10E4B180::FUN_10b7dc60(Class_10B7DC60_Param0* Obj)
         if (Obj->UnknownB0 == 0)
             return;
     }
-    Class_10BFBD70 Found;
+    cIntArray Found;
     GetUObjectLinkManager()->Virtual4(0, (int)Obj, 0x281B9D0, Found);
     if (Found.Count == 0)
     {

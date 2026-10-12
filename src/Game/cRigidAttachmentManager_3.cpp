@@ -3,7 +3,7 @@
 
 #include "Game/Class_10AA82D0.h"
 #include "Game/Class_10B39870.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 class UClass;
 
@@ -16,7 +16,7 @@ public:
     virtual void Virtual1(int A, int B, UClass* C, int D);
     virtual void Virtual2();
     virtual void Virtual3();
-    virtual void Virtual4(int A, int B, int C, Class_10BFBD70& Found);
+    virtual void Virtual4(int A, int B, int C, cIntArray& Found);
     virtual void Virtual5(int A, int B, int C, int D, int E);
 };
 
@@ -61,7 +61,7 @@ Class_10B39870* __stdcall cRigidAttachmentManager::GetAttachedObject()
 {
     if (UnknownA4)
     {
-        Class_10BFBD70 Found;
+        cIntArray Found;
         GetUObjectLinkManager()->Virtual4(UnknownA4, (int)this, 0x281B9D0, Found);
         if (Found.Count == 1)
             return (Class_10B39870*)((Class_10AA82D0*)Found.Data[0])->FUN_10aa82d0();

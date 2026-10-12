@@ -23,7 +23,7 @@ class Class_10E95898;
 
 class Class_10E96510;
 
-class Class_10E91EE8;
+class State_Gassed;
 
 class Class_10E93878;
 
@@ -49,7 +49,7 @@ public:
     virtual void Virtual16();
     virtual void Virtual17();
     virtual void Virtual18();
-    virtual Class_10E91EE8* FUN_10b999e0(Struct_10B98E00* A, int B);
+    virtual State_Gassed* FUN_10b999e0(Struct_10B98E00* A, int B);
     virtual void Virtual20();
     virtual void Virtual21();
     virtual void Virtual22();

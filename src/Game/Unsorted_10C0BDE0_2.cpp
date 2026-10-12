@@ -3,13 +3,13 @@
 #include "Game/Class_10C0C090.h"
 #include "Game/Struct_10C0BFC0.h"
 
-// FUNCTION: 0x10C0BFC0 ?FUN_10c0bfc0@Class_10C0C090@@QAEPAUStruct_10C0BFC0@@HH@Z
-Struct_10C0BFC0* Class_10C0C090::FUN_10c0bfc0(int A, int B)
+// FUNCTION: 0x10C0BFC0 ?FindEntry@Class_10C0C090@@QAEPAUStruct_10C0BFC0@@HH@Z
+Struct_10C0BFC0* Class_10C0C090::FindEntry(int A, int B)
 {
-    for (int i = 0; i < Unknown04; i++)
+    for (int i = 0; i < m_Count; i++)
     {
-        if (Unknown0C[i] && Unknown0C[i]->Unknown30 == A && Unknown0C[i]->Unknown2C == B)
-            return Unknown0C[i];
+        if (m_Entries[i] && m_Entries[i]->Unknown30 == A && m_Entries[i]->Unknown2C == B)
+            return m_Entries[i];
     }
     return 0;
 }

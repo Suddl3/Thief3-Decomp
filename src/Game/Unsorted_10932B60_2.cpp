@@ -1,7 +1,7 @@
 // Game/Unsorted_10932B60_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_109329F0.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/Struct_109323A0_Node.h"
 
 class Class_10932450
@@ -22,7 +22,7 @@ extern bool DAT_10f31bb4;
 
 extern Class_109329F0 DAT_10eff31c;
 
-extern Class_10BFBD70 DAT_10f31bd0;
+extern cIntArray DAT_10f31bd0;
 
 // FUNCTION: 0x10932B60 ?FUN_10932b60@@YAXXZ
 void FUN_10932b60()
@@ -55,6 +55,6 @@ void FUN_10932b60()
     DAT_10f31bb8.FUN_10932450();
     DAT_10f31bc4.FUN_10932450();
     DAT_10eff31c.FUN_109329f0(0x40);
-    DAT_10f31bd0.FUN_10bfbd70(0);
+    DAT_10f31bd0.SetCount(0);
     DAT_10f31bb4 = false;
 }

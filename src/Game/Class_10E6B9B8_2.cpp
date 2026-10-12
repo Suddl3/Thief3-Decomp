@@ -1,7 +1,7 @@
 // Game/Class_10E6B9B8_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/cUObjectLinkManager.h"
 #include "Game/Class_10F46DA0.h"
 #include "Game/Class_1098E3D0.h"
@@ -46,7 +46,7 @@ int Class_10E6B9B8::FUN_10a6e080(int A, Class_10A6E080_Arg2* Obj, float Dt)
     {
         {
             DAT_10f46da0->Virtual5(0x6e, (Class_10B697A0*)A, 0, 0);
-            Class_10BFBD70 Found;
+            cIntArray Found;
             GetUObjectLinkManager()->Virtual5(A, 0, 0x285b534, (int)&Found, 3);
             for (int i = 0; i < Found.Unknown00; i++)
             {

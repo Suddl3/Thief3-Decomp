@@ -4,7 +4,7 @@
 #include "Game/Class_10BBDB40.h"
 #include "Game/Class_10DBD510.h"
 #include "Game/Class_10E4CCD0.h"
-#include "Game/Class_10E91EE8.h"
+#include "Game/State_Gassed.h"
 #include "Game/Struct_10B98E00.h"
 
 // Ion Storm's placement new and its delete (0x10905C10; the delete folded into ::operator delete).
@@ -26,11 +26,11 @@ class Class_10E93878;
 
 class Class_10E96FD0;
 
-// FUNCTION: 0x10B999E0 ?FUN_10b999e0@Class_10E4CCD0@@UAEPAVClass_10E91EE8@@PAUStruct_10B98E00@@H@Z
-Class_10E91EE8* Class_10E4CCD0::FUN_10b999e0(Struct_10B98E00* A, int B)
+// FUNCTION: 0x10B999E0 ?FUN_10b999e0@Class_10E4CCD0@@UAEPAVState_Gassed@@PAUStruct_10B98E00@@H@Z
+State_Gassed* Class_10E4CCD0::FUN_10b999e0(Struct_10B98E00* A, int B)
 {
     int Id = FUN_10bcba80();
     if (Id && A->Unknown08->FUN_10dbd510(Id)->GetFloat() > DAT_10eafbdc)
-        return new(0, 0, 0, 0, 0) Class_10E91EE8((int)A, (int)this, B);
+        return new(0, 0, 0, 0, 0) State_Gassed((int)A, (int)this, B);
     return 0;
 }

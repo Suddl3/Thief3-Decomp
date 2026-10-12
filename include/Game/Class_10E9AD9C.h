@@ -18,7 +18,7 @@ public:
     virtual void FUN_10c365d0(int A, float B);
     virtual void FUN_10c365f0(int A, int B);
 
-    Class_109081E0 FUN_10c36860();
+    Class_109081E0 GetControllerName();
 
     char Unknown04[0x48];
     bool Unknown4C;

@@ -8,8 +8,8 @@ class Class_10B66980_Unknown158;
 class Class_10B6BD50
 {
 public:
-    int FUN_10b6bd50(int A, int B);
-    void FUN_10b6ba50(int A, Class_10B66980_Unknown158* B, int C);
+    int LookupValue(int A, int B);
+    void SetField(int A, Class_10B66980_Unknown158* B, int C);
 
     char Pad00[0x1];
 };

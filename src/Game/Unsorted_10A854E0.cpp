@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Struct_10AA3520.h"
 #include "Game/Class_10905A90_Member.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/Class_10A857A0.h"
 #include "Game/Class_10B1BD70.h"
 #include "Game/Object_10A84D10.h"
@@ -96,7 +96,7 @@ public:
     virtual void Virtual1(int A, int B, int C, int D);
     virtual void Virtual2();
     virtual void Virtual3();
-    virtual Class_10BFBD70* Virtual4();
+    virtual cIntArray* Virtual4();
 
     int Unknown04;
     int Unknown08;
@@ -185,7 +185,7 @@ Class_10E6DA64* Class_10A857A0::FUN_10a857a0(int A, int B)
         Obj->Virtual1(A, 0, 0, B);
     else
         Obj->Virtual1(A, 0, 0, B);
-    Class_10BFBD70* Arr = Obj->Virtual4();
+    cIntArray* Arr = Obj->Virtual4();
     for (int i = 0; i < Arr->Count; i++)
     {
         if (Arr->Data[i] != 0)

@@ -1,7 +1,7 @@
 // Game/Class_10E99350_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 extern void* DAT_10e99340[];
 
@@ -35,7 +35,7 @@ public:
 
     void* Unknown00;
     int Unknown04;
-    Class_10BFBD70 Unknown08;
+    cIntArray Unknown08;
     int Unknown14;
 };
 
@@ -45,13 +45,13 @@ Class_10E99350::Class_10E99350(int Value) : Unknown00(DAT_10e99350), Unknown04(0
     GetAllocator()->Virtual8(0, 0);
     int Tag = 0;
     Class_10E99340* First = new(Tag, 0, 0, 0, 0) Class_10E99340;
-    Class_10BFBD70* List = &Unknown08;
+    cIntArray* List = &Unknown08;
     int Index = List->Count;
-    List->FUN_10bfbd70(Index + 1);
+    List->SetCount(Index + 1);
     List->Data[Index] = (int)First;
     Class_10E99348* Second = new(0, 0, 0, 0, 0) Class_10E99348;
     Index = List->Count;
-    List->FUN_10bfbd70(Index + 1);
+    List->SetCount(Index + 1);
     List->Data[Index] = (int)Second;
     GetAllocator()->Virtual9();
 }

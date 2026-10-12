@@ -32,6 +32,6 @@ void Class_10B3ED20::FUN_10b3ea80()
     ((Class_10B39530*)FUN_10aa82d0())->FUN_10b39530(0xb5, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
     ((Class_10B396B0*)FUN_10aa82d0())->FUN_10b396b0(0xb9);
     ((Class_10B396B0*)FUN_10aa82d0())->FUN_10b396b0(0xb8);
-    DAT_10f35dec->Unknown94->FUN_10a3c2e0();
+    DAT_10f35dec->Unknown94->Reset();
     FUN_10b3e820(4);
 }

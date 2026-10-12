@@ -1,7 +1,7 @@
 // Game/Unsorted_10A56C50.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10A57980.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 extern void* DAT_10e68d80;
 
@@ -114,7 +114,7 @@ public:
     virtual void Virtual34();
     virtual void Virtual35();
     virtual void Virtual36();
-    virtual void AddToArray(Class_10BFBD70* Array, int B);
+    virtual void AddToArray(cIntArray* Array, int B);
 
     char Unknown04[0x114];
     int Unknown118;
@@ -127,13 +127,13 @@ FVector Class_10E68B10::FUN_10a56c50()
     return Ext + Virtual6();
 }
 
-// FUNCTION: 0x10A572C0 ?AddToArray@Class_10E6AEA0@@UAEXPAVClass_10BFBD70@@H@Z
-void Class_10E6AEA0::AddToArray(Class_10BFBD70* Array, int B)
+// FUNCTION: 0x10A572C0 ?AddToArray@Class_10E6AEA0@@UAEXPAVcIntArray@@H@Z
+void Class_10E6AEA0::AddToArray(cIntArray* Array, int B)
 {
     if (Array && Unknown118)
     {
         int Index = Array->Unknown00;
-        Array->FUN_10bfbd70(Index + 1);
+        Array->SetCount(Index + 1);
         Array->Unknown08[Index] = Unknown118;
     }
 }

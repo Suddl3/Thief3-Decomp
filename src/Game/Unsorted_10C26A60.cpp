@@ -23,17 +23,17 @@ public:
 
 struct Struct_10C26A60 {};
 
-class Class_10BFBD70
+class cIntArray
 {
 public:
-    void FUN_10bfbd70(int NewCount);
+    void SetCount(int NewCount);
 
     int Unknown00;
-    int Unknown04;
+    int m_CapacityBytes;
     Struct_10C26A60** Unknown08;
 };
 
-struct Struct_10C266F0 : public Class_10BFBD70 {};
+struct Struct_10C266F0 : public cIntArray {};
 
 void FUN_10c266f0(Struct_10C266F0* Array);
 
@@ -69,7 +69,7 @@ void Class_10C26A60::FUN_10c26a60(Struct_10C26A60* Obj, int Arg)
     Struct_10C266F0* Array = &Unknown38;
     FUN_10c266f0(Array);
     int Count = Array->Unknown00;
-    Array->FUN_10bfbd70(Count + 1);
+    Array->SetCount(Count + 1);
     Array->Unknown08[Count] = Obj;
     Virtual6();
 }

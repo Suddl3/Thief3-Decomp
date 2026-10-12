@@ -1,6 +1,6 @@
 // Game/Class_10E5B2C0_17.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 
 class Class_10E5B2C0
 {
@@ -43,16 +43,16 @@ public:
     virtual void Virtual35();
     virtual void Virtual36();
     virtual void Virtual37();
-    virtual void FUN_109e5740(Class_10BFBD70* Array);
+    virtual void FUN_109e5740(cIntArray* Array);
 
     char Unknown04[0x118];
     int Unknown11C;
 };
 
-// FUNCTION: 0x109E5740 ?FUN_109e5740@Class_10E5B2C0@@UAEXPAVClass_10BFBD70@@@Z
-void Class_10E5B2C0::FUN_109e5740(Class_10BFBD70* Array)
+// FUNCTION: 0x109E5740 ?FUN_109e5740@Class_10E5B2C0@@UAEXPAVcIntArray@@@Z
+void Class_10E5B2C0::FUN_109e5740(cIntArray* Array)
 {
     int Index = Array->Unknown00;
-    Array->FUN_10bfbd70(Index + 1);
+    Array->SetCount(Index + 1);
     Array->Unknown08[Index] = Unknown11C;
 }

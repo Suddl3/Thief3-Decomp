@@ -17,8 +17,8 @@ public:
 // Ion Storm's placement new (0x10905C10).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 
-// FUNCTION: 0x10B92C10 ?FUN_10b92c10@Class_10E89A8C@@UAEPAV1@XZ
-Class_10E89A8C* Class_10E89A8C::FUN_10b92c10()
+// FUNCTION: 0x10B92C10 ?Clone@Class_10E89A8C@@UAEPAV1@XZ
+Class_10E89A8C* Class_10E89A8C::Clone()
 {
     return new(0, 0, 0, 0, 0) Class_10E89A8C(Unknown04);
 }

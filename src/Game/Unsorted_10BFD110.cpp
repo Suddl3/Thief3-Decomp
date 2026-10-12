@@ -1,6 +1,6 @@
 // Game/Unsorted_10BFD110.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/Class_10BFD160.h"
 
 class Class_10C08940;
@@ -27,8 +27,8 @@ public:
     int Unknown08;
 };
 
-// FUNCTION: 0x10BFD160 ?FUN_10bfd160@Class_10BFD160@@QAEXPAVClass_10C08940@@PAVClass_10BFBD70@@M1@Z
-void Class_10BFD160::FUN_10bfd160(Class_10C08940* Owner, Class_10BFBD70* Ids, float Limit, Class_10BFBD70* Out)
+// FUNCTION: 0x10BFD160 ?FUN_10bfd160@Class_10BFD160@@QAEXPAVClass_10C08940@@PAVcIntArray@@M1@Z
+void Class_10BFD160::FUN_10bfd160(Class_10C08940* Owner, cIntArray* Ids, float Limit, cIntArray* Out)
 {
     if (Owner != 0)
     {
@@ -45,7 +45,7 @@ void Class_10BFD160::FUN_10bfd160(Class_10C08940* Owner, Class_10BFBD70* Ids, fl
                         if (!(Obj->Class_10978090::FUN_10c3dd60() > Limit))
                             break;
                         int Index = Out->Count;
-                        Out->FUN_10bfbd70(Index + 1);
+                        Out->SetCount(Index + 1);
                         Out->Data[Index] = (int)Obj;
                     }
                 }

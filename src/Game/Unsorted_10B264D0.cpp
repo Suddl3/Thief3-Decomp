@@ -154,8 +154,8 @@ int FUN_10b2bb20()
     return 0x7;
 }
 
-// FUNCTION: 0x10B2EE90 ?FUN_10b2ee90@Class_10E7B89C@@QAEXXZ
-void Class_10E7B89C::FUN_10b2ee90()
+// FUNCTION: 0x10B2EE90 ?ResetValue@Class_10E7B89C@@QAEXXZ
+void Class_10E7B89C::ResetValue()
 {
     Field0C = Field10;
 }

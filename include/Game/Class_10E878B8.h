@@ -5,16 +5,16 @@
 
 #include "Game/Class_10E876D0.h"
 
-class Class_10BFBD70;
+class cIntArray;
 
 class Class_10E878B8 : public Class_10E876D0
 {
 public:
     Class_10E878B8* FUN_10b73e90();
-    Class_10BFBD70 FUN_10a5aac0();
-    Class_10BFBD70 FUN_10b73ee0();
-    Class_10BFBD70 FUN_10a5a920();
-    Class_10BFBD70 FUN_10b73f00();
+    cIntArray FUN_10a5aac0();
+    cIntArray FUN_10b73ee0();
+    cIntArray FUN_10a5a920();
+    cIntArray FUN_10b73f00();
 
     char Pad11C[0x178];
 };

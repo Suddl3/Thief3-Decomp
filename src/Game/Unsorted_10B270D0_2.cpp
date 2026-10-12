@@ -1,7 +1,7 @@
 // Game/Unsorted_10B270D0_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_109081E0.h"
-#include "Game/Class_10BFBD70.h"
+#include "Game/cIntArray.h"
 #include "Game/Class_10B27090.h"
 #include "Game/Class_10B17210.h"
 
@@ -106,7 +106,7 @@ void Class_10B27220::Stop()
     if (Unknown30)
     {
         Unknown30->Virtual56(0);
-        Class_10BFBD70 Items;
+        cIntArray Items;
         ((Class_10B17210*)FUN_10b154c0())->FUN_10b17210(Items);
         Unknown30 = 0;
     }
