@@ -11,6 +11,8 @@ public:
     ~Class_10E56670();
 
     Class_10E56670* FUN_1099fb20();
+
+    char Pad04[0x74];
 };
 
 #endif // GAME_CLASS_10E56670_H

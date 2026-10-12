@@ -3,8 +3,8 @@
 #ifndef GAME_LOGINMANAGER_H
 #define GAME_LOGINMANAGER_H
 
-class cIntArray;
 class Object_10A67120;
+class cIntArray;
 
 class LoginManager
 {

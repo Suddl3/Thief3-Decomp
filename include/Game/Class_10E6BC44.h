@@ -8,11 +8,11 @@
 class Class_10A76830;
 class Class_10A76CD0_Arg3;
 class Class_10A76DA0_Arg2;
-class cIntArray;
 class Class_10E5D360;
 class Class_Field04;
 struct Struct_10A769A0_Data;
 struct Struct_10A769A0_Param;
+class cIntArray;
 
 class Class_10E6BC44 : public cActorManager
 {

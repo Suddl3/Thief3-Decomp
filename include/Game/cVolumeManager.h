@@ -6,8 +6,8 @@
 #include "Game/Class_10A4C550.h"
 #include "Game/cActorManager.h"
 
-class cVolume;
 class FVector;
+class cVolume;
 
 class cVolumeManager : public cActorManager
 {

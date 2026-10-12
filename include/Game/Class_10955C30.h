@@ -13,7 +13,7 @@ public:
     void Create();
 
     const char* m_Name;
-    char Unknown04[4];
+    char Pad04[0x4];
     int Unknown08;
     bool Unknown0C;
     char Pad0D[0xb];

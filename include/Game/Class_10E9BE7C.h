@@ -3,12 +3,12 @@
 #ifndef GAME_CLASS_10E9BE7C_H
 #define GAME_CLASS_10E9BE7C_H
 
-#include "Game/cIntArray.h"
 #include "Game/Class_10C4E880_Primary.h"
 #include "Game/Class_10C4E8D0.h"
 #include "Game/Class_10C4EDA0.h"
 #include "Game/Class_10C50EC0.h"
 #include "Game/Class_10E5B578.h"
+#include "Game/cIntArray.h"
 
 class FVector;
 

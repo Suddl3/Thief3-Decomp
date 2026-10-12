@@ -3,8 +3,10 @@
 #ifndef GAME_CSMOKEYSOUP_H
 #define GAME_CSMOKEYSOUP_H
 
-#include "Core/Core.h"
 #include "Game/Class_10E67BD8.h"
+#include "Game/cIntArray.h"
+
+class Class_10AF7F80;
 
 class cSmokeySoup : public Class_10E67BD8
 {
@@ -47,10 +49,41 @@ public:
     virtual void Virtual35();
     virtual void Virtual36();
     virtual void AddToArray(int p1, int p2);
+    virtual void Virtual38();
+    virtual void Virtual39();
+    virtual void Virtual40();
+    virtual void Virtual41();
+    virtual void Virtual42();
+    virtual void Virtual43();
+    virtual void Virtual44();
+    virtual void Virtual45();
+    virtual void Virtual46();
+    virtual void Virtual47();
+    virtual void Virtual48();
+    virtual void Virtual49();
+    virtual void Virtual50();
+    virtual void Virtual51();
+    virtual void Virtual52();
+    virtual void Virtual53();
+    virtual void Virtual56();
+    virtual void Virtual57();
+    virtual void Virtual58();
+    virtual void Virtual59();
+    virtual void Virtual60();
+    virtual void Virtual61();
+    virtual void Virtual62();
+    virtual void Virtual63();
+    virtual void Virtual64();
+    virtual void Virtual65(int A);
+
+    ~cSmokeySoup();
 
     cSmokeySoup* Init();
+    void* FUN_10a51100(int A);
+    void LoadConfig(Class_10AF7F80* File, Class_10AF7F80* Section);
 
-    FArray Unknown154;
+    cIntArray Unknown154;
+    char Pad160[0x114];
 };
 
 #endif // GAME_CSMOKEYSOUP_H

@@ -5,9 +5,9 @@
 
 #include "Game/Class_10C271A0.h"
 
-class cString;
-class cPositionList;
 class FArchive;
+class cPositionList;
+class cString;
 
 class MC_MoveToPoint : public Class_10C271A0
 {

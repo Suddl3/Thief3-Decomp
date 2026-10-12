@@ -6,8 +6,8 @@
 #include "Game/Class_10C57530_Unknown18.h"
 #include "Game/Class_10C592B0.h"
 
-class cString;
 class Class_10C59030_Value;
+class cString;
 
 class Class_10C59030 : public Class_10C592B0
 {

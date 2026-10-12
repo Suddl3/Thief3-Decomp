@@ -1,0 +1,9 @@
+// Game/cLocomotionCommand_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Declarations above the functions belong in include/ once they settle.
+#include "Game/cLocomotionCommand.h"
+
+// FUNCTION: 0x10C3DFC0 ?FUN_10c3dfc0@cLocomotionCommand@@UAEHXZ
+int cLocomotionCommand::FUN_10c3dfc0()
+{
+    return Unknown39 == 1;
+}

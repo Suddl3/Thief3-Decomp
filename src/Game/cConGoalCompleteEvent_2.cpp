@@ -1,0 +1,41 @@
+// Game/cConGoalCompleteEvent_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10905A90_Member.h"
+#include "Game/cString.h"
+#include "Game/Class_10AB37F0.h"
+#include "Game/Class_10AB3C20.h"
+
+void ReadInt(void* Reader, int* Out);
+
+void ReadString(void* Reader, int* Out);
+
+class cConGoalCompleteEvent
+{
+public:
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual void ReadFields(void* Reader, int Version, int Unused);
+
+    int Unknown04;
+    int Unknown08;
+    int Unknown0C;
+    Class_10AB37F0 Unknown10;
+};
+
+// FUNCTION: 0x10AAAEC0 ?ReadFields@cConGoalCompleteEvent@@UAEXPAXHH@Z
+void cConGoalCompleteEvent::ReadFields(void* Reader, int Version, int Unused)
+{
+    cString Text10;
+    cString Text0C;
+    int Count;
+    ReadInt(Reader, &Count);
+    Unknown08 = Count;
+    ReadString(Reader, &Unknown0C);
+    ReadString(Reader, (int*)&Text10);
+    if (Version > 0x1b)
+    {
+        ReadString(Reader, (int*)&Text0C);
+    }
+    Unknown10.FUN_10ab37f0(Text10);
+    ((Class_10AB3C20*)&Unknown10)->SetValue(Text0C);
+}

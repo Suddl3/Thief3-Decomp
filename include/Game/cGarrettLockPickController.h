@@ -5,6 +5,8 @@
 
 #include "Game/cLockPickController.h"
 
+class FVector;
+struct Struct_10AC8540_Param;
 struct Struct_10B3ACE0;
 
 class cGarrettLockPickController : public cLockPickController
@@ -25,8 +27,10 @@ public:
 
     void FUN_109e38b0(int A, int B);
     void ResetPickState();
+    FVector GetSideDirection(Struct_10AC8540_Param* A);
 
     char Unknown50[0x20];
+    char Pad70[0x40];
     bool Unknown70;
     char Pad71[0x7];
     int Unknown78;

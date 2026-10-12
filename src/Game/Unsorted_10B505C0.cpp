@@ -5,6 +5,7 @@
 #include "Game/Class_10F3A3D8.h"
 #include "Game/Struct_10AC8540_Param.h"
 #include "Game/Struct_10B7C170.h"
+#include "Game/cGarrettLockPickController.h"
 
 struct Struct_10B3ACE0;
 
@@ -16,40 +17,6 @@ struct Struct_10B505C0_Param
 {
     char Unknown00[0x34];
     float Unknown34;
-};
-
-// Game/cGarrettLockPickController.h copied whole, with the method this function calls added.
-class cGarrettLockPickController : public cLockPickController
-{
-public:
-    virtual void FUN_10b3e380(Struct_10B3ACE0* A, float B, float C);
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8();
-    virtual void Virtual9();
-    virtual void Virtual10();
-    virtual void FUN_10b3efe0(int p1);
-    virtual void Virtual12();
-    virtual void Virtual13();
-    virtual void Virtual14();
-    virtual void Virtual15();
-    virtual void FUN_10b3e240(int A, int B);
-
-    void FUN_109e38b0(int A, int B);
-    void ResetPickState();
-    FVector GetSideDirection(Struct_10AC8540_Param* A);
-
-    char Unknown50[0x20];
-    bool Unknown70;
-    char Pad71[0x7];
-    int Unknown78;
-    int Unknown7C;
-    int Unknown80;
-    int Unknown84;
-    float Unknown88;
-    float Unknown8C;
-    bool Unknown90;
-    char Pad91[0x3];
 };
 
 // Game/Class_10D9B090.h copied whole, with FUN_10d9d640 taking the two points by reference.

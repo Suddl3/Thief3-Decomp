@@ -5,6 +5,7 @@
 
 struct Struct_109E5700;
 
+void Clear();
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
 class Class_109E5700

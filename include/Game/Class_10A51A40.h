@@ -107,6 +107,7 @@ public:
     virtual void Virtual96_();
     virtual void Virtual97();
     virtual void Virtual98();
+    virtual void Virtual98_();
 
     void SetValueAt(int A, int B);
 
@@ -115,6 +116,7 @@ public:
     int Unknown128;
     Class_1092E930 Unknown12C;
     int* Unknown134;
+    char Pad138[0x26c];
 };
 
 #endif // GAME_CLASS_10A51A40_H
