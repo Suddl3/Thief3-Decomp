@@ -12,7 +12,7 @@ class Class_10C5BA20
 {
 public:
     Class_10C5BA20() : Unknown08(false), Unknown1C(-1.0f), Unknown20(-1.0f), Unknown24(0) {}
-    Class_10C5BA20* FUN_10c5ba20(const Class_10C5BA20& A);
+    Class_10C5BA20* CopyFrom(const Class_10C5BA20& A);
 
     cString Unknown00;
     cString Unknown04;
@@ -39,25 +39,25 @@ public:
     Class_10C5BB10_Node* Next;
 };
 
-// FUNCTION: 0x10C5BB10 ?FUN_10c5bb10@Class_10C5BB10@@QAEIABHABVClass_10C5BA20@@@Z
-unsigned int Class_10C5BB10::FUN_10c5bb10(const int& Key, const Class_10C5BA20& Value)
+// FUNCTION: 0x10C5BB10 ?Insert@Class_10C5BB10@@QAEIABHABVClass_10C5BA20@@@Z
+unsigned int Class_10C5BB10::Insert(const int& Key, const Class_10C5BA20& Value)
 {
-    if (!Unknown10 && Unknown00 > Unknown0C * 0.2)
-        FUN_10c5bbf0(Unknown0C * 2);
+    if (!Unknown10 && m_Collisions > m_BucketCount * 0.2)
+        FUN_10c5bbf0(m_BucketCount * 2);
     Class_10C5BB10_Node* Node = new(0, 0, 0, 0, 0) Class_10C5BB10_Node;
     Node->Key = Key;
-    Node->Value.FUN_10c5ba20(Value);
+    Node->Value.CopyFrom(Value);
     unsigned int Index;
     {
         const void* Data;
         int Length;
         Unknown18.Virtual0(Key, &Data, &Length);
-        Index = HashBytes(Data, Length) & ((1 << Unknown08) - 1);
+        Index = HashBytes(Data, Length) & ((1 << m_BucketBits) - 1);
     }
-    if (Unknown14[Index])
-        Unknown00++;
-    Node->Next = Unknown14[Index];
-    Unknown14[Index] = Node;
-    Unknown04++;
+    if (m_Buckets[Index])
+        m_Collisions++;
+    Node->Next = m_Buckets[Index];
+    m_Buckets[Index] = Node;
+    m_Count++;
     return Index;
 }

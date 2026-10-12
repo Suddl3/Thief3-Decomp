@@ -56,8 +56,8 @@ void Class_10C270C0::FUN_10c270c0()
     Unknown04->F22();
 }
 
-// FUNCTION: 0x10C270D0 ?FUN_10c270d0@Class_10C270D0@@QAEXXZ
-void Class_10C270D0::FUN_10c270d0()
+// FUNCTION: 0x10C270D0 ?Reset@Class_10C270D0@@QAEXXZ
+void Class_10C270D0::Reset()
 {
     if (Unknown48)
     {
@@ -68,10 +68,10 @@ void Class_10C270D0::FUN_10c270d0()
     Unknown45 = true;
 }
 
-// FUNCTION: 0x10C273E0 ?FUN_10c273e0@Class_10C273E0@@QAE_NH@Z
-bool Class_10C273E0::FUN_10c273e0(int Bit)
+// FUNCTION: 0x10C273E0 ?IsBitSet@Class_10C273E0@@QAE_NH@Z
+bool Class_10C273E0::IsBitSet(int Bit)
 {
     if (Bit == 0)
-        return Unknown04 == 0;
-    return (Unknown04 & (1 << Bit)) != 0;
+        return m_Flags == 0;
+    return (m_Flags & (1 << Bit)) != 0;
 }

@@ -6,21 +6,21 @@
 
 extern Class_10C3EA90* DAT_10ff70a4;
 
-FVector FUN_10c3ebc0(int p1);
+FVector GetProjectileRotation(int p1);
 
-// FUNCTION: 0x10C3EB80 ?FUN_10c3eb80@@YAXXZ
-void FUN_10c3eb80()
+// FUNCTION: 0x10C3EB80 ?ReleaseHashTable@@YAXXZ
+void ReleaseHashTable()
 {
-    --DAT_10ff70a4->Unknown1C;
-    if (DAT_10ff70a4->Unknown1C == 0)
+    --DAT_10ff70a4->m_RefCount;
+    if (DAT_10ff70a4->m_RefCount == 0)
     {
         delete DAT_10ff70a4;
         DAT_10ff70a4 = 0;
     }
 }
 
-// FUNCTION: 0x10C3ED70 ?FUN_10c3ed70@Class_10E9B570@@UAE?AVFVector@@XZ
-FVector Class_10E9B570::FUN_10c3ed70()
+// FUNCTION: 0x10C3ED70 ?GetRotation@Class_10E9B570@@UAE?AVFVector@@XZ
+FVector Class_10E9B570::GetRotation()
 {
-    return FUN_10c3ebc0(Unknown04);
+    return GetProjectileRotation(m_Owner);
 }

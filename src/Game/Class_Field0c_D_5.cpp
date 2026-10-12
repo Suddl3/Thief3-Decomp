@@ -17,7 +17,7 @@ int Class_Field0c_D::FindIndex(int A)
 {
     for (int i = 0; i < 2; i++)
     {
-        if (Unknown08[i]->FUN_10c3e140() && Unknown08[i]->GetUnknown08() == A)
+        if (Unknown08[i]->IsActive() && Unknown08[i]->GetUnknown08() == A)
             return i;
     }
     return -1;

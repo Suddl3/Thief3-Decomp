@@ -8,7 +8,7 @@ struct Struct_10C40C50;
 class Class_10C40160
 {
 public:
-    Struct_10C40C50* FUN_10c40160(int A, int B);
+    Struct_10C40C50* AllocateArray(int A, int B);
 
     char Unknown00[0x4];
     int Unknown04;

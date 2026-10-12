@@ -6,9 +6,9 @@
 // FUNCTION: 0x10C0C190 ?RemoveAt@Class_10C0C150@@QAEXH@Z
 void Class_10C0C150::RemoveAt(int Index)
 {
-    int Last = Unknown00 - 1;
-    Item_10C0C150 Temp = Unknown08[Index];
-    Unknown08[Index] = Unknown08[Last];
-    Unknown08[Last] = Temp;
-    Resize(Unknown00 - 1);
+    int Last = m_Count - 1;
+    Item_10C0C150 Temp = m_Data[Index];
+    m_Data[Index] = m_Data[Last];
+    m_Data[Last] = Temp;
+    Resize(m_Count - 1);
 }

@@ -12,7 +12,7 @@ public:
     Class_10C60C60(const FVector& A, const FVector& B);
     ~Class_10C60C60();
 
-    void FUN_10c60c60();
+    void Release();
 
     Class_10C609D0* Unknown00;
 };

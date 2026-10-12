@@ -8,7 +8,7 @@ class Class_10C299C0_Unknown04;
 class Class_10C299C0
 {
 public:
-    bool FUN_10c299c0(float* A, float B, float C);
+    bool IsAreaValid(float* A, float B, float C);
 
     char Unknown00[4];
     Class_10C299C0_Unknown04* Unknown04;

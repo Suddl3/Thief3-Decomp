@@ -4,7 +4,7 @@
 #define GAME_CLASS_10C662F0_H
 
 class Class_10C68070;
-class Class_10E9CB00;
+class cResSound;
 struct Struct_10C64E10;
 
 class Class_10C662F0
@@ -13,8 +13,8 @@ public:
     Class_10C662F0();
 
     bool TryCreate(int A, int B, int C);
-    void AddRef(Class_10E9CB00* A);
-    void Release(Class_10E9CB00* A);
+    void AddRef(cResSound* A);
+    void Release(cResSound* A);
     bool FUN_10c66230(int A, Class_10C68070* B);
     void FUN_10c65bf0(int A, Class_10C68070* B);
 

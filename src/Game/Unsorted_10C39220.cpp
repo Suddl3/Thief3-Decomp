@@ -43,14 +43,14 @@ class Class_10C3E140
 public:
     char Unknown00[0x18];
     unsigned char Field18;
-    unsigned char FUN_10c3e140();
+    unsigned char IsActive();
 };
 
 extern int DAT_10ff70a4;
 
 extern void* DAT_10e9b580[];
 
-void FUN_10c3fb10();
+void GetCadenceManager();
 
 void FUN_10c42440();
 
@@ -195,8 +195,8 @@ void FUN_10c3e120()
     FUN_10c3dee0();
 }
 
-// FUNCTION: 0x10C3E140 ?FUN_10c3e140@Class_10C3E140@@QAEEXZ
-unsigned char Class_10C3E140::FUN_10c3e140()
+// FUNCTION: 0x10C3E140 ?IsActive@Class_10C3E140@@QAEEXZ
+unsigned char Class_10C3E140::IsActive()
 {
     return Field18;
 }
@@ -234,7 +234,7 @@ unsigned char CadenceManager::FUN_10c3f260()
 // FUNCTION: 0x10C3FBD0 ?FUN_10c3fbd0@@YAXXZ
 void FUN_10c3fbd0()
 {
-    FUN_10c3fb10();
+    GetCadenceManager();
 }
 
 // FUNCTION: 0x10C42DD0 ?FUN_10c42dd0@@YAXXZ

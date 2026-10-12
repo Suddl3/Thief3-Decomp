@@ -14,7 +14,7 @@ public:
 class Class_10C41420
 {
 public:
-    virtual void FUN_10c423d0(int A, int B, int C, int D);
+    virtual void OnMessage(int A, int B, int C, int D);
 
     void FUN_10c41ab0(int A);
     void FUN_10c41b10();
@@ -23,11 +23,11 @@ public:
 class Class_10E9B83C : public Class_10C41420
 {
 public:
-    virtual void FUN_10c423d0(int A, int B, int C, int D);
+    virtual void OnMessage(int A, int B, int C, int D);
 };
 
-// FUNCTION: 0x10C423D0 ?FUN_10c423d0@Class_10E9B83C@@UAEXHHHH@Z
-void Class_10E9B83C::FUN_10c423d0(int A, int B, int C, int D)
+// FUNCTION: 0x10C423D0 ?OnMessage@Class_10E9B83C@@UAEXHHHH@Z
+void Class_10E9B83C::OnMessage(int A, int B, int C, int D)
 {
     switch (A)
     {

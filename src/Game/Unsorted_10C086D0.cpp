@@ -21,8 +21,8 @@ public:
 
 extern void* DAT_10ff66ac;
 
-// FUNCTION: 0x10C08760 ?FUN_10c08760@@YAXH@Z
-void FUN_10c08760(int A)
+// FUNCTION: 0x10C08760 ?AcquireShared@@YAXH@Z
+void AcquireShared(int A)
 {
     if (!DAT_10ff66ac)
     {

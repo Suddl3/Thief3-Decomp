@@ -9,12 +9,12 @@ struct Struct_10BFBFD0_Value;
 class Class_10BFBFD0
 {
 public:
-    bool FUN_10bfbfd0(Struct_10BFBFD0_Value* Out, int Key);
+    bool FindValue(Struct_10BFBFD0_Value* Out, int Key);
 
     char Unknown00[0x54];
-    int Unknown54;
+    int m_Count;
     char Unknown58[4];
-    Struct_10BFBFD0_Entry* Unknown5C;
+    Struct_10BFBFD0_Entry* m_Entries;
 };
 
 #endif // GAME_CLASS_10BFBFD0_H

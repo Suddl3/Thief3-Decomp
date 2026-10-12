@@ -8,7 +8,7 @@
 class Class_10C4F9B0
 {
 public:
-    void FUN_10c4f9b0();
+    void Empty();
 
     int Unknown00;
     Class_10C4F970 Unknown04;

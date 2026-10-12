@@ -36,8 +36,8 @@ void Class_10C184F0::FUN_10c184f0()
     FUN_10c18430(Unknown04->FUN_10ba9ee0(), &Result, 1, false);
 }
 
-// FUNCTION: 0x10C1A090 ?FUN_10c1a090@@YAXXZ
-void FUN_10c1a090()
+// FUNCTION: 0x10C1A090 ?ReleaseItems@@YAXXZ
+void ReleaseItems()
 {
     --DAT_10ff7088->Unknown00;
     if (DAT_10ff7088->Unknown00 == 0)
@@ -47,8 +47,8 @@ void FUN_10c1a090()
     }
 }
 
-// FUNCTION: 0x10C1A130 ?FUN_10c1a130@@YAXXZ
-void FUN_10c1a130()
+// FUNCTION: 0x10C1A130 ?ReleaseCounter@@YAXXZ
+void ReleaseCounter()
 {
     --*(int*)DAT_10ff708c;
     if (*(int*)DAT_10ff708c == 0)

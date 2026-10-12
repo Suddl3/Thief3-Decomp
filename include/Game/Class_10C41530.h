@@ -9,10 +9,10 @@ struct Struct_10C41530;
 class Class_10C41530
 {
 public:
-    cRefPtr FUN_10c41530(int Index);
+    cRefPtr GetItem(int Index);
 
     char Unknown00[0xC0];
-    Struct_10C41530* UnknownC0;
+    Struct_10C41530* m_Items;
 };
 
 #endif // GAME_CLASS_10C41530_H

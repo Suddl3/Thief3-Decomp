@@ -16,7 +16,7 @@ public:
     unsigned char FUN_10c80360();
     void FUN_10c5dc60(float A);
     void FUN_10c5e810();
-    void FUN_10c5daf0();
+    void Reset();
     void FUN_10c5f060();
 
     char Pad01[0xc];

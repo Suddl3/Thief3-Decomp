@@ -33,12 +33,12 @@ void Class_10E9925C::FUN_10c26770()
     if (Virtual14())
     {
         Class_109B6D50* P = FUN_10c26490();
-        if (P && Unknown35 == true)
+        if (P && m_Registered == true)
         {
-            if (P->FUN_109b6d50(Unknown0C) == true)
-                P->FUN_109b6d10(Unknown0C);
+            if (P->FUN_109b6d50(m_RegistryId) == true)
+                P->FUN_109b6d10(m_RegistryId);
         }
-        Unknown35 = false;
+        m_Registered = false;
     }
 }
 

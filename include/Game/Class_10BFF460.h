@@ -15,12 +15,12 @@ public:
     bool FUN_10bff460();
     bool FUN_10bff330();
     FVector FUN_10bff360();
-    void FUN_10bff250();
+    void MeasureDistance();
     void* FUN_10bff2a0();
 
     char Pad01[0x3];
     Class_10DBBAE0* Unknown04;
-    Class_10978090 Unknown08;
+    Class_10978090 m_Pawn;
     char Pad09[0x3];
 };
 

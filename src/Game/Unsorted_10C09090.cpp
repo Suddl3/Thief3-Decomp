@@ -45,8 +45,8 @@ int FUN_10c13cc0()
     return 0x27;
 }
 
-// FUNCTION: 0x10C15BB0 ?FUN_10c15bb0@Class_10E98C80@@QAEXXZ
-void Class_10E98C80::FUN_10c15bb0()
+// FUNCTION: 0x10C15BB0 ?ResetVTable@Class_10E98C80@@QAEXXZ
+void Class_10E98C80::ResetVTable()
 {
     Field00 = DAT_10e98c80;
 }
@@ -57,23 +57,23 @@ void* Class_10C15D50::FUN_10c15d50()
     return Field401c;
 }
 
-// FUNCTION: 0x10C15DB0 ?FUN_10c15db0@Class_10E98C84@@QAEXXZ
-void Class_10E98C84::FUN_10c15db0()
+// FUNCTION: 0x10C15DB0 ?ResetVTable@Class_10E98C84@@QAEXXZ
+void Class_10E98C84::ResetVTable()
 {
     Field00 = (void*)DAT_10e98c84;
 }
 
-// FUNCTION: 0x10C16220 ?FUN_10c16220@Class_10C16220@@QAEHH@Z
-int Class_10C16220::FUN_10c16220(int Id)
+// FUNCTION: 0x10C16220 ?LookupValue@Class_10C16220@@QAEHH@Z
+int Class_10C16220::LookupValue(int Id)
 {
     int Value = 0;
     Unknown04.FUN_10c160d0(Id, &Value);
     return Value;
 }
 
-// FUNCTION: 0x10C168F0 ?FUN_10c168f0@Class_10C168F0@@QAEXHM@Z
-void Class_10C168F0::FUN_10c168f0(int A, float B)
+// FUNCTION: 0x10C168F0 ?SetTimedValue@Class_10C168F0@@QAEXHM@Z
+void Class_10C168F0::SetTimedValue(int A, float B)
 {
-    Unknown0AC = A;
-    Unknown0B0 = GetTimeSeconds() + B;
+    m_Value = A;
+    m_ExpireTime = GetTimeSeconds() + B;
 }

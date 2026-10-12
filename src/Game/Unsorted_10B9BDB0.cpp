@@ -20,7 +20,7 @@ void Class_10B9BDB0::FUN_10b9bdb0()
     Struct_10B9BDB0_Unknown118* Obj = Unknown118;
     if (Obj && Obj->Unknown04)
     {
-        Obj->Unknown04->Unknown30.FUN_10bfc190();
+        Obj->Unknown04->Unknown30.Reset();
         if (Obj->Unknown04->FUN_10bb89d0())
         {
             Obj->Unknown04->FUN_10bb89d0()->ResetTimer();

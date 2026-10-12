@@ -11,11 +11,11 @@ struct Struct_10C60FA0
     unsigned short Unknown0E;
 };
 
-// FUNCTION: 0x10C60FA0 ?FUN_10c60fa0@Class_10C60FA0@@QAEHH@Z
-int Class_10C60FA0::FUN_10c60fa0(int A)
+// FUNCTION: 0x10C60FA0 ?RoundToBlockAlign@Class_10C60FA0@@QAEHH@Z
+int Class_10C60FA0::RoundToBlockAlign(int A)
 {
-    int X = Unknown1C->Unknown0E >> 3;
-    int Y = Unknown1C->Unknown0C;
+    int X = m_Format->Unknown0E >> 3;
+    int Y = m_Format->Unknown0C;
     int Size = X > Y ? X : Y;
     if (Size == 0)
         Size = 1;

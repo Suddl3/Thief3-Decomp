@@ -10,7 +10,7 @@ public:
     ~Class_10C50EC0();
 
     void FUN_10c50360(int Count);
-    void FUN_10c50ec0();
+    void Empty();
 
     int Unknown00;
     int Unknown04;

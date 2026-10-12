@@ -52,10 +52,10 @@ public:
     virtual Class_10C7D570* Virtual34();
 };
 
-// FUNCTION: 0x10C38F20 ?FUN_10c38f20@Class_10C38F20@@QAEHPBUStruct_10C05A50@@H@Z
-int Class_10C38F20::FUN_10c38f20(const Struct_10C05A50* A, int B)
+// FUNCTION: 0x10C38F20 ?IsWithinRadius@Class_10C38F20@@QAEHPBUStruct_10C05A50@@H@Z
+int Class_10C38F20::IsWithinRadius(const Struct_10C05A50* A, int B)
 {
-    float Radius = Unknown60;
+    float Radius = m_Radius;
     if (DistanceSquared2D(&((Struct_10C38F20_Target*)Unknown48->Virtual34()->FUN_10c7d570())->Unknown2C, A) < Radius * Radius)
         return 1;
     return 0;

@@ -7,7 +7,7 @@ class Class_10C41420 : public Class_10C3FF10
 {
 };
 
-Class_10C41420* FUN_10c47d90();
+Class_10C41420* GetSoundBufferPool();
 
 class Class_10E67FD0
 {
@@ -63,7 +63,7 @@ void cMovieSubtitles::Stop()
 {
     FUN_10a54d50();
     if (Unknown144)
-        FUN_10c47d90()->FUN_10c3ff10(-1);
+        GetSoundBufferPool()->CommitPending(-1);
     if (Unknown124)
     {
         Unknown124(Unknown128);

@@ -9,12 +9,12 @@ struct Struct_10C55320;
 class Class_10C55320
 {
 public:
-    cRefPtr FUN_10c55320();
+    cRefPtr GetFirst();
 
     char Unknown00[0x20];
-    Struct_10C55320* Unknown20;
+    Struct_10C55320* m_Head;
     char Unknown24[0x34];
-    Struct_10C55320* Unknown58;
+    Struct_10C55320* m_Current;
 };
 
 #endif // GAME_CLASS_10C55320_H

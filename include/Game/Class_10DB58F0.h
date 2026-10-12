@@ -4,7 +4,7 @@
 #define GAME_CLASS_10DB58F0_H
 
 class cString;
-class Class_10E9CB00;
+class cResSound;
 
 class Class_10DB58F0
 {
@@ -22,8 +22,8 @@ public:
     virtual void Virtual10();
     virtual void Virtual11();
     virtual void Virtual12();
-    virtual void Virtual13(Class_10E9CB00* A);
-    virtual void Virtual14(Class_10E9CB00* A);
+    virtual void Virtual13(cResSound* A);
+    virtual void Virtual14(cResSound* A);
     virtual void Virtual15();
     virtual void Virtual16(int A);
     virtual void Virtual17();

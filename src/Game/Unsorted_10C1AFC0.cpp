@@ -77,8 +77,8 @@ bool Class_10E98DE0::FUN_10c1afe0()
     return false;
 }
 
-// FUNCTION: 0x10C1B0F0 ?FUN_10c1b0f0@Class_10C1B0F0@@QAEXM@Z
-void Class_10C1B0F0::FUN_10c1b0f0(float Value)
+// FUNCTION: 0x10C1B0F0 ?SetClampedValue@Class_10C1B0F0@@QAEXM@Z
+void Class_10C1B0F0::SetClampedValue(float Value)
 {
     float Clamped = Value <= DAT_10e49984 ? Value : DAT_10e49984;
     Unknown2C = Clamped;

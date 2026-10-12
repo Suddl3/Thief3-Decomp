@@ -9,10 +9,10 @@ struct Struct_10C4DE60;
 class Class_10C4DE60
 {
 public:
-    Elem_10C4DE60* FUN_10c4de60(int p1, int p2);
+    Elem_10C4DE60* GetElement(int p1, int p2);
 
     char Unknown00[0x10];
-    Struct_10C4DE60* Unknown10;
+    Struct_10C4DE60* m_Groups;
 };
 
 #endif // GAME_CLASS_10C4DE60_H

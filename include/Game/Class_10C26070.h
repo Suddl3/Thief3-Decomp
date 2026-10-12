@@ -8,11 +8,11 @@ class Class_10C26070_Unknown00;
 class Class_10C26070
 {
 public:
-    char FUN_10c26070(float Margin);
+    char GetValueWithin(float Margin);
 
-    Class_10C26070_Unknown00* Unknown00;
-    int Unknown04;
-    int Unknown08;
+    Class_10C26070_Unknown00* m_Grid;
+    int m_Row;
+    int m_Column;
 };
 
 #endif // GAME_CLASS_10C26070_H

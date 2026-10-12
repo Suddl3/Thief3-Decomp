@@ -14,13 +14,13 @@ public:
     virtual float Virtual6(int A);
 };
 
-// FUNCTION: 0x10BFC020 ?FUN_10bfc020@Class_10BFC020@@QAEMH@Z
-float Class_10BFC020::FUN_10bfc020(int A)
+// FUNCTION: 0x10BFC020 ?SumValuesFor@Class_10BFC020@@QAEMH@Z
+float Class_10BFC020::SumValuesFor(int A)
 {
     float Sum = 0.0f;
-    for (int i = 0; i < Unknown08; i++)
+    for (int i = 0; i < m_Count; i++)
     {
-        Class_10BFC020_Item* Item = Unknown10[i];
+        Class_10BFC020_Item* Item = m_Items[i];
         if (Item->Virtual0() == A)
             Sum += Item->Virtual6(0);
     }

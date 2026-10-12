@@ -4,7 +4,7 @@
 #include "Game/cBinkMovie.h"
 #include "Game/Class_10DB58F0.h"
 
-class Class_10E9CB00;
+class cResSound;
 
 class cBinkMovie;
 

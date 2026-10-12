@@ -75,110 +75,110 @@ Class_10E8C210::~Class_10E8C210()
     DAT_10f46da0->Virtual2(this);
 }
 
-// FUNCTION: 0x10C14570 ?FUN_10c14570@@YA?AVcString@@XZ
-cString FUN_10c14570()
+// FUNCTION: 0x10C14570 ?GetAITaggedVolumeLabel@@YA?AVcString@@XZ
+cString GetAITaggedVolumeLabel()
 {
     return cString(DAT_10e9864c);
 }
 
-// FUNCTION: 0x10C14590 ?FUN_10c14590@@YA?AVcString@@XZ
-cString FUN_10c14590()
+// FUNCTION: 0x10C14590 ?GetAITaggedVolumeDescription@@YA?AVcString@@XZ
+cString GetAITaggedVolumeDescription()
 {
     return cString(DAT_10e98680);
 }
 
-// FUNCTION: 0x10C145B0 ?FUN_10c145b0@@YA?AVcString@@XZ
-cString FUN_10c145b0()
+// FUNCTION: 0x10C145B0 ?GetAIContextVolumeLabel@@YA?AVcString@@XZ
+cString GetAIContextVolumeLabel()
 {
     return cString(DAT_10e986f8);
 }
 
-// FUNCTION: 0x10C145D0 ?FUN_10c145d0@@YA?AVcString@@XZ
-cString FUN_10c145d0()
+// FUNCTION: 0x10C145D0 ?GetAIContextVolumeDescription@@YA?AVcString@@XZ
+cString GetAIContextVolumeDescription()
 {
     return cString(DAT_10e98738);
 }
 
-// FUNCTION: 0x10C147A0 ?FUN_10c147a0@@YA?AVcString@@XZ
-cString FUN_10c147a0()
+// FUNCTION: 0x10C147A0 ?GetAIPlayerDistanceLabel@@YA?AVcString@@XZ
+cString GetAIPlayerDistanceLabel()
 {
     return cString(DAT_10e98798);
 }
 
-// FUNCTION: 0x10C147C0 ?FUN_10c147c0@@YA?AVcString@@XZ
-cString FUN_10c147c0()
+// FUNCTION: 0x10C147C0 ?GetAIPlayerDistanceDescription@@YA?AVcString@@XZ
+cString GetAIPlayerDistanceDescription()
 {
     return cString(DAT_10e987e8);
 }
 
-// FUNCTION: 0x10C147E0 ?FUN_10c147e0@@YA?AVcString@@XZ
-cString FUN_10c147e0()
+// FUNCTION: 0x10C147E0 ?GetAIBehaviorStateLabel@@YA?AVcString@@XZ
+cString GetAIBehaviorStateLabel()
 {
     return cString(DAT_10e98844);
 }
 
-// FUNCTION: 0x10C14800 ?FUN_10c14800@@YA?AVcString@@XZ
-cString FUN_10c14800()
+// FUNCTION: 0x10C14800 ?GetAIBehaviorStateDescription@@YA?AVcString@@XZ
+cString GetAIBehaviorStateDescription()
 {
     return cString(DAT_10e98880);
 }
 
-// FUNCTION: 0x10C14820 ?FUN_10c14820@@YA?AVcString@@XZ
-cString FUN_10c14820()
+// FUNCTION: 0x10C14820 ?GetAIAlertLevelLabel@@YA?AVcString@@XZ
+cString GetAIAlertLevelLabel()
 {
     return cString(DAT_10e988e4);
 }
 
-// FUNCTION: 0x10C14840 ?FUN_10c14840@@YA?AVcString@@XZ
-cString FUN_10c14840()
+// FUNCTION: 0x10C14840 ?GetAIAlertLevelDescription@@YA?AVcString@@XZ
+cString GetAIAlertLevelDescription()
 {
     return cString(DAT_10e98920);
 }
 
-// FUNCTION: 0x10C14860 ?FUN_10c14860@@YA?AVcString@@XZ
-cString FUN_10c14860()
+// FUNCTION: 0x10C14860 ?GetAIDispositionLabel@@YA?AVcString@@XZ
+cString GetAIDispositionLabel()
 {
     return cString(DAT_10e989d8);
 }
 
-// FUNCTION: 0x10C14880 ?FUN_10c14880@@YA?AVcString@@XZ
-cString FUN_10c14880()
+// FUNCTION: 0x10C14880 ?GetAIDispositionDescription@@YA?AVcString@@XZ
+cString GetAIDispositionDescription()
 {
     return cString(DAT_10e98a40);
 }
 
-// FUNCTION: 0x10C14A00 ?FUN_10c14a00@@YA?AVcString@@XZ
-cString FUN_10c14a00()
+// FUNCTION: 0x10C14A00 ?GetAIInferenceLabel@@YA?AVcString@@XZ
+cString GetAIInferenceLabel()
 {
     return cString(DAT_10e98aa0);
 }
 
-// FUNCTION: 0x10C14A20 ?FUN_10c14a20@@YA?AVcString@@XZ
-cString FUN_10c14a20()
+// FUNCTION: 0x10C14A20 ?GetAIInferenceDescription@@YA?AVcString@@XZ
+cString GetAIInferenceDescription()
 {
     return cString(DAT_10e98ad8);
 }
 
-// FUNCTION: 0x10C14A40 ?FUN_10c14a40@@YA?AVcString@@XZ
-cString FUN_10c14a40()
+// FUNCTION: 0x10C14A40 ?GetAIEvidenceLabel@@YA?AVcString@@XZ
+cString GetAIEvidenceLabel()
 {
     return cString(DAT_10e98b24);
 }
 
-// FUNCTION: 0x10C14A60 ?FUN_10c14a60@@YA?AVcString@@XZ
-cString FUN_10c14a60()
+// FUNCTION: 0x10C14A60 ?GetAIEvidenceDescription@@YA?AVcString@@XZ
+cString GetAIEvidenceDescription()
 {
     return cString(DAT_10e98b60);
 }
 
-// FUNCTION: 0x10C14A80 ?FUN_10c14a80@@YA?AVcString@@XZ
-cString FUN_10c14a80()
+// FUNCTION: 0x10C14A80 ?GetAILockpickingLabel@@YA?AVcString@@XZ
+cString GetAILockpickingLabel()
 {
     return cString(DAT_10e98bb8);
 }
 
-// FUNCTION: 0x10C14AA0 ?FUN_10c14aa0@@YA?AVcString@@XZ
-cString FUN_10c14aa0()
+// FUNCTION: 0x10C14AA0 ?GetAILockpickingDescription@@YA?AVcString@@XZ
+cString GetAILockpickingDescription()
 {
     return cString(DAT_10e98be8);
 }

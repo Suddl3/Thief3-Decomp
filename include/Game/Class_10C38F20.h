@@ -9,12 +9,12 @@ struct Struct_10C05A50;
 class Class_10C38F20
 {
 public:
-    int FUN_10c38f20(const Struct_10C05A50* A, int B);
+    int IsWithinRadius(const Struct_10C05A50* A, int B);
 
     char Unknown00[0x48];
     Object_10C38F20* Unknown48;
     char Unknown4C[0x14];
-    float Unknown60;
+    float m_Radius;
 };
 
 #endif // GAME_CLASS_10C38F20_H

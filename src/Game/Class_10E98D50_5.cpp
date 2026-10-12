@@ -42,8 +42,8 @@ void Class_10E98D50::Serialize(FArchive& Ar)
         Ar.Serialize(&m_Disabled, 1);
 }
 
-// FUNCTION: 0x10C1B930 ?FUN_10c1b930@Class_10C1B930@@QAEXXZ
-void Class_10C1B930::FUN_10c1b930()
+// FUNCTION: 0x10C1B930 ?Reset@Class_10C1B930@@QAEXXZ
+void Class_10C1B930::Reset()
 {
     Unknown2C = 0;
     Unknown3C = 0;

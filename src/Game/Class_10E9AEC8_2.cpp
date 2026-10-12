@@ -17,7 +17,7 @@ public:
     Class_10c380d0_Member* Unknown04;
 };
 
-class Class_10E9AEC8 : public Class_10C270C0
+class MC_PullToPoint : public Class_10C270C0
 {
 public:
     virtual void Virtual1();
@@ -32,8 +32,8 @@ public:
     float m_Threshold;
 };
 
-// FUNCTION: 0x10C38210 ?CheckDistance@Class_10E9AEC8@@UAEXXZ
-void Class_10E9AEC8::CheckDistance()
+// FUNCTION: 0x10C38210 ?CheckDistance@MC_PullToPoint@@UAEXXZ
+void MC_PullToPoint::CheckDistance()
 {
     if (!m_bTriggered)
     {

@@ -7,28 +7,28 @@
 class Class_10C25EB0
 {
 public:
-    FVector FUN_10c25eb0();
+    FVector GetPosition();
 
-    Class_10C064D0* Unknown00;
-    int Unknown04;
-    int Unknown08;
+    Class_10C064D0* m_Grid;
+    int m_Row;
+    int m_Column;
 };
 
-// FUNCTION: 0x10C25770 ?FUN_10c25770@Class_10C25770@@QAEHPAH@Z
-int Class_10C25770::FUN_10c25770(int* Value)
+// FUNCTION: 0x10C25770 ?IndexOf@Class_10C25770@@QAEHPAH@Z
+int Class_10C25770::IndexOf(int* Value)
 {
-    for (int i = 0; i < Unknown00; i++)
+    for (int i = 0; i < m_Count; i++)
     {
-        if (Unknown08[i] == *Value)
+        if (m_Data[i] == *Value)
             return i;
     }
     return -1;
 }
 
-// FUNCTION: 0x10C25EB0 ?FUN_10c25eb0@Class_10C25EB0@@QAE?AVFVector@@XZ
-FVector Class_10C25EB0::FUN_10c25eb0()
+// FUNCTION: 0x10C25EB0 ?GetPosition@Class_10C25EB0@@QAE?AVFVector@@XZ
+FVector Class_10C25EB0::GetPosition()
 {
-    if (!Unknown00)
+    if (!m_Grid)
         return FVector(0.0f, 0.0f, 0.0f);
-    return Unknown00->FUN_10c064d0(Unknown04, Unknown08);
+    return m_Grid->FUN_10c064d0(m_Row, m_Column);
 }

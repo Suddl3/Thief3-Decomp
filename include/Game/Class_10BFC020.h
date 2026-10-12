@@ -8,12 +8,12 @@ class Class_10BFC020_Item;
 class Class_10BFC020
 {
 public:
-    float FUN_10bfc020(int A);
+    float SumValuesFor(int A);
 
     char Unknown00[8];
-    int Unknown08;
+    int m_Count;
     char Unknown0C[4];
-    Class_10BFC020_Item** Unknown10;
+    Class_10BFC020_Item** m_Items;
 };
 
 #endif // GAME_CLASS_10BFC020_H

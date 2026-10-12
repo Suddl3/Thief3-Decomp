@@ -6,7 +6,7 @@
 class Class_10BFC190
 {
 public:
-    void FUN_10bfc190();
+    void Reset();
 
     char Unknown00[8];
     int Unknown08;

@@ -26,7 +26,7 @@ public:
 class Class_10C3E140
 {
 public:
-    unsigned char FUN_10c3e140();
+    unsigned char IsActive();
 };
 
 class Class_10B7AB80 : public Class_10C3E140

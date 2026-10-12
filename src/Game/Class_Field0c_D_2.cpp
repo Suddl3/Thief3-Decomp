@@ -17,6 +17,6 @@ unsigned char Class_Field0c_D::FUN_10b470d0(int A)
 {
     int Index = FindIndex(A);
     if (Index >= 0)
-        return Unknown08[Index]->FUN_10c3e140();
+        return Unknown08[Index]->IsActive();
     return 0;
 }

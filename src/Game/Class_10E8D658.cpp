@@ -5,7 +5,7 @@
 class Class_10E98C84
 {
 public:
-    void FUN_10c15db0();
+    void ResetVTable();
 
     void* Field00;
 };
@@ -22,5 +22,5 @@ public:
 // FUNCTION: 0x10BA8E90 ??1Class_10E8D658@@UAE@XZ
 Class_10E8D658::~Class_10E8D658()
 {
-    Unknown4014.FUN_10c15db0();
+    Unknown4014.ResetVTable();
 }

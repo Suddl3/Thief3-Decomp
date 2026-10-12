@@ -11,8 +11,8 @@ struct Struct_10C56D20
     bool Unknown35;
 };
 
-// FUNCTION: 0x10C56D20 ?FUN_10c56d20@Class_10C56D20@@QAEXPAUStruct_10C56D20@@@Z
-void Class_10C56D20::FUN_10c56d20(Struct_10C56D20* Node)
+// FUNCTION: 0x10C56D20 ?RotateRight@Class_10C56D20@@QAEXPAUStruct_10C56D20@@@Z
+void Class_10C56D20::RotateRight(Struct_10C56D20* Node)
 {
     Struct_10C56D20* Left = Node->Unknown00;
     Node->Unknown00 = Left->Unknown08;

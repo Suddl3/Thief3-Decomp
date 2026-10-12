@@ -11,7 +11,7 @@
 void Class_10B47660::FUN_10b47660(int A, int B)
 {
     Unknown4C.SetCount(0);
-    if (Unknown0C->FUN_10c3e140())
+    if (Unknown0C->IsActive())
         Unknown0C->FUN_10b7b8a0();
     Unknown08->FUN_10b7ab80(A, 1.0f);
     Unknown08->FUN_10b7abb0(0x3f800000);

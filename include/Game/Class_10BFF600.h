@@ -17,12 +17,12 @@ public:
 
     char Pad00[0x1];
     char Pad01[0xf];
-    int Unknown10;
+    int m_Count;
     char Pad14[0x4];
-    Class_10BFF600_Unknown18** Unknown18;
+    Class_10BFF600_Unknown18** m_Elements;
     char Pad1C[0xc];
-    Struct_10C05A80 Unknown28;
-    int Unknown34;
+    Struct_10C05A80 m_LastPosition;
+    int m_LastResult;
 };
 
 #endif // GAME_CLASS_10BFF600_H

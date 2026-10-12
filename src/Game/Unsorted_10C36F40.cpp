@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10E98C8C.h"
 
-class Class_10E9ADE8
+class MC_Follow
 {
 public:
     virtual void Virtual0();
@@ -35,8 +35,8 @@ public:
     Class_10E98C8C Unknown4C;
 };
 
-// FUNCTION: 0x10C36F40 ?GetState@Class_10E9ADE8@@UAEHXZ
-int Class_10E9ADE8::GetState()
+// FUNCTION: 0x10C36F40 ?GetState@MC_Follow@@UAEHXZ
+int MC_Follow::GetState()
 {
     int Result = GetStateFromFlags();
     if (Result == 0x15 && Unknown8C == 1)

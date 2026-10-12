@@ -12,7 +12,7 @@ void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
 class Class_10E98C8C;
 
-void FUN_10c164c0(Class_10E98C8C* A);
+void RegisterItem(Class_10E98C8C* A);
 
 float Distance(const Struct_10BA91E0* A, const Struct_10BA91E0* B);
 
@@ -40,8 +40,8 @@ struct Struct_10C16680
     Struct_10BA91E0 Unknown2C;
 };
 
-// FUNCTION: 0x10C165F0 ?FUN_10c165f0@@YAPAVClass_10E98C8C@@H@Z
-Class_10E98C8C* FUN_10c165f0(int Value)
+// FUNCTION: 0x10C165F0 ?CreateItem@@YAPAVClass_10E98C8C@@H@Z
+Class_10E98C8C* CreateItem(int Value)
 {
     const int& Tag = 0;
     return new(Tag, 0, 0, 0, 0) Class_10E98C8C(Value);

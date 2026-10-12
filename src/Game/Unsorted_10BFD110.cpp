@@ -27,14 +27,14 @@ public:
     int Unknown08;
 };
 
-// FUNCTION: 0x10BFD160 ?FUN_10bfd160@Class_10BFD160@@QAEXPAVClass_10C08940@@PAVcIntArray@@M1@Z
-void Class_10BFD160::FUN_10bfd160(Class_10C08940* Owner, cIntArray* Ids, float Limit, cIntArray* Out)
+// FUNCTION: 0x10BFD160 ?CollectMatching@Class_10BFD160@@QAEXPAVClass_10C08940@@PAVcIntArray@@M1@Z
+void Class_10BFD160::CollectMatching(Class_10C08940* Owner, cIntArray* Ids, float Limit, cIntArray* Out)
 {
     if (Owner != 0)
     {
-        for (int i = Unknown08 - 1; i >= 0; i--)
+        for (int i = m_Count - 1; i >= 0; i--)
         {
-            Class_10978090* Obj = Unknown10[i];
+            Class_10978090* Obj = m_Objects[i];
             if (Obj->FUN_10978090() == Owner)
             {
                 for (int j = 0; j < Ids->Count; j++)

@@ -1,8 +1,8 @@
-// Game/Class_10E9AEC8.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/MC_PullToPoint.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10c380d0_Member.h"
 
-class Class_10E9AEC8
+class MC_PullToPoint
 {
 public:
     virtual void Virtual0();
@@ -18,8 +18,8 @@ public:
     unsigned char m_bTriggered;
 };
 
-// FUNCTION: 0x10C380D0 ?Trigger@Class_10E9AEC8@@UAEXXZ
-void Class_10E9AEC8::Trigger()
+// FUNCTION: 0x10C380D0 ?Trigger@MC_PullToPoint@@UAEXXZ
+void MC_PullToPoint::Trigger()
 {
     m_bTriggered = 1;
     Unknown04->Virtual44();

@@ -8,7 +8,7 @@
 class Class_10C16220
 {
 public:
-    int FUN_10c16220(int Id);
+    int LookupValue(int Id);
 
     char Unknown00[4];
     Class_10C160D0 Unknown04;

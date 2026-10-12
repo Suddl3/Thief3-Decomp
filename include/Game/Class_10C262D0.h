@@ -15,10 +15,10 @@ public:
     virtual void Virtual6();
     virtual void Virtual7();
 
-    void FUN_10c262d0(bool A);
+    void SetActive(bool A);
 
     char Unknown04[0x40];
-    bool Unknown44;
+    bool m_Active;
 };
 
 #endif // GAME_CLASS_10C262D0_H

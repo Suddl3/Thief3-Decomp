@@ -26,7 +26,7 @@ public:
 void Class_10E8C118::Serialize(FArchive& Ar)
 {
     if (Ar.Unknown0C >= 0x5E)
-        Unknown2C->FUN_10c084a0(Ar);
+        Unknown2C->Serialize(Ar);
     if (Ar.Unknown0C >= 0x66)
         Ar.Serialize(&UnknownB0, 1);
     if (Ar.Unknown0C >= 0x74)

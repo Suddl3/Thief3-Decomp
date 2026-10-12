@@ -17,10 +17,10 @@ public:
     Class_1098E330* Unknown00;
 };
 
-// FUNCTION: 0x10C29220 ?FUN_10c29220@Class_10C29220@@QAEXXZ
-void Class_10C29220::FUN_10c29220()
+// FUNCTION: 0x10C29220 ?UpdateTimer@Class_10C29220@@QAEXXZ
+void Class_10C29220::UpdateTimer()
 {
-    if (Unknown20 <= DAT_10eafbdc)
+    if (m_TimeLeft <= DAT_10eafbdc)
     {
         if (Unknown04 > 0 && !Unknown1C)
         {
@@ -31,23 +31,23 @@ void Class_10C29220::FUN_10c29220()
                 float X;
                 Obj->FUN_1098e330(0x10077f, (int*)&X);
                 Obj->FUN_1098e330(0x100780, (int*)&Y);
-                Unknown20 = (Y - X) * appFrand() + X;
-                if (Unknown20 <= DAT_10eafbdc)
+                m_TimeLeft = (Y - X) * appFrand() + X;
+                if (m_TimeLeft <= DAT_10eafbdc)
                 {
                     Unknown1D = false;
-                    Unknown20 = 0.0f;
+                    m_TimeLeft = 0.0f;
                 }
             }
         }
     }
     else
     {
-        double Remaining = Unknown20;
-        Unknown20 = Remaining - GetFrameDeltaTime();
-        if (Unknown20 <= DAT_10eafbdc)
+        double Remaining = m_TimeLeft;
+        m_TimeLeft = Remaining - GetFrameDeltaTime();
+        if (m_TimeLeft <= DAT_10eafbdc)
         {
             Unknown1D = false;
-            Unknown20 = 0.0f;
+            m_TimeLeft = 0.0f;
         }
     }
 }

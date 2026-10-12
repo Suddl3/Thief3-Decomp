@@ -10,15 +10,15 @@ struct Struct_10C16350
 class Class_10E98C88
 {
 public:
-    virtual void FUN_10c16350(int A, void* B, int C, int D);
+    virtual void HandleMessage(int A, void* B, int C, int D);
 
     int Unknown04;
     char Unknown08[4];
     Struct_10C16350** Unknown0C;
 };
 
-// FUNCTION: 0x10C16350 ?FUN_10c16350@Class_10E98C88@@UAEXHPAXHH@Z
-void Class_10E98C88::FUN_10c16350(int A, void* B, int C, int D)
+// FUNCTION: 0x10C16350 ?HandleMessage@Class_10E98C88@@UAEXHPAXHH@Z
+void Class_10E98C88::HandleMessage(int A, void* B, int C, int D)
 {
     if (A == 0x26 && B)
     {

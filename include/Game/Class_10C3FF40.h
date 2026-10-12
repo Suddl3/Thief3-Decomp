@@ -9,10 +9,10 @@
 class Class_10C3FF40
 {
 public:
-    int FUN_10c3ff40();
+    int GetItemCount();
 
     int Unknown00;
-    std::vector<Struct_10C3FF40_Item> Unknown04;
+    std::vector<Struct_10C3FF40_Item> m_Items;
 };
 
 #endif // GAME_CLASS_10C3FF40_H

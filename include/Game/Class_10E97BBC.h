@@ -10,7 +10,7 @@ class FArchive;
 class Class_10E97BBC
 {
 public:
-    virtual void FUN_10c08810(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 
     Class_10C08810 Unknown04;
     char Unknown08[4];

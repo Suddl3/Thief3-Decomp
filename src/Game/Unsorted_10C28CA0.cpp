@@ -10,8 +10,8 @@ void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D
 
 extern Class_10C28CA0* DAT_10ff70a0;
 
-// FUNCTION: 0x10C28D20 ?FUN_10c28d20@@YAXXZ
-void FUN_10c28d20()
+// FUNCTION: 0x10C28D20 ?AcquireSingleton@@YAXXZ
+void AcquireSingleton()
 {
     if (DAT_10ff70a0 == 0)
     {

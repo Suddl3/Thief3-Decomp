@@ -98,8 +98,8 @@ public:
     virtual int Virtual85();
 };
 
-// FUNCTION: 0x10C06750 ?FUN_10c06750@Class_10E8C008@@UAEXAAVFArchive@@@Z
-void Class_10E8C008::FUN_10c06750(FArchive& Ar)
+// FUNCTION: 0x10C06750 ?Serialize@Class_10E8C008@@UAEXAAVFArchive@@@Z
+void Class_10E8C008::Serialize(FArchive& Ar)
 {
     int Version = 3;
     Ar.Serialize(&Version, 4);

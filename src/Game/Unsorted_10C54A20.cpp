@@ -85,13 +85,13 @@ struct Struct_10C54A20
     Class_10C56E40 Unknown04;
 };
 
-// FUNCTION: 0x10C54A20 ?FUN_10c54a20@Class_10C54A20@@QAEXHH@Z
-void Class_10C54A20::FUN_10c54a20(int A, int B)
+// FUNCTION: 0x10C54A20 ?Swap@Class_10C54A20@@QAEXHH@Z
+void Class_10C54A20::Swap(int A, int B)
 {
     Struct_10C54A20 Temp;
-    Temp = Unknown08[A];
-    Unknown08[A] = Unknown08[B];
-    Unknown08[B] = Temp;
+    Temp = m_Data[A];
+    m_Data[A] = m_Data[B];
+    m_Data[B] = Temp;
 }
 
 // FUNCTION: 0x10C54B70 ??0Class_10E9C300@@QAE@XZ
@@ -99,20 +99,20 @@ Class_10E9C300::Class_10E9C300()
 {
 }
 
-// FUNCTION: 0x10C55320 ?FUN_10c55320@Class_10C55320@@QAE?AVcRefPtr@@XZ
-cRefPtr Class_10C55320::FUN_10c55320()
+// FUNCTION: 0x10C55320 ?GetFirst@Class_10C55320@@QAE?AVcRefPtr@@XZ
+cRefPtr Class_10C55320::GetFirst()
 {
-    Unknown58 = Unknown20->Unknown00;
-    if (Unknown58 == Unknown20)
+    m_Current = m_Head->Unknown00;
+    if (m_Current == m_Head)
         return cRefPtr();
-    return Unknown58->Unknown1C;
+    return m_Current->Unknown1C;
 }
 
-// FUNCTION: 0x10C55360 ?FUN_10c55360@Class_10C55360@@QAE?AVcRefPtr@@XZ
-cRefPtr Class_10C55360::FUN_10c55360()
+// FUNCTION: 0x10C55360 ?GetNext@Class_10C55360@@QAE?AVcRefPtr@@XZ
+cRefPtr Class_10C55360::GetNext()
 {
-    ++Unknown58;
-    if (Unknown58 == Unknown1C.end())
+    ++m_Current;
+    if (m_Current == m_Entries.end())
         return cRefPtr();
-    return Unknown58->Value;
+    return m_Current->Value;
 }

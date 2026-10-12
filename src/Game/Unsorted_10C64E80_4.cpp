@@ -19,7 +19,7 @@ public:
     char Pad00[0x38];
 };
 
-class Class_10E9CB00;
+class cResSound;
 
 struct Struct_10C64E10;
 
@@ -28,8 +28,8 @@ class Class_10C662F0
 {
 public:
     bool TryCreate(int A, int B, int C);
-    void AddRef(Class_10E9CB00* A);
-    void Release(Class_10E9CB00* A);
+    void AddRef(cResSound* A);
+    void Release(cResSound* A);
     void FUN_10c65bf0(int A, Class_10C68070* B);
 
     char Unknown00[0x1C];

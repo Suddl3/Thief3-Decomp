@@ -9,9 +9,9 @@ class Class_10C57310_Unknown00;
 class Class_10C57310
 {
 public:
-    bool FUN_10c57310(cString* A, float B);
+    bool SetFlag(cString* A, float B);
 
-    Class_10C57310_Unknown00* Unknown00;
+    Class_10C57310_Unknown00* m_Flags;
 };
 
 #endif // GAME_CLASS_10C57310_H

@@ -26,8 +26,8 @@ public:
 
 extern Class_10C19FD0* DAT_10ff7088;
 
-// FUNCTION: 0x10C1A030 ?FUN_10c1a030@@YAXXZ
-void FUN_10c1a030()
+// FUNCTION: 0x10C1A030 ?AddRefItems@@YAXXZ
+void AddRefItems()
 {
     if (DAT_10ff7088 == 0)
     {

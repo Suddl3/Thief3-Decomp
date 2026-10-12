@@ -6,11 +6,11 @@
 class Class_10BFBE30
 {
 public:
-    bool FUN_10bfbe30();
+    bool HasTimedOut();
 
     char Unknown00[4];
-    float Unknown04;
-    float Unknown08;
+    float m_TimeStamp;
+    float m_TimeLimit;
 };
 
 #endif // GAME_CLASS_10BFBE30_H

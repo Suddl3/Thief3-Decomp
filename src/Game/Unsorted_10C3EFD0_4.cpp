@@ -18,7 +18,7 @@ public:
     void FUN_10c472d0(int A);
 };
 
-Class_10C41420* FUN_10c47d90();
+Class_10C41420* GetSoundBufferPool();
 
 Class_10C80360* FUN_10c5f280();
 

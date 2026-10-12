@@ -53,14 +53,14 @@ public:
     virtual void FUN_10c356b0();
 
     char Unknown04[0x64];
-    FRotator Unknown68;
-    char Unknown74[0x27];
-    bool Unknown9B;
+    FRotator m_Rotation;
+    char m_Info[0x27];
+    bool m_HasRotation;
 };
 
 // FUNCTION: 0x10C356B0 ?FUN_10c356b0@cMotionControllerAnim@@UAEXXZ
 void cMotionControllerAnim::FUN_10c356b0()
 {
-    Unknown68 = FRotator(0, 0, 0);
-    Unknown9B = false;
+    m_Rotation = FRotator(0, 0, 0);
+    m_HasRotation = false;
 }

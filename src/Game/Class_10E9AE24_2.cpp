@@ -11,23 +11,23 @@ public:
     char Unknown04[0x48];
 };
 
-class Class_10E9ADE8 : public MoveCommand
+class MC_Follow : public MoveCommand
 {
 public:
     Class_10E98C8C Unknown4C;
     char Unknown54[0x40];
 };
 
-class Class_10E9AE24 : public Class_10E9ADE8
+class MC_FollowAbsolute : public MC_Follow
 {
 public:
-    ~Class_10E9AE24();
+    ~MC_FollowAbsolute();
 
     int m_OffsetX;
     int m_OffsetY;
 };
 
-// FUNCTION: 0x10C37770 ??1Class_10E9AE24@@QAE@XZ
-Class_10E9AE24::~Class_10E9AE24()
+// FUNCTION: 0x10C37770 ??1MC_FollowAbsolute@@QAE@XZ
+MC_FollowAbsolute::~MC_FollowAbsolute()
 {
 }

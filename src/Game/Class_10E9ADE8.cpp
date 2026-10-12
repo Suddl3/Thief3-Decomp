@@ -1,7 +1,7 @@
-// Game/Class_10E9ADE8.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/MC_Follow.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-class Class_10E9ADE8
+class MC_Follow
 {
 public:
     virtual void Virtual0();
@@ -15,8 +15,8 @@ public:
     unsigned int m_Flags;
 };
 
-// FUNCTION: 0x10C27140 ?GetStateFromFlags@Class_10E9ADE8@@UAEHXZ
-int Class_10E9ADE8::GetStateFromFlags()
+// FUNCTION: 0x10C27140 ?GetStateFromFlags@MC_Follow@@UAEHXZ
+int MC_Follow::GetStateFromFlags()
 {
     unsigned int Flags = m_Flags;
     if (Flags & 0x2)

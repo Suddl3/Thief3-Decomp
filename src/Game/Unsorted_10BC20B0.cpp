@@ -31,7 +31,7 @@ void Class_10BC20B0::FUN_10bc20b0(AAIPathPoint* A, int B)
             int K1 = B;
             int K2 = B;
             int K3 = B;
-            if (Owner->Unknown00.FUN_10c25770(&K1) == -1 && Owner->Unknown18.FUN_10c25770(&K2) == -1 && Owner->Unknown24.FUN_10c25770(&K3) == -1)
+            if (Owner->Unknown00.IndexOf(&K1) == -1 && Owner->Unknown18.IndexOf(&K2) == -1 && Owner->Unknown24.IndexOf(&K3) == -1)
                 FUN_10bc0f50(A, B);
             else
                 FUN_10bc0150(A, (AAIPathPoint*)B);

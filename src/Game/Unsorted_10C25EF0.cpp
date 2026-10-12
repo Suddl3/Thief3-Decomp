@@ -5,8 +5,8 @@
 
 int FUN_10b0fdb0();
 
-// FUNCTION: 0x10C25EF0 ?FUN_10c25ef0@@YAXPAVClass_10B9FBE0@@@Z
-void FUN_10c25ef0(Class_10B9FBE0* Array)
+// FUNCTION: 0x10C25EF0 ?InitGrid@@YAXPAVClass_10B9FBE0@@@Z
+void InitGrid(Class_10B9FBE0* Array)
 {
     if (Array->m_Count == 0)
     {

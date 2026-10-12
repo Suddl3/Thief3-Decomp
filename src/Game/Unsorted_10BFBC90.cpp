@@ -8,7 +8,7 @@
 #include "Game/Class_10E97AD4.h"
 #include "Game/Class_10E97ADC.h"
 
-void FUN_10bfbd30(int* A);
+void DeleteAllObjects(int* A);
 
 extern void* DAT_10e97adc[];
 
@@ -16,25 +16,25 @@ double FUN_1095af80();
 
 double GetTimeSeconds();
 
-// FUNCTION: 0x10BFBC90 ?FUN_10bfbc90@Class_10BFBC90@@QAEXXZ
-void Class_10BFBC90::FUN_10bfbc90()
+// FUNCTION: 0x10BFBC90 ?StampTime@Class_10BFBC90@@QAEXXZ
+void Class_10BFBC90::StampTime()
 {
-    Unknown4C = (float)GetTimeSeconds();
+    m_TimeStamp = (float)GetTimeSeconds();
 }
 
-// FUNCTION: 0x10BFC190 ?FUN_10bfc190@Class_10BFC190@@QAEXXZ
-void Class_10BFC190::FUN_10bfc190()
+// FUNCTION: 0x10BFC190 ?Reset@Class_10BFC190@@QAEXXZ
+void Class_10BFC190::Reset()
 {
     int* Head = &Unknown08;
-    FUN_10bfbd30(Head);
+    DeleteAllObjects(Head);
     Unknown14 = 0;
     Unknown18 = 0;
     Unknown1C = 0;
     *Head = 0;
 }
 
-// FUNCTION: 0x10BFD210 ?FUN_10bfd210@Class_10BFD210@@QAEXXZ
-void Class_10BFD210::FUN_10bfd210()
+// FUNCTION: 0x10BFD210 ?Reset@Class_10BFD210@@QAEXXZ
+void Class_10BFD210::Reset()
 {
     FUN_10bfc680(0.0f);
 }

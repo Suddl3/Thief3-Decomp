@@ -45,9 +45,9 @@ void Class_10C0C090::UpdatePosition(int A, int B, FVector* Pos, int D)
 // FUNCTION: 0x10C0C150 ?Add@Class_10C0C150@@QAEHPBUItem_10C0C150@@@Z
 int Class_10C0C150::Add(const Item_10C0C150* Item)
 {
-    int Index = Unknown00;
+    int Index = m_Count;
     Resize(Index + 1);
-    Unknown08[Index] = *Item;
+    m_Data[Index] = *Item;
     return Index;
 }
 

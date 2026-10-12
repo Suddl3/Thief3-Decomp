@@ -187,7 +187,7 @@ void Class_10B46F50::FUN_10b46f50(float A)
 {
     for (int i = 0; i < 2; i++)
     {
-        if (Unknown08[i]->FUN_10c3e140())
+        if (Unknown08[i]->IsActive())
             Unknown08[i]->FUN_10b7b110(A);
     }
     Unknown34 = A;

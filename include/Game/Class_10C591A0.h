@@ -6,7 +6,7 @@
 class Class_10C591A0
 {
 public:
-    bool FUN_10c591a0(int* A);
+    bool Remove(int* A);
 };
 
 #endif // GAME_CLASS_10C591A0_H

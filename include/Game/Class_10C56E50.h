@@ -6,7 +6,7 @@
 class Class_10C56E50
 {
 public:
-    void FUN_10c56e50();
+    void SetDefaults();
 
     float Unknown00;
     float Unknown04;

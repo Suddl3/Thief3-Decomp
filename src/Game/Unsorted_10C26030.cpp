@@ -12,19 +12,19 @@ class Class_10C25EB0
 public:
     void FUN_10c26030(float Value);
 
-    Class_10C064D0* Unknown00;
-    int Unknown04;
-    int Unknown08;
+    Class_10C064D0* m_Grid;
+    int m_Row;
+    int m_Column;
 };
 
 // FUNCTION: 0x10C26030 ?FUN_10c26030@Class_10C25EB0@@QAEXM@Z
 void Class_10C25EB0::FUN_10c26030(float Value)
 {
-    if (Unknown00)
+    if (m_Grid)
     {
-        int Y = Unknown08;
-        int X = Unknown04;
-        Struct_10C26030* Array = &Unknown00->Unknown1C;
+        int Y = m_Column;
+        int X = m_Row;
+        Struct_10C26030* Array = &m_Grid->Unknown1C;
         FUN_10c25f40(Array);
         int Index = FUN_10b0fdb0() * X + Y;
         Array->Unknown08[Index] = Value;

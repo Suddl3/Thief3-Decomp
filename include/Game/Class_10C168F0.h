@@ -6,11 +6,11 @@
 class Class_10C168F0
 {
 public:
-    void FUN_10c168f0(int A, float B);
+    void SetTimedValue(int A, float B);
 
     char Unknown00[0xAC];
-    int Unknown0AC;
-    float Unknown0B0;
+    int m_Value;
+    float m_ExpireTime;
 };
 
 #endif // GAME_CLASS_10C168F0_H

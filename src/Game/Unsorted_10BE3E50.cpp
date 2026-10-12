@@ -25,9 +25,9 @@ public:
     ~Class_10E95F40();
 };
 
-void FUN_10c07fe0();
+void ReleaseShared();
 
-void FUN_10c25610();
+void ReleaseSharedBlock();
 
 class Class_10BF7F90 : public Class_10AA82D0
 {
@@ -80,13 +80,13 @@ void State_Fetch::Tick()
 // FUNCTION: 0x10BE3F90 ??1Class_10E95F40@@QAE@XZ
 Class_10E95F40::~Class_10E95F40()
 {
-    FUN_10c07fe0();
-    FUN_10c25610();
+    ReleaseShared();
+    ReleaseSharedBlock();
 }
 
 // FUNCTION: 0x10BE3FF0 ?ResetTimer@Class_10BE3FF0@@QAEXXZ
 void Class_10BE3FF0::ResetTimer()
 {
-    Unknown04->Unknown30.FUN_10bfd210();
+    Unknown04->Unknown30.Reset();
     Unknown0C = GetTimeSeconds() - (Virtual65() + DAT_10e49684);
 }

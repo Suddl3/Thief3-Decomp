@@ -10,7 +10,7 @@ struct Struct_10C55730_Node2;
 class Class_10E9C32C
 {
 public:
-    virtual void FUN_10c55730(Class_10C55730_Param* Arg);
+    virtual void Unregister(Class_10C55730_Param* Arg);
 
     char Pad04[0x18];
     Struct_10C55730_Node1* Unknown1C;

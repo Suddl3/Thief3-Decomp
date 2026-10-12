@@ -12,14 +12,14 @@ class Class_10C5BB10
 {
 public:
     void FUN_10c5bbf0(int Size);
-    unsigned int FUN_10c5bb10(const int& Key, const Class_10C5BA20& Value);
+    unsigned int Insert(const int& Key, const Class_10C5BA20& Value);
 
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
+    int m_Collisions;
+    int m_Count;
+    int m_BucketBits;
+    int m_BucketCount;
     bool Unknown10;
-    Class_10C5BB10_Node** Unknown14;
+    Class_10C5BB10_Node** m_Buckets;
     Class_10C5BB10_Unknown18 Unknown18;
 };
 

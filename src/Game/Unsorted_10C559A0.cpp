@@ -21,12 +21,12 @@ public:
     Object_10C40120* Unknown4C;
 };
 
-// FUNCTION: 0x10C56270 ?FUN_10c56270@Class_10C56000@@QAEHPBVClass_10C559A0@@@Z
-int Class_10C56000::FUN_10c56270(const Class_10C559A0* Src)
+// FUNCTION: 0x10C56270 ?Append@Class_10C56000@@QAEHPBVClass_10C559A0@@@Z
+int Class_10C56000::Append(const Class_10C559A0* Src)
 {
-    int Index = Unknown00;
+    int Index = m_Count;
     FUN_10c56000(Index + 1);
-    Class_10C559A0* Dest = &Unknown08[Index];
+    Class_10C559A0* Dest = &m_Data[Index];
     Dest->FUN_10c559a0(Src);
     Object_10C40120* Old = Dest->Unknown4C;
     Object_10C40120* New = Src->Unknown4C;

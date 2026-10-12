@@ -24,30 +24,30 @@ float Class_10C29F10::FUN_10c29f10()
     return Value * DAT_10ff667c->UnknownA0;
 }
 
-// FUNCTION: 0x10C2A290 ?FUN_10c2a290@@YAXPAVClass_10AF3AA0@@PBD@Z
-void FUN_10c2a290(Class_10AF3AA0* Log, const char* Format)
+// FUNCTION: 0x10C2A290 ?LogMessage@@YAXPAVClass_10AF3AA0@@PBD@Z
+void LogMessage(Class_10AF3AA0* Log, const char* Format)
 {
     if (Log)
         Log->FUN_10af3aa0(Format);
 }
 
-// FUNCTION: 0x10C2A2B0 ?FUN_10c2a2b0@@YAXPAVFOutputDevice@@W4EName@@PBD@Z
-void FUN_10c2a2b0(FOutputDevice* Out, EName Event, const ANSICHAR* Fmt)
+// FUNCTION: 0x10C2A2B0 ?LogEvent@@YAXPAVFOutputDevice@@W4EName@@PBD@Z
+void LogEvent(FOutputDevice* Out, EName Event, const ANSICHAR* Fmt)
 {
     if (Out)
         Out->Logf(Event, Fmt);
 }
 
-// FUNCTION: 0x10C2E350 ?FUN_10c2e350@Class_10E9AA20@@QAEPAV1@H@Z
-Class_10E9AA20* Class_10E9AA20::FUN_10c2e350(int p1)
+// FUNCTION: 0x10C2E350 ?Construct@Class_10E9AA20@@QAEPAV1@H@Z
+Class_10E9AA20* Class_10E9AA20::Construct(int p1)
 {
     VTable = DAT_10e9aa20;
     Unknown04 = p1;
     return this;
 }
 
-// FUNCTION: 0x10C2E370 ?FUN_10c2e370@Class_10E9AA2C@@QAEPAV1@H@Z
-Class_10E9AA2C* Class_10E9AA2C::FUN_10c2e370(int p1)
+// FUNCTION: 0x10C2E370 ?Construct@Class_10E9AA2C@@QAEPAV1@H@Z
+Class_10E9AA2C* Class_10E9AA2C::Construct(int p1)
 {
     VTable = DAT_10e9aa2c;
     Unknown04 = p1;

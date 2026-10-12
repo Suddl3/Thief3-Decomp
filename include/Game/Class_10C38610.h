@@ -8,7 +8,7 @@
 class Class_10C38610
 {
 public:
-    void FUN_10c38610();
+    void Reset();
 
     char Unknown00[0xBC];
     Class_10B26930 Unknown0BC;

@@ -6,7 +6,7 @@
 class Class_10C41420
 {
 public:
-    virtual void FUN_10c423d0(int A, int B, int C, int D);
+    virtual void OnMessage(int A, int B, int C, int D);
 
     void FUN_10c41b10();
 

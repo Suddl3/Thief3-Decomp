@@ -1,9 +1,9 @@
-// Game/Class_10E9AD9C.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/MC_Turn.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10E9AD9C.h"
+#include "Game/MC_Turn.h"
 
-// FUNCTION: 0x10C365D0 ?FUN_10c365d0@Class_10E9AD9C@@UAEXHM@Z
-void Class_10E9AD9C::FUN_10c365d0(int A, float B)
+// FUNCTION: 0x10C365D0 ?FUN_10c365d0@MC_Turn@@UAEXHM@Z
+void MC_Turn::FUN_10c365d0(int A, float B)
 {
     if (Unknown70)
         return;

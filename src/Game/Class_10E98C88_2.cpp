@@ -5,7 +5,7 @@
 
 class Class_10E98C8C;
 
-void FUN_10c164c0(Class_10E98C8C* P);
+void RegisterItem(Class_10E98C8C* P);
 
 class Class_10E98C8C
 {
@@ -47,5 +47,5 @@ Class_10E98C88::~Class_10E98C88()
 Class_10E98C8C::Class_10E98C8C(int p1)
 {
     Unknown04 = p1;
-    FUN_10c164c0(this);
+    RegisterItem(this);
 }

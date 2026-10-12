@@ -8,12 +8,12 @@ class Class_10C38EB0_Member;
 class Class_10C38EB0
 {
 public:
-    void FUN_10c38eb0(int A);
+    void RebindHandle(int A);
 
     char Unknown00[0x48];
     Class_10C38EB0_Member* Unknown48;
     char Unknown4C[0xBA];
-    bool Unknown106;
+    bool m_HasHandle;
 };
 
 #endif // GAME_CLASS_10C38EB0_H

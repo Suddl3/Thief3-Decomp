@@ -6,7 +6,7 @@
 class Class_10E9AA2C
 {
 public:
-    Class_10E9AA2C* FUN_10c2e370(int p1);
+    Class_10E9AA2C* Construct(int p1);
 
     void** VTable;
     int Unknown04;

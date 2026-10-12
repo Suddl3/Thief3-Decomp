@@ -11,13 +11,13 @@ public:
     Class_10E9B570* FUN_10c3edb0(int Id);
 
     void** Unknown00;
-    int Unknown04;
+    int m_Owner;
 };
 
 // FUNCTION: 0x10C3EDB0 ?FUN_10c3edb0@Class_10E9B570@@QAEPAV1@H@Z
 Class_10E9B570* Class_10E9B570::FUN_10c3edb0(int Id)
 {
-    Unknown04 = Id;
+    m_Owner = Id;
     Unknown00 = DAT_10e9b570;
     FUN_10a37340(Id);
     return this;

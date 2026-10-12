@@ -5,27 +5,27 @@
 
 int FUN_10b0fdb0();
 
-void FUN_10c25ef0(Class_10B9FBE0* Array);
+void InitGrid(Class_10B9FBE0* Array);
 
 class Class_10C25EB0
 {
 public:
     void FUN_10c25ff0(char Value);
 
-    Class_10C064D0* Unknown00;
-    int Unknown04;
-    int Unknown08;
+    Class_10C064D0* m_Grid;
+    int m_Row;
+    int m_Column;
 };
 
 // FUNCTION: 0x10C25FF0 ?FUN_10c25ff0@Class_10C25EB0@@QAEXD@Z
 void Class_10C25EB0::FUN_10c25ff0(char Value)
 {
-    if (Unknown00)
+    if (m_Grid)
     {
-        int Y = Unknown08;
-        int X = Unknown04;
-        Class_10B9FBE0* Array = &Unknown00->Unknown10;
-        FUN_10c25ef0(Array);
+        int Y = m_Column;
+        int X = m_Row;
+        Class_10B9FBE0* Array = &m_Grid->Unknown10;
+        InitGrid(Array);
         int Index = FUN_10b0fdb0() * X + Y;
         Array->m_Data[Index] = Value;
     }

@@ -25,7 +25,7 @@ public:
     virtual Struct_10C26310 FUN_10c26310();
     virtual Struct_10C26310 FUN_10c26340();
 
-    Class_10E99298* FUN_10c27010(int A, int B, int C, int D);
+    Class_10E99298* Construct(int A, int B, int C, int D);
 
     union
     {

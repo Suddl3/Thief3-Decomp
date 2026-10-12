@@ -10,10 +10,10 @@ Class_10905A90_Member* GetAllocator();
 void Class_10C0C150::Clear()
 {
     Resize(0);
-    if (Unknown04)
+    if (m_CapacityBytes)
     {
-        GetAllocator()->Virtual5(Unknown08);
-        Unknown08 = 0;
-        Unknown04 = 0;
+        GetAllocator()->Virtual5(m_Data);
+        m_Data = 0;
+        m_CapacityBytes = 0;
     }
 }

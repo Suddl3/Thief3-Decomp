@@ -79,8 +79,8 @@ void SoundSimulator::FUN_10c549a0(Struct_10C549A0* A)
     }
 }
 
-// FUNCTION: 0x10C549E0 ?FUN_10c549e0@@YAHPAPAUStruct_10C549E0@@0@Z
-int FUN_10c549e0(Struct_10C549E0** A, Struct_10C549E0** B)
+// FUNCTION: 0x10C549E0 ?CompareByTime@@YAHPAPAUStruct_10C549E0@@0@Z
+int CompareByTime(Struct_10C549E0** A, Struct_10C549E0** B)
 {
     Struct_10C549E0* ItemA = *A;
     Struct_10C549E0* ItemB = *B;

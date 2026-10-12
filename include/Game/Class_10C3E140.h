@@ -8,7 +8,7 @@
 class Class_10C3E140 : public Class_10AAB5C0
 {
 public:
-    unsigned char FUN_10c3e140();
+    unsigned char IsActive();
 
     char Pad01[0x17];
     unsigned char Field18;

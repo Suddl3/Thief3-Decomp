@@ -10,7 +10,7 @@ struct Struct_10C0A6B0;
 class Class_10C0A9A0 : public Class_10C0A6B0
 {
 public:
-    void FUN_10c0a9a0(void* Value);
+    void RemoveFromAll(void* Value);
     void FUN_10c09f50(int A, void* B);
     int FUN_10c099a0(int A);
 

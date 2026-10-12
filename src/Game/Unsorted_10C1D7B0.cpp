@@ -108,8 +108,8 @@ Class_10E99178::Class_10E99178(int A)
 {
 }
 
-// FUNCTION: 0x10C1EF20 ?FUN_10c1ef20@Class_10E8D7C4@@UAEXAAVFArchive@@@Z
-void Class_10E8D7C4::FUN_10c1ef20(FArchive& Ar)
+// FUNCTION: 0x10C1EF20 ?Serialize@Class_10E8D7C4@@UAEXAAVFArchive@@@Z
+void Class_10E8D7C4::Serialize(FArchive& Ar)
 {
     Ar.Virtual6(&Unknown04);
     Ar.Virtual7(&Unknown08);

@@ -18,8 +18,8 @@ Struct_10C20030 Class_10C20030::FUN_10c20030()
     return Unknown0C;
 }
 
-// FUNCTION: 0x10C20BC0 ?FUN_10c20bc0@Class_10C20BC0@@QAEXXZ
-void Class_10C20BC0::FUN_10c20bc0()
+// FUNCTION: 0x10C20BC0 ?Reset@Class_10C20BC0@@QAEXXZ
+void Class_10C20BC0::Reset()
 {
     Unknown70 = 0;
     Unknown71 = 0;

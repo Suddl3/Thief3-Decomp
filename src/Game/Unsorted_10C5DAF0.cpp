@@ -36,7 +36,7 @@ public:
 class Class_10C80360
 {
 public:
-    void FUN_10c5daf0();
+    void Reset();
 
     char Unknown00[0x0D];
     bool Unknown0D;
@@ -47,8 +47,8 @@ public:
     Class_10C80360_Unknown1C* Unknown1C;
 };
 
-// FUNCTION: 0x10C5DAF0 ?FUN_10c5daf0@Class_10C80360@@QAEXXZ
-void Class_10C80360::FUN_10c5daf0()
+// FUNCTION: 0x10C5DAF0 ?Reset@Class_10C80360@@QAEXXZ
+void Class_10C80360::Reset()
 {
     if (Unknown1C)
     {

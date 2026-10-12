@@ -8,7 +8,7 @@
 class Class_10C26B60 : public Class_10C26A60
 {
 public:
-    void FUN_10c26b60(int A, int B, int C);
+    void Create(int A, int B, int C);
 };
 
 #endif // GAME_CLASS_10C26B60_H

@@ -8,7 +8,7 @@
 class Class_10C1D760
 {
 public:
-    void FUN_10c1d760();
+    void Reset();
 
     char Unknown00[4];
     FVector Unknown04;

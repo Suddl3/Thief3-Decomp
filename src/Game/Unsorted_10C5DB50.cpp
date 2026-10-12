@@ -40,8 +40,8 @@ bool __stdcall FUN_10c5db50(Object_10C5DB50* A, Struct_10C5DB50 B, void* C)
     return Result;
 }
 
-// FUNCTION: 0x10C5EE80 ?FUN_10c5ee80@Class_10C5EE80@@QAEXXZ
-void Class_10C5EE80::FUN_10c5ee80()
+// FUNCTION: 0x10C5EE80 ?Release@Class_10C5EE80@@QAEXXZ
+void Class_10C5EE80::Release()
 {
     FUN_10c5e600(0);
     if (Unknown04)

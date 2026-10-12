@@ -4160,3 +4160,296 @@ field Class_10BE9A40::Unknown78 m_NextTime Only method using it assigns GetTimeS
 field Class_10E97B00::Unknown04 m_Name Two constructors initialise it from their Name argument; FUN_10c01ff0 passes its address on.
 field Class_10C01EC0::Unknown0C m_Index Same offset as Class_10C01430::Index, a Class_10C01140-based index; looked up and erased by key in Remove.
 field Class_10C04D90::Unknown20 m_Values The cIntArray that AddValue appends each value to.
+class Class_10C63530 MetaSound Xbox strings 'MetaSound::bind called with null argument!' and 'bind() called on MetaSound before loading!'
+class Class_10E9AD9C MC_Turn GetControllerName returns the string 'MC_Turn'.
+class Class_10E9ADE8 MC_Follow GetMotionControllerName returns the string 'MC_Follow'.
+class Class_10E9AE24 MC_FollowAbsolute GetMotionControllerName returns the string 'MC_FollowAbsolute'.
+class Class_10E9AE88 MC_StayNear GetMotionControllerName returns the string 'MC_StayNear'.
+class Class_10E9AEC8 MC_PullToPoint GetMotionControllerName returns the string 'MC_PullToPoint'.
+class Class_10E9CB00 cResSound Xbox twin's messages are WAV and ADPCM errors, in file ResSound.cpp; ReleaseData frees its data.
+function 0x10C3E140 IsActive Class_Field0c_D::FindIndex matches a slot only when Field18 is set; FUN_10b47660 calls FUN_10b7b8a0 on a slot only when it is.
+function 0x10C3FB10 GetCadenceManager Lazily creates Class_10C3F290 singleton; Xbox callee pair names CadenceManager (about 87 percent).
+function 0x10C3FF10 CommitPending Copies pending Unknown128 into UnknownF0 and resets it to -1; Value replaces pending when not -1.
+function 0x10C40590 GetItemCount Returns Unknown0BC.size(), a vector of Struct_10C40590_Item.
+function 0x10C41500 GetItemData Returns the Struct_10C63E90 that UnknownBC[Index].Unknown00 yields via FUN_10c63e90().
+function 0x10C3FF40 GetItemCount Returns Unknown04.size(), a vector of Struct_10C3FF40_Item.
+function 0x10C3FF60 RotateRight Lifts Node's left child above Node, moving the child's right subtree to Node's left; updates parent and root links.
+function 0x10C40160 AllocateArray operator new(A * 20) bracketed by GetAllocator Virtual8/Virtual9 when Unknown04 is set.
+function 0x10C401D0 AllocateArray operator new(A * 24) bracketed by GetAllocator Virtual8/Virtual9 when Unknown04 is set.
+function 0x10C40240 AllocateArray operator new(A * 44) bracketed by GetAllocator Virtual8/Virtual9 when Unknown04 is set.
+function 0x10C40950 PushHeapEntry Sift-up of a max heap keyed on float Key, parent index (Hi-1)/2, element handle, int data.
+function 0x10C41530 GetItem Returns the cRefPtr Unknown00 of element UnknownC0[Index].
+function 0x10C423D0 OnMessage Virtual slot of Class_10C41420, overridden by Class_10E9B83C; switch on 0x74 and 0x75 calls FUN_10c41ab0 and FUN_10c41b10.
+function 0x10C47D90 GetSoundBufferPool Lazily creates Class_10C45C70 singleton; Xbox callee pair names cSoundBufferPool (about 87 percent).
+function 0x10C4DE60 GetElement Returns &Unknown10[p1].Unknown0c[p2]: a two-level table lookup of an element.
+function 0x10C4E7B0 ToggleFlags Inverts Unknown34 of each item whose Unknown30 is nonzero, across all groups; called by FUN_10c532c0.
+function 0x10C4E8D0 Empty Same body as the inline Class_10C4E970::Empty(), with its own resize: FUN_10c4d550(0), then frees Unknown08.
+function 0x10C4EDE0 CopyFrom Calls base Class_10A68AE0::CopyFrom(Other), then copies each derived field from Other; returns this.
+function 0x10C4F450 Empty Same body as this class's destructor, with its own resize: FUN_10c4eea0(0), then frees Unknown08.
+function 0x10C4F7E0 CopyFrom Zeroes three base fields, calls base CopyFrom(Other), then copies the derived fields; returns this.
+function 0x10C4F870 AddItem Appends an item to Unknown38 with the id from Unknown34 as its Unknown00; returns that id.
+function 0x10C4F9B0 Empty Body is Unknown04.Empty(), the member's inline Empty() from Class_10C4F970's header.
+function 0x10C50320 AddItem Grows the array by one via FUN_10c4f690(count+1), copies the item to Unknown08[Unknown00], returns the index.
+function 0x10C50EC0 Empty Same body as the inline Class_10C4E970::Empty(), with its own resize: FUN_10c50360(0), then frees Unknown08.
+function 0x10C591A0 Remove Unlinks the entry whose key matches, decrements Unknown04, deletes it and returns true when found.
+function 0x10C592B0 Reset Deletes every node and the bucket array, zeroes the counts, then FUN_10c57620(Size) unless Unknown10 is set.
+function 0x10C59EC0 RemoveKey Passes its key A to Unknown0D8's removal, FUN_10c591a0; virtual slot 0 of Class_10E9C7DC.
+function 0x10C5A1C0 Free Empties the table with FUN_10c592b0(0x40), deletes the bucket array, zeroes the counts and the array pointer.
+function 0x10C5A1F0 Free Same body as FUN_10c5a1c0 with FUN_10c59330(0x40): empties the table, deletes the bucket array, zeroes the counts.
+function 0x10C665D0 DecRef Decrements Field04, the refcount; Xbox vtable pair (about 89%) has the message 'Refcount must be positive on decrement!'.
+function 0x10C5E4E0 Empty Body is only Unknown04.Empty(), the member's own Empty.
+function 0x10C5F320 IsEqual Returns Unknown04 == Other->Unknown04 when Other->Virtual3() is 1; otherwise false.
+function 0x10C603E0 Empty Same body as the class destructor: FUN_10c504a0(0), then frees Unknown08 through the allocator.
+function 0x10C60C60 Release Deletes Unknown00 and nulls it; the destructor of Class_10E9CD84 calls it.
+function 0x10C60D80 ResizeBuffer Zero size frees Unknown130; otherwise reallocates Unknown12C bytes and binds them to an element.
+function 0x10C63530 bind Xbox string 'MetaSound::bind called with null argument!' matches the null Param1 check.
+function 0x10C68610 Free Deletes every entry of Unknown04 and Unknown08, then both arrays, and nulls them.
+function 0x10BFBC90 StampTime Stores GetTimeSeconds() in Unknown4C, its only field; called from FUN_10be1ce0.
+function 0x10BFC190 Reset Calls FUN_10bfbd30 on Unknown08, then zeroes Unknown14, Unknown18 and Unknown1C.
+function 0x10BFD210 Reset Its only statement passes 0.0f to FUN_10bfc680, a zero write.
+function 0x10BFBD30 DeleteAllObjects Deletes each object in List->Unknown08 and zeroes the count List->Unknown00.
+function 0x10BFBD00 Serialize Serializes Unknown08 and Unknown04 through Ar; slot 0 of this class's own vtable.
+function 0x10BFBE60 Serialize Ar.Serialize of Unknown04 and Unknown08, 4 bytes each; slot 0 of this class's own vtable.
+function 0x10BFBE30 HasTimedOut Returns true when GetTimeSeconds() minus Unknown04 exceeds Unknown08.
+function 0x10BFBE90 Contains Returns true when an Unknown10 element's Virtual0() equals A.
+function 0x10BFBFD0 FindValue Copies the Unknown08 value of the first entry whose Unknown04 equals Key.
+function 0x10BFC020 SumValuesFor Sums Item->Virtual6(0) over the items whose Virtual0() equals A.
+function 0x10BFD160 CollectMatching Appends objects owned by Owner, with Virtual0() in Ids and FUN_10c3dd60() above Limit, to Out.
+function 0x10BFD780 RemoveByKey Removes objects whose Virtual12(Key) holds and Unknown54 entries with that Key.
+function 0x10BFE6B0 RemoveRange Destroys elements Index to Index+Count-1, then FUN_10af3bd0 removes them from the array.
+function 0x10BFF250 MeasureDistance Calls Distance() on two Unknown2C positions and discards the result.
+function 0x10C06750 Serialize Writes version 3 then serializes Unknown10 and Unknown1C; vtable of 0x10E8C008 lists it next to Class_10E8C00C::Serialize.
+function 0x10C06790 InitGrid8x8 Appends 64 zero entries in two 8-step loops when the array is empty; called by Class_10C25EB0::FUN_10c25fb0.
+function 0x10C06FA0 IndexToMask Maps 0 to 4 to bit masks 1, 2, 4, 8, 16 and other values to 0; called by Class_10C07ED0::FUN_10c076f0.
+function 0x10C07070 GetRemainingCapacity Five int totals minus five short counts, 0 unless both sums are non-negative and Total >= Used; called by Class_10C07ED0::FUN_10c07ed0.
+function 0x10C07690 AddIfMissing Returns when FUN_10c06ff0 finds Obj; else appends it to Unknown08[B] and counts it in Unknown44[B] unless its kind is 1 or 2.
+function 0x10C07ED0 UpdatePopulation Every 16th call: if remaining capacity FUN_10c07070 is at most UnknownA4, calls FUN_10c076f0(i) for categories below target Unknown44[i+12]; called by ACitySectionPopulationInfo.
+function 0x10C07FE0 ReleaseShared Decrements the count at DAT_10ff66ac and deletes the object at zero; called by the destructors of Class_10E95F40 and Class_10BFCC40.
+function 0x10C08010 MarkCellsNear Square of side 2R around P: cells of samples sharing A's position index (FUN_10c00430) get 0xff and the current time; called by FUN_10bd27c0.
+function 0x10C08480 Reset Zeroes six fields, sets Unknown10 to true and returns this; called by FUN_10ba0a50.
+function 0x10C084A0 Serialize Writes Count through Ar.Virtual1, sets the count when Ar.Unknown14 is set, serializes each element; called by Class_10E8C118::Serialize.
+function 0x10C08760 AcquireShared Creates the object at DAT_10ff66ac when it is null, then increments its count; called by the constructors of State_Search and Class_10E95F40.
+function 0x10C08810 Serialize Virtual FArchive& serializer: serializes five members through Ar; vtable slot 0 of 0x10E97BBC.
+function 0x10C09A40 Clear Same body as Class_10C0C150::Clear: Resize(0), then frees Unknown08 and zeroes Unknown04.
+function 0x10C0A6F0 Clear Same body as Class_10C0C150::Clear: FUN_10c0a320(0), then frees Unknown08 and zeroes Unknown04.
+function 0x10C09A80 CollectMatching Appends each Param item whose FUN_10b82390(0x803b9, buffer) is true to the cIntArray Out.
+function 0x10C09AF0 CollectFlaggedItems Appends items of the global's list whose FUN_10c80360() has bit 8 set to Out.
+function 0x10C09E30 Remove Finds the entry whose handle is Handle, shifts the later entries down and shrinks Unknown10.
+function 0x10C0A6B0 RemoveItem Finds the last index holding Item in A and removes it through FUN_10c0a0b0(A, index).
+function 0x10C0A9A0 RemoveFromAll Removes the last match of Value from each Entries element through FUN_10c0a0b0.
+function 0x10C0AA00 AddMatches Appends a Class_10C09B60 record to Unknown04 for each Src item that FUN_10c09910 matches with Arg.
+function 0x10C0ADD0 SetAllAndClear Virtual slot 2 of Class_10E97BEC: stores Value in each Data pointee, then SetCount(0).
+function 0x10C0BF20 MoveRange memmove of Count elements from From to To inside Unknown08, then zeroes the vacated slots.
+function 0x10C14570 GetAITaggedVolumeLabel Returns the message text 'When the AI is in a tagged volume named [String]'.
+function 0x10C14590 GetAITaggedVolumeDescription Returns the message text 'Fires when an AI that owns this script enters an AITaggedVolume...'.
+function 0x10C145B0 GetAIContextVolumeLabel Returns the message text 'When the AI is in a context volume of type [ContextVolumeType]'.
+function 0x10C145D0 GetAIContextVolumeDescription Returns the message text 'Fires when an AI that owns this script enters an AI context volume of the given type.'
+function 0x10C147A0 GetAIPlayerDistanceLabel Returns the message text 'When the player is within [Float] feet of the AI (1 foot = 16 Unreal units)'.
+function 0x10C147C0 GetAIPlayerDistanceDescription Returns the message text 'Fires when an AI that owns this script is within the specified distance of the player.'
+function 0x10C147E0 GetAIBehaviorStateLabel Returns the message text 'While the AI is in the behavior state [Enum:EStateType]'.
+function 0x10C14800 GetAIBehaviorStateDescription Returns the message text 'Triggers every second as long as an AI that owns this script is in the specified behavioral stat...'.
+function 0x10C14820 GetAIAlertLevelLabel Returns the message text 'Query if my current alert level is [Enum:EAlertState]'.
+function 0x10C14840 GetAIAlertLevelDescription Returns the message text 'This is an efficient query for if an AI is at a given alert state.'
+function 0x10C14860 GetAIDispositionLabel Returns the message text 'Query if any AI connected to [LinkFlavor] has disposition [Enum:EFactionDisposition] towards the player'.
+function 0x10C14880 GetAIDispositionDescription Returns the message text 'Returns true if the specified AI has a matching disposition towards the player.'
+function 0x10C14A00 GetAIInferenceLabel Returns the message text 'When the AI has the inference [Enum:EInferenceType]'.
+function 0x10C14A20 GetAIInferenceDescription Returns the message text 'Fires when an AI that owns this script forms the specified inference.'
+function 0x10C14A40 GetAIEvidenceLabel Returns the message text 'When the AI receives evidence of type [Enum:EEvidenceType]'.
+function 0x10C14A60 GetAIEvidenceDescription Returns the message text 'Fires when an AI that owns this script accumulates evidence of the specified type.'
+function 0x10C14A80 GetAILockpickingLabel Returns the message text 'While I see the player hacking/lockpicking'.
+function 0x10C14AA0 GetAILockpickingDescription Returns the message text 'Fires once a second while the AI that owns this script sees the player in the act of using the m...'.
+function 0x10C15BB0 ResetVTable Assigns DAT_10e98c80, this class's vtable, to Field00 (the VTable member of the union).
+function 0x10C15DB0 ResetVTable Assigns DAT_10e98c84, this class's vtable, to Field00; called by the destructor of Class_10E8D658.
+function 0x10C16220 LookupValue Passes Id and &Value to Unknown04.FUN_10c160d0 and returns Value.
+function 0x10C168F0 SetTimedValue Stores A in Unknown0AC and GetTimeSeconds() + B in Unknown0B0.
+function 0x10C16300 GetActor Returns Unknown04 as AActor after an IsA(AActor) check, else 0.
+function 0x10C16350 HandleMessage Virtual slot 0, registered for message 0x26 in its constructor; on 0x26 nulls entries holding B.
+function 0x10C164C0 RegisterItem Appends Item to global list DAT_10ff7080, creating the list when null; the Class_10E98C8C constructor calls it.
+function 0x10C165F0 CreateItem Returns new Class_10E98C8C(Value); its constructor registers the item through FUN_10c164c0.
+function 0x10C1A030 AddRefItems Creates DAT_10ff7088 (a count plus Items array) when null, then increments the count.
+function 0x10C1A090 ReleaseItems Decrements the count of DAT_10ff7088; at zero deletes it, freeing its Items array.
+function 0x10C1A0C0 AddRefCounter Creates DAT_10ff708c (new int) when null, then increments it.
+function 0x10C1A130 ReleaseCounter Decrements DAT_10ff708c; at zero deletes it and clears the global.
+function 0x10C1A160 GetCounter Returns DAT_10ff708c, the counter that AddRefCounter and ReleaseCounter manage.
+function 0x10C1AD20 GetLocation Copies Unknown48, assigned from an FVector in FUN_10c1bee0, to Out; sets *Value to 0.
+function 0x10C28F00 Reset Only sets Field04 to 0; four callers.
+function 0x10C1B0F0 SetClampedValue Stores Value clamped to DAT_10e49984, the cap Class_10E98D08::Merge also applies, in Unknown2C, Unknown34 and Unknown3C.
+function 0x10C1B930 Reset Zeroes Unknown2C, Unknown34 and Unknown3C and sets Unknown47 to 1.
+function 0x10C1B940 Initialize Re-runs base constructor on this, sets vtable Unknown00, copies D to Unknown48, returns this; shape of Class_10E99020::Initialize.
+function 0x10C1C130 Initialize Re-runs base constructor Class_10C1B840 on this, sets vtable Unknown00, returns this; shape of Class_10E99020::Initialize.
+function 0x10C1C170 Initialize Re-runs base constructor Class_10C1B840 on this, sets vtable Unknown00, returns this; shape of Class_10E99020::Initialize.
+function 0x10C1C1B0 Initialize Re-runs base constructor Class_10C1B840 on this, sets vtable Unknown00, returns this; shape of Class_10E99020::Initialize.
+function 0x10C1D760 Reset Zeroes every member: FVector Unknown04 and the scalars Unknown10 to Unknown20.
+function 0x10C1EF20 Serialize Archives Unknown04, Unknown08 and Unknown0C through FArchive; Serialize(FArchive&) shape of Class_10E98D98::Serialize.
+function 0x10C1F440 Serialize Archives FVector Unknown04 and ints Unknown10, Unknown14, Unknown18 through FArchive; Serialize(FArchive&) shape.
+function 0x10C255F0 CompareObjectsDescending Comparator for object pointers: -1 when the first Unknown0C is larger, 0 when equal, else 1.
+function 0x10C25610 ReleaseSharedBlock Decrements the refcount in the first dword of DAT_10ff7098; deletes the block and nulls the global at zero.
+function 0x10C25770 IndexOf Linear search of m_Data for *Value over m_Count entries; returns the index or -1.
+function 0x10C25EB0 GetPosition Returns zero without a grid, else the grid's FUN_10c064d0 vector for this row and column.
+function 0x10C25EF0 InitGrid When m_Count is zero, resizes the array to FUN_10b0fdb0() squared and zeroes every entry.
+function 0x10C26070 GetValueWithin Returns the cell value; clears it first when its timestamp is older than GetTimeSeconds() minus Margin.
+function 0x10C262D0 SetActive Turning the flag on runs Virtual6, turning it off runs Virtual7, each only on a change.
+function 0x10C266F0 DeleteAll Deletes each pointer in the list up to its count, then sets the count to zero.
+function 0x10C26720 AddToRegistry Virtual slot 6 of Class_10E9925C: if Virtual14(), adds Unknown0C with Virtual13() to the registry once.
+function 0x10C26A60 Replace Deletes Obj when FUN_10c26500 returns 1; else deletes the held objects, stores Obj, calls Virtual6().
+function 0x10C26B60 Create Allocates a Class_10E9AFA4 from three ints through the allocator and passes it to FUN_10c26a60 (Replace).
+function 0x10C26C80 Clear Virtual slot 0 of Class_10E9925C: copies the list, detaches it via FUN_10c26c10, deletes the copied entries, calls Virtual3().
+function 0x10C26E80 Update Seconds since the previous call (0.1 on the first) go to Virtual4(); called by Class_10BBB410::Update.
+function 0x10C270D0 Reset Deletes and nulls the owned pointer at Unknown48, clears Unknown44 and sets Unknown45.
+function 0x10C273E0 IsBitSet Tests bit Arg of m_Flags; Arg 0 tests whether m_Flags is zero.
+function 0x10C27010 Construct Calls the base constructor with 90 and 90, sets the vtable pointer to DAT_10e99298, returns this.
+function 0x10C27050 Construct Calls the base constructor with 180 and 0, sets the vtable pointer to DAT_10e992d4, returns this.
+function 0x10C27090 IsCurrent Forwards to Unknown48->GetCurrent(A), returning false when Unknown48 is null.
+function 0x10C28D20 AcquireSingleton Creates the global Class_10C28CA0 on first use, then increments its Unknown0C; Class_10E90D70's constructor calls it.
+function 0x10C29220 UpdateTimer Counts Unknown20 down by GetFrameDeltaTime; when it lapses, re-arms it randomly between properties 0x10077f and 0x100780.
+function 0x10C299C0 IsAreaValid Returns false unless FUN_10c29930(FUN_10dbd520(), B, point) accepts point A and its eight neighbours spaced C apart.
+function 0x10C29AB0 Serialize FArchive& parameter; Ar.Serialize writes or reads the counts of Unknown08 and Unknown14 and their elements.
+function 0x10C2A290 LogMessage Forwards Format to Log->FUN_10af3aa0 when Log is non-null; FUN_10c2a330 and three more call it.
+function 0x10C2A2B0 LogEvent Forwards Event and Fmt to Out->Logf when Out is non-null (FOutputDevice::Logf).
+function 0x10C2E350 Construct Sets VTable and Unknown04 from p1 and returns this, as Class_10E9AE88::Construct does.
+function 0x10C2E370 Construct Sets VTable and Unknown04 from p1 and returns this, as Class_10E9AE88::Construct does.
+function 0x10C2EB30 Construct Sets Field00 to the vtable DAT_10e9aa7c, then calls FUN_10c27290.
+function 0x10C2EC00 Serialize FArchive& parameter; Ar.Serialize and Ar.Virtual7 on each field in turn, with FUN_10c11ff0 for one.
+function 0x10C2F870 SetInfo Copies In into Unknown74 and sets Unknown9F; FUN_10c2f8a0 reads both.
+function 0x10C35670 SetRotation Copies Value into Unknown68, an FRotator that FUN_10c356b0 resets, and sets Unknown9B.
+function 0x10C356A0 InvalidateInfo Clears Field9f, the byte Unknown9F shares; SetInfo sets it and FUN_10c2f8a0 checks it.
+function 0x10C384F0 Construct Sets Field00 to vtable DAT_10e9aad0 and nothing else; called by FUN_10c2ec70 and FUN_10c356d0.
+function 0x10C38610 Reset Zeroes Unknown0C4 and Unknown0FC and calls Unknown0BC.FUN_10b26930(0).
+function 0x10C386E0 Reset Zeroes UnknownA0 and UnknownAC, then calls UnknownB4->FUN_10c20bc0(); Class_10C38E40::Advance does the same to Unknown0AC.
+function 0x10C38EB0 RebindHandle Same as Class_10C38E40::Rebind, but registers A directly, without the FUN_10c099a0 lookup.
+function 0x10C38F20 IsWithinRadius Returns 1 when the target's position is within Unknown60 of A, comparing squared distance.
+function 0x10C20BC0 Reset Zeroes Unknown3C and Unknown70-72, all of the object's state.
+function 0x10C3EAC0 AcquireHashTable Creates the shared Class_10C3EA90 hash table on first use, then increments its count Unknown1C.
+function 0x10C3EB80 ReleaseHashTable Decrements the shared hash table's count Unknown1C; deletes the table (Release) at zero.
+function 0x10C3EBC0 GetProjectileRotation String 'hp_proj': FindBoneIndex finds that bone, then GetBoneLocationAndRotation's rotation is returned.
+function 0x10C3EC80 GetProjectileLocation String 'hp_proj': returns that bone's location, or the object's vector at 0x2C when the bone is missing.
+function 0x10C3ED70 GetRotation Virtual slot 1 of Class_10E9B570; returns GetProjectileRotation of Unknown04, the hp_proj bone's rotation.
+function 0x10C3F6E0 SetIndexFromName Compares its cString with the six strings in DAT_10f06a9c; stores the matching index in DAT_10ff711c.
+function 0x10C56D20 RotateRight Node's left child (Unknown00) takes Node's place and Node becomes its right child.
+function 0x10C57430 RotateLeft Node's right child (Unknown08) takes Node's place and Node becomes its left child.
+function 0x10C54A20 Swap Exchanges Unknown08[A] and Unknown08[B] through a Struct_10C54A20 temporary.
+function 0x10C55320 GetFirst Sets Unknown58 to the first node after sentinel Unknown20; returns its handle, or an empty one.
+function 0x10C55360 GetNext Advances Unknown58 and returns its Value handle, or an empty one at Unknown1C.end().
+function 0x10C56270 Append Grows the array by one, copies Src into the new last slot and returns its index.
+function 0x10C57310 SetFlag Switches on the string's first letter (b, c, r, s) and sets that bool from B.
+function 0x10C54810 Allocate Operator new of Count * 32 bytes, bracketed by GetAllocator() Virtual8 and Virtual9 when Unknown04 is set.
+function 0x10C56E50 SetDefaults Sets Unknown00 to 5.0, Unknown04 to 50.0 and Unknown98 to -100.0; the other fields to zero.
+function 0x10C54970 GetObject Returns a cRefPtr to Unknown28 (Object_10AB5B20*), or an empty cRefPtr when it is null.
+function 0x10C549E0 CompareByTime Comparator: orders two items by Unknown08->Virtual15(Time), Time from TimeManager::Instance().
+function 0x10C55730 Unregister Unlinks and deletes list-1 nodes whose Unknown1C is Arg, then list-2 nodes matching Arg->Unknown08 unless Unknown38.
+function 0x10C5B9A0 Append SetCount(m_Count + 1) on Unknown3C, then stores Item at the new last index; called by FUN_10a85c90.
+function 0x10C5B9D0 RemoveLast SetCount(m_Count - 1) on Unknown3C when m_Count > 1; called by FUN_10a87400.
+function 0x10C5BA20 CopyFrom Copies eight fields from A, using cString operator= for the strings; returns this.
+function 0x10C5BB10 Insert Grows (unless Unknown10) when Unknown00 > 0.2 * Unknown0C; links the node at its bucket head.
+function 0x10C5BFD0 Update Gets record for A via FUN_10c5be90; if found, sets its Unknown24 to B and stores it via FUN_10c5bcd0.
+function 0x10C5DAF0 Reset Virtual2 and null each of Unknown1C, Unknown18, Unknown14, Unknown10 in turn; clears Unknown0D.
+function 0x10C5EE80 Release Calls FUN_10c5e600(0), then GetAllocator()->Virtual5(Unknown08) when Unknown04 is set, then zeroes both.
+function 0x10C60FA0 RoundToBlockAlign Rounds A to a multiple of the 0x0C block-align field or the 0x0E bit depth divided by 8, whichever is larger.
+function 0x10A3B460 HandleEvent vtable slot 0: the same virtual function as Class_10E6FC80::HandleEvent (0x10AC8E80)
+field Class_10C3FF10::UnknownF0 m_CommittedValue CommitPending copies the pending value into it, then clears the pending value.
+field Class_10C3FF10::Unknown128 m_PendingValue CommitPending reads it and resets it to -1, which means no pending value.
+field Class_10C40590::Unknown0BC m_Items std::vector of Struct_10C40590_Item; GetItemCount returns its size.
+field Class_10C3FF40::Unknown04 m_Items std::vector of Struct_10C3FF40_Item; GetItemCount returns its size.
+field Class_10C41500::UnknownBC m_Items std::vector of Struct_10C41500; GetItemData indexes it, then calls Unknown00 on the element.
+field Class_10C41530::UnknownC0 m_Items Pointer to Struct_10C41530 elements; GetItem indexes it and returns each element's cRefPtr.
+field Class_10C3FF60::Unknown1C m_Head RotateRight tests Node against Unknown1C->Unknown04, the root link of this header node.
+field Class_10C4DE60::Unknown10 m_Groups FUN_10c4de60 indexes it by p1, then each entry's Unknown0c array by p2.
+field Class_10C4E7B0::Unknown08 m_GroupCount Bound of the outer loop over Unknown10 entries in FUN_10c4e7b0.
+field Class_10C4E7B0::Unknown10 m_Groups Indexed by the outer loop in FUN_10c4e7b0; each entry has a count and an item array.
+field Class_10C4F870::Unknown34 m_NextId Post-incremented into each new item's Unknown00 and returned by FUN_10c4f870.
+field Class_10C4F870::Unknown38 m_Items Item array: FUN_10c4f870 reads its m_Count, calls Resize, stores the item at m_Items[Index].
+field Class_10C50320::Unknown00 m_Count Read as the new item's index; Index+1 is passed to FUN_10c4f690 as the new count.
+field Class_10C50320::Unknown08 m_Items Item_10C50320 array that FUN_10c50320 fills at index Unknown00.
+field Class_10C591A0::Unknown00 m_Collisions Remove decrements it only when the removed entry shares its bucket (Prev or Node->Next set).
+field Class_10C591A0::Unknown04 m_Count Remove decrements it once per removed entry; the shrink test compares it with 5% of the bucket count.
+field Class_10C591A0::Unknown08 m_BucketBits Bucket index is HashBytes(...) & ((1 << Unknown08) - 1).
+field Class_10C591A0::Unknown0C m_BucketCount Remove calls Rehash(Unknown0C / 2) to shrink the table when it is sparse and above 64.
+field Class_10C591A0::Unknown14 m_Buckets Unknown14[Index] is a bucket's first node; Remove walks that chain and relinks Unknown14[Index].
+field Class_10C591A0::Unknown18 m_KeyTraits Virtual0 supplies the key bytes HashBytes hashes; Virtual1 compares a key with an entry's key.
+field Class_10C592B0::Unknown04 m_Count Reset deletes every node, then zeroes Unknown04 along with Unknown00 and Unknown0C.
+field Class_10C592B0::Unknown0C m_BucketCount Reset loops i < Unknown0C over the bucket array Unknown14 before freeing it.
+field Class_10C592B0::Unknown14 m_Buckets Reset frees each bucket's node chain Unknown14[i], then the array itself.
+field Class_10C5A1C0::Unknown14 m_Buckets FUN_10c5a1c0 deletes Unknown14, the array whose chains FUN_10c592b0 (Reset) frees first.
+field Class_10C5A1F0::Unknown14 m_Buckets FUN_10c5a1f0 deletes Unknown14, the bucket array, after FUN_10c59330(0x40); same body as FUN_10c5a1c0.
+field Class_10E9C7DC::Unknown0D8 m_KeyTable FUN_10c59ec0 passes its key to this hash table's removal, FUN_10c591a0.
+field Class_10C603E0::Unknown08 m_Data Freed through GetAllocator()->Virtual5 and zeroed in FUN_10c603e0 and the destructor.
+field Class_10C60D80::Unknown12C m_BufferSize Zero frees Unknown130; otherwise it is the operator new size and the length given to FUN_10d577b0.
+field Class_10C60D80::Unknown130 m_Buffer Freed with ::operator delete, then allocated with operator new(Unknown12C) and passed to FUN_10d577b0.
+field MetaSound::Unknown59 m_Bound Returns true at once when set; set to true after a successful bind.
+field MetaSound::Unknown70 m_Loaded Xbox string 'bind() called on MetaSound before loading!' fails bind while this is null.
+field Class_10C68610::Unknown00 m_LastIndex Inclusive loop bound over both entry arrays in FUN_10c68610 (for i <= Unknown00).
+field Class_10BFBC90::Unknown4C m_TimeStamp Written only by StampTime, with GetTimeSeconds().
+field Class_10BFBE30::Unknown04 m_TimeStamp Start of the interval that HasTimedOut measures.
+field Class_10BFBE30::Unknown08 m_TimeLimit Limit that HasTimedOut compares the elapsed time with.
+field Class_10BFBE90::Unknown08 m_Count Loop bound over Unknown10 in Contains.
+field Class_10BFBE90::Unknown10 m_Elements Element pointers that Contains walks, comparing Virtual0().
+field Class_10BFBFD0::Unknown54 m_Count Loop bound of the entry search in FindValue.
+field Class_10BFBFD0::Unknown5C m_Entries Key and value entries that FindValue searches.
+field Class_10BFC020::Unknown08 m_Count Loop bound over Unknown10 in SumValuesFor.
+field Class_10BFC020::Unknown10 m_Items Items that SumValuesFor walks and sums.
+field Class_10BFD160::Unknown08 m_Count Count of Unknown10, walked backwards by CollectMatching.
+field Class_10BFD160::Unknown10 m_Objects Object array walked by CollectMatching.
+field Class_10BFD780::Unknown08 m_Objects cIntArray of objects that RemoveByKey walks and swap-removes.
+field Class_10BFD780::Unknown54 m_Entries Structs with a Key field, removed by RemoveByKey.
+field Class_10BFF460::Unknown08 m_Pawn FUN_10bff2a0 casts its object to APawn; MeasureDistance reads its position.
+field Class_10BFF600::Unknown10 m_Count Loop bound over Unknown18 in FUN_10bff600.
+field Class_10BFF600::Unknown18 m_Elements Element pointers that FUN_10bff600 searches for the nearest.
+field Class_10BFF600::Unknown28 m_LastPosition Position copied by each search and compared before searching again.
+field Class_10BFF600::Unknown34 m_LastResult Result cached for m_LastPosition, or set from A.
+field Class_10C07690::Unknown08 m_Lists Each FUN_10c07690 call appends its object to Unknown08[B], one cIntArray per category.
+field Class_10C07690::Unknown44 m_Counts FUN_10c07690 increments Unknown44[B] for each added object whose Virtual85 kind is not 1 or 2.
+field Class_10C0A6F0::Unknown00 m_Count FUN_10c0aa00 reads it as the append index, then resizes to one more.
+field Class_10C0A6F0::Unknown04 m_CapacityBytes Clear tests it, frees Unknown08, then zeroes it, as cIntArray's m_CapacityBytes.
+field Class_10C0A6F0::Unknown08 m_Data FUN_10c0aa00 indexes it as Class_10C09B60 records from Unknown08 + Index.
+field Class_10C09E30::Unknown10 m_Entries FUN_10c09e30 scans it for the Handle entry, then shifts and shrinks it.
+field Class_10E97BE8::Unknown04 m_Entries FUN_10c0aa00 appends a Class_10C09B60 record to it for each match.
+field Class_10C0BF20::Unknown08 m_Data FUN_10c0bf20 memmoves elements inside it and zeroes the vacated ones.
+field Class_10C0C150::Unknown00 m_Count Resize sets it to NewCount after the OldCount loop; Add uses it as the new index.
+field Class_10C0C150::Unknown04 m_CapacityBytes Resize stores NewCapacity times sizeof(item) here; Clear tests it.
+field Class_10C0C150::Unknown08 m_Data Add and RemoveAt index it; Resize reallocates it through the allocator.
+field Class_10C09B60::Unknown00 m_Item FUN_10c0aa00 stores the matched Src item here.
+field Class_10C09B60::Unknown04 m_Found FUN_10c0aa00 stores the nonzero FUN_10c09910 result here.
+field Class_10C168F0::Unknown0AC m_Value Stored from parameter A of FUN_10c168f0 (SetTimedValue).
+field Class_10C168F0::Unknown0B0 m_ExpireTime Set to GetTimeSeconds() + B in FUN_10c168f0: a game time B seconds after the call.
+field Class_10C25770::Unknown00 m_Count Loop bound of FUN_10c25770; the number of entries in the array.
+field Class_10C25770::Unknown08 m_Data Int array indexed by the search loop and compared with *Value.
+field Class_10C25EB0::Unknown00 m_Grid Grid object whose FUN_10c064d0 gives the cell vector; null means no grid.
+field Class_10C25EB0::Unknown04 m_Row Cell index is FUN_10b0fdb0() * Unknown04 + Unknown08, as in Class_10C26070.
+field Class_10C25EB0::Unknown08 m_Column Minor cell index, paired with m_Row in the same index formula.
+field Class_10C26070::Unknown00 m_Grid Grid object: Unknown10 holds the cell values, Unknown1C the timestamps.
+field Class_10C26070::Unknown04 m_Row Major cell index in FUN_10b0fdb0() * Row + Column.
+field Class_10C26070::Unknown08 m_Column Minor cell index in FUN_10b0fdb0() * Row + Column.
+field Class_10E9925C::Unknown0C m_RegistryId Id passed to the registry's has, add and remove calls in AddToRegistry and FUN_10c26770.
+field Class_10E9925C::Unknown35 m_Registered Set by AddToRegistry, cleared by FUN_10c26770 when the id leaves the registry.
+field Class_10E9925C::Unknown38 m_Items List that Clear copies, detaches and deletes.
+field Class_10C262D0::Unknown44 m_Active Flag SetActive turns on before Virtual6 and off after Virtual7.
+field Class_10C26E80::Unknown30 m_LastTime Time recorded at the end of the previous Update; DAT_10eafbdc marks the first call.
+field Class_10C273E0::Unknown04 m_Flags Bit mask tested bit by bit by IsBitSet.
+field Class_10C29220::Unknown20 m_TimeLeft Float counted down by UpdateTimer (minus GetFrameDeltaTime) and re-armed randomly when it lapses.
+field cMotionControllerAnim::Unknown68 m_Rotation FRotator written by SetRotation and reset to FRotator(0, 0, 0) by FUN_10c356b0.
+field cMotionControllerAnim::Unknown9B m_HasRotation Set true by SetRotation and cleared with the rotation reset in FUN_10c356b0.
+field cMotionControllerAnim::Unknown74 m_Info Copied from SetInfo's argument and copied out by FUN_10c2f8a0 when the flag is set.
+field cMotionControllerAnim::Unknown9F m_HasInfo Set by SetInfo, cleared through its union twin Field9f by InvalidateInfo, checked by FUN_10c2f8a0.
+field Class_10C38F20::Unknown60 m_Radius Read as Radius in FUN_10c38f20 and compared squared against the target distance.
+field Class_10C38EB0::Unknown106 m_HasHandle Byte 0x106 is the m_HasHandle flag of Class_10C38E40 (same layout), set on FUN_10c38eb0's first call.
+field Class_10C3EA90::Unknown1C m_RefCount AcquireHashTable increments it, ReleaseHashTable decrements it and deletes the table at zero.
+field Class_10E9B570::Unknown04 m_Owner Object whose hp_proj bone GetProjectileRotation and GetProjectileLocation read; set by FUN_10c3edb0.
+field Class_10C55320::Unknown20 m_Head Sentinel of the circular list: GetFirst starts at its Unknown00 and stops on reaching it.
+field Class_10C55320::Unknown58 m_Current Walk position: GetFirst sets it to the first node and returns that node's handle.
+field Class_10C55360::Unknown1C m_Entries std::list whose end() ends the walk in GetNext.
+field Class_10C55360::Unknown58 m_Current std::list iterator advanced by ++ in GetNext.
+field Class_10C56000::Unknown00 m_Count Next index in Append, then grown by one.
+field Class_10C56000::Unknown08 m_Data Block indexed by the count: &Unknown08[Index] in Append.
+field Class_10C57310::Unknown00 m_Flags Object whose four bools SetFlag sets by letter.
+field Class_10C54A20::Unknown08 m_Data Array indexed by A and B in Swap.
+field Class_10C54970::Unknown28 m_Object Object returned as a cRefPtr by GetObject.
+field Class_10C5B9A0::Unknown3C m_Chars Append stores a char Item in its m_Data at the new last index.
+field Class_10C5BB10::Unknown00 m_Collisions Incremented when the target bucket is already occupied; growth test compares it with Unknown0C.
+field Class_10C5BB10::Unknown04 m_Count Incremented once per insert, after the node is linked.
+field Class_10C5BB10::Unknown08 m_BucketBits Bucket mask is (1 << Unknown08) - 1 in FUN_10c5bb10.
+field Class_10C5BB10::Unknown0C m_BucketCount Growth passes Unknown0C * 2 when collisions exceed 0.2 of it.
+field Class_10C5BB10::Unknown14 m_Buckets Indexed by bucket; each entry heads a chain of Class_10C5BB10_Node.
+field cResSound::UnknownF8 m_Data ReleaseData deletes it, and its size UnknownFC leaves the loaded total.
+field cResSound::UnknownFC m_DataSize ReleaseData subtracts it from Unknown10 when it frees UnknownF8.
+field cResSound::Unknown10 m_LoadedSize ReleaseData subtracts UnknownFC from it when it frees UnknownF8.
+field Class_10C60FA0::Unknown1C m_Format RoundToBlockAlign reads its 0x0C block-align and 0x0E bit-depth fields: a WAVE format header.

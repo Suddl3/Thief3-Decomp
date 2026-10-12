@@ -6,7 +6,7 @@
 
 extern Class_10A854C0* DAT_10f3a198;
 
-Class_10C3F110* FUN_10c3fb10();
+Class_10C3F110* GetCadenceManager();
 
 class Class_10A84F00_Param
 {
@@ -51,10 +51,10 @@ int __stdcall FUN_10a84f00(Class_10A84F00_Param* Object)
 // FUNCTION: 0x10A850C0 ?PushFloats@Class_10E6C390@@QAEXXZ
 void Class_10E6C390::PushFloats()
 {
-    FUN_10c3fb10()->FUN_10c3f120(0, Unknown3C);
-    FUN_10c3fb10()->FUN_10c3f120(1, Unknown40);
-    FUN_10c3fb10()->FUN_10c3f120(2, Unknown44);
-    FUN_10c3fb10()->FUN_10c3f120(3, Unknown48);
+    GetCadenceManager()->FUN_10c3f120(0, Unknown3C);
+    GetCadenceManager()->FUN_10c3f120(1, Unknown40);
+    GetCadenceManager()->FUN_10c3f120(2, Unknown44);
+    GetCadenceManager()->FUN_10c3f120(3, Unknown48);
 }
 
 // FUNCTION: 0x10A854C0 ?FUN_10a854c0@@YAXXZ

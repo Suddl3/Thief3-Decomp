@@ -36,8 +36,8 @@ extern Class_10C3F290* DAT_10ff70a8;
 
 extern bool DAT_10ff70ac;
 
-// FUNCTION: 0x10C3FB10 ?FUN_10c3fb10@@YAPAVClass_10C3F110@@XZ
-Class_10C3F110* FUN_10c3fb10()
+// FUNCTION: 0x10C3FB10 ?GetCadenceManager@@YAPAVClass_10C3F110@@XZ
+Class_10C3F110* GetCadenceManager()
 {
     if (!DAT_10ff70a8)
     {

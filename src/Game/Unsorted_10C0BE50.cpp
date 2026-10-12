@@ -19,53 +19,53 @@ public:
 // FUNCTION: 0x10C0BE50 ?Resize@Class_10C0C150@@QAEXH@Z
 void Class_10C0C150::Resize(int NewCount)
 {
-    int OldCount = Unknown00;
-    int Capacity = !Unknown08 ? 0 : Unknown04 / sizeof(Item_10C0C150);
+    int OldCount = m_Count;
+    int Capacity = !m_Data ? 0 : m_CapacityBytes / sizeof(Item_10C0C150);
     GetAllocator()->Virtual8(0, 0);
     if (NewCount > Capacity)
     {
         int NewCapacity = NewCount;
         if (Capacity)
             NewCapacity = (NewCount & ~15) + 16;
-        Unknown08 = (Item_10C0C150*)GetAllocator()->Virtual3(Unknown08, NewCapacity * sizeof(Item_10C0C150), 0, 0, 0, 0);
-        Unknown04 = NewCapacity * sizeof(Item_10C0C150);
+        m_Data = (Item_10C0C150*)GetAllocator()->Virtual3(m_Data, NewCapacity * sizeof(Item_10C0C150), 0, 0, 0, 0);
+        m_CapacityBytes = NewCapacity * sizeof(Item_10C0C150);
     }
     else if (NewCount <= Capacity - 16)
     {
         if (NewCount == 0)
         {
-            GetAllocator()->Virtual5(Unknown08);
-            Unknown08 = 0;
-            Unknown04 = 0;
+            GetAllocator()->Virtual5(m_Data);
+            m_Data = 0;
+            m_CapacityBytes = 0;
         }
         else
         {
             int NewCapacity = (NewCount & ~15) + 16;
-            Unknown08 = (Item_10C0C150*)GetAllocator()->Virtual3(Unknown08, NewCapacity * sizeof(Item_10C0C150), 0, 0, 0, 0);
-            Unknown04 = NewCapacity * sizeof(Item_10C0C150);
+            m_Data = (Item_10C0C150*)GetAllocator()->Virtual3(m_Data, NewCapacity * sizeof(Item_10C0C150), 0, 0, 0, 0);
+            m_CapacityBytes = NewCapacity * sizeof(Item_10C0C150);
         }
     }
     for (int i = OldCount; i < NewCount; i++)
     {
-        Item_10C0C150* Element = Unknown08 + i;
+        Item_10C0C150* Element = m_Data + i;
         if (Element)
             Element->Unknown00 = 0;
     }
     GetAllocator()->Virtual9();
-    Unknown00 = NewCount;
+    m_Count = NewCount;
 }
 
-// FUNCTION: 0x10C0BF20 ?FUN_10c0bf20@Class_10C0BF20@@QAEXHHH@Z
-void Class_10C0BF20::FUN_10c0bf20(int From, int To, int Count)
+// FUNCTION: 0x10C0BF20 ?MoveRange@Class_10C0BF20@@QAEXHHH@Z
+void Class_10C0BF20::MoveRange(int From, int To, int Count)
 {
     if (From != To && Count != 0)
     {
-        memmove(Unknown08 + To, Unknown08 + From, Count * sizeof(Class_10C0BF20_Unknown08));
+        memmove(m_Data + To, m_Data + From, Count * sizeof(Class_10C0BF20_Unknown08));
         if (From < To)
         {
             for (int I = From; I < To; I++)
             {
-                Class_10C0BF20_Unknown08* Item = Unknown08 + I;
+                Class_10C0BF20_Unknown08* Item = m_Data + I;
                 if (Item)
                     Item->Unknown00 = 0;
             }
@@ -74,7 +74,7 @@ void Class_10C0BF20::FUN_10c0bf20(int From, int To, int Count)
         {
             for (int I = To + Count; I < From + Count; I++)
             {
-                Class_10C0BF20_Unknown08* Item = Unknown08 + I;
+                Class_10C0BF20_Unknown08* Item = m_Data + I;
                 if (Item)
                     Item->Unknown00 = 0;
             }

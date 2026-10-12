@@ -5,8 +5,8 @@
 #include "Game/Class_10C09B60.h"
 #include "Game/Class_10E97BE8.h"
 
-// FUNCTION: 0x10C0AA00 ?FUN_10c0aa00@Class_10E97BE8@@QAEXHPAVcIntArray@@@Z
-void Class_10E97BE8::FUN_10c0aa00(int Arg, cIntArray* Src)
+// FUNCTION: 0x10C0AA00 ?AddMatches@Class_10E97BE8@@QAEXHPAVcIntArray@@@Z
+void Class_10E97BE8::AddMatches(int Arg, cIntArray* Src)
 {
     for (int i = 0; i < Src->Unknown00; i++)
     {
@@ -15,14 +15,14 @@ void Class_10E97BE8::FUN_10c0aa00(int Arg, cIntArray* Src)
         if (Found != 0)
         {
             Class_10C09B60 Tmp;
-            Tmp.Unknown00 = Item;
-            Tmp.Unknown04 = Found;
-            Class_10C0A6F0& Arr = Unknown04;
-            int Index = Arr.Unknown00;
+            Tmp.m_Item = Item;
+            Tmp.m_Found = Found;
+            Class_10C0A6F0& Arr = m_Entries;
+            int Index = Arr.m_Count;
             Arr.FUN_10c0a320(Index + 1);
-            Class_10C09B60* Elem = (Class_10C09B60*)Arr.Unknown08 + Index;
-            Elem->Unknown00 = Tmp.Unknown00;
-            Elem->Unknown04 = Tmp.Unknown04;
+            Class_10C09B60* Elem = (Class_10C09B60*)Arr.m_Data + Index;
+            Elem->m_Item = Tmp.m_Item;
+            Elem->m_Found = Tmp.m_Found;
             cIntArray& Dst = Elem->Unknown08;
             Dst.SetCount(Tmp.Unknown08.Unknown00);
             for (int j = 0; j < Dst.Unknown00; j++)

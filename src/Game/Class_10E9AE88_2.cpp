@@ -11,20 +11,20 @@ public:
     char Unknown04[0x48];
 };
 
-class Class_10E9ADE8 : public MoveCommand
+class MC_Follow : public MoveCommand
 {
 public:
     Class_10E98C8C Unknown4C;
     char Unknown54[0x40];
 };
 
-class Class_10E9AE88 : public Class_10E9ADE8
+class MC_StayNear : public MC_Follow
 {
 public:
-    ~Class_10E9AE88();
+    ~MC_StayNear();
 };
 
-// FUNCTION: 0x10C37EF0 ??1Class_10E9AE88@@QAE@XZ
-Class_10E9AE88::~Class_10E9AE88()
+// FUNCTION: 0x10C37EF0 ??1MC_StayNear@@QAE@XZ
+MC_StayNear::~MC_StayNear()
 {
 }

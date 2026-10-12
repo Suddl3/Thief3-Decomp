@@ -39,8 +39,8 @@ public:
     int Unknown2C;
 };
 
-// FUNCTION: 0x10C255F0 ?FUN_10c255f0@@YAHPAPAUObject_10C255F0@@0@Z
-int FUN_10c255f0(Object_10C255F0** A, Object_10C255F0** B)
+// FUNCTION: 0x10C255F0 ?CompareObjectsDescending@@YAHPAPAUObject_10C255F0@@0@Z
+int CompareObjectsDescending(Object_10C255F0** A, Object_10C255F0** B)
 {
     Object_10C255F0* ObjA = *A;
     Object_10C255F0* ObjB = *B;
@@ -49,8 +49,8 @@ int FUN_10c255f0(Object_10C255F0** A, Object_10C255F0** B)
     return ObjA->Unknown0C > ObjB->Unknown0C ? -1 : 1;
 }
 
-// FUNCTION: 0x10C25610 ?FUN_10c25610@@YAXXZ
-void FUN_10c25610()
+// FUNCTION: 0x10C25610 ?ReleaseSharedBlock@@YAXXZ
+void ReleaseSharedBlock()
 {
     --*(int*)DAT_10ff7098;
     if (*(int*)DAT_10ff7098 == 0)

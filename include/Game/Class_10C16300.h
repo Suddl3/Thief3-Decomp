@@ -9,7 +9,7 @@ class UObject;
 class Class_10C16300
 {
 public:
-    AActor* FUN_10c16300();
+    AActor* GetActor();
 
     char Unknown00[4];
     UObject* Unknown04;

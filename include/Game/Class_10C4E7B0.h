@@ -8,12 +8,12 @@ struct Struct_10C4E7B0_Unknown10;
 class Class_10C4E7B0
 {
 public:
-    void FUN_10c4e7b0();
+    void ToggleFlags();
 
     char Unknown00[8];
-    int Unknown08;
+    int m_GroupCount;
     char Unknown0C[4];
-    Struct_10C4E7B0_Unknown10* Unknown10;
+    Struct_10C4E7B0_Unknown10* m_Groups;
 };
 
 #endif // GAME_CLASS_10C4E7B0_H

@@ -8,7 +8,7 @@ int FUN_10b0fdb0();
 
 double GetTimeSeconds();
 
-void FUN_10c25ef0(Class_10B9FBE0* Array);
+void InitGrid(Class_10B9FBE0* Array);
 
 void FUN_10c25f40(Struct_10C26030* Data);
 
@@ -20,29 +20,29 @@ public:
     Struct_10C26030 Unknown1C;
 };
 
-// FUNCTION: 0x10C26070 ?FUN_10c26070@Class_10C26070@@QAEDM@Z
-char Class_10C26070::FUN_10c26070(float Margin)
+// FUNCTION: 0x10C26070 ?GetValueWithin@Class_10C26070@@QAEDM@Z
+char Class_10C26070::GetValueWithin(float Margin)
 {
-    if (!Unknown00)
+    if (!m_Grid)
         return 0;
-    int Column = Unknown08;
-    int Row = Unknown04;
-    Struct_10C26030* Data = &Unknown00->Unknown1C;
+    int Column = m_Column;
+    int Row = m_Row;
+    Struct_10C26030* Data = &m_Grid->Unknown1C;
     FUN_10c25f40(Data);
     float Value = Data->Unknown08[FUN_10b0fdb0() * Row + Column];
-    if (Value < GetTimeSeconds() - Margin && Unknown00)
+    if (Value < GetTimeSeconds() - Margin && m_Grid)
     {
-        Column = Unknown08;
-        Row = Unknown04;
-        Class_10B9FBE0* Array = &Unknown00->Unknown10;
-        FUN_10c25ef0(Array);
+        Column = m_Column;
+        Row = m_Row;
+        Class_10B9FBE0* Array = &m_Grid->Unknown10;
+        InitGrid(Array);
         int Index = FUN_10b0fdb0() * Row + Column;
         Array->m_Data[Index] = 0;
     }
-    Column = Unknown08;
-    Row = Unknown04;
-    Class_10B9FBE0* Array = &Unknown00->Unknown10;
-    FUN_10c25ef0(Array);
+    Column = m_Column;
+    Row = m_Row;
+    Class_10B9FBE0* Array = &m_Grid->Unknown10;
+    InitGrid(Array);
     int Index = FUN_10b0fdb0() * Row + Column;
     return Array->m_Data[Index];
 }

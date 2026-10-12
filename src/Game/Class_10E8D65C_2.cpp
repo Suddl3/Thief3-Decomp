@@ -5,7 +5,7 @@
 class Class_10E98C84
 {
 public:
-    void FUN_10c15db0();
+    void ResetVTable();
 
     void* Field00;
 };

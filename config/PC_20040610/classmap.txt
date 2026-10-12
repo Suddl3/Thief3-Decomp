@@ -514,12 +514,12 @@ Class_10C323A0           cIndexedList                     named: Node list with 
 Class_10C35650           cMotionControllerAnim            0x10C35650: slot of 0x10E9AC80
 Class_10C35670           cMotionControllerAnim            0x10C35670: slot of 0x10E9AC80
 Class_10C356A0           cMotionControllerAnim            0x10C356A0: slot of 0x10E9AC80
-Class_10C36860           Class_10E9AD9C                   0x10C36860: slot of 0x10E9AD9C
-Class_10C37390           Class_10E9ADE8                   0x10C37490: called on this by 0x10C37470
-Class_10C374E0           Class_10E9ADE8                   0x10C374E0: slot of 0x10E9ADE8
-Class_10C378A0           Class_10E9AE24                   0x10C378A0: slot of 0x10E9AE24
-Class_10C38040           Class_10E9AE88                   0x10C38040: slot of 0x10E9AE88
-Class_10C382B0           Class_10E9AEC8                   0x10C382B0: slot of 0x10E9AEC8
+Class_10C36860           MC_Turn                          0x10C36860: slot of 0x10E9AD9C
+Class_10C37390           MC_Follow                        0x10C37490: called on this by 0x10C37470
+Class_10C374E0           MC_Follow                        0x10C374E0: slot of 0x10E9ADE8
+Class_10C378A0           MC_FollowAbsolute                0x10C378A0: slot of 0x10E9AE24
+Class_10C38040           MC_StayNear                      0x10C38040: slot of 0x10E9AE88
+Class_10C382B0           MC_PullToPoint                   0x10C382B0: slot of 0x10E9AEC8
 Class_10C38350           Class_10E9AF04                   0x10C38350: called on this by 0x10C38330
 Class_10C38430           Class_10E9AF04                   0x10C38430: slot of 0x10E9AF04
 Class_10C384F0           Class_10E9AAD0                   0x10C384F0: stores 0x10E9AAD0
@@ -532,9 +532,10 @@ Class_10C49020           Class_10E9BB8C                   0x10C49020: called on 
 Class_10C4E880           Class_10E9BE7C                   0x10C50F00: stores 0x10E9BE7C
 Class_10C5CBC0           Class_10E9C828                   0x10C5CBC0: stores 0x10E9C828
 Class_10C5DB40           Class_10E5BEC4                   0x10C5DB40: slot of 0x10E5BEC4
-Class_10C613E0           Class_10E9CB00                   0x10C613E0: slot of 0x10E9CB00
-Class_10C61E30           Class_10E9CB00                   0x10C61E30: slot of 0x10E9CB00
+Class_10C613E0           cResSound                        0x10C613E0: slot of 0x10E9CB00
+Class_10C61E30           cResSound                        0x10C61E30: slot of 0x10E9CB00
 Class_10C62A50           Class_10E9E178                   0x10C62A50: called on this by 0x10C81190
+Class_10C63530           MetaSound                        named: Xbox strings 'MetaSound::bind called with null argument!' and 'bind() called on MetaSound before loading!'
 Class_10C664F0           SoundSchema                      0x10C664F0: slot of 0x10E9CFE0
 Class_10C66500           SoundSchema                      0x10C66500: slot of 0x10E9CFE0
 Class_10C66560           SoundSchema                      0x10C66560: slot of 0x10E9CFE0
@@ -650,10 +651,16 @@ Class_10E98CEC           SoundNotifier                    named: Xbox twin vtabl
 Class_10E99314           MoveCommand                      named: Xbox T3Opt twin names this class MoveCommand; vtable slot 3 is MC_MoveToPoint's method.
 Class_10E9AA7C           MC_MoveToPoint                   named: Xbox twin vtable (T3Opt 11/11 slots): its own methods' and constructors' debug names say MC_MoveToPoint (1), source AI_MC_MoveToPoint.cpp
 Class_10E9AC80           cMotionControllerAnim            named: Xbox twin vtable names cMotionControllerAnim (5 votes), source AI_MotionControllerAnim.cpp; its code adds and removes MotionCallbacks and queues locomotion commands.
+Class_10E9AD9C           MC_Turn                          named: GetControllerName returns the string 'MC_Turn'.
+Class_10E9ADE8           MC_Follow                        named: GetMotionControllerName returns the string 'MC_Follow'.
+Class_10E9AE24           MC_FollowAbsolute                named: GetMotionControllerName returns the string 'MC_FollowAbsolute'.
+Class_10E9AE88           MC_StayNear                      named: GetMotionControllerName returns the string 'MC_StayNear'.
+Class_10E9AEC8           MC_PullToPoint                   named: GetMotionControllerName returns the string 'MC_PullToPoint'.
 Class_10E9B5C0           CadenceManager                   named: Xbox twin CadenceManager (CadenceManager.cpp); its update's callees log CadenceTimingDetails.
 Class_10E9BB4C           cCadenceFactory                  named: Xbox source CadenceFactory.cpp and CADENCE INTERNAL ERROR messages; config section 'Cadence'.
 Class_10E9BC18           CadenceFactory                   named: Xbox twin vtable (T3Opt 20/20 slots): its own methods' and constructors' debug names say CadenceFactory (2), source CadenceFactory.cpp
 Class_10E9C330           SoundSimulator                   named: Xbox twin in SoundSimulator.cpp; its message names SoundSimulator as a sound's listener (FUN_10c556d0).
+Class_10E9CB00           cResSound                        named: Xbox twin's messages are WAV and ADPCM errors, in file ResSound.cpp; ReleaseData frees its data.
 Class_10E9CC20           cTagVocabulary                   named: Xbox messages in its vtable mention cTagVocabulary; FUN_10c635a0 assigns a string member
 Class_10E9CFE0           SoundSchema                      named: Xbox twin's Class:: names, most frequent SoundSchema (4), source SoundSchema.cpp; its messages name SoundSchema::play and getMetaSound.
 Class_10EC0560           cResSkeletalAnimInfo             named: Xbox twin vtable (T3Opt 32/32 slots): its own methods' and constructors' debug names say cResSkeletalAnimInfo (3), source ResSkeletalAnimInfo.cpp

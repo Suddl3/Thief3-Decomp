@@ -11,7 +11,7 @@ class FArchive;
 class Class_10E8C008
 {
 public:
-    virtual void FUN_10c06750(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 
     ~Class_10E8C008();
 

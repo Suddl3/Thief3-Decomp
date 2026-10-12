@@ -10,7 +10,7 @@ class Class_10E993C0
 {
 public:
     Class_10E993C0(int A);
-    virtual void FUN_10c29ab0(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 
     int Unknown04;
     Class_10943600 Unknown08;
@@ -19,8 +19,8 @@ public:
 
 FArchive& FUN_10b052a0(FArchive& Ar, void* V);
 
-// FUNCTION: 0x10C29AB0 ?FUN_10c29ab0@Class_10E993C0@@UAEXAAVFArchive@@@Z
-void Class_10E993C0::FUN_10c29ab0(FArchive& Ar)
+// FUNCTION: 0x10C29AB0 ?Serialize@Class_10E993C0@@UAEXAAVFArchive@@@Z
+void Class_10E993C0::Serialize(FArchive& Ar)
 {
     int Count = Unknown08.Unknown00;
     Ar.Serialize(&Count, 4);

@@ -1,6 +1,6 @@
 // Game/Unsorted_10C64E80_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10E9CB00.h"
+#include "Game/cResSound.h"
 #include "Game/Struct_10C64E10.h"
 
 class Class_10D4C990
@@ -17,15 +17,15 @@ class Class_10C662F0
 {
 public:
     bool TryCreate(int A, int B, int C);
-    void AddRef(Class_10E9CB00* A);
-    void Release(Class_10E9CB00* A);
+    void AddRef(cResSound* A);
+    void Release(cResSound* A);
 
     char Unknown00[0x178];
     Class_10D4C990 m_EntryCount;
 };
 
-// FUNCTION: 0x10C64FF0 ?Release@Class_10C662F0@@QAEXPAVClass_10E9CB00@@@Z
-void Class_10C662F0::Release(Class_10E9CB00* A)
+// FUNCTION: 0x10C64FF0 ?Release@Class_10C662F0@@QAEXPAVcResSound@@@Z
+void Class_10C662F0::Release(cResSound* A)
 {
     for (int i = 0; i < m_EntryCount.Unknown00; i++)
     {

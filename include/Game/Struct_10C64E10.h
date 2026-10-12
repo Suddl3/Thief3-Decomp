@@ -3,11 +3,11 @@
 #ifndef GAME_STRUCT_10C64E10_H
 #define GAME_STRUCT_10C64E10_H
 
-class Class_10E9CB00;
+class cResSound;
 
 struct Struct_10C64E10
 {
-    Class_10E9CB00* Unknown00;
+    cResSound* Unknown00;
     int Unknown04;
 };
 

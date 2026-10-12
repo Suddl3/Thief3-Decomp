@@ -10,8 +10,8 @@ class Class_10C09B60
 public:
     ~Class_10C09B60();
 
-    int Unknown00;
-    int Unknown04;
+    int m_Item;
+    int m_Found;
     cIntArray Unknown08;
     cIntArray Unknown14;
 };

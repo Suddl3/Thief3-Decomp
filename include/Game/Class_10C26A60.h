@@ -19,7 +19,7 @@ public:
     virtual void Virtual6();
 
     char FUN_10c26500(Struct_10C26A60* Obj, int Arg);
-    void FUN_10c26a60(Struct_10C26A60* Obj, int Arg);
+    void Replace(Struct_10C26A60* Obj, int Arg);
 
     char Unknown04[0x34];
     Struct_10C266F0 Unknown38;

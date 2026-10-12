@@ -6,14 +6,14 @@
 #include "Game/Class_10E99370.h"
 #include "Game/Class_10E993C0.h"
 #include "Game/Class_10E9AAD0.h"
-#include "Game/Class_10E9AD9C.h"
-#include "Game/Class_10E9ADE8.h"
-#include "Game/Class_10E9AEC8.h"
+#include "Game/MC_Turn.h"
+#include "Game/MC_Follow.h"
+#include "Game/MC_PullToPoint.h"
 #include "Game/Info_10C2F870.h"
 #include "Game/Struct_10C35670.h"
 #include "Game/Class_10C38610.h"
 #include "Game/Class_10E993C4.h"
-#include "Game/Class_10E9AE24.h"
+#include "Game/MC_FollowAbsolute.h"
 #include "Game/Class_10E9AF04.h"
 
 extern void* DAT_10e993c0[];
@@ -29,7 +29,7 @@ extern const char DAT_10e9aaa8[];
 class MC_MoveToPoint
 {
 public:
-    void FUN_10c2eb30();
+    void Construct();
     cString GetClassName();
 
     void* Field00;
@@ -46,23 +46,23 @@ public:
     void* FUN_10c2f530();
     bool FindValue(int Key, int* Out);
     void FUN_10c2f5c0();
-    void FUN_10c2f870(const Info_10C2F870* In);
+    void SetInfo(const Info_10C2F870* In);
     void FUN_10c2f960();
-    void FUN_10c35670(Struct_10C35670* Value);
-    void FUN_10c356a0();
+    void SetRotation(Struct_10C35670* Value);
+    void InvalidateInfo();
 
     char Unknown00[0x60];
     float Field60;
-    Struct_10C35670 Unknown68;
-    Info_10C2F870 Unknown74;
+    Struct_10C35670 m_Rotation;
+    Info_10C2F870 m_Info;
     char Pad80[0x1b];
-    bool Unknown9B;
+    bool m_HasRotation;
     char Pad9C[0x1];
     unsigned char Field9d;
     char Pad9E[0x1];
     union
     {
-        char Unknown9F;
+        char m_HasInfo;
         unsigned char Field9f;
     };
     char PadA0[0x2c];
@@ -92,7 +92,7 @@ class Object_10BCE8D0;
 
 extern const char DAT_10e9aeb8[];
 
-class Class_10E9AE88 : public Class_10E9AF04
+class MC_StayNear : public Class_10E9AF04
 {
 public:
     virtual void FUN_10c37e80(Object_10BCE8D0* A);
@@ -130,8 +130,8 @@ void FUN_10c29ee0()
     FUN_10c28280();
 }
 
-// FUNCTION: 0x10C2EB30 ?FUN_10c2eb30@MC_MoveToPoint@@QAEXXZ
-void MC_MoveToPoint::FUN_10c2eb30()
+// FUNCTION: 0x10C2EB30 ?Construct@MC_MoveToPoint@@QAEXXZ
+void MC_MoveToPoint::Construct()
 {
     Field00 = (void*)DAT_10e9aa7c;
     FUN_10c27290();
@@ -183,11 +183,11 @@ void cMotionControllerAnim::FUN_10c2f5c0()
     Field9d = 1;
 }
 
-// FUNCTION: 0x10C2F870 ?FUN_10c2f870@cMotionControllerAnim@@QAEXPBUInfo_10C2F870@@@Z
-void cMotionControllerAnim::FUN_10c2f870(const Info_10C2F870* In)
+// FUNCTION: 0x10C2F870 ?SetInfo@cMotionControllerAnim@@QAEXPBUInfo_10C2F870@@@Z
+void cMotionControllerAnim::SetInfo(const Info_10C2F870* In)
 {
-    Unknown9F = 1;
-    Unknown74 = *In;
+    m_HasInfo = 1;
+    m_Info = *In;
 }
 
 // FUNCTION: 0x10C2F960 ?FUN_10c2f960@cMotionControllerAnim@@QAEXXZ
@@ -202,21 +202,21 @@ float cMotionControllerAnim::FUN_10c35650()
     return Field60;
 }
 
-// FUNCTION: 0x10C35670 ?FUN_10c35670@cMotionControllerAnim@@QAEXPAUStruct_10C35670@@@Z
-void cMotionControllerAnim::FUN_10c35670(Struct_10C35670* Value)
+// FUNCTION: 0x10C35670 ?SetRotation@cMotionControllerAnim@@QAEXPAUStruct_10C35670@@@Z
+void cMotionControllerAnim::SetRotation(Struct_10C35670* Value)
 {
-    Unknown68 = *Value;
-    Unknown9B = true;
+    m_Rotation = *Value;
+    m_HasRotation = true;
 }
 
-// FUNCTION: 0x10C356A0 ?FUN_10c356a0@cMotionControllerAnim@@QAEXXZ
-void cMotionControllerAnim::FUN_10c356a0()
+// FUNCTION: 0x10C356A0 ?InvalidateInfo@cMotionControllerAnim@@QAEXXZ
+void cMotionControllerAnim::InvalidateInfo()
 {
     Field9f = 0;
 }
 
-// FUNCTION: 0x10C36860 ?GetControllerName@Class_10E9AD9C@@QAE?AVcString@@XZ
-cString Class_10E9AD9C::GetControllerName()
+// FUNCTION: 0x10C36860 ?GetControllerName@MC_Turn@@QAE?AVcString@@XZ
+cString MC_Turn::GetControllerName()
 {
     return cString(DAT_10e9adc8);
 }
@@ -227,32 +227,32 @@ void FUN_10c36f30()
     FUN_10c36a20();
 }
 
-// FUNCTION: 0x10C374E0 ?GetMotionControllerName@Class_10E9ADE8@@QAE?AVcString@@XZ
-cString Class_10E9ADE8::GetMotionControllerName()
+// FUNCTION: 0x10C374E0 ?GetMotionControllerName@MC_Follow@@QAE?AVcString@@XZ
+cString MC_Follow::GetMotionControllerName()
 {
     return cString(DAT_10e9ae18);
 }
 
-// FUNCTION: 0x10C378A0 ?GetMotionControllerName@Class_10E9AE24@@QAE?AVcString@@XZ
-cString Class_10E9AE24::GetMotionControllerName()
+// FUNCTION: 0x10C378A0 ?GetMotionControllerName@MC_FollowAbsolute@@QAE?AVcString@@XZ
+cString MC_FollowAbsolute::GetMotionControllerName()
 {
     return cString(DAT_10e9ae54);
 }
 
-// FUNCTION: 0x10C37E80 ?FUN_10c37e80@Class_10E9AE88@@UAEXPAVObject_10BCE8D0@@@Z
-void Class_10E9AE88::FUN_10c37e80(Object_10BCE8D0* A)
+// FUNCTION: 0x10C37E80 ?FUN_10c37e80@MC_StayNear@@UAEXPAVObject_10BCE8D0@@@Z
+void MC_StayNear::FUN_10c37e80(Object_10BCE8D0* A)
 {
     FUN_10c372e0(A);
 }
 
-// FUNCTION: 0x10C38040 ?GetMotionControllerName@Class_10E9AE88@@QAE?AVcString@@XZ
-cString Class_10E9AE88::GetMotionControllerName()
+// FUNCTION: 0x10C38040 ?GetMotionControllerName@MC_StayNear@@QAE?AVcString@@XZ
+cString MC_StayNear::GetMotionControllerName()
 {
     return cString(DAT_10e9aeb8);
 }
 
-// FUNCTION: 0x10C382B0 ?GetMotionControllerName@Class_10E9AEC8@@QAE?AVcString@@XZ
-cString Class_10E9AEC8::GetMotionControllerName()
+// FUNCTION: 0x10C382B0 ?GetMotionControllerName@MC_PullToPoint@@QAE?AVcString@@XZ
+cString MC_PullToPoint::GetMotionControllerName()
 {
     return cString(DAT_10e9aef4);
 }
@@ -269,14 +269,14 @@ cString Class_10C38430::GetMotionControllerName()
     return cString(DAT_10e9af34);
 }
 
-// FUNCTION: 0x10C384F0 ?FUN_10c384f0@Class_10E9AAD0@@QAEXXZ
-void Class_10E9AAD0::FUN_10c384f0()
+// FUNCTION: 0x10C384F0 ?Construct@Class_10E9AAD0@@QAEXXZ
+void Class_10E9AAD0::Construct()
 {
     Field00 = (void*)DAT_10e9aad0;
 }
 
-// FUNCTION: 0x10C38610 ?FUN_10c38610@Class_10C38610@@QAEXXZ
-void Class_10C38610::FUN_10c38610()
+// FUNCTION: 0x10C38610 ?Reset@Class_10C38610@@QAEXXZ
+void Class_10C38610::Reset()
 {
     Unknown0BC.FUN_10b26930(0);
     Unknown0C4 = 0;

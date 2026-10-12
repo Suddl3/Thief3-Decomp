@@ -6,11 +6,11 @@
 class Class_10C25770
 {
 public:
-    int FUN_10c25770(int* Value);
+    int IndexOf(int* Value);
 
-    int Unknown00;
+    int m_Count;
     char Unknown04[4];
-    int* Unknown08;
+    int* m_Data;
 };
 
 #endif // GAME_CLASS_10C25770_H

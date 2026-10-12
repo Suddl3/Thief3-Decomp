@@ -30,12 +30,12 @@ struct Struct_10BFD780_Elem
     char Pad08[0xc];
 };
 
-// FUNCTION: 0x10BFD780 ?FUN_10bfd780@Class_10BFD780@@QAEXH@Z
-void Class_10BFD780::FUN_10bfd780(int Key)
+// FUNCTION: 0x10BFD780 ?RemoveByKey@Class_10BFD780@@QAEXH@Z
+void Class_10BFD780::RemoveByKey(int Key)
 {
-    for (int i = 0; i < Unknown08.Count; i++)
+    for (int i = 0; i < m_Objects.Count; i++)
     {
-        Class_10BFD780_Unknown10* Obj = (Class_10BFD780_Unknown10*)Unknown08.Data[i];
+        Class_10BFD780_Unknown10* Obj = (Class_10BFD780_Unknown10*)m_Objects.Data[i];
         if (Obj->Virtual12(Key))
         {
             if (Unknown14 == Obj)
@@ -44,7 +44,7 @@ void Class_10BFD780::FUN_10bfd780(int Key)
                 Unknown18 = 0;
             if (Unknown1C == Obj)
                 Unknown1C = 0;
-            cIntArray* Arr = &Unknown08;
+            cIntArray* Arr = &m_Objects;
             int Tmp = Arr->Data[i];
             int Last = Arr->Count - 1;
             Arr->Data[i] = Arr->Data[Last];
@@ -58,13 +58,13 @@ void Class_10BFD780::FUN_10bfd780(int Key)
             Obj->Virtual13(Key);
         }
     }
-    for (int j = 0; j < Unknown54.m_Count; j++)
+    for (int j = 0; j < m_Entries.m_Count; j++)
     {
-        Struct_10BFD780_Elem* Elem = (Struct_10BFD780_Elem*)Unknown54.m_Data;
+        Struct_10BFD780_Elem* Elem = (Struct_10BFD780_Elem*)m_Entries.m_Data;
         if (Elem[j].Key == Key)
         {
-            Unknown54.FUN_10bfc320(j, Unknown54.m_Count - 1);
-            Unknown54.SetCount(Unknown54.m_Count - 1);
+            m_Entries.FUN_10bfc320(j, m_Entries.m_Count - 1);
+            m_Entries.SetCount(m_Entries.m_Count - 1);
             j--;
         }
     }

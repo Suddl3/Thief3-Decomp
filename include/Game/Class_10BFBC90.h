@@ -6,10 +6,10 @@
 class Class_10BFBC90
 {
 public:
-    void FUN_10bfbc90();
+    void StampTime();
 
     char Unknown00[0x4C];
-    float Unknown4C;
+    float m_TimeStamp;
 };
 
 #endif // GAME_CLASS_10BFBC90_H

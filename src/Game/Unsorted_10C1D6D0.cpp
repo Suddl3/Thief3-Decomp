@@ -3,8 +3,8 @@
 #include "Core/Core.h"
 #include "Game/Class_10C1D760.h"
 
-// FUNCTION: 0x10C1D760 ?FUN_10c1d760@Class_10C1D760@@QAEXXZ
-void Class_10C1D760::FUN_10c1d760()
+// FUNCTION: 0x10C1D760 ?Reset@Class_10C1D760@@QAEXXZ
+void Class_10C1D760::Reset()
 {
     Unknown04 = FVector(0, 0, 0);
     Unknown14 = 0;

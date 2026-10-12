@@ -14,7 +14,7 @@ class Class_10BFD210
 {
 public:
     float FUN_10bfc3a0();
-    void FUN_10bfd210();
+    void Reset();
     void FUN_10bfc680(float Value);
     void FUN_10bfd4c0(float Value);
     void FUN_10bff150(int A, float B, int C);

@@ -10,7 +10,7 @@ class Class_10C5BFD0
 public:
     bool FUN_10c5be90(int* A, Class_10C5B910* B);
     void FUN_10c5bcd0(int* A, Class_10C5B910* B);
-    void FUN_10c5bfd0(int A, int B);
+    void Update(int A, int B);
 };
 
 #endif // GAME_CLASS_10C5BFD0_H

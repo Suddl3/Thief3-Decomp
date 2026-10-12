@@ -8,8 +8,8 @@
 
 extern Struct_10AA3520* DAT_10f35dec;
 
-// FUNCTION: 0x10C09AF0 ?FUN_10c09af0@@YGXPAVcIntArray@@@Z
-void __stdcall FUN_10c09af0(cIntArray* Out)
+// FUNCTION: 0x10C09AF0 ?CollectFlaggedItems@@YGXPAVcIntArray@@@Z
+void __stdcall CollectFlaggedItems(cIntArray* Out)
 {
     Class_10AAAEB0* Obj = (Class_10AAAEB0*)DAT_10f35dec->UnknownA4;
     int i = 0;

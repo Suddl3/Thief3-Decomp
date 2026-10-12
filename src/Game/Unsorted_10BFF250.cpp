@@ -40,19 +40,19 @@ void Distance(int* A, int* B);
 class Class_10BFF460
 {
 public:
-    void FUN_10bff250();
+    void MeasureDistance();
 
     char Unknown00[4];
     Class_10DBBAE0* Unknown04;
-    Class_10978090 Unknown08;
+    Class_10978090 m_Pawn;
 };
 
-// FUNCTION: 0x10BFF250 ?FUN_10bff250@Class_10BFF460@@QAEXXZ
-void Class_10BFF460::FUN_10bff250()
+// FUNCTION: 0x10BFF250 ?MeasureDistance@Class_10BFF460@@QAEXXZ
+void Class_10BFF460::MeasureDistance()
 {
     Class_10BAA9D0* P = Unknown04->FUN_10dbbae0();
     Distance(&((Struct_10BFF250_A*)P->FUN_10c7d570())->Unknown2C,
-                 &((Struct_10BFF250_B*)Unknown08.FUN_10978090())->Unknown2C);
+                 &((Struct_10BFF250_B*)m_Pawn.FUN_10978090())->Unknown2C);
 }
 
 // FUNCTION: 0x10BFF280 ?FUN_10bff280@Class_10BFF280@@QAEHXZ

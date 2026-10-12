@@ -20,7 +20,7 @@ void Class_10B48300::FUN_10b48300(int A)
     int Index = 0;
     if (Hit0)
     {
-        if (!Hit1 && Unknown08[1]->FUN_10c3e140() && ((TimeManager*)Unknown08[1])->GetDeltaTime() == DAT_10e49684)
+        if (!Hit1 && Unknown08[1]->IsActive() && ((TimeManager*)Unknown08[1])->GetDeltaTime() == DAT_10e49684)
             FUN_10b478e0();
         ((Class_10B7AC50*)Unknown08[0])->FUN_10b7ac50();
     }

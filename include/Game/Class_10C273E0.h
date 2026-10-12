@@ -6,10 +6,10 @@
 class Class_10C273E0
 {
 public:
-    bool FUN_10c273e0(int Arg);
+    bool IsBitSet(int Arg);
 
     int Unknown00;
-    unsigned Unknown04;
+    unsigned m_Flags;
 };
 
 #endif // GAME_CLASS_10C273E0_H

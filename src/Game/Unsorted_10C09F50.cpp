@@ -3,8 +3,8 @@
 #include "Game/Class_10C0A6B0.h"
 #include "Game/Struct_10C0A6B0.h"
 
-// FUNCTION: 0x10C0A6B0 ?FUN_10c0a6b0@Class_10C0A6B0@@QAEXPAUStruct_10C0A6B0@@H@Z
-void Class_10C0A6B0::FUN_10c0a6b0(Struct_10C0A6B0* A, int Item)
+// FUNCTION: 0x10C0A6B0 ?RemoveItem@Class_10C0A6B0@@QAEXPAUStruct_10C0A6B0@@H@Z
+void Class_10C0A6B0::RemoveItem(Struct_10C0A6B0* A, int Item)
 {
     for (int i = A->Unknown08 - 1; i >= 0; i--)
     {

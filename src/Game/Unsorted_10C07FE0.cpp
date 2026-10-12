@@ -6,8 +6,8 @@ extern void* DAT_10ff66ac;
 
 extern void* DAT_10e97bb8[];
 
-// FUNCTION: 0x10C07FE0 ?FUN_10c07fe0@@YAXXZ
-void FUN_10c07fe0()
+// FUNCTION: 0x10C07FE0 ?ReleaseShared@@YAXXZ
+void ReleaseShared()
 {
     --*(int*)DAT_10ff66ac;
     if (*(int*)DAT_10ff66ac == 0)

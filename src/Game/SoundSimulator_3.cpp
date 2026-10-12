@@ -8,10 +8,10 @@ public:
     void FUN_10c41420();
 };
 
-Class_10C41420* FUN_10c47d90();
+Class_10C41420* GetSoundBufferPool();
 
 // FUNCTION: 0x10C547E0 ?FUN_10c547e0@SoundSimulator@@UAEXXZ
 void SoundSimulator::FUN_10c547e0()
 {
-    FUN_10c47d90()->FUN_10c41420();
+    GetSoundBufferPool()->FUN_10c41420();
 }

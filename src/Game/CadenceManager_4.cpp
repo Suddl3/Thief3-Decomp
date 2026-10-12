@@ -11,7 +11,7 @@ public:
     void FUN_10c472d0(int A);
 };
 
-Class_10C41420* FUN_10c47d90();
+Class_10C41420* GetSoundBufferPool();
 
 Class_10C80360* FUN_10c5f280();
 
@@ -26,14 +26,14 @@ class Class_10E9B5C0_Unknown1C;
 // FUNCTION: 0x10C3F190 ?FUN_10c3f190@CadenceManager@@UAEX_N@Z
 void CadenceManager::FUN_10c3f190(bool A)
 {
-    FUN_10c47d90()->FUN_10c472d0(1);
+    GetSoundBufferPool()->FUN_10c472d0(1);
     Unknown21 = A;
     if (A)
     {
         FUN_10c5f280()->FUN_10c5e810();
-        FUN_10c47d90()->FUN_10c3ff10(-1);
+        GetSoundBufferPool()->CommitPending(-1);
         return;
     }
-    FUN_10c5f280()->FUN_10c5daf0();
-    FUN_10c47d90()->FUN_10c3ff10(-1);
+    FUN_10c5f280()->Reset();
+    GetSoundBufferPool()->CommitPending(-1);
 }

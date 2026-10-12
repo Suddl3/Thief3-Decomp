@@ -13,9 +13,9 @@ public:
     virtual ~Class_10E97BE8();
 
     int FUN_10c09910(int Item, int Arg);
-    void FUN_10c0aa00(int Arg, cIntArray* Src);
+    void AddMatches(int Arg, cIntArray* Src);
 
-    Class_10C0A6F0 Unknown04;
+    Class_10C0A6F0 m_Entries;
     Class_10C09A40 Unknown10;
     cIntArray Unknown1C;
 };

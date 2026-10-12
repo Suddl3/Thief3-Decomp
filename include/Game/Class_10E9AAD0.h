@@ -7,7 +7,7 @@ class Class_10E9AAD0
 {
 public:
     void* Field00;
-    void FUN_10c384f0();
+    void Construct();
 };
 
 #endif // GAME_CLASS_10E9AAD0_H

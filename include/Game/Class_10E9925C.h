@@ -16,7 +16,7 @@ public:
     virtual void Virtual3();
     virtual void Virtual4();
     virtual void Virtual5();
-    virtual void FUN_10c26720();
+    virtual void AddToRegistry();
     virtual void FUN_10c26770();
     virtual bool Virtual8();
     virtual void Virtual9();
@@ -31,11 +31,11 @@ public:
     Class_109B6D50* FUN_10c26490();
 
     char Unknown04[8];
-    int Unknown0C;
+    int m_RegistryId;
     cString Unknown10;
     char Unknown14[0x20];
     bool Unknown34;
-    bool Unknown35;
+    bool m_Registered;
     char Pad36[0x2];
 };
 

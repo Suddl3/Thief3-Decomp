@@ -15,8 +15,8 @@ struct Struct_10C423F0
 {
 };
 
-// FUNCTION: 0x10C41530 ?FUN_10c41530@Class_10C41530@@QAE?AVcRefPtr@@H@Z
-cRefPtr Class_10C41530::FUN_10c41530(int Index)
+// FUNCTION: 0x10C41530 ?GetItem@Class_10C41530@@QAE?AVcRefPtr@@H@Z
+cRefPtr Class_10C41530::GetItem(int Index)
 {
-    return UnknownC0[Index].Unknown00;
+    return m_Items[Index].Unknown00;
 }

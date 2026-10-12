@@ -16,7 +16,7 @@ public:
     union
     {
         char Pad18[0x4];
-        int Unknown1C;
+        int m_RefCount;
     };
     char Pad20[0x4];
 };

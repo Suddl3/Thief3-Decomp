@@ -243,7 +243,7 @@ void Class_10C38E40::Advance()
     Class_10C20BC0* Pending = Unknown0B4;
     Unknown0AC = 0;
     if (Pending)
-        Pending->FUN_10c20bc0();
+        Pending->Reset();
     if (m_ObjectCount > ++m_Index)
     {
         Class_10C80360* Obj = m_Objects[m_Index];

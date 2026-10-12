@@ -14,7 +14,7 @@ public:
     char Unknown40[7];
     unsigned char Unknown47;
 
-    void FUN_10c1b930();
+    void Reset();
 };
 
 #endif // GAME_CLASS_10C1B930_H

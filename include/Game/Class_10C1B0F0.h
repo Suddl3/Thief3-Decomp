@@ -14,7 +14,7 @@ public:
     virtual void Virtual5();
     virtual float Virtual6(int A);
 
-    void FUN_10c1b0f0(float Value);
+    void SetClampedValue(float Value);
 
     char Unknown04[0x28];
     float Unknown2C;

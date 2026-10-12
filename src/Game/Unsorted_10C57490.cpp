@@ -15,8 +15,8 @@ unsigned int HashBytes(const void* Data, int Length);
 // FUNCTION: 0x10C57530 ?Insert@Class_10C59030@@QAEIABVcString@@ABVClass_10C59030_Value@@@Z
 unsigned int Class_10C59030::Insert(const cString& Key, const Class_10C59030_Value& Value)
 {
-    if (!Unknown10 && Unknown00 > Unknown0C * 0.2)
-        FUN_10c57620(Unknown0C * 2);
+    if (!Unknown10 && Unknown00 > m_BucketCount * 0.2)
+        FUN_10c57620(m_BucketCount * 2);
     Class_10C592B0_Node* Node = new(0, 0, 0, 0, 0) Class_10C592B0_Node;
     Node->Key = Key.Unknown00;
     Node->Value = Value;
@@ -27,10 +27,10 @@ unsigned int Class_10C59030::Insert(const cString& Key, const Class_10C59030_Val
         Unknown18.Virtual0(Key, &Data, &Length);
         Index = HashBytes(Data, Length) & ((1 << Unknown08) - 1);
     }
-    if (Unknown14[Index])
+    if (m_Buckets[Index])
         Unknown00++;
-    Node->Next = Unknown14[Index];
-    Unknown14[Index] = Node;
-    Unknown04++;
+    Node->Next = m_Buckets[Index];
+    m_Buckets[Index] = Node;
+    m_Count++;
     return Index;
 }

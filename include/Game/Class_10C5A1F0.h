@@ -7,14 +7,14 @@ class Class_10C5A1F0
 {
 public:
     void FUN_10c59330(int A);
-    void FUN_10c5a1f0();
+    void Free();
 
     int Unknown00;
     int Unknown04;
     char Unknown08[4];
     int Unknown0C;
     char Unknown10[4];
-    void* Unknown14;
+    void* m_Buckets;
 };
 
 #endif // GAME_CLASS_10C5A1F0_H

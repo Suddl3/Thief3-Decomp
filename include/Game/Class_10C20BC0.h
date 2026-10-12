@@ -6,7 +6,7 @@
 class Class_10C20BC0
 {
 public:
-    void FUN_10c20bc0();
+    void Reset();
 
     char Unknown00[0x3C];
     int Unknown3C;

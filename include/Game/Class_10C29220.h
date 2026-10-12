@@ -8,7 +8,7 @@ class Class_10C29220_Unknown0C;
 class Class_10C29220
 {
 public:
-    void FUN_10c29220();
+    void UpdateTimer();
 
     char Pad00[4];
     int Unknown04;
@@ -18,7 +18,7 @@ public:
     bool Unknown1C;
     bool Unknown1D;
     char Pad1E[2];
-    float Unknown20;
+    float m_TimeLeft;
 };
 
 #endif // GAME_CLASS_10C29220_H

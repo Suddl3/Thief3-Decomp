@@ -117,18 +117,18 @@ int Class_10BFF600::FUN_10bff600(int A, const float* B)
 {
     if (A)
     {
-        Unknown34 = A;
+        m_LastResult = A;
         return A;
     }
-    if (B[0] == Unknown28.Unknown00 && B[1] == Unknown28.Unknown04 && B[2] == Unknown28.Unknown08)
+    if (B[0] == m_LastPosition.Unknown00 && B[1] == m_LastPosition.Unknown04 && B[2] == m_LastPosition.Unknown08)
     {
-        return Unknown34;
+        return m_LastResult;
     }
     float Best = 1e10f;
     int Found = 0;
-    for (int i = 0; i < Unknown10; i++)
+    for (int i = 0; i < m_Count; i++)
     {
-        Class_10BFF600_Unknown18* Element = Unknown18[i];
+        Class_10BFF600_Unknown18* Element = m_Elements[i];
         if (Element->Virtual94() != 7 && !(Element->Unknown74 & 0x10))
         {
             float Dist = DistanceSquared3D((const Struct_10C05A80*)B, &Element->Unknown2C);
@@ -139,7 +139,7 @@ int Class_10BFF600::FUN_10bff600(int A, const float* B)
             }
         }
     }
-    Unknown28 = *(const Struct_10C05A80*)B;
-    Unknown34 = Found;
+    m_LastPosition = *(const Struct_10C05A80*)B;
+    m_LastResult = Found;
     return Found;
 }

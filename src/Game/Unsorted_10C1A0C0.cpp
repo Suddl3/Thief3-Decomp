@@ -9,8 +9,8 @@ Class_10905A90_Member* GetAllocator();
 // Ion Storm's placement new (0x10905C10).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 
-// FUNCTION: 0x10C1A0C0 ?FUN_10c1a0c0@@YAXXZ
-void FUN_10c1a0c0()
+// FUNCTION: 0x10C1A0C0 ?AddRefCounter@@YAXXZ
+void AddRefCounter()
 {
     if (!DAT_10ff708c)
     {

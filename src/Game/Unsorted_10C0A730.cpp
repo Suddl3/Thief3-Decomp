@@ -6,8 +6,8 @@
 
 struct Struct_10C0A6B0;
 
-// FUNCTION: 0x10C0A9A0 ?FUN_10c0a9a0@Class_10C0A9A0@@QAEXPAX@Z
-void Class_10C0A9A0::FUN_10c0a9a0(void* Value)
+// FUNCTION: 0x10C0A9A0 ?RemoveFromAll@Class_10C0A9A0@@QAEXPAX@Z
+void Class_10C0A9A0::RemoveFromAll(void* Value)
 {
     for (int i = Count - 1; i >= 0; i--)
     {

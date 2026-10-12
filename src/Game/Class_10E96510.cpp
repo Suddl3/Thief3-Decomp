@@ -142,7 +142,7 @@ void Class_10E96510::FUN_10be4580(bool A)
     if (!A)
     {
         if (Unknown04->Unknown10)
-            Unknown04->Unknown10->FUN_10c28f00();
+            Unknown04->Unknown10->Reset();
         Unknown04->Unknown08->FUN_10c7d570();
         Virtual86();
     }

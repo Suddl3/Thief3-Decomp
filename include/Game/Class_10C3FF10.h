@@ -6,12 +6,12 @@
 class Class_10C3FF10
 {
 public:
-    void FUN_10c3ff10(int A);
+    void CommitPending(int A);
 
     char Unknown00[0xF0];
-    int UnknownF0;
+    int m_CommittedValue;
     char UnknownF4[0x34];
-    int Unknown128;
+    int m_PendingValue;
 };
 
 #endif // GAME_CLASS_10C3FF10_H

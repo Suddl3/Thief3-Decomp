@@ -13,7 +13,7 @@ void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
 Class_10C4B2A0* FUN_10c4c2d0();
 
-class Class_10E9CB00;
+class cResSound;
 
 struct Struct_10C64E10;
 

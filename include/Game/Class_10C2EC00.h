@@ -8,7 +8,7 @@ class FArchive;
 class Class_10C2EC00
 {
 public:
-    void FUN_10c2ec00(FArchive& Ar);
+    void Serialize(FArchive& Ar);
 
     int Unknown00;
     int Unknown04;

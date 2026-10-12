@@ -30,7 +30,7 @@ public:
     virtual bool FUN_10c1ad70();
 
     APawn* FUN_10c1b580();
-    bool FUN_10c1ad20(Struct_10C1AD20* Out, float* Value);
+    bool GetLocation(Struct_10C1AD20* Out, float* Value);
 
     int Unknown04;
     char Pad08[0x40];

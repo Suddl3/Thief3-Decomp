@@ -5,10 +5,10 @@
 #include "Game/Object_10AB5B20.h"
 #include "Game/Struct_10C64E10.h"
 
-class Class_10E9CB00;
+class cResSound;
 
-// FUNCTION: 0x10C64E10 ?AddRef@Class_10C662F0@@QAEXPAVClass_10E9CB00@@@Z
-void Class_10C662F0::AddRef(Class_10E9CB00* A)
+// FUNCTION: 0x10C64E10 ?AddRef@Class_10C662F0@@QAEXPAVcResSound@@@Z
+void Class_10C662F0::AddRef(cResSound* A)
 {
     for (int i = 0; i < m_EntryCount; i++)
     {

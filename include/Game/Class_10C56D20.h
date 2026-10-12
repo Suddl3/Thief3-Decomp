@@ -8,7 +8,7 @@ struct Struct_10C56D20;
 class Class_10C56D20
 {
 public:
-    void FUN_10c56d20(Struct_10C56D20* Node);
+    void RotateRight(Struct_10C56D20* Node);
 
     int Unknown00;
     Struct_10C56D20* Unknown04;

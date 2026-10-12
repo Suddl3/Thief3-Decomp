@@ -6,14 +6,14 @@
 class Class_10C60D80
 {
 public:
-    void FUN_10c60d80();
+    void ResizeBuffer();
 
     char Unknown00[0x120];
     int Unknown120;
     int Unknown124;
     int Unknown128;
-    int Unknown12C;
-    void* Unknown130;
+    int m_BufferSize;
+    void* m_Buffer;
 };
 
 #endif // GAME_CLASS_10C60D80_H

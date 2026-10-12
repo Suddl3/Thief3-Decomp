@@ -12,7 +12,7 @@ public:
     void FUN_10c41490(int p1);
 };
 
-Class_10C41420* FUN_10c47d90();
+Class_10C41420* GetSoundBufferPool();
 
 struct Struct_10C55800
 {
@@ -21,13 +21,13 @@ struct Struct_10C55800
 // FUNCTION: 0x10C547F0 ?FUN_10c547f0@SoundSimulator@@UAEXH@Z
 void SoundSimulator::FUN_10c547f0(int p1)
 {
-    FUN_10c47d90()->FUN_10c41490(p1);
+    GetSoundBufferPool()->FUN_10c41490(p1);
 }
 
-// FUNCTION: 0x10C54970 ?FUN_10c54970@Class_10C54970@@QAE?AVcRefPtr@@XZ
-cRefPtr Class_10C54970::FUN_10c54970()
+// FUNCTION: 0x10C54970 ?GetObject@Class_10C54970@@QAE?AVcRefPtr@@XZ
+cRefPtr Class_10C54970::GetObject()
 {
-    if (Unknown28)
-        return cRefPtr(Unknown28);
+    if (m_Object)
+        return cRefPtr(m_Object);
     return cRefPtr();
 }

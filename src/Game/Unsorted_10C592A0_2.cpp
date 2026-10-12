@@ -245,8 +245,8 @@ void* Class_10c665b0::FUN_10c665b0()
     return Field88;
 }
 
-// FUNCTION: 0x10C665D0 ?FUN_10c665d0@Class_10C665D0@@QAEXXZ
-void Class_10C665D0::FUN_10c665d0()
+// FUNCTION: 0x10C665D0 ?DecRef@Class_10C665D0@@QAEXXZ
+void Class_10C665D0::DecRef()
 {
     Field04--;
 }

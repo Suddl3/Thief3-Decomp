@@ -1,9 +1,9 @@
-// Game/Class_10E9CB00.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/cResSound.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
 extern "C" __declspec(dllimport) void __stdcall Sleep(unsigned long dwMilliseconds);
 
-class Class_10E9CB00
+class cResSound
 {
 public:
     virtual void Virtual0();
@@ -29,8 +29,8 @@ public:
     virtual bool Virtual20();
 };
 
-// FUNCTION: 0x10C60C90 ?FUN_10c60c90@Class_10E9CB00@@UAEXXZ
-void Class_10E9CB00::FUN_10c60c90()
+// FUNCTION: 0x10C60C90 ?FUN_10c60c90@cResSound@@UAEXXZ
+void cResSound::FUN_10c60c90()
 {
     if (Virtual9() == 0 && Virtual20())
     {

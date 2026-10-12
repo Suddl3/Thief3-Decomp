@@ -12,7 +12,7 @@ public:
     virtual void Virtual2();
     virtual void Virtual3();
 
-    void FUN_10c270d0();
+    void Reset();
 
     char Unknown04[0x44];
     Class_10C39220* Unknown48;
@@ -32,7 +32,7 @@ void MC_MoveToPoint::FUN_10c2eb40()
         switch (Unknown48->FUN_10c3c2c0(1))
         {
         case 0:
-            FUN_10c270d0();
+            Reset();
             break;
         case 1:
             return;

@@ -13,20 +13,20 @@ public:
     ~Class_10C0A6F0()
     {
         FUN_10c0a320(0);
-        if (Unknown04)
+        if (m_CapacityBytes)
         {
-            GetAllocator()->Virtual5(Unknown08);
-            Unknown08 = 0;
-            Unknown04 = 0;
+            GetAllocator()->Virtual5(m_Data);
+            m_Data = 0;
+            m_CapacityBytes = 0;
         }
     }
 
     void FUN_10c0a320(int Count);
-    void FUN_10c0a6f0();
+    void Clear();
 
-    int Unknown00;
-    int Unknown04;
-    void* Unknown08;
+    int m_Count;
+    int m_CapacityBytes;
+    void* m_Data;
 };
 
 #endif // GAME_CLASS_10C0A6F0_H

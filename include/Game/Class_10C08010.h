@@ -10,7 +10,7 @@ struct Struct_10BA91E0;
 class Class_10C08010
 {
 public:
-    void FUN_10c08010(Class_10C08010_Arg1* A, Struct_10BA91E0* P, int Unused3, float* Radius, int Unused5);
+    void MarkCellsNear(Class_10C08010_Arg1* A, Struct_10BA91E0* P, int Unused3, float* Radius, int Unused5);
 
     char Unknown00[4];
     Class_10C08010_Unknown04* Unknown04;

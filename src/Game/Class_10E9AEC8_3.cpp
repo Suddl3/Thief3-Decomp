@@ -5,7 +5,7 @@
 
 FArchive& FUN_10b052a0(FArchive& Ar, void* V);
 
-class Class_10E9AEC8 : public Class_10C271A0
+class MC_PullToPoint : public Class_10C271A0
 {
 public:
     virtual void Serialize(FArchive& Ar);
@@ -18,8 +18,8 @@ public:
     int m_Threshold;
 };
 
-// FUNCTION: 0x10C38260 ?Serialize@Class_10E9AEC8@@UAEXAAVFArchive@@@Z
-void Class_10E9AEC8::Serialize(FArchive& Ar)
+// FUNCTION: 0x10C38260 ?Serialize@MC_PullToPoint@@UAEXAAVFArchive@@@Z
+void MC_PullToPoint::Serialize(FArchive& Ar)
 {
     FUN_10c271a0(Ar);
     FUN_10b052a0(Ar, Unknown4C);

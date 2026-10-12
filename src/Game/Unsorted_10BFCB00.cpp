@@ -14,7 +14,7 @@ class Class_10BFD210
 {
 public:
     float FUN_10bfc3a0();
-    void FUN_10bfd210();
+    void Reset();
     void FUN_10bfc680(float Value);
     void FUN_10bfd4c0(float Value);
     void FUN_10bfd0a0(Class_10C1B0F0* A, float B);
@@ -69,8 +69,8 @@ void Class_10BFD210::FUN_10bfd0a0(Class_10C1B0F0* A, float B)
     {
         B = B - FUN_10bfc3a0();
         if (B > DAT_10eafbdc)
-            A->FUN_10c1b0f0(B);
+            A->SetClampedValue(B);
         else
-            A->FUN_10c1b0f0(0.0f);
+            A->SetClampedValue(0.0f);
     }
 }

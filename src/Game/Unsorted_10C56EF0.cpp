@@ -27,30 +27,30 @@ public:
     bool Unknown1F;
 };
 
-// FUNCTION: 0x10C57310 ?FUN_10c57310@Class_10C57310@@QAE_NPAVcString@@M@Z
-bool Class_10C57310::FUN_10c57310(cString* A, float B)
+// FUNCTION: 0x10C57310 ?SetFlag@Class_10C57310@@QAE_NPAVcString@@M@Z
+bool Class_10C57310::SetFlag(cString* A, float B)
 {
     switch (tolower(*A->Unknown00))
     {
     case 'b':
-        Unknown00->Unknown1C = B != DAT_10eafbdc ? 1 : 0;
+        m_Flags->Unknown1C = B != DAT_10eafbdc ? 1 : 0;
         return 1;
     case 'c':
-        Unknown00->Unknown1E = B != DAT_10eafbdc ? 1 : 0;
+        m_Flags->Unknown1E = B != DAT_10eafbdc ? 1 : 0;
         return 1;
     case 'r':
-        Unknown00->Unknown1D = B != DAT_10eafbdc ? 1 : 0;
+        m_Flags->Unknown1D = B != DAT_10eafbdc ? 1 : 0;
         return 1;
     case 's':
-        Unknown00->Unknown1F = B != DAT_10eafbdc ? 1 : 0;
+        m_Flags->Unknown1F = B != DAT_10eafbdc ? 1 : 0;
         return 1;
     default:
         return 0;
     }
 }
 
-// FUNCTION: 0x10C57430 ?FUN_10c57430@Class_10C57430@@QAEXPAUStruct_10C57430@@@Z
-void Class_10C57430::FUN_10c57430(Struct_10C57430* Node)
+// FUNCTION: 0x10C57430 ?RotateLeft@Class_10C57430@@QAEXPAUStruct_10C57430@@@Z
+void Class_10C57430::RotateLeft(Struct_10C57430* Node)
 {
     Struct_10C57430* Left = Node->Unknown08;
     Node->Unknown08 = Left->Unknown00;

@@ -13,7 +13,7 @@ public:
     virtual void Virtual2();
     virtual void Virtual3();
 
-    void FUN_10c270d0();
+    void Reset();
 
     char Pad04[0x40];
     bool Unknown44;

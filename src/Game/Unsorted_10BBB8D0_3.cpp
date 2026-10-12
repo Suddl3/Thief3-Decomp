@@ -85,7 +85,7 @@ void Class_10BBB410::Update()
             Unknown30.FUN_10bfcd40(P);
     }
     for (int i = 0; i < Unknown14.Count; i++)
-        ((Class_10C26E80*)Unknown14.Data[i])->FUN_10c26e80();
+        ((Class_10C26E80*)Unknown14.Data[i])->Update();
     FUN_10bb88a0();
     FUN_10bbc590();
     Unknown10->FUN_10c29540();

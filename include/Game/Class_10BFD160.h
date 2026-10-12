@@ -10,12 +10,12 @@ class Class_10C08940;
 class Class_10BFD160
 {
 public:
-    void FUN_10bfd160(Class_10C08940* Owner, cIntArray* Ids, float Limit, cIntArray* Out);
+    void CollectMatching(Class_10C08940* Owner, cIntArray* Ids, float Limit, cIntArray* Out);
 
     char Pad00[0x8];
-    int Unknown08;
+    int m_Count;
     char Pad0C[0x4];
-    Class_10978090** Unknown10;
+    Class_10978090** m_Objects;
 };
 
 #endif // GAME_CLASS_10BFD160_H

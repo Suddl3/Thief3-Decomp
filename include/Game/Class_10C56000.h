@@ -10,11 +10,11 @@ class Class_10C56000
 {
 public:
     void FUN_10c56000(int NewCount);
-    int FUN_10c56270(const Class_10C559A0* Src);
+    int Append(const Class_10C559A0* Src);
 
-    int Unknown00;
+    int m_Count;
     int Unknown04;
-    Class_10C559A0* Unknown08;
+    Class_10C559A0* m_Data;
 };
 
 #endif // GAME_CLASS_10C56000_H

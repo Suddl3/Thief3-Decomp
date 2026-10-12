@@ -10,8 +10,8 @@ public:
 
 bool FUN_10c29930(void* A, float B, float* C);
 
-// FUNCTION: 0x10C299C0 ?FUN_10c299c0@Class_10C299C0@@QAE_NPAMMM@Z
-bool Class_10C299C0::FUN_10c299c0(float* A, float B, float C)
+// FUNCTION: 0x10C299C0 ?IsAreaValid@Class_10C299C0@@QAE_NPAMMM@Z
+bool Class_10C299C0::IsAreaValid(float* A, float B, float C)
 {
     if (!FUN_10c29930(Unknown04->FUN_10dbd520(), B, A))
         return false;

@@ -7,7 +7,7 @@ class Class_10C665D0 {
 public:
     char Unknown00[0x4];
     int Field04;
-    void FUN_10c665d0();
+    void DecRef();
 };
 
 #endif // GAME_CLASS_10C665D0_H

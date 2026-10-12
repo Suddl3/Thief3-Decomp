@@ -10,7 +10,7 @@ public:
     void FUN_10c472d0(int A);
 };
 
-Class_10C41420* FUN_10c47d90();
+Class_10C41420* GetSoundBufferPool();
 
 // FUNCTION: 0x10C3F120 ?FUN_10c3f120@Class_10C3F110@@QAEXHM@Z
 void Class_10C3F110::FUN_10c3f120(int Index, float Value)
@@ -21,7 +21,7 @@ void Class_10C3F110::FUN_10c3f120(int Index, float Value)
 // FUNCTION: 0x10C3F140 ?FUN_10c3f140@CadenceManager@@UAEX_N@Z
 void CadenceManager::FUN_10c3f140(bool A)
 {
-    FUN_10c47d90()->FUN_10c472d0(1);
+    GetSoundBufferPool()->FUN_10c472d0(1);
     Unknown20 = A;
-    FUN_10c47d90()->FUN_10c3ff10(-1);
+    GetSoundBufferPool()->CommitPending(-1);
 }

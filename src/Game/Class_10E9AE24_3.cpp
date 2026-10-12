@@ -29,7 +29,7 @@ public:
     virtual void Virtual9();
 };
 
-class Class_10E9AE24 : public Class_10E9AF04
+class MC_FollowAbsolute : public Class_10E9AF04
 {
 public:
     virtual void Serialize(Object_10BCE8D0* A);
@@ -44,8 +44,8 @@ public:
     float m_OffsetY;
 };
 
-// FUNCTION: 0x10C377C0 ?FUN_10c377c0@Class_10E9AE24@@UAE?AVFVector@@XZ
-FVector Class_10E9AE24::FUN_10c377c0()
+// FUNCTION: 0x10C377C0 ?FUN_10c377c0@MC_FollowAbsolute@@UAE?AVFVector@@XZ
+FVector MC_FollowAbsolute::FUN_10c377c0()
 {
     if (!Unknown4C.FUN_10978090())
         return FVector(0.0f, 0.0f, 0.0f);

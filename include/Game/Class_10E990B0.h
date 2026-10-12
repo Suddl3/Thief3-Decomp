@@ -8,7 +8,7 @@
 class Class_10E990B0 : public Class_10C1B840
 {
 public:
-    Class_10E990B0* FUN_10c1c170(int A, int B, int C, float D, float E);
+    Class_10E990B0* Initialize(int A, int B, int C, float D, float E);
 };
 
 #endif // GAME_CLASS_10E990B0_H

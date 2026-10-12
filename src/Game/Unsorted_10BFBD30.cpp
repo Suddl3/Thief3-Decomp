@@ -22,19 +22,19 @@ struct Struct_10BFBD30
     Object_10BFBD30** Unknown08;
 };
 
-// FUNCTION: 0x10BFBD30 ?FUN_10bfbd30@@YAXPAUStruct_10BFBD30@@@Z
-void FUN_10bfbd30(Struct_10BFBD30* List)
+// FUNCTION: 0x10BFBD30 ?DeleteAllObjects@@YAXPAUStruct_10BFBD30@@@Z
+void DeleteAllObjects(Struct_10BFBD30* List)
 {
     for (int i = 0; i < List->Unknown00; i++)
         delete List->Unknown08[i];
     List->Unknown00 = 0;
 }
 
-// FUNCTION: 0x10BFBE30 ?FUN_10bfbe30@Class_10BFBE30@@QAE_NXZ
-bool Class_10BFBE30::FUN_10bfbe30()
+// FUNCTION: 0x10BFBE30 ?HasTimedOut@Class_10BFBE30@@QAE_NXZ
+bool Class_10BFBE30::HasTimedOut()
 {
-    float Limit = Unknown08;
-    if (GetTimeSeconds() - Unknown04 > Limit)
+    float Limit = m_TimeLimit;
+    if (GetTimeSeconds() - m_TimeStamp > Limit)
         return true;
     return false;
 }

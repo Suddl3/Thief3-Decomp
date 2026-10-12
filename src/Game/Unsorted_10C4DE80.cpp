@@ -4,8 +4,8 @@
 #include "Game/Class_10C4E8D0.h"
 #include "Game/Class_10C4E970.h"
 
-// FUNCTION: 0x10C4E8D0 ?FUN_10c4e8d0@Class_10C4E8D0@@QAEXXZ
-void Class_10C4E8D0::FUN_10c4e8d0()
+// FUNCTION: 0x10C4E8D0 ?Empty@Class_10C4E8D0@@QAEXXZ
+void Class_10C4E8D0::Empty()
 {
     FUN_10c4d550(0);
     if (Unknown04)

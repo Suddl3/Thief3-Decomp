@@ -49,8 +49,8 @@ struct Struct_10C40950
     float Unknown08;
 };
 
-// FUNCTION: 0x10C40950 ?FUN_10c40950@@YAXPAUStruct_10C40950@@HHVClass_10C56E40@@HM@Z
-void FUN_10c40950(Struct_10C40950* Heap, int Hi, int Lo, Class_10C56E40 Value, int Data, float Key)
+// FUNCTION: 0x10C40950 ?PushHeapEntry@@YAXPAUStruct_10C40950@@HHVClass_10C56E40@@HM@Z
+void PushHeapEntry(Struct_10C40950* Heap, int Hi, int Lo, Class_10C56E40 Value, int Data, float Key)
 {
     int Parent = (Hi - 1) / 2;
     while (Lo < Hi)

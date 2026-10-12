@@ -26,8 +26,8 @@ struct Struct_10AA3520
 
 extern Struct_10AA3520* DAT_10f35dec;
 
-// FUNCTION: 0x10C5E4E0 ?FUN_10c5e4e0@Class_10C5E4E0@@QAEXXZ
-void Class_10C5E4E0::FUN_10c5e4e0()
+// FUNCTION: 0x10C5E4E0 ?Empty@Class_10C5E4E0@@QAEXXZ
+void Class_10C5E4E0::Empty()
 {
     Unknown04.Empty();
 }

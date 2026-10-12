@@ -13,7 +13,7 @@ public:
 class Class_10C4EDE0 : public Class_10A68AE0
 {
 public:
-    Class_10C4EDE0* FUN_10c4ede0(const Class_10C4EDE0& Other);
+    Class_10C4EDE0* CopyFrom(const Class_10C4EDE0& Other);
 
     cIntArray Unknown0C;
     int Unknown18;
@@ -28,8 +28,8 @@ public:
     int Unknown44;
 };
 
-// FUNCTION: 0x10C4EDE0 ?FUN_10c4ede0@Class_10C4EDE0@@QAEPAV1@ABV1@@Z
-Class_10C4EDE0* Class_10C4EDE0::FUN_10c4ede0(const Class_10C4EDE0& Other)
+// FUNCTION: 0x10C4EDE0 ?CopyFrom@Class_10C4EDE0@@QAEPAV1@ABV1@@Z
+Class_10C4EDE0* Class_10C4EDE0::CopyFrom(const Class_10C4EDE0& Other)
 {
     Class_10A68AE0::CopyFrom(Other);
     Unknown0C = Other.Unknown0C;

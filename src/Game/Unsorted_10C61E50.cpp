@@ -14,7 +14,7 @@ public:
 
 extern unsigned char DAT_10ff7115;
 
-class Class_10E9CB00
+class cResSound
 {
 public:
     virtual void Virtual0();
@@ -36,8 +36,8 @@ public:
     bool Unknown114;
 };
 
-// FUNCTION: 0x10C61E50 ?FUN_10c61e50@Class_10E9CB00@@UAEHXZ
-int Class_10E9CB00::FUN_10c61e50()
+// FUNCTION: 0x10C61E50 ?FUN_10c61e50@cResSound@@UAEHXZ
+int cResSound::FUN_10c61e50()
 {
     if (Unknown114)
         return 0;

@@ -2,8 +2,8 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10C07070.h"
 
-// FUNCTION: 0x10C06FA0 ?FUN_10c06fa0@@YAHH@Z
-int FUN_10c06fa0(int Value)
+// FUNCTION: 0x10C06FA0 ?IndexToMask@@YAHH@Z
+int IndexToMask(int Value)
 {
     switch (Value)
     {
@@ -21,8 +21,8 @@ int FUN_10c06fa0(int Value)
     return 0;
 }
 
-// FUNCTION: 0x10C07070 ?FUN_10c07070@Class_10C07070@@QAEHXZ
-int Class_10C07070::FUN_10c07070()
+// FUNCTION: 0x10C07070 ?GetRemainingCapacity@Class_10C07070@@QAEHXZ
+int Class_10C07070::GetRemainingCapacity()
 {
     int Total = Unknown38 + Unknown2C + Unknown20 + Unknown14 + Unknown08;
     int Used = Unknown4C + Unknown4A + Unknown48 + Unknown46 + Unknown44;

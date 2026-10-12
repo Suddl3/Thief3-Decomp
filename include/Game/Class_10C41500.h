@@ -11,10 +11,10 @@ struct Struct_10C63E90;
 class Class_10C41500
 {
 public:
-    Struct_10C63E90 FUN_10c41500(int Index);
+    Struct_10C63E90 GetItemData(int Index);
 
     char Unknown00[0xBC];
-    std::vector<Struct_10C41500> UnknownBC;
+    std::vector<Struct_10C41500> m_Items;
 };
 
 #endif // GAME_CLASS_10C41500_H

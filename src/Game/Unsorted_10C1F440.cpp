@@ -15,8 +15,8 @@ struct Struct_10C1F490
     int Unknown00;
 };
 
-// FUNCTION: 0x10C1F440 ?FUN_10c1f440@Class_10E991C0@@UAEXAAVFArchive@@@Z
-void Class_10E991C0::FUN_10c1f440(FArchive& Ar)
+// FUNCTION: 0x10C1F440 ?Serialize@Class_10E991C0@@UAEXAAVFArchive@@@Z
+void Class_10E991C0::Serialize(FArchive& Ar)
 {
     FUN_10b052a0(Ar, &Unknown04);
     Ar.Serialize(&Unknown10, 4);

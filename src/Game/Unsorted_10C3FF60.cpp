@@ -11,16 +11,16 @@ struct Struct_10C3FF60
     bool Unknown29;
 };
 
-// FUNCTION: 0x10C3FF60 ?FUN_10c3ff60@Class_10C3FF60@@QAEXPAUStruct_10C3FF60@@@Z
-void Class_10C3FF60::FUN_10c3ff60(Struct_10C3FF60* Node)
+// FUNCTION: 0x10C3FF60 ?RotateRight@Class_10C3FF60@@QAEXPAUStruct_10C3FF60@@@Z
+void Class_10C3FF60::RotateRight(Struct_10C3FF60* Node)
 {
     Struct_10C3FF60* Left = Node->Unknown00;
     Node->Unknown00 = Left->Unknown08;
     if (!Left->Unknown08->Unknown29)
         Left->Unknown08->Unknown04 = Node;
     Left->Unknown04 = Node->Unknown04;
-    if (Node == Unknown1C->Unknown04)
-        Unknown1C->Unknown04 = Left;
+    if (Node == m_Head->Unknown04)
+        m_Head->Unknown04 = Left;
     else if (Node == Node->Unknown04->Unknown08)
         Node->Unknown04->Unknown08 = Left;
     else

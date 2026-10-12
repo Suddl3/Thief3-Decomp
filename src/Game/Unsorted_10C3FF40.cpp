@@ -13,10 +13,10 @@ public:
     virtual void Virtual2();
 };
 
-// FUNCTION: 0x10C3FF40 ?FUN_10c3ff40@Class_10C3FF40@@QAEHXZ
-int Class_10C3FF40::FUN_10c3ff40()
+// FUNCTION: 0x10C3FF40 ?GetItemCount@Class_10C3FF40@@QAEHXZ
+int Class_10C3FF40::GetItemCount()
 {
-    return Unknown04.size();
+    return m_Items.size();
 }
 
 // FUNCTION: 0x10C40580 ?FUN_10c40580@Class_10C40580@@QAEXXZ

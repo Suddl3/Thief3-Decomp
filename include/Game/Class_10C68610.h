@@ -8,9 +8,9 @@ struct Struct_10C68610;
 class Class_10C68610
 {
 public:
-    void FUN_10c68610();
+    void Free();
 
-    int Unknown00;
+    int m_LastIndex;
     Struct_10C68610** Unknown04;
     Struct_10C68610** Unknown08;
 };

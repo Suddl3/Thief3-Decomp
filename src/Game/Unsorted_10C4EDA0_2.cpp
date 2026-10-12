@@ -28,8 +28,8 @@ void Class_10C4EDA0::Free()
     }
 }
 
-// FUNCTION: 0x10C4F450 ?FUN_10c4f450@Class_10C4F450@@QAEXXZ
-void Class_10C4F450::FUN_10c4f450()
+// FUNCTION: 0x10C4F450 ?Empty@Class_10C4F450@@QAEXXZ
+void Class_10C4F450::Empty()
 {
     FUN_10c4eea0(0);
     if (Unknown04)

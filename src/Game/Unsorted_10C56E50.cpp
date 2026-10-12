@@ -20,8 +20,8 @@ public:
     Class_10C576F0_Node* Next;
 };
 
-// FUNCTION: 0x10C56E50 ?FUN_10c56e50@Class_10C56E50@@QAEXXZ
-void Class_10C56E50::FUN_10c56e50()
+// FUNCTION: 0x10C56E50 ?SetDefaults@Class_10C56E50@@QAEXXZ
+void Class_10C56E50::SetDefaults()
 {
     Unknown00 = 5.0f;
     Unknown04 = 50.0f;

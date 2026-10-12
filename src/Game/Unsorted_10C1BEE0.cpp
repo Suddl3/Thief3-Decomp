@@ -27,24 +27,24 @@ Class_10E99020* Class_10E99020::Initialize(int A, int B, int C, int D, float E, 
     return this;
 }
 
-// FUNCTION: 0x10C1C130 ?FUN_10c1c130@Class_10E99068@@QAEPAV1@HHHMM@Z
-Class_10E99068* Class_10E99068::FUN_10c1c130(int A, int B, int C, float D, float E)
+// FUNCTION: 0x10C1C130 ?Initialize@Class_10E99068@@QAEPAV1@HHHMM@Z
+Class_10E99068* Class_10E99068::Initialize(int A, int B, int C, float D, float E)
 {
     this->Class_10C1B840::Class_10C1B840(A, B, C, (int)D, (int)E, 1.0f);
     Unknown00 = DAT_10e99068;
     return this;
 }
 
-// FUNCTION: 0x10C1C170 ?FUN_10c1c170@Class_10E990B0@@QAEPAV1@HHHMM@Z
-Class_10E990B0* Class_10E990B0::FUN_10c1c170(int A, int B, int C, float D, float E)
+// FUNCTION: 0x10C1C170 ?Initialize@Class_10E990B0@@QAEPAV1@HHHMM@Z
+Class_10E990B0* Class_10E990B0::Initialize(int A, int B, int C, float D, float E)
 {
     this->Class_10C1B840::Class_10C1B840(A, B, C, (int)D, (int)E, 1.0f);
     Unknown00 = DAT_10e990b0;
     return this;
 }
 
-// FUNCTION: 0x10C1C1B0 ?FUN_10c1c1b0@Class_10E990F8@@QAEPAV1@HHHMM@Z
-Class_10E990F8* Class_10E990F8::FUN_10c1c1b0(int A, int B, int C, float D, float E)
+// FUNCTION: 0x10C1C1B0 ?Initialize@Class_10E990F8@@QAEPAV1@HHHMM@Z
+Class_10E990F8* Class_10E990F8::Initialize(int A, int B, int C, float D, float E)
 {
     this->Class_10C1B840::Class_10C1B840(A, B, C, (int)D, (int)E, 1.0f);
     Unknown00 = DAT_10e990f8;

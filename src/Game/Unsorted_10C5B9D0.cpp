@@ -8,8 +8,8 @@
 
 extern "C" void* memmove(void* Dest, const void* Src, unsigned Count);
 
-// FUNCTION: 0x10C5B9D0 ?FUN_10c5b9d0@Class_10C5B9D0@@QAEXXZ
-void Class_10C5B9D0::FUN_10c5b9d0()
+// FUNCTION: 0x10C5B9D0 ?RemoveLast@Class_10C5B9D0@@QAEXXZ
+void Class_10C5B9D0::RemoveLast()
 {
     if (Unknown3C.m_Count > 1)
     {
@@ -27,8 +27,8 @@ void Class_10C5B9D0::FUN_10c5b9d0()
     }
 }
 
-// FUNCTION: 0x10C5BA20 ?FUN_10c5ba20@Class_10C5BA20@@QAEPAV1@ABV1@@Z
-Class_10C5BA20* Class_10C5BA20::FUN_10c5ba20(const Class_10C5BA20& A)
+// FUNCTION: 0x10C5BA20 ?CopyFrom@Class_10C5BA20@@QAEPAV1@ABV1@@Z
+Class_10C5BA20* Class_10C5BA20::CopyFrom(const Class_10C5BA20& A)
 {
     Unknown00 = A.Unknown00;
     Unknown04 = A.Unknown04;

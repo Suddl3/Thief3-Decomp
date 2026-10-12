@@ -14,17 +14,17 @@ public:
 
 extern Class_10FF667C* DAT_10ff667c;
 
-// FUNCTION: 0x10C38EB0 ?FUN_10c38eb0@Class_10C38EB0@@QAEXH@Z
-void Class_10C38EB0::FUN_10c38eb0(int A)
+// FUNCTION: 0x10C38EB0 ?RebindHandle@Class_10C38EB0@@QAEXH@Z
+void Class_10C38EB0::RebindHandle(int A)
 {
-    if (Unknown106)
+    if (m_HasHandle)
     {
         void* X = Unknown48->Virtual34()->FUN_10c7d570();
-        DAT_10ff667c->Unknown1C->FUN_10c0a9a0(X);
+        DAT_10ff667c->Unknown1C->RemoveFromAll(X);
     }
     else
     {
-        Unknown106 = true;
+        m_HasHandle = true;
     }
     void* Y = Unknown48->Virtual34()->FUN_10c7d570();
     DAT_10ff667c->Unknown1C->FUN_10c09f50(A, Y);

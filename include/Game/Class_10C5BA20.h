@@ -9,7 +9,7 @@
 class Class_10C5BA20
 {
 public:
-    Class_10C5BA20* FUN_10c5ba20(const Class_10C5BA20& A);
+    Class_10C5BA20* CopyFrom(const Class_10C5BA20& A);
 
     cString Unknown00;
     cString Unknown04;

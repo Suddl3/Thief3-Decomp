@@ -8,7 +8,7 @@ struct Struct_10C57430;
 class Class_10C57430
 {
 public:
-    void FUN_10c57430(Struct_10C57430* Node);
+    void RotateLeft(Struct_10C57430* Node);
 
     char Unknown00[4];
     Struct_10C57430* Unknown04;

@@ -10,7 +10,7 @@ class FArchive;
 class Class_10E991C0
 {
 public:
-    virtual void FUN_10c1f440(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 
     FVector Unknown04;
     int Unknown10;

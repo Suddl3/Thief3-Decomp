@@ -19,7 +19,7 @@ public:
     Class_109B6D50* FUN_10c26490();
 
     char Unknown04[8];
-    int Unknown0C;
+    int m_RegistryId;
     cString Unknown10;
     char Unknown14[0x20];
     bool Unknown34;
@@ -34,10 +34,10 @@ public:
 // FUNCTION: 0x10C26600 ?Unregister@Class_10E992D4@@QAEXXZ
 void Class_10E992D4::Unregister()
 {
-    if (Unknown34 && FUN_10c26490() && Unknown0C >= 0)
+    if (Unknown34 && FUN_10c26490() && m_RegistryId >= 0)
     {
-        if (FUN_10c26490()->FUN_109b6c50(Unknown0C) != -1)
-            FUN_10c26490()->FUN_109c33f0(Unknown0C, Unknown10);
+        if (FUN_10c26490()->FUN_109b6c50(m_RegistryId) != -1)
+            FUN_10c26490()->FUN_109c33f0(m_RegistryId, Unknown10);
         Virtual7();
         Unknown34 = false;
     }

@@ -9,7 +9,7 @@ class Class_10E90C58;
 
 double GetTimeSeconds();
 
-void FUN_10c28d20();
+void AcquireSingleton();
 
 // Ion Storm's placement new (0x10905C10).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
@@ -56,5 +56,5 @@ Class_10E90D70::Class_10E90D70(int A, int B)
     GetAllocator()->Virtual8(0, 0);
     Unknown18 = new(0, 0, 0, 0, 0) Class_10E90C58(this);
     GetAllocator()->Virtual9();
-    FUN_10c28d20();
+    AcquireSingleton();
 }

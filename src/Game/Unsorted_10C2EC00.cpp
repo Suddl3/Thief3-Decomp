@@ -34,8 +34,8 @@ public:
 
 void FUN_10c11ff0(FArchive& Ar, int* Value);
 
-// FUNCTION: 0x10C2EC00 ?FUN_10c2ec00@Class_10C2EC00@@QAEXAAVFArchive@@@Z
-void Class_10C2EC00::FUN_10c2ec00(FArchive& Ar)
+// FUNCTION: 0x10C2EC00 ?Serialize@Class_10C2EC00@@QAEXAAVFArchive@@@Z
+void Class_10C2EC00::Serialize(FArchive& Ar)
 {
     Ar.Serialize(&Unknown04, 4);
     Ar.Serialize(&Unknown08, 4);

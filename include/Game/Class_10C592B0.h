@@ -9,14 +9,14 @@ class Class_10C592B0
 {
 public:
     void FUN_10c57620(int Size);
-    void FUN_10c592b0(int Size);
+    void Reset(int Size);
 
     int Unknown00;
-    int Unknown04;
+    int m_Count;
     int Unknown08;
-    int Unknown0C;
+    int m_BucketCount;
     bool Unknown10;
-    Class_10C592B0_Node** Unknown14;
+    Class_10C592B0_Node** m_Buckets;
 };
 
 #endif // GAME_CLASS_10C592B0_H

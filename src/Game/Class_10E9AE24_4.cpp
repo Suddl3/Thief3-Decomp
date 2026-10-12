@@ -19,7 +19,7 @@ public:
     void FUN_10c372e0(Object_10BCE8D0* A);
 };
 
-class Class_10E9AE24 : public Class_10E9AF04
+class MC_FollowAbsolute : public Class_10E9AF04
 {
 public:
     virtual void Serialize(Object_10BCE8D0* A);
@@ -29,8 +29,8 @@ public:
     int m_OffsetY;
 };
 
-// FUNCTION: 0x10C37860 ?Serialize@Class_10E9AE24@@UAEXPAVObject_10BCE8D0@@@Z
-void Class_10E9AE24::Serialize(Object_10BCE8D0* A)
+// FUNCTION: 0x10C37860 ?Serialize@MC_FollowAbsolute@@UAEXPAVObject_10BCE8D0@@@Z
+void MC_FollowAbsolute::Serialize(Object_10BCE8D0* A)
 {
     FUN_10c372e0(A);
     A->Virtual1(&m_OffsetX, 4);

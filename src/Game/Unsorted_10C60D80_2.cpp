@@ -13,26 +13,26 @@ void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D
 
 Class_10C662F0* FUN_10c65090();
 
-// FUNCTION: 0x10C60D80 ?FUN_10c60d80@Class_10C60D80@@QAEXXZ
-void Class_10C60D80::FUN_10c60d80()
+// FUNCTION: 0x10C60D80 ?ResizeBuffer@Class_10C60D80@@QAEXXZ
+void Class_10C60D80::ResizeBuffer()
 {
-    if (Unknown12C == 0)
+    if (m_BufferSize == 0)
     {
-        ::operator delete(Unknown130);
-        Unknown130 = 0;
+        ::operator delete(m_Buffer);
+        m_Buffer = 0;
         return;
     }
-    if (Unknown130)
+    if (m_Buffer)
     {
-        ::operator delete(Unknown130);
-        Unknown130 = 0;
+        ::operator delete(m_Buffer);
+        m_Buffer = 0;
     }
     unsigned Hi;
     unsigned Lo;
     ((Class_10C64AA0*)FUN_10c65090())->FUN_10c64aa0(Unknown120, &Hi, &Lo);
     Elem_10C64AC0* Elem = ((Class_10C64AC0*)FUN_10c65090())->FUN_10c64ac0(Hi);
     int Tag = 0;
-    Unknown130 = operator new(Unknown12C, Tag, 0, 0, 0, 0);
+    m_Buffer = operator new(m_BufferSize, Tag, 0, 0, 0, 0);
     Elem->FUN_10d57770(Unknown128 + Unknown124 + Lo);
-    Elem->FUN_10d577b0(Unknown130, Unknown12C);
+    Elem->FUN_10d577b0(m_Buffer, m_BufferSize);
 }

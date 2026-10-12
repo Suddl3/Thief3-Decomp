@@ -227,5 +227,5 @@ int APatrolPoint::FUN_10bc2e20(int Index)
 // FUNCTION: 0x10BC2F40 ?FUN_10bc2f40@ACitySectionPopulationInfo@@UAEXH@Z
 void ACitySectionPopulationInfo::FUN_10bc2f40(int p1)
 {
-    DAT_10ff667c->Unknown30->FUN_10c07ed0();
+    DAT_10ff667c->Unknown30->UpdatePopulation();
 }

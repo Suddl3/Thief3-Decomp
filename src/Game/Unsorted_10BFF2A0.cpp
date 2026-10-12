@@ -9,13 +9,13 @@ public:
     void* FUN_10bff2a0();
 
     char Unknown00[8];
-    Class_10978090 Unknown08;
+    Class_10978090 m_Pawn;
 };
 
 // FUNCTION: 0x10BFF2A0 ?FUN_10bff2a0@Class_10BFF460@@QAEPAXXZ
 void* Class_10BFF460::FUN_10bff2a0()
 {
-    if (Unknown08.FUN_10978090())
-        return Cast<APawn>((UObject*)Unknown08.FUN_10978090());
+    if (m_Pawn.FUN_10978090())
+        return Cast<APawn>((UObject*)m_Pawn.FUN_10978090());
     return 0;
 }

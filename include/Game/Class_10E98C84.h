@@ -9,7 +9,7 @@ public:
     Class_10E98C84();
     ~Class_10E98C84();
 
-    void FUN_10c15db0();
+    void ResetVTable();
 
     void* Field00;
     int Unknown04;

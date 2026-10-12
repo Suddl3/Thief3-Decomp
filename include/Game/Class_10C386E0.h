@@ -14,7 +14,7 @@ public:
     int UnknownB0;
     Class_10C20BC0* UnknownB4;
 
-    void FUN_10c386e0();
+    void Reset();
 };
 
 #endif // GAME_CLASS_10C386E0_H

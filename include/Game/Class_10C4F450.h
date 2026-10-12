@@ -23,7 +23,7 @@ public:
     }
 
     void FUN_10c4eea0(int Count);
-    void FUN_10c4f450();
+    void Empty();
 
     int Unknown00;
     int Unknown04;

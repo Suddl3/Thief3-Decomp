@@ -9,10 +9,10 @@ class Object_10AB5B20;
 class Class_10C54970
 {
 public:
-    cRefPtr FUN_10c54970();
+    cRefPtr GetObject();
 
     char Unknown00[0x28];
-    Object_10AB5B20* Unknown28;
+    Object_10AB5B20* m_Object;
 };
 
 #endif // GAME_CLASS_10C54970_H

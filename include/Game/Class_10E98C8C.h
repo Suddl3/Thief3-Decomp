@@ -5,7 +5,7 @@
 
 class Class_10E98C8C;
 
-void FUN_10c164c0(Class_10E98C8C* P);
+void RegisterItem(Class_10E98C8C* P);
 
 class Class_10E98C8C
 {
@@ -16,7 +16,7 @@ public:
     Class_10E98C8C(int A)
     {
         Unknown04 = A;
-        FUN_10c164c0(this);
+        RegisterItem(this);
     }
 
     int Unknown04;

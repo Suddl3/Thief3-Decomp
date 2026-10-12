@@ -44,8 +44,8 @@ struct Struct_10C55730_Node2
     Class_10C55730_Unknown08* Unknown08;
 };
 
-// FUNCTION: 0x10C55730 ?FUN_10c55730@Class_10E9C32C@@UAEXPAVClass_10C55730_Param@@@Z
-void Class_10E9C32C::FUN_10c55730(Class_10C55730_Param* Arg)
+// FUNCTION: 0x10C55730 ?Unregister@Class_10E9C32C@@UAEXPAVClass_10C55730_Param@@@Z
+void Class_10E9C32C::Unregister(Class_10C55730_Param* Arg)
 {
     Struct_10C55730_Node1* P = Unknown1C->Next;
     while (P != Unknown1C)

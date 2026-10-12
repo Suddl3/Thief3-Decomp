@@ -8,7 +8,7 @@
 class Class_10C07ED0 : public Class_10C07070
 {
 public:
-    void FUN_10c07ed0();
+    void UpdatePopulation();
     void FUN_10c07330();
     void FUN_10c076f0(int A);
 

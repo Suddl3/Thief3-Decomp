@@ -13,9 +13,9 @@ public:
     void Clear();
     void RemoveAt(int Index);
 
-    int Unknown00;
-    int Unknown04;
-    Item_10C0C150* Unknown08;
+    int m_Count;
+    int m_CapacityBytes;
+    Item_10C0C150* m_Data;
 };
 
 #endif // GAME_CLASS_10C0C150_H

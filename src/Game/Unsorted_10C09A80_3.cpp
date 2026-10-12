@@ -10,8 +10,8 @@ struct Struct_10C09A80
     int Unknown30;
 };
 
-// FUNCTION: 0x10C09A80 ?FUN_10c09a80@@YGXPAUStruct_10C09A80@@PAVcIntArray@@@Z
-void __stdcall FUN_10c09a80(Struct_10C09A80* Param, cIntArray* Out)
+// FUNCTION: 0x10C09A80 ?CollectMatching@@YGXPAUStruct_10C09A80@@PAVcIntArray@@@Z
+void __stdcall CollectMatching(Struct_10C09A80* Param, cIntArray* Out)
 {
     if (Param)
     {

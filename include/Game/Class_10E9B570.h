@@ -9,12 +9,12 @@ class Class_10E9B570
 {
 public:
     virtual void Virtual0();
-    virtual FVector FUN_10c3ed70();
+    virtual FVector GetRotation();
     virtual FVector FUN_10c3ed90();
 
     Class_10E9B570* FUN_10c3edb0(int Id);
 
-    int Unknown04;
+    int m_Owner;
 };
 
 #endif // GAME_CLASS_10E9B570_H

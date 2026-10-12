@@ -64,11 +64,11 @@ class Class_10E97BEC : public cIntArray
 public:
     virtual ~Class_10E97BEC();
     virtual void Virtual1();
-    virtual void FUN_10c0add0(int Value);
+    virtual void SetAllAndClear(int Value);
 };
 
-// FUNCTION: 0x10C0ADD0 ?FUN_10c0add0@Class_10E97BEC@@UAEXH@Z
-void Class_10E97BEC::FUN_10c0add0(int Value)
+// FUNCTION: 0x10C0ADD0 ?SetAllAndClear@Class_10E97BEC@@UAEXH@Z
+void Class_10E97BEC::SetAllAndClear(int Value)
 {
     for (int i = 0; i < Count; i++)
         ((Class_10C0ADD0_Data*)Data[i])->Unknown00 = Value;

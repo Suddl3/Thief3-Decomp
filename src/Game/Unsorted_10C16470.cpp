@@ -12,8 +12,8 @@ void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
 extern Class_10E98C88* DAT_10ff7080;
 
-// FUNCTION: 0x10C164C0 ?FUN_10c164c0@@YAXPAVClass_10E98C8C@@@Z
-void FUN_10c164c0(Class_10E98C8C* Item)
+// FUNCTION: 0x10C164C0 ?RegisterItem@@YAXPAVClass_10E98C8C@@@Z
+void RegisterItem(Class_10E98C8C* Item)
 {
     if (!DAT_10ff7080)
     {

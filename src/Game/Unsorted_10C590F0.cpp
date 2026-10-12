@@ -25,41 +25,41 @@ public:
 class Class_10C591A0
 {
 public:
-    bool FUN_10c591a0(int* A);
+    bool Remove(int* A);
     void Rehash(int Size);
 
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
+    int m_Collisions;
+    int m_Count;
+    int m_BucketBits;
+    int m_BucketCount;
     bool Unknown10;
-    Class_10C591A0_Node** Unknown14;
-    Class_10C591A0_Field18 Unknown18;
+    Class_10C591A0_Node** m_Buckets;
+    Class_10C591A0_Field18 m_KeyTraits;
 };
 
-// FUNCTION: 0x10C591A0 ?FUN_10c591a0@Class_10C591A0@@QAE_NPAH@Z
-bool Class_10C591A0::FUN_10c591a0(int* A)
+// FUNCTION: 0x10C591A0 ?Remove@Class_10C591A0@@QAE_NPAH@Z
+bool Class_10C591A0::Remove(int* A)
 {
-    if (!Unknown10 && Unknown04 < Unknown0C * 0.05 && Unknown0C > 64)
-        Rehash(Unknown0C / 2);
+    if (!Unknown10 && m_Count < m_BucketCount * 0.05 && m_BucketCount > 64)
+        Rehash(m_BucketCount / 2);
     unsigned int Index;
     {
         const void* Data;
         int Length;
-        Unknown18.Virtual0(*A, &Data, &Length);
-        Index = HashBytes(Data, Length) & ((1 << Unknown08) - 1);
+        m_KeyTraits.Virtual0(*A, &Data, &Length);
+        Index = HashBytes(Data, Length) & ((1 << m_BucketBits) - 1);
     }
-    for (Class_10C591A0_Node* Node = Unknown14[Index], *Prev = 0; Node; Prev = Node, Node = Node->Next)
+    for (Class_10C591A0_Node* Node = m_Buckets[Index], *Prev = 0; Node; Prev = Node, Node = Node->Next)
     {
-        if (Unknown18.Virtual1(*A, Node->Key) == 0)
+        if (m_KeyTraits.Virtual1(*A, Node->Key) == 0)
         {
             if (Prev || Node->Next)
-                Unknown00--;
+                m_Collisions--;
             if (!Prev)
-                Unknown14[Index] = Node->Next;
+                m_Buckets[Index] = Node->Next;
             else
                 Prev->Next = Node->Next;
-            Unknown04--;
+            m_Count--;
             delete Node;
             return true;
         }

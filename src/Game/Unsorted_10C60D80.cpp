@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10C60ED0.h"
 #include "Game/Class_10C60F70.h"
-#include "Game/Class_10E9CB00.h"
+#include "Game/cResSound.h"
 
 int FUN_10c7fcb0();
 
@@ -27,8 +27,8 @@ int Class_10C60F70::FUN_10c60f70()
     return FUN_10c7fcb0();
 }
 
-// FUNCTION: 0x10C60FF0 ?FUN_10c60ff0@Class_10E9CB00@@UAE_NXZ
-bool Class_10E9CB00::FUN_10c60ff0()
+// FUNCTION: 0x10C60FF0 ?FUN_10c60ff0@cResSound@@UAE_NXZ
+bool cResSound::FUN_10c60ff0()
 {
     return Unknown11E == 0;
 }

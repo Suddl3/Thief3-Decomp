@@ -10,10 +10,10 @@ class Class_10A775F0;
 class Class_10C09E30
 {
 public:
-    void FUN_10c09e30(Class_10A775F0* Handle);
+    void Remove(Class_10A775F0* Handle);
 
     char Pad00[0x10];
-    Class_10C09A40 Unknown10;
+    Class_10C09A40 m_Entries;
 };
 
 #endif // GAME_CLASS_10C09E30_H

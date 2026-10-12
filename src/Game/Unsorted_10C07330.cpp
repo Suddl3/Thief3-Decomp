@@ -105,13 +105,13 @@ public:
 class Class_10C07690
 {
 public:
-    void FUN_10c07690(Class_10C07690Arg* A, int B);
+    void AddIfMissing(Class_10C07690Arg* A, int B);
     bool FUN_10c06ff0(Class_10C07690Arg* A, Class_10C07690** Local, Class_10C07690Arg** Key);
 
     int Unknown00;
     int Unknown04;
-    cIntArray Unknown08[5];
-    short Unknown44[5];
+    cIntArray m_Lists[5];
+    short m_Counts[5];
 };
 
 extern int DAT_10ff66a8;
@@ -119,7 +119,7 @@ extern int DAT_10ff66a8;
 class Class_10C07070
 {
 public:
-    int FUN_10c07070();
+    int GetRemainingCapacity();
 
     char Unknown00[0x44];
 };
@@ -127,7 +127,7 @@ public:
 class Class_10C07ED0 : public Class_10C07070
 {
 public:
-    void FUN_10c07ed0();
+    void UpdatePopulation();
     void FUN_10c07330();
     void FUN_10c076f0(int A);
 
@@ -136,8 +136,8 @@ public:
     unsigned int UnknownA4;
 };
 
-// FUNCTION: 0x10C07690 ?FUN_10c07690@Class_10C07690@@QAEXPAVClass_10C07690Arg@@H@Z
-void Class_10C07690::FUN_10c07690(Class_10C07690Arg* A, int B)
+// FUNCTION: 0x10C07690 ?AddIfMissing@Class_10C07690@@QAEXPAVClass_10C07690Arg@@H@Z
+void Class_10C07690::AddIfMissing(Class_10C07690Arg* A, int B)
 {
     Class_10C07690Arg* Obj = A;
     Class_10C07690* Local;
@@ -145,15 +145,15 @@ void Class_10C07690::FUN_10c07690(Class_10C07690Arg* A, int B)
         return;
     int Kind = Obj->Virtual85();
     if (Kind != 1 && Kind != 2)
-        Unknown44[B]++;
-    cIntArray& Arr = Unknown08[B];
+        m_Counts[B]++;
+    cIntArray& Arr = m_Lists[B];
     int Count = Arr.Unknown00;
     Arr.SetCount(Count + 1);
     Arr.Unknown08[Count] = Obj;
 }
 
-// FUNCTION: 0x10C07ED0 ?FUN_10c07ed0@Class_10C07ED0@@QAEXXZ
-void Class_10C07ED0::FUN_10c07ed0()
+// FUNCTION: 0x10C07ED0 ?UpdatePopulation@Class_10C07ED0@@QAEXXZ
+void Class_10C07ED0::UpdatePopulation()
 {
     if (DAT_10ff66a8 > 0)
     {
@@ -161,7 +161,7 @@ void Class_10C07ED0::FUN_10c07ed0()
         return;
     }
     DAT_10ff66a8 = 15;
-    if (FUN_10c07070() > UnknownA4)
+    if (GetRemainingCapacity() > UnknownA4)
     {
         FUN_10c07330();
         return;

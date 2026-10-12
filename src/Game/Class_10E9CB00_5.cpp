@@ -3,13 +3,13 @@
 #include "Game/Class_10C662F0.h"
 #include "Game/Class_10DB58F0.h"
 
-class Class_10E9CB00;
+class cResSound;
 
 Class_10DB58F0* FUN_10db58f0();
 
 Class_10C662F0* FUN_10c65090();
 
-class Class_10E9CB00
+class cResSound
 {
 public:
     virtual void Virtual0();
@@ -32,8 +32,8 @@ public:
     virtual bool Virtual17();
 };
 
-// FUNCTION: 0x10C61000 ?FUN_10c61000@Class_10E9CB00@@UAEXXZ
-void Class_10E9CB00::FUN_10c61000()
+// FUNCTION: 0x10C61000 ?FUN_10c61000@cResSound@@UAEXXZ
+void cResSound::FUN_10c61000()
 {
     if (Virtual17())
         FUN_10db58f0()->Virtual13(this);

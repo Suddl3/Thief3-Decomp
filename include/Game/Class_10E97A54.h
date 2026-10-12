@@ -8,7 +8,7 @@ class FArchive;
 class Class_10E97A54
 {
 public:
-    virtual void FUN_10bfbe60(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 
     int Unknown04;
     int Unknown08;

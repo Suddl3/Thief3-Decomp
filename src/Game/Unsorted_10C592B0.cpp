@@ -6,12 +6,12 @@
 #include "Game/Class_10E9C7DC.h"
 #include "Game/Class_10C592B0_Node.h"
 
-// FUNCTION: 0x10C592B0 ?FUN_10c592b0@Class_10C592B0@@QAEXH@Z
-void Class_10C592B0::FUN_10c592b0(int Size)
+// FUNCTION: 0x10C592B0 ?Reset@Class_10C592B0@@QAEXH@Z
+void Class_10C592B0::Reset(int Size)
 {
-    for (int i = 0; i < Unknown0C; i++)
+    for (int i = 0; i < m_BucketCount; i++)
     {
-        Class_10C592B0_Node* Node = Unknown14[i];
+        Class_10C592B0_Node* Node = m_Buckets[i];
         while (Node)
         {
             Class_10C592B0_Node* Next = Node->Next;
@@ -19,29 +19,29 @@ void Class_10C592B0::FUN_10c592b0(int Size)
             Node = Next;
         }
     }
-    Unknown04 = 0;
-    Unknown0C = 0;
+    m_Count = 0;
+    m_BucketCount = 0;
     Unknown00 = 0;
-    ::operator delete(Unknown14);
-    Unknown14 = 0;
+    ::operator delete(m_Buckets);
+    m_Buckets = 0;
     if (!Unknown10)
         FUN_10c57620(Size);
 }
 
-// FUNCTION: 0x10C59EC0 ?FUN_10c59ec0@Class_10E9C7DC@@UAEXH@Z
-void Class_10E9C7DC::FUN_10c59ec0(int A)
+// FUNCTION: 0x10C59EC0 ?RemoveKey@Class_10E9C7DC@@UAEXH@Z
+void Class_10E9C7DC::RemoveKey(int A)
 {
     int Key = A;
-    Unknown0D8.FUN_10c591a0(&Key);
+    m_KeyTable.Remove(&Key);
 }
 
-// FUNCTION: 0x10C5A1C0 ?FUN_10c5a1c0@Class_10C5A1C0@@QAEXXZ
-void Class_10C5A1C0::FUN_10c5a1c0()
+// FUNCTION: 0x10C5A1C0 ?Free@Class_10C5A1C0@@QAEXXZ
+void Class_10C5A1C0::Free()
 {
-    FUN_10c592b0(0x40);
-    ::operator delete(Unknown14);
+    Reset(0x40);
+    ::operator delete(m_Buckets);
     Unknown04 = 0;
     Unknown0C = 0;
-    Unknown14 = 0;
+    m_Buckets = 0;
     Unknown00 = 0;
 }

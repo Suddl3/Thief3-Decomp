@@ -15,9 +15,9 @@ public:
     virtual void FUN_10c2eb90(FArchive& Ar);
     virtual void Virtual1();
     virtual void Virtual2();
-    virtual bool FUN_10c27090(int A);
+    virtual bool IsCurrent(int A);
 
-    void FUN_10c2eb30();
+    void Construct();
     cString GetClassName();
 
     char Unknown04[0x44];

@@ -18,23 +18,23 @@ struct Data_10C26310
     Struct_10C26310 Unknown38;
 };
 
-// FUNCTION: 0x10C262D0 ?FUN_10c262d0@Class_10C262D0@@QAEX_N@Z
-void Class_10C262D0::FUN_10c262d0(bool A)
+// FUNCTION: 0x10C262D0 ?SetActive@Class_10C262D0@@QAEX_N@Z
+void Class_10C262D0::SetActive(bool A)
 {
     if (A == true)
     {
-        if (!Unknown44)
+        if (!m_Active)
         {
-            Unknown44 = true;
+            m_Active = true;
             Virtual6();
         }
     }
     else if (!A)
     {
-        if (Unknown44 == true)
+        if (m_Active == true)
         {
             Virtual7();
-            Unknown44 = false;
+            m_Active = false;
         }
     }
 }

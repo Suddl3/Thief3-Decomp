@@ -17,8 +17,8 @@ void Class_10C60480::ClearItems()
         Item->FUN_10c4f690(0);
         if (Item->Unknown04)
         {
-            GetAllocator()->Virtual5(Item->Unknown08);
-            Item->Unknown08 = 0;
+            GetAllocator()->Virtual5(Item->m_Items);
+            Item->m_Items = 0;
             Item->Unknown04 = 0;
         }
     }

@@ -118,6 +118,6 @@ void Class_10E959B0::FUN_10be1ce0(int A)
     {
         if (Unknown04->Unknown0C)
             Unknown04->Unknown0C->FUN_10bf7f90(0, 1);
-        Unknown04->Unknown30.FUN_10bfbc90();
+        Unknown04->Unknown30.StampTime();
     }
 }

@@ -29,13 +29,13 @@ public:
     Object_10C38700_Member* UnknownB0;
 };
 
-// FUNCTION: 0x10C386E0 ?FUN_10c386e0@Class_10C386E0@@QAEXXZ
-void Class_10C386E0::FUN_10c386e0()
+// FUNCTION: 0x10C386E0 ?Reset@Class_10C386E0@@QAEXXZ
+void Class_10C386E0::Reset()
 {
     UnknownA0 = 0;
     UnknownAC = 0;
     if (UnknownB4)
-        UnknownB4->FUN_10c20bc0();
+        UnknownB4->Reset();
 }
 
 // FUNCTION: 0x10C38700 ?FUN_10c38700@@YA_NPAVObject_10C38700@@@Z

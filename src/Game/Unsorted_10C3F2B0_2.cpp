@@ -16,8 +16,8 @@ struct Struct_10C3F6E0
     char Text[4];
 };
 
-// FUNCTION: 0x10C3F6E0 ?FUN_10c3f6e0@@YAXABVcString@@@Z
-void FUN_10c3f6e0(const cString& Name)
+// FUNCTION: 0x10C3F6E0 ?SetIndexFromName@@YAXABVcString@@@Z
+void SetIndexFromName(const cString& Name)
 {
     int Best = 0;
     for (int i = 0; i < 6; i++)

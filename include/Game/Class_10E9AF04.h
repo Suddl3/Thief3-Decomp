@@ -3,11 +3,11 @@
 #ifndef GAME_CLASS_10E9AF04_H
 #define GAME_CLASS_10E9AF04_H
 
-#include "Game/Class_10E9ADE8.h"
+#include "Game/MC_Follow.h"
 
 class Object_10BCE8D0;
 
-class Class_10E9AF04 : public Class_10E9ADE8
+class Class_10E9AF04 : public MC_Follow
 {
 public:
     virtual void Virtual0();

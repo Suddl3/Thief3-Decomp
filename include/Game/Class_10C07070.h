@@ -6,7 +6,7 @@
 class Class_10C07070
 {
 public:
-    int FUN_10c07070();
+    int GetRemainingCapacity();
 
     char Unknown00[8];
     int Unknown08;

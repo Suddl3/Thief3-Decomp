@@ -25,8 +25,8 @@ public:
 
 extern Class_10C45C70* DAT_10ff70b0;
 
-// FUNCTION: 0x10C47D90 ?FUN_10c47d90@@YAPAVClass_10C41420@@XZ
-Class_10C41420* FUN_10c47d90()
+// FUNCTION: 0x10C47D90 ?GetSoundBufferPool@@YAPAVClass_10C41420@@XZ
+Class_10C41420* GetSoundBufferPool()
 {
     if (!DAT_10ff70b0)
     {

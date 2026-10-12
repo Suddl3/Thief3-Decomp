@@ -31,36 +31,36 @@ public:
 class Class_10E9925C
 {
 public:
-    virtual void FUN_10c26c80();
+    virtual void Clear();
     virtual void Virtual1();
     virtual void Virtual2();
     virtual void Virtual3();
 
     char Pad04[0x34];
-    Class_10C26C10 Unknown38;
+    Class_10C26C10 m_Items;
 };
 
-// FUNCTION: 0x10C26B60 ?FUN_10c26b60@Class_10C26B60@@QAEXHHH@Z
-void Class_10C26B60::FUN_10c26b60(int A, int B, int C)
+// FUNCTION: 0x10C26B60 ?Create@Class_10C26B60@@QAEXHHH@Z
+void Class_10C26B60::Create(int A, int B, int C)
 {
     GetAllocator()->Virtual8(0, 0);
     Class_10E9AFA4* Obj = new(0, 0, 0, 0, 0) Class_10E9AFA4(A, B, C);
     GetAllocator()->Virtual9();
-    FUN_10c26a60((Struct_10C26A60*)Obj, 0);
+    Replace((Struct_10C26A60*)Obj, 0);
 }
 
-// FUNCTION: 0x10C26C80 ?FUN_10c26c80@Class_10E9925C@@UAEXXZ
-void Class_10E9925C::FUN_10c26c80()
+// FUNCTION: 0x10C26C80 ?Clear@Class_10E9925C@@UAEXXZ
+void Class_10E9925C::Clear()
 {
     cIntArray* Copy = new(0, 0, 0, 0, 0) cIntArray;
-    for (int i = 0; i < Unknown38.Count; i++)
+    for (int i = 0; i < m_Items.Count; i++)
     {
-        int Value = Unknown38.Data[i];
+        int Value = m_Items.Data[i];
         int Index = Copy->Count;
         Copy->SetCount(Index + 1);
         Copy->Data[Index] = Value;
     }
-    Unknown38.FUN_10c26c10(Copy);
+    m_Items.FUN_10c26c10(Copy);
     for (int i = 0; i < Copy->Count; i++)
     {
         delete (Struct_10C26C80*)Copy->Data[i];

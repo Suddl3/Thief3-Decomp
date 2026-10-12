@@ -23,25 +23,25 @@ struct Struct_10BFBFD0_Entry
     Struct_10BFBFD0_Value Unknown08;
 };
 
-// FUNCTION: 0x10BFBE90 ?FUN_10bfbe90@Class_10BFBE90@@QAE_NH@Z
-bool Class_10BFBE90::FUN_10bfbe90(int A)
+// FUNCTION: 0x10BFBE90 ?Contains@Class_10BFBE90@@QAE_NH@Z
+bool Class_10BFBE90::Contains(int A)
 {
-    for (int i = 0; i < Unknown08; i++)
+    for (int i = 0; i < m_Count; i++)
     {
-        if (Unknown10[i]->Virtual0() == A)
+        if (m_Elements[i]->Virtual0() == A)
             return true;
     }
     return false;
 }
 
-// FUNCTION: 0x10BFBFD0 ?FUN_10bfbfd0@Class_10BFBFD0@@QAE_NPAUStruct_10BFBFD0_Value@@H@Z
-bool Class_10BFBFD0::FUN_10bfbfd0(Struct_10BFBFD0_Value* Out, int Key)
+// FUNCTION: 0x10BFBFD0 ?FindValue@Class_10BFBFD0@@QAE_NPAUStruct_10BFBFD0_Value@@H@Z
+bool Class_10BFBFD0::FindValue(Struct_10BFBFD0_Value* Out, int Key)
 {
-    for (int i = 0; i < Unknown54; i++)
+    for (int i = 0; i < m_Count; i++)
     {
-        if (Unknown5C[i].Unknown04 == Key)
+        if (m_Entries[i].Unknown04 == Key)
         {
-            *Out = Unknown5C[i].Unknown08;
+            *Out = m_Entries[i].Unknown08;
             return true;
         }
     }

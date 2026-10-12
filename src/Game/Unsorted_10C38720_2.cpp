@@ -20,7 +20,7 @@ void Class_10C38E40::Rebind(int A)
     if (m_HasHandle)
     {
         void* X = Unknown48->Virtual34()->FUN_10c7d570();
-        DAT_10ff667c->Unknown1C->FUN_10c0a9a0(X);
+        DAT_10ff667c->Unknown1C->RemoveFromAll(X);
     }
     else
     {

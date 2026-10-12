@@ -14,24 +14,24 @@ struct Struct_10C266F0
     Struct_10C266F0_Item** Unknown08;
 };
 
-// FUNCTION: 0x10C266F0 ?FUN_10c266f0@@YAXPAUStruct_10C266F0@@@Z
-void FUN_10c266f0(Struct_10C266F0* List)
+// FUNCTION: 0x10C266F0 ?DeleteAll@@YAXPAUStruct_10C266F0@@@Z
+void DeleteAll(Struct_10C266F0* List)
 {
     for (int i = 0; i < List->Unknown00; i++)
         delete List->Unknown08[i];
     List->Unknown00 = 0;
 }
 
-// FUNCTION: 0x10C26720 ?FUN_10c26720@Class_10E9925C@@UAEXXZ
-void Class_10E9925C::FUN_10c26720()
+// FUNCTION: 0x10C26720 ?AddToRegistry@Class_10E9925C@@UAEXXZ
+void Class_10E9925C::AddToRegistry()
 {
     if (Virtual14())
     {
         Class_109B6D50* P = FUN_10c26490();
-        if (P && !Unknown35 && !P->FUN_109b6d50(Unknown0C))
+        if (P && !m_Registered && !P->FUN_109b6d50(m_RegistryId))
         {
-            P->FUN_109bf7f0(Unknown0C, Virtual13());
-            Unknown35 = true;
+            P->FUN_109bf7f0(m_RegistryId, Virtual13());
+            m_Registered = true;
         }
     }
 }

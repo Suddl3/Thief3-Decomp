@@ -6,7 +6,7 @@
 class Class_10C401D0
 {
 public:
-    void* FUN_10c401d0(int A, int B);
+    void* AllocateArray(int A, int B);
 
     char Unknown00[0x4];
     int Unknown04;

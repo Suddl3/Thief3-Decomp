@@ -6,7 +6,7 @@
 class Class_10C28F00
 {
 public:
-    void FUN_10c28f00();
+    void Reset();
 
     char Unknown00[0x4];
     int Field04;

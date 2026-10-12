@@ -6,10 +6,10 @@ struct Struct_10C68610
 {
 };
 
-// FUNCTION: 0x10C68610 ?FUN_10c68610@Class_10C68610@@QAEXXZ
-void Class_10C68610::FUN_10c68610()
+// FUNCTION: 0x10C68610 ?Free@Class_10C68610@@QAEXXZ
+void Class_10C68610::Free()
 {
-    for (int i = 0; i <= Unknown00; i++)
+    for (int i = 0; i <= m_LastIndex; i++)
     {
         delete Unknown04[i];
         delete Unknown08[i];

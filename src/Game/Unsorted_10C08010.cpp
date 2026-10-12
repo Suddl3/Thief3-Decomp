@@ -15,7 +15,7 @@ class Class_10C25EB0 : public Class_10963740
 {
 public:
     char FUN_10c25fb0();
-    FVector FUN_10c25eb0();
+    FVector GetPosition();
     void FUN_10c25ff0(int Value);
     void FUN_10c26030(float Value);
 };
@@ -50,8 +50,8 @@ public:
     Class_10C06F30* Unknown04;
 };
 
-// FUNCTION: 0x10C08010 ?FUN_10c08010@Class_10C08010@@QAEXPAVClass_10C08010_Arg1@@PAUStruct_10BA91E0@@HPAMH@Z
-void Class_10C08010::FUN_10c08010(Class_10C08010_Arg1* A, Struct_10BA91E0* P, int Unused3, float* Radius, int Unused5)
+// FUNCTION: 0x10C08010 ?MarkCellsNear@Class_10C08010@@QAEXPAVClass_10C08010_Arg1@@PAUStruct_10BA91E0@@HPAMH@Z
+void Class_10C08010::MarkCellsNear(Class_10C08010_Arg1* A, Struct_10BA91E0* P, int Unused3, float* Radius, int Unused5)
 {
     float R = *Radius;
     int Index = FUN_10c00430(&((Class_10C08010_Result*)A->Unknown08->FUN_10c7d570())->Unknown2C);
@@ -74,8 +74,8 @@ void Class_10C08010::FUN_10c08010(Class_10C08010_Arg1* A, Struct_10BA91E0* P, in
     }
 }
 
-// FUNCTION: 0x10C08480 ?FUN_10c08480@Class_10C08480@@QAEPAV1@XZ
-Class_10C08480* Class_10C08480::FUN_10c08480()
+// FUNCTION: 0x10C08480 ?Reset@Class_10C08480@@QAEPAV1@XZ
+Class_10C08480* Class_10C08480::Reset()
 {
     Unknown00 = 0;
     Unknown04 = 0;

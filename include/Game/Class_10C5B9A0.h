@@ -8,10 +8,10 @@
 class Class_10C5B9A0
 {
 public:
-    void FUN_10c5b9a0(char Item);
+    void Append(char Item);
 
     char Unknown00[0x3C];
-    Class_10A32000 Unknown3C;
+    Class_10A32000 m_Chars;
 };
 
 #endif // GAME_CLASS_10C5B9A0_H

@@ -12,8 +12,8 @@ Class_10905A90_Member* GetAllocator();
 // Ion Storm's placement new (0x10905C10).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 
-// FUNCTION: 0x10C40160 ?FUN_10c40160@Class_10C40160@@QAEPAUStruct_10C40C50@@HH@Z
-Struct_10C40C50* Class_10C40160::FUN_10c40160(int A, int B)
+// FUNCTION: 0x10C40160 ?AllocateArray@Class_10C40160@@QAEPAUStruct_10C40C50@@HH@Z
+Struct_10C40C50* Class_10C40160::AllocateArray(int A, int B)
 {
     if (Unknown04 != 0)
         GetAllocator()->Virtual8(0, 0);
@@ -24,8 +24,8 @@ Struct_10C40C50* Class_10C40160::FUN_10c40160(int A, int B)
     return (Struct_10C40C50*)Memory;
 }
 
-// FUNCTION: 0x10C401D0 ?FUN_10c401d0@Class_10C401D0@@QAEPAXHH@Z
-void* Class_10C401D0::FUN_10c401d0(int A, int B)
+// FUNCTION: 0x10C401D0 ?AllocateArray@Class_10C401D0@@QAEPAXHH@Z
+void* Class_10C401D0::AllocateArray(int A, int B)
 {
     if (Unknown04 != 0)
         GetAllocator()->Virtual8(0, 0);
@@ -36,8 +36,8 @@ void* Class_10C401D0::FUN_10c401d0(int A, int B)
     return Memory;
 }
 
-// FUNCTION: 0x10C40240 ?FUN_10c40240@Class_10C40240@@QAEPAXHH@Z
-void* Class_10C40240::FUN_10c40240(int A, int B)
+// FUNCTION: 0x10C40240 ?AllocateArray@Class_10C40240@@QAEPAXHH@Z
+void* Class_10C40240::AllocateArray(int A, int B)
 {
     if (Unknown04 != 0)
         GetAllocator()->Virtual8(0, 0);

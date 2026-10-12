@@ -8,10 +8,10 @@
 class Class_10E9C7DC
 {
 public:
-    virtual void FUN_10c59ec0(int A);
+    virtual void RemoveKey(int A);
 
     char Unknown04[0xD4];
-    Class_10C591A0 Unknown0D8;
+    Class_10C591A0 m_KeyTable;
 };
 
 #endif // GAME_CLASS_10E9C7DC_H

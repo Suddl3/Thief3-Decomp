@@ -29,11 +29,11 @@ public:
 class Class_10C4F870
 {
 public:
-    int FUN_10c4f870(const Struct_10C4F870& A, float B);
+    int AddItem(const Struct_10C4F870& A, float B);
 
     char Unknown00[0x34];
-    int Unknown34;
-    Class_10C4EDA0 Unknown38;
+    int m_NextId;
+    Class_10C4EDA0 m_Items;
 };
 
 class cIntArray
@@ -47,7 +47,7 @@ public:
 class Class_10C4F7E0 : public Class_10A68AE0
 {
 public:
-    Class_10C4F7E0* FUN_10c4f7e0(const Class_10C4F7E0& Other);
+    Class_10C4F7E0* CopyFrom(const Class_10C4F7E0& Other);
 
     cIntArray Unknown0C;
     int Unknown18;
@@ -62,8 +62,8 @@ public:
     int Unknown44;
 };
 
-// FUNCTION: 0x10C4F7E0 ?FUN_10c4f7e0@Class_10C4F7E0@@QAEPAV1@ABV1@@Z
-Class_10C4F7E0* Class_10C4F7E0::FUN_10c4f7e0(const Class_10C4F7E0& Other)
+// FUNCTION: 0x10C4F7E0 ?CopyFrom@Class_10C4F7E0@@QAEPAV1@ABV1@@Z
+Class_10C4F7E0* Class_10C4F7E0::CopyFrom(const Class_10C4F7E0& Other)
 {
     Unknown04 = 0;
     Unknown00 = 0;
@@ -83,14 +83,14 @@ Class_10C4F7E0* Class_10C4F7E0::FUN_10c4f7e0(const Class_10C4F7E0& Other)
     return this;
 }
 
-// FUNCTION: 0x10C4F870 ?FUN_10c4f870@Class_10C4F870@@QAEHABUStruct_10C4F870@@M@Z
-int Class_10C4F870::FUN_10c4f870(const Struct_10C4F870& A, float B)
+// FUNCTION: 0x10C4F870 ?AddItem@Class_10C4F870@@QAEHABUStruct_10C4F870@@M@Z
+int Class_10C4F870::AddItem(const Struct_10C4F870& A, float B)
 {
     Item_10C4F870 Item;
-    Item.Unknown00 = Unknown34++;
+    Item.Unknown00 = m_NextId++;
     Item.Unknown04 = A;
     Item.Unknown10 = B;
-    Class_10C4EDA0* Array = &Unknown38;
+    Class_10C4EDA0* Array = &m_Items;
     int Index = Array->m_Count;
     Array->Resize(Index + 1);
     Array->m_Items[Index] = Item;

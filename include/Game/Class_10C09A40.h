@@ -22,7 +22,7 @@ public:
     }
 
     void FUN_10c095f0(int Count);
-    void FUN_10c09a40();
+    void Clear();
     void FUN_10c09750(int A, int B, int C);
 
     int Unknown00;

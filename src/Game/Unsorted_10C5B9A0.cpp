@@ -12,10 +12,10 @@ struct Info_10C5BFA0
     Class_10C5BA80 Unknown04;
 };
 
-// FUNCTION: 0x10C5B9A0 ?FUN_10c5b9a0@Class_10C5B9A0@@QAEXD@Z
-void Class_10C5B9A0::FUN_10c5b9a0(char Item)
+// FUNCTION: 0x10C5B9A0 ?Append@Class_10C5B9A0@@QAEXD@Z
+void Class_10C5B9A0::Append(char Item)
 {
-    Class_10A32000* Array = &Unknown3C;
+    Class_10A32000* Array = &m_Chars;
     int Index = Array->m_Count;
     Array->SetCount(Index + 1);
     Array->m_Data[Index] = Item;

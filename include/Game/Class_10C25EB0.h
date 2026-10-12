@@ -11,7 +11,7 @@ class Class_10C25EB0 : public Class_10963740
 {
 public:
     char FUN_10c25fb0();
-    FVector FUN_10c25eb0();
+    FVector GetPosition();
     void FUN_10c25ff0(char Value);
     void FUN_10c26030(float Value);
 };

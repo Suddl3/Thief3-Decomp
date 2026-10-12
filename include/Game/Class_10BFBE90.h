@@ -8,12 +8,12 @@ class Class_10BFBE90_Element;
 class Class_10BFBE90
 {
 public:
-    bool FUN_10bfbe90(int A);
+    bool Contains(int A);
 
     char Unknown00[8];
-    int Unknown08;
+    int m_Count;
     char Unknown0C[4];
-    Class_10BFBE90_Element** Unknown10;
+    Class_10BFBE90_Element** m_Elements;
 };
 
 #endif // GAME_CLASS_10BFBE90_H

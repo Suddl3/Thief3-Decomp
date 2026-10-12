@@ -8,7 +8,7 @@ struct Struct_10C0A6B0;
 class Class_10C0A6B0
 {
 public:
-    void FUN_10c0a6b0(Struct_10C0A6B0* A, int Item);
+    void RemoveItem(Struct_10C0A6B0* A, int Item);
     void FUN_10c0a0b0(Struct_10C0A6B0* A, int Index);
 
     int Unknown00;

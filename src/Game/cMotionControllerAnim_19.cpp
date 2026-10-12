@@ -36,17 +36,17 @@ public:
     virtual bool FUN_10c2f8a0(S_10C2F8A0* Out);
 
     char Unknown04[0x70];
-    S_10C2F8A0 Unknown74;
+    S_10C2F8A0 m_Info;
     char Unknown80[0x1F];
-    bool Unknown9F;
+    bool m_HasInfo;
 };
 
 // FUNCTION: 0x10C2F8A0 ?FUN_10c2f8a0@cMotionControllerAnim@@UAE_NPAUS_10C2F8A0@@@Z
 bool cMotionControllerAnim::FUN_10c2f8a0(S_10C2F8A0* Out)
 {
-    if (Unknown9F)
+    if (m_HasInfo)
     {
-        *Out = Unknown74;
+        *Out = m_Info;
         return true;
     }
     return false;

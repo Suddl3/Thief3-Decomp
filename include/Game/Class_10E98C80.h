@@ -8,7 +8,7 @@ class Class_10E98C80
 public:
     Class_10E98C80();
 
-    void FUN_10c15bb0();
+    void ResetVTable();
 
     union
     {

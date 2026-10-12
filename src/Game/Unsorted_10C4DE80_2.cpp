@@ -18,14 +18,14 @@ struct Struct_10C4E7B0_Unknown10
     Struct_10C4E7B0_Unknown10_Unknown0C* Unknown0C;
 };
 
-// FUNCTION: 0x10C4E7B0 ?FUN_10c4e7b0@Class_10C4E7B0@@QAEXXZ
-void Class_10C4E7B0::FUN_10c4e7b0()
+// FUNCTION: 0x10C4E7B0 ?ToggleFlags@Class_10C4E7B0@@QAEXXZ
+void Class_10C4E7B0::ToggleFlags()
 {
-    for (int i = 0; i < Unknown08; i++)
+    for (int i = 0; i < m_GroupCount; i++)
     {
-        for (int j = 0; j < Unknown10[i].Unknown04; j++)
+        for (int j = 0; j < m_Groups[i].Unknown04; j++)
         {
-            Struct_10C4E7B0_Unknown10_Unknown0C& Item = Unknown10[i].Unknown0C[j];
+            Struct_10C4E7B0_Unknown10_Unknown0C& Item = m_Groups[i].Unknown0C[j];
             if (Item.Unknown30)
             {
                 Item.Unknown34 = !Item.Unknown34;

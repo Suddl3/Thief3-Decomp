@@ -115,30 +115,30 @@ struct Struct_10C09E30
     Class_10C09E30_Unknown0C* Unknown0C;
 };
 
-// FUNCTION: 0x10C09E30 ?FUN_10c09e30@Class_10C09E30@@QAEXPAVClass_10A775F0@@@Z
-void Class_10C09E30::FUN_10c09e30(Class_10A775F0* Handle)
+// FUNCTION: 0x10C09E30 ?Remove@Class_10C09E30@@QAEXPAVClass_10A775F0@@@Z
+void Class_10C09E30::Remove(Class_10A775F0* Handle)
 {
     Struct_10C09A10* Obj = FUN_10b8b660((int)Handle);
     if (!Obj)
         return;
-    for (int i = 0; i < Unknown10.Unknown00; i++)
+    for (int i = 0; i < m_Entries.Unknown00; i++)
     {
-        if (((Struct_10C09E30*)Unknown10.Unknown08)[i].Unknown00 == Handle)
+        if (((Struct_10C09E30*)m_Entries.Unknown08)[i].Unknown00 == Handle)
         {
-            Class_10C09E30_Unknown0C* Pointee = ((Struct_10C09E30*)Unknown10.Unknown08)[i].Unknown0C;
+            Class_10C09E30_Unknown0C* Pointee = ((Struct_10C09E30*)m_Entries.Unknown08)[i].Unknown0C;
             if (Pointee && Pointee->Virtual85() == 0)
             {
                 Obj->FUN_10b8c080();
-                if (((Struct_10C09E30*)Unknown10.Unknown08)[i].Unknown08 > 0)
+                if (((Struct_10C09E30*)m_Entries.Unknown08)[i].Unknown08 > 0)
                     Handle->FUN_10a775f0(0x800182, 1);
-                if (i != Unknown10.Unknown00 - 1)
-                    Unknown10.FUN_10c09750(i + 1, i, Unknown10.Unknown00 - i - 1);
-                Unknown10.FUN_10c095f0(Unknown10.Unknown00 - 1);
+                if (i != m_Entries.Unknown00 - 1)
+                    m_Entries.FUN_10c09750(i + 1, i, m_Entries.Unknown00 - i - 1);
+                m_Entries.FUN_10c095f0(m_Entries.Unknown00 - 1);
                 return;
             }
-            if (i != Unknown10.Unknown00 - 1)
-                Unknown10.FUN_10c09750(i + 1, i, Unknown10.Unknown00 - i - 1);
-            Unknown10.FUN_10c095f0(Unknown10.Unknown00 - 1);
+            if (i != m_Entries.Unknown00 - 1)
+                m_Entries.FUN_10c09750(i + 1, i, m_Entries.Unknown00 - i - 1);
+            m_Entries.FUN_10c095f0(m_Entries.Unknown00 - 1);
             return;
         }
     }

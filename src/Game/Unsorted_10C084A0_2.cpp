@@ -34,8 +34,8 @@ public:
 
 extern Class_10FF667C* DAT_10ff667c;
 
-// FUNCTION: 0x10C084A0 ?FUN_10c084a0@Class_10C084A0@@QAEXAAVFArchive@@@Z
-void Class_10C084A0::FUN_10c084a0(FArchive& Ar)
+// FUNCTION: 0x10C084A0 ?Serialize@Class_10C084A0@@QAEXAAVFArchive@@@Z
+void Class_10C084A0::Serialize(FArchive& Ar)
 {
     int Num = Count;
     Ar.Virtual1(&Num, 4);

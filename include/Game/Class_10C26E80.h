@@ -14,10 +14,10 @@ public:
     virtual void Virtual5();
 
     void FUN_10c26d60();
-    void FUN_10c26e80();
+    void Update();
 
     char Unknown04[0x2C];
-    float Unknown30;
+    float m_LastTime;
 };
 
 #endif // GAME_CLASS_10C26E80_H

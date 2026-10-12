@@ -16,15 +16,15 @@ public:
 
 extern Class_10FF667C* DAT_10ff667c;
 
-// FUNCTION: 0x10BFBD00 ?FUN_10bfbd00@Class_10E8D7C0@@UAEXAAVFArchive@@@Z
-void Class_10E8D7C0::FUN_10bfbd00(FArchive& Ar)
+// FUNCTION: 0x10BFBD00 ?Serialize@Class_10E8D7C0@@UAEXAAVFArchive@@@Z
+void Class_10E8D7C0::Serialize(FArchive& Ar)
 {
     FUN_10b052a0(Ar, &Unknown08);
     DAT_10ff667c->Unknown18->Virtual1(Ar, &Unknown04);
 }
 
-// FUNCTION: 0x10BFBE60 ?FUN_10bfbe60@Class_10E97A54@@UAEXAAVFArchive@@@Z
-void Class_10E97A54::FUN_10bfbe60(FArchive& Ar)
+// FUNCTION: 0x10BFBE60 ?Serialize@Class_10E97A54@@UAEXAAVFArchive@@@Z
+void Class_10E97A54::Serialize(FArchive& Ar)
 {
     Ar.Serialize(&Unknown04, 4);
     Ar.Serialize(&Unknown08, 4);

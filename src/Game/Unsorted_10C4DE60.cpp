@@ -13,8 +13,8 @@ struct Struct_10C4DE60
     Elem_10C4DE60* Unknown0c;
 };
 
-// FUNCTION: 0x10C4DE60 ?FUN_10c4de60@Class_10C4DE60@@QAEPAUElem_10C4DE60@@HH@Z
-Elem_10C4DE60* Class_10C4DE60::FUN_10c4de60(int p1, int p2)
+// FUNCTION: 0x10C4DE60 ?GetElement@Class_10C4DE60@@QAEPAUElem_10C4DE60@@HH@Z
+Elem_10C4DE60* Class_10C4DE60::GetElement(int p1, int p2)
 {
-    return &Unknown10[p1].Unknown0c[p2];
+    return &m_Groups[p1].Unknown0c[p2];
 }

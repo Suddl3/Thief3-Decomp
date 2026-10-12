@@ -7,7 +7,7 @@ class Class_10C5EE80
 {
 public:
     void FUN_10c5e600(int Count);
-    void FUN_10c5ee80();
+    void Release();
 
     int Unknown00;
     int Unknown04;

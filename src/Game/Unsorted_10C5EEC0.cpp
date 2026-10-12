@@ -17,8 +17,8 @@ void Class_10E9C990::HandleMessage(int Code, int A, int B, int C)
     }
 }
 
-// FUNCTION: 0x10C5F320 ?FUN_10c5f320@Class_10E9C9A8@@UAE_NPAV1@@Z
-bool Class_10E9C9A8::FUN_10c5f320(Class_10E9C9A8* Other)
+// FUNCTION: 0x10C5F320 ?IsEqual@Class_10E9C9A8@@UAE_NPAV1@@Z
+bool Class_10E9C9A8::IsEqual(Class_10E9C9A8* Other)
 {
     if (Other->Virtual3() == 1)
         return Other->Unknown04 == Unknown04;

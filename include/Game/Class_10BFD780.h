@@ -11,15 +11,15 @@ class Class_10BFD780_Unknown10;
 class Class_10BFD780
 {
 public:
-    void FUN_10bfd780(int Key);
+    void RemoveByKey(int Key);
 
     char Unknown00[8];
-    cIntArray Unknown08;
+    cIntArray m_Objects;
     Class_10BFD780_Unknown10* Unknown14;
     Class_10BFD780_Unknown10* Unknown18;
     Class_10BFD780_Unknown10* Unknown1C;
     char Pad20[0x34];
-    Class_10BAEC00 Unknown54;
+    Class_10BAEC00 m_Entries;
 };
 
 #endif // GAME_CLASS_10BFD780_H

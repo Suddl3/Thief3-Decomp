@@ -8,10 +8,10 @@ struct Struct_10C60FA0;
 class Class_10C60FA0
 {
 public:
-    int FUN_10c60fa0(int A);
+    int RoundToBlockAlign(int A);
 
     char Unknown00[0x1C];
-    Struct_10C60FA0* Unknown1C;
+    Struct_10C60FA0* m_Format;
 };
 
 #endif // GAME_CLASS_10C60FA0_H

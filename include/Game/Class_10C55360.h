@@ -11,12 +11,12 @@ class cRefPtr;
 class Class_10C55360
 {
 public:
-    cRefPtr FUN_10c55360();
+    cRefPtr GetNext();
 
     char Unknown00[0x1C];
-    std::list<Entry_10C55360> Unknown1C;
+    std::list<Entry_10C55360> m_Entries;
     char Unknown28[0x30];
-    std::list<Entry_10C55360>::iterator Unknown58;
+    std::list<Entry_10C55360>::iterator m_Current;
 };
 
 #endif // GAME_CLASS_10C55360_H

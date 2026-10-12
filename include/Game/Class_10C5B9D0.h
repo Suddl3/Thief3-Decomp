@@ -8,7 +8,7 @@
 class Class_10C5B9D0
 {
 public:
-    void FUN_10c5b9d0();
+    void RemoveLast();
 
     char Unknown00[0x3C];
     Class_10A32000 Unknown3C;

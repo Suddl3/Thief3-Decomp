@@ -16,8 +16,8 @@ public:
     FVector Unknown2C;
 };
 
-// FUNCTION: 0x10C3EBC0 ?FUN_10c3ebc0@@YA?AVFVector@@H@Z
-FVector FUN_10c3ebc0(int Param)
+// FUNCTION: 0x10C3EBC0 ?GetProjectileRotation@@YA?AVFVector@@H@Z
+FVector GetProjectileRotation(int Param)
 {
     FVector Dir(0.0f, 0.0f, 0.0f);
     FRotator Rot(0, 0, 0);
@@ -27,8 +27,8 @@ FVector FUN_10c3ebc0(int Param)
     return *(FVector*)&Rot;
 }
 
-// FUNCTION: 0x10C3EC80 ?FUN_10c3ec80@@YA?AVFVector@@H@Z
-FVector FUN_10c3ec80(int Param)
+// FUNCTION: 0x10C3EC80 ?GetProjectileLocation@@YA?AVFVector@@H@Z
+FVector GetProjectileLocation(int Param)
 {
     FVector Dir(0.0f, 0.0f, 0.0f);
     FRotator Rot(0, 0, 0);

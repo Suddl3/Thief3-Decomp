@@ -57,8 +57,8 @@ extern int DAT_10ff709c;
 
 extern int DAT_10ff70a0;
 
-// FUNCTION: 0x10C1A160 ?FUN_10c1a160@@YAHXZ
-int FUN_10c1a160()
+// FUNCTION: 0x10C1A160 ?GetCounter@@YAHXZ
+int GetCounter()
 {
     return DAT_10ff708c;
 }
@@ -134,8 +134,8 @@ int FUN_10c1ad10()
     return 0x1001ea;
 }
 
-// FUNCTION: 0x10C1AD20 ?FUN_10c1ad20@Class_10E98F48@@QAE_NPAUStruct_10C1AD20@@PAM@Z
-bool Class_10E98F48::FUN_10c1ad20(Struct_10C1AD20* Out, float* Value)
+// FUNCTION: 0x10C1AD20 ?GetLocation@Class_10E98F48@@QAE_NPAUStruct_10C1AD20@@PAM@Z
+bool Class_10E98F48::GetLocation(Struct_10C1AD20* Out, float* Value)
 {
     *Out = Unknown48;
     *Value = 0.0f;
@@ -260,8 +260,8 @@ int Class_10C28EF0::FUN_10c28ef0()
     return Field1D;
 }
 
-// FUNCTION: 0x10C28F00 ?FUN_10c28f00@Class_10C28F00@@QAEXXZ
-void Class_10C28F00::FUN_10c28f00()
+// FUNCTION: 0x10C28F00 ?Reset@Class_10C28F00@@QAEXXZ
+void Class_10C28F00::Reset()
 {
     Field04 = 0;
 }

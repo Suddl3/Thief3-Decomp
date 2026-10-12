@@ -51,7 +51,7 @@ class Class_10C3EA90 : public Class_10C30DD0
 public:
     Class_10C3EA90()
     {
-        Unknown1C = 0;
+        m_RefCount = 0;
     }
 
     void Reset(int A);
@@ -60,14 +60,14 @@ public:
     union
     {
         char Pad18[0x4];
-        int Unknown1C;
+        int m_RefCount;
     };
 };
 
 extern Class_10C3EA90* DAT_10ff70a4;
 
-// FUNCTION: 0x10C3EAC0 ?FUN_10c3eac0@@YAXXZ
-void FUN_10c3eac0()
+// FUNCTION: 0x10C3EAC0 ?AcquireHashTable@@YAXXZ
+void AcquireHashTable()
 {
     if (!DAT_10ff70a4)
     {
@@ -75,5 +75,5 @@ void FUN_10c3eac0()
         DAT_10ff70a4 = new(0, 0, 0, 0, 0) Class_10C3EA90();
         GetAllocator()->Virtual9();
     }
-    DAT_10ff70a4->Unknown1C++;
+    DAT_10ff70a4->m_RefCount++;
 }

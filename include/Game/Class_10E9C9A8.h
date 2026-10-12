@@ -10,7 +10,7 @@ public:
     virtual void Virtual1();
     virtual void Virtual2();
     virtual int Virtual3();
-    virtual bool FUN_10c5f320(Class_10E9C9A8* Other);
+    virtual bool IsEqual(Class_10E9C9A8* Other);
 
     Class_10E9C9A8();
 

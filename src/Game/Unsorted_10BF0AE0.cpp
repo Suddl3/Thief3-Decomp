@@ -8,7 +8,7 @@
 class Class_10BFF460
 {
 public:
-    float FUN_10bff250();
+    float MeasureDistance();
 };
 
 float GetFrameDeltaTime();
@@ -29,7 +29,7 @@ void Class_10BC9A50::UpdateSummon(Class_10BFF460* Target)
     }
     if (Target)
     {
-        if (Target->FUN_10bff250() < Unknown264 && Unknown260 < 0.0f)
+        if (Target->MeasureDistance() < Unknown264 && Unknown260 < 0.0f)
         {
             {
                 cString Text("summon");

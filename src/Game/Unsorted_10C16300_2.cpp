@@ -8,8 +8,8 @@ class AActor
     DECLARE_CLASS(AActor, UObject, 0x800, Engine)
 };
 
-// FUNCTION: 0x10C16300 ?FUN_10c16300@Class_10C16300@@QAEPAVAActor@@XZ
-AActor* Class_10C16300::FUN_10c16300()
+// FUNCTION: 0x10C16300 ?GetActor@Class_10C16300@@QAEPAVAActor@@XZ
+AActor* Class_10C16300::GetActor()
 {
     if (Unknown04 && Unknown04->IsA(AActor::StaticClass()))
         return (AActor*)Unknown04;
