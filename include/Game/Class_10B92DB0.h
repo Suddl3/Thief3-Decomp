@@ -9,9 +9,9 @@
 class Class_10B92DB0
 {
 public:
-    Class_10B92DB0* FUN_10b92db0();
+    Class_10B92DB0* SetDefaults();
 
-    FCoords Unknown00;
+    FCoords m_Coords;
     FVector Unknown30;
     FLOAT Unknown3C;
     FLOAT Unknown40;

@@ -31,14 +31,14 @@ public:
 
 extern Class_10FF667C* DAT_10ff667c;
 
-// FUNCTION: 0x10BA9D80 ?FUN_10ba9d80@Class_10BA9D80@@QAEHHHHHHHHHHPAVClass_10C7D570@@_NH@Z
-int Class_10BA9D80::FUN_10ba9d80(int A2, int A3, int A4, int A5, int A6, int A7, int A8, int A9, int A10, Class_10C7D570* Owner, bool A12, int A13)
+// FUNCTION: 0x10BA9D80 ?UpdateWithTimeout@Class_10BA9D80@@QAEHHHHHHHHHHPAVClass_10C7D570@@_NH@Z
+int Class_10BA9D80::UpdateWithTimeout(int A2, int A3, int A4, int A5, int A6, int A7, int A8, int A9, int A10, Class_10C7D570* Owner, bool A12, int A13)
 {
     if (!DAT_10ff667c->Unknown14->Virtual11())
         return 2;
     if (Virtual1())
     {
-        if (Unknown0C != Owner->FUN_10c7d570())
+        if (m_OwnerKey != Owner->FUN_10c7d570())
             return 2;
     }
     DAT_10ff667c->Unknown14->Virtual12();
@@ -46,8 +46,8 @@ int Class_10BA9D80::FUN_10ba9d80(int A2, int A3, int A4, int A5, int A6, int A7,
     float Delta = DAT_10ff667c->Unknown14->Virtual13();
     if (Result >= 0 && Result <= 1)
         Virtual4(0);
-    float Sum = Delta + Unknown08;
-    Unknown08 = Sum;
+    float Sum = Delta + m_Elapsed;
+    m_Elapsed = Sum;
     if (!A12 && Sum > 6.25f && Result != 1)
     {
         Virtual4(0);

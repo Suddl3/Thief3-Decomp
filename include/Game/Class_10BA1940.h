@@ -8,11 +8,11 @@ class Class_10C4F450;
 class Class_10BA1940
 {
 public:
-    void FUN_10ba1940(int NewCount);
+    void SetCount(int NewCount);
 
-    int Unknown00;
-    int Unknown04;
-    Class_10C4F450* Unknown08;
+    int m_Count;
+    int m_CapacityBytes;
+    Class_10C4F450* m_Data;
 };
 
 #endif // GAME_CLASS_10BA1940_H

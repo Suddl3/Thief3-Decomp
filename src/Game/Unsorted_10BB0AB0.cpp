@@ -4,9 +4,9 @@
 
 double GetTimeSeconds();
 
-// FUNCTION: 0x10BB0AB0 ?FUN_10bb0ab0@Class_10BB0AB0@@QAEXH@Z
-void Class_10BB0AB0::FUN_10bb0ab0(int p1)
+// FUNCTION: 0x10BB0AB0 ?SetValueAndTime@Class_10BB0AB0@@QAEXH@Z
+void Class_10BB0AB0::SetValueAndTime(int p1)
 {
     Unknown2CC = p1;
-    Unknown2D0 = (float)GetTimeSeconds();
+    m_LastSetTime = (float)GetTimeSeconds();
 }

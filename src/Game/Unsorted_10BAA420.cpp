@@ -31,8 +31,8 @@ bool Class_10BAA8A0::FUN_10baa8a0()
     return false;
 }
 
-// FUNCTION: 0x10BAA8F0 ?FUN_10baa8f0@@YAXPAUStruct_10BAA8F0@@@Z
-void FUN_10baa8f0(Struct_10BAA8F0* Array)
+// FUNCTION: 0x10BAA8F0 ?ClearItems@@YAXPAUStruct_10BAA8F0@@@Z
+void ClearItems(Struct_10BAA8F0* Array)
 {
     for (int i = 0; i < Array->Count; i++)
         delete Array->Items[i];

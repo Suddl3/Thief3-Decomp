@@ -13,7 +13,7 @@ class Class_10BC9D40;
 
 class AAIPawn;
 
-Class_10B9BCA0* FUN_10baa660(AAIPawn* Pawn);
+Class_10B9BCA0* GetAIPawnController(AAIPawn* Pawn);
 
 double GetTimeSeconds();
 
@@ -22,7 +22,7 @@ void Class_10BB8D00::FUN_10bb8d00()
 {
     if (GetTimeSeconds() - Unknown2EC > 1.0)
         Unknown2EC = GetTimeSeconds();
-    Class_10B9BCA0* Controller = FUN_10baa660((AAIPawn*)Unknown08->FUN_10c7d570());
+    Class_10B9BCA0* Controller = GetAIPawnController((AAIPawn*)Unknown08->FUN_10c7d570());
     Class_10BC9D40* Target;
     if (Controller && Controller->Unknown118 && Controller->Unknown118->Unknown08)
         Target = Controller->Unknown118->Unknown08->GetCurrent();

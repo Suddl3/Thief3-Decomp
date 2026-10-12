@@ -40,11 +40,11 @@ public:
     virtual void Virtual33();
 
     void FUN_10ad5310();
-    void FUN_10b7c000();
+    void Destroy();
 };
 
-// FUNCTION: 0x10B7C000 ?FUN_10b7c000@Class_10B7C000@@QAEXXZ
-void Class_10B7C000::FUN_10b7c000()
+// FUNCTION: 0x10B7C000 ?Destroy@Class_10B7C000@@QAEXXZ
+void Class_10B7C000::Destroy()
 {
     FUN_10ad5310();
     Virtual33();

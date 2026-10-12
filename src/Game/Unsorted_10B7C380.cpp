@@ -2,8 +2,8 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10B7C380.h"
 
-// FUNCTION: 0x10B7C380 ?FUN_10b7c380@Class_10B7C380@@QAEPAV1@ABV1@@Z
-Class_10B7C380* Class_10B7C380::FUN_10b7c380(const Class_10B7C380& Other)
+// FUNCTION: 0x10B7C380 ?CopyFrom@Class_10B7C380@@QAEPAV1@ABV1@@Z
+Class_10B7C380* Class_10B7C380::CopyFrom(const Class_10B7C380& Other)
 {
     Unknown00 = Other.Unknown00;
     Unknown04 = Other.Unknown04;

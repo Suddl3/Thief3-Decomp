@@ -10,24 +10,24 @@ public:
     virtual void Virtual1();
     virtual void Virtual2();
     virtual void Virtual3();
-    virtual void FUN_10ba9010(bool p1);
+    virtual void SetActive(bool p1);
 
     char Unknown04;
-    bool Unknown05;
+    bool m_Active;
     char Unknown06[6];
-    int Unknown0C;
+    int m_OwnerKey;
 };
 
-// FUNCTION: 0x10BA9010 ?FUN_10ba9010@Class_10E8D65C@@UAEX_N@Z
-void Class_10E8D65C::FUN_10ba9010(bool p1)
+// FUNCTION: 0x10BA9010 ?SetActive@Class_10E8D65C@@UAEX_N@Z
+void Class_10E8D65C::SetActive(bool p1)
 {
-    Unknown05 = p1;
+    m_Active = p1;
     if (!p1)
-        Unknown0C = 0;
+        m_OwnerKey = 0;
 }
 
-// FUNCTION: 0x10BA9E70 ?FUN_10ba9e70@Class_10BA9E70@@QAEPAV1@ABUStruct_10BA9E70@@0HHHH@Z
-Class_10BA9E70* Class_10BA9E70::FUN_10ba9e70(const Struct_10BA9E70& A, const Struct_10BA9E70& B, int C, int D, int E,
+// FUNCTION: 0x10BA9E70 ?Init@Class_10BA9E70@@QAEPAV1@ABUStruct_10BA9E70@@0HHHH@Z
+Class_10BA9E70* Class_10BA9E70::Init(const Struct_10BA9E70& A, const Struct_10BA9E70& B, int C, int D, int E,
                                              int F)
 {
     Unknown00 = A;

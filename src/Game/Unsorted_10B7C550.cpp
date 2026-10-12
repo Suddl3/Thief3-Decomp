@@ -5,8 +5,8 @@
 
 extern float DAT_11006e34;
 
-// FUNCTION: 0x10B7C550 ?FUN_10b7c550@@YA?AVFVector@@PBV1@@Z
-FVector FUN_10b7c550(const FVector* V)
+// FUNCTION: 0x10B7C550 ?ScaleVector@@YA?AVFVector@@PBV1@@Z
+FVector ScaleVector(const FVector* V)
 {
     return FVector(V->X, V->Y, V->Z) * DAT_11006e34;
 }

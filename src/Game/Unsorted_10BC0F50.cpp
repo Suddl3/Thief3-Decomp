@@ -15,8 +15,8 @@ struct Struct_10BC1BA0
     char Unknown54[0xC];
 };
 
-// FUNCTION: 0x10BC1BA0 ?FUN_10bc1ba0@Class_10BC1BA0@@QAEXH@Z
-void Class_10BC1BA0::FUN_10bc1ba0(int A)
+// FUNCTION: 0x10BC1BA0 ?ParsePathLinks@Class_10BC1BA0@@QAEXH@Z
+void Class_10BC1BA0::ParsePathLinks(int A)
 {
     FUN_10af42f0(A, "Begin PathLinks");
     FUN_10bc1b00(Unknown00->Unknown30, A);

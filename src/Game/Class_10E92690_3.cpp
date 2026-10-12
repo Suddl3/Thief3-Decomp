@@ -12,7 +12,7 @@ struct Struct_10BA91E0;
 
 int FUN_10aa6040();
 
-float FUN_10ba91e0(const Struct_10BA91E0* A, const Struct_10BA91E0* B);
+float Distance(const Struct_10BA91E0* A, const Struct_10BA91E0* B);
 
 extern float DAT_10eafbdc;
 
@@ -30,5 +30,5 @@ float Class_10E92690::FUN_10bcc2b0(int A, int B)
     {
         return 0.01f;
     }
-    return FUN_10ba91e0((const Struct_10BA91E0*)Unknown08, (const Struct_10BA91E0*)A);
+    return Distance((const Struct_10BA91E0*)Unknown08, (const Struct_10BA91E0*)A);
 }

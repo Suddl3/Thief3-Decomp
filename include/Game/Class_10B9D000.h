@@ -11,9 +11,9 @@ public:
     bool FUN_10b9d000();
 
     char Unknown00[0x10];
-    int Unknown10;
+    int m_Count;
     char Unknown14[4];
-    Class_10B9D000_Element** Unknown18;
+    Class_10B9D000_Element** m_Items;
 };
 
 #endif // GAME_CLASS_10B9D000_H

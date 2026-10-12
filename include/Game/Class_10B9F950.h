@@ -10,10 +10,10 @@ class FArchive;
 class Class_10B9F950
 {
 public:
-    void FUN_10b9f950(FArchive& Ar, int Count);
+    void SerializeItems(FArchive& Ar, int Count);
 
     char Unknown00[0x18];
-    cIntArray Unknown18;
+    cIntArray m_Items;
 };
 
 #endif // GAME_CLASS_10B9F950_H

@@ -10,8 +10,8 @@ extern float DAT_10f0591c;
 
 extern float DAT_10eafbdc;
 
-// FUNCTION: 0x10B6FCD0 ?FUN_10b6fcd0@Class_10B6FCD0@@QAEMPAVFVector@@0@Z
-float Class_10B6FCD0::FUN_10b6fcd0(FVector* A, FVector* B)
+// FUNCTION: 0x10B6FCD0 ?ComputeFalloff@Class_10B6FCD0@@QAEMPAVFVector@@0@Z
+float Class_10B6FCD0::ComputeFalloff(FVector* A, FVector* B)
 {
     FVector Here = Unknown00;
     FVector Delta;

@@ -50,7 +50,7 @@ void Class_10E97CB4::FUN_10c0e5e0(int Message, int A, Class_10C0E5E0_Param* Para
                     else if (Actor->IsA(FUN_10901650()))
                     {
                         int Item = (int)Actor;
-                        Unknown10.FUN_10b9fa20(&Item);
+                        Unknown10.Add(&Item);
                     }
                 }
             }

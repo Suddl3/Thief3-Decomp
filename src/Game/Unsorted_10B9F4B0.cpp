@@ -31,12 +31,12 @@ public:
     Struct_10B9F810** Unknown08;
 };
 
-// FUNCTION: 0x10B9F5B0 ?FUN_10b9f5b0@Class_10B9F5B0@@QAEXPAVClass_10B9F5B0_Param@@@Z
-void Class_10B9F5B0::FUN_10b9f5b0(Class_10B9F5B0_Param* A)
+// FUNCTION: 0x10B9F5B0 ?SerializeLinks@Class_10B9F5B0@@QAEXPAVClass_10B9F5B0_Param@@@Z
+void Class_10B9F5B0::SerializeLinks(Class_10B9F5B0_Param* A)
 {
-    for (int i = 0; i < Unknown18; i++)
+    for (int i = 0; i < m_Count; i++)
     {
-        int* Dest = Unknown20[i]->Unknown24;
+        int* Dest = m_Items[i]->Unknown24;
         for (int j = 0; j < 2; j++)
         {
             int Index;

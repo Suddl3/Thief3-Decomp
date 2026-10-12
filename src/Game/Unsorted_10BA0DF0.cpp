@@ -1,6 +1,6 @@
 // Game/Unsorted_10BA0DF0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10B9E410.h"
+#include "Game/cStateStack.h"
 #include "Game/Class_10BAA8A0.h"
 #include "Game/Class_10BBDB40.h"
 #include "Game/Class_10BC9D40.h"
@@ -28,7 +28,7 @@ public:
     Class_10970890* FUN_10991eb0();
 
     char Unknown00[0xC4];
-    unsigned int Unknown0C4;
+    unsigned int m_Flags;
 };
 
 // FUNCTION: 0x10BA0DF0 ?FUN_10ba0df0@@YGXPAVClass_10BAA580@@@Z
@@ -47,7 +47,7 @@ void __stdcall FUN_10ba0df0(Class_10BAA580* Obj)
         }
         if (((Class_10DBD510*)Obj)->FUN_10dbd510(0x100647)->GetFloat() > 0.0)
         {
-            ((Class_1098E330*)Obj->FUN_10c7d570())->Unknown0C4 |= 0x10000000;
+            ((Class_1098E330*)Obj->FUN_10c7d570())->m_Flags |= 0x10000000;
         }
     }
 }

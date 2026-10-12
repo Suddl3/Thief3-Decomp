@@ -1,7 +1,7 @@
 // Game/Unsorted_10BAA470.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Struct_10C05A80.h"
-#include "Game/Class_10BAA5F0.h"
+#include "Game/PawnWrapper.h"
 
 extern float DAT_10eafbdc;
 
@@ -18,20 +18,20 @@ public:
     Struct_10C05A80 Unknown2C;
 };
 
-// FUNCTION: 0x10BAA5F0 ?FUN_10baa5f0@Class_10BAA5F0@@QAE_NPAVClass_10BAA5F0_Field34@@MM@Z
-bool Class_10BAA5F0::FUN_10baa5f0(Class_10BAA5F0_Field34* A, float B, float C)
+// FUNCTION: 0x10BAA5F0 ?QuickProximityTest@PawnWrapper@@QAE_NPAVClass_10BAA5F0_Field34@@MM@Z
+bool PawnWrapper::QuickProximityTest(Class_10BAA5F0_Field34* A, float B, float C)
 {
-    if (A == Unknown34)
+    if (A == m_Pawn)
     {
         FUN_10905ff0(DAT_10e8d69c);
         return false;
     }
-    float Diff = A->Unknown2C.Unknown08 - Unknown34->Unknown2C.Unknown08;
+    float Diff = A->Unknown2C.Unknown08 - m_Pawn->Unknown2C.Unknown08;
     if (!(Diff >= DAT_10eafbdc))
         Diff = -Diff;
     if (Diff > C)
         return false;
-    float Dist = FUN_10c05a80(&A->Unknown2C, &Unknown34->Unknown2C);
+    float Dist = FUN_10c05a80(&A->Unknown2C, &m_Pawn->Unknown2C);
     if (Dist > B * B)
         return false;
     return true;

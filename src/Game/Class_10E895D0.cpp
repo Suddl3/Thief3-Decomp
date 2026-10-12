@@ -24,17 +24,17 @@ void Class_10E895D0::FUN_10b8b9f0(int A)
         V = m_Controller->FUN_10dab640();
     else if (m_Controller->Unknown04 == 1)
         V = m_Controller->FUN_10dad300();
-    switch (Unknown0C)
+    switch (m_State)
     {
     case 1:
         if (!(V > DAT_10e895f8))
             return;
-        FUN_10b8b830(0);
+        SetState(0);
         break;
     case 2:
         if (!(V < DAT_10e5bd88))
             return;
-        FUN_10b8b830(3);
+        SetState(3);
         break;
     default:
         return;

@@ -12,9 +12,9 @@ class Class_10E8C144
 public:
     virtual void Virtual0();
     virtual void Virtual1();
-    virtual Item_10BA14C0* FUN_10ba14c0(int Key, int Index, int Group);
+    virtual Item_10BA14C0* FindItem(int Key, int Index, int Group);
 
-    Class_10C49740 Unknown04;
+    Class_10C49740 m_Entries;
 };
 
 #endif // GAME_CLASS_10E8C144_H

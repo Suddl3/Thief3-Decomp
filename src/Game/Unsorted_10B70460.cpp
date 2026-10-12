@@ -13,8 +13,8 @@ void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
 extern Class_10E871C8* DAT_10ff65ac;
 
-// FUNCTION: 0x10B70460 ?FUN_10b70460@@YAPAVClass_10E871C8@@XZ
-Class_10E871C8* FUN_10b70460()
+// FUNCTION: 0x10B70460 ?GetSoupManager@@YAPAVClass_10E871C8@@XZ
+Class_10E871C8* GetSoupManager()
 {
     if (!DAT_10ff65ac)
     {

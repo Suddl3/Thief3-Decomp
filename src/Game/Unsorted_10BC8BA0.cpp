@@ -27,7 +27,7 @@ public:
 
 void FUN_10bb83e0();
 
-class Class_10E93020
+class State_PlayAction
 {
 public:
     void FUN_10bd0260();
@@ -155,8 +155,8 @@ int FUN_10bcb810()
     return 0x100476;
 }
 
-// FUNCTION: 0x10BCBA80 ?FUN_10bcba80@@YAHXZ
-int FUN_10bcba80()
+// FUNCTION: 0x10BCBA80 ?GetGassedEnableId@@YAHXZ
+int GetGassedEnableId()
 {
     return 0x100430;
 }
@@ -167,8 +167,8 @@ int FUN_10bcbb20()
     return 0x100446;
 }
 
-// FUNCTION: 0x10BCBD00 ?FUN_10bcbd00@@YAHXZ
-int FUN_10bcbd00()
+// FUNCTION: 0x10BCBD00 ?GetBlindedEnableId@@YAHXZ
+int GetBlindedEnableId()
 {
     return 0x1005ce;
 }
@@ -203,8 +203,8 @@ int FUN_10bcc110()
     return 0x30;
 }
 
-// FUNCTION: 0x10BCC1D0 ?FUN_10bcc1d0@@YAHXZ
-int FUN_10bcc1d0()
+// FUNCTION: 0x10BCC1D0 ?GetChokingEnableId@@YAHXZ
+int GetChokingEnableId()
 {
     return 0x10082f;
 }
@@ -235,8 +235,8 @@ int FUN_10bce960()
     return 0x2c;
 }
 
-// FUNCTION: 0x10BD0260 ?FUN_10bd0260@Class_10E93020@@QAEXXZ
-void Class_10E93020::FUN_10bd0260()
+// FUNCTION: 0x10BD0260 ?FUN_10bd0260@State_PlayAction@@QAEXXZ
+void State_PlayAction::FUN_10bd0260()
 {
     Unknown04->FUN_10bb83e0();
 }

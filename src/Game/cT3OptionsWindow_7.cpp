@@ -141,7 +141,7 @@ public:
 class Class_10B78220 : public Class_10B73810
 {
 public:
-    void FUN_10b78220();
+    void Decrement();
 };
 
 class cT3OptionsWindow : public Class_10B78220
@@ -305,7 +305,7 @@ void cT3OptionsWindow::FUN_10b73960()
             }
             break;
         case 2:
-            FUN_10b78220();
+            Decrement();
             break;
         }
     }

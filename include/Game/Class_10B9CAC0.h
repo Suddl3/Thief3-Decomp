@@ -3,12 +3,12 @@
 #ifndef GAME_CLASS_10B9CAC0_H
 #define GAME_CLASS_10B9CAC0_H
 
-#include "Game/Class_10B9E410.h"
+#include "Game/cStateStack.h"
 
 class Class_10BB8300;
 class Class_10BC9D40;
 
-class Class_10B9CAC0 : public Class_10B9E410
+class Class_10B9CAC0 : public cStateStack
 {
 public:
     bool FUN_10b9d0c0(int A);

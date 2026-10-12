@@ -9,7 +9,7 @@ struct Struct_10C08690;
 
 class Class_10B9D450;
 
-void FUN_10b9d450(Class_10B9D450* Obj);
+void FreeItems(Class_10B9D450* Obj);
 
 class Class_10E979EC;
 
@@ -26,6 +26,6 @@ extern Class_10F46DA0* DAT_10f46da0;
 // FUNCTION: 0x10BF90A0 ??1Class_10E979EC@@UAE@XZ
 Class_10E979EC::~Class_10E979EC()
 {
-    FUN_10b9d450((Class_10B9D450*)&Unknown04);
+    FreeItems((Class_10B9D450*)&Unknown04);
     DAT_10f46da0->Virtual2(this);
 }

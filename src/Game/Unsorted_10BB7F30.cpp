@@ -14,12 +14,12 @@ class AAIPawn;
 
 class Class_10B9CAC0;
 
-Class_10B9BCA0* FUN_10baa660(AAIPawn* Pawn);
+Class_10B9BCA0* GetAIPawnController(AAIPawn* Pawn);
 
 // FUNCTION: 0x10BB7F30 ?FUN_10bb7f30@Class_10BB7F30@@QAEPAVClass_10B9CAC0@@XZ
 Class_10B9CAC0* Class_10BB7F30::FUN_10bb7f30()
 {
-    Class_10B9BCA0* Controller = FUN_10baa660((AAIPawn*)Unknown08->FUN_10c7d570());
+    Class_10B9BCA0* Controller = GetAIPawnController((AAIPawn*)Unknown08->FUN_10c7d570());
     if (Controller && Controller->Unknown118 && Controller->Unknown118->Unknown08)
         return Controller->Unknown118->Unknown08;
     return 0;

@@ -13,7 +13,7 @@ public:
     char Unknown00[0x34];
     Class_1098E330* Unknown34;
     char Unknown38[0x130];
-    int Unknown168;
+    int m_CachedValue;
 };
 
 #endif // GAME_CLASS_10BAA3D0_H

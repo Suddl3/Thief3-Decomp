@@ -141,13 +141,13 @@ public:
 class Class_10B781E0
 {
 public:
-    void FUN_10b781e0();
+    void Increment();
 
     char Unknown00[0x164];
     int Unknown164;
     char Unknown168[0x20];
     Struct_10B781E0* Unknown188;
-    bool Unknown18C;
+    bool m_Changed;
 };
 
 class Struct_10B78220
@@ -288,13 +288,13 @@ public:
 class Class_10B78220
 {
 public:
-    void FUN_10b78220();
+    void Decrement();
 
     char Unknown00[0x164];
     int Unknown164;
     char Unknown168[0x20];
     Struct_10B78220* Unknown188;
-    bool Unknown18C;
+    bool m_Changed;
 };
 
 struct Struct_10B76320
@@ -317,7 +317,7 @@ extern Class_10F3A3D8* DAT_10f3a3d8;
 // FUNCTION: 0x10B76320 ?FUN_10b76320@Class_10B76320@@QAEHXZ
 int Class_10B76320::FUN_10b76320()
 {
-    switch (Unknown190)
+    switch (m_Mode)
     {
     case 1:
         return DAT_10f3a3d8->Unknown150->Unknown04;
@@ -333,8 +333,8 @@ void Class_10B78040::FUN_10b78040(int A, int B, int C, int D, int E, int F)
     Unknown160->FUN_10a2aef0(&Unknown168, A, B, C, D, E, F, 0, &Unknown16C);
 }
 
-// FUNCTION: 0x10B781E0 ?FUN_10b781e0@Class_10B781E0@@QAEXXZ
-void Class_10B781E0::FUN_10b781e0()
+// FUNCTION: 0x10B781E0 ?Increment@Class_10B781E0@@QAEXXZ
+void Class_10B781E0::Increment()
 {
     if (Unknown188->Unknown1F0 == Unknown188->Unknown1EC)
         Unknown188->Virtual122();
@@ -342,12 +342,12 @@ void Class_10B781E0::FUN_10b781e0()
     {
         Unknown188->Virtual123();
         Unknown164++;
-        Unknown18C = true;
+        m_Changed = true;
     }
 }
 
-// FUNCTION: 0x10B78220 ?FUN_10b78220@Class_10B78220@@QAEXXZ
-void Class_10B78220::FUN_10b78220()
+// FUNCTION: 0x10B78220 ?Decrement@Class_10B78220@@QAEXXZ
+void Class_10B78220::Decrement()
 {
     if (Unknown188->Unknown1F0 == Unknown188->Unknown1E8)
         Unknown188->Virtual122();
@@ -355,6 +355,6 @@ void Class_10B78220::FUN_10b78220()
     {
         Unknown188->Virtual124();
         Unknown164--;
-        Unknown18C = true;
+        m_Changed = true;
     }
 }

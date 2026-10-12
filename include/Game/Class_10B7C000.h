@@ -46,7 +46,7 @@ public:
     ~Class_10B7C000();
 
     void FUN_10ad5310();
-    void FUN_10b7c000();
+    void Destroy();
 };
 
 #endif // GAME_CLASS_10B7C000_H

@@ -13,7 +13,7 @@ public:
     void FUN_10b7ad70();
     void FUN_10b7ae90();
     void FUN_10b7b8a0();
-    void FUN_10b7b820();
+    void Reset();
     void FUN_10b7abb0(int A);
     void FUN_10b7b760(int A);
     void FUN_10b7ac80(unsigned char A);

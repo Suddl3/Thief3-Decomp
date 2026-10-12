@@ -8,7 +8,7 @@ class Class_10B7C3F0_Member;
 class Class_10B7C3F0
 {
 public:
-    void FUN_10b7c3f0(Class_10B7C3F0_Member* New);
+    void SetRefCounted(Class_10B7C3F0_Member* New);
 
     char Unknown00[0x54];
     Class_10B7C3F0_Member* Unknown54;

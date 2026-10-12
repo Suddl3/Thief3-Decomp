@@ -6,10 +6,10 @@
 class Class_10BAA230
 {
 public:
-    void FUN_10baa230();
+    void RecordTime();
 
     char Unknown00[0xB0];
-    float UnknownB0;
+    float m_RecordedTime;
 };
 
 #endif // GAME_CLASS_10BAA230_H

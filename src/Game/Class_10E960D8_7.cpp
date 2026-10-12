@@ -155,7 +155,7 @@ public:
 // FUNCTION: 0x10BE4420 ?FUN_10be4420@Class_10E960D8@@UAE_NXZ
 bool Class_10E960D8::FUN_10be4420()
 {
-    if (!Unknown04->FUN_10bb8a30()->Virtual58())
+    if (!Unknown04->GetCurrent()->Virtual58())
         return false;
     if (!Virtual5())
         return false;

@@ -35,7 +35,7 @@ struct Struct_10BFF250_B
     int Unknown2C;
 };
 
-void FUN_10ba91e0(int* A, int* B);
+void Distance(int* A, int* B);
 
 class Class_10BFF460
 {
@@ -51,7 +51,7 @@ public:
 void Class_10BFF460::FUN_10bff250()
 {
     Class_10BAA9D0* P = Unknown04->FUN_10dbbae0();
-    FUN_10ba91e0(&((Struct_10BFF250_A*)P->FUN_10c7d570())->Unknown2C,
+    Distance(&((Struct_10BFF250_A*)P->FUN_10c7d570())->Unknown2C,
                  &((Struct_10BFF250_B*)Unknown08.FUN_10978090())->Unknown2C);
 }
 

@@ -10,7 +10,7 @@ class Class_10BBFCA0_Unknown00;
 class Class_10BBFCA0
 {
 public:
-    unsigned int FUN_10bbfca0(Class_10BBFBF0_Param* A, Class_10A68D20* B);
+    unsigned int DrawPercentLines(Class_10BBFBF0_Param* A, Class_10A68D20* B);
 
     Class_10BBFCA0_Unknown00* Unknown00;
 };

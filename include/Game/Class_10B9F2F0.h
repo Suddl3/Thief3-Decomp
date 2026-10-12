@@ -9,9 +9,9 @@
 class Class_10B9F2F0
 {
 public:
-    Class_10B9F2F0(FArchive& Ar) { FUN_10b9f2f0(Ar); }
+    Class_10B9F2F0(FArchive& Ar) { Serialize(Ar); }
 
-    void FUN_10b9f2f0(FArchive& Ar);
+    void Serialize(FArchive& Ar);
 
     FVector Unknown00;
     FVector Unknown0C;

@@ -9,12 +9,12 @@ class FArchive;
 class Class_10B9F450
 {
 public:
-    void FUN_10b9f450(FArchive& Ar);
+    void Serialize(FArchive& Ar);
 
     char Unknown00[0xC];
-    int Unknown0C;
+    int m_Count;
     char Unknown10[4];
-    Class_10C04AA0** Unknown14;
+    Class_10C04AA0** m_Items;
 };
 
 #endif // GAME_CLASS_10B9F450_H

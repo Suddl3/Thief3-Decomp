@@ -6,7 +6,7 @@
 class Class_10E8C758
 {
 public:
-    Class_10E8C758* FUN_10ba43b0();
+    Class_10E8C758* Construct();
 
     void* Unknown00;
 };

@@ -28,7 +28,7 @@ FArchive& FUN_10b052a0(FArchive& Ar, void* Data);
 class Class_10B9F2F0
 {
 public:
-    void FUN_10b9f2f0(FArchive& Ar);
+    void Serialize(FArchive& Ar);
 
     FVector Unknown00;
     FVector Unknown0C;
@@ -39,8 +39,8 @@ public:
     char Unknown20;
 };
 
-// FUNCTION: 0x10B9F2F0 ?FUN_10b9f2f0@Class_10B9F2F0@@QAEXAAVFArchive@@@Z
-void Class_10B9F2F0::FUN_10b9f2f0(FArchive& Ar)
+// FUNCTION: 0x10B9F2F0 ?Serialize@Class_10B9F2F0@@QAEXAAVFArchive@@@Z
+void Class_10B9F2F0::Serialize(FArchive& Ar)
 {
     if (Ar.Unknown04 >= 0x4A)
         Ar.Serialize(&Unknown18, 1);

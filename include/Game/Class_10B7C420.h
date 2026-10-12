@@ -6,15 +6,15 @@
 class Class_10B7C420
 {
 public:
-    Class_10B7C420* FUN_10b7c420();
+    Class_10B7C420* Reset();
 
     float Unknown00;
     float Unknown04;
     float Unknown08;
     float Unknown0C;
     float Unknown10[7][4];
-    float Unknown80;
-    float Unknown84;
+    float m_MinAngle;
+    float m_MaxAngle;
     float Unknown88;
 };
 

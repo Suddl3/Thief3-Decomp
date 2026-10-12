@@ -74,7 +74,7 @@ public:
 // FUNCTION: 0x10BCBDF0 ?FUN_10bcbdf0@Class_10E92230@@UAEXHHHHH@Z
 void Class_10E92230::FUN_10bcbdf0(int A, int B, int C, int D, int E)
 {
-    Unknown04->FUN_10bb7e30();
+    Unknown04->Reset();
     cTacticMoveToPoint::FUN_10bcac50(A, B, C, D, E);
     PopState();
 }

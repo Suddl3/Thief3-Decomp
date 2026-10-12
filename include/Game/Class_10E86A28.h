@@ -8,7 +8,7 @@
 class Class_10E86A28 : public Class_10B78780
 {
 public:
-    Class_10E86A28* FUN_10b6d970();
+    Class_10E86A28* Init();
 
     int Unknown190;
 };

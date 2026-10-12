@@ -38,10 +38,10 @@ struct Struct_10B8BF80_Out
 // FUNCTION: 0x10B8BF80 ?FUN_10b8bf80@Class_10E895D0@@QAEXXZ
 void Class_10E895D0::FUN_10b8bf80()
 {
-    if (Unknown0C == 1)
+    if (m_State == 1)
         return;
-    if (Unknown0C != 0)
-        FUN_10b8b830(1);
+    if (m_State != 0)
+        SetState(1);
     Class_10B8B9F0_Unknown10* Ctrl = FUN_10b8b8a0();
     Class_10D9FEE0* Obj = (Class_10D9FEE0*)Unknown08;
     m_Controller = Ctrl;

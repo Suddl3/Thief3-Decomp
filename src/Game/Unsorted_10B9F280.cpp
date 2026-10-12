@@ -25,8 +25,8 @@ struct Struct_10B9F420
 
 extern __int64 DAT_10f05c70;
 
-// FUNCTION: 0x10B9F280 ?FUN_10b9f280@@YAXH_N@Z
-void FUN_10b9f280(int Bit, bool Clear)
+// FUNCTION: 0x10B9F280 ?SetBit@@YAXH_N@Z
+void SetBit(int Bit, bool Clear)
 {
     __int64 Mask = (__int64)1 << Bit;
     if (!Clear)
@@ -41,14 +41,14 @@ void FUN_10b9f280(int Bit, bool Clear)
     }
 }
 
-// FUNCTION: 0x10B9F3B0 ?FUN_10b9f3b0@Class_10E5BC3C@@UAEXPAVObject_10BE58C0@@AAPAVClass_10AAB5C0@@@Z
-void Class_10E5BC3C::FUN_10b9f3b0(Object_10BE58C0* Ar, Class_10AAB5C0*& Obj)
+// FUNCTION: 0x10B9F3B0 ?SerializeRef@Class_10E5BC3C@@UAEXPAVObject_10BE58C0@@AAPAVClass_10AAB5C0@@@Z
+void Class_10E5BC3C::SerializeRef(Object_10BE58C0* Ar, Class_10AAB5C0*& Obj)
 {
     int Index = 0;
     if (Ar->Unknown14)
     {
         Ar->Virtual1(&Index, 4);
-        Obj = Unknown14[Index];
+        Obj = m_Objects[Index];
         return;
     }
     if (Obj)
@@ -56,24 +56,24 @@ void Class_10E5BC3C::FUN_10b9f3b0(Object_10BE58C0* Ar, Class_10AAB5C0*& Obj)
     Ar->Virtual1(&Index, 4);
 }
 
-// FUNCTION: 0x10B9F420 ?FUN_10b9f420@@YAXPAUStruct_10B9F420@@@Z
-void FUN_10b9f420(Struct_10B9F420* List)
+// FUNCTION: 0x10B9F420 ?DeleteObjects@@YAXPAUStruct_10B9F420@@@Z
+void DeleteObjects(Struct_10B9F420* List)
 {
     for (int i = 0; i < List->Unknown00; i++)
         delete List->Unknown08[i];
     List->Unknown00 = 0;
 }
 
-// FUNCTION: 0x10B9F450 ?FUN_10b9f450@Class_10B9F450@@QAEXAAVFArchive@@@Z
-void Class_10B9F450::FUN_10b9f450(FArchive& Ar)
+// FUNCTION: 0x10B9F450 ?Serialize@Class_10B9F450@@QAEXAAVFArchive@@@Z
+void Class_10B9F450::Serialize(FArchive& Ar)
 {
-    for (int i = 0; i < Unknown0C; i++)
-        Unknown14[i]->FUN_10c04aa0(Ar);
+    for (int i = 0; i < m_Count; i++)
+        m_Items[i]->FUN_10c04aa0(Ar);
 }
 
-// FUNCTION: 0x10B9F480 ?FUN_10b9f480@Class_10B9F480@@QAEXAAVFArchive@@@Z
-void Class_10B9F480::FUN_10b9f480(FArchive& Ar)
+// FUNCTION: 0x10B9F480 ?Serialize@Class_10B9F480@@QAEXAAVFArchive@@@Z
+void Class_10B9F480::Serialize(FArchive& Ar)
 {
-    for (int i = 0; i < Unknown18; i++)
-        Unknown20[i]->FUN_10b9f2f0(Ar);
+    for (int i = 0; i < m_Count; i++)
+        m_Items[i]->Serialize(Ar);
 }

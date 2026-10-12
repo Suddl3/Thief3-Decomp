@@ -6,9 +6,9 @@
 class Class_10E8C878
 {
 public:
-    Class_10E8C878* FUN_10ba4c20();
+    Class_10E8C878* Construct();
 
-    void* Unknown00;
+    void* m_VTable;
 };
 
 #endif // GAME_CLASS_10E8C878_H

@@ -3,10 +3,10 @@
 #include "Game/Class_10E90D70.h"
 #include "Game/Class_10BD0270.h"
 
-class Class_10E93020 : public Class_10E90D70
+class State_PlayAction : public Class_10E90D70
 {
 public:
-    ~Class_10E93020();
+    ~State_PlayAction();
 
     int m_CurrentAction;
     Class_10BD0270* m_ActionQueue[4];
@@ -16,8 +16,8 @@ public:
     char Pad57[0x1];
 };
 
-// FUNCTION: 0x10BD0730 ??1Class_10E93020@@QAE@XZ
-Class_10E93020::~Class_10E93020()
+// FUNCTION: 0x10BD0730 ??1State_PlayAction@@QAE@XZ
+State_PlayAction::~State_PlayAction()
 {
     for (int i = 0; i < 4; i++)
     {

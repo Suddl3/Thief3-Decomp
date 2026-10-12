@@ -28,7 +28,7 @@ public:
 class Class_10E8B1A8 : public AAIPathPoint
 {
 public:
-    Class_10E8B1A8* FUN_10b93e30();
+    Class_10E8B1A8* Construct();
 };
 
 extern void* DAT_10e8b330[];
@@ -36,7 +36,7 @@ extern void* DAT_10e8b330[];
 class Class_10E8B330 : public AAIPathPoint
 {
 public:
-    Class_10E8B330* FUN_10b93e50();
+    Class_10E8B330* Construct();
 };
 
 extern void* DAT_10e8b4b8[];
@@ -44,7 +44,7 @@ extern void* DAT_10e8b4b8[];
 class Class_10E8B4B8 : public AAIPathPoint
 {
 public:
-    Class_10E8B4B8* FUN_10b93ef0();
+    Class_10E8B4B8* Construct();
 };
 
 enum EInternal { EC_Internal };
@@ -134,110 +134,110 @@ public:
 
 extern void* DAT_10e8bca0[];
 
-// FUNCTION: 0x10B93E30 ?FUN_10b93e30@Class_10E8B1A8@@QAEPAV1@XZ
-Class_10E8B1A8* Class_10E8B1A8::FUN_10b93e30()
+// FUNCTION: 0x10B93E30 ?Construct@Class_10E8B1A8@@QAEPAV1@XZ
+Class_10E8B1A8* Class_10E8B1A8::Construct()
 {
     this->AAIPathPoint::AAIPathPoint();
     Unknown00 = DAT_10e8b1a8;
     return this;
 }
 
-// FUNCTION: 0x10B93E50 ?FUN_10b93e50@Class_10E8B330@@QAEPAV1@XZ
-Class_10E8B330* Class_10E8B330::FUN_10b93e50()
+// FUNCTION: 0x10B93E50 ?Construct@Class_10E8B330@@QAEPAV1@XZ
+Class_10E8B330* Class_10E8B330::Construct()
 {
     this->AAIPathPoint::AAIPathPoint();
     Unknown00 = DAT_10e8b330;
     return this;
 }
 
-// FUNCTION: 0x10B93EF0 ?FUN_10b93ef0@Class_10E8B4B8@@QAEPAV1@XZ
-Class_10E8B4B8* Class_10E8B4B8::FUN_10b93ef0()
+// FUNCTION: 0x10B93EF0 ?Construct@Class_10E8B4B8@@QAEPAV1@XZ
+Class_10E8B4B8* Class_10E8B4B8::Construct()
 {
     this->AAIPathPoint::AAIPathPoint();
     Unknown00 = DAT_10e8b4b8;
     return this;
 }
 
-// FUNCTION: 0x10B95150 ?FUN_10b95150@@YAXPAX@Z
-void FUN_10b95150(void* Memory)
+// FUNCTION: 0x10B95150 ?ConstructAAIPawnController@@YAXPAX@Z
+void ConstructAAIPawnController(void* Memory)
 {
     new ((EInternal*)Memory) AAIPawnController();
 }
 
-// FUNCTION: 0x10B951A0 ?FUN_10b951a0@@YAXPAX@Z
-void FUN_10b951a0(void* Memory)
+// FUNCTION: 0x10B951A0 ?ConstructAAddAIPoint@@YAXPAX@Z
+void ConstructAAddAIPoint(void* Memory)
 {
     new ((EInternal*)Memory) AAddAIPoint();
 }
 
-// FUNCTION: 0x10B951B0 ?FUN_10b951b0@@YAXPAX@Z
-void FUN_10b951b0(void* Memory)
+// FUNCTION: 0x10B951B0 ?ConstructAChangeDirectionPoint@@YAXPAX@Z
+void ConstructAChangeDirectionPoint(void* Memory)
 {
     new ((EInternal*)Memory) AChangeDirectionPoint();
 }
 
-// FUNCTION: 0x10B951C0 ?FUN_10b951c0@@YAXPAX@Z
-void FUN_10b951c0(void* Memory)
+// FUNCTION: 0x10B951C0 ?ConstructAFormationPoint@@YAXPAX@Z
+void ConstructAFormationPoint(void* Memory)
 {
     new ((EInternal*)Memory) AFormationPoint();
 }
 
-// FUNCTION: 0x10B951D0 ?FUN_10b951d0@@YAXPAX@Z
-void FUN_10b951d0(void* Memory)
+// FUNCTION: 0x10B951D0 ?ConstructAFormationPointAbsolute@@YAXPAX@Z
+void ConstructAFormationPointAbsolute(void* Memory)
 {
     new ((EInternal*)Memory) AFormationPointAbsolute();
 }
 
-// FUNCTION: 0x10B951E0 ?FUN_10b951e0@@YAXPAX@Z
-void FUN_10b951e0(void* Memory)
+// FUNCTION: 0x10B951E0 ?ConstructAHeadTurnPoint@@YAXPAX@Z
+void ConstructAHeadTurnPoint(void* Memory)
 {
     new ((EInternal*)Memory) AHeadTurnPoint();
 }
 
-// FUNCTION: 0x10B951F0 ?FUN_10b951f0@@YAXPAX@Z
-void FUN_10b951f0(void* Memory)
+// FUNCTION: 0x10B951F0 ?ConstructALookPoint@@YAXPAX@Z
+void ConstructALookPoint(void* Memory)
 {
     new ((EInternal*)Memory) ALookPoint();
 }
 
-// FUNCTION: 0x10B95200 ?FUN_10b95200@@YAXPAX@Z
-void FUN_10b95200(void* Memory)
+// FUNCTION: 0x10B95200 ?ConstructAPlayAnimPoint@@YAXPAX@Z
+void ConstructAPlayAnimPoint(void* Memory)
 {
     new ((EInternal*)Memory) APlayAnimPoint();
 }
 
-// FUNCTION: 0x10B95210 ?FUN_10b95210@@YAXPAX@Z
-void FUN_10b95210(void* Memory)
+// FUNCTION: 0x10B95210 ?ConstructAPlayBarkPoint@@YAXPAX@Z
+void ConstructAPlayBarkPoint(void* Memory)
 {
     new ((EInternal*)Memory) APlayBarkPoint();
 }
 
-// FUNCTION: 0x10B952A0 ?FUN_10b952a0@@YAXPAX@Z
-void FUN_10b952a0(void* Memory)
+// FUNCTION: 0x10B952A0 ?ConstructAAICombatModel@@YAXPAX@Z
+void ConstructAAICombatModel(void* Memory)
 {
     new ((EInternal*)Memory) AAICombatModel();
 }
 
-// FUNCTION: 0x10B952B0 ?FUN_10b952b0@@YAXPAX@Z
-void FUN_10b952b0(void* Memory)
+// FUNCTION: 0x10B952B0 ?ConstructAAIFactionModel@@YAXPAX@Z
+void ConstructAAIFactionModel(void* Memory)
 {
     new ((EInternal*)Memory) AAIFactionModel();
 }
 
-// FUNCTION: 0x10B952C0 ?FUN_10b952c0@@YAXPAX@Z
-void FUN_10b952c0(void* Memory)
+// FUNCTION: 0x10B952C0 ?ConstructAAIMovementModel@@YAXPAX@Z
+void ConstructAAIMovementModel(void* Memory)
 {
     new ((EInternal*)Memory) AAIMovementModel();
 }
 
-// FUNCTION: 0x10B952D0 ?FUN_10b952d0@@YAXPAX@Z
-void FUN_10b952d0(void* Memory)
+// FUNCTION: 0x10B952D0 ?ConstructAAISensoryModel@@YAXPAX@Z
+void ConstructAAISensoryModel(void* Memory)
 {
     new ((EInternal*)Memory) AAISensoryModel();
 }
 
-// FUNCTION: 0x10B97660 ?FUN_10b97660@Class_10E8BCA0@@QAEPAV1@XZ
-Class_10E8BCA0* Class_10E8BCA0::FUN_10b97660()
+// FUNCTION: 0x10B97660 ?Construct@Class_10E8BCA0@@QAEPAV1@XZ
+Class_10E8BCA0* Class_10E8BCA0::Construct()
 {
     FUN_10a503e0();
     Unknown00 = DAT_10e8bca0;

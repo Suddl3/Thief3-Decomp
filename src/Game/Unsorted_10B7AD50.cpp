@@ -34,11 +34,11 @@ public:
 
 extern float DAT_10eafbdc;
 
-// FUNCTION: 0x10B7AD50 ?FUN_10b7ad50@Class_10B7AD50@@QAEMH@Z
-float Class_10B7AD50::FUN_10b7ad50(int Index)
+// FUNCTION: 0x10B7AD50 ?GetOrDefault@Class_10B7AD50@@QAEMH@Z
+float Class_10B7AD50::GetOrDefault(int Index)
 {
-    if (Unknown34 > Index)
-        return Unknown3C[Index];
+    if (m_ValueCount > Index)
+        return m_Values[Index];
     return DAT_10eafbdc;
 }
 

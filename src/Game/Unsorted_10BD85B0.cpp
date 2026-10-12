@@ -23,8 +23,8 @@ float Class_10BD8650::FUN_10bd8650()
     return Value;
 }
 
-// FUNCTION: 0x10BD9640 ?FUN_10bd9640@cTacticWeaponEquip@@UAEXH@Z
-void cTacticWeaponEquip::FUN_10bd9640(int A)
+// FUNCTION: 0x10BD9640 ?ClearReferencesTo@cTacticWeaponEquip@@UAEXH@Z
+void cTacticWeaponEquip::ClearReferencesTo(int A)
 {
     FUN_109e3c90(A);
     if (Unknown48 == A)

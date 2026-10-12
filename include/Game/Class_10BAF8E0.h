@@ -8,7 +8,7 @@
 class Class_10BAF8E0 : public cIntArray
 {
 public:
-    void FUN_10baf8e0(int Param);
+    void Dispatch(int Param);
 };
 
 #endif // GAME_CLASS_10BAF8E0_H

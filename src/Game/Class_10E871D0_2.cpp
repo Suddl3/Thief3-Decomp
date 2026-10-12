@@ -9,7 +9,7 @@ extern void* DAT_10e871d0[];
 
 extern void* DAT_10e7edb8[];
 
-Class_10E871C8* FUN_10b70460();
+Class_10E871C8* GetSoupManager();
 
 extern Class_10E871C8* DAT_10ff65ac;
 
@@ -39,7 +39,7 @@ Class_10E871D0::~Class_10E871D0()
     Unknown118 = DAT_10e7edb8;
     if (DAT_10ff65ac)
     {
-        Class_10E871C8* Manager = FUN_10b70460();
+        Class_10E871C8* Manager = GetSoupManager();
         if (--Manager->Unknown102FC == 0 && DAT_10ff65ac)
         {
             delete DAT_10ff65ac;

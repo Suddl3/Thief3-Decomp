@@ -10,15 +10,15 @@ public:
     virtual bool Virtual1();
     virtual void FUN_10ba9060(Class_10C7D570* Obj);
     virtual void FUN_10ba9030(int Value);
-    virtual void FUN_10ba9010(bool p1);
+    virtual void SetActive(bool p1);
 
     void FUN_10c15bc0();
 
     char Unknown04;
-    bool Unknown05;
+    bool m_Active;
     char Unknown06[2];
     int Unknown08;
-    void* Unknown0C;
+    void* m_OwnerKey;
     Class_10C16250 Unknown10;
     Class_10C16250 Unknown4030;
 };
@@ -30,5 +30,5 @@ void Class_10E8D65C::FUN_10ba9060(Class_10C7D570* Obj)
     Unknown10.FUN_10c16250();
     Unknown4030.FUN_10c16250();
     Unknown08 = 0;
-    Unknown0C = Obj ? Obj->FUN_10c7d570() : 0;
+    m_OwnerKey = Obj ? Obj->FUN_10c7d570() : 0;
 }

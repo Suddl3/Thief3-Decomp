@@ -26,7 +26,7 @@ extern Class_10F3A3D8* DAT_10f3a3d8;
 void Class_10B6E0F0::FUN_10b6e0f0()
 {
     int Obj;
-    switch (Unknown2FC)
+    switch (m_Mode)
     {
     case 0:
         Obj = DAT_10f3a3d8->Unknown150->Unknown08;
@@ -40,7 +40,7 @@ void Class_10B6E0F0::FUN_10b6e0f0()
     if (Obj == 0)
         return;
     int Value;
-    switch (Unknown2FC)
+    switch (m_Mode)
     {
     case 0:
         Value = DAT_10f3a3d8->Unknown150->Unknown08;
@@ -54,7 +54,7 @@ void Class_10B6E0F0::FUN_10b6e0f0()
     }
     DAT_10f3a3d8->Unknown14C->Unknown04 = Value;
     DAT_10f3a3d8->Unknown14C->FUN_10ab8050(Unknown2F4);
-    switch (Unknown2FC)
+    switch (m_Mode)
     {
     case 0:
         DAT_10f3a3d8->Unknown150->FUN_10abed20(1, Unknown2F4);

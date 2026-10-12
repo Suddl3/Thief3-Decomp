@@ -22,8 +22,8 @@ public:
     int** Unknown08;
 };
 
-// FUNCTION: 0x10B9D450 ?FUN_10b9d450@@YAXPAVClass_10B9D450@@@Z
-void FUN_10b9d450(Class_10B9D450* Array)
+// FUNCTION: 0x10B9D450 ?FreeItems@@YAXPAVClass_10B9D450@@@Z
+void FreeItems(Class_10B9D450* Array)
 {
     for (int i = 0; i < Array->Unknown00; i++)
     {

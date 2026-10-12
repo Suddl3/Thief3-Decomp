@@ -34,8 +34,8 @@ public:
     int Unknown10;
 };
 
-// FUNCTION: 0x10BA3550 ?FUN_10ba3550@Class_10E8C640@@UAEPAVClass_10E8C248@@XZ
-Class_10E8C248* Class_10E8C640::FUN_10ba3550()
+// FUNCTION: 0x10BA3550 ?Create@Class_10E8C640@@UAEPAVClass_10E8C248@@XZ
+Class_10E8C248* Class_10E8C640::Create()
 {
     const int& Tag = 0;
     return new(Tag, 0, 0, 0, 0) Class_10E8C248;

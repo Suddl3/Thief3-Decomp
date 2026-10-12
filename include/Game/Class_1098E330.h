@@ -106,7 +106,7 @@ public:
     char Pad28[0x4];
     int Unknown2C;
     char Pad30[0x94];
-    unsigned int Unknown0C4;
+    unsigned int m_Flags;
     char PadC8[0x2c];
     int UnknownF4;
     int UnknownF8;

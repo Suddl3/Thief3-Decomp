@@ -166,7 +166,7 @@ public:
     Class_10B9BCA0_Unknown118* Unknown118;
 };
 
-Class_10B9BCA0* FUN_10baa660(AAIPawn* A);
+Class_10B9BCA0* GetAIPawnController(AAIPawn* A);
 
 class Class_10C39E90_Unknown48
 {
@@ -306,7 +306,7 @@ bool Class_10C39E90::FUN_10c39e90(int* Out)
         if (!Check->FUN_10bac050(*Out))
             return true;
     }
-    Class_10B9BCA0* Obj = FUN_10baa660((AAIPawn*)((Class_10C7D570*)Unknown48->Virtual34())->FUN_10c7d570());
+    Class_10B9BCA0* Obj = GetAIPawnController((AAIPawn*)((Class_10C7D570*)Unknown48->Virtual34())->FUN_10c7d570());
     Class_10AA82D0* Owner = Obj && Obj->Unknown118 ? Obj->Unknown118->Unknown08 : 0;
     Class_10BFF460* Item = ((Class_10BBB410*)Owner->GetLinkedObject())->GetCurrent();
     if (Item && Item->FUN_10bff2a0() && (int)Item->FUN_10bff2a0() == *Out && Item->FUN_10bff330())

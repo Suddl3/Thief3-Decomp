@@ -1,4 +1,4 @@
-// Game/Class_10E93020.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/State_PlayAction.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
 extern void* DAT_10e93020[];
@@ -12,10 +12,10 @@ public:
     int Unknown04[15];
 };
 
-class Class_10E93020 : public Class_10E90D70
+class State_PlayAction : public Class_10E90D70
 {
 public:
-    Class_10E93020* FUN_10bd01b0(int A, int B, bool C, bool D);
+    State_PlayAction* FUN_10bd01b0(int A, int B, bool C, bool D);
 
     int m_CurrentAction;
     int m_ActionQueue[4];
@@ -24,8 +24,8 @@ public:
     bool Unknown56;
 };
 
-// FUNCTION: 0x10BD01B0 ?FUN_10bd01b0@Class_10E93020@@QAEPAV1@HH_N0@Z
-Class_10E93020* Class_10E93020::FUN_10bd01b0(int A, int B, bool C, bool D)
+// FUNCTION: 0x10BD01B0 ?FUN_10bd01b0@State_PlayAction@@QAEPAV1@HH_N0@Z
+State_PlayAction* State_PlayAction::FUN_10bd01b0(int A, int B, bool C, bool D)
 {
     this->Class_10E90D70::Class_10E90D70(A, B);
     m_CurrentAction = 0;

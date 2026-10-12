@@ -15,11 +15,11 @@ public:
     virtual void Virtual4(int A);
 
     int FUN_10ba9ae0(int A2, int A3, int A4, int A5, int A6, int A7, int A8, int A9, int A10, Class_10C7D570* Owner, int A13);
-    int FUN_10ba9d80(int A2, int A3, int A4, int A5, int A6, int A7, int A8, int A9, int A10, Class_10C7D570* Owner, bool A12, int A13);
+    int UpdateWithTimeout(int A2, int A3, int A4, int A5, int A6, int A7, int A8, int A9, int A10, Class_10C7D570* Owner, bool A12, int A13);
 
     char Unknown04[4];
-    float Unknown08;
-    void* Unknown0C;
+    float m_Elapsed;
+    void* m_OwnerKey;
 };
 
 #endif // GAME_CLASS_10BA9D80_H

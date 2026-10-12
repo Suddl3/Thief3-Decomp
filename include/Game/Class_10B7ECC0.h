@@ -8,7 +8,7 @@
 class Class_10B7ECC0
 {
 public:
-    Class_10B7ECC0* FUN_10b7ecc0();
+    Class_10B7ECC0* RegisterTArray();
 
     char Unknown00[0xC];
     Class_10AF4B90 Unknown0C;

@@ -41,8 +41,8 @@ public:
     virtual void Virtual0();
 };
 
-// FUNCTION: 0x10BA33F0 ?FUN_10ba33f0@Class_10E8C638@@UAEPAVClass_10E8C210@@XZ
-Class_10E8C210* Class_10E8C638::FUN_10ba33f0()
+// FUNCTION: 0x10BA33F0 ?Create@Class_10E8C638@@UAEPAVClass_10E8C210@@XZ
+Class_10E8C210* Class_10E8C638::Create()
 {
     return new(0, 0, 0, 0, 0) Class_10E8C210;
 }

@@ -337,9 +337,9 @@ public:
 // FUNCTION: 0x10B9CB80 ?FUN_10b9cb80@Class_10B9CB80@@QAE_NH@Z
 bool Class_10B9CB80::FUN_10b9cb80(int A)
 {
-    if (((Class_10BB7580*)Unknown0C->Unknown08->FUN_10ba9fd0())->FUN_10bb7580() && Unknown10 != 0)
+    if (((Class_10BB7580*)Unknown0C->Unknown08->FUN_10ba9fd0())->FUN_10bb7580() && m_Count != 0)
     {
-        Class_10B9CB80_Member* Last = Unknown18[Unknown10 - 1];
+        Class_10B9CB80_Member* Last = m_Stack[m_Count - 1];
         if (Last && Last->Virtual13(A))
             return FUN_10b98c50(Unknown0C) ? true : false;
     }
@@ -349,9 +349,9 @@ bool Class_10B9CB80::FUN_10b9cb80(int A)
 // FUNCTION: 0x10B9CBE0 ?FUN_10b9cbe0@Class_10B9CBE0@@QAEXXZ
 void Class_10B9CBE0::FUN_10b9cbe0()
 {
-    if (Unknown10)
+    if (m_Count)
     {
-        Object_10B9CBE0* Obj = Unknown18[Unknown10 - 1];
+        Object_10B9CBE0* Obj = m_Stack[m_Count - 1];
         if (Obj)
             Obj->Virtual32();
     }
@@ -360,9 +360,9 @@ void Class_10B9CBE0::FUN_10b9cbe0()
 // FUNCTION: 0x10B9CCD0 ?FUN_10b9ccd0@Class_10B9CCD0@@QAEXHHHHH@Z
 void Class_10B9CCD0::FUN_10b9ccd0(int A, int B, int C, int D, int E)
 {
-    if (Unknown10)
+    if (m_Count)
     {
-        Class_10B9CCD0_Member* Item = Unknown18[Unknown10 - 1];
+        Class_10B9CCD0_Member* Item = m_Stack[m_Count - 1];
         if (Item)
             Item->Virtual23(A, B, C, D, E);
     }
@@ -371,9 +371,9 @@ void Class_10B9CCD0::FUN_10b9ccd0(int A, int B, int C, int D, int E)
 // FUNCTION: 0x10B9CCF0 ?FUN_10b9ccf0@Class_10B9CCF0@@QAEXHH@Z
 void Class_10B9CCF0::FUN_10b9ccf0(int A, int B)
 {
-    if (Unknown10)
+    if (m_Count)
     {
-        Class_10B9CCF0_Member* Item = Unknown18[Unknown10 - 1];
+        Class_10B9CCF0_Member* Item = m_Stack[m_Count - 1];
         if (Item)
             Item->Virtual24(A, B);
     }
@@ -382,9 +382,9 @@ void Class_10B9CCF0::FUN_10b9ccf0(int A, int B)
 // FUNCTION: 0x10B9CD10 ?FUN_10b9cd10@Class_10B9CD10@@QAEXH@Z
 void Class_10B9CD10::FUN_10b9cd10(int A)
 {
-    if (Unknown10)
+    if (m_Count)
     {
-        Class_10B9CD10_Member* Item = Unknown18[Unknown10 - 1];
+        Class_10B9CD10_Member* Item = m_Stack[m_Count - 1];
         if (Item)
             Item->Virtual27(A);
     }
@@ -393,9 +393,9 @@ void Class_10B9CD10::FUN_10b9cd10(int A)
 // FUNCTION: 0x10B9CD30 ?FUN_10b9cd30@Class_10B9CD30@@QAEXXZ
 void Class_10B9CD30::FUN_10b9cd30()
 {
-    if (Unknown10)
+    if (m_Count)
     {
-        Class_10B9CD30_Member* Item = Unknown18[Unknown10 - 1];
+        Class_10B9CD30_Member* Item = m_Stack[m_Count - 1];
         if (Item)
             Item->Virtual33();
     }
@@ -404,9 +404,9 @@ void Class_10B9CD30::FUN_10b9cd30()
 // FUNCTION: 0x10B9CDA0 ?FUN_10b9cda0@Class_10B9CDA0@@QAEXH@Z
 void Class_10B9CDA0::FUN_10b9cda0(int A)
 {
-    if (Unknown10)
+    if (m_Count)
     {
-        Class_10B9CDA0_Member* Item = Unknown18[Unknown10 - 1];
+        Class_10B9CDA0_Member* Item = m_Stack[m_Count - 1];
         if (Item)
             Item->Virtual29(A);
     }
@@ -415,9 +415,9 @@ void Class_10B9CDA0::FUN_10b9cda0(int A)
 // FUNCTION: 0x10B9CDC0 ?FUN_10b9cdc0@Class_10B9CDC0@@QAEXHHHH@Z
 void Class_10B9CDC0::FUN_10b9cdc0(int A, int B, int C, int D)
 {
-    if (Unknown10)
+    if (m_Count)
     {
-        Class_10B9CDC0_Member* Item = Unknown18[Unknown10 - 1];
+        Class_10B9CDC0_Member* Item = m_Stack[m_Count - 1];
         if (Item)
             Item->Virtual28(A, B, C, D);
     }

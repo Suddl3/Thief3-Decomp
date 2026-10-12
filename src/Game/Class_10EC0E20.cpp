@@ -5,7 +5,7 @@ class Class_10EC0E20
 {
 public:
     void FUN_10b7ad70();
-    void FUN_10b7b820();
+    void Reset();
     void FUN_10b7abb0(int A);
     void FUN_10b7b8a0();
 
@@ -19,7 +19,7 @@ public:
 // FUNCTION: 0x10B7B8A0 ?FUN_10b7b8a0@Class_10EC0E20@@QAEXXZ
 void Class_10EC0E20::FUN_10b7b8a0()
 {
-    FUN_10b7b820();
+    Reset();
     if (Unknown18)
     {
         Unknown18 = false;

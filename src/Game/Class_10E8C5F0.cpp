@@ -29,8 +29,8 @@ public:
     }
 };
 
-// FUNCTION: 0x10BA3FB0 ?FUN_10ba3fb0@Class_10E8C5F0@@UAEPAVClass_10E8C51C@@HH@Z
-Class_10E8C51C* Class_10E8C5F0::FUN_10ba3fb0(int A, int B)
+// FUNCTION: 0x10BA3FB0 ?Create@Class_10E8C5F0@@UAEPAVClass_10E8C51C@@HH@Z
+Class_10E8C51C* Class_10E8C5F0::Create(int A, int B)
 {
     return new(0, 0, 0, 0, 0) Class_10E8C51C;
 }

@@ -9,13 +9,13 @@ class Class_10B9F5B0_Unknown20;
 class Class_10B9F5B0
 {
 public:
-    void FUN_10b9f5b0(Class_10B9F5B0_Param* A);
+    void SerializeLinks(Class_10B9F5B0_Param* A);
 
     char Unknown00[0x14];
     int* Unknown14;
-    int Unknown18;
+    int m_Count;
     int Unknown1C;
-    Class_10B9F5B0_Unknown20** Unknown20;
+    Class_10B9F5B0_Unknown20** m_Items;
 };
 
 #endif // GAME_CLASS_10B9F5B0_H

@@ -12,8 +12,8 @@ public:
     Struct_10BA9F50 Unknown38;
 };
 
-// FUNCTION: 0x10BA9F50 ?FUN_10ba9f50@Class_10BA9F50@@QAE_NPAUStruct_10BA9F50@@@Z
-bool Class_10BA9F50::FUN_10ba9f50(Struct_10BA9F50* Out)
+// FUNCTION: 0x10BA9F50 ?CopyPosition@Class_10BA9F50@@QAE_NPAUStruct_10BA9F50@@@Z
+bool Class_10BA9F50::CopyPosition(Struct_10BA9F50* Out)
 {
     Unknown34->GetPosition(Out);
     return true;

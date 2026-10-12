@@ -8,11 +8,11 @@ struct Struct_10B8C9B0;
 class Class_10B8C9B0
 {
 public:
-    Struct_10B8C9B0* FUN_10b8c9b0(int Value);
+    Struct_10B8C9B0* FindItem(int Value);
 
-    int Unknown00;
+    int m_Count;
     int Unknown04;
-    Struct_10B8C9B0** Unknown08;
+    Struct_10B8C9B0** m_Items;
 };
 
 #endif // GAME_CLASS_10B8C9B0_H

@@ -20,23 +20,23 @@ public:
 
     Struct_10BAFBF0 Unknown08;
     int Unknown14;
-    Class_1090A780 Unknown18;
+    Class_1090A780 m_Name;
 };
 
-// FUNCTION: 0x10BAEB60 ?FUN_10baeb60@@YA?AVcString@@XZ
-cString FUN_10baeb60()
+// FUNCTION: 0x10BAEB60 ?GetTextName@@YA?AVcString@@XZ
+cString GetTextName()
 {
     return cString(DAT_10e8d954);
 }
 
-// FUNCTION: 0x10BAEB80 ?FUN_10baeb80@@YA?AVcString@@XZ
-cString FUN_10baeb80()
+// FUNCTION: 0x10BAEB80 ?GetVertexName@@YA?AVcString@@XZ
+cString GetVertexName()
 {
     return cString(DAT_10e8d95c);
 }
 
 // FUNCTION: 0x10BAFBF0 ??0Class_10E8DBA4@@QAE@ABUStruct_10BAFBF0@@ABHABVClass_1090A780@@@Z
 Class_10E8DBA4::Class_10E8DBA4(const Struct_10BAFBF0& A, const int& B, const Class_1090A780& C)
-    : Unknown08(A), Unknown14(B), Unknown18(C)
+    : Unknown08(A), Unknown14(B), m_Name(C)
 {
 }

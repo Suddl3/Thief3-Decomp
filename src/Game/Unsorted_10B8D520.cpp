@@ -61,7 +61,7 @@ bool Class_10B8D800::FUN_10b8d800(int A, int B, int C, int D)
     }
     else if (Unknown19)
     {
-        Class_10D9FEE0* Obj = (Class_10D9FEE0*)FUN_10b8c9b0(C);
+        Class_10D9FEE0* Obj = (Class_10D9FEE0*)FindItem(C);
         Class_109671D0 Local;
         if (Obj)
         {

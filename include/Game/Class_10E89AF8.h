@@ -8,7 +8,7 @@
 class Class_10E89AF8 : public Class_10E52230
 {
 public:
-    Class_10E89AF8* FUN_10b93410();
+    Class_10E89AF8* Construct();
 };
 
 #endif // GAME_CLASS_10E89AF8_H

@@ -6,7 +6,7 @@
 
 class AAIPawn;
 
-Class_10B9BCA0* FUN_10baa660(AAIPawn* Pawn);
+Class_10B9BCA0* GetAIPawnController(AAIPawn* Pawn);
 
 class AAIPawn
 {
@@ -92,7 +92,7 @@ public:
 // FUNCTION: 0x10BC2F80 ?FUN_10bc2f80@AAIPawn@@UAE_NH@Z
 bool AAIPawn::FUN_10bc2f80(int A)
 {
-    Class_10B9BCA0* Controller = FUN_10baa660(this);
+    Class_10B9BCA0* Controller = GetAIPawnController(this);
     if (Controller && Controller->Unknown118 && Controller->Unknown118->Unknown08)
         return Controller->Unknown118->Unknown08->FUN_10b9d0e0(A);
     return false;

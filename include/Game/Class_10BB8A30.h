@@ -11,7 +11,7 @@ class Class_10C7D570;
 class Class_10BB8A30
 {
 public:
-    Class_10BC9D40* FUN_10bb8a30();
+    Class_10BC9D40* GetCurrent();
 
     char Unknown00[8];
     Class_10C7D570* Unknown08;

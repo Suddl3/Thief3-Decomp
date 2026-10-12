@@ -6,10 +6,10 @@
 class Class_10BB8480
 {
 public:
-    bool FUN_10bb8480();
+    bool IsTimeUp();
 
     char Unknown00[0x2C4];
-    float Unknown2C4;
+    float m_EndTime;
 };
 
 #endif // GAME_CLASS_10BB8480_H

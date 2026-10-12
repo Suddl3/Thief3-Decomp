@@ -52,15 +52,15 @@ public:
     int Unknown10;
 };
 
-// FUNCTION: 0x10BA32B0 ?FUN_10ba32b0@Class_10E8C630@@UAEPAVClass_10E8C1D4@@XZ
-Class_10E8C1D4* Class_10E8C630::FUN_10ba32b0()
+// FUNCTION: 0x10BA32B0 ?Create@Class_10E8C630@@UAEPAVClass_10E8C1D4@@XZ
+Class_10E8C1D4* Class_10E8C630::Create()
 {
     const int& Tag = 0;
     return new(Tag, 0, 0, 0, 0) Class_10E8C1D4;
 }
 
-// FUNCTION: 0x10BA3340 ?FUN_10ba3340@Class_10E8C634@@UAEPAVClass_10BA3340@@XZ
-Class_10BA3340* Class_10E8C634::FUN_10ba3340()
+// FUNCTION: 0x10BA3340 ?Create@Class_10E8C634@@UAEPAVClass_10BA3340@@XZ
+Class_10BA3340* Class_10E8C634::Create()
 {
     return new(0, 0, 0, 0, 0) Class_10BA3340;
 }

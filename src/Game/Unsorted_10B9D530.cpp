@@ -10,7 +10,7 @@ extern "C" void* memmove(void* Dest, const void* Src, unsigned int Count);
 
 struct Class_10B9E410_Unknown0C;
 
-class Class_10B9E410;
+class cStateStack;
 
 // include/Game/Class_10B9E410_Item.h copied whole, with Virtual4 taking the argument it is called with.
 class Class_10B9E410_Item
@@ -108,9 +108,9 @@ public:
     virtual int Virtual48(Class_10B9E410_Unknown0C* A, int B);
 };
 
-// include/Game/Class_10B9E410.h copied whole, with the three methods this function uses added
+// include/Game/cStateStack.h copied whole, with the three methods this function uses added
 // and Unknown0C typed as the pointer it holds.
-class Class_10B9E410
+class cStateStack
 {
 public:
     void FUN_10b9cf60();
@@ -123,7 +123,7 @@ public:
     }
     void FUN_10b9cf20();
     void FUN_10b9e410();
-    void FUN_10b9d740(int A);
+    void ApplyNextState(int A);
     void FUN_10b9d8d0();
     void FUN_10b9dc80(int A);
     void FUN_10b9dcc0();
@@ -143,11 +143,11 @@ public:
     int Unknown1C;
     int Unknown20;
     char Unknown24[0x14];
-    Class_10B9E410_Member* Unknown38;
+    Class_10B9E410_Member* m_Member;
 };
 
-// FUNCTION: 0x10B9DAC0 ?PopToBase@Class_10B9E410@@QAEXHHH@Z
-void Class_10B9E410::PopToBase(int A, int B, int C)
+// FUNCTION: 0x10B9DAC0 ?PopToBase@cStateStack@@QAEXHHH@Z
+void cStateStack::PopToBase(int A, int B, int C)
 {
     cIntArray* Array = (cIntArray*)&m_Count;
     int N = m_Count;
@@ -175,8 +175,8 @@ void Class_10B9E410::PopToBase(int A, int B, int C)
         }
         N = Array->Count;
     }
-    Class_10B9E410_Member* Member = Unknown38;
+    Class_10B9E410_Member* Member = m_Member;
     Class_10B9E410_Unknown0C* Owner = Unknown0C;
     int Res = Member->Virtual9(Owner, 0, A, B, C, FUN_10b9cc00(B));
-    FUN_10b9d740(Res);
+    ApplyNextState(Res);
 }

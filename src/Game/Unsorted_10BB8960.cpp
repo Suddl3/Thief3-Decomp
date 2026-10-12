@@ -149,16 +149,16 @@ void FUN_10bbade0()
     FUN_1096a980();
 }
 
-// FUNCTION: 0x10BBDB10 ?FUN_10bbdb10@Class_10BBDB10@@QAEHH@Z
-int Class_10BBDB10::FUN_10bbdb10(int Id)
+// FUNCTION: 0x10BBDB10 ?GetInt@Class_10BBDB10@@QAEHH@Z
+int Class_10BBDB10::GetInt(int Id)
 {
     int Value = 0;
     Unknown04->FUN_1098e330(Id, &Value);
     return Value;
 }
 
-// FUNCTION: 0x10BBDC00 ?FUN_10bbdc00@Class_10BBDC00@@QAEHH@Z
-int Class_10BBDC00::FUN_10bbdc00(int Id)
+// FUNCTION: 0x10BBDC00 ?GetInt@Class_10BBDC00@@QAEHH@Z
+int Class_10BBDC00::GetInt(int Id)
 {
     int Value = 0;
     Unknown0C->FUN_1098e330(Id, &Value);

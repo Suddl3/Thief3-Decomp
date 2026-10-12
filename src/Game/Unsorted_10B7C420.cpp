@@ -2,8 +2,8 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10B7C420.h"
 
-// FUNCTION: 0x10B7C420 ?FUN_10b7c420@Class_10B7C420@@QAEPAV1@XZ
-Class_10B7C420* Class_10B7C420::FUN_10b7c420()
+// FUNCTION: 0x10B7C420 ?Reset@Class_10B7C420@@QAEPAV1@XZ
+Class_10B7C420* Class_10B7C420::Reset()
 {
     Unknown00 = 0.0f;
     Unknown04 = 0.0f;
@@ -15,8 +15,8 @@ Class_10B7C420* Class_10B7C420::FUN_10b7c420()
     Unknown10[4][0] = Unknown10[4][1] = Unknown10[4][2] = Unknown10[4][3] = 0.0f;
     Unknown10[5][0] = Unknown10[5][1] = Unknown10[5][2] = Unknown10[5][3] = 0.0f;
     Unknown10[6][0] = Unknown10[6][1] = Unknown10[6][2] = Unknown10[6][3] = 0.0f;
-    Unknown80 = -3.1415927f;
-    Unknown84 = 3.1415927f;
+    m_MinAngle = -3.1415927f;
+    m_MaxAngle = 3.1415927f;
     Unknown88 = 0.0f;
     return this;
 }

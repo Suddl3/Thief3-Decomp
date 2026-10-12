@@ -88,8 +88,8 @@ Class_10BC00A0::Class_10BC00A0()
     GetAllocator()->Virtual9();
 }
 
-// FUNCTION: 0x10BC0F30 ?FUN_10bc0f30@Class_10BC0F30@@QAEXXZ
-void Class_10BC0F30::FUN_10bc0f30()
+// FUNCTION: 0x10BC0F30 ?Destroy@Class_10BC0F30@@QAEXXZ
+void Class_10BC0F30::Destroy()
 {
     Class_10BBFF10* Object = Unknown00;
     if (Object)

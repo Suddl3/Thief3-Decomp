@@ -77,7 +77,7 @@ public:
 Struct_10BA9F50 cMotionControllerAnim::GetFacingRotation()
 {
     Struct_10BA9F50 Value = Unknown10->Unknown38;
-    Unknown08->FUN_10ba9f50(&Value);
+    Unknown08->CopyPosition(&Value);
     Value.Unknown00 = Unknown34.Unknown00;
     Value.Unknown04 += Unknown34.Unknown04;
     Value.Unknown08 = Unknown34.Unknown08;

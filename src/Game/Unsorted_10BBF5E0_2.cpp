@@ -20,8 +20,8 @@ struct Struct_10BBFB80
 
 void DrawCircle(int A, void* B, float C, Struct_10BBFB80* D, int E);
 
-// FUNCTION: 0x10BBFB80 ?FUN_10bbfb80@@YGXPAVClass_1098E330@@H@Z
-void __stdcall FUN_10bbfb80(Class_1098E330* A, int B)
+// FUNCTION: 0x10BBFB80 ?DrawRadiusCircle@@YGXPAVClass_1098E330@@H@Z
+void __stdcall DrawRadiusCircle(Class_1098E330* A, int B)
 {
     float Scale = 0.0f;
     if (A->FUN_1098e330(0x1002fd, (int*)&Scale))

@@ -8,7 +8,7 @@ struct Struct_10BC1BA0;
 class Class_10BC1BA0
 {
 public:
-    void FUN_10bc1ba0(int p1);
+    void ParsePathLinks(int p1);
 
     Struct_10BC1BA0* Unknown00;
 };

@@ -4,9 +4,9 @@
 
 extern void* DAT_10e8c878[];
 
-// FUNCTION: 0x10BA4C20 ?FUN_10ba4c20@Class_10E8C878@@QAEPAV1@XZ
-Class_10E8C878* Class_10E8C878::FUN_10ba4c20()
+// FUNCTION: 0x10BA4C20 ?Construct@Class_10E8C878@@QAEPAV1@XZ
+Class_10E8C878* Class_10E8C878::Construct()
 {
-    Unknown00 = DAT_10e8c878;
+    m_VTable = DAT_10e8c878;
     return this;
 }

@@ -11,9 +11,9 @@ public:
     void FUN_10b9ccf0(int A, int B);
 
     char Unknown00[0x10];
-    int Unknown10;
+    int m_Count;
     char Unknown14[4];
-    Class_10B9CCF0_Member** Unknown18;
+    Class_10B9CCF0_Member** m_Stack;
 };
 
 #endif // GAME_CLASS_10B9CCF0_H

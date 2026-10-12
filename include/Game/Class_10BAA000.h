@@ -8,7 +8,7 @@ struct Struct_10BAA000;
 class Class_10BAA000
 {
 public:
-    float FUN_10baa000();
+    float GetDistanceFalloff();
 
     char Unknown00[0x34];
     Struct_10BAA000* Unknown34;

@@ -42,16 +42,16 @@ void Class_10B9EEB0::FUN_10b9eeb0(void* A)
     FUN_10b9e2c0(A);
 }
 
-// FUNCTION: 0x10B9F250 ?FUN_10b9f250@@YAHH@Z
-int FUN_10b9f250(int Bit)
+// FUNCTION: 0x10B9F250 ?IsBitClear@@YAHH@Z
+int IsBitClear(int Bit)
 {
     if ((DAT_10f05c70 & (1 << Bit)) == 0)
         return 1;
     return 0;
 }
 
-// FUNCTION: 0x10B9FA20 ?FUN_10b9fa20@cIntArray@@QAEHPAH@Z
-int cIntArray::FUN_10b9fa20(int* Item)
+// FUNCTION: 0x10B9FA20 ?Add@cIntArray@@QAEHPAH@Z
+int cIntArray::Add(int* Item)
 {
     int Index = Unknown00;
     SetCount(Index + 1);

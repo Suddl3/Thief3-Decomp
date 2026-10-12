@@ -10,7 +10,7 @@ class Class_10BC0F30
 public:
     ~Class_10BC0F30();
 
-    void FUN_10bc0f30();
+    void Destroy();
 
     Class_10BBFF10* Unknown00;
 };

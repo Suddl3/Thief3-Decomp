@@ -194,13 +194,13 @@ struct Struct_10BBFEF0
 class Class_10BBFEF0
 {
 public:
-    int FUN_10bbfef0(Class_10BBEFC0* p1);
+    int GetFirst(Class_10BBEFC0* p1);
 
     Struct_10BBFEF0* Unknown00;
 };
 
-// FUNCTION: 0x10BBFEF0 ?FUN_10bbfef0@Class_10BBFEF0@@QAEHPAVClass_10BBEFC0@@@Z
-int Class_10BBFEF0::FUN_10bbfef0(Class_10BBEFC0* p1)
+// FUNCTION: 0x10BBFEF0 ?GetFirst@Class_10BBFEF0@@QAEHPAVClass_10BBEFC0@@@Z
+int Class_10BBFEF0::GetFirst(Class_10BBEFC0* p1)
 {
     if (Unknown00->Unknown00 == 0)
         return 0;

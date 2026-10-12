@@ -8,7 +8,7 @@ class Class_1098E330;
 class Class_10BBDC00
 {
 public:
-    int FUN_10bbdc00(int Id);
+    int GetInt(int Id);
 
     char Unknown00[0xC];
     Class_1098E330* Unknown0C;

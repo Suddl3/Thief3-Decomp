@@ -72,8 +72,8 @@ public:
 
 extern Class_10FF667C* DAT_10ff667c;
 
-// FUNCTION: 0x10BAF8E0 ?FUN_10baf8e0@Class_10BAF8E0@@QAEXH@Z
-void Class_10BAF8E0::FUN_10baf8e0(int Param)
+// FUNCTION: 0x10BAF8E0 ?Dispatch@Class_10BAF8E0@@QAEXH@Z
+void Class_10BAF8E0::Dispatch(int Param)
 {
     if (FindIndex(0x4b) != -1)
     {

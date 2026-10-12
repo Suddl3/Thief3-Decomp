@@ -13,7 +13,7 @@ public:
     void FUN_10b9e430();
 };
 
-Class_10B9BCA0* FUN_10baa660(AAIPawn* Pawn);
+Class_10B9BCA0* GetAIPawnController(AAIPawn* Pawn);
 
 // FUNCTION: 0x10BB8650 ?FUN_10bb8650@Class_10BB8650@@QAE_NM@Z
 bool Class_10BB8650::FUN_10bb8650(float Value)
@@ -21,7 +21,7 @@ bool Class_10BB8650::FUN_10bb8650(float Value)
     Unknown288 = Value;
     if (Value <= 0.0f)
     {
-        Class_10B9BCA0* Controller = FUN_10baa660((AAIPawn*)Unknown08->FUN_10c7d570());
+        Class_10B9BCA0* Controller = GetAIPawnController((AAIPawn*)Unknown08->FUN_10c7d570());
         Class_10B9CAC0* Target;
         if (Controller && Controller->Unknown118 && Controller->Unknown118->Unknown08)
             Target = Controller->Unknown118->Unknown08;

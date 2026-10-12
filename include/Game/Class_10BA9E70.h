@@ -8,7 +8,7 @@
 class Class_10BA9E70
 {
 public:
-    Class_10BA9E70* FUN_10ba9e70(const Struct_10BA9E70& A, const Struct_10BA9E70& B, int C, int D, int E, int F);
+    Class_10BA9E70* Init(const Struct_10BA9E70& A, const Struct_10BA9E70& B, int C, int D, int E, int F);
 
     Struct_10BA9E70 Unknown00;
     Struct_10BA9E70 Unknown0C;

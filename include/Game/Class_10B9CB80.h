@@ -13,9 +13,9 @@ public:
 
     char Unknown00[0xC];
     Struct_10B98C50* Unknown0C;
-    int Unknown10;
+    int m_Count;
     char Unknown14[4];
-    Class_10B9CB80_Member** Unknown18;
+    Class_10B9CB80_Member** m_Stack;
 };
 
 #endif // GAME_CLASS_10B9CB80_H

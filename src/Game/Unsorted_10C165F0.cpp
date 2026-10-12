@@ -14,7 +14,7 @@ class Class_10E98C8C;
 
 void FUN_10c164c0(Class_10E98C8C* A);
 
-float FUN_10ba91e0(const Struct_10BA91E0* A, const Struct_10BA91E0* B);
+float Distance(const Struct_10BA91E0* A, const Struct_10BA91E0* B);
 
 class Class_10978090
 {
@@ -50,7 +50,7 @@ Class_10E98C8C* FUN_10c165f0(int Value)
 // FUNCTION: 0x10C16680 ?FUN_10c16680@Class_10C16680@@QAE_NPAUStruct_10C16680@@MM@Z
 bool Class_10C16680::FUN_10c16680(Struct_10C16680* A, float B, float C)
 {
-    float Dist = FUN_10ba91e0(&A->Unknown2C, &Unknown04->FUN_10ba9ef0());
+    float Dist = Distance(&A->Unknown2C, &Unknown04->FUN_10ba9ef0());
     if (B * C > FUN_10a4aa80(Unknown04->FUN_10dbd510()->FUN_10978090(), 0x400054b, Dist, 16.0f))
         return true;
     return false;

@@ -11,7 +11,7 @@ public:
     char Unknown000[0x2F4];
     bool Unknown2F4;
     char Unknown2F5[7];
-    int Unknown2FC;
+    int m_Mode;
 };
 
 #endif // GAME_CLASS_10B6E0F0_H

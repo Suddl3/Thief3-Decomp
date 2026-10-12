@@ -9,7 +9,7 @@ struct Struct_10BA9F50;
 class Class_10BA9F50
 {
 public:
-    bool FUN_10ba9f50(Struct_10BA9F50* Out);
+    bool CopyPosition(Struct_10BA9F50* Out);
 
     char Unknown00[0x34];
     Class_10BA9F50_Member* Unknown34;

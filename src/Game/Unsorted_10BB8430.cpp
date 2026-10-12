@@ -16,20 +16,20 @@ public:
 
 int FUN_10c28bc0();
 
-// FUNCTION: 0x10BB8430 ?FUN_10bb8430@Class_10E90A1C@@QAEXXZ
-void Class_10E90A1C::FUN_10bb8430()
+// FUNCTION: 0x10BB8430 ?StartInterval@Class_10E90A1C@@QAEXXZ
+void Class_10E90A1C::StartInterval()
 {
-    Unknown08->FUN_10ba9f90(0);
+    m_Schema->FUN_10ba9f90(0);
     ((Class_10C28BD0*)FUN_10c28bc0())->FUN_10c28bd0();
     RollInterval();
-    float Value = Unknown08->FUN_10dbd510(0x10070a)->GetFloat();
-    Unknown2C4 = GetTimeSeconds() + Value;
+    float Value = m_Schema->FUN_10dbd510(0x10070a)->GetFloat();
+    m_EndTime = GetTimeSeconds() + Value;
 }
 
-// FUNCTION: 0x10BB8480 ?FUN_10bb8480@Class_10BB8480@@QAE_NXZ
-bool Class_10BB8480::FUN_10bb8480()
+// FUNCTION: 0x10BB8480 ?IsTimeUp@Class_10BB8480@@QAE_NXZ
+bool Class_10BB8480::IsTimeUp()
 {
-    if (GetTimeSeconds() > Unknown2C4)
+    if (GetTimeSeconds() > m_EndTime)
         return true;
     return false;
 }

@@ -34,8 +34,8 @@ public:
     int Unknown10;
 };
 
-// FUNCTION: 0x10BA34A0 ?FUN_10ba34a0@Class_10E8C63C@@UAEPAVClass_10E8C22C@@XZ
-Class_10E8C22C* Class_10E8C63C::FUN_10ba34a0()
+// FUNCTION: 0x10BA34A0 ?Create@Class_10E8C63C@@UAEPAVClass_10E8C22C@@XZ
+Class_10E8C22C* Class_10E8C63C::Create()
 {
     return new(0, 0, 0, 0, 0) Class_10E8C22C;
 }

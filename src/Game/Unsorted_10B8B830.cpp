@@ -33,12 +33,12 @@ public:
 
 extern Class_10F46DA0* DAT_10f46da0;
 
-// FUNCTION: 0x10B8B830 ?FUN_10b8b830@Class_10B8B830@@QAEXH@Z
-void Class_10E895D0::FUN_10b8b830(int Arg)
+// FUNCTION: 0x10B8B830 ?SetState@Class_10B8B830@@QAEXH@Z
+void Class_10E895D0::SetState(int Arg)
 {
-    if (Unknown0C != Arg)
+    if (m_State != Arg)
     {
-        Unknown0C = Arg;
+        m_State = Arg;
         Class_10E50610 Local(Arg);
         DAT_10f46da0->Virtual5(7, Unknown08->Unknown04, &Local, 0);
     }

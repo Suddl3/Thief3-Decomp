@@ -29,8 +29,8 @@ int Class_10E4B180::Trace(int A, int B, FVector* Out)
     return Result;
 }
 
-// FUNCTION: 0x10B7C330 ?FUN_10b7c330@Class_10B7C330@@QAEXABV1@@Z
-void Class_10B7C330::FUN_10b7c330(const Class_10B7C330& Other)
+// FUNCTION: 0x10B7C330 ?CopyFrom@Class_10B7C330@@QAEXABV1@@Z
+void Class_10B7C330::CopyFrom(const Class_10B7C330& Other)
 {
     Unknown00 = Other.Unknown00;
     Unknown04 = Other.Unknown04;

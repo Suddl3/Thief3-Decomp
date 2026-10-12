@@ -8,7 +8,7 @@ class Class_10C7D570;
 class Class_10BB8BC0
 {
 public:
-    int FUN_10bb8bc0();
+    int GetFirst();
 
     char Unknown00[8];
     Class_10C7D570* Unknown08;

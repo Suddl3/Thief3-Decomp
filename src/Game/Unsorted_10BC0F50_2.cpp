@@ -12,8 +12,8 @@ public:
 
 FArchive& FUN_10b052a0(FArchive& Ar, void* A);
 
-// FUNCTION: 0x10BC19E0 ?FUN_10bc19e0@@YAXPAHPAVClass_10943600@@AAVFArchive@@@Z
-void FUN_10bc19e0(int* A, Class_10943600* Dst, FArchive& Ar)
+// FUNCTION: 0x10BC19E0 ?LoadItemList@@YAXPAHPAVClass_10943600@@AAVFArchive@@@Z
+void LoadItemList(int* A, Class_10943600* Dst, FArchive& Ar)
 {
     *A = 0;
     int Count = 0;

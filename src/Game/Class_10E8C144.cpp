@@ -12,11 +12,11 @@ struct Item_10BA14C0
     int Unknown08;
 };
 
-// FUNCTION: 0x10BA14C0 ?FUN_10ba14c0@Class_10E8C144@@UAEPAUItem_10BA14C0@@HHH@Z
-Item_10BA14C0* Class_10E8C144::FUN_10ba14c0(int Key, int Index, int Group)
+// FUNCTION: 0x10BA14C0 ?FindItem@Class_10E8C144@@UAEPAUItem_10BA14C0@@HHH@Z
+Item_10BA14C0* Class_10E8C144::FindItem(int Key, int Index, int Group)
 {
     Entry_10C32C30* Entry = 0;
-    Unknown04.FUN_10c49740(&Key, &Entry);
+    m_Entries.FUN_10c49740(&Key, &Entry);
     if (Entry && Group < Entry->Count)
     {
         Group_10BA14C0* G = &Entry->Data[Group];

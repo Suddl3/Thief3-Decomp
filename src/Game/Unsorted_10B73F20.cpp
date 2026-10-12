@@ -140,7 +140,7 @@ public:
 class Class_10B74460 : public Class_10B59730
 {
 public:
-    void FUN_10b74460(int A);
+    void Update(int A);
 
     char Unknown154[0x188];
     Struct_10B74460* Unknown2DC;
@@ -242,11 +242,11 @@ public:
 class Class_10E87B68 : public Class_10E858D0
 {
 public:
-    virtual bool FUN_10b74400(int A, int B, bool C);
+    virtual bool HandleKey(int A, int B, bool C);
 };
 
-// FUNCTION: 0x10B74400 ?FUN_10b74400@Class_10E87B68@@UAE_NHH_N@Z
-bool Class_10E87B68::FUN_10b74400(int A, int B, bool C)
+// FUNCTION: 0x10B74400 ?HandleKey@Class_10E87B68@@UAE_NHH_N@Z
+bool Class_10E87B68::HandleKey(int A, int B, bool C)
 {
     if (FUN_10b79560(A, B, C))
         return true;
@@ -259,8 +259,8 @@ bool Class_10E87B68::FUN_10b74400(int A, int B, bool C)
     return false;
 }
 
-// FUNCTION: 0x10B74460 ?FUN_10b74460@Class_10B74460@@QAEXH@Z
-void Class_10B74460::FUN_10b74460(int A)
+// FUNCTION: 0x10B74460 ?Update@Class_10B74460@@QAEXH@Z
+void Class_10B74460::Update(int A)
 {
     FUN_10b79860(A);
     if (!Unknown2F4 && Unknown2DC && Unknown2DC->Unknown1A4 && Unknown150 != 4)

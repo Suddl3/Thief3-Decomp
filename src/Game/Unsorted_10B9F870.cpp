@@ -12,16 +12,16 @@ void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D
 
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
-// FUNCTION: 0x10B9F950 ?FUN_10b9f950@Class_10B9F950@@QAEXAAVFArchive@@H@Z
-void Class_10B9F950::FUN_10b9f950(FArchive& Ar, int Count)
+// FUNCTION: 0x10B9F950 ?SerializeItems@Class_10B9F950@@QAEXAAVFArchive@@H@Z
+void Class_10B9F950::SerializeItems(FArchive& Ar, int Count)
 {
-    int Start = Unknown18.Count;
-    Unknown18.SetCount(Start + Count);
+    int Start = m_Items.Count;
+    m_Items.SetCount(Start + Count);
     for (int i = 0; i < Count; i++)
     {
         GetAllocator()->Virtual8(0, 0);
         Class_10B9F2F0* Item = new(0, 0, 0, 0, 0) Class_10B9F2F0(Ar);
         GetAllocator()->Virtual9();
-        Unknown18.Data[Start + i] = (int)Item;
+        m_Items.Data[Start + i] = (int)Item;
     }
 }

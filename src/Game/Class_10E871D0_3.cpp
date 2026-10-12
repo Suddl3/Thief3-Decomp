@@ -36,7 +36,7 @@ public:
     int Unknown102FC;
 };
 
-Class_10E871C8* FUN_10b70460();
+Class_10E871C8* GetSoupManager();
 
 class Class_10E871D0
 {
@@ -126,6 +126,6 @@ void Class_10E871D0::LoadConfig(Class_10AF7F80* File, Class_10AF7F80* Section)
         cString Alpha(DAT_10e87390);
         Result2 = FUN_10a51100((int)&Alpha);
     }
-    FUN_10b70460()->FUN_10b700a0(Result1, Result2, !(Virtual54() && Virtual55()));
+    GetSoupManager()->FUN_10b700a0(Result1, Result2, !(Virtual54() && Virtual55()));
     Virtual65(0x40);
 }

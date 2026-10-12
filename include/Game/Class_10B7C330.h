@@ -6,7 +6,7 @@
 class Class_10B7C330
 {
 public:
-    void FUN_10b7c330(const Class_10B7C330& Other);
+    void CopyFrom(const Class_10B7C330& Other);
 
     int Unknown00;
     int Unknown04;

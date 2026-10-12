@@ -12,7 +12,7 @@ public:
 class Class_10B781E0 : public Class_10B73810
 {
 public:
-    void FUN_10b781e0();
+    void Increment();
 };
 
 class cT3OptionsWindow : public Class_10B781E0
@@ -44,7 +44,7 @@ void cT3OptionsWindow::FUN_10b73900()
             }
             break;
         case 2:
-            FUN_10b781e0();
+            Increment();
             break;
         }
     }

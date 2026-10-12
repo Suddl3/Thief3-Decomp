@@ -18,8 +18,8 @@ void Class_10E8D7B8::FUN_10bad9b0(Class_10A68D20* Owner)
     FUN_10a68d20(Owner, (int)&Unknown08, (int)&Unknown14, Unknown18);
 }
 
-// FUNCTION: 0x10BAEB10 ?FUN_10baeb10@@YA?AVcString@@XZ
-cString FUN_10baeb10()
+// FUNCTION: 0x10BAEB10 ?GetLineName@@YA?AVcString@@XZ
+cString GetLineName()
 {
     return cString(DAT_10e8d94c);
 }
@@ -27,7 +27,7 @@ cString FUN_10baeb10()
 // FUNCTION: 0x10BAEB30 ?FUN_10baeb30@Class_10E8DBA4@@UAEXPAVClass_10A68D20@@@Z
 void Class_10E8DBA4::FUN_10baeb30(Class_10A68D20* Owner)
 {
-    const char* Name = Unknown18;
+    const char* Name = m_Name;
     if (!Name)
         Name = DAT_10e47660;
     FUN_10a68d50(Owner, (int)Name, (int)&Unknown08, (int)&Unknown14, 0);

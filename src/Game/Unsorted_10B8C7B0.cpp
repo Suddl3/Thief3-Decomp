@@ -16,13 +16,13 @@ struct Struct_10B8C9B0
     int Unknown30;
 };
 
-// FUNCTION: 0x10B8C9B0 ?FUN_10b8c9b0@Class_10B8C9B0@@QAEPAUStruct_10B8C9B0@@H@Z
-Struct_10B8C9B0* Class_10B8C9B0::FUN_10b8c9b0(int Value)
+// FUNCTION: 0x10B8C9B0 ?FindItem@Class_10B8C9B0@@QAEPAUStruct_10B8C9B0@@H@Z
+Struct_10B8C9B0* Class_10B8C9B0::FindItem(int Value)
 {
-    for (int i = 0; i < Unknown00; i++)
+    for (int i = 0; i < m_Count; i++)
     {
-        if (Value == Unknown08[i]->Unknown30)
-            return Unknown08[i];
+        if (Value == m_Items[i]->Unknown30)
+            return m_Items[i];
     }
     return 0;
 }
@@ -38,8 +38,8 @@ void Class_10B8C7B0::ExitSingleMode()
     }
 }
 
-// FUNCTION: 0x10B8DC70 ?FUN_10b8dc70@Class_10B8DC70@@QAEXH@Z
-void Class_10B8DC70::FUN_10b8dc70(int Item)
+// FUNCTION: 0x10B8DC70 ?AddItem@Class_10B8DC70@@QAEXH@Z
+void Class_10B8DC70::AddItem(int Item)
 {
     if (Item)
     {

@@ -3,7 +3,7 @@
 #include "Game/Class_10E871C8.h"
 #include "Game/Window.h"
 
-Class_10E871C8* FUN_10b70460();
+Class_10E871C8* GetSoupManager();
 
 class Class_10E871D0 : public Window
 {
@@ -16,9 +16,9 @@ public:
 void Class_10E871D0::Update(int A)
 {
     FUN_10a53560(A);
-    if (FUN_10b70460()->Unknown102F4 > 0)
+    if (GetSoupManager()->Unknown102F4 > 0)
     {
         FUN_10b70ac0(A);
-        FUN_10b70460()->FUN_10b70db0(A);
+        GetSoupManager()->FUN_10b70db0(A);
     }
 }

@@ -4,8 +4,8 @@
 #include "Game/Class_10BAEC40.h"
 #include "Game/Class_10BAF8A0.h"
 
-// FUNCTION: 0x10BAF8A0 ?FUN_10baf8a0@Class_10BAF8A0@@QAEXXZ
-void Class_10BAF8A0::FUN_10baf8a0()
+// FUNCTION: 0x10BAF8A0 ?Empty@Class_10BAF8A0@@QAEXXZ
+void Class_10BAF8A0::Empty()
 {
     Unknown28.Empty();
 }

@@ -9,15 +9,15 @@ class Class_10E90A1C
 {
 public:
     void RollInterval();
-    void FUN_10bb8430();
+    void StartInterval();
 
     char Unknown00[8];
-    Class_10DBD510* Unknown08;
+    Class_10DBD510* m_Schema;
     char Unknown0C[0x28C];
-    float Unknown298;
+    float m_Interval;
     float Unknown29C;
     char Pad2A0[0x24];
-    float Unknown2C4;
+    float m_EndTime;
 };
 
 #endif // GAME_CLASS_10E90A1C_H

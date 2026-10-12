@@ -11,14 +11,14 @@ public:
     virtual int Virtual3();
 };
 
-// FUNCTION: 0x10B9CD50 ?FUN_10b9cd50@Class_10B9CD50@@QAE_NH@Z
-bool Class_10B9CD50::FUN_10b9cd50(int A)
+// FUNCTION: 0x10B9CD50 ?ContainsType@Class_10B9CD50@@QAE_NH@Z
+bool Class_10B9CD50::ContainsType(int A)
 {
     if (!A)
         return false;
-    for (int i = 0; i < Unknown10; i++)
+    for (int i = 0; i < m_Count; i++)
     {
-        if (Unknown18[i]->Virtual3() == A)
+        if (m_Items[i]->Virtual3() == A)
             return true;
     }
     return false;

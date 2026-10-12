@@ -129,12 +129,12 @@ public:
     virtual void FUN_10a52a90(int A);
 };
 
-// FUNCTION: 0x10B717E0 ?FUN_10b717e0@Class_10B717E0@@QAEX_N@Z
-void Class_10B717E0::FUN_10b717e0(bool Flag)
+// FUNCTION: 0x10B717E0 ?SetChildStates@Class_10B717E0@@QAEX_N@Z
+void Class_10B717E0::SetChildStates(bool Flag)
 {
     int State = Flag ? 2 : 0;
-    for (int i = 0; i < Unknown1E8; i++)
-        Unknown1F0[i]->FUN_10a52a90(State);
+    for (int i = 0; i < m_ItemCount; i++)
+        m_Items[i]->FUN_10a52a90(State);
 }
 
 // FUNCTION: 0x10B71830 ??0cT3OptionsWindow@@QAE@XZ

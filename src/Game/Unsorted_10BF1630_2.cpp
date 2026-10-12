@@ -8,7 +8,7 @@ extern float DAT_10eafbdc;
 
 extern float DAT_10e66518;
 
-float FUN_10ba91e0(const Struct_10BA91E0* A, const Struct_10BA91E0* B);
+float Distance(const Struct_10BA91E0* A, const Struct_10BA91E0* B);
 
 // The object at this+0x40: slot 70 gives a pointer to a vector, slot 71 a float.
 class Class_10BF1C40_Unknown40
@@ -214,7 +214,7 @@ bool Class_10BF1C40::FUN_10bf1c40()
     if (!FUN_10bf0ea0(&A, 0x15, true))
         return false;
     Struct_10BA91E0 B = *Unknown40->Virtual70();
-    float F3 = FUN_10ba91e0(&A, &B);
+    float F3 = Distance(&A, &B);
     ((Class_10BF1C40_Result*)Unknown04->Unknown08->FUN_10c7d570())->Virtual98();
     if (F3 < DAT_10eafbdc)
         return false;

@@ -6,7 +6,7 @@
 class Class_10BB8AA0
 {
 public:
-    void FUN_10bb8aa0(float Delta);
+    void Tick(float Delta);
 
     char Unknown00[0x260];
     float Unknown260;

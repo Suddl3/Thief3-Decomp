@@ -19,10 +19,10 @@ public:
     virtual ~Class_10E8D65C();
 
     char Unknown04;
-    bool Unknown05;
+    bool m_Active;
     char Unknown06[2];
     int Unknown08;
-    int Unknown0C;
+    int m_OwnerKey;
     Class_10E8D658 Unknown10;
     char Unknown4028[0x8];
     Class_10E8D658 Unknown4030;
@@ -30,6 +30,6 @@ public:
 
 // FUNCTION: 0x10BA8F30 ??0Class_10E8D65C@@QAE@XZ
 Class_10E8D65C::Class_10E8D65C()
-    : Unknown04(1), Unknown05(false), Unknown08(0), Unknown0C(0)
+    : Unknown04(1), m_Active(false), Unknown08(0), m_OwnerKey(0)
 {
 }

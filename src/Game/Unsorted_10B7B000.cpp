@@ -41,7 +41,7 @@ public:
     void FUN_10b7ad70();
     void FUN_10b7ae90();
     void FUN_10b7b8a0();
-    void FUN_10b7b820();
+    void Reset();
     void FUN_10b7abb0(int A);
     void FUN_10b7b760(int A);
     void FUN_10b7ac80(unsigned char A);
@@ -66,8 +66,8 @@ public:
     int* Unknown3C;
 };
 
-// FUNCTION: 0x10B7B820 ?FUN_10b7b820@Class_10B7AD70@@QAEXXZ
-void Class_10EC0E20::FUN_10b7b820()
+// FUNCTION: 0x10B7B820 ?Reset@Class_10B7AD70@@QAEXXZ
+void Class_10EC0E20::Reset()
 {
     if (Unknown28 > 0)
     {

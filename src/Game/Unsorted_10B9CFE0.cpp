@@ -63,9 +63,9 @@ public:
 // FUNCTION: 0x10B9D000 ?FUN_10b9d000@Class_10B9D000@@QAE_NXZ
 bool Class_10B9D000::FUN_10b9d000()
 {
-    for (int i = 0; i < Unknown10; i++)
+    for (int i = 0; i < m_Count; i++)
     {
-        if (Unknown18[i]->Virtual52())
+        if (m_Items[i]->Virtual52())
             return true;
     }
     return false;

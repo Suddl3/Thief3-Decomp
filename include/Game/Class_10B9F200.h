@@ -16,9 +16,9 @@ public:
     void FUN_10b9d660();
 
     char Unknown00[0x10];
-    int Unknown10;
+    int m_Count;
     char Unknown14[4];
-    Class_10B9F200_Item** Unknown18;
+    Class_10B9F200_Item** m_Items;
     char Unknown1C[0x20];
     cIntArray Unknown3C;
 };

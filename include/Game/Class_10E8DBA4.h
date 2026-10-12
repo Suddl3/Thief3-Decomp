@@ -19,7 +19,7 @@ public:
     int Unknown08;
     char Pad0C[0x8];
     int Unknown14;
-    const char* Unknown18;
+    const char* m_Name;
 };
 
 #endif // GAME_CLASS_10E8DBA4_H

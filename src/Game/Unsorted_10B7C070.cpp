@@ -91,8 +91,8 @@ public:
 
 Class_10D9B090* FUN_10d9dcb0();
 
-// FUNCTION: 0x10B7C070 ?FUN_10b7c070@Class_10B7C070@@QAEXPAVClass_10990D10@@@Z
-void Class_10B7C070::FUN_10b7c070(Class_10990D10* A)
+// FUNCTION: 0x10B7C070 ?UpdatePhysics@Class_10B7C070@@QAEXPAVClass_10990D10@@@Z
+void Class_10B7C070::UpdatePhysics(Class_10990D10* A)
 {
     if (A)
     {

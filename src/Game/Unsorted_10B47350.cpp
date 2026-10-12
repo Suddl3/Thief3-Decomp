@@ -22,7 +22,7 @@ public:
 void Class_10B47660::FUN_10b47350(int A, int B, float C, int D, int E, int F)
 {
     Unknown0C->FUN_10b7ac80(0);
-    Unknown0C->FUN_10b7b820();
+    Unknown0C->Reset();
     Unknown0C->FUN_10b7ab80(A, C);
     Unknown0C->FUN_10b7abb0(0);
     Unknown0C->FUN_10b7b460(D, E, 0, F);

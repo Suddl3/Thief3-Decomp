@@ -3,7 +3,7 @@
 #include "Core/Core.h"
 #include "Game/Class_10905A90_Member.h"
 #include "Game/cString.h"
-#include "Game/Class_10BAE080.h"
+#include "Game/cVisualSubsystemArray.h"
 #include "Game/Class_10BAE0C0.h"
 #include "Game/FCoords.h"
 
@@ -21,8 +21,8 @@ void FUN_10badc40(Struct_10BADCE0* Data, const FRotator& Rotation, float Distanc
 
 extern FCoords DAT_10f46de8;
 
-// FUNCTION: 0x10BADB90 ?FUN_10badb90@@YA?AVFVector@@ABVFRotator@@ABV1@M@Z
-FVector FUN_10badb90(const FRotator& Rotation, const FVector& Origin, float Distance)
+// FUNCTION: 0x10BADB90 ?GetPointAlongRotation@@YA?AVFVector@@ABVFRotator@@ABV1@M@Z
+FVector GetPointAlongRotation(const FRotator& Rotation, const FVector& Origin, float Distance)
 {
     FCoords Coords = FCoords(DAT_10f46de8).FUN_10961af0(Rotation);
     FVector Dir = Coords.XAxis;
@@ -34,8 +34,8 @@ FVector FUN_10badb90(const FRotator& Rotation, const FVector& Origin, float Dist
     return Dir;
 }
 
-// FUNCTION: 0x10BADCE0 ?FUN_10badce0@@YAXPAUStruct_10BADCE0@@MHH@Z
-void FUN_10badce0(Struct_10BADCE0* Data, float Angle, int A, int B)
+// FUNCTION: 0x10BADCE0 ?ProbeYaw@@YAXPAUStruct_10BADCE0@@MHH@Z
+void ProbeYaw(Struct_10BADCE0* Data, float Angle, int A, int B)
 {
     FRotator Rotation = Data->Rotation;
     Rotation.Yaw = (Rotation.Yaw - (int)(Angle * -182.04f)) & 0xFFFF;
@@ -45,8 +45,8 @@ void FUN_10badce0(Struct_10BADCE0* Data, float Angle, int A, int B)
     FUN_10badc40(Data, Rotation, 400.0f, A, B);
 }
 
-// FUNCTION: 0x10BADD90 ?FUN_10badd90@@YAXPAUStruct_10BADCE0@@MHH@Z
-void FUN_10badd90(Struct_10BADCE0* Data, float Angle, int A, int B)
+// FUNCTION: 0x10BADD90 ?ProbePitch@@YAXPAUStruct_10BADCE0@@MHH@Z
+void ProbePitch(Struct_10BADCE0* Data, float Angle, int A, int B)
 {
     FRotator Rotation = Data->Rotation;
     Rotation.Pitch = (Rotation.Pitch - (int)(Angle * -182.04f)) & 0xFFFF;
@@ -56,8 +56,8 @@ void FUN_10badd90(Struct_10BADCE0* Data, float Angle, int A, int B)
     FUN_10badc40(Data, Rotation, 400.0f, A, B);
 }
 
-// FUNCTION: 0x10BAE080 ?Clear@Class_10BAE080@@QAEXXZ
-void Class_10BAE080::Clear()
+// FUNCTION: 0x10BAE080 ?Clear@cVisualSubsystemArray@@QAEXXZ
+void cVisualSubsystemArray::Clear()
 {
     Resize(0);
     if (m_CapacityBytes)
@@ -80,8 +80,8 @@ void Class_10BAE0C0::Free()
     }
 }
 
-// FUNCTION: 0x10BAEA20 ?FUN_10baea20@@YA?AVcString@@M@Z
-cString FUN_10baea20(float Value)
+// FUNCTION: 0x10BAEA20 ?FloatToString@@YA?AVcString@@M@Z
+cString FloatToString(float Value)
 {
     char Buffer[0x20];
     sprintf(Buffer, DAT_10e8d924, Value);

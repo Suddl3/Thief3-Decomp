@@ -6,23 +6,23 @@
 class Class_10B6BE30
 {
 public:
-    bool FUN_10b6be30(int Value);
+    bool Contains(int Value);
 
     // The index of the first element equal to Value, else -1.
     int FindIndex(int Value)
     {
-        for (int i = 0; i < Unknown120; i++)
+        for (int i = 0; i < m_Count; i++)
         {
-            if (Unknown128[i] == Value)
+            if (m_Values[i] == Value)
                 return i;
         }
         return -1;
     }
 
     char Unknown00[0x120];
-    int Unknown120;
+    int m_Count;
     char Unknown124[4];
-    int* Unknown128;
+    int* m_Values;
 };
 
 #endif // GAME_CLASS_10B6BE30_H

@@ -6,11 +6,11 @@
 // Ion Storm's placement new (0x10905C10).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 
-// FUNCTION: 0x10BA4940 ?FUN_10ba4940@Class_10E8C6BC@@UAEPAVClass_10E8C824@@XZ
-Class_10E8C824* Class_10E8C6BC::FUN_10ba4940()
+// FUNCTION: 0x10BA4940 ?Create@Class_10E8C6BC@@UAEPAVClass_10E8C824@@XZ
+Class_10E8C824* Class_10E8C6BC::Create()
 {
     Class_10E8C824* Object = (Class_10E8C824*)operator new(sizeof(Class_10E8C824), 0, 0, 0, 0, 0);
     if (Object)
-        return Object->FUN_10ba4980();
+        return Object->Construct();
     return 0;
 }

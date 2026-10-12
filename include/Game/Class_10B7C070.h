@@ -51,7 +51,7 @@ public:
     virtual void Virtual40();
     virtual void Virtual41(Class_10990D10* A);
 
-    void FUN_10b7c070(Class_10990D10* A);
+    void UpdatePhysics(Class_10990D10* A);
 };
 
 #endif // GAME_CLASS_10B7C070_H

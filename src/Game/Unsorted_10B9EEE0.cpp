@@ -22,10 +22,10 @@ void Class_10B9F200::FUN_10b9f200()
     Unknown3C.SetCount(0);
     FUN_10b9d2b0();
     FUN_10b9ea00(0);
-    int Count = Unknown10;
+    int Count = m_Count;
     if (Count)
     {
-        Class_10B9F200_Item* Item = Unknown18[Count - 1];
+        Class_10B9F200_Item* Item = m_Items[Count - 1];
         if (Item)
         {
             Item->Virtual6();

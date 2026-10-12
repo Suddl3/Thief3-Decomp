@@ -97,7 +97,7 @@ extern void* DAT_10e8c764[];
 class Class_10E8C764
 {
 public:
-    Class_10E8C764* FUN_10ba4410();
+    Class_10E8C764* Construct();
 
     void* Unknown00;
 };
@@ -140,7 +140,7 @@ class Class_10E8C7D0 {
 public:
     void* Field00;
 
-    Class_10E8C7D0* FUN_10ba46e0();
+    Class_10E8C7D0* Construct();
 };
 
 int FUN_10b3d450();
@@ -151,7 +151,7 @@ class Class_10E8C7DC {
 public:
     void* Field00;
 
-    Class_10E8C7DC* FUN_10ba4740();
+    Class_10E8C7DC* Construct();
 };
 
 int FUN_10b3d480();
@@ -200,7 +200,7 @@ extern void* DAT_10e8c848[];
 class Class_10E8C848
 {
 public:
-    Class_10E8C848* FUN_10ba4aa0();
+    Class_10E8C848* Construct();
 
     void* Unknown00;
 };
@@ -229,7 +229,7 @@ class Class_10E8C89C {
 public:
     void* Field00;
 
-    Class_10E8C89C* FUN_10ba4d40();
+    Class_10E8C89C* Construct();
 };
 
 int FUN_10bf6a60();
@@ -240,7 +240,7 @@ class Class_10E8C8A8 {
 public:
     void* Field00;
 
-    Class_10E8C8A8* FUN_10ba4da0();
+    Class_10E8C8A8* Construct();
 };
 
 int FUN_10bef070();
@@ -251,7 +251,7 @@ class Class_10E8C8B4 {
 public:
     void* Field00;
 
-    Class_10E8C8B4* FUN_10ba4e00();
+    Class_10E8C8B4* Construct();
 };
 
 int FUN_10bb0ad0();
@@ -261,7 +261,7 @@ extern void* DAT_10e8c8c0[];
 class Class_10E8C8C0 {
 public:
     void* Field00;
-    Class_10E8C8C0* FUN_10ba4e60();
+    Class_10E8C8C0* Construct();
 };
 
 void FUN_10be42c0();
@@ -279,7 +279,7 @@ extern void* DAT_10e8c8e4[];
 class Class_10E8C8E4 {
 public:
     void* Field00;
-    Class_10E8C8E4* FUN_10ba4f80();
+    Class_10E8C8E4* Construct();
 };
 
 int FUN_10bcc070();
@@ -436,8 +436,8 @@ void FUN_10ba4240()
     FUN_10aaaa10();
 }
 
-// FUNCTION: 0x10BA4290 ?FUN_10ba4290@Class_10E8C734@@QAEPAV1@XZ
-Class_10E8C734* Class_10E8C734::FUN_10ba4290()
+// FUNCTION: 0x10BA4290 ?Construct@Class_10E8C734@@QAEPAV1@XZ
+Class_10E8C734* Class_10E8C734::Construct()
 {
     *(void**)this = DAT_10e8c734;
     return this;
@@ -449,8 +449,8 @@ void FUN_10ba42a0()
     FUN_10aa9d80();
 }
 
-// FUNCTION: 0x10BA42F0 ?FUN_10ba42f0@Class_10E8C740@@QAEPAV1@XZ
-Class_10E8C740* Class_10E8C740::FUN_10ba42f0()
+// FUNCTION: 0x10BA42F0 ?Construct@Class_10E8C740@@QAEPAV1@XZ
+Class_10E8C740* Class_10E8C740::Construct()
 {
     Unknown00 = DAT_10e8c740;
     return this;
@@ -462,8 +462,8 @@ void FUN_10ba4300()
     FUN_10aaaea0();
 }
 
-// FUNCTION: 0x10BA4350 ?FUN_10ba4350@Class_10E8C74C@@QAEPAV1@XZ
-Class_10E8C74C* Class_10E8C74C::FUN_10ba4350()
+// FUNCTION: 0x10BA4350 ?Construct@Class_10E8C74C@@QAEPAV1@XZ
+Class_10E8C74C* Class_10E8C74C::Construct()
 {
     Unknown00 = DAT_10e8c74c;
     return this;
@@ -475,8 +475,8 @@ void FUN_10ba4360()
     FUN_10b3d210();
 }
 
-// FUNCTION: 0x10BA43B0 ?FUN_10ba43b0@Class_10E8C758@@QAEPAV1@XZ
-Class_10E8C758* Class_10E8C758::FUN_10ba43b0()
+// FUNCTION: 0x10BA43B0 ?Construct@Class_10E8C758@@QAEPAV1@XZ
+Class_10E8C758* Class_10E8C758::Construct()
 {
     Unknown00 = DAT_10e8c758;
     return this;
@@ -488,36 +488,36 @@ void FUN_10ba43c0()
     FUN_10c88a60();
 }
 
-// FUNCTION: 0x10BA4410 ?FUN_10ba4410@Class_10E8C764@@QAEPAV1@XZ
-Class_10E8C764* Class_10E8C764::FUN_10ba4410()
+// FUNCTION: 0x10BA4410 ?Construct@Class_10E8C764@@QAEPAV1@XZ
+Class_10E8C764* Class_10E8C764::Construct()
 {
     Unknown00 = DAT_10e8c764;
     return this;
 }
 
-// FUNCTION: 0x10BA4460 ?FUN_10ba4460@Class_10E8C770@@QAEPAV1@XZ
-Class_10E8C770* Class_10E8C770::FUN_10ba4460()
+// FUNCTION: 0x10BA4460 ?Construct@Class_10E8C770@@QAEPAV1@XZ
+Class_10E8C770* Class_10E8C770::Construct()
 {
     Unknown00 = DAT_10e8c770;
     return this;
 }
 
-// FUNCTION: 0x10BA44B0 ?FUN_10ba44b0@Class_10E8C77C@@QAEPAV1@XZ
-Class_10E8C77C* Class_10E8C77C::FUN_10ba44b0()
+// FUNCTION: 0x10BA44B0 ?Construct@Class_10E8C77C@@QAEPAV1@XZ
+Class_10E8C77C* Class_10E8C77C::Construct()
 {
     Unknown00 = DAT_10e8c77c;
     return this;
 }
 
-// FUNCTION: 0x10BA4500 ?FUN_10ba4500@Class_10E8C788@@QAEPAV1@XZ
-Class_10E8C788* Class_10E8C788::FUN_10ba4500()
+// FUNCTION: 0x10BA4500 ?Construct@Class_10E8C788@@QAEPAV1@XZ
+Class_10E8C788* Class_10E8C788::Construct()
 {
     Unknown00 = DAT_10e8c788;
     return this;
 }
 
-// FUNCTION: 0x10BA4550 ?FUN_10ba4550@Class_10E8C794@@QAEPAV1@XZ
-Class_10E8C794* Class_10E8C794::FUN_10ba4550()
+// FUNCTION: 0x10BA4550 ?Construct@Class_10E8C794@@QAEPAV1@XZ
+Class_10E8C794* Class_10E8C794::Construct()
 {
     Unknown00 = DAT_10e8c794;
     return this;
@@ -530,8 +530,8 @@ cStatePatrol* cStatePatrol::Construct()
     return this;
 }
 
-// FUNCTION: 0x10BA45F0 ?FUN_10ba45f0@Class_10E8C7AC@@QAEPAV1@XZ
-Class_10E8C7AC* Class_10E8C7AC::FUN_10ba45f0()
+// FUNCTION: 0x10BA45F0 ?Construct@Class_10E8C7AC@@QAEPAV1@XZ
+Class_10E8C7AC* Class_10E8C7AC::Construct()
 {
     Unknown00 = DAT_10e8c7ac;
     return this;
@@ -551,8 +551,8 @@ cStateFlee* cStateFlee::Construct()
     return this;
 }
 
-// FUNCTION: 0x10BA46E0 ?FUN_10ba46e0@Class_10E8C7D0@@QAEPAV1@XZ
-Class_10E8C7D0* Class_10E8C7D0::FUN_10ba46e0()
+// FUNCTION: 0x10BA46E0 ?Construct@Class_10E8C7D0@@QAEPAV1@XZ
+Class_10E8C7D0* Class_10E8C7D0::Construct()
 {
     Field00 = &DAT_10e8c7d0;
     return this;
@@ -564,8 +564,8 @@ void FUN_10ba46f0()
     FUN_10b3d450();
 }
 
-// FUNCTION: 0x10BA4740 ?FUN_10ba4740@Class_10E8C7DC@@QAEPAV1@XZ
-Class_10E8C7DC* Class_10E8C7DC::FUN_10ba4740()
+// FUNCTION: 0x10BA4740 ?Construct@Class_10E8C7DC@@QAEPAV1@XZ
+Class_10E8C7DC* Class_10E8C7DC::Construct()
 {
     Field00 = &DAT_10e8c7dc;
     return this;
@@ -590,8 +590,8 @@ void FUN_10ba47b0()
     FUN_10b3d310();
 }
 
-// FUNCTION: 0x10BA4800 ?FUN_10ba4800@Class_10E8C7F4@@QAEPAV1@XZ
-Class_10E8C7F4* Class_10E8C7F4::FUN_10ba4800()
+// FUNCTION: 0x10BA4800 ?Construct@Class_10E8C7F4@@QAEPAV1@XZ
+Class_10E8C7F4* Class_10E8C7F4::Construct()
 {
     Field00 = &DAT_10e8c7f4;
     return this;
@@ -603,8 +603,8 @@ void FUN_10ba4810()
     FUN_10b3d4b0();
 }
 
-// FUNCTION: 0x10BA4860 ?FUN_10ba4860@Class_10E8C800@@QAEPAV1@XZ
-Class_10E8C800* Class_10E8C800::FUN_10ba4860()
+// FUNCTION: 0x10BA4860 ?Construct@Class_10E8C800@@QAEPAV1@XZ
+Class_10E8C800* Class_10E8C800::Construct()
 {
     Unknown00 = DAT_10e8c800;
     return this;
@@ -616,8 +616,8 @@ void FUN_10ba4870()
     FUN_10b4cd10();
 }
 
-// FUNCTION: 0x10BA48C0 ?FUN_10ba48c0@Class_10E8C80C@@QAEPAV1@XZ
-Class_10E8C80C* Class_10E8C80C::FUN_10ba48c0()
+// FUNCTION: 0x10BA48C0 ?Construct@Class_10E8C80C@@QAEPAV1@XZ
+Class_10E8C80C* Class_10E8C80C::Construct()
 {
     Unknown00 = DAT_10e8c80c;
     return this;
@@ -642,8 +642,8 @@ void FUN_10ba4930()
     FUN_10a8c930();
 }
 
-// FUNCTION: 0x10BA4980 ?FUN_10ba4980@Class_10E8C824@@QAEPAV1@XZ
-Class_10E8C824* Class_10E8C824::FUN_10ba4980()
+// FUNCTION: 0x10BA4980 ?Construct@Class_10E8C824@@QAEPAV1@XZ
+Class_10E8C824* Class_10E8C824::Construct()
 {
     Unknown00 = DAT_10e8c824;
     return this;
@@ -655,8 +655,8 @@ void FUN_10ba4990()
     FUN_10a8d030();
 }
 
-// FUNCTION: 0x10BA49E0 ?FUN_10ba49e0@Class_10E8C830@@QAEPAV1@XZ
-Class_10E8C830* Class_10E8C830::FUN_10ba49e0()
+// FUNCTION: 0x10BA49E0 ?Construct@Class_10E8C830@@QAEPAV1@XZ
+Class_10E8C830* Class_10E8C830::Construct()
 {
     Unknown00 = DAT_10e8c830;
     return this;
@@ -668,8 +668,8 @@ void FUN_10ba49f0()
     FUN_10be1d40();
 }
 
-// FUNCTION: 0x10BA4A40 ?FUN_10ba4a40@Class_10E8C83C@@QAEPAV1@XZ
-Class_10E8C83C* Class_10E8C83C::FUN_10ba4a40()
+// FUNCTION: 0x10BA4A40 ?Construct@Class_10E8C83C@@QAEPAV1@XZ
+Class_10E8C83C* Class_10E8C83C::Construct()
 {
     Unknown00 = DAT_10e8c83c;
     return this;
@@ -681,8 +681,8 @@ void FUN_10ba4a50()
     FUN_10b349b0();
 }
 
-// FUNCTION: 0x10BA4AA0 ?FUN_10ba4aa0@Class_10E8C848@@QAEPAV1@XZ
-Class_10E8C848* Class_10E8C848::FUN_10ba4aa0()
+// FUNCTION: 0x10BA4AA0 ?Construct@Class_10E8C848@@QAEPAV1@XZ
+Class_10E8C848* Class_10E8C848::Construct()
 {
     Unknown00 = DAT_10e8c848;
     return this;
@@ -694,8 +694,8 @@ void FUN_10ba4ab0()
     FUN_10bdf7c0();
 }
 
-// FUNCTION: 0x10BA4B00 ?FUN_10ba4b00@Class_10E8C854@@QAEPAV1@XZ
-Class_10E8C854* Class_10E8C854::FUN_10ba4b00()
+// FUNCTION: 0x10BA4B00 ?Construct@Class_10E8C854@@QAEPAV1@XZ
+Class_10E8C854* Class_10E8C854::Construct()
 {
     Unknown00 = DAT_10e8c854;
     return this;
@@ -731,8 +731,8 @@ void FUN_10ba4c90()
     FUN_10be1d80();
 }
 
-// FUNCTION: 0x10BA4CE0 ?FUN_10ba4ce0@Class_10E8C890@@QAEPAV1@XZ
-Class_10E8C890* Class_10E8C890::FUN_10ba4ce0()
+// FUNCTION: 0x10BA4CE0 ?Construct@Class_10E8C890@@QAEPAV1@XZ
+Class_10E8C890* Class_10E8C890::Construct()
 {
     Field00 = &DAT_10e8c890;
     return this;
@@ -744,8 +744,8 @@ void FUN_10ba4cf0()
     FUN_10bd85a0();
 }
 
-// FUNCTION: 0x10BA4D40 ?FUN_10ba4d40@Class_10E8C89C@@QAEPAV1@XZ
-Class_10E8C89C* Class_10E8C89C::FUN_10ba4d40()
+// FUNCTION: 0x10BA4D40 ?Construct@Class_10E8C89C@@QAEPAV1@XZ
+Class_10E8C89C* Class_10E8C89C::Construct()
 {
     Field00 = &DAT_10e8c89c;
     return this;
@@ -757,8 +757,8 @@ void FUN_10ba4d50()
     FUN_10bf6a60();
 }
 
-// FUNCTION: 0x10BA4DA0 ?FUN_10ba4da0@Class_10E8C8A8@@QAEPAV1@XZ
-Class_10E8C8A8* Class_10E8C8A8::FUN_10ba4da0()
+// FUNCTION: 0x10BA4DA0 ?Construct@Class_10E8C8A8@@QAEPAV1@XZ
+Class_10E8C8A8* Class_10E8C8A8::Construct()
 {
     Field00 = &DAT_10e8c8a8;
     return this;
@@ -770,8 +770,8 @@ void FUN_10ba4db0()
     FUN_10bef070();
 }
 
-// FUNCTION: 0x10BA4E00 ?FUN_10ba4e00@Class_10E8C8B4@@QAEPAV1@XZ
-Class_10E8C8B4* Class_10E8C8B4::FUN_10ba4e00()
+// FUNCTION: 0x10BA4E00 ?Construct@Class_10E8C8B4@@QAEPAV1@XZ
+Class_10E8C8B4* Class_10E8C8B4::Construct()
 {
     Field00 = &DAT_10e8c8b4;
     return this;
@@ -783,8 +783,8 @@ void FUN_10ba4e10()
     FUN_10bb0ad0();
 }
 
-// FUNCTION: 0x10BA4E60 ?FUN_10ba4e60@Class_10E8C8C0@@QAEPAV1@XZ
-Class_10E8C8C0* Class_10E8C8C0::FUN_10ba4e60()
+// FUNCTION: 0x10BA4E60 ?Construct@Class_10E8C8C0@@QAEPAV1@XZ
+Class_10E8C8C0* Class_10E8C8C0::Construct()
 {
     Field00 = DAT_10e8c8c0;
     return this;
@@ -796,8 +796,8 @@ void FUN_10ba4e70()
     FUN_10be42c0();
 }
 
-// FUNCTION: 0x10BA4EC0 ?FUN_10ba4ec0@Class_10E8C8CC@@QAEPAV1@XZ
-Class_10E8C8CC* Class_10E8C8CC::FUN_10ba4ec0()
+// FUNCTION: 0x10BA4EC0 ?Construct@Class_10E8C8CC@@QAEPAV1@XZ
+Class_10E8C8CC* Class_10E8C8CC::Construct()
 {
     Field00 = DAT_10e8c8cc;
     return this;
@@ -809,8 +809,8 @@ void FUN_10ba4ed0()
     FUN_10be2f30();
 }
 
-// FUNCTION: 0x10BA4F20 ?FUN_10ba4f20@Class_10E8C8D8@@QAEPAV1@XZ
-Class_10E8C8D8* Class_10E8C8D8::FUN_10ba4f20()
+// FUNCTION: 0x10BA4F20 ?Construct@Class_10E8C8D8@@QAEPAV1@XZ
+Class_10E8C8D8* Class_10E8C8D8::Construct()
 {
     Field00 = DAT_10e8c8d8;
     return this;
@@ -822,8 +822,8 @@ void FUN_10ba4f30()
     FUN_10bce960();
 }
 
-// FUNCTION: 0x10BA4F80 ?FUN_10ba4f80@Class_10E8C8E4@@QAEPAV1@XZ
-Class_10E8C8E4* Class_10E8C8E4::FUN_10ba4f80()
+// FUNCTION: 0x10BA4F80 ?Construct@Class_10E8C8E4@@QAEPAV1@XZ
+Class_10E8C8E4* Class_10E8C8E4::Construct()
 {
     Field00 = DAT_10e8c8e4;
     return this;
@@ -835,8 +835,8 @@ void FUN_10ba4f90()
     FUN_10bcc070();
 }
 
-// FUNCTION: 0x10BA4FE0 ?FUN_10ba4fe0@Class_10E8C8F0@@QAEPAV1@XZ
-Class_10E8C8F0* Class_10E8C8F0::FUN_10ba4fe0()
+// FUNCTION: 0x10BA4FE0 ?Construct@Class_10E8C8F0@@QAEPAV1@XZ
+Class_10E8C8F0* Class_10E8C8F0::Construct()
 {
     Field00 = &DAT_10e8c8f0;
     return this;
@@ -848,8 +848,8 @@ void FUN_10ba4ff0()
     FUN_10bdb460();
 }
 
-// FUNCTION: 0x10BA5040 ?FUN_10ba5040@Class_10E8C8FC@@QAEPAV1@XZ
-Class_10E8C8FC* Class_10E8C8FC::FUN_10ba5040()
+// FUNCTION: 0x10BA5040 ?Construct@Class_10E8C8FC@@QAEPAV1@XZ
+Class_10E8C8FC* Class_10E8C8FC::Construct()
 {
     Field00 = &DAT_10e8c8fc;
     return this;
@@ -861,8 +861,8 @@ void FUN_10ba5050()
     FUN_10be2fd0();
 }
 
-// FUNCTION: 0x10BA50A0 ?FUN_10ba50a0@Class_10E8C908@@QAEPAV1@XZ
-Class_10E8C908* Class_10E8C908::FUN_10ba50a0()
+// FUNCTION: 0x10BA50A0 ?Construct@Class_10E8C908@@QAEPAV1@XZ
+Class_10E8C908* Class_10E8C908::Construct()
 {
     Field00 = &DAT_10e8c908;
     return this;
@@ -874,15 +874,15 @@ void FUN_10ba50b0()
     FUN_10bcc110();
 }
 
-// FUNCTION: 0x10BA5100 ?FUN_10ba5100@Class_10E8C914@@QAEPAV1@XZ
-Class_10E8C914* Class_10E8C914::FUN_10ba5100()
+// FUNCTION: 0x10BA5100 ?Construct@Class_10E8C914@@QAEPAV1@XZ
+Class_10E8C914* Class_10E8C914::Construct()
 {
     Unknown00 = DAT_10e8c914;
     return this;
 }
 
-// FUNCTION: 0x10BA5150 ?FUN_10ba5150@Class_10E8C920@@QAEPAV1@XZ
-Class_10E8C920* Class_10E8C920::FUN_10ba5150()
+// FUNCTION: 0x10BA5150 ?Construct@Class_10E8C920@@QAEPAV1@XZ
+Class_10E8C920* Class_10E8C920::Construct()
 {
     Unknown00 = DAT_10e8c920;
     return this;
@@ -894,8 +894,8 @@ void FUN_10ba5160()
     FUN_10b8eeb0();
 }
 
-// FUNCTION: 0x10BA51B0 ?FUN_10ba51b0@Class_10E8C92C@@QAEPAV1@XZ
-Class_10E8C92C* Class_10E8C92C::FUN_10ba51b0()
+// FUNCTION: 0x10BA51B0 ?Construct@Class_10E8C92C@@QAEPAV1@XZ
+Class_10E8C92C* Class_10E8C92C::Construct()
 {
     Unknown00 = DAT_10e8c92c;
     return this;
@@ -907,8 +907,8 @@ void FUN_10ba51c0()
     FUN_10a8d930();
 }
 
-// FUNCTION: 0x10BA5210 ?FUN_10ba5210@Class_10E8C938@@QAEPAV1@XZ
-Class_10E8C938* Class_10E8C938::FUN_10ba5210()
+// FUNCTION: 0x10BA5210 ?Construct@Class_10E8C938@@QAEPAV1@XZ
+Class_10E8C938* Class_10E8C938::Construct()
 {
     Unknown00 = DAT_10e8c938;
     return this;
@@ -920,8 +920,8 @@ void FUN_10ba5220()
     FUN_10934dd0();
 }
 
-// FUNCTION: 0x10BA5270 ?FUN_10ba5270@Class_10E8C944@@QAEPAV1@XZ
-Class_10E8C944* Class_10E8C944::FUN_10ba5270()
+// FUNCTION: 0x10BA5270 ?Construct@Class_10E8C944@@QAEPAV1@XZ
+Class_10E8C944* Class_10E8C944::Construct()
 {
     Unknown00 = DAT_10e8c944;
     return this;
@@ -933,8 +933,8 @@ void FUN_10ba5280()
     FUN_10bb0ae0();
 }
 
-// FUNCTION: 0x10BA52D0 ?FUN_10ba52d0@Class_10E8C950@@QAEPAV1@XZ
-Class_10E8C950* Class_10E8C950::FUN_10ba52d0()
+// FUNCTION: 0x10BA52D0 ?Construct@Class_10E8C950@@QAEPAV1@XZ
+Class_10E8C950* Class_10E8C950::Construct()
 {
     Unknown00 = DAT_10e8c950;
     return this;
@@ -946,8 +946,8 @@ void FUN_10ba52e0()
     FUN_10bb0af0();
 }
 
-// FUNCTION: 0x10BA5330 ?FUN_10ba5330@Class_10E8C95C@@QAEPAV1@XZ
-Class_10E8C95C* Class_10E8C95C::FUN_10ba5330()
+// FUNCTION: 0x10BA5330 ?Construct@Class_10E8C95C@@QAEPAV1@XZ
+Class_10E8C95C* Class_10E8C95C::Construct()
 {
     Unknown00 = DAT_10e8c95c;
     return this;

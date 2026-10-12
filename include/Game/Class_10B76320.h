@@ -9,7 +9,7 @@ public:
     int FUN_10b76320();
 
     char Unknown00[0x190];
-    int Unknown190;
+    int m_Mode;
 };
 
 #endif // GAME_CLASS_10B76320_H

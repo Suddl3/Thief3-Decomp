@@ -9,7 +9,7 @@ class State_Gassed;
 class Class_10E92460;
 class Class_10E92730;
 class Class_10E928E8;
-class Class_10E93020;
+class State_PlayAction;
 class State_PlayAnim;
 class State_SearchLook;
 class Class_10E93878;
@@ -61,7 +61,7 @@ public:
     virtual void Virtual31();
     virtual void Virtual32();
     virtual void Virtual33();
-    virtual Class_10E93020* FUN_10b98050(Struct_10B98E00* A, bool B, bool C);
+    virtual State_PlayAction* FUN_10b98050(Struct_10B98E00* A, bool B, bool C);
     virtual Class_10BD8880* FUN_10b98170(Struct_10B98E00* A);
     virtual void Virtual36();
     virtual cTacticWeaponHolster* FUN_10b98290(int A);

@@ -36,5 +36,5 @@ bool cAIManager::FUN_10c0b040()
 // FUNCTION: 0x10C0BDC0 ?FUN_10c0bdc0@@YGXHPAVClass_10BAF8E0@@@Z
 void __stdcall FUN_10c0bdc0(int p1, Class_10BAF8E0* p2)
 {
-    p2->FUN_10baf8e0(p1);
+    p2->Dispatch(p1);
 }

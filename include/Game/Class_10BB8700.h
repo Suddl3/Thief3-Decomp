@@ -9,14 +9,14 @@ class Class_10DBD510;
 class Class_10BB8700
 {
 public:
-    void FUN_10bb8700();
+    void ProcessItems();
 
     char Unknown00[8];
     Class_10DBD510* Unknown08;
     char Pad0C[0x8];
-    int Unknown14;
+    int m_ItemCount;
     char Unknown18[4];
-    Class_10BB8700_Unknown1C** Unknown1C;
+    Class_10BB8700_Unknown1C** m_Items;
 };
 
 #endif // GAME_CLASS_10BB8700_H

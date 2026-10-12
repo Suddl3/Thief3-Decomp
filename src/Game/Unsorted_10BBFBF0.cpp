@@ -170,8 +170,8 @@ public:
 
 void FUN_10bbf7a0(Class_10A68D20* Owner, Class_10BBFBF0_Param* A, Class_10BBFBF0_Entry* Entry, unsigned char* Color, int Percent);
 
-// FUNCTION: 0x10BBFBF0 ?FUN_10bbfbf0@Class_10BBFBF0@@QAEHPAVClass_10BBFBF0_Param@@PAVClass_10A68D20@@@Z
-int Class_10BBFBF0::FUN_10bbfbf0(Class_10BBFBF0_Param* A, Class_10A68D20* B)
+// FUNCTION: 0x10BBFBF0 ?DrawLines@Class_10BBFBF0@@QAEHPAVClass_10BBFBF0_Param@@PAVClass_10A68D20@@@Z
+int Class_10BBFBF0::DrawLines(Class_10BBFBF0_Param* A, Class_10A68D20* B)
 {
     if (Unknown00->Unknown18 == 0)
         return 0;
@@ -189,8 +189,8 @@ int Class_10BBFBF0::FUN_10bbfbf0(Class_10BBFBF0_Param* A, Class_10A68D20* B)
     return Flags;
 }
 
-// FUNCTION: 0x10BBFCA0 ?FUN_10bbfca0@Class_10BBFCA0@@QAEIPAVClass_10BBFBF0_Param@@PAVClass_10A68D20@@@Z
-unsigned int Class_10BBFCA0::FUN_10bbfca0(Class_10BBFBF0_Param* A, Class_10A68D20* B)
+// FUNCTION: 0x10BBFCA0 ?DrawPercentLines@Class_10BBFCA0@@QAEIPAVClass_10BBFBF0_Param@@PAVClass_10A68D20@@@Z
+unsigned int Class_10BBFCA0::DrawPercentLines(Class_10BBFBF0_Param* A, Class_10A68D20* B)
 {
     if (Unknown00->Unknown24 == 0)
         return 0;
@@ -213,8 +213,8 @@ unsigned int Class_10BBFCA0::FUN_10bbfca0(Class_10BBFBF0_Param* A, Class_10A68D2
     return Flags;
 }
 
-// FUNCTION: 0x10BBFD80 ?FUN_10bbfd80@@YAXPAVClass_10BBFD80@@AAVFArchive@@@Z
-void FUN_10bbfd80(Class_10BBFD80* A, FArchive& Ar)
+// FUNCTION: 0x10BBFD80 ?SaveItemList@@YAXPAVClass_10BBFD80@@AAVFArchive@@@Z
+void SaveItemList(Class_10BBFD80* A, FArchive& Ar)
 {
     int Count = A->Unknown00;
     Ar.Virtual1(&Count, 4);

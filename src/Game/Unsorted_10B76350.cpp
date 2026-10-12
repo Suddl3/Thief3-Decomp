@@ -13,8 +13,8 @@ public:
     unsigned long Value;
 };
 
-// FUNCTION: 0x10B76370 ?FUN_10b76370@@YAHPAPAVFName@@0@Z
-int FUN_10b76370(FName** A, FName** B)
+// FUNCTION: 0x10B76370 ?CompareNames@@YAHPAPAVFName@@0@Z
+int CompareNames(FName** A, FName** B)
 {
     return FUN_10af3690(*(*A)->FUN_10af9730(), *(*B)->FUN_10af9730());
 }

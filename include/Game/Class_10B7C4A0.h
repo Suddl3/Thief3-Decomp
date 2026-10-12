@@ -6,7 +6,7 @@
 class Class_10B7C4A0
 {
 public:
-    Class_10B7C4A0* FUN_10b7c4a0();
+    Class_10B7C4A0* Reset();
 
     int Unknown00;
     int Unknown04;
@@ -14,8 +14,8 @@ public:
     int Unknown0C;
     float Unknown10[5][4];
     float Unknown60[3][4];
-    float Unknown90;
-    float Unknown94;
+    float m_Min;
+    float m_Max;
     int Unknown98;
 };
 

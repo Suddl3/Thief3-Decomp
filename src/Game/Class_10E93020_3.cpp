@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10BD0270.h"
 
-class Class_10E93020
+class State_PlayAction
 {
 public:
     void PopAction();
@@ -12,8 +12,8 @@ public:
     int m_ActionQueue[4];
 };
 
-// FUNCTION: 0x10BD03D0 ?PopAction@Class_10E93020@@QAEXXZ
-void Class_10E93020::PopAction()
+// FUNCTION: 0x10BD03D0 ?PopAction@State_PlayAction@@QAEXXZ
+void State_PlayAction::PopAction()
 {
     if (m_CurrentAction)
     {

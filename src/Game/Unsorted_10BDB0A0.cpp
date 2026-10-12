@@ -124,7 +124,7 @@ void Class_10E94E00::FUN_10bdb110(int A)
 {
     Struct_10BDB110* Object = (Struct_10BDB110*)Unknown04->Unknown08->FUN_10dbd510()->GetLinkedObject();
     if (Object->UnknownDC & 1)
-        Unknown04->FUN_10bb8700();
+        Unknown04->ProcessItems();
 }
 
 // FUNCTION: 0x10BDB210 ?Serialize@Class_10E94A00@@UAEXAAVFArchive@@@Z

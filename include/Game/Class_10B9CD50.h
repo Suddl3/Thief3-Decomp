@@ -8,12 +8,12 @@ class Class_10B9CD50_Unknown18;
 class Class_10B9CD50
 {
 public:
-    bool FUN_10b9cd50(int A);
+    bool ContainsType(int A);
 
     char Unknown00[0x10];
-    int Unknown10;
+    int m_Count;
     char Unknown14[4];
-    Class_10B9CD50_Unknown18** Unknown18;
+    Class_10B9CD50_Unknown18** m_Items;
 };
 
 #endif // GAME_CLASS_10B9CD50_H

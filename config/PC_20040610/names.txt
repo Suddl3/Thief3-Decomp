@@ -3528,3 +3528,316 @@ field Class_10B83DC0::UnknownB8 m_Scale Multiplied by DAT_11006e30 and passed as
 field Class_10B83DC0::UnknownC0 m_Axis Indexes the X/Y/Z components of the vector from UnknownA0 in FUN_10b83a30.
 field Class_10B83E50::Unknown0B8 m_Scale Multiplied by DAT_11006e30 and passed as FUN_10dae490's third float in FUN_10b83b60.
 field Class_10B83E50::Unknown0C0 m_Axis Indexes the X/Y/Z components of the vector from Unknown0AC in FUN_10b83b60.
+class Class_10E93020 State_PlayAction Xbox twin names State_PlayAction (AI_PlayAnimStates.cpp); the class queues actions (m_ActionQueue, PopAction).
+class Class_10B9E410 cStateStack Top() reads the top of m_Stack, PopToBase pops it, and Top() is cast to State_Patrol.
+class Class_10BAA5F0 PawnWrapper Its only method's message names the class: 'PawnWrapper::QuickProximityTest(): tested against self'.
+class Class_10BAE080 cVisualSubsystemArray Growable array of VisualSubsystem: Add, Resize, Clear and Assign over m_Count, m_CapacityBytes and m_Items.
+function 0x10B9D450 FreeItems Frees each item through the allocator and operator delete, then zeroes Unknown00, the item count.
+function 0x10B9F420 DeleteObjects Deletes each Object_10B9F420 item with delete, then zeroes Unknown00, the count; called by FUN_10ba04c0.
+function 0x10BA0080 DeleteItems Deletes each Class_10E8C008 item with delete and zeroes Count; called by FUN_10ba0390.
+function 0x10B9F250 IsBitClear Returns 1 when bit Bit of DAT_10f05c70 is clear; FUN_10b9f280 sets and clears that same mask.
+function 0x10B9F280 SetBit Sets bit Bit of DAT_10f05c70 unless Clear is true, in which case it clears that bit.
+function 0x10B9F3B0 SerializeRef Virtual slot 1 of Class_10E5BC3C. Loading reads an index into Unknown14; saving writes the index of Obj.
+function 0x10B9F2F0 Serialize Class_10B9F2F0(FArchive&) constructor delegates here; version checks on Ar.Unknown04 and Ar.Unknown0C.
+function 0x10B9F450 Serialize Loops over Unknown0C elements calling each one's FArchive overload FUN_10c04aa0; caller FUN_10ba0570.
+function 0x10B9F480 Serialize Loops over Unknown18 items calling FUN_10b9f2f0(Ar) on each; caller FUN_10ba0570.
+function 0x10B9F5B0 SerializeLinks Reads two int indices per Unknown20 item from the archive param, resolving each through the Unknown14 table.
+function 0x10B9F950 SerializeItems Appends Count items built from the archive via the Class_10B9F2F0(FArchive&) constructor.
+function 0x10B9FA20 Add Grows the array by one with SetCount, stores *Item in the new slot and returns that index.
+function 0x10B9FC20 Free Same shape as Class_10B9FBE0::Free: Resize(0), then frees Unknown08 through the allocator and zeroes Unknown04.
+function 0x10BA4B80 Create Calls operator new and constructor ??0Class_10E8C86C, then returns the object or 0.
+function 0x10BA4BE0 Create Calls operator new and constructor ??0Class_10E8C878, then returns the object or 0.
+function 0x10BA4C20 Construct Constructor ??0Class_10E8C878, the factory's callee; stores DAT_10e8c878, its vtable, and returns this.
+function 0x10BA4C40 Create Calls operator new and constructor ??0Class_10E8C884, then returns the object or 0.
+function 0x10BA4CA0 Create Calls operator new and constructor ??0Class_10E8C890, then returns the object or 0.
+function 0x10BA4D00 Create Calls operator new and constructor ??0Class_10E8C89C, then returns the object or 0.
+function 0x10BA4D60 Create Calls operator new and constructor ??0Class_10E8C8A8, then returns the object or 0.
+function 0x10BA4DC0 Create Calls operator new and constructor ??0Class_10E8C8B4, then returns the object or 0.
+function 0x10BA4E20 Create Calls operator new and constructor ??0Class_10E8C8C0, then returns the object or 0.
+function 0x10BA4E80 Create Calls operator new and constructor ??0Class_10E8C8CC, then returns the object or 0.
+function 0x10BA5290 Create Allocates a Class_10E8C950, returns its FUN_10ba52d0() result, or 0 when allocation fails.
+function 0x10BA52F0 Create Allocates a Class_10E8C95C, returns its FUN_10ba5330() result, or 0 when allocation fails.
+function 0x10BA88E0 Create Returns a new Class_10E8D554 from Ion Storm's placement new; no other work.
+function 0x10BA8970 Create Returns a new Class_10E8D570 from Ion Storm's placement new; no other work.
+function 0x10BA8A00 Create Returns a new Class_10E8D58C from Ion Storm's placement new; no other work.
+function 0x10BA8A90 Create Returns a new Class_10E8D5A8 from Ion Storm's placement new; no other work.
+function 0x10BA8B20 Create Returns a new Class_10E8D5C4 from Ion Storm's placement new; no other work.
+function 0x10BA8BB0 Create Returns a new Class_10E8D5E0 from Ion Storm's placement new; no other work.
+function 0x10BA8C40 Create Returns a new Class_10E8D5FC from Ion Storm's placement new; no other work.
+function 0x10BA8CD0 Create Returns a new Class_10E8D618 from Ion Storm's placement new; no other work.
+function 0x10BA8D60 Create Returns a new Class_10E8D634 from Ion Storm's placement new; no other work.
+function 0x10BA91E0 Distance Square root of the summed squared x, y, z differences of two Struct_10BA91E0 vectors.
+function 0x10BA9010 SetActive Stores p1 in Unknown05 and clears Unknown0C when false; cAIManager::Activate calls it as Virtual4(0).
+function 0x10BA9D80 UpdateWithTimeout Adds the global's Virtual13() delta to Unknown08; past 6.25 it calls Virtual4(0) and returns 0 unless A12.
+function 0x10BA9E70 Init Assigns both structs and the four ints to its members, then returns this, as cAIManager::Init does.
+function 0x10BA9F50 CopyPosition Calls Unknown34->GetPosition(Out) and returns true; the member copies its Unknown38 position.
+function 0x10BAA230 RecordTime Callee GetTimeSeconds(); the whole body stores its result in UnknownB0.
+function 0x10BAA000 GetDistanceFalloff Callee FUN_10c05a80 of two positions; result gives a linear falloff, constant past 1048576.
+function 0x10BAA8F0 ClearItems Deletes each Items entry with delete, then sets Count to 0; the Items pointers are not nulled.
+function 0x10BAEB60 GetTextName Returns cString(DAT_10e8d954), the string 'text'; takes no arguments.
+function 0x10BAEB80 GetVertexName Returns cString(DAT_10e8d95c), the string 'vertex'; takes no arguments.
+function 0x10BAF8A0 Empty Body is only Unknown28.Empty(); the call list shows Class_10BAEC40::SetCount.
+function 0x10BAF8E0 Dispatch Calls Virtual0(Param) on each item from Class_10C0C460::FUN_10c0c460, deleting each; runs only if the list holds 0x4b.
+function 0x10BB0AB0 SetValueAndTime Stores its int argument in Unknown2CC and GetTimeSeconds() in Unknown2D0.
+function 0x10BB06A0 ReadVector3 Reads three floats with ReadFloat(Stream, ',' = 0x2c) and returns them as a three-float struct.
+function 0x10BB0610 ReadFloat Declared float(void* Stream, int Delimiter); ReadVector3 passes ',' (0x2c) for each component.
+function 0x10BB7E30 Reset Zeroes Unknown258 and Unknown25C, its only writes; called from FUN_10bcbdf0 (Class_10E92230).
+function 0x10BB8430 StartInterval Calls RollInterval, then sets Unknown2C4 to GetTimeSeconds() plus schema value 0x10070a.
+function 0x10BB8480 IsTimeUp Returns GetTimeSeconds() > Unknown2C4, the stored time; the class's only method.
+function 0x10BB8700 ProcessItems Loops over Unknown14 entries of Unknown1C; Virtual0() runs on each item where Virtual1() is true.
+function 0x10BB8A30 GetCurrent Returns GetCurrent() of Unknown118->Unknown08 in the pawn's controller, else 0.
+function 0x10BB8A60 Tick Adds Delta to Unknown258, then zeroes it when DAT_10eafbdc is at least the sum.
+function 0x10BB8AA0 Tick Same body as FUN_10bb8a60, on Unknown260.
+function 0x10BB8BC0 GetFirst Returns element 0 of the list from FUN_10aa9da0 when its count Unknown00 is nonzero, else 0.
+function 0x10BBDB10 GetInt Passes Id and &Value to FUN_1098e330 and returns the int it fills.
+function 0x10BBDC00 GetInt Same as FUN_10bbdb10, through Unknown0C.
+function 0x10BBF5E0 FindIdIndex Returns the first index whose property 0x200282 equals B, else -1.
+function 0x10BBF630 FindBadIdIndex Returns the first index whose property 0x200282 lies outside 1..Count, else -1.
+function 0x10BBF690 ClearDuplicateIds Keeps the first item whose property 0x200282 equals Id; sets later matches to 0 via FUN_1098e3d0.
+function 0x10BBFB80 DrawRadiusCircle Draws a green circle at the item's position; radius is float property 0x1002fd times 16.
+function 0x10BBFBF0 DrawLines Draws a purple line from the parameter's position to each entry, then calls FUN_10bbf8d0 per entry.
+function 0x10BBFCA0 DrawPercentLines Draws a line to each entry; with several entries FUN_10bbf7a0 draws a 100 / count percent part.
+function 0x10BBFD80 SaveItemList Writes the element count, then each element's struct, to the archive via FUN_10b052a0.
+function 0x10BBFEF0 GetFirst Returns Unknown00->Unknown08[0] when Unknown00->Unknown00 is nonzero, else 0.
+function 0x10BC0F30 Destroy Calls FUN_10bbff10 on the owned object, then operator delete; called from ~AAIPathPoint.
+function 0x10BC19E0 LoadItemList Reads a count from the archive, then reads each item and appends it to Dst.
+function 0x10BC1BA0 ParsePathLinks Brackets four list calls with 'Begin PathLinks' and 'End PathLinks'; its callee is ParseCommand.
+function 0x10BCBA80 GetGassedEnableId Returns an id; Class_10E4CCD0::FUN_10b999e0 creates State_Gassed only when that id's float exceeds a threshold.
+function 0x10BCBD00 GetBlindedEnableId Returns an id; Class_10E4CCD0::FUN_10b99b60 creates State_Blinded only when that id's float is positive.
+function 0x10BCC1D0 GetChokingEnableId Returns an id; Class_10E4CCD0::FUN_10b99c20 creates State_Choking only when that id's float is positive.
+function 0x10BD9640 ClearReferencesTo Clears fields Unknown48 and Unknown4C when they equal A, after calling FUN_109e3c90(A).
+function 0x10B6BE30 Contains Returns FindIndex(Value) != -1; FindIndex scans Unknown128 up to Unknown120 (header inline).
+function 0x10B6D970 Init Calls base constructor, sets vtable pointer Unknown00 and Unknown190, returns this; same shape as Class_10E871D0::Init.
+function 0x10B6FCD0 ComputeFalloff Returns linear falloff of squared offset over DAT_10f0591c, DAT_10eafbdc beyond range; writes offset to B; called by FUN_10b70db0.
+function 0x10B70460 GetSoupManager Lazily builds the Class_10E871C8 singleton through the allocator and returns it; Xbox twin 'SoupManager' (calls ~88%).
+function 0x10B70F60 AddToArray Vtable slot 37 override of Class_10E6AEA0::AddToArray(cIntArray*, int); forwards to singleton FUN_10b70d40(p1, p2).
+function 0x10B717E0 SetChildStates Calls slot-56 FUN_10a52a90 with 2 or 0 on each of Unknown1E8 items in Unknown1F0; that setter stores its argument in Unknown0C8.
+function 0x10B74400 HandleKey Vtable slot 1 override of Class_10E6B078::HandleKey(int, bool, bool); on Enter (13) pressed calls Unknown2B8->Virtual70(2).
+function 0x10B74460 Update Vtable slot 106 override of Update(int) (Class_10E858D0::Update, Class_10E871D0::Update); same FUN_10b79860 then Virtual119 body.
+function 0x10B76370 CompareNames Compares the FName strings of its two FName** arguments via FUN_10af9730 and FUN_10af3690; comparator shape for sorting.
+function 0x10B781E0 Increment Unknown164++ and sets Unknown18C when the range struct's Unknown1F0 is not Unknown1EC; otherwise Virtual122.
+function 0x10B78220 Decrement Unknown164-- and sets Unknown18C when the range struct's Unknown1F0 is not Unknown1E8; otherwise Virtual122; mirror of Increment.
+function 0x10B7AD50 GetOrDefault Returns Unknown3C[Index] while Index is below Unknown34, otherwise the global default DAT_10eafbdc.
+function 0x10B7B820 Reset Fills Unknown30 entries with 0x101 and Unknown3C entries with 0, and resets table entry Unknown14 via FUN_109c1f50(0).
+function 0x10B7C000 Destroy Calls FUN_10ad5310() then Virtual33(), which the calls list resolves to UObject::ConditionalDestroy; called from a destructor.
+function 0x10B7ECC0 RegisterTArray Uses the string 'TArray' and calls Unknown0C.FUN_10af4b90 with ID 0x27 and the table DAT_10e47850.
+function 0x10B7C070 UpdatePhysics Else branch sets the body frame to A->Virtual44() and zeroes two vectors; the Unknown08 == 0 branch rebuilds the body.
+function 0x10B7C330 CopyFrom Copies all twelve int fields from Other.
+function 0x10B7C380 CopyFrom Copies all twelve int fields from Other and returns this.
+function 0x10B7C3F0 SetRefCounted Increments New's Unknown06, releases the old Unknown54 (deleting at zero), then stores New in Unknown54.
+function 0x10B7C4A0 Reset Zeroes the fields, sets Unknown60 to identity, Unknown90 and Unknown94 to -FLT_MAX and FLT_MAX, returns this.
+function 0x10B7C420 Reset Zeroes the floats and Unknown10 matrix, sets Unknown80 and Unknown84 to -pi and pi, returns this.
+function 0x10B7C550 ScaleVector Returns a copy of *V multiplied by the global float DAT_11006e34.
+function 0x10B8B830 SetState Stores Arg in Unknown0C only when it changes, then notifies DAT_10f46da0; FUN_10b8b9f0 switches on Unknown0C.
+function 0x10B8C9B0 FindItem Returns the first Unknown08 item whose Unknown30 equals Value, else null; caller FUN_10b8d800 looks up by key.
+function 0x10B8DC70 AddItem Ignores zero; otherwise SetCount(Unknown00 + 1) and stores Item at the new last index (cIntArray base).
+function 0x10B8EC50 CreateState Returns a new Class_10E89720 state object (m_StateIndex, Advance, IsAtEnd, GetStateName) allocated through GetAllocator().
+function 0x10B93400 ConstructUAI Body is the placement new of UAI into the caller's Memory buffer.
+function 0x10B95150 ConstructAAIPawnController Body is the placement new of AAIPawnController into the caller's Memory buffer.
+function 0x10B951A0 ConstructAAddAIPoint Body is the placement new of AAddAIPoint into the caller's Memory buffer.
+function 0x10B951B0 ConstructAChangeDirectionPoint Body is the placement new of AChangeDirectionPoint into the caller's Memory buffer.
+function 0x10B951C0 ConstructAFormationPoint Body is the placement new of AFormationPoint into the caller's Memory buffer.
+function 0x10B951D0 ConstructAFormationPointAbsolute Body is the placement new of AFormationPointAbsolute into the caller's Memory buffer.
+function 0x10B951E0 ConstructAHeadTurnPoint Body is the placement new of AHeadTurnPoint into the caller's Memory buffer.
+function 0x10B951F0 ConstructALookPoint Body is the placement new of ALookPoint into the caller's Memory buffer.
+function 0x10B95200 ConstructAPlayAnimPoint Body is the placement new of APlayAnimPoint into the caller's Memory buffer.
+function 0x10B95210 ConstructAPlayBarkPoint Body is the placement new of APlayBarkPoint into the caller's Memory buffer.
+function 0x10B952A0 ConstructAAICombatModel Body is the placement new of AAICombatModel into the caller's Memory buffer.
+function 0x10B952B0 ConstructAAIFactionModel Body is the placement new of AAIFactionModel into the caller's Memory buffer.
+function 0x10B952C0 ConstructAAIMovementModel Body is the placement new of AAIMovementModel into the caller's Memory buffer.
+function 0x10B952D0 ConstructAAISensoryModel Body is the placement new of AAISensoryModel into the caller's Memory buffer.
+function 0x10B93410 Construct Calls base FUN_10994280, stores DAT_10e89af8 in Unknown00, returns this.
+function 0x10B934B0 Construct Calls base FUN_10994280, stores DAT_10e89c78 in Unknown00, returns this.
+function 0x10B93550 Construct Calls base FUN_10994280, stores DAT_10e89df8 in Unknown00, returns this.
+function 0x10B935F0 Construct Calls the AActor constructor (??0AActor@@QAE@XZ), stores DAT_10e89f78 in Unknown00, returns this.
+function 0x10B93690 Construct Calls the AActor constructor (??0AActor@@QAE@XZ), stores DAT_10e8a0f0 in Unknown00, returns this.
+function 0x10B93730 Construct Calls the AActor constructor (??0AActor@@QAE@XZ), stores DAT_10e8a268 in Unknown00, returns this.
+function 0x10B93E30 Construct Calls the AAIPathPoint constructor (??0AAIPathPoint@@QAE@XZ), stores DAT_10e8b1a8 in Unknown00, returns this.
+function 0x10B93E50 Construct Calls the AAIPathPoint constructor (??0AAIPathPoint@@QAE@XZ), stores DAT_10e8b330 in Unknown00, returns this.
+function 0x10B93EF0 Construct Calls the AAIPathPoint constructor (??0AAIPathPoint@@QAE@XZ), stores DAT_10e8b4b8 in Unknown00, returns this.
+function 0x10B97660 Construct Calls base FUN_10a503e0 (Class_10E67508), stores DAT_10e8bca0 in Unknown00, returns this.
+function 0x10B92DB0 SetDefaults Zeroes the FCoords and sets the other fields to fixed defaults, returns this; called by FUN_10b92f40 and FUN_10d9dd70.
+function 0x10B92F40 Init Both Class_10E89AA0 constructors call it; fills a Class_10B92DB0 from actor config and passes it to FUN_10da0ca0.
+function 0x10BA4290 Construct Writes DAT_10e8c734 into *this and returns it; its virtual caller returns Class_10E8C734*; same shape as cStatePatrol::Construct.
+function 0x10BA42F0 Construct Writes DAT_10e8c740 into Unknown00 and returns this; its virtual caller returns Class_10E8C740*; same shape as cStatePatrol::Construct.
+function 0x10BA4350 Construct Writes DAT_10e8c74c into Unknown00 and returns this; its virtual caller returns Class_10E8C74C*; same shape as cStatePatrol::Construct.
+function 0x10BA43B0 Construct Writes DAT_10e8c758 into Unknown00 and returns this; its virtual caller returns Class_10E8C758*; same shape as cStatePatrol::Construct.
+function 0x10BA4410 Construct Writes DAT_10e8c764 into Unknown00 and returns this; its virtual caller returns Class_10E8C764*; same shape as cStatePatrol::Construct.
+function 0x10BA4460 Construct Writes DAT_10e8c770 into Unknown00 and returns this; its virtual caller returns Class_10E8C770*; same shape as cStatePatrol::Construct.
+function 0x10BA44B0 Construct Writes DAT_10e8c77c into Unknown00 and returns this; its virtual caller returns Class_10E8C77C*; same shape as cStatePatrol::Construct.
+function 0x10BA4500 Construct Writes DAT_10e8c788 into Unknown00 and returns this; its virtual caller returns Class_10E8C788*; same shape as cStatePatrol::Construct.
+function 0x10BA4550 Construct Writes DAT_10e8c794 into Unknown00 and returns this; its virtual caller returns Class_10E8C794*; same shape as cStatePatrol::Construct.
+function 0x10BA45F0 Construct Writes DAT_10e8c7ac into Unknown00 and returns this; its virtual caller returns Class_10E8C7AC*; same shape as cStatePatrol::Construct.
+function 0x10BA46E0 Construct Writes &DAT_10e8c7d0 into Field00 and returns this; its virtual caller returns Class_10E8C7D0*; same shape as cStatePatrol::Construct.
+function 0x10BA4740 Construct Writes &DAT_10e8c7dc into Field00 and returns this; its virtual caller returns Class_10E8C7DC*; same shape as cStatePatrol::Construct.
+function 0x10BA4800 Construct Writes &DAT_10e8c7f4 into Field00 and returns this; its virtual caller returns Class_10E8C7F4*; same shape as cStatePatrol::Construct.
+function 0x10BA4860 Construct Writes DAT_10e8c800 into Unknown00 and returns this; its virtual caller returns Class_10E8C800*; same shape as cStatePatrol::Construct.
+function 0x10BA48C0 Construct Writes DAT_10e8c80c into Unknown00 and returns this; its virtual caller returns Class_10E8C80C*; same shape as cStatePatrol::Construct.
+function 0x10BA4980 Construct Writes DAT_10e8c824 into Unknown00 and returns this; its virtual caller returns Class_10E8C824*; same shape as cStatePatrol::Construct.
+function 0x10BA49E0 Construct Writes DAT_10e8c830 into Unknown00 and returns this; its virtual caller returns Class_10E8C830*; same shape as cStatePatrol::Construct.
+function 0x10BA4A40 Construct Writes DAT_10e8c83c into Unknown00 and returns this; its virtual caller returns Class_10E8C83C*; same shape as cStatePatrol::Construct.
+function 0x10BA4AA0 Construct Writes DAT_10e8c848 into Unknown00 and returns this; its virtual caller returns Class_10E8C848*; same shape as cStatePatrol::Construct.
+function 0x10BA4B00 Construct Writes DAT_10e8c854 into Unknown00 and returns this; its virtual caller returns Class_10E8C854*; same shape as cStatePatrol::Construct.
+function 0x10BA4CE0 Construct Writes &DAT_10e8c890 into Field00 and returns this; its virtual caller returns Class_10E8C890*; same shape as cStatePatrol::Construct.
+function 0x10BA4D40 Construct Writes &DAT_10e8c89c into Field00 and returns this; its virtual caller returns Class_10E8C89C*; same shape as cStatePatrol::Construct.
+function 0x10BA4DA0 Construct Writes &DAT_10e8c8a8 into Field00 and returns this; its virtual caller returns Class_10E8C8A8*; same shape as cStatePatrol::Construct.
+function 0x10BA4E00 Construct Writes &DAT_10e8c8b4 into Field00 and returns this; its virtual caller returns Class_10E8C8B4*; same shape as cStatePatrol::Construct.
+function 0x10BA4E60 Construct Writes DAT_10e8c8c0 into Field00 and returns this; its virtual caller returns Class_10E8C8C0*; same shape as cStatePatrol::Construct.
+function 0x10BA4EC0 Construct Writes DAT_10e8c8cc into Field00 and returns this; its virtual caller returns Class_10E8C8CC*; same shape as cStatePatrol::Construct.
+function 0x10BA4F20 Construct Writes DAT_10e8c8d8 into Field00 and returns this; its virtual caller returns Class_10E8C8D8*; same shape as cStatePatrol::Construct.
+function 0x10BA4F80 Construct Writes DAT_10e8c8e4 into Field00 and returns this; its virtual caller returns Class_10E8C8E4*; same shape as cStatePatrol::Construct.
+function 0x10BA4FE0 Construct Writes &DAT_10e8c8f0 into Field00 and returns this; its virtual caller returns Class_10E8C8F0*; same shape as cStatePatrol::Construct.
+function 0x10BA5040 Construct Writes &DAT_10e8c8fc into Field00 and returns this; its virtual caller returns Class_10E8C8FC*; same shape as cStatePatrol::Construct.
+function 0x10BA50A0 Construct Writes &DAT_10e8c908 into Field00 and returns this; its virtual caller returns Class_10E8C908*; same shape as cStatePatrol::Construct.
+function 0x10BA5100 Construct Writes DAT_10e8c914 into Unknown00 and returns this; its virtual caller returns Class_10E8C914*; same shape as cStatePatrol::Construct.
+function 0x10BA5150 Construct Writes DAT_10e8c920 into Unknown00 and returns this; its virtual caller returns Class_10E8C920*; same shape as cStatePatrol::Construct.
+function 0x10BA51B0 Construct Writes DAT_10e8c92c into Unknown00 and returns this; its virtual caller returns Class_10E8C92C*; same shape as cStatePatrol::Construct.
+function 0x10BA5210 Construct Writes DAT_10e8c938 into Unknown00 and returns this; its virtual caller returns Class_10E8C938*; same shape as cStatePatrol::Construct.
+function 0x10BA5270 Construct Writes DAT_10e8c944 into Unknown00 and returns this; its virtual caller returns Class_10E8C944*; same shape as cStatePatrol::Construct.
+function 0x10BA52D0 Construct Writes DAT_10e8c950 into Unknown00 and returns this; its virtual caller returns Class_10E8C950*; same shape as cStatePatrol::Construct.
+function 0x10BA5330 Construct Writes DAT_10e8c95c into Unknown00 and returns this; its virtual caller returns Class_10E8C95C*; same shape as cStatePatrol::Construct.
+function 0x10B9D740 ApplyNextState Each caller in the class packet passes a Member virtual's result as the next state id.
+function 0x10B9CD50 ContainsType Loops Unknown18, returns true when an element's Virtual3() (its type id, as Class_10B9E410 compares) equals A.
+function 0x10BA14C0 FindItem Looks Key up in Unknown04 (FUN_10c49740), then Group and Index; returns 0 when one is missing.
+function 0x10BA1940 SetCount Destructs or constructs elements between the old and new count, reallocates, then stores NewCount in Unknown00.
+function 0x10BA2FB0 Create Returns a new object from placement new; same (int, int) siblings in its table are named Create (Class_10E8C5D4::Create).
+function 0x10BA3150 Create Returns a new object from placement new; no-arg sibling slots in its table are named Create (Class_10E8C644::Create).
+function 0x10BA3200 Create Returns a new object from placement new; no-arg sibling slots in its table are named Create (Class_10E8C644::Create).
+function 0x10BA32B0 Create Returns a new object from placement new; no-arg sibling slots in its table are named Create (Class_10E8C644::Create).
+function 0x10BA3340 Create Returns a new object from placement new; no-arg sibling slots in its table are named Create (Class_10E8C644::Create).
+function 0x10BA33F0 Create Returns a new object from placement new; no-arg sibling slots in its table are named Create (Class_10E8C644::Create).
+function 0x10BA34A0 Create Returns a new object from placement new; no-arg sibling slots in its table are named Create (Class_10E8C644::Create).
+function 0x10BA3550 Create Returns a new object from placement new; no-arg sibling slots in its table are named Create (Class_10E8C644::Create).
+function 0x10BA3FB0 Create Same signature as named Class_10E8C5E8::Create(int, int); returns new Class_10E8C51C
+function 0x10BA4050 Create Same signature as named Class_10E8C5E8::Create(int, int); returns new Class_10E8C558
+function 0x10BA40F0 Create Same signature as named Class_10E8C5E8::Create(int, int); returns new Class_10E8C594
+function 0x10BA41F0 Create Allocates Class_10E8C728, returns its named Init() result or null, like named Class_10E8C5E8::Create
+function 0x10BA4250 Create Allocates Class_10E8C734, returns its FUN_10ba4290() result or null, like named Class_10E8C5E8::Create
+function 0x10BA42B0 Create Allocates Class_10E8C740, returns its FUN_10ba42f0() result or null, like named Class_10E8C5E8::Create
+function 0x10BA4310 Create Allocates Class_10E8C74C, returns its FUN_10ba4350() result or null, like named Class_10E8C5E8::Create
+function 0x10BA4370 Create Allocates Class_10E8C758, returns its FUN_10ba43b0() result or null, like named Class_10E8C5E8::Create
+function 0x10BA43D0 Create Allocates Class_10E8C764, returns its FUN_10ba4410() result or null, like named Class_10E8C5E8::Create
+function 0x10BA4420 Create Allocates Class_10E8C770, returns its FUN_10ba4460() result or null, like named Class_10E8C5E8::Create
+function 0x10BA47C0 Create operator new of Class_10E8C7F4, then its FUN_10ba4800 on the new object; 0 when allocation fails
+function 0x10BA4820 Create operator new of Class_10E8C800, then its FUN_10ba4860 on the new object; 0 when allocation fails
+function 0x10BA4880 Create operator new of Class_10E8C80C, then its FUN_10ba48c0 on the new object; 0 when allocation fails
+function 0x10BA48E0 Create operator new of Class_10E8C818, then its Construct() on the new object; 0 when allocation fails
+function 0x10BA4940 Create operator new of Class_10E8C824, then its FUN_10ba4980 on the new object; 0 when allocation fails
+function 0x10BA49A0 Create operator new of Class_10E8C830, then its FUN_10ba49e0 on the new object; 0 when allocation fails
+function 0x10BA4A00 Create operator new of Class_10E8C83C, then its FUN_10ba4a40 on the new object; 0 when allocation fails
+function 0x10BA4A60 Create operator new of Class_10E8C848, then its FUN_10ba4aa0 on the new object; 0 when allocation fails
+function 0x10BA4AC0 Create operator new of Class_10E8C854, then its FUN_10ba4b00 on the new object; 0 when allocation fails
+function 0x10BA4B20 Create operator new of Class_10E8C860, then its FUN_10ba4b60 on the new object; 0 when allocation fails
+function 0x10BA4EE0 Create allocates Class_10E8C8D8 with operator new, returns its FUN_10ba4f20() or 0 when allocation fails
+function 0x10BA4F40 Create allocates Class_10E8C8E4 with operator new, returns its FUN_10ba4f80() or 0 when allocation fails
+function 0x10BA4FA0 Create allocates Class_10E8C8F0 with operator new, returns its FUN_10ba4fe0() or 0 when allocation fails
+function 0x10BA5000 Create allocates Class_10E8C8FC with operator new, returns its FUN_10ba5040() or 0 when allocation fails
+function 0x10BA5060 Create allocates Class_10E8C908 with operator new, returns its FUN_10ba50a0() or 0 when allocation fails
+function 0x10BA50C0 Create allocates Class_10E8C914 with operator new, returns its FUN_10ba5100() or 0 when allocation fails
+function 0x10BA5110 Create allocates Class_10E8C920 with operator new, returns its FUN_10ba5150() or 0 when allocation fails
+function 0x10BA5170 Create allocates Class_10E8C92C with operator new, returns its FUN_10ba51b0() or 0 when allocation fails
+function 0x10BA51D0 Create allocates Class_10E8C938 with operator new, returns its FUN_10ba5210() or 0 when allocation fails
+function 0x10BA5230 Create allocates Class_10E8C944 with operator new, returns its FUN_10ba5270() or 0 when allocation fails
+function 0x10BAA5F0 QuickProximityTest Message 'PawnWrapper::QuickProximityTest(): tested against self' in this method.
+function 0x10BAA660 GetAIPawnController Returns the pawn's Controller when it is an AAIPawnController, else null (Cast<AAIPawnController>).
+function 0x10BADB90 GetPointAlongRotation Origin plus Distance times the normalized X axis of the Rotation's FCoords.
+function 0x10BADCE0 ProbeYaw Calls FUN_10badc40 at Rotation.Yaw plus and minus Angle (182.04 units per degree), distance 400.
+function 0x10BADD90 ProbePitch Calls FUN_10badc40 at Rotation.Pitch plus and minus Angle (182.04 units per degree), distance 400.
+function 0x10BAEA20 FloatToString sprintf '%0.4f' of the float, returned as a cString (strings: '%0.4f').
+function 0x10BAE330 IntToString Values from 10 up clamp to 99, smaller values use another format; returned as a cString.
+function 0x10BAEA60 ColorToString Three bytes printed as '%d,%d,%d' in reverse index order (strings: '%d,%d,%d').
+function 0x10BAEAB0 VectorToString Three floats printed as '%0.4f,%0.4f,%0.4f' (strings: '%0.4f,%0.4f,%0.4f').
+function 0x10BAEB10 GetLineName Returns the constant string 'line' (strings: 'line').
+function 0x10A3B460 HandleEvent vtable slot 0: the same virtual function as Class_10E6FC80::HandleEvent (0x10AC8E80)
+field Class_10B9FC20::Unknown04 m_Capacity Tested and zeroed beside the allocator free, as Class_10B9FBE0 uses m_Capacity.
+field Class_10B9FC20::Unknown08 m_Data Freed through the allocator and nulled in FUN_10b9fc20, as Class_10B9FBE0 uses m_Data.
+field Class_10B9F450::Unknown0C m_Count Loop bound in FUN_10b9f450.
+field Class_10B9F450::Unknown14 m_Items Indexed up to Unknown0C, each element serialized in FUN_10b9f450.
+field Class_10B9F480::Unknown18 m_Count Loop bound in FUN_10b9f480.
+field Class_10B9F480::Unknown20 m_Items Indexed up to Unknown18, each item serialized in FUN_10b9f480.
+field Class_10B9F5B0::Unknown18 m_Count Loop bound in FUN_10b9f5b0.
+field Class_10B9F5B0::Unknown20 m_Items Indexed up to Unknown18, each item's Unknown24 filled in FUN_10b9f5b0.
+field Class_10B9F950::Unknown18 m_Items cIntArray filled with Count new Class_10B9F2F0 items in FUN_10b9f950.
+field Class_10B9F200::Unknown10 m_Count Last item index is Count - 1 in FUN_10b9f200.
+field Class_10B9F200::Unknown18 m_Items Array of Class_10B9F200_Item indexed by Unknown10 in FUN_10b9f200.
+field Class_10E5BC3C::Unknown14 m_Objects Table indexed by the serialized index in FUN_10b9f3b0 (SerializeRef).
+field Class_10E8C878::Unknown00 m_VTable The constructor stores DAT_10e8c878, this class's vtable (0x10E8C878), at offset 0.
+field Class_10E8D65C::Unknown05 m_Active Written by SetActive, false in the constructor; cAIManager::Activate tests the singleton's Virtual1() before clearing it.
+field Class_10E8D65C::Unknown0C m_OwnerKey FUN_10ba9060 stores Obj->FUN_10c7d570() there; SetActive clears it when deactivating.
+field Class_10BA9D80::Unknown08 m_Elapsed Float: FUN_10ba9d80 adds each call's delta to it and times out past 6.25.
+field Class_10BA9D80::Unknown0C m_OwnerKey void*: compared with Owner->FUN_10c7d570() while Virtual1() holds; a mismatch returns 2.
+field Class_10BAA230::UnknownB0 m_RecordedTime Written only by FUN_10baa230 with GetTimeSeconds(), as a float.
+field Class_10BAA3D0::Unknown168 m_CachedValue Filled once by FUN_10baa3d0 from FUN_1098e330 while still -1, then read as a bool.
+field Class_10BB0AB0::Unknown2D0 m_LastSetTime Assigned GetTimeSeconds() in SetValueAndTime; no other method uses it.
+field Class_10E90A1C::Unknown08 m_Schema Ids 0x100251, 0x100252 and 0x10070a are read from it; FUN_10bb8430 calls a SoundSchema method on it.
+field Class_10E90A1C::Unknown298 m_Interval RollInterval stores a random value between two schema values here.
+field Class_10E90A1C::Unknown2C4 m_EndTime FUN_10bb8430 stores GetTimeSeconds() plus a schema value here.
+field Class_10BB8480::Unknown2C4 m_EndTime IsTimeUp compares GetTimeSeconds() against this time.
+field Class_10BB8700::Unknown14 m_ItemCount Loop bound for the item array Unknown1C in FUN_10bb8700.
+field Class_10BB8700::Unknown1C m_Items Array walked by FUN_10bb8700; each item has Virtual0 and Virtual1.
+field Class_10B6BE30::Unknown120 m_Count FindIndex loops i < Unknown120 over Unknown128 (header inline).
+field Class_10B6BE30::Unknown128 m_Values FindIndex compares Unknown128[i] to Value over Unknown120 entries (header inline).
+field Class_10B717E0::Unknown1E8 m_ItemCount FUN_10b717e0 loops i < Unknown1E8 over the Unknown1F0 entries.
+field Class_10B717E0::Unknown1F0 m_Items FUN_10b717e0 calls FUN_10a52a90 on Unknown1F0[i] for each entry.
+field Class_10B781E0::Unknown18C m_Changed Set true after each successful Increment step.
+field Class_10B78220::Unknown18C m_Changed Set true after each successful Decrement step.
+field Class_10B6E0F0::Unknown2FC m_Mode FUN_10b6e0f0 switches on Unknown2FC (0 or 1) to pick the value and the matching setter.
+field Class_10B76320::Unknown190 m_Mode FUN_10b76320 switches on Unknown190 (1 or 2) to pick Unknown04 or Unknown0C.
+field Class_10B7AD50::Unknown34 m_ValueCount FUN_10b7ad50 bounds-checks Index against Unknown34 before reading the array.
+field Class_10B7AD50::Unknown3C m_Values FUN_10b7ad50 returns Unknown3C[Index] when Index is below Unknown34.
+field Class_10B7C3F0_Member::Unknown06 m_RefCount FUN_10b7c3f0 increments it on reference, decrements on release, and deletes the object at zero.
+field Class_10B7C4A0::Unknown90 m_Min FUN_10b7c4a0 initializes it to -FLT_MAX, an unbounded lower limit.
+field Class_10B7C4A0::Unknown94 m_Max FUN_10b7c4a0 initializes it to FLT_MAX, an unbounded upper limit.
+field Class_10B7C420::Unknown80 m_MinAngle FUN_10b7c420 initializes it to -3.1415927f, the lower end of an angle range.
+field Class_10B7C420::Unknown84 m_MaxAngle FUN_10b7c420 initializes it to 3.1415927f, the upper end of an angle range.
+field Class_10E895D0::Unknown0C m_State FUN_10b8b9f0 switches on it; FUN_10b8b830 writes it only when the value changes.
+field Class_10B8C9B0::Unknown00 m_Count Loop bound in FUN_10b8c9b0 over the Unknown08 array.
+field Class_10B8C9B0::Unknown08 m_Items Array indexed in FUN_10b8c9b0 and returned as Struct_10B8C9B0*.
+field Class_10E89AA0::Unknown04 m_Actor Constructor's local Actor is Unknown04; Class_1098E330 is the actor layout supplying config and Virtual44.
+field Class_10B92DB0::Unknown00 m_Coords FCoords copied from Unknown04->Virtual44() in FUN_10b92f40; zeroed in FUN_10b92db0.
+field Class_10E8BE68::Unknown1C m_NewTransition PopState stores the new transition in Unknown1C; its Xbox assert reads new_transition != 0.
+field cStateStack::Unknown38 m_Member PopToBase's local is Member = Unknown38; its virtuals return the next state ids.
+field Class_10B9CB80::Unknown10 m_Count Unknown10 bounds Unknown18[Unknown10 - 1], the top-of-stack indexing GetCurrent uses for m_Count and m_Stack.
+field Class_10B9CB80::Unknown18 m_Stack Unknown18[Unknown10 - 1] is the top element, as GetCurrent returns m_Stack[m_Count - 1].
+field Class_10B9CBE0::Unknown10 m_Count Unknown10 bounds Unknown18[Unknown10 - 1], the top-of-stack indexing GetCurrent uses for m_Count and m_Stack.
+field Class_10B9CBE0::Unknown18 m_Stack Unknown18[Unknown10 - 1] is the top element, as GetCurrent returns m_Stack[m_Count - 1].
+field Class_10B9CCD0::Unknown10 m_Count Unknown10 bounds Unknown18[Unknown10 - 1], the top-of-stack indexing GetCurrent uses for m_Count and m_Stack.
+field Class_10B9CCD0::Unknown18 m_Stack Unknown18[Unknown10 - 1] is the top element, as GetCurrent returns m_Stack[m_Count - 1].
+field Class_10B9CCF0::Unknown10 m_Count Unknown10 bounds Unknown18[Unknown10 - 1], the top-of-stack indexing GetCurrent uses for m_Count and m_Stack.
+field Class_10B9CCF0::Unknown18 m_Stack Unknown18[Unknown10 - 1] is the top element, as GetCurrent returns m_Stack[m_Count - 1].
+field Class_10B9CD10::Unknown10 m_Count Unknown10 bounds Unknown18[Unknown10 - 1], the top-of-stack indexing GetCurrent uses for m_Count and m_Stack.
+field Class_10B9CD10::Unknown18 m_Stack Unknown18[Unknown10 - 1] is the top element, as GetCurrent returns m_Stack[m_Count - 1].
+field Class_10B9CD30::Unknown10 m_Count Unknown10 bounds Unknown18[Unknown10 - 1], the top-of-stack indexing GetCurrent uses for m_Count and m_Stack.
+field Class_10B9CD30::Unknown18 m_Stack Unknown18[Unknown10 - 1] is the top element, as GetCurrent returns m_Stack[m_Count - 1].
+field Class_10B9CDA0::Unknown10 m_Count Unknown10 bounds Unknown18[Unknown10 - 1], the top-of-stack indexing GetCurrent uses for m_Count and m_Stack.
+field Class_10B9CDA0::Unknown18 m_Stack Unknown18[Unknown10 - 1] is the top element, as GetCurrent returns m_Stack[m_Count - 1].
+field Class_10B9CDC0::Unknown10 m_Count Unknown10 bounds Unknown18[Unknown10 - 1], the top-of-stack indexing GetCurrent uses for m_Count and m_Stack.
+field Class_10B9CDC0::Unknown18 m_Stack Unknown18[Unknown10 - 1] is the top element, as GetCurrent returns m_Stack[m_Count - 1].
+field Class_10B9D060::Unknown10 m_Count Unknown10 bounds Unknown18[Unknown10 - 1], the top-of-stack indexing GetCurrent uses for m_Count and m_Stack.
+field Class_10B9D060::Unknown18 m_Stack Unknown18[Unknown10 - 1] is the top element, as GetCurrent returns m_Stack[m_Count - 1].
+field Class_10B9D080::Unknown10 m_Count Unknown10 bounds Unknown18[Unknown10 - 1], the top-of-stack indexing GetCurrent uses for m_Count and m_Stack.
+field Class_10B9D080::Unknown18 m_Stack Unknown18[Unknown10 - 1] is the top element, as GetCurrent returns m_Stack[m_Count - 1].
+field Class_10B9D0A0::Unknown10 m_Count Unknown10 bounds Unknown18[Unknown10 - 1], the top-of-stack indexing GetCurrent uses for m_Count and m_Stack.
+field Class_10B9D0A0::Unknown18 m_Stack Unknown18[Unknown10 - 1] is the top element, as GetCurrent returns m_Stack[m_Count - 1].
+field Class_10B9D180::Unknown10 m_Count Unknown10 bounds Unknown18[Unknown10 - 1], the top-of-stack indexing GetCurrent uses for m_Count and m_Stack.
+field Class_10B9D180::Unknown18 m_Stack Unknown18[Unknown10 - 1] is the top element, as GetCurrent returns m_Stack[m_Count - 1].
+field Class_10B9D1A0::Unknown10 m_Count Unknown10 bounds Unknown18[Unknown10 - 1], the top-of-stack indexing GetCurrent uses for m_Count and m_Stack.
+field Class_10B9D1A0::Unknown18 m_Stack Unknown18[Unknown10 - 1] is the top element, as GetCurrent returns m_Stack[m_Count - 1].
+field Class_10B9D1C0::Unknown10 m_Count Unknown10 bounds Unknown18[Unknown10 - 1], the top-of-stack indexing GetCurrent uses for m_Count and m_Stack.
+field Class_10B9D1C0::Unknown18 m_Stack Unknown18[Unknown10 - 1] is the top element, as GetCurrent returns m_Stack[m_Count - 1].
+field Class_10B9D1E0::Unknown10 m_Count Unknown10 bounds Unknown18[Unknown10 - 1], the top-of-stack indexing GetCurrent uses for m_Count and m_Stack.
+field Class_10B9D1E0::Unknown18 m_Stack Unknown18[Unknown10 - 1] is the top element, as GetCurrent returns m_Stack[m_Count - 1].
+field Class_10B9D200::Unknown10 m_Count Unknown10 bounds Unknown18[Unknown10 - 1], the top-of-stack indexing GetCurrent uses for m_Count and m_Stack.
+field Class_10B9D200::Unknown18 m_Stack Unknown18[Unknown10 - 1] is the top element, as GetCurrent returns m_Stack[m_Count - 1].
+field Class_10B9CD50::Unknown10 m_Count Loop bound for i < Unknown10 over Unknown18, same layout as GetCurrent's m_Count.
+field Class_10B9CD50::Unknown18 m_Items Walked as Unknown18[i] for i < Unknown10; no top-of-stack access in this method.
+field Class_10B9D000::Unknown10 m_Count Loop bound for i < Unknown10 over Unknown18, same layout as GetCurrent's m_Count.
+field Class_10B9D000::Unknown18 m_Items Walked as Unknown18[i] for i < Unknown10; no top-of-stack access in this method.
+field Class_10BA1940::Unknown00 m_Count SetCount reads it as the old count and stores the new count there.
+field Class_10BA1940::Unknown04 m_CapacityBytes Capacity is this divided by the element size; SetCount stores the new allocation size here.
+field Class_10BA1940::Unknown08 m_Data Element buffer indexed per element; reallocated and freed through the allocator in SetCount.
+field Class_10E8C144::Unknown04 m_Entries Looked up by Key through FUN_10c49740; the Entry it yields holds an array of groups.
+field Class_1098E330::Unknown0C4 m_Flags Bit-ORed with 0x10000000 in FUN_10ba0df0.
+field PawnWrapper::Unknown34 m_Pawn Pointer the method compares its argument against ('tested against self') and reads the position through.
+field Class_10BAA6F0::Unknown34 m_Pawn AAIPawn pointer; the method reads its Controller.
+field Class_10E8DBA4::Unknown18 m_Name const char* passed as the name to FUN_10a68d50, with a default string when null.

@@ -9,7 +9,7 @@
 class Class_10B6FCD0
 {
 public:
-    float FUN_10b6fcd0(FVector* A, FVector* B);
+    float ComputeFalloff(FVector* A, FVector* B);
 
     FVector Unknown00;
     Class_10D3C2B0 Unknown0C;

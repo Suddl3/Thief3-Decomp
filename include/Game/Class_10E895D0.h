@@ -9,7 +9,7 @@ class Struct_10B8B830;
 class Class_10E895D0
 {
 public:
-    void FUN_10b8b830(int Arg);
+    void SetState(int Arg);
     bool FUN_10b8b640();
     void FUN_10b8b9f0(int A);
     Class_10B8B9F0_Unknown10* FUN_10b8b8a0();
@@ -18,7 +18,7 @@ public:
     int Unknown00;
     int Unknown04;
     Struct_10B8B830* Unknown08;
-    int Unknown0C;
+    int m_State;
     Class_10B8B9F0_Unknown10* m_Controller;
     char Pad14[0x20];
     bool Unknown34;

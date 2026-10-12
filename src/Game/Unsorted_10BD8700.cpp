@@ -30,7 +30,7 @@ public:
     Struct_10BA91E0 Unknown2C;
 };
 
-float FUN_10ba91e0(const Struct_10BA91E0* A, const Struct_10BA91E0* B);
+float Distance(const Struct_10BA91E0* A, const Struct_10BA91E0* B);
 
 double GetTimeSeconds();
 
@@ -135,7 +135,7 @@ void cCombatBase::FUN_10bd92e0()
 {
     Class_10BFF460* Obj = Unknown04->GetCurrent();
     Class_10C7D570* C = Unknown04->Unknown08;
-    Unknown48 = FUN_10ba91e0(&((Class_10C7D570_Result*)C->FUN_10c7d570())->Unknown2C, Virtual70());
+    Unknown48 = Distance(&((Class_10C7D570_Result*)C->FUN_10c7d570())->Unknown2C, Virtual70());
     Unknown58 = Obj && !Obj->FUN_10bff330() && Virtual73(0.5f);
     float Value = ((Class_10BB89D0*)Unknown04)->Unknown33C;
     if (GetTimeSeconds() > Value)

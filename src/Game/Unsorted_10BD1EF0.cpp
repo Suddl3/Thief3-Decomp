@@ -4,7 +4,7 @@
 
 extern float DAT_10eafbdc;
 
-float FUN_10ba91e0(const Struct_10BA91E0* A, const Struct_10BA91E0* B);
+float Distance(const Struct_10BA91E0* A, const Struct_10BA91E0* B);
 
 struct Struct_10BD1EF0
 {
@@ -20,6 +20,6 @@ float FUN_10bd1ef0(int A, int B, int C, Struct_10BD1EF0* D)
         return DAT_10eafbdc;
     float Total = 0.0f;
     for (int i = 0; i < D->Count - 1; i++)
-        Total += FUN_10ba91e0(&D->Data[i], &D->Data[i + 1]);
+        Total += Distance(&D->Data[i], &D->Data[i + 1]);
     return Total;
 }

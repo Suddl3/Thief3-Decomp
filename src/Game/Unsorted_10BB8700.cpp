@@ -22,37 +22,37 @@ class Class_10BC9D40;
 
 class AAIPawn;
 
-Class_10B9BCA0* FUN_10baa660(AAIPawn* Pawn);
+Class_10B9BCA0* GetAIPawnController(AAIPawn* Pawn);
 
-// FUNCTION: 0x10BB8700 ?FUN_10bb8700@Class_10BB8700@@QAEXXZ
-void Class_10BB8700::FUN_10bb8700()
+// FUNCTION: 0x10BB8700 ?ProcessItems@Class_10BB8700@@QAEXXZ
+void Class_10BB8700::ProcessItems()
 {
-    for (int i = 0; i < Unknown14; i++)
+    for (int i = 0; i < m_ItemCount; i++)
     {
-        Class_10BB8700_Unknown1C* Item = Unknown1C[i];
+        Class_10BB8700_Unknown1C* Item = m_Items[i];
         if (Item->Virtual1())
             Item->Virtual0();
     }
 }
 
-// FUNCTION: 0x10BB8A30 ?FUN_10bb8a30@Class_10BB8A30@@QAEPAVClass_10BC9D40@@XZ
-Class_10BC9D40* Class_10BB8A30::FUN_10bb8a30()
+// FUNCTION: 0x10BB8A30 ?GetCurrent@Class_10BB8A30@@QAEPAVClass_10BC9D40@@XZ
+Class_10BC9D40* Class_10BB8A30::GetCurrent()
 {
-    Class_10B9BCA0* Controller = FUN_10baa660((AAIPawn*)Unknown08->FUN_10c7d570());
+    Class_10B9BCA0* Controller = GetAIPawnController((AAIPawn*)Unknown08->FUN_10c7d570());
     if (Controller && Controller->Unknown118 && Controller->Unknown118->Unknown08)
         return Controller->Unknown118->Unknown08->GetCurrent();
     return 0;
 }
 
-// FUNCTION: 0x10BB8A60 ?FUN_10bb8a60@Class_10BB8A60@@QAEXM@Z
-void Class_10BB8A60::FUN_10bb8a60(float Delta)
+// FUNCTION: 0x10BB8A60 ?Tick@Class_10BB8A60@@QAEXM@Z
+void Class_10BB8A60::Tick(float Delta)
 {
     Unknown258 += Delta;
     Unknown258 = (DAT_10eafbdc >= Unknown258) ? 0.0f : Unknown258;
 }
 
-// FUNCTION: 0x10BB8AA0 ?FUN_10bb8aa0@Class_10BB8AA0@@QAEXM@Z
-void Class_10BB8AA0::FUN_10bb8aa0(float Delta)
+// FUNCTION: 0x10BB8AA0 ?Tick@Class_10BB8AA0@@QAEXM@Z
+void Class_10BB8AA0::Tick(float Delta)
 {
     Unknown260 += Delta;
     Unknown260 = (DAT_10eafbdc >= Unknown260) ? 0.0f : Unknown260;

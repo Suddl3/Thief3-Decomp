@@ -12,8 +12,8 @@ public:
     Class_1098E3D0** Unknown20;
 };
 
-// FUNCTION: 0x10BBF690 ?FUN_10bbf690@@YAXPAPAVClass_10BBF690_Param@@H@Z
-void FUN_10bbf690(Class_10BBF690_Param** Obj, int Id)
+// FUNCTION: 0x10BBF690 ?ClearDuplicateIds@@YAXPAPAVClass_10BBF690_Param@@H@Z
+void ClearDuplicateIds(Class_10BBF690_Param** Obj, int Id)
 {
     bool Found = false;
     for (int i = 0; i < (*Obj)->Unknown18; i++)

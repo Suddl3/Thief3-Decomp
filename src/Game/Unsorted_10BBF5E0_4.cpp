@@ -4,8 +4,8 @@
 #include "Game/Object_10BBF5E0.h"
 #include "Game/Struct_10BBF5E0.h"
 
-// FUNCTION: 0x10BBF630 ?FUN_10bbf630@@YAHPAVObject_10BBF5E0@@@Z
-int FUN_10bbf630(Object_10BBF5E0* A)
+// FUNCTION: 0x10BBF630 ?FindBadIdIndex@@YAHPAVObject_10BBF5E0@@@Z
+int FindBadIdIndex(Object_10BBF5E0* A)
 {
     for (int i = 0; i < A->Unknown00->Count; i++)
     {

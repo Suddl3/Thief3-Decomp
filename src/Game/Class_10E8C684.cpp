@@ -11,6 +11,6 @@ Class_10E8C77C* cStateFactory::FUN_10ba4470()
 {
     Class_10E8C77C* Object = (Class_10E8C77C*)operator new(sizeof(Class_10E8C77C), 0, 0, 0, 0, 0);
     if (Object)
-        return Object->FUN_10ba44b0();
+        return Object->Construct();
     return 0;
 }

@@ -18,8 +18,8 @@ extern float DAT_10eafbdc;
 
 extern float DAT_10e49684;
 
-// FUNCTION: 0x10BAA000 ?FUN_10baa000@Class_10BAA000@@QAEMXZ
-float Class_10BAA000::FUN_10baa000()
+// FUNCTION: 0x10BAA000 ?GetDistanceFalloff@Class_10BAA000@@QAEMXZ
+float Class_10BAA000::GetDistanceFalloff()
 {
     if (DAT_10f35dec && DAT_10f35dec->Unknown08)
     {

@@ -10,7 +10,7 @@ public:
     virtual void Virtual1();
     virtual void FUN_10bb3710(int p1, int p2, int p3);
 
-    Class_10E8C764* FUN_10ba4410();
+    Class_10E8C764* Construct();
 };
 
 #endif // GAME_CLASS_10E8C764_H

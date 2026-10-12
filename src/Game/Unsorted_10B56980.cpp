@@ -167,7 +167,7 @@ public:
 
 void FUN_10b74330();
 
-void FUN_10b74400();
+void HandleKey();
 
 void FUN_10b79770();
 
@@ -393,7 +393,7 @@ void FUN_10b64260()
 // FUNCTION: 0x10B64270 ?FUN_10b64270@@YAXXZ
 void FUN_10b64270()
 {
-    FUN_10b74400();
+    HandleKey();
 }
 
 // FUNCTION: 0x10B642B0 ?FUN_10b642b0@@YAXXZ

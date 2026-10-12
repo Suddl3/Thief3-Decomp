@@ -19,7 +19,7 @@ public:
     Class_10BF7F90* FUN_10bc4160();
 };
 
-class Class_10E93020 : public Class_10BC4160
+class State_PlayAction : public Class_10BC4160
 {
 public:
     virtual void Virtual1();
@@ -44,8 +44,8 @@ public:
     virtual void FUN_10bd0240(bool A);
 };
 
-// FUNCTION: 0x10BD0240 ?FUN_10bd0240@Class_10E93020@@UAEX_N@Z
-void Class_10E93020::FUN_10bd0240(bool A)
+// FUNCTION: 0x10BD0240 ?FUN_10bd0240@State_PlayAction@@UAEX_N@Z
+void State_PlayAction::FUN_10bd0240(bool A)
 {
     if (!A)
         FUN_10bc4160()->FUN_10bf7f90(0, 1);

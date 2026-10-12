@@ -9,15 +9,15 @@ class Class_10E67FD0;
 class Class_10B717E0
 {
 public:
-    void FUN_10b717e0(bool Flag);
+    void SetChildStates(bool Flag);
 
     char Unknown00[0x1DC];
     int Unknown1DC;
     char Unknown1E0[4];
     Class_10B73C30_Unknown1E4** Unknown1E4;
-    int Unknown1E8;
+    int m_ItemCount;
     char Unknown1EC[4];
-    Class_10E67FD0** Unknown1F0;
+    Class_10E67FD0** m_Items;
 };
 
 #endif // GAME_CLASS_10B717E0_H

@@ -58,7 +58,7 @@ public:
     virtual void Virtual46();
     virtual void Virtual47();
     virtual void Virtual48();
-    virtual void FUN_10bd9640(int A);
+    virtual void ClearReferencesTo(int A);
 
     cTacticWeaponEquip(int A, int B, int C, bool D, bool E);
 

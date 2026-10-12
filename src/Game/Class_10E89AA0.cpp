@@ -8,13 +8,13 @@ class Class_10E89AA0 : public Class_10DA0420
 public:
     ~Class_10E89AA0();
 
-    Class_10990D10* Unknown04;
+    Class_10990D10* m_Actor;
     int Unknown08;
 };
 
 // FUNCTION: 0x10B92C50 ??1Class_10E89AA0@@QAE@XZ
 Class_10E89AA0::~Class_10E89AA0()
 {
-    if (Unknown04 && Unknown08 != 3)
-        Unknown04->FUN_10991fc0(0);
+    if (m_Actor && Unknown08 != 3)
+        m_Actor->FUN_10991fc0(0);
 }

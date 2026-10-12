@@ -41,17 +41,17 @@ Class_10BC9D40* Class_10B9CAC0::GetCurrent()
 // FUNCTION: 0x10B9D060 ?FUN_10b9d060@Class_10B9D060@@QAE_NXZ
 bool Class_10B9D060::FUN_10b9d060()
 {
-    return (Unknown10 == 0 ? 0 : Unknown18[Unknown10 - 1])->FUN_10bc9780();
+    return (m_Count == 0 ? 0 : m_Stack[m_Count - 1])->FUN_10bc9780();
 }
 
 // FUNCTION: 0x10B9D080 ?FUN_10b9d080@Class_10B9D080@@QAE_NXZ
 bool Class_10B9D080::FUN_10b9d080()
 {
-    return (Unknown10 == 0 ? 0 : Unknown18[Unknown10 - 1])->FUN_10bc9930();
+    return (m_Count == 0 ? 0 : m_Stack[m_Count - 1])->FUN_10bc9930();
 }
 
 // FUNCTION: 0x10B9D0A0 ?FUN_10b9d0a0@Class_10B9D0A0@@QAE_NXZ
 bool Class_10B9D0A0::FUN_10b9d0a0()
 {
-    return (Unknown10 == 0 ? 0 : Unknown18[Unknown10 - 1])->ShopOwnerNoCash();
+    return (m_Count == 0 ? 0 : m_Stack[m_Count - 1])->ShopOwnerNoCash();
 }

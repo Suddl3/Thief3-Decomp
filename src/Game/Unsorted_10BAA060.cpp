@@ -12,8 +12,8 @@ int FUN_10baa130(int A)
     return A + 0x4200039A;
 }
 
-// FUNCTION: 0x10BAA230 ?FUN_10baa230@Class_10BAA230@@QAEXXZ
-void Class_10BAA230::FUN_10baa230()
+// FUNCTION: 0x10BAA230 ?RecordTime@Class_10BAA230@@QAEXXZ
+void Class_10BAA230::RecordTime()
 {
-    UnknownB0 = GetTimeSeconds();
+    m_RecordedTime = GetTimeSeconds();
 }

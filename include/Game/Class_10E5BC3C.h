@@ -10,10 +10,10 @@ class Class_10E5BC3C
 {
 public:
     virtual void Virtual0();
-    virtual void FUN_10b9f3b0(Object_10BE58C0* Ar, Class_10AAB5C0*& Obj);
+    virtual void SerializeRef(Object_10BE58C0* Ar, Class_10AAB5C0*& Obj);
 
     char Unknown04[0x10];
-    Class_10AAB5C0** Unknown14;
+    Class_10AAB5C0** m_Objects;
 };
 
 #endif // GAME_CLASS_10E5BC3C_H

@@ -64,7 +64,7 @@ public:
 // FUNCTION: 0x10BBD0A0 ?Update@Class_10BBB410@@QAEXXZ
 void Class_10BBB410::Update()
 {
-    if (((Class_10BBDB10*)m_Owner->FUN_10dbd510())->FUN_10bbdb10(0x40800544) == 0)
+    if (((Class_10BBDB10*)m_Owner->FUN_10dbd510())->GetInt(0x40800544) == 0)
     {
         Unknown30.FUN_10bfd710();
         Unknown94.FUN_10c276c0();

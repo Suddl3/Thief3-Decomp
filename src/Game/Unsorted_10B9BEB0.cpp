@@ -4,7 +4,7 @@
 #include "Game/Class_10BE3FF0.h"
 #include "Game/Class_10BFB910.h"
 #include "Game/Class_10BC9D40.h"
-#include "Game/Class_10B9E410.h"
+#include "Game/cStateStack.h"
 #include "Game/Class_10FF667C.h"
 #include "Game/Struct_10B9BDB0_Unknown118.h"
 #include "Game/Class_10B9BDB0.h"
@@ -16,7 +16,7 @@ class Class_10B9CAC0;
 extern Class_10FF667C* DAT_10ff667c;
 
 // Game/Class_10B9CAC0.h's copy: FUN_10aa9da0 is a method of this object too.
-class Class_10B9CAC0 : public Class_10B9E410
+class Class_10B9CAC0 : public cStateStack
 {
 public:
     bool FUN_10b9d0c0(int A);

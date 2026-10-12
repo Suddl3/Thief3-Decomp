@@ -9,9 +9,9 @@ class Class_10B9D0A0
 {
 public:
     char Unknown00[0x10];
-    int Unknown10;
+    int m_Count;
     char Unknown14[4];
-    Class_10BC9A50** Unknown18;
+    Class_10BC9A50** m_Stack;
 
     bool FUN_10b9d0a0();
 };

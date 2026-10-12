@@ -1,7 +1,7 @@
 // Game/Unsorted_10BAD9D0_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10905A90_Member.h"
-#include "Game/Class_10BAE080.h"
+#include "Game/cVisualSubsystemArray.h"
 
 Class_10905A90_Member* GetAllocator();
 
@@ -30,8 +30,8 @@ public:
     int Unknown2C;
 };
 
-// FUNCTION: 0x10BAD9D0 ?Resize@Class_10BAE080@@QAEXH@Z
-void Class_10BAE080::Resize(int NewCount)
+// FUNCTION: 0x10BAD9D0 ?Resize@cVisualSubsystemArray@@QAEXH@Z
+void cVisualSubsystemArray::Resize(int NewCount)
 {
     int OldCount = m_Count;
     int Capacity = !m_Items ? 0 : m_CapacityBytes / sizeof(VisualSubsystem);

@@ -9,7 +9,7 @@ void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D
 
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
-int FUN_10bcbd00();
+int GetBlindedEnableId();
 
 struct Struct_10B98E00
 {
@@ -29,7 +29,7 @@ class Class_10E92730;
 
 class Class_10E928E8;
 
-class Class_10E93020;
+class State_PlayAction;
 
 class State_PlayAnim;
 
@@ -93,7 +93,7 @@ public:
     virtual void Virtual31();
     virtual void Virtual32();
     virtual void Virtual33();
-    virtual Class_10E93020* FUN_10b98050(Struct_10B98E00* A, bool B, bool C);
+    virtual State_PlayAction* FUN_10b98050(Struct_10B98E00* A, bool B, bool C);
     virtual cCombatBase* FUN_10b98170(Struct_10B98E00* A);
     virtual void Virtual36();
     virtual cTacticWeaponHolster* FUN_10b98290(int A);
@@ -120,7 +120,7 @@ public:
 // FUNCTION: 0x10B99B60 ?FUN_10b99b60@Class_10E4CCD0@@UAEPAVState_Blinded@@PAUStruct_10B98E00@@H@Z
 State_Blinded* Class_10E4CCD0::FUN_10b99b60(Struct_10B98E00* A, int B)
 {
-    int Id = FUN_10bcbd00();
+    int Id = GetBlindedEnableId();
     if (Id && A->Unknown08->FUN_10dbd510(Id)->GetFloat() > 0.0f)
         return new(0, 0, 0, 0, 0) State_Blinded((int)A, (int)this, B);
     return 0;

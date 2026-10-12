@@ -30,10 +30,10 @@ void Class_10E894C8::FUN_10b92cb0(int p1)
         Unknown04->FUN_10990d10();
 }
 
-// FUNCTION: 0x10B92DB0 ?FUN_10b92db0@Class_10B92DB0@@QAEPAV1@XZ
-Class_10B92DB0* Class_10B92DB0::FUN_10b92db0()
+// FUNCTION: 0x10B92DB0 ?SetDefaults@Class_10B92DB0@@QAEPAV1@XZ
+Class_10B92DB0* Class_10B92DB0::SetDefaults()
 {
-    Unknown00.FCoords::FCoords(FVector(0, 0, 0));
+    m_Coords.FCoords::FCoords(FVector(0, 0, 0));
     Unknown30.X = 0.0f;
     Unknown30.Y = 1.0f;
     Unknown30.Z = 0.0f;

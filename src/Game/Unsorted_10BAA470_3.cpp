@@ -18,7 +18,7 @@ public:
     Struct_10B9BCA0_Unknown118* Unknown118;
 };
 
-Class_10B9BCA0* FUN_10baa660(AAIPawn* Pawn);
+Class_10B9BCA0* GetAIPawnController(AAIPawn* Pawn);
 
 class Class_10BAA6B0_Param
 {
@@ -68,7 +68,7 @@ Class_10BABED0* FUN_10baa6b0(Class_10BAA6B0_Param* Param)
 {
     if (Param->Unknown0C0 && !Param->Virtual34())
     {
-        Class_10B9BCA0* Info = FUN_10baa660((AAIPawn*)Param);
+        Class_10B9BCA0* Info = GetAIPawnController((AAIPawn*)Param);
         if (Info && Info->Unknown118)
             return Info->Unknown118->Unknown10;
     }

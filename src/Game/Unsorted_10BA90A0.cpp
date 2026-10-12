@@ -6,7 +6,7 @@
 
 extern "C" void* memmove(void* Dest, const void* Src, unsigned Count);
 
-float FUN_10ba91e0(const Struct_10BA91E0* A, const Struct_10BA91E0* B);
+float Distance(const Struct_10BA91E0* A, const Struct_10BA91E0* B);
 
 // Ion Storm's placement new and its delete (0x10905C10; the delete folded into ::operator delete).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
@@ -45,8 +45,8 @@ void cIntArray::PushFront(const int* Item)
     Unknown08[0] = *Item;
 }
 
-// FUNCTION: 0x10BA91E0 ?FUN_10ba91e0@@YAMPBUStruct_10BA91E0@@0@Z
-float FUN_10ba91e0(const Struct_10BA91E0* A, const Struct_10BA91E0* B)
+// FUNCTION: 0x10BA91E0 ?Distance@@YAMPBUStruct_10BA91E0@@0@Z
+float Distance(const Struct_10BA91E0* A, const Struct_10BA91E0* B)
 {
     float X = B->Unknown00 - A->Unknown00;
     float Y = B->Unknown04 - A->Unknown04;

@@ -8,7 +8,7 @@ class Struct_10B8B830;
 class Class_10B8B830
 {
 public:
-    void FUN_10b8b830(int Arg);
+    void SetState(int Arg);
 
     int Unknown00;
     int Unknown04;

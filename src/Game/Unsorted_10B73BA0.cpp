@@ -83,18 +83,18 @@ void Class_10B73C30::FUN_10b73c30(int Mode)
         FUN_10b73a00(1);
         for (int i = 0; i < Unknown1DC; i++)
             Unknown1E4[i]->Virtual56(0);
-        FUN_10b717e0(false);
+        SetChildStates(false);
         break;
     case 1:
         FUN_10b73a00(0);
         FUN_10b71240(1);
-        FUN_10b717e0(false);
+        SetChildStates(false);
         break;
     case 2:
         FUN_10b73a00(0);
         for (int i = 0; i < Unknown1DC; i++)
             Unknown1E4[i]->Virtual56(0);
-        FUN_10b717e0(true);
+        SetChildStates(true);
         break;
     }
 }

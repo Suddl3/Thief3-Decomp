@@ -55,7 +55,7 @@ class Class_10BBEFC0;
 // FUNCTION: 0x10BBEF50 ?FUN_10bbef50@AAIPathPoint@@UAEXHH@Z
 void AAIPathPoint::FUN_10bbef50(int p1, int p2)
 {
-    Unknown0C0.FUN_10bc1ba0(p1);
+    Unknown0C0.ParsePathLinks(p1);
 }
 
 // FUNCTION: 0x10BBEFA0 ?FUN_10bbefa0@Class_10BBEFA0@@QAEXXZ
@@ -73,5 +73,5 @@ void Class_10BBEFB0::FUN_10bbefb0()
 // FUNCTION: 0x10BBEFC0 ?FUN_10bbefc0@Class_10BBEFC0@@QAEXXZ
 void Class_10BBEFC0::FUN_10bbefc0()
 {
-    UnknownC0.FUN_10bbfef0(this);
+    UnknownC0.GetFirst(this);
 }

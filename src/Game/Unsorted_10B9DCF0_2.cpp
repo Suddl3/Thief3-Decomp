@@ -69,7 +69,7 @@ extern Struct_10AA3520* DAT_10f35dec;
 
 UObject* FUN_10c00710(void* A, int B);
 
-class Class_10B9E410
+class cStateStack
 {
 public:
     void FUN_10b9cf60();
@@ -82,7 +82,7 @@ public:
     }
     void FUN_10b9cf20();
     void FUN_10b9e410();
-    void FUN_10b9d740(int A);
+    void ApplyNextState(int A);
     void FUN_10b9d8d0();
     void FUN_10b9dc80(int A);
     void FUN_10b9dcc0();
@@ -100,24 +100,24 @@ public:
     int Unknown1C;
     int Unknown20;
     char Unknown24[0x14];
-    Class_10B9E410_Member* Unknown38;
+    Class_10B9E410_Member* m_Member;
 };
 
-// FUNCTION: 0x10B9DCF0 ?MoveToPathPoint@Class_10B9E410@@QAEXH@Z
-void Class_10B9E410::MoveToPathPoint(int A)
+// FUNCTION: 0x10B9DCF0 ?MoveToPathPoint@cStateStack@@QAEXH@Z
+void cStateStack::MoveToPathPoint(int A)
 {
     Class_10C7D570* Owner = Unknown0C->Unknown08;
     UObject* Point = FUN_10c00710(Owner->FUN_10c7d570(), A);
     if (Point && Point->IsA(AAIPathPoint::StaticClass()))
     {
-        if (Unknown38 && m_Count > 0)
+        if (m_Member && m_Count > 0)
         {
-            int Result = Unknown38->Virtual12(Unknown0C, DAT_10f35dec->Unknown08, 0, Point);
+            int Result = m_Member->Virtual12(Unknown0C, DAT_10f35dec->Unknown08, 0, Point);
             if (Result)
             {
                 if (Top()->Virtual3() == 8)
                     FUN_10b9d8d0();
-                FUN_10b9d740(Result);
+                ApplyNextState(Result);
             }
         }
     }

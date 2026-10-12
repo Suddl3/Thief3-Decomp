@@ -5,7 +5,7 @@
 #include "Game/Class_10B9E410_Member.h"
 #include "Game/Class_10BB8300.h"
 #include "Game/Object_10B9CAC0.h"
-#include "Game/Class_10B9E410.h"
+#include "Game/cStateStack.h"
 
 Class_10905A90_Member* GetAllocator();
 
@@ -47,17 +47,17 @@ void Class_10B9CAC0::NotifyAllyKilled(int A)
     }
 }
 
-// FUNCTION: 0x10B9DC80 ?FUN_10b9dc80@Class_10B9E410@@QAEXH@Z
-void Class_10B9E410::FUN_10b9dc80(int A)
+// FUNCTION: 0x10B9DC80 ?FUN_10b9dc80@cStateStack@@QAEXH@Z
+void cStateStack::FUN_10b9dc80(int A)
 {
-    Class_10B9E410_Member* Obj = Unknown38;
+    Class_10B9E410_Member* Obj = m_Member;
     Class_10B9E410_Item* Top = m_Count == 0 ? 0 : m_Stack[m_Count - 1];
     int Key = Unknown0C;
-    FUN_10b9d740(Obj->Virtual44(Key, Top, A));
+    ApplyNextState(Obj->Virtual44(Key, Top, A));
 }
 
-// FUNCTION: 0x10B9DCC0 ?FUN_10b9dcc0@Class_10B9E410@@QAEXXZ
-void Class_10B9E410::FUN_10b9dcc0()
+// FUNCTION: 0x10B9DCC0 ?FUN_10b9dcc0@cStateStack@@QAEXXZ
+void cStateStack::FUN_10b9dcc0()
 {
     if (m_Count)
     {

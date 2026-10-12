@@ -5,7 +5,7 @@
 #include "Game/Class_10E871C8.h"
 #include "Game/Class_10E86A28.h"
 
-Class_10E871C8* FUN_10b70460();
+Class_10E871C8* GetSoupManager();
 
 extern void* DAT_10e86a28[];
 
@@ -56,14 +56,14 @@ public:
     FArray Unknown154;
 };
 
-// FUNCTION: 0x10B6BE30 ?FUN_10b6be30@Class_10B6BE30@@QAE_NH@Z
-bool Class_10B6BE30::FUN_10b6be30(int Value)
+// FUNCTION: 0x10B6BE30 ?Contains@Class_10B6BE30@@QAE_NH@Z
+bool Class_10B6BE30::Contains(int Value)
 {
     return FindIndex(Value) != -1;
 }
 
-// FUNCTION: 0x10B6D970 ?FUN_10b6d970@Class_10E86A28@@QAEPAV1@XZ
-Class_10E86A28* Class_10E86A28::FUN_10b6d970()
+// FUNCTION: 0x10B6D970 ?Init@Class_10E86A28@@QAEPAV1@XZ
+Class_10E86A28* Class_10E86A28::Init()
 {
     FUN_10b78780();
     Unknown00 = DAT_10e86a28;
@@ -91,5 +91,5 @@ Class_10E871D0* Class_10E871D0::Init()
 // FUNCTION: 0x10B70AB0 ?FUN_10b70ab0@@YAXXZ
 void FUN_10b70ab0()
 {
-    FUN_10b70460()->Virtual0();
+    GetSoupManager()->Virtual0();
 }

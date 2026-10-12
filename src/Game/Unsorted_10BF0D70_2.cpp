@@ -107,7 +107,7 @@ bool Class_10BF0EA0::FUN_10bf0ea0(FVector* Out, int Param2, int Param3)
     V.X *= Scale;
     V.Y *= Scale;
     V.Z *= Scale;
-    ((Class_10BA9F50*)this->Unknown04->Unknown08)->FUN_10ba9f50(&Rot);
+    ((Class_10BA9F50*)this->Unknown04->Unknown08)->CopyPosition(&Rot);
     Matrix.FUN_10963ce0(Rot);
     V = *Matrix.FUN_1096d8a0(&Tmp1, &V);
     *Out = Base + V;

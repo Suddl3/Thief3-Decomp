@@ -62,8 +62,8 @@ void FUN_10b7c3d0(Struct_10B7C3D0* p)
     DAT_10ffa700->Virtual5(p, p->Unknown04, 0x23);
 }
 
-// FUNCTION: 0x10B7ECC0 ?FUN_10b7ecc0@Class_10B7ECC0@@QAEPAV1@XZ
-Class_10B7ECC0* Class_10B7ECC0::FUN_10b7ecc0()
+// FUNCTION: 0x10B7ECC0 ?RegisterTArray@Class_10B7ECC0@@QAEPAV1@XZ
+Class_10B7ECC0* Class_10B7ECC0::RegisterTArray()
 {
     Unknown0C.FUN_10af4b90(0x27, DAT_10e47850);
     return this;

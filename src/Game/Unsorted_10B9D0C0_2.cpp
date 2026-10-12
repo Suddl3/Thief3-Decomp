@@ -5,7 +5,7 @@
 #include "Game/Class_10B9D1C0.h"
 #include "Game/Class_10B9D1E0.h"
 #include "Game/Class_10B9D200.h"
-#include "Game/Class_10B9E410.h"
+#include "Game/cStateStack.h"
 #include "Game/Class_10B9E410_Member.h"
 #include "Game/Object_10B9CAC0.h"
 
@@ -281,9 +281,9 @@ bool Class_10B9CAC0::FUN_10b9d0c0(int A)
 // FUNCTION: 0x10B9D180 ?FUN_10b9d180@Class_10B9D180@@QAEXH@Z
 void Class_10B9D180::FUN_10b9d180(int A)
 {
-    if (Unknown10)
+    if (m_Count)
     {
-        Class_10B9D180_Member* Item = Unknown18[Unknown10 - 1];
+        Class_10B9D180_Member* Item = m_Stack[m_Count - 1];
         if (Item)
             Item->Virtual41(A);
     }
@@ -292,9 +292,9 @@ void Class_10B9D180::FUN_10b9d180(int A)
 // FUNCTION: 0x10B9D1A0 ?FUN_10b9d1a0@Class_10B9D1A0@@QAEXH@Z
 void Class_10B9D1A0::FUN_10b9d1a0(int A)
 {
-    if (Unknown10)
+    if (m_Count)
     {
-        Class_10B9D1A0_Member* Item = Unknown18[Unknown10 - 1];
+        Class_10B9D1A0_Member* Item = m_Stack[m_Count - 1];
         if (Item)
             Item->Virtual42(A);
     }
@@ -303,9 +303,9 @@ void Class_10B9D1A0::FUN_10b9d1a0(int A)
 // FUNCTION: 0x10B9D1C0 ?FUN_10b9d1c0@Class_10B9D1C0@@QAEXH@Z
 void Class_10B9D1C0::FUN_10b9d1c0(int A)
 {
-    if (Unknown10)
+    if (m_Count)
     {
-        Class_10B9D1C0_Member* Item = Unknown18[Unknown10 - 1];
+        Class_10B9D1C0_Member* Item = m_Stack[m_Count - 1];
         if (Item)
             Item->Virtual43(A);
     }
@@ -314,9 +314,9 @@ void Class_10B9D1C0::FUN_10b9d1c0(int A)
 // FUNCTION: 0x10B9D1E0 ?FUN_10b9d1e0@Class_10B9D1E0@@QAEXXZ
 void Class_10B9D1E0::FUN_10b9d1e0()
 {
-    if (Unknown10)
+    if (m_Count)
     {
-        Class_10B9D1E0_Member* Item = Unknown18[Unknown10 - 1];
+        Class_10B9D1E0_Member* Item = m_Stack[m_Count - 1];
         if (Item)
             Item->Virtual44();
     }
@@ -325,18 +325,18 @@ void Class_10B9D1E0::FUN_10b9d1e0()
 // FUNCTION: 0x10B9D200 ?FUN_10b9d200@Class_10B9D200@@QAEXXZ
 void Class_10B9D200::FUN_10b9d200()
 {
-    if (Unknown10)
+    if (m_Count)
     {
-        Class_10B9D200_Member* Item = Unknown18[Unknown10 - 1];
+        Class_10B9D200_Member* Item = m_Stack[m_Count - 1];
         if (Item)
             Item->Virtual46();
     }
 }
 
-// FUNCTION: 0x10B9E410 ?FUN_10b9e410@Class_10B9E410@@QAEXXZ
-void Class_10B9E410::FUN_10b9e410()
+// FUNCTION: 0x10B9E410 ?FUN_10b9e410@cStateStack@@QAEXXZ
+void cStateStack::FUN_10b9e410()
 {
-    Class_10B9E410_Member* Obj = Unknown38;
+    Class_10B9E410_Member* Obj = m_Member;
     int Key = Unknown0C;
-    FUN_10b9d740(Obj->Virtual28(Key));
+    ApplyNextState(Obj->Virtual28(Key));
 }

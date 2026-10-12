@@ -34,14 +34,14 @@ public:
     int Unknown10;
 };
 
-// FUNCTION: 0x10BA2FB0 ?FUN_10ba2fb0@Class_10E8C5D0@@UAEPAVClass_10E984BC@@HH@Z
-Class_10E984BC* Class_10E8C5D0::FUN_10ba2fb0(int A, int B)
+// FUNCTION: 0x10BA2FB0 ?Create@Class_10E8C5D0@@UAEPAVClass_10E984BC@@HH@Z
+Class_10E984BC* Class_10E8C5D0::Create(int A, int B)
 {
     return new(0, 0, 0, 0, 0) Class_10E984BC;
 }
 
-// FUNCTION: 0x10BA3150 ?FUN_10ba3150@Class_10E8C628@@UAEPAVClass_10E8C194@@XZ
-Class_10E8C194* Class_10E8C628::FUN_10ba3150()
+// FUNCTION: 0x10BA3150 ?Create@Class_10E8C628@@UAEPAVClass_10E8C194@@XZ
+Class_10E8C194* Class_10E8C628::Create()
 {
     return new(0, 0, 0, 0, 0) Class_10E8C194;
 }

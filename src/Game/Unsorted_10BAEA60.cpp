@@ -22,16 +22,16 @@ struct Struct_10BAEA60
 
 extern const char DAT_10e8d92c[];
 
-// FUNCTION: 0x10BAEA60 ?FUN_10baea60@@YA?AVcString@@PBUStruct_10BAEA60@@@Z
-cString FUN_10baea60(const Struct_10BAEA60* Color)
+// FUNCTION: 0x10BAEA60 ?ColorToString@@YA?AVcString@@PBUStruct_10BAEA60@@@Z
+cString ColorToString(const Struct_10BAEA60* Color)
 {
     char Buffer[0x64];
     sprintf(Buffer, DAT_10e8d92c, Color->Unknown02, Color->Unknown01, Color->Unknown00);
     return cString(Buffer);
 }
 
-// FUNCTION: 0x10BAEAB0 ?FUN_10baeab0@@YA?AVcString@@PBUStruct_10BAEAB0@@@Z
-cString FUN_10baeab0(const Struct_10BAEAB0* Vec)
+// FUNCTION: 0x10BAEAB0 ?VectorToString@@YA?AVcString@@PBUStruct_10BAEAB0@@@Z
+cString VectorToString(const Struct_10BAEAB0* Vec)
 {
     char Buffer[0x64];
     sprintf(Buffer, DAT_10e8d938, Vec->Unknown00, Vec->Unknown04, Vec->Unknown08);

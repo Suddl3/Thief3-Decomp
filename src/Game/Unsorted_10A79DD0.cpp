@@ -43,7 +43,7 @@ public:
         AppendAll(Other);
         return *this;
     }
-    int FUN_10b9fa20(int* Item);
+    int Add(int* Item);
     void DeleteAll();
     void PushFront(const int* Item);
     void AddUnique(int Item);

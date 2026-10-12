@@ -19,7 +19,7 @@ class Class_10E89AA0 : public Class_10DA0420
 public:
     Class_10E89AA0(int A, int B, int C, int D);
 
-    void FUN_10b92f40(int A, int B);
+    void Init(int A, int B);
 
     void** Unknown00;
 };
@@ -75,5 +75,5 @@ Class_10E89AA0::Class_10E89AA0(int A, int B, int C, int D)
     : Class_10DA0420(A, C)
 {
     Unknown00 = DAT_10e89aa0;
-    FUN_10b92f40(B, D);
+    Init(B, D);
 }

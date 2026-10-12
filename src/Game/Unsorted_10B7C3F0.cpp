@@ -10,26 +10,26 @@ public:
     virtual ~Class_10B7C3F0_Member();
 
     char Unknown04[2];
-    unsigned short Unknown06;
+    unsigned short m_RefCount;
 };
 
-// FUNCTION: 0x10B7C3F0 ?FUN_10b7c3f0@Class_10B7C3F0@@QAEXPAVClass_10B7C3F0_Member@@@Z
-void Class_10B7C3F0::FUN_10b7c3f0(Class_10B7C3F0_Member* New)
+// FUNCTION: 0x10B7C3F0 ?SetRefCounted@Class_10B7C3F0@@QAEXPAVClass_10B7C3F0_Member@@@Z
+void Class_10B7C3F0::SetRefCounted(Class_10B7C3F0_Member* New)
 {
     if (New)
-        New->Unknown06++;
+        New->m_RefCount++;
     Class_10B7C3F0_Member* Old = Unknown54;
     if (Old)
     {
-        Old->Unknown06--;
-        if (Old->Unknown06 == 0)
+        Old->m_RefCount--;
+        if (Old->m_RefCount == 0)
             delete Old;
     }
     Unknown54 = New;
 }
 
-// FUNCTION: 0x10B7C4A0 ?FUN_10b7c4a0@Class_10B7C4A0@@QAEPAV1@XZ
-Class_10B7C4A0* Class_10B7C4A0::FUN_10b7c4a0()
+// FUNCTION: 0x10B7C4A0 ?Reset@Class_10B7C4A0@@QAEPAV1@XZ
+Class_10B7C4A0* Class_10B7C4A0::Reset()
 {
     Unknown00 = 0;
     Unknown04 = 0;
@@ -44,8 +44,8 @@ Class_10B7C4A0* Class_10B7C4A0::FUN_10b7c4a0()
     Unknown60[0][0] = 1.0f;
     Unknown60[1][1] = 1.0f;
     Unknown60[2][2] = 1.0f;
-    Unknown90 = -FLT_MAX;
-    Unknown94 = FLT_MAX;
+    m_Min = -FLT_MAX;
+    m_Max = FLT_MAX;
     Unknown98 = 0;
     return this;
 }

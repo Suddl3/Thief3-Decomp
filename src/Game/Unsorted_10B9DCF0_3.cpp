@@ -152,7 +152,7 @@ public:
     virtual int Virtual56(Class_10BB9FC0* A);
 };
 
-class Class_10B9E410
+class cStateStack
 {
 public:
     void FUN_10b9cf60();
@@ -165,7 +165,7 @@ public:
     }
     void FUN_10b9cf20();
     void FUN_10b9e410();
-    void FUN_10b9d740(int A);
+    void ApplyNextState(int A);
     void FUN_10b9d8d0();
     void FUN_10b9dc80(int A);
     void FUN_10b9dcc0();
@@ -183,11 +183,11 @@ public:
     int Unknown1C;
     int Unknown20;
     char Unknown24[0x14];
-    Class_10B9E410_Member* Unknown38;
+    Class_10B9E410_Member* m_Member;
 };
 
-// FUNCTION: 0x10B9E330 ?FUN_10b9e330@Class_10B9E410@@QAEXHH@Z
-void Class_10B9E410::FUN_10b9e330(int A, int B)
+// FUNCTION: 0x10B9E330 ?FUN_10b9e330@cStateStack@@QAEXHH@Z
+void cStateStack::FUN_10b9e330(int A, int B)
 {
     Top()->Virtual48(A, B);
     if (A == 4)
@@ -209,7 +209,7 @@ void Class_10B9E410::FUN_10b9e330(int A, int B)
                 {
                     Class_10BAC050* Owner = (Class_10BAC050*)Unknown0C->Unknown08;
                     if (Owner->FUN_10baac90(DAT_10f35dec->Unknown08) == 2)
-                        FUN_10b9d740(Unknown38->Virtual56(Unknown0C));
+                        ApplyNextState(m_Member->Virtual56(Unknown0C));
                 }
                 break;
             }

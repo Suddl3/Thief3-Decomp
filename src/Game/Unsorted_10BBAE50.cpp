@@ -78,7 +78,7 @@ void Class_10BBB410::CancelCurrent()
                     if (Key == (int)Unknown08->FUN_10c7d570())
                     {
                         int Value = (int)Unknown210->FUN_10bff2a0();
-                        Unknown220.FUN_10b9fa20(&Value);
+                        Unknown220.Add(&Value);
                         Unknown210 = 0;
                     }
                 }

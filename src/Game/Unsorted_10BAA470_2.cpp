@@ -19,8 +19,8 @@ public:
     UObject* Controller;
 };
 
-// FUNCTION: 0x10BAA660 ?FUN_10baa660@@YAPAVClass_10B9BCA0@@PAVAAIPawn@@@Z
-Class_10B9BCA0* FUN_10baa660(AAIPawn* Pawn)
+// FUNCTION: 0x10BAA660 ?GetAIPawnController@@YAPAVClass_10B9BCA0@@PAVAAIPawn@@@Z
+Class_10B9BCA0* GetAIPawnController(AAIPawn* Pawn)
 {
     return (Class_10B9BCA0*)Cast<AAIPawnController>(Pawn->Controller);
 }

@@ -106,7 +106,7 @@ public:
     Struct_10C05A80 Unknown2C;
     char Pad38[0x88];
     int Unknown0C0;
-    unsigned int Unknown0C4;
+    unsigned int m_Flags;
     char PadC8[0x2c];
     int UnknownF4;
     int UnknownF8;

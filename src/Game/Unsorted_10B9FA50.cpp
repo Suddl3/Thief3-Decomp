@@ -26,20 +26,20 @@ void Class_10B9FBE0::Free()
     }
 }
 
-// FUNCTION: 0x10B9FC20 ?FUN_10b9fc20@Class_10B9FC20@@QAEXXZ
-void Class_10B9FC20::FUN_10b9fc20()
+// FUNCTION: 0x10B9FC20 ?Free@Class_10B9FC20@@QAEXXZ
+void Class_10B9FC20::Free()
 {
     FUN_10b9f6d0(0);
-    if (Unknown04)
+    if (m_Capacity)
     {
-        GetAllocator()->Virtual5(Unknown08);
-        Unknown08 = 0;
-        Unknown04 = 0;
+        GetAllocator()->Virtual5(m_Data);
+        m_Data = 0;
+        m_Capacity = 0;
     }
 }
 
-// FUNCTION: 0x10BA0080 ?FUN_10ba0080@@YAXPAUStruct_10BA0080@@@Z
-void FUN_10ba0080(Struct_10BA0080* Array)
+// FUNCTION: 0x10BA0080 ?DeleteItems@@YAXPAUStruct_10BA0080@@@Z
+void DeleteItems(Struct_10BA0080* Array)
 {
     for (int i = 0; i < Array->Count; i++)
         delete Array->Items[i];

@@ -8,7 +8,7 @@
 class Class_10BAF8A0
 {
 public:
-    void FUN_10baf8a0();
+    void Empty();
 
     char Unknown00[0x28];
     Class_10BAEC40 Unknown28;

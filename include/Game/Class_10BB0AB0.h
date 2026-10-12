@@ -6,11 +6,11 @@
 class Class_10BB0AB0
 {
 public:
-    void FUN_10bb0ab0(int p1);
+    void SetValueAndTime(int p1);
 
     char Unknown00[0x2CC];
     int Unknown2CC;
-    float Unknown2D0;
+    float m_LastSetTime;
 };
 
 #endif // GAME_CLASS_10BB0AB0_H

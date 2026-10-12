@@ -6,7 +6,7 @@
 
 extern void* DAT_10e98e70[];
 
-float FUN_10ba91e0(const Struct_10BA91E0* A, const Struct_10BA91E0* B);
+float Distance(const Struct_10BA91E0* A, const Struct_10BA91E0* B);
 
 class Class_10C1B840
 {
@@ -57,7 +57,7 @@ Class_10E98E70::Class_10E98E70(int A, const Struct_10BA91E0& B, Class_10C7D570* 
     m_Reference = K;
     Unknown0C.Unknown08 += ((Class_10C1BB10_Field118*)C->FUN_10c7d570())->Unknown118;
     Unknown48.Unknown08 += ((Class_10C1BB10_Field118*)C->FUN_10c7d570())->Unknown118 * 0.2f;
-    float V = FUN_10ba91e0(&Unknown0C, &Unknown48) * 0.2f;
+    float V = Distance(&Unknown0C, &Unknown48) * 0.2f;
     Unknown54 = V;
     float W = 16.0f >= V ? 16.0f : V;
     Unknown54 = W;

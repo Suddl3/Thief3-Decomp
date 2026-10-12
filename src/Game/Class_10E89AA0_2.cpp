@@ -114,7 +114,7 @@ public:
     char Pad28[0x4];
     int Unknown2C;
     char Pad30[0x94];
-    unsigned int Unknown0C4;
+    unsigned int m_Flags;
     char PadC8[0x2c];
     int UnknownF4;
     int UnknownF8;
@@ -127,49 +127,49 @@ public:
 class Class_10E89AA0
 {
 public:
-    void FUN_10b92f40(float A, float B);
+    void Init(float A, float B);
     void FUN_10da0ca0(Class_10B92DB0* A);
 
     char Pad00[0x4];
-    Class_1098E330* Unknown04;
+    Class_1098E330* m_Actor;
     int Unknown08;
 };
 
-// FUNCTION: 0x10B92F40 ?FUN_10b92f40@Class_10E89AA0@@QAEXMM@Z
-void Class_10E89AA0::FUN_10b92f40(float A, float B)
+// FUNCTION: 0x10B92F40 ?Init@Class_10E89AA0@@QAEXMM@Z
+void Class_10E89AA0::Init(float A, float B)
 {
     Class_10B92DB0 Obj;
-    Obj.FUN_10b92db0();
-    if (Unknown04 != 0)
+    Obj.SetDefaults();
+    if (m_Actor != 0)
     {
         Obj.Unknown40 = 0.0f;
         Obj.Unknown30.Y = B * 0.4536f;
-        if (!Unknown04->FUN_1098e330(0x1002ab, (int*)&Obj.Unknown40))
+        if (!m_Actor->FUN_1098e330(0x1002ab, (int*)&Obj.Unknown40))
         {
             Obj.Unknown40 = 0.5f;
         }
         Obj.Unknown44 = 0.0f;
-        if (!Unknown04->FUN_1098e330(0x1002ac, (int*)&Obj.Unknown44))
+        if (!m_Actor->FUN_1098e330(0x1002ac, (int*)&Obj.Unknown44))
         {
             Obj.Unknown44 = 0.4f;
         }
         Struct_10978840 Out;
-        if (Unknown04->FUN_10978840(0x8053a, &Out))
+        if (m_Actor->FUN_10978840(0x8053a, &Out))
         {
             Obj.Unknown30.Z = Out.Unknown00;
             Obj.Unknown3C = Out.Unknown04;
         }
         float Value2 = 0.0f;
-        if (Unknown04->FUN_1098e330(0x100604, (int*)&Value2))
+        if (m_Actor->FUN_1098e330(0x100604, (int*)&Value2))
         {
             Obj.Unknown30.Z = Value2;
         }
         float Value3 = 0.0f;
-        if (Unknown04->FUN_1098e330(0x100605, (int*)&Value3))
+        if (m_Actor->FUN_1098e330(0x100605, (int*)&Value3))
         {
             Obj.Unknown3C = Value3;
         }
-        Obj.Unknown00 = Unknown04->Virtual44();
+        Obj.m_Coords = m_Actor->Virtual44();
     }
     Obj.Unknown30.X = A;
     Obj.Unknown48 = 2 + (Unknown08 != 0);

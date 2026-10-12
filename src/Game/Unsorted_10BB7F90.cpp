@@ -13,9 +13,9 @@ float appFrand();
 // FUNCTION: 0x10BB7F90 ?RollInterval@Class_10E90A1C@@QAEXXZ
 void Class_10E90A1C::RollInterval()
 {
-    float Min = Unknown08->FUN_10dbd510(0x100251)->GetFloat();
-    float Max = Unknown08->FUN_10dbd510(0x100252)->GetFloat();
-    Unknown298 = Min + (Max - Min) * appFrand();
+    float Min = m_Schema->FUN_10dbd510(0x100251)->GetFloat();
+    float Max = m_Schema->FUN_10dbd510(0x100252)->GetFloat();
+    m_Interval = Min + (Max - Min) * appFrand();
     Unknown29C = appFrand();
 }
 

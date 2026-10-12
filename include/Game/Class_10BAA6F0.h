@@ -11,7 +11,7 @@ public:
     int FUN_10baa6f0();
 
     char Unknown00[0x34];
-    AAIPawn* Unknown34;
+    AAIPawn* m_Pawn;
 };
 
 #endif // GAME_CLASS_10BAA6F0_H

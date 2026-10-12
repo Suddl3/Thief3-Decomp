@@ -6,11 +6,11 @@
 // FUNCTION: 0x10BAA3D0 ?FUN_10baa3d0@Class_10BAA3D0@@QAE_NXZ
 bool Class_10BAA3D0::FUN_10baa3d0()
 {
-    if (Unknown168 == -1)
+    if (m_CachedValue == -1)
     {
         int Value = 0;
         Unknown34->FUN_1098e330(0x8003e8, &Value);
-        Unknown168 = Value;
+        m_CachedValue = Value;
     }
-    return Unknown168 != 0;
+    return m_CachedValue != 0;
 }
