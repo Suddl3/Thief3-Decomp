@@ -43,7 +43,7 @@ void Class_10AA44B0::Rehash(int Size)
         Class_10AA44B0_Node* Node = OldTable[j];
         while (Node)
         {
-            Insert(*Node, Node->Unknown04);
+            Insert(*Node, Node->m_Name);
             Class_10AA44B0_Node* Next = Node->Next;
             delete Node;
             Node = Next;

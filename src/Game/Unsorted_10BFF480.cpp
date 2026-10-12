@@ -3,7 +3,7 @@
 #include "Game/Struct_10C05A80.h"
 #include "Game/Class_10BFF600.h"
 
-float FUN_10c05a80(const Struct_10C05A80* A, const Struct_10C05A80* B);
+float DistanceSquared3D(const Struct_10C05A80* A, const Struct_10C05A80* B);
 
 // The element type of Unknown18 is not named yet: this function calls its slot 94
 // and reads the position at 0x2C and the flags byte at 0x74.
@@ -131,7 +131,7 @@ int Class_10BFF600::FUN_10bff600(int A, const float* B)
         Class_10BFF600_Unknown18* Element = Unknown18[i];
         if (Element->Virtual94() != 7 && !(Element->Unknown74 & 0x10))
         {
-            float Dist = FUN_10c05a80((const Struct_10C05A80*)B, &Element->Unknown2C);
+            float Dist = DistanceSquared3D((const Struct_10C05A80*)B, &Element->Unknown2C);
             if (Dist < Best)
             {
                 Best = Dist;

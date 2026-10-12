@@ -6,46 +6,46 @@
 
 extern void* DAT_10e99314[];
 
-class Class_10E99314
+class MoveCommand
 {
 public:
-    Class_10E99314* FUN_10c27320(int A, const Class_10E93B5C& B, int C);
+    MoveCommand* Init(int A, const Class_10E93B5C& B, int C);
 
     void** Unknown00;
     int Unknown04;
     Class_10E93B5C Unknown08;
     int Unknown3C;
     int Unknown40;
-    bool Unknown44;
-    bool Unknown45;
+    bool m_Active;
+    bool m_Finished;
     int Unknown48;
 };
 
-// FUNCTION: 0x10C27100 ?FUN_10c27100@Class_10C27100@@QAEXXZ
-void Class_10C27100::FUN_10c27100()
+// FUNCTION: 0x10C27100 ?Update@Class_10C27100@@QAEXXZ
+void Class_10C27100::Update()
 {
-    if (Unknown48 && !Unknown48->FUN_10c3c2c0(0))
+    if (m_Child && !m_Child->FUN_10c3c2c0(0))
     {
-        if (Unknown48)
+        if (m_Child)
         {
-            delete Unknown48;
-            Unknown48 = 0;
+            delete m_Child;
+            m_Child = 0;
         }
-        Unknown44 = false;
-        Unknown45 = true;
+        m_Active = false;
+        m_Finished = true;
     }
 }
 
-// FUNCTION: 0x10C27320 ?FUN_10c27320@Class_10E99314@@QAEPAV1@HABVClass_10E93B5C@@H@Z
-Class_10E99314* Class_10E99314::FUN_10c27320(int A, const Class_10E93B5C& B, int C)
+// FUNCTION: 0x10C27320 ?Init@MoveCommand@@QAEPAV1@HABVClass_10E93B5C@@H@Z
+MoveCommand* MoveCommand::Init(int A, const Class_10E93B5C& B, int C)
 {
     Unknown00 = DAT_10e99314;
     Unknown04 = A;
     Unknown08.Class_10E93B5C::Class_10E93B5C(B);
     Unknown3C = 0;
-    Unknown45 = false;
+    m_Finished = false;
     Unknown48 = 0;
     Unknown40 = C;
-    Unknown44 = true;
+    m_Active = true;
     return this;
 }

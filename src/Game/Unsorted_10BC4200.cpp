@@ -21,11 +21,11 @@ public:
 void Class_10E8BE68::FUN_10bc4200()
 {
     if (!Unknown04->FUN_10bb8c00())
-        Unknown04->FUN_10bb8300();
+        Unknown04->ClearEntry();
 }
 
-// FUNCTION: 0x10BC4220 ?FUN_10bc4220@Class_10BC4220@@QAEHXZ
-int Class_10BC4220::FUN_10bc4220()
+// FUNCTION: 0x10BC4220 ?TakeValue@Class_10BC4220@@QAEHXZ
+int Class_10BC4220::TakeValue()
 {
     int Value = Unknown1C;
     if (Value)

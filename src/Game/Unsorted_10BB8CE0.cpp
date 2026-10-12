@@ -4,8 +4,8 @@
 #include "Game/Class_10BB8CE0.h"
 #include "Game/Class_10C01CE0.h"
 
-// FUNCTION: 0x10BB8CE0 ?FUN_10bb8ce0@Class_10BB8CE0@@QAEXXZ
-void Class_10BB8CE0::FUN_10bb8ce0()
+// FUNCTION: 0x10BB8CE0 ?Reset@Class_10BB8CE0@@QAEXXZ
+void Class_10BB8CE0::Reset()
 {
     Unknown334 = false;
     Unknown335 = false;

@@ -79,7 +79,7 @@ public:
 void Class_10BF3390::FUN_10bf3390()
 {
     Struct_10BF3390_Local Local;
-    if (FUN_10bc4b80(&Local, 0x1b, ((Class_10BF3390_Result*)FUN_10bc4bf0())->Virtual48()))
+    if (FindPosition(&Local, 0x1b, ((Class_10BF3390_Result*)GetTargetLinkType())->Virtual48()))
     {
         float Dist;
         if (FUN_10bf2170(0x1b, 1, &Dist) || Dist > 32.0f)

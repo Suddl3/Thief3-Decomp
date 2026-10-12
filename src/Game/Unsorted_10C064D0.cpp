@@ -23,10 +23,10 @@ public:
 class Class_10C07300
 {
 public:
-    void FUN_10c07300(int Item);
+    void AddItem(int Item);
 
     char Unknown00[0x50];
-    cIntArray Unknown50;
+    cIntArray m_Items;
 };
 
 // FUNCTION: 0x10C06540 ?FUN_10c06540@Class_10C06540@@QAE?AUStruct_10C06540@@XZ
@@ -35,8 +35,8 @@ Struct_10C06540 Class_10C06540::FUN_10c06540()
     return Unknown48;
 }
 
-// FUNCTION: 0x10C07300 ?FUN_10c07300@Class_10C07300@@QAEXH@Z
-void Class_10C07300::FUN_10c07300(int Item)
+// FUNCTION: 0x10C07300 ?AddItem@Class_10C07300@@QAEXH@Z
+void Class_10C07300::AddItem(int Item)
 {
-    Unknown50.Append(Item);
+    m_Items.Append(Item);
 }

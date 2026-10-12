@@ -8,11 +8,11 @@ struct Struct_10C04B70;
 class Class_10C04B70
 {
 public:
-    void FUN_10c04b70(int From, int To, int Count);
+    void MoveItems(int From, int To, int Count);
 
     int Unknown00;
     int Unknown04;
-    Struct_10C04B70* Unknown08;
+    Struct_10C04B70* m_Items;
 };
 
 #endif // GAME_CLASS_10C04B70_H

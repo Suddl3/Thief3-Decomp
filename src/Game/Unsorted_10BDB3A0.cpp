@@ -13,8 +13,8 @@ public:
     float Unknown34;
 };
 
-// FUNCTION: 0x10BDB3A0 ?FUN_10bdb3a0@Class_10BDB3A0@@QAE_NXZ
-bool Class_10BDB3A0::FUN_10bdb3a0()
+// FUNCTION: 0x10BDB3A0 ?IsTargetAbove@Class_10BDB3A0@@QAE_NXZ
+bool Class_10BDB3A0::IsTargetAbove()
 {
     Class_10BFF460* Obj = Unknown04->GetCurrent();
     if (Obj)

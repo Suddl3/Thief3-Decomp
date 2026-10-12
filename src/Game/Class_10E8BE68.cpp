@@ -9,7 +9,7 @@ class Class_10BB8300
 {
 public:
     char Unknown00[8];
-    Class_10BA9EC0* Unknown08;
+    Class_10BA9EC0* m_Owner;
 };
 
 class Class_10E8BE68
@@ -93,7 +93,7 @@ bool Class_10E8BE68::FUN_10bc3fc0()
     double Limit = Virtual65() + Unknown0C;
     if (GetTimeSeconds() < Limit)
         return false;
-    if (static_cast<Class_10C00C70*>(Unknown04->Unknown08->FUN_10ba9ec0())->FUN_10c00c70() == 1)
+    if (static_cast<Class_10C00C70*>(Unknown04->m_Owner->FUN_10ba9ec0())->FUN_10c00c70() == 1)
         return false;
     return true;
 }

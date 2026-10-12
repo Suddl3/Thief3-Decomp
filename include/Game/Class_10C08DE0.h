@@ -12,9 +12,9 @@ public:
     void FUN_10c08d60();
 
     char Unknown00[0x14];
-    int Unknown14;
+    int m_Count;
     int Unknown18;
-    Class_10BAA6B0_Param** Unknown1C;
+    Class_10BAA6B0_Param** m_Params;
     bool Unknown20;
     char Pad21[0x3];
 };

@@ -8,12 +8,12 @@ struct Struct_10BE9A40;
 class Class_10BE9A40
 {
 public:
-    void FUN_10be9a40();
+    void ScheduleNextTime();
 
     char Unknown00[4];
     Struct_10BE9A40* Unknown04;
     char Unknown08[0x70];
-    float Unknown78;
+    float m_NextTime;
 };
 
 #endif // GAME_CLASS_10BE9A40_H

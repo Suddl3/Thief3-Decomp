@@ -37,5 +37,5 @@ void cMeleeStrafeTarget::FUN_10bdafa0()
         Class_10BBB410* Ctrl = Unknown04;
         Ctrl->FUN_10bb8360(Obj->FUN_10bff280(), 1.0f, 0);
     }
-    Unknown04->FUN_10bb8300();
+    Unknown04->ClearEntry();
 }

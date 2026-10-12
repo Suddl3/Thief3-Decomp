@@ -6,7 +6,7 @@
 class Class_10C04830
 {
 public:
-    int FUN_10c04830(int p1);
+    int GetOther(int p1);
 
     char Unknown00[0x24];
     int Unknown24;

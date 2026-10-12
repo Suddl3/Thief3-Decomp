@@ -27,8 +27,8 @@ public:
     virtual void Virtual19(int Value);
 };
 
-// FUNCTION: 0x10C378D0 ?FUN_10c378d0@@YAXPAVClass_10C37960@@PAXH@Z
-void FUN_10c378d0(Class_10C37960* A, void* B, int C)
+// FUNCTION: 0x10C378D0 ?SetItemMode@@YAXPAVClass_10C37960@@PAXH@Z
+void SetItemMode(Class_10C37960* A, void* B, int C)
 {
     ((Class_10C378D0*)B)->Virtual19(C);
     switch (C)

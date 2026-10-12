@@ -8,12 +8,12 @@ class Class_10C7D570;
 class Class_10BB82C0
 {
 public:
-    bool FUN_10bb82c0(int A);
+    bool IsAngleBelow(int A);
 
     char Unknown00[8];
-    Class_10C7D570* Unknown08;
+    Class_10C7D570* m_Owner;
     char Unknown0C[0x278];
-    int Unknown284;
+    int m_Entry;
 };
 
 #endif // GAME_CLASS_10BB82C0_H

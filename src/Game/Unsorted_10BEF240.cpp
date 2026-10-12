@@ -172,8 +172,8 @@ float Class_10BF0360::GetRandomInRange()
     return Min + (Max - Min) * appFrand();
 }
 
-// FUNCTION: 0x10BEF5B0 ?FUN_10bef5b0@Class_10BEF5B0@@QAEMXZ
-float Class_10BEF5B0::FUN_10bef5b0()
+// FUNCTION: 0x10BEF5B0 ?GetRandomInRange@Class_10BEF5B0@@QAEMXZ
+float Class_10BEF5B0::GetRandomInRange()
 {
     float Min = Unknown04->Unknown08->FUN_10dbd510(0x100643)->FUN_10bbdc80();
     float Max = Unknown04->Unknown08->FUN_10dbd510(0x100644)->FUN_10bbdc80();

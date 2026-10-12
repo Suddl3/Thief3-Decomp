@@ -22,8 +22,8 @@ public:
     SoundNotifier() : Class_10E9CBE4() { Unknown04 = 0; }
 };
 
-// FUNCTION: 0x10C1A580 ?FUN_10c1a580@@YAXXZ
-void FUN_10c1a580()
+// FUNCTION: 0x10C1A580 ?AcquireSoundNotifier@@YAXXZ
+void AcquireSoundNotifier()
 {
     if (!DAT_10ff7090)
     {

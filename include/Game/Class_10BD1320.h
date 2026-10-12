@@ -8,12 +8,12 @@ struct Item_10BD1320;
 class Class_10BD1320
 {
 public:
-    int FUN_10bd1320(const Item_10BD1320* Item);
+    int AddItem(const Item_10BD1320* Item);
     void FUN_10bd0410(int NewCount);
 
-    int Unknown00;
+    int m_Count;
     int Unknown04;
-    Item_10BD1320* Unknown08;
+    Item_10BD1320* m_Items;
 };
 
 #endif // GAME_CLASS_10BD1320_H

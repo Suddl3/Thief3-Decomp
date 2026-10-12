@@ -31,7 +31,7 @@ public:
     virtual void Virtual19();
     virtual void Virtual20();
 
-    int FUN_10bc4bf0();
+    int GetTargetLinkType();
 
     Class_10BB86B0* Unknown04;
 };
@@ -46,6 +46,6 @@ public:
 void State_SlipAndFall::FUN_10bcc030()
 {
     Unknown04->FUN_10bb86b0(0.5f);
-    ((Class_10AAF570_Field10*)FUN_10bc4bf0())->Virtual27();
+    ((Class_10AAF570_Field10*)GetTargetLinkType())->Virtual27();
     ((Class_10BB86F0*)Unknown04)->FUN_10bb86f0(GetTimeSeconds());
 }

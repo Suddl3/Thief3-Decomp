@@ -7,7 +7,7 @@ class Class_10BF70E0
 {
 public:
     int FUN_10bf6d70();
-    void FUN_10bf70e0();
+    void Reset();
 
     char Unknown00[0x58];
     int Unknown58;

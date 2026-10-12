@@ -2,8 +2,8 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10E97AF8.h"
 
-// FUNCTION: 0x10C01090 ?FUN_10c01090@Class_10E97AF8@@UAEHPB_J0@Z
-int Class_10E97AF8::FUN_10c01090(const __int64* A, const __int64* B)
+// FUNCTION: 0x10C01090 ?Compare@Class_10E97AF8@@UAEHPB_J0@Z
+int Class_10E97AF8::Compare(const __int64* A, const __int64* B)
 {
     if (*A == *B)
         return 0;

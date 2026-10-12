@@ -9,12 +9,12 @@ class USkeletalMesh;
 class Class_10C2F970
 {
 public:
-    USkeletalMesh* FUN_10c2f970();
+    USkeletalMesh* GetSkeletalMesh();
 
     char Unknown00[8];
     Class_10C7D570* Unknown08;
     char Unknown0C[0x150];
-    USkeletalMesh* Unknown15C;
+    USkeletalMesh* m_SkeletalMesh;
 };
 
 #endif // GAME_CLASS_10C2F970_H

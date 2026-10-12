@@ -3,8 +3,8 @@
 #include "Game/Class_10C1AA80.h"
 #include "Game/Class_10C1AA90.h"
 
-// FUNCTION: 0x10C1AA80 ?FUN_10c1aa80@Class_10C1AA80@@QAEXM@Z
-void Class_10C1AA80::FUN_10c1aa80(float param)
+// FUNCTION: 0x10C1AA80 ?Scale@Class_10C1AA80@@QAEXM@Z
+void Class_10C1AA80::Scale(float param)
 {
     Unknown2C *= param;
 }

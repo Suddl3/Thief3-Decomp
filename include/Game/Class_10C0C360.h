@@ -9,12 +9,12 @@ struct Struct_10C05A80;
 class Class_10C0C360
 {
 public:
-    void FUN_10c0c360(cIntArray* Out, const Struct_10C05A80* Center, float Radius);
+    void FindInRadius(cIntArray* Out, const Struct_10C05A80* Center, float Radius);
 
     int Unknown00;
-    int Unknown04;
+    int m_Count;
     int Unknown08;
-    int* Unknown0C;
+    int* m_Items;
 };
 
 #endif // GAME_CLASS_10C0C360_H

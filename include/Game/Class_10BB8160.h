@@ -8,10 +8,10 @@
 class Class_10BB8160
 {
 public:
-    void FUN_10bb8160(const Info_10BB8160* In);
+    void SetInfo(const Info_10BB8160* In);
 
     char Unknown00[0x2B0];
-    Info_10BB8160 Unknown2B0;
+    Info_10BB8160 m_Info;
 };
 
 #endif // GAME_CLASS_10BB8160_H

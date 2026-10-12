@@ -4,6 +4,6 @@
 #include "Game/Class_10E97B00.h"
 
 // FUNCTION: 0x10C018E0 ??0Class_10E97B00@@QAE@ABV0@@Z
-Class_10E97B00::Class_10E97B00(const Class_10E97B00& Other) : Unknown04(Other.Unknown04)
+Class_10E97B00::Class_10E97B00(const Class_10E97B00& Other) : m_Name(Other.m_Name)
 {
 }

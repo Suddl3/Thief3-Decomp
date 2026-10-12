@@ -15,7 +15,7 @@ class Class_10E97BC0
 {
 public:
     Class_10E97BC0();
-    virtual void FUN_10c08fa0(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 
     int Unknown04;
     Class_10C08E90 Unknown08;
@@ -23,8 +23,8 @@ public:
     char Unknown20;
 };
 
-// FUNCTION: 0x10C08FA0 ?FUN_10c08fa0@Class_10E97BC0@@UAEXAAVFArchive@@@Z
-void Class_10E97BC0::FUN_10c08fa0(FArchive& Ar)
+// FUNCTION: 0x10C08FA0 ?Serialize@Class_10E97BC0@@UAEXAAVFArchive@@@Z
+void Class_10E97BC0::Serialize(FArchive& Ar)
 {
     Ar.Serialize(&Unknown20, 1);
     int Value = Unknown04;

@@ -60,19 +60,19 @@ public:
     virtual void Virtual5();
     virtual void Virtual6();
     virtual void Virtual7();
-    virtual void FUN_10be3e50();
+    virtual void Tick();
 
     bool FUN_10be3b30();
 
     Class_10BB85E0* Unknown04;
 };
 
-// FUNCTION: 0x10BE3E50 ?FUN_10be3e50@State_Fetch@@UAEXXZ
-void State_Fetch::FUN_10be3e50()
+// FUNCTION: 0x10BE3E50 ?Tick@State_Fetch@@UAEXXZ
+void State_Fetch::Tick()
 {
     if (!(FUN_10bc4160() && FUN_10bc4160()->GetLinkedObject() == 0) && !FUN_10be3b30())
         return;
-    DAT_10ff667c->Unknown28->FUN_10bfb910(4);
+    DAT_10ff667c->Unknown28->ClearTime(4);
     Unknown04->FUN_10bb8ee0(0);
     PopState();
 }
@@ -84,8 +84,8 @@ Class_10E95F40::~Class_10E95F40()
     FUN_10c25610();
 }
 
-// FUNCTION: 0x10BE3FF0 ?FUN_10be3ff0@Class_10BE3FF0@@QAEXXZ
-void Class_10BE3FF0::FUN_10be3ff0()
+// FUNCTION: 0x10BE3FF0 ?ResetTimer@Class_10BE3FF0@@QAEXXZ
+void Class_10BE3FF0::ResetTimer()
 {
     Unknown04->Unknown30.FUN_10bfd210();
     Unknown0C = GetTimeSeconds() - (Virtual65() + DAT_10e49684);

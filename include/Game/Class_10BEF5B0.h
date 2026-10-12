@@ -8,7 +8,7 @@ struct Struct_10BEF5B0;
 class Class_10BEF5B0
 {
 public:
-    float FUN_10bef5b0();
+    float GetRandomInRange();
 
     char Unknown00[4];
     Struct_10BEF5B0* Unknown04;

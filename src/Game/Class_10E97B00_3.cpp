@@ -7,5 +7,5 @@ void* FUN_10b232e0(void* A, void* B);
 // FUNCTION: 0x10C01FF0 ?FUN_10c01ff0@Class_10E97B00@@UAEXPAX@Z
 void Class_10E97B00::FUN_10c01ff0(void* A)
 {
-    FUN_10b232e0(A, &Unknown04);
+    FUN_10b232e0(A, &m_Name);
 }

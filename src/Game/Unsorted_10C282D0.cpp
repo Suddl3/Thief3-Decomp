@@ -16,16 +16,16 @@ extern float DAT_10eafbdc;
 
 double GetTimeSeconds();
 
-// FUNCTION: 0x10C28570 ?FUN_10c28570@Class_10C28570@@QAEXXZ
-void Class_10C28570::FUN_10c28570()
+// FUNCTION: 0x10C28570 ?Update@Class_10C28570@@QAEXXZ
+void Class_10C28570::Update()
 {
-    if (Unknown08 != DAT_10eafbdc)
+    if (m_StartTime != DAT_10eafbdc)
     {
-        double EndTime = Unknown08 + Unknown10;
+        double EndTime = m_StartTime + m_Duration;
         if (GetTimeSeconds() > EndTime)
         {
             FUN_10c283f0();
-            Unknown08 = 0;
+            m_StartTime = 0;
         }
     }
 }

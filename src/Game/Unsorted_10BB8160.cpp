@@ -3,8 +3,8 @@
 #include "Game/Class_10BB8160.h"
 #include "Game/Info_10BB8160.h"
 
-// FUNCTION: 0x10BB8160 ?FUN_10bb8160@Class_10BB8160@@QAEXPBUInfo_10BB8160@@@Z
-void Class_10BB8160::FUN_10bb8160(const Info_10BB8160* In)
+// FUNCTION: 0x10BB8160 ?SetInfo@Class_10BB8160@@QAEXPBUInfo_10BB8160@@@Z
+void Class_10BB8160::SetInfo(const Info_10BB8160* In)
 {
-    Unknown2B0 = *In;
+    m_Info = *In;
 }

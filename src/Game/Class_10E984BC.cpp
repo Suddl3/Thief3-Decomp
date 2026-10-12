@@ -10,17 +10,17 @@ class Class_10E984BC : public Class_10E6BF84
 public:
     virtual ~Class_10E984BC();
 
-    int* Unknown04;
+    int* m_Elements;
 };
 
 // FUNCTION: 0x10C12A00 ??1Class_10E984BC@@UAE@XZ
 Class_10E984BC::~Class_10E984BC()
 {
-    if (Unknown04)
+    if (m_Elements)
     {
-        int* Obj = Unknown04 - 1;
+        int* Obj = m_Elements - 1;
         GetAllocator()->Virtual5(Obj);
-        Unknown04 = 0;
+        m_Elements = 0;
     }
 }
 

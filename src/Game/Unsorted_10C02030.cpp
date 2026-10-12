@@ -14,12 +14,12 @@ struct Class_10C02460_Node
 
 struct Struct_10C01F80;
 
-void FUN_10c01f80(Struct_10C01F80* A);
+void ClearItems(Struct_10C01F80* A);
 
 // FUNCTION: 0x10C020A0 ??1Class_10C020A0@@QAE@XZ
 Class_10C020A0::~Class_10C020A0()
 {
-    FUN_10c01f80((Struct_10C01F80*)&Unknown08);
+    ClearItems((Struct_10C01F80*)&Unknown08);
 }
 
 // FUNCTION: 0x10C02460 ??1Class_10C02460@@QAE@XZ

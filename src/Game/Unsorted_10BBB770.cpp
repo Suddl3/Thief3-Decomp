@@ -24,7 +24,7 @@ public:
     void FUN_10baa240(FVector* Out);
 };
 
-FVector FUN_10c055d0(const FVector* V);
+FVector RotateYawMinus90(const FVector* V);
 
 class Class_10BBB8B0
 {
@@ -41,7 +41,7 @@ int Class_10BBB8B0::FUN_10bbb770(float Scale)
 {
     FVector A;
     Unknown08->FUN_10baa240(&A);
-    FVector B = FUN_10c055d0(&A);
+    FVector B = RotateYawMinus90(&A);
     float Factor = Scale * 16.0f;
     B.X *= Factor;
     B.Y *= Factor;

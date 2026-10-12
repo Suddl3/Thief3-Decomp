@@ -43,14 +43,14 @@ int Class_10BD3830::FUN_10bd3830(int A, Object_10BD3830* Obj, int C, int D)
     return 0;
 }
 
-// FUNCTION: 0x10BD4120 ?FUN_10bd4120@Class_10BD4120@@QAEXXZ
-void Class_10BD4120::FUN_10bd4120()
+// FUNCTION: 0x10BD4120 ?Empty@Class_10BD4120@@QAEXXZ
+void Class_10BD4120::Empty()
 {
     FUN_10a20940(0);
     if (Unknown04)
     {
-        GetAllocator()->Virtual5(Unknown08);
-        Unknown08 = 0;
+        GetAllocator()->Virtual5(m_Buffer);
+        m_Buffer = 0;
         Unknown04 = 0;
     }
 }

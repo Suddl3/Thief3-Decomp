@@ -17,8 +17,8 @@ UBOOL FUN_10c211c0(FVector* Normal, FVector* A, FVector* B)
     return V.Z * Normal->Z + V.Y * Normal->Y + V.X * Normal->X > DAT_10eafbdc;
 }
 
-// FUNCTION: 0x10C223A0 ?FUN_10c223a0@Class_10C223A0@@QAEXXZ
-void Class_10C223A0::FUN_10c223a0()
+// FUNCTION: 0x10C223A0 ?Clear@Class_10C223A0@@QAEXXZ
+void Class_10C223A0::Clear()
 {
     FUN_10c20c70(0);
     if (Unknown04)

@@ -10,7 +10,7 @@ struct Struct_10C32330;
 class Class_10C32330 : public Class_10C49740
 {
 public:
-    float FUN_10c32330(Struct_10C32330* Arg);
+    float SumValues(Struct_10C32330* Arg);
 };
 
 #endif // GAME_CLASS_10C32330_H

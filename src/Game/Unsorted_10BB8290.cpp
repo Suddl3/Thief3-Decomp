@@ -11,11 +11,11 @@
 
 cBoneAimController* GetBoneAimController();
 
-// FUNCTION: 0x10BB8330 ?FUN_10bb8330@Class_10BB8330@@QAE_NXZ
-bool Class_10BB8330::FUN_10bb8330()
+// FUNCTION: 0x10BB8330 ?HasEntry@Class_10BB8330@@QAE_NXZ
+bool Class_10BB8330::HasEntry()
 {
-    Class_10C7D570* Item = Unknown08;
-    return GetBoneAimController()->FindEntry(Item->FUN_10c7d570(), &Unknown284) != 0;
+    Class_10C7D570* Item = m_Owner;
+    return GetBoneAimController()->FindEntry(Item->FUN_10c7d570(), &m_Entry) != 0;
 }
 
 // FUNCTION: 0x10BB84F0 ?FUN_10bb84f0@Class_10BB84F0@@QAEXHH@Z

@@ -11,7 +11,7 @@ struct Struct_10C27CB0
     int Unknown08;
 };
 
-void FUN_10c05610(Struct_10C05610* A, Struct_10C27CB0* B, Struct_10C27CB0* C, bool* D);
+void ExpandBoundsList(Struct_10C05610* A, Struct_10C27CB0* B, Struct_10C27CB0* C, bool* D);
 
 // FUNCTION: 0x10C27CB0 ?FUN_10c27cb0@Class_10C27CB0@@QAEXPAUStruct_10C05610@@HHHHHH@Z
 void Class_10C27CB0::FUN_10c27cb0(Struct_10C05610* A, int B, int C, int D, int E, int F, int G)
@@ -19,6 +19,6 @@ void Class_10C27CB0::FUN_10c27cb0(Struct_10C05610* A, int B, int C, int D, int E
     bool Flag = false;
     Struct_10C27CB0 First;
     Struct_10C27CB0 Second;
-    FUN_10c05610(A, &First, &Second, &Flag);
+    ExpandBoundsList(A, &First, &Second, &Flag);
     FUN_10c27a20(First, Second, B, C, D, E, F, G);
 }

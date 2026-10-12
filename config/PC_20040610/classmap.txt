@@ -482,6 +482,7 @@ Class_10BF6B30           cStateMeleeCombat                0x10BF6B30: called on 
 Class_10BFBD70           cIntArray                        named: Count, capacity in bytes and Data form a growable int array, grown and freed through GetAllocator().
 Class_10C00A60           cIntArray                        0x10C00A60: called on this by 0x10A81B10
 Class_10C047F0           AudioController                  0x10C047F0: slot of 0x10E97AF4
+Class_10C05E30           cLineSegment                     named: Constructor stores two endpoints with their X and Y deltas and the slope, FLT_MAX when vertical.
 Class_10C08880           Class_10E97BB8                   0x10C08880: stores 0x10E97BB8
 Class_10C0AA00           Class_10E97BE8                   0x10C0AA00: called on this by 0x10C0AB40
 Class_10C0B960           cAIManager                       0x10C0B960: slot of 0x10E97C18
@@ -493,8 +494,9 @@ Class_10C1A570           SoundNotifier                    0x10C1A570: stores 0x1
 Class_10C1ACA0           Class_10E98F00                   0x10C1ACA0: slot of 0x10E98F00
 Class_10C1AD20           Class_10E98F48                   0x10C1AD20: slot of 0x10E98F48
 Class_10C1B1A0           Class_10E98D08                   0x10C1B1A0: slot of 0x10E98D08
+Class_10C1F650           AuditorySubsystem                named: Debug string 'AuditorySubsystem::ShouldIgnoreFromNoiseMaker' names the owner class.
 Class_10C270B0           Class_10E992D4                   0x10C270B0: slot of 0x10E992D4
-Class_10C27100           Class_10E99314                   0x10C27100: slot of 0x10E99314
+Class_10C27100           MoveCommand                      0x10C27100: slot of 0x10E99314
 Class_10C2EB30           MC_MoveToPoint                   0x10C2EB30: stores 0x10E9AA7C
 Class_10C2EBD0           MC_MoveToPoint                   0x10C2EBD0: slot of 0x10E9AA7C
 Class_10C2ECF0           cMotionControllerAnim            0x10C2ECF0: slot of 0x10E9AC80
@@ -508,6 +510,7 @@ Class_10C2F870           cMotionControllerAnim            0x10C2F870: slot of 0x
 Class_10C2F960           cMotionControllerAnim            0x10C2F960: slot of 0x10E9AC80
 Class_10C306B0           cMotionControllerAnim            0x10C306B0: called on this by 0x10C357D0
 Class_10C311D0           cMotionControllerAnim            0x10C311D0: called on this by 0x10C357D0
+Class_10C323A0           cIndexedList                     named: Node list with Head, Tail and Count; header: values also indexed by a hash table.
 Class_10C35650           cMotionControllerAnim            0x10C35650: slot of 0x10E9AC80
 Class_10C35670           cMotionControllerAnim            0x10C35670: slot of 0x10E9AC80
 Class_10C356A0           cMotionControllerAnim            0x10C356A0: slot of 0x10E9AC80
@@ -621,6 +624,7 @@ Class_10E92118           State_Blinded                    named: Xbox AI_Reactio
 Class_10E92348           State_SlipAndFall                named: Xbox AI_ReactionStates.cpp names State_SlipAndFall; its methods play effect 0x807ff and set a 0.5f value.
 Class_10E92578           State_Choking                    named: Xbox AI_ReactionStates.cpp names State_Choking; override FUN_10bcc1e0 sets Unknown5C and pops, as State_Blinded does.
 Class_10E92A00           State_PlayingPossum              named: Xbox twin vtable (T3Opt 72/72 slots): its own methods' and constructors' debug names say State_PlayingPossum (2), source AI_DeathStates.cpp
+Class_10E92C38           DeathState                       named: Xbox vtable pair, slot 2: message 'DeathState is trying to update in the middle of a havok timestep'.
 Class_10E93020           State_PlayAction                 named: Xbox twin names State_PlayAction (AI_PlayAnimStates.cpp); the class queues actions (m_ActionQueue, PopAction).
 Class_10E93148           State_PlayAnim                   named: Xbox twin vtable (T3Opt 70/70 slots): its own methods' and constructors' debug names say State_PlayAnim (2), source AI_PlayAnimStates.cpp
 Class_10E934D0           State_SearchLook                 named: Xbox twin's class name State_SearchLook (2 hits); its NotifyActivated message names this class.
@@ -643,6 +647,7 @@ Class_10E979DC           MovementController               named: Xbox twin vtabl
 Class_10E97AF4           AudioController                  named: Xbox twin vtable (T3Opt 1/1 slots): its own methods' and constructors' debug names say AudioController (1), source AI_AudioController.cpp
 Class_10E97C18           cAIManager                       named: Xbox twin vtable (T3Opt 25/25 slots): its own methods' and constructors' debug names say cAIManager (3)
 Class_10E98CEC           SoundNotifier                    named: Xbox twin vtable (T3Opt 3/3 slots): its own methods' and constructors' debug names say SoundNotifier (2), source AI_SoundNotifier.cpp
+Class_10E99314           MoveCommand                      named: Xbox T3Opt twin names this class MoveCommand; vtable slot 3 is MC_MoveToPoint's method.
 Class_10E9AA7C           MC_MoveToPoint                   named: Xbox twin vtable (T3Opt 11/11 slots): its own methods' and constructors' debug names say MC_MoveToPoint (1), source AI_MC_MoveToPoint.cpp
 Class_10E9AC80           cMotionControllerAnim            named: Xbox twin vtable names cMotionControllerAnim (5 votes), source AI_MotionControllerAnim.cpp; its code adds and removes MotionCallbacks and queues locomotion commands.
 Class_10E9B5C0           CadenceManager                   named: Xbox twin CadenceManager (CadenceManager.cpp); its update's callees log CadenceTimingDetails.

@@ -3,8 +3,8 @@
 
 #include "Core/Core.h"
 
-// FUNCTION: 0x10C055F0 ?FUN_10c055f0@@YA?AVFVector@@PBV1@@Z
-FVector FUN_10c055f0(const FVector* V)
+// FUNCTION: 0x10C055F0 ?RotateYaw90@@YA?AVFVector@@PBV1@@Z
+FVector RotateYaw90(const FVector* V)
 {
     return FVector(-V->Y, V->X, V->Z);
 }

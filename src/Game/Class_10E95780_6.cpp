@@ -27,10 +27,10 @@ public:
 class Class_10BB8300
 {
 public:
-    void FUN_10bb8300();
+    void ClearEntry();
 
     char Unknown00[8];
-    Class_10BA9EC0* Unknown08;
+    Class_10BA9EC0* m_Owner;
 };
 
 class Class_10FF667C
@@ -82,7 +82,7 @@ void Class_10E95780::FUN_10be2b90(int A)
             Result->FUN_10bf7f90(0, 1);
     }
     FUN_10be2a70();
-    ((Class_10C01CE0*)Unknown04->Unknown08->FUN_10ba9ec0())->RemoveAll();
-    Unknown04->FUN_10bb8300();
+    ((Class_10C01CE0*)Unknown04->m_Owner->FUN_10ba9ec0())->RemoveAll();
+    Unknown04->ClearEntry();
     DAT_10ff667c->Unknown28->FUN_10bfb8d0(3);
 }

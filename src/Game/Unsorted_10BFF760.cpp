@@ -19,8 +19,8 @@ public:
     Class_10BBF5D0 Unknown0C0;
 };
 
-// FUNCTION: 0x10BFFF00 ?FUN_10bfff00@@YGXPAVClass_10BFFF00_Src@@PAVcIntArray@@@Z
-void __stdcall FUN_10bfff00(Class_10BFFF00_Src* Src, cIntArray* Dst)
+// FUNCTION: 0x10BFFF00 ?AppendSourceArray@@YGXPAVClass_10BFFF00_Src@@PAVcIntArray@@@Z
+void __stdcall AppendSourceArray(Class_10BFFF00_Src* Src, cIntArray* Dst)
 {
     for (int i = 0; i < Src->Unknown0C0.FUN_10bbf5d0()->Count; i++)
     {
@@ -31,8 +31,8 @@ void __stdcall FUN_10bfff00(Class_10BFFF00_Src* Src, cIntArray* Dst)
     }
 }
 
-// FUNCTION: 0x10C00280 ?FUN_10c00280@@YAHHHH@Z
-int FUN_10c00280(int A, int B, int C)
+// FUNCTION: 0x10C00280 ?AddWrapped@@YAHHHH@Z
+int AddWrapped(int A, int B, int C)
 {
     int Result = A + B;
     if (B > 0)

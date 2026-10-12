@@ -8,13 +8,13 @@ class Class_10C39220;
 class Class_10C27100
 {
 public:
-    void FUN_10c27100();
+    void Update();
 
     char Unknown00[0x44];
-    bool Unknown44;
-    bool Unknown45;
+    bool m_Active;
+    bool m_Finished;
     char Unknown46[2];
-    Class_10C39220* Unknown48;
+    Class_10C39220* m_Child;
 };
 
 #endif // GAME_CLASS_10C27100_H

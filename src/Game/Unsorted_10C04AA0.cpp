@@ -9,9 +9,9 @@ struct Struct_10C04B70
     char Unknown00[0x1C];
 };
 
-// FUNCTION: 0x10C04B70 ?FUN_10c04b70@Class_10C04B70@@QAEXHHH@Z
-void Class_10C04B70::FUN_10c04b70(int From, int To, int Count)
+// FUNCTION: 0x10C04B70 ?MoveItems@Class_10C04B70@@QAEXHHH@Z
+void Class_10C04B70::MoveItems(int From, int To, int Count)
 {
     if (From != To && Count)
-        memmove(Unknown08 + To, Unknown08 + From, Count * sizeof(Struct_10C04B70));
+        memmove(m_Items + To, m_Items + From, Count * sizeof(Struct_10C04B70));
 }

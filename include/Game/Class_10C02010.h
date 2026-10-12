@@ -8,7 +8,7 @@
 class Class_10C02010
 {
 public:
-    Class_10C02010* FUN_10c02010(Class_10C02010* Other);
+    Class_10C02010* Assign(Class_10C02010* Other);
 
     int Unknown00;
     Class_1090AFD0 Unknown04;

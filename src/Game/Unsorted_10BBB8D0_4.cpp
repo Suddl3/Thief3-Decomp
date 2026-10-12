@@ -63,7 +63,7 @@ public:
 class Class_10BBB440
 {
 public:
-    int FUN_10bbb440(int Key);
+    int Find(int Key);
 
     char Pad00[0x8];
     Class_10BAA580* Unknown08;
@@ -72,10 +72,10 @@ public:
     cIntArray Unknown14;
 };
 
-// FUNCTION: 0x10BBC190 ?FUN_10bbc190@@YAHPAVClass_10BBB440@@HPAVcString@@@Z
-int FUN_10bbc190(Class_10BBB440* Self, int Key, cString* Name)
+// FUNCTION: 0x10BBC190 ?FindOrCreate@@YAHPAVClass_10BBB440@@HPAVcString@@@Z
+int FindOrCreate(Class_10BBB440* Self, int Key, cString* Name)
 {
-    int Found = Self->FUN_10bbb440(Key);
+    int Found = Self->Find(Key);
     if (Found)
         return Found;
     int Info;

@@ -11,7 +11,7 @@ class Class_10BF3390 : public Class_10BC4BF0
 {
 public:
     void FUN_10bf3390();
-    bool FUN_10bc4b80(Struct_10BF3390_Local* A, int B, int C);
+    bool FindPosition(Struct_10BF3390_Local* A, int B, int C);
     bool FUN_10bf2170(int A, int B, float* C);
     void FUN_10bf3180(int A, int B, float C, float D);
 };

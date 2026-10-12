@@ -8,7 +8,7 @@ struct Struct_10C08690;
 
 struct Struct_10C09520;
 
-void FUN_10c09520(Struct_10C09520* A);
+void ClearItems(Struct_10C09520* A);
 
 class Class_10E97BC8;
 
@@ -26,5 +26,5 @@ extern Class_10F46DA0* DAT_10f46da0;
 Class_10E97BC8::~Class_10E97BC8()
 {
     DAT_10f46da0->Virtual2(this);
-    FUN_10c09520(reinterpret_cast<Struct_10C09520*>(&Unknown04));
+    ClearItems(reinterpret_cast<Struct_10C09520*>(&Unknown04));
 }

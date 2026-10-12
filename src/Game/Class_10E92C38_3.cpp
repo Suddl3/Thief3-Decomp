@@ -1,7 +1,7 @@
 // Game/Class_10E92C38_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10E90D70.h"
-#include "Game/Class_10E92C38.h"
+#include "Game/DeathState.h"
 
 struct Struct_10BCEAB0Triple
 {
@@ -29,8 +29,8 @@ public:
 
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 
-// FUNCTION: 0x10BCEAB0 ??0Class_10E92C38@@QAE@HHHHPAX_N@Z
-Class_10E92C38::Class_10E92C38(int A, int B, int C, int D, void* E, bool F)
+// FUNCTION: 0x10BCEAB0 ??0DeathState@@QAE@HHHHPAX_N@Z
+DeathState::DeathState(int A, int B, int C, int D, void* E, bool F)
     : Class_10E90D70(A, B)
 {
     Struct_10BCEAB0Part* Source = (Struct_10BCEAB0Part*)E;

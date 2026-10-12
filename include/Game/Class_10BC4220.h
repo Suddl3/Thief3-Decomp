@@ -6,7 +6,7 @@
 class Class_10BC4220
 {
 public:
-    int FUN_10bc4220();
+    int TakeValue();
 
     char Unknown00[0x1C];
     int Unknown1C;

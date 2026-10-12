@@ -39,7 +39,7 @@ class Class_10E94100 : public cTacticMoveToPoint
 {
 public:
     void FUN_10bc4e30(int A);
-    int FUN_10bc4bf0();
+    int GetTargetLinkType();
 };
 
 class Class_10E94B20 : public Class_10E94100
@@ -144,7 +144,7 @@ void Class_10E94B20::FUN_10bdb260()
         }
         if (!Unknown55)
         {
-            if (((Class_10AAF570_Result*)FUN_10bc4bf0())->Virtual48() != 0x10)
+            if (((Class_10AAF570_Result*)GetTargetLinkType())->Virtual48() != 0x10)
             {
                 Virtual74();
                 return;

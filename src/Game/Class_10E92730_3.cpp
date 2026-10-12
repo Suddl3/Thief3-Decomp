@@ -20,7 +20,7 @@ public:
     void FUN_10be02e0();
 };
 
-float FUN_10c00490();
+float GetFrameDeltaTime();
 
 class Class_10E92730 : public Class_10E95288
 {
@@ -38,7 +38,7 @@ void Class_10E92730::TickCountdown()
     if (FUN_10bc4160()->GetLinkedObject() == 0)
     {
         double Remaining = m_Countdown;
-        m_Countdown = Remaining - FUN_10c00490();
+        m_Countdown = Remaining - GetFrameDeltaTime();
         if (m_Countdown < 0.0f)
             FUN_10be02e0();
     }

@@ -7,8 +7,8 @@ extern char DAT_10f06388[18][0x28];
 
 extern const char DAT_10e47660[];
 
-// FUNCTION: 0x10C0EF90 ?FUN_10c0ef90@@YAHPAPBD@Z
-int FUN_10c0ef90(const char** A)
+// FUNCTION: 0x10C0EF90 ?FindStanceIndex@@YAHPAPBD@Z
+int FindStanceIndex(const char** A)
 {
     for (int i = 0; i < 18; i++)
     {

@@ -4,7 +4,7 @@
 #include "Game/Class_10D9B090.h"
 #include "Game/FArchive.h"
 #include "Game/TimeManager.h"
-#include "Game/Class_10E92C38.h"
+#include "Game/DeathState.h"
 
 Class_10D9B090* FUN_10d9dcb0();
 
@@ -101,8 +101,8 @@ void State_PlayingPossum::FUN_10bcec90()
         PopState();
 }
 
-// FUNCTION: 0x10BCEF30 ?FUN_10bcef30@Class_10E92C38@@UAEXXZ
-void Class_10E92C38::FUN_10bcef30()
+// FUNCTION: 0x10BCEF30 ?FUN_10bcef30@DeathState@@UAEXXZ
+void DeathState::FUN_10bcef30()
 {
     if (Unknown4B && Unknown48)
     {

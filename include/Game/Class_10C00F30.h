@@ -8,11 +8,11 @@ struct Struct_10C00F30;
 class Class_10C00F30
 {
 public:
-    void FUN_10c00f30(int A);
+    void ClearMatching(int A);
 
-    int Unknown00;
+    int m_Count;
     char Unknown04[4];
-    Struct_10C00F30** Unknown08;
+    Struct_10C00F30** m_Entries;
 };
 
 #endif // GAME_CLASS_10C00F30_H

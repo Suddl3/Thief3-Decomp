@@ -17,7 +17,7 @@ public:
     float Unknown5C;
 };
 
-float FUN_10c05a80(const Struct_10C05A80* A, const Struct_10C05A80* B);
+float DistanceSquared3D(const Struct_10C05A80* A, const Struct_10C05A80* B);
 
 class Class_10C0C360_Unknown0C
 {
@@ -26,17 +26,17 @@ public:
     Struct_10C05A80 Unknown38;
 };
 
-// FUNCTION: 0x10C0C360 ?FUN_10c0c360@Class_10C0C360@@QAEXPAVcIntArray@@PBUStruct_10C05A80@@M@Z
-void Class_10C0C360::FUN_10c0c360(cIntArray* Out, const Struct_10C05A80* Center, float Radius)
+// FUNCTION: 0x10C0C360 ?FindInRadius@Class_10C0C360@@QAEXPAVcIntArray@@PBUStruct_10C05A80@@M@Z
+void Class_10C0C360::FindInRadius(cIntArray* Out, const Struct_10C05A80* Center, float Radius)
 {
     float RadiusSq = Radius * Radius;
-    for (int i = 0; i < Unknown04; i++)
+    for (int i = 0; i < m_Count; i++)
     {
-        Class_10C0C360_Unknown0C* Item = (Class_10C0C360_Unknown0C*)Unknown0C[i];
+        Class_10C0C360_Unknown0C* Item = (Class_10C0C360_Unknown0C*)m_Items[i];
         Struct_10C05A80 Pos = Item->Unknown38;
-        if (FUN_10c05a80(&Pos, Center) < RadiusSq)
+        if (DistanceSquared3D(&Pos, Center) < RadiusSq)
         {
-            int* Slot = Unknown0C + i;
+            int* Slot = m_Items + i;
             int Index = Out->Count;
             Out->SetCount(Index + 1);
             Out->Data[Index] = *Slot;

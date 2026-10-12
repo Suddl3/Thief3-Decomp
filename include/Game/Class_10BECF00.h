@@ -9,7 +9,7 @@ class Class_10BECF00 : public Class_10BC4160
 {
 public:
     void FUN_10becf00(int A);
-    int FUN_10bc4bf0();
+    int GetTargetLinkType();
 
     char Unknown08[0x3C];
     int Unknown44;

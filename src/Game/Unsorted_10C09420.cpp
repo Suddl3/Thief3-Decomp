@@ -45,8 +45,8 @@ Class_10E97BC8::Class_10E97BC8() : VTable(DAT_10e97bc8)
     DAT_10f46da0->Virtual1(this, 0x5a, -1, -1);
 }
 
-// FUNCTION: 0x10C09520 ?FUN_10c09520@@YAXPAUStruct_10C09520@@@Z
-void FUN_10c09520(Struct_10C09520* Array)
+// FUNCTION: 0x10C09520 ?ClearItems@@YAXPAUStruct_10C09520@@@Z
+void ClearItems(Struct_10C09520* Array)
 {
     for (int i = 0; i < Array->Count; i++)
         delete Array->Items[i];

@@ -6,8 +6,8 @@ extern Class_10E9CBE4* DAT_10ff7090;
 
 extern void* DAT_10ff7118;
 
-// FUNCTION: 0x10C1A640 ?FUN_10c1a640@@YAXXZ
-void FUN_10c1a640()
+// FUNCTION: 0x10C1A640 ?ReleaseSoundNotifier@@YAXXZ
+void ReleaseSoundNotifier()
 {
     --DAT_10ff7090->Unknown04;
     if (DAT_10ff7090->Unknown04 == 0)

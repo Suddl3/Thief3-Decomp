@@ -59,7 +59,7 @@ public:
     virtual void Virtual18();
     virtual void Virtual19();
     virtual void Virtual20();
-    virtual void FUN_10be1970();
+    virtual void DisableHeadAim();
 
     Class_10E95780_Unknown04* Unknown04;
 };
@@ -72,16 +72,16 @@ struct Struct_10BE1910
     Class_10DBD510* Unknown08;
 };
 
-// FUNCTION: 0x10BE1910 ?FUN_10be1910@Class_10BE1910@@QAEXXZ
-void Class_10BE1910::FUN_10be1910()
+// FUNCTION: 0x10BE1910 ?RandomizeValue@Class_10BE1910@@QAEXXZ
+void Class_10BE1910::RandomizeValue()
 {
     float Min = Unknown04->Unknown08->FUN_10dbd510(0x1006dd)->GetFloat();
     float Max = Unknown04->Unknown08->FUN_10dbd510(0x1006de)->GetFloat();
     Unknown4C = Min + (Max - Min) * appFrand();
 }
 
-// FUNCTION: 0x10BE1970 ?FUN_10be1970@Class_10E95780@@UAEXXZ
-void Class_10E95780::FUN_10be1970()
+// FUNCTION: 0x10BE1970 ?DisableHeadAim@Class_10E95780@@UAEXXZ
+void Class_10E95780::DisableHeadAim()
 {
     FName Name(DAT_10e5052c, FNAME_Add);
     Class_10C7D570* Item = Unknown04->Unknown08;

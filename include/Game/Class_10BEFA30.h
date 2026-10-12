@@ -8,7 +8,7 @@
 class Class_10BEFA30
 {
 public:
-    Class_10BEFA30* FUN_10befa30(const Class_10BEFA30& A);
+    Class_10BEFA30* Assign(const Class_10BEFA30& A);
     Class_10BEFA30& operator=(const Class_10BEFA30& A)
     {
         Unknown04 = A.Unknown04;

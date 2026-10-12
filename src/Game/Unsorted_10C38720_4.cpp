@@ -10,7 +10,7 @@ struct Struct_10C38D90_Pos : public Struct_10C05A50
     float Unknown08;
 };
 
-float FUN_10c05a20(const Struct_10C05A50* A, const Struct_10C05A50* B);
+float Distance2D(const Struct_10C05A50* A, const Struct_10C05A50* B);
 
 // The object at this+0x48: its Virtual34 gives the Class_10C7D570 whose FUN_10c7d570 gives the actor's position.
 class Class_10C38D90_Unknown48
@@ -179,7 +179,7 @@ int Class_10C399C0::CheckInRange(int Obj)
         Target->Virtual70(&Out);
         Struct_10C38D90_Pos Local = Out;
         Struct_10C3D0A0* Actor = (Struct_10C3D0A0*)Unknown48->Virtual34()->FUN_10c7d570();
-        if (FUN_10c05a20(&Local, &Actor->Unknown2C) < Scale)
+        if (Distance2D(&Local, &Actor->Unknown2C) < Scale)
             return Obj;
     }
     return 0;

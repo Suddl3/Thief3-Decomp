@@ -6,11 +6,11 @@
 class Class_10C285C0
 {
 public:
-    void FUN_10c285c0();
+    void ResolveHeadFlex();
 
     int Unknown00;
     char Unknown04[0x1c];
-    int Unknown20;
+    int m_HeadFlex;
 };
 
 #endif // GAME_CLASS_10C285C0_H

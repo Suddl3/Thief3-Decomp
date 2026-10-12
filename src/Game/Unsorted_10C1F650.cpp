@@ -6,7 +6,7 @@
 #include "Game/Class_10971570.h"
 #include "Game/Class_10978090.h"
 #include "Game/Class_Field04.h"
-#include "Game/Class_10C1F650.h"
+#include "Game/AuditorySubsystem.h"
 #include "Game/Class_10AF4BB0.h"
 
 extern void* DAT_10e991d4[];
@@ -27,8 +27,8 @@ public:
     int Unknown08;
 };
 
-// FUNCTION: 0x10C1F650 ?FUN_10c1f650@Class_10C1F650@@QAE_NPAVClass_10971570@@PAH@Z
-bool Class_10C1F650::FUN_10c1f650(Class_10971570* Target, int* Obj)
+// FUNCTION: 0x10C1F650 ?ShouldIgnoreFromNoiseMaker@AuditorySubsystem@@QAE_NPAVClass_10971570@@PAH@Z
+bool AuditorySubsystem::ShouldIgnoreFromNoiseMaker(Class_10971570* Target, int* Obj)
 {
     if (Target && *Obj == DAT_10ff667c->Unknown40)
     {

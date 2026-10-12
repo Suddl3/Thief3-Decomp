@@ -5,8 +5,8 @@
 
 Class_10905A90_Member* GetAllocator();
 
-// FUNCTION: 0x10C1A690 ?FUN_10c1a690@Class_10C1A690@@QAEXXZ
-void Class_10C1A690::FUN_10c1a690()
+// FUNCTION: 0x10C1A690 ?Free@Class_10C1A690@@QAEXXZ
+void Class_10C1A690::Free()
 {
     if (Unknown04)
     {

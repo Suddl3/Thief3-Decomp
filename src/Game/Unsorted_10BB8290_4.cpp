@@ -6,12 +6,12 @@
 
 cBoneAimController* GetBoneAimController();
 
-// FUNCTION: 0x10BB8300 ?FUN_10bb8300@Class_10BB8300@@QAEXXZ
-void Class_10BB8300::FUN_10bb8300()
+// FUNCTION: 0x10BB8300 ?ClearEntry@Class_10BB8300@@QAEXXZ
+void Class_10BB8300::ClearEntry()
 {
-    if (Unknown284)
+    if (m_Entry)
     {
-        GetBoneAimController()->FUN_10a2c2a0(Unknown08->FUN_10c7d570(), &Unknown284);
-        Unknown284 = 0;
+        GetBoneAimController()->FUN_10a2c2a0(m_Owner->FUN_10c7d570(), &m_Entry);
+        m_Entry = 0;
     }
 }

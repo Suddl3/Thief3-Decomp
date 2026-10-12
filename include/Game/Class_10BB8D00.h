@@ -13,7 +13,7 @@ public:
     char Unknown00[8];
     Class_10C7D570* Unknown08;
     char Unknown0C[0x2E0];
-    float Unknown2EC;
+    float m_LastUpdateTime;
 };
 
 #endif // GAME_CLASS_10BB8D00_H

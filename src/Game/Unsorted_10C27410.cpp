@@ -17,14 +17,14 @@ public:
     virtual int Virtual1();
 };
 
-// FUNCTION: 0x10C27410 ?FUN_10c27410@Class_10C27410@@QAEXH@Z
-void Class_10C27410::FUN_10c27410(int A)
+// FUNCTION: 0x10C27410 ?UpdateFlags@Class_10C27410@@QAEXH@Z
+void Class_10C27410::UpdateFlags(int A)
 {
-    for (int i = 0; i < Unknown08; i++)
+    for (int i = 0; i < m_Count; i++)
     {
-        Class_10C27410_Unknown10* Item = Unknown10[i];
+        Class_10C27410_Unknown10* Item = m_Items[i];
         if (Item->Virtual0(A) == 1)
-            Unknown04 |= 1 << Item->Virtual1();
+            m_Flags |= 1 << Item->Virtual1();
     }
 }
 

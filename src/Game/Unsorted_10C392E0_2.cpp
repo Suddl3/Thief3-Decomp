@@ -140,7 +140,7 @@ void FUN_10c37cb0(void* A, Struct_10C05A80* B, int C, int D, int E, bool F);
 
 bool FUN_10c37d30(void* A, int B, int C, float D, float E, int F, int G, Struct_10C37D30 H);
 
-float FUN_10c05a80(const Struct_10C05A80* A, const Struct_10C05A80* B);
+float DistanceSquared3D(const Struct_10C05A80* A, const Struct_10C05A80* B);
 
 class AAIPawn;
 
@@ -277,7 +277,7 @@ void Class_10C39220::MoveToCurrent()
         if (Sub != 0 && GetCurrent((int)&Pos) == 1)
         {
             Struct_10C05A80 Copy = *Sub->Virtual21();
-            if (FUN_10c05a80(&Pos, &Copy) < DAT_10e49684)
+            if (DistanceSquared3D(&Pos, &Copy) < DAT_10e49684)
             {
                 return;
             }

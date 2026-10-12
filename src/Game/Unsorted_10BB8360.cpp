@@ -16,16 +16,16 @@ bool Class_10BB8400::FUN_10bb8400()
     return !((Object_10AAF570*)Unknown0C->GetLinkType())->Virtual59();
 }
 
-// FUNCTION: 0x10BB84A0 ?FUN_10bb84a0@Class_10BB84A0@@QAEHXZ
-int Class_10BB84A0::FUN_10bb84a0()
+// FUNCTION: 0x10BB84A0 ?IsExpired@Class_10BB84A0@@QAEHXZ
+int Class_10BB84A0::IsExpired()
 {
-    if (GetTimeSeconds() > Unknown2D8)
+    if (GetTimeSeconds() > m_ExpireTime)
         return 1;
     return 0;
 }
 
-// FUNCTION: 0x10BB84D0 ?FUN_10bb84d0@Class_10BB84D0@@QAEXXZ
-void Class_10BB84D0::FUN_10bb84d0()
+// FUNCTION: 0x10BB84D0 ?StartTimeout@Class_10BB84D0@@QAEXXZ
+void Class_10BB84D0::StartTimeout()
 {
-    Unknown2D8 = GetTimeSeconds() + 10.0;
+    m_ExpireTime = GetTimeSeconds() + 10.0;
 }

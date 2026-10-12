@@ -6,7 +6,7 @@
 class Class_10BFB8C0
 {
 public:
-    float FUN_10bfb8c0(int Index);
+    float GetTime(int Index);
 
     float Unknown00[1];
 };

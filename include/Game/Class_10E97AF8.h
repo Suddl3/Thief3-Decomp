@@ -7,7 +7,7 @@ class Class_10E97AF8
 {
 public:
     virtual void Virtual0();
-    virtual int FUN_10c01090(const __int64* A, const __int64* B);
+    virtual int Compare(const __int64* A, const __int64* B);
 };
 
 #endif // GAME_CLASS_10E97AF8_H

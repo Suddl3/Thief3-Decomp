@@ -8,10 +8,10 @@
 class Class_10C04D90
 {
 public:
-    bool FUN_10c04d90(int Value);
+    bool AddValue(int Value);
 
     char Unknown00[0x20];
-    cIntArray Unknown20;
+    cIntArray m_Values;
 };
 
 #endif // GAME_CLASS_10C04D90_H

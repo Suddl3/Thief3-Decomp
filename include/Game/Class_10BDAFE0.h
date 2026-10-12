@@ -8,7 +8,7 @@ struct Struct_10BDAFE0;
 class Class_10BDAFE0
 {
 public:
-    void FUN_10bdafe0();
+    void StartRandomTimer();
 
     char Unknown00[4];
     Struct_10BDAFE0* Unknown04;

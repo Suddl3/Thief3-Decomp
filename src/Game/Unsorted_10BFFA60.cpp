@@ -100,7 +100,7 @@ public:
     int FUN_10bbf140(cIntArray* B, cIntArray* A);
 };
 
-void FUN_10bff980(Class_10BFF980_Param* Value, cIntArray* B, cIntArray* A);
+void SplitPointsByClass(Class_10BFF980_Param* Value, cIntArray* B, cIntArray* A);
 
 // FUNCTION: 0x10BFFDE0 ?FUN_10bffde0@@YGHPAVClass_1096D780@@@Z
 int __stdcall FUN_10bffde0(Class_1096D780* Param)
@@ -110,7 +110,7 @@ int __stdcall FUN_10bffde0(Class_1096D780* Param)
     {
         cIntArray B;
         cIntArray A;
-        FUN_10bff980((Class_10BFF980_Param*)Param->Get(), &B, &A);
+        SplitPointsByClass((Class_10BFF980_Param*)Param->Get(), &B, &A);
         return Point->FUN_10bbf140(&B, &A);
     }
     return 0;

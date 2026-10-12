@@ -100,7 +100,7 @@ public:
     virtual int FUN_10be4b30();
     virtual int FUN_10be4b50();
 
-    cString FUN_10be8840();
+    cString GetRedAlertName();
 
     bool Unknown6C;
     char Pad6D[0x3];

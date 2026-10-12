@@ -87,7 +87,7 @@ public:
     void FUN_10bc4e30(int A);
 
     // The accessor at 0x10BC4BF0, which the compiler inlines here.
-    int FUN_10bc4bf0()
+    int GetTargetLinkType()
     {
         Class_10AAF570* Target = Unknown04->Unknown0C;
         if (!Target)
@@ -101,11 +101,11 @@ public:
 // FUNCTION: 0x10BC4E30 ?FUN_10bc4e30@Class_10E94100@@QAEXH@Z
 void Class_10E94100::FUN_10bc4e30(int A)
 {
-    if (FUN_10bc4bf0())
+    if (GetTargetLinkType())
     {
         Class_109A6AA0 Local;
         Virtual67((int*)&Local);
         if (!Local.FUN_109a6aa0())
-            ((Class_10AAF570_Field10*)FUN_10bc4bf0())->Virtual69((int*)&Local, A);
+            ((Class_10AAF570_Field10*)GetTargetLinkType())->Virtual69((int*)&Local, A);
     }
 }

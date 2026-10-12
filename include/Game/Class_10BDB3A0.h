@@ -8,7 +8,7 @@ class Class_10BBB410;
 class Class_10BDB3A0
 {
 public:
-    bool FUN_10bdb3a0();
+    bool IsTargetAbove();
 
     char Unknown00[0x4];
     Class_10BBB410* Unknown04;

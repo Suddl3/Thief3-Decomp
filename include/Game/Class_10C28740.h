@@ -6,11 +6,11 @@
 class Class_10C28740
 {
 public:
-    void FUN_10c28740();
+    void ResolveSpineFlex();
 
     int Unknown00;
     char Unknown04[0x24];
-    int Unknown28;
+    int m_SpineFlex;
 };
 
 #endif // GAME_CLASS_10C28740_H

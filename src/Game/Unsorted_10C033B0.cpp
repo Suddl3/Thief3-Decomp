@@ -10,8 +10,8 @@ struct Struct_10C033B0
     float* Unknown08;
 };
 
-// FUNCTION: 0x10C033B0 ?FUN_10c033b0@@YAXPAUStruct_10C033B0@@PAV?$vector@HV?$allocator@H@std@@@std@@PA_NMM@Z
-void FUN_10c033b0(Struct_10C033B0* Items, std::vector<int>* Result, bool* Out, float A, float B)
+// FUNCTION: 0x10C033B0 ?CollectIndices@@YAXPAUStruct_10C033B0@@PAV?$vector@HV?$allocator@H@std@@@std@@PA_NMM@Z
+void CollectIndices(Struct_10C033B0* Items, std::vector<int>* Result, bool* Out, float A, float B)
 {
     for (int i = 0; i < Items->Count; i++)
     {

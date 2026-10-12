@@ -2,11 +2,11 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Core/Core.h"
 #include "Game/FCoords.h"
-#include "Game/Class_10C05E30.h"
+#include "Game/cLineSegment.h"
 
 extern FCoords DAT_10f46de8;
 
-bool FUN_10c054e0(float A, float B, float C);
+bool IsNearlyEqual(float A, float B, float C);
 
 // FUNCTION: 0x10C05BC0 ?FUN_10c05bc0@@YAMHHHM@Z
 float FUN_10c05bc0(int A, int B, int Rot, float Distance)
@@ -24,8 +24,8 @@ float FUN_10c05bc0(int A, int B, int Rot, float Distance)
     return Delta.X * Dir.Y - Delta.Y * Dir.X;
 }
 
-// FUNCTION: 0x10C05E30 ??0Class_10C05E30@@QAE@HH@Z
-Class_10C05E30::Class_10C05E30(int A, int B)
+// FUNCTION: 0x10C05E30 ??0cLineSegment@@QAE@HH@Z
+cLineSegment::cLineSegment(int A, int B)
 {
     const FVector* First = (const FVector*)A;
     const FVector* Second = (const FVector*)B;
@@ -45,11 +45,11 @@ Class_10C05E30::Class_10C05E30(int A, int B)
         Unknown18 = *First;
     }
     float DY = Unknown18.Y - Unknown0C.Y;
-    Unknown04 = DY;
+    m_DeltaY = DY;
     float DX = Unknown18.X - Unknown0C.X;
-    Unknown00 = DX;
-    if (!FUN_10c054e0(DX, 0.0f, 3.4028235e+38f))
-        Unknown08 = DY / DX;
+    m_DeltaX = DX;
+    if (!IsNearlyEqual(DX, 0.0f, 3.4028235e+38f))
+        m_Slope = DY / DX;
     else
-        Unknown08 = 3.4028235e+38f;
+        m_Slope = 3.4028235e+38f;
 }

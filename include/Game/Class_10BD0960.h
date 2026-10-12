@@ -8,11 +8,11 @@ class Class_10C1A690;
 class Class_10BD0960
 {
 public:
-    void FUN_10bd0960();
+    void Empty();
 
-    int Unknown00;
+    int m_Count;
     char Unknown04[4];
-    Class_10C1A690* Unknown08;
+    Class_10C1A690* m_Items;
 };
 
 #endif // GAME_CLASS_10BD0960_H

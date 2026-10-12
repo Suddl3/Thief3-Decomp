@@ -5,7 +5,7 @@
 class Class_10C1A690
 {
 public:
-    void FUN_10c1a690();
+    void Free();
 
     char Unknown00[4];
 };
@@ -28,7 +28,7 @@ void Class_10AA44B0::Clear(int Size)
         while (Node)
         {
             Class_10AA44B0_Node* Next = Node->Next;
-            Node->Key.FUN_10c1a690();
+            Node->Key.Free();
             ::operator delete(Node);
             Node = Next;
         }

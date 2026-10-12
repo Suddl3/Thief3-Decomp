@@ -13,8 +13,8 @@ struct Struct_10BD1EF0
     Struct_10BA91E0* Data;
 };
 
-// FUNCTION: 0x10BD1EF0 ?FUN_10bd1ef0@@YAMHHHPAUStruct_10BD1EF0@@@Z
-float FUN_10bd1ef0(int A, int B, int C, Struct_10BD1EF0* D)
+// FUNCTION: 0x10BD1EF0 ?SumSegments@@YAMHHHPAUStruct_10BD1EF0@@@Z
+float SumSegments(int A, int B, int C, Struct_10BD1EF0* D)
 {
     if (D->Count == 0)
         return DAT_10eafbdc;

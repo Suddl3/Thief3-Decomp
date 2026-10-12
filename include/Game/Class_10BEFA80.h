@@ -6,10 +6,10 @@
 class Class_10BEFA80
 {
 public:
-    void FUN_10befa80();
+    void SetRandomEndTime();
 
     char Unknown00[0x224];
-    float Unknown224;
+    float m_EndTime;
 };
 
 #endif // GAME_CLASS_10BEFA80_H

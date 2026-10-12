@@ -7,7 +7,7 @@ extern float DAT_10eafbdc;
 
 extern float DAT_10f069d8;
 
-float FUN_10c05a20(const Struct_10C05A50* A, const Struct_10C05A50* B);
+float Distance2D(const Struct_10C05A50* A, const Struct_10C05A50* B);
 
 class Class_10E9B168
 {
@@ -55,7 +55,7 @@ void FUN_10c3d080(float Arg)
 // FUNCTION: 0x10C3D0A0 ?IsInRange@Class_10E9B168@@UAEHXZ
 int Class_10E9B168::IsInRange()
 {
-    if (FUN_10c05a20(&Unknown04->Unknown2C, &Unknown1C) < m_Range)
+    if (Distance2D(&Unknown04->Unknown2C, &Unknown1C) < m_Range)
         return 1;
     return 0;
 }

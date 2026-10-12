@@ -21,9 +21,9 @@ int Class_10C15EB0::FUN_10c15eb0()
     return 0;
 }
 
-// FUNCTION: 0x10C161F0 ?FUN_10c161f0@Class_10C161F0@@QAEXPAUStruct_10C161F0@@@Z
-void Class_10C161F0::FUN_10c161f0(Struct_10C161F0* Source)
+// FUNCTION: 0x10C161F0 ?Remove@Class_10C161F0@@QAEXPAUStruct_10C161F0@@@Z
+void Class_10C161F0::Remove(Struct_10C161F0* Source)
 {
-    Unknown04.FUN_10c16030(Source->Unknown10);
-    Unknown4014.FUN_10c15e60(Source);
+    m_ById.FUN_10c16030(Source->Unknown10);
+    Unknown4014.Remove(Source);
 }

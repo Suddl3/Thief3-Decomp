@@ -14,8 +14,8 @@ struct Struct_10C32330
     int* Unknown08;
 };
 
-// FUNCTION: 0x10C32330 ?FUN_10c32330@Class_10C32330@@QAEMPAUStruct_10C32330@@@Z
-float Class_10C32330::FUN_10c32330(Struct_10C32330* Arg)
+// FUNCTION: 0x10C32330 ?SumValues@Class_10C32330@@QAEMPAUStruct_10C32330@@@Z
+float Class_10C32330::SumValues(Struct_10C32330* Arg)
 {
     float Sum = 0.0f;
     for (int* P = Arg->Unknown04; P != Arg->Unknown08; P++)

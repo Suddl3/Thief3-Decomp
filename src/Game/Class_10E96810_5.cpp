@@ -105,7 +105,7 @@ public:
 int Class_10E96810::FUN_10be4b30()
 {
     Class_10BB95C0* Owner = Unknown04;
-    if (Owner->FUN_10bb95c0(Owner->Unknown08->FUN_10ba9ee0()))
+    if (Owner->Contains(Owner->Unknown08->FUN_10ba9ee0()))
         return 0;
     return 0x36;
 }

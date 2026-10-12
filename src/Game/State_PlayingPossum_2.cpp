@@ -8,7 +8,7 @@ class Class_10BC4BF0
 public:
     virtual void Virtual0();
 
-    int FUN_10bc4bf0();
+    int GetTargetLinkType();
 };
 
 class cTacticMoveToPoint : public Class_10BC4BF0
@@ -57,6 +57,6 @@ void State_PlayingPossum::FUN_10bce970()
     {
         m_StartTime = TimeManager::Instance()->GetGameTime();
         m_EndTime = m_StartTime + m_Duration;
-        ((Class_10C30640*)FUN_10bc4bf0())->FUN_10c30640();
+        ((Class_10C30640*)GetTargetLinkType())->FUN_10c30640();
     }
 }

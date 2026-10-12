@@ -25,10 +25,10 @@ Class_10B9CAC0* Class_10BB7F30::FUN_10bb7f30()
     return 0;
 }
 
-// FUNCTION: 0x10BB7F60 ?FUN_10bb7f60@Class_10BB7F60@@QAEMXZ
-float Class_10BB7F60::FUN_10bb7f60()
+// FUNCTION: 0x10BB7F60 ?GetRoll@Class_10BB7F60@@QAEMXZ
+float Class_10BB7F60::GetRoll()
 {
-    if (Unknown29C == DAT_10eafbdc)
-        Unknown29C = appFrand();
-    return Unknown29C;
+    if (m_Roll == DAT_10eafbdc)
+        m_Roll = appFrand();
+    return m_Roll;
 }

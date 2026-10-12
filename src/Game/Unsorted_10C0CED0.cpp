@@ -60,7 +60,7 @@ public:
     virtual void Virtual11();
     virtual void Virtual12();
     virtual void Virtual13();
-    virtual int FUN_10c128b0();
+    virtual int GetAIMovementModelClass();
 };
 
 extern int DAT_10ff660c;
@@ -86,7 +86,7 @@ public:
     virtual void Virtual11();
     virtual void Virtual12();
     virtual void Virtual13();
-    virtual int FUN_10c128e0();
+    virtual int GetAIBehaviorModelClass();
 };
 
 extern int DAT_10ff6614;
@@ -112,7 +112,7 @@ public:
     virtual void Virtual11();
     virtual void Virtual12();
     virtual void Virtual13();
-    virtual int FUN_10c12910();
+    virtual int GetAICombatModelClass();
 };
 
 extern int DAT_10ff6618;
@@ -138,7 +138,7 @@ public:
     virtual void Virtual11();
     virtual void Virtual12();
     virtual void Virtual13();
-    virtual int FUN_10c12940();
+    virtual int GetAIFactionModelClass();
 };
 
 extern void* DAT_10e984bc[];
@@ -148,7 +148,7 @@ public:
     Class_10E984BC();
 
     void** Unknown00;
-    int Unknown04;
+    int m_Elements;
 };
 
 extern void* DAT_10e984f4[];
@@ -179,15 +179,15 @@ Class_10E97CB4::~Class_10E97CB4()
     DAT_10f46da0->Virtual2(this);
 }
 
-// FUNCTION: 0x10C0EE30 ?FUN_10c0ee30@Class_10E97CC0@@UAEXHHPAUStruct_10C0EE30@@H@Z
-void Class_10E97CC0::FUN_10c0ee30(int A, int B, Struct_10C0EE30* C, int D)
+// FUNCTION: 0x10C0EE30 ?HandleMessage@Class_10E97CC0@@UAEXHHPAUStruct_10C0EE30@@H@Z
+void Class_10E97CC0::HandleMessage(int A, int B, Struct_10C0EE30* C, int D)
 {
     if (A == 0x5A && C && C->Unknown08 == 0)
         FUN_10c0eb00();
 }
 
-// FUNCTION: 0x10C0EE90 ?FUN_10c0ee90@Class_10C0EE90@@QAEPAV1@XZ
-Class_10C0EE90* Class_10C0EE90::FUN_10c0ee90()
+// FUNCTION: 0x10C0EE90 ?Init@Class_10C0EE90@@QAEPAV1@XZ
+Class_10C0EE90* Class_10C0EE90::Init()
 {
     Unknown00 = 0;
     Unknown04 = 0;
@@ -208,8 +208,8 @@ int Class_10E8C378::GetAISensoryModelClass()
     return DAT_10ff6608;
 }
 
-// FUNCTION: 0x10C128B0 ?FUN_10c128b0@Class_10E8C42C@@UAEHXZ
-int Class_10E8C42C::FUN_10c128b0()
+// FUNCTION: 0x10C128B0 ?GetAIMovementModelClass@Class_10E8C42C@@UAEHXZ
+int Class_10E8C42C::GetAIMovementModelClass()
 {
     if (DAT_10ff6610 == 0)
     {
@@ -219,8 +219,8 @@ int Class_10E8C42C::FUN_10c128b0()
     return DAT_10ff6610;
 }
 
-// FUNCTION: 0x10C128E0 ?FUN_10c128e0@Class_10E8C3B4@@UAEHXZ
-int Class_10E8C3B4::FUN_10c128e0()
+// FUNCTION: 0x10C128E0 ?GetAIBehaviorModelClass@Class_10E8C3B4@@UAEHXZ
+int Class_10E8C3B4::GetAIBehaviorModelClass()
 {
     if (DAT_10ff660c == 0)
     {
@@ -230,8 +230,8 @@ int Class_10E8C3B4::FUN_10c128e0()
     return DAT_10ff660c;
 }
 
-// FUNCTION: 0x10C12910 ?FUN_10c12910@Class_10E8C3F0@@UAEHXZ
-int Class_10E8C3F0::FUN_10c12910()
+// FUNCTION: 0x10C12910 ?GetAICombatModelClass@Class_10E8C3F0@@UAEHXZ
+int Class_10E8C3F0::GetAICombatModelClass()
 {
     if (DAT_10ff6614 == 0)
     {
@@ -241,8 +241,8 @@ int Class_10E8C3F0::FUN_10c12910()
     return DAT_10ff6614;
 }
 
-// FUNCTION: 0x10C12940 ?FUN_10c12940@Class_10E8C468@@UAEHXZ
-int Class_10E8C468::FUN_10c12940()
+// FUNCTION: 0x10C12940 ?GetAIFactionModelClass@Class_10E8C468@@UAEHXZ
+int Class_10E8C468::GetAIFactionModelClass()
 {
     if (DAT_10ff6618 == 0)
     {
@@ -262,7 +262,7 @@ bool Class_10E8C4A4::FUN_10c129b0()
 Class_10E984BC::Class_10E984BC()
 {
     Unknown00 = DAT_10e984bc;
-    Unknown04 = 0;
+    m_Elements = 0;
 }
 
 // FUNCTION: 0x10C12A90 ?Init@Class_10E984F4@@QAEPAV1@XZ

@@ -6,7 +6,7 @@
 class Class_10BF02A0
 {
 public:
-    float FUN_10bf02a0();
+    float GetTotal();
 
     char Unknown00[0x154];
     float* Unknown154;

@@ -18,16 +18,16 @@ public:
     unsigned char Unknown8C;
 };
 
-class Class_10E99314
+class MoveCommand
 {
 public:
-    ~Class_10E99314();
+    ~MoveCommand();
 
     void** Unknown00;
     char Unknown04[0x48];
 };
 
-class Class_10C37390 : public Class_10E99314
+class Class_10C37390 : public MoveCommand
 {
 public:
     ~Class_10C37390();

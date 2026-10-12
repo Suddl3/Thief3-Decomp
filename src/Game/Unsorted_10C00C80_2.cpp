@@ -7,7 +7,7 @@
 #include "Game/Class_10E97B00.h"
 
 // FUNCTION: 0x10C013A0 ??0Class_10E97B00@@QAE@PBD@Z
-Class_10E97B00::Class_10E97B00(const char* Name) : Unknown04(Name)
+Class_10E97B00::Class_10E97B00(const char* Name) : m_Name(Name)
 {
 }
 

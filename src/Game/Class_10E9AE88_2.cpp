@@ -2,16 +2,16 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10E98C8C.h"
 
-class Class_10E99314
+class MoveCommand
 {
 public:
-    ~Class_10E99314();
+    ~MoveCommand();
 
     void** Unknown00;
     char Unknown04[0x48];
 };
 
-class Class_10E9ADE8 : public Class_10E99314
+class Class_10E9ADE8 : public MoveCommand
 {
 public:
     Class_10E98C8C Unknown4C;

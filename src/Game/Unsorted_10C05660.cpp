@@ -3,8 +3,8 @@
 
 extern float DAT_10eafbdc;
 
-// FUNCTION: 0x10C059C0 ?FUN_10c059c0@@YAMPAM00@Z
-float FUN_10c059c0(float* A, float* B, float* C)
+// FUNCTION: 0x10C059C0 ?HeightOnLine@@YAMPAM00@Z
+float HeightOnLine(float* A, float* B, float* C)
 {
     float Diff = C[0] - A[0];
     if (!(Diff >= DAT_10eafbdc))

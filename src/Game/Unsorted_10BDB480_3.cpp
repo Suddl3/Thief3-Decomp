@@ -15,7 +15,7 @@ public:
 class Class_10E94218 : public Class_10E90D70
 {
 public:
-    Class_10E94218* FUN_10bdb480(int A, int B, int C);
+    Class_10E94218* Construct(int A, int B, int C);
 
     int Unknown40;
     int Unknown44[3];
@@ -27,7 +27,7 @@ extern void* DAT_10e94338[];
 class Class_10E94338 : public Class_10E90D70
 {
 public:
-    Class_10E94338* FUN_10bdb4c0(int A, int B, int C);
+    Class_10E94338* Construct(int A, int B, int C);
 
     int Unknown40;
     int Unknown44[3];
@@ -39,7 +39,7 @@ extern void* DAT_10e94458[];
 class Class_10E94458 : public Class_10E90D70
 {
 public:
-    Class_10E94458* FUN_10bdb500(int A, int B, int C, int D, int E);
+    Class_10E94458* Construct(int A, int B, int C, int D, int E);
 
     int Unknown40;
     int Unknown44[3];
@@ -84,7 +84,7 @@ extern void* DAT_10e94698[];
 class Class_10E94698 : public Class_10E90D70
 {
 public:
-    Class_10E94698* FUN_10bdb620(int A, int B, int C, int D);
+    Class_10E94698* Construct(int A, int B, int C, int D);
 
     int Unknown40;
     int Unknown44[3];
@@ -101,7 +101,7 @@ extern void* DAT_10e947b8[];
 class cMeleeStrafeTarget : public Class_10E90D70
 {
 public:
-    cMeleeStrafeTarget* FUN_10bdb6c0(int A, int B, int C, int D);
+    cMeleeStrafeTarget* Construct(int A, int B, int C, int D);
 
     int Unknown40;
     FArray Unknown44;
@@ -116,8 +116,8 @@ public:
     int Unknown70;
 };
 
-// FUNCTION: 0x10BDB480 ?FUN_10bdb480@Class_10E94218@@QAEPAV1@HHH@Z
-Class_10E94218* Class_10E94218::FUN_10bdb480(int A, int B, int C)
+// FUNCTION: 0x10BDB480 ?Construct@Class_10E94218@@QAEPAV1@HHH@Z
+Class_10E94218* Class_10E94218::Construct(int A, int B, int C)
 {
     this->Class_10E90D70::Class_10E90D70(A, B);
     Unknown40 = C;
@@ -128,8 +128,8 @@ Class_10E94218* Class_10E94218::FUN_10bdb480(int A, int B, int C)
     return this;
 }
 
-// FUNCTION: 0x10BDB4C0 ?FUN_10bdb4c0@Class_10E94338@@QAEPAV1@HHH@Z
-Class_10E94338* Class_10E94338::FUN_10bdb4c0(int A, int B, int C)
+// FUNCTION: 0x10BDB4C0 ?Construct@Class_10E94338@@QAEPAV1@HHH@Z
+Class_10E94338* Class_10E94338::Construct(int A, int B, int C)
 {
     this->Class_10E90D70::Class_10E90D70(A, B);
     Unknown40 = C;
@@ -140,8 +140,8 @@ Class_10E94338* Class_10E94338::FUN_10bdb4c0(int A, int B, int C)
     return this;
 }
 
-// FUNCTION: 0x10BDB500 ?FUN_10bdb500@Class_10E94458@@QAEPAV1@HHHHH@Z
-Class_10E94458* Class_10E94458::FUN_10bdb500(int A, int B, int C, int D, int E)
+// FUNCTION: 0x10BDB500 ?Construct@Class_10E94458@@QAEPAV1@HHHHH@Z
+Class_10E94458* Class_10E94458::Construct(int A, int B, int C, int D, int E)
 {
     this->Class_10E90D70::Class_10E90D70(A, B);
     Unknown40 = C;
@@ -168,8 +168,8 @@ cTacticMoveToPoint* cTacticMoveToPoint::Construct(int A, int B, int C, const FVe
     return this;
 }
 
-// FUNCTION: 0x10BDB620 ?FUN_10bdb620@Class_10E94698@@QAEPAV1@HHHH@Z
-Class_10E94698* Class_10E94698::FUN_10bdb620(int A, int B, int C, int D)
+// FUNCTION: 0x10BDB620 ?Construct@Class_10E94698@@QAEPAV1@HHHH@Z
+Class_10E94698* Class_10E94698::Construct(int A, int B, int C, int D)
 {
     this->Class_10E90D70::Class_10E90D70(A, B);
     Unknown40 = C;
@@ -184,8 +184,8 @@ Class_10E94698* Class_10E94698::FUN_10bdb620(int A, int B, int C, int D)
     return this;
 }
 
-// FUNCTION: 0x10BDB6C0 ?FUN_10bdb6c0@cMeleeStrafeTarget@@QAEPAV1@HHHH@Z
-cMeleeStrafeTarget* cMeleeStrafeTarget::FUN_10bdb6c0(int A, int B, int C, int D)
+// FUNCTION: 0x10BDB6C0 ?Construct@cMeleeStrafeTarget@@QAEPAV1@HHHH@Z
+cMeleeStrafeTarget* cMeleeStrafeTarget::Construct(int A, int B, int C, int D)
 {
     this->Class_10E90D70::Class_10E90D70(A, B);
     Unknown40 = C;

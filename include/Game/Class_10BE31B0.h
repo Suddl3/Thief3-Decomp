@@ -11,7 +11,7 @@ class Class_10BE31B0
 {
 public:
     Struct_10C05A50* FUN_10be3060(Struct_10BE31B0_Out* Out);
-    int FUN_10be31b0();
+    int IsInRange();
 
     char Unknown00[4];
     Struct_10BE31B0_Owner* Unknown04;

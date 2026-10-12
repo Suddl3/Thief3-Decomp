@@ -8,12 +8,12 @@ struct Struct_10C15E60_Node;
 class Class_10C15E60
 {
 public:
-    void FUN_10c15e60(void* Source);
+    void Remove(void* Source);
     bool FUN_10c15dc0(float A, void* B);
 
     char Unknown00[4];
-    Struct_10C15E60_Node* Unknown04;
-    int Unknown08;
+    Struct_10C15E60_Node* m_Head;
+    int m_Count;
 };
 
 #endif // GAME_CLASS_10C15E60_H

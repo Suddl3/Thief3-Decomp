@@ -8,7 +8,7 @@
 class Class_10C32C30
 {
 public:
-    int FUN_10c32c30(int A);
+    int GetValue(int A);
 
     char Unknown00[0xC];
     Class_10C49740 Unknown0C;

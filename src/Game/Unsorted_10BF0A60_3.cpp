@@ -4,8 +4,8 @@
 #include "Game/Class_10BF0A60.h"
 #include "Game/Class_10BF0AA0.h"
 
-// FUNCTION: 0x10BF0AA0 ?FUN_10bf0aa0@Class_10BF0AA0@@QAEXXZ
-void Class_10BF0AA0::FUN_10bf0aa0()
+// FUNCTION: 0x10BF0AA0 ?Clear@Class_10BF0AA0@@QAEXXZ
+void Class_10BF0AA0::Clear()
 {
     Unknown08.Empty();
 }

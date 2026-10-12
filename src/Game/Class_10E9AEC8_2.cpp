@@ -5,7 +5,7 @@
 #include "Game/Struct_10C05A50.h"
 #include "Game/Struct_10C3D0A0.h"
 
-float FUN_10c05a20(const Struct_10C05A50* A, const Struct_10C05A50* B);
+float Distance2D(const Struct_10C05A50* A, const Struct_10C05A50* B);
 
 class Class_10C270C0
 {
@@ -38,7 +38,7 @@ void Class_10E9AEC8::CheckDistance()
     if (!m_bTriggered)
     {
         Struct_10C3D0A0* Actor = (Struct_10C3D0A0*)FUN_10c270c0()->FUN_10c7d570();
-        if (FUN_10c05a20(&m_Point, &Actor->Unknown2C) > m_Threshold)
+        if (Distance2D(&m_Point, &Actor->Unknown2C) > m_Threshold)
         {
             m_bTriggered = 1;
             Unknown04->Virtual44();

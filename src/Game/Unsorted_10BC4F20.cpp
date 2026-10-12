@@ -25,8 +25,8 @@ extern const char DAT_10e90c78[];
 
 extern const char DAT_10e90c68[];
 
-// FUNCTION: 0x10BC5020 ?FUN_10bc5020@@YA?AVClass_10E97B00@@H@Z
-Class_10E97B00 FUN_10bc5020(int State)
+// FUNCTION: 0x10BC5020 ?GetReprimandBark@@YA?AVClass_10E97B00@@H@Z
+Class_10E97B00 GetReprimandBark(int State)
 {
     switch (State)
     {

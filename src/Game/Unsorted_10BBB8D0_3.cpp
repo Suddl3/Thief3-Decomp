@@ -70,7 +70,7 @@ void Class_10BBB410::Update()
         Unknown94.FUN_10c276c0();
         FUN_10bb7c10();
     }
-    Unknown2C->FUN_10c28570();
+    Unknown2C->Update();
     UpdateReprimand();
     if (m_Current)
     {

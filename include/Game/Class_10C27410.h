@@ -8,13 +8,13 @@ class Class_10C27410_Unknown10;
 class Class_10C27410
 {
 public:
-    void FUN_10c27410(int A);
+    void UpdateFlags(int A);
 
     char Unknown00[4];
-    int Unknown04;
-    int Unknown08;
+    int m_Flags;
+    int m_Count;
     char Unknown0C[4];
-    Class_10C27410_Unknown10** Unknown10;
+    Class_10C27410_Unknown10** m_Items;
 };
 
 #endif // GAME_CLASS_10C27410_H

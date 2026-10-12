@@ -7,7 +7,7 @@ class Class_10C223A0
 {
 public:
     void FUN_10c20c70(int Count);
-    void FUN_10c223a0();
+    void Clear();
 
     int Unknown00;
     int Unknown04;

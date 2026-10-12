@@ -21,9 +21,9 @@ Class_10BABED0* FUN_10baa6b0(Class_10BAA6B0_Param* Param);
 // FUNCTION: 0x10C08960 ?FUN_10c08960@Class_10C08960@@QAEXXZ
 void Class_10C08960::FUN_10c08960()
 {
-    for (int i = 0; i < Unknown14; i++)
+    for (int i = 0; i < m_Count; i++)
     {
-        Class_10BAA6B0_Param* Item = Unknown1C[i];
+        Class_10BAA6B0_Param* Item = m_Params[i];
         if (Item)
         {
             Class_10BABED0* A = FUN_10baa6b0(Item);

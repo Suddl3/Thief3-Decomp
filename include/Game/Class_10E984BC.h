@@ -23,7 +23,7 @@ public:
 
     Class_1090A780 GetValue();
 
-    int Unknown04;
+    int m_Elements;
 };
 
 #endif // GAME_CLASS_10E984BC_H

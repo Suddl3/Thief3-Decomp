@@ -7,11 +7,11 @@ class Class_10BD4120
 {
 public:
     void FUN_10a20940(int Count);
-    void FUN_10bd4120();
+    void Empty();
 
     int Unknown00;
     int Unknown04;
-    void* Unknown08;
+    void* m_Buffer;
 };
 
 #endif // GAME_CLASS_10BD4120_H

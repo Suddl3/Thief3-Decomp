@@ -72,21 +72,21 @@ void cConversation::DeleteChild(Class_10A82840_Unknown10* Table, Class_10A82840_
     if (!Table)
         Table = Unknown10;
     Class_10C00A60* Array = (Class_10C00A60*)&Table->Unknown08;
-    for (int i = 0; i < Array->Unknown00; i++)
+    for (int i = 0; i < Array->m_Count; i++)
     {
         Class_10A82840_Unknown10* Entry = Table->Unknown10[i];
         if (Entry == Item)
         {
             delete Table->Unknown10[i];
-            if (i != Array->Unknown00 - 1)
+            if (i != Array->m_Count - 1)
             {
                 int From = i + 1;
                 int To = i;
-                int Count = Array->Unknown00 - i - 1;
+                int Count = Array->m_Count - i - 1;
                 if (From != To && Count)
-                    memmove(Array->Unknown08 + To, Array->Unknown08 + From, Count * sizeof(int));
+                    memmove(Array->m_Data + To, Array->m_Data + From, Count * sizeof(int));
             }
-            Array->FUN_10c00a60(Array->Unknown00 - 1);
+            Array->FUN_10c00a60(Array->m_Count - 1);
             return;
         }
         if (!Entry->Virtual1())

@@ -94,7 +94,7 @@ void State_MunchCorpse::FUN_10bdf8e0()
     Struct_10BC4240_Param* Param = FUN_10bc58f0(1, 1, 1);
     if (Param)
     {
-        ((Class_10BC4BF0Obj*)FUN_10bc4bf0())->Virtual62();
+        ((Class_10BC4BF0Obj*)GetTargetLinkType())->Virtual62();
         FUN_10bc4f20();
     }
     else

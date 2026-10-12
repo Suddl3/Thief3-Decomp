@@ -106,5 +106,5 @@ public:
 int Class_10E96810::FUN_10be4b50()
 {
     Class_10BB95C0* Item = Unknown04;
-    return Item->FUN_10bb95c0(Item->Unknown08->FUN_10ba9ee0()) ? 0 : 0x39;
+    return Item->Contains(Item->Unknown08->FUN_10ba9ee0()) ? 0 : 0x39;
 }

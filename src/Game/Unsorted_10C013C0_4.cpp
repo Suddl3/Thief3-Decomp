@@ -23,5 +23,5 @@ void Class_10C01FC0::Clear(int Size)
     ::operator delete(Unknown14);
     Unknown14 = 0;
     if (!Unknown10)
-        FUN_10c012d0(Size);
+        Rehash(Size);
 }

@@ -8,10 +8,10 @@ class Class_10E9313C;
 class Class_10BD0CB0
 {
 public:
-    void FUN_10bd0cb0(const Class_10E9313C& A);
+    void AddAction(const Class_10E9313C& A);
 
     char Unknown00[0x44];
-    Class_10E9313C* Unknown44[4];
+    Class_10E9313C* m_Queue[4];
 };
 
 #endif // GAME_CLASS_10BD0CB0_H

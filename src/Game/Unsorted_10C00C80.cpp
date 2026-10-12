@@ -21,22 +21,22 @@ struct Struct_10C00F30
     int Unknown0C;
 };
 
-// FUNCTION: 0x10C00F30 ?FUN_10c00f30@Class_10C00F30@@QAEXH@Z
-void Class_10C00F30::FUN_10c00f30(int A)
+// FUNCTION: 0x10C00F30 ?ClearMatching@Class_10C00F30@@QAEXH@Z
+void Class_10C00F30::ClearMatching(int A)
 {
-    for (int i = 0; i < Unknown00; i++)
+    for (int i = 0; i < m_Count; i++)
     {
-        Struct_10C00F30* Entry = Unknown08[i];
+        Struct_10C00F30* Entry = m_Entries[i];
         if (Entry->Unknown0C == A)
             Entry->Unknown0C = 0;
     }
 }
 
-// FUNCTION: 0x10C01140 ?FUN_10c01140@Class_10C01140@@QAEIABH0@Z
-unsigned int Class_10C01140::FUN_10c01140(const int& Key, const int& Value)
+// FUNCTION: 0x10C01140 ?Insert@Class_10C01140@@QAEIABH0@Z
+unsigned int Class_10C01140::Insert(const int& Key, const int& Value)
 {
     if (!Unknown10 && Unknown00 > Unknown0C * 0.2)
-        FUN_10c012d0(Unknown0C * 2);
+        Rehash(Unknown0C * 2);
     Class_10C01140_Node* Node = new(0, 0, 0, 0, 0) Class_10C01140_Node;
     Node->Key = Key;
     Node->Value = Value;
@@ -83,8 +83,8 @@ void Class_10C00F60::Rehash(int Size)
     delete OldBuckets;
 }
 
-// FUNCTION: 0x10C012D0 ?FUN_10c012d0@Class_10C01140@@QAEXH@Z
-void Class_10C01140::FUN_10c012d0(int Size)
+// FUNCTION: 0x10C012D0 ?Rehash@Class_10C01140@@QAEXH@Z
+void Class_10C01140::Rehash(int Size)
 {
     int OldSize = Unknown0C;
     Class_10C01140_Node** OldBuckets = Unknown14;
@@ -102,7 +102,7 @@ void Class_10C01140::FUN_10c012d0(int Size)
         Class_10C01140_Node* Node = OldBuckets[j];
         while (Node)
         {
-            FUN_10c01140(Node->Key, Node->Value);
+            Insert(Node->Key, Node->Value);
             Class_10C01140_Node* Next = Node->Next;
             delete Node;
             Node = Next;

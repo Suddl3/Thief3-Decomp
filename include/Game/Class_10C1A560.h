@@ -5,7 +5,7 @@
 
 class Class_10C1A560 {
 public:
-    Class_10C1A560* FUN_10c1a560();
+    Class_10C1A560* Reset();
 
     int Unknown00;
     int Unknown04;

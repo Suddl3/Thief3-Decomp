@@ -8,7 +8,7 @@
 class Class_10C16250
 {
 public:
-    void FUN_10c16250();
+    void Init();
 
     char Unknown00[4];
     Class_10C15EF0 Unknown04;

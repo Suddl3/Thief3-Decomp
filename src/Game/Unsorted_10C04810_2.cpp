@@ -19,10 +19,10 @@ unsigned char Class_10C04820::FUN_10c04820(int index)
     return Unknown1F[index];
 }
 
-// FUNCTION: 0x10C04D90 ?FUN_10c04d90@Class_10C04D90@@QAE_NH@Z
-bool Class_10C04D90::FUN_10c04d90(int Value)
+// FUNCTION: 0x10C04D90 ?AddValue@Class_10C04D90@@QAE_NH@Z
+bool Class_10C04D90::AddValue(int Value)
 {
-    cIntArray* Array = &Unknown20;
+    cIntArray* Array = &m_Values;
     int Index = Array->Unknown00;
     Array->SetCount(Index + 1);
     Array->Unknown08[Index] = Value;

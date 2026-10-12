@@ -14,10 +14,10 @@ Class_10E9313C::Class_10E9313C()
 {
 }
 
-// FUNCTION: 0x10BD0960 ?FUN_10bd0960@Class_10BD0960@@QAEXXZ
-void Class_10BD0960::FUN_10bd0960()
+// FUNCTION: 0x10BD0960 ?Empty@Class_10BD0960@@QAEXXZ
+void Class_10BD0960::Empty()
 {
-    for (int i = 0; i < Unknown00; i++)
-        Unknown08[i].FUN_10c1a690();
-    Unknown00 = 0;
+    for (int i = 0; i < m_Count; i++)
+        m_Items[i].Free();
+    m_Count = 0;
 }

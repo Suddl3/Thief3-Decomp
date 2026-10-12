@@ -9,18 +9,18 @@ extern float DAT_10eafbdc;
 
 float appFrand();
 
-// FUNCTION: 0x10BB81B0 ?FUN_10bb81b0@Class_10BB81B0@@QAEXXZ
-void Class_10BB81B0::FUN_10bb81b0()
+// FUNCTION: 0x10BB81B0 ?RollInterval@Class_10BB81B0@@QAEXXZ
+void Class_10BB81B0::RollInterval()
 {
     float Min = Unknown08->FUN_10dbd510(0x1006df)->GetFloat();
     float Max = Unknown08->FUN_10dbd510(0x1006e0)->GetFloat();
-    Unknown2BC = Min + (Max - Min) * appFrand();
+    m_Interval = Min + (Max - Min) * appFrand();
 }
 
-// FUNCTION: 0x10BB8210 ?FUN_10bb8210@Class_10BB8210@@QAEHXZ
-int Class_10BB8210::FUN_10bb8210()
+// FUNCTION: 0x10BB8210 ?IsExpired@Class_10BB8210@@QAEHXZ
+int Class_10BB8210::IsExpired()
 {
-    if (Unknown2BC <= DAT_10eafbdc)
+    if (m_Interval <= DAT_10eafbdc)
         return 1;
     return 0;
 }

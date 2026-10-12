@@ -6,8 +6,8 @@
 // FUNCTION: 0x10C307A0 ?FUN_10c307a0@Class_10C30700@@QAEXHH@Z
 void Class_10C30700::FUN_10c307a0(int A, int B)
 {
-    Unknown99 = true;
-    for (int i = 0; i < Unknown138; i++)
-        Unknown140[i]->Virtual2(A, B);
-    Unknown99 = false;
+    m_Iterating = true;
+    for (int i = 0; i < m_Count; i++)
+        m_Entries[i]->Virtual2(A, B);
+    m_Iterating = false;
 }

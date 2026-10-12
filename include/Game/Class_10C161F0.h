@@ -11,11 +11,11 @@ struct Struct_10C161F0;
 class Class_10C161F0
 {
 public:
-    void FUN_10c161f0(Struct_10C161F0* Source);
+    void Remove(Struct_10C161F0* Source);
     bool FUN_10c161b0(Struct_10C161F0* Source);
 
     char Unknown00[4];
-    Class_10C16030 Unknown04;
+    Class_10C16030 m_ById;
     char Unknown05[0x400F];
     Class_10C15E60 Unknown4014;
 };

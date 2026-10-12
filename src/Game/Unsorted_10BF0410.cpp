@@ -14,8 +14,8 @@ bool Class_10BF0870::FUN_10bf0870()
     bool R = true;
     if (FUN_10bef240() != 1)
     {
-        if (((Class_10BB8330*)Unknown04)->FUN_10bb8330())
-            R = ((Class_10BB82C0*)Unknown04)->FUN_10bb82c0(Unknown7C);
+        if (((Class_10BB8330*)Unknown04)->HasEntry())
+            R = ((Class_10BB82C0*)Unknown04)->IsAngleBelow(Unknown7C);
         else
             R = FUN_10bf0150(Obj, Unknown7C);
     }

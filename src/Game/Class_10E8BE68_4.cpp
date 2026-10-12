@@ -8,7 +8,7 @@ class Class_10BB8300
 {
 public:
     char Unknown00[8];
-    Class_10BABED0* Unknown08;
+    Class_10BABED0* m_Owner;
 };
 
 class Class_10E8BE68
@@ -35,7 +35,7 @@ public:
 // FUNCTION: 0x10BCC240 ?FUN_10bcc240@Class_10E8BE68@@UAEXXZ
 void Class_10E8BE68::FUN_10bcc240()
 {
-    if (!Unknown04->Unknown08->FUN_10babed0(false))
+    if (!Unknown04->m_Owner->FUN_10babed0(false))
     {
         PopState();
         return;

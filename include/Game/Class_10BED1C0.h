@@ -13,9 +13,9 @@ public:
     char Unknown00[4];
     Class_10BB8360* Unknown04;
     char Unknown08[0x50];
-    int Unknown58;
+    int m_Count;
     char Unknown5C[4];
-    int* Unknown60;
+    int* m_Entries;
 };
 
 #endif // GAME_CLASS_10BED1C0_H

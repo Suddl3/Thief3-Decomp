@@ -8,9 +8,9 @@ class Class_10C00A60
 public:
     void FUN_10c00a60(int Count);
 
-    int Unknown00;
-    int Unknown04;
-    int* Unknown08;
+    int m_Count;
+    int m_CapacityBytes;
+    int* m_Data;
 };
 
 #endif // GAME_CLASS_10C00A60_H

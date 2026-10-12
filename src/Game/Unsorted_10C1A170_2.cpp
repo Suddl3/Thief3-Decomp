@@ -131,7 +131,7 @@ public:
     virtual bool Virtual0(Class_1098E330* Actor);
 };
 
-float FUN_10c05a80(const Struct_10C05A80* A, const Struct_10C05A80* B);
+float DistanceSquared3D(const Struct_10C05A80* A, const Struct_10C05A80* B);
 
 float FUN_109675f0(float Value);
 
@@ -151,7 +151,7 @@ bool FUN_10c1a170(Class_10C1A170_Arg* Arg, Struct_10C05A80* Pos, float Radius, C
     int Value = 0;
     if (Arg->Unknown0C0->Virtual35() == 0 && Arg->Unknown0C0->FUN_1098e330(0x40800056, &Value) && Value)
         return false;
-    if (FUN_10c05a80(Pos, &Arg->Unknown0C0->Unknown2C) > Radius)
+    if (DistanceSquared3D(Pos, &Arg->Unknown0C0->Unknown2C) > Radius)
         return false;
     if (Dist != DAT_10eafbdc && FUN_109675f0(Arg->Unknown0C0->Unknown2C.Unknown08 - Pos->Unknown08) > Dist)
         return false;

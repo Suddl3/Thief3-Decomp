@@ -19,9 +19,9 @@ public:
     void* Unknown08;
     char Unknown0C[4];
     Class_10C08960_Unknown10* Unknown10;
-    int Unknown14;
+    int m_Count;
     char Unknown18[4];
-    Class_10BAA6B0_Param** Unknown1C;
+    Class_10BAA6B0_Param** m_Params;
     bool Unknown20;
     char Pad21[0x3];
 };

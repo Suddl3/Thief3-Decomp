@@ -20,7 +20,7 @@ public:
     void FUN_10bcfbd0();
 };
 
-class Class_10E92C38 : public Class_10BCFE10
+class DeathState : public Class_10BCFE10
 {
 public:
     virtual void Virtual1();
@@ -33,8 +33,8 @@ public:
     bool Unknown4B;
 };
 
-// FUNCTION: 0x10BCFDD0 ?FUN_10bcfdd0@Class_10E92C38@@UAEXXZ
-void Class_10E92C38::FUN_10bcfdd0()
+// FUNCTION: 0x10BCFDD0 ?FUN_10bcfdd0@DeathState@@UAEXXZ
+void DeathState::FUN_10bcfdd0()
 {
     if (!Unknown4B)
         FUN_10bcfbd0();

@@ -61,7 +61,7 @@ public:
     virtual void Virtual28();
     virtual void Virtual29();
     virtual void Virtual30();
-    virtual void FUN_10becee0(int p1);
+    virtual void SetViewport(int p1);
 
     char Unknown04[0x74];
     int Unknown78;
@@ -75,8 +75,8 @@ bool Class_10E92730::FUN_10bece80()
     return Unknown04->Unknown1EC == 0;
 }
 
-// FUNCTION: 0x10BECEE0 ?FUN_10becee0@UCanvas@@UAEXH@Z
-void UCanvas::FUN_10becee0(int p1)
+// FUNCTION: 0x10BECEE0 ?SetViewport@UCanvas@@UAEXH@Z
+void UCanvas::SetViewport(int p1)
 {
     Unknown78 = p1;
 }

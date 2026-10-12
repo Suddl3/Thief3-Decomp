@@ -23,8 +23,8 @@ void Class_10B9BDB0::FUN_10b9bdb0()
         Obj->Unknown04->Unknown30.FUN_10bfc190();
         if (Obj->Unknown04->FUN_10bb89d0())
         {
-            Obj->Unknown04->FUN_10bb89d0()->FUN_10be3ff0();
-            DAT_10ff667c->Unknown28->FUN_10bfb910(4);
+            Obj->Unknown04->FUN_10bb89d0()->ResetTimer();
+            DAT_10ff667c->Unknown28->ClearTime(4);
         }
     }
 }

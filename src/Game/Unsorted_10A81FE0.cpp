@@ -44,9 +44,9 @@ public:
 void cConversation::AddConEvent(int Value)
 {
     Class_10C00A60* Array = &m_ConEvents;
-    int Index = Array->Unknown00;
+    int Index = Array->m_Count;
     Array->FUN_10c00a60(Index + 1);
-    Array->Unknown08[Index] = Value;
+    Array->m_Data[Index] = Value;
 }
 
 // FUNCTION: 0x10A82E20 ??0Class_10E6C290@@QAE@XZ

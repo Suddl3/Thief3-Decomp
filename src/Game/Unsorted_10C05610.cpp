@@ -4,7 +4,7 @@
 #include "Game/Struct_10C05A50.h"
 #include "Game/Struct_10C05610_Item.h"
 
-float FUN_10c05a20(const Struct_10C05A50* A, const Struct_10C05A50* B);
+float Distance2D(const Struct_10C05A50* A, const Struct_10C05A50* B);
 
 struct Struct_10C05610
 {
@@ -13,17 +13,17 @@ struct Struct_10C05610
     Struct_10C05610_Item* Items;
 };
 
-void FUN_10c053c0(Struct_10C05610_Item* Item, int A, int B, int C);
+void ExpandBounds(Struct_10C05610_Item* Item, int A, int B, int C);
 
-// FUNCTION: 0x10C05610 ?FUN_10c05610@@YAXPAUStruct_10C05610@@HHH@Z
-void FUN_10c05610(Struct_10C05610* List, int A, int B, int C)
+// FUNCTION: 0x10C05610 ?ExpandBoundsList@@YAXPAUStruct_10C05610@@HHH@Z
+void ExpandBoundsList(Struct_10C05610* List, int A, int B, int C)
 {
     for (int i = 0; i < List->Count; i++)
-        FUN_10c053c0(&List->Items[i], A, B, C);
+        ExpandBounds(&List->Items[i], A, B, C);
 }
 
-// FUNCTION: 0x10C05A20 ?FUN_10c05a20@@YAMPBUStruct_10C05A50@@0@Z
-float FUN_10c05a20(const Struct_10C05A50* A, const Struct_10C05A50* B)
+// FUNCTION: 0x10C05A20 ?Distance2D@@YAMPBUStruct_10C05A50@@0@Z
+float Distance2D(const Struct_10C05A50* A, const Struct_10C05A50* B)
 {
     float X = B->Unknown00 - A->Unknown00;
     float Y = B->Unknown04 - A->Unknown04;

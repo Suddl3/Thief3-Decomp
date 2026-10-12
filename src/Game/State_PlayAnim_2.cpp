@@ -107,12 +107,12 @@ public:
 void State_PlayAnim::Serialize(FArchive& Ar)
 {
     ((Class_10E8BE68*)this)->Class_10E8BE68::Serialize(Ar);
-    int Count = m_Items.Unknown00;
+    int Count = m_Items.m_Count;
     Ar.Serialize(&Count, 4);
     if (Ar.ArIsLoading)
         m_Items.FUN_10bd0410(Count);
     for (int i = 0; i < Count; i++)
-        m_Items.Unknown08[i].Virtual0(Ar);
+        m_Items.m_Items[i].Virtual0(Ar);
     FUN_10c11ff0(Ar, &Unknown4C);
     unsigned char Flag = Unknown50;
     Ar.Serialize(&Flag, 1);

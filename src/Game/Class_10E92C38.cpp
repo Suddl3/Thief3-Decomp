@@ -1,4 +1,4 @@
-// Game/Class_10E92C38.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Game/DeathState.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10BA9FD0.h"
 #include "Game/Class_10E9092C.h"
@@ -24,7 +24,7 @@ public:
     Class_10BA9FD0* Unknown08;
 };
 
-class Class_10E92C38 : public Class_10BC4160
+class DeathState : public Class_10BC4160
 {
 public:
     virtual void Virtual0();
@@ -104,8 +104,8 @@ public:
     Class_10E92C38_Unknown04* Unknown04;
 };
 
-// FUNCTION: 0x10BCE840 ?FUN_10bce840@Class_10E92C38@@UAEXXZ
-void Class_10E92C38::FUN_10bce840()
+// FUNCTION: 0x10BCE840 ?FUN_10bce840@DeathState@@UAEXXZ
+void DeathState::FUN_10bce840()
 {
     if (FUN_10bc4160())
         FUN_10bc4160()->FUN_10bf7920();

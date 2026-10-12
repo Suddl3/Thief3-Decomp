@@ -40,9 +40,9 @@ void FUN_10a1b850();
 int cConversationManager::AddChild(int Value)
 {
     Class_10C00A60* Array = &m_ChildCount;
-    int Index = Array->Unknown00;
+    int Index = Array->m_Count;
     Array->FUN_10c00a60(Index + 1);
-    Array->Unknown08[Index] = Value;
+    Array->m_Data[Index] = Value;
     return 1;
 }
 

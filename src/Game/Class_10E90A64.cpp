@@ -5,8 +5,8 @@
 
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 
-// FUNCTION: 0x10BBD2A0 ?FUN_10bbd2a0@Class_10E90A64@@UAEXAAVFArchive@@@Z
-void Class_10E90A64::FUN_10bbd2a0(FArchive& Ar)
+// FUNCTION: 0x10BBD2A0 ?Serialize@Class_10E90A64@@UAEXAAVFArchive@@@Z
+void Class_10E90A64::Serialize(FArchive& Ar)
 {
     Ar.Serialize(&Unknown04, 4);
     bool HasA = Unknown08 != 0;

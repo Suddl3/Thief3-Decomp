@@ -6,8 +6,8 @@
 class Class_10C00A50 {
 public:
     char Unknown00[8];
-    int* Unknown08;
-    int* FUN_10c00a50(int p1);
+    int* m_Data;
+    int* GetElementPtr(int p1);
 };
 
 #endif // GAME_CLASS_10C00A50_H

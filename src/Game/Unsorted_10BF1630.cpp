@@ -9,8 +9,8 @@ class Class_10BBDB40;
 class Class_10BFB910
 {
 public:
-    void FUN_10bfb910(int Index);
-    float FUN_10bfb8c0(int Index);
+    void ClearTime(int Index);
+    float GetTime(int Index);
     void FUN_10bfb8d0(int p1);
 
     int Unknown00[64];
@@ -47,7 +47,7 @@ int Class_10BF23A0::FUN_10bf23a0()
     if (!Unknown230 && FUN_10bf1550())
     {
         double Limit = GetTimeSeconds();
-        if (DAT_10ff667c->Unknown28->FUN_10bfb8c0(8) < Limit)
+        if (DAT_10ff667c->Unknown28->GetTime(8) < Limit)
         {
             if (DAT_10ff667c->Unknown14->Virtual6())
             {

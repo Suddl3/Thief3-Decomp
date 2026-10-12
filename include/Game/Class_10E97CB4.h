@@ -12,7 +12,7 @@ public:
 
     Class_10E97CB4();
 
-    cIntArray Unknown04;
+    cIntArray m_ContextVolumes;
     cIntArray Unknown10;
 };
 

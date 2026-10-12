@@ -4,16 +4,16 @@
 #include "Game/Struct_10C05A50.h"
 #include "Game/Struct_10C05610_Item.h"
 
-float FUN_10c054b0(float A, float B, float C, float D, float E);
+float InterpolateLinear(float A, float B, float C, float D, float E);
 
-float FUN_10c05a50(const Struct_10C05A50* A, const Struct_10C05A50* B);
+float DistanceSquared2D(const Struct_10C05A50* A, const Struct_10C05A50* B);
 
 int FUN_109688a0(int A, int B, int C);
 
-void FUN_10c05480(int* A, int B);
+void ClampAngle(int* A, int B);
 
-// FUNCTION: 0x10C053C0 ?FUN_10c053c0@@YAXPAUStruct_10C05610_Item@@PAM1PA_N@Z
-void FUN_10c053c0(struct Struct_10C05610_Item* Item, float* Min, float* Max, bool* Done)
+// FUNCTION: 0x10C053C0 ?ExpandBounds@@YAXPAUStruct_10C05610_Item@@PAM1PA_N@Z
+void ExpandBounds(struct Struct_10C05610_Item* Item, float* Min, float* Max, bool* Done)
 {
     if (!*Done)
     {
@@ -40,8 +40,8 @@ void FUN_10c053c0(struct Struct_10C05610_Item* Item, float* Min, float* Max, boo
         Max[2] = Item->Unknown08;
 }
 
-// FUNCTION: 0x10C05480 ?FUN_10c05480@@YAXPAHH@Z
-void FUN_10c05480(int* A, int B)
+// FUNCTION: 0x10C05480 ?ClampAngle@@YAXPAHH@Z
+void ClampAngle(int* A, int B)
 {
     int Value = *A;
     if (Value > B && Value < 0xffff - B)
@@ -53,21 +53,21 @@ void FUN_10c05480(int* A, int B)
     }
 }
 
-// FUNCTION: 0x10C054B0 ?FUN_10c054b0@@YAMMMMMM@Z
-float FUN_10c054b0(float A, float B, float C, float D, float E)
+// FUNCTION: 0x10C054B0 ?InterpolateLinear@@YAMMMMMM@Z
+float InterpolateLinear(float A, float B, float C, float D, float E)
 {
     float Slope = (E - C) / (D - B);
     return Slope * A + (C - B * Slope);
 }
 
-// FUNCTION: 0x10C055D0 ?FUN_10c055d0@@YA?AVFVector@@PBV1@@Z
-FVector FUN_10c055d0(const FVector* V)
+// FUNCTION: 0x10C055D0 ?RotateYawMinus90@@YA?AVFVector@@PBV1@@Z
+FVector RotateYawMinus90(const FVector* V)
 {
     return FVector(V->Y, -V->X, V->Z);
 }
 
-// FUNCTION: 0x10C05A50 ?FUN_10c05a50@@YAMPBUStruct_10C05A50@@0@Z
-float FUN_10c05a50(const Struct_10C05A50* A, const Struct_10C05A50* B)
+// FUNCTION: 0x10C05A50 ?DistanceSquared2D@@YAMPBUStruct_10C05A50@@0@Z
+float DistanceSquared2D(const Struct_10C05A50* A, const Struct_10C05A50* B)
 {
     float X = B->Unknown00 - A->Unknown00;
     float Y = B->Unknown04 - A->Unknown04;

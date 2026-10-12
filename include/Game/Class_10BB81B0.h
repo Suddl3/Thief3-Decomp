@@ -8,12 +8,12 @@ class Class_10DBD510;
 class Class_10BB81B0
 {
 public:
-    void FUN_10bb81b0();
+    void RollInterval();
 
     char Unknown00[8];
     Class_10DBD510* Unknown08;
     char Unknown0C[0x2B0];
-    float Unknown2BC;
+    float m_Interval;
 };
 
 #endif // GAME_CLASS_10BB81B0_H

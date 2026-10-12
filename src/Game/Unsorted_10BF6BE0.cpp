@@ -90,8 +90,8 @@ extern const char DAT_10e47660[];
 
 extern Struct_10FF66B0 DAT_10ff66b0[];
 
-// FUNCTION: 0x10BF6E10 ?FUN_10bf6e10@@YGHVFString@@@Z
-int __stdcall FUN_10bf6e10(FString Name)
+// FUNCTION: 0x10BF6E10 ?FindNameIndex@@YGHVFString@@@Z
+int __stdcall FindNameIndex(FString Name)
 {
     for (int i = 0; i < 124; i++)
     {
@@ -104,8 +104,8 @@ int __stdcall FUN_10bf6e10(FString Name)
     return 0;
 }
 
-// FUNCTION: 0x10BF70E0 ?FUN_10bf70e0@Class_10BF70E0@@QAEXXZ
-void Class_10BF70E0::FUN_10bf70e0()
+// FUNCTION: 0x10BF70E0 ?Reset@Class_10BF70E0@@QAEXXZ
+void Class_10BF70E0::Reset()
 {
     Unknown58 = 0;
     Unknown5C = FUN_10bf6d70();
@@ -118,14 +118,14 @@ void MovementController::FUN_10bf8c90(int Code, int A, int B, int C)
         FUN_10bf8b40(A, B, C);
 }
 
-// FUNCTION: 0x10BFB8C0 ?FUN_10bfb8c0@Class_10BFB8C0@@QAEMH@Z
-float Class_10BFB8C0::FUN_10bfb8c0(int Index)
+// FUNCTION: 0x10BFB8C0 ?GetTime@Class_10BFB8C0@@QAEMH@Z
+float Class_10BFB8C0::GetTime(int Index)
 {
     return Unknown00[Index * 3 + 3];
 }
 
-// FUNCTION: 0x10BFB910 ?FUN_10bfb910@Class_10BFB910@@QAEXH@Z
-void Class_10BFB910::FUN_10bfb910(int Index)
+// FUNCTION: 0x10BFB910 ?ClearTime@Class_10BFB910@@QAEXH@Z
+void Class_10BFB910::ClearTime(int Index)
 {
     Unknown00[(Index + 1) * 3] = 0;
 }

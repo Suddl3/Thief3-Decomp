@@ -16,7 +16,7 @@ void Class_10E90A1C::RollInterval()
     float Min = m_Schema->FUN_10dbd510(0x100251)->GetFloat();
     float Max = m_Schema->FUN_10dbd510(0x100252)->GetFloat();
     m_Interval = Min + (Max - Min) * appFrand();
-    Unknown29C = appFrand();
+    m_Roll = appFrand();
 }
 
 // FUNCTION: 0x10BB8070 ?FUN_10bb8070@Class_10BB8070@@QAE_NXZ

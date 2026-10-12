@@ -30,7 +30,7 @@ public:
     virtual void Virtual19();
     virtual void Virtual20();
 
-    int FUN_10bc4bf0();
+    int GetTargetLinkType();
 
     Class_10BC4BF0_Member* Unknown04;
 };

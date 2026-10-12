@@ -6,10 +6,10 @@
 class Class_10BB8210
 {
 public:
-    int FUN_10bb8210();
+    int IsExpired();
 
     char Unknown00[0x2BC];
-    float Unknown2BC;
+    float m_Interval;
 };
 
 #endif // GAME_CLASS_10BB8210_H

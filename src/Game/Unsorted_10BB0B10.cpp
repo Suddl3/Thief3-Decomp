@@ -222,566 +222,566 @@ int FUN_10bb0c60(int A)
     return Obj->Unknown118->Unknown08;
 }
 
-// FUNCTION: 0x10BB1690 ?FUN_10bb1690@@YA?AVcString@@XZ
-cString FUN_10bb1690()
+// FUNCTION: 0x10BB1690 ?GetAIOverrideSensoryModelPropertyName@@YA?AVcString@@XZ
+cString GetAIOverrideSensoryModelPropertyName()
 {
     return cString(DAT_10e8dc40);
 }
 
-// FUNCTION: 0x10BB16B0 ?FUN_10bb16b0@@YA?AVcString@@XZ
-cString FUN_10bb16b0()
+// FUNCTION: 0x10BB16B0 ?GetAIOverrideSensoryModelPropertyDescription@@YA?AVcString@@XZ
+cString GetAIOverrideSensoryModelPropertyDescription()
 {
     return cString(DAT_10e8dc98);
 }
 
-// FUNCTION: 0x10BB16D0 ?FUN_10bb16d0@@YA?AVcString@@XZ
-cString FUN_10bb16d0()
+// FUNCTION: 0x10BB16D0 ?GetAIOverrideBehaviorModelPropertyName@@YA?AVcString@@XZ
+cString GetAIOverrideBehaviorModelPropertyName()
 {
     return cString(DAT_10e8dd40);
 }
 
-// FUNCTION: 0x10BB16F0 ?FUN_10bb16f0@@YA?AVcString@@XZ
-cString FUN_10bb16f0()
+// FUNCTION: 0x10BB16F0 ?GetAIOverrideBehaviorModelPropertyDescription@@YA?AVcString@@XZ
+cString GetAIOverrideBehaviorModelPropertyDescription()
 {
     return cString(DAT_10e8dd98);
 }
 
-// FUNCTION: 0x10BB1710 ?FUN_10bb1710@@YA?AVcString@@XZ
-cString FUN_10bb1710()
+// FUNCTION: 0x10BB1710 ?GetAIOverrideMovementModelPropertyName@@YA?AVcString@@XZ
+cString GetAIOverrideMovementModelPropertyName()
 {
     return cString(DAT_10e8de40);
 }
 
-// FUNCTION: 0x10BB1730 ?FUN_10bb1730@@YA?AVcString@@XZ
-cString FUN_10bb1730()
+// FUNCTION: 0x10BB1730 ?GetAIOverrideMovementModelPropertyDescription@@YA?AVcString@@XZ
+cString GetAIOverrideMovementModelPropertyDescription()
 {
     return cString(DAT_10e8de98);
 }
 
-// FUNCTION: 0x10BB1750 ?FUN_10bb1750@@YA?AVcString@@XZ
-cString FUN_10bb1750()
+// FUNCTION: 0x10BB1750 ?GetAIOverrideCombatModelPropertyName@@YA?AVcString@@XZ
+cString GetAIOverrideCombatModelPropertyName()
 {
     return cString(DAT_10e8df40);
 }
 
-// FUNCTION: 0x10BB1770 ?FUN_10bb1770@@YA?AVcString@@XZ
-cString FUN_10bb1770()
+// FUNCTION: 0x10BB1770 ?GetAIOverrideCombatModelPropertyDescription@@YA?AVcString@@XZ
+cString GetAIOverrideCombatModelPropertyDescription()
 {
     return cString(DAT_10e8df98);
 }
 
-// FUNCTION: 0x10BB1790 ?FUN_10bb1790@@YA?AVcString@@XZ
-cString FUN_10bb1790()
+// FUNCTION: 0x10BB1790 ?GetAIOverrideFactionPropertyName@@YA?AVcString@@XZ
+cString GetAIOverrideFactionPropertyName()
 {
     return cString(DAT_10e8e040);
 }
 
-// FUNCTION: 0x10BB17B0 ?FUN_10bb17b0@@YA?AVcString@@XZ
-cString FUN_10bb17b0()
+// FUNCTION: 0x10BB17B0 ?GetAIOverrideFactionPropertyDescription@@YA?AVcString@@XZ
+cString GetAIOverrideFactionPropertyDescription()
 {
     return cString(DAT_10e8e090);
 }
 
-// FUNCTION: 0x10BB17D0 ?FUN_10bb17d0@@YA?AVcString@@XZ
-cString FUN_10bb17d0()
+// FUNCTION: 0x10BB17D0 ?GetAIStopOverridingSensoryModelPropertyName@@YA?AVcString@@XZ
+cString GetAIStopOverridingSensoryModelPropertyName()
 {
     return cString(DAT_10e8e138);
 }
 
-// FUNCTION: 0x10BB17F0 ?FUN_10bb17f0@@YA?AVcString@@XZ
-cString FUN_10bb17f0()
+// FUNCTION: 0x10BB17F0 ?GetAIStopOverridingSensoryModelPropertyDescription@@YA?AVcString@@XZ
+cString GetAIStopOverridingSensoryModelPropertyDescription()
 {
     return cString(DAT_10e8e180);
 }
 
-// FUNCTION: 0x10BB1810 ?FUN_10bb1810@@YA?AVcString@@XZ
-cString FUN_10bb1810()
+// FUNCTION: 0x10BB1810 ?GetAIStopOverridingBehaviorModelPropertyName@@YA?AVcString@@XZ
+cString GetAIStopOverridingBehaviorModelPropertyName()
 {
     return cString(DAT_10e8e280);
 }
 
-// FUNCTION: 0x10BB1830 ?FUN_10bb1830@@YA?AVcString@@XZ
-cString FUN_10bb1830()
+// FUNCTION: 0x10BB1830 ?GetAIStopOverridingBehaviorModelPropertyDescription@@YA?AVcString@@XZ
+cString GetAIStopOverridingBehaviorModelPropertyDescription()
 {
     return cString(DAT_10e8e2c8);
 }
 
-// FUNCTION: 0x10BB1850 ?FUN_10bb1850@@YA?AVcString@@XZ
-cString FUN_10bb1850()
+// FUNCTION: 0x10BB1850 ?GetAIStopOverridingMovementModelPropertyName@@YA?AVcString@@XZ
+cString GetAIStopOverridingMovementModelPropertyName()
 {
     return cString(DAT_10e8e3c8);
 }
 
-// FUNCTION: 0x10BB1870 ?FUN_10bb1870@@YA?AVcString@@XZ
-cString FUN_10bb1870()
+// FUNCTION: 0x10BB1870 ?GetAIStopOverridingMovementModelPropertyDescription@@YA?AVcString@@XZ
+cString GetAIStopOverridingMovementModelPropertyDescription()
 {
     return cString(DAT_10e8e410);
 }
 
-// FUNCTION: 0x10BB1890 ?FUN_10bb1890@@YA?AVcString@@XZ
-cString FUN_10bb1890()
+// FUNCTION: 0x10BB1890 ?GetAIStopOverridingCombatModelPropertyName@@YA?AVcString@@XZ
+cString GetAIStopOverridingCombatModelPropertyName()
 {
     return cString(DAT_10e8e510);
 }
 
-// FUNCTION: 0x10BB18B0 ?FUN_10bb18b0@@YA?AVcString@@XZ
-cString FUN_10bb18b0()
+// FUNCTION: 0x10BB18B0 ?GetAIStopOverridingCombatModelPropertyDescription@@YA?AVcString@@XZ
+cString GetAIStopOverridingCombatModelPropertyDescription()
 {
     return cString(DAT_10e8e558);
 }
 
-// FUNCTION: 0x10BB18D0 ?FUN_10bb18d0@@YA?AVcString@@XZ
-cString FUN_10bb18d0()
+// FUNCTION: 0x10BB18D0 ?GetAIStopOverridingFactionPropertyName@@YA?AVcString@@XZ
+cString GetAIStopOverridingFactionPropertyName()
 {
     return cString(DAT_10e8e650);
 }
 
-// FUNCTION: 0x10BB18F0 ?FUN_10bb18f0@@YA?AVcString@@XZ
-cString FUN_10bb18f0()
+// FUNCTION: 0x10BB18F0 ?GetAIStopOverridingFactionPropertyDescription@@YA?AVcString@@XZ
+cString GetAIStopOverridingFactionPropertyDescription()
 {
     return cString(DAT_10e8e698);
 }
 
-// FUNCTION: 0x10BB1990 ?FUN_10bb1990@@YA?AVcString@@XZ
-cString FUN_10bb1990()
+// FUNCTION: 0x10BB1990 ?GetAIGuardPlayerName@@YA?AVcString@@XZ
+cString GetAIGuardPlayerName()
 {
     return cString(DAT_10e8e794);
 }
 
-// FUNCTION: 0x10BB19B0 ?FUN_10bb19b0@@YA?AVcString@@XZ
-cString FUN_10bb19b0()
+// FUNCTION: 0x10BB19B0 ?GetAIGuardPlayerDescription@@YA?AVcString@@XZ
+cString GetAIGuardPlayerDescription()
 {
     return cString(DAT_10e8e7a8);
 }
 
-// FUNCTION: 0x10BB1C00 ?FUN_10bb1c00@@YA?AVcString@@XZ
-cString FUN_10bb1c00()
+// FUNCTION: 0x10BB1C00 ?GetAIApproachLinkedObjectName@@YA?AVcString@@XZ
+cString GetAIApproachLinkedObjectName()
 {
     return cString(DAT_10e8e828);
 }
 
-// FUNCTION: 0x10BB1C20 ?FUN_10bb1c20@@YA?AVcString@@XZ
-cString FUN_10bb1c20()
+// FUNCTION: 0x10BB1C20 ?GetAIApproachLinkedObjectDescription@@YA?AVcString@@XZ
+cString GetAIApproachLinkedObjectDescription()
 {
     return cString(DAT_10e8e898);
 }
 
-// FUNCTION: 0x10BB1CD0 ?FUN_10bb1cd0@@YA?AVcString@@XZ
-cString FUN_10bb1cd0()
+// FUNCTION: 0x10BB1CD0 ?GetAIFleePlayerName@@YA?AVcString@@XZ
+cString GetAIFleePlayerName()
 {
     return cString(DAT_10e8e928);
 }
 
-// FUNCTION: 0x10BB1CF0 ?FUN_10bb1cf0@@YA?AVcString@@XZ
-cString FUN_10bb1cf0()
+// FUNCTION: 0x10BB1CF0 ?GetAIFleePlayerDescription@@YA?AVcString@@XZ
+cString GetAIFleePlayerDescription()
 {
     return cString(DAT_10e8e938);
 }
 
-// FUNCTION: 0x10BB1D10 ?FUN_10bb1d10@@YA?AVcString@@XZ
-cString FUN_10bb1d10()
+// FUNCTION: 0x10BB1D10 ?GetAIGuardLinkedNpcName@@YA?AVcString@@XZ
+cString GetAIGuardLinkedNpcName()
 {
     return cString(DAT_10e8e9b0);
 }
 
-// FUNCTION: 0x10BB1D30 ?FUN_10bb1d30@@YA?AVcString@@XZ
-cString FUN_10bb1d30()
+// FUNCTION: 0x10BB1D30 ?GetAIGuardLinkedNpcDescription@@YA?AVcString@@XZ
+cString GetAIGuardLinkedNpcDescription()
 {
     return cString(DAT_10e8ea00);
 }
 
-// FUNCTION: 0x10BB1D50 ?FUN_10bb1d50@@YA?AVcString@@XZ
-cString FUN_10bb1d50()
+// FUNCTION: 0x10BB1D50 ?GetAIFleeLinkedNpcName@@YA?AVcString@@XZ
+cString GetAIFleeLinkedNpcName()
 {
     return cString(DAT_10e8ead8);
 }
 
-// FUNCTION: 0x10BB1D70 ?FUN_10bb1d70@@YA?AVcString@@XZ
-cString FUN_10bb1d70()
+// FUNCTION: 0x10BB1D70 ?GetAIFleeLinkedNpcDescription@@YA?AVcString@@XZ
+cString GetAIFleeLinkedNpcDescription()
 {
     return cString(DAT_10e8eb28);
 }
 
-// FUNCTION: 0x10BB1D90 ?FUN_10bb1d90@@YA?AVcString@@XZ
-cString FUN_10bb1d90()
+// FUNCTION: 0x10BB1D90 ?GetAIEnterPatrolPathName@@YA?AVcString@@XZ
+cString GetAIEnterPatrolPathName()
 {
     return cString(DAT_10e8ec00);
 }
 
-// FUNCTION: 0x10BB1DB0 ?FUN_10bb1db0@@YA?AVcString@@XZ
-cString FUN_10bb1db0()
+// FUNCTION: 0x10BB1DB0 ?GetAIEnterPatrolPathDescription@@YA?AVcString@@XZ
+cString GetAIEnterPatrolPathDescription()
 {
     return cString(DAT_10e8ec48);
 }
 
-// FUNCTION: 0x10BB1DD0 ?FUN_10bb1dd0@@YA?AVcString@@XZ
-cString FUN_10bb1dd0()
+// FUNCTION: 0x10BB1DD0 ?GetAISetDefaultPatrolPathName@@YA?AVcString@@XZ
+cString GetAISetDefaultPatrolPathName()
 {
     return cString(DAT_10e8ed20);
 }
 
-// FUNCTION: 0x10BB1DF0 ?FUN_10bb1df0@@YA?AVcString@@XZ
-cString FUN_10bb1df0()
+// FUNCTION: 0x10BB1DF0 ?GetAISetDefaultPatrolPathDescription@@YA?AVcString@@XZ
+cString GetAISetDefaultPatrolPathDescription()
 {
     return cString(DAT_10e8ed70);
 }
 
-// FUNCTION: 0x10BB1FD0 ?FUN_10bb1fd0@@YA?AVcString@@XZ
-cString FUN_10bb1fd0()
+// FUNCTION: 0x10BB1FD0 ?GetAIStopPatrollingName@@YA?AVcString@@XZ
+cString GetAIStopPatrollingName()
 {
     return cString(DAT_10e8eea8);
 }
 
-// FUNCTION: 0x10BB1FF0 ?FUN_10bb1ff0@@YA?AVcString@@XZ
-cString FUN_10bb1ff0()
+// FUNCTION: 0x10BB1FF0 ?GetAIStopPatrollingDescription@@YA?AVcString@@XZ
+cString GetAIStopPatrollingDescription()
 {
     return cString(DAT_10e8eee0);
 }
 
-// FUNCTION: 0x10BB20B0 ?FUN_10bb20b0@@YA?AVcString@@XZ
-cString FUN_10bb20b0()
+// FUNCTION: 0x10BB20B0 ?GetAIStopFleeingName@@YA?AVcString@@XZ
+cString GetAIStopFleeingName()
 {
     return cString(DAT_10e8ef60);
 }
 
-// FUNCTION: 0x10BB20D0 ?FUN_10bb20d0@@YA?AVcString@@XZ
-cString FUN_10bb20d0()
+// FUNCTION: 0x10BB20D0 ?GetAIStopFleeingDescription@@YA?AVcString@@XZ
+cString GetAIStopFleeingDescription()
 {
     return cString(DAT_10e8ef78);
 }
 
-// FUNCTION: 0x10BB20F0 ?FUN_10bb20f0@@YA?AVcString@@XZ
-cString FUN_10bb20f0()
+// FUNCTION: 0x10BB20F0 ?GetAIStopGuardingName@@YA?AVcString@@XZ
+cString GetAIStopGuardingName()
 {
     return cString(DAT_10e8f014);
 }
 
-// FUNCTION: 0x10BB2110 ?FUN_10bb2110@@YA?AVcString@@XZ
-cString FUN_10bb2110()
+// FUNCTION: 0x10BB2110 ?GetAIStopGuardingDescription@@YA?AVcString@@XZ
+cString GetAIStopGuardingDescription()
 {
     return cString(DAT_10e8f030);
 }
 
-// FUNCTION: 0x10BB2130 ?FUN_10bb2130@@YA?AVcString@@XZ
-cString FUN_10bb2130()
+// FUNCTION: 0x10BB2130 ?GetVolumeEnabledName@@YA?AVcString@@XZ
+cString GetVolumeEnabledName()
 {
     return cString(DAT_10e8f0e0);
 }
 
-// FUNCTION: 0x10BB2150 ?FUN_10bb2150@@YA?AVcString@@XZ
-cString FUN_10bb2150()
+// FUNCTION: 0x10BB2150 ?GetVolumeEnabledDescription@@YA?AVcString@@XZ
+cString GetVolumeEnabledDescription()
 {
     return cString(DAT_10e8f140);
 }
 
-// FUNCTION: 0x10BB2170 ?FUN_10bb2170@@YA?AVcString@@XZ
-cString FUN_10bb2170()
+// FUNCTION: 0x10BB2170 ?GetAISetFactionDispositionTowardPlayerName@@YA?AVcString@@XZ
+cString GetAISetFactionDispositionTowardPlayerName()
 {
     return cString(DAT_10e8f1a8);
 }
 
-// FUNCTION: 0x10BB2190 ?FUN_10bb2190@@YA?AVcString@@XZ
-cString FUN_10bb2190()
+// FUNCTION: 0x10BB2190 ?GetAISetFactionDispositionTowardPlayerDescription@@YA?AVcString@@XZ
+cString GetAISetFactionDispositionTowardPlayerDescription()
 {
     return cString(DAT_10e8f21c);
 }
 
-// FUNCTION: 0x10BB21B0 ?FUN_10bb21b0@@YA?AVcString@@XZ
-cString FUN_10bb21b0()
+// FUNCTION: 0x10BB21B0 ?GetAISetFactionDispositionTowardFactionName@@YA?AVcString@@XZ
+cString GetAISetFactionDispositionTowardFactionName()
 {
     return cString(DAT_10e8f258);
 }
 
-// FUNCTION: 0x10BB21D0 ?FUN_10bb21d0@@YA?AVcString@@XZ
-cString FUN_10bb21d0()
+// FUNCTION: 0x10BB21D0 ?GetAISetFactionDispositionTowardFactionDescription@@YA?AVcString@@XZ
+cString GetAISetFactionDispositionTowardFactionDescription()
 {
     return cString(DAT_10e8f2dc);
 }
 
-// FUNCTION: 0x10BB21F0 ?FUN_10bb21f0@@YA?AVcString@@XZ
-cString FUN_10bb21f0()
+// FUNCTION: 0x10BB21F0 ?GetAISetNpcDispositionTowardPlayerName@@YA?AVcString@@XZ
+cString GetAISetNpcDispositionTowardPlayerName()
 {
     return cString(DAT_10e8f320);
 }
 
-// FUNCTION: 0x10BB2210 ?FUN_10bb2210@@YA?AVcString@@XZ
-cString FUN_10bb2210()
+// FUNCTION: 0x10BB2210 ?GetAISetNpcDispositionTowardPlayerDescription@@YA?AVcString@@XZ
+cString GetAISetNpcDispositionTowardPlayerDescription()
 {
     return cString(DAT_10e8f3a8);
 }
 
-// FUNCTION: 0x10BB2230 ?FUN_10bb2230@@YA?AVcString@@XZ
-cString FUN_10bb2230()
+// FUNCTION: 0x10BB2230 ?GetAISetNpcDispositionTowardFactionName@@YA?AVcString@@XZ
+cString GetAISetNpcDispositionTowardFactionName()
 {
     return cString(DAT_10e8f3f0);
 }
 
-// FUNCTION: 0x10BB2250 ?FUN_10bb2250@@YA?AVcString@@XZ
-cString FUN_10bb2250()
+// FUNCTION: 0x10BB2250 ?GetAISetNpcDispositionTowardFactionDescription@@YA?AVcString@@XZ
+cString GetAISetNpcDispositionTowardFactionDescription()
 {
     return cString(DAT_10e8f488);
 }
 
-// FUNCTION: 0x10BB2270 ?FUN_10bb2270@@YA?AVcString@@XZ
-cString FUN_10bb2270()
+// FUNCTION: 0x10BB2270 ?GetAIBecomeHostileToPawnName@@YA?AVcString@@XZ
+cString GetAIBecomeHostileToPawnName()
 {
     return cString(DAT_10e8f4d0);
 }
 
-// FUNCTION: 0x10BB2290 ?FUN_10bb2290@@YA?AVcString@@XZ
-cString FUN_10bb2290()
+// FUNCTION: 0x10BB2290 ?GetAIBecomeHostileToPawnDescription@@YA?AVcString@@XZ
+cString GetAIBecomeHostileToPawnDescription()
 {
     return cString(DAT_10e8f548);
 }
 
-// FUNCTION: 0x10BB22B0 ?FUN_10bb22b0@@YA?AVcString@@XZ
-cString FUN_10bb22b0()
+// FUNCTION: 0x10BB22B0 ?GetAIBecomeHostileTowardPlayerWithNearbyAlliesName@@YA?AVcString@@XZ
+cString GetAIBecomeHostileTowardPlayerWithNearbyAlliesName()
 {
     return cString(DAT_10e8f5b0);
 }
 
-// FUNCTION: 0x10BB22D0 ?FUN_10bb22d0@@YA?AVcString@@XZ
-cString FUN_10bb22d0()
+// FUNCTION: 0x10BB22D0 ?GetAIBecomeHostileTowardPlayerWithNearbyAlliesDescription@@YA?AVcString@@XZ
+cString GetAIBecomeHostileTowardPlayerWithNearbyAlliesDescription()
 {
     return cString(DAT_10e8f620);
 }
 
-// FUNCTION: 0x10BB22F0 ?FUN_10bb22f0@@YA?AVcString@@XZ
-cString FUN_10bb22f0()
+// FUNCTION: 0x10BB22F0 ?GetAIBecomeHostileToPawnWithAlliesName@@YA?AVcString@@XZ
+cString GetAIBecomeHostileToPawnWithAlliesName()
 {
     return cString(DAT_10e8f6d8);
 }
 
-// FUNCTION: 0x10BB2310 ?FUN_10bb2310@@YA?AVcString@@XZ
-cString FUN_10bb2310()
+// FUNCTION: 0x10BB2310 ?GetAIBecomeHostileToPawnWithAlliesDescription@@YA?AVcString@@XZ
+cString GetAIBecomeHostileToPawnWithAlliesDescription()
 {
     return cString(DAT_10e8f768);
 }
 
-// FUNCTION: 0x10BB2330 ?FUN_10bb2330@@YA?AVcString@@XZ
-cString FUN_10bb2330()
+// FUNCTION: 0x10BB2330 ?GetAIAddAlertnessName@@YA?AVcString@@XZ
+cString GetAIAddAlertnessName()
 {
     return cString(DAT_10e8f840);
 }
 
-// FUNCTION: 0x10BB2350 ?FUN_10bb2350@@YA?AVcString@@XZ
-cString FUN_10bb2350()
+// FUNCTION: 0x10BB2350 ?GetAIAddAlertnessDescription@@YA?AVcString@@XZ
+cString GetAIAddAlertnessDescription()
 {
     return cString(DAT_10e8f8b8);
 }
 
-// FUNCTION: 0x10BB2370 ?FUN_10bb2370@@YA?AVcString@@XZ
-cString FUN_10bb2370()
+// FUNCTION: 0x10BB2370 ?GetAISetMinimumAlertnessName@@YA?AVcString@@XZ
+cString GetAISetMinimumAlertnessName()
 {
     return cString(DAT_10e8f900);
 }
 
-// FUNCTION: 0x10BB2390 ?FUN_10bb2390@@YA?AVcString@@XZ
-cString FUN_10bb2390()
+// FUNCTION: 0x10BB2390 ?GetAISetMinimumAlertnessDescription@@YA?AVcString@@XZ
+cString GetAISetMinimumAlertnessDescription()
 {
     return cString(DAT_10e8f964);
 }
 
-// FUNCTION: 0x10BB23B0 ?FUN_10bb23b0@@YA?AVcString@@XZ
-cString FUN_10bb23b0()
+// FUNCTION: 0x10BB23B0 ?GetAISetMaximumAlertnessName@@YA?AVcString@@XZ
+cString GetAISetMaximumAlertnessName()
 {
     return cString(DAT_10e8f998);
 }
 
-// FUNCTION: 0x10BB23D0 ?FUN_10bb23d0@@YA?AVcString@@XZ
-cString FUN_10bb23d0()
+// FUNCTION: 0x10BB23D0 ?GetAISetMaximumAlertnessDescription@@YA?AVcString@@XZ
+cString GetAISetMaximumAlertnessDescription()
 {
     return cString(DAT_10e8f9fc);
 }
 
-// FUNCTION: 0x10BB23F0 ?FUN_10bb23f0@@YA?AVcString@@XZ
-cString FUN_10bb23f0()
+// FUNCTION: 0x10BB23F0 ?GetAIResetAlertnessLimitsName@@YA?AVcString@@XZ
+cString GetAIResetAlertnessLimitsName()
 {
     return cString(DAT_10e8fa30);
 }
 
-// FUNCTION: 0x10BB2410 ?FUN_10bb2410@@YA?AVcString@@XZ
-cString FUN_10bb2410()
+// FUNCTION: 0x10BB2410 ?GetAIResetAlertnessLimitsDescription@@YA?AVcString@@XZ
+cString GetAIResetAlertnessLimitsDescription()
 {
     return cString(DAT_10e8fac8);
 }
 
-// FUNCTION: 0x10BB2430 ?FUN_10bb2430@@YA?AVcString@@XZ
-cString FUN_10bb2430()
+// FUNCTION: 0x10BB2430 ?GetAIChangeSensoryModelName@@YA?AVcString@@XZ
+cString GetAIChangeSensoryModelName()
 {
     return cString(DAT_10e8fb80);
 }
 
-// FUNCTION: 0x10BB2450 ?FUN_10bb2450@@YA?AVcString@@XZ
-cString FUN_10bb2450()
+// FUNCTION: 0x10BB2450 ?GetAIChangeSensoryModelDescription@@YA?AVcString@@XZ
+cString GetAIChangeSensoryModelDescription()
 {
     return cString(DAT_10e8fbc8);
 }
 
-// FUNCTION: 0x10BB2470 ?FUN_10bb2470@@YA?AVcString@@XZ
-cString FUN_10bb2470()
+// FUNCTION: 0x10BB2470 ?GetAIChangeCombatModelName@@YA?AVcString@@XZ
+cString GetAIChangeCombatModelName()
 {
     return cString(DAT_10e8fc38);
 }
 
-// FUNCTION: 0x10BB2490 ?FUN_10bb2490@@YA?AVcString@@XZ
-cString FUN_10bb2490()
+// FUNCTION: 0x10BB2490 ?GetAIChangeCombatModelDescription@@YA?AVcString@@XZ
+cString GetAIChangeCombatModelDescription()
 {
     return cString(DAT_10e8fc80);
 }
 
-// FUNCTION: 0x10BB24B0 ?FUN_10bb24b0@@YA?AVcString@@XZ
-cString FUN_10bb24b0()
+// FUNCTION: 0x10BB24B0 ?GetAIChangeBehaviorModelName@@YA?AVcString@@XZ
+cString GetAIChangeBehaviorModelName()
 {
     return cString(DAT_10e8fcf0);
 }
 
-// FUNCTION: 0x10BB24D0 ?FUN_10bb24d0@@YA?AVcString@@XZ
-cString FUN_10bb24d0()
+// FUNCTION: 0x10BB24D0 ?GetAIChangeMovementModelDescription@@YA?AVcString@@XZ
+cString GetAIChangeMovementModelDescription()
 {
     return cString(DAT_10e8fd38);
 }
 
-// FUNCTION: 0x10BB24F0 ?FUN_10bb24f0@@YA?AVcString@@XZ
-cString FUN_10bb24f0()
+// FUNCTION: 0x10BB24F0 ?GetAIChangeFactionModelName@@YA?AVcString@@XZ
+cString GetAIChangeFactionModelName()
 {
     return cString(DAT_10e8fda8);
 }
 
-// FUNCTION: 0x10BB2510 ?FUN_10bb2510@@YA?AVcString@@XZ
-cString FUN_10bb2510()
+// FUNCTION: 0x10BB2510 ?GetAIChangeMovementModelName@@YA?AVcString@@XZ
+cString GetAIChangeMovementModelName()
 {
     return cString(DAT_10e8fdf0);
 }
 
-// FUNCTION: 0x10BB2530 ?FUN_10bb2530@@YA?AVcString@@XZ
-cString FUN_10bb2530()
+// FUNCTION: 0x10BB2530 ?GetAIPlayBarkName@@YA?AVcString@@XZ
+cString GetAIPlayBarkName()
 {
     return cString(DAT_10e8fe38);
 }
 
-// FUNCTION: 0x10BB2550 ?FUN_10bb2550@@YA?AVcString@@XZ
-cString FUN_10bb2550()
+// FUNCTION: 0x10BB2550 ?GetAIPlayBarkDescription@@YA?AVcString@@XZ
+cString GetAIPlayBarkDescription()
 {
     return cString(DAT_10e8fe50);
 }
 
-// FUNCTION: 0x10BB2570 ?FUN_10bb2570@@YA?AVcString@@XZ
-cString FUN_10bb2570()
+// FUNCTION: 0x10BB2570 ?GetAIFleeToFleePointName@@YA?AVcString@@XZ
+cString GetAIFleeToFleePointName()
 {
     return cString(DAT_10e8fea8);
 }
 
-// FUNCTION: 0x10BB2590 ?FUN_10bb2590@@YA?AVcString@@XZ
-cString FUN_10bb2590()
+// FUNCTION: 0x10BB2590 ?GetAIFleeToFleePointDescription@@YA?AVcString@@XZ
+cString GetAIFleeToFleePointDescription()
 {
     return cString(DAT_10e8fef0);
 }
 
-// FUNCTION: 0x10BB25B0 ?FUN_10bb25b0@@YA?AVcString@@XZ
-cString FUN_10bb25b0()
+// FUNCTION: 0x10BB25B0 ?GetAISetPrimaryTargetName@@YA?AVcString@@XZ
+cString GetAISetPrimaryTargetName()
 {
     return cString(DAT_10e8ff80);
 }
 
-// FUNCTION: 0x10BB25D0 ?FUN_10bb25d0@@YA?AVcString@@XZ
-cString FUN_10bb25d0()
+// FUNCTION: 0x10BB25D0 ?GetAISetPrimaryTargetDescription@@YA?AVcString@@XZ
+cString GetAISetPrimaryTargetDescription()
 {
     return cString(DAT_10e8ffc8);
 }
 
-// FUNCTION: 0x10BB2780 ?FUN_10bb2780@@YA?AVcString@@XZ
-cString FUN_10bb2780()
+// FUNCTION: 0x10BB2780 ?GetAIForgetEvidenceName@@YA?AVcString@@XZ
+cString GetAIForgetEvidenceName()
 {
     return cString(DAT_10e90068);
 }
 
-// FUNCTION: 0x10BB27A0 ?FUN_10bb27a0@@YA?AVcString@@XZ
-cString FUN_10bb27a0()
+// FUNCTION: 0x10BB27A0 ?GetAIForgetEvidenceDescription@@YA?AVcString@@XZ
+cString GetAIForgetEvidenceDescription()
 {
     return cString(DAT_10e900b0);
 }
 
-// FUNCTION: 0x10BB2940 ?FUN_10bb2940@@YA?AVcString@@XZ
-cString FUN_10bb2940()
+// FUNCTION: 0x10BB2940 ?GetAIReprimandPlayerName@@YA?AVcString@@XZ
+cString GetAIReprimandPlayerName()
 {
     return cString(DAT_10e90148);
 }
 
-// FUNCTION: 0x10BB2960 ?FUN_10bb2960@@YA?AVcString@@XZ
-cString FUN_10bb2960()
+// FUNCTION: 0x10BB2960 ?GetAIReprimandPlayerDescription@@YA?AVcString@@XZ
+cString GetAIReprimandPlayerDescription()
 {
     return cString(DAT_10e901b0);
 }
 
-// FUNCTION: 0x10BB2B80 ?FUN_10bb2b80@@YA?AVcString@@XZ
-cString FUN_10bb2b80()
+// FUNCTION: 0x10BB2B80 ?GetAIStartStoreBarksName@@YA?AVcString@@XZ
+cString GetAIStartStoreBarksName()
 {
     return cString(DAT_10e9022c);
 }
 
-// FUNCTION: 0x10BB2BA0 ?FUN_10bb2ba0@@YA?AVcString@@XZ
-cString FUN_10bb2ba0()
+// FUNCTION: 0x10BB2BA0 ?GetAIStartStoreBarksDescription@@YA?AVcString@@XZ
+cString GetAIStartStoreBarksDescription()
 {
     return cString(DAT_10e90270);
 }
 
-// FUNCTION: 0x10BB2DE0 ?FUN_10bb2de0@@YA?AVcString@@XZ
-cString FUN_10bb2de0()
+// FUNCTION: 0x10BB2DE0 ?GetAIStartFenceBarksName@@YA?AVcString@@XZ
+cString GetAIStartFenceBarksName()
 {
     return cString(DAT_10e902e0);
 }
 
-// FUNCTION: 0x10BB2E00 ?FUN_10bb2e00@@YA?AVcString@@XZ
-cString FUN_10bb2e00()
+// FUNCTION: 0x10BB2E00 ?GetAIStartFenceBarksDescription@@YA?AVcString@@XZ
+cString GetAIStartFenceBarksDescription()
 {
     return cString(DAT_10e90320);
 }
 
-// FUNCTION: 0x10BB2FC0 ?FUN_10bb2fc0@@YA?AVcString@@XZ
-cString FUN_10bb2fc0()
+// FUNCTION: 0x10BB2FC0 ?GetAIPlayFacialAnimationName@@YA?AVcString@@XZ
+cString GetAIPlayFacialAnimationName()
 {
     return cString(DAT_10e90388);
 }
 
-// FUNCTION: 0x10BB2FE0 ?FUN_10bb2fe0@@YA?AVcString@@XZ
-cString FUN_10bb2fe0()
+// FUNCTION: 0x10BB2FE0 ?GetAIPlayFacialAnimationDescription@@YA?AVcString@@XZ
+cString GetAIPlayFacialAnimationDescription()
 {
     return cString(DAT_10e90450);
 }
 
-// FUNCTION: 0x10BB3150 ?FUN_10bb3150@@YA?AVcString@@XZ
-cString FUN_10bb3150()
+// FUNCTION: 0x10BB3150 ?GetAIStopFacialAnimationName@@YA?AVcString@@XZ
+cString GetAIStopFacialAnimationName()
 {
     return cString(DAT_10e905a8);
 }
 
-// FUNCTION: 0x10BB3170 ?FUN_10bb3170@@YA?AVcString@@XZ
-cString FUN_10bb3170()
+// FUNCTION: 0x10BB3170 ?GetAIStopFacialAnimationDescription@@YA?AVcString@@XZ
+cString GetAIStopFacialAnimationDescription()
 {
     return cString(DAT_10e90628);
 }
 
-// FUNCTION: 0x10BB32C0 ?FUN_10bb32c0@@YA?AVcString@@XZ
-cString FUN_10bb32c0()
+// FUNCTION: 0x10BB32C0 ?GetBecomeInvisibleName@@YA?AVcString@@XZ
+cString GetBecomeInvisibleName()
 {
     return cString(DAT_10e90690);
 }
 
-// FUNCTION: 0x10BB32E0 ?FUN_10bb32e0@@YA?AVcString@@XZ
-cString FUN_10bb32e0()
+// FUNCTION: 0x10BB32E0 ?GetBecomeInvisibleDescription@@YA?AVcString@@XZ
+cString GetBecomeInvisibleDescription()
 {
     return cString(DAT_10e906f8);
 }
 
-// FUNCTION: 0x10BB3430 ?FUN_10bb3430@@YA?AVcString@@XZ
-cString FUN_10bb3430()
+// FUNCTION: 0x10BB3430 ?GetSitOrSleepName@@YA?AVcString@@XZ
+cString GetSitOrSleepName()
 {
     return cString(DAT_10e90758);
 }
 
-// FUNCTION: 0x10BB3450 ?FUN_10bb3450@@YA?AVcString@@XZ
-cString FUN_10bb3450()
+// FUNCTION: 0x10BB3450 ?GetSitOrSleepDescription@@YA?AVcString@@XZ
+cString GetSitOrSleepDescription()
 {
     return cString(DAT_10e90800);
 }

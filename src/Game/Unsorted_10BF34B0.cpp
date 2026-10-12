@@ -60,7 +60,7 @@ public:
     virtual void Virtual47();
     virtual int Virtual48();
 
-    int FUN_10bc4bf0();
+    int GetTargetLinkType();
 
     Class_10BC4BF0_Member* Unknown04;
 };
@@ -69,7 +69,7 @@ public:
 void Class_10BF5310::FUN_10bf5310()
 {
     FUN_10befed0();
-    Class_10BC4BF0* Obj = (Class_10BC4BF0*)FUN_10bc4bf0();
+    Class_10BC4BF0* Obj = (Class_10BC4BF0*)GetTargetLinkType();
     int Kind = Obj->Virtual48();
     if (Kind == 0xe || Kind == 0xb || Kind == 7)
     {

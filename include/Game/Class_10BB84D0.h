@@ -6,10 +6,10 @@
 class Class_10BB84D0
 {
 public:
-    void FUN_10bb84d0();
+    void StartTimeout();
 
     char Unknown00[0x2D8];
-    float Unknown2D8;
+    float m_ExpireTime;
 };
 
 #endif // GAME_CLASS_10BB84D0_H

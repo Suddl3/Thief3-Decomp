@@ -93,7 +93,7 @@ public:
     Class_10E95F40(int A, int B);
     ~Class_10E95F40();
 
-    Class_10E97B00 FUN_10be4fd0();
+    Class_10E97B00 GetReturnToIdleMessage();
 
     Struct_10BE57C0* Unknown04;
 };

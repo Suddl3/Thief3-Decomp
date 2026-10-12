@@ -6,7 +6,7 @@
 class Class_10C04840
 {
 public:
-    bool FUN_10c04840(unsigned char A);
+    bool HasAtLeast(unsigned char A);
 
     char Unknown00[0x19];
     unsigned char Unknown19[5];

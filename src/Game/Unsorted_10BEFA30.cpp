@@ -42,8 +42,8 @@ public:
     Class_10BAC050* Unknown08;
 };
 
-// FUNCTION: 0x10BEFA30 ?FUN_10befa30@Class_10BEFA30@@QAEPAV1@ABV1@@Z
-Class_10BEFA30* Class_10BEFA30::FUN_10befa30(const Class_10BEFA30& A)
+// FUNCTION: 0x10BEFA30 ?Assign@Class_10BEFA30@@QAEPAV1@ABV1@@Z
+Class_10BEFA30* Class_10BEFA30::Assign(const Class_10BEFA30& A)
 {
     Unknown04 = A.Unknown04;
     Unknown10 = A.Unknown10;
@@ -54,13 +54,13 @@ Class_10BEFA30* Class_10BEFA30::FUN_10befa30(const Class_10BEFA30& A)
     return this;
 }
 
-// FUNCTION: 0x10BEFA80 ?FUN_10befa80@Class_10BEFA80@@QAEXXZ
-void Class_10BEFA80::FUN_10befa80()
+// FUNCTION: 0x10BEFA80 ?SetRandomEndTime@Class_10BEFA80@@QAEXXZ
+void Class_10BEFA80::SetRandomEndTime()
 {
     float Delay = appFrand();
     Delay *= 3.0f;
     Delay += 3.0f;
-    Unknown224 = Delay + GetTimeSeconds();
+    m_EndTime = Delay + GetTimeSeconds();
 }
 
 // FUNCTION: 0x10BF0360 ?FUN_10bf0360@Class_10BF0360@@QAEXVFVector@@M@Z

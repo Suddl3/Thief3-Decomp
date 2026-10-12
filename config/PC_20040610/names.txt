@@ -3841,3 +3841,322 @@ field Class_1098E330::Unknown0C4 m_Flags Bit-ORed with 0x10000000 in FUN_10ba0df
 field PawnWrapper::Unknown34 m_Pawn Pointer the method compares its argument against ('tested against self') and reads the position through.
 field Class_10BAA6F0::Unknown34 m_Pawn AAIPawn pointer; the method reads its Controller.
 field Class_10E8DBA4::Unknown18 m_Name const char* passed as the name to FUN_10a68d50, with a default string when null.
+class Class_10C05E30 cLineSegment Constructor stores two endpoints with their X and Y deltas and the slope, FLT_MAX when vertical.
+class Class_10C1F650 AuditorySubsystem Debug string 'AuditorySubsystem::ShouldIgnoreFromNoiseMaker' names the owner class.
+class Class_10E99314 MoveCommand Xbox T3Opt twin names this class MoveCommand; vtable slot 3 is MC_MoveToPoint's method.
+class Class_10C323A0 cIndexedList Node list with Head, Tail and Count; header: values also indexed by a hash table.
+class Class_10E92C38 DeathState Xbox vtable pair, slot 2: message 'DeathState is trying to update in the middle of a havok timestep'.
+function 0x10BDAFE0 StartRandomTimer Stores GetTimeSeconds() plus a random interval (appFrand between two config floats) in Unknown70.
+function 0x10BDB3A0 IsTargetAbove Controller GetCurrent() object's Z exceeds the owner pawn's Z (Class_10c7d570_Result Unknown34) by more than 64.
+function 0x10BDB480 Construct Same shape as the named cTacticMoveToPoint::Construct (0x10BDB590): base constructor call, field stores, vtable store, return this.
+function 0x10BDB4C0 Construct Same shape as the named cTacticMoveToPoint::Construct (0x10BDB590): base constructor call, field stores, vtable store, return this.
+function 0x10BDB500 Construct Same shape as the named cTacticMoveToPoint::Construct (0x10BDB590): base constructor call, field stores, vtable store, return this.
+function 0x10BDB620 Construct Same shape as the named cTacticMoveToPoint::Construct (0x10BDB590): base constructor call, field stores, vtable store, return this.
+function 0x10BDB6C0 Construct Same shape as the named cTacticMoveToPoint::Construct (0x10BDB590): base constructor call, field stores, vtable store, return this.
+function 0x10BE1910 RandomizeValue Unknown4C = Min + (Max - Min) * appFrand(), with Min and Max read from two config keys.
+function 0x10BE1970 DisableHeadAim FName 'head' passed to cBoneAimController::FUN_10a2c2a0, which sets entry flag 0x7D; FUN_10a2c500 and IsAngleBelow skip entries with it set; dtor repeats the call.
+function 0x10BE31B0 IsInRange Owner pawn's position (Unknown2C) within 12544 (112 squared) of FUN_10be3060's point via FUN_10c05a50.
+function 0x10BE3E50 Tick Virtual slot 8 of the state family (Class_10E95D00 FUN_10be3ea0 also slot 8); returns early unless done, else PopState().
+function 0x10BE3FF0 ResetTimer Calls Unknown30.FUN_10bfd210() and sets Unknown0C to GetTimeSeconds() minus the Virtual65() interval.
+function 0x10BE4030 StartRandomTimer Stores GetTimeSeconds() plus a random interval (appFrand between two GetFloat config values) in Unknown40.
+function 0x10BED160 FindNearest Keeps the array entry whose Unknown2C is nearest Target by FUN_10c05a80 distance; returns it.
+function 0x10BEEB50 MoveToNextPatrolPoint Asks the patrol server for the next node (Xbox twin asserts m_pPatrolServer), then returns FUN_10bee570(node).
+function 0x10BEF5B0 GetRandomInRange Same body as Class_10BF0360::GetRandomInRange, with tuning ids 0x100643 and 0x100644.
+function 0x10BEFA30 Assign Copies the six fields of A into this and returns this, as the header's inline operator= does.
+function 0x10BEFA80 SetRandomEndTime Stores GetTimeSeconds() plus a random 3 to 6 seconds in Unknown224.
+function 0x10BFF980 SplitPointsByClass IsA(AAIPathPoint) entries go to A, IsA(APawn) entries to B, from Param's point array.
+function 0x10BFFF00 AppendSourceArray Appends each element of Src's array (Unknown0C0.FUN_10bbf5d0()) to Dst through SetCount and Data.
+function 0x10C00280 AddWrapped Returns A+B wrapped into [0,C): subtracts C while >= C if B>0, else adds C while < 0.
+function 0x10C00490 GetFrameDeltaTime Returns TimeManager::Instance()->GetDeltaTime().
+function 0x10C00A50 GetElementPtr Returns &Unknown08[p1], the address of element p1 of an int array.
+function 0x10C00B40 GetBucketIndex Hash of the key bytes masked with (1 << Unknown08) - 1 gives the bucket index.
+function 0x10C00F30 ClearMatching Zeroes Unknown0C of each entry in Unknown08[0..Unknown00) equal to A.
+function 0x10C01140 Insert Allocates Node(Key, Value), prepends it to bucket Unknown14[Index], bumps Unknown04, returns Index.
+function 0x10C012D0 Rehash Rebuilds Unknown14 with Size buckets, reinserting every node through FUN_10c01140.
+function 0x10C04AA0 Serialize FArchive& method: archive reads or writes the count, items, optional value, ArVer>=2 int and a byte.
+function 0x10C04B70 MoveItems memmove of Count 0x1C-byte items from index From to index To in Unknown08.
+function 0x10C053C0 ExpandBounds Widens per-axis min and max by the item's three floats; *Done marks the first item.
+function 0x10C05480 ClampAngle 16-bit (0xffff wrap) angle clamped into -B..B, snapping to the nearer edge split at 0x7fff.
+function 0x10C054B0 InterpolateLinear Value at A on the line through (B,C) and (D,E): Slope*A + (C - B*Slope).
+function 0x10C055D0 RotateYawMinus90 Returns (Y,-X,Z): a -90 degree yaw, since positive yaw turns X toward Y.
+function 0x10C05A50 DistanceSquared2D Sum of squared X and Y differences; Distance2D (FUN_10c05a20) takes its square root.
+function 0x10C054E0 IsNearlyEqual A within C of B; C equal to DAT_10e4a718 (FLT_MAX in the ctor) gives a 1e-6 relative tolerance.
+function 0x10C05590 CompareWithTolerance Returns 0 when FUN_10c054e0 finds A and B equal within C; else -1 if A < B, 1 otherwise.
+function 0x10C055F0 RotateYaw90 Returns (-Y,X,Z): a +90 degree yaw, since positive yaw turns X toward Y.
+function 0x10C05610 ExpandBoundsList Calls the per-item bounds update on each of the List's Count items.
+function 0x10C05A20 Distance2D sqrtf of the squared X and Y differences summed by FUN_10c05a50.
+function 0x10C059C0 HeightOnLine Z on the line A-C at B's X, or Y when A and C nearly share X (span under 0.001).
+function 0x10C05A80 DistanceSquared3D Sum of squared X, Y and Z differences of the three-float structs.
+function 0x10C07300 AddItem Appends Item to Unknown50 (cIntArray::Append); called from ACityPopPoint::PostLoad.
+function 0x10C08FA0 Serialize Serializes its fields through FArchive::Serialize, reading when Ar.Unknown14 is set; same shape as cAIManager::Serialize.
+function 0x10C08890 TrySet Sets Unknown04 to p1 only while it is 0, and returns whether it did.
+function 0x10C09520 ClearItems Deletes each Items[i], then sets Count to 0; the destructor of Class_10E97BC8 calls it.
+function 0x10C0C360 FindInRadius Appends each item id (Unknown0C) whose Unknown38 position is within Radius of Center to Out.
+function 0x10C0E5E0 HandleMessage Message callback: its constructor subscribes it to 0x5A via Virtual1; same callback as Class_10E97CC0 at 0x10C0EE30.
+function 0x10C0EE30 HandleMessage Message callback: its constructor subscribes it to 0x5A via Virtual1; same callback as Class_10E97CB4 at 0x10C0E5E0.
+function 0x10C0EE90 Init Zeroes Unknown00-Unknown0C, sets Unknown10 to 1.0, returns this; same shape as Class_10E984F4::Init.
+function 0x10C0EF90 FindStanceIndex Case-insensitive search of the 18-entry table with strings 'STANDING' and 'NUM_STANCES'; returns index or -1.
+function 0x10C128B0 GetAIMovementModelClass Lazy class lookup for AIMovementModel ('AICore' string); same shape as GetAISensoryModelClass.
+function 0x10C128E0 GetAIBehaviorModelClass Lazy class lookup for AIBehaviorModel ('AICore' string); same shape as GetAISensoryModelClass.
+function 0x10C12910 GetAICombatModelClass Lazy class lookup for AICombatModel ('AICore' string); same shape as GetAISensoryModelClass.
+function 0x10C12940 GetAIFactionModelClass Lazy class lookup for AIFactionModel ('AICore' string); same shape as GetAISensoryModelClass.
+function 0x10C12BE0 GetContextVolumeTypeName Returns cString literal 'ContextVolumeType'; called by FUN_10ba5350.
+function 0x10C12C20 GetAISensoryModelPropertyName Returns cString literal 'AISensoryModelProperty'; called by FUN_10ba5350.
+function 0x10C12C40 GetAIMovementModelPropertyName Returns cString literal 'AIMovementModelProperty'; called by FUN_10ba5350.
+function 0x10C12C60 GetAIBehaviorModelPropertyName Returns cString literal 'AIBehaviorModelProperty'; called by FUN_10ba5350.
+function 0x10C12C80 GetAICombatModelPropertyName Returns cString literal 'AICombatModelProperty'; called by FUN_10ba5350.
+function 0x10C12CA0 GetAIFactionModelPropertyName Returns cString literal 'AIFactionModelProperty'; called by FUN_10ba5350.
+function 0x10C12D00 GetAISensoryModelClassName Returns cString literal 'AISensoryModel'; called by FUN_10ba5350.
+function 0x10C12D20 GetAICombatModelClassName Returns cString literal 'AICombatModel'; called by FUN_10ba5350.
+function 0x10C12D40 GetAIMovementModelClassName Returns cString literal 'AIMovementModel'; called by FUN_10ba5350.
+function 0x10C12D60 GetAIFactionModelClassName Returns cString literal 'AIFactionModel'; called by FUN_10ba5350.
+function 0x10C12D80 GetAIBehaviorModelClassName Returns cString literal 'AIBehaviorModel'; called by FUN_10ba5350.
+function 0x10C15CC0 AllocEntry Takes the next of a fixed 0x400-entry pool and fills five ints; returns false when the pool is full.
+function 0x10C15E60 Remove Unlinks the node whose Unknown04 equals Source and decrements Unknown08.
+function 0x10C161F0 Remove Calls FUN_10c16030(Source->Unknown10) and FUN_10c15e60(Source) on its two members.
+function 0x10C16250 Init Allocates the shared Struct_10C16250 once when DAT_10ff7070 is null, then zeroes DAT_10ff7074 and fields 4018 and 401C.
+function 0x10C1A580 AcquireSoundNotifier Creates the SoundNotifier in DAT_10ff7090 when it is null, then increments its Unknown04 count.
+function 0x10C1A640 ReleaseSoundNotifier Decrements the SoundNotifier count; at zero deletes it (Virtual0(1)) and clears DAT_10ff7090 and DAT_10ff7118.
+function 0x10C1AA80 Scale Multiplies Unknown2C in place by its float argument (Unknown2C *= param).
+function 0x10C1A560 Reset Writes zero to Unknown00, Unknown04 and Unknown08, then returns this.
+function 0x10C1A420 Init Stores the vtable DAT_10e98ce4 in Unknown00 and p1 in Unknown04, then returns this.
+function 0x10C1A690 Free Frees Unknown04 less its header word through GetAllocator()->Virtual5, then nulls Unknown04.
+function 0x10C1F650 ShouldIgnoreFromNoiseMaker Debug string 'AuditorySubsystem::ShouldIgnoreFromNoiseMaker' names this function.
+function 0x10C223A0 Clear Same body as named Class_10C24940::Clear: FUN_10c20c70(0), then GetAllocator()->Virtual5 frees the array.
+function 0x10C22A70 CopyFrom Same body as named Class_10BAEC80::CopyFrom: resize to Other's count, then copy each element.
+function 0x10C22BA0 CopyFrom Copies every member from Other; its Unknown0C copy calls FUN_10c22a70, named CopyFrom here.
+function 0x10C27100 Update Vtable slot 4 of Class_10E99314; calls child Unknown48's FUN_10c3c2c0(0) and, when it fails, deletes the child and sets Unknown45.
+function 0x10C27320 Init Base initializer: sets the vtable, copies B into Unknown08, clears flags, returns this; constructors call it.
+function 0x10C27380 RemoveMatching Removes each Unknown30 entry whose Unknown04 equals A, scanning backwards; called by MovementController::FUN_10bf8b40.
+function 0x10C27410 UpdateFlags ORs bit Virtual1() of each Unknown10 item whose Virtual0(A) returns 1 into Unknown04; called by FUN_10c276c0.
+function 0x10C282A0 Init Sets Unknown00 to the argument, zeroes the other ten ints and returns this; called by FUN_10bbcbf0.
+function 0x10C28570 Update Per-frame tick called from Class_10BBB410::Update; when GetTimeSeconds passes Unknown08 plus Unknown10, calls FUN_10c283f0 and clears Unknown08.
+function 0x10C285C0 ResolveHeadFlex Looks up 'head_flex' with 'head' through FUN_10c28480 and stores the result in Unknown20.
+function 0x10C28740 ResolveSpineFlex Looks up 'spine_flex2' with 'M1 Spine1' through FUN_10c28480 and stores the result in Unknown28.
+function 0x10C28C60 DeleteItems Deletes each Items[i] and zeroes Count; called by the Class_10C28CA0 destructor.
+function 0x10C28D90 ReleaseSharedInstance Decrements Unknown0C of global DAT_10ff70a0; at zero deletes it and clears the global; called by Class_10E90D70's destructor.
+function 0x10C2F970 GetSkeletalMesh Returns the USkeletalMesh cast of Unknown08's object, cached in Unknown15C ('Engine' string).
+function 0x10C30350 AngleDifference Signed difference of two angles modulo 0xffff, shortest way round (threshold 0x7fff).
+function 0x10C323A0 Append Links a new node at Tail (or Head when empty), Count++, and indexes Value in Index.
+function 0x10C32330 SumValues Sums the map value of each key in Arg's [Unknown04, Unknown08) range; DAT_10eafbdc when absent.
+function 0x10C32C30 GetValue Looks key A up in Unknown0C and returns the found entry's Unknown08 value, or 0 when absent.
+function 0x10C378D0 SetItemMode Item->Virtual19(Mode), then Obj->Virtual8 (0), Virtual9 (1) or Virtual29 and Virtual10 (2).
+function 0x10BB1690 GetAIOverrideSensoryModelPropertyName title string 'Override AI Sensory Model property [AISensoryModelProperty] with the value [Float]'
+function 0x10BB16B0 GetAIOverrideSensoryModelPropertyDescription description string 'Overrides a single AI sensory model value for the AI attached to this script'
+function 0x10BB16D0 GetAIOverrideBehaviorModelPropertyName title string 'Override AI Behavior Model property [AIBehaviorModelProperty] with the value [Float]'
+function 0x10BB16F0 GetAIOverrideBehaviorModelPropertyDescription description string 'Overrides a single AI behavior model value for the AI attached to this script'
+function 0x10BB1710 GetAIOverrideMovementModelPropertyName title string 'Override AI Movement Model property [AIMovementModelProperty] with the value [Float]'
+function 0x10BB1730 GetAIOverrideMovementModelPropertyDescription description string 'Overrides a single AI movement model value for the AI attached to this script'
+function 0x10BB1750 GetAIOverrideCombatModelPropertyName title string 'Override AI Combat Model property [AICombatModelProperty] with the value [Float]'
+function 0x10BB1770 GetAIOverrideCombatModelPropertyDescription description string 'Overrides a single AI combat model value for the AI attached to this script'
+function 0x10BB1790 GetAIOverrideFactionPropertyName title string 'Override AI Faction property [AIFactionModelProperty] with the value [Float]'
+function 0x10BB17B0 GetAIOverrideFactionPropertyDescription description string 'Overrides a single AI faction model value for the AI attached to this script'
+function 0x10BB17D0 GetAIStopOverridingSensoryModelPropertyName title string 'Stop overriding AI Sensory Model property [AISensoryModelProperty]'
+function 0x10BB17F0 GetAIStopOverridingSensoryModelPropertyDescription description string 'Stops overriding a single AI sensory model value for the AI attached to this script'
+function 0x10BB1810 GetAIStopOverridingBehaviorModelPropertyName title string 'Stop overriding AI Behavior Model property [AIBehaviorModelProperty]'
+function 0x10BB1830 GetAIStopOverridingBehaviorModelPropertyDescription description string 'Stops overriding a single AI behavior model value for the AI attached to this script'
+function 0x10BB1850 GetAIStopOverridingMovementModelPropertyName title string 'Stop overriding AI Movement Model property [AIMovementModelProperty]'
+function 0x10BB1870 GetAIStopOverridingMovementModelPropertyDescription description string 'Stops overriding a single AI movement model value for the AI attached to this script'
+function 0x10BB1890 GetAIStopOverridingCombatModelPropertyName title string 'Stop overriding AI Combat Model property [AICombatModelProperty]'
+function 0x10BB18B0 GetAIStopOverridingCombatModelPropertyDescription description string 'Stops overriding a single AI combat model value for the AI attached to this script'
+function 0x10BB18D0 GetAIStopOverridingFactionPropertyName title string 'Stop overriding AI Faction Model property [AIFactionModelProperty]'
+function 0x10BB18F0 GetAIStopOverridingFactionPropertyDescription description string 'Stops overriding a single AI faction model value for the AI attached to this script'
+function 0x10BB1990 GetAIGuardPlayerName title string 'Guard the player'
+function 0x10BB19B0 GetAIGuardPlayerDescription description string 'Makes the AI attached to this script begin guarding the player'
+function 0x10BB1C00 GetAIApproachLinkedObjectName title string 'Make the linked AI(s) [LinkFlavor] approach linked object of [LinkFlavor] until it is within...'
+function 0x10BB1C20 GetAIApproachLinkedObjectDescription description string 'Makes the AI at the end of LinkFlavor approach linked object until it is within the distance...'
+function 0x10BB1CD0 GetAIFleePlayerName title string 'Flee the player'
+function 0x10BB1CF0 GetAIFleePlayerDescription description string 'Makes the AI attached to this script flee the player'
+function 0x10BB1D10 GetAIGuardLinkedNpcName title string 'DO NOT USE -- Guard the NPC linked to via a TriggerScript link named [String]'
+function 0x10BB1D30 GetAIGuardLinkedNpcDescription description string 'DO NOT USE -- Makes the AI attached to this script begin guarding the NPC linked to by a Trigger...'
+function 0x10BB1D50 GetAIFleeLinkedNpcName title string 'DO NOT USE -- Flee the NPC linked to via a TriggerScript link named [String]'
+function 0x10BB1D70 GetAIFleeLinkedNpcDescription description string 'DO NOT USE -- Makes the AI attached to this script begin fleeing the NPC linked to by a TriggerS...'
+function 0x10BB1D90 GetAIEnterPatrolPathName title string 'Patrol: Enter patrol path pointed to by a TriggerLink named [String]'
+function 0x10BB1DB0 GetAIEnterPatrolPathDescription description string 'Makes the AI attached to this script enter a patrol path at a PatrolPoint linked to by a Trigger...'
+function 0x10BB1DD0 GetAISetDefaultPatrolPathName title string 'Patrol: Set default patrol to path pointed to via TriggerLink named [String]'
+function 0x10BB1DF0 GetAISetDefaultPatrolPathDescription description string 'Makes the AI attached to this script set its default behavior to patrol...'
+function 0x10BB1FD0 GetAIStopPatrollingName title string 'Patrol: Stop all linked AI(s) [LinkFlavor] patrolling'
+function 0x10BB1FF0 GetAIStopPatrollingDescription description string 'This will stop any linked AIs from patrolling. They will resume any behavior...'
+function 0x10BB20B0 GetAIStopFleeingName title string 'Flee: Stop fleeing'
+function 0x10BB20D0 GetAIStopFleeingDescription description string 'Makes the AI attached to this script stop fleeing if it is fleeing the player or another NPC...'
+function 0x10BB20F0 GetAIStopGuardingName title string 'DO NOT USE: Stop guarding'
+function 0x10BB2110 GetAIStopGuardingDescription description string 'DO NOT USE: Makes the AI attached to this script stop guarding if it is guarding the player...'
+function 0x10BB2130 GetVolumeEnabledName title string 'Set the 'Enabled' flag to [Bool] for a volume pointed to by a TriggerLink named [String]'
+function 0x10BB2150 GetVolumeEnabledDescription description string 'Enables or disables a specified volume (this is the 'enabled' flag in the volumes 'AI' category)'
+function 0x10BB2170 GetAISetFactionDispositionTowardPlayerName title string 'Change Disposition: Set the faction with GUID [Int] to disposition [Enum:EFactionDisposition] t...'; its description says toward the player
+function 0x10BB2190 GetAISetFactionDispositionTowardPlayerDescription description string 'Modifies a faction's disposition toward the player. -PT'
+function 0x10BB21B0 GetAISetFactionDispositionTowardFactionName title string 'Change Disposition: Set the faction with GUID [Int] to disposition [Enum:EFactionDisposition] t...'; its description says toward another faction
+function 0x10BB21D0 GetAISetFactionDispositionTowardFactionDescription description string 'Modifies a faction's disposition toward another faction. -PT'
+function 0x10BB21F0 GetAISetNpcDispositionTowardPlayerName title string 'Change Disposition: Set the faction disposition toward the player to [Enum:EFactionDisposition]'; its description says a single NPC
+function 0x10BB2210 GetAISetNpcDispositionTowardPlayerDescription description string 'Modifies a single NPC's faction disposition toward the player. -PT'
+function 0x10BB2230 GetAISetNpcDispositionTowardFactionName title string 'Change Disposition: Set the faction disposition toward the faction with GUID [Int] to [Enum:EFa...'; its description says a single NPC
+function 0x10BB2250 GetAISetNpcDispositionTowardFactionDescription description string 'Modifies a single NPC's faction disposition toward another faction. -PT'
+function 0x10BB2270 GetAIBecomeHostileToPawnName title string 'Change Disposition: Attached AI will go hostile to pawn pointed to by a TriggerLink named [Stri...'
+function 0x10BB2290 GetAIBecomeHostileToPawnDescription description string 'This only causes the attached AI to become hostile towards the linked pawn -- no cascading...'
+function 0x10BB22B0 GetAIBecomeHostileTowardPlayerWithNearbyAlliesName title string 'Change Disposition: Attached AI and nearby allies will Become hostile toward the player and his...'
+function 0x10BB22D0 GetAIBecomeHostileTowardPlayerWithNearbyAlliesDescription description string 'This can cause disposition cascades, as all nearyb allies and friends on both sides...'
+function 0x10BB22F0 GetAIBecomeHostileToPawnWithAlliesName title string 'Change Disposition: Attached AI and all of its allies will become hostile to pawn (and its alli...'
+function 0x10BB2310 GetAIBecomeHostileToPawnWithAlliesDescription description string 'This will cause disposition cascades as all of the attached AI's allies will also go hostile...'
+function 0x10BB2330 GetAIAddAlertnessName title string 'Alertness: Add (or subtract) a fixed total of [Float] alertness (out of 100) to the AI attached...'
+function 0x10BB2350 GetAIAddAlertnessDescription description string 'Adds or subtracts a fixed amount to an NPC's alertness level. -PT'
+function 0x10BB2370 GetAISetMinimumAlertnessName title string 'Alertness: Set the minimum possible alertness level to [Float] for the AI attached to this script...'
+function 0x10BB2390 GetAISetMinimumAlertnessDescription description string 'Overrides an NPC's minimum alertness level. -PT'
+function 0x10BB23B0 GetAISetMaximumAlertnessName title string 'Alertness: Set the maximum possible alertness level to [Float] for the AI attached...'
+function 0x10BB23D0 GetAISetMaximumAlertnessDescription description string 'Overrides an NPC's maximum alertness level. -PT'
+function 0x10BB23F0 GetAIResetAlertnessLimitsName title string 'Alertness: Reset the minimum and maximum alertness levels for the AI attached to this script...'
+function 0x10BB2410 GetAIResetAlertnessLimitsDescription description string 'Resets an NPC's minimum and maximum alertness level. This is only useful if...'
+function 0x10BB2430 GetAIChangeSensoryModelName title string 'AIModels: Change the Sensory Model of this AI to [AISensoryModel]'
+function 0x10BB2450 GetAIChangeSensoryModelDescription description string 'Change the sensory model of the ai to which this script is attached to the specified model. -dak'
+function 0x10BB2470 GetAIChangeCombatModelName title string 'AIModels: Change the Combat Model of this AI to [AICombatModel]'
+function 0x10BB2490 GetAIChangeCombatModelDescription description string 'Change the combat model of the ai to which this script is attached to the specified model. -dak'
+function 0x10BB24B0 GetAIChangeBehaviorModelName title string 'AIModels: Change the Behavior Model of this AI to [AIBehaviorModel]'
+function 0x10BB24D0 GetAIChangeMovementModelDescription description string 'Change the movement model of the ai to which this script is attached to the specified model. -da...'
+function 0x10BB24F0 GetAIChangeFactionModelName title string 'AIModels: Change the Faction Model of this AI to [AIFactionModel]'
+function 0x10BB2510 GetAIChangeMovementModelName title string 'AIModels: Change the Movement Model of this AI to [AIMovementModel]'
+function 0x10BB2530 GetAIPlayBarkName title string 'Play AI bark [String]'
+function 0x10BB2550 GetAIPlayBarkDescription description string 'Makes the AI attached to this script play the specified AI bark if it can do so. -PT'
+function 0x10BB2570 GetAIFleeToFleePointName title string 'Flee: Flee to FleePoint pointed to by a TriggerLink named [String]'
+function 0x10BB2590 GetAIFleeToFleePointDescription description string 'AI will flee to a specified flee point. It will treat this as a normal flee state...'
+function 0x10BB25B0 GetAISetPrimaryTargetName title string 'Set primary target to pawn pointed to by a TriggerLink named [String]'
+function 0x10BB25D0 GetAISetPrimaryTargetDescription description string 'The primary target is the target we will fight to the finish...'
+function 0x10BB2780 GetAIForgetEvidenceName title string 'Forget: All AIs through [LinkFlavor] forget evidence and ramp down.'
+function 0x10BB27A0 GetAIForgetEvidenceDescription description string 'Each actor through the specified link will forget all the evidence it has seen...'
+function 0x10BB2940 GetAIReprimandPlayerName title string 'Reprimand: AI attached via [LinkFlavor] will issue a [Enum:WarnReason] type reprimand to the pl...'
+function 0x10BB2960 GetAIReprimandPlayerDescription description string 'The linked AI will reprimand the player for the specified WarnReason...'
+function 0x10BB2B80 GetAIStartStoreBarksName title string 'Get AI attached via [LinkFlavor] to start issuing store barks'
+function 0x10BB2BA0 GetAIStartStoreBarksDescription description string 'The linked AI will start issuing the barks of a storekeeper...'
+function 0x10BB2DE0 GetAIStartFenceBarksName title string 'Get AI attached via [LinkFlavor] to start issuing fence barks'
+function 0x10BB2E00 GetAIStartFenceBarksDescription description string 'The linked AI will start issuing the barks of a fence...'
+function 0x10BB2FC0 GetAIPlayFacialAnimationName title string 'Facial Animation: AI attached via [LinkFlavor] will play [Enum:EFacialAnimations] at Alpha [Flo...'
+function 0x10BB2FE0 GetAIPlayFacialAnimationDescription description string 'The linked AI will play the specified facial animation for as many seconds as specified...'
+function 0x10BB3150 GetAIStopFacialAnimationName title string 'Facial Animation: AI attached via [LinkFlavor] will stop playing the current facial expression...'
+function 0x10BB3170 GetAIStopFacialAnimationDescription description string 'The linked AI will stop playing facial animations over a period of time...'
+function 0x10BB32C0 GetBecomeInvisibleName title string 'Invisibility: Pawns attached via [LinkFlavor] will become invisible for the next [Float] second...'
+function 0x10BB32E0 GetBecomeInvisibleDescription description string 'The linked characters will become invisible for a period of time as specified by the input.'
+function 0x10BB3430 GetSitOrSleepName title string 'Sit / Sleep: ONLY USE IMMEDIATELY AFTER FORGET ACTION. Pawns attached via [LinkFlavor] will si...'
+function 0x10BB3450 GetSitOrSleepDescription description string 'The linked characters will become sit or sleep once more...'
+function 0x10BB7F00 GetIntProperty returns the int property looked up by id 0x40800544; GetFloat(int) is the float twin
+function 0x10BB7F60 GetRoll rolls appFrand() into Unknown29C while it equals DAT_10eafbdc, then returns it
+function 0x10BB8160 SetInfo copies the Info_10BB8160 argument into Unknown2B0 by assignment
+function 0x10BB81B0 RollInterval rolls Unknown2BC from the Min and Max properties with appFrand(), as Class_10E90A1C::RollInterval does
+function 0x10BB8210 IsExpired returns 1 when Unknown2BC is at or below DAT_10eafbdc, the constant the rolls test against
+function 0x10BB82C0 IsAngleBelow forwards to cBoneAimController::IsAngleBelow with owner, entry and angle; false without an entry
+function 0x10BB8300 ClearEntry if an entry is set, calls cBoneAimController FUN_10a2c2a0 with owner and entry, then zeroes it
+function 0x10BB8330 HasEntry returns cBoneAimController FindEntry(owner, &entry) != 0
+function 0x10BB84A0 IsExpired returns 1 once GetTimeSeconds() passes Unknown2D8, which StartTimeout sets ten seconds ahead
+function 0x10BB84D0 StartTimeout stores GetTimeSeconds() + 10.0 in Unknown2D8; its caller FUN_10bc9f40 also calls the expiry check
+function 0x10BB8CE0 Reset Clears Unknown334/335 and calls RemoveAll on the list from Unknown08; the deleting destructor calls it.
+function 0x10BB8D60 Reset Returns early when both Class_109A6AA0 checks pass; else sets Unknown2F0 and re-creates both values.
+function 0x10BB8FF0 DeleteItems Deletes each Items[i] of the struct and sets Count to 0.
+function 0x10BB95C0 Contains Returns FindIndex(Value) != -1; FindIndex is documented in the class header.
+function 0x10BBB510 AddItem Appends Item to Unknown14 with cIntArray::Append.
+function 0x10BBD2A0 Serialize Serializes Unknown04 and two optional pointers through FArchive::Serialize; its only vtable slot.
+function 0x10BBC190 FindOrCreate Returns the entry FUN_10bbb440 finds for Key, else creates one from the table's info and appends it.
+function 0x10BBB440 Find FindOrCreate returns its nonzero result at once, before creating an entry.
+function 0x10BC5020 GetReprimandBark Xbox message 'GetReprimandBark() -- WarnReason #%d is unfamiliar' names it; the switch on WarnReason returns a bark tag.
+function 0x10BC4BF0 GetTargetLinkType Returns Unknown04->Unknown0C->GetLinkType(), or 0 when Unknown0C is null; the source names that local Target.
+function 0x10BC5560 DeleteAllItems Deletes each Items[i] and sets Count to 0; the destructor of Class_10E90D70 calls it.
+function 0x10BC4B80 FindPosition Virtual16(B, C, 1) yields an id (false when 0); Virtual17 copies that id's FVector into Out.
+function 0x10BC4220 TakeValue Returns Unknown1C and zeroes it when nonzero, else 0; its caller is FUN_10b9ea00 in Class_10B9F200.
+function 0x10BD0CB0 AddAction Xbox calls pair names it: message 'State_PlayAction::AddAction exceeding maximum queue size'; body fills a free slot of a 4-entry queue.
+function 0x10BD0960 Empty Calls the Class_10E97B00 destructor on each Unknown08 element, then zeroes Unknown00; the buffer is kept.
+function 0x10BD4120 Empty Same body as Class_10BAEC40::Empty(): FUN_10a20940(0), frees Unknown08 through GetAllocator()->Virtual5, nulls both pointers and count.
+function 0x10BD1320 AddItem Grows the array with FUN_10bd0410(count+1), copies the Item's three fields into Unknown08[count], returns the index.
+function 0x10BD10A0 Serialize Only vtable slot, FArchive& signature: serializes Unknown04 via FUN_10b232e0, then two 4-byte fields.
+function 0x10BD1EF0 SumSegments Sums FUN_10ba91e0 over consecutive Data pairs; returns DAT_10eafbdc when Count is 0.
+function 0x10BD9780 Construct Same shape as cTacticMoveToPoint::Construct: base ctor call, vptr store, returns this.
+function 0x10BD97A0 Serialize Virtual (FArchive&) override whose body calls Class_10E8BE68::Serialize(Ar).
+function 0x10BE4FD0 GetReturnToIdleMessage Returns Class_10E97B00 message '+returntoidle', built like the '+grenade:thrown' message in NotifyGrenadeThrown.
+function 0x10BE8840 GetRedAlertName Returns cString 'redalert'; Class_10E96510::GetYellowAlertName returns 'yellowalert' the same way.
+function 0x10BE9A40 ScheduleNextTime Sets field (Unknown78) to GetTimeSeconds() plus a random delay between two float variables looked up by id 0x100856 and 0x100857.
+function 0x10BECEE0 SetViewport Stores its argument in the UCanvas Viewport field at 0x78 (include/Engine/EngineClasses.h).
+function 0x10BEFAB0 GetRandomInRange Returns Min + (Max - Min) * appFrand(), Min and Max read from attributes 0x1007e9 and 0x1007ea.
+function 0x10BF02A0 GetTotal Loop adds the 40 floats of Unknown154 (i < 4, j < 10) and returns Sum.
+function 0x10BF0AA0 Clear Only statement is Unknown08.Empty(), which calls FUN_10befb10 and GetAllocator.
+function 0x10BF70E0 Reset Sets Unknown58 to 0 and Unknown5C to FUN_10bf6d70(), the only two statements.
+function 0x10BFB8C0 GetTime Returns the float at Unknown00[Index * 3 + 3]; FUN_10bf23a0 compares it with GetTimeSeconds().
+function 0x10BFB910 ClearTime Writes 0 to Unknown00[(Index + 1) * 3], the slot FUN_10bfb8c0 (GetTime) returns.
+function 0x10BF6E10 FindNameIndex Compares each of the 124 names in DAT_10ff66b0 with appStricmp; returns the matching index, else 0.
+function 0x10C01090 Compare Three-way comparison of the two __int64 values: returns -1, 0 or 1 (vtable slot 1).
+function 0x10C01430 Append Links a new node after Tail, sets Head and Tail, Count++, and indexes Value in Index.
+function 0x10C01EC0 Remove Finds the node for key A in Unknown0C, unlinks it from Head and Tail, Count--, and deletes it.
+function 0x10C01F80 ClearItems Deletes each Items[i] and sets Count to 0; the Class_10C020A0 destructor calls it.
+function 0x10C02010 Assign Assigns Other->Unknown04 to Unknown04 via cString::FUN_1090afd0 and returns this, as operator= does.
+function 0x10C033B0 CollectIndices Pushes each index i with B - Unknown08[i] < A into Result; *Out tells whether all Count items qualified.
+function 0x10C04830 GetOther Returns Unknown28 when p1 equals Unknown24, otherwise Unknown24: the other of a pair.
+function 0x10C04840 HasAtLeast True when any of the five Unknown19 bytes is at least A.
+function 0x10C04D90 AddValue Grows Unknown20 by one with SetCount and stores Value in the new last slot; always returns true.
+function 0x10A3B460 HandleEvent vtable slot 0: the same virtual function as Class_10E6FC80::HandleEvent (0x10AC8E80)
+field Class_10BEF080::Unknown220 m_EndTime Set to GetTimeSeconds() plus 1.0 in FUN_10bef080: a one-second end time.
+field Class_10BEFA80::Unknown224 m_EndTime Set to GetTimeSeconds() plus a random 3 to 6 seconds in FUN_10befa80.
+field Class_10BED1C0::Unknown58 m_Count Loop bound over Unknown60 in FUN_10bed1c0, and tested against zero there.
+field Class_10BED1C0::Unknown60 m_Entries Indexed up to Unknown58 in FUN_10bed1c0; each entry is used at offset 0x2c.
+field Class_10C00A60::Unknown00 m_Count SetCount stores Count here.
+field Class_10C00A60::Unknown04 m_CapacityBytes Capacity is Unknown04 / sizeof(int); SetCount stores NewCapacity * sizeof(int).
+field Class_10C00A60::Unknown08 m_Data int* reallocated through the allocator in SetCount and indexed as the data.
+field Class_10C00A50::Unknown08 m_Data &Unknown08[p1] returns an element address, so it is an int array.
+field Class_10C00B40::Unknown08 m_BucketBits Bucket mask is (1 << Unknown08) - 1 in GetBucketIndex.
+field Class_10C00F30::Unknown00 m_Count Loop bound over the entries in ClearMatching.
+field Class_10C00F30::Unknown08 m_Entries Indexed as Struct_10C00F30* Entry = Unknown08[i] in ClearMatching.
+field Class_10C04AA0::Unknown14 m_Count Count written first and bounding the loop over Unknown1C items.
+field Class_10C04AA0::Unknown1C m_Items Array of Struct_10C04AA0 items, Count long, each archived through FUN_10b052a0.
+field Class_10C04B70::Unknown08 m_Items Base of the 0x1C-byte element array that FUN_10c04b70 memmoves.
+field cLineSegment::Unknown00 m_DeltaX Set to the X difference of the endpoints (Unknown18.X minus Unknown0C.X).
+field cLineSegment::Unknown04 m_DeltaY Set to the Y difference of the endpoints (Unknown18.Y minus Unknown0C.Y).
+field cLineSegment::Unknown08 m_Slope DY/DX, or FLT_MAX when DX equals zero (vertical line).
+field Class_10C07300::Unknown50 m_Items cIntArray that FUN_10c07300 appends each Item to.
+field Class_10C08960::Unknown14 m_Count Loop bound over Unknown1C in FUN_10c08960.
+field Class_10C08960::Unknown1C m_Params Class_10BAA6B0_Param* array indexed by the loop in FUN_10c08960.
+field Class_10C08DE0::Unknown14 m_Count Loop bound over Unknown1C in FUN_10c08de0.
+field Class_10C08DE0::Unknown1C m_Params Class_10BAA6B0_Param* array indexed by the loop in FUN_10c08de0.
+field Class_10C0C360::Unknown04 m_Count Loop bound over the item array (Unknown0C) in FUN_10c0c360.
+field Class_10C0C360::Unknown0C m_Items Item pointers indexed up to the count; FUN_10c0c360 reads each item's position.
+field Class_10E97CB4::Unknown04 m_ContextVolumes FUN_10c0e5e0 appends each level actor that IsA AAIContextVolume to this list.
+field Class_10E984BC::Unknown04 m_Elements Destructor frees the block at Unknown04-1 with GetAllocator, as m_Elements in Class_10E984F4.
+field Class_10C15E60::Unknown04 m_Head FUN_10c15e60 starts its walk at Unknown04 and reassigns it to the next node when the first is unlinked.
+field Class_10C15E60::Unknown08 m_Count Decremented on every unlink in FUN_10c15e60.
+field Class_10C161F0::Unknown04 m_ById Keyed by Source->Unknown10 in FUN_10c161b0 and FUN_10c161f0.
+field MoveCommand::Unknown44 m_Active Set true by FUN_10c27320; FUN_10c27100 (its vtable slot 4) clears it when the child ends.
+field MoveCommand::Unknown45 m_Finished Cleared by FUN_10c27320; FUN_10c27100 (its vtable slot 4) sets it when the child ends.
+field Class_10C27100::Unknown44 m_Active Cleared in FUN_10c27100 when the child ends; Class_10E99314::FUN_10c27320 sets it true.
+field Class_10C27100::Unknown45 m_Finished Set in FUN_10c27100 when the child ends; Class_10E99314::FUN_10c27320 clears it.
+field Class_10C27100::Unknown48 m_Child Owned child: FUN_10c27100 calls its FUN_10c3c2c0 and deletes it when that fails.
+field Class_10C28570::Unknown08 m_StartTime FUN_10c28570 adds Unknown10 to it and compares the sum with GetTimeSeconds.
+field Class_10C28570::Unknown10 m_Duration Added to Unknown08 in the expiry test of FUN_10c28570.
+field Class_10C27410::Unknown04 m_Flags FUN_10c27410 ORs 1 << Virtual1() into it for each matching item.
+field Class_10C27410::Unknown08 m_Count Loop bound of FUN_10c27410 over the Unknown10 items.
+field Class_10C27410::Unknown10 m_Items Array of item pointers walked by FUN_10c27410 with Virtual0 and Virtual1 calls.
+field Class_10C27380::Unknown30 m_Entries Class_10BAEC40 list (m_Count, m_Items, SetCount, MoveRange) pruned by FUN_10c27380.
+field Class_10C285C0::Unknown20 m_HeadFlex Set from FUN_10c28480 with the 'head' and 'head_flex' strings in FUN_10c285c0.
+field Class_10C28740::Unknown28 m_SpineFlex Set from FUN_10c28480 with the 'M1 Spine1' and 'spine_flex2' strings in FUN_10c28740.
+field Class_10C2F970::Unknown15C m_SkeletalMesh Lazily filled cache of the USkeletalMesh that FUN_10c2f970 returns.
+field Class_10C30700::Unknown138 m_Count Loop bound of Unknown140 in FUN_10c30700, FUN_10c30750 and FUN_10c307a0.
+field Class_10C30700::Unknown140 m_Entries Array of Unknown138 entry pointers; the loops call Virtual0, Virtual1 or Virtual2 on each.
+field Class_10C30700::Unknown99 m_Iterating Set true before and false after the entry loop in FUN_10c30700, FUN_10c30750 and FUN_10c307a0.
+field Class_10BB7F60::Unknown29C m_Roll GetRoll rolls appFrand() into it while it equals DAT_10eafbdc
+field Class_10BB81B0::Unknown2BC m_Interval RollInterval stores Min plus (Max minus Min) times appFrand() here
+field Class_10BB8210::Unknown2BC m_Interval IsExpired tests it against DAT_10eafbdc; RollInterval in Class_10BB81B0 fills it
+field Class_10BB8160::Unknown2B0 m_Info SetInfo assigns the Info_10BB8160 argument to it
+field Class_10BB82C0::Unknown08 m_Owner FUN_10c7d570 on it supplies the owner argument to IsAngleBelow
+field Class_10BB82C0::Unknown284 m_Entry its address is passed to cBoneAimController::IsAngleBelow as the entry
+field Class_10BB8300::Unknown08 m_Owner FUN_10c7d570 on it supplies the owner argument to FUN_10a2c2a0
+field Class_10BB8300::Unknown284 m_Entry its address goes to FUN_10a2c2a0, then it is zeroed
+field Class_10BB8330::Unknown08 m_Owner FUN_10c7d570 on it supplies the owner argument to FindEntry
+field Class_10BB8330::Unknown284 m_Entry its address is passed to cBoneAimController FindEntry
+field Class_10BB84A0::Unknown2D8 m_ExpireTime IsExpired compares GetTimeSeconds() against it; StartTimeout sets it
+field Class_10BB84D0::Unknown2D8 m_ExpireTime StartTimeout stores GetTimeSeconds() plus 10.0 in it
+field Class_10E90A1C::Unknown298 m_Interval RollInterval stores Min plus (Max minus Min) times appFrand() here
+field Class_10E90A1C::Unknown29C m_Roll RollInterval stores appFrand() here
+field Class_10BB95C0::Unknown220 m_Count Loop bound in FindIndex (i < Unknown220).
+field Class_10BB95C0::Unknown228 m_Items Indexed by FindIndex's loop (Unknown228[i] == Value).
+field Class_10BB8D00::Unknown2EC m_LastUpdateTime Compared with GetTimeSeconds() and set to it at most once a second in FUN_10bb8d00.
+field Class_10BD0CB0::Unknown44 m_Queue AddAction fills the first empty of these four slots; its Xbox message names a maximum queue size.
+field Class_10BD0960::Unknown00 m_Count Loop bound of Empty, zeroed after the elements are destructed.
+field Class_10BD0960::Unknown08 m_Items Element array; Empty destructs Unknown08[i] for each i below the count.
+field Class_10BD1320::Unknown00 m_Count AddItem's index: the array grows to count+1 and the old count is returned.
+field Class_10BD1320::Unknown08 m_Items Item array; AddItem copies the argument into Unknown08[count].
+field Class_10BD4120::Unknown08 m_Buffer Heap buffer freed through GetAllocator()->Virtual5 in Empty, then nulled.
+field Class_10BE9A40::Unknown78 m_NextTime Only method using it assigns GetTimeSeconds() plus a random delay, so it holds an absolute time.
+field Class_10E97B00::Unknown04 m_Name Two constructors initialise it from their Name argument; FUN_10c01ff0 passes its address on.
+field Class_10C01EC0::Unknown0C m_Index Same offset as Class_10C01430::Index, a Class_10C01140-based index; looked up and erased by key in Remove.
+field Class_10C04D90::Unknown20 m_Values The cIntArray that AddValue appends each value to.

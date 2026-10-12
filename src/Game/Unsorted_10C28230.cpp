@@ -8,8 +8,8 @@ Class_10E99370::~Class_10E99370()
 {
 }
 
-// FUNCTION: 0x10C282A0 ?FUN_10c282a0@Class_10C282A0@@QAEPAV1@H@Z
-Class_10C282A0* Class_10C282A0::FUN_10c282a0(int A)
+// FUNCTION: 0x10C282A0 ?Init@Class_10C282A0@@QAEPAV1@H@Z
+Class_10C282A0* Class_10C282A0::Init(int A)
 {
     Unknown00 = A;
     Unknown04 = 0;

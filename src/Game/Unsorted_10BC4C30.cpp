@@ -73,7 +73,7 @@ public:
     virtual void FUN_10bc4c30();
 
     // The accessor at 0x10BC4BF0, which the compiler inlines here.
-    int FUN_10bc4bf0()
+    int GetTargetLinkType()
     {
         Class_10AAF570* Target = Unknown04->Unknown0C;
         if (!Target)
@@ -98,7 +98,7 @@ public:
     void FUN_10bc4e90(Struct_10BC4E90* p1, int p2);
 
     // The accessor at 0x10BC4BF0, which the compiler inlines here.
-    int FUN_10bc4bf0()
+    int GetTargetLinkType()
     {
         Class_10AAF570* Target = Unknown04->Unknown0C;
         if (!Target)
@@ -112,13 +112,13 @@ public:
 // FUNCTION: 0x10BC4C30 ?FUN_10bc4c30@Class_10E8BE68@@UAEXXZ
 void Class_10E8BE68::FUN_10bc4c30()
 {
-    if (FUN_10bc4bf0() && (DAT_10ff66bc[((Object_10AAF570*)FUN_10bc4bf0())->Virtual38()].Flags & 4))
+    if (GetTargetLinkType() && (DAT_10ff66bc[((Object_10AAF570*)GetTargetLinkType())->Virtual38()].Flags & 4))
         Unknown04->FUN_10bb83e0();
 }
 
 // FUNCTION: 0x10BC4E90 ?FUN_10bc4e90@Class_10E92B20@@QAEXPAUStruct_10BC4E90@@H@Z
 void Class_10E92B20::FUN_10bc4e90(Struct_10BC4E90* p1, int p2)
 {
-    if (FUN_10bc4bf0())
-        ((Class_10AAF570_Field10*)FUN_10bc4bf0())->Virtual69(&p1->Unknown2C, p2);
+    if (GetTargetLinkType())
+        ((Class_10AAF570_Field10*)GetTargetLinkType())->Virtual69(&p1->Unknown2C, p2);
 }

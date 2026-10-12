@@ -13,11 +13,11 @@ public:
     void FUN_10c307a0(int A, int B);
 
     char Unknown00[0x99];
-    bool Unknown99;
+    bool m_Iterating;
     char Unknown9A[0x9E];
-    int Unknown138;
+    int m_Count;
     char Unknown13C[4];
-    Class_10C30700_Unknown140** Unknown140;
+    Class_10C30700_Unknown140** m_Entries;
 };
 
 #endif // GAME_CLASS_10C30700_H

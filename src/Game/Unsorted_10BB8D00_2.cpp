@@ -20,8 +20,8 @@ double GetTimeSeconds();
 // FUNCTION: 0x10BB8D00 ?FUN_10bb8d00@Class_10BB8D00@@QAEXXZ
 void Class_10BB8D00::FUN_10bb8d00()
 {
-    if (GetTimeSeconds() - Unknown2EC > 1.0)
-        Unknown2EC = GetTimeSeconds();
+    if (GetTimeSeconds() - m_LastUpdateTime > 1.0)
+        m_LastUpdateTime = GetTimeSeconds();
     Class_10B9BCA0* Controller = GetAIPawnController((AAIPawn*)Unknown08->FUN_10c7d570());
     Class_10BC9D40* Target;
     if (Controller && Controller->Unknown118 && Controller->Unknown118->Unknown08)
@@ -31,8 +31,8 @@ void Class_10BB8D00::FUN_10bb8d00()
     Target->Virtual25();
 }
 
-// FUNCTION: 0x10BB8D60 ?FUN_10bb8d60@Class_10BB8D60@@QAEXXZ
-void Class_10BB8D60::FUN_10bb8d60()
+// FUNCTION: 0x10BB8D60 ?Reset@Class_10BB8D60@@QAEXXZ
+void Class_10BB8D60::Reset()
 {
     if (Unknown22C.FUN_109a6aa0() && Unknown238.FUN_109a6aa0())
         return;

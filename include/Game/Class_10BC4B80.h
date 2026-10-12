@@ -9,7 +9,7 @@ class FVector;
 class Class_10BC4B80
 {
 public:
-    bool FUN_10bc4b80(FVector* Out, int B, int C);
+    bool FindPosition(FVector* Out, int B, int C);
 
     int Unknown00;
     Class_10BC4B80_Field04* Unknown04;

@@ -8,8 +8,8 @@ class Class_10BBDB40 : public Class_10BBDB10
 {
 };
 
-// FUNCTION: 0x10BB7F00 ?FUN_10bb7f00@Class_10BB7F00@@QAEHXZ
-int Class_10BB7F00::FUN_10bb7f00()
+// FUNCTION: 0x10BB7F00 ?GetIntProperty@Class_10BB7F00@@QAEHXZ
+int Class_10BB7F00::GetIntProperty()
 {
     return Unknown08->FUN_10dbd510()->GetInt(0x40800544);
 }

@@ -11,7 +11,7 @@ struct Struct_10C22AD0
 class Class_10C22A70
 {
 public:
-    void FUN_10c22a70(const Class_10C22A70& Other);
+    void CopyFrom(const Class_10C22A70& Other);
 
     char Unknown00[0xC];
 };
@@ -19,7 +19,7 @@ public:
 class Class_10C22BA0
 {
 public:
-    void FUN_10c22ba0(const Class_10C22BA0& Other);
+    void CopyFrom(const Class_10C22BA0& Other);
 
     Struct_10C22BA0 Unknown00;
     Class_10C22A70 Unknown0C;
@@ -34,11 +34,11 @@ void Class_10BAEC80::CopyFrom(const Class_10BAEC80& Other)
         Data[i] = Other.Data[i];
 }
 
-// FUNCTION: 0x10C22BA0 ?FUN_10c22ba0@Class_10C22BA0@@QAEXABV1@@Z
-void Class_10C22BA0::FUN_10c22ba0(const Class_10C22BA0& Other)
+// FUNCTION: 0x10C22BA0 ?CopyFrom@Class_10C22BA0@@QAEXABV1@@Z
+void Class_10C22BA0::CopyFrom(const Class_10C22BA0& Other)
 {
     Unknown00 = Other.Unknown00;
-    Unknown0C.FUN_10c22a70(Other.Unknown0C);
+    Unknown0C.CopyFrom(Other.Unknown0C);
     for (int i = 0; i < 0x5A; i++)
         Unknown18[i] = Other.Unknown18[i];
 }

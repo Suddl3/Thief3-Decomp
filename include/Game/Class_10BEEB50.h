@@ -8,7 +8,7 @@ class Class_10BEEB50_Unknown04;
 class Class_10BEEB50
 {
 public:
-    bool FUN_10beeb50(bool Flag);
+    bool MoveToNextPatrolPoint(bool Flag);
     bool FUN_10bee570(int A);
 
     char Unknown00[0x4];

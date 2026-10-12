@@ -24,68 +24,68 @@ extern const char DAT_10e98628[];
 
 extern const char DAT_10e98638[];
 
-// FUNCTION: 0x10C12BE0 ?FUN_10c12be0@@YA?AVcString@@XZ
-cString FUN_10c12be0()
+// FUNCTION: 0x10C12BE0 ?GetContextVolumeTypeName@@YA?AVcString@@XZ
+cString GetContextVolumeTypeName()
 {
     return cString(DAT_10e9856c);
 }
 
-// FUNCTION: 0x10C12C20 ?FUN_10c12c20@@YA?AVcString@@XZ
-cString FUN_10c12c20()
+// FUNCTION: 0x10C12C20 ?GetAISensoryModelPropertyName@@YA?AVcString@@XZ
+cString GetAISensoryModelPropertyName()
 {
     return cString(DAT_10e98580);
 }
 
-// FUNCTION: 0x10C12C40 ?FUN_10c12c40@@YA?AVcString@@XZ
-cString FUN_10c12c40()
+// FUNCTION: 0x10C12C40 ?GetAIMovementModelPropertyName@@YA?AVcString@@XZ
+cString GetAIMovementModelPropertyName()
 {
     return cString(DAT_10e98598);
 }
 
-// FUNCTION: 0x10C12C60 ?FUN_10c12c60@@YA?AVcString@@XZ
-cString FUN_10c12c60()
+// FUNCTION: 0x10C12C60 ?GetAIBehaviorModelPropertyName@@YA?AVcString@@XZ
+cString GetAIBehaviorModelPropertyName()
 {
     return cString(DAT_10e985b0);
 }
 
-// FUNCTION: 0x10C12C80 ?FUN_10c12c80@@YA?AVcString@@XZ
-cString FUN_10c12c80()
+// FUNCTION: 0x10C12C80 ?GetAICombatModelPropertyName@@YA?AVcString@@XZ
+cString GetAICombatModelPropertyName()
 {
     return cString(DAT_10e985c8);
 }
 
-// FUNCTION: 0x10C12CA0 ?FUN_10c12ca0@@YA?AVcString@@XZ
-cString FUN_10c12ca0()
+// FUNCTION: 0x10C12CA0 ?GetAIFactionModelPropertyName@@YA?AVcString@@XZ
+cString GetAIFactionModelPropertyName()
 {
     return cString(DAT_10e985e0);
 }
 
-// FUNCTION: 0x10C12D00 ?FUN_10c12d00@@YA?AVcString@@XZ
-cString FUN_10c12d00()
+// FUNCTION: 0x10C12D00 ?GetAISensoryModelClassName@@YA?AVcString@@XZ
+cString GetAISensoryModelClassName()
 {
     return cString(DAT_10e985f8);
 }
 
-// FUNCTION: 0x10C12D20 ?FUN_10c12d20@@YA?AVcString@@XZ
-cString FUN_10c12d20()
+// FUNCTION: 0x10C12D20 ?GetAICombatModelClassName@@YA?AVcString@@XZ
+cString GetAICombatModelClassName()
 {
     return cString(DAT_10e98608);
 }
 
-// FUNCTION: 0x10C12D40 ?FUN_10c12d40@@YA?AVcString@@XZ
-cString FUN_10c12d40()
+// FUNCTION: 0x10C12D40 ?GetAIMovementModelClassName@@YA?AVcString@@XZ
+cString GetAIMovementModelClassName()
 {
     return cString(DAT_10e98618);
 }
 
-// FUNCTION: 0x10C12D60 ?FUN_10c12d60@@YA?AVcString@@XZ
-cString FUN_10c12d60()
+// FUNCTION: 0x10C12D60 ?GetAIFactionModelClassName@@YA?AVcString@@XZ
+cString GetAIFactionModelClassName()
 {
     return cString(DAT_10e98628);
 }
 
-// FUNCTION: 0x10C12D80 ?FUN_10c12d80@@YA?AVcString@@XZ
-cString FUN_10c12d80()
+// FUNCTION: 0x10C12D80 ?GetAIBehaviorModelClassName@@YA?AVcString@@XZ
+cString GetAIBehaviorModelClassName()
 {
     return cString(DAT_10e98638);
 }

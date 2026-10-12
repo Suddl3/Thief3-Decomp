@@ -16,7 +16,7 @@ public:
     Class_10E97B00(const Class_10E97B00& Other);
     Class_10E97B00(const Class_1090A780& Name);
 
-    cString Unknown04;
+    cString m_Name;
 };
 
 #endif // GAME_CLASS_10E97B00_H

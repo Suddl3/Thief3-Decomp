@@ -9,7 +9,7 @@ struct Struct_10C3D0A0
     Struct_10C05A80 Unknown2C;
 };
 
-float FUN_10c05a80(const Struct_10C05A80* A, const Struct_10C05A80* B);
+float DistanceSquared3D(const Struct_10C05A80* A, const Struct_10C05A80* B);
 
 // The object at this+0x48: its Virtual34 gives the Class_10C7D570 whose FUN_10c7d570 gives the actor's position.
 class Class_10C3B570_Unknown48
@@ -90,7 +90,7 @@ bool Class_10C399C0::TrackTarget(int* Obj)
         if (*Obj == 0)
             return false;
     }
-    float Dist = FUN_10c05a80(&((Struct_10C3D0A0*)*Obj)->Unknown2C, &ActorPos);
+    float Dist = DistanceSquared3D(&((Struct_10C3D0A0*)*Obj)->Unknown2C, &ActorPos);
     float Sum = FUN_10c38640(*Obj) + Span;
     if (Dist < Sum * Sum)
     {

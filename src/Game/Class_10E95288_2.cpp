@@ -39,7 +39,7 @@ public:
 void Class_10E95288::FUN_10be1640(int A)
 {
     if (Unknown10 == 10)
-        Unknown04->FUN_10bb8d60();
+        Unknown04->Reset();
     FUN_10bdf280(A);
     FUN_10be02e0();
 }

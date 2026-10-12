@@ -68,16 +68,16 @@ public:
     char Pad99[0x3];
 };
 
-// FUNCTION: 0x10C2F970 ?FUN_10c2f970@Class_10C2F970@@QAEPAVUSkeletalMesh@@XZ
-USkeletalMesh* Class_10C2F970::FUN_10c2f970()
+// FUNCTION: 0x10C2F970 ?GetSkeletalMesh@Class_10C2F970@@QAEPAVUSkeletalMesh@@XZ
+USkeletalMesh* Class_10C2F970::GetSkeletalMesh()
 {
-    if (!Unknown15C)
-        Unknown15C = Cast<USkeletalMesh>((UObject*)((Class_10C66590*)Unknown08->FUN_10c7d570())->FUN_10c66590());
-    return Unknown15C;
+    if (!m_SkeletalMesh)
+        m_SkeletalMesh = Cast<USkeletalMesh>((UObject*)((Class_10C66590*)Unknown08->FUN_10c7d570())->FUN_10c66590());
+    return m_SkeletalMesh;
 }
 
-// FUNCTION: 0x10C30350 ?FUN_10c30350@@YGHHHHHHH@Z
-int __stdcall FUN_10c30350(int A, int B, int C, int D, int E, int F)
+// FUNCTION: 0x10C30350 ?AngleDifference@@YGHHHHHHH@Z
+int __stdcall AngleDifference(int A, int B, int C, int D, int E, int F)
 {
     int X = (B % 0xffff + 0xffff) % 0xffff;
     int Y = (E % 0xffff + 0xffff) % 0xffff;
@@ -126,19 +126,19 @@ void cMotionControllerAnim::FUN_10c306b0()
 // FUNCTION: 0x10C30700 ?FUN_10c30700@Class_10C30700@@QAEXXZ
 void Class_10C30700::FUN_10c30700()
 {
-    Unknown99 = true;
-    for (int i = 0; i < Unknown138; i++)
-        Unknown140[i]->Virtual0();
-    Unknown99 = false;
+    m_Iterating = true;
+    for (int i = 0; i < m_Count; i++)
+        m_Entries[i]->Virtual0();
+    m_Iterating = false;
 }
 
 // FUNCTION: 0x10C30750 ?FUN_10c30750@Class_10C30700@@QAEXHH@Z
 void Class_10C30700::FUN_10c30750(int A, int B)
 {
-    Unknown99 = true;
-    for (int i = 0; i < Unknown138; i++)
-        Unknown140[i]->Virtual1(A, B);
-    Unknown99 = false;
+    m_Iterating = true;
+    for (int i = 0; i < m_Count; i++)
+        m_Entries[i]->Virtual1(A, B);
+    m_Iterating = false;
 }
 
 // FUNCTION: 0x10C32A70 ?LocomotionCommandQueue@cMotionControllerAnim@@UAE_NPAX@Z

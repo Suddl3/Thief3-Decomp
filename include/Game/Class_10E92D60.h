@@ -3,11 +3,11 @@
 #ifndef GAME_CLASS_10E92D60_H
 #define GAME_CLASS_10E92D60_H
 
-#include "Game/Class_10E92C38.h"
+#include "Game/DeathState.h"
 
 class Object_10BCE8D0;
 
-class Class_10E92D60 : public Class_10E92C38
+class Class_10E92D60 : public DeathState
 {
 public:
     virtual void Virtual0();

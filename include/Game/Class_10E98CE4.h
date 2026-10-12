@@ -5,7 +5,7 @@
 
 class Class_10E98CE4 {
 public:
-    Class_10E98CE4* FUN_10c1a420(int p1);
+    Class_10E98CE4* Init(int p1);
 
     void* Unknown00;
     int Unknown04;

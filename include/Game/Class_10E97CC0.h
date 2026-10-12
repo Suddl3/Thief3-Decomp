@@ -10,7 +10,7 @@ struct Struct_10C0EE30;
 class Class_10E97CC0
 {
 public:
-    virtual void FUN_10c0ee30(int A, int B, Struct_10C0EE30* C, int D);
+    virtual void HandleMessage(int A, int B, Struct_10C0EE30* C, int D);
 
     Class_10E97CC0();
     ~Class_10E97CC0();

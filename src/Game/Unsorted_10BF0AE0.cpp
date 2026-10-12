@@ -11,7 +11,7 @@ public:
     float FUN_10bff250();
 };
 
-float FUN_10c00490();
+float GetFrameDeltaTime();
 
 // The address of an object passed by reference.
 inline Class_10E97B00* AddressOf(const Class_10E97B00& Object)
@@ -25,7 +25,7 @@ void Class_10BC9A50::UpdateSummon(Class_10BFF460* Target)
     if (Unknown260 >= 0.0f)
     {
         double Saved = Unknown260;
-        Unknown260 = (float)(Saved - FUN_10c00490());
+        Unknown260 = (float)(Saved - GetFrameDeltaTime());
     }
     if (Target)
     {
@@ -35,7 +35,7 @@ void Class_10BC9A50::UpdateSummon(Class_10BFF460* Target)
                 cString Text("summon");
                 FUN_10bc7d70(AddressOf(Class_10E97B00("+summon:fight")), 0x14, 9, &Text, true);
             }
-            Unknown260 = FUN_10befab0();
+            Unknown260 = GetRandomInRange();
         }
     }
 }

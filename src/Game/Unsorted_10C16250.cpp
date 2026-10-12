@@ -11,8 +11,8 @@ extern Struct_10C16250* DAT_10ff7070;
 
 extern int DAT_10ff7074;
 
-// FUNCTION: 0x10C16250 ?FUN_10c16250@Class_10C16250@@QAEXXZ
-void Class_10C16250::FUN_10c16250()
+// FUNCTION: 0x10C16250 ?Init@Class_10C16250@@QAEXXZ
+void Class_10C16250::Init()
 {
     Unknown04.FUN_10c16140();
     if (DAT_10ff7070 == 0)

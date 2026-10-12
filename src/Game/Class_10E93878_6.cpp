@@ -32,5 +32,5 @@ void Class_10E93878::FUN_10bd1bc0()
 {
     FUN_10bd1900();
     if (!(GetTimeSeconds() - Unknown0C < 10.0) && Unknown50 >= 7)
-        Unknown04->FUN_10bb89d0()->FUN_10be3ff0();
+        Unknown04->FUN_10bb89d0()->ResetTimer();
 }

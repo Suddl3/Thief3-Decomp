@@ -17,16 +17,16 @@ struct Struct_10BB8FF0
 
 cBoneAimController* GetBoneAimController();
 
-// FUNCTION: 0x10BB8FF0 ?FUN_10bb8ff0@@YAXPAUStruct_10BB8FF0@@@Z
-void FUN_10bb8ff0(Struct_10BB8FF0* Array)
+// FUNCTION: 0x10BB8FF0 ?DeleteItems@@YAXPAUStruct_10BB8FF0@@@Z
+void DeleteItems(Struct_10BB8FF0* Array)
 {
     for (int i = 0; i < Array->Count; i++)
         delete Array->Items[i];
     Array->Count = 0;
 }
 
-// FUNCTION: 0x10BB95C0 ?FUN_10bb95c0@Class_10BB95C0@@QAE_NH@Z
-bool Class_10BB95C0::FUN_10bb95c0(int Value)
+// FUNCTION: 0x10BB95C0 ?Contains@Class_10BB95C0@@QAE_NH@Z
+bool Class_10BB95C0::Contains(int Value)
 {
     return FindIndex(Value) != -1;
 }

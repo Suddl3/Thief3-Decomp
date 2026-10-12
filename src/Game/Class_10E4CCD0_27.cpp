@@ -40,7 +40,7 @@ public:
     virtual void Virtual18();
     virtual void Virtual19();
     virtual void Virtual20();
-    virtual void FUN_10be1970();
+    virtual void DisableHeadAim();
     virtual void Virtual22();
     virtual void FUN_10be1b00(int A, int B, int C, int D, int E);
     virtual void Virtual24();

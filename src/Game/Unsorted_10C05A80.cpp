@@ -2,10 +2,10 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Struct_10C05A80.h"
 
-float FUN_10c05a80(const Struct_10C05A80* A, const Struct_10C05A80* B);
+float DistanceSquared3D(const Struct_10C05A80* A, const Struct_10C05A80* B);
 
-// FUNCTION: 0x10C05A80 ?FUN_10c05a80@@YAMPBUStruct_10C05A80@@0@Z
-float FUN_10c05a80(const Struct_10C05A80* A, const Struct_10C05A80* B)
+// FUNCTION: 0x10C05A80 ?DistanceSquared3D@@YAMPBUStruct_10C05A80@@0@Z
+float DistanceSquared3D(const Struct_10C05A80* A, const Struct_10C05A80* B)
 {
     float X = B->Unknown00 - A->Unknown00;
     float Y = B->Unknown04 - A->Unknown04;

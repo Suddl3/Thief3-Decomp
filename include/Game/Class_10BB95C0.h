@@ -8,13 +8,13 @@ class Class_10BA9EE0;
 class Class_10BB95C0
 {
 public:
-    bool FUN_10bb95c0(int Value);
+    bool Contains(int Value);
     // The index of the first element equal to Value, else -1.
     int FindIndex(int Value)
     {
-        for (int i = 0; i < Unknown220; i++)
+        for (int i = 0; i < m_Count; i++)
         {
-            if (Unknown228[i] == Value)
+            if (m_Items[i] == Value)
                 return i;
         }
         return -1;
@@ -23,9 +23,9 @@ public:
     char Unknown00[8];
     Class_10BA9EE0* Unknown08;
     char Pad0C[0x214];
-    int Unknown220;
+    int m_Count;
     char Unknown224[4];
-    int* Unknown228;
+    int* m_Items;
 };
 
 #endif // GAME_CLASS_10BB95C0_H

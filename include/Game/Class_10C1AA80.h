@@ -8,7 +8,7 @@ class Class_10C1AA80
 public:
     char Unknown00[0x2C];
     float Unknown2C;
-    void FUN_10c1aa80(float param);
+    void Scale(float param);
 };
 
 #endif // GAME_CLASS_10C1AA80_H

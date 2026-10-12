@@ -8,7 +8,7 @@ struct Struct_10BE1910;
 class Class_10BE1910
 {
 public:
-    void FUN_10be1910();
+    void RandomizeValue();
 
     char Unknown00[4];
     Struct_10BE1910* Unknown04;

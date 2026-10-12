@@ -15,7 +15,7 @@ public:
     char Unknown08[0x12C];
     int Unknown134;
     char Unknown138[0xE8];
-    float Unknown220;
+    float m_EndTime;
 };
 
 #endif // GAME_CLASS_10BEF080_H

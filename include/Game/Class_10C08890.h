@@ -6,7 +6,7 @@
 class Class_10C08890
 {
 public:
-    bool FUN_10c08890(int p1);
+    bool TrySet(int p1);
 
     int Unknown00;
     int Unknown04;

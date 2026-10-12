@@ -6,12 +6,12 @@
 // FUNCTION: 0x10BED1C0 ?FUN_10bed1c0@Class_10BED1C0@@QAEXXZ
 void Class_10BED1C0::FUN_10bed1c0()
 {
-    if (Unknown58 == 0)
+    if (m_Count == 0)
     {
         int Value = Unknown04->FUN_10bb85d0();
         if (Value)
             Unknown04->FUN_10bb8360(Value, 0.5f, 0);
     }
-    for (int i = 0; i < Unknown58; i++)
-        Unknown04->FUN_10bb83a0(Unknown60[i] + 0x2c, 1.5f, 0);
+    for (int i = 0; i < m_Count; i++)
+        Unknown04->FUN_10bb83a0(m_Entries[i] + 0x2c, 1.5f, 0);
 }

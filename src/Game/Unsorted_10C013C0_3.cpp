@@ -18,7 +18,7 @@ unsigned int HashBytes(const void* Data, int Length);
 bool Class_10C01140::FUN_10c015b0(const int& Key)
 {
     if (!Unknown10 && Unknown04 < Unknown0C * 0.05 && Unknown0C > 64)
-        FUN_10c012d0(Unknown0C / 2);
+        Rehash(Unknown0C / 2);
     unsigned int Index;
     {
         const void* Data;

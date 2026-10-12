@@ -4,7 +4,7 @@
 #include "Game/Class_10C7D570.h"
 #include "Game/Struct_10C05A50.h"
 
-float FUN_10c05a50(const Struct_10C05A50* A, const Struct_10C05A50* B);
+float DistanceSquared2D(const Struct_10C05A50* A, const Struct_10C05A50* B);
 
 struct Struct_10C38F20_Target
 {
@@ -56,7 +56,7 @@ public:
 int Class_10C38F20::FUN_10c38f20(const Struct_10C05A50* A, int B)
 {
     float Radius = Unknown60;
-    if (FUN_10c05a50(&((Struct_10C38F20_Target*)Unknown48->Virtual34()->FUN_10c7d570())->Unknown2C, A) < Radius * Radius)
+    if (DistanceSquared2D(&((Struct_10C38F20_Target*)Unknown48->Virtual34()->FUN_10c7d570())->Unknown2C, A) < Radius * Radius)
         return 1;
     return 0;
 }

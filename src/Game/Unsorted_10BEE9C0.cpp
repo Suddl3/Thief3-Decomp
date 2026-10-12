@@ -30,8 +30,8 @@ public:
     float Unknown2C[3];
 };
 
-// FUNCTION: 0x10BEEB50 ?FUN_10beeb50@Class_10BEEB50@@QAE_N_N@Z
-bool Class_10BEEB50::FUN_10beeb50(bool Flag)
+// FUNCTION: 0x10BEEB50 ?MoveToNextPatrolPoint@Class_10BEEB50@@QAE_N_N@Z
+bool Class_10BEEB50::MoveToNextPatrolPoint(bool Flag)
 {
     Class_10BEEB50_Unknown04* P = Unknown04;
     Unknown50 = 0;

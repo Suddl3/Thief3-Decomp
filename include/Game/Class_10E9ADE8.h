@@ -4,11 +4,11 @@
 #define GAME_CLASS_10E9ADE8_H
 
 #include "Game/Class_10E98C8C.h"
-#include "Game/Class_10E99314.h"
+#include "Game/MoveCommand.h"
 
 class cString;
 
-class Class_10E9ADE8 : public Class_10E99314
+class Class_10E9ADE8 : public MoveCommand
 {
 public:
     virtual void Virtual0();

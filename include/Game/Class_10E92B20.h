@@ -75,7 +75,7 @@ public:
     void FUN_10bc4e90(Struct_10BC4E90* p1, int p2);
     Class_10E92B20* FUN_10bce9f0(int A, int B, const Struct_10BCE9F0& C);
     // The accessor at 0x10BC4BF0, which the compiler inlines here.
-    int FUN_10bc4bf0();
+    int GetTargetLinkType();
 
     Struct_10BCE9F0 Unknown40;
     bool Unknown4C;

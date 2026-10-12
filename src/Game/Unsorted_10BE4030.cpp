@@ -14,8 +14,8 @@ struct Struct_10BE4030
     Class_10DBD510* Unknown08;
 };
 
-// FUNCTION: 0x10BE4030 ?FUN_10be4030@Class_10BE4030@@QAEXXZ
-void Class_10BE4030::FUN_10be4030()
+// FUNCTION: 0x10BE4030 ?StartRandomTimer@Class_10BE4030@@QAEXXZ
+void Class_10BE4030::StartRandomTimer()
 {
     float Min = Unknown04->Unknown08->FUN_10dbd510(0x10024a)->GetFloat();
     float Max = Unknown04->Unknown08->FUN_10dbd510(0x10024b)->GetFloat();

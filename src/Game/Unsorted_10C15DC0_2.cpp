@@ -9,16 +9,16 @@ struct Struct_10C15E60_Node
     Struct_10C15E60_Node* Unknown08;
 };
 
-// FUNCTION: 0x10C15E60 ?FUN_10c15e60@Class_10C15E60@@QAEXPAX@Z
-void Class_10C15E60::FUN_10c15e60(void* Source)
+// FUNCTION: 0x10C15E60 ?Remove@Class_10C15E60@@QAEXPAX@Z
+void Class_10C15E60::Remove(void* Source)
 {
-    Struct_10C15E60_Node* Node = Unknown04;
+    Struct_10C15E60_Node* Node = m_Head;
     if (!Node)
         return;
     if (Node->Unknown04 == Source)
     {
-        Unknown04 = Node->Unknown08;
-        Unknown08--;
+        m_Head = Node->Unknown08;
+        m_Count--;
         return;
     }
     Struct_10C15E60_Node* Prev = Node;
@@ -27,7 +27,7 @@ void Class_10C15E60::FUN_10c15e60(void* Source)
         if (Node->Unknown04 == Source)
         {
             Prev->Unknown08 = Node->Unknown08;
-            Unknown08--;
+            m_Count--;
             return;
         }
         Prev = Node;

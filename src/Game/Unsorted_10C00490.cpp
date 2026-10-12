@@ -2,8 +2,8 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/TimeManager.h"
 
-// FUNCTION: 0x10C00490 ?FUN_10c00490@@YAMXZ
-float FUN_10c00490()
+// FUNCTION: 0x10C00490 ?GetFrameDeltaTime@@YAMXZ
+float GetFrameDeltaTime()
 {
     float DeltaTime = TimeManager::Instance()->GetDeltaTime();
     return DeltaTime;

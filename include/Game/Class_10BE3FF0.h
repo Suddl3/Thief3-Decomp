@@ -85,7 +85,7 @@ public:
     virtual void Virtual74();
     virtual bool Virtual75();
 
-    void FUN_10be3ff0();
+    void ResetTimer();
 
     Class_10BE3FF0_Field04* Unknown04;
     char Unknown08[4];

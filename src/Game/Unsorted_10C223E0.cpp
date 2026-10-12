@@ -21,15 +21,15 @@ public:
 class Class_10C22A70 : public Class_10BAE0C0
 {
 public:
-    void FUN_10c22a70(const Class_10C22A70& Other);
+    void CopyFrom(const Class_10C22A70& Other);
 
     int Unknown00;
     int Unknown04;
     Item_10C22A70* Unknown08;
 };
 
-// FUNCTION: 0x10C22A70 ?FUN_10c22a70@Class_10C22A70@@QAEXABV1@@Z
-void Class_10C22A70::FUN_10c22a70(const Class_10C22A70& Other)
+// FUNCTION: 0x10C22A70 ?CopyFrom@Class_10C22A70@@QAEXABV1@@Z
+void Class_10C22A70::CopyFrom(const Class_10C22A70& Other)
 {
     Resize(Other.Unknown00);
     for (int i = 0; i < Unknown00; i++)

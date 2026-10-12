@@ -17,8 +17,8 @@ extern int DAT_10ff7068;
 
 extern Struct_10C15CC0* DAT_10ff706c;
 
-// FUNCTION: 0x10C15CC0 ?FUN_10c15cc0@@YA_NPAPAUStruct_10C15CC0@@HHHHH@Z
-bool FUN_10c15cc0(Struct_10C15CC0** Out, int A, int B, int C, int D, int E)
+// FUNCTION: 0x10C15CC0 ?AllocEntry@@YA_NPAPAUStruct_10C15CC0@@HHHHH@Z
+bool AllocEntry(Struct_10C15CC0** Out, int A, int B, int C, int D, int E)
 {
     if (DAT_10ff7068 >= 0x400)
         return false;

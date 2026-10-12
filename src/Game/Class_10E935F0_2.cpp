@@ -49,7 +49,7 @@ public:
     virtual void Virtual19();
     virtual void Virtual20();
 
-    int FUN_10bc4bf0();
+    int GetTargetLinkType();
 };
 
 class Class_10E935F0 : public Class_10BC4BF0
@@ -66,5 +66,5 @@ void Class_10E935F0::FUN_10bd30c0()
     Class_10bb8960_Result* R = Unknown04->FUN_10bb8960();
     R->Unknown80 = R->Unknown8C;
     R->Unknown8C = FVector(0, 0, 0);
-    ((Class_10C2F090*)FUN_10bc4bf0())->FUN_10c2f090(0x3f800000);
+    ((Class_10C2F090*)GetTargetLinkType())->FUN_10c2f090(0x3f800000);
 }

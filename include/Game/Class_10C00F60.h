@@ -12,7 +12,7 @@ class Class_10C00F60
 public:
     unsigned int FUN_10c00f60(const int& Key, const int& Value);
     void Rehash(int Size);
-    unsigned int FUN_10c00b40(const int& Key);
+    unsigned int GetBucketIndex(const int& Key);
     bool Remove(const int& Key);
 
     int Unknown00;

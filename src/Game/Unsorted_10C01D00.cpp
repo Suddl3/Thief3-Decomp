@@ -13,20 +13,20 @@ public:
 class Class_10C01EC0
 {
 public:
-    int FUN_10c01ec0(int A);
+    int Remove(int A);
 
     int Count;
     Entry_10C32C30* Head;
     Entry_10C32C30* Tail;
-    Class_10C49740 Unknown0C;
+    Class_10C49740 m_Index;
 };
 
-// FUNCTION: 0x10C01EC0 ?FUN_10c01ec0@Class_10C01EC0@@QAEHH@Z
-int Class_10C01EC0::FUN_10c01ec0(int A)
+// FUNCTION: 0x10C01EC0 ?Remove@Class_10C01EC0@@QAEHH@Z
+int Class_10C01EC0::Remove(int A)
 {
     int Key = A;
     Entry_10C32C30* Found;
-    Entry_10C32C30* Node = Unknown0C.FUN_10c49740(&Key, &Found) ? Found : 0;
+    Entry_10C32C30* Node = m_Index.FUN_10c49740(&Key, &Found) ? Found : 0;
     if (Head == Node)
         Head = Node->Next;
     if (Tail == Node)
@@ -39,7 +39,7 @@ int Class_10C01EC0::FUN_10c01ec0(int A)
     Node->Prev = (Entry_10C32C30*)-1;
     Count--;
     Key = A;
-    Unknown0C.FUN_10c015b0(Key);
+    m_Index.FUN_10c015b0(Key);
     delete Node;
     return A;
 }

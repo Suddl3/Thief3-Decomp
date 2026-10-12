@@ -24,14 +24,14 @@ public:
 class Class_10BBB510
 {
 public:
-    void FUN_10bbb510(int Item);
+    void AddItem(int Item);
 
     char Unknown00[0x14];
     cIntArray Unknown14;
 };
 
-// FUNCTION: 0x10BBB510 ?FUN_10bbb510@Class_10BBB510@@QAEXH@Z
-void Class_10BBB510::FUN_10bbb510(int Item)
+// FUNCTION: 0x10BBB510 ?AddItem@Class_10BBB510@@QAEXH@Z
+void Class_10BBB510::AddItem(int Item)
 {
     Unknown14.Append(Item);
 }

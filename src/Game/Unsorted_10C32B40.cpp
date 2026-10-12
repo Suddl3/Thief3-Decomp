@@ -54,8 +54,8 @@ void cMotionControllerAnim::RemoveMotionCallback(int Item)
     }
 }
 
-// FUNCTION: 0x10C32C30 ?FUN_10c32c30@Class_10C32C30@@QAEHH@Z
-int Class_10C32C30::FUN_10c32c30(int A)
+// FUNCTION: 0x10C32C30 ?GetValue@Class_10C32C30@@QAEHH@Z
+int Class_10C32C30::GetValue(int A)
 {
     int Key = A;
     Entry_10C32C30* Value;

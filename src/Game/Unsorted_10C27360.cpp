@@ -23,22 +23,22 @@ public:
 class Class_10C27380
 {
 public:
-    void FUN_10c27380(int A);
+    void RemoveMatching(int A);
 
     char Unknown00[0x30];
-    Class_10BAEC40 Unknown30;
+    Class_10BAEC40 m_Entries;
 };
 
-// FUNCTION: 0x10C27380 ?FUN_10c27380@Class_10C27380@@QAEXH@Z
-void Class_10C27380::FUN_10c27380(int A)
+// FUNCTION: 0x10C27380 ?RemoveMatching@Class_10C27380@@QAEXH@Z
+void Class_10C27380::RemoveMatching(int A)
 {
-    for (int I = Unknown30.m_Count - 1; I >= 0; I--)
+    for (int I = m_Entries.m_Count - 1; I >= 0; I--)
     {
-        if (Unknown30.m_Items[I].Unknown04 == A)
+        if (m_Entries.m_Items[I].Unknown04 == A)
         {
-            if (I != Unknown30.m_Count - 1)
-                Unknown30.MoveRange(I + 1, I, Unknown30.m_Count - I - 1);
-            Unknown30.SetCount(Unknown30.m_Count - 1);
+            if (I != m_Entries.m_Count - 1)
+                m_Entries.MoveRange(I + 1, I, m_Entries.m_Count - I - 1);
+            m_Entries.SetCount(m_Entries.m_Count - 1);
         }
     }
 }

@@ -6,7 +6,7 @@
 class Class_10BFB910
 {
 public:
-    void FUN_10bfb910(int Index);
+    void ClearTime(int Index);
 
     int Unknown00[64];
 };

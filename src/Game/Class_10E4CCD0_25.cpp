@@ -125,7 +125,7 @@ public:
     virtual int FUN_10be4b30();
     virtual int FUN_10be4b50();
 
-    cString FUN_10be8840();
+    cString GetRedAlertName();
 
     char Pad04[0x68];
     bool Unknown6C;

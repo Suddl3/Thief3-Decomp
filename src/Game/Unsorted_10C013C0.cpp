@@ -57,8 +57,8 @@ void FUN_10c013c0()
     DAT_10ff66a0->Unknown04++;
 }
 
-// FUNCTION: 0x10C01430 ?FUN_10c01430@Class_10C01430@@QAEXPAX@Z
-void Class_10C01430::FUN_10c01430(void* Value)
+// FUNCTION: 0x10C01430 ?Append@Class_10C01430@@QAEXPAX@Z
+void Class_10C01430::Append(void* Value)
 {
     int Link = 0;
     Class_10C01430_Node* Node = new(Link, 0, 0, 0, 0) Class_10C01430_Node();
@@ -72,5 +72,5 @@ void Class_10C01430::FUN_10c01430(void* Value)
     if (!Head)
         Head = Node;
     Count++;
-    Index.FUN_10c01140((int)Value, Link);
+    Index.Insert((int)Value, Link);
 }

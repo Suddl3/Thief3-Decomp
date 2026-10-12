@@ -15,15 +15,15 @@ public:
         FUN_10bd0410(0);
         if (Unknown04)
         {
-            GetAllocator()->Virtual5(Unknown08);
-            Unknown08 = 0;
+            GetAllocator()->Virtual5(m_Items);
+            m_Items = 0;
             Unknown04 = 0;
         }
     }
 
-    int Unknown00;
+    int m_Count;
     int Unknown04;
-    void* Unknown08;
+    void* m_Items;
 };
 
 class State_PlayAnim : public Class_10E90D70

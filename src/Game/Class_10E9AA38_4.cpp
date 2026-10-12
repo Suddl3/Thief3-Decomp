@@ -8,27 +8,27 @@ double GetTimeSeconds();
 
 bool FUN_10c37920(Class_10C37960* A, int B, int C, int D, int E, int F);
 
-class Class_10E99314
+class MoveCommand
 {
 public:
-    Class_10E99314(int A, const Class_10E93B5C& B, int C);
+    MoveCommand(int A, const Class_10E93B5C& B, int C);
     virtual bool IsFinished();
 
-    ~Class_10E99314();
+    ~MoveCommand();
 
-    Class_10E99314* FUN_10c27320(int A, const Class_10E93B5C& B, int C);
+    MoveCommand* Init(int A, const Class_10E93B5C& B, int C);
 
     int Unknown04;
     Class_10E93B5C Unknown08;
     int Unknown3C;
     int Unknown40;
-    bool Unknown44;
-    bool Unknown45;
+    bool m_Active;
+    bool m_Finished;
     char Pad46[0x2];
     int Unknown48;
 };
 
-class Class_10E9AA38 : public Class_10E99314
+class Class_10E9AA38 : public MoveCommand
 {
 public:
     Class_10E9AA38(Class_10C37960* A, const Class_10E93B5C& B, int C, const cString& E, int F, int G, int H, int I);
@@ -49,7 +49,7 @@ public:
 
 // FUNCTION: 0x10C2E800 ??0Class_10E9AA38@@QAE@PAVClass_10C37960@@ABVClass_10E93B5C@@HABVcString@@HHHH@Z
 Class_10E9AA38::Class_10E9AA38(Class_10C37960* A, const Class_10E93B5C& B, int C, const cString& E, int F, int G, int H, int I)
-    : Class_10E99314((int)A, B, C), Unknown4C(false), Unknown50(0), Unknown54((char)F), Unknown58(G), Unknown5C(0.0f), Unknown64(E)
+    : MoveCommand((int)A, B, C), Unknown4C(false), Unknown50(0), Unknown54((char)F), Unknown58(G), Unknown5C(0.0f), Unknown64(E)
 {
     Unknown60 = (float)GetTimeSeconds();
     A->Virtual54();

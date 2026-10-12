@@ -37,8 +37,8 @@ Class_10E98CE0::Class_10E98CE0(int p1, int p2)
     Unknown08 = p2;
 }
 
-// FUNCTION: 0x10C1A420 ?FUN_10c1a420@Class_10E98CE4@@QAEPAV1@H@Z
-Class_10E98CE4* Class_10E98CE4::FUN_10c1a420(int p1)
+// FUNCTION: 0x10C1A420 ?Init@Class_10E98CE4@@QAEPAV1@H@Z
+Class_10E98CE4* Class_10E98CE4::Init(int p1)
 {
     Unknown00 = DAT_10e98ce4;
     Unknown04 = p1;
@@ -53,8 +53,8 @@ Class_10E98CE8::Class_10E98CE8(int p1, int p2)
     Unknown08 = p2;
 }
 
-// FUNCTION: 0x10C1A560 ?FUN_10c1a560@Class_10C1A560@@QAEPAV1@XZ
-Class_10C1A560* Class_10C1A560::FUN_10c1a560()
+// FUNCTION: 0x10C1A560 ?Reset@Class_10C1A560@@QAEPAV1@XZ
+Class_10C1A560* Class_10C1A560::Reset()
 {
     Unknown00 = 0;
     Unknown04 = 0;

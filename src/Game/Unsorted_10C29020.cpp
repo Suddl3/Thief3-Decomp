@@ -9,7 +9,7 @@ extern float DAT_10eafbdc;
 
 float appFrand();
 
-float FUN_10c00490();
+float GetFrameDeltaTime();
 
 class Class_10C29220_Unknown0C
 {
@@ -43,7 +43,7 @@ void Class_10C29220::FUN_10c29220()
     else
     {
         double Remaining = Unknown20;
-        Unknown20 = Remaining - FUN_10c00490();
+        Unknown20 = Remaining - GetFrameDeltaTime();
         if (Unknown20 <= DAT_10eafbdc)
         {
             Unknown1D = false;

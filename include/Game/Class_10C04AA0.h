@@ -9,7 +9,7 @@ struct Struct_10C04AA0;
 class Class_10C04AA0
 {
 public:
-    void FUN_10c04aa0(FArchive& Ar);
+    void Serialize(FArchive& Ar);
 
     char Unknown00[0x04];
     int Unknown04;
@@ -17,9 +17,9 @@ public:
     char Unknown0C;
     char Unknown0D[0x03];
     Struct_10C04AA0* Unknown10;
-    int Unknown14;
+    int m_Count;
     char Unknown18[0x04];
-    Struct_10C04AA0* Unknown1C;
+    Struct_10C04AA0* m_Items;
 };
 
 #endif // GAME_CLASS_10C04AA0_H

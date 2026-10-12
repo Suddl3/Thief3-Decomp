@@ -9,11 +9,11 @@
 class Class_10C00B40
 {
 public:
-    unsigned int FUN_10c00b40(const int& Key);
+    unsigned int GetBucketIndex(const int& Key);
 
     int Unknown00;
     int Unknown04;
-    int Unknown08;
+    int m_BucketBits;
     int Unknown0C;
     bool Unknown10;
     void* Unknown14;

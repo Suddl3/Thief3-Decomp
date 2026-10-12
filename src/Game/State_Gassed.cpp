@@ -69,7 +69,7 @@ void State_Gassed::FUN_10bcb820(int A)
 {
     FUN_109e3c90(A);
     Unknown04->FUN_10bb83e0();
-    Unknown04->FUN_10bb8300();
+    Unknown04->ClearEntry();
     if (Unknown54 == A)
         Unknown54 = 0;
 }

@@ -9,12 +9,12 @@ class Class_10BB8300
 {
 public:
     bool FUN_10bb8c00();
-    void FUN_10bb8300();
+    void ClearEntry();
 
     char Unknown00[8];
-    Class_10C7D570* Unknown08;
+    Class_10C7D570* m_Owner;
     char Unknown0C[0x278];
-    int Unknown284;
+    int m_Entry;
 };
 
 #endif // GAME_CLASS_10BB8300_H

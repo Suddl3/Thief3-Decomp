@@ -61,9 +61,9 @@ public:
 void Class_10C08DE0::FUN_10c08de0()
 {
     Unknown20 = true;
-    for (int i = 0; i < Unknown14; i++)
+    for (int i = 0; i < m_Count; i++)
     {
-        Class_10BAA6B0_Param* Param = Unknown1C[i];
+        Class_10BAA6B0_Param* Param = m_Params[i];
         if (Param)
         {
             Class_10BABED0* A = FUN_10baa6b0(Param);

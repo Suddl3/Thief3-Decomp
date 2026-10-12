@@ -6,10 +6,10 @@
 class Class_10BB7F60
 {
 public:
-    float FUN_10bb7f60();
+    float GetRoll();
 
     char Unknown00[0x29C];
-    float Unknown29C;
+    float m_Roll;
 };
 
 #endif // GAME_CLASS_10BB7F60_H

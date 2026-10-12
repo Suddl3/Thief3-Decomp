@@ -4,9 +4,9 @@
 #define GAME_CLASS_10E9AA38_H
 
 #include "Game/cString.h"
-#include "Game/Class_10E99314.h"
+#include "Game/MoveCommand.h"
 
-class Class_10E9AA38 : public Class_10E99314
+class Class_10E9AA38 : public MoveCommand
 {
 public:
     virtual bool IsFinished();

@@ -68,7 +68,7 @@ void DeleteObjects(Struct_10B9F420* List)
 void Class_10B9F450::Serialize(FArchive& Ar)
 {
     for (int i = 0; i < m_Count; i++)
-        m_Items[i]->FUN_10c04aa0(Ar);
+        m_Items[i]->Serialize(Ar);
 }
 
 // FUNCTION: 0x10B9F480 ?Serialize@Class_10B9F480@@QAEXAAVFArchive@@@Z

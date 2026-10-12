@@ -15,7 +15,7 @@ public:
     Class_10DBD510* m_Schema;
     char Unknown0C[0x28C];
     float m_Interval;
-    float Unknown29C;
+    float m_Roll;
     char Pad2A0[0x24];
     float m_EndTime;
 };

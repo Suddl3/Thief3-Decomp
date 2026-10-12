@@ -4,8 +4,8 @@
 #include "Game/Class_10C04840.h"
 #include "Game/Class_10C04A60.h"
 
-// FUNCTION: 0x10C04840 ?FUN_10c04840@Class_10C04840@@QAE_NE@Z
-bool Class_10C04840::FUN_10c04840(unsigned char A)
+// FUNCTION: 0x10C04840 ?HasAtLeast@Class_10C04840@@QAE_NE@Z
+bool Class_10C04840::HasAtLeast(unsigned char A)
 {
     for (int i = 0; i < 5; i++)
     {

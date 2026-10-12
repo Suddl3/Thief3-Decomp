@@ -17,7 +17,7 @@ public:
     Class_10E97B00(const Class_1090A780& Name);
     Class_10E97B00& operator=(const Class_10E97B00& Other);
 
-    cString Unknown04;
+    cString m_Name;
 };
 
 class Class_10bf7f90

@@ -13,7 +13,7 @@ public:
     void FUN_10bc4ee0(int* p1, int p2);
 
     // The accessor at 0x10BC4BF0, which the compiler inlines here.
-    int FUN_10bc4bf0()
+    int GetTargetLinkType()
     {
         Class_10AAF570* Target = Unknown04->Unknown0C;
         if (!Target)
@@ -37,8 +37,8 @@ struct Struct_10BC5560
     Class_10C02030** Items;
 };
 
-// FUNCTION: 0x10BC4BF0 ?FUN_10bc4bf0@Class_10BC4BF0@@QAEHXZ
-int Class_10BC4BF0::FUN_10bc4bf0()
+// FUNCTION: 0x10BC4BF0 ?GetTargetLinkType@Class_10BC4BF0@@QAEHXZ
+int Class_10BC4BF0::GetTargetLinkType()
 {
     Class_10AAF570* Target = Unknown04->Unknown0C;
     if (!Target)
@@ -49,12 +49,12 @@ int Class_10BC4BF0::FUN_10bc4bf0()
 // FUNCTION: 0x10BC4EE0 ?FUN_10bc4ee0@Class_10E92B20@@QAEXPAHH@Z
 void Class_10E92B20::FUN_10bc4ee0(int* p1, int p2)
 {
-    if (FUN_10bc4bf0())
-        ((Class_10AAF570_Field10*)FUN_10bc4bf0())->Virtual69(p1, p2);
+    if (GetTargetLinkType())
+        ((Class_10AAF570_Field10*)GetTargetLinkType())->Virtual69(p1, p2);
 }
 
-// FUNCTION: 0x10BC5560 ?FUN_10bc5560@@YAXPAUStruct_10BC5560@@@Z
-void FUN_10bc5560(Struct_10BC5560* Array)
+// FUNCTION: 0x10BC5560 ?DeleteAllItems@@YAXPAUStruct_10BC5560@@@Z
+void DeleteAllItems(Struct_10BC5560* Array)
 {
     for (int i = 0; i < Array->Count; i++)
         delete Array->Items[i];

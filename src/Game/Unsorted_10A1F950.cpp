@@ -31,12 +31,12 @@ void Class_10E65590::FUN_10a1f950(Class_10AE7460* Obj)
     {
         if (!Obj->FUN_10ae7460())
         {
-            if (Unknown04.Unknown00 <= Index)
+            if (Unknown04.m_Count <= Index)
                 Unknown04.FUN_10c00a60(Index + 1);
-            Class_10AE7460* Old = (Class_10AE7460*)Unknown04.Unknown08[Index];
+            Class_10AE7460* Old = (Class_10AE7460*)Unknown04.m_Data[Index];
             if (Old && Old != Obj)
                 Old->FUN_10ae7460();
-            Unknown04.Unknown08[Index] = (int)Obj;
+            Unknown04.m_Data[Index] = (int)Obj;
         }
     }
 }

@@ -7,7 +7,7 @@ class Class_10BC4BF0
 public:
     virtual void Virtual0();
 
-    int FUN_10bc4bf0();
+    int GetTargetLinkType();
 };
 
 class cTacticMoveToPoint : public Class_10BC4BF0

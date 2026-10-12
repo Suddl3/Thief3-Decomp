@@ -47,7 +47,7 @@ public:
 void Class_10BEF080::FUN_10bef080()
 {
     Unknown134 = Unknown04->FUN_10bbb8b0() ? 1 : 2;
-    Unknown220 = GetTimeSeconds() + 1.0;
+    m_EndTime = GetTimeSeconds() + 1.0;
 }
 
 // FUNCTION: 0x10BEF0F0 ?FUN_10bef0f0@cStateRangedCombat@@UAEXXZ
@@ -55,7 +55,7 @@ void cStateRangedCombat::FUN_10bef0f0()
 {
     if (Unknown25C)
     {
-        Unknown04->FUN_10bb8300();
+        Unknown04->ClearEntry();
         return;
     }
     if (!Unknown174)

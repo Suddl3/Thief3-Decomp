@@ -161,7 +161,7 @@ public:
     Struct_10BAA000** Unknown08;
 };
 
-float FUN_10c05a80(const Struct_10C05A80* A, const Struct_10C05A80* B);
+float DistanceSquared3D(const Struct_10C05A80* A, const Struct_10C05A80* B);
 
 class Class_10E97258 : public Class_10E8BE68
 {
@@ -240,14 +240,14 @@ public:
     unsigned char Unknown54;
 };
 
-// FUNCTION: 0x10BED160 ?FUN_10bed160@@YAPAUStruct_10BAA000@@PAVClass_10BED160@@PBUStruct_10C05A80@@@Z
-Struct_10BAA000* FUN_10bed160(Class_10BED160* Array, const Struct_10C05A80* Target)
+// FUNCTION: 0x10BED160 ?FindNearest@@YAPAUStruct_10BAA000@@PAVClass_10BED160@@PBUStruct_10C05A80@@@Z
+Struct_10BAA000* FindNearest(Class_10BED160* Array, const Struct_10C05A80* Target)
 {
     float BestDist = 0.0f;
     Struct_10BAA000* Best = 0;
     for (int i = 0; i < Array->Unknown00; i++)
     {
-        float Dist = FUN_10c05a80(&Array->Unknown08[i]->Unknown2C, Target);
+        float Dist = DistanceSquared3D(&Array->Unknown08[i]->Unknown2C, Target);
         if (Best == 0 || Dist < BestDist)
         {
             BestDist = Dist;

@@ -6,13 +6,13 @@
 class Class_10C28570
 {
 public:
-    void FUN_10c28570();
+    void Update();
     void FUN_10c283f0();
 
     char Unknown00[8];
-    float Unknown08;
+    float m_StartTime;
     char Unknown0C[4];
-    float Unknown10;
+    float m_Duration;
 };
 
 #endif // GAME_CLASS_10C28570_H

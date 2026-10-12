@@ -27,8 +27,8 @@ public:
 void Class_10E8D65C::FUN_10ba9060(Class_10C7D570* Obj)
 {
     FUN_10c15bc0();
-    Unknown10.FUN_10c16250();
-    Unknown4030.FUN_10c16250();
+    Unknown10.Init();
+    Unknown4030.Init();
     Unknown08 = 0;
     m_OwnerKey = Obj ? Obj->FUN_10c7d570() : 0;
 }

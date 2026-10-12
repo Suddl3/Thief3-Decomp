@@ -12,16 +12,16 @@ struct Struct_10C28C60
     Class_10C28B70** Items;
 };
 
-// FUNCTION: 0x10C28C60 ?FUN_10c28c60@@YAXPAUStruct_10C28C60@@@Z
-void FUN_10c28c60(Struct_10C28C60* Array)
+// FUNCTION: 0x10C28C60 ?DeleteItems@@YAXPAUStruct_10C28C60@@@Z
+void DeleteItems(Struct_10C28C60* Array)
 {
     for (int i = 0; i < Array->Count; i++)
         delete Array->Items[i];
     Array->Count = 0;
 }
 
-// FUNCTION: 0x10C28D90 ?FUN_10c28d90@@YAXXZ
-void FUN_10c28d90()
+// FUNCTION: 0x10C28D90 ?ReleaseSharedInstance@@YAXXZ
+void ReleaseSharedInstance()
 {
     --DAT_10ff70a0->Unknown0C;
     if (DAT_10ff70a0->Unknown0C == 0)

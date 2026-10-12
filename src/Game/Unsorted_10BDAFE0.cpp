@@ -40,8 +40,8 @@ struct Struct_10BDAFE0
     Class_10DBD510* Unknown08;
 };
 
-// FUNCTION: 0x10BDAFE0 ?FUN_10bdafe0@Class_10BDAFE0@@QAEXXZ
-void Class_10BDAFE0::FUN_10bdafe0()
+// FUNCTION: 0x10BDAFE0 ?StartRandomTimer@Class_10BDAFE0@@QAEXXZ
+void Class_10BDAFE0::StartRandomTimer()
 {
     float Min = Unknown04->Unknown08->FUN_10dbd510(0x10056e)->FUN_10bbdc80();
     float Max = Unknown04->Unknown08->FUN_10dbd510(0x10056f)->FUN_10bbdc80();

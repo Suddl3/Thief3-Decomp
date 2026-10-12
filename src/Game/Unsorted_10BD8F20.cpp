@@ -30,7 +30,7 @@ public:
 class cTacticWeaponHolster : public Class_10E90D70
 {
 public:
-    cTacticWeaponHolster* FUN_10bd9780(int A, int B);
+    cTacticWeaponHolster* Construct(int A, int B);
 };
 
 class Class_10E8BE68
@@ -42,7 +42,7 @@ public:
 class Class_10E928E8 : public Class_10E8BE68
 {
 public:
-    virtual void FUN_10bd97a0(FArchive& Ar);
+    virtual void Serialize(FArchive& Ar);
 };
 
 class Class_10E94B20
@@ -207,16 +207,16 @@ extern const char DAT_10e8c03c[];
 
 void FUN_10be7f20();
 
-// FUNCTION: 0x10BD9780 ?FUN_10bd9780@cTacticWeaponHolster@@QAEPAV1@HH@Z
-cTacticWeaponHolster* cTacticWeaponHolster::FUN_10bd9780(int A, int B)
+// FUNCTION: 0x10BD9780 ?Construct@cTacticWeaponHolster@@QAEPAV1@HH@Z
+cTacticWeaponHolster* cTacticWeaponHolster::Construct(int A, int B)
 {
     this->Class_10E90D70::Class_10E90D70(A, B);
     Unknown00 = DAT_10e93e48;
     return this;
 }
 
-// FUNCTION: 0x10BD97A0 ?FUN_10bd97a0@Class_10E928E8@@UAEXAAVFArchive@@@Z
-void Class_10E928E8::FUN_10bd97a0(FArchive& Ar)
+// FUNCTION: 0x10BD97A0 ?Serialize@Class_10E928E8@@UAEXAAVFArchive@@@Z
+void Class_10E928E8::Serialize(FArchive& Ar)
 {
     Class_10E8BE68::Serialize(Ar);
 }
@@ -236,7 +236,7 @@ void cTacticMoveToPoint::FUN_10bdaf10()
 // FUNCTION: 0x10BDAF90 ?FUN_10bdaf90@Class_10BDAF90@@QAEXXZ
 void Class_10BDAF90::FUN_10bdaf90()
 {
-    Field04->FUN_10bb8300();
+    Field04->ClearEntry();
 }
 
 // FUNCTION: 0x10BDB310 ?FUN_10bdb310@Class_10E94B20@@QAEXXZ
@@ -461,8 +461,8 @@ Class_10E97B00 Class_10BE4FA0::FUN_10be4fa0()
     return Class_10E97B00(DAT_10e47660);
 }
 
-// FUNCTION: 0x10BE4FD0 ?FUN_10be4fd0@Class_10E95F40@@QAE?AVClass_10E97B00@@XZ
-Class_10E97B00 Class_10E95F40::FUN_10be4fd0()
+// FUNCTION: 0x10BE4FD0 ?GetReturnToIdleMessage@Class_10E95F40@@QAE?AVClass_10E97B00@@XZ
+Class_10E97B00 Class_10E95F40::GetReturnToIdleMessage()
 {
     return Class_10E97B00(DAT_10e960c8);
 }
@@ -491,8 +491,8 @@ cString Class_10E96510::GetYellowAlertName()
     return cString(DAT_10e8c048);
 }
 
-// FUNCTION: 0x10BE8840 ?FUN_10be8840@Class_10E96810@@QAE?AVcString@@XZ
-cString Class_10E96810::FUN_10be8840()
+// FUNCTION: 0x10BE8840 ?GetRedAlertName@Class_10E96810@@QAE?AVcString@@XZ
+cString Class_10E96810::GetRedAlertName()
 {
     return cString(DAT_10e8c03c);
 }

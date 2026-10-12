@@ -26,8 +26,8 @@ public:
     int Unknown30;
 };
 
-// FUNCTION: 0x10BFF980 ?FUN_10bff980@@YAXPAVClass_10BFF980_Param@@PAVcIntArray@@1@Z
-void FUN_10bff980(Class_10BFF980_Param* Param, cIntArray* A, cIntArray* B)
+// FUNCTION: 0x10BFF980 ?SplitPointsByClass@@YAXPAVClass_10BFF980_Param@@PAVcIntArray@@1@Z
+void SplitPointsByClass(Class_10BFF980_Param* Param, cIntArray* A, cIntArray* B)
 {
     for (int i = 0; i < Param->Unknown30; i++)
     {

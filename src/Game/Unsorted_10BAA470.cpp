@@ -7,7 +7,7 @@ extern float DAT_10eafbdc;
 
 extern const char DAT_10e8d69c[];
 
-float FUN_10c05a80(const Struct_10C05A80* A, const Struct_10C05A80* B);
+float DistanceSquared3D(const Struct_10C05A80* A, const Struct_10C05A80* B);
 
 void FUN_10905ff0(const char* Message);
 
@@ -31,7 +31,7 @@ bool PawnWrapper::QuickProximityTest(Class_10BAA5F0_Field34* A, float B, float C
         Diff = -Diff;
     if (Diff > C)
         return false;
-    float Dist = FUN_10c05a80(&A->Unknown2C, &m_Pawn->Unknown2C);
+    float Dist = DistanceSquared3D(&A->Unknown2C, &m_Pawn->Unknown2C);
     if (Dist > B * B)
         return false;
     return true;

@@ -24,7 +24,7 @@ void* Class_10BB67F0::FUN_10bb6810(int Unused, Class_10EC0808* Owner, int B, voi
     for (int I = 0; I < ((Struct_10BB6810_List*)Owner->FUN_10aa7220())->Unknown00; I++)
     {
         Class_10C04830* Item = ((Struct_10BB6810_List*)Owner->FUN_10aa7220())->Unknown08[I];
-        int Found = Item->FUN_10c04830((int)Owner);
+        int Found = Item->GetOther((int)Owner);
         if (FUN_10bb4590(Found, B, (int)C) == 1)
             return (void*)Found;
     }

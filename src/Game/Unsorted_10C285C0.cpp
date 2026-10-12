@@ -10,23 +10,23 @@ double GetTimeSeconds();
 
 int FUN_10c28480(int A, cString* B, cString* C);
 
-// FUNCTION: 0x10C285C0 ?FUN_10c285c0@Class_10C285C0@@QAEXXZ
-void Class_10C285C0::FUN_10c285c0()
+// FUNCTION: 0x10C285C0 ?ResolveHeadFlex@Class_10C285C0@@QAEXXZ
+void Class_10C285C0::ResolveHeadFlex()
 {
     cString Head("head");
     cString HeadFlex("head_flex");
-    Unknown20 = FUN_10c28480(Unknown00, &HeadFlex, &Head);
+    m_HeadFlex = FUN_10c28480(Unknown00, &HeadFlex, &Head);
 }
 
-// FUNCTION: 0x10C28740 ?FUN_10c28740@Class_10C28740@@QAEXXZ
-void Class_10C28740::FUN_10c28740()
+// FUNCTION: 0x10C28740 ?ResolveSpineFlex@Class_10C28740@@QAEXXZ
+void Class_10C28740::ResolveSpineFlex()
 {
     cString Spine("M1 Spine1");
     {
         cString SpineFlex("spine_flex2");
-        Unknown28 = FUN_10c28480(Unknown00, &SpineFlex, &Spine);
+        m_SpineFlex = FUN_10c28480(Unknown00, &SpineFlex, &Spine);
     }
-    if (Unknown28)
+    if (m_SpineFlex)
         return;
 }
 

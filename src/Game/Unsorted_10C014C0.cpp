@@ -9,7 +9,7 @@ bool Class_10C00F60::Remove(const int& Key)
 {
     if (!m_NoResize && m_Count < m_BucketCount * 0.05 && m_BucketCount > 64)
         Rehash(m_BucketCount / 2);
-    unsigned int Index = FUN_10c00b40(Key);
+    unsigned int Index = GetBucketIndex(Key);
     for (Class_10C00F60_Node* Node = m_Buckets[Index], *Prev = 0; Node; Prev = Node, Node = Node->Next)
     {
         if (m_KeyCompare.Virtual1(Key, Node->Key) == 0)

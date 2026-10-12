@@ -32,7 +32,7 @@ void Class_10BECF00::FUN_10becf00(int A)
     if (Unknown44 != 0)
     {
         GetAllocator()->Virtual8(0, 0);
-        Class_10C2EA30* Obj = new(0, 0, 0, 0, 0) Class_10C2EA30(FUN_10bc4bf0(), A, this, Unknown44, 0, 0, 0x11, 1);
+        Class_10C2EA30* Obj = new(0, 0, 0, 0, 0) Class_10C2EA30(GetTargetLinkType(), A, this, Unknown44, 0, 0, 0x11, 1);
         GetAllocator()->Virtual9();
         ((Class_10bf7f90*)FUN_10bc4160())->FUN_10bf7f90((int)Obj, 1);
     }

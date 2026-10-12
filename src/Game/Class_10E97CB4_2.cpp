@@ -21,14 +21,14 @@ extern Struct_10AA3520* DAT_10f35dec;
 class Class_10E97CB4
 {
 public:
-    virtual void FUN_10c0e5e0(int Message, int A, Class_10C0E5E0_Param* Param, int B);
+    virtual void HandleMessage(int Message, int A, Class_10C0E5E0_Param* Param, int B);
 
-    cIntArray Unknown04;
+    cIntArray m_ContextVolumes;
     cIntArray Unknown10;
 };
 
-// FUNCTION: 0x10C0E5E0 ?FUN_10c0e5e0@Class_10E97CB4@@UAEXHHPAVClass_10C0E5E0_Param@@H@Z
-void Class_10E97CB4::FUN_10c0e5e0(int Message, int A, Class_10C0E5E0_Param* Param, int B)
+// FUNCTION: 0x10C0E5E0 ?HandleMessage@Class_10E97CB4@@UAEXHHPAVClass_10C0E5E0_Param@@H@Z
+void Class_10E97CB4::HandleMessage(int Message, int A, Class_10C0E5E0_Param* Param, int B)
 {
     if (Message == 0x5a && Param && Param->Unknown08 == 0)
     {
@@ -42,7 +42,7 @@ void Class_10E97CB4::FUN_10c0e5e0(int Message, int A, Class_10C0E5E0_Param* Para
                 {
                     if (Actor->IsA(AAIContextVolume::StaticClass()))
                     {
-                        cIntArray* List = &Unknown04;
+                        cIntArray* List = &m_ContextVolumes;
                         int Index = List->Count;
                         List->SetCount(Index + 1);
                         List->Data[Index] = (int)Actor;

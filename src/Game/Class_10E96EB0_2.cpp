@@ -4,7 +4,7 @@
 #include "Game/Struct_10C05A50.h"
 #include "Game/Struct_10C3D0A0.h"
 
-float FUN_10c05a20(const Struct_10C05A50* A, const Struct_10C05A50* B);
+float Distance2D(const Struct_10C05A50* A, const Struct_10C05A50* B);
 
 struct Struct_10BE91B0_Pos : public Struct_10C05A50
 {
@@ -51,7 +51,7 @@ void Class_10E96EB0::FUN_10be91b0()
     {
         Struct_10BE91B0_Pos Local = Unknown40->Unknown2C;
         Struct_10C3D0A0* Actor = (Struct_10C3D0A0*)Unknown04->Unknown08->FUN_10c7d570();
-        float Dist = FUN_10c05a20(&Local, &Actor->Unknown2C);
+        float Dist = Distance2D(&Local, &Actor->Unknown2C);
         if (!(Dist < Unknown48))
             return;
     }

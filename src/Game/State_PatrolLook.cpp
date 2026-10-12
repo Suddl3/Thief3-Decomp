@@ -49,7 +49,7 @@ void State_PatrolLook::FUN_10bed000()
         if (FUN_10bc4af0())
             return;
         if (Unknown10 == 10)
-            Unknown04->FUN_10bb8d60();
+            Unknown04->Reset();
     }
     if (m_Limit < 1 && GetTimeSeconds() > m_EndTime)
     {

@@ -4,7 +4,7 @@
 #include "Game/Struct_10C05A80.h"
 #include "Game/Struct_10BAA000.h"
 
-float FUN_10c05a80(const Struct_10C05A80* A, const Struct_10C05A80* B);
+float DistanceSquared3D(const Struct_10C05A80* A, const Struct_10C05A80* B);
 
 struct Struct_10AA3520
 {
@@ -24,7 +24,7 @@ float Class_10BAA000::GetDistanceFalloff()
     if (DAT_10f35dec && DAT_10f35dec->Unknown08)
     {
         Struct_10BAA000* Mine = Unknown34;
-        float Dist = FUN_10c05a80(&Mine->Unknown2C, &DAT_10f35dec->Unknown08->Unknown2C);
+        float Dist = DistanceSquared3D(&Mine->Unknown2C, &DAT_10f35dec->Unknown08->Unknown2C);
         if (Dist > 1048576.0f)
             return DAT_10eafbdc;
         return DAT_10e49684 - Dist * 9.536743e-07f;
