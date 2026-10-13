@@ -66,15 +66,10 @@ class Sources:
         self.p, self.classdecl, self.integrate = p, classdecl, integrate
         self.rev = rev
         self.headers: Dict[str, object] = {}
-        for h in sorted(p.include_dir.rglob("*.h")):
+        # With `rev`, as they were then: a copy written before the headers declared every slot counts from
+        # those, and a class of include/Game/ since moved to its real slots is read as it was numbered.
+        for h in headers_of(p, rev):
             text = h.read_text(encoding="utf-8", errors="replace")
-            if rev:
-                # As it was then: a copy written before the headers declared every slot counts from those,
-                # and a class of include/Game/ since moved to its real slots is read as it was numbered.
-                import subprocess
-                r = subprocess.run(["git", "show", f"{rev}:{h.relative_to(p.main).as_posix()}"], cwd=p.main,
-                                   capture_output=True)
-                text = r.stdout.decode("utf-8", errors="replace") if r.returncode == 0 else text
             for item in integrate.items(text):
                 d = parse_class(item)
                 if d is not None:
@@ -204,26 +199,37 @@ def typed(params: str) -> int:
 
 
 FUNCTION_LINE = re.compile(r"^// FUNCTION: (?:0x)?([0-9A-Fa-f]{8})\b", re.M)
-_old_sources: Dict[str, Path] = {}
+_exports: Dict[str, Path] = {}
+
+
+def export_of(p: Project, rev: str) -> Path:
+    """src/ and include/ as they were at a commit, exported once under build/ (one `git archive`: a
+    `git show` per file takes minutes over a few thousand files)."""
+    if rev not in _exports:
+        import io
+        import subprocess
+        import tarfile
+        sha = subprocess.run(["git", "rev-parse", rev], cwd=p.main, capture_output=True, text=True).stdout.strip()
+        root = p.state_dir("adopt") / f"tree-{sha[:12]}"
+        if not (root / "done").is_file():
+            archive = subprocess.run(["git", "archive", sha, p.src_dir.relative_to(p.main).as_posix(),
+                                      p.include_dir.relative_to(p.main).as_posix()], cwd=p.main, capture_output=True).stdout
+            tarfile.open(fileobj=io.BytesIO(archive)).extractall(root)
+            (root / "done").write_text(sha, encoding="utf-8")
+        _exports[rev] = root
+    return _exports[rev]
 
 
 def sources_of(p: Project, rev: Optional[str]) -> List[Path]:
-    """The units: the tree's, or with `rev` the ones of that commit (exported once under build/)."""
+    """The units: the tree's, or with `rev` the ones of that commit."""
     if not rev:
         return sorted(p.src_dir.rglob("*.cpp"))
-    if rev not in _old_sources:
-        import subprocess
-        sha = subprocess.run(["git", "rev-parse", rev], cwd=p.main, capture_output=True, text=True).stdout.strip()
-        root = p.state_dir("adopt") / f"src-{sha[:12]}"
-        if not root.is_dir():
-            root.mkdir(parents=True)
-            archive = subprocess.run(["git", "archive", sha, p.src_dir.relative_to(p.main).as_posix()], cwd=p.main,
-                                     capture_output=True).stdout
-            import io
-            import tarfile
-            tarfile.open(fileobj=io.BytesIO(archive)).extractall(root)
-        _old_sources[rev] = root
-    return sorted(_old_sources[rev].rglob("*.cpp"))
+    return sorted((export_of(p, rev) / p.src_dir.relative_to(p.main)).rglob("*.cpp"))
+
+
+def headers_of(p: Project, rev: Optional[str]) -> List[Path]:
+    root = export_of(p, rev) / p.include_dir.relative_to(p.main) if rev else p.include_dir
+    return sorted(root.rglob("*.h"))
 
 
 class Slot:

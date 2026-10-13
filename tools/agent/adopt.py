@@ -71,13 +71,11 @@ def old_include(p: Project, rev: str) -> Path:
     """include/ as it was at `rev`, for the files the generator writes and Core.h: a unit's own copies were
     numbered and laid out against those."""
     root = p.state_dir("adopt") / "old-include"
-    for h in list(p.include_dir.glob("*/*Classes.h")) + [p.include_dir / "Core" / "Core.h"]:
-        rel = h.relative_to(p.main).as_posix()
-        r = subprocess.run(["git", "show", f"{rev}:{rel}"], cwd=p.main, capture_output=True)
-        if r.returncode == 0:
-            out = root / h.relative_to(p.include_dir)
-            out.parent.mkdir(parents=True, exist_ok=True)
-            out.write_bytes(r.stdout)
+    then = vslots.export_of(p, rev) / p.include_dir.relative_to(p.main)
+    for h in list(then.glob("*/*Classes.h")) + [then / "Core" / "Core.h"]:
+        out = root / h.relative_to(then)
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_bytes(h.read_bytes())
     return root
 
 
@@ -177,6 +175,7 @@ class Adopter:
                     self.game.setdefault(d.name, path)
         self._game_fields: Dict[str, Dict[int, Tuple[str, str]]] = {}
         self._lock = threading.Lock()
+        self._class_locks: Dict[str, threading.Lock] = {}
         # Classes of include/Game/ that add virtual functions to a native class: {class: (file, tokens, final)}.
         self.header_rebased: Dict[str, Tuple[Path, Dict[Tuple[str, str], str], Dict[str, Optional[str]]]] = {}
 
@@ -193,6 +192,14 @@ class Adopter:
         with self._lock:
             if cls in self._game_fields:
                 return self._game_fields[cls]
+            mine = self._class_locks.setdefault(cls, threading.Lock())
+        with mine:  # one measurement of a class at a time: its probe is one file
+            with self._lock:
+                if cls in self._game_fields:
+                    return self._game_fields[cls]
+            return self._measure_fields(cls)
+
+    def _measure_fields(self, cls: str) -> Dict[int, Tuple[str, str]]:
         out: Dict[int, Tuple[str, str]] = {}
         chain = [c for c in self.new.chain(cls, {}) if c in self.new.headers]
         fields = [f for c in chain for f in self.new.headers[c].fields() if "static " not in classdecl.normal(f.text)]
@@ -290,15 +297,78 @@ class Adopter:
         text = text.replace("/*T3_VIRTUALS*/", "\n" + "".join(rows).rstrip("\n") if rows else "", 1)
         return re.sub(r"\n{3,}", "\n\n", text), tokens, final, ""
 
+    def absorb_methods(self, units: List[str], write: bool) -> List[str]:
+        """Declare in each class's header the member functions the units' copies declare and it lacks: a
+        declaration more changes no other unit's code, and without it the copy cannot go. A method the
+        header has under the same name with as many parameters is left alone (one of the two guessed its
+        types: that is for a reader to settle)."""
+        wanted: Dict[str, Dict[str, str]] = collections.defaultdict(dict)
+        for source in units:
+            path = self.p.src_dir / source
+            unit = Unit(source, path.read_text(encoding="utf-8", errors="replace"))
+            for cls, (_, decl) in unit.classes.items():
+                head = self.new.headers.get(cls)
+                if cls not in self.game or head is None or (self.only is not None and cls not in self.only):
+                    continue
+                have = {m.key for m in head.members}
+                same = {(m.name, arity(m.key)) for m in head.members if m.kind in ("method", "virtual", "ctor")}
+                for m in decl.members:
+                    if m.kind not in ("method", "ctor") or m.key in have or (m.name, arity(m.key)) in same:
+                        continue
+                    if classdecl.normal(m.text).startswith(("virtual ", "friend ", "DECLARE_")):
+                        continue
+                    m = classdecl.declaration_only(m) if m.body else m
+                    wanted[cls].setdefault(m.key, "    " + " ".join(classdecl.normal(m.text).split()) + "\n")
+        notes = []
+        for cls, members in sorted(wanted.items()):
+            path = self.game[cls]
+            text = path.read_text(encoding="utf-8", errors="replace")
+            head = self.new.headers[cls]
+            last = None
+            for m in head.members:
+                if m.kind in ("method", "virtual", "ctor", "dtor") and m.text in text:
+                    last = m
+            if last is None:
+                continue
+            anchor = last.text if last.text.endswith("\n") else last.text + "\n"
+            if anchor not in text:
+                continue
+            if write:
+                added = "".join(members[k] for k in sorted(members))
+                grown = text.replace(anchor, anchor + added, 1)
+                # The game's classes the new declarations name are declared ahead of the class.
+                words = set(re.findall(r"[A-Za-z_]\w*", added))
+                forward = "".join(f"{self.new.headers[w].kind} {w};\n" for w in sorted(words)
+                                  if w in self.game and w != cls and not re.search(rf"\b{w}\b", text))
+                at = grown.find(head.text.lstrip("\n")[:40])
+                if forward and at > 0:
+                    grown = grown[:at] + forward + "\n" + grown[at:]
+                probe = self.work / "headers" / f"alone_{cls}.cpp"
+                probe.parent.mkdir(parents=True, exist_ok=True)
+                probe.write_text(f'#include "Game/{path.name}"\n', encoding="utf-8")
+                ok = False
+                for candidate in (grown, re.sub(r"(#define \w+_H\n)", r'\1\n#include "Core/Core.h"\n', grown, count=1)):
+                    atomic_write(path, candidate)
+                    ok, _ = self.p.compile(probe, probe.with_suffix(".obj"), list(self.p.configure.CFLAGS))
+                    if ok:
+                        break
+                if not ok:  # a parameter of a type the header cannot name: the copy stays
+                    atomic_write(path, text)
+                    continue
+            notes.append(f"{path.name}: {len(members)} member functions declared")
+        if notes and write:
+            self.new = vslots.Sources(self.p)
+            self._slot_names = {}
+        return notes
+
     def prepare_headers(self, write: bool) -> List[str]:
         """Re-base the classes of include/Game/ that need it: the header in the tree as it will be, and
         beside the old package headers a copy whose members are tokens, for finding their uses."""
         notes = []
         for path in sorted((self.p.include_dir / "Game").glob("*.h")):
             now = path.read_text(encoding="utf-8", errors="replace")
-            r = subprocess.run(["git", "show", f"{self.rev}:{path.relative_to(self.p.main).as_posix()}"], cwd=self.p.main,
-                               capture_output=True)
-            text = r.stdout.decode("utf-8", errors="replace").replace("\r\n", "\n") if r.returncode == 0 else now
+            then = vslots.export_of(self.p, self.rev) / path.relative_to(self.p.main)
+            text = then.read_text(encoding="utf-8", errors="replace").replace("\r\n", "\n") if then.is_file() else now
             for item in integrate.items(text):
                 d = vslots.parse_class(item)
                 grown = self.grown(d.name, {}) if d is not None else None
@@ -826,8 +896,15 @@ def main() -> None:
         sys.exit(1 if bad else 0)
     for note in ad.prepare_headers(not args.dry_run):
         print(note)
+    grown = ad.absorb_methods(units, not args.dry_run) if not args.native else []
+    print(f"{len(grown)} headers took member functions from the units' copies")
+    def safely(source: str) -> dict:
+        try:
+            return ad.convert(source)
+        except Exception as e:  # one unit's surprise does not cost the run
+            return {"unit": source, "status": "failed", "why": f"{type(e).__name__}: {e}"[:300]}
     with ThreadPoolExecutor(args.jobs) as pool:
-        results = list(pool.map(ad.convert, units))
+        results = list(pool.map(safely, units))
     moved = [r for r in results if r["status"] == "moved"]
     failed = [r for r in results if r["status"] == "failed"]
     renames: Dict[str, str] = {}
