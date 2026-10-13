@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_10E959B0_MEMBER_H
 #define GAME_CLASS_10E959B0_MEMBER_H
 
-#include "Game/Class_10BFC2B0.h"
+#include "Game/Class_10BFBC90.h"
 
 class Class_10C7D570;
 class Class_10bf7f90;
@@ -15,8 +15,7 @@ public:
     Class_10C7D570* Unknown08;
     Class_10bf7f90* Unknown0C;
     char Unknown10[0x20];
-    Class_10BFC2B0 Unknown30;
-    char Pad31[0x4f];
+    Class_10BFBC90 Unknown30; // time stamp: StampTime() sets m_TimeStamp
 };
 
 #endif // GAME_CLASS_10E959B0_MEMBER_H

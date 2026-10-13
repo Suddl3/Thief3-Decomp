@@ -9,7 +9,8 @@ public:
     Class_10B3A460* GetEntry(int A);
 
     char Unknown00;
-    char Pad01[0x3];
+    char Pad01[0x1];
+    char Pad02[0x2];
     float Unknown04;
     char Pad08[0x4];
     char Unknown0C[0x10];

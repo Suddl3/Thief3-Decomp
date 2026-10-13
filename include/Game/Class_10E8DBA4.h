@@ -4,10 +4,10 @@
 #define GAME_CLASS_10E8DBA4_H
 
 #include "Game/Class_10BAFBF0.h"
+#include "Game/Class_1090A780.h"
+#include "Game/Struct_10BAFBF0.h"
 
-class Class_1090A780;
 class Class_10A68D20;
-struct Struct_10BAFBF0;
 
 class Class_10E8DBA4 : public Class_10BAFBF0
 {
@@ -16,10 +16,9 @@ public:
 
     Class_10E8DBA4(const Struct_10BAFBF0& A, const int& B, const Class_1090A780& C);
 
-    int Unknown08;
-    char Pad0C[0x8];
+    Struct_10BAFBF0 Unknown08;
     int Unknown14;
-    const char* m_Name;
+    Class_1090A780 m_Name;
 };
 
 #endif // GAME_CLASS_10E8DBA4_H

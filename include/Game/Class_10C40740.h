@@ -3,8 +3,7 @@
 #ifndef GAME_CLASS_10C40740_H
 #define GAME_CLASS_10C40740_H
 
-class Class_10C40740_Member;
-
+// The key of a hash node (Class_10A34C10_Node): 0x10 bytes, the node's value follows it at 0x10.
 class Class_10C40740
 {
 public:
@@ -13,7 +12,6 @@ public:
     void FUN_10c40740();
 
     char Unknown00[0x10];
-    Class_10C40740_Member* Unknown10;
 };
 
 #endif // GAME_CLASS_10C40740_H

@@ -2,21 +2,26 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Game/cString.h"
+#include "Game/Class_10A905A0.h"
 #include "Game/Class_10A8D160.h"
 #include "Game/Class_10A8D310.h"
 #include "Game/Class_10A8D320.h"
 #include "Game/Class_10E6CA40.h"
 #include "Game/Class_10E6CBEC.h"
 #include "Game/Class_10E6CBF8.h"
+#include "Game/Class_10E6CC64.h"
 #include "Game/Class_10E6CC70.h"
 #include "Game/Class_10E6CC98.h"
+#include "Game/Class_10E6CCA4.h"
 #include "Game/Class_10E6CCB0.h"
+#include "Game/Class_10E6CCD8.h"
 #include "Game/Class_10E6CD40.h"
 #include "Game/Class_10E6CDC4.h"
 #include "Game/Class_10E6CDD0.h"
 #include "Game/Class_10E6CDDC.h"
 #include "Game/Class_10E6CDE8.h"
 #include "Game/Class_10E6CDF4.h"
+#include "Game/Class_10E6CE1C.h"
 #include "Game/Class_10E6CE94.h"
 #include "Game/Class_10E6CEC4.h"
 #include "Game/Class_10E6CED0.h"
@@ -48,13 +53,6 @@ extern const char DAT_10e6c100[];
 
 extern void* DAT_10e50610;
 
-class Class_10A905A0
-{
-public:
-    void* Field0;
-    void FUN_10a905a0();
-};
-
 extern void* DAT_10e6ca40[];
 
 void FUN_10d4e100();
@@ -65,33 +63,15 @@ extern void* DAT_10e6cbf8;
 
 extern void* DAT_10e6cc64;
 
-class Class_10E6CC64 {
-public:
-    void* Field00;
-    Class_10E6CC64* Construct();
-};
-
 extern void* DAT_10e6cc70;
 
 extern void* DAT_10e6cc98[];
 
 extern void* DAT_10e6cca4[];
 
-class Class_10E6CCA4 {
-public:
-    void* Field00;
-    Class_10E6CCA4* Construct();
-};
-
 extern void* DAT_10e6ccb0[];
 
 extern void* DAT_10e6ccd8[];
-
-class Class_10E6CCD8 {
-public:
-    void* Field00;
-    Class_10E6CCD8* Construct();
-};
 
 extern void* DAT_10e6cd40[];
 
@@ -106,12 +86,6 @@ extern void* DAT_10e6cde8[];
 extern void* DAT_10e6cdf4[];
 
 extern void* DAT_10e6ce1c[];
-
-class Class_10E6CE1C {
-public:
-    void* Field00;
-    Class_10E6CE1C* Construct();
-};
 
 extern void* DAT_10e6ce94[];
 
@@ -194,7 +168,7 @@ int __cdecl FUN_10a8d930()
 // FUNCTION: 0x10A905A0 ?FUN_10a905a0@Class_10A905A0@@QAEXXZ
 void Class_10A905A0::FUN_10a905a0()
 {
-    Field0 = (void*)&DAT_10e50610;
+    *(void**)this = (void*)&DAT_10e50610;
 }
 
 // FUNCTION: 0x10A90DB0 ?FUN_10a90db0@@YAHXZ
@@ -245,7 +219,7 @@ Class_10E6CBF8* Class_10E6CBF8::Construct()
 // FUNCTION: 0x10A93350 ?Construct@Class_10E6CC64@@QAEPAV1@XZ
 Class_10E6CC64* Class_10E6CC64::Construct()
 {
-    Field00 = &DAT_10e6cc64;
+    *(void**)this = &DAT_10e6cc64;
     return this;
 }
 
@@ -296,7 +270,7 @@ unsigned int FUN_10a93cf0()
 // FUNCTION: 0x10A93D40 ?Construct@Class_10E6CCA4@@QAEPAV1@XZ
 Class_10E6CCA4* Class_10E6CCA4::Construct()
 {
-    Field00 = DAT_10e6cca4;
+    *(void***)this = DAT_10e6cca4;
     return this;
 }
 
@@ -322,7 +296,7 @@ unsigned int FUN_10a93dc0()
 // FUNCTION: 0x10A93E30 ?Construct@Class_10E6CCD8@@QAEPAV1@XZ
 Class_10E6CCD8* Class_10E6CCD8::Construct()
 {
-    Field00 = DAT_10e6ccd8;
+    *(void**)this = DAT_10e6ccd8;
     return this;
 }
 
@@ -395,7 +369,7 @@ int __cdecl FUN_10a94ca0()
 // FUNCTION: 0x10A95040 ?Construct@Class_10E6CE1C@@QAEPAV1@XZ
 Class_10E6CE1C* Class_10E6CE1C::Construct()
 {
-    Field00 = DAT_10e6ce1c;
+    *(void**)this = DAT_10e6ce1c;
     return this;
 }
 

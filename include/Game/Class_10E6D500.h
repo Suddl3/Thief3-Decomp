@@ -4,17 +4,20 @@
 #define GAME_CLASS_10E6D500_H
 
 #include <string>
+#include <vector>
+#include "Game/Class_10E6D4F0.h"
 
-class Class_10E6D500
+class Class_10E6D500 : public Class_10E6D4F0
 {
 public:
-    virtual void Virtual0();
+    // Slot 0 is the deleting destructor; Virtual<N> is slot N. Slot 4 has no declaration yet.
+    virtual ~Class_10E6D500();
     virtual void Virtual1();
     virtual void Virtual2();
     virtual std::string GetSuiteLabel();
     void FUN_10c93f30();
 
-    char Unknown04[0x10];
+    std::vector<int> Unknown04;
     std::string m_Name;
 };
 

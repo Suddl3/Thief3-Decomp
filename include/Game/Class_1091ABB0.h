@@ -3,12 +3,14 @@
 #ifndef GAME_CLASS_1091ABB0_H
 #define GAME_CLASS_1091ABB0_H
 
-class cString;
+#include "Game/cString.h"
 
 class Class_1091ABB0
 {
 public:
     cString FUN_1091abb0();
+
+    cString Unknown00;
 };
 
 #endif // GAME_CLASS_1091ABB0_H

@@ -2,6 +2,8 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Core/Core.h"
 #include "Game/Struct_10B82770_Param.h"
+#include "Game/Class_10B83DC0.h"
+#include "Game/Class_10B83E50.h"
 
 struct __declspec(align(16)) Struct_10B7C800
 {
@@ -11,25 +13,6 @@ struct __declspec(align(16)) Struct_10B7C800
 };
 
 Struct_10B7C800 FUN_10b7c800(const FVector& V);
-
-class Class_10943600;
-
-class Class_10B83DC0
-{
-public:
-    int FUN_10b83dc0(Class_10943600* Out);
-    void FUN_10b82770(Struct_10B82770_Param* P);
-};
-
-class Class_10B83E50 : public Class_10B83DC0
-{
-public:
-    char Unknown00[0xAC];
-    FVector Unknown0AC;
-    float m_Scale;
-    char Unknown0BC[4];
-    int m_Axis;
-};
 
 class Class_10B83820
 {
@@ -46,7 +29,7 @@ int FUN_10dae490(float A, float B, float C, float D, int E, int F, Class_10B8382
 int FUN_10b83b60(Class_10B83E50* Self, Class_10B83820* Out)
 {
     Struct_10B82770_Param P;
-    Self->FUN_10b82770(&P);
+    ((Class_10B83DC0*)Self)->FUN_10b82770(&P);
     float Scale = DAT_11006e30 * Self->m_Scale;
     Out->m_Count = 0;
     Struct_10B7C800 L = FUN_10b7c800(Self->Unknown0AC);

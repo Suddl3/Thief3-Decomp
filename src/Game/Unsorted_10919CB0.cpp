@@ -52,9 +52,9 @@ void Class_1091C820::Free()
 void Class_1091CC80::Free()
 {
     FUN_1091c850(0x40);
-    ::operator delete(Unknown14);
-    Unknown04 = 0;
-    Unknown0C = 0;
-    Unknown14 = 0;
-    Unknown00 = 0;
+    ::operator delete(Table);
+    Count = 0;
+    Size = 0;
+    Table = 0;
+    Collisions = 0;
 }

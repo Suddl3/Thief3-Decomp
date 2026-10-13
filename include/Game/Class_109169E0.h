@@ -3,6 +3,8 @@
 #ifndef GAME_CLASS_109169E0_H
 #define GAME_CLASS_109169E0_H
 
+#include "Game/Class_10C49740.h"
+
 class Class_1090A780;
 
 class Class_109169E0
@@ -13,6 +15,8 @@ public:
     void FUN_10916c00();
 
     char Pad00[0x1];
+    char Pad01[0x7];
+    Class_10C49740 Unknown08;
 };
 
 #endif // GAME_CLASS_109169E0_H

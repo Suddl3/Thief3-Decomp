@@ -3,6 +3,7 @@
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10B111A0_Unknown0C.h"
 #include "Game/Class_10B111A0_Unknown10.h"
+#include "Game/Class_10E782A0.h"
 #include "Game/Struct_10B111A0_Node.h"
 
 Class_10905A90_Member* GetAllocator();
@@ -22,22 +23,6 @@ public:
 
 class Class_10B111A0_Unknown10;
 
-class Class_10E782A0
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual bool RemoveKey(int A);
-    virtual void FUN_10b11bd0(int Key, int Index, int Tag, int Arg);
-
-    int FUN_10b113a0(int Index, Struct_10B111A0_Node* Node);
-    void FUN_10b11b00(int A, int B, int C, int D);
-
-    int Unknown04;
-    int Unknown08;
-    Class_10B111A0_Unknown0C** Unknown0C;
-};
-
 // FUNCTION: 0x10B117C0 ?FUN_10b117c0@@YAPAVClass_10B116F0@@XZ
 Class_10B116F0* FUN_10b117c0()
 {
@@ -51,7 +36,7 @@ Class_10B116F0* FUN_10b117c0()
 void Class_10E782A0::FUN_10b11bd0(int Key, int Index, int Tag, int Arg)
 {
     bool Done = false;
-    Class_10B111A0_Unknown0C* Bucket = Unknown0C[Index];
+    Class_10B111A0_Unknown0C* Bucket = m_Buckets[Index];
     if (Bucket)
     {
         Struct_10B111A0_Node* Node = Bucket->Head;

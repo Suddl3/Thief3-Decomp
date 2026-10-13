@@ -3,6 +3,7 @@
 
 #include "Game/Class_10C54970.h"
 #include "Game/Class_10C562C0.h"
+#include "Game/Class_10C64030_Member.h"
 #include "Game/Class_10C647F0.h"
 #include "Game/Struct_10C647F0_Vec.h"
 #include "Game/cRefPtr.h"
@@ -19,26 +20,6 @@ public:
 };
 
 float FUN_10d4e270(const Struct_10C647F0_Vec& V);
-
-class Class_10C64030_Member
-{
-public:
-    virtual ~Class_10C64030_Member();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8();
-    virtual void Virtual9();
-    virtual void Virtual10();
-    virtual void Virtual11();
-    virtual void Virtual12();
-    virtual void Virtual13();
-    virtual Class_10C64030_Member* Virtual14();
-};
 
 class Class_10EB7660
 {

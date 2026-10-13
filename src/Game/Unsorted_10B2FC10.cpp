@@ -3,6 +3,7 @@
 #include "Core/Core.h"
 #include "Game/cString.h"
 #include "Game/Class_10A242D0.h"
+#include "Game/Class_10A24370.h"
 #include "Game/Class_10AF7F80.h"
 #include "Game/Class_10B2FCE0.h"
 #include "Game/cT3ReadBookWindow.h"
@@ -125,16 +126,6 @@ public:
 };
 
 extern float DAT_10eafbdc;
-
-// Game/Class_10A24370.h copied whole; only the parameter of FUN_10a24370 differs.
-class Class_10A24370
-{
-public:
-    void FUN_10a24370(char p1);
-
-    char Unknown00[0x70];
-    char Unknown70;
-};
 
 class Class_10B2FCE0_Unknown14C
 {

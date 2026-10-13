@@ -5,13 +5,23 @@
 
 #include "Game/Class_10E6DC88.h"
 
+extern void* DAT_10e6d07c[];
+extern void* DAT_10e70820[];
+
 class Class_10E6D07C : public Class_10E6DC88
 {
 public:
+    virtual int Virtual0(int A, int B, int C, int* D);
     virtual void Virtual1();
     virtual void SendEvent();
 
-    Class_10E6D07C();
+    Class_10E6D07C()
+        : Class_10E6DC88(0x63)
+    {
+        // The primary table and the second base's table (at +0xC) are set by hand.
+        *(void***)this = DAT_10e6d07c;
+        *(void***)((char*)this + 0xC) = DAT_10e70820;
+    }
 };
 
 #endif // GAME_CLASS_10E6D07C_H

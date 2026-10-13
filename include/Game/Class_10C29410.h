@@ -21,7 +21,7 @@ public:
     bool Unknown1C;
     bool Unknown1D;
     char Pad1E[0x2];
-    int Unknown20;
+    float Unknown20;
 };
 
 #endif // GAME_CLASS_10C29410_H

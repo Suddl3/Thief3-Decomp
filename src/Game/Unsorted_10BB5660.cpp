@@ -2,19 +2,8 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Game/Class_10BB67F0.h"
+#include "Game/Class_10E9092C.h"
 #include "Game/Struct_10AA3520.h"
-
-class Class_10E9092C
-{
-public:
-    Class_10E9092C(void* p1);
-
-    virtual void Virtual0();
-
-    int Unknown04;
-    int Unknown08;
-    void* Unknown0C;
-};
 
 class Class_10BB48E0;
 
@@ -37,5 +26,5 @@ Class_10E9092C::Class_10E9092C(void* p1)
 {
     Unknown04 = 0;
     Unknown08 = 0;
-    Unknown0C = p1;
+    Unknown0C = (Class_10C7D570*)p1;
 }

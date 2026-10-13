@@ -3,13 +3,17 @@
 #ifndef GAME_CLASS_10BB8140_H
 #define GAME_CLASS_10BB8140_H
 
+class Class_10C7D570;
+
 class Class_10BB8140
 {
 public:
     void FUN_10bb8140(int param);
     void FUN_10bb8140(float A);
 
-    char Unknown00[0x2ac];
+    char Unknown00[8];
+    Class_10C7D570* Unknown08;
+    char Unknown0C[0x2a0];
     int Unknown2ac;
 };
 

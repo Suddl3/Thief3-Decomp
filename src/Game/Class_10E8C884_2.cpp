@@ -5,6 +5,7 @@
 #include "Game/Class_10E74F70.h"
 #include "Game/Struct_10BB0B90.h"
 #include "Game/Class_10BB1020_B.h"
+#include "Game/Class_10E8C884.h"
 
 class Class_10B47720;
 
@@ -38,16 +39,6 @@ public:
     Class_10B47720* Unknown0C;
     char Pad10[0x20];
     cMemoryStream Unknown30;
-};
-
-class Class_10E8C884
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual int FUN_10bb1240(int A, Class_10BB1020_B* B, int C);
-
-    Class_10E8C884* FUN_10ba4c80();
 };
 
 Struct_10BB0B90* FUN_10bb0b90(int A);

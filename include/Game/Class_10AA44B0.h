@@ -8,6 +8,13 @@ class Class_10AA44B0_Node;
 class Class_10E97B00;
 class cString;
 
+// The table's key hasher: slot 0 gives the bytes HashBytes hashes.
+class Class_10AA44B0_Field18
+{
+public:
+    virtual void Virtual0(const int& Key, const void** Data, int* Length);
+};
+
 class Class_10AA44B0
 {
 public:
@@ -24,6 +31,7 @@ public:
     bool m_FixedSize;
     char Pad11[0x3];
     Class_10AA44B0_Node** m_Buckets;
+    Class_10AA44B0_Field18 m_KeyAdapter;
 };
 
 #endif // GAME_CLASS_10AA44B0_H

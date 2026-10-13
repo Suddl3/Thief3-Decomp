@@ -3,21 +3,12 @@
 #include "Game/Class_10C7D570.h"
 #include "Game/Struct_10C22CE0.h"
 #include "Game/Class_10C22CE0.h"
+#include "Game/Class_10943600.h"
 
 struct Struct_10C7D570
 {
     char Unknown00[0x2C];
     Struct_10C22CE0 Unknown2C;
-};
-
-class Class_10943600
-{
-public:
-    void FUN_10da4f50(int A);
-
-    int Unknown00;
-    int Unknown04;
-    Struct_10C22CE0* Unknown08;
 };
 
 // FUNCTION: 0x10C22CE0 ?FUN_10c22ce0@Class_10C22CE0@@QAE_NPAVClass_10943600@@HHH@Z
@@ -30,7 +21,7 @@ bool Class_10C22CE0::FUN_10c22ce0(Class_10943600* A, int B, int C, int D)
     {
         A->Unknown00 = 0;
         A->FUN_10da4f50(1);
-        *A->Unknown08 = Unknown4C;
+        *(Struct_10C22CE0*)A->Unknown08 = Unknown4C;
         return false;
     }
     return true;

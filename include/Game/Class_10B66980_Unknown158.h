@@ -6,7 +6,22 @@
 class Class_10B66980_Unknown158
 {
 public:
-    char Unknown00[0x2C];
+    int Unknown00;
+    int Unknown04;
+    int Unknown08;
+    int Unknown0C;
+    int Unknown10;
+    int Unknown14;
+    unsigned int Unknown18Bits0To0 : 1;
+    unsigned int Unknown18Bits1To1 : 1;
+    unsigned int Unknown18Bits2To31 : 30;
+    int Unknown1C;
+    int Unknown20;
+    char Unknown24;
+    char Unknown25;
+    char Unknown26;
+    char Unknown27;
+    int Unknown28;
 };
 
 #endif // GAME_CLASS_10B66980_UNKNOWN158_H

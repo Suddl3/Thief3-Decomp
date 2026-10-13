@@ -10,6 +10,8 @@ class Class_10A250D0_Field18
 {
 public:
     virtual void Virtual0(const cString& Key, const void** Data, int* Length);
+    // Slot 1: compares a key with a stored node's key; 0 when they match.
+    virtual int Virtual1(const cString& Key, const cString& Other);
 };
 
 #endif // GAME_CLASS_10A250D0_FIELD18_H

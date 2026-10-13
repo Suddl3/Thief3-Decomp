@@ -8,6 +8,7 @@
 #include "Game/Class_10E7AD44.h"
 #include "Game/Class_10E7B89C.h"
 #include "Game/cT3ReadBookWindow.h"
+#include "Game/Class_10E7C3A4.h"
 #include "Game/Class_10E7C380.h"
 #include "Game/Class_10E7C38C.h"
 #include "Game/Class_10E7C3B0.h"
@@ -21,15 +22,9 @@
 
 extern void* DAT_10e7c3a4[];
 
-class Class_10E7C3A4 {
-public:
-    void* Field00;
-    Class_10E7C3A4* Construct();
-};
-
 // FUNCTION: 0x10B362D0 ?Construct@Class_10E7C3A4@@QAEPAV1@XZ
 Class_10E7C3A4* Class_10E7C3A4::Construct()
 {
-    Field00 = DAT_10e7c3a4;
+    *(void**)this = DAT_10e7c3a4; // the vptr at offset 0
     return this;
 }

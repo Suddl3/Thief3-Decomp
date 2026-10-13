@@ -3,18 +3,32 @@
 #ifndef GAME_CLASS_10E888E4_H
 #define GAME_CLASS_10E888E4_H
 
+#include "Core/Core.h"
+
+// The vptr at +0x00 is the class's own vtable (set by Init).
 class Class_10E888E4
 {
 public:
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual void Virtual2();
+    virtual void Virtual3();
+    virtual void Virtual4();
+    virtual void FUN_10b7a320(int A);
+
     Class_10E888E4* Init();
     void FUN_10b79340(int A);
 
-    void** Unknown00;        // +0x00: DAT_10e888e4
     float Unknown04;
     int Unknown08;
-    void** Unknown0C;        // +0x0c: DAT_10e68f94
-    char Unknown10[0x3C];
+    void** Unknown0C;        // +0x0c: embedded object; its vptr is DAT_10e68f94
+    FVector Unknown10;
+    char Unknown1C[0x24];
+    bool Unknown40;
+    char Unknown41[0x0B];
     float Unknown4C;
+    char Unknown50[0x2C];
+    float Unknown7C;
 };
 
 #endif // GAME_CLASS_10E888E4_H

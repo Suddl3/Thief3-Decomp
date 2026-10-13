@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Game/cString.h"
+#include "Game/Class_10AA44B0.h"
 
 // Ion Storm's placement new and its delete (0x10905C10; the delete folded into ::operator delete).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
@@ -17,31 +18,6 @@ public:
     int Key;
     cString Value;
     Class_10AA44B0_Node* Next;
-};
-
-// The table's key hasher: slot 0 gives the bytes HashBytes hashes.
-class Class_10AA44B0_Field18
-{
-public:
-    virtual void Virtual0(const int& Key, const void** Data, int* Length);
-};
-
-class Class_10AA44B0
-{
-public:
-    void Clear(int A);
-    void Free();
-    void Rehash(int Size);
-    unsigned int Insert(const int& Key, const cString& Value);
-
-    int m_Collisions;
-    int m_Count;
-    int m_BucketBits;
-    int m_BucketCount;
-    bool m_FixedSize;
-    char Pad11[0x3];
-    Class_10AA44B0_Node** m_Buckets;
-    Class_10AA44B0_Field18 m_KeyAdapter;
 };
 
 // FUNCTION: 0x10AA35D0 ?Insert@Class_10AA44B0@@QAEIABHABVcString@@@Z

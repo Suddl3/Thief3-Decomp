@@ -3,6 +3,8 @@
 #ifndef GAME_CLASS_10B42340_H
 #define GAME_CLASS_10B42340_H
 
+struct Struct_10B42300;
+
 class Class_10B42340
 {
 public:
@@ -14,7 +16,7 @@ public:
     int Unknown04;
     int m_Count;
     int Unknown0C;
-    int m_Entries;
+    Struct_10B42300** m_Entries;
     float Unknown14;
 };
 

@@ -3,6 +3,8 @@
 #ifndef GAME_CLASS_10A34CD0_H
 #define GAME_CLASS_10A34CD0_H
 
+class Class_10A34C10_Node;
+
 class Class_10A34CD0
 {
 public:
@@ -13,8 +15,9 @@ public:
     int Unknown04;
     char Unknown08[4];
     int m_BucketCount;
-    char Unknown10[4];
-    void* m_Buckets;
+    bool m_FixedSize;
+    char Pad11[0x3];
+    Class_10A34C10_Node** m_Buckets;
 };
 
 #endif // GAME_CLASS_10A34CD0_H

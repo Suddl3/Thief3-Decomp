@@ -3,12 +3,14 @@
 #ifndef GAME_CLASS_10B9B8D0_H
 #define GAME_CLASS_10B9B8D0_H
 
+class Class_10B9B8D0_Unknown00;
+
 class Class_10B9B8D0
 {
 public:
     Class_10B9B8D0();
 
-    int Unknown00;
+    Class_10B9B8D0_Unknown00* Unknown00; // Allocated by the constructor.
 };
 
 #endif // GAME_CLASS_10B9B8D0_H

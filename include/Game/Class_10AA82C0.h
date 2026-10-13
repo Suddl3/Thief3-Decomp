@@ -5,7 +5,10 @@
 
 class Class_10AA82C0 {
 public:
-    char Unknown00[0x8];
+    virtual void Virtual0();
+    virtual int Virtual1();
+
+    char Unknown04[0x4];
     void* Unknown8;
     void* FUN_10aa82c0();
 };

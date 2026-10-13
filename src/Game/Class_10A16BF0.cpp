@@ -1,6 +1,8 @@
 // Game/Class_10A16BF0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
+#include "Game/Class_10A16BF0.h"
+
 class Struct_10A16B60;
 
 class Class_10A16BF0_Node;
@@ -19,12 +21,6 @@ public:
     Class_10A16BF0_Node** Unknown14;
 };
 
-class Class_10A16BF0 : public Class_10A163F0
-{
-public:
-    void FUN_10a165c0(int A);
-};
-
 class Class_10A16BF0_Node
 {
 public:
@@ -37,7 +33,7 @@ void Class_10A16BF0::FUN_10a165c0(int A)
 {
     for (int i = 0; i < Unknown0C; i++)
     {
-        Class_10A16BF0_Node* Node = Unknown14[i];
+        Class_10A16BF0_Node* Node = ((Class_10A16BF0_Node**)Unknown14)[i];
         while (Node)
         {
             Class_10A16BF0_Node* Next = Node->Next;
@@ -50,6 +46,6 @@ void Class_10A16BF0::FUN_10a165c0(int A)
     Unknown00 = 0;
     ::operator delete(Unknown14);
     Unknown14 = 0;
-    if (!Unknown10)
-        Rehash(A);
+    if (!Unknown10[0])
+        ((Class_10A163F0*)this)->Rehash(A);
 }

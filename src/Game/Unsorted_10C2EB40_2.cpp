@@ -3,20 +3,7 @@
 #include "Game/cPositionList.h"
 #include "Game/Struct_10C2EB70.h"
 #include "Game/Class_10C2EB70.h"
-
-class Class_10C270D0
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-
-    void Reset();
-
-    char Unknown04[0x44];
-    cPositionList* Unknown48;
-};
+#include "Game/Class_10C270D0.h"
 
 class MC_MoveToPoint : public Class_10C270D0
 {

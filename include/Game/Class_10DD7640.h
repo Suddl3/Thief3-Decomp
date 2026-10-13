@@ -7,7 +7,7 @@ class Class_10DD7640
 {
 public:
     virtual void Virtual0();
-    virtual void Virtual1();
+    virtual bool Virtual1(int A);
     virtual void Virtual2(int A);
     virtual bool Virtual3(int A);
 };

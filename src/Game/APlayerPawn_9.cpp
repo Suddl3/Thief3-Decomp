@@ -2,15 +2,8 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Core/Core.h"
+#include "Game/Class_10AF8020.h"
 #include "Game/Class_10B19940.h"
-
-// The FString-like class whose method the game calls on a note's text.
-class Class_10AF8020 : public FString
-{
-public:
-    bool FUN_10af8020(int A);
-    using FString::operator=;
-};
 
 // FsNote from Engine/EngineClasses.h: the members the code above touches, with the
 // string members built as FString (the game's constructor calls).
@@ -18,7 +11,7 @@ struct FsNote
 {
     FName NoteName;                 // 0x0
     FString FriendlyName;           // 0x4
-    Class_10AF8020 NoteText;        // 0x10
+    FString NoteText;               // 0x10 (a Class_10AF8020 element's first 0xC bytes)
     INT Expiration;                 // 0x1C
 };
 
@@ -148,7 +141,7 @@ void APlayerPawn::AddNote(const FName& NoteName, const FString& NoteText, const 
 {
     for (INT i = 0; i < PlayerNotes.Unknown04; i++)
     {
-        if (((FsNote*)PlayerNotes.m_Items)[i].NoteText.FUN_10af8020((int)&NoteText))
+        if (((Class_10AF8020*)&((FsNote*)PlayerNotes.m_Items)[i].NoteText)->FUN_10af8020((int)&NoteText))
         {
             return;
         }

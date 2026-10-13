@@ -5,6 +5,20 @@
 
 #include "Game/Class_10ABFB00_Member.h"
 
+class Class_10ABFA30_Unknown14
+{
+public:
+    virtual void Virtual0();
+    virtual bool Virtual1();
+    virtual void Virtual2();
+    virtual float Virtual3();
+    virtual void Virtual4();
+    virtual void Virtual5(float A);
+
+    float Unknown04;
+    float Unknown08;
+};
+
 class Class_10ABFB00
 {
 public:
@@ -17,7 +31,8 @@ public:
     bool m_State;
     char Unknown01[0xB];
     float m_Level;
-    char Unknown10[0x10];
+    char Unknown10[0x4];
+    Class_10ABFA30_Unknown14 Unknown14;
     Class_10ABFB00_Member m_Interpolator;
 };
 

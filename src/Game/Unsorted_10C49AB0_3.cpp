@@ -4,15 +4,9 @@
 #include "Game/cString.h"
 #include "Game/Class_10C49100_Node.h"
 
-unsigned int HashBytes(const void* Data, int Length);
+#include "Game/Class_10C49100_Field18.h"
 
-// The table's key hasher: slot 0 gives the bytes HashBytes hashes, slot 1 compares a key with an entry's key (0 when they are equal).
-class Class_10C49100_Field18
-{
-public:
-    virtual void Virtual0(const cString& Key, const void** Data, int* Length);
-    virtual int Virtual1(const cString& Key, const cString& Other);
-};
+unsigned int HashBytes(const void* Data, int Length);
 
 class Class_10C49100
 {

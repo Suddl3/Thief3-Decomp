@@ -6,7 +6,7 @@
 class Class_10C64030_Member
 {
 public:
-    virtual void Virtual0();
+    virtual ~Class_10C64030_Member();
     virtual void Virtual1();
     virtual void Virtual2();
     virtual void Virtual3();

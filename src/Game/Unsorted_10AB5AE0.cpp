@@ -62,7 +62,7 @@ void cHighlightMgr::FUN_10abb8f0()
 // FUNCTION: 0x10ABB9D0 ?FUN_10abb9d0@Class_10E6F4B4@@QAEXXZ
 void Class_10E6F4B4::FUN_10abb9d0()
 {
-    Field00 = (void*)DAT_10e6f4b4;
+    *(void**)this = DAT_10e6f4b4;
     FUN_10abb760();
 }
 

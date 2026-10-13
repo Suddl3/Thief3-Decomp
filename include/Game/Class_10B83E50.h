@@ -4,11 +4,12 @@
 #define GAME_CLASS_10B83E50_H
 
 #include "Core/Core.h"
-#include "Game/Class_10B83DC0.h"
 
 class Class_10943600;
 
-class Class_10B83E50 : public Class_10B83DC0
+// Not derived from Class_10B83DC0: its fields sit at these offsets from its own start, and the
+// functions reach the base through a cast.
+class Class_10B83E50
 {
 public:
     int FUN_10b83e50(Class_10943600* Out);

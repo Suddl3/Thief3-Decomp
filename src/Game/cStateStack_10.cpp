@@ -3,6 +3,7 @@
 
 #include "Game/cIntArray.h"
 #include "Game/Class_10BC4020.h"
+#include "Game/cStateStack.h"
 
 class Class_10B9E410_Item
 {
@@ -46,46 +47,19 @@ public:
 
 class Class_10B9E410_Member;
 
-class cStateStack
-{
-public:
-    void FUN_10b9cf60();
-    void FUN_10b9cfa0();
-    Class_10B9E410_Item* Top();
-    void FUN_10b9cf20();
-    void FUN_10b9e410();
-    void ApplyNextState(int A);
-    void FUN_10b9d8d0();
-    void FUN_10b9dc80(int A);
-    void FUN_10b9dcc0();
-    void FUN_10b9dc40(int A);
-    void FUN_10b9e660();
-    void FUN_10b9e690(int A);
-    void FUN_10b9eee0();
-    void FUN_10b9cad0(Class_10B9E410_Item* A, int B, int C);
-
-    char Unknown00[0xC];
-    int Unknown0C;
-    cIntArray m_Stack;
-    int Unknown1C;
-    int Unknown20;
-    char Unknown24[0x14];
-    Class_10B9E410_Member* m_Member;
-};
-
 // FUNCTION: 0x10B9D8D0 ?FUN_10b9d8d0@cStateStack@@QAEXXZ
 void cStateStack::FUN_10b9d8d0()
 {
-    if (m_Stack.Count > 0)
+    if (((cIntArray*)&m_Count)->Count > 0)
     {
-        int Index = m_Stack.Count - 1;
-        Class_10B9E410_Item* Item = (Class_10B9E410_Item*)m_Stack.Data[Index];
+        int Index = ((cIntArray*)&m_Count)->Count - 1;
+        Class_10B9E410_Item* Item = (Class_10B9E410_Item*)((cIntArray*)&m_Count)->Data[Index];
         Item->Virtual21();
         ((Class_10BC4020*)Item)->FUN_10bc4020(0);
         int X = Item->Virtual3();
-        m_Stack.RemoveAt(Index);
+        ((cIntArray*)&m_Count)->RemoveAt(Index);
         Item->Virtual4(1);
-        if (m_Stack.Count > 0)
-            FUN_10b9cad0((Class_10B9E410_Item*)m_Stack.Data[m_Stack.Count - 1], X, 1);
+        if (((cIntArray*)&m_Count)->Count > 0)
+            FUN_10b9cad0((Class_10B9E410_Item*)((cIntArray*)&m_Count)->Data[((cIntArray*)&m_Count)->Count - 1], X, 1);
     }
 }

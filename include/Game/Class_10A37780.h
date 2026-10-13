@@ -14,9 +14,9 @@ public:
     virtual void Virtual1();
     virtual void Virtual2();
     virtual void Virtual3(int A);
-    virtual void Virtual4();
+    virtual int Virtual4();
     virtual void Virtual5(int A, int B, float C);
-    virtual void Virtual6();
+    virtual int Virtual6();
     virtual void Virtual7();
     virtual void Virtual8();
     virtual void Virtual9();

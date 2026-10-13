@@ -3,6 +3,8 @@
 #ifndef GAME_CLASS_1096A820_H
 #define GAME_CLASS_1096A820_H
 
+class Class_10BBDC30;
+
 class Class_1096A820
 {
 public:
@@ -12,7 +14,7 @@ public:
 
     int Unknown00;
     int Unknown04;
-    int Unknown08;
+    Class_10BBDC30** Unknown08;
 };
 
 #endif // GAME_CLASS_1096A820_H

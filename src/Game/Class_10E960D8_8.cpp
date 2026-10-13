@@ -1,24 +1,13 @@
 // Game/Class_10E960D8_8.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
+#include "Game/Class_10BB8140.h"
 #include "Game/Class_10BBDB40.h"
 #include "Game/Class_10C7D570.h"
 
 float appFrand();
 
 double GetTimeSeconds();
-
-class Class_10BB8140
-{
-public:
-    void FUN_10bb8140(int param);
-    void FUN_10bb8140(float A);
-
-    char Unknown00[8];
-    Class_10C7D570* Unknown08;
-    char Unknown0C[0x2a0];
-    int Unknown2ac;
-};
 
 class Class_10E960D8
 {

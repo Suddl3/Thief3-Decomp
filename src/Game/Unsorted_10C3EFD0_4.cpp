@@ -1,5 +1,6 @@
 // Game/Unsorted_10C3EFD0_4.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/CadenceManager.h"
 #include "Game/Class_10C3F090.h"
 #include "Game/Class_10C3FF10.h"
 #include "Game/Class_10C62A40.h"
@@ -21,33 +22,6 @@ public:
 Class_10C41420* GetSoundBufferPool();
 
 Class_10C80360* FUN_10c5f280();
-
-class CadenceManager
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void SetPosition(FVector* Position);
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void FUN_10c3f140(bool A);
-    virtual void Virtual8();
-    virtual void Virtual9();
-    virtual void Virtual10();
-    virtual void Virtual11();
-    virtual void Virtual12();
-    virtual void FUN_10c3f220(unsigned char A);
-
-    char Unknown04[4];
-    FVector m_Position;
-    char Unknown14[8];
-    Class_10E9B5C0_Unknown1C* Unknown1C;
-    bool Unknown20;
-    char Unknown21;
-    unsigned char Unknown22;
-};
 
 struct Struct_10C3F090
 {
@@ -82,7 +56,7 @@ public:
 // FUNCTION: 0x10C3F050 ?SetPosition@CadenceManager@@UAEXPAVFVector@@@Z
 void CadenceManager::SetPosition(FVector* Position)
 {
-    m_Position = *Position;
+    *(FVector*)&m_Position = *Position;
     if (Unknown1C)
         Unknown1C->Virtual14(Position->X, Position->Y, Position->Z, 1);
 }

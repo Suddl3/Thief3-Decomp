@@ -13,7 +13,7 @@ public:
     virtual void Virtual0();
     virtual void Virtual1();
     virtual void* Virtual2(void* A);
-    virtual void Virtual3();
+    virtual void* Virtual3();
     virtual void Virtual4();
     virtual void Virtual5();
     virtual void Virtual6();

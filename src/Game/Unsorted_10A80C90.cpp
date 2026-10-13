@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Game/Class_10A80C90.h"
+#include "Game/Class_10A810F0.h"
 #include "Game/TimeManager.h"
 #include "Game/cString.h"
 
@@ -36,16 +37,6 @@ public:
     int m_ConEvents;
     int Unknown08;
     int* Unknown0C;
-};
-
-extern const char DAT_10e6c100[];
-
-class Class_10A810F0
-{
-public:
-    Class_10A810F0() { Unknown00.FUN_1090a590(DAT_10e6c100); }
-
-    cString Unknown00;
 };
 
 class cConEvent : public Class_10A810F0

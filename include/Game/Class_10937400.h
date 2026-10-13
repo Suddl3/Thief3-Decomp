@@ -3,12 +3,13 @@
 #ifndef GAME_CLASS_10937400_H
 #define GAME_CLASS_10937400_H
 
-#include "Game/Class_109373D0.h"
-
-class Class_10937400 : public Class_109373D0
+class Class_10937400
 {
 public:
     void FUN_10937400(unsigned long Value);
+
+    char Unknown00[0x6AC];
+    unsigned long m_PixelShader;
 };
 
 #endif // GAME_CLASS_10937400_H

@@ -4,20 +4,10 @@
 #include "Game/Class_1092BA00.h"
 #include "Game/Struct_109296A0_Node.h"
 #include "Game/Class_10939570.h"
+#include "Game/Class_1092C0A0.h"
 
 // Game/Class_10939570.h copied whole, with the method the header lacks.
 class Class_10953590;
-
-// One list of a Class_109296A0 pair: the object at 0x10F31AB0 holds two of them, the second at +0xC.
-class Class_1092C0A0
-{
-public:
-    void Clear();
-
-    Struct_109296A0_Node* m_Head;
-    Struct_109296A0_Node* m_Tail;
-    int m_Count;
-};
 
 extern Class_10939570* DAT_10f323fc;
 
@@ -35,24 +25,24 @@ void FUN_1092bdb0(void* Node);
 void FUN_1092c1c0()
 {
     DAT_10f323fc->FUN_1093b1f0();
-    Struct_109296A0_Node* Node = DAT_10f31ab0.m_Head;
+    Struct_109296A0_Node* Node = (Struct_109296A0_Node*)DAT_10f31ab0.m_Head;
     while (Node)
     {
         Struct_109296A0_Node* Next = Node->Unknown10;
         FUN_1092bdb0(Node);
         if (Node->Unknown0C == 0)
-            DAT_10f31ab0.m_Head = Node->Unknown10;
+            DAT_10f31ab0.m_Head = (cString*)Node->Unknown10;
         else
             Node->Unknown0C->Unknown10 = Node->Unknown10;
         if (Node->Unknown10 == 0)
-            DAT_10f31ab0.m_Tail = Node->Unknown0C;
+            DAT_10f31ab0.m_Tail = (cString*)Node->Unknown0C;
         else
             Node->Unknown10->Unknown0C = Node->Unknown0C;
         DAT_10f31ab0.m_Count--;
-        Struct_109296A0_Node* Last = DAT_10f31abc.m_Tail;
-        DAT_10f31abc.m_Tail = Node;
+        Struct_109296A0_Node* Last = (Struct_109296A0_Node*)DAT_10f31abc.m_Tail;
+        DAT_10f31abc.m_Tail = (cString*)Node;
         if (Last == 0)
-            DAT_10f31abc.m_Head = Node;
+            DAT_10f31abc.m_Head = (cString*)Node;
         else
             Last->Unknown10 = Node;
         Node->Unknown10 = 0;

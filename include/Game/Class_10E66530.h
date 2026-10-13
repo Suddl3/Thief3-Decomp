@@ -19,9 +19,9 @@ public:
     virtual void Virtual6();
     virtual int FUN_10a37a50(float A);
 
-    Class_10E66530(Class_10E666A0* A, int B);
+    Class_10E66530(Class_10E666A0* A, int B) : Unknown04(A), Unknown08((Class_10A37A10_Field08*)B) {}
 
-    int Unknown04;
+    Class_10E666A0* Unknown04;
     Class_10A37A10_Field08* Unknown08;
 };
 

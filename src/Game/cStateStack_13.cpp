@@ -73,7 +73,7 @@ void cStateStack::FUN_10b9e0f0(int A, int B, int C, int D)
         return;
     Class_10B9E410_Item* State;
     if (Top()->Virtual3() != 0xf)
-        State = m_Member->Virtual10(Unknown0C, 0, 0);
+        State = m_Member->Virtual10((int)Unknown0C, 0, 0);
     else
         State = Top();
     State->FUN_10bd1550(A, B, C, D);

@@ -3,19 +3,7 @@
 #include "Core/Core.h"
 #include "Game/Class_1096D780_Field98.h"
 #include "Game/Class_10D9FEE0.h"
-
-class Class_1096D780;
-
-class Class_1096D780
-{
-public:
-    void* Get();
-
-    char Unknown00[0x98];
-    void* Field98;
-    char Unknown9C[0x14];
-    Class_10D9FEE0* UnknownB0;
-};
+#include "Game/Class_1096D780.h"
 
 // FUNCTION: 0x10A37210 ?MoveTo@@YA_NPAVClass_1096D780@@PBVFVector@@@Z
 bool MoveTo(Class_1096D780* A, const FVector* B)
@@ -23,7 +11,7 @@ bool MoveTo(Class_1096D780* A, const FVector* B)
     bool Result = static_cast<Class_1096D780_Field98*>(A->Get())->Virtual43(A, *B, 0, 0, 0) != 0;
     if (A->UnknownB0)
     {
-        A->UnknownB0->FUN_10da07c0(*B);
+        ((Class_10D9FEE0*)A->UnknownB0)->FUN_10da07c0(*B);
         Result = true;
     }
     return Result;

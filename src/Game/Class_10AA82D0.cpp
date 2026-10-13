@@ -2,6 +2,8 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Game/Class_10B39530.h"
+#include "Game/Class_10B39780.h"
+#include "Game/Class_10B39790.h"
 
 class Class_10AAF570
 {
@@ -12,26 +14,6 @@ public:
 class Class_10B39870;
 
 class Class_Field0c_D;
-
-class Class_10B47130;
-
-class Class_10B39780
-{
-public:
-    char Unknown00[0xc];
-    Class_Field0c_D* Unknown0c;
-
-    int FUN_10b39780();
-};
-
-class Class_10B39790
-{
-public:
-    void FUN_10b39790(int A, int B, int C, int D, float E);
-
-    char Unknown00[0xC];
-    Class_10B47130* m_Handlers[1];
-};
 
 class Class_10AA82D0 : public Class_10AAF570
 {
@@ -59,8 +41,11 @@ void Class_10AA82D0::FUN_10b4fbf0(int A, int B, float C, float D, int E, int F, 
     Unknown24 = E;
     Unknown20 = B;
     Unknown08 = A;
-    if (((Class_10B39780*)GetLinkedObject())->FUN_10b39780() != A)
+    // The header says void; this caller reads the callee's eax as an int.
+    typedef int (Class_10B39780::*GetIntFn)();
+    GetIntFn Getter = (GetIntFn)&Class_10B39780::FUN_10b39780;
+    if ((((Class_10B39780*)GetLinkedObject())->*Getter)() != A)
         ((Class_10B39530*)GetLinkedObject())->Play(Unknown08, C, D, Unknown20, Unknown24, F, G);
     else
-        ((Class_10B39790*)GetLinkedObject())->FUN_10b39790(Unknown08, Unknown20, Unknown24, 0, G);
+        ((Class_10B39790*)GetLinkedObject())->FUN_10b39790(Unknown08, Unknown20, Unknown24, 0, *(int*)&G);
 }

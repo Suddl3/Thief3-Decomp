@@ -1,22 +1,13 @@
 // Game/Class_10B42340.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
+#include "Game/Class_10B42340.h"
+
 struct Struct_10B42300
 {
     char Unknown00[0x968];
     int Unknown968;
     int Unknown96C;
-};
-
-class Class_10B42340
-{
-public:
-    void FUN_10b42300(int A, int B);
-
-    char Unknown00[8];
-    int m_Count;
-    char Unknown0C[4];
-    Struct_10B42300** m_Entries;
 };
 
 // FUNCTION: 0x10B42300 ?FUN_10b42300@Class_10B42340@@QAEXHH@Z

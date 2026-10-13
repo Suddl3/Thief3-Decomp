@@ -1,14 +1,7 @@
 // Game/cHighlightMgr_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10ABB300.h"
 #include "Game/Struct_10ABB300.h"
-
-class Class_10ABB300
-{
-public:
-    virtual void Virtual0();
-
-    void FUN_10abb300(Struct_10ABB300* P);
-};
 
 class cHighlightMgr : public Class_10ABB300
 {
@@ -19,7 +12,7 @@ public:
     virtual int Virtual4(int A);
     virtual bool FUN_10abb5c0(int A);
 
-    char Unknown04[0x18];
+    char Unknown14[0x8];
     Struct_10ABB300* m_Entries;
 };
 

@@ -3,15 +3,9 @@
 
 #include "Game/Class_10C5B990.h"
 #include "Game/Class_10C5BA20.h"
+#include "Game/Class_10C5BB10.h"
 
 class Class_10C5BA20;
-
-class Class_10C5BB10_Unknown18
-{
-public:
-    virtual void Virtual0(const int& Key, const void** Data, int* Length);
-    virtual int Virtual1(const int& Key, const Class_10C5B990& Node);
-};
 
 class Class_10C5BB10_Node
 {
@@ -22,22 +16,6 @@ public:
 };
 
 unsigned int HashBytes(const void* Data, int Length);
-
-class Class_10C5BB10
-{
-public:
-    void FUN_10c5bbf0(int Size);
-    unsigned int Insert(const int& Key, const Class_10C5BA20& Value);
-    bool FUN_10c5bd80(const int& Key);
-
-    int m_Collisions;
-    int m_Count;
-    int m_BucketBits;
-    int m_BucketCount;
-    bool Unknown10;
-    Class_10C5BB10_Node** m_Buckets;
-    Class_10C5BB10_Unknown18 Unknown18;
-};
 
 // FUNCTION: 0x10C5BD80 ?FUN_10c5bd80@Class_10C5BB10@@QAE_NABH@Z
 bool Class_10C5BB10::FUN_10c5bd80(const int& Key)

@@ -3,12 +3,18 @@
 #ifndef GAME_CLASS_10E8C884_H
 #define GAME_CLASS_10E8C884_H
 
+class Class_10BB1020_B;
+
 class Class_10E8C884
 {
 public:
-    Class_10E8C884* FUN_10ba4c80();
+    // Virtual slots in table order.
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual int FUN_10bb1240(int A, Class_10BB1020_B* B, int C);
 
-    void* Unknown00;
+    // The vtable pointer at +0x0 is implicit (the class is polymorphic).
+    Class_10E8C884* FUN_10ba4c80();
 };
 
 #endif // GAME_CLASS_10E8C884_H

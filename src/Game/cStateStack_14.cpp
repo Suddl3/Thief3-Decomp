@@ -4,6 +4,7 @@
 #include <string.h>
 #include "Game/Class_10BC4020.h"
 #include "Game/cIntArray.h"
+#include "Game/cStateStack.h"
 
 extern "C" void* memmove(void* Dest, const void* Src, unsigned int Count);
 
@@ -119,41 +120,6 @@ public:
 
 // include/Game/cStateStack.h copied whole, with FUN_10b9cad0 added and Unknown0C typed as the
 // pointer it holds.
-class cStateStack
-{
-public:
-    void FUN_10b9cf60();
-    void FUN_10b9cfa0();
-    Class_10B9E410_Item* Top()
-    {
-        if (m_Count == 0)
-            return 0;
-        return m_Stack[m_Count - 1];
-    }
-    void FUN_10b9cf20();
-    void FUN_10b9e410();
-    void ApplyNextState(int A);
-    void FUN_10b9d8d0();
-    void FUN_10b9dc80(int A);
-    void FUN_10b9dcc0();
-    void FUN_10b9dc40(int A);
-    void FUN_10b9e660();
-    void FUN_10b9e690(int A);
-    void FUN_10b9eee0();
-    void FUN_10b9e550(int A);
-    void FUN_10b9cad0(Class_10B9E410_Item* Item, int Value, int Flag);
-
-    char Unknown00[0xC];
-    Class_10B9E410_Unknown0C* Unknown0C;
-    int m_Count;
-    char Unknown14[4];
-    Class_10B9E410_Item** m_Stack;
-    int Unknown1C;
-    int Unknown20;
-    char Unknown24[0x14];
-    Class_10B9E410_Member* m_Member;
-};
-
 // FUNCTION: 0x10B9E550 ?FUN_10b9e550@cStateStack@@QAEXH@Z
 void cStateStack::FUN_10b9e550(int A)
 {

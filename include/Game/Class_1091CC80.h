@@ -3,30 +3,25 @@
 #ifndef GAME_CLASS_1091CC80_H
 #define GAME_CLASS_1091CC80_H
 
+#include "Game/Class_1091B480.h"
+
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
-class Class_1091CC80
+class Class_1091CC80 : public Class_1091B480
 {
 public:
     ~Class_1091CC80()
     {
         FUN_1091c850(0x40);
-        delete Unknown14;
-        Unknown04 = 0;
-        Unknown0C = 0;
-        Unknown14 = 0;
-        Unknown00 = 0;
+        delete Table;
+        Count = 0;
+        Size = 0;
+        Table = 0;
+        Collisions = 0;
     }
 
     void FUN_1091c850(int A);
     void Free();
-
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    int Unknown10;
-    void* Unknown14;
 };
 
 #endif // GAME_CLASS_1091CC80_H

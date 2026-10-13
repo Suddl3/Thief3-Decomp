@@ -7,6 +7,8 @@
 
 class Class_10A93D00;
 
+extern void* DAT_10e6ccbc[];
+
 class Class_10E6CCBC : public Class_10EB766C
 {
 public:
@@ -18,7 +20,11 @@ public:
     virtual void Virtual5();
     virtual int FUN_10a93c80(int A, Class_10A93D00* C);
 
-    Class_10E6CCBC();
+    // Points the object at this class's vtable.
+    Class_10E6CCBC()
+    {
+        *(void**)this = DAT_10e6ccbc;
+    }
 };
 
 #endif // GAME_CLASS_10E6CCBC_H

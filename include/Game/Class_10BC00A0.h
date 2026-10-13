@@ -3,12 +3,14 @@
 #ifndef GAME_CLASS_10BC00A0_H
 #define GAME_CLASS_10BC00A0_H
 
+class Class_10BC00A0_Unknown00;
+
 class Class_10BC00A0
 {
 public:
     Class_10BC00A0();
 
-    int Unknown00;
+    Class_10BC00A0_Unknown00* Unknown00;
 };
 
 #endif // GAME_CLASS_10BC00A0_H

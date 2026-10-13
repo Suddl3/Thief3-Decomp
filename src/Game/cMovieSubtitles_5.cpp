@@ -19,7 +19,7 @@ public:
 
     char Pad00[0x12C];
     Class_1091ABB0 Unknown12C;
-    char Pad12D[0x7];
+    char Pad130[0x4];
     Class_10A55050* Unknown134;
     unsigned char Unknown138;
     char Pad139[0x3];

@@ -7,7 +7,8 @@ class Class_10E4B0C8 {
 public:
     virtual void Virtual0();
     virtual void Virtual1();
-    virtual void Virtual2();
+    // Calls FUN_10961640; when Flags & 1, frees the 0x38-byte object (scalar deleting destructor).
+    virtual Class_10E4B0C8* FUN_109616d0(unsigned int Flags);
     virtual void Virtual3();
     virtual void Virtual4();
     virtual void Virtual5();

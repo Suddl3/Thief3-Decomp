@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Game/cIntArray.h"
+#include "Game/Class_10C01CE0.h"
 
 class Class_10C01C10_Unknown08_Unknown08
 {
@@ -49,13 +50,6 @@ public:
     }
 
     Class_10C01C10_Unknown08_Unknown08* Unknown00;
-};
-
-class Class_10C01CE0 : public cIntArray
-{
-public:
-    void RemoveAll();
-    void RemoveEntry(int A);
 };
 
 // FUNCTION: 0x10C01C10 ?RemoveEntry@Class_10C01CE0@@QAEXH@Z

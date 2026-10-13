@@ -5,13 +5,23 @@
 
 #include "Game/Class_10BE4DD0.h"
 
+class Class_10DBD510;
+
+struct Struct_10BE5EF0
+{
+    char Unknown00[8];
+    Class_10DBD510* Unknown08;
+};
+
 class Class_10BE5EF0 : public Class_10BE4DD0
 {
 public:
     Class_10BE5EF0(int A, int B);
 
     void** Unknown00;
-    int Unknown04[26];
+    Struct_10BE5EF0* Unknown04;
+    char Unknown08[0x60];
+    float Unknown68;
 };
 
 #endif // GAME_CLASS_10BE5EF0_H

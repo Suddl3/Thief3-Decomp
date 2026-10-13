@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Game/Class_10905A90_Member.h"
+#include "Game/Class_10B9B8D0.h"
 
 Class_10905A90_Member* GetAllocator();
 
@@ -29,14 +30,6 @@ public:
     int Unknown10;
     char Unknown14;
     int Unknown18;
-};
-
-class Class_10B9B8D0
-{
-public:
-    Class_10B9B8D0();
-
-    Class_10B9B8D0_Unknown00* Unknown00;
 };
 
 // FUNCTION: 0x10B9B8D0 ??0Class_10B9B8D0@@QAE@XZ

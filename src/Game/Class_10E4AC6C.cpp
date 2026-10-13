@@ -5,6 +5,7 @@
 #include "Game/Struct_Pair0.h"
 #include "Game/Struct_Zero4.h"
 #include "Game/Class_10905A90_Member.h"
+#include "Game/Class_10E4AC64.h"
 
 Class_10905A90_Member* GetAllocator();
 
@@ -62,13 +63,6 @@ struct Struct_Zero5
     void** C;
     int D;
     int E;
-};
-
-// The polymorphic base at 0x10E4AC64: a virtual destructor and no fields.
-class Class_10E4AC64
-{
-public:
-    virtual ~Class_10E4AC64() {}
 };
 
 class Class_10E4AC6C : public Class_10E4AC64

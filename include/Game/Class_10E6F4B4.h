@@ -3,11 +3,25 @@
 #ifndef GAME_CLASS_10E6F4B4_H
 #define GAME_CLASS_10E6F4B4_H
 
+class Class_10951900;
+class FVector;
+struct Struct_10ABBF70;
+
 class Class_10E6F4B4
 {
 public:
-    void* Field00;
+    // Offset 0 is the vtable pointer.
+    virtual void FUN_10abbf70(int Arg0, int Arg1);
+
+    char Unknown04[0x10];
+    // Number of entries in m_Items.
+    int m_Count;
+    char Unknown18[4];
+    // Array of m_Count entries; each entry starts with an object pointer.
+    Struct_10ABBF70* m_Items;
+
     void FUN_10abb9d0();
+    void FUN_10abba80(int Arg0, int Arg1, Class_10951900* Arg2, float Arg3, const FVector& Arg4);
 };
 
 #endif // GAME_CLASS_10E6F4B4_H

@@ -3,6 +3,7 @@
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10AB37C0.h"
 #include "Game/Class_10B154C0.h"
+#include "Game/Class_10E7C3B0.h"
 
 class WindowManager;
 
@@ -64,14 +65,6 @@ public:
     virtual void Virtual2();
     virtual void Virtual3();
     virtual Class_10AB37C0* Virtual4(int A);
-};
-
-class Class_10E7C3B0
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual int ShowOkMessage(int A, int B, Class_10B37370_Arg* C);
 };
 
 // FUNCTION: 0x10B37370 ?ShowOkMessage@Class_10E7C3B0@@UAEHHHPAVClass_10B37370_Arg@@@Z

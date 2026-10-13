@@ -3,6 +3,7 @@
 #include "Core/Core.h"
 #include "Game/Class_10AAB5C0.h"
 #include "Game/Class_10AC92F0.h"
+#include "Game/Class_10B46F10.h"
 #include "Game/Class_10B46D40.h"
 #include "Game/Class_10B46F50.h"
 #include "Game/Class_10DD7640.h"
@@ -141,18 +142,6 @@ void FUN_10a5ab50();
 struct Struct_10B3AF40_Param;
 
 Struct_10B48890* __stdcall FUN_10b3af40(Struct_10B3AF40_Param* p1);
-
-class Class_10B46F10
-{
-public:
-    bool FUN_10b46f10(int A);
-
-    char Unknown00[0x8];
-    Class_10AAB5C0* Unknown08;
-    Class_10AAB5C0* Unknown0C;
-    int Unknown10;
-    int Unknown14;
-};
 
 class Class_10B7B110 : public Class_10C3E140
 {

@@ -9925,8 +9925,10 @@ Game/Unsorted_10B9CE60.cpp:
 
 Game/cStateStack.cpp:
 	.text  start:0x10B9CF20 end:0x10B9CFDF
+	.text  start:0x10B9D2B0 end:0x10B9D32B
 	.text  start:0x10B9DC40 end:0x10B9DCE9
 	.text  start:0x10B9E410 end:0x10B9E429
+	.text  start:0x10B9E660 end:0x10B9E6CB
 
 Game/Unsorted_10B9CFE0.cpp:
 	.text  start:0x10B9D000 end:0x10B9D034
@@ -9943,9 +9945,6 @@ Game/Unsorted_10B9D0C0_3.cpp:
 
 Game/Class_10B9D100.cpp:
 	.text  start:0x10B9D100 end:0x10B9D17F
-
-Game/cStateStack_8.cpp:
-	.text  start:0x10B9D2B0 end:0x10B9D32B
 
 Game/Unsorted_10B9D220.cpp:
 	.text  start:0x10B9D330 end:0x10B9D3BE
@@ -9986,9 +9985,6 @@ Game/cStateStack_6.cpp:
 
 Game/cStateStack_14.cpp:
 	.text  start:0x10B9E550 end:0x10B9E651
-
-Game/cStateStack_7.cpp:
-	.text  start:0x10B9E660 end:0x10B9E6CB
 
 Game/cStateStack_15.cpp:
 	.text  start:0x10B9ED70 end:0x10B9EE80

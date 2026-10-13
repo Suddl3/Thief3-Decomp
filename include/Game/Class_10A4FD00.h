@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_10A4FD00_H
 #define GAME_CLASS_10A4FD00_H
 
-#include "Game/Class_10AF4B90.h"
+#include "Game/Class_10A4FC00.h"
 
 class Class_10A4FD00
 {
@@ -13,7 +13,7 @@ public:
     Class_10A4FD00* FUN_10a4fd00();
 
     char Unknown00[4];
-    Class_10AF4B90 Unknown04;
+    Class_10A4FC00 Unknown04;
 };
 
 #endif // GAME_CLASS_10A4FD00_H

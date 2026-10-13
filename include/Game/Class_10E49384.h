@@ -11,7 +11,7 @@ public:
     Class_10E49384* Init();
 
     void** VTable;
-    int m_Block;
+    int* m_Block;
 };
 
 #endif // GAME_CLASS_10E49384_H

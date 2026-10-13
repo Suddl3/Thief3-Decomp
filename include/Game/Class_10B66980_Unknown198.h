@@ -62,7 +62,7 @@ public:
     virtual void Virtual53();
     virtual void Virtual54();
     virtual void Virtual55();
-    virtual void Virtual56();
+    virtual void Virtual56(int A);
     virtual void Virtual57();
     virtual void Virtual58();
     virtual void Virtual59();
@@ -76,7 +76,7 @@ public:
     virtual void Virtual67();
     virtual void Virtual68();
     virtual void Virtual69();
-    virtual void Virtual70();
+    virtual void Virtual70(int A);
     virtual void Virtual71();
     virtual void Virtual72();
     virtual void Virtual73();

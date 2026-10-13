@@ -15,8 +15,6 @@ public:
         : Class_10E6DC88(0x46)
     {
     }
-
-    char Pad10[0x4];
 };
 
 #endif // GAME_CLASS_10E6CD70_H

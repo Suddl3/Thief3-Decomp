@@ -10,15 +10,15 @@ class Class_10C5BA20
 {
 public:
     Class_10C5BA20* CopyFrom(const Class_10C5BA20& A);
-    Class_10C5BA20();
+    Class_10C5BA20() : Unknown08(false), Unknown1C(-1.0f), Unknown20(-1.0f), Unknown24(0) {}
 
     cString Unknown00;
     cString Unknown04;
     bool Unknown08;
     Struct_10C5BA20 Unknown0C;
     int Unknown18;
-    int Unknown1C;
-    int Unknown20;
+    float Unknown1C;
+    float Unknown20;
     int Unknown24;
 };
 

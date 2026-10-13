@@ -3,6 +3,7 @@
 
 #include "Game/Class_1090A780.h"
 #include "Game/Class_10924E80.h"
+#include "Game/Class_10E66530.h"
 #include "Game/Class_10A37F30.h"
 #include "Game/Class_10E666A0.h"
 #include "Game/Struct_10A378B0.h"
@@ -13,17 +14,6 @@
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 
 class Class_10E666A0;
-
-class Class_10E66530
-{
-public:
-    Class_10E66530(Class_10E666A0* A, int B) : Unknown04(A), Unknown08(B) {}
-
-    virtual int FUN_10a37a10(int A, int B, int C);
-
-    Class_10E666A0* Unknown04;
-    int Unknown08;
-};
 
 extern Class_10924E80* DAT_10f2c734;
 

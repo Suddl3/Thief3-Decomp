@@ -3,13 +3,8 @@
 
 #include "Game/Class_10C49100.h"
 #include "Game/Class_10C49100_Node.h"
+#include "Game/Class_10C4A150.h"
 #include "Game/cString.h"
-
-class Class_10C4A150 : public Class_10C49100
-{
-public:
-    void Reset(int A);
-};
 
 // FUNCTION: 0x10C49DA0 ?Reset@Class_10C4A150@@QAEXH@Z
 void Class_10C4A150::Reset(int A)
@@ -31,5 +26,5 @@ void Class_10C4A150::Reset(int A)
     ::operator delete(m_Buckets);
     m_Buckets = 0;
     if (!m_FixedSize)
-        Rehash(A);
+        ((Class_10C49100*)this)->Rehash(A);
 }

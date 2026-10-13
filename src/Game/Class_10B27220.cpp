@@ -5,6 +5,7 @@
 #include "Game/cIntArray.h"
 #include "Game/Class_10B27090.h"
 #include "Game/Class_10B17210.h"
+#include "Game/Class_10B27220.h"
 
 extern const char DAT_10e47660[];
 
@@ -70,26 +71,6 @@ public:
     virtual void Virtual54();
     virtual void Virtual55();
     virtual void Virtual56(int A);
-};
-
-class Class_10B27220
-{
-public:
-    void RequestStop(int Index);
-    void Stop();
-    void Update(float A);
-
-    char Unknown00[8];
-    char* m_Active;
-    char Unknown0C[8];
-    cString* Unknown14;
-    char Unknown18[8];
-    int* Unknown20;
-    char Unknown24[0xC];
-    Class_10B270D0_Unknown30* Unknown30;
-    float m_Elapsed;
-    bool m_StopPending;
-    char Pad39[0x3];
 };
 
 // FUNCTION: 0x10B270D0 ?Stop@Class_10B27220@@QAEXXZ

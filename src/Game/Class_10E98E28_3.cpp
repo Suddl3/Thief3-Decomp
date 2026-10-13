@@ -41,5 +41,5 @@ Class_10E98E28::Class_10E98E28(int A, const FVector& B, Class_10C7D570* C, int D
     Unknown48 = B;
     Unknown54 = E;
     Unknown58 = 0;
-    Unknown14 = ((Class_10C1BA60_Member*)C->FUN_10c7d570())->Unknown118 + Unknown14;
+    Unknown0C.Unknown08 = ((Class_10C1BA60_Member*)C->FUN_10c7d570())->Unknown118 + Unknown0C.Unknown08;
 }

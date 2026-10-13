@@ -3,12 +3,48 @@
 #ifndef GAME_CLASS_10C57B30_H
 #define GAME_CLASS_10C57B30_H
 
+#include "Game/Class_10C56E40.h"
+
+class Class_10C57B30_Unknown14_Unknown00
+{
+public:
+    virtual void Virtual0();
+    virtual void Virtual1(Class_10C57B30_Unknown14_Unknown00** A);
+    virtual void Virtual2();
+    virtual void Virtual3();
+    virtual void Virtual4();
+    virtual void Virtual5();
+    virtual void Virtual6();
+    virtual bool Virtual7(Class_10C57B30_Unknown14_Unknown00** A);
+};
+
+class Class_10C57B30_Unknown14
+{
+public:
+    ~Class_10C57B30_Unknown14()
+    {
+        if (Unknown00 && Unknown00->Virtual7(&Unknown00))
+        {
+            Unknown00->Virtual1(&Unknown00);
+            Unknown04 = -1;
+            Unknown08 = -1;
+        }
+    }
+
+    Class_10C57B30_Unknown14_Unknown00* Unknown00;
+    int Unknown04;
+    int Unknown08;
+};
+
 class Class_10C57B30
 {
 public:
     ~Class_10C57B30();
 
-    int Unknown00;
+    Class_10C56E40 Unknown00;
+    Class_10C56E40 Unknown04;
+    char Unknown08[0xC];
+    Class_10C57B30_Unknown14 Unknown14;
 };
 
 #endif // GAME_CLASS_10C57B30_H

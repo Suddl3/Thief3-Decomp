@@ -3,14 +3,7 @@
 #include "Game/Class_10AAF570.h"
 #include "Game/Class_10AAF570_Field10.h"
 #include "Game/Class_10BC4BF0_Member.h"
-
-class Class_109A6AA0
-{
-public:
-    int FUN_109a6aa0();
-
-    char Unknown00[0xC];
-};
+#include "Game/Class_109A6AA0.h"
 
 class Class_10E94100
 {
@@ -103,9 +96,9 @@ void Class_10E94100::FUN_10bc4e30(int A)
 {
     if (GetTargetLinkType())
     {
-        Class_109A6AA0 Local;
+        char Local[0xC];
         Virtual67((int*)&Local);
-        if (!Local.FUN_109a6aa0())
+        if (!((Class_109A6AA0*)&Local)->FUN_109a6aa0())
             ((Class_10AAF570_Field10*)GetTargetLinkType())->Virtual69((int*)&Local, A);
     }
 }

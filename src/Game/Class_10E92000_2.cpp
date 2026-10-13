@@ -12,6 +12,6 @@ public:
 // FUNCTION: 0x10BCBB00 ?FUN_10bcbb00@Class_10E92000@@UAEXH@Z
 void Class_10E92000::FUN_10bcbb00(int p1)
 {
-    Class_10bf7f90* Target = (Class_10bf7f90*)FUN_10bc4160();
+    Class_10bf7f90* Target = (Class_10bf7f90*)((Class_10BC4160*)this)->FUN_10bc4160();
     Target->FUN_10bf7f90(0, 1);
 }

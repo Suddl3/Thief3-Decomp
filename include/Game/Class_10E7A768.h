@@ -14,8 +14,8 @@ public:
 
     int Unknown04;
     Object_10B22790* m_Objects[34];
-    int Unknown90;
-    int Unknown94;
+    Object_10B22790* Unknown90;
+    Object_10B22790* Unknown94;
     int Unknown98;
     int Unknown9C;
     int UnknownA0;

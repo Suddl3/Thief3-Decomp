@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_10C270D0_H
 #define GAME_CLASS_10C270D0_H
 
-class Object_10C270D0;
+#include "Game/cPositionList.h"
 
 class Class_10C270D0
 {
@@ -19,7 +19,7 @@ public:
     bool Unknown44;
     bool Unknown45;
     char Unknown46[2];
-    Object_10C270D0* Unknown48;
+    cPositionList* Unknown48;
 };
 
 #endif // GAME_CLASS_10C270D0_H

@@ -2,28 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/cIntArray.h"
 #include "Game/Class_10BBE020.h"
-
-struct Struct_10BBE020
-{
-};
-
-class Class_10E90A64
-{
-public:
-    virtual void Virtual0();
-
-    ~Class_10E90A64()
-    {
-        if (Unknown08)
-            delete Unknown08;
-        if (Unknown0C)
-            delete Unknown0C;
-    }
-
-    int Unknown04;
-    Struct_10BBE020* Unknown08;
-    Struct_10BBE020* Unknown0C;
-};
+#include "Game/Class_10E90A64.h"
 
 // FUNCTION: 0x10BBE020 ?FUN_10bbe020@Class_10BBE020@@QAEXH@Z
 void Class_10BBE020::FUN_10bbe020(int Item)

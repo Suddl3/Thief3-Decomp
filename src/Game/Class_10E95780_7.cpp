@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Game/Class_10E4AB88.h"
+#include "Game/Class_10E95780_Unknown04.h"
 
 class Object_10A84D10;
 
@@ -138,13 +139,6 @@ public:
     char Pad50[0x3c];
 };
 
-class Class_10E95780_Unknown04
-{
-public:
-    char Unknown00[8];
-    Class_10E4AB88* Unknown08;
-};
-
 Class_10E6C390* FUN_10a86080();
 
 bool HasObject(int Key);
@@ -154,7 +148,7 @@ void FUN_10a85900(int Key);
 // FUNCTION: 0x10BE1A70 ?FUN_10be1a70@Class_10E95780@@QAEXXZ
 void Class_10E95780::FUN_10be1a70()
 {
-    void* Obj = Unknown04->Unknown08->FUN_10baa3a0();
+    void* Obj = ((Class_10E4AB88*)Unknown04->Unknown08)->FUN_10baa3a0();
     if (Obj)
     {
         if (FUN_10a86080()->Virtual16() == Obj && FUN_10a86080()->Virtual3())

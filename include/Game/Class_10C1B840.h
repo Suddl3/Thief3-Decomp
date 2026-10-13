@@ -3,6 +3,8 @@
 #ifndef GAME_CLASS_10C1B840_H
 #define GAME_CLASS_10C1B840_H
 
+#include "Game/Struct_10BA91E0.h"
+
 class Class_10C1B840
 {
 public:
@@ -10,8 +12,9 @@ public:
     ~Class_10C1B840();
 
     void** Unknown00;
-    int Unknown04[4];
-    float Unknown14;
+    int Unknown04;
+    int Unknown08;
+    Struct_10BA91E0 Unknown0C; // three floats; Unknown0C.Unknown08 (+0x14) is adjusted by the derived constructors
     int Unknown18[12];
 };
 

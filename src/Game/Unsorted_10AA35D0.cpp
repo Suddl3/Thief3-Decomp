@@ -1,20 +1,14 @@
 // Game/Unsorted_10AA35D0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10AA44B0.h"
+#include "Game/Class_10C1A690.h"
 
-class Class_10C1A690
-{
-public:
-    void Free();
-
-    char Unknown00[4];
-};
-
-// A chained hash table's entry: 12 bytes, allocated per insert.
+// A chained hash table's entry: 12 bytes, allocated per insert. The key is
+// a 4-byte slot here, freed through Class_10C1A690 (a 16-byte class elsewhere).
 class Class_10AA44B0_Node
 {
 public:
-    Class_10C1A690 Key;
+    int Key;
     int Value;
     Class_10AA44B0_Node* Next;
 };
@@ -28,7 +22,7 @@ void Class_10AA44B0::Clear(int Size)
         while (Node)
         {
             Class_10AA44B0_Node* Next = Node->Next;
-            Node->Key.Free();
+            ((Class_10C1A690*)&Node->Key)->Free();
             ::operator delete(Node);
             Node = Next;
         }

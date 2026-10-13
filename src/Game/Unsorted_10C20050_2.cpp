@@ -2,32 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/cIntArray.h"
 #include "Game/Class_10C20050.h"
-
-struct Struct_10C20010
-{
-    float Unknown00;
-    float Unknown04;
-    float Unknown08;
-
-    bool IsWithin(const float* Center, float RadiusSq) const
-    {
-        float dx = Unknown00 - Center[0];
-        float dy = Unknown04 - Center[1];
-        float dz = Unknown08 - Center[2];
-        float Sum = dz * dz;
-        Sum += dx * dx;
-        Sum += dy * dy;
-        return Sum < RadiusSq;
-    }
-};
-
-class Class_10C20010
-{
-public:
-    Struct_10C20010 FUN_10c20010();
-
-    Struct_10C20010 Unknown00;
-};
+#include "Game/Class_10C20010.h"
 
 // FUNCTION: 0x10C20050 ?FindInRadius@Class_10C20050@@QAEXPAMMPAVcIntArray@@@Z
 void Class_10C20050::FindInRadius(float* Center, float Radius, cIntArray* Out)

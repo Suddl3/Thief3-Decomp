@@ -1,15 +1,7 @@
 // Game/Class_10E6FD0C_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-#include "Game/cIntArray.h"
-
-class Class_10E6FD0C
-{
-public:
-    virtual void FUN_10ac9a40(int Unused1, int Value, int Unused3, int** Key);
-
-    cIntArray Unknown04;
-};
+#include "Game/Class_10E6FD0C.h"
 
 // FUNCTION: 0x10AC9A40 ?FUN_10ac9a40@Class_10E6FD0C@@UAEXHHHPAPAH@Z
 void Class_10E6FD0C::FUN_10ac9a40(int Unused1, int Value, int Unused3, int** Key)

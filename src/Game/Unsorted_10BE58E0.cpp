@@ -4,29 +4,13 @@
 #include "Game/Class_10DBD510.h"
 #include "Game/Class_10BBDB40.h"
 #include "Game/Class_10BE4DD0.h"
+#include "Game/Class_10BE5EF0.h"
 #include "Game/Class_10BFBB60.h"
 #include "Game/Class_10E97B00.h"
 
 class Class_10BBDB40;
 
-struct Struct_10BE5EF0
-{
-    char Unknown00[8];
-    Class_10DBD510* Unknown08;
-};
-
 extern void* DAT_10e96510[];
-
-class Class_10BE5EF0 : public Class_10BE4DD0
-{
-public:
-    Class_10BE5EF0(int A, int B);
-
-    void** Unknown00;
-    Struct_10BE5EF0* Unknown04;
-    char Unknown08[0x60];
-    float Unknown68;
-};
 
 extern const char DAT_10e96430[];
 

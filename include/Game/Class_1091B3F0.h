@@ -13,8 +13,8 @@ public:
     void CopyFrom(const Class_1091B3F0& Other);
 
     int Count;
-    int m_Capacity;
-    Item_1091B3F0* Items;
+    int m_Capacity; // Bytes allocated for Items; 0 when Items is freed.
+    Item_1091B3F0* Items; // Element array of 0x14-byte cString pairs.
 };
 
 #endif // GAME_CLASS_1091B3F0_H

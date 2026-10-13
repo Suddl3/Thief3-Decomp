@@ -3,13 +3,28 @@
 #ifndef GAME_CLASS_10BD1320_H
 #define GAME_CLASS_10BD1320_H
 
+#include "Game/Class_10905A90_Member.h"
+
 struct Item_10BD1320;
+
+Class_10905A90_Member* GetAllocator();
 
 class Class_10BD1320
 {
 public:
     int AddItem(const Item_10BD1320* Item);
     void FUN_10bd0410(int NewCount);
+
+    ~Class_10BD1320()
+    {
+        FUN_10bd0410(0);
+        if (Unknown04)
+        {
+            GetAllocator()->Virtual5(m_Items);
+            m_Items = 0;
+            Unknown04 = 0;
+        }
+    }
 
     int m_Count;
     int Unknown04;

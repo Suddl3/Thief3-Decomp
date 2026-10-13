@@ -4,18 +4,13 @@
 #include "Game/cString.h"
 #include "Game/Class_10AB37C0.h"
 #include "Game/Class_10978090.h"
+#include "Game/Class_10B175C0.h"
 
 class WindowManager;
 
 extern WindowManager* GWindowManager;
 
 class Class_10B42BD0;
-
-class Class_10B175C0
-{
-public:
-    void FUN_10b175c0(void* A, bool B, void (*C)(Class_10B42BD0*), void* D);
-};
 
 class Class_10B37140_Arg
 {

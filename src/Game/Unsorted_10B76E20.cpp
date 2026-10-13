@@ -61,7 +61,7 @@ Class_10E888E4* Class_10E888E4::Init()
     Unknown08 = 0;
     Unknown0C = DAT_10e68f94;
     Unknown4C = 32767.0f;
-    Unknown00 = DAT_10e888e4;
+    *(void**)this = DAT_10e888e4;
     return this;
 }
 

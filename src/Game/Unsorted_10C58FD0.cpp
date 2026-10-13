@@ -1,7 +1,7 @@
 // Game/Unsorted_10C58FD0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/cString.h"
-#include "Game/Class_10C59030_Field18.h"
+#include "Game/Class_10C59030.h"
 #include "Game/Class_10C59030_Value.h"
 
 unsigned int HashBytes(const void* Data, int Length);
@@ -15,22 +15,6 @@ public:
     Class_10C59030_Node* Next;
 };
 
-class Class_10C59030
-{
-public:
-    unsigned int Insert(const cString& Key, const Class_10C59030_Value& Value);
-    unsigned int Set(const cString& Key, const Class_10C59030_Value& Value);
-
-    int m_Collisions;
-    int Unknown04;
-    int m_BucketBits;
-    int Unknown0C;
-    bool m_FixedSize;
-    char Pad11[0x3];
-    Class_10C59030_Node** m_Buckets;
-    Class_10C59030_Field18 m_KeyTraits;
-};
-
 // FUNCTION: 0x10C59030 ?Set@Class_10C59030@@QAEIABVcString@@ABVClass_10C59030_Value@@@Z
 unsigned int Class_10C59030::Set(const cString& Key, const Class_10C59030_Value& Value)
 {
@@ -39,11 +23,11 @@ unsigned int Class_10C59030::Set(const cString& Key, const Class_10C59030_Value&
         const void* Data;
         int Length;
         m_KeyTraits.Virtual0(Key, &Data, &Length);
-        Index = HashBytes(Data, Length) & ((1 << m_BucketBits) - 1);
+        Index = HashBytes(Data, Length) & ((1 << Unknown08) - 1);
     }
     if (!m_Buckets)
         return (unsigned int)-1;
-    for (Class_10C59030_Node* Node = m_Buckets[Index]; Node; Node = Node->Next)
+    for (Class_10C59030_Node* Node = (Class_10C59030_Node*)m_Buckets[Index]; Node; Node = Node->Next)
     {
         if (m_KeyTraits.Virtual1(Key, Node->Key) == 0)
         {

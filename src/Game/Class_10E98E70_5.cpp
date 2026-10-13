@@ -2,23 +2,12 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Game/Class_10C7D570.h"
+#include "Game/Class_10C1B840.h"
 #include "Game/Struct_10BA91E0.h"
 
 extern void* DAT_10e98e70[];
 
 float Distance(const Struct_10BA91E0* A, const Struct_10BA91E0* B);
-
-class Class_10C1B840
-{
-public:
-    Class_10C1B840(int A, int B, int C, int D, int E, float F);
-
-    void** Unknown00;
-    int Unknown04;
-    int Unknown08;
-    Struct_10BA91E0 Unknown0C;
-    int Unknown18[12];
-};
 
 class Class_10C1BB10_Field118
 {

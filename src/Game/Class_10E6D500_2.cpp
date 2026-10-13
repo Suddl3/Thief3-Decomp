@@ -1,20 +1,7 @@
 // Game/Class_10E6D500_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-#include <string>
-#include <vector>
-#include "Game/Class_10E6D4F0.h"
-
-class Class_10E6D500 : public Class_10E6D4F0
-{
-public:
-    ~Class_10E6D500();
-
-    void FUN_10c93f30();
-
-    std::vector<int> Unknown04;
-    std::string Unknown18;
-};
+#include "Game/Class_10E6D500.h"
 
 inline Class_10E6D4F0::~Class_10E6D4F0() {}
 

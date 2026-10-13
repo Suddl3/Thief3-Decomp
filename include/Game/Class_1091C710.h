@@ -3,10 +3,25 @@
 #ifndef GAME_CLASS_1091C710_H
 #define GAME_CLASS_1091C710_H
 
-class Class_1091C710
+#include "Game/Class_1091B480.h"
+
+class cString;
+
+// The table's key hasher: slot 0 gives the bytes HashBytes hashes, slot 1 compares a key with a node's key (0 when they are equal).
+class Class_1091C710_Field18
 {
 public:
-    unsigned char FUN_1091c710(int* p1);
+    virtual void Virtual0(int* Key, const void** Data, int* Length);
+    virtual int Virtual1(int* Key, const cString& Other);
+};
+
+// The hash table of Class_1091B480 with an int key hasher at +0x18.
+class Class_1091C710 : public Class_1091B480
+{
+public:
+    unsigned char FUN_1091c710(int* Key);
+
+    Class_1091C710_Field18 KeyHasher;
 };
 
 #endif // GAME_CLASS_1091C710_H

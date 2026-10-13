@@ -1,5 +1,6 @@
 // Game/Class_10E8C640.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10E8C248.h"
 #include "Game/Class_10E8C640.h"
 
 // Ion Storm's placement new and its delete (0x10905C10; the delete folded into ::operator delete).
@@ -11,28 +12,12 @@ extern void* DAT_10e8c248[];
 
 extern void* DAT_10e70820[];
 
-class Class_10E6DC88
+Class_10E8C248::Class_10E8C248() : Class_10E6DC88(0x1E)
 {
-public:
-    Class_10E6DC88(int A);
-
-    void* Unknown00;
-    int Unknown04;
-    int Unknown08;
-};
-
-class Class_10E8C248 : public Class_10E6DC88
-{
-public:
-    Class_10E8C248() : Class_10E6DC88(0x1E)
-    {
-        Unknown00 = DAT_10e8c248;
-        Unknown0C = DAT_10e70820;
-    }
-
-    void* Unknown0C;
-    int Unknown10;
-};
+    // The primary table at +0x0 and the second base's (folded with Class_10E8C22C's) at +0xC.
+    *(void**)this = DAT_10e8c248;
+    *(void**)((char*)this + 0x0C) = DAT_10e70820;
+}
 
 // FUNCTION: 0x10BA3550 ?Create@Class_10E8C640@@UAEPAVClass_10E8C248@@XZ
 Class_10E8C248* Class_10E8C640::Create()

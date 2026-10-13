@@ -17,9 +17,9 @@ public:
         return Sum < RadiusSq;
     }
 
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
+    float Unknown00;
+    float Unknown04;
+    float Unknown08;
 };
 
 #endif // GAME_STRUCT_10C20010_H

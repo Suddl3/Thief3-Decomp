@@ -3,6 +3,7 @@
 
 #include "Game/cString.h"
 #include "Game/cIntArray.h"
+#include "Game/Class_10AA82C0.h"
 
 int FUN_10af36e0(const char* A, const char* B);
 
@@ -12,18 +13,6 @@ public:
     cString FUN_10af9730() const;
 
     unsigned long Value;
-};
-
-// Copied whole from include/Game/Class_10AA82C0.h, with its virtual table added.
-class Class_10AA82C0
-{
-public:
-    virtual void Virtual0();
-    virtual int Virtual1();
-
-    char Unknown04[0x4];
-    void* Unknown8;
-    void* FUN_10aa82c0();
 };
 
 // Copied whole from include/Game/cConversation.h; slot 28 is this function.

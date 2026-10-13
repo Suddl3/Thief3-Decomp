@@ -1,16 +1,11 @@
 // Game/Unsorted_10BFF760.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/cIntArray.h"
+#include "Game/Class_10BBF5D0.h"
 
 extern float DAT_10eafbdc;
 
 float FUN_10c05bc0(int A, int B, int C, float D);
-
-class Class_10BBF5D0
-{
-public:
-    cIntArray* FUN_10bbf5d0();
-};
 
 class Class_10BFFF00_Src
 {
@@ -22,9 +17,9 @@ public:
 // FUNCTION: 0x10BFFF00 ?AppendSourceArray@@YGXPAVClass_10BFFF00_Src@@PAVcIntArray@@@Z
 void __stdcall AppendSourceArray(Class_10BFFF00_Src* Src, cIntArray* Dst)
 {
-    for (int i = 0; i < Src->Unknown0C0.FUN_10bbf5d0()->Count; i++)
+    for (int i = 0; i < ((cIntArray*)Src->Unknown0C0.FUN_10bbf5d0())->Count; i++)
     {
-        int Value = Src->Unknown0C0.FUN_10bbf5d0()->Data[i];
+        int Value = ((cIntArray*)Src->Unknown0C0.FUN_10bbf5d0())->Data[i];
         int Index = Dst->Count;
         Dst->SetCount(Index + 1);
         Dst->Data[Index] = Value;

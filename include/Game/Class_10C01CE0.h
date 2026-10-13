@@ -3,13 +3,13 @@
 #ifndef GAME_CLASS_10C01CE0_H
 #define GAME_CLASS_10C01CE0_H
 
-class Class_10C01CE0
+#include "Game/cIntArray.h"
+
+class Class_10C01CE0 : public cIntArray
 {
 public:
     void RemoveAll();
     void RemoveEntry(int A);
-
-    int m_Count;
 };
 
 #endif // GAME_CLASS_10C01CE0_H

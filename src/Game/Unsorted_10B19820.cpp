@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Core/Core.h"
+#include "Game/Class_10B19940.h"
 #include "Game/Class_1098E330.h"
 #include "Game/Class_10AF4BB0.h"
 #include "Game/Class_10B199A0.h"
@@ -30,22 +31,11 @@ struct Item_10B19940
     unsigned int Unknown18 : 1;
 };
 
-class Class_10B19940
-{
-public:
-    int FUN_10af4cc0(int A, int B);
-    int AddItem(const Item_10B19940& Item);
-
-    Item_10B19940* m_Items;
-    int Unknown04;
-    int Unknown08;
-};
-
 // FUNCTION: 0x10B19940 ?AddItem@Class_10B19940@@QAEHABUItem_10B19940@@@Z
 int Class_10B19940::AddItem(const Item_10B19940& Item)
 {
     int Index = FUN_10af4cc0(sizeof(Item_10B19940), 1);
-    m_Items[Index] = Item;
+    ((Item_10B19940*)m_Items)[Index] = Item;
     return Index;
 }
 

@@ -5,6 +5,8 @@ void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D
 
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
+#include "Game/Class_10E50928.h"
+
 extern char DAT_10e47660[];
 
 class Class_10984CF0
@@ -15,19 +17,8 @@ public:
     char Unknown00[0x10];
 };
 
-class Class_10E50928
-{
-public:
-    virtual void Virtual0();
-    virtual Class_10984CF0* FUN_10a2fab0();
-
-    const char* Unknown04;
-    int Unknown08;
-    int Unknown0C;
-};
-
 // FUNCTION: 0x10A2FAB0 ?FUN_10a2fab0@Class_10E50928@@UAEPAVClass_10984CF0@@XZ
 Class_10984CF0* Class_10E50928::FUN_10a2fab0()
 {
-    return new(0, 0, 0, 0, 0) Class_10984CF0(Unknown04 ? Unknown04 : DAT_10e47660, Unknown08, Unknown0C);
+    return new(0, 0, 0, 0, 0) Class_10984CF0(m_Name ? m_Name : DAT_10e47660, Unknown08, Unknown0C);
 }

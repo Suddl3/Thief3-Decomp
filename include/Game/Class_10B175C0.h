@@ -12,7 +12,7 @@ class Class_10B175C0 : public WindowManager
 {
 public:
     Class_10B314F0* GetFMVWindow();
-    void FUN_10b175c0(void* A, int B, void (*C)(Class_10B42BD0*), void* D);
+    void FUN_10b175c0(void* A, bool B, void (*C)(Class_10B42BD0*), void* D);
 };
 
 #endif // GAME_CLASS_10B175C0_H

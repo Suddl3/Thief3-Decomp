@@ -3,6 +3,7 @@
 #include "Game/Class_10AAB5C0.h"
 #include "Game/cIntArray.h"
 #include "Game/Struct_10A36570.h"
+#include "Game/Class_10B82390.h"
 
 class cUObjectLinkManager
 {
@@ -16,23 +17,6 @@ public:
 };
 
 cUObjectLinkManager* GetUObjectLinkManager();
-
-class Class_10B82390;
-
-class Class_10C08940
-{
-public:
-    int FUN_10ad18b0();
-
-    char Pad00[0xE8];
-    Class_10B82390* UnknownE8;
-};
-
-class Class_10B82390 : public Class_10C08940
-{
-public:
-    int FUN_10b82390(int A, void* B);
-};
 
 // FUNCTION: 0x10A36570 ?GetVulnerability@@YGPAUStruct_10A36570@@PAU1@HH@Z
 Struct_10A36570* __stdcall GetVulnerability(Struct_10A36570* Out, int Id, int Index)

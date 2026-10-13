@@ -4,10 +4,9 @@
 #include "Engine/EngineClasses.h"
 #include "Core/Core.h"
 #include "Game/Class_1092F270.h"
+#include "Game/Class_10E6F4B4.h"
 
 class APawn;
-
-class Class_10951900;
 
 class Class_10ABBF70_Unknown00 : public UObject
 {
@@ -61,23 +60,12 @@ struct Struct_10ABBF70
     char Unknown04[0x10];
 };
 
-class Class_10E6F4B4
-{
-public:
-    virtual void FUN_10abbf70(int Arg0, int Arg1);
-    char Unknown04[0x10];
-    INT Unknown14;
-    char Unknown18[4];
-    Struct_10ABBF70* Unknown1C;
-    void FUN_10abba80(int Arg0, int Arg1, Class_10951900* Arg2, FLOAT Arg3, const FVector& Arg4);
-};
-
 // FUNCTION: 0x10ABBF70 ?FUN_10abbf70@Class_10E6F4B4@@UAEXHH@Z
 void Class_10E6F4B4::FUN_10abbf70(int Arg0, int Arg1)
 {
-    for (INT i = 0; i < Unknown14; i++)
+    for (INT i = 0; i < m_Count; i++)
     {
-        Class_10ABBF70_Unknown00* Obj = Unknown1C[i].Unknown00;
+        Class_10ABBF70_Unknown00* Obj = m_Items[i].Unknown00;
         FLOAT Value = Obj->Virtual69();
         Class_1092F270* Sub = Obj->UnknownB4;
         if (Sub)

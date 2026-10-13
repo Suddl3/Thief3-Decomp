@@ -7,36 +7,27 @@
 #include "Game/Class_10B32D60.h"
 #include "Game/Class_10E7AD44.h"
 #include "Game/Class_10E7B89C.h"
+#include "Game/Class_10E7BB2C.h"
 #include "Game/cT3ReadBookWindow.h"
 #include "Game/Class_10E7C380.h"
 #include "Game/Class_10E7C38C.h"
+#include "Game/Class_10E7C398.h"
 #include "Game/Class_10E7C3B0.h"
 #include "Game/Class_10E7C3BC.h"
 #include "Game/Class_10E7C3C8.h"
 #include "Game/Class_10E7C3D4.h"
 #include "Game/Class_10E7C3E0.h"
+#include "Game/Class_10E7C3EC.h"
 #include "Game/Class_10E7C404.h"
 #include "Game/Class_10E7C410.h"
 #include "Game/Class_10E7C41C.h"
+#include "Game/Class_10E7C3F8.h"
 
 extern void* DAT_10e7ad44[];
 
 extern void* DAT_10e7bb2c[];
 
 extern void* DAT_10e7b968[];
-
-class Class_10E7BB2C
-{
-public:
-    Class_10E7BB2C* Init();
-
-    void** Unknown00;        // +0x00: DAT_10e7bb2c
-    float Unknown04;
-    int Unknown08;
-    void** Unknown0C;        // +0x0c: DAT_10e7b968
-    char Unknown10[0x1C];
-    float Unknown2C;
-};
 
 class cTaggedAnimSeq
 {
@@ -53,12 +44,6 @@ extern void* DAT_10e7c38c[];
 
 extern void* DAT_10e7c398[];
 
-class Class_10E7C398 {
-public:
-    void* Field00;
-    Class_10E7C398* Construct();
-};
-
 extern void* DAT_10e7c3b0[];
 
 extern void* DAT_10e7c3bc[];
@@ -71,23 +56,7 @@ extern void* DAT_10e7c3e0[];
 
 extern void* DAT_10e7c3ec[];
 
-class Class_10E7C3EC
-{
-public:
-    Class_10E7C3EC* Construct();
-
-    void* Unknown00;
-};
-
 extern void* DAT_10e7c3f8[];
-
-class Class_10E7C3F8
-{
-public:
-    Class_10E7C3F8* Construct();
-
-    void* Unknown00;
-};
 
 extern void* DAT_10e7c404[];
 
@@ -132,7 +101,7 @@ Class_10E7BB2C* Class_10E7BB2C::Init()
 {
     Unknown04 = 1.0f;
     Unknown08 = 0;
-    Unknown00 = DAT_10e7bb2c;
+    *(void**)this = DAT_10e7bb2c;
     Unknown0C = DAT_10e7b968;
     Unknown2C = 32767.0f;
     return this;
@@ -209,7 +178,7 @@ int FUN_10b36270()
 // FUNCTION: 0x10B36280 ?Construct@Class_10E7C398@@QAEPAV1@XZ
 Class_10E7C398* Class_10E7C398::Construct()
 {
-    Field00 = DAT_10e7c398;
+    *(void**)this = DAT_10e7c398;
     return this;
 }
 
@@ -293,7 +262,7 @@ int FUN_10b36380()
 // FUNCTION: 0x10B36390 ?Construct@Class_10E7C3EC@@QAEPAV1@XZ
 Class_10E7C3EC* Class_10E7C3EC::Construct()
 {
-    Unknown00 = DAT_10e7c3ec;
+    *(void**)this = DAT_10e7c3ec;
     return this;
 }
 
@@ -306,7 +275,7 @@ int FUN_10b363a0()
 // FUNCTION: 0x10B363D0 ?Construct@Class_10E7C3F8@@QAEPAV1@XZ
 Class_10E7C3F8* Class_10E7C3F8::Construct()
 {
-    Unknown00 = DAT_10e7c3f8;
+    *(void**)this = DAT_10e7c3f8;
     return this;
 }
 

@@ -16,6 +16,8 @@
 #include "Game/Class_10AB0400.h"
 #include "Game/Struct_10AB0400.h"
 #include "Game/Class_10A71C40.h"
+#include "Game/Class_10A4C550_Iterator.h"
+#include "Game/Struct_10A4C940_Node.h"
 
 class FVector;
 
@@ -39,22 +41,6 @@ class cVolume
 {
 public:
     bool ContainsPoint(FVector V);
-};
-
-struct Struct_10A4C550_Node
-{
-    Struct_10A4C550_Node* Unknown00;
-    Struct_10A4C550_Node* Unknown04;
-    unsigned int Unknown08;
-    int Unknown0C;
-};
-
-class Class_10A4C550_Iterator
-{
-public:
-    Class_10A4C550_Iterator() {}
-
-    Struct_10A4C550_Node* Unknown00;
 };
 
 // FUNCTION: 0x10A70FA0 ?ContainsPoint@cVolumeManager@@UAE_NABVFVector@@PAVcVolume@@@Z
@@ -84,5 +70,5 @@ void cVolumeManager::Virtual8(int A, int B, int C)
 int* cVolumeManager::FindValue(unsigned int Key)
 {
     Class_10A4C550_Iterator It = m_Values.FUN_10a4c550(Key);
-    return &It.Unknown00->Unknown0C;
+    return (int*)&It.Unknown00->Unknown0C;
 }

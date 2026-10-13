@@ -1,5 +1,7 @@
 // Game/Unsorted_10C07330.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10C07070.h"
+#include "Game/Class_10C07ED0.h"
 
 class Class_10C07690Arg
 {
@@ -115,26 +117,6 @@ public:
 };
 
 extern int DAT_10ff66a8;
-
-class Class_10C07070
-{
-public:
-    int GetRemainingCapacity();
-
-    char Unknown00[0x44];
-};
-
-class Class_10C07ED0 : public Class_10C07070
-{
-public:
-    void UpdatePopulation();
-    void FUN_10c07330();
-    void FUN_10c076f0(int A);
-
-    short Unknown44[17];
-    char Unknown66[0x3E];
-    unsigned int UnknownA4;
-};
 
 // FUNCTION: 0x10C07690 ?AddIfMissing@Class_10E97B68@@QAEXPAVClass_10C07690Arg@@H@Z
 void Class_10E97B68::AddIfMissing(Class_10C07690Arg* A, int B)

@@ -4,6 +4,7 @@
 #include "Game/cD3DVertexBuffer.h"
 #include "Game/Struct_10932ED0.h"
 #include "Game/Class_10E49D1C.h"
+#include "Game/Class_10E49F0C.h"
 
 class VBPoolStaticPermanent
 {
@@ -17,17 +18,6 @@ public:
 };
 
 extern void* DAT_10e49f0c[];
-
-class Class_10E49F0C
-{
-public:
-    void FUN_109341c0();
-    void** VTable;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    int Unknown10;
-};
 
 // FUNCTION: 0x10933630 ?Init@Class_10E49D1C@@UAEHHHPAUStruct_10932ED0@@H@Z
 int Class_10E49D1C::Init(int A, int B, Struct_10932ED0* C, int D)
@@ -48,7 +38,7 @@ unsigned int VBPoolStaticPermanent::Divide(unsigned int param)
 // FUNCTION: 0x109341C0 ?FUN_109341c0@Class_10E49F0C@@QAEXXZ
 void Class_10E49F0C::FUN_109341c0()
 {
-    VTable = DAT_10e49f0c;
+    *(void**)this = DAT_10e49f0c;
     Unknown04 = 0;
     Unknown0C = -1;
     Unknown08 = 0;

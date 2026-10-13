@@ -6,10 +6,16 @@
 class Class_10C3F110
 {
 public:
+    // Virtual table at +0x00 (the compiler's vptr), then the rows in table order.
+    // Slot 0 is the destructor that Class_10C3F290 overrides (FUN_10c3f290 deletes through it).
+    virtual ~Class_10C3F110();
+    virtual void Virtual1();
+    virtual void Virtual2(int Value);
+
     void FUN_10c3f120(int A, float B);
     int FUN_10c3f110(int p1);
 
-    char Unknown00[0x2C];
+    char Unknown04[0x28];
     int Unknown2C[1];
 };
 

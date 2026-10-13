@@ -3,6 +3,7 @@
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10E5D824.h"
 #include "Game/Class_10E5D9AC.h"
+#include "Game/Class_10E6CE78.h"
 #include "Game/Class_10E6CE94.h"
 
 Class_10905A90_Member* GetAllocator();
@@ -11,27 +12,6 @@ Class_10905A90_Member* GetAllocator();
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
-
-extern void* DAT_10e6ce78[];
-
-class Class_10EB766C
-{
-public:
-    Class_10EB766C();
-
-    void** VTable;
-    int Unknown04;
-    int Unknown08;
-};
-
-class Class_10E6CE78 : public Class_10EB766C
-{
-public:
-    Class_10E6CE78()
-    {
-        VTable = DAT_10e6ce78;
-    }
-};
 
 // FUNCTION: 0x10A95BB0 ?Create@Class_10E5D824@@UAEPAVClass_10E6CE78@@XZ
 Class_10E6CE78* Class_10E5D824::Create()

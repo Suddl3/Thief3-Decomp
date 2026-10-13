@@ -1,7 +1,9 @@
 // Game/Unsorted_1095B160.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10905A90_Member.h"
+#include "Game/Class_10DB58F0.h"
 #include "Game/cString.h"
+#include "Game/Class_1091ABB0.h"
 
 extern const char DAT_10e4af34[];
 
@@ -9,46 +11,7 @@ extern "C" char* _strupr(char* String);
 
 extern "C" char* strstr(const char* Haystack, const char* Needle);
 
-class Class_10DB58F0
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8();
-    virtual void Virtual9();
-    virtual void Virtual10();
-    virtual void Virtual11();
-    virtual void Virtual12();
-    virtual void Virtual13();
-    virtual void Virtual14();
-    virtual void Virtual15();
-    virtual void Virtual16();
-    virtual void Virtual17();
-    virtual void Virtual18();
-    virtual void Virtual19();
-    virtual void Virtual20();
-    virtual void Virtual21();
-    virtual void Virtual22();
-    virtual void Virtual23();
-    virtual bool Virtual24(const char* Name, int Type, cString* Out, int C);
-};
-
 Class_10DB58F0* FUN_10db58f0();
-
-// Copied from include/Game/Class_1091ABB0.h with the field at offset 0 that this function reads.
-class Class_1091ABB0
-{
-public:
-    cString FUN_1091abb0();
-
-    cString Unknown00;
-};
 
 // FUNCTION: 0x1095B2E0 ?FUN_1095b2e0@@YA_NPAVClass_1091ABB0@@@Z
 bool FUN_1095b2e0(Class_1091ABB0* Arg)

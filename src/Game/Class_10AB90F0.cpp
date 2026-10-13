@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Game/Class_10905A90_Member.h"
+#include "Game/Class_10AB90F0.h"
 
 Class_10905A90_Member* GetAllocator();
 
@@ -23,18 +24,6 @@ public:
     int Unknown24;
     int Unknown28;
     int Unknown2C;
-};
-
-// Copied from include/Game/Class_10AB90F0.h; m_Data holds the Class_10AB8BE0 elements that the loops reach.
-class Class_10AB90F0
-{
-public:
-    void FUN_10ab8e90(int NewCount);
-    void Free();
-
-    int Count;
-    int m_CapacityBytes;
-    Class_10AB8BE0* m_Data;
 };
 
 // FUNCTION: 0x10AB8E90 ?FUN_10ab8e90@Class_10AB90F0@@QAEXH@Z

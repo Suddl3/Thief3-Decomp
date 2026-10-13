@@ -12,6 +12,6 @@ extern void* DAT_10e67b54[];
 // FUNCTION: 0x10A4FD00 ?FUN_10a4fd00@Class_10A4FD00@@QAEPAV1@XZ
 Class_10A4FD00* Class_10A4FD00::FUN_10a4fd00()
 {
-    Unknown04.FUN_10af4b90(9, DAT_10e67b54);
+    ((Class_10AF4B90&)Unknown04).FUN_10af4b90(9, DAT_10e67b54);
     return this;
 }

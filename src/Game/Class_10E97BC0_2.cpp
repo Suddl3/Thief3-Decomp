@@ -4,36 +4,12 @@
 #include "Game/Class_10C09410.h"
 #include "Game/cIntArray.h"
 #include "Game/Class_10C09090.h"
+#include "Game/Class_10C08E90.h"
 
 class Class_10C092F0
 {
 public:
     void FUN_10c092f0(int p1);
-};
-
-class Item_10C091A0;
-
-// The header's Class_10C08E90 plus the destructor the unit inlines: a SetCount(0) and then the free.
-class Class_10C08E90
-{
-public:
-    ~Class_10C08E90()
-    {
-        FUN_10c089b0(0);
-        if (Unknown04)
-        {
-            GetAllocator()->Virtual5(Unknown08);
-            Unknown08 = 0;
-            Unknown04 = 0;
-        }
-    }
-    void FUN_10c089b0(int Count);
-    void Empty();
-    int Add(Item_10C091A0* Item);
-
-    int Unknown00;
-    int Unknown04;
-    Item_10C091A0* Unknown08;
 };
 
 // The header's Class_10E97BC0 with its polymorphic base slot and the two member arrays at +0x8 and +0x14.

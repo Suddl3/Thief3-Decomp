@@ -5,6 +5,9 @@
 
 #include "Game/Class_10EB766C.h"
 
+// The vtable this class's constructor installs.
+extern void* DAT_10e6ce78[];
+
 class Class_10E6CE78 : public Class_10EB766C
 {
 public:
@@ -16,7 +19,11 @@ public:
     virtual void Virtual5();
     virtual bool IsTimePaused(int p1, int p2);
 
-    Class_10E6CE78();
+    // Stores this class's vtable pointer in the first word.
+    Class_10E6CE78()
+    {
+        *(void***)this = DAT_10e6ce78;
+    }
 };
 
 #endif // GAME_CLASS_10E6CE78_H

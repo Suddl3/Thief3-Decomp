@@ -7,13 +7,7 @@
 #include "Game/Class_Field04.h"
 #include "Game/Struct_10AA3520.h"
 #include "Game/Class_10E6BC44.h"
-
-class Class_10A6FED0_Owner
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1(Class_Field04* A, int B, int C);
-};
+#include "Game/Class_10A6FED0_Owner.h"
 
 extern Struct_10AA3520* DAT_10f35dec;
 
@@ -37,7 +31,7 @@ void Class_10E6BC44::FUN_10a76a60(Class_Field04* A, cIntArray* B)
             ((Class_1098E330*)Item)->FUN_1098e330(0x80027a, &Key2);
             if (Key2)
             {
-                DAT_10f35dec->Unknown1C->Virtual1(A, 0, 0);
+                DAT_10f35dec->Unknown1C->Virtual1((Struct_10A6FED0*)A, 0, 0);
                 return;
             }
         }

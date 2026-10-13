@@ -8,7 +8,7 @@ class Class_10AAB5C0;
 class Class_10B46F10
 {
 public:
-    void FUN_10b46f10(int A);
+    bool FUN_10b46f10(int A);
 
     char Unknown00[0x8];
     Class_10AAB5C0* Unknown08;

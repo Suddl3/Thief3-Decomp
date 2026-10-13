@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_10C5B910_H
 #define GAME_CLASS_10C5B910_H
 
-#include "Game/cString.h"
+#include "Game/Class_1090A780.h"
 
 class Class_10C5B910
 {
@@ -11,16 +11,15 @@ public:
     ~Class_10C5B910();
     Class_10C5B910()
     {
-        Unknown00 = 0;
-        Unknown04 = 0;
         Unknown08 = 0;
         Unknown1C = -1.0f;
         Unknown20 = -1.0f;
         Unknown24 = 0;
     }
 
-    cString Unknown00;
-    cString Unknown04;
+    // Two string buffers: the constructor leaves them empty and the destructor frees them.
+    Class_1090A780 Unknown00;
+    Class_1090A780 Unknown04;
     char Unknown08;
     char Unknown09[0x13];
     float Unknown1C;

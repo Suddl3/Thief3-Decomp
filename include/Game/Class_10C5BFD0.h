@@ -3,7 +3,27 @@
 #ifndef GAME_CLASS_10C5BFD0_H
 #define GAME_CLASS_10C5BFD0_H
 
+#include "Game/Class_10C5BA20.h"
+
 class Class_10C5B910;
+class Class_10C5BE90_Unknown14;
+
+// Key traits of the table: hashes a key and compares it with a node's key.
+class Class_10C5BE90_Unknown18
+{
+public:
+    virtual void Virtual0(int* Key, const void** Data, int* Length);
+    virtual int Virtual1(int* Key, Class_10C5BE90_Unknown14* Node);
+};
+
+// A bucket's chain node: the entry's value and the next node.
+class Class_10C5BE90_Unknown14
+{
+public:
+    char Unknown00[0x4];
+    Class_10C5BA20 Unknown04;
+    Class_10C5BE90_Unknown14* Next;
+};
 
 class Class_10C5BFD0
 {
@@ -11,6 +31,12 @@ public:
     bool FUN_10c5be90(int* A, Class_10C5B910* B);
     void FUN_10c5bcd0(int* A, Class_10C5B910* B);
     void Update(int A, int B);
+
+    char Unknown00[0x8];
+    int m_BucketBits;
+    char Unknown0C[0x8];
+    Class_10C5BE90_Unknown14** m_Buckets;
+    Class_10C5BE90_Unknown18 m_KeyTraits;
 };
 
 #endif // GAME_CLASS_10C5BFD0_H

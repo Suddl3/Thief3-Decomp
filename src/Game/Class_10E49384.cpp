@@ -4,6 +4,7 @@
 #include "Game/Class_10905A90_Member.h"
 #include "Game/cString.h"
 #include "Game/Class_10913D70.h"
+#include "Game/Class_10E49384.h"
 
 extern void* DAT_10e49384[];
 
@@ -16,15 +17,6 @@ inline void FreeBlock(int*& Block)
         Block = 0;
     }
 }
-
-class Class_10E49384
-{
-public:
-    ~Class_10E49384();
-
-    void** VTable;
-    int* m_Block;
-};
 
 // FUNCTION: 0x10913A50 ??1Class_10E49384@@QAE@XZ
 Class_10E49384::~Class_10E49384()

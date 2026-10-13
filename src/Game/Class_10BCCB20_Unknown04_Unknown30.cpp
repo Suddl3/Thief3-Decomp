@@ -1,16 +1,7 @@
 // Game/Class_10BCCB20_Unknown04_Unknown30.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10BCCB20_Unknown04_Unknown30.h"
-
-class Class_10C3DD60
-{
-public:
-    virtual int Virtual0();
-    char Unknown00[0x24];
-    float Field24;
-
-    virtual float FUN_10c3dd60();
-};
+#include "Game/Class_10C3DD60.h"
 
 // FUNCTION: 0x10BFC080 ?FUN_10bfc080@Class_10BCCB20_Unknown04_Unknown30@@QAEPAVClass_10C3DD60@@H@Z
 Class_10C3DD60* Class_10BCCB20_Unknown04_Unknown30::FUN_10bfc080(int A)

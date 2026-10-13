@@ -1,20 +1,8 @@
 // Game/Unsorted_10915F10.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
+#include "Game/Class_109169E0.h"
 #include "Game/cString.h"
-#include "Game/Class_10C49740.h"
-
-class Class_109169E0
-{
-public:
-    int FUN_109169e0(const Class_1090A780& Name);
-    void FUN_109172f0(int B);
-    void FUN_10916c00();
-
-    char Pad00[0x1];
-    char Pad01[0x7];
-    Class_10C49740 Unknown08;
-};
 
 extern "C" char* _strupr(char* String);
 

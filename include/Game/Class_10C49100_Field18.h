@@ -5,11 +5,12 @@
 
 class cString;
 
-// The table's key hasher: slot 0 gives the bytes HashBytes hashes.
+// The table's key hasher: slot 0 gives the bytes HashBytes hashes, slot 1 compares a key with an entry's key (0 when they are equal).
 class Class_10C49100_Field18
 {
 public:
     virtual void Virtual0(const cString& Key, const void** Data, int* Length);
+    virtual int Virtual1(const cString& Key, const cString& Other);
 };
 
 #endif // GAME_CLASS_10C49100_FIELD18_H

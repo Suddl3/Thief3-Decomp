@@ -5,18 +5,11 @@
 #include "Game/Class_10905A90_Member.h"
 #include "Game/cStructArray.h"
 #include "Game/Class_10BAEC80.h"
+#include "Game/Class_10E8D7C0.h"
 
 Class_10905A90_Member* GetAllocator();
 
 extern void* DAT_10e8d7c0[];
-
-// The element: 0x14 bytes, its first word the vtable (the element's constructor stores only that).
-class Class_10E8D7C0
-{
-public:
-    void* VTable;
-    char Pad04[0x10];
-};
 
 // FUNCTION: 0x10BAE100 ?SetCount@cObjectArray@@QAEXH@Z
 void cObjectArray::SetCount(int NewCount)
@@ -48,7 +41,7 @@ void cObjectArray::SetCount(int NewCount)
     for (int j = OldCount; j < NewCount; j++) {
         Class_10E8D7C0* Element = (Class_10E8D7C0*)((char*)m_Data + j * sizeof(Class_10E8D7C0));
         if (Element)
-            Element->VTable = DAT_10e8d7c0;
+            *(void**)Element = DAT_10e8d7c0;
     }
     GetAllocator()->Virtual9();
     m_Count = NewCount;

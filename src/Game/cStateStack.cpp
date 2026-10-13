@@ -13,6 +13,10 @@
 #include "Game/Class_10B9D1C0.h"
 #include "Game/Class_10B9D1E0.h"
 #include "Game/Class_10B9D200.h"
+#include "Game/Class_10BA9EC0.h"
+#include "Game/Class_10C01CE0.h"
+#include "Game/Class_10BA9EE0.h"
+#include "Game/Class_10B9E410_Unknown0C.h"
 
 class State_Patrol : public Class_10B9E410_Item
 {
@@ -21,6 +25,10 @@ public:
 };
 
 class Class_10B9E410_Item;
+
+extern float DAT_10eafbdc;
+
+double GetTimeSeconds();
 
 // FUNCTION: 0x10B9CF20 ?FUN_10b9cf20@cStateStack@@QAEXXZ
 void cStateStack::FUN_10b9cf20()
@@ -45,12 +53,29 @@ void cStateStack::FUN_10b9cfa0()
         Top()->Virtual34();
 }
 
+// FUNCTION: 0x10B9D2B0 ?FUN_10b9d2b0@cStateStack@@QAEXXZ
+void cStateStack::FUN_10b9d2b0()
+{
+    if (Unknown1C != DAT_10eafbdc)
+    {
+        double EndTime = Unknown1C + 2.0f;
+        if (GetTimeSeconds() > EndTime)
+            FUN_10b9cf60();
+    }
+    if (Unknown20 != DAT_10eafbdc)
+    {
+        double EndTime = Unknown20 + 2.0f;
+        if (GetTimeSeconds() > EndTime)
+            FUN_10b9cfa0();
+    }
+}
+
 // FUNCTION: 0x10B9DC40 ?FUN_10b9dc40@cStateStack@@QAEXH@Z
 void cStateStack::FUN_10b9dc40(int A)
 {
     Class_10B9E410_Member* Obj = m_Member;
     Class_10B9E410_Item* Top = m_Count == 0 ? 0 : m_Stack[m_Count - 1];
-    int Key = Unknown0C;
+    int Key = (int)Unknown0C;
     ApplyNextState(Obj->Virtual43(Key, Top, A));
 }
 
@@ -59,7 +84,7 @@ void cStateStack::FUN_10b9dc80(int A)
 {
     Class_10B9E410_Member* Obj = m_Member;
     Class_10B9E410_Item* Top = m_Count == 0 ? 0 : m_Stack[m_Count - 1];
-    int Key = Unknown0C;
+    int Key = (int)Unknown0C;
     ApplyNextState(Obj->Virtual44(Key, Top, A));
 }
 
@@ -78,6 +103,29 @@ void cStateStack::FUN_10b9dcc0()
 void cStateStack::FUN_10b9e410()
 {
     Class_10B9E410_Member* Obj = m_Member;
-    int Key = Unknown0C;
+    int Key = (int)Unknown0C;
     ApplyNextState(Obj->Virtual28(Key));
+}
+
+// FUNCTION: 0x10B9E660 ?FUN_10b9e660@cStateStack@@QAEXXZ
+void cStateStack::FUN_10b9e660()
+{
+    int Result = ((Class_10BA9EE0*)Unknown0C->Unknown08)->FUN_10ba9ee0();
+    if (Result)
+    {
+        int Next = m_Member->Virtual11(Unknown0C, Result);
+        if (Next)
+            ApplyNextState(Next);
+    }
+}
+
+// FUNCTION: 0x10B9E690 ?FUN_10b9e690@cStateStack@@QAEXH@Z
+void cStateStack::FUN_10b9e690(int A)
+{
+    static_cast<Class_10C01CE0*>(((Class_10BA9EE0*)Unknown0C->Unknown08)->FUN_10ba9ec0())->RemoveAll();
+    Class_10B9E410_Member* Obj = m_Member;
+    Class_10B9E410_Unknown0C* Key = Unknown0C;
+    int Next = Obj->Virtual48(Key, A);
+    if (Next)
+        ApplyNextState(Next);
 }

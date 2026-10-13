@@ -3,6 +3,8 @@
 #ifndef GAME_CLASS_10B435B0_H
 #define GAME_CLASS_10B435B0_H
 
+class Class_10B79140;
+
 class Class_10B435B0
 {
 public:
@@ -47,7 +49,7 @@ public:
     virtual void Virtual38();
     virtual void Virtual39();
     virtual void Virtual40();
-    virtual void Virtual41();
+    virtual Class_10B79140* Virtual41();
     virtual void Virtual42();
     virtual void Virtual43();
     virtual void Virtual44();

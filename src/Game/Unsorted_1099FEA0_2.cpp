@@ -2,7 +2,16 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Game/Class_109A0310.h"
+#include "Game/Class_10E55F00.h"
+#include "Game/Class_10E55F88.h"
+#include "Game/Class_10E56450.h"
 #include "Game/Class_10E56DE0.h"
+#include "Game/Class_10E564D8.h"
+#include "Game/Class_10E56560.h"
+#include "Game/Class_10E57220.h"
+#include "Game/Class_10E572A8.h"
+#include "Game/Class_10E57330.h"
+#include "Game/Class_10E573B8.h"
 #include "Engine/EngineClasses.h"
 
 extern void* DAT_10e56c48[];
@@ -24,14 +33,6 @@ public:
 extern void* DAT_10e56de0[];
 
 extern void* DAT_10e56e68[];
-
-class Class_10E55E78
-{
-public:
-    Class_10E55E78();
-
-    void** Unknown00;
-};
 
 class Class_10E56E68 : public Class_10E55E78
 {
@@ -174,36 +175,6 @@ inline void* operator new(unsigned int, EInternal* Mem)
     return Mem;
 }
 
-class Class_10E55F00
-{
-public:
-    Class_10E55F00();
-};
-
-class Class_10E55F88
-{
-public:
-    Class_10E55F88();
-};
-
-class Class_10E56450
-{
-public:
-    Class_10E56450();
-};
-
-class Class_10E564D8
-{
-public:
-    Class_10E564D8();
-};
-
-class Class_10E56560
-{
-public:
-    Class_10E56560();
-};
-
 class Class_10E56A28
 {
 public:
@@ -234,30 +205,6 @@ public:
     void FUN_109a0740();
 };
 
-class Class_10E57220
-{
-public:
-    Class_10E57220();
-};
-
-class Class_10E572A8
-{
-public:
-    Class_10E572A8();
-};
-
-class Class_10E57330
-{
-public:
-    Class_10E57330();
-};
-
-class Class_10E573B8
-{
-public:
-    Class_10E573B8();
-};
-
 class Class_109A0E60
 {
 public:
@@ -284,7 +231,7 @@ Class_10E56DE0* Class_10E56DE0::FUN_109a0470()
 Class_10E56E68* Class_10E56E68::FUN_109a0500()
 {
     this->Class_10E55E78::Class_10E55E78();
-    Unknown00 = DAT_10e56e68;
+    *(void***)this = DAT_10e56e68;
     return this;
 }
 
@@ -292,7 +239,7 @@ Class_10E56E68* Class_10E56E68::FUN_109a0500()
 Class_10E56EF0* Class_10E56EF0::FUN_109a0590()
 {
     this->Class_10E55E78::Class_10E55E78();
-    Unknown00 = DAT_10e56ef0;
+    *(void***)this = DAT_10e56ef0;
     return this;
 }
 
@@ -300,7 +247,7 @@ Class_10E56EF0* Class_10E56EF0::FUN_109a0590()
 Class_10E56F78* Class_10E56F78::FUN_109a0620()
 {
     this->Class_10E55E78::Class_10E55E78();
-    Unknown00 = DAT_10e56f78;
+    *(void***)this = DAT_10e56f78;
     return this;
 }
 
@@ -308,7 +255,7 @@ Class_10E56F78* Class_10E56F78::FUN_109a0620()
 Class_10E57000* Class_10E57000::FUN_109a06b0()
 {
     this->Class_10E55E78::Class_10E55E78();
-    Unknown00 = DAT_10e57000;
+    *(void***)this = DAT_10e57000;
     return this;
 }
 
@@ -316,7 +263,7 @@ Class_10E57000* Class_10E57000::FUN_109a06b0()
 Class_10E57110* Class_10E57110::FUN_109a0830()
 {
     this->Class_10E55E78::Class_10E55E78();
-    Unknown00 = DAT_10e57110;
+    *(void***)this = DAT_10e57110;
     return this;
 }
 
@@ -324,7 +271,7 @@ Class_10E57110* Class_10E57110::FUN_109a0830()
 Class_10E57198* Class_10E57198::FUN_109a08c0()
 {
     this->Class_10E55E78::Class_10E55E78();
-    Unknown00 = DAT_10e57198;
+    *(void***)this = DAT_10e57198;
     return this;
 }
 
@@ -332,7 +279,7 @@ Class_10E57198* Class_10E57198::FUN_109a08c0()
 Class_10E57660* Class_10E57660::FUN_109a0dd0()
 {
     this->Class_10E55E78::Class_10E55E78();
-    Unknown00 = DAT_10e57660;
+    *(void***)this = DAT_10e57660;
     return this;
 }
 
@@ -340,7 +287,7 @@ Class_10E57660* Class_10E57660::FUN_109a0dd0()
 Class_10E57770* Class_10E57770::FUN_109a0f30()
 {
     this->Class_10E55E78::Class_10E55E78();
-    Unknown00 = DAT_10e57770;
+    *(void***)this = DAT_10e57770;
     return this;
 }
 
@@ -348,7 +295,7 @@ Class_10E57770* Class_10E57770::FUN_109a0f30()
 Class_10E577F8* Class_10E577F8::FUN_109a0fc0()
 {
     this->Class_10E55E78::Class_10E55E78();
-    Unknown00 = DAT_10e577f8;
+    *(void***)this = DAT_10e577f8;
     return this;
 }
 
@@ -356,7 +303,7 @@ Class_10E577F8* Class_10E577F8::FUN_109a0fc0()
 Class_10E57880* Class_10E57880::FUN_109a1050()
 {
     this->Class_10E55E78::Class_10E55E78();
-    Unknown00 = DAT_10e57880;
+    *(void***)this = DAT_10e57880;
     return this;
 }
 
@@ -364,7 +311,7 @@ Class_10E57880* Class_10E57880::FUN_109a1050()
 Class_10E57908* Class_10E57908::FUN_109a10e0()
 {
     this->Class_10E55E78::Class_10E55E78();
-    Unknown00 = DAT_10e57908;
+    *(void***)this = DAT_10e57908;
     return this;
 }
 
@@ -372,7 +319,7 @@ Class_10E57908* Class_10E57908::FUN_109a10e0()
 Class_10E57990* Class_10E57990::FUN_109a1170()
 {
     this->Class_10E55E78::Class_10E55E78();
-    Unknown00 = DAT_10e57990;
+    *(void***)this = DAT_10e57990;
     return this;
 }
 
@@ -380,7 +327,7 @@ Class_10E57990* Class_10E57990::FUN_109a1170()
 Class_10E57AA0* Class_10E57AA0::FUN_109a12d0()
 {
     this->Class_10E55E78::Class_10E55E78();
-    Unknown00 = DAT_10e57aa0;
+    *(void***)this = DAT_10e57aa0;
     return this;
 }
 
@@ -388,7 +335,7 @@ Class_10E57AA0* Class_10E57AA0::FUN_109a12d0()
 Class_10E57B28* Class_10E57B28::FUN_109a1360()
 {
     this->Class_10E55E78::Class_10E55E78();
-    Unknown00 = DAT_10e57b28;
+    *(void***)this = DAT_10e57b28;
     return this;
 }
 
@@ -396,7 +343,7 @@ Class_10E57B28* Class_10E57B28::FUN_109a1360()
 Class_10E57BB0* Class_10E57BB0::FUN_109a13f0()
 {
     this->Class_10E55E78::Class_10E55E78();
-    Unknown00 = DAT_10e57bb0;
+    *(void***)this = DAT_10e57bb0;
     return this;
 }
 
@@ -404,7 +351,7 @@ Class_10E57BB0* Class_10E57BB0::FUN_109a13f0()
 Class_10E57C38* Class_10E57C38::FUN_109a1480()
 {
     this->Class_10E55E78::Class_10E55E78();
-    Unknown00 = DAT_10e57c38;
+    *(void***)this = DAT_10e57c38;
     return this;
 }
 
@@ -412,7 +359,7 @@ Class_10E57C38* Class_10E57C38::FUN_109a1480()
 Class_10E57CC0* Class_10E57CC0::FUN_109a1510()
 {
     this->Class_10E55E78::Class_10E55E78();
-    Unknown00 = DAT_10e57cc0;
+    *(void***)this = DAT_10e57cc0;
     return this;
 }
 

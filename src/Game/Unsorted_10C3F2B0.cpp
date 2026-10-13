@@ -3,6 +3,7 @@
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10C3F110.h"
 #include "Game/Class_10C62A40.h"
+#include "Game/Class_10C3F290.h"
 #include "Game/Class_10C80360.h"
 
 Class_10905A90_Member* GetAllocator();
@@ -11,14 +12,6 @@ Class_10905A90_Member* GetAllocator();
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
-
-class Class_10C3F290 : public Class_10C3F110
-{
-public:
-    Class_10C3F290();
-
-    char Unknown30[0x18];
-};
 
 class Class_10C80360_Unknown10;
 

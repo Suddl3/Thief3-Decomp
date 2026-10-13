@@ -5,17 +5,9 @@
 #include "Game/Class_10B3B220_Item.h"
 #include "Game/Class_10B3B220_Unknown0B0.h"
 #include "Game/GSMantle.h"
+#include "Game/Class_10DD7640.h"
 
 class AGarrett;
-
-class Class_10DD7640
-{
-public:
-    virtual void Virtual0();
-    virtual bool Virtual1(int A);
-    virtual void Virtual2(int A);
-    virtual bool Virtual3(int A);
-};
 
 Class_10DD7640* FUN_10dd7640();
 

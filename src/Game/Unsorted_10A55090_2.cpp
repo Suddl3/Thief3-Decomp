@@ -21,6 +21,7 @@
 #include "Game/Class_10A56B70.h"
 #include "Game/Class_10E6AC50.h"
 #include "Game/Class_10E6AC98.h"
+#include "Game/Class_10E68F9C.h"
 
 void FUN_10a58910();
 
@@ -29,19 +30,6 @@ void FUN_10a581b0();
 extern void* DAT_10e68f9c[];
 
 extern void* DAT_10e68f94[];
-
-class Class_10E68F9C
-{
-public:
-    Class_10E68F9C* Init();
-
-    void** Unknown00;        // +0x00: DAT_10e68f9c
-    float Unknown04;
-    int Unknown08;
-    void** Unknown0C;        // +0x0c: DAT_10e68f94
-    char Unknown10[0x3C];
-    float Unknown4C;
-};
 
 extern void* DAT_10e68f74[];
 
@@ -144,7 +132,7 @@ Class_10E68F9C* Class_10E68F9C::Init()
 {
     Unknown04 = 1.0f;
     Unknown08 = 0;
-    Unknown00 = DAT_10e68f9c;
+    *(void**)this = DAT_10e68f9c;
     Unknown0C = DAT_10e68f94;
     Unknown4C = 32767.0f;
     return this;

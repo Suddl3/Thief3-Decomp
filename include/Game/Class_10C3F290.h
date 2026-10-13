@@ -13,7 +13,6 @@ public:
     Class_10C3F290();
 
     char Unknown30[0x18];
-    char Pad48[0x4];
 };
 
 #endif // GAME_CLASS_10C3F290_H

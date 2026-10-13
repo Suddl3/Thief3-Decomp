@@ -7,6 +7,7 @@
 #include "Game/Class_10BFE6B0.h"
 #include "Game/Class_10BFBE30.h"
 #include "Game/Class_10BFD210.h"
+#include "Game/Class_10BFD710.h"
 
 class Class_10BFD710_Unknown50;
 
@@ -22,22 +23,6 @@ public:
     void FUN_10c1a960(Class_10BFD710_Unknown50* A);
 };
 
-class Class_10BFD710 : public Class_10BFD210
-{
-public:
-    void FUN_10bfd710();
-    void FUN_10bfce60();
-
-    char Pad01[3];
-    Class_10BFBE30* Unknown04;
-    int Unknown08;
-    char Pad0C[4];
-    Class_10C1A960** Unknown10;
-    char Pad14[0x38];
-    float Unknown4C;
-    Class_10BFD710_Unknown50* Unknown50;
-};
-
 // FUNCTION: 0x10BFD710 ?FUN_10bfd710@Class_10BFD710@@QAEXXZ
 void Class_10BFD710::FUN_10bfd710()
 {
@@ -48,8 +33,8 @@ void Class_10BFD710::FUN_10bfd710()
         Class_10BFD710_Unknown50* Obj = Unknown50;
         if (Obj && Unknown04->HasTimedOut())
         {
-            for (int i = 0; i < Unknown08; i++)
-                Unknown10[i]->FUN_10c1a960(Obj);
+            for (int i = 0; i < Unknown08.Count; i++)
+                ((Class_10C1A960**)Unknown08.Data)[i]->FUN_10c1a960(Obj);
         }
     }
 }

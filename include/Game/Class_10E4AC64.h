@@ -3,10 +3,12 @@
 #ifndef GAME_CLASS_10E4AC64_H
 #define GAME_CLASS_10E4AC64_H
 
+// The polymorphic base at 0x10E4AC64: a virtual destructor and no fields. Its only
+// word is the vtable pointer, which the compiler stores.
 class Class_10E4AC64
 {
 public:
-    void* Field00;
+    virtual ~Class_10E4AC64() {}
 
     void FUN_109514b0();
 };

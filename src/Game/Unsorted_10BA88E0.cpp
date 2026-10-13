@@ -51,15 +51,9 @@
 #include "Game/Struct_10BA9F20.h"
 #include "Game/Struct_10BB8180.h"
 #include "Game/Class_10BA9F20.h"
+#include "Game/Class_10BA9F70.h"
 #include "Game/Class_10BB8180.h"
 #include "Game/Class_10E5CBD8.h"
-
-class Class_10BA9F70 {
-public:
-    char Unknown00[0x65];
-    unsigned char Unknown65;
-    void FUN_10ba9f70(unsigned char param);
-};
 
 class Class_10E4AB88
 {
@@ -99,7 +93,7 @@ Struct_10BA9F20 Class_10BA9F20::FUN_10ba9f20()
 // FUNCTION: 0x10BA9F70 ?FUN_10ba9f70@Class_10BA9F70@@QAEXE@Z
 void Class_10BA9F70::FUN_10ba9f70(unsigned char param)
 {
-    Unknown65 = param;
+    *((unsigned char*)this + 0x65) = param;
 }
 
 // FUNCTION: 0x10BA9F80 ?FUN_10ba9f80@Class_10BA9F80@@UAEMXZ

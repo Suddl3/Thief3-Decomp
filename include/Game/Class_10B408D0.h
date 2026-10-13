@@ -3,12 +3,22 @@
 #ifndef GAME_CLASS_10B408D0_H
 #define GAME_CLASS_10B408D0_H
 
+#include <new>
 #include "Game/Class_10B2A160.h"
 
 class Class_10B408D0 : public Class_10B2A160
 {
 public:
-    ~Class_10B408D0();
+    // Frees the buckets and empties the table; the owner's destructor runs this inline.
+    ~Class_10B408D0()
+    {
+        FUN_10b40620(0x40);
+        ::operator delete(m_Buckets);
+        m_Count = 0;
+        m_BucketCount = 0;
+        m_Buckets = 0;
+        m_Collisions = 0;
+    }
 
     void FUN_10b40620(int Size);
     void FUN_10b408d0();

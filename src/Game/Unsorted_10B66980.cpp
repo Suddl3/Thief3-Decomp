@@ -8,6 +8,7 @@
 #include "Game/Class_10B76190.h"
 #include "Game/cT3OptionsWindow.h"
 #include "Game/Class_10E876D0.h"
+#include "Game/Class_10E88160.h"
 
 extern void* DAT_10e84d80[];
 
@@ -365,14 +366,6 @@ public:
 
 extern void* DAT_10e88160;
 
-class Class_10E88160 : public Class_10B787F0
-{
-public:
-    void* Field00;
-
-    void FUN_10b76310();
-};
-
 // FUNCTION: 0x10B671A0 ?FUN_10b671a0@cMissionStatsPane@@QAEXXZ
 void cMissionStatsPane::FUN_10b671a0()
 {
@@ -493,6 +486,6 @@ void Class_10B76190::FUN_10b76190(unsigned char p1)
 // FUNCTION: 0x10B76310 ?FUN_10b76310@Class_10E88160@@QAEXXZ
 void Class_10E88160::FUN_10b76310()
 {
-    Field00 = (void*)&DAT_10e88160;
-    FUN_10b787f0();
+    Unknown00 = &DAT_10e88160;
+    ((Class_10B787F0*)this)->FUN_10b787f0();
 }

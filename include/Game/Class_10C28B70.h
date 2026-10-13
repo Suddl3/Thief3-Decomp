@@ -8,11 +8,9 @@
 class Class_10C28B70
 {
 public:
-    virtual void Virtual0();
-
     ~Class_10C28B70();
 
-    char Pad04[0x4];
+    Class_10E98C8C Unknown00;
     Class_10E98C8C Unknown08;
 };
 

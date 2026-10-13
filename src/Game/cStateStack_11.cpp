@@ -5,6 +5,7 @@
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10BC4020.h"
 #include "Game/cIntArray.h"
+#include "Game/cStateStack.h"
 
 extern "C" void* memmove(void* Dest, const void* Src, unsigned int Count);
 
@@ -125,56 +126,19 @@ public:
 
 // include/Game/cStateStack.h copied whole, with the methods this function uses added
 // and Unknown0C typed as the pointer it holds.
-class cStateStack
-{
-public:
-    void FUN_10b9cf60();
-    void FUN_10b9cfa0();
-    Class_10B9E410_Item* Top()
-    {
-        if (Unknown10 == 0)
-            return 0;
-        return Unknown18[Unknown10 - 1];
-    }
-    void FUN_10b9cf20();
-    void FUN_10b9e410();
-    void ApplyNextState(int A);
-    void FUN_10b9d8d0();
-    void FUN_10b9dc80(int A);
-    void FUN_10b9dcc0();
-    void FUN_10b9dc40(int A);
-    void FUN_10b9e660();
-    void FUN_10b9e690(int A);
-    void FUN_10b9eee0();
-    void PopToBase(int A, int B, int C);
-    void PopToBaseEx(int A, int B);
-    int FUN_10b9cc00(int A);
-    void FUN_10b9cad0(Class_10B9E410_Item* Item, int Value, int Flag);
-
-    char Unknown00[0xC];
-    Class_10B9E410_Unknown0C* Unknown0C;
-    int Unknown10;
-    char Unknown14[4];
-    Class_10B9E410_Item** Unknown18;
-    int Unknown1C;
-    int Unknown20;
-    char Unknown24[0x14];
-    Class_10B9E410_Member* Unknown38;
-};
-
 // FUNCTION: 0x10B9D9C0 ?PopToBaseEx@cStateStack@@QAEXHH@Z
 void cStateStack::PopToBaseEx(int A, int B)
 {
     if (Top())
         Top()->Virtual47();
-    cIntArray* Array = (cIntArray*)&Unknown10;
-    int N = Unknown10;
+    cIntArray* Array = (cIntArray*)&m_Count;
+    int N = m_Count;
     while (N > 1)
     {
         if (N > 0)
         {
             int I = N - 1;
-            Class_10B9E410_Item* Item = Unknown18[I];
+            Class_10B9E410_Item* Item = m_Stack[I];
             Item->Virtual21();
             ((Class_10BC4020*)Item)->FUN_10bc4020(0);
             int R = Item->Virtual3();
@@ -189,11 +153,11 @@ void cStateStack::PopToBaseEx(int A, int B)
             Array->SetCount(Array->Count - 1);
             Item->Virtual4(1);
             if (Array->Count > 0)
-                FUN_10b9cad0(Unknown18[Array->Count - 1], R, 1);
+                FUN_10b9cad0(m_Stack[Array->Count - 1], R, 1);
         }
         N = Array->Count;
     }
-    Class_10B9E410_Member* Member = Unknown38;
+    Class_10B9E410_Member* Member = m_Member;
     Class_10B9E410_Unknown0C* Owner = Unknown0C;
     int Res = Member->Virtual8(Owner, 0, A, B, FUN_10b9cc00(B));
     ApplyNextState(Res);

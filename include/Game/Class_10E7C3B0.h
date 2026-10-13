@@ -3,12 +3,17 @@
 #ifndef GAME_CLASS_10E7C3B0_H
 #define GAME_CLASS_10E7C3B0_H
 
+class Class_10B37370_Arg;
+
 class Class_10E7C3B0
 {
 public:
-    Class_10E7C3B0* Construct();
+    // The vtable pointer is at offset 0; Construct stores this class's vtable there.
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual int ShowOkMessage(int A, int B, Class_10B37370_Arg* C);
 
-    void* Unknown00;
+    Class_10E7C3B0* Construct();
 };
 
 #endif // GAME_CLASS_10E7C3B0_H

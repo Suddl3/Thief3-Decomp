@@ -4,11 +4,15 @@
 #define GAME_CLASS_10BB8960_H
 
 class Class_10bb8960_Result;
+class Class_10C7D570;
 
 class Class_10BB8960
 {
 public:
     Class_10bb8960_Result* FUN_10bb8960();
+
+    char Unknown00[8];
+    Class_10C7D570* Unknown08;
 };
 
 #endif // GAME_CLASS_10BB8960_H

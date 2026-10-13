@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Game/Class_1098E330.h"
+#include "Game/Class_10E6B9F8.h"
 #include "Game/Class_10E7755C.h"
 
 class Class_10E5D360
@@ -55,8 +56,6 @@ public:
     virtual void FUN_10a6dfc0(Class_1098E330* Obj, Class_10E5D360* Msg, Struct_10A6DFC0_Param* Param);
 };
 
-class Class_10E6B9F8;
-
 class Class_10E7755C;
 
 class Class_10F46DA0
@@ -69,14 +68,6 @@ public:
 extern Class_10F46DA0* DAT_10f46da0;
 
 extern void* DAT_10e6b9f8[];
-
-class Class_10E6B9F8
-{
-public:
-    Class_10E6B9F8* FUN_10a6e270();
-
-    void** Unknown00;
-};
 
 // FUNCTION: 0x10A6DFC0 ?FUN_10a6dfc0@Class_10E6B9B8@@UAEXPAVClass_1098E330@@PAVClass_10E5D360@@PAUStruct_10A6DFC0_Param@@@Z
 void Class_10E6B9B8::FUN_10a6dfc0(Class_1098E330* Obj, Class_10E5D360* Msg, Struct_10A6DFC0_Param* Param)
@@ -96,7 +87,7 @@ void Class_10E6B9B8::FUN_10a6dfc0(Class_1098E330* Obj, Class_10E5D360* Msg, Stru
 // FUNCTION: 0x10A6E270 ?FUN_10a6e270@Class_10E6B9F8@@QAEPAV1@XZ
 Class_10E6B9F8* Class_10E6B9F8::FUN_10a6e270()
 {
-    Unknown00 = DAT_10e6b9f8;
+    *(void***)this = DAT_10e6b9f8;
     Class_10E7755C Local;
     Local.Unknown04 = 0x203ead2;
     DAT_10f46da0->Virtual1(this, 3, -1, &Local);

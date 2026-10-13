@@ -77,7 +77,7 @@ public:
     virtual void Virtual68();
     virtual void Virtual69();
     virtual void Virtual70();
-    virtual void Virtual71();
+    virtual int Virtual71();
     virtual void Virtual72();
     virtual void Virtual73();
     virtual void Virtual74();

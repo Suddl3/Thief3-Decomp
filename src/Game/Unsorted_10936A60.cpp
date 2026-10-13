@@ -2,16 +2,9 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/IDirect3DDevice8.h"
 
+#include "Game/Class_10937400.h"
+
 extern IDirect3DDevice8* GDirect3DDevice8;
-
-class Class_10937400
-{
-public:
-    void FUN_10937400(unsigned long Shader);
-
-    char Unknown00[0x6AC];
-    unsigned long m_PixelShader;
-};
 
 // FUNCTION: 0x10937400 ?FUN_10937400@Class_10937400@@QAEXK@Z
 void Class_10937400::FUN_10937400(unsigned long Shader)

@@ -3,12 +3,14 @@
 #ifndef GAME_CLASS_10E5B2AC_H
 #define GAME_CLASS_10E5B2AC_H
 
+extern void* DAT_10e5b2ac[];
+
 class Class_10E5B2AC
 {
 public:
     virtual void HandleMessage(int Msg, int A, int B, int C);
 
-    Class_10E5B2AC();
+    Class_10E5B2AC() { *(void***)this = DAT_10e5b2ac; }
 
     void SendMessages();
     void FUN_109e3320(int A, int B, int C);

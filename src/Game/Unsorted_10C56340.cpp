@@ -2,22 +2,11 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10C56000.h"
 #include "Game/Class_10C56C70.h"
-
-class Class_10C559A0;
+#include "Game/Class_10C559A0.h"
 
 class Class_10C56C70_Unknown4C;
 
 class Class_10C5B8F0;
-
-class Class_10C559A0
-{
-public:
-    char Unknown00[0x44];
-    int Unknown44;
-    bool Unknown48;
-    char Pad49[0x3];
-    Class_10C56C70_Unknown4C* Unknown4C;
-};
 
 class Class_10C56C70_Unknown4C
 {
@@ -39,7 +28,7 @@ void Class_10C56C70::FUN_10c56c70(int Item)
 {
     for (int i = 0; i < Unknown40.m_Count; i++)
     {
-        if (Unknown40.m_Data[i].Unknown4C->Unknown08 == Item)
+        if (((Class_10C56C70_Unknown4C*)Unknown40.m_Data[i].Unknown4C)->Unknown08 == Item)
         {
             if (Unknown40.m_Data[i].Unknown48)
             {

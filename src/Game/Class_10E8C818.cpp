@@ -4,22 +4,13 @@
 #include "Game/Class_10978090.h"
 #include "Game/Class_10AAB5C0.h"
 #include "Game/Class_10BBDC30.h"
+#include "Game/Class_1096A820.h"
 
 class Class_1098E330;
 
 class Class_10971570;
 
 struct Struct_10BBD8B0;
-
-class Class_1096A820
-{
-public:
-    Class_1096A820* FUN_1096a820();
-
-    int Unknown00;
-    int Unknown04;
-    Class_10BBDC30** Unknown08;
-};
 
 class Class_10BB0E40_Param
 {

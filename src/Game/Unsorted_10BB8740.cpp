@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Game/Class_10B9BCA0.h"
+#include "Game/Class_10BB8960.h"
 #include "Game/Class_10C7D570.h"
 #include "Game/Struct_10B9BCA0.h"
 #include "Game/cStateStack.h"
@@ -30,15 +31,6 @@ struct Struct_10BB8960
     int Unknown00;
     char Unknown04[4];
     Class_10bb8960_Result** Unknown08;
-};
-
-class Class_10BB8960
-{
-public:
-    Class_10bb8960_Result* FUN_10bb8960();
-
-    char Unknown00[8];
-    Class_10C7D570* Unknown08;
 };
 
 class Class_10BE3FF0_Field04;

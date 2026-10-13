@@ -1,6 +1,7 @@
 // Game/Unsorted_109568F0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
+#include "Game/Class_109523D0.h"
 #include "Game/IDirect3DDevice8.h"
 #include "Game/cD3DStateCache.h"
 
@@ -16,20 +17,11 @@ public:
     char Unknown00[0x38];
 };
 
-class Class_109523D0
-{
-public:
-    int FUN_10952410(int* A);
-
-    char Unknown00[0x30];
-};
-
 class Class_109568F0 : public Class_109523D0
 {
 public:
     void ApplyStages(int A);
 
-    int Unknown30;
     char Unknown34[8];
     float Alpha;
     char Unknown40[0xC];
@@ -62,7 +54,7 @@ void Class_109568F0::ApplyStages(int A)
             break;
         case 1:
         case 7:
-            if ((Unknown30 & 0x40) && Result == 2)
+            if ((m_Flags & 0x40) && Result == 2)
                 m_Stages[i].ApplyStage(A, Unknown4C);
             break;
         case 6:

@@ -94,10 +94,10 @@ int Class_10AB86C0::Contains(int Value)
 void Class_10AB90F0::Free()
 {
     FUN_10ab8e90(0);
-    if (Unknown04)
+    if (m_CapacityBytes)
     {
         GetAllocator()->Virtual5(m_Data);
         m_Data = 0;
-        Unknown04 = 0;
+        m_CapacityBytes = 0;
     }
 }

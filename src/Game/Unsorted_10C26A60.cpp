@@ -2,10 +2,13 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Game/Class_10C26980.h"
+#include "Game/Class_10C26A60.h"
 #include "Game/Class_10C26E80.h"
+#include "Game/cIntArray.h"
 #include "Game/cPositionList.h"
 #include "Game/MC_MoveToPoint.h"
 #include "Game/Struct_10C26A60.h"
+#include "Game/Struct_10C266F0.h"
 
 extern void* DAT_10e99298[];
 
@@ -23,36 +26,7 @@ public:
     Class_10E992D4* Construct(int A, int B, int C, int D);
 };
 
-class cIntArray
-{
-public:
-    void SetCount(int NewCount);
-
-    int Unknown00;
-    int m_CapacityBytes;
-    Struct_10C26A60** Unknown08;
-};
-
-struct Struct_10C266F0 : public cIntArray {};
-
 void DeleteAll(Struct_10C266F0* Array);
-
-class Class_10C26A60
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    char FUN_10c26500(Struct_10C26A60* Obj, int Arg);
-    void Replace(Struct_10C26A60* Obj, int Arg);
-
-    char Unknown04[0x34];
-    Struct_10C266F0 Unknown38;
-};
 
 extern float DAT_10eafbdc;
 
@@ -70,7 +44,7 @@ void Class_10C26A60::Replace(Struct_10C26A60* Obj, int Arg)
     DeleteAll(Array);
     int Count = Array->Unknown00;
     Array->SetCount(Count + 1);
-    Array->Unknown08[Count] = Obj;
+    ((Struct_10C26A60**)Array->Unknown08)[Count] = Obj;
     Virtual6();
 }
 

@@ -3,10 +3,17 @@
 #ifndef GAME_CLASS_10B06220_H
 #define GAME_CLASS_10B06220_H
 
+#include "Core/Core.h"
 #include "Game/Class_1098CFE0.h"
 
 class Class_10A671D0_Item;
 class Class_10ABCC20;
+
+class Class_109EFF30
+{
+public:
+    FVector* FUN_109eff30(FVector* A);
+};
 
 class Class_10B06220 : public Class_1098CFE0
 {
@@ -15,6 +22,11 @@ public:
     void FUN_10ada010(int Id);
     void FUN_10ad9c90(int Handle, Class_10A671D0_Item* const& Item);
     void FUN_10ad9c90(int Handle, Class_10ABCC20* const& Item);
+
+    char Unknown00[0x24];
+    int Unknown24;
+    char Unknown28[0x10];
+    Class_109EFF30 Unknown38;
 };
 
 #endif // GAME_CLASS_10B06220_H

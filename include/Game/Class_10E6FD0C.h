@@ -9,6 +9,7 @@ class Class_10E6FD0C
 {
 public:
     virtual ~Class_10E6FD0C();
+    virtual void FUN_10ac9a40(int Unused1, int Value, int Unused3, int** Key);
 
     Class_10E6FD0C();
 

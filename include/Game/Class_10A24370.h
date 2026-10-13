@@ -6,7 +6,7 @@
 class Class_10A24370
 {
 public:
-    void FUN_10a24370(int p1);
+    void FUN_10a24370(char p1);
 
     char Unknown00[0x70];
     char Unknown70;

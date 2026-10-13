@@ -10,6 +10,14 @@ class Class_10E90A64
 public:
     virtual void Serialize(FArchive& Ar);
 
+    ~Class_10E90A64()
+    {
+        if (Unknown08)
+            delete Unknown08;
+        if (Unknown0C)
+            delete Unknown0C;
+    }
+
     int Unknown04;
     void* Unknown08;
     void* Unknown0C;

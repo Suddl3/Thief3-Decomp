@@ -2,28 +2,9 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include <vector>
+#include "Game/Class_109E5700.h"
 
 void FUN_10a4c7b0(int A, int B, bool C);
-
-struct Struct_10A4CB00
-{
-};
-
-class Class_109E5700
-{
-public:
-    ~Class_109E5700()
-    {
-        Clear();
-        delete m_Head;
-        m_Head = 0;
-    }
-
-    void Clear();
-
-    char Unknown00[0x18];
-    Struct_10A4CB00* m_Head;
-};
 
 class Class_10A4CB00
 {
@@ -32,7 +13,7 @@ public:
 
     char Unknown00[4];
     Class_109E5700 Unknown04;
-    char Unknown20[8];
+    char Unknown24[4];
     std::vector<int> Unknown28;
 };
 

@@ -4,21 +4,11 @@
 #include "Game/Struct_10AA3520.h"
 #include "Game/Struct_10B1B8A0_List.h"
 #include "Game/Class_109E3D60_Member.h"
+#include "Game/Class_10971570.h"
 
 class Class_10B1B8A0_Arg;
 
 class FArchive;
-
-// Game/Class_10971570.h copied whole, with the field the function reads at 0x24 added.
-class Class_10971570
-{
-public:
-    int FUN_10971570(int Id, bool* Out);
-
-    char Pad00[0x1];
-    char Pad01[0x23];
-    int Unknown24;
-};
 
 // Game/Class_10B1B8A0.h copied whole, with the four methods this function calls added.
 class Class_10B1B8A0

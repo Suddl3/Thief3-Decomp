@@ -7,6 +7,7 @@
 #include "Game/Class_10E5D964.h"
 #include "Game/Class_10E6CCA4.h"
 #include "Game/Class_10E6CCB0.h"
+#include "Game/Class_10E6CCBC.h"
 #include "Game/Class_10E6CCD8.h"
 
 class Class_10E6C890
@@ -26,27 +27,6 @@ Class_10905A90_Member* GetAllocator();
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
-
-extern void* DAT_10e6ccbc[];
-
-class Class_10EB766C
-{
-public:
-    Class_10EB766C();
-
-    void** VTable;
-    int Unknown04;
-    int Unknown08;
-};
-
-class Class_10E6CCBC : public Class_10EB766C
-{
-public:
-    Class_10E6CCBC()
-    {
-        VTable = DAT_10e6ccbc;
-    }
-};
 
 // FUNCTION: 0x10A93E40 ?Create@Class_10E5D960@@UAEPAVClass_10E6CCA4@@XZ
 Class_10E6CCA4* Class_10E5D960::Create()

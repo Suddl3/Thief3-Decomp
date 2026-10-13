@@ -2,20 +2,12 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10939570.h"
 #include "Game/Class_10953590.h"
+#include "Game/Class_10955C30.h"
 #include "Game/Struct_109528B0.h"
 
 extern int DAT_10f3419c;
 
 extern int DAT_10f341a0;
-
-class Class_10955C30
-{
-public:
-    void Destroy();
-    void FUN_10956110(int A);
-
-    char m_Name[0x18];
-};
 
 class Class_109528B0
 {
@@ -23,7 +15,7 @@ public:
     void FUN_109528b0();
 
     char Unknown00[0x90];
-    Class_10955C30 m_Slots;
+    char m_Slots[0x18];
     Struct_109528B0* UnknownA8;
 };
 
@@ -37,8 +29,8 @@ void Class_109528B0::FUN_109528b0()
     int Type = UnknownA8->Unknown30;
     if (Type == DAT_10f3419c || Type == DAT_10f341a0)
     {
-        m_Slots.Destroy();
-        m_Slots.FUN_10956110(0);
+        ((Class_10955C30*)m_Slots)->Destroy();
+        ((Class_10955C30*)m_Slots)->FUN_10956110(0);
     }
 }
 

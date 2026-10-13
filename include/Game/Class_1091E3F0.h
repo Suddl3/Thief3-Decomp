@@ -10,8 +10,9 @@ class Class_1091E3F0 : public Class_1091E3E0
 public:
     void* FUN_1091e3f0();
 
-    char Pad01[0xe3];
+    char Pad01[0x7c];
     void* unknown_e4;
+    char Pad02[0x68];
 };
 
 #endif // GAME_CLASS_1091E3F0_H

@@ -4,6 +4,8 @@
 #include "Game/cCitySectionManager.h"
 #include "Game/Class_10BAC050.h"
 #include "Game/Class_10BB9FC0.h"
+#include "Game/cStateStack.h"
+#include "Game/Class_10B9E410_Unknown0C.h"
 
 class Class_10BB9FC0;
 
@@ -139,40 +141,6 @@ public:
     virtual int Virtual56(Class_10BB9FC0* A);
 };
 
-class cStateStack
-{
-public:
-    void FUN_10b9cf60();
-    void FUN_10b9cfa0();
-    Class_10B9E410_Item* Top()
-    {
-        if (m_Count == 0)
-            return 0;
-        return m_Stack[m_Count - 1];
-    }
-    void FUN_10b9cf20();
-    void FUN_10b9e410();
-    void ApplyNextState(int A);
-    void FUN_10b9d8d0();
-    void FUN_10b9dc80(int A);
-    void FUN_10b9dcc0();
-    void FUN_10b9dc40(int A);
-    void FUN_10b9e660();
-    void FUN_10b9e690(int A);
-    void FUN_10b9eee0();
-    void FUN_10b9e330(int A, int B);
-
-    char Unknown00[0xC];
-    Class_10BB9FC0* Unknown0C;
-    int m_Count;
-    char Unknown14[4];
-    Class_10B9E410_Item** m_Stack;
-    int Unknown1C;
-    int Unknown20;
-    char Unknown24[0x14];
-    Class_10B9E410_Member* m_Member;
-};
-
 // FUNCTION: 0x10B9E330 ?FUN_10b9e330@cStateStack@@QAEXHH@Z
 void cStateStack::FUN_10b9e330(int A, int B)
 {
@@ -192,11 +160,11 @@ void cStateStack::FUN_10b9e330(int A, int B)
             case 20:
             case 36:
             case 39:
-                if (!Unknown0C->FUN_10bb96f0())
+                if (!((Class_10BB9FC0*)Unknown0C)->FUN_10bb96f0())
                 {
                     Class_10BAC050* Owner = (Class_10BAC050*)Unknown0C->Unknown08;
                     if (Owner->FUN_10baac90(DAT_10f35dec->Unknown08) == 2)
-                        ApplyNextState(m_Member->Virtual56(Unknown0C));
+                        ApplyNextState(m_Member->Virtual56((Class_10BB9FC0*)Unknown0C));
                 }
                 break;
             }

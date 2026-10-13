@@ -9,7 +9,8 @@ public:
     void FUN_109367a0();
     void Reset();
 
-    char Unknown00[0x62C];
+    char Unknown00[0x2C];
+    float Unknown2c[96][4]; // Reset() sets every entry to -100
     union
     {
         float Unknown62C[32];

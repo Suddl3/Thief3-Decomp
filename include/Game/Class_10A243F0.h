@@ -3,11 +3,14 @@
 #ifndef GAME_CLASS_10A243F0_H
 #define GAME_CLASS_10A243F0_H
 
+struct Struct_10A4E1D0;
+
 class Class_10A243F0
 {
 public:
     void Resize(int A);
     void Free();
+    int FUN_10a4e1d0(Struct_10A4E1D0* A);
 
     int Unknown00;
     int m_BufferBytes;

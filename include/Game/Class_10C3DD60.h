@@ -6,8 +6,8 @@
 class Class_10C3DD60
 {
 public:
+    virtual int Virtual0();
     virtual float FUN_10c3dd60();
-    virtual void Virtual1();
 
     void SetField28(float Value);
 

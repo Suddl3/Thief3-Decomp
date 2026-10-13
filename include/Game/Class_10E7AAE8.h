@@ -5,6 +5,8 @@
 
 class Class_10B42340;
 
+extern void* DAT_10e7aae8[];
+
 class Class_10E7AAE8
 {
 public:
@@ -18,7 +20,13 @@ public:
     virtual void FUN_10b26970(int A, int B);
 
     ~Class_10E7AAE8();
-    Class_10E7AAE8();
+    Class_10E7AAE8()
+    {
+        *(void**)this = DAT_10e7aae8;
+        Unknown08 = 0;
+        Unknown0C = 0;
+        Unknown10 = 0;
+    }
 
     int Unknown04;
     int Unknown08;

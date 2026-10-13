@@ -32,18 +32,13 @@
 #include "Game/Class_10E6DC88.h"
 #include "Game/FieldClass_A89060.h"
 #include "Game/Class_10A90DC0.h"
+#include "Game/Class_10E6CE6C.h"
 
 extern void* DAT_10e6ce6c[];
-
-class Class_10E6CE6C {
-public:
-    void* Field00;
-    Class_10E6CE6C* Construct();
-};
 
 // FUNCTION: 0x10A95AF0 ?Construct@Class_10E6CE6C@@QAEPAV1@XZ
 Class_10E6CE6C* Class_10E6CE6C::Construct()
 {
-    Field00 = DAT_10e6ce6c;
+    *(void***)this = DAT_10e6ce6c;
     return this;
 }

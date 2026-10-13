@@ -4,7 +4,6 @@
 #define GAME_CLASS_10B19940_H
 
 struct Item_10B19940;
-struct Struct_10A69C00Color;
 
 class Class_10B19940
 {
@@ -12,7 +11,8 @@ public:
     int FUN_10af4cc0(int A, int B);
     int AddItem(const Item_10B19940& Item);
 
-    Struct_10A69C00Color* m_Items;
+    // Element buffer; its element type is chosen at each use (the allocator takes the element size).
+    void* m_Items;
     int Unknown04;
     int Unknown08;
 };

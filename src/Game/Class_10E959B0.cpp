@@ -3,6 +3,7 @@
 #include "Game/Class_10BFBC90.h"
 #include "Game/Class_10C7D570.h"
 #include "Game/Class_10E959B0.h"
+#include "Game/Class_10E959B0_Member.h"
 
 class Class_10bf7f90
 {
@@ -99,16 +100,6 @@ public:
     virtual void Virtual83();
     virtual void Virtual84();
     virtual int Virtual85();
-};
-
-class Class_10E959B0_Member
-{
-public:
-    char Unknown00[8];
-    Class_10C7D570* Unknown08;
-    Class_10bf7f90* Unknown0C;
-    char Unknown10[0x20];
-    Class_10BFBC90 Unknown30;
 };
 
 // FUNCTION: 0x10BE1CE0 ?FUN_10be1ce0@Class_10E959B0@@UAEXH@Z

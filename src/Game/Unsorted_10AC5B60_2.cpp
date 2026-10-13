@@ -13,6 +13,7 @@
 #include "Game/Class_10E6FCF8.h"
 #include "Game/Class_10E6FEDC.h"
 #include "Game/Class_10E70060.h"
+#include "Game/Class_10E700F0.h"
 #include "Game/Class_10E7007C.h"
 #include "Game/Class_10E708CC.h"
 #include "Game/Class_10E708D8.h"
@@ -35,15 +36,6 @@ extern void* DAT_10e6fc7c[];
 extern void* DAT_10e6fedc[];
 
 extern float DAT_10e58a20;
-
-class Class_10E700F0 : public cActorManager, public Class_10E70060
-{
-public:
-    Class_10E700F0();
-
-    virtual void FUN_10c13ea0(int, int, int, int);
-    virtual float FUN_10ace340(int, int, int);
-};
 
 class Class_10F46DA0
 {

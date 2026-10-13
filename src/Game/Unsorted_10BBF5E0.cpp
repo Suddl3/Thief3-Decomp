@@ -3,6 +3,7 @@
 #include "Game/Class_10BC2080.h"
 #include "Game/Class_10C07ED0.h"
 #include "Game/Class_10FF667C.h"
+#include "Game/Class_10BBFEF0.h"
 
 class Class_1098E330
 {
@@ -189,14 +190,6 @@ struct Struct_10BBFEF0
     int Unknown00;
     int Unknown04;
     int* Unknown08;
-};
-
-class Class_10BBFEF0
-{
-public:
-    int GetFirst(Class_10BBEFC0* p1);
-
-    Struct_10BBFEF0* Unknown00;
 };
 
 // FUNCTION: 0x10BBFEF0 ?GetFirst@Class_10BBFEF0@@QAEHPAVClass_10BBEFC0@@@Z

@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include <math.h>
+#include "Game/Class_10953AC0.h"
 
 struct Item_10A21A60
 {
@@ -9,18 +10,6 @@ struct Item_10A21A60
     float Unknown04;
     float Unknown08;
     float Unknown0C;
-};
-
-class Class_10953AC0
-{
-public:
-    void Resize(int A);
-    void Free();
-    void CopyFrom(const Class_10953AC0& Other);
-
-    int m_Count;
-    int m_Capacity;
-    Item_10A21A60* m_Items;
 };
 
 class Class_10A21A60
@@ -44,12 +33,12 @@ int Class_10A21A60::FindOrAddPlane(const Item_10A21A60* P)
     Class_10953AC0* Array = &m_Planes;
     for (int i = 0; i < Count; i++)
     {
-        Item_10A21A60* Entry = &m_Planes.m_Items[i];
+        Item_10A21A60* Entry = &((Item_10A21A60*)m_Planes.m_Items)[i];
         if (Item.Unknown08 * Entry->Unknown08 + Item.Unknown04 * Entry->Unknown04 + Item.Unknown00 * Entry->Unknown00 > 0.999 && fabs(Entry->Unknown0C - Item.Unknown0C) < 0.001)
             return i;
     }
     int Index = Array->m_Count;
     Array->Resize(Index + 1);
-    Array->m_Items[Index] = Item;
+    ((Item_10A21A60*)Array->m_Items)[Index] = Item;
     return Index;
 }

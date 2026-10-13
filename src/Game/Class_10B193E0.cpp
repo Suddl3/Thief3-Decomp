@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Game/Struct_10C05A80.h"
+#include "Game/Class_10B193E0.h"
 
 int WrapAngle(int Value);
 
@@ -19,21 +20,6 @@ public:
     float Unknown410;
     char Pad414[0x40];
     float Unknown454;
-};
-
-// Game/Class_10B193E0.h copied whole: Unknown18 is a bool, and FUN_10b18e90 is a method.
-class Class_10B193E0
-{
-public:
-    void FUN_10b19260(Struct_10B193E0* Object, float Value);
-    void FUN_10b19140(int* Out, Struct_10B193E0* Object);
-    void FUN_10b193e0(Struct_10B193E0* Object);
-    void FUN_10b18e90(Struct_10B193E0* Object, float Value);
-
-    char Unknown00[0x18];
-    bool Unknown18;
-    char Unknown19[0x17];
-    int Unknown30;
 };
 
 // FUNCTION: 0x10B19260 ?FUN_10b19260@Class_10B193E0@@QAEXPAUStruct_10B193E0@@M@Z

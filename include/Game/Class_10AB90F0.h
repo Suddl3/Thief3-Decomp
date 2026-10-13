@@ -3,18 +3,23 @@
 #ifndef GAME_CLASS_10AB90F0_H
 #define GAME_CLASS_10AB90F0_H
 
+class Class_10AB8BE0;
+
 class Class_10AB90F0
 {
 public:
-    Class_10AB90F0() : Unknown00(0), Unknown04(0), m_Data(0) {}
+    Class_10AB90F0() : Count(0), m_CapacityBytes(0), m_Data(0) {}
     ~Class_10AB90F0();
 
-    void FUN_10ab8e90(int Count);
+    void FUN_10ab8e90(int NewCount);
     void Free();
 
-    int Unknown00;
-    int Unknown04;
-    void* m_Data;
+    // Number of elements in use; the elements past it are cleared when the array grows.
+    int Count;
+    // Bytes reserved for m_Data (capacity times the element size).
+    int m_CapacityBytes;
+    // The Class_10AB8BE0 elements that the loops reach.
+    Class_10AB8BE0* m_Data;
 };
 
 #endif // GAME_CLASS_10AB90F0_H

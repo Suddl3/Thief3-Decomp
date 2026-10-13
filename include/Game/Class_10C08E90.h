@@ -3,11 +3,25 @@
 #ifndef GAME_CLASS_10C08E90_H
 #define GAME_CLASS_10C08E90_H
 
+#include "Game/Class_10905A90_Member.h"
+
 struct Item_10C091A0;
+
+Class_10905A90_Member* GetAllocator();
 
 class Class_10C08E90
 {
 public:
+    ~Class_10C08E90()
+    {
+        FUN_10c089b0(0);
+        if (Unknown04)
+        {
+            GetAllocator()->Virtual5(Unknown08);
+            Unknown08 = 0;
+            Unknown04 = 0;
+        }
+    }
     void FUN_10c089b0(int Count);
     void Empty();
     int Add(Item_10C091A0* Item);

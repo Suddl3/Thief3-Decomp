@@ -3,9 +3,9 @@
 #ifndef GAME_CLASS_10E92000_H
 #define GAME_CLASS_10E92000_H
 
-#include "Game/Class_10BC4160.h"
+#include "Game/Class_10E90D70.h"
 
-class Class_10E92000 : public Class_10BC4160
+class Class_10E92000 : public Class_10E90D70
 {
 public:
     virtual void Virtual0();
@@ -32,7 +32,13 @@ public:
 
     Class_10E92000(int A, int B, int C);
 
-    char Pad08[0x54];
+    int Unknown40;
+    int Unknown44;
+    int Unknown48;
+    int Unknown4C;
+    int Unknown50;
+    int Unknown54;
+    unsigned char Unknown58;
 };
 
 #endif // GAME_CLASS_10E92000_H

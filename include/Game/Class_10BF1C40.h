@@ -3,7 +3,8 @@
 #ifndef GAME_CLASS_10BF1C40_H
 #define GAME_CLASS_10BF1C40_H
 
-class Class_10BF1C40_Unknown04;
+#include "Game/Class_10BBB410.h"
+
 class Class_10BF1C40_Unknown40;
 struct Struct_10BA91E0;
 
@@ -16,7 +17,7 @@ public:
     bool FUN_10bef470();
 
     char Unknown00[4];
-    Class_10BF1C40_Unknown04* Unknown04;
+    Class_10BBB410* Unknown04;
     char Unknown08[0x38];
     Class_10BF1C40_Unknown40* Unknown40;
     char Unknown44[0xC];

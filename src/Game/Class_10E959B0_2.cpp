@@ -8,6 +8,6 @@
 // FUNCTION: 0x10BE1D20 ?FUN_10be1d20@Class_10E959B0@@UAEXXZ
 void Class_10E959B0::FUN_10be1d20()
 {
-    Unknown04->Unknown30.FUN_10bfc2b0();
+    ((Class_10BFC2B0*)&Unknown04->Unknown30)->FUN_10bfc2b0();
     FUN_10d660b0();
 }

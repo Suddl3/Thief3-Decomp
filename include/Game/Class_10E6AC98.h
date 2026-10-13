@@ -30,6 +30,7 @@ public:
     char Unknown04[8];
     Class_1091D800* Unknown0C;
     Class_1090A780 Unknown10;
+    // A cString (FUN_10a634a0 assigns one): the same four bytes as its base Class_1090A780.
     Class_1090A780 Unknown14;
     Class_1090A780 Unknown18;
     union

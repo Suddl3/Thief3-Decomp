@@ -10,6 +10,8 @@ public:
     int FUN_109766a0(int A, int B);
 
     char Pad00[0x1];
+    char Pad01[0x23];
+    int Unknown24;
 };
 
 #endif // GAME_CLASS_10971570_H

@@ -3,6 +3,9 @@
 #ifndef GAME_CLASS_10C4A150_H
 #define GAME_CLASS_10C4A150_H
 
+class Class_10C49100_Node;
+
+// A hash table with the layout of Class_10C49100, without its key traits.
 class Class_10C4A150
 {
 public:
@@ -13,8 +16,9 @@ public:
     int m_Count;
     char Unknown08[4];
     int m_BucketCount;
-    char Unknown10[4];
-    void* m_Buckets;
+    bool m_FixedSize; // when set, Reset does not rehash
+    char Unknown11[3];
+    Class_10C49100_Node** m_Buckets;
 };
 
 #endif // GAME_CLASS_10C4A150_H

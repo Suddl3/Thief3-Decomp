@@ -7,6 +7,6 @@ extern void* DAT_10e8c884[];
 // FUNCTION: 0x10BA4C80 ?FUN_10ba4c80@Class_10E8C884@@QAEPAV1@XZ
 Class_10E8C884* Class_10E8C884::FUN_10ba4c80()
 {
-    Unknown00 = DAT_10e8c884;
+    *(void**)this = DAT_10e8c884;
     return this;
 }

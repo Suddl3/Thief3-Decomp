@@ -25,7 +25,7 @@ int IndexToMask(int Value)
 int Class_10C07070::GetRemainingCapacity()
 {
     int Total = Unknown38 + Unknown2C + Unknown20 + Unknown14 + Unknown08;
-    int Used = Unknown4C + Unknown4A + Unknown48 + Unknown46 + Unknown44;
+    int Used = *(short*)((char*)this + 0x4C) + *(short*)((char*)this + 0x4A) + *(short*)((char*)this + 0x48) + *(short*)((char*)this + 0x46) + *(short*)((char*)this + 0x44);
     if (Total >= 0 && Used >= 0 && Total >= Used)
         return Total - Used;
     return 0;

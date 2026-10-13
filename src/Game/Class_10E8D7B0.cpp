@@ -1,26 +1,14 @@
 // Game/Class_10E8D7B0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Struct_10BAD900.h"
+#include "Game/Class_10E8D7B0.h"
 
 extern void* DAT_10e8d7b0[];
-
-class Class_10E8D7B0
-{
-public:
-    Class_10E8D7B0* Init(Struct_10BAD900* A, Struct_10BAD900* B, int* C);
-
-    void** Unknown00;
-    int Unknown04;
-    Struct_10BAD900 Unknown08;
-    Struct_10BAD900 Unknown14;
-    int Unknown20;
-};
 
 // FUNCTION: 0x10BAD900 ?Init@Class_10E8D7B0@@QAEPAV1@PAUStruct_10BAD900@@0PAH@Z
 Class_10E8D7B0* Class_10E8D7B0::Init(Struct_10BAD900* A, Struct_10BAD900* B, int* C)
 {
     Unknown04 = 0;
-    Unknown00 = DAT_10e8d7b0;
+    *(void***)this = DAT_10e8d7b0; // the vtable pointer at offset 0
     Unknown08 = *A;
     Unknown14 = *B;
     Unknown20 = *C;

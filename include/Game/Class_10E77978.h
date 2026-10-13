@@ -11,6 +11,7 @@ class Class_10E77978 : public Class_10E6D4F0
 public:
     virtual ~Class_10E77978();
 
+    Class_10E77978() {}
     Class_10E77978(std::string Name);
 
     std::string m_Name;

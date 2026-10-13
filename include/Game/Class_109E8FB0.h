@@ -10,7 +10,8 @@ public:
     Class_109E8FB0();
 
     void** Unknown00;
-    char Pad04[0x21c];
+    void** Unknown04;
+    char Pad08[0x218];
 };
 
 #endif // GAME_CLASS_109E8FB0_H

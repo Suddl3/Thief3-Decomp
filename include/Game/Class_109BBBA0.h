@@ -3,6 +3,9 @@
 #ifndef GAME_CLASS_109BBBA0_H
 #define GAME_CLASS_109BBBA0_H
 
+class FName;
+class Class_10C30170_Unknown3A4;
+
 class Class_109BBBA0
 {
 public:
@@ -50,11 +53,11 @@ public:
     virtual void Virtual41();
     virtual void Virtual42();
     virtual void Virtual43();
-    virtual void Virtual44();
+    virtual void Virtual44(int A, float B, int C, int D, float E, int F, int G, int H);
     virtual void Virtual45();
     virtual void Virtual46();
     virtual void Virtual47();
-    virtual void Virtual48();
+    virtual int* Virtual48(int* Out, int Id);
     virtual void Virtual49();
     virtual void Virtual50();
     virtual void Virtual51();
@@ -72,6 +75,10 @@ public:
     void FUN_109bbba0(int A);
     void FUN_109b5d00(int A, float B);
     void FUN_109b2990(float A, float B, int C, int D, float E, int F, int G);
+    void FUN_109b6580(float A, int B, int C, FName D);
+
+    char Unknown04[0x3A0];
+    Class_10C30170_Unknown3A4* Unknown3A4;
 };
 
 #endif // GAME_CLASS_109BBBA0_H

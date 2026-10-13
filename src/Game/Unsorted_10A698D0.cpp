@@ -145,15 +145,15 @@ void InitPrimaryColors(Struct_10A69C00* A)
     Color.G = 0;
     Color.R = 255;
     Color.A = 255;
-    A->Unknown08.m_Items[A->Unknown08.FUN_10af4cc0(4, 1)] = Color;
+    ((Struct_10A69C00Color*)A->Unknown08.m_Items)[A->Unknown08.FUN_10af4cc0(4, 1)] = Color;
     Color.B = 0;
     Color.G = 255;
     Color.R = 0;
     Color.A = 255;
-    A->Unknown08.m_Items[A->Unknown08.FUN_10af4cc0(4, 1)] = Color;
+    ((Struct_10A69C00Color*)A->Unknown08.m_Items)[A->Unknown08.FUN_10af4cc0(4, 1)] = Color;
     Color.B = 255;
     Color.G = 0;
     Color.R = 0;
     Color.A = 255;
-    A->Unknown08.m_Items[A->Unknown08.FUN_10af4cc0(4, 1)] = Color;
+    ((Struct_10A69C00Color*)A->Unknown08.m_Items)[A->Unknown08.FUN_10af4cc0(4, 1)] = Color;
 }

@@ -7,7 +7,7 @@ class Class_10A58BE0_Member
 {
 public:
     virtual void Virtual0();
-    virtual void Virtual1();
+    virtual bool Virtual1();
     virtual void Virtual2();
 };
 

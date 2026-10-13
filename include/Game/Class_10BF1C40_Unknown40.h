@@ -3,6 +3,9 @@
 #ifndef GAME_CLASS_10BF1C40_UNKNOWN40_H
 #define GAME_CLASS_10BF1C40_UNKNOWN40_H
 
+struct Struct_10BA91E0;
+
+// The object at this+0x40: slot 70 gives a pointer to a vector, slot 71 a float.
 class Class_10BF1C40_Unknown40
 {
 public:
@@ -76,7 +79,7 @@ public:
     virtual void Virtual67();
     virtual void Virtual68();
     virtual void Virtual69();
-    virtual void Virtual70();
+    virtual Struct_10BA91E0* Virtual70();
     virtual float Virtual71();
 };
 

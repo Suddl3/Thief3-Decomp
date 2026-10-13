@@ -3,6 +3,9 @@
 #ifndef GAME_CLASS_10B27220_H
 #define GAME_CLASS_10B27220_H
 
+class cString;
+class Class_10B270D0_Unknown30;
+
 class Class_10B27220
 {
 public:
@@ -12,7 +15,12 @@ public:
 
     char Unknown00[8];
     char* m_Active;
-    char Unknown0C[0x28];
+    char Unknown0C[8];
+    cString* Unknown14;
+    char Unknown18[8];
+    int* Unknown20;
+    char Unknown24[0xC];
+    Class_10B270D0_Unknown30* Unknown30;
     float m_Elapsed;
     bool m_StopPending;
     char Pad39[0x3];

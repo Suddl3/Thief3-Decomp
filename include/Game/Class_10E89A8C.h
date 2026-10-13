@@ -3,6 +3,8 @@
 #ifndef GAME_CLASS_10E89A8C_H
 #define GAME_CLASS_10E89A8C_H
 
+extern void* DAT_10e89a8c[];
+
 class Class_10E89A8C
 {
 public:

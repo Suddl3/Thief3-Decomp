@@ -10,8 +10,10 @@ class Class_1091A590
 public:
     ~Class_1091A590();
 
+    // The destructor destroys both strings; the element loops clear them as plain words.
     cString Unknown00;
     cString Unknown04;
+    char Unknown08[0xc];
 };
 
 #endif // GAME_CLASS_1091A590_H

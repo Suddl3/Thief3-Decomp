@@ -6,7 +6,7 @@
 class Class_10ABFB00_Member
 {
 public:
-    virtual void Virtual0(float* A, float* B, int C);
+    virtual void Virtual0(float* A, float* B, float C);
 };
 
 #endif // GAME_CLASS_10ABFB00_MEMBER_H

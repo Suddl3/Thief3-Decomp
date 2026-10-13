@@ -19,12 +19,6 @@ public:
     char Unknown30[8];
     int Unknown38;
     char Unknown3C[8];
-    short Unknown44;
-    short Unknown46;
-    short Unknown48;
-    short Unknown4A;
-    short Unknown4C;
-    char Pad4E[0x2];
 };
 
 #endif // GAME_CLASS_10C07070_H

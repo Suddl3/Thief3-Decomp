@@ -3,14 +3,20 @@
 #ifndef GAME_CLASS_10E49B08_H
 #define GAME_CLASS_10E49B08_H
 
+#include "Core/Core.h"
+
 class Class_10E49B08
 {
 public:
+    // Virtual table rows in table order.
     virtual void Virtual0();
-    virtual void Virtual1();
+    virtual void Virtual1(int A, int B, int C, DWORD D);
     virtual void Virtual2(float A, float B, float C, float* D, float* E, float* F, float* G);
     virtual void Virtual3();
     virtual void GetLuminance(float A, float B, float C, float* Out);
+    virtual void Virtual5();
+    virtual void Virtual6();
+    virtual void FUN_10929b70(int A, int B, int C, FVector* D, FLOAT E);
 };
 
 #endif // GAME_CLASS_10E49B08_H

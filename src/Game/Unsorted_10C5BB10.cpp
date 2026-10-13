@@ -3,26 +3,9 @@
 // The placement delete that pairs with Ion Storm's new.
 #include "Game/cString.h"
 #include "Game/Struct_10C5BA20.h"
+#include "Game/Class_10C5BA20.h"
 #include "Game/Class_10C5BB10.h"
 #include "Game/Class_10C5BB10_Unknown18.h"
-
-// Class_10C5BA20 as include/Game/Class_10C5BA20.h declares it, plus the constructor the
-// new-expression below inlines (it stores -1.0f into Unknown1C and Unknown20, so those are float).
-class Class_10C5BA20
-{
-public:
-    Class_10C5BA20() : Unknown08(false), Unknown1C(-1.0f), Unknown20(-1.0f), Unknown24(0) {}
-    Class_10C5BA20* CopyFrom(const Class_10C5BA20& A);
-
-    cString Unknown00;
-    cString Unknown04;
-    bool Unknown08;
-    Struct_10C5BA20 Unknown0C;
-    int Unknown18;
-    float Unknown1C;
-    float Unknown20;
-    int Unknown24;
-};
 
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 

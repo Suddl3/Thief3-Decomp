@@ -3,10 +3,26 @@
 #ifndef GAME_CLASS_10B9BEB0_H
 #define GAME_CLASS_10B9BEB0_H
 
+class Class_10BF8DD0;
+class Class_10BBAE50;
+class Class_10B9D530;
+class Class_10BBD9D0;
+class Class_10BAC990;
+class Class_10BF90A0;
+
 class Class_10B9BEB0
 {
 public:
     void FUN_10b9beb0();
+
+    // Owned objects: FUN_10b9beb0 calls each one and deletes it.
+    Class_10BF8DD0* Unknown00;
+    Class_10BBAE50* Unknown04;
+    Class_10B9D530* Unknown08;
+    Class_10BBD9D0* Unknown0C;
+    Class_10BAC990* Unknown10;
+    int Unknown14;
+    Class_10BF90A0* Unknown18;
 };
 
 #endif // GAME_CLASS_10B9BEB0_H

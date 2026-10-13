@@ -9,7 +9,7 @@ struct Struct_10BBFEF0;
 class Class_10BBFEF0
 {
 public:
-    void GetFirst(Class_10BBEFC0* p1);
+    int GetFirst(Class_10BBEFC0* p1);
 
     Struct_10BBFEF0* Unknown00;
 };

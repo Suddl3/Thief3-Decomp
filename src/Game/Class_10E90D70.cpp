@@ -2,10 +2,9 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Game/cIntArray.h"
+#include "Game/Class_10E90C58.h"
 
 class Class_10BC4BE0_Member;
-
-class Class_10E90C58;
 
 double GetTimeSeconds();
 
@@ -13,19 +12,6 @@ void AcquireSingleton();
 
 // Ion Storm's placement new (0x10905C10).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
-
-class Class_10E90C58
-{
-public:
-    virtual void FUN_10bc4be0();
-
-    Class_10E90C58(void* Owner)
-    {
-        Unknown04 = (Class_10BC4BE0_Member*)Owner;
-    }
-
-    Class_10BC4BE0_Member* Unknown04;
-};
 
 class Class_10E90D70
 {

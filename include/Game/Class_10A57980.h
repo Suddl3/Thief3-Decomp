@@ -3,6 +3,9 @@
 #ifndef GAME_CLASS_10A57980_H
 #define GAME_CLASS_10A57980_H
 
+class Class_1098E330;
+class Class_10A248C0;
+
 class Class_10A57980
 {
 public:
@@ -124,7 +127,7 @@ public:
     virtual void Virtual115();
     virtual void Virtual116();
     virtual void Virtual117();
-    virtual void Virtual118();
+    virtual void Virtual118(int A);
     virtual void Virtual119();
     virtual void Virtual120();
     virtual void Virtual121(int A);
@@ -134,7 +137,17 @@ public:
     void FUN_10a57980(int A, int B);
     void FUN_10a51710(int A);
 
-    char Unknown04[0x1E4];
+    char Unknown04[0x124];
+    Class_1098E330** Unknown128;
+    char Unknown12C[0x28];
+    int Unknown154;
+    char Unknown158[0x4];
+    int* Unknown15C;
+    char Unknown160[0x28];
+    Class_10A248C0* Unknown188;
+    char Unknown18C[0x2c];
+    char Unknown1B8;
+    char Unknown1B9[0x2f];
     int Unknown1E8;
     int Unknown1EC;
     int Unknown1F0;

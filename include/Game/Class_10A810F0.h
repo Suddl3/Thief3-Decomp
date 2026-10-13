@@ -5,9 +5,13 @@
 
 #include "Game/cString.h"
 
+extern const char DAT_10e6c100[];
+
 class Class_10A810F0
 {
 public:
+    Class_10A810F0() { Unknown00.FUN_1090a590(DAT_10e6c100); }
+
     cString Unknown00;
 };
 

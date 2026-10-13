@@ -3,14 +3,18 @@
 #ifndef GAME_CLASS_10E50928_H
 #define GAME_CLASS_10E50928_H
 
+class Class_10984CF0;
+
 class Class_10E50928
 {
 public:
     virtual void Virtual0();
-    virtual void Virtual1();
+    virtual Class_10984CF0* FUN_10a2fab0();
     virtual int IsSameName(const Class_10E50928* Other);
 
     const char* m_Name;
+    int Unknown08;
+    int Unknown0C;
 };
 
 #endif // GAME_CLASS_10E50928_H

@@ -4,6 +4,7 @@
 #define GAME_CLASS_109B6D50_H
 
 class cString;
+struct Struct_10C26890;
 
 class Class_109B6D50
 {
@@ -14,6 +15,7 @@ public:
     bool FUN_109b6d50(int A);
     void FUN_109bf7f0(int A, float B);
     void FUN_109b6d10(int A);
+    void FUN_109bc5c0(int A, const Struct_10C26890& B, const cString& C);
 
     char Pad00[0x1];
 };

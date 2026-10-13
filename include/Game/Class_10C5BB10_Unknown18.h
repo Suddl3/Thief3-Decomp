@@ -3,11 +3,14 @@
 #ifndef GAME_CLASS_10C5BB10_UNKNOWN18_H
 #define GAME_CLASS_10C5BB10_UNKNOWN18_H
 
-// The table's key hasher: slot 0 gives the bytes HashBytes hashes.
+class Class_10C5B990;
+
+// The table's key hasher: slot 0 gives the bytes HashBytes hashes; slot 1 compares a key with a node's key.
 class Class_10C5BB10_Unknown18
 {
 public:
     virtual void Virtual0(const int& Key, const void** Data, int* Length);
+    virtual int Virtual1(const int& Key, const Class_10C5B990& Node);
 };
 
 #endif // GAME_CLASS_10C5BB10_UNKNOWN18_H

@@ -2,27 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Game/cIntArray.h"
-
-class Class_10AAB7D0
-{
-public:
-    ~Class_10AAB7D0()
-    {
-        SetCount(0);
-        if (m_ByteCapacity)
-        {
-            GetAllocator()->Virtual5(m_Data);
-            m_Data = 0;
-            m_ByteCapacity = 0;
-        }
-    }
-
-    int m_Count;
-    int m_ByteCapacity;
-    void* m_Data;
-
-    void SetCount(int NewCount);
-};
+#include "Game/Class_10AAB7D0.h"
 
 class Class_10E6DA64
 {

@@ -1,6 +1,7 @@
 // Game/Class_10E9925C_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
+#include "Game/Class_109B6D50.h"
 #include "Game/cString.h"
 
 struct Struct_10C26890
@@ -8,20 +9,6 @@ struct Struct_10C26890
     int Unknown00;
     int Unknown04;
     int Unknown08;
-};
-
-class Class_109B6D50
-{
-public:
-    void FUN_109bf5f0(int A, const cString& B);
-    int FUN_109b6c50(int A);
-    void FUN_109c33f0(int A, const cString& B);
-    bool FUN_109b6d50(int A);
-    void FUN_109bf7f0(int A, float B);
-    void FUN_109b6d10(int A);
-    void FUN_109bc5c0(int A, const Struct_10C26890& B, const cString& C);
-
-    char Pad00[0x1];
 };
 
 class Class_10E9925C

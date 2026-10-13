@@ -7,6 +7,8 @@
 
 struct Struct_10B53A00;
 
+extern void* DAT_10e81668[];
+
 class Class_10E81668 : public Class_10E7E4E0
 {
 public:

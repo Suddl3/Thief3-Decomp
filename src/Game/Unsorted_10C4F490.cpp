@@ -1,6 +1,7 @@
 // Game/Unsorted_10C4F490.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10A68AE0.h"
+#include "Game/Class_10C4EDA0.h"
 
 struct Struct_10C4F870
 {
@@ -14,16 +15,6 @@ struct Item_10C4F870
     int Unknown00;
     Struct_10C4F870 Unknown04;
     float Unknown10;
-};
-
-class Class_10C4EDA0
-{
-public:
-    void Resize(int Count);
-
-    int m_Count;
-    int m_Capacity;
-    Item_10C4F870* m_Items;
 };
 
 class Class_10C4F870
@@ -93,6 +84,6 @@ int Class_10C4F870::AddItem(const Struct_10C4F870& A, float B)
     Class_10C4EDA0* Array = &m_Items;
     int Index = Array->m_Count;
     Array->Resize(Index + 1);
-    Array->m_Items[Index] = Item;
+    ((Item_10C4F870*)Array->m_Items)[Index] = Item;
     return Item.Unknown00;
 }

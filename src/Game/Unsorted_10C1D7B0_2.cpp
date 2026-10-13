@@ -3,16 +3,10 @@
 #include "Game/Class_10BAE580.h"
 #include "Game/Class_10C1F4D0.h"
 #include "Game/Class_10DC1750.h"
+#include "Game/Class_10DC1750_Result.h"
 #include "Game/Class_10FF667C.h"
 
 class Class_10E991C4;
-
-class Class_10DC1750_Result
-{
-public:
-    char Unknown00[0x1C];
-    Class_10BAE580 Unknown1C;
-};
 
 class Class_10E991C4
 {
@@ -34,7 +28,7 @@ struct Struct_10C1F4D0
 void Class_10E991C4::FUN_10c1f420(int A)
 {
     Class_10DC1750_Result* Result = Unknown04->FUN_10dc1750();
-    Result->Unknown1C.FUN_10bae580(A, this);
+    ((Class_10BAE580*)&Result->Unknown1C)->FUN_10bae580(A, this);
 }
 
 // FUNCTION: 0x10C1F4D0 ?FUN_10c1f4d0@Class_10C1F4D0@@QAEHPAUStruct_10C1F4D0@@@Z

@@ -5,21 +5,7 @@
 #include "Game/Class_10B473D0.h"
 #include "Game/Class_10AAB5C0.h"
 #include "Game/cIntArray.h"
-
-class Class_10B3A460
-{
-public:
-    Class_10B3A460* GetEntry(int A);
-
-    char Unknown00;
-    char Unknown01;
-    char Pad02[0x2];
-    float Unknown04;
-    char Pad08[0x4];
-    char Unknown0C[0x10];
-    int m_Index;
-    char Unknown20[0xC];
-};
+#include "Game/Class_10B3A460.h"
 
 Class_10B3A460* GetEntries();
 
@@ -50,7 +36,7 @@ void Class_10B47AB0::FUN_10b47850(int A, int B, float C, int D, int E, int F)
     Unknown08->FUN_10b7abb0(0x3f800000);
     Unknown08->FUN_10b7b460(D, E, 0, F);
     Unknown08->FUN_10b7b610(B, F);
-    if (GetEntries()->GetEntry(((Class_10AAB5C0*)Unknown08)->GetUnknown08())->Unknown01)
+    if (GetEntries()->GetEntry(((Class_10AAB5C0*)Unknown08)->GetUnknown08())->Pad01[0])
     {
         ((Class_10B473D0*)this)->FUN_10b473d0();
     }

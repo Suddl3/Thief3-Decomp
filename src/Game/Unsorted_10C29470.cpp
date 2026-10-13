@@ -1,26 +1,7 @@
 // Game/Unsorted_10C29470.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-#include "Game/cIntArray.h"
-
-class Class_10BBA080;
-
-class Class_10C29410
-{
-public:
-    void Enqueue(int Value);
-    void Start(int Value);
-    void Update();
-
-    Class_10BBA080* m_Random;
-    cIntArray m_Queue;
-    char Pad10[0x8];
-    float m_EndTime;
-    bool Unknown1C;
-    bool Unknown1D;
-    char Pad1E[0x2];
-    float Unknown20;
-};
+#include "Game/Class_10C29410.h"
 
 double GetTimeSeconds();
 

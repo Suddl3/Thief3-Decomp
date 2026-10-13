@@ -1,28 +1,12 @@
 // Game/Class_10E7A768.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10B19300.h"
+#include "Game/Class_10E7A768.h"
 #include "Game/Object_10B22790.h"
 
 struct Struct_10B226C0
 {
     int Unknown00[5];
-};
-
-class Class_10E7A768
-{
-public:
-    Class_10E7A768(int A, int B);
-    virtual ~Class_10E7A768();
-
-    int Unknown04;
-    Object_10B22790* m_Objects[34];
-    Object_10B22790* Unknown90;
-    Object_10B22790* Unknown94;
-    int Unknown98;
-    int Unknown9C;
-    int UnknownA0;
-    bool UnknownA4;
-    int UnknownA8;
 };
 
 Class_10B19300* FUN_10b190e0();

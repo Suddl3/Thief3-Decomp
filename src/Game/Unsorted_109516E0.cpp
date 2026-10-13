@@ -9,22 +9,9 @@
 #include "Game/Struct_Zero4.h"
 #include "Game/Struct_Zero5.h"
 #include "Game/Class_10E4AC6C.h"
+#include "Game/Class_10951900.h"
 
 extern Class_10939570* DAT_10f323fc;
-
-class Class_10951900
-{
-public:
-    void Reset();
-    void Acquire(int* A, int B);
-
-    char Unknown00[4];
-    int m_Flags;
-    char Unknown08[0x18];
-    void* m_Handle;
-    char Unknown24[4];
-    int m_Mode;
-};
 
 // FUNCTION: 0x10951780 ??0Class_10E4AC6C@@QAE@XZ
 Class_10E4AC6C::Class_10E4AC6C() : Unknown04(0)
@@ -49,7 +36,7 @@ void Class_10951900::Acquire(int* A, int B)
     m_Mode = B;
     if (B)
     {
-        m_Handle = DAT_10f323fc->FUN_1093bd40(A, 0, 0);
+        m_Handle = (Class_10953590*)DAT_10f323fc->FUN_1093bd40(A, 0, 0);
         if (!m_Handle)
             m_Mode = 0;
         else if (m_Mode == 1)

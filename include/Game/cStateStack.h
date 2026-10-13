@@ -3,9 +3,9 @@
 #ifndef GAME_CSTATESTACK_H
 #define GAME_CSTATESTACK_H
 
-#include "Game/Class_10B9E410_Item.h"
-
+class Class_10B9E410_Item;
 class Class_10B9E410_Member;
+struct Class_10B9E410_Unknown0C;
 
 class cStateStack
 {
@@ -41,12 +41,13 @@ public:
     void PopToBaseEx(int A, int B);
 
     char Unknown00[0xC];
-    int Unknown0C;
+    Class_10B9E410_Unknown0C* Unknown0C;
+    // The item stack: m_Count, Unknown14 and m_Stack are one cIntArray (Count, capacity, Data) at 0x10.
     int m_Count;
     char Unknown14[4];
     Class_10B9E410_Item** m_Stack;
-    int Unknown1C;
-    int Unknown20;
+    float Unknown1C;
+    float Unknown20;
     char Unknown24[0x14];
     Class_10B9E410_Member* m_Member;
 };
