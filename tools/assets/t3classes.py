@@ -461,6 +461,8 @@ class Emitter:
         self.struct_package: Dict[int, str] = {}
         self.used_enums: Dict[str, Tuple[Scope, List[str]]] = {}
         self.used_structs: List[Scope] = []
+        self.native_types: Dict[Tuple[str, str], str] = {}   # natives.txt: (class, member) -> C++ type
+        self.native_used: Dict[str, Set[str]] = {}
 
     def member_name(self, name: str) -> str:
         return name + "_" if name in CPP_KEYWORDS else name
@@ -505,8 +507,11 @@ class Emitter:
             a = max(a, 4 if f.bit is not None else self.cpp_type(f.type)[1])
         return a
 
-    def members(self, fields_: List[Field], start: int, end: int, comment_enums: bool = True) -> List[str]:
-        """Member lines from `start` to `end`, with padding where C++ would place a member early."""
+    def members(self, fields_: List[Field], start: int, end: int, comment_enums: bool = True,
+                owner: str = "") -> List[str]:
+        """Member lines from `start` to `end`, with padding where C++ would place a member early. A
+        member of `owner` that natives.txt types (a C++ object the script only reserves room for) takes
+        that type."""
         out, cur = [], start
         for f in fields_:
             name = self.member_name(f.var.name)
@@ -514,6 +519,9 @@ class Emitter:
                 out.append(f"    BITFIELD {name}:1;")
                 continue
             ctype, a = ("BITFIELD", 4) if f.bit is not None else self.cpp_type(f.type)
+            if (owner, name) in self.native_types and f.bit is None:
+                ctype = self.native_types[(owner, name)]
+                self.native_used.setdefault(owner, set()).add(ctype)
             if align(cur, a) < f.offset:
                 out.append(f"    BYTE Pad{cur:X}[0x{f.offset - cur:X}];")
             elif align(cur, a) > f.offset:
@@ -572,9 +580,26 @@ def registration(classes, cpp: str, virtuals: Optional[Dict[str, List[str]]] = N
     return lines
 
 
-def generate(model: Model, virtuals: Optional[Dict[str, List[str]]] = None) -> Dict[str, str]:
-    """Package -> header text; `virtuals`: each class's overrides of UObject's slots (vtables.py)."""
+def load_natives(path: Path) -> Dict[Tuple[str, str], str]:
+    """natives.txt: `Class.member Type` lines, the C++ type of a member the script declares as room only
+    (`var native int pad`): an object with a constructor and a destructor, which the class's own run."""
+    out = {}
+    if path.is_file():
+        for line in path.read_text(encoding="utf-8").splitlines():
+            line = line.split("#", 1)[0].strip()
+            if line:
+                member, ctype = line.split(None, 1)
+                cls, name = member.split(".", 1)
+                out[(cls, name)] = ctype.strip()
+    return out
+
+
+def generate(model: Model, virtuals: Optional[Dict[str, List[str]]] = None,
+             natives: Optional[Dict[Tuple[str, str], str]] = None) -> Dict[str, str]:
+    """Package -> header text; `virtuals`: the virtual functions each class declares (vtables.py for the
+    slots Core.h's UObject names, vslots.py for the rest)."""
     em = Emitter(model)
+    em.native_types = natives or {}
     classes = model.classes
     # The native classes with a script, Ion Storm's without one (opaque), and their supers.
     wanted: List[str] = []
@@ -591,6 +616,8 @@ def generate(model: Model, virtuals: Optional[Dict[str, List[str]]] = None) -> D
     bodies: Dict[str, List[str]] = collections.defaultdict(list)
     refs: Dict[str, Set[str]] = collections.defaultdict(set)
     depends: Dict[str, Set[str]] = collections.defaultdict(set)
+    game_refs: Dict[str, Set[str]] = collections.defaultdict(set)  # the game's own classes the methods name
+    native_includes: Dict[str, Set[str]] = collections.defaultdict(set)  # and the ones members hold by value
     for cpp in wanted:
         n = classes[cpp]
         fields_, start, end = model.class_layout(cpp)
@@ -602,7 +629,22 @@ def generate(model: Model, virtuals: Optional[Dict[str, List[str]]] = None) -> D
             raise ValueError(f"{cpp}: the script lays out 0x{align(end, 4):X} bytes, the game registers 0x{n.size:X}")
         em.collect(fields_)
         lines = [f"class {cpp} : public {n.super}", "{"] + registration(classes, cpp, virtuals) + ["", "public:"]
-        lines += em.members(fields_, start, n.size if not fields_ else end) if fields_ or n.size > start else []
+        lines += em.members(fields_, start, n.size if not fields_ else end, owner=cpp) if fields_ or n.size > start else []
+        for ctype in em.native_used.get(cpp, ()):
+            if (ROOT / "include" / "Game" / f"{ctype}.h").is_file():
+                native_includes[n.package].add(f'#include "Game/{ctype}.h"')
+        own = ROOT / "include" / n.package / f"{cpp}.h"
+        if own.is_file():  # its member functions, kept by hand (as Unreal's headers include AActor.h)
+            lines += ["", "public:", f'#include "{n.package}/{cpp}.h"']
+            text = re.sub(r"//.*", "", own.read_text(encoding="utf-8"))
+            for word in set(re.findall(r"[A-Za-z_]\w*", text)):
+                if word in classes and word != cpp:
+                    refs[n.package].add(word)
+                elif (ROOT / "include" / "Game" / f"{word}.h").is_file():
+                    m = re.search(rf"^(class|struct) {word}\b[^;]*$", (ROOT / "include" / "Game" / f"{word}.h").read_text(
+                        encoding="utf-8", errors="replace"), re.M)
+                    if m:
+                        game_refs[n.package].add(f"{m.group(1)} {word};")
         lines += ["};", f"T3_CHECK_SIZE({cpp}, 0x{n.size:X});", ""]
         bodies[n.package] += lines
         if n.super in classes and classes[n.super].package != n.package:
@@ -661,8 +703,9 @@ def generate(model: Model, virtuals: Optional[Dict[str, List[str]]] = None) -> D
                 "// tools/assets/t3classes.py: do not edit.",
                 f"#ifndef {guard}", f"#define {guard}", "", '#include "Core/Core.h"']
         head += [f'#include "{d}/{d}Classes.h"' for d in order if d in depends[pkg]]
+        head += sorted(native_includes[pkg])
         forward = sorted(refs[pkg])
-        head += [""] + [f"class {c};" for c in forward] + [""] if forward else [""]
+        head += [""] + [f"class {c};" for c in forward] + sorted(game_refs[pkg]) + [""] if forward or game_refs[pkg] else [""]
         text = head + enum_lines[pkg] + struct_lines[pkg] + bodies[pkg] + [f"#endif"]
         out[pkg] = "\n".join(text).rstrip() + "\n"
     return out
@@ -760,11 +803,17 @@ def main() -> None:
     from common import Project  # noqa: E402
     p = Project()
     if p.exe and p.exe.is_file():  # the vtables are read from the exe, which stays local
+        import vslots  # noqa: E402
         import vtables  # noqa: E402
-        virtuals = vtables.declarations(p)
+        virtuals = vtables.declarations(p)  # UObject's slots, as Core.h names them
+        slots = vslots.Model(p)             # and every slot past them, in the class that introduces it
+        for cpp in classes:
+            more = slots.declarations(cpp)
+            if more:
+                virtuals[cpp] = virtuals.get(cpp, []) + more
     else:
         print("no exe: the headers declare no virtual functions (tools/agent/vtables.py)")
-    headers = generate(model, virtuals)
+    headers = generate(model, virtuals, load_natives(ROOT / "config" / args.version / "natives.txt"))
     out = Path(args.output)
     for pkg, text in headers.items():
         path = out / pkg / f"{pkg}Classes.h"
