@@ -308,8 +308,8 @@ def main() -> None:
                 if not units or cls in held or cls in finished or len(units) > args.max_units or set(units) & busy:
                     continue
                 header = header_of(p, cls)
-                if header is None:
-                    continue
+                if header is None or header.name.endswith("Classes.h"):
+                    continue  # a native class's slots and their names are the lead's (vslots.py, adopt.py)
                 snapshot(p, cls, header, units)
                 rec = {"class": cls, "id": args.id, "header": header.relative_to(p.main).as_posix(), "units": units,
                        "at": time.time()}
