@@ -2,16 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Game/Class_10B39530.h"
-
-class AGarrett
-{
-public:
-    char Unknown00[0x450];
-    unsigned bInBowDraw : 1;
-    unsigned isCrouching : 1;
-    char Unknown454[0xF8];
-    char Unknown54C;
-};
+#include "T3Player/T3PlayerClasses.h"
 
 class Class_10AA82D0
 {
@@ -44,7 +35,7 @@ public:
 // FUNCTION: 0x10B4E6A0 ?FUN_10b4e6a0@Class_10E7EA48@@QAEXPAVAGarrett@@@Z
 void Class_10E7EA48::FUN_10b4e6a0(AGarrett* Garrett)
 {
-    if (Garrett->Unknown54C == 3)
+    if (Garrett->InputSpeed == 3)
     {
         ((Class_10B39530*)GetLinkedObject())->Play(0, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
         return;

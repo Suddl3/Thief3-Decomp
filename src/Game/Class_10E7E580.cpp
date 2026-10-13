@@ -1,17 +1,11 @@
 // Game/Class_10E7E580.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10AA82D0.h"
 #include "Game/Class_10AC92E0.h"
 #include "Game/Class_10B39530.h"
 #include "Game/Class_10E7E580.h"
-
-class AGarrett
-{
-public:
-    char Unknown00[0x450];
-    unsigned bInBowDraw : 1;
-    unsigned isCrouching : 1;
-};
+#include "T3Player/T3PlayerClasses.h"
 
 class Class_10F3A3D8
 {

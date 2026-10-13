@@ -6,12 +6,15 @@
 
 #include "Core/Core.h"
 #include "Engine/EngineClasses.h"
+#include "Game/Class_10B9C9A0.h"
+#include "Game/Class_10BBF5D0.h"
 
 class AAIBehaviorModel;
 class AAICombatModel;
 class AAIFactionModel;
 class AAIMovementModel;
 class AAISensoryModel;
+class cIntArray;
 
 enum EEvidenceType
 {
@@ -134,6 +137,9 @@ public:
     virtual ~AAIModel();                    // slot 2: 0x10962880
 
 public:
+
+public:
+#include "AICore/AAIModel.h"
 };
 T3_CHECK_SIZE(AAIModel, 0xC0);
 
@@ -145,6 +151,9 @@ public:
     virtual ~AAIBehaviorModel();            // slot 2: 0x10962920
 
 public:
+
+public:
+#include "AICore/AAIBehaviorModel.h"
 };
 T3_CHECK_SIZE(AAIBehaviorModel, 0xC0);
 
@@ -156,6 +165,9 @@ public:
     virtual ~AAICombatModel();              // slot 2: 0x109629C0
 
 public:
+
+public:
+#include "AICore/AAICombatModel.h"
 };
 T3_CHECK_SIZE(AAICombatModel, 0xC0);
 
@@ -167,6 +179,9 @@ public:
     virtual ~AAIContextVolume();            // slot 2: 0x10B93430
 
 public:
+
+public:
+#include "AICore/AAIContextVolume.h"
 };
 T3_CHECK_SIZE(AAIContextVolume, 0x148);
 
@@ -178,6 +193,9 @@ public:
     virtual ~AAIFactionModel();             // slot 2: 0x10962A60
 
 public:
+
+public:
+#include "AICore/AAIFactionModel.h"
 };
 T3_CHECK_SIZE(AAIFactionModel, 0xC0);
 
@@ -197,6 +215,9 @@ public:
     FLOAT TurnBlendOutTime;                 // 0xD4
     FLOAT ConversationTurnSpeedMultiplier;  // 0xD8
     BITFIELD bKillBoneControllerOnMeleeAttack:1; // 0xDC
+
+public:
+#include "AICore/AAIMovementModel.h"
 };
 T3_CHECK_SIZE(AAIMovementModel, 0xE0);
 
@@ -210,9 +231,21 @@ public:
     virtual void Modify();                  // slot 6: 0x10BBF010
     virtual void PostLoad();                // slot 7: 0x10BBEF10
     virtual void Serialize(FArchive& Ar);   // slot 8: 0x10BBEFD0
+    virtual int Virtual93(int,int,int,int);                 // slot 93: 0x10BBEEE0
+    virtual int Virtual94();                                // slot 94: 0x10B59F70
+    virtual int Virtual95(AAIPathPoint* Param);             // slot 95: 0x10A54CD0
+    virtual bool Virtual96();                               // slot 96: 0x109E3CA0
+    virtual void Virtual27();                               // slot 27: 0x10CD3A40, UObject's
+    virtual void Virtual28(int,int,int);                    // slot 28: 0x10BBEF30, UObject's
+    virtual void Virtual29(int,int);                        // slot 29: 0x10BBEF50, UObject's
+    virtual void Virtual30();                               // slot 30: 0x10BBEF70, UObject's
+    virtual void Virtual72(int);                            // slot 72: 0x10BBEEC0, AActor's
 
 public:
-    INT pad;                                // 0xC0
+    Class_10BBF5D0 pad;                     // 0xC0
+
+public:
+#include "AICore/AAIPathPoint.h"
 };
 T3_CHECK_SIZE(AAIPathPoint, 0xC4);
 
@@ -222,6 +255,13 @@ class AAIPawn : public APawn
 
 public:
     virtual ~AAIPawn();                     // slot 2: 0x10B97680
+    virtual float Virtual110();                             // slot 110: 0x10BC2FB0
+    virtual float GetLightLevel();                          // slot 69: 0x10BC39D0, AActor's
+    virtual bool Virtual74(int);                            // slot 74: 0x10BC2F50, AActor's
+    virtual bool Virtual75(int);                            // slot 75: 0x10BC2F80, AActor's
+    virtual float Virtual76(int,int);                       // slot 76: 0x10BC3BA0, AActor's
+    virtual void Virtual100();                              // slot 100: 0x10BC3190, APawn's
+    virtual void Virtual105();                              // slot 105: 0x10BC3DE0, APawn's
 
 public:
     BITFIELD DiagnosticsOn:1;               // 0x208
@@ -236,6 +276,9 @@ public:
     UClass* OldFactionModelClass_MaintainedForCompatibility; // 0x22C
     AAIFactionModel* FactionModel;          // 0x230
     FLOAT PickpocketingAngleThreshold;      // 0x234
+
+public:
+#include "AICore/AAIPawn.h"
 };
 T3_CHECK_SIZE(AAIPawn, 0x238);
 
@@ -247,10 +290,21 @@ public:
     virtual void Destroy();                 // slot 0: 0x10B9C520
     virtual ~AAIPawnController();           // slot 2: 0x10962790
     virtual void Serialize(FArchive& Ar);   // slot 8: 0x10B9BE00
+    virtual void Virtual106();                              // slot 106: 0x10D660B0
+    virtual void Virtual107();                              // slot 107: 0x10D660B0, signature unknown
+    virtual void Virtual108();                              // slot 108: 0x10B9C7A0
+    virtual void Virtual60(int);                            // slot 60: 0x10B9BDA0, AActor's
+    virtual bool Virtual97(int);                            // slot 97: 0x10B9BC40, AController's
+    virtual void Virtual101();                              // slot 101: 0x10B9C4A0, AController's
+    virtual void Virtual102();                              // slot 102: 0x10B9BC10, AController's
+    virtual void Virtual105();                              // slot 105: 0x10B9BC60, AController's
 
 public:
     BITFIELD initialized:1;                 // 0x114
-    INT pad0;                               // 0x118
+    Class_10B9C9A0 pad0;                    // 0x118
+
+public:
+#include "AICore/AAIPawnController.h"
 };
 T3_CHECK_SIZE(AAIPawnController, 0x11C);
 
@@ -262,6 +316,9 @@ public:
     virtual ~AAISensoryModel();             // slot 2: 0x10962BA0
 
 public:
+
+public:
+#include "AICore/AAISensoryModel.h"
 };
 T3_CHECK_SIZE(AAISensoryModel, 0xC0);
 
@@ -273,6 +330,9 @@ public:
     virtual ~AAITaggedVolume();             // slot 2: 0x10B934D0
 
 public:
+
+public:
+#include "AICore/AAITaggedVolume.h"
 };
 T3_CHECK_SIZE(AAITaggedVolume, 0x148);
 
@@ -282,8 +342,15 @@ class AAddAIPoint : public AAIPathPoint
 
 public:
     virtual ~AAddAIPoint();                 // slot 2: 0x10B938D0
+    virtual void Virtual72(int);                            // slot 72: 0x10BC2BA0, AActor's
+    virtual int Virtual93(int,int,int,int);                 // slot 93: 0x10BC2B30, AAIPathPoint's
+    virtual int Virtual94();                                // slot 94: 0x10AFC110, AAIPathPoint's
+    virtual bool Virtual96();                               // slot 96: 0x10CD3A40, AAIPathPoint's
 
 public:
+
+public:
+#include "AICore/AAddAIPoint.h"
 };
 T3_CHECK_SIZE(AAddAIPoint, 0xC4);
 
@@ -293,8 +360,13 @@ class AChangeDirectionPoint : public AAIPathPoint
 
 public:
     virtual ~AChangeDirectionPoint();       // slot 2: 0x10B93970
+    virtual void Virtual72(int);                            // slot 72: 0x10BC2C10, AActor's
+    virtual int Virtual94();                                // slot 94: 0x10AA9440, AAIPathPoint's
 
 public:
+
+public:
+#include "AICore/AChangeDirectionPoint.h"
 };
 T3_CHECK_SIZE(AChangeDirectionPoint, 0xC4);
 
@@ -304,8 +376,16 @@ class APatrolPoint : public AAIPathPoint
 
 public:
     virtual ~APatrolPoint();                // slot 2: 0x10B93E00
+    virtual void Virtual72(int);                            // slot 72: 0x10BC2E50, AActor's
+    virtual void Virtual90();                               // slot 90: 0x10CD3A40, AActor's
+    virtual int Virtual91();                                // slot 91: 0x10BC2EB0, AActor's
+    virtual int Virtual94();                                // slot 94: 0x109474F0, AAIPathPoint's
+    virtual int Virtual95(AAIPathPoint* Param);             // slot 95: 0x10BC2E20, AAIPathPoint's
 
 public:
+
+public:
+#include "AICore/APatrolPoint.h"
 };
 T3_CHECK_SIZE(APatrolPoint, 0xC4);
 
@@ -318,6 +398,9 @@ public:
     virtual void PostLoad();                // slot 7: 0x10BC2F00
 
 public:
+
+public:
+#include "AICore/ACityPopPoint.h"
 };
 T3_CHECK_SIZE(ACityPopPoint, 0xC4);
 
@@ -328,8 +411,12 @@ class ACitySectionPopulationInfo : public AInfo
 public:
     virtual ~ACitySectionPopulationInfo();  // slot 2: 0x10B940F0
     virtual void PostLoad();                // slot 7: 0x10BC2F20
+    virtual void Virtual60(int);                            // slot 60: 0x10BC2F40, AActor's
 
 public:
+
+public:
+#include "AICore/ACitySectionPopulationInfo.h"
 };
 T3_CHECK_SIZE(ACitySectionPopulationInfo, 0xC0);
 
@@ -342,6 +429,9 @@ public:
 
 public:
     BYTE DummyVariable;                     // 0xC0  EEvidenceType
+
+public:
+#include "AICore/AEnumEvidenceType.h"
 };
 T3_CHECK_SIZE(AEnumEvidenceType, 0xC4);
 
@@ -354,6 +444,9 @@ public:
 
 public:
     BYTE DummyVariable;                     // 0xC0  EInferenceType
+
+public:
+#include "AICore/AEnumInferenceType.h"
 };
 T3_CHECK_SIZE(AEnumInferenceType, 0xC4);
 
@@ -366,6 +459,9 @@ public:
 
 public:
     BYTE DummyVariable;                     // 0xC0  EStateType
+
+public:
+#include "AICore/AEnumStateType.h"
 };
 T3_CHECK_SIZE(AEnumStateType, 0xC4);
 
@@ -377,6 +473,9 @@ public:
     virtual ~AFocusPoint();                 // slot 2: 0x10B93FB0
 
 public:
+
+public:
+#include "AICore/AFocusPoint.h"
 };
 T3_CHECK_SIZE(AFocusPoint, 0xC0);
 
@@ -386,8 +485,15 @@ class AFormationPoint : public AAIPathPoint
 
 public:
     virtual ~AFormationPoint();             // slot 2: 0x10B93A10
+    virtual void Virtual72(int);                            // slot 72: 0x10BC2C90, AActor's
+    virtual int Virtual93(int,int,int,int);                 // slot 93: 0x10BC2B30, AAIPathPoint's
+    virtual int Virtual94();                                // slot 94: 0x10C382E0, AAIPathPoint's
+    virtual bool Virtual96();                               // slot 96: 0x10CD3A40, AAIPathPoint's
 
 public:
+
+public:
+#include "AICore/AFormationPoint.h"
 };
 T3_CHECK_SIZE(AFormationPoint, 0xC4);
 
@@ -397,8 +503,15 @@ class AFormationPointAbsolute : public AAIPathPoint
 
 public:
     virtual ~AFormationPointAbsolute();     // slot 2: 0x10B93AB0
+    virtual void Virtual72(int);                            // slot 72: 0x10BC2C90, AActor's
+    virtual int Virtual93(int,int,int,int);                 // slot 93: 0x10BC2B30, AAIPathPoint's
+    virtual int Virtual94();                                // slot 94: 0x10AA8050, AAIPathPoint's
+    virtual bool Virtual96();                               // slot 96: 0x10CD3A40, AAIPathPoint's
 
 public:
+
+public:
+#include "AICore/AFormationPointAbsolute.h"
 };
 T3_CHECK_SIZE(AFormationPointAbsolute, 0xC4);
 
@@ -408,8 +521,13 @@ class AHeadTurnPoint : public AAIPathPoint
 
 public:
     virtual ~AHeadTurnPoint();              // slot 2: 0x10B93B50
+    virtual void Virtual72(int);                            // slot 72: 0x10BC2D00, AActor's
+    virtual int Virtual94();                                // slot 94: 0x10B0FDB0, AAIPathPoint's
 
 public:
+
+public:
+#include "AICore/AHeadTurnPoint.h"
 };
 T3_CHECK_SIZE(AHeadTurnPoint, 0xC4);
 
@@ -419,8 +537,13 @@ class ALookPoint : public AAIPathPoint
 
 public:
     virtual ~ALookPoint();                  // slot 2: 0x10B93C20
+    virtual void Virtual72(int);                            // slot 72: 0x10BC2D90, AActor's
+    virtual int Virtual94();                                // slot 94: 0x10B2BB20, AAIPathPoint's
 
 public:
+
+public:
+#include "AICore/ALookPoint.h"
 };
 T3_CHECK_SIZE(ALookPoint, 0xC4);
 
@@ -432,6 +555,9 @@ public:
     virtual ~ANavMeshInsertionPoint();      // slot 2: 0x10B94050
 
 public:
+
+public:
+#include "AICore/ANavMeshInsertionPoint.h"
 };
 T3_CHECK_SIZE(ANavMeshInsertionPoint, 0xC0);
 
@@ -443,6 +569,9 @@ public:
     virtual ~ANavMeshSubtractionVolume();   // slot 2: 0x10B93570
 
 public:
+
+public:
+#include "AICore/ANavMeshSubtractionVolume.h"
 };
 T3_CHECK_SIZE(ANavMeshSubtractionVolume, 0x148);
 
@@ -454,6 +583,9 @@ public:
     virtual ~APlayAnimPoint();              // slot 2: 0x10B93C90
 
 public:
+
+public:
+#include "AICore/APlayAnimPoint.h"
 };
 T3_CHECK_SIZE(APlayAnimPoint, 0xC4);
 
@@ -465,6 +597,9 @@ public:
     virtual ~APlayBarkPoint();              // slot 2: 0x10B93D30
 
 public:
+
+public:
+#include "AICore/APlayBarkPoint.h"
 };
 T3_CHECK_SIZE(APlayBarkPoint, 0xC4);
 
@@ -474,8 +609,13 @@ class AWanderPoint : public APatrolPoint
 
 public:
     virtual ~AWanderPoint();                // slot 2: 0x10B93F10
+    virtual void Virtual72(int);                            // slot 72: 0x109E3C90, AActor's
+    virtual int Virtual94();                                // slot 94: 0x10B2FC00, AAIPathPoint's
 
 public:
+
+public:
+#include "AICore/AWanderPoint.h"
 };
 T3_CHECK_SIZE(AWanderPoint, 0xC4);
 
@@ -485,8 +625,15 @@ class UAI : public UAISubsystem
 
 public:
     virtual ~UAI();                         // slot 2: 0x10BBE660
+    virtual void Virtual31(int);                            // slot 31: 0x109E3C90, USubsystem's
+    virtual void Virtual32(int);                            // slot 32: 0x10BBE510, UAISubsystem's
+    virtual void Virtual33();                               // slot 33: 0x10CD3930, UAISubsystem's
+    virtual void Virtual34();                               // slot 34: 0x10D660B0, UAISubsystem's
 
 public:
+
+public:
+#include "AICore/UAI.h"
 };
 T3_CHECK_SIZE(UAI, 0x34);
 

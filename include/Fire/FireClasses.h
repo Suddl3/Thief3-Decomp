@@ -122,6 +122,7 @@ class UFractalTexture : public UTexture
 
 public:
     virtual void Unknown3C();               // slot 15: 0x10A69170
+    virtual void Virtual41();                               // slot 41
 
 public:
     INT UMask;                              // 0xDC
@@ -140,6 +141,13 @@ class UFireTexture : public UFractalTexture
 
 public:
     virtual ~UFireTexture();                // slot 2: 0x109DBFB0
+    virtual void Virtual32();                               // slot 32: 0x109D4AD0, UBitmap's
+    virtual void Virtual33();                               // slot 33: 0x109DC7C0, UBitmap's
+    virtual void Virtual35();                               // slot 35: 0x109D9100, UBitmap's
+    virtual void Virtual36();                               // slot 36: 0x109D9190, UBitmap's
+    virtual void Virtual37();                               // slot 37: 0x109D9270, UBitmap's
+    virtual void Virtual39();                               // slot 39: 0x109D8E60, UBitmap's
+    virtual void Virtual41();                               // slot 41: 0x109D90D0, UFractalTexture's
 
 public:
     BYTE SparkType;                         // 0xF4  ESpark
@@ -196,6 +204,13 @@ class UFluidTexture : public UWaterTexture
 
 public:
     virtual ~UFluidTexture();               // slot 2: 0x109DC170
+    virtual void Virtual32();                               // slot 32: 0x109D4C50, UBitmap's
+    virtual void Virtual33();                               // slot 33: 0x109DCC90, UBitmap's
+    virtual void Virtual35();                               // slot 35: 0x109DA660, UBitmap's
+    virtual void Virtual36();                               // slot 36: 0x109D9370, UBitmap's
+    virtual void Virtual37();                               // slot 37: 0x109D93A0, UBitmap's
+    virtual void Virtual39();                               // slot 39: 0x109D8E60, UBitmap's
+    virtual void Virtual41();                               // slot 41: 0x109D4B90, UFractalTexture's
 
 public:
 };
@@ -207,6 +222,13 @@ class UIceTexture : public UFractalTexture
 
 public:
     virtual ~UIceTexture();                 // slot 2: 0x109DC2E0
+    virtual void Virtual32();                               // slot 32: 0x109D4CF0, UBitmap's
+    virtual void Virtual33();                               // slot 33: 0x109DBCD0, UBitmap's
+    virtual void Virtual34();                               // slot 34: 0x109DADC0, UBitmap's
+    virtual void Virtual35();                               // slot 35: 0x109DADA0, UBitmap's
+    virtual void Virtual36();                               // slot 36: 0x109D4D00, UBitmap's
+    virtual void Virtual39();                               // slot 39: 0x109D8E60, UBitmap's
+    virtual void Virtual41();                               // slot 41: 0x10CD3930, UFractalTexture's
 
 public:
     UTexture* GlassTexture;                 // 0xF4
@@ -239,6 +261,13 @@ class UWaveTexture : public UWaterTexture
 
 public:
     virtual ~UWaveTexture();                // slot 2: 0x109DC0D0
+    virtual void Virtual32();                               // slot 32: 0x109D4C50, UBitmap's
+    virtual void Virtual33();                               // slot 33: 0x109DCA50, UBitmap's
+    virtual void Virtual35();                               // slot 35: 0x109D94C0, UBitmap's
+    virtual void Virtual36();                               // slot 36: 0x109D9370, UBitmap's
+    virtual void Virtual37();                               // slot 37: 0x109D93A0, UBitmap's
+    virtual void Virtual39();                               // slot 39: 0x109D8E60, UBitmap's
+    virtual void Virtual41();                               // slot 41: 0x109D4B90, UFractalTexture's
 
 public:
     BYTE BumpMapLight;                      // 0x1314
@@ -254,6 +283,13 @@ class UWetTexture : public UWaterTexture
 
 public:
     virtual ~UWetTexture();                 // slot 2: 0x109DC210
+    virtual void Virtual32();                               // slot 32: 0x109D4C50, UBitmap's
+    virtual void Virtual33();                               // slot 33: 0x109DBB00, UBitmap's
+    virtual void Virtual35();                               // slot 35: 0x109DA6A0, UBitmap's
+    virtual void Virtual36();                               // slot 36: 0x109D9370, UBitmap's
+    virtual void Virtual37();                               // slot 37: 0x109D93A0, UBitmap's
+    virtual void Virtual39();                               // slot 39: 0x109D8E60, UBitmap's
+    virtual void Virtual41();                               // slot 41: 0x109D4B90, UFractalTexture's
 
 public:
     UTexture* SourceTexture;                // 0x1314

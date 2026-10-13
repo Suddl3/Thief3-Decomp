@@ -2,20 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Core/Core.h"
-
-class ULinkDataObject : public UObject
-{
-public:
-    virtual void Destroy();
-    virtual void Serialize(FArchive& Ar);
-    virtual ~ULinkDataObject();
-
-    INT m_LinkFlavor;
-    INT m_pAssociatedLink;
-    FStringNoInit m_LinkComment;
-    FStringNoInit m_name;
-    FName m_GroupName;
-};
+#include "Core/CoreClasses.h"
 
 // FUNCTION: 0x1099F1B0 ??1ULinkDataObject@@UAE@XZ
 ULinkDataObject::~ULinkDataObject()

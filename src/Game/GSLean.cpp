@@ -1,16 +1,10 @@
 // Game/GSLean.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Core/Core.h"
 #include "Game/Class_10A18FA0.h"
 #include "Game/Class_10AC92E0.h"
-
-class AGarrett
-{
-public:
-    char Unknown00[0x450];
-    unsigned bInBowDraw : 1;
-    unsigned isCrouching : 1;
-};
+#include "T3Player/T3PlayerClasses.h"
 
 class Object_10A18FC0 : public Class_10A18FA0
 {

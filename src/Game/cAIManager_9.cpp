@@ -2,13 +2,9 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Core/Core.h"
+#include "AICore/AICoreClasses.h"
 
 class AAIController;
-
-class AAIPawnController
-{
-    DECLARE_CLASS(AAIPawnController, AAIController, 0x0, AICore)
-};
 
 class cIntArray
 {

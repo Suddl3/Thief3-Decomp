@@ -1,5 +1,6 @@
 // Game/Unsorted_1097B790.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Core/Core.h"
 #include "Game/cString.h"
 #include "Game/Class_1096BD50.h"
@@ -13,13 +14,9 @@
 #include "Game/Class_1097CBE0.h"
 #include "Game/USkeletalMesh.h"
 #include "Game/Class_1097B240_Node.h"
+#include "Engine/EngineClasses.h"
 
 class AActor;
-
-class APawn
-{
-    DECLARE_CLASS(APawn, AActor, 0x800, Engine)
-};
 
 class ULodMesh;
 

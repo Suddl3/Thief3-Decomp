@@ -9,17 +9,6 @@ extern Struct_10AA3520* DAT_10f35dec;
 class Class_10B21560 : public UObject
 {
 public:
-    virtual void Virtual20();
-    virtual void Virtual21();
-    virtual void Virtual22();
-    virtual void Virtual23();
-    virtual void Virtual24();
-    virtual void Virtual25();
-    virtual void Virtual26();
-    virtual void Virtual27();
-    virtual void Virtual28();
-    virtual void Virtual29();
-    virtual void Virtual30();
     virtual void Virtual31();
     virtual void Virtual32();
     virtual void Virtual33();

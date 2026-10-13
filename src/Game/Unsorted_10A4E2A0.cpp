@@ -1,13 +1,10 @@
 // Game/Unsorted_10A4E2A0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Core/Core.h"
 #include "Game/cIntArray.h"
 #include "Game/Class_10A4E630.h"
-
-class AActor
-{
-    DECLARE_CLASS(AActor, UObject, 0x800, Engine)
-};
+#include "Engine/EngineClasses.h"
 
 class Class_10B9D4B0_Result;
 

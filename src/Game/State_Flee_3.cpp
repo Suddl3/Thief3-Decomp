@@ -1,14 +1,10 @@
 // Game/State_Flee_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Struct_10BE9AC0.h"
+#include "Engine/EngineClasses.h"
 
 class Class_10BB89D0;
-
-class APawn
-{
-public:
-    void FUN_10a6ea30(int Flags, int Value);
-};
 
 class cTacticMoveToPoint
 {

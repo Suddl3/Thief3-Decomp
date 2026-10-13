@@ -1,16 +1,8 @@
 // Game/Class_10E7EA48.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10B39530.h"
 
-class AGarrett
-{
-public:
-    char Unknown00[0x450];
-    unsigned bInBowDraw : 1;
-    unsigned isCrouching : 1;
-    char Unknown454[0xF8];
-    char Unknown54C;
-};
+#include "Game/Class_10B39530.h"
+#include "T3Player/T3PlayerClasses.h"
 
 class Class_10AA82D0
 {
@@ -54,7 +46,7 @@ void Class_10E7EA48::FUN_10b4e5e0(AGarrett* Garrett)
     else
         ((Class_10B39530*)GetLinkedObject())->Play(0, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
     Unknown10 = 0;
-    Garrett->Unknown54C = 3;
+    Garrett->InputSpeed = 3;
     DAT_10f04aa0 = FUN_10abc0a0();
     FUN_10abc090(0.2f);
     FUN_10b1f6a0(Garrett, 0);

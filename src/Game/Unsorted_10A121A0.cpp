@@ -1,5 +1,6 @@
 // Game/Unsorted_10A121A0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Core/Core.h"
 #include "Game/cString.h"
 #include "Game/Class_10970890.h"
@@ -39,52 +40,6 @@ public:
 class Class_1098E330 : public AActor
 {
 public:
-    virtual void Virtual40();
-    virtual void Virtual41();
-    virtual void Virtual42();
-    virtual void Virtual43();
-    virtual void Virtual44();
-    virtual void Virtual45();
-    virtual void Virtual46();
-    virtual void Virtual47();
-    virtual void Virtual48();
-    virtual void Virtual49();
-    virtual void Virtual50();
-    virtual void Virtual51();
-    virtual void Virtual52();
-    virtual void Virtual53();
-    virtual void Virtual54();
-    virtual void Virtual55();
-    virtual void Virtual56();
-    virtual void Virtual57();
-    virtual void Virtual58();
-    virtual void Virtual59();
-    virtual void Virtual60();
-    virtual void Virtual61();
-    virtual void Virtual62();
-    virtual void Virtual63();
-    virtual void Virtual64();
-    virtual void Virtual65();
-    virtual void Virtual66();
-    virtual void Virtual67();
-    virtual void Virtual68();
-    virtual void Virtual69();
-    virtual void Virtual70();
-    virtual void Virtual71();
-    virtual void Virtual72();
-    virtual void Virtual73();
-    virtual void Virtual74();
-    virtual void Virtual75();
-    virtual void Virtual76();
-    virtual void Virtual77();
-    virtual void Virtual78();
-    virtual void Virtual79();
-    virtual void Virtual80();
-    virtual void Virtual81();
-    virtual void Virtual82();
-    virtual void Virtual83();
-    virtual void Virtual84();
-    virtual int Virtual85();
 
     int FUN_1098e330(int Id, int* Out);
     Class_10970890* FUN_10991eb0();

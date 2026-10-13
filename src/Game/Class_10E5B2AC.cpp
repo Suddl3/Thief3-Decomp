@@ -1,13 +1,10 @@
 // Game/Class_10E5B2AC.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Core/Core.h"
 #include "Game/Class_10B0D530.h"
 #include "Game/Class_10E5B2AC.h"
-
-class AActor
-{
-    DECLARE_CLASS(AActor, UObject, 0x800, Engine)
-};
+#include "Engine/EngineClasses.h"
 
 class Class_1096BD50
 {

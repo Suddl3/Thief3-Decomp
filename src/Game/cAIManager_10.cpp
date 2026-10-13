@@ -3,13 +3,9 @@
 
 #include "Core/Core.h"
 #include "Game/cIntArray.h"
+#include "AICore/AICoreClasses.h"
 
 class AAIController;
-
-class AAIPawnController
-{
-    DECLARE_CLASS(AAIPawnController, AAIController, 0x0, AICore)
-};
 
 class cAIManager
 {

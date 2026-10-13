@@ -1,16 +1,13 @@
 // Game/Unsorted_10B3A540.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Core/Core.h"
 #include "Game/Class_10F3A3D8.h"
 #include "Game/Class_10B3A540.h"
 #include "Game/Struct_10B3A540.h"
+#include "T3Player/T3PlayerClasses.h"
 
 class APlayerPawn;
-
-class AGarrett
-{
-    DECLARE_CLASS(AGarrett, APlayerPawn, 0x800, T3Player)
-};
 
 extern Class_10F3A3D8* DAT_10f3a3d8;
 

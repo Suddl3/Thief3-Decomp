@@ -7,6 +7,7 @@
 #include "Core/Core.h"
 #include "Core/CoreClasses.h"
 #include "Engine/EngineClasses.h"
+#include "Game/Class_10B1D3D0.h"
 
 class AActor;
 class APawn;
@@ -94,6 +95,22 @@ public:
     virtual void Destroy();                 // slot 0: 0x10B21630
     virtual ~AGarrett();                    // slot 2: 0x10B133A0
     virtual void Serialize(FArchive& Ar);   // slot 8: 0x10B21AD0
+    virtual void Virtual21();                               // slot 21: 0x10B21390, UObject's
+    virtual int Tick(float,int);                            // slot 36: 0x10B217F0, AActor's
+    virtual void * Virtual52();                             // slot 52: 0x10B21BF0, AActor's
+    virtual float GetLightLevel();                          // slot 69: 0x10B220C0, AActor's
+    virtual void Virtual88();                               // slot 88: 0x10B21830, AActor's
+    virtual void Virtual89();                               // slot 89: 0x10B22120, AActor's
+    virtual bool IsCrouching();                             // slot 101: 0x10B21280, APawn's
+    virtual struct Struct_10B21250 Virtual102();            // slot 102: 0x10B21250, APawn's
+    virtual unsigned char IsHoldingWeapon();                // slot 103: 0x10B21290, APawn's
+    virtual void Virtual110();                              // slot 110: 0x10B222C0, APlayerPawn's
+    virtual struct Struct_10A465C0 * GetGoal(int);          // slot 112: 0x10B21A50, APlayerPawn's
+    virtual struct FsGoal * FindGoal(class FName const &);  // slot 113: 0x10B212A0, APlayerPawn's
+    virtual int GetGoalCount();                             // slot 114: 0x10B21AA0, APlayerPawn's
+    virtual void ClearGoals();                              // slot 115: 0x10B22690, APlayerPawn's
+    virtual void * Virtual122();                            // slot 122: 0x10B21380, APlayerPawn's
+    virtual bool Virtual123();                              // slot 123: 0x10B215B0, APlayerPawn's
 
 public:
     TArray<FRemovedInventoryInfo> RemovedInventory; // 0x278
@@ -200,6 +217,9 @@ public:
     BYTE Faction;                           // 0x54F  EFaction
     BYTE FatalAttackState;                  // 0x550  EFatalAttackState
     FAnimCall GAnimCall;                    // 0x554
+
+public:
+#include "T3Player/AGarrett.h"
 };
 T3_CHECK_SIZE(AGarrett, 0x560);
 
@@ -209,10 +229,18 @@ class AT3PlayerController : public APlayerController
 
 public:
     virtual ~AT3PlayerController();         // slot 2: 0x10B121C0
+    virtual int Virtual37(int,int);                         // slot 37: 0x10B1D460, AActor's
+    virtual void Virtual95(APawn* A, int B);                // slot 95: 0x10B1D5D0, AController's
+    virtual int Virtual98();                                // slot 98: 0x10B1D1C0, AController's
+    virtual void Virtual106();                              // slot 106: 0x10B1D760, APlayerController's
+    virtual void Virtual107(int,int,int,int);               // slot 107: 0x10B1D290, APlayerController's
 
 public:
     BITFIELD bIsActive:1;                   // 0x2C0
-    INT pad0;                               // 0x2C4
+    Class_10B1D3D0 pad0;                    // 0x2C4
+
+public:
+#include "T3Player/AT3PlayerController.h"
 };
 T3_CHECK_SIZE(AT3PlayerController, 0x2C8);
 
@@ -259,6 +287,9 @@ public:
     virtual ~UInvenBook_LinkDataObject();   // slot 2: 0x10B12BE0
 
 public:
+
+public:
+#include "T3Player/UInvenBook_LinkDataObject.h"
 };
 T3_CHECK_SIZE(UInvenBook_LinkDataObject, 0x50);
 
@@ -268,9 +299,14 @@ class UT3Game : public UGameSubsystem
 
 public:
     virtual ~UT3Game();                     // slot 2: 0x10B15220
+    virtual void Virtual31(int);                            // slot 31: 0x10B13BC0, USubsystem's
+    virtual void Init(class UObject *);                     // slot 32: 0x10B15450, UGameSubsystem's
 
 public:
     BYTE Pad34[0x188];
+
+public:
+#include "T3Player/UT3Game.h"
 };
 T3_CHECK_SIZE(UT3Game, 0x1BC);
 
@@ -280,9 +316,16 @@ class UT3GameEngine : public UGameEngine
 
 public:
     virtual ~UT3GameEngine();               // slot 2: 0x10B13650
+    virtual void Virtual31(int);                            // slot 31: 0x10B23B60, USubsystem's
+    virtual void Virtual32();                               // slot 32: 0x10B23B50, UEngine's
+    virtual void Virtual38();                               // slot 38: 0x10B23BA0, UEngine's
+    virtual bool Virtual60();                               // slot 60: 0x10B23B90, UEngine's
 
 public:
     BYTE thief3specificstuff[4];            // 0x17C
+
+public:
+#include "T3Player/UT3GameEngine.h"
 };
 T3_CHECK_SIZE(UT3GameEngine, 0x180);
 

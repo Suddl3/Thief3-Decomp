@@ -1,0 +1,7 @@
+# The C++ type of members the scripts declare as room only (`var native int pad`): objects the class's
+# constructor and destructor build and destroy. `Class.member Type`; tools/assets/t3classes.py gives the
+# member that type in the generated header. From the units' own declarations (tools/agent/adopt.py natives).
+
+AAIPathPoint.pad Class_10BBF5D0
+AAIPawnController.pad0 Class_10B9C9A0
+AT3PlayerController.pad0 Class_10B1D3D0

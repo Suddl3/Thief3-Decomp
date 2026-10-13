@@ -1,31 +1,17 @@
 // Game/Class_10E6F4B4.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
+#include "Engine/EngineClasses.h"
 #include "Core/Core.h"
 #include "Game/Class_1092F270.h"
 
 class APawn;
-
-class APlayerPawn
-{
-    DECLARE_CLASS(APlayerPawn, APawn, 0x0, Engine)
-};
 
 class Class_10951900;
 
 class Class_10ABBF70_Unknown00 : public UObject
 {
 public:
-    virtual void Virtual20();
-    virtual void Virtual21();
-    virtual void Virtual22();
-    virtual void Virtual23();
-    virtual void Virtual24();
-    virtual void Virtual25();
-    virtual void Virtual26();
-    virtual void Virtual27();
-    virtual void Virtual28();
-    virtual void Virtual29();
-    virtual void Virtual30();
     virtual void Virtual31();
     virtual void Virtual32();
     virtual void Virtual33();

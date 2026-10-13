@@ -1,5 +1,6 @@
 // Game/Unsorted_10B4FF40.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/GSMantle.h"
 #include "Game/Struct_10B53A00.h"
 #include "Game/Class_10B50500.h"

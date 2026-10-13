@@ -6,22 +6,7 @@
 #include "Game/Class_10B39870.h"
 #include "Game/Class_10B39890.h"
 #include "Game/Struct_10B1DCA0.h"
-
-class AGarrett
-{
-public:
-    char Unknown00[0x38];
-    FRotator Unknown38;
-    char Unknown44[0x300];
-    int Unknown344;
-    int Unknown348;
-    char Unknown34C[0x104];
-    unsigned bInBowDraw : 1;
-    unsigned isCrouching : 1;
-    unsigned CanDoItemSearch : 1;
-    unsigned CanUseItems : 1;
-    unsigned bUpdatePhysHeight : 1;
-};
+#include "T3Player/T3PlayerClasses.h"
 
 class Class_10AA82D0
 {
@@ -66,7 +51,7 @@ void FUN_109672e0(const Struct_10B1DCA0& Coords, const FVector& V, FVector& Out)
 void GState::Enter(AGarrett* Garrett)
 {
     StopBody(Garrett);
-    Unknown10 = Garrett->Unknown348;
+    Unknown10 = Garrett->NextState;
     switch (Unknown10)
     {
     case 2:
@@ -76,10 +61,10 @@ void GState::Enter(AGarrett* Garrett)
         ForceBody(Garrett);
         break;
     }
-    ((Class_10B39530*)GetLinkedObject())->Play(Garrett->Unknown344, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
-    FVector V = *(FVector*)((Class_10B39890*)GetLinkedObject())->GetEntryData(Garrett->Unknown344);
+    ((Class_10B39530*)GetLinkedObject())->Play(Garrett->AnimToPlay, -1.0f, 1.0f, 0x101, 0, 0, -1.0f);
+    FVector V = *(FVector*)((Class_10B39890*)GetLinkedObject())->GetEntryData(Garrett->AnimToPlay);
     Struct_10B1DCA0 Coords(FVector(0.0f, 0.0f, 0.0f));
-    Coords.FUN_109620b0(Garrett->Unknown38);
+    Coords.FUN_109620b0(Garrett->Rotation);
     {
         FVector Result;
         FUN_109672e0(Coords, V, Result);

@@ -2,13 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Core/Core.h"
-
-class AActor : public UObject
-{
-public:
-    BYTE Unknown2C[0x4C];           // 0x2C
-    BITFIELD bDeleteMe:1;           // 0x78
-};
+#include "Engine/EngineClasses.h"
 
 class Object_10A75810_B
 {
@@ -53,11 +47,6 @@ public:
 };
 
 class UParticleEmitter;
-
-class USpriteEmitter
-{
-    DECLARE_CLASS(USpriteEmitter, UParticleEmitter, 0x0, Engine)
-};
 
 // FUNCTION: 0x10A75810 ?FUN_10a75810@Class_10E6BBE8@@UAEXPAVAActor@@PAVObject_10A75810_B@@PAVObject_10A75810_C@@@Z
 void Class_10E6BBE8::FUN_10a75810(AActor* A, Object_10A75810_B* B, Object_10A75810_C* C)

@@ -1,6 +1,8 @@
 // Game/Unsorted_1099BA20.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
+#include "Engine/EngineClasses.h"
+
 extern const char DAT_10e475cc[];
 
 extern int DAT_10f7b5bc;
@@ -15,24 +17,6 @@ inline void* operator new(unsigned int, EInternal* Mem)
 {
     return Mem;
 }
-
-class AStimulusModifierObject
-{
-public:
-    AStimulusModifierObject();
-};
-
-class ASwooshEffectObject
-{
-public:
-    ASwooshEffectObject();
-};
-
-class AVulnerabilityObject
-{
-public:
-    AVulnerabilityObject();
-};
 
 // FUNCTION: 0x1099BBE0 ?GetStaticClassULinkDataObject@@YAHXZ
 int GetStaticClassULinkDataObject()

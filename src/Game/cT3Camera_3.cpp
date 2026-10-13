@@ -3,13 +3,9 @@
 
 #include "Core/Core.h"
 #include "Game/Class_10E666A0.h"
+#include "T3Player/T3PlayerClasses.h"
 
 class APlayerPawn;
-
-class AGarrett
-{
-    DECLARE_CLASS(AGarrett, APlayerPawn, 0x800, T3Player)
-};
 
 class cT3Camera;
 

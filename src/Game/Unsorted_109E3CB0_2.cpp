@@ -1,27 +1,12 @@
 // Game/Unsorted_109E3CB0_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Core/Core.h"
 #include "Game/Struct_10AA3520.h"
 #include "Game/Struct_109E3CB0.h"
+#include "AICore/AICoreClasses.h"
 
 class ULevel;
-
-class AAIPathPoint
-{
-public:
-    void FUN_10b06230(int Flags);
-
-    char Unknown00[0x74];
-    BITFIELD bLocalGameEvent : 1;
-    BITFIELD bTravelGameEvent : 1;
-    BITFIELD bDestroyInPainVolume : 1;
-    BITFIELD bDontDestroy : 1;
-    BITFIELD bHiddenEd : 1;
-    BITFIELD bHiddenEdGroup : 1;
-    BITFIELD bDirectional : 1;
-    BITFIELD bEdShouldSnap : 1;
-    BITFIELD bShouldTickInAppTime : 1;
-};
 
 // Spawns an actor of Class in Level (its SpawnActor is slot 46); the FRotator H is a rotation rate.
 AAIPathPoint* FUN_10a49f00(ULevel* Level, UClass* Class, int C, int D, FVector E, FVector F, FRotator G,

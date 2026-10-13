@@ -4,13 +4,7 @@
 #include "Engine/EngineClasses.h"
 #include "Core/Core.h"
 #include <math.h>
-
-class AGarrett
-{
-public:
-    char Unknown00[0x4BC];
-    AActor* closestAIInRange;
-};
+#include "T3Player/T3PlayerClasses.h"
 
 struct Struct_10B1DD70_Param;
 

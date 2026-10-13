@@ -1,6 +1,8 @@
 // Game/Unsorted_10B49450.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
+#include "T3Player/T3PlayerClasses.h"
+
 struct Struct_10B4A260
 {
     int Unknown00;
@@ -40,19 +42,6 @@ struct Info_10B49D70
     int Unknown08;
     int Unknown0C;
     int Unknown10;
-};
-
-class AGarrett
-{
-public:
-    void SetNoiseEnabled(int A);
-
-    char Unknown00[0x450];
-    unsigned bInBowDraw : 1;
-    unsigned isCrouching : 1;
-    unsigned CanDoItemSearch : 1;
-    unsigned CanUseItems : 1;
-    unsigned bUpdatePhysHeight : 1;
 };
 
 class Class_10E7E6A0

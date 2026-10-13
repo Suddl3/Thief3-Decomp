@@ -470,6 +470,72 @@ public:
     virtual UBOOL IsPendingKill();          // slot 9: 0x109623C0
     virtual void InitExecution();           // slot 12: 0x109E9650
     virtual void Unknown3C();               // slot 15: 0x1098E0E0
+    virtual void Virtual31();                               // slot 31: 0x10D660B0
+    virtual void Virtual32();                               // slot 32: 0x10990870
+    virtual void Virtual33();                               // slot 33: 0x10D660B0, signature unknown
+    virtual UBOOL Virtual34();                              // slot 34: 0x10B59F70
+    virtual void Virtual35();                               // slot 35: 0x10B59F70
+    virtual int Tick(float,int);                            // slot 36: 0x109EC770
+    virtual int Virtual37(int,int);                         // slot 37: 0x10AA7F70
+    virtual void Virtual38();                               // slot 38: 0x10D660B0
+    virtual void Virtual39();                               // slot 39: 0x10D660B0, signature unknown
+    virtual void Virtual40();                               // slot 40: 0x10D660B0, signature unknown
+    virtual void Virtual41();                               // slot 41: 0x10D660B0, signature unknown
+    virtual void Virtual42();                               // slot 42: 0x10D660B0
+    virtual void Virtual43();                               // slot 43: 0x10991B30
+    virtual void Virtual44();                               // slot 44: 0x10961A80
+    virtual void Virtual45();                               // slot 45: 0x10962040
+    virtual void Virtual46();                               // slot 46: 0x109635F0
+    virtual void Virtual47();                               // slot 47: 0x109640D0
+    virtual void Virtual48();                               // slot 48: 0x10995B20
+    virtual void Virtual49();                               // slot 49: 0x109920C0
+    virtual int Virtual50();                                // slot 50: 0x10990CB0
+    virtual void Virtual51();                               // slot 51: 0x109E9CC0
+    virtual void * Virtual52();                             // slot 52: 0x10C62D20
+    virtual void Virtual53(int);                            // slot 53: 0x1098CF80
+    virtual void Virtual54();                               // slot 54: 0x10D660B0, signature unknown
+    virtual void Virtual55();                               // slot 55: 0x1098E0C0
+    virtual void Virtual56();                               // slot 56: 0x109E9660
+    virtual void Virtual57();                               // slot 57: 0x109E9750
+    virtual void Virtual58();                               // slot 58: 0x10AFC110, signature unknown
+    virtual void Virtual59();                               // slot 59: 0x109EC760
+    virtual void Virtual60(int);                            // slot 60: 0x109E3C90
+    virtual void Virtual61();                               // slot 61: 0x109EB0B0
+    virtual void Virtual62();                               // slot 62: 0x109EB530
+    virtual void Virtual63();                               // slot 63: 0x10D660B0
+    virtual void Virtual64();                               // slot 64: 0x109EA640
+    virtual void Virtual65();                               // slot 65: 0x109EA730
+    virtual void Virtual66();                               // slot 66: 0x10D660B0, signature unknown
+    virtual void Virtual67();                               // slot 67: 0x109940B0
+    virtual void Virtual68();                               // slot 68: 0x10994110
+    virtual float GetLightLevel();                          // slot 69: 0x10991050
+    virtual void Virtual70();                               // slot 70: 0x10990E80
+    virtual void Virtual71();                               // slot 71: 0x109E3C90, signature unknown
+    virtual void Virtual72(int);                            // slot 72: 0x109E3C90
+    virtual void Virtual73();                               // slot 73: 0x109E3C90, signature unknown
+    virtual bool Virtual74(int);                            // slot 74: 0x10BC4030
+    virtual bool Virtual75(int);                            // slot 75: 0x10BC4030
+    virtual float Virtual76(int,int);                       // slot 76: 0x109623D0
+    virtual void Virtual77();                               // slot 77: 0x109E9780
+    virtual void Virtual78();                               // slot 78: 0x109E9200
+    virtual void Virtual79();                               // slot 79: 0x10D660B0, signature unknown
+    virtual void Virtual80();                               // slot 80: 0x10D660B0, signature unknown
+    virtual void Virtual81();                               // slot 81: 0x109E3C90, signature unknown
+    virtual void Virtual82();                               // slot 82: 0x109623E0, signature unknown
+    virtual void Virtual83();                               // slot 83: 0x109E91C0
+    virtual void Virtual84();                               // slot 84: 0x109E91E0
+    virtual void Virtual85();                               // slot 85: 0x109E91A0
+    virtual float Virtual86();                              // slot 86: 0x10962400
+    virtual void Virtual87();                               // slot 87: 0x10962430
+    virtual void Virtual88();                               // slot 88: 0x10962480
+    virtual void Virtual89();                               // slot 89: 0x109624A0
+    virtual void Virtual90();                               // slot 90: 0x109E3CA0, signature unknown
+    virtual int Virtual91();                                // slot 91: 0x10B59F70
+    virtual void Virtual92();                               // slot 92: 0x10992830
+    virtual void Virtual21();                               // slot 21: 0x10991B90, UObject's
+    virtual void Virtual23();                               // slot 23: 0x1098CF40, UObject's
+    virtual int Virtual24();                                // slot 24: 0x109E9F50, UObject's
+    virtual void Virtual26();                               // slot 26: 0x1098CF70, UObject's
 
 public:
     FVector Location;                       // 0x2C
@@ -558,6 +624,9 @@ public:
     INT m_FleshObject;                      // 0xB4
     INT m_FleshLight;                       // 0xB8
     INT m_isSelectedPadding;                // 0xBC
+
+public:
+#include "Engine/AActor.h"
 };
 T3_CHECK_SIZE(AActor, 0xC0);
 
@@ -569,6 +638,9 @@ public:
     virtual ~AMetaProperty();               // slot 2: 0x10962700
 
 public:
+
+public:
+#include "Engine/AMetaProperty.h"
 };
 T3_CHECK_SIZE(AMetaProperty, 0xC0);
 
@@ -580,6 +652,11 @@ public:
     virtual ~ABrush();                      // slot 2: 0x1098C850
     virtual void PostLoad();                // slot 7: 0x109941C0
     virtual void Unknown3C();               // slot 15: 0x10993AD0
+    virtual void Virtual93();                               // slot 93: 0x10993D20
+    virtual void Virtual94();                               // slot 94: 0x10992750
+    virtual void Virtual44();                               // slot 44: 0x10993B60, AActor's
+    virtual void Virtual45();                               // slot 45: 0x10993C40, AActor's
+    virtual void Virtual78();                               // slot 78: 0x109E9530, AActor's
 
 public:
     BYTE CsgOper;                           // 0xC0  ECsgOper
@@ -601,6 +678,8 @@ class AVolume : public ABrush
 
 public:
     virtual ~AVolume();                     // slot 2: 0x1098D0C0
+    virtual void Virtual48();                               // slot 48: 0x10995BF0, AActor's
+    virtual void Virtual62();                               // slot 62: 0x10D660B0, AActor's
 
 public:
     FStringNoInit LocationName;             // 0x120
@@ -614,6 +693,19 @@ class AController : public AActor
 
 public:
     virtual void Destroy();                 // slot 0: 0x109ECDB0
+    virtual int Virtual93();                                // slot 93
+    virtual void Virtual94();                               // slot 94, signature unknown
+    virtual void Virtual95(APawn* A, int B);                // slot 95
+    virtual void Virtual96();                               // slot 96
+    virtual bool Virtual97(int);                            // slot 97
+    virtual int Virtual98();                                // slot 98
+    virtual void Virtual99();                               // slot 99, signature unknown
+    virtual void Virtual100();                              // slot 100
+    virtual void Virtual101();                              // slot 101
+    virtual void Virtual102();                              // slot 102
+    virtual void Virtual103();                              // slot 103, signature unknown
+    virtual void Virtual104();                              // slot 104, signature unknown
+    virtual void Virtual105();                              // slot 105
 
 public:
     APawn* Pawn;                            // 0xC0
@@ -636,8 +728,30 @@ class AAIController : public AController
 
 public:
     virtual ~AAIController();               // slot 2: 0x10962640
+    virtual void Virtual31();                               // slot 31: 0x109ECE00, AActor's
+    virtual void Virtual32();                               // slot 32: 0x109ECEA0, AActor's
+    virtual int Tick(float,int);                            // slot 36: 0x109EC710, AActor's
+    virtual int Virtual50();                                // slot 50: 0x109ECCA0, AActor's
+    virtual void Virtual56();                               // slot 56: 0x109E96D0, AActor's
+    virtual void Virtual57();                               // slot 57: 0x109E9760, AActor's
+    virtual int Virtual93();                                // slot 93: 0x109ECCB0, AController's
+    virtual void Virtual94();                               // slot 94: 0x10C13EA0, AController's
+    virtual void Virtual95(APawn* A, int B);                // slot 95: 0x109ECCE0, AController's
+    virtual void Virtual96();                               // slot 96: 0x109ECE30, AController's
+    virtual bool Virtual97(int);                            // slot 97: 0x10BC4030, AController's
+    virtual int Virtual98();                                // slot 98: 0x10CD3A40, AController's
+    virtual void Virtual99();                               // slot 99: 0x109E3C90, AController's
+    virtual void Virtual100();                              // slot 100: 0x109ECCD0, AController's
+    virtual void Virtual101();                              // slot 101: 0x109E3C90, AController's
+    virtual void Virtual102();                              // slot 102: 0x10D660B0, AController's
+    virtual void Virtual103();                              // slot 103: 0x10D660B0, AController's
+    virtual void Virtual104();                              // slot 104: 0x10D660B0, AController's
+    virtual void Virtual105();                              // slot 105: 0x10D660B0, AController's
 
 public:
+
+public:
+#include "Engine/AAIController.h"
 };
 T3_CHECK_SIZE(AAIController, 0x114);
 
@@ -649,6 +763,9 @@ public:
     virtual ~AMarker();                     // slot 2: 0x1098C8D0
 
 public:
+
+public:
+#include "Engine/AMarker.h"
 };
 T3_CHECK_SIZE(AMarker, 0xC0);
 
@@ -661,6 +778,35 @@ public:
     virtual ~APawn();                       // slot 2: 0x10A46E10
     virtual void PostLoad();                // slot 7: 0x109A6250
     virtual void Serialize(FArchive& Ar);   // slot 8: 0x10A50120
+    virtual int Virtual93();                                // slot 93: 0x10A46E00
+    virtual void Virtual94();                               // slot 94: 0x10A500B0
+    virtual void Virtual95(int);                            // slot 95: 0x10A500E0
+    virtual void Virtual96();                               // slot 96: 0x10A50290
+    virtual void Virtual97();                               // slot 97: 0x10A50100
+    virtual void Virtual98();                               // slot 98: 0x109A5970, signature unknown
+    virtual void Virtual99();                               // slot 99: 0x10A4FDB0
+    virtual void Virtual100();                              // slot 100: 0x109A5330
+    virtual bool IsCrouching();                             // slot 101: 0x109A5450
+    virtual struct Struct_10B21250 Virtual102();            // slot 102: 0x109623E0
+    virtual unsigned char IsHoldingWeapon();                // slot 103: 0x10CD3A40
+    virtual void Virtual104();                              // slot 104: 0x109A5970, signature unknown
+    virtual void Virtual105();                              // slot 105: 0x10CD3A40
+    virtual void Virtual106();                              // slot 106: 0x109A63C0
+    virtual void Virtual107();                              // slot 107: 0x109A5490
+    virtual void Virtual108();                              // slot 108: 0x10A50170
+    virtual void Virtual109();                              // slot 109: 0x10A50030
+    virtual void Virtual21();                               // slot 21: 0x10A4FFC0, UObject's
+    virtual void Virtual31();                               // slot 31: 0x109A5310, AActor's
+    virtual void Virtual32();                               // slot 32: 0x10A4FFF0, AActor's
+    virtual UBOOL Virtual34();                              // slot 34: 0x109A5410, AActor's
+    virtual void Virtual35();                               // slot 35: 0x109A5430, AActor's
+    virtual void Virtual48();                               // slot 48: 0x1098CFF0, AActor's
+    virtual void Virtual51();                               // slot 51: 0x109E3C90, AActor's
+    virtual void * Virtual52();                             // slot 52: 0x109A5470, AActor's
+    virtual void Virtual59();                               // slot 59: 0x109EC920, AActor's
+    virtual void Virtual61();                               // slot 61: 0x109EB260, AActor's
+    virtual void Virtual63();                               // slot 63: 0x109A60E0, AActor's
+    virtual void Virtual87();                               // slot 87: 0x10A4FEB0, AActor's
 
 public:
     AController* Controller;                // 0xC0
@@ -760,6 +906,9 @@ public:
     FLOAT InvisibilityEndTime;              // 0x1F4
     INT DArrayPad[3];                       // 0x1F8
     INT InventoryPtrStub;                   // 0x204
+
+public:
+#include "Engine/APawn.h"
 };
 T3_CHECK_SIZE(APawn, 0x208);
 
@@ -771,6 +920,9 @@ public:
     virtual ~AAmbientLightVolume();         // slot 2: 0x109942F0
 
 public:
+
+public:
+#include "Engine/AAmbientLightVolume.h"
 };
 T3_CHECK_SIZE(AAmbientLightVolume, 0x148);
 
@@ -780,6 +932,28 @@ class APlayerController : public AController
 
 public:
     virtual ~APlayerController();           // slot 2: 0x1098D300
+    virtual void Virtual106();                              // slot 106: 0x109ECC20
+    virtual void Virtual107(int,int,int,int);               // slot 107: 0x1098D230
+    virtual void Virtual31();                               // slot 31: 0x109ECE00, AActor's
+    virtual void Virtual32();                               // slot 32: 0x109ECEA0, AActor's
+    virtual int Tick(float,int);                            // slot 36: 0x10AA7F70, AActor's
+    virtual int Virtual50();                                // slot 50: 0x109ECCA0, AActor's
+    virtual void Virtual56();                               // slot 56: 0x109E96D0, AActor's
+    virtual void Virtual57();                               // slot 57: 0x109E9760, AActor's
+    virtual void Virtual63();                               // slot 63: 0x109ECDE0, AActor's
+    virtual int Virtual93();                                // slot 93: 0x109ECCC0, AController's
+    virtual void Virtual94();                               // slot 94: 0x10C13EA0, AController's
+    virtual void Virtual95(APawn* A, int B);                // slot 95: 0x109ECD50, AController's
+    virtual void Virtual96();                               // slot 96: 0x109ECD10, AController's
+    virtual bool Virtual97(int);                            // slot 97: 0x10BC4030, AController's
+    virtual int Virtual98();                                // slot 98: 0x10CD3A40, AController's
+    virtual void Virtual99();                               // slot 99: 0x109E3C90, AController's
+    virtual void Virtual100();                              // slot 100: 0x109ECCD0, AController's
+    virtual void Virtual101();                              // slot 101: 0x109E3C90, AController's
+    virtual void Virtual102();                              // slot 102: 0x10D660B0, AController's
+    virtual void Virtual103();                              // slot 103: 0x10D660B0, AController's
+    virtual void Virtual104();                              // slot 104: 0x10D660B0, AController's
+    virtual void Virtual105();                              // slot 105: 0x10D660B0, AController's
 
 public:
     UPlayer* Player;                        // 0x114
@@ -875,6 +1049,9 @@ public:
     FRotator TurnRot180;                    // 0x2A0
     FVector OldFloor;                       // 0x2AC
     INT ShowFlags[2];                       // 0x2B8
+
+public:
+#include "Engine/APlayerController.h"
 };
 T3_CHECK_SIZE(APlayerController, 0x2C0);
 
@@ -919,6 +1096,9 @@ public:
     virtual ~AMetaData();                   // slot 2: 0x1098CA50
 
 public:
+
+public:
+#include "Engine/AMetaData.h"
 };
 T3_CHECK_SIZE(AMetaData, 0xC0);
 
@@ -930,6 +1110,9 @@ public:
     virtual ~AInfo();                       // slot 2: 0x1098CAD0
 
 public:
+
+public:
+#include "Engine/AInfo.h"
 };
 T3_CHECK_SIZE(AInfo, 0xC0);
 
@@ -992,6 +1175,9 @@ public:
     virtual ~AElevatorFloors();             // slot 2: 0x1098DC50
 
 public:
+
+public:
+#include "Engine/AElevatorFloors.h"
 };
 T3_CHECK_SIZE(AElevatorFloors, 0xC0);
 
@@ -1003,6 +1189,9 @@ public:
     virtual ~AFX();                         // slot 2: 0x1098D400
 
 public:
+
+public:
+#include "Engine/AFX.h"
 };
 T3_CHECK_SIZE(AFX, 0xC0);
 
@@ -1016,6 +1205,10 @@ public:
     virtual void PostLoad();                // slot 7: 0x10996810
     virtual void Unknown3C();               // slot 15: 0x10996490
     virtual void Unknown40();               // slot 16: 0x10996600
+    virtual void Virtual93();                               // slot 93: 0x10996780
+    virtual void Virtual21();                               // slot 21: 0x10996740, UObject's
+    virtual int Tick(float,int);                            // slot 36: 0x10996950, AActor's
+    virtual void Virtual42();                               // slot 42: 0x10996640, AActor's
 
 public:
     FLOAT TimeSinceRendered;                // 0xC0
@@ -1047,6 +1240,21 @@ class APlayerPawn : public APawn
 public:
     virtual ~APlayerPawn();                 // slot 2: 0x10A47700
     virtual void Serialize(FArchive& Ar);   // slot 8: 0x10A464D0
+    virtual void Virtual110();                              // slot 110: 0x10A46900
+    virtual void AddNote(class FName const &,class FString const &,class FString const &,int);// slot 111: 0x10A46A90
+    virtual struct Struct_10A465C0 * GetGoal(int);          // slot 112: 0x10A465C0
+    virtual struct FsGoal * FindGoal(class FName const &);  // slot 113: 0x10A46580
+    virtual int GetGoalCount();                             // slot 114: 0x10A46380
+    virtual void ClearGoals();                              // slot 115: 0x10A46A80
+    virtual bool HasGoal(FName* A);                         // slot 116: 0x10A46360
+    virtual void Virtual117();                              // slot 117: 0x10A46F80
+    virtual int GetGoalState(FName* A);                     // slot 118: 0x10A46390
+    virtual int IsGoalPrimary(int);                         // slot 119: 0x10A463B0
+    virtual int GetGoalType(int);                           // slot 120: 0x10A46430
+    virtual void Virtual121();                              // slot 121: 0x10A465F0
+    virtual void * Virtual122();                            // slot 122: 0x10B59F70
+    virtual bool Virtual123();                              // slot 123: 0x10CD3A40
+    virtual float GetLightLevel();                          // slot 69: 0x10A47F10, AActor's
 
 public:
     TArray<FsGoal> Goals;                   // 0x208
@@ -1061,6 +1269,9 @@ public:
     FLOAT TotalPlayTime;                    // 0x26C
     FLOAT SimtimePlayedTimer;               // 0x270
     INT TravelDisabledTokens;               // 0x274
+
+public:
+#include "Engine/APlayerPawn.h"
 };
 T3_CHECK_SIZE(APlayerPawn, 0x278);
 
@@ -1071,6 +1282,7 @@ class AInterpolationPoint : public AKeypoint
 public:
     virtual ~AInterpolationPoint();         // slot 2: 0x1098D720
     virtual void Unknown3C();               // slot 15: 0x1099AB10
+    virtual void Virtual38();                               // slot 38: 0x1099AB30, AActor's
 
 public:
 };
@@ -1082,6 +1294,7 @@ class AZoneInfo : public AInfo
 
 public:
     virtual ~AZoneInfo();                   // slot 2: 0x10992D20
+    virtual void Virtual21();                               // slot 21: 0x10993E90, UObject's
 
 public:
     ASkyZoneInfo* SkyZone;                  // 0xC0
@@ -1124,6 +1337,9 @@ class ALevelInfo : public AZoneInfo
 
 public:
     virtual ~ALevelInfo();                  // slot 2: 0x10992E50
+    virtual void Virtual21();                               // slot 21: 0x109E9970, UObject's
+    virtual void Virtual61();                               // slot 61: 0x109E9F00, AActor's
+    virtual void Virtual62();                               // slot 62: 0x10D660B0, AActor's
 
 public:
     FLOAT TimeSeconds;                      // 0x1B0
@@ -1232,8 +1448,12 @@ class AMissingArch : public AActor
 
 public:
     virtual ~AMissingArch();                // slot 2: 0x1098DE90
+    virtual void Virtual26();                               // slot 26: 0x10AFC110, UObject's
 
 public:
+
+public:
+#include "Engine/AMissingArch.h"
 };
 T3_CHECK_SIZE(AMissingArch, 0xC0);
 
@@ -1244,6 +1464,11 @@ class ANavigationPoint : public AKeypoint
 public:
     virtual void Destroy();                 // slot 0: 0x10A3D8B0
     virtual ~ANavigationPoint();            // slot 2: 0x1098C9D0
+    virtual void Virtual93();                               // slot 93: 0x10A3D900
+    virtual void Virtual94();                               // slot 94: 0x10D660B0, signature unknown
+    virtual void Virtual95();                               // slot 95: 0x10A3D860
+    virtual void Virtual38();                               // slot 38: 0x10A3D840, AActor's
+    virtual void Virtual42();                               // slot 42: 0x10A3D840, AActor's
 
 public:
     INT upstreamPaths[16];                  // 0xC0
@@ -1293,8 +1518,12 @@ class AObjSysTest : public AActor
 
 public:
     virtual ~AObjSysTest();                 // slot 2: 0x1098CB50
+    virtual int RunTest(int,int);                           // slot 93: 0x10A3DA80
 
 public:
+
+public:
+#include "Engine/AObjSysTest.h"
 };
 T3_CHECK_SIZE(AObjSysTest, 0xC0);
 
@@ -1304,8 +1533,12 @@ class AObjSysTestChild : public AObjSysTest
 
 public:
     virtual ~AObjSysTestChild();            // slot 2: 0x1098DF70
+    virtual int RunTest(int,int);                           // slot 93: 0x10A46070, AObjSysTest's
 
 public:
+
+public:
+#include "Engine/AObjSysTestChild.h"
 };
 T3_CHECK_SIZE(AObjSysTestChild, 0xC0);
 
@@ -1353,6 +1586,11 @@ class ASceneManager : public AInfo
 public:
     virtual ~ASceneManager();               // slot 2: 0x1099ADD0
     virtual void Unknown3C();               // slot 15: 0x1099AAE0
+    virtual void Virtual93();                               // slot 93: 0x109985D0
+    virtual void Virtual94();                               // slot 94: 0x109985B0
+    virtual int Tick(float,int);                            // slot 36: 0x1099B940, AActor's
+    virtual void Virtual63();                               // slot 63: 0x1099ACC0, AActor's
+    virtual void Virtual78();                               // slot 78: 0x10999EA0, AActor's
 
 public:
     TArray<UMatAction*> Actions;            // 0xC0
@@ -1407,6 +1645,9 @@ public:
     virtual ~ASpecialOptions();             // slot 2: 0x1098DDE0
 
 public:
+
+public:
+#include "Engine/ASpecialOptions.h"
 };
 T3_CHECK_SIZE(ASpecialOptions, 0xC0);
 
@@ -1429,6 +1670,9 @@ public:
     virtual ~AStimulusModifierObject();     // slot 2: 0x1099BA20
 
 public:
+
+public:
+#include "Engine/AStimulusModifierObject.h"
 };
 T3_CHECK_SIZE(AStimulusModifierObject, 0xC0);
 
@@ -1440,6 +1684,9 @@ public:
     virtual ~ASwooshEffectObject();         // slot 2: 0x1099BAC0
 
 public:
+
+public:
+#include "Engine/ASwooshEffectObject.h"
 };
 T3_CHECK_SIZE(ASwooshEffectObject, 0xC0);
 
@@ -1483,6 +1730,9 @@ public:
     virtual ~AVulnerabilityObject();        // slot 2: 0x1099BB60
 
 public:
+
+public:
+#include "Engine/AVulnerabilityObject.h"
 };
 T3_CHECK_SIZE(AVulnerabilityObject, 0xC0);
 
@@ -1518,12 +1768,20 @@ public:
 
 public:
     BITFIELD bZoneVisited:1;                // 0xC0
+
+public:
+#include "Engine/AZoneProperties.h"
 };
 T3_CHECK_SIZE(AZoneProperties, 0xC4);
 
 class UAISubsystem : public USubsystem
 {
     DECLARE_CLASS(UAISubsystem, USubsystem, 0xD, Engine)
+
+public:
+    virtual void Virtual32(int);                            // slot 32
+    virtual void Virtual33();                               // slot 33, signature unknown
+    virtual void Virtual34();                               // slot 34, signature unknown
 
 public:
     BYTE Pad30[0x4];
@@ -1618,6 +1876,9 @@ public:
     virtual ~UAssociationLinkDataObject();  // slot 2: 0x1099F3E0
 
 public:
+
+public:
+#include "Engine/UAssociationLinkDataObject.h"
 };
 T3_CHECK_SIZE(UAssociationLinkDataObject, 0x50);
 
@@ -1634,6 +1895,9 @@ public:
     BITFIELD bPropagatesHighlight:1;        // 0x68
     INT m_attachmentBoneIndex;              // 0x6C
     INT m_parentBoneIndex;                  // 0x70
+
+public:
+#include "Engine/UAttachmentLinkDataObject.h"
 };
 T3_CHECK_SIZE(UAttachmentLinkDataObject, 0x74);
 
@@ -1647,6 +1911,22 @@ public:
     virtual void PostLoad();                // slot 7: 0x109A67B0
     virtual void Unknown3C();               // slot 15: 0x10D660B0
     virtual void Unknown40();               // slot 16: 0x109A6BB0
+    virtual void Virtual31();                               // slot 31: 0x109A9150
+    virtual void Virtual32();                               // slot 32: 0x109A91E0
+    virtual void Virtual33();                               // slot 33: 0x109A68F0
+    virtual void Virtual34();                               // slot 34: 0x109A6A10
+    virtual void Virtual35();                               // slot 35: 0x109A8F00
+    virtual void Virtual36();                               // slot 36: 0x109A6DF0
+    virtual void Virtual37();                               // slot 37: 0x109A9220
+    virtual void Virtual38();                               // slot 38: 0x109A7210
+    virtual void Virtual39();                               // slot 39: 0x109A77E0
+    virtual void Virtual40();                               // slot 40: 0x109A70D0
+    virtual void Virtual41();                               // slot 41: 0x10C13EA0, signature unknown
+    virtual void Virtual42();                               // slot 42: 0x109A79B0
+    virtual int Virtual43(int,int,int);                     // slot 43: 0x109A6A90
+    virtual void Virtual44();                               // slot 44: 0x109A8AF0
+    virtual void Virtual45();                               // slot 45: 0x109A87F0
+    virtual void Virtual46();                               // slot 46: 0x109A89E0
 
 public:
     FVector Acceleration;                   // 0x2C
@@ -1764,6 +2044,19 @@ class UBeamEmitter : public UParticleEmitter
 public:
     virtual ~UBeamEmitter();                // slot 2: 0x109ACB30
     virtual void Unknown40();               // slot 16: 0x109AA300
+    virtual void Virtual47();                               // slot 47: 0x109AC200
+    virtual void Virtual48();                               // slot 48: 0x109AC010
+    virtual void Virtual49();                               // slot 49: 0x109ABA60
+    virtual void Virtual50();                               // slot 50: 0x109AA8C0
+    virtual void Virtual51();                               // slot 51: 0x109AA8F0
+    virtual void Virtual21();                               // slot 21: 0x109ABE80, UObject's
+    virtual void Virtual31();                               // slot 31: 0x109ABEC0, UParticleEmitter's
+    virtual void Virtual32();                               // slot 32: 0x109ABFD0, UParticleEmitter's
+    virtual void Virtual33();                               // slot 33: 0x109AA2E0, UParticleEmitter's
+    virtual void Virtual34();                               // slot 34: 0x109AA760, UParticleEmitter's
+    virtual void Virtual37();                               // slot 37: 0x109AAD20, UParticleEmitter's
+    virtual void Virtual38();                               // slot 38: 0x109AC110, UParticleEmitter's
+    virtual int Virtual43(int,int,int);                     // slot 43: 0x109ACC20, UParticleEmitter's
 
 public:
     FRange BeamDistanceRange;               // 0x32C
@@ -1812,6 +2105,18 @@ class UBitmap : public UObject
     DECLARE_CLASS(UBitmap, UObject, 0x1, Engine)
 
 public:
+    virtual void Virtual31();                               // slot 31
+    virtual void Virtual32();                               // slot 32
+    virtual void Virtual33();                               // slot 33
+    virtual void Virtual34();                               // slot 34
+    virtual void Virtual35();                               // slot 35
+    virtual void Virtual36();                               // slot 36
+    virtual void Virtual37();                               // slot 37
+    virtual void Virtual38();                               // slot 38
+    virtual void Virtual39();                               // slot 39
+    virtual void * Virtual40();                             // slot 40
+
+public:
     BYTE Format;                            // 0x2C  ETextureFormat
     UPalette* Palette;                      // 0x30
     BYTE UBits;                             // 0x34
@@ -1834,6 +2139,9 @@ public:
     virtual ~UBotDominationLinkDataObject();// slot 2: 0x1099F870
 
 public:
+
+public:
+#include "Engine/UBotDominationLinkDataObject.h"
 };
 T3_CHECK_SIZE(UBotDominationLinkDataObject, 0x50);
 
@@ -1858,6 +2166,9 @@ public:
 
 public:
     BYTE Pad2C[0x34];
+
+public:
+#include "Engine/UCARDEntry.h"
 };
 T3_CHECK_SIZE(UCARDEntry, 0x60);
 
@@ -1867,6 +2178,16 @@ class UCanvas : public UObject
 
 public:
     virtual ~UCanvas();                     // slot 2: 0x109D1A10
+    virtual void SetViewport(int);                          // slot 31: 0x10BECEE0
+    virtual void Virtual32();                               // slot 32: 0x109D1790
+    virtual void Virtual33();                               // slot 33: 0x109D1A80
+    virtual void Virtual34();                               // slot 34: 0x109D16D0
+    virtual void Virtual35();                               // slot 35: 0x109D1620
+    virtual void Virtual36();                               // slot 36: 0x109D2FE0
+    virtual void Virtual37();                               // slot 37: 0x109D30E0
+    virtual void Virtual38();                               // slot 38: 0x109D3140
+    virtual void Virtual39();                               // slot 39: 0x109D31A0
+    virtual void Virtual40();                               // slot 40: 0x109D1760
 
 public:
     UFont* Font;                            // 0x2C
@@ -1929,6 +2250,9 @@ public:
     BITFIELD bAttachObjects:1;
     BITFIELD bDeleteOnDeath:1;
     FStringNoInit m_childBone;              // 0x64
+
+public:
+#include "Engine/USpawnableHardpointLinkDataObject.h"
 };
 T3_CHECK_SIZE(USpawnableHardpointLinkDataObject, 0x70);
 
@@ -1942,6 +2266,9 @@ public:
 public:
     BITFIELD Active:1;                      // 0x70
     FStringNoInit Tag;                      // 0x74
+
+public:
+#include "Engine/UCollisionSpawnLinkDataObject.h"
 };
 T3_CHECK_SIZE(UCollisionSpawnLinkDataObject, 0x80);
 
@@ -1963,6 +2290,16 @@ class UTexture : public UBitmap
 
 public:
     virtual ~UTexture();                    // slot 2: 0x1096BE40
+    virtual void Virtual31();                               // slot 31: 0x1096B8C0, UBitmap's
+    virtual void Virtual32();                               // slot 32: 0x1096ABA0, UBitmap's
+    virtual void Virtual33();                               // slot 33: 0x1096B500, UBitmap's
+    virtual void Virtual34();                               // slot 34: 0x1096A2D0, UBitmap's
+    virtual void Virtual35();                               // slot 35: 0x10969D80, UBitmap's
+    virtual void Virtual36();                               // slot 36: 0x10CD3930, UBitmap's
+    virtual void Virtual37();                               // slot 37: 0x10CD3930, UBitmap's
+    virtual void Virtual38();                               // slot 38: 0x10969CF0, UBitmap's
+    virtual void Virtual39();                               // slot 39: 0x10969D40, UBitmap's
+    virtual void * Virtual40();                             // slot 40: 0x1096B8B0, UBitmap's
 
 public:
     UTexture* BumpMap;                      // 0x58
@@ -2039,6 +2376,7 @@ class UCubemap : public UTexture
 
 public:
     virtual ~UCubemap();                    // slot 2: 0x1096BFA0
+    virtual void * Virtual40();                             // slot 40: 0x1096BF90, UBitmap's
 
 public:
     UTexture* Faces[6];                     // 0xDC
@@ -2068,6 +2406,9 @@ public:
     virtual ~UDelaySpawnLinkDataObject();   // slot 2: 0x109A0490
 
 public:
+
+public:
+#include "Engine/UDelaySpawnLinkDataObject.h"
 };
 T3_CHECK_SIZE(UDelaySpawnLinkDataObject, 0x70);
 
@@ -2090,6 +2431,9 @@ public:
     virtual ~UDoorLinkDataObject();         // slot 2: 0x1099FAB0
 
 public:
+
+public:
+#include "Engine/UDoorLinkDataObject.h"
 };
 T3_CHECK_SIZE(UDoorLinkDataObject, 0x50);
 
@@ -2099,6 +2443,11 @@ class UDynamicBeamEmitter : public UBeamEmitter
 
 public:
     virtual ~UDynamicBeamEmitter();         // slot 2: 0x109ADD10
+    virtual void Virtual52();                               // slot 52: 0x109ADBE0
+    virtual void Virtual53();                               // slot 53: 0x109ADC10
+    virtual void Virtual54();                               // slot 54: 0x109AD850
+    virtual void Virtual55();                               // slot 55: 0x109ADC50
+    virtual void Virtual51();                               // slot 51: 0x109AD9A0, UBeamEmitter's
 
 public:
     TArray<FVector> DynamicPointList;       // 0x414
@@ -2114,6 +2463,9 @@ public:
     virtual ~UElevatorFloorMarkerLinkDataObject();// slot 2: 0x1099FBD0
 
 public:
+
+public:
+#include "Engine/UElevatorFloorMarkerLinkDataObject.h"
 };
 T3_CHECK_SIZE(UElevatorFloorMarkerLinkDataObject, 0x50);
 
@@ -2125,6 +2477,9 @@ public:
     virtual ~UElevatorLinkDataObject();     // slot 2: 0x1099FC60
 
 public:
+
+public:
+#include "Engine/UElevatorLinkDataObject.h"
 };
 T3_CHECK_SIZE(UElevatorLinkDataObject, 0x50);
 
@@ -2132,6 +2487,37 @@ class UEngine : public USubsystem
 {
     DECLARE_CLASS(UEngine, USubsystem, 0xD, Engine)
     void StaticConstructor();       // 0x10977B10
+
+public:
+    virtual void Virtual32();                               // slot 32
+    virtual void Virtual33();                               // slot 33
+    virtual void Virtual34();                               // slot 34
+    virtual void Virtual35();                               // slot 35
+    virtual void Virtual36();                               // slot 36, signature unknown
+    virtual void Virtual37();                               // slot 37
+    virtual void Virtual38();                               // slot 38
+    virtual void Virtual39();                               // slot 39
+    virtual void Virtual40();                               // slot 40
+    virtual void Virtual41();                               // slot 41, signature unknown
+    virtual void Virtual42();                               // slot 42
+    virtual void Virtual43();                               // slot 43
+    virtual void Virtual44();                               // slot 44
+    virtual void Virtual45();                               // slot 45, signature unknown
+    virtual void Virtual46();                               // slot 46, signature unknown
+    virtual void Virtual47();                               // slot 47
+    virtual void Virtual48();                               // slot 48
+    virtual void Virtual49();                               // slot 49, signature unknown
+    virtual void Virtual50();                               // slot 50, signature unknown
+    virtual void Virtual51();                               // slot 51, signature unknown
+    virtual void Virtual52();                               // slot 52, signature unknown
+    virtual void Virtual53();                               // slot 53, signature unknown
+    virtual void Virtual54();                               // slot 54, signature unknown
+    virtual int Virtual55();                                // slot 55
+    virtual void Virtual56();                               // slot 56
+    virtual void Virtual57();                               // slot 57
+    virtual void Virtual58();                               // slot 58, signature unknown
+    virtual void Virtual59();                               // slot 59
+    virtual bool Virtual60();                               // slot 60
 
 public:
     UClass* Language;                       // 0x30
@@ -2185,6 +2571,9 @@ public:
     FColor C_StaticMesh;                    // 0xF0
     FColor C_VolumeBrush;                   // 0xF4
     INT GameStats[5];                       // 0xF8
+
+public:
+#include "Engine/UEngine.h"
 };
 T3_CHECK_SIZE(UEngine, 0x10C);
 
@@ -2196,6 +2585,9 @@ public:
     virtual ~UFillLightLinkDataObject();    // slot 2: 0x1099FCF0
 
 public:
+
+public:
+#include "Engine/UFillLightLinkDataObject.h"
 };
 T3_CHECK_SIZE(UFillLightLinkDataObject, 0x50);
 
@@ -2207,6 +2599,9 @@ public:
     virtual ~UFireEffectLinkDataObject();   // slot 2: 0x1099FD80
 
 public:
+
+public:
+#include "Engine/UFireEffectLinkDataObject.h"
 };
 T3_CHECK_SIZE(UFireEffectLinkDataObject, 0x50);
 
@@ -2232,6 +2627,9 @@ public:
     virtual ~UFragRoundLinkDataObject();    // slot 2: 0x109A0240
 
 public:
+
+public:
+#include "Engine/UFragRoundLinkDataObject.h"
 };
 T3_CHECK_SIZE(UFragRoundLinkDataObject, 0x68);
 
@@ -2243,6 +2641,9 @@ public:
     virtual ~UFrobEventLinkDataObject();    // slot 2: 0x1099FE10
 
 public:
+
+public:
+#include "Engine/UFrobEventLinkDataObject.h"
 };
 T3_CHECK_SIZE(UFrobEventLinkDataObject, 0x50);
 
@@ -2254,6 +2655,9 @@ public:
     virtual ~UFrobLinkDataObject();         // slot 2: 0x1099FEA0
 
 public:
+
+public:
+#include "Engine/UFrobLinkDataObject.h"
 };
 T3_CHECK_SIZE(UFrobLinkDataObject, 0x50);
 
@@ -2264,6 +2668,36 @@ class UGameEngine : public UEngine
 
 public:
     virtual ~UGameEngine();                 // slot 2: 0x10987860
+    virtual void Virtual31(int);                            // slot 31: 0x1098A410, USubsystem's
+    virtual void Virtual32();                               // slot 32: 0x10984D70, UEngine's
+    virtual void Virtual33();                               // slot 33: 0x10983840, UEngine's
+    virtual void Virtual34();                               // slot 34: 0x10977CC0, UEngine's
+    virtual void Virtual35();                               // slot 35: 0x10977CE0, UEngine's
+    virtual void Virtual36();                               // slot 36: 0x109B2B00, UEngine's
+    virtual void Virtual37();                               // slot 37: 0x10977D50, UEngine's
+    virtual void Virtual38();                               // slot 38: 0x10983910, UEngine's
+    virtual void Virtual39();                               // slot 39: 0x10983FA0, UEngine's
+    virtual void Virtual40();                               // slot 40: 0x10983BC0, UEngine's
+    virtual void Virtual41();                               // slot 41: 0x10CD3930, UEngine's
+    virtual void Virtual42();                               // slot 42: 0x10983BE0, UEngine's
+    virtual void Virtual43();                               // slot 43: 0x10984020, UEngine's
+    virtual void Virtual44();                               // slot 44: 0x10983EF0, UEngine's
+    virtual void Virtual45();                               // slot 45: 0x10A589B0, UEngine's
+    virtual void Virtual46();                               // slot 46: 0x10CD3930, UEngine's
+    virtual void Virtual47();                               // slot 47: 0x1097C120, UEngine's
+    virtual void Virtual48();                               // slot 48: 0x1097C360, UEngine's
+    virtual void Virtual49();                               // slot 49: 0x109E3C90, UEngine's
+    virtual void Virtual50();                               // slot 50: 0x109E3C90, UEngine's
+    virtual void Virtual51();                               // slot 51: 0x10A54CD0, UEngine's
+    virtual void Virtual52();                               // slot 52: 0x10B59F70, UEngine's
+    virtual void Virtual53();                               // slot 53: 0x10A54CD0, UEngine's
+    virtual void Virtual54();                               // slot 54: 0x10CD3930, UEngine's
+    virtual int Virtual55();                                // slot 55: 0x10987850, UEngine's
+    virtual void Virtual56();                               // slot 56: 0x109865D0, UEngine's
+    virtual void Virtual57();                               // slot 57: 0x109887B0, UEngine's
+    virtual void Virtual58();                               // slot 58: 0x10D660B0, UEngine's
+    virtual void Virtual59();                               // slot 59: 0x10986140, UEngine's
+    virtual bool Virtual60();                               // slot 60: 0x10D660B0, UEngine's
 
 public:
     ULevel* GLevel;                         // 0x10C
@@ -2272,6 +2706,9 @@ public:
     TArray<FString> ServerActors;           // 0x158
     TArray<FString> ServerPackages;         // 0x164
     TArray<FString> EnginePackages;         // 0x170
+
+public:
+#include "Engine/UGameEngine.h"
 };
 T3_CHECK_SIZE(UGameEngine, 0x17C);
 
@@ -2289,6 +2726,9 @@ class UGameSubsystem : public USubsystem
     DECLARE_CLASS(UGameSubsystem, USubsystem, 0xD, Engine)
 
 public:
+    virtual void Init(class UObject *);                     // slot 32
+
+public:
     BYTE Pad30[0x4];
 };
 T3_CHECK_SIZE(UGameSubsystem, 0x34);
@@ -2301,6 +2741,9 @@ public:
     virtual ~UHighlightEventLinkDataObject();// slot 2: 0x109A0520
 
 public:
+
+public:
+#include "Engine/UHighlightEventLinkDataObject.h"
 };
 T3_CHECK_SIZE(UHighlightEventLinkDataObject, 0x50);
 
@@ -2310,6 +2753,7 @@ class UHingedAttachmentLinkDataObject : public UAttachmentLinkDataObject
 
 public:
     virtual ~UHingedAttachmentLinkDataObject();// slot 2: 0x1099F560
+    virtual void Virtual32();                               // slot 32: 0x10CD3A40, ULinkDataObject's
 
 public:
     FVector m_hingeLocation;                // 0x74
@@ -2329,6 +2773,9 @@ public:
     FLOAT m_rotations;                      // 0xF4
     BITFIELD m_motorActive:1;               // 0xF8
     BITFIELD m_containsSaveData:1;
+
+public:
+#include "Engine/UHingedAttachmentLinkDataObject.h"
 };
 T3_CHECK_SIZE(UHingedAttachmentLinkDataObject, 0xFC);
 
@@ -2340,6 +2787,9 @@ public:
     virtual ~UHitSpangLinkDataObject();     // slot 2: 0x109A05B0
 
 public:
+
+public:
+#include "Engine/UHitSpangLinkDataObject.h"
 };
 T3_CHECK_SIZE(UHitSpangLinkDataObject, 0x50);
 
@@ -2351,6 +2801,9 @@ public:
     virtual ~UInterestLinkDataObject();     // slot 2: 0x109A0640
 
 public:
+
+public:
+#include "Engine/UInterestLinkDataObject.h"
 };
 T3_CHECK_SIZE(UInterestLinkDataObject, 0x50);
 
@@ -2362,6 +2815,9 @@ public:
     virtual ~ULightLinkDataObject();        // slot 2: 0x109A06D0
 
 public:
+
+public:
+#include "Engine/ULightLinkDataObject.h"
 };
 T3_CHECK_SIZE(ULightLinkDataObject, 0x50);
 
@@ -2376,6 +2832,9 @@ public:
     FStringNoInit m_parentBone;             // 0x50
     FStringNoInit m_childBone;              // 0x5C
     BITFIELD bIsWeaponAttachment:1;         // 0x68
+
+public:
+#include "Engine/ULoadoutLinkDataObject.h"
 };
 T3_CHECK_SIZE(ULoadoutLinkDataObject, 0x6C);
 
@@ -2387,6 +2846,9 @@ public:
     virtual ~ULockAssociationLinkDataObject();// slot 2: 0x109A0850
 
 public:
+
+public:
+#include "Engine/ULockAssociationLinkDataObject.h"
 };
 T3_CHECK_SIZE(ULockAssociationLinkDataObject, 0x50);
 
@@ -2397,6 +2859,9 @@ class UMatSubAction : public UMatObject
 public:
     virtual ~UMatSubAction();               // slot 2: 0x10997EC0
     virtual void Unknown3C();               // slot 15: 0x1099AAF0
+    virtual void Virtual31();                               // slot 31: 0x10997CD0
+    virtual void Virtual32();                               // slot 32: 0x10998F70
+    virtual void Virtual33();                               // slot 33: 0x10997E20
 
 public:
     FLOAT Delay;                            // 0x2C
@@ -2417,6 +2882,9 @@ class UMeshEmitter : public UParticleEmitter
 public:
     virtual ~UMeshEmitter();                // slot 2: 0x109AE530
     virtual void Unknown3C();               // slot 15: 0x109AF360
+    virtual void Virtual31();                               // slot 31: 0x109ADF90, UParticleEmitter's
+    virtual void Virtual38();                               // slot 38: 0x109AE090, UParticleEmitter's
+    virtual int Virtual43(int,int,int);                     // slot 43: 0x109AE120, UParticleEmitter's
 
 public:
     UStaticMesh* StaticMesh;                // 0x32C
@@ -2434,6 +2902,9 @@ public:
     virtual ~UMovementModeLinkDataObject(); // slot 2: 0x109A08E0
 
 public:
+
+public:
+#include "Engine/UMovementModeLinkDataObject.h"
 };
 T3_CHECK_SIZE(UMovementModeLinkDataObject, 0x50);
 
@@ -2464,6 +2935,24 @@ T3_CHECK_SIZE(UPalette, 0x38);
 class UPlayer : public UObject
 {
     DECLARE_CLASS(UPlayer, UObject, 0xD, Engine)
+
+public:
+    virtual void Virtual31();                               // slot 31, signature unknown
+    virtual void Virtual32();                               // slot 32, signature unknown
+    virtual void Virtual33();                               // slot 33, signature unknown
+    virtual void Virtual34();                               // slot 34, signature unknown
+    virtual void Virtual35();                               // slot 35, signature unknown
+    virtual void Virtual36();                               // slot 36, signature unknown
+    virtual void Virtual37();                               // slot 37, signature unknown
+    virtual void Virtual38();                               // slot 38, signature unknown
+    virtual void Virtual39();                               // slot 39, signature unknown
+    virtual void Virtual40();                               // slot 40, signature unknown
+    virtual void Virtual41();                               // slot 41, signature unknown
+    virtual void Virtual42();                               // slot 42, signature unknown
+    virtual void Virtual43();                               // slot 43, signature unknown
+    virtual void Virtual44();                               // slot 44, signature unknown
+    virtual void Virtual45();                               // slot 45, signature unknown
+    virtual void Virtual46();                               // slot 46, signature unknown
 
 public:
     INT vfOut;                              // 0x2C
@@ -2498,11 +2987,15 @@ class UPointAttachmentLinkDataObject : public UAttachmentLinkDataObject
 
 public:
     virtual ~UPointAttachmentLinkDataObject();// slot 2: 0x1099F600
+    virtual void Virtual32();                               // slot 32: 0x10CD3A40, ULinkDataObject's
 
 public:
     FVector m_pointOffset;                  // 0x74
     FLOAT m_pointLimitMin;                  // 0x80
     FLOAT m_pointLimitMax;                  // 0x84
+
+public:
+#include "Engine/UPointAttachmentLinkDataObject.h"
 };
 T3_CHECK_SIZE(UPointAttachmentLinkDataObject, 0x88);
 
@@ -2537,6 +3030,9 @@ public:
     virtual ~UPuddleConnectorLinkDataObject();// slot 2: 0x109A0BB0
 
 public:
+
+public:
+#include "Engine/UPuddleConnectorLinkDataObject.h"
 };
 T3_CHECK_SIZE(UPuddleConnectorLinkDataObject, 0x50);
 
@@ -2548,6 +3044,9 @@ public:
     virtual ~UPuddleMarkLinkDataObject();   // slot 2: 0x109A0C40
 
 public:
+
+public:
+#include "Engine/UPuddleMarkLinkDataObject.h"
 };
 T3_CHECK_SIZE(UPuddleMarkLinkDataObject, 0x50);
 
@@ -2559,6 +3058,9 @@ public:
     virtual ~UReferenceLinkDataObject();    // slot 2: 0x109A0CD0
 
 public:
+
+public:
+#include "Engine/UReferenceLinkDataObject.h"
 };
 T3_CHECK_SIZE(UReferenceLinkDataObject, 0x50);
 
@@ -2578,6 +3080,9 @@ public:
     FRotator m_rotationOffset;              // 0x78
     FVector m_translationOffset;            // 0x84
     INT m_pAttachmentUpdateCallback;        // 0x90
+
+public:
+#include "Engine/URigidAttachmentLinkDataObject.h"
 };
 T3_CHECK_SIZE(URigidAttachmentLinkDataObject, 0x94);
 
@@ -2590,6 +3095,9 @@ public:
 
 public:
     BITFIELD bDeleteChildOnDeath:1;         // 0x74
+
+public:
+#include "Engine/URuntimeAttachmentLinkDataObject.h"
 };
 T3_CHECK_SIZE(URuntimeAttachmentLinkDataObject, 0x78);
 
@@ -2601,6 +3109,9 @@ public:
     virtual ~URuntimeFireEffectLinkDataObject();// slot 2: 0x109A0D60
 
 public:
+
+public:
+#include "Engine/URuntimeFireEffectLinkDataObject.h"
 };
 T3_CHECK_SIZE(URuntimeFireEffectLinkDataObject, 0x50);
 
@@ -2612,6 +3123,9 @@ public:
     virtual ~USittingLinkDataObject();      // slot 2: 0x109A0DF0
 
 public:
+
+public:
+#include "Engine/USittingLinkDataObject.h"
 };
 T3_CHECK_SIZE(USittingLinkDataObject, 0x50);
 
@@ -2624,6 +3138,9 @@ public:
 
 public:
     FStringNoInit m_parentBone;             // 0x50
+
+public:
+#include "Engine/USkeletalFireEffectLinkDataObject.h"
 };
 T3_CHECK_SIZE(USkeletalFireEffectLinkDataObject, 0x5C);
 
@@ -2635,6 +3152,9 @@ public:
     virtual ~USleepingLinkDataObject();     // slot 2: 0x109A0F50
 
 public:
+
+public:
+#include "Engine/USleepingLinkDataObject.h"
 };
 T3_CHECK_SIZE(USleepingLinkDataObject, 0x50);
 
@@ -2644,6 +3164,7 @@ class USlidingAttachmentLinkDataObject : public UAttachmentLinkDataObject
 
 public:
     virtual ~USlidingAttachmentLinkDataObject();// slot 2: 0x1099F7D0
+    virtual void Virtual32();                               // slot 32: 0x10CD3A40, ULinkDataObject's
 
 public:
     FVector m_slideAxis;                    // 0x74
@@ -2660,6 +3181,9 @@ public:
     FLOAT m_maxLimit;                       // 0xE0
     FLOAT m_maxFrictionForce;               // 0xE4
     BITFIELD m_containsSaveData:1;          // 0xE8
+
+public:
+#include "Engine/USlidingAttachmentLinkDataObject.h"
 };
 T3_CHECK_SIZE(USlidingAttachmentLinkDataObject, 0xEC);
 
@@ -2670,6 +3194,11 @@ class USparkEmitter : public UParticleEmitter
 public:
     virtual ~USparkEmitter();               // slot 2: 0x109AEB60
     virtual void Unknown3C();               // slot 15: 0x109AF360
+    virtual void Virtual31();                               // slot 31: 0x109AE880, UParticleEmitter's
+    virtual void Virtual32();                               // slot 32: 0x109AE900, UParticleEmitter's
+    virtual void Virtual37();                               // slot 37: 0x109AE7B0, UParticleEmitter's
+    virtual void Virtual38();                               // slot 38: 0x109AE690, UParticleEmitter's
+    virtual int Virtual43(int,int,int);                     // slot 43: 0x109AEF10, UParticleEmitter's
 
 public:
     FRange LineSegmentsRange;               // 0x32C
@@ -2693,6 +3222,9 @@ public:
     virtual ~USpawnLinkDataObject();        // slot 2: 0x109A0FE0
 
 public:
+
+public:
+#include "Engine/USpawnLinkDataObject.h"
 };
 T3_CHECK_SIZE(USpawnLinkDataObject, 0x50);
 
@@ -2721,6 +3253,9 @@ public:
     virtual ~UStimulusModifierLinkDataObject();// slot 2: 0x109A1070
 
 public:
+
+public:
+#include "Engine/UStimulusModifierLinkDataObject.h"
 };
 T3_CHECK_SIZE(UStimulusModifierLinkDataObject, 0x50);
 
@@ -2730,6 +3265,8 @@ class USubActionFOV : public UMatSubAction
 
 public:
     virtual ~USubActionFOV();               // slot 2: 0x10998040
+    virtual void Virtual31();                               // slot 31: 0x109991D0, UMatSubAction's
+    virtual void Virtual32();                               // slot 32: 0x10999390, UMatSubAction's
 
 public:
     FRange FOV;                             // 0x54
@@ -2755,6 +3292,8 @@ class USubActionGameSpeed : public UMatSubAction
 
 public:
     virtual ~USubActionGameSpeed();         // slot 2: 0x10998100
+    virtual void Virtual31();                               // slot 31: 0x109992C0, UMatSubAction's
+    virtual void Virtual32();                               // slot 32: 0x10999390, UMatSubAction's
 
 public:
     FRange GameSpeed;                       // 0x54
@@ -2767,6 +3306,8 @@ class USubActionOrientation : public UMatSubAction
 
 public:
     virtual ~USubActionOrientation();       // slot 2: 0x109981E0
+    virtual void Virtual31();                               // slot 31: 0x10997DC0, UMatSubAction's
+    virtual void Virtual32();                               // slot 32: 0x1099A170, UMatSubAction's
 
 public:
     FMatObjectOrientation CamOrientation;   // 0x54
@@ -2779,6 +3320,8 @@ class USubActionSceneSpeed : public UMatSubAction
 
 public:
     virtual ~USubActionSceneSpeed();        // slot 2: 0x109982B0
+    virtual void Virtual31();                               // slot 31: 0x10999450, UMatSubAction's
+    virtual void Virtual32();                               // slot 32: 0x10999390, UMatSubAction's
 
 public:
     FRange SceneSpeed;                      // 0x54
@@ -2791,6 +3334,8 @@ class USubActionTrigger : public UMatSubAction
 
 public:
     virtual ~USubActionTrigger();           // slot 2: 0x10998370
+    virtual void Virtual31();                               // slot 31: 0x10999030, UMatSubAction's
+    virtual void Virtual32();                               // slot 32: 0x109990F0, UMatSubAction's
 
 public:
     FName EventName;                        // 0x54
@@ -2805,6 +3350,9 @@ public:
     virtual ~USwooshLinkDataObject();       // slot 2: 0x109A1100
 
 public:
+
+public:
+#include "Engine/USwooshLinkDataObject.h"
 };
 T3_CHECK_SIZE(USwooshLinkDataObject, 0x50);
 
@@ -2829,6 +3377,9 @@ public:
 
 public:
     FVector TargetLocationOffset;           // 0x50
+
+public:
+#include "Engine/UTargetLinkDataObject.h"
 };
 T3_CHECK_SIZE(UTargetLinkDataObject, 0x5C);
 
@@ -2841,6 +3392,9 @@ public:
 
 public:
     FStringNoInit LinkName;                 // 0x50
+
+public:
+#include "Engine/UTriggerScriptLinkDataObject.h"
 };
 T3_CHECK_SIZE(UTriggerScriptLinkDataObject, 0x5C);
 
@@ -2852,6 +3406,9 @@ public:
     virtual ~UUserArmImplementationLinkDataObject();// slot 2: 0x109A12F0
 
 public:
+
+public:
+#include "Engine/UUserArmImplementationLinkDataObject.h"
 };
 T3_CHECK_SIZE(UUserArmImplementationLinkDataObject, 0x50);
 
@@ -2863,6 +3420,9 @@ public:
     virtual ~UUserLinkDataObject();         // slot 2: 0x109A1380
 
 public:
+
+public:
+#include "Engine/UUserLinkDataObject.h"
 };
 T3_CHECK_SIZE(UUserLinkDataObject, 0x50);
 
@@ -2874,6 +3434,9 @@ public:
     virtual ~UVulnerabilityLinkDataObject();// slot 2: 0x109A1410
 
 public:
+
+public:
+#include "Engine/UVulnerabilityLinkDataObject.h"
 };
 T3_CHECK_SIZE(UVulnerabilityLinkDataObject, 0x50);
 
@@ -2886,6 +3449,9 @@ public:
 
 public:
     FLOAT Speed;                            // 0x50
+
+public:
+#include "Engine/UWaypointInterpolationLinkDataObject.h"
 };
 T3_CHECK_SIZE(UWaypointInterpolationLinkDataObject, 0x54);
 
@@ -2897,6 +3463,9 @@ public:
     virtual ~UWeaponModLinkDataObject();    // slot 2: 0x109A1530
 
 public:
+
+public:
+#include "Engine/UWeaponModLinkDataObject.h"
 };
 T3_CHECK_SIZE(UWeaponModLinkDataObject, 0x50);
 

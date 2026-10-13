@@ -13,8 +13,12 @@ class AT3AIPawnController : public AAIPawnController
 
 public:
     virtual ~AT3AIPawnController();         // slot 2: 0x10962BF0
+    virtual void Virtual106();                              // slot 106: 0x10964A20, AAIPawnController's
 
 public:
+
+public:
+#include "T3AI/AT3AIPawnController.h"
 };
 T3_CHECK_SIZE(AT3AIPawnController, 0x11C);
 
@@ -26,6 +30,9 @@ public:
     virtual ~AT3BehaviorModel();            // slot 2: 0x10962C90
 
 public:
+
+public:
+#include "T3AI/AT3BehaviorModel.h"
 };
 T3_CHECK_SIZE(AT3BehaviorModel, 0xC0);
 
@@ -37,6 +44,9 @@ public:
     virtual ~AT3CombatModel();              // slot 2: 0x10962D30
 
 public:
+
+public:
+#include "T3AI/AT3CombatModel.h"
 };
 T3_CHECK_SIZE(AT3CombatModel, 0xC0);
 
@@ -48,6 +58,9 @@ public:
     virtual ~AT3FactionModel();             // slot 2: 0x10962DD0
 
 public:
+
+public:
+#include "T3AI/AT3FactionModel.h"
 };
 T3_CHECK_SIZE(AT3FactionModel, 0xC0);
 
@@ -59,6 +72,9 @@ public:
     virtual ~AT3MovementModel();            // slot 2: 0x10962E70
 
 public:
+
+public:
+#include "T3AI/AT3MovementModel.h"
 };
 T3_CHECK_SIZE(AT3MovementModel, 0xE0);
 
@@ -70,6 +86,9 @@ public:
     virtual ~AT3SensoryModel();             // slot 2: 0x10962F10
 
 public:
+
+public:
+#include "T3AI/AT3SensoryModel.h"
 };
 T3_CHECK_SIZE(AT3SensoryModel, 0xC0);
 

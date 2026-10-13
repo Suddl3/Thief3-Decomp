@@ -2,13 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Game/Class_10B39530.h"
-
-class AGarrett
-{
-public:
-    char Unknown00[0x54C];
-    unsigned char InputSpeed;
-};
+#include "T3Player/T3PlayerClasses.h"
 
 class Class_10AA82D0
 {

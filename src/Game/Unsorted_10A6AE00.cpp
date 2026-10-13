@@ -1,14 +1,9 @@
 // Game/Unsorted_10A6AE00.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Core/Core.h"
 #include "Game/Class_10E6B8C8.h"
-
-class AActor : public UObject
-{
-public:
-    BYTE Unknown2C[0x4C];           // 0x2C
-    BITFIELD bDeleteMe:1;           // 0x78
-};
+#include "Engine/EngineClasses.h"
 
 class Object_10A6AEA0_B
 {

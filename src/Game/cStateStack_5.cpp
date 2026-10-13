@@ -1,10 +1,12 @@
 // Game/cStateStack_5.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Engine/EngineClasses.h"
 #include "Game/Class_10B9E410_Item.h"
 #include "Game/Class_10C7D570.h"
 #include "Game/Struct_10AA3520.h"
 #include "Game/Class_10B9E410_Unknown0C.h"
+#include "AICore/AICoreClasses.h"
 
 class Class_10B9E410_Member
 {
@@ -58,11 +60,6 @@ public:
     virtual void Virtual46();
     virtual void Virtual47();
     virtual int Virtual48(Class_10B9E410_Unknown0C* A, int B);
-};
-
-class AAIPathPoint : public AMarker
-{
-    DECLARE_CLASS(AAIPathPoint, AMarker, 0x0, AICore)
 };
 
 extern Struct_10AA3520* DAT_10f35dec;

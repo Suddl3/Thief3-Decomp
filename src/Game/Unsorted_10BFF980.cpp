@@ -3,20 +3,12 @@
 
 #include "Core/Core.h"
 #include "Game/cIntArray.h"
+#include "AICore/AICoreClasses.h"
+#include "Engine/EngineClasses.h"
 
 class AMarker;
 
-class AAIPathPoint : public UObject
-{
-    DECLARE_CLASS(AAIPathPoint, AMarker, 0x0, AICore)
-};
-
 class AActor;
-
-class APawn
-{
-    DECLARE_CLASS(APawn, AActor, 0x800, Engine)
-};
 
 class Class_10BFF980_Param
 {

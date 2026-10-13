@@ -8,6 +8,7 @@ class AAIPathPoint;
 class Class_10BBF5D0
 {
 public:
+    int FUN_10bbf5c0();
     int FUN_10bbf5d0();
     void FUN_10bc0eb0(AAIPathPoint* Point, AAIPathPoint* Other);
     void FUN_10bc0150(AAIPathPoint* Point, AAIPathPoint* Other);

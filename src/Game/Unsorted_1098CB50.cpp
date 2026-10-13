@@ -1,15 +1,9 @@
 // Game/Unsorted_1098CB50.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include <new>
 #include "Game/Class_1098CB90.h"
-
-class APlayerPawn
-{
-public:
-    APlayerPawn();
-    void operator delete(void* p);
-    static void InternalConstructor(void* p);
-};
+#include "Engine/EngineClasses.h"
 
 // FUNCTION: 0x1098CB80 ?InternalConstructor@APlayerPawn@@SAXPAX@Z
 void APlayerPawn::InternalConstructor(void* p)

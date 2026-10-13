@@ -1,7 +1,9 @@
 // Game/cSoundStreamingManager_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Core/Core.h"
 #include "Game/cSoundStreamingManager.h"
+#include "Engine/EngineClasses.h"
 
 struct Struct_10A334E0;
 
@@ -20,11 +22,6 @@ struct Struct_10A33B70_Param
 {
     char Pad00[4];
     int Unknown04;
-};
-
-class AActor
-{
-    DECLARE_CLASS(AActor, UObject, 0x800, Engine)
 };
 
 // FUNCTION: 0x10A33B70 ?HandleMoveEvent@cSoundStreamingManager@@QAEXHHH@Z

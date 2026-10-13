@@ -1,21 +1,14 @@
 // Game/Class_10E6F3EC.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Core/Core.h"
 #include "Game/cCitySectionManager.h"
 #include "Game/Class_10ABDC10.h"
 #include "Game/Class_10E6F3EC.h"
 #include "Game/Class_10F3A3D8.h"
+#include "T3Game/T3GameClasses.h"
 
 class AInfo;
-
-class ADifficultyInfo
-{
-    DECLARE_CLASS(ADifficultyInfo, AInfo, 0x0, T3Game)
-
-public:
-    char Pad00[0x174];
-    unsigned char Unknown174;
-};
 
 class Class_10FF667C
 {
@@ -58,7 +51,7 @@ void Class_10E6F3EC::FUN_10ab8470(int Key, UObject* Obj, Class_10AB8470* Arg, in
                 ADifficultyInfo* Info = Cast<ADifficultyInfo>(Obj);
                 if (Info)
                 {
-                    Info->Unknown174 = Unknown08;
+                    Info->CurrentDifficulty = Unknown08;
                     Unknown04 = Info;
                     FUN_10ab8050(false);
                 }

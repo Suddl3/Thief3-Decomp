@@ -78,6 +78,9 @@ class USubsystem : public UObject
     DECLARE_CLASS(USubsystem, UObject, 0x9, Core)
 
 public:
+    virtual void Virtual31(int);                            // slot 31
+
+public:
     INT ExecVtbl;                           // 0x2C
 };
 T3_CHECK_SIZE(USubsystem, 0x30);
@@ -88,7 +91,11 @@ class ULinkDataObject : public UObject
 
 public:
     virtual void Destroy();                 // slot 0: 0x10B0F7F0
+    virtual ~ULinkDataObject();             // slot 2: 0x1099F280
     virtual void Serialize(FArchive& Ar);   // slot 8: 0x10B0F5E0
+    virtual void Virtual31();                               // slot 31: 0x10B0F4D0
+    virtual void Virtual32();                               // slot 32: 0x109E3CA0, signature unknown
+    virtual int Virtual24();                                // slot 24: 0x10B0F4A0, UObject's
 
 public:
     INT m_LinkFlavor;                       // 0x2C
@@ -106,6 +113,10 @@ class UEnum : public UField
 
 public:
     virtual ~UEnum();                       // slot 2: 0x10ADCAC0
+    virtual void Virtual31();                               // slot 31: 0x10AE50C0, UField's
+    virtual void Virtual32();                               // slot 32: 0x10AFC110, UField's
+    virtual void Virtual33();                               // slot 33: 0x10D660B0, UField's
+    virtual void Virtual34();                               // slot 34: 0x10AE58A0, UField's
 
 public:
     BYTE Pad34[0xC];
@@ -121,6 +132,9 @@ public:
     virtual void Serialize(FArchive& Ar);   // slot 8: 0x10AD73F0
 
 public:
+
+public:
+#include "Core/UBitfieldEnum.h"
 };
 T3_CHECK_SIZE(UBitfieldEnum, 0x40);
 
@@ -128,6 +142,29 @@ class UProperty : public UField
 {
     DECLARE_CLASS(UProperty, UField, 0x1, Core)
     DECLARE_WITHIN(UField)
+
+public:
+    virtual void Virtual35();                               // slot 35
+    virtual void Virtual36(int);                            // slot 36
+    virtual void Virtual37();                               // slot 37
+    virtual void Virtual38();                               // slot 38
+    virtual void Virtual39();                               // slot 39
+    virtual void Virtual40();                               // slot 40
+    virtual void Virtual41();                               // slot 41
+    virtual char const * ImportText(char const *,unsigned long *,void *);// slot 42
+    virtual void Virtual43();                               // slot 43
+    virtual void Virtual44(int *,int *,int);                // slot 44
+    virtual void Virtual45();                               // slot 45
+    virtual void Virtual46();                               // slot 46, signature unknown
+    virtual void Virtual47();                               // slot 47
+    virtual unsigned char Virtual48();                      // slot 48
+    virtual void Virtual49();                               // slot 49
+    virtual void Virtual50();                               // slot 50
+    virtual void Virtual51();                               // slot 51
+    virtual void Virtual52();                               // slot 52, signature unknown
+    virtual void Virtual53();                               // slot 53
+    virtual void Virtual54();                               // slot 54
+    virtual void Virtual55();                               // slot 55
 
 public:
     BYTE Pad34[0x2C];
@@ -140,6 +177,31 @@ class UIntProperty : public UProperty
 
 public:
     virtual ~UIntProperty();                // slot 2: 0x109768D0
+    virtual void Virtual31();                               // slot 31: 0x10AE50C0, UField's
+    virtual void Virtual32();                               // slot 32: 0x10AFC110, UField's
+    virtual void Virtual33();                               // slot 33: 0x10D660B0, UField's
+    virtual void Virtual34();                               // slot 34: 0x10AE58A0, UField's
+    virtual void Virtual35();                               // slot 35: 0x10AF0F60, UProperty's
+    virtual void Virtual36(int);                            // slot 36: 0x10AED0E0, UProperty's
+    virtual void Virtual37();                               // slot 37: 0x10AED100, UProperty's
+    virtual void Virtual38();                               // slot 38: 0x10AF1E50, UProperty's
+    virtual void Virtual39();                               // slot 39: 0x10AED160, UProperty's
+    virtual void Virtual40();                               // slot 40: 0x10AED140, UProperty's
+    virtual void Virtual41();                               // slot 41: 0x10AED180, UProperty's
+    virtual char const * ImportText(char const *,unsigned long *,void *);// slot 42: 0x10AED1A0, UProperty's
+    virtual void Virtual43();                               // slot 43: 0x10AECA00, UProperty's
+    virtual void Virtual44(int *,int *,int);                // slot 44: 0x10AED0F0, UProperty's
+    virtual void Virtual45();                               // slot 45: 0x10AED590, UProperty's
+    virtual void Virtual46();                               // slot 46: 0x109E3C90, UProperty's
+    virtual void Virtual47();                               // slot 47: 0x10AECAD0, UProperty's
+    virtual unsigned char Virtual48();                      // slot 48: 0x10AECB10, UProperty's
+    virtual void Virtual49();                               // slot 49: 0x10AEFF50, UProperty's
+    virtual void Virtual50();                               // slot 50: 0x10AECB70, UProperty's
+    virtual void Virtual51();                               // slot 51: 0x10AED920, UProperty's
+    virtual void Virtual52();                               // slot 52: 0x10AED930, UProperty's
+    virtual void Virtual53();                               // slot 53: 0x10AECC00, UProperty's
+    virtual void Virtual54();                               // slot 54: 0x10AECC10, UProperty's
+    virtual void Virtual55();                               // slot 55: 0x10AED1E0, UProperty's
 
 public:
 };
@@ -152,9 +214,16 @@ class UBitfieldProperty : public UIntProperty
 public:
     virtual ~UBitfieldProperty();           // slot 2: 0x10AEE390
     virtual void Serialize(FArchive& Ar);   // slot 8: 0x10AEE150
+    virtual void Virtual41();                               // slot 41: 0x10AEE990, UProperty's
+    virtual char const * ImportText(char const *,unsigned long *,void *);// slot 42: 0x10AF01B0, UProperty's
+    virtual void Virtual49();                               // slot 49: 0x10AF0290, UProperty's
+    virtual void Virtual55();                               // slot 55: 0x10AEE210, UProperty's
 
 public:
     BYTE Pad60[0x4];
+
+public:
+#include "Core/UBitfieldProperty.h"
 };
 T3_CHECK_SIZE(UBitfieldProperty, 0x64);
 
@@ -164,6 +233,7 @@ class UCommandlet : public UObject
 
 public:
     virtual ~UCommandlet();                 // slot 2: 0x10976FA0
+    virtual void Virtual31();                               // slot 31: 0x10AD7F90
 
 public:
     FStringNoInit HelpCmd;                  // 0x2C

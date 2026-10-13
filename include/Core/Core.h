@@ -274,6 +274,19 @@ public:
     // Registers a native class's natives once the object system is up
     // (InitializePrivateStaticClass's last call, slot 19).
     virtual void Register();
+    // Slots 20 to 30 (UObject's table has 31): not identified. The signatures
+    // are the ones matched overrides compile to (tools/agent/vslots.py).
+    virtual void Virtual20();
+    virtual void Virtual21();
+    virtual void Virtual22();
+    virtual void Virtual23();
+    virtual int Virtual24();
+    virtual void Virtual25();
+    virtual void Virtual26();
+    virtual void Virtual27();
+    virtual void Virtual28(int, int, int);
+    virtual void Virtual29(int, int);
+    virtual void Virtual30();
 
     UClass* GetClass() const { return Class; }
     void SetClass(UClass* NewClass) { Class = NewClass; }

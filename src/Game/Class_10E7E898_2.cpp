@@ -1,16 +1,9 @@
 // Game/Class_10E7E898_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Core/Core.h"
 #include "Game/Class_10B39530.h"
-
-class AGarrett
-{
-public:
-    char Unknown00[0x38];
-    FRotator Rotation;
-    char Unknown44[0x3BC];
-    FRotator HeadRot;
-};
+#include "T3Player/T3PlayerClasses.h"
 
 class Class_10AA82D0
 {

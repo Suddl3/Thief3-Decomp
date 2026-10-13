@@ -5,12 +5,7 @@
 #include "Game/Class_10E90D70.h"
 #include "Game/Struct_10BE9AC0.h"
 #include "Game/Struct_10C08690.h"
-
-class APawn
-{
-public:
-    void FUN_10a6ea30(int Flags, int Value);
-};
+#include "Engine/EngineClasses.h"
 
 class State_Flee : public Class_10E90D70
 {

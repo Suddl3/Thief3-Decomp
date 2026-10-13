@@ -2,13 +2,9 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Core/Core.h"
+#include "T3Player/T3PlayerClasses.h"
 
 class APlayerPawn;
-
-class AGarrett
-{
-    DECLARE_CLASS(AGarrett, APlayerPawn, 0x800, T3Player)
-};
 
 // FUNCTION: 0x109E9FD0 ??$Cast@VAGarrett@@@@YAPAVAGarrett@@PAVUObject@@@Z
 template AGarrett* Cast<AGarrett>(UObject* Src);

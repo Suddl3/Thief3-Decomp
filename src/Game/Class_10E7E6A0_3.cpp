@@ -2,23 +2,11 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Core/Core.h"
+#include "T3Player/T3PlayerClasses.h"
 
 struct Struct_10B1E010_Param;
 
 FVector FUN_10b1e010(Struct_10B1E010_Param* A);
-
-class AGarrett
-{
-public:
-    void SetNoiseEnabled(int A);
-
-    char Unknown00[0x450];
-    unsigned bInBowDraw : 1;
-    unsigned isCrouching : 1;
-    unsigned CanDoItemSearch : 1;
-    unsigned CanUseItems : 1;
-    unsigned bUpdatePhysHeight : 1;
-};
 
 class Class_10AA82D0
 {

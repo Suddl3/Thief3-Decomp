@@ -1,10 +1,12 @@
 // Game/Unsorted_10AC2610.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10AC2E40.h"
 #include "Game/GarrettOnCamera.h"
 #include "Game/Options.h"
 #include "Game/cIntArray.h"
 #include "Game/Class_10E6F61C.h"
+#include "Engine/EngineClasses.h"
 
 class UClient
 {
@@ -13,13 +15,6 @@ public:
     float Unknown68;
     float Unknown6C;
     float Unknown70;
-};
-
-class UEngine
-{
-public:
-    char Unknown00[0x38];
-    UClient* Client;
 };
 
 extern UEngine* GEngine;

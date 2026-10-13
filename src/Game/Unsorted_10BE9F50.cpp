@@ -1,13 +1,9 @@
 // Game/Unsorted_10BE9F50.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/cIntArray.h"
 #include "Game/Class_10BEA320.h"
-
-class APawn
-{
-public:
-    void FUN_10a6ea30(int A, int B);
-};
+#include "Engine/EngineClasses.h"
 
 class Class_10BEA320_Unknown60
 {

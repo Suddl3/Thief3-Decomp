@@ -91,6 +91,9 @@ public:
     FDifficultyLevel ExpertDiffSettings;    // 0x148
     BYTE CurrentDifficulty;                 // 0x174  eDifficultyLevels
     FDifficultyLevel CustomDiffSettings;    // 0x178
+
+public:
+#include "T3Game/ADifficultyInfo.h"
 };
 T3_CHECK_SIZE(ADifficultyInfo, 0x1A4);
 
@@ -146,6 +149,9 @@ public:
     FRotator localRotationRate;             // 0xC0
     INT CollisionFilterInfo;                // 0xCC
     INT pad;                                // 0xD0
+
+public:
+#include "T3Game/ASpellProjectile.h"
 };
 T3_CHECK_SIZE(ASpellProjectile, 0xD4);
 
@@ -160,6 +166,9 @@ public:
     BITFIELD Start:1;                       // 0xC0
     FLOAT Seconds;                          // 0xC4
     INT UniqueId;                           // 0xC8
+
+public:
+#include "T3Game/AWakeupCameraPoint.h"
 };
 T3_CHECK_SIZE(AWakeupCameraPoint, 0xCC);
 
@@ -171,6 +180,9 @@ public:
     virtual ~UInventorySwitchLinkDataObject();// slot 2: 0x10AB4D80
 
 public:
+
+public:
+#include "T3Game/UInventorySwitchLinkDataObject.h"
 };
 T3_CHECK_SIZE(UInventorySwitchLinkDataObject, 0x50);
 
@@ -182,6 +194,9 @@ public:
     virtual ~ULockLinkDataObject();         // slot 2: 0x10AB4E10
 
 public:
+
+public:
+#include "T3Game/ULockLinkDataObject.h"
 };
 T3_CHECK_SIZE(ULockLinkDataObject, 0x50);
 
@@ -195,6 +210,9 @@ public:
 public:
     FLOAT MidpointRotation;                 // 0x50
     FLOAT RotationFromCenter;               // 0x54
+
+public:
+#include "T3Game/ULockTickLinkDataObject.h"
 };
 T3_CHECK_SIZE(ULockTickLinkDataObject, 0x58);
 
@@ -208,6 +226,9 @@ public:
 public:
     FLOAT RopeLength;                       // 0x50
     FStringNoInit UnfurlAnimName;           // 0x54
+
+public:
+#include "T3Game/URopeArrowSpawnLinkDataObject.h"
 };
 T3_CHECK_SIZE(URopeArrowSpawnLinkDataObject, 0x60);
 
@@ -219,6 +240,9 @@ public:
     virtual ~USpawnPoolLinkDataObject();    // slot 2: 0x10AB5000
 
 public:
+
+public:
+#include "T3Game/USpawnPoolLinkDataObject.h"
 };
 T3_CHECK_SIZE(USpawnPoolLinkDataObject, 0x50);
 
@@ -231,6 +255,9 @@ public:
     virtual void Register();                // slot 19: 0x10ABD7D0
 
 public:
+
+public:
+#include "T3Game/UT3GameRegistrar.h"
 };
 T3_CHECK_SIZE(UT3GameRegistrar, 0x2C);
 

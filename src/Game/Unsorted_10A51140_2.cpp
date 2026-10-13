@@ -2,39 +2,9 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Core/Core.h"
+#include "Engine/EngineClasses.h"
 
 class AFX;
-
-class AEmitter
-{
-    DECLARE_CLASS(AEmitter, AFX, 0x0, Engine)
-
-public:
-    char Unknown00[0x140];
-    BITFIELD InOverlay:1;
-};
-
-class APawn
-{
-public:
-    void FUN_10a6ea30(int Flags, int Value);
-};
-
-class AActor : public UObject
-{
-public:
-    char Unknown2C[0x48];
-    BITFIELD bLocalGameEvent:1;
-    BITFIELD bTravelGameEvent:1;
-    BITFIELD bDestroyInPainVolume:1;
-    BITFIELD bDontDestroy:1;
-    BITFIELD bHiddenEd:1;
-    BITFIELD bHiddenEdGroup:1;
-    BITFIELD bDirectional:1;
-    BITFIELD bEdShouldSnap:1;
-    BITFIELD bShouldTickInAppTime:1;
-    BITFIELD bShouldNotTick:1;
-};
 
 class Class_10A57910
 {

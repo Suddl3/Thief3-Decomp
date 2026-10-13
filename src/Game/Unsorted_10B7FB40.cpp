@@ -1,5 +1,6 @@
 // Game/Unsorted_10B7FB40.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include <vector>
 #include "Game/Class_10B7FC20.h"
 #include "Game/Struct_10B7FC20_Item.h"

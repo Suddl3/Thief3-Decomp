@@ -2,14 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include <new>
-
-class UCARDEntry
-{
-public:
-    UCARDEntry();
-    void operator delete(void* p);
-    static void InternalConstructor(void* p);
-};
+#include "Engine/EngineClasses.h"
 
 // FUNCTION: 0x1098ACA0 ?InternalConstructor@UCARDEntry@@SAXPAX@Z
 void UCARDEntry::InternalConstructor(void* p)

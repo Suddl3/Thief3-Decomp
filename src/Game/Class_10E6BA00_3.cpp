@@ -5,19 +5,7 @@
 #include "Core/Core.h"
 #include "Game/cActorManager.h"
 #include "Game/Class_10971570.h"
-
-class AActor : public UObject
-{
-public:
-    BYTE Unknown2C[0x4C];           // 0x2C
-    BITFIELD bDeleteMe:1;           // 0x78
-};
-
-class APawn : public AActor
-{
-public:
-    void FUN_10a6ea30(int A, int B);
-};
+#include "Engine/EngineClasses.h"
 
 class Object_10A6FC90_B
 {
