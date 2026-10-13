@@ -13,45 +13,6 @@ void SetWorldTransform(Struct_10919190* Matrix);
 
 void SetStreamAndIndices(int A, int B, int C);
 
-Class_10905A90_Member* GetAllocator();
-
-struct Struct_1095A760_Element
-{
-    char Unknown00[0x5C];
-};
-
-// FUNCTION: 0x1095A5A0 ?SetCount@Class_1095A760@@QAEXH@Z
-void Class_1095A760::SetCount(int NewCount)
-{
-    int Capacity = !m_Elements ? 0 : m_CapacityBytes / sizeof(Struct_1095A760_Element);
-    GetAllocator()->Virtual8(0, 0);
-    if (NewCount > Capacity)
-    {
-        int NewCapacity = NewCount;
-        if (Capacity)
-            NewCapacity = (NewCount & ~15) + 16;
-        m_Elements = GetAllocator()->Virtual3(m_Elements, NewCapacity * sizeof(Struct_1095A760_Element), 0, 0, 0, 0);
-        m_CapacityBytes = NewCapacity * sizeof(Struct_1095A760_Element);
-    }
-    else if (NewCount <= Capacity - 16)
-    {
-        if (NewCount == 0)
-        {
-            GetAllocator()->Virtual5(m_Elements);
-            m_Elements = 0;
-            m_CapacityBytes = 0;
-        }
-        else
-        {
-            int NewCapacity = (NewCount & ~15) + 16;
-            m_Elements = GetAllocator()->Virtual3(m_Elements, NewCapacity * sizeof(Struct_1095A760_Element), 0, 0, 0, 0);
-            m_CapacityBytes = NewCapacity * sizeof(Struct_1095A760_Element);
-        }
-    }
-    GetAllocator()->Virtual9();
-    m_Count = NewCount;
-}
-
 // FUNCTION: 0x1095A660 ?Draw@Class_1095A660@@QAEXXZ
 void Class_1095A660::Draw()
 {

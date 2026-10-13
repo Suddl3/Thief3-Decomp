@@ -18,29 +18,6 @@ public:
     Class_10BC0A20_UnknownC0* UnknownC0;
 };
 
-class AAIPathPoint;
-
-class Class_10BC0EB0_Unknown08
-{
-public:
-    AAIPathPoint* Unknown00;
-};
-
-class Class_10BC0EB0_Field00
-{
-public:
-    int Unknown00;
-    char Unknown04[4];
-    Class_10BC0EB0_Unknown08* Unknown08;
-    char Unknown0C[0xC];
-    int Unknown18;
-    char Unknown1C[4];
-    AAIPathPoint** Unknown20;
-    int Unknown24;
-    char Unknown28[4];
-    AAIPathPoint** Unknown2C;
-};
-
 // FUNCTION: 0x10BC0A20 ?LinkBothWays@@YAXPAVClass_10BC0A20@@0@Z
 void LinkBothWays(Class_10BC0A20* First, Class_10BC0A20* Second)
 {
@@ -59,31 +36,5 @@ void LinkBothWays(Class_10BC0A20* First, Class_10BC0A20* Second)
         int Index = ListB.Count;
         ListB.SetCount(Index + 1);
         ListB.Data[Index] = (int)First;
-    }
-}
-
-// FUNCTION: 0x10BC0EB0 ?FUN_10bc0eb0@Class_10BBF5D0@@QAEXPAVAAIPathPoint@@0@Z
-void Class_10BBF5D0::FUN_10bc0eb0(AAIPathPoint* Point, AAIPathPoint* Other)
-{
-    Class_10BC0EB0_Field00* List = (Class_10BC0EB0_Field00*)Field00;
-    if (List->Unknown00 > 0 && (Other == 0 || List->Unknown08->Unknown00 != Other))
-    {
-        do
-        {
-            FUN_10bc0150(Point, List->Unknown08->Unknown00);
-            List = (Class_10BC0EB0_Field00*)Field00;
-        } while (List->Unknown00 > 0);
-    }
-    List = (Class_10BC0EB0_Field00*)Field00;
-    while (List->Unknown18 > 0)
-    {
-        FUN_10bc0150(Point, *List->Unknown20);
-        List = (Class_10BC0EB0_Field00*)Field00;
-    }
-    List = (Class_10BC0EB0_Field00*)Field00;
-    while (List->Unknown24 > 0)
-    {
-        FUN_10bc0150(Point, *List->Unknown2C);
-        List = (Class_10BC0EB0_Field00*)Field00;
     }
 }

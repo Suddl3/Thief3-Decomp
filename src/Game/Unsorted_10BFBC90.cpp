@@ -1,5 +1,6 @@
 // Game/Unsorted_10BFBC90.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10BFBC90.h"
 #include "Game/Class_10BFC190.h"
 #include "Game/Class_10BFD210.h"
@@ -31,18 +32,6 @@ void Class_10BFC190::Reset()
     Unknown18 = 0;
     Unknown1C = 0;
     *Head = 0;
-}
-
-// FUNCTION: 0x10BFD210 ?Reset@Class_10BFD210@@QAEXXZ
-void Class_10BFD210::Reset()
-{
-    FUN_10bfc680(0.0f);
-}
-
-// FUNCTION: 0x10BFF210 ??0Class_10E97AD4@@QAE@HH@Z
-Class_10E97AD4::Class_10E97AD4(int A, int B) : Unknown04(A), Unknown08(B)
-{
-    Unknown10 = false;
 }
 
 // FUNCTION: 0x10BFF240 ?FUN_10bff240@Class_10BFF240@@QAEXE@Z

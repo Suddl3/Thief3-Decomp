@@ -1,6 +1,10 @@
 // Game/Class_10E49EE0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
+#include "Game/cD3DVertexBuffer.h"
+#include "Game/Struct_10932ED0.h"
+#include "Game/Class_10E49D1C.h"
+
 class Class_10E49EE0;
 
 class Class_10E49EE0_Owner
@@ -36,6 +40,12 @@ public:
     Class_10E49EE0_Owner* m_Owner;
     int m_RefCount;
 };
+
+// FUNCTION: 0x109341E0 ?AddRef@Class_10E49EE0@@UAEHXZ
+int Class_10E49EE0::AddRef()
+{
+    return ++m_RefCount;
+}
 
 // FUNCTION: 0x109341F0 ?Release@Class_10E49EE0@@UAEHXZ
 int Class_10E49EE0::Release()

@@ -8,8 +8,6 @@
 #include "Game/Class_10E700F0.h"
 #include "Game/Class_10E70150.h"
 
-extern float DAT_10e499a4;
-
 // FUNCTION: 0x10ACE1D0 ?FUN_10ace1d0@Class_10E700D4@@UAEMPAVClass_1098E330@@H0@Z
 float Class_10E700D4::FUN_10ace1d0(Class_1098E330* A, int B, Class_1098E330* C)
 {
@@ -19,22 +17,4 @@ float Class_10E700D4::FUN_10ace1d0(Class_1098E330* A, int B, Class_1098E330* C)
     if (C)
         C->FUN_1098e330(0x100589, (int*)&Second);
     return Second + First;
-}
-
-// FUNCTION: 0x10ACE280 ?FUN_10ace280@Class_10E70150@@UAEMHHPAVClass_1098E330@@@Z
-float Class_10E70150::FUN_10ace280(int A, int B, Class_1098E330* Obj)
-{
-    if (Obj)
-    {
-        float Value = 0.0f;
-        Obj->FUN_1098e330(0x100588, (int*)&Value);
-        return Value;
-    }
-    return DAT_10e499a4;
-}
-
-// FUNCTION: 0x10ACE340 ?FUN_10ace340@Class_10E700F0@@UAEMHHH@Z
-float Class_10E700F0::FUN_10ace340(int a, int b, int c)
-{
-    return DAT_10e499a4;
 }

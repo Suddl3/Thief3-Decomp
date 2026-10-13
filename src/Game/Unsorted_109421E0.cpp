@@ -1,5 +1,6 @@
 // Game/Unsorted_109421E0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10942BB0.h"
 #include "Game/Class_10942BF0.h"
 #include "Game/cShortArray.h"
@@ -28,13 +29,4 @@ int Class_10942BF0::GetBits(int Flag)
     if (Flag == 0)
         return (Unknown158 >> 0x13) & 0x1fff;
     return Unknown158 & 0x7ffff;
-}
-
-// FUNCTION: 0x109435A0 ?Append@cShortArray@@QAEHPBF@Z
-int cShortArray::Append(const short* Item)
-{
-    int Index = m_Count;
-    Resize(Index + 1);
-    m_Items[Index] = *Item;
-    return Index;
 }

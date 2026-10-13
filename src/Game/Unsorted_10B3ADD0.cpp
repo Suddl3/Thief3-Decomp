@@ -1,22 +1,11 @@
 // Game/Unsorted_10B3ADD0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Core/Core.h"
 #include "Game/Class_10B25200.h"
 #include "Game/Class_10B3AE70.h"
 #include "Game/Class_10E7E538.h"
 #include "Game/GSMantle.h"
-
-struct Struct_10B21820_Object
-{
-    char Unknown00[0x4A4];
-    FVector Unknown4A4;
-};
-
-class Class_10B21820
-{
-public:
-    Struct_10B21820_Object* FUN_10991e10();
-};
 
 struct Struct_10B48890;
 
@@ -72,25 +61,11 @@ int __stdcall FUN_10b3add0(unsigned char A)
     return 0x21;
 }
 
-// FUNCTION: 0x10B3AE50 ?ForceArms@GSMantle@@QAEXPAVAGarrett@@@Z
-void GSMantle::ForceArms(AGarrett* Garrett)
-{
-    Garrett->ArmUse = EAU_FORCED_ARMS;
-    GetSelection()->SetJunkState();
-}
-
 // FUNCTION: 0x10B3AE70 ?ForceBody@Class_10B3AE70@@QAEXPAVAGarrett@@@Z
 void Class_10B3AE70::ForceBody(AGarrett* Garrett)
 {
     Garrett->ArmUse = EAU_FORCED_BODY;
     GetSelection()->SetJunkState();
-}
-
-// FUNCTION: 0x10B3AF10 ?GetLocationZ@Class_10E7E538@@UAEMPAVClass_10B21820@@@Z
-float Class_10E7E538::GetLocationZ(Class_10B21820* Obj)
-{
-    FVector Location = Obj->FUN_10991e10()->Unknown4A4;
-    return Location.Z;
 }
 
 // FUNCTION: 0x10B3AF40 ?FUN_10b3af40@@YGPAUStruct_10B48890@@PAUStruct_10B3AF40_Param@@@Z

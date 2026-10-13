@@ -1,5 +1,6 @@
 // Game/Unsorted_10A5B4A0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/cString.h"
 #include "Game/Class_1090FD40.h"
 
@@ -27,13 +28,6 @@ public:
     int Unknown1C4;
     int Unknown1C8;
 };
-
-// FUNCTION: 0x10A5C560 ?RemoveUnordered@Class_1090FD40@@QAEXH@Z
-void Class_1090FD40::RemoveUnordered(int Index)
-{
-    FUN_10a5b5b0(Index, m_Count - 1);
-    SetCount(m_Count - 1);
-}
 
 // FUNCTION: 0x10A5D3C0 ?FUN_10a5d3c0@Class_10E696A8@@QAEPAV1@XZ
 Class_10E696A8* Class_10E696A8::FUN_10a5d3c0()

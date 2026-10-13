@@ -1,5 +1,6 @@
 // Game/Unsorted_10C39220.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10C3D050.h"
 #include "Game/Class_10C3D0D0.h"
 #include "Game/Class_10C3D340.h"
@@ -16,21 +17,6 @@
 #include "Game/Class_10C3F170.h"
 #include "Game/Class_10E9B580.h"
 #include "Game/CadenceManager.h"
-
-extern void* DAT_10e9afa4[];
-
-class Class_10E9AFA4
-{
-public:
-    Class_10E9AFA4* Init(int A, int B, int C);
-
-    void* Unknown00;
-    float Unknown04;
-    float Unknown08;
-    int Unknown0C;
-    int Unknown10;
-    int Unknown14;
-};
 
 extern void* DAT_10e9b020[];
 
@@ -98,18 +84,6 @@ public:
     char Pad14[0x68];
     int Field7C;
 };
-
-// FUNCTION: 0x10C3CF70 ?Init@Class_10E9AFA4@@QAEPAV1@HHH@Z
-Class_10E9AFA4* Class_10E9AFA4::Init(int A, int B, int C)
-{
-    Unknown04 = 90.0f;
-    Unknown08 = 90.0f;
-    Unknown0C = A;
-    Unknown00 = DAT_10e9afa4;
-    Unknown10 = B;
-    Unknown14 = C;
-    return this;
-}
 
 // FUNCTION: 0x10C3D050 ?FUN_10c3d050@Class_10C3D050@@QAEXXZ
 void Class_10C3D050::FUN_10c3d050()
@@ -217,18 +191,6 @@ void Class_10E9B580::FUN_10c3efc0()
 unsigned char Class_10C3F170::FUN_10c3f170()
 {
     return Field20;
-}
-
-// FUNCTION: 0x10C3F1F0 ?FUN_10c3f1f0@CadenceManager@@QAEEXZ
-unsigned char CadenceManager::FUN_10c3f1f0()
-{
-    return Field21;
-}
-
-// FUNCTION: 0x10C3F260 ?FUN_10c3f260@CadenceManager@@QAEEXZ
-unsigned char CadenceManager::FUN_10c3f260()
-{
-    return Field22;
 }
 
 // FUNCTION: 0x10C3FBD0 ?FUN_10c3fbd0@@YAXXZ

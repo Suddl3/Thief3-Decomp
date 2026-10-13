@@ -10,6 +10,15 @@ inline void* operator new(unsigned int, EInternal* Mem)
     return Mem;
 }
 
+// FUNCTION: 0x109A0D60 ??_GURuntimeFireEffectLinkDataObject@@UAEPAXI@Z
+// Compiler-generated: emitted with the class's vtable by 0x109A0D80's definition in this unit.
+
+// FUNCTION: 0x109A0D80 ??1URuntimeFireEffectLinkDataObject@@UAE@XZ
+URuntimeFireEffectLinkDataObject::~URuntimeFireEffectLinkDataObject()
+{
+    ConditionalDestroy();
+}
+
 // FUNCTION: 0x109A1850 ?InternalConstructor@URuntimeFireEffectLinkDataObject@@SAXPAX@Z
 void URuntimeFireEffectLinkDataObject::InternalConstructor(void* X)
 {

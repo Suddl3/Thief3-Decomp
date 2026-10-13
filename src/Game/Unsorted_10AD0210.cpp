@@ -1,5 +1,6 @@
 // Game/Unsorted_10AD0210.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_1098E3D0.h"
 #include "Game/Class_10AD0490.h"
 #include <new>
@@ -30,12 +31,4 @@ void Class_10AD0210::CreateItem(int Handle, int B)
     Obj->Virtual45(Item, B, 0);
     FUN_10b06220();
     FUN_10ad9c90(Handle, Item);
-}
-
-// FUNCTION: 0x10AD0490 ?Lock@Class_10AD0490@@QAEXPAVClass_1098E3D0@@@Z
-void Class_10AD0490::Lock(Class_1098E3D0* Obj)
-{
-    int Value = 1;
-    Obj->FUN_1098e3d0(0x800182, &Value);
-    FUN_10ad03f0(Obj);
 }

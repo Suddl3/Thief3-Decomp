@@ -1,23 +1,8 @@
 // Game/Unsorted_109311E0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_109333A0.h"
 #include "Game/Struct_10932ED0.h"
-
-extern void* DAT_10e49d1c[];
-
-extern "C" void* memset(void* Dest, int Value, unsigned int Count);
-
-class Class_10E49D1C
-{
-public:
-    void FUN_10932ed0();
-
-    void* VTable;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    Struct_10932ED0 m_Desc;
-};
 
 extern int DAT_10f31bdc;
 
@@ -28,16 +13,6 @@ extern Class_10939570* DAT_10f323fc;
 extern int DAT_10f340ac;
 
 extern int DAT_10f340c0;
-
-// FUNCTION: 0x10932ED0 ?FUN_10932ed0@Class_10E49D1C@@QAEXXZ
-void Class_10E49D1C::FUN_10932ed0()
-{
-    VTable = DAT_10e49d1c;
-    Unknown04 = 0;
-    Unknown08 = -1;
-    memset(&m_Desc, 0, sizeof(m_Desc));
-    Unknown0C = 0;
-}
 
 // FUNCTION: 0x109333A0 ?FUN_109333a0@Class_109333A0@@QAEHXZ
 int Class_109333A0::FUN_109333a0()

@@ -1,5 +1,6 @@
 // Game/Unsorted_10B40620.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10B2A160.h"
 #include "Game/Class_10B2A160_Node.h"
 #include "Game/Class_10E696A8.h"
@@ -64,28 +65,6 @@ public:
     int Unknown200;
     bool Unknown204;
 };
-
-// FUNCTION: 0x10B40620 ?FUN_10b40620@Class_10B408D0@@QAEXH@Z
-void Class_10B408D0::FUN_10b40620(int Size)
-{
-    for (int i = 0; i < m_BucketCount; i++)
-    {
-        Class_10B2A160_Node* Node = m_Buckets[i];
-        while (Node)
-        {
-            Class_10B2A160_Node* Next = Node->Next;
-            ::operator delete(Node);
-            Node = Next;
-        }
-    }
-    m_Count = 0;
-    m_BucketCount = 0;
-    m_Collisions = 0;
-    ::operator delete(m_Buckets);
-    m_Buckets = 0;
-    if (!m_NoAutoResize)
-        Rehash(Size);
-}
 
 // FUNCTION: 0x10B406A0 ??0Class_10E7FB08@@QAE@XZ
 Class_10E7FB08::Class_10E7FB08()

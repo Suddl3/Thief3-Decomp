@@ -6,8 +6,6 @@
 #include "Game/cRigidAttachmentManager.h"
 #include "Engine/EngineClasses.h"
 
-int FUN_10977fa0(int Unknown);
-
 // FUNCTION: 0x10A7A770 ?ReadField@@YG?AVFString@@PAVClass_10AF7F80@@PAH@Z
 FString __stdcall ReadField(Class_10AF7F80* Src, int* Pos)
 {
@@ -26,14 +24,4 @@ FString __stdcall ReadField(Class_10AF7F80* Src, int* Pos)
     (*Pos)++;
     Buf[Count] = 0;
     return FString(Buf);
-}
-
-// FUNCTION: 0x10A7A920 ?FUN_10a7a920@cRigidAttachmentManager@@UAEXPAVUObject@@HH@Z
-void cRigidAttachmentManager::FUN_10a7a920(UObject* Obj, int Unknown04, int Unknown08)
-{
-    if (Obj && Obj->Class->ClassDefaultObject != Obj && Obj->IsA(AActor::StaticClass()))
-    {
-        int Result = FUN_10977fa0((int)Obj);
-        Virtual17(Result, 0);
-    }
 }

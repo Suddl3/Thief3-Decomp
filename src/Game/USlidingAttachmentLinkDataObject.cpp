@@ -10,6 +10,15 @@ inline void* operator new(unsigned int, EInternal* Mem)
     return Mem;
 }
 
+// FUNCTION: 0x1099F7D0 ??_GUSlidingAttachmentLinkDataObject@@UAEPAXI@Z
+// Compiler-generated: emitted with the class's vtable by 0x1099F800's definition in this unit.
+
+// FUNCTION: 0x1099F800 ??1USlidingAttachmentLinkDataObject@@UAE@XZ
+USlidingAttachmentLinkDataObject::~USlidingAttachmentLinkDataObject()
+{
+    ConditionalDestroy();
+}
+
 // FUNCTION: 0x109A1620 ?InternalConstructor@USlidingAttachmentLinkDataObject@@SAXPAX@Z
 void USlidingAttachmentLinkDataObject::InternalConstructor(void* X)
 {

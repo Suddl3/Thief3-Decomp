@@ -2,6 +2,9 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Game/cStructArray.h"
+#include "Game/Class_10905A90_Member.h"
+#include "Game/cObjectArray.h"
+#include "Game/Class_10BAEC80.h"
 
 extern "C" void* memmove(void* Dest, const void* Src, unsigned Count);
 
@@ -14,6 +17,18 @@ struct Struct_10BAEC40_Unknown08
     int Unknown08;
     bool Unknown0C;
 };
+
+// FUNCTION: 0x10BAEC40 ?FUN_10baec40@cStructArray@@QAEXXZ
+void cStructArray::FUN_10baec40()
+{
+    SetCount(0);
+    if (m_AllocBytes)
+    {
+        GetAllocator()->Virtual5(m_Items);
+        m_Items = 0;
+        m_AllocBytes = 0;
+    }
+}
 
 // FUNCTION: 0x10BF7AD0 ?MoveRange@cStructArray@@QAEXHHH@Z
 void cStructArray::MoveRange(int From, int To, int Count)

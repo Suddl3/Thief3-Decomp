@@ -1,5 +1,6 @@
 // Game/Unsorted_10A634A0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10905A90_Member.h"
 #include "Game/cString.h"
 #include "Game/Class_1090A780.h"
@@ -36,13 +37,5 @@ void Class_10E6AC98::FUN_10a634a0(const cString& A)
 {
     GetAllocator()->Virtual8(0, 0);
     Unknown14 = A;
-    GetAllocator()->Virtual9();
-}
-
-// FUNCTION: 0x10A634D0 ?FUN_10a634d0@cMenu@@UAEXABVcString@@@Z
-void cMenu::FUN_10a634d0(const cString& A)
-{
-    GetAllocator()->Virtual8(0, 0);
-    Unknown10 = A;
     GetAllocator()->Virtual9();
 }

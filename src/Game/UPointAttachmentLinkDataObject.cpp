@@ -10,6 +10,15 @@ inline void* operator new(unsigned int, EInternal* Mem)
     return Mem;
 }
 
+// FUNCTION: 0x1099F600 ??_GUPointAttachmentLinkDataObject@@UAEPAXI@Z
+// Compiler-generated: emitted with the class's vtable by 0x1099F630's definition in this unit.
+
+// FUNCTION: 0x1099F630 ??1UPointAttachmentLinkDataObject@@UAE@XZ
+UPointAttachmentLinkDataObject::~UPointAttachmentLinkDataObject()
+{
+    ConditionalDestroy();
+}
+
 // FUNCTION: 0x109A15F0 ?InternalConstructor@UPointAttachmentLinkDataObject@@SAXPAX@Z
 void UPointAttachmentLinkDataObject::InternalConstructor(void* X)
 {

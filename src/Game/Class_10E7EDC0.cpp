@@ -25,29 +25,6 @@ public:
     char Unknown1D1;
 };
 
-class cLockPickController
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual int Virtual4();
-
-    void Reset();
-    void ResetIfPending();
-
-    char Unknown04[0x48];
-    bool m_ResetPending;
-};
-
-// FUNCTION: 0x10B3ED20 ?ResetIfPending@cLockPickController@@QAEXXZ
-void cLockPickController::ResetIfPending()
-{
-    if (m_ResetPending)
-        Reset();
-}
-
 // FUNCTION: 0x10B3FD90 ?Construct@Class_10E7EDC0@@QAEPAV1@XZ
 Class_10E7EDC0* Class_10E7EDC0::Construct()
 {

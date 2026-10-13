@@ -3,6 +3,11 @@
 
 #include "Game/cShortArray.h"
 #include "Game/Class_10905A90_Member.h"
+#include "Game/Class_109434F0.h"
+#include "Game/Class_10943520.h"
+#include "Game/cEntryArray.h"
+#include "Game/Class_10942BB0.h"
+#include "Game/Class_10942BF0.h"
 
 Class_10905A90_Member* GetAllocator();
 
@@ -36,4 +41,25 @@ void cShortArray::Resize(int NewCount)
     }
     GetAllocator()->Virtual9();
     m_Count = NewCount;
+}
+
+// FUNCTION: 0x10943160 ?Clear@cShortArray@@QAEXXZ
+void cShortArray::Clear()
+{
+    Resize(0);
+    if (m_CapacityBytes)
+    {
+        GetAllocator()->Virtual5(m_Items);
+        m_Items = 0;
+        m_CapacityBytes = 0;
+    }
+}
+
+// FUNCTION: 0x109435A0 ?Append@cShortArray@@QAEHPBF@Z
+int cShortArray::Append(const short* Item)
+{
+    int Index = m_Count;
+    Resize(Index + 1);
+    m_Items[Index] = *Item;
+    return Index;
 }

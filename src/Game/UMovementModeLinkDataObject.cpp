@@ -10,6 +10,15 @@ inline void* operator new(unsigned int, EInternal* Mem)
     return Mem;
 }
 
+// FUNCTION: 0x109A08E0 ??_GUMovementModeLinkDataObject@@UAEPAXI@Z
+// Compiler-generated: emitted with the class's vtable by 0x109A0900's definition in this unit.
+
+// FUNCTION: 0x109A0900 ??1UMovementModeLinkDataObject@@UAE@XZ
+UMovementModeLinkDataObject::~UMovementModeLinkDataObject()
+{
+    ConditionalDestroy();
+}
+
 // FUNCTION: 0x109A17D0 ?InternalConstructor@UMovementModeLinkDataObject@@SAXPAX@Z
 void UMovementModeLinkDataObject::InternalConstructor(void* X)
 {

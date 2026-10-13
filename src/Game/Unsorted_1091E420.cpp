@@ -1,16 +1,9 @@
 // Game/Unsorted_1091E420.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include <math.h>
 #include "Game/cVector3.h"
 #include "Game/IDirect3DDevice8.h"
-
-extern void* DAT_10e49a0c[];
-
-class Class_10E49A0C {
-    void* Unknown00;
-public:
-    void FUN_1091f350();
-};
 
 class IDirect3DBaseTexture8;
 
@@ -24,21 +17,6 @@ public:
     char Unknown00[0x1C];
     IDirect3DBaseTexture8* m_Textures[4];
 };
-
-extern float DAT_10e49684;
-
-// FUNCTION: 0x1091ED80 ?FUN_1091ed80@cVector3@@QAEMXZ
-float cVector3::FUN_1091ed80()
-{
-    float Length = sqrtf(Unknown00 * Unknown00 + Unknown04 * Unknown04 + Unknown08 * Unknown08);
-    if (Length < 0.0001f)
-        return Length;
-    float Scale = DAT_10e49684 / Length;
-    Unknown00 *= Scale;
-    Unknown04 *= Scale;
-    Unknown08 *= Scale;
-    return Length;
-}
 
 // FUNCTION: 0x1091EF40 ?ClassifyPointToPlane@@YGHPAM0@Z
 int __stdcall ClassifyPointToPlane(float* A, float* B)
@@ -60,10 +38,4 @@ void cD3DStateCache::ClearTextures()
         if (GDirect3DDevice8)
             GDirect3DDevice8->SetTexture(i, 0);
     }
-}
-
-// FUNCTION: 0x1091F350 ?FUN_1091f350@Class_10E49A0C@@QAEXXZ
-void Class_10E49A0C::FUN_1091f350()
-{
-    Unknown00 = (void*)DAT_10e49a0c;
 }

@@ -1,5 +1,6 @@
 // Game/Unsorted_10BAD9D0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Core/Core.h"
 #include "Game/Class_10905A90_Member.h"
 #include "Game/cString.h"
@@ -54,30 +55,6 @@ void ProbePitch(Struct_10BADCE0* Data, float Angle, int A, int B)
     Rotation = Data->Rotation;
     Rotation.Pitch = (Rotation.Pitch - (int)(Angle * 182.04f)) & 0xFFFF;
     FUN_10badc40(Data, Rotation, 400.0f, A, B);
-}
-
-// FUNCTION: 0x10BAE080 ?Clear@cVisualSubsystemArray@@QAEXXZ
-void cVisualSubsystemArray::Clear()
-{
-    Resize(0);
-    if (m_CapacityBytes)
-    {
-        GetAllocator()->Virtual5(m_Items);
-        m_Items = 0;
-        m_CapacityBytes = 0;
-    }
-}
-
-// FUNCTION: 0x10BAE0C0 ?Free@Class_10BAE0C0@@QAEXXZ
-void Class_10BAE0C0::Free()
-{
-    Resize(0);
-    if (m_CapacityBytes)
-    {
-        GetAllocator()->Virtual5(m_Data);
-        m_Data = 0;
-        m_CapacityBytes = 0;
-    }
 }
 
 // FUNCTION: 0x10BAEA20 ?FloatToString@@YA?AVcString@@M@Z

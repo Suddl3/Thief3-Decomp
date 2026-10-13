@@ -1,5 +1,6 @@
 // Game/Unsorted_10BD8F20.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/cString.h"
 #include "Game/Class_10BB8300.h"
 #include "Game/Class_10BDAF90.h"
@@ -158,14 +159,7 @@ public:
     void FUN_10bdfa90();
 };
 
-extern void* DAT_10e95be8[];
-
 void FUN_10bc6a80(void);
-
-class State_FrobAlarm {
-public:
-    void FUN_10be2e20();
-};
 
 extern void* DAT_10e95d00;
 
@@ -225,12 +219,6 @@ void Class_10E928E8::Serialize(FArchive& Ar)
 int FUN_10bdaf00()
 {
     return 0x3c;
-}
-
-// FUNCTION: 0x10BDAF10 ?FUN_10bdaf10@cTacticMoveToPoint@@UAEXXZ
-void cTacticMoveToPoint::FUN_10bdaf10()
-{
-    PopState();
 }
 
 // FUNCTION: 0x10BDAF90 ?FUN_10bdaf90@Class_10BDAF90@@QAEXXZ
@@ -354,13 +342,6 @@ int __cdecl FUN_10be1d40(void)
 int __cdecl FUN_10be1d80(void)
 {
     return 0x2a;
-}
-
-// FUNCTION: 0x10BE2E20 ?FUN_10be2e20@State_FrobAlarm@@QAEXXZ
-void State_FrobAlarm::FUN_10be2e20()
-{
-    *(void**)this = (void*)DAT_10e95be8;
-    FUN_10bc6a80();
 }
 
 // FUNCTION: 0x10BE2E50 ?FUN_10be2e50@@YAHXZ

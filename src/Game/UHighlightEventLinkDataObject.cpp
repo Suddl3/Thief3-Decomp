@@ -10,6 +10,15 @@ inline void* operator new(unsigned int, EInternal* Mem)
     return Mem;
 }
 
+// FUNCTION: 0x109A0520 ??_GUHighlightEventLinkDataObject@@UAEPAXI@Z
+// Compiler-generated: emitted with the class's vtable by 0x109A0540's definition in this unit.
+
+// FUNCTION: 0x109A0540 ??1UHighlightEventLinkDataObject@@UAE@XZ
+UHighlightEventLinkDataObject::~UHighlightEventLinkDataObject()
+{
+    ConditionalDestroy();
+}
+
 // FUNCTION: 0x109A1770 ?InternalConstructor@UHighlightEventLinkDataObject@@SAXPAX@Z
 void UHighlightEventLinkDataObject::InternalConstructor(void* X)
 {

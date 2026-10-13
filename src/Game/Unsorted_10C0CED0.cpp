@@ -1,5 +1,6 @@
 // Game/Unsorted_10C0CED0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10C0EE90.h"
 #include "Game/Class_10E98530.h"
@@ -179,13 +180,6 @@ cContextVolumeList::~cContextVolumeList()
     DAT_10f46da0->Virtual2(this);
 }
 
-// FUNCTION: 0x10C0EE30 ?HandleMessage@Class_10E97CC0@@UAEXHHPAUStruct_10C0EE30@@H@Z
-void Class_10E97CC0::HandleMessage(int A, int B, Struct_10C0EE30* C, int D)
-{
-    if (A == 0x5A && C && C->Unknown08 == 0)
-        FUN_10c0eb00();
-}
-
 // FUNCTION: 0x10C0EE90 ?Init@Class_10C0EE90@@QAEPAV1@XZ
 Class_10C0EE90* Class_10C0EE90::Init()
 {
@@ -252,12 +246,6 @@ int Class_10E8C468::GetAIFactionModelClass()
     return DAT_10ff6618;
 }
 
-// FUNCTION: 0x10C129B0 ?FUN_10c129b0@Class_10E8C4A4@@UAE_NXZ
-bool Class_10E8C4A4::FUN_10c129b0()
-{
-    return Unknown08 != 0;
-}
-
 // FUNCTION: 0x10C129F0 ??0Class_10E984BC@@QAE@XZ
 Class_10E984BC::Class_10E984BC()
 {
@@ -272,14 +260,3 @@ Class_10E984F4* Class_10E984F4::Init()
     m_Elements = 0;
     return this;
 }
-
-// FUNCTION: 0x10C12B30 ??0Class_10E98530@@QAE@XZ
-Class_10E98530::Class_10E98530()
-{
-    Unknown04 = 0;
-    Unknown08 = 0;
-    Unknown0C = 0;
-}
-
-// FUNCTION: 0x10C132A0 ??_GClass_10E98530@@UAEPAXI@Z
-// Compiler-generated: emitted with the class's vtable by 0x10C12B30's definition in this unit.

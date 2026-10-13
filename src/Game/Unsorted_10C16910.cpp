@@ -1,5 +1,6 @@
 // Game/Unsorted_10C16910.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10BA9EE0.h"
 #include "Game/Class_10C184F0.h"
 #include "Game/Class_10C19FD0.h"
@@ -16,18 +17,6 @@ struct Struct_10C184F0
 };
 
 extern Class_10C19FD0* DAT_10ff7088;
-
-void FUN_10c17bc0(void* A, Struct_10C17BC0* B);
-
-// FUNCTION: 0x10C17C10 ?ClearReferences@Class_10E98CA4@@UAEXPAX@Z
-void Class_10E98CA4::ClearReferences(void* A)
-{
-    FUN_10c17bc0(A, &Unknown10);
-    FUN_10c17bc0(A, &Unknown1C);
-    FUN_10c17bc0(A, &Unknown28);
-    if (UnknownA4 == A)
-        UnknownA4 = 0;
-}
 
 // FUNCTION: 0x10C184F0 ?FUN_10c184f0@Class_10C184F0@@QAEXXZ
 void Class_10C184F0::FUN_10c184f0()

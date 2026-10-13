@@ -34,10 +34,6 @@ void FUN_10991270();
 
 void FUN_10a47530();
 
-extern int DAT_10f3a084;
-
-extern void* DAT_10e6798c[];
-
 extern void* DAT_10e679bc[];
 
 void FUN_10a4e3d0();
@@ -97,35 +93,6 @@ int FUN_10a48b10(Class_1098E330* Obj)
     int Value = 0;
     Obj->FUN_1098e330(0x4002002b, &Value);
     return Value;
-}
-
-// FUNCTION: 0x10A4C4D0 ?FUN_10a4c4d0@cActorManager@@UAE_NH@Z
-bool cActorManager::FUN_10a4c4d0(int A)
-{
-    Virtual14(&A, A);
-    return A != DAT_10f3a084;
-}
-
-// FUNCTION: 0x10A4D310 ?Init@Class_10E6798C@@QAEPAV1@XZ
-Class_10E6798C* Class_10E6798C::Init()
-{
-    Unknown00 = DAT_10e6798c;
-    Unknown28 = 0;
-    Unknown44 = 0;
-    Unknown48 = 0;
-    Unknown40 = 0;
-    Unknown3C = 0;
-    Unknown38 = 0;
-    Unknown34 = 0;
-    Unknown30 = 0;
-    Unknown2C = 0;
-    return this;
-}
-
-// FUNCTION: 0x10A4D340 ?FUN_10a4d340@Class_10E6798C@@QAEXXZ
-void Class_10E6798C::FUN_10a4d340()
-{
-    Field00 = (void*)DAT_10e6798c;
 }
 
 // FUNCTION: 0x10A4D400 ?FUN_10a4d400@Class_10E679BC@@QAEXXZ
@@ -188,11 +155,6 @@ bool Class_10A52110::FUN_10a52110()
 // FUNCTION: 0x10A52460 ?FUN_10a52460@Class_10A52460@@QAEPAXXZ
 void* Class_10A52460::FUN_10a52460() {
     return &Unknown58;
-}
-
-// FUNCTION: 0x10A53250 ?FUN_10a53250@Class_10E7BB2C@@QAEXXZ
-void Class_10E7BB2C::FUN_10a53250() {
-    Unknown20 = 1;
 }
 
 // FUNCTION: 0x10A53BD0 ?FUN_10a53bd0@Class_10A53BD0@@QAE?AVcString@@H@Z

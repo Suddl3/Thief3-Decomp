@@ -8,3 +8,12 @@
 UHingedAttachmentLinkDataObject::UHingedAttachmentLinkDataObject()
 {
 }
+
+// FUNCTION: 0x1099F560 ??_GUHingedAttachmentLinkDataObject@@UAEPAXI@Z
+// Compiler-generated: emitted with the class's vtable by 0x1099F590's definition in this unit.
+
+// FUNCTION: 0x1099F590 ??1UHingedAttachmentLinkDataObject@@UAE@XZ
+UHingedAttachmentLinkDataObject::~UHingedAttachmentLinkDataObject()
+{
+    ConditionalDestroy();
+}

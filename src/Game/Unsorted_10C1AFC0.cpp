@@ -7,19 +7,6 @@
 #include "Game/Class_10E98E70.h"
 #include "Game/Class_10E98D08.h"
 
-extern Class_10FF667C* DAT_10ff667c;
-
-FArchive& FUN_10b052a0(FArchive& Ar, void* V);
-
-class Class_10E98D98 : public Class_10E98D08
-{
-public:
-    virtual void Serialize(FArchive& Ar);
-
-    char Unknown04[0x44];
-    float Unknown48[3];
-};
-
 class Class_10BAC050
 {
 public:
@@ -69,19 +56,4 @@ void Class_10C1B0F0::SetClampedValue(float Value)
     Unknown2C = Clamped;
     Unknown3C = Clamped;
     Unknown34 = Clamped;
-}
-
-// FUNCTION: 0x10C1B270 ?Serialize@Class_10E98D98@@UAEXAAVFArchive@@@Z
-void Class_10E98D98::Serialize(FArchive& Ar)
-{
-    FUN_10c1b1a0(Ar);
-    FUN_10b052a0(Ar, Unknown48);
-}
-
-// FUNCTION: 0x10C1B460 ?FUN_10c1b460@Class_10E98E70@@UAE_NXZ
-bool Class_10E98E70::FUN_10c1b460()
-{
-    if (Unknown58 != DAT_10ff667c->Unknown40)
-        return true;
-    return false;
 }

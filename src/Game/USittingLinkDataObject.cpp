@@ -10,6 +10,15 @@ inline void* operator new(unsigned int, EInternal* Mem)
     return Mem;
 }
 
+// FUNCTION: 0x109A0DF0 ??_GUSittingLinkDataObject@@UAEPAXI@Z
+// Compiler-generated: emitted with the class's vtable by 0x109A0E10's definition in this unit.
+
+// FUNCTION: 0x109A0E10 ??1USittingLinkDataObject@@UAE@XZ
+USittingLinkDataObject::~USittingLinkDataObject()
+{
+    ConditionalDestroy();
+}
+
 // FUNCTION: 0x109A1860 ?InternalConstructor@USittingLinkDataObject@@SAXPAX@Z
 void USittingLinkDataObject::InternalConstructor(void* X)
 {

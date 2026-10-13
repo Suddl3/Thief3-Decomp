@@ -1,6 +1,8 @@
 // Game/Class_10E6B93C.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
+#include "Game/Class_10E66300.h"
+
 // Ion Storm's placement new (0x10905C10).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 
@@ -23,6 +25,12 @@ public:
 
     int Unknown04;
 };
+
+// FUNCTION: 0x10A2F160 ?IsSame@Class_10E6B93C@@UAEHPAV1@@Z
+int Class_10E6B93C::IsSame(Class_10E6B93C* Other)
+{
+    return &Unknown04 == &Other->Unknown04;
+}
 
 // FUNCTION: 0x10A2FA70 ?Clone@Class_10E6B93C@@UAEPAV1@XZ
 Class_10E6B93C* Class_10E6B93C::Clone()

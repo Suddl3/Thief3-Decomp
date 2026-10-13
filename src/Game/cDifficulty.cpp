@@ -4,6 +4,8 @@
 #include "Game/Class_10905A90_Member.h"
 #include "Game/cDifficulty.h"
 #include "Game/cString.h"
+#include "Core/Core.h"
+#include "T3Game/T3GameClasses.h"
 
 Class_10905A90_Member* GetAllocator();
 
@@ -29,6 +31,17 @@ public:
     char Pad00[0x1];
 };
 
+class cDifficulty;
+
+class Class_10F46DA0
+{
+public:
+    virtual void Virtual0();
+    virtual void Virtual1(cDifficulty* A, int B, int C, int D);
+};
+
+extern Class_10F46DA0* DAT_10f46da0;
+
 // FUNCTION: 0x10AB7330 ?LoadDifficulty@cDifficulty@@QAEXXZ
 void cDifficulty::LoadDifficulty()
 {
@@ -48,4 +61,12 @@ void cDifficulty::LoadDifficulty()
     }
     else
         Difficulty = 1;
+}
+
+// FUNCTION: 0x10AB7500 ?Init@cDifficulty@@QAEXXZ
+void cDifficulty::Init()
+{
+    DAT_10f46da0->Virtual1(this, 0x25, -1, -1);
+    DAT_10f46da0->Virtual1(this, 0x5a, -1, -1);
+    LoadDifficulty();
 }

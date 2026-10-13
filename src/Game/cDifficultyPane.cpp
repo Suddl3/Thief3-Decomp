@@ -1,5 +1,6 @@
 // Game/cDifficultyPane.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10A2AEF0.h"
 #include "Game/Class_10B6BD50.h"
 
@@ -20,8 +21,6 @@ public:
 };
 
 extern Class_10F3A3D8* DAT_10f3a3d8;
-
-extern int* DAT_10ff65a8;
 
 class Class_10B6BDE0_Member
 {
@@ -67,14 +66,6 @@ int cDifficultyPane::GetData()
 void cDifficultyPane::FUN_10b6bb80(int A, int B, int C, int D, int E, int F)
 {
     Unknown160->FUN_10a2aef0(&Unknown168, A, B, Unknown194 + C, D, E, F, 0, &Unknown16C);
-}
-
-// FUNCTION: 0x10B6BD50 ?LookupValue@Class_10B6BD50@@QAEHHH@Z
-int Class_10B6BD50::LookupValue(int A, int B)
-{
-    if (A == 8 && B != -1)
-        return DAT_10ff65a8[B];
-    return B;
 }
 
 // FUNCTION: 0x10B6BDE0 ?GetSelectedValue@cDifficultyPane@@QAEHXZ

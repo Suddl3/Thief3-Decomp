@@ -1,5 +1,6 @@
 // Game/Unsorted_10C61E50.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10C62A40.h"
 #include "Game/Class_10E5D4B8.h"
 
@@ -48,12 +49,6 @@ int cResSound::FUN_10c61e50()
 void Class_10E9CB60::FUN_10c62a20()
 {
     Unknown00 = &DAT_10e9cb60;
-}
-
-// FUNCTION: 0x10C62A30 ?FUN_10c62a30@Class_10E5D4B8@@UAEXH@Z
-void Class_10E5D4B8::FUN_10c62a30(int param)
-{
-    Unknown44 = param;
 }
 
 // FUNCTION: 0x10C62A40 ?FUN_10c62a40@Class_10C62A40@@QAEXE@Z

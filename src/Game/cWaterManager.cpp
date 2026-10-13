@@ -7,6 +7,11 @@
 #include "Game/cString.h"
 #include "Game/cWaterManager.h"
 #include "Game/Class_10939570.h"
+#include "Game/Class_10AB9D40.h"
+#include "Game/Class_10AB9FF0.h"
+#include "Game/Class_10E5BBE0.h"
+#include "Game/Struct_10ABA050.h"
+#include "Game/Class_10E6F3F4.h"
 
 extern const char DAT_10e6f2fc[];
 
@@ -52,4 +57,11 @@ void cWaterManager::Init()
     Unknown28 = 0;
     DAT_10f46da0->Virtual1(this, 0x28, -1, -1);
     DAT_10f46da0->Virtual1(this, 0x5a, -1, -1);
+}
+
+// FUNCTION: 0x10AB9130 ??0cWaterManager@@QAE@XZ
+cWaterManager::cWaterManager()
+    : m_Splash(0), m_Ripple(0)
+{
+    Init();
 }

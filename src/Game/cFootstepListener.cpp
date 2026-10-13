@@ -1,10 +1,14 @@
 // Game/cFootstepListener.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Engine/EngineClasses.h"
 #include "Game/Class_10AF7F80.h"
 #include "Game/Class_10BA9FD0.h"
 #include "Game/Class_10BB7600.h"
 #include "Game/cFootstepListener.h"
+#include "Game/Class_1091CA00.h"
+#include "Game/Class_1091DEE0.h"
+#include "Game/Class_10A6A150.h"
 
 class Class_10BABED0;
 
@@ -73,4 +77,11 @@ void cFootstepListener::HandleNoteTrack(int A, int B, int C)
     if (!FUN_10a6aa30(A, Part))
         return;
     DAT_10f46da0->Virtual5(0x2d, A, B, C);
+}
+
+// FUNCTION: 0x10A6AD50 ?OnNoteTrack@cFootstepListener@@UAEXHHHH@Z
+void cFootstepListener::OnNoteTrack(int Type, int A, int B, int C)
+{
+    if (Type >= 0x2a && Type <= 0x2b)
+        HandleNoteTrack(A, B, C);
 }

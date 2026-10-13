@@ -1,5 +1,6 @@
 // Game/Unsorted_10A86300.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/cString.h"
 #include "Game/Class_10A8D160.h"
 #include "Game/Class_10A8D310.h"
@@ -110,14 +111,6 @@ class Class_10E6CE1C {
 public:
     void* Field00;
     Class_10E6CE1C* Construct();
-};
-
-extern void* DAT_10e6ce6c[];
-
-class Class_10E6CE6C {
-public:
-    void* Field00;
-    Class_10E6CE6C* Construct();
 };
 
 extern void* DAT_10e6ce94[];
@@ -410,13 +403,6 @@ Class_10E6CE1C* Class_10E6CE1C::Construct()
 unsigned int FUN_10a95970()
 {
     return 0xb6;
-}
-
-// FUNCTION: 0x10A95AF0 ?Construct@Class_10E6CE6C@@QAEPAV1@XZ
-Class_10E6CE6C* Class_10E6CE6C::Construct()
-{
-    Field00 = DAT_10e6ce6c;
-    return this;
 }
 
 // FUNCTION: 0x10A95B60 ?Construct@Class_10E6CE94@@QAEPAV1@XZ

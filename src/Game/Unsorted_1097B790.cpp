@@ -16,10 +16,6 @@
 #include "Game/Class_1097B240_Node.h"
 #include "Engine/EngineClasses.h"
 
-class AActor;
-
-class ULodMesh;
-
 class UMeshAnimation
 {
     DECLARE_CLASS(UMeshAnimation, UObject, 0x40, Engine)
@@ -41,29 +37,6 @@ void Class_1097B790::FUN_1097b790(Struct_1097B790* A)
         for (int i = 0; i < Count; i++)
             FUN_1097afb0(A->Unknown2C[i], 0xF);
     }
-}
-
-// FUNCTION: 0x1097C880 ?Clear@Class_1097CBE0@@QAEXH@Z
-void Class_1097CBE0::Clear(int Size)
-{
-    for (int i = 0; i < m_BucketCount; i++)
-    {
-        Class_1097B240_Node* Node = m_Buckets[i];
-        while (Node)
-        {
-            Class_1097B240_Node* Next = Node->Next;
-            Node->Key.~cString();
-            ::operator delete(Node);
-            Node = Next;
-        }
-    }
-    Unknown04 = 0;
-    m_BucketCount = 0;
-    Unknown00 = 0;
-    ::operator delete(m_Buckets);
-    m_Buckets = 0;
-    if (!Unknown10)
-        Resize(Size);
 }
 
 // FUNCTION: 0x1097CAA0 ?FUN_1097caa0@Class_1097CAA0@@QAEPAV1@XZ

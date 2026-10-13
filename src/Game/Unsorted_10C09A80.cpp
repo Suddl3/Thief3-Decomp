@@ -22,12 +22,3 @@ bool __stdcall FUN_10c09bf0(Class_1098E330* Obj, int* Other)
     bool Positive = *Other > 0;
     return Positive;
 }
-
-// FUNCTION: 0x10C09F10 ?FUN_10c09f10@Class_10C099A0@@QAE_NHH@Z
-bool Class_10C099A0::FUN_10c09f10(int Key, int B)
-{
-    int Value = FindValue(Key);
-    if (Value)
-        return FUN_10c09c30(Value, B);
-    return false;
-}

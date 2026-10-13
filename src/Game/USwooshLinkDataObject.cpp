@@ -10,6 +10,15 @@ inline void* operator new(unsigned int, EInternal* Mem)
     return Mem;
 }
 
+// FUNCTION: 0x109A1100 ??_GUSwooshLinkDataObject@@UAEPAXI@Z
+// Compiler-generated: emitted with the class's vtable by 0x109A1120's definition in this unit.
+
+// FUNCTION: 0x109A1120 ??1USwooshLinkDataObject@@UAE@XZ
+USwooshLinkDataObject::~USwooshLinkDataObject()
+{
+    ConditionalDestroy();
+}
+
 // FUNCTION: 0x109A18B0 ?InternalConstructor@USwooshLinkDataObject@@SAXPAX@Z
 void USwooshLinkDataObject::InternalConstructor(void* X)
 {

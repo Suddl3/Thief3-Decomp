@@ -1,5 +1,6 @@
 // Game/Unsorted_10A55090_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Base_10A62CB0.h"
 #include "Game/Class_1090A780.h"
 #include "Game/Class_10A56170.h"
@@ -206,12 +207,6 @@ Class_10E6AC50::Class_10E6AC50()
     m_Count = 0;
     Unknown18 = 0;
     m_Items = 0;
-}
-
-// FUNCTION: 0x10A63210 ?FUN_10a63210@Class_10E6AC98@@UAE?AVClass_1090A780@@XZ
-Class_1090A780 Class_10E6AC98::FUN_10a63210()
-{
-    return Class_1090A780(Unknown14);
 }
 
 // FUNCTION: 0x10A63480 ??_GClass_10E6AC50@@UAEPAXI@Z

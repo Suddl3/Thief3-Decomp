@@ -9,3 +9,12 @@
 UCollisionSpawnLinkDataObject::UCollisionSpawnLinkDataObject()
 {
 }
+
+// FUNCTION: 0x109A03E0 ??_GUCollisionSpawnLinkDataObject@@UAEPAXI@Z
+// Compiler-generated: emitted with the class's vtable by 0x109A0410's definition in this unit.
+
+// FUNCTION: 0x109A0410 ??1UCollisionSpawnLinkDataObject@@UAE@XZ
+UCollisionSpawnLinkDataObject::~UCollisionSpawnLinkDataObject()
+{
+    ConditionalDestroy();
+}

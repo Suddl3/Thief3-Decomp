@@ -1,19 +1,12 @@
 // Game/Unsorted_10A66110.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Core/Core.h"
 #include "Game/Class_10A69170.h"
 #include "Game/Class_10A6A140.h"
 #include "Game/Class_10E6B978.h"
 #include "Game/cVolumeManager.h"
 #include "Game/Class_10E6BBCC.h"
-
-extern int DAT_10e6b594;
-
-class Class_10E6B594 {
-public:
-    void FUN_10a67b70();
-    void* Field00;
-};
 
 extern void* DAT_10e4dd6c[];
 
@@ -47,12 +40,6 @@ void FUN_10a4c5f0();
 
 extern void* DAT_10e6b978;
 
-class cVolume
-{
-public:
-    bool ContainsPoint(FVector V);
-};
-
 extern void* DAT_10e6bbcc[];
 
 extern void* DAT_10e6bbe8[];
@@ -64,12 +51,6 @@ public:
 public:
     void FUN_10a757a0();
 };
-
-// FUNCTION: 0x10A67B70 ?FUN_10a67b70@Class_10E6B594@@QAEXXZ
-void Class_10E6B594::FUN_10a67b70()
-{
-    Field00 = (void*)&DAT_10e6b594;
-}
 
 // FUNCTION: 0x10A68B30 ?Init@Class_10E6B5A0@@QAEPAV1@XZ
 Class_10E6B5A0* Class_10E6B5A0::Init()
@@ -114,12 +95,6 @@ void FUN_10a6adf0()
 void Class_10E6B978::FUN_10a6da70() {
     *(void**)this = &DAT_10e6b978;
     FUN_10a4c5f0();
-}
-
-// FUNCTION: 0x10A70FA0 ?ContainsPoint@cVolumeManager@@UAE_NABVFVector@@PAVcVolume@@@Z
-bool cVolumeManager::ContainsPoint(const FVector& A, cVolume* B)
-{
-    return B->ContainsPoint(A);
 }
 
 // FUNCTION: 0x10A74820 ?Init@Class_10E6BBCC@@QAEPAV1@XZ

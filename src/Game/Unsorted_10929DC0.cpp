@@ -1,5 +1,6 @@
 // Game/Unsorted_10929DC0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/cIntArray.h"
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_1092A280.h"
@@ -61,18 +62,4 @@ Class_1092A280_Node* Class_1092A280::AllocNode()
         Count++;
     }
     return Node;
-}
-
-// FUNCTION: 0x1092A330 ?FindOrAdd@cIntArray@@QAEHPBH@Z
-int cIntArray::FindOrAdd(const int* Item)
-{
-    int Count = Unknown00;
-    for (int i = 0; i < Count; i++)
-    {
-        if (Unknown08[i] == *Item)
-            return i;
-    }
-    SetCount(Count + 1);
-    Unknown08[Count] = *Item;
-    return Count;
 }

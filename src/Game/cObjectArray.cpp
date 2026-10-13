@@ -3,6 +3,8 @@
 
 #include "Game/cObjectArray.h"
 #include "Game/Class_10905A90_Member.h"
+#include "Game/cStructArray.h"
+#include "Game/Class_10BAEC80.h"
 
 Class_10905A90_Member* GetAllocator();
 
@@ -50,4 +52,16 @@ void cObjectArray::SetCount(int NewCount)
     }
     GetAllocator()->Virtual9();
     m_Count = NewCount;
+}
+
+// FUNCTION: 0x10BAEC00 ?Empty@cObjectArray@@QAEXXZ
+void cObjectArray::Empty()
+{
+    SetCount(0);
+    if (m_BlockBytes)
+    {
+        GetAllocator()->Virtual5(m_Data);
+        m_Data = 0;
+        m_BlockBytes = 0;
+    }
 }

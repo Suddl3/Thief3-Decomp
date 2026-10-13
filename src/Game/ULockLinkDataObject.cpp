@@ -10,6 +10,15 @@ inline void* operator new(unsigned int, EInternal* Mem)
     return Mem;
 }
 
+// FUNCTION: 0x10AB4E10 ??_GULockLinkDataObject@@UAEPAXI@Z
+// Compiler-generated: emitted with the class's vtable by 0x10AB4E30's definition in this unit.
+
+// FUNCTION: 0x10AB4E30 ??1ULockLinkDataObject@@UAE@XZ
+ULockLinkDataObject::~ULockLinkDataObject()
+{
+    ConditionalDestroy();
+}
+
 // FUNCTION: 0x10AB53C0 ?InternalConstructor@ULockLinkDataObject@@SAXPAX@Z
 void ULockLinkDataObject::InternalConstructor(void* X)
 {

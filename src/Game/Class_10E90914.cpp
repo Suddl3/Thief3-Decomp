@@ -1,0 +1,27 @@
+// Game/Class_10E90914.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Declarations above the functions belong in include/ once they settle.
+
+#include "Game/Class_10905A90_Member.h"
+#include "Game/Class_10BB48E0.h"
+#include "Game/Class_10E8C7D0.h"
+#include "Game/Class_10E8C7DC.h"
+#include "Game/Class_10E8C8E4.h"
+#include "Game/cString.h"
+
+int FUN_1090ecc0(void* A, void* B, int C);
+
+class Class_10E90914
+{
+public:
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual bool FUN_10bb44f0(Class_10E90914* Other);
+
+    int Unknown04;
+};
+
+// FUNCTION: 0x10BB44F0 ?FUN_10bb44f0@Class_10E90914@@UAE_NPAV1@@Z
+bool Class_10E90914::FUN_10bb44f0(Class_10E90914* Other)
+{
+    return FUN_1090ecc0(&Other->Unknown04, &Unknown04, 1) == 0;
+}

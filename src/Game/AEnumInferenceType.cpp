@@ -10,6 +10,15 @@ inline void* operator new(unsigned int, EInternal* Mem)
     return Mem;
 }
 
+// FUNCTION: 0x10B936B0 ??_GAEnumInferenceType@@UAEPAXI@Z
+// Compiler-generated: emitted with the class's vtable by 0x10B936E0's definition in this unit.
+
+// FUNCTION: 0x10B936E0 ??1AEnumInferenceType@@UAE@XZ
+AEnumInferenceType::~AEnumInferenceType()
+{
+    ConditionalDestroy();
+}
+
 // FUNCTION: 0x10B95170 ?InternalConstructor@AEnumInferenceType@@SAXPAX@Z
 void AEnumInferenceType::InternalConstructor(void* X)
 {

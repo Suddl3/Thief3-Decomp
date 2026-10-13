@@ -1,5 +1,6 @@
 // Game/Unsorted_10B97C40.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10B9BCA0.h"
 #include "Game/Class_10B9CAC0.h"
 #include "Game/Class_10BC9D40.h"
@@ -77,19 +78,6 @@ public:
     virtual void Virtual59();
     virtual void FUN_10b9bda0();
 };
-
-// Ion Storm's placement new and its delete (0x10905C10; the delete folded into ::operator delete).
-void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
-
-void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
-
-struct Struct_10B98E00;
-
-// FUNCTION: 0x10B97D80 ?CreatePlayAnimState@Class_10E4CCD0@@UAEPAVState_PlayAnim@@PAUStruct_10B98E00@@H_N@Z
-State_PlayAnim* Class_10E4CCD0::CreatePlayAnimState(Struct_10B98E00* A, int B, bool C)
-{
-    return new(0, 0, 0, 0, 0) State_PlayAnim((int)A, (int)this, B, C);
-}
 
 // FUNCTION: 0x10B9BCA0 ?FUN_10b9bca0@Class_10B9BCA0@@QAE_NH@Z
 bool Class_10B9BCA0::FUN_10b9bca0(int A)

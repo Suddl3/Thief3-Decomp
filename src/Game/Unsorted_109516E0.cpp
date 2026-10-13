@@ -1,5 +1,6 @@
 // Game/Unsorted_109516E0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10939570.h"
 #include "Game/cFilteredList.h"
 #include "Game/Struct_One2.h"
@@ -24,26 +25,6 @@ public:
     char Unknown24[4];
     int m_Mode;
 };
-
-class Class_10951540
-{
-public:
-    bool MatchesFilter(void* A);
-};
-
-// FUNCTION: 0x109516E0 ?RemoveMatching@cFilteredList@@QAEXXZ
-void cFilteredList::RemoveMatching()
-{
-    for (int i = 0; i < m_Count; i++)
-    {
-        Class_10951540* Item = m_Items[i];
-        if (Item->MatchesFilter(&m_Filter))
-        {
-            delete Item;
-            m_Items[i] = 0;
-        }
-    }
-}
 
 // FUNCTION: 0x10951780 ??0Class_10E4AC6C@@QAE@XZ
 Class_10E4AC6C::Class_10E4AC6C() : Unknown04(0)

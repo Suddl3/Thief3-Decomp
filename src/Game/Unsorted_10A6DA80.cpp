@@ -9,20 +9,6 @@
 #include "Game/Class_10E6BA00.h"
 #include "Game/Class_10E6BC8C.h"
 
-class Class_10E6B594
-{
-public:
-    virtual ~Class_10E6B594();
-};
-
-class Class_10E6B610 : public Class_10E6B594
-{
-public:
-    Class_10E6B610(Class_1098E330* A);
-
-    int Unknown04;
-};
-
 class Class_10E6B978;
 
 class Class_10F46DA0
@@ -46,36 +32,6 @@ void Class_10E6B978::HandleEvent(int Msg, int A, int B, int C)
         DAT_10f46da0->Virtual1(this, 0x26, A, -1);
         break;
     }
-}
-
-// FUNCTION: 0x10A6DF60 ??0Class_10E6B610@@QAE@PAVClass_1098E330@@@Z
-Class_10E6B610::Class_10E6B610(Class_1098E330* A)
-{
-    A->FUN_1098e330(0x1003f4, &Unknown04);
-}
-
-// FUNCTION: 0x10A6E5E0 ?HandleEvent@Class_10E6B9F8@@UAEXHPAVUObject@@HH@Z
-void Class_10E6B9F8::HandleEvent(int Event, UObject* A, int B, int C)
-{
-    switch (Event)
-    {
-    case 3:
-        FUN_10a6e1c0(A, B, C);
-        break;
-    case 51:
-    case 52:
-        FUN_10a6e370(A, B, C, Event);
-        break;
-    case 16:
-        FUN_10a6e490(A, B, C, Event, 0x25c7c38);
-        break;
-    }
-}
-
-// FUNCTION: 0x10A6E690 ?HasOwner@Class_10E6BC8C@@QAE_NH@Z
-bool Class_10E6BC8C::HasOwner(int A)
-{
-    return GetOwner(A) != 0;
 }
 
 // FUNCTION: 0x10A6E6B0 ?HandleEvent@Class_10E6BA00@@UAEXHHHH@Z

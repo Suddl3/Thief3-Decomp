@@ -17,3 +17,9 @@ void cSmokeySoup::Update(int A)
         GetSoupManager()->FUN_10b70db0(A);
     }
 }
+
+// FUNCTION: 0x10B70F60 ?AddToArray@cSmokeySoup@@UAEXHH@Z
+void cSmokeySoup::AddToArray(int p1, int p2)
+{
+    GetSoupManager()->FUN_10b70d40(p1, p2);
+}

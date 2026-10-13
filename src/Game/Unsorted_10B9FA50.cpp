@@ -1,5 +1,6 @@
 // Game/Unsorted_10B9FA50.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10905A90_Member.h"
 #include "Game/cCharArray.h"
 #include "Game/Class_10B9FC20.h"
@@ -13,18 +14,6 @@ struct Struct_10BA0080
     int Unknown04;
     Class_10E8C008** Items;
 };
-
-// FUNCTION: 0x10B9FBE0 ?Free@cCharArray@@QAEXXZ
-void cCharArray::Free()
-{
-    Resize(0);
-    if (m_Capacity)
-    {
-        GetAllocator()->Virtual5(m_Data);
-        m_Data = 0;
-        m_Capacity = 0;
-    }
-}
 
 // FUNCTION: 0x10B9FC20 ?Free@Class_10B9FC20@@QAEXXZ
 void Class_10B9FC20::Free()

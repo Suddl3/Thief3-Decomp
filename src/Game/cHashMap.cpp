@@ -4,6 +4,10 @@
 #include "Game/Class_10C00F60_Node.h"
 #include "Game/cHashMap.h"
 #include "Game/Class_10C00F60_Field18.h"
+#include "Game/Class_10C00F30.h"
+#include "Game/Class_10C01140.h"
+#include "Game/Class_10C01140_Field18.h"
+#include "Game/Class_10C01140_Node.h"
 
 // Ion Storm's placement new and its delete (0x10905C10; the delete folded into ::operator delete).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
@@ -25,6 +29,34 @@ unsigned int cHashMap::Insert(const int& Key, const int& Value)
     m_Buckets[Index] = Node;
     m_Count++;
     return Index;
+}
+
+// FUNCTION: 0x10C01200 ?Rehash@cHashMap@@QAEXH@Z
+void cHashMap::Rehash(int Size)
+{
+    int OldSize = m_BucketCount;
+    Class_10C00F60_Node** OldBuckets = m_Buckets;
+    m_Buckets = new(0, 0, 0, 0, 0) Class_10C00F60_Node*[Size];
+    m_BucketCount = Size;
+    m_BucketBits = 0;
+    while (Size >>= 1)
+        m_BucketBits++;
+    m_Count = 0;
+    m_Collisions = 0;
+    for (int i = 0; i < m_BucketCount; i++)
+        m_Buckets[i] = 0;
+    for (int j = 0; j < OldSize; j++)
+    {
+        Class_10C00F60_Node* Node = OldBuckets[j];
+        while (Node)
+        {
+            Insert(Node->Key, Node->Value);
+            Class_10C00F60_Node* Next = Node->Next;
+            delete Node;
+            Node = Next;
+        }
+    }
+    delete OldBuckets;
 }
 
 // FUNCTION: 0x10C014C0 ?Remove@cHashMap@@QAE_NABH@Z

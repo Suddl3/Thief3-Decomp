@@ -1,5 +1,6 @@
 // Game/Unsorted_10AB9130.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10AB90F0.h"
 #include "Game/Class_10AB9D40.h"
 #include "Game/Class_10AB9FF0.h"
@@ -34,13 +35,6 @@ public:
     virtual void Virtual1();
     virtual void Virtual2();
 };
-
-// FUNCTION: 0x10AB9130 ??0cWaterManager@@QAE@XZ
-cWaterManager::cWaterManager()
-    : m_Splash(0), m_Ripple(0)
-{
-    Init();
-}
 
 // FUNCTION: 0x10AB9D40 ?HandleFootstep@Class_10AB9D40@@QAEXHPAUStruct_10AB9D40@@H@Z
 void Class_10AB9D40::HandleFootstep(int A, Struct_10AB9D40* B, int C)

@@ -1,5 +1,6 @@
 // Game/Unsorted_10B25240.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/cListCursor.h"
 #include "Game/cListReverseCursor.h"
 #include "Game/cMenuInput.h"
@@ -62,24 +63,6 @@ Class_10B255F0* GetSelection()
 {
     static Class_10B255F0 Instance;
     return &Instance;
-}
-
-// FUNCTION: 0x10B25D60 ?Advance@cListCursor@@QAEXXZ
-void cListCursor::Advance()
-{
-    if (m_InListA)
-        m_Index = FindNextFromListA(&m_InListA);
-    else
-        m_Index = FindNextFromListB(&m_InListA);
-}
-
-// FUNCTION: 0x10B25D90 ?StepBack@cListReverseCursor@@QAEXXZ
-void cListReverseCursor::StepBack()
-{
-    if (m_InListA)
-        m_Index = FindPrevFromListA(&m_InListA);
-    else
-        m_Index = FindPrevFromListB(&m_InListA);
 }
 
 // FUNCTION: 0x10B26910 ?Reset@cMenuInput@@UAEXH@Z

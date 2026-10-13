@@ -1,5 +1,6 @@
 // Game/Unsorted_10B47220.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10B395B0.h"
 #include "Game/Class_10B39700.h"
 #include "Game/cIntArray.h"
@@ -32,17 +33,6 @@ public:
 
     int m_State;
 };
-
-// FUNCTION: 0x10B47C50 ?PlayLastQueued@Class_10B47C50@@QAEXXZ
-void Class_10B47C50::PlayLastQueued()
-{
-    int Count = Unknown4C.Unknown00;
-    if (Count > 0)
-    {
-        FUN_10b47b20(Unknown4C.Unknown08[Count - 1], -1.0f, 1.0f, 0x101, 0, true, false, -1.0f);
-        Unknown4C.RemoveAt(Count - 1);
-    }
-}
 
 // FUNCTION: 0x10B483C0 ?StopAnimation@Class_10E7E538@@UAEXPAVClass_10B22020@@@Z
 void Class_10E7E538::StopAnimation(Class_10B22020* A)

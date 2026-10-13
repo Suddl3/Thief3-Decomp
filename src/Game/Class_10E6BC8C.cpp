@@ -4,6 +4,11 @@
 #include "Game/Class_10E6BC8C.h"
 #include "Engine/EngineClasses.h"
 #include "Game/Class_1098E330.h"
+#include "Core/Core.h"
+#include "Game/cActorManager.h"
+#include "Game/Class_10E6B978.h"
+#include "Game/Class_10E6B9F8.h"
+#include "Game/Class_10E6BA00.h"
 
 class Class_10F46DA0
 {
@@ -41,6 +46,14 @@ extern float DAT_10eafbdc;
 extern Class_10F46DA0* DAT_10f46da0;
 
 extern Struct_10AA3520* DAT_10f35dec;
+
+class Class_10E6B978;
+
+// FUNCTION: 0x10A6E690 ?HasOwner@Class_10E6BC8C@@QAE_NH@Z
+bool Class_10E6BC8C::HasOwner(int A)
+{
+    return GetOwner(A) != 0;
+}
 
 // FUNCTION: 0x10A76E10 ?FUN_10a76e10@Class_10E6BC8C@@UAEHHPAVObject_10A76E10@@M@Z
 int Class_10E6BC8C::FUN_10a76e10(int A, Object_10A76E10* B, float C)

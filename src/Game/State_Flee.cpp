@@ -34,9 +34,23 @@ public:
     int Unknown74;
 };
 
+class Class_10BB89D0;
+
 // FUNCTION: 0x10BE9890 ?FUN_10be9890@State_Flee@@UAEXXZ
 void State_Flee::FUN_10be9890()
 {
     if (Unknown04->FUN_10bb89d0() && Unknown04->FUN_10bb89d0()->Virtual75())
         PopState();
+}
+
+// FUNCTION: 0x10BE9AC0 ?FUN_10be9ac0@State_Flee@@UAEXXZ
+void State_Flee::FUN_10be9ac0()
+{
+    if (!Unknown74 && Unknown60)
+    {
+        if (Unknown60->Unknown04)
+            Unknown60->Unknown04->FUN_10a6ea30(0x800709, 0);
+        delete Unknown60;
+        Unknown60 = 0;
+    }
 }

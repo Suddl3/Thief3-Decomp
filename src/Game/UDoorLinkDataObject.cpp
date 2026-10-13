@@ -10,6 +10,15 @@ inline void* operator new(unsigned int, EInternal* Mem)
     return Mem;
 }
 
+// FUNCTION: 0x1099FAB0 ??_GUDoorLinkDataObject@@UAEPAXI@Z
+// Compiler-generated: emitted with the class's vtable by 0x1099FAD0's definition in this unit.
+
+// FUNCTION: 0x1099FAD0 ??1UDoorLinkDataObject@@UAE@XZ
+UDoorLinkDataObject::~UDoorLinkDataObject()
+{
+    ConditionalDestroy();
+}
+
 // FUNCTION: 0x109A1670 ?InternalConstructor@UDoorLinkDataObject@@SAXPAX@Z
 void UDoorLinkDataObject::InternalConstructor(void* X)
 {

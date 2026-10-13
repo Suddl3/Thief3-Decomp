@@ -10,6 +10,15 @@ inline void* operator new(unsigned int, EInternal* Mem)
     return Mem;
 }
 
+// FUNCTION: 0x10B934D0 ??_GAAITaggedVolume@@UAEPAXI@Z
+// Compiler-generated: emitted with the class's vtable by 0x10B93500's definition in this unit.
+
+// FUNCTION: 0x10B93500 ??1AAITaggedVolume@@UAE@XZ
+AAITaggedVolume::~AAITaggedVolume()
+{
+    ConditionalDestroy();
+}
+
 // FUNCTION: 0x10B95130 ?InternalConstructor@AAITaggedVolume@@SAXPAX@Z
 void AAITaggedVolume::InternalConstructor(void* X)
 {

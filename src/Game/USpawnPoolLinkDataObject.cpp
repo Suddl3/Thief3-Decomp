@@ -10,6 +10,15 @@ inline void* operator new(unsigned int, EInternal* Mem)
     return Mem;
 }
 
+// FUNCTION: 0x10AB5000 ??_GUSpawnPoolLinkDataObject@@UAEPAXI@Z
+// Compiler-generated: emitted with the class's vtable by 0x10AB5020's definition in this unit.
+
+// FUNCTION: 0x10AB5020 ??1USpawnPoolLinkDataObject@@UAE@XZ
+USpawnPoolLinkDataObject::~USpawnPoolLinkDataObject()
+{
+    ConditionalDestroy();
+}
+
 // FUNCTION: 0x10AB53F0 ?InternalConstructor@USpawnPoolLinkDataObject@@SAXPAX@Z
 void USpawnPoolLinkDataObject::InternalConstructor(void* X)
 {

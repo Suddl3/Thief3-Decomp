@@ -1,22 +1,9 @@
 // Game/Unsorted_10C262D0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10C262D0.h"
 #include "Game/Class_10C7D570.h"
 #include "Game/Class_10E99298.h"
-
-struct Struct_10C26310
-{
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-};
-
-struct Data_10C26310
-{
-    char Unknown00[0x2C];
-    Struct_10C26310 Unknown2C;
-    Struct_10C26310 Unknown38;
-};
 
 // FUNCTION: 0x10C262D0 ?SetActive@Class_10C262D0@@QAEX_N@Z
 void Class_10C262D0::SetActive(bool A)
@@ -37,18 +24,4 @@ void Class_10C262D0::SetActive(bool A)
             m_Active = false;
         }
     }
-}
-
-// FUNCTION: 0x10C26310 ?FUN_10c26310@Class_10E99298@@UAE?AUStruct_10C26310@@XZ
-Struct_10C26310 Class_10E99298::FUN_10c26310()
-{
-    Data_10C26310* Data = (Data_10C26310*)Unknown08->FUN_10c7d570();
-    return Data->Unknown2C;
-}
-
-// FUNCTION: 0x10C26340 ?FUN_10c26340@Class_10E99298@@UAE?AUStruct_10C26310@@XZ
-Struct_10C26310 Class_10E99298::FUN_10c26340()
-{
-    Data_10C26310* Data = (Data_10C26310*)Unknown08->FUN_10c7d570();
-    return Data->Unknown38;
 }

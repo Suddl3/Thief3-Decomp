@@ -1,0 +1,26 @@
+// Game/Class_1092D420.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Declarations above the functions belong in include/ once they settle.
+
+#include "Game/Class_1092D940.h"
+
+class Class_1092D420 {
+public:
+    int Unknown00;
+    int Unknown04;
+    int Unknown08;
+    bool Unknown0C;
+    Class_1092D420* Initialize();
+};
+
+extern int DAT_10f31b88;
+
+// FUNCTION: 0x1092D420 ?Initialize@Class_1092D420@@QAEPAV1@XZ
+Class_1092D420* Class_1092D420::Initialize()
+{
+    DAT_10f31b88 = (int)this;
+    Unknown00 = 0;
+    Unknown04 = 0;
+    Unknown08 = 0;
+    Unknown0C = false;
+    return this;
+}

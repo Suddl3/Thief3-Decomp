@@ -4,8 +4,6 @@
 #include "Game/Class_1098E330.h"
 #include "Game/Class_10E7007C.h"
 
-extern float DAT_10e499a4;
-
 class Class_10E70020;
 
 class Class_10F46DA0
@@ -39,16 +37,4 @@ public:
 Class_10E70020::~Class_10E70020()
 {
     DAT_10f46da0->Virtual2(this);
-}
-
-// FUNCTION: 0x10ACC440 ?FUN_10acc440@Class_10E7007C@@UAEMHHPAVClass_1098E330@@@Z
-float Class_10E7007C::FUN_10acc440(int A, int B, Class_1098E330* Obj)
-{
-    if (Obj)
-    {
-        float Value = 0.0f;
-        if (Obj->FUN_1098e330(0x100588, (int*)&Value))
-            return Value;
-    }
-    return DAT_10e499a4;
 }

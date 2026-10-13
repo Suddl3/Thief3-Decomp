@@ -10,6 +10,15 @@ inline void* operator new(unsigned int, EInternal* Mem)
     return Mem;
 }
 
+// FUNCTION: 0x10B940F0 ??_GACitySectionPopulationInfo@@UAEPAXI@Z
+// Compiler-generated: emitted with the class's vtable by 0x10B94120's definition in this unit.
+
+// FUNCTION: 0x10B94120 ??1ACitySectionPopulationInfo@@UAE@XZ
+ACitySectionPopulationInfo::~ACitySectionPopulationInfo()
+{
+    ConditionalDestroy();
+}
+
 // FUNCTION: 0x10B95270 ?InternalConstructor@ACitySectionPopulationInfo@@SAXPAX@Z
 void ACitySectionPopulationInfo::InternalConstructor(void* X)
 {

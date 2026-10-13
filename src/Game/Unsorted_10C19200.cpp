@@ -1,5 +1,6 @@
 // Game/Unsorted_10C19200.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Core/Core.h"
 #include "Game/Class_1090A780.h"
 #include "Game/Class_10C1A940.h"
@@ -25,13 +26,7 @@
 
 extern int DAT_10ff708c;
 
-extern void* DAT_10e98cec[];
-
-void FUN_10c62c90();
-
 extern void* DAT_10e98d08[];
-
-class FArchive;
 
 extern void* DAT_10e8d7ac[];
 
@@ -61,13 +56,6 @@ extern int DAT_10ff70a0;
 int GetCounter()
 {
     return DAT_10ff708c;
-}
-
-// FUNCTION: 0x10C1A570 ?FUN_10c1a570@SoundNotifier@@QAEXXZ
-void SoundNotifier::FUN_10c1a570()
-{
-    Field00 = (void*)DAT_10e98cec;
-    FUN_10c62c90();
 }
 
 // FUNCTION: 0x10C1A940 ?FUN_10c1a940@Class_10C1A940@@QAEXXZ
@@ -120,26 +108,10 @@ int FUN_10c1ac90()
     return 0x100014;
 }
 
-// FUNCTION: 0x10C1ACA0 ?FUN_10c1aca0@Class_10E98F00@@QAE_NPAUStruct_10C1ACA0@@PAM@Z
-bool Class_10E98F00::FUN_10c1aca0(Struct_10C1ACA0* Out, float* Value)
-{
-    *Out = Unknown4C;
-    *Value = 0.0f;
-    return true;
-}
-
 // FUNCTION: 0x10C1AD10 ?FUN_10c1ad10@@YAHXZ
 int FUN_10c1ad10()
 {
     return 0x1001ea;
-}
-
-// FUNCTION: 0x10C1AD20 ?GetLocation@Class_10E98F48@@QAE_NPAUStruct_10C1AD20@@PAM@Z
-bool Class_10E98F48::GetLocation(Struct_10C1AD20* Out, float* Value)
-{
-    *Out = Unknown48;
-    *Value = 0.0f;
-    return true;
 }
 
 // FUNCTION: 0x10C1ADB0 ?FUN_10c1adb0@@YAHXZ
@@ -172,12 +144,6 @@ bool Class_10C1AF80::FUN_10c1af80(Struct_10C1AF80* Out, float* Value)
 int FUN_10c1afb0()
 {
     return 0x1005cd;
-}
-
-// FUNCTION: 0x10C1B7D0 ?Serialize@Class_10E99020@@UAEXAAVFArchive@@@Z
-void Class_10E99020::Serialize(FArchive& Ar)
-{
-    FUN_10c1b1a0(Ar);
 }
 
 // FUNCTION: 0x10C1D6A0 ??0Class_10E8D7AC@@QAE@XZ
@@ -222,30 +188,10 @@ void __stdcall FUN_10c266a0(Info_10C266A0* Out, int A, int B, int C)
     Out->Unknown08 = B;
 }
 
-// FUNCTION: 0x10C26A40 ?FUN_10c26a40@cMenu@@UAE?AVClass_1090A780@@XZ
-Class_1090A780 cMenu::FUN_10c26a40()
-{
-    return Class_1090A780(Unknown10);
-}
-
-// FUNCTION: 0x10C270B0 ?FUN_10c270b0@Class_10E992D4@@QAEEXZ
-unsigned char Class_10E992D4::FUN_10c270b0()
-{
-    return Field44;
-}
-
 // FUNCTION: 0x10C27900 ?FUN_10c27900@@YAHXZ
 int FUN_10c27900()
 {
     return DAT_10ff709c;
-}
-
-// FUNCTION: 0x10C28210 ??0Class_10E99370@@QAE@HH@Z
-Class_10E99370::Class_10E99370(int A, int B)
-{
-    Unknown04 = A;
-    Unknown08 = 0;
-    Unknown0C = B;
 }
 
 // FUNCTION: 0x10C28BC0 ?FUN_10c28bc0@@YAHXZ

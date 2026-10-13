@@ -1,5 +1,6 @@
 // Game/Unsorted_10A2C070.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Core/Core.h"
 #include "Game/cBoneAimController.h"
 #include "Game/Class_10A2C350.h"
@@ -40,15 +41,6 @@ void Class_10A2C350::Swap(int A, int B)
     Struct_10A2C350 Temp = m_Items[A];
     m_Items[A] = m_Items[B];
     m_Items[B] = Temp;
-}
-
-// FUNCTION: 0x10A2C500 ?FUN_10a2c500@cBoneAimController@@QAE_NPAX0@Z
-bool cBoneAimController::FUN_10a2c500(void* A, void* B)
-{
-    Struct_10A2C500* Entry = (Struct_10A2C500*)FindEntry(A, B);
-    if (Entry && !Entry->Unknown7D)
-        return true;
-    return false;
 }
 
 // FUNCTION: 0x10A2DE50 ?FUN_10a2de50@@YAXXZ

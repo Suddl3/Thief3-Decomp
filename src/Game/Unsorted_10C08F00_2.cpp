@@ -1,5 +1,6 @@
 // Game/Unsorted_10C08F00_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10E97BEC.h"
 #include "Game/cAIManager.h"
 #include "Game/Struct_10C09A10.h"
@@ -26,12 +27,6 @@ Class_10E97BEC::Class_10E97BEC()
 
 // FUNCTION: 0x10C0AE90 ??_GClass_10E97BEC@@UAEPAXI@Z
 // Compiler-generated: emitted with the class's vtable by 0x10C0AD70's definition in this unit.
-
-// FUNCTION: 0x10C0B040 ?FUN_10c0b040@cAIManager@@UAE_NXZ
-bool cAIManager::FUN_10c0b040()
-{
-    return Unknown08 < 8;
-}
 
 // FUNCTION: 0x10C0BDC0 ?FUN_10c0bdc0@@YGXHPAVClass_10BAF8E0@@@Z
 void __stdcall FUN_10c0bdc0(int p1, Class_10BAF8E0* p2)

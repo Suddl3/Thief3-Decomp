@@ -1,6 +1,13 @@
 // Game/Class_10E66530.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10E66530.h"
+#include "Game/Class_10924E80.h"
+#include "Game/Class_10E666A0.h"
+#include "Game/Info_10A399C0.h"
+#include "Game/Struct_10A378B0.h"
+#include "Game/UClient.h"
+#include "Engine/EngineClasses.h"
 
 class Class_10A37A10_Field08
 {
@@ -96,9 +103,34 @@ public:
     virtual void Virtual88(int A);
 };
 
+class Class_10A37A30
+{
+public:
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual void Virtual2();
+    virtual void Virtual3();
+    virtual void Virtual4();
+    virtual void Virtual5(int A, int B, float C);
+};
+
 // FUNCTION: 0x10A37A10 ?FUN_10a37a10@Class_10E66530@@UAEHHHH@Z
 int Class_10E66530::FUN_10a37a10(int A, int B, int C)
 {
     Unknown08->Virtual88(A);
     return A;
+}
+
+// FUNCTION: 0x10A37A30 ?FUN_10a37a30@Class_10E66530@@UAEXHPAVClass_10A37A30@@@Z
+void Class_10E66530::FUN_10a37a30(int A, Class_10A37A30* B)
+{
+    B->Virtual5(-1, 0, -1.0f);
+}
+
+// FUNCTION: 0x10A37A50 ?FUN_10a37a50@Class_10E66530@@UAEHM@Z
+int Class_10E66530::FUN_10a37a50(float A)
+{
+    if (A < 0.25f)
+        return 1;
+    return 0;
 }

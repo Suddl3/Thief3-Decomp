@@ -1,5 +1,6 @@
 // Game/Unsorted_10AB5AE0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10AC14F0.h"
 #include "Game/Class_10AC2600.h"
 #include "Game/Class_10AC3BF0.h"
@@ -38,12 +39,6 @@ public:
 };
 
 void FUN_10ac2fb0();
-
-// FUNCTION: 0x10AB5B20 ?Copy@cRefPtr@@QAE?AV1@XZ
-cRefPtr cRefPtr::Copy()
-{
-    return *this;
-}
 
 // FUNCTION: 0x10ABA160 ?FUN_10aba160@@YAXXZ
 void FUN_10aba160()

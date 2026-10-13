@@ -10,6 +10,15 @@ inline void* operator new(unsigned int, EInternal* Mem)
     return Mem;
 }
 
+// FUNCTION: 0x10B93FB0 ??_GAFocusPoint@@UAEPAXI@Z
+// Compiler-generated: emitted with the class's vtable by 0x10B93FE0's definition in this unit.
+
+// FUNCTION: 0x10B93FE0 ??1AFocusPoint@@UAE@XZ
+AFocusPoint::~AFocusPoint()
+{
+    ConditionalDestroy();
+}
+
 // FUNCTION: 0x10B95250 ?InternalConstructor@AFocusPoint@@SAXPAX@Z
 void AFocusPoint::InternalConstructor(void* X)
 {

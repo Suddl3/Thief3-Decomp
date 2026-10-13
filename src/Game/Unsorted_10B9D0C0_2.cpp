@@ -1,5 +1,6 @@
 // Game/Unsorted_10B9D0C0_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10B9D180.h"
 #include "Game/Class_10B9D1A0.h"
 #include "Game/Class_10B9D1C0.h"
@@ -331,12 +332,4 @@ void Class_10B9D200::FUN_10b9d200()
         if (Item)
             Item->Virtual46();
     }
-}
-
-// FUNCTION: 0x10B9E410 ?FUN_10b9e410@cStateStack@@QAEXXZ
-void cStateStack::FUN_10b9e410()
-{
-    Class_10B9E410_Member* Obj = m_Member;
-    int Key = Unknown0C;
-    ApplyNextState(Obj->Virtual28(Key));
 }

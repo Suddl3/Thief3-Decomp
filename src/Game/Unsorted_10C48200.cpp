@@ -1,5 +1,6 @@
 // Game/Unsorted_10C48200.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10C49200.h"
 #include "Game/Class_10C49230.h"
 #include "Game/Class_10C4A030_Member10.h"
@@ -47,44 +48,12 @@ unsigned int Class_10E9BB60::ClampToAvailable(int p1, unsigned int p2, unsigned 
     return Avail;
 }
 
-// FUNCTION: 0x10C483E0 ?CompareUnsigned@Class_10E9BB80@@UAEHPAI0@Z
-int Class_10E9BB80::CompareUnsigned(unsigned int* A, unsigned int* B)
-{
-    unsigned int X = *A;
-    unsigned int Y = *B;
-    if (X == Y)
-        return 0;
-    return X > Y ? 1 : -1;
-}
-
 // FUNCTION: 0x10C49020 ?FUN_10c49020@Class_10E9BB8C@@QAEHXZ
 int Class_10E9BB8C::FUN_10c49020()
 {
     ++*Unknown30;
     --*Unknown20;
     return *Unknown20;
-}
-
-// FUNCTION: 0x10C49200 ?Clear@Class_10C49200@@QAEXXZ
-void Class_10C49200::Clear()
-{
-    Reset(0x40);
-    ::operator delete(m_Buckets);
-    m_Count = 0;
-    m_BucketCount = 0;
-    m_Buckets = 0;
-    m_Collisions = 0;
-}
-
-// FUNCTION: 0x10C49230 ?Clear@Class_10C49230@@QAEXXZ
-void Class_10C49230::Clear()
-{
-    Reset(0x40);
-    ::operator delete(m_Buckets);
-    m_Count = 0;
-    m_BucketCount = 0;
-    m_Buckets = 0;
-    m_Collisions = 0;
 }
 
 // FUNCTION: 0x10C4A030 ?FUN_10c4a030@CadenceFactory@@UAEXXZ

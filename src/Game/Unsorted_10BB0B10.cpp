@@ -20,10 +20,6 @@
 
 extern Class_10BB48E0* DAT_10ff6694;
 
-void FUN_10bb3470(int p1, int p2);
-
-void FUN_10bb35e0(int p1, int p2);
-
 Struct_10BB0B90* FUN_10bb0b90(int A);
 
 extern const char DAT_10e8dc40[];
@@ -297,8 +293,6 @@ public:
 };
 
 UClass* FUN_10901680();
-
-class AActor;
 
 class Class_10BB0B90_Param
 {
@@ -922,18 +916,6 @@ cString GetSitOrSleepName()
 cString GetSitOrSleepDescription()
 {
     return cString(DAT_10e90800);
-}
-
-// FUNCTION: 0x10BB35C0 ?FUN_10bb35c0@Class_10E8C728@@UAEXHHH@Z
-void Class_10E8C728::FUN_10bb35c0(int p1, int p2, int p3)
-{
-    FUN_10bb3470(p2, p3);
-}
-
-// FUNCTION: 0x10BB3710 ?FUN_10bb3710@Class_10E8C764@@UAEXHHH@Z
-void Class_10E8C764::FUN_10bb3710(int p1, int p2, int p3)
-{
-    FUN_10bb35e0(p2, p3);
 }
 
 // FUNCTION: 0x10BB5630 ?FUN_10bb5630@@YAXXZ

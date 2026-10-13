@@ -1,10 +1,9 @@
 // Game/Unsorted_10B90330.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10B912E0.h"
 #include "Game/Class_10B91800.h"
-
-Class_10905A90_Member* GetAllocator();
 
 class Class_10DA0410
 {
@@ -47,26 +46,4 @@ Struct_10B90530 __stdcall FUN_10b90530(Class_10DA0410* Thing, int C)
         break;
     }
     return Result;
-}
-
-// FUNCTION: 0x10B912E0 ?Free@Class_10B912E0@@QAEXXZ
-void Class_10B912E0::Free()
-{
-    FUN_10b90980(0);
-    if (Unknown04)
-    {
-        GetAllocator()->Virtual5(m_Elements);
-        m_Elements = 0;
-        Unknown04 = 0;
-    }
-}
-
-// FUNCTION: 0x10B91800 ?Assign@Class_10B91800@@QAEPAV1@H@Z
-Class_10B91800* Class_10B91800::Assign(int A)
-{
-    Unknown04 = 0;
-    m_Count = 0;
-    m_Elements = 0;
-    CopyFrom(A);
-    return this;
 }

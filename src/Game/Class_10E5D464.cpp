@@ -1,7 +1,9 @@
 // Game/Class_10E5D464.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/cIntArray.h"
 #include "Game/Class_10E5D464.h"
+#include "Game/Class_10B06220.h"
 
 class Class_10E5D360
 {
@@ -25,6 +27,13 @@ public:
 };
 
 extern Class_10F46DA0* DAT_10f46da0;
+
+// FUNCTION: 0x10A11EC0 ?FUN_10a11ec0@Class_10E5D464@@UAEXHHHH@Z
+void Class_10E5D464::FUN_10a11ec0(int Type, int A, int B, int C)
+{
+    if (Type > 0 && Type <= 2)
+        Virtual1(A, B, C);
+}
 
 // FUNCTION: 0x10A11F30 ??0Class_10E5D464@@QAE@H@Z
 Class_10E5D464::Class_10E5D464(int Value)

@@ -1,5 +1,6 @@
 // Game/Unsorted_10A34AE0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10A34B90.h"
 #include "Game/cInt64HashTable.h"
 #include "Game/Class_10A34AE0.h"
@@ -36,26 +37,4 @@ bool Class_10A34AE0::AddPair(Struct_10A34AE0* A, int B)
     B = 1;
     m_PairCounts.Insert(Range, &B);
     return true;
-}
-
-// FUNCTION: 0x10A34B90 ?Reset@Class_10A34B90@@QAEXH@Z
-void Class_10A34B90::Reset(int Size)
-{
-    for (int i = 0; i < m_BucketCount; i++)
-    {
-        Class_10A34B90_Node* Node = m_Buckets[i];
-        while (Node)
-        {
-            Class_10A34B90_Node* Next = Node->Next;
-            ::operator delete(Node);
-            Node = Next;
-        }
-    }
-    m_Count = 0;
-    m_BucketCount = 0;
-    m_Collisions = 0;
-    ::operator delete(m_Buckets);
-    m_Buckets = 0;
-    if (!m_FixedSize)
-        Rehash(Size);
 }

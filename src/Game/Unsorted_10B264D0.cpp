@@ -1,5 +1,6 @@
 // Game/Unsorted_10B264D0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_1090A780.h"
 #include "Game/Class_10B26930.h"
 #include "Game/Class_10B27FD0.h"
@@ -19,23 +20,6 @@
 #include "Game/Class_10E7C41C.h"
 
 extern void* DAT_10e7ad44[];
-
-extern void* DAT_10e7ae9c[];
-
-extern void* DAT_10e6f614[];
-
-class Class_10E7AE9C
-{
-public:
-    Class_10E7AE9C* Init();
-
-    void** Unknown00;        // +0x00: DAT_10e7ae9c
-    float Unknown04;
-    int Unknown08;
-    void** Unknown0C;        // +0x0c: DAT_10e6f614
-    char Unknown10[0x3C];
-    float Unknown4C;
-};
 
 extern void* DAT_10e7bb2c[];
 
@@ -75,14 +59,6 @@ public:
     Class_10E7C398* Construct();
 };
 
-extern void* DAT_10e7c3a4[];
-
-class Class_10E7C3A4 {
-public:
-    void* Field00;
-    Class_10E7C3A4* Construct();
-};
-
 extern void* DAT_10e7c3b0[];
 
 extern void* DAT_10e7c3bc[];
@@ -115,10 +91,6 @@ public:
 
 extern void* DAT_10e7c404[];
 
-extern void* DAT_10e7c410[];
-
-extern void* DAT_10e7c41c[];
-
 // FUNCTION: 0x10B26930 ?FUN_10b26930@Class_10B26930@@QAEXH@Z
 void Class_10B26930::FUN_10b26930(int param)
 {
@@ -137,33 +109,10 @@ void Class_10E7AD44::FUN_10b28420()
     Field00 = (void*)DAT_10e7ad44;
 }
 
-// FUNCTION: 0x10B29810 ?Init@Class_10E7AE9C@@QAEPAV1@XZ
-Class_10E7AE9C* Class_10E7AE9C::Init()
-{
-    Unknown04 = 1.0f;
-    Unknown08 = 0;
-    Unknown0C = DAT_10e6f614;
-    Unknown4C = 32767.0f;
-    Unknown00 = DAT_10e7ae9c;
-    return this;
-}
-
 // FUNCTION: 0x10B2BB20 ?FUN_10b2bb20@@YAHXZ
 int FUN_10b2bb20()
 {
     return 0x7;
-}
-
-// FUNCTION: 0x10B2EE90 ?ResetValue@Class_10E7B89C@@QAEXXZ
-void Class_10E7B89C::ResetValue()
-{
-    Field0C = Field10;
-}
-
-// FUNCTION: 0x10B2F8F0 ?FUN_10b2f8f0@cT3ReadBookWindow@@QAEXH@Z
-void cT3ReadBookWindow::FUN_10b2f8f0(int p1)
-{
-    Field150 = 1;
 }
 
 // FUNCTION: 0x10B2FBF0 ?FUN_10b2fbf0@@YGDHH@Z
@@ -268,13 +217,6 @@ Class_10E7C398* Class_10E7C398::Construct()
 int FUN_10b36290()
 {
     return 0x89;
-}
-
-// FUNCTION: 0x10B362D0 ?Construct@Class_10E7C3A4@@QAEPAV1@XZ
-Class_10E7C3A4* Class_10E7C3A4::Construct()
-{
-    Field00 = DAT_10e7c3a4;
-    return this;
 }
 
 // FUNCTION: 0x10B362E0 ?FUN_10b362e0@@YAHXZ
@@ -387,24 +329,10 @@ int FUN_10b36420()
     return 0x96;
 }
 
-// FUNCTION: 0x10B36430 ?Construct@Class_10E7C410@@QAEPAV1@XZ
-Class_10E7C410* Class_10E7C410::Construct()
-{
-    *(void**)this = DAT_10e7c410;
-    return this;
-}
-
 // FUNCTION: 0x10B36440 ?FUN_10b36440@@YAHXZ
 int FUN_10b36440()
 {
     return 0x98;
-}
-
-// FUNCTION: 0x10B36470 ?Construct@Class_10E7C41C@@QAEPAV1@XZ
-Class_10E7C41C* Class_10E7C41C::Construct()
-{
-    *(void**)this = DAT_10e7c41c;
-    return this;
 }
 
 // FUNCTION: 0x10B36480 ?FUN_10b36480@@YAHXZ

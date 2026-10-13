@@ -1,19 +1,12 @@
 // Game/Unsorted_10C18520_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10DC1750.h"
 #include "Game/Class_10E98CA4.h"
 #include "Game/Struct_10B9F810.h"
 #include "Game/Struct_10DC1750_Result_1C.h"
 #include "Game/Class_10DC1750_Result.h"
-
-struct Struct_10AA3520
-{
-    char Unknown00[8];
-    int Unknown08;
-};
-
-extern Struct_10AA3520* DAT_10f35dec;
 
 Class_10905A90_Member* GetAllocator();
 
@@ -36,29 +29,6 @@ public:
     char Unknown00[4];
     cIntArray Unknown04;
 };
-
-// FUNCTION: 0x10C19B90 ?FUN_10c19b90@Class_10E98CA4@@QAEXXZ
-void Class_10E98CA4::FUN_10c19b90()
-{
-    int Value = DAT_10f35dec->Unknown08;
-    if (Value)
-    {
-        Class_10DC1750_Result* Result = Unknown04->FUN_10dc1750();
-        Struct_10DC1750_Result_1C* List = &Result->Unknown1C;
-        int Index = -1;
-        for (int i = 0; i < List->Count; i++)
-        {
-            if (List->Items[i] == 0x11)
-            {
-                Index = i;
-                break;
-            }
-        }
-        if (Index != -1)
-            return;
-        FUN_10c19810(Value);
-    }
-}
 
 // FUNCTION: 0x10C19FD0 ??1Class_10C19FD0@@QAE@XZ
 Class_10C19FD0::~Class_10C19FD0()

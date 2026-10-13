@@ -10,6 +10,15 @@ inline void* operator new(unsigned int, EInternal* Mem)
     return Mem;
 }
 
+// FUNCTION: 0x10B93570 ??_GANavMeshSubtractionVolume@@UAEPAXI@Z
+// Compiler-generated: emitted with the class's vtable by 0x10B935A0's definition in this unit.
+
+// FUNCTION: 0x10B935A0 ??1ANavMeshSubtractionVolume@@UAE@XZ
+ANavMeshSubtractionVolume::~ANavMeshSubtractionVolume()
+{
+    ConditionalDestroy();
+}
+
 // FUNCTION: 0x10B95140 ?InternalConstructor@ANavMeshSubtractionVolume@@SAXPAX@Z
 void ANavMeshSubtractionVolume::InternalConstructor(void* X)
 {

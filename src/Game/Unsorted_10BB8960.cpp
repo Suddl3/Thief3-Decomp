@@ -1,5 +1,6 @@
 // Game/Unsorted_10BB8960.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_1098E330.h"
 #include "Game/Class_10BB8CC0.h"
 #include "Game/Class_10BBDB10.h"
@@ -186,12 +187,6 @@ int AAIPathPoint::FUN_10bbeee0(int A, int B, int C, int D)
 int Class_10BBF5C0::FUN_10bbf5c0()
 {
     return Field00 + 0x18;
-}
-
-// FUNCTION: 0x10BBF5D0 ?FUN_10bbf5d0@Class_10BBF5D0@@QAEHXZ
-int Class_10BBF5D0::FUN_10bbf5d0()
-{
-    return Field00 + 0x24;
 }
 
 // FUNCTION: 0x10BC3F90 ?FUN_10bc3f90@Class_10BC3F90@@QAE?AUStruct_10BC3F90@@XZ

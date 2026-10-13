@@ -1,7 +1,9 @@
 // Game/PlayerStateController.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10B19300.h"
 #include "Game/PlayerStateController.h"
+#include "Game/Class_10B22D60_Unknown90.h"
 
 class Class_10E6BA58;
 
@@ -52,4 +54,20 @@ void PlayerStateController::SetSlot(void** A, int B)
     {
         FUN_10b190e0()->FUN_10de9b20(((Class_10B22D60_Unknown08*)*A)->Virtual12(Local));
     }
+}
+
+// FUNCTION: 0x10B22BD0 ?FUN_10b22bd0@PlayerStateController@@QAEXH@Z
+void PlayerStateController::FUN_10b22bd0(int A)
+{
+    int Value = Unknown90->Virtual8(A);
+    if (Value != Unknown90->Virtual4())
+        SetSlot((void**)&Unknown90, Value);
+}
+
+// FUNCTION: 0x10B22CE0 ?HandleBodyCarryNotification@PlayerStateController@@QAEXH@Z
+void PlayerStateController::HandleBodyCarryNotification(int A)
+{
+    int Value = Unknown90->Virtual9(m_Body, A);
+    if (Value != Unknown90->Virtual4())
+        SetSlot((void**)&Unknown90, Value);
 }

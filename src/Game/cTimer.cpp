@@ -1,6 +1,11 @@
 // Game/cTimer.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/cTimer.h"
+#include "Core/Core.h"
+#include "Game/Class_10A174E0.h"
+#include "Game/Class_10ACA550.h"
+#include "Game/Class_10ACA600.h"
 
 class Class_10F46DA0
 {
@@ -28,5 +33,15 @@ void cTimer::Tick(float A)
             Remaining = 0.0f;
             DAT_10f46da0->Virtual5(0xb, Unknown04, -1, 0);
         }
+    }
+}
+
+// FUNCTION: 0x10ACA620 ?Fire@cTimer@@QAEXXZ
+void cTimer::Fire()
+{
+    if (Remaining > DAT_10eafbdc)
+    {
+        Remaining = 0.0f;
+        DAT_10f46da0->Virtual5(0xb, Unknown04, -1, 0);
     }
 }

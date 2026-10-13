@@ -1,7 +1,24 @@
 // Game/cT3ReadBookWindow.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10A52A40.h"
 #include "Game/cT3ReadBookWindow.h"
+#include "Game/Class_1090A780.h"
+#include "Game/Class_10B26930.h"
+#include "Game/Class_10B27FD0.h"
+#include "Game/Class_10B32D60.h"
+#include "Game/Class_10E7AD44.h"
+#include "Game/Class_10E7B89C.h"
+#include "Game/Class_10E7C380.h"
+#include "Game/Class_10E7C38C.h"
+#include "Game/Class_10E7C3B0.h"
+#include "Game/Class_10E7C3BC.h"
+#include "Game/Class_10E7C3C8.h"
+#include "Game/Class_10E7C3D4.h"
+#include "Game/Class_10E7C3E0.h"
+#include "Game/Class_10E7C404.h"
+#include "Game/Class_10E7C410.h"
+#include "Game/Class_10E7C41C.h"
 
 class Class_10A52A40_Member;
 
@@ -112,6 +129,12 @@ public:
     virtual void Virtual101();
     virtual void Virtual102(Class_10A52A40_Member* P);
 };
+
+// FUNCTION: 0x10B2F8F0 ?FUN_10b2f8f0@cT3ReadBookWindow@@QAEXH@Z
+void cT3ReadBookWindow::FUN_10b2f8f0(int p1)
+{
+    Field150 = 1;
+}
 
 // FUNCTION: 0x10B2F900 ?FUN_10b2f900@cT3ReadBookWindow@@QAEXPAVClass_10A52A40_Member@@@Z
 void cT3ReadBookWindow::FUN_10b2f900(Class_10A52A40_Member* P)

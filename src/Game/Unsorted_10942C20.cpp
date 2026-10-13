@@ -1,19 +1,16 @@
 // Game/Unsorted_10942C20.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_109434F0.h"
 #include "Game/Class_10943520.h"
 #include "Game/cShortArray.h"
 #include "Game/cEntryArray.h"
 
-Class_10905A90_Member* GetAllocator();
-
 struct Struct_109434F0
 {
     char Unknown00[0x20];
 };
-
-struct Entry_10946110;
 
 class Class_10E4A668_Unknown130_Unknown04
 {
@@ -88,18 +85,6 @@ void Class_10E4A668::FUN_10942c20(int Param)
     }
 }
 
-// FUNCTION: 0x10943160 ?Clear@cShortArray@@QAEXXZ
-void cShortArray::Clear()
-{
-    Resize(0);
-    if (m_CapacityBytes)
-    {
-        GetAllocator()->Virtual5(m_Items);
-        m_Items = 0;
-        m_CapacityBytes = 0;
-    }
-}
-
 // FUNCTION: 0x109434F0 ?Append@Class_109434F0@@QAEHABUStruct_109434F0@@@Z
 int Class_109434F0::Append(const Struct_109434F0& Item)
 {
@@ -107,28 +92,4 @@ int Class_109434F0::Append(const Struct_109434F0& Item)
     FUN_10dcd540(Index + 1);
     Unknown08[Index] = Item;
     return Index;
-}
-
-// FUNCTION: 0x10943520 ?Clear@Class_10943520@@QAEXXZ
-void Class_10943520::Clear()
-{
-    FUN_10943240(0);
-    if (Unknown04)
-    {
-        GetAllocator()->Virtual5(Unknown08);
-        Unknown08 = 0;
-        Unknown04 = 0;
-    }
-}
-
-// FUNCTION: 0x10943560 ?Free@cEntryArray@@QAEXXZ
-void cEntryArray::Free()
-{
-    Resize(0);
-    if (m_Capacity)
-    {
-        GetAllocator()->Virtual5(m_Entries);
-        m_Entries = 0;
-        m_Capacity = 0;
-    }
 }

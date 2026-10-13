@@ -10,6 +10,15 @@ inline void* operator new(unsigned int, EInternal* Mem)
     return Mem;
 }
 
+// FUNCTION: 0x10AB4D80 ??_GUInventorySwitchLinkDataObject@@UAEPAXI@Z
+// Compiler-generated: emitted with the class's vtable by 0x10AB4DA0's definition in this unit.
+
+// FUNCTION: 0x10AB4DA0 ??1UInventorySwitchLinkDataObject@@UAE@XZ
+UInventorySwitchLinkDataObject::~UInventorySwitchLinkDataObject()
+{
+    ConditionalDestroy();
+}
+
 // FUNCTION: 0x10AB53B0 ?InternalConstructor@UInventorySwitchLinkDataObject@@SAXPAX@Z
 void UInventorySwitchLinkDataObject::InternalConstructor(void* X)
 {

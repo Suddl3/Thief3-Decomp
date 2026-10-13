@@ -1,5 +1,6 @@
 // Game/Unsorted_10BA88E0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Core/Core.h"
 #include "Game/Class_10BA9EC0.h"
 #include "Game/Class_10BA9ED0.h"
@@ -71,14 +72,6 @@ public:
 
 void __stdcall FUN_109e3c90(int);
 
-class Class_10E993C4
-{
-public:
-    ~Class_10E993C4();
-
-    Class_10E99370 Unknown00;
-};
-
 // FUNCTION: 0x10BA9EC0 ?FUN_10ba9ec0@Class_10BA9EC0@@QAEPAXXZ
 void* Class_10BA9EC0::FUN_10ba9ec0()
 {
@@ -113,12 +106,6 @@ void Class_10BA9F70::FUN_10ba9f70(unsigned char param)
 float Class_10BA9F80::FUN_10ba9f80()
 {
     return Unknown64;
-}
-
-// FUNCTION: 0x10BA9F90 ?FUN_10ba9f90@SoundSchema@@QAEXH@Z
-void SoundSchema::FUN_10ba9f90(int param)
-{
-    Unknown68 = param;
 }
 
 // FUNCTION: 0x10BA9FA0 ?FUN_10ba9fa0@Class_10BA9FA0@@UAEMXZ
@@ -190,11 +177,6 @@ int FUN_10bb0af0()
 int FUN_10bb0b00()
 {
     return 0x83;
-}
-
-// FUNCTION: 0x10BB7BE0 ??1Class_10E993C4@@QAE@XZ
-Class_10E993C4::~Class_10E993C4()
-{
 }
 
 // FUNCTION: 0x10BB7D50 ?FUN_10bb7d50@Class_10BB7D50@@QAEXXZ

@@ -1,5 +1,6 @@
 // Game/Unsorted_10A84E60.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10A873D0.h"
 #include "Game/Class_10E6C390.h"
 
@@ -25,15 +26,4 @@ void Class_10E6C390::FUN_10a85890(Struct_10A85890* Ar)
         FUN_10a852e0(Ar);
     else if (Ar->Unknown18)
         FUN_10a85110(Ar);
-}
-
-// FUNCTION: 0x10A873D0 ?FUN_10a873d0@Class_10A873D0@@QAEXXZ
-void Class_10A873D0::FUN_10a873d0()
-{
-    Reset(0x40);
-    ::operator delete(Unknown14);
-    Unknown04 = 0;
-    Unknown0C = 0;
-    Unknown14 = 0;
-    Unknown00 = 0;
 }

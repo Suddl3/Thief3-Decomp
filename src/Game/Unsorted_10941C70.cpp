@@ -1,5 +1,6 @@
 // Game/Unsorted_10941C70.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10941C40.h"
 #include "Game/Class_10941E90.h"
 #include "Game/Class_10941F40.h"
@@ -38,14 +39,6 @@ public:
     int Unknown5C;
     int Unknown60;
 };
-
-// FUNCTION: 0x10941DB0 ?FUN_10941db0@Class_10941C40@@QAEXHHHHHHHHHHHHH@Z
-void Class_10941C40::FUN_10941db0(int A, int B, int C, int D, int E, int F, int G, int H, int I, int J, int K,
-                                  int L, int M)
-{
-    FUN_10941b10(A);
-    FUN_10941cb0(B, C, D, E, F, G, H, I, J, K, H, I);
-}
 
 // FUNCTION: 0x10941E90 ?Free@Class_10941E90@@QAEXXZ
 void Class_10941E90::Free()

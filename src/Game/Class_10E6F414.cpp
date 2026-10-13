@@ -1,10 +1,12 @@
 // Game/Class_10E6F414.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Engine/EngineClasses.h"
 #include "Game/Class_1096D780.h"
 #include "Game/Class_10AAAEB0.h"
 #include "Game/cIntArray.h"
 #include "Game/Class_10E6F414.h"
+#include "Game/Class_10AC10E0.h"
 
 class Class_10DA0870;
 
@@ -56,6 +58,34 @@ struct Struct_10AC0830_Entry
 bool MoveTo(Class_1096D780* A, const FVector* B);
 
 Class_10D9B090* FUN_10d9dcb0();
+
+class Class_10E6F414_Member
+{
+public:
+    virtual void Virtual0();
+    virtual int Virtual1(int A, int B, int C);
+};
+
+class Class_10ACCAA0 : public Class_10E6F414, public Class_10E6F414_Member
+{
+public:
+    int FUN_10accaa0(int A, int B, int C, int D, int E, int F, int G);
+};
+
+// FUNCTION: 0x10AC0560 ?FireWeapon@Class_10E6F414@@UAEHHHHHHHHH@Z
+int Class_10E6F414::FireWeapon(int A, int B, int C, int D, int E, int F, int G, int H)
+{
+    Class_10E6F414_Member* Result = Virtual1(A);
+    switch (Result->Virtual1(A, B, 0))
+    {
+    case 2:
+    {
+        Class_10ACCAA0* Owner = (Class_10ACCAA0*)Result;
+        return Owner->FUN_10accaa0(A, B, D, E, F, G, H);
+    }
+    }
+    return 0;
+}
 
 // FUNCTION: 0x10AC0830 ?FUN_10ac0830@Class_10E6F414@@UAEXPAVClass_1096D780@@PAVAActor@@@Z
 void Class_10E6F414::FUN_10ac0830(Class_1096D780* P1, AActor* P2)

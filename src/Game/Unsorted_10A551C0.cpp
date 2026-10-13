@@ -1,5 +1,6 @@
 // Game/Unsorted_10A551C0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_1090C880.h"
 #include "Game/Class_10C4EDA0.h"
@@ -12,10 +13,6 @@ class FVector
 public:
     float X, Y, Z;
 };
-
-extern float DAT_10eafbdc;
-
-extern float DAT_10e49684;
 
 class Class_10E684A8
 {
@@ -46,21 +43,6 @@ void Class_10E684A8::SetLocation(FVector* A)
     if (A->X != Current->X || A->Y != Current->Y || A->Z != Current->Z)
         m_Dirty = true;
     *Current = *A;
-}
-
-// FUNCTION: 0x10A55380 ?AddItem@Class_10C4EDA0@@QAEXABUStruct_10A55380@@@Z
-void Class_10C4EDA0::AddItem(const Struct_10A55380& A)
-{
-    Item_10A55380 Item;
-    Item.Unknown00 = A;
-    if (A.Unknown08 != DAT_10eafbdc)
-        Item.Unknown0C = DAT_10e49684 / A.Unknown08;
-    else
-        Item.Unknown0C = 0.0f;
-    int Index = m_Count;
-    Item.Unknown10 = Unknown14;
-    Resize(Index + 1);
-    m_Items[Index] = Item;
 }
 
 // FUNCTION: 0x10A556F0 ?SetNameByIndex@Class_10E684A8@@QAEXH@Z

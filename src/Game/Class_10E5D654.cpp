@@ -1,7 +1,10 @@
 // Game/Class_10E5D654.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10A16BF0.h"
 #include "Game/Class_10E5D654.h"
+#include "Game/Class_10A174E0.h"
+#include "Game/Class_10E5D650.h"
 
 class Class_10E5D654;
 
@@ -20,4 +23,11 @@ extern Class_10F46DA0* DAT_10f46da0;
 Class_10E5D654::~Class_10E5D654()
 {
     DAT_10f46da0->Virtual3(this, 0x5a, -1, -1);
+}
+
+// FUNCTION: 0x10A173E0 ?FUN_10a173e0@Class_10E5D654@@UAEXHHHH@Z
+void Class_10E5D654::FUN_10a173e0(int p1, int p2, int p3, int p4)
+{
+    if (p1 == 0x5b)
+        FUN_10a173f0();
 }

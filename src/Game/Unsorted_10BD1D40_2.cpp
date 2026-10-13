@@ -1,5 +1,6 @@
 // Game/Unsorted_10BD1D40_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10BB8960.h"
 #include "Game/Class_10BBDB40.h"
 #include "Game/Class_10DBD510.h"
@@ -23,8 +24,6 @@ public:
 
     char Unknown40;
 };
-
-class Class_10bb8960_Result;
 
 class Class_10E935F0
 {
@@ -52,16 +51,6 @@ public:
     virtual void FUN_10bd1e60(int p1);
 
     Class_10BB8960* Unknown04;
-};
-
-extern void* DAT_10e933b8[];
-
-class Class_10E933B8 : public Class_10E90D70
-{
-public:
-    Class_10E933B8* FUN_10bd1e70(int A, int B);
-
-    char Unknown40;
 };
 
 extern "C" double cos(double);
@@ -174,15 +163,6 @@ Class_10E932A0* Class_10E932A0::FUN_10bd1e00(int A, int B)
 void Class_10E935F0::FUN_10bd1e60(int p1)
 {
     Unknown04->FUN_10bb8960();
-}
-
-// FUNCTION: 0x10BD1E70 ?FUN_10bd1e70@Class_10E933B8@@QAEPAV1@HH@Z
-Class_10E933B8* Class_10E933B8::FUN_10bd1e70(int A, int B)
-{
-    this->Class_10E90D70::Class_10E90D70(A, B);
-    Unknown40 = 0;
-    Unknown00 = DAT_10e933b8;
-    return this;
 }
 
 // FUNCTION: 0x10BD2D10 ?FUN_10bd2d10@Class_10E93878@@UAENXZ

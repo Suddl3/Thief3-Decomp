@@ -1,5 +1,6 @@
 // Game/Unsorted_10C26A60.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10C26980.h"
 #include "Game/Class_10C26E80.h"
 #include "Game/cPositionList.h"
@@ -102,12 +103,4 @@ Class_10E992D4* Class_10E992D4::Construct(int A, int B, int C, int D)
     this->Class_10C26980::Class_10C26980(A, B, C, D, 180.0f, 0.0f);
     Unknown00 = DAT_10e992d4;
     return this;
-}
-
-// FUNCTION: 0x10C27090 ?IsCurrent@MC_MoveToPoint@@UAE_NH@Z
-bool MC_MoveToPoint::IsCurrent(int A)
-{
-    if (!Unknown48)
-        return false;
-    return Unknown48->GetCurrent(A);
 }

@@ -1,21 +1,10 @@
 // Game/Unsorted_10C0C200.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10C0C8E0.h"
 #include "Game/cIntArray.h"
 #include "Game/Struct_10C05A80.h"
 #include "Game/Class_10C0C360.h"
-
-double GetTimeSeconds();
-
-class Class_10C0C8E0_Unknown0C
-{
-public:
-    char Unknown00[0x2C];
-    int Unknown2C;
-    int Unknown30;
-    char Unknown34[0x28];
-    float Unknown5C;
-};
 
 float DistanceSquared3D(const Struct_10C05A80* A, const Struct_10C05A80* B);
 
@@ -41,17 +30,5 @@ void Class_10C0C360::FindInRadius(cIntArray* Out, const Struct_10C05A80* Center,
             Out->SetCount(Index + 1);
             Out->Data[Index] = *Slot;
         }
-    }
-}
-
-// FUNCTION: 0x10C0C410 ?ExpireStale@Class_10C0C8E0@@QAEXXZ
-void Class_10C0C8E0::ExpireStale()
-{
-    for (int i = 0; i < m_Count; i++)
-    {
-        Class_10C0C8E0_Unknown0C* Item = m_Entries[i];
-        float Old = Item->Unknown5C;
-        if (GetTimeSeconds() - Old > 60.0)
-            FUN_10c0c200(Item->Unknown30, Item->Unknown2C);
     }
 }

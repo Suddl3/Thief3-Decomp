@@ -1,8 +1,16 @@
 // Game/cDispatchTable.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/cString.h"
 #include "Game/Class_10C49740.h"
 #include "Game/cDispatchTable.h"
+#include "Core/Core.h"
+#include "Game/Class_10914D70.h"
+#include "Game/Class_10919B80.h"
+#include "Game/Class_10919CA0.h"
+#include "Game/Class_1091CCF0.h"
+#include "Game/Class_1091E3E0.h"
+#include "Game/Class_1091E410.h"
 
 struct Group_10BA14C0;
 
@@ -28,6 +36,12 @@ public:
 };
 
 extern "C" char* _strupr(char* String);
+
+// FUNCTION: 0x10914D60 ?GetField08@cDispatchTable@@QAEEXZ
+unsigned char cDispatchTable::GetField08()
+{
+    return Field08;
+}
 
 // FUNCTION: 0x10915160 ?Dispatch@cDispatchTable@@QAEXHAAVcString@@H@Z
 void cDispatchTable::Dispatch(int A, cString& B, int C)

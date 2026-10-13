@@ -15,10 +15,6 @@ struct Struct_10AA3520
 
 extern Struct_10AA3520* DAT_10f35dec;
 
-extern void* GWindowManager[];
-
-extern Class_10F3A3D8* DAT_10f3a3d8;
-
 struct Struct_10B1DAF0_Vec
 {
     int Unknown00;
@@ -41,18 +37,6 @@ struct Struct_10B1DAF0
 int GetInfoCount()
 {
     return DAT_10f35dec->Unknown08->Unknown47C;
-}
-
-// FUNCTION: 0x10B1BCC0 ?HasWindowManager@Class_10E79488@@UAE_NH@Z
-bool Class_10E79488::HasWindowManager(int param)
-{
-    return GWindowManager[0] != 0;
-}
-
-// FUNCTION: 0x10B1D290 ?FUN_10b1d290@AT3PlayerController@@UAEXHHHH@Z
-void AT3PlayerController::Virtual107(int A, int B, int C, int D)
-{
-    DAT_10f3a3d8->Unknown150->FUN_10abdc10(A, B, C, D, 0);
 }
 
 // FUNCTION: 0x10B1DAF0 ?FUN_10b1daf0@@YAXPAUStruct_10B1DAF0@@H@Z

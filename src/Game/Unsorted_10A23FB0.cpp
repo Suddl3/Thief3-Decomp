@@ -58,9 +58,3 @@ void Class_10A33EC0::FUN_10a33ec0()
 {
     Field3c = 1;
 }
-
-// FUNCTION: 0x10A33ED0 ?FUN_10a33ed0@Class_10E9CD18@@QAEXXZ
-void Class_10E9CD18::FUN_10a33ed0()
-{
-    Unknown3C = 0;
-}

@@ -1,5 +1,6 @@
 // Game/cLockPickController.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10C56E40.h"
 
 class Class_10E7E538
@@ -87,4 +88,11 @@ void cLockPickController::ClearSlots(int Index)
                 Item->Virtual2();
         }
     }
+}
+
+// FUNCTION: 0x10B3ED20 ?ResetIfPending@cLockPickController@@QAEXXZ
+void cLockPickController::ResetIfPending()
+{
+    if (m_ResetPending)
+        Reset();
 }

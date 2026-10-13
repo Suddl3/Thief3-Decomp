@@ -1,10 +1,21 @@
 // Game/cVolumeManager.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Engine/EngineClasses.h"
 #include "Game/cActorManager.h"
 #include "Game/Class_10A4C550.h"
 #include "Game/Class_10AA6290.h"
 #include "Game/cVolumeManager.h"
+#include "Core/Core.h"
+#include "Game/Class_10A69170.h"
+#include "Game/Class_10A6A140.h"
+#include "Game/Class_10E6B978.h"
+#include "Game/Class_10E6BBCC.h"
+#include <vector>
+#include "Game/Class_10A111B0.h"
+#include "Game/Class_10AB0400.h"
+#include "Game/Struct_10AB0400.h"
+#include "Game/Class_10A71C40.h"
 
 class FVector;
 
@@ -24,6 +35,34 @@ struct Class_10A71380_Arg3
     BYTE* Unknown04;
 };
 
+class cVolume
+{
+public:
+    bool ContainsPoint(FVector V);
+};
+
+struct Struct_10A4C550_Node
+{
+    Struct_10A4C550_Node* Unknown00;
+    Struct_10A4C550_Node* Unknown04;
+    unsigned int Unknown08;
+    int Unknown0C;
+};
+
+class Class_10A4C550_Iterator
+{
+public:
+    Class_10A4C550_Iterator() {}
+
+    Struct_10A4C550_Node* Unknown00;
+};
+
+// FUNCTION: 0x10A70FA0 ?ContainsPoint@cVolumeManager@@UAE_NABVFVector@@PAVcVolume@@@Z
+bool cVolumeManager::ContainsPoint(const FVector& A, cVolume* B)
+{
+    return B->ContainsPoint(A);
+}
+
 // FUNCTION: 0x10A71380 ?Virtual8@cVolumeManager@@UAEXHHH@Z
 void cVolumeManager::Virtual8(int A, int B, int C)
 {
@@ -39,4 +78,11 @@ void cVolumeManager::Virtual8(int A, int B, int C)
                 FUN_10a71210(Volume);
         }
     }
+}
+
+// FUNCTION: 0x10A73200 ?FindValue@cVolumeManager@@UAEPAHI@Z
+int* cVolumeManager::FindValue(unsigned int Key)
+{
+    Class_10A4C550_Iterator It = m_Values.FUN_10a4c550(Key);
+    return &It.Unknown00->Unknown0C;
 }

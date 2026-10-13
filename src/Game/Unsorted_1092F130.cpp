@@ -1,5 +1,6 @@
 // Game/Unsorted_1092F130.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10928760.h"
 #include "Game/Class_1092F130.h"
@@ -23,11 +24,3 @@ void Class_1092F130::FUN_1092f130()
     DAT_10f31ba4[Index] = this;
     GetAllocator()->Virtual9();
 }
-
-// FUNCTION: 0x1092F830 ??0Vocabulary@@QAE@XZ
-Vocabulary::Vocabulary()
-{
-}
-
-// FUNCTION: 0x10930630 ??_GVocabulary@@UAEPAXI@Z
-// Compiler-generated: emitted with the class's vtable by 0x1092F830's definition in this unit.

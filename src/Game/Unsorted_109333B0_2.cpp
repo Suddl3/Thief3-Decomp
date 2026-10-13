@@ -1,5 +1,6 @@
 // Game/Unsorted_109333B0_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/cD3DVertexBuffer.h"
 #include "Game/Struct_10932ED0.h"
 #include "Game/Class_10E49D1C.h"
@@ -28,14 +29,6 @@ public:
     int Unknown10;
 };
 
-class Class_10E49EE0 {
-public:
-    virtual int AddRef();
-
-    char m_Owner[4];
-    int m_RefCount;
-};
-
 // FUNCTION: 0x10933630 ?Init@Class_10E49D1C@@UAEHHHPAUStruct_10932ED0@@H@Z
 int Class_10E49D1C::Init(int A, int B, Struct_10932ED0* C, int D)
 {
@@ -60,16 +53,4 @@ void Class_10E49F0C::FUN_109341c0()
     Unknown0C = -1;
     Unknown08 = 0;
     Unknown10 = 0;
-}
-
-// FUNCTION: 0x109341E0 ?AddRef@Class_10E49EE0@@UAEHXZ
-int Class_10E49EE0::AddRef()
-{
-    return ++m_RefCount;
-}
-
-// FUNCTION: 0x10934800 ?GetVertexCount@cD3DVertexBuffer@@UAEIXZ
-unsigned int cD3DVertexBuffer::GetVertexCount()
-{
-    return m_Length / Unknown1c;
 }

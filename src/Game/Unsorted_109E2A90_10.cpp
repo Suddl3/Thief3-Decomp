@@ -1,5 +1,6 @@
 // Game/Unsorted_109E2A90_10.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_109E2A90.h"
 #include "Game/Class_109E2AE0.h"
@@ -47,15 +48,6 @@ public:
 extern cZoneManager* DAT_10f35dbc;
 
 class Class_10E5B2AC;
-
-class Class_10F46DA0
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1(Class_10E5B2AC* A, int B, int C, int D);
-};
-
-extern Class_10F46DA0* DAT_10f46da0;
 
 class FVector
 {
@@ -152,17 +144,6 @@ cZoneManager* GetZoneManager()
         GetAllocator()->Virtual9();
     }
     return DAT_10f35dbc;
-}
-
-// FUNCTION: 0x109E32B0 ?SendMessages@Class_10E5B2AC@@QAEXXZ
-void Class_10E5B2AC::SendMessages()
-{
-    if (DAT_10f46da0)
-    {
-        DAT_10f46da0->Virtual1(this, 0x24, -1, -1);
-        DAT_10f46da0->Virtual1(this, 0x25, -1, -1);
-        DAT_10f46da0->Virtual1(this, 5, -1, -1);
-    }
 }
 
 // FUNCTION: 0x109E32F0 ?FUN_109e32f0@@YGHVFVector@@@Z

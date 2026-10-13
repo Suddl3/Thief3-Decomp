@@ -1,5 +1,6 @@
 // Game/Unsorted_10B87540.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10E89384.h"
 #include "Game/Class_10b888d0_Entry.h"
 #include "Game/Class_Unknown00.h"
@@ -75,19 +76,6 @@ Class_10E893B0::Class_10E893B0()
 
 // FUNCTION: 0x10B87EE0 ??_GClass_10E893B0@@UAEPAXI@Z
 // Compiler-generated: emitted with the class's vtable by 0x10B87560's definition in this unit.
-
-// FUNCTION: 0x10B88840 ?Reset@cRagdollBlockData@@QAEPAV1@XZ
-cRagdollBlockData* cRagdollBlockData::Reset()
-{
-    Unknown30 = false;
-    for (int i = 0; i < 4; i++)
-    {
-        Unknown00[i].Unknown00 = 0;
-        Unknown00[i].Unknown04 = 0;
-        Unknown00[i].Unknown08 = false;
-    }
-    return this;
-}
 
 // FUNCTION: 0x10B888D0 ?FUN_10b888d0@Class_10B888D0@@QAEHH@Z
 int Class_10B888D0::FUN_10b888d0(int index)

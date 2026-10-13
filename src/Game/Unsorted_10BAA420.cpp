@@ -8,8 +8,6 @@
 #include "Game/Class_10E98C8C.h"
 #include "AICore/AICoreClasses.h"
 
-class AAIController;
-
 struct Struct_10BAA8F0
 {
     int Count;
@@ -19,14 +17,6 @@ struct Struct_10BAA8F0
 
 // FUNCTION: 0x10BAA420 ??$Cast@VAAIPawnController@@@@YAPAVAAIPawnController@@PAVUObject@@@Z
 template AAIPawnController* Cast<AAIPawnController>(UObject* Src);
-
-// FUNCTION: 0x10BAA8A0 ?FUN_10baa8a0@Class_10BAA8A0@@QAE_NXZ
-bool Class_10BAA8A0::FUN_10baa8a0()
-{
-    if (FUN_10baa750() && FUN_10baa750()->GetCurrent())
-        return FUN_10baa750()->GetCurrent()->Virtual3() == 5;
-    return false;
-}
 
 // FUNCTION: 0x10BAA8F0 ?ClearItems@@YAXPAUStruct_10BAA8F0@@@Z
 void ClearItems(Struct_10BAA8F0* Array)

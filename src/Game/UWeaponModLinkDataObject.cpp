@@ -10,6 +10,15 @@ inline void* operator new(unsigned int, EInternal* Mem)
     return Mem;
 }
 
+// FUNCTION: 0x109A1530 ??_GUWeaponModLinkDataObject@@UAEPAXI@Z
+// Compiler-generated: emitted with the class's vtable by 0x109A1550's definition in this unit.
+
+// FUNCTION: 0x109A1550 ??1UWeaponModLinkDataObject@@UAE@XZ
+UWeaponModLinkDataObject::~UWeaponModLinkDataObject()
+{
+    ConditionalDestroy();
+}
+
 // FUNCTION: 0x109A1920 ?InternalConstructor@UWeaponModLinkDataObject@@SAXPAX@Z
 void UWeaponModLinkDataObject::InternalConstructor(void* X)
 {

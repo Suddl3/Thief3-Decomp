@@ -1,9 +1,8 @@
 // Game/Class_10E84BB8_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10B78780.h"
 #include "Game/cMissionStatsPane.h"
-
-extern void* DAT_10e84d80[];
 
 class cIntArray
 {
@@ -57,12 +56,4 @@ Class_10E84BB8::Class_10E84BB8()
     for (int i = 0; i < 4; i++)
         Unknown190.Unknown08[i] = 0;
     Unknown0E8 = 6;
-}
-
-// FUNCTION: 0x10B67180 ?FUN_10b67180@cMissionStatsPane@@QAEPAV1@XZ
-cMissionStatsPane* cMissionStatsPane::FUN_10b67180()
-{
-    FUN_10b78780();
-    Unknown00 = DAT_10e84d80;
-    return this;
 }

@@ -1,5 +1,6 @@
 // Game/Class_10E4A668.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Struct_109481F0.h"
 
 class Class_10E4A668
@@ -36,4 +37,14 @@ void Class_10E4A668::FUN_10942830()
     Virtual8();
     for (int i = 0; i < Unknown0F0; i++)
         Virtual9(0, i);
+}
+
+// FUNCTION: 0x109481F0 ?FUN_109481f0@Class_10E4A668@@UAE_NXZ
+bool Class_10E4A668::FUN_109481f0()
+{
+    if (!Virtual16())
+        return true;
+    if (Unknown0B0 && Unknown0B0->Unknown28)
+        return true;
+    return false;
 }

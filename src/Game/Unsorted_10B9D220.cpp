@@ -9,8 +9,6 @@
 #include "Game/cStateStack.h"
 #include "Game/cString.h"
 
-Class_10905A90_Member* GetAllocator();
-
 class Class_10B9CAC0
 {
 public:
@@ -30,25 +28,5 @@ void Class_10B9CAC0::NotifyAllyKilled(int A)
     {
         cString Name("+combatwitness:ally_killed");
         (m_Count == 0 ? 0 : m_Stack[m_Count - 1])->Virtual35(Name, 1);
-    }
-}
-
-// FUNCTION: 0x10B9DC80 ?FUN_10b9dc80@cStateStack@@QAEXH@Z
-void cStateStack::FUN_10b9dc80(int A)
-{
-    Class_10B9E410_Member* Obj = m_Member;
-    Class_10B9E410_Item* Top = m_Count == 0 ? 0 : m_Stack[m_Count - 1];
-    int Key = Unknown0C;
-    ApplyNextState(Obj->Virtual44(Key, Top, A));
-}
-
-// FUNCTION: 0x10B9DCC0 ?FUN_10b9dcc0@cStateStack@@QAEXXZ
-void cStateStack::FUN_10b9dcc0()
-{
-    if (m_Count)
-    {
-        Class_10B9E410_Item* Top = m_Stack[m_Count - 1];
-        if (Top && Top->Virtual3() == 7)
-            FUN_10b9d8d0();
     }
 }

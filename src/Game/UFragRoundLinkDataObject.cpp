@@ -10,6 +10,15 @@ inline void* operator new(unsigned int, EInternal* Mem)
     return Mem;
 }
 
+// FUNCTION: 0x109A0240 ??_GUFragRoundLinkDataObject@@UAEPAXI@Z
+// Compiler-generated: emitted with the class's vtable by 0x109A0260's definition in this unit.
+
+// FUNCTION: 0x109A0260 ??1UFragRoundLinkDataObject@@UAE@XZ
+UFragRoundLinkDataObject::~UFragRoundLinkDataObject()
+{
+    ConditionalDestroy();
+}
+
 // FUNCTION: 0x109A1730 ?InternalConstructor@UFragRoundLinkDataObject@@SAXPAX@Z
 void UFragRoundLinkDataObject::InternalConstructor(void* X)
 {

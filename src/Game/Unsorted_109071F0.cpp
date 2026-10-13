@@ -3,32 +3,7 @@
 
 #include <string.h>
 
-class cString
-{
-public:
-    cString(const char* In);
-
-    void FUN_10907870(int Length, int Flag);
-
-    char* Unknown00;
-};
-
 bool FUN_10907af0(const char* Str, int Max);
-
-// FUNCTION: 0x109081E0 ??0cString@@QAE@PBD@Z
-cString::cString(const char* In)
-{
-    Unknown00 = 0;
-    if (In)
-    {
-        int Length = strlen(In);
-        if (Length)
-        {
-            FUN_10907870(Length, 0);
-            strcpy(Unknown00, In);
-        }
-    }
-}
 
 // FUNCTION: 0x10908230 ?GetBoundedLength@@YAHPBDH@Z
 int GetBoundedLength(const char* Str, int Max)

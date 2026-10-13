@@ -10,6 +10,15 @@ inline void* operator new(unsigned int, EInternal* Mem)
     return Mem;
 }
 
+// FUNCTION: 0x10B12BE0 ??_GUInvenBook_LinkDataObject@@UAEPAXI@Z
+// Compiler-generated: emitted with the class's vtable by 0x10B12C00's definition in this unit.
+
+// FUNCTION: 0x10B12C00 ??1UInvenBook_LinkDataObject@@UAE@XZ
+UInvenBook_LinkDataObject::~UInvenBook_LinkDataObject()
+{
+    ConditionalDestroy();
+}
+
 // FUNCTION: 0x10B12E10 ?InternalConstructor@UInvenBook_LinkDataObject@@SAXPAX@Z
 void UInvenBook_LinkDataObject::InternalConstructor(void* X)
 {

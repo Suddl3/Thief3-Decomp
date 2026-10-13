@@ -1,5 +1,6 @@
 // Game/Unsorted_109401B0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_1091A4F0.h"
 #include "Game/Class_109401B0.h"
 #include "Game/Class_10941570.h"
@@ -56,19 +57,4 @@ void Class_10941570::DrawAll()
 {
     for (int i = 0; i < m_Count; i++)
         m_Items[i].Draw();
-}
-
-// FUNCTION: 0x10941980 ?AddEntry@Class_10941C40@@QAEXFFF@Z
-void Class_10941C40::AddEntry(short A, short B, short C)
-{
-    Class_109418E0* Item = m_Item;
-    Struct_10941980 Value;
-    Value.Unknown00 = A;
-    Value.Unknown02 = B;
-    Value.Unknown04 = C;
-    Class_1091A4F0* Array = &Item->Unknown2C;
-    Item->Unknown06 = 0;
-    int Index = Array->Unknown00;
-    Array->FUN_1091a4f0(Index + 1);
-    Array->Unknown08[Index] = Value;
 }

@@ -289,16 +289,6 @@ void FUN_10b5ac10()
     FUN_10a593a0();
 }
 
-// FUNCTION: 0x10B5AEA0 ?InitDefaults@cFactionPane@@QAEPAV1@XZ
-cFactionPane* cFactionPane::InitDefaults()
-{
-    FUN_10b78780();
-    m_HammerFaction = 0;
-    m_PaganFaction = 0;
-    Unknown00 = DAT_10e82af8;
-    return this;
-}
-
 // FUNCTION: 0x10B5AEC0 ?FUN_10b5aec0@Class_10B5AEC0@@QAEXXZ
 void Class_10B5AEC0::FUN_10b5aec0()
 {

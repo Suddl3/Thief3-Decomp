@@ -10,6 +10,15 @@ inline void* operator new(unsigned int, EInternal* Mem)
     return Mem;
 }
 
+// FUNCTION: 0x10962F10 ??_GAT3SensoryModel@@UAEPAXI@Z
+// Compiler-generated: emitted with the class's vtable by 0x10962F40's definition in this unit.
+
+// FUNCTION: 0x10962F40 ??1AT3SensoryModel@@UAE@XZ
+AT3SensoryModel::~AT3SensoryModel()
+{
+    ConditionalDestroy();
+}
+
 // FUNCTION: 0x10964530 ?InternalConstructor@AT3SensoryModel@@SAXPAX@Z
 void AT3SensoryModel::InternalConstructor(void* X)
 {

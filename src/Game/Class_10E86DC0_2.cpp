@@ -1,5 +1,6 @@
 // Game/Class_10E86DC0_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10B15960.h"
 #include "Game/Class_10B59FA0_Member.h"
 #include "Game/Class_10B64280.h"
@@ -20,8 +21,6 @@ class cTabScreenMainMenu : public Class_10E87B68
 public:
     cTabScreenMainMenu* Construct();
 };
-
-void* GetWindowManager();
 
 class cT3TabbedWindow
 {
@@ -60,13 +59,6 @@ Class_10E86DC0::Class_10E86DC0(int A)
     : Unknown2CC(0), Unknown2D0(0), Unknown2D4(0), Unknown2D8(0), Unknown2DC(0), Unknown2E0(0),
       Unknown2E4(0), Unknown2E8(0), Unknown2EC(0), Unknown2F0(0), Unknown2F4(false), Unknown2FC(A)
 {
-}
-
-// FUNCTION: 0x10B6F870 ?FUN_10b6f870@Class_10B64280@@QAEXXZ
-void Class_10B64280::FUN_10b6f870()
-{
-    FUN_10b744b0();
-    static_cast<Class_10B15960*>(GetWindowManager())->OpenMainMenuWindow(0);
 }
 
 // FUNCTION: 0x10B6F9E0 ?Construct@cTabScreenMainMenu@@QAEPAV1@XZ

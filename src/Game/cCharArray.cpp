@@ -3,6 +3,8 @@
 
 #include "Game/cCharArray.h"
 #include "Game/Class_10905A90_Member.h"
+#include "Game/Class_10B9FC20.h"
+#include "Game/Class_10E8C008.h"
 
 Class_10905A90_Member* GetAllocator();
 
@@ -43,4 +45,16 @@ void cCharArray::Resize(int NewCount)
     }
     GetAllocator()->Virtual9();
     m_Count = NewCount;
+}
+
+// FUNCTION: 0x10B9FBE0 ?Free@cCharArray@@QAEXXZ
+void cCharArray::Free()
+{
+    Resize(0);
+    if (m_Capacity)
+    {
+        GetAllocator()->Virtual5(m_Data);
+        m_Data = 0;
+        m_Capacity = 0;
+    }
 }

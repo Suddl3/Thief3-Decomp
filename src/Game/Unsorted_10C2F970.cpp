@@ -1,5 +1,6 @@
 // Game/Unsorted_10C2F970.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Core/Core.h"
 #include "Game/Class_10C2F970.h"
 #include "Game/Class_10C30640.h"
@@ -9,8 +10,6 @@
 #include "Game/Class_10C66590.h"
 #include "Game/Class_10C7D570.h"
 #include "Game/USkeletalMesh.h"
-
-class ULodMesh;
 
 struct Struct_10C30640;
 
@@ -123,24 +122,6 @@ void cMotionControllerAnim::FUN_10c306b0()
         Unknown50 = 0.0f;
 }
 
-// FUNCTION: 0x10C30700 ?FUN_10c30700@Class_10C30700@@QAEXXZ
-void Class_10C30700::FUN_10c30700()
-{
-    m_Iterating = true;
-    for (int i = 0; i < m_Count; i++)
-        m_Entries[i]->Virtual0();
-    m_Iterating = false;
-}
-
-// FUNCTION: 0x10C30750 ?FUN_10c30750@Class_10C30700@@QAEXHH@Z
-void Class_10C30700::FUN_10c30750(int A, int B)
-{
-    m_Iterating = true;
-    for (int i = 0; i < m_Count; i++)
-        m_Entries[i]->Virtual1(A, B);
-    m_Iterating = false;
-}
-
 // FUNCTION: 0x10C32A70 ?LocomotionCommandQueue@cMotionControllerAnim@@UAE_NPAX@Z
 bool cMotionControllerAnim::LocomotionCommandQueue(void* A)
 {
@@ -148,15 +129,4 @@ bool cMotionControllerAnim::LocomotionCommandQueue(void* A)
         return false;
     FUN_10c32970(A, 0);
     return true;
-}
-
-// FUNCTION: 0x10C32C70 ?Release@Class_10C32C70@@QAEXXZ
-void Class_10C32C70::Release()
-{
-    Reset(0x40);
-    ::operator delete(m_Buckets);
-    m_Count = 0;
-    m_BucketCount = 0;
-    m_Buckets = 0;
-    m_Collisions = 0;
 }

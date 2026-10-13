@@ -10,8 +10,6 @@
 #include "Game/Class_10C1B0F0.h"
 #include "Game/Class_10BFD210.h"
 
-extern float DAT_10eafbdc;
-
 extern float DAT_10e49684;
 
 struct Class_10BFCF80_Unknown00
@@ -49,18 +47,4 @@ float FUN_10bfcf80(Class_10C7D570* Obj, float Key)
         }
     }
     return DAT_10e49684;
-}
-
-// FUNCTION: 0x10BFD0A0 ?FUN_10bfd0a0@Class_10BFD210@@QAEXPAVClass_10C1B0F0@@M@Z
-void Class_10BFD210::FUN_10bfd0a0(Class_10C1B0F0* A, float B)
-{
-    float V = A->Virtual6(0);
-    if (FUN_10bfc3a0() + V > B)
-    {
-        B = B - FUN_10bfc3a0();
-        if (B > DAT_10eafbdc)
-            A->SetClampedValue(B);
-        else
-            A->SetClampedValue(0.0f);
-    }
 }

@@ -1,13 +1,12 @@
 // Game/Unsorted_10957D30.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10958A10.h"
 #include "Game/Class_1095A1A0.h"
 #include "Game/Class_1095A490.h"
 #include "Game/Class_1095A760.h"
 #include "Game/Class_1095A7A0.h"
-
-Class_10905A90_Member* GetAllocator();
 
 void* operator new(unsigned int A, const int& B, int C, int D, int E, int F);
 
@@ -57,18 +56,6 @@ Class_1095A490* Class_1095A490::SetMatrix(float A, float B, float C, float D,
     m_Matrix[3][2] = O;
     m_Matrix[3][3] = P;
     return this;
-}
-
-// FUNCTION: 0x1095A760 ?Clear@Class_1095A760@@QAEXXZ
-void Class_1095A760::Clear()
-{
-    SetCount(0);
-    if (m_CapacityBytes)
-    {
-        GetAllocator()->Virtual5(m_Elements);
-        m_Elements = 0;
-        m_CapacityBytes = 0;
-    }
 }
 
 // FUNCTION: 0x1095A7A0 ??0Class_1095A7A0@@QAE@XZ

@@ -1,5 +1,6 @@
 // Game/Unsorted_10C3D570.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_109BBBA0.h"
 #include "Game/cLocomotionCommand.h"
 
@@ -67,15 +68,4 @@ void Class_10E9B370::Stop()
         m_Handle = -1;
     }
     m_bActive = false;
-}
-
-// FUNCTION: 0x10C3D890 ?Stop@cLocomotionCommand@@UAEXXZ
-void cLocomotionCommand::Stop()
-{
-    if (m_Handle >= 0)
-    {
-        Unknown70->FUN_109bbba0(m_Handle);
-        m_Handle = -1;
-    }
-    m_Active = false;
 }

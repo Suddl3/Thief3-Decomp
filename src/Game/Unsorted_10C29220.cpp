@@ -1,5 +1,6 @@
 // Game/Unsorted_10C29220.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/cString.h"
 #include "Game/Class_10B26930.h"
 #include "Game/Class_10C38430.h"
@@ -79,8 +80,6 @@ public:
     char Pad158[0x8];
     unsigned char Field160;
 };
-
-extern const char DAT_10e9adc8[];
 
 void FUN_10c36a20();
 
@@ -213,12 +212,6 @@ void cMotionControllerAnim::SetRotation(Struct_10C35670* Value)
 void cMotionControllerAnim::InvalidateInfo()
 {
     Field9f = 0;
-}
-
-// FUNCTION: 0x10C36860 ?GetControllerName@MC_Turn@@QAE?AVcString@@XZ
-cString MC_Turn::GetControllerName()
-{
-    return cString(DAT_10e9adc8);
 }
 
 // FUNCTION: 0x10C36F30 ?FUN_10c36f30@@YAXXZ

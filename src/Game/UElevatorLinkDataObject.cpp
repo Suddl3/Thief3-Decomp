@@ -10,6 +10,15 @@ inline void* operator new(unsigned int, EInternal* Mem)
     return Mem;
 }
 
+// FUNCTION: 0x1099FC60 ??_GUElevatorLinkDataObject@@UAEPAXI@Z
+// Compiler-generated: emitted with the class's vtable by 0x1099FC80's definition in this unit.
+
+// FUNCTION: 0x1099FC80 ??1UElevatorLinkDataObject@@UAE@XZ
+UElevatorLinkDataObject::~UElevatorLinkDataObject()
+{
+    ConditionalDestroy();
+}
+
 // FUNCTION: 0x109A16A0 ?InternalConstructor@UElevatorLinkDataObject@@SAXPAX@Z
 void UElevatorLinkDataObject::InternalConstructor(void* X)
 {

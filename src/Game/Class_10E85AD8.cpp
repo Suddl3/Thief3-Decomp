@@ -1,6 +1,8 @@
 // Game/Class_10E85AD8.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/cIntArray.h"
+#include "Game/Class_10905A90_Member.h"
 
 class Class_10E67FD0
 {
@@ -63,4 +65,9 @@ int Class_10E85AD8::FindCurrentIndex()
         }
     }
     return i;
+}
+
+// FUNCTION: 0x10B698B0 ??1Class_10E85AD8@@UAE@XZ
+Class_10E85AD8::~Class_10E85AD8()
+{
 }

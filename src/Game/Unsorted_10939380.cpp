@@ -1,5 +1,6 @@
 // Game/Unsorted_10939380.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_1090A780.h"
 #include "Game/Class_10939380.h"
@@ -50,15 +51,4 @@ int Class_1093BCB0::FUN_1093bcb0(Struct_1093BCB0* Info)
     if (FUN_1093b260(Info->Unknown04, &Info))
         return Info->Unknown54;
     return -1;
-}
-
-// FUNCTION: 0x1093C750 ?Free@Class_1093C750@@QAEXXZ
-void Class_1093C750::Free()
-{
-    Reset(0x40);
-    ::operator delete(m_Buckets);
-    m_Count = 0;
-    m_BucketCount = 0;
-    m_Buckets = 0;
-    m_Collisions = 0;
 }

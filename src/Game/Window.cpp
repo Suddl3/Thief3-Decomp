@@ -1,5 +1,6 @@
 // Game/Window.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Window.h"
 
 typedef unsigned long DWORD;
@@ -14,6 +15,12 @@ BOOL Window::HasFlag(DWORD Flag)
 void Window::SetFlag(DWORD Flag)
 {
     Flags |= Flag;
+}
+
+// FUNCTION: 0x109E3860 ?ClearFlag@Window@@UAEXK@Z
+void Window::ClearFlag(DWORD Flag)
+{
+    Flags &= ~Flag;
 }
 
 // FUNCTION: 0x109E38E0 ?GetParent@Window@@UAEPAV1@XZ

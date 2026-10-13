@@ -1,23 +1,12 @@
 // Game/Unsorted_109523D0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/cD3DStateCache.h"
 #include "Game/Class_109523D0.h"
 #include "Game/Class_10952640.h"
 #include "Game/Info_10952690.h"
 
 extern cD3DStateCache* DAT_10f31be0;
-
-// FUNCTION: 0x109523D0 ?HasAllBits@Class_109523D0@@QAE_NH@Z
-bool Class_109523D0::HasAllBits(int Mask)
-{
-    for (int i = 0; i < 9; i++)
-    {
-        int Bit = 1 << i;
-        if ((Mask & Bit) && !(m_Flags & Bit))
-            return false;
-    }
-    return true;
-}
 
 // FUNCTION: 0x10952640 ?Apply@Class_10952640@@QAEXXZ
 void Class_10952640::Apply()

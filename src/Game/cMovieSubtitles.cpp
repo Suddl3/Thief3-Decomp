@@ -1,5 +1,6 @@
 // Game/cMovieSubtitles.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10C3FF10.h"
 #include "Game/Struct_10B315F0.h"
 
@@ -71,3 +72,14 @@ void cMovieSubtitles::Stop()
         Unknown124 = 0;
     }
 }
+
+// FUNCTION: 0x10B315F0 ??0cMovieSubtitles@@QAE@XZ
+cMovieSubtitles::cMovieSubtitles()
+    : Unknown124(0), Unknown128(0), Unknown130(false), Unknown131(false), Unknown132(false), Unknown134(0),
+      Unknown138(true), Unknown13C(0), Unknown140(0), Unknown144(true)
+{
+    Unknown0E8 = 6;
+}
+
+// FUNCTION: 0x10B31660 ??_GcMovieSubtitles@@UAEPAXI@Z
+// Compiler-generated: emitted with the class's vtable by 0x10B315F0's definition in this unit.

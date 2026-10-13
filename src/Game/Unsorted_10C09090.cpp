@@ -1,5 +1,6 @@
 // Game/Unsorted_10C09090.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_1090A780.h"
 #include "Game/Class_10C13100.h"
 #include "Game/Class_10C13130.h"
@@ -14,10 +15,6 @@
 extern Class_1090A780 DAT_10ff7060;
 
 extern Class_1090A780 DAT_10ff7064;
-
-extern void* DAT_10e98c80[];
-
-extern void* DAT_10e98c84[];
 
 double GetTimeSeconds();
 
@@ -45,22 +42,10 @@ int FUN_10c13cc0()
     return 0x27;
 }
 
-// FUNCTION: 0x10C15BB0 ?ResetVTable@Class_10E98C80@@QAEXXZ
-void Class_10E98C80::ResetVTable()
-{
-    Field00 = DAT_10e98c80;
-}
-
 // FUNCTION: 0x10C15D50 ?FUN_10c15d50@Class_10C15D50@@QAEPAXXZ
 void* Class_10C15D50::FUN_10c15d50()
 {
     return Field401c;
-}
-
-// FUNCTION: 0x10C15DB0 ?ResetVTable@Class_10E98C84@@QAEXXZ
-void Class_10E98C84::ResetVTable()
-{
-    Field00 = (void*)DAT_10e98c84;
 }
 
 // FUNCTION: 0x10C16220 ?LookupValue@Class_10C16220@@QAEHH@Z

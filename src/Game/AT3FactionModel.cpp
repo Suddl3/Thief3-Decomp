@@ -10,6 +10,15 @@ inline void* operator new(unsigned int, EInternal* Mem)
     return Mem;
 }
 
+// FUNCTION: 0x10962DD0 ??_GAT3FactionModel@@UAEPAXI@Z
+// Compiler-generated: emitted with the class's vtable by 0x10962E00's definition in this unit.
+
+// FUNCTION: 0x10962E00 ??1AT3FactionModel@@UAE@XZ
+AT3FactionModel::~AT3FactionModel()
+{
+    ConditionalDestroy();
+}
+
 // FUNCTION: 0x10964510 ?InternalConstructor@AT3FactionModel@@SAXPAX@Z
 void AT3FactionModel::InternalConstructor(void* X)
 {

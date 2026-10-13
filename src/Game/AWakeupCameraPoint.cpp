@@ -10,6 +10,15 @@ inline void* operator new(unsigned int, EInternal* Mem)
     return Mem;
 }
 
+// FUNCTION: 0x10AB3D80 ??_GAWakeupCameraPoint@@UAEPAXI@Z
+// Compiler-generated: emitted with the class's vtable by 0x10AB3DB0's definition in this unit.
+
+// FUNCTION: 0x10AB3DB0 ??1AWakeupCameraPoint@@UAE@XZ
+AWakeupCameraPoint::~AWakeupCameraPoint()
+{
+    ConditionalDestroy();
+}
+
 // FUNCTION: 0x10AB4D20 ?InternalConstructor@AWakeupCameraPoint@@SAXPAX@Z
 void AWakeupCameraPoint::InternalConstructor(void* X)
 {

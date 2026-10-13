@@ -26,13 +26,3 @@ int Class_10ACF3A0::FUN_10acf3a0(int A)
     GetUObjectLinkManager()->Virtual4(0, A, 0x281b9d0, &Items);
     return (int)((Class_10978090*)Items.Data[0])->FUN_10978090();
 }
-
-// FUNCTION: 0x10ACF690 ?FUN_10acf690@Class_10ACF9A0@@QAEPAVClass_10B82390@@H@Z
-Class_10B82390* Class_10ACF9A0::FUN_10acf690(int A)
-{
-    cIntArray Items;
-    GetUObjectLinkManager()->Virtual4(A, 0, 0x64d9226, &Items);
-    if (Items.Count)
-        return (Class_10B82390*)((Class_10AAB5C0*)Items.Data[0])->GetUnknown08();
-    return 0;
-}
