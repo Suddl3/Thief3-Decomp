@@ -303,6 +303,44 @@ at 100% is 7,260 of 12,252 functions, 18.6% of its bytes (from 6,329 and
 13.3%). 71 accepted functions still clash with their units (an overflow unit
 does not take them either), and the 160-to-319 band has 283 functions left.
 
+### Batch y1: Haiku through the t3-match workflow, 20 then 64 workers (2026-10-12)
+
+After the naming waves, the same day: `t3-match.js`, Haiku at medium effort
+on functions of 80 to 159 bytes (three workers in four, `N=6 COUNT=1
+CAP=10`) and 160 to 319 (`--by-class N=4 COUNT=1 CAP=10`), first as two runs
+of 10 lanes, then with three more runs beside them (16, 16 and 12 lanes): 64
+workers, every one holding a claim. Nothing capped the width.
+
+| | Workers | Matched | Deferred | Tokens |
+|---|---|---|---|---|
+| 80 to 159 bytes | 177 | 459 | 398 | |
+| 160 to 319 bytes | 93 | 82 | 145 | |
+| Batch | 270 | 541 | 543 | 70.7M, about 131K a match |
+
+At 20 workers the batch accepted 138 matches an hour, at 64 it accepted 543
+in its first half hour, the easy end of each band; both bands were empty
+110 minutes after the start. Matches came on the first attempt 280 times,
+the second 152. Deferrals: name-conflict 167, tiebreak 141, codegen 77,
+layout 47, eh 38.
+
+The batch ended by closing the queue (`build/agent/drain`: next.py claim
+then hands out nothing), so each worker finished the function it held and
+its lanes found their bands empty; no claim was cut off. The checkpoint, in
+order: sweep, the two review greps (no hack patterns; casts between
+placeholder classes and 19 constructors written as methods, as before),
+`stlscan.py` (its 20 hits were all excluded already), `integrate_loop.sh`,
+`fixnames.py aliases` (92 of 129 name-only deferrals accepted), `dtors.py`
+(4), integration again, `names.py sync`, `classify.py write`, the report,
+then the structure pass. One source declared the C runtime's `tolower` as
+`_tolower` under `extern "C"`, which renamed the runtime's symbol and cost a
+neighbour its 100%: compare the report after every integration.
+
+After the batch, `src/` holds 7,508 functions (from 6,878) in 4,184 units,
+and game code at 100% is 7,983 of 12,370 functions, 22.27% of its bytes
+(from 7,260 and 18.60%). 206 accepted functions wait (most clash with their
+units), 1,957 are deferred, and the queue holds 2,005 functions, all of 320
+bytes or more.
+
 ## Running a swarm as a workflow
 
 [.claude/workflows/t3-swarm.js](../.claude/workflows/t3-swarm.js) runs one

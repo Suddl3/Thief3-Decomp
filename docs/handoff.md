@@ -48,8 +48,8 @@ decompilation** worked mostly by Claude agents under the strict gate in
   unclassified); `include/Core/Core.h` keeps the declarations the game code
   compiles against. Matching runs as the [agent
   workflow](agent-workflow.md): a swarm of up to 20 sub-agents at a time
-  (Haiku or Sonnet on functions under 160 bytes, Opus on bigger ones), from the one-file protocol `tools/agent/worker.md`. `src/Game` holds 6,878
-  matched functions in 3,642 units, one per auto unit of the split
+  (Haiku or Sonnet on functions under 160 bytes, Opus on bigger ones), from the one-file protocol `tools/agent/worker.md`. `src/Game` holds 7,508
+  matched functions in 4,184 units, one per auto unit of the split
   (`Unsorted_<start>.cpp`, chunks of up to 64 KB; `_2`, `_3`, ... hold
   functions whose classes clash with their unit's); 1,484 of them are named
   after the class most of their code is. 3,361 classes are declared once, in
@@ -57,7 +57,7 @@ decompilation** worked mostly by Claude agents under the strict gate in
   class are folded (`config/PC_20040610/classmap.txt`; agent-workflow.md,
   "Class structure"). decomp.dev shows the
   committed report `progress/PC_20040610/report.json`, whose headline is the
-  game code (7,260 of 12,252 functions at 100%, 18.6% of its bytes; hidden from decomp.dev's list
+  game code (7,983 of 12,370 functions at 100%, 22.27% of its bytes; hidden from decomp.dev's list
   below 0.5% matched): regenerate it after integrating, see next step 2.
 - The 266 native classes are in `config/PC_20040610/classes.txt` (size,
   super class, flags, vtable; `tools/classify.py write`), and the 64 classes
@@ -232,7 +232,7 @@ Later the same day, played by the user:
      unit's, in overflow units too); the renames and models its workers asked
      for are in the lead's local `build/agent/lead-backlog.md`.
    - Names ([agent-workflow.md](agent-workflow.md), "Readable code"): the
-     naming waves of 2026-10-12 gave half of the 6,878 matched functions a
+     naming waves of 2026-10-12 gave half of the 6,878 functions matched then a
      real name (3,461), 203 classes and 1,461 fields theirs, each with its
      evidence in `config/PC_20040610/names.txt`; 1,641 functions (23.9%) have
      both a name and a named class. After an integration, `names.py sync`
@@ -243,6 +243,11 @@ Later the same day, played by the user:
      on fields nobody named, and some 1,560 stand-in classes of one or two
      methods. The Xbox development builds' evidence (`xbox.py`) needs a local
      copy of the builds.
+   - Batch y1 (2026-10-12, agent-workflow.md): 64 Haiku workers emptied the
+     80-to-319 bands; the queue's 2,005 functions are all of 320 bytes or
+     more, where Haiku is untested, and 1,957 are deferred (name conflicts
+     first: `fixnames.py aliases`, then `retry.py`). `build/agent/drain`
+     closes the queue so a batch ends without cutting a worker off.
    - Batch w11 (2026-10-10, agent-workflow.md) ended with 1,506 deferrals
      and 71 accepted functions `integrate.py` cannot place. What would
      unblock most of the rest, in order: one class split over placeholders
