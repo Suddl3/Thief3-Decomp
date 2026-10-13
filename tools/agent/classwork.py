@@ -139,12 +139,19 @@ def same(p: Project, source: str, work: Path, first: Optional[Path] = None) -> O
     old, new = headers.code_of(coff.Coff.load(ref)), headers.code_of(coff.Coff.load(obj))
     for m in FUNCTION_MARKER.finditer(text):
         name, a = m.group(2).strip(), int(m.group(1), 16)
-        if name not in old:
-            continue
+        if name not in old:  # an alias of the address's name: tools/cc.py gives the object that one
+            sym = p.by_addr.get(a)
+            name = sym.name if sym is not None and sym.address == a else name
+            if name not in old:
+                continue
         if name not in new:
             return f"{fmt_addr(a)} ({name}) is no longer emitted: its name or signature changed"
         if new[name] != old[name]:
             return f"{fmt_addr(a)} ({name}) compiles to other code"
+        for extra in old:  # its EH tables and funclets: a member that gained or lost a destructor shows here
+            if f"${name}" in extra and (extra not in new or new[extra] != old[extra]):
+                return (f"{fmt_addr(a)} ({name}): its exception tables changed ({extra.split('$')[0].strip('_')}): "
+                        f"a member's type now has, or no longer has, a constructor or destructor")
     return None
 
 

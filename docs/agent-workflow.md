@@ -606,6 +606,82 @@ a named `VTable` field. One of those notes, a method `Class_10BFBD70.h`
 lacked, moved 46 units on the next `headers.py build`: fix the merge in the
 tools first, and give workers only what the tools cannot settle.
 
+## One declaration per class
+
+The matched code is also meant to read as the game's source did: a class
+declared once, its functions in one file. Until 2026-10-12 a unit declared the
+classes it used itself, each copy with the members its functions needed and
+rows of `virtual void Virtual<N>();` up to the slot it called (58,880 such
+lines), and a class's functions lay in `<Class>_2.cpp` to `_<N>.cpp` wherever
+two copies clashed. Four tools undo that, each gated on unchanged code:
+
+1. **`tools/agent/vslots.py`: the whole vtable of every native class.**
+   `classes.txt` gives each native class its super and its table; slot k
+   belongs to the topmost ancestor whose table reaches it. A slot's signature
+   is that of a function `src/` defines there, else what the units calling it
+   declared, else a caller's guessed name; `config/<version>/slots.txt` keeps
+   what was found (`Class slot declaration`), so a declaration units compile
+   against does not change when the copy that told moves away. Edit a line
+   there to rename a slot or type its parameters. `vslots.py names` gives each
+   slot's function the declared name in `symbols.txt` (an alias; a function
+   that stores a vtable has every slot compared by name).
+   `tools/assets/t3classes.py headers` writes the slots into the generated
+   headers, types the members `config/<version>/natives.txt` lists (a
+   `var native int pad` that is really an object with a destructor), and
+   includes `include/<Package>/<Class>.h` inside the class: its member
+   functions, kept by hand, as Unreal's own headers include `AActor.h`.
+2. **`tools/agent/adopt.py apply [--native]`: units onto the headers, where
+   that takes no judgement.** A copy's nth virtual function is the slot its
+   own layout gives it (the copy counted from its base as the headers were at
+   `--rev`), a field is the header's field at its offset (measured by MSVC).
+   Members whose names differ are renamed to tokens in the copy, the compiler
+   reports each use, the tokens take the header's names, the copy goes, and
+   every function is compared with the target. A class of `include/Game/`
+   that added virtual functions to a native class moves to the base's real
+   length. A unit that fails stays as it was.
+3. **`tools/agent/regroup.py apply`: one unit per class.** A class's
+   functions move into `<Class>.cpp` from one source unit at a time, with the
+   declarations they use; the move is kept when every function of both units
+   compiles to the code it had in the last build (in one file MSVC may inline
+   a callee it called before). `splits.txt` follows. A class known only by
+   one function's address stays in its address chunk's unit.
+4. **Class workers (`tools/agent/classer.md`, `tools/agent/classwork.py`,
+   the `t3-classes` workflow)** take the copies that disagree with their
+   header: a field typed otherwise, a method with other parameters, a member
+   the header lacks. A worker claims a class (`next`; no two workers hold a
+   unit in common), sees each copy against the header member by member
+   (`diff`, offsets by MSVC), settles the header, removes the copies, and
+   `check` holds it to unchanged code in every unit that had a copy or
+   includes the header; `giveup` puts the files back. Native classes are not
+   handed out: their slots and names are the lead's.
+
+Order: `vslots.py pin`, `t3classes.py headers`, `vslots.py names`,
+`configure.py`, `adopt.py apply`, build and compare, class workers, build and
+compare, `regroup.py apply`, build and compare; commit after each comparison
+that loses nothing.
+
+First run (2026-10-12): the generated headers took 421 slots past UObject's
+twenty (UObject's own table has 31) and 118 member files; `adopt.py` moved
+249 units off 212 copies of native classes and 162 more off copies of the
+game's classes; `regroup.py` moved 937 functions and emptied 504 units (4,184
+units became 3,996). A pilot of six Haiku class workers settled one class of
+eleven copies and gave three up with the reason (546K tokens). Lessons:
+
+- A copy that follows `DECLARE_CLASS(...)` loses its first virtual to a
+  parser that takes the macro (no `;`) and the next member as one: every later
+  slot is then one short. `vslots.parse_class` ends the macro first.
+- A table can be cut short by an instruction that names its middle; a class
+  has at least its super's slots.
+- Names in `symbols.txt` reach the compiler through `aliases.json`: run
+  `configure.py` after `vslots.py names`, before comparing anything.
+- `adopt.py` adds the member functions a copy declares to the class's header
+  when the header lacks them. That is not always harmless: seven functions in
+  other units changed, and the headers had to be put back. Compare the whole
+  report after it, and revert the headers of whatever is lost.
+- 3,069 copies of 899 classes disagreed with their headers after the
+  mechanical passes, and 1,973 moves waited on them: the remaining work is the
+  class workers', then `regroup.py` again.
+
 ## Readable code
 
 A match proves that a function compiles to the game's code, not that anyone

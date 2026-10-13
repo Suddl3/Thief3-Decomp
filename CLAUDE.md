@@ -33,6 +33,7 @@ python tools/agent/clusters.py list|stamp; sweep.py "<prefix>-*"                
 .venv/Scripts/python tools/agent/classinfo.py <Class>|--units <units>; names.py apply <plan> [--dry-run]|list|sync; fields.py apply <plan>   # naming pass (tools/agent/namer.md)
 .venv/Scripts/python tools/agent/xbox.py pair <T3Opt.xbe> [<T3Debug.xbe>]|show <addr|Class_X>|classes   # Xbox builds' evidence for names
 .venv/Scripts/python tools/assets/t3classes.py check|show <class>|headers          # class layouts from the scripts (include/<Package>/)
+.venv/Scripts/python tools/agent/vslots.py show <Class>|pin|names; adopt.py apply [--native]; regroup.py plan|apply; classwork.py list|diff <Class>   # one declaration and one unit per class (docs/agent-workflow.md)
 .venv/Scripts/python tools/agent/retry.py; rename.py --registered; fixnames.py spec <plan>; dtors.py [native|matched]; classreg.py; vtables.py spec <plan>; arity.py   # naming passes, deleting destructors, class registrations, vtable slots, arities (docs/agent-workflow.md)
 python tools/assets/t3pack.py roundtrip|apply|install|restore                    # write edited maps back
 cd launcher && yarn install && yarn tauri dev                                      # the launcher (docs/launcher.md)
