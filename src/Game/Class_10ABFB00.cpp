@@ -2,10 +2,13 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Game/Class_10ABFB00.h"
+#include "Game/Class_10ABFB00_Member.h"
 
 extern float DAT_10eafbdc;
 
 bool __stdcall FUN_10abf300(int A, int B);
+
+extern float DAT_10e49684;
 
 // FUNCTION: 0x10ABFA30 ?Update@Class_10ABFB00@@QAEXHHM@Z
 void Class_10ABFB00::Update(int A, int B, float C)
@@ -44,4 +47,31 @@ void Class_10ABFB00::Update(int A, int B, float C)
             FUN_10abf7c0(A);
         }
     }
+}
+
+// FUNCTION: 0x10ABFB00 ?SetState@Class_10ABFB00@@QAEXH_N@Z
+void Class_10ABFB00::SetState(int A, bool State)
+{
+    float Level = State ? 1.0f : 0.0f;
+    float* Value = &m_Level;
+    *Value = Level;
+    m_Interpolator.Virtual0(Value, Value, 0);
+    m_State = State;
+    FUN_10abf660(A);
+    FUN_10abf7c0(A);
+}
+
+// FUNCTION: 0x10ABFB50 ?FUN_10abfb50@Class_10ABFB00@@QAEXHH@Z
+void Class_10ABFB00::FUN_10abfb50(int A, int B)
+{
+    bool State = FUN_10abf300(A, B);
+    float Level = State ? DAT_10e49684 : DAT_10eafbdc;
+    float* Value = &m_Level;
+    *Value = Level;
+    m_State = State;
+    Class_10ABFB00_Member* Member = &m_Interpolator;
+    Member->Virtual0(Value, Value, 0);
+    m_State = State;
+    FUN_10abf660(A);
+    FUN_10abf7c0(A);
 }

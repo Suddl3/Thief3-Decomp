@@ -9,36 +9,6 @@
 #include "Game/Class_10BFD210.h"
 #include "Game/Class_10BFD710.h"
 
-class Class_10BFD710_Unknown50;
-
-class Class_10C1A960;
-
-float GetFrameDeltaTime();
-
-extern float DAT_10eafbdc;
-
-class Class_10C1A960
-{
-public:
-    void FUN_10c1a960(Class_10BFD710_Unknown50* A);
-};
-
-// FUNCTION: 0x10BFD710 ?FUN_10bfd710@Class_10BFD710@@QAEXXZ
-void Class_10BFD710::FUN_10bfd710()
-{
-    if (GetFrameDeltaTime() != 0.0 && Unknown4C == DAT_10eafbdc)
-    {
-        FUN_10bfce60();
-        FUN_10bfc3a0();
-        Class_10BFD710_Unknown50* Obj = Unknown50;
-        if (Obj && Unknown04->HasTimedOut())
-        {
-            for (int i = 0; i < Unknown08.Count; i++)
-                ((Class_10C1A960**)Unknown08.Data)[i]->FUN_10c1a960(Obj);
-        }
-    }
-}
-
 // FUNCTION: 0x10BFE6B0 ?RemoveRange@Class_10BFE6B0@@QAEXHH@Z
 void Class_10BFE6B0::RemoveRange(int Index, int Count)
 {

@@ -22,12 +22,6 @@ void UT3GameEngine::Virtual31(int A)
         DAT_10f3a3d8->Unknown0E8->FUN_10abb6b0(A);
 }
 
-// FUNCTION: 0x10B248D0 ?Register@Class_10E7A9C0@@UAEXPAVClass_10B152C0@@@Z
-void Class_10E7A9C0::Register(Class_10B152C0* p1)
-{
-    p1->AddToLists(0xef, this);
-}
-
 // FUNCTION: 0x10B24D00 ?FUN_10b24d00@Class_10B24D00@@QAEXHE@Z
 void Class_10B24D00::FUN_10b24d00(int p1, unsigned char p2)
 {

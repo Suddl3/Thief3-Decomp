@@ -13,6 +13,29 @@ void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
 unsigned int HashBytes(const void* Data, int Length);
 
+// FUNCTION: 0x1090F080 ?Insert@Class_1090F080@@QAEIABVcString@@ABH@Z
+unsigned int Class_1090F080::Insert(const cString& Key, const int& Value)
+{
+    if (!m_NoResize && m_Collisions > m_Size * 0.2)
+        Rehash(m_Size * 2);
+    Class_1090F080_Node* Node = new(0, 0, 0, 0, 0) Class_1090F080_Node;
+    Node->Key = Key;
+    Node->Value = Value;
+    unsigned int Index;
+    {
+        const void* Data;
+        int Length;
+        m_KeyTraits.Virtual0(Key, &Data, &Length);
+        Index = HashBytes(Data, Length) & ((1 << m_Bits) - 1);
+    }
+    if (m_Table[Index])
+        m_Collisions++;
+    Node->Next = m_Table[Index];
+    m_Table[Index] = Node;
+    m_Count++;
+    return Index;
+}
+
 // FUNCTION: 0x1090F1E0 ?Rehash@Class_1090F080@@QAEXH@Z
 void Class_1090F080::Rehash(int NewSize)
 {

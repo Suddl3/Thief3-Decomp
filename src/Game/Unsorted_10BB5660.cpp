@@ -20,11 +20,3 @@ Class_10BB48E0* FUN_10bb5660()
         FUN_10bb55a0(DAT_10f35dec->UnknownA4);
     return DAT_10ff6694;
 }
-
-// FUNCTION: 0x10BB74E0 ??0Class_10E9092C@@QAE@PAX@Z
-Class_10E9092C::Class_10E9092C(void* p1)
-{
-    Unknown04 = 0;
-    Unknown08 = 0;
-    Unknown0C = (Class_10C7D570*)p1;
-}

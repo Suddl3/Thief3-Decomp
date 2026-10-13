@@ -63,14 +63,3 @@ void CadenceFactory::FUN_10c4a030()
     Unknown10.Virtual6();
     Unknown60.Reset(0x40);
 }
-
-// FUNCTION: 0x10C4A150 ?Clear@Class_10C4A150@@QAEXXZ
-void Class_10C4A150::Clear()
-{
-    Reset(0x40);
-    ::operator delete(m_Buckets);
-    m_Count = 0;
-    m_BucketCount = 0;
-    m_Buckets = 0;
-    m_Collisions = 0;
-}

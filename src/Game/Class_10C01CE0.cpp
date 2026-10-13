@@ -3,6 +3,10 @@
 
 #include "Game/cIntArray.h"
 #include "Game/Class_10C01CE0.h"
+#include "Game/cString.h"
+#include "Game/Class_1090A780.h"
+#include "Game/Class_10C01990.h"
+#include "Game/Class_10E97B00.h"
 
 class Class_10C01C10_Unknown08_Unknown08
 {
@@ -71,4 +75,11 @@ void Class_10C01CE0::RemoveEntry(int A)
         RemoveAt(A);
         delete Entry;
     }
+}
+
+// FUNCTION: 0x10C01CE0 ?RemoveAll@Class_10C01CE0@@QAEXXZ
+void Class_10C01CE0::RemoveAll()
+{
+    while (Count > 0)
+        RemoveEntry(0);
 }

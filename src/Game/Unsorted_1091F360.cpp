@@ -1,5 +1,6 @@
 // Game/Unsorted_1091F360.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_109241E0.h"
 #include "Game/Class_1094D740.h"
 #include "Game/Class_10E49A0C.h"
@@ -20,12 +21,6 @@ public:
 };
 
 extern cD3DStateCache* DAT_10f31be0;
-
-// FUNCTION: 0x1091F360 ?FUN_1091f360@Class_10E49A0C@@UAEXHH@Z
-void Class_10E49A0C::FUN_1091f360(int A, int B)
-{
-    Virtual2(A, B, &B);
-}
 
 // FUNCTION: 0x109241E0 ?SetTexture@Class_109241E0@@QAEXKPAVIDirect3DBaseTexture8@@@Z
 void Class_109241E0::SetTexture(unsigned long Stage, IDirect3DBaseTexture8* Texture)

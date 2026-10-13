@@ -61,17 +61,11 @@ extern void* DAT_10e6cbec;
 
 extern void* DAT_10e6cbf8;
 
-extern void* DAT_10e6cc64;
-
 extern void* DAT_10e6cc70;
 
 extern void* DAT_10e6cc98[];
 
-extern void* DAT_10e6cca4[];
-
 extern void* DAT_10e6ccb0[];
-
-extern void* DAT_10e6ccd8[];
 
 extern void* DAT_10e6cd40[];
 
@@ -84,8 +78,6 @@ extern void* DAT_10e6cddc[];
 extern void* DAT_10e6cde8[];
 
 extern void* DAT_10e6cdf4[];
-
-extern void* DAT_10e6ce1c[];
 
 extern void* DAT_10e6ce94[];
 
@@ -216,13 +208,6 @@ Class_10E6CBF8* Class_10E6CBF8::Construct()
     return this;
 }
 
-// FUNCTION: 0x10A93350 ?Construct@Class_10E6CC64@@QAEPAV1@XZ
-Class_10E6CC64* Class_10E6CC64::Construct()
-{
-    *(void**)this = &DAT_10e6cc64;
-    return this;
-}
-
 // FUNCTION: 0x10A93360 ?FUN_10a93360@@YAIXZ
 unsigned int FUN_10a93360()
 {
@@ -267,13 +252,6 @@ unsigned int FUN_10a93cf0()
     return 0x66;
 }
 
-// FUNCTION: 0x10A93D40 ?Construct@Class_10E6CCA4@@QAEPAV1@XZ
-Class_10E6CCA4* Class_10E6CCA4::Construct()
-{
-    *(void***)this = DAT_10e6cca4;
-    return this;
-}
-
 // FUNCTION: 0x10A93D50 ?FUN_10a93d50@@YAIXZ
 unsigned int FUN_10a93d50()
 {
@@ -291,13 +269,6 @@ Class_10E6CCB0* Class_10E6CCB0::Construct()
 unsigned int FUN_10a93dc0()
 {
     return 0x68;
-}
-
-// FUNCTION: 0x10A93E30 ?Construct@Class_10E6CCD8@@QAEPAV1@XZ
-Class_10E6CCD8* Class_10E6CCD8::Construct()
-{
-    *(void**)this = DAT_10e6ccd8;
-    return this;
 }
 
 // FUNCTION: 0x10A943D0 ?Construct@Class_10E6CD40@@QAEPAV1@XZ
@@ -364,13 +335,6 @@ Class_10E6CDF4* Class_10E6CDF4::Construct()
 int __cdecl FUN_10a94ca0()
 {
     return 0x6e;
-}
-
-// FUNCTION: 0x10A95040 ?Construct@Class_10E6CE1C@@QAEPAV1@XZ
-Class_10E6CE1C* Class_10E6CE1C::Construct()
-{
-    *(void**)this = DAT_10e6ce1c;
-    return this;
 }
 
 // FUNCTION: 0x10A95970 ?FUN_10a95970@@YAIXZ

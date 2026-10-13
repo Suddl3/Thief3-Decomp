@@ -9,6 +9,12 @@
 #include "Game/Class_10A250D0.h"
 #include "Game/Class_10A250D0_Node.h"
 
+struct Struct_10A4E1D0
+{
+    int Unknown00;
+    float Unknown04;
+};
+
 // FUNCTION: 0x10A24580 ?Free@Class_10A243F0@@QAEXXZ
 void Class_10A243F0::Free()
 {
@@ -19,4 +25,21 @@ void Class_10A243F0::Free()
         m_Buffer = 0;
         m_BufferBytes = 0;
     }
+}
+
+// FUNCTION: 0x10A4E1D0 ?FUN_10a4e1d0@Class_10A243F0@@QAEHPAUStruct_10A4E1D0@@@Z
+int Class_10A243F0::FUN_10a4e1d0(Struct_10A4E1D0* A)
+{
+    int Count = Unknown00;
+    for (int i = 0; i < Count; i++)
+    {
+        Struct_10A4E1D0* E = &((Struct_10A4E1D0*)m_Buffer)[i];
+        if (A->Unknown00 == E->Unknown00 && A->Unknown04 == E->Unknown04)
+            return i;
+    }
+    Resize(Count + 1);
+    Struct_10A4E1D0* E = &((Struct_10A4E1D0*)m_Buffer)[Count];
+    E->Unknown00 = A->Unknown00;
+    E->Unknown04 = A->Unknown04;
+    return Count;
 }

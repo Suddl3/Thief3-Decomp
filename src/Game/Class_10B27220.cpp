@@ -6,6 +6,9 @@
 #include "Game/Class_10B27090.h"
 #include "Game/Class_10B17210.h"
 #include "Game/Class_10B27220.h"
+#include "Game/Struct_10F0328C.h"
+#include "Game/Class_10E7AAE8.h"
+#include "Game/Class_10B26D00.h"
 
 extern const char DAT_10e47660[];
 
@@ -73,6 +76,10 @@ public:
     virtual void Virtual56(int A);
 };
 
+extern Struct_10F0328C DAT_10f0328c[];
+
+extern float DAT_10eafbdc;
+
 // FUNCTION: 0x10B270D0 ?Stop@Class_10B27220@@QAEXXZ
 void Class_10B27220::Stop()
 {
@@ -97,4 +104,31 @@ void Class_10B27220::Stop()
     Unknown20[Index] = 0;
     m_StopPending = false;
     ((Class_10B27090*)this)->FUN_10b26e00();
+}
+
+// FUNCTION: 0x10B271D0 ?Update@Class_10B27220@@QAEXM@Z
+void Class_10B27220::Update(float A)
+{
+    for (int i = 0; i < 4; i++)
+    {
+        if (m_Active[i])
+        {
+            if (i != 0)
+            {
+                m_Elapsed += A;
+                if (m_Elapsed >= DAT_10f0328c[i].Unknown00 && m_StopPending)
+                    Stop();
+            }
+            return;
+        }
+    }
+}
+
+// FUNCTION: 0x10B27220 ?RequestStop@Class_10B27220@@QAEXH@Z
+void Class_10B27220::RequestStop(int Index)
+{
+    if (DAT_10f0328c[Index].Unknown00 > DAT_10eafbdc)
+        m_StopPending = true;
+    else
+        Stop();
 }

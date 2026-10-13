@@ -4,8 +4,6 @@
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10AB90F0.h"
 
-Class_10905A90_Member* GetAllocator();
-
 struct Struct_10AB86C0
 {
     int Unknown00;
@@ -88,16 +86,4 @@ void GetDifficultyParam(Class_10AB7610_Param* Param, int Index, Struct_10AB7610*
 int Class_10AB86C0::Contains(int Value)
 {
     return FindIndex(Value) >= 0;
-}
-
-// FUNCTION: 0x10AB90F0 ?Free@Class_10AB90F0@@QAEXXZ
-void Class_10AB90F0::Free()
-{
-    FUN_10ab8e90(0);
-    if (m_CapacityBytes)
-    {
-        GetAllocator()->Virtual5(m_Data);
-        m_Data = 0;
-        m_CapacityBytes = 0;
-    }
 }

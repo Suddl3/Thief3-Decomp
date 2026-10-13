@@ -12,8 +12,6 @@ public:
     Class_10E565E8* FUN_1099fa90();
 };
 
-extern void* DAT_10e56670[];
-
 extern void* DAT_10e566f8[];
 
 class Class_10E566F8 : public Class_10E55E78
@@ -35,14 +33,6 @@ Class_10E565E8* Class_10E565E8::FUN_1099fa90()
 {
     this->Class_10E55E78::Class_10E55E78();
     *(void***)this = DAT_10e565e8;
-    return this;
-}
-
-// FUNCTION: 0x1099FB20 ?FUN_1099fb20@Class_10E56670@@QAEPAV1@XZ
-Class_10E56670* Class_10E56670::FUN_1099fb20()
-{
-    this->Class_10E55E78::Class_10E55E78();
-    *(void***)this = DAT_10e56670;
     return this;
 }
 

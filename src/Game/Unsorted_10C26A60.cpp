@@ -26,27 +26,9 @@ public:
     Class_10E992D4* Construct(int A, int B, int C, int D);
 };
 
-void DeleteAll(Struct_10C266F0* Array);
-
 extern float DAT_10eafbdc;
 
 double GetTimeSeconds();
-
-// FUNCTION: 0x10C26A60 ?Replace@Class_10C26A60@@QAEXPAUStruct_10C26A60@@H@Z
-void Class_10C26A60::Replace(Struct_10C26A60* Obj, int Arg)
-{
-    if (FUN_10c26500(Obj, Arg) == 1)
-    {
-        delete Obj;
-        return;
-    }
-    Struct_10C266F0* Array = &Unknown38;
-    DeleteAll(Array);
-    int Count = Array->Unknown00;
-    Array->SetCount(Count + 1);
-    ((Struct_10C26A60**)Array->Unknown08)[Count] = Obj;
-    Virtual6();
-}
 
 // FUNCTION: 0x10C26E80 ?Update@Class_10C26E80@@QAEXXZ
 void Class_10C26E80::Update()

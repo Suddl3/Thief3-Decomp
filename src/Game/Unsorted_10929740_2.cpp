@@ -14,14 +14,3 @@ void cPixelAccessor::GetLuminance(Struct_10929510* p1, int p2, int p3, float* p4
     Virtual8(p1, &R, &G, &B, &A, p2, p3);
     *p4 = R * 0.3f + G * 0.59f + B * 0.11f;
 }
-
-// FUNCTION: 0x10929B10 ?GetLuminance@Class_10E49B08@@UAEXMMMPAM@Z
-void Class_10E49B08::GetLuminance(float A, float B, float C, float* Out)
-{
-    float Unused;
-    Virtual2(A, B, C, &C, &B, &A, &Unused);
-    float Sum = C * 0.3f;
-    Sum += B * 0.59f;
-    Sum += A * 0.11f;
-    *Out = Sum;
-}

@@ -4,6 +4,9 @@
 #include "Game/cString.h"
 #include "Game/Class_10E8D7B8.h"
 #include "Game/Class_10E8DBA4.h"
+#include "Game/Class_1090A780.h"
+#include "Game/Class_10BAFBF0.h"
+#include "Game/Struct_10BAFBF0.h"
 
 class Class_10A68D20;
 
@@ -16,4 +19,10 @@ void Class_10E8DBA4::FUN_10baeb30(Class_10A68D20* Owner)
     if (!Name)
         Name = DAT_10e47660;
     FUN_10a68d50(Owner, (int)Name, (int)&Unknown08, (int)&Unknown14, 0);
+}
+
+// FUNCTION: 0x10BAFBF0 ??0Class_10E8DBA4@@QAE@ABUStruct_10BAFBF0@@ABHABVClass_1090A780@@@Z
+Class_10E8DBA4::Class_10E8DBA4(const Struct_10BAFBF0& A, const int& B, const Class_1090A780& C)
+    : Unknown08(A), Unknown14(B), m_Name(C)
+{
 }

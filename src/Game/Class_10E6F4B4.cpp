@@ -5,6 +5,14 @@
 #include "Core/Core.h"
 #include "Game/Class_1092F270.h"
 #include "Game/Class_10E6F4B4.h"
+#include "Game/Class_10AC14F0.h"
+#include "Game/Class_10AC2600.h"
+#include "Game/Class_10AC3BF0.h"
+#include "Game/Class_10E6F388.h"
+#include "Game/Object_10AB5B20.h"
+#include "Game/Struct_10AC1830.h"
+#include "Game/cRefPtr.h"
+#include "Game/Class_10AC1830.h"
 
 class APawn;
 
@@ -59,6 +67,17 @@ struct Struct_10ABBF70
     Class_10ABBF70_Unknown00* Unknown00;
     char Unknown04[0x10];
 };
+
+void FUN_10abb760();
+
+extern void* DAT_10e6f4b4[];
+
+// FUNCTION: 0x10ABB9D0 ?FUN_10abb9d0@Class_10E6F4B4@@QAEXXZ
+void Class_10E6F4B4::FUN_10abb9d0()
+{
+    *(void**)this = DAT_10e6f4b4;
+    FUN_10abb760();
+}
 
 // FUNCTION: 0x10ABBF70 ?FUN_10abbf70@Class_10E6F4B4@@UAEXHH@Z
 void Class_10E6F4B4::FUN_10abbf70(int Arg0, int Arg1)

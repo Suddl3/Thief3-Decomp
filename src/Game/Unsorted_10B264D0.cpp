@@ -25,10 +25,6 @@
 
 extern void* DAT_10e7ad44[];
 
-extern void* DAT_10e7bb2c[];
-
-extern void* DAT_10e7b968[];
-
 class cTaggedAnimSeq
 {
 public:
@@ -42,21 +38,11 @@ extern void* DAT_10e7c380[];
 
 extern void* DAT_10e7c38c[];
 
-extern void* DAT_10e7c398[];
-
-extern void* DAT_10e7c3b0[];
-
 extern void* DAT_10e7c3bc[];
-
-extern void* DAT_10e7c3c8[];
 
 extern void* DAT_10e7c3d4[];
 
 extern void* DAT_10e7c3e0[];
-
-extern void* DAT_10e7c3ec[];
-
-extern void* DAT_10e7c3f8[];
 
 extern void* DAT_10e7c404[];
 
@@ -94,17 +80,6 @@ char __stdcall FUN_10b2fbf0(int p1, int p2)
 int FUN_10b2fc00()
 {
     return 6;
-}
-
-// FUNCTION: 0x10B30000 ?Init@Class_10E7BB2C@@QAEPAV1@XZ
-Class_10E7BB2C* Class_10E7BB2C::Init()
-{
-    Unknown04 = 1.0f;
-    Unknown08 = 0;
-    *(void**)this = DAT_10e7bb2c;
-    Unknown0C = DAT_10e7b968;
-    Unknown2C = 32767.0f;
-    return this;
 }
 
 // FUNCTION: 0x10B32D60 ?FUN_10b32d60@Class_10B32D60@@QAEXXZ
@@ -175,13 +150,6 @@ int FUN_10b36270()
     return 0x88;
 }
 
-// FUNCTION: 0x10B36280 ?Construct@Class_10E7C398@@QAEPAV1@XZ
-Class_10E7C398* Class_10E7C398::Construct()
-{
-    *(void**)this = DAT_10e7c398;
-    return this;
-}
-
 // FUNCTION: 0x10B36290 ?FUN_10b36290@@YAHXZ
 int FUN_10b36290()
 {
@@ -192,13 +160,6 @@ int FUN_10b36290()
 int FUN_10b362e0()
 {
     return 0x8b;
-}
-
-// FUNCTION: 0x10B362F0 ?Construct@Class_10E7C3B0@@QAEPAV1@XZ
-Class_10E7C3B0* Class_10E7C3B0::Construct()
-{
-    *(void**)this = DAT_10e7c3b0;
-    return this;
 }
 
 // FUNCTION: 0x10B36300 ?FUN_10b36300@@YAHXZ
@@ -218,13 +179,6 @@ Class_10E7C3BC* Class_10E7C3BC::Construct()
 int FUN_10b36320()
 {
     return 0x8d;
-}
-
-// FUNCTION: 0x10B36330 ?Construct@Class_10E7C3C8@@QAEPAV1@XZ
-Class_10E7C3C8* Class_10E7C3C8::Construct()
-{
-    *(void**)this = DAT_10e7c3c8;
-    return this;
 }
 
 // FUNCTION: 0x10B36340 ?FUN_10b36340@@YAHXZ
@@ -259,24 +213,10 @@ int FUN_10b36380()
     return 0x99;
 }
 
-// FUNCTION: 0x10B36390 ?Construct@Class_10E7C3EC@@QAEPAV1@XZ
-Class_10E7C3EC* Class_10E7C3EC::Construct()
-{
-    *(void**)this = DAT_10e7c3ec;
-    return this;
-}
-
 // FUNCTION: 0x10B363A0 ?FUN_10b363a0@@YAHXZ
 int FUN_10b363a0()
 {
     return 0x94;
-}
-
-// FUNCTION: 0x10B363D0 ?Construct@Class_10E7C3F8@@QAEPAV1@XZ
-Class_10E7C3F8* Class_10E7C3F8::Construct()
-{
-    *(void**)this = DAT_10e7c3f8;
-    return this;
 }
 
 // FUNCTION: 0x10B363E0 ?FUN_10b363e0@@YAHXZ

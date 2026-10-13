@@ -1,5 +1,6 @@
 // Game/Unsorted_10B92C10.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Core/Core.h"
 #include "Game/Class_10990D10.h"
 #include "Game/Class_10E89A8C.h"
@@ -13,15 +14,6 @@ public:
 
     Class_10990D10* Unknown04;
 };
-
-// Ion Storm's placement new (0x10905C10).
-void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
-
-// FUNCTION: 0x10B92C10 ?Clone@Class_10E89A8C@@UAEPAV1@XZ
-Class_10E89A8C* Class_10E89A8C::Clone()
-{
-    return new(0, 0, 0, 0, 0) Class_10E89A8C(Unknown04);
-}
 
 // FUNCTION: 0x10B92CB0 ?FUN_10b92cb0@Class_10E894C8@@UAEXH@Z
 void Class_10E894C8::FUN_10b92cb0(int p1)

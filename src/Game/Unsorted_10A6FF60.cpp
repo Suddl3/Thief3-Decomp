@@ -16,15 +16,6 @@
 #include "Game/Class_10B37FE0_Unknown0B4.h"
 #include "Game/Struct_10978840.h"
 
-class Class_10A48230
-{
-public:
-    char Unknown00[0xE8];
-    Class_1098E330* Unknown0E8;
-};
-
-Class_10A48230* FUN_10a48230(int A, int B);
-
 extern Class_1091DEE0* DAT_10f2c928;
 
 extern Struct_10AA3520* DAT_10f35dec;
@@ -64,22 +55,4 @@ void __stdcall FUN_10a705e0(Class_10B37FE0_Unknown04_Unknown460* A, Class_10B37F
             DAT_10f35dec->Unknown0B4->Virtual5(A, B, &S, 0);
         }
     }
-}
-
-// FUNCTION: 0x10A707F0 ?FUN_10a707f0@Class_10A707F0@@QAE_NPAVClass_10B06220@@HH@Z
-bool Class_10A707F0::FUN_10a707f0(Class_10B06220* A, int B, int C)
-{
-    Class_10A48230* Found = FUN_10a48230(B, C);
-    if (Found)
-    {
-        int Key = 0;
-        Found->Unknown0E8->FUN_1098e330(0x800523, &Key);
-        if (Key != 0)
-        {
-            FUN_10a6fe10(A, B, C);
-            A->FUN_10ada010(0x2000399);
-            return true;
-        }
-    }
-    return false;
 }

@@ -78,3 +78,15 @@ void Class_10AB90F0::FUN_10ab8e90(int NewCount)
     GetAllocator()->Virtual9();
     Count = NewCount;
 }
+
+// FUNCTION: 0x10AB90F0 ?Free@Class_10AB90F0@@QAEXXZ
+void Class_10AB90F0::Free()
+{
+    FUN_10ab8e90(0);
+    if (m_CapacityBytes)
+    {
+        GetAllocator()->Virtual5(m_Data);
+        m_Data = 0;
+        m_CapacityBytes = 0;
+    }
+}

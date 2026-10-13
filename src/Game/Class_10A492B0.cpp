@@ -5,11 +5,39 @@
 #include "Game/Class_10A492B0.h"
 #include "Game/Class_10A492B0_Field18.h"
 #include "Game/Class_10A492B0_Node.h"
+#include "Core/Core.h"
+#include "Game/Class_10A4C4A0.h"
+#include "Game/FCoords.h"
 
 // Ion Storm's placement new and its delete (0x10905C10; the delete folded into ::operator delete).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
+
+unsigned int HashBytes(const void* Data, int Length);
+
+// FUNCTION: 0x10A492B0 ?Insert@Class_10A492B0@@QAEIABVcString@@ABH@Z
+unsigned int Class_10A492B0::Insert(const cString& Key, const int& Value)
+{
+    if (!m_FixedSize && m_Collisions > m_BucketCount * 0.2)
+        Rehash(m_BucketCount * 2);
+    Class_10A492B0_Node* Node = new(0, 0, 0, 0, 0) Class_10A492B0_Node;
+    Node->Key = Key;
+    Node->Value = Value;
+    unsigned int Index;
+    {
+        const void* Data;
+        int Length;
+        m_KeyAccessor.Virtual0(Key, &Data, &Length);
+        Index = HashBytes(Data, Length) & ((1 << m_BucketBits) - 1);
+    }
+    if (m_Buckets[Index])
+        m_Collisions++;
+    Node->Next = m_Buckets[Index];
+    m_Buckets[Index] = Node;
+    m_Count++;
+    return Index;
+}
 
 // FUNCTION: 0x10A4AB10 ?Rehash@Class_10A492B0@@QAEXH@Z
 void Class_10A492B0::Rehash(int Size)

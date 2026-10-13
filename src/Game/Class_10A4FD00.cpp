@@ -15,3 +15,9 @@ Class_10A4FD00* Class_10A4FD00::FUN_10a4fd00()
     ((Class_10AF4B90&)Unknown04).FUN_10af4b90(9, DAT_10e67b54);
     return this;
 }
+
+// FUNCTION: 0x10A4FD20 ??1Class_10A4FD00@@QAE@XZ
+Class_10A4FD00::~Class_10A4FD00()
+{
+    Unknown04.Empty(0);
+}

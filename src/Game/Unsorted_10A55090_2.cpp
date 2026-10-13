@@ -27,10 +27,6 @@ void FUN_10a58910();
 
 void FUN_10a581b0();
 
-extern void* DAT_10e68f9c[];
-
-extern void* DAT_10e68f94[];
-
 extern void* DAT_10e68f74[];
 
 extern void* DAT_10e69038[];
@@ -125,17 +121,6 @@ void FUN_10a57970()
 void FUN_10a58320()
 {
     FUN_10a581b0();
-}
-
-// FUNCTION: 0x10A58420 ?Init@Class_10E68F9C@@QAEPAV1@XZ
-Class_10E68F9C* Class_10E68F9C::Init()
-{
-    Unknown04 = 1.0f;
-    Unknown08 = 0;
-    *(void**)this = DAT_10e68f9c;
-    Unknown0C = DAT_10e68f94;
-    Unknown4C = 32767.0f;
-    return this;
 }
 
 // FUNCTION: 0x10A58470 ?FUN_10a58470@Class_10A58470@@QAEXXZ

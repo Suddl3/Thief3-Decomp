@@ -3,6 +3,21 @@
 
 #include "Core/Core.h"
 #include "Game/Class_10E49B08.h"
+#include "Game/cPixelAccessor.h"
+#include "Game/Class_10E49B28.h"
+#include "Game/Struct_10929510.h"
+#include "Game/Struct_10929D60.h"
+
+// FUNCTION: 0x10929B10 ?GetLuminance@Class_10E49B08@@UAEXMMMPAM@Z
+void Class_10E49B08::GetLuminance(float A, float B, float C, float* Out)
+{
+    float Unused;
+    Virtual2(A, B, C, &C, &B, &A, &Unused);
+    float Sum = C * 0.3f;
+    Sum += B * 0.59f;
+    Sum += A * 0.11f;
+    *Out = Sum;
+}
 
 // FUNCTION: 0x10929B70 ?FUN_10929b70@Class_10E49B08@@UAEXHHHPAVFVector@@M@Z
 void Class_10E49B08::FUN_10929b70(int A, int B, int C, FVector* D, FLOAT E)

@@ -1,8 +1,19 @@
 // Game/Class_10E56670.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10B7C000.h"
 #include "Game/Class_10E55E78.h"
 #include "Game/Class_10E56670.h"
+
+extern void* DAT_10e56670[];
+
+// FUNCTION: 0x1099FB20 ?FUN_1099fb20@Class_10E56670@@QAEPAV1@XZ
+Class_10E56670* Class_10E56670::FUN_1099fb20()
+{
+    this->Class_10E55E78::Class_10E55E78();
+    *(void***)this = DAT_10e56670;
+    return this;
+}
 
 // FUNCTION: 0x1099FB60 ??1Class_10E56670@@QAE@XZ
 Class_10E56670::~Class_10E56670()

@@ -5,6 +5,11 @@
 #include "Game/Class_10E49A0C.h"
 #include "Game/cVector3.h"
 #include "Game/IDirect3DDevice8.h"
+#include "Game/Class_109241E0.h"
+#include "Game/Class_1094D740.h"
+#include "Game/Struct_10924210.h"
+#include "Game/Class_10924210.h"
+#include "Game/Class_109243D0.h"
 
 extern void* DAT_10e49a0c[];
 
@@ -12,4 +17,10 @@ extern void* DAT_10e49a0c[];
 void Class_10E49A0C::FUN_1091f350()
 {
     *(void**)this = (void*)DAT_10e49a0c;
+}
+
+// FUNCTION: 0x1091F360 ?FUN_1091f360@Class_10E49A0C@@UAEXHH@Z
+void Class_10E49A0C::FUN_1091f360(int A, int B)
+{
+    Virtual2(A, B, &B);
 }

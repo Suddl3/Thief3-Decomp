@@ -1,5 +1,6 @@
 // Game/Unsorted_10B364E0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10B1B8A0.h"
 #include "Game/Class_10B1D660.h"
@@ -13,10 +14,6 @@
 #include "Game/Class_10E7C398.h"
 #include "Game/Class_10E7C3A4.h"
 #include "Game/Struct_10AA3520.h"
-
-struct Struct_10AA3520_Member;
-
-extern Struct_10AA3520* DAT_10f35dec;
 
 Class_10B1B8A0* FUN_10b1b600();
 
@@ -71,13 +68,6 @@ Class_10E7C3A4* Class_10E79584::Create()
         Result = static_cast<Class_10E7C3A4*>(Memory)->Construct();
     GetAllocator()->Virtual9();
     return Result;
-}
-
-// FUNCTION: 0x10B36620 ?FUN_10b36620@Class_10E7C3A4@@UAEHHHH@Z
-int Class_10E7C3A4::FUN_10b36620(int p1, int p2, int p3)
-{
-    DAT_10f35dec->Unknown0C->FUN_10b1d660();
-    return 1;
 }
 
 // FUNCTION: 0x10B374E0 ?FUN_10b374e0@Class_10B374E0@@QAEXHPAV1@H@Z

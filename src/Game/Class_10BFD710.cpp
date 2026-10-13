@@ -3,6 +3,12 @@
 
 #include "Game/cIntArray.h"
 #include "Game/Class_10BFD710.h"
+#include "Game/Class_10991270.h"
+#include "Game/Class_10AF4BB0.h"
+#include "Game/Class_10BFD4E0.h"
+#include "Game/Class_10BFE6B0.h"
+#include "Game/Class_10BFBE30.h"
+#include "Game/Class_10BFD210.h"
 
 class Class_10978090Result;
 
@@ -31,6 +37,20 @@ public:
     int Unknown08;
 };
 
+class Class_10BFD710_Unknown50;
+
+class Class_10C1A960;
+
+float GetFrameDeltaTime();
+
+extern float DAT_10eafbdc;
+
+class Class_10C1A960
+{
+public:
+    void FUN_10c1a960(Class_10BFD710_Unknown50* A);
+};
+
 // FUNCTION: 0x10BFCD40 ?FUN_10bfcd40@Class_10BFD710@@QAEXPAX@Z
 void Class_10BFD710::FUN_10bfcd40(void* A)
 {
@@ -54,6 +74,22 @@ void Class_10BFD710::FUN_10bfcd40(void* A)
             i--;
             if (Item)
                 Item->Virtual5(1);
+        }
+    }
+}
+
+// FUNCTION: 0x10BFD710 ?FUN_10bfd710@Class_10BFD710@@QAEXXZ
+void Class_10BFD710::FUN_10bfd710()
+{
+    if (GetFrameDeltaTime() != 0.0 && Unknown4C == DAT_10eafbdc)
+    {
+        FUN_10bfce60();
+        FUN_10bfc3a0();
+        Class_10BFD710_Unknown50* Obj = Unknown50;
+        if (Obj && Unknown04->HasTimedOut())
+        {
+            for (int i = 0; i < Unknown08.Count; i++)
+                ((Class_10C1A960**)Unknown08.Data)[i]->FUN_10c1a960(Obj);
         }
     }
 }

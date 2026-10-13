@@ -4,6 +4,9 @@
 #include "Game/Class_109367A0.h"
 #include "Game/Class_10E4A538.h"
 #include "Game/Class_10E49F90.h"
+#include "Game/IDirect3DDevice8.h"
+
+extern IDirect3DDevice8* GDirect3DDevice8;
 
 // FUNCTION: 0x109367A0 ?FUN_109367a0@Class_109367A0@@QAEXXZ
 void Class_109367A0::FUN_109367a0()
@@ -16,4 +19,26 @@ void Class_109367A0::FUN_109367a0()
     Unknown62C[11] = Unknown62C[10] = Unknown62C[9] = Unknown62C[8] =
     Unknown62C[7] = Unknown62C[6] = Unknown62C[5] = Unknown62C[4] =
     Unknown62C[3] = Unknown62C[2] = Unknown62C[1] = Unknown62C[0] = -100.0f;
+}
+
+// FUNCTION: 0x10936A60 ?Reset@Class_109367A0@@QAEXXZ
+void Class_109367A0::Reset()
+{
+    float* Value = &Unknown2c[0][0];
+    for (int i = 0; i < 96; i++)
+    {
+        Value[0] = -100.0f;
+        Value[1] = -100.0f;
+        Value[2] = -100.0f;
+        Value[3] = -100.0f;
+        Value += 4;
+    }
+    FUN_109367a0();
+    if (GDirect3DDevice8)
+    {
+        GDirect3DDevice8->SetVertexShader(2);
+        GDirect3DDevice8->SetPixelShader(0);
+    }
+    Unknown6ac = -1;
+    Unknown6b0 = -1;
 }

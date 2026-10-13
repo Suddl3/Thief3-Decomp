@@ -1,5 +1,6 @@
 // Game/Unsorted_10B76E20.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Base_10B7AA20.h"
 #include "Game/Class_10B78340.h"
 #include "Game/Class_10B7AC80.h"
@@ -9,10 +10,6 @@
 #include "Game/Class_10E888E4.h"
 #include "Game/Class_10E89268.h"
 #include "Game/Struct_10B7AA20.h"
-
-extern void* DAT_10e888e4[];
-
-extern void* DAT_10e68f94[];
 
 class Class_10E822B0
 {
@@ -52,17 +49,6 @@ void FUN_10cad410();
 void* Class_10B78340::FUN_10b78340()
 {
     return Field188;
-}
-
-// FUNCTION: 0x10B7A2F0 ?Init@Class_10E888E4@@QAEPAV1@XZ
-Class_10E888E4* Class_10E888E4::Init()
-{
-    Unknown04 = 1.0f;
-    Unknown08 = 0;
-    Unknown0C = DAT_10e68f94;
-    Unknown4C = 32767.0f;
-    *(void**)this = DAT_10e888e4;
-    return this;
 }
 
 // FUNCTION: 0x10B7AA20 ??0Class_10E88AF8@@QAE@XZ

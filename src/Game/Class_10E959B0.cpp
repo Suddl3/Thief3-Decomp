@@ -1,9 +1,12 @@
 // Game/Class_10E959B0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10BFBC90.h"
 #include "Game/Class_10C7D570.h"
 #include "Game/Class_10E959B0.h"
 #include "Game/Class_10E959B0_Member.h"
+#include "Game/Class_10BFC2B0.h"
+#include "Game/Class_10D660B0.h"
 
 class Class_10bf7f90
 {
@@ -111,4 +114,11 @@ void Class_10E959B0::FUN_10be1ce0(int A)
             Unknown04->Unknown0C->FUN_10bf7f90(0, 1);
         Unknown04->Unknown30.StampTime();
     }
+}
+
+// FUNCTION: 0x10BE1D20 ?FUN_10be1d20@Class_10E959B0@@UAEXXZ
+void Class_10E959B0::FUN_10be1d20()
+{
+    ((Class_10BFC2B0*)&Unknown04->Unknown30)->FUN_10bfc2b0();
+    FUN_10d660b0();
 }

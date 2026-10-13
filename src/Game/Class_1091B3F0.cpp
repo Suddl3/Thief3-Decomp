@@ -4,6 +4,11 @@
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_1091A590.h"
 #include "Game/Class_1091B3F0.h"
+#include "Game/cTextRenderer.h"
+#include "Game/Class_1091A4F0.h"
+#include "Game/Struct_1091A610.h"
+#include "Game/Struct_1091A610Header.h"
+#include "Game/cString.h"
 
 Class_10905A90_Member* GetAllocator();
 
@@ -49,4 +54,16 @@ void Class_1091B3F0::SetCount(int NewCount)
     }
     GetAllocator()->Virtual9();
     Count = NewCount;
+}
+
+// FUNCTION: 0x1091B3F0 ?Free@Class_1091B3F0@@QAEXXZ
+void Class_1091B3F0::Free()
+{
+    SetCount(0);
+    if (m_Capacity)
+    {
+        GetAllocator()->Virtual5(Items);
+        Items = 0;
+        m_Capacity = 0;
+    }
 }

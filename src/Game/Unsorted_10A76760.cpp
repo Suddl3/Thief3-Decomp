@@ -37,17 +37,6 @@ public:
 // FUNCTION: 0x10A77300 ??$Cast@VULevel@@@@YAPAVULevel@@PAVUObject@@@Z
 template ULevel* Cast<ULevel>(UObject* Src);
 
-// FUNCTION: 0x10A790B0 ?HandleEvent@Class_10E6BD18@@QAEXHHHH@Z
-void Class_10E6BD18::HandleEvent(int A, int B, int C, int D)
-{
-    if (A != 0x27)
-    {
-        cActorManager::FUN_10a4c470(A, B, C, D);
-        return;
-    }
-    Virtual16(B, C, D);
-}
-
 // FUNCTION: 0x10A79670 ?FUN_10a79670@Class_10E6BD64@@QAEXXZ
 void Class_10E6BD64::FUN_10a79670()
 {

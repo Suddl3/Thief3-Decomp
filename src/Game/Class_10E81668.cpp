@@ -1,5 +1,6 @@
 // Game/Class_10E81668.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10AC92F0.h"
 #include "Game/Class_10E81668.h"
 #include "Game/Class_10F3A3D8.h"
@@ -19,4 +20,17 @@ void Class_10E81668::FUN_10b4fa70(Struct_10B53A00* A)
         ReleaseItem(A);
     DAT_10f3a3d8->Unknown13C->FUN_10ac92f0();
     FUN_10abc090(DAT_10f05068);
+}
+
+// FUNCTION: 0x10B4FF00 ?Construct@Class_10E81668@@QAEPAV1@XZ
+Class_10E81668* Class_10E81668::Construct()
+{
+    FUN_10b3acb0();
+    *(void***)this = DAT_10e81668;
+    Unknown28 = 0;
+    Unknown34 = 0.66f;
+    Unknown38 = 0;
+    for (int i = 0; i < 3; i++)
+        Unknown50[i] = 0;
+    return this;
 }
