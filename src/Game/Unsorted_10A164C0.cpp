@@ -1,24 +1,9 @@
 // Game/Unsorted_10A164C0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10A15C30_Field18.h"
+#include "Game/Class_10A15C30_Node.h"
 
 unsigned int HashBytes(const void* Data, int Length);
-
-// A chained hash table's entry: the key at 0, the next entry at 0x18.
-struct Class_10A15C30_Node
-{
-    int Key;
-    char Unknown04[0x14];
-    Class_10A15C30_Node* Next;
-};
-
-// The table's key hasher: slot 0 gives the bytes HashBytes hashes,
-// slot 1 compares a key with an entry's key (0 when they are equal).
-class Class_10A15C30_Field18
-{
-public:
-    virtual void Virtual0(const int& Key, const void** Data, int* Length);
-    virtual int Virtual1(const int& Key, const int& Other);
-};
 
 // Copied from include/Game/Class_10A15C30.h with the hash table's members added.
 class Class_10A15C30

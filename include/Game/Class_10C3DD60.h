@@ -6,10 +6,13 @@
 class Class_10C3DD60
 {
 public:
+    virtual float FUN_10c3dd60();
+    virtual void Virtual1();
+
+    void SetField28(float Value);
+
     char Unknown00[0x24];
     float Field24;
-
-    virtual float FUN_10c3dd60();
 };
 
 #endif // GAME_CLASS_10C3DD60_H

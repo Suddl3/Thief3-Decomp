@@ -1,7 +1,7 @@
 // Game/Unsorted_10ABB6B0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/cIntArray.h"
+#include "Game/Class_10ABB6B0.h"
 
 extern "C" void* memmove(void* Dst, const void* Src, unsigned int Size);
 
@@ -11,17 +11,6 @@ class Class_10ABB6B0_Unknown04
 {
 public:
     virtual void Virtual0(Class_10ABB6B0* Owner, int A);
-};
-
-class Class_10ABB6B0
-{
-public:
-    void FUN_10abb6b0(int A);
-    void FUN_10abb520(int A);
-
-    char Unknown00[4];
-    cIntArray Unknown04;
-    cIntArray Unknown10;
 };
 
 // FUNCTION: 0x10ABB6B0 ?FUN_10abb6b0@Class_10ABB6B0@@QAEXH@Z

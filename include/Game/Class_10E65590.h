@@ -5,14 +5,17 @@
 
 #include "Game/Class_10C00A60.h"
 
+class Class_10AD26E0;
 class Class_10AE7460;
+struct Struct_10A1FA00;
 
 class Class_10E65590
 {
 public:
+    virtual void FUN_10a1fa00(int A, Class_10AD26E0* B, int C, Struct_10A1FA00* D);
+
     void FUN_10a1f950(Class_10AE7460* Obj);
 
-    int Unknown00;
     Class_10C00A60 Unknown04;
 };
 

@@ -1,5 +1,6 @@
 // Game/Unsorted_10B56980.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Core/Core.h"
 #include "Game/Class_1090A780.h"
 #include "Game/Class_10B5B050.h"
@@ -34,7 +35,7 @@ void FUN_10b7a3b0();
 
 extern void* DAT_10e822b0[];
 
-class Class_10A66190
+class cBorderWindow
 {
 public:
     void FUN_10a66190();
@@ -42,7 +43,7 @@ public:
     void* VTable;
 };
 
-class Class_10B59E00 : public Class_10A66190
+class Class_10B59E00 : public cBorderWindow
 {
 public:
     void FUN_10b59e00();

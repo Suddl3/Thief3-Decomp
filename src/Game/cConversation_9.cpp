@@ -1,10 +1,8 @@
 // Game/cConversation_9.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/cString.h"
 #include "Game/Class_10905A90_Member.h"
-
-Class_10905A90_Member* GetAllocator();
+#include "Game/Class_10A83AC0_Unknown0C.h"
 
 // Copied from include/Game/Class_1090FD40.h with FUN_1090f160 (the find that returns -1) added.
 class Class_1090FD40
@@ -33,19 +31,6 @@ public:
     int m_Count;
     int m_CapacityBytes;
     cString* m_Items;
-};
-
-// The pointee of cConversation's Unknown0C: slot 1 says whether to skip the item.
-class Class_10A83AC0_Unknown0C
-{
-public:
-    virtual void Virtual0();
-    virtual int Virtual1();
-
-    char Unknown04[0xC];
-    cString Unknown10;
-    char Unknown14[0x8];
-    cString Unknown1C;
 };
 
 class cConversation

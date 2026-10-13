@@ -4,6 +4,8 @@
 #include "Game/Class_1090C880.h"
 #include "Game/Class_10C4EDA0.h"
 #include "Game/cString.h"
+#include "Game/Item_10A55380.h"
+#include "Game/Struct_10A55380.h"
 
 class FVector
 {
@@ -14,20 +16,6 @@ public:
 extern float DAT_10eafbdc;
 
 extern float DAT_10e49684;
-
-struct Struct_10A55380
-{
-    float Unknown00;
-    float Unknown04;
-    float Unknown08;
-};
-
-struct Item_10A55380
-{
-    Struct_10A55380 Unknown00;
-    float Unknown0C;
-    int Unknown10;
-};
 
 class Class_10E684A8
 {

@@ -3,9 +3,24 @@
 #ifndef GAME_CLASS_1095A760_H
 #define GAME_CLASS_1095A760_H
 
+#include "Game/Class_10905A90_Member.h"
+
+Class_10905A90_Member* GetAllocator();
+
 class Class_1095A760
 {
 public:
+    ~Class_1095A760()
+    {
+        SetCount(0);
+        if (m_CapacityBytes)
+        {
+            GetAllocator()->Virtual5(m_Elements);
+            m_Elements = 0;
+            m_CapacityBytes = 0;
+        }
+    }
+
     void SetCount(int A);
     void Clear();
 

@@ -5,12 +5,16 @@
 
 #include "Game/cIntArray.h"
 
+class Class_10A7DC00_Arg;
+
 class Class_10E6BEA8
 {
 public:
     virtual void Virtual0();
     virtual void FUN_10a7db90();
     virtual void FUN_10a7dbb0(int Item);
+    virtual void Virtual3();
+    virtual void FUN_10a7dc00(Class_10A7DC00_Arg* Arg);
 
     Class_10E6BEA8* FUN_10a7dac0();
     void FUN_10a7dae0();

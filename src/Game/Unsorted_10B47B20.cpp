@@ -1,6 +1,5 @@
 // Game/Unsorted_10B47B20.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/cIntArray.h"
 #include "Game/Class_10B3A460.h"
 #include "Game/Class_10B47AB0.h"
@@ -8,6 +7,7 @@
 #include "Game/Class_10C3E140.h"
 #include "Game/Class_10EC0E20.h"
 #include "Game/TimeManager.h"
+#include "Game/Class_10B47C50.h"
 
 extern float DAT_10e49684;
 
@@ -35,27 +35,6 @@ public:
     char Unknown1E[0x2E];
     cIntArray Unknown4C;
     char Pad4D[0x3];
-};
-
-class Class_10B47C50
-{
-public:
-    void FUN_10b47b20(int A, float B, float C, int D, int E, bool F, bool G, float H);
-    void PlayLastQueued();
-
-    char Unknown00[0x8];
-    Class_10EC0E20* Unknown08;
-    Class_10EC0E20* Unknown0C;
-    char Pad10[0x4];
-    int Unknown14;
-    float Unknown18;
-    char Pad1C[0x1C];
-    int Unknown38;
-    int Unknown3C;
-    float Unknown40;
-    float Unknown44;
-    char Pad48[0x4];
-    cIntArray Unknown4C;
 };
 
 // FUNCTION: 0x10B47B20 ?FUN_10b47b20@Class_10B47C50@@QAEXHMMHH_N0M@Z

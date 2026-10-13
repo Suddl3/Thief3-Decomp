@@ -9,11 +9,19 @@ public:
     int FindNextFromListA(int* A);
     int FindNextFromListB(int* A);
     void Advance();
+    void FUN_10b25e90(int A);
 
     char Unknown00[4];
     int m_Index;
-    char Unknown08[8];
+    int Unknown08;
+    int Unknown0C;
     int m_InListA;
+    int Unknown14;
+    char Unknown18[4];
+    bool Unknown1C;
+    char Unknown1D[3];
+    float Unknown20;
+    int Unknown24;
 };
 
 #endif // GAME_CLISTCURSOR_H

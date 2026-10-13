@@ -1,7 +1,7 @@
 // Game/Unsorted_10952740_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/IDirect3DDevice8.h"
+#include "Game/IDirect3DTexture8.h"
 
 class IDirect3DTexture8;
 
@@ -16,29 +16,6 @@ struct Struct_10952740_Desc
     char Unknown00[0x18];
     int Width;
     int Height;
-};
-
-class IDirect3DTexture8
-{
-public:
-    virtual int __stdcall Virtual0();
-    virtual int __stdcall Virtual1();
-    virtual int __stdcall Virtual2();
-    virtual int __stdcall Virtual3();
-    virtual int __stdcall Virtual4();
-    virtual int __stdcall Virtual5();
-    virtual int __stdcall Virtual6();
-    virtual int __stdcall Virtual7();
-    virtual int __stdcall Virtual8();
-    virtual int __stdcall Virtual9();
-    virtual int __stdcall Virtual10();
-    virtual int __stdcall Virtual11();
-    virtual int __stdcall Virtual12();
-    virtual int __stdcall GetLevelCount();
-    virtual int __stdcall GetLevelDesc(unsigned int Level, Struct_10952740_Desc* Desc);
-    virtual int __stdcall Virtual15();
-    virtual int __stdcall LockRect(unsigned int Level, Struct_10952740* LockedRect, const void* Rect, unsigned long Flags);
-    virtual int __stdcall UnlockRect(unsigned int Level);
 };
 
 extern IDirect3DDevice8* GDirect3DDevice8;

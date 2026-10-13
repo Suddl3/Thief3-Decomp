@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/cIntArray.h"
 #include "Game/Class_10C084A0.h"
+#include "Game/Class_10C084A0_Unknown18.h"
 
 class FArchive
 {
@@ -16,13 +17,6 @@ public:
 
     char Unknown04[16];
     int Unknown14;
-};
-
-class Class_10C084A0_Unknown18
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1(FArchive& Ar, void* Value);
 };
 
 class Class_10FF667C

@@ -1,5 +1,6 @@
 // Game/Unsorted_10942D20.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/IDirect3DIndexBuffer8.h"
 
 extern "C" void* memcpy(void* Dest, const void* Src, unsigned int Count);
 
@@ -121,24 +122,6 @@ public:
     virtual long __stdcall SetPixelShader(unsigned long Handle);
     virtual int __stdcall Virtual89();
     virtual int __stdcall Virtual90(int Handle);
-};
-
-class IDirect3DIndexBuffer8
-{
-public:
-    virtual long __stdcall Virtual0();
-    virtual long __stdcall Virtual1();
-    virtual long __stdcall Virtual2();
-    virtual long __stdcall Virtual3();
-    virtual long __stdcall Virtual4();
-    virtual long __stdcall Virtual5();
-    virtual long __stdcall Virtual6();
-    virtual long __stdcall Virtual7();
-    virtual long __stdcall Virtual8();
-    virtual long __stdcall Virtual9();
-    virtual long __stdcall Virtual10();
-    virtual long __stdcall Lock(unsigned int OffsetToLock, unsigned int SizeToLock, unsigned char** ppbData, unsigned long Flags);
-    virtual long __stdcall Unlock();
 };
 
 extern IDirect3DDevice8* GDirect3DDevice8;

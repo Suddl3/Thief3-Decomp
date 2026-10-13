@@ -7,6 +7,7 @@ class Class_1095A7A0
 {
 public:
     Class_1095A7A0();
+    ~Class_1095A7A0();
 
     char Unknown00[2];
     char Unknown02;
@@ -18,6 +19,7 @@ public:
     int Unknown14;
     int Unknown18;
     int Unknown1C;
+    int Unknown20;
 };
 
 #endif // GAME_CLASS_1095A7A0_H

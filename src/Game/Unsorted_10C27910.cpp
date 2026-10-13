@@ -1,15 +1,9 @@
 // Game/Unsorted_10C27910.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10C27CB0.h"
+#include "Game/Struct_10C27CB0.h"
 
 struct Struct_10C05610;
-
-struct Struct_10C27CB0
-{
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-};
 
 void ExpandBoundsList(Struct_10C05610* A, Struct_10C27CB0* B, Struct_10C27CB0* C, bool* D);
 

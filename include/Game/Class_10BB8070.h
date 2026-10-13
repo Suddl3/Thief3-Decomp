@@ -11,6 +11,8 @@ class Class_10BB8070
 {
 public:
     bool FUN_10bb8070();
+    void FUN_10bb7ff0();
+    void RollInterval();
 
     char Unknown00[8];
     Class_10DBD510* Unknown08;

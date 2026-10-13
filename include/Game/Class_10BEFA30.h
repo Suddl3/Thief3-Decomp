@@ -5,9 +5,13 @@
 
 #include "Game/Struct_10BEFA30.h"
 
+class FArchive;
+
 class Class_10BEFA30
 {
 public:
+    virtual void Virtual0(FArchive& Ar);
+
     Class_10BEFA30* Assign(const Class_10BEFA30& A);
     Class_10BEFA30& operator=(const Class_10BEFA30& A)
     {
@@ -20,7 +24,6 @@ public:
         return *this;
     }
 
-    char Unknown00[4];
     Struct_10BEFA30 Unknown04;
     int Unknown10;
     int Unknown14;

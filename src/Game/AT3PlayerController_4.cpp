@@ -1,8 +1,8 @@
 // Game/AT3PlayerController_4.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10B39A70.h"
 #include "Game/TimeManager.h"
+#include "Game/Static_10B3A410.h"
 
 class Class_10B1D460_pad0;
 
@@ -18,11 +18,6 @@ class Class_10B21C80
 {
 public:
     void FUN_10b21c80(int A);
-};
-
-struct Static_10B3A410
-{
-    void FUN_10b39cb0(Class_10B21C80* A);
 };
 
 class Class_10B22D70

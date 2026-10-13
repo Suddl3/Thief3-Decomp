@@ -1,7 +1,7 @@
 // Game/Unsorted_10A21B20.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10905A90_Member.h"
+#include "Game/Class_10A22D00.h"
 
 Class_10905A90_Member* GetAllocator();
 
@@ -21,17 +21,6 @@ public:
     int Unknown1C;
     int Unknown20;
     int Unknown24;
-};
-
-// The owner: Count, the buffer size in bytes and the elements.
-class Class_10A22D00
-{
-public:
-    void SetCount(int NewCount);
-
-    int Count;
-    int m_CapacityBytes;
-    Class_10A214C0* m_Data;
 };
 
 // FUNCTION: 0x10A22D00 ?SetCount@Class_10A22D00@@QAEXH@Z

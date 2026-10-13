@@ -1,21 +1,7 @@
 // Game/Class_10E95288.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Struct_10BDF610.h"
-
-class Class_10E95288
-{
-public:
-    void FUN_10bdf610(Struct_10BDF610* A, float B, float C, float D, float E, unsigned char F);
-
-    char Unknown00[0x48];
-    Struct_10BDF610 Unknown48;
-    float Unknown54;
-    float Unknown58;
-    float Unknown5C;
-    float Unknown60;
-    char Unknown64[4];
-    unsigned char Unknown68;
-};
+#include "Game/Class_10E95288.h"
 
 // FUNCTION: 0x10BDF610 ?FUN_10bdf610@Class_10E95288@@QAEXPAUStruct_10BDF610@@MMMME@Z
 void Class_10E95288::FUN_10bdf610(Struct_10BDF610* A, float B, float C, float D, float E, unsigned char F)

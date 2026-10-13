@@ -1,20 +1,10 @@
 // Game/Unsorted_10BFC220.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10C3DD60.h"
 
 double GetTimeSeconds();
 
 extern float DAT_10eafbdc;
-
-class Class_10C3DD60
-{
-public:
-    void SetField28(float Value);
-
-    char Unknown00[0x24];
-    float Field24;
-
-    virtual float FUN_10c3dd60();
-};
 
 class Class_10BFC2B0_Unknown04
 {

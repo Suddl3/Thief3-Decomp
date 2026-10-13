@@ -1,10 +1,11 @@
 // Game/Unsorted_10A246E0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 // The placement delete that pairs with Ion Storm's new.
 #include "Game/cString.h"
 #include "Game/Class_10A250D0.h"
 #include "Game/Class_10A250D0_Node.h"
+#include "Game/Class_10A25040.h"
+#include "Game/Class_10A25040_Unknown18.h"
 
 // Ion Storm's placement new (0x10905C10).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
@@ -15,31 +16,12 @@ unsigned int HashBytes(const void* Data, int Length);
 
 class Class_10A25040_Unknown14;
 
-class Class_10A25040_Unknown18
-{
-public:
-    virtual void Virtual0(int* Key, const void** Data, int* Length);
-    virtual int Virtual1(int* Key, Class_10A25040_Unknown14* Node);
-};
-
 class Class_10A25040_Unknown14
 {
 public:
     char Unknown00[4];
     cString Unknown04;
     Class_10A25040_Unknown14* Next;
-};
-
-class Class_10A25040
-{
-public:
-    bool Lookup(int* A, cString& Out);
-
-    char Unknown00[8];
-    int Unknown08;
-    char Unknown0C[8];
-    Class_10A25040_Unknown14** Unknown14;
-    Class_10A25040_Unknown18 Unknown18;
 };
 
 // FUNCTION: 0x10A25040 ?Lookup@Class_10A25040@@QAE_NPAHAAVcString@@@Z

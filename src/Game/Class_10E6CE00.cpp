@@ -23,7 +23,7 @@ public:
     int Unknown08;
 };
 
-class Class_10AAB5C0 : public Class_10978090
+class Class_10E6CE28 : public Class_10978090
 {
 public:
     int GetUnknown08();
@@ -60,7 +60,7 @@ public:
     int Unknown08;
 };
 
-class Class_10E6CE00 : public Class_10AAB5C0
+class Class_10E6CE00 : public Class_10E6CE28
 {
 public:
     virtual int FUN_10a94db0(int A, int B);

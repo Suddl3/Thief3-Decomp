@@ -1,6 +1,5 @@
 // Game/Unsorted_109E5770.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/cString.h"
 #include "Game/Class_109E5910.h"
 #include "Game/Class_10D3F830.h"
@@ -9,6 +8,7 @@
 #include "Game/Class_10C49740.h"
 #include "Game/cIntArray.h"
 #include "Game/Class_10905A90_Member.h"
+#include "Game/Class_109E5770.h"
 
 class Class_10E5B2C0
 {
@@ -111,15 +111,6 @@ public:
     virtual void Virtual38();
     virtual void Virtual39();
     virtual void Virtual40(int A);
-};
-
-class Class_109E5770
-{
-public:
-    virtual Class_109E5770_Obj* Virtual0(int A);
-
-    Class_109E5770_Obj* FUN_109e5770(int A);
-    Class_109E5770_Obj* FUN_109e49c0(int A);
 };
 
 // FUNCTION: 0x109E5770 ?FUN_109e5770@Class_109E5770@@QAEPAVClass_109E5770_Obj@@H@Z

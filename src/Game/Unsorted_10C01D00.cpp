@@ -1,9 +1,10 @@
 // Game/Unsorted_10C01D00.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10C01140.h"
+
+#include "Game/cNodeHashMap.h"
 #include "Game/Entry_10C32C30.h"
 
-class Class_10C49740 : public Class_10C01140
+class Class_10C49740 : public cNodeHashMap
 {
 public:
     bool FUN_10c49740(int* Key, Entry_10C32C30** Out);

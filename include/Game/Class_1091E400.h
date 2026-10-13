@@ -15,8 +15,10 @@ public:
 
     char Pad01[0x3];
     Class_10953730 Unknown04;
-    char Pad05[0x11f];
+    char Pad6C[0x120];
     void* unknown_124;
+    char Pad190[0x10];
+    float Unknown1A0[6][4];
 };
 
 #endif // GAME_CLASS_1091E400_H

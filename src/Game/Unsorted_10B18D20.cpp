@@ -1,8 +1,8 @@
 // Game/Unsorted_10B18D20.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include <stdlib.h>
 #include "Game/Static_10B18D00.h"
+#include "Game/Class_10B22020.h"
 
 class Class_10B22020;
 
@@ -25,17 +25,6 @@ public:
 };
 
 extern Class_10F3A3D8* DAT_10f3a3d8;
-
-class Class_10B22020
-{
-public:
-    char Unknown00[0x404];
-    int Unknown404;
-    char Unknown408[8];
-    float Unknown410;
-    char Unknown414[0x40];
-    float Unknown454;
-};
 
 // FUNCTION: 0x10B18D20 ?FUN_10b18d20@Static_10B18D00@@QAEXPAVClass_10B22020@@@Z
 void Static_10B18D00::FUN_10b18d20(Class_10B22020* A)

@@ -1,7 +1,8 @@
 // Game/Unsorted_10C07330_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/cIntArray.h"
+#include "Game/Class_10C074F0.h"
+#include "Game/Class_10C084A0_Unknown18.h"
 
 class FArchive
 {
@@ -18,13 +19,6 @@ public:
     int Unknown14;
 };
 
-class Class_10C084A0_Unknown18
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1(FArchive& Ar, void* Value);
-};
-
 class Class_10FF667C
 {
 public:
@@ -33,16 +27,6 @@ public:
 };
 
 extern Class_10FF667C* DAT_10ff667c;
-
-class Class_10C074F0
-{
-public:
-    void FUN_10c074f0(FArchive& Ar);
-
-    char Unknown00[0x8];
-    cIntArray Unknown08[5];
-    short Unknown44[5];
-};
 
 // FUNCTION: 0x10C074F0 ?FUN_10c074f0@Class_10C074F0@@QAEXAAVFArchive@@@Z
 void Class_10C074F0::FUN_10c074f0(FArchive& Ar)

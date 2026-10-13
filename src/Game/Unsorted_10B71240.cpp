@@ -1,19 +1,13 @@
 // Game/Unsorted_10B71240.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Options.h"
+#include "Game/cOptionToggle.h"
 
 class Class_10B78320
 {
 public:
     virtual void Virtual0();
     void FUN_10b78320();
-};
-
-class cOptionToggle
-{
-public:
-    void SetSelection(int Value);
 };
 
 class cString;

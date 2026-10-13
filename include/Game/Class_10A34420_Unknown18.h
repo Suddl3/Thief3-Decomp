@@ -3,11 +3,13 @@
 #ifndef GAME_CLASS_10A34420_UNKNOWN18_H
 #define GAME_CLASS_10A34420_UNKNOWN18_H
 
-// The table's key hasher: slot 0 gives the bytes HashBytes hashes.
+class Class_10A345C0_Node;
+
 class Class_10A34420_Unknown18
 {
 public:
     virtual void Virtual0(const __int64* Key, const void** Data, int* Length);
+    virtual int Virtual1(const __int64* Key, Class_10A345C0_Node* Node);
 };
 
 #endif // GAME_CLASS_10A34420_UNKNOWN18_H

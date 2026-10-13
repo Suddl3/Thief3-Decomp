@@ -5,12 +5,12 @@
 
 class Class_10C559A0;
 
-// A growable array: a count, the bytes allocated and the block.
 class Class_10C56000
 {
 public:
     void FUN_10c56000(int NewCount);
     int Append(const Class_10C559A0* Src);
+    void FUN_10c55ef0(int Index, int Last);
 
     int m_Count;
     int Unknown04;

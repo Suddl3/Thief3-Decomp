@@ -1,18 +1,9 @@
 // Game/cConGoalCompleteEvent_6.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/cString.h"
 #include "Game/Class_10AB37F0.h"
 #include "Game/Class_10AB3C20.h"
-
-class Class_10AAB590_Param
-{
-public:
-    virtual void Virtual0(int* Value);
-    virtual void Virtual1(int Value);
-    virtual cString Virtual2();
-    virtual int Virtual3();
-};
+#include "Game/Class_10AAB590_Param.h"
 
 class cConGoalCompleteEvent
 {

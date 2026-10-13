@@ -3,13 +3,7 @@
 #include "Engine/EngineClasses.h"
 #include "Game/FArchive.h"
 #include "Game/Struct_10AA3520.h"
-
-class Class_10A37780
-{
-public:
-    void FUN_10a37780(APlayerPawn* A, int B);
-    void FUN_10a378f0(FArchive& Ar);
-};
+#include "Game/Class_10A37780.h"
 
 extern Struct_10AA3520* DAT_10f35dec;
 

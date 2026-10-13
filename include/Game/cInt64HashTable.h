@@ -6,6 +6,7 @@
 #include "Game/Class_10A34420_Unknown18.h"
 
 class Class_10A345C0_Node;
+class Class_10A34650_Value;
 
 class cInt64HashTable
 {
@@ -14,6 +15,8 @@ public:
     void Rehash(int Size);
     unsigned int InsertOrAssign(__int64* Key, int* Value);
     bool FUN_10a345c0(__int64* Range, int* Index);
+    void Reset(int A);
+    bool FUN_10a34650(__int64* Range, Class_10A34650_Value** Out);
 
     int m_Collisions;
     int m_Count;

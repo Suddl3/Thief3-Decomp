@@ -5,6 +5,8 @@
 
 #include "Game/Class_10AA82D0.h"
 
+class Object_10B4BB80;
+
 class GState : public Class_10AA82D0
 {
 public:
@@ -13,6 +15,9 @@ public:
     virtual void Virtual2();
     virtual void Virtual3();
     virtual void Virtual4();
+    virtual void Virtual5();
+    virtual void Virtual6();
+    virtual void FUN_10b4bb80(Object_10B4BB80* A);
 
     bool ApplyAnimMotion(int A);
 };

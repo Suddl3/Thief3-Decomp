@@ -7,38 +7,11 @@
 #include "Game/cMemoryStream.h"
 #include "Game/Struct_10BB0B90.h"
 #include "Game/Class_10BB1020_B.h"
+#include "Game/Class_10BAD190.h"
+#include "Game/Class_10BB1140_Item.h"
+#include "Game/Class_10BB1140_Source.h"
 
 int FUN_10bb0c60(int A);
-
-class Class_10BB1140_Item
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual int Virtual8();
-};
-
-class Class_10BB1140_Source
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual int Virtual3();
-    virtual Class_10C3D3B0* Virtual4(int A);
-};
-
-class Class_10BAD190
-{
-public:
-    void FUN_10bad190(int A, int B, int C);
-};
 
 class Class_10B9C9F0
 {

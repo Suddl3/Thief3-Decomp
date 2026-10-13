@@ -3,6 +3,7 @@
 #include "Game/Class_10C56E50.h"
 #include "Game/Class_10C576F0.h"
 #include "Game/Class_10C576F0_Field18.h"
+#include "Game/Class_10C576F0_Node.h"
 
 // Ion Storm's placement new and its delete (0x10905C10; the delete folded into ::operator delete).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
@@ -10,15 +11,6 @@ void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
 unsigned int HashBytes(const void* Data, int Length);
-
-// A chained hash table's entry: 12 bytes, allocated per insert.
-class Class_10C576F0_Node
-{
-public:
-    int Key;
-    int Value;
-    Class_10C576F0_Node* Next;
-};
 
 // FUNCTION: 0x10C56E50 ?SetDefaults@Class_10C56E50@@QAEXXZ
 void Class_10C56E50::SetDefaults()

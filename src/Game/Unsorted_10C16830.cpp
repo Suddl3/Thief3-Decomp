@@ -1,10 +1,10 @@
 // Game/Unsorted_10C16830.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10B255F0.h"
 #include "Game/Class_10BBDB40.h"
 #include "Game/Class_10C1B0F0.h"
 #include "Game/Class_10C7D570.h"
+#include "Game/Class_10C16830.h"
 
 double GetTimeSeconds();
 
@@ -23,17 +23,6 @@ public:
     int Unknown2C;
     char Unknown30[0x2C];
     float Unknown5C;
-};
-
-class Class_10C16830
-{
-public:
-    void RefreshClamp(Class_10B255F0* A1, float A2);
-
-    char Unknown00[4];
-    Class_10C7D570* Unknown04;
-    char Unknown08[4];
-    Class_10BFE9E0* Unknown0C;
 };
 
 // FUNCTION: 0x10C16830 ?RefreshClamp@Class_10C16830@@QAEXPAVClass_10B255F0@@M@Z

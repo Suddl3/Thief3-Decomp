@@ -1,5 +1,6 @@
 // Game/Unsorted_10AA6080.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10AA6080.h"
 
 // Declarations first
 class FVector
@@ -20,18 +21,6 @@ public:
     float Unknown18;
     char Pad1C[0x4];
     int Unknown20;
-};
-
-class Class_10AA6080
-{
-public:
-    bool FUN_10aa6080(FVector* A, float B);
-
-    char Pad00[0x1];
-    char Unknown01[0x3];
-    int m_Count;
-    char Unknown08[0x4];
-    Class_10AA6080_Member** m_Items;
 };
 
 // FUNCTION: 0x10AA6080 ?FUN_10aa6080@Class_10AA6080@@QAE_NPAVFVector@@M@Z

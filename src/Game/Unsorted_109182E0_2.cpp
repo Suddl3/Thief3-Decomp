@@ -6,6 +6,7 @@
 #include "Game/Class_10F2C744.h"
 #include "Game/Struct_10918E10.h"
 #include "Game/Class_1092D420.h"
+#include "Game/Class_10918E10_Element.h"
 
 class Class_10924E80
 {
@@ -27,12 +28,6 @@ void CreateTextures();
 extern Class_1092D420* DAT_10f31b88;
 
 extern Class_10B59770 DAT_10f2c768;
-
-class Class_10918E10_Element
-{
-public:
-    virtual void Virtual0(int A, int B, int C);
-};
 
 extern Struct_10918E10* DAT_10f2c770;
 

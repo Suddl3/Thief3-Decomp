@@ -12,6 +12,7 @@ class Class_10C29410
 public:
     void Enqueue(int Value);
     void Start(int Value);
+    void Update();
 
     Class_10BBA080* m_Random;
     cIntArray m_Queue;

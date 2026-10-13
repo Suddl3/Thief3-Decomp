@@ -4,6 +4,7 @@
 #include "Game/Class_10AAF570_Field10.h"
 #include "Game/Class_10BC4BF0.h"
 #include "Game/Class_10BC4BF0_Member.h"
+#include "Game/Class_10C02030.h"
 
 class Class_10E92B20
 {
@@ -22,12 +23,6 @@ public:
     }
 
     Class_10BC4BF0_Member* Unknown04;
-};
-
-class Class_10C02030
-{
-public:
-    ~Class_10C02030();
 };
 
 struct Struct_10BC5560

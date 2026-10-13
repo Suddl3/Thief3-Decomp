@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10E8C118.h"
 #include "Game/Class_10D38640.h"
+#include "Game/Struct_10D38640.h"
 
 class Class_10BABED0;
 
@@ -13,13 +14,6 @@ struct Struct_10BA0FC0_Item
 {
     char Unknown00[0xC0];
     Class_10BAA6B0_Param* Unknown0C0;
-};
-
-struct Struct_10D38640
-{
-    int Count;
-    char Unknown04[4];
-    Struct_10BA0FC0_Item** Data;
 };
 
 // FUNCTION: 0x10BA0FC0 ?FUN_10ba0fc0@Class_10E8C118@@UAEXXZ

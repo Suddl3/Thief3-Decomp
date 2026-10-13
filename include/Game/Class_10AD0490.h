@@ -3,9 +3,11 @@
 #ifndef GAME_CLASS_10AD0490_H
 #define GAME_CLASS_10AD0490_H
 
+#include "Game/Class_10ACF9A0.h"
+
 class Class_1098E3D0;
 
-class Class_10AD0490
+class Class_10AD0490 : public Class_10ACF9A0
 {
 public:
     void FUN_10ad03f0(Class_1098E3D0* Obj);

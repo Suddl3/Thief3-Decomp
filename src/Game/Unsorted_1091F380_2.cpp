@@ -4,6 +4,7 @@
 #include "Game/Class_1092F130.h"
 #include "Game/Class_10924100_Unknown44.h"
 #include "Game/Class_109480B0.h"
+#include "Game/Class_10924100_Unknown38.h"
 
 extern int DAT_10f31960;
 
@@ -45,15 +46,6 @@ public:
     int Unknown3C;
     char Unknown40[4];
     Class_10924100_Unknown44** Unknown44;
-};
-
-class Class_10924100_Unknown38
-{
-public:
-    virtual void Virtual0(int Flag);
-
-    char Pad04[0x58];
-    int Unknown5C;
 };
 
 // FUNCTION: 0x1091F5B0 ?Reset@Class_10924100@@QAEXXZ

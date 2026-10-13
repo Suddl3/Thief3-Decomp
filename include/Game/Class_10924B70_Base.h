@@ -3,14 +3,15 @@
 #ifndef GAME_CLASS_10924B70_BASE_H
 #define GAME_CLASS_10924B70_BASE_H
 
-#include "Game/Class_10924AE0.h"
-
-extern Class_10924AE0* DAT_10f3199c;
+extern void** DAT_10f3199c;
 
 class Class_10924B70_Base
 {
 public:
-    Class_10924B70_Base();
+    Class_10924B70_Base()
+    {
+        DAT_10f3199c = (void**)this;
+    }
     ~Class_10924B70_Base()
     {
         DAT_10f3199c = 0;

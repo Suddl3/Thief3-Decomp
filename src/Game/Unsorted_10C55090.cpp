@@ -1,8 +1,8 @@
 // Game/Unsorted_10C55090.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10A04240.h"
 #include "Game/Class_10905A90_Member.h"
+#include "Game/Class_10C551D0.h"
 
 class Object_10C552D0_Member
 {
@@ -48,16 +48,6 @@ class Class_10C551D0_Unknown08
 public:
     int Unknown00;
     Class_10C551D0_Unknown04* Unknown04;
-};
-
-class Class_10C551D0
-{
-public:
-    void SetCount(int NewCount);
-
-    int Unknown00;
-    int Unknown04;
-    void* Unknown08;
 };
 
 // FUNCTION: 0x10C551D0 ?SetCount@Class_10C551D0@@QAEXH@Z

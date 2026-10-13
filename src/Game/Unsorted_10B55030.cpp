@@ -52,7 +52,7 @@ public:
     virtual int Virtual39();
 };
 
-class Class_10A52EE0
+class cHUDLightGem
 {
 public:
     Class_10B2BC90_Unknown* GetItem(int Index);
@@ -68,7 +68,7 @@ public:
 };
 
 // FUNCTION: 0x10B55030 ?FUN_10b55030@Class_10A52EE0@@QAEXXZ
-void Class_10A52EE0::FUN_10b55030()
+void cHUDLightGem::FUN_10b55030()
 {
     for (int i = 0; i < m_Count; i++)
     {

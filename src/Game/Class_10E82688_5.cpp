@@ -1,20 +1,14 @@
 // Game/Class_10E82688_5.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
 #include "Game/Class_109E6D60.h"
 #include "Game/WindowManager.h"
 #include "Game/Class_10B15960.h"
+#include "Game/Class_10B155D0.h"
 
 void* GetWindowManager();
 
 extern WindowManager* GWindowManager;
-
-class Class_10B155D0
-{
-public:
-    bool FUN_10b155d0(int A, int B);
-};
 
 class Class_10E5B2C0
 {

@@ -1,26 +1,15 @@
 // Game/Unsorted_10A87F80.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include <math.h>
 #include "Core/Core.h"
 #include "Game/Class_10A88910.h"
 #include "Game/Class_10A88970.h"
 #include "Game/Class_10A88D00.h"
+#include "Game/Class_10A88880.h"
 
 extern float DAT_10e49684;
 
 extern float DAT_10eafbdc;
-
-class Class_10A88880
-{
-public:
-    float Unknown00;
-    float Unknown04;
-    float Unknown08;
-    float Unknown0C;
-
-    float GetFalloff(float Value, bool Flag);
-};
 
 // FUNCTION: 0x10A88880 ?GetFalloff@Class_10A88880@@QAEMM_N@Z
 float Class_10A88880::GetFalloff(float Value, bool Flag)

@@ -1,8 +1,8 @@
 // Game/Unsorted_10BAA930.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_109BC840.h"
 #include "Game/Class_10B9C030.h"
+#include "Game/Class_10BAA930.h"
 
 class Class_10BAA580
 {
@@ -22,19 +22,6 @@ struct Struct_10BAA930
     char Unknown00[0x1C];
     Class_10B9C030 UnknownA;
     Class_10B9C030 UnknownB;
-};
-
-class Class_10BAA930
-{
-public:
-    bool FUN_10baa930();
-
-    char Unknown00[0x34];
-    int Unknown34;
-    char Unknown38[0x4];
-    Struct_10BAA930* Unknown3C;
-    char Unknown40[0x10];
-    bool Unknown50;
 };
 
 // FUNCTION: 0x10BAA930 ?FUN_10baa930@Class_10BAA930@@QAE_NXZ

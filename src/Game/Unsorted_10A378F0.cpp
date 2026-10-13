@@ -1,5 +1,6 @@
 // Game/Unsorted_10A378F0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Struct_10A37780_Field20.h"
 
 class UObject;
 
@@ -23,20 +24,6 @@ public:
 };
 
 FArchive& FUN_10b052a0(FArchive& Ar, void* Data);
-
-class Struct_10A37780_Field20
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5(FArchive& Ar);
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8(FArchive& Ar);
-};
 
 class Class_10A37780
 {

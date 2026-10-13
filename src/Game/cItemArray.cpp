@@ -1,33 +1,9 @@
 // Game/cItemArray.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include <new>
 #include "Game/Class_10905A90_Member.h"
 #include "Game/cItemArray.h"
-
-Class_10905A90_Member* GetAllocator();
-
-// The element: 16 bytes, its first field a block that is freed from four bytes before its start.
-class Item_1093F140
-{
-public:
-    Item_1093F140() : Unknown00(0) {}
-
-    ~Item_1093F140()
-    {
-        if (Unknown00)
-        {
-            char* Block = Unknown00 - 4;
-            GetAllocator()->Virtual5(Block);
-            Unknown00 = 0;
-        }
-    }
-
-    char* Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-};
+#include "Game/Item_1093F140.h"
 
 // FUNCTION: 0x1093EE90 ?Resize@cItemArray@@QAEXH@Z
 void cItemArray::Resize(int NewCount)

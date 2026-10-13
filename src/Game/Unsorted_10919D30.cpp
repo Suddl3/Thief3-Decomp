@@ -1,13 +1,8 @@
 // Game/Unsorted_10919D30.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_1091A4F0.h"
 #include "Game/Class_10905A90_Member.h"
-
-struct Struct_10941980
-{
-    char Unknown00[6];
-};
+#include "Game/Struct_10941980.h"
 
 Class_10905A90_Member* GetAllocator();
 

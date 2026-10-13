@@ -10,11 +10,21 @@ class Class_10E8C00C
 public:
     virtual void Serialize(FArchive& Ar);
 
+    Class_10E8C00C(int Owner);
+
     Class_10E8C00C* Construct(int A);
 
-    int m_ChildCount;
+    union
+    {
+        int m_ChildCount;
+        int Unknown04;
+    };
     int Unknown08;
-    Class_10E8C00C** m_Children;
+    union
+    {
+        Class_10E8C00C** m_Children;
+        int Unknown0C;
+    };
     int Unknown10;
     int Unknown14;
     int Unknown18;

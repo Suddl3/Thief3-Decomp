@@ -4,31 +4,11 @@
 #include "Game/Class_10B116B0.h"
 #include "Game/Class_10B11600.h"
 #include "Game/Class_10E782A0.h"
+#include "Game/Class_10B111A0_Unknown0C.h"
+#include "Game/Class_10B111A0_Unknown10.h"
+#include "Game/Struct_10B111A0_Node.h"
 
 Class_10905A90_Member* GetAllocator();
-
-class Class_10B111A0_Unknown10
-{
-public:
-    virtual ~Class_10B111A0_Unknown10();
-};
-
-struct Struct_10B111A0_Node
-{
-    Struct_10B111A0_Node* Next;
-    Struct_10B111A0_Node* Prev;
-    int Key;
-    int Unknown0C;
-    Class_10B111A0_Unknown10* Unknown10;
-};
-
-class Class_10B111A0_Unknown0C
-{
-public:
-    int Count;
-    Struct_10B111A0_Node* Head;
-    Struct_10B111A0_Node* Tail;
-};
 
 // The element: 0xC bytes, its three words cleared by the loop.
 class Class_10B11520_Unknown08

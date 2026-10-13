@@ -4,18 +4,22 @@
 #define GAME_CLASS_10C609D0_H
 
 #include "Game/Class_10943600.h"
-#include "Game/cIntArray.h"
 #include "Game/Class_10C603E0.h"
+#include "Game/cIntArray.h"
+
+class FVector;
 
 class Class_10C609D0
 {
 public:
     ~Class_10C609D0();
+    Class_10C609D0(const FVector& A, const FVector& B);
 
     Class_10C603E0 Unknown00;
     cIntArray Unknown0C;
     char Unknown18[0xc];
     Class_10943600 Unknown24;
+    char Pad30[0xc];
 };
 
 #endif // GAME_CLASS_10C609D0_H

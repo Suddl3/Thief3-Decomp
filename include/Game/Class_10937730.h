@@ -3,13 +3,27 @@
 #ifndef GAME_CLASS_10937730_H
 #define GAME_CLASS_10937730_H
 
-class Class_10937730
+#include "Game/cD3DStateCache.h"
+
+class Class_10937730 : public cD3DStateCache
 {
 public:
     void FUN_10937730();
     bool FUN_10937690();
+    void Reset();
 
-    char Pad00[0x1];
+    union
+    {
+        char Pad00[0xC];
+        int Unknown00[3];
+    };
+    int Unknown0C;
+    int Unknown10;
+    int Unknown14;
+    char Unknown18[4];
+    int Unknown1C[4];
+    char Unknown2C[0x688];
+    int Unknown6B4;
 };
 
 #endif // GAME_CLASS_10937730_H

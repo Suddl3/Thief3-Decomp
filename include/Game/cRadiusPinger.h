@@ -29,6 +29,7 @@ public:
     virtual void Virtual14();
     virtual void Virtual15();
     virtual void Virtual16(AActor* A);
+    virtual float FUN_10a738c0(int A, float B, float C);
 
     cRadiusPinger();
 };

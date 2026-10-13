@@ -9,6 +9,8 @@ class Class_10905760 : public Class_10AF4BB0
 {
 public:
     void Empty(int Slack);
+    int FUN_10905680(int A);
+    Class_10905760& FUN_109056f0(const Class_10905760& Other);
 };
 
 #endif // GAME_CLASS_10905760_H

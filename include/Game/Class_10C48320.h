@@ -10,6 +10,11 @@ class Class_10C48320_Node;
 class Class_10C48320
 {
 public:
+    Class_10C48320() : m_Collisions(0), m_Count(0), m_BucketCount(0), m_FixedSize(false), m_Buckets(0)
+    {
+        Rehash(64);
+    }
+
     unsigned int Insert(const int& Key, const int& Value);
     void Rehash(int Size);
     bool Remove(const int& Key);

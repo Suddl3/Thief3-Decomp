@@ -1,28 +1,13 @@
 // Game/Unsorted_10A6B540.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 // Declarations first
 #include "Core/Core.h"
 #include "Game/FArchive.h"
 #include "Game/Class_1098E330.h"
+#include "Game/Class_10A6B770.h"
+#include "Game/Class_10A6BD80.h"
 
 FArchive& FUN_10b052a0(FArchive& Ar, void* Data);
-
-class Class_10A6B770
-{
-public:
-    void FUN_10a6b770(FArchive& Ar);
-
-    int Unknown00;
-    FVector Unknown04;
-    FVector Unknown10;
-    int Unknown1C;
-    int Unknown20;
-    char Unknown24;
-    char Unknown25;
-    char Unknown26;
-    int Unknown28;
-};
 
 class Class_10A6BD80_Param
 {
@@ -31,21 +16,6 @@ public:
     bool Unknown24;
     bool Unknown25;
     bool Unknown26;
-};
-
-class Class_10A6BD80
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7(int A);
-
-    bool FUN_10a6bd80(int A, Class_10A6BD80_Param* B);
 };
 
 // FUNCTION: 0x10A6B770 ?FUN_10a6b770@Class_10A6B770@@QAEXAAVFArchive@@@Z

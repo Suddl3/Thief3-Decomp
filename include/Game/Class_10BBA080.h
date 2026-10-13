@@ -4,6 +4,8 @@
 #define GAME_CLASS_10BBA080_H
 
 class Class_1098E330;
+class Class_10BC9D40;
+class Class_10BE3FF0;
 class Class_10DBD510;
 
 class Class_10BBA080
@@ -13,6 +15,8 @@ public:
     int FUN_10bba080(Class_1098E330* Obj);
     float GetRandomInRange();
     bool RollChance();
+    Class_10BE3FF0* FUN_10bb89d0();
+    Class_10BC9D40* GetCurrent();
 
     char Unknown00[8];
     Class_10DBD510* Unknown08;

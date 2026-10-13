@@ -9,10 +9,10 @@ public:
     virtual ~Class_10A66110();
 };
 
-class Class_10A66190 : public Class_10A66110
+class cBorderWindow : public Class_10A66110
 {
 public:
-    virtual ~Class_10A66190();
+    virtual ~cBorderWindow();
 
     void FUN_10a66190();
 
@@ -24,6 +24,6 @@ public:
 };
 
 // FUNCTION: 0x10A66190 ??1Class_10A66190@@UAE@XZ
-Class_10A66190::~Class_10A66190()
+cBorderWindow::~cBorderWindow()
 {
 }

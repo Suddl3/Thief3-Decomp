@@ -13,6 +13,7 @@ public:
     bool FUN_10bf1c40();
     float FUN_10bef370();
     bool FUN_10bf0ea0(Struct_10BA91E0* Out, int Id, bool Flag);
+    bool FUN_10bef470();
 
     char Unknown00[4];
     Class_10BF1C40_Unknown04* Unknown04;

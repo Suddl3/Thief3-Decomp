@@ -1,8 +1,8 @@
 // Game/Unsorted_1091B5E0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/cString.h"
 #include "Game/Class_1091B480.h"
+#include "Game/Class_1091B480_Node.h"
 
 unsigned int HashBytes(const void* Data, int Length);
 
@@ -12,15 +12,6 @@ class Class_1091C710_Field18
 public:
     virtual void Virtual0(int* Key, const void** Data, int* Length);
     virtual int Virtual1(int* Key, const cString& Other);
-};
-
-// A chained hash table's entry: the key first, Next at +0x20.
-struct Class_1091B480_Node
-{
-    cString Key;
-    int Value;
-    char Unknown08[0x18];
-    Class_1091B480_Node* Next;
 };
 
 // The hash table of Class_1091B480 with an int key hasher at +0x18.

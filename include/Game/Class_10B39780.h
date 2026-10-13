@@ -5,12 +5,13 @@
 
 class Class_Field0c_D;
 
-class Class_10B39780 {
+class Class_10B39780
+{
 public:
+    void FUN_10b39780();
+
     char Unknown00[0xc];
     Class_Field0c_D* Unknown0c;
-
-    void FUN_10b39780();
 };
 
 #endif // GAME_CLASS_10B39780_H

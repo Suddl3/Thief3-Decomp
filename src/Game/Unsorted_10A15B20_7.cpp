@@ -1,27 +1,13 @@
 // Game/Unsorted_10A15B20_7.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10A15B20_Unknown14.h"
+#include "Game/Class_10A15B20_Unknown18.h"
 
 class Class_10A15B20_Unknown14;
 
 class Class_10A15B20_Unknown18;
 
 unsigned int HashBytes(const void* Data, int Length);
-
-class Class_10A15B20_Unknown18
-{
-public:
-    virtual void Virtual0(int* Key, const void** Data, int* Length);
-    virtual int Virtual1(int* Key, Class_10A15B20_Unknown14* Node);
-};
-
-class Class_10A15B20_Unknown14
-{
-public:
-    char Unknown00[0x4];
-    int Unknown04;
-    int Unknown08;
-    Class_10A15B20_Unknown14* Next;
-};
 
 // Copied from include/Game/Class_10A15B20.h with the fields this method reads added in place of its pad.
 class Class_10A15B20

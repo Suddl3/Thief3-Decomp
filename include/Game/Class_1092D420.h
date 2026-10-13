@@ -12,6 +12,7 @@ public:
     Class_1092D420* Initialize();
     bool Release();
     void FUN_1092d350(int A, int B);
+    bool Open(const char* A1, int A2, int A3, int A4, int A5, int A6);
 };
 
 #endif // GAME_CLASS_1092D420_H

@@ -1,10 +1,10 @@
 // Game/Unsorted_10A121A0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
 #include "Game/cString.h"
 #include "Game/Class_10970890.h"
 #include "Engine/EngineClasses.h"
+#include "Game/Class_109709F0.h"
 
 extern const char DAT_10e4a3c0[];
 
@@ -34,16 +34,6 @@ public:
     virtual void Virtual20();
     virtual int Virtual21();
     virtual cString& Virtual22(int Index);
-};
-
-class Class_109709F0
-{
-public:
-    Class_109709F0();
-    ~Class_109709F0();
-
-    FString Unknown00;
-    FString Unknown0C;
 };
 
 class Class_1098E330 : public AActor

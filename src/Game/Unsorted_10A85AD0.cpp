@@ -1,8 +1,8 @@
 // Game/Unsorted_10A85AD0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Object_10A858C0.h"
+#include "Game/Class_10A85AD0.h"
 
 Class_10905A90_Member* GetAllocator();
 
@@ -21,14 +21,6 @@ void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 class Class_10A854C0;
 
 extern Class_10A854C0* DAT_10f3a198;
-
-class Class_10A85AD0
-{
-public:
-    Class_10A85AD0();
-
-    char Unknown00[0x58];
-};
 
 class Class_10E6C390;
 

@@ -2,13 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/PlayerStateController.h"
 #include "Game/Class_10B38DE0.h"
-
-struct Struct_10B38DE0_Vec
-{
-    float Unknown00;
-    float Unknown04;
-    float Unknown08;
-};
+#include "Game/Struct_10B38DE0_Vec.h"
 
 class Class_10B38DE0_Result
 {

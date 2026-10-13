@@ -1,9 +1,9 @@
 // Game/Unsorted_10B7C200.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10D9B090.h"
 #include "Game/Class_10D9FEE0.h"
 #include "Game/Class_10905A90_Member.h"
+#include "Game/Class_10E894C8.h"
 
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 
@@ -14,13 +14,6 @@ Class_10905A90_Member* GetAllocator();
 Class_10D9B090* FUN_10d9dcb0();
 
 class Object_10B8B420;
-
-class Class_10E894C8
-{
-public:
-    void FUN_10da0220(int A);
-    void FUN_10b8b420(Object_10B8B420* Target);
-};
 
 class Class_10E89540
 {

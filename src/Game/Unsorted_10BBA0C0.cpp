@@ -1,51 +1,12 @@
 // Game/Unsorted_10BBA0C0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10C7D570.h"
 #include "Game/Class_10FF667C.h"
 #include "Game/Class_10BAA6F0.h"
 #include "Game/Class_10BB8300.h"
-
-// The object passed to the method: its slot 34 (+0x88) is tested as an int.
-class Class_10BAA6B0_Param
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8();
-    virtual void Virtual9();
-    virtual void Virtual10();
-    virtual void Virtual11();
-    virtual void Virtual12();
-    virtual void Virtual13();
-    virtual void Virtual14();
-    virtual void Virtual15();
-    virtual void Virtual16();
-    virtual void Virtual17();
-    virtual void Virtual18();
-    virtual void Virtual19();
-    virtual void Virtual20();
-    virtual void Virtual21();
-    virtual void Virtual22();
-    virtual void Virtual23();
-    virtual void Virtual24();
-    virtual void Virtual25();
-    virtual void Virtual26();
-    virtual void Virtual27();
-    virtual void Virtual28();
-    virtual void Virtual29();
-    virtual void Virtual30();
-    virtual void Virtual31();
-    virtual void Virtual32();
-    virtual void Virtual33();
-    virtual int Virtual34();
-};
+#include "Game/Class_10B9BDA0_Member.h"
+#include "Game/Class_10BAA6B0_Param.h"
+#include "Game/Class_10BBA0C0.h"
 
 // Class_10BAC050 copied whole from include/Game/Class_10BAC050.h, with FUN_10bac070 as its call site shows it.
 class Class_10BAC050 : public Class_10C7D570
@@ -81,19 +42,6 @@ public:
     int Unknown2DC;
 };
 
-// Class_10B9BDA0_Member as the other units declare it: DAT_10ff667c->Unknown14 is one of these.
-class Class_10B9BDA0_Member
-{
-public:
-    virtual void F0() = 0;
-    virtual void F1() = 0;
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual bool Virtual6();
-};
-
 class Class_10BABED0;
 
 Class_10BABED0* FUN_10baa6b0(Class_10BAA6B0_Param* A);
@@ -105,16 +53,6 @@ bool FUN_10c00680(void* A);
 extern Class_10FF667C* DAT_10ff667c;
 
 extern float DAT_10eafbdc;
-
-// The placeholder class of the method's this: a method that reads ecx at entry.
-class Class_10BBA0C0
-{
-public:
-    bool FUN_10bba0c0(Class_10BAA6B0_Param* A);
-
-    char Unknown00[8];
-    Class_10BAC050* Unknown08;
-};
 
 // FUNCTION: 0x10BBA0C0 ?FUN_10bba0c0@Class_10BBA0C0@@QAE_NPAVClass_10BAA6B0_Param@@@Z
 bool Class_10BBA0C0::FUN_10bba0c0(Class_10BAA6B0_Param* A)

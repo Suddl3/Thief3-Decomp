@@ -102,11 +102,11 @@ public:
     void** Unknown08;
 };
 
-class Class_10C07690
+class Class_10E97B68
 {
 public:
     void AddIfMissing(Class_10C07690Arg* A, int B);
-    bool FUN_10c06ff0(Class_10C07690Arg* A, Class_10C07690** Local, Class_10C07690Arg** Key);
+    bool FUN_10c06ff0(Class_10C07690Arg* A, Class_10E97B68** Local, Class_10C07690Arg** Key);
 
     int Unknown00;
     int Unknown04;
@@ -136,11 +136,11 @@ public:
     unsigned int UnknownA4;
 };
 
-// FUNCTION: 0x10C07690 ?AddIfMissing@Class_10C07690@@QAEXPAVClass_10C07690Arg@@H@Z
-void Class_10C07690::AddIfMissing(Class_10C07690Arg* A, int B)
+// FUNCTION: 0x10C07690 ?AddIfMissing@Class_10E97B68@@QAEXPAVClass_10C07690Arg@@H@Z
+void Class_10E97B68::AddIfMissing(Class_10C07690Arg* A, int B)
 {
     Class_10C07690Arg* Obj = A;
-    Class_10C07690* Local;
+    Class_10E97B68* Local;
     if (FUN_10c06ff0(Obj, &Local, &A))
         return;
     int Kind = Obj->Virtual85();

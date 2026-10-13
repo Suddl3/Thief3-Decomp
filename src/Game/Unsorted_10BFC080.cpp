@@ -1,5 +1,6 @@
 // Game/Unsorted_10BFC080.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10BFC110.h"
 
 class Class_10C08940;
 
@@ -26,18 +27,6 @@ public:
 
     Class_10C08940* Unknown04;
     int Unknown08;
-};
-
-class Class_10BFC110
-{
-public:
-    Class_10978090* FindBestFor(Class_10C08940* Owner);
-
-    char Unknown00[8];
-    int Unknown08;
-    char Unknown0C[4];
-    Class_10978090** Unknown10;
-    Class_10978090* Unknown14;
 };
 
 // FUNCTION: 0x10BFC110 ?FindBestFor@Class_10BFC110@@QAEPAVClass_10978090@@PAVClass_10C08940@@@Z

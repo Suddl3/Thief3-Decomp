@@ -2,14 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_1091CCB0.h"
 #include "Game/Class_10941AC0.h"
-
-class Class_109415F0
-{
-public:
-    void FUN_109415f0();
-
-    char Unknown00[0x44];
-};
+#include "Game/Class_109415F0.h"
 
 // FUNCTION: 0x10941AC0 ?Reset@Class_10941AC0@@QAEXXZ
 void Class_10941AC0::Reset()

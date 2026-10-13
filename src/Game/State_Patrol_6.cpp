@@ -1,33 +1,17 @@
 // Game/State_Patrol_6.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10BC4160.h"
 #include "Game/Class_10BECF00.h"
 #include "Game/Class_10BED1C0.h"
 #include "Game/Class_10BB8070.h"
 #include "Game/Class_10AA82D0.h"
+#include "Game/cRandomInterval.h"
 
 class Object_10BE9860;
 
 struct Struct_10BC4240_Param;
 
 class Class_10DBD510;
-
-class cRandomInterval
-{
-public:
-    void RollInterval();
-    void StartInterval();
-    void FUN_10bb7ff0();
-
-    char Unknown00[8];
-    Class_10DBD510* m_Schema;
-    char Unknown0C[0x28C];
-    float m_Interval;
-    float m_Roll;
-    char Pad2A0[0x24];
-    float m_EndTime;
-};
 
 class Class_10BF7F90 : public Class_10AA82D0
 {

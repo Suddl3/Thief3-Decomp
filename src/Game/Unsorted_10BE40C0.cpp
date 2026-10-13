@@ -8,12 +8,7 @@
 #include "Game/Class_10BFF280.h"
 #include "Game/Class_10DBD510.h"
 #include "Game/Class_10FF667C.h"
-
-class Class_10C08590
-{
-public:
-    bool FUN_10c08590();
-};
+#include "Game/Class_10C08590.h"
 
 extern Class_10FF667C* DAT_10ff667c;
 

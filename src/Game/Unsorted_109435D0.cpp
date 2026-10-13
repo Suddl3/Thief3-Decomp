@@ -3,11 +3,7 @@
 #include "Game/Class_109435D0.h"
 #include "Game/Class_10943600.h"
 #include "Game/Item_10943600.h"
-
-struct Struct_109435D0
-{
-    char Unknown00[0x30];
-};
+#include "Game/Struct_109435D0.h"
 
 // FUNCTION: 0x109435D0 ?Add@Class_109435D0@@QAEHABUStruct_109435D0@@@Z
 int Class_109435D0::Add(const Struct_109435D0& Item)

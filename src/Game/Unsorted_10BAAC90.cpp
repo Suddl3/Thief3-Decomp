@@ -1,18 +1,9 @@
 // Game/Unsorted_10BAAC90.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/cIntArray.h"
+#include "Game/Class_10BABA40.h"
 
 extern "C" void* memmove(void* Dest, const void* Src, unsigned Count);
-
-class Class_10BABA40
-{
-public:
-    void RemoveItem(int Item);
-
-    char Unknown00[0xD8];
-    cIntArray UnknownD8;
-};
 
 // FUNCTION: 0x10BABA40 ?RemoveItem@Class_10BABA40@@QAEXH@Z
 void Class_10BABA40::RemoveItem(int Item)

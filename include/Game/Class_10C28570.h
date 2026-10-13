@@ -3,16 +3,24 @@
 #ifndef GAME_CLASS_10C28570_H
 #define GAME_CLASS_10C28570_H
 
+class Class_10BBB410;
+class Class_10E9925C;
+
 class Class_10C28570
 {
 public:
     void Update();
     void FUN_10c283f0();
 
-    char Unknown00[8];
+    Class_10BBB410* Unknown00;
+    char Unknown04[4];
     float m_StartTime;
     char Unknown0C[4];
     float m_Duration;
+    char Unknown14[0xC];
+    Class_10E9925C* Unknown20;
+    Class_10E9925C* Unknown24;
+    Class_10E9925C* Unknown28;
 };
 
 #endif // GAME_CLASS_10C28570_H

@@ -1,5 +1,6 @@
 // Game/Unsorted_10AB8FB0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10AB8FB0.h"
 
 extern "C" void* memmove(void* Dest, const void* Src, unsigned Count);
 
@@ -20,16 +21,6 @@ public:
     int Unknown24;
     int Unknown28;
     int Unknown2C;
-};
-
-class Class_10AB8FB0
-{
-public:
-    void MoveRange(int From, int To, int Count);
-
-    int Unknown00;
-    int Unknown04;
-    Class_10AB8BE0* Unknown08;
 };
 
 // FUNCTION: 0x10AB8FB0 ?MoveRange@Class_10AB8FB0@@QAEXHHH@Z

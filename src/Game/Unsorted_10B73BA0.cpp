@@ -83,7 +83,7 @@ class Class_10B73BA0_Unknown1CC;
 
 void __stdcall FUN_10b78080(int A);
 
-class Class_10B73BA0
+class cT3OptionsWindow
 {
 public:
     void FUN_10b73ba0(int A);
@@ -335,8 +335,8 @@ public:
     int Unknown12C;
 };
 
-// FUNCTION: 0x10B73BA0 ?FUN_10b73ba0@Class_10B73BA0@@QAEXH@Z
-void Class_10B73BA0::FUN_10b73ba0(int A)
+// FUNCTION: 0x10B73BA0 ?FUN_10b73ba0@cT3OptionsWindow@@QAEXH@Z
+void cT3OptionsWindow::FUN_10b73ba0(int A)
 {
     FUN_10b78080(A);
     if (Unknown1C8 && Unknown1C8->Unknown1A4)

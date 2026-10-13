@@ -1,26 +1,14 @@
 // Game/State_PatrolLook_4.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10AA82D0.h"
+#include "Game/Class_10BB8070.h"
 
 class Class_10B39870;
 
 class Class_10BF7F90;
 
-class Class_10AA82D0
-{
-public:
-    Class_10B39870* GetLinkedObject();
-};
-
 class Class_10BF7F90 : public Class_10AA82D0
 {
-};
-
-class Class_10BB8070
-{
-public:
-    bool FUN_10bb8070();
-    void FUN_10bb7ff0();
-    void RollInterval();
 };
 
 class Class_10BC4160

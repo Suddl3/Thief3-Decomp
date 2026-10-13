@@ -4,6 +4,7 @@
 #define GAME_CLASS_10C08DE0_H
 
 class Class_10BAA6B0_Param;
+struct Struct_10C09090;
 
 class Class_10C08DE0
 {
@@ -11,7 +12,10 @@ public:
     void FUN_10c08de0();
     void FUN_10c08d60();
 
-    char Unknown00[0x14];
+    char Unknown00[8];
+    int Unknown08;
+    char Unknown0C[4];
+    Struct_10C09090* Unknown10;
     int m_Count;
     int Unknown18;
     Class_10BAA6B0_Param** m_Params;

@@ -14,14 +14,35 @@ public:
     void Rehash(int Size);
     unsigned int GetBucketIndex(const int& Key);
     bool Remove(const int& Key);
+    bool FUN_10c01000(const int& Key, int* Value);
 
-    int m_Collisions;
-    int m_Count;
+    union
+    {
+        int m_Collisions;
+        int Unknown00;
+    };
+    union
+    {
+        int m_Count;
+        int Unknown04;
+    };
     int m_BucketBits;
-    int m_BucketCount;
-    bool m_NoResize;
+    union
+    {
+        int m_BucketCount;
+        int Unknown0C;
+    };
+    union
+    {
+        bool m_NoResize;
+        bool Unknown10;
+    };
     char Pad11[0x3];
-    Class_10C00F60_Node** m_Buckets;
+    union
+    {
+        Class_10C00F60_Node** m_Buckets;
+        Class_10C00F60_Node** Unknown14;
+    };
     Class_10C00F60_Field18 m_KeyCompare;
 };
 

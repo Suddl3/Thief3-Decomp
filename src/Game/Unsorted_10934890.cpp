@@ -4,6 +4,7 @@
 #include "Game/cD3DStateCache.h"
 #include "Game/Class_10E49EE0_Member.h"
 #include "Game/cD3DDynamicVertexBuffer.h"
+#include "Game/Class_10934990.h"
 
 class Class_10E49EE0
 {
@@ -29,15 +30,6 @@ public:
     virtual void __stdcall Virtual0();
     virtual void __stdcall Virtual1();
     virtual void __stdcall Virtual2();
-};
-
-class Class_10934990
-{
-public:
-    int FUN_10934990(int* Out, int B, int C);
-
-    char Unknown00[0x14];
-    unsigned char Unknown14;
 };
 
 class Class_10E49D44

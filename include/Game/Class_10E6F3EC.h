@@ -3,10 +3,24 @@
 #ifndef GAME_CLASS_10E6F3EC_H
 #define GAME_CLASS_10E6F3EC_H
 
+class ADifficultyInfo;
+class Class_10AB8470;
+class UObject;
+
 class Class_10E6F3EC
 {
 public:
+    virtual void FUN_10ab8470(int Key, UObject* Obj, Class_10AB8470* Arg, int Unused);
+
     void FUN_10ab72d0();
+    void FUN_10ab7530();
+    void FUN_10ab70b0();
+    void FUN_10ab7710();
+    void FUN_10ab8050(bool A);
+
+    ADifficultyInfo* Unknown04;
+    bool Unknown08;
+    char Pad09[0x3];
 };
 
 #endif // GAME_CLASS_10E6F3EC_H

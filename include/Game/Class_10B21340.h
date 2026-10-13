@@ -7,13 +7,16 @@ class Class_10B21340
 {
 public:
     void FUN_10b21340();
+    int FUN_1098e330(int Id, int* Out);
 
     char Unknown00[0x400];
     int Unknown400;
     char Unknown404[0x3C];
     int Unknown440;
     int Unknown444;
-    char Unknown448[0x1C];
+    char Unknown448[0xC];
+    float Unknown454;
+    char Unknown458[0xC];
     int Unknown464;
 };
 

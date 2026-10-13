@@ -1,19 +1,10 @@
 // Game/Unsorted_10A19400.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/cIntArray.h"
 #include "Game/Class_10A4DD60.h"
+#include "Game/Class_10A19400.h"
 
 Class_10A4DD60* __stdcall FUN_10a4f900();
-
-class Class_10A19400
-{
-public:
-    void FUN_10a19400(int Item, int Mode);
-
-    char Unknown00[0x320];
-    cIntArray Unknown320[0x40];
-};
 
 // FUNCTION: 0x10A19400 ?FUN_10a19400@Class_10A19400@@QAEXHH@Z
 void Class_10A19400::FUN_10a19400(int Item, int Mode)

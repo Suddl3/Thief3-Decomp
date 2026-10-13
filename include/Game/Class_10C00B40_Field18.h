@@ -3,11 +3,11 @@
 #ifndef GAME_CLASS_10C00B40_FIELD18_H
 #define GAME_CLASS_10C00B40_FIELD18_H
 
-// The table's key hasher: slot 0 gives the bytes HashBytes hashes.
 class Class_10C00B40_Field18
 {
 public:
     virtual void Virtual0(const __int64& Key, const void** Data, int* Length);
+    virtual int Virtual1(const __int64& A, const __int64& B);
 };
 
 #endif // GAME_CLASS_10C00B40_FIELD18_H

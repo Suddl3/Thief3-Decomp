@@ -1,5 +1,7 @@
 // Game/Unsorted_1094E4D0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10905A90_Member.h"
+#include "Game/Class_1094E530.h"
 
 // Declarations first.
 struct D3DXMATRIX;
@@ -126,21 +128,6 @@ extern IDirect3DDevice8* GDirect3DDevice8;
 
 extern int DAT_10efefbc;
 
-class Class_10905A90_Member
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8(int A, int B);
-    virtual void Virtual9();
-};
-
 Class_10905A90_Member* GetAllocator();
 
 struct Struct_1094E530
@@ -161,17 +148,6 @@ class Class_1094E530_Unknown108
 public:
     char Unknown00[0x10];
     Struct_1094E530_Slot Slots[1];
-};
-
-class Class_1094E530
-{
-public:
-    bool FUN_1094e530(int A, int B, int C, int D);
-
-    char Unknown00[0x108];
-    Class_1094E530_Unknown108* Unknown108;
-    char Unknown10C[0x54];
-    int Unknown160;
 };
 
 // FUNCTION: 0x1094E530 ?FUN_1094e530@Class_1094E530@@QAE_NHHHH@Z

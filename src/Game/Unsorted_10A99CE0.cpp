@@ -147,7 +147,7 @@ public:
     virtual Class_10AAB5C0* Virtual4(int A);
 };
 
-class Class_10A99F80
+class Class_10E6D0F8
 {
 public:
     void FUN_10a99ce0(int A, Class_10A73EF0_Object* B, int C, Class_10AAB5C0* D, Class_10AAB5C0* E, Class_10AAB5C0* F);
@@ -162,8 +162,8 @@ UClass* FUN_10af1d40(const char* A);
 
 void FUN_10aef840();
 
-// FUNCTION: 0x10A99F80 ?FUN_10a99f80@Class_10A99F80@@QAEHHPAVClass_10A99F80_Param@@@Z
-int Class_10A99F80::FUN_10a99f80(int A, Class_10A99F80_Param* B)
+// FUNCTION: 0x10A99F80 ?FUN_10a99f80@Class_10E6D0F8@@QAEHHPAVClass_10A99F80_Param@@@Z
+int Class_10E6D0F8::FUN_10a99f80(int A, Class_10A99F80_Param* B)
 {
     Class_10AAB5C0* V = B->Virtual4(0);
     Class_10A73EF0_Object* Obj = FUN_10af3470()->FUN_10af33e0(V->GetUnknown08());

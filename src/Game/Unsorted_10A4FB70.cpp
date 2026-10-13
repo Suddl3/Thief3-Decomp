@@ -1,16 +1,12 @@
 // Game/Unsorted_10A4FB70.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/cString.h"
+#include "Game/Class_10A4DFD0.h"
+#include "Game/Struct_10F3A0B4.h"
 
 int appStricmp(const char* A, const char* B);
 
 extern cString DAT_10f3a0b4;
-
-struct Struct_10F3A0B4
-{
-    int Unknown00;
-};
 
 class Class_10A4FB00_Result;
 
@@ -19,12 +15,6 @@ Class_10A4FB00_Result* FUN_10a4df70(cString& A);
 void FUN_10a4f840(cString& A);
 
 void FUN_10a4fb00(cString& A, int B);
-
-class Class_10A4DFD0
-{
-public:
-    void FUN_10a4e130();
-};
 
 Class_10A4DFD0* FUN_10a4f900();
 

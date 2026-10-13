@@ -5,13 +5,26 @@
 
 #include "Game/cIntArray.h"
 
+class Class_10EC0E20;
+
 class Class_10B47C50
 {
 public:
     void FUN_10b47b20(int A, float B, float C, int D, int E, bool F, bool G, float H);
     void PlayLastQueued();
 
-    char Unknown00[0x4C];
+    char Unknown00[0x8];
+    Class_10EC0E20* Unknown08;
+    Class_10EC0E20* Unknown0C;
+    char Pad10[0x4];
+    int Unknown14;
+    float Unknown18;
+    char Pad1C[0x1C];
+    int Unknown38;
+    int Unknown3C;
+    float Unknown40;
+    float Unknown44;
+    char Pad48[0x4];
     cIntArray Unknown4C;
 };
 

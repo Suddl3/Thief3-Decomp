@@ -12,6 +12,8 @@ class Class_10E991C0
 public:
     virtual void Serialize(FArchive& Ar);
 
+    Class_10E991C0() {}
+
     FVector Unknown04;
     int Unknown10;
     int Unknown14;

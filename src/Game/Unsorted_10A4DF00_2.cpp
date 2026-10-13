@@ -1,23 +1,7 @@
 // Game/Unsorted_10A4DF00_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-struct Struct_10A4DF00
-{
-    int Count;
-    int Unknown04;
-    int* Values;
-};
-
-class Class_10A4DF00
-{
-public:
-    int FUN_10a4df00(int Index);
-
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    Struct_10A4DF00 Entries[0x42];
-};
+#include "Game/Class_10A4DF00.h"
+#include "Game/Struct_10A4DF00.h"
 
 // FUNCTION: 0x10A4DF00 ?FUN_10a4df00@Class_10A4DF00@@QAEHH@Z
 int Class_10A4DF00::FUN_10a4df00(int Index)

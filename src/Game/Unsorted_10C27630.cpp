@@ -1,8 +1,8 @@
 // Game/Unsorted_10C27630.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/cIntArray.h"
 #include "Game/Class_10AA82C0.h"
+#include "Game/Class_10C27630.h"
 
 class Class_10C27630_Member
 {
@@ -15,14 +15,6 @@ struct Struct_10C27630
     int Unknown00;
     char Unknown04[4];
     Class_10C27630_Member** Unknown08;
-};
-
-class Class_10C27630
-{
-public:
-    char Unknown00[0x14];
-    Class_10AA82C0* Unknown14;
-    void FUN_10c27630(cIntArray* Dst);
 };
 
 // FUNCTION: 0x10C27630 ?FUN_10c27630@Class_10C27630@@QAEXPAVcIntArray@@@Z

@@ -1,11 +1,11 @@
 // Game/Unsorted_10A141D0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10A151A0.h"
 #include "Game/Class_1090FD40.h"
 #include <string.h>
 #include "Game/cString.h"
+#include "Game/Class_10A14270.h"
 
 class cIntArray
 {
@@ -74,17 +74,6 @@ public:
     virtual void Virtual27();
     virtual void Virtual28();
     virtual void Virtual29(int A);
-};
-
-class Class_10A14270
-{
-public:
-    int FUN_10a14270(int A, const char** Name);
-
-    char Unknown00[0x8];
-    int Unknown08;
-    char Unknown0C[0x4];
-    Class_10A14270_Unknown10** Unknown10;
 };
 
 // FUNCTION: 0x10A14270 ?FUN_10a14270@Class_10A14270@@QAEHHPAPBD@Z

@@ -1,16 +1,8 @@
 // Game/cDelayedDeleter_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10A70B80.h"
 #include "Game/Struct_10A70DF0.h"
-
-class Class_10A70DF0_Obj
-{
-public:
-    virtual ~Class_10A70DF0_Obj();
-    virtual void Virtual1();
-    virtual int Virtual2();
-};
+#include "Game/Class_10A70DF0_Obj.h"
 
 // Game/cDelayedDeleter.h copied whole, with the array at 0x4 typed as Class_10A70B80 and slot 5 named.
 class cDelayedDeleter

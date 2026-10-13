@@ -63,9 +63,11 @@ Class_10956f50           Class_10956F50                   the same address as Cl
 Class_10957000           Class_10E4AE8C                   0x10957000: slot of 0x10E4AE8C
 Class_109570A0           Class_10E4AE8C                   0x109570A0: stores 0x10E4AE8C
 Class_1095B0A0           cRandom                          named: Linear congruential seed (214013, 2531011); its method draws a random float in a range.
+Class_109E2BD0           cZoneManager                     0x109E2BD0: called on this by 0x109E3060
 Class_109E4860           Class_10E5B7C4                   0x109E4860: slot of 0x10E5B7C4
 Class_109E4FB0           Class_10E5B7C8                   0x109E4FB0: called on this by 0x109E8FB0
 Class_109E5000           Class_10E5B7C8                   0x109E5000: called on this by 0x109E87F0
+Class_109E50F0           Class_10E5B7C8                   0x109E50F0: called on this by 0x109E70E0
 Class_109E5180           Class_10E5B7C8                   0x109E5180: called on this by 0x109E70E0
 Class_109E55C0           Class_10E5B7C8                   0x109E55C0: called on this by 0x109E70E0
 Class_109E6520           cStringIntHashTable              named: Same table as Class_10A250D0 with const int& values: Insert(const cString&, const int&) and Remove by cString.
@@ -73,9 +75,11 @@ Class_109a0310           Class_109A0310                   the same address as Cl
 Class_109a0390           Class_109A0390                   the same address as Class_109A0390, in capitals
 Class_109a0740           Class_109A0740                   the same address as Class_109A0740, in capitals
 Class_109a0e60           Class_109A0E60                   the same address as Class_109A0E60, in capitals
+Class_10A0FFD0           Class_10E5D42C                   0x10A0FFD0: slot of 0x10E5D42C
 Class_10A12DC0           Class_10E5D4B8                   0x10A12DC0: slot of 0x10E5D4B8
 Class_10A12F50           Class_10E5D478                   0x10A12F50: stores 0x10E5D478
 Class_10A13BC0           cConversationManager             0x10A13BC0: called on this by 0x10A14400
+Class_10A14270           cConversationManager             0x10A14270: slot of 0x10E5D548
 Class_10A18E50           Class_10E5D70C                   0x10A18E50: slot of 0x10E5D70C
 Class_10A1F950           Class_10E65590                   0x10A1F950: called on this by 0x10A1FA00
 Class_10A2C2F0           cBoneAimController               named: Xbox twin BoneAimController.cpp names the class cBoneAimController; entries hold aim angles (IsAngleBelow).
@@ -85,6 +89,7 @@ Class_10A32270           cByteArray                       named: SetCount memset
 Class_10A32370           cRefArray                        named: Append AddRefs (Virtual1) the new element and releases (Virtual2) the replaced one.
 Class_10A33ED0           Class_10E9CD18                   0x10A33ED0: slot of 0x10E9CD18
 Class_10A345C0           cInt64HashTable                  named: Hash table keyed by __int64 with int values; Insert and InsertOrAssign index m_Buckets.
+Class_10A34B90           cInt64HashTable                  0x10A34810: called on this by 0x10A34420
 Class_10A39E70           Class_10E666E0                   0x10A39E70: stores 0x10E666E0
 Class_10A3A020           Class_10E66718                   0x10A3A020: slot of 0x10E66718
 Class_10A3A1D0           Class_10E66718                   0x10A3A1D0: slot of 0x10E66718
@@ -94,6 +99,7 @@ Class_10A3A9C0           Class_10E66718                   0x10A3A9C0: slot of 0x
 Class_10A3AC50           Class_10E66700                   0x10A3AC50: slot of 0x10E667AC
 Class_10A4D340           Class_10E6798C                   0x10A4D340: stores 0x10E6798C
 Class_10A4D400           Class_10E679BC                   0x10A4D400: stores 0x10E679BC
+Class_10A52EE0           cHUDLightGem                     0x10A52EE0: called on this by 0x10B55030
 Class_10A54CB0           cMovieSubtitles                  0x10A54CB0: called on this by 0x10B31580
 Class_10A556F0           Class_10E684A8                   0x10A556F0: called on this by 0x10A55A20
 Class_10A56860           cRadioWindow                     0x10A56480: called on this by 0x10A56730
@@ -102,11 +108,13 @@ Class_10A5B530           cConsoleWindow                   0x10A5B530: called on 
 Class_10A5D420           Class_10E696A8                   0x10A5D420: stores 0x10E696A8
 Class_10A5D460           Class_10E7FB08                   0x10A5D460: called on this by 0x10B27400
 Class_10A5DA00           cIconWindow                      0x10A5DA00: slot of 0x10E698F0
+Class_10A5DF70           cIconWindow                      0x10A5DF70: called on this by 0x10A5DFE0
 Class_10A5E8A0           Class_10E69BA0                   0x10A5E8A0: slot of 0x10E69BA0
 Class_10A5E900           Class_10E69BA0                   0x10A5E900: slot of 0x10E69BA0
 Class_10A626F0           Class_10E6A9F8                   0x10A626F0: slot of 0x10E6A9F8
 Class_10A62BC0           Class_10E6A9F8                   0x10A62BC0: slot of 0x10E6A9F8
 Class_10A63340           cRemovableIntArray               named: Derives from cIntArray; EraseAt moves the items after Index down one place, then calls SetCount with one less.
+Class_10A66190           cBorderWindow                    0x10A66190: stores 0x10E6AEA0
 Class_10A67000           cVolume                          named: cVolumeManager::ContainsPoint takes this class as its volume and calls its point test.
 Class_10A67B70           Class_10E6B594                   0x10A67B70: stores 0x10E6B594
 Class_10A68B70           Class_10E6B5A0                   0x10A68B70: slot of 0x10E6B5A0
@@ -128,6 +136,7 @@ Class_10A84D70           Class_10E6C390                   0x10A84D70: slot of 0x
 Class_10A84E50           Class_10E6C390                   0x10A84E50: slot of 0x10E6C390
 Class_10A84E60           Class_10E6C390                   0x10A84E60: slot of 0x10E6C390
 Class_10A84E90           Class_10E6C390                   0x10A84E90: slot of 0x10E6C390
+Class_10A84F60           Class_10E6C390                   0x10A84F60: slot of 0x10E6C390
 Class_10A850C0           Class_10E6C390                   0x10A850C0: called on this by 0x10A87400
 Class_10A857A0           Class_10E6C390                   0x10A857A0: slot of 0x10E6C390
 Class_10A85890           Class_10E6C390                   0x10A85890: slot of 0x10E6C390
@@ -167,6 +176,7 @@ Class_10A99580           Class_10E6D0EC                   0x10A99580: stores 0x1
 Class_10A99610           Class_10E6D0F8                   0x10A99610: stores 0x10E6D0F8
 Class_10A99620           Class_10E6D104                   0x10A99620: stores 0x10E6D104
 Class_10A99640           Class_10E6D110                   0x10A99640: stores 0x10E6D110
+Class_10A99F80           Class_10E6D0F8                   0x10A99F80: called on this by 0x10A9A020
 Class_10A9AAD0           Class_10E6D11C                   0x10A9AAD0: stores 0x10E6D11C
 Class_10A9AAF0           Class_10E6D128                   0x10A9AAF0: stores 0x10E6D128
 Class_10A9AB10           Class_10E6D134                   0x10A9AB10: stores 0x10E6D134
@@ -239,6 +249,7 @@ Class_10AA8310           Class_10E6D990                   0x10AA8310: slot of 0x
 Class_10AAA050           Class_10E6D9BC                   0x10AAA050: slot of 0x10E6D9BC
 Class_10AAAA60           cConNoteEvent                    0x10AAAA60: slot of 0x10E6D9E8
 Class_10AAB060           cConGoalCompleteEvent            0x10AAB060: called on this by 0x10AAB080
+Class_10AAB5C0           Class_10E6CE28                   0x10A95860: slot of 0x10E6CE28
 Class_10AACF40           cConCameraController             0x10AACF40: slot of 0x10E6DA90
 Class_10AAEB00           XBInputInterface                 0x10AAEB00: slot of 0x10E6DC54
 Class_10AAEB70           XBInputInterface                 0x10AAEB70: slot of 0x10E6DC54
@@ -254,6 +265,7 @@ Class_10ABB900           cHighlightMgr                    0x10ABB900: slot of 0x
 Class_10ABB9D0           Class_10E6F4B4                   0x10ABB9D0: stores 0x10E6F4B4
 Class_10ABF100           cCitySectionManager              named: Singleton accessor's Xbox twin is in CitySectionManager.cpp; its methods read APlayerPawn::CitySectionGoals.
 Class_10AC1490           cT3Camera                        0x10AC1490: slot of 0x10E6F910
+Class_10AC3810           Class_10E6F61C                   0x10AC3810: stores 0x10E6F61C
 Class_10AC67F0           cVertexBufferInfo                0x10AC67F0: slot of 0x10E6F7D4
 Class_10AC6820           cVertexBufferInfo                0x10AC6820: slot of 0x10E6F7D4
 Class_10AC6850           cVertexBufferInfo                0x10AC6850: slot of 0x10E6F7D4
@@ -271,12 +283,14 @@ Class_10AD0AE0           Class_10E708FC                   0x10AD0AE0: stores 0x1
 Class_10AD0AF0           Class_10E70908                   0x10AD0AF0: stores 0x10E70908
 Class_10AD0B00           Class_10E70914                   0x10AD0B00: stores 0x10E70914
 Class_10AF9A90           FNameEntry                       named: String 'FNameEntry::m_Concretes' is the debug name of the field its only method initialises.
+Class_10B11400           Class_10E782A0                   0x10B11400: called on this by 0x10B11CF0
 Class_10B152C0           UT3Game                          0x10B152C0: called on this by 0x10B15300
 Class_10B16C10           Class_10E79228                   0x10B16C10: called on this by 0x10B17810
 Class_10B177C0           Class_10E79228                   0x10B17720: stores 0x10E79228
 Class_10B21250           AGarrett                         0x10B21250: slot of 0x10E78710
 Class_10B215D0           cVector                          named: Three float fields, a three-float constructor and the named Dot: a 3D vector.
 Class_10B22D60           PlayerStateController            named: Xbox string pair 'PlayerStateController: No body was set...' is in HandleBodyCarryNotification, a method of this class.
+Class_10B23EE0           Class_10E7A8E0                   0x10B23EE0: stores 0x10E7A8E0
 Class_10B24D60           Class_10EB79F4                   0x10B24D60: slot of 0x10EB79F4
 Class_10B25D60           cListCursor                      named: Advance and FindNextFromListA/B walk m_Index forward over ListA and ListB entries with Count above zero.
 Class_10B25D90           cListReverseCursor               named: StepBack and FindPrevFromListA/B walk m_Index backward over ListA and ListB entries with Count above zero.
@@ -288,7 +302,7 @@ Class_10B283D0           cT3MainMenuWindow                0x10B283D0: called on 
 Class_10B28420           Class_10E7AD44                   0x10B28420: stores 0x10E7AD44
 Class_10B2A100           cFade                            0x10B2A100: slot of 0x10E80798
 Class_10B2A750           cFade                            0x10B2A510: called on this by 0x10B2A750
-Class_10B2B9D0           Class_10E7FED0                   0x10B2B9D0: slot of 0x10E7FED0
+Class_10B2B9D0           Class_10E7FED0                   0x10B2B880: called on this by 0x10B2B9D0
 Class_10B2BA10           Class_10E80250                   0x10B2BA10: slot of 0x10E80250
 Class_10B2BA60           Class_10E80088                   0x10B2BA60: slot of 0x10E80088
 Class_10B2BD00           Class_10E7B360                   0x10B2BD00: called on this by 0x10B2BCE0
@@ -331,6 +345,7 @@ Class_10B460C0           Class_10E81130                   0x10B460C0: stores 0x1
 Class_10B49250           Class_10E7E5C8                   0x10B49250: slot of 0x10E7E5C8
 Class_10B49D40           Class_10E7E6A0                   0x10B49D40: slot of 0x10E7E6A0
 Class_10B4A2A0           Class_10E7E6A0                   0x10B4A2A0: called on this by 0x10B4B440
+Class_10B4A7D0           Class_10E7E6A0                   0x10B4A7D0: slot of 0x10E7E6A0
 Class_10B4E7A0           Class_10E7EA48                   0x10B4E7A0: called on this by 0x10B4E9D0
 Class_10B53F70           Class_10E81740                   0x10B53F70: stores 0x10E81740
 Class_10B53FA0           Class_10E81740                   0x10B53FA0: stores 0x10E81740
@@ -338,6 +353,7 @@ Class_10B54FE0           Class_10E7F930                   0x10B54FE0: slot of 0x
 Class_10B55000           Class_10E7F930                   0x10B55000: slot of 0x10E7F930
 Class_10B56520           cOptionsWindow                   0x10B45D10: called on this by 0x10B56520
 Class_10B592E0           Class_10E82058                   0x10B592E0: stores 0x10E82058
+Class_10B59730           cT3TabbedWindow                  0x10B79860: slot of 0x10E88900
 Class_10B5A390           Class_10E82688                   0x10B5A570: called on this by 0x10B5A6F0
 Class_10B5A3D0           Class_10E82688                   0x10B5A3D0: called on this by 0x10B5A620
 Class_10B5AB90           Class_10E828B0                   0x10B5AB90: stores 0x10E828B0
@@ -354,8 +370,6 @@ Class_10B61080           Class_10E83E20                   0x10B61080: slot of 0x
 Class_10B61C40           cT3InventoryWindow               0x10B61C40: called on this by 0x10B62B80
 Class_10B61C70           cT3InventoryWindow               0x10B61C70: slot of 0x10E84088
 Class_10B61C90           cT3InventoryWindow               0x10B61C90: slot of 0x10E84088
-Class_10B61CA0           cT3InventoryWindow               0x10B61CA0: called on this by 0x10B62F60
-Class_10B61CE0           cT3InventoryWindow               0x10B61CE0: called on this by 0x10B62B80
 Class_10B61EA0           cT3InventoryWindow               0x10B61EA0: slot of 0x10E84088
 Class_10B61F80           cT3InventoryWindow               0x10B61F80: slot of 0x10E84088
 Class_10B642C0           Class_10E84508                   0x10B642C0: slot of 0x10E84508
@@ -368,6 +382,8 @@ Class_10B671A0           cMissionStatsPane                0x10B671A0: stores 0x1
 Class_10B671D0           cMissionStatsPane                0x10B671D0: slot of 0x10E84D80
 Class_10B67EE0           Class_10E858D0                   0x10B67EE0: slot of 0x10E858D0
 Class_10B69050           Class_10E858D0                   0x10B69050: slot of 0x10E858D0
+Class_10B69680           Class_10E85AD8                   0x10B69680: called on this by 0x10B69930
+Class_10B69930           Class_10E85AD8                   0x10B69930: called on this by 0x10B6B3F0
 Class_10B6B930           cDifficultyPane                  0x10B6B930: stores 0x10E85DE0
 Class_10B6B940           cDifficultyPane                  0x10B6B940: called on this by 0x10B6BE70
 Class_10B6BB80           cDifficultyPane                  0x10B6BB80: slot of 0x10E85DE0
@@ -378,18 +394,21 @@ Class_10B6D990           Class_10E86A28                   0x10B6D990: stores 0x1
 Class_10B6E1B0           Class_10E86DC0                   0x10B6E1B0: called on this by 0x10B6E260
 Class_10B70990           cSmokeySoup                      0x10B70990: slot of 0x10E871D0
 Class_10B70F20           cSmokeySoup                      0x10B70F20: slot of 0x10E871D0
+Class_10B71170           cT3OptionsWindow                 0x10B71170: called on this by 0x10B73D70
 Class_10B71200           cT3OptionsWindow                 0x10B71200: slot of 0x10E873B0
 Class_10B71220           cT3OptionsWindow                 0x10B71220: slot of 0x10E873B0
 Class_10B718F0           cT3OptionsWindow                 0x10B718F0: slot of 0x10E873B0
 Class_10B71A80           cT3OptionsWindow                 0x10B71A80: called on this by 0x10B73CF0
 Class_10B73900           cT3OptionsWindow                 0x10B73900: slot of 0x10E873B0
 Class_10B739C0           cT3OptionsWindow                 0x10B739C0: called on this by 0x10B73BA0
+Class_10B73BA0           cT3OptionsWindow                 0x10B73BA0: slot of 0x10E873B0
 Class_10B73E60           Class_10E876D0                   0x10B73E60: stores 0x10E876D0
 Class_10B73EE0           Class_10E878B8                   0x10B73EE0: slot of 0x10E878B8
 Class_10B73F00           Class_10E878B8                   0x10B73F00: slot of 0x10E878B8
 Class_10B75660           Class_10E87B68                   0x10B75660: slot of 0x10E87B68
 Class_10B76180           Class_10E87F90                   0x10B76180: slot of 0x10E87F90
 Class_10B76310           Class_10E88160                   0x10B76310: stores 0x10E88160
+Class_10B79A30           Class_10E888E4                   0x10B7A320: slot of 0x10E888E4
 Class_10B7AD70           Class_10EC0E20                   0x10B7AC80: slot of 0x10EC0E20
 Class_10B81D10           Class_10E89268                   0x10B81D10: stores 0x10E89268
 Class_10B87900           Class_10E896A8                   0x10B87900: called on this by 0x10B8C6F0
@@ -397,15 +416,19 @@ Class_10B88840           cRagdollBlockData                named: Four chunks and
 Class_10B89070           cRagdollBlockDataManager         named: Name-keyed table (base Class_10C49740); its loader FUN_10b88e80 calls the writer from RagdollBlockDataManager.cpp.
 Class_10B8AB90           Class_10E894C8                   0x10B8AB90: stores 0x10E894C8
 Class_10B8B830           Class_10E895D0                   0x10B8B830: called on this by 0x10B8B9F0
+Class_10B8C290           Class_10E895D0                   0x10B8C290: slot of 0x10E895D0
 Class_10B8C6C0           Class_10E896A8                   0x10B8C6C0: stores 0x10E896A8
 Class_10B8F6D0           Class_10E897F4                   0x10B8F6D0: stores 0x10E897F4
 Class_10B8F6F0           Class_10E89800                   0x10B8F6F0: stores 0x10E89800
 Class_10B8F700           Class_10E8980C                   0x10B8F700: stores 0x10E8980C
 Class_10B8FC80           Class_10E89818                   0x10B8FC80: stores 0x10E89818
 Class_10B8FCA0           Class_10E89824                   0x10B8FCA0: stores 0x10E89824
+Class_10B92330           Class_10E8984C                   0x10B92330: called on this by 0x10B925E0
 Class_10B92690           Class_10E89A10                   0x10B92690: stores 0x10E89A10
+Class_10B9CC00           cStateStack                      0x10B9CC00: called on this by 0x10B9D9C0
 Class_10B9E410           cStateStack                      named: Top() reads the top of m_Stack, PopToBase pops it, and Top() is cast to State_Patrol.
 Class_10B9FBE0           cCharArray                       named: Fields m_Count, m_Capacity, m_Data; Resize reallocates m_Data in 16-byte steps and zero-fills new chars.
+Class_10BA00C0           Class_10E8C008                   0x10BA00C0: called on this by 0x10BA0310
 Class_10BA4230           Class_10E8C728                   0x10BA4230: stores 0x10E8C728
 Class_10BA4290           Class_10E8C734                   0x10BA4290: stores 0x10E8C734
 Class_10BA42F0           Class_10E8C740                   0x10BA42F0: stores 0x10E8C740
@@ -463,10 +486,12 @@ Class_10BD0260           State_PlayAction                 0x10BD0260: slot of 0x
 Class_10BD7EA0           cSampleStats                     0x10BD7EA0: slot of 0x10E93B68
 Class_10BD8460           cSampleStats                     0x10BD8460: slot of 0x10E93B68
 Class_10BD8880           cCombatBase                      0x10BD8880: stores 0x10E93CA0
+Class_10BDB050           cMeleeStrafeTarget               0x10BDB050: called on this by 0x10BDB860
 Class_10BDB310           Class_10E94B20                   0x10BDB310: slot of 0x10E94B20
 Class_10BDB320           Class_10E94B20                   0x10BDB320: slot of 0x10E94B20
 Class_10BDB340           Class_10E94B20                   0x10BDB340: slot of 0x10E94B20
 Class_10BDB390           Class_10E94100                   0x10BDB390: stores 0x10E94100
+Class_10BDB3A0           Class_10E94100                   0x10BDB3A0: called on this by 0x10BDC860
 Class_10BDC290           Class_10E948D8                   0x10BDC290: slot of 0x10E948D8
 Class_10BDEEF0           Class_10E94B20                   0x10BDEEE0: slot of 0x10E94B20
 Class_10BDF8D0           State_MunchCorpse                0x10BDF8D0: stores 0x10E954D0
@@ -484,6 +509,7 @@ Class_10BE45F0           cYellowAlert                     0x10BE45F0: slot of 0x
 Class_10BE4800           cYellowAlert                     0x10BE4800: slot of 0x10E96510
 Class_10BE4980           cYellowAlert                     0x10BE4980: slot of 0x10E96510
 Class_10BE4FD0           Class_10E95F40                   0x10BE4FD0: slot of 0x10E95F40
+Class_10BE5D10           Class_10E960D8                   0x10BE5D10: slot of 0x10E960D8
 Class_10BE5EF0           cYellowAlert                     0x10BE5EF0: stores 0x10E96510
 Class_10BE85B0           Class_10E960D8                   0x10BE85B0: slot of 0x10E960D8
 Class_10BE8710           cYellowAlert                     0x10BE8710: slot of 0x10E96510
@@ -497,15 +523,20 @@ Class_10BF1500           cStateRangedCombat               0x10BF1500: called on 
 Class_10BF2F70           cStateRangedCombat               0x10BF2F70: slot of 0x10E97720
 Class_10BF6B10           cStateMeleeCombat                0x10BF6B10: called on this by 0x10BF6EC0
 Class_10BF6B30           cStateMeleeCombat                0x10BF6B30: called on this by 0x10BF6EC0
+Class_10BF6C70           cStateMeleeCombat                0x10BF6C70: called on this by 0x10BF6EC0
 Class_10BFBD70           cIntArray                        named: Count, capacity in bytes and Data form a growable int array, grown and freed through GetAllocator().
 Class_10C00A60           cIntArray                        0x10C00A60: called on this by 0x10A81B10
+Class_10C00B40           cHashMap                         0x10C00B40: called on this by 0x10C00F60
 Class_10C00F60           cHashMap                         named: Int-keyed chained hash map: Remove unlinks nodes and shrinks buckets; Rehash reinserts them, like Class_10BA1330.
+Class_10C01140           cNodeHashMap                     0x10C01140: called on this by 0x10C012D0
 Class_10C01FC0           cNodeHashMap                     named: Derives Class_10C01140; Clear frees every Class_10C01140_Node chain in its bucket array and Free wraps Clear with the array delete
 Class_10C047F0           AudioController                  0x10C047F0: slot of 0x10E97AF4
 Class_10C05E30           cLineSegment                     named: Constructor stores two endpoints with their X and Y deltas and the slope, FLT_MAX when vertical.
+Class_10C07690           Class_10E97B68                   0x10C06FF0: called on this by 0x10C07960
 Class_10C08880           Class_10E97BB8                   0x10C08880: stores 0x10E97BB8
+Class_10C08960           Class_10E97BC0                   0x10C08F00: stores 0x10E97BC0
 Class_10C08E30           cItemList                        named: Holds Class_10C08E90 m_Items and cIntArray m_ItemIds; AddItem appends a new item then AddUnique records its id
-Class_10C0AA00           Class_10E97BE8                   0x10C0AA00: called on this by 0x10C0AB40
+Class_10C0AA00           Class_10E97BE8                   0x10C09910: called on this by 0x10C0AA00
 Class_10C0B960           cAIManager                       0x10C0B960: slot of 0x10E97C18
 Class_10C0C090           cEntryTable                      named: Owns m_Entries array of Struct_10C0BFC0*; FindEntry looks up by two keys and UpdatePosition stamps time and position into the found entry
 Class_10C12DA0           Class_10E984BC                   0x10C12DA0: slot of 0x10E984BC
@@ -531,9 +562,12 @@ Class_10C2F600           cMotionControllerAnim            0x10C2F600: called on 
 Class_10C2F870           cMotionControllerAnim            0x10C2F870: slot of 0x10E9AC80
 Class_10C2F960           cMotionControllerAnim            0x10C2F960: slot of 0x10E9AC80
 Class_10C306B0           cMotionControllerAnim            0x10C306B0: called on this by 0x10C357D0
+Class_10C30700           cMotionControllerAnim            0x10C30700: called on this by 0x10C33BC0
 Class_10C30DD0           cIntHashTable                    named: Chained hash table from int keys to int values: Insert hashes the key with m_KeyTraits; Rehash resizes the buckets.
 Class_10C311D0           cMotionControllerAnim            0x10C311D0: called on this by 0x10C357D0
+Class_10C31210           cMotionControllerAnim            0x10C31210: called on this by 0x10C357D0
 Class_10C323A0           cIndexedList                     named: Node list with Head, Tail and Count; header: values also indexed by a hash table.
+Class_10C33CE0           cMotionControllerAnim            0x10C33CE0: called on this by 0x10C357D0
 Class_10C35650           cMotionControllerAnim            0x10C35650: slot of 0x10E9AC80
 Class_10C35670           cMotionControllerAnim            0x10C35670: slot of 0x10E9AC80
 Class_10C356A0           cMotionControllerAnim            0x10C356A0: slot of 0x10E9AC80
@@ -806,6 +840,7 @@ Struct_10919b40          Struct_10919B40                  the same address as St
 # rejected: Class_10A4C5F0 Class_10E6FF54 ??1Class_10E6FF54@@QAE@XZ would name 0x10A4C5F0 and 0x10ACB0E0
 # rejected: Class_10A57930 Class_10E68D80 Class_10E68D80 derives from Class_10A57930: one class by the map
 # rejected: Class_10AA83E0 Class_10E6D990 Class_10E6D990 derives from Class_10AA83E0: one class by the map
+# rejected: Class_10AAB170 cConEvent ??1cConEvent@@QAE@XZ would name 0x10AAB170 and 0x10A821A0
 # rejected: Class_10AAF8B0 Class_10E77978 Class_10AAF8B0 derives from Class_10E77978: one class by the map
 # rejected: Class_10AB04A0 Class_10E77978 Class_10AB04A0 derives from Class_10E77978: one class by the map
 # rejected: Class_10ABB300 Class_10E6F47C Class_10E6F47C derives from Class_10ABB300: one class by the map
@@ -813,6 +848,8 @@ Struct_10919b40          Struct_10919B40                  the same address as St
 # rejected: Class_10B32750 Class_10E7E928 Class_10B32750 derives from Class_10B32160: one class by the map
 # rejected: Class_10B3ED20 Class_10E7ED00 Class_10E7ED00 derives from Class_10B3ED20: one class by the map
 # rejected: Class_10B59640 Class_10E82058 Class_10E82058 derives from Class_10B59640: one class by the map
+# rejected: Class_10B61CA0 cT3InventoryWindow ?FindIndex@cT3InventoryWindow@@QAEHXZ would name 0x10B61CE0 and 0x10B61CA0
+# rejected: Class_10B61CE0 cT3InventoryWindow ?FindIndex@cT3InventoryWindow@@QAEHXZ would name 0x10B61CE0 and 0x10B61CA0
 # rejected: Class_10B717E0 Class_10E873B0 Class_10B73C30 derives from Class_10B717E0: one class by the map
 # rejected: Class_10B73810 Class_10E873B0 Class_10E873B0 derives from Class_10B73810: one class by the map
 # rejected: Class_10B73C30 Class_10E873B0 Class_10B73C30 derives from Class_10B717E0: one class by the map

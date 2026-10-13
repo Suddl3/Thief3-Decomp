@@ -9,6 +9,8 @@ class Class_10A7F5A0
 {
 public:
     cIntArray FUN_10a7f5a0(int A, int B);
+
+    char Pad00[0x1];
 };
 
 #endif // GAME_CLASS_10A7F5A0_H

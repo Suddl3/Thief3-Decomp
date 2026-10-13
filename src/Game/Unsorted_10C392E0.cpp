@@ -1,9 +1,9 @@
 // Game/Unsorted_10C392E0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10DC1750.h"
 #include "Game/Class_10DC1750_Result.h"
 #include "Game/Struct_10DC1750_Result_1C.h"
+#include "Game/Class_10C39880.h"
 
 float GetFrameDeltaTime();
 
@@ -61,17 +61,6 @@ public:
     virtual void Virtual37();
     virtual void Virtual38();
     virtual Class_10C39880_Result* Virtual39();
-};
-
-class Class_10C39880
-{
-public:
-    bool FUN_10c39880();
-
-    char Unknown00[0x48];
-    Class_10C39880_Unknown48* Unknown48;
-    char Pad4C[0x90];
-    float UnknownDC;
 };
 
 // FUNCTION: 0x10C39880 ?FUN_10c39880@Class_10C39880@@QAE_NXZ

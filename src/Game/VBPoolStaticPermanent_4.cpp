@@ -1,20 +1,13 @@
 // Game/VBPoolStaticPermanent_4.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_109343B0.h"
 #include "Game/IDirect3DDevice8.h"
 #include "Game/Class_10905A90_Member.h"
+#include "Game/Struct_10933DC0.h"
 
 class IDirect3DVertexBuffer8;
 
 Class_10905A90_Member* GetAllocator();
-
-struct Struct_10933DC0
-{
-    int Unknown00;
-    unsigned int Unknown04;
-    int Unknown08;
-};
 
 class VBPoolStaticPermanent
 {

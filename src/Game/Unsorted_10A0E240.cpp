@@ -5,14 +5,7 @@
 #include "Game/Class_10A0E240.h"
 #include "Game/Class_10A0E3E0.h"
 #include "Game/Class_10AF4BB0.h"
-
-class Class_109709F0
-{
-public:
-    void FUN_109709f0();
-
-    char Unknown00[0x18];
-};
+#include "Game/Class_109709F0.h"
 
 // FUNCTION: 0x10A0E240 ?Remove@Class_10A0E240@@QAEXHH@Z
 void Class_10A0E240::Remove(int Index, int Count)

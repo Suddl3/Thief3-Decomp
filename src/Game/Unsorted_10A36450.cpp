@@ -1,8 +1,8 @@
 // Game/Unsorted_10A36450.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10AAB5C0.h"
 #include "Game/cIntArray.h"
+#include "Game/Struct_10A36570.h"
 
 class cUObjectLinkManager
 {
@@ -32,14 +32,6 @@ class Class_10B82390 : public Class_10C08940
 {
 public:
     int FUN_10b82390(int A, void* B);
-};
-
-struct Struct_10A36570
-{
-    float Unknown00;
-    float Unknown04;
-    float Unknown08;
-    float Unknown0C;
 };
 
 // FUNCTION: 0x10A36570 ?GetVulnerability@@YGPAUStruct_10A36570@@PAU1@HH@Z

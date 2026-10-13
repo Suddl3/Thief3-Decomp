@@ -3,16 +3,9 @@
 #include "Game/Class_10948190.h"
 #include "Game/Class_109475E0.h"
 #include "Game/Class_109480B0.h"
+#include "Game/Class_1095A7C0.h"
 
 void operator delete(void* Ptr);
-
-class Class_1095A7C0
-{
-public:
-    ~Class_1095A7C0();
-
-    char Unknown00[0x24];
-};
 
 class Class_109480B0_Unknown54
 {

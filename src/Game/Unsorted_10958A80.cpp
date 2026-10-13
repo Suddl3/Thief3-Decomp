@@ -1,8 +1,8 @@
 // Game/Unsorted_10958A80.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10958D00.h"
 #include "Game/Class_1096A820.h"
+#include "Game/Class_10958A80.h"
 
 extern "C" void* memcpy(void* Dst, const void* Src, unsigned int Size);
 
@@ -16,16 +16,6 @@ class FVector
 {
 public:
     float X, Y, Z;
-};
-
-class Class_10958A80
-{
-public:
-    int FUN_10958a80(FVector* A);
-
-    FVector* Unknown00;
-    char Unknown04[0x14];
-    int Unknown18;
 };
 
 // FUNCTION: 0x10958A80 ?FUN_10958a80@Class_10958A80@@QAEHPAVFVector@@@Z

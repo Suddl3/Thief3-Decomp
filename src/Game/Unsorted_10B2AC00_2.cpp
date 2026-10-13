@@ -1,18 +1,11 @@
 // Game/Unsorted_10B2AC00_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Config.h"
 
 class Class_10AF7F80
 {
 public:
     const char* FUN_10af7f80();
-};
-
-class Config
-{
-public:
-    static Config* Instance();
-
-    bool GetFloat(const char* Section, const char* Key, float* Value, const char* File);
 };
 
 class Window
@@ -60,7 +53,7 @@ public:
     virtual int Virtual8();
 };
 
-class Class_10A52EE0
+class cHUDLightGem
 {
 public:
     Class_10B2BC90_Unknown* GetItem(int A);
@@ -80,8 +73,8 @@ void Class_10E7FED0::LoadConfig(Class_10AF7F80* File, Class_10AF7F80* Section)
         FadeTime = 2.0f;
 }
 
-// FUNCTION: 0x10B2B6E0 ?FUN_10b2b6e0@Class_10A52EE0@@QAEXXZ
-void Class_10A52EE0::FUN_10b2b6e0()
+// FUNCTION: 0x10B2B6E0 ?FUN_10b2b6e0@cHUDLightGem@@QAEXXZ
+void cHUDLightGem::FUN_10b2b6e0()
 {
     for (int i = 0; i < Count; i++)
     {

@@ -1,18 +1,12 @@
 // Game/Unsorted_10BBB580.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
 #include "Game/Class_10978090.h"
 #include "Game/Class_10BFF240.h"
 #include "Game/Class_10BFF280.h"
 #include "Game/Class_10BFF460.h"
 #include "Game/Class_10C7D570.h"
-
-class Class_10C16C10
-{
-public:
-    void FUN_10c16c10(FVector* A, int B, bool C);
-};
+#include "Game/Class_10C16C10.h"
 
 // Game/Class_10BB9FC0.h copied whole, with the fields at 0xAC and 0x210 named.
 class Class_10BB9FC0

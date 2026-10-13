@@ -7,7 +7,7 @@ struct Struct_10B6E090
     bool Unknown1A4;
 };
 
-class Class_10B59730
+class cT3TabbedWindow
 {
 public:
     virtual void Virtual0();
@@ -137,7 +137,7 @@ public:
     int Unknown150;
 };
 
-class Class_10E86DC0 : public Class_10B59730
+class Class_10E86DC0 : public cT3TabbedWindow
 {
 public:
     virtual void Update(int A);

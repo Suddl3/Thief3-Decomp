@@ -5,6 +5,7 @@
 
 struct Struct_10DC1750_Result_1C
 {
+public:
     int Count;
     char Unknown04[4];
     int* Items;

@@ -1,19 +1,7 @@
 // Game/AAIPathPoint_6.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-struct Struct_10BBEFD0
-{
-    char Unknown00[0x14];
-    int Unknown14;
-    int Unknown18;
-    int Unknown1C;
-};
-
-class Class_10BC1A60
-{
-public:
-    void FUN_10bc1a60(Struct_10BBEFD0* Arg);
-};
+#include "Game/Class_10BC1A60.h"
+#include "Game/Struct_10BBEFD0.h"
 
 class AActor
 {

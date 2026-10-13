@@ -1,9 +1,9 @@
 // Game/Unsorted_10C33C40.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10C49740.h"
 #include "Game/Entry_10C32C30.h"
 #include "Game/Struct_10C32C30.h"
+#include "Game/Class_10C33FC0.h"
 
 class Class_10C33CE0_Unknown08
 {
@@ -28,7 +28,7 @@ public:
     int Unknown08;
 };
 
-class Class_10C33CE0
+class cMotionControllerAnim
 {
 public:
     void FUN_10c33ce0(int A);
@@ -85,19 +85,8 @@ public:
     Class_10C33FC0_Unknown1C Unknown3C;
 };
 
-class Class_10C33FC0
-{
-public:
-    Class_10C33FC0_Unknown08* FUN_10c33fc0(int A);
-
-    char Pad00[0xA8];
-    Class_10C33FC0_UnknownA8* UnknownA8;
-    char PadAC[0x4];
-    Class_10C49740 UnknownB0;
-};
-
-// FUNCTION: 0x10C33CE0 ?FUN_10c33ce0@Class_10C33CE0@@QAEXH@Z
-void Class_10C33CE0::FUN_10c33ce0(int A)
+// FUNCTION: 0x10C33CE0 ?FUN_10c33ce0@cMotionControllerAnim@@QAEXH@Z
+void cMotionControllerAnim::FUN_10c33ce0(int A)
 {
     Entry_10C32C30* Value;
     int Key;

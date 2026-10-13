@@ -3,15 +3,21 @@
 #ifndef GAME_CLASS_10A32BF0_H
 #define GAME_CLASS_10A32BF0_H
 
+class Class_10A32000;
+
 class Class_10A32BF0
 {
 public:
     void SetCount(int Count);
     void Clear();
 
-    int Unknown00;
+    union
+    {
+        int Unknown00;
+        int Count;
+    };
     int m_CapacityBytes;
-    void* m_Data;
+    Class_10A32000* m_Data;
 };
 
 #endif // GAME_CLASS_10A32BF0_H

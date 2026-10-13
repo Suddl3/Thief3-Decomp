@@ -1,32 +1,15 @@
 // Game/Unsorted_10A4F200.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/cString.h"
+#include "Game/Class_10A4F2A0.h"
+#include "Game/Class_10A4FB00_Result.h"
+#include "Game/Struct_10F3A0B4.h"
 
 int appStricmp(const char* A, const char* B);
 
 extern const char DAT_10e47660[];
 
-// The count of the character buffer sits 4 bytes before the text.
-struct Struct_10F3A0B4
-{
-    int Unknown00;
-};
-
 extern cString DAT_10f3a0b4;
-
-class Class_10A4F2A0
-{
-public:
-    void FUN_10a4f2a0(int A);
-};
-
-class Class_10A4FB00_Result
-{
-public:
-    char Unknown00[0x1C];
-    Class_10A4F2A0 Unknown1C;
-};
 
 Class_10A4FB00_Result* FUN_10a4df70(cString& A);
 

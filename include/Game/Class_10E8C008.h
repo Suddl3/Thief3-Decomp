@@ -5,6 +5,7 @@
 
 #include "Game/Class_10C065F0.h"
 #include "Game/Class_10C066A0.h"
+#include "Game/cCharArray.h"
 
 class FArchive;
 
@@ -14,12 +15,19 @@ public:
     virtual void Serialize(FArchive& Ar);
 
     ~Class_10E8C008();
+    Class_10E8C008(FArchive& Ar);
 
-    char Unknown04[0xC];
+    cCharArray Unknown04;
     Class_10C065F0 Unknown10;
-    char Unknown11[0xB];
+    char Pad11[0xb];
     Class_10C066A0 Unknown1C;
-    char Pad1D[0x3];
+    char Pad1D[0xb];
+    cCharArray Unknown28;
+    cCharArray Unknown34;
+    int Unknown40;
+    int Unknown44;
+    int Unknown48;
+    char Pad4C[0x8];
 };
 
 #endif // GAME_CLASS_10E8C008_H

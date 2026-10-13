@@ -3,6 +3,8 @@
 #ifndef GAME_CRANDOMINTERVAL_H
 #define GAME_CRANDOMINTERVAL_H
 
+#include "Game/Class_10BFD210.h"
+
 class Class_10DBD510;
 
 class cRandomInterval
@@ -10,10 +12,15 @@ class cRandomInterval
 public:
     void RollInterval();
     void StartInterval();
+    void FUN_10bb7ff0();
+    bool FUN_10bb8070();
+    void FUN_10bb85b0(unsigned char param);
 
     char Unknown00[8];
     Class_10DBD510* m_Schema;
-    char Unknown0C[0x28C];
+    char Unknown0C[0x24];
+    Class_10BFD210 Unknown30;
+    char Unknown31[0x267];
     float m_Interval;
     float m_Roll;
     char Pad2A0[0x24];

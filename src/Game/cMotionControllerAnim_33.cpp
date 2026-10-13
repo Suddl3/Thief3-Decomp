@@ -1,7 +1,8 @@
 // Game/cMotionControllerAnim_33.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/cIntArray.h"
+#include "Game/Class_109A62E0.h"
+#include "Game/Class_10C356D0_Element.h"
 
 void ReleaseHashTable();
 
@@ -19,21 +20,6 @@ public:
     virtual void Virtual0();
 
     int Unknown04;
-};
-
-class Class_10C356D0_Element
-{
-public:
-    virtual ~Class_10C356D0_Element();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8();
-    virtual void Virtual9();
 };
 
 class Class_10C356D0_Node
@@ -57,15 +43,6 @@ public:
     int Count;
     Class_10C356D0_Node* Head;
     char Pad08[0x8C];
-};
-
-class Class_109A62E0
-{
-public:
-    void FUN_109a62e0(Class_10E7C584* Other);
-
-    char Pad00[0x1C];
-    int Unknown1C;
 };
 
 class cMotionControllerAnim : public Class_10E9AAD0, public Class_10E7C584

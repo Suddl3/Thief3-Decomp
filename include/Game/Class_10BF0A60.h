@@ -25,6 +25,7 @@ public:
         }
     }
     int Add(const Class_10BEFA30& Item);
+    void FUN_10befc30(int A, int B, int C);
 
     int m_Count;
     int Unknown04;

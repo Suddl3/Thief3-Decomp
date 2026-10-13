@@ -2,12 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/cIntArray.h"
 #include "Game/Class_10BAAB60.h"
-
-class Class_10BBE020
-{
-public:
-    void FUN_10bbe020(int A);
-};
+#include "Game/Class_10BBE020.h"
 
 // FUNCTION: 0x10BAAB60 ?FUN_10baab60@Class_10BAAB60@@QAEXXZ
 void Class_10BAAB60::FUN_10baab60()

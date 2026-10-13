@@ -1,12 +1,12 @@
 // Game/Unsorted_10BB3B00_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include <string.h>
 #include "Core/Core.h"
 #include "Game/cString.h"
 #include "Game/Class_10AB37C0.h"
 #include "Game/Class_10978090.h"
 #include "Game/Class_1098E3D0.h"
+#include "Game/Class_10BAD190.h"
 
 // The object passed as the second argument: its slot 8 takes no arguments and returns a pointer.
 class Class_10BB3B00_Param2
@@ -87,12 +87,6 @@ public:
 
     char Unknown00[0xc];
     InnerClass_10B9C9F0* Fieldc;
-};
-
-class Class_10BAD190
-{
-public:
-    void FUN_10bacff0(Class_10BB3190_Result* A, int B, int C);
 };
 
 class UObject;

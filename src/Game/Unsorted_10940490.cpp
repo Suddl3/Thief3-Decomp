@@ -1,5 +1,7 @@
 // Game/Unsorted_10940490.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_109403A0.h"
+#include "Game/Struct_109403A0.h"
 
 class IDirect3DDevice8
 {
@@ -83,26 +85,7 @@ public:
 
 extern cD3DStateCache* DAT_10f31be0;
 
-struct Struct_109403A0
-{
-    char Unknown00[0x140];
-    void* Unknown140;
-};
-
 class IDirect3DBaseTexture8;
-
-class Class_109403A0
-{
-public:
-    void FUN_1093fcd0(Struct_109403A0* Material);
-    void SetMaterialTextures(Struct_109403A0* Material, bool Enable);
-    void FUN_109405d0(Struct_109403A0* Material);
-
-    char Unknown00[0x300];
-    IDirect3DBaseTexture8* Unknown300;
-    char Unknown304[4];
-    IDirect3DBaseTexture8* Unknown308;
-};
 
 // FUNCTION: 0x109405D0 ?FUN_109405d0@Class_109403A0@@QAEXPAUStruct_109403A0@@@Z
 void Class_109403A0::FUN_109405d0(Struct_109403A0* Material)

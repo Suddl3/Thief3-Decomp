@@ -9,6 +9,7 @@ class Class_10B22020
 {
 public:
     void FUN_10b22020(int A);
+    void FUN_1098e3d0(int A, void* B);
 
     char Unknown00[0x38];
     FRotator Unknown38;
@@ -16,7 +17,9 @@ public:
     int Unknown404;
     char Unknown408[8];
     float Unknown410;
-    char Unknown414[0x4C];
+    char Unknown414[0x40];
+    float Unknown454;
+    char Pad458[0x8];
     int Unknown460;
     char Unknown464[0x58];
     int Unknown4BC;

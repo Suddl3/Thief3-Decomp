@@ -7,6 +7,7 @@ class Class_10E6649C
 {
 public:
     virtual void FUN_10a34760(int p1, int* p2, int* p3);
+    virtual int FUN_10a34780(const __int64* A, const __int64* B);
 };
 
 #endif // GAME_CLASS_10E6649C_H

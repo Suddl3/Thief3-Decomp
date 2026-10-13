@@ -3,12 +3,9 @@
 #include "Game/Class_1090EC30.h"
 #include "Game/Class_10BA9FD0.h"
 #include "Game/Class_10E98CF8.h"
+#include "Game/Class_10BABED0.h"
 
 class Class_10BAA6B0_Param;
-
-class Class_10BABED0 : public Class_10BA9FD0
-{
-};
 
 Class_10BABED0* FUN_10baa6b0(Class_10BAA6B0_Param* A);
 

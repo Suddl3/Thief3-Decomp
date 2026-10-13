@@ -1,5 +1,6 @@
 // Game/cConversationManager_16.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10A86210_Arg.h"
 
 class Class_109022E0;
 
@@ -72,17 +73,6 @@ public:
 
 struct Struct_10A14400
 {
-};
-
-class Class_10A86210_Arg
-{
-public:
-    Class_10A86210_Arg(Struct_10A14400* A, int B);
-    ~Class_10A86210_Arg();
-
-    char Unknown00[0x10];
-    int Unknown10;
-    char Unknown14[0x3C];
 };
 
 void FUN_10a87ad0(Class_10A86210_Arg* A);

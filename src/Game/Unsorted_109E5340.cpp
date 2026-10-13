@@ -1,24 +1,17 @@
 // Game/Unsorted_109E5340.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
 #include "Game/Class_109E53B0.h"
 #include "Game/Class_109E5620.h"
 #include "Game/Class_109E5700.h"
 #include "Game/Class_10E5B7C8.h"
+#include "Game/Class_109E5340.h"
+#include "Game/Class_10A4B960.h"
 
 struct Struct_109E5700
 {
     Struct_109E5700* Unknown00;
     Struct_109E5700* Unknown04;
-};
-
-class Class_10A4B960
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
 };
 
 void FUN_10a4b960(Class_10A4B960** Out, int A);
@@ -194,12 +187,6 @@ struct Struct_109E5340
     int Count;
     char Unknown04[4];
     Class_109E5340_Param** Data;
-};
-
-class Class_109E5340
-{
-public:
-    void FUN_109e5340(Class_109E5340_Param* Param, int Arg2);
 };
 
 // FUNCTION: 0x109E5340 ?FUN_109e5340@Class_109E5340@@QAEXPAVClass_109E5340_Param@@H@Z

@@ -3,9 +3,24 @@
 #ifndef GAME_CCHARARRAY_H
 #define GAME_CCHARARRAY_H
 
+#include "Game/Class_10905A90_Member.h"
+
+Class_10905A90_Member* GetAllocator();
+
 class cCharArray
 {
 public:
+    ~cCharArray()
+    {
+        Resize(0);
+        if (m_Capacity)
+        {
+            GetAllocator()->Virtual5(m_Data);
+            m_Data = 0;
+            m_Capacity = 0;
+        }
+    }
+
     void Resize(int Count);
     void Free();
 

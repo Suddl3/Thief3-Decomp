@@ -1,17 +1,13 @@
 // Game/Unsorted_10C0EEB0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Struct_10FF66B0.h"
 #include "Game/Class_10905A90_Member.h"
 #include "Game/cString.h"
+#include "Game/Class_10C0EEB0.h"
 
 int FUN_10af36e0(const char* A, const char* B);
 
 extern Struct_10FF66B0 DAT_10ff66b0[];
-
-extern const char DAT_10e47660[];
-
-Class_10905A90_Member* GetAllocator();
 
 class Class_10C0EEB0_Unknown08
 {
@@ -19,16 +15,6 @@ public:
     virtual void Virtual0();
     virtual void Virtual1();
     virtual void Virtual2();
-};
-
-class Class_10C0EEB0
-{
-public:
-    ~Class_10C0EEB0();
-
-    cString Unknown00;
-    cString Unknown04;
-    Class_10C0EEB0_Unknown08* Unknown08;
 };
 
 // FUNCTION: 0x10C0EEB0 ??1Class_10C0EEB0@@QAE@XZ

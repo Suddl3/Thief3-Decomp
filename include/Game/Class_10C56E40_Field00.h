@@ -3,12 +3,32 @@
 #ifndef GAME_CLASS_10C56E40_FIELD00_H
 #define GAME_CLASS_10C56E40_FIELD00_H
 
+class Class_10A9C200_Unknown00;
+
 class Class_10C56E40_Field00
 {
 public:
     virtual void Virtual0();
     virtual void Virtual1();
     virtual void Virtual2();
+    virtual int Virtual3();
+    virtual void Virtual4();
+    virtual void Virtual5();
+    virtual void Virtual6();
+    virtual void Virtual7();
+    virtual void Virtual8();
+    virtual void Virtual9();
+    virtual void Virtual10();
+    virtual void Virtual11();
+    virtual void Virtual12();
+    virtual void Virtual13();
+    virtual void Virtual14();
+    virtual void Virtual15();
+    virtual float Virtual16();
+
+    Class_10C56E40_Field00(Class_10A9C200_Unknown00* A, int B);
+
+    char Unknown04[0x3C];
 };
 
 #endif // GAME_CLASS_10C56E40_FIELD00_H

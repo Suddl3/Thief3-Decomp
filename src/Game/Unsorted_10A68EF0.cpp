@@ -1,12 +1,12 @@
 // Game/Unsorted_10A68EF0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include <string.h>
 #include "Game/cIntArray.h"
 #include "Game/Class_10943600.h"
 #include "Game/Item_10943600.h"
 #include "Game/Class_10A68AE0.h"
 #include "Game/Class_10905A90_Member.h"
+#include "Game/Class_10A68F90.h"
 
 extern "C" void* memmove(void* Dest, const void* Src, unsigned int Count);
 
@@ -22,15 +22,6 @@ public:
     Class_10A68AE0 Unknown08;
     bool Flag;
     char Unknown15;
-};
-
-class Class_10A68F90
-{
-public:
-    void FUN_10a68f90(int Key, int* Value, const Class_10A68AE0& Other, bool Flag);
-
-    char Pad00[0x4];
-    cIntArray Unknown04;
 };
 
 // FUNCTION: 0x10A68F90 ?FUN_10a68f90@Class_10A68F90@@QAEXHPAHABVClass_10A68AE0@@_N@Z

@@ -6,6 +6,8 @@
 class Class_10A1F880
 {
 public:
+    Class_10A1F880();
+
     int GetAt(int Index);
 
     char Unknown00[4];

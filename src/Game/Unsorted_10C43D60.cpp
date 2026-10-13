@@ -1,5 +1,7 @@
 // Game/Unsorted_10C43D60.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10C43E90.h"
+#include "Game/Class_10C43E90_Map.h"
 
 class Class_10C43E90_Obj
 {
@@ -45,24 +47,6 @@ public:
     }
 
     Class_10C43E90_Obj* Unknown00;
-};
-
-class Class_10C43E90_Map
-{
-public:
-    void FUN_10c5cda0(Class_10C43E90_Iter* It, Class_10C56E40* Key);
-    Class_10C43E90_Node** FUN_10c42540(int* Slot, Class_10C43E90_Node* Node);
-};
-
-class Class_10C43E90
-{
-public:
-    void FUN_10c43e90(Class_10C56E40 Key);
-
-    char Unknown00[0x4C];
-    Class_10C43E90_Map Unknown4C;
-    char Unknown4D[0x1B];
-    Class_10C43E90_Node* Unknown68;
 };
 
 // FUNCTION: 0x10C43E90 ?FUN_10c43e90@Class_10C43E90@@QAEXVClass_10C56E40@@@Z

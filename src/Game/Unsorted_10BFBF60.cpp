@@ -1,8 +1,8 @@
 // Game/Unsorted_10BFBF60.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10978090.h"
 #include "Game/Class_10C1AAC0.h"
+#include "Game/Class_10BFBF60.h"
 
 extern float DAT_10e49c68;
 
@@ -16,17 +16,6 @@ public:
     virtual void Virtual4();
     virtual void Virtual5();
     virtual float Virtual6(int A);
-};
-
-class Class_10BFBF60
-{
-public:
-    bool IsAllowed(Class_10C08940* Value);
-
-    char Unknown00[8];
-    int Unknown08;
-    char Unknown0C[4];
-    Class_10978090** Unknown10;
 };
 
 // FUNCTION: 0x10BFBF60 ?IsAllowed@Class_10BFBF60@@QAE_NPAVClass_10C08940@@@Z

@@ -66,7 +66,7 @@ public:
     Class_10C31210_Unknown08* Unknown08;
 };
 
-class Class_10C31210
+class cMotionControllerAnim
 {
 public:
     virtual void Virtual0();
@@ -113,8 +113,8 @@ public:
     float Unknown110;
 };
 
-// FUNCTION: 0x10C31210 ?FUN_10c31210@Class_10C31210@@QAEXH@Z
-void Class_10C31210::FUN_10c31210(int A)
+// FUNCTION: 0x10C31210 ?FUN_10c31210@cMotionControllerAnim@@QAEXH@Z
+void cMotionControllerAnim::FUN_10c31210(int A)
 {
     if (Unknown0A8 == 0)
         return;

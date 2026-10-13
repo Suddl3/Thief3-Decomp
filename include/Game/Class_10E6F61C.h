@@ -5,12 +5,17 @@
 
 #include "Game/cIntArray.h"
 
+class Class_10AC3810_Unknown04;
+
 class Class_10E6F61C
 {
 public:
     virtual void HandleMessage(int p1, int p2, int p3, int p4);
 
-    char Unknown04[0x554];
+    ~Class_10E6F61C();
+
+    Class_10AC3810_Unknown04* Unknown04;
+    char Pad08[0x550];
     cIntArray Unknown558;
 };
 

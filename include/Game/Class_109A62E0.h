@@ -12,6 +12,8 @@ public:
     void FUN_109a62c0(Class_10E7C584* A);
 
     char Pad00[0x1];
+    char Pad01[0x1b];
+    int Unknown1C;
 };
 
 #endif // GAME_CLASS_109A62E0_H

@@ -3,6 +3,7 @@
 #include "Core/Core.h"
 #include "Game/Class_10924100.h"
 #include "Game/Class_10963CE0.h"
+#include "Game/Class_10A1E620_Inner.h"
 
 void FreeItemList(void* Object);
 
@@ -30,22 +31,6 @@ public:
     virtual void Virtual3();
     virtual void Virtual4();
     virtual void Virtual5(int Flag);
-};
-
-// The container at the object's field B4: an item array and its count.
-class Class_10A1E620_Inner
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5(int Flag);
-
-    char Unknown04[0x110];
-    Class_10A1E620_Item** Items;
-    int Count;
 };
 
 // The object passed in: the container pointer is at B4.

@@ -1,8 +1,8 @@
 // Game/Unsorted_10A32000.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10A32000.h"
 #include "Game/Class_10905A90_Member.h"
+#include "Game/Class_10A32210.h"
 
 Class_10905A90_Member* GetAllocator();
 
@@ -19,16 +19,6 @@ public:
     virtual void Virtual5();
     virtual void Virtual6();
     virtual bool Virtual7(Class_10A32210* A);
-};
-
-class Class_10A32210
-{
-public:
-    int FUN_10a32210();
-
-    Class_10A32210_Unknown00* Unknown00;
-    char Unknown04[8];
-    int Unknown0C;
 };
 
 // FUNCTION: 0x10A32000 ?SetCount@Class_10A32000@@QAEXH@Z

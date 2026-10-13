@@ -1,41 +1,11 @@
 // Game/Unsorted_10A21340.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include <new>
 #include "Game/Class_10905A90_Member.h"
+#include "Game/Class_1095A7A0.h"
+#include "Game/Class_10A21340.h"
 
 Class_10905A90_Member* GetAllocator();
-
-// The element: 0x24 bytes. Copied from include/Game/Class_1095A7A0.h, plus the last int the header lacks.
-class Class_1095A7A0
-{
-public:
-    Class_1095A7A0();
-    ~Class_1095A7A0();
-
-    char Unknown00[2];
-    char Unknown02;
-    char Unknown03;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    int Unknown10;
-    int Unknown14;
-    int Unknown18;
-    int Unknown1C;
-    int Unknown20;
-};
-
-// The owner: its element count, the buffer size in bytes and the buffer.
-class Class_10A21340
-{
-public:
-    void FUN_10a21340(int NewCount);
-
-    int Count;
-    int m_CapacityBytes;
-    Class_1095A7A0* m_Data;
-};
 
 // FUNCTION: 0x10A21340 ?FUN_10a21340@Class_10A21340@@QAEXH@Z
 void Class_10A21340::FUN_10a21340(int NewCount)

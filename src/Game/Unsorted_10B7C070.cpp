@@ -3,6 +3,7 @@
 #include "Game/FCoords.h"
 #include "Game/Class_10D9B090.h"
 #include "Game/Class_10B7C070.h"
+#include "Game/Class_10990D10.h"
 
 struct Struct_10D9E5E0_Param;
 
@@ -30,63 +31,6 @@ public:
     int Unknown08;
     char Pad0C[0x8];
     Class_10B7C070_Unknown14* Unknown14;
-};
-
-// Class_10990D10 from include/Game/Class_10990D10.h, with virtual slots up to 44 and the field at 0xB0.
-class Class_10990D10
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8();
-    virtual void Virtual9();
-    virtual void Virtual10();
-    virtual void Virtual11();
-    virtual void Virtual12();
-    virtual void Virtual13();
-    virtual void Virtual14();
-    virtual void Virtual15();
-    virtual void Virtual16();
-    virtual void Virtual17();
-    virtual void Virtual18();
-    virtual void Virtual19();
-    virtual void Virtual20();
-    virtual void Virtual21();
-    virtual void Virtual22();
-    virtual void Virtual23();
-    virtual void Virtual24();
-    virtual void Virtual25();
-    virtual void Virtual26();
-    virtual void Virtual27();
-    virtual void Virtual28();
-    virtual void Virtual29();
-    virtual void Virtual30();
-    virtual void Virtual31();
-    virtual void Virtual32();
-    virtual void Virtual33();
-    virtual void Virtual34();
-    virtual void Virtual35();
-    virtual void Virtual36();
-    virtual void Virtual37();
-    virtual void Virtual38();
-    virtual void Virtual39();
-    virtual void Virtual40();
-    virtual void Virtual41();
-    virtual void Virtual42();
-    virtual void Virtual43();
-    virtual FCoords Virtual44();
-
-    void FUN_10990d10();
-    void FUN_10991fc0(int A);
-
-    char Pad04[0xAC];
-    Class_10D9FEE0* UnknownB0;
 };
 
 Class_10D9B090* FUN_10d9dcb0();

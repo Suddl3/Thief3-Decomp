@@ -1,6 +1,7 @@
 // Game/Unsorted_10C1A170_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Struct_10C05A80.h"
+#include "Game/Class_10C1A170_Arg.h"
 
 class Class_10970890;
 
@@ -114,15 +115,6 @@ public:
     int Unknown100;
     int Unknown104;
     int Unknown108;
-};
-
-class Class_10C1A170_Arg
-{
-public:
-    char Pad00[0x1C];
-    int Unknown1C;
-    char Pad20[0xA0];
-    Class_1098E330* Unknown0C0;
 };
 
 class Class_10C1A170_Filter

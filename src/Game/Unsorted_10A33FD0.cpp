@@ -1,5 +1,6 @@
 // Game/Unsorted_10A33FD0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Core/Core.h"
 #include "Game/Class_10A34CD0.h"
 #include "Game/Class_10A35630.h"
@@ -14,7 +15,7 @@
 #include "Game/Struct_10A3A1D0.h"
 #include "Game/Class_10A3A1D0.h"
 
-class Class_10A34B90
+class cInt64HashTable
 {
 public:
     void Reset(int A);
@@ -26,7 +27,7 @@ public:
     void Reset(int A);
 
     char Unknown00[0x4];
-    Class_10A34B90 Unknown04;
+    cInt64HashTable Unknown04;
     char Unknown05[0x1B];
     Class_10A34CD0 Unknown20;
 };

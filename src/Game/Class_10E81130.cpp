@@ -3,7 +3,7 @@
 
 extern void* DAT_10e81130[];
 
-class Class_10A66190
+class cBorderWindow
 {
 public:
     void FUN_10a66190();
@@ -11,7 +11,7 @@ public:
     void* VTable;
 };
 
-class Class_10E81130 : public Class_10A66190
+class Class_10E81130 : public cBorderWindow
 {
 public:
     void FUN_10b460c0();

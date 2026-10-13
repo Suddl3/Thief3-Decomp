@@ -6,25 +6,12 @@
 #include "Game/Class_10B3A460.h"
 #include "Game/Class_10B47130.h"
 #include "Game/Class_10B47180.h"
+#include "Game/Static_10B3A410.h"
 
 class Class_10B47720
 {
 public:
     void FUN_10b47720(int A);
-};
-
-struct Static_10B3A410
-{
-    Static_10B3A410() : Unknown00(0), Unknown04(0), Unknown08(0), Unknown10(0), Unknown14(0), Unknown18(0) {}
-    ~Static_10B3A410();
-
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    int Unknown10;
-    int Unknown14;
-    int Unknown18;
 };
 
 Class_10B3A460* GetEntries();

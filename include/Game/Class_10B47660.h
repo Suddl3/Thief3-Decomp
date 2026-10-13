@@ -26,6 +26,7 @@ public:
     char Unknown1E[0x2E];
     cIntArray Unknown4C;
     char Pad4D[0x3];
+    char Pad5B[0x1];
 };
 
 #endif // GAME_CLASS_10B47660_H

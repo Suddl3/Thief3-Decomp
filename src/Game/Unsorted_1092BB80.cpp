@@ -1,17 +1,12 @@
 // Game/Unsorted_1092BB80.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_1092C160.h"
 
 struct Node_10F31AFC
 {
     Node_10F31AFC* Unknown00;
     Node_10F31AFC* Unknown04;
     Node_10F31AFC* Unknown08;
-};
-
-class Class_1092C160
-{
-public:
-    void FUN_1092c160(Node_10F31AFC* Root);
 };
 
 extern bool DAT_10ffc855;

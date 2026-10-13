@@ -2,12 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10905A90_Member.h"
 #include "Game/cIntArray.h"
-
-class Class_10C09420
-{
-public:
-    ~Class_10C09420();
-};
+#include "Game/Class_10C09420.h"
 
 struct Struct_10C09520
 {

@@ -1,11 +1,11 @@
 // Game/Unsorted_109E66F0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_1092D3D0.h"
 #include "Game/Class_109E6AA0.h"
 #include "Game/Class_109E6D60.h"
 #include "Game/Object_10A18FC0.h"
 #include "Game/Class_1092D420.h"
+#include "Game/Class_109E69A0.h"
 
 struct Class_109E6D60_Member
 {
@@ -185,22 +185,6 @@ public:
     virtual void Virtual62();
     virtual void Virtual63();
     virtual bool Virtual64(int A);
-};
-
-class Class_109E69A0
-{
-public:
-    bool FUN_109e69a0(int A, int B, int C);
-
-    char Pad00[0x8];
-    int Unknown08;
-    char Pad0C[0x4];
-    Class_109E69A0_Unknown10** Unknown10;
-    char Pad14[0x78];
-    Class_109E69A0_Unknown8C* Unknown8C;
-    int Unknown90;
-    char Pad94[0x164];
-    Class_109E69A0_Unknown10* Unknown1F8;
 };
 
 // FUNCTION: 0x109E69A0 ?FUN_109e69a0@Class_109E69A0@@QAE_NHHH@Z

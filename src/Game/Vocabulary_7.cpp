@@ -1,7 +1,7 @@
 // Game/Vocabulary_7.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10928760.h"
+#include "Game/Vocabulary.h"
 
 class Class_109301D0_Unknown58;
 
@@ -47,35 +47,6 @@ public:
     int Unknown120;
     char Pad124[0x4];
     Struct_1092FFD0* Unknown128;
-};
-
-class Vocabulary : public Class_10928760
-{
-public:
-    virtual ~Vocabulary();
-
-    Vocabulary();
-
-    void FUN_1092ff00(int A, int B);
-    bool FUN_10925130(int A);
-    void FUN_1092fae0(int A, int B, void* C);
-    void FUN_10925190(int A);
-    void FUN_10930110(int Param1, int Param2);
-    bool FUN_10925160(int A);
-    void FUN_10930170(int A, int B);
-    void FUN_1092ff60(int A, int B);
-    void FUN_1092ffd0(int A, int B);
-    void FUN_1092fcb0(int A, int B, int C);
-    void FUN_109301d0();
-
-    char Pad04[0x4c];
-    int m_ItemCount;
-    int Unknown54;
-    Class_109301D0_Unknown58** m_Items;
-    char Pad5C[0x18];
-    int Unknown74;
-    char Pad78[0x4];
-    Class_1092FFD0_Unknown7C** Unknown7C;
 };
 
 // FUNCTION: 0x1092FFD0 ?FUN_1092ffd0@Vocabulary@@QAEXHH@Z

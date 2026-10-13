@@ -7,14 +7,7 @@
 #include "Game/Class_10E97B00.h"
 #include "Game/Class_10C08E90.h"
 #include "Game/cItemList.h"
-
-// The field at 0x10 of the object: a flag at 0x24 is read through it.
-class Class_10C08960_Unknown10
-{
-public:
-    char Unknown00[0x24];
-    bool Unknown24;
-};
+#include "Game/Class_10C08960_Unknown10.h"
 
 extern void* DAT_10e97bbc[];
 

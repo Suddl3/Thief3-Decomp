@@ -1,22 +1,14 @@
 // Game/cD3DStateCache_5.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/IDirect3DDevice8.h"
 #include "Game/Struct_10924210.h"
+#include "Game/Struct_109371D0.h"
 
 class IDirect3DBaseTexture8;
 
 struct Info_10952690;
 
 extern IDirect3DDevice8* GDirect3DDevice8;
-
-struct Struct_109371D0
-{
-    float Unknown00;
-    float Unknown04;
-    float Unknown08;
-    float Unknown0C;
-};
 
 class cD3DStateCache
 {

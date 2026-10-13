@@ -3,12 +3,16 @@
 #ifndef GAME_CLASS_10BB8A60_H
 #define GAME_CLASS_10BB8A60_H
 
+class Class_10C7D570;
+
 class Class_10BB8A60
 {
 public:
     void Tick(float Delta);
 
-    char Unknown00[0x258];
+    char Unknown00[0x8];
+    Class_10C7D570* Unknown08;
+    char Unknown0C[0x24C];
     float Unknown258;
 };
 

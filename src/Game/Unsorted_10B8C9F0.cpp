@@ -1,18 +1,9 @@
 // Game/Unsorted_10B8C9F0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10B8C9B0.h"
+#include "Game/Class_109671D0.h"
 
 extern float DAT_10eafbdc;
-
-// The vector the arguments point to: three floats.
-class Class_109671D0
-{
-public:
-    float Unknown00;
-    float Unknown04;
-    float Unknown08;
-};
 
 // Only the members this function uses; the object's +0x30 is a field the header lacks.
 class Class_10D9FEE0

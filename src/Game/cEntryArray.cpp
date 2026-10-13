@@ -1,35 +1,13 @@
 // Game/cEntryArray.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include <new>
 #include "Game/cEntryArray.h"
 #include "Game/Class_10905A90_Member.h"
+#include "Game/Entry_10946110.h"
 
 Class_10905A90_Member* GetAllocator();
 
 struct Struct_10943350 {};
-
-// The element: 0x1C bytes. Its first word is a pointer that the destructor
-// deletes and clears; the constructor clears the words and sets the last but one to -1.
-struct Entry_10946110
-{
-    Entry_10946110() : Unknown00(0), Unknown04(0), Unknown08(0), Unknown0C(0), Unknown10(0), Unknown14(-1), Unknown18(0) {}
-
-    ~Entry_10946110()
-    {
-        if (Unknown00)
-            delete Unknown00;
-        Unknown00 = 0;
-    }
-
-    Struct_10943350* Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    int Unknown10;
-    int Unknown14;
-    int Unknown18;
-};
 
 // FUNCTION: 0x10943350 ?Resize@cEntryArray@@QAEXH@Z
 void cEntryArray::Resize(int NewCount)

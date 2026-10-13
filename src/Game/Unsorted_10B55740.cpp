@@ -93,9 +93,9 @@ public:
     virtual void Virtual86(int A, float B, int C, float D, float E);
 };
 
-// Game/Class_10A52EE0.h's class, with GetItem as its call site shows it and the
+// Game/cHUDLightGem.h's class, with GetItem as its call site shows it and the
 // fields this function reads: the item array at 0x120 and the count at 0x148.
-class Class_10A52EE0
+class cHUDLightGem
 {
 public:
     Class_10B2BC90_Unknown* GetItem(int A);
@@ -106,7 +106,7 @@ public:
     int* Data;
 };
 
-class Class_10B55740 : public Class_10A52EE0
+class Class_10B55740 : public cHUDLightGem
 {
 public:
     void FUN_10b55740(int Index);

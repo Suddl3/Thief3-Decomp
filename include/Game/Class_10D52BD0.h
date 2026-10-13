@@ -7,6 +7,9 @@ class Class_10D52BD0
 {
 public:
     void FUN_10d52bd0();
+    int FUN_10d52ca0(int A, int B, int C);
+
+    char Pad00[0x1];
 };
 
 #endif // GAME_CLASS_10D52BD0_H

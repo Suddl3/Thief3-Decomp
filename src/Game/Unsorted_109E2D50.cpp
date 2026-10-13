@@ -1,32 +1,12 @@
 // Game/Unsorted_109E2D50.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/cIntArray.h"
 #include "Game/Class_1098E330.h"
+#include "Game/Class_109E2E70.h"
+#include "Game/Struct_109E2E70_Entry.h"
+#include "Game/Struct_109E2E70_Node.h"
 
 struct Struct_109E2E70_Node;
-
-struct Struct_109E2E70_Entry
-{
-    int Unknown00;
-    Struct_109E2E70_Node* Unknown04;
-};
-
-struct Struct_109E2E70_Node
-{
-    Struct_109E2E70_Node* Next;
-    int Unknown04;
-    Class_1098E330* Unknown08;
-};
-
-class Class_109E2E70
-{
-public:
-    bool FUN_109e2e70(int Index, cIntArray* Out, bool Flag);
-
-    char Unknown00[4];
-    cIntArray Unknown04;
-};
 
 // FUNCTION: 0x109E2E70 ?FUN_109e2e70@Class_109E2E70@@QAE_NHPAVcIntArray@@_N@Z
 bool Class_109E2E70::FUN_109e2e70(int Index, cIntArray* Out, bool Flag)

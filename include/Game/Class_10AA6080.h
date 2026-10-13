@@ -3,6 +3,7 @@
 #ifndef GAME_CLASS_10AA6080_H
 #define GAME_CLASS_10AA6080_H
 
+class Class_10AA6080_Member;
 class FVector;
 
 class Class_10AA6080
@@ -11,6 +12,10 @@ public:
     bool FUN_10aa6080(FVector* A, float B);
 
     char Pad00[0x1];
+    char Unknown01[0x3];
+    int m_Count;
+    char Unknown08[0x4];
+    Class_10AA6080_Member** m_Items;
 };
 
 #endif // GAME_CLASS_10AA6080_H

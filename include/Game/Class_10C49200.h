@@ -8,6 +8,8 @@
 class Class_10C49200 : public Class_10C48260
 {
 public:
+    ~Class_10C49200();
+
     void Reset(int A);
     void Clear();
 };

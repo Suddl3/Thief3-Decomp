@@ -66,7 +66,7 @@ public:
     int Unknown08;
 };
 
-class Class_10C30700
+class cMotionControllerAnim
 {
 public:
     void FUN_10c30700();
@@ -87,7 +87,7 @@ public:
 };
 
 // FUNCTION: 0x10C33BC0 ?FUN_10c33bc0@Class_10C30700@@QAEXXZ
-void Class_10C30700::FUN_10c33bc0()
+void cMotionControllerAnim::FUN_10c33bc0()
 {
     Entry_10C32C30* Value;
     int Key;

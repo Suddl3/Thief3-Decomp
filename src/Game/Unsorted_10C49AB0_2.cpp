@@ -1,24 +1,8 @@
 // Game/Unsorted_10C49AB0_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10C49100.h"
-
-// Ion Storm's string (0x109081E0): a char pointer, null when default constructed.
-class cString
-{
-public:
-    ~cString();
-
-    char* Unknown00;
-};
-
-class Class_10C49100_Node
-{
-public:
-    cString Key;
-    int Value;
-    Class_10C49100_Node* Next;
-};
+#include "Game/Class_10C49100_Node.h"
+#include "Game/cString.h"
 
 class Class_10C4A150 : public Class_10C49100
 {

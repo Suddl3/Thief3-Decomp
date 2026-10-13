@@ -5,6 +5,8 @@
 
 #include "Game/Class_10E7E4E0.h"
 
+class Class_10B4C190_Arg;
+
 class Class_10E7E808 : public Class_10E7E4E0
 {
 public:
@@ -13,10 +15,14 @@ public:
     virtual void Virtual2();
     virtual void Virtual3();
     virtual void Virtual4();
+    virtual void Virtual5();
+    virtual void Virtual6();
+    virtual int FUN_10b4c190(Class_10B4C190_Arg* P);
 
     Class_10E7E808* Init();
 
-    char Pad04[0xc];
+    float Unknown10;
+    char Pad14[0x8];
 };
 
 #endif // GAME_CLASS_10E7E808_H

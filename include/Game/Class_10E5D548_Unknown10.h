@@ -41,6 +41,9 @@ public:
     virtual void Virtual32();
     virtual void Virtual33();
     virtual void Virtual34(int Param);
+    virtual void Virtual35();
+    virtual void Virtual36();
+    virtual int Virtual37(int Param);
 };
 
 #endif // GAME_CLASS_10E5D548_UNKNOWN10_H

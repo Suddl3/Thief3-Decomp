@@ -1,5 +1,6 @@
 // Game/Class_10E8C268_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10C08940.h"
 #include "Game/Class_10E5B578.h"
 
@@ -17,7 +18,7 @@ public:
     Class_10C08940* Unknown04;
 };
 
-class Class_10AAB5C0 : public Class_10978090
+class Class_10E6CE28 : public Class_10978090
 {
 public:
     int GetUnknown08();
@@ -33,7 +34,7 @@ struct Struct_10AA3520
 
 extern Struct_10AA3520* DAT_10f35dec;
 
-class Class_10E8C268 : public Class_10AAB5C0, public Class_10E5B578
+class Class_10E8C268 : public Class_10E6CE28, public Class_10E5B578
 {
 public:
     virtual int Virtual0(int A, int B, int C, int* D);

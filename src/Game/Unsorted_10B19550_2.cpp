@@ -3,6 +3,7 @@
 #include "Game/Class_10E79488.h"
 #include "Game/Class_10F3A3D8.h"
 #include "Game/Struct_10AA3520_Member.h"
+#include "Game/Class_10ABDC10.h"
 
 struct Struct_10AA3520
 {
@@ -13,12 +14,6 @@ struct Struct_10AA3520
 extern Struct_10AA3520* DAT_10f35dec;
 
 extern void* GWindowManager[];
-
-class Class_10ABDC10
-{
-public:
-    void FUN_10abdc10(int A, int B, int C, int D, int E);
-};
 
 extern Class_10F3A3D8* DAT_10f3a3d8;
 

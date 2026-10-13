@@ -5,6 +5,18 @@
 
 struct Struct_10C20010
 {
+public:
+    bool IsWithin(const float* Center, float RadiusSq) const
+    {
+        float dx = Unknown00 - Center[0];
+        float dy = Unknown04 - Center[1];
+        float dz = Unknown08 - Center[2];
+        float Sum = dz * dz;
+        Sum += dx * dx;
+        Sum += dy * dy;
+        return Sum < RadiusSq;
+    }
+
     int Unknown00;
     int Unknown04;
     int Unknown08;

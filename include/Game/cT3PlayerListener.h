@@ -4,11 +4,19 @@
 #define GAME_CT3PLAYERLISTENER_H
 
 class Class_10B21580;
+class Class_10B38E90_Arg1;
+class Class_10B38E90_Arg2;
 
 class cT3PlayerListener
 {
 public:
     void PickUpBody();
+    void FUN_10b37760();
+    void FUN_10b37a30();
+    void FUN_10b37fe0();
+    void FUN_10b379e0(Class_10B38E90_Arg2* A, int B);
+    void FUN_10b382b0(Class_10B38E90_Arg1* A, Class_10B38E90_Arg2* B, int C);
+    void FUN_10b38e90(Class_10B38E90_Arg1* A, Class_10B38E90_Arg2* B, int C);
 
     char Unknown00[4];
     Class_10B21580* Unknown04;

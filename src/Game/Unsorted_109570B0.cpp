@@ -1,9 +1,9 @@
 // Game/Unsorted_109570B0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10957D20.h"
 #include "Game/Class_1095AFD0.h"
 #include "Core/Core.h"
+#include "Game/Class_109570D0_Unknown90.h"
 
 void VectorMin(float* Out, float* A, float* B);
 
@@ -12,13 +12,6 @@ extern const char DAT_10e47660[];
 int FUN_1095af30(int A);
 
 void* FUN_1092cac0(const char* Name, int A, int B, int C, int D, int E);
-
-class Class_109570D0_Unknown90
-{
-public:
-    const char* Unknown00;
-    char Unknown04[0x34];
-};
 
 class Class_10E4AE8C
 {

@@ -3,6 +3,8 @@
 #ifndef GAME_CLASS_10B791E0_H
 #define GAME_CLASS_10B791E0_H
 
+class Class_10B59680_Unknown2CC;
+class Class_10B59680_Unknown2D0;
 struct Struct_10B791E0_Entry;
 
 class Class_10B791E0
@@ -126,11 +128,17 @@ public:
     virtual void Virtual115();
     virtual void Virtual116();
     virtual int Virtual117();
+    virtual void Virtual118();
+    virtual void Virtual119();
+    virtual void FUN_10b59680();
 
     int FindValueByKey(int Key);
+    void FUN_10b7a470();
 
     char Unknown04[0x2C4];
     Struct_10B791E0_Entry* m_Entries;
+    Class_10B59680_Unknown2CC* Unknown2CC;
+    Class_10B59680_Unknown2D0* Unknown2D0;
 };
 
 #endif // GAME_CLASS_10B791E0_H

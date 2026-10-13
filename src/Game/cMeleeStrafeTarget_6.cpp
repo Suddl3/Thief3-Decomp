@@ -1,8 +1,8 @@
 // Game/cMeleeStrafeTarget_6.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10BBDB40.h"
 #include "Game/Class_10C7D570.h"
+#include "Game/Class_10BB8A60.h"
 
 float GetFrameDeltaTime();
 
@@ -37,17 +37,6 @@ public:
 
     char Unknown04[0x8];
     Class_10B47720* Unknown0C;
-};
-
-class Class_10BB8A60
-{
-public:
-    void Tick(float Delta);
-
-    char Unknown00[0x8];
-    Class_10C7D570* Unknown08;
-    char Unknown0C[0x24C];
-    float Unknown258;
 };
 
 class Class_10BDB7C0_Link

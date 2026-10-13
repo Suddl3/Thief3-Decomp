@@ -2,45 +2,12 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_1094D700.h"
 #include "Game/Class_1094D9A0.h"
+#include "Game/Class_10924B70_Base.h"
+#include "Game/cRenderTargetState.h"
 
 class Class_109242E0;
 
-extern void** DAT_10f3199c;
-
 extern Class_109242E0* DAT_10f319a0;
-
-class Class_10924B70_Base
-{
-public:
-    Class_10924B70_Base()
-    {
-        DAT_10f3199c = (void**)this;
-    }
-
-    ~Class_10924B70_Base()
-    {
-        DAT_10f3199c = 0;
-    }
-
-    bool Unknown00;
-    char Unknown01[3];
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    int Unknown10;
-    int Unknown14;
-    char Unknown18[0x18];
-};
-
-class cRenderTargetState : public Class_10924B70_Base
-{
-public:
-    cRenderTargetState();
-
-    Class_1094D700 Unknown30;
-    Class_1094D9A0 Unknown48[3];
-    int UnknownA8;
-};
 
 // FUNCTION: 0x10924A00 ??0cRenderTargetState@@QAE@XZ
 cRenderTargetState::cRenderTargetState()

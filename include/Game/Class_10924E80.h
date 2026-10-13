@@ -18,8 +18,8 @@ public:
     void FUN_10926f20(int A, int B);
     void FUN_10925290(int A, int B);
     void RemoveItem(void* Item);
-    void FUN_10925c60(void* A, int B);
     void FUN_109251c0(float Value);
+    bool FUN_10925c60(void* A, bool B);
 
     char Pad01[0xbb];
     char Pad1A3[0x1];

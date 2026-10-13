@@ -8,6 +8,8 @@
 class Class_10B408D0 : public Class_10B2A160
 {
 public:
+    ~Class_10B408D0();
+
     void FUN_10b40620(int Size);
     void FUN_10b408d0();
 };

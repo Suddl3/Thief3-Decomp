@@ -1,7 +1,7 @@
 // Game/Unsorted_10C5BBF0_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/cString.h"
+#include "Game/Class_10C5BBF0.h"
 
 // Ion Storm's placement new (0x10905C10).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
@@ -23,20 +23,6 @@ public:
     cString Key;
     InnerClass_10c5b910 inner;
     Class_10C5B990* Next;
-};
-
-class Class_10C5BBF0
-{
-public:
-    unsigned int Insert(const cString& Key, InnerClass_10c5b910* Value);
-    void FUN_10c5bbf0(int NewSize);
-
-    int Collisions;
-    int Count;
-    int Bits;
-    int Size;
-    bool Unknown10;
-    Class_10C5B990** Table;
 };
 
 // FUNCTION: 0x10C5BBF0 ?FUN_10c5bbf0@Class_10C5BBF0@@QAEXH@Z

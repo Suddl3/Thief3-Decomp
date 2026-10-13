@@ -6,12 +6,7 @@
 #include "Game/Class_10B24D30.h"
 #include "Game/Class_10E7A9C0.h"
 #include "Game/Class_10F3A3D8.h"
-
-class Class_10ABB6B0
-{
-public:
-    void FUN_10abb6b0(int A);
-};
+#include "Game/Class_10ABB6B0.h"
 
 extern Class_10F3A3D8* DAT_10f3a3d8;
 

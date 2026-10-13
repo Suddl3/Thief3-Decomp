@@ -1,17 +1,9 @@
 // Game/Unsorted_10BADC40.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Core/Core.h"
 #include "Game/Class_10A68D20.h"
 #include "Game/Struct_10BA91E0.h"
-
-struct Struct_10BADCE0
-{
-    FVector Unknown00;
-    char Unknown0C[0xC];
-    Struct_10BA91E0* Unknown18;
-    Class_10A68D20 Unknown1C;
-};
+#include "Game/Struct_10BADCE0.h"
 
 FVector GetPointAlongRotation(const FRotator& Rotation, const FVector& Origin, float Dist);
 

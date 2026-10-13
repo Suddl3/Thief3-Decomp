@@ -4,17 +4,9 @@
 #include "Game/Class_10E49B48.h"
 #include "Game/Struct_10929600.h"
 #include "Game/Struct_10929D60.h"
+#include "Game/Class_10929710.h"
 
 Class_10905A90_Member* GetAllocator();
-
-class Class_10929710
-{
-public:
-    void FUN_10929710();
-
-    char Unknown00[0xC];
-    char* Unknown0C;
-};
 
 typedef unsigned short WORD;
 

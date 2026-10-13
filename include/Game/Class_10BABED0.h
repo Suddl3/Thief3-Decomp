@@ -5,10 +5,18 @@
 
 #include "Game/Class_10BAA8A0.h"
 
+class Class_10BB7670;
+class Class_10BBDB40;
+class Class_10C08590_Owner;
+
 class Class_10BABED0 : public Class_10BAA8A0
 {
 public:
     bool FUN_10babed0(bool A);
+    void FUN_10bacff0(void* A);
+    Class_10BB7670* FUN_10ba9fd0();
+    Class_10C08590_Owner* FUN_10baa6f0();
+    Class_10BBDB40* FUN_10dbd510(int Id);
 };
 
 #endif // GAME_CLASS_10BABED0_H

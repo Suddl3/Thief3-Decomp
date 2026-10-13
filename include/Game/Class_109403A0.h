@@ -11,6 +11,7 @@ class Class_109403A0
 public:
     void FUN_1093fcd0(Struct_109403A0* Material);
     void SetMaterialTextures(Struct_109403A0* Material, bool Enable);
+    void FUN_109405d0(Struct_109403A0* Material);
 
     char Unknown00[0x300];
     IDirect3DBaseTexture8* Unknown300;

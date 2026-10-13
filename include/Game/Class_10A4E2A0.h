@@ -3,12 +3,15 @@
 #ifndef GAME_CLASS_10A4E2A0_H
 #define GAME_CLASS_10A4E2A0_H
 
-class cIntArray;
+#include "Game/cIntArray.h"
 
 class Class_10A4E2A0
 {
 public:
     void FUN_10a4e2a0(int A, cIntArray* B);
+
+    char Unknown00[0xC];
+    cIntArray Unknown0C[0x10];
 };
 
 #endif // GAME_CLASS_10A4E2A0_H

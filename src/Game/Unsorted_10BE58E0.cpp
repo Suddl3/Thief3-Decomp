@@ -47,7 +47,7 @@ public:
     Class_10BFBB60 Unknown30;
 };
 
-class Class_10BE5D10
+class Class_10E960D8
 {
 public:
     Class_10E97B00 FUN_10be5d10();
@@ -56,8 +56,8 @@ public:
     Class_10BE5D10_Unknown04* Unknown04;
 };
 
-// FUNCTION: 0x10BE5D10 ?FUN_10be5d10@Class_10BE5D10@@QAE?AVClass_10E97B00@@XZ
-Class_10E97B00 Class_10BE5D10::FUN_10be5d10()
+// FUNCTION: 0x10BE5D10 ?FUN_10be5d10@Class_10E960D8@@QAE?AVClass_10E97B00@@XZ
+Class_10E97B00 Class_10E960D8::FUN_10be5d10()
 {
     int Evidence = 0;
     if (Unknown04->Unknown30.FUN_10bfbb60())

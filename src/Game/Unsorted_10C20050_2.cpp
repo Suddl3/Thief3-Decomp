@@ -1,7 +1,7 @@
 // Game/Unsorted_10C20050_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/cIntArray.h"
+#include "Game/Class_10C20050.h"
 
 struct Struct_10C20010
 {
@@ -27,16 +27,6 @@ public:
     Struct_10C20010 FUN_10c20010();
 
     Struct_10C20010 Unknown00;
-};
-
-class Class_10C20050
-{
-public:
-    void FindInRadius(float* Center, float Radius, cIntArray* Out);
-
-    int Unknown00;
-    int Unknown04;
-    int* Unknown08;
 };
 
 // FUNCTION: 0x10C20050 ?FindInRadius@Class_10C20050@@QAEXPAMMPAVcIntArray@@@Z

@@ -1,18 +1,12 @@
 // Game/Class_10E6BA00.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10905A90_Member.h"
 #include "Game/cIntArray.h"
+#include "Game/Class_10AA6290.h"
 
 Class_10905A90_Member* GetAllocator();
 
 struct Struct_10C08690;
-
-class Class_10AA6290
-{
-public:
-    void FUN_10aa6290(int A);
-};
 
 int FUN_10aa6040();
 

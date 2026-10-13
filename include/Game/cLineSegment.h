@@ -10,9 +10,21 @@ class cLineSegment
 public:
     cLineSegment(int A, int B);
 
-    float m_DeltaX;
-    float m_DeltaY;
-    float m_Slope;
+    union
+    {
+        float m_DeltaX;
+        float Unknown00;
+    };
+    union
+    {
+        float m_DeltaY;
+        float Unknown04;
+    };
+    union
+    {
+        float m_Slope;
+        char Pad08[0x4];
+    };
     FVector Unknown0C;
     FVector Unknown18;
 };

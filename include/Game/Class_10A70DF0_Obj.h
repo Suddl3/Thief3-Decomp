@@ -8,6 +8,7 @@ class Class_10A70DF0_Obj
 public:
     virtual ~Class_10A70DF0_Obj();
     virtual void Virtual1();
+    virtual int Virtual2();
 };
 
 #endif // GAME_CLASS_10A70DF0_OBJ_H

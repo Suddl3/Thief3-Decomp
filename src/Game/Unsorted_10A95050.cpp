@@ -1,5 +1,6 @@
 // Game/Unsorted_10A95050.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10E5D808.h"
 #include "Game/Class_10E5D968.h"
@@ -28,7 +29,7 @@ public:
     virtual int Virtual7(int p1);
 };
 
-class Class_10AAB5C0
+class Class_10E6CE28
 {
 public:
     virtual void Virtual0();
@@ -38,7 +39,7 @@ public:
     int GetUnknown08();
 };
 
-class Class_10E6CE50 : public Class_10AAB5C0
+class Class_10E6CE50 : public Class_10E6CE28
 {
 public:
     virtual void SetTimeRemaining();

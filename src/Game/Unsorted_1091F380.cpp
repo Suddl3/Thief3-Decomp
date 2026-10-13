@@ -1,15 +1,11 @@
 // Game/Unsorted_1091F380.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10924100.h"
 #include "Game/Class_10924100_Unknown44.h"
 #include "Game/Class_1092E8F0.h"
 #include "Game/Class_10905A90_Member.h"
-
-struct Struct_1092E970
-{
-    char Unknown00[0xC];
-};
+#include "Game/Class_1091F4C0.h"
+#include "Game/Struct_1092E970.h"
 
 Class_10905A90_Member* GetAllocator();
 
@@ -28,17 +24,6 @@ public:
     float Unknown04;
     float Unknown08;
     float Unknown0C;
-};
-
-class Class_1091F4C0
-{
-public:
-    bool FUN_1091f4c0(FVector* A, FVector* B);
-
-    char Unknown00[0x18];
-    int Unknown18;
-    char Unknown1C[4];
-    Class_1091F4C0_Unknown20* Unknown20;
 };
 
 // FUNCTION: 0x1091F380 ?SetCount@Class_1092E8F0@@QAEXH@Z

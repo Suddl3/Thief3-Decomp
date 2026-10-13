@@ -5,6 +5,8 @@
 
 #include "Game/cActorManager.h"
 
+class Object_10A76E10;
+
 class Class_10E6BC8C : public cActorManager
 {
 public:
@@ -19,6 +21,9 @@ public:
     virtual void Virtual8();
     virtual void Virtual9();
     virtual int Virtual10(int A);
+    virtual void Virtual11();
+    virtual void Virtual12();
+    virtual int FUN_10a76e10(int A, Object_10A76E10* B, float C);
 
     Class_10E6BC8C();
 

@@ -4,6 +4,7 @@
 #include "Game/Class_10C26E80.h"
 #include "Game/cPositionList.h"
 #include "Game/MC_MoveToPoint.h"
+#include "Game/Struct_10C26A60.h"
 
 extern void* DAT_10e99298[];
 
@@ -20,8 +21,6 @@ class Class_10E992D4 : public Class_10C26980
 public:
     Class_10E992D4* Construct(int A, int B, int C, int D);
 };
-
-struct Struct_10C26A60 {};
 
 class cIntArray
 {

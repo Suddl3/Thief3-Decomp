@@ -5,9 +5,17 @@
 
 #include "Game/cStructArray.h"
 
+class Class_10BF7F90;
+
 class Class_10BAF8A0
 {
 public:
+    Class_10BAF8A0(Class_10BF7F90* Owner);
+    ~Class_10BAF8A0()
+    {
+        Unknown28.Empty();
+    }
+
     void Empty();
 
     char Unknown00[0x28];

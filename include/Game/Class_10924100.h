@@ -19,6 +19,9 @@ public:
     void FUN_1091f6a0();
     bool Contains(Class_10924100_Unknown44* Item);
     void FUN_10920a30(Class_10A1E620_Inner* Inner);
+    void FUN_10923ff0(int A);
+    void ClearFlags(int A);
+    void FUN_1091f850();
 
     char Unknown00[0x4];
     int Unknown04;
@@ -36,6 +39,9 @@ public:
     int Unknown3C;
     char Unknown40[4];
     Class_10924100_Unknown44** Unknown44;
+    char Pad48[0x4];
+    bool Unknown4C;
+    char Pad4D[0x3];
 };
 
 #endif // GAME_CLASS_10924100_H

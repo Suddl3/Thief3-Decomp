@@ -9,6 +9,9 @@ public:
     void FUN_10aa5240();
     void FUN_10aa5250(int p1);
     void FUN_10aa52c0();
+
+    void* Unknown00;
+    int Unknown04;
 };
 
 #endif // GAME_CLASS_10AA52C0_H

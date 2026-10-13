@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10BBFBF0.h"
 #include "Game/Class_10BBFCA0.h"
+#include "Game/Class_10BBFD80.h"
 
 class FArchive
 {
@@ -24,14 +25,6 @@ class Class_10BBFD80Element
 public:
     char Unknown00[0x2C];
     Struct_10BBFD80 Unknown2C;
-};
-
-class Class_10BBFD80
-{
-public:
-    int Unknown00;
-    int Unknown04;
-    Class_10BBFD80Element** Unknown08;
 };
 
 class Class_10A68D20;

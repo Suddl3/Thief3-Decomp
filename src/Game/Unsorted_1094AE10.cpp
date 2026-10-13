@@ -1,15 +1,6 @@
 // Game/Unsorted_1094AE10.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_1094AE10
-{
-public:
-    int IsWithinRange(Class_1094AE10* Other, float Radius);
-
-    float Unknown00;
-    float Unknown04;
-    float Unknown08;
-};
+#include "Game/Class_1094AE10.h"
 
 // FUNCTION: 0x1094AE10 ?IsWithinRange@Class_1094AE10@@QAEHPAV1@M@Z
 int Class_1094AE10::IsWithinRange(Class_1094AE10* Other, float Radius)

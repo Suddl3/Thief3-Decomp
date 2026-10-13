@@ -4,18 +4,9 @@
 #include "Game/Class_10AA82D0.h"
 #include "Game/Class_10B8CB20.h"
 #include "Game/Class_10B8D800.h"
+#include "Game/Class_109671D0.h"
 
 class FVector;
-
-class Class_109671D0
-{
-public:
-    int FUN_109671d0();
-
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-};
 
 class Class_10D9FEE0 : public Class_10AA82D0
 {

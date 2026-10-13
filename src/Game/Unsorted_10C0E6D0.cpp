@@ -1,37 +1,16 @@
 // Game/Unsorted_10C0E6D0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_1098E330.h"
 #include "Game/cVolume.h"
 #include "Game/cIntArray.h"
 #include "Game/Struct_10C05A80.h"
 #include "Game/Struct_10BAA000.h"
-
-class Class_10C0E910
-{
-public:
-    void FUN_10c0e910(FVector* Pos, cIntArray* Out);
-
-    char Unknown00[0x10];
-    int Unknown10;
-    char Unknown14[4];
-    Class_1098E330** Unknown18;
-};
+#include "Game/Class_10C0E910.h"
+#include "Game/Class_10C0E9A0.h"
 
 extern float DAT_10eafbdc;
 
 float DistanceSquared3D(const Struct_10C05A80* A, const Struct_10C05A80* B);
-
-class Class_10C0E9A0
-{
-public:
-    Struct_10BAA000* FUN_10c0e9a0(const Struct_10C05A80* Target);
-
-    char Unknown00[4];
-    int Unknown04;
-    char Unknown08[4];
-    Struct_10BAA000** Unknown0C;
-};
 
 // FUNCTION: 0x10C0E910 ?FUN_10c0e910@Class_10C0E910@@QAEXPAVFVector@@PAVcIntArray@@@Z
 void Class_10C0E910::FUN_10c0e910(FVector* Pos, cIntArray* Out)

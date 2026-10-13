@@ -5,6 +5,7 @@
 #include "Game/Class_10E4CCD0.h"
 #include "Game/Struct_10B98C50.h"
 #include "Game/Struct_10B98E00.h"
+#include "Game/Class_10E95288.h"
 
 extern float DAT_10eafbdc;
 
@@ -16,15 +17,6 @@ void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
 void* FUN_10bdf650();
-
-class Class_10E95288
-{
-public:
-    Class_10E95288(int A, int B);
-
-    void** Unknown00;
-    int Unknown04[26];
-};
 
 // FUNCTION: 0x10B98C50 ?FUN_10b98c50@@YAHPAUStruct_10B98C50@@@Z
 int FUN_10b98c50(Struct_10B98C50* P)

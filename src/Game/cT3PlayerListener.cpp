@@ -7,6 +7,7 @@
 #include "Game/Struct_10B21820_Object.h"
 #include "Game/cT3PlayerListener.h"
 #include "Game/Object_10B4CA50_A.h"
+#include "Game/Class_109B2910.h"
 
 extern const char* DAT_10ff3824;
 
@@ -143,12 +144,6 @@ public:
     Class_10CAFD00* Unknown04;
     char Pad08[0xb0];
     bool UnknownB8;
-};
-
-class Class_109B2910
-{
-public:
-    void FUN_109b2910(int A);
 };
 
 Class_10D9B090* FUN_10d9dcb0();

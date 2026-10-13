@@ -5,12 +5,16 @@
 
 #include "Game/Class_10C49740.h"
 
+class Class_10C33AA0_Unknown0A8;
+
 class Class_10C32C30
 {
 public:
     int GetValue(int A);
 
-    char Unknown00[0xC];
+    char Unknown00[0x4];
+    Class_10C33AA0_Unknown0A8* Unknown04;
+    char Unknown08[0x4];
     Class_10C49740 Unknown0C;
 };
 

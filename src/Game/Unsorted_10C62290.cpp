@@ -1,15 +1,7 @@
 // Game/Unsorted_10C62290.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10905A90_Member.h"
-
-class Class_10C62290
-{
-public:
-    Class_10C62290(int A);
-
-    char Unknown00[0x13c];
-};
+#include "Game/Class_10C62290.h"
 
 Class_10905A90_Member* GetAllocator();
 

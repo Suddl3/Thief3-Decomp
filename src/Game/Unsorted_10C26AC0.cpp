@@ -5,6 +5,7 @@
 #include "Game/Class_10C26A60.h"
 #include "Game/Class_10C26B60.h"
 #include "Game/Class_10E9AFA4.h"
+#include "Game/Class_10C26C10.h"
 
 struct Struct_10C26A60;
 
@@ -16,16 +17,6 @@ void operator delete(void* Ptr);
 
 struct Struct_10C26C80
 {
-};
-
-class Class_10C26C10
-{
-public:
-    void FUN_10c26c10(cIntArray* Other);
-
-    int Count;
-    int Unknown04;
-    int* Data;
 };
 
 class Class_10E9925C

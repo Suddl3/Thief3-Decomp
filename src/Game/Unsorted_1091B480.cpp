@@ -4,6 +4,7 @@
 #include "Game/Class_1091B3F0.h"
 #include "Game/Class_1090A780.h"
 #include "Game/Class_1091B480.h"
+#include "Game/Class_1091B480_Node.h"
 
 struct Item_1091B3F0
 {
@@ -18,14 +19,6 @@ struct Item_1091B3F0
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 
 void operator delete(void* Ptr);
-
-struct Class_1091B480_Node
-{
-    cString Key;
-    int Value;
-    char Unknown08[0x18];
-    Class_1091B480_Node* Next;
-};
 
 // FUNCTION: 0x1091B480 ?Rehash@Class_1091B480@@QAEXH@Z
 void Class_1091B480::Rehash(int NewSize)

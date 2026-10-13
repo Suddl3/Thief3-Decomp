@@ -1,10 +1,10 @@
 // Game/Unsorted_10A67ED0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Item_10943600.h"
 #include "Game/Class_10943600.h"
 #include "Game/Class_10A680C0.h"
+#include "Game/Class_10A68020.h"
 
 class cIntArray
 {
@@ -43,16 +43,6 @@ public:
 };
 
 Class_10905A90_Member* GetAllocator();
-
-class Class_10A68020
-{
-public:
-    int m_Count;
-    unsigned int Unknown04;
-    char* m_Data;
-
-    void SetCount(int NewCount);
-};
 
 // FUNCTION: 0x10A68020 ?SetCount@Class_10A68020@@QAEXH@Z
 void Class_10A68020::SetCount(int NewCount)

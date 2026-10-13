@@ -1,16 +1,9 @@
 // Game/ALookPoint_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Engine/EngineClasses.h"
+#include "Game/Struct_10BC2D00_List.h"
 
 class AAIPathPoint;
-
-struct Struct_10BC2D00_List
-{
-    int Count;
-    int Unknown04;
-    AAIPathPoint** Items;
-};
 
 class Class_10BBF5D0
 {

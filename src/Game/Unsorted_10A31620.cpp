@@ -1,11 +1,11 @@
 // Game/Unsorted_10A31620.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10A31F00.h"
 #include "Game/cByteArray.h"
 #include "Game/Class_10E663C8.h"
 #include "Game/cString.h"
+#include "Game/Class_10A31750.h"
 
 class Class_10A31F00;
 
@@ -28,21 +28,9 @@ extern Class_10E663C8* DAT_10f39f3c;
 
 extern bool DAT_10ffc854;
 
-Class_10905A90_Member* GetAllocator();
-
 cString FUN_10d39dd0(const cString& Name);
 
 void FUN_10d394e0();
-
-class Class_10A31750
-{
-public:
-    void FUN_10a31750(int A, const char* B);
-
-    char Unknown00[4];
-    int Unknown04;
-    cString Unknown08;
-};
 
 // FUNCTION: 0x10A31750 ?FUN_10a31750@Class_10A31750@@QAEXHPBD@Z
 void Class_10A31750::FUN_10a31750(int A, const char* B)

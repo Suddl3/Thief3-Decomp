@@ -5,12 +5,17 @@
 
 #include "Game/Class_10B88A80_Field18.h"
 
-class cString;
 class Class_10B88A80_Node;
+class cString;
 
 class Class_10B88A80
 {
 public:
+    Class_10B88A80() : m_Collisions(0), m_Count(0), m_BucketCount(0), m_FixedSize(false), m_Buckets(0)
+    {
+        Rehash(0x40);
+    }
+
     unsigned int Insert(const cString& Key, const int& Value);
     void Rehash(int Size);
 
@@ -19,6 +24,7 @@ public:
     int m_HashBits;
     int m_BucketCount;
     bool m_FixedSize;
+    char Pad11[0x3];
     Class_10B88A80_Node** m_Buckets;
     Class_10B88A80_Field18 m_Hasher;
 };

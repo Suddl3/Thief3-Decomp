@@ -6,6 +6,7 @@
 #include "Game/Class_1094E780.h"
 #include "Game/Class_Field108.h"
 #include "Game/Elem_1094E3A0.h"
+#include "Game/Struct_1094E820B.h"
 
 struct Struct_1094E650
 {
@@ -50,14 +51,6 @@ struct Struct_1094E820A
     int Unknown00;
     int Unknown04;
     int Unknown08;
-};
-
-struct Struct_1094E820B
-{
-    char Unknown00[0x10];
-    Struct_1094E820A* Unknown10;
-    int Unknown14;
-    char Unknown18[0x10];
 };
 
 class Class_10E4AB88

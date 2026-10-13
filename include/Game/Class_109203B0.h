@@ -6,6 +6,8 @@
 class Class_109203B0
 {
 public:
+    Class_109203B0();
+
     Class_109203B0* Init();
 
     long m_InitTime;
@@ -27,6 +29,7 @@ public:
     int Unknown48;
     bool Unknown4C;
     bool Unknown4D;
+    char Pad4E[0x2];
 };
 
 #endif // GAME_CLASS_109203B0_H

@@ -68,8 +68,8 @@ public:
     virtual bool Virtual54();
 };
 
-// Copied from include/Game/Class_10A52EE0.h, with GetItem's real return type.
-class Class_10A52EE0
+// Copied from include/Game/cHUDLightGem.h, with GetItem's real return type.
+class cHUDLightGem
 {
 public:
     Class_10B2BC90_Unknown* GetItem(int Index);
@@ -81,8 +81,8 @@ public:
 };
 
 // Copied from include/Game/Class_10E7FED0.h: the list at +0x118 is a cIntArray (the header says FArray),
-// and GetItem is inherited from Class_10A52EE0 at offset 0.
-class Class_10E7FED0 : public Class_10A52EE0
+// and GetItem is inherited from cHUDLightGem at offset 0.
+class Class_10E7FED0 : public cHUDLightGem
 {
 public:
     void FUN_10b2b880();

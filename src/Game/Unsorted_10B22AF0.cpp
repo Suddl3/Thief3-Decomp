@@ -1,17 +1,9 @@
 // Game/Unsorted_10B22AF0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10905A90_Member.h"
+#include "Game/Class_10B22AF0.h"
 
 Class_10905A90_Member* GetAllocator();
-
-class Class_10B22AF0
-{
-public:
-    void SetLength(int Length);
-
-    int* Unknown00;
-};
 
 // FUNCTION: 0x10B22AF0 ?SetLength@Class_10B22AF0@@QAEXH@Z
 void Class_10B22AF0::SetLength(int Length)

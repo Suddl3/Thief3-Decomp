@@ -1,10 +1,10 @@
 // Game/Unsorted_10B4C320.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10971570.h"
 #include "Game/Class_10A18E80.h"
 #include "Game/Class_10EB79F4.h"
 #include "Game/Class_10AA9D90.h"
+#include "Game/Class_10B4C620.h"
 
 class FArchive;
 
@@ -86,19 +86,6 @@ class Class_1098E330
 public:
     char Unknown00[0x440];
     Class_10971570* Unknown440;
-};
-
-class Class_10B4C620
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-
-    int FUN_10b3add0(unsigned char Value);
-    void FUN_10b4c620(Class_1098E330* A);
 };
 
 // FUNCTION: 0x10B4C620 ?FUN_10b4c620@Class_10B4C620@@QAEXPAVClass_1098E330@@@Z

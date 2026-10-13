@@ -1,8 +1,8 @@
 // Game/Unsorted_10AA7360.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/cString.h"
 #include "Game/Class_10B1D660.h"
+#include "Game/Class_10AA7530.h"
 
 bool FUN_1090f010(const int* A, const int* B);
 
@@ -91,22 +91,6 @@ public:
 };
 
 extern Struct_10AA3520* DAT_10f35dec;
-
-class Class_10AA7530
-{
-public:
-    virtual void Virtual0();
-    virtual int Virtual1();
-
-    void FUN_10aa7530(int A, int B);
-
-    char Pad04[8];
-    cString Unknown0C;
-    cString Unknown10;
-    char Pad14[4];
-    cString Unknown18;
-    cString Unknown1C;
-};
 
 // FUNCTION: 0x10AA7530 ?FUN_10aa7530@Class_10AA7530@@QAEXHH@Z
 void Class_10AA7530::FUN_10aa7530(int A, int B)

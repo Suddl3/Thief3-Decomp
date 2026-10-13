@@ -11,6 +11,7 @@ class Class_10A80D30
 {
 public:
     bool WriteLines(FILE* File, int A);
+    bool FUN_10a83da0(FILE* File, int A);
 
     char Unknown00[4];
     int ChildCount;

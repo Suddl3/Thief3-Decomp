@@ -1,29 +1,13 @@
 // Game/Unsorted_10BBB8D0_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10BBDB10.h"
 #include "Game/cIntArray.h"
 #include "Game/Class_10BFF460.h"
 #include "Game/Class_10C26E80.h"
 #include "Game/Class_10C28570.h"
 #include "Game/Class_10DBD510.h"
-
-class Class_10BFD710
-{
-public:
-    void FUN_10bfd710();
-    void FUN_10bfcd40(void* P);
-
-    char Pad00[0x64];
-};
-
-class Class_10C276C0
-{
-public:
-    void FUN_10c276c0();
-
-    char Pad00[0x17C];
-};
+#include "Game/Class_10BFD710.h"
+#include "Game/Class_10C276C0.h"
 
 class Class_10C29540
 {

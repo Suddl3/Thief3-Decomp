@@ -7,6 +7,8 @@ class Class_10974340
 {
 public:
     int FUN_10974340();
+
+    char Pad00[0x1];
 };
 
 #endif // GAME_CLASS_10974340_H

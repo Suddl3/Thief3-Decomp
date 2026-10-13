@@ -3,14 +3,22 @@
 #ifndef GAME_CLASS_10E68F8C_H
 #define GAME_CLASS_10E68F8C_H
 
-class FVector;
+#include "Core/Core.h"
 
 class Class_10E68F8C
 {
 public:
     virtual void Virtual0(int A, FVector* B, float C);
+    virtual void FUN_10a57be0(float Delta);
 
-    char Unknown04[0x3C];
+    FVector m_Current;
+    FVector m_Start;
+    FVector m_End;
+    FVector m_Delta;
+    BYTE m_Finished;
+    char Pad35[0x3];
+    float m_Duration;
+    float m_Elapsed;
 };
 
 #endif // GAME_CLASS_10E68F8C_H

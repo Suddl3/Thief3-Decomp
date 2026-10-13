@@ -2,12 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10BF7990.h"
 #include "Game/Class_10C7D570.h"
-
-struct Struct_10BF7990
-{
-    char Unknown00[8];
-    int Unknown08;
-};
+#include "Game/Struct_10BF7990.h"
 
 struct Struct_10C7D570
 {

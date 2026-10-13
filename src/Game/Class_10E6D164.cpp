@@ -1,20 +1,10 @@
 // Game/Class_10E6D164.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10A9C200_Arg2.h"
+#include "Game/Class_10A9C200_Arg3.h"
+#include "Game/Class_10A9C200_Unknown00.h"
 
 class Class_10A036A0;
-
-class Class_10A9C200_Unknown00
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1(Class_10A036A0* Holder);
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual bool Virtual7(Class_10A036A0* Holder);
-};
 
 // Class_10A036A0 as include/Game/Class_10A036A0.h declares it, with the destructor added
 // (the funclet's destructor, FUN_109ea420) and the first 4 bytes typed as the pointer it holds.
@@ -30,30 +20,6 @@ public:
 
     Class_10A9C200_Unknown00* Unknown00;
     char Unknown04[0xC];
-};
-
-class Class_10A9C200_Arg2
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual Class_10A9C200_Unknown00* Virtual8();
-};
-
-class Class_10A9C200_Arg3
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual int Virtual4(int A);
 };
 
 // SoundSimulator as include/Game/SoundSimulator.h declares it, with Virtual3's real arguments

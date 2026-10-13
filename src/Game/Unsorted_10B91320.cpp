@@ -2,14 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10B912E0.h"
 #include "Game/Class_10B91800.h"
-
-class Class_10DAAF90
-{
-public:
-    void FUN_10daaf90(const Class_10DAAF90* Other);
-
-    char Unknown00[0x10];
-};
+#include "Game/Class_10DAAF90.h"
 
 // FUNCTION: 0x10B91320 ?CopyFrom@Class_10B91800@@QAEXH@Z
 void Class_10B91800::CopyFrom(int A)

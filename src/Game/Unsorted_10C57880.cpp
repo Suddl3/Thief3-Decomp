@@ -1,12 +1,13 @@
 // Game/Unsorted_10C57880.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_1091CA00.h"
 #include "Game/Class_1091DEE0.h"
 #include "Game/cString.h"
 #include "Game/Class_10C59EE0.h"
 #include "Game/Class_10A036A0.h"
+#include "Game/Class_10C56E40.h"
+#include "Game/Class_10C57BC0.h"
 
 extern Class_1091DEE0* DAT_10f2c928;
 
@@ -26,21 +27,6 @@ public:
     virtual void Virtual0();
     virtual void Virtual1();
     virtual void Virtual2();
-};
-
-class Class_10C56E40
-{
-public:
-    ~Class_10C56E40()
-    {
-        Class_10C57B30_Unknown00_Unknown00* P = Unknown00;
-        if (P)
-        {
-            P->Virtual2();
-        }
-    }
-
-    Class_10C57B30_Unknown00_Unknown00* Unknown00;
 };
 
 class Class_10C57B30_Unknown14_Unknown00
@@ -99,19 +85,6 @@ public:
     virtual void Virtual0();
     virtual void Virtual1();
     virtual void Virtual2();
-};
-
-class Class_10C57BC0
-{
-public:
-    Class_10C57BC0& FUN_10c57bc0(const Class_10C57BC0& Other);
-
-    Class_10C57BC0_Unknown00* Unknown00;
-    Class_10C57BC0_Unknown04* Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    int Unknown10;
-    Class_10A036A0 Unknown14;
 };
 
 // FUNCTION: 0x10C57B30 ??1Class_10C57B30@@QAE@XZ

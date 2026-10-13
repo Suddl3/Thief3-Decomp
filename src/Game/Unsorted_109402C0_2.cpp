@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_109403A0.h"
 #include "Game/Class_109373D0.h"
+#include "Game/Struct_109403A0.h"
 
 struct D3DXMATRIX;
 
@@ -132,12 +133,6 @@ public:
 };
 
 extern cD3DStateCache* DAT_10f31be0;
-
-struct Struct_109403A0
-{
-    char Unknown00[0x140];
-    IDirect3DBaseTexture8* Unknown140;
-};
 
 // FUNCTION: 0x109403A0 ?SetMaterialTextures@Class_109403A0@@QAEXPAUStruct_109403A0@@_N@Z
 void Class_109403A0::SetMaterialTextures(Struct_109403A0* Material, bool Enable)

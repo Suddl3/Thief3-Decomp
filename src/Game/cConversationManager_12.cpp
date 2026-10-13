@@ -1,29 +1,14 @@
 // Game/cConversationManager_12.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include <stdio.h>
 #include "Game/cString.h"
+#include "Game/Class_10A80D30.h"
 
 extern const char DAT_10e5d510[];
 
 extern const char DAT_10e5d514[];
 
 class Object_10A80D30;
-
-// Class_10A80D30 copied whole from include/Game/Class_10A80D30.h with FUN_10a83da0 added.
-class Class_10A80D30
-{
-public:
-    bool WriteLines(FILE* File, int A);
-    bool FUN_10a83da0(FILE* File, int A);
-
-    char Unknown00[4];
-    int ChildCount;
-    char Unknown08[4];
-    Object_10A80D30** Children;
-    char Unknown10[0x24];
-    char* Subject;
-};
 
 class Class_109022E0;
 

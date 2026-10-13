@@ -1,10 +1,11 @@
 // Game/Unsorted_10B2C620.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/cIntArray.h"
 #include "Game/Class_10B2BC90_Unknown.h"
 
-// Copied whole from include/Game/Class_10A52EE0.h, with GetItem returning the object symbols.txt names.
-class Class_10A52EE0
+// Copied whole from include/Game/cHUDLightGem.h, with GetItem returning the object symbols.txt names.
+class cHUDLightGem
 {
 public:
     Class_10B2BC90_Unknown* GetItem(int Index);
@@ -15,7 +16,7 @@ public:
     int* m_Items;
 };
 
-class Class_10B2D600 : public Class_10A52EE0
+class Class_10B2D600 : public cHUDLightGem
 {
 public:
     void RefreshNextSlots();

@@ -1,8 +1,8 @@
 // Game/Unsorted_10AC9B00.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10ACA3E0.h"
 #include "Game/TimeManager.h"
+#include "Game/Class_10AC9F60.h"
 
 extern float DAT_10eafbdc;
 
@@ -19,17 +19,6 @@ public:
     float Unknown10;
     float Unknown14;
     float Unknown18;
-};
-
-class Class_10AC9F60
-{
-public:
-    float FUN_10ac9f60(int Key);
-
-    char Pad00[0x4];
-    int Count;
-    char Pad08[0x4];
-    Class_10AC9F60_Unknown0C** Unknown0C;
 };
 
 // FUNCTION: 0x10AC9F60 ?FUN_10ac9f60@Class_10AC9F60@@QAEMH@Z

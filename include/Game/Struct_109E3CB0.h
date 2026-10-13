@@ -7,6 +7,7 @@ class ULevel;
 
 struct Struct_109E3CB0
 {
+public:
     ULevel* Unknown00;
 };
 

@@ -1,9 +1,9 @@
 // Game/Unsorted_10BED4A0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/cString.h"
 #include "Game/Class_10BC4160.h"
 #include "Game/Struct_10FF66B0.h"
+#include "Game/Class_10BED900.h"
 
 extern Struct_10FF66B0 DAT_10ff66b0[];
 
@@ -15,12 +15,6 @@ class Class_10BF79D0
 {
 public:
     int FUN_10bf79d0();
-};
-
-class Class_10BED900 : public Class_10BC4160
-{
-public:
-    int FUN_10bed900(const cString* Name);
 };
 
 // FUNCTION: 0x10BED900 ?FUN_10bed900@Class_10BED900@@QAEHPBVcString@@@Z

@@ -16,6 +16,7 @@ public:
     int FUN_10c3c2c0(int A);
     bool FUN_10c38810();
     void MoveToCurrent();
+    void FUN_10c39920(bool A, bool B);
 
     char Pad04[0x24];
     Struct_10C39220 m_FixedEntry;

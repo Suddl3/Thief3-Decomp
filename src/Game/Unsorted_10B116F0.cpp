@@ -1,20 +1,9 @@
 // Game/Unsorted_10B116F0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
-class Class_10905A90_Member
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8(int A, int B);
-    virtual void Virtual9();
-};
+#include "Game/Class_10905A90_Member.h"
+#include "Game/Class_10B111A0_Unknown0C.h"
+#include "Game/Class_10B111A0_Unknown10.h"
+#include "Game/Struct_10B111A0_Node.h"
 
 Class_10905A90_Member* GetAllocator();
 
@@ -32,31 +21,6 @@ public:
 };
 
 class Class_10B111A0_Unknown10;
-
-struct Struct_10B111A0_Node
-{
-    Struct_10B111A0_Node* Next;
-    Struct_10B111A0_Node* Prev;
-    int Key;
-    int Unknown0C;
-    Class_10B111A0_Unknown10* Unknown10;
-};
-
-class Class_10B111A0_Unknown0C
-{
-public:
-    int Count;
-    Struct_10B111A0_Node* Head;
-    Struct_10B111A0_Node* Tail;
-};
-
-class Class_10B111A0_Unknown10
-{
-public:
-    virtual ~Class_10B111A0_Unknown10();
-    virtual void Virtual1();
-    virtual int Virtual2(int A);
-};
 
 class Class_10E782A0
 {

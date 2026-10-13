@@ -1,7 +1,7 @@
 // Game/Unsorted_109396D0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/cString.h"
+#include "Game/Class_109396D0.h"
 
 int __stricmp(const char* Str1, const char* Str2);
 
@@ -14,15 +14,6 @@ public:
     cString Unknown0C;
     char Unknown10;
     bool Unknown11;
-};
-
-class Class_109396D0
-{
-public:
-    Class_109396D0_Unknown04* FindInsertParent(const cString& Key);
-
-    char Unknown00[0x1C];
-    Class_109396D0_Unknown04* Unknown1C;
 };
 
 // FUNCTION: 0x109396D0 ?FindInsertParent@Class_109396D0@@QAEPAVClass_109396D0_Unknown04@@ABVcString@@@Z

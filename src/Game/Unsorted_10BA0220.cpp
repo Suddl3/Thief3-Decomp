@@ -5,6 +5,7 @@
 #include "Game/Class_10C084A0.h"
 #include "Game/Class_10E8C118.h"
 #include "Game/FArchive.h"
+#include "Game/Class_10C074F0.h"
 
 extern Class_10BA1270* DAT_10ff6680;
 
@@ -14,12 +15,6 @@ struct Struct_10BA12F0
     int Count;
     char Unknown10[4];
     void** Items;
-};
-
-class Class_10C074F0
-{
-public:
-    void FUN_10c074f0(FArchive& Ar);
 };
 
 // FUNCTION: 0x10BA0DA0 ?Serialize@Class_10E8C118@@UAEXAAVFArchive@@@Z

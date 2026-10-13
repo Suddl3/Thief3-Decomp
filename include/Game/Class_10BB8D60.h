@@ -5,12 +5,20 @@
 
 #include "Game/Class_109A6AA0.h"
 
+class Class_10C28F00;
+class Class_10C7D570;
+class Class_10bf7f90;
+
 class Class_10BB8D60
 {
 public:
     void Reset();
 
-    char Unknown00[0x22C];
+    char Unknown00[8];
+    Class_10C7D570* Unknown08;
+    Class_10bf7f90* Unknown0C;
+    Class_10C28F00* Unknown10;
+    char Pad14[0x218];
     Class_109A6AA0 Unknown22C;
     Class_109A6AA0 Unknown238;
     char Unknown244[0xAC];

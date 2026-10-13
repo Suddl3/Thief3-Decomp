@@ -1,5 +1,6 @@
 // Game/Unsorted_10BDAFE0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10AAF570.h"
 #include "Game/Class_10AAF570_Result.h"
 #include "Game/Class_10BBDB40.h"
@@ -24,7 +25,7 @@ public:
     Class_10BF7F90* FUN_10bc4160();
 };
 
-class Class_10BDB050 : public Class_10BC4160
+class cMeleeStrafeTarget : public Class_10BC4160
 {
 public:
     bool FUN_10bdb050();
@@ -48,8 +49,8 @@ void Class_10BDAFE0::StartRandomTimer()
     Unknown70 = GetTimeSeconds() + (Max - Min) * appFrand() + Min;
 }
 
-// FUNCTION: 0x10BDB050 ?FUN_10bdb050@Class_10BDB050@@QAE_NXZ
-bool Class_10BDB050::FUN_10bdb050()
+// FUNCTION: 0x10BDB050 ?FUN_10bdb050@cMeleeStrafeTarget@@QAE_NXZ
+bool cMeleeStrafeTarget::FUN_10bdb050()
 {
     if (FUN_10bc4160() && FUN_10bc4160()->GetLinkedObject())
         return ((Class_10AAF570_Result*)FUN_10bc4160()->GetLinkType())->Virtual46();

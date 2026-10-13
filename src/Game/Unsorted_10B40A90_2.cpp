@@ -1,11 +1,7 @@
 // Game/Unsorted_10B40A90_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include <new>
-
-struct Struct_109E2A90_Node
-{
-};
+#include "Game/Struct_109E2A90_Node.h"
 
 // Copied from include/Game/Class_109E2A90.h; Unlink returns the node it removed (the caller deletes eax).
 class Class_109E2A90

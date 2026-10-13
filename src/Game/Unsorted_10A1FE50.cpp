@@ -1,12 +1,12 @@
 // Game/Unsorted_10A1FE50.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10A21280.h"
 #include "Game/Class_10BD4120.h"
 #include <new>
 #include "Game/Class_10A21480.h"
 #include "Game/Class_10BAEC80.h"
+#include "Game/Struct_10C22AD0.h"
 
 Class_10905A90_Member* GetAllocator();
 
@@ -43,11 +43,6 @@ public:
 
     char Unknown00[0x148];
     int Unknown148;
-};
-
-struct Struct_10C22AD0
-{
-    char Unknown00[0x24];
 };
 
 // FUNCTION: 0x10A20440 ?FUN_10a20440@@YAXXZ

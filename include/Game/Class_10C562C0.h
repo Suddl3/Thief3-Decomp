@@ -8,7 +8,11 @@
 class Class_10C562C0 : public Class_10C54970
 {
 public:
+    Class_10C562C0();
+
     void FUN_10c56780(float A);
+
+    char Unknown2C[0x30];
 };
 
 #endif // GAME_CLASS_10C562C0_H

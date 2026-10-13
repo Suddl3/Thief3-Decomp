@@ -1,38 +1,13 @@
 // Game/Unsorted_1095B160.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10905A90_Member.h"
-
-Class_10905A90_Member* GetAllocator();
-
-extern const char DAT_10e47660[];
+#include "Game/cString.h"
 
 extern const char DAT_10e4af34[];
 
 extern "C" char* _strupr(char* String);
 
 extern "C" char* strstr(const char* Haystack, const char* Needle);
-
-// Ion Storm's string (0x109081E0): a char pointer to a block allocated 4 bytes before it.
-class cString
-{
-public:
-    cString() : Unknown00(0) {}
-
-    ~cString()
-    {
-        if (Unknown00)
-        {
-            char* Block = Unknown00 - 4;
-            GetAllocator()->Virtual5(Block);
-            Unknown00 = 0;
-        }
-    }
-
-    const char* operator*() const { return Unknown00 ? Unknown00 : DAT_10e47660; }
-
-    char* Unknown00;
-};
 
 class Class_10DB58F0
 {

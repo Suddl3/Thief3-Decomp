@@ -11,8 +11,11 @@ class Class_10B9F950
 {
 public:
     void SerializeItems(FArchive& Ar, int Count);
+    void FUN_10ba0390(FArchive& Ar);
 
-    char Unknown00[0x18];
+    char Pad00[0x4];
+    cIntArray Unknown04;
+    char Pad10[0x8];
     cIntArray m_Items;
 };
 

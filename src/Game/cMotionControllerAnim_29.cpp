@@ -1,7 +1,7 @@
 // Game/cMotionControllerAnim_29.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10C49740.h"
+#include "Game/Class_10C32C30.h"
 
 class Class_10C33AA0_Member
 {
@@ -50,17 +50,6 @@ class Class_10C33AA0_Unknown0A8
 public:
     char Unknown00[0x8];
     Class_10C33AA0_Unknown08* Unknown08;
-};
-
-class Class_10C32C30
-{
-public:
-    int GetValue(int A);
-
-    char Unknown00[0x4];
-    Class_10C33AA0_Unknown0A8* Unknown04;
-    char Unknown08[0x4];
-    Class_10C49740 Unknown0C;
 };
 
 class cMotionControllerAnim

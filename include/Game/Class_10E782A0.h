@@ -4,6 +4,9 @@
 #define GAME_CLASS_10E782A0_H
 
 class Class_10B111A0_Unknown0C;
+class Class_10B11400_Arg;
+class Class_10B11400_Unknown10;
+struct Struct_10B111A0_Node;
 
 class Class_10E782A0
 {
@@ -11,10 +14,24 @@ public:
     virtual void Virtual0();
     virtual void Virtual1();
     virtual bool RemoveKey(int A);
+    virtual void FUN_10b11bd0(int Key, int Index, int Tag, int Arg);
 
-    int m_BucketCount;
+    void FUN_10b11400(Class_10B11400_Arg* X);
+    int FUN_10b113a0(int Index, Struct_10B111A0_Node* Node);
+    void FUN_10b11b00(int A, int B, int C, int D);
+
+    union
+    {
+        int m_BucketCount;
+        int Unknown04;
+    };
     int Unknown08;
-    Class_10B111A0_Unknown0C** m_Buckets;
+    union
+    {
+        Class_10B111A0_Unknown0C** m_Buckets;
+        int Unknown0C;
+    };
+    Class_10B11400_Unknown10* Unknown10;
 };
 
 #endif // GAME_CLASS_10E782A0_H

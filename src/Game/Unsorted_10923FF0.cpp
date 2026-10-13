@@ -1,60 +1,15 @@
 // Game/Unsorted_10923FF0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/IDirect3DDevice8.h"
+#include "Game/Class_10924100.h"
+#include "Game/Class_10924100_Unknown38.h"
+#include "Game/Class_10924100_Unknown44.h"
 
 class Class_10924100_Unknown38;
 
 class Class_10924100_Unknown44;
 
 class Class_10A1E620_Inner;
-
-class Class_10924100
-{
-public:
-    ~Class_10924100();
-
-    bool FUN_109228a0(int A, int B);
-    void Reset();
-    void FUN_10924100();
-    void FUN_1091f6a0();
-    bool Contains(Class_10924100_Unknown44* Item);
-    void FUN_10920a30(Class_10A1E620_Inner* Inner);
-    void FUN_10923ff0(int A);
-    void ClearFlags(int A);
-    void FUN_1091f850();
-
-    char Unknown00[0xC];
-    int Unknown0C;
-    char Pad10[0x1c];
-    int Unknown2C;
-    int Unknown30;
-    char Pad34[0x4];
-    Class_10924100_Unknown38** Unknown38;
-    int Unknown3C;
-    char Unknown40[4];
-    Class_10924100_Unknown44** Unknown44;
-    char Pad48[0x4];
-    bool Unknown4C;
-};
-
-class Class_10924100_Unknown38
-{
-public:
-    virtual void Virtual0(int A);
-
-    char Unknown04[0x58];
-    int Unknown5C;
-};
-
-class Class_10924100_Unknown44
-{
-public:
-    virtual void Virtual0(int A);
-
-    char Unknown04[0x58];
-    int Unknown5C;
-};
 
 class cD3DStateCache
 {

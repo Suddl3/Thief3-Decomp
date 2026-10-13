@@ -1,15 +1,8 @@
 // Game/Unsorted_10C59330.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10C576F0.h"
 #include "Game/Class_10C5A1F0.h"
-
-class Class_10C576F0_Node
-{
-public:
-    char Unknown00[8];
-    Class_10C576F0_Node* Next;
-};
+#include "Game/Class_10C576F0_Node.h"
 
 // FUNCTION: 0x10C59330 ?FUN_10c59330@Class_10C5A1F0@@QAEXH@Z
 void Class_10C5A1F0::FUN_10c59330(int A)

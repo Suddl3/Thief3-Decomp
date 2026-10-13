@@ -3,10 +3,21 @@
 #ifndef GAME_CLASS_10C341B0_H
 #define GAME_CLASS_10C341B0_H
 
+#include "Game/Class_10C49740.h"
+
+class Class_10C341B0_UnknownA8;
+class Object_10C2F4F0;
+
 class Class_10C341B0
 {
 public:
     int FUN_10c341b0();
+    Object_10C2F4F0* FUN_10c2f4f0(int A);
+
+    char Pad00[0xA8];
+    Class_10C341B0_UnknownA8* UnknownA8;
+    char PadAC[0x4];
+    Class_10C49740 UnknownB0;
 };
 
 #endif // GAME_CLASS_10C341B0_H

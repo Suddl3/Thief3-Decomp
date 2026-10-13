@@ -1,20 +1,7 @@
 // Game/Unsorted_109E5660.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_1091D390.h"
-
-class Class_109E5660
-{
-public:
-    void FUN_109e5660(Class_1091D390* Obj, float B, float C, int D, int E, float F, float G, int H);
-
-    char Unknown00[0xB0];
-    float Unknown0B0;
-    float Unknown0B4;
-    char Unknown0B8[0x14];
-    float Unknown0CC;
-    float Unknown0D0;
-};
+#include "Game/Class_109E5660.h"
 
 // FUNCTION: 0x109E5660 ?FUN_109e5660@Class_109E5660@@QAEXPAVClass_1091D390@@MMHHMMH@Z
 void Class_109E5660::FUN_109e5660(Class_1091D390* Obj, float B, float C, int D, int E, float F, float G, int H)

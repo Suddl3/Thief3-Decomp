@@ -1,7 +1,7 @@
 // Game/Unsorted_10BA0220_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/cIntArray.h"
+#include "Game/Class_10B9F950.h"
 
 class FArchive
 {
@@ -20,22 +20,13 @@ void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
 void DeleteItems(cIntArray* Items);
 
-class Class_10BA00C0
+class Class_10E8C008
 {
 public:
-    Class_10BA00C0(FArchive& Ar);
+    Class_10E8C008(FArchive& Ar);
     void Serialize(FArchive& Ar);
 
     char Pad00[0x54];
-};
-
-class Class_10B9F950
-{
-public:
-    void FUN_10ba0390(FArchive& Ar);
-
-    char Pad00[0x4];
-    cIntArray Unknown04;
 };
 
 // FUNCTION: 0x10BA0390 ?FUN_10ba0390@Class_10B9F950@@QAEXAAVFArchive@@@Z
@@ -47,7 +38,7 @@ void Class_10B9F950::FUN_10ba0390(FArchive& Ar)
         int Count = Unknown04.Count;
         Ar.Serialize(&Count, 4);
         for (int i = 0; i < Count; i++)
-            ((Class_10BA00C0*)Unknown04.Data[i])->Serialize(Ar);
+            ((Class_10E8C008*)Unknown04.Data[i])->Serialize(Ar);
     }
     if (Ar.Unknown14 == 1)
     {
@@ -57,7 +48,7 @@ void Class_10B9F950::FUN_10ba0390(FArchive& Ar)
         for (int i = 0; i < Count; i++)
         {
             GetAllocator()->Virtual8(0, 0);
-            Class_10BA00C0* Obj = new(0, 0, 0, 0, 0) Class_10BA00C0(Ar);
+            Class_10E8C008* Obj = new(0, 0, 0, 0, 0) Class_10E8C008(Ar);
             GetAllocator()->Virtual9();
             int Index = Unknown04.Count;
             cIntArray* List = &Unknown04;

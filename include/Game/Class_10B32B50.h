@@ -12,9 +12,11 @@ public:
     void FUN_10b31fb0(int* A, Class_10B21340* B);
     void FUN_10b32620(Class_10B21340* A);
     void FUN_10b326b0(Class_10B21340* A);
+    bool FUN_10b32200(Class_10B21340* A);
 
     char Unknown00[0x32];
     bool Unknown32;
+    char Pad33[0x1];
     int Unknown34;
 };
 

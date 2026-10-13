@@ -3,6 +3,7 @@
 #include "Game/Class_10FF667C.h"
 #include "Game/Class_10B9BDA0_Member.h"
 #include "Game/Class_10BF23A0.h"
+#include "Game/Class_10BF23A0_Unknown04.h"
 
 class Class_10BBDB40;
 
@@ -26,15 +27,6 @@ public:
 
     char Unknown00[0x64];
     bool Unknown64;
-};
-
-class Class_10BF23A0_Unknown04
-{
-public:
-    bool FUN_10bb7db0(int A, int B, int C);
-
-    char Unknown00[8];
-    Class_10C7D570* Unknown08;
 };
 
 double GetTimeSeconds();

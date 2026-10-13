@@ -1,28 +1,9 @@
 // Game/Unsorted_10B326B0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Options.h"
 #include "Game/Class_10AC14F0.h"
-
-class Class_10B21340
-{
-public:
-    int FUN_1098e330(int Id, int* Out);
-};
-
-class Class_10B32B50
-{
-public:
-    void BeginArrowAttach(Class_10B21340* A);
-    void FUN_10b31fb0(int* A, Class_10B21340* B);
-    void FUN_10b32620(Class_10B21340* A);
-    void FUN_10b326b0(Class_10B21340* A);
-    bool FUN_10b32200(Class_10B21340* A);
-
-    char Unknown00[0x32];
-    bool Unknown32;
-    int Unknown34;
-};
+#include "Game/Class_10B21340.h"
+#include "Game/Class_10B32B50.h"
 
 class Class_10F3A3D8
 {

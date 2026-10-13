@@ -5,6 +5,7 @@
 
 struct Arg_10A48720
 {
+public:
     Arg_10A48720() { Unknown00 = 0; }
     Arg_10A48720(const Arg_10A48720& Other) { Unknown00 = Other.Unknown00; }
 

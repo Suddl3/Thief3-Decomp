@@ -1,7 +1,7 @@
 // Game/Unsorted_10BBDD00.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/cIntArray.h"
+#include "Game/Class_10BBE020.h"
 
 struct Struct_10BBE020
 {
@@ -23,15 +23,6 @@ public:
     int Unknown04;
     Struct_10BBE020* Unknown08;
     Struct_10BBE020* Unknown0C;
-};
-
-class Class_10BBE020
-{
-public:
-    void FUN_10bbe020(int Item);
-
-    char Unknown00[0x18];
-    cIntArray Unknown18;
 };
 
 // FUNCTION: 0x10BBE020 ?FUN_10bbe020@Class_10BBE020@@QAEXH@Z

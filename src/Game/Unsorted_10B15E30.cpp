@@ -1,9 +1,9 @@
 // Game/Unsorted_10B15E30.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-
 #include "Game/Class_10B154C0.h"
 #include "Game/Class_10905A90_Member.h"
 #include "Game/WindowManager.h"
+#include "Game/cString.h"
 
 // Game/Class_10B45AD0.h does not declare FUN_10b2a610, which the window calls on itself: this copy has it.
 class Class_10B45AD0
@@ -58,28 +58,6 @@ public:
     char Pad15C[0x1];
     char Unknown15D;
     char Pad15E[0x2];
-};
-
-Class_10905A90_Member* GetAllocator();
-
-// Ion Storm's string (0x109081E0): a char pointer to a block allocated 4 bytes before it.
-// The header's class has a base and the implicit destructor, which does not match here
-// (Block is computed before GetAllocator()): this copy has no base and the body as its destructor.
-class cString
-{
-public:
-    cString(const char* In);
-    ~cString()
-    {
-        if (Unknown00)
-        {
-            char* Block = Unknown00 - 4;
-            GetAllocator()->Virtual5(Block);
-            Unknown00 = 0;
-        }
-    }
-
-    char* Unknown00;
 };
 
 // FUNCTION: 0x10B15E30 ?FUN_10b15e30@Class_10B154C0@@QAEXPAXH@Z

@@ -5,9 +5,22 @@
 
 struct Item_10943600
 {
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
+public:
+    union
+    {
+        int Unknown00;
+        float X;
+    };
+    union
+    {
+        int Unknown04;
+        float Y;
+    };
+    union
+    {
+        int Unknown08;
+        float Z;
+    };
 };
 
 #endif // GAME_ITEM_10943600_H

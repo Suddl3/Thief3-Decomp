@@ -3,9 +3,24 @@
 #ifndef GAME_CLASS_10B9FC20_H
 #define GAME_CLASS_10B9FC20_H
 
+#include "Game/Class_10905A90_Member.h"
+
+Class_10905A90_Member* GetAllocator();
+
 class Class_10B9FC20
 {
 public:
+    ~Class_10B9FC20()
+    {
+        FUN_10b9f6d0(0);
+        if (m_Capacity)
+        {
+            GetAllocator()->Virtual5(m_Data);
+            m_Data = 0;
+            m_Capacity = 0;
+        }
+    }
+
     void FUN_10b9f6d0(int Count);
     void Free();
 

@@ -101,7 +101,7 @@ public:
     virtual Class_10B2BC10_Value* Virtual83();
 };
 
-class Class_10A52EE0
+class cHUDLightGem
 {
 public:
     virtual void Virtual0();
@@ -113,7 +113,7 @@ public:
     int* m_Items;
 };
 
-class Class_10B2C160 : public Class_10A52EE0
+class Class_10B2C160 : public cHUDLightGem
 {
 public:
     bool FUN_10b2bc10();

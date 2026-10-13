@@ -9,9 +9,11 @@ class Class_10C613F0
 {
 public:
     int FUN_10c613f0();
+    bool FUN_10d57530();
 
     char Unknown00[0xC];
     Class_10C613F0_Member* Unknown0C;
+    char Unknown10[0x28];
 };
 
 #endif // GAME_CLASS_10C613F0_H

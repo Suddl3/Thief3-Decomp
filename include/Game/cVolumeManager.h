@@ -6,6 +6,7 @@
 #include "Game/Class_10A4C550.h"
 #include "Game/cActorManager.h"
 
+class AVolume;
 class FVector;
 class cVolume;
 
@@ -20,7 +21,6 @@ public:
     virtual void Virtual5();
     virtual void Virtual6();
     virtual void Virtual7();
-    virtual void Virtual8();
     virtual void Virtual9();
     virtual void Virtual10();
     virtual void Virtual11();
@@ -29,6 +29,11 @@ public:
     virtual void Virtual14();
     virtual bool ContainsPoint(const FVector& A, cVolume* B);
     virtual int* FindValue(unsigned int Key);
+    virtual void Virtual8(int A, int B, int C);
+
+    void FUN_10a71210(AVolume* Volume);
+
+    using cActorManager::Virtual7;
 
     Class_10A4C550 m_Values;
     char Pad05[0x3];

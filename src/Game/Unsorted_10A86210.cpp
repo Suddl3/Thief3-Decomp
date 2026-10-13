@@ -2,6 +2,8 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/cIntArray.h"
 #include "Game/Object_10A858C0.h"
+#include "Game/Class_10A85AD0.h"
+#include "Game/Class_10A86210_Arg.h"
 
 class Class_10A86210_Arg;
 
@@ -14,24 +16,6 @@ void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 extern cIntArray DAT_10f3a1c8;
 
 extern Object_10A858C0** DAT_10f3a1d0;
-
-class Class_10A85AD0 : public Object_10A858C0
-{
-public:
-    Class_10A85AD0();
-
-    char Unknown04[0x54];
-};
-
-class Class_10A86210_Arg
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1(void* Data, int Size);
-
-    char Unknown04[0x10];
-    int Unknown14;
-};
 
 // FUNCTION: 0x10A86210 ?SerializeObjects@@YAXPAVClass_10A86210_Arg@@@Z
 void SerializeObjects(Class_10A86210_Arg* Ar)
