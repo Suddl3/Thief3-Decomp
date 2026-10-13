@@ -166,8 +166,11 @@ class Regrouper:
         for a in blocks:
             name = self.marks[a]
             old = self.reference(self.home[a])
-            if name not in old:
-                continue  # an alias of the address's name: tools/cc.py renames it; nothing to compare by
+            if name not in old:  # an alias of the address's name: tools/cc.py gives the object that one
+                sym = self.p.by_addr.get(a)
+                name = sym.name if sym is not None and sym.address == a else name
+                if name not in old:
+                    continue
             if name not in new:
                 return f"{fmt_addr(a)} is not emitted"
             if new[name] != old[name]:
@@ -242,8 +245,27 @@ def write_splits(p: Project, rg: Regrouper, changed: List[str]) -> str:
     for r, sources in wants.items():
         owner = held[r] if held[r] in sources else sorted(sources)[0]
         eh[owner].append(r)
+    # A range no record lists (a destructor a tool named, not a worker) goes by the names in it:
+    # `__ehhandler$<function>` belongs with that function.
+    where = {a: s for s, u in rg.units.items() for a in u.blocks}
+    for r, holder in held.items():
+        if r in wants:
+            continue
+        owner = holder if rg.units.get(holder) and rg.units[holder].blocks else None
+        for s in p.symbols:
+            if r[0] <= s.address < r[1] and "$" in s.name:
+                m = re.match(r"^__(?:ehhandler|unwindfunclet)\$(.+?)(?:\$\d+)?$", s.name)
+                f = p.address_of(m.group(1)) if m else None
+                if f in where:
+                    owner = where[f]
+                    break
+        if owner:
+            eh[owner].append(r)
     text = p.splits_txt.read_text(encoding="utf-8")
     note = ".text$x: EH handlers and unwind funclets"
+    # and a unit that only takes over a range (one ICF folded for several functions, when the unit that
+    # held it lost its function) is written too
+    changed = sorted(set(changed) | {owner for owner, rs in eh.items() if any(held.get(r) != owner for r in rs)})
     for source in changed:
         u = rg.units[source]
         if not u.blocks:
