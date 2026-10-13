@@ -202,6 +202,10 @@ def main() -> None:
                   "missing": missing, "empty": True})
             sys.exit(5)
         agent = agent_id(args.agent)
+        if (p.state / "drain").is_file():  # the lead is closing the batch: workers finish what they hold
+            print(json.dumps({"agent": agent, "claimed": [], "empty": True,
+                              "note": "the lead closed the queue (build/agent/drain): stop"}), flush=True)
+            sys.exit(4)
         accepted = p.accepted()
         taken = []
         # A second pass never hands a worker back its own deferral.
