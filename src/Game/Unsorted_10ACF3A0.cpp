@@ -4,6 +4,8 @@
 #include "Game/Class_10ACF9A0.h"
 #include "Game/Class_10AAB5C0.h"
 #include "Game/cIntArray.h"
+#include "Game/Class_10ACF3A0.h"
+#include "Game/Class_10978090.h"
 
 class cUObjectLinkManager
 {
@@ -16,6 +18,14 @@ public:
 };
 
 cUObjectLinkManager* GetUObjectLinkManager();
+
+// FUNCTION: 0x10ACF3A0 ?FUN_10acf3a0@Class_10ACF3A0@@QAEHH@Z
+int Class_10ACF3A0::FUN_10acf3a0(int A)
+{
+    cIntArray Items;
+    GetUObjectLinkManager()->Virtual4(0, A, 0x281b9d0, &Items);
+    return (int)((Class_10978090*)Items.Data[0])->FUN_10978090();
+}
 
 // FUNCTION: 0x10ACF690 ?FUN_10acf690@Class_10ACF9A0@@QAEPAVClass_10B82390@@H@Z
 Class_10B82390* Class_10ACF9A0::FUN_10acf690(int A)

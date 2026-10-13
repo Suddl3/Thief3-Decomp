@@ -1,5 +1,6 @@
 // Game/Unsorted_10A87F80.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include <math.h>
 #include "Core/Core.h"
 #include "Game/Class_10A88910.h"
@@ -7,6 +8,44 @@
 #include "Game/Class_10A88D00.h"
 
 extern float DAT_10e49684;
+
+extern float DAT_10eafbdc;
+
+class Class_10A88880
+{
+public:
+    float Unknown00;
+    float Unknown04;
+    float Unknown08;
+    float Unknown0C;
+
+    float GetFalloff(float Value, bool Flag);
+};
+
+// FUNCTION: 0x10A88880 ?GetFalloff@Class_10A88880@@QAEMM_N@Z
+float Class_10A88880::GetFalloff(float Value, bool Flag)
+{
+    if (Flag)
+    {
+        if (Value == 180.0f)
+            return DAT_10eafbdc;
+        if (Value <= Unknown08)
+            return DAT_10e49684;
+        if (Value > Unknown0C)
+            return DAT_10eafbdc;
+        return ((Unknown0C - Unknown08) - (Value - Unknown08)) / (Unknown0C - Unknown08);
+    }
+    else
+    {
+        if (Value == 180.0f)
+            return DAT_10eafbdc;
+        if (Value <= Unknown00)
+            return DAT_10e49684;
+        if (Value > Unknown04)
+            return DAT_10eafbdc;
+        return ((Unknown04 - Unknown00) - (Value - Unknown00)) / (Unknown04 - Unknown00);
+    }
+}
 
 // FUNCTION: 0x10A88910 ?ReadOrDefault@Class_10A88910@@QAEXHH@Z
 void Class_10A88910::ReadOrDefault(int Id, int Mode)

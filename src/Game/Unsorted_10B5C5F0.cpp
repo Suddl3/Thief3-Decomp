@@ -1,8 +1,10 @@
 // Game/Unsorted_10B5C5F0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10B197E0.h"
 #include "Game/Class_10B5E2E0.h"
+#include "Core/Core.h"
 
 class Class_10B1B8A0
 {
@@ -137,6 +139,24 @@ public:
     virtual void Virtual119();
     virtual void Virtual120(int A, int B);
 };
+
+struct Item_10B197E0
+{
+    FString Unknown00;
+    INT Unknown0C;
+    INT Unknown10;
+    BYTE Unknown14;
+    BITFIELD Unknown18 : 1;
+};
+
+// FUNCTION: 0x10B5CEE0 ?FUN_10b5cee0@Class_10B197E0@@QAEXABV1@@Z
+void Class_10B197E0::FUN_10b5cee0(const Class_10B197E0& Other)
+{
+    int Old = m_Count;
+    SetCount(Other.m_Count + m_Count);
+    for (int i = 0; i < Other.m_Count; i++)
+        m_Items[Old + i] = Other.m_Items[i];
+}
 
 // FUNCTION: 0x10B5E2E0 ?RebuildList@Class_10B5E2E0@@QAEXXZ
 void Class_10B5E2E0::RebuildList()

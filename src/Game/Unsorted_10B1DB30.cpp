@@ -1,5 +1,6 @@
 // Game/Unsorted_10B1DB30.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10A18E80.h"
 
 extern float DAT_10eafbdc;
@@ -20,6 +21,37 @@ public:
 };
 
 void FUN_10b20650(Class_10B21820* Object);
+
+class Class_10B1DB30
+{
+public:
+    char Unknown00[0x54C];
+    unsigned char Unknown54C;
+};
+
+// FUNCTION: 0x10B1DB30 ?FUN_10b1db30@@YAXPAVClass_10B1DB30@@MPAM@Z
+void FUN_10b1db30(Class_10B1DB30* Obj, float Value, float* Bounds)
+{
+    if (Value >= Bounds[2])
+    {
+        Obj->Unknown54C = 2;
+        return;
+    }
+    if (Value >= Bounds[1])
+    {
+        if (Obj->Unknown54C != 2 || Value < Bounds[18])
+            Obj->Unknown54C = 1;
+        return;
+    }
+    if (Value >= Bounds[0])
+    {
+        if (Obj->Unknown54C != 1 || Value < Bounds[17])
+            Obj->Unknown54C = 0;
+        return;
+    }
+    if (Obj->Unknown54C != 0 || Value < Bounds[16])
+        Obj->Unknown54C = 3;
+}
 
 // FUNCTION: 0x10B1DBD0 ?LerpScaled@@YAMMMMM@Z
 float LerpScaled(float A, float B, float C, float D)

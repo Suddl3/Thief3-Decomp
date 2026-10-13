@@ -1,5 +1,6 @@
 // Game/Unsorted_10B56390.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10B56410.h"
 
 class Class_10B56410_Unknown190;
@@ -285,6 +286,36 @@ struct Struct_10B56410_Elem
     Struct_10B56410_Entry Unknown08[2];
     bool Unknown18;
 };
+
+class Class_10B56390_Unknown16C
+{
+public:
+    char Unknown00[0x1C];
+    int Unknown1C;
+    int Unknown20;
+    float Unknown24;
+};
+
+class Class_10B56390
+{
+public:
+    Class_10B56390_Unknown16C* FUN_10b56390(int A, int B, float C);
+
+    char Unknown00[0x16C];
+    Class_10B56390_Unknown16C** Unknown16C;
+};
+
+// FUNCTION: 0x10B56390 ?FUN_10b56390@Class_10B56390@@QAEPAVClass_10B56390_Unknown16C@@HHM@Z
+Class_10B56390_Unknown16C* Class_10B56390::FUN_10b56390(int A, int B, float C)
+{
+    for (int i = 0; i < 12; i++)
+    {
+        Class_10B56390_Unknown16C* Obj = Unknown16C[i];
+        if (Obj->Unknown1C == A && (A != 0x3f || (Obj->Unknown20 == B && (Obj->Unknown24 >= 0.0f) == (C >= 0.0f))))
+            return Obj;
+    }
+    return 0;
+}
 
 // FUNCTION: 0x10B56410 ?UpdateHighlight@Class_10B56410@@QAEXXZ
 void Class_10B56410::UpdateHighlight()

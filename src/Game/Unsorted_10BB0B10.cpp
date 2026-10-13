@@ -1,5 +1,6 @@
 // Game/Unsorted_10BB0B10.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/cString.h"
 #include "Game/Class_10BB48E0.h"
 #include "Game/Class_10BB7570.h"
@@ -14,6 +15,7 @@
 #include "Game/Class_10E8C764.h"
 #include "Game/Struct_10BB0B90.h"
 #include "Game/Struct_10BB0B90_Unknown118.h"
+#include "Core/Core.h"
 
 extern Class_10BB48E0* DAT_10ff6694;
 
@@ -210,6 +212,191 @@ extern const char DAT_10e906f8[];
 extern const char DAT_10e90758[];
 
 extern const char DAT_10e90800[];
+
+class Class_10BB0B10_Obj;
+
+class Class_10B9EBE0;
+
+struct Struct_10BB0B10_Unknown118;
+
+class Class_10BB0B10_Item
+{
+public:
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual void Virtual2();
+    virtual void Virtual3();
+    virtual void Virtual4();
+    virtual void Virtual5();
+    virtual void Virtual6();
+    virtual void Virtual7();
+    virtual int Virtual8();
+};
+
+class Class_10BB0B10_Owner
+{
+public:
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual void Virtual2();
+    virtual void Virtual3();
+    virtual void Virtual4();
+    virtual void Virtual5();
+    virtual void Virtual6();
+    virtual void Virtual7();
+    virtual void Virtual8();
+    virtual void Virtual9();
+    virtual void Virtual10();
+    virtual void Virtual11();
+    virtual void Virtual12();
+    virtual void Virtual13();
+    virtual void Virtual14();
+    virtual void Virtual15();
+    virtual void Virtual16();
+    virtual void Virtual17();
+    virtual void Virtual18();
+    virtual void Virtual19();
+    virtual void Virtual20();
+    virtual void Virtual21();
+    virtual void Virtual22();
+    virtual void Virtual23();
+    virtual void Virtual24();
+    virtual void Virtual25();
+    virtual void Virtual26();
+    virtual void Virtual27();
+    virtual void Virtual28();
+    virtual void Virtual29();
+    virtual void Virtual30();
+    virtual void Virtual31();
+    virtual void Virtual32();
+    virtual void Virtual33();
+    virtual int Virtual34();
+
+    char Unknown04[0xBC];
+    Class_10BB0B10_Obj* Unknown0C0;
+};
+
+class Class_10BB0B10_Obj
+{
+public:
+    char Unknown00[0x118];
+    Struct_10BB0B10_Unknown118* Unknown118;
+};
+
+struct Struct_10BB0B10_Unknown118
+{
+    char Unknown00[8];
+    Class_10B9EBE0* Unknown08;
+};
+
+class Class_10B9EBE0
+{
+public:
+    void FUN_10b9ebe0(const cString& A);
+};
+
+UClass* FUN_10901680();
+
+class AActor;
+
+class AController : public UObject
+{
+};
+
+class Class_10BB0B90_Param
+{
+public:
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual void Virtual2();
+    virtual void Virtual3();
+    virtual void Virtual4();
+    virtual void Virtual5();
+    virtual void Virtual6();
+    virtual void Virtual7();
+    virtual UObject* Virtual8();
+};
+
+class APawn
+{
+    DECLARE_CLASS(APawn, AActor, 0x800, Engine)
+
+public:
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual void Virtual2();
+    virtual void Virtual3();
+    virtual void Virtual4();
+    virtual void Virtual5();
+    virtual void Virtual6();
+    virtual void Virtual7();
+    virtual void Virtual8();
+    virtual void Virtual9();
+    virtual void Virtual10();
+    virtual void Virtual11();
+    virtual void Virtual12();
+    virtual void Virtual13();
+    virtual void Virtual14();
+    virtual void Virtual15();
+    virtual void Virtual16();
+    virtual void Virtual17();
+    virtual void Virtual18();
+    virtual void Virtual19();
+    virtual void Virtual20();
+    virtual void Virtual21();
+    virtual void Virtual22();
+    virtual void Virtual23();
+    virtual void Virtual24();
+    virtual void Virtual25();
+    virtual void Virtual26();
+    virtual void Virtual27();
+    virtual void Virtual28();
+    virtual void Virtual29();
+    virtual void Virtual30();
+    virtual void Virtual31();
+    virtual void Virtual32();
+    virtual void Virtual33();
+    virtual UBOOL Virtual34();
+
+public:
+    char Unknown04[0xBC];
+    AController* Controller;
+};
+
+struct Struct_10BB0B90;
+
+// FUNCTION: 0x10BB0B10 ?FUN_10bb0b10@@YAHHHHABVcString@@@Z
+int FUN_10bb0b10(int A, int B, int C, const cString& D)
+{
+    Class_10BB0B10_Item* Item = (Class_10BB0B10_Item*)B;
+    if (Item != 0 && Item->Virtual8() && C != 0)
+    {
+        Class_10BB0B10_Owner* Owner = (Class_10BB0B10_Owner*)Item->Virtual8();
+        if (Owner->Unknown0C0 != 0 && Owner->Virtual34() == 0
+            && ((UObject*)Owner->Unknown0C0)->IsA(FUN_10901680())
+            && Owner->Unknown0C0->Unknown118 != 0)
+        {
+            Owner->Unknown0C0->Unknown118->Unknown08->FUN_10b9ebe0(D);
+            return 1;
+        }
+    }
+    return 0;
+}
+
+// FUNCTION: 0x10BB0B90 ?FUN_10bb0b90@@YAPAUStruct_10BB0B90@@H@Z
+Struct_10BB0B90* FUN_10bb0b90(int Value)
+{
+    Class_10BB0B90_Param* Obj = (Class_10BB0B90_Param*)Value;
+    if (Obj && Obj->Virtual8() && Obj->Virtual8()->IsA(APawn::StaticClass()))
+    {
+        APawn* Pawn = (APawn*)Obj->Virtual8();
+        if (Pawn->Controller && !Pawn->Virtual34() && Pawn->Controller->IsA(FUN_10901680()))
+        {
+            return (Struct_10BB0B90*)Pawn->Controller;
+        }
+    }
+    return 0;
+}
 
 // FUNCTION: 0x10BB0C60 ?FUN_10bb0c60@@YAHH@Z
 int FUN_10bb0c60(int A)

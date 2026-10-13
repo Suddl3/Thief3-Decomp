@@ -1,7 +1,9 @@
 // Game/Unsorted_10AAB5F0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10AAB7D0.h"
+#include "Game/cString.h"
 
 Class_10905A90_Member* GetAllocator();
 
@@ -13,6 +15,36 @@ public:
     int Unknown04;
     char Pad08[0x10];
 };
+
+class Class_10AAB5F0_Param
+{
+public:
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual cString Virtual2();
+    virtual int Virtual3();
+};
+
+class Class_10E6DA40
+{
+public:
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual void Virtual2();
+    virtual void Virtual3();
+    virtual int FUN_10aab5f0(Class_10AAB5F0_Param* Obj);
+
+    cString Unknown04;
+    int Unknown08;
+};
+
+// FUNCTION: 0x10AAB5F0 ?FUN_10aab5f0@Class_10E6DA40@@UAEHPAVClass_10AAB5F0_Param@@@Z
+int Class_10E6DA40::FUN_10aab5f0(Class_10AAB5F0_Param* Obj)
+{
+    Unknown04 = Obj->Virtual2();
+    Unknown08 = Obj->Virtual3();
+    return 1;
+}
 
 // FUNCTION: 0x10AAB7D0 ?SetCount@Class_10AAB7D0@@QAEXH@Z
 void Class_10AAB7D0::SetCount(int NewCount)

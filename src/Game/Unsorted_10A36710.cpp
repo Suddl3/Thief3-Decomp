@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Core/Core.h"
+#include "Game/Class_10905A90_Member.h"
 
 class Class_10AF8250 : public FString
 {
@@ -28,6 +29,32 @@ extern Class_10AF8250 DAT_10f3a00c;
 extern int DAT_10f39fec;
 
 extern int DAT_10f39ff0;
+
+Class_10905A90_Member* GetAllocator();
+
+void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
+
+void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
+
+class Class_10A36450
+{
+public:
+    Class_10A36450();
+};
+
+extern Class_10A36450* DAT_10f39fd8;
+
+// FUNCTION: 0x10A36710 ?FUN_10a36710@@YAPAVClass_10A36450@@XZ
+Class_10A36450* FUN_10a36710()
+{
+    if (!DAT_10f39fd8)
+    {
+        GetAllocator()->Virtual8(0, 0);
+        DAT_10f39fd8 = new(0, 0, 0, 0, 0) Class_10A36450;
+        GetAllocator()->Virtual9();
+    }
+    return DAT_10f39fd8;
+}
 
 // FUNCTION: 0x10A36B00 ?FUN_10a36b00@@YAXHPAPAX0HHVFString@@H@Z
 void FUN_10a36b00(int A, void** B, void** C, int D, int E, Class_10AF8250 F, int G)

@@ -1,5 +1,6 @@
 // Game/Unsorted_10AD0B10.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10E7024C.h"
 #include "Game/Class_10E70254.h"
@@ -20,6 +21,31 @@ Class_10905A90_Member* GetAllocator();
 
 // Ion Storm's placement new (0x10905C10).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
+
+void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
+
+class Class_10E70884
+{
+public:
+    Class_10E70884();
+
+    char Unknown00[8];
+};
+
+class Class_10E70250
+{
+public:
+    virtual Class_10E70884* FUN_10ad0b10();
+};
+
+// FUNCTION: 0x10AD0B10 ?FUN_10ad0b10@Class_10E70250@@UAEPAVClass_10E70884@@XZ
+Class_10E70884* Class_10E70250::FUN_10ad0b10()
+{
+    GetAllocator()->Virtual8(0, 0);
+    Class_10E70884* Result = new(0, 0, 0, 0, 0) Class_10E70884;
+    GetAllocator()->Virtual9();
+    return Result;
+}
 
 // FUNCTION: 0x10AD0E60 ?FUN_10ad0e60@Class_10E70258@@UAEPAVClass_10E708CC@@XZ
 Class_10E708CC* Class_10E70258::FUN_10ad0e60()

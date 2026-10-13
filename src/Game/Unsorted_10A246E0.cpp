@@ -13,6 +13,56 @@ void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
 unsigned int HashBytes(const void* Data, int Length);
 
+class Class_10A25040_Unknown14;
+
+class Class_10A25040_Unknown18
+{
+public:
+    virtual void Virtual0(int* Key, const void** Data, int* Length);
+    virtual int Virtual1(int* Key, Class_10A25040_Unknown14* Node);
+};
+
+class Class_10A25040_Unknown14
+{
+public:
+    char Unknown00[4];
+    cString Unknown04;
+    Class_10A25040_Unknown14* Next;
+};
+
+class Class_10A25040
+{
+public:
+    bool Lookup(int* A, cString& Out);
+
+    char Unknown00[8];
+    int Unknown08;
+    char Unknown0C[8];
+    Class_10A25040_Unknown14** Unknown14;
+    Class_10A25040_Unknown18 Unknown18;
+};
+
+// FUNCTION: 0x10A25040 ?Lookup@Class_10A25040@@QAE_NPAHAAVcString@@@Z
+bool Class_10A25040::Lookup(int* A, cString& Out)
+{
+    const void* Data;
+    int Length;
+    Unknown18.Virtual0(A, &Data, &Length);
+    Class_10A25040_Unknown14** Table = Unknown14;
+    if (!Table)
+        return false;
+    unsigned int Index = HashBytes(Data, Length) & ((1 << Unknown08) - 1);
+    for (Class_10A25040_Unknown14* Node = Table[Index]; Node; Node = Node->Next)
+    {
+        if (Unknown18.Virtual1(A, Node) == 0)
+        {
+            Out = Node->Unknown04;
+            return true;
+        }
+    }
+    return false;
+}
+
 // FUNCTION: 0x10A250D0 ?Insert@Class_10A250D0@@QAEIABVcString@@0@Z
 unsigned int Class_10A250D0::Insert(const cString& Key, const cString& Value)
 {

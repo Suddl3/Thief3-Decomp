@@ -1,5 +1,6 @@
 // Game/Unsorted_109E5340.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Core/Core.h"
 #include "Game/Class_109E53B0.h"
 #include "Game/Class_109E5620.h"
@@ -123,6 +124,98 @@ struct Struct_109E55C0
     char Unknown04[4];
     Class_109E55C0_Param** Data;
 };
+
+class Class_109E5340_Param;
+
+struct Struct_109E5340;
+
+class Class_109E5340_Param
+{
+public:
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual void Virtual2();
+    virtual void Virtual3();
+    virtual void Virtual4();
+    virtual void Virtual5();
+    virtual void Virtual6();
+    virtual void Virtual7();
+    virtual void Virtual8();
+    virtual void Virtual9();
+    virtual void Virtual10();
+    virtual void Virtual11();
+    virtual void Virtual12();
+    virtual void Virtual13();
+    virtual void Virtual14();
+    virtual void Virtual15();
+    virtual void Virtual16();
+    virtual void Virtual17();
+    virtual void Virtual18();
+    virtual void Virtual19();
+    virtual void Virtual20();
+    virtual void Virtual21();
+    virtual void Virtual22();
+    virtual void Virtual23();
+    virtual void Virtual24();
+    virtual void Virtual25();
+    virtual void Virtual26();
+    virtual void Virtual27();
+    virtual void Virtual28();
+    virtual void Virtual29();
+    virtual void Virtual30();
+    virtual void Virtual31();
+    virtual void Virtual32();
+    virtual void Virtual33();
+    virtual void Virtual34();
+    virtual void Virtual35();
+    virtual void Virtual36();
+    virtual void Virtual37();
+    virtual void Virtual38();
+    virtual void Virtual39();
+    virtual void Virtual40();
+    virtual void Virtual41();
+    virtual void Virtual42();
+    virtual Struct_109E5340* Virtual43();
+    virtual void Virtual44();
+    virtual void Virtual45();
+    virtual void Virtual46();
+    virtual void Virtual47();
+    virtual void Virtual48();
+    virtual void Virtual49();
+    virtual void Virtual50();
+    virtual void Virtual51();
+    virtual void Virtual52();
+    virtual void Virtual53();
+    virtual bool Virtual54();
+};
+
+struct Struct_109E5340
+{
+    int Count;
+    char Unknown04[4];
+    Class_109E5340_Param** Data;
+};
+
+class Class_109E5340
+{
+public:
+    void FUN_109e5340(Class_109E5340_Param* Param, int Arg2);
+};
+
+// FUNCTION: 0x109E5340 ?FUN_109e5340@Class_109E5340@@QAEXPAVClass_109E5340_Param@@H@Z
+void Class_109E5340::FUN_109e5340(Class_109E5340_Param* Param, int Arg2)
+{
+    if (Param && Param->Virtual54())
+    {
+        Param->Virtual36();
+        Struct_109E5340* List = Param->Virtual43();
+        if (Param->Virtual54())
+        {
+            for (int i = 0; i < List->Count; i++)
+                FUN_109e5340(List->Data[i], Arg2);
+        }
+    }
+}
 
 // FUNCTION: 0x109E53B0 ?FUN_109e53b0@Class_109E53B0@@QAEHH@Z
 int Class_109E53B0::FUN_109e53b0(int A)

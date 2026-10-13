@@ -1,5 +1,6 @@
 // Game/Unsorted_10C05AB0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Core/Core.h"
 #include "Game/FCoords.h"
 #include "Game/cLineSegment.h"
@@ -7,6 +8,45 @@
 extern FCoords DAT_10f46de8;
 
 bool IsNearlyEqual(float A, float B, float C);
+
+struct Struct_10D38640
+{
+    int Unknown00;
+    char Unknown04[4];
+    int* Unknown08;
+};
+
+int FUN_10c05880(int* A, int* B, int C, float D);
+
+// FUNCTION: 0x10C05AB0 ?FUN_10c05ab0@@YADPAUStruct_10D38640@@HM@Z
+char FUN_10c05ab0(Struct_10D38640* Table, int B, float C)
+{
+    int Count = Table->Unknown00;
+    if (Count < 3)
+        return 0;
+    int First = FUN_10c05880(Table->Unknown08 + (Count - 1) * 3, Table->Unknown08, B, C);
+    int i = 0;
+    if (0 < Count)
+    {
+        int* Items = Table->Unknown08;
+        int Prev = (Count - 1) * 3;
+        int Cur = 0;
+        do
+        {
+            int R = FUN_10c05880(Items + Prev, Items + Cur, B, C);
+            if (R != First && R != 0)
+            {
+                if (First != 0)
+                    return 0;
+                First = R;
+            }
+            i++;
+            Prev = Cur;
+            Cur += 3;
+        } while (i < Count);
+    }
+    return 1;
+}
 
 // FUNCTION: 0x10C05BC0 ?FUN_10c05bc0@@YAMHHHM@Z
 float FUN_10c05bc0(int A, int B, int Rot, float Distance)

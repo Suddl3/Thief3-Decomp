@@ -1,5 +1,6 @@
 // Game/Unsorted_10C15BC0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10C15D20.h"
 #include "Game/Class_10C15D40.h"
 
@@ -16,6 +17,47 @@ struct Struct_10C15CC0
 extern int DAT_10ff7068;
 
 extern Struct_10C15CC0* DAT_10ff706c;
+
+struct Struct_10C15CC0;
+
+// Ion Storm's placement new and its delete (0x10905C10; the delete folded into ::operator delete).
+void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
+
+void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
+
+// Copied from include/Game/Class_10E98C80.h with the destructor the array's cookie needs.
+class Class_10E98C80
+{
+public:
+    Class_10E98C80();
+    ~Class_10E98C80();
+
+    void ResetVTable();
+
+    union
+    {
+        void* Field00;
+        void* VTable;
+    };
+    char Unknown04[8];
+    int Unknown0c;
+    int Unknown10;
+    int Unknown14;
+};
+
+class Class_10E8D65C
+{
+public:
+    void FUN_10c15bc0();
+};
+
+// FUNCTION: 0x10C15BC0 ?FUN_10c15bc0@Class_10E8D65C@@QAEXXZ
+void Class_10E8D65C::FUN_10c15bc0()
+{
+    if (!DAT_10ff706c)
+        DAT_10ff706c = (Struct_10C15CC0*)new(0, 0, 0, 0, 0) Class_10E98C80[0x400];
+    DAT_10ff7068 = 0;
+}
 
 // FUNCTION: 0x10C15CC0 ?AllocEntry@@YA_NPAPAUStruct_10C15CC0@@HHHHH@Z
 bool AllocEntry(Struct_10C15CC0** Out, int A, int B, int C, int D, int E)

@@ -1,6 +1,8 @@
 // Game/Unsorted_10B7B000.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
+#include "Game/cIntArray.h"
+
 class Class_109C1F50
 {
 public:
@@ -65,6 +67,24 @@ public:
     char Pad38[0x4];
     int* Unknown3C;
 };
+
+class Class_10B7B000
+{
+public:
+    ~Class_10B7B000();
+
+    char Pad00[0x4];
+    int Unknown04;
+    char Pad08[0x20];
+    cIntArray Unknown28;
+    cIntArray Unknown34;
+};
+
+// FUNCTION: 0x10B7B000 ??1Class_10B7B000@@QAE@XZ
+Class_10B7B000::~Class_10B7B000()
+{
+    Unknown04 = 0;
+}
 
 // FUNCTION: 0x10B7B820 ?Reset@Class_10B7AD70@@QAEXXZ
 void Class_10EC0E20::Reset()

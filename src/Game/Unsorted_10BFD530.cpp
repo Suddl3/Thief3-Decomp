@@ -1,9 +1,58 @@
 // Game/Unsorted_10BFD530.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10991270.h"
 #include "Game/Class_10AF4BB0.h"
 #include "Game/Class_10BFD4E0.h"
 #include "Game/Class_10BFE6B0.h"
+#include "Game/Class_10BFBE30.h"
+#include "Game/Class_10BFD210.h"
+
+class Class_10BFD710_Unknown50;
+
+class Class_10C1A960;
+
+float GetFrameDeltaTime();
+
+extern float DAT_10eafbdc;
+
+class Class_10C1A960
+{
+public:
+    void FUN_10c1a960(Class_10BFD710_Unknown50* A);
+};
+
+class Class_10BFD710 : public Class_10BFD210
+{
+public:
+    void FUN_10bfd710();
+    void FUN_10bfce60();
+
+    char Pad01[3];
+    Class_10BFBE30* Unknown04;
+    int Unknown08;
+    char Pad0C[4];
+    Class_10C1A960** Unknown10;
+    char Pad14[0x38];
+    float Unknown4C;
+    Class_10BFD710_Unknown50* Unknown50;
+};
+
+// FUNCTION: 0x10BFD710 ?FUN_10bfd710@Class_10BFD710@@QAEXXZ
+void Class_10BFD710::FUN_10bfd710()
+{
+    if (GetFrameDeltaTime() != 0.0 && Unknown4C == DAT_10eafbdc)
+    {
+        FUN_10bfce60();
+        FUN_10bfc3a0();
+        Class_10BFD710_Unknown50* Obj = Unknown50;
+        if (Obj && Unknown04->HasTimedOut())
+        {
+            for (int i = 0; i < Unknown08; i++)
+                Unknown10[i]->FUN_10c1a960(Obj);
+        }
+    }
+}
 
 // FUNCTION: 0x10BFE6B0 ?RemoveRange@Class_10BFE6B0@@QAEXHH@Z
 void Class_10BFE6B0::RemoveRange(int Index, int Count)

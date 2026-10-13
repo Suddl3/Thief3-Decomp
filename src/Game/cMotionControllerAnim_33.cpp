@@ -1,0 +1,100 @@
+// Game/cMotionControllerAnim_33.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Declarations above the functions belong in include/ once they settle.
+
+#include "Game/cIntArray.h"
+
+void ReleaseHashTable();
+
+class Class_10E9AAD0
+{
+public:
+    virtual void Virtual0();
+
+    ~Class_10E9AAD0();
+};
+
+class Class_10E7C584
+{
+public:
+    virtual void Virtual0();
+
+    int Unknown04;
+};
+
+class Class_10C356D0_Element
+{
+public:
+    virtual ~Class_10C356D0_Element();
+    virtual void Virtual1();
+    virtual void Virtual2();
+    virtual void Virtual3();
+    virtual void Virtual4();
+    virtual void Virtual5();
+    virtual void Virtual6();
+    virtual void Virtual7();
+    virtual void Virtual8();
+    virtual void Virtual9();
+};
+
+class Class_10C356D0_Node
+{
+public:
+    char Pad00[0x8];
+    Class_10C356D0_Element* Unknown08;
+};
+
+class Class_10C356D0_Unknown0A4
+{
+public:
+    ~Class_10C356D0_Unknown0A4();
+
+    Class_10C356D0_Element* FirstElement()
+    {
+        return Head ? Head->Unknown08 : 0;
+    }
+    Class_10C356D0_Element* FUN_10c32ba0(Class_10C356D0_Element* Element);
+
+    int Count;
+    Class_10C356D0_Node* Head;
+    char Pad08[0x8C];
+};
+
+class Class_109A62E0
+{
+public:
+    void FUN_109a62e0(Class_10E7C584* Other);
+
+    char Pad00[0x1C];
+    int Unknown1C;
+};
+
+class cMotionControllerAnim : public Class_10E9AAD0, public Class_10E7C584
+{
+public:
+    virtual ~cMotionControllerAnim();
+
+    Class_109A62E0* Unknown0C;
+    char Pad10[0x94];
+    Class_10C356D0_Unknown0A4 Unknown0A4;
+    cIntArray Unknown138;
+};
+
+// FUNCTION: 0x10C356D0 ??1cMotionControllerAnim@@UAE@XZ
+cMotionControllerAnim::~cMotionControllerAnim()
+{
+    while (Unknown0A4.Count > 0)
+    {
+        Class_10C356D0_Element* Element = Unknown0A4.FirstElement();
+        Element->Virtual9();
+        Class_10C356D0_Element* Removed = Unknown0A4.FUN_10c32ba0(Element);
+        if (Removed)
+        {
+            delete Removed;
+        }
+    }
+    ReleaseHashTable();
+    if (Unknown0C && (Unknown0C->Unknown1C & 0x800000) == 0)
+    {
+        Unknown0C->FUN_109a62e0(this);
+    }
+}

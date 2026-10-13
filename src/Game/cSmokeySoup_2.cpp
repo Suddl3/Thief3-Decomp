@@ -1,5 +1,6 @@
 // Game/cSmokeySoup_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/cIntArray.h"
 #include "Game/Class_10B6FC70.h"
 #include "Game/Class_10B6FDA0.h"
@@ -31,6 +32,9 @@ public:
 
     cIntArray Unknown154;
 };
+
+// FUNCTION: 0x10B6FB30 ??1Class_10E871C8@@QAE@XZ
+// Compiler-generated: emitted with the class's vtable by 0x10B708D0's definition in this unit.
 
 // FUNCTION: 0x10B708D0 ??1cSmokeySoup@@QAE@XZ
 cSmokeySoup::~cSmokeySoup()

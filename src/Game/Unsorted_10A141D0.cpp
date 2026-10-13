@@ -4,6 +4,8 @@
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10A151A0.h"
 #include "Game/Class_1090FD40.h"
+#include <string.h>
+#include "Game/cString.h"
 
 class cIntArray
 {
@@ -36,6 +38,70 @@ public:
     Object_10A14540_A** m_Children;
     Class_1090FD40 Unknown14;
 };
+
+extern const char DAT_10e47660[];
+
+class Class_10A14270_Unknown10
+{
+public:
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual void Virtual2();
+    virtual void Virtual3();
+    virtual void Virtual4();
+    virtual void Virtual5();
+    virtual void Virtual6();
+    virtual void Virtual7();
+    virtual void Virtual8();
+    virtual void Virtual9();
+    virtual void Virtual10();
+    virtual void Virtual11();
+    virtual void Virtual12();
+    virtual void Virtual13();
+    virtual void Virtual14();
+    virtual cString* Virtual15();
+    virtual void Virtual16();
+    virtual void Virtual17();
+    virtual void Virtual18();
+    virtual void Virtual19();
+    virtual void Virtual20();
+    virtual void Virtual21();
+    virtual void Virtual22();
+    virtual void Virtual23();
+    virtual void Virtual24();
+    virtual void Virtual25();
+    virtual void Virtual26();
+    virtual void Virtual27();
+    virtual void Virtual28();
+    virtual void Virtual29(int A);
+};
+
+class Class_10A14270
+{
+public:
+    int FUN_10a14270(int A, const char** Name);
+
+    char Unknown00[0x8];
+    int Unknown08;
+    char Unknown0C[0x4];
+    Class_10A14270_Unknown10** Unknown10;
+};
+
+// FUNCTION: 0x10A14270 ?FUN_10a14270@Class_10A14270@@QAEHHPAPBD@Z
+int Class_10A14270::FUN_10a14270(int A, const char** Name)
+{
+    for (int i = 0; i < Unknown08; i++)
+    {
+        cString* Record = Unknown10[i]->Virtual15();
+        const char* Have = DAT_10e47660;
+        if (Record->Unknown00)
+            Have = Record->Unknown00;
+        const char* Want = *Name ? *Name : DAT_10e47660;
+        if (strcmp(Want, Have) == 0)
+            Unknown10[i]->Virtual29(A);
+    }
+    return 1;
+}
 
 // FUNCTION: 0x10A14540 ?Clear@cConversationManager@@UAEXXZ
 void cConversationManager::Clear()

@@ -1,7 +1,10 @@
 // Game/Unsorted_1095A7C0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include <string.h>
 #include "Game/Class_1095A8D0.h"
+#include "Game/Class_10905A90_Member.h"
+#include "Game/Class_10939570.h"
 
 extern const char DAT_10e47660[];
 
@@ -10,6 +13,71 @@ struct Struct_1095A8D0_Unknown08
     char Unknown00[4];
     const char* Unknown04;
 };
+
+Class_10905A90_Member* GetAllocator();
+
+class Class_10953590;
+
+extern Class_10939570* DAT_10f323fc;
+
+class Class_1095A760
+{
+public:
+    ~Class_1095A760()
+    {
+        SetCount(0);
+        if (m_CapacityBytes)
+        {
+            GetAllocator()->Virtual5(m_Elements);
+            m_Elements = 0;
+            m_CapacityBytes = 0;
+        }
+    }
+
+    void SetCount(int A);
+    void Clear();
+
+    int m_Count;
+    int m_CapacityBytes;
+    void* m_Elements;
+};
+
+class Class_1095A7C0_Unknown04
+{
+public:
+    virtual int __stdcall Virtual0();
+    virtual int __stdcall Virtual1();
+    virtual int __stdcall Virtual2();
+};
+
+struct Struct_1095A7C0
+{
+};
+
+class Class_1095A7C0
+{
+public:
+    ~Class_1095A7C0();
+
+    char Unknown00[4];
+    Class_1095A7C0_Unknown04* Unknown04;
+    Class_10953590* Unknown08;
+    Struct_1095A7C0* Unknown0C;
+    char Unknown10[4];
+    Class_1095A760 Unknown14;
+};
+
+// FUNCTION: 0x1095A7C0 ??1Class_1095A7C0@@QAE@XZ
+Class_1095A7C0::~Class_1095A7C0()
+{
+    if (Unknown04)
+        Unknown04->Virtual2();
+    if (Unknown0C)
+        delete Unknown0C;
+    DAT_10f323fc->FUN_1093bce0(Unknown08);
+    Unknown08 = 0;
+    Unknown0C = 0;
+}
 
 // FUNCTION: 0x1095A8D0 ?GetText@Class_1095A8D0@@QAEPBDXZ
 const char* Class_1095A8D0::GetText()

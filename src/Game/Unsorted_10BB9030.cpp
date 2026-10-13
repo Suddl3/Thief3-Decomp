@@ -1,5 +1,6 @@
 // Game/Unsorted_10BB9030.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Core/Core.h"
 #include "Game/Class_10BB7F30.h"
 #include "Game/Class_10B9CAC0.h"
@@ -8,6 +9,8 @@
 #include "Game/cString.h"
 #include "Game/Class_10E97B00.h"
 #include "Game/cAISpeech.h"
+#include "Game/Class_10943600.h"
+#include "Game/cIntArray.h"
 
 extern float DAT_10eafbdc;
 
@@ -104,6 +107,22 @@ public:
     char Pad1E8[0x4];
     bool Unknown1EC;
 };
+
+class Class_10BB91D0
+{
+public:
+    ~Class_10BB91D0();
+
+    int Unknown00;
+    int Unknown04;
+    Class_10943600 Unknown08;
+    cIntArray Unknown14;
+};
+
+// FUNCTION: 0x10BB91D0 ??1Class_10BB91D0@@QAE@XZ
+Class_10BB91D0::~Class_10BB91D0()
+{
+}
 
 // FUNCTION: 0x10BB9260 ?UpdateReprimand@Class_10BBB410@@QAEXXZ
 void Class_10BBB410::UpdateReprimand()

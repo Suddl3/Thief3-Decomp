@@ -7,6 +7,61 @@
 
 void VectorMin(float* Out, float* A, float* B);
 
+extern const char DAT_10e47660[];
+
+int FUN_1095af30(int A);
+
+void* FUN_1092cac0(const char* Name, int A, int B, int C, int D, int E);
+
+class Class_109570D0_Unknown90
+{
+public:
+    const char* Unknown00;
+    char Unknown04[0x34];
+};
+
+class Class_10E4AE8C
+{
+public:
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual void Virtual2();
+    virtual void Virtual3();
+    virtual void Virtual4();
+    virtual void Virtual5();
+    virtual void Virtual6(int A);
+    virtual bool Virtual7(int A);
+    virtual void FUN_109570d0(int A);
+    virtual void Virtual9();
+    virtual bool Virtual10();
+
+    char Unknown04[0x8C];
+    Class_109570D0_Unknown90 Unknown90[9];
+    char Unknown288[0x14];
+    void* Unknown29C[9];
+};
+
+// FUNCTION: 0x109570D0 ?FUN_109570d0@Class_10E4AE8C@@UAEXH@Z
+void Class_10E4AE8C::FUN_109570d0(int A)
+{
+    if (Virtual7(A))
+    {
+        if (Virtual10())
+        {
+            Class_109570D0_Unknown90* Entry = &Unknown90[A];
+            const char* Name = DAT_10e47660;
+            if (Entry->Unknown00)
+                Name = Entry->Unknown00;
+            Unknown29C[A] = FUN_1092cac0(Name, A, FUN_1095af30(A), 1, 0, 0);
+        }
+        Virtual6(A);
+    }
+    else
+    {
+        Unknown29C[A] = 0;
+    }
+}
+
 // FUNCTION: 0x10957150 ?WrapAngles@@YAXPAVFVector@@@Z
 void WrapAngles(FVector* Value)
 {
