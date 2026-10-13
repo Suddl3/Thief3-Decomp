@@ -8,6 +8,7 @@ class Class_10A15C30
 public:
     bool FUN_10a15c30(int* p1);
     void Remove(int* p1);
+    void Rehash(int Size);
 
     char Pad00[0x1];
 };

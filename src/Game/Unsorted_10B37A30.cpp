@@ -1,8 +1,10 @@
 // Game/Unsorted_10B37A30.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Engine/EngineClasses.h"
 #include "Game/Class_10B37DE0.h"
 #include "Game/Class_1096D780.h"
+#include "AICore/AICoreClasses.h"
 
 class ULevel;
 
@@ -15,15 +17,6 @@ class Class_10F3A3D8;
 class Class_10F46DA0;
 
 class Class_10B37DE0;
-
-class AAIPathPoint : public AMarker
-{
-    DECLARE_CLASS(AAIPathPoint, AMarker, 0x0, AICore)
-
-public:
-    int FUN_1098e330(int A, int* B);
-    void FUN_1098e3d0(int A, void* B);
-};
 
 void* FUN_10a4bd70(int A);
 

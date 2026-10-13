@@ -1,18 +1,9 @@
 // Game/Unsorted_10B83850.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10B83DC0.h"
 #include "Game/Class_10B83E50.h"
-
-class Allocator_10FFA700
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5(void* A, int B, int C);
-};
+#include "Game/Allocator_10FFA700.h"
 
 extern Allocator_10FFA700* DAT_10ffa700;
 
@@ -27,7 +18,7 @@ public:
         if (!Unknown08Flag)
         {
             Allocator_10FFA700* Allocator = DAT_10ffa700;
-            Allocator->Virtual5(m_Buffer, m_Capacity * 16, 0x11);
+            Allocator->Free(m_Buffer, m_Capacity * 16, 0x11);
         }
     }
 

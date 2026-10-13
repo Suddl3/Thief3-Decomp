@@ -19,6 +19,7 @@ public:
     void Reset();
     int FUN_1098e290(int Id, FString* Out);
     void FUN_1098e290();
+    void FUN_10ada010(int Id);
 
     char Pad01[0xb];
     char Pad293[0x1];

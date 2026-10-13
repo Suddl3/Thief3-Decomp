@@ -3,24 +3,9 @@
 
 #include "Core/Core.h"
 #include "Game/Class_10C66590.h"
+#include "Game/FCoords.h"
 
 class ULodMesh;
-
-class FCoords
-{
-public:
-    FCoords(const FVector& InOrigin) : Origin(InOrigin), XAxis(1, 0, 0), YAxis(0, 1, 0), ZAxis(0, 0, 1) {}
-    FCoords() {}
-
-    FRotator OrthoRotation() const;
-    FCoords& FUN_10961af0(const FRotator& Rot);
-    FCoords* FUN_10961e00(void* A);
-
-    FVector Origin;
-    FVector XAxis;
-    FVector YAxis;
-    FVector ZAxis;
-};
 
 class Class_109CC350
 {

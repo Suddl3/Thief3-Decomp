@@ -25,6 +25,7 @@ public:
     ~Class_10E6C484();
 
     void FUN_10a89060();
+    Class_10E6C484* FUN_10a88e30();
 
     Class_10E6C470* Unknown04;
     char Unknown08[0x670];

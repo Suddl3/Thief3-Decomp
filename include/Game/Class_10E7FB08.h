@@ -8,6 +8,8 @@
 
 class Class_10E7FB08_Unknown200;
 
+class Class_10A52A40_Member;
+
 class Class_10E7FB08 : public Class_10E696A8
 {
 public:
@@ -147,6 +149,7 @@ public:
 
     void FUN_10a5d460();
     void FUN_10b274f0();
+    void FUN_10b27530(Class_10A52A40_Member* P);
 
     char Pad04[0x1c8];
     int Unknown1CC;

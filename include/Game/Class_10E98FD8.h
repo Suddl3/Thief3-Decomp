@@ -25,6 +25,7 @@ public:
     virtual void Virtual11();
     virtual void Virtual12();
     virtual void FUN_10c1adc0(void* p1);
+    Class_10E98FD8* FUN_10c1bfb0(int A, int B, int C, int D, float E, float F, float G);
 
     int Unknown04;
     char Unknown08[0x40];

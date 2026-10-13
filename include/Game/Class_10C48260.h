@@ -12,6 +12,7 @@ class Class_10C48260
 public:
     unsigned int Insert(const int& Key, const int& Value);
     void Rehash(int Size);
+    Class_10C48260();
 
     int m_Collisions;
     int m_Count;

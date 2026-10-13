@@ -20,6 +20,7 @@ public:
     virtual void FUN_10b4bb80(Object_10B4BB80* A);
 
     bool ApplyAnimMotion(int A);
+    GState* FUN_10b4bb40();
 };
 
 #endif // GAME_GSTATE_H

@@ -1,7 +1,9 @@
 // Game/cDifficulty.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10905A90_Member.h"
 #include "Game/cDifficulty.h"
+#include "Game/cString.h"
 
 Class_10905A90_Member* GetAllocator();
 
@@ -10,25 +12,6 @@ extern const char DAT_10e47660[];
 int FUN_10af3690(const char* A, const char* B);
 
 extern "C" char* _strlwr(char* String);
-
-// Game/cString.h copied without its base, with the destructor's own body: the code computes Unknown00 - 4 before GetAllocator().
-class cString
-{
-public:
-    cString() { Unknown00 = 0; }
-    ~cString()
-    {
-        if (Unknown00)
-        {
-            char* Block = Unknown00 - 4;
-            GetAllocator()->Virtual5(Block);
-        }
-    }
-
-    const char* operator*() const { return Unknown00 ? Unknown00 : DAT_10e47660; }
-
-    char* Unknown00;
-};
 
 // Game/Config.h copied whole, with GetString added.
 class Config

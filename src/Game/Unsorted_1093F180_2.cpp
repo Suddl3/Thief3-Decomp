@@ -1,12 +1,10 @@
 // Game/Unsorted_1093F180_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_109373D0.h"
 #include "Game/Class_10937400.h"
 #include "Game/Class_1093F9F0.h"
-
-class cD3DStateCache : public Class_10937400
-{
-};
+#include "Game/cD3DStateCache.h"
 
 extern cD3DStateCache* DAT_10f31be0;
 

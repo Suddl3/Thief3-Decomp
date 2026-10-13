@@ -11,6 +11,7 @@ public:
     virtual void Virtual1();
     virtual void Virtual2();
     virtual void FUN_10a8f590();
+    Class_10E6C8CC();
 
     char Unknown04[0x10];
     int Unknown14;

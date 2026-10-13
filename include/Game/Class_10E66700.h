@@ -8,6 +8,7 @@ class Class_10E66700
 public:
     virtual ~Class_10E66700();
     virtual void UpdateItems(int A) = 0;
+    void FUN_10a3abd0(int Index);
 };
 
 #endif // GAME_CLASS_10E66700_H

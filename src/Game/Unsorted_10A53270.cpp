@@ -3,24 +3,9 @@
 
 #include "Game/Class_10AF7F80.h"
 #include "Game/Class_10905A90_Member.h"
+#include "Game/cString.h"
 
 Class_10905A90_Member* GetAllocator();
-
-class cString
-{
-public:
-    cString() : Unknown00(0) {}
-    ~cString()
-    {
-        if (Unknown00)
-        {
-            char* Block = Unknown00 - 4;
-            GetAllocator()->Virtual5(Block);
-        }
-    }
-
-    char* Unknown00;
-};
 
 class Config
 {

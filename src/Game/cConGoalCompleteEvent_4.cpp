@@ -1,26 +1,10 @@
 // Game/cConGoalCompleteEvent_4.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
+#include "Game/cString.h"
+#include "Game/Class_10A810F0.h"
+
 extern const char DAT_10e6c100[];
-
-class cString
-{
-public:
-    cString() : Unknown00(0) {}
-    ~cString();
-
-    cString& FUN_1090a590(const char* In);
-
-    char* Unknown00;
-};
-
-class Class_10A810F0
-{
-public:
-    Class_10A810F0() { Unknown00.FUN_1090a590(DAT_10e6c100); }
-
-    cString Unknown00;
-};
 
 class cConEvent : public Class_10A810F0
 {

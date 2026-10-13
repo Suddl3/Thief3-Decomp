@@ -1,22 +1,14 @@
 // Game/Unsorted_109E6240.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include <list>
 #include "Game/Class_109E6520_Field18.h"
 #include "Game/Class_10E5B7C8.h"
 #include "Game/cStringIntHashTable.h"
 #include "Game/TimeManager.h"
 #include "Game/Class_109E6410.h"
-
-// Ion Storm's string (0x109081E0): a char pointer, null when default constructed.
-class cString
-{
-public:
-    cString() : Unknown00(0) {}
-    ~cString();
-    cString& operator=(const cString& Other);
-
-    char* Unknown00;
-};
+#include "Game/cString.h"
+#include "Game/Class_109E6520_Node.h"
 
 // Ion Storm's placement new and its delete (0x10905C10; the delete folded into ::operator delete).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
@@ -24,15 +16,6 @@ void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
 unsigned int HashBytes(const void* Data, int Length);
-
-// A chained hash table's entry: 12 bytes, allocated per insert.
-class Class_109E6520_Node
-{
-public:
-    cString Key;
-    int Value;
-    Class_109E6520_Node* Next;
-};
 
 class Class_10E5B7C8_Unknown88
 {

@@ -3,10 +3,19 @@
 #ifndef GAME_CLASS_10E8984C_H
 #define GAME_CLASS_10E8984C_H
 
+class Class_10B90750_Arg1;
+
 class Class_10E8984C
 {
 public:
     Class_10E8984C();
+    void FUN_10b90580(Class_10B90750_Arg1* A, int B, int C);
+    void FUN_10b90750(Class_10B90750_Arg1* A, int B, int C);
+    void FUN_10b90ab0(Class_10B90750_Arg1* A, int B, int C);
+    void FUN_10b91f10(int A, char* B, void* C, int D, int E);
+    void FUN_10b92330(Class_10B90750_Arg1* Arg, int B, int C);
+    void FUN_10b923b0(Class_10B90750_Arg1* A, int B, int C);
+    void FUN_10b924d0(Class_10B90750_Arg1* A, int B, int C);
 
     void** Unknown00;
     int Unknown04;

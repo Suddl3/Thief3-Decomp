@@ -1,14 +1,7 @@
 // Game/Unsorted_10BBF5E0_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-class Class_1098E330
-{
-public:
-    int FUN_1098e330(int A, int* B);
-
-    char Unknown00[0x2C];
-    int Unknown2C;
-};
+#include "Game/Class_1098E330.h"
 
 struct Struct_10BBFB80
 {
@@ -32,6 +25,6 @@ void __stdcall DrawRadiusCircle(Class_1098E330* A, int B)
         Color.Unknown02 = 0;
         Color.Unknown01 = 0x80;
         Color.Unknown03 = 0xff;
-        DrawCircle(B, &A->Unknown2C, Scale, &Color, 8);
+        DrawCircle(B, &A->Location, Scale, &Color, 8);
     }
 }

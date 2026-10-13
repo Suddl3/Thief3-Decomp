@@ -8,33 +8,13 @@
 #include "Game/cString.h"
 #include "Game/Class_10B6FC70.h"
 #include "Game/Class_10B6FDA0.h"
+#include "Game/Class_10E871C8.h"
 
 extern const char DAT_10e873a0[];
 
 extern const char DAT_10e87390[];
 
 Class_10905A90_Member* GetAllocator();
-
-// Class_10E871C8 copied whole from include/Game/Class_10E871C8.h, with FUN_10b700a0 added.
-class Class_10E871C8
-{
-public:
-    virtual void Virtual0();
-
-    Class_10E871C8();
-
-    void FUN_10b70d40(int p1, int p2);
-    void FUN_10b70db0(int A);
-    void FUN_10b700a0(void* A, void* B, int C);
-
-    Class_10B6FDA0 Unknown04[500];
-    Class_10B6FC70 Unknown101D4[10];
-    int Unknown102EC;
-    int Unknown102F0;
-    int Unknown102F4;
-    float Unknown102F8;
-    int Unknown102FC;
-};
 
 Class_10E871C8* GetSoupManager();
 

@@ -4,6 +4,7 @@
 #include "Game/Class_10BFD210.h"
 #include "Game/Class_10BBDB40.h"
 #include "Game/Class_10C7D570.h"
+#include "Game/Class_10BB8A30.h"
 
 class Class_10BC9D40
 {
@@ -67,20 +68,6 @@ public:
     virtual void Virtual56();
     virtual void Virtual57();
     virtual bool Virtual58();
-};
-
-// The header Game/Class_10BB8A30.h lacks FUN_10bb8b50: copied whole, with the member added.
-class Class_10BB8A30
-{
-public:
-    Class_10BC9D40* GetCurrent();
-    void FUN_10bb8b50(int A);
-
-    char Unknown00[8];
-    Class_10C7D570* Unknown08;
-    char Unknown0C[0x24];
-    Class_10BFD210 Unknown30;
-    char Pad31[0x3];
 };
 
 class Class_10E960D8

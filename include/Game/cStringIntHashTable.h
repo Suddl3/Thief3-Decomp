@@ -13,6 +13,7 @@ class cStringIntHashTable
 public:
     unsigned int Insert(const cString& Key, const int& Value);
     void Rehash(int Size);
+    bool Remove(const cString& Key);
 
     int m_Collisions;
     int m_Count;

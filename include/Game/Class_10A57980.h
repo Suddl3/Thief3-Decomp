@@ -132,6 +132,7 @@ public:
     void FUN_10a577f0(int A);
     void FUN_10a589e0(int A);
     void FUN_10a57980(int A, int B);
+    void FUN_10a51710(int A);
 
     char Unknown04[0x1E4];
     int Unknown1E8;

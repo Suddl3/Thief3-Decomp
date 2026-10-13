@@ -13,6 +13,7 @@ public:
     ~MoveCommand();
 
     MoveCommand* Init(int A, const Class_10E93B5C& B, int C);
+    MoveCommand(int A, const Class_10E93B5C& B, int C);
 
     int Unknown04;
     Class_10E93B5C Unknown08;

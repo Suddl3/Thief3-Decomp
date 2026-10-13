@@ -41,6 +41,7 @@ public:
     virtual void Virtual32();
     virtual void Virtual33();
     virtual void Virtual34();
+    void FUN_10bd1550(int A, int B, int C, int D);
 };
 
 #endif // GAME_CLASS_10B9E410_ITEM_H

@@ -5,10 +5,13 @@
 
 class Class_1097B240_Node;
 
+class cString;
+
 class Class_1097B240
 {
 public:
     void Resize(int Size);
+    unsigned int Insert(const cString& Key, const int& Value);
 
     int Unknown00;
     int Unknown04;

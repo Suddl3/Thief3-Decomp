@@ -1,47 +1,14 @@
 // Game/Unsorted_10B8D520.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10B8C9B0.h"
 #include "Game/Class_10AA82D0.h"
 #include "Game/Class_10B8CB20.h"
 #include "Game/Class_10B8D800.h"
 #include "Game/Class_109671D0.h"
+#include "Game/Class_10D9FEE0.h"
 
 class FVector;
-
-class Class_10D9FEE0 : public Class_10AA82D0
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8();
-    virtual void Virtual10();
-    virtual void Virtual11();
-    virtual void FUN_10da03a0(int A);
-    virtual void Virtual12();
-    virtual void Virtual13(int A);
-    virtual void Virtual15();
-    virtual void Virtual16();
-    virtual void FUN_10d9fdb0();
-
-    void FUN_10d9fee0(int A, int B);
-    void FUN_10da0640(Class_109671D0* A, int B);
-    void FUN_10da01b0(const FVector& A);
-    void FUN_10da0710(const FVector& A);
-    FVector FUN_10da00f0();
-    bool FUN_10d9feb0();
-    void FUN_10da07c0(const FVector& V);
-    void FUN_10da0000(bool A);
-    unsigned FUN_10da0400();
-
-    char Pad04[0x4];
-    int Unknown08;
-};
 
 // FUNCTION: 0x10B8D800 ?FUN_10b8d800@Class_10B8D800@@QAE_NHHHH@Z
 bool Class_10B8D800::FUN_10b8d800(int A, int B, int C, int D)

@@ -1,22 +1,12 @@
 // Game/Unsorted_1092C1A0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_1092BA00.h"
 #include "Game/Struct_109296A0_Node.h"
+#include "Game/Class_10939570.h"
 
 // Game/Class_10939570.h copied whole, with the method the header lacks.
 class Class_10953590;
-
-class Class_10939570
-{
-public:
-    char FUN_10939570();
-    void FUN_1093bce0(Class_10953590* Param);
-    void* FUN_1093bd40(int* A, int B, int C);
-    void FUN_1093b5e0();
-    void FUN_1093b1f0();
-
-    char Pad00[0x1];
-};
 
 // One list of a Class_109296A0 pair: the object at 0x10F31AB0 holds two of them, the second at +0xC.
 class Class_1092C0A0

@@ -13,6 +13,8 @@ public:
     virtual void MountRope(AGarrett* Garrett);
 
     void StopBody(AGarrett* Garrett);
+    void FUN_10b49640(int A);
+    cRopeMotion* Init();
 
     bool Unknown10;
     char Pad11[0x3];

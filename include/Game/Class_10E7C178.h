@@ -18,6 +18,7 @@ public:
     virtual int IsDone();
     virtual cString GetCurrent();
     virtual int IsInventoryClass();
+    void SeekMatch();
 
     cString m_ClassName;
 };

@@ -5,15 +5,7 @@
 #include "Game/Class_10BBDB40.h"
 #include "Game/Class_10C7D570.h"
 #include "Game/Class_10FF667C.h"
-
-class Class_10BFB910
-{
-public:
-    void ClearTime(int Index);
-    float GetTime(int Index);
-
-    int Unknown00[64];
-};
+#include "Game/Class_10BFB910.h"
 
 double GetTimeSeconds();
 

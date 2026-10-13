@@ -10,6 +10,7 @@ class Class_10E897D4 : public Class_10E897D4_Primary, public Class_10E897D4_Seco
 {
 public:
     virtual void FUN_10b8f2d0();
+    Class_10E897D4();
 };
 
 #endif // GAME_CLASS_10E897D4_H

@@ -11,6 +11,7 @@ public:
     void FUN_10c167a0(float Value);
     void FUN_10c167d0(float Value);
     void FUN_10c16800(float Value);
+    void FUN_10c28240();
 
     char Unknown00[0x34];
     float Unknown34;

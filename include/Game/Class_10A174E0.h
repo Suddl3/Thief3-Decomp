@@ -17,6 +17,7 @@ public:
     ~Class_10A174E0();
 
     void FUN_10a16700(const cString& Name);
+    Class_10A174E0();
 };
 
 #endif // GAME_CLASS_10A174E0_H

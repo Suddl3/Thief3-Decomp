@@ -9,6 +9,7 @@ class Class_10B39610
 {
 public:
     void FUN_10b39610(float A, int B);
+    void FUN_10b39610(float A);
 
     char Unknown00[0xC];
     Class_10B46F50* m_Handlers[8];

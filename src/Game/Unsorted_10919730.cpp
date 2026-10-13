@@ -1,10 +1,12 @@
 // Game/Unsorted_10919730.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10924AE0.h"
 #include "Game/Struct_10924210.h"
 #include "Game/Class_10937730.h"
 #include "Game/Class_1093E930.h"
+#include "Game/Class_10939570.h"
 
 class IDirect3D8;
 
@@ -58,18 +60,6 @@ public:
     virtual int __stdcall Virtual39();
     virtual int __stdcall Virtual40();
     virtual long __stdcall Virtual41(const Struct_10924210* Viewport);
-};
-
-// Copied from include/Game/Class_10939570.h with FUN_109397b0 added.
-class Class_10939570
-{
-public:
-    char FUN_10939570();
-    void FUN_1093bce0(Class_10953590* Param);
-    void* FUN_1093bd40(int* A, int B, int C);
-    void FUN_1093b5e0();
-    void FUN_109397b0();
-    char Pad00[0x1];
 };
 
 Class_10905A90_Member* GetAllocator();

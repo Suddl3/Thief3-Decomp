@@ -1,21 +1,12 @@
 // Game/Unsorted_10A34780_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10A34B90_Node.h"
 #include "Game/Class_10A34C10.h"
 #include "Game/Class_10A34B90.h"
+#include "Game/cString.h"
 
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
-
-class cString
-{
-public:
-    cString() : Unknown00(0) {}
-    ~cString();
-
-    cString& operator=(const cString& Other);
-
-    char* Unknown00;
-};
 
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 

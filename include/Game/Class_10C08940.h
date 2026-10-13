@@ -35,6 +35,7 @@ public:
     virtual int Virtual24();
 
     int FUN_10c08940();
+    int FUN_10ad18b0();
 
     char Pad04[0x4];
     int Unknown08;

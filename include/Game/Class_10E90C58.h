@@ -8,6 +8,7 @@ class Class_10BC4BE0_Member;
 class Class_10E90C58 {
 public:
     virtual void FUN_10bc4be0();
+    Class_10E90C58(void* Owner);
     Class_10BC4BE0_Member* Unknown04;
 };
 

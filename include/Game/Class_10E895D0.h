@@ -14,6 +14,9 @@ public:
     void FUN_10b8b9f0(int A);
     Class_10B8B9F0_Unknown10* FUN_10b8b8a0();
     void FUN_10b8bf80();
+    void FUN_10b8baa0(int A);
+    void FUN_10b8bb30();
+    void FUN_10b8c290();
 
     int Unknown00;
     int Unknown04;

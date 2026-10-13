@@ -1,10 +1,12 @@
 // Game/cWaterManager.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10AB90F0.h"
 #include "Game/cActorManager.h"
 #include "Game/Class_10905A90_Member.h"
 #include "Game/cString.h"
 #include "Game/cWaterManager.h"
+#include "Game/Class_10939570.h"
 
 extern const char DAT_10e6f2fc[];
 
@@ -17,19 +19,6 @@ extern const char* DAT_10f3a3d4;
 void* FUN_10a4bd70(int A);
 
 class Class_10953590;
-
-// Copied from Game/Class_10939570.h with GetCategoryIndex added.
-class Class_10939570
-{
-public:
-    char FUN_10939570();
-    void FUN_1093bce0(Class_10953590* Param);
-    void* FUN_1093bd40(int* A, int B, int C);
-    void FUN_1093b5e0();
-    int GetCategoryIndex(const char** Name);
-
-    char Pad00[0x1];
-};
 
 extern Class_10939570* DAT_10f323fc;
 

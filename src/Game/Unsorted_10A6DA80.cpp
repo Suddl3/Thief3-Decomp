@@ -7,24 +7,7 @@
 #include "Game/Class_10E6B978.h"
 #include "Game/Class_10E6B9F8.h"
 #include "Game/Class_10E6BA00.h"
-
-class Class_10E6BC8C
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8();
-    virtual void Virtual9();
-    virtual int Virtual10(int A);
-
-    bool HasOwner(int A);
-};
+#include "Game/Class_10E6BC8C.h"
 
 class Class_10E6B594
 {
@@ -92,7 +75,7 @@ void Class_10E6B9F8::HandleEvent(int Event, UObject* A, int B, int C)
 // FUNCTION: 0x10A6E690 ?HasOwner@Class_10E6BC8C@@QAE_NH@Z
 bool Class_10E6BC8C::HasOwner(int A)
 {
-    return Virtual10(A) != 0;
+    return GetOwner(A) != 0;
 }
 
 // FUNCTION: 0x10A6E6B0 ?HandleEvent@Class_10E6BA00@@UAEXHHHH@Z

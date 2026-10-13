@@ -5,12 +5,17 @@
 
 class Class_10AA44B0_Node;
 
+class Class_10E97B00;
+class cString;
+
 class Class_10AA44B0
 {
 public:
     void Clear(int A);
     void Free();
     void Rehash(int Size);
+    unsigned int Insert(const Class_10E97B00& Key, const cString& Value);
+    unsigned int Insert(const int& Key, const cString& Value);
 
     int m_Collisions;
     int m_Count;

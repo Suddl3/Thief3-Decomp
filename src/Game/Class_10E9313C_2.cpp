@@ -1,25 +1,10 @@
 // Game/Class_10E9313C_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Core/Core.h"
 #include "Game/Class_10E9313C.h"
 #include "Game/Object_10BFBD00.h"
-
-class FArchive
-{
-public:
-    virtual ~FArchive();
-    virtual void Serialize(void* V, int Length);
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6(void* Value);
-
-    char Unknown04[0x08];
-    int ArVer;
-    int Unknown10;
-    int ArIsLoading;
-};
+#include "Game/FArchive.h"
 
 void FUN_10c11ff0(FArchive& Ar, int* Value);
 
@@ -45,16 +30,16 @@ void Class_10E9313C::Serialize(FArchive& Ar)
     DAT_10ff667c->Unknown18->Virtual1(Ar, &Unknown1C);
     BYTE Flag = Unknown20;
     Ar.Serialize(&Flag, 1);
-    if (Ar.ArIsLoading)
+    if (Ar.Unknown14)
         Unknown20 = Flag;
     Ar.Serialize(&Unknown24, 4);
     BYTE Flag2 = Unknown28;
     Ar.Serialize(&Flag2, 1);
-    if (Ar.ArIsLoading)
+    if (Ar.Unknown14)
         Unknown28 = Flag2;
     Ar.Serialize(&Unknown2C, 4);
     Ar.Serialize(&Unknown30, 1);
     FUN_10b232e0(&Ar, &Unknown34);
-    if (Ar.ArVer >= 0x65)
+    if (Ar.Unknown0C >= 0x65)
         Ar.Serialize(&Unknown38, 1);
 }

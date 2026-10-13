@@ -27,6 +27,7 @@ public:
         int Length = Unknown00 == 0 ? 0 : ((int*)Unknown00)[-1];
         return Length == 0;
     }
+    operator int();
 
     char* Unknown00;
 };

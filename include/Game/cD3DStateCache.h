@@ -19,6 +19,17 @@ public:
     void SetVertexShaderConstantScalar(int p1, int p2);
     void SetPixelShaderConstantScalar(int Index, int Value);
     void FUN_10936bf0(int A);
+    void FUN_10937140(int A, float* B);
+    void FUN_10937400(unsigned long Value);
+    void FUN_10937c70();
+    void FUN_10938000();
+    void FUN_10938150(float A, float B, float C, float D);
+    void FUN_10938430();
+    void Reset();
+    void ResetTextureStagesBiased();
+    void SetStageBorder(int A, bool B);
+    void SetTexture(unsigned long Stage, IDirect3DBaseTexture8* Texture);
+    void SetVertexShader(unsigned long Value);
 
     char Pad01[0xb];
     char Pad81F[0x1];

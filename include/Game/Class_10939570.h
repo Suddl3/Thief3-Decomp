@@ -12,6 +12,10 @@ public:
     void FUN_1093bce0(Class_10953590* Param);
     void* FUN_1093bd40(int* A, int B, int C);
     void FUN_1093b5e0();
+    void FUN_109397b0();
+    void FUN_1093b1f0();
+    void FUN_1093b560();
+    int GetCategoryIndex(const char** Name);
 
     char Pad00[0x1];
 };

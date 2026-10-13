@@ -9,6 +9,8 @@ class Class_10A163F0
 {
 public:
     int Set(int* Key, Struct_10A16B60* Info);
+    int FUN_10a15ef0(int* Key, Struct_10A16B60* Value);
+    void Rehash(int Size);
 };
 
 #endif // GAME_CLASS_10A163F0_H

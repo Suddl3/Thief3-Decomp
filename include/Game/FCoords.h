@@ -15,6 +15,8 @@ public:
 
     FRotator OrthoRotation() const;
     FCoords& FUN_10961af0(const FRotator& Rot);
+    FCoords* FUN_10961e00(void* A);
+    FCoords operator/(const FRotator& Rot) const;
 
     FVector Origin;
     FVector XAxis;

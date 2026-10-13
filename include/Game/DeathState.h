@@ -17,6 +17,7 @@ public:
     DeathState(int A, int B, int C, int D, void* E, bool F);
 
     void FUN_10bced10();
+    void FUN_10bcf680();
 
     Class_10BCEAB0_Unknown40* Unknown40;
     int Unknown44;

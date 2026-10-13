@@ -3,6 +3,7 @@
 
 #include "Game/Class_10C7D570.h"
 #include "Game/Class_10971570.h"
+#include "Game/Class_10BB9FC0.h"
 
 class Class_10BB96F0_Virtual93;
 
@@ -125,20 +126,6 @@ public:
     virtual int Virtual14();
     virtual void Virtual15();
     virtual Class_10971570* Virtual16(int Index);
-};
-
-class Class_10BB9FC0
-{
-public:
-    void FUN_10bb9e90();
-    void FUN_10bb9fc0();
-    void FUN_10bb9ff0();
-    bool FUN_10bb96f0();
-
-    char Unknown00[8];
-    Class_10C7D570* Unknown08;
-    char Unknown0C[0x278];
-    int Unknown284;
 };
 
 // FUNCTION: 0x10BB96F0 ?FUN_10bb96f0@Class_10BB9FC0@@QAE_NXZ

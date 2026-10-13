@@ -12,6 +12,7 @@ public:
 
     void Reset(int A);
     void Release();
+    Class_10C3EA90();
 
     union
     {

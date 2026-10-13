@@ -3,6 +3,7 @@
 
 #include "Game/cCitySectionManager.h"
 #include "Game/Class_10BAC050.h"
+#include "Game/Class_10BB9FC0.h"
 
 class Class_10BB9FC0;
 
@@ -21,20 +22,6 @@ struct Struct_10AA3520
 };
 
 extern Struct_10AA3520* DAT_10f35dec;
-
-class Class_10BB9FC0
-{
-public:
-    void FUN_10bb9e90();
-    void FUN_10bb9fc0();
-    void FUN_10bb9ff0();
-    bool FUN_10bb96f0();
-
-    char Unknown00[8];
-    Class_10C7D570* Unknown08;
-    char Unknown0C[0x278];
-    int Unknown284;
-};
 
 class Class_10B9E410_Item
 {

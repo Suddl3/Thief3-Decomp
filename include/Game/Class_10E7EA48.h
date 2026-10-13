@@ -25,6 +25,8 @@ public:
     virtual void FUN_10b4e660(Info_10B4E660* Out);
 
     Class_10E7EA48* FUN_10b3d380();
+    void FUN_10b4e6a0(AGarrett* Garrett);
+    void FUN_10b4e7a0(AGarrett* Garrett);
 
     char Pad04[0xc];
 };

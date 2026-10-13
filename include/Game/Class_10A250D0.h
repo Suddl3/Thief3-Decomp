@@ -13,6 +13,7 @@ class Class_10A250D0
 public:
     unsigned int Insert(const cString& Key, const cString& Value);
     void Rehash(int Size);
+    unsigned int Set(const cString& Key, const cString& Value);
 
     int m_Collisions;
     int m_Count;

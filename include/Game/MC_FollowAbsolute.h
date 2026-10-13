@@ -14,6 +14,7 @@ public:
 
     MC_FollowAbsolute* Initialize(int A, int B, int C, int D, int E, int F, int G, int H);
     cString GetMotionControllerName();
+    MC_FollowAbsolute(int A);
 
     int m_OffsetX;
     int m_OffsetY;

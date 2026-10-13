@@ -13,6 +13,7 @@ public:
     virtual void Virtual1();
     virtual void FUN_10b4fcc0(Class_10B22020* Param);
     virtual void FUN_10b4fd30(Class_10B22020* Param);
+    Class_10E81620* Init();
 
     int Unknown04;
     int Unknown08;

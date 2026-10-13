@@ -2,21 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Game/Class_10AF7F80.h"
-
-// Game/Class_10E6BBD0.h copied whole, with FUN_10a755b0 added (called on this).
-class Class_10E6BBD0
-{
-public:
-    virtual void HandleEvent(int Event, int A, int B, int C);
-
-    void FUN_10a74c10(int A);
-    void FUN_10a75190(int A, int B, int C);
-    void FUN_10a75560(int A, bool B);
-    void FUN_10a75680(int A, int B, int C);
-    void FUN_10a74df0(int A);
-    void FUN_10a74ec0(int A);
-    void FUN_10a755b0(Class_10AF7F80* A, int B);
-};
+#include "Game/Class_10E6BBD0.h"
 
 class Class_10A75680_Param
 {

@@ -1,10 +1,12 @@
 // Game/Class_10E82688_7.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10E67FD0.h"
 #include "Game/Class_1092D3D0.h"
 #include "Game/Class_10C56E40_Field00.h"
 #include "Game/Class_109E6D60.h"
 #include "Game/Class_1092D420.h"
+#include "Game/Class_10C56E40.h"
 
 class Class_10C5A160_Y;
 
@@ -48,30 +50,6 @@ public:
     float AssumedUIScreenHeight;
     char PadD4[0x190];
     char Unknown264;
-};
-
-// Copied whole from Game/Class_10C56E40.h with FUN_10b18b60 and FUN_10b18ac0 added.
-class Class_10C56E40
-{
-public:
-    Class_10C56E40(Class_10C56E40_Field00* P)
-    {
-        Unknown00 = P;
-        if (Unknown00)
-            Unknown00->Virtual1();
-    }
-    ~Class_10C56E40()
-    {
-        if (Unknown00)
-            Unknown00->Virtual2();
-    }
-    Class_10C56E40() : Unknown00(0) {}
-    Class_10C56E40(Class_10C5A160_Y*& A);
-
-    void FUN_10b18b60(int A);
-    void FUN_10b18ac0();
-
-    Class_10C56E40_Field00* Unknown00;
 };
 
 Class_10C56E40* FUN_10b18b20();

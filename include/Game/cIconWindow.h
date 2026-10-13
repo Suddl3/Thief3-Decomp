@@ -110,6 +110,7 @@ public:
 
     void FUN_10a5df70();
     void FUN_10a5db30(int Index);
+    cIconWindow* FUN_10a5ddc0();
 
     char Unknown118[0xA0];
     bool Unknown1B8;

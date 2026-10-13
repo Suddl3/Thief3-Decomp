@@ -12,6 +12,7 @@ public:
     void FUN_10abf7c0(int A);
     void SetState(int A, bool State);
     void FUN_10abfb50(int A, int B);
+    void Update(int A, int B, float C);
 
     bool m_State;
     char Unknown01[0xB];

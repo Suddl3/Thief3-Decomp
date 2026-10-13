@@ -6,12 +6,16 @@
 #include "Game/cString.h"
 #include "Game/MoveCommand.h"
 
+class Class_10C37960;
+class Class_10E93B5C;
+
 class MC_PlayAnimation : public MoveCommand
 {
 public:
     virtual bool IsFinished();
     virtual cString GetDescription();
     virtual ~MC_PlayAnimation();
+    MC_PlayAnimation(Class_10C37960* A, const Class_10E93B5C& B, int C, const cString& E, int F, int G, int H, int I);
 
     bool m_Failed;
     char Pad4D[0x3];

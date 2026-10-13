@@ -13,6 +13,7 @@ class Class_10C5BB10
 public:
     void FUN_10c5bbf0(int Size);
     unsigned int Insert(const int& Key, const Class_10C5BA20& Value);
+    bool FUN_10c5bd80(const int& Key);
 
     int m_Collisions;
     int m_Count;

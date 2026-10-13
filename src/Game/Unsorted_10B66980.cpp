@@ -1,11 +1,13 @@
 // Game/Unsorted_10B66980.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/cString.h"
 #include "Game/Class_10B71110.h"
 #include "Game/Class_10B71140.h"
 #include "Game/Class_10B73E80.h"
 #include "Game/Class_10B76190.h"
 #include "Game/cT3OptionsWindow.h"
+#include "Game/Class_10E876D0.h"
 
 extern void* DAT_10e84d80[];
 
@@ -319,13 +321,6 @@ extern void* DAT_10e7edb8[];
 
 extern void FUN_10a58e50(void);
 
-class Class_10E876D0 {
-public:
-    char Unknown00[0x118];
-    void* Field118;
-    void FUN_10b73e60();
-};
-
 void FUN_10b756d0();
 
 class Class_10E87B68
@@ -444,7 +439,7 @@ cString cT3OptionsWindow::GetPaneFileName()
 void Class_10E876D0::FUN_10b73e60()
 {
     *(void**)this = &DAT_10e876d0;
-    Field118 = DAT_10e7edb8;
+    Unknown118 = DAT_10e7edb8;
     FUN_10a58e50();
 }
 

@@ -17,6 +17,11 @@ public:
     Class_10BC9D40* GetCurrent();
     int FUN_10b9d040(int A, int B);
     void NotifyAllyKilled(int A);
+    void* FUN_10aa9da0();
+    void FUN_10b9d1a0(int A);
+    void FUN_10b9d1c0(int A);
+    void FUN_10b9d3c0(int A);
+    void FUN_10b9e430();
 
     char Pad01[0xb];
     char Pad47[0x1];

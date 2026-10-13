@@ -3,16 +3,9 @@
 
 #include "Core/Core.h"
 #include "Game/FArchive.h"
+#include "Game/Class_10E98D08.h"
 
 FArchive& FUN_10b052a0(FArchive& Ar, void* Data);
-
-class Class_10E98D08
-{
-public:
-    virtual ~Class_10E98D08();
-
-    void FUN_10c1b1a0(FArchive& Ar);
-};
 
 class Class_10E98E28 : public Class_10E98D08
 {

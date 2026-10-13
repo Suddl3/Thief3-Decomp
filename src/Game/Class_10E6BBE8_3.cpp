@@ -3,12 +3,7 @@
 
 #include "Game/Class_10E6BBE8.h"
 #include "Engine/EngineClasses.h"
-
-class Class_1098E330
-{
-public:
-    void FUN_1098e330(int A, int* B);
-};
+#include "Game/Class_1098E330.h"
 
 // FUNCTION: 0x10A76490 ?FUN_10a76490@Class_10E6BBE8@@UAEHHHH@Z
 int Class_10E6BBE8::FUN_10a76490(int A, int B, int C)

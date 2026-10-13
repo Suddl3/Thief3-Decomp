@@ -8,6 +8,8 @@
 class AGarrett;
 struct Struct_10B4A260;
 
+struct Struct_10B193E0;
+
 class Class_10E7E730 : public Class_10B3AE70
 {
 public:
@@ -26,6 +28,8 @@ public:
     virtual void FUN_10b4a260(Struct_10B4A260* Out);
 
     void StopBody(AGarrett* Garrett);
+    bool FUN_10b3b540(Struct_10B193E0* A, int B, int C);
+    Class_10E7E730* Init();
 
     int Unknown10;
     float m_Timer;

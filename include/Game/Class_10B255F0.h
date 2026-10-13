@@ -24,6 +24,7 @@ public:
     void FUN_10b25700(int p1);
     void FUN_10b25dc0(int p1);
     int GetItemCount();
+    void FUN_10b261e0();
 
     int Unknown30;
     union

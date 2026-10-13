@@ -144,6 +144,14 @@ public:
     void FUN_10b71a80();
     void FUN_10b71600();
     void FUN_10b716a0();
+    bool FUN_10b71170(int A, int B, bool C);
+    void FUN_10b71740();
+    void FUN_10b73900();
+    void FUN_10b739c0();
+    void FUN_10b73b40(int A);
+    void FUN_10b73ba0(int A);
+    void ResetToDefaults();
+    cT3OptionsWindow();
 
     char Unknown04[0x1B0];
     Class_10B70F80* Unknown1B4;

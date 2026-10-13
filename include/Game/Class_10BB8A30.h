@@ -12,6 +12,7 @@ class Class_10BB8A30
 {
 public:
     Class_10BC9D40* GetCurrent();
+    void FUN_10bb8b50(int A);
 
     char Unknown00[8];
     Class_10C7D570* Unknown08;

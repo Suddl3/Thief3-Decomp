@@ -1,29 +1,15 @@
 // Game/Unsorted_10B9D220.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10B9E410_Item.h"
 #include "Game/Class_10B9E410_Member.h"
 #include "Game/Class_10BB8300.h"
 #include "Game/Object_10B9CAC0.h"
 #include "Game/cStateStack.h"
+#include "Game/cString.h"
 
 Class_10905A90_Member* GetAllocator();
-
-class cString
-{
-public:
-    cString(const char* In);
-    ~cString()
-    {
-        if (Unknown00)
-        {
-            char* Block = Unknown00 - 4;
-            GetAllocator()->Virtual5(Block);
-        }
-    }
-
-    char* Unknown00;
-};
 
 class Class_10B9CAC0
 {

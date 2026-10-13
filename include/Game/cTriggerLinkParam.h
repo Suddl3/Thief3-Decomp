@@ -21,6 +21,8 @@ public:
     virtual void Virtual9();
 
     cTriggerLinkParam(bool A);
+    void FUN_10a80000(cString* Value);
+    cString FUN_10a801e0();
 
     int Unknown04;
     cString m_Flavor;

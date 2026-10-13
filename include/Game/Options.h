@@ -15,6 +15,8 @@ public:
     int SetDefaults(int Index);
     unsigned int Load();
     void Set(int Name, int Value);
+    void ApplyVideo();
+    void FUN_10ab5a90();
 
           // +0x04, indexed by the names table; [11] is the resolution
 

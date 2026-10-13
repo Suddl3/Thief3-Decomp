@@ -1,17 +1,13 @@
 // Game/Unsorted_10925230.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
+#include "Game/Class_109242E0.h"
+
 extern bool DAT_10f31a60;
 
 class Class_10950230;
 
 extern Class_10950230* DAT_10f31a64;
-
-class Class_109242E0
-{
-public:
-    void ApplyRenderTarget();
-};
 
 extern Class_109242E0* DAT_10f319a0;
 

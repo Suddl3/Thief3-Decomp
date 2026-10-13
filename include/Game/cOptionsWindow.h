@@ -131,6 +131,9 @@ public:
     void FUN_10b45af0(int A);
     void FUN_10b56980();
     void CancelAndClose();
+    bool FUN_10a53020(int A, int B, int C, int D);
+    void FUN_10b56240(int A, int B);
+    void FUN_10b57d20(int A);
 
     char Unknown04[0x154];
     Struct_10B45D10* Unknown158;

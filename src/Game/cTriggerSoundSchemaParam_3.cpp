@@ -1,7 +1,10 @@
 // Game/cTriggerSoundSchemaParam_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10E6BF84.h"
+#include "Game/Class_1090A780.h"
+#include "Game/cString.h"
 
 Class_10905A90_Member* GetAllocator();
 
@@ -40,51 +43,6 @@ public:
     int Unknown04;
     int Unknown08;
     int Unknown0C;
-};
-
-// Copied from include/Game/Class_1090A780.h without its destructor (the base's destructor is trivial in the original).
-class Class_1090A780
-{
-public:
-    Class_1090A780(const Class_1090A780& Other);
-    Class_1090A780() : Unknown00(0) {}
-
-    bool IsEmpty() const
-    {
-        int Length = Unknown00 == 0 ? 0 : ((int*)Unknown00)[-1];
-        return Length == 0;
-    }
-
-    char* Unknown00;
-};
-
-// Copied from include/Game/cString.h with a default constructor added.
-class cString : public Class_1090A780
-{
-public:
-    ~cString()
-    {
-        if (Unknown00)
-        {
-            char* Block = Unknown00 - 4;
-            GetAllocator()->Virtual5(Block);
-            Unknown00 = 0;
-        }
-    }
-    cString() : Class_1090A780() {}
-    cString(const char* In);
-    cString(const cString& Other);
-    cString(const Class_1090A780& Other) : Class_1090A780(Other) {}
-
-    void FUN_10907870(int Length, int Flag);
-    cString& operator=(const cString& Other);
-    cString& FUN_1090a590(const char* In);
-    const char* operator*() const { return Unknown00 ? Unknown00 : DAT_10e47660; }
-    bool IsEmpty() const
-    {
-        int Length = Unknown00 == 0 ? 0 : ((int*)Unknown00)[-1];
-        return Length == 0;
-    }
 };
 
 class cTriggerSoundSchemaParam : public Class_10E6BF84

@@ -9,6 +9,7 @@ class Class_10AB37F0
 {
 public:
     void FUN_10ab37f0(const cString& Value);
+    void FUN_10ab3ab0();
 
     cString Unknown00;
 };

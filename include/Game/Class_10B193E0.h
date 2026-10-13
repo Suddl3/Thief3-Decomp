@@ -11,6 +11,7 @@ public:
     void FUN_10b19260(Struct_10B193E0* Object, float Value);
     void FUN_10b19140(int* Out, Struct_10B193E0* Object);
     void FUN_10b193e0(Struct_10B193E0* Object);
+    void FUN_10b18e90(Struct_10B193E0* Object, float Value);
 
     char Unknown00[0x30];
     int Unknown30;

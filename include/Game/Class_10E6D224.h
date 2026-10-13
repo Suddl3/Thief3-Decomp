@@ -7,6 +7,7 @@ class Class_10E6D224
 {
 public:
     Class_10E6D224* Construct();
+    void FUN_10a9d660(int Id, float Value);
 
     union
     {

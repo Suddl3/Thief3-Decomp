@@ -1,29 +1,7 @@
 // Game/Unsorted_10B73A00_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-class Options
-{
-public:
-    int Get(int Index);
-    void GetResolution(int* Width, int* Height);
-    void FUN_10ab5c60(int Index);
-    void FUN_10ab6420();
-    void Save();
-    void FUN_10ab66e0();
-    int SetDefaults(int Index);
-    unsigned int Load();
-    void Set(int Name, int Value);
-    void FUN_10ab5a90();
-
-    static int ResolutionWidths[];
-    static int ResolutionHeights[];
-
-    int Unknown00;
-    int Values[21];
-    char Unknown58;
-    char Unknown59;
-    char Pad5A[0x2];
-};
+#include "Game/Options.h"
 
 Options* GetOptions();
 

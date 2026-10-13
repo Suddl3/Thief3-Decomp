@@ -12,6 +12,7 @@ class cFactionPane : public Class_10B78780
 public:
     void ResetStyles();
     cFactionPane* InitDefaults();
+    void FUN_10b77ee0(int A);
 
     Object_10B5AFF0* m_HammerFaction;
     Object_10B5AFF0* m_PaganFaction;

@@ -1,8 +1,10 @@
 // Game/Unsorted_10B83850_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Core/Core.h"
 #include "Game/Struct_10B82770_Param.h"
 #include "Game/Class_10B83DC0.h"
+#include "Game/Allocator_10FFA700.h"
 
 struct __declspec(align(16)) Struct_10B7C800
 {
@@ -15,17 +17,6 @@ Struct_10B7C800 FUN_10b7c800(const FVector& V);
 
 class Class_10943600;
 
-class Allocator_10FFA700
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5(void* A, int B, int C);
-};
-
 extern Allocator_10FFA700* DAT_10ffa700;
 
 class Class_10B83820
@@ -37,7 +28,7 @@ public:
         if (!Unknown08Flag)
         {
             Allocator_10FFA700* Allocator = DAT_10ffa700;
-            Allocator->Virtual5(m_Buffer, m_Capacity * 16, 0x11);
+            Allocator->Free(m_Buffer, m_Capacity * 16, 0x11);
         }
     }
 

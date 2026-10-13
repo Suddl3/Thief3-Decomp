@@ -7,6 +7,9 @@
 
 class FVector;
 
+class Class_109671D0;
+class FCoords;
+
 class Class_10D9FEE0 : public Class_10AA82D0
 {
 public:
@@ -36,6 +39,9 @@ public:
     void FUN_10da07c0(const FVector& V);
     void FUN_10da0000(bool A);
     unsigned FUN_10da0400();
+    void FUN_10da0640(Class_109671D0* A, int B);
+    void FUN_10da06b0(Class_109671D0* A);
+    void FUN_10da0ab0(const FCoords& A);
 
     char Pad04[0x4];
     int Unknown08;

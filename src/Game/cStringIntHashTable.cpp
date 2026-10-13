@@ -1,27 +1,10 @@
 // Game/cStringIntHashTable.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
+#include "Game/cString.h"
+#include "Game/Class_109E6520_Node.h"
+
 unsigned int HashBytes(const void* Data, int Length);
-
-// Ion Storm's string (0x109081E0): a char pointer, null when default constructed.
-class cString
-{
-public:
-    cString() : Unknown00(0) {}
-    ~cString();
-    cString& operator=(const cString& Other);
-
-    char* Unknown00;
-};
-
-// A chained hash table's entry: 12 bytes, allocated per insert.
-class Class_109E6520_Node
-{
-public:
-    cString Key;
-    int Value;
-    Class_109E6520_Node* Next;
-};
 
 // The table's key hasher: slot 0 gives the bytes HashBytes hashes,
 // slot 1 compares a key with an entry's key (0 when they are equal).

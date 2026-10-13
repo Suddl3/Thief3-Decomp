@@ -13,6 +13,8 @@ public:
     void FUN_1094b730();
     void FUN_10948e80();
     void IntegrateOffsets(int A);
+    void AddUniqueItem(int A);
+    void FUN_1094d500(int A);
 
     char Unknown04[0x58];
     int m_PendingFlags;

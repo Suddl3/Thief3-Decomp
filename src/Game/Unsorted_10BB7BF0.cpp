@@ -5,6 +5,7 @@
 #include "Game/Class_10BBDC30.h"
 #include "Game/Class_10BBDB10.h"
 #include "Game/Class_10C28240.h"
+#include "Game/Class_10C16740.h"
 
 class Class_10BBDB40;
 
@@ -31,30 +32,6 @@ public:
 
     char Unknown00[0x64];
     bool Unknown64;
-};
-
-// Game/Class_10C16740.h copied whole, with FUN_10c28240 (called on this object too).
-class Class_10C16740
-{
-public:
-    void FUN_10c16740(float Value);
-    void FUN_10c16770(float Value);
-    void FUN_10c167a0(float Value);
-    void FUN_10c167d0(float Value);
-    void FUN_10c16800(float Value);
-    void FUN_10c28240();
-
-    char Unknown00[0x34];
-    float Unknown34;
-    float Unknown38;
-    float Unknown3C;
-    float Unknown40;
-    float Unknown44;
-    float Unknown48;
-    float Unknown4C;
-    float Unknown50;
-    float Unknown54;
-    float Unknown58;
 };
 
 // The base of Class_10BBB410: the fields this function reads are in it.

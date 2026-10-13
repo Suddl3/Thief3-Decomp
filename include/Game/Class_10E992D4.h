@@ -5,6 +5,8 @@
 
 #include "Game/Class_10E9925C.h"
 
+class Class_10BAA580;
+
 class Class_10E992D4 : public Class_10E9925C
 {
 public:
@@ -23,6 +25,8 @@ public:
     unsigned char FUN_10c270b0();
     void Register();
     void Unregister();
+    Class_10E992D4(int A, Class_10BAA580* B, int* C, int D);
+    Class_10E992D4* Construct(int A, int B, int C, int D);
 
     int Unknown38;
     char Pad3C[0x8];

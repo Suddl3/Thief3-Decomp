@@ -18,6 +18,7 @@ public:
     void FUN_10c5e810();
     void Reset();
     void FUN_10c5f060();
+    Class_10C80360();
 
     char Pad01[0xc];
     bool Unknown0D;

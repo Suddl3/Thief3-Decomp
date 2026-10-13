@@ -1,13 +1,9 @@
 // Game/State_SearchLook_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10BB8960.h"
 #include "Game/Class_10bb8960_Result.h"
-
-class Class_10BE3FF0
-{
-public:
-    void FUN_10be7ae0();
-};
+#include "Game/Class_10BE3FF0.h"
 
 class Class_10BB89D0 : public Class_10BB8960
 {

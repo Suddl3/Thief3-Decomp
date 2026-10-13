@@ -28,6 +28,7 @@ public:
     virtual void FUN_10a39ba0(int A);
 
     void FUN_10a38b50();
+    void FUN_10a375c0(int A);
 
     char Unknown04[0x28];
     Info_10A399C0 Unknown2C;

@@ -26,6 +26,8 @@ public:
 
     void SetRenderStates(int A, int B);
     void FUN_10935930(int A, int B);
+    void FUN_109353a0(int A, Class_109526D0* B, int C);
+    void ResetTextureStages();
 
     char Unknown04[0x110];
     int m_VertexShader;

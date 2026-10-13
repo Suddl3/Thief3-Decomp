@@ -11,6 +11,7 @@ class Class_10E8C320 : public Class_10978090, public Class_10E8C320_Secondary
 public:
     virtual void Virtual1();
     virtual void FUN_10c14280();
+    Class_10E8C320();
 };
 
 #endif // GAME_CLASS_10E8C320_H

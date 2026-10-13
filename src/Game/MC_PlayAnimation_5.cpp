@@ -3,23 +3,7 @@
 
 #include "Core/Core.h"
 #include "Game/Class_10C271A0.h"
-
-class FArchive
-{
-public:
-    virtual ~FArchive();
-    virtual void Serialize(void* V, int Length);
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6(void* Value);
-
-    char Unknown04[0x08];
-    int ArVer;
-    int Unknown10;
-    int ArIsLoading;
-};
+#include "Game/FArchive.h"
 
 void FUN_10c11ff0(FArchive& Ar, int* Value);
 
@@ -51,7 +35,7 @@ void MC_PlayAnimation::FUN_10c2e9a0(FArchive& Ar)
     Ar.Serialize(&Unknown54, 1);
     BYTE Flag = Unknown58;
     Ar.Serialize(&Flag, 1);
-    if (Ar.ArIsLoading)
+    if (Ar.Unknown14)
         Unknown58 = Flag;
     Ar.Serialize(&Unknown5C, 4);
     Ar.Serialize(&Unknown60, 4);

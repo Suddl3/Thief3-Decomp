@@ -89,6 +89,7 @@ public:
     void FUN_10bde730();
     // The accessor at 0x10BC4BF0, which the compiler inlines here.
     int GetTargetLinkType();
+    Class_10E94100* Construct(int A, int B);
 
     Class_10BC4BF0_Member* Unknown04;
     char Unknown28[0x2C];

@@ -7,12 +7,15 @@
 
 class Class_109BC840;
 
+class cString;
+
 class Class_10BAA580 : public Class_10C7D570
 {
 public:
     int GetCachedValue();
     Class_109BC840* FUN_10baa580();
     int* GetCachedIndex(int* Out);
+    int* FUN_10babab0(int* A, cString* B);
 
     char Pad01[0x8b];
     int m_CachedValue;

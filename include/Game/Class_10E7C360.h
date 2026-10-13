@@ -14,6 +14,7 @@ public:
     virtual void Virtual3();
     virtual bool FUN_10b35630(int p1);
     virtual int FUN_10b35640(int A, int B);
+    Class_10E7C360();
 
     char Pad04[0x8];
 };

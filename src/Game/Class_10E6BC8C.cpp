@@ -3,13 +3,7 @@
 
 #include "Game/Class_10E6BC8C.h"
 #include "Engine/EngineClasses.h"
-
-class Class_1098E330 : public AActor
-{
-public:
-    virtual void Virtual0();
-    int FUN_1098e330(int Id, int* Out);
-};
+#include "Game/Class_1098E330.h"
 
 class Class_10F46DA0
 {

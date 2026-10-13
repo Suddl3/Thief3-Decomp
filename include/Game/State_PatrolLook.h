@@ -60,6 +60,8 @@ public:
     virtual void FUN_10bed060(int A);
 
     State_PatrolLook(int A, int B, int C, int D, int E, int F, int G, int H);
+    bool FUN_10bcb600();
+    void FUN_10bedca0();
 
     int Unknown40;
     float m_EndTime;

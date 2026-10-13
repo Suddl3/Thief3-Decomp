@@ -1,10 +1,12 @@
 // Game/Unsorted_10B34C30.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Core/Core.h"
 #include "Game/Class_10B0D530.h"
 #include "Game/Class_10E6DC88.h"
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10E79548.h"
+#include "Game/Class_10971570.h"
 
 struct Struct_10A89290
 {
@@ -39,15 +41,6 @@ public:
     Class_10B0D530 Unknown14;
     char Pad15[0xf];
     int Unknown24;
-};
-
-class Class_10971570
-{
-public:
-    int FUN_10971570(int Id, bool* Out);
-    int FUN_109766a0(int A, int B);
-
-    char Pad00[0x1];
 };
 
 class Class_10B34F60_Object

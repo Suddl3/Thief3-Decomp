@@ -9,6 +9,7 @@ class Class_10E6CC7C : public Class_10AAB5C0
 {
 public:
     virtual int Virtual6(int A, int B);
+    Class_10E6CC7C();
 };
 
 #endif // GAME_CLASS_10E6CC7C_H

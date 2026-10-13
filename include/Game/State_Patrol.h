@@ -39,6 +39,9 @@ public:
     void FUN_10bece10();
     void FUN_10beec50(int param);
     void FUN_10bef060();
+    bool FUN_10bcb600();
+    void FUN_10bed5b0();
+    State_Patrol* Init(int A, int B);
 
     int m_Id;
     Object_10BE9860* Unknown08;

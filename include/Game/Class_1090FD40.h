@@ -30,6 +30,9 @@ public:
             m_CapacityBytes = 0;
         }
     }
+    int AddUnique(const cString& Item);
+    Class_1090FD40();
+    int FUN_1090f160(const cString& Name);
 
     int m_Count;
     int m_CapacityBytes;

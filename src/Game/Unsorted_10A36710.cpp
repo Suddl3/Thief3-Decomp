@@ -1,12 +1,10 @@
 // Game/Unsorted_10A36710.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Core/Core.h"
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10A36450.h"
-
-class Class_10AF8250 : public FString
-{
-};
+#include "Game/Class_10AF8250.h"
 
 struct Struct_10AA3520
 {

@@ -38,6 +38,7 @@ public:
     virtual void Virtual30();
     virtual void Virtual31();
     virtual void FUN_109616a0(int p1);
+    void FUN_10961640();
 
     char Unknown04[0x2C];
     int Unknown30;

@@ -1,32 +1,14 @@
 // Game/MC_PlayAnimation_4.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/cString.h"
 #include "Game/Class_10E93B5C.h"
 #include "Game/Class_10C37960.h"
+#include "Game/MoveCommand.h"
 
 double GetTimeSeconds();
 
 bool FUN_10c37920(Class_10C37960* A, int B, int C, int D, int E, int F);
-
-class MoveCommand
-{
-public:
-    MoveCommand(int A, const Class_10E93B5C& B, int C);
-    virtual bool IsFinished();
-
-    ~MoveCommand();
-
-    MoveCommand* Init(int A, const Class_10E93B5C& B, int C);
-
-    int Unknown04;
-    Class_10E93B5C Unknown08;
-    int Unknown3C;
-    int Unknown40;
-    bool m_Active;
-    bool m_Finished;
-    char Pad46[0x2];
-    int Unknown48;
-};
 
 class MC_PlayAnimation : public MoveCommand
 {

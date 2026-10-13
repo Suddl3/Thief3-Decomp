@@ -1,32 +1,14 @@
 // Game/Unsorted_1090EED0_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_1090F080.h"
-
-// A string-keyed hash table: buckets of singly linked nodes.
-
-class cString
-{
-public:
-    cString() : Unknown00(0) {}
-    ~cString();
-
-    cString& operator=(const cString& Other);
-
-    char* Unknown00;
-};
+#include "Game/cString.h"
+#include "Game/Class_1090F080_Node.h"
 
 // Ion Storm's placement new and its delete (0x10905C10; the delete folded into ::operator delete).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
-
-// A bucket entry (12 bytes; Insert allocates it).
-struct Class_1090F080_Node
-{
-    cString Key;
-    int Value;
-    Class_1090F080_Node* Next;
-};
 
 // FUNCTION: 0x1090F1E0 ?Rehash@Class_1090F080@@QAEXH@Z
 void Class_1090F080::Rehash(int NewSize)

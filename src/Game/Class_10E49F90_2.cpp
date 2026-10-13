@@ -1,16 +1,12 @@
 // Game/Class_10E49F90_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/IDirect3DDevice8.h"
 #include "Game/Class_10937400.h"
 #include "Game/Class_10952640.h"
 #include "Game/Class_109526F0.h"
 #include "Game/Class_10955DB0.h"
-
-class cD3DStateCache : public Class_10937400
-{
-public:
-    void FUN_10937140(int A, float* B);
-};
+#include "Game/cD3DStateCache.h"
 
 extern cD3DStateCache* DAT_10f31be0;
 

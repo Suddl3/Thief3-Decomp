@@ -19,6 +19,8 @@ public:
     void UpdateLastKnownPosition();
     cString GetYellowAlertName();
     bool FUN_10be4980();
+    int FUN_10be45d0();
+    int FUN_10be45f0();
 
     Struct_10BE4800* Unknown04;
     char Unknown08[0x48];

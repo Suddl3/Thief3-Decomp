@@ -29,6 +29,8 @@ public:
     virtual void Virtual18(float A);
 
     void FUN_10b8a880(int A);
+    void FUN_10b8ac90(int A);
+    void FUN_10b8acc0(int A);
 };
 
 #endif // GAME_STRUCT_10D9E5E0_PARAM_H

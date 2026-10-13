@@ -7,6 +7,8 @@ class Class_10E97BC0
 {
 public:
     Class_10E97BC0();
+    void FUN_10c088b0();
+    void FUN_10c08960();
 
     void** Unknown00;        // +0x00: DAT_10e97bc0
     int Unknown04;

@@ -1,16 +1,11 @@
 // Game/cTriggerBoolPropertyParam.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10905A90_Member.h"
 #include "Game/cString.h"
+#include "Game/Class_10E6BF84.h"
 
 extern const char DAT_10e6c100[];
-
-// The primary base (0x10E6BF84): it shares the vptr at offset 0.
-class Class_10E6BF84
-{
-public:
-    virtual ~Class_10E6BF84();
-};
 
 class cTriggerBoolPropertyParam : public Class_10E6BF84
 {

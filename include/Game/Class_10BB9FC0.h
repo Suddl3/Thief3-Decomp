@@ -11,6 +11,7 @@ public:
     void FUN_10bb9e90();
     void FUN_10bb9fc0();
     void FUN_10bb9ff0();
+    bool FUN_10bb96f0();
 
     char Unknown00[8];
     Class_10C7D570* Unknown08;

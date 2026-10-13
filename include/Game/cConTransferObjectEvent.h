@@ -22,6 +22,7 @@ public:
     cConTransferObjectEvent();
 
     int Dump(FILE* File, int Param);
+    void Load(void* A, int Count, int Unused);
 
     int Unknown0C;
     int Unknown10;

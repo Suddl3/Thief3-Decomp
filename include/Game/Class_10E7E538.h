@@ -29,6 +29,7 @@ public:
     virtual Static_10B18DC0 FUN_10b3ad40();
     virtual void Virtual13();
     virtual float GetLocationZ(Class_10B21820* Obj);
+    Class_10E7E538* Initialize();
 
     int m_State;
     char Pad14[0x18];

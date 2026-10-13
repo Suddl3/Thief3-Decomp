@@ -11,6 +11,7 @@ public:
     virtual void Virtual0();
 
     int GetLinkedObject();
+    void FUN_10b4fbf0(int A, int B, float C, float D, int E, int F, float G);
 
     char Pad01[0x3];
     char Unknown04[4];

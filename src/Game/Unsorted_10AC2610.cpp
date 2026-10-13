@@ -7,6 +7,7 @@
 #include "Game/cIntArray.h"
 #include "Game/Class_10E6F61C.h"
 #include "Engine/EngineClasses.h"
+#include "Game/Class_1098E330.h"
 
 class UClient
 {
@@ -40,12 +41,6 @@ public:
     virtual void Virtual13();
     virtual void Virtual14();
     virtual float FUN_10ac2cc0();
-};
-
-class Class_1098E330
-{
-public:
-    void FUN_1098e330(int Id, int* Out);
 };
 
 struct Struct_10AA3520

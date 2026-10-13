@@ -6,6 +6,7 @@
 #include "Game/Struct_10B9BCA0.h"
 #include "Game/cStateStack.h"
 #include "Game/Class_10BFC190.h"
+#include "Game/Class_10B9CAC0.h"
 
 class AAIPawn;
 
@@ -14,25 +15,6 @@ Class_10B9BCA0* GetAIPawnController(AAIPawn* Pawn);
 class Class_10BB8300;
 
 class Class_10BC9D40;
-
-class Class_10B9CAC0 : public cStateStack
-{
-public:
-    bool FUN_10b9d0c0(int A);
-    bool FUN_10b9d0e0(int A);
-    Class_10BC9D40* GetCurrent(int A);
-    Class_10BC9D40* GetCurrent();
-    int FUN_10b9d040(int A, int B);
-    void NotifyAllyKilled(int A);
-    void* FUN_10aa9da0();
-
-    char Pad01[0xb];
-    char Pad47[0x1];
-    Class_10BB8300* Unknown0C;
-    int m_Count;
-    char Unknown14[4];
-    Class_10BC9D40** m_Stack;
-};
 
 class Class_10bb8960_Result
 {

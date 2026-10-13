@@ -36,6 +36,7 @@ public:
     void FUN_10a84e90();
     void FUN_10a84e60();
     void PushFloats();
+    void FUN_10a84f60(int State);
 
     int Unknown04;
     int Unknown08;

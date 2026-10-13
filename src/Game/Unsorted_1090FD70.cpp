@@ -1,7 +1,9 @@
 // Game/Unsorted_1090FD70.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/cString.h"
 #include "Game/Class_1090FE50.h"
+#include "Game/Class_10AA9DA0.h"
 
 typedef void* HANDLE;
 
@@ -19,17 +21,6 @@ enum
 };
 
 void FUN_10908440(char* Buffer, int Size, const char* Name);
-
-class Class_10AA9DA0
-{
-public:
-    void* FUN_10aa9da0();
-    void FUN_10914470(cString& Name, bool& Flag);
-    void RemoveByName(cString& Name);
-
-    char Unknown00[0x10];
-    void* Unknown10;
-};
 
 // FUNCTION: 0x1090FE50 ?SaveToFile@Class_1090FE50@@QAE_NPAVClass_10AA9DA0@@AAVcString@@1@Z
 bool Class_1090FE50::SaveToFile(Class_10AA9DA0* A, cString& B, cString& C)

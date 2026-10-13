@@ -10,6 +10,7 @@ public:
 
     void FUN_10a6da70();
     void FUN_10a6db10(int A, int B, int C);
+    Class_10E6B978();
 };
 
 #endif // GAME_CLASS_10E6B978_H

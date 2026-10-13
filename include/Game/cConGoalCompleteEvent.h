@@ -18,6 +18,7 @@ public:
     virtual void WriteFields(void* A, int B, int C);
     virtual void Virtual4();
     virtual int FUN_10aab200(Class_10AAB200_Param* Writer);
+    cConGoalCompleteEvent();
 };
 
 #endif // GAME_CCONGOALCOMPLETEEVENT_H

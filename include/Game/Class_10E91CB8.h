@@ -10,6 +10,7 @@ class Class_10E91CB8 : public Class_10E90D70
 {
 public:
     Class_10E91CB8(int A, int B);
+    void FUN_10bce210();
 
     Struct_10BCB770_Value Unknown40;
 };

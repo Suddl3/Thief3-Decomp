@@ -1,24 +1,13 @@
 // Game/Class_10E92230.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10BB89D0.h"
 #include "Game/Class_10BBB410.h"
 #include "Game/Class_10BFF460.h"
 #include "Game/Class_1090A780.h"
 #include "Game/cString.h"
 #include "Game/cAISpeech.h"
-
-class Class_10E97B00
-{
-public:
-    virtual void Serialize(void* A);
-
-    Class_10E97B00(const char* Name);
-    Class_10E97B00(const Class_10E97B00& Other);
-    Class_10E97B00(const Class_1090A780& Name);
-    Class_10E97B00& operator=(const Class_10E97B00& Other);
-
-    cString m_Name;
-};
+#include "Game/Class_10E97B00.h"
 
 class Class_10bf7f90
 {

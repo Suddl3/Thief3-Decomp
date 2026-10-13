@@ -1,11 +1,13 @@
 // Game/Unsorted_10B81D80.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10B822C0.h"
 #include "Game/Struct_10B859B0_0C.h"
 #include "Game/Struct_10B859B0_Vector.h"
 #include "Game/Class_10B859B0.h"
 #include "Game/Struct_10B859B0_Rotation.h"
 #include "Game/Struct_10B859B0_Transform.h"
+#include "Game/Allocator_10FFA700.h"
 
 typedef unsigned char BYTE;
 
@@ -14,17 +16,6 @@ class Class_10B822C0_Member
 public:
     char Unknown00[0x28];
     unsigned int Unknown28;
-};
-
-class Allocator_10FFA700
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5(void* A, int B, int C);
 };
 
 extern Allocator_10FFA700* DAT_10ffa700;
@@ -54,7 +45,7 @@ void Class_10B83820::FreeBuffer()
     if (!Unknown08Flag)
     {
         Allocator_10FFA700* Allocator = DAT_10ffa700;
-        Allocator->Virtual5(m_Buffer, m_Capacity * 16, 0x11);
+        Allocator->Free(m_Buffer, m_Capacity * 16, 0x11);
     }
 }
 

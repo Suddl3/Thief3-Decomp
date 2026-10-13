@@ -1,22 +1,14 @@
 // Game/Unsorted_10A3C2C0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10A3C2E0.h"
 #include "Game/Class_10A3C640_Field18.h"
 #include "Game/Object_10A18FC0.h"
 #include "Game/Class_10A3C640.h"
+#include "Game/cString.h"
+#include "Game/Class_10A3C640_Node.h"
 
 Object_10A18FC0* FUN_10a18fc0();
-
-// Ion Storm's string (0x109081E0): a char pointer, null when default constructed.
-class cString
-{
-public:
-    cString() : Unknown00(0) {}
-    ~cString();
-    cString& operator=(const cString& Other);
-
-    char* Unknown00;
-};
 
 // Ion Storm's placement new and its delete (0x10905C10; the delete folded into ::operator delete).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
@@ -24,15 +16,6 @@ void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
 unsigned int HashBytes(const void* Data, int Length);
-
-// A chained hash table's entry: 12 bytes, allocated per insert.
-class Class_10A3C640_Node
-{
-public:
-    cString Key;
-    int Value;
-    Class_10A3C640_Node* Next;
-};
 
 // FUNCTION: 0x10A3C2E0 ?Reset@Class_10A3C2E0@@QAEXXZ
 void Class_10A3C2E0::Reset()

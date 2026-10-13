@@ -9,6 +9,7 @@ class Class_1096BD50
 {
 public:
     Class_1096BD50* FUN_1096bd50(UClass* InClass);
+    Class_1096BD50(UClass* InClass);
 };
 
 #endif // GAME_CLASS_1096BD50_H

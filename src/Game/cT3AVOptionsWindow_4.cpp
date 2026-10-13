@@ -1,33 +1,7 @@
 // Game/cT3AVOptionsWindow_4.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-// The class map's names.
-// Game/Options.h copied whole, with ApplyVideo (missing from the header) added.
-class Options
-{
-public:
-    int Get(int Index);
-    void GetResolution(int* Width, int* Height);
-    void FUN_10ab5c60(int Index);
-    void FUN_10ab6420();
-    void Save();
-    void FUN_10ab66e0();
-    int SetDefaults(int Index);
-    unsigned int Load();
-    void Set(int Name, int Value);
-    void ApplyVideo();
-
-          // +0x04, indexed by the names table; [11] is the resolution
-
-    static int ResolutionWidths[];
-    static int ResolutionHeights[];
-
-    int Unknown00;
-    int Values[21];
-    char Unknown58;
-    char Unknown59;
-    char Pad5A[0x2];
-};
+#include "Game/Options.h"
 
 Options* GetOptions();
 

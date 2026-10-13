@@ -86,6 +86,7 @@ public:
 
     void FUN_10bce7b0(Object_10BCE8D0* A);
     Class_10E92D60* Initialize(int A, int B, bool C, int D, void* E, int F);
+    Class_10E92D60(int A, int B, bool C, int D, void* E, int F);
 
     bool Unknown54;
     char Pad55[0x3];

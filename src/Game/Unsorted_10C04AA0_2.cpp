@@ -1,16 +1,8 @@
 // Game/Unsorted_10C04AA0_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10C04AA0.h"
-
-class FArchive
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1(void* A, int B);
-
-    char Unknown04[0x08];
-    int ArVer;
-};
+#include "Game/FArchive.h"
 
 FArchive& FUN_10b052a0(FArchive& Ar, void* Value);
 
@@ -25,7 +17,7 @@ struct Struct_10C04AA0
 void Class_10C04AA0::Serialize(FArchive& Ar)
 {
     int Count = m_Count;
-    Ar.Virtual1(&Count, 4);
+    Ar.Serialize(&Count, 4);
     for (int i = 0; i < Count; i++)
     {
         Struct_10C04AA0 Item = m_Items[i];
@@ -38,7 +30,7 @@ void Class_10C04AA0::Serialize(FArchive& Ar)
     if (Unknown10)
         Value = *Unknown10;
     FUN_10b052a0(Ar, &Value);
-    if (Ar.ArVer >= 2)
-        Ar.Virtual1(&Unknown04, 4);
-    Ar.Virtual1(&Unknown0C, 1);
+    if (Ar.Unknown0C >= 2)
+        Ar.Serialize(&Unknown04, 4);
+    Ar.Serialize(&Unknown0C, 1);
 }

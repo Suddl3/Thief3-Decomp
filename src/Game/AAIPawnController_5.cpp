@@ -4,22 +4,7 @@
 #include "Engine/EngineClasses.h"
 #include "Game/Class_10B9C9A0.h"
 #include "AICore/AICoreClasses.h"
-
-class FArchive
-{
-public:
-    virtual ~FArchive();
-    virtual void Serialize(void* V, int Length);
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6(void* Value);
-    char Unknown04[0x08];
-    int ArVer;
-    int Unknown10;
-    int ArIsLoading;
-};
+#include "Game/FArchive.h"
 
 class Class_10B9BE00_Unknown00
 {
@@ -70,7 +55,7 @@ public:
 void AAIPawnController::Serialize(FArchive& Ar)
 {
     AActor::Serialize(Ar);
-    if (Ar.ArVer >= 0x20)
+    if (Ar.Unknown0C >= 0x20)
     {
         bool Flag = true;
         Ar.Serialize(&Flag, 1);
@@ -79,11 +64,11 @@ void AAIPawnController::Serialize(FArchive& Ar)
             Class_10B9BE00_Unknown118* P = (Class_10B9BE00_Unknown118*)pad0.Unknown00;
             if (P)
             {
-                if (Pawn && Ar.ArIsLoading)
+                if (Pawn && Ar.Unknown14)
                 {
                     Virtual95(Pawn, 1);
                 }
-                if (Ar.ArVer >= 0x3f && P->Unknown10)
+                if (Ar.Unknown0C >= 0x3f && P->Unknown10)
                 {
                     P->Unknown10->Virtual0(Ar);
                 }

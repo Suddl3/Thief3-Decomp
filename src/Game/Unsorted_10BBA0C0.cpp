@@ -1,5 +1,6 @@
 // Game/Unsorted_10BBA0C0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10C7D570.h"
 #include "Game/Class_10FF667C.h"
 #include "Game/Class_10BAA6F0.h"
@@ -7,6 +8,7 @@
 #include "Game/Class_10B9BDA0_Member.h"
 #include "Game/Class_10BAA6B0_Param.h"
 #include "Game/Class_10BBA0C0.h"
+#include "Game/Class_10BB9FC0.h"
 
 // Class_10BAC050 copied whole from include/Game/Class_10BAC050.h, with FUN_10bac070 as its call site shows it.
 class Class_10BAC050 : public Class_10C7D570
@@ -15,21 +17,6 @@ public:
     int FUN_10baac90(int A);
     int FUN_10bac050(int A);
     bool FUN_10bac070(int A);
-};
-
-// Class_10BB9FC0 copied whole from include/Game/Class_10BB9FC0.h, with FUN_10bb96f0 added.
-class Class_10BB9FC0
-{
-public:
-    void FUN_10bb9e90();
-    void FUN_10bb9fc0();
-    void FUN_10bb9ff0();
-    bool FUN_10bb96f0();
-
-    char Unknown00[8];
-    Class_10C7D570* Unknown08;
-    char Unknown0C[0x278];
-    int Unknown284;
 };
 
 // The object FUN_10baa6f0 returns, read as a float at +0x2c8 and an int at +0x2dc.

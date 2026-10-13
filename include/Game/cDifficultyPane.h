@@ -147,6 +147,7 @@ public:
     void FUN_10b6bb80(int A, int B, int C, int D, int E, int F);
     int GetSelectedValue();
     void ApplySelection();
+    void FUN_10b77ee0(int A);
 
     void* Field00;
     char Pad04[0x15c];

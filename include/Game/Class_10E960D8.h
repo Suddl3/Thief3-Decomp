@@ -109,6 +109,9 @@ public:
     int FUN_10be42a0();
     void FUN_10be8f70();
     void FUN_10be8ee0();
+    bool FUN_10be43b0();
+    Class_10E97B00 FUN_10be5d10();
+    void FUN_10be7ae0();
 
     Class_10BB8140* Unknown04;
     char Pad08[0x60];

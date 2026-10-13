@@ -51,6 +51,7 @@ public:
     virtual bool Virtual54();
 
     void SetNameByIndex(int A);
+    Class_10E684A8();
 
     char Unknown04[0x18];
     FVector m_Location;

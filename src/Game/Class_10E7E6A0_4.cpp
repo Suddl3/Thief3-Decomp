@@ -1,18 +1,14 @@
 // Game/Class_10E7E6A0_4.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
+#include "Game/Class_10B39610.h"
+
 class Class_10AA82D0
 {
 public:
     virtual void Virtual0();
 
     int GetLinkedObject();
-};
-
-class Class_10B39610
-{
-public:
-    void FUN_10b39610(float A);
 };
 
 float __stdcall GetMoveSpeedMultiplier(int A);

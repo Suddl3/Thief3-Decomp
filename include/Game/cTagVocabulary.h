@@ -20,6 +20,7 @@ public:
     virtual void Virtual7();
     virtual void Virtual8();
     virtual void Apply(Struct_10C62D90** P, int B);
+    const std::string& FUN_10c62dc0();
 
     int m_Index;
     int m_Slots[6];

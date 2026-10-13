@@ -11,6 +11,7 @@ class cObjectTable
 public:
     virtual void Virtual0();
     virtual void SerializeRef(Object_10BE58C0* Ar, Class_10AAB5C0*& Obj);
+    void FUN_10ba04c0();
 
     char Unknown04[0x10];
     Class_10AAB5C0** m_Objects;

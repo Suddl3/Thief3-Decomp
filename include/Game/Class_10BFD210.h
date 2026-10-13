@@ -3,6 +3,8 @@
 #ifndef GAME_CLASS_10BFD210_H
 #define GAME_CLASS_10BFD210_H
 
+class Class_10C1B0F0;
+
 class Class_10BFD210
 {
 public:
@@ -10,6 +12,8 @@ public:
     void Reset();
     void FUN_10bfc680(float Value);
     void FUN_10bfd4c0(float Value);
+    void FUN_10bfd0a0(Class_10C1B0F0* A, float B);
+    void FUN_10bff150(int A, float B, int C);
 
     char Pad00[0x1];
 };

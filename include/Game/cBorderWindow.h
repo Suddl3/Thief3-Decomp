@@ -51,6 +51,7 @@ public:
     virtual void AddToArray(cIntArray* Array, int B);
 
     cBorderWindow();
+    void FUN_10a66190();
 
     int Unknown118;
     bool Unknown11C;

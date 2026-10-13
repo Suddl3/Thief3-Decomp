@@ -5,18 +5,8 @@
 #include "Game/Class_10E6D1D8.h"
 #include "Game/Struct_10AA3520.h"
 #include "Engine/EngineClasses.h"
-
-class Class_1098E330 : public AActor
-{
-public:
-    int FUN_1098e330(int Id, int* Out);
-};
-
-class Class_1098E3D0 : public Class_1098E330
-{
-public:
-    void FUN_1098e3d0(int Id, void* Out);
-};
+#include "Game/Class_1098E330.h"
+#include "Game/Class_1098E3D0.h"
 
 extern Struct_10AA3520* DAT_10f35dec;
 

@@ -23,6 +23,9 @@ public:
     }
     Class_10C56E40() : Unknown00(0) {}
     Class_10C56E40(Class_10C5A160_Y*& A);
+    void FUN_10b18ac0();
+    void FUN_10b18b60(int A);
+    Class_10C56E40& operator=(const Class_10C56E40& Other);
 
     Class_10C56E40_Field00* Unknown00;
 };

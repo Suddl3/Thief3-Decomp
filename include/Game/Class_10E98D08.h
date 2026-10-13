@@ -3,12 +3,16 @@
 #ifndef GAME_CLASS_10E98D08_H
 #define GAME_CLASS_10E98D08_H
 
+class FArchive;
+
 class Class_10E98D08
 {
 public:
     ~Class_10E98D08() {}
 
     virtual int Virtual0() = 0;
+    Class_10E98D08(int A, int B, int C, int D, int E, float F);
+    void FUN_10c1b1a0(FArchive& Ar);
 };
 
 #endif // GAME_CLASS_10E98D08_H

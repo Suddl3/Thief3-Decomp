@@ -9,85 +9,8 @@
 #include "Game/Class_10AAB5C0.h"
 #include "Game/Class_10AAF570.h"
 #include "Game/Class_10905A90_Member.h"
-
-// Copied whole from include/Game/Class_10C08940.h with FUN_10ad18b0 added.
-class Class_10C08940
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual int Virtual3(int A, int B);
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual int Virtual8(int A);
-    virtual void Virtual9();
-    virtual void Virtual10();
-    virtual void Virtual11();
-    virtual void Virtual12();
-    virtual void Virtual13();
-    virtual void Virtual14();
-    virtual void Virtual15();
-    virtual void Virtual16();
-    virtual void Virtual17();
-    virtual void Virtual18();
-    virtual void Virtual19();
-    virtual void Virtual20();
-    virtual void Virtual21();
-    virtual void Virtual22();
-    virtual void Virtual23();
-    virtual int Virtual24();
-
-    int FUN_10c08940();
-    int FUN_10ad18b0();
-
-    char Pad04[0x4];
-    int Unknown08;
-    char Unknown0C[4];
-    int Unknown10;
-    char Unknown14[0xC];
-    bool Unknown20;
-    char Pad21[0xb];
-    FVector Unknown2C;
-};
-
-// Copied whole from include/Game/Class_10D9FEE0.h with FUN_10da0ab0 added.
-class Class_10D9FEE0 : public Class_10AA82D0
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8();
-    virtual void Virtual10();
-    virtual void Virtual11();
-    virtual void FUN_10da03a0(int A);
-    virtual void Virtual12();
-    virtual void Virtual13(int A);
-    virtual void Virtual15();
-    virtual void Virtual16();
-    virtual void FUN_10d9fdb0();
-
-    void FUN_10d9fee0(int A, int B);
-    void FUN_10da01b0(const FVector& A);
-    void FUN_10da0710(const FVector& A);
-    FVector FUN_10da00f0();
-    bool FUN_10d9feb0();
-    void FUN_10da07c0(const FVector& V);
-    void FUN_10da0000(bool A);
-    unsigned FUN_10da0400();
-    void FUN_10da0ab0(const FCoords& A);
-
-    char Pad04[0x4];
-    int Unknown08;
-};
+#include "Game/Class_10C08940.h"
+#include "Game/Class_10D9FEE0.h"
 
 // The result of FUN_10977fa0 that the function calls virtuals on and reads fields of.
 class Class_10A7AAC0_Result

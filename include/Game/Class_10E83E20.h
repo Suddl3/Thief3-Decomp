@@ -118,6 +118,8 @@ public:
 
     void FUN_10b613c0();
     void FUN_10a58950(int A);
+    Class_10E83E20();
+    int GetAdjustedValueAt(int Index);
 
     char Pad118[0xb8];
     float m_Countdown;

@@ -5,10 +5,14 @@
 
 #include "Game/Class_10B78780.h"
 
+class cString;
+
 class cMissionStatsPane : public Class_10B78780
 {
 public:
     cMissionStatsPane* FUN_10b67180();
+    void FUN_10b671a0();
+    cString GetMissionStatsPaneFile();
 };
 
 #endif // GAME_CMISSIONSTATSPANE_H

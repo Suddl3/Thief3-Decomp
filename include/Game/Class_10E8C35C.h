@@ -11,6 +11,7 @@ class Class_10E8C35C : public Class_10978090, public Class_10E8C35C_Secondary
 public:
     virtual void Virtual1();
     virtual void FUN_10c14320();
+    Class_10E8C35C();
 
     int Unknown10;
     int Unknown14;

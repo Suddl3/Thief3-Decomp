@@ -1,26 +1,11 @@
 // Game/cFMVWindow.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/cBinkMovie.h"
 #include "Game/Class_10905A90_Member.h"
+#include "Game/cString.h"
 
 Class_10905A90_Member* GetAllocator();
-
-// Ion Storm's string (0x109081E0): a char pointer to a block allocated 4 bytes before it.
-class cString
-{
-public:
-    ~cString()
-    {
-        if (Unknown00)
-        {
-            char* Block = Unknown00 - 4;
-            GetAllocator()->Virtual5(Block);
-            Unknown00 = 0;
-        }
-    }
-
-    char* Unknown00;
-};
 
 class Class_10E682E0;
 

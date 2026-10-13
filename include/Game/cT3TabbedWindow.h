@@ -14,6 +14,8 @@ public:
     virtual ~cT3TabbedWindow();
 
     cT3TabbedWindow();
+    void FUN_10b59730(int A);
+    void FUN_10b79860(int A);
 
     int Unknown154;
     int Unknown158;

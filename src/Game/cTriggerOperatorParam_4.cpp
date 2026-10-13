@@ -1,22 +1,9 @@
 // Game/cTriggerOperatorParam_4.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/cTriggerOperatorParam.h"
-
-class Class_1090A780
-{
-public:
-    Class_1090A780(const Class_1090A780& Other);
-    ~Class_1090A780();
-
-    char* Unknown00;
-};
-
-class cString : public Class_1090A780
-{
-public:
-    cString(const char* In);
-    cString(const Class_1090A780& Other) : Class_1090A780(Other) {}
-};
+#include "Game/Class_1090A780.h"
+#include "Game/cString.h"
 
 extern Class_1090A780 DAT_10f3a1f8[];
 

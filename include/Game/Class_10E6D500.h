@@ -12,6 +12,7 @@ public:
     virtual void Virtual1();
     virtual void Virtual2();
     virtual std::string GetSuiteLabel();
+    void FUN_10c93f30();
 
     char Unknown04[0x10];
     std::string m_Name;

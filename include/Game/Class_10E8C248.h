@@ -10,6 +10,7 @@ class Class_10E8C248 : public Class_10E6DC88
 public:
     virtual ~Class_10E8C248();
     virtual int Virtual0(int A, int B, int C, int* D);
+    Class_10E8C248();
 };
 
 #endif // GAME_CLASS_10E8C248_H

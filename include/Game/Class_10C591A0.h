@@ -7,6 +7,7 @@ class Class_10C591A0
 {
 public:
     bool Remove(int* A);
+    void Rehash(int Size);
 };
 
 #endif // GAME_CLASS_10C591A0_H

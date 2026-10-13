@@ -17,6 +17,7 @@ public:
     bool FUN_10bbdc30(int A);
     bool FUN_10bbdcc0(int A);
     bool FUN_10bbd840(int A);
+    void FUN_10bbdf10(int A, int B);
 
     char Unknown00[4];
     Class_1098E330* Unknown04;

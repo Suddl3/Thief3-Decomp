@@ -59,6 +59,11 @@ public:
     void AddUnique(int Item);
     void Remove(int Item);
     void FUN_10c08690(Struct_10C08690* Item);
+    void Append(int Item);
+    void AppendUnique(int Item);
+    void FUN_10c00a60(int A);
+    void RemoveFirst();
+    void SetMember(int Item, char Flag);
 
     union
     {

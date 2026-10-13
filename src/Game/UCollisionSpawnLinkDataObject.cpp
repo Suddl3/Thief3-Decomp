@@ -3,12 +3,7 @@
 
 #include "Core/Core.h"
 #include "Engine/EngineClasses.h"
-
-class Class_10E55E78
-{
-public:
-    virtual void Virtual0();
-};
+#include "Game/Class_10E55E78.h"
 
 // FUNCTION: 0x109A0390 ??0UCollisionSpawnLinkDataObject@@QAE@XZ
 UCollisionSpawnLinkDataObject::UCollisionSpawnLinkDataObject()

@@ -16,6 +16,8 @@ public:
     float FUN_10dad2d0();
     float FUN_10dad2e0();
     void FUN_10dacd80(float A, int B);
+    float FUN_10dacdb0();
+    float FUN_10dacdd0();
 
     char Pad00[0x4];
     int Unknown04;

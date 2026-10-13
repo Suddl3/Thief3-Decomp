@@ -10,6 +10,8 @@ class Class_10BB8300
 public:
     bool FUN_10bb8c00();
     void ClearEntry();
+    bool IsExpired();
+    void RollInterval();
 
     char Unknown00[8];
     Class_10C7D570* m_Owner;

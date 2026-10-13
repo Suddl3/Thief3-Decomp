@@ -15,6 +15,7 @@ public:
     virtual void Virtual6();
     virtual void Virtual7();
     virtual int SetStreamSource(int A);
+    cD3DDynamicVertexBuffer(int Owner, int A, int B);
 
     char m_Pool[0x10];
     int m_Buffer;

@@ -42,6 +42,7 @@ public:
     virtual void Virtual27();
     virtual void Virtual28();
     virtual void FUN_10a13480(int Param);
+    void ResolvePending();
 
     int Unknown04;
     int m_ChildCount;

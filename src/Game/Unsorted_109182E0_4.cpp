@@ -1,5 +1,6 @@
 // Game/Unsorted_109182E0_4.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include <stddef.h>
 #include "Game/Class_1092D960.h"
 #include "Game/Class_10918E10_Element.h"
@@ -7,6 +8,7 @@
 #include "Game/Class_10F2C744.h"
 #include "Game/IDirect3DSurface8.h"
 #include "Game/Struct_10918E10.h"
+#include "Game/Class_109242E0.h"
 
 class Class_10924E80
 {
@@ -16,12 +18,6 @@ public:
 };
 
 extern Class_10924E80* DAT_10f2c734;
-
-class Class_109242E0
-{
-public:
-    void FUN_10924270();
-};
 
 extern Class_109242E0* DAT_10f319a0;
 

@@ -23,6 +23,7 @@ public:
     virtual void Virtual10();
     virtual void Virtual11();
     virtual void CopyFrom(cTriggerSoundSchemaParam* Other);
+    cTriggerSoundSchemaParam();
 
     Object_10A8AC40* m_Schema;
     int Unknown08;

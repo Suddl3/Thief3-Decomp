@@ -8,6 +8,9 @@
 
 class FArchive;
 
+class Class_10C7D570;
+struct Struct_10BA91E0;
+
 class Class_10E98E70 : public Class_10C1B1A0
 {
 public:
@@ -28,6 +31,7 @@ public:
     virtual void Virtual14();
     virtual bool FUN_10c1b460();
     virtual bool FUN_10c1ab90();
+    Class_10E98E70(int A, const Struct_10BA91E0& B, Class_10C7D570* C, int D, int F, float G, float H, float I, bool J, int K);
 
     Struct_10C1ABD0 Unknown48;
     int Unknown54;

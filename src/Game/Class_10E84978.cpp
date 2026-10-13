@@ -4,38 +4,9 @@
 #include "Core/Core.h"
 #include "Game/Class_10AF7F80.h"
 #include "Game/cIntArray.h"
+#include "Game/cString.h"
 
 extern const char DAT_10e47660[];
-
-// Game/cString.h copied without its base, with the destructor's own body: the code computes Unknown00 - 4 before GetAllocator().
-// The base's default constructor clears Unknown00, so this copy's default constructor does too.
-class cString
-{
-public:
-    cString() { Unknown00 = 0; }
-    cString(const char* In);
-    cString(const cString& Other);
-    ~cString()
-    {
-        if (Unknown00)
-        {
-            char* Block = Unknown00 - 4;
-            GetAllocator()->Virtual5(Block);
-        }
-    }
-
-    void FUN_10907870(int Length, int Flag);
-    cString& operator=(const cString& Other);
-    cString& FUN_1090a590(const char* In);
-    const char* operator*() const { return Unknown00 ? Unknown00 : DAT_10e47660; }
-    bool IsEmpty() const
-    {
-        int Length = Unknown00 == 0 ? 0 : ((int*)Unknown00)[-1];
-        return Length == 0;
-    }
-
-    char* Unknown00;
-};
 
 // Game/Config.h copied whole, with GetString added.
 class Config

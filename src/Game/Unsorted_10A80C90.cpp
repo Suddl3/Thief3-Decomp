@@ -1,7 +1,9 @@
 // Game/Unsorted_10A80C90.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10A80C90.h"
 #include "Game/TimeManager.h"
+#include "Game/cString.h"
 
 class cConversation
 {
@@ -37,17 +39,6 @@ public:
 };
 
 extern const char DAT_10e6c100[];
-
-class cString
-{
-public:
-    cString() : Unknown00(0) {}
-    ~cString();
-
-    cString& FUN_1090a590(const char* In);
-
-    char* Unknown00;
-};
 
 class Class_10A810F0
 {

@@ -1,23 +1,10 @@
 // Game/Unsorted_10C084A0_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/cIntArray.h"
 #include "Game/Class_10C084A0.h"
 #include "Game/Class_10C084A0_Unknown18.h"
-
-class FArchive
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1(void* A, int B);
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6(void* Value);
-
-    char Unknown04[16];
-    int Unknown14;
-};
+#include "Game/FArchive.h"
 
 class Class_10FF667C
 {
@@ -32,7 +19,7 @@ extern Class_10FF667C* DAT_10ff667c;
 void Class_10C084A0::Serialize(FArchive& Ar)
 {
     int Num = Count;
-    Ar.Virtual1(&Num, 4);
+    Ar.Serialize(&Num, 4);
     if (Ar.Unknown14)
         SetCount(Num);
     for (int i = 0; i < Count; i++)

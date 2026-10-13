@@ -14,6 +14,7 @@ public:
     void FUN_10a6e1c0(UObject* A, int B, int C);
     void FUN_10a6e370(UObject* A, int B, int C, int Event);
     void FUN_10a6e490(UObject* A, int B, int C, int Event, int Id);
+    Class_10E6B9F8* FUN_10a6e270();
 };
 
 #endif // GAME_CLASS_10E6B9F8_H

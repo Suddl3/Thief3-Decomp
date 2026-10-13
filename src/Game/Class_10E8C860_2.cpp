@@ -3,23 +3,12 @@
 
 #include "Game/Class_10AA82D0.h"
 #include "Game/Class_10C3D3B0.h"
+#include "Game/Class_10BFD210.h"
 
 struct Struct_10AA3520
 {
     char Unknown00[8];
     int Unknown08;
-};
-
-class Class_10BFD210
-{
-public:
-    float FUN_10bfc3a0();
-    void Reset();
-    void FUN_10bfc680(float Value);
-    void FUN_10bfd4c0(float Value);
-    void FUN_10bff150(int A, float B, int C);
-
-    char Pad00[0x1];
 };
 
 extern Struct_10AA3520* DAT_10f35dec;

@@ -15,6 +15,7 @@ public:
     Class_10E97B00(const char* Name);
     Class_10E97B00(const Class_10E97B00& Other);
     Class_10E97B00(const Class_1090A780& Name);
+    Class_10E97B00& operator=(const Class_10E97B00& Other);
 
     cString m_Name;
 };

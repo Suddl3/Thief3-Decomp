@@ -11,6 +11,7 @@ class Class_10E99020 : public Class_10C1B1A0
 {
 public:
     virtual void Serialize(FArchive& Ar);
+    Class_10E99020* Initialize(int A, int B, int C, int D, float E, float F);
 };
 
 #endif // GAME_CLASS_10E99020_H

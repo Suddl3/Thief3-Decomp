@@ -3,6 +3,8 @@
 
 #include "Core/Core.h"
 #include "Game/Class_109B28E0.h"
+#include "Game/FCoords.h"
+#include "Game/Struct_10A2DA00.h"
 
 extern const char DAT_10e47660[];
 
@@ -26,39 +28,6 @@ struct Struct_10B21820_Object : public Class_109B28E0
     char Pad4B0[0x70];
     int Unknown520;
     char Pad524[0x4];
-};
-
-class FCoords
-{
-public:
-    FCoords(const FVector& InOrigin) : Origin(InOrigin), XAxis(1, 0, 0), YAxis(0, 1, 0), ZAxis(0, 0, 1) {}
-    FCoords() {}
-
-    FRotator OrthoRotation() const;
-    FCoords& FUN_10961af0(const FRotator& Rot);
-    FCoords* FUN_10961e00(void* A);
-
-    FVector Origin;
-    FVector XAxis;
-    FVector YAxis;
-    FVector ZAxis;
-};
-
-struct Struct_10A2DA00
-{
-    Class_10B21820* Unknown00;
-    char Unknown04[4];
-    int Unknown08;
-    char Unknown0C[0xC];
-    Struct_10B21820_Object* Unknown18;
-    char Unknown1C[4];
-    FCoords Unknown20;
-    char Unknown50[0x2A];
-    bool Unknown7A;
-    char Unknown7B;
-    bool Unknown7C;
-    bool Unknown7D;
-    char Unknown7E[0x32];
 };
 
 class Class_109700E0

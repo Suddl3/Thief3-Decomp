@@ -15,6 +15,7 @@ public:
 
     void FUN_10b70d40(int p1, int p2);
     void FUN_10b70db0(int A);
+    void FUN_10b700a0(void* A, void* B, int C);
 
     Class_10B6FDA0 Unknown04[500];
     Class_10B6FC70 Unknown101D4[10];

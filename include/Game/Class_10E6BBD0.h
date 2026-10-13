@@ -3,6 +3,8 @@
 #ifndef GAME_CLASS_10E6BBD0_H
 #define GAME_CLASS_10E6BBD0_H
 
+class Class_10AF7F80;
+
 class Class_10E6BBD0
 {
 public:
@@ -14,6 +16,7 @@ public:
     void FUN_10a75680(int A, int B, int C);
     void FUN_10a74df0(int A);
     void FUN_10a74ec0(int A);
+    void FUN_10a755b0(Class_10AF7F80* A, int B);
 };
 
 #endif // GAME_CLASS_10E6BBD0_H

@@ -28,6 +28,17 @@ public:
     void FUN_10b9e660();
     void FUN_10b9e690(int A);
     void FUN_10b9eee0();
+    void FUN_10b9cad0(Class_10B9E410_Item* A, int B, int C);
+    int FUN_10b9cc00(int A);
+    void FUN_10b9d2b0();
+    void FUN_10b9df70();
+    void FUN_10b9e0f0(int A, int B, int C, int D);
+    void FUN_10b9e330(int A, int B);
+    void FUN_10b9e550(int A);
+    void FUN_10b9ed70(int Index);
+    void MoveToPathPoint(int A);
+    void PopToBase(int A, int B, int C);
+    void PopToBaseEx(int A, int B);
 
     char Unknown00[0xC];
     int Unknown0C;

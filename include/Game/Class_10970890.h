@@ -11,6 +11,7 @@ class Class_10970890
 public:
     void FUN_109724c0(Class_1098E330* A, int B);
     Object_10970890* FUN_10970890();
+    void FUN_10971750(Class_1098E330* A, int B);
 
     char Unknown00[0x5C];
     int Unknown5C;

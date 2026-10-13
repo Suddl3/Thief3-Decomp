@@ -67,6 +67,7 @@ public:
     void FUN_10be1a70();
     bool FUN_10be2380(void* Object, int A);
     void FUN_10be2a70();
+    Class_10E95780(int A, int B);
 
     Class_10E95780_Unknown04* Unknown04;
     char Pad08[0x38];

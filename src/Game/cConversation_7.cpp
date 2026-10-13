@@ -1,39 +1,12 @@
 // Game/cConversation_7.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/cString.h"
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10A83AC0_Unknown0C.h"
+#include "Game/Class_1090FD40.h"
 
 class cString;
-
-// Copied from include/Game/Class_1090FD40.h with FUN_1090f160 (the find that returns -1) added.
-class Class_1090FD40
-{
-public:
-    int Add(const cString& Item);
-    int FUN_1090f160(const cString& Item);
-    void SetCount(int Count);
-    void FUN_1090fd00();
-    void MoveItems(int A, int B, int C);
-    void RemoveAt(int Index);
-    void Insert(int Index, const cString& Value);
-    void FUN_10a5b5b0(int A, int B);
-    void RemoveUnordered(int Index);
-    void Empty()
-    {
-        SetCount(0);
-        if (m_CapacityBytes)
-        {
-            GetAllocator()->Virtual5(m_Items);
-            m_Items = 0;
-            m_CapacityBytes = 0;
-        }
-    }
-
-    int m_Count;
-    int m_CapacityBytes;
-    cString* m_Items;
-};
 
 class cConversation
 {

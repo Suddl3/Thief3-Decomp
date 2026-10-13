@@ -39,6 +39,8 @@ public:
     void FUN_10bdeda0();
     void FUN_10bdb860();
     void FUN_10bdbf70();
+    cMeleeStrafeTarget* Construct(int A, int B, int C, int D);
+    bool FUN_10bdb050();
 
     Class_10BBB410* Unknown04;
     char Pad08[0x78];

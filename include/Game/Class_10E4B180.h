@@ -62,6 +62,7 @@ public:
     Class_10E4B180();
 
     void AddToMaskedLists(int Mask, Class_10E4B180_Unknown70* Obj);
+    void FUN_10961800();
 
     char Unknown04[0x28];
     void** Unknown2C;

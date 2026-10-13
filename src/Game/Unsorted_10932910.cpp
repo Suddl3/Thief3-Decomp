@@ -1,18 +1,9 @@
 // Game/Unsorted_10932910.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10932910_Field18.h"
 #include "Game/Class_10932910.h"
-
-// Ion Storm's string (0x109081E0): a char pointer, null when default constructed.
-class cString
-{
-public:
-    cString() : Unknown00(0) {}
-    ~cString();
-    cString& operator=(const cString& Other);
-
-    char* Unknown00;
-};
+#include "Game/cString.h"
 
 // Ion Storm's placement new and its delete (0x10905C10; the delete folded into ::operator delete).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);

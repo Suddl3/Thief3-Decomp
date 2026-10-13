@@ -14,6 +14,12 @@ public:
     void FUN_10b16780();
     void ShowJunkItemWindow(int A);
     void FUN_10b16ef0(int A);
+    void EnterUnEquipFirst();
+    void FUN_10b16300(int A, int B, bool C);
+    void FUN_10b163c0(int A);
+    void FUN_10b16450(int A);
+    void FUN_10b164e0(int A, int B, char C);
+    void FUN_10b165a0();
 
     char Pad00[0x1];
 };

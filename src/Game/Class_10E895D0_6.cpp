@@ -4,6 +4,7 @@
 #include "Core/Core.h"
 #include "Game/Class_10BB8300.h"
 #include "Game/cIntArray.h"
+#include "Game/Class_Field04.h"
 
 // Ion Storm's placement new and its delete (0x10905C10; the delete folded into ::operator delete).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
@@ -11,43 +12,6 @@ void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
 class Class_10AAF570;
-
-// Copied whole from include/Game/Class_Field04.h, with FUN_10ada010 added: the same object gets it.
-class Class_Field04 : public Class_10BB8300
-{
-public:
-    void FUN_10b46f90();
-    void FUN_10b46fb0();
-    void FUN_10bb83e0();
-    void FUN_10b47310(int A);
-    void Reset();
-    int FUN_1098e290(int Id, FString* Out);
-    void FUN_1098e290();
-    void FUN_10ada010(int Id);
-
-    char Pad01[0xb];
-    char Pad293[0x1];
-    Class_10AAF570* Unknown0C;
-    int Unknown10;
-    int Unknown14;
-    float Unknown18;
-    char Unknown1C[0x1C];
-    int Unknown38;
-    int Unknown3C;
-    float Unknown40;
-    int Unknown44;
-    unsigned char Unknown48;
-    char Unknown49[3];
-    cIntArray Unknown4C;
-    char Pad58[0x6c];
-    FString UnknownC4;
-    FString UnknownD0;
-    FString m_DefaultString;
-    FString UnknownE8;
-    char PadF4[0x1e0];
-    unsigned char Unknown2D4;
-    char Pad2D5[0x3];
-};
 
 // The object this->Unknown08 points to; its Unknown04 at +4 is the field.
 class Class_10B8C290_Unknown08

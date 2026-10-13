@@ -5,33 +5,9 @@
 #include "Game/Class_10936A40.h"
 #include "Game/Info_10952690.h"
 #include "Game/Struct_10924210.h"
+#include "Game/cD3DStateCache.h"
 
 extern IDirect3DDevice8* GDirect3DDevice8;
-
-// Game/cD3DStateCache.h copied whole, with the two methods this function calls added.
-class cD3DStateCache : public Class_10936A40
-{
-public:
-    void SetStreamSource(int A, int B);
-    void SetIndices(int A, int B);
-    void ClearTextures();
-    void FUN_10937280(int A, Info_10952690* Info);
-    void SetVertexShaderConstantScalar(int p1, int p2);
-    void SetPixelShaderConstantScalar(int Index, int Value);
-    void FUN_10936bf0(int A);
-    void FUN_10938000();
-    void FUN_10938150(float A, float B, float C, float D);
-
-    char Pad01[0xb];
-    char Pad81F[0x1];
-    int m_VertexBuffer;
-    int m_VertexStride;
-    int m_IndexBuffer;
-    int m_BaseVertexIndex;
-    IDirect3DBaseTexture8* m_Textures[4];
-    char Pad2C[0x7d0];
-    Struct_10924210 Unknown7FC;
-};
 
 extern cD3DStateCache* DAT_10f31be0;
 

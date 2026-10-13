@@ -9,6 +9,7 @@ class Class_10E88160 : public Class_10B78780
 {
 public:
     Class_10E88160* Construct();
+    void FUN_10b76310();
 
     int Unknown190;
 };

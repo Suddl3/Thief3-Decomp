@@ -21,6 +21,7 @@ public:
     unsigned char FUN_10bbdb80(int A);
     unsigned char FUN_10bbdb80();
     float FUN_10bbdc80();
+    void FUN_10bbd370(int A, int B);
 
     Class_1098E330* Unknown08;
     char Unknown0C[4];

@@ -61,6 +61,7 @@ public:
 
     void FUN_10be2e20();
     State_FrobAlarm* FUN_10be2df0(int A, int B, int C);
+    State_FrobAlarm(int A, int B, int C);
 
     int Unknown40;
     int Unknown44;

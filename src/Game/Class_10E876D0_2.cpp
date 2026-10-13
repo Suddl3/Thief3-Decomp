@@ -2,20 +2,9 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Game/Class_10E83E20.h"
+#include "Game/Class_10B7B910.h"
 
 class Class_10E822B0;
-
-// Copied from include/Game/Class_10B7B910.h with the three state methods added.
-class Class_10B7B910
-{
-public:
-    Class_10B7B910* Init();
-    bool FUN_10b7b920(Class_10E822B0* A);
-    int FUN_10b7b980(Class_10E822B0* A, int B);
-    int FUN_10b7bd10(Class_10E822B0* A, int B);
-
-    int Field00;
-};
 
 class Class_10E876D0
 {

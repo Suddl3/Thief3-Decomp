@@ -11,6 +11,8 @@ class Class_10BBB8B0
 public:
     void FUN_10bbb8b0();
     void FUN_10bbb580(const Struct_10BA9EF0& Position);
+    int FUN_10bbb770(float Scale);
+    int FUN_10bbb810(float Scale);
 
     char Unknown00[8];
     Class_10E5CBD8* Unknown08;

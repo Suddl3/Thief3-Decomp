@@ -48,6 +48,8 @@ public:
     virtual int Virtual39();
 
     void FUN_10b45ad0(int A);
+    void FUN_10b2a610(void* A, int* B);
+    void FUN_10b2b910(int A, int B);
 
     char Pad04[0x154];
     int Unknown158;

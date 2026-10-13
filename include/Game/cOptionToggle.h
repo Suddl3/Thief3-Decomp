@@ -127,6 +127,7 @@ public:
     void ApplyEntry(int A);
     void SetEntry(int Index, int Value);
     void SetThirdStateEnabled(bool A);
+    cOptionToggle* Init();
 
     char Unknown04[0x124];
     Struct_10A58AE0* Unknown128;

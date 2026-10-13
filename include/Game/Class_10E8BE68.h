@@ -93,6 +93,7 @@ public:
     Struct_10BC4240_Param* FUN_10bca700();
     void FUN_10bce0d0(int p1);
     bool FUN_10bc4af0();
+    int GetTargetLinkType();
 
     Class_10BB8300* Unknown04;
     char Unknown08[4];

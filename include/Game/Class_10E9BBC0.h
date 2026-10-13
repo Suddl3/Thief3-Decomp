@@ -26,6 +26,7 @@ public:
     virtual void Virtual8(Info_10C47FC0* Info);
     virtual void FUN_10c49860(Struct_10C49860* A);
     virtual void AddEntry(Struct_10C49880* A);
+    Class_10E9BBC0(Class_10E9BBC0_Unknown3C* Arg);
 
     Class_10D3F830 m_Entries;
     char Unknown05[0x37];

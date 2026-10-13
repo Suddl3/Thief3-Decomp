@@ -3,20 +3,7 @@
 
 #include "Game/cIntArray.h"
 #include "Game/Class_10B2C030.h"
-
-class Class_10B16930
-{
-public:
-    cIntArray FUN_109e6d80(int A);
-    void FUN_10b166a0();
-    void FUN_10b16930();
-    void FUN_10b16780();
-    void ShowJunkItemWindow(int A);
-    void FUN_10b16ef0(int A);
-    void FUN_10b16450(int A);
-
-    char Pad00[0x1];
-};
+#include "Game/Class_10B16930.h"
 
 // FUNCTION: 0x10B16450 ?FUN_10b16450@Class_10B16930@@QAEXH@Z
 void Class_10B16930::FUN_10b16450(int A)

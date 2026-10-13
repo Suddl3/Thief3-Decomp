@@ -1,25 +1,10 @@
 // Game/State_PlayAnim_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10E8BE68.h"
 #include "Game/Class_10BD1320.h"
 #include "Game/Item_10BD1320.h"
-
-class FArchive
-{
-public:
-    virtual ~FArchive();
-    virtual void Serialize(void* V, int Length);
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6(void* Value);
-
-    char Unknown04[0x08];
-    int ArVer;
-    int Unknown10;
-    int ArIsLoading;
-};
+#include "Game/FArchive.h"
 
 void FUN_10c11ff0(FArchive& Ar, int* Value);
 
@@ -109,14 +94,14 @@ void State_PlayAnim::Serialize(FArchive& Ar)
     ((Class_10E8BE68*)this)->Class_10E8BE68::Serialize(Ar);
     int Count = m_Items.m_Count;
     Ar.Serialize(&Count, 4);
-    if (Ar.ArIsLoading)
+    if (Ar.Unknown14)
         m_Items.FUN_10bd0410(Count);
     for (int i = 0; i < Count; i++)
         m_Items.m_Items[i].Virtual0(Ar);
     FUN_10c11ff0(Ar, &Unknown4C);
     unsigned char Flag = Unknown50;
     Ar.Serialize(&Flag, 1);
-    if (Ar.ArIsLoading)
+    if (Ar.Unknown14)
         Unknown50 = Flag;
     Ar.Serialize(&Unknown54, 1);
     Ar.Serialize(&Unknown55, 1);

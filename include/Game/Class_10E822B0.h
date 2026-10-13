@@ -126,6 +126,7 @@ public:
     Class_10E822B0();
 
     void FUN_10a53560(int A);
+    void ReleaseOwnedObject(bool A);
 
     Class_10B7B910 m_StateMachine;
 };

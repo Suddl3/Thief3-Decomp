@@ -3,6 +3,8 @@
 #ifndef GAME_CONFIG_H
 #define GAME_CONFIG_H
 
+class cString;
+
 class Config
 {
 public:
@@ -15,6 +17,7 @@ public:
     bool GetFloat(const char* Section, const char* Key, float* Value, const char* File);
     bool GetString(const char* Section, const char* Key, char** Value, const char* File);
     bool FUN_10910ca0(const char* Section, const char* Key, char* Value, int Size, int Default);
+    bool Find(const cString& Section, const cString& Key, const char* File, cString& Value);
 
     char Pad00[0x1];
 };

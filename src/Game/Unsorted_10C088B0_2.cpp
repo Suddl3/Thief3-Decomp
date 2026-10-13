@@ -1,9 +1,11 @@
 // Game/Unsorted_10C088B0_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10BAA8A0.h"
 #include "Game/Class_10C08960.h"
 #include "Game/Class_10BABED0.h"
 #include "Game/Class_10C08960_Unknown10.h"
+#include "Game/Class_10B9CAC0.h"
 
 // Declarations first
 class AAIPawn;
@@ -17,13 +19,6 @@ class Class_10C08960_Unknown10;
 class Class_10BABED0;
 
 Class_10BABED0* FUN_10baa6b0(Class_10BAA6B0_Param* Param);
-
-class Class_10B9CAC0
-{
-public:
-    void FUN_10b9d1a0(int A);
-    void FUN_10b9d1c0(int A);
-};
 
 // FUNCTION: 0x10C088B0 ?FUN_10c088b0@Class_10C08960@@QAEXXZ
 void Class_10C08960::FUN_10c088b0()

@@ -20,6 +20,7 @@ public:
     virtual void Virtual6();
     virtual void FUN_10b4f4b0(Struct_10B4F4B0* Other);
     virtual int FUN_10b4eb40(int p1);
+    Class_10E7EA90* FUN_10b3d3a0();
 };
 
 #endif // GAME_CLASS_10E7EA90_H

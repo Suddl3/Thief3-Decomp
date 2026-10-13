@@ -3,10 +3,15 @@
 #ifndef GAME_CLASS_10AA9DA0_H
 #define GAME_CLASS_10AA9DA0_H
 
+class cString;
+
 class Class_10AA9DA0
 {
 public:
     void* FUN_10aa9da0();
+    void FUN_10914470(cString& Name, bool& Flag);
+    bool FUN_10914470(cString& Name, unsigned char& Found);
+    void RemoveByName(cString& Name);
 
     char Unknown00[0x10];
     void* Unknown10;

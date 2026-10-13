@@ -5,6 +5,8 @@
 
 class Class_10919C40;
 
+class cString;
+
 class Class_1091CB20
 {
 public:
@@ -18,6 +20,8 @@ public:
             FUN_1091be70();
         return Unknown00;
     }
+    Class_1091CB20(Class_10919C40* Owner, const cString& Name, float A, float B, bool C, int D);
+    cString FUN_1091cbc0(int B, int C);
 
     int Unknown00;
     char Unknown04[4];

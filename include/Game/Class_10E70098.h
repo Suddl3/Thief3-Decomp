@@ -10,6 +10,7 @@ class Class_10E70098 : public cActorManager, public Class_10E7007C
 {
 public:
     ~Class_10E70098();
+    Class_10E70098();
 };
 
 #endif // GAME_CLASS_10E70098_H

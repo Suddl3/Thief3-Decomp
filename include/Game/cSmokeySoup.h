@@ -81,6 +81,8 @@ public:
     cSmokeySoup* Init();
     void* FUN_10a51100(int A);
     void LoadConfig(Class_10AF7F80* File, Class_10AF7F80* Section);
+    void FUN_10b70ac0(int A);
+    void Update(int A);
 
     cIntArray Unknown154;
     char Pad160[0x114];

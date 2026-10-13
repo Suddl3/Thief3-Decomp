@@ -7,6 +7,8 @@ class Class_10BFB910
 {
 public:
     void ClearTime(int Index);
+    void FUN_10bfb8d0(int p1);
+    float GetTime(int Index);
 
     int Unknown00[64];
 };

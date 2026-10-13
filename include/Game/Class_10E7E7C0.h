@@ -17,6 +17,7 @@ public:
     virtual int OnAnimationEnd(Object_10B4BC30* A, int B);
     virtual void Virtual6();
     virtual void FUN_10b4bc50(Object_10B4BC30* A);
+    Class_10E7E7C0* FUN_10b3d1f0();
 
     char Unknown04[0xC];
     int Unknown10;

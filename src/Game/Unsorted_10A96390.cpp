@@ -1,5 +1,6 @@
 // Game/Unsorted_10A96390.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/cString.h"
 #include "Game/Class_10A99470.h"
 #include "Game/Class_10AA3520.h"
@@ -63,6 +64,7 @@
 #include "Game/Class_10E6D52C.h"
 #include "Game/Class_10E6D5E4.h"
 #include "Game/Struct_10AA3520.h"
+#include "Game/SwooshGeometryTriStrip.h"
 
 extern int DAT_10f012d8;
 
@@ -277,22 +279,6 @@ extern void* DAT_10e6d4f0[];
 extern const char DAT_10e6d548[];
 
 extern void* DAT_10e6d59c[];
-
-class SwooshGeometryTriStrip
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-
-    void SetParameters(int A, int B, int C, int D);
-
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    int Unknown10;
-    int Unknown14;
-};
 
 extern void* DAT_10e6d5e4[];
 
@@ -1171,7 +1157,7 @@ void SwooshGeometryTriStrip::SetParameters(int A, int B, int C, int D)
     Unknown0C = B;
     Unknown10 = C;
     Unknown14 = D;
-    Virtual2();
+    Release();
 }
 
 // FUNCTION: 0x10AA5200 ?FUN_10aa5200@Class_10E6D5E4@@QAEXXZ

@@ -3,10 +3,15 @@
 #ifndef GAME_CLASS_10B7B910_H
 #define GAME_CLASS_10B7B910_H
 
+class Class_10E822B0;
+
 class Class_10B7B910
 {
 public:
     Class_10B7B910* Init();
+    bool FUN_10b7b920(Class_10E822B0* A);
+    int FUN_10b7b980(Class_10E822B0* A, int B);
+    int FUN_10b7bd10(Class_10E822B0* A, int B);
 
     int Field00;
 };

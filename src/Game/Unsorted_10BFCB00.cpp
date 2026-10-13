@@ -1,5 +1,6 @@
 // Game/Unsorted_10BFCB00.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Core/Core.h"
 #include "Game/Class_10C7D570.h"
 #include "Game/Class_10978090.h"
@@ -7,20 +8,9 @@
 #include "Game/Class_10AF4B90.h"
 #include "Game/Class_10AF4BB0.h"
 #include "Game/Class_10C1B0F0.h"
+#include "Game/Class_10BFD210.h"
 
 extern float DAT_10eafbdc;
-
-class Class_10BFD210
-{
-public:
-    float FUN_10bfc3a0();
-    void Reset();
-    void FUN_10bfc680(float Value);
-    void FUN_10bfd4c0(float Value);
-    void FUN_10bfd0a0(Class_10C1B0F0* A, float B);
-
-    char Pad00[0x1];
-};
 
 extern float DAT_10e49684;
 

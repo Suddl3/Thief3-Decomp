@@ -1,15 +1,10 @@
 // Game/Unsorted_10BBFBF0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10BBFBF0.h"
 #include "Game/Class_10BBFCA0.h"
 #include "Game/Class_10BBFD80.h"
-
-class FArchive
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1(void* A, int B);
-};
+#include "Game/FArchive.h"
 
 FArchive& FUN_10b052a0(FArchive& Ar, void* A);
 
@@ -210,7 +205,7 @@ unsigned int Class_10BBFCA0::DrawPercentLines(Class_10BBFBF0_Param* A, Class_10A
 void SaveItemList(Class_10BBFD80* A, FArchive& Ar)
 {
     int Count = A->Unknown00;
-    Ar.Virtual1(&Count, 4);
+    Ar.Serialize(&Count, 4);
     for (int i = 0; i < Count; i++)
     {
         Class_10BBFD80Element* Element = A->Unknown08[i];

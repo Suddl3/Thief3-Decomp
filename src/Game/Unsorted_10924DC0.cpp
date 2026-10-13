@@ -1,10 +1,12 @@
 // Game/Unsorted_10924DC0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/cIntArray.h"
 #include "Game/Class_10936A40.h"
 #include "Game/Struct_10924210.h"
 #include "Game/Class_10924E80.h"
 #include "Game/Class_10925410.h"
+#include "Game/cD3DStateCache.h"
 
 class IDirect3DBaseTexture8;
 
@@ -128,29 +130,6 @@ public:
     virtual long __stdcall SetPixelShader(unsigned long Handle);
     virtual int __stdcall Virtual89();
     virtual int __stdcall Virtual90(int Handle);
-};
-
-class cD3DStateCache : public Class_10936A40
-{
-public:
-    void SetStreamSource(int A, int B);
-    void SetIndices(int A, int B);
-    void ClearTextures();
-    void FUN_10937280(int A, Info_10952690* Info);
-    void SetVertexShaderConstantScalar(int p1, int p2);
-    void SetPixelShaderConstantScalar(int Index, int Value);
-    void FUN_10936bf0(int A);
-    void ResetTextureStagesBiased();
-
-    char Pad01[0xb];
-    char Pad81F[0x1];
-    int m_VertexBuffer;
-    int m_VertexStride;
-    int m_IndexBuffer;
-    int m_BaseVertexIndex;
-    IDirect3DBaseTexture8* m_Textures[4];
-    char Pad2C[0x7d0];
-    Struct_10924210 Unknown7FC;
 };
 
 extern IDirect3DDevice8* GDirect3DDevice8;

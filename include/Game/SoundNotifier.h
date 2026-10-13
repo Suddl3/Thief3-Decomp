@@ -8,6 +8,7 @@ class SoundNotifier
 public:
     void* Field00;
     void FUN_10c1a570();
+    SoundNotifier();
 };
 
 #endif // GAME_SOUNDNOTIFIER_H

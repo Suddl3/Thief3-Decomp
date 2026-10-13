@@ -7,6 +7,7 @@ class Class_10E6DA64
 {
 public:
     Class_10E6DA64* Init();
+    Class_10E6DA64();
 
     void** Unknown00;
     int m_Count;
