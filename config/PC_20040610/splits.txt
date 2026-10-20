@@ -530,6 +530,9 @@ Game/Unsorted_10924C60.cpp:
 Game/Class_10924E80.cpp:
 	.text  start:0x10924E80 end:0x10924FBE
 
+Game/Unsorted_10924FC0.cpp:
+	.text  start:0x10925060 end:0x109250B2
+
 Game/Unsorted_10925130.cpp:
 	.text  start:0x109251C0 end:0x1092522D
 
@@ -720,6 +723,9 @@ Game/Vocabulary.cpp:
 	.text  start:0x10930110 end:0x109302F6
 	.text  start:0x10930630 end:0x1093064E
 	.text  start:0x10E04D00 end:0x10E04D12  # .text$x: EH handlers and unwind funclets
+
+Game/Unsorted_1092F850.cpp:
+	.text  start:0x1092FAE0 end:0x1092FC9E
 
 Game/Unsorted_1092FCB0.cpp:
 	.text  start:0x1092FD50 end:0x1092FDC9
@@ -1331,7 +1337,7 @@ Game/Unsorted_1094E3E0_2.cpp:
 	.text  start:0x1094E3E0 end:0x1094E4C1
 
 Game/Unsorted_1094E4D0.cpp:
-	.text  start:0x1094E530 end:0x1094E5C9
+	.text  start:0x1094E4D0 end:0x1094E5C9
 
 Game/Class_1094E7A0.cpp:
 	.text  start:0x1094E5D0 end:0x1094E61F
@@ -1492,6 +1498,9 @@ Game/Unsorted_10952740.cpp:
 
 Game/Unsorted_109535B0.cpp:
 	.text  start:0x109535D0 end:0x10953694
+
+Game/Unsorted_109536A0.cpp:
+	.text  start:0x109538B0 end:0x10953A85
 
 Game/Class_10953AC0.cpp:
 	.text  start:0x10953AC0 end:0x10953B54
@@ -1659,6 +1668,10 @@ Game/Class_10E4B040.cpp:
 	.text  start:0x109615B0 end:0x10961606
 	.text  start:0x10961620 end:0x10961640
 	.text  start:0x10E06380 end:0x10E06392  # .text$x: EH handlers and unwind funclets
+
+Game/Unsorted_10961640.cpp:
+	.text  start:0x10961640 end:0x10961696
+	.text  start:0x10E063A0 end:0x10E063B2  # .text$x: EH handlers and unwind funclets
 
 Game/Class_10E4B0C8.cpp:
 	.text  start:0x109616A0 end:0x109616B1
@@ -2709,6 +2722,9 @@ Game/cGlobalDataManager_7.cpp:
 Game/cGlobalDataManager_9.cpp:
 	.text  start:0x10A16F30 end:0x10A16F67
 
+Game/Unsorted_10A16FA0.cpp:
+	.text  start:0x10A170F0 end:0x10A17176
+
 Game/Class_10E5D650.cpp:
 	.text  start:0x10A17180 end:0x10A1720F
 	.text  start:0x10E0DB90 end:0x10E0DBA5  # .text$x: EH handlers and unwind funclets
@@ -2942,8 +2958,8 @@ Game/Unsorted_10A2E4D0.cpp:
 	.text  start:0x10A2E4D0 end:0x10A2E567
 
 Game/Unsorted_10A2E570.cpp:
-	.text  start:0x10A2E6F0 end:0x10A2E7B9
-	.text  start:0x10E0F6F0 end:0x10E0F702  # .text$x: EH handlers and unwind funclets
+	.text  start:0x10A2E570 end:0x10A2E7B9
+	.text  start:0x10E0F6D0 end:0x10E0F702  # .text$x: EH handlers and unwind funclets
 
 Game/Unsorted_10A2ED50.cpp:
 	.text  start:0x10A2ED50 end:0x10A2ED6C
@@ -2997,6 +3013,9 @@ Game/Unsorted_10A2F1D0.cpp:
 
 Game/Class_10E6D208.cpp:
 	.text  start:0x10A2F220 end:0x10A2F268
+
+Game/Unsorted_10A2F270.cpp:
+	.text  start:0x10A2F270 end:0x10A2F2BB
 
 Game/Unsorted_10A2F300.cpp:
 	.text  start:0x10A2F300 end:0x10A2F3BD
@@ -4510,6 +4529,10 @@ Game/Unsorted_10A76810.cpp:
 	.text  start:0x10A76EA0 end:0x10A76F38
 	.text  start:0x10E14150 end:0x10E14172  # .text$x: EH handlers and unwind funclets
 
+Game/Unsorted_10A76F40.cpp:
+	.text  start:0x10A76F40 end:0x10A76F91
+	.text  start:0x10E14180 end:0x10E14192  # .text$x: EH handlers and unwind funclets
+
 Game/Unsorted_10A76760.cpp:
 	.text  start:0x10A77300 end:0x10A77342
 	.text  start:0x10A79670 end:0x10A796CF
@@ -4574,8 +4597,14 @@ Game/Unsorted_10A7A990_2.cpp:
 	.text  start:0x10A7D2A0 end:0x10A7D37C
 	.text  start:0x10E144A0 end:0x10E144B2  # .text$x: EH handlers and unwind funclets
 
+Game/cRigidAttachmentManager_9.cpp:
+	.text  start:0x10A7AFD0 end:0x10A7B17F
+
 Game/cRigidAttachmentManager_5.cpp:
 	.text  start:0x10A7BA40 end:0x10A7BB75
+
+Game/Unsorted_10A7BB80.cpp:
+	.text  start:0x10A7BB80 end:0x10A7BD2D
 
 Game/cRigidAttachmentManager_6.cpp:
 	.text  start:0x10A7BD30 end:0x10A7BE9C
@@ -5346,6 +5375,9 @@ Game/Class_10E6CE6C.cpp:
 
 Game/Unsorted_10A95B00.cpp:
 	.text  start:0x10A95B00 end:0x10A95B55
+
+Game/Unsorted_10A95B80_2.cpp:
+	.text  start:0x10A95B80 end:0x10A95BA6
 
 Game/Unsorted_10A95B80.cpp:
 	.text  start:0x10A95BB0 end:0x10A95C97
@@ -6247,6 +6279,9 @@ Game/Unsorted_10AB5B50.cpp:
 
 Game/Class_10E49AC4.cpp:
 	.text  start:0x10AB6E50 end:0x10AB6EAE
+
+Game/Unsorted_10AB6ED0.cpp:
+	.text  start:0x10AB70B0 end:0x10AB72C4
 
 Game/Class_10E6F3EC.cpp:
 	.text  start:0x10AB72D0 end:0x10AB72DF
@@ -9313,9 +9348,15 @@ Game/Unsorted_10B73EE0.cpp:
 Game/Unsorted_10B73F20.cpp:
 	.text  start:0x10B74400 end:0x10B744A2
 
+Game/Unsorted_10B744B0_2.cpp:
+	.text  start:0x10B744B0 end:0x10B744E6
+
 Game/Unsorted_10B744B0.cpp:
 	.text  start:0x10B744F0 end:0x10B74599
 	.text  start:0x10E235E0 end:0x10E235F2  # .text$x: EH handlers and unwind funclets
+
+Game/Unsorted_10B745A0.cpp:
+	.text  start:0x10B745A0 end:0x10B74796
 
 Game/Class_10E876D0.cpp:
 	.text  start:0x10B75670 end:0x10B756C7
@@ -10351,6 +10392,9 @@ Game/cStateStack_6.cpp:
 Game/cStateStack_14.cpp:
 	.text  start:0x10B9E550 end:0x10B9E651
 
+Game/Unsorted_10B9E6D0.cpp:
+	.text  start:0x10B9EA00 end:0x10B9EB52
+
 Game/cStateStack_15.cpp:
 	.text  start:0x10B9ED70 end:0x10B9EE80
 
@@ -11141,6 +11185,9 @@ Game/Unsorted_10BB9030.cpp:
 	.text  start:0x10BB91D0 end:0x10BB9395
 	.text  start:0x10E26AF0 end:0x10E26B2A  # .text$x: EH handlers and unwind funclets
 
+Game/Unsorted_10BB93A0.cpp:
+	.text  start:0x10BB9560 end:0x10BB95B4
+
 Game/Class_10BB9FC0.cpp:
 	.text  start:0x10BB96F0 end:0x10BB9764
 	.text  start:0x10BB9FC0 end:0x10BBA020
@@ -11316,6 +11363,9 @@ Game/Unsorted_10BBFF10.cpp:
 	.text  start:0x10BC00A0 end:0x10BC0141
 	.text  start:0x10BC0F30 end:0x10BC0F49
 
+Game/Unsorted_10BC0150_2.cpp:
+	.text  start:0x10BC0150 end:0x10BC02EF
+
 Game/Unsorted_10BC0150.cpp:
 	.text  start:0x10BC0990 end:0x10BC0A1B
 
@@ -11350,6 +11400,9 @@ Game/AAIPathPoint_11.cpp:
 Game/AAIPathPoint_8.cpp:
 	.text  start:0x10BC2C90 end:0x10BC2CF2
 
+Game/AAIPawn_2.cpp:
+	.text  start:0x10BC2FB0 end:0x10BC2FE3
+
 Game/Unsorted_10BC2FB0.cpp:
 	.text  start:0x10BC3590 end:0x10BC3669
 
@@ -11375,6 +11428,9 @@ Game/Class_10E8BE68_2.cpp:
 
 Game/Unsorted_10BC4200.cpp:
 	.text  start:0x10BC4200 end:0x10BC4232
+
+Game/Unsorted_10BC4240.cpp:
+	.text  start:0x10BC45A0 end:0x10BC45BC
 
 Game/Unsorted_10BC45D0.cpp:
 	.text  start:0x10BC4930 end:0x10BC49A4
@@ -12721,6 +12777,9 @@ Game/Unsorted_10BFF760.cpp:
 
 Game/Unsorted_10C002B0.cpp:
 	.text  start:0x10C002B0 end:0x10C003A0
+
+Game/Unsorted_10C003E0.cpp:
+	.text  start:0x10C003E0 end:0x10C00479
 
 Game/Unsorted_10BFF760_2.cpp:
 	.text  start:0x10C00480 end:0x10C0048D
@@ -14090,6 +14149,10 @@ Game/Unsorted_10C378D0_2.cpp:
 Game/Unsorted_10C378D0.cpp:
 	.text  start:0x10C37960 end:0x10C37996
 
+Game/Unsorted_10C379A0_2.cpp:
+	.text  start:0x10C37B20 end:0x10C37CAC
+	.text  start:0x10E2DBE0 end:0x10E2DBF2  # .text$x: EH handlers and unwind funclets
+
 Game/Unsorted_10C379A0.cpp:
 	.text  start:0x10C37CB0 end:0x10C37D25
 
@@ -15045,6 +15108,9 @@ Game/Class_10E9D0BC.cpp:
 
 Game/Unsorted_10C68610.cpp:
 	.text  start:0x10C68610 end:0x10C68668
+
+Game/Unsorted_10C68B90.cpp:
+	.text  start:0x10C68B90 end:0x10C68BC2
 
 Game/Unsorted_10C698A0.cpp:
 	.text  start:0x10C698A0 end:0x10C69938

@@ -1,5 +1,6 @@
 // Game/Unsorted_1094E4D0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_1094E530.h"
 
@@ -149,6 +150,52 @@ public:
     char Unknown00[0x10];
     Struct_1094E530_Slot Slots[1];
 };
+
+extern int DAT_10f2c720;
+
+class Class_1094E4D0_Unknown0E8
+{
+public:
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual void Virtual2();
+    virtual void Virtual3();
+    virtual void Virtual4();
+    virtual void Virtual5();
+    virtual int Virtual6(int A, int B, int* C);
+};
+
+struct Struct_1094E4D0
+{
+    int Unknown00;
+    char Unknown04[0x24];
+};
+
+class Class_1094E4D0
+{
+public:
+    int FUN_1094e4d0(int A);
+
+    char Unknown00[0xE8];
+    Class_1094E4D0_Unknown0E8* Unknown0E8[1];
+    char Unknown0EC[0x1C];
+    Struct_1094E4D0* Unknown108;
+    int Unknown10C;
+    int Unknown110;
+};
+
+// FUNCTION: 0x1094E4D0 ?FUN_1094e4d0@Class_1094E4D0@@QAEHH@Z
+int Class_1094E4D0::FUN_1094e4d0(int A)
+{
+    int Result = 0;
+    if (Unknown0E8[DAT_10f2c720])
+    {
+        int Handle = Unknown108[Unknown110].Unknown00;
+        if (Unknown0E8[DAT_10f2c720]->Virtual6(0, Handle, &Result) < 0)
+            return 0;
+    }
+    return Result;
+}
 
 // FUNCTION: 0x1094E530 ?FUN_1094e530@Class_1094E530@@QAE_NHHHH@Z
 bool Class_1094E530::FUN_1094e530(int A, int B, int C, int D)
