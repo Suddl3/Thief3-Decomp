@@ -6,7 +6,7 @@
 class Class_10C29000
 {
 public:
-    void FUN_10c29000();
+    int FUN_10c29000();
 
     char Unknown00[4];
     int Unknown04;

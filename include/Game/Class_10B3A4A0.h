@@ -3,13 +3,17 @@
 #ifndef GAME_CLASS_10B3A4A0_H
 #define GAME_CLASS_10B3A4A0_H
 
+#include "Game/cString.h"
+
 class Class_10B3A4A0
 {
 public:
     ~Class_10B3A4A0();
     Class_10B3A4A0();
 
-    char Unknown00[0x2C];
+    char Unknown00[0x24];
+    cString Unknown24;
+    cString Unknown28;
 };
 
 #endif // GAME_CLASS_10B3A4A0_H

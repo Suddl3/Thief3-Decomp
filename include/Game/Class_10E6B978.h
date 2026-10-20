@@ -3,7 +3,9 @@
 #ifndef GAME_CLASS_10E6B978_H
 #define GAME_CLASS_10E6B978_H
 
-class Class_10E6B978
+#include "Game/cActorManager.h"
+
+class Class_10E6B978 : public cActorManager
 {
 public:
     virtual void HandleEvent(int Msg, int A, int B, int C);

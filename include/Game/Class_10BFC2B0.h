@@ -3,10 +3,21 @@
 #ifndef GAME_CLASS_10BFC2B0_H
 #define GAME_CLASS_10BFC2B0_H
 
+class Class_10BFC2B0_Unknown04;
+class Class_10C3DD60;
+
 class Class_10BFC2B0
 {
 public:
     void FUN_10bfc2b0();
+
+    char Unknown00[0x4];
+    Class_10BFC2B0_Unknown04* Unknown04;
+    int m_Count;                    // entries in m_Objects
+    char Unknown0C[0x4];
+    Class_10C3DD60** m_Objects;     // each gets the elapsed time added to its field
+    char Unknown14[0x38];
+    float m_StartTime;              // start of the running interval; 0 once it has been added
 };
 
 #endif // GAME_CLASS_10BFC2B0_H

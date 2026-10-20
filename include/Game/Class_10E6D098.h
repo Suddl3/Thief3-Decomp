@@ -5,13 +5,23 @@
 
 #include "Game/Class_10E6DC88.h"
 
+// The tables the constructor installs (0x10E6D098 and 0x10E70820): the primary table at +0x0 and the
+// second base's at +0xC.
+extern void* DAT_10e6d098[];
+extern void* DAT_10e70820[];
+
 class Class_10E6D098 : public Class_10E6DC88
 {
 public:
+    virtual int Virtual0(int A, int B, int C, int* D);
     virtual void Virtual1();
     virtual void SendEvent();
 
-    Class_10E6D098();
+    Class_10E6D098() : Class_10E6DC88(0x62)
+    {
+        *(void***)this = DAT_10e6d098;
+        *(void***)((char*)this + 0x0C) = DAT_10e70820;
+    }
 };
 
 #endif // GAME_CLASS_10E6D098_H

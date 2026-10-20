@@ -62,7 +62,7 @@ void Class_10E95D00::FUN_10be3df0()
 {
     if (FUN_10be3220())
     {
-        Unknown04->FUN_10bb8620();
+        ((Class_10BB8620*)Unknown04)->FUN_10bb8620();
         PopState();
     }
     else if (!Unknown40)

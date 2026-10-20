@@ -6,6 +6,10 @@
 #include "Game/cCheatHandler.h"
 #include "Game/Object_10B55450.h"
 #include "Game/Struct_10DD7DC0Arg.h"
+#include "Core/Core.h"
+#include "Game/Struct_10ABC6F0.h"
+#include "Game/Class_10B37FE0_Unknown04_Unknown460.h"
+#include "Game/Class_10B37FE0_Unknown0B4.h"
 
 extern void* DAT_10e81c20[];
 
@@ -130,41 +134,11 @@ int FUN_10af3710(const char* Text);
 
 Static_10B3AC60* FUN_10b3ac60();
 
-// A three-float vector: the zero vector and the copied position.
-struct Struct_10B559E0_Vector
-{
-    float Unknown00;
-    float Unknown04;
-    float Unknown08;
-};
-
-// The block Virtual5 gets: a converted number, a zero vector, a position, and two flags.
-struct Struct_10B559E0
-{
-    float Unknown00;
-    Struct_10B559E0_Vector Unknown04;
-    Struct_10B559E0_Vector Unknown10;
-    bool Unknown1C;
-    bool Unknown1D;
-    int Unknown20;
-};
-
 // The object FUN_10b3ac90 returns (a void* in the header): a position at +0x2C.
 struct Class_10B559E0_Result
 {
     char Pad00[0x2C];
-    Struct_10B559E0_Vector Unknown2C;
-};
-
-class Class_10B37FE0_Unknown0B4
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5(void* A, int B, Struct_10B559E0* C, int D);
+    FVector Unknown2C;
 };
 
 // FUNCTION: 0x10B559E0 ?HandleCheatCommand@cCheatHandler@@UAEHPADH@Z
@@ -173,15 +147,15 @@ int cCheatHandler::HandleCheatCommand(char* Command, int Unknown)
     if (FUN_10af42f0((int)&Command, "HURTME"))
     {
         Class_10B559E0_Result* Player = (Class_10B559E0_Result*)FUN_10b3ac60()->Class_10B3AC90::FUN_10b3ac90();
-        Struct_10B559E0 Arg;
+        Struct_10ABC6F0 Arg;
         Arg.Unknown1C = true;
         Arg.Unknown00 = (float)FUN_10af3710(Command);
         Arg.Unknown1D = false;
         Arg.Unknown20 = -1;
-        Struct_10B559E0_Vector Zero = { 0.0f, 0.0f, 0.0f };
+        FVector Zero(0.0f, 0.0f, 0.0f);
         Arg.Unknown04 = Zero;
         Arg.Unknown10 = Player->Unknown2C;
-        DAT_10f35dec->Unknown0B4->Virtual5(Player, 0, &Arg, 0);
+        DAT_10f35dec->Unknown0B4->Virtual5((Class_10B37FE0_Unknown04_Unknown460*)Player, 0, &Arg, 0);
         return 1;
     }
     if (FUN_10af42f0((int)&Command, "HEALME"))

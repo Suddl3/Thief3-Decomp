@@ -2,12 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10C1AC00.h"
 #include "Game/Class_10FF667C.h"
-
-class Class_10C88610
-{
-public:
-    Class_10C1AC00* FUN_10c88610();
-};
+#include "Game/Class_10C88610.h"
 
 struct Struct_10BE57C0
 {
@@ -106,7 +101,7 @@ public:
 bool Class_10E95F40::FUN_10be57c0()
 {
     int Local;
-    Class_10C1AC00* Object = Unknown04->Unknown30.FUN_10c88610();
+    Class_10C1AC00* Object = (Class_10C1AC00*)Unknown04->Unknown30.FUN_10c88610();
     if (Object && Object->Virtual0() == 7)
     {
         int* Field = &DAT_10ff667c->Unknown78;

@@ -3,16 +3,14 @@
 #ifndef GAME_CLASS_10BB85E0_H
 #define GAME_CLASS_10BB85E0_H
 
-#include "Game/Class_10BB8620.h"
-
-class Class_10BB85E0 : public Class_10BB8620
+class Class_10BB85E0
 {
 public:
     bool FUN_10bb85e0();
     void FUN_10bb8ee0(int A);
 
-    char Pad01[0x2f2];
-    bool Unknown2F3;
+    char Unknown00[0x2f3];
+    bool Unknown2F3; // FUN_10bb85e0 returns this->Unknown2F3 || this->Unknown2F4
     bool Unknown2F4;
 };
 

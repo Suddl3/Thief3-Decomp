@@ -3,12 +3,14 @@
 #ifndef GAME_CLASS_10C37960_H
 #define GAME_CLASS_10C37960_H
 
+struct Struct_10C05A80;
+
 class Class_10C37960
 {
 public:
     virtual void Virtual0();
     virtual void Virtual1();
-    virtual void Virtual2();
+    virtual void* Virtual2(void* Item, Struct_10C05A80* Info, bool Flag, float A, float B);
     virtual void Virtual3();
     virtual void* Virtual4(int A, int B, float C);
     virtual void* Virtual5(int A, int B, int C, int D);

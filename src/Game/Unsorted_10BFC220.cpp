@@ -1,5 +1,6 @@
 // Game/Unsorted_10BFC220.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10BFC2B0.h"
 #include "Game/Class_10C3DD60.h"
 
 double GetTimeSeconds();
@@ -13,32 +14,18 @@ public:
     float Unknown04;
 };
 
-class Class_10BFC2B0
-{
-public:
-    void FUN_10bfc2b0();
-
-    char Unknown00[0x4];
-    Class_10BFC2B0_Unknown04* Unknown04;
-    int Unknown08;
-    char Unknown0C[0x4];
-    Class_10C3DD60** Unknown10;
-    char Unknown14[0x38];
-    float Unknown4C;
-};
-
 // FUNCTION: 0x10BFC2B0 ?FUN_10bfc2b0@Class_10BFC2B0@@QAEXXZ
 void Class_10BFC2B0::FUN_10bfc2b0()
 {
-    if (Unknown4C != DAT_10eafbdc)
+    if (m_StartTime != DAT_10eafbdc)
     {
-        float Elapsed = GetTimeSeconds() - Unknown4C;
+        float Elapsed = GetTimeSeconds() - m_StartTime;
         Unknown04->Unknown04 = Elapsed + Unknown04->Unknown04;
-        for (int i = 0; i < Unknown08; i++)
+        for (int i = 0; i < m_Count; i++)
         {
-            Class_10C3DD60* Obj = Unknown10[i];
+            Class_10C3DD60* Obj = m_Objects[i];
             Obj->SetField28(Obj->Class_10C3DD60::FUN_10c3dd60() + Elapsed);
         }
-        Unknown4C = 0.0f;
+        m_StartTime = 0.0f;
     }
 }

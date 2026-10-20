@@ -13,7 +13,7 @@ public:
     int Unknown04;
 };
 
-class Class_10E6B978;
+#include "Game/Class_10E6B978.h"
 
 class Class_10F46DA0
 {
@@ -23,13 +23,6 @@ public:
 };
 
 extern Class_10F46DA0* DAT_10f46da0;
-
-class Class_10E6B978 : public cActorManager
-{
-public:
-    Class_10E6B978();
-    virtual void HandleEvent(int A, int B, int C, int D);
-};
 
 // FUNCTION: 0x10A6DAA0 ??0Class_10E6B978@@QAE@XZ
 Class_10E6B978::Class_10E6B978()

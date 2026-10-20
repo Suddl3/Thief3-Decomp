@@ -1,6 +1,8 @@
 // Game/Unsorted_10923700.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
+#include "Game/Class_10A0C5F0.h"
+
 class Class_10E4AA80;
 
 struct Struct_109236B0;
@@ -42,27 +44,6 @@ public:
     float Field78;
     char Pad7C[0x18];
     Struct_109236B0* Unknown94;
-};
-
-// Game/Class_10A0C5F0.h's copy (that header includes Class_10E4AA80.h, which this file copies instead).
-class Class_10A0C5F0
-{
-public:
-    void FUN_10a0c5f0(int Index);
-
-    int FindIndex(Class_10E4AA80* Item)
-    {
-        for (int i = 0; i < Unknown00; i++)
-        {
-            if (Unknown08[i] == Item)
-                return i;
-        }
-        return -1;
-    }
-
-    int Unknown00;
-    int Unknown04;
-    Class_10E4AA80** Unknown08;
 };
 
 // Game/Class_10920A90.h's copy: the padding holds Unknown0C, and FUN_10923f30 is a member.

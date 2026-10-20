@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_10A0C5F0_H
 #define GAME_CLASS_10A0C5F0_H
 
-#include "Game/Class_10E4AA80.h"
+class Class_10E4AA80;
 
 class Class_10A0C5F0
 {
