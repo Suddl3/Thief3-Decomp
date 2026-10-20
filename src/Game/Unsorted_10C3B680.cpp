@@ -20,6 +20,42 @@ float FUN_10a4aa80(int A, int B, float C, float D);
 
 void FUN_10c3cac0(Struct_10C3CAC0* Out, const Struct_10BA9EF0& A, const Struct_10BA9F20& B, int Y);
 
+extern float DAT_10eafbdc;
+
+extern float DAT_10e49684;
+
+// FUNCTION: 0x10C3C9A0 ?FUN_10c3c9a0@@YAMMMMMM@Z
+float FUN_10c3c9a0(float A, float B, float C, float D, float E)
+{
+    if (A < DAT_10eafbdc)
+        A = DAT_10eafbdc;
+    else if (A > DAT_10e49684)
+        A = DAT_10e49684;
+    if (B < DAT_10eafbdc)
+        B = DAT_10eafbdc;
+    else if (B > DAT_10e49684)
+        B = DAT_10e49684;
+    if (C < DAT_10eafbdc)
+        C = DAT_10eafbdc;
+    else if (C > DAT_10e49684)
+        C = DAT_10e49684;
+    if (D < DAT_10eafbdc)
+        D = DAT_10eafbdc;
+    else if (D > DAT_10e49684)
+        D = DAT_10e49684;
+    if (E < DAT_10eafbdc)
+        E = DAT_10eafbdc;
+    else if (E > DAT_10e49684)
+        E = DAT_10e49684;
+    float Result = A * B;
+    Result = Result * E;
+    Result = Result * D;
+    Result = Result * C;
+    if (Result < DAT_10eafbdc)
+        Result = DAT_10eafbdc;
+    return Result;
+}
+
 // FUNCTION: 0x10C3CB40 ?FUN_10c3cb40@@YAMPAMPAVClass_10E5CBD8@@H@Z
 float FUN_10c3cb40(float* Out, Class_10E5CBD8* Obj, int Y)
 {

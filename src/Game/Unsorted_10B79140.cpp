@@ -1,0 +1,138 @@
+// Game/Unsorted_10B79140.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Declarations above the functions belong in include/ once they settle.
+
+class Class_10B79140
+{
+public:
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual void Virtual2();
+    virtual void Virtual3();
+    virtual void Virtual4();
+    virtual void Virtual5();
+    virtual void Virtual6();
+    virtual void Virtual7();
+    virtual void Virtual8();
+    virtual void Virtual9();
+    virtual void VirtualA();
+    virtual void VirtualB();
+    virtual void VirtualC();
+    virtual void VirtualD();
+    virtual void VirtualE();
+    virtual void VirtualF();
+    virtual void Virtual10();
+    virtual void Virtual11();
+    virtual void Virtual12();
+    virtual void Virtual13();
+    virtual void Virtual14();
+    virtual void Virtual15();
+    virtual void Virtual16();
+    virtual void Virtual17();
+    virtual void Virtual18();
+    virtual void Virtual19();
+    virtual void Virtual1A();
+    virtual void Virtual1B();
+    virtual void Virtual1C();
+    virtual void Virtual1D();
+    virtual void Virtual1E();
+    virtual void Virtual1F();
+    virtual void Virtual20();
+    virtual void Virtual21();
+    virtual void Virtual22();
+    virtual void Virtual23();
+    virtual void Virtual24();
+    virtual void Virtual25();
+    virtual void Virtual26();
+    virtual void Virtual27();
+    virtual void Virtual28();
+    virtual void Virtual29();
+    virtual void Virtual2A();
+    virtual void Virtual2B();
+    virtual void Virtual2C();
+    virtual void Virtual2D();
+    virtual void Virtual2E();
+    virtual void Virtual2F();
+    virtual void Virtual30();
+    virtual void Virtual31();
+    virtual void Virtual32();
+    virtual void Virtual33();
+    virtual void Virtual34();
+    virtual void Virtual35();
+    virtual void Virtual36();
+    virtual void Virtual37();
+    virtual void Virtual38();
+    virtual void Virtual39();
+    virtual void Virtual3A();
+    virtual void Virtual3B();
+    virtual void Virtual3C();
+    virtual void Virtual3D();
+    virtual void Virtual3E();
+    virtual void Virtual3F();
+    virtual void Virtual40();
+    virtual void Virtual41();
+    virtual void Virtual42();
+    virtual void Virtual43();
+    virtual void Virtual44();
+    virtual void Virtual45();
+    virtual void Virtual46();
+    virtual void Virtual47();
+    virtual void Virtual48();
+    virtual void Virtual49();
+    virtual void Virtual4A();
+    virtual void Virtual4B();
+    virtual void Virtual4C();
+    virtual void Virtual4D();
+    virtual void Virtual4E();
+    virtual void Virtual4F();
+    virtual void Virtual50();
+    virtual void Virtual51();
+    virtual void Virtual52();
+    virtual void Virtual53();
+    virtual void Virtual54();
+    virtual void Virtual55();
+    virtual void Virtual56();
+    virtual void Virtual57();
+    virtual void Virtual58();
+    virtual void Virtual59();
+    virtual void Virtual5A();
+    virtual void Virtual5B();
+    virtual void Virtual5C();
+    virtual void Virtual5D();
+    virtual void Virtual5E();
+    virtual void Virtual5F();
+    virtual void Virtual60();
+    virtual void Virtual61();
+    virtual void Virtual62();
+    virtual void Virtual63();
+    virtual void Virtual64();
+    virtual void Virtual65();
+    virtual void Virtual66();
+    virtual void Virtual67();
+    virtual void Virtual68();
+    virtual void Virtual69();
+    virtual void Virtual6A();
+    virtual void Virtual6B();
+    virtual void Virtual6C();
+    virtual void Virtual6D();
+    virtual void Virtual6E();
+    virtual void Virtual6F();
+    virtual void Virtual70();
+    virtual void Virtual71();
+    virtual void Virtual72();
+    virtual void Virtual73();
+    virtual void Virtual74();
+    virtual void Virtual75();
+    virtual void Virtual76();
+    virtual void Virtual77();
+    void FUN_10b79140();
+
+    char Unknown04[0x178];
+    unsigned char Field17c;
+};
+
+// FUNCTION: 0x10B79140 ?FUN_10b79140@Class_10B79140@@QAEXXZ
+void Class_10B79140::FUN_10b79140()
+{
+    Field17c = 1;
+    this->Virtual77();
+}

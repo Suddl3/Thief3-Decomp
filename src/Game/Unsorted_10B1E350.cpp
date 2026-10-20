@@ -1,5 +1,6 @@
 // Game/Unsorted_10B1E350.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+
 #include "Core/Core.h"
 #include <math.h>
 #include "Game/Struct_10B1DD70_Param.h"
@@ -37,6 +38,60 @@ public:
     char Pad35C[0xf8];
     float Unknown454;
 };
+
+extern float DAT_10eafbdc;
+
+extern float DAT_10e49684;
+
+class Class_10B1DB30
+{
+public:
+    char Unknown00[0x54C];
+    char Unknown54C;
+};
+
+void __cdecl FUN_10b1db30(Class_10B1DB30* Obj, float A, float* B);
+
+// FUNCTION: 0x10B1E350 ?FUN_10b1e350@@YAMPAVClass_10B1DB30@@MPAM@Z
+float __cdecl FUN_10b1e350(Class_10B1DB30* Obj, float Param, float* P)
+{
+    FUN_10b1db30(Obj, Param, P);
+    char Mode = Obj->Unknown54C;
+    if (Mode == 3)
+        return DAT_10eafbdc;
+    if (Mode == 0)
+    {
+        float High = P[1];
+        float Low = P[0];
+        float F;
+        if (Low >= High)
+            F = DAT_10e49684;
+        else
+            F = (Param - Low) / (High - Low);
+        float Base = P[6];
+        return ((P[9] - Base) * F + Base) * P[0xC] * P[3];
+    }
+    if (Mode == 1)
+    {
+        float High = P[2];
+        float Low = P[1];
+        float F;
+        if (Low >= High)
+            F = DAT_10e49684;
+        else
+            F = (Param - Low) / (High - Low);
+        float Base = P[7];
+        return ((P[10] - Base) * F + Base) * P[0xC] * P[4];
+    }
+    float Low = P[2];
+    float F;
+    if (Low >= DAT_10e49684)
+        F = DAT_10e49684;
+    else
+        F = (Param - Low) / (DAT_10e49684 - Low);
+    float Base = P[8];
+    return ((P[11] - Base) * F + Base) * P[0xC] * P[5];
+}
 
 // FUNCTION: 0x10B1E450 ?FUN_10b1e450@@YAXPAUStruct_10B1DD70_Param@@@Z
 void FUN_10b1e450(Struct_10B1DD70_Param* A)
