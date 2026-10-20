@@ -3,14 +3,7 @@
 #include "Game/Class_10E4AA80.h"
 #include "Game/Class_10920A90.h"
 #include "Game/Class_10A0C5F0.h"
-
-struct Struct_109236B0
-{
-    char Unknown00[0xC];
-    int Unknown0C;
-    char Unknown10[4];
-    Struct_109236B0** Unknown14;
-};
+#include "Game/Struct_109236B0.h"
 
 // FUNCTION: 0x109236B0 ?VisitTree@Class_10920A90@@QAEXPAUStruct_109236B0@@HH@Z
 void Class_10920A90::VisitTree(Struct_109236B0* A, int B, int C)

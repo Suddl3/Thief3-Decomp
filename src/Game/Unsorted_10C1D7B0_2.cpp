@@ -5,17 +5,7 @@
 #include "Game/Class_10DC1750.h"
 #include "Game/Class_10DC1750_Result.h"
 #include "Game/Class_10FF667C.h"
-
-class Class_10E991C4;
-
-class Class_10E991C4
-{
-public:
-    virtual void Virtual0();
-    virtual void FUN_10c1f420(int A);
-
-    Class_10DC1750* Unknown04;
-};
+#include "Game/Class_10E991C4.h"
 
 extern Class_10FF667C* DAT_10ff667c;
 
@@ -27,7 +17,7 @@ struct Struct_10C1F4D0
 // FUNCTION: 0x10C1F420 ?FUN_10c1f420@Class_10E991C4@@UAEXH@Z
 void Class_10E991C4::FUN_10c1f420(int A)
 {
-    Class_10DC1750_Result* Result = Unknown04->FUN_10dc1750();
+    Class_10DC1750_Result* Result = ((Class_10DC1750*)Unknown04)->FUN_10dc1750();
     ((Class_10BAE580*)&Result->Unknown1C)->FUN_10bae580(A, this);
 }
 

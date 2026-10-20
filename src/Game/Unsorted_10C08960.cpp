@@ -4,6 +4,7 @@
 #include "Game/Class_10BAA8A0.h"
 #include "Game/Class_10C08DE0.h"
 #include "Game/Class_10BABED0.h"
+#include "Game/cItemList.h"
 
 class Class_10BAA6B0_Param;
 
@@ -19,42 +20,6 @@ Class_10BABED0* FUN_10baa6b0(Class_10BAA6B0_Param* Param);
 
 class Class_10B9CAC0 : public Class_10B9CA00
 {
-};
-
-class cIntArray
-{
-public:
-    void SetCount(int NewCount);
-
-    int FindIndex(int Item)
-    {
-        for (int i = 0; i < Unknown00; i++)
-        {
-            if (Unknown08[i] == Item)
-                return i;
-        }
-        return -1;
-    }
-
-    void Append(int Item)
-    {
-        int Index = Unknown00;
-        SetCount(Index + 1);
-        Unknown08[Index] = Item;
-    }
-
-    int Unknown00;
-    int m_CapacityBytes;
-    int* Unknown08;
-};
-
-class cItemList
-{
-public:
-    void AddUnique(int Item);
-
-    char Unknown00[0x14];
-    cIntArray m_ItemIds;
 };
 
 // FUNCTION: 0x10C08DE0 ?FUN_10c08de0@Class_10C08DE0@@QAEXXZ
@@ -82,5 +47,11 @@ void Class_10C08DE0::FUN_10c08de0()
 void cItemList::AddUnique(int Item)
 {
     if (m_ItemIds.FindIndex(Item) == -1)
-        m_ItemIds.Append(Item);
+    {
+        // The game's cIntArray::Append is inlined at this call site.
+        cIntArray& Array = m_ItemIds;
+        int Index = Array.Unknown00;
+        Array.SetCount(Index + 1);
+        Array.Unknown08[Index] = Item;
+    }
 }

@@ -2,7 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Game/Class_10905A90_Member.h"
-#include "Game/Class_10E9BB80.h"
+#include "Game/cIntHashTable.h"
 
 Class_10905A90_Member* GetAllocator();
 
@@ -10,39 +10,6 @@ Class_10905A90_Member* GetAllocator();
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
-
-// The class whose vtable is DAT_10ebff38: a Class_10E9BB80 whose slot 1 (FUN_10daf820) overrides
-// CompareUnsigned and whose slot 2 (FUN_10daf850) is its own.
-class Class_10EBFF38 : public Class_10E9BB80
-{
-public:
-    virtual int CompareUnsigned(unsigned int* A, unsigned int* B);
-    virtual void Virtual2();
-};
-
-class Class_10C30DD0_Node;
-
-// Game/cIntHashTable.h copied whole, with the constructor its objects run (the header has none).
-class cIntHashTable
-{
-public:
-    cIntHashTable() : m_Collisions(0), m_Count(0), m_BucketCount(0), m_FixedSize(false), m_Buckets(0)
-    {
-        Rehash(0x40);
-    }
-
-    unsigned int Insert(const int& Key, const int& Value);
-    void Rehash(int Size);
-
-    int m_Collisions;
-    int m_Count;
-    int m_BucketBits;
-    int m_BucketCount;
-    bool m_FixedSize;
-    char Pad11[0x3];
-    Class_10C30DD0_Node** m_Buckets;
-    Class_10EBFF38 m_KeyTraits;
-};
 
 // Game/Class_10C3EA90.h copied whole, minus its destructor (not used here) and the 4 bytes after
 // the union (the object is 0x20 bytes: the new passes 0x20).

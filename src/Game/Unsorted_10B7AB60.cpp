@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10B3A460.h"
 #include "Game/Class_10B7AB60.h"
+#include "Game/Class_10B7AB80.h"
 
 class Class_10B7AB60_Member
 {
@@ -76,17 +77,6 @@ public:
 };
 
 Class_10B3A460* GetEntries();
-
-class Class_10B7AB80
-{
-public:
-    void FUN_10b7ab80(int A, float B);
-
-    char Unknown00[8];
-    int Unknown08;
-    char Unknown0C[0x10];
-    float Unknown1C;
-};
 
 class Class_10B7AC30_Target
 {
@@ -181,8 +171,9 @@ void Class_10B7AB60::FUN_10b7ab60()
 // FUNCTION: 0x10B7AB80 ?FUN_10b7ab80@Class_10B7AB80@@QAEXHM@Z
 void Class_10B7AB80::FUN_10b7ab80(int A, float B)
 {
-    Unknown08 = A;
-    Unknown1C = B * GetEntries()->GetEntry(A)->Unknown04;
+    // the base class's index (0x08) and scale (0x1C)
+    *(int*)((char*)this + 0x8) = A;
+    *(float*)((char*)this + 0x1C) = B * GetEntries()->GetEntry(A)->Unknown04;
 }
 
 // FUNCTION: 0x10B7AC30 ?FUN_10b7ac30@Class_10B7AC30@@QAEXXZ

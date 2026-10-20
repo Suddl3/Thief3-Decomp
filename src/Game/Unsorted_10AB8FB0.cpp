@@ -1,27 +1,9 @@
 // Game/Unsorted_10AB8FB0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10AB8FB0.h"
+#include "Game/Class_10AB8BE0.h"
 
 extern "C" void* memmove(void* Dest, const void* Src, unsigned Count);
-
-class Class_10AB8BE0
-{
-public:
-    ~Class_10AB8BE0();
-
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    int Unknown10;
-    int Unknown14;
-    int Unknown18;
-    int Unknown1C;
-    int Unknown20;
-    int Unknown24;
-    int Unknown28;
-    int Unknown2C;
-};
 
 // FUNCTION: 0x10AB8FB0 ?MoveRange@Class_10AB8FB0@@QAEXHHH@Z
 void Class_10AB8FB0::MoveRange(int From, int To, int Count)
@@ -52,12 +34,12 @@ void Class_10AB8FB0::MoveRange(int From, int To, int Count)
                 Class_10AB8BE0* Item = Unknown08 + I;
                 if (Item)
                 {
-                    Item->Unknown18 = 0;
-                    Item->Unknown1C = 0;
-                    Item->Unknown20 = 0;
-                    Item->Unknown24 = 0;
-                    Item->Unknown28 = 0;
-                    Item->Unknown2C = 0;
+                    Item->Unknown18.Count = 0;
+                    Item->Unknown18.m_CapacityBytes = 0;
+                    Item->Unknown18.Data = 0;
+                    Item->Unknown24.Count = 0;
+                    Item->Unknown24.m_CapacityBytes = 0;
+                    Item->Unknown24.Data = 0;
                     Item->Unknown00 = 0;
                     Item->Unknown04 = 0;
                     Item->Unknown08 = 0;
@@ -72,12 +54,12 @@ void Class_10AB8FB0::MoveRange(int From, int To, int Count)
             Class_10AB8BE0* Item = Unknown08 + I;
             if (Item)
             {
-                Item->Unknown18 = 0;
-                Item->Unknown1C = 0;
-                Item->Unknown20 = 0;
-                Item->Unknown24 = 0;
-                Item->Unknown28 = 0;
-                Item->Unknown2C = 0;
+                Item->Unknown18.Count = 0;
+                Item->Unknown18.m_CapacityBytes = 0;
+                Item->Unknown18.Data = 0;
+                Item->Unknown24.Count = 0;
+                Item->Unknown24.m_CapacityBytes = 0;
+                Item->Unknown24.Data = 0;
                 Item->Unknown00 = 0;
                 Item->Unknown04 = 0;
                 Item->Unknown08 = 0;

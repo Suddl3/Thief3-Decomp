@@ -9,6 +9,7 @@
 #include "Game/Class_1091CCF0.h"
 #include "Game/Class_1091E3E0.h"
 #include "Game/Class_1091E3F0.h"
+#include "Game/Class_1091E400.h"
 #include "Game/Class_1091E410.h"
 
 extern float DAT_10f2c8dc;
@@ -26,13 +27,6 @@ public:
     void* VTable;
     char Pad04[0x17c];
     float Field180;
-};
-
-struct Class_1091E400 {
-    char unknown_00[0x124];
-    void* unknown_124;
-
-    void* FUN_1091e400();
 };
 
 // FUNCTION: 0x10914D70 ?GetField09@Class_10914D70@@QAEEXZ

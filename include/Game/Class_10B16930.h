@@ -3,9 +3,11 @@
 #ifndef GAME_CLASS_10B16930_H
 #define GAME_CLASS_10B16930_H
 
+#include "Game/WindowManager.h"
+
 class cIntArray;
 
-class Class_10B16930
+class Class_10B16930 : public WindowManager
 {
 public:
     cIntArray FUN_109e6d80(int A);
@@ -13,7 +15,7 @@ public:
     void FUN_10b16930();
     void FUN_10b16780();
     void ShowJunkItemWindow(int A);
-    void FUN_10b16ef0(int A);
+    void FUN_10b16ef0(bool A);
     void EnterUnEquipFirst();
     void FUN_10b16300(int A, int B, bool C);
     void FUN_10b163c0(int A);

@@ -3,16 +3,17 @@
 #ifndef GAME_CLASS_10E6D400_H
 #define GAME_CLASS_10E6D400_H
 
+class Class_10AA25F0_Param;
+class Class_10AA25F0_Param2;
+
 class Class_10E6D400
 {
 public:
-    Class_10E6D400* Construct();
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual int FUN_10aa25f0(int A, Class_10AA25F0_Param* B, Class_10AA25F0_Param2* C);
 
-    union
-    {
-        void* Field00;
-        void* Unknown00;
-    };
+    Class_10E6D400* Construct();
 };
 
 #endif // GAME_CLASS_10E6D400_H

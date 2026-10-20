@@ -6,10 +6,10 @@
 class Class_10A345C0_Node
 {
 public:
-    Class_10A345C0_Node();
+    Class_10A345C0_Node() { Key[0] = -1; Key[1] = -1; }
 
-    __int64 Key;
-    char Pad08[0x8];
+    // The key is 16 bytes wide; its constructor fills both halves with -1.
+    __int64 Key[2];
     int Value;
     Class_10A345C0_Node* Next;
 };

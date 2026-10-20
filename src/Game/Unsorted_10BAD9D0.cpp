@@ -7,16 +7,11 @@
 #include "Game/cVisualSubsystemArray.h"
 #include "Game/Class_10BAE0C0.h"
 #include "Game/FCoords.h"
+#include "Game/Struct_10BADCE0.h"
 
 extern "C" int __cdecl sprintf(char* Out, const char* Format, ...);
 
 extern const char DAT_10e8d924[];
-
-struct Struct_10BADCE0
-{
-    char Unknown00[0xc];
-    FRotator Rotation;
-};
 
 void FUN_10badc40(Struct_10BADCE0* Data, const FRotator& Rotation, float Distance, int A, int B);
 

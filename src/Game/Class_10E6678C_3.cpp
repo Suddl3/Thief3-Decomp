@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Game/cIntArray.h"
+#include "Game/Class_10E6678C.h"
 
 struct Struct_10A3AB10
 {
@@ -16,25 +17,6 @@ public:
 };
 
 int FUN_10aa54a0(int A);
-
-class Class_10E6678C
-{
-public:
-    virtual void Virtual0();
-    virtual void SetItems(int Count, Struct_10A3AB10* Items);
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    void FUN_10a39ed0(Struct_10A3AB10* Item);
-
-    char Unknown04[0xe4];
-    cIntArray m_Items;
-    char Unknown0F4[0x5c];
-    int Unknown150;
-};
 
 // FUNCTION: 0x10A3AB10 ?SetItems@Class_10E6678C@@UAEXHPAUStruct_10A3AB10@@@Z
 void Class_10E6678C::SetItems(int Count, Struct_10A3AB10* Items)
@@ -53,5 +35,5 @@ void Class_10E6678C::SetItems(int Count, Struct_10A3AB10* Items)
         FUN_10a39ed0(&Local);
         ((Class_10A3AB10_Data*)m_Items.Data[i])->Virtual1(&Local);
     }
-    Virtual7();
+    FUN_10a3a3f0();
 }

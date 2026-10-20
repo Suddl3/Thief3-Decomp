@@ -6,7 +6,7 @@
 struct Struct_10B1B8A0_Item
 {
 public:
-    int Unknown00;
+    void* Unknown00;
     union
     {
         int Unknown04;

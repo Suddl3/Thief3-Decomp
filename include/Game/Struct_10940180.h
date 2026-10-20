@@ -3,19 +3,27 @@
 #ifndef GAME_STRUCT_10940180_H
 #define GAME_STRUCT_10940180_H
 
-#include "Core/Core.h"
+// The game's FVector: a plain struct of three floats. The decorated names of
+// the functions that take it say "struct", so Core's "class FVector" cannot
+// stand in for it here.
+struct FVector
+{
+    float X;
+    float Y;
+    float Z;
+};
 
 struct Struct_10940180
 {
 public:
     char Unknown00[0x24];
-    FVector Unknown24;
+    FVector Direction;              // negated into the direction that is passed on
     char Unknown30[4];
-    FVector Unknown34;
+    FVector Start;                  // the point the call starts from
     char Pad40[0x24];
     int Unknown64;
     char Pad68[0x10];
-    float Unknown78;
+    float Radius;                   // doubled into the radius that is passed on
     char Unknown7C[0xC8];
     char Unknown144[0x40];
     char Unknown184;

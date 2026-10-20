@@ -3,18 +3,24 @@
 #ifndef GAME_COBJECTTABLE_H
 #define GAME_COBJECTTABLE_H
 
+#include "Game/cIntArray.h"
+
 class Class_10AAB5C0;
 class Object_10BE58C0;
 
 class cObjectTable
 {
 public:
-    virtual void Virtual0();
+    virtual ~cObjectTable();
     virtual void SerializeRef(Object_10BE58C0* Ar, Class_10AAB5C0*& Obj);
     void FUN_10ba04c0();
 
-    char Unknown04[0x10];
-    Class_10AAB5C0** m_Objects;
+    int Unknown04;
+    int Unknown08;
+    // The table's objects: the array's data pointer is the one at +0x14.
+    cIntArray m_Objects;
+    cIntArray Unknown18;
+    cIntArray Unknown24;
 };
 
 #endif // GAME_COBJECTTABLE_H

@@ -17,20 +17,13 @@
 #include "Game/Class_10C3F170.h"
 #include "Game/Class_10E9B580.h"
 #include "Game/CadenceManager.h"
+#include "Game/Class_10C3E140.h"
 
 extern void* DAT_10e9b020[];
 
 extern void* DAT_10e9afd0[];
 
 void FUN_10c3dee0();
-
-class Class_10C3E140
-{
-public:
-    char Unknown00[0x18];
-    unsigned char Field18;
-    unsigned char IsActive();
-};
 
 extern int DAT_10ff70a4;
 

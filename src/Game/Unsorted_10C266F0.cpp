@@ -2,23 +2,17 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_109B6D50.h"
 #include "Game/Class_10E9925C.h"
+#include "Game/Struct_10C266F0.h"
 
 struct Struct_10C266F0_Item
 {
-};
-
-struct Struct_10C266F0
-{
-    int Unknown00;
-    int Unknown04;
-    Struct_10C266F0_Item** Unknown08;
 };
 
 // FUNCTION: 0x10C266F0 ?DeleteAll@@YAXPAUStruct_10C266F0@@@Z
 void DeleteAll(Struct_10C266F0* List)
 {
     for (int i = 0; i < List->Unknown00; i++)
-        delete List->Unknown08[i];
+        delete (Struct_10C266F0_Item*)List->Unknown08[i];
     List->Unknown00 = 0;
 }
 

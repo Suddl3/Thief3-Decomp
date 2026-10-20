@@ -13,10 +13,14 @@ class cVolume;
 class cVolumeManager : public cActorManager
 {
 public:
-    virtual void HandleEvent(int Event, int A, int B, int C);
+    // Virtual17, Virtual18 and Virtual19 are called through vtable slots 17 to 19,
+    // so no other virtual may be declared before them. HandleEvent follows them
+    // because the base's slot 0 is cActorManager::FUN_10a4c470, the event handler
+    // this one falls back to for the events it does not handle.
     virtual void Virtual17(int A, int B, int C);
     virtual void Virtual18(int A, int B, int C);
     virtual void Virtual19(int A, int B, int C);
+    virtual void HandleEvent(int Event, int A, int B, int C);
     virtual void Virtual4();
     virtual void Virtual5();
     virtual void Virtual6();

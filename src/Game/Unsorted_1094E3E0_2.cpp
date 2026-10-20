@@ -2,27 +2,10 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_1094E3A0.h"
+#include "Game/Class_10F2C744.h"
 #include "Game/Elem_1094E3A0.h"
 
 Class_10905A90_Member* GetAllocator();
-
-// The render device (its Virtual3 creates a vertex buffer and returns a status).
-class Class_10F2C744
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual int Virtual3(int A, int B, int C, const char* Name, void* Out);
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8();
-    virtual void Virtual9();
-    virtual void Virtual10();
-    virtual void Virtual11();
-};
 
 extern Class_10F2C744* DAT_10f2c744;
 

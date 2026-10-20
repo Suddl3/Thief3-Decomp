@@ -5,6 +5,7 @@
 #include "Game/Class_10E5B578.h"
 #include "Game/Class_10E6DC88.h"
 #include "Game/Class_10E79564.h"
+#include "Game/Class_10E7C30C.h"
 
 Class_10905A90_Member* GetAllocator();
 
@@ -12,22 +13,6 @@ Class_10905A90_Member* GetAllocator();
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
-
-// Class_10E7C30C.h's declaration with the constructor added; its primary table is
-// the destructor, Virtual1 and FUN_10b359d0, and its second base's table is Virtual0.
-class Class_10E7C30C : public Class_10E6DC88
-{
-public:
-    Class_10E7C30C()
-        : Class_10E6DC88(0x73)
-    {
-    }
-
-    virtual ~Class_10E7C30C();
-    virtual void Virtual1();
-    virtual void FUN_10b359d0();
-    virtual int Virtual0(int A, int B, int C, int* D);
-};
 
 // FUNCTION: 0x10B358D0 ?Create@Class_10E79564@@UAEPAVClass_10E7C30C@@XZ
 Class_10E7C30C* Class_10E79564::Create()

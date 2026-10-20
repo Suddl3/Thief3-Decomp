@@ -38,7 +38,7 @@ bool Class_1090FE50::SaveToFile(Class_10AA9DA0* A, cString& B, cString& C)
         {
             CloseHandle(File);
             bool Flag = false;
-            A->FUN_10914470(B, Flag);
+            A->FUN_10914470(B, (unsigned char&)Flag);
             A->RemoveByName(B);
             this->FUN_1090f400(B, A->FUN_10aa9da0(), 1, Flag);
             return true;

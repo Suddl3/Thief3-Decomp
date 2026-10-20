@@ -3,14 +3,18 @@
 #ifndef GAME_CLASS_10E6C470_H
 #define GAME_CLASS_10E6C470_H
 
+#include "Game/cIntArray.h"
+
 class Class_10E6C470
 {
 public:
     Class_10E6C470();
 
-    virtual void Virtual0();
+    virtual ~Class_10E6C470();
 
-    char Unknown04[0x80c];
+    char Unknown04[0x7F8];
+    cIntArray Unknown7FC;
+    char Unknown808[0x8];
 };
 
 #endif // GAME_CLASS_10E6C470_H

@@ -3,6 +3,7 @@
 
 #include "Core/Core.h"
 #include "Game/Class_10B21570.h"
+#include "Game/cT3PlayerListener.h"
 
 class Class_10B38E90_Arg1;
 
@@ -29,21 +30,6 @@ extern const char DAT_10e7c4e0[];
 
 extern char DAT_10e6b668[];
 
-class cT3PlayerListener
-{
-public:
-    void PickUpBody();
-    void FUN_10b37760();
-    void FUN_10b37a30();
-    void FUN_10b37fe0();
-    void FUN_10b379e0(Class_10B38E90_Arg2* A, int B);
-    void FUN_10b382b0(Class_10B38E90_Arg1* A, Class_10B38E90_Arg2* B, int C);
-    void FUN_10b38e90(Class_10B38E90_Arg1* A, Class_10B38E90_Arg2* B, int C);
-
-    char Unknown00[4];
-    Class_10B21570* Unknown04;
-};
-
 // FUNCTION: 0x10B38E90 ?FUN_10b38e90@cT3PlayerListener@@QAEXPAVClass_10B38E90_Arg1@@PAVClass_10B38E90_Arg2@@H@Z
 void cT3PlayerListener::FUN_10b38e90(Class_10B38E90_Arg1* A, Class_10B38E90_Arg2* B, int C)
 {
@@ -60,7 +46,7 @@ void cT3PlayerListener::FUN_10b38e90(Class_10B38E90_Arg1* A, Class_10B38E90_Arg2
     }
     if (!FUN_10af3690(**Name, DAT_10e7c4f8))
     {
-        if (Unknown04->FUN_10b21570())
+        if (((Class_10B21570*)Unknown04)->FUN_10b21570())
             FUN_10b37a30();
         return;
     }

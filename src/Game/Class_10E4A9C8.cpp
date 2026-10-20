@@ -1,6 +1,8 @@
 // Game/Class_10E4A9C8.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
+#include "Game/Class_1091E2E0.h"
+
 extern void* DAT_10e4a9c8[];
 
 class FArray
@@ -13,26 +15,11 @@ public:
     int ArrayMax;
 };
 
-class Class_1091E2E0
-{
-public:
-    void Reset();
-
-    void** Unknown00;
-    char m_Matrix[0x40];
-};
-
 class Class_10E4A9C8 : public Class_1091E2E0
 {
 public:
     Class_10E4A9C8* Init();
 
-    int Unknown44;
-    bool Unknown48;
-    int Unknown4C;
-    char Unknown50[0xC];
-    int Unknown5C;
-    char Unknown60[4];
     FArray Unknown64;
     FArray Unknown70;
     FArray Unknown7C;
@@ -51,7 +38,7 @@ public:
 Class_10E4A9C8* Class_10E4A9C8::Init()
 {
     Reset();
-    Unknown00 = DAT_10e4a9c8;
+    *(void**)this = DAT_10e4a9c8;
     Unknown64.FArray::FArray();
     Unknown70.FArray::FArray();
     Unknown7C.FArray::FArray();

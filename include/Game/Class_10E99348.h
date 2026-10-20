@@ -5,12 +5,19 @@
 
 struct Struct_10C274B0;
 
+// The table the constructor installs (0x10E99348).
+extern void* DAT_10e99348[];
+
 class Class_10E99348
 {
 public:
     virtual bool FUN_10c274b0(Struct_10C274B0* List);
 
-    Class_10E99348();
+    Class_10E99348()
+    {
+        // The table is set by hand: the class's own table is the game's.
+        *(void***)this = DAT_10e99348;
+    }
 };
 
 #endif // GAME_CLASS_10E99348_H

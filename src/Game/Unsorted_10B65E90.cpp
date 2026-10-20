@@ -5,16 +5,9 @@
 #include "Game/Struct_10B6C180.h"
 #include "Game/WindowManager.h"
 #include "Game/Class_10B66020.h"
+#include "Game/Class_10A52A40.h"
 
 extern WindowManager* GWindowManager;
-
-class Class_10A52A40_Member;
-
-class Class_10A52A40
-{
-public:
-    void FUN_10a52a40(Class_10A52A40_Member* A);
-};
 
 class Class_10B65FD0_Unknown18C
 {
@@ -129,8 +122,6 @@ class Class_10B65FD0 : public Class_10A52A40
 public:
     void SetSelected(Class_10A52A40_Member* A);
 
-    char Unknown00[0xC4];
-    int Unknown0C4;
     char Unknown0C8[0xC4];
     Class_10B65FD0_Unknown18C* Unknown18C;
 };
@@ -141,7 +132,7 @@ void Class_10B65FD0::SetSelected(Class_10A52A40_Member* A)
     FUN_10a52a40(A);
     if (Unknown18C)
     {
-        if (Unknown0C4)
+        if (m_Selected)
             Unknown18C->Virtual102(A);
         else
             Unknown18C->Virtual56(0);

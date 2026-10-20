@@ -1,6 +1,7 @@
 // Game/Unsorted_10950230.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10950230.h"
+#include "Game/IDirect3DTexture8.h"
 
 extern "C" __declspec(dllimport) int __stdcall _BinkWait(void* Bink);
 
@@ -10,35 +11,10 @@ extern "C" __declspec(dllimport) int __stdcall _BinkCopyToBuffer(void* Bink, voi
 
 extern "C" __declspec(dllimport) void __stdcall _BinkNextFrame(void* Bink);
 
-struct RECT;
-
 struct D3DLOCKED_RECT
 {
     int Pitch;
     void* pBits;
-};
-
-class IDirect3DTexture8
-{
-public:
-    virtual long __stdcall Virtual0();
-    virtual long __stdcall Virtual1();
-    virtual long __stdcall Virtual2();
-    virtual long __stdcall Virtual3();
-    virtual long __stdcall Virtual4();
-    virtual long __stdcall Virtual5();
-    virtual long __stdcall Virtual6();
-    virtual long __stdcall Virtual7();
-    virtual long __stdcall Virtual8();
-    virtual long __stdcall Virtual9();
-    virtual long __stdcall Virtual10();
-    virtual long __stdcall Virtual11();
-    virtual long __stdcall Virtual12();
-    virtual long __stdcall Virtual13();
-    virtual long __stdcall Virtual14();
-    virtual long __stdcall Virtual15();
-    virtual long __stdcall LockRect(unsigned int Level, D3DLOCKED_RECT* pLockedRect, const RECT* pRect, unsigned long Flags);
-    virtual long __stdcall UnlockRect(unsigned int Level);
 };
 
 class Class_10950230_Unknown00_Unknown00
@@ -67,7 +43,7 @@ bool Class_10950230::DecodeFrame()
         {
             _BinkDoFrame(Unknown00->Unknown00);
             D3DLOCKED_RECT Locked;
-            if (Unknown00->Unknown04->LockRect(0, &Locked, 0, 0x2000) >= 0)
+            if (Unknown00->Unknown04->LockRect(0, (Struct_10952740*)&Locked, 0, 0x2000) >= 0)
             {
                 int Result = _BinkCopyToBuffer(Unknown00->Unknown00, Locked.pBits, Locked.Pitch, Unknown00->Unknown0C, 0, 0, 5);
                 Unknown00->Unknown04->UnlockRect(0);

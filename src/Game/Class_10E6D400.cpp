@@ -4,6 +4,7 @@
 #include "Game/Class_1098E330.h"
 #include "Game/Object_10970890.h"
 #include "Game/Class_10970890.h"
+#include "Game/Class_10E6D400.h"
 
 class Class_10AA25F0_Param
 {
@@ -28,22 +29,6 @@ public:
     virtual void Virtual3();
     virtual void Virtual4();
     virtual int Virtual5(int A);
-};
-
-class Class_10E6D400
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual int FUN_10aa25f0(int A, Class_10AA25F0_Param* B, Class_10AA25F0_Param2* C);
-
-    Class_10E6D400* Construct();
-
-    union
-    {
-        void* Field00;
-        void* Unknown00;
-    };
 };
 
 // FUNCTION: 0x10AA25F0 ?FUN_10aa25f0@Class_10E6D400@@UAEHHPAVClass_10AA25F0_Param@@PAVClass_10AA25F0_Param2@@@Z

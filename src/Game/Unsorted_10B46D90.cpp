@@ -3,18 +3,11 @@
 #include "Core/Core.h"
 #include "Game/Class_10B46D90.h"
 #include "Game/Class_10B46E50.h"
+#include "Game/Class_10E68F8C.h"
 
 extern void* DAT_10e7b558[];
 
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
-
-class Class_10E68F8C
-{
-public:
-    virtual void Virtual0(int A, int* B, float C);
-
-    char Unknown04[0x3C];
-};
 
 class Class_10E7B558
 {
@@ -49,7 +42,7 @@ void Class_10B46D90::FUN_10b46d90()
     Object_10B46D90* Obj = new(0, 0, 0, 0, 0) Object_10B46D90;
     char Buffer[12];
     int Value = Virtual6(Buffer);
-    Obj->Unknown0C.Virtual0(Value, &Unknown10, 0.1f);
+    Obj->Unknown0C.Virtual0(Value, (FVector*)&Unknown10, 0.1f);
     Virtual77(Obj);
     for (int i = 0; i < Unknown0B8; i++)
     {
@@ -65,7 +58,7 @@ void Class_10B46E50::FUN_10b46e50()
     Object_10B46E50* Obj = new(0, 0, 0, 0, 0) Object_10B46E50;
     FVector Vector;
     int Result = Virtual6(&Vector);
-    Obj->Unknown0C.Virtual0(Result, &Unknown154, 0.1f);
+    Obj->Unknown0C.Virtual0(Result, (FVector*)&Unknown154, 0.1f);
     Virtual77(Obj);
     for (int i = 0; i < Unknown0B8; i++)
     {

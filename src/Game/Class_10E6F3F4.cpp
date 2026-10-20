@@ -1,6 +1,7 @@
 // Game/Class_10E6F3F4.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10E5BBE0.h"
+#include "Game/Struct_10ABA050.h"
 
 class Object_10ABB070
 {
@@ -10,24 +11,13 @@ public:
     virtual void Virtual2();
 };
 
-struct Struct_10ABA050
+// Releases the object in the first field before the struct goes away.
+Struct_10ABA050::~Struct_10ABA050()
 {
-    ~Struct_10ABA050()
-    {
-        Object_10ABB070* P = Unknown00;
-        if (P)
-            P->Virtual2();
-    }
-
-    Object_10ABB070* Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    int Unknown10;
-    int Unknown14;
-    int Unknown18;
-    char Unknown1C;
-};
+    Object_10ABB070* P = Unknown00;
+    if (P)
+        P->Virtual2();
+}
 
 class Class_10E6F3F4 : public Class_10E5BBE0
 {

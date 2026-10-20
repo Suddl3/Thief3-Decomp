@@ -4,6 +4,8 @@
 #include "Game/Class_10E5D5E0Base.h"
 #include "Game/cActorManager.h"
 #include "Game/Class_10E5D5E0.h"
+#include "Game/Class_10E5B578.h"
+#include "Game/Class_10E6CD50.h"
 
 class Class_10E6CE28
 {
@@ -19,12 +21,6 @@ public:
     int Unknown08;
 };
 
-class Class_10E6CD50 : public Class_10E6CE28, public cActorManager
-{
-public:
-    virtual void FUN_10a94fc0();
-};
-
 class Class_10F46DA0
 {
 public:
@@ -37,9 +33,10 @@ extern Class_10F46DA0* DAT_10f46da0;
 // FUNCTION: 0x10A94FC0 ?FUN_10a94fc0@Class_10E6CD50@@UAEXXZ
 void Class_10E6CD50::FUN_10a94fc0()
 {
-    Class_10E6CE28* Owner = (Class_10E6CE28*)GetUnknown08();
+    // GetUnknown08() gives the owner kept at +0x08; the manager is the secondary base at +0x0C.
+    Class_10E6CE28* Owner = (Class_10E6CE28*)((Class_10E6CE28*)this)->GetUnknown08();
     Class_10E6CE28* Result = Owner->Virtual4(0);
     Class_10E5D5E0 Local;
     Local.Unknown00 = Result->Unknown04;
-    DAT_10f46da0->Virtual1(this, 0x61, -1, &Local);
+    DAT_10f46da0->Virtual1((cActorManager*)(Class_10E5B578*)this, 0x61, -1, &Local);
 }

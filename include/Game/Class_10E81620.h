@@ -3,11 +3,11 @@
 #ifndef GAME_CLASS_10E81620_H
 #define GAME_CLASS_10E81620_H
 
-#include "Game/Class_10AA82D0.h"
+#include "Game/Class_10E7E4E0.h"
 
 class Class_10B22020;
 
-class Class_10E81620 : public Class_10AA82D0
+class Class_10E81620 : public Class_10E7E4E0
 {
 public:
     virtual void Virtual1();
@@ -15,13 +15,13 @@ public:
     virtual void FUN_10b4fd30(Class_10B22020* Param);
     Class_10E81620* Init();
 
-    int Unknown04;
-    int Unknown08;
-    char Unknown0C[0x10];
+    float Unknown10;
+    char Unknown14;
+    float Unknown18;
     int Unknown1C;
     int Unknown20;
     int Unknown24;
-    char Pad28[0x24];
+    char Pad28[0x48];
 };
 
 #endif // GAME_CLASS_10E81620_H

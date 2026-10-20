@@ -3,31 +3,36 @@
 #ifndef GAME_CLASS_10E6678C_H
 #define GAME_CLASS_10E6678C_H
 
-class Class_10A3A4C0;
+#include "Game/cIntArray.h"
+
 class Class_10E6678C_UnknownFC;
+struct Struct_10A3AB10;
+struct Struct_10A3A430;
 
 class Class_10E6678C
 {
 public:
     virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
+    virtual void SetItems(int Count, Struct_10A3AB10* Items);
+    virtual void FUN_10a3a430(int Count, Struct_10A3A430* Dst);
     virtual bool FUN_10a3a4c0();
     virtual void Virtual4();
     virtual void FUN_10a3a630();
     virtual void Virtual6();
     virtual void FUN_10a3a3f0();
 
+    void FUN_10a39ed0(Struct_10A3AB10* Item);
+
     char Unknown04[0xE4];
-    int m_Items;
-    char Unknown0EC[4];
-    Class_10A3A4C0** Unknown0F0;
+    cIntArray m_Items;
     int m_Count;
-    char UnknownF8[4];
+    char Unknown0F8[4];
     Class_10E6678C_UnknownFC** m_Entries;
     char Unknown100[0x34];
     char Unknown134;
     char Pad135[0x3];
+    char Unknown138[0x18];
+    int Unknown150;
 };
 
 #endif // GAME_CLASS_10E6678C_H

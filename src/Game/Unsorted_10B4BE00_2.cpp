@@ -1,6 +1,7 @@
 // Game/Unsorted_10B4BE00_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10B398B0.h"
+#include "Game/Class_10E81590.h"
 
 class AGarrett;
 
@@ -45,24 +46,6 @@ public:
 
 extern void* DAT_10e81590[];
 
-class Class_10E7E4E0
-{
-public:
-    Class_10E7E4E0* FUN_10b3acb0();
-
-    void** Unknown00;
-    char Unknown04[0x0C];
-};
-
-class Class_10E81590 : public Class_10E7E4E0
-{
-public:
-    Class_10E81590* FUN_10b4ccf0();
-
-    bool m_AnimationEnded;
-    bool Unknown11;
-};
-
 // FUNCTION: 0x10B4BE90 ?FUN_10b4be90@Class_10E7E778@@UAEXPAVAGarrett@@@Z
 void Class_10E7E778::FUN_10b4be90(AGarrett* Param)
 {
@@ -87,6 +70,6 @@ Class_10E81590* Class_10E81590::FUN_10b4ccf0()
     FUN_10b3acb0();
     m_AnimationEnded = false;
     Unknown11 = false;
-    Unknown00 = DAT_10e81590;
+    *(void**)this = DAT_10e81590;  // the vtable pointer
     return this;
 }

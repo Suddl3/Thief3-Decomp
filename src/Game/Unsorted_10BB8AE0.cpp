@@ -1,17 +1,12 @@
 // Game/Unsorted_10BB8AE0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
-#include "Game/Class_10AA9DA0.h"
 #include "Game/Class_10B9BCA0.h"
+#include "Game/Class_10B9CAC0.h"
 #include "Game/Class_10BB8BC0.h"
 #include "Game/Class_10C7D570.h"
+#include "Game/Struct_10B9BCA0.h"
 
 class AAIPawn;
-
-struct Struct_10B9BCA0
-{
-    char Unknown00[8];
-    Class_10AA9DA0* Unknown08;
-};
 
 Class_10B9BCA0* GetAIPawnController(AAIPawn* Pawn);
 

@@ -6,6 +6,7 @@
 class Class_10924100_Unknown38;
 class Class_10924100_Unknown44;
 class Class_1092F130;
+class Class_109480B0;
 class Class_10A1E620_Inner;
 
 class Class_10924100
@@ -26,7 +27,8 @@ public:
     char Unknown00[0x4];
     int Unknown04;
     int Unknown08;
-    int Unknown0C;
+    // Owned object, released with Free() and deleted in Reset().
+    Class_109480B0* Unknown0C;
     Class_1092F130* Unknown10;
     int Unknown14;
     int Unknown18;

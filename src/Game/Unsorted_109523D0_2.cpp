@@ -10,9 +10,9 @@ extern cD3DStateCache* DAT_10f31be0;
 void Class_10952690::FUN_10952690()
 {
     Info_10952690 Info;
-    Info.Unknown00 = Unknown80;
-    Info.Unknown04 = Unknown84;
-    Info.Unknown08 = Unknown88;
+    *(int*)&Info.Unknown00 = Unknown80; // the float Unknown80 holds, copied as it is
+    *(int*)&Info.Unknown04 = Unknown84;
+    *(int*)&Info.Unknown08 = Unknown88;
     Info.Unknown0C = 0;
     DAT_10f31be0->FUN_10937280(0, &Info);
 }

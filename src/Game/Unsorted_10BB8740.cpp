@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Game/Class_10B9BCA0.h"
+#include "Game/Class_10bb8960_Result.h"
 #include "Game/Class_10BB8960.h"
 #include "Game/Class_10C7D570.h"
 #include "Game/Struct_10B9BCA0.h"
@@ -16,15 +17,6 @@ Class_10B9BCA0* GetAIPawnController(AAIPawn* Pawn);
 class Class_10BB8300;
 
 class Class_10BC9D40;
-
-class Class_10bb8960_Result
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual int Virtual3();
-};
 
 struct Struct_10BB8960
 {

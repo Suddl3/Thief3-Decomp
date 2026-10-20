@@ -15,8 +15,9 @@ public:
 
     char Pad01[0x3];
     Class_10953730 Unknown04;
-    char Pad6C[0x120];
+    char Pad6C[0xB8];
     void* unknown_124;
+    char Pad128[0x68];
     char Pad190[0x10];
     float Unknown1A0[6][4];
 };

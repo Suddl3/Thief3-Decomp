@@ -8,6 +8,8 @@
 #include "Game/Class_10978090.h"
 #include "Game/Class_1098E3D0.h"
 #include "Game/Class_10BAD190.h"
+#include "Game/Class_10E8C83C.h"
+#include "Game/Class_10B9C9F0.h"
 
 UObject* FUN_10c00710(void* A, int B);
 
@@ -39,20 +41,6 @@ public:
 
 class Class_10BB3190_Result;
 
-class InnerClass_10B9C9F0;
-
-class Class_10BAD190;
-
-// include/Game/Class_10B9C9F0.h copied whole, with FUN_10b9c9f0 returning the Class_10BAD190 its caller uses.
-class Class_10B9C9F0
-{
-public:
-    Class_10BAD190* FUN_10b9c9f0();
-
-    char Unknown00[0xc];
-    InnerClass_10B9C9F0* Fieldc;
-};
-
 class UObject;
 
 Class_10BB3190_Result* FUN_10983cf0(int A);
@@ -60,14 +48,6 @@ Class_10BB3190_Result* FUN_10983cf0(int A);
 int FUN_10bb0c60(int A);
 
 // The placeholder class of the vtable at 0x10E8C83C; this function is its slot 2.
-class Class_10E8C83C
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual int FUN_10bb3c20(int A, Class_10BB3C20_Param2* B, Class_10BB3C20_Param3* C);
-};
-
 // FUNCTION: 0x10BB3C20 ?FUN_10bb3c20@Class_10E8C83C@@UAEHHPAVClass_10BB3C20_Param2@@PAVClass_10BB3C20_Param3@@@Z
 int Class_10E8C83C::FUN_10bb3c20(int A, Class_10BB3C20_Param2* B, Class_10BB3C20_Param3* C)
 {
@@ -86,7 +66,7 @@ int Class_10E8C83C::FUN_10bb3c20(int A, Class_10BB3C20_Param2* B, Class_10BB3C20
                     Class_10B9C9F0* Owner = (Class_10B9C9F0*)FUN_10bb0c60((int)B);
                     if (Owner)
                     {
-                        Owner->FUN_10b9c9f0()->FUN_10bacff0(Item, 0, 1);
+                        ((Class_10BAD190*)Owner->FUN_10b9c9f0())->FUN_10bacff0(Item, 0, 1);
                         return 1;
                     }
                 }

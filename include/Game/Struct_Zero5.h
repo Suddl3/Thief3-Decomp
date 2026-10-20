@@ -3,17 +3,64 @@
 #ifndef GAME_STRUCT_ZERO5_H
 #define GAME_STRUCT_ZERO5_H
 
+#include "Game/Class_10905A90_Member.h"
+
+Class_10905A90_Member* GetAllocator();
+
+// A growable array of pointers in 20 bytes: a count, the bytes allocated and
+// the block, grown and shrunk 4 entries at a time. It has no destructor: its
+// owner frees it with Free().
 struct Struct_Zero5
 {
-    Struct_Zero5() : A(0), B(0), C(0), D(0), E(0) {}
-    void Free();
-    void SetCount(int NewCount);
+    Struct_Zero5() : m_Count(0), m_AllocBytes(0), m_Items(0), Unknown0C(0), Unknown10(0) {}
 
-    int A;
-    int B;
-    int C;
-    int D;
-    int E;
+    void SetCount(int NewCount)
+    {
+        int Capacity = !m_Items ? 0 : m_AllocBytes / sizeof(void*);
+        GetAllocator()->Virtual8(0, 0);
+        if (NewCount > Capacity)
+        {
+            int NewCapacity = NewCount;
+            if (Capacity)
+                NewCapacity = (NewCount & ~3) + 4;
+            m_Items = (void**)GetAllocator()->Virtual3(m_Items, NewCapacity * sizeof(void*), 0, 0, 0, 0);
+            m_AllocBytes = NewCapacity * sizeof(void*);
+        }
+        else if (NewCount <= Capacity - 4)
+        {
+            if (NewCount == 0)
+            {
+                GetAllocator()->Virtual5(m_Items);
+                m_Items = 0;
+                m_AllocBytes = 0;
+            }
+            else
+            {
+                int NewCapacity = (NewCount & ~3) + 4;
+                m_Items = (void**)GetAllocator()->Virtual3(m_Items, NewCapacity * sizeof(void*), 0, 0, 0, 0);
+                m_AllocBytes = NewCapacity * sizeof(void*);
+            }
+        }
+        GetAllocator()->Virtual9();
+        m_Count = NewCount;
+    }
+
+    void Free()
+    {
+        SetCount(0);
+        if (m_AllocBytes)
+        {
+            GetAllocator()->Virtual5(m_Items);
+            m_Items = 0;
+            m_AllocBytes = 0;
+        }
+    }
+
+    int m_Count;
+    int m_AllocBytes;
+    void** m_Items;
+    int Unknown0C;
+    int Unknown10;
 };
 
 #endif // GAME_STRUCT_ZERO5_H

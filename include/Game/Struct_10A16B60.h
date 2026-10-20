@@ -6,7 +6,8 @@
 struct Struct_10A16B60
 {
 public:
-    int Unknown00;
+    short Unknown00;
+    short Unknown02;
     int Unknown04;
     int Unknown08;
     int Unknown0C;

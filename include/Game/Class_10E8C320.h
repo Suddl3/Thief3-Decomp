@@ -3,15 +3,25 @@
 #ifndef GAME_CLASS_10E8C320_H
 #define GAME_CLASS_10E8C320_H
 
-#include "Game/Class_10978090.h"
-#include "Game/Class_10E8C320_Secondary.h"
+#include "Game/Class_10E6DC88.h"
 
-class Class_10E8C320 : public Class_10978090, public Class_10E8C320_Secondary
+// The game's vftables this class points at: its own, and the one of its secondary base.
+extern void* DAT_10e8c320[];
+extern void* DAT_10e8c31c[];
+
+class Class_10E8C320 : public Class_10E6DC88
 {
 public:
     virtual void Virtual1();
     virtual void FUN_10c14280();
-    Class_10E8C320();
+    virtual int Virtual0(int A, int B, int C, int* D);
+
+    // The object is a Class_10E6DC88 built with the id 0x2a, then turned into this class.
+    Class_10E8C320() : Class_10E6DC88(0x2a)
+    {
+        *(void**)this = DAT_10e8c320;
+        *(void**)((char*)this + 0xC) = DAT_10e8c31c;
+    }
 };
 
 #endif // GAME_CLASS_10E8C320_H

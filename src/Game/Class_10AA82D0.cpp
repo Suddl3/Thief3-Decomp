@@ -4,18 +4,15 @@
 #include "Game/Class_10B39530.h"
 #include "Game/Class_10B39780.h"
 #include "Game/Class_10B39790.h"
-
-class Class_10AAF570
-{
-public:
-    int GetLinkType();
-};
+#include "Game/Class_10AAF570.h"
 
 class Class_10B39870;
 
 class Class_Field0c_D;
 
-class Class_10AA82D0 : public Class_10AAF570
+// The fields are the ones the function below reads and writes; they keep the
+// offsets that code uses, so the class stands alone here.
+class Class_10AA82D0
 {
 public:
     virtual void Virtual0();

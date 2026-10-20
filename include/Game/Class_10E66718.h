@@ -15,13 +15,13 @@ public:
     virtual FVector GetMidpoint();
     virtual void Virtual4();
     virtual void Virtual5();
-    virtual void Virtual6();
+    virtual int Virtual6();
     virtual void Virtual7();
     virtual void FUN_10a3a030();
-    virtual void Virtual9();
+    virtual void Virtual9(int A, int B);
     virtual void Virtual10();
     virtual void Virtual11();
-    virtual void Virtual12();
+    virtual void FUN_10a3a050(float A, float B, float C, int D, bool Flag);
     virtual void Virtual13();
     virtual void Virtual14();
     virtual void Virtual15();

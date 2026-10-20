@@ -16,22 +16,10 @@
 #include "Game/Class_10C3DFE0.h"
 #include "Game/Class_10C3F170.h"
 #include "Game/Class_10E9B580.h"
+#include "Game/Class_10E9AFA4.h"
 #include "Game/CadenceManager.h"
 
 extern void* DAT_10e9afa4[];
-
-class Class_10E9AFA4
-{
-public:
-    Class_10E9AFA4* Init(int A, int B, int C);
-
-    void* Unknown00;
-    float Unknown04;
-    float Unknown08;
-    int Unknown0C;
-    int Unknown10;
-    int Unknown14;
-};
 
 // FUNCTION: 0x10C3CF70 ?Init@Class_10E9AFA4@@QAEPAV1@HHH@Z
 Class_10E9AFA4* Class_10E9AFA4::Init(int A, int B, int C)
@@ -39,7 +27,7 @@ Class_10E9AFA4* Class_10E9AFA4::Init(int A, int B, int C)
     Unknown04 = 90.0f;
     Unknown08 = 90.0f;
     Unknown0C = A;
-    Unknown00 = DAT_10e9afa4;
+    *(void**)this = DAT_10e9afa4;
     Unknown10 = B;
     Unknown14 = C;
     return this;

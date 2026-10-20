@@ -6,9 +6,9 @@
 class Class_1091E2E0
 {
 public:
+    virtual void Virtual0() = 0;
     void Reset();
 
-    int Unknown00;
     float m_Matrix[4][4];
     int Unknown44;
     bool Unknown48;

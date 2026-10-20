@@ -7,6 +7,7 @@ class Class_10E98C80
 {
 public:
     Class_10E98C80();
+    ~Class_10E98C80();
 
     void ResetVTable();
 

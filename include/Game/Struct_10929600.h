@@ -3,6 +3,8 @@
 #ifndef GAME_STRUCT_10929600_H
 #define GAME_STRUCT_10929600_H
 
+#include "Game/IDirect3DTexture8.h"
+
 class Object_10929600;
 
 struct Struct_10929600
@@ -12,7 +14,7 @@ public:
     unsigned int Width;
     unsigned int Height;
     char Unknown20[0x10];
-    Object_10929600* Unknown30;
+    IDirect3DTexture8* Unknown30;
 };
 
 #endif // GAME_STRUCT_10929600_H

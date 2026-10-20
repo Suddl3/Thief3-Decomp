@@ -4,30 +4,11 @@
 #include "Game/Class_1090FD40.h"
 #include "Game/cTriggerSoundSchemaParam.h"
 #include "Game/Class_10C4CD50.h"
+#include "Game/cTriggerPropertyParam.h"
 
 void WriteString(void* Stream, int* Value);
 
 void WriteInt(void* Stream, int Value);
-
-class cTriggerPropertyParam
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8();
-    virtual void Virtual9();
-    virtual void WriteValue(int A, void* Stream);
-
-    char Unknown04[4];
-    int Unknown08;
-    int Unknown0C;
-};
 
 enum EFindName
 {
@@ -86,7 +67,7 @@ void cTriggerSoundSchemaParam::Reset()
 void cTriggerPropertyParam::WriteValue(int A, void* Stream)
 {
     WriteInt(Stream, Unknown08);
-    WriteString(Stream, &Unknown0C);
+    WriteString(Stream, (int*)&Unknown0C);
 }
 
 // FUNCTION: 0x10A8C080 ?SetValue@Class_10E6C6C4@@UAEHABVClass_109022E0@@@Z

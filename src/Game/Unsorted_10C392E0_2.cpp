@@ -23,6 +23,7 @@
 #include "Game/Class_10C39E90.h"
 #include "Game/Class_10C38E40.h"
 #include "Game/cPositionList.h"
+#include "Game/Class_10B9BCA0.h"
 
 class Class_10FF667C
 {
@@ -157,13 +158,6 @@ class Class_10B9BCA0_Unknown118
 public:
     char Unknown00[8];
     Class_10AA82D0* Unknown08;
-};
-
-class Class_10B9BCA0
-{
-public:
-    char Unknown00[0x118];
-    Class_10B9BCA0_Unknown118* Unknown118;
 };
 
 Class_10B9BCA0* GetAIPawnController(AAIPawn* A);
@@ -307,7 +301,7 @@ bool Class_10C39E90::FUN_10c39e90(int* Out)
             return true;
     }
     Class_10B9BCA0* Obj = GetAIPawnController((AAIPawn*)((Class_10C7D570*)Unknown48->Virtual34())->FUN_10c7d570());
-    Class_10AA82D0* Owner = Obj && Obj->Unknown118 ? Obj->Unknown118->Unknown08 : 0;
+    Class_10AA82D0* Owner = Obj && Obj->Unknown118 ? ((Class_10B9BCA0_Unknown118*)Obj->Unknown118)->Unknown08 : 0;
     Class_10BFF460* Item = ((Class_10BBB410*)Owner->GetLinkedObject())->GetCurrent();
     if (Item && Item->FUN_10bff2a0() && (int)Item->FUN_10bff2a0() == *Out && Item->FUN_10bff330())
         return true;

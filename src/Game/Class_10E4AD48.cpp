@@ -30,7 +30,7 @@ public:
 // FUNCTION: 0x10951F10 ??0Class_10E4AD48@@QAE@XZ
 Class_10E4AD48::Class_10E4AD48()
 {
-    Unknown00 = (int)DAT_10e4ad48;
+    *(void**)this = DAT_10e4ad48;
     Unknown138 = 0;
     Unknown140 = FUN_1092fdd0();
     Unknown58 |= 1;

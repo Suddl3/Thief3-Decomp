@@ -4,6 +4,7 @@
 #include "Game/Class_109481D0.h"
 #include "Game/Struct_1094E0F0.h"
 #include "Game/Struct_1094E120.h"
+#include "Game/Struct_1094E9D0.h"
 
 class Class_1094E050;
 
@@ -12,8 +13,6 @@ class Class_10951730;
 class cIntArray;
 
 struct Struct_1094E820B;
-
-struct Struct_1094E9D0;
 
 class Class_10E4AB88
 {
@@ -99,11 +98,6 @@ public:
     char Unknown4C;
     char Unknown4D[0x23F];
     char Unknown28C;
-};
-
-struct Struct_1094E9D0
-{
-    Class_1094E860_Unknown00* Unknown00;
 };
 
 // FUNCTION: 0x1094E860 ?IsReady@Class_10E4AB88@@UAE_NXZ

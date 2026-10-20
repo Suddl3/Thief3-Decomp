@@ -5,7 +5,6 @@
 
 #include "Game/Class_10928760.h"
 
-class Class_1092FFD0_Unknown7C;
 class Class_109301D0_Unknown58;
 class Class_1094B030;
 
@@ -38,7 +37,7 @@ public:
     char Pad5C[0x18];
     int Unknown74;
     char Pad78[0x4];
-    Class_1092FFD0_Unknown7C** Unknown7C;
+    Class_1094B030** Unknown7C;
 };
 
 #endif // GAME_VOCABULARY_H

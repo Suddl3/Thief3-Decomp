@@ -16,8 +16,8 @@ void Class_10952640::Apply()
         W = Unknown7C;
     Info_10952690 Info;
     Info.Unknown0C = W;
-    Info.Unknown00 = Unknown70;
-    Info.Unknown04 = Unknown74;
-    Info.Unknown08 = Unknown78;
+    *(int*)&Info.Unknown00 = Unknown70; // the float Unknown70 holds, copied as it is
+    *(int*)&Info.Unknown04 = Unknown74;
+    *(int*)&Info.Unknown08 = Unknown78;
     DAT_10f31be0->FUN_10937280(0, &Info);
 }

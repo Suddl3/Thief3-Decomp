@@ -2,26 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Game/Class_10940180.h"
-
-struct FVector
-{
-    float X;
-    float Y;
-    float Z;
-};
-
-struct Struct_10940180
-{
-    char Unknown00[0x24];
-    FVector Unknown24;
-    char Unknown30[4];
-    FVector Unknown34;
-    char Unknown40[0x38];
-    float Unknown78;
-    char Unknown7C[0xC8];
-    char Unknown144[0x40];
-    char Unknown184;
-};
+#include "Game/Struct_10940180.h"
 
 void FUN_109573a0(char* Unknown, FVector* Start, FVector* Direction);
 
@@ -31,14 +12,14 @@ void __stdcall FUN_10d690fe(char* Unknown, float A, float B, float C, float D);
 void Class_10940180::FUN_1093ff60(Struct_10940180* P)
 {
     FVector Start;
-    Start.X = P->Unknown34.X;
-    Start.Y = P->Unknown34.Y;
-    Start.Z = P->Unknown34.Z;
+    Start.X = P->Start.X;
+    Start.Y = P->Start.Y;
+    Start.Z = P->Start.Z;
     FVector Direction;
-    Direction.X = -P->Unknown24.X;
-    Direction.Y = -P->Unknown24.Y;
-    Direction.Z = -P->Unknown24.Z;
-    float Radius = P->Unknown78 + P->Unknown78;
+    Direction.X = -P->Direction.X;
+    Direction.Y = -P->Direction.Y;
+    Direction.Z = -P->Direction.Z;
+    float Radius = P->Radius + P->Radius;
     FUN_109573a0(P->Unknown144, &Start, &Direction);
     FUN_10d690fe(&P->Unknown184, Radius, Radius, 1.0f, 50.0f);
 }

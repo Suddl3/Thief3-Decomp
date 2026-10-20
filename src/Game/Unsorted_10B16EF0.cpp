@@ -6,21 +6,7 @@
 #include "Game/WindowManager.h"
 #include "Game/cString.h"
 #include "Game/Class_10B45AD0.h"
-
-class Class_10B45AD0;
-
-class Class_10B16930
-{
-public:
-    cIntArray FUN_109e6d80(int A);
-    void FUN_10b166a0();
-    void FUN_10b16930();
-    void FUN_10b16780();
-    void ShowJunkItemWindow(int A);
-    void FUN_10b16ef0(bool A);
-
-    char Pad00[0x1];
-};
+#include "Game/Class_10B16930.h"
 
 // FUNCTION: 0x10B16EF0 ?FUN_10b16ef0@Class_10B16930@@QAEX_N@Z
 void Class_10B16930::FUN_10b16ef0(bool A)

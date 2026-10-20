@@ -7,6 +7,9 @@
 
 extern "C" void* memset(void*, int, unsigned);
 
+// The vtable this class installs in the first word of its objects.
+extern void* DAT_10e49d1c[];
+
 class Class_10E49D1C
 {
 public:
@@ -27,6 +30,7 @@ public:
         Unknown0C = 0;
     }
 
+    // Installs this class's vtable and puts the object in its initial state.
     void FUN_10932ed0();
 
     int Unknown04;

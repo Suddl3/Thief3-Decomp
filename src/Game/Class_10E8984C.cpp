@@ -19,8 +19,8 @@ extern void* DAT_10e8984c[];
 // FUNCTION: 0x10B90320 ??0Class_10E8984C@@QAE@XZ
 Class_10E8984C::Class_10E8984C()
 {
-    Unknown00 = DAT_10e8984c;
-    Unknown04 = 0;
+    *(void**)this = DAT_10e8984c;
+    *(int*)&m_Flags = 0;
 }
 
 // FUNCTION: 0x10B92330 ?FUN_10b92330@Class_10E8984C@@QAEXPAVClass_10B90750_Arg1@@HH@Z

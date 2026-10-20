@@ -6,6 +6,9 @@
 class Object_10AA4D20_A;
 class Object_10AA4D20_B;
 
+// The vtable (0x10E6D5B0) the class' virtuals are called through.
+extern void* DAT_10e6d5b0[];
+
 class SwooshGeometryTriStrip
 {
 public:
@@ -13,7 +16,17 @@ public:
     virtual void Virtual1();
     virtual void Release();
 
-    SwooshGeometryTriStrip();
+    SwooshGeometryTriStrip()
+    {
+        Unknown04 = false;
+        Unknown08 = 0;
+        Unknown0C = 0;
+        Unknown10 = 0;
+        Unknown14 = 0;
+        Unknown18 = 0;
+        Unknown1C = 0;
+        *(void**)this = DAT_10e6d5b0; // the vtable the virtuals above are called through
+    }
 
     void SetParameters(int A, int B, int C, int D);
 

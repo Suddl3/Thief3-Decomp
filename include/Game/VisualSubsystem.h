@@ -9,7 +9,7 @@ public:
     VisualSubsystem(const VisualSubsystem& Other);
 
     virtual ~VisualSubsystem();
-    VisualSubsystem();
+    VisualSubsystem() { Unknown04 = 0; }
 
     int Unknown04;
     int Unknown08;

@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/cString.h"
 #include "Game/Class_10A304C0.h"
+#include "Game/Class_10E66390.h"
 
 struct Item_10A304C0
 {
@@ -15,17 +16,6 @@ struct Item_10A304C0
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
-
-class Class_10E66390
-{
-public:
-    virtual void Virtual0();
-    virtual Class_10E66390* Virtual1();
-
-    Class_10E66390(const cString& In);
-
-    cString Unknown04;
-};
 
 // FUNCTION: 0x10A300C0 ?Virtual1@Class_10E66390@@UAEPAV1@XZ
 Class_10E66390* Class_10E66390::Virtual1()

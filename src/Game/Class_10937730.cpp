@@ -1,6 +1,8 @@
 // Game/Class_10937730.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
+#include "Game/Class_10937730.h"
+
 class IDirect3DDevice8
 {
 public:
@@ -72,23 +74,6 @@ public:
 
 extern IDirect3DDevice8* GDirect3DDevice8;
 
-class Class_10937730
-{
-public:
-    void FUN_10937730();
-    bool FUN_10937690();
-    void Reset();
-
-    char Pad00[0xC];
-    int Unknown0C;
-    int Unknown10;
-    int Unknown14;
-    char Unknown18[4];
-    int Unknown1C[4];
-    char Unknown2C[0x688];
-    int Unknown6B4;
-};
-
 // FUNCTION: 0x10937690 ?FUN_10937690@Class_10937730@@QAE_NXZ
 bool Class_10937730::FUN_10937690()
 {
@@ -100,7 +85,7 @@ bool Class_10937730::FUN_10937690()
     }
     Reset();
     int i = 0;
-    int* Slot = Unknown1C;
+    IDirect3DBaseTexture8** Slot = m_StageTextures;
     for (; i < 4; i++, Slot++)
     {
         *Slot = 0;

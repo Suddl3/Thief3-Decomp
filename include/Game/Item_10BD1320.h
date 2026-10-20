@@ -10,7 +10,8 @@ class FArchive;
 struct Item_10BD1320
 {
 public:
-    virtual void Virtual0(FArchive& Ar);
+    // The element's only virtual: it serializes the element, taking the archive to write into.
+    virtual void Virtual0();
 
     cString Unknown04;
     int Unknown08;

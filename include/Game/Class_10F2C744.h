@@ -3,17 +3,18 @@
 #ifndef GAME_CLASS_10F2C744_H
 #define GAME_CLASS_10F2C744_H
 
+// The render device.
 class Class_10F2C744
 {
 public:
     virtual void Virtual0();
     virtual void Virtual1();
     virtual void Virtual2();
-    virtual void Virtual3(int A, int B, int C, const char* Name, int* Out);
-    virtual void Virtual4();
-    virtual void Virtual5();
+    virtual int Virtual3(int A, int B, int C, const char* Name, void* Out);
+    virtual unsigned int Virtual4();
+    virtual void Virtual5(unsigned int Index, void* Out);
     virtual void Virtual6();
-    virtual void Virtual7();
+    virtual void Virtual7(unsigned int Index);
     virtual void Virtual8();
     virtual void Virtual9();
     virtual void Virtual10();

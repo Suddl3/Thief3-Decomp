@@ -2,23 +2,18 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/IDirectInput8A.h"
 #include "Game/IDirectInputDevice8A.h"
+#include "Game/Class_10E6C470.h"
 
 extern IDirectInputDevice8A* DAT_10f3a368;
 
 extern IDirectInput8A* DAT_10f3a36c;
-
-class Class_10E6C470
-{
-public:
-    virtual ~Class_10E6C470();
-};
 
 class XBInputInterface : public Class_10E6C470
 {
 public:
     virtual ~XBInputInterface();
 
-    char Unknown04[0x81C];
+    char Pad810[0x10];
     IDirectInputDevice8A* Unknown820;
     IDirectInputDevice8A* Unknown824;
 };

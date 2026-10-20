@@ -23,7 +23,8 @@ public:
 
     Class_1090A780 GetValue();
 
-    int m_Elements;
+    // the elements array; the count sits just before it
+    int* m_Elements;
 };
 
 #endif // GAME_CLASS_10E984BC_H

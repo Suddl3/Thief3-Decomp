@@ -9,6 +9,7 @@
 #include "Game/cIntArray.h"
 #include "Game/cContextVolumeList.h"
 #include "Game/Class_10E97CC0.h"
+#include "Game/Class_10E984BC.h"
 
 extern const char DAT_10e47600[];
 
@@ -144,14 +145,6 @@ public:
 
 extern void* DAT_10e984bc[];
 
-class Class_10E984BC {
-public:
-    Class_10E984BC();
-
-    void** Unknown00;
-    int m_Elements;
-};
-
 extern void* DAT_10e984f4[];
 
 class Class_10E984F4
@@ -249,7 +242,7 @@ int Class_10E8C468::GetAIFactionModelClass()
 // FUNCTION: 0x10C129F0 ??0Class_10E984BC@@QAE@XZ
 Class_10E984BC::Class_10E984BC()
 {
-    Unknown00 = DAT_10e984bc;
+    *(void**)this = (void*)DAT_10e984bc;
     m_Elements = 0;
 }
 

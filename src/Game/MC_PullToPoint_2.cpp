@@ -38,7 +38,7 @@ void MC_PullToPoint::CheckDistance()
     if (!m_bTriggered)
     {
         Struct_10C3D0A0* Actor = (Struct_10C3D0A0*)FUN_10c270c0()->FUN_10c7d570();
-        if (Distance2D(&m_Point, &Actor->Unknown2C) > m_Threshold)
+        if (Distance2D(&m_Point, (const Struct_10C05A50*)&Actor->m_Position) > m_Threshold)
         {
             m_bTriggered = 1;
             Unknown04->Virtual44();

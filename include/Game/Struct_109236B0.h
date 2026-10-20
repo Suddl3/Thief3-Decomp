@@ -9,7 +9,7 @@ public:
     char Unknown00[0xC];
     int Unknown0C;
     char Unknown10[4];
-    int* Unknown14;
+    Struct_109236B0** Unknown14;
 };
 
 #endif // GAME_STRUCT_109236B0_H

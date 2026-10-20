@@ -5,6 +5,7 @@
 #include "Game/Class_10A6F0C0.h"
 #include "Game/cIntArray.h"
 #include "Game/Class_10F46DA0.h"
+#include "Game/Class_10E6BA40.h"
 
 class Class_10B697A0;
 
@@ -44,26 +45,12 @@ public:
     char Unknown09[0xc];
 };
 
-// Class_10E6BA40 copied whole from include/Game/Class_10E6BA40.h, with the two slots and the list head at 0xC that this function uses.
-class Class_10E6BA40
-{
-public:
-    virtual void Virtual0();
-    virtual int FUN_10a6f160(int Key, float Value);
-    virtual void Virtual2();
-    virtual void FUN_10a6f010(int A, cIntArray* Arr);
-
-    Class_10A6F0C0 m_Entries;
-    char Pad05[0x7];
-    Class_10A6F010_Unknown0C* Unknown0C;
-};
-
 // FUNCTION: 0x10A6F010 ?FUN_10a6f010@Class_10E6BA40@@UAEXHPAVcIntArray@@@Z
 void Class_10E6BA40::FUN_10a6f010(int A, cIntArray* Arr)
 {
     Class_10E66500 Local;
-    Class_10A6F010_Unknown0C* Node = this->Unknown0C->Next;
-    if (Node != this->Unknown0C)
+    Class_10A6F010_Unknown0C* Node = this->m_Head->Next;
+    if (Node != this->m_Head)
     {
         do
         {
@@ -78,6 +65,6 @@ void Class_10E6BA40::FUN_10a6f010(int A, cIntArray* Arr)
                 }
             }
             Node = Node->Next;
-        } while (Node != this->Unknown0C);
+        } while (Node != this->m_Head);
     }
 }

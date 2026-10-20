@@ -8,7 +8,9 @@ class Class_10918E10_Element;
 struct Struct_10918E10
 {
 public:
+    // The element whose Virtual0 is called when the resolution changes.
     Class_10918E10_Element* Unknown00;
+    // The third argument of that call.
     int Unknown04;
 };
 

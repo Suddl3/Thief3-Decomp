@@ -38,5 +38,5 @@ Class_10B228E0* Class_10B1D1B0::FUN_10b1d1b0()
 {
     if (!Unknown00)
         return 0;
-    return Unknown00->Unknown04;
+    return (Class_10B228E0*)Unknown00->m_PlayerStateController;
 }

@@ -4,22 +4,12 @@
 #include "Game/Class_10A34B90_Node.h"
 #include "Game/Class_10A34C10.h"
 #include "Game/Class_10A34B90.h"
+#include "Game/Class_10A34C10_Node.h"
 #include "Game/cString.h"
 
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
-
-class Class_10A34C10_Unknown10;
-
-// A bucket entry (0x18 bytes).
-struct Class_10A34C10_Node
-{
-    cString Key;
-    char Unknown04[0xC];
-    Class_10A34C10_Unknown10* Value;
-    Class_10A34C10_Node* Next;
-};
 
 // FUNCTION: 0x10A349E0 ?Rehash@Class_10A34C10@@QAEXH@Z
 void Class_10A34C10::Rehash(int NewSize)

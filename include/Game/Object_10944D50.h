@@ -9,10 +9,10 @@ public:
     virtual void Virtual0();
     virtual void Virtual1();
     virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
+    virtual int Virtual3();  // multiplied by Virtual4() for the buffer's size in bytes
+    virtual int Virtual4();
     virtual void Virtual5();
-    virtual void Virtual6(int A, int B, int* C);
+    virtual void Virtual6(int A, int B, int* C);  // writes the buffer's address to C
     virtual void Virtual7();
 };
 

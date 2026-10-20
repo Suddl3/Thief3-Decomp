@@ -16,6 +16,7 @@ public:
     virtual void Virtual1();
     virtual void Virtual2();
     virtual bool IsCurrent(int A);
+    virtual void FUN_10c2eb40();
 
     void Construct();
     cString GetClassName();

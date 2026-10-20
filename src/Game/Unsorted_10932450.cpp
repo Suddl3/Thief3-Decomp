@@ -4,6 +4,7 @@
 #include "Game/ListPool.h"
 #include "Game/Class_10932760.h"
 #include "Game/Class_10943600.h"
+#include "Game/Node_10932350.h"
 #include "Game/Archetype.h"
 
 class Item_10943600;
@@ -12,19 +13,12 @@ void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D
 
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
-struct Node_10932350
-{
-    char Unknown00[0xA8];
-    Node_10932350* m_Prev;
-    Node_10932350* m_Next;
-};
-
 class Class_109324C0 : public Node_10932350
 {
 public:
     Class_109324C0();
 
-    char Unknown0B0[0x20];
+    char UnknownB4[0x1C];
 };
 
 // FUNCTION: 0x10932690 ??_GArchetype@@UAEPAXI@Z

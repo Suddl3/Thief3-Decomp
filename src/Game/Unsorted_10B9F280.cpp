@@ -48,7 +48,7 @@ void cObjectTable::SerializeRef(Object_10BE58C0* Ar, Class_10AAB5C0*& Obj)
     if (Ar->Unknown14)
     {
         Ar->Virtual1(&Index, 4);
-        Obj = m_Objects[Index];
+        Obj = ((Class_10AAB5C0**)m_Objects.Data)[Index];
         return;
     }
     if (Obj)

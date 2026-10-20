@@ -17,11 +17,12 @@ public:
     int* GetCachedIndex(int* Out);
     int* FUN_10babab0(int* A, cString* B);
 
-    char Pad01[0x8b];
+    char Pad01[0x1F];
+    int m_CachedIndex;
+    char Unknown88[0x4];
     int m_CachedValue;
     char Unknown90[0x24];
     bool m_CacheValid;
-    char PadB5[0x3];
 };
 
 #endif // GAME_CLASS_10BAA580_H

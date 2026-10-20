@@ -14,7 +14,7 @@ public:
     virtual Object_10A76760* FindBySource(int Value);
 
     int m_CopyCount;
-    int Unknown08;
+    int m_CapacityBytes;
     Object_10A76760** m_Copies;
 };
 

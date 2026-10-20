@@ -10,6 +10,6 @@ int Class_10E49EE0::BindStreamSource(int A)
 {
     if (m_Member == 0)
         return 0x80040721;
-    DAT_10f31be0->SetStreamSource(m_Member, m_Stride);
+    DAT_10f31be0->SetStreamSource((int)m_Member, m_Stride);
     return 0;
 }

@@ -3,12 +3,19 @@
 #ifndef GAME_CLASS_10E8C860_H
 #define GAME_CLASS_10E8C860_H
 
+class Class_10BB1080_Item;
+class Class_10BB1080_Source;
+
+// A polymorphic class of three slots: its only word is the vtable pointer, which the
+// constructor stores.
 class Class_10E8C860
 {
 public:
-    Class_10E8C860* FUN_10ba4b60();
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual int FUN_10bb1080(int p1, Class_10BB1080_Item* Item, Class_10BB1080_Source* Source);
 
-    void* Unknown00;
+    Class_10E8C860* FUN_10ba4b60();
 };
 
 #endif // GAME_CLASS_10E8C860_H

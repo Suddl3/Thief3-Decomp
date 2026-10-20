@@ -5,12 +5,29 @@
 
 class FArchive;
 
+// The vtable the object gets at construction.
+extern void* DAT_10e8c00c[];
+
 class Class_10E8C00C
 {
 public:
     virtual void Serialize(FArchive& Ar);
 
-    Class_10E8C00C(int Owner);
+    Class_10E8C00C(int Owner)
+    {
+        // The vtable pointer is set by hand.
+        *(void***)this = DAT_10e8c00c;
+        Unknown04 = 0;
+        Unknown08 = 0;
+        Unknown0C = 0;
+        Unknown10 = Owner;
+        Unknown14 = 0;
+        Unknown18 = 0;
+        Unknown1C = 0;
+        Unknown20 = 0;
+        Unknown24 = 0;
+        Unknown28 = 0;
+    }
 
     Class_10E8C00C* Construct(int A);
 

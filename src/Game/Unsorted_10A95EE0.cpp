@@ -26,6 +26,7 @@
 #include "Game/Class_10E6CF24.h"
 #include "Game/Class_10E6CF30.h"
 #include "Game/Class_10E6CF3C.h"
+#include "Game/Class_10E6CF80.h"
 
 Class_10905A90_Member* GetAllocator();
 
@@ -36,22 +37,13 @@ void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
 extern void* DAT_10e6cf48[];
 
-class Class_10EB766C
-{
-public:
-    Class_10EB766C();
-
-    void** VTable;
-    int Unknown04;
-    int Unknown08;
-};
-
+// Its table is stored over the base's.
 class Class_10E6CF48 : public Class_10EB766C
 {
 public:
     Class_10E6CF48()
     {
-        VTable = DAT_10e6cf48;
+        *(void***)this = DAT_10e6cf48;
     }
 };
 
@@ -62,18 +54,7 @@ class Class_10E6CF64 : public Class_10EB766C
 public:
     Class_10E6CF64()
     {
-        VTable = DAT_10e6cf64;
-    }
-};
-
-extern void* DAT_10e6cf80[];
-
-class Class_10E6CF80 : public Class_10EB766C
-{
-public:
-    Class_10E6CF80()
-    {
-        VTable = DAT_10e6cf80;
+        *(void***)this = DAT_10e6cf64;
     }
 };
 

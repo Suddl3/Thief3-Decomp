@@ -4,6 +4,7 @@
 #include "Game/Class_1098E330.h"
 #include "Game/Class_109BC840.h"
 #include "Game/Class_10BA9FD0.h"
+#include "Game/Class_10BAA580.h"
 #include "Game/Class_10BB7670.h"
 #include "Game/Class_10BBAB80.h"
 #include "Game/Class_10BBAD80.h"
@@ -19,12 +20,6 @@ public:
 };
 
 extern Struct_10AA3520* DAT_10f35dec;
-
-class Class_10BAA580 : public Class_10BA9FD0
-{
-public:
-    Class_109BC840* FUN_10baa580();
-};
 
 // FUNCTION: 0x10BBAB80 ?FUN_10bbab80@Class_10BBAB80@@QAEXXZ
 void Class_10BBAB80::FUN_10bbab80()
@@ -43,7 +38,7 @@ void Class_10BBAB80::FUN_10bbab80()
 // FUNCTION: 0x10BBAD80 ?FUN_10bbad80@Class_10BBAD80@@QAEXHHMHH@Z
 void Class_10BBAD80::FUN_10bbad80(int A, int B, float C, int D, int E)
 {
-    if (((Class_10BB7670*)Unknown08->FUN_10ba9fd0())->FUN_10bb7670())
+    if (((Class_10BB7670*)((Class_10BA9FD0*)Unknown08)->FUN_10ba9fd0())->FUN_10bb7670())
     {
         if (!FUN_10bbaca0(A))
         {

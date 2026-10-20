@@ -2,31 +2,13 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Game/cIntArray.h"
-
-extern void* DAT_10e99340[];
-
-extern void* DAT_10e99348[];
+#include "Game/Class_10E99340.h"
+#include "Game/Class_10E99348.h"
 
 extern void* DAT_10e99350[];
 
 // Ion Storm's placement new (0x10905C10).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
-
-class Class_10E99340
-{
-public:
-    Class_10E99340() : Unknown00(DAT_10e99340) {}
-
-    void* Unknown00;
-};
-
-class Class_10E99348
-{
-public:
-    Class_10E99348() : Unknown00(DAT_10e99348) {}
-
-    void* Unknown00;
-};
 
 class Class_10E99350
 {

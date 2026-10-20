@@ -4,22 +4,11 @@
 #include "Core/Core.h"
 #include "Game/Class_10B25200.h"
 #include "Game/Class_10B3AE70.h"
+#include "Game/Class_10B3AF40_UnknownB0.h"
 #include "Game/Class_10E7E538.h"
 #include "Game/GSMantle.h"
 
 struct Struct_10B48890;
-
-class Class_10B3AF40_UnknownB0
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual Struct_10B48890* Virtual6();
-};
 
 struct Struct_10B3AF40_Param
 {
@@ -71,5 +60,5 @@ void Class_10B3AE70::ForceBody(AGarrett* Garrett)
 // FUNCTION: 0x10B3AF40 ?FUN_10b3af40@@YGPAUStruct_10B48890@@PAUStruct_10B3AF40_Param@@@Z
 Struct_10B48890* __stdcall FUN_10b3af40(Struct_10B3AF40_Param* p1)
 {
-    return p1->UnknownB0->Virtual6();
+    return (Struct_10B48890*)p1->UnknownB0->Virtual6();
 }

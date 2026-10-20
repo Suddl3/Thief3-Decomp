@@ -3,15 +3,9 @@
 
 #include "Core/Core.h"
 #include "Game/Class_10B39870.h"
+#include "Game/Struct_10B4C2C0.h"
 
 extern float DAT_10eafbdc;
-
-struct Struct_10B4C2C0
-{
-    float X;
-    float Y;
-    float Z;
-};
 
 struct Struct_10B48890
 {

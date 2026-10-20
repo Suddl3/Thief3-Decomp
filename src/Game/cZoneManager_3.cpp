@@ -3,17 +3,11 @@
 
 #include "Core/Core.h"
 #include "Game/Class_109E2A90.h"
+#include "Game/Struct_109E2A90_Node.h"
 
 class AZoneProperties;
 
 class UObject;
-
-struct Struct_109E2A90_Node
-{
-    Struct_109E2A90_Node* Next;
-    int Unknown04;
-    AZoneProperties* Unknown08;
-};
 
 class cZoneManager
 {
@@ -44,7 +38,7 @@ void cZoneManager::RemoveFromBucket(INT Index, AZoneProperties* Obj)
         {
             for (Struct_109E2A90_Node* Node = Bucket->Head; Node; Node = Node->Next)
             {
-                if (Node->Unknown08 == Obj)
+                if (Node->Zone == Obj)
                 {
                     Bucket->Unlink(Node);
                     delete Node;

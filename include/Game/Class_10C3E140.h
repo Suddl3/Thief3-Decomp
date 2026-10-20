@@ -10,8 +10,11 @@ class Class_10C3E140 : public Class_10AAB5C0
 public:
     unsigned char IsActive();
 
-    char Pad01[0x17];
-    unsigned char Field18;
+    char Pad01[8];
+    unsigned char Field18; // the flag IsActive() returns
+    char Pad19[3];
+    float m_Scale; // the value the cadence's own is multiplied by
+    char Pad20[8];
 };
 
 #endif // GAME_CLASS_10C3E140_H

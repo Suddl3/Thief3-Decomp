@@ -3,6 +3,7 @@
 
 #include "Game/Class_1090A780.h"
 #include "Game/Class_1098E330.h"
+#include "Game/Class_10a46380.h"
 #include "Game/Class_10A50750.h"
 #include "Game/Class_10A52110.h"
 #include "Game/Class_10A52460.h"
@@ -20,15 +21,6 @@
 #include "Game/cString.h"
 #include "Game/Class_10A4EB40.h"
 #include "Game/Class_10A4EB50.h"
-
-class Class_10a46380
-{
-public:
-    char Unknown00[0x20c];
-    int Unknown20c;
-
-    int GetGoalCount();
-};
 
 void FUN_10991270();
 
@@ -72,7 +64,7 @@ public:
 // FUNCTION: 0x10A46380 ?GetGoalCount@Class_10a46380@@QAEHXZ
 int Class_10a46380::GetGoalCount()
 {
-    return Unknown20c;
+    return Goals.Num();
 }
 
 // FUNCTION: 0x10A47040 ?FUN_10a47040@@YAXXZ

@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/cActorManager.h"
 #include "Game/Class_10E6BC8C.h"
+#include "Game/cCopyList.h"
 
 // Ion Storm's placement new (0x10905C10).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
@@ -39,15 +40,6 @@ public:
     Struct_10A76C50Copy** Unknown08;
 };
 
-class cCopyList
-{
-public:
-    virtual void Virtual0();
-    virtual void AddCopy(Struct_10A76C50* Source);
-
-    cIntArray m_CopyCount;
-};
-
 class Class_10E5D360
 {
 public:
@@ -83,8 +75,8 @@ void cCopyList::AddCopy(Struct_10A76C50* Source)
         Copy->Unknown10 = Source->Unknown38;
         Result = Copy;
     }
-    int Index = m_CopyCount.Unknown00;
-    cIntArray* Array = &m_CopyCount;
+    int Index = m_CopyCount;
+    cIntArray* Array = (cIntArray*)&m_CopyCount;
     Array->SetCount(Index + 1);
     Array->Unknown08[Index] = Result;
 }

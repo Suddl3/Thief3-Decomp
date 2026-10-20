@@ -1,28 +1,8 @@
 // Game/Class_10E935F0_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10BB8960.h"
+#include "Game/Class_10bb8960_Result.h"
 #include "Game/Class_10C2F090.h"
-
-typedef float FLOAT;
-
-class FVector
-{
-public:
-    FVector() {}
-    FVector(FLOAT InX, FLOAT InY, FLOAT InZ) : X(InX), Y(InY), Z(InZ) {}
-
-    FLOAT X, Y, Z;
-};
-
-class Class_10bb8960_Result
-{
-public:
-    virtual void Virtual0();
-
-    char Unknown04[0x7C];
-    FVector Unknown80;
-    FVector Unknown8C;
-};
 
 class Class_10BC4BF0
 {

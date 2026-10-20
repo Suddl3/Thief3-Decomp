@@ -5,21 +5,7 @@
 #include "Game/cString.h"
 #include "Game/Class_10B2E6F0.h"
 #include "Game/Class_10E7B6E8.h"
-
-class cIntArray;
-
-class Class_10B16930 : public WindowManager
-{
-public:
-    cIntArray FUN_109e6d80(int A);
-    void FUN_10b166a0();
-    void FUN_10b16930();
-    void FUN_10b16780();
-    void ShowJunkItemWindow(int A);
-    void FUN_10b16ef0(int A);
-
-    char Pad00[0x1];
-};
+#include "Game/Class_10B16930.h"
 
 class Class_10B16930_Window
 {

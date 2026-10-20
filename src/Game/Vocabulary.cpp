@@ -151,7 +151,7 @@ void Vocabulary::FUN_1092ffd0(int A, int B)
     {
         for (B = 0; B < Unknown74; B++)
         {
-            Class_1092FFD0_Unknown7C* Item = Unknown7C[B];
+            Class_1092FFD0_Unknown7C* Item = (Class_1092FFD0_Unknown7C*)Unknown7C[B];
             if (Item->Unknown64 == 2)
             {
                 DAT_10f2c8e4->Unknown2FC = Item;

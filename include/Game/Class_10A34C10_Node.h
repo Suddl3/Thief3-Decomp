@@ -7,16 +7,14 @@
 
 class Class_10A34C10_Unknown10;
 
+// A bucket entry of the Class_10A34C10 hash (0x18 bytes): the key is a cString,
+// the value a pointer the hash stores it under.
 struct Class_10A34C10_Node
 {
 public:
     cString Key;
     char Unknown04[0xC];
-    union
-    {
-        Class_10A34C10_Unknown10* Value;
-        Class_10A34C10_Unknown10* Unknown10;
-    };
+    Class_10A34C10_Unknown10* Value;
     Class_10A34C10_Node* Next;
 };
 

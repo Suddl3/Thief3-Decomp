@@ -49,7 +49,7 @@ void __stdcall FUN_10a705e0(Class_10B37FE0_Unknown04_Unknown460* A, Class_10B37F
             S.Unknown04 = A->Unknown2C - B->Unknown2C;
             S.Unknown04.Normalize();
             S.Unknown10 = B->Unknown2C;
-            S.Unknown1C = Out.Unknown04;
+            S.Unknown1C = *(BYTE*)&Out.Unknown04;
             S.Unknown1D = 0;
             S.Unknown20 = -1;
             DAT_10f35dec->Unknown0B4->Virtual5(A, B, &S, 0);

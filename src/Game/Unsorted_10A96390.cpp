@@ -23,16 +23,20 @@
 #include "Game/Class_10E6D170.h"
 #include "Game/Class_10E6D17C.h"
 #include "Game/Class_10E6D188.h"
+#include "Game/Class_10E6D194.h"
 #include "Game/Class_10E6D1A0.h"
 #include "Game/Class_10E6D1CC.h"
+#include "Game/Class_10E6D1D8.h"
 #include "Game/Class_10E6D1E4.h"
 #include "Game/Class_10E6D1F0.h"
+#include "Game/Class_10E6D1FC.h"
 #include "Game/Class_10E6D218.h"
 #include "Game/Class_10E6D224.h"
 #include "Game/Class_10E6D230.h"
 #include "Game/Class_10E6D23C.h"
 #include "Game/Class_10E6D248.h"
 #include "Game/Class_10E6D254.h"
+#include "Game/Class_10E6D260.h"
 #include "Game/Class_10E6D26C.h"
 #include "Game/Class_10E6D278.h"
 #include "Game/Class_10E6D284.h"
@@ -46,17 +50,24 @@
 #include "Game/Class_10E6D2F4.h"
 #include "Game/Class_10E6D300.h"
 #include "Game/Class_10E6D30C.h"
+#include "Game/Class_10E6D318.h"
+#include "Game/Class_10E6D324.h"
+#include "Game/Class_10E6D330.h"
+#include "Game/Class_10E6D33C.h"
 #include "Game/Class_10E6D348.h"
 #include "Game/Class_10E6D358.h"
 #include "Game/Class_10E6D368.h"
 #include "Game/Class_10E6D37C.h"
 #include "Game/Class_10E6D390.h"
 #include "Game/Class_10E6D39C.h"
+#include "Game/Class_10E6D3A8.h"
 #include "Game/Class_10E6D3B4.h"
 #include "Game/Class_10E6D3F4.h"
 #include "Game/Class_10E6D400.h"
 #include "Game/Class_10E6D40C.h"
 #include "Game/Class_10E6D418.h"
+#include "Game/Class_10E6D424.h"
+#include "Game/Class_10E6D430.h"
 #include "Game/Class_10E6D43C.h"
 #include "Game/Class_10E6D448.h"
 #include "Game/Class_10E6D454.h"
@@ -100,36 +111,17 @@ extern void* DAT_10e6d188[];
 
 extern void* DAT_10e6d194[];
 
-class Class_10E6D194 {
-public:
-    void* Field00;
-
-    Class_10E6D194* Construct();
-};
-
 extern void* DAT_10e6d1a0[];
 
 extern void* DAT_10e6d1cc[];
 
 extern void* DAT_10e6d1d8[];
 
-class Class_10E6D1D8 {
-public:
-    void* Field00;
-    Class_10E6D1D8* Construct();
-};
-
 extern void* DAT_10e6d1e4[];
 
 extern void* DAT_10e6d1f0[];
 
 extern void* DAT_10e6d1fc[];
-
-class Class_10E6D1FC {
-public:
-    void* Field00;
-    Class_10E6D1FC* Construct();
-};
 
 extern void* DAT_10e6d218[];
 
@@ -144,12 +136,6 @@ extern void* DAT_10e6d248[];
 extern void* DAT_10e6d254[];
 
 extern void* DAT_10e6d260[];
-
-class Class_10E6D260 {
-public:
-    void* Field00;
-    Class_10E6D260* Construct();
-};
 
 extern void* DAT_10e6d26c[];
 
@@ -179,35 +165,11 @@ extern void* DAT_10e6d30c[];
 
 extern void* DAT_10e6d318[];
 
-class Class_10E6D318 {
-public:
-    void* Field00;
-    Class_10E6D318* Construct();
-};
-
 extern void* DAT_10e6d324[];
-
-class Class_10E6D324 {
-public:
-    void* Field00;
-    Class_10E6D324* Construct();
-};
 
 extern void* DAT_10e6d330[];
 
-class Class_10E6D330 {
-public:
-    void* Field00;
-    Class_10E6D330* Construct();
-};
-
 extern void* DAT_10e6d33c[];
-
-class Class_10E6D33C {
-public:
-    void* Field00;
-    Class_10E6D33C* Construct();
-};
 
 extern void* DAT_10e6d348[];
 
@@ -223,13 +185,6 @@ extern void* DAT_10e6d39c[];
 
 extern void* DAT_10e6d3a8[];
 
-class Class_10E6D3A8
-{
-public:
-    void* Field00;
-    Class_10E6D3A8* Construct();
-};
-
 extern void* DAT_10e6d3b4[];
 
 extern void* DAT_10e6d3f4[];
@@ -242,21 +197,7 @@ extern void* DAT_10e6d418[];
 
 extern void* DAT_10e6d424[];
 
-class Class_10E6D424 {
-public:
-    void* Field00;
-
-    Class_10E6D424* Construct();
-};
-
 extern void* DAT_10e6d430[];
-
-class Class_10E6D430 {
-public:
-    void* Field00;
-
-    Class_10E6D430* Construct();
-};
 
 extern void* DAT_10e6d43c[];
 
@@ -328,7 +269,7 @@ Class_10E6D0EC* Class_10E6D0EC::Construct()
 // FUNCTION: 0x10A99610 ?Construct@Class_10E6D0F8@@QAEPAV1@XZ
 Class_10E6D0F8* Class_10E6D0F8::Construct()
 {
-    Field00 = DAT_10e6d0f8;
+    *(void**)this = DAT_10e6d0f8;
     return this;
 }
 
@@ -426,7 +367,7 @@ int FUN_10a9ab60()
 // FUNCTION: 0x10A9AB70 ?Construct@Class_10E6D158@@QAEPAV1@XZ
 Class_10E6D158* Class_10E6D158::Construct()
 {
-    Field00 = DAT_10e6d158;
+    *(void**)this = DAT_10e6d158; // the vptr at offset 0
     return this;
 }
 
@@ -491,7 +432,7 @@ unsigned int FUN_10a9ac00()
 // FUNCTION: 0x10A9AC10 ?Construct@Class_10E6D194@@QAEPAV1@XZ
 Class_10E6D194* Class_10E6D194::Construct()
 {
-    Field00 = DAT_10e6d194;
+    *(void**)this = DAT_10e6d194; // the vptr at offset 0
     return this;
 }
 
@@ -542,7 +483,7 @@ int FUN_10a9cda0()
 // FUNCTION: 0x10A9CDB0 ?Construct@Class_10E6D1D8@@QAEPAV1@XZ
 Class_10E6D1D8* Class_10E6D1D8::Construct()
 {
-    Field00 = DAT_10e6d1d8;
+    *(void**)this = DAT_10e6d1d8; // the vptr at offset 0
     return this;
 }
 
@@ -581,7 +522,7 @@ int FUN_10a9d0b0()
 // FUNCTION: 0x10A9D0E0 ?Construct@Class_10E6D1FC@@QAEPAV1@XZ
 Class_10E6D1FC* Class_10E6D1FC::Construct()
 {
-    Field00 = DAT_10e6d1fc;
+    *(void**)this = DAT_10e6d1fc; // the vptr at offset 0
     return this;
 }
 
@@ -672,7 +613,7 @@ int FUN_10a9d3b0()
 // FUNCTION: 0x10A9D3C0 ?Construct@Class_10E6D260@@QAEPAV1@XZ
 Class_10E6D260* Class_10E6D260::Construct()
 {
-    Field00 = DAT_10e6d260;
+    *(void**)this = DAT_10e6d260;
     return this;
 }
 
@@ -854,7 +795,7 @@ int FUN_10aa0aa0()
 // FUNCTION: 0x10AA0AB0 ?Construct@Class_10E6D318@@QAEPAV1@XZ
 Class_10E6D318* Class_10E6D318::Construct()
 {
-    Field00 = DAT_10e6d318;
+    *(void**)this = DAT_10e6d318;
     return this;
 }
 
@@ -867,7 +808,7 @@ int FUN_10aa0ac0()
 // FUNCTION: 0x10AA0B00 ?Construct@Class_10E6D324@@QAEPAV1@XZ
 Class_10E6D324* Class_10E6D324::Construct()
 {
-    Field00 = DAT_10e6d324;
+    *(void**)this = DAT_10e6d324; // the vptr at offset 0
     return this;
 }
 
@@ -880,7 +821,7 @@ int FUN_10aa0b10()
 // FUNCTION: 0x10AA0B50 ?Construct@Class_10E6D330@@QAEPAV1@XZ
 Class_10E6D330* Class_10E6D330::Construct()
 {
-    Field00 = DAT_10e6d330;
+    *(void**)this = DAT_10e6d330; // the vptr at offset 0
     return this;
 }
 
@@ -893,7 +834,7 @@ int FUN_10aa0e90()
 // FUNCTION: 0x10AA0EA0 ?Construct@Class_10E6D33C@@QAEPAV1@XZ
 Class_10E6D33C* Class_10E6D33C::Construct()
 {
-    Field00 = DAT_10e6d33c;
+    *(void**)this = DAT_10e6d33c; // the vptr at offset 0
     return this;
 }
 
@@ -978,7 +919,7 @@ int FUN_10aa1a90()
 // FUNCTION: 0x10AA1AA0 ?Construct@Class_10E6D3A8@@QAEPAV1@XZ
 Class_10E6D3A8* Class_10E6D3A8::Construct()
 {
-    Field00 = (void*)DAT_10e6d3a8;
+    *(void**)this = DAT_10e6d3a8;
     return this;
 }
 
@@ -1011,7 +952,7 @@ Class_10E6D3F4* Class_10E6D3F4::Construct()
 // FUNCTION: 0x10AA25D0 ?Construct@Class_10E6D400@@QAEPAV1@XZ
 Class_10E6D400* Class_10E6D400::Construct()
 {
-    Field00 = DAT_10e6d400;
+    *(void**)this = DAT_10e6d400; // the vptr at offset 0
     return this;
 }
 
@@ -1050,7 +991,7 @@ int FUN_10aa2870()
 // FUNCTION: 0x10AA2880 ?Construct@Class_10E6D424@@QAEPAV1@XZ
 Class_10E6D424* Class_10E6D424::Construct()
 {
-    Field00 = DAT_10e6d424;
+    *(void**)this = DAT_10e6d424; // the vptr at offset 0
     return this;
 }
 
@@ -1063,7 +1004,7 @@ int FUN_10aa2890()
 // FUNCTION: 0x10AA28C0 ?Construct@Class_10E6D430@@QAEPAV1@XZ
 Class_10E6D430* Class_10E6D430::Construct()
 {
-    Field00 = DAT_10e6d430;
+    *(void**)this = DAT_10e6d430; // the vptr at offset 0
     return this;
 }
 

@@ -8,6 +8,7 @@ class Object_10A9D0C0;
 class Class_10E6D1FC
 {
 public:
+    // The vtable pointer is at offset 0; Construct stores this class's vtable there.
     virtual void Virtual0();
     virtual void Virtual1();
     virtual int FUN_10a9d0c0(int A, Object_10A9D0C0* B, int C);

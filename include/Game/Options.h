@@ -18,16 +18,16 @@ public:
     void ApplyVideo();
     void FUN_10ab5a90();
 
-          // +0x04, indexed by the names table; [11] is the resolution
-
     static int ResolutionWidths[];
     static int ResolutionHeights[];
 
     int Unknown00;
+    // +0x04, indexed by the names table; [11] is the resolution
     int Values[21];
-    char Unknown58;
-    char Unknown59;
-    char Pad5A[0x2];
+    bool Unknown58;
+    unsigned char Unknown59;
+    unsigned char Unknown5A;
+    char Pad5B;
 };
 
 #endif // GAME_OPTIONS_H

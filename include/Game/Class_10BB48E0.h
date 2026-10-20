@@ -3,12 +3,17 @@
 #ifndef GAME_CLASS_10BB48E0_H
 #define GAME_CLASS_10BB48E0_H
 
+#include "Core/Core.h"
+
 class Class_10BB48E0
 {
 public:
+    Class_10BB48E0(void* Arg);
     ~Class_10BB48E0();
+    void FUN_10bb4870(void* A, FVector* B);
 
     int Unknown00;
+    char Unknown04[0x14];
 };
 
 #endif // GAME_CLASS_10BB48E0_H

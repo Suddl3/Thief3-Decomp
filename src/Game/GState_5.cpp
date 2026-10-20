@@ -4,6 +4,7 @@
 #include "Game/Class_10B19300.h"
 #include "Game/Class_10B193E0.h"
 #include "Game/Class_10B39530.h"
+#include "Game/Class_10B39670.h"
 #include "Game/Class_10B39870.h"
 #include "Game/Class_10B46F10.h"
 #include "Game/Class_10AA82D0.h"
@@ -22,16 +23,6 @@ public:
     int Unknown404;
     char Unknown408[0x8];
     float Unknown410;
-};
-
-// Copied from include/Game/Class_10B39670.h with the return type the symbol has.
-class Class_10B39670
-{
-public:
-    bool FUN_10b39670(int A);
-
-    char Unknown00[0xC];
-    Class_10B46F10* Unknown0C[1];
 };
 
 // FUNCTION: 0x10B4BB80 ?FUN_10b4bb80@GState@@UAEXPAVObject_10B4BB80@@@Z

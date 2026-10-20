@@ -3,6 +3,7 @@
 
 #include "Game/cString.h"
 #include "Game/Class_10AA44B0.h"
+#include "Game/Class_10AA44B0_Node.h"
 
 // Ion Storm's placement new and its delete (0x10905C10; the delete folded into ::operator delete).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
@@ -11,20 +12,12 @@ void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 
 unsigned int HashBytes(const void* Data, int Length);
 
-// A chained hash table's entry: 12 bytes, allocated per insert.
-class Class_10AA44B0_Node
-{
-public:
-    int Key;
-    cString Value;
-    Class_10AA44B0_Node* Next;
-};
-
 // FUNCTION: 0x10AA35D0 ?Insert@Class_10AA44B0@@QAEIABHABVcString@@@Z
 unsigned int Class_10AA44B0::Insert(const int& Key, const cString& Value)
 {
     if (!m_FixedSize && m_Collisions > m_BucketCount * 0.2)
         Rehash(m_BucketCount * 2);
+    // The entry is a plain 12-byte block: the key, the value and the link on.
     Class_10AA44B0_Node* Node = new(0, 0, 0, 0, 0) Class_10AA44B0_Node;
     Node->Key = Key;
     Node->Value = Value;

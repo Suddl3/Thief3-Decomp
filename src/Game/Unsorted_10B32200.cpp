@@ -2,10 +2,9 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10B31BE0.h"
 #include "Game/Class_10B39530.h"
+#include "Game/Class_10B21350.h"
 
 class Class_10AA82D0;
-
-class Class_10B21350;
 
 class Class_1098E330;
 
@@ -23,17 +22,10 @@ public:
     int GetLinkedObject();
 };
 
-class Class_10B21350
-{
-public:
-    void FUN_10b21350();
-};
-
+// Class_1098E330 stands for the actor: the fields this function reads are the
+// base's, at absolute offsets.
 class Class_1098E330 : public Class_10B21350
 {
-public:
-    char Unknown00[0x440];
-    int Unknown440;
 };
 
 class Class_10B32160 : public Class_10AA82D0

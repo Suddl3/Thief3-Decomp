@@ -10,14 +10,9 @@
 #include "Game/Class_10BAD190.h"
 #include "Game/Class_10BB1140_Item.h"
 #include "Game/Class_10BB1140_Source.h"
+#include "Game/Class_10B9C9F0.h"
 
 int FUN_10bb0c60(int A);
-
-class Class_10B9C9F0
-{
-public:
-    Class_10BAD190* FUN_10b9c9f0();
-};
 
 struct Struct_10AA3520
 {
@@ -43,7 +38,7 @@ int Class_10E8C848::FUN_10bb1020(int A, Class_10BB1020_B* B, int C)
         Struct_10BB0B90* Owner = FUN_10bb0b90((int)B);
         if (Owner && Owner->Unknown118 && Owner->Unknown118->Unknown08)
         {
-            Owner->Unknown118->Unknown08->FUN_10b9c9f0()->FUN_10bad190(DAT_10f35dec->Unknown08, 1, 1);
+            ((Class_10BAD190*)Owner->Unknown118->Unknown08->FUN_10b9c9f0())->FUN_10bad190(DAT_10f35dec->Unknown08, 1, 1);
             return 1;
         }
     }

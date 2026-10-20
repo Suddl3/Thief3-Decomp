@@ -5,18 +5,11 @@
 #include "Game/Class_10905A90_Member.h"
 #include "Game/cObjectArray.h"
 #include "Game/Class_10BAEC80.h"
+#include "Game/Struct_10BAEC40_Unknown08.h"
 
 extern "C" void* memmove(void* Dest, const void* Src, unsigned Count);
 
 extern void* DAT_10e8d7c4[];
-
-struct Struct_10BAEC40_Unknown08
-{
-    void** Unknown00;
-    int Unknown04;
-    int Unknown08;
-    bool Unknown0C;
-};
 
 // FUNCTION: 0x10BAEC40 ?FUN_10baec40@cStructArray@@QAEXXZ
 void cStructArray::FUN_10baec40()

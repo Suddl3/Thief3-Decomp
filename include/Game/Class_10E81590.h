@@ -10,11 +10,6 @@ class Class_1098E330;
 class Class_10E81590 : public Class_10E7E4E0
 {
 public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
     virtual void OnAnimationEnd(int p1, int p2);
     virtual void Virtual6();
     virtual int FUN_10b4cd30(Class_1098E330* A);

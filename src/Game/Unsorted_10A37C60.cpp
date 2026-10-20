@@ -3,6 +3,7 @@
 #include "Game/Class_10A37E80.h"
 #include "Game/Class_10F46DA0.h"
 #include "Game/Object_10A37820.h"
+#include "Game/Object_10A37860.h"
 #include "Game/Struct_10A37860.h"
 
 class Class_10E666A0;
@@ -59,16 +60,6 @@ public:
 };
 
 extern float DAT_10eafbdc;
-
-class Object_10A37860
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual float Virtual3();
-    virtual Struct_10A37860* Virtual4();
-};
 
 class Class_10A37E80_Unknown20
 {

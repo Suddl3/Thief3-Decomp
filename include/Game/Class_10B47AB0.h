@@ -13,10 +13,14 @@ class Class_10B47AB0
 {
 public:
     void FUN_10b47ab0(int A);
+    // The game declared the method with three different parameter lists: the
+    // definition takes ints, the call sites pass floats.
+    void FUN_10b47850(int A, int B, float C, int D, int E, int F);
     void FUN_10b47850(int A, float B, float C, int D, int E, float F);
+    void FUN_10b47850(int A, float B, float C, int D, float E, float F);
 
     char Unknown00[8];
-    Class_10B7AC30* Unknown08;
+    Class_10EC0E20* Unknown08;
     Class_10EC0E20* Unknown0C;
     Class_10B47660_Member* Unknown10;
     char Unknown14[0x1C];

@@ -2,11 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_1094DFB0.h"
 #include "Game/Class_1094DFD0.h"
-
-struct Struct_10919190
-{
-    int Unknown00;
-};
+#include "Game/Struct_10919190.h"
 
 void SetWorldTransform(Struct_10919190* P);
 
@@ -40,7 +36,7 @@ public:
     virtual void FUN_1094e050();
 
     Struct_10919190 Unknown04;
-    char Unknown08[0xE0];
+    char Unknown44[0xA4];
     Class_1094E050* Unknown0E8[1];
 };
 

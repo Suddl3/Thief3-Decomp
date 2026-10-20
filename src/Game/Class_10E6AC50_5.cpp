@@ -1,11 +1,7 @@
 // Game/Class_10E6AC50_5.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-class cRemovableIntArray
-{
-public:
-    void EraseAt(int Index);
-};
+#include "Game/cRemovableIntArray.h"
 
 class Object_10A63310
 {
@@ -34,13 +30,11 @@ public:
 
     char Unknown04[0x10];
     cRemovableIntArray m_Count;
-    char Unknown15[7];
-    Object_10A63310** m_Items;
 };
 
 // FUNCTION: 0x10A63310 ?RemoveItemAt@Class_10E6AC50@@UAEXH@Z
 void Class_10E6AC50::RemoveItemAt(int Index)
 {
-    m_Items[Index]->Virtual1(0);
+    ((Object_10A63310**)m_Count.Data)[Index]->Virtual1(0);
     m_Count.EraseAt(Index);
 }

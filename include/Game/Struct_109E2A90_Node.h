@@ -3,6 +3,8 @@
 #ifndef GAME_STRUCT_109E2A90_NODE_H
 #define GAME_STRUCT_109E2A90_NODE_H
 
+class AZoneProperties;
+
 struct Struct_109E2A90_Node
 {
 public:
@@ -12,7 +14,8 @@ public:
         Struct_109E2A90_Node* Prev;
         int Unknown04;
     };
-    int Unknown08;
+    // The zone this node refers to.
+    AZoneProperties* Zone;
 };
 
 #endif // GAME_STRUCT_109E2A90_NODE_H

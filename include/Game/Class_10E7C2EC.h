@@ -10,6 +10,7 @@ class Class_10E7C2EC : public Class_10E6DC88
 public:
     virtual ~Class_10E7C2EC();
     virtual int Virtual0(int A, int B, int C, int* D);
+    virtual void FUN_10b358a0();
     Class_10E7C2EC();
 };
 

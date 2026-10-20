@@ -5,6 +5,7 @@
 #include "Game/Class_10E4A538.h"
 #include <string.h>
 #include "Game/Class_1093F090.h"
+#include "Game/Item_1093F140.h"
 
 struct Struct_1093FFE0
 {
@@ -24,14 +25,6 @@ struct Struct_1093FFE0
     float M21, M22, M23, M24;
     float M31, M32, M33, M34;
     float M41, M42, M43, M44;
-};
-
-struct Item_1093F140
-{
-    cString Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
 };
 
 extern const char DAT_10e47660[];

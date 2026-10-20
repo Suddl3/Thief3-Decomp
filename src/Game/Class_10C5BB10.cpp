@@ -11,7 +11,6 @@ class Class_10C5BB10_Node
 {
 public:
     Class_10C5B990 Key;
-    char Unknown08[0x24];
     Class_10C5BB10_Node* Next;
 };
 

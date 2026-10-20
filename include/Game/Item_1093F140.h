@@ -3,25 +3,12 @@
 #ifndef GAME_ITEM_1093F140_H
 #define GAME_ITEM_1093F140_H
 
-#include "Game/Class_10905A90_Member.h"
+#include "Game/cString.h"
 
-Class_10905A90_Member* GetAllocator();
-
-class Item_1093F140
+struct Item_1093F140
 {
 public:
-    Item_1093F140() : Unknown00(0) {}
-    ~Item_1093F140()
-    {
-        if (Unknown00)
-        {
-            char* Block = Unknown00 - 4;
-            GetAllocator()->Virtual5(Block);
-            Unknown00 = 0;
-        }
-    }
-
-    char* Unknown00;
+    cString Unknown00;
     int Unknown04;
     int Unknown08;
     int Unknown0C;

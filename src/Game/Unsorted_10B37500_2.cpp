@@ -50,8 +50,8 @@ void Class_10B395E0::FUN_10b395e0(int A)
 }
 
 // FUNCTION: 0x10B39670 ?FUN_10b39670@Class_10B39670@@QAEXH@Z
-void Class_10B39670::FUN_10b39670(int A)
+bool Class_10B39670::FUN_10b39670(int A)
 {
     Class_10B46F10* Item = Unknown0C[GetEntries()->GetEntry(A)->m_Index];
-    Item->FUN_10b46f10(A);
+    return Item->FUN_10b46f10(A);
 }

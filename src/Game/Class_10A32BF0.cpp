@@ -2,24 +2,12 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Game/Class_10905A90_Member.h"
+#include "Game/Class_10A32000.h"
 #include "Game/Class_10A32BF0.h"
 #include "Game/Class_10A32A70.h"
 #include "Game/Class_10A32D60.h"
 
 Class_10905A90_Member* GetAllocator();
-
-// The element: 0xc bytes; the loops clear its three words and call its destructor.
-class Class_10A32000
-{
-public:
-    void SetCount(int A);
-    int Append(char* Value);
-    ~Class_10A32000();
-
-    int m_Count;
-    int Unknown04;
-    char* m_Data;
-};
 
 // FUNCTION: 0x10A32AF0 ?SetCount@Class_10A32BF0@@QAEXH@Z
 void Class_10A32BF0::SetCount(int NewCount)
@@ -58,7 +46,7 @@ void Class_10A32BF0::SetCount(int NewCount)
         if (Element)
         {
             Element->m_Count = 0;
-            Element->Unknown04 = 0;
+            Element->m_CapacityBytes = 0;
             Element->m_Data = 0;
         }
     }

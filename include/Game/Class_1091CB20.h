@@ -3,9 +3,10 @@
 #ifndef GAME_CLASS_1091CB20_H
 #define GAME_CLASS_1091CB20_H
 
-class Class_10919C40;
+#include "Game/cIntArray.h"
+#include "Game/cString.h"
 
-class cString;
+class Class_10919C40;
 
 class Class_1091CB20
 {
@@ -18,19 +19,20 @@ public:
     {
         if (!Unknown0C)
             FUN_1091be70();
-        return Unknown00;
+        return Unknown00.Unknown00;
     }
     Class_1091CB20(Class_10919C40* Owner, const cString& Name, float A, float B, bool C, int D);
     cString FUN_1091cbc0(int B, int C);
 
-    int Unknown00;
-    char Unknown04[4];
-    int* Unknown08;
+    cIntArray Unknown00;
     bool Unknown0C;
-    char Unknown0D[0xB];
+    bool Unknown0D;
+    char Unknown0E[2];
+    cString m_Name;
+    float Unknown14;
     float Unknown18;
     int Unknown1C;
-    Class_10919C40* Unknown20;
+    Class_10919C40* m_Owner;
 };
 
 #endif // GAME_CLASS_1091CB20_H

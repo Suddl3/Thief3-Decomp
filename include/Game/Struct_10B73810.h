@@ -62,7 +62,7 @@ public:
     virtual void Virtual53();
     virtual void Virtual54();
     virtual void Virtual55();
-    virtual void Virtual56();
+    virtual void Virtual56(int A);
     virtual void Virtual57();
     virtual void Virtual58();
     virtual void Virtual59();
@@ -76,7 +76,7 @@ public:
     virtual void Virtual67();
     virtual void Virtual68();
     virtual void Virtual69();
-    virtual void Virtual70();
+    virtual void Virtual70(int A);
     virtual void Virtual71();
     virtual void Virtual72();
     virtual void Virtual73();
@@ -126,8 +126,8 @@ public:
     virtual void Virtual117();
     virtual void Virtual118();
     virtual void Virtual119();
-    virtual void Virtual120();
-    virtual void Virtual121();
+    virtual void Virtual120(int A, int B);
+    virtual void Virtual121(int A);
     virtual void Virtual122();
     virtual void Virtual123();
     virtual void Virtual124();
@@ -136,6 +136,7 @@ public:
     int Unknown1E8;
     int Unknown1EC;
     int Unknown1F0;
+    int Unknown1F4;
 };
 
 #endif // GAME_STRUCT_10B73810_H

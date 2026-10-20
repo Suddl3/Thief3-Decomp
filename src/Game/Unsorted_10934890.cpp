@@ -1,26 +1,11 @@
 // Game/Unsorted_10934890.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10E49EE0.h"
 #include "Game/Class_10934DB0.h"
 #include "Game/cD3DStateCache.h"
 #include "Game/Class_10E49EE0_Member.h"
 #include "Game/cD3DDynamicVertexBuffer.h"
 #include "Game/Class_10934990.h"
-
-class Class_10E49EE0
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual int UnlockVertices();
-
-    char m_Owner[0x10];
-    Class_10E49EE0_Member* m_Member;
-};
 
 extern cD3DStateCache* DAT_10f31be0;
 

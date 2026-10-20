@@ -4,19 +4,20 @@
 #define GAME_CLASS_10E66390_H
 
 #include "Game/Class_10A905A0.h"
-
-class cString;
+#include "Game/cString.h"
 
 class Class_10E66390 : public Class_10A905A0
 {
 public:
     virtual void Virtual0();
+    virtual Class_10E66390* Virtual1();
     virtual int FUN_10a2fcb0(Class_10E66390* A);
     virtual void Virtual2();
 
     Class_10E66390(const cString& A);
 
-    int Unknown04;
+    // the string the constructor was given, copied into the object
+    cString Unknown04;
 };
 
 #endif // GAME_CLASS_10E66390_H

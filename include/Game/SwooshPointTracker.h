@@ -20,7 +20,7 @@ public:
     int m_Head;
     int m_Capacity;
     int m_Count;
-    Struct_10AA53E0_Item* m_Points;
+    Struct_10AA53E0_Item* m_Points;  // points, indexed modulo m_Capacity; AddPoint stores an Entry_10AA5390 here
 };
 
 #endif // GAME_SWOOSHPOINTTRACKER_H

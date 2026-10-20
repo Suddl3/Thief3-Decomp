@@ -11,7 +11,7 @@ public:
     char PadA0[0x8];
     Node_10932350* m_Prev;
     Node_10932350* m_Next;
-    char* UnknownB0;
+    char* m_Name; // the entry's name, copied into its own buffer
 };
 
 #endif // GAME_NODE_10932350_H

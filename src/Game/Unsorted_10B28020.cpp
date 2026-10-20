@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10B28390.h"
 #include "Game/Class_10B28020.h"
+#include "Game/Class_10A52A40.h"
 
 class WindowManager
 {
@@ -16,14 +17,6 @@ public:
 extern WindowManager* GWindowManager;
 
 void* GetWindowManager();
-
-class Class_10A52A40_Member;
-
-class Class_10A52A40
-{
-public:
-    void FUN_10a52a40(Class_10A52A40_Member* A);
-};
 
 class Class_10B282E0_Unknown170
 {
@@ -138,8 +131,6 @@ class cT3MainMenuWindow : public Class_10A52A40
 public:
     void SetSelectedItem(Class_10A52A40_Member* A);
 
-    char Unknown00[0xC4];
-    int Unknown0C4;
     char Unknown0C8[0xA8];
     Class_10B282E0_Unknown170* Unknown170;
 };
@@ -668,7 +659,7 @@ void cT3MainMenuWindow::SetSelectedItem(Class_10A52A40_Member* A)
     FUN_10a52a40(A);
     if (Unknown170)
     {
-        if (Unknown0C4)
+        if (m_Selected)
             Unknown170->Virtual102(A);
         else
             Unknown170->Virtual56(0);

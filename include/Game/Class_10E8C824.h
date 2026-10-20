@@ -3,12 +3,17 @@
 #ifndef GAME_CLASS_10E8C824_H
 #define GAME_CLASS_10E8C824_H
 
+class Class_10BB0F20_Item;
+class Class_10BB0F20_Source;
+
 class Class_10E8C824
 {
 public:
-    Class_10E8C824* Construct();
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual int FUN_10bb0f20(int p1, Class_10BB0F20_Item* Item, Class_10BB0F20_Source* Source);
 
-    void* Unknown00;
+    Class_10E8C824* Construct();
 };
 
 #endif // GAME_CLASS_10E8C824_H

@@ -15,9 +15,9 @@ public:
 // FUNCTION: 0x10ABB4E0 ?FindMatchIndex@Class_10E6F474@@QAEHH@Z
 int Class_10E6F474::FindMatchIndex(int A)
 {
-    for (int i = 0; i < m_EntryCount; i++)
+    for (int i = 0; i < m_Entries.Count; i++)
     {
-        if (m_Entries[i]->Virtual4(A))
+        if (((Class_10ABB4E0_Element**)m_Entries.Data)[i]->Virtual4(A))
             return i;
     }
     return -1;

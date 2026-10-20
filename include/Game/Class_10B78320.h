@@ -13,7 +13,7 @@ public:
     void FUN_10b78320();
 
     char Pad04[0x184];
-    Class_10B78320_Member* Unknown188;
+    Class_10B78320_Member* Unknown188; // FUN_10b78320 calls Unknown188->Virtual70(0)
     char Pad18C[0x18];
 };
 

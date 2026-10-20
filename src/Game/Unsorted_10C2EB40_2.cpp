@@ -4,12 +4,7 @@
 #include "Game/Struct_10C2EB70.h"
 #include "Game/Class_10C2EB70.h"
 #include "Game/Class_10C270D0.h"
-
-class MC_MoveToPoint : public Class_10C270D0
-{
-public:
-    virtual void FUN_10c2eb40();
-};
+#include "Game/MC_MoveToPoint.h"
 
 // FUNCTION: 0x10C2EB40 ?FUN_10c2eb40@MC_MoveToPoint@@UAEXXZ
 void MC_MoveToPoint::FUN_10c2eb40()
@@ -19,7 +14,7 @@ void MC_MoveToPoint::FUN_10c2eb40()
         switch (Unknown48->FUN_10c3c2c0(1))
         {
         case 0:
-            Reset();
+            ((Class_10C270D0*)this)->Reset(); // Reset() belongs to the base the game derives from
             break;
         case 1:
             return;

@@ -97,7 +97,7 @@ public:
     virtual void Virtual86(int A, float B, int C, float D, int E);
 
     void FUN_10a55050(int A);
-    void FUN_10a55050(unsigned char A);
+    void FUN_10a55050(unsigned char A);  // the callers pass the value as a byte
     void FUN_10a55780(int A);
 
     char Unknown04[0x128];

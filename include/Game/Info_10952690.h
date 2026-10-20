@@ -6,9 +6,9 @@
 struct Info_10952690
 {
 public:
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
+    float Unknown00;
+    float Unknown04;
+    float Unknown08;
     float Unknown0C;
 };
 

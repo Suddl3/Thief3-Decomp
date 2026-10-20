@@ -2,24 +2,11 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Game/cIntArray.h"
-
-class Object_10A858C0;
+#include "Game/Object_10A858C0.h"
 
 extern cIntArray DAT_10f3a1c8;
 
 extern Object_10A858C0** DAT_10f3a1d0;
-
-class Object_10A858C0
-{
-public:
-    virtual void Virtual0();
-    virtual ~Object_10A858C0();
-    virtual void Virtual2();
-    virtual bool Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6(int A);
-};
 
 // FUNCTION: 0x10A872A0 ?FUN_10a872a0@@YAXH@Z
 void FUN_10a872a0(int Param)

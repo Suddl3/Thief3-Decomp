@@ -5,15 +5,20 @@
 
 #include "Game/cIntArray.h"
 
+class Class_10C0E5E0_Param;
+
 class cContextVolumeList
 {
 public:
+    // slot 0: the hub sends message 0x5a, the list then takes the level's actors
+    virtual void HandleMessage(int Message, int A, Class_10C0E5E0_Param* Param, int B);
+
     virtual ~cContextVolumeList();
 
     cContextVolumeList();
 
-    cIntArray m_ContextVolumes;
-    cIntArray Unknown10;
+    cIntArray m_ContextVolumes;   // the AAIContextVolume actors of the level
+    cIntArray Unknown10;          // the other actors of the level
 };
 
 #endif // GAME_CCONTEXTVOLUMELIST_H

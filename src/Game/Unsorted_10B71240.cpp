@@ -2,13 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Options.h"
 #include "Game/cOptionToggle.h"
-
-class Class_10B78320
-{
-public:
-    virtual void Virtual0();
-    void FUN_10b78320();
-};
+#include "Game/Class_10B78320.h"
 
 class cString;
 
@@ -152,7 +146,7 @@ public:
     void FUN_10b716a0();
     void FUN_10b71740();
 
-    char Unknown04[0x1B0];
+    char Unknown1A4[0x10];
     cOptionToggle* Unknown1B4;
     cOptionToggle* Unknown1B8;
     cOptionToggle* Unknown1BC;

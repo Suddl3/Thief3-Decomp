@@ -3,10 +3,13 @@
 #ifndef GAME_STRUCT_1094E9D0_H
 #define GAME_STRUCT_1094E9D0_H
 
+class Class_1094E860_Unknown00;
+
 struct Struct_1094E9D0
 {
 public:
-    int Unknown00;
+    // points at the object the entry refers to; null when the entry is empty
+    Class_1094E860_Unknown00* Unknown00;
 };
 
 #endif // GAME_STRUCT_1094E9D0_H

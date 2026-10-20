@@ -1,6 +1,9 @@
 // Game/Unsorted_10937520_4.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
+#include "Game/Class_10937730.h"
+#include "Game/cD3DStateCache.h"
+
 class IDirect3DDevice8
 {
 public:
@@ -65,31 +68,12 @@ public:
 
 extern IDirect3DDevice8* GDirect3DDevice8;
 
-class cD3DStateCache
-{
-public:
-    void ClearTextures();
-};
-
-class Class_10937730 : public cD3DStateCache
-{
-public:
-    void Reset();
-    void FUN_10937730();
-
-    int Unknown00[3];
-    int Unknown0C;
-    int Unknown10;
-    int Unknown14;
-    char Unknown18[0x69C];
-    int Unknown6B4;
-};
-
 // FUNCTION: 0x10937730 ?FUN_10937730@Class_10937730@@QAEXXZ
 void Class_10937730::FUN_10937730()
 {
     Reset();
-    ClearTextures();
+    // The object sits on a cD3DStateCache, whose textures are cleared here.
+    ((cD3DStateCache*)(void*)this)->ClearTextures();
     Unknown0C = 0;
     Unknown10 = 0;
     Unknown14 = 0;

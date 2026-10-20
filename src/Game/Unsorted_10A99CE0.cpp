@@ -7,6 +7,7 @@
 #include "Game/Class_10A73EF0_Table.h"
 #include "Game/Class_10A73EF0_Object.h"
 #include "Game/Class_10AAB5C0.h"
+#include "Game/Class_10E6D0F8.h"
 
 class Class_10A99F80_Param
 {
@@ -16,13 +17,6 @@ public:
     virtual void Virtual2();
     virtual void Virtual3();
     virtual Class_10AAB5C0* Virtual4(int A);
-};
-
-class Class_10E6D0F8
-{
-public:
-    void FUN_10a99ce0(int A, Class_10A73EF0_Object* B, int C, Class_10AAB5C0* D, Class_10AAB5C0* E, Class_10AAB5C0* F);
-    int FUN_10a99f80(int A, Class_10A99F80_Param* B);
 };
 
 extern UClass* DAT_10f3eda0;

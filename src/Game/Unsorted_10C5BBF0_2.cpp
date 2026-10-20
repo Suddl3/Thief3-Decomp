@@ -2,15 +2,10 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/cString.h"
 #include "Game/Class_10C5BBF0.h"
+#include "Game/InnerClass_10c5b910.h"
 
 // Ion Storm's placement new (0x10905C10).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
-
-class InnerClass_10c5b910
-{
-public:
-    char Pad00[0x28];
-};
 
 // Class_10C5B990 copied from include/Game/Class_10C5B990.h, its padding retyped as the bucket key
 // and its destructor added (the game's out-of-line one at 0x10C5B990).

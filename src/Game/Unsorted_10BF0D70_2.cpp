@@ -6,16 +6,8 @@
 #include "Game/Class_10BC4BF0.h"
 #include "Game/Class_10963CE0.h"
 #include "Game/Class_10BF0EA0.h"
-
-// Game/Struct_10BA91E0.h copied whole with its FVector base: the result is used as a vector.
-struct Struct_10BA91E0 : public FVector
-{
-};
-
-// Game/Struct_10BA9F50.h copied whole with its FRotator base: the rotation is passed by value.
-struct Struct_10BA9F50 : public FRotator
-{
-};
+#include "Game/Struct_10BA91E0.h"
+#include "Game/Struct_10BA9F50.h"
 
 // The header's FUN_10ba9ef0 returns Struct_10BA9EF0 (ints), the symbol's returns Struct_10BA91E0 (floats).
 class Class_10E5CBD8
@@ -93,14 +85,16 @@ bool Class_10BF0EA0::FUN_10bf0ea0(FVector* Out, int Param2, int Param3)
     Class_10963CE0 Matrix;
     FVector Tmp1;
     FVector Tmp0;
+    // A rotation: the struct's three ints are pitch, yaw and roll, so it is used as an FRotator.
     Struct_10BA9F50 Rot;
     this->Unknown04->Unknown08->FUN_10baa240(&Tmp0);
+    // A vector: the struct's three floats are x, y and z, so it is used as an FVector.
     Struct_10BA91E0 Base = this->Unknown04->Unknown08->FUN_10ba9ef0();
     Class_10BF0EA0_Result* Obj = (Class_10BF0EA0_Result*)((Class_10BC4BF0*)this)->GetTargetLinkType();
     FVector V;
     if (!((Class_10BC4B80*)this)->FindPosition(&V, Param2, Obj->Virtual48()))
     {
-        *Out = Base;
+        *Out = *(FVector*)&Base;
         return false;
     }
     float Scale = (float)Param3;
@@ -108,8 +102,8 @@ bool Class_10BF0EA0::FUN_10bf0ea0(FVector* Out, int Param2, int Param3)
     V.Y *= Scale;
     V.Z *= Scale;
     ((Class_10BA9F50*)this->Unknown04->Unknown08)->CopyPosition(&Rot);
-    Matrix.FUN_10963ce0(Rot);
+    Matrix.FUN_10963ce0(*(FRotator*)&Rot);
     V = *Matrix.FUN_1096d8a0(&Tmp1, &V);
-    *Out = Base + V;
+    *Out = (*(FVector*)&Base) + V;
     return true;
 }

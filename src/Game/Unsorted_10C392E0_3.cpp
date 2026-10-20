@@ -4,12 +4,7 @@
 #include "Game/Class_10C38D90_Unknown48.h"
 #include "Game/Class_10C7D570.h"
 #include "Game/Struct_10C05A80.h"
-
-struct Struct_10C3D0A0
-{
-    char Unknown00[0x2C];
-    Struct_10C05A80 Unknown2C;
-};
+#include "Game/Struct_10C3D0A0.h"
 
 float DistanceSquared3D(const Struct_10C05A80* A, const Struct_10C05A80* B);
 
@@ -20,7 +15,7 @@ bool Class_10C399C0::TrackTarget(int* Obj)
     if (m_PathIndex >= m_PathCount)
         return true;
     Struct_10C3D0A0* Actor = (Struct_10C3D0A0*)Unknown48->Virtual34()->FUN_10c7d570();
-    Struct_10C05A80 ActorPos = Actor->Unknown2C;
+    Struct_10C05A80 ActorPos = Actor->m_Position;
     Struct_10C05A80 Pos = m_PathPoints[m_PathIndex];
     if (*Obj == 0)
     {
@@ -29,7 +24,7 @@ bool Class_10C399C0::TrackTarget(int* Obj)
         if (*Obj == 0)
             return false;
     }
-    float Dist = DistanceSquared3D(&((Struct_10C3D0A0*)*Obj)->Unknown2C, &ActorPos);
+    float Dist = DistanceSquared3D(&((Struct_10C3D0A0*)*Obj)->m_Position, &ActorPos);
     float Sum = FUN_10c38640(*Obj) + Span;
     if (Dist < Sum * Sum)
     {

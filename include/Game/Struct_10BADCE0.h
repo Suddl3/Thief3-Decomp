@@ -12,7 +12,7 @@ struct Struct_10BADCE0
 {
 public:
     FVector Unknown00;
-    char Unknown0C[0xC];
+    FRotator Rotation;
     Struct_10BA91E0* Unknown18;
     Class_10A68D20 Unknown1C;
 };

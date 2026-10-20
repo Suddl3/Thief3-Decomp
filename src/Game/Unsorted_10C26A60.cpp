@@ -4,6 +4,7 @@
 #include "Game/Class_10C26980.h"
 #include "Game/Class_10C26A60.h"
 #include "Game/Class_10C26E80.h"
+#include "Game/Class_10E99298.h"
 #include "Game/cIntArray.h"
 #include "Game/cPositionList.h"
 #include "Game/MC_MoveToPoint.h"
@@ -11,12 +12,6 @@
 #include "Game/Struct_10C266F0.h"
 
 extern void* DAT_10e99298[];
-
-class Class_10E99298 : public Class_10C26980
-{
-public:
-    Class_10E99298* Construct(int A, int B, int C, int D);
-};
 
 extern void* DAT_10e992d4[];
 
@@ -48,8 +43,10 @@ void Class_10C26E80::Update()
 // FUNCTION: 0x10C27010 ?Construct@Class_10E99298@@QAEPAV1@HHHH@Z
 Class_10E99298* Class_10E99298::Construct(int A, int B, int C, int D)
 {
-    this->Class_10C26980::Class_10C26980(A, B, C, D, 90.0f, 90.0f);
-    Unknown00 = DAT_10e99298;
+    // The base's constructor runs on the object itself: its vtable pointer, at offset 0,
+    // is the one this class installs below.
+    ((Class_10C26980*)(void*)this)->Class_10C26980::Class_10C26980(A, B, C, D, 90.0f, 90.0f);
+    *(void**)this = DAT_10e99298; // the vtable pointer at offset 0
     return this;
 }
 

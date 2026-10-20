@@ -5,6 +5,7 @@
 
 #include "Game/cIntArray.h"
 
+// The element: 0x30 bytes; the loops call its destructor and clear its words.
 class Class_10AB8BE0
 {
 public:

@@ -15,8 +15,8 @@ public:
     float m_Delta;
     bool m_Finished;
     char Pad15[0x3];
-    float m_Duration;
-    float m_Elapsed;
+    float m_Duration;   // Start copies the duration argument into it as raw bits
+    float m_Elapsed;    // time accumulated by Update since Start
 };
 
 #endif // GAME_CFLOATINTERPOLATOR_H

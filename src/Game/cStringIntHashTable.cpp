@@ -4,26 +4,9 @@
 #include "Game/cString.h"
 #include "Game/Class_109E6520_Node.h"
 #include "Game/Class_109E6520_Field18.h"
+#include "Game/cStringIntHashTable.h"
 
 unsigned int HashBytes(const void* Data, int Length);
-
-// The hash table of cStringIntHashTable's header, with Remove added.
-class cStringIntHashTable
-{
-public:
-    unsigned int Insert(const cString& Key, const int& Value);
-    void Rehash(int Size);
-    bool Remove(const cString& Key);
-
-    int m_Collisions;
-    int m_Count;
-    int m_BucketBits;
-    int m_BucketCount;
-    bool m_FixedSize;
-    char Pad11[0x3];
-    Class_109E6520_Node** m_Buckets;
-    Class_109E6520_Field18 m_KeyTraits;
-};
 
 // FUNCTION: 0x109E7B20 ?Remove@cStringIntHashTable@@QAE_NABVcString@@@Z
 bool cStringIntHashTable::Remove(const cString& Key)

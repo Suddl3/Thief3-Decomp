@@ -2,21 +2,9 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Game/Class_10A32000.h"
+#include "Game/Object_10944D50.h"
 
 extern "C" void* memcpy(void*, const void*, unsigned int);
-
-class Object_10944D50
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual int Virtual3();
-    virtual int Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6(int A, int B, int* C);
-    virtual void Virtual7();
-};
 
 // FUNCTION: 0x10944CD0 ?AppendBuffer@@YGXPAVObject_10944D50@@PAVClass_10A32000@@PAH@Z
 void __stdcall AppendBuffer(Object_10944D50* A, Class_10A32000* C, int* Offset)

@@ -28,8 +28,8 @@ void Class_10C184F0::FUN_10c184f0()
 // FUNCTION: 0x10C1A090 ?ReleaseItems@@YAXXZ
 void ReleaseItems()
 {
-    --DAT_10ff7088->Unknown00;
-    if (DAT_10ff7088->Unknown00 == 0)
+    --DAT_10ff7088->m_RefCount;
+    if (DAT_10ff7088->m_RefCount == 0)
     {
         delete DAT_10ff7088;
         DAT_10ff7088 = 0;

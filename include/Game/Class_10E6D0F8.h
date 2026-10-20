@@ -3,16 +3,22 @@
 #ifndef GAME_CLASS_10E6D0F8_H
 #define GAME_CLASS_10E6D0F8_H
 
+class Class_10A73EF0_Object;
+class Class_10A99F80_Param;
+class Class_10A9A020_Param2;
+class Class_10A9A020_Param3;
+class Class_10AAB5C0;
+
 class Class_10E6D0F8
 {
 public:
-    Class_10E6D0F8* Construct();
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual int FUN_10a9a020(int A, Class_10A9A020_Param2* B, Class_10A9A020_Param3* C);
 
-    union
-    {
-        void* Field00;
-        void* Unknown00;
-    };
+    Class_10E6D0F8* Construct();
+    void FUN_10a99ce0(int A, Class_10A73EF0_Object* B, int C, Class_10AAB5C0* D, Class_10AAB5C0* E, Class_10AAB5C0* F);
+    int FUN_10a99f80(int A, Class_10A99F80_Param* B);
 };
 
 #endif // GAME_CLASS_10E6D0F8_H

@@ -3,6 +3,7 @@
 #include "Game/cString.h"
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10A63500.h"
+#include "Game/Class_1091CB20.h"
 
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 
@@ -11,35 +12,6 @@ void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
 Class_10905A90_Member* GetAllocator();
 
 class Class_10919C40;
-
-// Class_1091CB20 as include/Game/Class_1091CB20.h declares it, with the constructor
-// and the cString at 0x10 that the header's padding hides.
-class Class_1091CB20
-{
-public:
-    Class_1091CB20(Class_10919C40* A, const cString& B, float C, float D, bool E, int F);
-    int FUN_1091cb20();
-    void FUN_1091be70();
-    int FUN_1091cb40();
-    int GetValue(unsigned int Index);
-    int Count()
-    {
-        if (!Unknown0C)
-            FUN_1091be70();
-        return Unknown00;
-    }
-
-    int Unknown00;
-    char Unknown04[4];
-    int* Unknown08;
-    bool Unknown0C;
-    char Unknown0D[0x3];
-    cString Unknown10;
-    char Unknown14[0x4];
-    float Unknown18;
-    int Unknown1C;
-    Class_10919C40* Unknown20;
-};
 
 bool FUN_1094c430(const cString& A, const cString& B);
 
@@ -54,15 +26,15 @@ void Class_10A63500::FUN_10a63500(const cString& Name, Class_10919C40* Value)
     else
     {
         Class_1091CB20* Obj = Unknown0C;
-        if (Value != Obj->Unknown20)
+        if (Value != Obj->m_Owner)
         {
-            Obj->Unknown20 = Value;
+            Obj->m_Owner = Value;
             Obj->Unknown0C = false;
         }
         Obj = Unknown0C;
-        if (FUN_1094c430(Name, Obj->Unknown10))
+        if (FUN_1094c430(Name, Obj->m_Name))
         {
-            Obj->Unknown10 = Name;
+            Obj->m_Name = Name;
             Obj->Unknown0C = false;
         }
     }

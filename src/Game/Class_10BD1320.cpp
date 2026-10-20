@@ -4,38 +4,9 @@
 #include <new>
 #include "Game/Class_10BD1320.h"
 #include "Game/Class_10905A90_Member.h"
+#include "Game/Item_10BD1320.h"
 
 Class_10905A90_Member* GetAllocator();
-
-// The holder at +4 of an element: a block pointer, freed from four bytes before its start.
-class Class_10BD0410_Unknown04
-{
-public:
-    Class_10BD0410_Unknown04() : Unknown00(0) {}
-
-    ~Class_10BD0410_Unknown04()
-    {
-        if (Unknown00)
-        {
-            char* Block = Unknown00 - 4;
-            GetAllocator()->Virtual5(Block);
-            Unknown00 = 0;
-        }
-    }
-
-    char* Unknown00;
-    int Unknown04;
-    int Unknown08;
-};
-
-// The element: a vtable, then the holder. No destructor of its own, so the compiler's one frees the holder.
-class Item_10BD1320
-{
-public:
-    virtual void Virtual0();
-
-    Class_10BD0410_Unknown04 Unknown04;
-};
 
 // FUNCTION: 0x10BD0410 ?FUN_10bd0410@Class_10BD1320@@QAEXH@Z
 void Class_10BD1320::FUN_10bd0410(int NewCount)

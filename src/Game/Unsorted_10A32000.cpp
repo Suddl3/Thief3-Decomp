@@ -24,7 +24,7 @@ public:
 // FUNCTION: 0x10A32000 ?SetCount@Class_10A32000@@QAEXH@Z
 void Class_10A32000::SetCount(int NewCount)
 {
-    int Capacity = !m_Data ? 0 : Unknown04;
+    int Capacity = !m_Data ? 0 : m_CapacityBytes;
     GetAllocator()->Virtual8(0, 0);
     if (NewCount > Capacity)
     {
@@ -32,7 +32,7 @@ void Class_10A32000::SetCount(int NewCount)
         if (Capacity)
             NewCapacity = (NewCount & ~15) + 16;
         m_Data = (char*)GetAllocator()->Virtual3(m_Data, NewCapacity, 0, 0, 0, 0);
-        Unknown04 = NewCapacity;
+        m_CapacityBytes = NewCapacity;
     }
     else if (NewCount <= Capacity - 16)
     {
@@ -40,13 +40,13 @@ void Class_10A32000::SetCount(int NewCount)
         {
             GetAllocator()->Virtual5(m_Data);
             m_Data = 0;
-            Unknown04 = 0;
+            m_CapacityBytes = 0;
         }
         else
         {
             int NewCapacity = (NewCount & ~15) + 16;
             m_Data = (char*)GetAllocator()->Virtual3(m_Data, NewCapacity, 0, 0, 0, 0);
-            Unknown04 = NewCapacity;
+            m_CapacityBytes = NewCapacity;
         }
     }
     GetAllocator()->Virtual9();

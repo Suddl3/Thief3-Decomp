@@ -3,6 +3,9 @@
 #ifndef GAME_CLASS_10A57910_H
 #define GAME_CLASS_10A57910_H
 
+#include "Core/Core.h"
+#include "Engine/EngineClasses.h"
+
 class Class_10A57910
 {
 public:
@@ -127,9 +130,12 @@ public:
     virtual void Virtual118(int A);
 
     void FUN_10a57910(int p1);
+    void FUN_10a588c0(int p1);  // the overload FUN_10a57910 calls; the vtable slot 87 is the bool one
     void SetInOverlay(bool A);
 
-    char Pad04[0x1ec];
+    char Pad04[0x124];
+    TArray<AActor*> Unknown128;  // array of actors, read at the index Virtual71() returns
+    char Pad134[0xBC];
     int Unknown1F0;
     int Unknown1F4;
 };

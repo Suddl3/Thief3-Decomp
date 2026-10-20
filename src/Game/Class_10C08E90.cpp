@@ -28,10 +28,10 @@ int Class_10C08E90::Add(Item_10C091A0* Item)
     int Index = Unknown00;
     FUN_10c089b0(Index + 1);
     Item_10C091A0* Dest = &Unknown08[Index];
-    Dest->Unknown04.Assign(&Item->Unknown04);
+    ((Class_10913D70*)&Dest->Unknown04)->Assign((Class_10913D70*)&Item->Unknown04);
     Dest->Unknown0C = Item->Unknown0C;
     Dest->Unknown10 = Item->Unknown10;
-    Dest->Unknown14 = Item->Unknown14;
+    *(Struct_10C091A0*)&Dest->Unknown14 = *(Struct_10C091A0*)&Item->Unknown14;
     Dest->Unknown20 = Item->Unknown20;
     Dest->Unknown24 = Item->Unknown24;
     return Index;

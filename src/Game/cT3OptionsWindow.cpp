@@ -1,12 +1,7 @@
 // Game/cT3OptionsWindow.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
-class Class_10B78320
-{
-public:
-    virtual void Virtual0();
-    void FUN_10b78320();
-};
+#include "Game/Class_10B78320.h"
 
 class Class_10B70F80
 {
@@ -210,7 +205,7 @@ public:
     virtual void Virtual120();
     virtual void FUN_10b70f80();
 
-    char Unknown04[0x1B0];
+    char Unknown1A4[0x10];
     Class_10B70F80* Unknown1B4;
     Class_10B70F80* Unknown1B8;
     Class_10B70F80* Unknown1BC;

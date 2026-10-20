@@ -3,6 +3,7 @@
 
 #include "Core/Core.h"
 #include "Engine/EngineClasses.h"
+#include "Game/Class_10E6BBE8.h"
 
 class Object_10A75810_B
 {
@@ -24,39 +25,16 @@ public:
     Object_10A75810_P* Unknown04;
 };
 
-class Class_10E6BBE8
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void FUN_10a75810(AActor* A, Object_10A75810_B* B, Object_10A75810_C* C);
-    virtual void Virtual9();
-    virtual void Virtual10();
-    virtual void Virtual11();
-    virtual void Virtual12();
-    virtual void Virtual13();
-    virtual void Virtual14();
-    virtual void Virtual15(AActor* A);
-    virtual void FUN_10a757e0(AActor* A);
-};
-
 class UParticleEmitter;
-
 // FUNCTION: 0x10A75810 ?FUN_10a75810@Class_10E6BBE8@@UAEXPAVAActor@@PAVObject_10A75810_B@@PAVObject_10A75810_C@@@Z
 void Class_10E6BBE8::FUN_10a75810(AActor* A, Object_10A75810_B* B, Object_10A75810_C* C)
 {
     if (B->Unknown04 == 0x80028A)
     {
         Object_10A75810_P* P = C->Unknown04;
-        FUN_10a757e0(A);
+        FUN_10a757e0((int)A);
         if (!A->bDeleteMe && !(A->ObjectFlags & 0x800000) && P && P->Unknown00)
-            Virtual15(A);
+            FUN_10a757b0((int)A);
     }
 }
 

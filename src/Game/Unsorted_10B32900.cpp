@@ -3,6 +3,7 @@
 
 #include "Game/Class_10A18E80.h"
 #include "Game/Class_10A18FA0.h"
+#include "Game/Class_10B21350.h"
 
 class Object_10A18FC0;
 
@@ -10,20 +11,10 @@ extern float DAT_10eafbdc;
 
 Object_10A18FC0* FUN_10a18fc0();
 
-class Class_10B21350
-{
-public:
-    void FUN_10b21350();
-};
-
-// Class_1098E330 as Unsorted_10B32200.cpp lays it out: the fields this function reads are absolute offsets.
+// Class_1098E330 stands for the actor: the field this function reads is the
+// base's, at an absolute offset.
 class Class_1098E330 : public Class_10B21350
 {
-public:
-    char Unknown00[0x440];
-    int Unknown440;
-    char Unknown444[0x10];
-    float Unknown454;
 };
 
 class Class_10B32750

@@ -27,7 +27,8 @@ unsigned int cIntHashTable::Insert(const int& Key, const int& Value)
     {
         const void* Data;
         int Length;
-        m_KeyTraits.Virtual0(Key, &Data, &Length);
+        // The traits object is a Class_10EBFF38; slot 0 is the key hasher it inherits.
+        ((Class_10C30DD0_Field18*)&m_KeyTraits)->Virtual0(Key, &Data, &Length);
         Index = HashBytes(Data, Length) & ((1 << m_BucketBits) - 1);
     }
     if (m_Buckets[Index])

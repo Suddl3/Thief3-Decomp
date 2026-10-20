@@ -4,18 +4,7 @@
 #include "Game/Class_10A3B460_Member.h"
 #include "Game/cIntArray.h"
 #include "Game/Class_10A3AD10.h"
-
-class cProximityManager
-{
-public:
-    virtual void HandleEvent(int Message, int Param, int C, int D);
-
-    bool FUN_10a3ad90(int Param);
-
-    Class_10A3B460_Member Unknown04;
-    char Unknown08[0x20];
-    int m_Target;
-};
+#include "Game/cProximityManager.h"
 
 // FUNCTION: 0x10A3AD10 ??0Class_10A3AD10@@QAE@ABV0@@Z
 Class_10A3AD10::Class_10A3AD10(const Class_10A3AD10& Other)
@@ -28,7 +17,8 @@ Class_10A3AD10::Class_10A3AD10(const Class_10A3AD10& Other)
 // FUNCTION: 0x10A3B460 ?HandleEvent@cProximityManager@@UAEXHHHH@Z
 void cProximityManager::HandleEvent(int Message, int Param, int C, int D)
 {
-    bool NoTarget = m_Target == 0;
+    // The target sits at +0x28, inside the Class_10A3BA50 member.
+    bool NoTarget = *(int*)&Unknown08.Unknown00[0x20] == 0;
     switch (Message)
     {
     case 59:
@@ -38,7 +28,8 @@ void cProximityManager::HandleEvent(int Message, int Param, int C, int D)
     case 38:
     case 39:
         if (!NoTarget)
-            Unknown04.Virtual5(Param);
+            // The Class_10E66700 base, whose sixth virtual slot takes the event.
+            reinterpret_cast<Class_10A3B460_Member*>(&static_cast<Class_10E66700&>(*this))->Virtual5(Param);
         break;
     }
 }

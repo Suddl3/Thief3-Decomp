@@ -5,6 +5,7 @@
 #include "Game/cString.h"
 #include "Game/Class_1090C880.h"
 #include "Game/Class_10A52BE0.h"
+#include "Game/cCountLabel.h"
 
 extern const char DAT_10e7b930[];
 
@@ -100,25 +101,6 @@ public:
     Class_1090C880 m_Names;
     int Unknown134;
     char Pad138[0xc0];
-};
-
-// Copied whole from include/Game/cCountLabel.h, with Unknown120 typed as the
-// Class_10E684A8 the function calls through (the header has void*).
-class cCountLabel
-{
-public:
-    void RefreshLabel();
-    void SetHideCount(unsigned char param);
-    void SetName(const cString& Name);
-    void SetCount(int p1);
-
-    char Unknown00[0x120];
-    Class_10E684A8* m_Label;
-    char Unknown124[0x18];
-    cString m_Name;
-    char Pad140[0x4];
-    int m_Count;
-    unsigned char m_HideCount;
 };
 
 // FUNCTION: 0x10B2F590 ?RefreshLabel@cCountLabel@@QAEXXZ

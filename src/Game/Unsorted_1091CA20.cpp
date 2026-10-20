@@ -7,5 +7,5 @@ int Class_1091CB20::FUN_1091cb20()
 {
     if (!Unknown0C)
         FUN_1091be70();
-    return Unknown00;
+    return Unknown00.Unknown00;
 }

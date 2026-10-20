@@ -3,15 +3,8 @@
 
 #include "Game/Class_10A34C10.h"
 #include "Game/Class_10A34CD0.h"
+#include "Game/Class_10A34C10_Node.h"
 #include "Game/Class_10C40740.h"
-
-class Class_10A34C10_Node
-{
-public:
-    Class_10C40740 Key;
-    int Value;
-    Class_10A34C10_Node* Next;
-};
 
 // FUNCTION: 0x10A34CD0 ?FUN_10a34cd0@Class_10A34CD0@@QAEXH@Z
 void Class_10A34CD0::FUN_10a34cd0(int A)
@@ -22,7 +15,7 @@ void Class_10A34CD0::FUN_10a34cd0(int A)
         while (Node)
         {
             Class_10A34C10_Node* Next = Node->Next;
-            Node->Key.~Class_10C40740();
+            ((Class_10C40740*)&Node->Key)->~Class_10C40740();
             ::operator delete(Node);
             Node = Next;
         }

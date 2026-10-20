@@ -3,9 +3,9 @@
 #ifndef GAME_CLASS_10937730_H
 #define GAME_CLASS_10937730_H
 
-#include "Game/cD3DStateCache.h"
+class IDirect3DBaseTexture8;
 
-class Class_10937730 : public cD3DStateCache
+class Class_10937730
 {
 public:
     void FUN_10937730();
@@ -21,7 +21,7 @@ public:
     int Unknown10;
     int Unknown14;
     char Unknown18[4];
-    int Unknown1C[4];
+    IDirect3DBaseTexture8* m_StageTextures[4];
     char Unknown2C[0x688];
     int Unknown6B4;
 };

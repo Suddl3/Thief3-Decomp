@@ -13,6 +13,6 @@ extern Class_10F3A3D8* DAT_10f3a3d8;
 void Class_10E81620::FUN_10b4fd30(Class_10B22020* Param)
 {
     Param->FUN_10b22020(0);
-    ((Class_10B396A0*)GetLinkedObject())->FUN_10b396a0();
+    ((Class_10B396A0*)((Class_10AA82D0*)this)->GetLinkedObject())->FUN_10b396a0();
     DAT_10f3a3d8->Unknown13C->FUN_10ac92f0();
 }

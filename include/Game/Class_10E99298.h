@@ -25,13 +25,12 @@ public:
     virtual Struct_10C26310 FUN_10c26310();
     virtual Struct_10C26310 FUN_10c26340();
 
+    // The base's constructor runs on the object itself: its vtable pointer, at offset 0,
+    // is the one this class installs.
     Class_10E99298* Construct(int A, int B, int C, int D);
 
-    union
-    {
-        char Unknown04[4];
-        Class_10C7D570* Unknown08;
-    };
+    // The base's word: the code calls FUN_10c7d570() on it.
+    Class_10C7D570* Unknown08;
     char Pad0C[0x4];
 };
 

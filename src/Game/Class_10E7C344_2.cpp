@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10AAB5C0.h"
 #include "Game/Class_10A98570_Unknown08.h"
+#include "Game/Class_10E7C344.h"
 #include "Game/Info_10B196B0.h"
 #include "Game/Static_10B3AC60.h"
 
@@ -36,22 +37,16 @@ public:
 
 Static_10B3AC60* FUN_10b3ac60();
 
-class Class_10E7C344 : public Class_10AAB5C0
-{
-public:
-    virtual int Virtual6(int A, int B);
-};
-
 // FUNCTION: 0x10B35530 ?Virtual6@Class_10E7C344@@UAEHHH@Z
 int Class_10E7C344::Virtual6(int A, int B)
 {
-    Class_10A98570_Unknown08* Obj1 = (Class_10A98570_Unknown08*)GetUnknown08();
+    Class_10A98570_Unknown08* Obj1 = (Class_10A98570_Unknown08*)((Class_10AAB5C0*)this)->GetUnknown08();
     Class_10978090* Obj1Result = Obj1->Virtual4(0);
     Class_10C08940* Result0 = Obj1Result->FUN_10978090();
-    Class_10A98570_Unknown08* Obj2 = (Class_10A98570_Unknown08*)GetUnknown08();
+    Class_10A98570_Unknown08* Obj2 = (Class_10A98570_Unknown08*)((Class_10AAB5C0*)this)->GetUnknown08();
     Class_10978090* Obj3 = Obj2->Virtual4(1);
     int Sum = 0;
-    Class_10A98570_Unknown08* Obj4 = (Class_10A98570_Unknown08*)GetUnknown08();
+    Class_10A98570_Unknown08* Obj4 = (Class_10A98570_Unknown08*)((Class_10AAB5C0*)this)->GetUnknown08();
     if (Obj4->Virtual4(2)->FUN_10978090())
     {
         Class_10B1B8A0* Block = FUN_10b1b600();

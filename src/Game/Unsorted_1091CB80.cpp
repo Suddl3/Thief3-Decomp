@@ -7,5 +7,5 @@ int Class_1091CB20::GetValue(unsigned int Index)
 {
     if (Index >= Count())
         Index = Count() - 1;
-    return Unknown08[Index];
+    return Unknown00.Unknown08[Index];
 }

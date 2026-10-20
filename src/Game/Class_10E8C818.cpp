@@ -4,6 +4,7 @@
 #include "Game/Class_10978090.h"
 #include "Game/Class_10AAB5C0.h"
 #include "Game/Class_10BBDC30.h"
+#include "Game/Class_10E8C818.h"
 #include "Game/Class_1096A820.h"
 
 class Class_1098E330;
@@ -25,14 +26,6 @@ public:
 int FUN_10c27900();
 
 int FUN_10baa130(int A);
-
-class Class_10E8C818
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual int FUN_10bb0e40(int A, int B, Class_10BB0E40_Param* C);
-};
 
 // FUNCTION: 0x10BB0E40 ?FUN_10bb0e40@Class_10E8C818@@UAEHHHPAVClass_10BB0E40_Param@@@Z
 int Class_10E8C818::FUN_10bb0e40(int A, int B, Class_10BB0E40_Param* C)

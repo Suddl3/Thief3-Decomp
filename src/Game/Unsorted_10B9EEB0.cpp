@@ -3,29 +3,10 @@
 #include "Game/Class_10B9EEB0.h"
 #include "Game/Class_10BA1660.h"
 #include "Game/Class_10C7D570.h"
+#include "Game/Class_10E8C00C.h"
 #include "Game/cIntArray.h"
 
 extern __int64 DAT_10f05c70;
-
-extern void* DAT_10e8c00c[];
-
-class Class_10E8C00C
-{
-public:
-    Class_10E8C00C* Construct(int A);
-
-    void** Unknown00;
-    int m_ChildCount;
-    int Unknown08;
-    int m_Children;
-    int Unknown10;
-    int Unknown14;
-    int Unknown18;
-    int Unknown1C;
-    int Unknown20;
-    int Unknown24;
-    int Unknown28;
-};
 
 class Object_10B9EEB0
 {
@@ -62,7 +43,8 @@ int cIntArray::Add(int* Item)
 // FUNCTION: 0x10BA01F0 ?Construct@Class_10E8C00C@@QAEPAV1@H@Z
 Class_10E8C00C* Class_10E8C00C::Construct(int A)
 {
-    Unknown00 = DAT_10e8c00c;
+    // The vtable pointer is set by hand.
+    *(void***)this = DAT_10e8c00c;
     m_ChildCount = 0;
     Unknown08 = 0;
     m_Children = 0;

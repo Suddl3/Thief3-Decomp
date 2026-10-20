@@ -8,7 +8,7 @@
 struct Struct_10919190
 {
 public:
-    D3DXMATRIX Unknown00;
+    D3DXMATRIX m_WorldMatrix;  // the world transform handed to the device
 };
 
 #endif // GAME_STRUCT_10919190_H

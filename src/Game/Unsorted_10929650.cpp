@@ -1,19 +1,9 @@
 // Game/Unsorted_10929650.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/IDirect3DDevice8.h"
-
-class IDirect3DTexture8;
+#include "Game/Struct_10929600.h"
 
 extern IDirect3DDevice8* GDirect3DDevice8;
-
-struct Struct_10929600
-{
-    char Unknown00[0x18];
-    unsigned int Width;
-    unsigned int Height;
-    char Unknown20[0x10];
-    IDirect3DTexture8* Unknown30;
-};
 
 extern int DAT_10f31ad4;
 

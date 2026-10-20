@@ -3,9 +3,11 @@
 #ifndef GAME_CLASS_10939570_H
 #define GAME_CLASS_10939570_H
 
+#include "Game/Class_1093BCB0.h"
+
 class Class_10953590;
 
-class Class_10939570
+class Class_10939570 : public Class_1093BCB0
 {
 public:
     char FUN_10939570();
@@ -18,6 +20,8 @@ public:
     int GetCategoryIndex(const char** Name);
 
     char Pad00[0x1];
+    char Pad01[0x1C4F];
+    bool Unknown1C50; // when set, the shutdown path calls FUN_1093b560()
 };
 
 #endif // GAME_CLASS_10939570_H

@@ -10,7 +10,11 @@ class Class_10E7C2CC : public Class_10E6DC88
 public:
     virtual ~Class_10E7C2CC();
     virtual int Virtual0(int A, int B, int C, int* D);
-    Class_10E7C2CC();
+    virtual void FUN_10b35770();
+
+    Class_10E7C2CC() : Class_10E6DC88(0x71)
+    {
+    }
 };
 
 #endif // GAME_CLASS_10E7C2CC_H

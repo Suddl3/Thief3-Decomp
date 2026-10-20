@@ -3,14 +3,49 @@
 #ifndef GAME_CLASS_10A15C30_H
 #define GAME_CLASS_10A15C30_H
 
+#include "Game/Class_10A15C30_Field18.h"
+
+class Class_10A15C30_Node;
+
 class Class_10A15C30
 {
 public:
     bool FUN_10a15c30(int* p1);
-    void Remove(int* p1);
+    bool Remove(int* p1);
     void Rehash(int Size);
 
-    char Pad00[0x1];
+    union
+    {
+        int m_Collisions;   // nodes that shared a bucket
+        int Unknown00;
+    };
+    union
+    {
+        int m_Count;        // nodes in the table
+        int Unknown04;
+    };
+    union
+    {
+        int m_BucketBits;   // log2 of the bucket count
+        int Unknown08;
+    };
+    union
+    {
+        int m_BucketCount;  // number of buckets
+        int Unknown0C;
+    };
+    union
+    {
+        bool m_NoResize;    // suppresses the automatic rehash
+        bool Unknown10;
+    };
+    char Pad11[0x3];
+    union
+    {
+        Class_10A15C30_Node** m_Buckets;
+        Class_10A15C30_Node** Unknown14;
+    };
+    Class_10A15C30_Field18 m_KeyCompare;
 };
 
 #endif // GAME_CLASS_10A15C30_H

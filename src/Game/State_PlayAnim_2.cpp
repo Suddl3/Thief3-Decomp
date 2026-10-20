@@ -3,6 +3,7 @@
 
 #include "Game/Class_10E8BE68.h"
 #include "Game/Class_10BD1320.h"
+#include "Game/Class_10E93138.h"
 #include "Game/Item_10BD1320.h"
 #include "Game/FArchive.h"
 
@@ -97,7 +98,7 @@ void State_PlayAnim::Serialize(FArchive& Ar)
     if (Ar.Unknown14)
         m_Items.FUN_10bd0410(Count);
     for (int i = 0; i < Count; i++)
-        m_Items.m_Items[i].Virtual0(Ar);
+        ((Class_10E93138*)&m_Items.m_Items[i])->Serialize(Ar); // the element's one virtual, with the archive
     FUN_10c11ff0(Ar, &Unknown4C);
     unsigned char Flag = Unknown50;
     Ar.Serialize(&Flag, 1);

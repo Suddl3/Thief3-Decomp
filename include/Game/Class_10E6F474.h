@@ -5,8 +5,6 @@
 
 #include "Game/cIntArray.h"
 
-class Class_10ABB4E0_Element;
-
 class Class_10E6F474
 {
 public:
@@ -15,9 +13,8 @@ public:
     int FindMatchIndex(int A);
     void AddUnique(int Item);
 
-    int m_EntryCount;
-    char Pad08[0x4];
-    Class_10ABB4E0_Element** m_Entries;
+    // the entries FindMatchIndex walks: its count at +0x04, its elements at +0x0C
+    cIntArray m_Entries;
     cIntArray m_MembraneMaterials;
 };
 

@@ -5,6 +5,8 @@
 
 #include "Game/Class_10EB766C.h"
 
+extern void* DAT_10e7c344[];
+
 class Class_10E7C344 : public Class_10EB766C
 {
 public:
@@ -14,8 +16,12 @@ public:
     virtual void Virtual3();
     virtual void Virtual4();
     virtual bool FUN_10b35520(int param);
+    virtual int Virtual6(int A, int B);
 
-    Class_10E7C344();
+    Class_10E7C344()
+    {
+        *(void**)this = DAT_10e7c344;
+    }
 };
 
 #endif // GAME_CLASS_10E7C344_H

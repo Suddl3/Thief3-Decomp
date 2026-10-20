@@ -23,10 +23,11 @@ public:
 // FUNCTION: 0x10A98570 ?Virtual6@Class_10E6CF80@@UAEHHH@Z
 int Class_10E6CF80::Virtual6(int A, int B)
 {
-    Class_10A98570_Unknown08* Obj1 = (Class_10A98570_Unknown08*)GetUnknown08();
+    // The game class derives from Class_10AAB5C0; its header's base does not say so yet.
+    Class_10A98570_Unknown08* Obj1 = (Class_10A98570_Unknown08*)((Class_10AAB5C0*)this)->GetUnknown08();
     Class_10978090* Obj1Result = Obj1->Virtual4(0);
     Class_10C08940* Result1 = Obj1Result->FUN_10978090();
-    Class_10A98570_Unknown08* Obj2 = (Class_10A98570_Unknown08*)GetUnknown08();
+    Class_10A98570_Unknown08* Obj2 = (Class_10A98570_Unknown08*)((Class_10AAB5C0*)this)->GetUnknown08();
     Class_10978090* Obj3 = Obj2->Virtual4(1);
     Class_10D4ACC0 Local1 = FUN_10d4acc0();
     int Value = Local1.FUN_10d4acb0();

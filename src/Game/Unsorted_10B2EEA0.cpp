@@ -2,34 +2,13 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/cCountLabel.h"
 #include "Game/Struct_10B2E690.h"
+#include "Game/Class_10B2E690.h"
 #include "Game/Class_10B2EEA0.h"
 
 struct Struct_10B16860;
 
-class Class_10B2E690;
-
 // Ion Storm's placement new (0x10905C10).
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
-
-extern void* DAT_10e7b89c[];
-
-class Class_10B2E690
-{
-public:
-    Class_10B2E690()
-    {
-        Unknown04 = 1.0f;
-        Unknown08 = 0;
-        Unknown00 = DAT_10e7b89c;
-    }
-
-    void Init(const Struct_10B2E690& A, const Struct_10B2E690& B, int C);
-
-    void** Unknown00;
-    float Unknown04;
-    int Unknown08;
-    char Unknown0C[0x2C];
-};
 
 class Class_10B2EEA0_Unknown118
 {

@@ -8,8 +8,8 @@
 class Class_10E68F8C
 {
 public:
-    virtual void Virtual0(int A, FVector* B, float C);
-    virtual void FUN_10a57be0(float Delta);
+    virtual void Virtual0(int A, FVector* B, float C);  // B: the position to move to, C: the time it takes
+    virtual void FUN_10a57be0(float Delta);  // advances the move: m_Current runs from m_Start to m_End over m_Duration
 
     FVector m_Current;
     FVector m_Start;

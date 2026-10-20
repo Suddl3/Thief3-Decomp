@@ -3,16 +3,9 @@
 #include "Game/cIntArray.h"
 #include "Game/Class_109A62E0.h"
 #include "Game/Class_10C356D0_Element.h"
+#include "Game/Class_10E9AAD0.h"
 
 void ReleaseHashTable();
-
-class Class_10E9AAD0
-{
-public:
-    virtual void Virtual0();
-
-    ~Class_10E9AAD0();
-};
 
 class Class_10E7C584
 {

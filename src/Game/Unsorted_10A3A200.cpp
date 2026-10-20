@@ -1,21 +1,9 @@
 // Game/Unsorted_10A3A200.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10A3A300_Primary.h"
+#include "Game/Class_10E66718.h"
 #include "Game/Class_10E6678C.h"
 #include "Game/Struct_10919190.h"
-
-class Class_10E66718
-{
-public:
-    virtual void FUN_10a3a300(int A);
-    void FUN_10948bd0();
-
-    Struct_10919190 Unknown04;
-    char Unknown44[0x18];
-    int Unknown5C;
-    char Unknown60[0xD0];
-    bool Unknown130;
-};
 
 class Class_10A3A300 : public Class_10A3A300_Primary, public Class_10E66718
 {
@@ -39,13 +27,13 @@ void Class_10A3A300::FUN_10a3a300(int A)
     FUN_10948bd0();
     Unknown5C = 0;
     if (!Unknown130)
-        Virtual6();
+        ((Class_10A3A300_Primary*)this)->Virtual6();
 }
 
 // FUNCTION: 0x10A3A4C0 ?FUN_10a3a4c0@Class_10E6678C@@UAE_NXZ
 bool Class_10E6678C::FUN_10a3a4c0()
 {
-    if (m_Items == 0)
+    if (m_Items.Count == 0)
         return true;
-    return (*Unknown0F0)->Virtual4() == 0;
+    return (*(Class_10A3A4C0**)m_Items.Data)->Virtual4() == 0;
 }

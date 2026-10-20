@@ -3,28 +3,30 @@
 #ifndef GAME_STRUCT_10924210_H
 #define GAME_STRUCT_10924210_H
 
+// The viewport a D3DVIEWPORT8 SetViewport call is copied from:
+// X, Y, Width and Height are the DWORDs of a D3DVIEWPORT8.
 struct Struct_10924210
 {
 public:
     union
     {
-        int X;
-        int Unknown00;
+        unsigned int X;
+        unsigned int Unknown00;
     };
     union
     {
-        int Y;
-        int Unknown04;
+        unsigned int Y;
+        unsigned int Unknown04;
     };
     union
     {
-        int Width;
-        int Unknown08;
+        unsigned int Width;
+        unsigned int Unknown08;
     };
     union
     {
-        int Height;
-        int Unknown0C;
+        unsigned int Height;
+        unsigned int Unknown0C;
     };
     union
     {

@@ -4,6 +4,18 @@
 #define GAME_CLASS_10C19FD0_H
 
 #include "Game/cIntArray.h"
+#include "Game/Struct_10B9F810.h"
+
+// The items the manager holds: how many there are, the size of the block they
+// live in and the items themselves. The manager's own constructor and destructor
+// do the work on them, so this one has neither.
+class Class_10C19FD0_Items
+{
+public:
+    int Count;
+    int m_CapacityBytes;
+    Struct_10B9F810** m_Items;
+};
 
 class Class_10C19FD0
 {
@@ -11,8 +23,8 @@ public:
     ~Class_10C19FD0();
     Class_10C19FD0();
 
-    int Unknown00;
-    cIntArray Unknown04;
+    int m_RefCount;
+    Class_10C19FD0_Items Unknown04;
 };
 
 #endif // GAME_CLASS_10C19FD0_H

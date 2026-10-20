@@ -6,12 +6,18 @@
 #include "Game/Class_10E8C740.h"
 #include "Game/Class_10E8C74C.h"
 #include "Game/Class_10E8C758.h"
+#include "Game/Class_10E8C764.h"
 #include "Game/Class_10E8C770.h"
 #include "Game/Class_10E8C77C.h"
 #include "Game/Class_10E8C788.h"
 #include "Game/Class_10E8C794.h"
 #include "Game/cStatePatrol.h"
+#include "Game/cStateFlee.h"
+#include "Game/cStateGuard.h"
 #include "Game/Class_10E8C7AC.h"
+#include "Game/Class_10E8C7D0.h"
+#include "Game/Class_10E8C7DC.h"
+#include "Game/Class_10E8C7E8.h"
 #include "Game/Class_10E8C7F4.h"
 #include "Game/Class_10E8C800.h"
 #include "Game/Class_10E8C80C.h"
@@ -19,10 +25,16 @@
 #include "Game/Class_10E8C824.h"
 #include "Game/Class_10E8C830.h"
 #include "Game/Class_10E8C83C.h"
+#include "Game/Class_10E8C848.h"
 #include "Game/Class_10E8C854.h"
 #include "Game/Class_10E8C890.h"
+#include "Game/Class_10E8C89C.h"
+#include "Game/Class_10E8C8A8.h"
+#include "Game/Class_10E8C8B4.h"
+#include "Game/Class_10E8C8C0.h"
 #include "Game/Class_10E8C8CC.h"
 #include "Game/Class_10E8C8D8.h"
+#include "Game/Class_10E8C8E4.h"
 #include "Game/Class_10E8C8F0.h"
 #include "Game/Class_10E8C8FC.h"
 #include "Game/Class_10E8C908.h"
@@ -94,14 +106,6 @@ int FUN_10c88a60();
 
 extern void* DAT_10e8c764[];
 
-class Class_10E8C764
-{
-public:
-    Class_10E8C764* Construct();
-
-    void* Unknown00;
-};
-
 extern void* DAT_10e8c770[];
 
 extern void* DAT_10e8c77c[];
@@ -116,54 +120,17 @@ extern void* DAT_10e8c7ac[];
 
 extern void* DAT_10e8c7b8[];
 
-class cStateGuard
-{
-public:
-    cStateGuard* Construct();
-
-    void* Unknown00;
-};
-
 extern void* DAT_10e8c7c4[];
 
-class cStateFlee
-{
-public:
-    cStateFlee* Construct();
-
-    void* Unknown00;
-};
-
 extern void* DAT_10e8c7d0;
-
-class Class_10E8C7D0 {
-public:
-    void* Field00;
-
-    Class_10E8C7D0* Construct();
-};
 
 int FUN_10b3d450();
 
 extern void* DAT_10e8c7dc;
 
-class Class_10E8C7DC {
-public:
-    void* Field00;
-
-    Class_10E8C7DC* Construct();
-};
-
 int FUN_10b3d480();
 
 extern void* DAT_10e8c7e8;
-
-class Class_10E8C7E8 {
-public:
-    void* Field00;
-
-    Class_10E8C7E8* Construct();
-};
 
 int FUN_10b3d310();
 
@@ -197,14 +164,6 @@ int __cdecl FUN_10b349b0(void);
 
 extern void* DAT_10e8c848[];
 
-class Class_10E8C848
-{
-public:
-    Class_10E8C848* Construct();
-
-    void* Unknown00;
-};
-
 int __cdecl FUN_10bdf7c0();
 
 extern void* DAT_10e8c854[];
@@ -225,44 +184,17 @@ int FUN_10bd85a0(void);
 
 extern void* DAT_10e8c89c;
 
-class Class_10E8C89C {
-public:
-    void* Field00;
-
-    Class_10E8C89C* Construct();
-};
-
 int FUN_10bf6a60();
 
 extern void* DAT_10e8c8a8;
-
-class Class_10E8C8A8 {
-public:
-    void* Field00;
-
-    Class_10E8C8A8* Construct();
-};
 
 int FUN_10bef070();
 
 extern void* DAT_10e8c8b4;
 
-class Class_10E8C8B4 {
-public:
-    void* Field00;
-
-    Class_10E8C8B4* Construct();
-};
-
 int FUN_10bb0ad0();
 
 extern void* DAT_10e8c8c0[];
-
-class Class_10E8C8C0 {
-public:
-    void* Field00;
-    Class_10E8C8C0* Construct();
-};
 
 void FUN_10be42c0();
 
@@ -275,12 +207,6 @@ extern void* DAT_10e8c8d8[];
 int FUN_10bce960();
 
 extern void* DAT_10e8c8e4[];
-
-class Class_10E8C8E4 {
-public:
-    void* Field00;
-    Class_10E8C8E4* Construct();
-};
 
 int FUN_10bcc070();
 
@@ -491,7 +417,7 @@ void FUN_10ba43c0()
 // FUNCTION: 0x10BA4410 ?Construct@Class_10E8C764@@QAEPAV1@XZ
 Class_10E8C764* Class_10E8C764::Construct()
 {
-    Unknown00 = DAT_10e8c764;
+    *(void**)this = DAT_10e8c764;
     return this;
 }
 
@@ -526,7 +452,7 @@ Class_10E8C794* Class_10E8C794::Construct()
 // FUNCTION: 0x10BA45A0 ?Construct@cStatePatrol@@QAEPAV1@XZ
 cStatePatrol* cStatePatrol::Construct()
 {
-    Unknown00 = DAT_10e8c7a0;
+    *(void**)this = DAT_10e8c7a0;
     return this;
 }
 
@@ -540,21 +466,21 @@ Class_10E8C7AC* Class_10E8C7AC::Construct()
 // FUNCTION: 0x10BA4640 ?Construct@cStateGuard@@QAEPAV1@XZ
 cStateGuard* cStateGuard::Construct()
 {
-    Unknown00 = DAT_10e8c7b8;
+    *(void**)this = DAT_10e8c7b8;
     return this;
 }
 
 // FUNCTION: 0x10BA4690 ?Construct@cStateFlee@@QAEPAV1@XZ
 cStateFlee* cStateFlee::Construct()
 {
-    Unknown00 = DAT_10e8c7c4;
+    *(void**)this = DAT_10e8c7c4;
     return this;
 }
 
 // FUNCTION: 0x10BA46E0 ?Construct@Class_10E8C7D0@@QAEPAV1@XZ
 Class_10E8C7D0* Class_10E8C7D0::Construct()
 {
-    Field00 = &DAT_10e8c7d0;
+    *(void**)this = &DAT_10e8c7d0;
     return this;
 }
 
@@ -567,7 +493,7 @@ void FUN_10ba46f0()
 // FUNCTION: 0x10BA4740 ?Construct@Class_10E8C7DC@@QAEPAV1@XZ
 Class_10E8C7DC* Class_10E8C7DC::Construct()
 {
-    Field00 = &DAT_10e8c7dc;
+    *(void***)this = &DAT_10e8c7dc;
     return this;
 }
 
@@ -580,7 +506,7 @@ void FUN_10ba4750()
 // FUNCTION: 0x10BA47A0 ?Construct@Class_10E8C7E8@@QAEPAV1@XZ
 Class_10E8C7E8* Class_10E8C7E8::Construct()
 {
-    Field00 = &DAT_10e8c7e8;
+    *(void**)this = &DAT_10e8c7e8;
     return this;
 }
 
@@ -632,7 +558,7 @@ void FUN_10ba48d0()
 // FUNCTION: 0x10BA4920 ?Construct@Class_10E8C818@@QAEPAV1@XZ
 Class_10E8C818* Class_10E8C818::Construct()
 {
-    Unknown00 = DAT_10e8c818;
+    *(void**)this = DAT_10e8c818;
     return this;
 }
 
@@ -645,7 +571,7 @@ void FUN_10ba4930()
 // FUNCTION: 0x10BA4980 ?Construct@Class_10E8C824@@QAEPAV1@XZ
 Class_10E8C824* Class_10E8C824::Construct()
 {
-    Unknown00 = DAT_10e8c824;
+    *(void**)this = DAT_10e8c824;
     return this;
 }
 
@@ -658,7 +584,7 @@ void FUN_10ba4990()
 // FUNCTION: 0x10BA49E0 ?Construct@Class_10E8C830@@QAEPAV1@XZ
 Class_10E8C830* Class_10E8C830::Construct()
 {
-    Unknown00 = DAT_10e8c830;
+    *(void**)this = DAT_10e8c830;
     return this;
 }
 
@@ -671,7 +597,7 @@ void FUN_10ba49f0()
 // FUNCTION: 0x10BA4A40 ?Construct@Class_10E8C83C@@QAEPAV1@XZ
 Class_10E8C83C* Class_10E8C83C::Construct()
 {
-    Unknown00 = DAT_10e8c83c;
+    *(void***)this = DAT_10e8c83c;
     return this;
 }
 
@@ -684,7 +610,7 @@ void FUN_10ba4a50()
 // FUNCTION: 0x10BA4AA0 ?Construct@Class_10E8C848@@QAEPAV1@XZ
 Class_10E8C848* Class_10E8C848::Construct()
 {
-    Unknown00 = DAT_10e8c848;
+    *(void**)this = DAT_10e8c848; // the vtable pointer
     return this;
 }
 
@@ -697,7 +623,7 @@ void FUN_10ba4ab0()
 // FUNCTION: 0x10BA4B00 ?Construct@Class_10E8C854@@QAEPAV1@XZ
 Class_10E8C854* Class_10E8C854::Construct()
 {
-    Unknown00 = DAT_10e8c854;
+    *(void**)this = DAT_10e8c854; // the table the class installs
     return this;
 }
 
@@ -734,7 +660,7 @@ void FUN_10ba4c90()
 // FUNCTION: 0x10BA4CE0 ?Construct@Class_10E8C890@@QAEPAV1@XZ
 Class_10E8C890* Class_10E8C890::Construct()
 {
-    Field00 = &DAT_10e8c890;
+    *(void**)this = &DAT_10e8c890; // the vptr at offset 0
     return this;
 }
 
@@ -747,7 +673,7 @@ void FUN_10ba4cf0()
 // FUNCTION: 0x10BA4D40 ?Construct@Class_10E8C89C@@QAEPAV1@XZ
 Class_10E8C89C* Class_10E8C89C::Construct()
 {
-    Field00 = &DAT_10e8c89c;
+    *(void**)this = &DAT_10e8c89c; // the vptr at offset 0
     return this;
 }
 
@@ -760,7 +686,7 @@ void FUN_10ba4d50()
 // FUNCTION: 0x10BA4DA0 ?Construct@Class_10E8C8A8@@QAEPAV1@XZ
 Class_10E8C8A8* Class_10E8C8A8::Construct()
 {
-    Field00 = &DAT_10e8c8a8;
+    *(void**)this = &DAT_10e8c8a8;
     return this;
 }
 
@@ -773,7 +699,7 @@ void FUN_10ba4db0()
 // FUNCTION: 0x10BA4E00 ?Construct@Class_10E8C8B4@@QAEPAV1@XZ
 Class_10E8C8B4* Class_10E8C8B4::Construct()
 {
-    Field00 = &DAT_10e8c8b4;
+    *(void**)this = &DAT_10e8c8b4;
     return this;
 }
 
@@ -786,7 +712,7 @@ void FUN_10ba4e10()
 // FUNCTION: 0x10BA4E60 ?Construct@Class_10E8C8C0@@QAEPAV1@XZ
 Class_10E8C8C0* Class_10E8C8C0::Construct()
 {
-    Field00 = DAT_10e8c8c0;
+    *(void**)this = DAT_10e8c8c0;
     return this;
 }
 
@@ -825,7 +751,7 @@ void FUN_10ba4f30()
 // FUNCTION: 0x10BA4F80 ?Construct@Class_10E8C8E4@@QAEPAV1@XZ
 Class_10E8C8E4* Class_10E8C8E4::Construct()
 {
-    Field00 = DAT_10e8c8e4;
+    *(void**)this = DAT_10e8c8e4; // the table the class installs
     return this;
 }
 
@@ -936,7 +862,7 @@ void FUN_10ba5280()
 // FUNCTION: 0x10BA52D0 ?Construct@Class_10E8C950@@QAEPAV1@XZ
 Class_10E8C950* Class_10E8C950::Construct()
 {
-    Unknown00 = DAT_10e8c950;
+    *(void**)this = DAT_10e8c950;
     return this;
 }
 

@@ -4,6 +4,7 @@
 #include "Game/Class_10978090.h"
 #include "Game/Class_10AAB5C0.h"
 #include "Game/Class_10BBDC30.h"
+#include "Game/Class_10E8C830.h"
 
 class Class_1098E330;
 
@@ -25,14 +26,6 @@ public:
     virtual void Virtual2();
     virtual int Virtual3();
     virtual Class_10AAB5C0* Virtual4(int A);
-};
-
-class Class_10E8C830
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual int FUN_10bb0f90(int A, Class_10978090* B, Class_10BB0F90_Param* C);
 };
 
 // FUNCTION: 0x10BB0F90 ?FUN_10bb0f90@Class_10E8C830@@UAEHHPAVClass_10978090@@PAVClass_10BB0F90_Param@@@Z

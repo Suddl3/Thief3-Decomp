@@ -6,7 +6,7 @@
 struct Struct_10BAEC40_Unknown08
 {
 public:
-    int Unknown00;
+    void** Unknown00;
     int Unknown04;
     int Unknown08;
     bool Unknown0C;

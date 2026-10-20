@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Game/Struct_10924210.h"
+#include "Game/Info_10952690.h"
 
 struct D3DXMATRIX;
 
@@ -123,14 +124,6 @@ public:
 };
 
 extern IDirect3DDevice8* GDirect3DDevice8;
-
-struct Info_10952690
-{
-    float Unknown00;
-    float Unknown04;
-    float Unknown08;
-    float Unknown0C;
-};
 
 class cD3DStateCache
 {

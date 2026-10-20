@@ -7,6 +7,7 @@
 #include "Game/Class_10E6B978.h"
 #include "Game/cVolumeManager.h"
 #include "Game/Class_10E6BBCC.h"
+#include "Game/Class_10E6BBE8.h"
 
 extern void* DAT_10e4dd6c[];
 
@@ -43,14 +44,6 @@ extern void* DAT_10e6b978;
 extern void* DAT_10e6bbcc[];
 
 extern void* DAT_10e6bbe8[];
-
-class Class_10E6BBE8
-{
-public:
-    void* Field00;
-public:
-    void FUN_10a757a0();
-};
 
 // FUNCTION: 0x10A68B30 ?Init@Class_10E6B5A0@@QAEPAV1@XZ
 Class_10E6B5A0* Class_10E6B5A0::Init()
@@ -107,6 +100,6 @@ Class_10E6BBCC* Class_10E6BBCC::Init()
 // FUNCTION: 0x10A757A0 ?FUN_10a757a0@Class_10E6BBE8@@QAEXXZ
 void Class_10E6BBE8::FUN_10a757a0()
 {
-    Field00 = (void*)DAT_10e6bbe8;
+    *(void**)this = (void*)DAT_10e6bbe8;
     FUN_10a4c5f0();
 }

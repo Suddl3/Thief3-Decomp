@@ -11,10 +11,10 @@ public:
     virtual void Virtual0();
     virtual ~Object_10A858C0();
     virtual void Virtual2();
-    virtual void Virtual3();
+    virtual bool Virtual3();
     virtual void Virtual4();
     virtual void Virtual5();
-    virtual void Virtual6();
+    virtual void Virtual6(int A);
     virtual void Virtual7();
     virtual void Virtual8();
     virtual void Virtual9();

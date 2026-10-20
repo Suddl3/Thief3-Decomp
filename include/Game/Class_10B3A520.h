@@ -3,9 +3,9 @@
 #ifndef GAME_CLASS_10B3A520_H
 #define GAME_CLASS_10B3A520_H
 
-#include "Game/Class_10B3A460.h"
+#include "Game/Class_10B3A4A0.h"
 
-class Class_10B3A520 : public Class_10B3A460
+class Class_10B3A520
 {
 public:
     ~Class_10B3A520();
@@ -13,8 +13,8 @@ public:
 
     void FUN_10b3a5c0();
 
-    char Pad01[0x2c57];
-    char Pad2C83[0x1];
+    // The table's entries: GetEntry() walks them 0x2C bytes at a time.
+    Class_10B3A4A0 m_Entries[0x102];
 };
 
 #endif // GAME_CLASS_10B3A520_H

@@ -4,17 +4,7 @@
 #include "Game/D3DXMATRIX.h"
 #include "Game/IDirect3DDevice8.h"
 #include "Game/Struct_10917D20.h"
-
-// The D3DVIEWPORT8 SetViewport copies in (its Width and Height are DWORDs).
-struct Struct_10924210
-{
-    unsigned int X;
-    unsigned int Y;
-    unsigned int Width;
-    unsigned int Height;
-    float MinZ;
-    float MaxZ;
-};
+#include "Game/Struct_10924210.h"
 
 // D3DX's matrix product.
 extern "C" D3DXMATRIX* __stdcall FUN_10d67f9a(D3DXMATRIX* pOut, const D3DXMATRIX* pM1, const D3DXMATRIX* pM2);

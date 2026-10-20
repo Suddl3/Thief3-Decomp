@@ -6,11 +6,13 @@
 class Class_10A32000
 {
 public:
-    void SetCount(int A);
+    ~Class_10A32000();
+
+    void SetCount(int NewCount);
     int Append(char* Value);
 
     int m_Count;
-    int Unknown04;
+    int m_CapacityBytes;
     char* m_Data;
 };
 

@@ -55,7 +55,7 @@ void FUN_10c3d080(float Arg)
 // FUNCTION: 0x10C3D0A0 ?IsInRange@Class_10E9B168@@UAEHXZ
 int Class_10E9B168::IsInRange()
 {
-    if (Distance2D(&Unknown04->Unknown2C, &m_Position) < m_Range)
+    if (Distance2D((const Struct_10C05A50*)&Unknown04->m_Position, &m_Position) < m_Range)
         return 1;
     return 0;
 }

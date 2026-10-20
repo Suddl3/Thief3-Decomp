@@ -10,6 +10,8 @@ public:
     int Unknown04;
     char Pad08[0x4];
     int Unknown0C;
+
+    void FUN_10b8c080();
 };
 
 #endif // GAME_STRUCT_10C09A10_H

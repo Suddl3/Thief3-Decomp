@@ -14,9 +14,9 @@ public:
     void FUN_10a35e50(int A);
 
     char Unknown00[0xD];
-    bool Unknown0D;
+    bool Unknown0D;    // when set, the measurement uses Unknown88 instead of Unknown84
     char Unknown0E[0x2];
-    int Unknown10;
+    int Unknown10;     // argument handed to GetField14
     char Pad14[0x8];
     int Unknown1C;
     int Unknown20;
@@ -41,8 +41,8 @@ public:
     int Unknown78;
     int Unknown7C;
     char Pad80[0x4];
-    Class_10919CA0* Unknown84;
-    Class_10919CA0* Unknown88;
+    Class_10919CA0* Unknown84;  // measured together with Unknown88
+    Class_10919CA0* Unknown88;  // measured together with Unknown84
 };
 
 #endif // GAME_CLASS_10A359D0_H

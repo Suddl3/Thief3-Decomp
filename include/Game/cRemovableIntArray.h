@@ -9,7 +9,7 @@ class cRemovableIntArray : public cIntArray
 {
 public:
     void EraseAt(int Index);
-    void MoveItems(int A, int B, int C);
+    void MoveItems(int From, int To, int Count);
 };
 
 #endif // GAME_CREMOVABLEINTARRAY_H

@@ -3,6 +3,7 @@
 #ifndef GAME_STRUCT_10BA91E0_H
 #define GAME_STRUCT_10BA91E0_H
 
+// A vector: the code reads its three floats as the x, y and z components.
 struct Struct_10BA91E0
 {
 public:

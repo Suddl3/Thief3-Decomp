@@ -1,12 +1,7 @@
 // Game/Unsorted_109182E0_3.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10B59770.h"
-
-struct Struct_10918E10
-{
-    int Unknown00;
-    int Unknown04;
-};
+#include "Game/Struct_10918E10.h"
 
 extern Class_10B59770 DAT_10f2c768;
 
@@ -17,7 +12,7 @@ bool RemoveByKey(int Key)
 {
     for (int i = 0; i < DAT_10f2c768.Unknown00; i++)
     {
-        if (DAT_10f2c770[i].Unknown00 == Key)
+        if ((int)DAT_10f2c770[i].Unknown00 == Key)
         {
             Struct_10918E10 Found = DAT_10f2c770[i];
             int Last = DAT_10f2c768.Unknown00 - 1;

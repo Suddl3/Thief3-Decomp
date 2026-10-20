@@ -31,13 +31,7 @@ public:
     unsigned char IsActive();
 };
 
-class Class_10B7AB80 : public Class_10C3E140
-{
-public:
-    void FUN_10b7ab80(int A, float B);
-};
-
-class Class_10EC0E20 : public Class_10B7AB80
+class Class_10EC0E20 : public Class_10C3E140
 {
 public:
     void FUN_10b7ad70();

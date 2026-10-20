@@ -22,7 +22,7 @@ void SetWorldTransform(Struct_10919190* P)
 {
     if (DAT_10f2c8c0)
     {
-        D3DXMATRIX World = P->Unknown00;
+        D3DXMATRIX World = P->m_WorldMatrix;
         GDirect3DDevice8->SetTransform(0x100, &World);
         D3DXMATRIX Combined;
         FUN_10d67f9a(&Combined, &World, (D3DXMATRIX*)DAT_10f2c8c0->FUN_1091e400());

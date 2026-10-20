@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10A7F5A0.h"
+#include "Game/Class_10E6D0F8.h"
 
 Class_10905A90_Member* GetAllocator();
 
@@ -80,21 +81,11 @@ public:
     virtual Class_10A7F5A0* Virtual4(int A);
 };
 
-class Class_10E6D0F8
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual int FUN_10a9a020(int A, Class_10A9A020_Param2* B, Class_10A9A020_Param3* C);
-
-    void FUN_10a99f80(void* Item, Class_10A9A020_Param3* C);
-};
-
 // FUNCTION: 0x10A9A020 ?FUN_10a9a020@Class_10E6D0F8@@UAEHHPAVClass_10A9A020_Param2@@PAVClass_10A9A020_Param3@@@Z
 int Class_10E6D0F8::FUN_10a9a020(int A, Class_10A9A020_Param2* B, Class_10A9A020_Param3* C)
 {
     cIntArray Local = C->Virtual4(4)->FUN_10a7f5a0(B->Virtual8(), 0);
     for (int i = 0; i < Local.Unknown00; i++)
-        FUN_10a99f80(Local.Unknown08[i], C);
+        FUN_10a99f80((int)Local.Unknown08[i], (Class_10A99F80_Param*)C);
     return 1;
 }

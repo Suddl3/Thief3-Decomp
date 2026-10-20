@@ -2,6 +2,8 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Game/Class_10905A90_Member.h"
+#include "Game/Class_10924100.h"
+#include "Game/Class_109480B0.h"
 #include "Game/Class_109E2A90.h"
 #include "Game/Class_109E2AE0.h"
 #include "Game/Class_109E2BD0.h"
@@ -69,13 +71,6 @@ public:
     Struct_10947090* FUN_10947090(const FVector* Point);
 };
 
-class Class_10924100
-{
-public:
-    char Unknown00[0xC];
-    Class_10947090* Unknown0C;
-};
-
 extern Class_10924100* DAT_10f2c740;
 
 // FUNCTION: 0x109E2A90 ?Unlink@Class_109E2A90@@QAEXPAUStruct_109E2A90_Node@@@Z
@@ -125,7 +120,7 @@ int Class_109E2BD0::FindBucketIndex(int Value)
         {
             for (Struct_109E2A90_Node* Node = List->Head; Node; Node = Node->Next)
             {
-                if (Node->Unknown08 == Value)
+                if ((int)Node->Zone == Value)
                     return i;
             }
         }
@@ -151,7 +146,7 @@ int __stdcall FUN_109e32f0(FVector Point)
 {
     if (DAT_10f2c740 && DAT_10f2c740->Unknown0C)
     {
-        Struct_10947090* Record = DAT_10f2c740->Unknown0C->FUN_10947090(&Point);
+        Struct_10947090* Record = ((Class_10947090*)DAT_10f2c740->Unknown0C)->FUN_10947090(&Point);
         if (Record)
             return Record->Unknown30;
     }

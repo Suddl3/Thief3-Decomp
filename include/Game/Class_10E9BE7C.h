@@ -5,7 +5,6 @@
 
 #include "Game/Class_10C4E880_Primary.h"
 #include "Game/Class_10C4E8D0.h"
-#include "Game/Class_10C4EDA0.h"
 #include "Game/Class_10C50EC0.h"
 #include "Game/Class_10E5B578.h"
 #include "Game/cIntArray.h"
@@ -15,13 +14,17 @@ class FVector;
 class Class_10E9BE7C : public Class_10C4E880_Primary, public Class_10E5B578
 {
 public:
+    // The vtable holds FUN_10c51600 for Class_10C4E880_Primary and, for Class_10E5B578,
+    // the class's own FUN_10c4e650; Class_10E5B578's pure virtual (Virtual0) is
+    // implemented here.
     virtual void FUN_10c51600();
-    virtual void FUN_10c4e650(int Code, int A, int* B, int C);
+    virtual int Virtual0(int A, int B, int C, int* D);
 
     Class_10E9BE7C();
 
     void FUN_10c4e880(void* Owner);
     int FUN_10c4eb60(const FVector* Point);
+    void FUN_10c4e650(int Code, int A, int* B, int C);
 
     Class_10C50EC0 Unknown08;
     cIntArray Unknown14;
@@ -29,7 +32,7 @@ public:
     int Unknown24;
     Class_10C4E8D0 Unknown28;
     int Unknown34;
-    Class_10C4EDA0 Unknown38;
+    Class_10C50EC0 Unknown38;
 };
 
 #endif // GAME_CLASS_10E9BE7C_H

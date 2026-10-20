@@ -9,8 +9,7 @@ struct Struct_10978840
 {
 public:
     FLOAT Unknown00;
-    BYTE Unknown04;
-    char Pad05[0x3];
+    FLOAT Unknown04; // read as a byte by FUN_10a705e0
 };
 
 #endif // GAME_STRUCT_10978840_H

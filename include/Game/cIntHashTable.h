@@ -3,7 +3,7 @@
 #ifndef GAME_CINTHASHTABLE_H
 #define GAME_CINTHASHTABLE_H
 
-#include "Game/Class_10C30DD0_Field18.h"
+#include "Game/Class_10EBFF38.h"
 
 class Class_10C30DD0_Node;
 
@@ -25,7 +25,7 @@ public:
     bool m_FixedSize;
     char Pad11[0x3];
     Class_10C30DD0_Node** m_Buckets;
-    Class_10C30DD0_Field18 m_KeyTraits;
+    Class_10EBFF38 m_KeyTraits;
 };
 
 #endif // GAME_CINTHASHTABLE_H

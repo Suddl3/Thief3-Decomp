@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/cString.h"
 #include "Game/Class_10F46DA0.h"
+#include "Game/Class_10E6DC88_Primary.h"
 
 extern const char DAT_10e9864c[];
 
@@ -46,14 +47,6 @@ public:
 };
 
 extern Class_10F46DA0* DAT_10f46da0;
-
-class Class_10E6DC88_Primary
-{
-public:
-    virtual void Virtual0();
-
-    char Unknown04[8];
-};
 
 class Class_10E6DC88 : public Class_10E6DC88_Primary, public Class_10E5B578
 {

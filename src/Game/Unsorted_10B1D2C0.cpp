@@ -4,6 +4,7 @@
 #include "Game/Class_10B1D1B0.h"
 #include "Game/Class_10B1D3D0.h"
 #include "Game/PlayerStateController.h"
+#include "Game/Struct_10B1D1B0_Unknown00.h"
 #include "Game/Class_10B3AF40_UnknownB0.h"
 #include "Game/Class_10B48890.h"
 
@@ -120,12 +121,6 @@ public:
     Class_10B3AF40_UnknownB0* m_physicsObjectPadding;
 };
 
-struct Struct_10B1D1B0_Unknown00
-{
-    char Unknown00[4];
-    PlayerStateController* Unknown04;
-};
-
 // AT3PlayerController (0x2C0 is its bIsActive bitfield).
 class Class_10B1D500
 {
@@ -152,7 +147,7 @@ void Class_10B1D500::SetActive(bool A, bool B)
             if (!Holder)
                 Target = 0;
             else
-                Target = Holder->Unknown04;
+                Target = Holder->m_PlayerStateController;
             Target->FUN_10b22c80();
         }
     }

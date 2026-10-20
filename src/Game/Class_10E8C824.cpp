@@ -3,6 +3,7 @@
 
 #include "Game/Class_10AAB5C0.h"
 #include "Game/Class_10BBDC30.h"
+#include "Game/Class_10E8C824.h"
 
 class Class_1098E330;
 
@@ -35,14 +36,6 @@ public:
 };
 
 Class_10BBDC30* FUN_10bb0c30(int A);
-
-class Class_10E8C824
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual int FUN_10bb0f20(int p1, Class_10BB0F20_Item* Item, Class_10BB0F20_Source* Source);
-};
 
 // FUNCTION: 0x10BB0F20 ?FUN_10bb0f20@Class_10E8C824@@UAEHHPAVClass_10BB0F20_Item@@PAVClass_10BB0F20_Source@@@Z
 int Class_10E8C824::FUN_10bb0f20(int p1, Class_10BB0F20_Item* Item, Class_10BB0F20_Source* Source)

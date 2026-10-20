@@ -3,6 +3,7 @@
 #ifndef GAME_CLASS_10E49EE0_H
 #define GAME_CLASS_10E49EE0_H
 
+#include "Game/Class_10E49EE0_Member.h"
 #include "Game/Class_10E49F0C.h"
 
 class Class_10E49EE0 : public Class_10E49F0C
@@ -20,7 +21,7 @@ public:
     virtual void Virtual9();
     virtual void Virtual10();
 
-    int m_Member;
+    Class_10E49EE0_Member* m_Member;
     int Unknown18;
     union
     {

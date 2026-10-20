@@ -3,13 +3,20 @@
 #ifndef GAME_CLASS_10E6CF80_H
 #define GAME_CLASS_10E6CF80_H
 
-#include "Game/Class_10AAB5C0.h"
+#include "Game/Class_10EB766C.h"
 
-class Class_10E6CF80 : public Class_10AAB5C0
+extern void* DAT_10e6cf80[];
+
+class Class_10E6CF80 : public Class_10EB766C
 {
 public:
     virtual int Virtual6(int A, int B);
-    Class_10E6CF80();
+
+    // The class's own table, stored over the base's.
+    Class_10E6CF80()
+    {
+        *(void***)this = DAT_10e6cf80;
+    }
 };
 
 #endif // GAME_CLASS_10E6CF80_H

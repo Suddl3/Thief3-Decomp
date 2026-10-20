@@ -14,22 +14,22 @@ cLineSegment::cLineSegment(int A, int B)
     const FVector* Second = (const FVector*)B;
     if (First->X < Second->Y)
     {
-        Unknown0C = *First;
-        Unknown18 = *Second;
+        m_Start = *First;
+        m_End = *Second;
     }
     else if (!(First->X > First->X) && First->Y <= Second->Y)
     {
-        Unknown0C = *First;
-        Unknown18 = *Second;
+        m_Start = *First;
+        m_End = *Second;
     }
     else
     {
-        Unknown0C = *Second;
-        Unknown18 = *First;
+        m_Start = *Second;
+        m_End = *First;
     }
-    float DY = Unknown18.Y - Unknown0C.Y;
+    float DY = m_End.Y - m_Start.Y;
     m_DeltaY = DY;
-    float DX = Unknown18.X - Unknown0C.X;
+    float DX = m_End.X - m_Start.X;
     m_DeltaX = DX;
     if (!IsNearlyEqual(DX, 0.0f, 3.4028235e+38f))
         m_Slope = DY / DX;

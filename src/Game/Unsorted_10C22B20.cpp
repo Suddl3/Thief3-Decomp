@@ -1,24 +1,15 @@
 // Game/Unsorted_10C22B20.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Struct_10C22B20.h"
+#include "Game/Class_10BAE0C0.h"
 
 struct Item_10C22A70;
-
-class Class_10BAE0C0
-{
-public:
-    ~Class_10BAE0C0();
-};
 
 class Class_10C22A70 : public Class_10BAE0C0
 {
 public:
-    Class_10C22A70() : Unknown00(0), Unknown04(0), Unknown08(0) {}
+    Class_10C22A70() { m_Count = 0; m_CapacityBytes = 0; m_Data = 0; }
     void CopyFrom(const Class_10C22A70& Other);
-
-    int Unknown00;
-    int Unknown04;
-    Item_10C22A70* Unknown08;
 };
 
 class Class_10C22B20

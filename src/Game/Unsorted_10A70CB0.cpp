@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include "Game/Class_10A70B80.h"
 #include "Game/Class_10A70DF0_Obj.h"
+#include "Game/cVolumeManager.h"
 
 struct Struct_10A70DF0
 {
@@ -19,37 +20,6 @@ public:
     virtual void DeleteAfter(float A, Class_10A70DF0_Obj* Obj);
 
     Class_10A70B80 m_Entries;
-};
-
-class cActorManager
-{
-public:
-    virtual void HandleEvent(int A, int B, int C, int D);
-    virtual void FUN_10a4c470(int A, int B, int C, int D);
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8();
-    virtual void Virtual9();
-    virtual void Virtual10();
-    virtual void Virtual11();
-    virtual void Virtual12();
-    virtual void Virtual13();
-    virtual void Virtual14();
-    virtual void Virtual15();
-    virtual void Virtual16();
-};
-
-class cVolumeManager : public cActorManager
-{
-public:
-    virtual void HandleEvent(int Event, int A, int B, int C);
-    virtual void Virtual17(int A, int B, int C);
-    virtual void Virtual18(int A, int B, int C);
-    virtual void Virtual19(int A, int B, int C);
 };
 
 // FUNCTION: 0x10A70DF0 ?DeleteAfter@cDelayedDeleter@@UAEXMPAVClass_10A70DF0_Obj@@@Z

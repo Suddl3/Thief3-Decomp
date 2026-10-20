@@ -14,6 +14,6 @@ void Class_10B47AB0::FUN_10b47ab0(int A)
     Unknown4C.SetCount(0);
     if (Unknown0C->IsActive())
         Unknown0C->FUN_10b7b8a0();
-    FUN_10b47850(A, Unknown10->FUN_109b6560(0) - Unknown08->FUN_10b7ac30(), 1.0f, 0x101, 0, -1.0f);
+    FUN_10b47850(A, Unknown10->FUN_109b6560(0) - ((Class_10B7AC30*)Unknown08)->FUN_10b7ac30(), 1.0f, 0x101, 0, -1.0f);
     Unknown30 = true;
 }

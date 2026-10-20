@@ -3,8 +3,10 @@
 #ifndef GAME_STRUCT_10BA9F50_H
 #define GAME_STRUCT_10BA9F50_H
 
+// A rotation: the code uses its three ints as the pitch, yaw and roll angles.
 struct Struct_10BA9F50
 {
+public:
     int Unknown00;
     int Unknown04;
     int Unknown08;

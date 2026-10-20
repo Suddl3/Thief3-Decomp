@@ -10,10 +10,9 @@ class Class_10E6CD50 : public Class_10E6DC88
 public:
     virtual ~Class_10E6CD50();
     virtual int Virtual0(int A, int B, int C, int* D);
+    virtual void FUN_10a94fc0();
 
     Class_10E6CD50() : Class_10E6DC88(0x45) {}
-
-    char Pad10[0x4];
 };
 
 #endif // GAME_CLASS_10E6CD50_H

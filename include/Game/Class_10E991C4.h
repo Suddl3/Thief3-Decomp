@@ -4,17 +4,20 @@
 #define GAME_CLASS_10E991C4_H
 
 #include "Game/Class_10E99370.h"
-#include "Game/Struct_10C1F500.h"
+#include "Game/cIntArray.h"
+
+class Class_10C28280_Param;
 
 class Class_10E991C4 : public Class_10E99370
 {
 public:
     virtual void FUN_10c28260();
     virtual void FUN_10c1f420(int A);
+    virtual void FUN_10c28280(Class_10C28280_Param* Ar);
 
     Class_10E991C4(int A, int B);
 
-    Struct_10C1F500 Unknown10;
+    cIntArray Unknown10;
     char Unknown1C[0xC];
     int Unknown28;
     int Unknown2C;

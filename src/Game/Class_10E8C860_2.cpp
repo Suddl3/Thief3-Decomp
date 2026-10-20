@@ -4,6 +4,7 @@
 #include "Game/Class_10AA82D0.h"
 #include "Game/Class_10C3D3B0.h"
 #include "Game/Class_10BFD210.h"
+#include "Game/Class_10E8C860.h"
 
 struct Struct_10AA3520
 {
@@ -39,14 +40,6 @@ public:
     virtual void Virtual2();
     virtual int Virtual3();
     virtual Class_10C3D3B0* Virtual4(int A);
-};
-
-class Class_10E8C860
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual int FUN_10bb1080(int p1, Class_10BB1080_Item* Item, Class_10BB1080_Source* Source);
 };
 
 // FUNCTION: 0x10BB1080 ?FUN_10bb1080@Class_10E8C860@@UAEHHPAVClass_10BB1080_Item@@PAVClass_10BB1080_Source@@@Z

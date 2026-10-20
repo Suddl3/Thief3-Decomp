@@ -7,5 +7,5 @@
 Class_10B3A460* GetEntries()
 {
     static Class_10B3A520 GSingleton;
-    return &GSingleton;
+    return (Class_10B3A460*)&GSingleton;
 }

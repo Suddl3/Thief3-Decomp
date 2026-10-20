@@ -10,14 +10,14 @@
 class cProximityManager : public cActorManager, public Class_10E66700
 {
 public:
-    virtual void FUN_10a4c470(int A, int B, int C, int D);
+    virtual void HandleEvent(int A, int B, int C, int D);
     virtual void UpdateItems(int A);
 
     cProximityManager();
 
     bool FUN_10a3ad90(int Param);
 
-    Class_10A3BA50 Unknown08;
+    Class_10A3BA50 Unknown08;   // holds the current target as an int at +0x20
     int Unknown48;
     int Unknown4C;
     int Unknown50;

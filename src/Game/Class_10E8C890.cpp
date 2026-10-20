@@ -6,6 +6,7 @@
 #include "Game/Struct_10BB0B90.h"
 #include "Game/Class_10C13130.h"
 #include "Game/Class_10BBDB40.h"
+#include "Game/Class_10E8C890.h"
 
 class Class_10BBDB40;
 
@@ -48,14 +49,6 @@ struct Struct_10BB0B90_Unknown118
 };
 
 Struct_10BB0B90* FUN_10bb0b90(int A);
-
-class Class_10E8C890
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual int FUN_10bb12a0(int A, Class_10BB12A0_B* B, Class_10BB12A0_C* C);
-};
 
 // FUNCTION: 0x10BB12A0 ?FUN_10bb12a0@Class_10E8C890@@UAEHHPAVClass_10BB12A0_B@@PAVClass_10BB12A0_C@@@Z
 int Class_10E8C890::FUN_10bb12a0(int A, Class_10BB12A0_B* B, Class_10BB12A0_C* C)

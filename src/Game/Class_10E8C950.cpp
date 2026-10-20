@@ -5,6 +5,7 @@
 #include "Game/Class_10C3D3B0.h"
 #include "Game/Class_10A9DBE0_Param2.h"
 #include "Game/Class_10A9DBE0_Param3.h"
+#include "Game/Class_10E8C950.h"
 
 class Class_10BB3190_Result
 {
@@ -120,14 +121,6 @@ public:
 };
 
 Class_10BB3190_Result* FUN_10983cf0(int A);
-
-class Class_10E8C950
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual int FUN_10bb3190(int A, Class_10A9DBE0_Param2* B, Class_10A9DBE0_Param3* C);
-};
 
 // FUNCTION: 0x10BB3190 ?FUN_10bb3190@Class_10E8C950@@UAEHHPAVClass_10A9DBE0_Param2@@PAVClass_10A9DBE0_Param3@@@Z
 int Class_10E8C950::FUN_10bb3190(int A, Class_10A9DBE0_Param2* B, Class_10A9DBE0_Param3* C)

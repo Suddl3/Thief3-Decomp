@@ -6,6 +6,7 @@
 #include "Game/Class_10AB37C0.h"
 #include "Game/Class_10B9C9F0.h"
 #include "Game/Class_10BAD190.h"
+#include "Game/Class_10E8C854.h"
 
 class Class_10BB3D50_Param2
 {
@@ -38,14 +39,6 @@ Class_10BB3190_Result* FUN_10983cf0(int A);
 UObject* FUN_10c00710(void* A, int B);
 
 Class_10B9C9F0* FUN_10bb0c60(int A);
-
-class Class_10E8C854
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual int FUN_10bb3d50(int A, Class_10BB3D50_Param2* B, Class_10BB3D50_Param3* C);
-};
 
 // FUNCTION: 0x10BB3D50 ?FUN_10bb3d50@Class_10E8C854@@UAEHHPAVClass_10BB3D50_Param2@@PAVClass_10BB3D50_Param3@@@Z
 int Class_10E8C854::FUN_10bb3d50(int A, Class_10BB3D50_Param2* B, Class_10BB3D50_Param3* C)

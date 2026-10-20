@@ -4,13 +4,13 @@
 #define GAME_STRUCT_10C3D0A0_H
 
 #include "Game/Struct_10C05A50.h"
+#include "Game/Struct_10C05A80.h"
 
 struct Struct_10C3D0A0
 {
 public:
     char Unknown00[0x2C];
-    Struct_10C05A50 Unknown2C;
-    char Pad34[0x4];
+    Struct_10C05A80 m_Position;  // the object's world position; the 2D distance calls read its first two floats
 };
 
 #endif // GAME_STRUCT_10C3D0A0_H

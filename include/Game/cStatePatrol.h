@@ -6,9 +6,11 @@
 class cStatePatrol
 {
 public:
-    cStatePatrol* Construct();
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual int FUN_10bb3a50(int A, int B, int C);
 
-    void* Unknown00;
+    cStatePatrol* Construct();
 };
 
 #endif // GAME_CSTATEPATROL_H

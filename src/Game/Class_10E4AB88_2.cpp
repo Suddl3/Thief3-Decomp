@@ -28,5 +28,5 @@ void Class_10E4AB88::FUN_1094e9d0(int p1, int p2)
 {
     if (p1 >= m_NumEntries)
         return;
-    Unknown0FC[p1]->Unknown00 = p2;
+    Unknown0FC[p1]->Unknown00 = (Class_1094E860_Unknown00*)(unsigned int)p2;
 }

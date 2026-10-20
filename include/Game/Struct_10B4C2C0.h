@@ -6,9 +6,9 @@
 struct Struct_10B4C2C0
 {
 public:
-    int X;
-    int Y;
-    int Z;
+    float X;
+    float Y;
+    float Z;
 };
 
 #endif // GAME_STRUCT_10B4C2C0_H

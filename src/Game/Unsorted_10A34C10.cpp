@@ -29,8 +29,8 @@ unsigned int Class_10A34C10::InsertOrAssign(const cString& Key, Class_10A34C10_U
         if (m_KeyOps.Virtual1(Key, Node->Key) == 0)
         {
             Class_10A34C10_Unknown10* New = *Value;
-            Class_10A34C10_Unknown10* Old = Node->Unknown10;
-            Node->Unknown10 = New;
+            Class_10A34C10_Unknown10* Old = Node->Value;
+            Node->Value = New;
             if (New)
                 New->Virtual1();
             if (Old)

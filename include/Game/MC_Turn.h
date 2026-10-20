@@ -3,18 +3,23 @@
 #ifndef GAME_MC_TURN_H
 #define GAME_MC_TURN_H
 
+#include "Game/Class_10C271A0.h"
+
+class FArchive;
 class cString;
 
-class MC_Turn
+class Class_10C36680
 {
 public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
+    virtual void Virtual0(FArchive& Ar);
+
+    char Unknown04[4];
+};
+
+class MC_Turn : public Class_10C271A0
+{
+public:
+    virtual void Serialize(FArchive& Ar);
     virtual void FUN_10c365d0(int A, float B);
     virtual void FUN_10c365f0(int A, int B);
 
@@ -22,11 +27,16 @@ public:
 
     char Unknown04[0x48];
     bool Unknown4C;
-    char Unknown4D[0x1B];
+    char Unknown4D[3];
+    char Unknown50[0xC];
+    Class_10C36680 Unknown5C;
+    bool Unknown64;
+    char Unknown65[3];
     float Unknown68;
     int Unknown6C;
     unsigned char Unknown70;
     char Pad71[0x3];
+    int Unknown74;
 };
 
 #endif // GAME_MC_TURN_H

@@ -50,7 +50,7 @@ public:
     int Unknown18;
     int Unknown1C;
     int Unknown20;
-    int Unknown24;
+    int m_Handle;
     char Unknown28;
     unsigned char Unknown29;
     char Unknown2A;
@@ -60,7 +60,7 @@ public:
     union
     {
         char Pad34[0x4];
-        UObject* Unknown34;
+        UObject* m_Manager;
     };
     char Unknown38[0xC];
 };

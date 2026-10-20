@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Game/cString.h"
+#include "Game/cMissionStatsPane.h"
 #include "Game/Class_10B71110.h"
 #include "Game/Class_10B71140.h"
 #include "Game/Class_10B73E80.h"
@@ -19,15 +20,6 @@ public:
 };
 
 extern const char DAT_10e84f7c[];
-
-class cMissionStatsPane : public Class_10B787F0
-{
-public:
-    void FUN_10b671a0();
-    cString GetMissionStatsPaneFile();
-
-    void* Field00;
-};
 
 void FUN_10b790e0();
 
@@ -369,8 +361,8 @@ extern void* DAT_10e88160;
 // FUNCTION: 0x10B671A0 ?FUN_10b671a0@cMissionStatsPane@@QAEXXZ
 void cMissionStatsPane::FUN_10b671a0()
 {
-    Field00 = DAT_10e84d80;
-    FUN_10b787f0();
+    Unknown00 = DAT_10e84d80;
+    ((Class_10B787F0*)this)->FUN_10b787f0();
 }
 
 // FUNCTION: 0x10B671D0 ?GetMissionStatsPaneFile@cMissionStatsPane@@QAE?AVcString@@XZ

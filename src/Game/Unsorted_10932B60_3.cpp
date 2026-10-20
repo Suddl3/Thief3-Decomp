@@ -32,7 +32,7 @@ int CreateNamedEntry(const cString& Param1, Class_10E4A668* B)
         int Tag = 0;
         int Length = Name.Unknown00 == 0 ? 0 : ((int*)Name.Unknown00)[-1];
         char* Buffer = (char*)::operator new(Length + 1, Tag, 0, 0, 0, 0);
-        Node->UnknownB0 = Buffer;
+        Node->m_Name = Buffer;
         const char* Src = *Name;
         char* Dst = Buffer;
         char C;

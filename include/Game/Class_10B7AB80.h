@@ -5,16 +5,12 @@
 
 #include "Game/Class_10C3E140.h"
 
+// The class has no fields of its own: FUN_10b7ab80 writes the base class's
+// index (0x08) and its scale (0x1C).
 class Class_10B7AB80 : public Class_10C3E140
 {
 public:
     void FUN_10b7ab80(int A, float B);
-
-    char Pad01[0x7];
-    char Pad2F[0x1];
-    int Unknown08;
-    char Unknown0C[0x10];
-    float Unknown1C;
 };
 
 #endif // GAME_CLASS_10B7AB80_H

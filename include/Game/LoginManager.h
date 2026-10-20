@@ -6,6 +6,8 @@
 class Object_10A67120;
 class cIntArray;
 
+extern void* DAT_10e6b4c8[];
+
 class LoginManager
 {
 public:
@@ -17,7 +19,11 @@ public:
     virtual void FollowPlayerSetupLinks(int A, int B, cIntArray* Out);
     virtual void Virtual6(int A, int B);
 
-    LoginManager();
+    // The class's own table, stored at +0x0.
+    LoginManager()
+    {
+        *(void***)this = DAT_10e6b4c8;
+    }
 };
 
 #endif // GAME_LOGINMANAGER_H

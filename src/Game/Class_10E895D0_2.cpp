@@ -3,24 +3,9 @@
 #include "Game/Class_10D9FEE0.h"
 #include "Game/Class_10B82390.h"
 #include "Game/Class_10E895D0.h"
+#include "Game/Class_10B8B9F0_Unknown10.h"
 
 struct Struct_10B8B830;
-
-class Class_10B8B9F0_Unknown10
-{
-public:
-    bool FUN_10dab5a0();
-    float FUN_10dab590();
-    float FUN_10dab580();
-    void FUN_10dab5f0(float A);
-    void FUN_10dab620(int A);
-    float FUN_10dad2d0();
-    float FUN_10dad2e0();
-    void FUN_10dacd80(float A, int B);
-
-    char Pad00[0x4];
-    int Unknown04;
-};
 
 struct Struct_10B8BF80_Obj
 {

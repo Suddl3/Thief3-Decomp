@@ -30,7 +30,8 @@ void Class_10AA44B0::Rehash(int Size)
         Class_10AA44B0_Node* Node = OldTable[j];
         while (Node)
         {
-            Insert(*Node, Node->m_Name);
+            // Each entry is put back under the key in its first word, with its value.
+            Insert(*(Class_10E97B00*)Node, Node->Value);
             Class_10AA44B0_Node* Next = Node->Next;
             delete Node;
             Node = Next;

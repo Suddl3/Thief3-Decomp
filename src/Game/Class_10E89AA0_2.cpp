@@ -2,14 +2,9 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Game/Class_10B92DB0.h"
+#include "Game/Struct_10978840.h"
 
 class Class_10970890;
-
-struct Struct_10978840
-{
-    FLOAT Unknown00;
-    FLOAT Unknown04;
-};
 
 // Game/Class_1098E330.h copied whole, with FUN_10978840 added and Virtual44's real return type (FCoords by value).
 // The AActor base is left out: its UObject slots would move Virtual44 to slot 64; accepted units number this class's slots from 0.

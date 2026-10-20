@@ -6,6 +6,8 @@
 class InnerClass_10c5b910 {
 public:
     void FUN_10c5b910();
+
+    char Unknown00[0x28];
 };
 
 #endif // GAME_INNERCLASS_10C5B910_H

@@ -5,6 +5,8 @@
 
 #include "Game/cString.h"
 
+class Class_10E684A8;
+
 class cCountLabel
 {
 public:
@@ -14,7 +16,7 @@ public:
     void SetCount(int p1);
 
     char Unknown00[0x120];
-    void* m_Label;
+    Class_10E684A8* m_Label;  // the label the count is written on
     char Unknown124[0x18];
     cString m_Name;
     char Pad140[0x4];

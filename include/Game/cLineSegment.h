@@ -10,23 +10,11 @@ class cLineSegment
 public:
     cLineSegment(int A, int B);
 
-    union
-    {
-        float m_DeltaX;
-        float Unknown00;
-    };
-    union
-    {
-        float m_DeltaY;
-        float Unknown04;
-    };
-    union
-    {
-        float m_Slope;
-        char Pad08[0x4];
-    };
-    FVector Unknown0C;
-    FVector Unknown18;
+    float m_DeltaX; // m_End.X - m_Start.X
+    float m_DeltaY; // m_End.Y - m_Start.Y
+    float m_Slope;  // m_DeltaY / m_DeltaX
+    FVector m_Start; // the point the segment runs from
+    FVector m_End;   // the point the segment runs to
 };
 
 #endif // GAME_CLINESEGMENT_H

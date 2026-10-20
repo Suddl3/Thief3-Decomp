@@ -5,15 +5,23 @@
 
 #include "Game/Struct_10B2E690.h"
 
+// The class's own table, stored in the first word by the constructor.
+extern void* DAT_10e7b89c[];
+
 class Class_10B2E690
 {
 public:
-    Class_10B2E690();
+    Class_10B2E690()
+    {
+        Unknown04 = 1.0f;
+        Unknown08 = 0;
+        Unknown00 = DAT_10e7b89c;
+    }
 
     void Init(const Struct_10B2E690& A, const Struct_10B2E690& B, int C);
 
-    int Unknown00;
-    int Unknown04;
+    void** Unknown00; // the class's own table
+    float Unknown04;
     int Unknown08;
     int Unknown0C;
     int Unknown10;

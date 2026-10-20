@@ -3,13 +3,13 @@
 #ifndef GAME_STRUCT_10B1D1B0_UNKNOWN00_H
 #define GAME_STRUCT_10B1D1B0_UNKNOWN00_H
 
-class Class_10B228E0;
+#include "Game/PlayerStateController.h"
 
 struct Struct_10B1D1B0_Unknown00
 {
 public:
     char Unknown00[4];
-    Class_10B228E0* Unknown04;
+    PlayerStateController* m_PlayerStateController;
 };
 
 #endif // GAME_STRUCT_10B1D1B0_UNKNOWN00_H

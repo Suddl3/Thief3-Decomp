@@ -3,6 +3,7 @@
 #include "Game/Class_10C15D20.h"
 #include "Game/Class_10C15D40.h"
 #include "Game/Class_10E8D65C.h"
+#include "Game/Class_10E98C80.h"
 
 struct Struct_10C15CC0
 {
@@ -24,26 +25,6 @@ struct Struct_10C15CC0;
 void* operator new(unsigned int Size, const int& Tag, int A, int B, int C, int D);
 
 void operator delete(void* Ptr, const int& Tag, int A, int B, int C, int D);
-
-// Copied from include/Game/Class_10E98C80.h with the destructor the array's cookie needs.
-class Class_10E98C80
-{
-public:
-    Class_10E98C80();
-    ~Class_10E98C80();
-
-    void ResetVTable();
-
-    union
-    {
-        void* Field00;
-        void* VTable;
-    };
-    char Unknown04[8];
-    int Unknown0c;
-    int Unknown10;
-    int Unknown14;
-};
 
 // FUNCTION: 0x10C15BC0 ?FUN_10c15bc0@Class_10E8D65C@@QAEXXZ
 void Class_10E8D65C::FUN_10c15bc0()

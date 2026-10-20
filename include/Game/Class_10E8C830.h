@@ -3,12 +3,17 @@
 #ifndef GAME_CLASS_10E8C830_H
 #define GAME_CLASS_10E8C830_H
 
+class Class_10978090;
+class Class_10BB0F90_Param;
+
 class Class_10E8C830
 {
 public:
-    Class_10E8C830* Construct();
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual int FUN_10bb0f90(int A, Class_10978090* B, Class_10BB0F90_Param* C);
 
-    void* Unknown00;
+    Class_10E8C830* Construct();
 };
 
 #endif // GAME_CLASS_10E8C830_H

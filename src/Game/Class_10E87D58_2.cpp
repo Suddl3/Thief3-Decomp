@@ -1,13 +1,7 @@
 // Game/Class_10E87D58_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
+#include "Game/Class_10A57930.h"
 #include "Game/Class_10E87D58_Unknown1FC.h"
-
-class Class_10A57930
-{
-public:
-    virtual void Virtual0();
-    int FUN_10a57930(int A, int B);
-};
 
 class Class_10E87D58_Unknown1D8;
 
@@ -75,7 +69,7 @@ public:
 
     void FUN_10a57c70(int A);
 
-    char Unknown04[0x1D4];
+    char Unknown1A8[0x30];
     Class_10E87D58_Unknown1D8* Unknown1D8;
     char Unknown1DC[0x10];
     int m_MaxIndex;

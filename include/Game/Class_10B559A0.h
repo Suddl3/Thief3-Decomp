@@ -3,6 +3,8 @@
 #ifndef GAME_CLASS_10B559A0_H
 #define GAME_CLASS_10B559A0_H
 
+struct Struct_10DD7DC0Arg;
+
 class Class_10B559A0
 {
 public:
@@ -14,9 +16,9 @@ public:
     virtual void Virtual5();
     virtual void Virtual6();
     virtual void Virtual7();
-    virtual void Virtual8();
+    virtual Struct_10DD7DC0Arg* Virtual8();   // the position the move goes to
     virtual void Virtual9();
-    virtual void Virtual10();
+    virtual Struct_10DD7DC0Arg* Virtual10();  // the position the move starts from
     virtual void Virtual11();
     virtual void Virtual12();
     virtual void Virtual13();
@@ -60,9 +62,9 @@ public:
     virtual void Virtual51();
     virtual void Virtual52();
     virtual void Virtual53();
-    virtual void Virtual54();
+    virtual bool Virtual54();                 // when false, Virtual56(1) comes first
     virtual void Virtual55();
-    virtual void Virtual56(int A);
+    virtual void Virtual56(int A);             // called with 1
     virtual void Virtual57();
     virtual void Virtual58();
     virtual void Virtual59();
@@ -92,7 +94,7 @@ public:
     char Unknown04[0xE0];
     int m_State;
     char PadE8[0x44];
-    int Unknown12C;
+    int Unknown12C;         // its address is handed to Class_10E68F8C::Virtual0
 };
 
 #endif // GAME_CLASS_10B559A0_H

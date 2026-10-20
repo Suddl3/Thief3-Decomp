@@ -3,8 +3,6 @@
 #ifndef GAME_CLASS_10A73EF0_OBJECT_H
 #define GAME_CLASS_10A73EF0_OBJECT_H
 
-class Class_10ABCC20;
-
 class Class_10A73EF0_Object
 {
 public:
@@ -53,7 +51,7 @@ public:
     virtual void Virtual42();
     virtual void Virtual43();
     virtual void Virtual44();
-    virtual void Virtual45(Class_10ABCC20* Item, int B, int C);
+    virtual void Virtual45(void* Item, int B, int C);
     virtual void Virtual46();
     virtual void Virtual47();
     virtual void Virtual48();

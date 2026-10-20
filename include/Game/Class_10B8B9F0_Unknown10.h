@@ -3,13 +3,15 @@
 #ifndef GAME_CLASS_10B8B9F0_UNKNOWN10_H
 #define GAME_CLASS_10B8B9F0_UNKNOWN10_H
 
+class Class_10B8C1F0_Unknown08;
+
 class Class_10B8B9F0_Unknown10
 {
 public:
     bool FUN_10dab5a0();
     float FUN_10dab640();
     float FUN_10dad300();
-    void FUN_10dab5f0(int A);
+    void FUN_10dab5f0(float A);
     void FUN_10dab620(int A);
     float FUN_10dab590();
     float FUN_10dab580();
@@ -21,6 +23,7 @@ public:
 
     char Pad00[0x4];
     int Unknown04;
+    Class_10B8C1F0_Unknown08* Unknown08;
 };
 
 #endif // GAME_CLASS_10B8B9F0_UNKNOWN10_H

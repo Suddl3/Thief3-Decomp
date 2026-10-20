@@ -4,66 +4,9 @@
 #include "Game/Struct_One4.h"
 #include "Game/Struct_Pair0.h"
 #include "Game/Struct_Zero4.h"
+#include "Game/Struct_Zero5.h"
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10E4AC64.h"
-
-Class_10905A90_Member* GetAllocator();
-
-// A growable array of pointers in 20 bytes: a count, the bytes allocated and
-// the block, grown and shrunk 4 entries at a time. It has no destructor: its
-// owner frees it with Free().
-struct Struct_Zero5
-{
-    Struct_Zero5() : A(0), B(0), C(0), D(0), E(0) {}
-
-    void SetCount(int NewCount)
-    {
-        int Capacity = !C ? 0 : B / sizeof(void*);
-        GetAllocator()->Virtual8(0, 0);
-        if (NewCount > Capacity)
-        {
-            int NewCapacity = NewCount;
-            if (Capacity)
-                NewCapacity = (NewCount & ~3) + 4;
-            C = (void**)GetAllocator()->Virtual3(C, NewCapacity * sizeof(void*), 0, 0, 0, 0);
-            B = NewCapacity * sizeof(void*);
-        }
-        else if (NewCount <= Capacity - 4)
-        {
-            if (NewCount == 0)
-            {
-                GetAllocator()->Virtual5(C);
-                C = 0;
-                B = 0;
-            }
-            else
-            {
-                int NewCapacity = (NewCount & ~3) + 4;
-                C = (void**)GetAllocator()->Virtual3(C, NewCapacity * sizeof(void*), 0, 0, 0, 0);
-                B = NewCapacity * sizeof(void*);
-            }
-        }
-        GetAllocator()->Virtual9();
-        A = NewCount;
-    }
-
-    void Free()
-    {
-        SetCount(0);
-        if (B)
-        {
-            GetAllocator()->Virtual5(C);
-            C = 0;
-            B = 0;
-        }
-    }
-
-    int A;
-    int B;
-    void** C;
-    int D;
-    int E;
-};
 
 class Class_10E4AC6C : public Class_10E4AC64
 {
@@ -98,10 +41,10 @@ struct Struct_10951800 {};
 // FUNCTION: 0x10951800 ??1Class_10E4AC6C@@UAE@XZ
 Class_10E4AC6C::~Class_10E4AC6C()
 {
-    for (int i = 0; i < Unknown40.A; i++)
+    for (int i = 0; i < Unknown40.m_Count; i++)
     {
-        if (Unknown40.C[i])
-            delete (Struct_10951800*)Unknown40.C[i];
+        if (Unknown40.m_Items[i])
+            delete (Struct_10951800*)Unknown40.m_Items[i];
     }
     Unknown40.Free();
 }

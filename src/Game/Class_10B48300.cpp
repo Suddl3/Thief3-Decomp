@@ -3,6 +3,7 @@
 
 #include "Core/Core.h"
 #include "Game/Class_10B47660.h"
+#include "Game/Class_10B47AB0.h"
 #include "Game/Class_10B7AC30.h"
 #include "Game/Class_10B7AD00.h"
 #include "Game/Class_10B7AD20.h"
@@ -16,13 +17,6 @@
 #include "Game/Class_10AA82E0.h"
 #include "Game/Class_10B7AC50.h"
 #include "Game/Class_10B47C50.h"
-
-// Minimal declarations of the two classes whose callees take floats where their headers say int.
-class Class_10B47AB0
-{
-public:
-    void FUN_10b47850(int A, float B, float C, int D, float E, float F);
-};
 
 extern float DAT_10e49684;
 

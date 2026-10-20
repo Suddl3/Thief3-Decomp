@@ -3,11 +3,14 @@
 #ifndef GAME_CLASS_10AA44B0_NODE_H
 #define GAME_CLASS_10AA44B0_NODE_H
 
-#include "Game/Class_10E97B00.h"
+#include "Game/cString.h"
 
-class Class_10AA44B0_Node : public Class_10E97B00
+// A chained hash table's entry: 12 bytes, allocated per insert.
+class Class_10AA44B0_Node
 {
 public:
+    int Key;
+    cString Value;
     Class_10AA44B0_Node* Next;
 };
 

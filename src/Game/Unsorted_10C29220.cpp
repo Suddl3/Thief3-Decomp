@@ -15,6 +15,7 @@
 #include "Game/Class_10C38610.h"
 #include "Game/Class_10E993C4.h"
 #include "Game/MC_FollowAbsolute.h"
+#include "Game/MC_MoveToPoint.h"
 #include "Game/Class_10E9AF04.h"
 
 extern void* DAT_10e993c0[];
@@ -26,15 +27,6 @@ extern void* DAT_10e9aa7c[];
 void FUN_10c27290();
 
 extern const char DAT_10e9aaa8[];
-
-class MC_MoveToPoint
-{
-public:
-    void Construct();
-    cString GetClassName();
-
-    void* Field00;
-};
 
 class cMotionControllerAnim
 {
@@ -132,7 +124,7 @@ void FUN_10c29ee0()
 // FUNCTION: 0x10C2EB30 ?Construct@MC_MoveToPoint@@QAEXXZ
 void MC_MoveToPoint::Construct()
 {
-    Field00 = (void*)DAT_10e9aa7c;
+    *(void**)this = (void*)DAT_10e9aa7c; // the vtable pointer at +0
     FUN_10c27290();
 }
 
@@ -265,7 +257,7 @@ cString Class_10C38430::GetMotionControllerName()
 // FUNCTION: 0x10C384F0 ?Construct@Class_10E9AAD0@@QAEXXZ
 void Class_10E9AAD0::Construct()
 {
-    Field00 = (void*)DAT_10e9aad0;
+    *(void**)this = (void*)DAT_10e9aad0;
 }
 
 // FUNCTION: 0x10C38610 ?Reset@Class_10C38610@@QAEXXZ

@@ -28,15 +28,11 @@ public:
     }
 };
 
-// Copy of include/Game/Class_10AB37F0.h: adds FUN_10ab3ab0, which is called on the same object.
-class Class_10AB37F0
-{
-public:
-    void FUN_10ab37f0(const cString& Value);
-    void FUN_10ab3ab0();
-
-    cString Unknown00;
-};
+// Game/Class_10AB37F0.h includes Game/cString.h, which would define cString a second
+// time: this unit has its own copy of cString (it adds FUN_1095b160), so its include
+// guard keeps the header from bringing in another one.
+#define GAME_CSTRING_H
+#include "Game/Class_10AB37F0.h"
 
 cString FUN_10a83850(FILE* File, int A);
 

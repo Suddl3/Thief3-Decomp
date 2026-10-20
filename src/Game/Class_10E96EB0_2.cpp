@@ -51,7 +51,7 @@ void Class_10E96EB0::FUN_10be91b0()
     {
         Struct_10BE91B0_Pos Local = Unknown40->Unknown2C;
         Struct_10C3D0A0* Actor = (Struct_10C3D0A0*)Unknown04->Unknown08->FUN_10c7d570();
-        float Dist = Distance2D(&Local, &Actor->Unknown2C);
+        float Dist = Distance2D(&Local, (const Struct_10C05A50*)&Actor->m_Position);
         if (!(Dist < Unknown48))
             return;
     }

@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 #include <vector>
 #include "Game/Struct_10932ED0.h"
+#include "Game/Class_10E49D1C.h"
 
 extern "C" void* memset(void* Dest, int Value, unsigned int Count);
 
@@ -47,25 +48,6 @@ class Class_1095D6C0 : public std::vector<void*, Allocator_109335C0<void*> >
 public:
     Class_1095D6C0(const Allocator_109335C0<void*>& Alloc) : std::vector<void*, Allocator_109335C0<void*> >(Alloc) {}
     ~Class_1095D6C0();
-};
-
-class Class_10E49D1C
-{
-public:
-    Class_10E49D1C()
-    {
-        Unknown04 = 0;
-        Unknown08 = -1;
-        memset(&m_Desc, 0, sizeof(m_Desc));
-        Unknown0C = 0;
-    }
-
-    virtual ~Class_10E49D1C();
-
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    Struct_10932ED0 m_Desc;
 };
 
 class Class_10E49EB8 : public Class_10E49D1C

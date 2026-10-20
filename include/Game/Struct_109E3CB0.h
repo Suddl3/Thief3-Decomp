@@ -8,7 +8,7 @@ class ULevel;
 struct Struct_109E3CB0
 {
 public:
-    ULevel* Unknown00;
+    ULevel* m_Level;   // the level the game is in; its actors are listed and spawned into
 };
 
 #endif // GAME_STRUCT_109E3CB0_H

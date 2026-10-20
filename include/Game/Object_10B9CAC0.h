@@ -43,7 +43,8 @@ public:
     virtual void Virtual32();
     virtual void Virtual33();
     virtual void Virtual34();
-    virtual void Virtual35(const cString& A, int B);
+    // The call sites pass a cString and an int; one of them returns the result.
+    virtual int Virtual35(const cString& A, int B);
     virtual void Virtual36();
     virtual void Virtual37();
     virtual void Virtual38();

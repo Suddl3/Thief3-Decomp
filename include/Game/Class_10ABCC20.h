@@ -11,6 +11,7 @@ public:
     Class_10ABCC20* FUN_10abcc20();
 
     int Unknown00;
+    // A Class_10AF4B90 set up with (0x27, DAT_10e47850).
     Class_10ABCC20_Field04 Unknown04;
 };
 

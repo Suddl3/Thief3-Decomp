@@ -3,10 +3,20 @@
 
 #include <hash_map>
 
+#include "Game/Class_10E6BA40.h"
+
 struct Struct_10E6BA40_Value
 {
     float Unknown00;
     int Unknown04;
+};
+
+// The class seen with its table as the hash map the source that matched the game used:
+// the table sits at 0x04, and the head of the list in it at 0x0C.
+struct Class_10E6BA40_HashMap
+{
+    void* vptr;
+    stdext::hash_map<int, Struct_10E6BA40_Value> m_Entries;
 };
 
 class Class_10E50610
@@ -47,23 +57,12 @@ public:
 
 extern Class_10F46DA0* DAT_10f46da0;
 
-class Class_10E6BA40
-{
-public:
-    virtual void Virtual0();
-    virtual int FUN_10a6f160(int Key, float Value);
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void RemoveEntry(int A, int Key);
-
-    stdext::hash_map<int, Struct_10E6BA40_Value> m_Entries;
-};
-
 // FUNCTION: 0x10A6FD60 ?RemoveEntry@Class_10E6BA40@@UAEXHH@Z
 void Class_10E6BA40::RemoveEntry(int A, int Key)
 {
-    stdext::hash_map<int, Struct_10E6BA40_Value>::iterator It = m_Entries.find(Key);
-    if (It == m_Entries.end())
+    Class_10E6BA40_HashMap& Table = *(Class_10E6BA40_HashMap*)this;
+    stdext::hash_map<int, Struct_10E6BA40_Value>::iterator It = Table.m_Entries.find(Key);
+    if (It == Table.m_Entries.end())
         return;
     if (It->second.Unknown04)
     {
@@ -72,5 +71,5 @@ void Class_10E6BA40::RemoveEntry(int A, int Key)
         Event.Unknown04 = A;
         DAT_10f46da0->Virtual5(0x29, Key, &Event, 0);
     }
-    m_Entries.erase(Key);
+    Table.m_Entries.erase(Key);
 }

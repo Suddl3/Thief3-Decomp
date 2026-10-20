@@ -3,6 +3,8 @@
 #ifndef GAME_STRUCT_10ABA050_H
 #define GAME_STRUCT_10ABA050_H
 
+class Object_10ABB070;
+
 struct Struct_10ABA050
 {
     Struct_10ABA050()
@@ -16,7 +18,9 @@ struct Struct_10ABA050
         Unknown1C = 0;
     }
 
-    int Unknown00;
+    ~Struct_10ABA050();
+
+    Object_10ABB070* Unknown00;
     int Unknown04;
     int Unknown08;
     int Unknown0C;

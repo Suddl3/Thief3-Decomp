@@ -6,7 +6,9 @@
 class Class_10E9AAD0
 {
 public:
-    void* Field00;
+    virtual void Virtual0();
+
+    ~Class_10E9AAD0();
     void Construct();
 };
 

@@ -12,6 +12,7 @@
 #include "Game/cString.h"
 #include "Game/Class_10B56C80.h"
 #include "Game/Class_10B66060.h"
+#include "Game/Data_10B66060.h"
 #include "Game/cFactionPane.h"
 
 extern void* DAT_10e82058;
@@ -207,12 +208,6 @@ public:
 void FUN_10b76060();
 
 void FUN_10b760b0();
-
-struct Data_10B66060
-{
-    char Unknown000[0x178];
-    Info_10B66060 Unknown178;
-};
 
 // FUNCTION: 0x10B56C80 ?FUN_10b56c80@Class_10B56C80@@QAE?AVClass_1090A780@@XZ
 Class_1090A780 Class_10B56C80::FUN_10b56c80()
@@ -434,5 +429,5 @@ void Class_10B66060::SetData(int A, Data_10B66060* B)
 {
     Unknown184 = A;
     m_Data = B;
-    m_Info = B->Unknown178;
+    m_Info = *(Info_10B66060*)&B->Unknown178;
 }

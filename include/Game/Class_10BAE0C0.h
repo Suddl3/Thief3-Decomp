@@ -8,6 +8,7 @@ class Class_10BAE0C0
 public:
     void Resize(int Count);
     void Free();
+    ~Class_10BAE0C0();
 
     int m_Count;
     int m_CapacityBytes;

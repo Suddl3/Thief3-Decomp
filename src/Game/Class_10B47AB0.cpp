@@ -1,6 +1,7 @@
 // Game/Class_10B47AB0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
+#include "Game/Class_10B47AB0.h"
 #include "Game/Class_10EC0E20.h"
 #include "Game/Class_10B473D0.h"
 #include "Game/Class_10AAB5C0.h"
@@ -8,24 +9,6 @@
 #include "Game/Class_10B3A460.h"
 
 Class_10B3A460* GetEntries();
-
-class Class_10B47660_Member;
-
-class Class_10B47AB0
-{
-public:
-    void FUN_10b47ab0(int A);
-    void FUN_10b47850(int A, int B, float C, int D, int E, int F);
-
-    char Unknown00[8];
-    Class_10EC0E20* Unknown08;
-    Class_10EC0E20* Unknown0C;
-    Class_10B47660_Member* Unknown10;
-    char Unknown14[0x1C];
-    bool Unknown30;
-    char Unknown31[0x1B];
-    cIntArray Unknown4C;
-};
 
 // FUNCTION: 0x10B47850 ?FUN_10b47850@Class_10B47AB0@@QAEXHHMHHH@Z
 void Class_10B47AB0::FUN_10b47850(int A, int B, float C, int D, int E, int F)

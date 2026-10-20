@@ -8,6 +8,8 @@
 #include "Game/Class_10B46F50.h"
 #include "Game/Class_10DD7640.h"
 #include "Game/Class_10F3A3D8.h"
+#include "Game/Class_10E7E4E0.h"
+#include "Game/Class_10E81620.h"
 #include "Game/Struct_10B48890.h"
 #include "Game/Struct_10B4D620.h"
 #include "Game/Class_10B4D620.h"
@@ -59,25 +61,6 @@ struct Info_10B4FBC0
 void FUN_10a54cd0();
 
 extern void* DAT_10e81620[];
-
-class Class_10E7E4E0
-{
-public:
-    Class_10E7E4E0* FUN_10b3acb0();
-
-    void** Unknown00;
-    char Unknown04[0x0C];
-};
-
-class Class_10E81620 : public Class_10E7E4E0
-{
-public:
-    Class_10E81620* Init();
-
-    float Unknown10;
-    char Unknown14;
-    float Unknown18;
-};
 
 struct Info_10B4FED0
 {
@@ -267,7 +250,7 @@ void FUN_10b4fc80()
 Class_10E81620* Class_10E81620::Init()
 {
     FUN_10b3acb0();
-    Unknown00 = DAT_10e81620;
+    *(void**)this = DAT_10e81620;
     Unknown10 = 0.33f;
     Unknown14 = 0;
     Unknown18 = 10012.444f;
@@ -296,7 +279,7 @@ GSMantle* GSMantle::Init()
     FUN_10b3acb0();
     Unknown20 = 0;
     Unknown24 = 0;
-    Unknown00 = DAT_10e816e0;
+    *(void**)this = DAT_10e816e0;
     Unknown28 = -1.0f;
     return this;
 }

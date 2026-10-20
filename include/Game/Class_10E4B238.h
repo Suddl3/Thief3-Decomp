@@ -9,6 +9,7 @@ class Class_10E4B238 : public Class_10E4B180
 {
 public:
     virtual void FUN_10961510(int p1);
+    virtual void FUN_10961570();
 
     Class_10E4B238* FUN_109618a0();
 

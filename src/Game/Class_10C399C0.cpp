@@ -140,7 +140,7 @@ int Class_10C399C0::CheckInRange(int Obj)
         Target->Virtual70(&Out);
         Struct_10C38D90_Pos Local = Out;
         Struct_10C3D0A0* Actor = (Struct_10C3D0A0*)Unknown48->Virtual34()->FUN_10c7d570();
-        if (Distance2D(&Local, &Actor->Unknown2C) < Scale)
+        if (Distance2D(&Local, (const Struct_10C05A50*)&Actor->m_Position) < Scale)
             return Obj;
     }
     return 0;

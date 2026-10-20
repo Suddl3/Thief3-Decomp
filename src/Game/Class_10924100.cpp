@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include <new>
+#include "Game/Class_10924100.h"
 #include "Game/Class_1092F130.h"
 #include "Game/Class_10924100_Unknown44.h"
 #include "Game/Class_109480B0.h"
@@ -12,42 +13,6 @@ extern int DAT_10f31960;
 extern int DAT_10f31958;
 
 extern int DAT_10f3195c;
-
-class Class_10A1E620_Inner;
-
-class Class_10924100_Unknown38;
-
-class Class_10924100_Unknown44;
-
-class Class_10924100
-{
-public:
-    ~Class_10924100();
-
-    bool FUN_109228a0(int A, int B);
-    void Reset();
-    void FUN_10924100();
-    void FUN_1091f6a0();
-    bool Contains(Class_10924100_Unknown44* Item);
-    void FUN_10920a30(Class_10A1E620_Inner* Inner);
-
-    char Unknown00[0x4];
-    int Unknown04;
-    int Unknown08;
-    Class_109480B0* Unknown0C;
-    Class_1092F130* Unknown10;
-    int Unknown14;
-    int Unknown18;
-    int Unknown1C;
-    char Pad20[0xC];
-    int Unknown2C;
-    int Unknown30;
-    char Pad34[0x4];
-    Class_10924100_Unknown38** Unknown38;
-    int Unknown3C;
-    char Unknown40[4];
-    Class_10924100_Unknown44** Unknown44;
-};
 
 // FUNCTION: 0x1091F5B0 ?Reset@Class_10924100@@QAEXXZ
 void Class_10924100::Reset()

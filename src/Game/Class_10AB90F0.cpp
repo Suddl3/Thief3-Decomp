@@ -3,28 +3,9 @@
 
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10AB90F0.h"
+#include "Game/Class_10AB8BE0.h"
 
 Class_10905A90_Member* GetAllocator();
-
-// The element: 0x30 bytes; the loops call its destructor and clear its words.
-class Class_10AB8BE0
-{
-public:
-    ~Class_10AB8BE0();
-
-    int Unknown00;
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    int Unknown10;
-    int Unknown14;
-    int Unknown18;
-    int Unknown1C;
-    int Unknown20;
-    int Unknown24;
-    int Unknown28;
-    int Unknown2C;
-};
 
 // FUNCTION: 0x10AB8E90 ?FUN_10ab8e90@Class_10AB90F0@@QAEXH@Z
 void Class_10AB90F0::FUN_10ab8e90(int NewCount)
@@ -62,12 +43,12 @@ void Class_10AB90F0::FUN_10ab8e90(int NewCount)
         Class_10AB8BE0* Element = (Class_10AB8BE0*)((char*)m_Data + j * sizeof(Class_10AB8BE0));
         if (Element)
         {
-            Element->Unknown18 = 0;
-            Element->Unknown1C = 0;
-            Element->Unknown20 = 0;
-            Element->Unknown24 = 0;
-            Element->Unknown28 = 0;
-            Element->Unknown2C = 0;
+            Element->Unknown18.Count = 0;
+            Element->Unknown18.m_CapacityBytes = 0;
+            Element->Unknown18.Data = 0;
+            Element->Unknown24.Count = 0;
+            Element->Unknown24.m_CapacityBytes = 0;
+            Element->Unknown24.Data = 0;
             Element->Unknown00 = 0;
             Element->Unknown04 = 0;
             Element->Unknown08 = 0;

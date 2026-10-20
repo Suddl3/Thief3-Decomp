@@ -5,13 +5,22 @@
 
 #include "Game/Class_10A6F0C0.h"
 
+class cIntArray;
+class Class_10A6F010_Unknown0C;
+
+// The vtable at 0x10E6BA40 holds these five, in this order.
 class Class_10E6BA40
 {
 public:
     virtual void Virtual0();
     virtual int FUN_10a6f160(int Key, float Value);
+    virtual void Virtual2();
+    virtual void FUN_10a6f010(int A, cIntArray* Arr);
+    virtual void RemoveEntry(int A, int Key);
 
-    Class_10A6F0C0 m_Entries;
+    Class_10A6F0C0 m_Entries;         // 0x04: the table of entries
+    char Pad05[0x7];
+    Class_10A6F010_Unknown0C* m_Head;  // 0x0C: the head of the list the entries hang in
 };
 
 #endif // GAME_CLASS_10E6BA40_H

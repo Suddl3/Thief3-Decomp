@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Game/Class_10905A90_Member.h"
+#include "Game/VisualSubsystem.h"
 #include "Game/cVisualSubsystemArray.h"
 #include "Core/Core.h"
 #include "Game/cString.h"
@@ -13,27 +14,6 @@ Class_10905A90_Member* GetAllocator();
 enum EInternal { EC_Internal };
 
 inline void* operator new(unsigned int Size, EInternal* Mem) { return Mem; }
-
-// Game/VisualSubsystem.h copied with the default constructor the element's loop runs (it stores the vtable, then zeroes Unknown04).
-class VisualSubsystem
-{
-public:
-    VisualSubsystem() { Unknown04 = 0; }
-    VisualSubsystem(const VisualSubsystem& Other);
-    virtual ~VisualSubsystem();
-
-    int Unknown04;
-    int Unknown08;
-    int Unknown0C;
-    int Unknown10;
-    int Unknown14;
-    int Unknown18;
-    int Unknown1C;
-    int Unknown20;
-    int Unknown24;
-    int Unknown28;
-    int Unknown2C;
-};
 
 // FUNCTION: 0x10BAD9D0 ?Resize@cVisualSubsystemArray@@QAEXH@Z
 void cVisualSubsystemArray::Resize(int NewCount)

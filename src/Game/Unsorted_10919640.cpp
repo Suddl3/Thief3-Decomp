@@ -4,6 +4,7 @@
 #include "Game/Class_1093EDB0.h"
 #include "Game/cString.h"
 #include "Game/Class_1091E400.h"
+#include "Game/Class_10939570.h"
 #include "Game/IDirect3DDevice8.h"
 #include "Game/Class_10937730.h"
 #include "Game/IDirect3D8.h"
@@ -31,21 +32,6 @@ public:
     cString Unknown180[47];
     char Pad23C[0xc0];
     int Unknown2FC;
-};
-
-// Include/Game/Class_10939570.h copied whole, with FUN_1093b560 and the flag at 0x1c50 added.
-class Class_10939570
-{
-public:
-    char FUN_10939570();
-    void FUN_1093bce0(Class_10953590* Param);
-    void* FUN_1093bd40(int* A, int B, int C);
-    void FUN_1093b5e0();
-    void FUN_1093b560();
-
-    char Pad00[0x1];
-    char Pad01[0x1C4F];
-    bool Unknown1C50;
 };
 
 extern Class_10E4A538* DAT_10f2c8e4;

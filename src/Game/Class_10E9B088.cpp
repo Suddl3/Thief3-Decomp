@@ -50,14 +50,14 @@ void Class_10E9B088::FUN_10c3da10(int A)
     Ar.Serialize(&Unknown14, 4);
     Ar.Serialize(&Unknown18, 4);
     Ar.Serialize(&Unknown20, 4);
-    Ar.Serialize(&Unknown24, 4);
+    Ar.Serialize(&m_Handle, 4);
     Ar.Serialize(&Unknown28, 1);
     Ar.Serialize(&Unknown29, 1);
     Ar.Serialize(&Unknown2A, 1);
     Ar.Serialize(&Unknown2B, 1);
     Virtual26(&Unknown2C, Ar);
     Ar.Virtual7(&Unknown30);
-    Ar.Virtual6(&Unknown34);
+    Ar.Virtual6(&m_Manager);
     FUN_10b052a0(Ar, &Unknown38);
     if (Ar.Unknown0C >= 0x5b)
         Ar.Serialize(&Unknown1C, 4);
