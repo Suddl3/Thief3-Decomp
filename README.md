@@ -4,8 +4,8 @@
 [![Download the launcher](https://img.shields.io/github/v/release/Veradictus/Thief3-Decomp?include_prereleases&label=Download&style=for-the-badge)](https://github.com/Veradictus/Thief3-Decomp/releases/latest)
 [![Documentation](https://img.shields.io/badge/Documentation-read%20the%20guides-d6ab52?style=for-the-badge)](https://veradictus.github.io/Thief3-Decomp/)
 
-[![Decompiled](https://decomp.dev/Veradictus/Thief3-Decomp.svg?mode=shield&measure=matched_code_percent&category=main&label=Decompiled)](https://decomp.dev/Veradictus/Thief3-Decomp)
-[![Functions](https://decomp.dev/Veradictus/Thief3-Decomp.svg?mode=shield&measure=matched_functions&category=main&label=Functions)](https://decomp.dev/Veradictus/Thief3-Decomp)
+[![Decompiled](https://bytematch.dev/Veradictus/Thief3-Decomp.svg?mode=shield&measure=matched_code_percent&category=main&label=Decompiled)](https://bytematch.dev/Veradictus/Thief3-Decomp)
+[![Functions](https://bytematch.dev/Veradictus/Thief3-Decomp.svg?mode=shield&measure=matched_functions&category=main&label=Functions)](https://bytematch.dev/Veradictus/Thief3-Decomp)
 [![Progress report](https://github.com/Veradictus/Thief3-Decomp/actions/workflows/build.yml/badge.svg)](https://github.com/Veradictus/Thief3-Decomp/actions/workflows/build.yml)
 
 **T3SDK** is a modding SDK for **Thief: Deadly Shadows** (Ion Storm, 2004), PC.
@@ -274,11 +274,11 @@ your own copy of `T3Main.exe` and writes its results into ignored folders.
 - **Progress**: `tools/progress_report.py write` turns a local build's objdiff
   report into `progress/PC_20040610/report.json`, which is committed; CI
   checks that it matches `src/` and publishes it to
-  [decomp.dev](https://decomp.dev/Veradictus/Thief3-Decomp)
-  ([docs/decomp-dev.md](docs/decomp-dev.md)). The code by unit, matched in
+  [bytematch.dev](https://bytematch.dev/Veradictus/Thief3-Decomp)
+  ([docs/bytematch.md](docs/bytematch.md)). The code by unit, matched in
   colour:
 
-  [![decomp.dev progress by unit](https://decomp.dev/Veradictus/Thief3-Decomp.svg?w=512&h=256)](https://decomp.dev/Veradictus/Thief3-Decomp)
+  [![bytematch.dev progress by unit](https://bytematch.dev/Veradictus/Thief3-Decomp.svg?w=512&h=256)](https://bytematch.dev/Veradictus/Thief3-Decomp)
 
 ## Contributing
 
@@ -309,5 +309,5 @@ config/PC_20040610/      symbols.txt, splits.txt
 docs/                    engine notes, SDK and launcher guides, formats, matching, current status
 site/                    the documentation site (VitePress) built from docs/
 orig/PC_20040610/        your copy of T3Main.exe for the workbench (never committed)
-.github/workflows/       CI: launcher and SDK builds, releases, the decomp.dev report, the docs site
+.github/workflows/       CI: launcher and SDK builds, releases, the bytematch.dev report, the docs site
 ```

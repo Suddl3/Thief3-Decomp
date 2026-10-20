@@ -28,9 +28,9 @@ explained in full.
   screen on the monitor until the new game's own is ready. New, and not yet
   tried in the actual game. See
   [Troubleshooting: display and performance](troubleshooting.md#display-and-performance).
-- **decomp.dev.** The public dashboard that tracks how much of `T3Main.exe`
+- **bytematch.dev.** The public dashboard that tracks how much of `T3Main.exe`
   has been matched, built from this repository by CI. See
-  [decomp.dev reporting](../decomp-dev.md).
+  [bytematch.dev reporting](../bytematch.md).
 - **Flesh.** Ion Storm's own name for the early Unreal Engine 2 fork Thief:
   Deadly Shadows runs on. See [Assets and formats](../assets.md).
 - **Frame callback.** A function a mod registers that T3SDK calls once per

@@ -197,7 +197,7 @@ ways to force a "match" that isn't real source (see
 None of these are lint rules for their own sake — call a function the target
 doesn't call, and the result is a wrong callee regardless of what objdiff's
 percentage says. This project pins objdiff's relocation ruler
-(`functionRelocDiffs: name_address`, see [decomp-dev.md](../decomp-dev.md))
+(`functionRelocDiffs: name_address`, see [bytematch.md](../bytematch.md))
 specifically because a default, lenient ruler would show 100% for exactly
 that mistake; `accept.py`'s own address-resolved rulers catch it independent
 of that pin.

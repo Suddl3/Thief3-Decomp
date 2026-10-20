@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""The progress report decomp.dev shows: written from a local build, checked and published by CI.
+"""The progress report bytematch.dev shows: written from a local build, checked and published by CI.
 
     python tools/progress_report.py write [--version PC_20040610]    after a build, with orig/
     python tools/progress_report.py check [--version PC_20040610]    CI: no exe or compiler needed
     python tools/progress_report.py summary [--version PC_20040610]  a Markdown table of the report
 
-decomp.dev reads an objdiff report (format version 2) from the artifact
+bytematch.dev reads an objdiff report (format version 2) from the artifact
 <version>_report of the latest push run on the default branch. CI cannot make
 one: the build splits T3Main.exe, which never enters the repository or CI. So
 `write` builds build/<version>/report.json with ninja (objdiff compares every
@@ -19,7 +19,7 @@ the headline, "main", is Ion Storm's game code, which the decompilation
 covers; Epic's engine, the libraries and unclassified code are reported for
 reference. The .text$x funclets no declared unit takes are left out (the
 compiler emits them with their parent function), and so is data: nothing is
-split into units yet, so `write` drops the data measures (decomp.dev then shows
+split into units yet, so `write` drops the data measures (bytematch.dev then shows
 none) and the data-only __shared_data unit.
 
 `check` fails when the committed report no longer describes the tree:

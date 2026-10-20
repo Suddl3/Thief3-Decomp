@@ -7,7 +7,7 @@ against the local game install. It should support ambitious mods, multiplayer
 first among them. Around it: a **launcher** for players and map makers, a
 **Godot map workflow** (export, edit, repack), and a public **matching
 decompilation** worked mostly by Claude agents under the strict gate in
-`tools/agent/`, listed on decomp.dev. What we identify gets its name in
+`tools/agent/`, listed on bytematch.dev. What we identify gets its name in
 `symbols.txt` and its notes in `docs/engine.md`. Matched source is public
 (`src/`, `include/`); raw decompiler output stays local (`build/`,
 `ghidra/`), and the repository never holds game files or data (see
@@ -40,7 +40,7 @@ decompilation** worked mostly by Claude agents under the strict gate in
   `tools/classify.py` from evidence in the exe (native class registrations
   with their packages, vtables, strings), says whose each function is: 2.6 MB
   of game code, 0.8 MB of Epic's engine, 1.4 MB of libraries and 0.22 MB still
-  unclassified ([decomp-dev.md](decomp-dev.md), "Whose code it is"). The
+  unclassified ([bytematch.md](bytematch.md), "Whose code it is"). The
   queue offers game code only, integrate.py publishes nothing else, and
   `progress_report.py check` enforces it. Epic's engine code (the `UObject`
   natives) was removed from `src/`, and with it 414 matched functions the
@@ -55,10 +55,10 @@ decompilation** worked mostly by Claude agents under the strict gate in
   after the class most of their code is. 3,361 classes are declared once, in
   `include/Game/<Class>.h`, and the placeholders the exe shows to be one
   class are folded (`config/PC_20040610/classmap.txt`; agent-workflow.md,
-  "Class structure"). decomp.dev shows the
+  "Class structure"). bytematch.dev shows the
   committed report `progress/PC_20040610/report.json`, whose headline is the
-  game code (7,983 of 12,370 functions at 100%, 22.27% of its bytes; hidden from decomp.dev's list
-  below 0.5% matched): regenerate it after integrating, see next step 2.
+  game code (7,983 of 12,370 functions at 100%, 22.27% of its bytes):
+  regenerate it after integrating, see next step 2.
 - The 266 native classes are in `config/PC_20040610/classes.txt` (size,
   super class, flags, vtable; `tools/classify.py write`), and the 64 classes
   known only as `Class_<vtable>` carry their names (`AGarrett`,
@@ -94,7 +94,7 @@ decompilation** worked mostly by Claude agents under the strict gate in
 | Release bundle (tools, prebuilt SDK, embeddable Python) | `tools/stage_launcher.py` | builds in CI |
 | Matching harness: queue, context, try, strict gate, integrate, waves | `tools/agent/`, `.claude/agents/t3-matcher.md`, `.claude/skills/t3-match/`, [matching.md](matching.md) | synthetic tests pass; runs on the real split (hand-matched functions, a smoke wave and a natives wave) |
 | Swarm workflow, families stamped without a model, worker guard | `.claude/workflows/t3-swarm.js`, `tools/agent/clusters.py`, `.claude/settings.json`, [agent-workflow.md](agent-workflow.md) | synthetic tests pass and the guard was checked with a live sub-agent (2026-10-02); not yet run on the real split |
-| CI: launcher and SDK builds (artifacts), releases on `v*` tags, decomp.dev report | `.github/workflows/` | launcher/SDK green; the progress job checks and publishes the committed report ([decomp-dev.md](decomp-dev.md)) |
+| CI: launcher and SDK builds (artifacts), releases on `v*` tags, bytematch.dev report | `.github/workflows/` | launcher/SDK green; the progress job checks and publishes the committed report ([bytematch.md](bytematch.md)) |
 
 Commands are in [sdk.md](sdk.md) (SDK) and [../CLAUDE.md](../CLAUDE.md).
 `tools/sdk.py click`/`keys`/`screenshot` make UI tests possible without
@@ -200,11 +200,11 @@ Later the same day, played by the user:
      original must sit in `System/mods/originals/`, and switching the mod
      off must put it back. With a texture pack on, a `files/` mod that
      places an `.ibt` must queue restore, place the bundle, then apply.
-2. **decomp.dev**: CI publishes `progress/PC_20040610/report.json`, which
+2. **bytematch.dev**: CI publishes `progress/PC_20040610/report.json`, which
    `python tools/progress_report.py write` makes from a local build (the exe
-   stays local) and CI checks against `src/` ([decomp-dev.md](decomp-dev.md)).
+   stays local) and CI checks against `src/` ([bytematch.md](bytematch.md)).
    After each integration: write it and commit it with the source. On
-   decomp.dev, set the project's default category to **main** (owner).
+   bytematch.dev, set the project's default category to **main** (owner).
 3. **Matching** (game code only):
    - Matching runs as a swarm ([agent-workflow.md](agent-workflow.md)), now
      best as a workflow: `t3-swarm` (a model per band) or `t3-match` (one

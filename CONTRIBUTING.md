@@ -29,7 +29,7 @@ not negotiable:
   render device, ...) is not decompiled or published: the game code compiles
   against it through declarations in `include/`, and the engine stays in the
   binary the player owns. `config/PC_20040610/categories.txt` records whose
-  each function is (`tools/classify.py`, see docs/decomp-dev.md); a function
+  each function is (`tools/classify.py`, see docs/bytematch.md); a function
   it does not call game code (engine, library or unclassified) stays out of
   `src/`, and `python tools/progress_report.py check` fails otherwise.
 - **No extracted assets.** The asset tools write into `build/assets/`, which is

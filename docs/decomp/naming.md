@@ -119,7 +119,7 @@ makes `tools/symbols.py`'s parser raise immediately, naming the exact line.
 It doesn't check that a name is *correct*. Renaming never makes the report
 stale; adding or resizing a function does, since it changes the units: then
 run `python tools/progress_report.py write` (it needs the exe) and commit the
-report with your change. CI runs the same check ([decomp-dev.md](../decomp-dev.md)).
+report with your change. CI runs the same check ([bytematch.md](../bytematch.md)).
 
 ## What not to record
 

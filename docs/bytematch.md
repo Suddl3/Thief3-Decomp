@@ -1,9 +1,14 @@
-# Progress on decomp.dev
+# Progress on bytematch.dev
 
-[decomp.dev](https://decomp.dev/Veradictus/Thief3-Decomp) shows the progress
+[bytematch.dev](https://bytematch.dev/Veradictus/Thief3-Decomp) shows the progress
 of public matching decompilations. It reads an objdiff report that this
-repository's CI uploads; nothing is uploaded by hand. How the site finds
-reports is in [research/llm-matching.md](research/llm-matching.md), section 3.
+repository's CI uploads; nothing is uploaded by hand. It took over from
+decomp.dev, which shut down, and reads reports the same way: the artifact
+`<VERSION>_report`, the same report format, the same page, JSON and badge URLs
+with only the host changed
+([migrating from decomp.dev](https://bytematch.dev/docs/migrating-from-decomp-dev)).
+How decomp.dev found reports is in
+[research/llm-matching.md](research/llm-matching.md), section 3.
 
 ## How the report gets there
 
@@ -20,7 +25,7 @@ splits `T3Main.exe`, which never enters the repository or CI.
 3. On every push and pull request, `.github/workflows/build.yml` (workflow
    "progress") runs `python tools/progress_report.py check`, validates the
    report with objdiff, and uploads it as the artifact `PC_20040610_report`.
-   decomp.dev takes it from the latest push run on the default branch.
+   bytematch.dev takes it from the latest push run on the default branch.
 
 `check` needs neither the exe nor the compiler. It fails when `src/`,
 `splits.txt`, `symbols.txt` or `categories.txt` changed without a new report:
@@ -46,7 +51,7 @@ which `tools/classify.py` writes from the exe (see "Whose code it is" below):
 
 | Category | Name | What |
 |---|---|---|
-| **main** | Game | Ion Storm's code: the decompilation's scope, and decomp.dev's headline |
+| **main** | Game | Ion Storm's code: the decompilation's scope, and bytematch.dev's headline |
 | **engine** | Engine (Epic) | Epic's Unreal Engine 2 (Core, Engine, Fire, the drivers, Window): not decompiled |
 | **libs** | Libraries | Havok, qhull, the MSVC runtime, STL, D3DX, libjpeg, LIPSinc: not decompiled |
 | **unknown** | Unclassified | code without evidence yet of whose it is |
@@ -59,7 +64,7 @@ categories (`configure.py` breaks them at every boundary). Left out entirely:
   compiler emits them with their parent function, which is what counts; a
   declared unit includes its own functions' funclets.
 - data. Nothing is split into units yet, so `write` drops the data measures
-  and the data-only `__shared_data` unit, and decomp.dev shows no data bar.
+  and the data-only `__shared_data` unit, and bytematch.dev shows no data bar.
 
 ## Whose code it is
 
@@ -105,29 +110,27 @@ integrate.py skips it, and the work queue offers game code only.
 
 ## One-time setup (repository owner)
 
-The repository is registered (at <https://decomp.dev/manage/new>, platform
-*Windows (win32)*). Left to do on decomp.dev, signed in as an admin of the
-repository:
+On bytematch.dev, signed in with GitHub as an admin of the repository:
 
-- In the project's settings, set the default category to **main**, so the
-  headline counts Ion Storm's game code rather than everything in the exe.
-- Optionally install the decomp.dev GitHub App, which comments on pull
-  requests with the functions they improve or regress.
+- add the project (**Manage**, **Add project**), if it is not listed yet;
+- in its settings, set the default category to **main**, so the headline
+  counts Ion Storm's game code rather than everything in the exe;
+- import the history saved from decomp.dev, so the chart starts where that
+  one ended.
 
-A project stays hidden from decomp.dev's list until 0.5% of its code matches
-(about 13 KB of the 2.6 MB of game code); its page and badges work before
-that.
+The workflow uploads the report as `PC_20040610_report`, the standard name, so
+no artifact pattern or workflow restriction is needed.
 
 ## Badges
 
-The README shows these. decomp.dev's shields take `style=flat` (the
-default), `plastic` or `flatsquare`; `forthebadge` is refused at the moment.
+The README shows these. bytematch.dev takes every badge style decomp.dev took
+(`social` is drawn as `flat`).
 
 ```markdown
-[![Decompiled](https://decomp.dev/Veradictus/Thief3-Decomp.svg?mode=shield&measure=matched_code_percent&category=main&label=Decompiled)](https://decomp.dev/Veradictus/Thief3-Decomp)
-[![Functions](https://decomp.dev/Veradictus/Thief3-Decomp.svg?mode=shield&measure=matched_functions&category=main&label=Functions)](https://decomp.dev/Veradictus/Thief3-Decomp)
+[![Decompiled](https://bytematch.dev/Veradictus/Thief3-Decomp.svg?mode=shield&measure=matched_code_percent&category=main&label=Decompiled)](https://bytematch.dev/Veradictus/Thief3-Decomp)
+[![Functions](https://bytematch.dev/Veradictus/Thief3-Decomp.svg?mode=shield&measure=matched_functions&category=main&label=Functions)](https://bytematch.dev/Veradictus/Thief3-Decomp)
 [![Progress report](https://github.com/Veradictus/Thief3-Decomp/actions/workflows/build.yml/badge.svg)](https://github.com/Veradictus/Thief3-Decomp/actions/workflows/build.yml)
-![Progress chart](https://decomp.dev/Veradictus/Thief3-Decomp.svg?w=512&h=256)
+![Progress chart](https://bytematch.dev/Veradictus/Thief3-Decomp.svg?w=512&h=256)
 ```
 
 ## Keeping the number honest

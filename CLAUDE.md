@@ -27,7 +27,7 @@ python tools/ghidra_headless.py bootstrap                          # rebuild ghi
 .venv/Scripts/python configure.py --msvc-runtime <dir> && .venv/Scripts/ninja   # split/diff workbench
 python tools/agent/next.py status | context.py <addr> | try.py | accept.py        # matching loop (docs/matching.md)
 python tools/agent/clusters.py list|stamp; sweep.py "<prefix>-*"                 # families without a model; close a swarm batch (docs/agent-workflow.md)
-.venv/Scripts/python tools/progress_report.py write|check                          # decomp.dev report: write after integrating, commit progress/
+.venv/Scripts/python tools/progress_report.py write|check                          # bytematch.dev report: write after integrating, commit progress/
 .venv/Scripts/python tools/classify.py write|classes|explain <addr>|stats          # whose code: game/engine/libs (config/*/categories.txt, classes.txt)
 .venv/Scripts/python tools/agent/readability.py [--history]                       # how much of src/ is named (docs/agent-workflow.md, "Readable code")
 .venv/Scripts/python tools/agent/classinfo.py <Class>|--units <units>; names.py apply <plan> [--dry-run]|list|sync; fields.py apply <plan>   # naming pass (tools/agent/namer.md)

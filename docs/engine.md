@@ -162,7 +162,7 @@ Window 1) and 57 in Ion Storm's (AICore 30, T3Game 11, T3Player 8, T3AI 6,
 GamePhysics and T3GamePhysics 1 each). About 80 of the classes in Core and
 Engine are Ion Storm's own (the `*LinkDataObject` links, `MetaProperty`,
 `AISubsystem`, ...): their UnrealScript source has no Epic header. The tool
-uses them to tell Ion Storm's code from Epic's ([decomp-dev.md](decomp-dev.md),
+uses them to tell Ion Storm's code from Epic's ([bytematch.md](bytematch.md),
 "Whose code it is").
 
 It also writes `config/PC_20040610/classes.txt`, one line per class: C++ name

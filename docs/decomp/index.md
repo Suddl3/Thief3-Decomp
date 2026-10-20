@@ -66,7 +66,7 @@ follow them, not to repeat them in full. In short:
 This handbook covers the *process*. The facts it produces are the reference
 pages: [engine.md](../engine.md) for addresses and layouts,
 [target.md](../target.md) for the binary itself, and
-[decomp-dev.md](../decomp-dev.md) for how progress is published. Once
+[bytematch.md](../bytematch.md) for how progress is published. Once
 something is identified, the [mod author cookbook](../modding/cookbook/index.md)
 is where it turns into a mod hook, and the [player guide](../guide/faq.md) is
 where players ask what any of this means for them.

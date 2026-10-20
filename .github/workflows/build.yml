@@ -1,4 +1,4 @@
-# Publishes the progress report decomp.dev reads: the artifact <version>_report
+# Publishes the progress report bytematch.dev reads: the artifact <version>_report
 # of the latest push run on the default branch.
 #
 # This job does not build the decompilation: the build splits T3Main.exe,
@@ -7,7 +7,7 @@
 # functions) and committed as progress/<version>/report.json. It holds names,
 # addresses, sizes and match percentages, no bytes of the game. This job checks
 # that it still describes the tree (its units, and the functions in src/),
-# validates it with objdiff and uploads it. (docs/decomp-dev.md)
+# validates it with objdiff and uploads it. (docs/bytematch.md)
 name: progress
 
 on:

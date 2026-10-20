@@ -4,7 +4,7 @@
 > and lives in this repository itself, rather than in a separate repository or
 > behind a report-only setup (section 5); CONTRIBUTING.md has the rules. The
 > harness it recommends is in `tools/agent/` ([matching.md](../matching.md)),
-> the CI and decomp.dev setup in [decomp-dev.md](../decomp-dev.md).
+> the CI and progress setup (now on bytematch.dev) in [bytematch.md](../bytematch.md).
 
 Date: 2026-09-27. Scope: Thief: Deadly Shadows `T3Main.exe` (Win32 x86, MSVC 13.10.3077,
 `/O2 /GX /GR-`), the workbench in this repo (delink split, MSVC 7.1 through wibo, objdiff).
@@ -408,7 +408,7 @@ From the site's source ([encounter/decomp.dev](https://github.com/encounter/deco
     objdiff report (JSON or protobuf), and runs `migrate()`.
   - For this repo the artifact name would be `PC_20040610_report` and the file `build/PC_20040610/report.json`.
 - **Visibility threshold:** projects are hidden when `matched_code_percent < 0.5` (`crates/core/src/models.rs`).
-  Here that means ~13 KB if the default category is the 2.6 MB of game code (`main`, [decomp-dev.md](../decomp-dev.md)).
+  Here that means ~13 KB if the default category is the 2.6 MB of game code (`main`, [bytematch.md](../bytematch.md)).
 - **Progress categories:** set them on units (`metadata.progress_categories`) and list them in `objdiff.json`; this repo's
   `configure.py` already does both. The project setting `default_category` chooses which category's measures drive
   the headline and visibility. **"Fully linked"** is `complete_code_percent`, from units whose metadata is `complete`.

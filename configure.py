@@ -73,8 +73,8 @@ UNIT_RANGES = [
 for _start, _end, _source in UNIT_RANGES:
     UNITS[_source] = {"cflags": OD_CFLAGS}
 
-# objdiff/decomp.dev progress categories, from config/<version>/categories.txt
-# (tools/classify.py). "main" is the headline (decomp.dev's default category):
+# objdiff/bytematch.dev progress categories, from config/<version>/categories.txt
+# (tools/classify.py). "main" is the headline (bytematch.dev's default category):
 # Ion Storm's game code, which the decompilation covers. Epic's engine and the
 # third-party libraries stay in the binary; they are reported for reference.
 CATEGORIES = {

@@ -169,7 +169,7 @@ export default defineConfig({
           { text: "The target binary", link: "/target" },
           { text: "Matching decompilation", link: "/matching" },
           { text: "Agent workflow", link: "/agent-workflow" },
-          { text: "Progress on decomp.dev", link: "/decomp-dev" },
+          { text: "Progress on bytematch.dev", link: "/bytematch" },
           { text: "Assets and formats", link: "/assets" },
           { text: "Research: LLM matching", link: "/research/llm-matching" },
           { text: "Research: Unreal decomps and swarms", link: "/research/ue2-decomps" },
