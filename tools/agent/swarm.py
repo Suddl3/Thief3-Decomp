@@ -35,6 +35,7 @@ STATE = ROOT / "build" / "agent" / "swarm"
 PY = ".venv/Scripts/python"
 DRY_LIMIT = 3
 LIMITED = re.compile(r"Rate limit exceeded|rate.?limit|429|Too Many Requests", re.I)
+BLOCKED = re.compile(r"abusive traffic|aren.t available from your current network", re.I)
 BACKOFF = STATE / "backoff.json"   # shared by every swarm on the machine: one provider, one limit
 
 
@@ -167,6 +168,13 @@ class Swarm:
         output = log.read_text(encoding="utf-8", errors="replace") if log.is_file() else ""
         report = last_json(output)
         handled = 0
+        if report is None and BLOCKED.search(output[-2000:]):
+            # the provider refuses this network altogether: every lane stops, no retries
+            (ROOT / "build" / "agent" / "stop-swarm").write_text(f"{wid}: blocked by the provider\n", encoding="utf-8")
+            with self.lock:
+                self.note(f"{wid}: the provider blocked this network; every lane stops (build/agent/stop-swarm)")
+                self.save()
+            return
         if report is None and LIMITED.search(output[-2000:]):
             until = back_off()
             with self.lock:
