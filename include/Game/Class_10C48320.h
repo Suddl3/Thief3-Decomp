@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_10C48320_H
 #define GAME_CLASS_10C48320_H
 
-#include "Game/Class_10C48320_Field18.h"
+#include "Game/Class_10E9BB80.h"
 
 class Class_10C48320_Node;
 
@@ -26,7 +26,8 @@ public:
     bool m_FixedSize;
     char Pad11[0x3];
     Class_10C48320_Node** m_Buckets;
-    Class_10C48320_Field18 m_KeyTraits;
+    // The key's traits: slot 0 gives HashBytes the key's bytes, slot 1 compares two keys.
+    Class_10E9BB80 m_KeyTraits;
 };
 
 #endif // GAME_CLASS_10C48320_H

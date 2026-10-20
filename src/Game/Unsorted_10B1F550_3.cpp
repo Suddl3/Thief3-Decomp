@@ -2,18 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Core/Core.h"
-
-// The object's class, with the flag byte the code tests.
-class Class_1098E0F0
-{
-public:
-    void FUN_1098e0f0(int A);
-
-    char Unknown00[0x78];
-    bool Unknown78;
-    char Unknown79[0x3B];
-    void* Unknown0B4;
-};
+#include "Game/Class_1098E0F0.h"
 
 class Class_10E6D208;
 

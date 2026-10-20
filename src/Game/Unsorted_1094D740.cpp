@@ -1,34 +1,10 @@
 // Game/Unsorted_1094D740.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
+#include "Game/Class_10937790.h"
 #include "Game/Class_1094D740.h"
 #include "Game/Info_10952690.h"
 #include "Game/Struct_10924210.h"
-
-// The game declares these two as classes; the state cache's header forward
-// declares one of them as a struct, which mangles the call wrongly.
-class Class_1091E3F0;
-
-struct Struct_10938DA0;
-
-// Game/Class_10937790.h copied whole, with the argument of FUN_10938ee0
-// typed as the class the game uses.
-class Class_10937790
-{
-public:
-    void FUN_10937790();
-    void SetTransforms(void* A, void* B, void* C);
-    void FUN_10938ee0(Class_1091E3F0* Obj);
-    void FUN_10938da0(void* A, Struct_10938DA0* B, void* C);
-
-    char Unknown00[0x6FC];
-    int Unknown6FC;
-    char Pad700[0x3c];
-    char m_Projection[0x40];
-    char m_World[0x40];
-    char m_View[0x40];
-    char m_Viewport[0x18];
-};
 
 // Game/IDirect3DDevice8.h copied whole, with slot 72 given the signature the
 // game uses (a viewport block) and the other slots untouched.

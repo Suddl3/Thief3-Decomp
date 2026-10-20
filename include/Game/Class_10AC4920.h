@@ -3,15 +3,17 @@
 #ifndef GAME_CLASS_10AC4920_H
 #define GAME_CLASS_10AC4920_H
 
+class Class_10A38130;
+
 class Class_10AC4920
 {
 public:
     void FUN_10ac44c0(int Count);
     void Free();
 
-    int Unknown00;
-    int Unknown04;
-    void* m_Data;
+    int m_Count;      // number of elements in the array
+    int m_BufferSize; // size of the array in bytes
+    Class_10A38130* m_Data;
 };
 
 #endif // GAME_CLASS_10AC4920_H

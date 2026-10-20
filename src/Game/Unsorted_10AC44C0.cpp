@@ -31,11 +31,11 @@ Class_10AC47F0* Class_10AC47F0::CopyFrom(const Class_10AC47F0& Other)
 void Class_10AC4920::Free()
 {
     FUN_10ac44c0(0);
-    if (Unknown04)
+    if (m_BufferSize)
     {
         GetAllocator()->Virtual5(m_Data);
         m_Data = 0;
-        Unknown04 = 0;
+        m_BufferSize = 0;
     }
 }
 

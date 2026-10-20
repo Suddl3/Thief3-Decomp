@@ -9,6 +9,7 @@
 #include "Game/Class_10AAF570.h"
 #include "Game/Class_10B9BCA0.h"
 #include "Game/Class_10BB86B0.h"
+#include "Game/Class_10E8C944.h"
 
 class Class_10BAA580;
 
@@ -67,14 +68,6 @@ struct Struct_10B9BCA0
 Class_10B9BCA0* GetAIPawnController(AAIPawn* Pawn);
 
 Class_10BB3190_Result* FUN_10983cf0(int A);
-
-class Class_10E8C944
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual int FUN_10bb3000(int A, Class_10A9DBE0_Param2* B, Class_10A9DBE0_Param3* C);
-};
 
 // FUNCTION: 0x10BB3000 ?FUN_10bb3000@Class_10E8C944@@UAEHHPAVClass_10A9DBE0_Param2@@PAVClass_10A9DBE0_Param3@@@Z
 int Class_10E8C944::FUN_10bb3000(int A, Class_10A9DBE0_Param2* B, Class_10A9DBE0_Param3* C)

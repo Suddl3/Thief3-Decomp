@@ -849,7 +849,7 @@ void FUN_10ba5220()
 // FUNCTION: 0x10BA5270 ?Construct@Class_10E8C944@@QAEPAV1@XZ
 Class_10E8C944* Class_10E8C944::Construct()
 {
-    Unknown00 = DAT_10e8c944;
+    *(void**)this = DAT_10e8c944;
     return this;
 }
 

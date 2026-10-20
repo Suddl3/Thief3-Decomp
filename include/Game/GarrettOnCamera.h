@@ -4,13 +4,17 @@
 #define GAME_GARRETTONCAMERA_H
 
 class FArchive;
+class FVector;
+class Class_1098E330;
+class Class_10991FF0;
+struct Struct_10AC2630_Param;
 
 class GarrettOnCamera
 {
 public:
-    virtual void Virtual0();
+    virtual FVector FUN_10ac2630(int A, Struct_10AC2630_Param* B);
     virtual void Virtual1();
-    virtual void Virtual2();
+    virtual Class_10991FF0* Virtual2();
     virtual void Virtual3();
     virtual void FUN_10ac2b30(int A, GarrettOnCamera* B);
     virtual void Virtual5(int A, bool B, float C);
@@ -21,7 +25,8 @@ public:
     bool FUN_10ac1180(GarrettOnCamera* A, int* B, bool* C, float* D);
     void FUN_10ac2a80(GarrettOnCamera* A);
 
-    char Unknown04[8];
+    int Unknown04;
+    Class_1098E330* Unknown08;
     int Unknown0C;
     int Unknown10;
     bool Unknown14;

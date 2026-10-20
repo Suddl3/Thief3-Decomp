@@ -3,12 +3,17 @@
 #ifndef GAME_CLASS_10E98CE4_H
 #define GAME_CLASS_10E98CE4_H
 
+class Class_10BB96F0_FUN_10c7d570;
+
 class Class_10E98CE4 {
 public:
+    virtual char FUN_10c1a440(Class_10BB96F0_FUN_10c7d570* Arg);
+    virtual void Virtual1();
+    virtual void Virtual2();
+
     Class_10E98CE4* Init(int p1);
 
-    void* Unknown00;
-    int Unknown04;
+    int Unknown04;                      // switch on the item's flag value
 };
 
 #endif // GAME_CLASS_10E98CE4_H

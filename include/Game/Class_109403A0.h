@@ -3,6 +3,8 @@
 #ifndef GAME_CLASS_109403A0_H
 #define GAME_CLASS_109403A0_H
 
+#include "Game/D3DXMATRIX.h"
+
 class IDirect3DBaseTexture8;
 struct Struct_109403A0;
 
@@ -17,6 +19,8 @@ public:
     IDirect3DBaseTexture8* Unknown300;
     char Unknown304[4];
     IDirect3DBaseTexture8* Unknown308;
+    char Unknown30C[4];
+    D3DXMATRIX Unknown310; // multiplied in when the material has no texture of its own
 };
 
 #endif // GAME_CLASS_109403A0_H

@@ -10,26 +10,35 @@ Class_10905A90_Member* GetAllocator();
 class Class_10C4E970
 {
 public:
-    Class_10C4E970() : Unknown00(0), Unknown04(0), Unknown08(0) {}
-    ~Class_10C4E970();
+    Class_10C4E970() : m_Count(0), m_CapacityBytes(0), m_Items(0) {}
+    ~Class_10C4E970()
+    {
+        FUN_10c4d3c0(0);
+        if (m_CapacityBytes)
+        {
+            GetAllocator()->Virtual5(m_Items);
+            m_Items = 0;
+            m_CapacityBytes = 0;
+        }
+    }
 
     void FUN_10c4d3c0(int Count);
     void FUN_10c4e970();
     void Empty()
     {
         FUN_10c4d3c0(0);
-        if (Unknown04)
+        if (m_CapacityBytes)
         {
-            GetAllocator()->Virtual5(Unknown08);
-            Unknown08 = 0;
-            Unknown04 = 0;
+            GetAllocator()->Virtual5(m_Items);
+            m_Items = 0;
+            m_CapacityBytes = 0;
         }
     }
     void FUN_10c4e910(const Class_10C4E970* Other);
 
-    int Unknown00;
-    int Unknown04;
-    void* Unknown08;
+    int m_Count;               // number of elements in the array
+    int m_CapacityBytes;       // size of the element block in bytes
+    void* m_Items;             // the element block
 };
 
 #endif // GAME_CLASS_10C4E970_H

@@ -3,6 +3,8 @@
 #ifndef GAME_CLASS_10C26E80_H
 #define GAME_CLASS_10C26E80_H
 
+#include "Game/Class_10C26C10.h"
+
 class Class_10C26E80
 {
 public:
@@ -12,12 +14,17 @@ public:
     virtual void Virtual3();
     virtual void Virtual4(float A);
     virtual void Virtual5();
+    virtual void Virtual6();
+    virtual void Virtual7();
+    virtual bool Virtual8();
 
     void FUN_10c26d60();
     void Update();
 
     char Unknown04[0x2C];
     float m_LastTime;
+    char Unknown34[4];
+    Class_10C26C10 Unknown38;  // the objects the code walks and deletes
 };
 
 #endif // GAME_CLASS_10C26E80_H

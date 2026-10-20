@@ -3,6 +3,7 @@
 
 #include "Core/Core.h"
 #include "Game/Class_10905A90_Member.h"
+#include "Game/Class_10E6D218.h"
 
 Class_10905A90_Member* GetAllocator();
 
@@ -130,14 +131,6 @@ public:
 };
 
 extern Class_10F46DA0* DAT_10f46da0;
-
-class Class_10E6D218
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual int Virtual2(int A, Class_10E6D208_Param2* B, Class_10E6D208_Param3* C);
-};
 
 // FUNCTION: 0x10A9D1B0 ?Virtual2@Class_10E6D218@@UAEHHPAVClass_10E6D208_Param2@@PAVClass_10E6D208_Param3@@@Z
 int Class_10E6D218::Virtual2(int A, Class_10E6D208_Param2* B, Class_10E6D208_Param3* C)

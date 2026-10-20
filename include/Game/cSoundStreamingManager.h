@@ -19,6 +19,7 @@ public:
     void FUN_10a33c60();
     void FUN_10a32450(int A, Struct_10A32090* B);
     void FUN_10a33930(int A, int* B);
+    void FUN_10a33d30();
 
     char Unknown04[0x50];
     bool Unknown54;

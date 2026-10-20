@@ -13,6 +13,7 @@ public:
     virtual void Virtual4();
     virtual void Virtual5();
     virtual bool Virtual6();
+    virtual void Virtual7();
 };
 
 #endif // GAME_CLASS_10B9BDA0_MEMBER_H

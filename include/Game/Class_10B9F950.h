@@ -12,6 +12,8 @@ class Class_10B9F950
 public:
     void SerializeItems(FArchive& Ar, int Count);
     void FUN_10ba0390(FArchive& Ar);
+    // Works on the object read as a cIntArray at +0: the count at +0, the item array at +8.
+    void FUN_10b9fa50(FArchive& Ar);
 
     char Pad00[0x4];
     cIntArray Unknown04;

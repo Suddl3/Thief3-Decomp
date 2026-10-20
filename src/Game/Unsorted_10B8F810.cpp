@@ -4,6 +4,7 @@
 #include "Core/Core.h"
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10E895D0.h"
+#include "Game/Class_10E897F4.h"
 
 Class_10905A90_Member* GetAllocator();
 
@@ -112,18 +113,6 @@ public:
     virtual void Virtual2();
     virtual int Virtual3();
     virtual Class_10A7F5A0* Virtual4(int A);
-};
-
-// Game/Class_10E897F4.h copied whole, with the vtable it heads: slot 2 is this function.
-class Class_10E897F4
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual int FUN_10b8f990(int A, Class_10B8F990_Param2* B, Class_10B8F990_Param3* C);
-
-    Class_10E897F4* Init();
-    void* Unknown00;
 };
 
 // FUNCTION: 0x10B8F990 ?FUN_10b8f990@Class_10E897F4@@UAEHHPAVClass_10B8F990_Param2@@PAVClass_10B8F990_Param3@@@Z

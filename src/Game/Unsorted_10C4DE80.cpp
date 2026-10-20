@@ -20,10 +20,10 @@ void Class_10C4E8D0::Empty()
 void Class_10C4E970::FUN_10c4e970()
 {
     FUN_10c4d3c0(0);
-    if (Unknown04)
+    if (m_CapacityBytes)
     {
-        GetAllocator()->Virtual5(Unknown08);
-        Unknown08 = 0;
-        Unknown04 = 0;
+        GetAllocator()->Virtual5(m_Items);
+        m_Items = 0;
+        m_CapacityBytes = 0;
     }
 }

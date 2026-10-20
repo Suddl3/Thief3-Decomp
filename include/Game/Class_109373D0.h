@@ -11,6 +11,7 @@ public:
     void SetVertexShader(unsigned long Value);
     void ResetTextureStages();
     void ResetTextureStagesBiased();
+    void FUN_109389b0();
 
     char Unknown00[0x1C];
     IDirect3DBaseTexture8* m_StageTextures[4];

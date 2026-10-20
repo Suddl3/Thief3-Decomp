@@ -2,30 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Game/cD3DStateCache.h"
-
-struct Struct_10952390_B;
-
-// The object Class_10952390::Unknown00 points at: a flag and a value the
-// renderer hands out for this draw.
-class Class_10AA4D50_Unknown00
-{
-public:
-    char Unknown00[0x28C];
-    bool Unknown28C;
-    char Unknown28D[3];
-    int Unknown290;
-};
-
-// Game/Class_10952390.h copied here: that header has no member for the
-// fields this function reads.
-class Class_10952390
-{
-public:
-    bool FUN_10952390();
-
-    Class_10AA4D50_Unknown00* Unknown00;
-    Struct_10952390_B* Unknown04;
-};
+#include "Game/Class_10952390.h"
 
 class Class_10AA4D50_Unknown14
 {

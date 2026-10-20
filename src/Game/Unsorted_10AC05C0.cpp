@@ -9,6 +9,7 @@
 #include "Game/Class_1098E330.h"
 #include "Game/Class_1098E3D0.h"
 #include "Game/Class_10A370C0.h"
+#include "Game/Class_10E6F414.h"
 #include "Game/cCitySectionManager.h"
 
 class Class_10E6F414_Member;
@@ -53,27 +54,6 @@ public:
 
     char Pad04[0x4];
     int Unknown08;
-};
-
-// Class_10E6F414 from include/Game/Class_10E6F414.h, with FUN_10ac05c0 at slot 12 and Virtual13 taking the two objects.
-class Class_10E6F414
-{
-public:
-    virtual void Virtual0();
-    virtual Class_10E6F414_Member* Virtual1(int A);
-    virtual int FireWeapon(int A, int B, int C, int D, int E, int F, int G, int H);
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8();
-    virtual void Virtual9();
-    virtual void Virtual10();
-    virtual void Virtual11();
-    virtual void FUN_10ac05c0(Class_10A370C0* A, Class_10A370C0* B);
-    virtual void Virtual13(Class_10A370C0* B, Class_10A370C0* A);
-    virtual void FUN_10ac0830(Class_1096D780* A, AActor* B);
 };
 
 cCitySectionManager* GetCitySectionManager();

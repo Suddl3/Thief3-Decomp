@@ -1,19 +1,13 @@
 // Game/Unsorted_10B24DD0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
+#include "Game/Class_10AA9D90.h"
 #include "Game/FArchive.h"
 
-// Class_10AA9D90 from include/Game/Class_10AA9D90.h, without the fields it
-// cannot have: this class's own fields start right after the vtable pointer.
-class Class_10AA9D90
-{
-public:
-    int FUN_10aa9d90();
-};
-
 // Class_10B255F0 from include/Game/Class_10B255F0.h, with the fields this
-// function serializes laid out at their offsets.
-class Class_10B255F0 : public Class_10AA9D90
+// function serializes laid out at their offsets. It does not derive from
+// Class_10AA9D90: that class's 0x2c bytes would move these fields up.
+class Class_10B255F0
 {
 public:
     virtual int Virtual0();

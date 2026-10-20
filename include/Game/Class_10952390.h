@@ -3,7 +3,18 @@
 #ifndef GAME_CLASS_10952390_H
 #define GAME_CLASS_10952390_H
 
-struct Struct_10952390_A;
+// The object Class_10952390::Unknown00 points at: a flag and a value the
+// renderer hands out for this draw.
+struct Struct_10952390_A
+{
+    char Unknown00[0x4C];
+    bool Unknown4C;
+    char Unknown4D[0x23F];
+    bool Unknown28C;
+    char Unknown28D[3];
+    int Unknown290;
+};
+
 struct Struct_10952390_B;
 
 class Class_10952390

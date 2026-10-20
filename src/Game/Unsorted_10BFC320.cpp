@@ -6,6 +6,8 @@
 #include "Game/Class_10E97B00.h"
 #include "Game/Class_10971570.h"
 #include "Game/cString.h"
+#include "Game/Class_10C1AAA0.h"
+#include "Game/Class_10C1AAC0.h"
 
 extern const char DAT_10e97a58[];
 
@@ -91,39 +93,7 @@ public:
 };
 
 // The game's chain: Class_10C1AAA0 -> Class_10C1AAC0 -> Class_10E98F48.
-// Copied from the headers with the bases and the first slot's return type fixed.
-class Class_10C1AAA0
-{
-public:
-    virtual int Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8();
-    virtual void Virtual9();
-    virtual void Virtual10();
-    virtual void Virtual11();
-    virtual void Virtual12();
-    virtual void Virtual13();
-    virtual bool Virtual14();
-
-    void FUN_10c1aaa0(bool Value);
-
-    int Unknown04;
-    char Pad08[0x3E];
-    bool Unknown46;
-};
-
-class Class_10C1AAC0 : public Class_10C1AAA0
-{
-public:
-    unsigned char FUN_10c1aac0();
-};
-
+// Copied from include/Game/Class_10E98F48.h, with the base class this unit needs.
 class Class_10E98F48 : public Class_10C1AAC0
 {
 public:

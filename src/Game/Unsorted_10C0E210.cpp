@@ -1,6 +1,8 @@
 // Game/Unsorted_10C0E210.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
+#include "Game/Class_10C0C150.h"
+
 extern void* DAT_10e50610;
 
 class Class_10E50610
@@ -32,19 +34,6 @@ public:
 };
 
 struct Item_10C0C150;
-
-class Class_10C0C150
-{
-public:
-    Class_10C0C150() : m_Count(0), m_CapacityBytes(0), m_Data(0) {}
-    ~Class_10C0C150();
-
-    void Resize(int NewCount);
-
-    int m_Count;
-    int m_CapacityBytes;
-    Item_10C0C150* m_Data;
-};
 
 class Class_10C0E320_Unknown04
 {

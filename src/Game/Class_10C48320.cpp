@@ -28,7 +28,7 @@ unsigned int Class_10C48320::Insert(const int& Key, const int& Value)
     {
         const void* Data;
         int Length;
-        m_KeyTraits.Virtual0(Key, &Data, &Length);
+        m_KeyTraits.FUN_10c3e9f0((int)&Key, (int*)&Data, &Length);
         Index = HashBytes(Data, Length) & ((1 << m_BucketBits) - 1);
     }
     if (m_Buckets[Index])
@@ -76,12 +76,12 @@ bool Class_10C48320::Remove(const int& Key)
     {
         const void* Data;
         int Length;
-        m_KeyTraits.Virtual0(Key, &Data, &Length);
+        m_KeyTraits.FUN_10c3e9f0((int)&Key, (int*)&Data, &Length);
         Index = HashBytes(Data, Length) & ((1 << m_BucketBits) - 1);
     }
     for (Class_10C48320_Node* Node = m_Buckets[Index], *Prev = 0; Node; Prev = Node, Node = Node->Next)
     {
-        if (m_KeyTraits.Virtual1(Key, Node->Key) == 0)
+        if (m_KeyTraits.CompareUnsigned((unsigned int*)&Key, (unsigned int*)&Node->Key) == 0)
         {
             if (Prev || Node->Next)
                 m_Collisions--;

@@ -73,7 +73,7 @@ float Class_10C1A950::FUN_10c1a950()
 // FUNCTION: 0x10C1AAC0 ?FUN_10c1aac0@Class_10C1AAC0@@QAEEXZ
 unsigned char Class_10C1AAC0::FUN_10c1aac0()
 {
-    return Field46;
+    return Unknown46;
 }
 
 // FUNCTION: 0x10C1AAD0 ?FUN_10c1aad0@Class_10C1AAD0@@QAE_NPAUStruct_10C1AAD0@@PAM@Z

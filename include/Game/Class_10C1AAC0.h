@@ -3,10 +3,11 @@
 #ifndef GAME_CLASS_10C1AAC0_H
 #define GAME_CLASS_10C1AAC0_H
 
-class Class_10C1AAC0 {
+#include "Game/Class_10C1AAA0.h"
+
+class Class_10C1AAC0 : public Class_10C1AAA0
+{
 public:
-    char Unknown00[0x46];
-    unsigned char Field46;
     unsigned char FUN_10c1aac0();
 };
 

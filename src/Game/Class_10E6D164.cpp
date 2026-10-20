@@ -3,6 +3,7 @@
 #include "Game/Class_10A9C200_Arg2.h"
 #include "Game/Class_10A9C200_Arg3.h"
 #include "Game/Class_10A9C200_Unknown00.h"
+#include "Game/Class_10E6D164.h"
 
 class Class_10A036A0;
 
@@ -56,21 +57,6 @@ public:
 SoundSimulator* GetSoundSimulator();
 
 Class_10A036A0 FUN_10a9c050(int A, Class_10A9C200_Unknown00* B);
-
-class Class_10E6D164
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual int FUN_10a9c200(void* Arg1, Class_10A9C200_Arg2* Arg2, Class_10A9C200_Arg3* Arg3);
-    Class_10E6D164* Construct();
-
-    union
-    {
-        void* Field00;
-        void* Unknown00;
-    };
-};
 
 // FUNCTION: 0x10A9C200 ?FUN_10a9c200@Class_10E6D164@@UAEHPAXPAVClass_10A9C200_Arg2@@PAVClass_10A9C200_Arg3@@@Z
 int Class_10E6D164::FUN_10a9c200(void* Arg1, Class_10A9C200_Arg2* Arg2, Class_10A9C200_Arg3* Arg3)

@@ -3,16 +3,19 @@
 #ifndef GAME_CLASS_10E6D3F4_H
 #define GAME_CLASS_10E6D3F4_H
 
+class Class_10AA2470_Param2;
+
+class Class_10AA2470_Param3;
+
 class Class_10E6D3F4
 {
 public:
-    Class_10E6D3F4* Construct();
+    // The vtable pointer is at offset 0; Construct stores this class's vtable there.
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual int FUN_10aa2470(int A, Class_10AA2470_Param2* B, Class_10AA2470_Param3* C);
 
-    union
-    {
-        void* Field00;
-        void* Unknown00;
-    };
+    Class_10E6D3F4* Construct();
 };
 
 #endif // GAME_CLASS_10E6D3F4_H

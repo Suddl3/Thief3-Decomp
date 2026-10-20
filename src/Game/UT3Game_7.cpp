@@ -1,6 +1,8 @@
 // Game/UT3Game_7.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
+#include "Game/Class_10E7A8E0.h"
+
 // The two released members are declared here with the virtual slots this
 // function calls (the generated headers do not name them).
 class Class_10E7A9C0
@@ -16,13 +18,6 @@ public:
     virtual void Virtual7();
     virtual void Virtual8();
     virtual void Virtual9(int A);
-};
-
-class Class_10E7A8E0
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1(int A);
 };
 
 class Class_10B13B70_Unknown50

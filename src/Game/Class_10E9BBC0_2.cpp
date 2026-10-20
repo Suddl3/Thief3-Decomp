@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include <list>
+#include "Game/Class_10C48320.h"
 #include "Game/Class_10E9BB80.h"
 
 class Class_10C48260_Node;
@@ -34,29 +35,6 @@ public:
     ~Class_10C49200();
     void Reset(int A);
     void Clear();
-};
-
-class Class_10C48320_Node;
-
-class Class_10C48320
-{
-public:
-    Class_10C48320() : m_Collisions(0), m_Count(0), m_BucketCount(0), m_FixedSize(false), m_Buckets(0)
-    {
-        Rehash(64);
-    }
-    unsigned int Insert(const int& Key, const int& Value);
-    void Rehash(int Size);
-    bool Remove(const int& Key);
-
-    int m_Collisions;
-    int m_Count;
-    int m_BucketBits;
-    int m_BucketCount;
-    bool m_FixedSize;
-    char Pad11[0x3];
-    Class_10C48320_Node** m_Buckets;
-    Class_10E9BB80 m_KeyTraits;
 };
 
 class Class_10C49230 : public Class_10C48320

@@ -3,7 +3,12 @@
 #include "Game/Class_109E8930.h"
 #include "Game/Class_10A64D50.h"
 #include "Game/Class_10B15960.h"
-#include "Game/Class_10A55050.h"
+
+class Class_10A55050
+{
+public:
+    void FUN_10a55050(unsigned char A);
+};
 
 extern void* GWindowManager[];
 
@@ -90,7 +95,7 @@ void Class_10E82688::ResetFrame()
     Unknown134.Reset();
     Unknown130 = 0;
     if (Unknown11C)
-        Unknown11C->FUN_10a55050((unsigned char)Unknown130);
+        Unknown11C->FUN_10a55050(Unknown130);
 }
 
 // FUNCTION: 0x10B5A3D0 ?Close@Class_10E82688@@QAEXXZ

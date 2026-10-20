@@ -2,22 +2,8 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Game/cIntArray.h"
+#include "Game/Class_10B9BDA0_Member.h"
 #include "Game/Class_10FF667C.h"
-
-// Class_10B9BDA0_Member copied whole from include/Game/Class_10B9BDA0_Member.h,
-// with the slot 7 the target calls added.
-class Class_10B9BDA0_Member
-{
-public:
-    virtual void F0() = 0;
-    virtual void F1() = 0;
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual bool Virtual6();
-    virtual void Virtual7();
-};
 
 extern Class_10FF667C* DAT_10ff667c;
 

@@ -5,6 +5,7 @@
 
 class AActor;
 class Class_1096D780;
+class Class_10A370C0;
 class Class_10E6F414_Member;
 
 class Class_10E6F414
@@ -22,8 +23,8 @@ public:
     virtual void Virtual9();
     virtual void Virtual10();
     virtual void Virtual11();
-    virtual void Virtual12();
-    virtual void Virtual13();
+    virtual void FUN_10ac05c0(Class_10A370C0* A, Class_10A370C0* B);
+    virtual void Virtual13(Class_10A370C0* B, Class_10A370C0* A);
     virtual void FUN_10ac0830(Class_1096D780* A, AActor* B);
 };
 

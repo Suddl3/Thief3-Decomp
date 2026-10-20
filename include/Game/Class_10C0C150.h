@@ -8,6 +8,9 @@ struct Item_10C0C150;
 class Class_10C0C150
 {
 public:
+    Class_10C0C150() : m_Count(0), m_CapacityBytes(0), m_Data(0) {}
+    ~Class_10C0C150();
+
     int Add(const Item_10C0C150* Item);
     void Resize(int NewCount);
     void Clear();

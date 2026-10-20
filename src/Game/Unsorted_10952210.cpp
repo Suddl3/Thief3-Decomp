@@ -3,12 +3,6 @@
 #include "Game/Class_10952390.h"
 #include "Game/Class_109522D0.h"
 
-struct Struct_10952390_A
-{
-    char Unknown00[0x4C];
-    bool Unknown4C;
-};
-
 struct Struct_10952390_B
 {
     int Unknown00;

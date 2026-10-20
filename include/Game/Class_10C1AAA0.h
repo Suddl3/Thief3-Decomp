@@ -6,7 +6,7 @@
 class Class_10C1AAA0
 {
 public:
-    virtual void Virtual0();
+    virtual int Virtual0();
     virtual void Virtual1();
     virtual void Virtual2();
     virtual void Virtual3();
@@ -24,7 +24,8 @@ public:
 
     void FUN_10c1aaa0(bool Value);
 
-    char Unknown04[0x42];
+    int Unknown04;
+    char Pad08[0x3E];
     bool Unknown46;
 };
 

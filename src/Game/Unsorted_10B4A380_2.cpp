@@ -7,14 +7,11 @@ class Class_10B47720;
 
 struct Struct_10B4C2C0;
 
-class Class_10B395E0
-{
-public:
-    void FUN_10b395e0(int A);
+#include "Game/Class_10B395E0.h"
 
-    char Unknown00[0xC];
-    Class_10B47AB0* Unknown0C[1];
-};
+class Class_10B47720;
+
+struct Struct_10B4C2C0;
 
 // The linked object: a Class_10B395E0 with a few methods of its own.
 class Class_10B39870 : public Class_10B395E0

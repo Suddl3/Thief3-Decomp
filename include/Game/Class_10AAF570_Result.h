@@ -22,7 +22,7 @@ public:
     virtual void Virtual13();
     virtual void Virtual14();
     virtual void Virtual15();
-    virtual void Virtual16();
+    virtual int Virtual16(int A, int B, int C);
     virtual void Virtual17();
     virtual void Virtual18();
     virtual void Virtual19();

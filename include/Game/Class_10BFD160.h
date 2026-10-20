@@ -11,6 +11,7 @@ class Class_10BFD160
 {
 public:
     void CollectMatching(Class_10C08940* Owner, cIntArray* Ids, float Limit, cIntArray* Out);
+    void FUN_10bfd110(cIntArray* Out, int Id);
 
     char Pad00[0x8];
     int m_Count;

@@ -1,18 +1,14 @@
 // Game/Unsorted_10B49DD0_2.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
+#include "Game/Class_10B39530.h"
+
 class Class_10AA82D0
 {
 public:
     virtual void Virtual0();
 
     int GetLinkedObject();
-};
-
-class Class_10B39530
-{
-public:
-    void Play(int A, float B, float C, int D, int E, int F, float G);
 };
 
 // The class of 0x10B4A7D0's vtable (config/<version>/classmap.txt): the flag at +0x18 is the one toggled here.

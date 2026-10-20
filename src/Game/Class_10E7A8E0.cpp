@@ -18,7 +18,7 @@ extern void* DAT_10e7a8e0[];
 // FUNCTION: 0x10B23EE0 ??0Class_10E7A8E0@@QAE@XZ
 Class_10E7A8E0::Class_10E7A8E0()
 {
-    VTable = DAT_10e7a8e0;
+    *(void**)this = DAT_10e7a8e0;
     DAT_10f46da0->Virtual1(this, 0xb, -1, -1);
     DAT_10f46da0->Virtual1(this, 0x44, -1, -1);
     DAT_10f46da0->Virtual1(this, 0x46, -1, -1);

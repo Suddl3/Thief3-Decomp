@@ -8,6 +8,7 @@
 #include "Core/Core.h"
 #include "Game/Class_1090C880.h"
 #include "Game/Class_10A52BE0.h"
+#include "Game/Class_10B651B0.h"
 #include "Game/Struct_10B651B0.h"
 
 extern const char DAT_10e47660[];
@@ -169,19 +170,6 @@ public:
     char Unknown00[0x1EC];
     int Unknown1F0;
     int Unknown1F4;
-};
-
-// include/Game/Class_10B651B0.h copied whole, with the widget pointer typed.
-class Class_10B651B0
-{
-public:
-    void SetData(Struct_10B651B0* Src);
-    void FUN_10b64de0();
-
-    char Unknown00[4];
-    Class_10B651B0_Member* Unknown04;
-    Class_10E684A8* Unknown08;
-    Struct_10B651B0 m_Data;
 };
 
 extern const char DAT_10e84908[];

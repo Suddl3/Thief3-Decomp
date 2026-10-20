@@ -5,16 +5,7 @@
 // frees the object through the global allocator when the delete flag is set.
 void FUN_10b81d70(void);
 
-class Allocator_10FFA700
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5(void* Object, int Value, int Flag);
-};
+#include "Game/Allocator_10FFA700.h"
 
 extern Allocator_10FFA700* DAT_10ffa700;
 
@@ -31,6 +22,6 @@ Class_10E891C4* Class_10E891C4::FUN_10b81d40(unsigned char Flags)
 {
     FUN_10b81d70();
     if (Flags & 1)
-        DAT_10ffa700->Virtual5(this, Unknown04, 0xf);
+        DAT_10ffa700->Free(this, Unknown04, 0xf);
     return this;
 }

@@ -3,6 +3,7 @@
 
 #include "Game/Struct_10A334E0.h"
 #include "Game/Struct_10AA3520.h"
+#include "Game/cSoundStreamingManager.h"
 
 struct Struct_10A32090;
 
@@ -35,26 +36,6 @@ public:
 extern Class_10F46DA0* DAT_10f46da0;
 
 extern Struct_10AA3520* DAT_10f35dec;
-
-class cSoundStreamingManager
-{
-public:
-    virtual void HandleEvent(int A, int B, int C, int D);
-
-    cSoundStreamingManager();
-
-    void FUN_10a33040(int Index, Struct_10A334E0 Item);
-    void ClearItems();
-    void HandleMoveEvent(int A, int B, int C);
-    void FUN_10a33c60();
-    void FUN_10a32450(int A, Struct_10A32090* B);
-    void FUN_10a33930(int A, int* B);
-    void FUN_10a33d30();
-
-    char Unknown04[0x50];
-    bool Unknown54;
-    char Pad55[0x3];
-};
 
 // FUNCTION: 0x10A33D30 ?FUN_10a33d30@cSoundStreamingManager@@QAEXXZ
 void cSoundStreamingManager::FUN_10a33d30()

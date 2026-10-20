@@ -3,6 +3,8 @@
 #ifndef GAME_CLASS_10E7AD54_H
 #define GAME_CLASS_10E7AD54_H
 
+#include "Game/Class_10B429B0.h"
+
 class Class_10E7AD54
 {
 public:
@@ -13,7 +15,8 @@ public:
 
     void FUN_10b289f0(bool p1);
 
-    char Unknown04[8];
+    Class_10B429B0* Unknown04;          // screen put back when the current one is closed
+    Class_10B429B0* Unknown08;          // the screen currently shown
     float m_Elapsed;
     int m_Duration;
 };

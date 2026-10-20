@@ -3,12 +3,19 @@
 #ifndef GAME_CLASS_10E6CEC4_H
 #define GAME_CLASS_10E6CEC4_H
 
+class Class_10A96E20_Param2;
+class Class_10A96E20_Param3;
+
+// The class holds nothing but its vtable: the pointer at the start of it is
+// the vtable pointer, not a member of its own.
 class Class_10E6CEC4
 {
 public:
-    Class_10E6CEC4* Construct();
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual int FUN_10a96e20(int A, Class_10A96E20_Param2* B, Class_10A96E20_Param3* C);
 
-    void* Unknown00;
+    Class_10E6CEC4* Construct();
 };
 
 #endif // GAME_CLASS_10E6CEC4_H

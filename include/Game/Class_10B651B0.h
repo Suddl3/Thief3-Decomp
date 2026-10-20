@@ -6,6 +6,7 @@
 #include "Game/Struct_10B651B0.h"
 
 class Class_10B651B0_Member;
+class Class_10E684A8;
 
 class Class_10B651B0
 {
@@ -15,7 +16,7 @@ public:
 
     char Unknown00[4];
     Class_10B651B0_Member* Unknown04;
-    char Unknown08[4];
+    Class_10E684A8* Unknown08;  // widget whose name and position the code sets
     Struct_10B651B0 m_Data;
 };
 

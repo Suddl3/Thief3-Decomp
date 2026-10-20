@@ -85,7 +85,7 @@ int FUN_10b8f6c0()
 // FUNCTION: 0x10B8F6D0 ?Init@Class_10E897F4@@QAEPAV1@XZ
 Class_10E897F4* Class_10E897F4::Init()
 {
-    Unknown00 = &DAT_10e897f4;
+    *(void**)this = &DAT_10e897f4;
     return this;
 }
 

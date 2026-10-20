@@ -8,12 +8,20 @@
 struct Item_10C50320
 {
 public:
+    Item_10C50320()
+    {
+        Unknown0C = 0;
+        Unknown10 = 0;
+        Unknown14 = 1.0f;
+    }
+    ~Item_10C50320() {}
+
     Item_10C50320(const Item_10C50320& Other);
 
     Class_10C4E970 Unknown00;
     int Unknown0C;
     int Unknown10;
-    int Unknown14;
+    float Unknown14;
 };
 
 #endif // GAME_ITEM_10C50320_H

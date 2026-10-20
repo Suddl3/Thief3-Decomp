@@ -4,23 +4,55 @@
 #define GAME_CLASS_109439A0_H
 
 #include "Game/Class_109434F0.h"
+#include "Game/Class_10943520.h"
 #include "Game/cEntryArray.h"
 
 class Class_109439A0_Unknown128;
 struct Struct_109439A0;
+class Class_10942DC0;
+class Class_10943A20_UnknownF4;
+class Class_10943A20_UnknownF8;
 
 class Class_109439A0
 {
 public:
+    void FUN_10943a20();
     void FUN_109439a0();
 
-    char Unknown00[0x128];
+    // The first 0xE4 bytes are the base class Class_10E4A9C8; only the
+    // fields the code touches are named here.
+    char Unknown00[0x58];
+    int Unknown58;   // flags of the base class, or'ed with 7
+    int Unknown5C;   // flags of the base class, set to -1
+    int Unknown60;   // flags of the base class, or'ed with 0x809
+    char Unknown64[0x80];
+    int UnknownE4;
+    int UnknownE8;
+    int UnknownEC;
+    int UnknownF0;
+    Class_10943A20_UnknownF4* UnknownF4;    // dropped and cleared
+    Class_10943A20_UnknownF8* UnknownF8;    // dropped and cleared
+    int UnknownFC;
+    char Unknown100[4];
+    int Unknown104;
+    char Unknown108[0x14];
+    int Unknown11C;
+    int Unknown120;
+    int Unknown124;
     Class_109439A0_Unknown128* Unknown128;
     Struct_109439A0* Unknown12C;
-    char Unknown130[0x4];
+    Class_10942DC0* Unknown130;     // an array of them, deleted on reset
     Class_109434F0 Unknown134;
-    char Unknown140[0x2C];
+    char Unknown140[0xC];
+    Class_10943520 Unknown14C;
+    char Unknown158[4];
+    char Unknown15C;    // set while the class is in use
+    char Unknown15D[3];
+    int Unknown160;
+    Class_10943A20_UnknownF4* Unknown164;  // dropped and cleared
+    Class_10943A20_UnknownF8* Unknown168;  // dropped and cleared
     cEntryArray Unknown16C;
+    int Unknown178;
 };
 
 #endif // GAME_CLASS_109439A0_H

@@ -3,6 +3,7 @@
 #ifndef GAME_CLASS_10936A40_H
 #define GAME_CLASS_10936A40_H
 
+#include "Game/D3DXMATRIX.h"
 #include "Game/D3DVIEWPORT8.h"
 
 class Class_10936A40
@@ -10,7 +11,12 @@ class Class_10936A40
 public:
     void ApplyViewport();
 
-    char Unknown00[0x7FC];
+    char Unknown00[0x6AC];
+    unsigned long m_PixelShader;  // cached pixel shader; reset to 0 (no shader) when non-zero
+    int m_VertexShader;           // cached vertex shader; set to 2 when not already 2
+    char Unknown6B4[0x48];
+    D3DXMATRIX m_WorldMatrix;     // world matrix handed to SetTransform
+    char Unknown73C[0xC0];
     D3DVIEWPORT8 Viewport;
 };
 

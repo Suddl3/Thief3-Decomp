@@ -109,10 +109,10 @@ void cConversationManager::Clear()
 void Class_10A151A0::Free()
 {
     FUN_10a15060(0);
-    if (Unknown04)
+    if (m_CapacityBytes)
     {
-        GetAllocator()->Virtual5(Unknown08);
-        Unknown08 = 0;
-        Unknown04 = 0;
+        GetAllocator()->Virtual5(m_Elements);
+        m_Elements = 0;
+        m_CapacityBytes = 0;
     }
 }

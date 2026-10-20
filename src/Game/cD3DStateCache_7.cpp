@@ -1,6 +1,7 @@
 // Game/cD3DStateCache_7.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
+#include "Game/Class_10936A40.h"
 #include "Game/D3DXMATRIX.h"
 #include "Game/D3DVIEWPORT8.h"
 #include "Game/IDirect3DDevice8.h"
@@ -9,21 +10,6 @@
 extern IDirect3DDevice8* GDirect3DDevice8;
 
 struct Info_10952690;
-
-// Game/Class_10936A40.h copied whole, with the fields this function uses added.
-class Class_10936A40
-{
-public:
-    void ApplyViewport();
-
-    char Unknown00[0x6AC];
-    unsigned long Unknown6AC;
-    int Unknown6B0;
-    char Unknown6B4[0x48];
-    D3DXMATRIX Unknown6FC;
-    char Unknown73C[0xC0];
-    D3DVIEWPORT8 Viewport;
-};
 
 // Game/cD3DStateCache.h copied whole, with the method this function defines added.
 class cD3DStateCache : public Class_10936A40
@@ -62,16 +48,16 @@ public:
 // FUNCTION: 0x10938000 ?FUN_10938000@cD3DStateCache@@QAEXXZ
 void cD3DStateCache::FUN_10938000()
 {
-    GDirect3DDevice8->SetTransform(0x100, &Unknown6FC);
-    if (Unknown6B0 != 2)
+    GDirect3DDevice8->SetTransform(0x100, &m_WorldMatrix);
+    if (m_VertexShader != 2)
     {
         GDirect3DDevice8->SetVertexShader(2);
-        Unknown6B0 = 2;
+        m_VertexShader = 2;
     }
-    if (Unknown6AC)
+    if (m_PixelShader)
     {
         GDirect3DDevice8->SetPixelShader(0);
-        Unknown6AC = 0;
+        m_PixelShader = 0;
     }
     GDirect3DDevice8->SetRenderState(0x34, 0);
     GDirect3DDevice8->SetRenderState(0x1b, 1);

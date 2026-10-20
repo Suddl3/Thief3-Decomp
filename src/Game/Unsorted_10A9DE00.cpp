@@ -2,6 +2,8 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Game/Class_10A9DBE0_Param2.h"
+#include "Game/Class_10A9DBE0_Param3.h"
+#include "Game/Class_10E6D248.h"
 
 // A growable array of pointers: a count, the capacity in bytes and the items.
 class cIntArray
@@ -18,30 +20,6 @@ class Class_10A7F5A0
 {
 public:
     cIntArray FUN_10a7f5a0(int A, int B);
-};
-
-class Class_10A9DBE0_Param3
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual int Virtual3();
-    virtual Class_10A7F5A0* Virtual4(int A);
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual int Virtual7(int A);
-    virtual float Virtual8(int A);
-};
-
-class Class_10E6D248
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual int FUN_10a9e170(int A, Class_10A9DBE0_Param2* B, Class_10A9DBE0_Param3* C);
-
-    void FUN_10a9d890(int Id, float V1, float V2, float V3, float V4, int X);
 };
 
 void* FUN_10a030c0();

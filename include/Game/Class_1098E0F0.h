@@ -10,7 +10,9 @@ class Class_1098E0F0
 public:
     void FUN_1098e0f0(int A);
 
-    char Unknown00[0xB4];
+    char Unknown00[0x78];
+    bool Unknown78; // flag byte; bit 0 is tested before the object is used
+    char Unknown79[0x3B];
     Class_1092F270* Unknown0B4;
 };
 

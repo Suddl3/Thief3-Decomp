@@ -1,6 +1,7 @@
 // Game/Class_10E6D454.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
+#include "Game/Class_10E6D454.h"
 #include "Game/Struct_10AA3520.h"
 
 class UProperty;
@@ -30,17 +31,6 @@ public:
     virtual void Virtual6();
     virtual void Virtual7();
     virtual float Virtual8(int A);
-};
-
-class Class_10E6D454
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual int FUN_10aa2d30(int A, int B, Class_10AA2D30_Param* C);
-    Class_10E6D454* Construct();
-
-    void* Unknown00;
 };
 
 extern Struct_10AA3520* DAT_10f35dec;

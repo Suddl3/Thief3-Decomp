@@ -11,7 +11,7 @@ public:
     void FUN_10b744f0();
 
     virtual void Virtual0();
-    virtual void Virtual1();
+    virtual void Virtual1(int A, int B, int C);
     virtual void Virtual2();
     virtual void Virtual3();
     virtual void Virtual4();
@@ -49,7 +49,7 @@ public:
     virtual void Virtual36();
     virtual void Virtual37();
     virtual void Virtual38();
-    virtual void Virtual39();
+    virtual int Virtual39();
     virtual void Virtual40();
     virtual void Virtual41();
     virtual void Virtual42();
@@ -112,7 +112,7 @@ public:
     virtual void Virtual99();
     virtual void Virtual100();
     virtual void Virtual101();
-    virtual void Virtual102();
+    virtual void Virtual102(int A);
     virtual void Virtual103();
     virtual void Virtual104();
     virtual void Virtual105();

@@ -8,11 +8,8 @@ class Class_10E7A8E0
 public:
     Class_10E7A8E0();
 
-    union
-    {
-        void** VTable;
-        int Unknown00;
-    };
+    virtual void Virtual0();
+    virtual void Virtual1(int A);
 };
 
 #endif // GAME_CLASS_10E7A8E0_H

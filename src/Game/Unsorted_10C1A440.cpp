@@ -124,15 +124,7 @@ public:
     virtual Class_10BB96F0_Virtual93* Virtual93();
 };
 
-class Class_10E98CE4
-{
-public:
-    virtual char FUN_10c1a440(Class_10BB96F0_FUN_10c7d570* Arg);
-    virtual void Virtual1();
-    virtual void Virtual2();
-
-    int Unknown04;
-};
+#include "Game/Class_10E98CE4.h"
 
 // FUNCTION: 0x10C1A440 ?FUN_10c1a440@Class_10E98CE4@@UAEDPAVClass_10BB96F0_FUN_10c7d570@@@Z
 char Class_10E98CE4::FUN_10c1a440(Class_10BB96F0_FUN_10c7d570* Arg)

@@ -3,6 +3,16 @@
 #ifndef GAME_CLASS_10C50EC0_H
 #define GAME_CLASS_10C50EC0_H
 
+#include "Game/Class_10C4F970.h"
+
+// The element of the array: a pointer, then the array it holds.
+class Class_10C50360_Unknown08
+{
+public:
+    void* Unknown00;
+    Class_10C4F970 Unknown04;
+};
+
 class Class_10C50EC0
 {
 public:
@@ -14,7 +24,7 @@ public:
 
     int Unknown00;
     int Unknown04;
-    void* Unknown08;
+    Class_10C50360_Unknown08* Unknown08;
 };
 
 #endif // GAME_CLASS_10C50EC0_H

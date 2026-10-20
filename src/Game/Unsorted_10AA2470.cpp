@@ -5,6 +5,7 @@
 #include "Engine/EngineClasses.h"
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10A7F5A0.h"
+#include "Game/Class_10E6D3F4.h"
 
 Class_10905A90_Member* GetAllocator();
 
@@ -83,15 +84,6 @@ public:
     virtual void Virtual2();
     virtual void Virtual3();
     virtual Class_10A7F5A0* Virtual4(int A);
-};
-
-// The class whose table holds this function in slot 2.
-class Class_10E6D3F4
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual int FUN_10aa2470(int A, Class_10AA2470_Param2* B, Class_10AA2470_Param3* C);
 };
 
 // FUNCTION: 0x10AA2470 ?FUN_10aa2470@Class_10E6D3F4@@UAEHHPAVClass_10AA2470_Param2@@PAVClass_10AA2470_Param3@@@Z

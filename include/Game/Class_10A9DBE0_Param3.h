@@ -15,7 +15,7 @@ public:
     virtual Class_10A7F5A0* Virtual4(int A);
     virtual void Virtual5();
     virtual void Virtual6();
-    virtual void Virtual7();
+    virtual int Virtual7(int A);
     virtual float Virtual8(int A);
 };
 

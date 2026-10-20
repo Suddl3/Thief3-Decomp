@@ -2,23 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Game/cString.h"
-
-class Class_1093EDB0_Element;
-
-// include/Game/Class_1093EDB0.h copied whole, with the two methods the code
-// calls added.
-class Class_1093EDB0
-{
-public:
-    void FUN_1093f7a0();
-    bool DeleteShaders();
-    void FUN_1093f5e0(cString* Name, int A, int B, cString* Value);
-    void FUN_1093f180(cString* Name, int A, int B, cString* Value);
-
-    int Unknown00;
-    int Unknown04;
-    Class_1093EDB0_Element* Unknown08;
-};
+#include "Game/Class_1093EDB0.h"
 
 // The renderer the settings are pushed into.
 extern Class_1093EDB0* DAT_10f340c0;

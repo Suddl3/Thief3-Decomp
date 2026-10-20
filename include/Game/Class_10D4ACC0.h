@@ -12,6 +12,8 @@ public:
 
     int FUN_10d4acb0();
     Class_10D4AE40 FUN_10d4b650(int Key);
+    bool FUN_10d4b5c0(int Key);
+    void FUN_10d4b520(int Key);
 
     int Unknown00;
 };

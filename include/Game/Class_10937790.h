@@ -3,7 +3,7 @@
 #ifndef GAME_CLASS_10937790_H
 #define GAME_CLASS_10937790_H
 
-struct Class_1091E3F0;
+class Class_1091E3F0;
 struct Struct_10938DA0;
 
 class Class_10937790

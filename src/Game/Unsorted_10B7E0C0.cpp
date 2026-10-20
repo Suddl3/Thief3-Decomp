@@ -4,6 +4,7 @@
 #include "Core/Core.h"
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10E894C8.h"
+#include "Game/Class_10B37FE0_Unknown04.h"
 
 class Class_10D9B090;
 
@@ -54,17 +55,6 @@ struct Struct_10978840
 };
 
 class Class_10B37FE0_Unknown04_Unknown460;
-
-class Class_10B37FE0_Unknown04
-{
-public:
-    int FUN_10978840(int Id, Struct_10978840* Out);
-
-    char Unknown00[0x2C];
-    FVector Unknown2C;
-    char Pad38[0x428];
-    Class_10B37FE0_Unknown04_Unknown460* Unknown460;
-};
 
 class Class_10971570
 {

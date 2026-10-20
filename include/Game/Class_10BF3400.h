@@ -3,19 +3,20 @@
 #ifndef GAME_CLASS_10BF3400_H
 #define GAME_CLASS_10BF3400_H
 
+#include "Game/Class_10BF1C40.h"
+
 class Class_10BF3400_Unknown04;
 
-class Class_10BF3400
+class Class_10BF3400 : public Class_10BF1C40
 {
 public:
     int FUN_10bf3400(float A, int B);
     void FUN_10bf3180(int A, int B, float C, float D);
 
-    char Unknown00[0x4];
-    Class_10BF3400_Unknown04* Unknown04;
-    char Unknown08[0x120];
+    char Unknown54[0xD4];
     int Unknown128;
     int Unknown12C;
+    char Unknown130[0x40];
 };
 
 #endif // GAME_CLASS_10BF3400_H

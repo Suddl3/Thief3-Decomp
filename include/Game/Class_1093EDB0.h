@@ -4,12 +4,15 @@
 #define GAME_CLASS_1093EDB0_H
 
 class Class_1093EDB0_Element;
+class cString;
 
 class Class_1093EDB0
 {
 public:
     void FUN_1093f7a0();
     bool DeleteShaders();
+    void FUN_1093f5e0(cString* Name, int A, int B, cString* Value);
+    void FUN_1093f180(cString* Name, int A, int B, cString* Value);
 
     int Unknown00;
     int Unknown04;

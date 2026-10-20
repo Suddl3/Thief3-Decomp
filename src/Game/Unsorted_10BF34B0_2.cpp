@@ -7,6 +7,8 @@
 #include "Game/Class_10C7D570.h"
 #include "Game/Class_10BF1C40.h"
 #include "Game/Class_10BF1C40_Unknown40.h"
+#include "Game/Class_10BF3400.h"
+#include "Game/Class_10BF5310.h"
 
 // The object the manager hands out; its slot 98 is the one asked for the message.
 class Class_10BF42C0_Result
@@ -194,24 +196,8 @@ public:
     Class_10BF7F90* FUN_10bc4160();
 };
 
-// include/Game/Class_10BF5310.h copied whole, with the fields this function reads and writes.
-class Class_10BF5310
-{
-public:
-    void FUN_10bf42c0();
-    int GetTargetLinkType();
-    void FUN_10bf3d70(int A, float B, float C);
-
-    char Unknown00[4];
-    Class_10BB8300* Unknown04;
-    char Unknown08[0x130];
-    unsigned char Unknown138;
-    char Unknown139[3];
-    int Unknown13C;
-    char Unknown140[0x118];
-    int Unknown258;
-};
-
+// Class_10BF5310 comes from include/Game/Class_10BF5310.h, with the fields
+// this function reads and writes.
 float __cdecl appFrand();
 
 extern float DAT_10e8738c;
@@ -219,21 +205,6 @@ extern float DAT_10e8738c;
 extern float DAT_10e4a640;
 
 extern float DAT_10e499a0;
-
-class Class_10BF3400_Unknown04;
-
-// include/Game/Class_10BF3400.h copied whole, with the base it really has.
-class Class_10BF3400 : public Class_10BF1C40
-{
-public:
-    int FUN_10bf3400(float A, int B);
-    void FUN_10bf3180(int A, int B, float C, float D);
-
-    Class_10BF3400_Unknown04* Unknown04;
-    char Unknown08[0x110];
-    int Unknown128;
-    int Unknown12C;
-};
 
 class Class_10BF4410 : public Class_10BF3400
 {
@@ -249,7 +220,9 @@ void Class_10BF5310::FUN_10bf42c0()
 {
     Unknown13C = 3;
     Unknown138 = 0;
-    Class_10971570* Obj = ((Class_10BF42C0_Result*)Unknown04->m_Owner->FUN_10c7d570())->Virtual98();
+    // The target pointer is the base class's field, which the game has at 0x4.
+    Class_10BB8300* Target = *(Class_10BB8300**)((char*)this + 4);
+    Class_10971570* Obj = ((Class_10BF42C0_Result*)Target->m_Owner->FUN_10c7d570())->Virtual98();
     if (!Obj)
         return;
     unsigned char Flag = 0;

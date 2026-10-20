@@ -3,6 +3,16 @@
 #ifndef GAME_CLASS_10C5EE80_H
 #define GAME_CLASS_10C5EE80_H
 
+// The element: 116 bytes; its first field is a block freed from four bytes before its start.
+class Class_10C5E600_Unknown08
+{
+public:
+    ~Class_10C5E600_Unknown08();
+
+    void* Unknown00;
+    char Unknown04[0x70];
+};
+
 class Class_10C5EE80
 {
 public:
@@ -11,7 +21,7 @@ public:
 
     int Unknown00;
     int Unknown04;
-    void* Unknown08;
+    Class_10C5E600_Unknown08* Unknown08;
 };
 
 #endif // GAME_CLASS_10C5EE80_H

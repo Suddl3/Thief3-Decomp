@@ -3,6 +3,7 @@
 
 #include "Game/D3DXMATRIX.h"
 #include "Game/IDirect3DDevice8.h"
+#include "Game/Class_109403A0.h"
 
 class IDirect3DBaseTexture8;
 
@@ -47,21 +48,6 @@ struct Struct_109403A0
     bool Unknown205;
     char Unknown206[0x26];
     D3DXVECTOR3 Unknown22C;
-};
-
-class Class_109403A0
-{
-public:
-    void FUN_1093fcd0(Struct_109403A0* Material);
-    void SetMaterialTextures(Struct_109403A0* Material, bool Enable);
-    void FUN_109405d0(Struct_109403A0* Material);
-
-    char Unknown00[0x300];
-    IDirect3DBaseTexture8* Unknown300;
-    char Unknown304[4];
-    IDirect3DBaseTexture8* Unknown308;
-    char Unknown30C[4];
-    D3DXMATRIX Unknown310;
 };
 
 // FUNCTION: 0x1093FCD0 ?FUN_1093fcd0@Class_109403A0@@QAEXPAUStruct_109403A0@@@Z

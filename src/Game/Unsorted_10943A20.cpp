@@ -3,6 +3,7 @@
 
 #include "Game/Class_109434F0.h"
 #include "Game/Class_10943520.h"
+#include "Game/Class_109439A0.h"
 #include "Game/Class_10B59770.h"
 #include "Game/cEntryArray.h"
 #include "Game/cIntArray.h"
@@ -81,45 +82,12 @@ public:
     virtual int __stdcall Virtual2();
 };
 
-class Class_109439A0 : public Class_10E4A9C8
-{
-public:
-    void FUN_10943a20();
-    void FUN_109439a0();
-
-    int UnknownE4;
-    int UnknownE8;
-    int UnknownEC;
-    int UnknownF0;
-    Class_10943A20_UnknownF4* UnknownF4;
-    Class_10943A20_UnknownF8* UnknownF8;
-    int UnknownFC;
-    char Unknown100[4];
-    int Unknown104;
-    char Unknown108[0x14];
-    int Unknown11C;
-    int Unknown120;
-    int Unknown124;
-    Class_109439A0_Unknown128* Unknown128;
-    Struct_109439A0* Unknown12C;
-    Class_10942DC0* Unknown130;
-    Class_109434F0 Unknown134;
-    char Unknown140[0xC];
-    Class_10943520 Unknown14C;
-    char Unknown158[4];
-    char Unknown15C;
-    char Unknown15D[3];
-    int Unknown160;
-    Class_10943A20_UnknownF4* Unknown164;
-    Class_10943A20_UnknownF8* Unknown168;
-    cEntryArray Unknown16C;
-    int Unknown178;
-};
-
 // FUNCTION: 0x10943A20 ?FUN_10943a20@Class_109439A0@@QAEXXZ
 void Class_109439A0::FUN_10943a20()
 {
-    Class_10E4A9C8::FUN_10948680();
+    // The base class Class_10E4A9C8 is flat in the header, so its own reset
+    // is called through the base.
+    ((Class_10E4A9C8*)this)->FUN_10948680();
 
     Unknown5C = -1;
     Unknown58 |= 7;

@@ -5,22 +5,11 @@
 #include "Game/Class_10E8BE68.h"
 #include "Game/Class_10C7D570.h"
 #include "Game/cAISpeech.h"
+#include "Game/Class_10913D70.h"
 #include "Game/Struct_10AA3520.h"
+#include "Game/Class_10BC4160_Member.h"
 
 extern Struct_10AA3520* DAT_10f35dec;
-
-// The name class holds the string in the base that also has Assign, one
-// vtable slot and the string itself; Game/Class_10913D70.h misses the
-// vtable and the base relation.
-class Class_10913D70
-{
-public:
-    virtual void Serialize(void* A);
-
-    Class_10913D70* Assign(Class_10913D70* Other);
-
-    cString Unknown04;
-};
 
 class Class_10E97B00 : public Class_10913D70
 {
@@ -29,13 +18,6 @@ public:
     Class_10E97B00(const Class_10E97B00& Other);
     Class_10E97B00(const Class_1090A780& Name);
     Class_10E97B00& operator=(const Class_10E97B00& Other);
-};
-
-class Class_10BC4160_Member
-{
-public:
-    char Pad00[8];
-    Class_10C7D570* Unknown08;
 };
 
 class Class_10BEA1A0_Target

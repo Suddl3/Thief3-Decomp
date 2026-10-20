@@ -1,6 +1,8 @@
 // Game/Unsorted_10C5E520.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
+#include "Game/Class_10C5EE80.h"
+
 // Ion Storm's memory manager (0x10905AA0).
 class Class_10905A90_Member
 {
@@ -21,35 +23,15 @@ Class_10905A90_Member* GetAllocator();
 
 extern "C" void* memset(void* Dest, int Fill, unsigned int Count);
 
-// The element: 116 bytes; its first field is a block freed from four bytes before its start.
-class Class_10C5E600_Unknown08
+Class_10C5E600_Unknown08::~Class_10C5E600_Unknown08()
 {
-public:
-    ~Class_10C5E600_Unknown08()
+    if (Unknown00)
     {
-        if (Unknown00)
-        {
-            char* Block = (char*)Unknown00 - 4;
-            GetAllocator()->Virtual5(Block);
-            Unknown00 = 0;
-        }
+        char* Block = (char*)Unknown00 - 4;
+        GetAllocator()->Virtual5(Block);
+        Unknown00 = 0;
     }
-
-    void* Unknown00;
-    char Unknown04[0x70];
-};
-
-// Copied whole from include/Game/Class_10C5EE80.h with the items' type named.
-class Class_10C5EE80
-{
-public:
-    void FUN_10c5e600(int Count);
-    void Release();
-
-    int Unknown00;
-    int Unknown04;
-    Class_10C5E600_Unknown08* Unknown08;
-};
+}
 
 // FUNCTION: 0x10C5E600 ?FUN_10c5e600@Class_10C5EE80@@QAEXH@Z
 void Class_10C5EE80::FUN_10c5e600(int NewCount)

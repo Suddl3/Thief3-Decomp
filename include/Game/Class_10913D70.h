@@ -8,9 +8,10 @@
 class Class_10913D70
 {
 public:
+    virtual void Serialize(void* A);
+
     Class_10913D70* Assign(Class_10913D70* Other);
 
-    int Unknown00;
     cString Unknown04;
 };
 

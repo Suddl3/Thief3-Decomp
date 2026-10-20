@@ -2,25 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 
 // The filter a cFilteredList keeps: every item of the list is compared against it.
-struct Struct_10951A40
-{
-    float Unknown00;
-    float Unknown04;
-    float Unknown08;
-    float Unknown0C;
-    float Unknown10;
-    float Unknown14;
-    float Unknown18;
-    float Unknown1C;
-    float Unknown20;
-    float Unknown24;
-    float Unknown28;
-    float Unknown2C;
-    int Unknown30;
-    int Unknown34;
-    float Unknown38;
-    float Unknown3C;
-};
+#include "Game/Struct_10951A40.h"
 
 // The items of a cFilteredList: each carries the filter it was built with.
 class Class_10951540 : public Struct_10951A40

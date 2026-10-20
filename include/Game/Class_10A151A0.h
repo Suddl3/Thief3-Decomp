@@ -3,15 +3,27 @@
 #ifndef GAME_CLASS_10A151A0_H
 #define GAME_CLASS_10A151A0_H
 
+#include "Game/Class_1090FD40.h"
+
+// The element of the array: four bytes, then the cString array it owns.
+class Element_10A15060
+{
+public:
+    int Unknown00;
+    Class_1090FD40 m_Items;
+
+    void Init() { m_Items.m_Count = 0; m_Items.m_CapacityBytes = 0; m_Items.m_Items = 0; }
+};
+
 class Class_10A151A0
 {
 public:
     void FUN_10a15060(int Count);
     void Free();
 
-    int Unknown00;
-    int Unknown04;
-    void* Unknown08;
+    int m_Count;                 // number of elements in the array
+    int m_CapacityBytes;         // size of the element block in bytes
+    Element_10A15060* m_Elements;
 };
 
 #endif // GAME_CLASS_10A151A0_H

@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include "Game/Class_1090A780.h"
+#include "Game/Class_10A80D30.h"
 
 extern const char DAT_10e47660[];
 
@@ -46,21 +47,6 @@ public:
     virtual int Virtual6(FILE* File, int A);
 };
 
-// Copy of include/Game/Class_10A80D30.h: the subject is a string, not a char*.
-class Class_10A80D30
-{
-public:
-    bool WriteLines(FILE* File, int A);
-    bool FUN_10a83da0(FILE* File, int A);
-
-    char Unknown00[4];
-    int ChildCount;
-    char Unknown08[4];
-    Object_10A80D30** Children;
-    char Unknown10[0x24];
-    cString Subject;
-};
-
 // FUNCTION: 0x10A83DA0 ?FUN_10a83da0@Class_10A80D30@@QAE_NPAU_iobuf@@H@Z
 bool Class_10A80D30::FUN_10a83da0(FILE* File, int A)
 {
@@ -68,7 +54,7 @@ bool Class_10A80D30::FUN_10a83da0(FILE* File, int A)
     cString Value = Line.FUN_1095b160('=');
     if (appStricmp(*Value, (const char*)DAT_10e6c0f8) != 0)
         return false;
-    Subject = Line;
+    *(cString*)&Subject = Line;
     for (int i = 0; i < ChildCount; i++)
     {
         if (!Children[i]->Virtual6(File, A))

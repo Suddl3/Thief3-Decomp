@@ -380,7 +380,7 @@ int FUN_10a9ab80()
 // FUNCTION: 0x10A9AB90 ?Construct@Class_10E6D164@@QAEPAV1@XZ
 Class_10E6D164* Class_10E6D164::Construct()
 {
-    Field00 = DAT_10e6d164;
+    *(void**)this = DAT_10e6d164; // the vptr at offset 0
     return this;
 }
 
@@ -535,7 +535,7 @@ unsigned int FUN_10a9d140()
 // FUNCTION: 0x10A9D150 ?Construct@Class_10E6D218@@QAEPAV1@XZ
 Class_10E6D218* Class_10E6D218::Construct()
 {
-    Field00 = (void*)DAT_10e6d218;
+    *(void**)this = (void*)DAT_10e6d218; // the vptr at offset 0
     return this;
 }
 
@@ -587,7 +587,7 @@ int FUN_10a9d370()
 // FUNCTION: 0x10A9D380 ?Construct@Class_10E6D248@@QAEPAV1@XZ
 Class_10E6D248* Class_10E6D248::Construct()
 {
-    Field00 = DAT_10e6d248;
+    *(void**)this = DAT_10e6d248; // the vptr at offset 0
     return this;
 }
 
@@ -945,7 +945,7 @@ int FUN_10aa2400()
 // FUNCTION: 0x10AA2410 ?Construct@Class_10E6D3F4@@QAEPAV1@XZ
 Class_10E6D3F4* Class_10E6D3F4::Construct()
 {
-    Field00 = DAT_10e6d3f4;
+    *(void**)this = DAT_10e6d3f4; // the vptr at offset 0
     return this;
 }
 

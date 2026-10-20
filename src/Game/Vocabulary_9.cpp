@@ -4,11 +4,7 @@
 #include "Game/IDirect3DDevice8.h"
 #include "Game/Class_1091E3F0.h"
 #include "Game/Class_10928760.h"
-
-struct D3DXMATRIX
-{
-    float m[4][4];
-};
+#include "Game/D3DXMATRIX.h"
 
 class IDirect3DBaseTexture8;
 

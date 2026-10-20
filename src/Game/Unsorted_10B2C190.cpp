@@ -4,6 +4,8 @@
 #include "Core/Core.h"
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10A52EE0.h"
+#include "Game/Class_10B46D90.h"
+#include "Game/Class_10B46E50.h"
 
 Class_10905A90_Member* GetAllocator();
 
@@ -31,98 +33,6 @@ public:
 cString FUN_1090a660(const char* Format, ...);
 
 extern const char DAT_10e7b574[];
-
-// The object at this+0x140: its slot 56 and two methods are called.
-class Class_10B46D90
-{
-public:
-    virtual void Virtual0();
-    virtual void Virtual1();
-    virtual void Virtual2();
-    virtual void Virtual3();
-    virtual void Virtual4();
-    virtual void Virtual5();
-    virtual void Virtual6();
-    virtual void Virtual7();
-    virtual void Virtual8();
-    virtual void Virtual9();
-    virtual void Virtual10();
-    virtual void Virtual11();
-    virtual void Virtual12();
-    virtual void Virtual13();
-    virtual void Virtual14();
-    virtual void Virtual15();
-    virtual void Virtual16();
-    virtual void Virtual17();
-    virtual void Virtual18();
-    virtual void Virtual19();
-    virtual void Virtual20();
-    virtual void Virtual21();
-    virtual void Virtual22();
-    virtual void Virtual23();
-    virtual void Virtual24();
-    virtual void Virtual25();
-    virtual void Virtual26();
-    virtual void Virtual27();
-    virtual void Virtual28();
-    virtual void Virtual29();
-    virtual void Virtual30();
-    virtual void Virtual31();
-    virtual void Virtual32();
-    virtual void Virtual33();
-    virtual void Virtual34();
-    virtual void Virtual35();
-    virtual void Virtual36();
-    virtual void Virtual37();
-    virtual void Virtual38();
-    virtual void Virtual39();
-    virtual void Virtual40();
-    virtual void Virtual41();
-    virtual void Virtual42();
-    virtual void Virtual43();
-    virtual void Virtual44();
-    virtual void Virtual45();
-    virtual void Virtual46();
-    virtual void Virtual47();
-    virtual void Virtual48();
-    virtual void Virtual49();
-    virtual void Virtual50();
-    virtual void Virtual51();
-    virtual void Virtual52();
-    virtual void Virtual53();
-    virtual void Virtual54();
-    virtual void Virtual55();
-    virtual void Virtual56(int A);
-    virtual void Virtual57();
-    virtual void Virtual58();
-    virtual void Virtual59();
-    virtual void Virtual60();
-    virtual void Virtual61();
-    virtual void Virtual62();
-    virtual void Virtual63();
-    virtual void Virtual64();
-    virtual void Virtual65();
-    virtual void Virtual66();
-    virtual void Virtual67();
-    virtual void Virtual68();
-    virtual void Virtual69();
-    virtual void Virtual70();
-    virtual void Virtual71();
-    virtual void Virtual72();
-    virtual void Virtual73();
-    virtual void Virtual74();
-    virtual void Virtual75();
-    virtual void Virtual76();
-    virtual void Virtual77();
-
-    void FUN_10b46d90();
-};
-
-class Class_10B46E50 : public Class_10B46D90
-{
-public:
-    void FUN_10b46e50();
-};
 
 // The object at this+0x118: its slot 56 and SetNameByIndex are called.
 class Class_10E684A8
@@ -232,7 +142,7 @@ void Class_10B2D600::FUN_10b2c190(int Mode)
         if (Unknown140)
         {
             Unknown140->Virtual56(1);
-            Unknown140->FUN_10b46d90();
+            ((Class_10B46D90*)Unknown140)->FUN_10b46d90();
         }
         break;
     case 2:

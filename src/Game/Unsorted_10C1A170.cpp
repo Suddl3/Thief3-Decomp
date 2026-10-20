@@ -11,7 +11,7 @@ extern void* DAT_10e98ce4[];
 // FUNCTION: 0x10C1A420 ?Init@Class_10E98CE4@@QAEPAV1@H@Z
 Class_10E98CE4* Class_10E98CE4::Init(int p1)
 {
-    Unknown00 = DAT_10e98ce4;
+    *(void**)this = DAT_10e98ce4;
     Unknown04 = p1;
     return this;
 }

@@ -18,7 +18,7 @@ public:
     char Unknown08[4];
     Object_10A80D30** Children;
     char Unknown10[0x24];
-    char* Subject;
+    char* Subject;  // the subject text; the parser copies a cString into it, the writer prints it
 };
 
 #endif // GAME_CLASS_10A80D30_H

@@ -3,6 +3,8 @@
 
 #include "Game/Class_10905A90_Member.h"
 #include "Game/Class_10943600.h"
+#include "Game/Class_10BB86B0.h"
+#include "Game/Class_10BD4120.h"
 #include "Game/cIntArray.h"
 
 class Class_10C7D570
@@ -29,16 +31,6 @@ public:
     void FUN_10bb83e0();
 };
 
-class Class_10BB86B0
-{
-public:
-    void FUN_10bb86b0(float A);
-
-    int Unknown00;
-    int Unknown04;
-    void* Unknown08;
-};
-
 // The state's root: the table's slots 0 and 1 are its two virtuals.
 class Class_10E8BE68
 {
@@ -57,33 +49,6 @@ public:
 
     Class_Field04* Unknown04;
     char Pad08[0x38];
-};
-
-// Game/Class_10BD4120.h copied whole, with the destructor its objects use.
-class Class_10BD4120
-{
-public:
-    Class_10BD4120() : Unknown00(0), Unknown04(0), m_Buffer(0) {}
-    ~Class_10BD4120()
-    {
-        Empty();
-    }
-
-    void FUN_10a20940(int Count);
-    void Empty()
-    {
-        FUN_10a20940(0);
-        if (Unknown04)
-        {
-            GetAllocator()->Virtual5(m_Buffer);
-            m_Buffer = 0;
-            Unknown04 = 0;
-        }
-    }
-
-    int Unknown00;
-    int Unknown04;
-    void* m_Buffer;
 };
 
 class Class_10FF667C

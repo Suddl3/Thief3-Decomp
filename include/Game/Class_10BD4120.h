@@ -3,9 +3,26 @@
 #ifndef GAME_CLASS_10BD4120_H
 #define GAME_CLASS_10BD4120_H
 
+#include "Game/Class_10905A90_Member.h"
+
+Class_10905A90_Member* GetAllocator();
+
 class Class_10BD4120
 {
 public:
+    Class_10BD4120() : Unknown00(0), Unknown04(0), m_Buffer(0) {}
+    // Frees the buffer, the way Empty() does.
+    ~Class_10BD4120()
+    {
+        FUN_10a20940(0);
+        if (Unknown04)
+        {
+            GetAllocator()->Virtual5(m_Buffer);
+            m_Buffer = 0;
+            Unknown04 = 0;
+        }
+    }
+
     void FUN_10a20940(int Count);
     void Empty();
 

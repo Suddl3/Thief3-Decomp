@@ -13,6 +13,14 @@ public:
     unsigned char FUN_10bef0b0();
     void FUN_10bef610(int A);
     void FUN_10bf42c0();
+    void FUN_10bf3d70(int A, float B, float C);
+
+    char Unknown4C[0xEC];
+    unsigned char Unknown138;
+    char Unknown139[3];
+    int Unknown13C;
+    char Unknown140[0x118];
+    int Unknown258;
 };
 
 #endif // GAME_CLASS_10BF5310_H

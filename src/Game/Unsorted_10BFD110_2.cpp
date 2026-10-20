@@ -2,6 +2,7 @@
 // Declarations above the functions belong in include/ once they settle.
 
 #include "Game/cIntArray.h"
+#include "Game/Class_10BFD160.h"
 
 class Class_10BAA6B0_Param;
 
@@ -26,19 +27,6 @@ public:
 
     Class_10C08940* Unknown04;
     int Unknown08;
-};
-
-// Copied whole from include/Game/Class_10BFD160.h, with the method this function defines.
-class Class_10BFD160
-{
-public:
-    void CollectMatching(Class_10C08940* Owner, cIntArray* Ids, float Limit, cIntArray* Out);
-    void FUN_10bfd110(cIntArray* Out, int Id);
-
-    char Pad00[0x8];
-    int m_Count;
-    char Pad0C[0x4];
-    Class_10978090** m_Objects;
 };
 
 // FUNCTION: 0x10BFD110 ?FUN_10bfd110@Class_10BFD160@@QAEXPAVcIntArray@@H@Z
