@@ -341,6 +341,36 @@ and game code at 100% is 7,983 of 12,370 functions, 22.27% of its bytes
 units), 1,957 are deferred, and the queue holds 2,005 functions, all of 320
 bytes or more.
 
+### MiniMax on opencode, up to 128 workers (2026-10-19 to 20)
+
+`tools/agent/swarm.py` runs the same one-file protocols outside Claude Code:
+each lane is an `opencode run --auto -m <model>` process, refilled as its
+worker ends (`--lanes match=88,class=40`). The model was MiniMax M3.1 flash
+(`opencode/minimax-m3.1-flash-free`) on the queue of functions of 320 bytes
+and more, then on the deferred ones (`--band d`), with class workers
+(`classer.md`) beside them.
+
+- 64 workers held the machine at 93 to 99% CPU, most of it workers' own
+  `grep -r` over the tree; told not to search the repository, 128 held it at
+  about 80%.
+- About 160 at once hit the free endpoint's rate limit within the hour, and
+  every lane retried at once: thousands of empty workers. The swarm now backs
+  off together (`build/agent/swarm/backoff.json`, 5 to 40 minutes).
+- A worker cut off by its time limit is not a dry queue: only a claim that
+  prints `"empty"` ends a band (an early version stopped matching with 1,550
+  functions queued).
+- In about three hours the queue went from 2,005 to 1,190 functions; with
+  the matches accepted before, 242 functions went into `src/` (24.43% of the
+  game code), and the class workers settled about 180 classes. MiniMax
+  explores more than Haiku (it reads tools' source and lists directories),
+  and its deferrals are mostly codegen, layout and EH.
+- Two lessons from integrating: a unit that declares a CRT function by its
+  decorated name (`extern "C" char* _strstr(...)`) renames the CRT's function
+  in `symbols.txt` and costs every other caller its match (put the name back
+  and fix the declaration); and the class workers' `check` does not see every
+  unit a header change reaches, so build and compare the whole report before
+  committing their work, and put back the classes behind anything lost.
+
 ## Running a swarm as a workflow
 
 [.claude/workflows/t3-swarm.js](../.claude/workflows/t3-swarm.js) runs one
