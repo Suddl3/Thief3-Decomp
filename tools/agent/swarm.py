@@ -78,6 +78,19 @@ def opencode() -> str:
     return found
 
 
+def cpu_load() -> float:
+    """The machine's CPU load in percent (Windows: wmic; elsewhere the 1-minute load average)."""
+    try:
+        if os.name == "nt":
+            out = subprocess.run(["wmic", "cpu", "get", "loadpercentage"], capture_output=True, text=True,
+                                 timeout=30).stdout
+            values = [int(x) for x in re.findall(r"\d+", out)]
+            return sum(values) / len(values) if values else 0.0
+        return 100.0 * os.getloadavg()[0] / (os.cpu_count() or 1)
+    except (OSError, subprocess.SubprocessError, ValueError):
+        return 0.0
+
+
 class Swarm:
     def __init__(self, args):
         self.args = args
@@ -91,6 +104,16 @@ class Swarm:
         self.tally = {"workers": 0, "failed": 0, "matched": 0, "deferred": 0, "classes": 0, "givenup": 0,
                       "named": 0, "running": 0}
         self.tasks = json.loads(Path(args.name_tasks).read_text(encoding="utf-8")) if args.name_tasks else []
+        self.load = 0.0                     # the CPU load, averaged over the last minute
+        if args.max_cpu:
+            threading.Thread(target=self.watch_cpu, daemon=True).start()
+
+    def watch_cpu(self) -> None:
+        samples = []
+        while True:
+            samples = (samples + [cpu_load()])[-4:]
+            self.load = sum(samples) / len(samples)
+            time.sleep(15)
 
     # -- prompts -----------------------------------------------------------------------------
     def prompt(self, kind: str):
@@ -196,6 +219,10 @@ class Swarm:
             if wait > 0:
                 time.sleep(min(wait, 60) + (hash(threading.current_thread().name) % 30))
                 continue
+            if self.args.max_cpu and self.load > self.args.max_cpu:
+                # the machine is busy enough: start no worker until the running ones bring it down
+                time.sleep(45 + (hash(threading.current_thread().name) % 30))
+                continue
             p = self.prompt(kind)
             if p is None:
                 if self.done[kind]:
@@ -211,7 +238,8 @@ class Swarm:
         print(f"{stamp} {line}", flush=True)
 
     def save(self) -> None:
-        data = dict(self.tally, band=MATCH_BANDS[self.band]["letter"], done=self.done, at=time.time())
+        data = dict(self.tally, band=MATCH_BANDS[self.band]["letter"], done=self.done, load=round(self.load),
+                    at=time.time())
         (self.dir / "status.json").write_text(json.dumps(data, indent=1), encoding="utf-8")
 
 
@@ -250,6 +278,7 @@ def main() -> None:
     s.add_argument("--max-units", type=int, default=16)
     s.add_argument("--name-tasks")
     s.add_argument("--band", default="q", help="the matching band to start on: q (the queue) or d (deferred)")
+    s.add_argument("--max-cpu", type=float, default=0, help="start no worker while the CPU load is above this")
     s.add_argument("--stagger", type=float, default=2.0, help="seconds between starting lanes")
     sub.add_parser("status")
     args = ap.parse_args()
