@@ -34,9 +34,41 @@ ROOT = Path(__file__).resolve().parents[2]
 STATE = ROOT / "build" / "agent" / "swarm"
 PY = ".venv/Scripts/python"
 DRY_LIMIT = 3
+LIMITED = re.compile(r"Rate limit exceeded|rate.?limit|429|Too Many Requests", re.I)
+BACKOFF = STATE / "backoff.json"   # shared by every swarm on the machine: one provider, one limit
+
+
+def backoff_until() -> float:
+    try:
+        return json.loads(BACKOFF.read_text(encoding="utf-8"))["until"]
+    except (OSError, ValueError, KeyError):
+        return 0.0
+
+
+def back_off() -> float:
+    """The provider refused a request: every lane waits, twice as long as last time (5 to 40 minutes);
+    the wait resets once a worker gets through."""
+    try:
+        data = json.loads(BACKOFF.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        data = {}
+    now = time.time()
+    if data.get("until", 0) > now:
+        return data["until"]
+    delay = min(max(data.get("delay", 150) * 2, 300), 2400)
+    BACKOFF.write_text(json.dumps({"until": now + delay, "delay": delay}), encoding="utf-8")
+    return now + delay
+
+
+def through() -> None:
+    try:
+        if BACKOFF.is_file() and json.loads(BACKOFF.read_text(encoding="utf-8")).get("until", 0) < time.time():
+            BACKOFF.unlink()
+    except (OSError, ValueError):
+        pass
 
 MATCH_BANDS = [
-    {"letter": "q", "filters": "--min-size 1", "n": 4, "count": 1, "cap": 10},
+    {"letter": "q", "filters": "--min-size 1", "n": 3, "count": 1, "cap": 10},
     {"letter": "d", "filters": "--only-deferred", "n": 4, "count": 1, "cap": 8},
 ]
 
@@ -53,7 +85,7 @@ class Swarm:
         self.dir.mkdir(parents=True, exist_ok=True)
         self.lock = threading.Lock()
         self.counter = 0
-        self.band = 0                       # the matching band in use
+        self.band = next(i for i, b in enumerate(MATCH_BANDS) if b["letter"] == args.band)  # the band in use
         self.dry = {"match": 0, "class": 0, "name": 0}
         self.done = {"match": False, "class": False, "name": False}
         self.tally = {"workers": 0, "failed": 0, "matched": 0, "deferred": 0, "classes": 0, "givenup": 0,
@@ -83,7 +115,10 @@ class Swarm:
                 text = (f"Read tools/agent/namer.md and follow it exactly. ID={wid} CLASSES={','.join(task)}\n\n"
                         f"Write only build/scratch/names/{wid}.json; do not edit any other file.")
             text += ("\n\nWork from the repository root (the current directory); run the tools with the shell. "
-                     "End with the JSON line your protocol asks for, on a line of its own.")
+                     "Never search or list the repository at large (no `grep -r`, `find`, `ls` of build/, src/ or "
+                     "ghidra/, no reading the tools' source): the protocol and the tools' output give you what "
+                     "you need, and a search over this tree costs every other worker its CPU. Read only the files "
+                     "the tools name. End with the JSON line your protocol asks for, on a line of its own.")
             return wid, text
 
     # -- one worker ----------------------------------------------------------------------------
@@ -106,8 +141,18 @@ class Swarm:
         finally:
             with self.lock:
                 self.tally["running"] -= 1
-        report = last_json(log.read_text(encoding="utf-8", errors="replace") if log.is_file() else "")
+        output = log.read_text(encoding="utf-8", errors="replace") if log.is_file() else ""
+        report = last_json(output)
         handled = 0
+        if report is None and LIMITED.search(output[-2000:]):
+            until = back_off()
+            with self.lock:
+                self.tally["limited"] = self.tally.get("limited", 0) + 1
+                self.note(f"{wid}: rate limited; every lane waits until {time.strftime('%H:%M', time.localtime(until))}")
+                self.save()
+            return
+        if report is not None:
+            through()
         with self.lock:
             self.tally["workers"] += 1
             if report is None:
@@ -127,7 +172,8 @@ class Swarm:
                 self.tally["named"] += handled
             if handled:
                 self.dry[kind] = 0
-            elif report is not None:  # it ran and found nothing: the source is dry
+            elif report is not None and code == 0 and (kind != "match" or report.get("empty")):
+                # it finished and found nothing (a matcher's claim printed "empty"): the source is dry
                 self.dry[kind] += 1
                 if self.dry[kind] >= DRY_LIMIT:
                     if kind == "match" and self.band + 1 < len(MATCH_BANDS):
@@ -146,6 +192,10 @@ class Swarm:
         while True:
             if (ROOT / "build" / "agent" / "stop-swarm").exists():
                 return
+            wait = backoff_until() - time.time()
+            if wait > 0:
+                time.sleep(min(wait, 60) + (hash(threading.current_thread().name) % 30))
+                continue
             p = self.prompt(kind)
             if p is None:
                 if self.done[kind]:
@@ -196,9 +246,10 @@ def main() -> None:
     s.add_argument("--prefix", required=True)
     s.add_argument("--lanes", default="match=44,class=20", help="kind=count,...")
     s.add_argument("--model", default="opencode/minimax-m3.1-flash-free")
-    s.add_argument("--timeout", type=int, default=3600, help="seconds a worker may run")
+    s.add_argument("--timeout", type=int, default=5400, help="seconds a worker may run")
     s.add_argument("--max-units", type=int, default=16)
     s.add_argument("--name-tasks")
+    s.add_argument("--band", default="q", help="the matching band to start on: q (the queue) or d (deferred)")
     s.add_argument("--stagger", type=float, default=2.0, help="seconds between starting lanes")
     sub.add_parser("status")
     args = ap.parse_args()
