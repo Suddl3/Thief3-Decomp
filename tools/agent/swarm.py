@@ -80,12 +80,13 @@ def opencode() -> str:
 
 
 def cpu_load() -> float:
-    """The machine's CPU load in percent (Windows: wmic; elsewhere the 1-minute load average)."""
+    """The machine's CPU load in percent over all cores (Windows: the _Total processor counter; WMI's
+    LoadPercentage reads far higher than the cores' average); elsewhere the 1-minute load average."""
     try:
         if os.name == "nt":
-            out = subprocess.run(["wmic", "cpu", "get", "loadpercentage"], capture_output=True, text=True,
-                                 timeout=30).stdout
-            values = [int(x) for x in re.findall(r"\d+", out)]
+            out = subprocess.run(["typeperf", r"\Processor(_Total)\% Processor Time", "-sc", "2"],
+                                 capture_output=True, text=True, timeout=30).stdout
+            values = [float(x) for x in re.findall(r'^"[^"]+","([\d.]+)"', out, re.M)]
             return sum(values) / len(values) if values else 0.0
         return 100.0 * os.getloadavg()[0] / (os.cpu_count() or 1)
     except (OSError, subprocess.SubprocessError, ValueError):
