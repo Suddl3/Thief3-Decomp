@@ -48,8 +48,8 @@ decompilation** worked mostly by Claude agents under the strict gate in
   unclassified); `include/Core/Core.h` keeps the declarations the game code
   compiles against. Matching runs as the [agent
   workflow](agent-workflow.md): a swarm of up to 20 sub-agents at a time
-  (Haiku or Sonnet on functions under 160 bytes, Opus on bigger ones), from the one-file protocol `tools/agent/worker.md`. `src/Game` holds 7,686
-  matched functions in 4,122 units, one per auto unit of the split
+  (Haiku or Sonnet on functions under 160 bytes, Opus on bigger ones), from the one-file protocol `tools/agent/worker.md`. `src/Game` holds 7,805
+  matched functions in 4,233 units, one per auto unit of the split
   (`Unsorted_<start>.cpp`, chunks of up to 64 KB; `_2`, `_3`, ... hold
   functions whose classes clash with their unit's); 1,484 of them are named
   after the class most of their code is. 3,361 classes are declared once, in
@@ -57,7 +57,7 @@ decompilation** worked mostly by Claude agents under the strict gate in
   class are folded (`config/PC_20040610/classmap.txt`; agent-workflow.md,
   "Class structure"). bytematch.dev shows the
   committed report `progress/PC_20040610/report.json`, whose headline is the
-  game code (8,222 of 12,438 functions at 100%, 24.43% of its bytes):
+  game code (8,365 of 12,473 functions at 100%, 25.67% of its bytes):
   regenerate it after integrating, see next step 2.
 - The 266 native classes are in `config/PC_20040610/classes.txt` (size,
   super class, flags, vtable; `tools/classify.py write`), and the 64 classes

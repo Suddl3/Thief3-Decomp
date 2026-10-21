@@ -371,6 +371,28 @@ and more, then on the deferred ones (`--band d`), with class workers
   unit a header change reaches, so build and compare the whole report before
   committing their work, and put back the classes behind anything lost.
 
+### MiniMax again, ramped to 160 workers (2026-10-21)
+
+A controller added 32 lanes every half hour from 64 while the cores' load
+stayed under 75% and the provider stayed quiet; it reached 160 lanes with
+no block and no rate limit, the cores at 30 to 55%. Lessons:
+
+- WMI's `LoadPercentage` (what the first governor read) said 85% while the
+  32 cores averaged 32%: `swarm.py` reads the `_Total` processor counter.
+- The yield is the limit, not the width: what is left in the queue is 320
+  bytes and more, and at 128 to 160 workers deferrals outran matches. In
+  about two hours the queue went from 1,318 to 970 and 116 functions went
+  into `src/` (25.67% of the game code).
+- Stopping the drivers does not stop the work: opencode's background service
+  keeps running a session whose `opencode run` client was killed, and those
+  sessions kept editing `src/` after every client had exited. Stop the
+  service too (`opencode service stop`) before landing anything.
+- Class workers' edits across 160 classes came to depend on each other
+  (a header one worker grew, units another adapted to it): putting back the
+  classes behind a broken unit, one at a time, broke others. They were all
+  put back and queued again. Land class work in smaller rounds, and build
+  and compare between rounds.
+
 ## Running a swarm as a workflow
 
 [.claude/workflows/t3-swarm.js](../.claude/workflows/t3-swarm.js) runs one
