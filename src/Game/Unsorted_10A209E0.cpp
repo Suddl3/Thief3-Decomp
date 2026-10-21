@@ -1,6 +1,9 @@
 // Game/Unsorted_10A209E0.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
 // Declarations above the functions belong in include/ once they settle.
 
+#include <new>
+#include "Game/Class_10905A90_Member.h"
+
 // A point: three coordinates.
 struct Class_10A20BD0_Vector
 {
@@ -34,6 +37,78 @@ public:
     char Unknown00[0x30];
     Class_10A20BD0_Entry* Unknown30;
 };
+
+Class_10905A90_Member* GetAllocator();
+
+struct Struct_109481F0;
+
+// The element of the array: the objects the array holds, one per slot.
+class Class_10E4A668
+{
+public:
+    Class_10E4A668();
+
+    // The vtable's slots; the array calls the one in slot 5.
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual void Virtual2();
+    virtual void Virtual3();
+    virtual void Virtual4();
+    virtual void FUN_10946b90(int A);
+
+    char Unknown04[0xAC];
+    Struct_109481F0* Unknown0B0;
+    char Unknown0B4[0x3C];
+    int Unknown0F0;
+    char Unknown0F4[0xB8];
+};
+
+class Class_10A209E0
+{
+public:
+    void FUN_10a209e0(int Count);
+
+    int m_Count;
+    int Unknown04;
+    Class_10E4A668* m_Items;
+};
+
+// FUNCTION: 0x10A209E0 ?FUN_10a209e0@Class_10A209E0@@QAEXH@Z
+void Class_10A209E0::FUN_10a209e0(int Count)
+{
+    int OldCount = m_Count;
+    int Capacity = !m_Items ? 0 : Unknown04 / sizeof(Class_10E4A668);
+    for (int i = Count; i < OldCount; i++)
+        m_Items[i].FUN_10946b90(0);
+    GetAllocator()->Virtual8(0, 0);
+    if (Count > Capacity)
+    {
+        int NewCapacity = Count;
+        if (Capacity)
+            NewCapacity = (Count & ~15) + 16;
+        m_Items = (Class_10E4A668*)GetAllocator()->Virtual3(m_Items, NewCapacity * sizeof(Class_10E4A668), 0, 0, 0, 0);
+        Unknown04 = NewCapacity * sizeof(Class_10E4A668);
+    }
+    else if (Count <= Capacity - 16)
+    {
+        if (Count == 0)
+        {
+            GetAllocator()->Virtual5(m_Items);
+            m_Items = 0;
+            Unknown04 = 0;
+        }
+        else
+        {
+            int NewCapacity = (Count & ~15) + 16;
+            m_Items = (Class_10E4A668*)GetAllocator()->Virtual3(m_Items, NewCapacity * sizeof(Class_10E4A668), 0, 0, 0, 0);
+            Unknown04 = NewCapacity * sizeof(Class_10E4A668);
+        }
+    }
+    for (int i = OldCount; i < Count; i++)
+        new (&m_Items[i]) Class_10E4A668();
+    GetAllocator()->Virtual9();
+    m_Count = Count;
+}
 
 // FUNCTION: 0x10A20BD0 ?FUN_10a20bd0@Class_10A20BD0@@QAEXHHPAUClass_10A20BD0_Vector@@0@Z
 void Class_10A20BD0::FUN_10a20bd0(int Index, int EndIndex, Class_10A20BD0_Vector* Min, Class_10A20BD0_Vector* Max)

@@ -1,0 +1,168 @@
+// Game/Unsorted_10A96200.cpp: functions matched byte for byte, assembled by tools/agent/integrate.py.
+// Declarations above the functions belong in include/ once they settle.
+
+#include "Core/Core.h"
+#include "Engine/EngineClasses.h"
+#include "Game/Class_10905A90_Member.h"
+
+Class_10905A90_Member* GetAllocator();
+
+class Class_10BAA6B0_Param;
+
+class Class_10C08940;
+
+// Game/cIntArray.h has no destructor and an out-of-line SetCount; this copy inlines both, as the function does.
+class cIntArray
+{
+public:
+    void SetCount(int NewCount)
+    {
+        int Capacity = !Unknown08 ? 0 : Unknown04 / sizeof(void*);
+        GetAllocator()->Virtual8(0, 0);
+        if (NewCount > Capacity)
+        {
+            int NewCapacity = NewCount;
+            if (Capacity)
+                NewCapacity = (NewCount & ~15) + 16;
+            Unknown08 = (void**)GetAllocator()->Virtual3(Unknown08, NewCapacity * sizeof(void*), 0, 0, 0, 0);
+            Unknown04 = NewCapacity * sizeof(void*);
+        }
+        else if (NewCount <= Capacity - 16)
+        {
+            if (NewCount == 0)
+            {
+                GetAllocator()->Virtual5(Unknown08);
+                Unknown08 = 0;
+                Unknown04 = 0;
+            }
+            else
+            {
+                int NewCapacity = (NewCount & ~15) + 16;
+                Unknown08 = (void**)GetAllocator()->Virtual3(Unknown08, NewCapacity * sizeof(void*), 0, 0, 0, 0);
+                Unknown04 = NewCapacity * sizeof(void*);
+            }
+        }
+        GetAllocator()->Virtual9();
+        Unknown00 = NewCount;
+    }
+
+    ~cIntArray()
+    {
+        SetCount(0);
+        if (Unknown04)
+        {
+            GetAllocator()->Virtual5(Unknown08);
+            Unknown08 = 0;
+            Unknown04 = 0;
+        }
+    }
+
+    int Unknown00;
+    int Unknown04;
+    void** Unknown08;
+};
+
+// The object the array comes from.
+class Class_10A7F5A0
+{
+public:
+    cIntArray FUN_10a7f5a0(int A, int B);
+};
+
+// The object Class_10E6CE28::GetUnknown08 returns.
+class Class_10A95860_Unknown08
+{
+public:
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual void Virtual2();
+    virtual void Virtual3();
+    virtual Class_10A7F5A0* Virtual4(int A);
+};
+
+// The global the loop calls into.
+class Class_10F46DA0
+{
+public:
+    virtual void Virtual0();
+    virtual void Virtual1(void* A, int B, void* C, int D);
+    virtual void Virtual2();
+    virtual void Virtual3();
+    virtual void Virtual4();
+    virtual void Virtual5(int A, class Class_10B697A0* B, int C, int D);
+};
+
+extern Class_10F46DA0* DAT_10f46da0;
+
+// The object Class_10978090::FUN_10978090 returns.
+class Class_10978090Result
+{
+public:
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual void Virtual2();
+    virtual void Virtual3();
+    virtual int Virtual4();
+    virtual void Virtual5();
+    virtual int Virtual6(int A, int B);
+    virtual void Virtual7();
+    virtual int Virtual8();
+};
+
+// Class_10978090 from include/Game/Class_10978090.h, with the result type of
+// FUN_10978090.
+class Class_10978090
+{
+public:
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual void Virtual2();
+    virtual void Virtual3();
+    virtual int Virtual4();
+    virtual void Virtual5();
+    virtual int Virtual6(int A, int B);
+    virtual void Virtual7();
+    virtual Class_10BAA6B0_Param* Virtual8();
+
+    Class_10978090Result* FUN_10978090();
+
+    Class_10C08940* Unknown04;
+    int Unknown08;
+};
+
+class Class_10E6CE28 : public Class_10978090
+{
+public:
+    Class_10A95860_Unknown08* GetUnknown08();
+};
+
+// The field at 0x0C, whose address the loop hands to the global.
+class Class_10A96200_Unknown0C;
+
+// The class whose table at 0x10E6CEA8 holds this function.
+class Class_10E6CEA8 : public Class_10E6CE28
+{
+public:
+    virtual void Virtual0();
+    virtual void Virtual1();
+    virtual void FUN_10a96200();
+
+    Class_10A96200_Unknown0C* Unknown0c;
+};
+
+template AActor* Cast<AActor>(UObject* Src);
+
+// FUNCTION: 0x10A96200 ?FUN_10a96200@Class_10E6CEA8@@UAEXXZ
+void Class_10E6CEA8::FUN_10a96200()
+{
+    Class_10978090Result* Result = FUN_10978090();
+    Class_10A95860_Unknown08* Owner = GetUnknown08();
+    cIntArray Local = Owner->Virtual4(0)->FUN_10a7f5a0(Result->Virtual8(), 0);
+    for (int i = 0; i < Local.Unknown00; i++)
+    {
+        Class_10A96200_Unknown0C** Target = this ? &this->Unknown0c : 0;
+        UObject* Item = (UObject*)Local.Unknown08[i];
+        AActor* Actor = Cast<AActor>(Item);
+        DAT_10f46da0->Virtual1(Target, 0x27, Actor, -1);
+    }
+}
