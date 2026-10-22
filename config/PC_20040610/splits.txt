@@ -11054,6 +11054,9 @@ Game/Unsorted_10BAA420.cpp:
 	.text  start:0x10BAA420 end:0x10BAA462
 	.text  start:0x10BAA8F0 end:0x10BAA92B
 
+Game/Class_10BAA580_2.cpp:
+	.text  start:0x10BAA580 end:0x10BAA5E4
+
 Game/PawnWrapper.cpp:
 	.text  start:0x10BAA5F0 end:0x10BAA653
 
@@ -12741,6 +12744,10 @@ Game/Unsorted_10BE9F50.cpp:
 
 Game/State_Flee_5.cpp:
 	.text  start:0x10BEAE90 end:0x10BEAEE0
+
+Game/State_Flee_8.cpp:
+	.text  start:0x10BEBC70 end:0x10BEBDB9
+	.text  start:0x10E29BF0 end:0x10E29C1B  # .text$x: EH handlers and unwind funclets
 
 Game/State_Flee_6.cpp:
 	.text  start:0x10BEBDC0 end:0x10BEBE06

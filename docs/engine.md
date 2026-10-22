@@ -731,3 +731,37 @@ with the earlier group above):
 | `0x10F46DA0` | `DAT_10f46da0` | [0x10B9CAD0](../src/Game/cStateStack_16.cpp) |
 | `0x10FF661C` | `AAIPathPoint::PrivateStaticClass` | [0x10B9DDB0](../src/Game/PatrolStack.cpp) |
 | `0x10FF664C` | `AAIPawnController::PrivateStaticClass` | [0x10BC3190](../src/Game/PawnModelInitialization.cpp) |
+
+### Mesh lookup and flee submission
+
+The mesh receiver at `0x10BAA580` reads the wrapper owner at `+0x34`, resolves
+its object, checks `USkeletalMeshInstance::StaticClass()` with `UObject::IsA`,
+and caches a compatible receiver at `+0x164`. Those offsets and the calls in
+the matched body support the local ABI view; they do not name other fields.
+
+The flee submission body at `0x10BEBC70` retries destination selection once,
+submits a move command when it succeeds, and otherwise marks failure. Its
+local complete declarations retain the observed eleven-slot movement vtable,
+`0x34`-byte context and `0x58`-byte move command (compile-time size checks in
+the source). `MoveCommand::Virtual6` binds to the shared `0x10D660B0` return
+entry; its two-argument slots 7/8 bind to `0x109E38B0`. These are declaration
+aliases to existing folded code, not new implementation matches. Helpers
+`0x10BEA3B0` and `0x10BEB6C0` are called through their recorded declarations;
+their bodies are not contributed or credited here.
+
+| Function | Bytes | Static role and matching source |
+|---|---:|---|
+| `0x10BAA580` | 100 | [Cache and type-check the associated skeletal-mesh instance receiver](../src/Game/Class_10BAA580_2.cpp) |
+| `0x10BEBC70` | 329 | [Resolve/rebuild flee destination and submit a movement command while preserving context lifetime](../src/Game/State_Flee_8.cpp) |
+
+External references first used by this group (common references are recorded
+with the earlier group above):
+
+| Target address | Referenced name | Matching caller evidence |
+|---|---|---|
+| `0x10991E10` | `Class_10B21820::FUN_10991e10` | [0x10BAA580](../src/Game/Class_10BAA580_2.cpp) |
+| `0x109B2760` | `USkeletalMeshInstance::InitializePrivateStaticClassUSkeletalMeshInstance` | [0x10BAA580](../src/Game/Class_10BAA580_2.cpp) |
+| `0x109CC060` | `USkeletalMeshInstance::GetPrivateStaticClassUSkeletalMeshInstance` | [0x10BAA580](../src/Game/Class_10BAA580_2.cpp) |
+| `0x10BEA3B0` | `Class_10BEA3B0::FUN_10bea3b0` | [0x10BEBC70](../src/Game/State_Flee_8.cpp) |
+| `0x10BEB6C0` | `Class_10BEB6C0::FUN_10beb6c0` | [0x10BEBC70](../src/Game/State_Flee_8.cpp) |
+| `0x10F35488` | `USkeletalMeshInstance::PrivateStaticClass` | [0x10BAA580](../src/Game/Class_10BAA580_2.cpp) |
