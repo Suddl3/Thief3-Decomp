@@ -506,3 +506,52 @@ pause state after the handler keeps the game running (verified).
   `ActorChannel` or travel strings and no Winsock imports; only `IpDrv.dll`,
   `RemoteRole`, `Replication` and the `UClass::NetFields`/`ClassReps`
   containers remain. Multiplayer needs its own transport.
+
+## City AI and collection matching evidence
+
+The following entries are **static** evidence for `PC_20040610`, the original
+executable identified in [target.md](target.md). They are not runtime tests,
+an address map for patched executables, or a guard-disappearance fix. Class,
+field and parameter names that retain address-based placeholders are
+reconstructed; descriptive roles below do not establish original source names.
+
+The linked contributor-written C++ was compiled with MSVC 7.1
+(`13.10.3077`, `/O2 /GX /GR- /MT /DNDEBUG /DWIN32 /D_WINDOWS`) and checked
+in its integrated translation unit with the strict [matching gate](matching.md).
+Each listed contribution passed at 100%, with zero provisional bindings,
+including the gate's code/data references, argument counts and generated
+exception-cleanup data. The source's `// FUNCTION:` marker identifies the
+function and its decorated symbol; [symbols.txt](../config/PC_20040610/symbols.txt)
+records the address/name bindings and supported aliases. Generated handlers,
+aliases and already matched neighbors are not additional contributed functions.
+
+The boundary tables record the external function and global references paired
+by that verification, including engine/library declarations. The evidence for
+each row is the linked caller's matching reference to that exact target address,
+not an inference from a suggestive name. Folded functions can share an address;
+the table uses the caller's symbol spelling rather than claiming that one
+class's name uniquely owns the shared body. No engine or library body is
+reconstructed here. Vtable/data references are declarations, not extracted
+assets. Scalar/string constants and compiler-generated EH tables are checked by
+value by the gate; they are not new engine entry points.
+
+### Scratch allocation
+
+The scratch acquisition function reuses the last pool entry or constructs an
+empty object under the allocator's paired scope calls. Its strict result is
+100%; the ordinary objdiff progress report displays 99.85714% for this same
+function/object. These are different comparisons, not a rounded match claim.
+
+| Function | Bytes | Static role and matching source |
+|---|---:|---|
+| `0x1092F040` | 184 | [Preserved scratch-pool acquisition helper](../src/Game/Unsorted_1092E9C0.cpp) |
+
+External references first used by this group (common references are recorded
+with the earlier group above):
+
+| Target address | Referenced name | Matching caller evidence |
+|---|---|---|
+| `0x10905AA0` | `GetAllocator` | [0x1092F040](../src/Game/Unsorted_1092E9C0.cpp) |
+| `0x10905C10` | `new` | [0x1092F040](../src/Game/Unsorted_1092E9C0.cpp) |
+| `0x10BFBD70` | `cIntArray::SetCount` | [0x1092F040](../src/Game/Unsorted_1092E9C0.cpp) |
+| `0x10F31B9C` | `DAT_10f31b9c` | [0x1092F040](../src/Game/Unsorted_1092E9C0.cpp) |

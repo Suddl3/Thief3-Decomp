@@ -15429,3 +15429,6 @@ Game/TimeManager.cpp:
 	.text  start:0x10D3EC80 end:0x10D3ED44
 	.text  start:0x10D3ED70 end:0x10D3EDB4
 
+
+Game/Unsorted_1092E9C0.cpp:
+	.text  start:0x1092F040 end:0x1092F0F8
