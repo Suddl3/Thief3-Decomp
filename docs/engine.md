@@ -555,3 +555,25 @@ with the earlier group above):
 | `0x10905C10` | `new` | [0x1092F040](../src/Game/Unsorted_1092E9C0.cpp) |
 | `0x10BFBD70` | `cIntArray::SetCount` | [0x1092F040](../src/Game/Unsorted_1092E9C0.cpp) |
 | `0x10F31B9C` | `DAT_10f31b9c` | [0x1092F040](../src/Game/Unsorted_1092E9C0.cpp) |
+
+### Item range lifetimes
+
+The range move destroys displaced elements, moves the retained range, and
+reconstructs the vacated elements. It calls the existing `memmove` library
+entry point; no library implementation is included.
+
+| Function | Bytes | Static role and matching source |
+|---|---:|---|
+| `0x10C08B50` | 527 | [Item collection range movement/lifetime](../src/Game/Unsorted_10C08B50.cpp) |
+
+External references first used by this group (common references are recorded
+with the earlier group above):
+
+| Target address | Referenced name | Matching caller evidence |
+|---|---|---|
+| `0x10C013A0` | `Class_10E97B00::Class_10E97B00` | [0x10C08B50](../src/Game/Unsorted_10C08B50.cpp) |
+| `0x10D1F040` | `__CxxFrameHandler` | [0x10C08B50](../src/Game/Unsorted_10C08B50.cpp) |
+| `0x10D20990` | `memmove` | [0x10C08B50](../src/Game/Unsorted_10C08B50.cpp) |
+| `0x10D660B0` | `UObject::StaticConstructor` | [0x10C08B50](../src/Game/Unsorted_10C08B50.cpp) |
+| `0x10E47660` | `DAT_10e47660` | [0x10C08B50](../src/Game/Unsorted_10C08B50.cpp) |
+| `0x10E97BBC` | `DAT_10e97bbc` | [0x10C08B50](../src/Game/Unsorted_10C08B50.cpp) |

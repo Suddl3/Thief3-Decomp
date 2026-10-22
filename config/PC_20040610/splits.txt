@@ -15432,3 +15432,7 @@ Game/TimeManager.cpp:
 
 Game/Unsorted_1092E9C0.cpp:
 	.text  start:0x1092F040 end:0x1092F0F8
+
+Game/Unsorted_10C08B50.cpp:
+	.text  start:0x10C08B50 end:0x10C08D5F
+	.text  start:0x10E2B520 end:0x10E2B55E  # .text$x: EH handlers and unwind funclets
