@@ -260,7 +260,7 @@ public:
     virtual bool Virtual74(int);                            // slot 74: 0x10BC2F50, AActor's
     virtual bool Virtual75(int);                            // slot 75: 0x10BC2F80, AActor's
     virtual float Virtual76(int,int);                       // slot 76: 0x10BC3BA0, AActor's
-    virtual void Virtual100();                              // slot 100: 0x10BC3190, APawn's
+    virtual void Virtual100(AController* Controller, bool Restored); // slot 100: 0x10BC3190, APawn's
     virtual void Virtual105();                              // slot 105: 0x10BC3DE0, APawn's
 
 public:
@@ -295,7 +295,7 @@ public:
     virtual void Virtual108();                              // slot 108: 0x10B9C7A0
     virtual void Virtual60(int);                            // slot 60: 0x10B9BDA0, AActor's
     virtual bool Virtual97(int);                            // slot 97: 0x10B9BC40, AController's
-    virtual void Virtual101();                              // slot 101: 0x10B9C4A0, AController's
+    virtual void Virtual101(bool A);                              // slot 101: 0x10B9C4A0, AController's
     virtual void Virtual102();                              // slot 102: 0x10B9BC10, AController's
     virtual void Virtual105();                              // slot 105: 0x10B9BC60, AController's
 

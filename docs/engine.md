@@ -577,3 +577,157 @@ with the earlier group above):
 | `0x10D660B0` | `UObject::StaticConstructor` | [0x10C08B50](../src/Game/Unsorted_10C08B50.cpp) |
 | `0x10E47660` | `DAT_10e47660` | [0x10C08B50](../src/Game/Unsorted_10C08B50.cpp) |
 | `0x10E97BBC` | `DAT_10e97bbc` | [0x10C08B50](../src/Game/Unsorted_10C08B50.cpp) |
+
+### Guard state, population and return
+
+The matched bodies cover the controller/state stack, pawn/model lifetime,
+population bookkeeping, patrol ownership, and return movement/orientation.
+They establish original-build behavior that can support later City research;
+they do not establish compatibility with a different executable.
+
+The declaration corrections in [EngineClasses.h](../include/Engine/EngineClasses.h)
+and [AICoreClasses.h](../include/AICore/AICoreClasses.h) have these specific limits:
+
+| Address | Contract and evidence |
+|---|---|
+| `0x109A5330` | `APawn::Virtual100(AController*, bool)`: the matched `AAIPawn::Virtual100` forwards two stack words to the base entry; its target cleanup is eight bytes. Engine declaration only. |
+| `0x10BC3190` | `AAIPawn::Virtual100(AController*, bool)`: matched 1,017-byte body, two-argument cleanup and the base call above; `Restored` describes the observed skip flag, not a recovered original name. |
+| `0x10B9C4A0` | `AAIPawnController::Virtual101(bool)`: matched 116-byte reset body with one stack argument; the inherited slot-101 declarations agree with that call shape. |
+| `0x109E3C90` | Shared folded slot target for `AAIController` and `APlayerController`: the one-word slot-101 aliases are retained alongside existing spellings; this is not evidence that the other folded methods have identical source-level types. |
+| `0x10C07960` | `Class_10E97B68::FUN_10c07960(int,int,int,int)` occupies slot zero before the virtual destructor. The matched event body and the existing constructor/destructor vtable agree; the old destructor remains unchanged. |
+
+The cached-state maximum at `0x10C083C0` reads the registry and stores its
+timestamp at owner `+0x14` and maximum at `+0x18`, returning the cache within
+the observed 0.1-second interval. A separate population-point eligibility
+function at `0x10A491B0` uses `0x10F3A054` (float distance cache) and
+`0x10F3A058` (initialization flag); its matched accesses establish those types.
+The behavior context at `0x10BF7B90` is 52 bytes. The movement and orientation
+constructors preserve their observed member/temporary lifetimes; opaque
+fields remain opaque.
+
+| Function | Bytes | Static role and matching source |
+|---|---:|---|
+| `0x1091F420` | 148 | [Portal plane-array allocation and count](../src/Game/PortalPlaneArray.cpp) |
+| `0x10B9C4A0` | 116 | [Controller state reset](../src/Game/AAIPawnController_7.cpp) |
+| `0x10B9CAD0` | 164 | [State activation/notification](../src/Game/cStateStack_16.cpp) |
+| `0x10B9DBB0` | 140 | [Guard-state stack lifetime](../src/Game/cStateStack_17.cpp) |
+| `0x10B9D7E0` | 238 | [State replacement and pending-state queue](../src/Game/Unsorted_10B9D7E0.cpp) |
+| `0x10C083C0` | 177 | [Cached maximum of active AI-state values on the search registry](../src/Game/Unsorted_10C08130.cpp) |
+| `0x10BC40E0` | 125 | [AI-state eligibility threshold check](../src/Game/StateEligibility.cpp) |
+| `0x10BC4240` | 278 | [Pending AI-state request replacement](../src/Game/StateRequest.cpp) |
+| `0x10BCE0D0` | 305 | [AI-state animation command creation and submission](../src/Game/StateAnimation.cpp) |
+| `0x10BC3190` | 1017 | [Pawn/controller initialization and five AI-model lifetimes](../src/Game/PawnModelInitialization.cpp) |
+| `0x10BC3120` | 109 | [Spawn an AI model using the pawn transform and context](../src/Game/PawnModelFactory.cpp) |
+| `0x10A491B0` | 242 | [Population point exclusion using cached LeavingDistance and view direction](../src/Game/PopulationPointEligibility.cpp) |
+| `0x10B9DDB0` | 436 | [Reconcile patrol/path-point requests with active state-stack lifetimes](../src/Game/PatrolStack.cpp) |
+| `0x10BDFEF0` | 956 | [Returning state: move home, finish orientation, and advance toward state pop](../src/Game/ReturningState.cpp) |
+| `0x10C36700` | 158 | [MC_Turn constructor used to restore home orientation during Returning](../src/Game/ReturnOrientationCommand.cpp) |
+| `0x10C2EA30` | 241 | [MC_MoveToPoint constructor creates Returning movement and owns its nested path list](../src/Game/ReturnMovementCommand.cpp) |
+| `0x10BF7B90` | 149 | [Construct the 52-byte movement context used by Returning commands](../src/Game/BehaviorContextConstruction.cpp) |
+| `0x10C36630` | 80 | [Initialize the MC_Turn orientation request during Returning](../src/Game/ReturnOrientationInitialization.cpp) |
+| `0x10C07960` | 330 | [Population events: adjust counts, remove group membership, update CityGroup and delegate quota](../src/Game/Class_10E97B68_3.cpp) |
+
+External references first used by this group (common references are recorded
+with the earlier group above):
+
+| Target address | Referenced name | Matching caller evidence |
+|---|---|---|
+| `0x1096D780` | `Class_1096D780::Get` | [0x10BC3190](../src/Game/PawnModelInitialization.cpp), [0x10BC3120](../src/Game/PawnModelFactory.cpp) |
+| `0x10971570` | `Class_10971570::FUN_10971570` | [0x10C07960](../src/Game/Class_10E97B68_3.cpp) |
+| `0x10974340` | `Class_10974340::FUN_10974340` | [0x10A491B0](../src/Game/PopulationPointEligibility.cpp) |
+| `0x10978090` | `Class_10978090::FUN_10978090` | [0x10C36630](../src/Game/ReturnOrientationInitialization.cpp) |
+| `0x1098E330` | `Class_1098E330::FUN_1098e330` | [0x10BC3190](../src/Game/PawnModelInitialization.cpp), [0x10A491B0](../src/Game/PopulationPointEligibility.cpp) |
+| `0x109A5330` | `APawn::Virtual100` | [0x10BC3190](../src/Game/PawnModelInitialization.cpp) |
+| `0x109DFF50` | `cIntArray::RemoveAt` | [0x10B9D7E0](../src/Game/Unsorted_10B9D7E0.cpp), [0x10B9DDB0](../src/Game/PatrolStack.cpp) |
+| `0x109E38B0` | `cGarrettLockPickController::FUN_109e38b0` | [0x10C2EA30](../src/Game/ReturnMovementCommand.cpp) |
+| `0x109EFF30` | `Class_109EFF30::FUN_109eff30` | [0x10A491B0](../src/Game/PopulationPointEligibility.cpp) |
+| `0x10A0A8C0` | `cPawnArray::FUN_10a0a8c0` | [0x10B9DDB0](../src/Game/PatrolStack.cpp) |
+| `0x10A0C5F0` | `Class_10A0C5F0::FUN_10a0c5f0` | [0x10C07960](../src/Game/Class_10E97B68_3.cpp) |
+| `0x10A15B00` | `destructor'` | [0x10B9CAD0](../src/Game/cStateStack_16.cpp) |
+| `0x10A905A0` | `Class_10E50610::~Class_10E50610` | [0x10B9CAD0](../src/Game/cStateStack_16.cpp) |
+| `0x10AA8050` | `AFormationPointAbsolute::Virtual94` | [0x10C2EA30](../src/Game/ReturnMovementCommand.cpp) |
+| `0x10AA82D0` | `Class_10AA82D0::GetLinkedObject` | [0x10BDFEF0](../src/Game/ReturningState.cpp) |
+| `0x10AA82E0` | `Class_10AA82E0::FUN_10aa82e0` | [0x10BDFEF0](../src/Game/ReturningState.cpp) |
+| `0x10AAF570` | `Class_10AAF570::GetLinkType` | [0x10B9C4A0](../src/Game/AAIPawnController_7.cpp) |
+| `0x10AD1DC0` | `delete` | [0x10BC4240](../src/Game/StateRequest.cpp), [0x10BCE0D0](../src/Game/StateAnimation.cpp), [0x10BDFEF0](../src/Game/ReturningState.cpp), [0x10C2EA30](../src/Game/ReturnMovementCommand.cpp) |
+| `0x10AD1EE0` | `UObject::IsA` | [0x10BC3190](../src/Game/PawnModelInitialization.cpp), [0x10B9DDB0](../src/Game/PatrolStack.cpp) |
+| `0x10AD2800` | `Class_1098E330::FUN_10ad2800` | [0x10BC3190](../src/Game/PawnModelInitialization.cpp) |
+| `0x10B94280` | `AAIPathPoint::InitializePrivateStaticClassAAIPathPoint` | [0x10B9DDB0](../src/Game/PatrolStack.cpp) |
+| `0x10B944A0` | `AAIPawnController::InitializePrivateStaticClassAAIPawnController` | [0x10BC3190](../src/Game/PawnModelInitialization.cpp) |
+| `0x10B957C0` | `AAIPathPoint::GetPrivateStaticClassAAIPathPoint` | [0x10B9DDB0](../src/Game/PatrolStack.cpp) |
+| `0x10B96180` | `AAIPawnController::GetPrivateStaticClassAAIPawnController` | [0x10BC3190](../src/Game/PawnModelInitialization.cpp) |
+| `0x10B9BAB0` | `Class_10B9BAB0::FUN_10b9bab0` | [0x10B9C4A0](../src/Game/AAIPawnController_7.cpp) |
+| `0x10B9BCD0` | `Class_10B9BCD0::FUN_10b9bcd0` | [0x10BC3190](../src/Game/PawnModelInitialization.cpp) |
+| `0x10B9BEB0` | `Class_10B9BEB0::FUN_10b9beb0` | [0x10B9C4A0](../src/Game/AAIPawnController_7.cpp) |
+| `0x10B9C060` | `FUN_10b9c060` | [0x10B9C4A0](../src/Game/AAIPawnController_7.cpp) |
+| `0x10B9C450` | `Class_10B9C450::FUN_10b9c450` | [0x10B9C4A0](../src/Game/AAIPawnController_7.cpp) |
+| `0x10B9CA60` | `Class_10E8BF90::Clone` | [0x10B9CAD0](../src/Game/cStateStack_16.cpp) |
+| `0x10B9CAD0` | `cStateStack::FUN_10b9cad0` | [0x10B9D7E0](../src/Game/Unsorted_10B9D7E0.cpp) |
+| `0x10B9D740` | `cStateStack::ApplyNextState` | [0x10B9DBB0](../src/Game/cStateStack_17.cpp), [0x10B9DDB0](../src/Game/PatrolStack.cpp) |
+| `0x10B9D7E0` | `Class_10B9F200::FUN_10b9d7e0` | [0x10B9DDB0](../src/Game/PatrolStack.cpp) |
+| `0x10B9D8D0` | `cStateStack::FUN_10b9d8d0` | [0x10B9DBB0](../src/Game/cStateStack_17.cpp), [0x10B9DDB0](../src/Game/PatrolStack.cpp) |
+| `0x10BA91E0` | `Distance` | [0x10BDFEF0](../src/Game/ReturningState.cpp) |
+| `0x10BA9FD0` | `Class_10BA9FD0::FUN_10ba9fd0` | [0x10B9DBB0](../src/Game/cStateStack_17.cpp), [0x10C083C0](../src/Game/Unsorted_10C08130.cpp) |
+| `0x10BAA6B0` | `FUN_10baa6b0` | [0x10C083C0](../src/Game/Unsorted_10C08130.cpp) |
+| `0x10BAA6F0` | `Class_10BAA6F0::FUN_10baa6f0` | [0x10C083C0](../src/Game/Unsorted_10C08130.cpp) |
+| `0x10BAE1D0` | `cStructArray::SetCount` | [0x10BCE0D0](../src/Game/StateAnimation.cpp) |
+| `0x10BAEC40` | `cStructArray::~cStructArray` | [0x10BF7B90](../src/Game/BehaviorContextConstruction.cpp) |
+| `0x10BAF8A0` | `Class_10BAF8A0::~Class_10BAF8A0` | [0x10BCE0D0](../src/Game/StateAnimation.cpp), [0x10BDFEF0](../src/Game/ReturningState.cpp) |
+| `0x10BB7580` | `Class_10BB7580::FUN_10bb7580` | [0x10B9DBB0](../src/Game/cStateStack_17.cpp) |
+| `0x10BB7670` | `Class_10BB7670::FUN_10bb7670` | [0x10C083C0](../src/Game/Unsorted_10C08130.cpp) |
+| `0x10BB7F20` | `Class_10BB7F20::FUN_10bb7f20` | [0x10BC40E0](../src/Game/StateEligibility.cpp) |
+| `0x10BB89D0` | `Class_10BB89D0::FUN_10bb89d0` | [0x10C083C0](../src/Game/Unsorted_10C08130.cpp) |
+| `0x10BB8D60` | `Class_10BB8D60::Reset` | [0x10B9DDB0](../src/Game/PatrolStack.cpp) |
+| `0x10BBB410` | `Class_10BBB410::GetCurrent` | [0x10BC40E0](../src/Game/StateEligibility.cpp) |
+| `0x10BBDB40` | `Class_10BBDB40::GetFloat` | [0x10BC40E0](../src/Game/StateEligibility.cpp) |
+| `0x10BC3120` | `FUN_10bc3120` | [0x10BC3190](../src/Game/PawnModelInitialization.cpp) |
+| `0x10BC3F90` | `Class_10BC3F90::FUN_10bc3f90` | [0x10BDFEF0](../src/Game/ReturningState.cpp) |
+| `0x10BC4010` | `Class_10BC4010::FUN_10bc4010` | [0x10B9CAD0](../src/Game/cStateStack_16.cpp) |
+| `0x10BC4020` | `Class_10BC4020::FUN_10bc4020` | [0x10B9CAD0](../src/Game/cStateStack_16.cpp), [0x10B9D7E0](../src/Game/Unsorted_10B9D7E0.cpp) |
+| `0x10BC4160` | `Class_10BC4160::FUN_10bc4160` | [0x10BCE0D0](../src/Game/StateAnimation.cpp), [0x10BDFEF0](../src/Game/ReturningState.cpp) |
+| `0x10BC4BF0` | `Class_10BC4BF0::GetTargetLinkType` | [0x10BCE0D0](../src/Game/StateAnimation.cpp), [0x10BDFEF0](../src/Game/ReturningState.cpp) |
+| `0x10BD4160` | `cStructArray::CopyFrom` | [0x10BF7B90](../src/Game/BehaviorContextConstruction.cpp) |
+| `0x10BDF0A0` | `Class_10BDF0A0::FUN_10bdf0a0` | [0x10BDFEF0](../src/Game/ReturningState.cpp) |
+| `0x10BECEE0` | `UCanvas::SetViewport` | [0x10B9DDB0](../src/Game/PatrolStack.cpp) |
+| `0x10BF7E00` | `Class_10BF7F90::FUN_10bf7e00` | [0x10BCE0D0](../src/Game/StateAnimation.cpp), [0x10BDFEF0](../src/Game/ReturningState.cpp) |
+| `0x10BF7F90` | `Class_10bf7f90::FUN_10bf7f90` | [0x10BCE0D0](../src/Game/StateAnimation.cpp), [0x10BDFEF0](../src/Game/ReturningState.cpp) |
+| `0x10BFC3A0` | `Class_10BFD210::FUN_10bfc3a0` | [0x10BC40E0](../src/Game/StateEligibility.cpp) |
+| `0x10BFF460` | `Class_10BFF460::FUN_10bff460` | [0x10BC40E0](../src/Game/StateEligibility.cpp) |
+| `0x10C00480` | `GetTimeSeconds` | [0x10C083C0](../src/Game/Unsorted_10C08130.cpp), [0x10BDFEF0](../src/Game/ReturningState.cpp) |
+| `0x10C00710` | `FUN_10c00710` | [0x10B9DDB0](../src/Game/PatrolStack.cpp) |
+| `0x10C06F80` | `FUN_10c06f80` | [0x10C07960](../src/Game/Class_10E97B68_3.cpp) |
+| `0x10C06FF0` | `Class_10E97B68::FUN_10c06ff0` | [0x10C07960](../src/Game/Class_10E97B68_3.cpp) |
+| `0x10C07220` | `Class_10C07220::FUN_10c07220` | [0x10C07960](../src/Game/Class_10E97B68_3.cpp) |
+| `0x10C07690` | `Class_10E97B68::AddIfMissing` | [0x10C07960](../src/Game/Class_10E97B68_3.cpp) |
+| `0x10C16580` | `Class_10E98C8C::Class_10E98C8C` | [0x10C36700](../src/Game/ReturnOrientationCommand.cpp) |
+| `0x10C165A0` | `Class_10E98C8C::~Class_10E98C8C` | [0x10C36700](../src/Game/ReturnOrientationCommand.cpp) |
+| `0x10C27090` | `MC_MoveToPoint::IsCurrent` | [0x10C2EA30](../src/Game/ReturnMovementCommand.cpp) |
+| `0x10C27140` | `MC_Follow::GetStateFromFlags` | [0x10C2EA30](../src/Game/ReturnMovementCommand.cpp) |
+| `0x10C27290` | `MoveCommand::~MoveCommand` | [0x10C36700](../src/Game/ReturnOrientationCommand.cpp), [0x10C2EA30](../src/Game/ReturnMovementCommand.cpp) |
+| `0x10C27320` | `MoveCommand::MoveCommand` | [0x10C36700](../src/Game/ReturnOrientationCommand.cpp), [0x10C2EA30](../src/Game/ReturnMovementCommand.cpp) |
+| `0x10C2E350` | `Class_10E9AA20::Class_10E9AA20` | [0x10BC4240](../src/Game/StateRequest.cpp) |
+| `0x10C2E370` | `Class_10E9AA2C::Class_10E9AA2C` | [0x10BC4240](../src/Game/StateRequest.cpp) |
+| `0x10C2E6E0` | `MC_PlayAnimation::MC_PlayAnimation` | [0x10BCE0D0](../src/Game/StateAnimation.cpp) |
+| `0x10C2EA30` | `MC_MoveToPoint::MC_MoveToPoint` | [0x10BDFEF0](../src/Game/ReturningState.cpp) |
+| `0x10C2EB40` | `MC_MoveToPoint::FUN_10c2eb40` | [0x10C2EA30](../src/Game/ReturnMovementCommand.cpp) |
+| `0x10C2EB60` | `MC_MoveToPoint::IsFinished` | [0x10C2EA30](../src/Game/ReturnMovementCommand.cpp) |
+| `0x10C2EB90` | `MC_MoveToPoint::FUN_10c2eb90` | [0x10C2EA30](../src/Game/ReturnMovementCommand.cpp) |
+| `0x10C2EBB0` | `destructor'` | [0x10C2EA30](../src/Game/ReturnMovementCommand.cpp) |
+| `0x10C2EBD0` | `MC_MoveToPoint::GetClassName` | [0x10C2EA30](../src/Game/ReturnMovementCommand.cpp) |
+| `0x10C36630` | `MC_Turn::FUN_10c36630` | [0x10C36700](../src/Game/ReturnOrientationCommand.cpp) |
+| `0x10C36700` | `MC_Turn::MC_Turn` | [0x10BDFEF0](../src/Game/ReturningState.cpp) |
+| `0x10C37960` | `FUN_10c37960` | [0x10C36630](../src/Game/ReturnOrientationInitialization.cpp) |
+| `0x10C3B6A0` | `Class_10E9AF6C::Class_10E9AF6C` | [0x10C2EA30](../src/Game/ReturnMovementCommand.cpp) |
+| `0x10C7D570` | `Class_10C7D570::FUN_10c7d570` | [0x10B9C4A0](../src/Game/AAIPawnController_7.cpp), [0x10B9CAD0](../src/Game/cStateStack_16.cpp), [0x10B9DDB0](../src/Game/PatrolStack.cpp), [0x10BDFEF0](../src/Game/ReturningState.cpp) |
+| `0x10DBD510` | `Class_10C7D570::FUN_10dbd510` | [0x10BC40E0](../src/Game/StateEligibility.cpp) |
+| `0x10E8BF90` | `Class_10E8BF90::`vftable'` | [0x10B9CAD0](../src/Game/cStateStack_16.cpp) |
+| `0x10E93B5C` | `DAT_10e93b5c` | [0x10BF7B90](../src/Game/BehaviorContextConstruction.cpp) |
+| `0x10E9AA7C` | `DAT_10e9aa7c` | [0x10C2EA30](../src/Game/ReturnMovementCommand.cpp) |
+| `0x10E9AD9C` | `DAT_10e9ad9c` | [0x10C36700](../src/Game/ReturnOrientationCommand.cpp) |
+| `0x10EAFBDC` | `DAT_10eafbdc` | [0x10A491B0](../src/Game/PopulationPointEligibility.cpp) |
+| `0x10F35DEC` | `DAT_10f35dec` | [0x10A491B0](../src/Game/PopulationPointEligibility.cpp) |
+| `0x10F3A054` | `DAT_10f3a054` | [0x10A491B0](../src/Game/PopulationPointEligibility.cpp) |
+| `0x10F3A058` | `DAT_10f3a058` | [0x10A491B0](../src/Game/PopulationPointEligibility.cpp) |
+| `0x10F46DA0` | `DAT_10f46da0` | [0x10B9CAD0](../src/Game/cStateStack_16.cpp) |
+| `0x10FF661C` | `AAIPathPoint::PrivateStaticClass` | [0x10B9DDB0](../src/Game/PatrolStack.cpp) |
+| `0x10FF664C` | `AAIPawnController::PrivateStaticClass` | [0x10BC3190](../src/Game/PawnModelInitialization.cpp) |

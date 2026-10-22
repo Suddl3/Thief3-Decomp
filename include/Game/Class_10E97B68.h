@@ -8,6 +8,7 @@
 class Class_10E97B68
 {
 public:
+    virtual void FUN_10c07960(int Event, int A, int B, int C);
     virtual ~Class_10E97B68();
 
     Class_10E97B68();
