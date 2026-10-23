@@ -131,7 +131,7 @@
   }
 
   .name {
-    font-family: var(--serif);
+    font-family: var(--font-display);
     font-size: 19px;
     font-weight: 600;
     letter-spacing: 0.05em;

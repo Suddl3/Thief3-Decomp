@@ -89,7 +89,7 @@
   {#if status?.enabled}
     <label class="row switch">
       <Toggle checked={autoCheck !== false} label="Check for updates at start-up" onchange={setAuto} />
-      <span>Check for updates when the launcher starts (at most once a day)</span>
+      <span class="muted small">Check for updates when the launcher starts (at most once a day)</span>
     </label>
   {/if}
 </div>

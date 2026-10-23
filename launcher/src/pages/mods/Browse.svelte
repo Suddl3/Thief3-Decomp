@@ -69,7 +69,7 @@
       {@const downloading = mods.download?.id === m.id ? mods.download : null}
       <div class="entry card">
         <div class="head">
-          <h3>{m.name}</h3>
+          <h3 class="row-title">{m.name}</h3>
           {#if m.installed}<span class="badge ok"><Icon name="check" size={12} />Installed {m.installed}</span>{/if}
           {#if updates.has(m.id)}<span class="badge info">Update: {updates.get(m.id)}</span>{/if}
         </div>

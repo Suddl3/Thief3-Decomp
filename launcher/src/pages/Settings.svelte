@@ -101,7 +101,7 @@
   };
 </script>
 
-<div class="page">
+<div class="page narrow" class:setup>
   {#if setup}
     <div class="welcome">
       <img src="/icon.svg" alt="" width="56" height="56" />
@@ -145,7 +145,8 @@
 
     <details class="card group advanced" open={setup ? !toolsOk : undefined}>
       <summary
-        ><h2>Advanced</h2>
+        ><span class="chevron"><Icon name="chevron" size={16} /></span>
+        <h2>Advanced</h2>
         <span class="muted">The launcher's tools. It ships with its own.</span></summary
       >
       <PathField
@@ -242,6 +243,15 @@
 </div>
 
 <style>
+  /* The first run is one short task: it sits in the middle of the window, and scrolls when it grows. */
+  .page.setup > :first-child {
+    margin-top: auto;
+  }
+
+  .page.setup > :last-child {
+    margin-bottom: auto;
+  }
+
   .welcome {
     display: flex;
     gap: 16px;
@@ -260,16 +270,6 @@
   .body {
     display: grid;
     gap: 14px;
-    max-width: 860px;
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  .page > .heading {
-    max-width: 860px;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
   }
 
   .group {
@@ -304,8 +304,8 @@
 
   summary {
     display: flex;
-    align-items: baseline;
-    gap: 12px;
+    align-items: center;
+    gap: 10px;
     cursor: pointer;
     list-style: none;
   }
@@ -314,13 +314,18 @@
     display: none;
   }
 
-  summary::before {
-    content: "▸";
+  .chevron {
+    display: grid;
     color: var(--muted);
+    transition: transform 0.18s cubic-bezier(0.2, 0.8, 0.2, 1);
   }
 
-  details[open] summary::before {
-    content: "▾";
+  details[open] .chevron {
+    transform: rotate(90deg);
+  }
+
+  summary:hover .chevron {
+    color: var(--text);
   }
 
   .advanced[open] {
@@ -341,9 +346,7 @@
     display: flex;
     gap: 8px;
     align-items: center;
-    max-width: 860px;
-    width: 100%;
-    margin: 12px auto 0;
+    margin-top: 12px;
     padding-top: 12px;
     border-top: 1px solid var(--line);
   }

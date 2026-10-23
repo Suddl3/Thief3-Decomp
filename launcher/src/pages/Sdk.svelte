@@ -142,7 +142,7 @@
   }
 
   .setting h3 {
-    font-family: var(--sans);
+    font-family: var(--font-ui);
     font-size: 14px;
     display: flex;
     gap: 8px;

@@ -133,7 +133,7 @@
           />
           <div class="grow body">
             <div class="title">
-              <h3>{p.name}</h3>
+              <h3 class="row-title">{p.name}</h3>
               {#if p.version}<span class="faint version">{p.version}</span>{/if}
             </div>
             <p class="muted desc">{p.description ?? listText(p.authors)}</p>
@@ -187,7 +187,7 @@
             onchange={(on) => setLooseEnabled(m.name, on)}
           />
           <div class="grow body">
-            <div class="title"><h3>{m.name}</h3></div>
+            <div class="title"><h3 class="row-title">{m.name}</h3></div>
             <p class="faint desc">A DLL in System\mods</p>
           </div>
           <span class="kind loose">DLL</span>

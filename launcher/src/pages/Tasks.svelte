@@ -168,7 +168,7 @@
     padding: 12px 14px;
     overflow: auto;
     background: #0b0c0e;
-    font: 12px/1.55 var(--mono);
+    font: 12px/1.55 var(--font-mono);
     color: #cfcabe;
     white-space: pre-wrap;
     overflow-wrap: anywhere;

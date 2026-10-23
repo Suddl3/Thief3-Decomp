@@ -16,6 +16,8 @@
     "tauri": "node scripts/tauri.js"
   },
   "dependencies": {
+    "@fontsource/barlow": "^5.3.0",
+    "@fontsource/grenze": "^5.3.0",
     "@tauri-apps/api": "^2.12.4",
     "@tauri-apps/plugin-dialog": "^2.8.3",
     "@tauri-apps/plugin-opener": "^2.7.2"

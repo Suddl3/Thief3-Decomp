@@ -53,7 +53,7 @@
 {#if app.modsTab === "maps"}
   <Maps />
 {:else}
-  <div class="page">
+  <div class="page" class:narrow={app.modsTab === "installed"}>
     <ModsTabs />
     {#if app.modsTab === "installed"}
       <div class="page-head">

@@ -84,7 +84,6 @@
 <div class="page">
   <section class="hero card">
     <div class="title">
-      <p class="eyebrow">Ion Storm · 2004</p>
       <h1>Thief: Deadly Shadows</h1>
       <ul class="steps">
         <li class:done={game?.ok}><Icon name={game?.ok ? "check" : "x"} size={14} />Game found</li>
@@ -132,17 +131,9 @@
     min-width: 0;
   }
 
-  .eyebrow {
-    color: var(--accent);
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    font-size: 11.5px;
-  }
-
   h1 {
-    font-size: 34px;
-    line-height: 1.2;
-    margin-top: 2px;
+    font-size: 44px;
+    line-height: 1.05;
     text-shadow: 0 2px 18px #000a;
   }
 

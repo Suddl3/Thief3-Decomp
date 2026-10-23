@@ -84,7 +84,7 @@
     background: #0b0c0e;
     border: 1px solid var(--line);
     border-radius: var(--radius-sm);
-    font: 12px/1.55 var(--mono);
+    font: 12px/1.55 var(--font-mono);
     color: #c9c4b8;
     overflow: auto;
     white-space: pre-wrap;

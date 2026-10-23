@@ -71,7 +71,7 @@
 <div class="field card">
   <div class="head">
     <div class="grow">
-      <h3>
+      <h3 class="row-title">
         {label}
         {#if optional}<span class="faint opt">optional</span>{/if}
       </h3>
@@ -137,7 +137,7 @@
   }
 
   .opt {
-    font-family: var(--sans);
+    font-family: var(--font-ui);
     font-size: 12px;
     font-weight: 400;
     margin-left: 6px;

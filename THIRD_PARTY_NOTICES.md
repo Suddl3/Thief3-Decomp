@@ -114,6 +114,19 @@ tools such as `cargo-license` and `license-checker` list them all.
 The WebView2 runtime the launcher uses on Windows is part of Windows and is
 not distributed with it.
 
+### Fonts
+
+The launcher bundles two typefaces, through the `@fontsource/grenze` and
+`@fontsource/barlow` packages, both under the
+[SIL Open Font License 1.1](https://openfontlicense.org/):
+
+- **Grenze**, Copyright 2017 The Grenze Project Authors
+  (<https://github.com/Omnibus-Type/Grenze>).
+- **Barlow**, Copyright 2017 The Barlow Project Authors
+  (<https://github.com/jpt/barlow>).
+
+The license text ships with each package (`node_modules/@fontsource/*/LICENSE`).
+
 ## Used to build, not distributed
 
 These tools are used by the build and by CI but are not part of any file we

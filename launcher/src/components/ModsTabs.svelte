@@ -29,7 +29,7 @@
 <style>
   .tabs {
     display: inline-flex;
-    align-self: flex-start;
+    align-self: center;
     gap: 2px;
     padding: 4px;
     margin-bottom: 16px;

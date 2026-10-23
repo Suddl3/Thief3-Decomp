@@ -464,7 +464,7 @@
     place-items: center;
     border: 1px solid var(--line-2);
     color: var(--muted);
-    font-family: var(--serif);
+    font-family: var(--font-display);
   }
 
   .stage.done .num {

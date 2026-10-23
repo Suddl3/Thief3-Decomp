@@ -103,6 +103,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fontsource/barlow@npm:^5.3.0":
+  version: 5.3.0
+  resolution: "@fontsource/barlow@npm:5.3.0"
+  checksum: 10c0/2efe5abb3dac2ef2eb3ae9a3fd5acdc6955daf85efc1b5439081003e2d67ea90d62aae1d54fd1dcf6fc0eccfc815174bb77e70120a4973c0142431827d0b9c6d
+  languageName: node
+  linkType: hard
+
+"@fontsource/grenze@npm:^5.3.0":
+  version: 5.3.0
+  resolution: "@fontsource/grenze@npm:5.3.0"
+  checksum: 10c0/6fe1484d0b668addd743c3219f4612e75681b9749089ae412abdfbee994ec8ad1ba88bc9467097cfcc053e0f46001fe830a8ba08bb4f3454b4e49da923573735
+  languageName: node
+  linkType: hard
+
 "@humanfs/core@npm:^0.19.2":
   version: 0.19.2
   resolution: "@humanfs/core@npm:0.19.2"
@@ -2230,6 +2244,8 @@ __metadata:
   resolution: "t3sdk-launcher@workspace:."
   dependencies:
     "@eslint/js": "npm:^10.0.1"
+    "@fontsource/barlow": "npm:^5.3.0"
+    "@fontsource/grenze": "npm:^5.3.0"
     "@sveltejs/vite-plugin-svelte": "npm:^7.3.1"
     "@tauri-apps/api": "npm:^2.12.4"
     "@tauri-apps/cli": "npm:^2.12.3"

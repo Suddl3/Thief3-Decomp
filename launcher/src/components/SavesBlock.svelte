@@ -137,7 +137,7 @@
   }
 
   .summary strong {
-    font-family: var(--serif);
+    font-family: var(--font-display);
     font-size: 17px;
   }
 
