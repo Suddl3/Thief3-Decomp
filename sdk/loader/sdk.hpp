@@ -2,7 +2,7 @@
 
 #include <windows.h>
 
-#define T3SDK_VERSION "0.1.0"
+#define T3SDK_VERSION "0.3.0"
 
 namespace t3sdk {
 
