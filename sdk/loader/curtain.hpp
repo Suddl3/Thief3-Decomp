@@ -1,7 +1,5 @@
 #pragma once
 
-#include <windows.h>
-
 // The level-change curtain. T3 restarts for every level change: the outgoing
 // game draws the next level's loading screen and ends, and about five seconds
 // later (while the game's launcher starts it again) the incoming game draws
@@ -11,6 +9,9 @@
 // helper process (rundll32 on this DLL's T3SDK_Curtain export), and the
 // incoming game lifts it once its own loading screen is up; the helper then
 // hands it the foreground.
+
+#include <windows.h>
+
 namespace t3sdk::curtain {
 
 // Copies what `monitor` shows (the loading screen the game just presented)
