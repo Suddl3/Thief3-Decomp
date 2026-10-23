@@ -450,6 +450,13 @@ multipliers come from `Default.ini` `[Difficulty]`
 | quick save: the name settled, `cString` at `[esp+0x14]` | `0x10B17CE0` | code hook (`quicksave-cycle`) |
 | quick load: the name settled, `cString` at `[esp+0x14]` | `0x10B181AA` | code hook (`quicksave-cycle`) |
 | `FormatHexId`: a save's 20-byte ID as dashed hex, its folder name | `0x10D64D80` | static |
+| save loader: a `LOADGAME:` level opens `<save>/<Level>.wgs` through the save reader; a reader of size 0 falls back to the map itself (a fresh start) | `0x10B090C0` | static |
+| save reader (archive over the unpacked level), `thiscall(path, loading)` | `0x10B0EE30` | static |
+| `.wgs` check: the file id, the block sizes and the SHA-1 of the blocks and the header (docs/assets.md, "Saved games") | `0x10D4B230` | static |
+| `.wgs` unpack: 0x4000-byte blocks of LZO1X into a temporary file | `0x10D4BB10` | static |
+| SHA-1 init / update / final | `0x10D64900` / `0x10D64D60` / `0x10D64A00` | static |
+| `ULevelBase::Serialize`: a save load (`ar[0xD] & 0x200`) reopens the map and reads its static gamesys data at the summary's offset 0x24 | `0x109753E0` | static |
+| gamesys object system serialise (`this+0xC` the item count) / read the items | `0x10BA0570` / `0x10B9F870` | static |
 
 ## Options (`options.ini`)
 
@@ -518,7 +525,7 @@ Other settings read through `Config`: `T3PlayerAnims.ini`'s animation
 sections (`Name`, `Speed`, `Looping`, ...; the idle ones are `[MainIdle]`,
 `[MainIdleCrouching]`, `[MainIdle_PS]`, `[BodyCarryIdle]`,
 `[BodyCarryIdleCrouching]`); `Default.ini` `[Physics] WorldGravityZ`
-(-514.96, Unreal units/s², Havok) and `[PointPhysics] Gravity` (-32 ft/s²,
+(-514.96, Unreal units/sÂ², Havok) and `[PointPhysics] Gravity` (-32 ft/sÂ²,
 flinders), `[T3Settings] WalkMultiplier` (0.5) and `CreepMultiplier` (0.33).
 
 `System/T3Camera.ini` is not read through `Config`: it lists camera modes as
