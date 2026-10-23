@@ -26,7 +26,7 @@ void Class_10BBAB80::FUN_10bbab80()
 {
     float Position[3];
     float Out;
-    if (((Class_1098E330*)Unknown08->FUN_10c7d570())->FUN_1098e330(0x1007b8, (int*)&Out) && Out >= 0.0f)
+    if (((Class_1098E330*)Unknown08->FUN_10c7d570())->GetPropertyValue(0x1007b8, (int*)&Out) && Out >= 0.0f)
     {
         DAT_10f35dec->Unknown0B0->Virtual2(Unknown08->FUN_10c7d570(), Position);
         Unknown288 = Position[1];

@@ -23,8 +23,8 @@ void Class_10AC98B0::FUN_10ac9840()
     Class_10AC14F0* Camera = DAT_10f35dec->Unknown10;
     float First = 75.0f;
     float Second = 60.0f;
-    DAT_10f35dec->Unknown08->FUN_1098e330(0x100534, (int*)&First);
-    DAT_10f35dec->Unknown08->FUN_1098e330(0x100777, (int*)&Second);
+    DAT_10f35dec->Unknown08->GetPropertyValue(0x100534, (int*)&First);
+    DAT_10f35dec->Unknown08->GetPropertyValue(0x100777, (int*)&Second);
     Camera->FUN_10ac14f0(First, 0, Second, true);
     FUN_10ac9570();
 }

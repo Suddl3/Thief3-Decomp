@@ -24,7 +24,7 @@ public:
 class Class_1098E330
 {
 public:
-    int FUN_1098e330(int Id, int* Out);
+    int GetPropertyValue(int Id, int* Out);
 };
 
 // Game/Class_10B1B8A0.h declares FUN_10b1b220 but not the two methods below: a copy with them.
@@ -52,7 +52,7 @@ void Class_10B1B8A0::FUN_10b1b220(int p1, int p2)
     if (Mode == 3)
     {
         FName Name;
-        if (((Class_1098E330*)Sub)->FUN_1098e330(0x10000b0, (int*)&Name) != 0)
+        if (((Class_1098E330*)Sub)->GetPropertyValue(0x10000b0, (int*)&Name) != 0)
         {
             FString Text(*Name.FUN_10af9730());
             FUN_10b1b660(&Text, p1);

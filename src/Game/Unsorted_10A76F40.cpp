@@ -20,5 +20,5 @@ public:
 // FUNCTION: 0x10A76F40 ??0Class_10E6B610@@QAE@AAVClass_1098E330@@@Z
 Class_10E6B610::Class_10E6B610(Class_1098E330& A)
 {
-    A.FUN_1098e330(0x100272, &Unknown04);
+    A.GetPropertyValue(0x100272, &Unknown04);
 }

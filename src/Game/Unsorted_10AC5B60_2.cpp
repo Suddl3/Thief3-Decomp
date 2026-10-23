@@ -127,7 +127,7 @@ int cVertexBufferInfo::GetField1B0()
 int __stdcall FUN_10ac84b0(Class_1098E330* Obj)
 {
     int Value = 0;
-    Obj->FUN_1098e330(0x8000ca, &Value);
+    Obj->GetPropertyValue(0x8000ca, &Value);
     return Value;
 }
 
@@ -135,7 +135,7 @@ int __stdcall FUN_10ac84b0(Class_1098E330* Obj)
 int __stdcall FUN_10ac84e0(Class_1098E330* Obj)
 {
     int Value = 0;
-    Obj->FUN_1098e330(0x8000cb, &Value);
+    Obj->GetPropertyValue(0x8000cb, &Value);
     return Value;
 }
 
@@ -143,7 +143,7 @@ int __stdcall FUN_10ac84e0(Class_1098E330* Obj)
 int __stdcall FUN_10ac8510(Class_1098E330* Obj)
 {
     int Value = 0;
-    Obj->FUN_1098e330(0x80048b, &Value);
+    Obj->GetPropertyValue(0x80048b, &Value);
     return Value;
 }
 
@@ -223,7 +223,7 @@ float Class_10E7007C::FUN_10acc490(int a, int b, int c)
 float __stdcall FUN_10acc4a0(Class_1098E330* Obj, int, int)
 {
     float Value = -1.0f;
-    Obj->FUN_1098e330(0x10058a, (int*)&Value);
+    Obj->GetPropertyValue(0x10058a, (int*)&Value);
     return Value;
 }
 

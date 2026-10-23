@@ -14,6 +14,6 @@ struct Struct_10B8C780
 void Class_10B8C780::FUN_10b8c780(Struct_10B8C780* Param)
 {
     Unknown1C = Param;
-    Param->Unknown04->FUN_1098e330(0x8006b7, (int*)&Param);
+    Param->Unknown04->GetPropertyValue(0x8006b7, (int*)&Param);
     Unknown18 = (int)Param == 1;
 }

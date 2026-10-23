@@ -30,8 +30,8 @@ void Class_10C29220::UpdateTimer()
             {
                 float Y;
                 float X;
-                Obj->FUN_1098e330(0x10077f, (int*)&X);
-                Obj->FUN_1098e330(0x100780, (int*)&Y);
+                Obj->GetPropertyValue(0x10077f, (int*)&X);
+                Obj->GetPropertyValue(0x100780, (int*)&Y);
                 m_TimeLeft = (Y - X) * appFrand() + X;
                 if (m_TimeLeft <= DAT_10eafbdc)
                 {

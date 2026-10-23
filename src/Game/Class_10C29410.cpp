@@ -23,7 +23,7 @@ void Class_10C29410::Start(int Value)
     double Scale = m_Random->GetRandomInRange();
     m_EndTime = GetTimeSeconds() + Scale;
     float Local = 0.0f;
-    ((Class_1098E330*)Value)->FUN_1098e330(0x100790, (int*)&Local);
+    ((Class_1098E330*)Value)->GetPropertyValue(0x100790, (int*)&Local);
     ((Class_10C292E0*)Value)->FUN_10c292e0(0x40100781, GetTimeSeconds() + Local);
     Unknown1C = m_Random->RollChance();
     if (!Unknown1C)

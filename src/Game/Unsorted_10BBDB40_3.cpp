@@ -9,6 +9,6 @@ float Class_10BBDC30::FUN_10bbdbc0(int A)
 {
     float Result = 0.0f;
     if (FUN_10bbd870(A, &Result) != true)
-        ((Class_1098E330*)Unknown0C)->FUN_1098e330(A, (int*)&Result);
+        ((Class_1098E330*)Unknown0C)->GetPropertyValue(A, (int*)&Result);
     return Result;
 }

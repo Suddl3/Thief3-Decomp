@@ -31,7 +31,7 @@ int Class_10E6D1D8::FUN_10a9cf40(int A, Object_10A9CF40* B, int C)
     int Position[3] = { 0, 0, 0 };
     Actor->FUN_1098e3d0(0x80017, Position);
     int Id = 0;
-    Actor->FUN_1098e330(0x800526, &Id);
+    Actor->GetPropertyValue(0x800526, &Id);
     DAT_10f35dec->Unknown7C->FUN_10a6ae00(Actor, Id);
     return 1;
 }

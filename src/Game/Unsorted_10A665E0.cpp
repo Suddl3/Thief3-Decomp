@@ -5,7 +5,7 @@
 class Class_1098E330
 {
 public:
-    int FUN_1098e330(int A, int* B);
+    int GetPropertyValue(int A, int* B);
 };
 
 class Class_1098E3D0 : public Class_1098E330
@@ -74,7 +74,7 @@ public:
 void __stdcall FUN_10a66b00(Class_10992030* Obj)
 {
     int Flag = 0;
-    Obj->FUN_1098e330(0x80064b, &Flag);
+    Obj->GetPropertyValue(0x80064b, &Flag);
     if (Flag)
     {
         int Value = 1;

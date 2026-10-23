@@ -91,7 +91,7 @@ void ASpellProjectile::FUN_10adb3a0()
 bool FUN_10abe100(Class_1098E330* Obj)
 {
     int Value = 0;
-    Obj->FUN_1098e330(0x800863, &Value);
+    Obj->GetPropertyValue(0x800863, &Value);
     return Value == 1;
 }
 
@@ -99,7 +99,7 @@ bool FUN_10abe100(Class_1098E330* Obj)
 bool FUN_10abe130(Class_1098E330* Obj)
 {
     int Value = 0;
-    Obj->FUN_1098e330(0x800864, &Value);
+    Obj->GetPropertyValue(0x800864, &Value);
     return Value == 1;
 }
 

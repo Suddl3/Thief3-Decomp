@@ -36,7 +36,7 @@ float Class_10E70150::FUN_10ace280(int A, int B, Class_1098E330* Obj)
     if (Obj)
     {
         float Value = 0.0f;
-        Obj->FUN_1098e330(0x100588, (int*)&Value);
+        Obj->GetPropertyValue(0x100588, (int*)&Value);
         return Value;
     }
     return DAT_10e499a4;

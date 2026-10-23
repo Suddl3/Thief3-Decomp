@@ -16,7 +16,7 @@ class Class_10B21820;
 class Class_1098E330
 {
 public:
-    int FUN_1098e330(int Id, int* Out);
+    int GetPropertyValue(int Id, int* Out);
 
     char Unknown00[0x440];
     Class_10B21820* Unknown440;
@@ -49,7 +49,7 @@ void Class_10B32750::FUN_10b31c40(Class_1098E330* A)
     if (Want != Unknown18)
     {
         float Delta = 0.0f;
-        A->FUN_1098e330(0x100505, (int*)&Delta);
+        A->GetPropertyValue(0x100505, (int*)&Delta);
         float Step = Delta * A->Unknown454;
         if (Unknown18 > Want)
         {

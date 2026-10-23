@@ -27,7 +27,7 @@ public:
     virtual void Virtual104();
     virtual int Virtual105();
 
-    int FUN_1098e330(int Id, int* Out);
+    int GetPropertyValue(int Id, int* Out);
     Class_10970890* FUN_10991eb0();
     int FUN_10b22000();
     int FUN_109766a0(int A, int B);
@@ -64,7 +64,7 @@ bool Class_109E2E70::FUN_109e2f00(int Index, int Param3, cIntArray* Out, bool Fl
         if (!Flag)
         {
             int Key;
-            if (!Node->Unknown08->FUN_1098e330(0x8004ef, &Key))
+            if (!Node->Unknown08->GetPropertyValue(0x8004ef, &Key))
                 Take = false;
             else
                 Take = Key == 1;

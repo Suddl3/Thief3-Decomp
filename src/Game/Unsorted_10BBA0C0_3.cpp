@@ -51,7 +51,7 @@ int Class_10BB8360::FUN_10bbac00(int Type)
     default:
         return -1;
     }
-    if (((Class_1098E330*)Unknown08->FUN_10dbd510()->GetUnknown08())->FUN_1098e330(Id, &Type))
+    if (((Class_1098E330*)Unknown08->FUN_10dbd510()->GetUnknown08())->GetPropertyValue(Id, &Type))
         return Type;
     return -1;
 }

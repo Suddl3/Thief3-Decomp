@@ -10,7 +10,7 @@ class Class_1098E330
 public:
     virtual void Virtual0();
 
-    void FUN_1098e330(int Id, int* Out);
+    void GetPropertyValue(int Id, int* Out);
 };
 
 class APatrolPoint : public Class_1098E330
@@ -213,7 +213,7 @@ int APatrolPoint::FUN_10bc2e20(int Index)
         return 0;
     int Base = Index;
     Index = 0;
-    FUN_1098e330(Base + 0x2001da, &Index);
+    GetPropertyValue(Base + 0x2001da, &Index);
     return Index;
 }
 

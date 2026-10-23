@@ -41,7 +41,7 @@ class Class_1098E330 : public AActor
 {
 public:
 
-    int FUN_1098e330(int Id, int* Out);
+    int GetPropertyValue(int Id, int* Out);
     Class_10970890* FUN_10991eb0();
     int FUN_10b22000();
     int FUN_10ad2700();

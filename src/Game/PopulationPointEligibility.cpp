@@ -57,7 +57,7 @@ bool FUN_10a491b0(void* A)
         int Level = DAT_10f35dec->Unknown08->Unknown98->FUN_10974340();
         if (Level)
         {
-            ((Class_1098E330*)Level)->FUN_1098e330(0x10064C, (int*)&DAT_10f3a054);
+            ((Class_1098E330*)Level)->GetPropertyValue(0x10064C, (int*)&DAT_10f3a054);
             DAT_10f3a054 *= 16.0f;
             DAT_10f3a058 = true;
             Ready = true;

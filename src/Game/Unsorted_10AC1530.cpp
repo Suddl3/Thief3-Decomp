@@ -16,6 +16,6 @@ float GetMaximum()
 {
     float Value = 75.0f;
     if (DAT_10f35dec->Unknown08)
-        DAT_10f35dec->Unknown08->FUN_1098e330(0x100534, (int*)&Value);
+        DAT_10f35dec->Unknown08->GetPropertyValue(0x100534, (int*)&Value);
     return Value;
 }

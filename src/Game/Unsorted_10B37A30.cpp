@@ -71,7 +71,7 @@ void Class_10B37DE0::AddPathPoint(int A, int B, Struct_10B37DE0_List* C)
     C->Last = Point;
     C->Count++;
     int Flag = 0;
-    Point->FUN_1098e330(0x8001f2, &Flag);
+    Point->GetPropertyValue(0x8001f2, &Flag);
     if (Flag != 0)
     {
         Point->FUN_1098e3d0(0x2047b, &Unknown04);

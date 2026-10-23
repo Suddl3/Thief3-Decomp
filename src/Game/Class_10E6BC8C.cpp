@@ -63,7 +63,7 @@ int Class_10E6BC8C::FUN_10a76e10(int A, Object_10A76E10* B, float C)
     {
         DAT_10f46da0->Virtual5(0x6d, A, -1, 0);
         int Key;
-        if (((Class_1098E330*)A)->FUN_1098e330(0x800703, &Key) && Key != 0)
+        if (((Class_1098E330*)A)->GetPropertyValue(0x800703, &Key) && Key != 0)
         {
             ((APawn*)A)->FUN_10a6ea30(0x40800056, 1);
             return 1;

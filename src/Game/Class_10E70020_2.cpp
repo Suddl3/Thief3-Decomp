@@ -19,7 +19,7 @@ int Class_10E70020::FUN_10acc350(int A, int B, float C)
         break;
     case 4:
     {
-        Obj->FUN_1098e330(0x100201, &Key);
+        Obj->GetPropertyValue(0x100201, &Key);
         int Value = 1;
         Obj->FUN_1098e3d0(0x800271, &Value);
         Obj->FUN_1098e3d0(0x100272, &Key);

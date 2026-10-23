@@ -12,7 +12,7 @@ extern Class_10FF667C* DAT_10ff667c;
 float Class_10C1F600::FUN_10c1f600()
 {
     float Value = 0.0f;
-    if (!((Class_1098E330*)Unknown04->FUN_10c7d570())->FUN_1098e330(0x40100302, (int*)&Value))
+    if (!((Class_1098E330*)Unknown04->FUN_10c7d570())->GetPropertyValue(0x40100302, (int*)&Value))
         return DAT_10ff667c->Unknown9C;
     return Value * DAT_10ff667c->Unknown9C;
 }

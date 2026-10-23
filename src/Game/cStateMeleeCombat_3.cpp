@@ -29,10 +29,10 @@ int cStateMeleeCombat::FUN_10bf6c70()
     int A = 0;
     int B = 0;
     Class_10C7D570* Obj = Unknown04->Unknown08;
-    if (((Class_1098E330*)((Class_10AAF570*)Obj->FUN_10dbd510())->GetLinkType())->FUN_1098e330(0x2007bf, &A))
+    if (((Class_1098E330*)((Class_10AAF570*)Obj->FUN_10dbd510())->GetLinkType())->GetPropertyValue(0x2007bf, &A))
     {
         Obj = Unknown04->Unknown08;
-        if (((Class_1098E330*)((Class_10AAF570*)Obj->FUN_10dbd510())->GetLinkType())->FUN_1098e330(0x2007c0, &B))
+        if (((Class_1098E330*)((Class_10AAF570*)Obj->FUN_10dbd510())->GetLinkType())->GetPropertyValue(0x2007c0, &B))
         {
             if (A - B + 1 > 0)
                 return FUN_10af3a20() % (A - B + 1) + B;

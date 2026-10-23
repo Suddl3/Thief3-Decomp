@@ -28,7 +28,7 @@ public:
     virtual void Virtual104();
     virtual int Virtual105();
 
-    int FUN_1098e330(int Id, int* Out);
+    int GetPropertyValue(int Id, int* Out);
     Class_10970890* FUN_10991eb0();
     int FUN_10b22000();
     float FUN_10992b70(float Value);
@@ -86,12 +86,12 @@ float AAIPawn::GetLightLevel()
     float Cached;
     float LastUpdate;
     LastUpdate = 0.0f;
-    FUN_1098e330(0x100584, (int*)&LastUpdate);
+    GetPropertyValue(0x100584, (int*)&LastUpdate);
     Now = (float)TimeManager::Instance()->GetGameTime();
     if (Now < LastUpdate + 0.1f)
     {
         Cached = 0.0f;
-        FUN_1098e330(0x100583, (int*)&Cached);
+        GetPropertyValue(0x100583, (int*)&Cached);
         return Cached;
     }
     else

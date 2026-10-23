@@ -67,7 +67,7 @@ bool Class_10A707F0::FUN_10a707f0(Class_10B06220* A, int B, int C)
     if (Found)
     {
         int Key = 0;
-        Found->Unknown0E8->FUN_1098e330(0x800523, &Key);
+        Found->Unknown0E8->GetPropertyValue(0x800523, &Key);
         if (Key != 0)
         {
             FUN_10a6fe10(A, B, C);

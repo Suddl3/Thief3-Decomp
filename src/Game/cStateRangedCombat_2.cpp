@@ -101,7 +101,7 @@ void cStateRangedCombat::FUN_10bf2f70(int A)
         if (Obj)
         {
             int Value = 0;
-            Obj->FUN_1098e330(0x8007b1, &Value);
+            Obj->GetPropertyValue(0x8007b1, &Value);
             Found = Value != 0;
         }
         if (Found)

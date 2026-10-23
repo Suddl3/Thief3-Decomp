@@ -20,7 +20,7 @@ void Class_10C0E910::FUN_10c0e910(FVector* Pos, cIntArray* Out)
     {
         Class_1098E330* Obj = Unknown18[i];
         int Found = 0;
-        Obj->FUN_1098e330(0x800465, &Found);
+        Obj->GetPropertyValue(0x800465, &Found);
         if (Found)
         {
             if (((cVolume*)Obj)->ContainsPoint(*Pos))

@@ -29,6 +29,6 @@ float Class_10BBDC30::FUN_10bbdad0(int A)
 {
     float Result = 0.0f;
     if (FUN_10bbd870(A, &Result) != true)
-        Unknown04->FUN_1098e330(A, (int*)&Result);
+        Unknown04->GetPropertyValue(A, (int*)&Result);
     return Result;
 }

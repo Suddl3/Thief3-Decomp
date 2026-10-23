@@ -79,7 +79,7 @@ float Class_10BBA080::GetRandomInRange()
 // FUNCTION: 0x10BBA080 ?FUN_10bba080@Class_10BBA080@@QAEHPAVClass_1098E330@@@Z
 int Class_10BBA080::FUN_10bba080(Class_1098E330* Obj)
 {
-    Obj->FUN_1098e330(0x48000782, (int*)&Obj);
+    Obj->GetPropertyValue(0x48000782, (int*)&Obj);
     if (FUN_10bb8c60() <= 1)
         return ((int)Obj & 1) > 0;
     return ((int)Obj & 2) > 0;

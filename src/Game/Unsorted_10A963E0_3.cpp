@@ -148,7 +148,7 @@ int Class_10E6CEC4::FUN_10a96e20(int A, Class_10A96E20_Param2* B, Class_10A96E20
         for (Struct_10A96E20_Node* Node = Result->Unknown08->Next; Node != Result->Unknown08; Node = Node->Next)
         {
             int Found;
-            if (Node->Unknown08->FUN_1098e330(0x40800056, &Found) == 0 || Found == 0)
+            if (Node->Unknown08->GetPropertyValue(0x40800056, &Found) == 0 || Found == 0)
                 DAT_10f35dec->Unknown1C->Virtual1(Node->Unknown08, 0, 0);
         }
     }

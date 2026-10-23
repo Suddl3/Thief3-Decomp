@@ -82,7 +82,7 @@ char Class_10E960D8::FUN_10be42d0()
         return true;
     int Value = 0;
     Class_10C7D570* Props = Unknown04->Unknown08;
-    if (!((Class_1098E330*)Props->FUN_10c7d570())->FUN_1098e330(0x4080069f, &Value) || !Value)
+    if (!((Class_1098E330*)Props->FUN_10c7d570())->GetPropertyValue(0x4080069f, &Value) || !Value)
     {
         int State = Unknown04->Unknown08->FUN_10dbd510(0x4200057f)->FUN_10bbdb80();
         if (State < 0 || State > 1)

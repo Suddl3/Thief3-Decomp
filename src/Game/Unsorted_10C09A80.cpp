@@ -17,7 +17,7 @@ Class_10C09B60::~Class_10C09B60()
 bool __stdcall FUN_10c09bf0(Class_1098E330* Obj, int* Other)
 {
     int Value = 0;
-    if (Obj->FUN_1098e330(0x800182, &Value) && Value)
+    if (Obj->GetPropertyValue(0x800182, &Value) && Value)
         return true;
     bool Positive = *Other > 0;
     return Positive;

@@ -12,7 +12,7 @@ class Class_109BC840;
 class Class_1098E330
 {
 public:
-    int FUN_1098e330(int Id, int* Out);
+    int GetPropertyValue(int Id, int* Out);
 };
 
 class FName
@@ -31,7 +31,7 @@ int* Class_10BAA580::GetCachedIndex(int* Out)
     {
         FName Name;
         Name.Value = 0;
-        if ((*(Class_1098E330**)&((Class_10C7D570*)this)->Unknown00[0x34])->FUN_1098e330(0x10005d0, (int*)&Name.Value))
+        if ((*(Class_1098E330**)&((Class_10C7D570*)this)->Unknown00[0x34])->GetPropertyValue(0x10005d0, (int*)&Name.Value))
         {
             cString Str = Name.FUN_10af9730();
             int Index;

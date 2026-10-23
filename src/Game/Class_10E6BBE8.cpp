@@ -34,11 +34,11 @@ int Class_10E6BBE8::FUN_10a76490(int A, int B, int C)
     Class_1098E330* Obj = (Class_1098E330*)A;
     int Key;
     int Local;
-    Obj->FUN_1098e330(0x80028b, &Key);
+    Obj->GetPropertyValue(0x80028b, &Key);
     if (Key != 0)
     {
         ((APawn*)Obj)->FUN_10a6ea30(0x80028b, 0);
-        Obj->FUN_1098e330(0x2047b, &Local);
+        Obj->GetPropertyValue(0x2047b, &Local);
         FUN_10a759b0((int)Obj, Local);
         return 1;
     }
@@ -51,13 +51,13 @@ void Class_10E6BBE8::FUN_10a76500(int A, int B, int C)
 {
     Class_1098E3D0* Obj = (Class_1098E3D0*)A;
     int Key;
-    Obj->FUN_1098e330(0x80028b, &Key);
+    Obj->GetPropertyValue(0x80028b, &Key);
     if (Key != 0)
     {
         return;
     }
     int Value;
-    if (!Obj->FUN_1098e330(0x20029c, &Value))
+    if (!Obj->GetPropertyValue(0x20029c, &Value))
     {
         return;
     }
@@ -73,7 +73,7 @@ void Class_10E6BBE8::FUN_10a76500(int A, int B, int C)
     }
     if (C == 0 || !((UObject*)C)->IsA(FUN_109015c0()))
     {
-        Obj->FUN_1098e330(0x2047b, &C);
+        Obj->GetPropertyValue(0x2047b, &C);
     }
     FUN_10a759b0((int)Obj, C);
 }
@@ -83,11 +83,11 @@ void Class_10E6BBE8::FUN_10a765b0(int A, int B)
 {
     Class_1098E3D0* Obj = (Class_1098E3D0*)A;
     int Key;
-    Obj->FUN_1098e330(0x80028b, &Key);
+    Obj->GetPropertyValue(0x80028b, &Key);
     if (Key != 0)
     {
         int Value;
-        if (Obj->FUN_1098e330(0x20029d, &Value))
+        if (Obj->GetPropertyValue(0x20029d, &Value))
         {
             Value = Value - B;
             if (Value < 0)

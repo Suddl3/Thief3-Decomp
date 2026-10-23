@@ -8,6 +8,6 @@
 int Class_1098E330::FUN_10b22000()
 {
     int Value = 0;
-    FUN_1098e330(0x800847, &Value);
+    GetPropertyValue(0x800847, &Value);
     return Value;
 }

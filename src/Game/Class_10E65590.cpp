@@ -34,7 +34,7 @@ public:
 void Class_10E65590::FUN_10a1f950(Class_10AE7460* Obj)
 {
     int Index;
-    if (Obj->UnknownE8->FUN_1098e330(0x200467, &Index))
+    if (Obj->UnknownE8->GetPropertyValue(0x200467, &Index))
     {
         if (!Obj->FUN_10ae7460())
         {

@@ -61,7 +61,7 @@ void Class_10E6BD18::FUN_10a790e0(AActor* Actor, Class_10E6CE28* Link, int A, in
     UDeathSpawnLinkDataObject* Data = Cast<UDeathSpawnLinkDataObject>((UObject*)Link->GetLinkedObject());
     void* Obj = ((Class_1096D780*)Actor)->Get();
     int Key;
-    ((Class_1098E330*)Actor)->FUN_1098e330(0x2047b, &Key);
+    ((Class_1098E330*)Actor)->GetPropertyValue(0x2047b, &Key);
     for (int i = 0; i < Data->m_numberToSpawn; i++)
     {
         FVector Loc = Actor->Location;

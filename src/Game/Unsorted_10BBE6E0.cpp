@@ -130,7 +130,7 @@ Class_10BBE6E0_UnknownC0* FUN_10bbe6e0(Class_10BBE5B0_Param* A, bool B)
                     if (!B || Node->UnknownC0->Virtual85() != 1)
                     {
                         int Out = 0;
-                        if (!((Class_1098E330*)Node->UnknownC0)->FUN_1098e330(0x40800056, &Out) || Out == 0)
+                        if (!((Class_1098E330*)Node->UnknownC0)->GetPropertyValue(0x40800056, &Out) || Out == 0)
                         {
                             Class_10BBE6E0_UnknownC0* Obj = Node->UnknownC0;
                             float DistX = Target->Location.X - Obj->Location.X;

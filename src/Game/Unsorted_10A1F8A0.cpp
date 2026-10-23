@@ -62,7 +62,7 @@ int __stdcall FUN_10a1f8a0(Class_1098E330* A)
     if (A)
     {
         int Value;
-        if (A->FUN_1098e330(0x200478, &Value))
+        if (A->GetPropertyValue(0x200478, &Value))
             return Value;
         Class_10970890* C = A->FUN_10991eb0();
         if (C && C->FUN_10970890())

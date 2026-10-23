@@ -50,6 +50,6 @@ bool Class_10C07220::FUN_10c07220(Class_10C070C0* Obj)
         Unknown5C[4] = (short)Result.Unknown10;
     else
         Unknown5C[4] = 0;
-    ((Class_1098E330*)Obj)->FUN_1098e330(0x200849, &Unknown0A4);
+    ((Class_1098E330*)Obj)->GetPropertyValue(0x200849, &Unknown0A4);
     return true;
 }

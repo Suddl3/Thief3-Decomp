@@ -20,7 +20,7 @@ void ClearDuplicateIds(Class_10BBF690_Param** Obj, int Id)
     {
         Class_1098E3D0* Item = (*Obj)->Unknown20[i];
         int Value = 0;
-        Item->FUN_1098e330(0x200282, &Value);
+        Item->GetPropertyValue(0x200282, &Value);
         if (Value == Id)
         {
             if (!Found)

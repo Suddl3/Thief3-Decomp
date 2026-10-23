@@ -95,7 +95,7 @@ public:
     virtual void Virtual84();
     virtual int Virtual85();
 
-    int FUN_1098e330(int Id, int* Out);
+    int GetPropertyValue(int Id, int* Out);
     Class_10970890* FUN_10991eb0();
     int FUN_10b22000();
 
@@ -141,7 +141,7 @@ bool FUN_10c1a170(Class_10C1A170_Arg* Arg, Struct_10C05A80* Pos, float Radius, C
     if (!Arg->Unknown0C0->Unknown0C0 || Arg->Unknown0C0->Virtual34())
         return false;
     int Value = 0;
-    if (Arg->Unknown0C0->Virtual35() == 0 && Arg->Unknown0C0->FUN_1098e330(0x40800056, &Value) && Value)
+    if (Arg->Unknown0C0->Virtual35() == 0 && Arg->Unknown0C0->GetPropertyValue(0x40800056, &Value) && Value)
         return false;
     if (DistanceSquared3D(Pos, &Arg->Unknown0C0->Unknown2C) > Radius)
         return false;

@@ -23,7 +23,7 @@ float Class_10BBDB40::GetFloat(int A)
 {
     float Result = 0.0f;
     if (FUN_10bbd870(A, &Result) != true)
-        Unknown08->FUN_1098e330(A, (int*)&Result);
+        Unknown08->GetPropertyValue(A, (int*)&Result);
     return Result;
 }
 
@@ -32,6 +32,6 @@ float Class_10BBDB40::FUN_10bbdc80(int A)
 {
     float Result = 0.0f;
     if (FUN_10bbd870(A, &Result) != true)
-        Unknown10->FUN_1098e330(A, (int*)&Result);
+        Unknown10->GetPropertyValue(A, (int*)&Result);
     return Result;
 }

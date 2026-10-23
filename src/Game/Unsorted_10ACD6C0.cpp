@@ -12,9 +12,9 @@
 float Class_10E700D4::FUN_10ace1d0(Class_1098E330* A, int B, Class_1098E330* C)
 {
     float First = 0.0f;
-    A->FUN_1098e330(0x10058b, (int*)&First);
+    A->GetPropertyValue(0x10058b, (int*)&First);
     float Second = 0.0f;
     if (C)
-        C->FUN_1098e330(0x100589, (int*)&Second);
+        C->GetPropertyValue(0x100589, (int*)&Second);
     return Second + First;
 }

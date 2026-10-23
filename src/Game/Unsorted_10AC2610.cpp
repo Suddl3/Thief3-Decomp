@@ -79,7 +79,7 @@ float Class_10AC2E40::GetFraction()
     float Current = m_Current;
     float Max = 75.0f;
     if (DAT_10f35dec->Unknown08)
-        DAT_10f35dec->Unknown08->FUN_1098e330(0x100534, (int*)&Max);
+        DAT_10f35dec->Unknown08->GetPropertyValue(0x100534, (int*)&Max);
     return Current / Max;
 }
 

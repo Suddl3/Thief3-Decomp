@@ -4720,3 +4720,6 @@ field Class_10C48260::Unknown18 m_KeyTraits Insert gets the key's bytes from Unk
 field cCamera::Unknown198 m_ProjectionScaleX Set to half width times projection matrix [0][0] in both SetProjection and SetViewport.
 field cCamera::Unknown19C m_ProjectionScaleY Set to negated half height times projection matrix [1][1] in both SetProjection and SetViewport.
 field Class_1091B3F0::Unknown04 m_Capacity Free frees Items only while it is set, then resets it to 0.
+function 0x10AB70B0 LoadDifficultyMultipliers Reads the gamesys values dif_AISenses and dif_AICombat, maps each to Easy/Normal/Hard/Expert and reads Difficulty_AIVisual_Mult_<level>, _AIAudio_, _AITactile_, _AIHitPoints_, _AICombatSpeed_ ... from [Difficulty] into the object at DAT_10ff667c + 0x98 onward.
+function 0x1098E330 GetPropertyValue Looks a gamesys ID up with 0x10AD3DF0 (low 16 bits index the property table at DAT_10f3eda4 + 8) and copies its value into the out argument through the table entry's vtable +0xB4; bit 0x800000 clears the out value first; callers pass gamesys IDs such as 0x8004EF and 0x800864.
+function 0x10D64D80 FormatHexId Writes the 20 bytes at this as uppercase hex with sprintf("%02X"), a dash after every 4 bytes, into the cString argument; the result names save folders (XXXXXXXX-XXXXXXXX-...).

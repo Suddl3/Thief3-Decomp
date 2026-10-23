@@ -98,7 +98,7 @@ void FUN_10b9c060(AAIPawn* Pawn)
         int Result = ((Class_10AA82E0*)Child)->FUN_10aa82e0();
 
         int Key = 0;
-        if (((Class_1098E330*)Pawn)->FUN_1098e330(0x2047b, &Key))
+        if (((Class_1098E330*)Pawn)->GetPropertyValue(0x2047b, &Key))
         {
             if (Key == DAT_10f35dec->Unknown08)
                 Pawn->FUN_10bc3590(Result);

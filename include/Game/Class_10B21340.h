@@ -7,7 +7,7 @@ class Class_10B21340
 {
 public:
     void FUN_10b21340();
-    int FUN_1098e330(int Id, int* Out);
+    int GetPropertyValue(int Id, int* Out);
 
     char Unknown00[0x400];
     int Unknown400;

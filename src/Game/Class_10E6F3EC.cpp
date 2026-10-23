@@ -93,7 +93,7 @@ void Class_10E6F3EC::FUN_10ab8470(int Key, UObject* Obj, Class_10AB8470* Arg, in
             {
                 if (DAT_10ff667c->Unknown0B0 == 0)
                     FUN_10ab7530();
-                FUN_10ab70b0();
+                LoadDifficultyMultipliers();
                 return;
             }
         }

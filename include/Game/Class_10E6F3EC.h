@@ -14,7 +14,7 @@ public:
 
     void FUN_10ab72d0();
     void FUN_10ab7530();
-    void FUN_10ab70b0();
+    void LoadDifficultyMultipliers();
     void FUN_10ab7710();
     void FUN_10ab8050(bool A);
 

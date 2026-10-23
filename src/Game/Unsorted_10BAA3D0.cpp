@@ -10,7 +10,7 @@ bool Class_10BAA3D0::FUN_10baa3d0()
     if (m_CachedValue == -1)
     {
         int Value = 0;
-        Unknown34->FUN_1098e330(0x8003e8, &Value);
+        Unknown34->GetPropertyValue(0x8003e8, &Value);
         m_CachedValue = Value;
     }
     return m_CachedValue != 0;

@@ -12,7 +12,7 @@ void Class_10ACC2D0::FUN_10acc2d0(int A, float B)
 {
     Class_1098E330* Obj = (Class_1098E330*)A;
     float Value = 0.0f;
-    Obj->FUN_1098e330(0x1000c5, (int*)&Value);
+    Obj->GetPropertyValue(0x1000c5, (int*)&Value);
     if (Value > DAT_10eafbdc)
     {
         Value = Value - B;

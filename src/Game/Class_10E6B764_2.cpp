@@ -51,7 +51,7 @@ void Class_10E6B764::FUN_10a6ae00(AActor* A, int B)
             if (Ok == 0 || Flag2 != 0x16)
             {
                 int Key;
-                ((Class_1098E330*)A)->FUN_1098e330(0x8003e8, &Key);
+                ((Class_1098E330*)A)->GetPropertyValue(0x8003e8, &Key);
                 Virtual5(A, 0, 1, 0);
             }
         }

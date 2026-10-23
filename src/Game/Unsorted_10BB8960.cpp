@@ -154,7 +154,7 @@ void FUN_10bbade0()
 int Class_10BBDB10::GetInt(int Id)
 {
     int Value = 0;
-    Unknown04->FUN_1098e330(Id, &Value);
+    Unknown04->GetPropertyValue(Id, &Value);
     return Value;
 }
 
@@ -162,7 +162,7 @@ int Class_10BBDB10::GetInt(int Id)
 int Class_10BBDC00::GetInt(int Id)
 {
     int Value = 0;
-    Unknown0C->FUN_1098e330(Id, &Value);
+    Unknown0C->GetPropertyValue(Id, &Value);
     return Value;
 }
 

@@ -33,7 +33,7 @@ public:
     virtual void Virtual104();
     virtual int Virtual105();
 
-    int FUN_1098e330(int Id, int* Out);
+    int GetPropertyValue(int Id, int* Out);
     Class_10970890* FUN_10991eb0();
     int FUN_10b22000();
 
@@ -97,7 +97,7 @@ void Class_10E9092C::FUN_10bb7680()
         return;
 
     int Key = 0;
-    if (((Class_1098E330*)Unknown0C->FUN_10c7d570())->FUN_1098e330(0x40800056, &Key) != 0)
+    if (((Class_1098E330*)Unknown0C->FUN_10c7d570())->GetPropertyValue(0x40800056, &Key) != 0)
     {
         if (Key != 0)
         {

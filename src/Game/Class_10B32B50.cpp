@@ -56,9 +56,9 @@ void Class_10B32B50::FUN_10b326b0(Class_10B21340* A)
             First = 20.0f;
             Second = 0x40000000;
             Third = 30.0f;
-            A->FUN_1098e330(0x100509, (int*)&First);
-            A->FUN_1098e330(0x10050b, &Second);
-            A->FUN_1098e330(0x10050a, (int*)&Third);
+            A->GetPropertyValue(0x100509, (int*)&First);
+            A->GetPropertyValue(0x10050b, &Second);
+            A->GetPropertyValue(0x10050a, (int*)&Third);
             DAT_10f3a3d8->Unknown10->FUN_10ac14f0(First, Second, Third, false);
         }
     }

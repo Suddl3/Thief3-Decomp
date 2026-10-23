@@ -83,7 +83,7 @@ void FUN_10a47590()
 int FUN_10a48b10(Class_1098E330* Obj)
 {
     int Value = 0;
-    Obj->FUN_1098e330(0x4002002b, &Value);
+    Obj->GetPropertyValue(0x4002002b, &Value);
     return Value;
 }
 

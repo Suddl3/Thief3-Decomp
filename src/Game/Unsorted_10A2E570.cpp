@@ -166,7 +166,7 @@ unsigned int CombineInstanceValues(UClass* InClass)
         {
             int Out;
             int Value;
-            if (((Class_1098E330*)Obj)->FUN_1098e330(0x80007d3, &Out) == 0)
+            if (((Class_1098E330*)Obj)->GetPropertyValue(0x80007d3, &Out) == 0)
                 Value = -1;
             else
                 Value = Out;

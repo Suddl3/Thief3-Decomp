@@ -22,7 +22,7 @@ Class_10B255F0* GetSelection();
 void Class_10B37F00::FUN_10b37f00(Class_1098E330* A, int Unused1, int Unused2)
 {
     int Result = 0;
-    A->FUN_1098e330(0x8001fa, &Result);
+    A->GetPropertyValue(0x8001fa, &Result);
     if (Result == 0)
     {
         if (A->IsA(APawn::StaticClass()))

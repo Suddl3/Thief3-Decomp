@@ -98,7 +98,7 @@ public:
     virtual void Virtual84();
     virtual int Virtual85();
 
-    int FUN_1098e330(int Id, int* Out);
+    int GetPropertyValue(int Id, int* Out);
     int FUN_10978840(int Id, Struct_10978840* Out);
     Class_10970890* FUN_10991eb0();
     int FUN_10b22000();
@@ -139,12 +139,12 @@ void Class_10E89AA0::Init(float A, float B)
     {
         Obj.Unknown40 = 0.0f;
         Obj.Unknown30.Y = B * 0.4536f;
-        if (!m_Actor->FUN_1098e330(0x1002ab, (int*)&Obj.Unknown40))
+        if (!m_Actor->GetPropertyValue(0x1002ab, (int*)&Obj.Unknown40))
         {
             Obj.Unknown40 = 0.5f;
         }
         Obj.Unknown44 = 0.0f;
-        if (!m_Actor->FUN_1098e330(0x1002ac, (int*)&Obj.Unknown44))
+        if (!m_Actor->GetPropertyValue(0x1002ac, (int*)&Obj.Unknown44))
         {
             Obj.Unknown44 = 0.4f;
         }
@@ -155,12 +155,12 @@ void Class_10E89AA0::Init(float A, float B)
             Obj.Unknown3C = Out.Unknown04;
         }
         float Value2 = 0.0f;
-        if (m_Actor->FUN_1098e330(0x100604, (int*)&Value2))
+        if (m_Actor->GetPropertyValue(0x100604, (int*)&Value2))
         {
             Obj.Unknown30.Z = Value2;
         }
         float Value3 = 0.0f;
-        if (m_Actor->FUN_1098e330(0x100605, (int*)&Value3))
+        if (m_Actor->GetPropertyValue(0x100605, (int*)&Value3))
         {
             Obj.Unknown3C = Value3;
         }

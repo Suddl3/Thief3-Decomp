@@ -16,7 +16,7 @@ void Class_10E6BC44::FUN_10a76a60(Class_Field04* A, cIntArray* B)
 {
     Class_1098E330* Obj = (Class_1098E330*)A;
     int Key;
-    Obj->FUN_1098e330(0x2047b, &Key);
+    Obj->GetPropertyValue(0x2047b, &Key);
     for (int i = 0; i < B->Count; i++)
     {
         int Item = B->Data[i];
@@ -28,7 +28,7 @@ void Class_10E6BC44::FUN_10a76a60(Class_Field04* A, cIntArray* B)
                     continue;
             }
             int Key2;
-            ((Class_1098E330*)Item)->FUN_1098e330(0x80027a, &Key2);
+            ((Class_1098E330*)Item)->GetPropertyValue(0x80027a, &Key2);
             if (Key2)
             {
                 DAT_10f35dec->Unknown1C->Virtual1((Struct_10A6FED0*)A, 0, 0);

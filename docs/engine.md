@@ -409,7 +409,7 @@ property getters keyed by an ID whose low 16 bits index the property table at
 
 | What | Address | Status |
 |---|---|---|
-| `int Get(uint32_t id, void* out)`, `__thiscall`, `ret 8`: looks the ID up (`0x10AD3DF0`), then copies the value through the table entry's vtable `+0xB4` | `0x1098E330` | hooked by the `widescreen-fov` mod |
+| `GetPropertyValue(uint32_t id, void* out)`, `__thiscall`, `ret 8`, returns int: looks the ID up (`0x10AD3DF0`), then copies the value through the table entry's vtable `+0xB4` | `0x1098E330` | hooked by the `widescreen-fov` mod |
 | property write path | `0x10AD9C90` | static |
 
 FOV properties (float degrees, designed for 4:3), IDs with bit `0x100000`
@@ -434,7 +434,7 @@ multipliers come from `Default.ini` `[Difficulty]`
 | What | Address | Status |
 |---|---|---|
 | `GetStats()`, `__cdecl`; slot 0 of the result: `int Get(FName)` | `0x10A18230` | used by the `difficulty-fixes` mod |
-| loads the `[Difficulty]` multipliers for `dif_AISenses`/`dif_AICombat`; only caller `0x10AB8470`, nothing calls it on a level load (missions play with the multipliers the game started with) | `0x10AB70B0` | called by the `difficulty-fixes` mod |
+| `LoadDifficultyMultipliers`: loads the `[Difficulty]` multipliers for `dif_AISenses`/`dif_AICombat`; only caller `0x10AB8470`, nothing calls it on a level load (missions play with the multipliers the game started with) | `0x10AB70B0` | called by the `difficulty-fixes` mod |
 | in `UGameEngine::Virtual32` (the level load), after the map is in: `mov al, [0x10F45C0C]` | `0x10985ADC` | code hook (`difficulty-fixes`) |
 | `WindowManager::OpenEnterMissionWindow(bool)` / `OpenRestartMissionWindow()` | `0x10B15B20` / `0x10B15BF0` | hooked (`difficulty-fixes`) |
 | mission records the menus edit: `*(DAT_10F3A3D8 + 0x150)`, `+4`/`+8` (mission, record) for Enter Mission, `+0xC`/`+0x10` for Restart Mission; the record's difficulty at `+0x174` | `0x10F3A3D8` | static |

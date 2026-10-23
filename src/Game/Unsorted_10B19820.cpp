@@ -55,7 +55,7 @@ int __stdcall FUN_10b19be0(int A)
         Struct_10B198A0* Owner = FUN_10b198a0(A);
         Class_1098E330* Props = !Owner->UnknownEC ? 0 : Owner->UnknownE8;
         int Value = 0;
-        Props->FUN_1098e330(0x200062, &Value);
+        Props->GetPropertyValue(0x200062, &Value);
         if (Value)
             return Value;
     }

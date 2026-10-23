@@ -126,7 +126,7 @@ bool Class_10BF23A0::FUN_10bf1550()
         bool Flag = false;
         int Value = 0;
         return (Found->FUN_10971570(0x20000bd, &Flag) && Flag == 0xc)
-            && (((Class_1098E330*)Found)->FUN_1098e330(0x800602, &Value) == 0 || Value == 0);
+            && (((Class_1098E330*)Found)->GetPropertyValue(0x800602, &Value) == 0 || Value == 0);
     }
     return false;
 }

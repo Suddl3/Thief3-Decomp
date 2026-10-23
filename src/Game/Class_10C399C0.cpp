@@ -108,7 +108,7 @@ public:
     virtual void Virtual84();
     virtual int Virtual85();
 
-    int FUN_1098e330(int Id, int* Out);
+    int GetPropertyValue(int Id, int* Out);
     Class_10970890* FUN_10991eb0();
     int FUN_10b22000();
 
@@ -134,7 +134,7 @@ int Class_10C399C0::CheckInRange(int Obj)
     if (FUN_10c38d30(Target))
     {
         float Scale = 0.0f;
-        Target->FUN_1098e330(0x1003d4, (int*)&Scale);
+        Target->GetPropertyValue(0x1003d4, (int*)&Scale);
         Scale = Scale * 16.0f;
         Struct_10C38D90_Pos Out;
         Target->Virtual70(&Out);

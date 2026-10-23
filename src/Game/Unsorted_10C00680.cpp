@@ -91,7 +91,7 @@ public:
     virtual void Virtual84();
     virtual int Virtual85();
 
-    int FUN_1098e330(int Id, int* Out);
+    int GetPropertyValue(int Id, int* Out);
 };
 
 // FUNCTION: 0x10C006D0 ?FUN_10c006d0@@YA_NPAVClass_1098E330@@@Z
@@ -100,7 +100,7 @@ bool FUN_10c006d0(Class_1098E330* Obj)
     if (Obj->Virtual85())
         return false;
     int Value = 0;
-    if (Obj->FUN_1098e330(0x40800649, &Value) && Value)
+    if (Obj->GetPropertyValue(0x40800649, &Value) && Value)
         return false;
     return true;
 }

@@ -73,7 +73,7 @@ void Class_10E6F414::FUN_10ac05c0(Class_10A370C0* A, Class_10A370C0* B)
     if (B == 0)
         return;
     int Key = 0;
-    if (((Class_1098E330*)A)->FUN_1098e330(0x8001f0, &Key) && Key != 0)
+    if (((Class_1098E330*)A)->GetPropertyValue(0x8001f0, &Key) && Key != 0)
         return;
     Virtual13(B, A);
     if (GetCitySectionManager()->FUN_10abf100())

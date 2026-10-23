@@ -45,7 +45,7 @@ bool Class_10B9C570::IsOutOfRange()
         if (((Class_109B2980*)Found)->FUN_109b2980() == 0)
         {
             int Key = 0;
-            if (((Class_1098E330*)Obj->FUN_10c7d570())->FUN_1098e330(0x40800648, &Key) != 0)
+            if (((Class_1098E330*)Obj->FUN_10c7d570())->GetPropertyValue(0x40800648, &Key) != 0)
             {
                 if (Key != 0)
                 {
@@ -53,7 +53,7 @@ bool Class_10B9C570::IsOutOfRange()
                     if (Target != 0)
                     {
                         float Scale = 0.0f;
-                        ((Class_1098E330*)Target)->FUN_1098e330(0x10064c, (int*)&Scale);
+                        ((Class_1098E330*)Target)->GetPropertyValue(0x10064c, (int*)&Scale);
                         Scale = Scale * 16.0f;
                         int Other = ((Class_10BA9EE0*)Obj)->FUN_10ba9ee0();
                         if (Other != 0)

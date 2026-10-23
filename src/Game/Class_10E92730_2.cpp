@@ -38,6 +38,6 @@ void Class_10E92730::FUN_10bcbec0()
 {
     int Value = 1;
     Class_10C7D570* Props = Unknown04->Unknown08;
-    if (((Class_1098E330*)Props->FUN_10c7d570())->FUN_1098e330(0x80028b, &Value) && !Value)
+    if (((Class_1098E330*)Props->FUN_10c7d570())->GetPropertyValue(0x80028b, &Value) && !Value)
         PopState();
 }

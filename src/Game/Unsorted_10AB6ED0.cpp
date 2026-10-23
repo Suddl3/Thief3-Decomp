@@ -65,8 +65,8 @@ extern const char DAT_10e6f014[];
    // "Difficulty_AICombatSpeed_Mult_%s"
 extern const char DAT_10e6eff0[];
 
-// FUNCTION: 0x10AB70B0 ?FUN_10ab70b0@Class_10E6F3EC@@QAEXXZ
-void Class_10E6F3EC::FUN_10ab70b0()
+// FUNCTION: 0x10AB70B0 ?LoadDifficultyMultipliers@Class_10E6F3EC@@QAEXXZ
+void Class_10E6F3EC::LoadDifficultyMultipliers()
 {
     char Buffer[0x80];
     int Senses = GetStats()->Virtual0(FName(DAT_10e6f0e4, FNAME_Add).Value);

@@ -24,7 +24,7 @@ bool Class_109E2E70::FUN_109e2e70(int Index, cIntArray* Out, bool Flag)
         if (!Take)
         {
             int Key;
-            if (Node->Unknown08->FUN_1098e330(0x8004ef, &Key))
+            if (Node->Unknown08->GetPropertyValue(0x8004ef, &Key))
                 Take = Key == 1;
         }
         if (Take)

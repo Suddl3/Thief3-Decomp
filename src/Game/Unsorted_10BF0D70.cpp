@@ -40,7 +40,7 @@ bool cStateRangedCombat::FUN_10bf1500()
     if (Obj)
     {
         int Value = 0;
-        Obj->FUN_1098e330(0x8007b1, &Value);
+        Obj->GetPropertyValue(0x8007b1, &Value);
         return Value != 0;
     }
     return false;

@@ -12,7 +12,7 @@ int FindBadIdIndex(Object_10BBF5E0* A)
     {
         Class_1098E330* Item = A->Unknown00->Data[i];
         int Result = 0;
-        Item->FUN_1098e330(0x200282, &Result);
+        Item->GetPropertyValue(0x200282, &Result);
         if (Result < 1 || Result > A->Unknown00->Count)
             return i;
     }

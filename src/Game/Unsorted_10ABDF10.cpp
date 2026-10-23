@@ -5,7 +5,7 @@ class Class_1098E330
 {
 public:
     virtual void Virtual0();
-    int FUN_1098e330(int Id, int* Out);
+    int GetPropertyValue(int Id, int* Out);
 
     char Unknown04[0xF0];
     int UnknownF4;
@@ -15,7 +15,7 @@ public:
 bool FUN_10abdf10(Class_1098E330* Obj)
 {
     int Value = 0;
-    if (!Obj->FUN_1098e330(0x800814, &Value))
+    if (!Obj->GetPropertyValue(0x800814, &Value))
         Value = Obj->UnknownF4 & 1;
     return Value == 1;
 }

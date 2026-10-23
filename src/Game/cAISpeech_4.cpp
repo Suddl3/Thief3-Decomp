@@ -91,7 +91,7 @@ int cAISpeech::FUN_10bc7d70(Class_10E97B00* Name, int Flags, int Count, cString*
     {
         int Found = 0;
         Class_10C7D570* Speaker = Unknown04->Unknown08;
-        ((Class_1098E330*)Speaker->FUN_10c7d570())->FUN_1098e330(0x800846, &Found);
+        ((Class_1098E330*)Speaker->FUN_10c7d570())->GetPropertyValue(0x800846, &Found);
         if (Found)
             Count |= 0x40;
     }

@@ -267,7 +267,7 @@ float Class_10E948D8::FUN_10bdc290()
 {
     float Value = 0.0f;
     Class_10DBD510* Props = Unknown04->Unknown08;
-    ((Class_1098E330*)Props->FUN_10dbd510()->GetLinkType())->FUN_1098e330(0x1007be, (int*)&Value);
+    ((Class_1098E330*)Props->FUN_10dbd510()->GetLinkType())->GetPropertyValue(0x1007be, (int*)&Value);
     return Value * DAT_10ff667c->UnknownA8;
 }
 

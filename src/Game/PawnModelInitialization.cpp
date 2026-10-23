@@ -48,7 +48,7 @@ public:
 
 class Class_1098E330 {
 public:
-    int FUN_1098e330(int Id, int* Out);
+    int GetPropertyValue(int Id, int* Out);
     Class_1098E330* FUN_10ad2800();
 };
 
@@ -99,12 +99,12 @@ __forceinline int InheritedModelClass(AAIPawn* Pawn, int Id)
 {
     int Value = 0;
     Class_1098E330* Object = (Class_1098E330*)Pawn;
-    int Found = Object->FUN_1098e330(Id, &Value);
+    int Found = Object->GetPropertyValue(Id, &Value);
     Object = Object->FUN_10ad2800();
     while (Found) {
         if (Value) break;
         if (!Object) break;
-        Found = Object->FUN_1098e330(Id, &Value);
+        Found = Object->GetPropertyValue(Id, &Value);
         Object = Object->FUN_10ad2800();
     }
     return Value;
@@ -114,7 +114,7 @@ __forceinline int InheritedModelClass(AAIPawn* Pawn, int Id)
 void AAIPawn::Virtual100(AController* Controller, bool Restored)
 {
     int Context = 0;
-    ((Class_1098E330*)this)->FUN_1098e330(0x2005B, &Context);
+    ((Class_1098E330*)this)->GetPropertyValue(0x2005B, &Context);
     if ((!SensoryModel || !BehaviorModel || !MovementModel || !CombatModel || !FactionModel) && !Restored) {
         if (SensoryModel) {
             ((PawnModelWorld*)((Class_1096D780*)this)->Get())->Virtual44(SensoryModel, 0);

@@ -24,7 +24,7 @@ class Class_1098E330
 {
 public:
     virtual void Virtual0();
-    int FUN_1098e330(int Id, int* Out);
+    int GetPropertyValue(int Id, int* Out);
 
     char Unknown04[0xF4];
     int UnknownF8;
@@ -42,7 +42,7 @@ void GetStringOrDefault(Class_Field04* A, FString* B)
 int FUN_10abdf60(Class_1098E330* Obj)
 {
     int Value = -1;
-    if (!Obj->FUN_1098e330(0x200815, &Value))
+    if (!Obj->GetPropertyValue(0x200815, &Value))
         return Obj->UnknownF8;
     return Value;
 }
@@ -51,7 +51,7 @@ int FUN_10abdf60(Class_1098E330* Obj)
 int FUN_10abdfa0(Class_1098E330* Obj)
 {
     int Value = -1;
-    if (!Obj->FUN_1098e330(0x200816, &Value))
+    if (!Obj->GetPropertyValue(0x200816, &Value))
         return Obj->UnknownFC;
     return Value;
 }

@@ -84,7 +84,7 @@ void __stdcall FUN_10ac8840(int A, int B)
             else
                 Obj = Iter.Unknown10->Unknown08;
             int Value = 0;
-            if (((Class_1098E330*)Obj)->FUN_1098e330(0x80081b, &Value) == 0)
+            if (((Class_1098E330*)Obj)->GetPropertyValue(0x80081b, &Value) == 0)
                 Value = ((AExitMissionInfo*)Obj)->EntryMapObjectFlag;
             if (Value)
             {

@@ -17,7 +17,7 @@ void DrawCircle(int A, void* B, float C, Struct_10BBFB80* D, int E);
 void __stdcall DrawRadiusCircle(Class_1098E330* A, int B)
 {
     float Scale = 0.0f;
-    if (A->FUN_1098e330(0x1002fd, (int*)&Scale))
+    if (A->GetPropertyValue(0x1002fd, (int*)&Scale))
     {
         Scale = Scale * 16.0f;
         Struct_10BBFB80 Color;

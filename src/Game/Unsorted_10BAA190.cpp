@@ -91,7 +91,7 @@ public:
     virtual void Virtual84();
     virtual int Virtual85();
 
-    int FUN_1098e330(int Id, int* Out);
+    int GetPropertyValue(int Id, int* Out);
 
     char Pad04[0x74];
     unsigned char Unknown78;
@@ -108,14 +108,14 @@ Class_1098E330* FUN_10baa1b0(Class_1098E330* Obj)
             if (Obj->Virtual85() == 0)
                 return Obj;
             Found = 0;
-            Obj->FUN_1098e330(0x2047b, (int*)&Found);
+            Obj->GetPropertyValue(0x2047b, (int*)&Found);
             if (Found && (Found->Unknown78 & 4))
                 return Found;
         }
         else
         {
             Found = 0;
-            Obj->FUN_1098e330(0x2047b, (int*)&Found);
+            Obj->GetPropertyValue(0x2047b, (int*)&Found);
             if (Found && (Found->Unknown78 & 4))
                 return Found;
         }

@@ -73,7 +73,7 @@ void Class_10BBB410::CancelCurrent()
                 if (((Class_10BFF280*)Unknown210)->FUN_10bff280() == Unknown2cc)
                     Unknown2cc = 0;
                 int Key = 0;
-                if (((Class_1098E330*)((Class_10BFF280*)Unknown210)->FUN_10bff280())->FUN_1098e330(0x2047b, &Key) && Key != 0)
+                if (((Class_1098E330*)((Class_10BFF280*)Unknown210)->FUN_10bff280())->GetPropertyValue(0x2047b, &Key) && Key != 0)
                 {
                     if (Key == (int)Unknown08->FUN_10c7d570())
                     {

@@ -28,7 +28,7 @@ Class_10E89AA0::Class_10E89AA0(int A, int B, int C)
     if (Actor)
     {
         Value = 0.0f;
-        if (!Actor->FUN_1098e330(0x1002aa, (int*)&Value) || Value == DAT_10eafbdc)
+        if (!Actor->GetPropertyValue(0x1002aa, (int*)&Value) || Value == DAT_10eafbdc)
             Value = 2.2f;
     }
     Init(B, *(int*)&Value);

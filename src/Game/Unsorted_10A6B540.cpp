@@ -43,7 +43,7 @@ bool Class_10A6BD80::FUN_10a6bd80(int A, Class_10A6BD80_Param* B)
         return false;
     }
     int Key;
-    if (((Class_1098E330*)A)->FUN_1098e330(0x40800056, &Key) && Key)
+    if (((Class_1098E330*)A)->GetPropertyValue(0x40800056, &Key) && Key)
     {
         if (B->Unknown26)
         {

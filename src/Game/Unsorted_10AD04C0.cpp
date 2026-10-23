@@ -50,7 +50,7 @@ bool Class_10AD04C0::FUN_10ad04c0(UObject* Src, int Obj, int List, int Flag)
     Class_1098E3D0* Actor = (Class_1098E3D0*)Obj;
     FUN_10acfbc0(Actor);
     Obj = 0;
-    Actor->FUN_1098e330(0x800182, &Obj);
+    Actor->GetPropertyValue(0x800182, &Obj);
     if (Obj != 0)
     {
         if (List != 0)
@@ -61,7 +61,7 @@ bool Class_10AD04C0::FUN_10ad04c0(UObject* Src, int Obj, int List, int Flag)
             }
         }
         List = 0;
-        Actor->FUN_1098e330(0x800182, &List);
+        Actor->GetPropertyValue(0x800182, &List);
         if (List == 0)
         {
             return true;

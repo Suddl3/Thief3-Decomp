@@ -163,7 +163,7 @@ int Class_10E8C950::FUN_10bb2bc0(int A, Class_10A9DBE0_Param2* B, Class_10A9DBE0
                             Holder->Unknown08->FUN_10b9d060();
                             Holder->Unknown04->FUN_10bb8cd0();
                             Holder->Unknown18->FUN_10bf9050();
-                            ((Class_1098E330*)Item)->FUN_1098e330(0x8000862, (int*)&B);
+                            ((Class_1098E330*)Item)->GetPropertyValue(0x8000862, (int*)&B);
                             FUN_10abc130(B);
                             return 1;
                         }

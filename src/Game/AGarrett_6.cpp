@@ -91,7 +91,7 @@ public:
     virtual void Virtual84();
     virtual int Virtual85();
 
-    int FUN_1098e330(int Id, int* Out);
+    int GetPropertyValue(int Id, int* Out);
 };
 
 class APlayerPawn : public Class_1098E330
@@ -121,7 +121,7 @@ float AGarrett::GetLightLevel()
         return DAT_10eafbdc;
     float Speed = APlayerPawn::GetLightLevel();
     int Value = 0;
-    FUN_1098e330(0x800847, &Value);
+    GetPropertyValue(0x800847, &Value);
     if (Value)
         Speed += wallFlattenedLightModifier;
     return Speed;

@@ -43,7 +43,7 @@ int __stdcall FUN_10a9ce80(int A, Object_10A9CE80_B* B, Object_10A9CE80_C* C)
     int Position[3] = { (int)F1, (int)F2, (int)F0 };
     Actor->FUN_1098e3d0(0x80017, Position);
     int Id = 0;
-    Actor->FUN_1098e330(0x800526, &Id);
+    Actor->GetPropertyValue(0x800526, &Id);
     DAT_10f35dec->Unknown7C->FUN_10a6ae00(Actor, Id);
     return 1;
 }

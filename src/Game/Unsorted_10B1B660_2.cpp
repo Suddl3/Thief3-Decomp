@@ -33,7 +33,7 @@ public:
 class Class_1098E330
 {
 public:
-    int FUN_1098e330(int Id, int* Out);
+    int GetPropertyValue(int Id, int* Out);
 
     void** Unknown00;
     char Pad04[0x20];
@@ -127,7 +127,7 @@ bool Class_10B1B8A0::FUN_10b1b660(FString* Text, int p1)
             Struct_10B1B8A0_Item* Entry = &ListC.Data[i];
             if (Entry->Unknown00)
             {
-                if (Entry->Unknown00->FUN_1098e330(0x10000b0, (int*)&Name) != 0)
+                if (Entry->Unknown00->GetPropertyValue(0x10000b0, (int*)&Name) != 0)
                 {
                     Equal = ((*Name.FUN_10af9730())[0] == Text->FUN_10d52630());
                     if (Equal)

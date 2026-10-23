@@ -28,5 +28,5 @@ class Class_10E6B978;
 // FUNCTION: 0x10A6DF60 ??0Class_10E6B610@@QAE@PAVClass_1098E330@@@Z
 Class_10E6B610::Class_10E6B610(Class_1098E330* A)
 {
-    A->FUN_1098e330(0x1003f4, &Unknown04);
+    A->GetPropertyValue(0x1003f4, &Unknown04);
 }

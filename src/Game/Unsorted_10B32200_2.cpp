@@ -70,8 +70,8 @@ void Class_10E7E928::Virtual2(Class_10B21820* A)
     Unknown31 = false;
     Unknown3C = false;
     Unknown38 = -1.0f;
-    ((Class_1098E330*)A)->FUN_1098e330(0x100500, &Unknown10);
-    ((Class_1098E330*)A)->FUN_1098e330(0x100501, &Unknown14);
+    ((Class_1098E330*)A)->GetPropertyValue(0x100500, &Unknown10);
+    ((Class_1098E330*)A)->GetPropertyValue(0x100501, &Unknown14);
     Unknown1C = 0;
     Unknown18 = 0;
     Unknown2C = 0;

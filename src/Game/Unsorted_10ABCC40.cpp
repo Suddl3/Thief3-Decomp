@@ -68,7 +68,7 @@ int FUN_10abcd90(int A)
     if (Obj)
     {
         int Value = 0;
-        Obj->UnknownE8->FUN_1098e330(0x80062b, &Value);
+        Obj->UnknownE8->GetPropertyValue(0x80062b, &Value);
         return Value;
     }
     return 0;

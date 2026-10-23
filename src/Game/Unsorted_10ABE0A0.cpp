@@ -7,7 +7,7 @@
 int FUN_10abe0d0(Class_1098E330* Obj)
 {
     int Value = -1;
-    if (!Obj->FUN_1098e330(0x200826, &Value))
+    if (!Obj->GetPropertyValue(0x200826, &Value))
         return -1;
     return Value;
 }
