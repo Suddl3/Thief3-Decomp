@@ -6,6 +6,9 @@
 // for '.' with the last dot after the last path separator, or NULL. Other
 // characters, and dotted names without separators (Engine.Actor), are
 // unaffected.
+//
+// The mod has no settings.
+#include <t3sdk/modkit.hpp>
 #include <t3sdk/t3sdk.h>
 
 #include <cstdint>
@@ -13,11 +16,16 @@
 
 namespace {
 
-constexpr uintptr_t kStrrchr = 0x10D1EF20;  // char* __cdecl strrchr(const char*, int)
+// char* __cdecl strrchr(const char*, int): the game's own copy of the CRT function.
+constexpr uintptr_t kStrrchr = 0x10D1EF20;
 
 using StrrchrFn = char*(__cdecl*)(const char* text, int c);
+
+// The game's strrchr, called through for the real search.
 StrrchrFn g_strrchr = nullptr;
 
+// strrchr, except that a search for '.' finds nothing when a path separator
+// follows the last dot (the dot is then in a folder name, not an extension).
 char* __cdecl StrrchrDetour(const char* text, int c) {
     char* found = g_strrchr(text, c);
     if (!found || char(c) != '.') {
@@ -28,14 +36,11 @@ char* __cdecl StrrchrDetour(const char* text, int c) {
 
 }  // namespace
 
+// Called by the SDK when the mod is loaded. Returns non-zero (the mod stays
+// off) when the hook cannot be placed.
 T3SDK_EXPORT int T3SDK_CALL T3Mod_Init(const T3SdkApi* api) {
-    auto target = reinterpret_cast<void*>(kStrrchr);
-    int status = api->CreateHook(target, reinterpret_cast<void*>(&StrrchrDetour), reinterpret_cast<void**>(&g_strrchr));
-    if (status == 0) {
-        status = api->EnableHook(target);
-    }
-    if (status != 0) {
-        api->Log("strrchr hook failed (MinHook status %d)", status);
+    if (!t3mod::Hook(api, kStrrchr, reinterpret_cast<void*>(&StrrchrDetour), reinterpret_cast<void**>(&g_strrchr),
+                     "strrchr")) {
         return 1;
     }
     return 0;

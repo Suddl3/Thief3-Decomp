@@ -14,7 +14,10 @@
 // Settings, in difficulty-fixes.ini next to the DLL:
 //   [Difficulty]
 //   ApplyOnMissionLoad=1   load the difficulty multipliers when a mission loads
+//                          (default 1)
 //   KeepInMissionMenus=1   preselect the current difficulty in the mission menus
+//                          (default 1)
+#include <t3sdk/modkit.hpp>
 #include <t3sdk/t3sdk.h>
 
 #include <windows.h>
@@ -24,60 +27,124 @@
 
 namespace {
 
-constexpr uintptr_t kAfterLevelLoad = 0x10985ADC;           // UGameEngine::Virtual32, after the map is loaded
-constexpr uintptr_t kLoadDifficultyMultipliers = 0x10AB70B0;  // void (), reads [Difficulty] for the gamesys levels
-constexpr uintptr_t kGetStats = 0x10A18230;                 // Stats* __cdecl GetStats()
-constexpr uintptr_t kFNameConstruct = 0x10AF9E20;           // FName::FName(const char*, EFindName)
-constexpr uintptr_t kOpenEnterMissionWindow = 0x10B15B20;   // bool WindowManager::OpenEnterMissionWindow(bool)
-constexpr uintptr_t kOpenRestartMissionWindow = 0x10B15BF0; // bool WindowManager::OpenRestartMissionWindow()
-constexpr uintptr_t kMissionFlow = 0x10F3A3D8;              // pointer; +0x150: the menus' mission records
-constexpr uintptr_t kFixedDifficulty = 0x10ABE130;          // bool __cdecl (mission): gamesys 0x800864 == 1
-constexpr uint32_t kDifficultyField = 0x174;                // in a mission record
-constexpr int kCustomDifficulty = 4;                        // dif_currdifficulty: 0 Easy .. 3 Expert, 4 custom
+// ---- game addresses ---------------------------------------------------------------
+
+// In UGameEngine::Virtual32 (the level load), after the map is in: `mov al, [0x10F45C0C]`
+// (docs/engine.md, "Difficulty").
+constexpr uintptr_t kAfterLevelLoad = 0x10985ADC;
+
+// void LoadDifficultyMultipliers() (called with an unused `this`): loads the
+// [Difficulty] multipliers for the levels dif_AISenses and dif_AICombat select.
+constexpr uintptr_t kLoadDifficultyMultipliers = 0x10AB70B0;
+
+// Stats* __cdecl GetStats(); slot 0 of the result's vtable is int Get(FName).
+constexpr uintptr_t kGetStats = 0x10A18230;
+
+// FName::FName(const char*, EFindName), __thiscall (docs/engine.md, "Names (FName)").
+constexpr uintptr_t kFNameConstruct = 0x10AF9E20;
+
+// bool WindowManager::OpenEnterMissionWindow(bool), __thiscall.
+constexpr uintptr_t kOpenEnterMissionWindow = 0x10B15B20;
+
+// bool WindowManager::OpenRestartMissionWindow(), __thiscall.
+constexpr uintptr_t kOpenRestartMissionWindow = 0x10B15BF0;
+
+// Pointer to the mission flow object; at kMissionRecords is the table of the
+// mission records the menus edit.
+constexpr uintptr_t kMissionFlow = 0x10F3A3D8;
+
+// bool __cdecl (mission): true when gamesys 0x800864 is 1, i.e. the mission
+// has no difficulty choice.
+constexpr uintptr_t kFixedDifficulty = 0x10ABE130;
+
+// ---- game layout --------------------------------------------------------------------
+
+// In the mission flow object: the table of mission records.
+constexpr uint32_t kMissionRecords = 0x150;
+
+// In the table: the (mission, record) pair for the Enter Mission menu...
+constexpr uint32_t kEnterMission = 0x04;
+constexpr uint32_t kEnterRecord = 0x08;
+
+// ...and for the Restart Mission menu.
+constexpr uint32_t kRestartMission = 0x0C;
+constexpr uint32_t kRestartRecord = 0x10;
+
+// In a mission record: the difficulty the menu shows.
+constexpr uint32_t kDifficultyField = 0x174;
+
+// dif_currdifficulty: 0 Easy .. 3 Expert, 4 custom (a custom difficulty is left alone).
+constexpr int kCustomDifficulty = 4;
+
+// EFindName value that adds the name when it is new.
 constexpr int kFNameAdd = 1;
 
 using OpenEnterFn = bool(__fastcall*)(void* self, void* edx, bool arg);
 using OpenRestartFn = bool(__fastcall*)(void* self, void* edx);
 
+// ---- state ----------------------------------------------------------------------------
+
+// The SDK's function table, kept from T3Mod_Init.
 const T3SdkApi* g_api = nullptr;
+
+// The game's menu openers, called through by the detours.
 OpenEnterFn g_openEnter = nullptr;
 OpenRestartFn g_openRestart = nullptr;
 
+// ---- the difficulty --------------------------------------------------------------------
+
+// The difficulty being played (dif_currdifficulty: 0 Easy .. 3 Expert, 4
+// custom), or -1 when the game has no stats object yet.
 int CurrentDifficulty() {
     void* stats = reinterpret_cast<void*(__cdecl*)()>(kGetStats)();
     if (!stats) {
         return -1;
     }
+
     uint32_t name = 0;
     reinterpret_cast<void*(__fastcall*)(uint32_t*, void*, const char*, int)>(kFNameConstruct)(
         &name, nullptr, "dif_currdifficulty", kFNameAdd);
+
     auto get = (*reinterpret_cast<int(__fastcall***)(void*, void*, uint32_t)>(stats))[0];
     return get(stats, nullptr, name);
 }
 
+// Code hook after the map is loaded: loads the AI's difficulty multipliers,
+// which the game forgets to do.
 void T3SDK_CALL AfterLevelLoad(void*, T3Registers*) {
     reinterpret_cast<void(__fastcall*)(void*, void*)>(kLoadDifficultyMultipliers)(nullptr, nullptr);
     g_api->Log("level loaded: difficulty multipliers loaded for difficulty %d", CurrentDifficulty());
 }
 
+// ---- the mission menus -----------------------------------------------------------------
+
 // Writes the current difficulty into the mission record the menu edits:
-// +4/+8 (mission, record) for Enter Mission, +0xC/+0x10 for Restart Mission.
+// (mission, record) at +4/+8 of the record table for Enter Mission, at
+// +0xC/+0x10 for Restart Mission. Does nothing for a custom difficulty, when
+// the game's state is not there yet, or for a mission with a fixed difficulty.
 void PreselectDifficulty(bool restart) {
     int difficulty = CurrentDifficulty();
     auto flow = *reinterpret_cast<uint8_t**>(kMissionFlow);
-    auto records = flow ? *reinterpret_cast<uint8_t**>(flow + 0x150) : nullptr;
-    if (difficulty < 0 || difficulty >= kCustomDifficulty || !records) {
+    if (difficulty < 0 || difficulty >= kCustomDifficulty || !flow) {
         return;
     }
-    void* mission = *reinterpret_cast<void**>(records + (restart ? 0x0C : 0x04));
-    auto record = *reinterpret_cast<uint8_t**>(records + (restart ? 0x10 : 0x08));
+
+    auto records = t3mod::Field<uint8_t*>(flow, kMissionRecords);
+    if (!records) {
+        return;
+    }
+
+    void* mission = t3mod::Field<void*>(records, restart ? kRestartMission : kEnterMission);
+    auto record = t3mod::Field<uint8_t*>(records, restart ? kRestartRecord : kEnterRecord);
     if (!mission || !record || reinterpret_cast<bool(__cdecl*)(void*)>(kFixedDifficulty)(mission)) {
         return;
     }
-    *reinterpret_cast<int*>(record + kDifficultyField) = difficulty;
+
+    t3mod::Field<int>(record, kDifficultyField) = difficulty;
     g_api->Log("%s menu: difficulty %d preselected", restart ? "restart mission" : "enter mission", difficulty);
 }
 
+// Detour of OpenEnterMissionWindow: preselects the difficulty once the menu is open.
 bool __fastcall OpenEnterDetour(void* self, void* edx, bool arg) {
     bool opened = g_openEnter(self, edx, arg);
     if (opened) {
@@ -86,6 +153,7 @@ bool __fastcall OpenEnterDetour(void* self, void* edx, bool arg) {
     return opened;
 }
 
+// Detour of OpenRestartMissionWindow: preselects the difficulty once the menu is open.
 bool __fastcall OpenRestartDetour(void* self, void* edx) {
     bool opened = g_openRestart(self, edx);
     if (opened) {
@@ -94,50 +162,31 @@ bool __fastcall OpenRestartDetour(void* self, void* edx) {
     return opened;
 }
 
-bool Hook(uintptr_t target, void* detour, void** original, const char* what) {
-    int status = g_api->CreateHook(reinterpret_cast<void*>(target), detour, original);
-    if (status == 0) {
-        status = g_api->EnableHook(reinterpret_cast<void*>(target));
-    }
-    if (status != 0) {
-        g_api->Log("%s hook failed (MinHook status %d)", what, status);
-    }
-    return status == 0;
-}
-
-std::wstring IniPath() {
-    HMODULE self = nullptr;
-    GetModuleHandleExW(GET_MODULE_HANDLE_EX_FLAG_FROM_ADDRESS | GET_MODULE_HANDLE_EX_FLAG_UNCHANGED_REFCOUNT,
-                       reinterpret_cast<LPCWSTR>(&IniPath), &self);
-    wchar_t path[MAX_PATH];
-    GetModuleFileNameW(self, path, MAX_PATH);
-    std::wstring ini = path;
-    return ini.substr(0, ini.find_last_of(L'.')) + L".ini";
-}
-
 }  // namespace
 
+// Called by the SDK when the mod is loaded. Returns non-zero (the mod stays
+// off) when the SDK has no code hooks; a fix whose hook fails is left off and
+// the other still works.
 T3SDK_EXPORT int T3SDK_CALL T3Mod_Init(const T3SdkApi* api) {
     if (api->version < 2 || api->size < offsetof(T3SdkApi, AddCodeHook) + sizeof(api->AddCodeHook)) {
         return 1;
     }
     g_api = api;
-    std::wstring ini = IniPath();
-    bool onLoad = GetPrivateProfileIntW(L"Difficulty", L"ApplyOnMissionLoad", 1, ini.c_str()) != 0;
-    bool menus = GetPrivateProfileIntW(L"Difficulty", L"KeepInMissionMenus", 1, ini.c_str()) != 0;
+
+    std::wstring ini = t3mod::SettingsFile();
+    bool onLoad = t3mod::ReadBool(ini, L"Difficulty", L"ApplyOnMissionLoad", true);
+    bool menus = t3mod::ReadBool(ini, L"Difficulty", L"KeepInMissionMenus", true);
+
     if (onLoad) {
-        int status = api->AddCodeHook(reinterpret_cast<void*>(kAfterLevelLoad), AfterLevelLoad, nullptr);
-        if (status != 0) {
-            api->Log("level load hook failed (status %d)", status);
-            onLoad = false;
-        }
+        onLoad = t3mod::CodeHook(api, kAfterLevelLoad, AfterLevelLoad, nullptr, "level load");
     }
     if (menus) {
-        menus = Hook(kOpenEnterMissionWindow, reinterpret_cast<void*>(&OpenEnterDetour),
-                     reinterpret_cast<void**>(&g_openEnter), "enter mission menu") &&
-                Hook(kOpenRestartMissionWindow, reinterpret_cast<void*>(&OpenRestartDetour),
-                     reinterpret_cast<void**>(&g_openRestart), "restart mission menu");
+        menus = t3mod::Hook(api, kOpenEnterMissionWindow, reinterpret_cast<void*>(&OpenEnterDetour),
+                            reinterpret_cast<void**>(&g_openEnter), "enter mission menu") &&
+                t3mod::Hook(api, kOpenRestartMissionWindow, reinterpret_cast<void*>(&OpenRestartDetour),
+                            reinterpret_cast<void**>(&g_openRestart), "restart mission menu");
     }
+
     api->Log("multipliers on mission load %s, mission menus %s", onLoad ? "on" : "off", menus ? "on" : "off");
     return 0;
 }

@@ -6,86 +6,77 @@
 //
 // Settings, in unstick.ini next to the DLL:
 //   [Unstick]
-//   Keys=16,17,13   virtual-key codes held together (Shift, Ctrl, Enter)
+//   Keys=16,17,13   virtual-key codes held together (Shift, Ctrl, Enter);
+//                   decimal or 0x hex, separated by commas. With none valid
+//                   the mod stays off.
+#include <t3sdk/modkit.hpp>
 #include <t3sdk/t3sdk.h>
 
 #include <windows.h>
 
 #include <cstdint>
-#include <cwchar>
-#include <string>
 #include <vector>
 
 namespace {
 
-constexpr uintptr_t kEventDispatcher = 0x10F46DA0;  // object*; vtable +0x14: void Post(int id, int, int, int)
+// Pointer to the event dispatcher object; its vtable slot at kPostSlot is
+// void __thiscall Post(int id, int, int, int) (docs/engine.md, "Game loop and exit").
+constexpr uintptr_t kEventDispatcher = 0x10F46DA0;
+
+// Byte offset of Post in the dispatcher's vtable.
+constexpr uint32_t kPostSlot = 0x14;
+
+// Event that releases the player from a stuck state.
 constexpr int kReleasePlayerEvent = 0x7F;
 
+// Post is __thiscall; declared __fastcall with an unused edx.
 using PostFn = void(__fastcall*)(void* self, void* edx, int id, int a, int b, int c);
 
+// The SDK's function table, kept from T3Mod_Init.
 const T3SdkApi* g_api = nullptr;
+
+// The key combination from the settings.
 std::vector<int> g_keys;
+
+// Whether the combination was held on the previous frame, so one press posts one event.
 bool g_wasDown = false;
 
-bool GameHasFocus() {
-    DWORD pid = 0;
-    GetWindowThreadProcessId(GetForegroundWindow(), &pid);
-    return pid == GetCurrentProcessId();
-}
-
-bool KeysDown() {
-    for (int key : g_keys) {
-        if (!(GetAsyncKeyState(key) & 0x8000)) {
-            return false;
-        }
+// Posts the release event through the game's event dispatcher, once per press.
+void PostReleasePlayer() {
+    void* dispatcher = *reinterpret_cast<void**>(kEventDispatcher);
+    if (!dispatcher) {
+        return;
     }
-    return !g_keys.empty();
+
+    auto post = (*reinterpret_cast<PostFn**>(dispatcher))[kPostSlot / sizeof(void*)];
+    post(dispatcher, nullptr, kReleasePlayerEvent, 0, 0, 0);
+
+    g_api->Log("player release requested");
 }
 
+// Frame callback (main thread): posts the event when the combination goes
+// from up to down while the game has the focus.
 void T3SDK_CALL OnFrame(void*) {
-    bool down = g_api->EngineReady() && GameHasFocus() && KeysDown();
+    bool down = g_api->EngineReady() && t3mod::GameHasFocus() && t3mod::KeysDown(g_keys);
     if (down && !g_wasDown) {
-        void* dispatcher = *reinterpret_cast<void**>(kEventDispatcher);
-        if (dispatcher) {
-            auto post = (*reinterpret_cast<PostFn**>(dispatcher))[0x14 / 4];
-            post(dispatcher, nullptr, kReleasePlayerEvent, 0, 0, 0);
-            g_api->Log("player release requested");
-        }
+        PostReleasePlayer();
     }
     g_wasDown = down;
 }
 
-std::wstring IniPath() {
-    HMODULE self = nullptr;
-    GetModuleHandleExW(GET_MODULE_HANDLE_EX_FLAG_FROM_ADDRESS | GET_MODULE_HANDLE_EX_FLAG_UNCHANGED_REFCOUNT,
-                       reinterpret_cast<LPCWSTR>(&IniPath), &self);
-    wchar_t path[MAX_PATH];
-    GetModuleFileNameW(self, path, MAX_PATH);
-    std::wstring ini = path;
-    return ini.substr(0, ini.find_last_of(L'.')) + L".ini";
-}
-
 }  // namespace
 
+// Called by the SDK when the mod is loaded. Returns non-zero (the mod stays
+// off) when no valid key is set.
 T3SDK_EXPORT int T3SDK_CALL T3Mod_Init(const T3SdkApi* api) {
     g_api = api;
-    wchar_t text[64];
-    GetPrivateProfileStringW(L"Unstick", L"Keys", L"16,17,13", text, 64, IniPath().c_str());
-    for (wchar_t* p = text; *p;) {
-        wchar_t* end = nullptr;
-        long key = wcstol(p, &end, 0);
-        if (end == p) {
-            break;
-        }
-        if (key > 0 && key < 256) {
-            g_keys.push_back(int(key));
-        }
-        p = *end ? end + 1 : end;
-    }
+
+    g_keys = t3mod::ReadKeys(t3mod::SettingsFile(), L"Unstick", L"Keys", L"16,17,13");
     if (g_keys.empty()) {
         api->Log("no keys set; off");
         return 1;
     }
+
     api->AddFrameCallback(OnFrame, nullptr);
     return 0;
 }
