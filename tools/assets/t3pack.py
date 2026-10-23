@@ -45,7 +45,7 @@ from typing import Any, Callable, Dict, List, Optional, Tuple, Union
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from t3common import run_cli, BUILD_DIR, FORMATS, content_dir, game_dir, resolve_map  # noqa: E402
 from t3props import PropertyNames, load_table  # noqa: E402
-from upkg import RF_HasStack, Export, Package, prop_value, struct_fields  # noqa: E402
+from upkg import RF_HasStack, Export, Package, level_actor_list, prop_value, struct_fields  # noqa: E402
 from upkgwrite import (STRUCTS, ActorEdit, LayoutError, PackageWriter, block_kind, compare_packages, f32,  # noqa: E402
                        first_difference, gamesys_data, is_finite_f32, parse_fields, parse_object)
 
@@ -711,26 +711,21 @@ def resize_test(pkg: Package, writer: PackageWriter, scratch: Path) -> Tuple[boo
     return True, "skipped: no actor with a missing Location or Rotation field"
 
 
-def x24_note(pkg: Package) -> Optional[str]:
-    """What the Ion DWORD at 0x24 coincides with, if anything (evidence for
-    its meaning; see docs/assets.md, section 9)."""
-    v = pkg.ion_unknown
-    if not v:
+def static_data_note(pkg: Package) -> Optional[str]:
+    """Where the map static data offset (the summary DWORD at 0x24) points:
+    the Level object, after its actor list, in every shipped map (see
+    docs/assets.md, "The level object").  None when the package has none."""
+    at = pkg.ion_unknown
+    if not at:
         return None
-    cands = [("the file size", len(pkg.data)), ("the name table offset", pkg.name_offset),
-             ("the import table offset", pkg.import_offset), ("the export table offset", pkg.export_offset),
-             ("the extra table offset", pkg.depends_offset), ("the end of the import table", pkg.import_end),
-             ("the end of the export table", pkg.export_end), ("the name count", len(pkg.names)),
-             ("the import count", len(pkg.imports)), ("the export count", len(pkg.exports)),
-             ("the actor count", sum(1 for e in pkg.exports if e.flags & RF_HasStack)),
-             ("the total object size", sum(e.serial_size for e in pkg.exports))]
-    for e in pkg.exports:
-        if e.serial_size:
-            cands += [(f"the offset of export #{e.index} {e.name}", e.serial_offset),
-                      (f"the end of export #{e.index} {e.name}", e.serial_offset + e.serial_size)]
-    hits = [k for k, c in cands if c == v]
-    return (f"DWORD at 0x24 = {v:#x} ({v}): "
-            + ("equals " + ", ".join(hits[:4]) if hits else "matches no table offset, object offset or count"))
+    lvl = pkg.level()
+    if lvl is None or not lvl.serial_offset <= at < lvl.serial_offset + lvl.serial_size:
+        return f"map static data at {at:#x}: UNEXPECTED, not in the Level object"
+    rel = at - lvl.serial_offset
+    _, _, end = level_actor_list(pkg.export_bytes(lvl))
+    if rel < end:
+        return f"map static data at {at:#x}: UNEXPECTED, inside the Level's actor list"
+    return f"map static data at {at:#x}: Level object +{rel:#x}, {rel - end} bytes after the actor list"
 
 
 def roundtrip(path: Path, resize: bool = True) -> RoundTrip:
@@ -770,7 +765,7 @@ def roundtrip(path: Path, resize: bool = True) -> RoundTrip:
         rok, text = resize_test(pkg, writer, ROUNDTRIP_DIR / f"{path.stem}.resized{path.suffix}")
         res.lines.append(f"resize test: {text}")
         ok = ok and rok
-    note = x24_note(pkg)
+    note = static_data_note(pkg)
     if note:
         res.lines.append(note)
     res.ok = ok

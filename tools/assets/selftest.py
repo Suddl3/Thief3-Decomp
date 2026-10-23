@@ -34,7 +34,7 @@ from t3pack import (EditsError, apply_edits, check_source, install, load_edits, 
 from t3props import PropertyNames, parse_declarations, parse_enums  # noqa: E402
 from t3texture import decode_rgba, parse_material, parse_texture, to_dds  # noqa: E402
 from upkg import Package, prop_value, struct_fields  # noqa: E402
-from upkgwrite import PackageWriter, enc_index, first_difference  # noqa: E402
+from upkgwrite import LayoutError, PackageWriter, enc_index, first_difference  # noqa: E402
 import selftest_texpack  # noqa: E402
 
 OUT = BUILD_DIR / "selftest"
@@ -121,7 +121,9 @@ MAP_NAMES = ["None", "Core", "Engine", "T3Gamesys", "Package", "Class", "Level",
              "Light0", "AttachmentLinkDataObject0", "StaticMeshActor1", "Location", "Vector", "X", "Y", "Z",
              "Rotation", "Rotator", "Pitch", "Yaw", "Name", "Skin", "DrawScale", "Title", "bHidden",
              "m_parentBone", "Bone01", "OldTag"]
-MAP_X24 = 0x0BADF00D
+# Where MyLevel's data after its actor list starts: the summary DWORD at 0x24 points there
+# (the map static data offset).
+MAP_STATIC_AT = 13 + 8 + 5
 # Gamesys property ids of the synthetic property table (see map_property_names).
 P_DRAWSCALE, P_MESH, P_TAG, P_LIGHTON, P_LIGHTTYPE, P_BRIGHTNESS, P_DISPLAY, P_HEALTH, P_FLAGS = (
     0x30, 0x38, 0x4F, 0x60, 0x61, 0x62, 0x63, 0x64, 0x65)
@@ -224,7 +226,7 @@ def build_map() -> bytes:
                     struct.pack("<I", flags) + size_raw + write_index(off))
     head = struct.pack("<IHHI6I", 0x9E2A83C1, 95, 133, 1, len(MAP_NAMES), header_size, len(objects), export_off,
                        8, import_off)
-    head += struct.pack("<I", MAP_X24) + bytes(range(16)) + struct.pack("<I", len(gens))
+    head += struct.pack("<I", placed[0][0] + MAP_STATIC_AT) + bytes(range(16)) + struct.pack("<I", len(gens))
     head += b"".join(struct.pack("<II", *g) for g in gens) + struct.pack("<II", 0, extra_off)
     assert len(head) == header_size
     return bytes(head + body + imports + extra + exports)
@@ -249,7 +251,8 @@ def test_writer() -> None:
     data = build_map()
     path.write_bytes(data)
     pkg = Package(path)
-    assert pkg.ion_unknown == MAP_X24 and pkg.depends_offset is not None and len(pkg.generations) == 2
+    assert pkg.ion_unknown == pkg.find_export("MyLevel").serial_offset + MAP_STATIC_AT
+    assert pkg.depends_offset is not None and len(pkg.generations) == 2
     assert all(pkg.read_actor(e).parse_error is None for e in pkg.exports if e.flags & 0x02000000)
 
     # unchanged: byte-identical, padded compact indices kept, extra table understood
@@ -269,8 +272,26 @@ def test_writer() -> None:
     bad[lvl.serial_offset + 5] ^= 0xFF
     assert first_difference(data, bytes(bad)) == lvl.serial_offset + 5
     assert w.locate(lvl.serial_offset + 5) == "object #3 D_100_0 (D_100) +0x5"
-    assert w.locate(0x24) == "summary, Ion DWORD at 0x24 +0x0"
+    assert w.locate(0x24) == "summary, map static data offset +0x0"
     assert w.locate(pkg.export_offset + 1).startswith("export table, entry 0 (MyLevel)")
+
+    # a shorter actor list moves the static data, and the summary offset follows it;
+    # an edit of the static data itself is refused
+    w = PackageWriter(pkg)
+    w.set_level_actors([2, 3, 4, 5])
+    shorter = OUT / "synthmap-shorter.gmp"
+    shorter.write_bytes(w.write())
+    moved = Package(shorter)
+    assert moved.ion_unknown == pkg.ion_unknown - 1
+    assert moved.data[moved.ion_unknown:moved.ion_unknown + 40] == b"LEVEL" * 8
+    level = moved.find_export("MyLevel")
+    w = PackageWriter(pkg)
+    w.set_object(level.index, pkg.export_bytes(pkg.find_export("MyLevel"))[:-1] + b"X")
+    try:
+        w.write()
+        raise AssertionError("an edit of the static data was accepted")
+    except LayoutError:
+        pass
 
     # edits: values in place, missing struct fields and a missing struct, gamesys
     # blocks changed, resized and added, names added, one value set back to its default
@@ -293,7 +314,8 @@ def test_writer() -> None:
     write_verified(pkg, patch, out)
     new = Package(out)
     assert new.names == MAP_NAMES + ["Roll", "NewTag"], new.names[len(MAP_NAMES):]
-    assert new.generations == [(5, 30), (7, len(MAP_NAMES) + 2)] and new.ion_unknown == MAP_X24
+    assert new.generations == [(5, 30), (7, len(MAP_NAMES) + 2)]
+    assert new.data[new.ion_unknown:new.ion_unknown + 5] == b"LEVEL"  # moved with the added names
     assert new.guid == pkg.guid and new.ion_extra == pkg.ion_extra
     edited = {"StaticMeshActor0", "D_100_0", "Light0"}
     assert sorted(new.exports[i].name for i in patch.edited) == sorted(edited)

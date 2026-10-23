@@ -83,7 +83,7 @@ added:
 |---|---|
 | 0x00 | tag `0x9E2A83C1`, u16 file version (95), u16 licensee (107–133 in maps and scripts) |
 | 0x08 | package flags, name count/offset, export count/offset, import count/offset |
-| 0x24 | **Ion:** one extra DWORD. It is 0 in `.t3u` files and non-zero in maps; meaning unknown. Present from licensee 44 |
+| 0x24 | **Ion:** the map static data offset: where the gamesys object data inside the Level object starts (see "The level object"). 0 in `.t3u` files. Present from licensee 44 |
 | 0x28 | GUID (16 bytes), then at 0x38 the generation count and the generations (export count, name count each) |
 | after the generations | **Ion:** two DWORDs, present from licensee 22. The first is 0 in maps and small in scripts. The second is the offset of an extra table that sits between the import table and the export table. The name table follows (at 0x4C with one generation) |
 
@@ -194,12 +194,27 @@ Decoded so far, in order:
   `LevelInfo` and the builder `Brush`.
 - The URL: protocol, host, map, portal, options, port, valid.
 - A reference to the level `Model`.
+- The map's **static gamesys data**: the object system's item table, its
+  items and links (1,468 items in `Inn.gmp`). The summary DWORD at 0x24
+  holds its absolute file offset; in every shipped map it is 61–66 bytes
+  after the actor list.
 - Navigation-mesh polygons.
 - **BSP render blocks** (see below).
 - A list of BSP polygons with 92-byte vertices (position, normal, UVs), a
   material name and flags. These are probably the source surfaces, kept for
   decals or lighting.
 - Several hundred kilobytes more, not decoded.
+
+**Saves and the static data.** A save holds only what changed: the level is
+serialised without the object system. When a save loads,
+`ULevelBase::Serialize` reopens the map (`..\Content\T3\Maps\<Level>.gmp`),
+reads its summary, seeks to the DWORD at 0x24 and reads the object system
+from there. A fresh start of the map reads the same data in place while
+loading the Level object. So the DWORD must follow the data: when an edit
+changes the size of anything before it (adding or removing an actor
+lengthens or shortens the actor list), a stale offset makes every save of
+that map read garbage and crash on load. A fresh start still works.
+`upkgwrite.py` recomputes it.
 
 **BSP.** The cooked `Model` keeps only the BSP nodes: plane, 256-bit zone
 mask, flags, the stock compact links, a bounding sphere, zone and vertex
@@ -943,10 +958,12 @@ From least to most work:
 **The package writer** (`upkgwrite.py`) re-serialises a package read by
 `upkg.py`. An unchanged package comes out byte-identical.
 
-- The summary keeps its Ion fields as they are: the DWORD at 0x24, the
-  GUID, and the two DWORDs after the generations. Only the table counts and
-  offsets change. The last generation follows the export and name counts
-  when it matched them before.
+- The summary keeps the GUID and the two Ion DWORDs after the generations
+  as they are. The table counts and offsets change, and so does the map
+  static data offset at 0x24: it moves with the Level object, and with the
+  end of its actor list when that changes length. An edit of the bytes it
+  points at is refused. The last generation follows the export and name
+  counts when it matched them before.
 - The name, import and export tables are re-encoded from their values. A
   compact index written wider than needed keeps its width. A name that does
   not re-encode exactly is kept as raw bytes.
@@ -1045,8 +1062,7 @@ t3pack.py restore Inn | --all [--dry-run]
   `build/assets/roundtrip/`. It also re-serialises every actor through the
   editing code. For maps, it grows one actor near the middle of the file
   (an absent struct field written as 0) and checks with `upkg.py` that every
-  other object is intact. It prints what the DWORD at 0x24 coincides with,
-  if anything. `--all` covers every map, script package and UTX file.
+  other object is intact. `--all` covers every map, script package and UTX file.
 - `apply` writes `build/assets/patched/<Level>.gmp` and lists each change.
   It reads the file back: every other object must be byte-identical, and
   every edited value must read as requested. When the game holds a patched
@@ -1096,20 +1112,20 @@ package identical. Then move one visible prop in a small map, `apply`,
   and shadow data are compiled by the editor. Structural edits (new rooms)
   require regenerating them, so reusing T3Ed's build (item 3 above) may be
   unavoidable.
-- **Validation in the engine.** Hashes in `.ibt`, the extra table and the
-  summary DWORD at 0x24 may be checked when loading. `t3pack.py` keeps the
-  DWORD, the GUID and the generations (apart from the last one's counts) as
-  they were. If the DWORD depends on the layout, a patched map that changed
-  size will not load. An object that stores absolute file offsets (like
-  UE2's lazy arrays) would break when it moves; none is known in maps.
+- **Validation in the engine.** Hashes in `.ibt` and the extra table may be
+  checked when loading. `t3pack.py` keeps the GUID and the generations
+  (apart from the last one's counts) as they were. The summary DWORD at
+  0x24 is an absolute file offset (the map static data, which save loads
+  read): the writer moves it with the data. Another object that stores
+  absolute file offsets (like UE2's lazy arrays) would break when it moves;
+  none is known in maps.
 - **Licensee drift.** Maps span licensee versions 107–133. `Entry.gmp`
   (107) already has a different actor tail.
 - **Legal.** Assets stay local. Nothing extracted may be committed or shared.
 
 ## 9. Open questions
 
-- The DWORD at 0x24 in map summaries, and the purpose of the 32 export-index
-  lists.
+- The purpose of the 32 export-index lists.
 - The first 13 bytes of the Level object (the actor list follows them),
   and everything after the BSP polygon list.
 - What indexes the BSP render blocks (block ids look like node or surface

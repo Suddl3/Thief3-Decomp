@@ -401,13 +401,37 @@ class PackageWriter:
         if p.file_version < 68:
             return f + [("heritage count", u32(p.heritage_count)), ("heritage offset", u32(off["heritage"]))]
         if p.ion_unknown is not None:
-            f.append(("Ion DWORD at 0x24", u32(p.ion_unknown)))
+            f.append(("map static data offset", u32(self._static_data_offset())))
         gens = self._generations()
         f += [("GUID", p.guid), ("generation count", u32(len(gens)))]
         f += [(f"generation {i}", struct.pack("<II", *g)) for i, g in enumerate(gens)]
         if p.depends_offset is not None:
             f += [("Ion DWORD after the generations", u32(p.ion_extra)), ("extra table offset", u32(off["extra"]))]
         return f
+
+    def _static_data_offset(self) -> int:
+        """The DWORD at 0x24 for the current layout.  In a map it is the file
+        offset of the map's static gamesys data, inside the Level object after
+        its actor list: loading a save reopens the map and reads that data
+        from there (docs/assets.md, section 2).  It moves with the data."""
+        old = self.pkg.ion_unknown
+        g = next((g for g in self.regions if g.placed and g.start <= old < g.end), None)
+        if not old or g is None:
+            return old
+        rel = old - g.start
+        if g.kind != "object" or g.index not in self.objects:
+            return g.new_start + rel
+        lvl = self.pkg.level()
+        if lvl is None or g.index != lvl.index:
+            raise LayoutError(f"the map static data offset ({old:#x}) points into edited object #{g.index}")
+        # Only the actor list may have changed size: the data after it must be as it was.
+        orig = self.data[g.start:g.end]
+        new = self.object_data(g.index)
+        _, _, orig_end = level_actor_list(orig)
+        _, _, new_end = level_actor_list(new)
+        if rel < orig_end or orig[orig_end:] != new[new_end:]:
+            raise LayoutError(f"the map static data offset ({old:#x}) points into edited Level data")
+        return g.new_start + rel - orig_end + new_end
 
     @staticmethod
     def _entries(parts: Sequence[bytes]) -> Tuple[bytes, List[int]]:
@@ -867,6 +891,15 @@ class ActorEdit:
 
 # --- checks ------------------------------------------------------------------------------
 
+def static_data(pkg: Package) -> Optional[bytes]:
+    """The bytes from the map static data offset (the DWORD at 0x24) to the
+    end of the object holding them; None when it is 0 or in no object."""
+    at = pkg.ion_unknown
+    e = next((e for e in pkg.exports if e.serial_size and e.serial_offset <= (at or 0) < e.serial_offset
+              + e.serial_size), None)
+    return pkg.data[at:e.serial_offset + e.serial_size] if at and e else None
+
+
 def compare_packages(old: Package, new: Package, edited: Collection[int] = (), added: int = 0) -> List[str]:
     """Differences between two packages other than the data of the `edited`
     exports, names appended to the table and `added` exports appended to
@@ -874,10 +907,12 @@ def compare_packages(old: Package, new: Package, edited: Collection[int] = (), a
     patch.  An edited actor must keep its state frame, links and native
     tail."""
     out = []
-    head = ("file_version", "licensee_version", "package_flags", "guid", "ion_unknown", "ion_extra")
+    head = ("file_version", "licensee_version", "package_flags", "guid", "ion_extra")
     for k in head:
         if getattr(old, k) != getattr(new, k):
             out.append(f"summary: {k} changed")
+    if static_data(old) != static_data(new):
+        out.append("summary: the map static data offset no longer points at the static data")
     if new.names[:len(old.names)] != old.names:
         out.append("name table: existing names changed")
     if [vars(i) for i in new.imports] != [vars(i) for i in old.imports]:
