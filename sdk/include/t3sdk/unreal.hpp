@@ -45,8 +45,9 @@ static_assert(offsetof(FNameEntry, Name) == 0x1C);
 
 struct UClass;
 
-// Base of every engine object. Index/Name/Class verified; Outer is detected at
-// startup (stock Unreal Engine 2 puts it at 0x18).
+// Base of every engine object, 0x2C bytes (stock Unreal Engine 2's 0x28 plus
+// Ion Storm's property hash). Index/Name/Class verified; the SDK also finds
+// Outer at startup and logs its offset (0x18, as in stock Unreal Engine 2).
 struct UObject {
     void** VTable;          // 0x00
     int32_t Index;          // 0x04 verified: slot in GObjObjects
@@ -58,8 +59,10 @@ struct UObject {
     uint32_t ObjectFlags;   // 0x1C
     FName Name;             // 0x20 verified
     UClass* Class;          // 0x24 verified
+    uint32_t PropertyHash;  // 0x28 Ion Storm's (Object.uc: ObjectInternalPropertyHash)
 };
 static_assert(offsetof(UObject, Name) == 0x20 && offsetof(UObject, Class) == 0x24);
+static_assert(sizeof(UObject) == 0x2C);  // so UStruct's SuperField lands at 0x2C
 
 // Addresses in T3Main.exe (fixed: the exe has no relocations, so it always
 // loads at 0x10900000). Only valid for the supported build.
