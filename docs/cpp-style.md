@@ -20,7 +20,9 @@ python tools/sdk_style.py --fix    # format them
 
 In short: 4 spaces, lines up to 120 columns, braces on the statement's own
 line and always present (`if (x) { return; }`, never `if (x) return;`), a
-blank line between definitions, `Type* name` (the `*` with the type).
+blank line between definitions and around control blocks (below), `Type* name`
+(the `*` with the type). The tool runs clang-format, then puts in the blank
+lines around control blocks, which clang-format cannot.
 
 ## Files
 
@@ -86,8 +88,15 @@ Name a thing for what it means in the game, not for where it was found:
 
 - **Globals**: what each holds, and which threads touch it when that is more
   than the main thread.
-- **Inside a function**: a short comment before a step whose reason is not
-  visible in the code (why a check is there, which game behaviour it works
+- **Control blocks**: every `if`, `for`, `while`, `switch`, `do` and `__try`
+  gets a comment line right above it saying what it checks or does and why,
+  in the reader's terms: "The engine frees objects once the game starts
+  exiting: touch none after that." rather than "If not ready, return." A
+  plain null check of what the line before just fetched is the one exception
+  (`if (!dispatcher) { return; }` after reading the dispatcher). An `else`
+  branch that is not obvious gets its comment as the first line inside it.
+- **Inside a function**: a short comment before any other step whose reason
+  is not visible in the code (why it is there, which game behaviour it works
   around). Not one per line.
 - Comments are sentences: a capital letter and a full stop. No commented-out
   code, no `TODO` without what is to be done and why it is not done yet.
@@ -97,6 +106,26 @@ Name a thing for what it means in the game, not for where it was found:
 - Group the statements of a function into steps, with a blank line between
   steps: read the settings, then check them, then install the hooks. A
   function of 30 lines with no blank line is a wall.
+- A control block (`if`, `for`, `while`, `switch`, `do`, `__try`) has a
+  blank line before it and after its closing brace, so declarations, other
+  blocks and the `return` that follows stand apart. Not at the start or end
+  of the enclosing block, and not between `}` and its `else`. Comment lines
+  right above a block stay with it. `tools/sdk_style.py --fix` puts these
+  blank lines in:
+
+  ```cpp
+  MH_STATUS status = MH_CreateHook(target, detour, original);
+
+  if (status == MH_OK) {
+      status = MH_EnableHook(target);
+  }
+
+  if (status != MH_OK) {
+      T3_LOG("hook failed (%s)", MH_StatusToString(status));
+  }
+
+  return status == MH_OK;
+  ```
 - Return early for the cases that stop the work; keep the main path at the
   left margin.
 - Keep functions short: past about 40 lines, look for a step that can be its
