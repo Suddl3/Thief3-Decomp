@@ -172,6 +172,7 @@ Check `api->version >= 2` (or `api->size`) before using these.
 
 | Mod | What it does | Settings |
 |---|---|---|
+| [`difficulty-fixes`](../sdk/mods/difficulty-fixes/difficulty.cpp) | Missions play at the chosen difficulty (the AI multipliers are loaded on every level load), and the Enter/Restart Mission menus preselect the difficulty being played ([engine.md](engine.md#difficulty)) | `difficulty-fixes.ini`: `ApplyOnMissionLoad`, `KeepInMissionMenus` |
 | [`hello`](../sdk/mods/hello/hello.cpp) | API walkthrough: logs objects and log categories | none |
 | [`widescreen-fov`](../sdk/mods/widescreen-fov/fov.cpp) | Hor+: widens the cameras' FOV on screens wider than 4:3, and sets the player's FOV ([engine.md](engine.md#gamesys-properties)) | `widescreen-fov.ini`: `HorPlus`, `PlayerFOV`, `LogReads` |
 

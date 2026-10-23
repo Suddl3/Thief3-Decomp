@@ -422,6 +422,24 @@ and moves the player's by its `PlayerFOV` minus 85. Not yet confirmed in the
 game: that the IDs are FOVs in this build, and which of them are horizontal
 angles. The mod's `LogReads=1` logs each ID's first read.
 
+## Difficulty
+
+The chosen difficulty lives in the stats as gamesys values: `dif_currdifficulty`
+(0 Easy .. 3 Expert, 4 custom), `dif_AISenses`, `dif_AICombat`. The AI
+multipliers come from `Default.ini` `[Difficulty]`
+(`Difficulty_AIVisual_Mult_<Easy|Normal|Hard|Expert>`, `_AIAudio_`,
+`_AITactile_`, `_AIHitPoints_`, `_AICombatSpeed_`, ...) into the object at
+`DAT_10FF667C + 0x98` onward.
+
+| What | Address | Status |
+|---|---|---|
+| `GetStats()`, `__cdecl`; slot 0 of the result: `int Get(FName)` | `0x10A18230` | used by the `difficulty-fixes` mod |
+| loads the `[Difficulty]` multipliers for `dif_AISenses`/`dif_AICombat`; only caller `0x10AB8470`, nothing calls it on a level load (missions play with the multipliers the game started with) | `0x10AB70B0` | called by the `difficulty-fixes` mod |
+| in `UGameEngine::Virtual32` (the level load), after the map is in: `mov al, [0x10F45C0C]` | `0x10985ADC` | code hook (`difficulty-fixes`) |
+| `WindowManager::OpenEnterMissionWindow(bool)` / `OpenRestartMissionWindow()` | `0x10B15B20` / `0x10B15BF0` | hooked (`difficulty-fixes`) |
+| mission records the menus edit: `*(DAT_10F3A3D8 + 0x150)`, `+4`/`+8` (mission, record) for Enter Mission, `+0xC`/`+0x10` for Restart Mission; the record's difficulty at `+0x174` | `0x10F3A3D8` | static |
+| `bool __cdecl (mission)`: gamesys `0x800864` is 1 (the mission has no difficulty choice) | `0x10ABE130` | static |
+
 ## Options (`options.ini`)
 
 Options are stored as ints at `options + 4 + 4*i`, indexed by the names table
