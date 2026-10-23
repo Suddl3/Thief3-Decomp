@@ -16,7 +16,14 @@
   let { items, label = "More", large = false }: { items: MenuItem[]; label?: string; large?: boolean } = $props();
 
   let open = $state(false);
+  let up = $state(false);
   let root = $state<HTMLElement>();
+
+  /** Opens upwards when the list would not fit under the button (the last rows of a list). */
+  function toggle() {
+    if (!open && root) up = root.getBoundingClientRect().bottom + 48 + items.length * 34 > window.innerHeight;
+    open = !open;
+  }
 
   $effect(() => {
     if (!open) return;
@@ -43,10 +50,10 @@
     title={label}
     aria-haspopup="menu"
     aria-expanded={open}
-    onclick={() => (open = !open)}><Icon name="more" size={large ? 20 : 16} /></button
+    onclick={toggle}><Icon name="more" size={large ? 20 : 16} /></button
   >
   {#if open}
-    <div class="list" role="menu">
+    <div class="list" class:up role="menu">
       {#each items as item (item.label)}
         <button
           role="menuitem"
@@ -104,6 +111,11 @@
     border: 1px solid var(--line-2);
     background: #1a1c20;
     box-shadow: 0 12px 32px #000b;
+  }
+
+  .list.up {
+    top: auto;
+    bottom: calc(100% + 6px);
   }
 
   .list button {

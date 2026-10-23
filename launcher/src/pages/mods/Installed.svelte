@@ -204,11 +204,9 @@
     margin-bottom: 12px;
   }
 
-  /* As tall as its mods, and no taller than the window: then it scrolls. */
+  /* The page scrolls, not the list: a row's menu is never cut off at the list's edge. */
   .list {
-    flex: 0 1 auto;
-    min-height: 0;
-    overflow: auto;
+    flex: none;
   }
 
   .mod {
