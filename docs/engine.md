@@ -436,6 +436,8 @@ multipliers come from `Default.ini` `[Difficulty]`
 | `GetStats()`, `__cdecl`; slot 0 of the result: `int Get(FName)` | `0x10A18230` | used by the `difficulty-fixes` mod |
 | `LoadDifficultyMultipliers`: loads the `[Difficulty]` multipliers for `dif_AISenses`/`dif_AICombat`; only caller `0x10AB8470`, nothing calls it on a level load (missions play with the multipliers the game started with) | `0x10AB70B0` | called by the `difficulty-fixes` mod |
 | in `UGameEngine::Virtual32` (the level load), after the map is in: `mov al, [0x10F45C0C]` | `0x10985ADC` | code hook (`difficulty-fixes`) |
+| `FindExitMissionInfo()`, `__cdecl`: the level's `AExitMissionInfo` actor, NULL in city sections | `0x10AC89C0` | called by the `end-mission` mod |
+| `WindowManager::OpenMissionCompleteWindow()`, `__thiscall` on `GWindowManager`: shows `MissionCompleteWindow` | `0x10B15CC0` | called by the `end-mission` mod |
 | `WindowManager::OpenEnterMissionWindow(bool)` / `OpenRestartMissionWindow()` | `0x10B15B20` / `0x10B15BF0` | hooked (`difficulty-fixes`) |
 | mission records the menus edit: `*(DAT_10F3A3D8 + 0x150)`, `+4`/`+8` (mission, record) for Enter Mission, `+0xC`/`+0x10` for Restart Mission; the record's difficulty at `+0x174` | `0x10F3A3D8` | static |
 | `bool __cdecl (mission)`: gamesys `0x800864` is 1 (the mission has no difficulty choice) | `0x10ABE130` | static |
