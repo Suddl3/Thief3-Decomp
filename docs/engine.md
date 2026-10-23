@@ -503,6 +503,13 @@ DeEquipText` (the "nothing equipped" string tag; an empty value counts as
 missing); `[HealthMeter] Pos_X/Pos_Y` and `ClearPos_X/ClearPos_Y` (20/-15 and
 20/100: where the bar sits and where it slides when idle).
 
+Other settings read through `Config`: `T3PlayerAnims.ini`'s animation
+sections (`Name`, `Speed`, `Looping`, ...; the idle ones are `[MainIdle]`,
+`[MainIdleCrouching]`, `[MainIdle_PS]`, `[BodyCarryIdle]`,
+`[BodyCarryIdleCrouching]`); `Default.ini` `[Physics] WorldGravityZ`
+(-514.96, Unreal units/s², Havok) and `[PointPhysics] Gravity` (-32 ft/s²,
+flinders), `[T3Settings] WalkMultiplier` (0.5) and `CreepMultiplier` (0.33).
+
 ## Display: viewport and Direct3D 8
 
 | What | Address | Status |
