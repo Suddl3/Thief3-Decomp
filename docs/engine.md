@@ -524,6 +524,7 @@ flinders), `[T3Settings] WalkMultiplier` (0.5) and `CreepMultiplier` (0.33).
 | `UD3DRenderDevice::Lock` (logs "TestCooperativeLevel failed", "BeginScene failed") | `0x10C83450` | verified (log) |
 | `UD3DRenderDevice::SetRes`: present parameters (fullscreen interval ONE with VSynch, else IMMEDIATE; none when windowed), creates or resets the device, then `LoadingScreen::Begin` for the current map | `0x10C84070` | static |
 | VSynch as `SetRes` reads it (`Options::ApplyVideo` writes it) | render device `+0x40DC` | static |
+| `DrawLoadingProgress(float progress, bool force)`, `__cdecl`: redraws the loading screen (and presents) when forced or when the bar moved; the loading code calls it many times, each a frame that waits for VSynch | `0x109E1E80` | hooked by the `loading-tweaks` mod |
 | `LoadingScreen::Begin(device, map, flag)`, `__cdecl`: `<[Paths] DynamicTextures>\<map>.dds` (else `Loading1.dds`) as the background, the `[LoadingScreen]` logo and caption textures; draws and presents | `0x109E1FC0` | static (hooked by the SDK's level-change curtain) |
 | `LoadingScreen::LoadLayout` (`[LoadingScreen]` positions and sizes) | `0x109DFBA0` | static |
 | `UpdateWindowTitle` (localised "Thief - Deadly Shadows") | `0x10C872C0` | static |
