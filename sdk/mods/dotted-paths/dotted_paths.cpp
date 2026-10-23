@@ -28,9 +28,11 @@ StrrchrFn g_strrchr = nullptr;
 // follows the last dot (the dot is then in a folder name, not an extension).
 char* __cdecl StrrchrDetour(const char* text, int c) {
     char* found = g_strrchr(text, c);
+
     if (!found || char(c) != '.') {
         return found;
     }
+
     return strpbrk(found, "/\\") ? nullptr : found;
 }
 
@@ -43,5 +45,6 @@ T3SDK_EXPORT int T3SDK_CALL T3Mod_Init(const T3SdkApi* api) {
                      "strrchr")) {
         return 1;
     }
+
     return 0;
 }

@@ -97,6 +97,7 @@ OpenRestartFn g_openRestart = nullptr;
 // custom), or -1 when the game has no stats object yet.
 int CurrentDifficulty() {
     void* stats = reinterpret_cast<void*(__cdecl*)()>(kGetStats)();
+
     if (!stats) {
         return -1;
     }
@@ -125,17 +126,20 @@ void T3SDK_CALL AfterLevelLoad(void*, T3Registers*) {
 void PreselectDifficulty(bool restart) {
     int difficulty = CurrentDifficulty();
     auto flow = *reinterpret_cast<uint8_t**>(kMissionFlow);
+
     if (difficulty < 0 || difficulty >= kCustomDifficulty || !flow) {
         return;
     }
 
     auto records = t3mod::Field<uint8_t*>(flow, kMissionRecords);
+
     if (!records) {
         return;
     }
 
     void* mission = t3mod::Field<void*>(records, restart ? kRestartMission : kEnterMission);
     auto record = t3mod::Field<uint8_t*>(records, restart ? kRestartRecord : kEnterRecord);
+
     if (!mission || !record || reinterpret_cast<bool(__cdecl*)(void*)>(kFixedDifficulty)(mission)) {
         return;
     }
@@ -147,18 +151,22 @@ void PreselectDifficulty(bool restart) {
 // Detour of OpenEnterMissionWindow: preselects the difficulty once the menu is open.
 bool __fastcall OpenEnterDetour(void* self, void* edx, bool arg) {
     bool opened = g_openEnter(self, edx, arg);
+
     if (opened) {
         PreselectDifficulty(false);
     }
+
     return opened;
 }
 
 // Detour of OpenRestartMissionWindow: preselects the difficulty once the menu is open.
 bool __fastcall OpenRestartDetour(void* self, void* edx) {
     bool opened = g_openRestart(self, edx);
+
     if (opened) {
         PreselectDifficulty(true);
     }
+
     return opened;
 }
 
@@ -171,6 +179,7 @@ T3SDK_EXPORT int T3SDK_CALL T3Mod_Init(const T3SdkApi* api) {
     if (api->version < 2 || api->size < offsetof(T3SdkApi, AddCodeHook) + sizeof(api->AddCodeHook)) {
         return 1;
     }
+
     g_api = api;
 
     std::wstring ini = t3mod::SettingsFile();
@@ -180,6 +189,7 @@ T3SDK_EXPORT int T3SDK_CALL T3Mod_Init(const T3SdkApi* api) {
     if (onLoad) {
         onLoad = t3mod::CodeHook(api, kAfterLevelLoad, AfterLevelLoad, nullptr, "level load");
     }
+
     if (menus) {
         menus = t3mod::Hook(api, kOpenEnterMissionWindow, reinterpret_cast<void*>(&OpenEnterDetour),
                             reinterpret_cast<void**>(&g_openEnter), "enter mission menu") &&

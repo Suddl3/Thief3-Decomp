@@ -80,22 +80,27 @@ void T3SDK_CALL OnFrame(void*) {
     }
 
     DWORD now = GetTickCount();
+
     if (now - g_lastScan < kScanIntervalMs) {
         return;
     }
+
     g_lastScan = now;
 
     if (!g_zoneClass) {
         g_zoneClass = g_api->FindObject("Class", "Engine.ZoneInfo");
+
         if (!g_zoneClass) {
             return;
         }
     }
 
     int adjusted = 0;
+
     for (int i = 0, n = g_api->ObjectCount(); i < n; ++i) {
         T3Object* object = g_api->ObjectAt(i);
         char name[16];
+
         // Class default objects (Default__ZoneInfo, ...) keep the values new zones start from.
         if (!object || !g_api->IsA(object, g_zoneClass) || g_done.count(object) ||
             (g_api->ObjectName(object, name, sizeof(name)) && strncmp(name, "Default__", 9) == 0)) {
@@ -123,6 +128,7 @@ T3SDK_EXPORT int T3SDK_CALL T3Mod_Init(const T3SdkApi* api) {
     std::wstring ini = t3mod::SettingsFile();
     g_fogDistance = ReadFactor(L"FogDistance", ini);
     g_ambientLight = ReadFactor(L"AmbientLight", ini);
+
     if (g_fogDistance == 1.0f && g_ambientLight == 1.0f) {
         api->Log("nothing to change; off");
         return 1;

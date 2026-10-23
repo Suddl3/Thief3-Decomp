@@ -54,20 +54,24 @@ T3Object* FindPlayerController() {
     for (int i = 0, n = g_api->ObjectCount(); i < n; ++i) {
         T3Object* object = g_api->ObjectAt(i);
         char name[128];
+
         if (object && g_api->IsA(object, g_playerControllerClass) && g_api->ObjectName(object, name, sizeof(name)) &&
             strncmp(name, "Default", 7) != 0) {
             return object;
         }
     }
+
     return nullptr;
 }
 
 // The number of object slots that hold an object. Main thread only.
 int CountLiveObjects() {
     int live = 0;
+
     for (int i = 0, n = g_api->ObjectCount(); i < n; ++i) {
         live += g_api->ObjectAt(i) != nullptr;
     }
+
     return live;
 }
 
@@ -75,9 +79,11 @@ int CountLiveObjects() {
 std::string DescribeLogLines() {
     std::string lines;
     std::lock_guard<std::mutex> lock(g_logLinesMutex);
+
     for (const auto& [category, count] : g_logLines) {
         lines += category + "=" + std::to_string(count) + " ";
     }
+
     return lines;
 }
 
@@ -96,14 +102,17 @@ void T3SDK_CALL OnFrame(void*) {
     }
 
     DWORD now = GetTickCount();
+
     if (now - g_lastReport < kReportIntervalMs) {
         return;
     }
+
     g_lastReport = now;
 
     int live = CountLiveObjects();
 
     char controller[256] = "none";
+
     if (T3Object* playerController = FindPlayerController()) {
         g_api->ObjectPathName(playerController, controller, sizeof(controller));
     }
@@ -120,6 +129,7 @@ T3SDK_EXPORT int T3SDK_CALL T3Mod_Init(const T3SdkApi* api) {
     if (api->version < T3SDK_API_VERSION) {
         return 1;
     }
+
     g_api = api;
 
     api->AddFrameCallback(OnFrame, nullptr);

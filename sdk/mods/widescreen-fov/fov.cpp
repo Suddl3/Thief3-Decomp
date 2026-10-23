@@ -90,11 +90,13 @@ float HorPlus(float fov, float aspect) {
 // The position of gamesys ID `id` in kFovProperties, or -1 when it is not a FOV.
 int FovIndex(uint32_t id) {
     id |= kPropertyIdBit;
+
     for (int i = 0; i < int(std::size(kFovProperties)); ++i) {
         if (kFovProperties[i] == id) {
             return i;
         }
     }
+
     return -1;
 }
 
@@ -103,6 +105,7 @@ int FovIndex(uint32_t id) {
 int __fastcall PropertyGetDetour(void* self, void* edx, uint32_t id, void* out) {
     int found = g_get(self, edx, id, out);
     int index = found && out ? FovIndex(id) : -1;
+
     if (index < 0) {
         return found;
     }
@@ -115,6 +118,7 @@ int __fastcall PropertyGetDetour(void* self, void* edx, uint32_t id, void* out) 
     }
 
     float aspect = g_aspect;
+
     if (g_horPlus && aspect > kDesignedAspect) {
         *fov = HorPlus(*fov, aspect);
     }
@@ -123,6 +127,7 @@ int __fastcall PropertyGetDetour(void* self, void* edx, uint32_t id, void* out) 
         g_logged |= 1u << index;
         g_api->Log("FOV property %06X: %.2f -> %.2f (aspect %.3f)", id | kPropertyIdBit, original, *fov, aspect);
     }
+
     return found;
 }
 
@@ -133,12 +138,15 @@ BOOL CALLBACK FindGameWindow(HWND window, LPARAM param) {
     GetWindowThreadProcessId(window, &pid);
 
     RECT rect;
+
     if (pid == GetCurrentProcessId() && IsWindowVisible(window) && GetClientRect(window, &rect)) {
         auto* best = reinterpret_cast<RECT*>(param);
+
         if (rect.right * rect.bottom > best->right * best->bottom) {
             *best = rect;
         }
     }
+
     return TRUE;
 }
 
@@ -147,18 +155,22 @@ BOOL CALLBACK FindGameWindow(HWND window, LPARAM param) {
 void T3SDK_CALL OnFrame(void*) {
     static DWORD last = 0;
     DWORD now = GetTickCount();
+
     if (now - last < kAspectCheckMs) {
         return;  // A resolution change shows up within a second.
     }
+
     last = now;
 
     RECT best{};
     EnumWindows(FindGameWindow, reinterpret_cast<LPARAM>(&best));
+
     if (best.right <= 0 || best.bottom <= 0) {
         return;
     }
 
     float aspect = float(best.right) / float(best.bottom);
+
     if (aspect != g_aspect.exchange(aspect)) {
         g_api->Log("screen aspect %.3f (%ldx%ld): FOVs %s", aspect, best.right, best.bottom,
                    g_horPlus && aspect > kDesignedAspect ? "widened" : "as designed");
@@ -186,6 +198,7 @@ T3SDK_EXPORT int T3SDK_CALL T3Mod_Init(const T3SdkApi* api) {
                      "property getter")) {
         return 1;
     }
+
     api->AddFrameCallback(OnFrame, nullptr);
 
     api->Log("Hor+ %s, player FOV %.1f", g_horPlus ? "on" : "off", g_playerFov);

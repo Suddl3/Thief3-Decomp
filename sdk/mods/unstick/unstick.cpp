@@ -44,6 +44,7 @@ bool g_wasDown = false;
 // Posts the release event through the game's event dispatcher, once per press.
 void PostReleasePlayer() {
     void* dispatcher = *reinterpret_cast<void**>(kEventDispatcher);
+
     if (!dispatcher) {
         return;
     }
@@ -58,9 +59,11 @@ void PostReleasePlayer() {
 // from up to down while the game has the focus.
 void T3SDK_CALL OnFrame(void*) {
     bool down = g_api->EngineReady() && t3mod::GameHasFocus() && t3mod::KeysDown(g_keys);
+
     if (down && !g_wasDown) {
         PostReleasePlayer();
     }
+
     g_wasDown = down;
 }
 
@@ -72,6 +75,7 @@ T3SDK_EXPORT int T3SDK_CALL T3Mod_Init(const T3SdkApi* api) {
     g_api = api;
 
     g_keys = t3mod::ReadKeys(t3mod::SettingsFile(), L"Unstick", L"Keys", L"16,17,13");
+
     if (g_keys.empty()) {
         api->Log("no keys set; off");
         return 1;

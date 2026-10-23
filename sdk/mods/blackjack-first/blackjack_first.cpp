@@ -35,5 +35,6 @@ T3SDK_EXPORT int T3SDK_CALL T3Mod_Init(const T3SdkApi* api) {
     if (!t3mod::CodeHook(api, kDefaultWeaponName, OnDefaultWeapon, nullptr, "default weapon")) {
         return 1;
     }
+
     return 0;
 }
