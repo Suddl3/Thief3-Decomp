@@ -76,6 +76,8 @@ jobs:
         with:
           python-version: "3.12"
       - run: python -m pip install -r requirements.txt
+      - name: C++ style (docs/cpp-style.md)
+        run: python tools/sdk_style.py
       - run: python tools/sdk.py build
       - name: MSVC for x86 (for the mod template)
         uses: ilammy/msvc-dev-cmd@v1

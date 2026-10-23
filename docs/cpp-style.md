@@ -11,7 +11,9 @@ months later. Write for that reader.
 
 ## Formatting
 
-`sdk/.clang-format` decides the layout, and CI checks it:
+`sdk/.clang-format` decides the layout, and CI checks it with the
+clang-format version `requirements.txt` pins (versions lay code out slightly
+differently, so use that one: `pip install -r requirements.txt`):
 
 ```sh
 python tools/sdk_style.py          # which files need formatting

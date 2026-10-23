@@ -37,8 +37,11 @@ OPENS = re.compile(r"(?:\{|:)$")
 
 
 def clang_format() -> Optional[str]:
-    """$CLANG_FORMAT, clang-format on PATH, or LLVM's usual install folders."""
-    candidates = [os.environ.get("CLANG_FORMAT"), shutil.which("clang-format")]
+    """$CLANG_FORMAT, the pinned one requirements.txt installs next to this Python, clang-format on PATH, or
+    LLVM's usual install folders. Versions lay code out slightly differently: the pinned one is what CI uses."""
+    scripts = Path(sys.executable).parent
+    candidates = [os.environ.get("CLANG_FORMAT"), str(scripts / "clang-format.exe"), str(scripts / "clang-format"),
+                  shutil.which("clang-format")]
     candidates += [str(Path(p) / "clang-format.exe") for p in (
         os.path.expandvars(r"%ProgramFiles%\LLVM\bin"),
         os.path.expanduser(r"~\scoop\apps\llvm\current\bin"),

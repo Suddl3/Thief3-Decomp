@@ -34,7 +34,7 @@ struct GameString {
 
 using FindFn = bool(__fastcall*)(void* self, void* edx, const GameString* section, const GameString* key,
                                  const char* file, GameString* value);
-using AssignFn = GameString*(__fastcall*)(GameString* self, void* edx, const char* text);
+using AssignFn = GameString*(__fastcall*)(GameString * self, void* edx, const char* text);
 
 // A value a mod set with SetValue.
 struct Override {
