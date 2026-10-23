@@ -41,7 +41,10 @@ export interface ModFix {
 export const modFixes: ModFix[] = [
   { name: "widescreen-fov", label: "Widescreen field of view", hint: "See more at the sides, not less at the top." },
   { name: "difficulty-fixes", label: "Difficulty fixes", hint: "Missions play at the difficulty you chose." },
+  { name: "loading-tweaks", label: "Faster loading", hint: "Hold Ctrl to stay on a loading screen." },
+  { name: "hud-tweaks", label: "Calmer HUD", hint: "Junk items stay lit instead of flashing." },
   { name: "unstick", label: "Unstick key", hint: "Shift+Ctrl+Enter frees Garrett when he is stuck." },
+  { name: "end-mission", label: "End-mission key", hint: "Shift+Ctrl+Alt+End finishes the current mission." },
   { name: "dotted-paths", label: "Dots in the install folder", hint: "The game runs from any folder name." },
   { name: "blackjack-first", label: "Blackjack first", hint: "Attack with empty hands draws the blackjack." },
 ];
