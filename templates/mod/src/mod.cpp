@@ -23,6 +23,7 @@ void T3SDK_CALL OnFrame(void*) {
         return;
     }
 
+    // Log once, on the first frame with the engine up.
     if (g_frames++ == 0) {
         g_api->Log("engine up: %d object slots", g_api->ObjectCount());
     }
@@ -39,6 +40,7 @@ T3SDK_EXPORT int T3SDK_CALL T3Mod_Init(const T3SdkApi* api) {
 
     g_api = api;
 
+    // Without the frame callback the mod has nothing to do: stay unloaded.
     if (api->AddFrameCallback(OnFrame, nullptr) != 0) {
         return 1;
     }

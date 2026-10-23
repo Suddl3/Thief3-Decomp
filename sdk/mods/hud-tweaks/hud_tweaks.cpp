@@ -61,22 +61,26 @@ std::string ReadIni(const std::wstring& file, const wchar_t* section, const wcha
 // Config callback: replaces the health bar's ClearPos_X / ClearPos_Y with its Pos_X / Pos_Y, so it never
 // slides away. Returns the replacement, or nullptr to leave the value alone.
 const char* T3SDK_CALL OnConfig(void*, const char*, const char* section, const char* key, const char* value) {
+    // Only the health bar's settings matter, and only when the bar is meant to stay on screen.
     if (!g_healthAlwaysShown || _stricmp(section, "HealthMeter") != 0) {
         return nullptr;
     }
 
     const std::string* answer = nullptr;
 
+    // Its two off-screen resting positions are the ones to replace: X with Pos_X, Y with Pos_Y.
     if (_stricmp(key, "ClearPos_X") == 0) {
         answer = &g_healthPosX;
     } else if (_stricmp(key, "ClearPos_Y") == 0) {
         answer = &g_healthPosY;
     }
 
+    // Without a position read from T3UI.ini there is nothing to answer with: leave the game's value.
     if (!answer || answer->empty()) {
         return nullptr;
     }
 
+    // Log the first replacement only, not every read.
     if (!g_loggedHealth.exchange(true)) {
         g_api->Log("health bar kept on screen (%s %s instead of %s)", key, answer->c_str(), value ? value : "none");
     }
@@ -87,6 +91,7 @@ const char* T3SDK_CALL OnConfig(void*, const char*, const char* section, const c
 }  // namespace
 
 T3SDK_EXPORT int T3SDK_CALL T3Mod_Init(const T3SdkApi* api) {
+    // The mod needs T3SDK API version 2: stay unloaded on an older SDK.
     if (api->version < 2) {
         return 1;
     }
@@ -100,24 +105,29 @@ T3SDK_EXPORT int T3SDK_CALL T3Mod_Init(const T3SdkApi* api) {
     bool worldBehindBooks = t3mod::ReadBool(ini, L"HUD", L"WorldBehindBooks", false);
     bool hideLockpickHud = t3mod::ReadBool(ini, L"HUD", L"HideLockpickHud", false);
 
+    // The junk item flashes by turning off for FlashOffTime; zero keeps it lit.
     if (steadyJunk) {
         api->SetConfigValue(nullptr, "JunkItemWindow", "FlashOffTime", "0");
     }
 
+    // Both cycle windows show the "nothing equipped" text.
     if (hideEmptyHands) {
         // A space, not "": an empty value reads as missing, and the game would use its default text.
         api->SetConfigValue(nullptr, "ItemCycleWindow", "DeEquipText", " ");
         api->SetConfigValue(nullptr, "WeaponCycleWindow", "DeEquipText", " ");
     }
 
+    // Pos_Y is counted from the bottom, so 4000 places the lockpicking HUD far below the screen.
     if (hideLockpickHud) {
         api->SetConfigValue(nullptr, "LockPickHUDWindow", "Pos_Y", "4000");
     }
 
+    // The books' black screen is what hides the world; maps already turn it off.
     if (worldBehindBooks) {
         api->SetConfigValue(nullptr, "ReadBookWindow", "BlackScreen", "FALSE");
     }
 
+    // The health bar is answered on demand: read where it rests when shown, then register the callback.
     if (g_healthAlwaysShown) {
         std::wstring ui = t3mod::SystemFile(L"T3UI.ini");
         g_healthPosX = ReadIni(ui, L"HealthMeter", L"Pos_X");

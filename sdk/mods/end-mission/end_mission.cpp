@@ -43,6 +43,7 @@ void EndMission() {
     void* windows = *reinterpret_cast<void**>(kWindowManager);
     void* exit = reinterpret_cast<FindExitFn>(kFindExitMissionInfo)();
 
+    // City sections have no mission exit, and without a window manager the screen cannot open: do nothing.
     if (!windows || !exit) {
         g_api->Log("no mission exit in this level; nothing ended");
         return;
@@ -56,6 +57,7 @@ void EndMission() {
 void T3SDK_CALL OnFrame(void*) {
     bool down = g_api->EngineReady() && t3mod::GameHasFocus() && t3mod::KeysDown(g_keys);
 
+    // Only the frame the combination goes down ends the mission, not every frame it is held.
     if (down && !g_wasDown) {
         EndMission();
     }
@@ -70,6 +72,7 @@ T3SDK_EXPORT int T3SDK_CALL T3Mod_Init(const T3SdkApi* api) {
 
     g_keys = t3mod::ReadKeys(t3mod::SettingsFile(), L"EndMission", L"Keys", L"16,17,18,35");
 
+    // Without keys the mod can never act: do not load.
     if (g_keys.empty()) {
         api->Log("no keys set; off");
         return 1;

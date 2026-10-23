@@ -66,7 +66,9 @@ bool Held() {
 void __cdecl DrawDetour(float progress, bool force) {
     DWORD now = GetTickCount();
 
+    // A redraw the game does not force, and that follows the last one too closely, is skipped.
     if (!force && g_minRedrawMs && now - g_lastDraw < g_minRedrawMs) {
+        // Log once when skipping has become routine (after 100 skipped redraws).
         if (++g_skipped == 100 && !g_loggedSkips) {
             g_loggedSkips = true;
             g_api->Log("loading screen redraws thinned out (%lu ms apart at least)", g_minRedrawMs);
@@ -78,10 +80,12 @@ void __cdecl DrawDetour(float progress, bool force) {
     g_lastDraw = now;
     g_draw(progress, force);
 
+    // Without the hold keys down the redraw is done: back to loading.
     if (!Held()) {
         return;
     }
 
+    // Log the first hold only, not every one.
     if (!g_loggedHold) {
         g_loggedHold = true;
         g_api->Log("loading held while the keys are down");
@@ -90,6 +94,7 @@ void __cdecl DrawDetour(float progress, bool force) {
     // Peeking keeps Windows from marking the game as not responding; nothing is taken off the queue.
     MSG msg;
 
+    // Keep redrawing the same screen until the keys are released.
     while (Held()) {
         PeekMessageW(&msg, nullptr, 0, 0, PM_NOREMOVE);
         Sleep(30);
@@ -107,17 +112,20 @@ T3SDK_EXPORT int T3SDK_CALL T3Mod_Init(const T3SdkApi* api) {
     std::wstring ini = t3mod::SettingsFile();
     g_minRedrawMs = DWORD(t3mod::ReadInt(ini, L"Loading", L"MinRedrawMs", 20));
 
+    // Cap the interval at the most accepted.
     if (g_minRedrawMs > kMaxMinRedrawMs) {
         g_minRedrawMs = kMaxMinRedrawMs;
     }
 
     g_holdKeys = t3mod::ReadKeys(ini, L"Loading", L"HoldKeys", L"17");
 
+    // Both features off: nothing to hook, do not load.
     if (!g_minRedrawMs && g_holdKeys.empty()) {
         api->Log("nothing to change; off");
         return 1;
     }
 
+    // Without the hook neither feature works: do not load.
     if (!t3mod::Hook(api, kDrawLoadingProgress, reinterpret_cast<void*>(&DrawDetour), reinterpret_cast<void**>(&g_draw),
                      "loading screen")) {
         return 1;

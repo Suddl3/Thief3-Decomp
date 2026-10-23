@@ -94,6 +94,7 @@ void T3SDK_CALL OnQuickSave(void*, T3Registers* regs) {
 
 // Code hook on a quick load: names the save to load with the number of the last one written.
 void T3SDK_CALL OnQuickLoad(void*, T3Registers* regs) {
+    // Nothing was written yet (number 0): leave the name alone and load the game's own quick save.
     if (int number = LastNumber()) {
         Rename(regs, number, "quick load");
     }
@@ -102,6 +103,7 @@ void T3SDK_CALL OnQuickLoad(void*, T3Registers* regs) {
 }  // namespace
 
 T3SDK_EXPORT int T3SDK_CALL T3Mod_Init(const T3SdkApi* api) {
+    // The mod needs code hooks, which API version 2 added: stay unloaded on an older SDK.
     if (api->version < 2 || api->size < offsetof(T3SdkApi, AddCodeHook) + sizeof(api->AddCodeHook)) {
         return 1;
     }
@@ -110,6 +112,7 @@ T3SDK_EXPORT int T3SDK_CALL T3Mod_Init(const T3SdkApi* api) {
 
     std::wstring ini = t3mod::SettingsFile();
 
+    // Off by default, as it writes extra save games.
     if (!t3mod::ReadBool(ini, L"QuickSave", L"Enabled", false)) {
         api->Log("off (Enabled=0)");
         return 1;
@@ -117,6 +120,7 @@ T3SDK_EXPORT int T3SDK_CALL T3Mod_Init(const T3SdkApi* api) {
 
     g_count = t3mod::ReadInt(ini, L"QuickSave", L"Count", kDefaultCount);
 
+    // A Count outside the allowed range counts as the default.
     if (g_count < kMinCount || g_count > kMaxCount) {
         g_count = kDefaultCount;
     }
@@ -126,10 +130,12 @@ T3SDK_EXPORT int T3SDK_CALL T3Mod_Init(const T3SdkApi* api) {
     // Not t3mod::CodeHook: its failure line differs from the one this mod has always logged.
     int status = api->AddCodeHook(reinterpret_cast<void*>(kQuickSaveNamed), OnQuickSave, nullptr);
 
+    // Hook quick load only after quick save was hooked.
     if (status == 0) {
         status = api->AddCodeHook(reinterpret_cast<void*>(kQuickLoadNamed), OnQuickLoad, nullptr);
     }
 
+    // Either hook failing leaves the cycle half done: report it and do not load.
     if (status != 0) {
         api->Log("quick save hooks failed (status %d)", status);
         return 1;

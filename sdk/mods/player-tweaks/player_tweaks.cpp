@@ -41,7 +41,9 @@ std::atomic<bool> g_loggedGravity = false;
 
 // Whether a T3PlayerAnims.ini section is one of the standing-still animations.
 bool IsIdleSection(const char* section) {
+    // Compare with each standing-still section, ignoring case as the game does.
     for (const char* idle : kIdleSections) {
+        // A match means this is one of the idle animations.
         if (_stricmp(section, idle) == 0) {
             return true;
         }
@@ -58,7 +60,9 @@ const char* T3SDK_CALL OnConfig(void*, const char*, const char* section, const c
     // The answer must outlive the call, so it lives in the calling thread.
     thread_local std::string answer;
 
+    // An idle animation's Speed is read: answer 0 so it does not play.
     if (g_stillIdle && _stricmp(key, "Speed") == 0 && IsIdleSection(section)) {
+        // Log the first idle answer only, not every read.
         if (!g_loggedIdle.exchange(true)) {
             g_api->Log("idle animations held still");
         }
@@ -69,6 +73,7 @@ const char* T3SDK_CALL OnConfig(void*, const char*, const char* section, const c
     bool isGravity = value && ((_stricmp(section, "Physics") == 0 && _stricmp(key, "WorldGravityZ") == 0) ||
                                (_stricmp(section, "PointPhysics") == 0 && _stricmp(key, "Gravity") == 0));
 
+    // Gravity is left alone when the multiplier is 1 or when this is not a gravity setting.
     if (g_gravity == 1.0f || !isGravity) {
         return nullptr;
     }
@@ -77,6 +82,7 @@ const char* T3SDK_CALL OnConfig(void*, const char*, const char* section, const c
     snprintf(text, sizeof(text), "%g", atof(value) * g_gravity);
     answer = text;
 
+    // Log the first gravity answer only, not every read.
     if (!g_loggedGravity.exchange(true)) {
         g_api->Log("gravity x%.2f ([%s] %s %s -> %s)", g_gravity, section, key, value, text);
     }
@@ -87,6 +93,7 @@ const char* T3SDK_CALL OnConfig(void*, const char*, const char* section, const c
 }  // namespace
 
 T3SDK_EXPORT int T3SDK_CALL T3Mod_Init(const T3SdkApi* api) {
+    // The mod needs T3SDK API version 2: stay unloaded on an older SDK.
     if (api->version < 2) {
         return 1;
     }
@@ -97,10 +104,12 @@ T3SDK_EXPORT int T3SDK_CALL T3Mod_Init(const T3SdkApi* api) {
     g_stillIdle = t3mod::ReadBool(ini, L"Player", L"StillIdle", false);
     g_gravity = t3mod::ReadFloat(ini, L"Player", L"Gravity", 1.0f, 0.0f, 10.0f);
 
+    // A gravity of zero or below would be nonsense: fall back to the game's own.
     if (g_gravity <= 0.0f) {
         g_gravity = 1.0f;  // ReadFloat accepts 0; a gravity of zero is not accepted here
     }
 
+    // With both settings as the game has them there is nothing to answer: do not load.
     if (!g_stillIdle && g_gravity == 1.0f) {
         api->Log("nothing to change; off");
         return 1;
