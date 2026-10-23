@@ -44,9 +44,12 @@ Deploy copies DLL, PDB, and INI files from `build/sdk/bin/` into `System/` and
 records the files it installed in `build/sdk/deployed.json` (under
 `$T3SDK_BUILD_DIR/sdk/` when that is set, as the launcher does for its bundled
 copy). It refuses to overwrite an existing file it does not own, and then
-copies nothing, except that an existing `System/T3SDK.ini` that is not already
-in the manifest is kept as the user's settings. `undeploy` removes only files
-in the manifest.
+copies nothing. Settings files that exist (`T3SDK.ini`, a mod's `.ini`) are
+the player's and are never overwritten; a fix mod the launcher switched off
+(in `System/mods/disabled/`) is updated there, so it stays off; and files an
+earlier deploy installed that the build no longer has are removed.
+`undeploy` removes only files in the manifest, wherever the launcher's switch
+moved them.
 
 ## Settings and built-in fixes
 
@@ -169,6 +172,14 @@ Check `api->version >= 2` (or `api->size`) before using these.
   the game's registers are left as they were.
 
 ### Mods in this repository
+
+All but `hello` make up T3SDK's fix pack: they build into `bin/mods/`, ship
+with a release, and **Install T3SDK** puts them into `System\mods`. The
+launcher's Play page switches them under Game fixes; switching one off moves
+it to `System\mods\disabled`, and an update of T3SDK keeps it there. An
+update also keeps every settings file that already exists (`T3SDK.ini`, a
+mod's `.ini`). `hello` is an example to read: it builds into `examples/`
+and is not installed.
 
 | Mod | What it does | Settings |
 |---|---|---|

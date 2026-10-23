@@ -50,6 +50,9 @@ now have:
 - a borderless window instead of exclusive fullscreen (alt-tab, other
   monitors and screenshots work);
 - menus laid out for widescreen;
+- T3SDK's fix pack: a widescreen field of view, missions at the difficulty
+  you chose, faster loading, a key that frees a stuck Garrett, and more
+  (the full list is in [docs/sdk.md](docs/sdk.md#mods-in-this-repository));
 - the mod loader: mod DLLs go into the game's `System\mods` folder
   (**Mods** page, **Open folder**).
 

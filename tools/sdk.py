@@ -113,26 +113,67 @@ def cmd_deploy(args: argparse.Namespace) -> None:
         sys.exit("nothing to deploy: run `tools/sdk.py build` first")
     previous = set(json.loads(MANIFEST.read_text())["files"]) if MANIFEST.is_file() else set()
 
-    # sorted: a deterministic manifest, regardless of filesystem order
-    files = [src.relative_to(BIN).as_posix() for src in sorted(BIN.rglob("*"))
+    # The built files, as paths in System/ (sorted: a deterministic manifest, regardless of
+    # filesystem order). A fix mod the player switched off in the launcher (moved to
+    # mods/disabled/) is updated there, so it stays off.
+    built = [src.relative_to(BIN).as_posix() for src in sorted(BIN.rglob("*"))
              if src.is_file() and src.suffix.lower() in (".dll", ".pdb", ".ini")]
+    targets = {rel: placed(system, rel) for rel in built}
+
+    # Settings files (T3SDK.ini, a mod's .ini) that exist are the player's: they are kept, not
+    # overwritten. They stay in the manifest when this tool installed them in the first place.
+    ours = lambda rel: rel in previous or other_place(rel) in previous  # noqa: E731
+    kept = {rel for rel, dst in targets.items() if rel.lower().endswith(".ini") and (system / dst).exists()}
+
     # A file already there that this tool did not install stops the deploy before
     # anything is copied, so a refused deploy leaves the folder as it was.
-    # T3SDK.ini is the exception: an existing one is the user's own settings.
-    files = [rel for rel in files if not (rel == "T3SDK.ini" and rel not in previous and (system / rel).exists())]
-    conflicts = [system / rel for rel in files if (system / rel).exists() and rel not in previous]
+    conflicts = [system / dst for rel, dst in targets.items()
+                 if rel not in kept and (system / dst).exists() and not ours(dst)]
     if conflicts:
         sys.exit("these files exist and were not installed by this tool; move them away first:\n  "
                  + "\n  ".join(str(c) for c in conflicts))
+
     installed: List[str] = []
-    for rel in files:
-        dst = system / rel
-        dst.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(BIN / rel, dst)
-        installed.append(rel)
+    for rel, dst in targets.items():
+        if rel in kept:
+            if ours(dst):
+                installed.append(dst)
+            continue
+        (system / dst).parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(BIN / rel, system / dst)
+        installed.append(dst)
+
+    # What an earlier deploy installed that this build no longer has (a mod dropped from the pack, or the
+    # example mod older builds shipped) goes.
+    current = set(installed) | {other_place(rel) for rel in installed}
+    stale = sorted(rel for rel in previous if rel not in current)
+    for rel in stale:
+        (system / rel).unlink(missing_ok=True)
+        (system / other_place(rel)).unlink(missing_ok=True)
+
     MANIFEST.parent.mkdir(parents=True, exist_ok=True)
     MANIFEST.write_text(json.dumps({"system": str(system), "files": installed}, indent=1), encoding="utf-8")
-    print(f"deployed {len(installed)} files to {system}")
+    print(f"deployed {len(installed)} files to {system} ({len(kept)} settings files kept as they were"
+          + (f", {len(stale)} no longer built removed" if stale else "") + ")")
+
+
+def other_place(rel: str) -> str:
+    """A mod file's path in the other of System/mods and System/mods/disabled (the launcher's switch
+    moves loose mods between them); the path itself for any other file."""
+    if rel.startswith("mods/disabled/") and rel.count("/") == 2:
+        return "mods/" + rel[len("mods/disabled/"):]
+    if rel.startswith("mods/") and rel.count("/") == 1:
+        return "mods/disabled/" + rel[len("mods/"):]
+    return rel
+
+
+def placed(system: Path, rel: str) -> str:
+    """Where a built file goes in System/: mods/disabled/ when the player switched that mod off."""
+    if rel.startswith("mods/") and rel.count("/") == 1:
+        stem = Path(rel).stem
+        if (system / "mods" / "disabled" / f"{stem}.dll").is_file():
+            return other_place(rel)
+    return rel
 
 
 def cmd_undeploy(args: argparse.Namespace) -> None:
@@ -140,11 +181,13 @@ def cmd_undeploy(args: argparse.Namespace) -> None:
         sys.exit(f"nothing deployed (no {MANIFEST})")
     data = json.loads(MANIFEST.read_text())
     system = Path(data["system"])
+    # A fix mod may have been switched on or off since (moved between mods/ and mods/disabled/).
     for rel in data["files"]:
         (system / rel).unlink(missing_ok=True)
-    mods = system / "mods"
-    if mods.is_dir() and not any(mods.iterdir()):
-        mods.rmdir()
+        (system / other_place(rel)).unlink(missing_ok=True)
+    for folder in (system / "mods" / "disabled", system / "mods"):
+        if folder.is_dir() and not any(folder.iterdir()):
+            folder.rmdir()
     MANIFEST.unlink()
     print(f"removed {len(data['files'])} files from {system}")
 
