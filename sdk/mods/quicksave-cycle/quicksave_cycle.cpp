@@ -6,69 +6,93 @@
 // Count and round again, and quick load picks the last one written. The saves
 // themselves are the game's own; there are just Count of them.
 //
-//   0x10B17CE0  quick save, name settled (cString at [esp+0x14])
-//   0x10B181AA  quick load, name settled (cString at [esp+0x14])
-//
 // The number of the last quick save is kept in quicksave-cycle.state next to
 // the DLL. Settings, in quicksave-cycle.ini:
 //   [QuickSave]
 //   Enabled=0   1 = cycle through Count quick saves (writes extra save games)
-//   Count=3     how many quick saves to keep (2..9)
-#include <t3sdk/t3sdk.h>
+//   Count=3     how many quick saves to keep (2..9; anything else counts as 3)
+//
+// Off by default: it writes extra save games.
+#include <t3sdk/modkit.hpp>
 
 #include <windows.h>
 
+#include <cstddef>
 #include <cstdint>
 #include <cstdio>
+#include <cwchar>
 #include <string>
 
 namespace {
 
+// Code hooks inside the save/load dispatcher, at the point where the save's name is settled; the name's
+// cString is at [esp+0x14] (docs/engine.md, "Save games").
 constexpr uintptr_t kQuickSaveNamed = 0x10B17CE0;
 constexpr uintptr_t kQuickLoadNamed = 0x10B181AA;
-constexpr uint32_t kNameOnStack = 0x14;            // the name's cString, from the game's esp
-constexpr uintptr_t kStringAssign = 0x1090A590;    // cString& cString::operator=(const char*)
+constexpr uint32_t kNameOnStack = 0x14;
 
+// cString& cString::operator=(const char*), __thiscall: frees the old text and copies the new
+// (docs/engine.md, "Configuration").
+constexpr uintptr_t kStringAssign = 0x1090A590;
+
+using StringAssignFn = void*(__fastcall*)(void* self, void* edx, const char* text);
+
+// The game's cString: a pointer to its text.
 struct GameString {
     char* text;
 };
 
+// The most quick saves that can be kept, and the Count used when the setting is out of range.
+constexpr int kMinCount = 2;
+constexpr int kMaxCount = 9;
+constexpr int kDefaultCount = 3;
+
+// ---- state --------------------------------------------------------------------
+
 const T3SdkApi* g_api = nullptr;
-int g_count = 3;
+
+// How many quick saves the cycle goes through.
+int g_count = kDefaultCount;
+
+// quicksave-cycle.state, which remembers the number of the last quick save across runs.
 std::wstring g_stateFile;
 
-std::wstring ModFile(const wchar_t* extension) {
-    HMODULE self = nullptr;
-    GetModuleHandleExW(GET_MODULE_HANDLE_EX_FLAG_FROM_ADDRESS | GET_MODULE_HANDLE_EX_FLAG_UNCHANGED_REFCOUNT,
-                       reinterpret_cast<LPCWSTR>(&ModFile), &self);
-    wchar_t path[MAX_PATH];
-    GetModuleFileNameW(self, path, MAX_PATH);
-    std::wstring file = path;
-    return file.substr(0, file.find_last_of(L'.')) + extension;
-}
+// ---- helpers ------------------------------------------------------------------
 
 // The number of the last quick save written, 0 for none yet.
 int LastNumber() {
-    int last = int(GetPrivateProfileIntW(L"QuickSave", L"Last", 0, g_stateFile.c_str()));
+    int last = t3mod::ReadInt(g_stateFile, L"QuickSave", L"Last", 0);
     return last >= 1 && last <= g_count ? last : 0;
 }
 
-void Rename(T3Registers* regs, int number, const char* what) {
-    auto name = reinterpret_cast<GameString*>(regs->esp + kNameOnStack);
-    char text[160];
-    snprintf(text, sizeof(text), "%s %d", name->text ? name->text : "Quick Save", number);
-    reinterpret_cast<GameString*(__fastcall*)(GameString*, void*, const char*)>(kStringAssign)(name, nullptr, text);
-    g_api->Log("%s: \"%s\"", what, text);
-}
-
-void T3SDK_CALL OnQuickSave(void*, T3Registers* regs) {
-    int number = LastNumber() % g_count + 1;
+// Remembers `number` as the last quick save written.
+void StoreLastNumber(int number) {
     wchar_t text[8];
     swprintf(text, 8, L"%d", number);
     WritePrivateProfileStringW(L"QuickSave", L"Last", text, g_stateFile.c_str());
+}
+
+// Changes the save's name (the cString on the game's stack) to "<name> <number>" and logs it as `what`.
+void Rename(T3Registers* regs, int number, const char* what) {
+    auto name = reinterpret_cast<GameString*>(regs->esp + kNameOnStack);
+
+    char text[160];
+    snprintf(text, sizeof(text), "%s %d", name->text ? name->text : "Quick Save", number);
+    reinterpret_cast<StringAssignFn>(kStringAssign)(name, nullptr, text);
+
+    g_api->Log("%s: \"%s\"", what, text);
+}
+
+// ---- logic --------------------------------------------------------------------
+
+// Code hook on a quick save: moves on to the next number in the cycle and names the save with it.
+void T3SDK_CALL OnQuickSave(void*, T3Registers* regs) {
+    int number = LastNumber() % g_count + 1;
+    StoreLastNumber(number);
     Rename(regs, number, "quick save");
 }
 
+// Code hook on a quick load: names the save to load with the number of the last one written.
 void T3SDK_CALL OnQuickLoad(void*, T3Registers* regs) {
     if (int number = LastNumber()) {
         Rename(regs, number, "quick load");
@@ -82,16 +106,19 @@ T3SDK_EXPORT int T3SDK_CALL T3Mod_Init(const T3SdkApi* api) {
         return 1;
     }
     g_api = api;
-    std::wstring ini = ModFile(L".ini");
-    if (GetPrivateProfileIntW(L"QuickSave", L"Enabled", 0, ini.c_str()) == 0) {
+
+    std::wstring ini = t3mod::SettingsFile();
+    if (!t3mod::ReadBool(ini, L"QuickSave", L"Enabled", false)) {
         api->Log("off (Enabled=0)");
         return 1;
     }
-    g_count = int(GetPrivateProfileIntW(L"QuickSave", L"Count", 3, ini.c_str()));
-    if (g_count < 2 || g_count > 9) {
-        g_count = 3;
+    g_count = t3mod::ReadInt(ini, L"QuickSave", L"Count", kDefaultCount);
+    if (g_count < kMinCount || g_count > kMaxCount) {
+        g_count = kDefaultCount;
     }
-    g_stateFile = ModFile(L".state");
+    g_stateFile = t3mod::ModFile(L".state");
+
+    // Not t3mod::CodeHook: its failure line differs from the one this mod has always logged.
     int status = api->AddCodeHook(reinterpret_cast<void*>(kQuickSaveNamed), OnQuickSave, nullptr);
     if (status == 0) {
         status = api->AddCodeHook(reinterpret_cast<void*>(kQuickLoadNamed), OnQuickLoad, nullptr);
@@ -100,6 +127,7 @@ T3SDK_EXPORT int T3SDK_CALL T3Mod_Init(const T3SdkApi* api) {
         api->Log("quick save hooks failed (status %d)", status);
         return 1;
     }
+
     api->Log("cycling through %d quick saves (last %d)", g_count, LastNumber());
     return 0;
 }

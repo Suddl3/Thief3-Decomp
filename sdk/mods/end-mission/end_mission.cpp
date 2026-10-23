@@ -6,91 +6,71 @@
 //
 // Settings, in end-mission.ini next to the DLL:
 //   [EndMission]
-//   Keys=16,17,18,35   virtual-key codes held together (Shift, Ctrl, Alt, End)
-#include <t3sdk/t3sdk.h>
-
-#include <windows.h>
+//   Keys=16,17,18,35   virtual-key codes held together (Shift, Ctrl, Alt, End); empty = off
+#include <t3sdk/modkit.hpp>
 
 #include <cstdint>
-#include <cwchar>
-#include <string>
 #include <vector>
 
 namespace {
 
-constexpr uintptr_t kFindExitMissionInfo = 0x10AC89C0;       // AExitMissionInfo* __cdecl ()
-constexpr uintptr_t kOpenMissionCompleteWindow = 0x10B15CC0; // bool __thiscall WindowManager::(void)
-constexpr uintptr_t kWindowManager = 0x10F35DC4;             // GWindowManager
+// AExitMissionInfo* __cdecl FindExitMissionInfo(): the level's mission exit actor, null in city sections
+// (docs/engine.md, "Difficulty").
+constexpr uintptr_t kFindExitMissionInfo = 0x10AC89C0;
+
+// bool __thiscall WindowManager::OpenMissionCompleteWindow(): shows the mission complete screen
+// (docs/engine.md, "Difficulty").
+constexpr uintptr_t kOpenMissionCompleteWindow = 0x10B15CC0;
+
+// WindowManager* GWindowManager: the game's window manager (docs/engine.md, "UI windows").
+constexpr uintptr_t kWindowManager = 0x10F35DC4;
+
+using FindExitFn = void*(__cdecl*)();
+using OpenWindowFn = bool(__fastcall*)(void* self, void* edx);
+
+// ---- state --------------------------------------------------------------------
 
 const T3SdkApi* g_api = nullptr;
+
+// The key combination, and whether it was down on the previous frame (the mission ends once per press).
 std::vector<int> g_keys;
 bool g_wasDown = false;
 
-bool GameHasFocus() {
-    DWORD pid = 0;
-    GetWindowThreadProcessId(GetForegroundWindow(), &pid);
-    return pid == GetCurrentProcessId();
-}
+// ---- logic --------------------------------------------------------------------
 
-bool KeysDown() {
-    for (int key : g_keys) {
-        if (!(GetAsyncKeyState(key) & 0x8000)) {
-            return false;
-        }
-    }
-    return !g_keys.empty();
-}
-
+// Opens the mission complete screen, if the level has a mission exit.
 void EndMission() {
     void* windows = *reinterpret_cast<void**>(kWindowManager);
-    void* exit = reinterpret_cast<void*(__cdecl*)()>(kFindExitMissionInfo)();
+    void* exit = reinterpret_cast<FindExitFn>(kFindExitMissionInfo)();
     if (!windows || !exit) {
         g_api->Log("no mission exit in this level; nothing ended");
         return;
     }
-    bool opened = reinterpret_cast<bool(__fastcall*)(void*, void*)>(kOpenMissionCompleteWindow)(windows, nullptr);
+
+    bool opened = reinterpret_cast<OpenWindowFn>(kOpenMissionCompleteWindow)(windows, nullptr);
     g_api->Log(opened ? "mission ended: mission complete screen opened" : "mission complete screen did not open");
 }
 
+// Frame callback (game's main thread): ends the mission when the combination goes down.
 void T3SDK_CALL OnFrame(void*) {
-    bool down = g_api->EngineReady() && GameHasFocus() && KeysDown();
+    bool down = g_api->EngineReady() && t3mod::GameHasFocus() && t3mod::KeysDown(g_keys);
     if (down && !g_wasDown) {
         EndMission();
     }
     g_wasDown = down;
 }
 
-std::wstring IniPath() {
-    HMODULE self = nullptr;
-    GetModuleHandleExW(GET_MODULE_HANDLE_EX_FLAG_FROM_ADDRESS | GET_MODULE_HANDLE_EX_FLAG_UNCHANGED_REFCOUNT,
-                       reinterpret_cast<LPCWSTR>(&IniPath), &self);
-    wchar_t path[MAX_PATH];
-    GetModuleFileNameW(self, path, MAX_PATH);
-    std::wstring ini = path;
-    return ini.substr(0, ini.find_last_of(L'.')) + L".ini";
-}
-
 }  // namespace
 
 T3SDK_EXPORT int T3SDK_CALL T3Mod_Init(const T3SdkApi* api) {
     g_api = api;
-    wchar_t text[64];
-    GetPrivateProfileStringW(L"EndMission", L"Keys", L"16,17,18,35", text, 64, IniPath().c_str());
-    for (wchar_t* p = text; *p;) {
-        wchar_t* end = nullptr;
-        long key = wcstol(p, &end, 0);
-        if (end == p) {
-            break;
-        }
-        if (key > 0 && key < 256) {
-            g_keys.push_back(int(key));
-        }
-        p = *end ? end + 1 : end;
-    }
+
+    g_keys = t3mod::ReadKeys(t3mod::SettingsFile(), L"EndMission", L"Keys", L"16,17,18,35");
     if (g_keys.empty()) {
         api->Log("no keys set; off");
         return 1;
     }
+
     api->AddFrameCallback(OnFrame, nullptr);
     return 0;
 }

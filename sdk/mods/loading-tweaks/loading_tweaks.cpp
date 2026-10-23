@@ -10,50 +10,59 @@
 //
 // Settings, in loading-tweaks.ini next to the DLL:
 //   [Loading]
-//   MinRedrawMs=20    0 = every redraw, as the game does
+//   MinRedrawMs=20    0 = every redraw, as the game does; at most 1000
 //   HoldKeys=17       virtual-key codes held together (17 Ctrl); empty = off
-#include <t3sdk/t3sdk.h>
+//
+// With both off the mod does not load.
+#include <t3sdk/modkit.hpp>
 
 #include <windows.h>
 
 #include <cstdint>
-#include <cwchar>
 #include <string>
 #include <vector>
 
 namespace {
 
+// void __cdecl DrawLoadingProgress(float progress, bool force): redraws the loading screen with the bar at
+// `progress`; `force` is set by the game when the redraw must not be skipped (docs/engine.md, "Display").
 constexpr uintptr_t kDrawLoadingProgress = 0x109E1E80;
+
+// The longest MinRedrawMs accepted; larger values are clamped to it.
+constexpr DWORD kMaxMinRedrawMs = 1000;
 
 using DrawFn = void(__cdecl*)(float progress, bool force);
 
+// ---- state --------------------------------------------------------------------
+
 const T3SdkApi* g_api = nullptr;
+
+// The game's DrawLoadingProgress, called through the hook.
 DrawFn g_draw = nullptr;
+
+// Settings: the shortest time between two redraws, and the keys that hold loading.
 DWORD g_minRedrawMs = 20;
 std::vector<int> g_holdKeys;
+
+// When the last redraw was let through (GetTickCount), and how many have been skipped since the start.
 DWORD g_lastDraw = 0;
 int g_skipped = 0;
+
+// Set once the first skip burst and the first hold are logged.
 bool g_loggedSkips = false;
 bool g_loggedHold = false;
 
-bool GameHasFocus() {
-    DWORD pid = 0;
-    GetWindowThreadProcessId(GetForegroundWindow(), &pid);
-    return pid == GetCurrentProcessId();
-}
+// ---- helpers ------------------------------------------------------------------
 
+// Whether the player is holding loading: the keys are down and the game's window has the focus.
 bool Held() {
-    if (g_holdKeys.empty() || !GameHasFocus()) {
-        return false;
-    }
-    for (int key : g_holdKeys) {
-        if (!(GetAsyncKeyState(key) & 0x8000)) {
-            return false;
-        }
-    }
-    return true;
+    return t3mod::GameHasFocus() && t3mod::KeysDown(g_holdKeys);
 }
 
+// ---- logic --------------------------------------------------------------------
+
+// Replaces DrawLoadingProgress: skips redraws that come too soon, and keeps redrawing the same screen while
+// the hold keys are down.
 void __cdecl DrawDetour(float progress, bool force) {
     DWORD now = GetTickCount();
     if (!force && g_minRedrawMs && now - g_lastDraw < g_minRedrawMs) {
@@ -63,69 +72,50 @@ void __cdecl DrawDetour(float progress, bool force) {
         }
         return;
     }
+
     g_lastDraw = now;
     g_draw(progress, force);
-    if (Held()) {
-        if (!g_loggedHold) {
-            g_loggedHold = true;
-            g_api->Log("loading held while the keys are down");
-        }
-        // Peeking keeps Windows from marking the game as not responding; nothing is taken off the queue.
-        MSG msg;
-        while (Held()) {
-            PeekMessageW(&msg, nullptr, 0, 0, PM_NOREMOVE);
-            Sleep(30);
-            g_draw(progress, true);
-        }
-        g_lastDraw = GetTickCount();
+    if (!Held()) {
+        return;
     }
-}
 
-std::wstring IniPath() {
-    HMODULE self = nullptr;
-    GetModuleHandleExW(GET_MODULE_HANDLE_EX_FLAG_FROM_ADDRESS | GET_MODULE_HANDLE_EX_FLAG_UNCHANGED_REFCOUNT,
-                       reinterpret_cast<LPCWSTR>(&IniPath), &self);
-    wchar_t path[MAX_PATH];
-    GetModuleFileNameW(self, path, MAX_PATH);
-    std::wstring ini = path;
-    return ini.substr(0, ini.find_last_of(L'.')) + L".ini";
+    if (!g_loggedHold) {
+        g_loggedHold = true;
+        g_api->Log("loading held while the keys are down");
+    }
+
+    // Peeking keeps Windows from marking the game as not responding; nothing is taken off the queue.
+    MSG msg;
+    while (Held()) {
+        PeekMessageW(&msg, nullptr, 0, 0, PM_NOREMOVE);
+        Sleep(30);
+        g_draw(progress, true);
+    }
+    g_lastDraw = GetTickCount();
 }
 
 }  // namespace
 
 T3SDK_EXPORT int T3SDK_CALL T3Mod_Init(const T3SdkApi* api) {
     g_api = api;
-    std::wstring ini = IniPath();
-    g_minRedrawMs = GetPrivateProfileIntW(L"Loading", L"MinRedrawMs", 20, ini.c_str());
-    if (g_minRedrawMs > 1000) {
-        g_minRedrawMs = 1000;
+
+    std::wstring ini = t3mod::SettingsFile();
+    g_minRedrawMs = DWORD(t3mod::ReadInt(ini, L"Loading", L"MinRedrawMs", 20));
+    if (g_minRedrawMs > kMaxMinRedrawMs) {
+        g_minRedrawMs = kMaxMinRedrawMs;
     }
-    wchar_t text[64];
-    GetPrivateProfileStringW(L"Loading", L"HoldKeys", L"17", text, 64, ini.c_str());
-    for (wchar_t* p = text; *p;) {
-        wchar_t* end = nullptr;
-        long key = wcstol(p, &end, 0);
-        if (end == p) {
-            break;
-        }
-        if (key > 0 && key < 256) {
-            g_holdKeys.push_back(int(key));
-        }
-        p = *end ? end + 1 : end;
-    }
+    g_holdKeys = t3mod::ReadKeys(ini, L"Loading", L"HoldKeys", L"17");
+
     if (!g_minRedrawMs && g_holdKeys.empty()) {
         api->Log("nothing to change; off");
         return 1;
     }
-    auto target = reinterpret_cast<void*>(kDrawLoadingProgress);
-    int status = api->CreateHook(target, reinterpret_cast<void*>(&DrawDetour), reinterpret_cast<void**>(&g_draw));
-    if (status == 0) {
-        status = api->EnableHook(target);
-    }
-    if (status != 0) {
-        api->Log("loading screen hook failed (MinHook status %d)", status);
+
+    if (!t3mod::Hook(api, kDrawLoadingProgress, reinterpret_cast<void*>(&DrawDetour), reinterpret_cast<void**>(&g_draw),
+                     "loading screen")) {
         return 1;
     }
+
     api->Log("redraws at least %lu ms apart, hold keys %s", g_minRedrawMs, g_holdKeys.empty() ? "off" : "on");
     return 0;
 }
