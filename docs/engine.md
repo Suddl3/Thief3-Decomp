@@ -440,6 +440,15 @@ multipliers come from `Default.ini` `[Difficulty]`
 | mission records the menus edit: `*(DAT_10F3A3D8 + 0x150)`, `+4`/`+8` (mission, record) for Enter Mission, `+0xC`/`+0x10` for Restart Mission; the record's difficulty at `+0x174` | `0x10F3A3D8` | static |
 | `bool __cdecl (mission)`: gamesys `0x800864` is 1 (the mission has no difficulty choice) | `0x10ABE130` | static |
 
+## Save games
+
+| What | Address | Status |
+|---|---|---|
+| save/load dispatcher (input commands; `0x3D` quick save, `0x3E` quick load): quick save names the save after the localized `T_QuickSave` ("Quick Save") and overwrites the save of that name (skipped when its game time is the current one); quick load loads the save of that name | `0x10B17810` | static |
+| quick save: the name settled, `cString` at `[esp+0x14]` | `0x10B17CE0` | code hook (`quicksave-cycle`) |
+| quick load: the name settled, `cString` at `[esp+0x14]` | `0x10B181AA` | code hook (`quicksave-cycle`) |
+| `FormatHexId`: a save's 20-byte ID as dashed hex, its folder name | `0x10D64D80` | static |
+
 ## Options (`options.ini`)
 
 Options are stored as ints at `options + 4 + 4*i`, indexed by the names table
