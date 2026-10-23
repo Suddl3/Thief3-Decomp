@@ -35,6 +35,7 @@ target_compile_options(t3sdk_headers INTERFACE /W4)
 
 add_subdirectory(loader)
 add_subdirectory(mods/difficulty-fixes)
+add_subdirectory(mods/dotted-paths)
 add_subdirectory(mods/hello)
 add_subdirectory(mods/widescreen-fov)
 
