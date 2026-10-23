@@ -86,7 +86,7 @@ decompilation** worked mostly by Claude agents under the strict gate in
 | Loose-file overrides (`AddFileRoot`: CreateFileA/W, GetFileAttributesA, FindFirstFileA) | `sdk/loader/files.cpp` | builds; not yet tried in the game |
 | Code hooks at any instruction (`AddCodeHook`, `T3Registers`) | `sdk/loader/codehook.cpp` | builds; not yet tried in the game |
 | Example mod | `sdk/mods/hello/hello.cpp` | works |
-| Fix and tweak mods: `widescreen-fov`, `difficulty-fixes`, `dotted-paths`, `unstick`, `zone-tweaks`, `blackjack-first` ([sdk.md](sdk.md#mods-in-this-repository)) | `sdk/mods/` | build; none tried in the game yet (see Next steps 1) |
+| Fix and tweak mods: `widescreen-fov`, `difficulty-fixes`, `dotted-paths`, `unstick`, `zone-tweaks`, `blackjack-first`, `hud-tweaks`, `player-tweaks`, `loading-tweaks`, `quicksave-cycle`, `end-mission`, `first-person-death` ([sdk.md](sdk.md#mods-in-this-repository)) | `sdk/mods/` | build; none tried in the game yet (see Next steps 1) |
 | Build/deploy/run/screenshot/click/keys/close tool | `tools/sdk.py` | works |
 | Ghidra scripts: Decompile, Disassemble, ImportNames, ExportSymbols | `tools/ghidra/` | work |
 | Map and asset export to Godot 4.7; Godot map viewer | `tools/assets/`, `tools/assets/godot/` | works for all 32 maps (static geometry, lights, actor data) |
@@ -179,7 +179,19 @@ Later the same day, played by the user:
      level logs "player release requested" and must not disturb a normal
      player. `dotted-paths`: install to a folder with a dot in its name.
      `zone-tweaks`: set `FogDistance=2` and compare a foggy level.
-     `blackjack-first`: Attack with nothing in hand.
+     `blackjack-first`: Attack with nothing in hand. `hud-tweaks`: a junk
+     item (a coin) stays lit; turn on each other setting and look at the
+     item/weapon cycles, the health bar, lockpicking and a book.
+     `player-tweaks`: `StillIdle=1` (no sway standing still), `Gravity=0.5`
+     (jumps and thrown objects; the log shows the old and new value).
+     `loading-tweaks`: time a level load with VSynch on against
+     `MinRedrawMs=0`, and hold Ctrl on a loading screen (log lines for both).
+     `quicksave-cycle` (`Enabled=1`): three quick saves make "Quick Save 1"
+     to "3" and quick load loads the newest; check the Load screen.
+     `end-mission`: Shift+Ctrl+Alt+End in a mission opens the mission
+     complete screen and goes on; in a city section it only logs.
+     `first-person-death` (`Enabled=1`): die; the log says the death camera
+     stays in first person.
    - Lockpicking above 100 fps: the game is known to break lockpicking at
      high frame rates (a frame cap of about 90 fixes it). `SmoothFrames=1`
      with VSynch off and `MaxFPS=0` lets the world update at any rate; try
@@ -444,33 +456,54 @@ Later the same day, played by the user:
 ## Fixes researched for mods, not written yet
 
 Each one's addresses are in our build; the research tools are local
-(`build/su/`, see the lead's notes). Most need a test session first.
+(`build/su/`). Each needs a test session, or more study, before it is
+written.
 
 - **Loot values** (same loot type, different values: the Gear screen and the
   fence show the first item's value for all). Pickup is
   `Class_10B1B8A0::FUN_10b19e30` (`+0x206` sees each item's value); the lists
-  multiply count by unit value in `FUN_10b5cb60`,
-  `Class_10B5F9C0::FUN_10b5e920` and `Class_10B5FAE0::FUN_10b5fae0`. A fix
-  records each pickup's value per loot name and sums those; the record must
-  survive the level-change relaunch and be stored with save games
-  (`FUN_10b17810` saves, `FUN_10d60e90` loads).
-- **Save games**: quick-save cycling (the quick save/load paths in
-  `FUN_10b17810`, `+0x46F` and `+0x939`) and readable folder names
-  (`FormatHexId`, `0x10D64D80`, makes the `XXXXXXXX-...` name from the save's
-  20-byte ID; a readable name needs a mapping that loading finds again).
+  multiply count by unit value (entries: name `+0`, count `+0xC`, unit value
+  `+0x10`) in `FUN_10b5cb60`, `Class_10B5F9C0::FUN_10b5e920` and
+  `Class_10B5FAE0::FUN_10b5fae0`. A fix records each pickup's value per loot
+  name and sums those; the record must survive the level-change relaunch
+  (`RelaunchForLevelChange`) and be stored with save games (`FUN_10b17810`
+  saves, `FUN_10d60e90` loads). Not written: a record that only lives until
+  the next load or level change would show other totals than the stats.
+- **Readable save folder names**: `FormatHexId` (`0x10D64D80`) names the
+  folder from the save's 20-byte ID; loading must find the same folder
+  again, so a readable name needs a mapping kept with the saves. Not
+  written: a mistake loses the player's saves.
 - **Property storage** for large maps: `Class_10B10A70` keeps 8 16-bit slot
   indices into a static pool at `0x10F7B5C8` (`0x1E000` dwords, 12-byte
   entries, about 40,960); large maps run out when saving. A bigger pool
   needs every function that indexes it (`0x10B10A70` to `0x10B10F00`,
   `Class_10B06220::FUN_10ad3df0`, `FUN_10ada010`) moved to the new base,
-  and 32-bit indices widen the object that holds them.
-- **HUD and menu tweaks** through `SetConfigValue` on `T3UI.ini`/`T3Hud.ini`
-  windows (`LockPickHUDWindow`, the health bar, item flashing, loading
-  tips): which keys hide or scale a window needs trying in the game.
-- **End mission key**: a command injected into the input handler
-  `FUN_10a19480`; fragile in city sections.
-- **Loading screens, gamepad, screenshots, non-Bink video, a fan mission
-  loader**: sites mapped, not yet studied.
+  and 32-bit indices widen the object that holds them. Only fan missions
+  need it, and the SDK does not load those yet.
+- **More config-value tweaks** (found as `Config` values, not written):
+  `[T3Settings] WalkMultiplier`/`CreepMultiplier` (a "walk by default" mode
+  also needs the run key's meaning swapped in the movement code,
+  `FUN_10a4ddb0`); `[PauseWindow]`, `[ReadBookWindow]`, `[InvMapWindow]`
+  backgrounds (`BlackScreen`, `Color_Normal_A`, `TextColor_A`); HUD scale and
+  mirroring (`Placement_X`, `NormalPos_X/Y`, `Width`, `Height`, `Scale_*`
+  of `[ItemCycleWindow]`, `[WeaponCycleWindow]`, `[HealthMeter]` and the
+  other HUD windows): a whole layout to work out against the widescreen UI.
+- **Auto-raise of blackjack and dagger, bouncing arrows, head bobbing,
+  loading tips**: the switches are `Name` overrides on animation sections
+  (auto-raise) or code not yet traced; which sections and values needs the
+  game running (dump `Config` lookups with an `AddConfigCallback` that logs).
+- **Left-handed mouse**: swap buttons 0 and 1 in the DirectInput mouse
+  device (`GetDeviceState`/`GetDeviceData` on devices created for
+  `GUID_SysMouse`); the SDK already stands in for `dinput8.dll`. Mouse
+  sensitivity is in the game's Options.
+- **Gamepad** (half-axes set up reversed, Xbox 360 triggers as buttons,
+  modifier buttons, an escape button): `FUN_10aaf120` (device GUID),
+  `FUN_10aaf342` (state), `FUN_10b57ed0` (axis inversion); needs a
+  controller to verify.
+- **Screenshots** (JPEG on Print Screen and with saves): the window message
+  handler `UWindowsViewport::ViewportWndProc`; borderless mode already lets
+  Windows' own screenshot tools work.
+- **Non-Bink video, a fan mission loader**: out of scope for now.
 
 ## Roadmap towards multiplayer
 
