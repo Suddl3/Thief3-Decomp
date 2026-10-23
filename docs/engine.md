@@ -521,6 +521,11 @@ sections (`Name`, `Speed`, `Looping`, ...; the idle ones are `[MainIdle]`,
 (-514.96, Unreal units/s², Havok) and `[PointPhysics] Gravity` (-32 ft/s²,
 flinders), `[T3Settings] WalkMultiplier` (0.5) and `CreepMultiplier` (0.33).
 
+`System/T3Camera.ini` is not read through `Config`: it lists camera modes as
+`CameraMode <name>` ... `EndCameraMode` blocks (`InheritsFrom`, `Distance`,
+`PitchLimit`, ...); `DeathCam` inherits from `FarThirdPerson`. A changed copy
+reaches the game through a file override.
+
 ## Display: viewport and Direct3D 8
 
 | What | Address | Status |
