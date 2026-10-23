@@ -75,7 +75,14 @@ bool Interesting(DWORD code) {
         case EXCEPTION_PRIV_INSTRUCTION:
         case EXCEPTION_INT_DIVIDE_BY_ZERO:
         case EXCEPTION_ARRAY_BOUNDS_EXCEEDED:
+        case EXCEPTION_STACK_OVERFLOW:
+        case STATUS_STACK_BUFFER_OVERRUN:
             return true;
+
+        // An int3 reached without a debugger: code jumped into padding, or the game's own debug break
+        // on a failed check. It ends the game (exit code 0x80000003), so it is worth its stack.
+        case EXCEPTION_BREAKPOINT:
+            return !IsDebuggerPresent();
         default:
             return false;
     }
@@ -156,6 +163,34 @@ void LogStack(const CONTEXT* context) {
     T3_LOG("%s", line);
 }
 
+// Logs how much of the process's address space is in use and the largest free block left. The game's
+// allocator stops with a breakpoint when VirtualAlloc fails, so this tells running out of address space
+// (2 GB for this 32-bit game) from a real bug. VirtualQuery allocates nothing: safe in the handler.
+void LogAddressSpace() {
+    uintptr_t free = 0;
+    uintptr_t largest = 0;
+    MEMORY_BASIC_INFORMATION info;
+
+    // Walk the user address space region by region.
+    for (uintptr_t address = 0x10000; address < 0x7FFF0000;) {
+        // A failed query means the walk left the address space.
+        if (!VirtualQuery(reinterpret_cast<const void*>(address), &info, sizeof(info))) {
+            break;
+        }
+
+        // Free regions are what VirtualAlloc can still hand out.
+        if (info.State == MEM_FREE) {
+            free += info.RegionSize;
+            largest = info.RegionSize > largest ? info.RegionSize : largest;
+        }
+
+        address = reinterpret_cast<uintptr_t>(info.BaseAddress) + info.RegionSize;
+    }
+
+    T3_LOG("  address space: %u MB of 2047 MB in use, %u MB free, largest free block %u MB",
+           unsigned((0x7FFF0000 - 0x10000 - free) >> 20), unsigned(free >> 20), unsigned(largest >> 20));
+}
+
 // The vectored handler: reports a fault the first time its address is seen, then always lets the search go on, so
 // the game's own handlers still run.
 LONG CALLBACK Handler(EXCEPTION_POINTERS* info) {
@@ -176,6 +211,7 @@ LONG CALLBACK Handler(EXCEPTION_POINTERS* info) {
     LogFault(record, address);
     LogRegisters(info->ContextRecord);
     LogStack(info->ContextRecord);
+    LogAddressSpace();
     return EXCEPTION_CONTINUE_SEARCH;
 }
 
