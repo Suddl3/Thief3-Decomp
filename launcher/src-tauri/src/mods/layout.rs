@@ -11,7 +11,7 @@ use super::manifest::{self, Manifest, RESERVED_IDS};
 
 /// The API version of the SDK this launcher ships with
 /// (T3SDK_API_VERSION in sdk/include/t3sdk/t3sdk.h; a test keeps them equal).
-pub const SDK_API_VERSION: u32 = 1;
+pub const SDK_API_VERSION: u32 = 2;
 
 #[derive(Clone, Debug)]
 pub struct Layout {
@@ -72,16 +72,14 @@ pub fn sdk_info(game: &Path, sdk_root: Option<&Path>) -> SdkInfo {
     }
 }
 
-/// An entry of `dir` whose name matches `name` case-insensitively.
+/// An entry of `dir` whose name matches `name` case-insensitively, spelled as
+/// on disk (Windows also opens `dir.join(name)` in any case, but names it as asked).
 pub fn find_ci(dir: &Path, name: &str) -> Option<PathBuf> {
-    let exact = dir.join(name);
-    if exact.exists() {
-        return Some(exact);
-    }
-    std::fs::read_dir(dir)
-        .ok()?
-        .flatten()
-        .find(|e| e.file_name().to_string_lossy().eq_ignore_ascii_case(name))
+    let entries: Vec<_> = std::fs::read_dir(dir).ok()?.flatten().collect();
+    entries
+        .iter()
+        .find(|e| e.file_name().to_string_lossy() == name)
+        .or_else(|| entries.iter().find(|e| e.file_name().to_string_lossy().eq_ignore_ascii_case(name)))
         .map(|e| e.path())
 }
 
