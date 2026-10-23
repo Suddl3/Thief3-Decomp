@@ -94,7 +94,10 @@ describes it can go together; unrelated clean-ups go in their own commit.
 ## Code
 
 Match the surrounding code: its naming, comment density and idiom. The SDK is
-C++ built with MSVC for 32-bit x86 and must build without warnings. Tools are
+C++ built with MSVC for 32-bit x86 and must build without warnings; the SDK,
+its headers, the mods and the mod template follow
+[docs/cpp-style.md](docs/cpp-style.md), and `python tools/sdk_style.py` must
+pass (`--fix` formats). Tools are
 Python using only the standard library, plus Ghidra scripts in Java. The
 launcher is Rust and Svelte/TypeScript: `cargo fmt`, `cargo clippy` and
 `yarn verify` (types, lint, format, tests) must pass (see

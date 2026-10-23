@@ -1,0 +1,33 @@
+# Formatting of T3SDK's own C++: the loader, the public headers and the mods
+# (docs/cpp-style.md). Not used for src/ and include/, the matching
+# decompilation, which keeps its own layout. Run `clang-format -i` on a file,
+# or `python tools/sdk_style.py --fix`.
+BasedOnStyle: Google
+Language: Cpp
+Standard: c++20
+IndentWidth: 4
+ColumnLimit: 120
+AccessModifierOffset: -4
+PointerAlignment: Left
+DerivePointerAlignment: false
+
+# Braces always, on the line of their statement; short bodies still get lines of their own.
+InsertBraces: true
+AllowShortFunctionsOnASingleLine: Inline
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: false
+AllowShortBlocksOnASingleLine: Never
+AllowShortLambdasOnASingleLine: Inline
+
+# A blank line between definitions; at most one blank line anywhere.
+SeparateDefinitionBlocks: Always
+MaxEmptyLinesToKeep: 1
+KeepEmptyLinesAtTheStartOfBlocks: false
+EmptyLineBeforeAccessModifier: LogicalBlock
+
+# Includes keep the order the file gives them (docs/cpp-style.md, "Includes"): <windows.h> must come
+# before the Windows headers that need it, which sorting would break.
+SortIncludes: Never
+
+SpacesBeforeTrailingComments: 2
+FixNamespaceComments: true

@@ -97,9 +97,11 @@ def cmd_build(args: argparse.Namespace) -> None:
     env = msvc_x86_env()
     ninja = shutil.which("ninja") or str(Path(sys.executable).parent / "ninja.exe")
     cmake = shutil.which("cmake", path=env.get("Path") or env.get("PATH")) or "cmake"
-    run([cmake, "-S", ROOT / "sdk", "-B", BUILD, "-G", "Ninja", f"-DCMAKE_MAKE_PROGRAM={ninja}",
+    # --build-dir: a build of its own, for checks that run beside the usual one (deploy uses build/sdk).
+    build = Path(args.build_dir).resolve() if args.build_dir else BUILD
+    run([cmake, "-S", ROOT / "sdk", "-B", build, "-G", "Ninja", f"-DCMAKE_MAKE_PROGRAM={ninja}",
          f"-DCMAKE_BUILD_TYPE={args.config}", "-DCMAKE_C_COMPILER=cl", "-DCMAKE_CXX_COMPILER=cl"], env)
-    run([cmake, "--build", BUILD], env)
+    run([cmake, "--build", build], env)
 
 
 def cmd_deploy(args: argparse.Namespace) -> None:
@@ -418,6 +420,7 @@ def main() -> None:
     sub = parser.add_subparsers(dest="cmd", required=True)
     build = sub.add_parser("build")
     build.add_argument("--config", default="RelWithDebInfo", choices=["Debug", "RelWithDebInfo", "Release"])
+    build.add_argument("--build-dir", help="build here instead of build/sdk (deploy always uses build/sdk)")
     run = sub.add_parser("run")
     run.add_argument("game_args", nargs=argparse.REMAINDER, help="arguments passed to T3Main.exe")
     close = sub.add_parser("close")

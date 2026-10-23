@@ -76,6 +76,8 @@ python tools/mods/selftest.py                                                   
 
 - Ask the user before deploying into the game folder or launching the game,
   and close the game after each test.
+- C++ in `sdk/` and `templates/mod/` follows [docs/cpp-style.md](docs/cpp-style.md)
+  (`python tools/sdk_style.py [--fix]`); mods use `t3sdk/modkit.hpp`.
 - The user commits and pushes; don't commit unless asked. Commit messages
   follow Conventional Commits (`feat`, `fix`, `docs`, ...; see
   [CONTRIBUTING.md](CONTRIBUTING.md)).
