@@ -1,13 +1,14 @@
 <script lang="ts">
-  // Paths to the game, Godot, Python and the T3SDK tools. Also the first-run
+  // Where the game is, updates, and the developer tools; the tools' own paths
+  // under Advanced. Changes are saved as they are made. Also the first-run
   // setup screen (`setup`), prefilled from detection.
   import { onMount } from "svelte";
   import Icon from "$components/Icon.svelte";
   import PathField from "$components/PathField.svelte";
-  import ReportCard from "$components/ReportCard.svelte";
+  import Toggle from "$components/Toggle.svelte";
   import UpdatesCard from "$components/UpdatesCard.svelte";
   import { api, emptyConfig, launcherVersion, type Candidate, type Config, type Detected } from "$lib/api";
-  import { app, guard, saveConfig, toast } from "$lib/app.svelte";
+  import { app, guard, saveConfig } from "$lib/app.svelte";
   import { ago, bytes } from "$lib/format";
   import { mods } from "$lib/mods.svelte";
 
@@ -25,7 +26,8 @@
   let savesAuto = $state("");
 
   const ready = $derived(gameOk && pythonOk && rootOk);
-  const dirty = $derived(JSON.stringify(draft) !== JSON.stringify(app.config));
+  /** The bundled tools need nothing from the player: Advanced opens by itself only when one is missing. */
+  const toolsOk = $derived(pythonOk && rootOk);
 
   async function detect() {
     detecting = true;
@@ -49,14 +51,25 @@
       });
   });
 
-  const DEFAULT_INDEX = "https://veradictus.github.io/Thief3-Decomp/modindex/index.json";
   const indexUrlOk = $derived(!draft.modIndexUrl || /^https:\/\/[^\s/?#]+/.test(draft.modIndexUrl));
 
-  async function save() {
-    if (draft.modIndexUrl !== app.config?.modIndexUrl) mods.index = null; // the Mods page reads the new index
+  // Saved a moment after the last change (a path is typed a key at a time).
+  $effect(() => {
+    if (setup) return;
+    const next = JSON.stringify(draft);
+    if (next === JSON.stringify(app.config) || !indexUrlOk) return;
+    const timer = setTimeout(() => {
+      if (draft.modIndexUrl !== app.config?.modIndexUrl) mods.index = null; // the Mods tab reads the new index
+      void guard(saveConfig({ ...draft, setupComplete: true }));
+    }, 600);
+    return () => {
+      clearTimeout(timer);
+    };
+  });
+
+  async function finishSetup() {
     await guard(saveConfig({ ...draft, setupComplete: true }));
-    if (setup) app.page = "play";
-    else toast("Settings saved.");
+    app.page = "play";
   }
 
   const gameCheck = async (path: string) => {
@@ -88,52 +101,58 @@
   };
 </script>
 
-<!-- The buttons stay in view (in the heading, or under the fields during setup)
-     while the fields scroll between them. -->
 <div class="page">
   {#if setup}
     <div class="welcome">
       <img src="/icon.svg" alt="" width="56" height="56" />
       <div>
         <h1>Welcome, taffer.</h1>
-        <p class="muted">
-          Tell the launcher where things are. It found what it could; check each entry and fix the ones marked.
-          Everything stays on this computer.
-        </p>
+        <p class="muted">Check where the game is, then continue.</p>
       </div>
     </div>
   {:else}
-    <div class="page-head">
-      <h1>Settings</h1>
-      <div class="row">
-        <button class="btn ghost" onclick={detect} disabled={detecting}>
-          <Icon name="search" />{detecting ? "Searching…" : "Search again"}
-        </button>
-        <button class="btn" onclick={() => (draft = { ...(app.config ?? emptyConfig) })} disabled={!dirty}
-          >Revert</button
-        >
-        <button class="btn primary" onclick={save} disabled={!dirty || !indexUrlOk}><Icon name="check" />Save</button>
-      </div>
-      <p>Where the game and the tools are. Stored in your user profile, not in the game folder.</p>
-    </div>
+    <h1 class="heading">Settings</h1>
   {/if}
 
   <div class="body">
-    <div class="fields">
+    <section class="card group">
+      <h2>Your game</h2>
       <PathField
         label="Thief: Deadly Shadows"
         bind:value={draft.gameDir}
         bind:ok={gameOk}
-        hint="The game folder: it contains System and Content. The Steam release (patch 1.1) gets the full SDK."
+        hint="The folder with System and Content in it."
         candidates={detected?.games}
         check={gameCheck}
         action={{ label: "Get Thief: Deadly Shadows on Steam", href: "https://store.steampowered.com/app/6980/" }}
       />
+    </section>
+
+    {#if !setup}
+      <section class="card group">
+        <h2>General</h2>
+        <label class="switch">
+          <span class="grow">
+            <strong>Developer tools</strong>
+            <span class="muted">Every T3SDK setting, building T3SDK, and diagnostics.</span>
+          </span>
+          <Toggle checked={draft.developer} label="Developer tools" onchange={(on) => (draft.developer = on)} />
+        </label>
+      </section>
+
+      <UpdatesCard bind:autoCheck={draft.autoUpdateCheck} />
+    {/if}
+
+    <details class="card group advanced" open={setup ? !toolsOk : undefined}>
+      <summary
+        ><h2>Advanced</h2>
+        <span class="muted">The launcher's tools. It ships with its own.</span></summary
+      >
       <PathField
         label="T3SDK folder"
         bind:value={draft.sdkRoot}
         bind:ok={rootOk}
-        hint="The T3SDK tools and SDK. The launcher ships with its own copy; a T3SDK checkout (for developers) works too."
+        hint="The T3SDK tools; a T3SDK checkout works too."
         candidates={detected?.sdkRoots}
         check={rootCheck}
         action={{ label: "Get T3SDK", href: "https://github.com/Veradictus/Thief3-Decomp" }}
@@ -143,7 +162,7 @@
         bind:value={draft.python}
         bind:ok={pythonOk}
         directory={false}
-        hint="Runs the T3SDK tools (SDK install, map export, repack). The launcher ships with one; any Python 3.10+ works too."
+        hint="Runs the T3SDK tools; any Python 3.10+ works."
         candidates={detected?.pythons}
         check={pythonCheck}
         action={{ label: "Get Python", href: "https://www.python.org/downloads/" }}
@@ -154,69 +173,59 @@
         bind:ok={godotOk}
         directory={false}
         optional
-        hint="Godot 4.7 or newer, to view and edit exported maps. Not needed to play."
+        hint="Godot 4.7 or newer, for Map Studio. Not needed to play."
         candidates={detected?.godots}
         check={godotCheck}
         action={{ label: "Get Godot", href: "https://godotengine.org/download/" }}
       />
       {#if !setup}
         <PathField
-          label="Godot project folder"
+          label="Map export folder"
           bind:value={draft.projectDir}
           optional
-          hint="Where maps are exported. Empty: build\assets\godot in the T3SDK folder."
+          hint="Where Map Studio exports maps. Empty: inside the T3SDK folder."
           check={projectCheck}
         />
         <PathField
           label="Saves folder"
           bind:value={draft.savesDir}
           optional
-          hint={`The game's SaveGames folder, for save backups. Empty: found automatically${savesAuto ? ` (${savesAuto})` : ""}.`}
+          hint={`For save backups. Empty: found by itself${savesAuto ? ` (${savesAuto})` : ""}.`}
           candidates={savesFound}
           check={savesCheck}
         />
-        <div class="field card">
+        <div class="field">
           <div class="row">
-            <div class="grow">
-              <h3>Mod index</h3>
-              <p class="muted hint">
-                The list of published mods that the Mods page browses and checks for updates. Empty: the T3SDK index.
-              </p>
-            </div>
-            {#if !indexUrlOk}<span class="badge err"><Icon name="alert" size={13} />Not an https:// URL</span>{/if}
+            <h3 class="grow">Mod index</h3>
+            {#if !indexUrlOk}<span class="badge err"><Icon name="alert" size={13} />Not an https:// address</span>{/if}
           </div>
-          <div class="row">
-            <input
-              type="text"
-              spellcheck="false"
-              placeholder={DEFAULT_INDEX}
-              value={draft.modIndexUrl ?? ""}
-              oninput={(e) => (draft.modIndexUrl = e.currentTarget.value.trim() || null)}
-            />
-            <button class="btn" onclick={() => (draft.modIndexUrl = null)} disabled={!draft.modIndexUrl}>Default</button
-            >
-          </div>
+          <p class="muted hint">The list of mods Browse shows. Empty: T3SDK's.</p>
+          <input
+            type="text"
+            spellcheck="false"
+            placeholder="https://veradictus.github.io/Thief3-Decomp/modindex/index.json"
+            value={draft.modIndexUrl ?? ""}
+            oninput={(e) => (draft.modIndexUrl = e.currentTarget.value.trim() || null)}
+          />
         </div>
-      {/if}
-    </div>
-
-    {#if !setup}
-      <UpdatesCard bind:autoCheck={draft.autoUpdateCheck} />
-      <ReportCard />
-
-      <div class="about card">
-        <h3>About</h3>
-        <p class="muted">
-          T3SDK Launcher {version}. T3SDK is a fan project, not affiliated with or endorsed by the owners of the Thief
-          series. It changes the game only in memory while it runs; map repacks and content mods replace game files only
-          while they are installed or enabled, after backing up the originals.
-        </p>
         <div class="row">
-          <button class="btn small" onclick={() => saveConfig({ ...(app.config ?? emptyConfig), setupComplete: false })}
-            >Run setup again</button
+          <button class="btn small ghost" onclick={detect} disabled={detecting}>
+            <Icon name="search" size={14} />{detecting ? "Searching…" : "Search for everything again"}
+          </button>
+          <button
+            class="btn small ghost"
+            onclick={() => saveConfig({ ...(app.config ?? emptyConfig), setupComplete: false })}
+            >Run the first-time setup again</button
           >
         </div>
-      </div>
+      {/if}
+    </details>
+
+    {#if !setup}
+      <p class="faint about">
+        T3SDK Launcher {version}. A fan project, not affiliated with the owners of the Thief series. It changes the game
+        only while it runs, and keeps the originals of any file it replaces.
+      </p>
     {/if}
   </div>
 
@@ -227,7 +236,7 @@
       </button>
       <div class="grow"></div>
       <button class="btn ghost" onclick={() => saveConfig({ ...draft, setupComplete: true })}>Skip for now</button>
-      <button class="btn primary" onclick={save} disabled={!ready}>Continue<Icon name="chevron" /></button>
+      <button class="btn primary" onclick={finishSetup} disabled={!ready}>Continue<Icon name="chevron" /></button>
     </div>
   {/if}
 </div>
@@ -242,49 +251,100 @@
 
   .welcome p {
     margin-top: 4px;
-    max-width: 80ch;
   }
 
-  /* The fields scroll here, between the heading and the buttons. */
+  .heading {
+    margin-bottom: 16px;
+  }
+
   .body {
-    flex: 0 1 auto;
-    min-height: 0;
-    overflow: auto;
+    display: grid;
+    gap: 14px;
+    max-width: 860px;
+    width: 100%;
+    margin: 0 auto;
   }
 
-  .fields {
+  .page > .heading {
+    max-width: 860px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .group {
     display: grid;
     gap: 12px;
-    max-width: 900px;
+    padding: 16px 18px;
+  }
+
+  /* The path fields inside a group: no card of their own. */
+  .group :global(.field.card) {
+    padding: 0;
+    border: 0;
+    background: none;
+  }
+
+  .switch {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    cursor: pointer;
+  }
+
+  .switch .grow {
+    display: grid;
+    gap: 1px;
+  }
+
+  .switch .muted,
+  .hint {
+    font-size: 13px;
+  }
+
+  summary {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  summary::before {
+    content: "▸";
+    color: var(--muted);
+  }
+
+  details[open] summary::before {
+    content: "▾";
+  }
+
+  .advanced[open] {
+    gap: 14px;
   }
 
   .field {
-    padding: 14px 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    display: grid;
+    gap: 6px;
   }
 
-  .hint {
-    margin-top: 2px;
-    font-size: 13px;
+  .about {
+    font-size: 12.5px;
+    padding: 0 4px 8px;
   }
 
   .actions {
     display: flex;
     gap: 8px;
     align-items: center;
-    max-width: 900px;
-    margin-top: 12px;
+    max-width: 860px;
+    width: 100%;
+    margin: 12px auto 0;
     padding-top: 12px;
     border-top: 1px solid var(--line);
-  }
-
-  .about {
-    max-width: 900px;
-    margin-top: 16px;
-    padding: 14px 16px;
-    display: grid;
-    gap: 8px;
   }
 </style>

@@ -33,6 +33,8 @@ pub struct Config {
     pub last_update_check: Option<u64>,
     /// The mod index the Mods page browses; default `mods::DEFAULT_INDEX_URL`.
     pub mod_index_url: Option<String>,
+    /// Shows the developer tools: every T3SDK setting, builds, diagnostics.
+    pub developer: bool,
     /// Where the tools write, when not <sdk_root>/build (see `resolve`).
     #[serde(skip)]
     pub data_dir: Option<PathBuf>,

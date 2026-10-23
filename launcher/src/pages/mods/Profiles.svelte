@@ -2,6 +2,7 @@
   // Profiles: a saved load order and set of enabled mods. The active profile
   // follows every change; switching applies another one.
   import Icon from "$components/Icon.svelte";
+  import Menu from "$components/Menu.svelte";
   import type { ModList } from "$lib/api";
   import { mods, profile } from "$lib/mods.svelte";
 
@@ -39,9 +40,8 @@
   }
 </script>
 
-<div class="profiles card">
-  <Icon name="sliders" />
-  <label for="profile-select">Profile</label>
+<div class="profiles">
+  <label for="profile-select" class="muted">Profile</label>
   <select
     id="profile-select"
     value={list.profile}
@@ -77,29 +77,36 @@
     >
     <button class="btn small ghost" onclick={() => (mode = "idle")}>Cancel</button>
   {:else}
-    <button
-      class="btn small ghost"
-      onclick={() => {
-        start("saveAs");
-      }}
-      disabled={mods.busy}>Save as…</button
-    >
-    <button
-      class="btn small ghost"
-      onclick={() => {
-        start("rename");
-      }}
-      disabled={mods.busy}>Rename…</button
-    >
-    <button
-      class="btn small ghost"
-      onclick={() => {
-        start("delete");
-      }}
-      disabled={mods.busy || !others.length}
-      title={others.length ? "Delete another profile" : "The active profile cannot be deleted"}>Delete…</button
-    >
-    <span class="faint small hint">A profile keeps an order and the enabled mods; switching applies it.</span>
+    <Menu
+      label="Profile actions"
+      items={[
+        {
+          label: "Save as a new profile…",
+          icon: "copy",
+          disabled: mods.busy,
+          run: () => {
+            start("saveAs");
+          },
+        },
+        {
+          label: "Rename this profile…",
+          icon: "edit",
+          disabled: mods.busy,
+          run: () => {
+            start("rename");
+          },
+        },
+        {
+          label: "Delete a profile…",
+          icon: "trash",
+          danger: true,
+          disabled: mods.busy || !others.length,
+          run: () => {
+            start("delete");
+          },
+        },
+      ]}
+    />
   {/if}
 </div>
 
@@ -108,17 +115,6 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    padding: 9px 14px;
-    margin-bottom: 12px;
-  }
-
-  .profiles :global(svg) {
-    flex: none;
-    color: var(--accent-2);
-  }
-
-  label {
-    font-weight: 600;
   }
 
   select {
@@ -142,13 +138,5 @@
 
   .warn-text {
     color: var(--warn);
-  }
-
-  .hint {
-    margin-left: auto;
-    min-width: 0;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
   }
 </style>

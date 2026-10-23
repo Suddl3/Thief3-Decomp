@@ -46,15 +46,16 @@
 </script>
 
 <div class="page">
+  <button class="back" onclick={() => (app.page = "play")}><Icon name="chevron" size={14} />Play</button>
   <div class="page-head">
-    <h1>SDK settings</h1>
+    <h1>Every T3SDK setting</h1>
     <div class="row">
       <button class="btn" onclick={() => load()} disabled={!changes.length}>Revert</button>
       <button class="btn primary" onclick={save} disabled={!changes.length}>
         <Icon name="check" />Save{changes.length ? ` (${changes.length})` : ""}
       </button>
     </div>
-    <p>What T3SDK changes in the game. Stored in <code>System\T3SDK.ini</code>; the game reads it at start-up.</p>
+    <p>All of <code>System\T3SDK.ini</code>, for developers. The game reads it when it starts.</p>
   </div>
 
   {#if settings && !settings.exists}

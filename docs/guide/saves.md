@@ -4,7 +4,7 @@ Back up your saves before you install a mod, update one or switch profiles.
 A save made while a mod was on may depend on that mod, and a buggy mod can
 damage saves. With a backup from before, you can always go back.
 
-The launcher's **Saves** page does this for you:
+The **Saves** block on the launcher's Play page does this for you:
 
 - **Back up** copies all of the game's saves, as they are now, into a new
   backup.

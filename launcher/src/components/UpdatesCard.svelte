@@ -30,7 +30,7 @@
 <div class="card updates">
   <div class="row">
     <div class="grow">
-      <h3>Updates</h3>
+      <h2>Updates</h2>
       <p class="muted small">
         T3SDK Launcher {status?.version ?? ""}
         {#if status?.lastCheck}· last checked {ago(status.lastCheck)}{/if}
@@ -96,9 +96,7 @@
 
 <style>
   .updates {
-    max-width: 900px;
-    margin-top: 16px;
-    padding: 14px 16px;
+    padding: 16px 18px;
     display: grid;
     gap: 12px;
   }

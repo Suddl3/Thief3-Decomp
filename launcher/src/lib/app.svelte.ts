@@ -13,18 +13,37 @@ import {
 } from "./api";
 import { elapsed } from "./format";
 
-export type Page = "play" | "maps" | "mods" | "saves" | "sdk" | "tasks" | "settings";
+/** Play, Mods and Settings are the tabs; Activity ("tasks") and every T3SDK setting ("sdk") open from menus. */
+export type Page = "play" | "mods" | "settings" | "tasks" | "sdk";
+export type ModsTab = "installed" | "browse" | "maps";
 
 interface AppState {
   config: Config | null;
   overview: Overview | null;
   page: Page;
+  modsTab: ModsTab;
   toasts: { id: number; text: string; kind: "info" | "error" }[];
   /** Bumped when files may have changed, so pages reload their lists. */
   revision: number;
 }
 
-export const app = $state<AppState>({ config: null, overview: null, page: "play", toasts: [], revision: 0 });
+export const app = $state<AppState>({
+  config: null,
+  overview: null,
+  page: "play",
+  modsTab: "installed",
+  toasts: [],
+  revision: 0,
+});
+
+/** Opens a page by its name, including those of the old layout (?page=maps in a link or a screenshot). */
+export function openPage(name: string) {
+  if (name === "maps" || name === "browse" || name === "installed") {
+    app.modsTab = name === "maps" ? "maps" : name;
+    app.page = "mods";
+  } else if (name === "saves") app.page = "play";
+  else if (["play", "mods", "settings", "tasks", "sdk"].includes(name)) app.page = name as Page;
+}
 
 let toastId = 0;
 export function toast(text: string, kind: "info" | "error" = "info") {

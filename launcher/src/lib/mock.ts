@@ -35,6 +35,7 @@ let config: Config = {
   autoUpdateCheck: null,
   lastUpdateCheck: null,
   modIndexUrl: null,
+  developer: false,
 };
 
 type SettingRow = [section: string, key: string, value: string, description: string];

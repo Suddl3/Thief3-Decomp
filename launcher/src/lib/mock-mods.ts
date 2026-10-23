@@ -257,6 +257,10 @@ export function mockMods(emit: Emit) {
   ];
   const loose: LooseMod[] = [
     { name: "ai_senses_log", enabled: false, size: 41984, modified: now - 12 * DAY },
+    { name: "blackjack-first", enabled: false, size: 12288, modified: now - DAY },
+    { name: "difficulty-fixes", enabled: true, size: 14336, modified: now - DAY },
+    { name: "unstick", enabled: true, size: 13312, modified: now - DAY },
+    { name: "widescreen-fov", enabled: true, size: 14848, modified: now - DAY },
     { name: "debug_camera", enabled: true, size: 30720, modified: now - 20 * DAY },
     { name: "hello", enabled: true, size: 14336, modified: now - 3 * DAY },
     { name: "old_experiment", enabled: false, size: 188416, modified: now - 40 * DAY },

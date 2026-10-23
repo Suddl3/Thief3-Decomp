@@ -25,6 +25,8 @@ export interface Config {
   lastUpdateCheck: number | null;
   /** The mod index the Mods page browses; null for the default. */
   modIndexUrl: string | null;
+  /** Shows the developer tools: every T3SDK setting, builds, diagnostics. */
+  developer: boolean;
 }
 
 export interface Candidate {
@@ -372,6 +374,7 @@ export const emptyConfig: Config = {
   autoUpdateCheck: null,
   lastUpdateCheck: null,
   modIndexUrl: null,
+  developer: false,
 };
 
 export type Location = "game" | "system" | "mods" | "log" | "project" | "sdk" | "patched" | "backup";

@@ -14,7 +14,7 @@ copy of the game, and gives them access to the engine. The goal is mods as
 large as multiplayer. It comes with a launcher, tools to edit maps in Godot,
 and the workbench for a matching decompilation of the game.
 
-![The T3SDK Launcher's Play page: the game's build check, T3SDK, mods, maps and T3SDK's log](docs/images/launcher-play.png)
+![The T3SDK Launcher's Play page: Play, the saves, help and the game fixes](docs/images/launcher-play.png)
 
 **Documentation**: <https://veradictus.github.io/Thief3-Decomp/>, with the
 player guide (settings, FAQ, troubleshooting), the mod author guide and its
@@ -40,7 +40,7 @@ handbook and the engineering notes (the same pages as in [docs/](docs/)).
 3. Start **T3SDK Launcher**. It finds the game and its own tools by itself;
    when they show **OK**, click **Continue** (Godot is only needed to edit
    maps).
-4. On the **Play** page, click **Install** in the T3SDK box, then **Play**.
+4. On the **Play** page, click **Install T3SDK**, then **Play**.
 
 That's all: the launcher brings its own copy of the tools and of Python. You
 now have:
@@ -53,8 +53,8 @@ now have:
 - the mod loader: mod DLLs go into the game's `System\mods` folder
   (**Mods** page, **Open folder**).
 
-Change any of it on the **SDK settings** page. **Remove** on the Play page
-takes T3SDK out again and leaves the game as it was. More in
+Switch any of it under **Game fixes** on the Play page. **Remove T3SDK**, in
+the menu beside Play, takes T3SDK out again and leaves the game as it was. More in
 [docs/launcher.md](docs/launcher.md) and [docs/sdk.md](docs/sdk.md).
 
 ## Edit maps
@@ -66,7 +66,7 @@ new geometry are not possible yet.
 
 1. Install [Godot 4.7 or newer](https://godotengine.org/download/). The
    launcher usually finds it; otherwise set it under **Settings**.
-2. In the launcher, open **Map Studio**, pick a map and click **Export**.
+2. In the launcher, open **Mods → Map Studio**, pick a map and click **Export**.
 3. Click **Edit in Godot**. Move, rotate and scale things with Godot's tools,
    or change their properties in the **T3 Map** dock (below the Inspector).
    Then click **Save T3 edits** in that dock.

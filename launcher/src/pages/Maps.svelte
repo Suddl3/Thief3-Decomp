@@ -2,6 +2,7 @@
   // Map Studio: export a map to Godot, edit it there, repack it into a .gmp and
   // install it into the game (and put the original back).
   import Icon from "$components/Icon.svelte";
+  import ModsTabs from "$components/ModsTabs.svelte";
   import { api, type MapEntry } from "$lib/api";
   import { app, enqueue, guard, jobs, running, toast, type Job } from "$lib/app.svelte";
   import { ago, bytes } from "$lib/format";
@@ -87,6 +88,7 @@
 </script>
 
 <div class="page">
+  <ModsTabs />
   <div class="page-head">
     <h1>Map Studio</h1>
     <div class="row">
@@ -101,10 +103,7 @@
         disabled={busy}><Icon name="download" />Export all</button
       >
     </div>
-    <p>
-      Export a map to Godot, move things around, then repack it and try it in the game. Originals are backed up before
-      anything is replaced.
-    </p>
+    <p>Edit a map in Godot, then put it in the game. The original is kept.</p>
   </div>
 
   {#if outdated.length}

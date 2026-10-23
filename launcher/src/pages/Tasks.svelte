@@ -1,7 +1,7 @@
 <script lang="ts">
   // The job queue and each job's live output.
   import Icon from "$components/Icon.svelte";
-  import { cancel, clearFinished, duration, jobs, type Job } from "$lib/app.svelte";
+  import { app, cancel, clearFinished, duration, jobs, type Job } from "$lib/app.svelte";
 
   let output = $state<HTMLPreElement>();
   let follow = $state(true);
@@ -40,10 +40,11 @@
 </script>
 
 <div class="page">
+  <button class="back" onclick={() => (app.page = "play")}><Icon name="chevron" size={14} />Play</button>
   <div class="page-head">
-    <h1>Tasks</h1>
+    <h1>Activity</h1>
     <button class="btn" onclick={clearFinished} disabled={!finished}><Icon name="trash" />Clear finished</button>
-    <p>Tools run one at a time, in order. Their output stays here until you clear it.</p>
+    <p>What the launcher ran, one at a time, and what each printed.</p>
   </div>
 
   <div class="split">

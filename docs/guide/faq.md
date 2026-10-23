@@ -34,7 +34,7 @@ mod off (see [Installing mods](mods.md#removing-mods)).
 
 ### How do I remove it?
 
-Click **Remove** in the T3SDK box on the launcher's **Play** page, or delete
+Choose **Remove T3SDK** in the menu (…) beside **Play** in the launcher, or delete
 the files you copied in if you installed by hand
 (see [Playing with T3SDK](playing.md#install-and-remove)). To take
 everything back to how it was — mods, edited maps and T3SDK itself — follow
@@ -91,13 +91,13 @@ Logs: `System\T3SDK.log` in the game folder. The launcher's **Play** page
 shows the end of it, **Open** opens the whole file, and **Collect logs**
 packages it for a bug report (see [Troubleshooting](troubleshooting.md)).
 Saves: the game's own `SaveGames` folder, wherever your installation keeps
-it — the launcher's **Saves** page shows where it found yours, and
-**Settings** can override the location. See [Save backups](saves.md).
+it — **Settings → Advanced → Saves folder** shows where the launcher found
+yours, and can override the location. See [Save backups](saves.md).
 
 ### How do I get help?
 
 The [Taffer Tavern on Discord](https://discord.gg/eaJkC5C6WJ) for questions,
-or **Report a problem** (Play page or Settings) for the project's GitHub
+or **Report a problem** (Help, on the Play page) for the project's GitHub
 issue tracker if you've found a bug. Run **Collect logs** first and attach
 the zip either way.
 

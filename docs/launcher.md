@@ -14,16 +14,18 @@ Python, and shows their output live.
 
 ## Screens
 
+Three tabs, **Play**, **Mods** and **Settings**, in a bar across the top. A
+running task shows in the bar (it opens Activity), next to an "Update" pill
+when a newer launcher is out.
+
 | Screen | What it does |
 |---|---|
-| Setup | First run: finds the game (installer registry entry, Steam libraries, `T3_GAME_DIR`), Godot (`GODOT`, `PATH`, common folders), Python (the bundled one, the T3SDK `.venv`, the `py` launcher, `PATH`) and the T3SDK folder (the bundled one, or a checkout found by walking up from the launcher). Each path is checked: the game's `T3Main.exe` SHA-1, `godot --version` (4.7+), Python 3.10+, the tools. |
-| Play | Starts the game (through Steam for a Steam install, as the Play button does), shows whether the build is supported, installs or removes T3SDK (`sdk.py deploy`/`undeploy`), builds it from a checkout (`sdk.py build`, needs Visual Studio), and shows the end of `T3SDK.log` with **Collect logs** and **Report a problem** next to it. The Game box says when the saves were last backed up. |
-| Map Studio | Per map: export to Godot (then a headless Godot import), open it in the Godot editor or the viewer, repack the saved edits into a patched `.gmp`, install it into the game, restore the original. Also a byte-exact round-trip check of the unchanged map. Keeps exports current: see [Map files the launcher reads](#map-files-the-launcher-reads). |
-| Mods | The mod manager ([below](#mods)): installed `.t3mod` packages in load order (drag or arrows to reorder), switches, what each one holds (code, content, textures), the checks' issues with their fixes, remove, profiles, and loose DLLs. **Install mod…** or dropping `.t3mod` files onto the window installs them; the Browse tab reads the mod index, with search, tags, compatibility and updates. |
-| Saves | The game's saves folder (how many saves, their size, the newest), **Back up now** with an optional label, and the backups: restore (after a confirmation, and not while the game runs), delete, open the folder. A switch backs the saves up whenever the launcher starts the game. See Saves below. |
-| SDK settings | `System/T3SDK.ini` as switches. The list, order and descriptions come from the comments in the SDK's own `sdk/T3SDK.ini`, so new settings appear without launcher changes. Values are edited in place; the file's comments and line endings are kept. |
-| Tasks | The job queue. Jobs run one at a time, in order; a job that depends on another (the import after an export) is skipped when that one fails. Output streams live and can be copied; a running job can be cancelled (its whole process tree on Windows). |
-| Settings | The paths again, plus the Godot project folder (default `build/assets/godot` in the T3SDK folder), the saves folder (default: found automatically) and the mod index URL (default `https://veradictus.github.io/Thief3-Decomp/modindex/index.json`). **Updates**: the launcher's version, **Check now**, the start-up check switch, and a found update with its notes. **Collect logs** and **Report a problem**. |
+| Setup | First run: finds the game (installer registry entry, Steam libraries, `T3_GAME_DIR`), Godot (`GODOT`, `PATH`, common folders), Python (the bundled one, the T3SDK `.venv`, the `py` launcher, `PATH`) and the T3SDK folder (the bundled one, or a checkout found by walking up from the launcher). Each path is checked: the game's `T3Main.exe` SHA-1, `godot --version` (4.7+), Python 3.10+, the tools. The tools' paths are folded under Advanced unless one is missing. |
+| Play | One main button that says the next step: **Find the game**, **Install T3SDK** (`sdk.py deploy`), then **Play** (through Steam for a Steam install). Its menu (…) removes T3SDK (`sdk.py undeploy`), builds it (developer tools; `sdk.py build`, needs Visual Studio), opens the game's folder and Activity. A checklist under the title: game found, T3SDK installed, mods on. Under it: **Saves** (back up now, back up before playing, the backups to restore or delete; see [Saves](#saves)), **Help** (**Report a problem**, **Collect logs**, `T3SDK.log` folded away) and **Game fixes**: T3SDK's player-facing switches and the fix mods it installs, saved as they change (`launcher/src/lib/fixes.ts` lists them). |
+| Mods | **My mods**: installed `.t3mod` packages in load order, one row each with its switch, description and kind (code, content, textures); its menu moves it earlier or later, opens its page or removes it; the checks' issues sit under it with their fixes; then the other loose DLLs. Profiles switch beside the count. **Add a mod…** or dropping `.t3mod` files onto the window installs them ([below](#mods)). **Browse** reads the mod index, with search, tags, compatibility and updates. **Map Studio**: per map, export to Godot (then a headless Godot import), open it in the Godot editor or the viewer, repack the saved edits into a patched `.gmp`, install it into the game, restore the original; also a byte-exact round-trip check. See [Map files the launcher reads](#map-files-the-launcher-reads). |
+| Settings | Saved as they change. **Your game**: the game folder. **General**: developer tools. **Updates**: the launcher's version, **Check now**, the start-up check switch, and a found update with its notes. **Advanced** (folded): the T3SDK folder, Python, Godot, the map export folder (default `build/assets/godot` in the T3SDK folder), the saves folder (default: found automatically) and the mod index URL (default `https://veradictus.github.io/Thief3-Decomp/modindex/index.json`). |
+| Activity | From Play's menu or the running task in the bar: the job queue. Jobs run one at a time, in order; a job that depends on another (the import after an export) is skipped when that one fails. Output streams live and can be copied; a running job can be cancelled (its whole process tree on Windows). |
+| Every T3SDK setting | With developer tools on, from Game fixes: `System/T3SDK.ini` as switches. The list, order and descriptions come from the comments in the SDK's own `sdk/T3SDK.ini`, so new settings appear without launcher changes. Values are edited in place; the file's comments and line endings are kept. |
 
 The launcher's own settings are `launcher.json` in the per-user config folder
 (`%APPDATA%\org.t3sdk.launcher\` on Windows); save backups go to `saves\` in
@@ -139,7 +141,7 @@ never deletes the ones made with **Back up now**.
 Release builds made with the updater key check
 `https://github.com/Veradictus/Thief3-Decomp/releases/latest/download/latest.json`
 at start-up, at most once a day (**Settings → Updates** has a switch and
-**Check now**). A newer version shows "Update available" in the sidebar;
+**Check now**). A newer version shows an "Update" pill in the top bar;
 **Update and restart** downloads the installer, checks its signature, and
 runs it without questions (a progress bar), after which the new launcher
 starts. The portable zip does not update itself: it links to the releases
@@ -148,7 +150,7 @@ How the key and the release files fit together: [releasing.md](releasing.md).
 
 ## Collect logs
 
-**Collect logs** (Play page and Settings) asks where to save a zip for a bug
+**Collect logs** (Play page, Help) asks where to save a zip for a bug
 report and fills it with:
 
 - `System/T3SDK*.log` (the last 4 MB of each), `System/T3SDK.ini`, and

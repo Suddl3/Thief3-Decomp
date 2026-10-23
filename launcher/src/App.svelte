@@ -1,31 +1,29 @@
 <script lang="ts">
+  // The window: a bar with three tabs (Play, Mods, Settings) over the page.
+  // Activity and every T3SDK setting open from the pages' menus; the running
+  // task shows in the bar, and opens Activity.
   import { onMount } from "svelte";
   import DropOverlay from "$components/DropOverlay.svelte";
   import Icon from "$components/Icon.svelte";
   import UpdateBanner from "$components/UpdateBanner.svelte";
   import { api, inTauri } from "$lib/api";
-  import { app, jobs, loadConfig, pending, refresh, running, type Page } from "$lib/app.svelte";
+  import { app, jobs, loadConfig, openPage, pending, refresh, running, type Page } from "$lib/app.svelte";
   import { startupUpdateCheck } from "$lib/update.svelte";
-  import Maps from "./pages/Maps.svelte";
   import Mods from "./pages/Mods.svelte";
   import Play from "./pages/Play.svelte";
-  import Saves from "./pages/Saves.svelte";
   import Sdk from "./pages/Sdk.svelte";
   import Settings from "./pages/Settings.svelte";
   import Tasks from "./pages/Tasks.svelte";
 
-  const nav: { page: Page; label: string; icon: string }[] = [
-    { page: "play", label: "Play", icon: "play" },
-    { page: "maps", label: "Map Studio", icon: "map" },
-    { page: "mods", label: "Mods", icon: "puzzle" },
-    { page: "saves", label: "Saves", icon: "archive" },
-    { page: "sdk", label: "SDK settings", icon: "sliders" },
-    { page: "tasks", label: "Tasks", icon: "terminal" },
+  const tabs: { page: Page; label: string }[] = [
+    { page: "play", label: "Play" },
+    { page: "mods", label: "Mods" },
+    { page: "settings", label: "Settings" },
   ];
 
   onMount(() => {
-    const start = new URLSearchParams(location.search).get("page") as Page | null;
-    if (start) app.page = start;
+    const start = new URLSearchParams(location.search).get("page");
+    if (start) openPage(start);
     void loadConfig().then(refresh).then(startupUpdateCheck);
     // Pick up changes made outside the launcher (the game, Godot, a shell).
     const onFocus = () => void refresh();
@@ -40,8 +38,6 @@
   });
 
   const current = $derived(running());
-  const lastLine = $derived(current?.lines.at(-1)?.line ?? "");
-  const game = $derived(app.overview?.game ?? null);
 </script>
 
 {#if !app.config}
@@ -50,75 +46,51 @@
   <main class="setup"><Settings setup /></main>
 {:else}
   <div class="shell">
-    <aside>
+    <header>
       <div class="brand">
-        <img src="/icon.svg" alt="" width="34" height="34" />
-        <div>
-          <div class="name">T3SDK</div>
-          <div class="faint tag">Launcher</div>
-        </div>
+        <img src="/icon.svg" alt="" width="28" height="28" />
+        <span class="name">T3SDK</span>
       </div>
       <nav>
-        {#each nav as item (item.page)}
-          <button class:active={app.page === item.page} onclick={() => (app.page = item.page)}>
-            <Icon name={item.icon} size={17} />
-            <span class="grow">{item.label}</span>
-            {#if item.page === "tasks" && pending()}<span class="count">{pending()}</span>{/if}
-          </button>
+        {#each tabs as tab (tab.page)}
+          <button class:active={app.page === tab.page} onclick={() => (app.page = tab.page)}>{tab.label}</button>
         {/each}
       </nav>
       <div class="grow"></div>
-      <UpdateBanner />
-      <!-- The running job lives here, not over the page, so it never hides content. -->
       {#if current}
         <button
           class="job"
-          title="Show its output in Tasks"
+          title="Show what it prints in Activity"
           onclick={() => {
             jobs.selected = current.key;
             app.page = "tasks";
           }}
         >
-          <span class="row">
-            <span class="spinner"></span>
-            <strong class="grow clip">{current.title}</strong>
-            {#if pending() > 1}
-              <span class="faint queued" title={`${pending() - 1} more queued`}>+{pending() - 1}</span>
-            {/if}
-          </span>
-          <span class="mono faint clip">{lastLine || "Starting…"}</span>
+          <span class="spinner"></span>
+          <span class="clip">{current.title}</span>
+          {#if pending() > 1}<span class="faint">+{pending() - 1}</span>{/if}
         </button>
       {/if}
-      <div class="status">
-        {#if game}
-          <span class="badge" class:ok={game.supported} class:warn={!game.supported}>
-            <span class="dot"></span>{game.supported ? "Game supported" : "Unsupported build"}
-          </span>
-        {:else}
-          <span class="badge err"><span class="dot"></span>No game folder</span>
-        {/if}
-        {#if !inTauri}<span class="badge info">Browser preview</span>{/if}
-      </div>
-      <nav>
-        <button class="link" onclick={() => api.openLink("https://discord.gg/eaJkC5C6WJ")}>
-          <Icon name="discord" size={16} /><span class="grow">Taffer Tavern</span>
-        </button>
-        <button class="link" onclick={() => api.openLink("https://veradictus.github.io/Thief3-Decomp/")}>
-          <Icon name="book" size={16} /><span class="grow">Documentation</span>
-        </button>
-        <button class:active={app.page === "settings"} onclick={() => (app.page = "settings")}>
-          <Icon name="gear" size={17} /><span class="grow">Settings</span>
-        </button>
-      </nav>
-    </aside>
+      <UpdateBanner />
+      {#if !inTauri}<span class="badge info">Browser preview</span>{/if}
+      <button
+        class="link"
+        title="Taffer Tavern, the community's Discord"
+        onclick={() => api.openLink("https://discord.gg/eaJkC5C6WJ")}><Icon name="discord" size={18} /></button
+      >
+      <button
+        class="link"
+        title="Documentation"
+        onclick={() => api.openLink("https://veradictus.github.io/Thief3-Decomp/")}
+        ><Icon name="book" size={18} /></button
+      >
+    </header>
 
     <main>
       {#if app.page === "play"}<Play />
-      {:else if app.page === "maps"}<Maps />
       {:else if app.page === "mods"}<Mods />
-      {:else if app.page === "saves"}<Saves />
-      {:else if app.page === "sdk"}<Sdk />
       {:else if app.page === "tasks"}<Tasks />
+      {:else if app.page === "sdk"}<Sdk />
       {:else}<Settings />{/if}
     </main>
   </div>
@@ -137,131 +109,106 @@
 <style>
   .shell {
     display: grid;
-    grid-template-columns: 224px 1fr;
+    grid-template-rows: auto minmax(0, 1fr);
     height: 100%;
   }
 
-  aside {
+  header {
     display: flex;
-    flex-direction: column;
-    gap: 6px;
-    padding: 18px 12px 14px;
+    align-items: center;
+    gap: 10px;
+    height: 56px;
+    padding: 0 18px;
     background: #111215;
-    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
   }
 
   .brand {
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 0 8px 18px;
+    gap: 9px;
+    margin-right: 18px;
   }
 
   .name {
     font-family: var(--serif);
     font-size: 19px;
     font-weight: 600;
-    letter-spacing: 0.04em;
-    line-height: 1.1;
-  }
-
-  .tag {
-    font-size: 11.5px;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
+    letter-spacing: 0.05em;
   }
 
   nav {
     display: flex;
-    flex-direction: column;
-    gap: 2px;
+    gap: 4px;
   }
 
   nav button {
-    display: flex;
-    align-items: center;
-    gap: 11px;
-    height: 38px;
-    padding: 0 12px;
+    height: 34px;
+    padding: 0 16px;
     border: 0;
-    border-radius: 8px;
+    border-radius: 99px;
     background: none;
     color: var(--muted);
+    font-size: 14.5px;
     cursor: pointer;
-    text-align: left;
   }
 
   nav button:hover {
-    background: var(--panel-2);
     color: var(--text);
+    background: var(--panel-2);
   }
 
   nav button.active {
-    background: var(--panel-3);
-    color: var(--text);
-    box-shadow: inset 3px 0 0 var(--accent);
-  }
-
-  nav button.active :global(svg) {
-    color: var(--accent-2);
-  }
-
-  nav button.link {
-    height: 32px;
-    font-size: 13px;
-  }
-
-  .count {
-    min-width: 20px;
-    height: 20px;
-    padding: 0 6px;
-    border-radius: 99px;
-    background: var(--accent);
     color: var(--accent-ink);
-    font-size: 11.5px;
-    font-weight: 700;
+    background: var(--accent);
+    font-weight: 600;
+  }
+
+  .link {
     display: grid;
     place-items: center;
+    width: 34px;
+    height: 34px;
+    border: 0;
+    border-radius: 50%;
+    background: none;
+    color: var(--muted);
+    cursor: pointer;
   }
 
-  .status {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
-    padding: 0 8px 10px;
+  .link:hover {
+    color: var(--text);
+    background: var(--panel-2);
   }
 
   main {
     min-width: 0;
-    height: 100%;
+    min-height: 0;
     overflow: hidden;
   }
 
   .setup {
+    height: 100%;
     max-width: 980px;
     margin: 0 auto;
   }
 
   .job {
-    display: grid;
-    gap: 2px;
-    margin-bottom: 4px;
-    padding: 8px 12px;
-    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    max-width: 280px;
+    height: 30px;
+    padding: 0 12px;
+    border-radius: 99px;
     border: 1px solid var(--line-2);
     background: var(--panel-2);
+    font-size: 12.5px;
     cursor: pointer;
-    text-align: left;
   }
 
   .job:hover {
     background: var(--panel-3);
-    border-color: #474d57;
-  }
-
-  .job .mono {
-    font-size: 12px;
   }
 
   .clip {
@@ -270,13 +217,9 @@
     text-overflow: ellipsis;
   }
 
-  .queued {
-    font-size: 12px;
-  }
-
   .spinner {
-    width: 14px;
-    height: 14px;
+    width: 13px;
+    height: 13px;
     border-radius: 50%;
     border: 2px solid #d6ab5240;
     border-top-color: var(--accent);
@@ -290,7 +233,6 @@
     }
   }
 
-  /* Bottom right: the page's buttons are at the top right. */
   .toasts {
     position: fixed;
     right: 20px;
@@ -298,7 +240,7 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
-    z-index: 10;
+    z-index: 30;
     max-width: 420px;
   }
 

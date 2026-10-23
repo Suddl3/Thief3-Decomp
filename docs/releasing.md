@@ -119,8 +119,8 @@ What the workflows do with them:
 
 In the launcher, `src-tauri/src/update.rs` registers the updater plugin only
 when the app's config has `plugins.updater` with a key. It checks at start-up
-(at most once a day; Settings can turn this off), shows "Update available"
-in the sidebar, and on "Update and restart" downloads the installer, checks
+(at most once a day; Settings can turn this off), shows an "Update" pill
+in the top bar, and on "Update and restart" downloads the installer, checks
 its signature and runs it in passive mode: a progress bar, no questions, and
 the new launcher starts when it is done. A copy unzipped from the portable
 zip does not update itself (the installer would install a second copy); it

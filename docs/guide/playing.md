@@ -5,11 +5,10 @@ game only in memory, while it runs.
 
 ## Install and remove
 
-On the launcher's **Play** page, click **Install** in the T3SDK box, then
-**Play**. On a Steam install the game starts through Steam, as Steam's own
+On the launcher's **Play** page, click **Install T3SDK**, then **Play**. On a Steam install the game starts through Steam, as Steam's own
 Play button does.
 
-![The launcher's Play page: the game's build check, T3SDK, mods, maps and T3SDK's log](../images/launcher-play.png)
+![The launcher's Play page: Play, the saves, help and the game fixes](../images/launcher-play.png)
 
 Install copies T3SDK's files into the game's `System` folder:
 
@@ -45,7 +44,7 @@ program. Pause first.
 
 ## Settings
 
-Change the settings on the launcher's **SDK settings** page, or edit
+Switch the fixes under **Game fixes** on the launcher's Play page, or edit
 `System\T3SDK.ini` in a text editor. They take effect the next time the game
 starts. The fixes:
 

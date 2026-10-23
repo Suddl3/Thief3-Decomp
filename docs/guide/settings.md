@@ -9,13 +9,15 @@ default, and when you'd change it. For how the fixes work under the hood, see
 
 Two ways to change `System\T3SDK.ini`:
 
-- The launcher's **SDK settings** page shows every key as a toggle, a key
-  box, or a text field. Its list, order and descriptions come straight from
-  the SDK's own `T3SDK.ini`, so a setting the SDK adds later shows up here
-  without a launcher update. **Save** writes your changes into the file in
-  place, keeping its comments; **Revert** discards them. If the file is
-  missing (for example after copying just `dinput8.dll` in by hand), the page
-  offers to create one with the defaults.
+- The launcher's **Game fixes** (on the Play page) switch the fixes a player
+  wants, saved at once. With **Developer tools** on (Settings), **Every
+  T3SDK setting** shows every key as a toggle, a key box, or a text field.
+  Its list, order and descriptions come straight from the SDK's own
+  `T3SDK.ini`, so a setting the SDK adds later shows up there without a
+  launcher update. **Save** writes your changes into the file in place,
+  keeping its comments; **Revert** discards them. If the file is missing (for
+  example after copying just `dinput8.dll` in by hand), the page offers to
+  create one with the defaults.
 - Edit `System\T3SDK.ini` directly in a text editor. `1` turns a setting on,
   `0` off; a few (`DumpObjectsKey`, `MaxFPS`, `CursorScale`) take a number
   instead.
@@ -111,6 +113,6 @@ On the **Settings** page:
 - **Run setup again** re-opens the first-run setup screen, so you can
   re-check or change every path.
 
-The **Saves** page has one setting of its own: **Back up before starting the
-game** (off by default) makes a save backup, skipping it when nothing has
+The **Saves** block on the Play page has one setting of its own: **Back up
+before playing** (off by default) makes a save backup, skipping it when nothing has
 changed, every time you click Play. See [Save backups](saves.md).

@@ -5,7 +5,7 @@
   // against the index's size and SHA-256 before it is installed.
   import Icon from "$components/Icon.svelte";
   import { api, type IndexMod, type IndexVersion } from "$lib/api";
-  import { ago, bytes } from "$lib/format";
+  import { ago } from "$lib/format";
   import { indexTags, installButton, listText, matches, meta } from "$lib/modlist";
   import { installFromIndex, loadIndex, mods } from "$lib/mods.svelte";
 
@@ -72,15 +72,13 @@
           <h3>{m.name}</h3>
           {#if m.installed}<span class="badge ok"><Icon name="check" size={12} />Installed {m.installed}</span>{/if}
           {#if updates.has(m.id)}<span class="badge info">Update: {updates.get(m.id)}</span>{/if}
-          <span class="grow"></span>
-          {#each m.tags as t (t)}<span class="tag">{t}</span>{/each}
         </div>
-        <p class="faint small">{meta(m.authors.length > 0 && `by ${listText(m.authors)}`, m.id, m.license)}</p>
+        {#if m.authors.length}<p class="faint small">by {listText(m.authors)}</p>{/if}
         {#if m.description}<p class="muted desc">{m.description}</p>{/if}
 
         {#if v}
-          <div class="version">
-            {#if m.versions.length > 1}
+          {#if m.versions.length > 1}
+            <div class="version">
               <select
                 aria-label={`Version of ${m.name}`}
                 value={v.version}
@@ -88,20 +86,15 @@
               >
                 {#each m.versions as x (x.version)}<option value={x.version}>{x.version}</option>{/each}
               </select>
-            {:else}
-              <span class="mono">{v.version}</span>
-            {/if}
-            <span class="faint small">
-              {meta(bytes(v.size), v.released && `released ${v.released}`, v.api && `T3SDK API ${v.api.toString()}`)}
-            </span>
-          </div>
-          <ul class="notes">
-            {#each v.notes as note, k (k)}
-              <li class={note.severity}><Icon name="alert" size={13} />{note.message}</li>
-            {:else}
-              <li class="ok"><Icon name="check" size={13} />Works with your installed mods and SDK.</li>
-            {/each}
-          </ul>
+            </div>
+          {/if}
+          {#if v.notes.length}
+            <ul class="notes">
+              {#each v.notes as note, k (k)}
+                <li class={note.severity}><Icon name="alert" size={13} />{note.message}</li>
+              {/each}
+            </ul>
+          {/if}
         {/if}
 
         <div class="row actions">
