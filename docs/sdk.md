@@ -159,6 +159,14 @@ Check `api->version >= 2` (or `api->size`) before using these.
   not merged (a file the game only finds by listing a folder must exist in
   the game folder too), and resources packed in `.ibt` bundles are not
   reached, only loose files.
+- **`AddCodeHook(address, callback, user)`** runs `callback` whenever the
+  game reaches `address`, at any instruction (CreateHook only takes a
+  function's start), with the registers in a `T3Registers` the callback may
+  change. This is how a fix goes into the middle of a function: read a
+  value the game just computed, or change it before the next instruction
+  uses it. The 5 bytes at `address` are moved by MinHook, so they must not
+  contain a jump target. A callback that raises an exception is disabled and
+  the game's registers are left as they were.
 
 ### Mods in this repository
 

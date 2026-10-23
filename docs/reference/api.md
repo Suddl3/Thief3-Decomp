@@ -123,6 +123,14 @@ int AddFileRoot(const char* dir);
 
 - **`AddFileRoot`**: ``Loose``-``file`` ``overrides``: `dir` (``UTF``-``8``; ``relative`` ``to`` ``the`` ``calling`` ``mod``'``s`` ``own`` ``folder``) ``mirrors`` ``the`` ``game`` ``folder``, ``and`` ``a`` ``file`` ``the`` ``game`` ``reads`` ``from`` &lt;``game``>/&lt;``path``> ``comes`` ``from`` &lt;`dir```>/&lt;``path``> ``when`` ``that`` ``exists``. ``The`` ``folder`` ``added`` ``last`` ``wins``. ``Only`` ``single`` ``files``: ``directory`` ``listings`` ``are`` ``not`` ``merged``, ``and`` ``files`` ``packed`` ``in`` .``ibt`` ``bundles`` ``are`` ``not`` ``reached``. ``0``, ``or`` -``1`` ``if`` `dir` ``is`` ``not`` ``a`` ``folder``.
 
+### AddCodeHook
+
+```c
+int AddCodeHook(void* address, T3CodeCallback callback, void* user);
+```
+
+- **`AddCodeHook`**: ``Code`` ``hooks``: `callback` ``runs`` ``each`` ``time`` ``the`` ``game`` ``reaches`` `address` (``any`` ``instruction`` ``in`` ``T3Main``.``exe``, ``not`` ``only`` ``a`` ``function``'``s`` ``start``), ``before`` ``the`` ``instruction`` ``there``, ``with`` ``the`` ``registers`` ``to`` ``read`` ``or`` ``change``. ``The`` ``address`` ``must`` ``start`` ``an`` ``instruction``, ``and`` ``the`` ``5`` ``bytes`` ``from`` ``it`` ``must`` ``not`` ``be`` ``a`` ``jump`` ``target`` (``MinHook`` ``moves`` ``them``). ``Shares`` ``MinHook``'``s`` ``table`` ``with`` `CreateHook```: ``one`` ``hook`` ``per`` ``address``. ``A`` ``callback`` ``that`` ``raises`` ``an`` ``exception`` ``is`` ``disabled``. ``0``, -``1`` ``for`` ``a`` `NULL``` ``argument``, ``or`` ``an`` `MH_STATUS```.
+
 ## Types
 
 ### T3Object
@@ -152,9 +160,16 @@ typedef void(T3SDK_CALL* T3LogCallback)(void* user, const char* text, const char
 
 ```c
 typedef const char*(T3SDK_CALL* T3ConfigCallback)(void* user, const char* file, const char* section, const char* key,
+typedef struct T3Registers {
 ```
 
 ``One`` ``INI`` ``lookup`` ``by`` ``the`` ``game``: `file` ``is`` ``the`` ``INI`` ``it`` ``names`` (`NULL``` ``for`` ``its`` ``default``), `value` ``the`` ``text`` ``found`` ``so`` ``far`` (`NULL``` ``if`` ``the`` ``key`` ``is`` ``missing``). ``Return`` ``the`` ``text`` ``to`` ``answer`` ``with`` (``copied`` ``right`` ``away``), ``or`` `NULL``` ``to`` ``leave`` ``it``.
+
+### T3CodeCallback
+
+```c
+typedef void(T3SDK_CALL* T3CodeCallback)(void* user, T3Registers* regs);
+```
 
 ### T3ModInitFn
 

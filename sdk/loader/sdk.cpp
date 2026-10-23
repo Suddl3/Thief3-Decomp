@@ -5,6 +5,7 @@
 // entry-point trampoline on the game's main thread.
 #include "sdk.hpp"
 
+#include "codehook.hpp"
 #include "config.hpp"
 #include "crash.hpp"
 #include "display.hpp"
@@ -280,6 +281,7 @@ void DropCallbacksOf(HMODULE module) {
     std::erase_if(g_logCallbacks, [module](const LogCallback& cb) { return cb.owner == module; });
     config::DropOwner(module);
     files::DropOwner(module);
+    codehook::DropOwner(module);
 }
 
 // ---- mod API ---------------------------------------------------------------
@@ -355,6 +357,10 @@ int T3SDK_CALL ApiAddFileRoot(const char* dir) {
     return files::AddRoot(path, owner);
 }
 
+int T3SDK_CALL ApiAddCodeHook(void* address, T3CodeCallback callback, void* user) {
+    return codehook::Add(address, callback, user, mods::ModuleAt(_ReturnAddress()));
+}
+
 const T3SdkApi g_api = {
     T3SDK_API_VERSION,
     sizeof(T3SdkApi),
@@ -378,6 +384,7 @@ const T3SdkApi g_api = {
     ApiSetConfigValue,
     ApiAddConfigCallback,
     ApiAddFileRoot,
+    ApiAddCodeHook,
 };
 
 // ---- start-up ----------------------------------------------------------------

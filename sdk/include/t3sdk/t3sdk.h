@@ -65,6 +65,13 @@ typedef void(T3SDK_CALL* T3LogCallback)(void* user, const char* text, const char
  * the text to answer with (copied right away), or NULL to leave it. */
 typedef const char*(T3SDK_CALL* T3ConfigCallback)(void* user, const char* file, const char* section, const char* key,
                                                   const char* value);
+/* The game's registers at a code hook, as pushad/pushfd leave them. Changes
+ * to any of them but esp carry back into the game. */
+typedef struct T3Registers {
+    uint32_t edi, esi, ebp, esp, ebx, edx, ecx, eax;
+    uint32_t eflags;
+} T3Registers;
+typedef void(T3SDK_CALL* T3CodeCallback)(void* user, T3Registers* regs);
 
 typedef struct T3SdkApi {
     uint32_t version; /* T3SDK_API_VERSION implemented by the SDK */
@@ -129,6 +136,15 @@ typedef struct T3SdkApi {
      * files packed in .ibt bundles are not reached. 0, or -1 if `dir` is not
      * a folder. */
     int(T3SDK_CALL* AddFileRoot)(const char* dir);
+
+    /* Code hooks: `callback` runs each time the game reaches `address` (any
+     * instruction in T3Main.exe, not only a function's start), before the
+     * instruction there, with the registers to read or change. The address
+     * must start an instruction, and the 5 bytes from it must not be a jump
+     * target (MinHook moves them). Shares MinHook's table with CreateHook: one
+     * hook per address. A callback that raises an exception is disabled. 0,
+     * -1 for a NULL argument, or an MH_STATUS. */
+    int(T3SDK_CALL* AddCodeHook)(void* address, T3CodeCallback callback, void* user);
 } T3SdkApi;
 
 typedef int(T3SDK_CALL* T3ModInitFn)(const T3SdkApi* api);
