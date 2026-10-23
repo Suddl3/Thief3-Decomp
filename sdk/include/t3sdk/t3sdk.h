@@ -65,8 +65,9 @@ typedef void(T3SDK_CALL* T3LogCallback)(void* user, const char* text, const char
  * the text to answer with (copied right away), or NULL to leave it. */
 typedef const char*(T3SDK_CALL* T3ConfigCallback)(void* user, const char* file, const char* section, const char* key,
                                                   const char* value);
-/* The game's registers at a code hook, as pushad/pushfd leave them. Changes
- * to any of them but esp carry back into the game. */
+/* The game's registers at a code hook, in pushad order. `esp` is the game's
+ * own (its stack, readable and writable, starts there); changes to any
+ * register but esp carry back into the game. */
 typedef struct T3Registers {
     uint32_t edi, esi, ebp, esp, ebx, edx, ecx, eax;
     uint32_t eflags;

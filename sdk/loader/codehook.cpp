@@ -53,6 +53,7 @@ void __cdecl Dispatch(Hook* hook, T3Registers* regs) {
     if (!hook->active) {
         return;
     }
+    regs->esp += 4;  // pushad saw esp after pushfd; the callback gets the game's own
     T3Registers saved = *regs;
     DWORD code = 0;
     if (!CallGuarded(hook, regs, &code)) {
