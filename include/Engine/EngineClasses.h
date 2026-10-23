@@ -701,7 +701,7 @@ public:
     virtual int Virtual98();                                // slot 98
     virtual void Virtual99();                               // slot 99, signature unknown
     virtual void Virtual100();                              // slot 100
-    virtual void Virtual101();                              // slot 101
+    virtual void Virtual101(bool A);                              // slot 101
     virtual void Virtual102();                              // slot 102
     virtual void Virtual103();                              // slot 103, signature unknown
     virtual void Virtual104();                              // slot 104, signature unknown
@@ -742,7 +742,7 @@ public:
     virtual int Virtual98();                                // slot 98: 0x10CD3A40, AController's
     virtual void Virtual99();                               // slot 99: 0x109E3C90, AController's
     virtual void Virtual100();                              // slot 100: 0x109ECCD0, AController's
-    virtual void Virtual101();                              // slot 101: 0x109E3C90, AController's
+    virtual void Virtual101(bool A);                              // slot 101: 0x109E3C90, AController's
     virtual void Virtual102();                              // slot 102: 0x10D660B0, AController's
     virtual void Virtual103();                              // slot 103: 0x10D660B0, AController's
     virtual void Virtual104();                              // slot 104: 0x10D660B0, AController's
@@ -785,7 +785,7 @@ public:
     virtual void Virtual97();                               // slot 97: 0x10A50100
     virtual void Virtual98();                               // slot 98: 0x109A5970, signature unknown
     virtual void Virtual99();                               // slot 99: 0x10A4FDB0
-    virtual void Virtual100();                              // slot 100: 0x109A5330
+    virtual void Virtual100(AController* Controller, bool Restored); // slot 100: 0x109A5330
     virtual bool IsCrouching();                             // slot 101: 0x109A5450
     virtual struct Struct_10B21250 Virtual102();            // slot 102: 0x109623E0
     virtual unsigned char IsHoldingWeapon();                // slot 103: 0x10CD3A40
@@ -949,7 +949,7 @@ public:
     virtual int Virtual98();                                // slot 98: 0x10CD3A40, AController's
     virtual void Virtual99();                               // slot 99: 0x109E3C90, AController's
     virtual void Virtual100();                              // slot 100: 0x109ECCD0, AController's
-    virtual void Virtual101();                              // slot 101: 0x109E3C90, AController's
+    virtual void Virtual101(bool A);                              // slot 101: 0x109E3C90, AController's
     virtual void Virtual102();                              // slot 102: 0x10D660B0, AController's
     virtual void Virtual103();                              // slot 103: 0x10D660B0, AController's
     virtual void Virtual104();                              // slot 104: 0x10D660B0, AController's
