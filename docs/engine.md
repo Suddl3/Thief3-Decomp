@@ -496,6 +496,13 @@ makes `w` the layout width, so a full-width window at `Pos_X=325` (the main
 menu buttons) sits 325 units from the left edge at any width. Callers use the
 returned pointer: a detour must return it.
 
+HUD values the game reads from `T3UI.ini` (through `Config`, so `SetConfigValue`
+answers them): `[JunkItemWindow] FlashOnTime`/`FlashOffTime` (0.75/0.25 s,
+the picked-up junk item's flashing); `[ItemCycleWindow]`/`[WeaponCycleWindow]
+DeEquipText` (the "nothing equipped" string tag; an empty value counts as
+missing); `[HealthMeter] Pos_X/Pos_Y` and `ClearPos_X/ClearPos_Y` (20/-15 and
+20/100: where the bar sits and where it slides when idle).
+
 ## Display: viewport and Direct3D 8
 
 | What | Address | Status |
