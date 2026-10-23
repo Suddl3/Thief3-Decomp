@@ -8,6 +8,7 @@
 #include "log.hpp"
 
 #include <algorithm>
+#include <cstdio>
 #include <fstream>
 #include <string>
 #include <vector>
@@ -37,6 +38,17 @@ uintptr_t ImageEnd(HMODULE module) {
     auto base = reinterpret_cast<const BYTE*>(module);
     auto nt = reinterpret_cast<const IMAGE_NT_HEADERS*>(base + reinterpret_cast<const IMAGE_DOS_HEADER*>(base)->e_lfanew);
     return reinterpret_cast<uintptr_t>(base) + nt->OptionalHeader.SizeOfImage;
+}
+
+// Calls the mod's T3Mod_Init; returns the exception code, or 0 when it returned
+// normally (its result in `result`).
+DWORD CallInit(T3ModInitFn init, const T3SdkApi* api, int* result) {
+    __try {
+        *result = init(api);
+        return 0;
+    } __except (EXCEPTION_EXECUTE_HANDLER) {
+        return GetExceptionCode();
+    }
 }
 
 // Returns the exception code, or 0 when the mod's shutdown returned normally.
@@ -122,10 +134,18 @@ void Load(const std::filesystem::path& file, const std::string& name, bool packa
     // Registered before init so the mod's log lines and callbacks are attributed to it.
     g_mods.push_back({name, module, reinterpret_cast<uintptr_t>(module), ImageEnd(module), nullptr});
     auto init = reinterpret_cast<T3ModInitFn>(GetProcAddress(module, "T3Mod_Init"));
-    int result = init ? init(api) : -1;
-    if (result != 0) {
-        T3_LOG("mod %s: %s; unloading", name.c_str(),
-               init ? ("T3Mod_Init returned " + std::to_string(result)).c_str() : "no T3Mod_Init export");
+    int result = -1;
+    DWORD code = init ? CallInit(init, api, &result) : 0;
+    if (code || result != 0) {
+        char why[64];
+        if (!init) {
+            snprintf(why, sizeof(why), "no T3Mod_Init export");
+        } else if (code) {
+            snprintf(why, sizeof(why), "T3Mod_Init raised exception 0x%08lX", code);
+        } else {
+            snprintf(why, sizeof(why), "T3Mod_Init returned %d", result);
+        }
+        T3_LOG("mod %s: %s; unloading", name.c_str(), why);
         onUnload(module);
         g_mods.pop_back();
         FreeLibrary(module);
