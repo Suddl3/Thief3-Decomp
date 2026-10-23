@@ -154,9 +154,10 @@ class ActorData:
 
 
 class Package:
-    def __init__(self, path: Path | str) -> None:
+    def __init__(self, path: Path | str, data: Optional[bytes] = None) -> None:
+        """Parse the package at `path`, or `data` (then `path` only names it)."""
         self.path = Path(path)
-        self.data = self.path.read_bytes()
+        self.data = self.path.read_bytes() if data is None else bytes(data)
         r = Reader(self.data)
         self.tag = r.u32()
         if self.tag != PACKAGE_TAG:

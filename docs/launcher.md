@@ -197,7 +197,10 @@ the launcher or the T3SDK folder is updated:
   the map's saved edits, so nothing is lost. A notice lists the outdated
   maps, with **Update all now**.
 - **Install** repacks first when there is no patched map yet or the edits
-  changed after the last repack.
+  changed after the last repack. It also gives the level's existing saves
+  the edits (`t3pack.py install --edits`, in the saves folder the Saves
+  section uses): a save holds its own copy of the level, so without this
+  it would show the level as it was ([assets.md](assets.md#saved-games-wgs)).
 
 ## Releases
 

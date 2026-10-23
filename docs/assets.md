@@ -205,8 +205,8 @@ Decoded so far, in order:
   decals or lighting.
 - Several hundred kilobytes more, not decoded.
 
-**Saves and the static data.** A save holds only what changed: the level is
-serialised without the object system. When a save loads,
+**Saves and the static data.** A save holds the level's actors as played
+(section 4, "Saved games") but not the object system. When a save loads,
 `ULevelBase::Serialize` reopens the map (`..\Content\T3\Maps\<Level>.gmp`),
 reads its summary, seeks to the DWORD at 0x24 and reads the object system
 from there. A fresh start of the map reads the same data in place while
@@ -496,6 +496,51 @@ bundle's backup) it:
 - **Books** (`.sch`) are text. Conversations (`.con`), lip sync (`.lbd`) and
   the tag database are small binaries. None of these is needed for
   geometry.
+
+### Saved games (.wgs)
+
+Each save slot is a folder in `SaveGames` named by the save's ID
+(`Current Save` is the game's copy of the save being played). It holds
+`<Level>.wgs` for each level visited, the `LoadFilter`, `PlayerFlags`,
+`Restart_*`, `metadata.ion`, a screenshot (`SaveImage.dds`) and a
+`SaveManifest` (file names with a hash the game does not check on load).
+
+`<Level>.wgs` is the level as played, as an Unreal package (version 95,
+licensee 133): every actor with its saved state, and a Level object of a
+few kilobytes (the actor list and save sections such as the
+ChangedActorDatabase). Its static gamesys data comes from the map (section
+2, "The level object"). The file:
+
+| Offset | Field |
+|---|---|
+| 0x00 | 16-byte save file id, the same in every save |
+| 0x10 | u32 size of the blocks (the file from 0x104), u32 size of the package they unpack to, u32 0 |
+| 0x1C | SHA-1 of the blocks, then of the 0x104-byte header with this field zeroed |
+| 0x104 | blocks: u32 unpacked size, u32 packed size, LZO1X data |
+
+The game reads each block into a 0x4000-byte buffer and unpacks it into
+another, so no block may be larger, packed or unpacked. A save whose SHA-1
+does not match is skipped without a message: the game starts the map
+fresh instead (`docs/engine.md`, "Save games").
+
+**Map edits and saves.** A save keeps its own copy of the level, so a map
+edit installed later does not reach the saves made before it: they load
+fine (the static data is unchanged), but show the level as it was.
+`t3save.py migrate` (and `t3pack.py install --edits`, which the launcher's
+Install runs) applies the edits to those saves:
+
+- New actors get the names the patched map gave them, so a save made on
+  the patched map, or migrated already, is recognised and left alone.
+- An edited actor is changed only while the save still has it where the
+  original map put it (within 1 unit; physics settles objects slightly).
+  One the player moved, took or destroyed keeps its saved state.
+- A removed actor leaves the save's level when it is still in it.
+- Each changed save is backed up to `build/assets/save-backup/<time>/`.
+  The packed blocks are stored, not compressed: a migrated save is about
+  twice the size, which the game accepts.
+
+Putting the original map back does not undo a migration: the saves keep
+the edits they were given.
 
 ## 5. Coordinates and units
 
@@ -1156,7 +1201,9 @@ All tools live in `tools/assets/` and use the standard library only. They
 find the game with `--game-dir`, then `$T3_GAME_DIR`, then the installer's
 registry value. They write only under `build/assets/`, except
 `t3pack.py install` and `restore`, which replace maps in the game folder,
-and `t3texpack.py apply` and `restore`, which replace `.ibt` bundles.
+`t3pack.py install --edits` and `t3save.py migrate`, which rewrite saves
+(after a backup), and `t3texpack.py apply` and `restore`, which replace
+`.ibt` bundles.
 
 | Tool | Purpose |
 |---|---|
@@ -1171,6 +1218,7 @@ and `t3texpack.py apply` and `restore`, which replace `.ibt` bundles.
 | `t3map.py <map>\|--all [--json-only] [--scale S] [--without-edits]` | Level to JSON + Godot scene, with its saved edits |
 | `t3map.py --project-only [-o DIR]` | Update the project's viewer and map editor plugin only |
 | `t3pack.py roundtrip\|apply\|install\|restore` | Write maps back: round-trip check, edits file to a patched `.gmp`, install with a backup, restore (section 8) |
+| `t3save.py info\|unpack\|pack\|list\|migrate` | Saved games (`.wgs`): describe, unpack to a package, pack one back, list the saves, apply a map edits file to the saves of its level (section 4, "Saved games") |
 | `upkgwrite.py` | Package writer and actor editing, used by `t3pack.py` |
 | `t3texpack.py list\|check\|apply\|restore`, `--selfcheck` | Texture packs: replace textures inside `.ibt` bundles with DDS files, with a backup and a record; restore. `--selfcheck` checks the writer and the encoder on the retail bundles (section 3) |
 | `ibtwrite.py` | Block-file writer (byte-exact round trip, resource replacement), used by `t3texpack.py` |

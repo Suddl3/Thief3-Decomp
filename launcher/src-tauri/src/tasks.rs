@@ -166,7 +166,18 @@ fn plan(spec: &TaskSpec, cfg: &Config) -> Result<Plan, String> {
             if !patched.is_file() {
                 return Err(format!("{l} has not been repacked yet"));
             }
-            python(format!("Install {l}"), vec![tool("assets/t3pack.py")?, "install".into(), patched.into_os_string()])
+            let mut args = vec![tool("assets/t3pack.py")?, "install".into(), patched.into_os_string()];
+
+            // Saves hold the whole level as played: the edits the map was repacked from go into them too.
+            let edits = project()?.join(l).join(format!("{l}.edits.json"));
+            if edits.is_file() {
+                args.extend(["--edits".into(), edits.into_os_string()]);
+                if let Some(folder) = crate::saves::locate(cfg).folder.filter(|f| f.exists) {
+                    args.extend(["--saves".into(), folder.path.into_os_string()]);
+                }
+            }
+
+            python(format!("Install {l}"), args)
         }
         TaskSpec::Restore { level } => {
             let mut args = vec![tool("assets/t3pack.py")?, "restore".into()];

@@ -17,13 +17,16 @@ Usage:
   t3pack.py apply <edits.json> [-o out.gmp] [--source <.gmp>] [--dry-run]
       apply a map edits file (t3-map-edits, see docs/assets.md) to the
       level's .gmp and write build/assets/patched/<Level>.gmp.
-  t3pack.py install <patched.gmp> [--level NAME] [--dry-run]
+  t3pack.py install <patched.gmp> [--level NAME] [--edits <edits.json> [--saves DIR]] [--dry-run]
       copy a patched map into Content/T3/Maps, after backing up the original
       once to build/assets/backup/ (an existing backup is never replaced).
+      With --edits, the level's saves get the edits too (t3save.py migrate;
+      each changed save is backed up to build/assets/save-backup/ first).
   t3pack.py restore <Level> | --all [--dry-run]
       copy the backed-up originals back into Content/T3/Maps.
 
-install and restore are the only commands that write to the game folder.
+install and restore are the only commands that write to the game folder,
+and install --edits the only one that writes to the saves.
 """
 
 from __future__ import annotations
@@ -504,15 +507,20 @@ def _new_actor_name(writer: PackageWriter, like: str) -> str:
     return f"{stem}__{number}"
 
 
-def apply_edits(pkg: Package, edits: Dict[str, Any], names: Optional[PropertyNames] = None) -> Patch:
+def apply_edits(pkg: Package, edits: Dict[str, Any], names: Optional[PropertyNames] = None,
+                added_names: Optional[List[str]] = None) -> Patch:
     """Apply checked edits (see load_edits) to a parsed map.  Call
     patch.writer.write() for the file.  Raises EditsError listing every
     actor or value that cannot be applied.
 
     A new actor copies the object data of the actor it names (as in the
     file, before any edit to it) under a new name, and joins the Level's
-    actor list.  A removed actor leaves that list: its object stays in the
-    file, but the level does not have it."""
+    actor list.  The name is the next free one of its stem, or the matching
+    entry of `added_names` (a save gets the names its patched map gave).
+    A removed actor leaves that list: its object stays in the file, but the
+    level does not have it."""
+    if added_names is not None and len(added_names) != len(edits.get("added", [])):
+        raise EditsError("added_names must name every added actor")
     patch = Patch(PackageWriter(pkg))
     props = _Props(patch.writer, names)
     by_name = _export_index(pkg)
@@ -559,7 +567,7 @@ def apply_edits(pkg: Package, edits: Dict[str, Any], names: Optional[PropertyNam
             label = f"added actor {i + 1} (a copy of {rec['copy_of']})"
             try:
                 src = _find_actor(pkg, by_name, rec["copy_of"])
-                name = _new_actor_name(patch.writer, src.name)
+                name = added_names[i] if added_names is not None else _new_actor_name(patch.writer, src.name)
                 index = patch.writer.add_export(src.index, name, pkg.export_bytes(src))
                 act = ActorEdit(patch.writer, patch.writer.export_view(index))
                 expect = _apply_record(act, rec, props, label, problems)
@@ -945,7 +953,22 @@ def cmd_apply(args) -> None:
 
 def cmd_install(args) -> None:
     game = game_dir(args.game_dir)
-    install(Path(args.patched), game, args.level, dry_run=args.dry_run)
+    target = install(Path(args.patched), game, args.level, dry_run=args.dry_run)
+
+    # Saves hold the whole level as played: give the ones made before this map its edits too.
+    if args.edits:
+        import t3save  # t3save imports this module: import it only when needed
+
+        edits = load_edits(args.edits)
+        source = original_source(edits, target)
+        print(f"{source.name}: {check_source(edits, source)}")
+        folders = t3save.save_folders(args.saves, game)
+        need_table = any("draw_scale" in a or a.get("gamesys") for a in list(edits["actors"].values()) + edits["added"])
+        names = _load_names(game) if need_table else None
+        changed, failed = t3save.migrate(edits, source, folders, names, args.dry_run)
+        print(f"saves: {changed} {'to change' if args.dry_run else 'changed'}" + (f", {failed} FAILED" if failed else ""))
+        if failed:
+            sys.exit(1)
 
 
 def cmd_restore(args) -> None:
@@ -970,6 +993,9 @@ def main() -> None:
     s = sub.add_parser("install", help="copy a patched map into the game, backing up the original once")
     s.add_argument("patched", help="patched .gmp")
     s.add_argument("--level", help="map to replace (default: the patched file's name)")
+    s.add_argument("--edits", help="the edits file the map was made from: also migrate the level's saves "
+                                   "(t3save.py migrate)")
+    s.add_argument("--saves", help="SaveGames folder for --edits (default: every known place)")
     s.add_argument("-n", "--dry-run", action="store_true", help="show what would be copied")
     s = sub.add_parser("restore", help="copy backed-up original maps back into the game")
     s.add_argument("level", nargs="?")

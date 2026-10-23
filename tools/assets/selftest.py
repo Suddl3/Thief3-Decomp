@@ -30,8 +30,10 @@ from t3map import (EXPORT_VERSION, TOOLS_DIR, ActorRecord, ensure_project, expor
                    keep_previous_scene, resolve_edits, write_tscn)
 from t3mesh import ResourceSet, mesh_to_gltf, parse_static_mesh  # noqa: E402
 from t3pack import (EditsError, apply_edits, check_source, install, load_edits, original_source,  # noqa: E402
-                    restore, roundtrip, write_verified)
+                    restore, roundtrip, verify_patch, write_verified)
 from t3props import PropertyNames, parse_declarations, parse_enums  # noqa: E402
+from t3save import (LITERAL_BLOCK, SaveFile, added_names, lzo1x_decompress, lzo1x_literal,  # noqa: E402
+                    migrate_package)
 from t3texture import decode_rgba, parse_material, parse_texture, to_dds  # noqa: E402
 from upkg import Package, prop_value, struct_fields  # noqa: E402
 from upkgwrite import LayoutError, PackageWriter, enc_index, first_difference  # noqa: E402
@@ -672,10 +674,57 @@ def test_math_and_props() -> None:
     print("coordinates, property declarations, compact indices: ok")
 
 
+def test_saves() -> None:
+    # LZO1X: literals, then a match that overlaps its own output, then the end marker
+    stream = bytes([17 + 4]) + b"abcd" + bytes([0x20 | 4, (4 - 1) << 2, 0]) + b"\x11\0\0"
+    assert lzo1x_decompress(stream, 10) == b"abcdabcdab"
+    for n in (1, 238, 239, 273, 528, LITERAL_BLOCK):
+        raw = bytes(i * 7 & 0xFF for i in range(n))
+        assert lzo1x_decompress(lzo1x_literal(raw), n) == raw, n
+        assert len(lzo1x_literal(raw)) <= 0x4000
+
+    # a save: blocks, sizes and checksum; a changed byte breaks the checksum
+    data = (OUT / "synthmap.gmp").read_bytes()
+    header = b"T3SDK-SELFTEST!!" + bytes(0x104 - 16)
+    wgs = SaveFile(header, data).encode()
+    back = SaveFile.read(wgs)
+    assert back.package == data and back.digest_ok and back.header[:16] == header[:16]
+    bad = bytearray(wgs)
+    bad[0x104 + 20] ^= 1
+    assert not SaveFile.read(bytes(bad)).digest_ok
+
+    # migration: a save where StaticMeshActor0 was moved in play
+    base = Package(OUT / "synthmap.gmp")
+    played = apply_edits(base, load_edits({"format": "t3-map-edits", "version": 2, "level": "synthmap",
+                                           "actors": {"StaticMeshActor0": {"location": [999.0, 0.0, 0.0]}}}))
+    save = Package("played.pkg", played.writer.write())
+    edits = load_edits({"format": "t3-map-edits", "version": 2, "level": "synthmap",
+                        "actors": {"StaticMeshActor0": {"location": [1.0, 2.0, 3.0]},
+                                   "Light0": {"location": [7.0, 8.0, 9.0]}},
+                        "added": [{"copy_of": "StaticMeshActor1", "location": [0.0, 0.0, 50.0]}],
+                        "removed": ["D_100_0"]})
+    names = added_names(base, edits)
+    result = migrate_package(save, base, edits)
+    assert result.patch is not None
+    assert any(n.startswith("StaticMeshActor0: moved") for n in result.notes), result.notes
+    migrated = Package("migrated.pkg", result.patch.writer.write())
+    assert not verify_patch(save, migrated, result.patch)
+    level = {migrated.exports[r - 1].name for r in migrated.level_actors()}
+    assert names[0] in level and "D_100_0" not in level
+    moved = struct_fields(prop_value(migrated.read_actor(migrated.find_export("Light0")).properties, "Location"))
+    kept = struct_fields(prop_value(migrated.read_actor(migrated.find_export("StaticMeshActor0")).properties,
+                                    "Location"))
+    assert (moved["X"], moved["Y"], moved["Z"]) == (7.0, 8.0, 9.0) and kept["X"] == 999.0
+    # a second migration finds nothing to do
+    assert migrate_package(migrated, base, edits).patch is None
+    print("saves: LZO1X, .wgs blocks and checksum, migration (moved in play, added, removed, repeated): ok")
+
+
 def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
     test_package()
     test_writer()
+    test_saves()
     test_export()
     test_ibt()
     test_math_and_props()
