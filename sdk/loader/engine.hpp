@@ -23,6 +23,7 @@ struct Build {
     uint32_t imageSize;
     bool supported;
 };
+
 Build CheckBuild();
 
 // Offsets found by ValidateLayout(). Zero until the layout is validated.
@@ -30,6 +31,7 @@ struct Layout {
     uint32_t outer = 0;       // UObject::Outer
     uint32_t superField = 0;  // UStruct::SuperField (walks a class up to Object)
 };
+
 const Layout& GetLayout();
 
 // True once names and objects exist and the layout checks passed, until the

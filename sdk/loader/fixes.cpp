@@ -11,34 +11,47 @@
 namespace t3sdk::fixes {
 namespace {
 
-// Plays [PCStartup] ShortIntroMovies (Eidos, Ion Storm, copyright, nVidia and
-// EAX logos) before the main menu. It does nothing else, so returning early is
-// the same as ShowIntroMovies=False.
+// void PlayIntroMovies(), __cdecl: plays [PCStartup] ShortIntroMovies (Eidos, Ion Storm, copyright, nVidia and
+// EAX logos) before the main menu. It does nothing else, so returning early is the same as ShowIntroMovies=False
+// (docs/engine.md, "intro-movie player").
 constexpr uintptr_t kPlayIntroMovies = 0x10A50C30;
 
 using PlayIntroMoviesFn = void(__cdecl*)();
+
+// The original PlayIntroMovies, filled in by the hook. The detour never calls it.
 PlayIntroMoviesFn g_playIntroMovies = nullptr;
 
-void __cdecl PlayIntroMoviesDetour() { T3_LOG("intro movies skipped"); }
+// Replaces PlayIntroMovies: logs and returns at once.
+void __cdecl PlayIntroMoviesDetour() {
+    T3_LOG("intro movies skipped");
+}
 
+// Creates and enables a hook on `target`; logs "<what>: hook failed (...)" and returns false when MinHook refuses.
 bool Hook(uintptr_t target, void* detour, void** original, const char* what) {
     MH_STATUS status = MH_CreateHook(reinterpret_cast<void*>(target), detour, original);
+
+    // Enable the hook only once it was created.
     if (status == MH_OK) {
         status = MH_EnableHook(reinterpret_cast<void*>(target));
     }
+
+    // Creating or enabling the hook failed.
     if (status != MH_OK) {
         T3_LOG("%s: hook failed (%s)", what, MH_StatusToString(status));
     }
+
     return status == MH_OK;
 }
 
 }  // namespace
 
 void Install(const Options& options) {
+    // Only when SkipIntros is on.
     if (options.skipIntros) {
         Hook(kPlayIntroMovies, reinterpret_cast<void*>(&PlayIntroMoviesDetour),
              reinterpret_cast<void**>(&g_playIntroMovies), "skip intros");
     }
+
     T3_LOG("fixes: skip intros %s", options.skipIntros ? "on" : "off");
 }
 

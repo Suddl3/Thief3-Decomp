@@ -10,15 +10,19 @@
 
 namespace t3sdk::engine {
 
+// Which step of the check failed, or None when the hash was computed.
 enum class HashFailure { None, OpenFile, ReadFile, Crypto };
 
+// The outcome of CheckSupportedExecutableHash.
 struct HashCheck {
     HashFailure failure;
-    DWORD win32Error;
-    NTSTATUS cryptoStatus;
-    bool matches;
+    DWORD win32Error;       // GetLastError() for OpenFile and ReadFile
+    NTSTATUS cryptoStatus;  // the BCrypt status; meaningful for Crypto
+    bool matches;           // true only when failure is None and the digest equals the supported build's
 };
 
+// Hashes the file at `path` with SHA-1 and compares the digest with the
+// supported T3Main.exe build's. Any thread; reads the whole file.
 HashCheck CheckSupportedExecutableHash(const wchar_t* path);
 
 }  // namespace t3sdk::engine

@@ -8,9 +8,12 @@ namespace t3sdk::menu {
 
 // Changes the menu version label's format string at one verified callsite in
 // the supported T3Main.exe build. The engine still owns formatting and text.
+// Returns false (and logs why) when the bytes there are not the expected ones
+// or cannot be patched.
 bool InstallModdedVersionFormat();
 
 // Temporary focused event tracing for the known menu/popup entry points.
+// Installs both hooks or neither; returns false (and logs why) on failure.
 bool InstallInputDiagnostics();
 
 }  // namespace t3sdk::menu

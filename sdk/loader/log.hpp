@@ -16,6 +16,8 @@ void Open(const std::filesystem::path& file, bool console);
 // Writes one line: "hh:mm:ss.mmm [tag] message". Thread-safe; flushed at once so
 // the log survives a crash.
 void Write(const char* tag, const char* fmt, ...);
+
+// Same as Write, with the arguments already in a va_list.
 void WriteV(const char* tag, const char* fmt, va_list args);
 
 }  // namespace t3sdk::log

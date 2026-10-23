@@ -9,16 +9,24 @@
 namespace t3sdk::log {
 namespace {
 
+// Guards the two outputs below, so lines from different threads do not interleave.
 std::mutex g_mutex;
+
+// The open T3SDK.log, or nullptr before Open or when it could not be opened.
 FILE* g_file = nullptr;
+
+// The console's output handle, or nullptr when no console was requested.
 HANDLE g_console = nullptr;
 
 }  // namespace
 
 void Open(const std::filesystem::path& file, bool console) {
     std::lock_guard lock(g_mutex);
+
     // Keep diagnostics from earlier runs; the owner can clear this file when wanted.
     g_file = _wfopen(file.c_str(), L"a");
+
+    // A console window only when requested.
     if (console && AllocConsole()) {
         SetConsoleTitleW(L"T3SDK");
         g_console = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -29,25 +37,33 @@ void WriteV(const char* tag, const char* fmt, va_list args) {
     char message[2048];
     vsnprintf(message, sizeof(message), fmt, args);
 
-    SYSTEMTIME t;
-    GetLocalTime(&t);
+    SYSTEMTIME time;
+    GetLocalTime(&time);
     char line[2200];
-    int n = snprintf(line, sizeof(line), "%02u:%02u:%02u.%03u [%s] %s\n", t.wHour, t.wMinute, t.wSecond,
-                     t.wMilliseconds, tag, message);
-    if (n < 0) {
+    int length = snprintf(line, sizeof(line), "%02u:%02u:%02u.%03u [%s] %s\n", time.wHour, time.wMinute, time.wSecond,
+                          time.wMilliseconds, tag, message);
+
+    // Formatting the line failed.
+    if (length < 0) {
         return;
     }
-    n = n < int(sizeof(line)) ? n : int(sizeof(line)) - 1;
+
+    length = length < int(sizeof(line)) ? length : int(sizeof(line)) - 1;
 
     std::lock_guard lock(g_mutex);
+
+    // Write to the file when it could be opened.
     if (g_file) {
-        fwrite(line, 1, size_t(n), g_file);
+        fwrite(line, 1, size_t(length), g_file);
         fflush(g_file);
     }
+
+    // Echo to the console window when there is one.
     if (g_console) {
         DWORD written;
-        WriteConsoleA(g_console, line, DWORD(n), &written, nullptr);
+        WriteConsoleA(g_console, line, DWORD(length), &written, nullptr);
     }
+
     OutputDebugStringA(line);
 }
 
