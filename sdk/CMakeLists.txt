@@ -35,6 +35,7 @@ target_compile_options(t3sdk_headers INTERFACE /W4)
 
 add_subdirectory(loader)
 add_subdirectory(mods/hello)
+add_subdirectory(mods/widescreen-fov)
 
 configure_file(T3SDK.ini ${T3SDK_BIN_DIR}/T3SDK.ini COPYONLY)
 # The public headers go into bin/include/t3sdk/ too: bin/ is what the release

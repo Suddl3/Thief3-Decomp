@@ -395,10 +395,32 @@ suffixes: `__p` (PC), `__x` (Xbox), `__t` (Thief), for example
 |---|---|---|
 | `Config::Instance()` (returns the singleton) | `0x10911950` | static |
 | the singleton | `0x10F2C3E4` | static |
-| `Config::Find` (core lookup) | `0x109103D0` | static |
+| `bool Config::Find(const cString& section, const cString& key, const char* file, cString& value)`, `__thiscall`: the lookup every getter parses | `0x109103D0` | hooked (SDK config overrides) |
+| `cString& cString::operator=(const char*)` (frees the old text, copies with the game's allocator; `""` leaves it empty) | `0x1090A590` | used by the SDK |
 | `bool Config::GetBool(section, key, bool*, file)` | `0x109108B0` | static |
 | `bool Config::GetFloat(section, key, float*, file)`, `__thiscall` | `0x10910B60` | verified (hooked) |
 | `bool Config::GetString(section, key, char**, file)` | `0x10910E20` | static |
+
+## Gamesys properties
+
+Gameplay values (Ion Storm's gamesys, from `T3Gamesys.t3u`) are read through
+property getters keyed by an ID whose low 16 bits index the property table at
+`DAT_10F3EDA4 + 8`; bit `0x800000` asks for the value to be cleared first.
+
+| What | Address | Status |
+|---|---|---|
+| `int Get(uint32_t id, void* out)`, `__thiscall`, `ret 8`: looks the ID up (`0x10AD3DF0`), then copies the value through the table entry's vtable `+0xB4` | `0x1098E330` | hooked by the `widescreen-fov` mod |
+| property write path | `0x10AD9C90` | static |
+
+FOV properties (float degrees, designed for 4:3), IDs with bit `0x100000`
+set: `0x100534` the player camera (85), `0x100509`, `0x10050A`, `0x10050C`,
+`0x100775`, `0x100776`, `0x100777`, `0x10084E`, `0x10084F` (the other cameras
+and zoom views; values 20 to 200). The `widescreen-fov` mod converts each
+to Hor+ on screens wider than 4:3 (`tan(h'/2) = tan(h/2) * aspect / (4/3)`,
+which keeps the 4:3 vertical view; values of 180 or more, not angles, stay)
+and moves the player's by its `PlayerFOV` minus 85. Not yet confirmed in the
+game: that the IDs are FOVs in this build, and which of them are horizontal
+angles. The mod's `LogReads=1` logs each ID's first read.
 
 ## Options (`options.ini`)
 
