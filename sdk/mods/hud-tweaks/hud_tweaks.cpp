@@ -8,6 +8,8 @@
 // - HealthAlwaysShown: the health bar stays on screen. It slides to its
 //   ClearPos_X/ClearPos_Y (below the screen) when nothing changes; the mod
 //   answers those with its Pos_X/Pos_Y, read from the same file.
+// - HideLockpickHud: the lockpicking HUD (the picks' positions) is moved
+//   below the screen ([LockPickHUDWindow] Pos_Y, placed from the bottom).
 // - WorldBehindBooks: books and scrolls show over the paused game instead of
 //   a black screen ([ReadBookWindow] BlackScreen FALSE, as maps have it).
 //
@@ -16,6 +18,7 @@
 //   SteadyJunkItem=1
 //   HideEmptyHands=0
 //   HealthAlwaysShown=0
+//   HideLockpickHud=0
 //   WorldBehindBooks=0
 #include <t3sdk/t3sdk.h>
 
@@ -90,6 +93,7 @@ T3SDK_EXPORT int T3SDK_CALL T3Mod_Init(const T3SdkApi* api) {
     bool hideEmptyHands = GetPrivateProfileIntW(L"HUD", L"HideEmptyHands", 0, ini.c_str()) != 0;
     g_healthAlwaysShown = GetPrivateProfileIntW(L"HUD", L"HealthAlwaysShown", 0, ini.c_str()) != 0;
     bool worldBehindBooks = GetPrivateProfileIntW(L"HUD", L"WorldBehindBooks", 0, ini.c_str()) != 0;
+    bool hideLockpickHud = GetPrivateProfileIntW(L"HUD", L"HideLockpickHud", 0, ini.c_str()) != 0;
 
     if (steadyJunk) {
         api->SetConfigValue(nullptr, "JunkItemWindow", "FlashOffTime", "0");
@@ -98,6 +102,9 @@ T3SDK_EXPORT int T3SDK_CALL T3Mod_Init(const T3SdkApi* api) {
         // A space, not "": an empty value reads as missing, and the game would use its default text.
         api->SetConfigValue(nullptr, "ItemCycleWindow", "DeEquipText", " ");
         api->SetConfigValue(nullptr, "WeaponCycleWindow", "DeEquipText", " ");
+    }
+    if (hideLockpickHud) {
+        api->SetConfigValue(nullptr, "LockPickHUDWindow", "Pos_Y", "4000");
     }
     if (worldBehindBooks) {
         api->SetConfigValue(nullptr, "ReadBookWindow", "BlackScreen", "FALSE");
@@ -108,8 +115,8 @@ T3SDK_EXPORT int T3SDK_CALL T3Mod_Init(const T3SdkApi* api) {
         g_healthPosY = ReadIni(ui, L"HealthMeter", L"Pos_Y");
         api->AddConfigCallback(OnConfig, nullptr);
     }
-    api->Log("steady junk item %s, empty-hand texts %s, health always shown %s, world behind books %s",
+    api->Log("steady junk item %s, empty-hand texts %s, health always shown %s, lockpick HUD %s, world behind books %s",
              steadyJunk ? "on" : "off", hideEmptyHands ? "hidden" : "shown", g_healthAlwaysShown ? "on" : "off",
-             worldBehindBooks ? "on" : "off");
+             hideLockpickHud ? "hidden" : "shown", worldBehindBooks ? "on" : "off");
     return 0;
 }
