@@ -5,9 +5,11 @@
 // entry-point trampoline on the game's main thread.
 #include "sdk.hpp"
 
+#include "config.hpp"
 #include "crash.hpp"
 #include "display.hpp"
 #include "engine.hpp"
+#include "files.hpp"
 #include "fixes.hpp"
 #include "iat.hpp"
 #include "log.hpp"
@@ -276,6 +278,8 @@ BOOL WINAPI TerminateProcessDetour(HANDLE process, UINT code) {
 void DropCallbacksOf(HMODULE module) {
     std::erase_if(g_frameCallbacks, [module](const FrameCallback& cb) { return cb.owner == module; });
     std::erase_if(g_logCallbacks, [module](const LogCallback& cb) { return cb.owner == module; });
+    config::DropOwner(module);
+    files::DropOwner(module);
 }
 
 // ---- mod API ---------------------------------------------------------------
@@ -332,6 +336,25 @@ size_t T3SDK_CALL ApiNameToString(uint32_t name, char* buf, size_t size) {
     return CopyOut(engine::NameToString(name), buf, size);
 }
 
+int T3SDK_CALL ApiSetConfigValue(const char* file, const char* section, const char* key, const char* value) {
+    return config::SetValue(file, section, key, value, mods::ModuleAt(_ReturnAddress()));
+}
+int T3SDK_CALL ApiAddConfigCallback(T3ConfigCallback callback, void* user) {
+    return config::AddCallback(callback, user, mods::ModuleAt(_ReturnAddress()));
+}
+
+int T3SDK_CALL ApiAddFileRoot(const char* dir) {
+    if (!dir) {
+        return -1;
+    }
+    HMODULE owner = mods::ModuleAt(_ReturnAddress());
+    fs::path path(std::u8string(reinterpret_cast<const char8_t*>(dir)));
+    if (path.is_relative()) {
+        path = (owner ? ModulePath(owner).parent_path() : g_dir) / path;
+    }
+    return files::AddRoot(path, owner);
+}
+
 const T3SdkApi g_api = {
     T3SDK_API_VERSION,
     sizeof(T3SdkApi),
@@ -352,6 +375,9 @@ const T3SdkApi g_api = {
     ApiObjectName,
     ApiObjectPathName,
     ApiNameToString,
+    ApiSetConfigValue,
+    ApiAddConfigCallback,
+    ApiAddFileRoot,
 };
 
 // ---- start-up ----------------------------------------------------------------
@@ -389,9 +415,11 @@ void Start() {
         PatchImport(exe, "KERNEL32.dll", "TerminateProcess", reinterpret_cast<void*>(&TerminateProcessDetour)));
     engine::SetLogSink(&OnEngineLog);
     bool engineLog = engine::HookEngineLog();
-    T3_LOG("hooks: frame %s, exit %s, engine log %s, menu version label %s, menu input trace %s",
+    bool configHook = config::Install();
+    files::Install(g_dir.parent_path());
+    T3_LOG("hooks: frame %s, exit %s, engine log %s, config %s, menu version label %s, menu input trace %s",
            g_peekMessageA ? "ok" : "MISSING", g_exitProcess && g_terminateProcess ? "ok" : "MISSING",
-           engineLog ? "ok" : "MISSING", menuVersion, menuInput);
+           engineLog ? "ok" : "MISSING", configHook ? "ok" : "MISSING", menuVersion, menuInput);
 
     mods::LoadAll(g_dir / "mods", &g_api, &DropCallbacksOf);
     T3_LOG("started; waiting for the engine");

@@ -44,7 +44,7 @@
 #define T3SDK_EXPORT T3SDK_EXTERN_C __declspec(dllexport) /* use on a mod's T3Mod_Init/T3Mod_Shutdown */
 #define T3SDK_CALL __cdecl /* calling convention for every function in this header */
 
-#define T3SDK_API_VERSION 1 /* current version; see T3SdkApi::version/size below */
+#define T3SDK_API_VERSION 2 /* current version; see T3SdkApi::version/size below */
 
 /* Opaque handle to an engine UObject (see unreal.hpp for the real layout, C++
  * only): mods just carry pointers to it back into the calls below. */
@@ -60,6 +60,11 @@ typedef struct T3Object T3Object;
 typedef void(T3SDK_CALL* T3FrameCallback)(void* user);
 /* `category` is the engine's log category, e.g. "Log", "Init", "Warning". */
 typedef void(T3SDK_CALL* T3LogCallback)(void* user, const char* text, const char* category);
+/* One INI lookup by the game: `file` is the INI it names (NULL for its
+ * default), `value` the text found so far (NULL if the key is missing). Return
+ * the text to answer with (copied right away), or NULL to leave it. */
+typedef const char*(T3SDK_CALL* T3ConfigCallback)(void* user, const char* file, const char* section, const char* key,
+                                                  const char* value);
 
 typedef struct T3SdkApi {
     uint32_t version; /* T3SDK_API_VERSION implemented by the SDK */
@@ -104,6 +109,26 @@ typedef struct T3SdkApi {
     /* Dotted Outer chain, e.g. "Engine.Actor"; "" for a NULL object. */
     size_t(T3SDK_CALL* ObjectPathName)(T3Object* object, char* buf, size_t size);
     size_t(T3SDK_CALL* NameToString)(uint32_t name, char* buf, size_t size); /* "<invalid name>" for an unknown value */
+
+    /* ---- version 2 ---- */
+
+    /* Game settings: the INI values the game reads through its Config layer
+     * (Default.ini, T3UI.ini, ...; every bool, int, float and string). Usable
+     * from T3Mod_Init on, so start-up reads see them; lookups can come from any
+     * thread. SetConfigValue answers `section`/`key` with `value` (NULL removes
+     * this mod's override; `file` NULL matches any INI). Callbacks see every
+     * lookup, after the set values, in registration order. When mods disagree,
+     * the one loaded later wins. Each returns 0, or -1 for a NULL argument. */
+    int(T3SDK_CALL* SetConfigValue)(const char* file, const char* section, const char* key, const char* value);
+    int(T3SDK_CALL* AddConfigCallback)(T3ConfigCallback callback, void* user);
+
+    /* Loose-file overrides: `dir` (UTF-8; relative to the calling mod's own
+     * folder) mirrors the game folder, and a file the game reads from
+     * <game>/<path> comes from <dir>/<path> when that exists. The folder added
+     * last wins. Only single files: directory listings are not merged, and
+     * files packed in .ibt bundles are not reached. 0, or -1 if `dir` is not
+     * a folder. */
+    int(T3SDK_CALL* AddFileRoot)(const char* dir);
 } T3SdkApi;
 
 typedef int(T3SDK_CALL* T3ModInitFn)(const T3SdkApi* api);

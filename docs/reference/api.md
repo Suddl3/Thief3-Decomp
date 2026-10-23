@@ -7,30 +7,30 @@ outline: [2, 3]
 
 # Mod API reference
 
-The C API that T3SDK hands to every mod, as declared in [t3sdk.h](../../sdk/include/t3sdk/t3sdk.h). This page is generated from that header's comments (API version 1). The optional C++ header [unreal.hpp](../../sdk/include/t3sdk/unreal.hpp) has the engine's memory layouts and fixed addresses for advanced use; they are specific to the supported game build.
+The C API that T3SDK hands to every mod, as declared in [t3sdk.h](../../sdk/include/t3sdk/t3sdk.h). This page is generated from that header's comments (API version 2). The optional C++ header [unreal.hpp](../../sdk/include/t3sdk/unreal.hpp) has the engine's memory layouts and fixed addresses for advanced use; they are specific to the supported game build.
 
 How a mod uses these calls over the game's lifetime is in [The mod lifecycle](../modding/lifecycle.md).
 
 ## Overview
 
-A mod is a 32-bit DLL in the game's System/mods/ folder that exports
+``A`` ``mod`` ``is`` ``a`` ``32``-``bit`` ``DLL`` ``in`` ``the`` ``game``'``s`` ``System``/``mods``/ ``folder`` ``that`` ``exports``
 
 ```c
 T3SDK_EXPORT int  T3SDK_CALL T3Mod_Init(const T3SdkApi* api);  // 0 = loaded
 T3SDK_EXPORT void T3SDK_CALL T3Mod_Shutdown(void);             // optional
 ```
 
-A packaged mod (a .t3mod the launcher installed; docs/mods.md) has a folder of its own there, named after its id, and System/mods/load-order.txt lists its DLL as `"id/file.dll"`. The SDK loads the listed DLLs first, in that order, each with its own folder on the DLL search path, then the DLLs put straight into System/mods/, in name order. In `T3SDK.log` a mod goes by its folder name (a loose DLL by its file name).
+``A`` ``packaged`` ``mod`` (``a`` .``t3mod`` ``the`` ``launcher`` ``installed``; ``docs``/``mods``.``md``) ``has`` ``a`` ``folder`` ``of`` ``its`` ``own`` ``there``, ``named`` ``after`` ``its`` ``id``, ``and`` ``System``/``mods``/``load``-``order``.``txt`` ``lists`` ``its`` ``DLL`` ``as`` `"id/file.dll"`. ``The`` ``SDK`` ``loads`` ``the`` ``listed`` ``DLLs`` ``first``, ``in`` ``that`` ``order``, ``each`` ``with`` ``its`` ``own`` ``folder`` ``on`` ``the`` ``DLL`` ``search`` ``path``, ``then`` ``the`` ``DLLs`` ``put`` ``straight`` ``into`` ``System``/``mods``/, ``in`` ``name`` ``order``. ``In`` `T3SDK.log``` ``a`` ``mod`` ``goes`` ``by`` ``its`` ``folder`` ``name`` (``a`` ``loose`` ``DLL`` ``by`` ``its`` ``file`` ``name``).
 
-`T3Mod_Init` runs before the game's own startup code, so the engine does not exist yet: register callbacks there and wait for `api->EngineReady()`.
+`T3Mod_Init``` ``runs`` ``before`` ``the`` ``game``'``s`` ``own`` ``startup`` ``code``, ``so`` ``the`` ``engine`` ``does`` ``not`` ``exist`` ``yet``: ``register`` ``callbacks`` ``there`` ``and`` ``wait`` ``for`` `api->EngineReady()`.
 
-The API is plain C so a mod can use any compiler. The table only grows: a member added after version 1 is usable when `api->size` covers it.
+``The`` ``API`` ``is`` ``plain`` ``C`` ``so`` ``a`` ``mod`` ``can`` ``use`` ``any`` ``compiler``. ``The`` ``table`` ``only`` ``grows``: ``a`` ``member`` ``added`` ``after`` ``version`` ``1`` ``is`` ``usable`` ``when`` `api->size``` ``covers`` ``it``.
 
-**Threading:** frame callbacks run on the game's main thread, once per pass of its message loop, starting once `EngineReady()` first returns non-zero and stopping once the game begins exiting. Engine log callbacks run on whichever thread logged, from start-up onward (so possibly before `EngineReady()`); protect any state shared with a frame callback.
+**Threading:** ``frame`` ``callbacks`` ``run`` ``on`` ``the`` ``game``'``s`` ``main`` ``thread``, ``once`` ``per`` ``pass`` ``of`` ``its`` ``message`` ``loop``, ``starting`` ``once`` `EngineReady()` ``first`` ``returns`` ``non``-``zero`` ``and`` ``stopping`` ``once`` ``the`` ``game`` ``begins`` ``exiting``. ``Engine`` ``log`` ``callbacks`` ``run`` ``on`` ``whichever`` ``thread`` ``logged``, ``from`` ``start``-``up`` ``onward`` (``so`` ``possibly`` ``before`` `EngineReady()`); ``protect`` ``any`` ``state`` ``shared`` ``with`` ``a`` ``frame`` ``callback``.
 
-**Objects:** `T3Object*` pointers, and the object functions below, are only good while `EngineReady()` holds; the engine can free objects once the game starts exiting, when `EngineReady()` goes back to 0.
+**Objects:** `T3Object*` ``pointers``, ``and`` ``the`` ``object`` ``functions`` ``below``, ``are`` ``only`` ``good`` ``while`` `EngineReady()` ``holds``; ``the`` ``engine`` ``can`` ``free`` ``objects`` ``once`` ``the`` ``game`` ``starts`` ``exiting``, ``when`` `EngineReady()` ``goes`` ``back`` ``to`` ``0``.
 
-**Memory:** strings come back through caller buffers; nothing allocated on one side of the API is freed on the other.
+**Memory:** ``strings`` ``come`` ``back`` ``through`` ``caller`` ``buffers``; ``nothing`` ``allocated`` ``on`` ``one`` ``side`` ``of`` ``the`` ``API`` ``is`` ``freed`` ``on`` ``the`` ``other``.
 
 ## T3SdkApi
 
@@ -43,8 +43,8 @@ uint32_t version;
 uint32_t size;
 ```
 
-- **`version`**: `T3SDK_API_VERSION` implemented by the SDK.
-- **`size`**: `sizeof(T3SdkApi)` in the SDK.
+- **`version`**: `T3SDK_API_VERSION``` ``implemented`` ``by`` ``the`` ``SDK``.
+- **`size`**: `sizeof(T3SdkApi)` ``in`` ``the`` ``SDK``.
 
 ### Log
 
@@ -52,11 +52,11 @@ uint32_t size;
 void Log(const char* fmt, ...);
 ```
 
-- **`Log`**: printf-style line in `T3SDK.log`, tagged with the calling mod's name.
+- **`Log`**: ``printf``-``style`` ``line`` ``in`` `T3SDK.log```, ``tagged`` ``with`` ``the`` ``calling`` ``mod``'``s`` ``name``.
 
 ### Callbacks
 
-Each returns 0 on success, -1 if `callback` is `NULL`. See Threading, above, for when each one runs.
+``Each`` ``returns`` ``0`` ``on`` ``success``, -``1`` ``if`` `callback` ``is`` `NULL```. ``See`` ``Threading``, ``above``, ``for`` ``when`` ``each`` ``one`` ``runs``.
 
 ```c
 int AddFrameCallback(T3FrameCallback callback, void* user);
@@ -65,7 +65,7 @@ int AddEngineLogCallback(T3LogCallback callback, void* user);
 
 ### Inline function hooks
 
-Inline function hooks (MinHook: one table shared by every mod, so two mods cannot hook the same `target`). `target` is a code address in T3Main.exe; `detour` replaces it; `original` (may be `NULL`) receives a trampoline that calls the unhooked function. `CreateHook` leaves the hook disabled; call `EnableHook` to activate it. Each returns 0 (`MH_OK`) on success, another `MH_STATUS` otherwise (`MinHook.h` has the values, e.g. `MH_ERROR_ALREADY_CREATED` for a `target` another mod already hooked).
+``Inline`` ``function`` ``hooks`` (``MinHook``: ``one`` ``table`` ``shared`` ``by`` ``every`` ``mod``, ``so`` ``two`` ``mods`` ``cannot`` ``hook`` ``the`` ``same`` `target`). `target` ``is`` ``a`` ``code`` ``address`` ``in`` ``T3Main``.``exe``; `detour` ``replaces`` ``it``; `original` (``may`` ``be`` `NULL```) ``receives`` ``a`` ``trampoline`` ``that`` ``calls`` ``the`` ``unhooked`` ``function``. `CreateHook``` ``leaves`` ``the`` ``hook`` ``disabled``; ``call`` `EnableHook``` ``to`` ``activate`` ``it``. ``Each`` ``returns`` ``0`` (`MH_OK```) ``on`` ``success``, ``another`` `MH_STATUS``` ``otherwise`` (`MinHook.h``` ``has`` ``the`` ``values``, ``e``.``g``. `MH_ERROR_ALREADY_CREATED``` ``for`` ``a`` `target` ``another`` ``mod`` ``already`` ``hooked``).
 
 ```c
 int CreateHook(void* target, void* detour, void** original);
@@ -76,7 +76,7 @@ int RemoveHook(void* target);
 
 ### Engine objects
 
-Usable once `EngineReady()` returns non-zero (see Objects, above); `ObjectCount`/`ObjectAt`/`FindObject` return 0/`NULL` before that.
+``Usable`` ``once`` `EngineReady()` ``returns`` ``non``-``zero`` (``see`` ``Objects``, ``above``); `ObjectCount```/`ObjectAt```/`FindObject``` ``return`` ``0``/`NULL``` ``before`` ``that``.
 
 ```c
 int EngineReady(void);
@@ -91,15 +91,37 @@ size_t ObjectPathName(T3Object* object, char* buf, size_t size);
 size_t NameToString(uint32_t name, char* buf, size_t size);
 ```
 
-- **`ObjectCount`**: size of the object table, including free slots.
-- **`ObjectAt`**: `NULL` for a free slot or an out-of-range index.
-- **`FindObject`**: Linear search by full path, e.g. `FindObject("Class", "Engine.Actor")`. `className` may be `NULL` to match any class. `NULL` if not found.
-- **`ObjectClass`**: `NULL` for a `NULL` object.
-- **`ObjectOuter`**: the object's Outer, or `NULL`.
-- **`IsA`**: 1 if object's class is `cls` or derives from it.
-- **`ObjectName`**: Text into `buf`, NUL-terminated even when truncated; returns the full untruncated length, like snprintf (`buf` may be `NULL` and size 0 to size a buffer first). `"None"` for a `NULL` object.
-- **`ObjectPathName`**: Dotted Outer chain, e.g. `"Engine.Actor"`; `""` for a `NULL` object.
-- **`NameToString`**: `"<invalid name>"` for an unknown value.
+- **`ObjectCount`**: ``size`` ``of`` ``the`` ``object`` ``table``, ``including`` ``free`` ``slots``.
+- **`ObjectAt`**: `NULL``` ``for`` ``a`` ``free`` ``slot`` ``or`` ``an`` ``out``-``of``-``range`` ``index``.
+- **`FindObject`**: ``Linear`` ``search`` ``by`` ``full`` ``path``, ``e``.``g``. `FindObject("Class", "Engine.Actor")`. `className``` ``may`` ``be`` `NULL``` ``to`` ``match`` ``any`` ``class``. `NULL``` ``if`` ``not`` ``found``.
+- **`ObjectClass`**: `NULL``` ``for`` ``a`` `NULL``` ``object``.
+- **`ObjectOuter`**: ``the`` ``object``'``s`` ``Outer``, ``or`` `NULL```.
+- **`IsA`**: ``1`` ``if`` ``object``'``s`` ``class`` ``is`` `cls``` ``or`` ``derives`` ``from`` ``it``.
+- **`ObjectName`**: ``Text`` ``into`` `buf```, ``NUL``-``terminated`` ``even`` ``when`` ``truncated``; ``returns`` ``the`` ``full`` ``untruncated`` ``length``, ``like`` ``snprintf`` (`buf``` ``may`` ``be`` `NULL``` ``and`` ``size`` ``0`` ``to`` ``size`` ``a`` ``buffer`` ``first``). `"None"` ``for`` ``a`` `NULL``` ``object``.
+- **`ObjectPathName`**: ``Dotted`` ``Outer`` ``chain``, ``e``.``g``. `"Engine.Actor"`; `""` ``for`` ``a`` `NULL``` ``object``.
+- **`NameToString`**: `"<invalid name>"` ``for`` ``an`` ``unknown`` ``value``.
+
+### 
+
+```c
+```
+
+### Game settings
+
+``The`` ``INI`` ``values`` ``the`` ``game`` ``reads`` ``through`` ``its`` ``Config`` ``layer`` (`Default.ini```, `T3UI.ini```, ...; ``every`` ``bool``, ``int``, ``float`` ``and`` ``string``). ``Usable`` ``from`` `T3Mod_Init``` ``on``, ``so`` ``start``-``up`` ``reads`` ``see`` ``them``; ``lookups`` ``can`` ``come`` ``from`` ``any`` ``thread``. `SetConfigValue``` ``answers`` `section`/`key` ``with`` `value` (`NULL``` ``removes`` ``this`` ``mod``'``s`` ``override``; `file` `NULL``` ``matches`` ``any`` ``INI``). ``Callbacks`` ``see`` ``every`` ``lookup``, ``after`` ``the`` ``set`` ``values``, ``in`` ``registration`` ``order``. ``When`` ``mods`` ``disagree``, ``the`` ``one`` ``loaded`` ``later`` ``wins``. ``Each`` ``returns`` ``0``, ``or`` -``1`` ``for`` ``a`` `NULL``` ``argument``.
+
+```c
+int SetConfigValue(const char* file, const char* section, const char* key, const char* value);
+int AddConfigCallback(T3ConfigCallback callback, void* user);
+```
+
+### AddFileRoot
+
+```c
+int AddFileRoot(const char* dir);
+```
+
+- **`AddFileRoot`**: ``Loose``-``file`` ``overrides``: `dir` (``UTF``-``8``; ``relative`` ``to`` ``the`` ``calling`` ``mod``'``s`` ``own`` ``folder``) ``mirrors`` ``the`` ``game`` ``folder``, ``and`` ``a`` ``file`` ``the`` ``game`` ``reads`` ``from`` &lt;``game``>/&lt;``path``> ``comes`` ``from`` &lt;`dir```>/&lt;``path``> ``when`` ``that`` ``exists``. ``The`` ``folder`` ``added`` ``last`` ``wins``. ``Only`` ``single`` ``files``: ``directory`` ``listings`` ``are`` ``not`` ``merged``, ``and`` ``files`` ``packed`` ``in`` .``ibt`` ``bundles`` ``are`` ``not`` ``reached``. ``0``, ``or`` -``1`` ``if`` `dir` ``is`` ``not`` ``a`` ``folder``.
 
 ## Types
 
@@ -110,7 +132,7 @@ typedef t3::UObject T3Object; /* C++ */
 typedef struct T3Object T3Object; /* C */
 ```
 
-Opaque handle to an engine UObject (see `unreal.hpp` for the real layout, C++ only): mods just carry pointers to it back into the calls below.
+``Opaque`` ``handle`` ``to`` ``an`` ``engine`` ``UObject`` (``see`` `unreal.hpp``` ``for`` ``the`` ``real`` ``layout``, ``C``++ ``only``): ``mods`` ``just`` ``carry`` ``pointers`` ``to`` ``it`` ``back`` ``into`` ``the`` ``calls`` ``below``.
 
 ### T3FrameCallback
 
@@ -124,7 +146,15 @@ typedef void(T3SDK_CALL* T3FrameCallback)(void* user);
 typedef void(T3SDK_CALL* T3LogCallback)(void* user, const char* text, const char* category);
 ```
 
-`category` is the engine's log category, e.g. `"Log"`, `"Init"`, `"Warning"`.
+`category` ``is`` ``the`` ``engine``'``s`` ``log`` ``category``, ``e``.``g``. `"Log"`, `"Init"`, `"Warning"`.
+
+### 
+
+```c
+typedef const char*(T3SDK_CALL* T3ConfigCallback)(void* user, const char* file, const char* section, const char* key,
+```
+
+``One`` ``INI`` ``lookup`` ``by`` ``the`` ``game``: `file` ``is`` ``the`` ``INI`` ``it`` ``names`` (`NULL``` ``for`` ``its`` ``default``), `value` ``the`` ``text`` ``found`` ``so`` ``far`` (`NULL``` ``if`` ``the`` ``key`` ``is`` ``missing``). ``Return`` ``the`` ``text`` ``to`` ``answer`` ``with`` (``copied`` ``right`` ``away``), ``or`` `NULL``` ``to`` ``leave`` ``it``.
 
 ### T3ModInitFn
 
@@ -142,7 +172,7 @@ typedef void(T3SDK_CALL* T3ModShutdownFn)(void);
 
 | Macro | Value | Meaning |
 |---|---|---|
-| `T3SDK_EXTERN_C` | `extern "C"` (C++), empty (C) | so a C++ mod's exports keep their plain-C names |
-| `T3SDK_EXPORT` | `T3SDK_EXTERN_C __declspec(dllexport)` | use on a mod's `T3Mod_Init`/`T3Mod_Shutdown` |
-| `T3SDK_CALL` | `__cdecl` | calling convention for every function in this header |
-| `T3SDK_API_VERSION` | `1` | current version; see `T3SdkApi::version`/size below |
+| `T3SDK_EXTERN_C` | `extern "C"` (C++), empty (C) | ``so`` ``a`` ``C``++ ``mod``'``s`` ``exports`` ``keep`` ``their`` ``plain``-``C`` ``names`` |
+| `T3SDK_EXPORT` | `T3SDK_EXTERN_C __declspec(dllexport)` | ``use`` ``on`` ``a`` ``mod``'``s`` `T3Mod_Init```/`T3Mod_Shutdown``` |
+| `T3SDK_CALL` | `__cdecl` | ``calling`` ``convention`` ``for`` ``every`` ``function`` ``in`` ``this`` ``header`` |
+| `T3SDK_API_VERSION` | `2` | ``current`` ``version``; ``see`` `T3SdkApi::version```/``size`` ``below`` |

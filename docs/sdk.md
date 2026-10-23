@@ -137,6 +137,36 @@ T3SDK_EXPORT int T3SDK_CALL T3Mod_Init(const T3SdkApi* sdk) {
 
 The engine object functions are valid only after `EngineReady()` succeeds.
 
+### Game settings and file overrides (API version 2)
+
+Check `api->version >= 2` (or `api->size`) before using these.
+
+- **`SetConfigValue(file, section, key, value)`** answers one of the game's
+  INI settings (`Default.ini`, `T3UI.ini`, ...) with `value`. Every bool,
+  int, float and string the game reads through its Config layer goes through
+  `Config::Find`, which the SDK hooks, so this works for any of them. `file`
+  NULL matches any INI; `value` NULL removes the mod's override. Call it from
+  `T3Mod_Init` so the game's start-up reads see it.
+- **`AddConfigCallback(callback, user)`** sees every lookup with the value
+  found so far (NULL for a missing key) and may return other text. Set
+  values apply first, then callbacks in registration order; between mods,
+  the one loaded later wins. Lookups can come from any thread.
+- **`AddFileRoot(dir)`** adds a folder that mirrors the game folder (a
+  relative `dir` is relative to the mod's own folder). When the game opens a
+  file under `<game>/` for reading, or checks that it exists, and
+  `<dir>/<same path>` exists, it gets that file instead; the folder added
+  last wins. The install is never changed. Limits: directory listings are
+  not merged (a file the game only finds by listing a folder must exist in
+  the game folder too), and resources packed in `.ibt` bundles are not
+  reached, only loose files.
+
+### Mods in this repository
+
+| Mod | What it does | Settings |
+|---|---|---|
+| [`hello`](../sdk/mods/hello/hello.cpp) | API walkthrough: logs objects and log categories | none |
+| [`widescreen-fov`](../sdk/mods/widescreen-fov/fov.cpp) | Hor+: widens the cameras' FOV on screens wider than 4:3, and sets the player's FOV ([engine.md](engine.md#gamesys-properties)) | `widescreen-fov.ini`: `HorPlus`, `PlayerFOV`, `LogReads` |
+
 Frame callbacks run on the game's main thread once per message-loop pass.
 Engine log callbacks run on whichever thread writes the log, so protect shared
 state if those callbacks communicate with frame callbacks. The optional
