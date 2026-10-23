@@ -43,6 +43,9 @@ pub struct SdkStatus {
     pub buildable: bool,
     /// System/T3SDK.ini exists.
     pub settings: bool,
+    /// Installed by the tools, and the built SDK differs from it (a newer loader or fix mod, or a file
+    /// the build no longer has): installing again updates it.
+    pub outdated: bool,
 }
 
 #[derive(Debug, Default, Serialize)]
@@ -77,11 +80,67 @@ pub(crate) fn sdk_status(cfg: &Config) -> SdkStatus {
         status.built = root.join("build").join("sdk").join("bin").join("dinput8.dll").is_file();
         status.buildable = root.join("sdk").join("CMakeLists.txt").is_file();
     }
+    let mut manifest_text = None;
     if let Some(build) = cfg.build_root() {
         let manifest = build.join("sdk").join("deployed.json");
-        status.managed = status.installed && std::fs::read_to_string(manifest).is_ok_and(|t| t.contains("dinput8.dll"));
+        manifest_text = std::fs::read_to_string(manifest).ok();
+        status.managed = status.installed && manifest_text.as_deref().is_some_and(|t| t.contains("dinput8.dll"));
+    }
+    if status.managed && status.built {
+        if let (Some(game), Some(root)) = (&cfg.game_dir, &cfg.sdk_root) {
+            let bin = root.join("build").join("sdk").join("bin");
+            let installed = manifest_text
+                .as_deref()
+                .and_then(|t| serde_json::from_str::<DeployManifest>(t).ok())
+                .map(|m| m.files)
+                .unwrap_or_default();
+            status.outdated = sdk_outdated(&bin, &game.join("System"), &installed);
+        }
     }
     status
+}
+
+/// build/sdk/deployed.json, which tools/sdk.py deploy writes.
+#[derive(Deserialize)]
+struct DeployManifest {
+    files: Vec<String>,
+}
+
+/// Whether the built SDK in `bin` differs from what is installed in `system`: a built DLL or PDB
+/// (the loader, or a fix mod in mods/) is missing there or has another size or time (deploy copies
+/// the time along), or a file the last deploy installed is no longer built. A fix mod the player
+/// switched off sits in mods/disabled/ and counts as installed. Settings files are the player's
+/// and never count.
+fn sdk_outdated(bin: &Path, system: &Path, installed: &[String]) -> bool {
+    let code = |name: &str| name.ends_with(".dll") || name.ends_with(".pdb");
+    let mut built = Vec::new();
+    for dir in ["", "mods"] {
+        let Ok(entries) = std::fs::read_dir(bin.join(dir)) else { continue };
+        for entry in entries.flatten() {
+            let name = entry.file_name().to_string_lossy().to_lowercase();
+            if code(&name) && entry.path().is_file() {
+                built.push(if dir.is_empty() { name } else { format!("mods/{name}") });
+            }
+        }
+    }
+
+    let same = |a: &Path, b: &Path| match (std::fs::metadata(a), std::fs::metadata(b)) {
+        (Ok(x), Ok(y)) => x.len() == y.len() && x.modified().ok() == y.modified().ok(),
+        _ => false,
+    };
+    for rel in &built {
+        let source = bin.join(rel);
+        let target = system.join(rel);
+        let switched_off = rel.strip_prefix("mods/").map(|name| system.join("mods").join("disabled").join(name));
+        if !same(&source, &target) && !switched_off.is_some_and(|off| same(&source, &off)) {
+            return true;
+        }
+    }
+
+    installed.iter().any(|rel| {
+        let rel = rel.to_lowercase().replace("mods/disabled/", "mods/");
+        code(&rel) && !built.contains(&rel)
+    })
 }
 
 pub(crate) fn game_running() -> bool {
@@ -508,5 +567,46 @@ mod tests {
         // Tools without formats.json: nothing is outdated.
         fs::remove_file(root.join("tools").join("assets").join("formats.json")).unwrap();
         assert!(outdated(&cfg).iter().all(|(_, o)| !o));
+    }
+
+    /// Writes `bytes` to `path` with a fixed modification time, as deploy's copy keeps it.
+    fn put(path: &Path, bytes: &[u8], seconds: u64) {
+        fs::create_dir_all(path.parent().unwrap()).unwrap();
+        fs::write(path, bytes).unwrap();
+        let file = fs::File::options().write(true).open(path).unwrap();
+        file.set_modified(UNIX_EPOCH + Duration::from_secs(seconds)).unwrap();
+    }
+
+    #[test]
+    fn sdk_is_outdated_when_the_build_differs_from_the_install() {
+        let tmp = tempfile::tempdir().unwrap();
+        let (bin, system) = (tmp.path().join("bin"), tmp.path().join("System"));
+        put(&bin.join("dinput8.dll"), b"loader", 100);
+        put(&bin.join("mods").join("fix.dll"), b"fix", 100);
+        put(&bin.join("mods").join("fix.ini"), b"[Fix]", 100);
+        put(&system.join("dinput8.dll"), b"loader", 100);
+        put(&system.join("mods").join("fix.dll"), b"fix", 100);
+        let installed: Vec<String> = ["dinput8.dll", "mods/fix.dll", "mods/fix.ini"].map(String::from).to_vec();
+
+        // The same files, and a settings file the player changed: current.
+        put(&system.join("mods").join("fix.ini"), b"[Fix] mine", 200);
+        assert!(!sdk_outdated(&bin, &system, &installed));
+
+        // A fix mod the player switched off is still installed.
+        fs::create_dir_all(system.join("mods").join("disabled")).unwrap();
+        fs::rename(system.join("mods").join("fix.dll"), system.join("mods").join("disabled").join("fix.dll")).unwrap();
+        assert!(!sdk_outdated(&bin, &system, &installed));
+
+        // A file the last deploy installed that the build no longer has (an old example mod).
+        let mut with_old = installed.clone();
+        with_old.push("mods/hello.dll".into());
+        assert!(sdk_outdated(&bin, &system, &with_old));
+
+        // A newer loader, and a new fix mod not installed yet.
+        put(&bin.join("dinput8.dll"), b"loader 2", 300);
+        assert!(sdk_outdated(&bin, &system, &installed));
+        put(&bin.join("dinput8.dll"), b"loader", 100);
+        put(&bin.join("mods").join("new.dll"), b"new", 100);
+        assert!(sdk_outdated(&bin, &system, &installed));
     }
 }

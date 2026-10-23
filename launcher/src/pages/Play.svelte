@@ -17,6 +17,8 @@
   const game = $derived(o?.game ?? null);
   const busy = $derived(running() !== null);
   const developer = $derived(app.config?.developer ?? false);
+  /** The launcher cannot install or update T3SDK: its tools folder is missing or has no built SDK. */
+  const toolsMissing = $derived(!!game?.supported && !!o && !o.sdk.built);
 
   async function play() {
     launching = true;
@@ -39,6 +41,14 @@
       };
     if (o?.running) return { label: "Playing", icon: "play", hint: "Thief is running.", disabled: true };
     if (launching) return { label: "Starting…", icon: "play", hint: "Thief starts through Steam.", disabled: true };
+    if (game.supported && o?.sdk.managed && o.sdk.outdated)
+      return {
+        label: "Update T3SDK",
+        icon: "download",
+        hint: "A newer T3SDK and fix pack are ready. Your settings are kept.",
+        run: () => enqueue({ kind: "sdkDeploy" }, "Update T3SDK"),
+        disabled: busy,
+      };
     if (game.supported && !o?.sdk.installed && o?.sdk.built)
       return {
         label: "Install T3SDK",
@@ -103,6 +113,20 @@
       <p class="hint">{next.hint}</p>
     </div>
   </section>
+
+  {#if toolsMissing}
+    <div class="card notice" role="status">
+      <Icon name="alert" />
+      <p class="grow">T3SDK's tools are missing, so the launcher cannot install or update it.</p>
+      <button
+        class="btn small"
+        onclick={() => {
+          app.showTools = true;
+          app.page = "settings";
+        }}>Find them</button
+      >
+    </div>
+  {/if}
 
   <div class="blocks">
     <SavesBlock />
@@ -177,6 +201,20 @@
   .hint {
     color: var(--muted);
     font-size: 12.5px;
+  }
+
+  .notice {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    color: var(--warn);
+    border-color: #5b4526;
+    background: #1c160d;
+  }
+
+  .notice :global(svg) {
+    flex: none;
   }
 
   .blocks {

@@ -193,12 +193,12 @@ const log = [
   "[12:01:07.233] display: native resolutions on, borderless on, widescreen UI on (width 852), keeps running in the background",
   "[12:01:07.233] display: smooth frames on, no frame limit",
   "[12:01:07.260] hooks: frame ok, exit ok, engine log ok, menu version label ok, menu input trace off",
-  "[12:01:07.262] mods: loaded hello.dll",
+  "[12:01:07.262] mod widescreen-fov loaded",
   "[12:01:07.263] started; waiting for the engine",
   "[12:01:07.912] display: UI layout width 640 -> 852",
   "[12:01:08.901] object layout validated: 4488 objects, 287 classes, Outer at 0x18, SuperField at 0x2C (287/287 classes reach Object)",
   "[12:01:08.902] engine ready",
-  "[12:01:08.940] [hello] engine ready: 4488 objects",
+  "[12:01:08.940] [widescreen-fov] screen aspect 1.778 (2560x1440): FOVs widened",
   "[12:01:11.371] display: CreateDevice 2560x1440 fullscreen made borderless, VSync -> 0x00000000",
   "[12:01:11.377] display: window brought to the front",
   "[12:01:11.402] display: cursor 32x32 shown at x1.88",
@@ -368,7 +368,15 @@ const commands: Record<string, (args: Args) => unknown> = {
   }),
   overview: (): Overview => ({
     game: config.gameDir ? game() : null,
-    sdk: { installed: true, managed: true, built: true, buildable: true, settings: true },
+    // ?outdated: an older T3SDK is installed, for Play's Update button.
+    sdk: {
+      installed: true,
+      managed: true,
+      built: true,
+      buildable: true,
+      settings: true,
+      outdated: params.has("outdated"),
+    },
     modsEnabled: mods.counts().on,
     modsDisabled: mods.counts().off,
     maps: {

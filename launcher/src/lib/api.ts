@@ -77,7 +77,15 @@ export interface CheckResult {
 
 export interface Overview {
   game: GameCheck | null;
-  sdk: { installed: boolean; managed: boolean; built: boolean; buildable: boolean; settings: boolean };
+  sdk: {
+    installed: boolean;
+    managed: boolean;
+    built: boolean;
+    buildable: boolean;
+    settings: boolean;
+    /** Installed by the tools, and the built SDK (loader or fix pack) is newer: installing again updates it. */
+    outdated: boolean;
+  };
   modsEnabled: number;
   modsDisabled: number;
   maps: { total: number; exported: number; edited: number; patched: number; installed: number };

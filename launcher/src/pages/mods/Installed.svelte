@@ -9,7 +9,7 @@
   import Toggle from "$components/Toggle.svelte";
   import { api, type Issue, type ModPackage } from "$lib/api";
   import { app } from "$lib/app.svelte";
-  import { isModFix } from "$lib/fixes";
+  import { fixPack, inFixPack } from "$lib/fixes";
   import { badges, issuesFor, listText, moveBy, moveTo } from "$lib/modlist";
   import {
     fix,
@@ -26,7 +26,14 @@
   const list = $derived(mods.list);
   const order = $derived(list?.packages.map((p) => p.id) ?? []);
   const general = $derived(issuesFor(list, null));
-  const loose = $derived(list?.loose.filter((m) => !isModFix(m.name)) ?? []);
+  const loose = $derived(list?.loose.filter((m) => !inFixPack(m.name)) ?? []);
+  /** T3SDK's fix pack as it is installed, with each mod's label: its own card, above your mods. */
+  const pack = $derived(
+    fixPack.flatMap((f) => {
+      const m = list?.loose.find((l) => l.name === f.name);
+      return m ? [{ ...f, enabled: m.enabled }] : [];
+    }),
+  );
   const on = $derived((list?.packages.filter((p) => p.enabled).length ?? 0) + loose.filter((m) => m.enabled).length);
   const texturesBusy = $derived(textureJobs().length > 0);
 
@@ -67,11 +74,6 @@
 </script>
 
 {#if list}
-  <div class="row bar">
-    <span class="muted grow">{on} of {list.packages.length + loose.length} on</span>
-    <Profiles {list} />
-  </div>
-
   {#if !list.sdk.installed && list.packages.some((p) => p.code && p.enabled)}
     <div class="note warn card">
       <Icon name="alert" />Code mods need T3SDK: install it on the Play page.
@@ -119,6 +121,37 @@
   {#each general as issue, i (i)}
     <div class="note card {issue.severity}"><Icon name={icon(issue)} />{issue.message}</div>
   {/each}
+
+  <section class="card pack">
+    <div class="row pack-head">
+      <h2 class="grow">T3SDK fix pack</h2>
+      <span class="muted">Comes with T3SDK</span>
+    </div>
+    {#each pack as fix (fix.name)}
+      <div class="mod" class:off={!fix.enabled}>
+        <div class="main">
+          <Toggle
+            checked={fix.enabled}
+            label={`Switch ${fix.label} on or off`}
+            disabled={mods.busy}
+            onchange={(on) => setLooseEnabled(fix.name, on)}
+          />
+          <div class="grow body">
+            <div class="title"><h3 class="row-title">{fix.label}</h3></div>
+            <p class="muted desc">{fix.hint}</p>
+          </div>
+        </div>
+      </div>
+    {:else}
+      <p class="empty">Install T3SDK on the Play page to get the fix pack.</p>
+    {/each}
+  </section>
+
+  <div class="row bar">
+    <h2 class="grow">Your mods</h2>
+    <span class="muted">{on} of {list.packages.length + loose.length} on</span>
+    <Profiles {list} />
+  </div>
 
   <div class="list card">
     {#each list.packages as p, i (p.id)}
@@ -201,7 +234,16 @@
 
 <style>
   .bar {
+    gap: 14px;
     margin-bottom: 12px;
+  }
+
+  .pack {
+    margin-bottom: 28px;
+  }
+
+  .pack-head {
+    padding: 14px 16px 10px;
   }
 
   /* The page scrolls, not the list: a row's menu is never cut off at the list's edge. */

@@ -22,6 +22,8 @@ interface AppState {
   overview: Overview | null;
   page: Page;
   modsTab: ModsTab;
+  /** Settings opens with Advanced unfolded (Play's "tools are missing" notice sets it). */
+  showTools: boolean;
   toasts: { id: number; text: string; kind: "info" | "error" }[];
   /** Bumped when files may have changed, so pages reload their lists. */
   revision: number;
@@ -32,6 +34,7 @@ export const app = $state<AppState>({
   overview: null,
   page: "play",
   modsTab: "installed",
+  showTools: false,
   toasts: [],
   revision: 0,
 });

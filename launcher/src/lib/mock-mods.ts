@@ -259,13 +259,17 @@ export function mockMods(emit: Emit) {
     { name: "ai_senses_log", enabled: false, size: 41984, modified: now - 12 * DAY },
     { name: "blackjack-first", enabled: false, size: 12288, modified: now - DAY },
     { name: "difficulty-fixes", enabled: true, size: 14336, modified: now - DAY },
+    { name: "dotted-paths", enabled: true, size: 11264, modified: now - DAY },
+    { name: "first-person-death", enabled: true, size: 15360, modified: now - DAY },
+    { name: "player-tweaks", enabled: true, size: 14848, modified: now - DAY },
+    { name: "quicksave-cycle", enabled: true, size: 15872, modified: now - DAY },
+    { name: "zone-tweaks", enabled: true, size: 14336, modified: now - DAY },
     { name: "end-mission", enabled: true, size: 13824, modified: now - DAY },
     { name: "hud-tweaks", enabled: true, size: 16384, modified: now - DAY },
     { name: "loading-tweaks", enabled: true, size: 14336, modified: now - DAY },
     { name: "unstick", enabled: true, size: 13312, modified: now - DAY },
     { name: "widescreen-fov", enabled: true, size: 14848, modified: now - DAY },
     { name: "debug_camera", enabled: true, size: 30720, modified: now - 20 * DAY },
-    { name: "hello", enabled: true, size: 14336, modified: now - 3 * DAY },
     { name: "old_experiment", enabled: false, size: 188416, modified: now - 40 * DAY },
   ];
   let profile = "Default";
@@ -428,7 +432,10 @@ export function mockMods(emit: Emit) {
 
   function indexView(): ModIndex {
     const enabled = (id: string) => byId(id)?.enabled ?? false;
-    const mods: IndexMod[] = indexRows.map((row) => {
+    // ?emptyindex: an index that lists nothing yet, for Browse's empty state.
+    const search = typeof location === "undefined" ? "" : location.search;
+    const rows = new URLSearchParams(search).has("emptyindex") ? [] : indexRows;
+    const mods: IndexMod[] = rows.map((row) => {
       const installed = byId(row.id)?.version ?? null;
       const versions: IndexVersion[] = row.versions.map((v) => {
         const notes: IndexNote[] = [];

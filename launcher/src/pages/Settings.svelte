@@ -28,6 +28,9 @@
   const ready = $derived(gameOk && pythonOk && rootOk);
   /** The bundled tools need nothing from the player: Advanced opens by itself only when one is missing. */
   const toolsOk = $derived(pythonOk && rootOk);
+  /** Advanced starts unfolded when Play sent the player here to fix the tools' paths. */
+  const showTools = app.showTools;
+  app.showTools = false;
 
   async function detect() {
     detecting = true;
@@ -143,7 +146,7 @@
       <UpdatesCard bind:autoCheck={draft.autoUpdateCheck} />
     {/if}
 
-    <details class="card group advanced" open={setup ? !toolsOk : undefined}>
+    <details class="card group advanced" open={setup ? !toolsOk : showTools || undefined}>
       <summary
         ><span class="chevron"><Icon name="chevron" size={16} /></span>
         <h2>Advanced</h2>

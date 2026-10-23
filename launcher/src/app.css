@@ -335,7 +335,10 @@ input:not([type]):focus {
   box-shadow: 0 0 0 3px #d6ab5222;
 }
 
+/* An empty state centres in its container; in a grid of cards (Browse) it takes the whole row, not the
+   first column. */
 .empty {
+  grid-column: 1 / -1;
   padding: 34px 24px;
   text-align: center;
   color: var(--muted);

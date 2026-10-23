@@ -49,7 +49,28 @@ export const modFixes: ModFix[] = [
   { name: "blackjack-first", label: "Blackjack first", hint: "Attack with empty hands draws the blackjack." },
 ];
 
+/** The rest of T3SDK's fix pack: mods that do nothing until their .ini (in the mods folder) turns something on. */
+export const modTweaks: ModFix[] = [
+  { name: "zone-tweaks", label: "Fog and light", hint: "Set fog distance and ambient light in zone-tweaks.ini." },
+  { name: "player-tweaks", label: "Player tweaks", hint: "Still idling and gravity, set in player-tweaks.ini." },
+  {
+    name: "quicksave-cycle",
+    label: "Quick-save slots",
+    hint: "Several quick saves in turn, set in quicksave-cycle.ini.",
+  },
+  {
+    name: "first-person-death",
+    label: "First-person death",
+    hint: "Keep the first-person view, set in first-person-death.ini.",
+  },
+];
+
 export const isModFix = (name: string) => modFixes.some((f) => f.name === name);
+
+/** Every mod of T3SDK's fix pack, by DLL name: the switches on Play, then the ones set up in their .ini. */
+export const fixPack: ModFix[] = [...modFixes, ...modTweaks];
+
+export const inFixPack = (name: string) => fixPack.some((f) => f.name === name);
 
 /** Whether a T3SDK.ini value shows the fix as on. */
 export const fixOn = (fix: SdkFix, value: string | undefined) => (value === "1") !== !!fix.inverted;
