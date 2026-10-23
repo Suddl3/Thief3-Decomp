@@ -81,8 +81,12 @@ decompilation** worked mostly by Claude agents under the strict gate in
 | Display: native resolutions, borderless window (cursor, VSync, focus, running in the background), frame pacing, widescreen UI | `sdk/loader/display.cpp` | works (details below); frame pacing and VSync not yet tried in the game |
 | Level-change curtain (keeps the loading screen up while the game restarts) | `sdk/loader/curtain.cpp` | a black version worked; the loading-screen version is not yet tried in the game |
 | Main-menu version label, menu input diagnostics | `sdk/loader/menu.cpp` | works |
-| Public C API (`T3SdkApi` v1), C++ engine header | `sdk/include/t3sdk/` | |
+| Public C API (`T3SdkApi` v2), C++ engine header | `sdk/include/t3sdk/` | |
+| Game settings overrides (`Config::Find` hook: `SetConfigValue`, `AddConfigCallback`) | `sdk/loader/config.cpp` | builds; not yet tried in the game |
+| Loose-file overrides (`AddFileRoot`: CreateFileA/W, GetFileAttributesA, FindFirstFileA) | `sdk/loader/files.cpp` | builds; not yet tried in the game |
+| Code hooks at any instruction (`AddCodeHook`, `T3Registers`) | `sdk/loader/codehook.cpp` | builds; not yet tried in the game |
 | Example mod | `sdk/mods/hello/hello.cpp` | works |
+| Fix and tweak mods: `widescreen-fov`, `difficulty-fixes`, `dotted-paths`, `unstick`, `zone-tweaks`, `blackjack-first` ([sdk.md](sdk.md#mods-in-this-repository)) | `sdk/mods/` | build; none tried in the game yet (see Next steps 1) |
 | Build/deploy/run/screenshot/click/keys/close tool | `tools/sdk.py` | works |
 | Ghidra scripts: Decompile, Disassemble, ImportNames, ExportSymbols | `tools/ghidra/` | work |
 | Map and asset export to Godot 4.7; Godot map viewer | `tools/assets/`, `tools/assets/godot/` | works for all 32 maps (static geometry, lights, actor data) |
@@ -166,6 +170,21 @@ Later the same day, played by the user:
 
 1. **Verify on the real install** (ask the user before deploying or
    launching; close the game after each test):
+   - The fix mods (2026-10-23, all untested). `widescreen-fov` has
+     `LogReads=1`: the log must show the nine FOV properties' first reads
+     with values (85 for `100534`), and the view must widen, not stretch.
+     `difficulty-fixes` logs "difficulty multipliers loaded" on every level
+     load and "difficulty N preselected" in the Enter/Restart Mission menus;
+     check that Hard plays harder than Easy. `unstick`: Shift+Ctrl+Enter in a
+     level logs "player release requested" and must not disturb a normal
+     player. `dotted-paths`: install to a folder with a dot in its name.
+     `zone-tweaks`: set `FogDistance=2` and compare a foggy level.
+     `blackjack-first`: Attack with nothing in hand.
+   - Lockpicking above 100 fps: the game is known to break lockpicking at
+     high frame rates (a frame cap of about 90 fixes it). `SmoothFrames=1`
+     with VSynch off and `MaxFPS=0` lets the world update at any rate; try
+     lockpicking there, and if it breaks, cap world updates or make a 90 fps
+     default for `MaxFPS` with VSynch off.
    - Deploy the current SDK. New Game should go from the menu straight to
      Inn's loading screen with no black gap. `FrameStats=1` should show
      about the monitor's refresh rate with VSynch on, and motion should be
@@ -421,6 +440,37 @@ Later the same day, played by the user:
       exported yet.
 11. **Name and document as we go**: every function the SDK touches gets its
     name in `symbols.txt` and an entry in `docs/engine.md`.
+
+## Fixes researched for mods, not written yet
+
+Each one's addresses are in our build; the research tools are local
+(`build/su/`, see the lead's notes). Most need a test session first.
+
+- **Loot values** (same loot type, different values: the Gear screen and the
+  fence show the first item's value for all). Pickup is
+  `Class_10B1B8A0::FUN_10b19e30` (`+0x206` sees each item's value); the lists
+  multiply count by unit value in `FUN_10b5cb60`,
+  `Class_10B5F9C0::FUN_10b5e920` and `Class_10B5FAE0::FUN_10b5fae0`. A fix
+  records each pickup's value per loot name and sums those; the record must
+  survive the level-change relaunch and be stored with save games
+  (`FUN_10b17810` saves, `FUN_10d60e90` loads).
+- **Save games**: quick-save cycling (the quick save/load paths in
+  `FUN_10b17810`, `+0x46F` and `+0x939`) and readable folder names
+  (`FormatHexId`, `0x10D64D80`, makes the `XXXXXXXX-...` name from the save's
+  20-byte ID; a readable name needs a mapping that loading finds again).
+- **Property storage** for large maps: `Class_10B10A70` keeps 8 16-bit slot
+  indices into a static pool at `0x10F7B5C8` (`0x1E000` dwords, 12-byte
+  entries, about 40,960); large maps run out when saving. A bigger pool
+  needs every function that indexes it (`0x10B10A70` to `0x10B10F00`,
+  `Class_10B06220::FUN_10ad3df0`, `FUN_10ada010`) moved to the new base,
+  and 32-bit indices widen the object that holds them.
+- **HUD and menu tweaks** through `SetConfigValue` on `T3UI.ini`/`T3Hud.ini`
+  windows (`LockPickHUDWindow`, the health bar, item flashing, loading
+  tips): which keys hide or scale a window needs trying in the game.
+- **End mission key**: a command injected into the input handler
+  `FUN_10a19480`; fragile in city sections.
+- **Loading screens, gamepad, screenshots, non-Bink video, a fan mission
+  loader**: sites mapped, not yet studied.
 
 ## Roadmap towards multiplayer
 
