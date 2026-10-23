@@ -16,9 +16,12 @@ struct TArray {
     int32_t Max;
 
     T& operator[](int32_t i) const { return Data[i]; }
+
     T* begin() const { return Data; }
+
     T* end() const { return Data + Num; }
 };
+
 static_assert(sizeof(TArray<int>) == 12);
 
 // FName: low 16 bits index FName::Names, high 16 bits are an instance number.
@@ -28,21 +31,26 @@ struct FName {
     uint32_t Value;
 
     uint16_t Index() const { return uint16_t(Value & 0xFFFF); }
+
     uint16_t Number() const { return uint16_t(Value >> 16); }
 };
+
 static_assert(sizeof(FName) == 4);
 
+// One entry of FName::Names: the text an FName index stands for.
 struct FNameEntry {
     int32_t Index;
     FNameEntry* HashNext;
-    uint32_t Flags;            // 0x1000: log output with this category is suppressed
+    uint32_t Flags;  // 0x1000: log output with this category is suppressed
     uint16_t MaxNumber;
     uint16_t Pad;
     TArray<uint32_t> NumberFlags;
-    char Name[64];             // verified: ANSI text at +0x1C
+    char Name[64];  // verified: ANSI text at +0x1C
 };
+
 static_assert(offsetof(FNameEntry, Name) == 0x1C);
 
+// Only used through pointers here; its layout is not described.
 struct UClass;
 
 // Base of every engine object, 0x2C bytes (stock Unreal Engine 2's 0x28 plus
@@ -61,10 +69,11 @@ struct UObject {
     UClass* Class;          // 0x24 verified
     uint32_t PropertyHash;  // 0x28 Ion Storm's (Object.uc: ObjectInternalPropertyHash)
 };
+
 static_assert(offsetof(UObject, Name) == 0x20 && offsetof(UObject, Class) == 0x24);
 static_assert(sizeof(UObject) == 0x2C);  // so UStruct's SuperField lands at 0x2C
 
-// Addresses in T3Main.exe (fixed: the exe has no relocations, so it always
+// Addresses of engine globals and functions in T3Main.exe (fixed: the exe has no relocations, so it always
 // loads at 0x10900000). Only valid for the supported build.
 namespace addr {
 inline constexpr uintptr_t GObjObjects = 0x10F3E4A0;       // TArray<UObject*> UObject::GObjObjects
@@ -76,13 +85,21 @@ inline constexpr uintptr_t FNameHash = 0x10F76F18;         // FNameEntry* [4096]
 inline constexpr uintptr_t GNatives = 0x10F41C08;          // Native[4096]: the function of each opcode and native index
 inline constexpr uintptr_t GIsCriticalError = 0x10F46D70;  // UBOOL, set by the error handler
 inline constexpr uintptr_t GIsRunning = 0x10F46D7C;        // UBOOL, main loop condition
-inline constexpr uintptr_t GIsRequestingExit = 0x10F46D84; // UBOOL, appRequestExit / WM_QUIT
-inline constexpr uintptr_t GLog = 0x10F01158;              // FOutputDevice*, points at the log file device
-inline constexpr uintptr_t FOutputDeviceLogf = 0x10AF5230; // void __cdecl Logf(FOutputDevice*, EName, const char*, ...)
-inline constexpr uintptr_t FOutputDeviceFileSerialize = 0x10901780;  // __thiscall (const char*, EName), GLog's vtable[0]
+inline constexpr uintptr_t GIsRequestingExit = 0x10F46D84;  // UBOOL, appRequestExit / WM_QUIT
+inline constexpr uintptr_t GLog = 0x10F01158;               // FOutputDevice*, points at the log file device
+inline constexpr uintptr_t FOutputDeviceLogf =
+    0x10AF5230;  // void __cdecl Logf(FOutputDevice*, EName, const char*, ...)
+inline constexpr uintptr_t FOutputDeviceFileSerialize =
+    0x10901780;  // __thiscall (const char*, EName), GLog's vtable[0]
 }  // namespace addr
 
-inline TArray<UObject*>& GObjObjects() { return *reinterpret_cast<TArray<UObject*>*>(addr::GObjObjects); }
-inline TArray<FNameEntry*>& FNameNames() { return *reinterpret_cast<TArray<FNameEntry*>*>(addr::FNameNames); }
+// The engine's object table and name table, as references to the memory at their addresses.
+inline TArray<UObject*>& GObjObjects() {
+    return *reinterpret_cast<TArray<UObject*>*>(addr::GObjObjects);
+}
+
+inline TArray<FNameEntry*>& FNameNames() {
+    return *reinterpret_cast<TArray<FNameEntry*>*>(addr::FNameNames);
+}
 
 }  // namespace t3

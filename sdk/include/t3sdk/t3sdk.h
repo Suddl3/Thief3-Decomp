@@ -42,7 +42,7 @@
 #define T3SDK_EXTERN_C
 #endif
 #define T3SDK_EXPORT T3SDK_EXTERN_C __declspec(dllexport) /* use on a mod's T3Mod_Init/T3Mod_Shutdown */
-#define T3SDK_CALL __cdecl /* calling convention for every function in this header */
+#define T3SDK_CALL __cdecl                                /* calling convention for every function in this header */
 
 #define T3SDK_API_VERSION 2 /* current version; see T3SdkApi::version/size below */
 
@@ -52,11 +52,13 @@
 namespace t3 {
 struct UObject;
 }
+
 typedef t3::UObject T3Object;
 #else
 typedef struct T3Object T3Object;
 #endif
 
+/* Runs once per pass of the game's message loop on its main thread. */
 typedef void(T3SDK_CALL* T3FrameCallback)(void* user);
 /* `category` is the engine's log category, e.g. "Log", "Init", "Warning". */
 typedef void(T3SDK_CALL* T3LogCallback)(void* user, const char* text, const char* category);
@@ -65,6 +67,7 @@ typedef void(T3SDK_CALL* T3LogCallback)(void* user, const char* text, const char
  * the text to answer with (copied right away), or NULL to leave it. */
 typedef const char*(T3SDK_CALL* T3ConfigCallback)(void* user, const char* file, const char* section, const char* key,
                                                   const char* value);
+
 /* The game's registers at a code hook, in pushad order. `esp` is the game's
  * own (its stack, readable and writable, starts there); changes to any
  * register but esp carry back into the game. */
@@ -72,6 +75,7 @@ typedef struct T3Registers {
     uint32_t edi, esi, ebp, esp, ebx, edx, ecx, eax;
     uint32_t eflags;
 } T3Registers;
+
 typedef void(T3SDK_CALL* T3CodeCallback)(void* user, T3Registers* regs);
 
 typedef struct T3SdkApi {
@@ -102,13 +106,13 @@ typedef struct T3SdkApi {
      * Objects, above); ObjectCount/ObjectAt/FindObject return 0/NULL before
      * that. */
     int(T3SDK_CALL* EngineReady)(void);
-    int(T3SDK_CALL* ObjectCount)(void); /* size of the object table, including free slots */
+    int(T3SDK_CALL* ObjectCount)(void);         /* size of the object table, including free slots */
     T3Object*(T3SDK_CALL* ObjectAt)(int index); /* NULL for a free slot or an out-of-range index */
     /* Linear search by full path, e.g. FindObject("Class", "Engine.Actor").
      * className may be NULL to match any class. NULL if not found. */
     T3Object*(T3SDK_CALL* FindObject)(const char* className, const char* pathName);
-    T3Object*(T3SDK_CALL* ObjectClass)(T3Object* object); /* NULL for a NULL object */
-    T3Object*(T3SDK_CALL* ObjectOuter)(T3Object* object); /* the object's Outer, or NULL */
+    T3Object*(T3SDK_CALL* ObjectClass)(T3Object* object);  /* NULL for a NULL object */
+    T3Object*(T3SDK_CALL* ObjectOuter)(T3Object* object);  /* the object's Outer, or NULL */
     int(T3SDK_CALL* IsA)(T3Object* object, T3Object* cls); /* 1 if object's class is cls or derives from it */
     /* Text into buf, NUL-terminated even when truncated; returns the full
      * untruncated length, like snprintf (buf may be NULL and size 0 to size a
@@ -148,6 +152,7 @@ typedef struct T3SdkApi {
     int(T3SDK_CALL* AddCodeHook)(void* address, T3CodeCallback callback, void* user);
 } T3SdkApi;
 
+/* The signatures of a mod's exports (T3Mod_Init, T3Mod_Shutdown), for GetProcAddress. */
 typedef int(T3SDK_CALL* T3ModInitFn)(const T3SdkApi* api);
 typedef void(T3SDK_CALL* T3ModShutdownFn)(void);
 

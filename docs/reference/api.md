@@ -140,13 +140,13 @@ typedef t3::UObject T3Object; /* C++ */
 typedef struct T3Object T3Object; /* C */
 ```
 
-``Opaque`` ``handle`` ``to`` ``an`` ``engine`` ``UObject`` (``see`` `unreal.hpp``` ``for`` ``the`` ``real`` ``layout``, ``C``++ ``only``): ``mods`` ``just`` ``carry`` ``pointers`` ``to`` ``it`` ``back`` ``into`` ``the`` ``calls`` ``below``.
-
 ### T3FrameCallback
 
 ```c
 typedef void(T3SDK_CALL* T3FrameCallback)(void* user);
 ```
+
+``Runs`` ``once`` ``per`` ``pass`` ``of`` ``the`` ``game``'``s`` ``message`` ``loop`` ``on`` ``its`` ``main`` ``thread``.
 
 ### T3LogCallback
 
@@ -176,6 +176,8 @@ typedef void(T3SDK_CALL* T3CodeCallback)(void* user, T3Registers* regs);
 ```c
 typedef int(T3SDK_CALL* T3ModInitFn)(const T3SdkApi* api);
 ```
+
+``The`` ``signatures`` ``of`` ``a`` ``mod``'``s`` ``exports`` (`T3Mod_Init```, `T3Mod_Shutdown```), ``for`` ``GetProcAddress``.
 
 ### T3ModShutdownFn
 
