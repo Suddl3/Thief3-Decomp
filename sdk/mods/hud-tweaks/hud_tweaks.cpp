@@ -66,11 +66,13 @@ const char* T3SDK_CALL OnConfig(void*, const char*, const char* section, const c
     }
 
     const std::string* answer = nullptr;
+
     if (_stricmp(key, "ClearPos_X") == 0) {
         answer = &g_healthPosX;
     } else if (_stricmp(key, "ClearPos_Y") == 0) {
         answer = &g_healthPosY;
     }
+
     if (!answer || answer->empty()) {
         return nullptr;
     }
@@ -78,6 +80,7 @@ const char* T3SDK_CALL OnConfig(void*, const char*, const char* section, const c
     if (!g_loggedHealth.exchange(true)) {
         g_api->Log("health bar kept on screen (%s %s instead of %s)", key, answer->c_str(), value ? value : "none");
     }
+
     return answer->c_str();
 }
 
@@ -87,6 +90,7 @@ T3SDK_EXPORT int T3SDK_CALL T3Mod_Init(const T3SdkApi* api) {
     if (api->version < 2) {
         return 1;
     }
+
     g_api = api;
 
     std::wstring ini = t3mod::SettingsFile();
@@ -99,17 +103,21 @@ T3SDK_EXPORT int T3SDK_CALL T3Mod_Init(const T3SdkApi* api) {
     if (steadyJunk) {
         api->SetConfigValue(nullptr, "JunkItemWindow", "FlashOffTime", "0");
     }
+
     if (hideEmptyHands) {
         // A space, not "": an empty value reads as missing, and the game would use its default text.
         api->SetConfigValue(nullptr, "ItemCycleWindow", "DeEquipText", " ");
         api->SetConfigValue(nullptr, "WeaponCycleWindow", "DeEquipText", " ");
     }
+
     if (hideLockpickHud) {
         api->SetConfigValue(nullptr, "LockPickHUDWindow", "Pos_Y", "4000");
     }
+
     if (worldBehindBooks) {
         api->SetConfigValue(nullptr, "ReadBookWindow", "BlackScreen", "FALSE");
     }
+
     if (g_healthAlwaysShown) {
         std::wstring ui = t3mod::SystemFile(L"T3UI.ini");
         g_healthPosX = ReadIni(ui, L"HealthMeter", L"Pos_X");

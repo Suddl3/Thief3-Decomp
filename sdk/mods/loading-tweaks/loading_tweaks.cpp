@@ -65,16 +65,19 @@ bool Held() {
 // the hold keys are down.
 void __cdecl DrawDetour(float progress, bool force) {
     DWORD now = GetTickCount();
+
     if (!force && g_minRedrawMs && now - g_lastDraw < g_minRedrawMs) {
         if (++g_skipped == 100 && !g_loggedSkips) {
             g_loggedSkips = true;
             g_api->Log("loading screen redraws thinned out (%lu ms apart at least)", g_minRedrawMs);
         }
+
         return;
     }
 
     g_lastDraw = now;
     g_draw(progress, force);
+
     if (!Held()) {
         return;
     }
@@ -86,11 +89,13 @@ void __cdecl DrawDetour(float progress, bool force) {
 
     // Peeking keeps Windows from marking the game as not responding; nothing is taken off the queue.
     MSG msg;
+
     while (Held()) {
         PeekMessageW(&msg, nullptr, 0, 0, PM_NOREMOVE);
         Sleep(30);
         g_draw(progress, true);
     }
+
     g_lastDraw = GetTickCount();
 }
 
@@ -101,9 +106,11 @@ T3SDK_EXPORT int T3SDK_CALL T3Mod_Init(const T3SdkApi* api) {
 
     std::wstring ini = t3mod::SettingsFile();
     g_minRedrawMs = DWORD(t3mod::ReadInt(ini, L"Loading", L"MinRedrawMs", 20));
+
     if (g_minRedrawMs > kMaxMinRedrawMs) {
         g_minRedrawMs = kMaxMinRedrawMs;
     }
+
     g_holdKeys = t3mod::ReadKeys(ini, L"Loading", L"HoldKeys", L"17");
 
     if (!g_minRedrawMs && g_holdKeys.empty()) {

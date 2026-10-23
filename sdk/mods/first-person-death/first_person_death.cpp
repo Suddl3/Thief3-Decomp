@@ -42,8 +42,10 @@ std::string WithFirstPersonDeath(const std::string& text) {
             line = "\tInheritsFrom FirstPerson\r";
             changed = true;
         }
+
         out += line + "\n";
     }
+
     return changed ? out : std::string();
 }
 
@@ -53,6 +55,7 @@ T3SDK_EXPORT int T3SDK_CALL T3Mod_Init(const T3SdkApi* api) {
     if (api->version < 2) {
         return 1;
     }
+
     if (!t3mod::ReadBool(t3mod::SettingsFile(), L"Death", L"Enabled", false)) {
         api->Log("off (Enabled=0)");
         return 1;
@@ -63,6 +66,7 @@ T3SDK_EXPORT int T3SDK_CALL T3Mod_Init(const T3SdkApi* api) {
     std::stringstream original;
     original << in.rdbuf();
     std::string changed = WithFirstPersonDeath(original.str());
+
     if (changed.empty()) {
         api->Log("no DeathCam camera mode in T3Camera.ini; off");
         return 1;
@@ -75,6 +79,7 @@ T3SDK_EXPORT int T3SDK_CALL T3Mod_Init(const T3SdkApi* api) {
     std::ofstream out(root + L"\\System\\T3Camera.ini", std::ios::binary | std::ios::trunc);
     out << changed;
     out.close();
+
     if (!out) {
         api->Log("could not write the camera file; off");
         return 1;
@@ -83,6 +88,7 @@ T3SDK_EXPORT int T3SDK_CALL T3Mod_Init(const T3SdkApi* api) {
     // Serve the copy in place of the installed file.
     char rootUtf8[MAX_PATH * 3];
     WideCharToMultiByte(CP_UTF8, 0, root.c_str(), -1, rootUtf8, sizeof(rootUtf8), nullptr, nullptr);
+
     if (api->AddFileRoot(rootUtf8) != 0) {
         api->Log("file override failed; off");
         return 1;

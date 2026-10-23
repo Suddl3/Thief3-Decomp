@@ -105,24 +105,31 @@ T3SDK_EXPORT int T3SDK_CALL T3Mod_Init(const T3SdkApi* api) {
     if (api->version < 2 || api->size < offsetof(T3SdkApi, AddCodeHook) + sizeof(api->AddCodeHook)) {
         return 1;
     }
+
     g_api = api;
 
     std::wstring ini = t3mod::SettingsFile();
+
     if (!t3mod::ReadBool(ini, L"QuickSave", L"Enabled", false)) {
         api->Log("off (Enabled=0)");
         return 1;
     }
+
     g_count = t3mod::ReadInt(ini, L"QuickSave", L"Count", kDefaultCount);
+
     if (g_count < kMinCount || g_count > kMaxCount) {
         g_count = kDefaultCount;
     }
+
     g_stateFile = t3mod::ModFile(L".state");
 
     // Not t3mod::CodeHook: its failure line differs from the one this mod has always logged.
     int status = api->AddCodeHook(reinterpret_cast<void*>(kQuickSaveNamed), OnQuickSave, nullptr);
+
     if (status == 0) {
         status = api->AddCodeHook(reinterpret_cast<void*>(kQuickLoadNamed), OnQuickLoad, nullptr);
     }
+
     if (status != 0) {
         api->Log("quick save hooks failed (status %d)", status);
         return 1;

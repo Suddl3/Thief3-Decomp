@@ -36,6 +36,7 @@ T3SDK_EXPORT int T3SDK_CALL T3Mod_Init(const T3SdkApi* api) {
     if (api->version < T3SDK_API_VERSION) {
         return 1;
     }
+
     g_api = api;
 
     if (api->AddFrameCallback(OnFrame, nullptr) != 0) {

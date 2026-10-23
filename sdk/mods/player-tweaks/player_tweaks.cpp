@@ -46,6 +46,7 @@ bool IsIdleSection(const char* section) {
             return true;
         }
     }
+
     return false;
 }
 
@@ -61,11 +62,13 @@ const char* T3SDK_CALL OnConfig(void*, const char*, const char* section, const c
         if (!g_loggedIdle.exchange(true)) {
             g_api->Log("idle animations held still");
         }
+
         return "0";
     }
 
     bool isGravity = value && ((_stricmp(section, "Physics") == 0 && _stricmp(key, "WorldGravityZ") == 0) ||
                                (_stricmp(section, "PointPhysics") == 0 && _stricmp(key, "Gravity") == 0));
+
     if (g_gravity == 1.0f || !isGravity) {
         return nullptr;
     }
@@ -73,9 +76,11 @@ const char* T3SDK_CALL OnConfig(void*, const char*, const char* section, const c
     char text[32];
     snprintf(text, sizeof(text), "%g", atof(value) * g_gravity);
     answer = text;
+
     if (!g_loggedGravity.exchange(true)) {
         g_api->Log("gravity x%.2f ([%s] %s %s -> %s)", g_gravity, section, key, value, text);
     }
+
     return answer.c_str();
 }
 
@@ -85,11 +90,13 @@ T3SDK_EXPORT int T3SDK_CALL T3Mod_Init(const T3SdkApi* api) {
     if (api->version < 2) {
         return 1;
     }
+
     g_api = api;
 
     std::wstring ini = t3mod::SettingsFile();
     g_stillIdle = t3mod::ReadBool(ini, L"Player", L"StillIdle", false);
     g_gravity = t3mod::ReadFloat(ini, L"Player", L"Gravity", 1.0f, 0.0f, 10.0f);
+
     if (g_gravity <= 0.0f) {
         g_gravity = 1.0f;  // ReadFloat accepts 0; a gravity of zero is not accepted here
     }
