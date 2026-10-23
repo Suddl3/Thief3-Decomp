@@ -37,6 +37,7 @@ add_subdirectory(loader)
 add_subdirectory(mods/difficulty-fixes)
 add_subdirectory(mods/dotted-paths)
 add_subdirectory(mods/hello)
+add_subdirectory(mods/unstick)
 add_subdirectory(mods/widescreen-fov)
 
 configure_file(T3SDK.ini ${T3SDK_BIN_DIR}/T3SDK.ini COPYONLY)

@@ -175,6 +175,7 @@ Check `api->version >= 2` (or `api->size`) before using these.
 | [`difficulty-fixes`](../sdk/mods/difficulty-fixes/difficulty.cpp) | Missions play at the chosen difficulty (the AI multipliers are loaded on every level load), and the Enter/Restart Mission menus preselect the difficulty being played ([engine.md](engine.md#difficulty)) | `difficulty-fixes.ini`: `ApplyOnMissionLoad`, `KeepInMissionMenus` |
 | [`dotted-paths`](../sdk/mods/dotted-paths/dotted_paths.cpp) | The game runs from a folder whose path has a dot: `strrchr(path, '.')` (the CRT's, `0x10D1EF20`) only finds a dot after the last path separator | none |
 | [`hello`](../sdk/mods/hello/hello.cpp) | API walkthrough: logs objects and log categories | none |
+| [`unstick`](../sdk/mods/unstick/unstick.cpp) | A key combination (Shift+Ctrl+Enter) frees Garrett when he is stuck floating or in the floor: it posts the game's event `0x7F` | `unstick.ini`: `Keys` |
 | [`widescreen-fov`](../sdk/mods/widescreen-fov/fov.cpp) | Hor+: widens the cameras' FOV on screens wider than 4:3, and sets the player's FOV ([engine.md](engine.md#gamesys-properties)) | `widescreen-fov.ini`: `HorPlus`, `PlayerFOV`, `LogReads` |
 
 Frame callbacks run on the game's main thread once per message-loop pass.
