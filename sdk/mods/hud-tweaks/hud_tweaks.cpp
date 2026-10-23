@@ -8,12 +8,15 @@
 // - HealthAlwaysShown: the health bar stays on screen. It slides to its
 //   ClearPos_X/ClearPos_Y (below the screen) when nothing changes; the mod
 //   answers those with its Pos_X/Pos_Y, read from the same file.
+// - WorldBehindBooks: books and scrolls show over the paused game instead of
+//   a black screen ([ReadBookWindow] BlackScreen FALSE, as maps have it).
 //
 // Settings, in hud-tweaks.ini next to the DLL (each 1 = on, 0 = off):
 //   [HUD]
 //   SteadyJunkItem=1
 //   HideEmptyHands=0
 //   HealthAlwaysShown=0
+//   WorldBehindBooks=0
 #include <t3sdk/t3sdk.h>
 
 #include <windows.h>
@@ -86,6 +89,7 @@ T3SDK_EXPORT int T3SDK_CALL T3Mod_Init(const T3SdkApi* api) {
     bool steadyJunk = GetPrivateProfileIntW(L"HUD", L"SteadyJunkItem", 1, ini.c_str()) != 0;
     bool hideEmptyHands = GetPrivateProfileIntW(L"HUD", L"HideEmptyHands", 0, ini.c_str()) != 0;
     g_healthAlwaysShown = GetPrivateProfileIntW(L"HUD", L"HealthAlwaysShown", 0, ini.c_str()) != 0;
+    bool worldBehindBooks = GetPrivateProfileIntW(L"HUD", L"WorldBehindBooks", 0, ini.c_str()) != 0;
 
     if (steadyJunk) {
         api->SetConfigValue(nullptr, "JunkItemWindow", "FlashOffTime", "0");
@@ -95,13 +99,17 @@ T3SDK_EXPORT int T3SDK_CALL T3Mod_Init(const T3SdkApi* api) {
         api->SetConfigValue(nullptr, "ItemCycleWindow", "DeEquipText", " ");
         api->SetConfigValue(nullptr, "WeaponCycleWindow", "DeEquipText", " ");
     }
+    if (worldBehindBooks) {
+        api->SetConfigValue(nullptr, "ReadBookWindow", "BlackScreen", "FALSE");
+    }
     if (g_healthAlwaysShown) {
         std::wstring ui = SystemFile(L"T3UI.ini");
         g_healthPosX = ReadIni(ui, L"HealthMeter", L"Pos_X");
         g_healthPosY = ReadIni(ui, L"HealthMeter", L"Pos_Y");
         api->AddConfigCallback(OnConfig, nullptr);
     }
-    api->Log("steady junk item %s, empty-hand texts %s, health always shown %s", steadyJunk ? "on" : "off",
-             hideEmptyHands ? "hidden" : "shown", g_healthAlwaysShown ? "on" : "off");
+    api->Log("steady junk item %s, empty-hand texts %s, health always shown %s, world behind books %s",
+             steadyJunk ? "on" : "off", hideEmptyHands ? "hidden" : "shown", g_healthAlwaysShown ? "on" : "off",
+             worldBehindBooks ? "on" : "off");
     return 0;
 }
