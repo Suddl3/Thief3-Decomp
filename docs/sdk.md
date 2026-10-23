@@ -173,13 +173,14 @@ Check `api->version >= 2` (or `api->size`) before using these.
 
 ### Mods in this repository
 
-All but `hello` make up T3SDK's fix pack: they build into `bin/mods/`, ship
-with a release, and **Install T3SDK** puts them into `System\mods`. The
-launcher's Play page switches them under Game fixes; switching one off moves
-it to `System\mods\disabled`, and an update of T3SDK keeps it there. An
-update also keeps every settings file that already exists (`T3SDK.ini`, a
-mod's `.ini`). `hello` is an example to read: it builds into `examples/`
-and is not installed.
+All but `hello` and `save-trace` make up T3SDK's fix pack: they build into
+`bin/mods/`, ship with a release, and **Install T3SDK** puts them into
+`System\mods`. The launcher's Play page switches them under Game fixes;
+switching one off moves it to `System\mods\disabled`, and an update of
+T3SDK keeps it there. An update also keeps every settings file that already
+exists (`T3SDK.ini`, a mod's `.ini`). `hello` is an example to read and
+`save-trace` a development tool: both build into `examples/` and are not
+installed.
 
 | Mod | What it does | Settings |
 |---|---|---|
@@ -189,6 +190,7 @@ and is not installed.
 | [`end-mission`](../sdk/mods/end-mission/end_mission.cpp) | Shift+Ctrl+Alt+End ends the current mission as if its exit was reached (`FindExitMissionInfo`, then `OpenMissionCompleteWindow`); missions only, not city sections | `end-mission.ini`: `Keys` |
 | [`first-person-death`](../sdk/mods/first-person-death/first_person_death.cpp) | Dying keeps the first-person view: a copy of the installed `T3Camera.ini` with `DeathCam` inheriting from `FirstPerson`, served through `AddFileRoot`; off by default | `first-person-death.ini`: `Enabled` |
 | [`hello`](../sdk/mods/hello/hello.cpp) | API walkthrough: logs objects and log categories | none |
+| [`save-trace`](../sdk/mods/save-trace/save_trace.cpp) | Development tool: logs how a level is saved and loaded (archive positions, the gamesys object table's size, the files opened), to compare an edited map with the original ([assets.md](assets.md#the-level-object-mylevel-class-level)) | none |
 | [`hud-tweaks`](../sdk/mods/hud-tweaks/hud_tweaks.cpp) | HUD changes through `T3UI.ini` values: junk items stay lit instead of flashing (on), no "nothing equipped" texts (off), the health bar stays on screen (off), no lockpicking HUD (off), books over the paused game instead of black (off) | `hud-tweaks.ini`: `SteadyJunkItem`, `HideEmptyHands`, `HealthAlwaysShown`, `HideLockpickHud`, `WorldBehindBooks` |
 | [`loading-tweaks`](../sdk/mods/loading-tweaks/loading_tweaks.cpp) | Faster loading: loading-screen redraws (each one a presented frame) at least 20 ms apart unless forced; hold Ctrl to stop on the current loading screen and read it | `loading-tweaks.ini`: `MinRedrawMs`, `HoldKeys` |
 | [`player-tweaks`](../sdk/mods/player-tweaks/player_tweaks.cpp) | No breathing sway while idle (the idle animations of `T3PlayerAnims.ini` get `Speed` 0) and a gravity multiplier (`[Physics] WorldGravityZ`, `[PointPhysics] Gravity`); off by default | `player-tweaks.ini`: `StillIdle`, `Gravity` |
