@@ -28,10 +28,12 @@ void T3SDK_CALL OnDefaultWeapon(void*, T3Registers* regs) {
 // Called by the SDK when the mod is loaded. Returns non-zero (the mod stays
 // off) when the SDK has no code hooks or the hook cannot be placed.
 T3SDK_EXPORT int T3SDK_CALL T3Mod_Init(const T3SdkApi* api) {
+    // Code hooks need API version 2; an older SDK cannot place this hook, so the mod stays off.
     if (api->version < 2 || api->size < offsetof(T3SdkApi, AddCodeHook) + sizeof(api->AddCodeHook)) {
         return 1;
     }
 
+    // Without the hook the dagger stays the default weapon, so the mod has nothing to do.
     if (!t3mod::CodeHook(api, kDefaultWeaponName, OnDefaultWeapon, nullptr, "default weapon")) {
         return 1;
     }

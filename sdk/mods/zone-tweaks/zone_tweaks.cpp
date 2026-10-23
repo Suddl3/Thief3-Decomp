@@ -61,11 +61,13 @@ float ReadFactor(const wchar_t* key, const std::wstring& ini) {
 
 // Scales one zone's fog distance and ambient brightness (clamped to a byte).
 void Adjust(T3Object* zone) {
+    // A factor of 1 leaves the fog as the game has it.
     if (g_fogDistance != 1.0f) {
         t3mod::Field<float>(zone, kDistanceFogStart) *= g_fogDistance;
         t3mod::Field<float>(zone, kDistanceFogEnd) *= g_fogDistance;
     }
 
+    // A factor of 1 leaves the brightness as the game has it.
     if (g_ambientLight != 1.0f) {
         float brightness = t3mod::Field<uint8_t>(zone, kAmbientBrightness) * g_ambientLight;
         t3mod::Field<uint8_t>(zone, kAmbientBrightness) = uint8_t(brightness > 255.0f ? 255.0f : brightness + 0.5f);
@@ -75,21 +77,25 @@ void Adjust(T3Object* zone) {
 // Frame callback (main thread): once a second, scales the zones that appeared
 // since the last scan and logs how many.
 void T3SDK_CALL OnFrame(void*) {
+    // Objects exist only once the engine is up: touch none before that.
     if (!g_api->EngineReady()) {
         return;
     }
 
     DWORD now = GetTickCount();
 
+    // Scan for new zones only once a second.
     if (now - g_lastScan < kScanIntervalMs) {
         return;
     }
 
     g_lastScan = now;
 
+    // Look the zone class up once it is found.
     if (!g_zoneClass) {
         g_zoneClass = g_api->FindObject("Class", "Engine.ZoneInfo");
 
+        // The class was not found: try again at the next scan.
         if (!g_zoneClass) {
             return;
         }
@@ -97,6 +103,7 @@ void T3SDK_CALL OnFrame(void*) {
 
     int adjusted = 0;
 
+    // Walk every object slot of the engine.
     for (int i = 0, n = g_api->ObjectCount(); i < n; ++i) {
         T3Object* object = g_api->ObjectAt(i);
         char name[16];
@@ -112,6 +119,7 @@ void T3SDK_CALL OnFrame(void*) {
         ++adjusted;
     }
 
+    // Log only when this scan changed a zone.
     if (adjusted) {
         g_api->Log("%d zones adjusted (fog distance x%.2f, ambient light x%.2f)", adjusted, g_fogDistance,
                    g_ambientLight);
@@ -129,6 +137,7 @@ T3SDK_EXPORT int T3SDK_CALL T3Mod_Init(const T3SdkApi* api) {
     g_fogDistance = ReadFactor(L"FogDistance", ini);
     g_ambientLight = ReadFactor(L"AmbientLight", ini);
 
+    // Both factors at 1.0 would change nothing, so the mod stays off.
     if (g_fogDistance == 1.0f && g_ambientLight == 1.0f) {
         api->Log("nothing to change; off");
         return 1;

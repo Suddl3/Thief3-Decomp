@@ -78,6 +78,7 @@ uint32_t g_logged = 0;
 // The horizontal FOV at `aspect` that shows the vertical view `fov` shows at
 // 4:3. A value that is not an angle (0 or below, 180 or above) stays as it is.
 float HorPlus(float fov, float aspect) {
+    // A value that is not an angle cannot be converted.
     if (fov <= 0.0f || fov >= 180.0f) {
         return fov;
     }
@@ -91,7 +92,9 @@ float HorPlus(float fov, float aspect) {
 int FovIndex(uint32_t id) {
     id |= kPropertyIdBit;
 
+    // Look the ID up in the FOV table.
     for (int i = 0; i < int(std::size(kFovProperties)); ++i) {
+        // IDs are compared with the property bit set, as the table has it.
         if (kFovProperties[i] == id) {
             return i;
         }
@@ -106,6 +109,7 @@ int __fastcall PropertyGetDetour(void* self, void* edx, uint32_t id, void* out) 
     int found = g_get(self, edx, id, out);
     int index = found && out ? FovIndex(id) : -1;
 
+    // Not a FOV property (or the game found no value): leave the read alone.
     if (index < 0) {
         return found;
     }
@@ -113,16 +117,19 @@ int __fastcall PropertyGetDetour(void* self, void* edx, uint32_t id, void* out) 
     float* fov = static_cast<float*>(out);
     float original = *fov;
 
+    // Only the player camera's FOV is moved by PlayerFOV.
     if ((id | kPropertyIdBit) == kPlayerCamera) {
         *fov += g_playerFov - kGamePlayerFov;
     }
 
     float aspect = g_aspect;
 
+    // Widen only on screens wider than 4:3, once the aspect is known (it is 0 before).
     if (g_horPlus && aspect > kDesignedAspect) {
         *fov = HorPlus(*fov, aspect);
     }
 
+    // Log each FOV property once, the first time it is read.
     if (g_logReads && !(g_logged & (1u << index))) {
         g_logged |= 1u << index;
         g_api->Log("FOV property %06X: %.2f -> %.2f (aspect %.3f)", id | kPropertyIdBit, original, *fov, aspect);
@@ -139,9 +146,11 @@ BOOL CALLBACK FindGameWindow(HWND window, LPARAM param) {
 
     RECT rect;
 
+    // Only a visible window of this process can be the game's.
     if (pid == GetCurrentProcessId() && IsWindowVisible(window) && GetClientRect(window, &rect)) {
         auto* best = reinterpret_cast<RECT*>(param);
 
+        // The game's window is the largest of them.
         if (rect.right * rect.bottom > best->right * best->bottom) {
             *best = rect;
         }
@@ -156,6 +165,7 @@ void T3SDK_CALL OnFrame(void*) {
     static DWORD last = 0;
     DWORD now = GetTickCount();
 
+    // Check the window's aspect only once a second.
     if (now - last < kAspectCheckMs) {
         return;  // A resolution change shows up within a second.
     }
@@ -165,12 +175,14 @@ void T3SDK_CALL OnFrame(void*) {
     RECT best{};
     EnumWindows(FindGameWindow, reinterpret_cast<LPARAM>(&best));
 
+    // The game's window has no size yet (not created, or minimised): keep the previous aspect.
     if (best.right <= 0 || best.bottom <= 0) {
         return;
     }
 
     float aspect = float(best.right) / float(best.bottom);
 
+    // Log only when the aspect changes.
     if (aspect != g_aspect.exchange(aspect)) {
         g_api->Log("screen aspect %.3f (%ldx%ld): FOVs %s", aspect, best.right, best.bottom,
                    g_horPlus && aspect > kDesignedAspect ? "widened" : "as designed");
@@ -194,6 +206,7 @@ T3SDK_EXPORT int T3SDK_CALL T3Mod_Init(const T3SdkApi* api) {
     g_api = api;
     LoadSettings();
 
+    // Without the hook nothing reads the FOVs through this mod, so it stays off.
     if (!t3mod::Hook(api, kPropertyGet, reinterpret_cast<void*>(&PropertyGetDetour), reinterpret_cast<void**>(&g_get),
                      "property getter")) {
         return 1;

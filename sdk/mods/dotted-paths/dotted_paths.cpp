@@ -29,6 +29,7 @@ StrrchrFn g_strrchr = nullptr;
 char* __cdecl StrrchrDetour(const char* text, int c) {
     char* found = g_strrchr(text, c);
 
+    // Only a search for '.' that found something needs checking; everything else is the game's own answer.
     if (!found || char(c) != '.') {
         return found;
     }
@@ -41,6 +42,7 @@ char* __cdecl StrrchrDetour(const char* text, int c) {
 // Called by the SDK when the mod is loaded. Returns non-zero (the mod stays
 // off) when the hook cannot be placed.
 T3SDK_EXPORT int T3SDK_CALL T3Mod_Init(const T3SdkApi* api) {
+    // Without the hook the game keeps its own strrchr, so the mod stays off.
     if (!t3mod::Hook(api, kStrrchr, reinterpret_cast<void*>(&StrrchrDetour), reinterpret_cast<void**>(&g_strrchr),
                      "strrchr")) {
         return 1;

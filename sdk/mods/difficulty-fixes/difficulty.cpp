@@ -98,6 +98,7 @@ OpenRestartFn g_openRestart = nullptr;
 int CurrentDifficulty() {
     void* stats = reinterpret_cast<void*(__cdecl*)()>(kGetStats)();
 
+    // The game has no stats object: there is no difficulty to report.
     if (!stats) {
         return -1;
     }
@@ -127,12 +128,14 @@ void PreselectDifficulty(bool restart) {
     int difficulty = CurrentDifficulty();
     auto flow = *reinterpret_cast<uint8_t**>(kMissionFlow);
 
+    // Do nothing for a custom difficulty (it has no menu entry) or before the mission flow object exists.
     if (difficulty < 0 || difficulty >= kCustomDifficulty || !flow) {
         return;
     }
 
     auto records = t3mod::Field<uint8_t*>(flow, kMissionRecords);
 
+    // The mission flow has no record table yet: nothing to write into.
     if (!records) {
         return;
     }
@@ -140,6 +143,7 @@ void PreselectDifficulty(bool restart) {
     void* mission = t3mod::Field<void*>(records, restart ? kRestartMission : kEnterMission);
     auto record = t3mod::Field<uint8_t*>(records, restart ? kRestartRecord : kEnterRecord);
 
+    // Leave the menu alone when it has no mission or record, or when the mission has a fixed difficulty (no choice).
     if (!mission || !record || reinterpret_cast<bool(__cdecl*)(void*)>(kFixedDifficulty)(mission)) {
         return;
     }
@@ -152,6 +156,7 @@ void PreselectDifficulty(bool restart) {
 bool __fastcall OpenEnterDetour(void* self, void* edx, bool arg) {
     bool opened = g_openEnter(self, edx, arg);
 
+    // Only preselect when the game really opened the menu.
     if (opened) {
         PreselectDifficulty(false);
     }
@@ -163,6 +168,7 @@ bool __fastcall OpenEnterDetour(void* self, void* edx, bool arg) {
 bool __fastcall OpenRestartDetour(void* self, void* edx) {
     bool opened = g_openRestart(self, edx);
 
+    // Only preselect when the game really opened the menu.
     if (opened) {
         PreselectDifficulty(true);
     }
@@ -176,6 +182,7 @@ bool __fastcall OpenRestartDetour(void* self, void* edx) {
 // off) when the SDK has no code hooks; a fix whose hook fails is left off and
 // the other still works.
 T3SDK_EXPORT int T3SDK_CALL T3Mod_Init(const T3SdkApi* api) {
+    // Code hooks need API version 2; an older SDK cannot place this mod's code hook, so the mod stays off.
     if (api->version < 2 || api->size < offsetof(T3SdkApi, AddCodeHook) + sizeof(api->AddCodeHook)) {
         return 1;
     }
@@ -186,10 +193,12 @@ T3SDK_EXPORT int T3SDK_CALL T3Mod_Init(const T3SdkApi* api) {
     bool onLoad = t3mod::ReadBool(ini, L"Difficulty", L"ApplyOnMissionLoad", true);
     bool menus = t3mod::ReadBool(ini, L"Difficulty", L"KeepInMissionMenus", true);
 
+    // Hook the level load only when the setting asks for it; a failed hook turns this fix off.
     if (onLoad) {
         onLoad = t3mod::CodeHook(api, kAfterLevelLoad, AfterLevelLoad, nullptr, "level load");
     }
 
+    // Hook both menus only when the setting asks for it; if either hook fails the menu fix is reported as off.
     if (menus) {
         menus = t3mod::Hook(api, kOpenEnterMissionWindow, reinterpret_cast<void*>(&OpenEnterDetour),
                             reinterpret_cast<void**>(&g_openEnter), "enter mission menu") &&

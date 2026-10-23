@@ -45,6 +45,7 @@ bool g_wasDown = false;
 void PostReleasePlayer() {
     void* dispatcher = *reinterpret_cast<void**>(kEventDispatcher);
 
+    // The game has no event dispatcher: nothing to post to.
     if (!dispatcher) {
         return;
     }
@@ -60,6 +61,7 @@ void PostReleasePlayer() {
 void T3SDK_CALL OnFrame(void*) {
     bool down = g_api->EngineReady() && t3mod::GameHasFocus() && t3mod::KeysDown(g_keys);
 
+    // Post once per press, on the frame the combination goes down, not every frame it is held.
     if (down && !g_wasDown) {
         PostReleasePlayer();
     }
@@ -76,6 +78,7 @@ T3SDK_EXPORT int T3SDK_CALL T3Mod_Init(const T3SdkApi* api) {
 
     g_keys = t3mod::ReadKeys(t3mod::SettingsFile(), L"Unstick", L"Keys", L"16,17,13");
 
+    // With no valid key the combination could never be pressed, so the mod stays off.
     if (g_keys.empty()) {
         api->Log("no keys set; off");
         return 1;

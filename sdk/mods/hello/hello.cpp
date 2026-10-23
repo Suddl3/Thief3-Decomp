@@ -47,14 +47,17 @@ void T3SDK_CALL OnEngineLog(void*, const char*, const char* category) {
 // object (whose name starts with "Default") is an instance of the class too,
 // and is skipped. Main thread only.
 T3Object* FindPlayerController() {
+    // The class is looked up when the engine comes up; until then there is no controller to find.
     if (!g_playerControllerClass) {
         return nullptr;
     }
 
+    // Walk every object slot of the engine.
     for (int i = 0, n = g_api->ObjectCount(); i < n; ++i) {
         T3Object* object = g_api->ObjectAt(i);
         char name[128];
 
+        // Take the first live instance of the class that is not the class default object.
         if (object && g_api->IsA(object, g_playerControllerClass) && g_api->ObjectName(object, name, sizeof(name)) &&
             strncmp(name, "Default", 7) != 0) {
             return object;
@@ -68,6 +71,7 @@ T3Object* FindPlayerController() {
 int CountLiveObjects() {
     int live = 0;
 
+    // Walk every object slot of the engine; empty slots do not count.
     for (int i = 0, n = g_api->ObjectCount(); i < n; ++i) {
         live += g_api->ObjectAt(i) != nullptr;
     }
@@ -80,6 +84,7 @@ std::string DescribeLogLines() {
     std::string lines;
     std::lock_guard<std::mutex> lock(g_logLinesMutex);
 
+    // Append each category with its count.
     for (const auto& [category, count] : g_logLines) {
         lines += category + "=" + std::to_string(count) + " ";
     }
@@ -90,10 +95,12 @@ std::string DescribeLogLines() {
 // Frame callback (main thread): finds the player controller class when the
 // engine comes up, then logs the report every kReportIntervalMs.
 void T3SDK_CALL OnFrame(void*) {
+    // Objects exist only once the engine is up: touch none before that.
     if (!g_api->EngineReady()) {
         return;
     }
 
+    // The first frame with the engine up: look up the controller class once.
     if (!g_engineUp) {
         g_engineUp = true;
         g_playerControllerClass = g_api->FindObject("Class", "Engine.PlayerController");
@@ -103,6 +110,7 @@ void T3SDK_CALL OnFrame(void*) {
 
     DWORD now = GetTickCount();
 
+    // Report only every kReportIntervalMs.
     if (now - g_lastReport < kReportIntervalMs) {
         return;
     }
@@ -113,6 +121,7 @@ void T3SDK_CALL OnFrame(void*) {
 
     char controller[256] = "none";
 
+    // Name the controller when there is one; "none" stays otherwise.
     if (T3Object* playerController = FindPlayerController()) {
         g_api->ObjectPathName(playerController, controller, sizeof(controller));
     }
@@ -126,6 +135,7 @@ void T3SDK_CALL OnFrame(void*) {
 // Called by the SDK when the mod is loaded. Returns non-zero (the mod stays
 // off) when the SDK is older than the one this mod was built against.
 T3SDK_EXPORT int T3SDK_CALL T3Mod_Init(const T3SdkApi* api) {
+    // The mod was built against this API version: an older SDK may lack functions it calls, so stay off.
     if (api->version < T3SDK_API_VERSION) {
         return 1;
     }
