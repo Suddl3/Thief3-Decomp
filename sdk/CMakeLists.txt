@@ -39,6 +39,7 @@ add_subdirectory(mods/dotted-paths)
 add_subdirectory(mods/hello)
 add_subdirectory(mods/unstick)
 add_subdirectory(mods/widescreen-fov)
+add_subdirectory(mods/zone-tweaks)
 
 configure_file(T3SDK.ini ${T3SDK_BIN_DIR}/T3SDK.ini COPYONLY)
 # The public headers go into bin/include/t3sdk/ too: bin/ is what the release

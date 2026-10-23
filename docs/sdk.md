@@ -177,6 +177,7 @@ Check `api->version >= 2` (or `api->size`) before using these.
 | [`hello`](../sdk/mods/hello/hello.cpp) | API walkthrough: logs objects and log categories | none |
 | [`unstick`](../sdk/mods/unstick/unstick.cpp) | A key combination (Shift+Ctrl+Enter) frees Garrett when he is stuck floating or in the floor: it posts the game's event `0x7F` | `unstick.ini`: `Keys` |
 | [`widescreen-fov`](../sdk/mods/widescreen-fov/fov.cpp) | Hor+: widens the cameras' FOV on screens wider than 4:3, and sets the player's FOV ([engine.md](engine.md#gamesys-properties)) | `widescreen-fov.ini`: `HorPlus`, `PlayerFOV`, `LogReads` |
+| [`zone-tweaks`](../sdk/mods/zone-tweaks/zone_tweaks.cpp) | Fog distance and ambient light in every level: scales each zone actor's `DistanceFogStart`/`End` and `AmbientBrightness` once, when it appears | `zone-tweaks.ini`: `FogDistance`, `AmbientLight` |
 
 Frame callbacks run on the game's main thread once per message-loop pass.
 Engine log callbacks run on whichever thread writes the log, so protect shared
