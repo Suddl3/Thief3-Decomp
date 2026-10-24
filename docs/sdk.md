@@ -173,14 +173,14 @@ Check `api->version >= 2` (or `api->size`) before using these.
 
 ### Mods in this repository
 
-All but `hello` and `save-trace` make up T3SDK's fix pack: they build into
+All but `hello`, `save-trace` and `frame-profile` make up T3SDK's fix pack: they build into
 `bin/mods/`, ship with a release, and **Install T3SDK** puts them into
 `System\mods`. The launcher's Play page switches them under Game fixes;
 switching one off moves it to `System\mods\disabled`, and an update of
 T3SDK keeps it there. An update also keeps every settings file that already
-exists (`T3SDK.ini`, a mod's `.ini`). `hello` is an example to read and
-`save-trace` a development tool: both build into `examples/` and are not
-installed.
+exists (`T3SDK.ini`, a mod's `.ini`). `hello` is an example to read, and
+`save-trace` and `frame-profile` are development tools: they build into
+`examples/` and are not installed.
 
 | Mod | What it does | Settings |
 |---|---|---|
@@ -190,12 +190,13 @@ installed.
 | [`end-mission`](../sdk/mods/end-mission/end_mission.cpp) | Shift+Ctrl+Alt+End ends the current mission as if its exit was reached (`FindExitMissionInfo`, then `OpenMissionCompleteWindow`); missions only, not city sections | `end-mission.ini`: `Keys` |
 | [`first-person-death`](../sdk/mods/first-person-death/first_person_death.cpp) | Dying keeps the first-person view: a copy of the installed `T3Camera.ini` with `DeathCam` inheriting from `FirstPerson`, served through `AddFileRoot`; off by default | `first-person-death.ini`: `Enabled` |
 | [`hello`](../sdk/mods/hello/hello.cpp) | API walkthrough: logs objects and log categories | none |
+| [`frame-profile`](../sdk/mods/frame-profile/frame_profile.cpp) | Development tool: times each frame (the engine tick, the Havok physics step within it, and presenting plus the rest of the main loop) to `frame-profile.csv`, with 10-second summaries in `T3SDK.log` | none |
 | [`save-trace`](../sdk/mods/save-trace/save_trace.cpp) | Development tool: logs how a level is saved and loaded (archive positions, the gamesys object table's size, the files opened), to compare an edited map with the original ([assets.md](assets.md#the-level-object-mylevel-class-level)) | none |
 | [`hud-tweaks`](../sdk/mods/hud-tweaks/hud_tweaks.cpp) | HUD changes through `T3UI.ini` values: junk items stay lit instead of flashing (on), no "nothing equipped" texts (off), the health bar stays on screen (off), no lockpicking HUD (off), books over the paused game instead of black (off) | `hud-tweaks.ini`: `SteadyJunkItem`, `HideEmptyHands`, `HealthAlwaysShown`, `HideLockpickHud`, `WorldBehindBooks` |
 | [`loading-tweaks`](../sdk/mods/loading-tweaks/loading_tweaks.cpp) | Faster loading: loading-screen redraws (each one a presented frame) at least 20 ms apart unless forced; hold Ctrl to stop on the current loading screen and read it | `loading-tweaks.ini`: `MinRedrawMs`, `HoldKeys` |
 | [`player-tweaks`](../sdk/mods/player-tweaks/player_tweaks.cpp) | No breathing sway while idle (the idle animations of `T3PlayerAnims.ini` get `Speed` 0) and a gravity multiplier (`[Physics] WorldGravityZ`, `[PointPhysics] Gravity`); off by default | `player-tweaks.ini`: `StillIdle`, `Gravity` |
 | [`quicksave-cycle`](../sdk/mods/quicksave-cycle/quicksave_cycle.cpp) | Quick save takes turns between several saves ("Quick Save 1", "Quick Save 2", ...) and quick load loads the newest; off by default (it writes extra save games) | `quicksave-cycle.ini`: `Enabled`, `Count` |
-| [`steady-view`](../sdk/mods/steady-view/steady_view.cpp) | A steadier first-person view: the eye's height above Garrett's centre is smoothed instead of riding the "Camera Attach" bone's animation (`GetCameraTargetLocation`, `0x10B21830`), the body faces the view at once when he moves (turn rate `0x10E793FC`, 302 degrees a second in the game), and the near plane moves from 1.0 to 0.5 so held items do not cut into the view ([engine.md](engine.md#first-person-camera)) | `steady-view.ini`: `Smoothing`, `HeadBob`, `BodyTurnSpeed`, `NearClip` |
+| [`steady-view`](../sdk/mods/steady-view/steady_view.cpp) | A steadier first-person view. The eye stays at a resting spot relative to Garrett and the way he looks instead of riding the "Camera Attach" bone's animation (`GetCameraTargetLocation`, `0x10B21830`): on the ground the spot follows his stance slowly, in the air or climbing it holds. When his physics body jumps to a new height (a landing, a stair step, the top of a climb) the eye eases there. The body faces the view at once when he moves (turn rate `0x10E793FC`, 302 degrees a second in the game), and the near plane moves from 1.0 to 0.5 so held items do not cut into the view ([engine.md](engine.md#first-person-camera)). `[Debug] TraceCamera=1` writes every camera update to `steady-view-trace.csv` | `steady-view.ini`: `Smoothing`, `HeadBob`, `LandingSmoothing`, `BodyTurnSpeed`, `NearClip` |
 | [`unstick`](../sdk/mods/unstick/unstick.cpp) | A key combination (Shift+Ctrl+Enter) frees Garrett when he is stuck floating or in the floor: it posts the game's event `0x7F` | `unstick.ini`: `Keys` |
 | [`widescreen-fov`](../sdk/mods/widescreen-fov/fov.cpp) | Hor+: widens the cameras' FOV on screens wider than 4:3, and sets the player's FOV ([engine.md](engine.md#gamesys-properties)) | `widescreen-fov.ini`: `HorPlus`, `PlayerFOV`, `LogReads` |
 | [`zone-tweaks`](../sdk/mods/zone-tweaks/zone_tweaks.cpp) | Fog distance and ambient light in every level: scales each zone actor's `DistanceFogStart`/`End` and `AmbientBrightness` once, when it appears | `zone-tweaks.ini`: `FogDistance`, `AmbientLight` |
