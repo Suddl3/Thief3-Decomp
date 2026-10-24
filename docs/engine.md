@@ -474,6 +474,20 @@ after physics and the actors, at `0x1098A89B`, and `UT3GameEngine::Draw`
   accumulator and no interpolation (props, carried bodies, ragdolls). The
   player character steps by the frame time, so Garrett himself moves every
   frame.
+- **Garrett's position chases his physics body.** The physics character's
+  block (`AActor+0xB0`, vtable slot 8) holds its velocity at `+0xF8`, `+0xFC`,
+  `+0x100` (z) and the collision height the game asks for at `+0x118`. In the
+  air its vertical speed is a clean ballistic curve (240 units/s at take-off,
+  gravity 515), but `Location.Z` follows the body at no more than 64 units/s:
+  it lags at take-off, keeps rising at +64 after the body has passed the top
+  of the jump, falls at -64, and catches up on landing in one frame (about 19
+  units). On the ground the velocity keeps its value from the landing. Stairs
+  and slopes move `Location.Z` in 2-5 unit steps.
+- **The eye bone.** Measured in front of the view, the bone sits about 6.5
+  units ahead of Garrett's centre standing and 12-13 moving (he leans), and
+  about 24 / 21.5 units above it. The jump animation lifts it 8 units; the
+  climb swings it over 30. When his body turns at once, the bone is computed
+  for one frame with his old facing (it swings about 90 degrees around him).
 
 | What | Address | Status |
 |---|---|---|
