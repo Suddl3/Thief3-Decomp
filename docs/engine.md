@@ -1323,3 +1323,7 @@ size. The body emits no object vtable, uses no cast, register/stack trick,
 forced argument-home write or additional alias, and preserves the original
 void/float thiscall ABI. This is static PC reconstruction, not a runtime
 verification or gameplay-fix claim.
+
+### Existing vector support binding
+
+The existing scalar-left `FVector` multiplication operator is also bound to `0x10968D30` by a same-address alias. Its original-toolchain COFF body equals the complete 37-byte helper with no relocations. This records a supported ABI binding for existing source; it adds no ordinary game function or matched-byte credit.

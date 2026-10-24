@@ -3579,6 +3579,7 @@ FUN_10968bb0 = .text:0x10968BB0; // type:function size:0x12
 FUN_10968c50 = .text:0x10968C50; // type:function size:0xE
 FUN_10968c60 = .text:0x10968C60; // type:function size:0xC4
 FUN_10968d30 = .text:0x10968D30; // type:function size:0x25
+??D@YA?AVFVector@@MABV0@@Z = .text:0x10968D30; // type:alias
 ?Serialize@UPrimitive@@UAEXAAVFArchive@@@Z = .text:0x10968D60; // type:function size:0x2D
 ?Unknown20@UPrimitive@@UAEXXZ = .text:0x10968D60; // type:alias
 FUN_10968d90 = .text:0x10968D90; // type:function size:0x38
