@@ -40,6 +40,7 @@ export interface ModFix {
 
 export const modFixes: ModFix[] = [
   { name: "widescreen-fov", label: "Widescreen field of view", hint: "See more at the sides, not less at the top." },
+  { name: "steady-view", label: "Steady view", hint: "The view follows Garrett, not his animations." },
   { name: "difficulty-fixes", label: "Difficulty fixes", hint: "Missions play at the difficulty you chose." },
   { name: "loading-tweaks", label: "Faster loading", hint: "Hold a key to stay on a loading screen." },
   { name: "hud-tweaks", label: "Calmer HUD", hint: "Junk items stay lit instead of flashing." },

@@ -442,6 +442,53 @@ multipliers come from `Default.ini` `[Difficulty]`
 | mission records the menus edit: `*(DAT_10F3A3D8 + 0x150)`, `+4`/`+8` (mission, record) for Enter Mission, `+0xC`/`+0x10` for Restart Mission; the record's difficulty at `+0x174` | `0x10F3A3D8` | static |
 | `bool __cdecl (mission)`: gamesys `0x800864` is 1 (the mission has no difficulty choice) | `0x10ABE130` | static |
 
+## First-person camera
+
+Static analysis; the `steady-view` mod relies on the parts marked hooked.
+Each engine tick (`UT3GameEngine::Tick`, `0x1098A410`) updates the camera
+after physics and the actors, at `0x1098A89B`, and `UT3GameEngine::Draw`
+(`0x10B23BA0`) reads it in the same tick.
+
+- **Position.** The first-person modes (`LookAt ActorsTarget` in
+  `T3Camera.ini`) take `AGarrett::GetCameraTargetLocation`: the world
+  position of the "Camera Attach" bone (`AGarrett+0x390` name, `+0x39C`
+  number), pulled back from walls by a short trace along the view. The bone
+  moves with every animation (breathing, walk bob, the landing animation,
+  crouch blends); the root bone's translation is cancelled, so there is no
+  root motion. `T3Camera.ini`'s springs do nothing at `Stiffness 1.0`, and
+  `Default.ini`'s `[CameraEffects]` keys are not read by this build.
+- **Rotation.** The view is `AGarrett::HeadRot` (`+0x400`), not the
+  controller's rotation. Standing, the head turns up to 90 degrees from the
+  body; moving, the body turns toward the view at a fixed rate. Movement input
+  is applied in the body's frame, so starting off at an angle curves.
+- **Movement.** Velocity is computed from input, not from animation, and
+  smoothed with 0.10 (walking) or 0.95 (running) per application, once per
+  10 ms or per frame, whichever is longer: the smoothing depends on the frame
+  rate.
+- **Landing.** The land state zeroes Garrett's velocity and plays the land
+  animation, which moves the eye bone.
+- **Near plane.** The scene render pushes a near plane of 1.0 and a far plane
+  of 32000 for each pass. Held items hang from the hand bones and are drawn
+  with the world, so they cut into the near plane, more so with a wider FOV.
+- **Physics.** Havok rigid bodies step at a fixed 1/60 s with an
+  accumulator and no interpolation (props, carried bodies, ragdolls). The
+  player character steps by the frame time, so Garrett himself moves every
+  frame.
+
+| What | Address | Status |
+|---|---|---|
+| `cT3Camera::Update(dt)`, `__thiscall` | `0x10AC2D30` | static |
+| `AGarrett::GetCameraTargetLocation(FVector* out)`, `__thiscall`: the eye bone, pulled back from walls | `0x10B21830` | hooked by `steady-view` |
+| eye bone or Location, plus the wall trace, `__thiscall(filter; out, pawn, bone)` | `0x10ABFBC0` | static |
+| `AGarrett::GetCameraTargetRotation` / view rotation (returns `HeadRot`) | `0x10B22120` / `0x10B21250` | static |
+| body turn toward the view while moving; its rate, 55000 units/s (302 degrees/s) | `0x10B19300`; `0x10E793FC` | rate patched by `steady-view` |
+| velocity from input and smoothing, `__stdcall(pawn, float)`; factors 0.10 / 0.95 | `0x10B3BD10`; `0x10E7E4C0` / `0x10E7E4C4` | static |
+| land state Enter: zeroes velocity, plays `JumpLand_FWD` | `0x10B49250` | static |
+| scene render: near 1.0 (`push` immediates at `0x109FD10E`, `0x109FD3FD`, `0x109FD54E`, `0x109FD5FC`), far 32000 | `0x109FCF10` | near plane patched by `steady-view` |
+| set view, near, far, FOV, `__cdecl(view*, near, far, fov)` | `0x10917D20` | static |
+| Havok world step: fixed 1/60 s (`0x10EBF560`) with an accumulator | `0x10D9E840` | static |
+| player character simulate: steps by the frame time | `0x10B86D00` | static |
+
 ## Save games
 
 | What | Address | Status |

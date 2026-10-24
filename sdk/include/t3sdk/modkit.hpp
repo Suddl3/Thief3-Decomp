@@ -10,6 +10,7 @@
 
 #include <cstddef>
 #include <cstdint>
+#include <cstring>
 #include <cwchar>
 #include <string>
 #include <vector>
@@ -158,6 +159,34 @@ inline bool CodeHook(const T3SdkApi* api, uintptr_t address, T3CodeCallback call
     }
 
     return status == 0;
+}
+
+// Writes `value` over the game's bytes at `address` (code or read-only data),
+// but only while they still hold `expected`: another build, or another mod's
+// patch, is left alone and logged as "<what>: unexpected bytes". True when the
+// value is in place.
+template <class T>
+bool Patch(const T3SdkApi* api, uintptr_t address, const T& expected, const T& value, const char* what) {
+    auto target = reinterpret_cast<void*>(address);
+
+    // Only the build the address was found in has the expected bytes there.
+    if (std::memcmp(target, &expected, sizeof(T)) != 0) {
+        api->Log("%s: unexpected bytes at %08X, not patched", what, unsigned(address));
+        return false;
+    }
+
+    DWORD protect = 0;
+
+    // Code and constants are read-only: open the page for the write.
+    if (!VirtualProtect(target, sizeof(T), PAGE_EXECUTE_READWRITE, &protect)) {
+        api->Log("%s: cannot write at %08X (error %lu)", what, unsigned(address), GetLastError());
+        return false;
+    }
+
+    std::memcpy(target, &value, sizeof(T));
+    VirtualProtect(target, sizeof(T), protect, &protect);
+    FlushInstructionCache(GetCurrentProcess(), target, sizeof(T));
+    return true;
 }
 
 // ---- engine objects ----------------------------------------------------------------

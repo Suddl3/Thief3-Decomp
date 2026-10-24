@@ -270,6 +270,7 @@ export function mockMods(emit: Emit) {
     { name: "loading-tweaks", enabled: true, size: 14336, modified: now - DAY, settings: true },
     { name: "unstick", enabled: true, size: 13312, modified: now - DAY, settings: true },
     { name: "widescreen-fov", enabled: true, size: 14848, modified: now - DAY, settings: true },
+    { name: "steady-view", enabled: true, size: 15360, modified: now - DAY, settings: true },
     { name: "debug_camera", enabled: true, size: 30720, modified: now - 20 * DAY, settings: true },
     { name: "old_experiment", enabled: false, size: 188416, modified: now - 40 * DAY, settings: false },
   ];
