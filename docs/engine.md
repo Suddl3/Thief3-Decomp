@@ -1327,3 +1327,13 @@ verification or gameplay-fix claim.
 ### Existing vector support binding
 
 The existing scalar-left `FVector` multiplication operator is also bound to `0x10968D30` by a same-address alias. Its original-toolchain COFF body equals the complete 37-byte helper with no relocations. This records a supported ABI binding for existing source; it adds no ordinary game function or matched-byte credit.
+
+## DeathState parameter block
+
+The constructor's local parameter block uses `FLOAT` at +0x00 and `FVector` at
++0x04, consistent with the scalar-left vector operation. Its 0x24-byte layout,
+existing assignments, 271-byte constructor and physical exception-handling
+destinations are preserved. MSVC also emits two empty three-byte SELECT_ANY
+constructors for the vector member and its containing block. This support type
+correction adds no matched game function; other DeathState helper and lifetime
+contracts remain unresolved.
