@@ -65,7 +65,7 @@ moved them.
 | | `MenuInputTrace` | 0 | log main-menu and popup input events |
 | `Fixes` | `SkipIntros` | 1 | skip the logo movies at start-up |
 | `Display` | `NativeResolutions` | 1 | offer the monitor's own modes in Options; the top entry is native |
-| | `Borderless` | 1 | a borderless window instead of exclusive fullscreen (alt-tab, other monitors, screenshots) |
+| | `Borderless` | 1 | a borderless window instead of exclusive fullscreen (alt-tab, other monitors, screenshots). With 0, exclusive fullscreen runs at the desktop's refresh rate (Direct3D 8's "default" may pick 60 Hz on a faster monitor) |
 | | `WidescreenUI` | 1 | lay the UI out for the screen's aspect ratio: menus stay centered as a 4:3 frame, the HUD moves to the screen edges |
 | | `UILayoutTrace` | 0 | log each UI window's placement once (for UI modding) |
 | | `PauseInBackground` | 0 | pause while another window has the focus, as the game does on its own; 0 = a borderless game keeps running |
@@ -91,7 +91,14 @@ A borderless window also takes over what exclusive fullscreen did on its own:
   keeps it on the monitor (a helper process, `rundll32` running
   `dinput8.dll`'s `T3SDK_Curtain`) until the incoming game has drawn its own,
   then hands that game the foreground. Any click or key removes it early, and
-  it gives up after 20 seconds.
+  it gives up after 20 seconds. Exclusive fullscreen gets the curtain too: there
+  the restart switched the monitor back to the desktop and left a window that
+  did not answer until the new game had its device.
+- **Keeping running, and coming back.** On losing the focus the game pauses,
+  releases the mouse and keyboard (DirectInput) and marks itself inactive; the
+  SDK undoes the pause and the mark so it keeps running. On getting the focus
+  back the game takes the mouse and keyboard again only when it is marked
+  inactive, so the SDK marks it so just before.
 
 `T3SDK.log` also receives a crash report for the first faults in the process
 (access violations and the like): the location as `T3Main.exe+offset`, the
@@ -196,7 +203,7 @@ exists (`T3SDK.ini`, a mod's `.ini`). `hello` is an example to read, and
 | [`loading-tweaks`](../sdk/mods/loading-tweaks/loading_tweaks.cpp) | Faster loading: loading-screen redraws (each one a presented frame) at least 20 ms apart unless forced; hold Ctrl to stop on the current loading screen and read it | `loading-tweaks.ini`: `MinRedrawMs`, `HoldKeys` |
 | [`player-tweaks`](../sdk/mods/player-tweaks/player_tweaks.cpp) | No breathing sway while idle (the idle animations of `T3PlayerAnims.ini` get `Speed` 0) and a gravity multiplier (`[Physics] WorldGravityZ`, `[PointPhysics] Gravity`); off by default | `player-tweaks.ini`: `StillIdle`, `Gravity` |
 | [`quicksave-cycle`](../sdk/mods/quicksave-cycle/quicksave_cycle.cpp) | Quick save takes turns between several saves ("Quick Save 1", "Quick Save 2", ...) and quick load loads the newest; off by default (it writes extra save games) | `quicksave-cycle.ini`: `Enabled`, `Count` |
-| [`steady-view`](../sdk/mods/steady-view/steady_view.cpp) | A steadier first-person view. The eye stays at a resting spot relative to Garrett and the way he looks instead of riding the "Camera Attach" bone's animation (`GetCameraTargetLocation`, `0x10B21830`): on the ground the spot follows his stance slowly, in the air or climbing it holds. When his physics body jumps to a new height (a landing, a stair step, the top of a climb) the eye eases there. The body faces the view at once when he moves (turn rate `0x10E793FC`, 302 degrees a second in the game), and the near plane moves from 1.0 to 0.5 so held items do not cut into the view ([engine.md](engine.md#first-person-camera)). `[Debug] TraceCamera=1` writes every camera update to `steady-view-trace.csv` | `steady-view.ini`: `Smoothing`, `HeadBob`, `LandingSmoothing`, `BodyTurnSpeed`, `NearClip` |
+| [`steady-view`](../sdk/mods/steady-view/steady_view.cpp) | A steadier first-person view. The eye stays at a resting spot in front of Garrett's view instead of riding the "Camera Attach" bone's animation (`GetCameraTargetLocation`, `0x10B21830`): its height follows his stance slowly on the ground and holds in the air; its place in front of him is learned while he stands (the bone leans 6 units further forward while he moves); one-frame swings of the bone are ignored. In the air the eye follows the physics body's own vertical speed (Garrett's position only chases it at 64 units a second); a jump of his height on the ground (a landing, a stair step) is eased. The body faces the view at once when he moves (turn rate `0x10E793FC`, 302 degrees a second in the game), and the near plane moves from 1.0 to 0.5 so held items do not cut into the view ([engine.md](engine.md#first-person-camera)). `[Debug] TraceCamera=1` writes every camera update to `steady-view-trace.csv` | `steady-view.ini`: `Smoothing`, `HeadBob`, `LandingSmoothing`, `BodyTurnSpeed`, `NearClip` |
 | [`unstick`](../sdk/mods/unstick/unstick.cpp) | A key combination (Shift+Ctrl+Enter) frees Garrett when he is stuck floating or in the floor: it posts the game's event `0x7F` | `unstick.ini`: `Keys` |
 | [`widescreen-fov`](../sdk/mods/widescreen-fov/fov.cpp) | Hor+: widens the cameras' FOV on screens wider than 4:3, and sets the player's FOV ([engine.md](engine.md#gamesys-properties)) | `widescreen-fov.ini`: `HorPlus`, `PlayerFOV`, `LogReads` |
 | [`zone-tweaks`](../sdk/mods/zone-tweaks/zone_tweaks.cpp) | Fog distance and ambient light in every level: scales each zone actor's `DistanceFogStart`/`End` and `AmbientBrightness` once, when it appears | `zone-tweaks.ini`: `FogDistance`, `AmbientLight` |

@@ -178,6 +178,10 @@ ResetFn g_reset = nullptr;
 bool g_borderless = false;  // [Display] Borderless is on and the Direct3DCreate8 import was found
 HWND g_window = nullptr;    // the game's device window, set when the device is created
 UINT g_desktopFormat = 0;   // the desktop's back buffer format, read before a windowed device is created
+UINT g_desktopRefresh = 0;  // the desktop's refresh rate on the game's adapter, read with the format
+
+// Fills in the desktop's refresh rate for an exclusive fullscreen device that leaves it to Direct3D.
+void UseDesktopRefresh(PresentParameters* params);
 
 // The function in slot `slot` of the vtable of the COM-style `object`.
 void* VtableEntry(void* object, int slot) {
@@ -367,6 +371,25 @@ constexpr uintptr_t kCreationPresentParams = 0x10F2C86C;
 // Detour of IDirect3DDevice8::Reset: skips the focus-loss reset and any reset
 // while the game exits, and keeps every other reset windowed and borderless.
 HRESULT WINAPI ResetDetour(void* device, PresentParameters* params) {
+    // Exclusive fullscreen loses its device on a focus change, so the game never makes its focus-loss reset there.
+    // But Windows' fullscreen optimisations keep the device, and the game then resets to its creation parameters,
+    // which fails (0x0) and loses the device for real: skip that reset, as borderless does.
+    if (!g_borderless && reinterpret_cast<uintptr_t>(params) == kCreationPresentParams) {
+        T3_LOG("display: focus-loss Reset skipped (fullscreen kept its device)");
+        return S_OK;
+    }
+
+    // Exclusive fullscreen: other resets go through (they restore the device after a focus change), at the
+    // desktop's refresh rate.
+    if (!g_borderless) {
+        UseDesktopRefresh(params);
+        HRESULT result = g_reset(device, params);
+        T3_LOG("display: Reset %ux%u %s at %u Hz, present interval %u -> 0x%08lX", params->BackBufferWidth,
+               params->BackBufferHeight, params->Windowed ? "windowed" : "fullscreen",
+               params->FullScreen_RefreshRateInHz, params->FullScreen_PresentationInterval, result);
+        return result;
+    }
+
     // The focus-loss handler resets with the creation parameters: skip that reset.
     if (reinterpret_cast<uintptr_t>(params) == kCreationPresentParams) {
         T3_LOG("display: focus-loss Reset skipped (the borderless device stays as it is)");
@@ -910,9 +933,20 @@ void ReadDesktopFormat(void* d3d, UINT adapter) {
     DisplayMode desktop{};
     auto getMode = reinterpret_cast<GetAdapterDisplayModeFn>(VtableEntry(d3d, kD3D8GetAdapterDisplayMode));
 
-    // Remember the format when the adapter answers.
+    // Remember the format and refresh rate when the adapter answers.
     if (SUCCEEDED(getMode(d3d, adapter, &desktop))) {
         g_desktopFormat = desktop.Format;
+        g_desktopRefresh = desktop.RefreshRate;
+    }
+}
+
+// An exclusive fullscreen device asks for the refresh rate "default" (0), for
+// which Direct3D 8 may pick 60 Hz on a faster monitor: ask for the desktop's
+// rate instead, which the monitor is known to run.
+void UseDesktopRefresh(PresentParameters* params) {
+    // Only a fullscreen device that leaves the rate to Direct3D, on an adapter whose rate is known.
+    if (!params->Windowed && params->FullScreen_RefreshRateInHz == 0 && g_desktopRefresh) {
+        params->FullScreen_RefreshRateInHz = g_desktopRefresh;
     }
 }
 
@@ -933,34 +967,39 @@ HRESULT WINAPI CreateDeviceDetour(void* d3d, UINT adapter, UINT type, HWND focus
                                   PresentParameters* params, void** device) {
     const bool wasFullscreen = !params->Windowed;
 
-    // A borderless game needs the desktop format and a windowed device.
+    ReadDesktopFormat(d3d, adapter);
+
+    // A borderless game needs a windowed device; exclusive fullscreen runs at the desktop's refresh rate.
     if (g_borderless) {
-        ReadDesktopFormat(d3d, adapter);
         MakeWindowed(params);
+    } else {
+        UseDesktopRefresh(params);
     }
 
     g_window = params->hDeviceWindow ? params->hDeviceWindow : focus;
     HRESULT result = g_createDevice(d3d, adapter, type, focus, flags, params, device);
-    T3_LOG("display: CreateDevice %ux%u %s%s -> 0x%08lX", params->BackBufferWidth, params->BackBufferHeight,
+    T3_LOG("display: CreateDevice %ux%u %s%s, %u Hz, present interval %u -> 0x%08lX", params->BackBufferWidth,
+           params->BackBufferHeight,
            !wasFullscreen ? "windowed"
            : g_borderless ? "fullscreen made borderless"
                           : "fullscreen",
-           VSyncNote(params), result);
+           VSyncNote(params), params->Windowed ? g_desktopRefresh : params->FullScreen_RefreshRateInHz,
+           params->FullScreen_PresentationInterval, result);
 
     // Stop here when the device could not be created.
     if (FAILED(result)) {
         return result;
     }
 
+    // Hook Reset once: borderless keeps its window through resets, exclusive fullscreen its refresh rate.
+    if (!g_reset) {
+        HookReset(*device);
+    }
+
     // Borderless setup of the new device.
     if (g_borderless) {
         MakeBorderless(g_window);
         BringToFront(g_window);
-
-        // Hook Reset once.
-        if (!g_reset) {
-            HookReset(*device);
-        }
 
         // Hook the cursor once.
         if (!g_setCursor) {
@@ -1028,17 +1067,29 @@ using SetPausedFn = void(__fastcall*)(void* timeManager, void* edx, bool paused)
 
 ViewportWndProcFn g_viewportWndProc = nullptr;
 
+// Set when a focus loss was undone to keep the game running, until the focus comes back.
+bool g_keptRunning = false;
+
 // Detour of the viewport's window procedure: after a focus loss, marks the
 // game active again and restores the pause state the handler saved.
 LRESULT __fastcall ViewportWndProcDetour(void* viewport, void* edx, UINT message, WPARAM wParam, LPARAM lParam) {
     auto active = reinterpret_cast<volatile uint8_t*>(kAppActive);
     const bool losingFocus = message == WM_ACTIVATEAPP && !wParam && *active;
 
+    // The handler re-acquires the mouse and keyboard (DirectInput, released on focus loss) only when the game is
+    // marked inactive, which it no longer is after a kept-running focus loss: mark it so again first.
+    if (message == WM_ACTIVATEAPP && wParam && g_keptRunning) {
+        *active = 0;
+        g_keptRunning = false;
+        T3_LOG("display: focus back; the game takes the mouse and keyboard again");
+    }
+
     LRESULT result = g_viewportWndProc(viewport, edx, message, wParam, lParam);
 
     // The handler paused the game and marked it inactive: undo both.
     if (losingFocus && !*active) {
         *active = 1;
+        g_keptRunning = true;
         void* timeManager = reinterpret_cast<TimeManagerInstanceFn>(kTimeManagerInstance)();
         const bool wasPaused = *reinterpret_cast<const uint8_t*>(kPausedBeforeBackground) != 0;
         reinterpret_cast<SetPausedFn>(kTimeManagerSetPaused)(timeManager, nullptr, wasPaused);
@@ -1330,17 +1381,11 @@ void ConfigureFramePacing(const Options& options) {
     }
 }
 
-// Hooks the Direct3DCreate8 import, which the borderless window, the frame
-// limit and the statistics all hang off. Without the import Borderless is
-// switched off.
+// Hooks the Direct3DCreate8 import, which the borderless window, the
+// fullscreen refresh rate, the frame limit and the statistics all hang off.
+// Without the import Borderless is switched off.
 void HookDirect3D(const Options& options, HMODULE exe) {
     g_borderless = options.borderless;
-
-    // Nothing needs the Direct3D hook.
-    if (!options.borderless && !g_frameTicks && !g_frameStats) {
-        return;
-    }
-
     g_direct3DCreate8 = reinterpret_cast<Direct3DCreate8Fn>(
         PatchImport(exe, "d3d8.dll", "Direct3DCreate8", reinterpret_cast<void*>(&Direct3DCreate8Detour)));
 
@@ -1351,14 +1396,20 @@ void HookDirect3D(const Options& options, HMODULE exe) {
     }
 }
 
-// The hooks that only make sense with a borderless window: the level-change
-// curtain and running in the background.
-void HookBorderlessExtras(const Options& options, HMODULE exe) {
+// The level-change curtain: the game restarts for every level change and
+// every loaded save, which in a borderless window shows the desktop and in
+// exclusive fullscreen a mode switch and a window that does not answer until
+// the new game has its device. The curtain covers the monitor meanwhile.
+void HookCurtain(HMODULE exe) {
     g_shellExecuteExA = reinterpret_cast<ShellExecuteExAFn>(
         PatchImport(exe, "SHELL32.dll", "ShellExecuteExA", reinterpret_cast<void*>(&ShellExecuteExADetour)));
     Hook(kLoadingScreenBegin, reinterpret_cast<void*>(&LoadingScreenBeginDetour),
          reinterpret_cast<void**>(&g_loadingScreenBegin), "level-change curtain");
+}
 
+// The hooks that only make sense with a borderless window: running in the
+// background.
+void HookBorderlessExtras(const Options& options) {
     // Only a borderless game can keep running: an exclusive fullscreen
     // device is lost as soon as another window takes the focus.
     if (!options.pauseInBackground) {
@@ -1416,9 +1467,11 @@ void Install(const Options& options) {
     HMODULE exe = GetModuleHandleW(nullptr);
     HookDirect3D(options, exe);
 
+    HookCurtain(exe);
+
     // The hooks that only a borderless window needs.
     if (g_borderless) {
-        HookBorderlessExtras(options, exe);
+        HookBorderlessExtras(options);
     }
 
     LogSummary(options);
