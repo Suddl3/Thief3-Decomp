@@ -121,6 +121,8 @@ export interface LooseMod {
   enabled: boolean;
   size: number;
   modified: number | null;
+  /** Has a <name>.ini next to it. */
+  settings: boolean;
 }
 
 /** An installed .t3mod package, System/mods/<id>/. */
@@ -150,6 +152,8 @@ export interface ModPackage {
   textures: number;
   /** Why the package cannot be used. */
   error: string | null;
+  /** Has an .ini. */
+  settings: boolean;
 }
 
 export type Severity = "error" | "warning" | "info";
@@ -261,6 +265,30 @@ export interface SdkSettings {
   exists: boolean;
   template: string | null;
   sections: { name: string; settings: Setting[] }[];
+}
+
+/** How a mod setting is edited: its `@` hints in the mod's .ini, else what its value looks like. */
+export type ModControl =
+  | { kind: "toggle" }
+  | { kind: "number"; min: number | null; max: number | null; step: number | null }
+  | { kind: "choice"; options: string[] }
+  | { kind: "keys" }
+  | { kind: "text" };
+
+export interface ModSetting {
+  key: string;
+  label: string;
+  value: string;
+  default: string | null;
+  description: string;
+  control: ModControl;
+}
+
+/** A mod's .ini (System\mods), as controls. */
+export interface ModSettings {
+  file: string;
+  intro: string;
+  sections: { name: string; settings: ModSetting[] }[];
 }
 
 export type TaskSpec =
@@ -412,6 +440,10 @@ export const api = {
   modProfile: (action: ProfileAction) => call<ModList>("mod_profile", { action }),
   modIndex: (refresh: boolean) => call<ModIndex>("mod_index", { refresh }),
   installFromIndex: (id: string, version: string) => call<ModList>("install_from_index", { id, version }),
+  /** A mod's settings, or null when it has no .ini. */
+  readModSettings: (name: string) => call<ModSettings | null>("read_mod_settings", { name }),
+  writeModSettings: (name: string, changes: { section: string; key: string; value: string }[]) =>
+    call<null>("write_mod_settings", { name, changes }),
   readSdkSettings: () => call<SdkSettings>("read_sdk_settings"),
   writeSdkSettings: (changes: { section: string; key: string; value: string }[]) =>
     call<null>("write_sdk_settings", { changes }),

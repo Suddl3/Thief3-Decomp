@@ -16,7 +16,7 @@
 mod checks;
 mod files;
 mod index;
-mod layout;
+pub(crate) mod layout;
 mod manifest;
 mod overlay;
 mod package;
@@ -81,6 +81,8 @@ pub struct PackageView {
     pub textures: usize,
     /// Why the package cannot be used (unreadable or invalid mod.json).
     pub error: Option<String>,
+    /// Has an .ini: settings for the Mods page.
+    pub settings: bool,
 }
 
 #[derive(Clone, Debug, Default, PartialEq, Eq, Serialize)]
@@ -265,6 +267,7 @@ impl Mods {
                     files: p.files.len(),
                     textures: p.textures.len(),
                     error: p.manifest.as_ref().err().cloned(),
+                    settings: crate::modsettings::locate(&self.layout, &p.id).is_some(),
                 }
             })
             .collect();

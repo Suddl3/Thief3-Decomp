@@ -104,6 +104,7 @@ export default defineConfig({
           { text: "Your first mod", link: "/modding/first-mod" },
           { text: "The mod lifecycle", link: "/modding/lifecycle" },
           { text: "Packaging", link: "/modding/packaging" },
+          { text: "Mod settings", link: "/modding/settings" },
           { text: "Content and texture packs", link: "/modding/content-packs" },
           { text: "Publishing to the mod index", link: "/modding/publishing" },
           { text: "Map editing", link: "/modding/maps" },

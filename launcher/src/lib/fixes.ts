@@ -41,33 +41,33 @@ export interface ModFix {
 export const modFixes: ModFix[] = [
   { name: "widescreen-fov", label: "Widescreen field of view", hint: "See more at the sides, not less at the top." },
   { name: "difficulty-fixes", label: "Difficulty fixes", hint: "Missions play at the difficulty you chose." },
-  { name: "loading-tweaks", label: "Faster loading", hint: "Hold Ctrl to stay on a loading screen." },
+  { name: "loading-tweaks", label: "Faster loading", hint: "Hold a key to stay on a loading screen." },
   { name: "hud-tweaks", label: "Calmer HUD", hint: "Junk items stay lit instead of flashing." },
-  { name: "unstick", label: "Unstick key", hint: "Shift+Ctrl+Enter frees Garrett when he is stuck." },
-  { name: "end-mission", label: "End-mission key", hint: "Shift+Ctrl+Alt+End finishes the current mission." },
+  { name: "unstick", label: "Unstick key", hint: "A key combination frees Garrett when he is stuck." },
+  { name: "end-mission", label: "End-mission key", hint: "A key combination finishes the current mission." },
   { name: "dotted-paths", label: "Dots in the install folder", hint: "The game runs from any folder name." },
   { name: "blackjack-first", label: "Blackjack first", hint: "Attack with empty hands draws the blackjack." },
 ];
 
-/** The rest of T3SDK's fix pack: mods that do nothing until their .ini (in the mods folder) turns something on. */
+/** The rest of T3SDK's fix pack: mods that do nothing until one of their settings turns something on. */
 export const modTweaks: ModFix[] = [
-  { name: "zone-tweaks", label: "Fog and light", hint: "Set fog distance and ambient light in zone-tweaks.ini." },
-  { name: "player-tweaks", label: "Player tweaks", hint: "Still idling and gravity, set in player-tweaks.ini." },
+  { name: "zone-tweaks", label: "Fog and light", hint: "Fog distance and ambient light, in its settings." },
+  { name: "player-tweaks", label: "Player tweaks", hint: "Still idling and gravity, in its settings." },
   {
     name: "quicksave-cycle",
     label: "Quick-save slots",
-    hint: "Several quick saves in turn, set in quicksave-cycle.ini.",
+    hint: "Several quick saves in turn, in its settings.",
   },
   {
     name: "first-person-death",
     label: "First-person death",
-    hint: "Keep the first-person view, set in first-person-death.ini.",
+    hint: "Keep the first-person view, in its settings.",
   },
 ];
 
 export const isModFix = (name: string) => modFixes.some((f) => f.name === name);
 
-/** Every mod of T3SDK's fix pack, by DLL name: the switches on Play, then the ones set up in their .ini. */
+/** Every mod of T3SDK's fix pack, by DLL name: the switches on Play, then the ones set up in their settings. */
 export const fixPack: ModFix[] = [...modFixes, ...modTweaks];
 
 export const inFixPack = (name: string) => fixPack.some((f) => f.name === name);

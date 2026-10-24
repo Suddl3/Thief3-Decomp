@@ -189,6 +189,8 @@ pub struct LooseMod {
     pub enabled: bool,
     pub size: u64,
     pub modified: Option<u64>,
+    /// Has a `<name>.ini` next to it: settings for the Mods page.
+    pub settings: bool,
 }
 
 /// System/mods/*.dll (enabled) and System/mods/disabled/*.dll, by name.
@@ -200,9 +202,12 @@ pub fn loose(layout: &Layout) -> Vec<LooseMod> {
             let path = e.path();
             if path.is_file() && path.extension().is_some_and(|x| x.eq_ignore_ascii_case("dll")) {
                 let meta = e.metadata().ok();
+                let name = path.file_stem().unwrap_or_default().to_string_lossy().into_owned();
+                let settings = find_ci(&dir, &format!("{name}.ini")).is_some_and(|p| p.is_file());
                 list.push(LooseMod {
-                    name: path.file_stem().unwrap_or_default().to_string_lossy().into_owned(),
+                    name,
                     enabled,
+                    settings,
                     size: meta.as_ref().map_or(0, |m| m.len()),
                     modified: meta
                         .and_then(|m| m.modified().ok())

@@ -3,9 +3,12 @@
   // wins where two replace the same file): its switch, what it is, and a menu
   // to move it or remove it. The checks' issues sit under their mod, with
   // their fixes. Loose DLLs load after the packages, in name order; T3SDK's
-  // own fix mods are on the Play page.
+  // own fix mods are on the Play page. A mod with an .ini has a settings
+  // button that opens its settings under its row.
   import Icon from "$components/Icon.svelte";
   import Menu, { type MenuItem } from "$components/Menu.svelte";
+  import ModSettings from "$components/ModSettings.svelte";
+  import SettingsButton from "$components/SettingsButton.svelte";
   import Toggle from "$components/Toggle.svelte";
   import { api, type Issue, type ModPackage } from "$lib/api";
   import { app } from "$lib/app.svelte";
@@ -31,13 +34,19 @@
   const pack = $derived(
     fixPack.flatMap((f) => {
       const m = list?.loose.find((l) => l.name === f.name);
-      return m ? [{ ...f, enabled: m.enabled }] : [];
+      return m ? [{ ...f, enabled: m.enabled, settings: m.settings }] : [];
     }),
   );
   const on = $derived((list?.packages.filter((p) => p.enabled).length ?? 0) + loose.filter((m) => m.enabled).length);
   const texturesBusy = $derived(textureJobs().length > 0);
 
   let confirming = $state<string | null>(null);
+  /** The mod whose settings are open, by DLL name or package id. */
+  let open = $state<string | null>(new URLSearchParams(location.search).get("settings"));
+
+  function toggleSettings(name: string) {
+    open = open === name ? null : name;
+  }
 
   const icon = (issue: Issue) => (issue.severity === "info" ? "copy" : "alert");
 
@@ -140,7 +149,17 @@
             <div class="title"><h3 class="row-title">{fix.label}</h3></div>
             <p class="muted desc">{fix.hint}</p>
           </div>
+          {#if fix.settings}
+            <SettingsButton
+              label={fix.label}
+              open={open === fix.name}
+              ontoggle={() => {
+                toggleSettings(fix.name);
+              }}
+            />
+          {/if}
         </div>
+        {#if open === fix.name}<ModSettings name={fix.name} />{/if}
       </div>
     {:else}
       <p class="empty">Install T3SDK on the Play page to get the fix pack.</p>
@@ -172,6 +191,15 @@
             <p class="muted desc">{p.description ?? listText(p.authors)}</p>
           </div>
           {#each badges(p) as b (b.key)}<span class="kind {b.key}" title={b.title}>{b.label}</span>{/each}
+          {#if p.settings}
+            <SettingsButton
+              label={p.name}
+              open={open === p.id}
+              ontoggle={() => {
+                toggleSettings(p.id);
+              }}
+            />
+          {/if}
           {#if confirming === p.id}
             <span class="confirm">Remove it?</span>
             <button
@@ -187,6 +215,7 @@
             <Menu items={menu(p, i, list.packages.length)} label={`More for ${p.name}`} />
           {/if}
         </div>
+        {#if open === p.id}<ModSettings name={p.id} />{/if}
         {#each issues as issue, k (k)}
           <div class="issue {issue.severity}">
             <Icon name={icon(issue)} size={13} />
@@ -224,7 +253,17 @@
             <p class="faint desc">A DLL in System\mods</p>
           </div>
           <span class="kind loose">DLL</span>
+          {#if m.settings}
+            <SettingsButton
+              label={m.name}
+              open={open === m.name}
+              ontoggle={() => {
+                toggleSettings(m.name);
+              }}
+            />
+          {/if}
         </div>
+        {#if open === m.name}<ModSettings name={m.name} />{/if}
       </div>
     {/each}
   </div>

@@ -14,7 +14,7 @@ Put everything the package holds in one folder:
 my-mod/
 ├── mod.json          the manifest
 ├── my-mod.dll        the code, named by "entry"
-├── my-mod.ini        optional: other files next to the DLL are installed with it
+├── my-mod.ini        optional: its settings (see Mod settings); other files next to the DLL are installed with it
 └── files/            optional: content (see Content and texture packs)
 ```
 

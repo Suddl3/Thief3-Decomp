@@ -78,6 +78,7 @@ const pkg = (p: Partial<ModPackage>): ModPackage => ({
   files: 0,
   textures: 0,
   error: null,
+  settings: false,
   ...p,
 });
 

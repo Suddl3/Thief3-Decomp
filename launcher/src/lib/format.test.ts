@@ -3,16 +3,50 @@ import type { Setting } from "./api";
 import {
   ago,
   bytes,
+  comboText,
   dateTime,
   elapsed,
   firstLink,
   isKeySetting,
   isSwitch,
+  keyCodes,
   keyName,
+  modDescription,
   percent,
   settingDescription,
   settingLabel,
+  sortKeys,
+  vkFromCode,
+  vkName,
 } from "./format";
+
+describe("mod settings", () => {
+  it("names mod key combinations", () => {
+    expect(vkName(16)).toBe("Shift");
+    expect(vkName(0x41)).toBe("A");
+    expect(vkName(0x7b)).toBe("F12");
+    expect(vkName(99)).toBe("Num 3");
+    expect(keyCodes("16, 17,0x0D, 0, 300, x")).toEqual([16, 17, 13]);
+    expect(sortKeys([35, 18, 16, 17, 16])).toEqual([16, 17, 18, 35]);
+    expect(comboText("35,16,17,18")).toBe("Shift+Ctrl+Alt+End");
+    expect(comboText("")).toBe("Off");
+    expect([vkFromCode("ShiftRight"), vkFromCode("KeyQ"), vkFromCode("Digit7")]).toEqual([16, 81, 55]);
+    expect([vkFromCode("Numpad3"), vkFromCode("F10"), vkFromCode("End"), vkFromCode("Fn")]).toEqual([
+      99,
+      121,
+      35,
+      null,
+    ]);
+  });
+
+  it("drops what a mod setting's control already says", () => {
+    expect(modDescription("Widen the FOV on wide screens (Hor+): 1 on, 0 off. Default 1.")).toBe(
+      "Widen the FOV on wide screens (Hor+).",
+    );
+    expect(modDescription("1 = Garrett does not sway.")).toBe("Garrett does not sway.");
+    expect(modDescription("Multiplies the fog: 2.0 pushes it away.")).toBe("Multiplies the fog: 2.0 pushes it away.");
+  });
+});
 
 const setting = (key: string, value: string, description = "", defaultValue: string | null = value): Setting => ({
   key,

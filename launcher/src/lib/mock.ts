@@ -7,6 +7,9 @@ import type {
   Detected,
   GameCheck,
   MapEntry,
+  ModControl,
+  ModList,
+  ModSettings,
   Overview,
   SavesInfo,
   SdkSettings,
@@ -340,7 +343,149 @@ function sdkSettings(): SdkSettings {
   return { file: "...\\System\\T3SDK.ini", exists: true, template: "...\\sdk\\T3SDK.ini", sections };
 }
 
+/** A few fix-pack mods' settings, as read_mod_settings returns them from their .ini. */
+const range = (min: number, max: number, step: number): ModControl => ({ kind: "number", min, max, step });
+const toggle: ModControl = { kind: "toggle" };
+const modSettings: Record<string, ModSettings> = {
+  "zone-tweaks": {
+    file: "...\\System\\mods\\zone-tweaks.ini",
+    intro: "Zone tweaks (T3SDK): fog distance and ambient light in every level.",
+    sections: [
+      {
+        name: "Zones",
+        settings: [
+          {
+            key: "FogDistance",
+            label: "Fog distance",
+            value: "1.6",
+            default: "1.0",
+            description:
+              "Multiplies where the distance fog starts and ends: 2.0 pushes the fog twice as far away, 0.5 brings it closer.",
+            control: range(0.1, 10, 0.05),
+          },
+          {
+            key: "AmbientLight",
+            label: "Ambient light",
+            value: "1.0",
+            default: "1.0",
+            description: "Multiplies the zones' ambient brightness: 1.5 lightens dark areas.",
+            control: range(0.1, 10, 0.05),
+          },
+        ],
+      },
+    ],
+  },
+  "widescreen-fov": {
+    file: "...\\System\\mods\\widescreen-fov.ini",
+    intro: "Widescreen FOV mod (T3SDK).",
+    sections: [
+      {
+        name: "FOV",
+        settings: [
+          {
+            key: "HorPlus",
+            label: "Hor+ on wide screens",
+            value: "1",
+            default: "1",
+            description: "Widen the cameras' field of view on screens wider than 4:3 (Hor+): 1 on, 0 off. Default 1.",
+            control: toggle,
+          },
+          {
+            key: "PlayerFOV",
+            label: "Field of view",
+            value: "85",
+            default: "85",
+            description: "The player camera's field of view at 4:3, in degrees, from 30 to 150. The game uses 85.",
+            control: range(30, 150, 1),
+          },
+          {
+            key: "LogReads",
+            label: "Log FOV reads",
+            value: "0",
+            default: "0",
+            description:
+              "Log the first read of each FOV property to T3SDK.log, with its value: 1 on, 0 off. Default 0.",
+            control: toggle,
+          },
+        ],
+      },
+    ],
+  },
+  unstick: {
+    file: "...\\System\\mods\\unstick.ini",
+    intro: "Unstick (T3SDK): a key combination that frees Garrett when he is stuck.",
+    sections: [
+      {
+        name: "Unstick",
+        settings: [
+          {
+            key: "Keys",
+            label: "Keys",
+            value: "16,17,13",
+            default: "16,17,13",
+            description: "Virtual-key codes to hold together.",
+            control: { kind: "keys" },
+          },
+        ],
+      },
+    ],
+  },
+  "loading-tweaks": {
+    file: "...\\System\\mods\\loading-tweaks.ini",
+    intro: "Loading screen tweaks (T3SDK).",
+    sections: [
+      {
+        name: "Loading",
+        settings: [
+          {
+            key: "MinRedrawMs",
+            label: "Time between redraws (ms)",
+            value: "20",
+            default: "20",
+            description:
+              "Skip loading-screen redraws closer together than this: levels load faster, most with VSynch on.",
+            control: range(0, 1000, 5),
+          },
+          {
+            key: "HoldKeys",
+            label: "Hold to read",
+            value: "17",
+            default: "17",
+            description: "Hold these keys to stop loading on the current screen and read it.",
+            control: { kind: "keys" },
+          },
+        ],
+      },
+    ],
+  },
+};
+
 const commands: Record<string, (args: Args) => unknown> = {
+  read_mod_settings: (args) => {
+    const name = text(args, "name");
+    const known = modSettings[name];
+    if (known) return structuredClone(known);
+    const list = mods.commands.list_mods?.({}) as ModList;
+    if (!list.loose.some((m) => m.name === name && m.settings)) return null;
+    return {
+      file: `...\\System\\mods\\${name}.ini`,
+      intro: "",
+      sections: [
+        {
+          name: "Settings",
+          settings: [{ key: "Enabled", label: "Enabled", value: "1", default: "1", description: "", control: toggle }],
+        },
+      ],
+    } satisfies ModSettings;
+  },
+  write_mod_settings: (args) => {
+    const known = modSettings[text(args, "name")];
+    for (const change of args.changes as { section: string; key: string; value: string }[]) {
+      const s = known?.sections.find((x) => x.name === change.section)?.settings.find((x) => x.key === change.key);
+      if (s) s.value = change.value;
+    }
+    return null;
+  },
   get_config: () => ({ ...config }),
   save_config: (args) => {
     config = { ...(args.config as Config) };

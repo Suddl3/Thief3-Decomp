@@ -8,6 +8,7 @@ mod diag;
 mod game;
 mod ini;
 mod mods;
+mod modsettings;
 mod proc;
 mod saves;
 mod tasks;
@@ -52,6 +53,8 @@ pub fn run() {
             mods::mod_profile,
             mods::mod_index,
             mods::install_from_index,
+            modsettings::read_mod_settings,
+            modsettings::write_mod_settings,
             game::read_sdk_settings,
             game::write_sdk_settings,
             game::create_sdk_settings,

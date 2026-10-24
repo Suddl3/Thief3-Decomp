@@ -1,13 +1,17 @@
-// Minimal INI reading and in-place editing for T3SDK.ini: values are updated
-// where they stand, so the file's comments, order and line endings survive.
+// Minimal INI reading and in-place editing for T3SDK.ini and the mods' .ini
+// files: values are updated where they stand, so the file's comments, order
+// and line endings survive. A comment line starting with `@` is a hint for the
+// launcher (`; @range 0.25..4 step 0.05`), not part of the description.
 
-/// One `key=value` entry and the comment lines directly above it.
-#[derive(Clone, Debug, PartialEq)]
+/// One `key=value` entry, the comment lines directly above it and their hints.
+#[derive(Clone, Debug, Default, PartialEq)]
 pub struct Entry {
     pub section: String,
     pub key: String,
     pub value: String,
     pub comment: String,
+    /// The `@` comment lines above the entry, without the `@`.
+    pub hints: Vec<String>,
 }
 
 fn section_of(line: &str) -> Option<&str> {
@@ -28,26 +32,49 @@ pub fn parse(text: &str) -> Vec<Entry> {
     let mut entries = Vec::new();
     let mut section = String::new();
     let mut comment: Vec<&str> = Vec::new();
+    let mut hints: Vec<String> = Vec::new();
     for line in text.lines() {
         let t = line.trim();
         if let Some(s) = section_of(line) {
             section = s.to_string();
             comment.clear();
+            hints.clear();
         } else if let Some(c) = t.strip_prefix(';').or_else(|| t.strip_prefix('#')) {
-            comment.push(c.trim());
+            match c.trim().strip_prefix('@') {
+                Some(hint) => hints.push(hint.trim().to_string()),
+                None => comment.push(c.trim()),
+            }
         } else if let Some((k, v)) = key_value(line) {
             entries.push(Entry {
                 section: section.clone(),
                 key: k.into(),
                 value: v.into(),
                 comment: comment.join(" "),
+                hints: std::mem::take(&mut hints),
             });
             comment.clear();
         } else if t.is_empty() {
             comment.clear();
+            hints.clear();
         }
     }
     entries
+}
+
+/// The comment lines at the top of the file, before its first section or
+/// entry, joined: what the file is for.
+pub fn intro(text: &str) -> String {
+    let mut lines = Vec::new();
+    for line in text.lines() {
+        let t = line.trim();
+        match t.strip_prefix(';').or_else(|| t.strip_prefix('#')) {
+            Some(c) if !c.trim().starts_with('@') => lines.push(c.trim()),
+            Some(_) => {}
+            None if t.is_empty() => {}
+            None => break,
+        }
+    }
+    lines.join(" ")
 }
 
 /// Sets `section.key = value` in `text`, replacing the value in place, or adding
@@ -104,10 +131,25 @@ mod tests {
         assert_eq!(e.len(), 3);
         assert_eq!(
             e[0],
-            Entry { section: "T3SDK".into(), key: "Console".into(), value: "0".into(), comment: "1 = console.".into() }
+            Entry {
+                section: "T3SDK".into(),
+                key: "Console".into(),
+                value: "0".into(),
+                comment: "1 = console.".into(),
+                hints: vec![],
+            }
         );
         assert_eq!(e[1].comment, "");
         assert_eq!(e[2].section, "Fixes");
+    }
+
+    #[test]
+    fn hints_are_not_description() {
+        let text = "; Zone tweaks: fog.\n; Next start.\n[Zones]\n; Multiplies the fog.\n; @range 0.25..4 step 0.05\n; @label Fog distance\nFogDistance=1.0\n";
+        let e = parse(text);
+        assert_eq!(e[0].comment, "Multiplies the fog.");
+        assert_eq!(e[0].hints, ["range 0.25..4 step 0.05", "label Fog distance"]);
+        assert_eq!(intro(text), "Zone tweaks: fog. Next start.");
     }
 
     #[test]
