@@ -7,7 +7,7 @@ struct Struct_10C06540
 {
     int Unknown00;
     int Unknown04;
-    int Unknown08;
+    float Unknown08;
 };
 
 #endif // GAME_STRUCT_10C06540_H
