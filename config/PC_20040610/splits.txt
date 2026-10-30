@@ -4816,6 +4816,9 @@ Game/Unsorted_10A80D30.cpp:
 Game/Unsorted_10A80E60.cpp:
 	.text  start:0x10A80E60 end:0x10A80E8C
 
+Game/TriggerStringArrayResize.cpp:
+	.text  start:0x10A80E90 end:0x10A80FDE
+
 Game/Unsorted_10A80E90.cpp:
 	.text  start:0x10A80FE0 end:0x10A810CB
 
@@ -7544,6 +7547,9 @@ Game/Unsorted_10B1E350.cpp:
 Game/Unsorted_10B1E4C0.cpp:
 	.text  start:0x10B1EF90 end:0x10B1F057
 
+Game/ObjectRangeEligibility.cpp:
+	.text  start:0x10B1F550 end:0x10B1F69D
+
 Game/Unsorted_10B1F550_3.cpp:
 	.text  start:0x10B1F6A0 end:0x10B1F813
 	.text  start:0x10E1E8B0 end:0x10E1E8DA  # .text$x: EH handlers and unwind funclets
@@ -7869,6 +7875,9 @@ Game/cFade_2.cpp:
 
 Game/cT3SubtitleWindow.cpp:
 	.text  start:0x10B2A7D0 end:0x10B2A897
+
+Game/SubtitleStringRecordResize.cpp:
+	.text  start:0x10B2A8A0 end:0x10B2A9CE
 
 Game/Unsorted_10B2A8A0.cpp:
 	.text  start:0x10B2A9D0 end:0x10B2AB24
@@ -14438,6 +14447,9 @@ Game/Unsorted_10C285C0.cpp:
 	.text  start:0x10C28740 end:0x10C287F8
 	.text  start:0x10C28B10 end:0x10C28B6D
 	.text  start:0x10E2D240 end:0x10E2D27D  # .text$x: EH handlers and unwind funclets
+
+Game/SpineFlexOneResolve.cpp:
+	.text  start:0x10C28680 end:0x10C28738
 
 Game/Unsorted_10C282D0.cpp:
 	.text  start:0x10C28B70 end:0x10C28BBC
