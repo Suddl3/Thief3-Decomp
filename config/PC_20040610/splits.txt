@@ -8793,6 +8793,9 @@ Game/cRopeMotion_2.cpp:
 Game/cRopeMotion_3.cpp:
 	.text  start:0x10B494C0 end:0x10B49515
 
+Game/RopeClimbUpdate.cpp:
+	.text  start:0x10B49520 end:0x10B49634
+
 Game/RopeTraversalDisplacement.cpp:
 	.text  start:0x10B49640 end:0x10B4978A
 
@@ -11570,6 +11573,9 @@ Game/Unsorted_10BBD180.cpp:
 Game/Class_10E90A64.cpp:
 	.text  start:0x10BBD2A0 end:0x10BBD370
 
+Game/PawnModelReplacement.cpp:
+	.text  start:0x10BBD370 end:0x10BBD728
+
 Game/Class_10BBDC30.cpp:
 	.text  start:0x10BBD840 end:0x10BBD8AE
 	.text  start:0x10BBDC30 end:0x10BBDC65
@@ -13310,6 +13316,9 @@ Game/Unsorted_10C064D0.cpp:
 	.text  start:0x10C06540 end:0x10C0655E
 	.text  start:0x10C07300 end:0x10C07321
 
+Game/GridCandidateCoordinates.cpp:
+	.text  start:0x10C06560 end:0x10C065E5
+
 Game/Unsorted_10C06560.cpp:
 	.text  start:0x10C06750 end:0x10C06787
 	.text  start:0x10C06F30 end:0x10C06F9F
@@ -13322,6 +13331,9 @@ Game/Unsorted_10C067D0.cpp:
 
 Game/Class_10E8C00C.cpp:
 	.text  start:0x10C068F0 end:0x10C0693B
+
+Game/GridCandidateLookup.cpp:
+	.text  start:0x10C06940 end:0x10C06B60
 
 Game/Unsorted_10C06FA0.cpp:
 	.text  start:0x10C06FA0 end:0x10C06FE8

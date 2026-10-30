@@ -1337,3 +1337,149 @@ destinations are preserved. MSVC also emits two empty three-byte SELECT_ANY
 constructors for the vector member and its containing block. This support type
 correction adds no matched game function; other DeathState helper and lifetime
 contracts remain unresolved.
+
+## AI model replacement, rope-climb update and grid candidate helpers
+
+This group reconstructs seven PC_20040610 Game bodies (1,881 bytes). The local
+views below describe only the observed fields and call shapes. Names such as
+`PawnModelWorld`, `Class_10C06940` and `cGridCandidateArray` do not assert a
+recovered complete original class definition.
+
+### Paired AI model replacement
+
+[`PawnModelReplacement.cpp`](../src/Game/PawnModelReplacement.cpp) implements
+four 232-byte methods on the existing `Class_10BBDB40` receiver view:
+
+| Body | Model | Owner field | AAIPawn field |
+| --- | --- | --- | --- |
+| `0x10BBD370` | `AAISensoryModel*` | `+0x04` | `+0x210` |
+| `0x10BBD460` | `AAICombatModel*` | `+0x10` | `+0x228` |
+| `0x10BBD550` | `AAIBehaviorModel*` | `+0x08` | `+0x218` |
+| `0x10BBD640` | `AAIFactionModel*` | `+0x14` | `+0x230` |
+
+Each checks the class word and pawn, then tests
+`UObject::IsA(AAIPawn::StaticClass())`. The class registration/global names
+and the fields already exist in the AICore declarations. The four matched
+command callers at `0x10BB12A0`, `0x10BB1370`, `0x10BB13D0` and
+`0x10BB1430` establish the original receiver/method bindings. Their existing
+`(int,int)` symbols remain; same-address `(int,AAIPawn*)` overload aliases
+make the pawn argument explicit in the new definitions.
+
+The wrapper returned by `Class_1096D780::Get()` (`0x1096D780`) uses these
+observed slots:
+
+| Slot | Byte offset | Used call shape |
+| --- | --- | --- |
+| 44 | `0xB0` | `void(void* Model, int Flag)` |
+| 46 | `0xB8` | `void*(int ModelClass, four-byte name value, FVector, FRotator, nine trailing words)` |
+
+Existing [`PawnModelFactory.cpp`](../src/Game/PawnModelFactory.cpp) and
+[`PawnModelInitialization.cpp`](../src/Game/PawnModelInitialization.cpp)
+provide independent source witnesses for these same slot shapes. The
+four-byte name value retains `Struct_10C37D30`'s default/copy ABI; its original
+type name and the semantic names of the trailing flags remain unknown.
+
+These replacements pass the pawn's `Location` (`+0x2C`) and `Rotation`
+(`+0x38`), followed by `0,0,0,0,0,0,1,0,0`. A failed creation leaves the
+old model unchanged. On success, an existing model is destroyed through slot
+44 with flag zero, both paired fields are cleared, and both receive the new
+model pointer.
+
+Supporting existing identities are:
+
+| Address | Binding used |
+| --- | --- |
+| `0x10FF6650` | `AAIPawn::PrivateStaticClass` |
+| `0x10B97B50` | `AAIPawn::GetPrivateStaticClassAAIPawn(const char*)` |
+| `0x10B945B0` | `AAIPawn::InitializePrivateStaticClassAAIPawn()` |
+| `0x10AD1EE0` | `UObject::IsA(UClass*) const` |
+| `0x10E47600` | the existing `AICore` package literal |
+
+### Rope-climb state update
+
+The 276-byte body at `0x10B49520` is recorded in
+[`RopeClimbUpdate.cpp`](../src/Game/RopeClimbUpdate.cpp). The original table
+at `0x10E7E610` supplies slot 1 for this update and slot 4 for the retained
+state-result call. The source preserves the existing single-word player
+binding; no complete original owner type is inferred from that word.
+
+The native upward-query path gets a height offset, starts at the pawn's
+location plus that offset, and queries a second point 32 units higher. It
+preserves the five-argument query binding, initialized hit record, flag 15
+and low-byte result test. A query hit invokes the existing linked-object
+operation before the slot-4 call. The other path calls `ApplyAnimMotion`;
+a false result invokes the same linked-object operation, followed by slot 4.
+
+| Address | Existing binding |
+| --- | --- |
+| `0x10A18FC0` | control-source getter |
+| `0x10A18E80` | single-integer float-returning control query |
+| `0x10EAFBDC` | existing float comparison datum |
+| `0x10991FF0` | no-argument height-offset getter |
+| `0x10D9DCB0` | query-provider getter |
+| `0x10D9D640` | existing five-argument point query |
+| `0x10AA82D0` | `GetLinkedObject()` |
+| `0x10B39700` | linked-object operation |
+| `0x10B3AF60` | `GState::ApplyAnimMotion(int)` |
+| `0x10E5D35C` | `32.0f` literal, `__real@42000000` |
+
+The two point addresses retain the existing query's integer-carrier API.
+This group does not globally replace that declaration with a speculative
+new query type.
+
+### Grid candidate lookup and coordinates
+
+[`GridCandidateLookup.cpp`](../src/Game/GridCandidateLookup.cpp) implements
+the 544-byte provider at `0x10C06940`. It tests both signed cell indices,
+retains the first matching candidate, and allocates temporary pointer
+storage only when another match exists. Among multiple matches, the first
+entry seeds the result unconditionally; a later entry replaces it only if
+its third origin component is above the requested height and below the
+current result's component. This preserves the native selection rule; it
+does not establish a globally nearest-above-height API.
+
+The provider uses these same-address source bindings without changing the
+other canonical users:
+
+| Address | Candidate/list view | Retained canonical binding |
+| --- | --- | --- |
+| `0x10AFCF40` | `Class_10C06540::FUN_10afcf40() -> int` | `Class_10AFCF40::FUN_10afcf40() -> int` |
+| `0x10DBD520` | `Class_10C06540::FUN_10dbd520() -> int` | `Class_10C299C0_Unknown04::FUN_10dbd520() -> void*` |
+| `0x10BFBD70` | `cGridCandidateArray::SetCount(int)` | `cIntArray::SetCount(int)` |
+
+Independent callers `0x10C06B60` and `0x10C06D30` use both getters on the
+same candidate with signed comparisons. The latter also uses the same
+candidate's origin getter at `0x10C06540` and coordinate helper at
+`0x10C06560`. Serialization and construction witnesses at `0x10BA00C0`
+and `0x10BA0310` corroborate the record layout. This supports a local
+candidate view, without merging unrelated native owner classes.
+
+[`GridCandidateArray.h`](../include/Game/GridCandidateArray.h) is a
+non-owning list of four-byte candidate pointers, using the existing resize
+routine. The routine manages buffer capacity and allocation only.
+Destroying the temporary list releases its storage and never deletes the
+candidate objects. The allocator getter, tagged allocation and ordinary
+delete retain their existing identities at `0x10905AA0`, `0x10905C10`
+and `0x10AD1DC0`.
+
+The 133-byte coordinate body in
+[`GridCandidateCoordinates.cpp`](../src/Game/GridCandidateCoordinates.cpp)
+reads the two float32 origin components at candidate `+0x48/+0x4C`,
+subtracts 96, scales the position deltas by `1/24`, converts to signed
+integers and clamps each output to `[0,7]`. Conversion follows the native
+truncation behavior rather than mathematical floor. The first output uses
+the X delta and the second uses Y; the parameter names are reconstructed.
+
+The first two words in `Struct_10C06540` are consequently declared float32.
+The third word was already a float in the inherited local baseline. The
+getter's existing three-word return ABI remains unchanged.
+
+| Address | Literal/helper |
+| --- | --- |
+| `0x10E81500` | `96.0f`, `__real@42c00000` |
+| `0x10E5BBDC` | float32 `1/24`, `__real@3d2aaaab` |
+| `0x10D20E3C` | existing `__ftol2` conversion helper |
+
+This is static PC reconstruction, not whole-game runtime verification or a
+completed grid-search subsystem. Supporting aliases and declarations add no
+separate function or byte credit.

@@ -5,8 +5,8 @@
 
 struct Struct_10C06540
 {
-    int Unknown00;
-    int Unknown04;
+    float Unknown00;
+    float Unknown04;
     float Unknown08;
 };
 
