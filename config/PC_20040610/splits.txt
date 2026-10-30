@@ -8345,6 +8345,9 @@ Game/Unsorted_10B396B0_2.cpp:
 Game/Unsorted_10B39710_2.cpp:
 	.text  start:0x10B39710 end:0x10B39718
 
+Game/HandlerAnimationTime.cpp:
+	.text  start:0x10B39750 end:0x10B39777
+
 Game/Unsorted_10B39720.cpp:
 	.text  start:0x10B39780 end:0x10B39788
 	.text  start:0x10B3A460 end:0x10B3A46C
@@ -8356,6 +8359,9 @@ Game/Unsorted_10B39790.cpp:
 
 Game/Unsorted_10B39890.cpp:
 	.text  start:0x10B39890 end:0x10B398A7
+
+Game/LinkedMotionDisable.cpp:
+	.text  start:0x10B398C0 end:0x10B398D0
 
 Game/Unsorted_10B398B0.cpp:
 	.text  start:0x10B399B0 end:0x10B399EE
@@ -8686,6 +8692,9 @@ Game/Class_Field0c_D_6.cpp:
 Game/Class_Field0c_D_5.cpp:
 	.text  start:0x10B47020 end:0x10B47060
 
+Game/MotionPairDisable.cpp:
+	.text  start:0x10B47090 end:0x10B470B2
+
 Game/Class_Field0c_D_2.cpp:
 	.text  start:0x10B470D0 end:0x10B470F4
 
@@ -8895,6 +8904,12 @@ Game/Unsorted_10B4C320.cpp:
 
 Game/Unsorted_10B4C6B0.cpp:
 	.text  start:0x10B4C750 end:0x10B4C760
+
+Game/WeaponMotionTransition.cpp:
+	.text  start:0x10B4C840 end:0x10B4CA45
+
+Game/WeaponMotionSelection.cpp:
+	.text  start:0x10B4CAD0 end:0x10B4CC63
 
 Game/Class_10E81590.cpp:
 	.text  start:0x10B4CD20 end:0x10B4CD2C
@@ -11747,6 +11762,9 @@ Game/PawnModelInitialization.cpp:
 Game/Unsorted_10BC2FB0.cpp:
 	.text  start:0x10BC3590 end:0x10BC3669
 
+Game/FactionPropertyTransfer.cpp:
+	.text  start:0x10BC3670 end:0x10BC39CA
+
 Game/Unsorted_10BC3670.cpp:
 	.text  start:0x10BC39D0 end:0x10BC3B93
 	.text  start:0x10E27270 end:0x10E27282  # .text$x: EH handlers and unwind funclets
@@ -12386,6 +12404,10 @@ Game/Class_10E94E00.cpp:
 Game/Class_10E94B20_5.cpp:
 	.text  start:0x10BDC600 end:0x10BDC6C9
 	.text  start:0x10E28D20 end:0x10E28D3A  # .text$x: EH handlers and unwind funclets
+
+Game/AIObjectCallback.cpp:
+	.text  start:0x10BDC6D0 end:0x10BDC821
+	.text  start:0x10E28D40 end:0x10E28D52  # .text$x: EH handlers and unwind funclets
 
 Game/Class_10E94100_4.cpp:
 	.text  start:0x10BDC860 end:0x10BDC991
@@ -13347,6 +13369,12 @@ Game/Class_10E8C00C.cpp:
 
 Game/GridCandidateLookup.cpp:
 	.text  start:0x10C06940 end:0x10C06B60
+
+Game/GridCandidateCache.cpp:
+	.text  start:0x10C06B60 end:0x10C06D2E
+
+Game/GridCandidateSelection.cpp:
+	.text  start:0x10C06D30 end:0x10C06F2F
 
 Game/Unsorted_10C06FA0.cpp:
 	.text  start:0x10C06FA0 end:0x10C06FE8

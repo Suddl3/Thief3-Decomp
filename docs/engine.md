@@ -1518,3 +1518,43 @@ states initialized by `0x10B492F0`, selects the linked object's transition actio
 and then records the new state. These are static PC reconstructions; no game
 execution or whole-game behavior claim is made. Supporting aliases, declarations
 and generated cleanup bodies receive no separate contribution credit.
+
+## Grid caching, linked motion and faction properties
+
+The cache builder at `0x10C06B60` allocates row and cell containers, then places
+borrowed grid-candidate pointers into the corresponding cells. The two typed
+`SetCount` aliases at `0x10BFBD70` operate on four-byte pointer slots. These bodies
+do not infer destruction of the row/cell containers or ownership of candidates.
+
+The selector at `0x10C06D30` uses the cached cell and candidate height, then calls
+the existing coordinate clamp. Its output bounds are three-float vectors, as
+independently consumed by this caller. The `0x10BCC290` scalar getter reads the
+same float without using its receiver. Typed aliases describe these uses while
+preserving existing canonical names, including the selector name used by the
+65-byte position wrapper at `0x10C06F30`.
+
+The linked-motion chain comprises the two-handler disable operation at
+`0x10B47090`, indexed linked-object wrapper at `0x10B398C0`, and handler value
+query at `0x10B39750`. The query's reconstructed name is `QueryHandlerValue`;
+it is not claimed as a recovered original identifier. The selectors at
+`0x10B4CAD0` and `0x10B4C840` use those actual implementations. Their controller
+view records the observed field at `0x90` and integer-return virtual slot
+`0x10`; its small accessor preserves the observed receiver evaluation.
+
+The faction transfer at `0x10BC3670` copies 22 one-byte properties from a borrowed
+faction model to a borrowed property-setter interface. Native calls to the
+existing getter/setter pair `0x10971570` and `0x1098E3D0` establish that the first
+argument is an object pointer. The typed alias preserves the old canonical
+spelling; no integer arithmetic or ownership transfer is involved.
+
+The object callback at `0x10BDC6D0` belongs to the existing `Class_10E94B20`
+view: `0x10BDBBC0` installs that vtable and slot 72 identifies this function.
+Its observed virtual calls and borrowed object parameters are declared as
+structural interfaces. Its local string owns its buffer and uses the existing
+normal and exception cleanup. One call uses the folded empty body at
+`0x10D660B0`, which remains classified as library code. The three-argument
+cdecl alias reflects the observed call and caller cleanup; no library body is
+implemented or counted.
+
+These are static PC reconstructions. Supporting aliases, declarations, and
+compiler-generated cleanup do not receive separate Game contribution credit.
