@@ -1,4 +1,4 @@
-{"measures":{"fuzzy_match_percent":14.010738,"total_code":"5137416","matched_code":"683951","matched_code_percent":13.313132,"total_functions":24044,"matched_functions":8451,"matched_functions_percent":35.148064,"total_units":6769},"version":2,"categories":[{"id":"main","name":"Game","measures":{"fuzzy_match_percent":27.774002,"total_code":"2591596","matched_code":"683951","matched_code_percent":26.391113,"total_functions":12489,"matched_functions":8451,"matched_functions_percent":67.66755,"total_units":6274}},{"id":"engine","name":"Engine (Epic)","measures":{"total_code":"853992","total_functions":3863,"total_units":139}},{"id":"libs","name":"Libraries","measures":{"total_code":"1469822","total_functions":6679,"total_units":278}},{"id":"unknown","name":"Unclassified","measures":{"total_code":"222006","total_functions":1013,"total_units":77}}],"units":[
+{"measures":{"fuzzy_match_percent":14.0444975,"total_code":"5137446","matched_code":"684871","matched_code_percent":13.330962,"total_functions":24047,"matched_functions":8457,"matched_functions_percent":35.16863,"total_units":6777},"version":2,"categories":[{"id":"main","name":"Game","measures":{"fuzzy_match_percent":27.840765,"total_code":"2591626","matched_code":"684871","matched_code_percent":26.426306,"total_functions":12492,"matched_functions":8457,"matched_functions_percent":67.699326,"total_units":6282}},{"id":"engine","name":"Engine (Epic)","measures":{"total_code":"853992","total_functions":3863,"total_units":139}},{"id":"libs","name":"Libraries","measures":{"total_code":"1469822","total_functions":6679,"total_units":278}},{"id":"unknown","name":"Unclassified","measures":{"total_code":"222006","total_functions":1013,"total_units":77}}],"units":[
  {"name":"Game/Unsorted_10901710","measures":{"fuzzy_match_percent":100.0,"total_code":"76","matched_code":"76","matched_code_percent":100.0,"total_functions":2,"matched_functions":2,"matched_functions_percent":100.0,"total_units":1},"sections":[{"name":".text","size":"76","fuzzy_match_percent":100.0,"metadata":{}}],"metadata":{"source_path":"src/Game/Unsorted_10901710.cpp","progress_categories":["main"],"auto_generated":false},"functions":[
   {"name":"?GetStaticClassADifficultyInfo@@YAHXZ","size":"38","fuzzy_match_percent":100.0,"metadata":{"demangled_name":"int __cdecl GetStaticClassADifficultyInfo(void)","virtual_address":"277878544"},"address":"0"},
   {"name":"?GetStaticClassASpellProjectile@@YAHXZ","size":"38","fuzzy_match_percent":100.0,"metadata":{"demangled_name":"int __cdecl GetStaticClassASpellProjectile(void)","virtual_address":"277878592"},"address":"38"}
@@ -9493,6 +9493,18 @@
  {"name":"Game/cGarrettLockPickController_4","measures":{"fuzzy_match_percent":100.0,"total_code":"110","matched_code":"110","matched_code_percent":100.0,"total_functions":1,"matched_functions":1,"matched_functions_percent":100.0,"total_units":1},"sections":[{"name":".text","size":"110","fuzzy_match_percent":100.0,"metadata":{}}],"metadata":{"source_path":"src/Game/cGarrettLockPickController_4.cpp","progress_categories":["main"],"auto_generated":false},"functions":[
   {"name":"?Exit@cGarrettLockPickController@@UAEXPAVAGarrett@@@Z","size":"110","fuzzy_match_percent":100.0,"metadata":{"demangled_name":"public: virtual void __thiscall cGarrettLockPickController::Exit(class AGarrett *)","virtual_address":"280227840"},"address":"0"}
  ]},
+ {"name":"Game/LockPickPinSelection","measures":{"fuzzy_match_percent":100.0,"total_code":"185","matched_code":"185","matched_code_percent":100.0,"total_functions":2,"matched_functions":2,"matched_functions_percent":100.0,"total_units":1},"sections":[{"name":".text","size":"193","fuzzy_match_percent":100.0,"metadata":{}}],"metadata":{"source_path":"src/Game/LockPickPinSelection.cpp","progress_categories":["main"],"auto_generated":false},"functions":[
+  {"name":"?FUN_10b3f070@cLockPickController@@QAEXPAVClass_10B3F830_Arg@@@Z","size":"175","fuzzy_match_percent":100.0,"metadata":{"demangled_name":"public: void __thiscall cLockPickController::FUN_10b3f070(class Class_10B3F830_Arg *)","virtual_address":"280227952"},"address":"0"},
+  {"name":"__ehhandler$?FUN_10b3f070@cLockPickController@@QAEXPAVClass_10B3F830_Arg@@@Z","size":"10","fuzzy_match_percent":100.0,"metadata":{"virtual_address":"283247416"},"address":"183"}
+ ]},
+ {"name":"Game/LockPickPinPositions","measures":{"fuzzy_match_percent":99.93248,"total_code":"477","matched_code":"10","matched_code_percent":2.096436,"total_functions":2,"matched_functions":1,"matched_functions_percent":50.0,"total_units":1},"sections":[{"name":".text","size":"501","fuzzy_match_percent":99.93248,"metadata":{}}],"metadata":{"source_path":"src/Game/LockPickPinPositions.cpp","progress_categories":["main"],"auto_generated":false},"functions":[
+  {"name":"?FUN_10b3f3c0@cLockPickController@@QAEXPAVClass_10B3F830_Arg@@@Z","size":"467","fuzzy_match_percent":99.93104,"metadata":{"demangled_name":"public: void __thiscall cLockPickController::FUN_10b3f3c0(class Class_10B3F830_Arg *)","virtual_address":"280228800"},"address":"0"},
+  {"name":"__ehhandler$?FUN_10b3f3c0@cLockPickController@@QAEXPAVClass_10B3F830_Arg@@@Z","size":"10","fuzzy_match_percent":100.0,"metadata":{"virtual_address":"283247560"},"address":"491"}
+ ]},
+ {"name":"Game/LockPickStageComplete","measures":{"fuzzy_match_percent":100.0,"total_code":"453","matched_code":"453","matched_code_percent":100.0,"total_functions":2,"matched_functions":2,"matched_functions_percent":100.0,"total_units":1},"sections":[{"name":".text","size":"486","fuzzy_match_percent":100.0,"metadata":{}}],"metadata":{"source_path":"src/Game/LockPickStageComplete.cpp","progress_categories":["main"],"auto_generated":false},"functions":[
+  {"name":"?FUN_10b3f670@cLockPickController@@QAEXPAVClass_10B3F830_Arg@@@Z","size":"443","fuzzy_match_percent":100.0,"metadata":{"demangled_name":"public: void __thiscall cLockPickController::FUN_10b3f670(class Class_10B3F830_Arg *)","virtual_address":"280229488"},"address":"0"},
+  {"name":"__ehhandler$?FUN_10b3f670@cLockPickController@@QAEXPAVClass_10B3F830_Arg@@@Z","size":"10","fuzzy_match_percent":100.0,"metadata":{"virtual_address":"283247617"},"address":"476"}
+ ]},
  {"name":"Game/cLockPickController_3","measures":{"fuzzy_match_percent":100.0,"total_code":"215","matched_code":"215","matched_code_percent":100.0,"total_functions":1,"matched_functions":1,"matched_functions_percent":100.0,"total_units":1},"sections":[{"name":".text","size":"215","fuzzy_match_percent":100.0,"metadata":{}}],"metadata":{"source_path":"src/Game/cLockPickController_3.cpp","progress_categories":["main"],"auto_generated":false},"functions":[
   {"name":"?OnLockPicked@cLockPickController@@QAEXPAVClass_10B3F830_Arg@@@Z","size":"215","fuzzy_match_percent":100.0,"metadata":{"demangled_name":"public: void __thiscall cLockPickController::OnLockPicked(class Class_10B3F830_Arg *)","virtual_address":"280229936"},"address":"0"}
  ]},
@@ -15681,6 +15693,12 @@
  ]},
  {"name":"Game/Unsorted_10C21230","measures":{"fuzzy_match_percent":100.0,"total_code":"142","matched_code":"142","matched_code_percent":100.0,"total_functions":1,"matched_functions":1,"matched_functions_percent":100.0,"total_units":1},"sections":[{"name":".text","size":"142","fuzzy_match_percent":100.0,"metadata":{}}],"metadata":{"source_path":"src/Game/Unsorted_10C21230.cpp","progress_categories":["main"],"auto_generated":false},"functions":[
   {"name":"?FUN_10c21680@@YGMMMMPAVObject_10C21680@@@Z","size":"142","fuzzy_match_percent":100.0,"metadata":{"demangled_name":"float __stdcall FUN_10c21680(float, float, float, class Object_10C21680*)","virtual_address":"281155200"},"address":"0"}
+ ]},
+ {"name":"Game/GridSegmentExtension","measures":{"fuzzy_match_percent":99.7,"total_code":"353","total_functions":1,"total_units":1},"sections":[{"name":".text","size":"353","fuzzy_match_percent":99.7,"metadata":{}}],"metadata":{"source_path":"src/Game/GridSegmentExtension.cpp","progress_categories":["main"],"auto_generated":false},"functions":[
+  {"name":"?FUN_10c219e0@@YAXPAVFVector@@0PBUcGridEdgeRecord@@PBM@Z","size":"353","fuzzy_match_percent":99.7,"metadata":{"demangled_name":"void __cdecl FUN_10c219e0(class FVector *, class FVector *, struct cGridEdgeRecord const *, float const *)","virtual_address":"281156064"},"address":"0"}
+ ]},
+ {"name":"Game/GridAngularWeight","measures":{"fuzzy_match_percent":100.0,"total_code":"272","matched_code":"272","matched_code_percent":100.0,"total_functions":1,"matched_functions":1,"matched_functions_percent":100.0,"total_units":1},"sections":[{"name":".text","size":"272","fuzzy_match_percent":100.0,"metadata":{}}],"metadata":{"source_path":"src/Game/GridAngularWeight.cpp","progress_categories":["main"],"auto_generated":false},"functions":[
+  {"name":"?FUN_10c21dd0@@YAMPBEHHH@Z","size":"272","fuzzy_match_percent":100.0,"metadata":{"demangled_name":"float __cdecl FUN_10c21dd0(unsigned char const *, int, int, int)","virtual_address":"281157072"},"address":"0"}
  ]},
  {"name":"Game/Unsorted_10C223E0_3","measures":{"fuzzy_match_percent":100.0,"total_code":"63","matched_code":"63","matched_code_percent":100.0,"total_functions":1,"matched_functions":1,"matched_functions_percent":100.0,"total_units":1},"sections":[{"name":".text","size":"63","fuzzy_match_percent":100.0,"metadata":{}}],"metadata":{"source_path":"src/Game/Unsorted_10C223E0_3.cpp","progress_categories":["main"],"auto_generated":false},"functions":[
   {"name":"?FUN_10c223e0@Class_10C223E0@@QAEXXZ","size":"63","fuzzy_match_percent":100.0,"metadata":{"demangled_name":"public: void __thiscall Class_10C223E0::FUN_10c223e0(void)","virtual_address":"281158624"},"address":"0"}
@@ -26190,13 +26208,12 @@
   {"name":"FUN_10b3ef00","size":"30","metadata":{"virtual_address":"280227584"},"address":"455"},
   {"name":"FUN_10b3ef20","size":"177","metadata":{"virtual_address":"280227616"},"address":"485"}
  ]},
- {"name":"auto/text_10B3F070","measures":{"total_code":"1947","total_functions":6,"total_units":1},"sections":[{"name":".text","size":"1947","metadata":{}}],"metadata":{"progress_categories":["main"],"auto_generated":true},"functions":[
-  {"name":"FUN_10b3f070","size":"175","metadata":{"virtual_address":"280227952"},"address":"0"},
-  {"name":"?FUN_10b3f120@cLockPickController@@QAEXPAVClass_10B3F830_Arg@@M@Z","size":"350","metadata":{"demangled_name":"public: void __thiscall cLockPickController::FUN_10b3f120(class Class_10B3F830_Arg *, float)","virtual_address":"280228128"},"address":"175"},
-  {"name":"?FUN_10b3f280@cLockPickController@@QAEXPAVClass_10B3F830_Arg@@@Z","size":"318","metadata":{"demangled_name":"public: void __thiscall cLockPickController::FUN_10b3f280(class Class_10B3F830_Arg *)","virtual_address":"280228480"},"address":"525"},
-  {"name":"FUN_10b3f3c0","size":"467","metadata":{"virtual_address":"280228800"},"address":"843"},
-  {"name":"FUN_10b3f5a0","size":"194","metadata":{"virtual_address":"280229280"},"address":"1310"},
-  {"name":"?FUN_10b3f670@cLockPickController@@QAEXPAVClass_10B3F830_Arg@@@Z","size":"443","metadata":{"demangled_name":"public: void __thiscall cLockPickController::FUN_10b3f670(class Class_10B3F830_Arg *)","virtual_address":"280229488"},"address":"1504"}
+ {"name":"auto/text_10B3F120","measures":{"total_code":"668","total_functions":2,"total_units":1},"sections":[{"name":".text","size":"668","metadata":{}}],"metadata":{"progress_categories":["main"],"auto_generated":true},"functions":[
+  {"name":"?FUN_10b3f120@cLockPickController@@QAEXPAVClass_10B3F830_Arg@@M@Z","size":"350","metadata":{"demangled_name":"public: void __thiscall cLockPickController::FUN_10b3f120(class Class_10B3F830_Arg *, float)","virtual_address":"280228128"},"address":"0"},
+  {"name":"?FUN_10b3f280@cLockPickController@@QAEXPAVClass_10B3F830_Arg@@@Z","size":"318","metadata":{"demangled_name":"public: void __thiscall cLockPickController::FUN_10b3f280(class Class_10B3F830_Arg *)","virtual_address":"280228480"},"address":"350"}
+ ]},
+ {"name":"auto/text_10B3F5A0","measures":{"total_code":"194","total_functions":1,"total_units":1},"sections":[{"name":".text","size":"194","metadata":{}}],"metadata":{"progress_categories":["main"],"auto_generated":true},"functions":[
+  {"name":"FUN_10b3f5a0","size":"194","metadata":{"virtual_address":"280229280"},"address":"0"}
  ]},
  {"name":"auto/text_10B3F910","measures":{"total_code":"432","total_functions":1,"total_units":1},"sections":[{"name":".text","size":"432","metadata":{}}],"metadata":{"progress_categories":["main"],"auto_generated":true},"functions":[
   {"name":"FUN_10b3f910","size":"432","metadata":{"virtual_address":"280230160"},"address":"0"}
@@ -28807,12 +28824,14 @@
   {"name":"?FUN_10c21510@Class_10C25010@@QAEXPAVFVector@@0H@Z","size":"245","metadata":{"demangled_name":"public: void __thiscall Class_10C25010::FUN_10c21510(class FVector *, class FVector *, int)","virtual_address":"281154832"},"address":"0"},
   {"name":"FUN_10c21610","size":"102","metadata":{"virtual_address":"281155088"},"address":"245"}
  ]},
- {"name":"auto/text_10C21710","measures":{"total_code":"3184","total_functions":5,"total_units":1},"sections":[{"name":".text","size":"3184","metadata":{}}],"metadata":{"progress_categories":["main"],"auto_generated":true},"functions":[
-  {"name":"FUN_10c21710","size":"719","metadata":{"virtual_address":"281155344"},"address":"0"},
-  {"name":"FUN_10c219e0","size":"353","metadata":{"virtual_address":"281156064"},"address":"719"},
-  {"name":"FUN_10c21b50","size":"630","metadata":{"virtual_address":"281156432"},"address":"1072"},
-  {"name":"FUN_10c21dd0","size":"272","metadata":{"virtual_address":"281157072"},"address":"1702"},
-  {"name":"FUN_10c21ee0","size":"1210","metadata":{"virtual_address":"281157344"},"address":"1974"}
+ {"name":"auto/text_10C21710","measures":{"total_code":"719","total_functions":1,"total_units":1},"sections":[{"name":".text","size":"719","metadata":{}}],"metadata":{"progress_categories":["main"],"auto_generated":true},"functions":[
+  {"name":"FUN_10c21710","size":"719","metadata":{"virtual_address":"281155344"},"address":"0"}
+ ]},
+ {"name":"auto/text_10C21B50","measures":{"total_code":"630","total_functions":1,"total_units":1},"sections":[{"name":".text","size":"630","metadata":{}}],"metadata":{"progress_categories":["main"],"auto_generated":true},"functions":[
+  {"name":"FUN_10c21b50","size":"630","metadata":{"virtual_address":"281156432"},"address":"0"}
+ ]},
+ {"name":"auto/text_10C21EE0","measures":{"total_code":"1210","total_functions":1,"total_units":1},"sections":[{"name":".text","size":"1210","metadata":{}}],"metadata":{"progress_categories":["main"],"auto_generated":true},"functions":[
+  {"name":"FUN_10c21ee0","size":"1210","metadata":{"virtual_address":"281157344"},"address":"0"}
  ]},
  {"name":"auto/text_10C22420","measures":{"total_code":"1616","total_functions":1,"total_units":1},"sections":[{"name":".text","size":"1616","metadata":{}}],"metadata":{"progress_categories":["main"],"auto_generated":true},"functions":[
   {"name":"?FUN_10c22420@Class_10C22CE0@@QAE_NPAUStruct_10C22CE0@@HH0H@Z","size":"1616","metadata":{"demangled_name":"public: bool __thiscall Class_10C22CE0::FUN_10c22420(struct Struct_10C22CE0*, int, int, struct Struct_10C22CE0*, int)","virtual_address":"281158688"},"address":"0"}

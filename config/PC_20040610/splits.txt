@@ -8550,6 +8550,18 @@ Game/cGarrettLockPickController_3.cpp:
 Game/cGarrettLockPickController_4.cpp:
 	.text  start:0x10B3F000 end:0x10B3F06E
 
+Game/LockPickPinSelection.cpp:
+	.text  start:0x10B3F070 end:0x10B3F11F
+	.text  start:0x10E20330 end:0x10E20342  # .text$x: EH handlers and unwind funclets
+
+Game/LockPickPinPositions.cpp:
+	.text  start:0x10B3F3C0 end:0x10B3F593
+	.text  start:0x10E203B0 end:0x10E203D2  # .text$x: EH handlers and unwind funclets
+
+Game/LockPickStageComplete.cpp:
+	.text  start:0x10B3F670 end:0x10B3F82B
+	.text  start:0x10E203E0 end:0x10E2040B  # .text$x: EH handlers and unwind funclets
+
 Game/cLockPickController_3.cpp:
 	.text  start:0x10B3F830 end:0x10B3F907
 
@@ -14143,6 +14155,12 @@ Game/GridRegionQuery.cpp:
 
 Game/Unsorted_10C21230.cpp:
 	.text  start:0x10C21680 end:0x10C2170E
+
+Game/GridSegmentExtension.cpp:
+	.text  start:0x10C219E0 end:0x10C21B41
+
+Game/GridAngularWeight.cpp:
+	.text  start:0x10C21DD0 end:0x10C21EE0
 
 Game/Unsorted_10C223E0_3.cpp:
 	.text  start:0x10C223E0 end:0x10C2241F
