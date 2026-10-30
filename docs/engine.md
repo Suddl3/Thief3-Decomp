@@ -1483,3 +1483,38 @@ getter's existing three-word return ABI remains unchanged.
 This is static PC reconstruction, not whole-game runtime verification or a
 completed grid-search subsystem. Supporting aliases and declarations add no
 separate function or byte credit.
+
+## Planner intervals, target weighting and grid traversal
+
+The planner's periodic effect at `0x10BB88A0` passes a temporary `FVector`, two
+floating-point durations and an integer mode to the existing engine helper at
+`0x10A03780`. That helper copies the vector before returning. Its payload
+consumers at `0x10A030F0` and `0x10A03130` independently identify the duration,
+integer-limit and vector fields. Only a declaration and an alias are added for
+the engine helper. The existing getter at `0x10AA82E0` returns the borrowed
+member at offset `0x14`; its pointer-return alias preserves the original name.
+
+The cooldown update at `0x10BBB8D0` uses the existing current-command validation
+and cancellation path. The handle resolver at `0x10BFF2A0` checks the resolved
+object's runtime type and returns the same borrowed pointer. The existing
+interaction check at `0x10BAA9D0` independently calls integer-return virtual slot
+`0x88` on that target, supporting the structural interface used here.
+
+The target selector at `0x10BFD220` groups positive weights by resolved target
+pointer and returns the target with the greatest aggregate weight. Its two
+temporary arrays own their allocation buffers, not the target objects. Typed
+pointer and float views describe the observed four-byte elements; array
+allocation and cleanup follow the existing `cIntArray` implementation, including
+its exception cleanup. The returned pointer remains borrowed.
+
+The segment traversal at `0x10C25640` samples successive grid cells and reports
+the first cell at or below the requested value. Its position lookup uses the
+existing `0x10C06F30` implementation through a typed reference alias. The
+three-word cell handle is non-owning. A local double scale retains the observed
+x87 intermediate precision; the public vector layout and operations are unchanged.
+
+The rope-state transition at `0x10B493A0` compares the current and remembered
+states initialized by `0x10B492F0`, selects the linked object's transition action,
+and then records the new state. These are static PC reconstructions; no game
+execution or whole-game behavior claim is made. Supporting aliases, declarations
+and generated cleanup bodies receive no separate contribution credit.

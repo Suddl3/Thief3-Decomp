@@ -8787,6 +8787,9 @@ Game/Class_10E7E610.cpp:
 Game/Class_10E7E610_2.cpp:
 	.text  start:0x10B49360 end:0x10B49399
 
+Game/RopeStateTransition.cpp:
+	.text  start:0x10B493A0 end:0x10B4941F
+
 Game/cRopeMotion_2.cpp:
 	.text  start:0x10B49450 end:0x10B494B7
 
@@ -11458,6 +11461,9 @@ Game/Unsorted_10BB8700.cpp:
 Game/Unsorted_10BB8740_2.cpp:
 	.text  start:0x10BB8830 end:0x10BB889F
 
+Game/AIPeriodicEffect.cpp:
+	.text  start:0x10BB88A0 end:0x10BB8955
+
 Game/Unsorted_10BB8740.cpp:
 	.text  start:0x10BB8960 end:0x10BB8A2B
 
@@ -11555,6 +11561,9 @@ Game/Unsorted_10BBB770.cpp:
 
 Game/Unsorted_10BBB810.cpp:
 	.text  start:0x10BBB810 end:0x10BBB8A6
+
+Game/AIPlannerCooldown.cpp:
+	.text  start:0x10BBB8D0 end:0x10BBBAE2
 
 Game/Unsorted_10BBB8D0_5.cpp:
 	.text  start:0x10BBBDD0 end:0x10BBBFAC
@@ -13105,6 +13114,10 @@ Game/Unsorted_10BFD110_2.cpp:
 Game/Unsorted_10BFD110.cpp:
 	.text  start:0x10BFD160 end:0x10BFD208
 
+Game/AITargetWeightSelection.cpp:
+	.text  start:0x10BFD220 end:0x10BFD4B8
+	.text  start:0x10E2AB70 end:0x10E2AB8A  # .text$x: EH handlers and unwind funclets
+
 Game/Unsorted_10BFD4E0.cpp:
 	.text  start:0x10BFD4E0 end:0x10BFD52D
 	.text  start:0x10E2AB90 end:0x10E2ABA5  # .text$x: EH handlers and unwind funclets
@@ -14126,6 +14139,9 @@ Game/Unsorted_10C25580_2.cpp:
 	.text  start:0x10C26290 end:0x10C26297
 	.text  start:0x10C262B0 end:0x10C262C8
 	.text  start:0x10C26660 end:0x10C2666B
+
+Game/GridSegmentTraversal.cpp:
+	.text  start:0x10C25640 end:0x10C25769
 
 Game/Unsorted_10C25640.cpp:
 	.text  start:0x10C25770 end:0x10C25795
