@@ -6639,6 +6639,9 @@ Game/Class_10E6F4EC.cpp:
 	.text  start:0x10ABD820 end:0x10ABD8F3
 	.text  start:0x10E18B00 end:0x10E18B15  # .text$x: EH handlers and unwind funclets
 
+Game/StringRecordResize.cpp:
+	.text  start:0x10ABDAE0 end:0x10ABDC10
+
 Game/Unsorted_10ABD820_3.cpp:
 	.text  start:0x10ABDEB0 end:0x10ABDEDC
 	.text  start:0x10ABDFE0 end:0x10ABE053
@@ -11369,6 +11372,9 @@ Game/Unsorted_10BB1E10.cpp:
 	.text  start:0x10BB1E10 end:0x10BB1FC3
 	.text  start:0x10E267E0 end:0x10E267FA  # .text$x: EH handlers and unwind funclets
 
+Game/StateFleeUnwind.cpp:
+	.text  start:0x10BB2010 end:0x10BB20AA
+
 Game/ScriptControllerCleanup.cpp:
 	.text  start:0x10BB25F0 end:0x10BB2776
 
@@ -14404,6 +14410,9 @@ Game/Unsorted_10C276C0.cpp:
 	.text  start:0x10C276C0 end:0x10C2774E
 	.text  start:0x10E2D190 end:0x10E2D1A2  # .text$x: EH handlers and unwind funclets
 
+Game/GridCellBounds.cpp:
+	.text  start:0x10C27A20 end:0x10C27B78
+
 Game/Unsorted_10C27910.cpp:
 	.text  start:0x10C27B80 end:0x10C27D35
 
@@ -14490,6 +14499,13 @@ Game/Unsorted_10C29EF0.cpp:
 	.text  start:0x10C29F10 end:0x10C29F54
 	.text  start:0x10C2A290 end:0x10C2A2C2
 	.text  start:0x10C2E350 end:0x10C2E382
+
+Game/GridCommandAdd.cpp:
+	.text  start:0x10C2A330 end:0x10C2A464
+	.text  start:0x10E2D3F0 end:0x10E2D40A  # .text$x: EH handlers and unwind funclets
+
+Game/GridCommandRemove.cpp:
+	.text  start:0x10C2A470 end:0x10C2A597
 
 Game/MC_PlayAnimation.cpp:
 	.text  start:0x10C2E500 end:0x10C2E5AA
