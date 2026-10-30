@@ -2668,6 +2668,12 @@ Game/Unsorted_10A13040.cpp:
 Game/cConversationManager_5.cpp:
 	.text  start:0x10A13150 end:0x10A1318D
 
+Game/InteractionRegistryUpdate.cpp:
+	.text  start:0x10A13190 end:0x10A132F2
+
+Game/ActorInteractionEvent.cpp:
+	.text  start:0x10A13300 end:0x10A13477
+
 Game/cConversationManager_6.cpp:
 	.text  start:0x10A13480 end:0x10A134AC
 
@@ -7008,6 +7014,9 @@ Game/LockPickSoundLinks.cpp:
 
 Game/Class_10ACF9A0.cpp:
 	.text  start:0x10ACF690 end:0x10ACF766
+
+Game/NearestLinkedActor.cpp:
+	.text  start:0x10ACF770 end:0x10ACF931
 
 Game/Unsorted_10ACF9A0.cpp:
 	.text  start:0x10ACF9A0 end:0x10ACF9E4
@@ -13353,6 +13362,10 @@ Game/Unsorted_10C02030.cpp:
 	.text  start:0x10E2B050 end:0x10E2B065  # .text$x: EH handlers and unwind funclets
 	.text  start:0x10E2B0B0 end:0x10E2B0C5  # .text$x: EH handlers and unwind funclets
 
+Game/AudioControllerState.cpp:
+	.text  start:0x10C02720 end:0x10C027F5
+	.text  start:0x10E2B140 end:0x10E2B173  # .text$x: EH handlers and unwind funclets
+
 Game/Unsorted_10C033B0.cpp:
 	.text  start:0x10C033B0 end:0x10C03451
 
@@ -14326,6 +14339,10 @@ Game/Unsorted_10C26770.cpp:
 Game/Class_10E9925C_3.cpp:
 	.text  start:0x10C26890 end:0x10C2691D
 
+Game/GridControllerConstructor.cpp:
+	.text  start:0x10C26980 end:0x10C26A36
+	.text  start:0x10E2D130 end:0x10E2D150  # .text$x: EH handlers and unwind funclets
+
 Game/GridActionFactory.cpp:
 	.text  start:0x10C26AC0 end:0x10C26B5F
 
@@ -14343,6 +14360,9 @@ Game/Unsorted_10C26D60.cpp:
 Game/Unsorted_10C26A60.cpp:
 	.text  start:0x10C26E80 end:0x10C26ED8
 	.text  start:0x10C27010 end:0x10C27081
+
+Game/GridControllerDestructor.cpp:
+	.text  start:0x10C26EE0 end:0x10C27002
 
 Game/MC_MoveToPoint.cpp:
 	.text  start:0x10C27090 end:0x10C270A1
