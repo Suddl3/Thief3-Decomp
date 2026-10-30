@@ -6785,6 +6785,9 @@ Game/Unsorted_10AC6B30.cpp:
 	.text  start:0x10AC8180 end:0x10AC82D9
 	.text  start:0x10E194B0 end:0x10E194F2  # .text$x: EH handlers and unwind funclets
 
+Game/ObjectEventRouter.cpp:
+	.text  start:0x10AC8310 end:0x10AC84A5
+
 Game/Unsorted_10AC8540.cpp:
 	.text  start:0x10AC8540 end:0x10AC865B
 
@@ -11161,12 +11164,19 @@ Game/Unsorted_10BAA930.cpp:
 Game/Unsorted_10BAA930_2.cpp:
 	.text  start:0x10BAAB60 end:0x10BAAC83
 
+Game/ObjectStateSerialization.cpp:
+	.text  start:0x10BAB250 end:0x10BAB533
+	.text  start:0x10E26250 end:0x10E26273  # .text$x: EH handlers and unwind funclets
+
 Game/Unsorted_10BAAC90.cpp:
 	.text  start:0x10BABA40 end:0x10BABAAF
 
 Game/Class_10BAA580.cpp:
 	.text  start:0x10BABDD0 end:0x10BABECE
 	.text  start:0x10E26350 end:0x10E26362  # .text$x: EH handlers and unwind funclets
+
+Game/UniqueObjectWrapperAppend.cpp:
+	.text  start:0x10BABF80 end:0x10BAC049
 
 Game/Class_10BAC050.cpp:
 	.text  start:0x10BAC050 end:0x10BAC091
@@ -11337,6 +11347,9 @@ Game/cStateFlee.cpp:
 Game/Unsorted_10BB1E10.cpp:
 	.text  start:0x10BB1E10 end:0x10BB1FC3
 	.text  start:0x10E267E0 end:0x10E267FA  # .text$x: EH handlers and unwind funclets
+
+Game/ScriptControllerCleanup.cpp:
+	.text  start:0x10BB25F0 end:0x10BB2776
 
 Game/Unsorted_10BB2BC0.cpp:
 	.text  start:0x10BB2BC0 end:0x10BB2DD7
@@ -12860,6 +12873,9 @@ Game/State_Flee_7.cpp:
 	.text  start:0x10BE9E80 end:0x10BE9F4B
 	.text  start:0x10E29B30 end:0x10E29B4D  # .text$x: EH handlers and unwind funclets
 
+Game/AIStateSerialization.cpp:
+	.text  start:0x10BE9F50 end:0x10BEA196
+
 Game/Unsorted_10BE9F50_2.cpp:
 	.text  start:0x10BEA1A0 end:0x10BEA2F6
 	.text  start:0x10E29B50 end:0x10E29B72  # .text$x: EH handlers and unwind funclets
@@ -13188,6 +13204,9 @@ Game/Unsorted_10BFD4E0.cpp:
 Game/Unsorted_10BFD530_2.cpp:
 	.text  start:0x10BFD780 end:0x10BFD85A
 
+Game/ObjectResultPositions.cpp:
+	.text  start:0x10BFD860 end:0x10BFD9E0
+
 Game/Unsorted_10BFD530.cpp:
 	.text  start:0x10BFE6B0 end:0x10BFE6F5
 
@@ -13378,6 +13397,9 @@ Game/Unsorted_10C05A80.cpp:
 Game/Unsorted_10C05AB0.cpp:
 	.text  start:0x10C05AB0 end:0x10C05B47
 	.text  start:0x10C05BC0 end:0x10C05C8B
+
+Game/GridDirectionAngle.cpp:
+	.text  start:0x10C05B50 end:0x10C05BBB
 
 Game/cLineSegment.cpp:
 	.text  start:0x10C05E30 end:0x10C05F06
