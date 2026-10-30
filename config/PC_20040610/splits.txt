@@ -48,6 +48,9 @@ Game/Unsorted_10906DC0.cpp:
 	.text  start:0x10906DC0 end:0x10906E57
 	.text  start:0x10907030 end:0x10907187
 
+Game/StringBufferAllocate.cpp:
+	.text  start:0x10907870 end:0x109078D9
+
 Game/cString.cpp:
 	.text  start:0x109081E0 end:0x10908221
 
@@ -3614,6 +3617,10 @@ Game/Class_10A492B0.cpp:
 	.text  start:0x10A492B0 end:0x10A49382
 	.text  start:0x10A4AB10 end:0x10A4ABE5
 
+Game/SpatialQueryObjectFilter.cpp:
+	.text  start:0x10A49DA0 end:0x10A49EFB
+	.text  start:0x10E11370 end:0x10E1138A  # .text$x: EH handlers and unwind funclets
+
 Game/Unsorted_10A49020.cpp:
 	.text  start:0x10A4A100 end:0x10A4A186
 
@@ -6173,6 +6180,9 @@ Game/cConChoiceEvent_2.cpp:
 Game/cConChoiceEvent_3.cpp:
 	.text  start:0x10AA9B10 end:0x10AA9C6F
 	.text  start:0x10E173B0 end:0x10E173CA  # .text$x: EH handlers and unwind funclets
+
+Game/StatsConditionalRecordCopy.cpp:
+	.text  start:0x10AA9C70 end:0x10AA9D80
 
 Game/Class_10E6D9BC.cpp:
 	.text  start:0x10AA9DD0 end:0x10AA9DE8
@@ -11324,6 +11334,9 @@ Game/Unsorted_10BB0B10_2.cpp:
 
 Game/Class_10E8C7E8.cpp:
 	.text  start:0x10BB0C90 end:0x10BB0CC6
+
+Game/ControlModelFlagCommand.cpp:
+	.text  start:0x10BB0CD0 end:0x10BB0E31
 
 Game/Class_10E8C818.cpp:
 	.text  start:0x10BB0E40 end:0x10BB0F16
