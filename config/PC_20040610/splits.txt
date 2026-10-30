@@ -11144,6 +11144,10 @@ Game/Class_10BAA580.cpp:
 Game/Class_10BAC050.cpp:
 	.text  start:0x10BAC050 end:0x10BAC091
 
+Game/FactionRelationQuery.cpp:
+	.text  start:0x10BAC100 end:0x10BAC34F
+	.text  start:0x10E26370 end:0x10E26382  # .text$x: EH handlers and unwind funclets
+
 Game/Unsorted_10BAC0A0.cpp:
 	.text  start:0x10BAD820 end:0x10BAD8F1
 	.text  start:0x10E264D0 end:0x10E264F3  # .text$x: EH handlers and unwind funclets
@@ -11417,6 +11421,9 @@ Game/cRandomInterval.cpp:
 
 Game/Unsorted_10BB7F90.cpp:
 	.text  start:0x10BB8070 end:0x10BB80BC
+
+Game/FactionContextActor.cpp:
+	.text  start:0x10BB80D0 end:0x10BB80DB
 
 Game/Unsorted_10BB8160.cpp:
 	.text  start:0x10BB8160 end:0x10BB817D
@@ -13347,6 +13354,9 @@ Game/Unsorted_10C05F10.cpp:
 Game/Unsorted_10C06030.cpp:
 	.text  start:0x10C06030 end:0x10C06191
 
+Game/GridEdgeSpan.cpp:
+	.text  start:0x10C061C0 end:0x10C064B9
+
 Game/Unsorted_10C064D0.cpp:
 	.text  start:0x10C06540 end:0x10C0655E
 	.text  start:0x10C07300 end:0x10C07321
@@ -14127,6 +14137,9 @@ Game/Unsorted_10C20BD0.cpp:
 Game/Unsorted_10C20DA0.cpp:
 	.text  start:0x10C211C0 end:0x10C21223
 	.text  start:0x10C223A0 end:0x10C223D1
+
+Game/GridRegionQuery.cpp:
+	.text  start:0x10C21340 end:0x10C21509
 
 Game/Unsorted_10C21230.cpp:
 	.text  start:0x10C21680 end:0x10C2170E

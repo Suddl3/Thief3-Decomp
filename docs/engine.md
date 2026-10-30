@@ -1558,3 +1558,40 @@ implemented or counted.
 
 These are static PC reconstructions. Supporting aliases, declarations, and
 compiler-generated cleanup do not receive separate Game contribution credit.
+
+## Faction collection and grid edge spans
+
+The collector at `0x10BAC100` queries nearby actors with faction filters, or
+collects a temporary nearby list and appends actors whose relation is 3 or 4.
+Both output and temporary lists hold borrowed actor pointers. Only the temporary
+array buffer is owned and released by this function. Its stack filter objects
+borrow their model and linked-filter pointers. The pointer-slot view retains the
+existing array growth, allocator brackets and exception cleanup.
+
+The native getter at `0x10C1A160` returns the four-byte counter allocation
+created by the existing `AddRefCounter` implementation. Its typed pointer alias
+and the receiver-preserving query alias at `0x10C1A310` leave the established
+canonical names unchanged. The query body does not read its receiver. Two
+filter-constructor aliases describe independently observed pointer fields;
+another alias describes the actor pointer passed to the existing relation
+lookup at `0x10BAAC90`.
+
+The context getter at `0x10BB80D0` returns the actor from its embedded handle at
+offset `0x2A0`, through the existing handle implementation. It transfers no
+ownership.
+
+The geometry helper at `0x10C061C0` reads a borrowed point and a contiguous array
+of 36-byte edge records. Each record contains start and end vectors followed by
+12 bytes whose meaning remains unknown. It stops after the first two strict Y
+crossings and tests whether the point's X lies strictly between their computed
+intersections. This is the observed edge-span test, not a claim that the helper
+implements general polygon containment. The array's unused second header word
+also remains unnamed. The helper has no external calls or global references.
+
+Its region-query caller at `0x10C21340` examines borrowed 36-byte region records.
+For type 1 it uses the edge-span helper, returns the mean of all edge endpoints,
+and writes radius 16. For type 0 it compares squared distance with the square of
+the stored radius plus the observed signed integer context field; it returns
+the stored center and radius on success. Its manager-lookup fallback returns a
+null comparison without writing those outputs. The owner pointer and the two
+typed lookup/distance aliases retain their existing canonical identities.
