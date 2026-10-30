@@ -950,6 +950,9 @@ Game/Class_10E49F90_3.cpp:
 Game/Class_10E49F90.cpp:
 	.text  start:0x10936240 end:0x109362A6
 
+Game/ShaderNameInitialization.cpp:
+	.text  start:0x109362D0 end:0x1093679A
+
 Game/Class_109367A0.cpp:
 	.text  start:0x109367A0 end:0x10936866
 	.text  start:0x10936A60 end:0x10936ABD
@@ -2462,6 +2465,9 @@ Game/Class_10E5B2C0_15.cpp:
 
 Game/Window_4.cpp:
 	.text  start:0x109E39E0 end:0x109E39F0
+
+Game/BuiltinWindowType.cpp:
+	.text  start:0x109E3A10 end:0x109E3C31
 
 Game/Unsorted_109E3A10.cpp:
 	.text  start:0x109E3C40 end:0x109E3C5D
@@ -12265,6 +12271,9 @@ Game/Unsorted_10BD1EA0.cpp:
 Game/Unsorted_10BD1EF0.cpp:
 	.text  start:0x10BD1EF0 end:0x10BD1F43
 
+Game/StateSearchContextUpdate.cpp:
+	.text  start:0x10BD20F0 end:0x10BD2251
+
 Game/Class_10E939E0_6.cpp:
 	.text  start:0x10BD2D30 end:0x10BD2E5F
 
@@ -13994,6 +14003,9 @@ Game/Class_10C16740.cpp:
 Game/Unsorted_10C16830.cpp:
 	.text  start:0x10C16830 end:0x10C168C5
 
+Game/VisualStateSerialization.cpp:
+	.text  start:0x10C17450 end:0x10C17676
+
 Game/cVisualSubsystemArray_2.cpp:
 	.text  start:0x10C176E0 end:0x10C17747
 
@@ -14653,6 +14665,9 @@ Game/Unsorted_10C2F600.cpp:
 
 Game/cMotionControllerAnim_19.cpp:
 	.text  start:0x10C2F8A0 end:0x10C2F8CB
+
+Game/AnimationCacheSelection.cpp:
+	.text  start:0x10C2F8D0 end:0x10C2F959
 
 Game/Unsorted_10C2F970.cpp:
 	.text  start:0x10C2F970 end:0x10C2F9D5
