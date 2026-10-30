@@ -1339,6 +1339,9 @@ Game/Class_10E4AA94.cpp:
 	.text  start:0x1094DB20 end:0x1094DBEE
 	.text  start:0x10E05950 end:0x10E05970  # .text$x: EH handlers and unwind funclets
 
+Game/MaterialTextureAndShaderInitialization.cpp:
+	.text  start:0x1094DBF0 end:0x1094DEF7
+
 Game/Unsorted_1094DA70.cpp:
 	.text  start:0x1094DF00 end:0x1094DF92
 
@@ -6476,6 +6479,9 @@ Game/cRefPtr.cpp:
 Game/Unsorted_10AB5B50.cpp:
 	.text  start:0x10AB5B50 end:0x10AB5BB8
 	.text  start:0x10AB6EB0 end:0x10AB6ECD
+
+Game/OptionsApplyVideo.cpp:
+	.text  start:0x10AB61A0 end:0x10AB6311
 
 Game/Class_10E49AC4.cpp:
 	.text  start:0x10AB6E50 end:0x10AB6EAE
@@ -14568,6 +14574,9 @@ Game/cMotionControllerAnim_3.cpp:
 Game/cMotionControllerAnim_4.cpp:
 	.text  start:0x10C2EE60 end:0x10C2EEA3
 
+Game/MotionAnimationPlayback.cpp:
+	.text  start:0x10C2EEC0 end:0x10C2EFBE
+
 Game/Unsorted_10C2EEC0.cpp:
 	.text  start:0x10C2EFC0 end:0x10C2EFCE
 	.text  start:0x10C2F090 end:0x10C2F09D
@@ -14581,6 +14590,9 @@ Game/cMotionControllerAnim_6.cpp:
 
 Game/cMotionControllerAnim_7.cpp:
 	.text  start:0x10C2F030 end:0x10C2F083
+
+Game/AnimationPointHeight.cpp:
+	.text  start:0x10C2F0A0 end:0x10C2F16F
 
 Game/Unsorted_10C2F1B0.cpp:
 	.text  start:0x10C2F1B0 end:0x10C2F236
@@ -14600,6 +14612,10 @@ Game/cMotionControllerAnim_10.cpp:
 
 Game/cMotionControllerAnim_11.cpp:
 	.text  start:0x10C2F300 end:0x10C2F32B
+
+Game/LocomotionCommandFactory.cpp:
+	.text  start:0x10C2F340 end:0x10C2F424
+	.text  start:0x10E2D7D0 end:0x10E2D7F3  # .text$x: EH handlers and unwind funclets
 
 Game/cMotionControllerAnim_12.cpp:
 	.text  start:0x10C2F430 end:0x10C2F4A0
