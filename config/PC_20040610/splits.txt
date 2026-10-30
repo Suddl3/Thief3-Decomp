@@ -6544,6 +6544,9 @@ Game/Unsorted_10AB9130.cpp:
 	.text  start:0x10ABA050 end:0x10ABA136
 	.text  start:0x10ABB0E0 end:0x10ABB0FE
 
+Game/WaterEventHandling.cpp:
+	.text  start:0x10AB9D90 end:0x10AB9FC1
+
 Game/Unsorted_10AB5AE0.cpp:
 	.text  start:0x10ABA160 end:0x10ABA165
 	.text  start:0x10ABA190 end:0x10ABA197
@@ -13403,6 +13406,10 @@ Game/AudioControllerState.cpp:
 Game/Unsorted_10C033B0.cpp:
 	.text  start:0x10C033B0 end:0x10C03451
 
+Game/AudioCallbackQueue.cpp:
+	.text  start:0x10C04630 end:0x10C047E9
+	.text  start:0x10E2B3D0 end:0x10E2B3E2  # .text$x: EH handlers and unwind funclets
+
 Game/Unsorted_10C04810_2.cpp:
 	.text  start:0x10C04810 end:0x10C0482B
 	.text  start:0x10C04D90 end:0x10C04DB3
@@ -14691,6 +14698,9 @@ Game/cMotionControllerAnim_31.cpp:
 Game/cIndexedList.cpp:
 	.text  start:0x10C323A0 end:0x10C32425
 
+Game/IntegerHashTableSet.cpp:
+	.text  start:0x10C32430 end:0x10C324D8
+
 Game/Class_10C32C70.cpp:
 	.text  start:0x10C325E0 end:0x10C3265A
 	.text  start:0x10C32C70 end:0x10C32C95
@@ -14826,6 +14836,10 @@ Game/Class_10E9AF04_2.cpp:
 
 Game/Class_10E9AF04_3.cpp:
 	.text  start:0x10C38400 end:0x10C38423
+
+Game/MotionControllerFactory.cpp:
+	.text  start:0x10C38460 end:0x10C384E6
+	.text  start:0x10E2DCA0 end:0x10E2DCC3  # .text$x: EH handlers and unwind funclets
 
 Game/Unsorted_10C38500.cpp:
 	.text  start:0x10C38500 end:0x10C38512
