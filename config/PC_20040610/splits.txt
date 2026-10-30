@@ -6617,6 +6617,9 @@ Game/Unsorted_10ABC760.cpp:
 	.text  start:0x10ABC760 end:0x10ABC7ED
 	.text  start:0x10ABCC20 end:0x10ABCC36
 
+Game/LinkedPawnStatus.cpp:
+	.text  start:0x10ABC7F0 end:0x10ABC8EF
+
 Game/Unsorted_10ABC7F0.cpp:
 	.text  start:0x10ABC8F0 end:0x10ABC9F2
 	.text  start:0x10E18970 end:0x10E18982  # .text$x: EH handlers and unwind funclets
@@ -6992,6 +6995,10 @@ Game/Unsorted_10ACF0A0.cpp:
 Game/Unsorted_10ACF3A0.cpp:
 	.text  start:0x10ACF3A0 end:0x10ACF433
 	.text  start:0x10E19C10 end:0x10E19C22  # .text$x: EH handlers and unwind funclets
+
+Game/LockPickSoundLinks.cpp:
+	.text  start:0x10ACF440 end:0x10ACF685
+	.text  start:0x10E19BF0 end:0x10E19C0A  # .text$x: EH handlers and unwind funclets
 
 Game/Class_10ACF9A0.cpp:
 	.text  start:0x10ACF690 end:0x10ACF766
@@ -8544,6 +8551,10 @@ Game/cLockPickController_2.cpp:
 Game/cLockPickController_4.cpp:
 	.text  start:0x10B3EBD0 end:0x10B3ED1E
 
+Game/LockPickControllerDestructor.cpp:
+	.text  start:0x10B3EF20 end:0x10B3EFD1
+	.text  start:0x10E20300 end:0x10E20328  # .text$x: EH handlers and unwind funclets
+
 Game/cGarrettLockPickController_3.cpp:
 	.text  start:0x10B3EFE0 end:0x10B3EFF3
 
@@ -9053,6 +9064,10 @@ Game/Unsorted_10B54790.cpp:
 
 Game/Unsorted_10B547C0.cpp:
 	.text  start:0x10B54920 end:0x10B54956
+
+Game/MapWindowConfig.cpp:
+	.text  start:0x10B54CE0 end:0x10B54DFA
+	.text  start:0x10E213F0 end:0x10E2140A  # .text$x: EH handlers and unwind funclets
 
 Game/Unsorted_10B54970.cpp:
 	.text  start:0x10B54FE0 end:0x10B55026
@@ -11160,6 +11175,10 @@ Game/FactionRelationQuery.cpp:
 	.text  start:0x10BAC100 end:0x10BAC34F
 	.text  start:0x10E26370 end:0x10E26382  # .text$x: EH handlers and unwind funclets
 
+Game/FactionRelationZeroQuery.cpp:
+	.text  start:0x10BAC350 end:0x10BAC569
+	.text  start:0x10E26390 end:0x10E263A2  # .text$x: EH handlers and unwind funclets
+
 Game/Unsorted_10BAC0A0.cpp:
 	.text  start:0x10BAD820 end:0x10BAD8F1
 	.text  start:0x10E264D0 end:0x10E264F3  # .text$x: EH handlers and unwind funclets
@@ -11331,6 +11350,9 @@ Game/Unsorted_10BB3000.cpp:
 Game/Class_10E8C950.cpp:
 	.text  start:0x10BB3190 end:0x10BB32B1
 	.text  start:0x10E26800 end:0x10E26812  # .text$x: EH handlers and unwind funclets
+
+Game/ScriptControllerCommand.cpp:
+	.text  start:0x10BB3300 end:0x10BB3426
 
 Game/Class_10E8C728.cpp:
 	.text  start:0x10BB35C0 end:0x10BB35D5
@@ -14143,6 +14165,9 @@ Game/Unsorted_10C20050_2.cpp:
 Game/Unsorted_10C20050.cpp:
 	.text  start:0x10C200F0 end:0x10C20214
 
+Game/GridBoxCorners.cpp:
+	.text  start:0x10C20A50 end:0x10C20BBC
+
 Game/Unsorted_10C20BD0.cpp:
 	.text  start:0x10C20D60 end:0x10C20D94
 
@@ -14176,8 +14201,14 @@ Game/Unsorted_10C22B20.cpp:
 Game/Unsorted_10C223E0_2.cpp:
 	.text  start:0x10C22BA0 end:0x10C22BE0
 
+Game/GridAngularWindow.cpp:
+	.text  start:0x10C22BE0 end:0x10C22CDA
+
 Game/Unsorted_10C22BE0.cpp:
 	.text  start:0x10C22CE0 end:0x10C22D57
+
+Game/GridEdgeFilter.cpp:
+	.text  start:0x10C22EE0 end:0x10C230CF
 
 Game/Unsorted_10C22DA0.cpp:
 	.text  start:0x10C24260 end:0x10C245D5
