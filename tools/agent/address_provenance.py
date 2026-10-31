@@ -73,6 +73,9 @@ class OriginalAddresses:
         self._stats = {}
         self._objects = {}
         self._data_objects = {}
+        self._anchor_notes = {}
+        self._defined_names = {}
+        self._field_relocations = {}
         self.origins: Dict[Tuple[str, int], dict] = {}
         self.model_reads = 0
 
@@ -210,9 +213,48 @@ class OriginalAddresses:
         if not m:
             return False
         _, info = self._eh_info(m[1])
-        unwind = self._relocation(info + 8)
-        expected = self._relocation(unwind + 8 * int(m[2]) + 4)
+        states = self._funcinfo_states(info)
+        state = int(m[2])
+        if state >= states:
+            raise ProvenanceError("funclet state exceeds original FuncInfo bounds")
+        _, owner, section, offset = self._named_view(info, 28)
+        unwind = self._original_pointer(owner, section, offset + 8, info + 8)
+        # Read the complete map, not merely a pointer at an unchecked index.
+        _, obj, section, offset = self._named_view(unwind, states * 8)
+        field = state * 8 + 4
+        expected = self._original_pointer(obj, section, offset + field, unwind + field)
         return expected == address and address in self.functions
+
+    def _original_pointer(self, obj, section, offset, original_field):
+        """Join the model field to its actual COFF relocation, including folding."""
+        expected = self._relocation(original_field)
+        identity = (obj, id(obj.data), section.index)
+        if identity not in self._field_relocations:
+            fields = {}
+            for r in section.relocations:
+                fields.setdefault(r.offset, []).append(r)
+            self._field_relocations[identity] = fields
+        relocs = self._field_relocations[identity].get(offset, [])
+        if len(relocs) != 1 or relocs[0].type != coff.IMAGE_REL_I386_DIR32:
+            raise ProvenanceError("original unwind field lacks its COFF relocation")
+        r = relocs[0]
+        target = obj.slots[r.symbol]
+        if target is None:
+            raise ProvenanceError("invalid original unwind field target")
+        base = (expected - obj.addend(section.index, r)) & 0xFFFFFFFF
+        known = self.p.address_of(target.name)
+        named = target.name in self.names.get(base, set()) \
+            or self.function_names.get(target.name) == base
+        if known is not None and known != base:
+            raise ProvenanceError("conflicting original unwind field target")
+        if target.defined:
+            self._check_named_slot(obj, target, base)
+        if known is None and not named:
+            values = self._anchor_notes.get((obj, id(obj.data)))
+            if not target.defined or values is None or target.index >= len(values) \
+                    or values[target.index] != base:
+                raise ProvenanceError("unwind field target lacks original slot/name evidence")
+        return expected
 
     def _tail(self, obj, values):
         """Recognize only append-only passes documented by split.py/coff.py."""
@@ -304,7 +346,34 @@ class OriginalAddresses:
     def has_note(self, obj):
         return self._note(obj) is not None
 
-    def _read_named(self, address, size):
+    def _check_named_slot(self, obj, sym, address):
+        """Check one anchored definition without recursively loading its peers.
+
+        A data owner may contain the funclet currently being validated by _note.
+        Re-entering symbol_address for this independent named data anchor would
+        re-enter that unfinished note. Validate its own raw slot directly instead.
+        """
+        identity = (obj, id(obj.data))
+        if identity not in self._anchor_notes:
+            try:
+                values = split_virtual_addresses(obj)
+            except ValueError as e:
+                raise ProvenanceError(str(e)) from e
+            if values is not None:
+                self._tail(obj, values)
+            # Cache only successful immutable slot/append-lineage validation.
+            self._anchor_notes[identity] = values
+        values = self._anchor_notes[identity]
+        if values is not None:
+            if sym.index >= len(values):
+                raise ProvenanceError("named EH definition lacks its original slot")
+            witness = values[sym.index]
+            if witness:
+                sec = obj.section(sym.section)
+                if witness != address or sec is None or not self._contains(self._group_key(obj), address, sec.is_code):
+                    raise ProvenanceError("EH target name/slot/group conflict")
+
+    def _named_view(self, address, size):
         candidates = [(a, b, key) for a, b, key in self.data_owners if a <= address and address + size <= b]
         keys = {key for _, _, key in candidates}
         if len(keys) > 1:
@@ -322,20 +391,43 @@ class OriginalAddresses:
             if cached[0] != stamp:
                 raise ProvenanceError("original EH target object changed")
             obj = cached[1]
-        matches = [s for s in obj.symbols if s.defined and not s.is_section
-                   and s.name in self.names.get(address, set()) and self.p.address_of(s.name) == address]
+        # Parsed Coff bytes/symbols are immutable, as for _objects above. Index
+        # once rather than rescanning a potentially huge shared owner per state.
+        identity = (obj, id(obj.data))
+        if identity not in self._defined_names:
+            names = {}
+            for s in obj.symbols:
+                if s.defined and not s.is_section:
+                    names.setdefault(s.name, []).append(s)
+            self._defined_names[identity] = names
+        names = self._defined_names[identity]
+        matches = sorted((s for name in self.names.get(address, set()) for s in names.get(name, [])
+                          if self.p.address_of(s.name) == address), key=lambda s: s.index)
         if not matches:
             raise ProvenanceError("EH target lacks an independent readable named definition")
         views = []
+        locations = []
         for s in matches:
             sec = obj.section(s.section)
-            witness = self.symbol_address(obj, s)
-            if witness != address or s.value + size > len(sec.data):
+            self._check_named_slot(obj, s, address)
+            if sec is None or s.value + size > len(sec.data):
                 raise ProvenanceError("EH target name/slot/extent conflict")
             views.append(sec.data[s.value:s.value + size])
+            locations.append((obj, sec, s.value))
         if any(v != views[0] for v in views[1:]):
             raise ProvenanceError("conflicting named EH target definitions")
-        return views[0]
+        return (views[0], *locations[0])
+
+    def _read_named(self, address, size):
+        return self._named_view(address, size)[0]
+
+    def _funcinfo_states(self, target):
+        # Shared by undefined FuncInfo and renamed funclet witnesses.
+        data = self._read_named(target, 28)
+        magic, states = struct.unpack_from("<Ii", data)
+        if magic & ~3 != coff.EH_MAGIC or not 0 <= states <= 0x1000:
+            raise ProvenanceError("original named FuncInfo is not a supported EH table")
+        return states
 
     def relocation_address(self, obj, section, relocation, offset, address):
         """Base of an undefined friendly FuncInfo, proved by its original field."""
@@ -357,10 +449,7 @@ class OriginalAddresses:
         key = self._group_key(obj)
         if key is None or not self._contains(key, start, True):
             raise ProvenanceError("EH source object/group identity mismatch")
-        data = self._read_named(target, 28)
-        magic, states = struct.unpack_from("<II", data)
-        if magic & ~3 != coff.EH_MAGIC or states > 0x1000:
-            raise ProvenanceError("original named FuncInfo is not a supported EH table")
+        self._funcinfo_states(target)
         self.origins[(str(source_path(obj)), sym.index)] = dict(kind="original-handler-field+named-target",
             address=target, source_field=start + 1, relocation_type=relocation.type, addend=0,
             object_sha256=hashlib.sha256(obj.data).hexdigest(), group=key, **self.model_identity)

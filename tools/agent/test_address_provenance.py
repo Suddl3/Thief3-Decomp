@@ -4,6 +4,7 @@ import json
 import struct
 import tempfile
 import unittest
+from unittest.mock import patch
 from pathlib import Path
 from types import SimpleNamespace
 
@@ -371,6 +372,211 @@ class AddressProvenanceTests(unittest.TestCase):
         path.write_bytes(obj.rewrite(patch={(1, 8): bytes(4)}))
         with self.assertRaises(ProvenanceError):
             c.handler_view()
+
+    def test_funclet_index_must_be_within_actual_state_count(self):
+        c = self.case
+        old = c.source_symbols[1]
+        c.source_symbols[1] = (coff.eh_funclet_name(FUNCTION, 4),) + old[1:]
+        # An unrelated original pointer beyond the one-entry map is not lineage.
+        c.model["relocations"].append(dict(addr=D + 36, type="OFF32", size=4, target=U))
+        obj = c.write()
+        with self.assertRaises(ProvenanceError):
+            for_project(c.project).symbol_address(obj, obj.slots[1])
+
+    def test_funclet_requires_complete_unwind_map(self):
+        c = self.case
+        obj = c.write()
+        path = c.objects / "__shared_data.obj"
+        data = coff.Coff.load(path)
+        # Header remains readable, but 5 entries require 40 bytes, not 36.
+        path.write_bytes(data.rewrite(patch={(1, 12): struct.pack("<I", 5)}))
+        with self.assertRaises(ProvenanceError):
+            for_project(c.project).symbol_address(obj, obj.slots[1])
+
+    def test_funclet_last_state_is_valid(self):
+        c = self.case
+        old = c.source_symbols[1]
+        c.source_symbols[1] = (coff.eh_funclet_name(FUNCTION, 1),) + old[1:]
+        c.model["names"].append(dict(addr=D + 40, name=f"DAT_{D+40:08x}"))
+        c.model["relocations"][1]["target"] = D + 40
+        c.model["relocations"][2:] = [dict(addr=D + x, type="OFF32", size=4, target=U) for x in (44, 52)]
+        data = bytearray(56)
+        struct.pack_into("<II", data, 8, coff.EH_MAGIC, 2)
+        struct.pack_into("<i", data, 40, -1)
+        raw = make_object([(".rdata", bytes(data), [(16, 0, 6), (44, 2, 6), (52, 2, 6)], 0x40000040),
+                           (".note.split", note([D + 40, D + 8, 0]), [], 0x40000040)],
+                          [(f"DAT_{D+40:08x}", 40, 1, 0, 2, b""),
+                           (f"DAT_{D+8:08x}", 8, 1, 0, 2, b""),
+                           (f"Unwind@{U:08x}", 0, 0, 0, 2, b"")])
+        (c.objects / "__shared_data.obj").write_bytes(raw)
+        obj = c.write()
+        self.assertEqual(for_project(c.project).symbol_address(obj, obj.slots[1]), U)
+
+    def test_funclet_data_owner_can_contain_its_own_funclet(self):
+        c = self.case
+        c.groups["unit.obj"]["rdata"] = [[D, D + 36]]
+        c.write()
+        shared_path = c.objects / "__shared_data.obj"
+        data = coff.Coff.load(shared_path).section(1).data
+        symbols = c.source_symbols + [(f"DAT_{D:08x}", 0, 2, 0, 2, b""),
+                                      (f"DAT_{D+8:08x}", 8, 2, 0, 2, b""),
+                                      (f"Unwind@{U:08x}", 0, 0, 0, 2, b"")]
+        raw = make_object([(".text", bytes(c.source_data), c.source_relocs, 0x60000020),
+                           (".rdata", data, [(4, 6, 6), (16, 4, 6)], 0x40000040),
+                           (".note.split", note(c.values + [D, D + 8, 0]), [], 0x40000040)], symbols)
+        c.path.write_bytes(raw)
+        shared_path.unlink()
+        obj = load_object(c.path)
+        self.assertEqual(for_project(c.project).symbol_address(obj, obj.slots[1]), U)
+        self.assertEqual(c.handler_view(obj).relocs[1][0], D + 8)
+
+    def test_defined_friendly_map_target_reuses_owner_slot_validation(self):
+        c = self.case
+        c.groups["unit.obj"]["rdata"] = [[D, D + 36]]
+        c.write()
+        shared_path = c.objects / "__shared_data.obj"
+        data = coff.Coff.load(shared_path).section(1).data
+        symbols = c.source_symbols + [(f"DAT_{D:08x}", 0, 2, 0, 2, b""),
+                                      (f"DAT_{D+8:08x}", 8, 2, 0, 2, b"")]
+        # The map now refers to the defined friendly funclet in this owner.
+        raw = make_object([(".text", bytes(c.source_data), c.source_relocs, 0x60000020),
+                           (".rdata", data, [(4, 1, 6), (16, 4, 6)], 0x40000040),
+                           (".note.split", note(c.values + [D, D + 8]), [], 0x40000040)], symbols)
+        c.path.write_bytes(raw)
+        shared_path.unlink()
+        obj = load_object(c.path)
+        with patch("address_provenance.split_virtual_addresses", wraps=split_virtual_addresses) as parse:
+            self.assertEqual(for_project(c.project).symbol_address(obj, obj.slots[1]), U)
+            self.assertEqual(c.handler_view(obj).relocs[1][0], D + 8)
+        # One parse for the caller Coff, one for the separately loaded data owner.
+        self.assertEqual(parse.call_count, 2)
+
+    def test_funclet_rejects_bad_actual_header(self):
+        for magic, states in ((0, 1), (coff.EH_MAGIC, 0), (coff.EH_MAGIC, -1),
+                              (coff.EH_MAGIC, 0x1001)):
+            with self.subTest(magic=magic, states=states):
+                c = Case()
+                try:
+                    obj = c.write()
+                    path = c.objects / "__shared_data.obj"
+                    data = coff.Coff.load(path)
+                    path.write_bytes(data.rewrite(patch={(1, 8): struct.pack("<Ii", magic, states)}))
+                    with self.assertRaises(ProvenanceError):
+                        for_project(c.project).symbol_address(obj, obj.slots[1])
+                finally:
+                    c.close()
+
+    def test_funclet_requires_actual_map_field_relocation(self):
+        c = self.case
+        obj = c.write()
+        path = c.objects / "__shared_data.obj"
+        data = coff.Coff.load(path)
+        # Keep the model pointer but remove its actual COFF relocation.
+        raw = make_object([(".rdata", data.section(1).data, [(16, 0, 6)], 0x40000040),
+                           (".note.split", note([D, D + 8, 0]), [], 0x40000040)],
+                          [(f"DAT_{D:08x}", 0, 1, 0, 2, b""),
+                           (f"DAT_{D+8:08x}", 8, 1, 0, 2, b""),
+                           (f"Unwind@{U:08x}", 0, 0, 0, 2, b"")])
+        path.write_bytes(raw)
+        with self.assertRaises(ProvenanceError):
+            for_project(c.project).symbol_address(obj, obj.slots[1])
+
+    def test_funclet_checks_actual_map_link_and_field(self):
+        for relocations in ([(4, 2, 6)], [(4, 2, 7), (16, 0, 6)],
+                            [(4, 0, 6), (16, 0, 6)]):
+            with self.subTest(relocations=relocations):
+                c = Case()
+                try:
+                    obj = c.write()
+                    path = c.objects / "__shared_data.obj"
+                    data = coff.Coff.load(path).section(1).data
+                    raw = make_object([(".rdata", data, relocations, 0x40000040),
+                                       (".note.split", note([D, D + 8, 0]), [], 0x40000040)],
+                                      [(f"DAT_{D:08x}", 0, 1, 0, 2, b""),
+                                       (f"DAT_{D+8:08x}", 8, 1, 0, 2, b""),
+                                       (f"Unwind@{U:08x}", 0, 0, 0, 2, b"")])
+                    path.write_bytes(raw)
+                    with self.assertRaises(ProvenanceError):
+                        for_project(c.project).symbol_address(obj, obj.slots[1])
+                finally:
+                    c.close()
+
+    def test_funclet_preserves_folded_target_addend(self):
+        c = self.case
+        c.project._symbols.append(SimpleNamespace(name="Container", address=U - 4, size=12,
+                                                 type="object", is_function=False))
+        obj = c.write()
+        path = c.objects / "__shared_data.obj"
+        data = bytearray(coff.Coff.load(path).section(1).data)
+        struct.pack_into("<I", data, 4, 4)
+        raw = make_object([(".rdata", bytes(data), [(4, 2, 6), (16, 0, 6)], 0x40000040),
+                           (".note.split", note([D, D + 8, 0]), [], 0x40000040)],
+                          [(f"DAT_{D:08x}", 0, 1, 0, 2, b""),
+                           (f"DAT_{D+8:08x}", 8, 1, 0, 2, b""),
+                           ("Container", 0, 0, 0, 2, b"")])
+        path.write_bytes(raw)
+        self.assertEqual(for_project(c.project).symbol_address(obj, obj.slots[1]), U)
+
+    def test_repeated_named_reads_parse_slot_lineage_once(self):
+        c = self.case
+        c.write()
+        service = for_project(c.project)
+        service._load()
+        with patch("address_provenance.split_virtual_addresses", wraps=split_virtual_addresses) as parse:
+            for _ in range(5):
+                self.assertEqual(service._funcinfo_states(D + 8), 1)
+        self.assertEqual(parse.call_count, 1)
+
+    def test_repeated_named_reads_index_symbols_and_fields_once(self):
+        class CountedList(list):
+            iterations = 0
+
+            def __iter__(self):
+                self.iterations += 1
+                return super().__iter__()
+
+        c = self.case
+        c.write()
+        service = for_project(c.project)
+        service._load()
+        path = c.objects / "__shared_data.obj"
+        owner = load_object(path)
+        owner.symbols = CountedList(owner.symbols)
+        section = owner.section(1)
+        section.relocations = CountedList(section.relocations)
+        service._data_objects[path] = service._stat(path), owner
+        for _ in range(5):
+            service._funcinfo_states(D + 8)
+            service._original_pointer(owner, section, 4, D + 4)
+        # One name index plus two iterations for the single append-lineage check.
+        self.assertLessEqual(owner.symbols.iterations, 3)
+        self.assertEqual(section.relocations.iterations, 1)
+
+    def test_cached_named_owner_still_rejects_file_change(self):
+        c = self.case
+        c.write()
+        service = for_project(c.project)
+        service._load()
+        self.assertEqual(service._funcinfo_states(D + 8), 1)
+        path = c.objects / "__shared_data.obj"
+        path.write_bytes(path.read_bytes() + b"changed")
+        with self.assertRaises(ProvenanceError):
+            service._funcinfo_states(D + 8)
+
+    def test_named_index_preserves_conflicting_duplicate_definitions(self):
+        c = self.case
+        obj = c.write()
+        path = c.objects / "__shared_data.obj"
+        data = coff.Coff.load(path).section(1).data + bytes(28)
+        raw = make_object([(".rdata", data, [(4, 2, 6), (16, 0, 6)], 0x40000040),
+                           (".note.split", note([D, D + 8, 0, D + 8]), [], 0x40000040)],
+                          [(f"DAT_{D:08x}", 0, 1, 0, 2, b""),
+                           (f"DAT_{D+8:08x}", 8, 1, 0, 2, b""),
+                           (f"Unwind@{U:08x}", 0, 0, 0, 2, b""),
+                           (f"DAT_{D+8:08x}", 36, 1, 0, 2, b"")])
+        path.write_bytes(raw)
+        with self.assertRaises(ProvenanceError):
+            for_project(c.project).symbol_address(obj, obj.slots[1])
 
     def test_missing_independent_target_name_rejects(self):
         c = self.case
