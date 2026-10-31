@@ -1595,3 +1595,142 @@ the stored radius plus the observed signed integer context field; it returns
 the stored center and radius on success. Its manager-lookup fallback returns a
 null comparison without writing those outputs. The owner pointer and the two
 typed lookup/distance aliases retain their existing canonical identities.
+
+
+## Owned string conversion used by grid commands
+
+Engine declaration `0x10AF5210` (31 bytes) converts a borrowed `const char*`
+to an owned four-byte `cString` value. Its entry stack has the hidden output
+pointer at `+4` and input pointer at `+8`; it calls the existing `cString`
+constructor at `0x109081E0` with the output as receiver, returns that output in
+EAX, and uses a plain return. The declaration is
+`cString FUN_10af5210(const char*)`; its typed symbol retains the bare-name alias.
+[GridCommandAdd](../src/Game/GridCommandAdd.cpp) (`0x10C2A330`, 308 bytes) and
+[GridCommandRemove](../src/Game/GridCommandRemove.cpp) (`0x10C2A470`, 295 bytes)
+corroborate the contract: each consumes the temporary string and releases its
+buffer on both normal and exception cleanup paths. The input remains borrowed.
+This adds a declaration and symbol identity, not an Engine implementation or
+Engine body credit.
+
+## Verified ordinary Game function inventory
+
+The following 105 ordinary Game functions add 34,602 bytes relative to the
+previously merged source baseline. Each passed static strict matching and
+ordinary reference-object verification at 100%, with zero provisional bindings.
+Generated support contributes zero functions and zero bytes to these totals.
+These checks do not establish runtime behavior, and no game execution is claimed.
+
+Raw object reports use a different name-based comparison and are not uniformly
+100%. In particular, the UI window-type function retains two equivalent string
+literal names (`Window` and `Menu`); its code bytes and all 48 relocation
+destinations agree. Strict verification checks those literal values. Existing
+generated-support, exception-label and source-unit identity transitions are
+excluded from ordinary function credit.
+
+| Address | Bytes | Ordinary source |
+| --- | ---: | --- |
+| `0x10907870` | 105 | [StringBufferAllocate.cpp](../src/Game/StringBufferAllocate.cpp) |
+| `0x109362D0` | 1226 | [ShaderNameInitialization.cpp](../src/Game/ShaderNameInitialization.cpp) |
+| `0x109377D0` | 1169 | [RenderStateInitialization.cpp](../src/Game/RenderStateInitialization.cpp) |
+| `0x10937C70` | 902 | [D3DStateReset.cpp](../src/Game/D3DStateReset.cpp) |
+| `0x1094DBF0` | 775 | [MaterialTextureAndShaderInitialization.cpp](../src/Game/MaterialTextureAndShaderInitialization.cpp) |
+| `0x1099FF10` | 92 | [HardpointLinkLifetime.cpp](../src/Game/HardpointLinkLifetime.cpp) |
+| `0x109A0ED0` | 92 | [SkeletalFireLinkLifetime.cpp](../src/Game/SkeletalFireLinkLifetime.cpp) |
+| `0x109E3A10` | 545 | [BuiltinWindowType.cpp](../src/Game/BuiltinWindowType.cpp) |
+| `0x10A13190` | 354 | [InteractionRegistryUpdate.cpp](../src/Game/InteractionRegistryUpdate.cpp) |
+| `0x10A13300` | 375 | [ActorInteractionEvent.cpp](../src/Game/ActorInteractionEvent.cpp) |
+| `0x10A172D0` | 134 | [StatsListenerInitialization.cpp](../src/Game/StatsListenerInitialization.cpp) |
+| `0x10A174E0` | 77 | [StatsOwnerLifetime.cpp](../src/Game/StatsOwnerLifetime.cpp) |
+| `0x10A49DA0` | 347 | [SpatialQueryObjectFilter.cpp](../src/Game/SpatialQueryObjectFilter.cpp) |
+| `0x10A80E90` | 334 | [TriggerStringArrayResize.cpp](../src/Game/TriggerStringArrayResize.cpp) |
+| `0x10AA9C70` | 272 | [StatsConditionalRecordCopy.cpp](../src/Game/StatsConditionalRecordCopy.cpp) |
+| `0x10AB3D00` | 79 | [T3GameRegistrarLifetime.cpp](../src/Game/T3GameRegistrarLifetime.cpp) |
+| `0x10AB61A0` | 369 | [OptionsApplyVideo.cpp](../src/Game/OptionsApplyVideo.cpp) |
+| `0x10AB9D90` | 561 | [WaterEventHandling.cpp](../src/Game/WaterEventHandling.cpp) |
+| `0x10ABC7F0` | 255 | [LinkedPawnStatus.cpp](../src/Game/LinkedPawnStatus.cpp) |
+| `0x10ABDAE0` | 304 | [StringRecordResize.cpp](../src/Game/StringRecordResize.cpp) |
+| `0x10AC8310` | 405 | [ObjectEventRouter.cpp](../src/Game/ObjectEventRouter.cpp) |
+| `0x10ACB630` | 356 | [EventRecordMove.cpp](../src/Game/EventRecordMove.cpp) |
+| `0x10ACF440` | 581 | [LockPickSoundLinks.cpp](../src/Game/LockPickSoundLinks.cpp) |
+| `0x10ACF770` | 449 | [NearestLinkedActor.cpp](../src/Game/NearestLinkedActor.cpp) |
+| `0x10B1F550` | 333 | [ObjectRangeEligibility.cpp](../src/Game/ObjectRangeEligibility.cpp) |
+| `0x10B2A8A0` | 302 | [SubtitleStringRecordResize.cpp](../src/Game/SubtitleStringRecordResize.cpp) |
+| `0x10B39750` | 39 | [HandlerAnimationTime.cpp](../src/Game/HandlerAnimationTime.cpp) |
+| `0x10B398C0` | 16 | [LinkedMotionDisable.cpp](../src/Game/LinkedMotionDisable.cpp) |
+| `0x10B3EF20` | 177 | [LockPickControllerDestructor.cpp](../src/Game/LockPickControllerDestructor.cpp) |
+| `0x10B3F070` | 175 | [LockPickPinSelection.cpp](../src/Game/LockPickPinSelection.cpp) |
+| `0x10B3F3C0` | 467 | [LockPickPinPositions.cpp](../src/Game/LockPickPinPositions.cpp) |
+| `0x10B3F670` | 443 | [LockPickStageComplete.cpp](../src/Game/LockPickStageComplete.cpp) |
+| `0x10B426A0` | 480 | [LineRecordResize.cpp](../src/Game/LineRecordResize.cpp) |
+| `0x10B47090` | 34 | [MotionPairDisable.cpp](../src/Game/MotionPairDisable.cpp) |
+| `0x10B493A0` | 127 | [RopeStateTransition.cpp](../src/Game/RopeStateTransition.cpp) |
+| `0x10B49520` | 276 | [RopeClimbUpdate.cpp](../src/Game/RopeClimbUpdate.cpp) |
+| `0x10B49640` | 330 | [RopeTraversalDisplacement.cpp](../src/Game/RopeTraversalDisplacement.cpp) |
+| `0x10B4C840` | 517 | [WeaponMotionTransition.cpp](../src/Game/WeaponMotionTransition.cpp) |
+| `0x10B4CAD0` | 403 | [WeaponMotionSelection.cpp](../src/Game/WeaponMotionSelection.cpp) |
+| `0x10B54CE0` | 282 | [MapWindowConfig.cpp](../src/Game/MapWindowConfig.cpp) |
+| `0x10B91370` | 249 | [TransformCoordinates.cpp](../src/Game/TransformCoordinates.cpp) |
+| `0x10B97E10` | 131 | [State935F0Factory.cpp](../src/Game/State935F0Factory.cpp) |
+| `0x10B97EA0` | 131 | [State933B8Factory.cpp](../src/Game/State933B8Factory.cpp) |
+| `0x10B988F0` | 136 | [AIPlayingPossumFactory.cpp](../src/Game/AIPlayingPossumFactory.cpp) |
+| `0x10B99530` | 175 | [PatrolStateFactory.cpp](../src/Game/PatrolStateFactory.cpp) |
+| `0x10BAB250` | 739 | [ObjectStateSerialization.cpp](../src/Game/ObjectStateSerialization.cpp) |
+| `0x10BABF80` | 201 | [UniqueObjectWrapperAppend.cpp](../src/Game/UniqueObjectWrapperAppend.cpp) |
+| `0x10BAC100` | 591 | [FactionRelationQuery.cpp](../src/Game/FactionRelationQuery.cpp) |
+| `0x10BAC350` | 537 | [FactionRelationZeroQuery.cpp](../src/Game/FactionRelationZeroQuery.cpp) |
+| `0x10BB0CD0` | 353 | [ControlModelFlagCommand.cpp](../src/Game/ControlModelFlagCommand.cpp) |
+| `0x10BB14F0` | 192 | [DeferredActionCallback.cpp](../src/Game/DeferredActionCallback.cpp) |
+| `0x10BB2010` | 154 | [StateFleeUnwind.cpp](../src/Game/StateFleeUnwind.cpp) |
+| `0x10BB25F0` | 390 | [ScriptControllerCleanup.cpp](../src/Game/ScriptControllerCleanup.cpp) |
+| `0x10BB3300` | 294 | [ScriptControllerCommand.cpp](../src/Game/ScriptControllerCommand.cpp) |
+| `0x10BB80D0` | 11 | [FactionContextActor.cpp](../src/Game/FactionContextActor.cpp) |
+| `0x10BB88A0` | 181 | [AIPeriodicEffect.cpp](../src/Game/AIPeriodicEffect.cpp) |
+| `0x10BB8AE0` | 102 | [AIContextScalarUpdate.cpp](../src/Game/AIContextScalarUpdate.cpp) |
+| `0x10BBB8D0` | 530 | [AIPlannerCooldown.cpp](../src/Game/AIPlannerCooldown.cpp) |
+| `0x10BBD370` | 232 | [PawnModelReplacement.cpp](../src/Game/PawnModelReplacement.cpp) |
+| `0x10BBD460` | 232 | [PawnModelReplacement.cpp](../src/Game/PawnModelReplacement.cpp) |
+| `0x10BBD550` | 232 | [PawnModelReplacement.cpp](../src/Game/PawnModelReplacement.cpp) |
+| `0x10BBD640` | 232 | [PawnModelReplacement.cpp](../src/Game/PawnModelReplacement.cpp) |
+| `0x10BC2FF0` | 289 | [AIActorOrientation.cpp](../src/Game/AIActorOrientation.cpp) |
+| `0x10BC3670` | 858 | [FactionPropertyTransfer.cpp](../src/Game/FactionPropertyTransfer.cpp) |
+| `0x10BC45D0` | 264 | [AIStateEventDispatch.cpp](../src/Game/AIStateEventDispatch.cpp) |
+| `0x10BC9F40` | 196 | [AISpeechTimedDanger.cpp](../src/Game/AISpeechTimedDanger.cpp) |
+| `0x10BD20F0` | 353 | [StateSearchContextUpdate.cpp](../src/Game/StateSearchContextUpdate.cpp) |
+| `0x10BDC6D0` | 337 | [AIObjectCallback.cpp](../src/Game/AIObjectCallback.cpp) |
+| `0x10BE4EF0` | 173 | [AIAlertStateSerialization.cpp](../src/Game/AIAlertStateSerialization.cpp) |
+| `0x10BE9F50` | 582 | [AIStateSerialization.cpp](../src/Game/AIStateSerialization.cpp) |
+| `0x10BFD220` | 664 | [AITargetWeightSelection.cpp](../src/Game/AITargetWeightSelection.cpp) |
+| `0x10BFD860` | 384 | [ObjectResultPositions.cpp](../src/Game/ObjectResultPositions.cpp) |
+| `0x10C02720` | 213 | [AudioControllerState.cpp](../src/Game/AudioControllerState.cpp) |
+| `0x10C04630` | 441 | [AudioCallbackQueue.cpp](../src/Game/AudioCallbackQueue.cpp) |
+| `0x10C05B50` | 107 | [GridDirectionAngle.cpp](../src/Game/GridDirectionAngle.cpp) |
+| `0x10C061C0` | 761 | [GridEdgeSpan.cpp](../src/Game/GridEdgeSpan.cpp) |
+| `0x10C06560` | 133 | [GridCandidateCoordinates.cpp](../src/Game/GridCandidateCoordinates.cpp) |
+| `0x10C06940` | 544 | [GridCandidateLookup.cpp](../src/Game/GridCandidateLookup.cpp) |
+| `0x10C06B60` | 462 | [GridCandidateCache.cpp](../src/Game/GridCandidateCache.cpp) |
+| `0x10C06D30` | 511 | [GridCandidateSelection.cpp](../src/Game/GridCandidateSelection.cpp) |
+| `0x10C17450` | 550 | [VisualStateSerialization.cpp](../src/Game/VisualStateSerialization.cpp) |
+| `0x10C20A50` | 364 | [GridBoxCorners.cpp](../src/Game/GridBoxCorners.cpp) |
+| `0x10C20C70` | 234 | [GridPairArray.cpp](../src/Game/GridPairArray.cpp) |
+| `0x10C21340` | 457 | [GridRegionQuery.cpp](../src/Game/GridRegionQuery.cpp) |
+| `0x10C219E0` | 353 | [GridSegmentExtension.cpp](../src/Game/GridSegmentExtension.cpp) |
+| `0x10C21DD0` | 272 | [GridAngularWeight.cpp](../src/Game/GridAngularWeight.cpp) |
+| `0x10C22BE0` | 250 | [GridAngularWindow.cpp](../src/Game/GridAngularWindow.cpp) |
+| `0x10C22EE0` | 495 | [GridEdgeFilter.cpp](../src/Game/GridEdgeFilter.cpp) |
+| `0x10C25640` | 297 | [GridSegmentTraversal.cpp](../src/Game/GridSegmentTraversal.cpp) |
+| `0x10C26980` | 182 | [GridControllerConstructor.cpp](../src/Game/GridControllerConstructor.cpp) |
+| `0x10C26AC0` | 159 | [GridActionFactory.cpp](../src/Game/GridActionFactory.cpp) |
+| `0x10C26EE0` | 290 | [GridControllerDestructor.cpp](../src/Game/GridControllerDestructor.cpp) |
+| `0x10C27A20` | 344 | [GridCellBounds.cpp](../src/Game/GridCellBounds.cpp) |
+| `0x10C28680` | 184 | [SpineFlexOneResolve.cpp](../src/Game/SpineFlexOneResolve.cpp) |
+| `0x10C2A330` | 308 | [GridCommandAdd.cpp](../src/Game/GridCommandAdd.cpp) |
+| `0x10C2A470` | 295 | [GridCommandRemove.cpp](../src/Game/GridCommandRemove.cpp) |
+| `0x10C2EEC0` | 254 | [MotionAnimationPlayback.cpp](../src/Game/MotionAnimationPlayback.cpp) |
+| `0x10C2F0A0` | 207 | [AnimationPointHeight.cpp](../src/Game/AnimationPointHeight.cpp) |
+| `0x10C2F340` | 228 | [LocomotionCommandFactory.cpp](../src/Game/LocomotionCommandFactory.cpp) |
+| `0x10C2F8D0` | 137 | [AnimationCacheSelection.cpp](../src/Game/AnimationCacheSelection.cpp) |
+| `0x10C32430` | 168 | [IntegerHashTableSet.cpp](../src/Game/IntegerHashTableSet.cpp) |
+| `0x10C38460` | 134 | [MotionControllerFactory.cpp](../src/Game/MotionControllerFactory.cpp) |
+| `0x10C49AB0` | 253 | [GameTableKeyRemoval.cpp](../src/Game/GameTableKeyRemoval.cpp) |
+| `0x10C5DC60` | 173 | [CadenceManagedUpdate.cpp](../src/Game/CadenceManagedUpdate.cpp) |
+| `0x10D3EBE0` | 158 | [GameTimeSingleton.cpp](../src/Game/GameTimeSingleton.cpp) |
